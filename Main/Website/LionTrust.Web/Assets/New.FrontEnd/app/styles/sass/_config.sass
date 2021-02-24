@@ -2,7 +2,7 @@
 @import 'variables'
 @import './mixins/breakpoints'
 
-// IMPORT SECTION
+// IMPORT BOOTSTRAP STYLES
 @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
 // @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
 @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Bootstrap Grid
@@ -10,14 +10,14 @@
 
 // FONTS LOAD SECTION
 @import './mixins/fonts'
-@include font('futura-pt', normal, 300, '../fonts/futura-pt-regular-300.woff2')
-@include font('futura-pt', normal, 400, '../fonts/futura-pt-regular.woff2')
-@include font('futura-pt', normal, 500, '../fonts/futura-pt-regular-500.woff2')
-@include font('futura-pt', italic, 400, '../fonts/futura-pt-regular-italic.woff2')
-@include font('futura-pt', normal, 700, '../fonts/futura-pt-bold.woff2')
-@include font('futura-pt', italic, 700, '../fonts/futura-pt-bold-italic.woff2')
-@include font('futura-pt-bold', normal, 700, '../fonts/futura-pt-bold-bold.woff2')
-@include font('futura-pt-bold', italic, 700, '../fonts/futura-pt-bold-bold-italic.woff2')
+@include font('futura-pt', normal, 300, '../fonts/futura/futura-pt-regular-300.woff2')
+@include font('futura-pt', normal, 400, '../fonts/futura/futura-pt-regular.woff2')
+@include font('futura-pt', normal, 500, '../fonts/futura/futura-pt-regular-500.woff2')
+@include font('futura-pt', italic, 400, '../fonts/futura/futura-pt-regular-italic.woff2')
+@include font('futura-pt', normal, 700, '../fonts/futura/futura-pt-bold.woff2')
+@include font('futura-pt', italic, 700, '../fonts/futura/futura-pt-bold-italic.woff2')
+@include font('futura-pt-bold', normal, 700, '../fonts/futura/futura-pt-bold-bold.woff2')
+@include font('futura-pt-bold', italic, 700, '../fonts/futura/futura-pt-bold-bold-italic.woff2')
 
 
 // GENERAL DOCUMENT STYLES
@@ -54,3 +54,5 @@ a
 	&:hover
 		text-decoration: none
 		color: $white
+
+		
