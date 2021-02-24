@@ -1,0 +1,64 @@
+h1, .h1, h2, .h2, h3, h4, .h4, h5, .h5
+    color: $headingcolor
+    font-family: $userfont
+    font-weight: 300
+
+h1, .h1
+    font-size: 42px
+    line-height: 48px
+    @include breakpoint(desktop, up)
+        font-size: 62px
+        line-height: 66px
+
+h2, .h2
+    font-size: 32px
+    line-height: 38px
+    @include breakpoint(desktop, up)
+        font-size: 52px
+        line-height: 58px
+
+h3, .h3
+    font-size: 26px
+    line-height: 32px
+    @include breakpoint(desktop, up)
+        font-size: 42px
+        line-height: 48px
+
+h4, .h4
+    font-size: 22px
+    line-height: 32px
+    @include breakpoint(desktop, up)
+        font-size: 32px
+        line-height: 38px
+
+h5, .h5
+    font-size: 20px
+    line-height: 26px
+    @include breakpoint(desktop, up)
+        font-size: 26px
+        line-height: 32px
+
+h6, .h6
+    font-size: 12px
+    line-height: 16px
+    font-weight: bold
+    @include breakpoint(desktop, up)
+        font-size: 15px
+        line-height: 20px
+
+@mixin p-1-medium
+    font-size: 18px
+    font-weight: 500
+    line-height: 28px
+    @include breakpoint(desktop, up)
+        font-size: 20px
+        line-height: 30px
+
+@mixin p-1-book
+    font-size: 18px
+    font-weight: 500
+    line-height: 28px
+    @include breakpoint(desktop, up)
+        font-size: 20px
+        line-height: 30px
+    
