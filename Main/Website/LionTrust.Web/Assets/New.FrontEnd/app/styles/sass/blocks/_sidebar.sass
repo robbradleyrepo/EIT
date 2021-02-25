@@ -1,5 +1,8 @@
 .sidebar
     background: $secondary
+    display: flex
+    flex-direction: column
+    justify-content: space-between
     padding: 17px 20px 43px 20px
     position: absolute
     top: 0
@@ -11,6 +14,8 @@
     transition: left .3s ease
     @include breakpoint(mobile-large, up)
         border-right: 2px solid $gold
+    @include breakpoint(desktop, up)
+        padding: 27px 32px 64px 84px
     &_active
         left: 0
         // transition: left .3s ease
@@ -32,9 +37,13 @@
         margin-left: -37px
     &__profile-btn
         margin: 35px auto
+        @include breakpoint(desktop, up)
+            margin: 42px auto
 
 .mob-nav
     margin: 35px 0
+    @include breakpoint(desktop, up)
+        display: none
     &__link
         font-size: 22px
         line-height: 52px
@@ -48,6 +57,8 @@
         font-size: 18px
         display: flex
         align-items: center
+        @include breakpoint(desktop, up)
+            font-size: 20px
         i
             display: inline-block
             margin-right: 26px
@@ -78,3 +89,17 @@
         color: $primary
         font-size: 7px
         margin-left: 3px
+    &_hr
+        display: none
+        height: 1px
+        background: #2d3440
+        margin: 10px 0
+        @include breakpoint(desktop, up)
+            display: block
+
+.bottom-links
+    display: none
+    font-size: 20px
+    line-height: 60px
+    @include breakpoint(desktop, up)
+        display: block
