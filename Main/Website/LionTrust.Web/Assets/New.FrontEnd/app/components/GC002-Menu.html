@@ -1,4 +1,4 @@
-<div class="sidebar">
+<div class="sidebar sidebar_active">
     <div class="sidebar__top">
         <div class="sidebar__header">
             <button class="sidebar__close-btn"></button>
@@ -11,10 +11,33 @@
         <nav class="mob-nav">
             <ul class="mob-nav__list">
                 <li class="mob-nav__item">
+                    <!-- if link isn`t have sub links it should be a tag -->
                     <a href="#" class="mob-nav__link">Our Funds </a>
                 </li>
                 <li class="mob-nav__item">
-                    <a href="#" class="mob-nav__link">Insight</a>
+                    <!-- if link has sublinks it should be label -->
+                    <label class="mob-nav__link" for="Insight">Insight</label>
+                    <input type="checkbox" id="Insight" class="mob-nav__checkbox">
+                    <div class="mob-nav__submenu">
+                        <label class="mob-nav__close-submenu" for="Insight">
+                            <i class="icon-chevron-left"></i>
+                             back
+                        </label>
+                        <ul class="mob-nav__sub-list">
+                            <li class="mob-nav__sub-item">
+                                <a class="mob-nav__sub-link mob-nav__sub-link_heading" href="#">
+                                    Insight
+                                    <i class="icon-chevron-right"></i>
+                                </a>
+                            </li>
+                            <li class="mob-nav__sub-item">
+                                <a class="mob-nav__sub-link" href="#">Community Engagement and Sponsorships</a>
+                            </li>
+                            <li class="mob-nav__sub-item">
+                                <a class="mob-nav__sub-link" href="#">Some Link</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="mob-nav__item">
                     <a href="#" class="mob-nav__link">Learning</a>
