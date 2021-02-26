@@ -1,4 +1,4 @@
-<div class="sidebar sidebar_active">
+<div class="sidebar sidebar_border">
     <div class="sidebar__top">
         <div class="sidebar__header">
             <button class="sidebar__close-btn"></button>
@@ -17,27 +17,6 @@
                 <li class="navigation__item">
                     <!-- if link has sublinks it should be label -->
                     <label class="navigation__link" for="Insight">Insight</label>
-                    <input type="checkbox" id="Insight" class="navigation__checkbox">
-                    <div class="navigation__submenu">
-                        <label class="navigation__close-submenu" for="Insight">
-                            <i class="icon-chevron-left"></i>
-                            back
-                        </label>
-                        <ul class="navigation__sub-list">
-                            <li class="navigation__sub-item">
-                                <a class="navigation__sub-link navigation__sub-link_heading" href="#">
-                                    Insight
-                                    <i class="icon-chevron-right"></i>
-                                </a>
-                            </li>
-                            <li class="navigation__sub-item">
-                                <a class="navigation__sub-link" href="#">Community Engagement and Sponsorships</a>
-                            </li>
-                            <li class="navigation__sub-item">
-                                <a class="navigation__sub-link" href="#">Some Link</a>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
                 <li class="navigation__item">
                     <a href="#" class="navigation__link">Learning</a>
@@ -107,58 +86,93 @@
                 <li class="navigation__item">
                     <!-- if link has sublinks it should be label -->
                     <label class="navigation__link" for="About">About us</label>
-                    <input type="checkbox" id="About" class="navigation__checkbox">
-                    <div class="navigation__submenu">
-                        <label class="navigation__close-submenu" for="About">
-                            <i class="icon-chevron-left"></i>
-                            back
-                        </label>
-                        <ul class="navigation__sub-list">
-                            <li class="navigation__sub-item">
-                                <a class="navigation__sub-link navigation__sub-link_heading" href="#">
-                                    About Us
-                                    <i class="icon-chevron-right"></i>
-                                </a>
-                            </li>
-                            <li class="navigation__sub-item">
-                                <a class="navigation__sub-link" href="#">Community Engagement and Sponsorships</a>
-                            </li>
-                            <li class="navigation__sub-item">
-                                <a class="navigation__sub-link" href="#">Some Link</a>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
                 <li class="navigation__item">
-                    <!-- if link has sublinks it should be label -->
-                    <label class="navigation__link" for="Investor">Investor Relations</label>
-                    <input type="checkbox" id="Investor" class="navigation__checkbox">
-                    <div class="navigation__submenu">
-                        <label class="navigation__close-submenu" for="Investor">
-                            <i class="icon-chevron-left"></i>
-                            back
-                        </label>
-                        <ul class="navigation__sub-list">
-                            <li class="navigation__sub-item">
-                                <a class="navigation__sub-link navigation__sub-link_heading" href="#">
-                                    Investor Relations
-                                    <i class="icon-chevron-right"></i>
-                                </a>
-                            </li>
-                            <li class="navigation__sub-item">
-                                <a class="navigation__sub-link" href="#">Investor</a>
-                            </li>
-                            <li class="navigation__sub-item">
-                                <a class="navigation__sub-link" href="#">Some Link seadf ds</a>
-                            </li>
-                        </ul>
-                    </div>
+                    <!-- if link hasn't sublinks it should be link tag --> 
+                    <label class="navigation__link" for="Investor">Investor</label>             
                 </li>
                 <li class="navigation__item">
+                    <!-- if link hasn't sublinks it should be link tag --> 
                     <a href="#" class="navigation__link">Press Relations</a>
                 </li>
             </ul>
         </nav>
+    </div>
+</div>
+
+<!-- block with sublinks items -->
+<div class="navigation__sublinks-items">   
+    <!-- each item should have id for exact like for attribute for label  -->
+    <div class="navigation__item">
+        <input type="checkbox" id="Insight" class="navigation__checkbox">
+        <div class="navigation__submenu">
+            <label class="navigation__close-submenu" for="Insight">
+                <i class="icon-chevron-left"></i>
+                back
+            </label>
+            <ul class="navigation__sub-list">
+                <li class="navigation__sub-item">
+                    <a class="navigation__sub-link navigation__sub-link_heading" href="#">
+                        Insight
+                        <i class="icon-chevron-right"></i>
+                    </a>
+                </li>
+                <li class="navigation__sub-item">
+                    <a class="navigation__sub-link" href="#">Community Engagement and Sponsorships</a>
+                </li>
+                <li class="navigation__sub-item">
+                    <a class="navigation__sub-link" href="#">Some Link</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="navigation__item">
+        <input type="checkbox" id="About" class="navigation__checkbox">
+        <div class="navigation__submenu">
+            <label class="navigation__close-submenu" for="About">
+                <i class="icon-chevron-left"></i>
+                back
+            </label>
+            <ul class="navigation__sub-list">
+                <li class="navigation__sub-item">
+                    <a class="navigation__sub-link navigation__sub-link_heading" href="#">
+                        About Us
+                        <i class="icon-chevron-right"></i>
+                    </a>
+                </li>
+                <li class="navigation__sub-item">
+                    <a class="navigation__sub-link" href="#">Community Engagement and Sponsorships</a>
+                </li>
+                <li class="navigation__sub-item">
+                    <a class="navigation__sub-link" href="#">Some Link</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="navigation__item">
+        <input type="checkbox" id="Investor" class="navigation__checkbox">
+        <div class="navigation__submenu">
+            <label class="navigation__close-submenu" for="Investor">
+                <i class="icon-chevron-left"></i>
+                back
+            </label>
+            <ul class="navigation__sub-list">
+                <li class="navigation__sub-item">
+                    <a class="navigation__sub-link navigation__sub-link_heading" href="#">
+                        Investor Relations
+                        <i class="icon-chevron-right"></i>
+                    </a>
+                </li>
+                <li class="navigation__sub-item">
+                    <a class="navigation__sub-link" href="#">Investor and Sponsorships</a>
+                </li>
+                <li class="navigation__sub-item">
+                    <a class="navigation__sub-link" href="#">Some Link</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
 <div class="sidebar-overlay"></div>

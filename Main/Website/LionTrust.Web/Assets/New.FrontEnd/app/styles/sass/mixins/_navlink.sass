@@ -1,0 +1,16 @@
+@mixin navlink-behaviour()
+    &.active
+        color: $gold
+        position: relative
+        &:after
+            content: ""
+            position: absolute
+            right: -32px
+            bottom: 0
+            height: 100%
+            width: 2px
+            background: $gold
+    &:hover
+        color: $gold
+        position: relative
+        

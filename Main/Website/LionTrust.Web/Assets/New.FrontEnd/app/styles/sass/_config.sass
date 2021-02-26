@@ -1,6 +1,7 @@
 // IMPORT VARIABLES
 @import 'variables'
 @import './mixins/breakpoints'
+@import './mixins/navlink'
 
 // IMPORT BOOTSTRAP STYLES
 @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
@@ -51,6 +52,7 @@ ul
 
 a
 	color: $white
+	transition: color .3s ease-in
 	&:hover
 		text-decoration: none
 		color: $white
