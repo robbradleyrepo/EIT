@@ -10,14 +10,35 @@
     user-select: none
     background-color: transparent
     border: 1px solid transparent
-    padding: 1.03rem 1.625rem
+    padding: 0 1rem
+    min-width: 158px
+    height: 42px
+    line-height: 42px
     font-size: 12px
     border-radius: 6px
-    letter-spacing: 2.4px
+    letter-spacing: 1.2px
     transition: color .3s ease-out,background-color .3s ease-out,border-color .3s ease-out,box-shadow .3s ease-out
+    i.animate-arrow
+        display: none
+    @include breakpoint(desktop, up)
+        min-width: 212px
+        height: 51px
+        line-height: 51px
+        letter-spacing: 2.4px
+        i.animate-arrow
+            display: inline-block
+            transition: transform .3s ease-out
+    &:hover
+        i.animate-arrow
+            transform: translate(10px, 0)
     &-primary
         background: $primary
+        border-color: $primary
         &:hover
             background: #0E8039
+            border-color: #0E8039
+    &-secondary
+        border-color: $white
     &-block
         width: 100%
+        letter-spacing: 2.4px
