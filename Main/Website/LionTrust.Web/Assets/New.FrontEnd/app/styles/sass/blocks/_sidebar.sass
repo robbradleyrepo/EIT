@@ -8,6 +8,7 @@
     top: 0
     left: 0
     transform: translate3d(-452px, 0, 0)
+    overflow-y: scroll
     height: 100%
     width: 100%
     max-width: 452px
@@ -19,6 +20,7 @@
             border-right: 2px solid $gold
     @include breakpoint(desktop, up)
         padding: 27px 32px 64px 84px
+        overflow-y: initial
     &_active
         transform: translate3d(0, 0, 0)
     &__header
