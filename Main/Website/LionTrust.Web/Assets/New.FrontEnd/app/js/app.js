@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     $(".sidebar-overlay").removeClass("sidebar-overlay_active");
     checkboxes.prop("checked", false);
     navLinks.removeClass("active");
+    $(".navigation__submenu").removeClass("navigation__submenu_stop-animation");
   };
 
   // togle sidebar menu
