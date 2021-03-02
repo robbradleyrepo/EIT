@@ -1,0 +1,39 @@
+@import '../../../../node_modules/@fancyapps/fancybox/src/css/core'
+
+.video-box
+    &__link
+        width: 100%
+        display: block
+        background-position: center center
+        background-repeat: no-repeat
+        background-size: cover
+        border-radius: 10px
+        overflow: hidden
+        height: 0
+        padding-top: 63.75%
+        position: relative
+        @include breakpoint(tablet, up)
+            padding-top: 52%
+        @include breakpoint(desktop-large, up)
+            padding-top: 394px
+        &:after
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            background: transparentize($secondary, 0.8)
+    &__play-btn
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 100px
+        height: 100px
+        z-index: 2
+        @include breakpoint(desktop, up)
+            width: 188px
+            height: 188px
+        .play
+            fill: $white

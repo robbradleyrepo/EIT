@@ -34,7 +34,11 @@ function browsersync() {
 }
 
 function scripts() {
-	return src(['app/js/*.js', '!app/js/*.min.js'])
+	return src([
+		'app/js/*.js',
+		'!app/js/*.min.js',
+		'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js' // import fancybox
+	])
 		.pipe(webpack({
 			mode: 'production',
 			performance: { hints: false },

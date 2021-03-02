@@ -1,6 +1,9 @@
 import $ from "jquery";
 window.jQuery = $;
 window.$ = $;
+// import fancybox from "@fancyapps/fancybox";
+
+// console.log('fancybox', $.fancybox);
 
 document.addEventListener("DOMContentLoaded", () => {
 
