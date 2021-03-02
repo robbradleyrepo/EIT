@@ -29,9 +29,29 @@
     &__user-link
         display: none
         margin: 16px 36px 0 44px
+        position: relative
+        &:after
+            visibility: hidden
+            opacity: 0
+            content: 'my liontrust'
+            position: absolute
+            font-size: 10px
+            font-weight: 500
+            white-space: nowrap
+            letter-spacing: 2px
+            bottom: -20px
+            left: -35px
+            text-transform: uppercase
+            display: inline-block
+            color: $primary
+            transition: opacity .3s ease-out, visibility .3s ease-out
         @include breakpoint(desktop, up)
             display: block
             margin-top: 13px
+        &:hover
+            &:after
+                visibility: visible
+                opacity: 1
 
 .nav-desktop
     display: none
@@ -40,7 +60,7 @@
     @include breakpoint(desktop, up)
         display: block
     @include breakpoint(desktop-large, up)
-        margin-right: 44px
+        margin-right: 64px
     &__list
         display: flex
         justify-content: space-between
