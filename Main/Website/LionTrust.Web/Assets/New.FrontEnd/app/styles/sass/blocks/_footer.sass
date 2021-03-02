@@ -1,0 +1,75 @@
+.footer
+    background: $secondary
+    padding-top: 42px
+    padding-bottom: 16px
+    &__title 
+        margin-bottom: 8px
+        display: inline-block
+        @include breakpoint(desktop, up)
+            margin-bottom: 1rem
+    &__section
+        margin-top: 37px
+        @include breakpoint(desktop, up)
+        margin-top: 0
+    &__bottom-item
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+    &__list
+        padding-top: 6px
+    &__link
+        line-height: 26px
+        @include breakpoint(desktop, up)
+            font-size: 18px
+            line-height: 28px
+        &_arrow
+            text-transform: uppercase
+            font-size: 12px
+            letter-spacing: 2.4px
+            display: block
+            i.icon-arrow-right
+                color: $primary
+        &_sign
+            margin-top: 16px
+            @include breakpoint(desktop, up)
+                margin-top: 0
+    &__map-link
+        color: $primary
+        text-transform: uppercase
+        font-size: 12px
+        margin-top: 12px
+        letter-spacing: 2.4px
+        @include breakpoint(desktop, up)
+                margin-top: 2rem
+    &__list-item
+        line-height: 34px
+        font-size: 14px
+    &__copy
+        font-size: 10px
+        line-height: 13px
+        @include breakpoint(desktop, up)
+            font-size: 12px
+    &__investor
+        text-transform: uppercase
+        font-size: 12px
+        letter-spacing: 2.4px
+        display: flex
+        align-items: center
+        cursor: pointer
+        margin-top: 8px
+        @include breakpoint(desktop, up)
+            font-size: 12px
+            margin-top: 0
+        i
+            color: $primary
+            font-size: 6px
+            display: inline-block
+            margin-left: 4px
+
+.social
+    &__link
+        margin-right: 21px
+    &__link-icon
+        font-size: 15px
+        
+
