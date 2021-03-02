@@ -1,0 +1,12 @@
+// Function gives you a possibility to setup your own gutter widths for different screen breakpoints.
+@each $grid-breakpoint, $grid-gutter-width in $grid-gutter-widths
+	@include breakpoint($grid-breakpoint, up)
+		$grid-gutter-half-width: $grid-gutter-width / 2
+		.row:not(.no-gutters)
+			margin-right: -$grid-gutter-half-width
+			margin-left: -$grid-gutter-half-width
+		.row:not(.no-gutters) > .col,
+		.row:not(.no-gutters) > [class*="col-"]
+			padding-right: $grid-gutter-half-width
+			padding-left: $grid-gutter-half-width
+
