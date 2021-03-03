@@ -69,5 +69,25 @@
 .social
     &__link
         margin-right: 21px
+        cursor: pointer
+        position: relative
+        &:hover
+            .social__twitter
+                visibility: visible
+                opacity: 1
     &__link-icon
         font-size: 15px
+    &__twitter
+        visibility: hidden
+        opacity: 0
+        background: $secondary
+        z-index: 2
+        position: absolute
+        transition: opacity .3s ease, visibility .3s ease
+        padding: 3px
+        @include breakpoint(mobile-large, up)
+            top: -5px
+            left: 25px
+    &__twitter-link
+        font-size: 14px
+        line-height: 24px
