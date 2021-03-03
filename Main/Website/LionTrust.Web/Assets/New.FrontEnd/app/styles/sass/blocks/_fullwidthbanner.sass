@@ -1,0 +1,44 @@
+.fullwidthbanner   
+    background-image: url('../../../images/components/banners/fullwidthbanner.png')
+    height: 762px
+    background-repeat: no-repeat
+    background-size: cover
+    display: flex
+    flex-direction: column
+    justify-content: center
+    text-align: center
+    margin-top: 20px
+    position: absolute
+    left: 0
+    box-shadow: inset 0 76px 20px 8px #000, inset 0 -45px 5px #000
+    // opacity: .7
+    &__headbox
+        display: flex
+        justify-content: center
+
+    &__head
+        display: flex
+        color: $gold
+        letter-spacing: 1.86px
+        font-weight: 300
+        opacity: 1
+        justify-content: center
+        width: 100%
+        @include breakpoint(mobile-large, up)
+            width: 80%
+        @include breakpoint(desktop, up)
+            width: 60%
+   
+    &__contentbox
+        display: flex
+        justify-content: center
+
+    &__content
+        display: flex
+        justify-content: center
+        font-weight: normal
+        letter-spacing: 0.2px
+        color: $white
+        width: 100%
+        @include breakpoint(mobile-large, up)
+           width: 80%
