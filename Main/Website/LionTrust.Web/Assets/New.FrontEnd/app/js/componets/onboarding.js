@@ -1,47 +1,67 @@
 // Onboarding overlay modal
+import Cookies from "js-cookie";
 
 export default () => {
   const onboarding = $(".onboarding-overlay");
   const btnStep = $("[data-set-step]");
 
-  const showTab = (currentTab) => {
-    // const urlParams = new URLSearchParams(window.location.search);
-    // if(currentTab === 0) {
-    // console.log('urlParams',urlParams);
-    // urlParams.set('step', currentTab);
-    // window.location.search = urlParams;
-    // }
+  // default values
+  const currentTab = Cookies.get("currentTab") || 1;
+//   const country = Cookies.get("country") || "United Kingdom";
+//   const inverstorType = Cookies.get("inverstorType") || 0;
+  const agreePolicy = Cookies.get("agreePolicy") || false;
 
+  const showTab = (currentTab) => {
     const tabs = $("[data-tab-number]");
     tabs.removeClass("visible");
     $(tabs[currentTab]).addClass("visible");
+
     const step = $(".onboarding-overlay__step");
-    console.log("step", step);
     step.removeClass("active");
-    console.log("currentTab", currentTab);
+
     if (currentTab == 0 || currentTab == 1) $(step[0]).addClass("active");
     if (currentTab == 2) $(step[1]).addClass("active");
     if (currentTab == 3) $(step[2]).addClass("active");
+
+    Cookies.set("currentTab", currentTab);
   };
 
-  showTab(2);
+  // start showing tab
+  if(!agreePolicy) {
+    showTab(currentTab);
+    onboarding.addClass('active')
+  }
 
+  // move to next step
   btnStep.on("click", (e) => {
     e.preventDefault();
-    console.log(e);
     const tab = e.target.dataset.setStep;
-    console.log("tab", tab);
     showTab(tab);
   });
 
+  // navigation on tabs
+  $('[data-change-step]').on("click", (e) => {
+    e.preventDefault();
+    const tab = e.target.dataset.changeStep;
+    if (tab > currentTab) return;
+    showTab(tab);
+  });  
+
+  // set investor type to cookie
+  $("[data-investor-type]").on("click", (e) => {
+    Cookies.set("inverstorType", e.target.dataset.investorType);
+  });
+
+  // set country to cookie
   $(".set-location__item").on("click", (e) => {
-    const textValue = e.target.innerText;
-    console.log("textValue", textValue);
+    const country = e.target.dataset.isoCountry;
+    Cookies.set("country", country);
     showTab(2);
   });
 
+  // finish onboarding, close modal
   $("#submit-board").on("click", () => {
-    console.log(onboarding);
     onboarding.removeClass("active");
+    Cookies.set("agreePolicy", 1);
   });
 };
