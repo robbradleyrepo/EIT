@@ -49,19 +49,19 @@ export default () => {
 
   // set investor type to cookie
   $("[data-investor-type]").on("click", (e) => {
-    Cookies.set("inverstorType", e.target.dataset.investorType);
+    Cookies.set("inverstorType", e.target.dataset.investorType, { expires: 365 });
   });
 
   // set country to cookie
   $(".set-location__item").on("click", (e) => {
     const country = e.target.dataset.isoCountry;
-    Cookies.set("country", country);
+    Cookies.set("country", country, { expires: 365 });
     showTab(2);
   });
 
   // finish onboarding, close modal
   $("#submit-board").on("click", () => {
     onboarding.removeClass("active");
-    Cookies.set("agreePolicy", 1);
+    Cookies.set("agreePolicy", 1, { expires: 365 });
   });
 };
