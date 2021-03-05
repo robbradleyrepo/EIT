@@ -25,9 +25,13 @@
             letter-spacing: 1.2px
     &__tab
         visibility: hidden
+        opacity: 0
         height: 0
+        transition: opacity 1s ease-out
         &.visible
             visibility: visible
+            opacity: 1
+            height: auto
     &__logo
         text-align: center
     &__hint
