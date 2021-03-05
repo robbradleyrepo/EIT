@@ -5,5 +5,9 @@ window.$ = $;
 import onboardingOverlay from "./componets/onboarding";
 import sidebarNav from "./componets/sidebarNav";
 
-onboardingOverlay();
-sidebarNav();
+
+document.addEventListener("DOMContentLoaded", () => {
+    onboardingOverlay();
+    sidebarNav();
+  });
+
