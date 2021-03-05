@@ -37,7 +37,8 @@ function scripts() {
 	return src([
 		'app/js/*.js',
 		'!app/js/*.min.js',
-		'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js' // import fancybox
+		'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js', // import fancybox
+		'node_modules/bootstrap/js/dist/modal.js' // import bootstrap modal
 	])
 		.pipe(webpack({
 			mode: 'production',
