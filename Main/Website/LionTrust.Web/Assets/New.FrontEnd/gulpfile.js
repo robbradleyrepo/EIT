@@ -37,8 +37,9 @@ function scripts() {
 	return src([
 		'app/js/*.js',
 		'!app/js/*.min.js',
-		'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js' // import fancybox
-	])
+		'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js', // import fancybox
+		'node_modules/bootstrap/js/dist/modal.js' // import bootstrap modal
+	], { sourcemaps: true })
 		.pipe(webpack({
 			mode: 'production',
 			performance: { hints: false },
@@ -59,18 +60,18 @@ function scripts() {
 			this.emit('end')
 		})
 		.pipe(rename('app.min.js'))
-		.pipe(dest('app/js'))
+		.pipe(dest('app/js', { sourcemaps: true }))
 		.pipe(browserSync.stream())
 }
 
 function styles() {
-	return src([`app/styles/${preprocessor}/*.*`, `!app/styles/${preprocessor}/_*.*`])
+	return src([`app/styles/${preprocessor}/*.*`, `!app/styles/${preprocessor}/_*.*`], { sourcemaps: true })
 		.pipe(eval(`${preprocessor}glob`)())
 		.pipe(eval(preprocessor)())
 		.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
 		// .pipe(cleancss({ level: { 1: { specialComments: 0 } },/* format: 'beautify' */ }))
 		.pipe(rename({ suffix: ".min" }))
-		.pipe(dest('app/css'))
+		.pipe(dest('app/css',  { sourcemaps: true }))
 		.pipe(browserSync.stream())
 }
 

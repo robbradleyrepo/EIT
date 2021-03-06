@@ -1,0 +1,102 @@
+.onboarding-overlay
+    z-index: 100
+    background-image: url('../../../images/components/header/bg-desktop.svg')
+    background-repeat: no-repeat
+    background-size: cover
+    height: 100vh
+    align-items: center
+    justify-content: space-between
+    padding: 34px 12px 20px 12px
+    // justify-content: center
+    flex-direction: column
+    display: none
+    @include breakpoint(tablet, up)
+        padding-top: 120px
+    &.active
+        display: flex
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+    .btn-primary
+        letter-spacing: 0
+        @include breakpoint(tablet, up)
+            letter-spacing: 1.2px
+    &__tab
+        visibility: hidden
+        height: 0
+        &.visible
+            visibility: visible
+    &__logo
+        text-align: center
+    &__hint
+        max-width: 352px
+        font-size: 18px
+        font-weight: 300
+        text-align: center
+        line-height: 28px
+        margin: 0 auto
+        margin-bottom: 55px
+        @include breakpoint(tablet, up)
+            margin-bottom: 120px
+    &__img
+        width: 197px
+        height: auto
+        margin-bottom: 30px
+        @include breakpoint(tablet, up)
+    &__title
+        @extend .h1
+        text-align: center
+        margin-bottom: 20px
+    &__btns
+        text-align: center
+        margin-top: 34px
+        margin-bottom: 48px
+    &__text
+        @extend .onboarding-overlay__hint
+        max-width: 456px
+        @extend .onboarding-overlay__btns
+    &__link
+        text-decoration: underline
+    &__get-hint
+        text-align: center
+        display: block
+    &__step
+        display: inline-block
+        margin: 0 5px
+        width: 20px
+        position: relative
+        padding: 5px 0
+        cursor: pointer
+        &::after
+            content: ''
+            position: absolute
+            display: block
+            width: 20px
+            height: 1px
+            background: $white
+        &.active
+            &::after
+                background: $gold
+    &__row-location
+
+.set-location
+    &__row.row
+        margin-left: 0
+        margin-right: 0
+        max-width: 700px
+        margin: 0 auto
+    &__list
+        margin-bottom: 30px
+    &__title
+        font-size: 32px
+        line-height: 41px
+        font-weight: 300
+    &__item
+        line-height: 38px
+        font-weight: 300
+        cursor: pointer
+    &__content
+        width: max-content
+        margin: 0 auto
