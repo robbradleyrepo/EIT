@@ -1,0 +1,44 @@
+.anchorbox
+    background: $black
+
+    &__content
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        align-items: center
+        padding: 30px 0
+        @include breakpoint(desktop, up)
+            flex-direction: row
+        
+    &__head
+        display: flex
+        justify-content: center
+        flex: 1
+        margin-bottom: 20px
+        font-size: 18px
+        @include breakpoint(desktop, up)
+            margin-bottom: 0
+            font-size: 16px
+
+    &__body
+        display: flex
+        justify-content: space-around
+        align-items: center
+        flex: 4
+        flex-wrap: wrap
+    &__btn
+        display: flex 
+        min-width: 43%
+        margin-bottom: 20px
+        align-items: center
+        justify-content: center
+        @include breakpoint(desktop, up)
+            min-width: 170px
+            margin-bottom: 0
+        @include breakpoint(desktop-large, up)
+            min-width: 250px
+
+
+    
+
+

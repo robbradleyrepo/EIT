@@ -1,5 +1,5 @@
 .fullwidthbanner   
-    background-image: url('../../../images/components/banners/fullwidthbanner.png')
+    background:url('../../../images/components/banners/fullwidthbanner.png')
     height: 762px
     background-repeat: no-repeat
     background-size: cover
@@ -7,11 +7,9 @@
     flex-direction: column
     justify-content: center
     text-align: center
-    margin-top: 20px
-    position: absolute
-    left: 0
-    box-shadow: inset 0 76px 20px 8px #000, inset 0 -45px 5px #000
-    // opacity: .7
+    padding: 20px
+    z-index: 11
+    position: relative
     &__headbox
         display: flex
         justify-content: center
@@ -24,6 +22,7 @@
         opacity: 1
         justify-content: center
         width: 100%
+        margin-bottom: 20px
         @include breakpoint(mobile-large, up)
             width: 80%
         @include breakpoint(desktop, up)
@@ -32,6 +31,8 @@
     &__contentbox
         display: flex
         justify-content: center
+        margin-bottom: 20px
+
 
     &__content
         display: flex
@@ -42,3 +43,13 @@
         width: 100%
         @include breakpoint(mobile-large, up)
            width: 80%
+
+    &__more-arrow
+        width: 15px
+        height: 12.5px
+        margin-left: 5px
+
+    &__morebox
+        display: flex
+        justify-content: center
+        align-items: center
