@@ -1,5 +1,4 @@
 export default () => {
-  document.addEventListener("DOMContentLoaded", () => {
     // Toogle navigation menu
     const navLinks = $(".navigation__link, .sidebar-actions__link");
     const checkboxes = $(".navigation__checkbox");
@@ -51,5 +50,4 @@ export default () => {
       navLinks.removeClass("active");
       sidebar.addClass("sidebar_border");
     });
-  });
 };
