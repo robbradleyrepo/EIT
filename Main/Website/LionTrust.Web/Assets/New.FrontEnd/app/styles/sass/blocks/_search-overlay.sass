@@ -1,0 +1,71 @@
+.search-overlay
+    @extend .onboarding-overlay
+    padding: 20px
+    @include breakpoint(tablet, up)
+        padding-top: 56px
+    &.active
+        display: block
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+    .container
+        padding-left: 0
+        padding-right: 0
+        @include breakpoint(tablet, up)
+            padding-left: inherit
+            padding-right: inherit
+    &__close
+        text-align: right
+    &__icon-close
+        cursor: pointer
+    &__serch-content
+        margin-top: 64px
+        @include breakpoint(desktop, up)
+            padding: 0 100px
+    &__input
+        width: 100%
+        border: none
+        background: transparent
+        padding: 0 32px 11px 0
+        color: $gold
+        font-size: 22px
+        line-height: 25px
+        font-weight: 300
+        border-bottom: 1px solid $secondary-gray
+        position: relative
+        &::placeholder
+            color: $gold
+        @include breakpoint(desktop, up)
+            font-size: 52px
+            padding-right: 40px
+    &__form
+        position: relative
+    &__submit
+        position: absolute
+        top: 0
+        right: 0
+        border: none
+        background: transparent
+        font-size: 20px
+        color: $white
+        @include breakpoint(desktop, up)
+            font-size: 27px
+            top: 23px
+
+.recent
+    font-size: 18px
+    line-height: 25px
+    margin-top: 24px
+    @include breakpoint(desktop, up)
+        margin-top: 33px
+        font-size: 20px
+    &__title
+        font-weight: 800
+        color: #9A9A9A
+    &__list
+        margin-top: 20px
+
+    &__item
+        padding-bottom: 1rem
