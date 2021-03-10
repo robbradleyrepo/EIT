@@ -16,18 +16,30 @@
     
     &__slider-box      
         display: flex
-        overflow: auto
-        padding-bottom: 15px
+        // height: 90px; /* 40px - more place for scrollbar, is hidden under parent box */
+        // padding: 5px;
+        // white-space: nowrap;
+        // overflow-x: scroll;
+        // overflow-y: hidden;
+        // -webkit-overflow-scrolling: touch;
+
         padding-right: 50px
+        padding-bottom: 15px
         scrollbar-width: none
-        &:-webkit-scrollbar
-            display: none
 
      
+        // white-space: nowrap
+        overflow-y: hidden
+        overflow-x: scroll
+        -webkit-overflow-scrolling: touch
+        &::-webkit-scrollbar 
+            display: none
+        
  
     &__slider-scroll
         display: flex
         min-height: min-content
+
 
     &__slide
         position: relative
@@ -58,6 +70,7 @@
         width: 100%
         height: 100%
         opacity: .8
+
 
     &__slidefront 
         display: flex
@@ -110,7 +123,11 @@
             font-size: 42px
 
     &__slidedesc
-        display: none
+        visibility: hidden
+        opacity: 0
+        transition: visibility 0s, opacity .5s linear
+
+
         @include breakpoint(tablet, up)
             font-size: 18px
             font-weight: 300
@@ -120,6 +137,7 @@
             -webkit-line-clamp: 4 /* number of lines to show */
             -webkit-box-orient: vertical
             visibility: hidden
+
 
     &__slidefooter
         display: flex
@@ -159,11 +177,15 @@
 
 .article__slidefront:hover  .article__slidedesc
     visibility: visible
+    opacity: 1
+
 
 
 
 .article__slidefront:hover + .article__slideback
     webkit-filter: blur(4px)
     filter: blur(4px)
+    transition: all .5s
+
 
   
