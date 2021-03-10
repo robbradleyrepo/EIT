@@ -1,8 +1,116 @@
-.carousel
-    width: 100%
+// .carousel
+//     width: 100%
+//     background: url(../../../images/components/banners/defult-back.png) no-repeat
+//     background-size: cover
+//     height: 500px
+    
+//     &__slidefront
+//         display: flex
+//         flex: 1
+//         -webkit-flex: 1
+//         position: absolute 
+//         z-index: 10
+//         left: 0
+//         top: 0
+//         padding: 15px
+//         width: 65%
+//         height: 100%
+//         flex-direction: column
+//         border-radius: 15px
+//         display: none
+
+//     &__slideback
+//         display: flex
+//         flex: 1
+//         -webkit-flex: 1
+//         position: absolute 
+//         z-index: 9
+//         left: 0
+//         top: 0
+//         width: 100%
+//         height: 100%
+//         border-radius: 15px
+//         object-fit: cover
+
+
+
+
+
+// .flickity-button
+//     display: none !important
+//     @include breakpoint(desktop, up)
+//         display: block!important
+
+// .gallery 
+//     outline: none
+//     padding: 55px
+
+    
+// .flickity-viewport
+//     overflow: visible !important
+
+// .gallery-cell 
+//     width: 34%
+//     height: 380px
+//     background: #8C8
+//     counter-increment: gallery-cell
+//     border-radius: 15px
+//     opacity: .7
+//     cursor: pointer
+    
+
+// .gallery-cell.is-selected 
+//     width: 45%
+//     // height: 449px
+//     z-index: 99
+//     -webkit-transform: scale(1.4, 1.2)
+//     -ms-transform: scale(1.4, 1.2)
+//     transform: scale(1.4, 1.2)
+//     opacity: .8
+//     &:hover 
+//         opacity: 1
+
+// .gallery-cell.is-selected .carousel__slidefront
+//     display: flex
+
+
+// .flickity-page-dots
+//     &:marker 
+//         display: none    
+
+// .flickity-page-dots .dot 
+//     width: 12px
+//     height: 12px
+//     opacity: 1
+//     background: transparent
+//     border: 2px solid white
+
+// .flickity-page-dots .dot.is-selected 
+//     background: white
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.carousel-box
     background: url(../../../images/components/banners/defult-back.png) no-repeat
-  
     background-size: cover
+    padding: 70px 30px
+    overflow: hidden
+
+
+.carousel 
+    
+
 
     &__slidefront
         display: flex
@@ -19,10 +127,10 @@
         border-radius: 15px
         display: none
 
+
+    &__slide
+        // position: relative
     &__slideback
-        display: flex
-        flex: 1
-        -webkit-flex: 1
         position: absolute 
         z-index: 9
         left: 0
@@ -30,9 +138,7 @@
         width: 100%
         height: 100%
         border-radius: 15px
-
-
-
+        object-fit: cover
     &__vidicon
         background: url(../../../images/components/banners/btn-video.svg) no-repeat
         width: 42px
@@ -40,58 +146,90 @@
         background-size: contain
 
 
+    &__slidefooter
+        display: flex
+        align-items: center
+        margin-top: 50px
 
 
-.flickity-button
-    display: none !important
-.gallery 
-    outline: none
-    padding: 70px
-    overflow: hidden
+.carousel-cell 
+    width: 85%
+    height: 429px
+    margin-right: 10px
+    // background: #8C8
+    border-radius: 15px
+    cursor: pointer
+    @include breakpoint(tablet, up)
+        width: 75%
 
-.gallery-cell 
-  width: 32%
-  height: 325px
-  background: #8C8
-  counter-increment: gallery-cell
-  border-radius: 15px
-  opacity: .7
+    @include breakpoint(desktop, up)
+        width: 65%
 
-.gallery-cell.is-selected 
-    width: 45%
-    // height: 449px
+    @include breakpoint(desktop-large, up)
+        width: 60%
+
+
+.carousel-cell.is-selected 
+    // width: 45%
     z-index: 99
     -webkit-transform: scale(1.4, 1.2)
     -ms-transform: scale(1.4, 1.2)
     transform: scale(1.4, 1.2)
-    opacity: .8
+    opacity: .9
     &:hover 
         opacity: 1
+        .carousel__vidicon
+            background: url(../../../images/components/banners/btn-video-active.svg) no-repeat
+            width: 42px
+            height: 42px
+            background-size: contain
 
-.gallery-cell.is-selected .carousel__slidefront
+.carousel-cell.is-selected .carousel__slidefront
     display: flex
-    //  -webkit-transform: scale(.6, .8)
-    // -ms-transform: scale(.6, .8)
-    // transform: scale(.6, .8)
 
-    /* position dots in carousel */
-.flickity-page-dots 
-  display: none
 
-.flickity-page-dots
-    &:marker 
-        display: none    
-/* white circles */
-.flickity-page-dots .dot 
-    width: 12px
-    height: 12px
-    opacity: 1
-    background: transparent
-    border: 2px solid white
-
-/* fill-in selected dot */
 .flickity-page-dots .dot.is-selected 
-    background: white
+    background: $gold
+
+.flickity-page-dots .dot
+    background: $white
+    opacity: 1
+
+
+  
+.flickity-viewport
+    overflow: visible
+    border-radius: 15px
+.flickity-prev-next-button.next 
+    right: -100px
+
+.flickity-prev-next-button.previous
+    left: -100px
+
+.flickity-prev-next-button 
+    width: 170px
+    height: 170px
+    background: none !important
+    color: $white !important
+    opacity: 0
+    transition: visibility 0s, opacity .5s linear
+    display: none
+    @include breakpoint(tablet, up)
+        display: block
+    &:hover
+        opacity: 1
+        
+.flickity-page-dots 
+    display: block
+    position: relative
+    bottom: -55px
+
+    marg
+    @include breakpoint(tablet, up)
+        display: none
+
+.flickity-button-icon  path 
+    stroke-width: 1
 
 .carousel .article__writerphoto
     width: 40px
@@ -104,8 +242,5 @@
     
 
 
-.carousel .article__slidefooter
-    margin-top: 20px
-    justify-content: flex-start
 
-  
+

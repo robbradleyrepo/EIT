@@ -38,7 +38,9 @@ function scripts() {
 		'app/js/*.js',
 		'!app/js/*.min.js',
 		'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js', // import fancybox
-		'node_modules/bootstrap/js/dist/modal.js' // import bootstrap modal
+		'node_modules/bootstrap/js/dist/modal.js', // import bootstrap modal
+		'node_modules/flickity/dist/flickity.pkgd.js' // import flickity modal for slider
+
 	], { sourcemaps: true })
 		.pipe(webpack({
 			mode: 'production',

@@ -166,6 +166,8 @@
 
     &__btn
         display: none
+        @include breakpoint(desktop, up)
+            min-width: 245px
         @include breakpoint(tablet, up)
             display: inline-block
 .btn-resp 
