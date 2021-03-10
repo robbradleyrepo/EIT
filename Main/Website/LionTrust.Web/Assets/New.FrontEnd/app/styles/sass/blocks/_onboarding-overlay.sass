@@ -1,6 +1,6 @@
 .onboarding-overlay
     z-index: 100
-    background-image: url('../../../images/components/header/bg-desktop.svg')
+    background-image: url('../images/components/header/bg-desktop.svg')
     background-repeat: no-repeat
     background-size: cover
     height: 100vh
@@ -25,9 +25,13 @@
             letter-spacing: 1.2px
     &__tab
         visibility: hidden
+        opacity: 0
         height: 0
+        transition: opacity 1s ease-out
         &.visible
             visibility: visible
+            opacity: 1
+            height: auto
     &__logo
         text-align: center
     &__hint
