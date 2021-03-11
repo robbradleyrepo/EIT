@@ -1,6 +1,6 @@
 .search-page
-    padding-top: 20px
-    padding-bottom: 20px
+    padding-top: 66px
+    padding-bottom: 65px
     color: $black
 
 .search-filter
@@ -32,9 +32,12 @@
 
 .search-item
     margin-bottom: 30px
+    @include breakpoint(desktop, up)
+        margin-bottom: 50px
     &__header
         display: flex
         align-items: center
+        margin-bottom: 7px
     &__title
         @extend h3
         margin: 0

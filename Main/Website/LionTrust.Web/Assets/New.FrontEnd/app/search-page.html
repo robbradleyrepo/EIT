@@ -12,7 +12,7 @@
 
 <main class="container search-page">
     <div class="row">
-        <div class="col-lg-8">
+        <div class="col-lg-7">
             <div class="search-filter">
                 <button class="btn search-filter__btn active">
                     All Results
@@ -106,21 +106,33 @@
                         21st February 2021
                     </div>
                     <div class="search-item__footer">
-                        <div class="search-item__author search-item__footer-item">
-                            <img src="images/components/search-page/David-Roberts-Liontrust@2x.png" alt="David-Roberts-Liontrust" class="search-item__author-img">
-                             David Roberts
+                        <div class="search-item__tag search-item__footer-item">
+                            <i class="icon-file"></i> Factsheet
                         </div>
                         <div class="search-item__tag search-item__footer-item">
-                            <i class="icon-clock"></i> The Global Fixed Income team
+                            <i class="icon-team"></i> The Global Fixed Income team
                         </div>
                     </div>
                 </div>            
             </div>
-            <div>
-                pagination should be here
-            </div>
+            
+            <nav class="pagination">
+                <a href="#" class="pagination__step"><i class="icon-arrow-left"></i> Previous</a>
+                <ul class="pagination__list">
+                    <li class="pagination__item"><a href="#" class="pagination__link pagination__link_steps">...</a></li>
+                    <li class="pagination__item"><a href="#" class="pagination__link active">1</a></li>
+                    <li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
+                    <li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
+                    <li class="pagination__item"><a href="#" class="pagination__link">4</a></li>
+                    <li class="pagination__item"><a href="#" class="pagination__link">5</a></li>
+                    <li class="pagination__item"><a href="#" class="pagination__link">6</a></li>
+                    <li class="pagination__item"><a href="#" class="pagination__link">7</a></li>
+                    <li class="pagination__item"><a href="#" class="pagination__link pagination__link_steps">...</a></li>
+                </ul>
+                <a href="#" class="pagination__step pagination__step_next"><i class="icon-arrow-right"></i> Next</a>
+            </nav>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-5">
             <aside>Related Articles</aside>
         </div>
     </div>
