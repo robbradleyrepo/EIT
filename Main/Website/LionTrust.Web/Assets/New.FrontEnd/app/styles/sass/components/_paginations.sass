@@ -5,14 +5,14 @@
     display: flex
     flex-wrap: wrap
     justify-content: space-between
-    @include breakpoint(desktop, up)        
+    @include breakpoint(desktop-large, up)        
         align-items: center
         justify-content: start
     &__list
         order: 1
         display: flex
         margin: 0 auto
-        @include breakpoint(desktop, up)
+        @include breakpoint(desktop-large, up)
             order: 0
             margin: 0 10px
     &__step
@@ -24,7 +24,7 @@
             text-align: end
         &:hover
             color: $primary
-        @include breakpoint(desktop, up)
+        @include breakpoint(desktop-large, up)
             width: auto
             margin-bottom: 0
     &__link
