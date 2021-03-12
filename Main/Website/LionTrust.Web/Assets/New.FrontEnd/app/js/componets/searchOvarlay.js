@@ -4,7 +4,7 @@ export default () => {
     overlay.removeClass("active");
   });
 
-  $(".header-navbar__btn-search").on("click", () => {
+  $(".header-navbar__btn-search, .search-header__search-header-mobile").on("click", () => {
     overlay.addClass("active");
   });
 };

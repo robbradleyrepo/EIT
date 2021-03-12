@@ -23,15 +23,6 @@
                             <i class="icon-search"></i> Search again
                         </button>
                     </div>
-                    <div class="search-header__desktop">
-                        <form class="search-form">
-                            <input type="text" class="search-form__input" placeholder="25 results for “Bonds”">
-                            <button class="search-form__submit" type="submit">
-                                <i class="icon-search"></i>
-                            </button>
-                        </form>
-                    </div>
-
                 </div>
             </div>
         </div>
@@ -40,112 +31,94 @@
 
 </header>
 
-<main class="container search-page">
+<main class="container search-page" id="result-list-app">
     <div class="row">
         <div class="col-lg-7">
+            <div class="search-header__desktop">
+                <form class="search-form">
+                    <input  type="text" class="search-form__input" placeholder="25 results for “Bonds”">
+                    <button class="search-form__submit" type="submit">
+                        <i class="icon-search"></i>
+                    </button>                    
+                </form>
+            </div>
             <div class="search-filter">
-                <button class="btn search-filter__btn active">
-                    All Results
-                </button>
-                <button class="btn search-filter__btn">
-                    Funds
-                </button>
-                <button class="btn search-filter__btn">
-                    Fund Managers
-                </button>
-                <button class="btn search-filter__btn">
-                    Articles
-                </button>
-                <button class="btn search-filter__btn">
-                    Documents
-                </button>
-                <button class="btn search-filter__btn">
-                    Pages
-                </button>
+                <label>
+                    <input type="checkbox" class="search-filter__checkbox" name="filter">
+                    <span class="btn search-filter__btn">
+                        All Results
+                    </span>                    
+                </label>
+                <label>
+                    <input type="checkbox" class="search-filter__checkbox" name="filter">
+                    <span class="btn search-filter__btn">
+                        Funds
+                    </span>                    
+                </label>
+                <label>
+                    <input type="checkbox" class="search-filter__checkbox" name="filter">
+                    <span class="btn search-filter__btn">
+                        Funds Managers
+                    </span>                    
+                </label>
+                <label>
+                    <input type="checkbox" class="search-filter__checkbox" name="filter">
+                    <span class="btn search-filter__btn">
+                        Articles
+                    </span>                    
+                </label>
+                <label>
+                    <input type="checkbox" class="search-filter__checkbox" name="filter">
+                    <span class="btn search-filter__btn">
+                        Documents
+                    </span>                    
+                </label>
+                <label>
+                    <input type="checkbox" class="search-filter__checkbox" name="filter">
+                    <span class="btn search-filter__btn">
+                        Pages
+                    </span>                    
+                </label>
             </div>
             <div class="search-page__items">
-                <div class="search-item">
+                <div v-for="(item, i) in results.items" class="search-item" :key="i">
                     <div class="search-item__header">
-                        <a href="#" class="search-item__title">GF Absolute Return Bond Fund</a>
+                        <a :href="item.link" class="search-item__title">{{item.title}}</a>
                         <div class="badge search-item__badge">
-                            Fund
+                            {{item.type}}
                         </div>
                     </div>
-                    <a href="#">
+                    <a :href="item.link">
                         <p class="search-item__text">
-                            The Fund has been managed since launch in June 2018 by David Roberts, Phil Milburn and
-                            Donald
-                            Phillips. The Fund aims to generate positive absolute…
+                            {{item.bodyText}}
                         </p>
                     </a>
                     <div class="search-item__date">
                         <i class="icon-clock"></i>
-                        21st February 2021
+                        {{item.date}}
                     </div>
-                    <div class="search-item__footer">
+                    <div v-if="item.type === 'Article'" class="search-item__footer">
                         <div class="search-item__author search-item__footer-item">
-                            <img src="images/components/search-page/David-Roberts-Liontrust@2x.png"
-                                alt="David-Roberts-Liontrust" class="search-item__author-img">
-                            David Roberts
+                            <img :src="item.footer.author.imageSrc"
+                                :alt="item.footer.author.name" class="search-item__author-img">
+                            {{item.footer.author.name}}
                         </div>
                         <div class="search-item__tag search-item__footer-item">
-                            <i class="icon-clock"></i> The Global Fixed Income team
+                            <a :href="item.footer.team.link">
+                                <i class="icon-team"></i> {{item.footer.team.name}}
+                            </a>                 
                         </div>
                     </div>
-                </div>
-                <div class="search-item">
-                    <div class="search-item__header">
-                        <a href="#" class="search-item__title">GF Absolute Return Bond Fund</a>
-                        <div class="badge search-item__badge">
-                            Fund
-                        </div>
-                    </div>
-                    <a href="#">
-                        <p class="search-item__text">
-                            The Fund has been managed since launch in June 2018 by David Roberts, Phil Milburn and
-                            Donald
-                            Phillips. The Fund aims to generate positive absolute…
-                        </p>
-                    </a>
-                    <div class="search-item__date">
-                        <i class="icon-clock"></i>
-                        21st February 2021
-                    </div>
-                    <div class="search-item__footer">
+                    <div v-if="item.type === 'Fund'" class="search-item__footer">
                         <div class="search-item__author search-item__footer-item">
-                            <img src="images/components/search-page/David-Roberts-Liontrust@2x.png"
-                                alt="David-Roberts-Liontrust" class="search-item__author-img">
-                            David Roberts
+                            <div class="search-item__tag search-item__footer-item">
+                                <a :href="item.footer.factsheet.link"><i class="icon-file"></i> Factsheet</a>
+                            </div>
                         </div>
                         <div class="search-item__tag search-item__footer-item">
-                            <i class="icon-clock"></i> The Global Fixed Income team
-                        </div>
-                    </div>
-                </div>
-                <div class="search-item">
-                    <div class="search-item__header">
-                        <a href="#" class="search-item__title">GF Absolute Return Bond Fund</a>
-                        <div class="badge search-item__badge">
-                            Fund
-                        </div>
-                    </div>
-                    <a href="#">
-                        <p class="search-item__text">
-                            The Fund has been managed since launch in June 2018 by David Roberts, Phil Milburn and
-                            Donald
-                            Phillips. The Fund aims to generate positive absolute…
-                        </p>
-                    </a>
-                    <div class="search-item__date">
-                        <i class="icon-clock"></i>
-                        21st February 2021
-                    </div>
-                    <div class="search-item__footer">
-                        <div class="search-item__tag search-item__footer-item">
-                            <i class="icon-file"></i> Factsheet
-                        </div>
-                        <div class="search-item__tag search-item__footer-item">
-                            <i class="icon-team"></i> The Global Fixed Income team
+                            <a :href="item.footer.team.link">
+                                <i class="icon-team"></i> {{item.footer.team.name}}
+                            </a> 
                         </div>
                     </div>
                 </div>

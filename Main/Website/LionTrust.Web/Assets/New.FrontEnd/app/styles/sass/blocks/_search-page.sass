@@ -9,7 +9,15 @@
     @include breakpoint(tablet, up)
         white-space: initial
         overflow-x: initial
-        margin-bottom: 20px
+        margin-bottom: 20px        
+        @include breakpoint(desktop, up)
+            margin-top: 230px
+    &__checkbox
+        display: none
+        &:checked ~ .btn
+            background: $primary
+            color: $white
+            border-color: $primary
     &__btn
         color: $black
         text-transform: inherit
@@ -26,10 +34,10 @@
             background: $primary
             color: $white
             border-color: $primary
-        &.active
-            background: $primary
-            color: $white
-            border-color: $primary
+        // &.active
+        //     background: $primary
+        //     color: $white
+        //     border-color: $primary
 
 .search-item
     margin-bottom: 30px
@@ -105,14 +113,14 @@
     padding-top: 35px
     @include breakpoint(desktop, up)
         align-items: start
-        padding-top: 120px
-        padding-bottom: 100px
+        padding-top: 140px
+        min-height: 420px
     &__title
         font-weight: bold
         letter-spacing: 0.7px
         margin-bottom: 12px
     &__mobile
-        text-align: center        
+        text-align: center
         @include breakpoint(desktop, up)
             display: none
     &__desktop
@@ -120,6 +128,7 @@
         @include breakpoint(desktop, up)
             display: block
             width: 100%
+            margin-top: -310px
     &__mob-result
         font-weight: 300
         font-size: 42px
