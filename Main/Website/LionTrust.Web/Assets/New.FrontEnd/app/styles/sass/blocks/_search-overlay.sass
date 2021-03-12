@@ -24,6 +24,9 @@
         margin-top: 64px
         @include breakpoint(desktop, up)
             padding: 0 100px
+
+.search-form
+    position: relative
     &__input
         width: 100%
         border: none
@@ -39,9 +42,7 @@
             color: $gold
         @include breakpoint(desktop, up)
             font-size: 52px
-            padding-right: 40px
-    &__form
-        position: relative
+            padding-right: 40px    
     &__submit
         position: absolute
         top: 0

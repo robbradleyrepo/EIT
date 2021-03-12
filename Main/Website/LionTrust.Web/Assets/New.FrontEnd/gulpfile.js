@@ -37,6 +37,7 @@ function scripts() {
 	return src([
 		'app/js/*.js',
 		'!app/js/*.min.js',
+		'!app/js/search-page.js',
 		'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js', // import fancybox
 		'node_modules/jquery/dist/jquery.min.js', // import jquery 
 		'node_modules/popper.js/dist/umd/popper.min.js', // import jquery 

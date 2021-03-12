@@ -1,0 +1,169 @@
+<!--#set var="title" value="Search page" -->
+<!--#include virtual="/components/head.html" -->
+<header class="header">
+    <section class="container">
+        <!--#include virtual="/components/GC001-Header.html" -->
+    </section>
+    <!--#include virtual="/components/GC002-Menu.html" -->
+
+
+    <!-- Search Header -->
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="search-header">
+                    <div class="search-header__title">
+                        Search results
+                    </div>
+                    <div class="search-header__mobile">
+                        <span class="search-header__mob-result">
+                            25 results for “Bonds”
+                        </span>
+                        <button class="btn search-header__search-header-mobile">
+                            <i class="icon-search"></i> Search again
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</header>
+
+<main class="container search-page" id="result-list-app">
+    <div class="row">
+        <div class="col-lg-7">
+            <div class="search-header__desktop">
+                <form class="search-form">
+                    <input  type="text" class="search-form__input" placeholder="25 results for “Bonds”">
+                    <button class="search-form__submit" type="submit">
+                        <i class="icon-search"></i>
+                    </button>                    
+                </form>
+            </div>
+            <div class="search-filter">
+                <label>
+                    <input type="checkbox" class="search-filter__checkbox" name="filter">
+                    <span class="btn search-filter__btn">
+                        All Results
+                    </span>                    
+                </label>
+                <label>
+                    <input type="checkbox" class="search-filter__checkbox" name="filter">
+                    <span class="btn search-filter__btn">
+                        Funds
+                    </span>                    
+                </label>
+                <label>
+                    <input type="checkbox" class="search-filter__checkbox" name="filter">
+                    <span class="btn search-filter__btn">
+                        Funds Managers
+                    </span>                    
+                </label>
+                <label>
+                    <input type="checkbox" class="search-filter__checkbox" name="filter">
+                    <span class="btn search-filter__btn">
+                        Articles
+                    </span>                    
+                </label>
+                <label>
+                    <input type="checkbox" class="search-filter__checkbox" name="filter">
+                    <span class="btn search-filter__btn">
+                        Documents
+                    </span>                    
+                </label>
+                <label>
+                    <input type="checkbox" class="search-filter__checkbox" name="filter">
+                    <span class="btn search-filter__btn">
+                        Pages
+                    </span>                    
+                </label>
+            </div>
+            <div class="search-page__items">
+                <div v-for="(item, i) in results.items" class="search-item" :key="i">
+                    <div class="search-item__header">
+                        <a :href="item.link" class="search-item__title">{{item.title}}</a>
+                        <div class="badge search-item__badge">
+                            {{item.type}}
+                        </div>
+                    </div>
+                    <a :href="item.link">
+                        <p class="search-item__text">
+                            {{item.bodyText}}
+                        </p>
+                    </a>
+                    <div class="search-item__date">
+                        <i class="icon-clock"></i>
+                        {{item.date}}
+                    </div>
+                    <div v-if="item.type === 'Article'" class="search-item__footer">
+                        <div class="search-item__author search-item__footer-item">
+                            <img :src="item.footer.author.imageSrc"
+                                :alt="item.footer.author.name" class="search-item__author-img">
+                            {{item.footer.author.name}}
+                        </div>
+                        <div class="search-item__tag search-item__footer-item">
+                            <a :href="item.footer.team.link">
+                                <i class="icon-team"></i> {{item.footer.team.name}}
+                            </a>                 
+                        </div>
+                    </div>
+                    <div v-if="item.type === 'Fund'" class="search-item__footer">
+                        <div class="search-item__author search-item__footer-item">
+                            <div class="search-item__tag search-item__footer-item">
+                                <a :href="item.footer.factsheet.link"><i class="icon-file"></i> Factsheet</a>
+                            </div>
+                        </div>
+                        <div class="search-item__tag search-item__footer-item">
+                            <a :href="item.footer.team.link">
+                                <i class="icon-team"></i> {{item.footer.team.name}}
+                            </a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="pagination">
+                <a href="#" class="pagination__step"><i class="icon-arrow-left"></i> Previous</a>
+                <ul class="pagination__list">
+                    <li class="pagination__item"><a href="#" class="pagination__link pagination__link_steps">...</a>
+                    </li>
+                    <li class="pagination__item"><a href="#" class="pagination__link active">1</a></li>
+                    <li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
+                    <li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
+                    <li class="pagination__item"><a href="#" class="pagination__link">4</a></li>
+                    <li class="pagination__item"><a href="#" class="pagination__link">5</a></li>
+                    <li class="pagination__item"><a href="#" class="pagination__link">6</a></li>
+                    <li class="pagination__item"><a href="#" class="pagination__link">7</a></li>
+                    <li class="pagination__item"><a href="#" class="pagination__link pagination__link_steps">...</a>
+                    </li>
+                </ul>
+                <a href="#" class="pagination__step pagination__step_next"><i class="icon-arrow-right"></i> Next</a>
+            </nav>
+        </div>
+        <div class="offset-lg-1 col-lg-4">
+            <aside>
+                <div class="related-article">
+                    <h2 class="related-article__title">
+                        Related articles
+                    </h2>
+                    <ul class="related-article__list">
+                        <li class="related-article__item"><a href="#" class="related-article__link">10 bond ideas for
+                                2021</a></li>
+                        <li class="related-article__item"><a href="#" class="related-article__link">Why own bonds in
+                                2021?</a></li>
+                        <li class="related-article__item"><a href="#" class="related-article__link">12 myths of
+                                Bondmas</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+</main>
+
+
+<!--#include virtual="/components/LDC-190-Footer.html" -->
+<!--#include virtual="/components/GC006-Search-Overlay.html" -->
+<!--#include virtual="/components/footer.html" -->
