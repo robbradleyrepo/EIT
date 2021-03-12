@@ -16,19 +16,9 @@
     
     &__slider-box      
         display: flex
-        // height: 90px; /* 40px - more place for scrollbar, is hidden under parent box */
-        // padding: 5px;
-        // white-space: nowrap;
-        // overflow-x: scroll;
-        // overflow-y: hidden;
-        // -webkit-overflow-scrolling: touch;
-
         padding-right: 50px
         padding-bottom: 15px
         scrollbar-width: none
-
-     
-        // white-space: nowrap
         overflow-y: hidden
         overflow-x: scroll
         -webkit-overflow-scrolling: touch
@@ -55,9 +45,7 @@
         @include breakpoint(tablet, up)
             width: 406px
             height: 406px 
-        @include breakpoint(desktop, up)
-            // font-size: 12px
-            // min-width: 200px
+
 
     &__slideback 
         display: flex

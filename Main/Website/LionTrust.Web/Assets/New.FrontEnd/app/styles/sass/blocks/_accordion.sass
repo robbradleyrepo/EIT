@@ -1,0 +1,91 @@
+.accordion
+    background: $black
+    position: relative
+    padding: 20px 0
+
+    &__card
+        background: none
+        width: 100%
+        position: inherit
+        @include breakpoint(tablet, up)
+            width: 50%
+
+    &__link
+        color: $gold!important
+        font-weight: 300
+        font-size: 26px
+        padding: 10px 0
+        position: relative
+        border-bottom: 1px solid #414855 
+        align-items: center
+        display: flex
+        justify-content: space-between
+        
+    &__link:before 
+        position: absolute
+        display: block
+        content: ''
+        border-bottom: 1px solid $primary
+        bottom: -1px
+        width: 60%
+        box-sizing: border-box
+        -moz-box-sizing: border-box
+        -webkit-box-sizing: border-box
+
+    &__link.collapsed
+        border-bottom: 1px solid #414855 
+
+    &__link.collapsed:before
+        border: none
+
+
+    &__plus, &__minus
+        color: $white
+        font-size: 19px
+
+    &__minus
+        font-size: 33px
+
+    &__link.collapsed .accordion__minus
+        display: none
+
+    &__link .accordion__minus
+        display: block
+
+    &__link.collapsed .accordion__plus
+        display: block
+
+    &__link .accordion__plus
+        display: none
+
+    &__smartcard
+        position: relative
+        width: 100%
+        padding: 20px
+        display: flex
+        height: 100%
+        justify-content: center
+        align-items: center
+        cursor: pointer
+        &:hover .carousel__vidicon
+            background: url(../../../images/components/banners/btn-video-active.svg) no-repeat
+            width: 100px
+            height: 100px
+            background-size: contain
+        @include breakpoint(tablet, up)
+            position: absolute
+            width: 50%
+            right: 0
+            top: 0
+            padding: 40px 20px
+    &__smartimg
+        width: 100%
+        height: 100%
+        object-fit: cover
+        border-radius: 15px
+        opacity: .9
+
+    &__vidicon
+        position: absolute
+        width: 100px !important
+        height: 100px !important
