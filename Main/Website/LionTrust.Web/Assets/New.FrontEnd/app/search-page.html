@@ -36,7 +36,7 @@
         <div class="col-lg-7">
             <div class="search-header__desktop">
                 <form class="search-form">
-                    <input  type="text" class="search-form__input" placeholder="25 results for “Bonds”">
+                    <input v-model="inputText"  type="text" class="search-form__input" placeholder="25 results for “Bonds”">
                     <button class="search-form__submit" type="submit">
                         <i class="icon-search"></i>
                     </button>                    
@@ -44,44 +44,21 @@
             </div>
             <div class="search-filter">
                 <label>
-                    <input type="checkbox" class="search-filter__checkbox" name="filter">
+                    <input v-model="allResults" type="checkbox" class="search-filter__checkbox" name="filter">
                     <span class="btn search-filter__btn">
                         All Results
                     </span>                    
                 </label>
-                <label>
-                    <input type="checkbox" class="search-filter__checkbox" name="filter">
+                <label v-for="(label, i) in labels" @click="labelClick">
+                    <input type="checkbox" v-model="label.checked" class="search-filter__checkbox" name="filter">
                     <span class="btn search-filter__btn">
-                        Funds
+                        {{label.title}}
                     </span>                    
                 </label>
-                <label>
-                    <input type="checkbox" class="search-filter__checkbox" name="filter">
-                    <span class="btn search-filter__btn">
-                        Funds Managers
-                    </span>                    
-                </label>
-                <label>
-                    <input type="checkbox" class="search-filter__checkbox" name="filter">
-                    <span class="btn search-filter__btn">
-                        Articles
-                    </span>                    
-                </label>
-                <label>
-                    <input type="checkbox" class="search-filter__checkbox" name="filter">
-                    <span class="btn search-filter__btn">
-                        Documents
-                    </span>                    
-                </label>
-                <label>
-                    <input type="checkbox" class="search-filter__checkbox" name="filter">
-                    <span class="btn search-filter__btn">
-                        Pages
-                    </span>                    
-                </label>
+                
             </div>
             <div class="search-page__items">
-                <div v-for="(item, i) in results.items" class="search-item" :key="i">
+                <div v-for="(item, i) in getSearchResult" class="search-item" :key="i">
                     <div class="search-item__header">
                         <a :href="item.link" class="search-item__title">{{item.title}}</a>
                         <div class="badge search-item__badge">
