@@ -9,6 +9,8 @@
 @import 'node_modules/bootstrap/scss/bootstrap-reboot' // Bootstrap Reboot collection
 @import 'node_modules/bootstrap/scss/bootstrap-grid' // Bootstrap Grid
 @import 'node_modules/bootstrap/scss/modal' // Bootstrap Grid
+@import 'node_modules/bootstrap/dist/css/bootstrap.min' // Bootstrap Grid
+
 
 @import 'node_modules/flickity/dist/flickity' // flickity for slider
 
@@ -69,3 +71,20 @@ a
 	line-height: 17px
 	i
 		font-size: 10px
+
+
+.txtlimit
+	overflow: hidden
+	text-overflow: ellipsis
+	display: -webkit-box
+	-webkit-line-clamp: 1 /* number of lines to show */
+	-webkit-box-orient: vertical
+	
+.twoline
+	-webkit-line-clamp: 2 /* number of lines to show */
+.threeline
+	-webkit-line-clamp: 3 /* number of lines to show */
+.fourline
+	-webkit-line-clamp: 4 /* number of lines to show */
+.fiveline
+	-webkit-line-clamp: 5 /* number of lines to show */

@@ -1,0 +1,69 @@
+.fundcard
+    display: flex
+    flex-direction: column
+    > div
+        display: flex
+
+    &__top
+        background: $blue-bold
+        border-radius: 15px 15px 0 0
+        position: relative
+        height: 257px
+
+    &__topback
+        width: 100%
+        height: 100%
+        position: absolute
+        right: 0
+        top: 0
+        opacity: .8
+        z-index: 9
+    &__topbox
+        display: flex
+        width: 100%
+        height: 100%
+        position: absolute
+        left: 0
+        top: 0        
+        z-index: 10
+        flex-direction: column
+        padding: 15px
+
+
+    &__tophead  
+        display: flex  
+        align-items: center
+        margin-bottom: 10px
+    &__tophead-img
+        width: 39px
+        height: 39px
+        border-radius: 5em
+        object-fit: cover
+        margin-right: 10px
+    &__topteam
+        font-size: 12px
+        letter-spacing: 2.4px
+        font-weight: bold
+        text-align: left
+        color: $white
+    &__toptitle
+        color: $gold
+        font-size: 42px
+        font-weight: 300
+        text-align: left
+        margin-bottom: 10px
+    &__topfooter
+        position: absolute
+        bottom: 15px
+        display: flex
+        align-items: center
+        font-size: 12px
+        font-weight: normal
+    &__change
+        margin-left: 5px
+        font-weight: bold
+    &__bottom
+        min-height: 373px
+        background: $white
+        padding: 15px
+        border-radius: 0 0 15px 15px 
