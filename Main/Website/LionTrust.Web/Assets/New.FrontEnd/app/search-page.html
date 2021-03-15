@@ -35,7 +35,7 @@
     <div class="row">
         <div class="col-lg-7">
             <div class="search-header__desktop">
-                <form class="search-form">
+                <form class="search-form" @submit.prevent="submit">
                     <input v-model="inputText"  type="text" class="search-form__input" placeholder="25 results for “Bonds”">
                     <button class="search-form__submit" type="submit">
                         <i class="icon-search"></i>
