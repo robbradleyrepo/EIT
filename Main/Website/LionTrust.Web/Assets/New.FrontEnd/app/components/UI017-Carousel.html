@@ -2,11 +2,13 @@
     <div class="container">
         <div class="row">
 
-            <div class="carousel" data-flickity='{ "wrapAround": true,"draggable": true,"prevNextButtons": true,
-            "freeScroll": false, "selectedAttraction": 0.01,
-            "friction": 0.15}'>
-                <div class="carousel-cell">
-                    <div class="carousel__slide">
+             <!-- Swiper -->
+                <div class="swiper-container carousel">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+
+                        <img class="carousel__slideback" src="../images/components/banners/gallery.png" alt="">
+
                         <div class="carousel__slidefront">
                             <div class="article__slidehead">
                                 <img class="article__writerphoto" src="../images/components/banners/writer.jpeg"  alt="">
@@ -25,20 +27,16 @@
                            
                             <div class="carousel__slidefooter">
                                 <span class="article__time">WATCH NOW</span>
-                                <span class="carousel__vidicon"></span>    
+                                <span class="accordion__vid accordion__vidicon"></span>    
+                                <span class="accordion__vid accordion__vidicon-active"></span>      
                             </div>
     
                           
                         </div>
-                        
-                        
-                        <img class="carousel__slideback" src="../images/components/banners/gallery.png" alt=""> 
-
                     </div>
+                    <div class="swiper-slide">
+                        <img class="carousel__slideback" src="../images/components/banners/vid2.jpg" alt="">
 
-                </div>
-                <div class="carousel-cell">
-                    <div class="carousel__slide">
                         <div class="carousel__slidefront">
                             <div class="article__slidehead">
                                 <img class="article__writerphoto" src="../images/components/banners/writer.jpeg"  alt="">
@@ -57,17 +55,16 @@
                            
                             <div class="carousel__slidefooter">
                                 <span class="article__time">WATCH NOW</span>
-                                <span class="carousel__vidicon"></span>    
+                                <span class="accordion__vid accordion__vidicon"></span>    
+                                <span class="accordion__vid accordion__vidicon-active"></span>  
                             </div>
     
                           
                         </div>
-                        <img class="carousel__slideback" src="../images/components/banners/vid2.jpg" alt=""> 
-
                     </div>
-                </div>
-                <div class="carousel-cell">
-                    <div class="carousel__slide">
+                    <div class="swiper-slide">
+                        <img class="carousel__slideback" src="../images/components/banners/vid3.jpg" alt="">
+
                         <div class="carousel__slidefront">
                             <div class="article__slidehead">
                                 <img class="article__writerphoto" src="../images/components/banners/writer.jpeg"  alt="">
@@ -86,19 +83,26 @@
                            
                             <div class="carousel__slidefooter">
                                 <span class="article__time">WATCH NOW</span>
-                                <span class="carousel__vidicon"></span>    
+                                <span class="accordion__vid accordion__vidicon"></span>    
+                                <span class="accordion__vid accordion__vidicon-active"></span>    
                             </div>
     
                           
                         </div>
-                        <img class="carousel__slideback" src="../images/components/banners/vid3.jpg" alt=""> 
-
                     </div>
+        
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+
+                        <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
-               
+        
             </div>
+      
         </div>
-    </div>    
+    </div>
 </div>
-  
 

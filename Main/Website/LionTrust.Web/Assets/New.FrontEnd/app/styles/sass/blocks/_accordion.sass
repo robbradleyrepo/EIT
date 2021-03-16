@@ -27,7 +27,7 @@
         content: ''
         border-bottom: 1px solid $primary
         bottom: -1px
-        width: 60%
+        width: 100%
         box-sizing: border-box
         -moz-box-sizing: border-box
         -webkit-box-sizing: border-box
@@ -67,11 +67,11 @@
         justify-content: center
         align-items: center
         cursor: pointer
-        &:hover .carousel__vidicon
-            background: url(../../../images/components/banners/btn-video-active.svg) no-repeat
-            width: 100px
-            height: 100px
-            background-size: contain
+        &:hover .accordion__vidicon-active
+            opacity: 1
+        &:hover .accordion__vidicon
+            opacity: 0
+
         @include breakpoint(tablet, up)
             position: absolute
             width: 50%
@@ -84,8 +84,21 @@
         object-fit: cover
         border-radius: 15px
         opacity: .9
-
-    &__vidicon
+    &__vid
         position: absolute
-        width: 100px !important
-        height: 100px !important
+        width: 100px 
+        height: 100px 
+        -webkit-transition: opacity 400ms linear
+        -moz-transition: opacity 400ms linear
+        -o-transition: opacity 400ms linear
+        -ms-transition: opacity 400ms linear
+        transition: opacity 400ms linear
+    &__vidicon
+        background: url(../../../images/components/banners/btn-video.svg) no-repeat
+        background-size: contain
+        opacity: 1
+   
+    &__vidicon-active
+        background: url(../../../images/components/banners/btn-video-active.svg) no-repeat
+        opacity: 0
+        background-size: contain

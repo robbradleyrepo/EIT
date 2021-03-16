@@ -1,6 +1,19 @@
 .fundcard
     display: flex
     flex-direction: column
+    cursor: pointer
+    width: 310px
+    margin-right: 20px
+    @include breakpoint(tablet, up)
+        width: 350px
+        margin-right: 40px
+
+    @include breakpoint(desktop, up)
+        width: 400px
+
+    &:hover
+        i.animate-arrow
+            transform: translate(10px, 0)
     > div
         display: flex
 
@@ -8,7 +21,9 @@
         background: $blue-bold
         border-radius: 15px 15px 0 0
         position: relative
-        height: 257px
+        height: 160px
+        @include breakpoint(desktop, up)
+            height: 257px
 
     &__topback
         width: 100%
@@ -35,35 +50,83 @@
         align-items: center
         margin-bottom: 10px
     &__tophead-img
-        width: 39px
-        height: 39px
+        width: 20px
+        height: 20px
         border-radius: 5em
         object-fit: cover
         margin-right: 10px
+        @include breakpoint(desktop, up)
+            width: 39px
+            height: 39px
     &__topteam
-        font-size: 12px
+        font-size: 8px
         letter-spacing: 2.4px
         font-weight: bold
         text-align: left
         color: $white
+        @include breakpoint(desktop, up)
+            font-size: 12px
+
     &__toptitle
         color: $gold
-        font-size: 42px
+        font-size: 26px
         font-weight: 300
         text-align: left
         margin-bottom: 10px
+        @include breakpoint(desktop, up)
+            font-size: 42px
+
     &__topfooter
         position: absolute
         bottom: 15px
         display: flex
         align-items: center
-        font-size: 12px
+        font-size: 10px
         font-weight: normal
+        @include breakpoint(desktop, up)
+            font-size: 12px
+
     &__change
-        margin-left: 5px
+        margin: 0  5px
         font-weight: bold
+    &__arrow-up
+        color: $primary
+    &__arrow-down
+        color: $red
+
     &__bottom
-        min-height: 373px
+        min-height: 240px
         background: $white
         padding: 15px
         border-radius: 0 0 15px 15px 
+        flex-direction: column
+        justify-content: space-between
+        -webkit-line-clamp: 10 /* number of lines to show */
+
+        @include breakpoint(desktop, up)
+            min-height: 373px
+            -webkit-line-clamp: 8 /* number of lines to show */
+
+    &__bottomcontent
+        -webkit-line-clamp: 8 /* number of lines to show */
+        font-size: 16px
+        color: $secondary-gray
+
+        @include breakpoint(desktop, up)
+            -webkit-line-clamp: 10 /* number of lines to show */
+            font-size: 18px
+
+    &__bottomfooter
+        display: flex
+        align-items: center
+        color: $primary
+        letter-spacing: 2.4px
+        font-size: 12px
+        text-transform: uppercase
+        > i 
+            width: 16px
+            height: 13px
+            margin-left: 5px
+            transition: transform .5s ease-out
+
+               
