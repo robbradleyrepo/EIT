@@ -35,11 +35,12 @@
     <div class="row">
         <div class="col-lg-7">
             <div class="search-header__desktop">
-                <form class="search-form">
-                    <input v-model="inputText"  type="text" class="search-form__input" placeholder="25 results for “Bonds”">
+                <form class="search-form" @submit.prevent="submit">
+                    <input v-model="searchParams.queryText" type="text" class="search-form__input"
+                        :placeholder="`${amountResults} results for “${getQueryText}”`">
                     <button class="search-form__submit" type="submit">
                         <i class="icon-search"></i>
-                    </button>                    
+                    </button>
                 </form>
             </div>
             <div class="search-filter">
@@ -47,15 +48,15 @@
                     <input v-model="allResults" type="checkbox" class="search-filter__checkbox" name="filter">
                     <span class="btn search-filter__btn">
                         All Results
-                    </span>                    
+                    </span>
                 </label>
                 <label v-for="(label, i) in labels" @click="labelClick">
                     <input type="checkbox" v-model="label.checked" class="search-filter__checkbox" name="filter">
                     <span class="btn search-filter__btn">
                         {{label.title}}
-                    </span>                    
+                    </span>
                 </label>
-                
+
             </div>
             <div class="search-page__items">
                 <div v-for="(item, i) in getSearchResult" class="search-item" :key="i">
@@ -76,14 +77,14 @@
                     </div>
                     <div v-if="item.type === 'Article'" class="search-item__footer">
                         <div class="search-item__author search-item__footer-item">
-                            <img :src="item.footer.author.imageSrc"
-                                :alt="item.footer.author.name" class="search-item__author-img">
+                            <img :src="item.footer.author.imageSrc" :alt="item.footer.author.name"
+                                class="search-item__author-img">
                             {{item.footer.author.name}}
                         </div>
                         <div class="search-item__tag search-item__footer-item">
                             <a :href="item.footer.team.link">
                                 <i class="icon-team"></i> {{item.footer.team.name}}
-                            </a>                 
+                            </a>
                         </div>
                     </div>
                     <div v-if="item.type === 'Fund'" class="search-item__footer">
@@ -95,28 +96,33 @@
                         <div class="search-item__tag search-item__footer-item">
                             <a :href="item.footer.team.link">
                                 <i class="icon-team"></i> {{item.footer.team.name}}
-                            </a> 
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <nav class="pagination">
-                <a href="#" class="pagination__step"><i class="icon-arrow-left"></i> Previous</a>
+                <a href="#" @click.prevent="prevPage" class="pagination__step"><i class="icon-arrow-left"></i>
+                    Previous</a>
                 <ul class="pagination__list">
-                    <li class="pagination__item"><a href="#" class="pagination__link pagination__link_steps">...</a>
+                    <li class="pagination__item">
+                        <a @click.prevent="jumpPagesForward" v-if="showForwardPageBtn" href="#"
+                            class="pagination__link pagination__link_steps">...</a>
                     </li>
-                    <li class="pagination__item"><a href="#" class="pagination__link active">1</a></li>
-                    <li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
-                    <li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
-                    <li class="pagination__item"><a href="#" class="pagination__link">4</a></li>
-                    <li class="pagination__item"><a href="#" class="pagination__link">5</a></li>
-                    <li class="pagination__item"><a href="#" class="pagination__link">6</a></li>
-                    <li class="pagination__item"><a href="#" class="pagination__link">7</a></li>
-                    <li class="pagination__item"><a href="#" class="pagination__link pagination__link_steps">...</a>
+                    <li v-for="(page, i) in getPages" :key="i" class="pagination__item">
+                        <a @click.prevent="changePage(page)" href="#" class="pagination__link"
+                            :class="getPage === page ? 'active' : ''">
+                            {{page}}
+                        </a>
+                    </li>
+                    <li class="pagination__item">
+                        <a @click.prevent="jumpPagesNext" v-if="showNextPageBtn" href="#"
+                            class="pagination__link pagination__link_steps">...</a>
                     </li>
                 </ul>
-                <a href="#" class="pagination__step pagination__step_next"><i class="icon-arrow-right"></i> Next</a>
+                <a href="#" @click.prevent="nextPage" class="pagination__step pagination__step_next"><i
+                        class="icon-arrow-right"></i> Next</a>
             </nav>
         </div>
         <div class="offset-lg-1 col-lg-4">
