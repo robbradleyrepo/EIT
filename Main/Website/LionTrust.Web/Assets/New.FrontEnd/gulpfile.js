@@ -51,7 +51,12 @@ function scripts() {
 						exclude: /(node_modules)/,
 						loader: 'babel-loader',
 						query: {
-							presets: ['@babel/env'],
+							presets: [
+								["@babel/preset-env", {
+								  useBuiltIns: "usage", // or "entry"
+								  corejs: 3,
+								}]
+							  ],
 							plugins: ['babel-plugin-root-import']
 						}
 					}
