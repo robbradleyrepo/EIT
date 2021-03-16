@@ -40,11 +40,6 @@ function scripts() {
 		'!app/js/search-page.js',
 		'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js', // import fancybox
 		'node_modules/bootstrap/js/dist/modal.js', // import bootstrap modal
-
-
-
-		
-
 	], { sourcemaps: true })
 		.pipe(webpack({
 			mode: 'production',
