@@ -71,34 +71,20 @@ export default () => {
         const pages = [];
         const median = Math.floor(this.showPageInPagination / 2); // 3
         const step = this.getPage - median; // 5 - 4 = 1
-        // console.log("median", median);
-        // console.log("this.getPage", this.getPage);
-        // console.log("startIndex", step);
-        // console.log("this.getPage", this.getPage);
-        // console.log("this.getPageAmount", this.getPageAmount);
 
-        for (let i = 0; i < this.showPageInPagination; i++) {
-          console.log("i", i + step);
-          // if (this.getPage >= this.getPage + step) {
-          //   console.log('here');
-          //   pages.push(i + 1);
-          // 7                14 - 3 = 11
-          if (this.getPage >= this.getPageAmount - step) console.log("less");
-          if (this.getPage <= median) {
-            pages.push(i + 1);
-          } else {
-            pages.push(i + step);
+        if (this.getPage >= this.getPageAmount - median) {
+          for (let i = 0; i < this.showPageInPagination; i++) {
+            pages.push(this.getPageAmount - this.showPageInPagination + i + 1);
+          }
+        } else {
+          for (let i = 0; i < this.showPageInPagination; i++) {
+            if (this.getPage <= median) pages.push(i + 1);
+            else pages.push(i + step);
           }
         }
         console.log("pages", pages);
 
         return pages;
-
-        // if (sum > this.getPage + 1) {
-        //   let x = sum - numPage;
-        //   console.log('x',x);
-        //   return x + 1;
-        // }
       },
       showForwardPageBtn() {
         return !this.getPages.includes(1);
@@ -110,9 +96,14 @@ export default () => {
     methods: {
       jumpPagesForward() {
         this.searchParams.page = this.getPage - this.showPageInPagination;
+        if (this.searchParams.page < 1) this.searchParams.page = 1;
+        this.serchRequest();
       },
       jumpPagesNext() {
         this.searchParams.page = this.getPage + this.showPageInPagination;
+        if (this.searchParams.page > this.getPageAmount)
+          this.searchParams.page = this.getPageAmount;
+        this.serchRequest();
       },
       labelClick() {
         this.allResults = false;
@@ -176,12 +167,14 @@ export default () => {
         deep: true,
       },
       results() {
-        $('#mob-result').html(`${this.amountResults} results for “${this.getQueryText}”`)
-      }
+        $("#mob-result").html(
+          `${this.amountResults} results for “${this.getQueryText}”`
+        );
+      },
     },
     mounted() {
       console.log("this.searchParams.queryText", this.getReqValue.queryText);
-      this.searchParams.queryText = this.getReqValue.queryText
+      this.searchParams.queryText = this.getReqValue.queryText;
       this.serchRequest();
     },
   });
