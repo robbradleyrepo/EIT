@@ -1,20 +1,47 @@
 .fundscroller
     background: $black
-
     &__box
         display: flex
         width: 100%
+        min-height: 400px
         padding: 20px 0
         justify-content: space-between
+        flex-direction: column
+        @include breakpoint(desktop, up)
+            flex-direction: row
+            min-height: 673px
 
     &__left 
         display: flex
         align-items: center
-        width: 50%
+        width: 100%
+        margin-right: 30px
+        @include breakpoint(desktop, up)
+            width: 45%
 
     &__right
         display: flex
-        width: 45%
+        position: relative
+        right: 0px
+        width: 100%
+        overflow-x: scroll
+        overflow-y: hidden
+        -webkit-overflow-scrolling: touch
+        margin-top: 30px
+        padding: 10px
+        &::-webkit-scrollbar 
+            display: none
         
+        @include breakpoint(desktop, up)
+            margin-top: 0
+            position: absolute
+            width: 45%
+            padding: 0
+
+        @include breakpoint(desktop-large, up)
+            width: 50%
+
+    &__slider
+        display: flex
     .imagepromo__content
         width: 100%

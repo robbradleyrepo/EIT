@@ -1,13 +1,31 @@
 .carousel-box
     background: url(../../../images/components/banners/defult-back.png) no-repeat
     background-size: cover
-    padding: 70px 30px
+    padding: 20px
     overflow: hidden
 
 
+
+    .swiper-container 
+      width: 100%
+      padding-bottom: 30px
+      border-radius: 15px
+      @include breakpoint(tablet, up)
+        padding-bottom: 0
+
+    .swiper-slide 
+        background-position: center
+        background-size: cover
+        width: 80%
+        height: 200px
+        border-radius: 15px
+        position: relative
+        @include breakpoint(tablet, up)
+            height: 470px
+
+  
 .carousel 
     
-
 
     &__slidefront
         display: flex
@@ -17,16 +35,22 @@
         z-index: 10
         left: 0
         top: 0
-        padding: 15px
-        width: 65%
+        padding: 10px
+        width: 80%
         height: 100%
         flex-direction: column
         border-radius: 15px
-        display: none
+        cursor: pointer
+        @include breakpoint(tablet, up)
+            width: 65%
+            padding: 15px
+        &:hover + .carousel__slideback
+            opacity: 1
+        &:hover .carousel__slidefooter  .accordion__vidicon-active
+            opacity: 1
+        &:hover .carousel__slidefooter  .accordion__vidicon
+            opacity: 0
 
-
-    &__slide
-        // position: relative
     &__slideback
         position: absolute 
         z-index: 9
@@ -36,108 +60,109 @@
         height: 100%
         border-radius: 15px
         object-fit: cover
-    &__vidicon
-        background: url(../../../images/components/banners/btn-video.svg) no-repeat
-        width: 42px
-        height: 42px
-        background-size: contain
-
+        opacity: .9
+        -webkit-transition: opacity 800ms linear
+        -moz-transition: opacity 800ms linear
+        -o-transition: opacity 800ms linear
+        -ms-transition: opacity 800ms linear
+        transition: opacity 800ms linear
+        &:hover 
+            opacity: 1
+        &:hover + .carousel__slidefront .carousel__slidefooter  .accordion__vidicon-active
+            opacity: 1
+        &:hover + .carousel__slidefront .carousel__slidefooter  .accordion__vidicon
+            opacity: 0
 
     &__slidefooter
         display: flex
         align-items: center
-        margin-top: 50px
-
-
-.carousel-cell 
-    width: 85%
-    height: 429px
-    margin-right: 10px
-    // background: #8C8
-    border-radius: 15px
-    cursor: pointer
+        margin-top: 20px
+        @include breakpoint(tablet, up)
+            margin-top: 50px
+  
+.carousel .article__writerphoto
+    width: 25px
+    height: 25px
     @include breakpoint(tablet, up)
-        width: 75%
-
-    @include breakpoint(desktop, up)
-        width: 65%
-
-    @include breakpoint(desktop-large, up)
-        width: 60%
+        width: 50px
+        height: 50px
 
 
-.carousel-cell.is-selected 
-    // width: 45%
-    z-index: 99
-    -webkit-transform: scale(1.4, 1.2)
-    -ms-transform: scale(1.4, 1.2)
-    transform: scale(1.4, 1.2)
-    opacity: .9
-    &:hover 
-        opacity: 1
-        .carousel__vidicon
-            background: url(../../../images/components/banners/btn-video-active.svg) no-repeat
-            width: 42px
-            height: 42px
-            background-size: contain
+.carousel    .article__writername
+    font-size: 10px
+    font-weight: bold
+    letter-spacing: 2px
+    @include breakpoint(tablet, up)
+        font-size: 12px
+        letter-spacing: 2.4px
 
-.carousel-cell.is-selected .carousel__slidefront
-    display: flex
+.carousel .article__slidetit
+    font-size: 26px
+    font-weight: 300
+    -webkit-line-clamp: 2 /* number of lines to show */
+
+    @include breakpoint(tablet, up)
+        font-size: 52px
+        -webkit-line-clamp: 3 /* number of lines to show */
+
+.carousel .article__time 
+    font-size: 12px!important
+    font-weight: medium 
+    margin-right: 10px
+    letter-spacing: 2.4px
+    
+
+.carousel  .accordion__vid
+    width: 30px
+    height: 30px
+    left: 120px
+    -webkit-transition: opacity 800ms linear
+    -moz-transition: opacity 800ms linear
+    -o-transition: opacity 800ms linear
+    -ms-transition: opacity 800ms linear
+    transition: opacity 800ms linear
+    @include breakpoint(tablet, up)
+        width: 53px
+        height: 53px
+        left: 130px
 
 
-.flickity-page-dots .dot.is-selected 
-    background: $gold
+.swiper-pagination
+    visibility: visible
+    bottom: 0
+    @include breakpoint(tablet, up)
+        visibility: hidden
 
-.flickity-page-dots .dot
+.swiper-pagination-bullet
     background: $white
     opacity: 1
 
+.swiper-pagination-bullet-active
+    background: $gold
 
-  
-.flickity-viewport
-    overflow: visible
-    border-radius: 15px
-.flickity-prev-next-button.next 
-    right: -100px
-
-.flickity-prev-next-button.previous
-    left: -100px
-
-.flickity-prev-next-button 
-    width: 170px
-    height: 170px
-    background: none !important
-    color: $white !important
-    opacity: 0
-    transition: visibility 0s, opacity .5s linear
+.swiper-button-next, .swiper-button-prev
+    width: 100px
+    outline: none
     display: none
+    -webkit-transition: opacity 300ms linear
+    -moz-transition: opacity 300ms linear
+    -o-transition: opacity 300ms linear
+    -ms-transition: opacity 300ms linear
+    transition: opacity 300ms linear
     @include breakpoint(tablet, up)
-        display: block
-    &:hover
-        opacity: 1
-        
-.flickity-page-dots 
-    display: block
-    position: relative
-    bottom: -55px
+       display: flex
+       opacity: 0
+       
+       &:hover
+           opacity: 1
 
-    marg
-    @include breakpoint(tablet, up)
-        display: none
+.swiper-button-next
+    right: 0px
 
-.flickity-button-icon  path 
-    stroke-width: 1
+.swiper-button-prev
+    left: 0px
 
-.carousel .article__writerphoto
-    width: 40px
-    height: 40px
-
-.carousel .article__time 
-    font-size: 8px!important
-    font-weight: 400
-    margin-right: 10px
-    
-
-
-
+.swiper-button-next:after, .swiper-button-prev:after
+    color: $white
+    font-size: 80px
 

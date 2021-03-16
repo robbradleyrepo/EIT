@@ -40,11 +40,13 @@ function scripts() {
 		'!app/js/search-page.js',
 		'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js', // import fancybox
 		'node_modules/jquery/dist/jquery.min.js', // import jquery 
-		'node_modules/popper.js/dist/umd/popper.min.js', // import jquery 
-		'node_modules/bootstrap/js/dist/modal.js', // import bootstrap modal
+		'node_modules/popper.js/dist/umd/popper.min.js', 
 		'node_modules/bootstrap/dist/js/bootstrap.min.js', // import bootstrap modal
-		'node_modules/flickity/dist/flickity.pkgd.js', // import flickity modal for slider
+		'node_modules/bootstrap/js/dist/modal.js', // import bootstrap modal
 
+
+
+		
 
 	], { sourcemaps: true })
 		.pipe(webpack({
