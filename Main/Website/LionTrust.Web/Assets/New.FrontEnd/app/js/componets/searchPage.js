@@ -175,10 +175,14 @@ export default () => {
         },
         deep: true,
       },
+      results() {
+        $('#mob-result').html(`${this.amountResults} results for “${this.getQueryText}”`)
+      }
     },
     mounted() {
       console.log("this.searchParams.queryText", this.getReqValue.queryText);
-      this.serchRequest(this.getReqValue.queryText);
+      this.searchParams.queryText = this.getReqValue.queryText
+      this.serchRequest();
     },
   });
 };
