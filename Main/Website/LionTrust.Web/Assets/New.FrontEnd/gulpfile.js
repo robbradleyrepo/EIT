@@ -37,17 +37,11 @@ function scripts() {
 	return src([
 		'app/js/*.js',
 		'!app/js/*.min.js',
-		'!app/js/search-page.js',
 		'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js', // import fancybox
 		// 'node_modules/jquery/dist/jquery.min.js', // import jquery 
 		// 'node_modules/popper.js/dist/umd/popper.min.js', 
 		// 'node_modules/bootstrap/dist/js/bootstrap.min.js', // import bootstrap modal
 		'node_modules/bootstrap/js/dist/modal.js', // import bootstrap modal
-
-
-
-		
-
 	], { sourcemaps: true })
 		.pipe(webpack({
 			mode: 'production',
@@ -59,7 +53,12 @@ function scripts() {
 						exclude: /(node_modules)/,
 						loader: 'babel-loader',
 						query: {
-							presets: ['@babel/env'],
+							presets: [
+								["@babel/preset-env", {
+								  useBuiltIns: "usage", // or "entry"
+								  corejs: 3,
+								}]
+							  ],
 							plugins: ['babel-plugin-root-import']
 						}
 					}
