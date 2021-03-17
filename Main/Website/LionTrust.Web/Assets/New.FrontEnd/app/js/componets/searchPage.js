@@ -219,7 +219,6 @@ export default () => {
         this.allResults = false;
       },
       submit() {
-        this.searchParams.type = "";
         this.searchParams.page = 1;
         this.serchRequest();
       },
