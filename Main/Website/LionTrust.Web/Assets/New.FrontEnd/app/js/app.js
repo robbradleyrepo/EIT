@@ -6,10 +6,12 @@ import onboardingOverlay from "./componets/onboarding";
 import searchOvarlay from "./componets/searchOvarlay";
 import searchPage from "./search-page";
 import sidebarNav from "./componets/sidebarNav";
+import slider from "./componets/slider";
+
 
 document.addEventListener("DOMContentLoaded", () => {
   onboardingOverlay();
   sidebarNav();
   searchOvarlay();
-  searchPage();
+  slider();
 });

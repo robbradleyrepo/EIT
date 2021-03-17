@@ -24,15 +24,36 @@
         height: 160px
         @include breakpoint(desktop, up)
             height: 257px
+        &:hover .fundcard__toplion
+            opacity: .5
+        &:hover .fundcard__topback
+            right: -20px
+            // top: 10px
+            height: 100%
+
+            
 
     &__topback
+        width: 100%
+        height: 110%
+        position: absolute
+        right: 0
+        top: 0
+        opacity: .8
+        z-index: 8
+        background-position: right
+        transition: all .9s ease-out
+
+    &__toplion
         width: 100%
         height: 100%
         position: absolute
         right: 0
         top: 0
-        opacity: .8
+        opacity: 0
         z-index: 9
+        transition: opacity .7s ease-out
+
     &__topbox
         display: flex
         width: 100%
