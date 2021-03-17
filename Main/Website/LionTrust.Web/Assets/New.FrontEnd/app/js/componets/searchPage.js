@@ -1,4 +1,92 @@
 import Vue from "vue/dist/vue.common.prod";
+const request = {  "amountResults": "5",
+"results":  [
+    { "link": "#link",
+      "title": "Factsheet GF Absolute Return Bond Fund",
+      "bodyText": "Debt, debt, everywhere, nor any income to take. The current situation is not as bleak as this rewriting of Samuel Taylor Coleridge’s famous lines suggests, but with the UK and…",
+      "date": "21st February 2021",
+      "type": "Fund",
+      "footer": {
+        "factsheet": {
+          "name": "Factsheet",
+          "link": "#"
+        },
+        "team": {
+          "name": "The Global Fixed Income team",
+          "link": "#"
+        }
+      }
+    },
+    { "link": "#link",
+      "title": "Article GF Absolute Return Bond Fund",
+      "bodyText": "Debt, debt, everywhere, nor any income to take. The current situation is not as bleak as this rewriting of Samuel Taylor Coleridge’s famous lines suggests, but with the UK and…",
+      "date": "21st February 2021",
+      "type": "Article",
+      "footer": {
+        "author": {
+          "name": "David Roberts",
+          "imageSrc": "images/components/search-page/David-Roberts-Liontrust@2x.png"
+        },
+        "team": {
+          "name": "The Global Fixed Income team",
+          "link": "#"
+        }
+      }
+    },
+    { "link": "#link",
+      "title": "Page GF Absolute Return Bond Fund",
+      "bodyText": "Debt, debt, everywhere, nor any income to take. The current situation is not as bleak as this rewriting of Samuel Taylor Coleridge’s famous lines suggests, but with the UK and…",      
+      "type": "Page",
+      "date": "23st December 2020"  
+    },
+    { "link": "#link",
+      "title": "Document GF Absolute Return Bond Fund",
+      "bodyText": "Debt, debt, everywhere, nor any income to take. The current situation is not as bleak as this rewriting of Samuel Taylor Coleridge’s famous lines suggests, but with the UK and…",      
+      "type": "Document",
+      "date": "18st June 2020"  
+    },
+    { "link": "#link",
+      "title": "Document GF Absolute Return Bond Fund",
+      "bodyText": "Debt, debt, everywhere, nor any income to take. The current situation is not as bleak as this rewriting of Samuel Taylor Coleridge’s famous lines suggests, but with the UK and…",      
+      "type": "Fund Manager",
+      "date": "1st June 2019"
+    }
+    { "link": "#link",
+      "title": "Article GF Absolute Return Bond Fund",
+      "bodyText": "Debt, debt, everywhere, nor any income to take. The current situation is not as bleak as this rewriting of Samuel Taylor Coleridge’s famous lines suggests, but with the UK and…",
+      "date": "21st February 2021",
+      "type": "Article",
+      "footer": {
+        "author": {
+          "name": "David Roberts",
+          "imageSrc": "images/components/search-page/David-Roberts-Liontrust@2x.png"
+        },
+        "team": {
+          "name": "The Global Fixed Income team",
+          "link": "#"
+        }
+      }
+    },
+    { "link": "#link",
+      "title": "Page GF Absolute Return Bond Fund",
+      "bodyText": "Debt, debt, everywhere, nor any income to take. The current situation is not as bleak as this rewriting of Samuel Taylor Coleridge’s famous lines suggests, but with the UK and…",      
+      "type": "Page",
+      "date": "23st December 2020"  
+    },
+    { "link": "#link",
+      "title": "Document GF Absolute Return Bond Fund",
+      "bodyText": "Debt, debt, everywhere, nor any income to take. The current situation is not as bleak as this rewriting of Samuel Taylor Coleridge’s famous lines suggests, but with the UK and…",      
+      "type": "Document",
+      "date": "18st June 2020"  
+    },
+    { "link": "#link",
+      "title": "Document GF Absolute Return Bond Fund",
+      "bodyText": "Debt, debt, everywhere, nor any income to take. The current situation is not as bleak as this rewriting of Samuel Taylor Coleridge’s famous lines suggests, but with the UK and…",      
+      "type": "Fund Manager",
+      "date": "1st June 2019"
+    }
+  ]
+}
 
 export default () => {
   const host = "http://localhost:3004/results?";
@@ -6,9 +94,10 @@ export default () => {
     el: "#result-list-app",
     data: {
       results: [],
-      amountResults: 70,
-      showPerPage: 5,
+      amountResults: 0,
+      showPerPage: 9,
       showPageInPagination: 7,
+      loading: true,
       searchParams: {
         queryText: "",
         type: "",
@@ -51,7 +140,6 @@ export default () => {
         for (const [key, value] of Object.entries(this.searchParams)) {
           if (value) query += `${key}=${value}&`;
         }
-        console.log("query", query);
         return query;
       },
       getPage() {
@@ -71,8 +159,12 @@ export default () => {
         const pages = [];
         const median = Math.floor(this.showPageInPagination / 2); // 3
         const step = this.getPage - median; // 5 - 4 = 1
-
-        if (this.getPage >= this.getPageAmount - median) {
+        if (this.getPageAmount <= this.showPageInPagination) {
+          for (let i = 0; i < this.getPageAmount; i++) {
+            pages.push(i + 1);
+          }
+        }
+        else if (this.getPage >= this.getPageAmount - median) {
           for (let i = 0; i < this.showPageInPagination; i++) {
             pages.push(this.getPageAmount - this.showPageInPagination + i + 1);
           }
@@ -82,8 +174,6 @@ export default () => {
             else pages.push(i + step);
           }
         }
-        console.log("pages", pages);
-
         return pages;
       },
       showForwardPageBtn() {
@@ -115,16 +205,28 @@ export default () => {
       },
       serchRequest(params = this.generateSearchParams) {
         this.changeUrl(params);
-        $.ajax(host + params)
-          .done((res) => {
-            this.results = res;
-          })
-          .fail((e) => {
-            throw new Error("Data does not fetch " + e);
-          });
+        this.loading = true;
+        // uncomit it on develop
+        // $.ajax(host + params)
+        //   .done((res) => {
+        //     this.results = res;
+        //     console.log("results", this.results);
+        //     this.loading = false;
+        //   })
+        //   .fail((e) => {
+        //     this.loading = false;
+        //     throw new Error("Data does not fetch ", e);
+        //   });
+
+        // dummy data
+        setTimeout(() => {
+          const {results, amountResults} = request
+          this.results = results
+          this.amountResults = amountResults
+          this.loading = false
+        }, 500)
       },
       changeUrl(searchParams) {
-        console.log("changeUrl");
         window.history.pushState(
           { page: "search-page" },
           "search",
@@ -143,7 +245,6 @@ export default () => {
         }
       },
       changePage(num) {
-        console.log("num", num);
         this.searchParams.page = num;
         this.serchRequest();
       },
@@ -160,7 +261,6 @@ export default () => {
             if (filters.length - 1 !== i) type += `${item.categoryName},`;
             else type += `${item.categoryName}`;
           });
-          console.log("type", type);
           this.searchParams.type = type;
           this.serchRequest();
         },
@@ -173,7 +273,6 @@ export default () => {
       },
     },
     mounted() {
-      console.log("this.searchParams.queryText", this.getReqValue.queryText);
       this.searchParams.queryText = this.getReqValue.queryText;
       this.serchRequest();
     },
