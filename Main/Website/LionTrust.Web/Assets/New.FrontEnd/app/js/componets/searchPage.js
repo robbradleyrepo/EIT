@@ -1,92 +1,113 @@
 import Vue from "vue/dist/vue.common.prod";
-const request = {  "amountResults": "5",
-"results":  [
-    { "link": "#link",
-      "title": "Factsheet GF Absolute Return Bond Fund",
-      "bodyText": "Debt, debt, everywhere, nor any income to take. The current situation is not as bleak as this rewriting of Samuel Taylor Coleridge’s famous lines suggests, but with the UK and…",
-      "date": "21st February 2021",
-      "type": "Fund",
-      "footer": {
-        "factsheet": {
-          "name": "Factsheet",
-          "link": "#"
+const request = {
+  amountResults: "150",
+  results: [
+    {
+      link: "#link",
+      title: "Factsheet GF Absolute Return Bond Fund",
+      bodyText:
+        "Debt, debt, everywhere, nor any income to take. The current situation is not as bleak as this rewriting of Samuel Taylor Coleridge’s famous lines suggests, but with the UK and…",
+      date: "21st February 2021",
+      type: "Fund",
+      footer: {
+        factsheet: {
+          name: "Factsheet",
+          link: "#",
         },
-        "team": {
-          "name": "The Global Fixed Income team",
-          "link": "#"
-        }
-      }
-    },
-    { "link": "#link",
-      "title": "Article GF Absolute Return Bond Fund",
-      "bodyText": "Debt, debt, everywhere, nor any income to take. The current situation is not as bleak as this rewriting of Samuel Taylor Coleridge’s famous lines suggests, but with the UK and…",
-      "date": "21st February 2021",
-      "type": "Article",
-      "footer": {
-        "author": {
-          "name": "David Roberts",
-          "imageSrc": "images/components/search-page/David-Roberts-Liontrust@2x.png"
+        team: {
+          name: "The Global Fixed Income team",
+          link: "#",
         },
-        "team": {
-          "name": "The Global Fixed Income team",
-          "link": "#"
-        }
-      }
+      },
     },
-    { "link": "#link",
-      "title": "Page GF Absolute Return Bond Fund",
-      "bodyText": "Debt, debt, everywhere, nor any income to take. The current situation is not as bleak as this rewriting of Samuel Taylor Coleridge’s famous lines suggests, but with the UK and…",      
-      "type": "Page",
-      "date": "23st December 2020"  
-    },
-    { "link": "#link",
-      "title": "Document GF Absolute Return Bond Fund",
-      "bodyText": "Debt, debt, everywhere, nor any income to take. The current situation is not as bleak as this rewriting of Samuel Taylor Coleridge’s famous lines suggests, but with the UK and…",      
-      "type": "Document",
-      "date": "18st June 2020"  
-    },
-    { "link": "#link",
-      "title": "Document GF Absolute Return Bond Fund",
-      "bodyText": "Debt, debt, everywhere, nor any income to take. The current situation is not as bleak as this rewriting of Samuel Taylor Coleridge’s famous lines suggests, but with the UK and…",      
-      "type": "Fund Manager",
-      "date": "1st June 2019"
-    }
-    { "link": "#link",
-      "title": "Article GF Absolute Return Bond Fund",
-      "bodyText": "Debt, debt, everywhere, nor any income to take. The current situation is not as bleak as this rewriting of Samuel Taylor Coleridge’s famous lines suggests, but with the UK and…",
-      "date": "21st February 2021",
-      "type": "Article",
-      "footer": {
-        "author": {
-          "name": "David Roberts",
-          "imageSrc": "images/components/search-page/David-Roberts-Liontrust@2x.png"
+    {
+      link: "#link",
+      title: "Article GF Absolute Return Bond Fund",
+      bodyText:
+        "Debt, debt, everywhere, nor any income to take. The current situation is not as bleak as this rewriting of Samuel Taylor Coleridge’s famous lines suggests, but with the UK and…",
+      date: "21st February 2021",
+      type: "Article",
+      footer: {
+        author: {
+          name: "David Roberts",
+          imageSrc:
+            "images/components/search-page/David-Roberts-Liontrust@2x.png",
         },
-        "team": {
-          "name": "The Global Fixed Income team",
-          "link": "#"
-        }
-      }
+        team: {
+          name: "The Global Fixed Income team",
+          link: "#",
+        },
+      },
     },
-    { "link": "#link",
-      "title": "Page GF Absolute Return Bond Fund",
-      "bodyText": "Debt, debt, everywhere, nor any income to take. The current situation is not as bleak as this rewriting of Samuel Taylor Coleridge’s famous lines suggests, but with the UK and…",      
-      "type": "Page",
-      "date": "23st December 2020"  
+    {
+      link: "#link",
+      title: "Page GF Absolute Return Bond Fund",
+      bodyText:
+        "Debt, debt, everywhere, nor any income to take. The current situation is not as bleak as this rewriting of Samuel Taylor Coleridge’s famous lines suggests, but with the UK and…",
+      type: "Page",
+      date: "23st December 2020",
     },
-    { "link": "#link",
-      "title": "Document GF Absolute Return Bond Fund",
-      "bodyText": "Debt, debt, everywhere, nor any income to take. The current situation is not as bleak as this rewriting of Samuel Taylor Coleridge’s famous lines suggests, but with the UK and…",      
-      "type": "Document",
-      "date": "18st June 2020"  
+    {
+      link: "#link",
+      title: "Document GF Absolute Return Bond Fund",
+      bodyText:
+        "Debt, debt, everywhere, nor any income to take. The current situation is not as bleak as this rewriting of Samuel Taylor Coleridge’s famous lines suggests, but with the UK and…",
+      type: "Document",
+      date: "18st June 2020",
     },
-    { "link": "#link",
-      "title": "Document GF Absolute Return Bond Fund",
-      "bodyText": "Debt, debt, everywhere, nor any income to take. The current situation is not as bleak as this rewriting of Samuel Taylor Coleridge’s famous lines suggests, but with the UK and…",      
-      "type": "Fund Manager",
-      "date": "1st June 2019"
-    }
-  ]
-}
+    {
+      link: "#link",
+      title: "Document GF Absolute Return Bond Fund",
+      bodyText:
+        "Debt, debt, everywhere, nor any income to take. The current situation is not as bleak as this rewriting of Samuel Taylor Coleridge’s famous lines suggests, but with the UK and…",
+      type: "Fund Manager",
+      date: "1st June 2019",
+    },
+    {
+      link: "#link",
+      title: "Article GF Absolute Return Bond Fund",
+      bodyText:
+        "Debt, debt, everywhere, nor any income to take. The current situation is not as bleak as this rewriting of Samuel Taylor Coleridge’s famous lines suggests, but with the UK and…",
+      date: "21st February 2021",
+      type: "Article",
+      footer: {
+        author: {
+          name: "David Roberts",
+          imageSrc:
+            "images/components/search-page/David-Roberts-Liontrust@2x.png",
+        },
+        team: {
+          name: "The Global Fixed Income team",
+          link: "#",
+        },
+      },
+    },
+    {
+      link: "#link",
+      title: "Page GF Absolute Return Bond Fund",
+      bodyText:
+        "Debt, debt, everywhere, nor any income to take. The current situation is not as bleak as this rewriting of Samuel Taylor Coleridge’s famous lines suggests, but with the UK and…",
+      type: "Page",
+      date: "23st December 2020",
+    },
+    {
+      link: "#link",
+      title: "Document GF Absolute Return Bond Fund",
+      bodyText:
+        "Debt, debt, everywhere, nor any income to take. The current situation is not as bleak as this rewriting of Samuel Taylor Coleridge’s famous lines suggests, but with the UK and…",
+      type: "Document",
+      date: "18st June 2020",
+    },
+    {
+      link: "#link",
+      title: "Document GF Absolute Return Bond Fund",
+      bodyText:
+        "Debt, debt, everywhere, nor any income to take. The current situation is not as bleak as this rewriting of Samuel Taylor Coleridge’s famous lines suggests, but with the UK and…",
+      type: "Fund Manager",
+      date: "1st June 2019",
+    },
+  ],
+};
 
 export default () => {
   const host = "http://localhost:3004/results?";
@@ -163,8 +184,7 @@ export default () => {
           for (let i = 0; i < this.getPageAmount; i++) {
             pages.push(i + 1);
           }
-        }
-        else if (this.getPage >= this.getPageAmount - median) {
+        } else if (this.getPage >= this.getPageAmount - median) {
           for (let i = 0; i < this.showPageInPagination; i++) {
             pages.push(this.getPageAmount - this.showPageInPagination + i + 1);
           }
@@ -205,7 +225,6 @@ export default () => {
       },
       serchRequest(params = this.generateSearchParams) {
         this.changeUrl(params);
-        this.loading = true;
         // uncomit it on develop
         // $.ajax(host + params)
         //   .done((res) => {
@@ -220,11 +239,11 @@ export default () => {
 
         // dummy data
         setTimeout(() => {
-          const {results, amountResults} = request
-          this.results = results
-          this.amountResults = amountResults
-          this.loading = false
-        }, 500)
+          const { results, amountResults } = request;
+          this.results = results;
+          this.amountResults = amountResults;
+          this.loading = false;
+        }, 500);
       },
       changeUrl(searchParams) {
         window.history.pushState(
@@ -245,8 +264,10 @@ export default () => {
         }
       },
       changePage(num) {
-        this.searchParams.page = num;
-        this.serchRequest();
+        if (this.getPage !== num) {
+          this.searchParams.page = num;
+          this.serchRequest();
+        }
       },
     },
     watch: {
