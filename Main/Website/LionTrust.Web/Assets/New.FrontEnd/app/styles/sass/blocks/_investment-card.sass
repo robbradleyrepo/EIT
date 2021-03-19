@@ -18,6 +18,10 @@
     border-radius: $border-radius
     overflow: hidden
     position: relative
+    &:first-child
+        .investment-card      
+            &::before
+                left: -85px
     &::before        
         counter-increment: section
         content: counter(section)
@@ -27,7 +31,7 @@
         font-size: 38rem
         line-height: 1
         top: -120px
-        left: -85px
+        left: -60px
         pointer-events: none
     &__content
         z-index: 2
