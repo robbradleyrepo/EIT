@@ -22,9 +22,10 @@
                     <label class="navigation__link" for="Learning">Learning</label>
                 </li>
                 <li class="navigation__item">
-                    <a href="#" class="navigation__link">Sustainability</a>
+                    <label class="navigation__link" for="Sustainability">Sustainability</label>
                 </li>
                 <li class="navigation__item">
+                    <!-- if link isn`t have sub links it should be a tag -->
                     <a href="#" class="navigation__link">Contact Us</a>
                 </li>
                 <li class="navigation__item">
@@ -163,6 +164,22 @@
                 <div class="mt-3">
                     <!--#include virtual="/components/reusables/Learning_nav_item_3.html" -->
                 </div>
+            </div>
+        </div>
+        <!-- Sustainability Links -->
+        <div class="navigation__item">
+            <input type="checkbox" id="Sustainability" class="navigation__checkbox">
+            <div class="navigation__submenu">
+                <label class="navigation__close-submenu" for="Sustainability">
+                    <i class="icon-chevron-left"></i>
+                    back
+                </label>
+                <ul class="navigation__sub-list mb-4">
+                    <li class="navigation__sub-item">
+                        <!--#include virtual="/components/reusables/Sustainability_nav_item_1.html" -->
+                    </li>                    
+                </ul>                
+                <!--#include virtual="/components/UI010-Quick-Link-CTA.html" -->                          
             </div>
         </div>
     </div>
