@@ -20,6 +20,30 @@ const newer        = require('gulp-newer')
 const rsync        = require('gulp-rsync')
 const del          = require('del')
 
+
+const webPackConfig = {
+	mode: 'production',
+	performance: { hints: false },
+	module: {
+		rules: [
+			{
+				test: /\.(js)$/,
+				exclude: /(node_modules)/,
+				loader: 'babel-loader',
+				query: {
+					presets: [
+						["@babel/preset-env", {
+						  useBuiltIns: "usage", // or "entry"
+						  corejs: 3,
+						}]
+					  ],
+					plugins: ['babel-plugin-root-import']
+				}
+			}
+		]
+	}
+}
+
 function browsersync() {
 	browserSync.init({
 		server: {
@@ -33,38 +57,32 @@ function browsersync() {
 	})
 }
 
-function scripts() {
+function scriptsMain() {
 	return src([
 		'app/js/*.js',
+		'!app/js/search-page.js',
 		'!app/js/*.min.js',
 		'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js', // import fancybox
 		'node_modules/bootstrap/js/dist/modal.js', // import bootstrap modal
 	], { sourcemaps: true })
-		.pipe(webpack({
-			mode: 'production',
-			performance: { hints: false },
-			module: {
-				rules: [
-					{
-						test: /\.(js)$/,
-						exclude: /(node_modules)/,
-						loader: 'babel-loader',
-						query: {
-							presets: [
-								["@babel/preset-env", {
-								  useBuiltIns: "usage", // or "entry"
-								  corejs: 3,
-								}]
-							  ],
-							plugins: ['babel-plugin-root-import']
-						}
-					}
-				]
-			}
-		})).on('error', function handleError() {
+		.pipe(webpack(webPackConfig)).on('error', function handleError() {
 			this.emit('end')
 		})
 		.pipe(rename('app.min.js'))
+		.pipe(dest('app/js', { sourcemaps: true }))
+		.pipe(browserSync.stream())
+}
+
+function scriptsSearch() {
+	return src([
+		'!app/js/*.js',
+		'app/js/search-page.js',
+		'!app/js/*.min.js',
+	], { sourcemaps: true })
+		.pipe(webpack(webPackConfig)).on('error', function handleError() {
+			this.emit('end')
+		})
+		.pipe(rename('search-page.min.js'))
 		.pipe(dest('app/js', { sourcemaps: true }))
 		.pipe(browserSync.stream())
 }
@@ -110,14 +128,14 @@ function cleandist() {
 
 function startwatch() {
 	watch(`app/styles/${preprocessor}/**/*`, { usePolling: true }, styles)
-	watch(['app/js/**/*.js', '!app/js/**/*.min.js'], { usePolling: true }, scripts)
+	watch(['app/js/**/*.js', '!app/js/**/*.min.js'], { usePolling: true }, parallel(scriptsMain, scriptsSearch))
 	watch('app/images/src/**/*.{jpg,jpeg,png,webp,svg,gif}', { usePolling: true }, images)
 	watch(`app/**/*.{${fileswatch}}`, { usePolling: true }).on('change', browserSync.reload)
 }
 
-exports.scripts = scripts
+exports.scripts = series(scriptsMain, scriptsSearch)
 exports.styles  = styles
 exports.images  = images
-exports.assets  = series(scripts, styles, images)
-exports.build   = series(cleandist, scripts, styles, images, buildcopy, buildhtml)
-exports.default = series(scripts, styles, images, parallel(browsersync, startwatch))
+exports.assets  = series(scriptsMain, scriptsSearch, styles, images)
+exports.build   = series(cleandist, scriptsMain, scriptsSearch, styles, images, buildcopy, buildhtml)
+exports.default = series(scriptsMain, scriptsSearch, styles, images, parallel(browsersync, startwatch))
