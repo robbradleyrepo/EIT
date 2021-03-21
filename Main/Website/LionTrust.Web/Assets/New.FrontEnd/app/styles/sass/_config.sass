@@ -4,6 +4,7 @@
 @import './mixins/breakpoints'
 @import './mixins/navlink'
 @import './functions/gutters-bootsrap'
+@import './functions/common'
 
 // IMPORT BOOTSTRAP STYLES
 @import 'node_modules/bootstrap/scss/bootstrap-reboot' // Bootstrap Reboot collection
@@ -71,9 +72,14 @@ a
 	line-height: 17px
 	i
 		font-size: 10px
+	&:hover
+		color: $primary
 
 .text-gold
 	color: $gold
+
+.mb-30
+	margin-bottom: 30px
 
 .text-center
 	text-align: center

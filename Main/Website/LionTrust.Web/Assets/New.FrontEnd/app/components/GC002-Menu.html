@@ -12,19 +12,20 @@
             <ul class="navigation__list">
                 <li class="navigation__item">
                     <!-- if link isn`t have sub links it should be a tag -->
-                    <a href="#" class="navigation__link">Our Funds </a>
+                    <label class="navigation__link" for="Our Funds">Our Funds</label>
                 </li>
                 <li class="navigation__item">
                     <!-- if link has sublinks it should be label -->
                     <label class="navigation__link" for="Insight">Insight</label>
                 </li>
                 <li class="navigation__item">
-                    <a href="#" class="navigation__link">Learning</a>
+                    <label class="navigation__link" for="Learning">Learning</label>
                 </li>
                 <li class="navigation__item">
-                    <a href="#" class="navigation__link">Sustainability</a>
+                    <label class="navigation__link" for="Sustainability">Sustainability</label>
                 </li>
                 <li class="navigation__item">
+                    <!-- if link isn`t have sub links it should be a tag -->
                     <a href="#" class="navigation__link">Contact Us</a>
                 </li>
                 <li class="navigation__item">
@@ -82,45 +83,109 @@
                     <label class="navigation__link" for="About">About us</label>
                 </li>
                 <li class="navigation__item">
-                    <!-- if link hasn't sublinks it should be link tag --> 
-                    <label class="navigation__link" for="Investor">Investor</label>             
+                    <!-- if link hasn't sublinks it should be link tag -->
+                    <label class="navigation__link" for="Investor">Investor</label>
                 </li>
                 <li class="navigation__item">
-                    <!-- if link hasn't sublinks it should be link tag --> 
+                    <!-- if link hasn't sublinks it should be link tag -->
                     <a href="#" class="navigation__link">Press Relations</a>
                 </li>
             </ul>
         </nav>
     </div>
-</div>
-
-<!-- block with sublinks items -->
-<div class="navigation__sublinks-items">   
-    <!-- each item should have id for exact like for attribute for label  -->
-    <div class="navigation__item">
-        <input type="checkbox" id="Insight" class="navigation__checkbox">
-        <div class="navigation__submenu">
-            <label class="navigation__close-submenu" for="Insight">
-                <i class="icon-chevron-left"></i>
-                back
-            </label>
-            <ul class="navigation__sub-list">
-                <li class="navigation__sub-item">
-                    <a class="navigation__sub-link navigation__sub-link_heading" href="#">
-                        Insight
-                        <i class="icon-chevron-right"></i>
-                    </a>
-                </li>
-                <li class="navigation__sub-item">
-                    <a class="navigation__sub-link" href="#">Community Engagement and Sponsorships</a>
-                </li>
-                <li class="navigation__sub-item">
-                    <a class="navigation__sub-link" href="#">Some Link</a>
-                </li>
-            </ul>
+    <!-- block with sublinks items for mobile -->
+    <div class="navigation__sublinks-items">
+        <!-- each item should have id for exact like for attribute for label  -->
+        <!-- Our Funds Links -->
+        <div class="navigation__item">
+            <input type="checkbox" id="Our Funds" class="navigation__checkbox">
+            <div class="navigation__submenu">
+                <label class="navigation__close-submenu" for="Our Funds">
+                    <i class="icon-chevron-left"></i>
+                    back
+                </label>
+                <ul class="navigation__sub-list">
+                    <li class="navigation__sub-item">
+                        <a class="mb-3 navigation__sub-link navigation__sub-link_heading" href="#">
+                            Our Funds
+                        </a>
+                        <a href="#" class="btn btn-primary btn-block mb-4">
+                            All Funds and Literature
+                        </a>
+                    </li>
+                </ul>
+                <!--#include virtual="/components/reusables/OurFunds_nav_items_1.html" -->
+                <div class="mt-3">
+                    <!--#include virtual="/components/reusables/OurFunds_nav_items_2.html" -->
+                </div>
+                <div class="mt-4">
+                    <!--#include virtual="/components/UI010-Quick-Link-CTA.html" -->
+                </div>
+            </div>
+        </div>
+        <!-- Insight Links -->
+        <div class="navigation__item">
+            <input type="checkbox" id="Insight" class="navigation__checkbox">
+            <div class="navigation__submenu">
+                <label class="navigation__close-submenu" for="Insight">
+                    <i class="icon-chevron-left"></i>
+                    back
+                </label>
+                <ul class="navigation__sub-list mb-4">
+                    <li class="navigation__sub-item">
+                        <!--#include virtual="/components/reusables/Insight_nav_item_1.html" -->
+                    </li>                    
+                </ul>
+                <div class="row">
+                    <div class="col-md-6">                        
+                            <!--#include virtual="/components/UI010-Quick-Link-CTA-SMALL.html" -->
+                            <!--#include virtual="/components/UI010-Quick-Link-CTA-SMALL.html" -->                       
+                    </div>
+                    <div class="col-md-6">
+                        <!--#include virtual="/components/UI010-Quick-Link-CTA.html" -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Learning Links -->
+        <div class="navigation__item">
+            <input type="checkbox" id="Learning" class="navigation__checkbox">
+            <div class="navigation__submenu">
+                <label class="navigation__close-submenu" for="Learning">
+                    <i class="icon-chevron-left"></i>
+                    back
+                </label>
+                <div class="mt-3">
+                    <!--#include virtual="/components/reusables/Learning_nav_item_1.html" -->
+                </div>
+                <div class="mt-3">
+                    <!--#include virtual="/components/reusables/Learning_nav_item_2.html" -->
+                </div>
+                <div class="mt-3">
+                    <!--#include virtual="/components/reusables/Learning_nav_item_3.html" -->
+                </div>
+            </div>
+        </div>
+        <!-- Sustainability Links -->
+        <div class="navigation__item">
+            <input type="checkbox" id="Sustainability" class="navigation__checkbox">
+            <div class="navigation__submenu">
+                <label class="navigation__close-submenu" for="Sustainability">
+                    <i class="icon-chevron-left"></i>
+                    back
+                </label>
+                <ul class="navigation__sub-list mb-4">
+                    <li class="navigation__sub-item">
+                        <!--#include virtual="/components/reusables/Sustainability_nav_item_1.html" -->
+                    </li>                    
+                </ul>                
+                <!--#include virtual="/components/UI010-Quick-Link-CTA.html" -->                          
+            </div>
         </div>
     </div>
-
+</div>
+<!-- For desktop sidebar links items -->
+<div class="navigation__sublinks-items">
     <div class="navigation__item">
         <input type="checkbox" id="About" class="navigation__checkbox">
         <div class="navigation__submenu">
@@ -144,7 +209,6 @@
             </ul>
         </div>
     </div>
-
     <div class="navigation__item">
         <input type="checkbox" id="Investor" class="navigation__checkbox">
         <div class="navigation__submenu">
@@ -169,4 +233,6 @@
         </div>
     </div>
 </div>
+
+
 <div class="sidebar-overlay"></div>
