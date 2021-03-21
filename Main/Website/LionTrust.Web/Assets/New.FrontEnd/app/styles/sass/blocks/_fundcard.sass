@@ -2,11 +2,15 @@
     display: flex
     flex-direction: column
     cursor: pointer
-    width: 310px
-    margin-right: 20px
+    width: 100%
+    // margin-right: 20px
+
+    @include breakpoint(mobile-large, up)
+        width: 310px
+
     @include breakpoint(tablet, up)
         width: 350px
-        margin-right: 40px
+        // margin-right: 40px
 
     @include breakpoint(desktop, up)
         width: 400px
@@ -22,6 +26,7 @@
         border-radius: 15px 15px 0 0
         position: relative
         height: 160px
+        overflow: hidden
         @include breakpoint(desktop, up)
             height: 257px
         &:hover .fundcard__toplion

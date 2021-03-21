@@ -6,14 +6,15 @@
 
 
 
-    .swiper-container 
+    .swiper-container-carousel 
       width: 100%
       padding-bottom: 30px
       border-radius: 15px
+      overflow: hidden
       @include breakpoint(tablet, up)
         padding-bottom: 0
 
-    .swiper-slide 
+    .swiper-container-carousel .swiper-slide 
         background-position: center
         background-size: cover
         width: 80%
@@ -127,20 +128,20 @@
         left: 130px
 
 
-.swiper-pagination
+.swiper-container-carousel .swiper-pagination
     visibility: visible
     bottom: 0
     @include breakpoint(tablet, up)
         visibility: hidden
 
-.swiper-pagination-bullet
+.swiper-container-carousel .swiper-pagination-bullet
     background: $white
     opacity: 1
 
-.swiper-pagination-bullet-active
+.swiper-container-carousel .swiper-pagination-bullet-active
     background: $gold
 
-.swiper-button-next, .swiper-button-prev
+.swiper-container-carousel .swiper-button-next, .swiper-container-carousel .swiper-button-prev
     width: 100px
     outline: none
     display: none
@@ -156,13 +157,13 @@
        &:hover
            opacity: 1
 
-.swiper-button-next
+.swiper-container-carousel .swiper-button-next
     right: 0px
 
-.swiper-button-prev
+.swiper-container-carousel .swiper-button-prev
     left: 0px
 
-.swiper-button-next:after, .swiper-button-prev:after
+.swiper-container-carousel .swiper-button-next:after, .swiper-container-carousel .swiper-button-prev:after
     color: $white
     font-size: 80px
 

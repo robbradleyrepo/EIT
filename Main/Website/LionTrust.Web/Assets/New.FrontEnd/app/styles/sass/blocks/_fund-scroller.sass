@@ -1,10 +1,12 @@
 .fundscroller
     background: $black
     &__box
+        position: relative
         display: flex
         width: 100%
         min-height: 400px
         padding: 20px 0
+        margin: 10px 0
         justify-content: space-between
         flex-direction: column
         @include breakpoint(desktop, up)
@@ -24,11 +26,11 @@
         position: relative
         right: 0px
         width: 100%
-        overflow-x: scroll
         overflow-y: hidden
         -webkit-overflow-scrolling: touch
         margin-top: 30px
-        padding: 10px
+        padding-bottom: 30px
+
         &::-webkit-scrollbar 
             display: none
         
@@ -36,7 +38,7 @@
             margin-top: 0
             position: absolute
             width: 45%
-            padding: 0
+            padding-bottom: 20px
 
         @include breakpoint(desktop-large, up)
             width: 50%
@@ -45,3 +47,80 @@
         display: flex
     .imagepromo__content
         width: 100%
+
+
+
+
+.swiper-container-funds
+    width: 100%
+    height: 100%
+    
+
+.swiper-container-funds .swiper-slide 
+    text-align: center
+    font-size: 18px
+    /* Center slide text vertically */
+    display: -webkit-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    -webkit-justify-content: center
+    justify-content: center
+    -webkit-box-align: center
+    -ms-flex-align: center
+    -webkit-align-items: center
+    align-items: center
+    // width: 70% !important
+    width: 100% !important
+    // margin-right: 0 !important
+    @include breakpoint(mobile-large, up)
+        width: 310px !important
+    @include breakpoint(tablet, up)
+        // width: 45% !important
+        width: 370px !important
+
+    @include breakpoint(desktop, up)
+        // width: 80%!important
+        width: 400px !important
+
+    @include breakpoint(desktop-large, up)
+        // width: 60%!important
+
+    // width: 310px
+    // margin-right: 20px
+    // @include breakpoint(tablet, up)
+    //     width: 350px
+    //     margin-right: 40px
+
+    // @include breakpoint(desktop, up)
+    //     width: 400px
+
+    
+
+.swiper-container-funds .swiper-pagination
+    bottom: -6px
+
+.swiper-container-funds .swiper-pagination-bullet
+    background: $white
+    opacity: 1
+    outline: none
+
+.swiper-container-funds .swiper-pagination-bullet-active
+    background: $gold
+
+.fundscroller .swiper-button-next
+    right: -45px
+    top: 60% 
+    outline: none
+
+.fundscroller .swiper-button-prev
+    left: -45px
+    top: 60% 
+    outline: none
+    
+.fundscroller .swiper-button-next:after, .fundscroller .swiper-button-prev:after
+    color: $white
+    font-size: 50px
+    z-index: 999
