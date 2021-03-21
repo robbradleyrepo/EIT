@@ -7,6 +7,8 @@ import searchOvarlay from "./componets/searchOvarlay";
 import sidebarNav from "./componets/sidebarNav";
 import carouselSlider from "./componets/carouselSlider";
 import fundsSlider from "./componets/fundsSlider";
+import articleSlider from "./componets/articleSlider";
+
 
 import investmentCard from "./componets/investmentCard";
 
@@ -16,5 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
   searchOvarlay();
   carouselSlider();
   fundsSlider();
+  articleSlider();
   investmentCard();
 });

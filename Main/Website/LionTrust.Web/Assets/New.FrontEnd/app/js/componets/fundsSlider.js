@@ -12,19 +12,10 @@ SwiperCore.use([Navigation, Pagination]);
 export default () => {
     
     const swiper = new Swiper('.swiper-container-funds', {
-        // effect: 'coverflow',
         slidesPerView: 2,
         spaceBetween: 20,
-        // grabCursor: true,
+        grabCursor: true,
         centeredSlides: false,
-        // coverflowEffect: {
-        //     rotate: 0,
-        //     stretch: 0,
-        //     depth: 100,
-        //     modifier: 1,
-        //     slideShadows: true,
-        // },
-        // freeMode: false,
         loop: true,
         pagination: {
             el: '.swiper-pagination',
