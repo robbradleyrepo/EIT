@@ -6,7 +6,7 @@
     flex-direction: column
     justify-content: flex-end
     padding: 5px 20px
-    background-size: cover   
+    background-size: cover
     @include breakpoint(desktop, up)
         height: 257px
     &__title
@@ -22,3 +22,21 @@
         margin-bottom: 20px
         @include breakpoint(desktop, up)
             margin-bottom: 30px
+
+.container-left-gutter
+    margin: 40px 0
+    @include breakpoint(desktop, up)
+        margin: 100px 0
+    .container-lg
+        overflow-x: scroll
+        @include breakpoint(desktop, up)
+            overflow-x: initial
+    .row
+        flex-wrap: nowrap
+    .quick-link-chart
+        height: 187px
+        &__title
+            @include breakpoint(desktop, up)
+                font-size: 26px
+        &__text
+            font-size: 16px
