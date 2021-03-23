@@ -1,0 +1,53 @@
+.fund-manager-hero-bg
+    padding-top: 92px
+    padding-bottom: 30px
+    margin-top: -99px
+    height: 545px
+    background-position-x: 78%    
+    @include breakpoint(desktop, up)
+        height: 640px
+        background-size: cover
+.fund-manager-hero
+    color: $black
+    margin-bottom: 30px
+    @include breakpoint(desktop, up)
+        color: $white
+        margin-top: -480px
+    &__content
+        @include breakpoint(desktop, up)
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            height: 450px
+    &__title
+        margin-top: 16px
+        margin-bottom: 0
+    &__btn
+        background: transparent
+        border: none
+        padding: 0
+        margin-bottom: 18px
+        @extend .link-styles
+        display: inline-flex
+        line-height: 18px
+        @include breakpoint(desktop, up)
+            margin-bottom: 20px
+        i
+            font-size: 17px
+            margin-left: 5px
+            display: inline-block
+    &__text
+        line-height: 28px
+        p
+        @include breakpoint(desktop, up)
+            margin-bottom: 20px
+            font-size: 20px
+    &__link
+        @extend .link-styles
+        color: $black
+        &:hover
+            color: inherit
+        i
+            font-size: 22px
+        @include breakpoint(desktop, up)
+            color: $white
