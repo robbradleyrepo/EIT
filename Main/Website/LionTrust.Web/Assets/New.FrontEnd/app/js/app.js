@@ -1,3 +1,4 @@
+import 'core-js/es/number'; 
 import $ from "jquery";
 window.jQuery = $;
 window.$ = $;
