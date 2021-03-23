@@ -76,10 +76,10 @@
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Unicorn\z.Feature.Navigation.config" />
     <Content Include="Views\Navigation\Header.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Navigation\Menu.cshtml" />
+    <Content Include="App_Config\Include\Feature\Feature.Navigation.Serialization.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
