@@ -1,49 +1,33 @@
 import Swiper from 'swiper/bundle';
 
-// core version + navigation, pagination modules:
-import SwiperCore, { Navigation, Pagination } from 'swiper/core';
-
-// configure Swiper to use modules
-SwiperCore.use([Navigation, Pagination]);
-
 export default () => {
     
     const swiper = new Swiper('.swiper-container-article', {
-        slidesPerView: 1,
-        spaceBetween: 5,
-        grabCursor: true,
-        centeredSlides: false,
+
+        slidesPerView: 1.2,
+        spaceBetween: 0,
+        // slidesOffsetAfter: 30,
+        breakpointsInverse: true,
         loop: true,
         breakpoints: {
-            // 480: {
-            //     slidesPerView: 1,
-            //     spaceBetween: 20,
-            //   },
-            640: {
-                slidesPerView: 2,
+            576: {
+                slidesPerView: 1.8,
                 spaceBetween: 10,
-            },
-            // 768: {
-            //     slidesPerView: 2,
-            //     spaceBetween: 20,
-            // },
-            // 1024: {
-            //     slidesPerView: 2,
-            //     spaceBetween: 20,
-            // },
-            1124: {
-                slidesPerView: 3,
-                spaceBetween: 10,
-            },
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
 
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
+            },
+            768: {
+                slidesPerView: 2.2,
+            },
+            992: {
+                slidesPerView: 2.7,
+            },
+            1200: {
+                slidesPerView: 3.5,
+            },
+            2560: {
+                slidesPerView: 4.5,
+            }
+        }
+     
     });
 }
