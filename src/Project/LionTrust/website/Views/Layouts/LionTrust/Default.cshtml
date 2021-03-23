@@ -1,4 +1,7 @@
-﻿@using Sitecore.Mvc.Analytics.Extensions
+﻿@using Sitecore.Links
+@using Sitecore.Mvc.Analytics.Extensions
+@using Sitecore.Foundation.Assets.Extensions
+@using Sitecore.Web
 @{
     Layout = null;
 }
@@ -9,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>@Html.Sitecore().Field("title", new {DisableWebEdit = true})</title>
+    <title>@Html.Sitecore().Field("BrowserTitle", new { DisableWebEdit = true })</title>
     @Html.Sitecore().VisitorIdentification()
     <!-- Bootstrap -->
     <link href="~/Content/bootstrap.css" rel="stylesheet">
@@ -22,18 +25,15 @@
     <![endif]-->
 </head>
 <body>
-<header>
-    <h1>@Html.Sitecore().Field("title")</h1>
-</header>
-<main>
-    @Html.Sitecore().Placeholder("main")
-</main>
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="~/Scripts/jquery-3.0.0.min.js"><\/script>')</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+    <header class="header">
+        <section class="container">
+            @Html.Sitecore().Rendering("/sitecore/layout/Renderings/Feature/Navigation/Header", new { DatSource = Sitecore.Context.Item })
+    </header>
+    <div class="mask"></div>
+    <main id="main" role="main">
+        @Html.Sitecore().Placeholder("main")
+    </main>
+
+    @Html.Sitecore().Rendering("/sitecore/layout/Renderings/Feature/Navigation/Footer", new { DatSource = Sitecore.Context.Item })
 </body>
 </html>

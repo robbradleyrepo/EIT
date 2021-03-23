@@ -7,15 +7,14 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{EEDA31E9-58A3-448A-A3FC-F519ED051503}</ProjectGuid>
+    <ProjectGuid>{A57B01C5-75AD-47C0-BEDA-93079FD37317}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LionTrust.Feature.Navigation</RootNamespace>
-    <AssemblyName>LionTrust.Feature.Navigation</AssemblyName>
+    <RootNamespace>LionTrust.Foundation.SitecoreExtensions</RootNamespace>
+    <AssemblyName>LionTrust.Foundation.SitecoreExtensions</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress />
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -24,6 +23,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TargetFrameworkProfile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,7 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\</OutputPath>
@@ -44,42 +43,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Glass.Mapper.Sc.92">
-      <Version>5.8.177</Version>
-    </PackageReference>
-    <PackageReference Include="Glass.Mapper.Sc.92.Mvc">
-      <Version>5.8.177</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.AspNet.Mvc">
-      <Version>5.2.7</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.AspNet.Razor">
-      <Version>3.2.7</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.AspNet.WebPages">
-      <Version>3.2.7</Version>
-    </PackageReference>
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="1.0.5" />
     <PackageReference Include="Microsoft.Net.Compilers" Version="2.1.0" />
-    <PackageReference Include="Microsoft.Web.Infrastructure">
-      <Version>1.0.0</Version>
+    <PackageReference Include="Sitecore.Kernel">
+      <Version>9.2.0</Version>
     </PackageReference>
-    <PackageReference Include="Sitecore.Kernel" Version="9.2.0" />
     <PackageReference Include="Sitecore.Mvc">
       <Version>9.2.0</Version>
     </PackageReference>
-    <PackageReference Include="Unicorn.Core" Version="4.0.8" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
-    <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Unicorn\z.Feature.Navigation.config" />
-    <Content Include="Views\Navigation\Header.cshtml" />
-    <Content Include="Views\Web.config" />
-    <Content Include="Views\Navigation\Menu.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -91,26 +68,16 @@
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\NavigationController.cs" />
-    <Compile Include="Models\NavigationViewModel.cs" />
-    <Compile Include="Models\IHome.cs" />
-    <Compile Include="Models\INavigationGlassBase.cs" />
-    <Compile Include="Models\ISiteRoot.cs" />
+    <Compile Include="Extensions\FieldExtensions.cs" />
+    <Compile Include="Extensions\ItemExtensions.cs" />
+    <Compile Include="Extensions\SiteExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\INavigationRepository.cs" />
-    <Compile Include="Repositories\NavigationRepository.cs" />
-    <Compile Include="Constants.cs" />
+    <Compile Include="Templates.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Foundation\ORM\website\LionTrust.Foundation.ORM.csproj">
-      <Project>{5e91a7d9-8e93-44fd-857f-f9ce145b6022}</Project>
-      <Name>LionTrust.Foundation.ORM</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Foundation\SitecoreExtensions\website\LionTrust.Foundation.SitecoreExtensions.csproj">
-      <Project>{a57b01c5-75ad-47c0-beda-93079fd37317}</Project>
-      <Name>LionTrust.Foundation.SitecoreExtensions</Name>
-    </ProjectReference>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -124,9 +91,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>52939</DevelopmentServerPort>
+          <DevelopmentServerPort>39014</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:52939/</IISUrl>
+          <IISUrl>http://localhost:39014/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
