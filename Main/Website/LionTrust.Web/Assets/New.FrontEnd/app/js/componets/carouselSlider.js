@@ -29,7 +29,7 @@ export default () => {
         loop: true,
         pagination: {
             el: '.swiper-pagination',
-        clickable: true,
+            clickable: true,
 
         },
         navigation: {
