@@ -1,10 +1,12 @@
 .header-navbar
-    padding-top: 30px
-    padding-bottom: 15px
+    padding-top: 10px
     display: flex
     justify-content: space-between
     // height: 47px
     align-items: center
+    @include breakpoint(desktop, up)
+        padding-top: 30px
+        padding-bottom: 15px
     &__btn-open
         background: transparent
         border: none
