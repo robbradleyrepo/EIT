@@ -1,6 +1,3 @@
-
-
-
 import Swiper from 'swiper/bundle';
 
 // core version + navigation, pagination modules:
@@ -11,21 +8,11 @@ SwiperCore.use([Navigation, Pagination]);
 
 export default () => {
     
-    const swiper = new Swiper('.swiper-container-carousel', {
-
-        effect: 'coverflow',
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
+    const swiper = new Swiper('.swiper-container-awards', {
+        slidesPerView: 3,
         spaceBetween: 5,
-        coverflowEffect: {
-            rotate: 10,
-            stretch: 0,
-            depth: 300,
-            modifier: 2,
-            slideShadows: true,
-        },
-            
+        grabCursor: true,
+        centeredSlides: false,
         loop: true,
         pagination: {
             el: '.swiper-pagination',
