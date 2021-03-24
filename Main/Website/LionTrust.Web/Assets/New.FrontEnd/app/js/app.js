@@ -9,6 +9,8 @@ import sidebarNav from "./componets/sidebarNav";
 import carouselSlider from "./componets/carouselSlider";
 import fundsSlider from "./componets/fundsSlider";
 import articleSlider from "./componets/articleSlider";
+import awardsSlider from "./componets/awardsSlider";
+
 
 
 import investmentCard from "./componets/investmentCard";
@@ -17,8 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
   onboardingOverlay();
   sidebarNav();
   searchOvarlay();
+  investmentCard();
   carouselSlider();
   fundsSlider();
   articleSlider();
-  investmentCard();
+  awardsSlider();
 });

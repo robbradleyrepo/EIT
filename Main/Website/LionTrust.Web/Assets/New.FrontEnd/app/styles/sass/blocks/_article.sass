@@ -5,6 +5,7 @@
     &__box
         display: flex
         flex-direction: column
+        overflow: hidden
     
     &__head
         display: flex
@@ -18,7 +19,6 @@
         display: flex
         padding-bottom: 25px
         padding-left: 20px
-        scrollbar-width: none
         position: relative
         @include breakpoint(desktop, up)
             padding-left: 50px
@@ -186,28 +186,3 @@
 .swiper-container-article .swiper-slide 
     display: flex
 
-.swiper-container-article .swiper-pagination
-    bottom: -6px
-
-.swiper-container-article .swiper-pagination-bullet
-    background: $white
-    opacity: 1
-    outline: none
-
-.swiper-container-article .swiper-pagination-bullet-active
-    background: $gold
-
-// .fundscroller .swiper-button-next
-//     right: -45px
-//     top: 60% 
-//     outline: none
-
-// .fundscroller .swiper-button-prev
-//     left: -45px
-//     top: 60% 
-//     outline: none
-    
-// .fundscroller .swiper-button-next:after, .fundscroller .swiper-button-prev:after
-//     color: $white
-//     font-size: 50px
-//     z-index: 999

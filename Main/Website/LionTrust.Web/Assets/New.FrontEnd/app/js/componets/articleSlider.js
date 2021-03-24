@@ -6,6 +6,7 @@ export default () => {
 
         slidesPerView: 1.2,
         spaceBetween: 0,
+        grabCursor: true,
         // slidesOffsetAfter: 30,
         breakpointsInverse: true,
         loop: true,
@@ -24,9 +25,9 @@ export default () => {
             1200: {
                 slidesPerView: 3.5,
             },
-            2560: {
-                slidesPerView: 4.5,
-            }
+            // 2560: {
+                // slidesPerView: 4.5,
+            // }
         }
      
     });
