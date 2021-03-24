@@ -1,0 +1,45 @@
+.featured-articles
+    background: #F7F9FC
+    padding-top: 18px
+    padding-bottom: 10px
+    font-size: 18px
+    line-height: 26px
+    counter-reset: section
+    @include breakpoint(desktop, up)
+        padding-top: 30px
+        padding-bottom: 0
+    &__title
+        @include breakpoint(desktop, up)
+            margin-bottom: 38px
+
+.featured-article
+    @include breakpoint(desktop, up)
+        columns: 2
+    &__item
+        margin-bottom: 20px
+        position: relative
+        padding-left: 52px
+        @include breakpoint(desktop, up)
+            font-size: 20px
+            line-height: 30px
+            padding-left: 80px
+            margin-bottom: 44px
+        @include breakpoint(desktop-large, up)
+            padding-right: 40px
+        &:before
+            position: absolute
+            font-size: 60px
+            font-weight: bold
+            color: $primary
+            counter-increment: section
+            content: counter(section)
+            width: 36px
+            left: 0
+            top: 13px
+            @include breakpoint(desktop, up)
+                font-size: 80px
+                top: 20px
+    &__link
+        color: $black
+        &:hover
+            color: $black
