@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</ProjectGuid>
+    <ProjectGuid>{A57B01C5-75AD-47C0-BEDA-93079FD37317}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LionTrust.Foundation.ORM</RootNamespace>
-    <AssemblyName>LionTrust.Foundation.ORM</AssemblyName>
+    <RootNamespace>LionTrust.Foundation.SitecoreExtensions</RootNamespace>
+    <AssemblyName>LionTrust.Foundation.SitecoreExtensions</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -20,6 +20,8 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <TargetFrameworkProfile />
     <Use64BitIISExpress />
   </PropertyGroup>
@@ -41,13 +43,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Glass.Mapper.Sc.92">
-      <Version>5.8.177</Version>
+    <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="1.0.5" />
+    <PackageReference Include="Microsoft.Net.Compilers" Version="2.1.0" />
+    <PackageReference Include="Sitecore.Kernel">
+      <Version>9.2.0</Version>
     </PackageReference>
-    <PackageReference Include="Glass.Mapper.Sc.92.Mvc">
-      <Version>5.8.177</Version>
-    </PackageReference>
-    <PackageReference Include="Sitecore.Kernel" Version="9.2.0" />
     <PackageReference Include="Sitecore.Mvc">
       <Version>9.2.0</Version>
     </PackageReference>
@@ -57,24 +57,6 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\GlassMapperSc.cs" />
-    <Compile Include="App_Start\GlassMapperScCustom.cs" />
-    <Compile Include="DI\RegisterContainer.cs" />
-    <Compile Include="Extensions\MapsConfigFactoryExtension.cs" />
-    <Compile Include="Mappings\GlassMappings.cs" />
-    <Compile Include="Mappings\RegisterMappings.cs" />
-    <Compile Include="Models\IGlassBase.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_Config\Include\Foundation\Foundation.ORM.RegisterMappings.config" />
-    <Content Include="App_Config\Include\Glass\z.Glass.Mapper.Sc.ViewRender.config.exclude" />
-    <Content Include="App_Config\Include\Glass\Glass.Mapper.Sc.Start.config" />
-    <Content Include="App_Config\Include\Glass\Glass.Mapper.Sc.config" />
-    <Content Include="App_Config\Include\Foundation\Foundation.ORM.RegisterContainer.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <None Include="Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -83,11 +65,19 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Core\website\LionTrust.Foundation.Core.csproj">
-      <Project>{0c1e2fec-ac54-4cf0-905a-890d3bf711d5}</Project>
-      <Name>LionTrust.Foundation.Core</Name>
-    </ProjectReference>
+    <None Include="Web.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions\FieldExtensions.cs" />
+    <Compile Include="Extensions\ItemExtensions.cs" />
+    <Compile Include="Extensions\SiteExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Templates.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -101,9 +91,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>4629</DevelopmentServerPort>
+          <DevelopmentServerPort>39014</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:4629/</IISUrl>
+          <IISUrl>http://localhost:39014/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -1,0 +1,43 @@
+﻿@using LionTrust.Feature.Navigation
+@model Liontrust.Feature.Navigation.Models.NavigationViewModel
+<!-- header -->
+<div class="header-navbar">
+    <button class="header-navbar__btn-open"></button>
+
+    <a href="@Model.HomeItem.Url" class="header-navbar__logo">
+        @Html.Glass().RenderImage(Model.HomeItem, x => x.Logo, new { alt = Model.HomeItem.Logo != null ? Model.HomeItem.Logo.Alt : string.Empty, @class= "header-navbar__logo-img" }, isEditable: true)
+    </a>
+
+    @if (Model.HomeItem.HeaderMenuItems != null && Model.HomeItem.HeaderMenuItems.Any())
+    {
+        <nav class="nav-desktop">
+            <ul class="nav-desktop__list">
+                @foreach (var menuItem in Model.HomeItem.HeaderMenuItems)
+                {
+                    <li class="nav-desktop__item">
+                        <a href="@menuItem.Url" class="nav-desktop__link">
+                            @Html.Glass().Editable(menuItem, z => z.MenuTitle)
+                        </a>
+                    </li>
+                }
+                @if (Model.HomeItem.ContactUsPage != null)
+                {
+                    <li class="nav-desktop__item">
+                        <a href="@Model.HomeItem.ContactUsPage.Url" class="nav-desktop__link nav-desktop__link_contact">
+                            @Html.Glass().Editable(Model.HomeItem.ContactUsPage, z => z.MenuTitle)
+                        </a>
+                    </li>
+                }
+            </ul>
+        </nav>
+    }
+
+    <a href="#" class="header-navbar__user-link">
+        <img src="images/components/header/user.svg" alt="user profile">
+    </a>
+    <div class="header-navbar__btn-search">
+        <img src="images/components/header/search.svg" alt="search">
+    </div>
+</div>
+
+@Html.Partial("~/Views/Navigation/Menu.cshtml", Model)
