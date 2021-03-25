@@ -1,0 +1,44 @@
+.insight
+    display: flex
+
+    &__box
+        display: flex
+        flex-direction: column
+
+    &__head
+        display: flex
+        justify-content: space-between
+        align-content: center
+        padding: 10px 0
+        
+
+    &__tit
+        display: flex
+        font-size: 32px
+        color: $gold
+        font-weight: 300
+        @include breakpoint(desktop, up)
+            font-size: 52px
+
+
+    &__more
+        display: none
+        align-items: center
+        color: $primary
+        letter-spacing: 2.4px
+        font-size: 12px
+        text-transform: uppercase
+        cursor: pointer
+        @include breakpoint(desktop, up)
+            display: flex
+        > i 
+            width: 16px
+            height: 13px
+            margin-left: 5px
+            transition: transform .5s ease-out
+
+        &:hover
+            > i
+                transform: translate(10px, 0)
+
+                
