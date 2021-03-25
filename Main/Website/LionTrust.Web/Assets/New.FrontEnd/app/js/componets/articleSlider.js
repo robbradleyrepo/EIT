@@ -3,18 +3,14 @@ import Swiper from 'swiper/bundle';
 export default () => {
     
     const swiper = new Swiper('.swiper-container-article', {
-
         slidesPerView: 1.2,
-        spaceBetween: 0,
+        spaceBetween: 32,
         grabCursor: true,
-        // slidesOffsetAfter: 30,
+        slidesOffsetAfter: 30,
         breakpointsInverse: true,
-        loop: true,
         breakpoints: {
             576: {
-                slidesPerView: 1.8,
-                spaceBetween: 10,
-
+                slidesPerView: 1.5,
             },
             768: {
                 slidesPerView: 2.2,
@@ -23,12 +19,11 @@ export default () => {
                 slidesPerView: 2.7,
             },
             1200: {
-                slidesPerView: 3.5,
+                slidesPerView: 3.2,
             },
-            // 2560: {
-                // slidesPerView: 4.5,
-            // }
+            2560: {
+                slidesPerView: 4.5,
+            }
         }
-     
-    });
+      });
 }

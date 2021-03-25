@@ -158,9 +158,11 @@ export default () => {
       },
       generateSearchParams() {
         let query = "";
-        for (const [key, value] of Object.entries(this.searchParams)) {
-          if (value) query += `${key}=${value}&`;
-        }
+        const entries = Object.entries(this.searchParams);
+        entries.forEach(([key, value], index) => {
+          if (value) query += `${key}=${value}`;
+          if (index !== entries.length - 1 ) query += '&';
+        });
         return query;
       },
       getPage() {
