@@ -8,12 +8,31 @@ export default () => {
   const options = document.querySelectorAll(".article-filters__options");
   const optionCheckbox = document.querySelectorAll(".option-checkbox");
 
+  const hideSelectFilters = () => {
+    document.querySelectorAll(".article-filters__select").forEach((el) => {
+      el.classList.remove("active");
+    });
+  };
+
   openSelectFilterBtn.forEach((el) => {
     el.addEventListener("click", (e) => {
-      console.log(e);
-      console.log("parentNode", el.parentNode);
-      el.parentNode.querySelector('.article-filters__options').classList.add("active");
+      e.stopPropagation();
+      // hideSelectFilters();
+      el.classList.toggle("active");
+      el.parentNode
+        .querySelector(".article-filters__options")
+        .classList.add("active");
     });
+  });
+
+  options.forEach((option) => {
+    option.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+  });
+
+  document.querySelector("body").addEventListener("click", () => {
+    hideSelectFilters();
   });
 
   // optionCheckbox.forEach(checkbox => {

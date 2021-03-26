@@ -35,6 +35,12 @@
 	background-color: $primary
 	color: #fff
 
+*
+    &::-webkit-scrollbar
+        width: 4px
+    &::-webkit-scrollbar-thumb
+        background-color: #9D9D9D
+
 input, textarea
 	outline: none
 	&:focus:required:invalid
@@ -87,6 +93,12 @@ a
 .mb-30
 	margin-bottom: 30px
 
+.min-width-100
+	min-width: 100%!important
+
+.relative 
+	position: relative
+
 .text-center
 	text-align: center
 
@@ -96,7 +108,7 @@ a
 	display: -webkit-box
 	-webkit-line-clamp: 1 /* number of lines to show */
 	-webkit-box-orient: vertical
-	
+
 .twoline
 	-webkit-line-clamp: 2 /* number of lines to show */
 .threeline

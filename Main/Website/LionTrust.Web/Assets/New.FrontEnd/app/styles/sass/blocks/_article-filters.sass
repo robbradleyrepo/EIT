@@ -9,19 +9,35 @@
     z-index: 4
     transition: transform 0.35s
     transform: translate3d(100%, 0, 0)
+    @include breakpoint(desktop, up)
+        position: static
+        transform: translate3d(0, 0, 0)
     &.active
         transform: translate3d(0, 0, 0)
     &__header
         background: $white
         padding: 15px 0 23px
+        @include breakpoint(desktop, up)
+            display: none
     &__body
         background: #F7F9FC
         height: 100%
+        @include breakpoint(desktop, up)
+            height: auto
+            padding: 20px 0
+    &__footer
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 24px
+        @include breakpoint(desktop, up)
+            display: none
     &__main-title
         @extend h3
         display: flex
         align-items: center
         justify-content: space-between
+        margin-bottom: 20px
         i
             color: $black
             font-size: 19px
@@ -33,12 +49,66 @@
         justify-content: space-between
         align-items: center
         cursor: pointer
+        &.active
+            i:before
+                content: "\e916"
+                font-size: 9px
+            @include breakpoint(desktop, up)
+                border-color: $primary
+        @include breakpoint(desktop, up)
+            font-size: 16px
+            padding: 11px 0
+        &.active + .article-filters__options
+            visibility: visible
+    &__select-custom
+        @extend .article-filters__select
+        background: transparent
+        border-top: none
+        border-left: none
+        border-right: none
+        appearance: none
+        width: 100%
+        &:focus
+            outline: none
+    &__item-title
+        &.active
+            color: $primary
+            &:after
+                font-family: 'icomoon'
+                content: "\e91d"
+                position: relative
+                top: 3px
+                left: 5px
+                @include breakpoint(desktop, up)
+                    font-size: 14px
+    &__btns
+        display: none
+        @include breakpoint(desktop, up)
+            display: flex
+            justify-content: space-between
+    &__btn
+        color: $secondary
+        min-width: auto
+        height: 38px
+        line-height: 38px
+        &_apply
+            background: #4148550D
+            padding: 0 0.7rem
+            width: auto
+            &:hover
+                background: darken(#4148550D, 50%)
+        &_clear
+            padding: 0
+            width: auto
+            white-space: nowrap
     &__title
         @extend h4
         display: flex
         align-items: center
         margin: 10px 0
         cursor: pointer
+        @include breakpoint(desktop, up)
+            display: none
         i
             font-size: 16px
             margin-right: 10px
@@ -46,6 +116,10 @@
         @extend [class*=" icon-"]
         &::before
             content: "\e913"
+        @include breakpoint(desktop, up)
+            font-size: 5px
+            &::before
+                content: "\e906"
     &__options
         position: fixed
         top: 0
@@ -59,6 +133,18 @@
         transform: translate3d(100%, 0, 0)
         &.active
             transform: translate3d(0, 0, 0)
+        @include breakpoint(desktop, up)
+            position: absolute
+            top: 48px
+            left: 0
+            bottom: inherit
+            box-shadow: 0px 10px 20px #414855
+            border-radius: 0px 0px 6px 6px
+            padding: 10px 11px 0
+            transform: none
+            visibility: hidden
+            max-height: 350px
+            overflow-y: scroll
 
 .option-checkbox
     display: block
@@ -67,6 +153,10 @@
     display: flex
     align-items: center
     justify-content: space-between
+    @include breakpoint(desktop, up)
+        font-size: 16px
+        padding-top: 0
+        padding-bottom: 10px
     &__input
         display: none
         &:checked ~ .option-checkbox__text
@@ -80,3 +170,7 @@
         &::before
             content: "\e91c"
             color: #CFD1D4
+
+#show-article-fliter
+    @include breakpoint(desktop, up)
+        display: none
