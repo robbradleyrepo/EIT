@@ -1,4 +1,4 @@
-import 'core-js/es/number'; 
+import "core-js/es/number";
 import $ from "jquery";
 window.jQuery = $;
 window.$ = $;
@@ -11,9 +11,8 @@ import fundsSlider from "./componets/fundsSlider";
 import articleSlider from "./componets/articleSlider";
 import awardsSlider from "./componets/awardsSlider";
 
-
-
 import investmentCard from "./componets/investmentCard";
+import articleFilder from "./componets/articleFilder";
 
 document.addEventListener("DOMContentLoaded", () => {
   onboardingOverlay();
@@ -24,4 +23,5 @@ document.addEventListener("DOMContentLoaded", () => {
   fundsSlider();
   articleSlider();
   awardsSlider();
+  articleFilder();
 });

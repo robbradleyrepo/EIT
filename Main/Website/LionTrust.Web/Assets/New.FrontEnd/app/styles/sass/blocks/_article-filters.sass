@@ -1,0 +1,82 @@
+.article-filters
+    color: $black
+    font-size: 18px
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 4
+    transition: transform 0.35s
+    transform: translate3d(100%, 0, 0)
+    &.active
+        transform: translate3d(0, 0, 0)
+    &__header
+        background: $white
+        padding: 15px 0 23px
+    &__body
+        background: #F7F9FC
+        height: 100%
+    &__main-title
+        @extend h3
+        display: flex
+        align-items: center
+        justify-content: space-between
+        i
+            color: $black
+            font-size: 19px
+            cursor: pointer
+    &__select
+        border-bottom: 1px solid rgba($secondary-gray, .1)
+        padding: 18px 0
+        display: flex
+        justify-content: space-between
+        align-items: center
+        cursor: pointer
+    &__title
+        @extend h4
+        display: flex
+        align-items: center
+        margin: 10px 0
+        cursor: pointer
+        i
+            font-size: 16px
+            margin-right: 10px
+    &__icon-arrow
+        @extend [class*=" icon-"]
+        &::before
+            content: "\e913"
+    &__options
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: $white
+        z-index: 5
+        padding: 20px
+        transition: transform 0.35s
+        transform: translate3d(100%, 0, 0)
+        &.active
+            transform: translate3d(0, 0, 0)
+
+.option-checkbox
+    display: block
+    padding-top: 10px
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &__input
+        display: none
+        &:checked ~ .option-checkbox__text
+            color: $primary
+        &:checked ~ .option-checkbox__icon
+            &::before
+                content: "\e91d"
+                color: $primary
+    &__icon
+        @extend [class*=" icon-"]
+        &::before
+            content: "\e91c"
+            color: #CFD1D4
