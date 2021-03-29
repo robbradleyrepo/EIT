@@ -12,13 +12,16 @@
     @include breakpoint(desktop, up)
         position: static
         transform: translate3d(0, 0, 0)
+        display: flex
+        flex-direction: column
     &.active
         transform: translate3d(0, 0, 0)
     &__header
         background: $white
         padding: 15px 0 23px
         @include breakpoint(desktop, up)
-            display: none
+            order: 1
+            padding-top: 38px
     &__body
         background: #F7F9FC
         height: 100%
@@ -60,6 +63,7 @@
             padding: 11px 0
         &.active + .article-filters__options
             visibility: visible
+            transform: translate3d(0, 0, 0)
     &__select-custom
         @extend .article-filters__select
         background: transparent
@@ -81,6 +85,7 @@
                 left: 5px
                 @include breakpoint(desktop, up)
                     font-size: 14px
+                    top: 0
     &__btns
         display: none
         @include breakpoint(desktop, up)
@@ -91,6 +96,7 @@
         min-width: auto
         height: 38px
         line-height: 38px
+        white-space: nowrap
         &_apply
             background: #4148550D
             padding: 0 0.7rem
@@ -120,6 +126,10 @@
             font-size: 5px
             &::before
                 content: "\e906"
+        &_select
+            position: absolute
+            right: 10px
+            bottom: 20px
     &__options
         position: fixed
         top: 0
@@ -131,8 +141,8 @@
         padding: 20px
         transition: transform 0.35s
         transform: translate3d(100%, 0, 0)
-        &.active
-            transform: translate3d(0, 0, 0)
+        // &.active
+        //     transform: translate3d(0, 0, 0)
         @include breakpoint(desktop, up)
             position: absolute
             top: 48px
@@ -145,6 +155,16 @@
             visibility: hidden
             max-height: 350px
             overflow-y: scroll
+    .search-form
+        &__input
+            @include breakpoint(desktop, up)
+                font-size: initial
+        &__submit
+            color: $primary
+            @include breakpoint(desktop, up)
+                font-size: initial
+                top: 7px
+                color: initial
 
 .option-checkbox
     display: block
