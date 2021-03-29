@@ -1,6 +1,5 @@
 ﻿@using Sitecore.Links
 @using Sitecore.Mvc.Analytics.Extensions
-@using Sitecore.Foundation.Assets.Extensions
 @using Sitecore.Web
 @{
     Layout = null;
@@ -14,8 +13,8 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>@Html.Sitecore().Field("BrowserTitle", new { DisableWebEdit = true })</title>
     @Html.Sitecore().VisitorIdentification()
-    <!-- Bootstrap -->
-    <link href="~/Content/bootstrap.css" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/styles.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -35,5 +34,7 @@
     </main>
 
     @Html.Sitecore().Rendering("/sitecore/layout/Renderings/Feature/Navigation/Footer", new { DatSource = Sitecore.Context.Item })
+
+    <script src="js/script.js"></script>
 </body>
 </html>

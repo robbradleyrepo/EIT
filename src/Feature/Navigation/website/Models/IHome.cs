@@ -6,34 +6,31 @@
 
     public interface IHome : INavigationGlassBase
     {
-        [SitecoreField(Constants.Identity.Logo_FieldName)]
-        public Image Logo { get; set; }
+        [SitecoreField(Constants.Menu.HeaderMenuItems_FieldName)]
+        IEnumerable<INavigationGlassBase> HeaderMenuItems { get; set; }
 
-        [SitecoreField(Constants.Identity.HeaderMenuItems_FieldName)]
-        public IEnumerable<INavigationGlassBase> HeaderMenuItems { get; set; }
-
-        [SitecoreField(Constants.Identity.ContactUsPage_FieldName)]
-        public INavigationGlassBase ContactUsPage { get; set; }
+        [SitecoreField(Constants.Menu.ContactUsPage_FieldName)]
+        INavigationGlassBase ContactUsPage { get; set; }
 
         [SitecoreField(Constants.Menu.MyLionTrust_FieldName)]
-        public INavigationGlassBase MyLionTrust { get; set; }
+        INavigationGlassBase MyLionTrust { get; set; }
 
         [SitecoreField(Constants.Menu.MyPreferences_FieldName)]
-        public INavigationGlassBase MyPreferences { get; set; }
+        INavigationGlassBase MyPreferences { get; set; }
 
         [SitecoreField(Constants.Menu.SignUpNewsletter_FieldName)]
-        public INavigationGlassBase SignupNewsLetter { get; set; }
+        INavigationGlassBase SignupNewsLetter { get; set; }
 
         [SitecoreField(Constants.Menu.YouAreViewingLabel_FieldName)]
-        public string YouAreViewingLabel { get; set; }
+        string YouAreViewingLabel { get; set; }
 
         [SitecoreField(Constants.Menu.ChangeLabel_FieldName)]
-        public string ChangeLabel { get; set; }
+        string ChangeLabel { get; set; }
 
         [SitecoreField(Constants.Menu.CloseLabel_FieldName)]
-        public string CloseLabel { get; set; }
+        string CloseLabel { get; set; }
 
         [SitecoreField(Constants.Menu.MenuItems_FieldName)]
-        public IEnumerable<INavigationGlassBase> MenuItems { get; set; }
+        IEnumerable<INavigationGlassBase> MenuItems { get; set; }
     }
 }

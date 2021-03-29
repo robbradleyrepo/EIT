@@ -8,16 +8,16 @@
         {     
             public const string Logo_FieldName = "Logo";
             public static readonly ID Logo_FieldID = new ID("{F113BF3D-FE80-4A15-9CDA-679B3C3CB3BE}");
+        }
 
+        public static class Menu
+        {
             public const string HeaderMenuItems_FieldName = "HeaderMenuItems";
             public static readonly ID HeaderMenuItems_FieldID = new ID("{31282663-006B-47B1-95AE-F044B042F534}");
 
             public const string ContactUsPage_FieldName = "Contact Us Page";
             public static readonly ID ContactUsPage_FieldID = new ID("{0D831D08-90C7-4E31-B880-5A93146B3029}");
-        }
 
-        public static class Menu
-        {
             public const string MyLionTrust_FieldName = "MyLionTrust";
             public static readonly ID MyLionTrust_FieldID = new ID("{B810A405-73F4-48CC-AF61-778C82531262}");
 

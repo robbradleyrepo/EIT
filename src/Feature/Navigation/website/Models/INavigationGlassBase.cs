@@ -7,9 +7,9 @@
     public interface INavigationGlassBase : IGlassBase
     {
         [SitecoreField(Constants.Navigation.MenuTitle_FieldName)]
-        public string MenuTitle { get; set; }
+        string MenuTitle { get; set; }
 
         [SitecoreChildren]
-        public IEnumerable<INavigationGlassBase> Childrens { get; set; }
+        IEnumerable<INavigationGlassBase> Children { get; set; }
     }
 }
