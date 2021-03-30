@@ -23,5 +23,5 @@ document.addEventListener("DOMContentLoaded", () => {
   fundsSlider();
   articleSlider();
   awardsSlider();
-  articleFilder();
+  if (document.querySelector(".article-page")) articleFilder();
 });
