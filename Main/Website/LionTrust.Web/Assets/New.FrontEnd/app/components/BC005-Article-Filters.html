@@ -17,9 +17,28 @@
                     </form>
                 </div>
                 <div class="col-lg-2 offset-lg-7 d-none d-lg-block">
-                    <button class="btn btn-clean d-block ms-auto">
-                        sort <i class="icon-sort"></i>
-                    </button>
+                    <div class="relative">
+                        <button class="btn btn-clean d-block ms-auto button-sort">
+                            sort <i class="icon-sort"></i>
+                        </button>
+                        <div class="sort-dropdown">
+                            <div class="text-right">
+                                <span class="btn btn-clean">
+                                    sort <i class="icon-sort"></i>
+                                </span>
+                            </div>
+                            <label for="newest" class="option-checkbox">
+                                <input id="newest" class="option-checkbox__input" type="radio" name="sort" checked>
+                                <span class="option-checkbox__text">Date newest first</span>
+                                <span class="option-checkbox__icon"></span>
+                            </label>
+                            <label for="oldest" class="option-checkbox">
+                                <input id="oldest" class="option-checkbox__input" type="radio" name="sort">
+                                <span class="option-checkbox__text">Date oldest first</span>
+                                <span class="option-checkbox__icon"></span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

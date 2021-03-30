@@ -194,3 +194,17 @@
 #show-article-fliter
     @include breakpoint(desktop, up)
         display: none
+
+.sort-dropdown
+    @extend .article-filters__options
+    position: absolute
+    visibility: hidden
+    opacity: 0
+    border-radius: 6px
+    padding-top: 0
+    top: 0
+    right: -15px
+    transition: opacity .3s ease-out, visibility .3s ease-out
+    &.active
+        visibility: visible
+        opacity: 1
