@@ -1,276 +1,282 @@
-<div class="article-filters">
-    <div class="article-filters__header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2 d-lg-none">
-                    <div class="article-filters__main-title">Filters
-                        <i id="filters-close" class="icon-close"></i>
+<div class="article-filter-wrapper">
+    <div class="article-filters">
+        <div class="article-filters__header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 d-lg-none">
+                        <div class="article-filters__main-title">Filters
+                            <i id="filters-close" class="icon-close"></i>
+                        </div>
                     </div>
+                    <div class="col-lg-3">
+                        <form class="search-form">
+                            <input type="text" name="queryText" class="search-form__input color-black"
+                                placeholder="Search insight">
+                            <button class="search-form__submit pe-0" type="submit">
+                                <i class="icon-search"></i>
+                            </button>
+                        </form>
+                    </div>                    
                 </div>
-                <div class="col-lg-3">
-                    <form class="search-form">
-                        <input type="text" name="queryText" class="search-form__input color-black"
-                            placeholder="Search insight">
-                        <button class="search-form__submit pe-0" type="submit">
-                            <i class="icon-search"></i>
-                        </button>
-                    </form>
-                </div>
-                <div class="col-lg-2 offset-lg-7 d-none d-lg-block">
-                    <div class="relative">
-                        <button class="btn btn-clean d-block ms-auto button-sort">
-                            sort <i class="icon-sort"></i>
-                        </button>
-                        <div class="sort-dropdown">
-                            <div class="text-right">
-                                <span class="btn btn-clean">
-                                    sort <i class="icon-sort"></i>
-                                </span>
+            </div>
+        </div>
+        <div class="article-filters__body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 relative">
+                        <div class="article-filters__select">
+                            <span class="article-filters__item-title">
+                                Fund
+                            </span>
+                            <i class="article-filters__icon-arrow"></i>
+                        </div>
+                        <div class="article-filters__options">
+                            <div class="article-filters__title">
+                                <i class="icon-chevron-left"></i>
+                                Fund
                             </div>
-                            <label for="newest" class="option-checkbox">
-                                <input id="newest" class="option-checkbox__input" type="radio" name="sort" checked>
-                                <span class="option-checkbox__text">Date newest first</span>
+                            <label for="james" class="option-checkbox">
+                                <input id="james" class="option-checkbox__input" type="checkbox">
+                                <span class="option-checkbox__text">James Inglis-Jones</span>
                                 <span class="option-checkbox__icon"></span>
                             </label>
-                            <label for="oldest" class="option-checkbox">
-                                <input id="oldest" class="option-checkbox__input" type="radio" name="sort">
-                                <span class="option-checkbox__text">Date oldest first</span>
+                            <label for="Samantha" class="option-checkbox">
+                                <input id="Samantha" class="option-checkbox__input" type="checkbox">
+                                <span class="option-checkbox__text"> Samantha Gleave</span>
                                 <span class="option-checkbox__icon"></span>
                             </label>
+                            <label for="Test1" class="option-checkbox">
+                                <input id="Test1" class="option-checkbox__input" type="checkbox">
+                                <span class="option-checkbox__text"> Test1</span>
+                                <span class="option-checkbox__icon"></span>
+                            </label>
+                            <label for="Test2" class="option-checkbox">
+                                <input id="Test2" class="option-checkbox__input" type="checkbox">
+                                <span class="option-checkbox__text"> Test2</span>
+                                <span class="option-checkbox__icon"></span>
+                            </label>
+                            <label for="Test3" class="option-checkbox">
+                                <input id="Test3" class="option-checkbox__input" type="checkbox">
+                                <span class="option-checkbox__text"> Test3</span>
+                                <span class="option-checkbox__icon"></span>
+                            </label>
+                            <label for="Test4" class="option-checkbox">
+                                <input id="Test4" class="option-checkbox__input" type="checkbox">
+                                <span class="option-checkbox__text"> Test4</span>
+                                <span class="option-checkbox__icon"></span>
+                            </label>
+                            <label for="Test5" class="option-checkbox">
+                                <input id="Test5" class="option-checkbox__input" type="checkbox">
+                                <span class="option-checkbox__text"> Test5</span>
+                                <span class="option-checkbox__icon"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 relative">
+                        <div class="article-filters__select">
+                            <span class="article-filters__item-title">
+                                Fund Team
+                            </span>
+                            <i class="article-filters__icon-arrow"></i>
+                        </div>
+                        <div class="article-filters__options">
+                            <div class="article-filters__title">
+                                <i class="icon-chevron-left"></i>
+                                Category 123
+                            </div>
+                            <label for="james12" class="option-checkbox">
+                                <input id="james12" class="option-checkbox__input" type="checkbox">
+                                <span class="option-checkbox__text">James Inglis-Jones</span>
+                                <span class="option-checkbox__icon"></span>
+                            </label>
+                            <label for="Samantha12" class="option-checkbox">
+                                <input id="Samantha12" class="option-checkbox__input" type="checkbox">
+                                <span class="option-checkbox__text"> Samantha Gleave</span>
+                                <span class="option-checkbox__icon"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 relative">
+                        <div class="article-filters__select">
+                            <span class="article-filters__item-title">
+                                Fund Manager
+                            </span>
+                            <i class="article-filters__icon-arrow"></i>
+                        </div>
+                        <div class="article-filters__options">
+                            <div class="article-filters__title">
+                                <i class="icon-chevron-left"></i>
+                                Fund Manager
+                            </div>
+                            <label for="james1" class="option-checkbox">
+                                <input id="james1" class="option-checkbox__input" type="checkbox">
+                                <span class="option-checkbox__text">James Inglis-Jones</span>
+                                <span class="option-checkbox__icon"></span>
+                            </label>
+                            <label for="Samantha1" class="option-checkbox">
+                                <input id="Samantha1" class="option-checkbox__input" type="checkbox">
+                                <span class="option-checkbox__text"> Samantha Gleave</span>
+                                <span class="option-checkbox__icon"></span>
+                            </label>
+                            <label for="Test12" class="option-checkbox">
+                                <input id="Test12" class="option-checkbox__input" type="checkbox">
+                                <span class="option-checkbox__text"> Test1</span>
+                                <span class="option-checkbox__icon"></span>
+                            </label>
+                            <label for="Test22" class="option-checkbox">
+                                <input id="Test22" class="option-checkbox__input" type="checkbox">
+                                <span class="option-checkbox__text"> Test2</span>
+                                <span class="option-checkbox__icon"></span>
+                            </label>
+                            <label for="Test32" class="option-checkbox">
+                                <input id="Test32" class="option-checkbox__input" type="checkbox">
+                                <span class="option-checkbox__text"> Test3</span>
+                                <span class="option-checkbox__icon"></span>
+                            </label>
+                            <label for="Test42" class="option-checkbox">
+                                <input id="Test42" class="option-checkbox__input" type="checkbox">
+                                <span class="option-checkbox__text"> Test4</span>
+                                <span class="option-checkbox__icon"></span>
+                            </label>
+                            <label for="Test52" class="option-checkbox">
+                                <input id="Test52" class="option-checkbox__input" type="checkbox">
+                                <span class="option-checkbox__text"> Test5</span>
+                                <span class="option-checkbox__icon"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 relative">
+                        <div class="article-filters__select">Category
+                            <i class="article-filters__icon-arrow"></i>
+                        </div>
+                        <div class="article-filters__options">
+                            <div class="article-filters__title">
+                                <i class="icon-chevron-left"></i>
+                                Fund Manager
+                            </div>
+                            <label for="james3" class="option-checkbox">
+                                <input id="james3" class="option-checkbox__input" type="checkbox">
+                                <span class="option-checkbox__text">James Inglis-Jones</span>
+                                <span class="option-checkbox__icon"></span>
+                            </label>
+                            <label for="Samantha3" class="option-checkbox">
+                                <input id="Samantha3" class="option-checkbox__input" type="checkbox">
+                                <span class="option-checkbox__text"> Samantha Gleave</span>
+                                <span class="option-checkbox__icon"></span>
+                            </label>
+                            <label for="Test431" class="option-checkbox">
+                                <input id="Test431" class="option-checkbox__input" type="checkbox">
+                                <span class="option-checkbox__text"> Test1</span>
+                                <span class="option-checkbox__icon"></span>
+                            </label>
+                            <label for="Test41" class="option-checkbox">
+                                <input id="Test41" class="option-checkbox__input" type="checkbox">
+                                <span class="option-checkbox__text"> Test2</span>
+                                <span class="option-checkbox__icon"></span>
+                            </label>
+                            <label for="Test321" class="option-checkbox">
+                                <input id="Test321" class="option-checkbox__input" type="checkbox">
+                                <span class="option-checkbox__text"> Test3</span>
+                                <span class="option-checkbox__icon"></span>
+                            </label>
+                            <label for="Test422" class="option-checkbox">
+                                <input id="Test422" class="option-checkbox__input" type="checkbox">
+                                <span class="option-checkbox__text"> Test4</span>
+                                <span class="option-checkbox__icon"></span>
+                            </label>
+                            <label for="Test525" class="option-checkbox">
+                                <input id="Test525" class="option-checkbox__input" type="checkbox">
+                                <span class="option-checkbox__text"> Test5</span>
+                                <span class="option-checkbox__icon"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 relative">
+                        <!-- <div class="article-filters__select">Month
+                            <i class="article-filters__icon-arrow"></i>      
+                                         
+                        </div> -->
+                        <select class="article-filters__select-custom">
+                            <option value="0" disabled selected>Month</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October </option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                        <i class="article-filters__icon-arrow article-filters__icon-arrow_select"></i>
+                    </div>
+                    <div class="col-lg-1 relative">
+                        <select class="article-filters__select-custom">
+                            <option value="0" disabled selected>Year</option>
+                            <option value="1">2018</option>
+                            <option value="2">2019</option>
+                            <option value="3">2020</option>
+                            <option value="4">2021</option>
+                        </select>
+                        <i class="article-filters__icon-arrow article-filters__icon-arrow_select"></i>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="article-filters__btns">
+                            <button class="btn article-filters__btn article-filters__btn_apply">
+                                Apply filters
+                            </button>
+                            <button class="clear-filter btn article-filters__btn article-filters__btn_clear">
+                                Clear all
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="article-filters__body">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2 relative">
-                    <div class="article-filters__select">
-                        <span class="article-filters__item-title">
-                            Fund
-                        </span>
-                        <i class="article-filters__icon-arrow"></i>
-                    </div>
-                    <div class="article-filters__options">
-                        <div class="article-filters__title">
-                            <i class="icon-chevron-left"></i>
-                            Fund
-                        </div>
-                        <label for="james" class="option-checkbox">
-                            <input id="james" class="option-checkbox__input" type="checkbox">
-                            <span class="option-checkbox__text">James Inglis-Jones</span>
-                            <span class="option-checkbox__icon"></span>
-                        </label>
-                        <label for="Samantha" class="option-checkbox">
-                            <input id="Samantha" class="option-checkbox__input" type="checkbox">
-                            <span class="option-checkbox__text"> Samantha Gleave</span>
-                            <span class="option-checkbox__icon"></span>
-                        </label>
-                        <label for="Test1" class="option-checkbox">
-                            <input id="Test1" class="option-checkbox__input" type="checkbox">
-                            <span class="option-checkbox__text"> Test1</span>
-                            <span class="option-checkbox__icon"></span>
-                        </label>
-                        <label for="Test2" class="option-checkbox">
-                            <input id="Test2" class="option-checkbox__input" type="checkbox">
-                            <span class="option-checkbox__text"> Test2</span>
-                            <span class="option-checkbox__icon"></span>
-                        </label>
-                        <label for="Test3" class="option-checkbox">
-                            <input id="Test3" class="option-checkbox__input" type="checkbox">
-                            <span class="option-checkbox__text"> Test3</span>
-                            <span class="option-checkbox__icon"></span>
-                        </label>
-                        <label for="Test4" class="option-checkbox">
-                            <input id="Test4" class="option-checkbox__input" type="checkbox">
-                            <span class="option-checkbox__text"> Test4</span>
-                            <span class="option-checkbox__icon"></span>
-                        </label>
-                        <label for="Test5" class="option-checkbox">
-                            <input id="Test5" class="option-checkbox__input" type="checkbox">
-                            <span class="option-checkbox__text"> Test5</span>
-                            <span class="option-checkbox__icon"></span>
-                        </label>
-                    </div>
-                </div>
-                <div class="col-lg-2 relative">
-                    <div class="article-filters__select">
-                        <span class="article-filters__item-title">
-                            Fund Team
-                        </span>
-                        <i class="article-filters__icon-arrow"></i>
-                    </div>
-                    <div class="article-filters__options">
-                        <div class="article-filters__title">
-                            <i class="icon-chevron-left"></i>
-                            Category 123
-                        </div>
-                        <label for="james12" class="option-checkbox">
-                            <input id="james12" class="option-checkbox__input" type="checkbox">
-                            <span class="option-checkbox__text">James Inglis-Jones</span>
-                            <span class="option-checkbox__icon"></span>
-                        </label>
-                        <label for="Samantha12" class="option-checkbox">
-                            <input id="Samantha12" class="option-checkbox__input" type="checkbox">
-                            <span class="option-checkbox__text"> Samantha Gleave</span>
-                            <span class="option-checkbox__icon"></span>
-                        </label>
-                    </div>
-                </div>
-                <div class="col-lg-2 relative">
-                    <div class="article-filters__select">
-                        <span class="article-filters__item-title">
-                            Fund Manager
-                        </span>
-                        <i class="article-filters__icon-arrow"></i>
-                    </div>
-                    <div class="article-filters__options">
-                        <div class="article-filters__title">
-                            <i class="icon-chevron-left"></i>
-                            Fund Manager
-                        </div>
-                        <label for="james1" class="option-checkbox">
-                            <input id="james1" class="option-checkbox__input" type="checkbox">
-                            <span class="option-checkbox__text">James Inglis-Jones</span>
-                            <span class="option-checkbox__icon"></span>
-                        </label>
-                        <label for="Samantha1" class="option-checkbox">
-                            <input id="Samantha1" class="option-checkbox__input" type="checkbox">
-                            <span class="option-checkbox__text"> Samantha Gleave</span>
-                            <span class="option-checkbox__icon"></span>
-                        </label>
-                        <label for="Test12" class="option-checkbox">
-                            <input id="Test12" class="option-checkbox__input" type="checkbox">
-                            <span class="option-checkbox__text"> Test1</span>
-                            <span class="option-checkbox__icon"></span>
-                        </label>
-                        <label for="Test22" class="option-checkbox">
-                            <input id="Test22" class="option-checkbox__input" type="checkbox">
-                            <span class="option-checkbox__text"> Test2</span>
-                            <span class="option-checkbox__icon"></span>
-                        </label>
-                        <label for="Test32" class="option-checkbox">
-                            <input id="Test32" class="option-checkbox__input" type="checkbox">
-                            <span class="option-checkbox__text"> Test3</span>
-                            <span class="option-checkbox__icon"></span>
-                        </label>
-                        <label for="Test42" class="option-checkbox">
-                            <input id="Test42" class="option-checkbox__input" type="checkbox">
-                            <span class="option-checkbox__text"> Test4</span>
-                            <span class="option-checkbox__icon"></span>
-                        </label>
-                        <label for="Test52" class="option-checkbox">
-                            <input id="Test52" class="option-checkbox__input" type="checkbox">
-                            <span class="option-checkbox__text"> Test5</span>
-                            <span class="option-checkbox__icon"></span>
-                        </label>
-                    </div>
-                </div>
-                <div class="col-lg-2 relative">
-                    <div class="article-filters__select">Category
-                        <i class="article-filters__icon-arrow"></i>
-                    </div>
-                    <div class="article-filters__options">
-                        <div class="article-filters__title">
-                            <i class="icon-chevron-left"></i>
-                            Fund Manager
-                        </div>
-                        <label for="james3" class="option-checkbox">
-                            <input id="james3" class="option-checkbox__input" type="checkbox">
-                            <span class="option-checkbox__text">James Inglis-Jones</span>
-                            <span class="option-checkbox__icon"></span>
-                        </label>
-                        <label for="Samantha3" class="option-checkbox">
-                            <input id="Samantha3" class="option-checkbox__input" type="checkbox">
-                            <span class="option-checkbox__text"> Samantha Gleave</span>
-                            <span class="option-checkbox__icon"></span>
-                        </label>
-                        <label for="Test431" class="option-checkbox">
-                            <input id="Test431" class="option-checkbox__input" type="checkbox">
-                            <span class="option-checkbox__text"> Test1</span>
-                            <span class="option-checkbox__icon"></span>
-                        </label>
-                        <label for="Test41" class="option-checkbox">
-                            <input id="Test41" class="option-checkbox__input" type="checkbox">
-                            <span class="option-checkbox__text"> Test2</span>
-                            <span class="option-checkbox__icon"></span>
-                        </label>
-                        <label for="Test321" class="option-checkbox">
-                            <input id="Test321" class="option-checkbox__input" type="checkbox">
-                            <span class="option-checkbox__text"> Test3</span>
-                            <span class="option-checkbox__icon"></span>
-                        </label>
-                        <label for="Test422" class="option-checkbox">
-                            <input id="Test422" class="option-checkbox__input" type="checkbox">
-                            <span class="option-checkbox__text"> Test4</span>
-                            <span class="option-checkbox__icon"></span>
-                        </label>
-                        <label for="Test525" class="option-checkbox">
-                            <input id="Test525" class="option-checkbox__input" type="checkbox">
-                            <span class="option-checkbox__text"> Test5</span>
-                            <span class="option-checkbox__icon"></span>
-                        </label>
-                    </div>
-                </div>
-                <div class="col-lg-1 relative">
-                    <!-- <div class="article-filters__select">Month
-                        <i class="article-filters__icon-arrow"></i>      
-                                     
-                    </div> -->
-                    <select class="article-filters__select-custom">
-                        <option value="0" disabled selected>Month</option>
-                        <option value="1">January</option>
-                        <option value="2">February</option>
-                        <option value="3">March</option>
-                        <option value="4">April</option>
-                        <option value="5">May</option>
-                        <option value="6">June</option>
-                        <option value="7">July</option>
-                        <option value="8">August</option>
-                        <option value="9">September</option>
-                        <option value="10">October </option>
-                        <option value="11">November</option>
-                        <option value="12">December</option>
-                    </select>
-                    <i class="article-filters__icon-arrow article-filters__icon-arrow_select"></i>
-                </div>
-                <div class="col-lg-1 relative">
-                    <select class="article-filters__select-custom">
-                        <option value="0" disabled selected>Year</option>
-                        <option value="1">2018</option>
-                        <option value="2">2019</option>
-                        <option value="3">2020</option>
-                        <option value="4">2021</option>
-                    </select>
-                    <i class="article-filters__icon-arrow article-filters__icon-arrow_select"></i>
-                </div>
-                <div class="col-lg-2">
-                    <div class="article-filters__btns">
-                        <button class="btn article-filters__btn article-filters__btn_apply">
-                            Apply filters
+        <div class="article-filters__footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <button class="btn btn-primary min-width-100">
+                            Apply Filters
                         </button>
-                        <button class="clear-filter btn article-filters__btn article-filters__btn_clear">
-                            Clear all
+                    </div>
+                    <div class="col-6">
+                        <button class="clear-filter btn btn-primary-forward min-width-100">
+                            clear all
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="article-filters__footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-6">
-                    <button class="btn btn-primary min-width-100">
-                        Apply Filters
+    </div>    
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-lg-2 offset-6 col-md-4 offset-md-8 offset-lg-10 margin-sort-btn">
+                <div class="relative">
+                    <button class="btn btn-clean d-block ms-auto button-sort">
+                        sort <i class="icon-sort"></i>
                     </button>
-                </div>
-                <div class="col-6">
-                    <button class="clear-filter btn btn-primary-forward min-width-100">
-                        clear all
-                    </button>
+                    <div class="sort-dropdown">
+                        <div class="text-right">
+                            <span class="btn btn-clean">
+                                sort <i class="icon-sort"></i>
+                            </span>
+                        </div>
+                        <label for="newest" class="option-checkbox">
+                            <input id="newest" class="option-checkbox__input" type="radio" name="sort" checked>
+                            <span class="option-checkbox__text">Date newest first</span>
+                            <span class="option-checkbox__icon"></span>
+                        </label>
+                        <label for="oldest" class="option-checkbox">
+                            <input id="oldest" class="option-checkbox__input" type="radio" name="sort">
+                            <span class="option-checkbox__text">Date oldest first</span>
+                            <span class="option-checkbox__icon"></span>
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
@@ -278,12 +284,9 @@
 </div>
 
 <div class="container d-lg-none">
-    <div class="d-flex justify-content-between">
+    <div class="d-flex justify-content-between margin-mob-fliter-btn">
         <btn id="show-article-fliter" class="btn btn-clean">
             <i class="icon-filter"></i> filter
-        </btn>
-        <button class="btn btn-clean">
-            sort <i class="icon-sort"></i>
-        </button>
+        </btn>        
     </div>
 </div>
