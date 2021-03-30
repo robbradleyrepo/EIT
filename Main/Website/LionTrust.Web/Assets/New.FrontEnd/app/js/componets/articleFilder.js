@@ -7,17 +7,21 @@ export default () => {
   const closeFilterBtn = document.querySelector("#filters-close");
   const options = document.querySelectorAll(".article-filters__options");
   const optionCheckbox = document.querySelectorAll(".option-checkbox");
+  const checkboxes = document.querySelectorAll(".option-checkbox__input");
+  const sortDropdown = document.querySelector(".sort-dropdown");
 
   const hideSelectFilters = () => {
-    document.querySelectorAll(".article-filters__select").forEach((el) => {
-      el.classList.remove("active");
-    });
+    document
+      .querySelectorAll(".article-filters__select.active")
+      .forEach((el) => {
+        el.classList.remove("active");
+      });
   };
 
   openSelectFilterBtn.forEach((el) => {
     el.addEventListener("click", (e) => {
       e.stopPropagation();
-      // hideSelectFilters();
+      if (!el.classList.contains("active")) hideSelectFilters();
       el.classList.toggle("active");
       el.parentNode
         .querySelector(".article-filters__options")
@@ -31,21 +35,43 @@ export default () => {
     });
   });
 
-  document.querySelector("body").addEventListener("click", () => {
-    hideSelectFilters();
+  const setSelectActive = () => {
+    options.forEach((option) => {
+      let setActive = false;
+      const checkboxes = option.querySelectorAll(".option-checkbox__input");
+      const title = option.parentNode.querySelector(
+        ".article-filters__item-title"
+      );
+      if (title) title.classList.remove("active");
+      checkboxes.forEach((checkbox) => {
+        if (checkbox.checked) setActive = true;
+        if (setActive && title) {
+          title.classList.add("active");
+        }
+      });
+    });
+  };
+
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", () => {
+      setSelectActive();
+    });
   });
 
-  // optionCheckbox.forEach(checkbox => {
-  //   checkbox.addEventListener('click', function(e) {
-  //     e.stopPropagation()
-  //     console.log('e', e);
-  //   })
-  // })
+  document.querySelector("body").addEventListener("click", () => {
+    hideSelectFilters();
+    document.querySelectorAll(".sort-dropdown").forEach(dropdown => {
+      dropdown.classList.remove("active");
+    })
+  });
 
   closeSubItems.forEach((btn) => {
     btn.addEventListener("click", () => {
-      console.log("btn", btn);
-      btn.parentElement.classList.remove("active");
+      const parentOfBtn = btn.parentElement;
+      parentOfBtn.parentNode
+        .querySelector(".article-filters__select")
+        .classList.remove("active");
+      parentOfBtn.classList.remove("active");
     });
   });
 
@@ -58,4 +84,21 @@ export default () => {
     .addEventListener("click", () => {
       filter.classList.add("active");
     });
+
+  document.querySelectorAll(".clear-filter").forEach((clear) => {
+    clear.addEventListener("click", () => {
+      checkboxes.forEach((checkbox) => (checkbox.checked = false));
+      setSelectActive();
+    });
+  });
+
+  document.querySelectorAll(".button-sort").forEach((button) => {
+    button.addEventListener("click", (e) => {
+      console.log("click");
+      e.stopPropagation();
+      const sortDropDown = button.parentNode.querySelector(".sort-dropdown")
+      console.log('sortDropDown',sortDropDown);
+      sortDropDown.classList.add("active");
+    });
+  });
 };
