@@ -8,7 +8,7 @@ export default () => {
   const options = document.querySelectorAll(".article-filters__options");
   const optionCheckbox = document.querySelectorAll(".option-checkbox");
   const checkboxes = document.querySelectorAll(".option-checkbox__input");
-  const sortDropdown = document.querySelector(".sort-dropdown");
+  const sortDropdown = document.querySelector('.sort-dropdown')
 
   const hideSelectFilters = () => {
     document
@@ -60,9 +60,7 @@ export default () => {
 
   document.querySelector("body").addEventListener("click", () => {
     hideSelectFilters();
-    document.querySelectorAll(".sort-dropdown").forEach(dropdown => {
-      dropdown.classList.remove("active");
-    })
+    sortDropdown.classList.remove('active')
   });
 
   closeSubItems.forEach((btn) => {
@@ -92,13 +90,10 @@ export default () => {
     });
   });
 
-  document.querySelectorAll(".button-sort").forEach((button) => {
-    button.addEventListener("click", (e) => {
-      console.log("click");
+  
+    document.querySelector('.button-sort').addEventListener("click", (e) => {
       e.stopPropagation();
-      const sortDropDown = button.parentNode.querySelector(".sort-dropdown")
-      console.log('sortDropDown',sortDropDown);
-      sortDropDown.classList.add("active");
+      sortDropdown.classList.add("active");
     });
-  });
+  
 };
