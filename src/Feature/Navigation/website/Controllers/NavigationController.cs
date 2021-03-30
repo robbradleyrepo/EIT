@@ -8,12 +8,17 @@
     using LionTrust.Feature.Navigation.Repositories;
     using LionTrust.Foundation.SitecoreExtensions.Extensions;
     using Sitecore.Data;
+    using Sitecore.Mvc.Controllers;
     using Sitecore.Mvc.Presentation;
 
-    public class NavigationController : Controller
+    public class NavigationController : SitecoreController
     {
         private readonly INavigationRepository _navigationRepository;
         private readonly IMvcContext _mvcContext;
+
+        public NavigationController(IMvcContext mvcContext) : this(new NavigationRepository(RenderingContext.Current.ContextItem), mvcContext)
+        {
+        }
 
         public NavigationController(INavigationRepository navigationRepository, IMvcContext mvcContext)
         {

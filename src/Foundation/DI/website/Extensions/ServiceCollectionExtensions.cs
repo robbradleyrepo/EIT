@@ -4,6 +4,7 @@ using System;
 using System.Linq;
 using System.Reflection;
 using LionTrust.Foundation.Core.Methods;
+using System.Web.Mvc;
 
 namespace LionTrust.Foundation.DI.Extensions
 {

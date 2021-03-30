@@ -51,7 +51,7 @@
       <Version>5.8.177</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNet.Mvc">
-      <Version>5.2.7</Version>
+      <Version>5.2.4</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNet.Razor">
       <Version>3.2.7</Version>
@@ -111,6 +111,7 @@
       <Name>LionTrust.Foundation.SitecoreExtensions</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

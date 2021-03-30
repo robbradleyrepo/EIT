@@ -1,11 +1,11 @@
 ﻿@using LionTrust.Feature.Navigation
-@model Liontrust.Feature.Navigation.Models.NavigationViewModel
+@model LionTrust.Feature.Navigation.Models.NavigationViewModel
 <!-- header -->
 <div class="header-navbar">
     <button class="header-navbar__btn-open"></button>
 
     <a href="@Model.HomeItem.Url" class="header-navbar__logo">
-        @Html.Glass().RenderImage(Model.HomeItem, x => x.Logo, new { alt = Model.HomeItem.Logo != null ? Model.HomeItem.Logo.Alt : string.Empty, @class= "header-navbar__logo-img" }, isEditable: true)
+        @Html.Glass().RenderImage(Model.RootItem, x => x.Logo, new { alt = Model.RootItem.Logo != null ? Model.RootItem.Logo.Alt : string.Empty, @class= "header-navbar__logo-img" }, isEditable: true)
     </a>
 
     @if (Model.HomeItem.HeaderMenuItems != null && Model.HomeItem.HeaderMenuItems.Any())
