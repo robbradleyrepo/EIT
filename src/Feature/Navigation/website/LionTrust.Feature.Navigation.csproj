@@ -80,6 +80,7 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Navigation\Menu.cshtml" />
     <Content Include="App_Config\Include\Feature\Feature.Navigation.Serialization.config" />
+    <Content Include="Views\Navigation\Footer.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

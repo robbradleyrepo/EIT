@@ -30,19 +30,32 @@
         {
             var navigationViewModel = new NavigationViewModel();
             var item = RenderingContext.Current.Rendering.Item;
-            var rootItem = _navigationRepository.GetSiteRootIdentity(item); 
+            var rootItem = _navigationRepository.GetSiteRootIdentity(item);
             if (rootItem != null)
             {
-                navigationViewModel.RootItem = _mvcContext.SitecoreService.GetItem<ISiteRoot>(rootItem.ID.Guid);                
+                navigationViewModel.RootItem = _mvcContext.SitecoreService.GetItem<ISiteRoot>(rootItem.ID.Guid);
             }
-            
-            var homeItem = _navigationRepository.GetNavigationRoot(item);            
+
+            var homeItem = _navigationRepository.GetNavigationRoot(item);
             if (homeItem != null)
             {
                 navigationViewModel.HomeItem = _mvcContext.SitecoreService.GetItem<IHome>(homeItem.ID.Guid);
             }
-            
+
             return View("~/Views/Navigation/Header.cshtml", navigationViewModel);
+        }
+
+        public ActionResult Footer()
+        {
+            var item = RenderingContext.Current.Rendering.Item;
+            var homeItem = _navigationRepository.GetNavigationRoot(item);
+            IHome homeModel = null;
+            if (homeItem != null)
+            {
+                homeModel = _mvcContext.SitecoreService.GetItem<IHome>(homeItem.ID.Guid);
+            }
+
+            return View("~/Views/Navigation/Footer.cshtml", homeModel);
         }
     }
 }
