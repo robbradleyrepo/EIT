@@ -1,0 +1,25 @@
+﻿---
+ID: "d0db0627-8629-4ea8-aebc-4fcd648c588a"
+Parent: "ad887c47-c4ee-48cb-a429-7ff13fd09094"
+Template: "2a3e91a0-7987-44b5-ab34-35c2d9de83b9"
+Path: /sitecore/layout/renderings/Feature/Navigation/Header
+DB: master
+SharedFields:
+- ID: "a2f5d9df-8cba-4a1d-99eb-51acb94cb057"
+  Hint: Page Editor Buttons
+  Type: Treelist
+  Value: "{529D8A08-D6E5-4909-986D-FD9E8C89BDF3}"
+- ID: "ded9e431-3604-4921-a4b3-a6ec7636a5b6"
+  Hint: Controller Action
+  Value: Header
+- ID: "e64ad073-dfcc-4d20-8c0b-fe5aa6226cd7"
+  Hint: Controller
+  Value: Navigation
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210323T103538Z
