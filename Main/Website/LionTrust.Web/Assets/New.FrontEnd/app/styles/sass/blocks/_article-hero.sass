@@ -1,0 +1,107 @@
+.article-hero
+    text-align: center
+    margin-top: 30px
+    @include breakpoint(desktop, up)
+        text-align: left
+        margin-top: 80px
+    &__content
+        margin-bottom: 20px
+    &__text
+        display: none
+        @include breakpoint(desktop, up)
+            display: block
+            font-size: 20px
+            line-height: 30px
+            margin-right: 15%
+
+.hero-author
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 5px
+    @include breakpoint(desktop, up)
+        align-items: start
+        flex-direction: row
+        margin-bottom: 1rem
+    &__img
+        width: 30px
+        height: 30px
+        border-radius: 50%
+        @include breakpoint(desktop, up)
+            margin-right: 10px
+    &__name
+        font-weight: 700
+        font-size: 12px
+        letter-spacing: 2.4px
+        text-transform: uppercase
+        margin: 7px 0 4px
+        display: flex
+        align-items: center
+        line-height: 1
+        @include breakpoint(desktop, up)
+            margin: 0
+        i
+            display: none
+            @include breakpoint(desktop, up)
+                display: inline
+                margin-left: 5px
+                font-size: 17px
+                cursor: pointer
+    &__date
+        font-size: 14px
+        color: $gray
+        @include breakpoint(desktop, up)
+            margin-top: -2px
+            display: block
+
+.hero-author.hero-author_big
+    @include breakpoint(desktop, up)
+        display: block
+        text-align: center
+    .hero-author__name
+        @include breakpoint(desktop, up)
+            justify-content: center
+            margin: 11px 0 9px
+            font-size: 15px
+            line-height: 18px
+    .hero-author__img
+        @include breakpoint(desktop, up)
+            width: 60px
+            height: 60px
+    .hero-author__date
+        font-size: 18px
+        font-weight: 500
+    .hero-author__content
+        @include breakpoint(desktop, up)
+            text-align: center
+
+.topic-follow
+    margin-top: 1.6rem
+    display: flex
+    align-items: center
+    justify-content: center
+
+.follow-btn
+    font-size: 18px
+    display: flex
+    align-items: center
+    font-weight: 300
+    i
+        margin-right: 5px
+
+
+.article-links
+    display: flex
+    justify-content: space-between
+    font-size: 12px
+    margin-bottom: 30px
+    @include breakpoint(desktop, up)
+        font-size: 18px
+    &__link
+        display: flex
+        align-items: center
+        i
+            margin-right: 10px
+            font-size: 20px
+            @include breakpoint(desktop, up)
+                font-size: 25px
