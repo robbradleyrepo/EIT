@@ -6,3 +6,10 @@
                 margin-left: calc((100vw - #{$size}px - 1rem) / 2)
         @else 
             padding-left: var(--bs-gutter-x,16px)
+
+
+@each $name, $color in $text-colors
+    @debug $name, $color
+    .text-#{$name}
+        color: $color!important
+     
