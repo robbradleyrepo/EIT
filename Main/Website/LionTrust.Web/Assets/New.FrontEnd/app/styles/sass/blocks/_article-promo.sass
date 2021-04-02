@@ -48,6 +48,9 @@
         margin-bottom: 10px
         align-items: center
         justify-content: flex-start
+        i
+            margin-right: 10px
+            font-size: 12px
     &__head-img
         width: 25px
         height: 25px
@@ -106,6 +109,19 @@
             padding-left: 20px
             padding-right: 20px
             padding-bottom: 20px
+    &__play-video
+        font-size: 12px
+        text-transform: uppercase
+        font-weight: 500
+        @extend .d-flex
+        @extend .align-items-center
+    &__video-btn
+        width: 30px
+        height: 30px
+        margin-left: 10px
+        @include breakpoint(desktop, up)
+            width: 53px
+            height: 53px
     &__footer-item
         display: flex
         align-items: center
