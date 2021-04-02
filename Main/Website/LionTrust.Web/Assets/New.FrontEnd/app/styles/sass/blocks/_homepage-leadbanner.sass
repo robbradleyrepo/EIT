@@ -1,3 +1,4 @@
+// remove in future    
 .leadbanner
     display: flex
     flex-direction: column
@@ -46,3 +47,17 @@
     &__teamicon
         width: 60px
         height: 60px
+
+// new style for lead banner
+.lead-banner
+    margin: 30px 0
+    text-align: center
+    @include breakpoint(desktop, up)
+        margin: 80px 0
+    &__title
+        margin-bottom: 20px
+        @include breakpoint(desktop, up)
+        margin-bottom: 2rem
+    &__text
+        font-size: 18px
+        display: inline-block
