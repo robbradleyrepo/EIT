@@ -26,17 +26,19 @@
         display: flex
         min-height: min-content
 
-    &__slide
-        position: relative
-        width: 100%
-        padding-top: 100%
-        cursor: pointer
-        &:hover > &__slideback
-            display: none
-            webkit-filter: blur(4px)
-            filter: blur(4px)
-
-    &__slideback
+.article-promo
+    position: relative
+    width: 100%
+    padding-top: 100%
+    cursor: pointer
+    border-radius: 10px
+    overflow: hidden
+    &:hover > &__back
+        webkit-filter: blur(4px)
+        filter: blur(4px)
+    &:hover &__desc
+        opacity: 1
+    &__back
         display: flex
         flex: 1
         -webkit-flex: 1
@@ -48,8 +50,7 @@
         height: 100%
         opacity: .8
         transition: all .8s ease-out
-
-    &__slidefront
+    &__front
         display: flex
         position: absolute
         z-index: 10
@@ -59,13 +60,12 @@
         padding: 20px 10px 10px
         flex-direction: column
         justify-content: space-between
-
-    &__slidehead
+    &__head
         display: flex
         justify-content: flex-start
         align-items: center
         margin-bottom: 10px
-    &__writerphoto
+    &__writer-photo
         object-fit: cover
         border-radius: 5em
         margin-right: 10px
@@ -74,19 +74,13 @@
         @include breakpoint(desktop, up)
             width: 50px
             height: 50px
-    &__writername
+    &__writer-name
         letter-spacing: 2.4px
-        color: $gold
         text-transform: uppercase
         font-weight: 600
         font-size: 10px
 
-    &__slidebody
-    //     color: $white
-    //     padding: 10px 0
-    //     position: relative
-
-    &__slidetitle
+    &__title
         font-size: 26px
         font-weight: 300
         line-height: 32px
@@ -99,11 +93,14 @@
         @include breakpoint(desktop-large, up)
             font-size: 52px
             line-height: 58px
-
-    &__slidedesc
+    &__desc
         opacity: 0
         transition: opacity .8s ease-out
-
+        overflow: hidden
+        text-overflow: ellipsis
+        display: -webkit-box
+        -webkit-line-clamp: 3 /* number of lines to show */
+        -webkit-box-orient: vertical
         @include breakpoint(tablet, up)
             font-size: 18px
             font-weight: 300
@@ -112,8 +109,7 @@
             display: -webkit-box
             -webkit-line-clamp: 4 /* number of lines to show */
             -webkit-box-orient: vertical
-
-    &__slidefooter
+    &__footer
         display: flex
         padding: 10px
         justify-content: space-between
@@ -125,8 +121,7 @@
         @include breakpoint(tablet, up)
             position: relative
             padding: 10px 0
-
-    &__slidefooterleft
+    &__footer-left
         display: flex
         align-items: center
         i
@@ -135,29 +130,29 @@
             margin-right: 10px
     &__time
         font-size: 12px
-
-    &__slidefooter
-
     &__clock
-        margin-right: 5px
-
+        width: 18px
+        height: auto
+        margin-right: 10px
+    &__bookmark
+        font-size: 18px
     &__btn
         display: none
         @include breakpoint(desktop, up)
             min-width: 245px
         @include breakpoint(tablet, up)
             display: inline-block
-    
+
 .btn-resp
     @include breakpoint(tablet, up)
         display: none
 
-.article__slidefront:hover  .article__slidedesc
-    opacity: 1
+// .article__slidefront:hover  .article__slidedesc
+//     opacity: 1
 
-.article__slidefront:hover + .article__slideback
-    filter: blur(4px)
-    transition: all .5s ease-out
+// .article__slidefront:hover + .article__slideback
+//     filter: blur(4px)
+//     transition: all .5s ease-out
 
 .swiper-container-article .swiper-slide
     display: flex
