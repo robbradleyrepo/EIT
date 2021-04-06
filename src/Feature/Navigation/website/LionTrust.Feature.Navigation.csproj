@@ -93,6 +93,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\NavigationController.cs" />
+    <Compile Include="Models\IFooterConfiguration.cs" />
+    <Compile Include="Models\IHeaderConfiguration.cs" />
+    <Compile Include="Models\IHeaderDropdown.cs" />
+    <Compile Include="Models\IHeaderImage.cs" />
+    <Compile Include="Models\IHeaderNavigationColumn.cs" />
+    <Compile Include="Models\IPageLink.cs" />
+    <Compile Include="Models\ISocialIcon.cs" />
     <Compile Include="Models\NavigationViewModel.cs" />
     <Compile Include="Models\IHome.cs" />
     <Compile Include="Models\INavigationGlassBase.cs" />

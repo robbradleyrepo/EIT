@@ -1,11 +1,15 @@
 ﻿namespace LionTrust.Feature.Navigation.Models
 {
-    using Glass.Mapper.Sc.Configuration.Attributes;
-    using Glass.Mapper.Sc.Fields;
     using System.Collections.Generic;
+
+    using Glass.Mapper.Sc.Configuration.Attributes;
+    using Glass.Mapper.Sc.Fields;    
 
     public interface IHome : INavigationGlassBase
     {
+        [SitecoreField(Constants.Header.HeaderConfiguration_FieldName)]
+        IEnumerable<IHeaderConfiguration> HeaderConfiguration { get; set; }
+
         [SitecoreField(Constants.Header.HeaderMenuItems_FieldName)]
         IEnumerable<INavigationGlassBase> HeaderMenuItems { get; set; }
 
@@ -60,23 +64,11 @@
         [SitecoreField(Constants.Footer.EmailCTALabel_FieldName)]
         string EmailCTALabel { get; set; }
 
-        [SitecoreField(Constants.Footer.TwitterAccounts_FieldName)]
-        string TwitterAccounts { get; set; }
+        [SitecoreField(Constants.Footer.FooterConfiguration_FieldName)]
+        IEnumerable<IFooterConfiguration> FooterConfiguration { get; set; }
 
-        [SitecoreField(Constants.Footer.TwitterIcon_FieldName)]
-        Image TwitterIcon { get; set; }
-
-        [SitecoreField(Constants.Footer.LinkedinLink_FieldName)]
-        Link LinkedinLink { get; set; }
-
-        [SitecoreField(Constants.Footer.LinkedinIcon_FieldName)]
-        Image LinkedinIcon { get; set; }
-
-        [SitecoreField(Constants.Footer.FacebookLink_FieldName)]
-        Link FacebookLink { get; set; }
-
-        [SitecoreField(Constants.Footer.FacebookIcon_FieldName)]
-        Image FacebookIcon { get; set; }
+        [SitecoreField(Constants.Footer.SocialLinks_FieldName)]
+        IEnumerable<ISocialIcon> SocialLinks { get; set; }        
 
         [SitecoreField(Constants.Footer.SubscribeNewsletterLabel_FieldName)]
         string SubscribeNewsletterLabel { get; set; }
@@ -88,7 +80,7 @@
         Link SubscribeCTALink_FieldName { get; set; }
 
         [SitecoreField(Constants.Footer.FooterLinks_FieldName)]
-        IEnumerable<INavigationGlassBase> FooterLinks { get; set; }
+        IEnumerable<IPageLink> FooterLinks { get; set; }
 
         [SitecoreField(Constants.Footer.Copyright_FieldName)]
         string Copyright { get; set; }

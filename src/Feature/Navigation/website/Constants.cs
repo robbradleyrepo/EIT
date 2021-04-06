@@ -12,11 +12,40 @@
 
         public static class Header
         {
+            public const string HeaderConfiguration_FieldName = "Header Configuration";
+            public static readonly ID HeaderConfiguration_FieldID = new ID("{95F0787B-70E6-4164-98C0-F9502163D720}");
+
             public const string HeaderMenuItems_FieldName = "HeaderMenuItems";
             public static readonly ID HeaderMenuItems_FieldID = new ID("{31282663-006B-47B1-95AE-F044B042F534}");
 
             public const string ContactUsPage_FieldName = "Contact Us Page";
             public static readonly ID ContactUsPage_FieldID = new ID("{0D831D08-90C7-4E31-B880-5A93146B3029}");
+        }
+
+        public static class HeaderDropDown
+        {
+            public const string NavigationColumns_FieldName = "NavigationColumns";
+            public const string Images_FieldName = "Images";
+            public const string ShowCTA_FieldName = "Show CTA";
+            public const string CTALabel_FieldName = "CTA Label";
+            public const string CTALink_FieldName = "CTA Link";
+        }
+
+        public static class HeaderImage
+        {
+            public const string Image_FieldName = "Image";
+            public const string Title_FieldName = "Title";
+            public const string Description_FieldName = "Description";
+            public const string Link_FieldName = "Link";
+        }
+
+        public static class HeaderNavigationColumn
+        {
+            public const string ShowColumnLink_FieldName = "Show Column Link";
+            public const string ColumnLink_FieldName = "Column Link";
+            public const string ColumnLinkLabel_FieldName = "Column Link Label";
+            public const string ColumnTitle_FieldName = "Column Title";
+            public const string PageLinks_FieldName = "Page Links";
         }
 
         public static class Footer
@@ -51,23 +80,8 @@
             public const string EmailCTALabel_FieldName = "EmailCTALabel";
             public static readonly ID EmailCTALabel_FieldID = new ID("{E4CA4419-EFEE-45A0-BEF9-2F611004D7A7}");
 
-            public const string TwitterAccounts_FieldName = "TwitterAccounts";
-            public static readonly ID TwitterAccounts_FieldID = new ID("{BA6CB33D-C63F-4BD4-92A1-8C3DDE97F9FC}");
-
-            public const string TwitterIcon_FieldName = "TwitterIcon";
-            public static readonly ID TwitterIcon_FieldID = new ID("{352406EE-D59A-49A0-9E9C-55738142A220}");
-
-            public const string LinkedinLink_FieldName = "LinkedinLink";
-            public static readonly ID LinkedinLink_FieldID = new ID("{44A65390-FCC7-4C9D-82EF-C1BDE9E4FB4C}");
-
-            public const string LinkedinIcon_FieldName = "LinkedinIcon";
-            public static readonly ID LinkedinIcon_FieldID = new ID("{8AEA31E3-9089-4887-A062-A57ABD3CC7B9}");
-
-            public const string FacebookLink_FieldName = "FacebookLink";
-            public static readonly ID FacebookLink_FieldID = new ID("{2A464F51-5954-4260-B8A0-EE0A7DE64E02}");
-
-            public const string FacebookIcon_FieldName = "FacebookIcon";
-            public static readonly ID FacebookIcon_FieldID = new ID("{5717E811-4F55-4821-B482-ACDEFD3CFB11}");
+            public const string SocialLinks_FieldName = "SocialLinks";
+            public static readonly ID SocialLinks_FieldID = new ID("{BA6CB33D-C63F-4BD4-92A1-8C3DDE97F9FC}");
 
             public const string SubscribeNewsletterLabel_FieldName = "SubscribeNewsletterLabel";
             public static readonly ID SubscribeNewsletterLabel_FieldID = new ID("{6A0F17AB-B448-474A-A275-5EE5F12F8D10}");
@@ -83,6 +97,30 @@
 
             public const string Copyright_FieldName = "Copyright";
             public static readonly ID Copyright_FieldID = new ID("{E168F770-7271-4DC4-9242-72805145ACDC}");
+        }
+
+        public static class FooterConfiguration
+        {
+            public const string PageLinks_FieldName = "Page Links";
+            public const string SocialLinks_FieldName = "Social Links";
+        }
+
+        public static class SocialIcon
+        {
+            public const string SocialLink_FieldName = "Link";
+            public static readonly ID SocialLink_FieldID = new ID("{380DE464-FA5D-4B97-AD9E-B520108FD350}");
+
+            public const string SocialIcon_FieldName = "Icon";
+            public static readonly ID SocialIcon_FieldID = new ID("{18F9485A-B46B-4F81-B166-FB972D21FEF4}");
+
+            public const string TwitterAccounts_FieldName = "TwitterMultipleAccounts";
+            public static readonly ID TwitterAccounts_FieldID = new ID("{4B63503E-2D9F-43D0-B7A6-9A92EC21013E}");
+        }
+
+        public static class PageLink
+        {
+            public const string Link_FieldName = "Link";
+            public static readonly ID Link_FieldID = new ID("{3F39E86E-0426-46F0-8F64-C5636372E13A}");
         }
 
         public static class Menu

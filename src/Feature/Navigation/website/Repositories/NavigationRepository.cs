@@ -1,12 +1,10 @@
 ﻿namespace LionTrust.Feature.Navigation.Repositories
 {
     using System;
-    using System.Linq;
+
     using LionTrust.Foundation.SitecoreExtensions.Extensions;
     using Sitecore;
-    using Sitecore.Data;
     using Sitecore.Data.Items;
-    using Sitecore.Sites;
 
     public class NavigationRepository : INavigationRepository
     {

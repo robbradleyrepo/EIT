@@ -45,44 +45,45 @@
                                             @Model.EmailCTALabel
                                             <i class="icon-arrow-right"></i>
                                         </a>
-                                    }                                    
+                                    }
                                 </li>
                             </ul>
                         </div>
                         <div class="social">
-                            @using (Html.Glass().BeginRenderLink(Model, m => m.LinkedinLink, new NameValueCollection { { "class", "social__link" } }, isEditable: true))
+                            @if (Model.SocialLinks != null && Model.SocialLinks.Any())
                             {
-                                @Html.Glass().RenderImage(Model, x => x.LinkedinIcon, new NameValueCollection { { "class", "social__link-icon" } }, isEditable: true)
-                            }
-                            @using (Html.Glass().BeginRenderLink(Model, m => m.FacebookLink, new NameValueCollection { { "class", "social__link" } }, isEditable: true))
-                            {
-                                @Html.Glass().RenderImage(Model, x => x.FacebookIcon, new NameValueCollection { { "class", "social__link-icon" } }, isEditable: true)
-                            }
-                            <!--      <a href="#" class="social__link"><i class="social__link-icon icon-linked-in"></i></a>
-                                <a href="#" class="social__link"><i class="social__link-icon icon-facebook"></i></a>-->
-                            <span class="social__link">
-                                <i class="social__link-icon icon-twitter"></i>
-                                <div class="social__twitter">
-                                    @if (Sitecore.Context.PageMode.IsExperienceEditor)
+                                foreach (var socialLink in Model.SocialLinks)
+                                {
+                                    if (string.IsNullOrEmpty(socialLink.TwitterAccounts))
                                     {
-                                        @:Add here the twitter account names delimited by space:
-                                        <div class="social__twitter-link">@Html.Glass().Editable(Model, m => m.TwitterAccounts)</div>
+                                        using (Html.Glass().BeginRenderLink(socialLink, m => m.SocialLink, new NameValueCollection { { "class", "social__link" } }, isEditable: true))
+                                        {
+                                            @Html.Glass().RenderImage(socialLink, x => x.SocialIcon, new NameValueCollection { { "class", "social__link-icon" } }, isEditable: true)
+                                        }
                                     }
                                     else
                                     {
-                                        if (!string.IsNullOrEmpty(Model.TwitterAccounts))
-                                        {
-                                            var accounts = Model.TwitterAccounts.Replace(@"@", "");
-                                            foreach (var account in accounts)
-                                            {
-                                                <a href="https://twitter.com/@account" class="social__twitter-link">@@@account</a>
-                                            }
-                                        }
+                                        <span class="social__link">
+                                            @Html.Glass().RenderImage(socialLink, x => x.SocialIcon, new NameValueCollection { { "class", "social__link-icon" } }, isEditable: true)
+                                            <div class="social__twitter">
+                                                @if (Sitecore.Context.PageMode.IsExperienceEditor)
+                                                {
+                                                    @:Add here the twitter account names delimited by space:
+                                                    <div class="social__twitter-link">@Html.Glass().Editable(socialLink, m => m.TwitterAccounts)</div>
+                                                }
+                                                else
+                                                {
+                                                    var accounts = socialLink.TwitterAccounts.Replace(@"@", "");
+                                                    foreach (var account in accounts)
+                                                    {
+                                                        <a href="https://twitter.com/@account" class="social__twitter-link">@@@account</a>
+                                                    }
+                                                }
+                                            </div>
+                                        </span>
                                     }
-                                </div>
-
-
-                            </span>
+                                }
+                            }
                         </div>
                     </div>
                     <div class="col-12 my-4 my-lg-0 col-lg-6 footer__section">
@@ -98,8 +99,8 @@
                 <div class="row">
                     @if (Model.FooterLinks != null && Model.FooterLinks.Any())
                     {
-                        IEnumerable<INavigationGlassBase> firstColumnLinks = null;
-                        IEnumerable<INavigationGlassBase> secondColumnLinks = null;
+                        IEnumerable<IPageLink> firstColumnLinks = null;
+                        IEnumerable<IPageLink> secondColumnLinks = null;
                         var footerLinksCount = Model.FooterLinks.Count();
                         if (footerLinksCount > 1)
                         {
@@ -112,9 +113,9 @@
                                 <ul class="footer__nav">
                                     @foreach (var footerLink in firstColumnLinks)
                                     {
-                                    <li class="footer__list-item">
-                                        <a href="@footerLink.Url" class="footer__mav-list">@Html.Glass().Editable(footerLink, x => x.MenuTitle)</a>
-                                    </li>
+                                        <li class="footer__list-item">
+                                            @Html.Glass().RenderLink(footerLink, m => m.PageLink, new NameValueCollection { { "class", "footer__mav-list" } }, isEditable: true)
+                                        </li>
                                     }
                                 </ul>
                             </nav>
@@ -124,9 +125,7 @@
                                 <ul class="footer__nav">
                                     @foreach (var footerLink in secondColumnLinks)
                                     {
-                                        <li class="footer__list-item">
-                                            <a href="@footerLink.Url" class="footer__mav-list">@Html.Glass().Editable(footerLink, x => x.MenuTitle)</a>
-                                        </li>
+                                        @Html.Glass().RenderLink(footerLink, m => m.PageLink, new NameValueCollection { { "class", "footer__mav-list" } }, isEditable: true)
                                     }
                                 </ul>
                             </nav>

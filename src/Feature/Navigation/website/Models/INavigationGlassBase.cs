@@ -1,8 +1,9 @@
 ﻿namespace LionTrust.Feature.Navigation.Models
 {
-    using Glass.Mapper.Sc.Configuration.Attributes;
-    using LionTrust.Foundation.ORM.Models;
     using System.Collections.Generic;
+
+    using Glass.Mapper.Sc.Configuration.Attributes;
+    using LionTrust.Foundation.ORM.Models;    
 
     public interface INavigationGlassBase : IGlassBase
     {

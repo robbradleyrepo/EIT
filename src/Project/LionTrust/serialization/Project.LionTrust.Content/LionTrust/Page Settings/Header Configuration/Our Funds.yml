@@ -1,0 +1,45 @@
+﻿---
+ID: "ac46ef9f-fb8c-49b9-9066-e3f6a38196bb"
+Parent: "8af83fdb-f9d8-4b35-8c8e-c0f9465ed7b2"
+Template: "9e459de5-0d5a-458a-be73-344b939719e1"
+Path: /sitecore/content/Liontrust/Page Settings/Header Configuration/Our Funds
+DB: master
+BranchID: "376511be-c163-4800-a4e9-7b71c6281a0f"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{12CF970E-33FF-4672-8BF7-DCF6918B5C99}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "24930482-3138-42f2-9aaf-5439885993d4"
+      Hint: CTALabel
+      Value: All Funds & Literature
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210406T123214Z
+    - ID: "7f27284a-ec01-42a2-a460-5b5c6438d92f"
+      Hint: NavigationColumnCount
+      Value: 2
+    - ID: "8016ec09-4619-48b1-b90d-d60b2e2da621"
+      Hint: ShowCTA
+      Type: Checkbox
+      Value: 1
+    - ID: "9c105ad9-59d2-4134-bb95-95b9b3b3422f"
+      Hint: ImageCount
+      Value: 1
+    - ID: "c230e8eb-6b8f-44cd-bc43-5b24b540f6ae"
+      Hint: Images
+      Type: Treelist
+      Value: "{6CED57E9-CFB0-4D79-B251-0E6CC5E5608C}"
+    - ID: "d335cc19-7219-49ba-8782-95def11a5c4d"
+      Hint: NavigationColumns
+      Type: Treelist
+      Value: |
+        {35AECCB3-AE5B-4B73-A09D-916560523197}
+        {A568648E-23BF-4E75-B725-4C88E71D735D}

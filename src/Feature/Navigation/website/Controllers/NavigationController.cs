@@ -1,13 +1,10 @@
 ﻿namespace LionTrust.Feature.Navigation.Controllers
 {
-    using System;
-    using System.Linq;
     using System.Web.Mvc;
+
     using Glass.Mapper.Sc.Web.Mvc;
     using LionTrust.Feature.Navigation.Models;
     using LionTrust.Feature.Navigation.Repositories;
-    using LionTrust.Foundation.SitecoreExtensions.Extensions;
-    using Sitecore.Data;
     using Sitecore.Mvc.Controllers;
     using Sitecore.Mvc.Presentation;
 

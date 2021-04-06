@@ -1,0 +1,18 @@
+﻿---
+ID: "ba6cb33d-c63f-4bd4-92a1-8c3dde97f9fc"
+Parent: "5df77998-4ada-4367-9b3b-d51a2e547cb8"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/Navigation/_Footer/Footer/SocialLinks
+DB: master
+SharedFields:
+- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
+  Hint: Source
+  Value: "query:./descendant-or-self::*"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: "20210406T105503:637533033034349706Z"
