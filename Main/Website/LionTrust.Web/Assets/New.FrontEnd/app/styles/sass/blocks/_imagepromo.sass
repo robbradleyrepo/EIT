@@ -60,12 +60,13 @@
             width: 48%
             padding-left: 25px
     &__headbox
-        text-align: left
         margin-bottom: 10px
+        @include breakpoint(desktop, up)
+            margin-top: 50px
     &__contentbox
-        text-align: left
         margin-bottom: 40px
         font-size: 20px
+        color: $black
     &__btnbox
         display: flex
         justify-content: left
@@ -87,8 +88,3 @@
         display: none
         @include breakpoint(tablet, up)
             display: inline-block
-
-
-        
-
-

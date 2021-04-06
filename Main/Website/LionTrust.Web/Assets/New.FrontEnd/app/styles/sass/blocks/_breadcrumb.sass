@@ -1,23 +1,19 @@
 .breadcrumb
-    background-color: $black
-
-    &__box
-        display: flex
-        align-content: center
-        align-times: center
-        padding: 10px 0
-        color: $white
-
-    &__path 
-        font-size: 10px
-        font-weight: normal
-        margin: 0 5px
-        display: flex
-        align-items: center
-        
-    &__path.active
-        font-weight: bold
-
+    background-color: $black 
+    
     &__nav
         display: flex
+        align-items: center
 
+    &__divider
+        display: inline-block
+        margin: 0 3px
+        font-size: 10px
+        line-height: 20px
+
+    &__path
+        font-size: 10px
+        font-weight: normal
+
+    &__path.active
+        font-weight: bold

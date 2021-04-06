@@ -10,6 +10,8 @@
 @import 'node_modules/bootstrap/scss/bootstrap-reboot' // Bootstrap Reboot collection
 @import 'node_modules/bootstrap/scss/bootstrap-grid' // Bootstrap Grid
 @import 'node_modules/bootstrap/scss/modal' // Bootstrap Grid
+@import 'node_modules/bootstrap/scss/accordion' // Bootstrap Grid
+@import 'node_modules/bootstrap/scss/transitions' // Bootstrap Grid
 @import 'node_modules/swiper/swiper-bundle.min' // swiper Grid
 
 // @import 'node_modules/bootstrap/dist/css/bootstrap.min' // Bootstrap Grid
@@ -35,11 +37,11 @@
 	background-color: $primary
 	color: #fff
 
-*
-    &::-webkit-scrollbar
-        width: 4px
-    &::-webkit-scrollbar-thumb
-        background-color: #9D9D9D
+body
+	&::-webkit-scrollbar
+		width: 4px
+	&::-webkit-scrollbar-thumb
+		background-color: $gray
 
 input, textarea
 	outline: none
@@ -81,22 +83,22 @@ a
 	&:hover
 		color: $primary
 
-.color-primary
-	color: $primary!important
-
-.color-black
-	color: $black!important
-
-.text-gold
-	color: $gold!important
-
+.no-wrap
+	white-space: nowrap
 .mb-30
 	margin-bottom: 30px
+
+.row-scrollable-mob
+	flex-wrap: nowrap
+	overflow-y: scroll
+	@include breakpoint(desktop, up)
+		flex-wrap: wrap
+		overflow-y: initial
 
 .min-width-100
 	min-width: 100%!important
 
-.relative 
+.relative
 	position: relative
 
 .text-center

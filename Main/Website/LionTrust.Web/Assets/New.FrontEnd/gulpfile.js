@@ -67,6 +67,7 @@ function scriptsMain() {
 		// 'node_modules/popper.js/dist/umd/popper.min.js', 
 		// 'node_modules/bootstrap/dist/js/bootstrap.min.js', // import bootstrap modal
 		'node_modules/bootstrap/js/dist/modal.js', // import bootstrap modal
+		'node_modules/bootstrap/js/dist/collapse.js', // import bootstrap modal
 	], { sourcemaps: true })
 		.pipe(webpack(webPackConfig)).on('error', function handleError() {
 			this.emit('end')

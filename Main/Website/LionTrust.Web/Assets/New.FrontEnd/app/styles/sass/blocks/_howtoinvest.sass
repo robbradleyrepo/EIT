@@ -1,6 +1,7 @@
 .howtoinvest
-    display: flex
-    padding: 20px 0
+    margin: 45px 0
+    @include breakpoint(desktop, up)
+        margin: 70px 0
     &__box
         display: flex
         flex-direction: column
@@ -22,7 +23,6 @@
         display: flex
         margin-bottom: 20px
         justify-content: center
-
 
     &__slide
         display: flex
@@ -63,4 +63,3 @@
 
         > a
             margin-bottom: 10px
-        

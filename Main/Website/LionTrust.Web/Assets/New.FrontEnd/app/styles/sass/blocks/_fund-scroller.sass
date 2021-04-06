@@ -1,5 +1,7 @@
 .fundscroller
-    background: $black
+    margin: 45px 0
+    @include breakpoint(desktop, up)
+        margin: 70px 0
     &__box
         position: relative
         display: flex
@@ -14,11 +16,7 @@
             min-height: 673px
             padding-left: 50px
 
-    &__left 
-        display: flex
-        align-items: center
-        width: 100%
-        margin-right: 30px
+    &__left
         @include breakpoint(desktop, up)
             width: 45%
 
@@ -29,17 +27,14 @@
         width: 100%
         overflow-y: hidden
         -webkit-overflow-scrolling: touch
-        margin-top: 30px
-        padding-bottom: 30px
-        padding-left: 20px
-        &::-webkit-scrollbar 
+        padding: 30px 0 45px 20px
+        &::-webkit-scrollbar
             display: none
-        
+
         @include breakpoint(desktop, up)
             margin-top: 0
             position: absolute
             width: 45%
-            padding-bottom: 20px
         @include breakpoint(desktop-large, up)
             width: 50%
 
@@ -48,15 +43,11 @@
     .imagepromo__content
         width: 100%
 
-
-
-
 .swiper-container-funds
     width: 100%
     height: 100%
-    
 
-.swiper-container-funds .swiper-slide 
+.swiper-container-funds .swiper-slide
     text-align: center
     font-size: 18px
     /* Center slide text vertically */
@@ -64,7 +55,6 @@
     display: -ms-flexbox
     display: -webkit-flex
     display: flex
-
 
     width: 100% !important
     @include breakpoint(mobile-large, up)
@@ -74,7 +64,6 @@
 
     @include breakpoint(desktop, up)
         width: 400px !important
-    
 
 .swiper-container-funds .swiper-pagination
     bottom: -6px
@@ -89,14 +78,14 @@
 
 .fundscroller .swiper-button-next
     right: -45px
-    top: 60% 
+    top: 60%
     outline: none
 
 .fundscroller .swiper-button-prev
     left: -45px
-    top: 60% 
+    top: 60%
     outline: none
-    
+
 .fundscroller .swiper-button-next:after, .fundscroller .swiper-button-prev:after
     color: $white
     font-size: 50px

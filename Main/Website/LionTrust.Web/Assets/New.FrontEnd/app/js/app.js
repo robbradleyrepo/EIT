@@ -10,7 +10,6 @@ import carouselSlider from "./componets/carouselSlider";
 import fundsSlider from "./componets/fundsSlider";
 import articleSlider from "./componets/articleSlider";
 import awardsSlider from "./componets/awardsSlider";
-
 import investmentCard from "./componets/investmentCard";
 import articleFilder from "./componets/articleFilder";
 
@@ -23,5 +22,5 @@ document.addEventListener("DOMContentLoaded", () => {
   fundsSlider();
   articleSlider();
   awardsSlider();
-  articleFilder();
+  if (document.querySelector(".article-page")) articleFilder();
 });

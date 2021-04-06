@@ -1,5 +1,6 @@
 .anchorbox
     background: $black
+    padding: 20px 0
 
     &__content
         display: flex
@@ -9,40 +10,26 @@
         padding: 30px 0
         @include breakpoint(desktop, up)
             flex-direction: row
-        
+
     &__head
-        display: flex
-        justify-content: center
-        flex: 1
-        margin-bottom: 20px
+        white-space: nowrap
+        margin-bottom: 5px
         font-size: 18px
         font-weight: 500
+        line-height: 48px
+        text-align: center
         @include breakpoint(desktop, up)
             margin-bottom: 0
             font-size: 16px
 
-    &__body
-        display: flex
-        justify-content: space-around
-        align-items: center
-        flex: 4
-        flex-wrap: wrap
     &__btn
-        display: flex 
+        display: flex
         min-width: 43%
         margin-bottom: 20px
         align-items: center
         justify-content: center
         height: 42px
-
+        width: 100%
         @include breakpoint(desktop, up)
             height: 48px
-            min-width: 170px
-            margin-bottom: 0
         @include breakpoint(desktop-large, up)
-            min-width: 250px
-
-
-    
-
-
