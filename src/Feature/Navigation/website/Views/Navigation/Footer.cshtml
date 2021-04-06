@@ -50,9 +50,11 @@
                             </ul>
                         </div>
                         <div class="social">
-                            @if (Model.SocialLinks != null && Model.SocialLinks.Any())
+                            @if (Model.FooterConfiguration != null 
+                                && Model.FooterConfiguration.SocialIcons != null 
+                                && Model.FooterConfiguration.SocialIcons.Any())
                             {
-                                foreach (var socialLink in Model.SocialLinks)
+                                foreach (var socialLink in Model.FooterConfiguration.SocialIcons)
                                 {
                                     if (string.IsNullOrEmpty(socialLink.TwitterAccounts))
                                     {
@@ -97,15 +99,17 @@
             </div>
             <div class="col-lg-3">
                 <div class="row">
-                    @if (Model.FooterLinks != null && Model.FooterLinks.Any())
+                    @if (Model.FooterConfiguration != null 
+                        && Model.FooterConfiguration.PageLink != null 
+                        && Model.FooterConfiguration.PageLink.Any())
                     {
                         IEnumerable<IPageLink> firstColumnLinks = null;
                         IEnumerable<IPageLink> secondColumnLinks = null;
-                        var footerLinksCount = Model.FooterLinks.Count();
+                        var footerLinksCount = Model.FooterConfiguration.PageLink.Count();
                         if (footerLinksCount > 1)
                         {
-                            firstColumnLinks = Model.FooterLinks.Take(footerLinksCount / 2);
-                            secondColumnLinks = Model.FooterLinks.Skip(footerLinksCount / 2);
+                            firstColumnLinks = Model.FooterConfiguration.PageLink.Take(footerLinksCount / 2);
+                            secondColumnLinks = Model.FooterConfiguration.PageLink.Skip(footerLinksCount / 2);
                         }
 
                         <div class="col-6 col-lg-12 footer__section">

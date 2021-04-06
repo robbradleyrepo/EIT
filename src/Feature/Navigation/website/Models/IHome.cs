@@ -65,11 +65,8 @@
         string EmailCTALabel { get; set; }
 
         [SitecoreField(Constants.Footer.FooterConfiguration_FieldName)]
-        IEnumerable<IFooterConfiguration> FooterConfiguration { get; set; }
-
-        [SitecoreField(Constants.Footer.SocialLinks_FieldName)]
-        IEnumerable<ISocialIcon> SocialLinks { get; set; }        
-
+        IFooterConfiguration FooterConfiguration { get; set; }
+  
         [SitecoreField(Constants.Footer.SubscribeNewsletterLabel_FieldName)]
         string SubscribeNewsletterLabel { get; set; }
 
@@ -78,9 +75,6 @@
 
         [SitecoreField(Constants.Footer.SubscribeCTALink_FieldName)]
         Link SubscribeCTALink_FieldName { get; set; }
-
-        [SitecoreField(Constants.Footer.FooterLinks_FieldName)]
-        IEnumerable<IPageLink> FooterLinks { get; set; }
 
         [SitecoreField(Constants.Footer.Copyright_FieldName)]
         string Copyright { get; set; }

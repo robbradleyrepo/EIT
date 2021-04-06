@@ -80,8 +80,7 @@
             public const string EmailCTALabel_FieldName = "EmailCTALabel";
             public static readonly ID EmailCTALabel_FieldID = new ID("{E4CA4419-EFEE-45A0-BEF9-2F611004D7A7}");
 
-            public const string SocialLinks_FieldName = "SocialLinks";
-            public static readonly ID SocialLinks_FieldID = new ID("{BA6CB33D-C63F-4BD4-92A1-8C3DDE97F9FC}");
+            public const string FooterConfiguration_FieldName = "Footer Configuration";
 
             public const string SubscribeNewsletterLabel_FieldName = "SubscribeNewsletterLabel";
             public static readonly ID SubscribeNewsletterLabel_FieldID = new ID("{6A0F17AB-B448-474A-A275-5EE5F12F8D10}");
@@ -91,9 +90,6 @@
 
             public const string SubscribeCTALink_FieldName = "SubscribeCTALink";
             public static readonly ID SubscribeCTALink_FieldID = new ID("{25FE6D9F-7990-451A-A9CB-94A632389CD3}");
-
-            public const string FooterLinks_FieldName = "FooterLinks";
-            public static readonly ID FooterLinks_FieldID = new ID("{E28B0C65-2DC9-42CB-B852-282C57BFEE3A}");
 
             public const string Copyright_FieldName = "Copyright";
             public static readonly ID Copyright_FieldID = new ID("{E168F770-7271-4DC4-9242-72805145ACDC}");
