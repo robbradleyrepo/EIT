@@ -1,7 +1,7 @@
 .article
-    background: $black
-    padding: 10px 0
-
+    margin: 45px 0
+    @include breakpoint(desktop, up)
+        margin: 70px 0
     &__box
         display: flex
         flex-direction: column
@@ -25,7 +25,6 @@
     &__slider-scroll
         display: flex
         min-height: min-content
-
 
 .btn-resp
     @include breakpoint(tablet, up)
