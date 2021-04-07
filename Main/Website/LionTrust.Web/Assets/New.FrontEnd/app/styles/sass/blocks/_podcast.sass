@@ -1,25 +1,22 @@
 .podcast
-    background: $black
     display: flex
-    padding: 15px
-
-    &__box
-        display: flex
-        position: relative
-        height: 300px
-        overflow: hidden
+    position: relative
+    height: 300px
+    overflow: hidden
+    border-radius: $border-radius
+    margin: 45px 0
+    &:hover
+        .podcast__back
+            transform: scale(1.2)
     &__back
         position: absolute
         width: 100%
         height: 100%
         left: 0
         top: 0
-        border-radius: 15px
         z-index: 9
         object-fit: cover
         transition: transform .8s
-        &:hover
-            transform: scale(1.2)
     &__front
         position: absolute
         width: 90%
@@ -34,8 +31,6 @@
         padding: 15px
         @include breakpoint(desktop, up)
             width: 60%
-        &:hover + .podcast__back
-            transform: scale(1.2)
     &__head
         display: flex
         align-items: center
@@ -52,33 +47,29 @@
         margin-right: 10px
         width: 13px
         height: 18px
-
     &__tit
-        font-size: 32px       
+        font-size: 32px
         font-weight: 300
         -webkit-line-clamp: 2 /* number of lines to show */
         margin-bottom: 10px
         color: $gold
         @include breakpoint(tablet, up)
-	        -webkit-line-clamp: 1 /* number of lines to show */
+            -webkit-line-clamp: 1 /* number of lines to show */
             font-size: 52px
-
     &__desc
-        font-size: 16px       
+        font-size: 16px
         font-weight: normal
         -webkit-line-clamp: 4 /* number of lines to show */
         margin-bottom: 10px
         @include breakpoint(tablet, up)
-	        -webkit-line-clamp: 2 /* number of lines to show */
+            -webkit-line-clamp: 2 /* number of lines to show */
             font-size: 18px
-
-
-    &__footer  
+    &__footer
         position: absolute
         display: flex
         bottom: 20px
         left: 15px
-        font-size: 15px       
+        font-size: 15px
         font-weight: normal
         align-items: center
         width: 100%
@@ -88,15 +79,12 @@
             margin-right: 30px
             @include breakpoint(tablet, up)
                 margin-right: 40px
-        > i
+        > a
             margin-right: 30px
             font-size: 20px
             display: flex
             align-items: center
             cursor: pointer
-
             @include breakpoint(tablet, up)
                 font-size: 32px
                 margin-right: 40px
-
-            
