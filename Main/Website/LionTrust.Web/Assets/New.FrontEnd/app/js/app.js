@@ -1,4 +1,5 @@
 import "core-js/es/number";
+import "core-js/features/string/repeat";
 import $ from "jquery";
 window.jQuery = $;
 window.$ = $;
