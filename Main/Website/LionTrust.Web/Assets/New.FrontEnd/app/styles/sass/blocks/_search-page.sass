@@ -7,9 +7,9 @@
     overflow-x: scroll
     white-space: nowrap
     @include breakpoint(tablet, up)
-        white-space: initial
-        overflow-x: initial
-        margin-bottom: 20px        
+        white-space: normal
+        overflow-x: hidden
+        margin-bottom: 20px
         @include breakpoint(desktop, up)
             margin-top: 230px
     &__checkbox
@@ -26,7 +26,7 @@
         line-height: 48px
         border: 1px solid $secondary-silver
         padding: 0 24px
-        min-width: initial
+        min-width: auto
         margin-right: 20px
         margin-bottom: 20px
         letter-spacing: 0
