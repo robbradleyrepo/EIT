@@ -1,10 +1,12 @@
 .podcast
     display: flex
     position: relative
-    height: 300px
+    height: 380px
     overflow: hidden
     border-radius: $border-radius
-    margin: 45px 0
+    margin-bottom: 40px
+    @include breakpoint(desktop, up)
+        height: 340px
     &:hover
         .podcast__back
             transform: scale(1.2)
