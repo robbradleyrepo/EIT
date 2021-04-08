@@ -1,7 +1,21 @@
 .fundscroller
-    margin: 45px 0
+    padding: 45px 0
+    background: $black
+    position: relative
+    &::before
+        // position: absolute
+        // top: -100%
+        // left: 0
+        // bottom: -100%
+        // width: 80%
+        // content: ""
+        // background: radial-gradient( at 0% 46%,rgba(#10a047, .3),rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))
+        // background: radial-gradient(at 0%,rgba(16,160,71,.3),rgba(0,0,0,0),rgba(0,0,0,0))
+        // background: radial-gradient(circle, rgba(0,186,0,0.2) 50%, rgba(0,186,0,0.2)),
+        // background: radial-gradient(circle closest-side at 30px 20px, #10a047, #000)
+        // background: radial-gradient(to right, rgba(16,160, 71,1), rgba(0,0,0,0))
     @include breakpoint(desktop, up)
-        margin: 70px 0
+        padding: 70px 0
     &__box
         position: relative
         display: flex
