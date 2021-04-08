@@ -4,18 +4,29 @@
     cursor: pointer
     width: 100%
     // margin-right: 20px
-
     @include breakpoint(mobile-large, up)
         width: 310px
-
     @include breakpoint(tablet, up)
         width: 350px
         // margin-right: 40px
-
     @include breakpoint(desktop, up)
-        width: 400px
-
+        width: 456px
     &:hover
+        .move-top
+            transform: translate(-10px, -55px)
+        .top-right
+            transform: translate(20px, -10px)
+        .move-right
+            transform: translate(30px, 5px)
+        .circle-blur
+            transform: translateX(40px)
+            filter: blur(8px)
+        .blur-circle-small
+            transform: translate(-10px, 8px) scale(1.2)
+        .slow-left
+            transform: translateX(-5px)
+        .big-left-small
+            transform: translate(-5px, 4px)
         i.animate-arrow
             transform: translate(10px, 0)
     > div
@@ -153,3 +164,14 @@
             height: 13px
             margin-left: 5px
             transition: transform .5s ease-out
+
+.bubble-svg
+    position: absolute
+    right: -25px
+    top: -25px
+    path
+        transition: transform .5s ease-out, filter .5s ease-out
+    .blur-circle
+        filter: blur(12px)
+    .blur-circle-small
+        filter: blur(2px)
