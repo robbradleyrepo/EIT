@@ -1,0 +1,34 @@
+.newsletter
+    &:hover
+        .bubbls-big
+            .one
+                transform: translate(-10px, 20px)
+            .two
+                transform: translateX(-20px)
+            .three
+                transform: translate(30px, -20px)
+            .four
+                transform: translate(30px, 5px)
+            .five
+                transform: translate(-10px, -10px)
+            .six
+                transform: translate(-15px, -15px)
+            .seven
+                transform: translateX(-15px)
+            .eight
+                transform: translate(15px, -5px)
+.bubbls-big
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-95%,-30%)
+    @include breakpoint(tablet, up)
+        transform: translate(-50%, -50%)
+    path
+        transition: transform 1s ease-out
+    .four
+        filter: blur(3px)
+    .three
+        filter: blur(10px)
+    .six
+        filter: blur(4px)
