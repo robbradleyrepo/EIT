@@ -1,7 +1,6 @@
 .fundcard
     display: flex
     flex-direction: column
-    cursor: pointer
     width: 100%
     // margin-right: 20px
     @include breakpoint(mobile-large, up)
@@ -29,8 +28,8 @@
             transform: translate(-5px, 4px)
         i.animate-arrow
             transform: translate(10px, 0)
-    > div
-        display: flex
+        .fundcard__toplion
+            opacity: .5
 
     &__top
         background: $blue-bold
@@ -40,12 +39,6 @@
         overflow: hidden
         @include breakpoint(desktop, up)
             height: 257px
-        &:hover .fundcard__toplion
-            opacity: .5
-        &:hover .fundcard__topback
-            right: -20px
-            // top: 10px
-            height: 100%
 
     &__topback
         width: 100%
@@ -77,7 +70,9 @@
         top: 0
         z-index: 10
         flex-direction: column
-        padding: 15px
+        padding: 15px 10px 10px
+        @include breakpoint(desktop, up)
+        padding: 32px 16px 20px
 
     &__tophead
         display: flex
@@ -131,38 +126,35 @@
     &__bottom
         min-height: 240px
         background: $white
-        padding: 15px
-        border-radius: 0 0 15px 15px
+        padding: 15px 10px 20px
+        display: flex
         flex-direction: column
         justify-content: space-between
+        border-radius: 0 0 15px 15px
         -webkit-line-clamp: 10 /* number of lines to show */
         box-shadow: 0px 10px 30px #41485572
 
         @include breakpoint(desktop, up)
             min-height: 373px
             -webkit-line-clamp: 8 /* number of lines to show */
+            padding: 24px 16px 36px
 
     &__bottomcontent
         -webkit-line-clamp: 8 /* number of lines to show */
         font-size: 16px
         color: $secondary-gray
         text-align: start
+        line-height: 22px
 
         @include breakpoint(desktop, up)
             -webkit-line-clamp: 10 /* number of lines to show */
             font-size: 18px
+            line-height: 28px
 
     &__bottomfooter
-        display: flex
-        align-items: center
-        color: $primary
-        letter-spacing: 2.4px
-        font-size: 12px
-        text-transform: uppercase
-        > i
-            width: 16px
-            height: 13px
-            margin-left: 5px
+        text-align: left
+        i
+            display: inline-block
             transition: transform .5s ease-out
 
 .bubble-svg
