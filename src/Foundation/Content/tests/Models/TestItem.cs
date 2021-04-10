@@ -15,5 +15,6 @@ namespace LionTrust.Foundation.Content.Tests.Models
         public string Name { get; set; }
 
         public string Title { get; set; }
+        public string Url { get; set; }
     }
 }

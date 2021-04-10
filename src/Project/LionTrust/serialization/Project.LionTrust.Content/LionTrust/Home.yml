@@ -1,4 +1,4 @@
----
+﻿---
 ID: "1d5c266a-112f-4ea2-a69e-e4865ace2200"
 Parent: "5ac6cf7a-26b8-47a1-a326-8cd790317be0"
 Template: "76036f5e-cbce-46d1-af0a-4143f9b557aa"
@@ -55,12 +55,9 @@ Languages:
           p:p="1">
           <d
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
-            <p
-              uid="{498BDDC8-091D-4F1C-9895-78F658BCA4FF}"
-              s:md="{B9AE5A80-B0ED-4E40-AA4E-E3FFE1255ED8}" />
             <r
               uid="{7E20CCF1-4111-494F-9F02-9610CCF58DB7}"
-              p:after="*[1=2]"
+              p:after="p[@uid='{498BDDC8-091D-4F1C-9895-78F658BCA4FF}']"
               s:ds="{0A275E4A-98DF-4CB3-8A7E-948F53010AE3}"
               s:id="{51BBBAAD-01F6-4371-9260-9473141506EF}"
               s:ph="main">
@@ -100,6 +97,27 @@ Languages:
                 </ruleset>
               </rls>
             </r>
+            <r
+              uid="{BBBF83B5-483E-472C-B625-C2C39D615C47}"
+              p:after="r[@uid='{7E20CCF1-4111-494F-9F02-9610CCF58DB7}']"
+              s:ds="{04B8B14B-C57E-4C47-9C19-A8EC9F3CD04A}"
+              s:id="{51BBBAAD-01F6-4371-9260-9473141506EF}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{8E732695-CE06-41E3-879C-A7D707C8B68B}"
+              p:after="r[@uid='{BBBF83B5-483E-472C-B625-C2C39D615C47}']"
+              s:ds="{11912AF4-20C8-445D-A5C8-E3C3FAFD2E4A}"
+              s:id="{51BBBAAD-01F6-4371-9260-9473141506EF}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{415463EA-181F-4FAD-9FD4-AC30F351DD05}"
+              p:after="*[1=2]"
+              s:ds="{1DCF073B-27EE-4B93-9AE5-FE1D212F5BA3}"
+              s:id="{51BBBAAD-01F6-4371-9260-9473141506EF}"
+              s:par=""
+              s:ph="main" />
           </d>
         </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"

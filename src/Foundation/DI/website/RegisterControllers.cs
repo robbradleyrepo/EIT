@@ -8,8 +8,13 @@ namespace LionTrust.Foundation.DI
     {
         public void Configure(IServiceCollection serviceCollection)
         {
+            //From HelixBase
             serviceCollection.AddMvcControllers(
                 "LionTrust.Feature.*");
+
+            //From Habitat
+            serviceCollection.AddClassesWithServiceAttribute("*.Feature.*");
+            serviceCollection.AddClassesWithServiceAttribute("*.Foundation.*");
         }
     }
 }
