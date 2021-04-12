@@ -19,13 +19,6 @@ namespace LionTrust.Feature.Hero.Controllers
             _mvcContext = mvcContext;
         }
 
-        public ActionResult FundManagerHero()
-        {
-            var model = _mvcContext.GetContextItem<IFundManagerHero>();
-
-            return View(Feature.Hero.Constants.Views.FundManagerHeroView, model);
-        }
-
         public ActionResult Hero()
         {
             var mediatorResponse = _heroMediator.RequestHeroViewModel();
