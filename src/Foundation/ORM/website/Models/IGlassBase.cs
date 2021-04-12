@@ -1,18 +1,36 @@
-using System;
-using System.Collections;
-using Sitecore.Globalization;
-
 namespace LionTrust.Foundation.ORM.Models
 {
+    using System;
+    using System.Collections;
+
+    using Glass.Mapper.Sc.Configuration;
+    using Glass.Mapper.Sc.Configuration.Attributes;
+    using Sitecore.Globalization;
+
     public interface IGlassBase
     {
+        [SitecoreId]
         Guid Id { get; set; }
+
+        [SitecoreInfo(SitecoreInfoType.Language)]
         Language Language { get; set; }
+
+        [SitecoreInfo(SitecoreInfoType.Version)]
         int Version { get; set; }
-        IEnumerable BaseTemplateIds { get; set; }
-        string TemplateName { get; set; }
-        Guid TemplateId { get; set; }
-        string Name { get; set; }
+
+        [SitecoreInfo(SitecoreInfoType.Url)]
         string Url { get; set; }
+
+        [SitecoreInfo(SitecoreInfoType.Name)]
+        string Name { get; set; }
+
+        [SitecoreInfo(SitecoreInfoType.BaseTemplateIds)]
+        IEnumerable BaseTemplateIds { get; set; }
+
+        [SitecoreInfo(SitecoreInfoType.TemplateName)]
+        string TemplateName { get; set; }
+
+        [SitecoreInfo(SitecoreInfoType.TemplateId)]
+        Guid TemplateId { get; set; }
     }
 }

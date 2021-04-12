@@ -17,7 +17,8 @@ namespace LionTrust.Feature.Redirects
         }
         public static class RedirectContentItem
         {
-            public static readonly Guid TemplateId = new Guid("{E85BB7D7-85D1-403E-A178-D0988966583F}");
+            public const string RedirectContentItemId = "{E85BB7D7-85D1-403E-A178-D0988966583F}";
+            public static readonly Guid TemplateId = new Guid(RedirectContentItemId);
         }
         public static class ErrorMessages
         {

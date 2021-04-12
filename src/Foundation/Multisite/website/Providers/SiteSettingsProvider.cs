@@ -16,7 +16,7 @@
             this.siteContext = siteContext;
         }
 
-        public static string SettingsRootName => Settings.GetSetting("Multisite.SettingsRootName", "ettings");
+        public static string SettingsRootName => Settings.GetSetting("Multisite.SettingsRootName", "settings");
 
         public virtual Item GetSetting(Item contextItem, string settingsName, string setting)
         {

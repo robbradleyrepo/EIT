@@ -1,8 +1,8 @@
 ﻿namespace LionTrust.Foundation.Multisite.Pipelines
 {
-    using Sitecore.Diagnostics;
     using LionTrust.Foundation.DI;
     using LionTrust.Foundation.Multisite.Providers;
+    using Sitecore.Diagnostics;
     using Sitecore.Pipelines.GetRenderingDatasource;
 
     [Service]

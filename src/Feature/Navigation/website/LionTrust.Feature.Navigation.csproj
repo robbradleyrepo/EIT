@@ -81,6 +81,7 @@
     <Content Include="Views\Navigation\Menu.cshtml" />
     <Content Include="App_Config\Include\Feature\Feature.Navigation.Serialization.config" />
     <Content Include="Views\Navigation\Footer.cshtml" />
+    <Content Include="App_Config\Include\Feature\Feature.Navigation.RegisterContainer.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -93,6 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\NavigationController.cs" />
+    <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Models\IFooterConfiguration.cs" />
     <Compile Include="Models\IHeaderConfiguration.cs" />
     <Compile Include="Models\IHeaderDropdown.cs" />

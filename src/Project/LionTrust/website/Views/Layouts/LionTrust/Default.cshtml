@@ -24,17 +24,12 @@
     <![endif]-->
 </head>
 <body>
-    <header class="header">
-        <section class="container">
-            @Html.Sitecore().Rendering("/sitecore/layout/Renderings/Feature/Navigation/Header", new { DatSource = Sitecore.Context.Item })
-    </header>
+    @Html.Sitecore().Placeholder("header")
     <div class="mask"></div>
     <main id="main" role="main">
         @Html.Sitecore().Placeholder("main")
     </main>
-
-    @Html.Sitecore().Rendering("/sitecore/layout/Renderings/Feature/Navigation/Footer", new { DatSource = Sitecore.Context.Item })
-
+    @Html.Sitecore().Placeholder("footer")
     <script src="js/script.js"></script>
 </body>
 </html>
