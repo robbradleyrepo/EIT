@@ -4,37 +4,50 @@
         z-index: 2
 
 .shevron-bg
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
     background-image: url("../images/components/banners/brand-element-chevron.svg")
     background-repeat: no-repeat
-    background-position: 80%
+    background-position: 50%
     background-size: 50%
 
 .main-bg
 
 .lead-banner
+
     &__wrapper
-        height: 760px
-        /* margin-top: 0px; */
-        // background-attachment: fixed
-        // background-repeat: no-repeat
-        // min-height: 100%
+        height: 550px
         position: relative
-    &__bg
-        position: absolute
-        top: 0
-        width: 100%
-        height: 100%
-        left: 0
-        right: 0
-        bottom: 0
-        background: url("../images/bg/lead-banner.png")
+        top: -60px
+        @include breakpoint(desktop, up)
+            height: 760px
     &__overlay
         position: absolute
         top: 0
         left: 0
         right: 0
         bottom: 0
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 69.2%, #000000 100%), linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 34.28%)
+
+    &__bg
+        width: 100%
+        height: 100%
+        background: url("../images/bg/lead-banner.png")
+        background-repeat: no-repeat
+        background-size: cover
+        position: relative
+        &:after
+            position: absolute
+            content: ''
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            // background: linear-gradient(180deg, rgba(0, 0, 0, 0) 69.2%, #000000 100%), linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 34.28%)
+            // @include breakpoint(desktop, up)
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 69.2%, #000000 100%), linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, .2) 34.28%)
 
 .main-page-conentent
     position: relative

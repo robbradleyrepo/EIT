@@ -11,24 +11,26 @@
     <!--#include virtual="/components/UI002-Anchor-Links.html" -->
   </header>
 
-  <main class="main-page-conentent">    
+  <main class="main-page-conentent">
 
     <!--#include virtual="/components/UI003-Fund-Scroller-main.html" -->
 
     <!--#include virtual="/components/UIC001-Article-Scroller.html" -->
-    <div class="shevron-bg">
+    <section class="relative">
       <!--#include virtual="/components/UI005-Podcast-Promo.html" -->
 
       <!--#include virtual="/components/UI006-4-Image-Promo.html" -->
-    </div>
+      <div class="shevron-bg"></div>
+    </section>
 
     <section class="lead-banner__wrapper">
-      <div class="container absolute-center z-index-10">
+      <div class="absolute-center z-index-10">
         <!--#include virtual="/components/UI007-Full-Width-Banner.html" -->
       </div>
-      <div class="lead-banner__bg">
+      <div class="lead-banner__overlay">
+        <div class="lead-banner__bg">
+        </div>
       </div>
-      <div class="lead-banner__overlay"></div>
     </section>
 
     <!--#include virtual="/components/UI008-Accordion.html" -->
@@ -43,5 +45,5 @@
     <div class="paralax-circle__item"></div>
   </div>
 
-  
+
 </body>

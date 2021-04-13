@@ -13,6 +13,8 @@ import articleSlider from "./componets/articleSlider";
 import awardsSlider from "./componets/awardsSlider";
 import investmentCard from "./componets/investmentCard";
 import articleFilder from "./componets/articleFilder";
+import parallaxScrolling from "./componets/parallaxScrolling";
+
 
 document.addEventListener("DOMContentLoaded", () => {
   onboardingOverlay();
@@ -23,5 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fundsSlider();
   articleSlider();
   awardsSlider();
-  if (document.querySelector(".article-page")) articleFilder();
+  if (document.querySelector(".article-page")) articleFilder(); 
+  if (document.querySelector(".main-page")) parallaxScrolling();
+
 });
