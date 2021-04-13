@@ -1,2 +1,51 @@
 .main-page
-    background: $black
+    .header
+        position: relative
+        z-index: 2
+
+.shevron-bg
+    background-image: url("../images/components/banners/brand-element-chevron.svg")
+    background-repeat: no-repeat
+    background-position: 80%
+    background-size: 50%
+
+.main-bg
+
+.lead-banner
+    &__wrapper
+        height: 760px
+        /* margin-top: 0px; */
+        // background-attachment: fixed
+        // background-repeat: no-repeat
+        // min-height: 100%
+        position: relative
+    &__bg
+        position: absolute
+        top: 0
+        width: 100%
+        height: 100%
+        left: 0
+        right: 0
+        bottom: 0
+        background: url("../images/bg/lead-banner.png")
+    &__overlay
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 69.2%, #000000 100%), linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 34.28%)
+
+.main-page-conentent
+    position: relative
+    z-index: 2
+
+.paralax-circle
+    position: absolute
+    top: 60vh
+    width: 100%
+    height: 3200px
+    &__item
+        height: 100%
+        // background: red
+        background: radial-gradient(61.5% 33.82% at 119.62% 65.43%, rgba(192, 169, 97, 0.62) 0%, rgba(192, 169, 97, 0) 100%), radial-gradient(37.38% 35.89% at 0% 35.6%, rgba(16, 160, 71, 0.37) 0%, rgba(16, 160, 71, 0) 100%)
