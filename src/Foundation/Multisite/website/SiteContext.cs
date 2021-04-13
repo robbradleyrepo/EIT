@@ -1,9 +1,9 @@
 ﻿namespace LionTrust.Foundation.Multisite
 {
-    using Sitecore.Data.Items;
-    using Sitecore.Diagnostics;
     using LionTrust.Foundation.DI;
     using LionTrust.Foundation.Multisite.Providers;
+    using Sitecore.Data.Items;
+    using Sitecore.Diagnostics;
 
     [Service]
     public class SiteContext

@@ -5,7 +5,7 @@
     public static class Constants
     {
         public static class Identity
-        {     
+        {
             public const string Logo_FieldName = "Logo";
             public static readonly ID Logo_FieldID = new ID("{F113BF3D-FE80-4A15-9CDA-679B3C3CB3BE}");
         }
@@ -120,7 +120,7 @@
         }
 
         public static class Menu
-        {           
+        {
             public const string MyLionTrust_FieldName = "MyLionTrust";
             public static readonly ID MyLionTrust_FieldID = new ID("{B810A405-73F4-48CC-AF61-778C82531262}");
 
@@ -140,16 +140,16 @@
             public static readonly ID MenuItems_FieldID = new ID("{5D68CC82-EA43-4789-B892-0E49244F68D5}");
         }
 
-        public static class SiteRoot
+        public static class NavigationSiteRoot
         {
-            public const string TemplateName = "Site Root";
-            public static readonly ID TemplateID = new ID("{8BAA6E9E-CA51-4CBD-8E4E-BA53CAFE8C17}");
+            public const string TemplateName = "_NavigationSiteRoot";
+            public static readonly ID TemplateID = new ID("{8375C190-5C85-4616-9E14-E8AE5CBAD135}");
         }
 
-        public static class Home
+        public static class NavigationRoot
         {
-            public const string TemplateName = "Home";
-            public static readonly ID TemplateID = new ID("{51D3A578-6E10-4EC6-BB5B-5C1307A6D661}");
+            public const string TemplateName = "_NavigationRoot";
+            public static readonly ID TemplateID = new ID("{93962463-4F5F-45E8-BE15-79F96D0CBB04}");
         }
 
         public static class Navigation

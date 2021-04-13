@@ -4,7 +4,7 @@
 
     public interface INavigationRepository
     {
-        Item GetSiteRootIdentity(Item contextItem);
+        Item GetNavigationSiteRoot(Item contextItem);
         Item GetNavigationRoot(Item contextItem);
     }
 }

@@ -16,7 +16,7 @@
         public NavigationRepository(Item contextItem)
         {
             this.ContextItem = contextItem;
-            this.SiteRootIdentity = this.GetSiteRootIdentity(this.ContextItem);
+            this.SiteRootIdentity = this.GetNavigationSiteRoot(this.ContextItem);
             this.NavigationRoot = this.GetNavigationRoot(this.ContextItem);
             if (this.NavigationRoot == null)
             {
@@ -24,14 +24,14 @@
             }
         }
 
-        public Item GetSiteRootIdentity(Item contextItem)
+        public Item GetNavigationSiteRoot(Item contextItem)
         {
-            return contextItem.GetAncestorOrSelfOfTemplate(Navigation.Constants.SiteRoot.TemplateID) ?? Context.Site.GetContextItem(Navigation.Constants.SiteRoot.TemplateID);
+            return contextItem.GetAncestorOrSelfOfTemplate(Navigation.Constants.NavigationSiteRoot.TemplateID) ?? Context.Site.GetContextItem(Navigation.Constants.NavigationSiteRoot.TemplateID);
         }
 
         public Item GetNavigationRoot(Item contextItem)
         {
-            return contextItem.GetAncestorOrSelfOfTemplate(Navigation.Constants.Home.TemplateID) ?? Context.Site.GetContextItem(Navigation.Constants.Home.TemplateID);
+            return contextItem.GetAncestorOrSelfOfTemplate(Navigation.Constants.NavigationRoot.TemplateID) ?? Context.Site.GetContextItem(Navigation.Constants.NavigationRoot.TemplateID);
         }
     }
 }

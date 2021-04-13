@@ -1,17 +1,22 @@
-using Sitecore.Mvc.Controllers;
-using System.Web.Mvc;
-using LionTrust.Feature.Hero.Mediators;
-using LionTrust.Foundation.Core.Exceptions;
-
 namespace LionTrust.Feature.Hero.Controllers
 {
+    using System.Web.Mvc;
+
+    using Glass.Mapper.Sc.Web.Mvc;
+    using LionTrust.Feature.Hero.Mediators;
+    using LionTrust.Feature.Hero.Models;
+    using LionTrust.Foundation.Core.Exceptions;
+    using Sitecore.Mvc.Controllers;
+
     public class HeroController : SitecoreController
     {
         private readonly IHeroMediator _heroMediator;
+        private readonly IMvcContext _mvcContext;
 
-        public HeroController(IHeroMediator heroMediator)
+        public HeroController(IHeroMediator heroMediator, IMvcContext mvcContext)
         {
             _heroMediator = heroMediator;
+            _mvcContext = mvcContext;
         }
 
         public ActionResult Hero()

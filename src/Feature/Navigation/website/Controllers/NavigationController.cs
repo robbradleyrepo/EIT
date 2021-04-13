@@ -27,7 +27,7 @@
         {
             var navigationViewModel = new NavigationViewModel();
             var item = RenderingContext.Current.Rendering.Item;
-            var rootItem = _navigationRepository.GetSiteRootIdentity(item);
+            var rootItem = _navigationRepository.GetNavigationSiteRoot(item);
             if (rootItem != null)
             {
                 navigationViewModel.RootItem = _mvcContext.SitecoreService.GetItem<ISiteRoot>(rootItem.ID.Guid);

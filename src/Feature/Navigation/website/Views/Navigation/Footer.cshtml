@@ -1,4 +1,5 @@
-﻿@using System.Collections.Specialized;
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using System.Collections.Specialized;
 @using LionTrust.Feature.Navigation.Models;
 @model LionTrust.Feature.Navigation.Models.IHome
 <footer class="footer">
@@ -21,7 +22,7 @@
                         </ul>
                         @using (Html.Glass().BeginRenderLink(Model, m => m.GoogleMapsLink, new NameValueCollection { { "class", "footer__map-link" } }, isEditable: true))
                         {
-                            @Html.Glass().Editable(Model, x=>x.GoogleMapsCTALabel)<i class="icon-tab"></i>                    
+                            @Html.Glass().Editable(Model, x => x.GoogleMapsCTALabel)<i class="icon-tab"></i>
                         }
                     </div>
                     <div class="col-6 col-lg-3 footer__bottom-item">
@@ -50,8 +51,8 @@
                             </ul>
                         </div>
                         <div class="social">
-                            @if (Model.FooterConfiguration != null 
-                                && Model.FooterConfiguration.SocialIcons != null 
+                            @if (Model.FooterConfiguration != null
+                                && Model.FooterConfiguration.SocialIcons != null
                                 && Model.FooterConfiguration.SocialIcons.Any())
                             {
                                 foreach (var socialLink in Model.FooterConfiguration.SocialIcons)
@@ -99,8 +100,8 @@
             </div>
             <div class="col-lg-3">
                 <div class="row">
-                    @if (Model.FooterConfiguration != null 
-                        && Model.FooterConfiguration.PageLink != null 
+                    @if (Model.FooterConfiguration != null
+                        && Model.FooterConfiguration.PageLink != null
                         && Model.FooterConfiguration.PageLink.Any())
                     {
                         IEnumerable<IPageLink> firstColumnLinks = null;
@@ -134,9 +135,9 @@
                                 </ul>
                             </nav>
                         </div>
-                        
-                     }
-                    </div>
+
+                    }
+                </div>
             </div>
         </div>
         <div class="row mt-3">
