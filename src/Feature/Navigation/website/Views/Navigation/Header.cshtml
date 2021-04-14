@@ -1,0 +1,287 @@
+﻿@using System.Collections.Specialized;
+@using Glass.Mapper.Sc.Web.Mvc;
+@using LionTrust.Feature.Navigation.Models;
+@model LionTrust.Feature.Navigation.Models.NavigationViewModel
+<!-- header -->
+<header class="header">
+    <section class="container">
+        <div class="header-navbar">
+            @using (Html.Glass().BeginEditFrame(Model.HomeItem, "Edit Menu Links", x => x.MenuItems))
+            {
+                <button class="header-navbar__btn-open"></button>
+            }
+
+            <a href="@Model.HomeItem.Url" class="header-navbar__logo">
+                @Html.Glass().RenderImage(Model.RootItem, x => x.Logo, new { alt = Model.RootItem.Logo != null ? Model.RootItem.Logo.Alt : string.Empty, @class = "header-navbar__logo-img" }, isEditable: true)
+            </a>
+
+            @if (Model.HomeItem.HeaderConfiguration != null && Model.HomeItem.HeaderConfiguration.HeaderDropDowns != null && Model.HomeItem.HeaderConfiguration.HeaderDropDowns.Any())
+            {
+                <nav class="nav-desktop">
+                    <ul class="nav-desktop__list">
+                        @foreach (var menuItem in Model.HomeItem.HeaderConfiguration.HeaderDropDowns)
+                        {
+                            if (menuItem != null)
+                            {
+                                var navigationColumnsCount = 0;
+                                IHeaderNavigationColumn firstNavigationColumn = null;
+                                IEnumerable<IHeaderNavigationColumn> otherNavigationColumns = null;
+                                if (menuItem.NavigationColumns != null && menuItem.NavigationColumns.Any())
+                                {
+                                    navigationColumnsCount = menuItem.NavigationColumns.Count();
+                                    firstNavigationColumn = menuItem.NavigationColumns.FirstOrDefault();
+                                    otherNavigationColumns = menuItem.NavigationColumns.Skip(1);
+                                }
+                                <li class="nav-desktop__item">
+                                    @if (menuItem.PageItem != null)
+                                    {
+                                        <a href="@menuItem.PageItem.Url" class="nav-desktop__link">
+                                            @Html.Glass().Editable(menuItem.PageItem, z => z.MenuTitle)
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a href="#" class="nav-desktop__link">
+                                            @menuItem.Name
+                                        </a>
+                                    }
+                                    <div class="dropdown">
+                                        <div class="dropdown__inner">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <nav class="dropdown-nav">
+                                                            @if (menuItem.ShowCTA)
+                                                            {
+                                                                @using (Html.Glass().BeginRenderLink(menuItem, z => z.CTALink, new NameValueCollection { { "class", "btn btn-primary btn-block mb-5" } }, isEditable: true))
+                                                                {
+                                                                    @Html.Glass().Editable(menuItem, z => z.CTALabel) <i class="icon-arrow-right animate-arrow"></i>
+                                                                }
+                                                            }
+
+                                                            @if (firstNavigationColumn != null)
+                                                            {
+                                                                if (firstNavigationColumn.ShowColumnLink)
+                                                                {
+                                                                    <h4 class="dropdown-nav__title">@Html.Glass().Editable(firstNavigationColumn, z => z.ColumnTitle)</h4>
+                                                                    @using (Html.Glass().BeginRenderLink(firstNavigationColumn, z => z.ColumnLink, new NameValueCollection { { "class", "link-styles d-block mb-4" } }, isEditable: true))
+                                                                    {
+                                                                        @Html.Glass().Editable(firstNavigationColumn, z => z.ColumnLinkLabel) <i class="icon-arrow-right"></i>
+                                                                    }
+                                                                }
+                                                                if (firstNavigationColumn.PageLinks != null && firstNavigationColumn.PageLinks.Any())
+                                                                {
+                                                                    <ul class="dropdown-nav__list">
+                                                                        @foreach (var pageLink in firstNavigationColumn.PageLinks)
+                                                                        {
+                                                                            <li class="dropdown-nav__item">
+                                                                                <a href="@pageLink.Url" class="dropdown-nav__link">@Html.Glass().Editable(pageLink, z => z.MenuTitle)</a>
+                                                                            </li>
+                                                                        }
+                                                                    </ul>
+                                                                }
+                                                            }
+                                                        </nav>
+                                                    </div>
+                                                    @if (otherNavigationColumns != null && otherNavigationColumns.Any())
+                                                    {
+                                                        var secondNavigationColumn = otherNavigationColumns.FirstOrDefault();
+                                                        <div class="col-md-3 offset-1">
+                                                            <nav>
+                                                                @if (secondNavigationColumn.ShowColumnLink)
+                                                                {
+                                                                    <h4 class="dropdown-nav__title">@Html.Glass().Editable(secondNavigationColumn, z => z.ColumnTitle)</h4>
+                                                                    @using (Html.Glass().BeginRenderLink(secondNavigationColumn, z => z.ColumnLink, new NameValueCollection { { "class", "link-styles d-block mb-4" } }, isEditable: true))
+                                                                    {
+                                                                        @Html.Glass().Editable(secondNavigationColumn, z => z.ColumnLinkLabel) <i class="icon-arrow-right"></i>
+                                                                    }
+                                                                }
+                                                                @if (secondNavigationColumn.PageLinks != null && secondNavigationColumn.PageLinks.Any())
+                                                                {
+                                                                    <ul class="dropdown-nav__list">
+                                                                        @foreach (var pageLink in secondNavigationColumn.PageLinks)
+                                                                        {
+                                                                            <li class="dropdown-nav__item">
+                                                                                <a href="@pageLink.Url" class="dropdown-nav__link">@Html.Glass().Editable(pageLink, z => z.MenuTitle)</a>
+                                                                            </li>
+                                                                        }
+                                                                    </ul>
+                                                                }
+                                                            </nav>
+                                                        </div>
+                                                        var lastNavigationColumn = otherNavigationColumns.Skip(1);
+                                                        if (lastNavigationColumn != null && lastNavigationColumn.Any())
+                                                        {
+                                                            var thirdNavigationColumn = lastNavigationColumn.FirstOrDefault();
+                                                            <div class="col-xl-4 col-lg-5 offset-xl-1">
+                                                                <nav>
+                                                                    @if (thirdNavigationColumn.ShowColumnLink)
+                                                                    {
+                                                                        <h4 class="dropdown-nav__title">@Html.Glass().Editable(thirdNavigationColumn, z => z.ColumnTitle)</h4>
+                                                                        @using (Html.Glass().BeginRenderLink(thirdNavigationColumn, z => z.ColumnLink, new NameValueCollection { { "class", "link-styles d-block mb-4" } }, isEditable: true))
+                                                                        {
+                                                                            @Html.Glass().Editable(thirdNavigationColumn, z => z.ColumnLinkLabel) <i class="icon-arrow-right"></i>
+                                                                        }
+                                                                    }
+                                                                    @if (thirdNavigationColumn.PageLinks != null && thirdNavigationColumn.PageLinks.Any())
+                                                                    {
+                                                                        <ul class="dropdown-nav__list">
+                                                                            @foreach (var pageLink in thirdNavigationColumn.PageLinks)
+                                                                            {
+                                                                                <li class="dropdown-nav__item">
+                                                                                    <a href="@pageLink.Url" class="dropdown-nav__link">@Html.Glass().Editable(pageLink, z => z.MenuTitle)</a>
+                                                                                </li>
+                                                                            }
+                                                                        </ul>
+                                                                    }
+                                                                </nav>
+                                                            </div>
+                                                        }
+                                                        else
+                                                        {
+                                                            if (menuItem.Images != null && menuItem.Images.Any())
+                                                            {
+                                                                if (menuItem.Images.Count() == 1)
+                                                                {
+                                                                    var image = menuItem.Images.FirstOrDefault();
+                                                                    <div class="col-xl-4 col-lg-5 offset-lg-4 offset-xl-5">
+                                                                        @using (Html.Glass().BeginRenderLink(image, z => z.Link, new NameValueCollection { { "class", "quick-link-chart" }, { "style", "background-image: url('" + image.Image.Src + "')" } }, isEditable: true))
+                                                                        {
+                                                                            <span class="quick-link-chart__title">@Html.Glass().Editable(image, z => z.Title)</span>
+                                                                            <span class="quick-link-chart__text">@Html.Glass().Editable(image, z => z.Description)</span>
+                                                                        }
+                                                                    </div>
+                                                                }
+                                                                else
+                                                                {
+                                                                    var firstImage = menuItem.Images.FirstOrDefault();
+                                                                    <div class="col-xl-4 col-lg-5 offset-lg-4 offset-xl-5">
+                                                                        @using (Html.Glass().BeginRenderLink(firstImage, z => z.Link, new NameValueCollection { { "class", "quick-link-chart quick-link-chart__small" }, { "style", "background-image: url('" + firstImage.Image.Src + "')" } }, isEditable: true))
+                                                                        {
+                                                                            <span class="quick-link-chart__title">@Html.Glass().Editable(firstImage, z => z.Title)</span>
+                                                                            <span class="quick-link-chart__text">@Html.Glass().Editable(firstImage, z => z.Description)</span>
+                                                                        }
+                                                                    </div>
+                                                                    var secondImage = menuItem.Images.Skip(1).FirstOrDefault();
+                                                                    <div class="col-xl-4 col-lg-5 offset-lg-4 offset-xl-5">
+                                                                        @using (Html.Glass().BeginRenderLink(secondImage, z => z.Link, new NameValueCollection { { "class", "quick-link-chart quick-link-chart__small" }, { "style", "background-image: url('" + secondImage.Image.Src + "')" } }, isEditable: true))
+                                                                        {
+                                                                            <span class="quick-link-chart__title">@Html.Glass().Editable(secondImage, z => z.Title)</span>
+                                                                            <span class="quick-link-chart__text">@Html.Glass().Editable(secondImage, z => z.Description)</span>
+                                                                        }
+                                                                    </div>
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (menuItem.Images != null && menuItem.Images.Any())
+                                                        {
+                                                            var imagesCount = menuItem.Images.Count();
+                                                            if (imagesCount == 1)
+                                                            {
+                                                                var image = menuItem.Images.FirstOrDefault();
+                                                                <div class="col-xl-4 col-lg-5 offset-lg-4 offset-xl-5">
+                                                                    @using (Html.Glass().BeginRenderLink(image, z => z.Link, new NameValueCollection { { "class", "quick-link-chart" }, { "style", "background-image: url('" + image.Image.Src + "')" } }, isEditable: true))
+                                                                    {
+                                                                        <span class="quick-link-chart__title">@Html.Glass().Editable(image, z => z.Title)</span>
+                                                                        <span class="quick-link-chart__text">@Html.Glass().Editable(image, z => z.Description)</span>
+                                                                    }
+                                                                </div>
+                                                            }
+                                                            else
+                                                            {
+                                                                var imageCollecion = menuItem.Images;
+                                                                <div class="col-xl-7 col-lg-9 offset-xl-2">
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            @if (imagesCount == 2)
+                                                                            {
+                                                                                var firstImage = menuItem.Images.FirstOrDefault();
+                                                                                @using (Html.Glass().BeginRenderLink(firstImage, z => z.Link, new NameValueCollection { { "class", "quick-link-chart" }, { "style", "background-image: url('" + firstImage.Image.Src + "')" } }, isEditable: true))
+                                                                                {
+                                                                                    <span class="quick-link-chart__title">@Html.Glass().Editable(firstImage, z => z.Title)</span>
+                                                                                    <span class="quick-link-chart__text">@Html.Glass().Editable(firstImage, z => z.Description)</span>
+                                                                                }
+
+                                                                                imageCollecion = imageCollecion.Skip(1);
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                var firstImage = menuItem.Images.FirstOrDefault();
+                                                                                @using (Html.Glass().BeginRenderLink(firstImage, z => z.Link, new NameValueCollection { { "class", "quick-link-chart quick-link-chart__small" }, { "style", "background-image: url('" + firstImage.Image.Src + "')" } }, isEditable: true))
+                                                                                {
+                                                                                    <span class="quick-link-chart__title">@Html.Glass().Editable(firstImage, z => z.Title)</span>
+                                                                                    <span class="quick-link-chart__text">@Html.Glass().Editable(firstImage, z => z.Description)</span>
+                                                                                }
+                                                                                var secondImage = menuItem.Images.Skip(1).FirstOrDefault();
+                                                                                @using (Html.Glass().BeginRenderLink(secondImage, z => z.Link, new NameValueCollection { { "class", "quick-link-chart quick-link-chart__small" }, { "style", "background-image: url('" + secondImage.Image.Src + "')" } }, isEditable: true))
+                                                                                {
+                                                                                    <span class="quick-link-chart__title">@Html.Glass().Editable(secondImage, z => z.Title)</span>
+                                                                                    <span class="quick-link-chart__text">@Html.Glass().Editable(secondImage, z => z.Description)</span>
+                                                                                }
+                                                                                imageCollecion = imageCollecion.Skip(2);
+                                                                            }
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            @if (imagesCount < 4)
+                                                                            {
+                                                                                var secondColumnImage = menuItem.Images.FirstOrDefault();
+                                                                                @using (Html.Glass().BeginRenderLink(secondColumnImage, z => z.Link, new NameValueCollection { { "class", "quick-link-chart" }, { "style", "background-image: url('" + secondColumnImage.Image.Src + "')" } }, isEditable: true))
+                                                                                {
+                                                                                    <span class="quick-link-chart__title">@Html.Glass().Editable(secondColumnImage, z => z.Title)</span>
+                                                                                    <span class="quick-link-chart__text">@Html.Glass().Editable(secondColumnImage, z => z.Description)</span>
+                                                                                }
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                var secondColumnFirstImage = menuItem.Images.FirstOrDefault();
+                                                                                @using (Html.Glass().BeginRenderLink(secondColumnFirstImage, z => z.Link, new NameValueCollection { { "class", "quick-link-chart quick-link-chart__small" }, { "style", "background-image: url('" + secondColumnFirstImage.Image.Src + "')" } }, isEditable: true))
+                                                                                {
+                                                                                    <span class="quick-link-chart__title">@Html.Glass().Editable(secondColumnFirstImage, z => z.Title)</span>
+                                                                                    <span class="quick-link-chart__text">@Html.Glass().Editable(secondColumnFirstImage, z => z.Description)</span>
+                                                                                }
+                                                                                var secondColumnSecondImage = menuItem.Images.Skip(1).FirstOrDefault();
+                                                                                @using (Html.Glass().BeginRenderLink(secondColumnSecondImage, z => z.Link, new NameValueCollection { { "class", "quick-link-chart quick-link-chart__small" }, { "style", "background-image: url('" + secondColumnSecondImage.Image.Src + "')" } }, isEditable: true))
+                                                                                {
+                                                                                    <span class="quick-link-chart__title">@Html.Glass().Editable(secondColumnSecondImage, z => z.Title)</span>
+                                                                                    <span class="quick-link-chart__text">@Html.Glass().Editable(secondColumnSecondImage, z => z.Description)</span>
+                                                                                }
+                                                                            }
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            }
+                                                        }
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            }
+                        }
+                        @if (Model.HomeItem.ContactUsPage != null)
+                        {
+                            <li class="nav-desktop__item">
+                                <a href="@Model.HomeItem.ContactUsPage.Url" class="nav-desktop__link nav-desktop__link_contact">
+                                    @Html.Glass().Editable(Model.HomeItem.ContactUsPage, z => z.MenuTitle)
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            }
+
+            <a href="#" class="header-navbar__user-link">
+                <img src="images/components/header/user.svg" alt="user profile">
+            </a>
+            <div class="header-navbar__btn-search">
+                <img src="images/components/header/search.svg" alt="search">
+            </div>
+        </div>
+
+        @Html.Partial("~/Views/Navigation/Menu.cshtml", Model)
+    </section>
+</header>
