@@ -10,7 +10,7 @@
 @import 'node_modules/bootstrap/scss/bootstrap-reboot' // Bootstrap Reboot collection
 @import 'node_modules/bootstrap/scss/bootstrap-grid' // Bootstrap Grid
 @import 'node_modules/bootstrap/scss/modal' // Bootstrap Grid
-@import 'node_modules/bootstrap/scss/accordion' // Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/accordion' // Bootstrap Grid
 @import 'node_modules/bootstrap/scss/transitions' // Bootstrap Grid
 @import 'node_modules/swiper/swiper-bundle.min' // swiper Grid
 
@@ -61,6 +61,7 @@ body
 	min-width: 320px
 	position: relative
 	overflow-x: hidden
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 15.17%, #000000 20.03%), radial-gradient(50.75% 6.66% at 30.63% 13.08%, rgba(0, 0, 0, 0.46) 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(51.75% 11.35% at 34.38% -3.36%, rgba(255, 255, 255, 0.21) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(140.61deg, #0D1927 5.72%, #253931 47.84%)
 
 ul
 	list-style-type: none
@@ -73,6 +74,7 @@ a
 	text-decoration: none
 	&:hover
 		color: $white
+		text-decoration: none
 
 .link-styles
 	font-size: 12px
@@ -103,6 +105,12 @@ a
 
 .relative
 	position: relative
+
+.absolute-center
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
 
 .text-center
 	text-align: center
