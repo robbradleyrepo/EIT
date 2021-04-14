@@ -1,20 +1,89 @@
 .imagepromo
     display: flex
-    flex-direction: column
+    position: relative
+    flex-direction: row
     justify-content: center
     text-align: center
-    margin-top: 40px
+
+    &__box
+        // background: transparent url(../images/components/banners/brand-element-chevron.svg) 0% 0% no-repeat padding-box
+        position: relative
+        width: 100%
+        display: flex
+        padding: 0
+        background-position: calc(100% + 3px) calc(1% + -96px)
+        background-size: 59%
+
+    &__body
+        display: flex
+        z-index: 10
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        align-items: center
+        flex-direction: column
+
+        @include breakpoint(tablet, up)
+            flex-direction: row
+
     &__imagebox
         display: flex
-        width: 50%
         flex-direction: row
+        width: 100%
+        @include breakpoint(tablet, up)
+            width: 48%
+    &__imageboxchild
+        display: flex
+        flex-direction: column
+        width: 50%
+        padding: 10px
     &__image-bg
-        width: 48%;
-        object-fit: cover;
-        height: 408px;
-        margin: 0 10px 10px 0; 
+        object-fit: cover
+        width: 100%
+        height: 408px
+        margin-bottom: 20px
+        border-radius: 5px
     &__image-sm
-        width: 48%;
-        object-fit: cover;
-        height: 118px;
-        margin: 0 10px 10px 0;    
+        object-fit: cover
+        width: 100%
+        height: 118px
+        margin-bottom: 20px
+        border-radius: 5px
+    &__content
+        display: flex
+        flex-direction: column
+        width: 100%
+        padding-left: 10px
+        @include breakpoint(tablet, up)
+            width: 48%
+            padding-left: 25px
+    &__headbox
+        margin-bottom: 10px
+        @include breakpoint(desktop, up)
+            margin-top: 50px
+    &__contentbox
+        margin-bottom: 40px
+        font-size: 20px
+        color: $black
+    &__btnbox
+        display: flex
+        justify-content: left
+    &__btn
+        margin-right: 16px
+        font-size: 10px
+        padding: 0 .2rem
+        min-width: 135px
+        @include breakpoint(tablet, up)
+            min-width: 180px
+            padding: 0 .5rem
+            font-size: 10px
+        @include breakpoint(desktop, up)
+            font-size: 12px
+            min-width: 200px
+
+    &__arrow
+        margin-left: 5px
+        display: none
+        @include breakpoint(tablet, up)
+            display: inline-block

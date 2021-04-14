@@ -1,0 +1,65 @@
+.howtoinvest
+    margin: 45px 0
+    @include breakpoint(desktop, up)
+        margin: 70px 0
+    &__box
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+    &__head
+        display: flex
+        font-size: 32px
+        color: $gold
+        font-weight: 300
+        margin-bottom: 20px
+        text-align: center
+        justify-content: center
+
+        @include breakpoint(desktop, up)
+            font-size: 52px
+
+    &__body
+        display: flex
+        margin-bottom: 20px
+        justify-content: center
+
+    &__slide
+        display: flex
+        flex-direction: column
+        width: 30%
+        justify-content: center
+        align-items: center
+        padding: 0
+        @include breakpoint(desktop, up)
+            padding: 20px
+
+    &__img
+        width: 70px
+        height: 70px
+        border-radius: 5em
+        margin-bottom: 20px
+        @include breakpoint(desktop, up)
+            width: 100px
+            height: 100px
+
+    &__desc
+        display: flex
+        text-align: center
+        color: #000
+        font-size: 14px
+        font-weight: bold
+        @include breakpoint(desktop, up)
+            padding: 0 20px
+            font-size: 18px
+
+    &__footer
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+        @include breakpoint(tablet, up)
+            flex-direction: row
+
+        > a
+            margin-bottom: 10px

@@ -1,24 +1,32 @@
 // IMPORT VARIABLES
 @import 'variables'
+@import './functions/mix-max'
 @import './mixins/breakpoints'
 @import './mixins/navlink'
+@import './functions/gutters-bootsrap'
+@import './functions/common'
 
 // IMPORT BOOTSTRAP STYLES
-@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
-// @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
-@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Bootstrap Grid
-@import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Bootstrap Utilites
+@import 'node_modules/bootstrap/scss/bootstrap-reboot' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/bootstrap-grid' // Bootstrap Grid
+@import 'node_modules/bootstrap/scss/modal' // Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/accordion' // Bootstrap Grid
+@import 'node_modules/bootstrap/scss/transitions' // Bootstrap Grid
+@import 'node_modules/swiper/swiper-bundle.min' // swiper Grid
+
+// @import 'node_modules/bootstrap/dist/css/bootstrap.min' // Bootstrap Grid
+@import 'node_modules/bootstrap/scss/spinners' // Bootstrap Grid
 
 // FONTS LOAD SECTION
 @import './mixins/fonts'
-@include font('futura-pt', normal, 300, '../fonts/futura/futura-pt-regular-300.woff2')
-@include font('futura-pt', normal, 400, '../fonts/futura/futura-pt-regular.woff2')
-@include font('futura-pt', normal, 500, '../fonts/futura/futura-pt-regular-500.woff2')
-@include font('futura-pt', italic, 400, '../fonts/futura/futura-pt-regular-italic.woff2')
-@include font('futura-pt', normal, 700, '../fonts/futura/futura-pt-bold.woff2')
-@include font('futura-pt', italic, 700, '../fonts/futura/futura-pt-bold-italic.woff2')
-@include font('futura-pt-bold', normal, 700, '../fonts/futura/futura-pt-bold-bold.woff2')
-@include font('futura-pt-bold', italic, 700, '../fonts/futura/futura-pt-bold-bold-italic.woff2')
+@include font('futura-pt', normal, 300, '../fonts/futura/futura-pt-regular-300')
+@include font('futura-pt', normal, 400, '../fonts/futura/futura-pt-regular')
+@include font('futura-pt', normal, 500, '../fonts/futura/futura-pt-regular-500')
+@include font('futura-pt', italic, 400, '../fonts/futura/futura-pt-regular-italic')
+@include font('futura-pt', normal, 700, '../fonts/futura/futura-pt-bold')
+@include font('futura-pt', italic, 700, '../fonts/futura/futura-pt-bold-italic')
+@include font('futura-pt-bold', normal, 700, '../fonts/futura/futura-pt-bold-bold')
+@include font('futura-pt-bold', italic, 700, '../fonts/futura/futura-pt-bold-bold-italic')
 
 // GENERAL DOCUMENT STYLES
 
@@ -28,6 +36,15 @@
 ::selection
 	background-color: $primary
 	color: #fff
+
+select::-ms-expand
+	display: none
+
+body
+	&::-webkit-scrollbar
+		width: 4px
+	&::-webkit-scrollbar-thumb
+		background-color: $gray
 
 input, textarea
 	outline: none
@@ -44,6 +61,7 @@ body
 	min-width: 320px
 	position: relative
 	overflow-x: hidden
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 15.17%, #000000 20.03%), radial-gradient(50.75% 6.66% at 30.63% 13.08%, rgba(0, 0, 0, 0.46) 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(51.75% 11.35% at 34.38% -3.36%, rgba(255, 255, 255, 0.21) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(140.61deg, #0D1927 5.72%, #253931 47.84%)
 
 ul
 	list-style-type: none
@@ -53,6 +71,71 @@ ul
 a
 	color: $white
 	transition: color .3s ease-in
+	text-decoration: none
 	&:hover
-		text-decoration: none
 		color: $white
+		text-decoration: none
+
+.link-styles
+	font-size: 12px
+	font-weight: 500
+	text-transform: uppercase
+	letter-spacing: 2.4px
+	color: $primary
+	line-height: 17px
+	i
+		font-size: 10px
+	&:hover
+		color: $primary
+
+.no-wrap
+	white-space: nowrap
+.mb-30
+	margin-bottom: 30px
+
+.row-scrollable-mob
+	flex-wrap: nowrap
+	overflow-y: scroll
+	@include breakpoint(desktop, up)
+		flex-wrap: wrap
+		overflow-y: initial
+
+.min-width-100
+	min-width: 100%!important
+
+.relative
+	position: relative
+
+.absolute-center
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+
+.text-center
+	text-align: center
+
+.text-right
+	text-align: right
+
+.z-index-10
+	position: relative
+	z-index: 10
+
+.txtlimit
+	overflow: hidden
+	text-overflow: ellipsis
+	display: -webkit-box
+	-webkit-line-clamp: 1 /* number of lines to show */
+	-webkit-box-orient: vertical
+
+.twoline
+	-webkit-line-clamp: 2 /* number of lines to show */
+.threeline
+	-webkit-line-clamp: 3 /* number of lines to show */
+.fourline
+	-webkit-line-clamp: 4 /* number of lines to show */
+.fiveline
+	-webkit-line-clamp: 5 /* number of lines to show */
+.tenline
+	-webkit-line-clamp: 10 /* number of lines to show */

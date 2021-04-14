@@ -1,0 +1,35 @@
+﻿@using Sitecore.Links
+@using Sitecore.Mvc.Analytics.Extensions
+@using Sitecore.Web
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>@Html.Sitecore().Field("BrowserTitle", new { DisableWebEdit = true })</title>
+    @Html.Sitecore().VisitorIdentification()
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    @Html.Sitecore().Placeholder("header")
+    <div class="mask"></div>
+    <main id="main" role="main">
+        @Html.Sitecore().Placeholder("main")
+    </main>
+    @Html.Sitecore().Placeholder("footer")
+    <script src="js/script.js"></script>
+</body>
+</html>

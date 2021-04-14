@@ -1,0 +1,32 @@
+﻿---
+ID: "7778ad99-3ff8-4f83-a4c5-b35573e94e34"
+Parent: "3e0d22e5-8ad7-4ed0-809b-3d162c0a9505"
+Template: "857e4b73-6e7e-41cf-972f-0e3cc2ea8e22"
+Path: /sitecore/content/Liontrust/Page Settings/Header Configuration/Learning/Navigation Columns/Manage Your Investments
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210406T123509Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "89cc8946-1499-4d72-9d06-016cc68b0401"
+      Hint: Column Title
+      Value: Manage Your Investments
+    - ID: "9012ee1a-dea2-49fa-951d-f72e835639ca"
+      Hint: Column Link
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
+    - ID: "9063296f-3bbe-4d1f-9ea6-9a6e2442b520"
+      Hint: Column Link Label
+      Value: Manage Your Investments
+    - ID: "fe160ab8-1158-46c9-80ad-43557ce4129d"
+      Hint: Show Column Link
+      Type: Checkbox
+      Value: 1

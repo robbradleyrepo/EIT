@@ -4,12 +4,16 @@
     justify-content: space-between
     // height: 47px
     align-items: center
+    @include breakpoint(desktop, up)
+        padding-top: 30px
+        padding-bottom: 15px
     &__btn-open
         background: transparent
         border: none
         width: 48px
         height: 25px
-        background-image: url('./../../../images/components/header/Menu.svg')
+        background-size: contain
+        background-image: url('../images/components/header/Menu.svg')
         background-repeat: no-repeat
         margin-top: 20px
     &__logo
@@ -29,9 +33,29 @@
     &__user-link
         display: none
         margin: 16px 36px 0 44px
+        position: relative
+        &:after
+            visibility: hidden
+            opacity: 0
+            content: 'my liontrust'
+            position: absolute
+            font-size: 10px
+            font-weight: 500
+            white-space: nowrap
+            letter-spacing: 2px
+            bottom: -20px
+            left: -35px
+            text-transform: uppercase
+            display: inline-block
+            color: $primary
+            transition: opacity .3s ease-out, visibility .3s ease-out
         @include breakpoint(desktop, up)
             display: block
             margin-top: 13px
+        &:hover
+            &:after
+                visibility: visible
+                opacity: 1
 
 .nav-desktop
     display: none
@@ -40,7 +64,7 @@
     @include breakpoint(desktop, up)
         display: block
     @include breakpoint(desktop-large, up)
-        margin-right: 44px
+        margin-right: 64px
     &__list
         display: flex
         justify-content: space-between
@@ -49,14 +73,35 @@
     &__item
         @include breakpoint(desktop-large, up)
             margin-right: -66px
+        &:hover
+            .dropdown
+                visibility: visible
+                opacity: 1
+                z-index: 100
+            a
+                &:before
+                    visibility: visible
+                    background: $white
+
     &__link
         text-transform: uppercase
         font-size: 14px
         font-weight: 500
         color: $white
         letter-spacing: 1.4px
+        position: relative
+        &:before
+            content: ""
+            visibility: hidden
+            width: 100%
+            height: 2px
+            position: absolute
+            bottom: -9px
+            transition: visible .3s ease-out, background .3s ease-out
         &_contact
             padding: 11px 26px
             line-height: 17px
             border-radius: 6px
             background: rgba(255, 255, 255, .1)
+            &:before
+                display: none

@@ -1,0 +1,155 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using System.Collections.Specialized;
+@using LionTrust.Feature.Navigation.Models;
+@model LionTrust.Feature.Navigation.Models.IHome
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="row">
+                    <div class="col-6 col-lg-3 footer__bottom-item">
+                        <span class="footer__title h5">@Html.Glass().Editable(Model, x => x.FindUsLabel)</span>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">@Html.Glass().Editable(Model, x => x.Address)</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">@Html.Glass().Editable(Model, x => x.Location)</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">@Html.Glass().Editable(Model, x => x.PostalCode)</a>
+                            </li>
+                        </ul>
+                        @using (Html.Glass().BeginRenderLink(Model, m => m.GoogleMapsLink, new NameValueCollection { { "class", "footer__map-link" } }, isEditable: true))
+                        {
+                            @Html.Glass().Editable(Model, x => x.GoogleMapsCTALabel)<i class="icon-tab"></i>
+                        }
+                    </div>
+                    <div class="col-6 col-lg-3 footer__bottom-item">
+                        <div>
+                            <span class="footer__title h5">@Html.Glass().Editable(Model, x => x.GetInTouchLabel)</span>
+                            <ul class="footer__list">
+                                <li class="footer__item">
+                                    <a href="tel:@Model.PhoneNumber" class="footer__link">@Html.Glass().Editable(Model, x => x.PhoneNumber)</a>
+                                </li>
+                                <li class="footer__item">
+                                    @if (Sitecore.Context.PageMode.IsExperienceEditor)
+                                    {
+                                        <div class="footer__link footer__link_arrow">
+                                            @Html.Glass().Editable(Model, x => x.Email)
+                                            @Html.Glass().Editable(Model, x => x.EmailCTALabel)<i class="icon-arrow-right"></i>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <a href="mailto:@Model.Email" class="footer__link footer__link_arrow">
+                                            @Model.EmailCTALabel
+                                            <i class="icon-arrow-right"></i>
+                                        </a>
+                                    }
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="social">
+                            @if (Model.FooterConfiguration != null
+                                && Model.FooterConfiguration.SocialIcons != null
+                                && Model.FooterConfiguration.SocialIcons.Any())
+                            {
+                                foreach (var socialLink in Model.FooterConfiguration.SocialIcons)
+                                {
+                                    if (string.IsNullOrEmpty(socialLink.TwitterAccounts))
+                                    {
+                                        using (Html.Glass().BeginRenderLink(socialLink, m => m.SocialLink, new NameValueCollection { { "class", "social__link" } }, isEditable: true))
+                                        {
+                                            @Html.Glass().RenderImage(socialLink, x => x.SocialIcon, new NameValueCollection { { "class", "social__link-icon" } }, isEditable: true)
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <span class="social__link">
+                                            @Html.Glass().RenderImage(socialLink, x => x.SocialIcon, new NameValueCollection { { "class", "social__link-icon" } }, isEditable: true)
+                                            <div class="social__twitter">
+                                                @if (Sitecore.Context.PageMode.IsExperienceEditor)
+                                                {
+                                                    @:Add here the twitter account names delimited by space:
+                                                    <div class="social__twitter-link">@Html.Glass().Editable(socialLink, m => m.TwitterAccounts)</div>
+                                                }
+                                                else
+                                                {
+                                                    var accounts = socialLink.TwitterAccounts.Replace(@"@", "");
+                                                    foreach (var account in accounts)
+                                                    {
+                                                        <a href="https://twitter.com/@account" class="social__twitter-link">@@@account</a>
+                                                    }
+                                                }
+                                            </div>
+                                        </span>
+                                    }
+                                }
+                            }
+                        </div>
+                    </div>
+                    <div class="col-12 my-4 my-lg-0 col-lg-6 footer__section">
+                        <span class="footer__title h5">@Html.Glass().Editable(Model, m => m.SubscribeNewsletterLabel)</span>
+                        @using (Html.Glass().BeginRenderLink(Model, m => m.SubscribeCTALink_FieldName, new NameValueCollection { { "class", "footer__link footer__link_arrow footer__link_sign" } }, isEditable: true))
+                        {
+                            @Html.Glass().Editable(Model, x => x.SubscribeCTALabel)<i class="icon-arrow-right"></i>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="row">
+                    @if (Model.FooterConfiguration != null
+                        && Model.FooterConfiguration.PageLink != null
+                        && Model.FooterConfiguration.PageLink.Any())
+                    {
+                        IEnumerable<IPageLink> firstColumnLinks = null;
+                        IEnumerable<IPageLink> secondColumnLinks = null;
+                        var footerLinksCount = Model.FooterConfiguration.PageLink.Count();
+                        if (footerLinksCount > 1)
+                        {
+                            firstColumnLinks = Model.FooterConfiguration.PageLink.Take(footerLinksCount / 2);
+                            secondColumnLinks = Model.FooterConfiguration.PageLink.Skip(footerLinksCount / 2);
+                        }
+
+                        <div class="col-6 col-lg-12 footer__section">
+                            <nav>
+                                <ul class="footer__nav">
+                                    @foreach (var footerLink in firstColumnLinks)
+                                    {
+                                        <li class="footer__list-item">
+                                            @Html.Glass().RenderLink(footerLink, m => m.PageLink, new NameValueCollection { { "class", "footer__mav-list" } }, isEditable: true)
+                                        </li>
+                                    }
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col-6 col-lg-12 footer__section">
+                            <nav>
+                                <ul class="footer__nav">
+                                    @foreach (var footerLink in secondColumnLinks)
+                                    {
+                                        @Html.Glass().RenderLink(footerLink, m => m.PageLink, new NameValueCollection { { "class", "footer__mav-list" } }, isEditable: true)
+                                    }
+                                </ul>
+                            </nav>
+                        </div>
+
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-lg-6">
+                <span class="footer__copy">@Html.Glass().Editable(Model, x => x.Copyright)</span>
+            </div>
+            <div class="offset-lg-3 col-lg-3">
+                <span class="footer__investor">
+                    Private investor - TO DO
+                    <i class="icon-chevron"></i>
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>

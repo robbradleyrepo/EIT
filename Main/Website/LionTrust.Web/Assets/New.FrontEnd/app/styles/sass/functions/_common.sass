@@ -1,0 +1,14 @@
+// generate container-left-gutter width for all breakpoints
+@each $name, $size in $breakpoints
+	.container-left-gutter
+        @if $size != 0
+            @include breakpoint($name, up)		
+                margin-left: calc((100vw - #{$size}px - 1rem) / 2)
+        @else 
+            padding-left: var(--bs-gutter-x,16px)
+
+
+@each $name, $color in $text-colors
+    .text-#{$name}
+        color: $color!important
+     

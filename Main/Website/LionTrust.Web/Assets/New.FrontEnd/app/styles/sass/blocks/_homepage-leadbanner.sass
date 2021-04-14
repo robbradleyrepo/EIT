@@ -1,0 +1,64 @@
+// remove in future    
+.leadbanner
+    display: flex
+    flex-direction: column
+    justify-content: center
+    text-align: center
+    padding: 40px 0
+    &__headbox
+        display: flex
+        justify-content: center
+
+    &__head
+        display: flex
+        color: $gold
+        letter-spacing: 1.86px
+        font-weight: 300
+        opacity: 1
+        justify-content: center
+        width: 100%
+        @include breakpoint(mobile-large, up)
+            width: 80%
+        @include breakpoint(desktop, up)
+            width: 60%
+        > h1
+            line-height: 1.2
+
+    &__contentbox
+        display: flex
+        justify-content: center
+        margin-top: 15px
+
+    &__content
+        display: flex
+        justify-content: center
+        font-weight: normal
+        letter-spacing: 0.2px
+        color: $white
+        width: 100%
+        @include breakpoint(mobile-large, up)
+            width: 80%
+
+    &__btnbox
+        display: flex
+        margin-top: 20px
+        justify-content: center
+
+    &__teamicon
+        width: 60px
+        height: 60px
+
+// new style for lead banner
+.lead-banner
+    margin: 30px 0
+    text-align: center
+    padding: 0 20px
+    @include breakpoint(desktop, up)
+        margin: 80px 0
+    &__title
+        margin-bottom: 20px
+        @include breakpoint(desktop, up)
+        margin-bottom: 2rem
+    &__text
+        font-size: 18px
+        display: inline-block

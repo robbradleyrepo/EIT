@@ -1,0 +1,42 @@
+.article
+    margin-bottom: 40px
+    @include breakpoint(desktop, up)
+        margin: 70px 0
+    &__box
+        display: flex
+        flex-direction: column
+        overflow: hidden
+
+    &__head
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        margin-bottom: 20px
+
+    &__slider-box
+        display: flex
+        padding-bottom: 25px
+        padding-left: 20px
+        position: relative
+        @include breakpoint(desktop, up)
+            padding-left: 50px
+
+    &__slider-scroll
+        display: flex
+        min-height: min-content
+
+.btn-resp
+    @include breakpoint(tablet, up)
+        display: none
+
+// .article__slidefront:hover  .article__slidedesc
+//     opacity: 1
+
+// .article__slidefront:hover + .article__slideback
+//     filter: blur(4px)
+//     transition: all .5s ease-out
+
+.swiper-container-article .swiper-slide
+    display: flex
+    // margin-bottom: 20px

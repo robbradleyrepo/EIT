@@ -1,0 +1,43 @@
+.page-promo
+    padding-top: 21px
+    @include breakpoint(desktop, up)
+        padding-top: 50px
+    &__item
+        display: flex
+        flex-direction: column
+        margin-bottom: 36px
+        @include breakpoint(desktop, up)
+            margin-bottom: 40px
+            flex-direction: row
+    &__image
+        @include breakpoint(desktop, up)
+            display: inline-block
+            width: 50%
+            margin-right: 16px
+    &__img
+        width: 100%
+        height: auto
+        border-radius: 10px
+    &__content
+        @include breakpoint(desktop, up)
+            margin-left: 16px
+            width: 50%
+    &__title
+        @extend .h2
+        margin-top: 10px
+        margin-bottom: 4px
+        @include breakpoint(desktop, up)
+            margin-top: 0
+            font-size: 32px
+            line-height: 38px
+    &__text
+        color: $black
+        font-size: 18px
+        line-height: 28px
+        @include breakpoint(desktop, up)
+            margin-bottom: 3px
+
+    &__link
+        @extend .link-styles
+        &:hover
+            color: $primary

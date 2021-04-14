@@ -1,0 +1,16 @@
+.fund-manager
+    &__item
+        display: flex
+        margin-bottom: 30px
+    &__img
+        width: 100%
+        height: auto
+    &__title
+        @extend .h5
+        @include breakpoint(desktop-large, up)
+            margin-bottom: 6px
+    &__text
+        color: $black
+        @include breakpoint(desktop-large, up)
+            font-size: 18px
+            line-height: 26px

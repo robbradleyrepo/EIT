@@ -1,0 +1,253 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Feature.Navigation
+@model LionTrust.Feature.Navigation.Models.NavigationViewModel
+@if (Model.RootItem != null && Model.HomeItem != null)
+{
+    <div class="sidebar sidebar_border">
+        <div class="sidebar__top">
+            <div class="sidebar__header">
+                <button class="sidebar__close-btn"></button>
+                <div class="sidebar__logo">
+                    <a href="@Model.HomeItem.Url" class="sidebar__logo-link">
+                        @if (Model.RootItem.Logo != null)
+                        {
+                            @Html.Glass().RenderImage(Model.RootItem, x => x.Logo, new { alt = Model.RootItem.Logo != null ? Model.RootItem.Logo.Alt : string.Empty, @class = "sidebar__logo-img" }, isEditable: true)
+                        }
+                    </a>
+                </div>
+            </div>
+            <nav class="navigation">
+                @if (Model.HomeItem.MenuItems != null && Model.HomeItem.MenuItems.Any())
+                {
+                    <ul class="navigation__list">
+                        @foreach (var menuItem in Model.HomeItem.MenuItems)
+                        {
+                            if (menuItem.Children != null && menuItem.Children.Any())
+                            {
+                                <li class="navigation__item">
+                                    <label class="navigation__link" for="Our Funds">
+                                        @Html.Glass().Editable(menuItem, z => z.MenuTitle)
+                                    </label>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="navigation__item">
+                                    <a href="@menuItem.Url" class="navigation__link">
+                                        @Html.Glass().Editable(menuItem, z => z.MenuTitle)
+                                    </a>
+                                </li>
+                            }
+                        }
+                    </ul>
+                }
+            </nav>
+
+            @if (Model.HomeItem.MyLionTrust != null)
+            {
+                <div class="sidebar__profile-btn">
+                    <a href="@Model.HomeItem.MyLionTrust.Url" class="btn btn-primary btn-block">
+                        <i class="icon-user"></i>
+                        @Html.Glass().Editable(Model.HomeItem.MyLionTrust, z => z.MenuTitle)
+                    </a>
+                </div>
+            }
+            <div class="sidebar__setting">
+                <ul class="sidebar-actions">
+                    @if (Model.HomeItem.MyPreferences != null)
+                    {
+                        <li class="sidebar-actions__item">
+                            <a href="@Model.HomeItem.MyPreferences.Url" class="sidebar-actions__link">
+                                <i class="icon-settings"></i>
+                                @Html.Glass().Editable(Model.HomeItem.MyPreferences, z => z.MenuTitle)
+                            </a>
+                        </li>
+                    }
+                    @if (Model.HomeItem.SignupNewsLetter != null)
+                    {
+                        <li class="sidebar-actions__item">
+                            <a href="@Model.HomeItem.SignupNewsLetter.Url" class="sidebar-actions__link">
+                                <i class="icon-email"></i>
+                                @Html.Glass().Editable(Model.HomeItem.SignupNewsLetter, z => z.MenuTitle)
+                            </a>
+                        </li>
+                    }
+                    @if (Model.HomeItem.ContactUsPage != null)
+                    {
+                        <li class="sidebar-actions__item">
+                            <a href="@Model.HomeItem.ContactUsPage.Url" class="sidebar-actions__link">
+                                <i class="icon-chat"></i>
+                                @Html.Glass().Editable(Model.HomeItem.ContactUsPage, z => z.MenuTitle)
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+            <div class="user-status">
+                <div class="user-status_hr"></div>
+                <span class="user-status__text">
+                    @Html.Glass().Editable(Model.HomeItem, z => z.YouAreViewingLabel) <span class="user-status__name">TO DO - Private Investor</span>
+                    <i class="icon-chevron user-status__icon"></i>
+                </span>
+            </div>
+        </div>
+        <div class="sidebar__bottom">
+            @if (Model.HomeItem.MenuItems != null && Model.HomeItem.MenuItems.Any())
+            {
+                <nav class="navigation navigation_desktop">
+                    <ul class="navigation__list">
+                        @foreach (var menuItem in Model.HomeItem.MenuItems)
+                        {
+                            if (menuItem.Children != null && menuItem.Children.Any())
+                            {
+                                <li class="navigation__item">
+                                    <label class="navigation__link" for="@menuItem.Name">
+                                        @Html.Glass().Editable(menuItem, z => z.MenuTitle)
+                                    </label>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="navigation__item">
+                                    <a href="@menuItem.Url" class="navigation__link">
+                                        @Html.Glass().Editable(menuItem, z => z.MenuTitle)
+                                    </a>
+                                </li>
+                            }
+                        }
+
+                    </ul>
+                </nav>
+            }
+        </div>
+        <!-- block with sublinks items for mobile -->
+        <div class="navigation__sublinks-items">
+            <!-- each item should have id for exact like for attribute for label  -->
+            <!-- Our Funds Links -->
+            <div class="navigation__item">
+                <input type="checkbox" id="Our Funds" class="navigation__checkbox">
+                <div class="navigation__submenu">
+                    <label class="navigation__close-submenu" for="Our Funds">
+                        <i class="icon-chevron-left"></i>
+                        back
+                    </label>
+                    <ul class="navigation__sub-list">
+                        <li class="navigation__sub-item">
+                            <a class="mb-3 navigation__sub-link navigation__sub-link_heading" href="#">
+                                Our Funds
+                            </a>
+                            <a href="#" class="btn btn-primary btn-block mb-4">
+                                All Funds and Literature
+                            </a>
+                        </li>
+                    </ul>
+                    <!--#include virtual="/components/reusables/OurFunds_nav_items_1.html" -->
+                    <div class="mt-3">
+                        <!--#include virtual="/components/reusables/OurFunds_nav_items_2.html" -->
+                    </div>
+                    <div class="mt-4">
+                        <!--#include virtual="/components/UI010-Quick-Link-CTA.html" -->
+                    </div>
+                </div>
+            </div>
+            <!-- Insight Links -->
+            <div class="navigation__item">
+                <input type="checkbox" id="Insight" class="navigation__checkbox">
+                <div class="navigation__submenu">
+                    <label class="navigation__close-submenu" for="Insight">
+                        <i class="icon-chevron-left"></i>
+                        back
+                    </label>
+                    <ul class="navigation__sub-list mb-4">
+                        <li class="navigation__sub-item">
+                            <!--#include virtual="/components/reusables/Insight_nav_item_1.html" -->
+                        </li>
+                    </ul>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!--#include virtual="/components/UI010-Quick-Link-CTA-SMALL.html" -->
+                            <!--#include virtual="/components/UI010-Quick-Link-CTA-SMALL.html" -->
+                        </div>
+                        <div class="col-md-6">
+                            <!--#include virtual="/components/UI010-Quick-Link-CTA.html" -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Learning Links -->
+            <div class="navigation__item">
+                <input type="checkbox" id="Learning" class="navigation__checkbox">
+                <div class="navigation__submenu">
+                    <label class="navigation__close-submenu" for="Learning">
+                        <i class="icon-chevron-left"></i>
+                        back
+                    </label>
+                    <div class="mt-3">
+                        <!--#include virtual="/components/reusables/Learning_nav_item_1.html" -->
+                    </div>
+                    <div class="mt-3">
+                        <!--#include virtual="/components/reusables/Learning_nav_item_2.html" -->
+                    </div>
+                    <div class="mt-3">
+                        <!--#include virtual="/components/reusables/Learning_nav_item_3.html" -->
+                    </div>
+                </div>
+            </div>
+            <!-- Sustainability Links -->
+            <div class="navigation__item">
+                <input type="checkbox" id="Sustainability" class="navigation__checkbox">
+                <div class="navigation__submenu">
+                    <label class="navigation__close-submenu" for="Sustainability">
+                        <i class="icon-chevron-left"></i>
+                        back
+                    </label>
+                    <ul class="navigation__sub-list mb-4">
+                        <li class="navigation__sub-item">
+                            <!--#include virtual="/components/reusables/Sustainability_nav_item_1.html" -->
+                        </li>
+                    </ul>
+                    <!--#include virtual="/components/UI010-Quick-Link-CTA.html" -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- For desktop sidebar links items -->
+    if (Model.HomeItem.MenuItems != null && Model.HomeItem.MenuItems.Any())
+    {
+        <div class="navigation__sublinks-items">
+            @foreach (var menuItem in Model.HomeItem.MenuItems)
+            {
+                <div class="navigation__item">
+                    <input type="checkbox" id="@menuItem.Name-@menuItem.Id.ToString()" class="navigation__checkbox">
+                    <div class="navigation__submenu">
+                        <label class="navigation__close-submenu" for="@menuItem.Name-@menuItem.Id.ToString()">
+                            <i class="icon-chevron-left"></i>
+                            back
+                        </label>
+                        <ul class="navigation__sub-list">
+                            <li class="navigation__sub-item">
+                                <a class="navigation__sub-link navigation__sub-link_heading" href="@menuItem.Url">
+                                    @Html.Glass().Editable(menuItem, z => z.MenuTitle)
+                                    <i class="icon-chevron-right"></i>
+                                </a>
+                            </li>
+                            @if (menuItem.Children != null && menuItem.Children.Any())
+                            {
+                                foreach (var child in menuItem.Children)
+                                {
+                                    <li class="navigation__sub-item">
+                                        <a class="navigation__sub-link" href="@child.Url">@Html.Glass().Editable(child, z => z.MenuTitle)</a>
+                                    </li>
+                                }
+                            }
+                        </ul>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    <div class="sidebar-overlay"></div>
+}
+else
+{
+}

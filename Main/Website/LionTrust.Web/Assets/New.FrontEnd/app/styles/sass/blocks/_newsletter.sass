@@ -1,0 +1,41 @@
+.newsletter
+    text-align: center
+    padding: 40px 0
+    background-image: url(../images/bg/newsletter-bg.svg)
+    background-size: cover
+    position: relative
+    overflow: hidden
+    @include breakpoint(desktop, up)
+        padding-top: 60px
+        padding-bottom: 70px
+        border-radius: 10px
+    &-wrapper
+        @extend .container-lg
+        margin-top: 60px
+        @include breakpoint(desktop, down)
+            padding: 0
+        @include breakpoint(desktop, up)
+            margin: 100px auto
+    &__headbox
+        margin-bottom: 5px
+        @include breakpoint(desktop, up)
+            margin-bottom: 10px
+    &__content
+        font-size: 18px
+        display: inline-block
+        margin-bottom: 30px
+        padding: 0 30px
+        @include breakpoint(desktop, up)
+            font-size: 20px
+            display: inline-block
+            margin-bottom: 20px
+            padding: 0
+
+    &__btnbox
+        display: flex
+        margin-top: 20px
+        justify-content: center
+
+    &__teamicon
+        width: 60px
+        height: 60px

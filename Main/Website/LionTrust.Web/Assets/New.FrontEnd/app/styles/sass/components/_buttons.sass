@@ -10,7 +10,7 @@
     user-select: none
     background-color: transparent
     border: 1px solid transparent
-    padding: 0 1rem
+    padding: 0 .5rem
     min-width: 158px
     height: 42px
     line-height: 42px
@@ -25,6 +25,7 @@
         height: 51px
         line-height: 51px
         letter-spacing: 2.4px
+        padding: 0 1rem
         i.animate-arrow
             display: inline-block
             transition: transform .3s ease-out
@@ -39,6 +40,30 @@
             border-color: #0E8039
     &-secondary
         border-color: $white
+    &-outline-primary
+        border-color: $primary
+        color: $primary
     &-block
         width: 100%
         letter-spacing: 2.4px
+    &-primary-forward
+        border: 1px solid $primary-forward !important
+        color: $primary-forward !important
+    &-anchor
+        border: 1px solid $white
+        color: $white
+        &:hover
+            background: $white
+            color: $black
+    &-secondary-nav
+        border: 1px solid $white
+        color: $white
+        background: $secondary
+        &:hover
+            background: $white
+            color: $black
+    &-clean
+        padding: 0
+        margin: 0
+        color: $black
+        min-width: initial

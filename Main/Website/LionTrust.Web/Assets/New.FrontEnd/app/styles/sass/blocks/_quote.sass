@@ -1,0 +1,46 @@
+.quote
+    display: flex
+    flex-direction: column
+    justify-content: center
+    text-align: center
+    padding: 40px 0
+    background-image: url(../images/bg/newsletter-bg.svg)
+    background-size: cover
+    position: relative
+    overflow: hidden
+    @include breakpoint(tablet, up)
+        padding: 80px 0
+    @include breakpoint(desktop, up)
+        padding: 100px 0
+    &__head
+        display: flex
+        color: $white
+        letter-spacing: 0.42px
+        text-align: left
+        width: 100%
+        font-size: 26px
+        line-height: 36px
+        @include breakpoint(desktop, up)
+            font-size: 42px
+            line-height: 52px
+
+    &__footer
+        display: flex
+        align-items: center
+        margin-top: 16px
+    &__writer
+        font-size: 12px
+        font-weight: bold
+        color: $primary
+        letter-spacing: 2.4px
+        text-transform: uppercase
+        padding-left: 10px
+        position: relative
+        &:before
+            content: ''
+            position: absolute
+            left: 0
+            top: 0
+            width: 2px
+            height: 100%
+            background: $gold

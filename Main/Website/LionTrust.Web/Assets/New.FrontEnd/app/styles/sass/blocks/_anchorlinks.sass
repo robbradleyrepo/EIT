@@ -1,0 +1,33 @@
+.anchorbox
+    padding: 20px 0
+    &__content
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        align-items: center
+        padding: 30px 0
+        @include breakpoint(desktop, up)
+            flex-direction: row
+
+    &__head
+        white-space: nowrap
+        margin-bottom: 5px
+        font-size: 18px
+        font-weight: 500
+        line-height: 48px
+        text-align: center
+        @include breakpoint(desktop, up)
+            margin-bottom: 0
+            font-size: 16px
+
+    &__btn
+        display: flex
+        min-width: 43%
+        margin-bottom: 20px
+        align-items: center
+        justify-content: center
+        height: 42px
+        width: 100%
+        @include breakpoint(desktop, up)
+            height: 48px
+        @include breakpoint(desktop-large, up)

@@ -1,20 +1,23 @@
 {
 	"name": "liontrust",
 	"version": "1.0.0",
-	"description": "Optimized Starter",
+	"description": "Liontrust",
 	"main": "index.js",
 	"author": "Max Rozvora",
 	"license": "MIT",
 	"devDependencies": {
-		"@babel/core": "^7.12.17",
-		"@babel/preset-env": "^7.12.17",
+		"@babel/core": "^7.13.10",
+		"@babel/preset-env": "^7.13.10",
 		"babel-loader": "^8.2.2",
 		"babel-plugin-module-resolver": "^4.1.0",
 		"babel-plugin-root-import": "^6.6.0",
+		"babel-plugin-transform-runtime": "^6.23.0",
 		"bootstrap": "^4.6.0",
 		"browser-sync": "^2.26.14",
 		"browsersync-ssi": "^0.2.4",
+		"core-js": "^3.9.1",
 		"del": "^6.0.0",
+		"gsap": "^3.6.1",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^7.0.1",
 		"gulp-clean-css": "^4.3.0",
@@ -28,9 +31,15 @@
 		"gulp-sass": "^4.1.0",
 		"gulp-sass-glob": "^1.1.0",
 		"gulp-stylus": "^2.7.0",
+		"js-cookie": "^2.2.1",
 		"webpack-stream": "^6.1.2"
 	},
 	"dependencies": {
-		"jquery": "^3.5.1"
+		"@fancyapps/fancybox": "^3.5.7",
+		"jquery": "^3.5.1",
+		"materialize-css": "^1.0.0-rc.2",
+		"popper.js": "^1.16.1",
+		"swiper": "^6.5.0",
+		"vue": "^2.6.12"
 	}
 }

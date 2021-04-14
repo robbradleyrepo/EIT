@@ -1,0 +1,143 @@
+.search-page
+    padding-top: 66px
+    padding-bottom: 65px
+    color: $black
+
+.search-filter
+    overflow-x: scroll
+    white-space: nowrap
+    @include breakpoint(tablet, up)
+        white-space: normal
+        overflow-x: hidden
+        margin-bottom: 20px
+        @include breakpoint(desktop, up)
+            margin-top: 230px
+    &__checkbox
+        display: none
+        &:checked ~ .btn
+            background: $primary
+            color: $white
+            border-color: $primary
+    &__btn
+        color: $black
+        text-transform: inherit
+        font-size: 16px
+        height: 48px
+        line-height: 48px
+        border: 1px solid $secondary-silver
+        padding: 0 24px
+        min-width: auto
+        margin-right: 20px
+        margin-bottom: 20px
+        letter-spacing: 0
+        &:hover
+            background: $primary
+            color: $white
+            border-color: $primary
+        // &.active
+        //     background: $primary
+        //     color: $white
+        //     border-color: $primary
+
+.search-item
+    margin-bottom: 30px
+    @include breakpoint(desktop, up)
+        margin-bottom: 50px
+    &__header
+        display: flex
+        align-items: center
+        margin-bottom: 7px
+    &__title
+        @extend h3
+        margin: 0
+        &:hover
+            color: $gold
+    &__badge
+        margin-left: 10px
+    &__text
+        line-height: 26px
+        margin-bottom: 8px
+        color: $black
+        @include breakpoint(desktop, up)
+            font-size: 18px
+            line-height: 28px
+    &__date
+        font-size: 10px
+        color: $gray
+        margin-bottom: 20px
+    &__footer
+        font-size: 12px
+        line-height: 17px
+        font-weight: 500
+        display: flex
+        align-items: center
+        a
+            display: block
+            color: $black
+            &:hover
+                color: $black
+    &__footer-item
+        &:first-child
+            margin-right: 30px
+    &__author-img
+        width: 25px
+        height: 25px
+        margin-right: 8px
+    &__tag
+        i
+            vertical-align: text-top
+            color: $primary
+            font-size: 15px
+            margin-right: 4px
+            line-height: 17px
+
+.related-article
+    background: linear-gradient(148deg, #000000 0%, #20242B 100%) 0% 0% no-repeat padding-box
+    padding: 21px
+    min-height: 260px
+    border-radius: 10px
+    display: none
+    @include breakpoint(desktop, up)
+        display: block
+    &__title
+        font-size: 32px
+        line-height: 38px
+        margin-bottom: 5px
+    &__link
+        line-height: 38px
+
+.search-header
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding-top: 35px
+    min-height: 250px
+    @include breakpoint(desktop, up)
+        align-items: start
+        padding-top: 140px
+        min-height: 420px
+    &__title
+        font-weight: bold
+        letter-spacing: 0.7px
+        margin-bottom: 12px
+        color: $white
+    &__mobile
+        text-align: center
+        @include breakpoint(desktop, up)
+            display: none
+    &__desktop
+        display: none
+        @include breakpoint(desktop, up)
+            display: block
+            width: 100%
+            margin-top: -310px
+    &__mob-result
+        font-weight: 300
+        font-size: 42px
+        display: block
+        text-align: center
+        color: $gold
+        margin-bottom: 31px
+    &__search-header-mobile
+        color: $primary
+        margin-bottom: 40px

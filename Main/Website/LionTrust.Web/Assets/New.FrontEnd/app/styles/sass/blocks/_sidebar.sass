@@ -12,7 +12,7 @@
     height: 100%
     width: 100%
     max-width: 452px
-    z-index: 10
+    z-index: 1000
     transition: transform .3s ease
     border-right: 2px solid transparent
     @include breakpoint(mobile-large, up)
@@ -30,7 +30,7 @@
         height: 37px
         background: transparent
         border: none
-        background-image: url('../../../images/components/header/close.svg')
+        background-image: url('../images/components/header/close.svg')
         background-repeat: no-repeat
         cursor: pointer
     &__logo
@@ -46,6 +46,7 @@
             font-size: 15px
         @include breakpoint(desktop, up)
             margin: 42px auto
+
 
 .navigation
     margin: 28px 0 28px 0
@@ -72,16 +73,16 @@
         top: 70px
         padding: 13px 20px 43px 21px
         left: 0
-        z-index: 11
+        z-index: 1100
         background: $secondary
         width: 100%
         max-width: 450px
-        height: 100%
+        min-height: 150%
         transform: translate3d(-450px, 0, 0)
         transition: transform 0.35s
         @include breakpoint(desktop, up)
             transition: transform 0.7s
-            z-index: 9
+            z-index: 999
             top: 0
             background: rgba(0, 0, 0, .3)
             border-right: 2px solid $gold
@@ -130,6 +131,9 @@
         .navigation__link
             font-weight: 300
             line-height: 60px
+    &__item
+        .dropdown-nav__link
+            color: $white
 
 .sidebar-actions
     &__item

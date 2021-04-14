@@ -1,0 +1,123 @@
+.carousel-box
+    .swiper-container-carousel
+        width: 100%
+        padding-bottom: 30px
+        overflow: hidden
+    @include breakpoint(tablet, up)
+        padding-bottom: 0
+
+    .swiper-container-carousel .swiper-slide
+        width: 85vw
+        height: 180px
+        position: relative
+        @include breakpoint(mobile-large, up)
+            height: 100%
+            width: 60vw
+        @include breakpoint(desktop-large, up)
+            width: 45vw
+    .swiper-button-next
+        right: 75px
+        @include breakpoint(desktop-large, up)
+            right: 130px
+    .swiper-button-prev
+        left: 75px
+        @include breakpoint(desktop-large, up)
+            left: 130px
+    .swiper-button-next, .swiper-button-prev
+        display: none
+        color: $white
+        transition: .3s opacity ease
+        &:hover
+            opacity: 1
+        @include breakpoint(desktop, up)
+            display: block
+            opacity: 0
+    .swiper-pagination
+        @include breakpoint(desktop, up)
+            display: none
+    .swiper-pagination-bullets
+        bottom: 6px
+    .swiper-pagination-bullet
+        background: $white
+        opacity: 1
+        &-active
+            background: $gold
+
+.slide
+    background-size: cover
+    padding: 16px 10px 20px
+    border-radius: 10px
+    position: relative
+    height: 0
+    padding-top: 56%
+    position: relative
+    &:hover
+        &::after
+            opacity: 0
+        .triangle
+            fill: $white
+    &:after
+        position: absolute
+        content: ''
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        z-index: 1
+        background: $black
+        transition: .3s opacity ease
+        opacity: 0.2
+    &__content
+        z-index: 2
+        display: flex
+        position: relative
+        flex-direction: column
+        justify-content: space-between
+        position: absolute
+        top: 10px
+        left: 10px
+        padding-right: 10px
+        @include breakpoint(desktop, up)
+            top: 20px
+            left: 20px
+        @include breakpoint(desktop-large, up)
+            top: 45px
+            left: 40px
+    &__head-img
+        @extend .article-promo__head-img
+    &__name
+        @extend .article-promo__head-title
+        color: $gold
+    &__title
+        color: $white
+        font-size: 26px
+        line-height: 32px
+        @include breakpoint(desktop, up)
+            font-size: 42px
+            line-height: 48px
+            width: 80%
+        @include breakpoint(desktop-large, up)
+            font-size: 52px
+            line-height: 58px
+            margin-top: 26px
+            width: 60%
+    &__play
+        cursor: pointer
+        font-size: 12px
+        text-transform: uppercase
+        display: flex
+        align-items: center
+        letter-spacing: 2.4px
+        position: absolute
+        bottom: 20px
+        z-index: 2
+        @include breakpoint(desktop, up)
+            bottom: 20px
+            left: 23px
+        @include breakpoint(desktop-large, up)
+            bottom: 40px
+            left: 43px
+        svg
+            margin-left: 10px
+            path
+                transition: .3s all ease

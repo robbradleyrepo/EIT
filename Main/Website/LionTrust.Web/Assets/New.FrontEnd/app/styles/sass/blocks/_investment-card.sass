@@ -1,0 +1,41 @@
+
+.investment-card-container
+    margin-top: 30px
+    margin-bottom: 40px
+    counter-reset: section
+    h3
+        margin-bottom: 9px
+        @include breakpoint(desktop, up)
+            margin-bottom: 1rem
+    @include breakpoint(desktop, up)
+        margin-top: 80px
+        margin-bottom: 100px        
+.investment-card
+    color: $black
+    height: 382px
+    padding: 20px
+    background: #F8FAFA
+    border-radius: $border-radius
+    overflow: hidden
+    position: relative
+    &::before        
+        counter-increment: section
+        content: counter(section)
+        color: #EFF2F4
+        position: absolute
+        font-weight: bold
+        font-size: 38rem
+        line-height: 1
+        top: -120px
+        left: -60px
+        pointer-events: none
+    &__content
+        z-index: 2
+        position: relative
+    &__title
+        font-weight: bold
+        text-transform: uppercase
+        margin-bottom: 12px
+        font-size: 10px
+        color: $primary
+        

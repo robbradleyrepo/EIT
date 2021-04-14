@@ -1,0 +1,23 @@
+.dropdown
+    position: absolute
+    top: 70px
+    left: 0
+    right: 0
+    z-index: -100    
+    padding-top: 35px
+    border-bottom: 5px solid $primary
+    // display: none
+    visibility: hidden
+    opacity: 0
+    transition: opacity .3s ease-in-out
+    &__inner
+        background: $white
+        padding-top: 50px    
+        padding-bottom: 25px
+
+.dropdown-nav
+    &__link
+        color: $black
+        line-height: 38px
+        &:hover
+            color: $black
