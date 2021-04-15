@@ -128,6 +128,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LeadBanner", "LeadBanner", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionTrust.Feature.LeadBanner", "src\Feature\LeadBanner\website\LionTrust.Feature.LeadBanner.csproj", "{4A438B76-4E52-498F-BA0B-57D43C598973}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Newsletter", "Newsletter", "{86605A72-7A1C-4232-99DA-CCFFA5E39B7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionTrust.Feature.Newsletter", "src\Feature\Newsletter\website\LionTrust.Feature.Newsletter.csproj", "{13F31C47-8857-45AB-A89F-7FB810B04FEE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -250,6 +254,10 @@ Global
 		{4A438B76-4E52-498F-BA0B-57D43C598973}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A438B76-4E52-498F-BA0B-57D43C598973}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A438B76-4E52-498F-BA0B-57D43C598973}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13F31C47-8857-45AB-A89F-7FB810B04FEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13F31C47-8857-45AB-A89F-7FB810B04FEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13F31C47-8857-45AB-A89F-7FB810B04FEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13F31C47-8857-45AB-A89F-7FB810B04FEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -310,6 +318,8 @@ Global
 		{366D70BB-816F-46DC-8C37-5C0C0D40DDFB} = {C95C4E53-1DF8-41F9-AD56-C539C8B5346B}
 		{2389A6D4-D219-42A6-BF69-7D4FA14EBA08} = {60DA3F20-DEED-4580-AE38-A296D76ADE79}
 		{4A438B76-4E52-498F-BA0B-57D43C598973} = {2389A6D4-D219-42A6-BF69-7D4FA14EBA08}
+		{86605A72-7A1C-4232-99DA-CCFFA5E39B7E} = {60DA3F20-DEED-4580-AE38-A296D76ADE79}
+		{13F31C47-8857-45AB-A89F-7FB810B04FEE} = {86605A72-7A1C-4232-99DA-CCFFA5E39B7E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {845F548C-FD53-4C61-AB7F-953C2225A13B}
