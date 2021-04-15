@@ -13,8 +13,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>@Html.Sitecore().Field("BrowserTitle", new { DisableWebEdit = true })</title>
     @Html.Sitecore().VisitorIdentification()
-    <link rel="icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="images/favicon.ico">   
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,12 +23,16 @@
     <![endif]-->
 </head>
 <body>
-    @Html.Sitecore().Placeholder("header")
-    <div class="mask"></div>
-    <main id="main" role="main">
-        @Html.Sitecore().Placeholder("main")
-    </main>
-    @Html.Sitecore().Placeholder("footer")
-    <script src="js/script.js"></script>
+    <header class="header">
+        <section class="container">
+            @Html.Sitecore().Placeholder("header")
+            </section>
+        </header>
+            <div class="mask"></div>
+            <main id="main" role="main">
+                @Html.Sitecore().Placeholder("main")
+            </main>
+            @Html.Sitecore().Placeholder("footer")
+            <script src="js/script.js"></script>
 </body>
 </html>
