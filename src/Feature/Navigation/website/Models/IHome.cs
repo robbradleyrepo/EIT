@@ -13,6 +13,9 @@
         [SitecoreField(Constants.NavigationRoot.ContactUsPage_FieldName)]
         INavigationGlassBase ContactUsPage { get; set; }
 
+        [SitecoreField(Constants.NavigationRoot.FooterConfiguration_FieldName)]
+        IFooterConfiguration FooterConfiguration { get; set; }
+
         [SitecoreField(Constants.Menu.MyLionTrust_FieldName)]
         INavigationGlassBase MyLionTrust { get; set; }
 
@@ -60,9 +63,6 @@
 
         [SitecoreField(Constants.FooterConfiguration.EmailCTALabel_FieldName)]
         string EmailCTALabel { get; set; }
-
-        [SitecoreField(Constants.NavigationRoot.FooterConfiguration_FieldName)]
-        IFooterConfiguration FooterConfiguration { get; set; }
   
         [SitecoreField(Constants.FooterConfiguration.SubscribeNewsletterLabel_FieldName)]
         string SubscribeNewsletterLabel { get; set; }

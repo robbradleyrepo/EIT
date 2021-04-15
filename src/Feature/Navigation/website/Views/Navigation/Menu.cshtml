@@ -1,7 +1,7 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
-@using LionTrust.Feature.Navigation
+@using System.Collections.Specialized;
 @model LionTrust.Feature.Navigation.Models.NavigationViewModel
-@if (Model.RootItem != null && Model.HomeItem != null)
+@if (Model != null && Model.RootItem != null && Model.HomeItem != null)
 {
     <div class="sidebar sidebar_border">
         <div class="sidebar__top">
@@ -120,96 +120,344 @@
                 </nav>
             }
         </div>
-        <!-- block with sublinks items for mobile -->
-        <div class="navigation__sublinks-items">
-            <!-- each item should have id for exact like for attribute for label  -->
-            <!-- Our Funds Links -->
-            <div class="navigation__item">
-                <input type="checkbox" id="Our Funds" class="navigation__checkbox">
-                <div class="navigation__submenu">
-                    <label class="navigation__close-submenu" for="Our Funds">
-                        <i class="icon-chevron-left"></i>
-                        back
-                    </label>
-                    <ul class="navigation__sub-list">
-                        <li class="navigation__sub-item">
-                            <a class="mb-3 navigation__sub-link navigation__sub-link_heading" href="#">
-                                Our Funds
-                            </a>
-                            <a href="#" class="btn btn-primary btn-block mb-4">
-                                All Funds and Literature
-                            </a>
-                        </li>
-                    </ul>
-                    <!--#include virtual="/components/reusables/OurFunds_nav_items_1.html" -->
-                    <div class="mt-3">
-                        <!--#include virtual="/components/reusables/OurFunds_nav_items_2.html" -->
-                    </div>
-                    <div class="mt-4">
-                        <!--#include virtual="/components/UI010-Quick-Link-CTA.html" -->
-                    </div>
-                </div>
-            </div>
-            <!-- Insight Links -->
-            <div class="navigation__item">
-                <input type="checkbox" id="Insight" class="navigation__checkbox">
-                <div class="navigation__submenu">
-                    <label class="navigation__close-submenu" for="Insight">
-                        <i class="icon-chevron-left"></i>
-                        back
-                    </label>
-                    <ul class="navigation__sub-list mb-4">
-                        <li class="navigation__sub-item">
-                            <!--#include virtual="/components/reusables/Insight_nav_item_1.html" -->
-                        </li>
-                    </ul>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <!--#include virtual="/components/UI010-Quick-Link-CTA-SMALL.html" -->
-                            <!--#include virtual="/components/UI010-Quick-Link-CTA-SMALL.html" -->
+
+        @if (Model.HomeItem.HeaderConfiguration != null
+            && Model.HomeItem.HeaderConfiguration.HeaderDropDowns != null
+            && Model.HomeItem.HeaderConfiguration.HeaderDropDowns.Any())
+        {
+            <div class="navigation__sublinks-items">
+                @foreach (var dropDown in Model.HomeItem.HeaderConfiguration.HeaderDropDowns)
+                {
+                    if (dropDown.PageItem != null)
+                    {
+                        var dropDownLabel = !string.IsNullOrEmpty(dropDown.PageItem.MenuTitle) ? dropDown.PageItem.MenuTitle : dropDown.PageItem.Name;
+                        var navigationColumnCount = 0;
+                        <div class="navigation__item">
+                            <input type="checkbox" id="@dropDownLabel" class="navigation__checkbox">
+                            <div class="navigation__submenu">
+                                <label class="navigation__close-submenu" for="@dropDownLabel">
+                                    <i class="icon-chevron-left"></i>
+                                    back
+                                </label>
+                                <ul class="navigation__sub-list">
+                                    <li class="navigation__sub-item">
+                                        <a class="mb-3 navigation__sub-link navigation__sub-link_heading" href="@dropDown.PageItem.Url">
+                                            @Html.Glass().Editable(dropDown.PageItem, z => z.MenuTitle)
+                                        </a>
+                                        @if (dropDown.ShowCTA)
+                                        {
+                                            using (Html.Glass().BeginRenderLink(dropDown, x => x.CTALink, new NameValueCollection { { "class", "btn btn-primary btn-block mb-4" } }, isEditable: true))
+                                            {
+                                                @Html.Glass().Editable(dropDown, x => x.CTALabel)
+                                            }
+                                        }
+                                    </li>
+                                </ul>
+                                @if (dropDown.NavigationColumns != null && dropDown.NavigationColumns.Any())
+                                {
+                                    foreach (var navigationColumn in dropDown.NavigationColumns)
+                                    {
+                                        switch (navigationColumnCount)
+                                        {
+                                            case 0:
+                                                {
+                                                    break;
+                                                }
+                                            case 1:
+                                                {
+                                                    @:<div class="mt-3">
+                                                        break;
+                                                    }
+                                                case 2:
+                                                    {
+                                                        @:<div class="mt-4">
+                                                            break;
+                                                        }
+                                                    default:
+                                                        break;
+                                                }
+                                                navigationColumnCount++;
+
+                                                if (navigationColumn.ShowColumnLink)
+                                                {
+                                                    <h4 class="dropdown-nav__title">@Html.Glass().Editable(navigationColumn, z => z.ColumnTitle)</h4>
+                                                    using (Html.Glass().BeginRenderLink(navigationColumn, z => z.ColumnLink, new NameValueCollection { { "class", "link-styles d-block mb-4" } }, isEditable: true))
+                                                    {
+                                                        @Html.Glass().Editable(navigationColumn, z => z.ColumnLinkLabel) <i class="icon-arrow-right"></i>
+                                                    }
+
+                                                    if (navigationColumn.PageLinks != null && navigationColumn.PageLinks.Any())
+                                                    {
+                                                        <ul class="dropdown-nav__list">
+                                                            @foreach (var pageLink in navigationColumn.PageLinks)
+                                                            {
+                                                                <li class="dropdown-nav__item">
+                                                                    <a href="@pageLink.Url" class="dropdown-nav__link">@Html.Glass().Editable(pageLink, z => z.MenuTitle)</a>
+                                                                </li>
+                                                            }
+                                                        </ul>
+                                                    }
+                                                }
+
+                                                if (navigationColumnCount > 0)
+                                                {
+                                                @:</div>
+                                                if (navigationColumnCount >= 2)
+                                                {
+                                                    break;
+                                                }
+                                            }
+                                        }
+                                    }
+                                @if (navigationColumnCount < 3 && dropDown.Images != null && dropDown.Images.Any())
+                                {
+                                    if (navigationColumnCount < 2)
+                                    {
+                                        var imagesCount = dropDown.Images.Count();
+                                        if (imagesCount == 1)
+                                        {
+                                            var image = dropDown.Images.FirstOrDefault();
+                                            if (image != null)
+                                            {
+                                                <div class="col-xl-4 col-lg-5 offset-lg-4 offset-xl-5">
+                                                    @if (image.Link != null || Sitecore.Context.PageMode.IsExperienceEditor)
+                                                    {
+                                                        using (Html.Glass().BeginRenderLink(image, z => z.Link, new NameValueCollection { { "class", "quick-link-chart" }, { "style", "background-image: url('" + image.Image != null ? image.Image.Src : string.Empty + "')" } }, isEditable: true))
+                                                        {
+                                                            <span class="quick-link-chart__title">@Html.Glass().Editable(image, z => z.Title)</span>
+                                                            <span class="quick-link-chart__text">@Html.Glass().Editable(image, z => z.Description)</span>
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        <a href="#" class="quick-link-chart" style="background-image: url('@(image.Image !=null ? image.Image.Src : string.Empty)')">
+                                                            <span class="quick-link-chart__title">@Html.Glass().Editable(image, z => z.Title)</span>
+                                                            <span class="quick-link-chart__text">@Html.Glass().Editable(image, z => z.Description)</span>
+                                                        </a>
+                                                    }
+                                                </div>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            var imageCollecion = dropDown.Images;
+                                            <div class="col-xl-7 col-lg-9 offset-xl-2">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        @if (imagesCount == 2)
+                                                        {
+                                                            var firstImage = dropDown.Images.FirstOrDefault();
+                                                            if (firstImage != null)
+                                                            {
+                                                                if (firstImage.Link != null || Sitecore.Context.PageMode.IsExperienceEditor)
+                                                                {
+                                                                    using (Html.Glass().BeginRenderLink(firstImage, z => z.Link, new NameValueCollection { { "class", "quick-link-chart" }, { "style", "background-image: url('" + firstImage.Image != null ? firstImage.Image.Src : string.Empty + "')" } }, isEditable: true))
+                                                                    {
+                                                                        <span class="quick-link-chart__title">@Html.Glass().Editable(firstImage, z => z.Title)</span>
+                                                                        <span class="quick-link-chart__text">@Html.Glass().Editable(firstImage, z => z.Description)</span>
+                                                                    }
+                                                                }
+                                                                else
+                                                                {
+                                                                    <a href="#" class="quick-link-chart" style="background-image: url('@(firstImage.Image !=null ? firstImage.Image.Src : string.Empty)')">
+                                                                        <span class="quick-link-chart__title">@Html.Glass().Editable(firstImage, z => z.Title)</span>
+                                                                        <span class="quick-link-chart__text">@Html.Glass().Editable(firstImage, z => z.Description)</span>
+                                                                    </a>
+                                                                }
+                                                            }
+                                                            imageCollecion = imageCollecion.Skip(1);
+                                                        }
+                                                        else
+                                                        {
+                                                            var firstImage = dropDown.Images.FirstOrDefault();
+                                                            if (firstImage != null)
+                                                            {
+                                                                if (firstImage.Link != null || Sitecore.Context.PageMode.IsExperienceEditor)
+                                                                {
+                                                                    using (Html.Glass().BeginRenderLink(firstImage, z => z.Link, new NameValueCollection { { "class", "quick-link-chart quick-link-chart__small" }, { "style", "background-image: url('" + firstImage.Image != null ? firstImage.Image.Src : string.Empty + "')" } }, isEditable: true))
+                                                                    {
+                                                                        <span class="quick-link-chart__title">@Html.Glass().Editable(firstImage, z => z.Title)</span>
+                                                                        <span class="quick-link-chart__text">@Html.Glass().Editable(firstImage, z => z.Description)</span>
+                                                                    }
+                                                                }
+                                                                else
+                                                                {
+                                                                    <a href="#" class="quick-link-chart quick-link-chart__small" style="background-image: url('@(firstImage.Image !=null ? firstImage.Image.Src : string.Empty)')">
+                                                                        <span class="quick-link-chart__title">@Html.Glass().Editable(firstImage, z => z.Title)</span>
+                                                                        <span class="quick-link-chart__text">@Html.Glass().Editable(firstImage, z => z.Description)</span>
+                                                                    </a>
+                                                                }
+                                                            }
+                                                            var secondImage = dropDown.Images.Skip(1).FirstOrDefault();
+                                                            if (secondImage != null)
+                                                            {
+                                                                if (secondImage.Link != null || Sitecore.Context.PageMode.IsExperienceEditor)
+                                                                {
+                                                                    using (Html.Glass().BeginRenderLink(secondImage, z => z.Link, new NameValueCollection { { "class", "quick-link-chart quick-link-chart__small" }, { "style", "background-image: url('" + secondImage.Image != null ? secondImage.Image.Src : string.Empty + "')" } }, isEditable: true))
+                                                                    {
+                                                                        <span class="quick-link-chart__title">@Html.Glass().Editable(secondImage, z => z.Title)</span>
+                                                                        <span class="quick-link-chart__text">@Html.Glass().Editable(secondImage, z => z.Description)</span>
+                                                                    }
+                                                                }
+                                                                else
+                                                                {
+                                                                    <a href="#" class="quick-link-chart quick-link-chart__small" style="background-image: url('@(secondImage.Image !=null ? secondImage.Image.Src : string.Empty)')">
+                                                                        <span class="quick-link-chart__title">@Html.Glass().Editable(secondImage, z => z.Title)</span>
+                                                                        <span class="quick-link-chart__text">@Html.Glass().Editable(secondImage, z => z.Description)</span>
+                                                                    </a>
+                                                                }
+                                                            }
+                                                            imageCollecion = imageCollecion.Skip(2);
+                                                        }
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        @if (imagesCount < 4)
+                                                        {
+                                                            var secondColumnImage = dropDown.Images.FirstOrDefault();
+                                                            if (secondColumnImage != null)
+                                                            {
+                                                                if (secondColumnImage != null || Sitecore.Context.PageMode.IsExperienceEditor)
+                                                                {
+                                                                    using (Html.Glass().BeginRenderLink(secondColumnImage, z => z.Link, new NameValueCollection { { "class", "quick-link-chart" }, { "style", "background-image: url('" + secondColumnImage.Image != null ? secondColumnImage.Image.Src : string.Empty + "')" } }, isEditable: true))
+                                                                    {
+                                                                        <span class="quick-link-chart__title">@Html.Glass().Editable(secondColumnImage, z => z.Title)</span>
+                                                                        <span class="quick-link-chart__text">@Html.Glass().Editable(secondColumnImage, z => z.Description)</span>
+                                                                    }
+                                                                }
+                                                                else
+                                                                {
+                                                                    <a href="#" class="quick-link-chart" style="background-image: url('@(secondColumnImage.Image !=null ? secondColumnImage.Image.Src : string.Empty)')">
+                                                                        <span class="quick-link-chart__title">@Html.Glass().Editable(secondColumnImage, z => z.Title)</span>
+                                                                        <span class="quick-link-chart__text">@Html.Glass().Editable(secondColumnImage, z => z.Description)</span>
+                                                                    </a>
+                                                                }
+                                                            }
+                                                        }
+                                                        else
+                                                        {
+                                                            var secondColumnFirstImage = dropDown.Images.FirstOrDefault();
+                                                            if (secondColumnFirstImage != null)
+                                                            {
+                                                                if (secondColumnFirstImage.Link != null || Sitecore.Context.PageMode.IsExperienceEditor)
+                                                                {
+                                                                    using (Html.Glass().BeginRenderLink(secondColumnFirstImage, z => z.Link, new NameValueCollection { { "class", "quick-link-chart quick-link-chart__small" }, { "style", "background-image: url('" + secondColumnFirstImage.Image != null ? secondColumnFirstImage.Image.Src : string.Empty + "')" } }, isEditable: true))
+                                                                    {
+                                                                        <span class="quick-link-chart__title">@Html.Glass().Editable(secondColumnFirstImage, z => z.Title)</span>
+                                                                        <span class="quick-link-chart__text">@Html.Glass().Editable(secondColumnFirstImage, z => z.Description)</span>
+                                                                    }
+                                                                }
+                                                                else
+                                                                {
+                                                                    <a href="#" class="quick-link-chart quick-link-chart__small" style="background-image: url('@(secondColumnFirstImage.Image !=null ? secondColumnFirstImage.Image.Src : string.Empty)')">
+                                                                        <span class="quick-link-chart__title">@Html.Glass().Editable(secondColumnFirstImage, z => z.Title)</span>
+                                                                        <span class="quick-link-chart__text">@Html.Glass().Editable(secondColumnFirstImage, z => z.Description)</span>
+                                                                    </a>
+                                                                }
+                                                            }
+                                                            var secondColumnSecondImage = dropDown.Images.Skip(1).FirstOrDefault();
+                                                            if (secondColumnSecondImage != null)
+                                                            {
+                                                                if (secondColumnSecondImage.Link != null)
+                                                                {
+                                                                    using (Html.Glass().BeginRenderLink(secondColumnSecondImage, z => z.Link, new NameValueCollection { { "class", "quick-link-chart quick-link-chart__small" }, { "style", "background-image: url('" + secondColumnSecondImage.Image != null ? secondColumnSecondImage.Image.Src : string.Empty + "')" } }, isEditable: true))
+                                                                    {
+                                                                        <span class="quick-link-chart__title">@Html.Glass().Editable(secondColumnSecondImage, z => z.Title)</span>
+                                                                        <span class="quick-link-chart__text">@Html.Glass().Editable(secondColumnSecondImage, z => z.Description)</span>
+                                                                    }
+                                                                }
+                                                                else
+                                                                {
+                                                                    <a href="#" class="quick-link-chart quick-link-chart__small" style="background-image: url('@(secondColumnSecondImage.Image !=null ? secondColumnSecondImage.Image.Src : string.Empty)')">
+                                                                        <span class="quick-link-chart__title">@Html.Glass().Editable(secondColumnSecondImage, z => z.Title)</span>
+                                                                        <span class="quick-link-chart__text">@Html.Glass().Editable(secondColumnSecondImage, z => z.Description)</span>
+                                                                    </a>
+                                                                }
+                                                            }
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if (dropDown.Images.Count() == 1)
+                                        {
+                                            var image = dropDown.Images.FirstOrDefault();
+                                            if (image != null)
+                                            {
+                                                <div class="col-xl-4 col-lg-5 offset-lg-4 offset-xl-5">
+                                                    @if (image.Link != null || Sitecore.Context.PageMode.IsExperienceEditor)
+                                                    {
+                                                        using (Html.Glass().BeginRenderLink(image, z => z.Link, new NameValueCollection { { "class", "quick-link-chart" }, { "style", "background-image: url('" + image.Image != null ? image.Image.Src : string.Empty + "')" } }, isEditable: true))
+                                                        {
+                                                            <span class="quick-link-chart__title">@Html.Glass().Editable(image, z => z.Title)</span>
+                                                            <span class="quick-link-chart__text">@Html.Glass().Editable(image, z => z.Description)</span>
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        <a href="#" class="quick-link-chart" style="background-image: url('@(image.Image !=null ? image.Image.Src : string.Empty)')">
+                                                            <span class="quick-link-chart__title">@Html.Glass().Editable(image, z => z.Title)</span>
+                                                            <span class="quick-link-chart__text">@Html.Glass().Editable(image, z => z.Description)</span>
+                                                        </a>
+                                                    }
+                                                </div>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            var firstImage = dropDown.Images.FirstOrDefault();
+                                            if (firstImage != null)
+                                            {
+                                                <div class="col-xl-4 col-lg-5 offset-lg-4 offset-xl-5">
+                                                    @if (firstImage.Link != null || Sitecore.Context.PageMode.IsExperienceEditor)
+                                                    {
+                                                        using (Html.Glass().BeginRenderLink(firstImage, z => z.Link, new NameValueCollection { { "class", "quick-link-chart quick-link-chart__small" }, { "style", "background-image: url('" + firstImage.Image != null ? firstImage.Image.Src : string.Empty + "')" } }, isEditable: true))
+                                                        {
+                                                            <span class="quick-link-chart__title">@Html.Glass().Editable(firstImage, z => z.Title)</span>
+                                                            <span class="quick-link-chart__text">@Html.Glass().Editable(firstImage, z => z.Description)</span>
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        <a href="#" class="quick-link-chart quick-link-chart__small" style="background-image: url('@(firstImage.Image !=null ? firstImage.Image.Src : string.Empty)')">
+                                                            <span class="quick-link-chart__title">@Html.Glass().Editable(firstImage, z => z.Title)</span>
+                                                            <span class="quick-link-chart__text">@Html.Glass().Editable(firstImage, z => z.Description)</span>
+                                                        </a>
+                                                    }
+                                                </div>
+                                            }
+                                            var secondImage = dropDown.Images.Skip(1).FirstOrDefault();
+                                            if (secondImage != null)
+                                            {
+                                                <div class="col-xl-4 col-lg-5 offset-lg-4 offset-xl-5">
+                                                    @if (secondImage.Link != null || Sitecore.Context.PageMode.IsExperienceEditor)
+                                                    {
+                                                        using (Html.Glass().BeginRenderLink(secondImage, z => z.Link, new NameValueCollection { { "class", "quick-link-chart quick-link-chart__small" }, { "style", "background-image: url('" + secondImage.Image != null ? secondImage.Image.Src : string.Empty + "')" } }, isEditable: true))
+                                                        {
+                                                            <span class="quick-link-chart__title">@Html.Glass().Editable(secondImage, z => z.Title)</span>
+                                                            <span class="quick-link-chart__text">@Html.Glass().Editable(secondImage, z => z.Description)</span>
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        <a href="#" class="quick-link-chart quick-link-chart__small" style="background-image: url('@(secondImage.Image !=null ? secondImage.Image.Src : string.Empty)')">
+                                                            <span class="quick-link-chart__title">@Html.Glass().Editable(secondImage, z => z.Title)</span>
+                                                            <span class="quick-link-chart__text">@Html.Glass().Editable(secondImage, z => z.Description)</span>
+                                                        </a>
+                                                    }
+                                                </div>
+                                            }
+                                        }
+                                    }
+                                }
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <!--#include virtual="/components/UI010-Quick-Link-CTA.html" -->
-                        </div>
-                    </div>
-                </div>
+                    }
+                }
             </div>
-            <!-- Learning Links -->
-            <div class="navigation__item">
-                <input type="checkbox" id="Learning" class="navigation__checkbox">
-                <div class="navigation__submenu">
-                    <label class="navigation__close-submenu" for="Learning">
-                        <i class="icon-chevron-left"></i>
-                        back
-                    </label>
-                    <div class="mt-3">
-                        <!--#include virtual="/components/reusables/Learning_nav_item_1.html" -->
-                    </div>
-                    <div class="mt-3">
-                        <!--#include virtual="/components/reusables/Learning_nav_item_2.html" -->
-                    </div>
-                    <div class="mt-3">
-                        <!--#include virtual="/components/reusables/Learning_nav_item_3.html" -->
-                    </div>
-                </div>
-            </div>
-            <!-- Sustainability Links -->
-            <div class="navigation__item">
-                <input type="checkbox" id="Sustainability" class="navigation__checkbox">
-                <div class="navigation__submenu">
-                    <label class="navigation__close-submenu" for="Sustainability">
-                        <i class="icon-chevron-left"></i>
-                        back
-                    </label>
-                    <ul class="navigation__sub-list mb-4">
-                        <li class="navigation__sub-item">
-                            <!--#include virtual="/components/reusables/Sustainability_nav_item_1.html" -->
-                        </li>
-                    </ul>
-                    <!--#include virtual="/components/UI010-Quick-Link-CTA.html" -->
-                </div>
-            </div>
-        </div>
+        }
     </div>
     <!-- For desktop sidebar links items -->
     if (Model.HomeItem.MenuItems != null && Model.HomeItem.MenuItems.Any())
@@ -248,6 +496,7 @@
     }
     <div class="sidebar-overlay"></div>
 }
-else
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
 {
+    @:Issue with navigation: Root/Home item isn't correct
 }

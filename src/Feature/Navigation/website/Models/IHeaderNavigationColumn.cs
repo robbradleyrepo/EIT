@@ -8,7 +8,7 @@
     public interface IHeaderNavigationColumn
     {
         [SitecoreField(Constants.HeaderNavigationColumn.ColumnTitle_FieldName)]
-        int ColumnTitle { get; set; }
+        string ColumnTitle { get; set; }
 
         [SitecoreField(Constants.HeaderNavigationColumn.ShowColumnLink_FieldName)]
         bool ShowColumnLink { get; set; }
