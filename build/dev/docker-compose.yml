@@ -1,0 +1,112 @@
+version: "2.4"
+
+services:
+
+  sql:
+    container_name: liontrustsql
+    image: ${REGISTRY}sitecore-xp-sqldev:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    volumes:
+      - .\data\sql:C:\Data
+    ports:
+      - "44010:1433"
+
+  solr:
+    container_name: liontrustsolr
+    image: ${REGISTRY}sitecore-xp-solr:${SITECORE_VERSION}-nanoserver-${NANOSERVER_VERSION}
+    volumes:
+      - .\data\solr:C:\Data
+    ports:
+      - "44011:8983"
+
+  xconnect:
+    container_name: liontrustxconnect
+    image: ${REGISTRY}sitecore-xp-xconnect:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    volumes:
+      - ${LICENSE_PATH}:C:\license
+      - .\data\xconnect:C:\inetpub\wwwroot\App_Data\logs
+    environment:
+      ENTRYPOINT_STDOUT_XCONNECT_LOG_ENABLED: 'true'
+      ENTRYPOINT_STDOUT_IIS_ACCESS_LOG_ENABLED: 'true'
+      ENTRYPOINT_STDOUT_IIS_ERROR_LOG_ENABLED: 'true'
+    links:
+      - sql
+      - solr
+
+  xconnect-automationengine:
+    container_name: liontrustxconnectautomationengine
+    image: ${REGISTRY}sitecore-xp-xconnect-automationengine:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    volumes:
+      - ${LICENSE_PATH}:C:\license
+      - .\data\xconnect-automationengine:C:\AutomationEngine\App_Data\logs
+    mem_limit: 500MB
+    links:
+      - sql
+      - xconnect
+
+  xconnect-indexworker:
+    container_name: liontrustxconnectindexworker
+    image: ${REGISTRY}sitecore-xp-xconnect-indexworker:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    volumes:
+      - ${LICENSE_PATH}:C:\license
+      - .\data\xconnect-indexworker:C:\IndexWorker\App_Data\logs
+    mem_limit: 500MB
+    links:
+      - sql
+      - solr
+
+  xconnect-processingengine:
+    container_name: liontrustxconnectprocessingengine
+    image: ${REGISTRY}sitecore-xp-xconnect-processingengine:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    volumes:
+      - ${LICENSE_PATH}:C:\license
+      - .\data\xconnect-processingengine:C:\ProcessingEngine\App_Data\logs
+    restart: unless-stopped
+    mem_limit: 500MB
+    depends_on: 
+      - xconnect
+    links:
+      - sql
+      - xconnect
+
+  cd:
+    container_name: liontrustcd
+    image: ${REGISTRY}sitecore-xp-cd:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    entrypoint: powershell.exe -NoLogo -NoProfile -File C:\\tools\\entrypoints\\iis\\Development.ps1
+    volumes:
+      - .\site:C:\src
+      - ${LICENSE_PATH}:C:\license
+      - .\data\cd:C:\inetpub\wwwroot\App_Data\logs
+    ports:
+      - "44002:80"
+    links:
+      - sql
+      - solr
+      - xconnect
+
+  cm:
+    container_name: liontrustcm
+    image: ${REGISTRY}sitecore-xp-standalone:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    entrypoint: powershell.exe -NoLogo -NoProfile -File C:\\tools\\entrypoints\\iis\\Development.ps1
+    volumes:
+      - ..\..\src:C:\projects\LionTrust\src\  
+      - .\site:C:\src
+      - ${LICENSE_PATH}:C:\license
+      - .\data\cm:C:\inetpub\wwwroot\App_Data\logs
+    ports:
+      - "44001:80"
+    links:
+      - sql
+      - solr
+      - xconnect
+
+  identity:
+    container_name: liontrustidentity
+    image: ${REGISTRY}sitecore-xp-identity:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    volumes:
+      - ${LICENSE_PATH}:C:\license
+      - .\data\identity:C:\inetpub\wwwroot\wwwroot\logs
+    mem_limit: 500MB
+    ports:
+      - "44005:80"
+    links:
+      - sql

@@ -4,6 +4,14 @@ Parent: "6cf55936-0b82-4ef5-9dc2-81d8ae0a8ddb"
 Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
 Path: /sitecore/layout/placeholder settings/Project/LionTrust/Header
 DB: master
+SharedFields:
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: Header
+- ID: "e391b526-d0c5-439d-803e-17512eae6222"
+  Hint: Allowed Controls
+  Type: TreelistEx
+  Value: "{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
 Languages:
 - Language: en
   Versions:
