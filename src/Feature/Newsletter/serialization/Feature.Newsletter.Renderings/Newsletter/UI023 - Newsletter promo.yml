@@ -2,7 +2,7 @@
 ID: "22fd70f2-7c50-4401-b3a5-1de2c3d3a924"
 Parent: "8bc48bec-4630-4aab-b9e8-8d4f80295245"
 Template: "2a3e91a0-7987-44b5-ab34-35c2d9de83b9"
-Path: /sitecore/layout/Renderings/Feature/Newsletter/Newsletter promo
+Path: "/sitecore/layout/Renderings/Feature/Newsletter/UI023 - Newsletter promo"
 DB: master
 SharedFields:
 - ID: "3d08db46-2267-41b0-bc52-be69fd618633"
@@ -13,6 +13,10 @@ SharedFields:
   Hint: VaryByData
   Type: Checkbox
   Value: 1
+- ID: "a2f5d9df-8cba-4a1d-99eb-51acb94cb057"
+  Hint: Page Editor Buttons
+  Type: Treelist
+  Value: "{6C01008E-0DE2-4B29-A719-347F803E2D47}"
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
   Value: "site:newsletterpromo"

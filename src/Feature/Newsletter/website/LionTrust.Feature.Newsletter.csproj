@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{13F31C47-8857-45AB-A89F-7FB810B04FEE}</ProjectGuid>
+    <ProjectGuid>{D0D69643-144F-438F-9103-07832B9ACA32}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -15,24 +15,27 @@
     <AssemblyName>LionTrust.Feature.Newsletter</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <TargetFrameworkProfile />
-    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\</OutputPath>
@@ -41,59 +44,56 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Glass.Mapper.Sc.92.Core" Version="5.8.177" />
+    <PackageReference Include="Glass.Mapper.Sc.92">
+      <Version>5.8.177</Version>
+    </PackageReference>
     <PackageReference Include="Glass.Mapper.Sc.92.Mvc">
       <Version>5.8.177</Version>
     </PackageReference>
-    <PackageReference Include="Sitecore.Mvc" Version="9.2.0" />
+    <PackageReference Include="Microsoft.AspNet.Mvc">
+      <Version>5.2.4</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNet.Web.Optimization">
+      <Version>1.1.3</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="1.0.5" />
+    <PackageReference Include="Microsoft.Net.Compilers" Version="2.1.0" />
+    <PackageReference Include="Sitecore.Kernel" Version="9.2.0" />
+    <PackageReference Include="Sitecore.Mvc">
+      <Version>9.2.0</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Views\Newsletter\Promo.cshtml" />
+    <Content Include="Views\web.config" />
+    <Content Include="App_Config\Include\Feature\Feature.Newsletter.Serialization.config" />
+    <None Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Promo\NewsletterPromoViewModel.cs" />
+    <Compile Include="Promo\NewsletterPromoController.cs" />
+    <Compile Include="Promo\INewsletterPromoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Feature\Feature.Newsletter.Serialization.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Web.config">
-      <SubType>Designer</SubType>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Web.config">
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Foundation\Logging\website\LionTrust.Foundation.Logging.csproj">
-      <Project>{9B72C426-123C-4782-BEF8-0D52E5F2A396}</Project>
-      <Name>LionTrust.Foundation.Logging</Name>
+    <ProjectReference Include="..\..\..\Foundation\Analytics\website\LionTrust.Foundation.Analytics.csproj">
+      <Project>{71010683-02eb-4e0d-b0e1-6643922799ee}</Project>
+      <Name>LionTrust.Foundation.Analytics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Content\website\LionTrust.Foundation.Content.csproj">
+      <Project>{f8f55034-fa55-4d27-b115-0ab4eeb9a0a8}</Project>
+      <Name>LionTrust.Foundation.Content</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\ORM\website\LionTrust.Foundation.ORM.csproj">
       <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>
       <Name>LionTrust.Foundation.ORM</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Foundation\Search\website\LionTrust.Foundation.Search.csproj">
-      <Project>{22686DC6-4E6C-4D98-84B7-C48042F5B8FC}</Project>
-      <Name>LionTrust.Foundation.Search</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Foundation\Content\website\LionTrust.Foundation.Content.csproj">
-      <Project>{F8F55034-FA55-4D27-B115-0AB4EEB9A0A8}</Project>
-      <Name>LionTrust.Foundation.Content</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Foundation\Core\website\LionTrust.Foundation.Core.csproj">
-      <Project>{0C1E2FEC-AC54-4CF0-905A-890D3BF711D5}</Project>
-      <Name>LionTrust.Foundation.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="Views\Newsletter\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -106,11 +106,11 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>4632</DevelopmentServerPort>
+          <DevelopmentServerPort>52939</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:4632/</IISUrl>
+          <IISUrl>http://localhost:52939/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
