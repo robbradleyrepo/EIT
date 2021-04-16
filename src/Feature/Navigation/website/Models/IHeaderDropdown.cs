@@ -4,12 +4,11 @@
 
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
-    using LionTrust.Foundation.ORM.Models;
 
-    public interface IHeaderDropdown : IGlassBase
+    public interface IHeaderDropdown : INavigationGlassBase
     {
         [SitecoreField(Constants.HeaderDropDown.PageItem_FieldName)]
-        INavigationGlassBase PageItem { get; set; } 
+        INavigablePage PageItem { get; set; } 
 
         [SitecoreField(Constants.HeaderDropDown.NavigationColumns_FieldName)]
         IEnumerable<IHeaderNavigationColumn> NavigationColumns { get; set; }

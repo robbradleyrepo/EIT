@@ -118,13 +118,13 @@
         public static class SocialIcon
         {
             public const string SocialLink_FieldName = "Link";
-            public static readonly ID SocialLink_FieldID = new ID("{380DE464-FA5D-4B97-AD9E-B520108FD350}");
+            public static readonly ID SocialLink_FieldID = new ID("{E990E03D-0332-45CC-A5E7-613996DEDA74}");
 
             public const string SocialIcon_FieldName = "Icon";
-            public static readonly ID SocialIcon_FieldID = new ID("{18F9485A-B46B-4F81-B166-FB972D21FEF4}");
+            public static readonly ID SocialIcon_FieldID = new ID("{321DB99F-5D14-4703-AC2F-6FEEA5E48000}");
 
             public const string TwitterAccounts_FieldName = "TwitterMultipleAccounts";
-            public static readonly ID TwitterAccounts_FieldID = new ID("{4B63503E-2D9F-43D0-B7A6-9A92EC21013E}");
+            public static readonly ID TwitterAccounts_FieldID = new ID("{9568F987-E036-4144-B158-B2084D778CE2}");
         }
 
         public static class PageLink

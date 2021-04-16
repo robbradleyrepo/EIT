@@ -3,7 +3,7 @@
     using Glass.Mapper.Sc.Fields;
     using Glass.Mapper.Sc.Configuration.Attributes;
 
-    public interface ISocialIcon
+    public interface ISocialIcon : INavigationGlassBase
     {
         [SitecoreField(Constants.SocialIcon.SocialIcon_FieldName)]
         Image SocialIcon { get; set; }

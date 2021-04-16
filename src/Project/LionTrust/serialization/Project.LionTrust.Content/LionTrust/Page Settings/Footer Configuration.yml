@@ -17,3 +17,40 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20210406T121357Z
+    - ID: "25fe6d9f-7990-451a-a9cb-94a632389cd3"
+      Hint: SubscribeCTALink
+      Value: |
+        <link linktype="external" url="http://www.google.com" anchor="" target="" />
+    - ID: "580a13a4-8095-4815-be0a-2888c67a8aeb"
+      Hint: PostalCode
+      Value: WC2R 0EZ
+    - ID: "5d9590c5-5dbe-47a1-b617-634debc799c5"
+      Hint: PhoneNumber
+      Value: +44 (0)20 7412 1700
+    - ID: "a4f06287-e1be-4c76-96d8-e0e8b609aac1"
+      Hint: GoogleMapsLink
+      Value: |
+        <link linktype="external" url="http://www.google.com" anchor="" target="" />
+    - ID: "c77b9712-2755-4657-bdf2-c43aed9bee02"
+      Hint: Location
+      Value: London
+    - ID: "d77b2873-db24-4887-9db1-af3bcd76f3d6"
+      Hint: Email
+      Value: test@test.com
+    - ID: "e28b0c65-2dc9-42cb-b852-282c57bfee3a"
+      Hint: Page Links
+      Type: Treelist
+      Value: |
+        {51723723-E912-4A96-8DB3-391795910F30}
+        {852F4008-8C74-4328-8E27-C0212DED15AE}
+        {94067DB5-9D55-450A-A285-A3DA1399DC56}
+    - ID: "f0d67b9b-4d7d-40ac-b854-ac936934071d"
+      Hint: Social Links
+      Type: Treelist
+      Value: |
+        {5976C22F-9F0A-4330-9C4B-5B8030C0EDB7}
+        {9684486B-7593-40C7-82B7-4B4F990F8FD5}
+        {3938BBEF-AED2-4F61-8569-2AEDA9057845}
+    - ID: "f53df5de-4d7d-4278-8dae-59d0c79d0b0c"
+      Hint: Address
+      Value: 2 Savoy Court

@@ -3,9 +3,9 @@
     using System.Collections.Generic;
 
     using Glass.Mapper.Sc.Configuration.Attributes;
-    using Glass.Mapper.Sc.Fields;    
+    using Glass.Mapper.Sc.Fields;
 
-    public interface IHeaderNavigationColumn
+    public interface IHeaderNavigationColumn : INavigationGlassBase
     {
         [SitecoreField(Constants.HeaderNavigationColumn.ColumnTitle_FieldName)]
         string ColumnTitle { get; set; }
@@ -20,6 +20,6 @@
         Link ColumnLinkLabel { get; set; }
 
         [SitecoreField(Constants.HeaderNavigationColumn.PageLinks_FieldName)]
-        IEnumerable<INavigationGlassBase> PageLinks { get; set; }
+        IEnumerable<INavigablePage> PageLinks { get; set; }
     }
 }
