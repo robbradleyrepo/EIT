@@ -3,7 +3,7 @@
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
 
-    public interface IHeaderImage
+    public interface IHeaderImage : INavigationGlassBase
     {
         [SitecoreField(Constants.HeaderImage.Image_FieldName)]
         Image Image { get; set; }

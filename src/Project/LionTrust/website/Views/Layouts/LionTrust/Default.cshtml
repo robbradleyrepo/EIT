@@ -13,26 +13,27 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>@Html.Sitecore().Field("BrowserTitle", new { DisableWebEdit = true })</title>
     @Html.Sitecore().VisitorIdentification()
-    <link rel="icon" href="images/favicon.ico">   
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <link rel="icon" href="/dist/images/favicon.ico">
+    <link rel="stylesheet" href="/dist/css/styles.min.css">
 </head>
 <body>
-    <header class="header">
-        <section class="container">
-            @Html.Sitecore().Placeholder("header")
-            </section>
-        </header>
-            <div class="mask"></div>
-            <main id="main" role="main">
-                @Html.Sitecore().Placeholder("main")
-            </main>
-            @Html.Sitecore().Placeholder("footer")
-            <script src="js/script.js"></script>
+    @Html.Sitecore().Placeholder("header")
+    <div class="mask"></div>
+    <main id="main" role="main">
+        @Html.Sitecore().Placeholder("main")
+    </main>
+    @Html.Sitecore().Placeholder("footer")
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script src="/dist/js/script.js"></script>
+    <script src="https://pagecdn.io/lib/zepto/1.2.0/zepto.min.js"></script>
+    <script src="/assets/js/addAnalyticsTracking.js"></script>
+	<script src="/dist/js/search-page.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,22 @@
+﻿---
+ID: "852f4008-8c74-4328-8e27-c0212ded15ae"
+Parent: "3acd48d1-dcef-4f56-a924-594ccfb52f93"
+Template: "ea33832b-34aa-4344-a770-332d71e7f6b1"
+Path: /sitecore/content/LiontrustNew/Page Settings/Footer Configuration/Page Links/Terms and Conditions
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210416T115511Z
+    - ID: "3f39e86e-0426-46f0-8f64-c5636372e13a"
+      Hint: Link
+      Value: |
+        <link linktype="external" text="Terms &amp; Conditions" url="http://www.google.com" anchor="" target="" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

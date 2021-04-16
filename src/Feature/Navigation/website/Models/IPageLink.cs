@@ -3,7 +3,7 @@
     using Glass.Mapper.Sc.Fields;
     using Glass.Mapper.Sc.Configuration.Attributes;
 
-    public interface IPageLink
+    public interface IPageLink : INavigationGlassBase
     {
         [SitecoreField(Constants.PageLink.Link_FieldName)]
         Link PageLink { get; set; }
