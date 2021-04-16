@@ -71,8 +71,9 @@ services:
   cd:
     container_name: liontrustcd
     image: ${REGISTRY}sitecore-xp-cd:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    entrypoint: powershell.exe -NoLogo -NoProfile -File C:\\tools\\entrypoints\\iis\\Development.ps1
     volumes:
-      - .\site:C:\dev\
+      - .\site:C:\src
       - ${LICENSE_PATH}:C:\license
       - .\data\cd:C:\inetpub\wwwroot\App_Data\logs
     ports:
@@ -85,8 +86,10 @@ services:
   cm:
     container_name: liontrustcm
     image: ${REGISTRY}sitecore-xp-standalone:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    entrypoint: powershell.exe -NoLogo -NoProfile -File C:\\tools\\entrypoints\\iis\\Development.ps1
     volumes:
-      - .\site:C:\dev\
+      - ..\..\src:C:\projects\LionTrust\src\  
+      - .\site:C:\src
       - ${LICENSE_PATH}:C:\license
       - .\data\cm:C:\inetpub\wwwroot\App_Data\logs
     ports:
