@@ -4,9 +4,12 @@
 
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
-    
-    public interface IHeaderDropdown
+
+    public interface IHeaderDropdown : INavigationGlassBase
     {
+        [SitecoreField(Constants.HeaderDropDown.PageItem_FieldName)]
+        INavigablePage PageItem { get; set; } 
+
         [SitecoreField(Constants.HeaderDropDown.NavigationColumns_FieldName)]
         IEnumerable<IHeaderNavigationColumn> NavigationColumns { get; set; }
 

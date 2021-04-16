@@ -10,46 +10,62 @@
             public static readonly ID Logo_FieldID = new ID("{F113BF3D-FE80-4A15-9CDA-679B3C3CB3BE}");
         }
 
-        public static class Header
-        {
-            public const string HeaderConfiguration_FieldName = "Header Configuration";
-            public static readonly ID HeaderConfiguration_FieldID = new ID("{95F0787B-70E6-4164-98C0-F9502163D720}");
-
-            public const string HeaderMenuItems_FieldName = "HeaderMenuItems";
-            public static readonly ID HeaderMenuItems_FieldID = new ID("{31282663-006B-47B1-95AE-F044B042F534}");
-
-            public const string ContactUsPage_FieldName = "Contact Us Page";
-            public static readonly ID ContactUsPage_FieldID = new ID("{0D831D08-90C7-4E31-B880-5A93146B3029}");
-        }
-
         public static class HeaderDropDown
         {
+            public static readonly ID PageItem_FieldID = new ID("{F01D9F47-3D98-42D9-AB7D-59B5E845B974}");
+            public const string PageItem_FieldName = "Page Item";
+
+            public static readonly ID NavigationColumns_FieldID = new ID("{D335CC19-7219-49BA-8782-95DEF11A5C4D}");
             public const string NavigationColumns_FieldName = "NavigationColumns";
+
+            public static readonly ID Images_FieldID = new ID("{C230E8EB-6B8F-44CD-BC43-5B24B540F6AE}");
             public const string Images_FieldName = "Images";
+
+            public static readonly ID ShowCTA_FieldID = new ID("{8016EC09-4619-48B1-B90D-D60B2E2DA621}");
             public const string ShowCTA_FieldName = "Show CTA";
+
+            public static readonly ID CTALabel_FieldID = new ID("{24930482-3138-42F2-9AAF-5439885993D4}");
             public const string CTALabel_FieldName = "CTA Label";
+
+            public static readonly ID CTALink_FieldID = new ID("{716377AD-4C27-4F6D-A932-C121AED8EB70}");
             public const string CTALink_FieldName = "CTA Link";
         }
 
         public static class HeaderImage
         {
+            public static readonly ID Image_FieldID = new ID("{C0A0281F-CFE6-45E1-A095-B02D109A8952}");
             public const string Image_FieldName = "Image";
+
+            public static readonly ID Title_FieldID = new ID("{D6596C9A-E05A-49DD-98E6-7BA505D79842}");
             public const string Title_FieldName = "Title";
+
+            public static readonly ID Description_FieldID = new ID("{7FF41320-58C1-4A05-B2C5-DD1E4F9C2191}");
             public const string Description_FieldName = "Description";
+
+            public static readonly ID Link_FieldID = new ID("{2DAF00E2-B3E8-4BB2-836A-C47F505EE481}");
             public const string Link_FieldName = "Link";
         }
 
         public static class HeaderNavigationColumn
         {
+            public static readonly ID ShowColumnLink_FieldID = new ID("{FE160AB8-1158-46C9-80AD-43557CE4129D}");
             public const string ShowColumnLink_FieldName = "Show Column Link";
+
+            public static readonly ID ColumnLink_FieldID = new ID("{9012EE1A-DEA2-49FA-951D-F72E835639CA}");
             public const string ColumnLink_FieldName = "Column Link";
+
+            public static readonly ID ColumnLinkLabel_FieldID = new ID("{9063296F-3BBE-4D1F-9EA6-9A6E2442B520}");
             public const string ColumnLinkLabel_FieldName = "Column Link Label";
+
+            public static readonly ID ColumnTitle_FieldID = new ID("{89CC8946-1499-4D72-9D06-016CC68B0401}");
             public const string ColumnTitle_FieldName = "Column Title";
+
+            public static readonly ID PageLinks_FieldID = new ID("{E6689B09-D0FF-4B12-965C-625B7185F6BE}");
             public const string PageLinks_FieldName = "Page Links";
         }
 
-        public static class Footer
-        {
+        public static class FooterConfiguration
+        {           
             public const string FindUsLabel_FieldName = "FindUsLabel";
             public static readonly ID FindUsLabel_FieldID = new ID("{05ABA786-3D35-479B-ADA4-ECEE716AD9F5}");
 
@@ -78,9 +94,7 @@
             public static readonly ID Email_FieldID = new ID("{D77B2873-DB24-4887-9DB1-AF3BCD76F3D6}");
 
             public const string EmailCTALabel_FieldName = "EmailCTALabel";
-            public static readonly ID EmailCTALabel_FieldID = new ID("{E4CA4419-EFEE-45A0-BEF9-2F611004D7A7}");
-
-            public const string FooterConfiguration_FieldName = "Footer Configuration";
+            public static readonly ID EmailCTALabel_FieldID = new ID("{E4CA4419-EFEE-45A0-BEF9-2F611004D7A7}");            
 
             public const string SubscribeNewsletterLabel_FieldName = "SubscribeNewsletterLabel";
             public static readonly ID SubscribeNewsletterLabel_FieldID = new ID("{6A0F17AB-B448-474A-A275-5EE5F12F8D10}");
@@ -93,24 +107,24 @@
 
             public const string Copyright_FieldName = "Copyright";
             public static readonly ID Copyright_FieldID = new ID("{E168F770-7271-4DC4-9242-72805145ACDC}");
-        }
 
-        public static class FooterConfiguration
-        {
             public const string PageLinks_FieldName = "Page Links";
+            public static readonly ID PageLinks_FieldId = new ID("{E28B0C65-2DC9-42CB-B852-282C57BFEE3A}");
+
             public const string SocialLinks_FieldName = "Social Links";
+            public static readonly ID SocialLinks_FieldId = new ID("{F0D67B9B-4D7D-40AC-B854-AC936934071D}");
         }
 
         public static class SocialIcon
         {
             public const string SocialLink_FieldName = "Link";
-            public static readonly ID SocialLink_FieldID = new ID("{380DE464-FA5D-4B97-AD9E-B520108FD350}");
+            public static readonly ID SocialLink_FieldID = new ID("{E990E03D-0332-45CC-A5E7-613996DEDA74}");
 
             public const string SocialIcon_FieldName = "Icon";
-            public static readonly ID SocialIcon_FieldID = new ID("{18F9485A-B46B-4F81-B166-FB972D21FEF4}");
+            public static readonly ID SocialIcon_FieldID = new ID("{321DB99F-5D14-4703-AC2F-6FEEA5E48000}");
 
             public const string TwitterAccounts_FieldName = "TwitterMultipleAccounts";
-            public static readonly ID TwitterAccounts_FieldID = new ID("{4B63503E-2D9F-43D0-B7A6-9A92EC21013E}");
+            public static readonly ID TwitterAccounts_FieldID = new ID("{9568F987-E036-4144-B158-B2084D778CE2}");
         }
 
         public static class PageLink
@@ -150,6 +164,15 @@
         {
             public const string TemplateName = "_NavigationRoot";
             public static readonly ID TemplateID = new ID("{93962463-4F5F-45E8-BE15-79F96D0CBB04}");
+
+            public const string FooterConfiguration_FieldName = "Footer Configuration";
+            public static readonly ID FooterConfiguration_FieldId = new ID("{E27B5DB1-CE93-4CB1-BA69-F78556AACAF0}");
+
+            public const string HeaderConfiguration_FieldName = "Header Configuration";
+            public static readonly ID HeaderConfiguration_FieldID = new ID("{95F0787B-70E6-4164-98C0-F9502163D720}");
+
+            public const string ContactUsPage_FieldName = "Contact Us Page";
+            public static readonly ID ContactUsPage_FieldID = new ID("{0D831D08-90C7-4E31-B880-5A93146B3029}");
         }
 
         public static class Navigation
