@@ -41,9 +41,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="moq">
-      <Version>4.16.1</Version>
-    </PackageReference>
     <PackageReference Include="Unicorn" Version="4.0.8" />
     <PackageReference Include="Unicorn.Roles" Version="4.0.8" />
     <PackageReference Include="Unicorn.Users" Version="4.0.8" />
