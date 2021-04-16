@@ -62,9 +62,9 @@
 
                                                                 @if (firstNavigationColumn != null)
                                                                 {
+                                                                    <h4 class="dropdown-nav__title">@Html.Glass().Editable(firstNavigationColumn, z => z.ColumnTitle)</h4>
                                                                     if (firstNavigationColumn.ShowColumnLink)
                                                                     {
-                                                                        <h4 class="dropdown-nav__title">@Html.Glass().Editable(firstNavigationColumn, z => z.ColumnTitle)</h4>
                                                                         using (Html.Glass().BeginRenderLink(firstNavigationColumn, z => z.ColumnLink, new NameValueCollection { { "class", "link-styles d-block mb-4" } }, isEditable: true))
                                                                         {
                                                                             @Html.Glass().Editable(firstNavigationColumn, z => z.ColumnLinkLabel) <i class="icon-arrow-right"></i>
@@ -89,9 +89,9 @@
                                                             var secondNavigationColumn = otherNavigationColumns.FirstOrDefault();
                                                             <div class="col-md-3 offset-1">
                                                                 <nav>
+                                                                    <h4 class="dropdown-nav__title">@Html.Glass().Editable(secondNavigationColumn, z => z.ColumnTitle)</h4>
                                                                     @if (secondNavigationColumn.ShowColumnLink)
                                                                     {
-                                                                        <h4 class="dropdown-nav__title">@Html.Glass().Editable(secondNavigationColumn, z => z.ColumnTitle)</h4>
                                                                         using (Html.Glass().BeginRenderLink(secondNavigationColumn, z => z.ColumnLink, new NameValueCollection { { "class", "link-styles d-block mb-4" } }, isEditable: true))
                                                                         {
                                                                             @Html.Glass().Editable(secondNavigationColumn, z => z.ColumnLinkLabel) <i class="icon-arrow-right"></i>
@@ -116,9 +116,9 @@
                                                                 var thirdNavigationColumn = lastNavigationColumn.FirstOrDefault();
                                                                 <div class="col-xl-4 col-lg-5 offset-xl-1">
                                                                     <nav>
+                                                                        <h4 class="dropdown-nav__title">@Html.Glass().Editable(thirdNavigationColumn, z => z.ColumnTitle)</h4>
                                                                         @if (thirdNavigationColumn.ShowColumnLink)
                                                                         {
-                                                                            <h4 class="dropdown-nav__title">@Html.Glass().Editable(thirdNavigationColumn, z => z.ColumnTitle)</h4>
                                                                             using (Html.Glass().BeginRenderLink(thirdNavigationColumn, z => z.ColumnLink, new NameValueCollection { { "class", "link-styles d-block mb-4" } }, isEditable: true))
                                                                             {
                                                                                 @Html.Glass().Editable(thirdNavigationColumn, z => z.ColumnLinkLabel) <i class="icon-arrow-right"></i>
@@ -142,88 +142,78 @@
                                                             {
                                                                 if (dropDown.Images != null && dropDown.Images.Any())
                                                                 {
-                                                                    if (dropDown.Images.Count() == 1)
-                                                                    {
-                                                                        var image = dropDown.Images.FirstOrDefault();
-                                                                        if (image != null)
+                                                                    <div class="col-xl-4 col-lg-5 offset-xl-1">
+                                                                        @if (dropDown.Images.Count() == 1)
                                                                         {
-                                                                            <div class="col-xl-4 col-lg-5 offset-lg-4 offset-xl-5">
-                                                                                @if (image.Link != null || Sitecore.Context.PageMode.IsExperienceEditor)
+                                                                            var image = dropDown.Images.FirstOrDefault();
+                                                                            if (image != null && image.Link != null || Sitecore.Context.PageMode.IsExperienceEditor)
+                                                                            {
+                                                                                var imageSrc = image.Image != null ? !string.IsNullOrEmpty(image.Image.Src) ? image.Image.Src : "dist/images/components/navigation/charts.svg" : "dist/images/components/navigation/charts.svg";
+                                                                                using (Html.Glass().BeginRenderLink(
+                                                                                    image, z => z.Link,
+                                                                                    new NameValueCollection {
+                                                                                    { "class", "quick-link-chart" },
+                                                                                    { "style", "background-image: url('" + imageSrc + "')" } },
+                                                                                    isEditable: true))
                                                                                 {
-                                                                                    var imageSrc = image.Image != null ? !string.IsNullOrEmpty(image.Image.Src) ? image.Image.Src : "images/components/navigation/charts.svg" : "images/components/navigation/charts.svg";
-                                                                                    using (Html.Glass().BeginRenderLink(
-                                                                                        image, z => z.Link, 
-                                                                                        new NameValueCollection { 
-                                                                                            { "class", "quick-link-chart" }, 
-                                                                                            { "style", "background-image: url('" + imageSrc + "')" } }, 
-                                                                                        isEditable: true))
-                                                                                    {
-                                                                                        <span class="quick-link-chart__title">@Html.Glass().Editable(image, z => z.Title)</span>
-                                                                                        <span class="quick-link-chart__text">@Html.Glass().Editable(image, z => z.Description)</span>
-                                                                                    }
+                                                                                    <span class="quick-link-chart__title">@Html.Glass().Editable(image, z => z.Title)</span>
+                                                                                    <span class="quick-link-chart__text">@Html.Glass().Editable(image, z => z.Description)</span>
                                                                                 }
-                                                                                else
-                                                                                {
-                                                                                    <a href="#" class="quick-link-chart" style="background-image: url('@(image.Image != null ? !string.IsNullOrEmpty(image.Image.Src) ? image.Image.Src : "images/components/navigation/charts.svg" : "images/components/navigation/charts.svg") ')">
-                                                                                        <span class="quick-link-chart__title">@Html.Glass().Editable(image, z => z.Title)</span>
-                                                                                        <span class="quick-link-chart__text">@Html.Glass().Editable(image, z => z.Description)</span>
-                                                                                    </a>
-                                                                                }
-                                                                            </div>
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                <a href="#" class="quick-link-chart" style="background-image: url('@(image.Image != null ? !string.IsNullOrEmpty(image.Image.Src) ? image.Image.Src : "dist/images/components/navigation/charts.svg" : "dist/images/components/navigation/charts.svg") ')">
+                                                                                    <span class="quick-link-chart__title">@Html.Glass().Editable(image, z => z.Title)</span>
+                                                                                    <span class="quick-link-chart__text">@Html.Glass().Editable(image, z => z.Description)</span>
+                                                                                </a>
+                                                                            }
                                                                         }
-                                                                    }
-                                                                    else
-                                                                    {
-                                                                        var firstImage = dropDown.Images.FirstOrDefault();
-                                                                        if (firstImage != null)
+                                                                        else
                                                                         {
-                                                                            <div class="col-xl-4 col-lg-5 offset-lg-4 offset-xl-5">
-                                                                                @if (firstImage.Link != null || Sitecore.Context.PageMode.IsExperienceEditor)
+                                                                            var firstImage = dropDown.Images.FirstOrDefault();
+                                                                            if (firstImage != null && firstImage.Link != null || Sitecore.Context.PageMode.IsExperienceEditor)
+                                                                            {
+                                                                                using (Html.Glass().BeginRenderLink(
+                                                                                    firstImage, z => z.Link,
+                                                                                    new NameValueCollection {
+                                                                                            { "class", "quick-link-chart quick-link-chart__small" },
+                                                                                            { "style", "background-image: url('" + firstImage.Image != null ? !string.IsNullOrEmpty(firstImage.Image.Src) ? firstImage.Image.Src : "dist/images/components/navigation/charts.svg" : "dist/images/components/navigation/charts.svg" + "')" } },
+                                                                                    isEditable: true))
                                                                                 {
-                                                                                    using (Html.Glass().BeginRenderLink(
-                                                                                        firstImage, z => z.Link, 
-                                                                                        new NameValueCollection { 
-                                                                                            { "class", "quick-link-chart quick-link-chart__small" }, 
-                                                                                            { "style", "background-image: url('" + firstImage.Image != null ? !string.IsNullOrEmpty(firstImage.Image.Src) ? firstImage.Image.Src : "images/components/navigation/charts.svg" : "images/components/navigation/charts.svg" + "')" } }, 
-                                                                                        isEditable: true))
-                                                                                    {
-                                                                                        <span class="quick-link-chart__title">@Html.Glass().Editable(firstImage, z => z.Title)</span>
-                                                                                        <span class="quick-link-chart__text">@Html.Glass().Editable(firstImage, z => z.Description)</span>
-                                                                                    }
+                                                                                    <span class="quick-link-chart__title">@Html.Glass().Editable(firstImage, z => z.Title)</span>
+                                                                                    <span class="quick-link-chart__text">@Html.Glass().Editable(firstImage, z => z.Description)</span>
                                                                                 }
-                                                                                else
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                <a href="#" class="quick-link-chart quick-link-chart__small" style="background-image: url('@(firstImage.Image != null ? !string.IsNullOrEmpty(firstImage.Image.Src) ? firstImage.Image.Src : "dist/images/components/navigation/charts.svg" : "dist/images/components/navigation/charts.svg")')">
+                                                                                    <span class="quick-link-chart__title">@Html.Glass().Editable(firstImage, z => z.Title)</span>
+                                                                                    <span class="quick-link-chart__text">@Html.Glass().Editable(firstImage, z => z.Description)</span>
+                                                                                </a>
+                                                                            }
+
+                                                                            var secondImage = dropDown.Images.Skip(1).FirstOrDefault();
+
+                                                                            if (secondImage != null && secondImage.Link != null || Sitecore.Context.PageMode.IsExperienceEditor)
+                                                                            {
+                                                                                using (Html.Glass().BeginRenderLink(secondImage, z => z.Link, new NameValueCollection { { "class", "quick-link-chart quick-link-chart__small" }, { "style", "background-image: url('" + secondImage.Image != null ? !string.IsNullOrEmpty(secondImage.Image.Src) ? secondImage.Image.Src : "dist/images/components/navigation/charts.svg" : "dist/images/components/navigation/charts.svg" + "')" } },
+                                                                                    isEditable: true))
                                                                                 {
-                                                                                    <a href="#" class="quick-link-chart quick-link-chart__small" style="background-image: url('@(firstImage.Image !=null ? !string.IsNullOrEmpty(firstImage.Image.Src) ? firstImage.Image.Src : "images/components/navigation/charts.svg" : "images/components/navigation/charts.svg")')">
-                                                                                        <span class="quick-link-chart__title">@Html.Glass().Editable(firstImage, z => z.Title)</span>
-                                                                                        <span class="quick-link-chart__text">@Html.Glass().Editable(firstImage, z => z.Description)</span>
-                                                                                    </a>
+                                                                                    <span class="quick-link-chart__title">@Html.Glass().Editable(secondImage, z => z.Title)</span>
+                                                                                    <span class="quick-link-chart__text">@Html.Glass().Editable(secondImage, z => z.Description)</span>
                                                                                 }
-                                                                            </div>
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                <a href="#" class="quick-link-chart quick-link-chart__small" style="background-image: url('@(secondImage.Image != null ? !string.IsNullOrEmpty(secondImage.Image.Src) ? secondImage.Image.Src : "dist/images/components/navigation/charts.svg" : "dist/images/components/navigation/charts.svg")')">
+                                                                                    <span class="quick-link-chart__title">@Html.Glass().Editable(secondImage, z => z.Title)</span>
+                                                                                    <span class="quick-link-chart__text">@Html.Glass().Editable(secondImage, z => z.Description)</span>
+                                                                                </a>
+                                                                            }
                                                                         }
-                                                                        var secondImage = dropDown.Images.Skip(1).FirstOrDefault();
-                                                                        if (secondImage != null)
-                                                                        {
-                                                                            <div class="col-xl-4 col-lg-5 offset-lg-4 offset-xl-5">
-                                                                                @if (secondImage.Link != null || Sitecore.Context.PageMode.IsExperienceEditor)
-                                                                                {
-                                                                                    using (Html.Glass().BeginRenderLink(secondImage, z => z.Link, new NameValueCollection { { "class", "quick-link-chart quick-link-chart__small" }, { "style", "background-image: url('" + secondImage.Image != null ? !string.IsNullOrEmpty(secondImage.Image.Src) ? secondImage.Image.Src : "images/components/navigation/charts.svg" : "images/components/navigation/charts.svg" + "')" } }, 
-                                                                                        isEditable: true))
-                                                                                    {
-                                                                                        <span class="quick-link-chart__title">@Html.Glass().Editable(secondImage, z => z.Title)</span>
-                                                                                        <span class="quick-link-chart__text">@Html.Glass().Editable(secondImage, z => z.Description)</span>
-                                                                                    }
-                                                                                }
-                                                                                else
-                                                                                {
-                                                                                    <a href="#" class="quick-link-chart quick-link-chart__small" style="background-image: url('@(secondImage.Image != null ? !string.IsNullOrEmpty(secondImage.Image.Src) ? secondImage.Image.Src : "images/components/navigation/charts.svg" : "images/components/navigation/charts.svg")')">
-                                                                                        <span class="quick-link-chart__title">@Html.Glass().Editable(secondImage, z => z.Title)</span>
-                                                                                        <span class="quick-link-chart__text">@Html.Glass().Editable(secondImage, z => z.Description)</span>
-                                                                                    </a>
-                                                                                }
-                                                                            </div>
-                                                                        }
-                                                                    }
+                                                                    </div>
                                                                 }
+
                                                             }
                                                         }
                                                         else
@@ -240,10 +230,10 @@
                                                                             @if (image.Link != null || Sitecore.Context.PageMode.IsExperienceEditor)
                                                                             {
                                                                                 using (Html.Glass().BeginRenderLink(
-                                                                                    image, z => z.Link, 
-                                                                                    new NameValueCollection { 
-                                                                                        { "class", "quick-link-chart" }, 
-                                                                                        { "style", "background-image: url('" + image.Image != null ? !string.IsNullOrEmpty(image.Image.Src) ? image.Image.Src : "images/components/navigation/charts.svg" : "images/components/navigation/charts.svg" + "')" } }, 
+                                                                                    image, z => z.Link,
+                                                                                    new NameValueCollection {
+                                                                                        { "class", "quick-link-chart" },
+                                                                                        { "style", "background-image: url('" + image.Image != null ? !string.IsNullOrEmpty(image.Image.Src) ? image.Image.Src : "dist/images/components/navigation/charts.svg" : "dist/images/components/navigation/charts.svg" + "')" } },
                                                                                     isEditable: true))
                                                                                 {
                                                                                     <span class="quick-link-chart__title">@Html.Glass().Editable(image, z => z.Title)</span>
@@ -252,7 +242,7 @@
                                                                             }
                                                                             else
                                                                             {
-                                                                                <a href="#" class="quick-link-chart" style="background-image: url('@(image.Image !=null ? !string.IsNullOrEmpty(image.Image.Src) ? image.Image.Src : "images/components/navigation/charts.svg" : "images/components/navigation/charts.svg")')">
+                                                                                <a href="#" class="quick-link-chart" style="background-image: url('@(image.Image !=null ? !string.IsNullOrEmpty(image.Image.Src) ? image.Image.Src : "dist/images/components/navigation/charts.svg" : "dist/images/components/navigation/charts.svg")')">
                                                                                     <span class="quick-link-chart__title">@Html.Glass().Editable(image, z => z.Title)</span>
                                                                                     <span class="quick-link-chart__text">@Html.Glass().Editable(image, z => z.Description)</span>
                                                                                 </a>
@@ -274,10 +264,10 @@
                                                                                         if (firstImage.Link != null || Sitecore.Context.PageMode.IsExperienceEditor)
                                                                                         {
                                                                                             using (Html.Glass().BeginRenderLink(
-                                                                                                firstImage, z => z.Link, 
-                                                                                                new NameValueCollection { 
-                                                                                                    { "class", "quick-link-chart" }, 
-                                                                                                    { "style", "background-image: url('" + firstImage.Image != null ? !string.IsNullOrEmpty(firstImage.Image.Src) ? firstImage.Image.Src : "images/components/navigation/charts.svg" : "images/components/navigation/charts.svg" + "')" } }, 
+                                                                                                firstImage, z => z.Link,
+                                                                                                new NameValueCollection {
+                                                                                                    { "class", "quick-link-chart" },
+                                                                                                    { "style", "background-image: url('" + firstImage.Image != null ? !string.IsNullOrEmpty(firstImage.Image.Src) ? firstImage.Image.Src : "dist/images/components/navigation/charts.svg" : "dist/images/components/navigation/charts.svg" + "')" } },
                                                                                                 isEditable: true))
                                                                                             {
                                                                                                 <span class="quick-link-chart__title">@Html.Glass().Editable(firstImage, z => z.Title)</span>
@@ -301,12 +291,12 @@
                                                                                     {
                                                                                         if (firstImage.Link != null || Sitecore.Context.PageMode.IsExperienceEditor)
                                                                                         {
-                                                                                            var firstImageSrc = firstImage.Image != null ? !string.IsNullOrEmpty(firstImage.Image.Src) ? firstImage.Image.Src : "images/components/navigation/charts.svg" : "images/components/navigation/charts.svg";
+                                                                                            var firstImageSrc = firstImage.Image != null ? !string.IsNullOrEmpty(firstImage.Image.Src) ? firstImage.Image.Src : "dist/images/components/navigation/charts.svg" : "dist/images/components/navigation/charts.svg";
                                                                                             using (Html.Glass().BeginRenderLink(
-                                                                                                firstImage, z => z.Link, 
-                                                                                                new NameValueCollection { 
-                                                                                                    { "class", "quick-link-chart quick-link-chart__small" }, 
-                                                                                                    { "style", "background-image: url('" + firstImageSrc + "')" } }, 
+                                                                                                firstImage, z => z.Link,
+                                                                                                new NameValueCollection {
+                                                                                                    { "class", "quick-link-chart quick-link-chart__small" },
+                                                                                                    { "style", "background-image: url('" + firstImageSrc + "')" } },
                                                                                                 isEditable: true))
                                                                                             {
                                                                                                 <span class="quick-link-chart__title">@Html.Glass().Editable(firstImage, z => z.Title)</span>
@@ -315,7 +305,7 @@
                                                                                         }
                                                                                         else
                                                                                         {
-                                                                                            <a href="#" class="quick-link-chart quick-link-chart__small" style="background-image: url('@(firstImage.Image !=null ? !string.IsNullOrEmpty(firstImage.Image.Src) ? firstImage.Image.Src : "images/components/navigation/charts.svg" : "images/components/navigation/charts.svg")')">
+                                                                                            <a href="#" class="quick-link-chart quick-link-chart__small" style="background-image: url('@(firstImage.Image !=null ? !string.IsNullOrEmpty(firstImage.Image.Src) ? firstImage.Image.Src : "dist/images/components/navigation/charts.svg" : "dist/images/components/navigation/charts.svg")')">
                                                                                                 <span class="quick-link-chart__title">@Html.Glass().Editable(firstImage, z => z.Title)</span>
                                                                                                 <span class="quick-link-chart__text">@Html.Glass().Editable(firstImage, z => z.Description)</span>
                                                                                             </a>
@@ -326,12 +316,12 @@
                                                                                     {
                                                                                         if (secondImage.Link != null || Sitecore.Context.PageMode.IsExperienceEditor)
                                                                                         {
-                                                                                            var secondImageSrc = secondImage.Image != null ? !string.IsNullOrEmpty(secondImage.Image.Src) ? secondImage.Image.Src : "images/components/navigation/charts.svg" : "images/components/navigation/charts.svg";
+                                                                                            var secondImageSrc = secondImage.Image != null ? !string.IsNullOrEmpty(secondImage.Image.Src) ? secondImage.Image.Src : "dist/images/components/navigation/charts.svg" : "dist/images/components/navigation/charts.svg";
                                                                                             using (Html.Glass().BeginRenderLink(
-                                                                                                secondImage, z => z.Link, 
-                                                                                                new NameValueCollection { 
-                                                                                                    { "class", "quick-link-chart quick-link-chart__small" }, 
-                                                                                                    { "style", "background-image: url('" + secondImageSrc + "')" } }, 
+                                                                                                secondImage, z => z.Link,
+                                                                                                new NameValueCollection {
+                                                                                                    { "class", "quick-link-chart quick-link-chart__small" },
+                                                                                                    { "style", "background-image: url('" + secondImageSrc + "')" } },
                                                                                                 isEditable: true))
                                                                                             {
                                                                                                 <span class="quick-link-chart__title">@Html.Glass().Editable(secondImage, z => z.Title)</span>
@@ -340,7 +330,7 @@
                                                                                         }
                                                                                         else
                                                                                         {
-                                                                                            <a href="#" class="quick-link-chart quick-link-chart__small" style="background-image: url('@(secondImage.Image !=null ? !string.IsNullOrEmpty(secondImage.Image.Src) ? secondImage.Image.Src : "images/components/navigation/charts.svg" : "images/components/navigation/charts.svg")')">
+                                                                                            <a href="#" class="quick-link-chart quick-link-chart__small" style="background-image: url('@(secondImage.Image !=null ? !string.IsNullOrEmpty(secondImage.Image.Src) ? secondImage.Image.Src : "dist/images/components/navigation/charts.svg" : "dist/images/components/navigation/charts.svg")')">
                                                                                                 <span class="quick-link-chart__title">@Html.Glass().Editable(secondImage, z => z.Title)</span>
                                                                                                 <span class="quick-link-chart__text">@Html.Glass().Editable(secondImage, z => z.Description)</span>
                                                                                             </a>
@@ -357,12 +347,12 @@
                                                                                     {
                                                                                         if (secondColumnImage.Link != null || Sitecore.Context.PageMode.IsExperienceEditor)
                                                                                         {
-                                                                                            var secondColumnImageSrc = secondColumnImage.Image != null ? !string.IsNullOrEmpty(secondColumnImage.Image.Src) ? secondColumnImage.Image.Src : "images/components/navigation/charts.svg" : "images/components/navigation/charts.svg";
+                                                                                            var secondColumnImageSrc = secondColumnImage.Image != null ? !string.IsNullOrEmpty(secondColumnImage.Image.Src) ? secondColumnImage.Image.Src : "dist/images/components/navigation/charts.svg" : "dist/images/components/navigation/charts.svg";
                                                                                             using (Html.Glass().BeginRenderLink(
-                                                                                                secondColumnImage, z => z.Link, 
-                                                                                                new NameValueCollection { 
-                                                                                                    { "class", "quick-link-chart" }, 
-                                                                                                    { "style", "background-image: url('" + secondColumnImageSrc + "')" } }, 
+                                                                                                secondColumnImage, z => z.Link,
+                                                                                                new NameValueCollection {
+                                                                                                    { "class", "quick-link-chart" },
+                                                                                                    { "style", "background-image: url('" + secondColumnImageSrc + "')" } },
                                                                                                 isEditable: true))
                                                                                             {
                                                                                                 <span class="quick-link-chart__title">@Html.Glass().Editable(secondColumnImage, z => z.Title)</span>
@@ -371,7 +361,7 @@
                                                                                         }
                                                                                         else
                                                                                         {
-                                                                                            <a href="#" class="quick-link-chart" style="background-image: url('@(secondColumnImage.Image != null ? !string.IsNullOrEmpty(secondColumnImage.Image.Src) ? secondColumnImage.Image.Src : "images/components/navigation/charts.svg" : "images/components/navigation/charts.svg")')">
+                                                                                            <a href="#" class="quick-link-chart" style="background-image: url('@(secondColumnImage.Image != null ? !string.IsNullOrEmpty(secondColumnImage.Image.Src) ? secondColumnImage.Image.Src : "dist/images/components/navigation/charts.svg" : "dist/images/components/navigation/charts.svg")')">
                                                                                                 <span class="quick-link-chart__title">@Html.Glass().Editable(secondColumnImage, z => z.Title)</span>
                                                                                                 <span class="quick-link-chart__text">@Html.Glass().Editable(secondColumnImage, z => z.Description)</span>
                                                                                             </a>
@@ -386,10 +376,10 @@
                                                                                         if (secondColumnFirstImage.Link != null || Sitecore.Context.PageMode.IsExperienceEditor)
                                                                                         {
                                                                                             using (Html.Glass().BeginRenderLink(
-                                                                                                secondColumnFirstImage, z => z.Link, 
-                                                                                                new NameValueCollection { 
-                                                                                                    { "class", "quick-link-chart quick-link-chart__small" }, 
-                                                                                                    { "style", "background-image: url('" + secondColumnFirstImage.Image != null ? !string.IsNullOrEmpty(secondColumnFirstImage.Image.Src) ? secondColumnFirstImage.Image.Src : "images/components/navigation/charts.svg" : "images/components/navigation/charts.svg" + "')" } }, 
+                                                                                                secondColumnFirstImage, z => z.Link,
+                                                                                                new NameValueCollection {
+                                                                                                    { "class", "quick-link-chart quick-link-chart__small" },
+                                                                                                    { "style", "background-image: url('" + secondColumnFirstImage.Image != null ? !string.IsNullOrEmpty(secondColumnFirstImage.Image.Src) ? secondColumnFirstImage.Image.Src : "dist/images/components/navigation/charts.svg" : "dist/images/components/navigation/charts.svg" + "')" } },
                                                                                                 isEditable: true))
                                                                                             {
                                                                                                 <span class="quick-link-chart__title">@Html.Glass().Editable(secondColumnFirstImage, z => z.Title)</span>
@@ -398,7 +388,7 @@
                                                                                         }
                                                                                         else
                                                                                         {
-                                                                                            <a href="#" class="quick-link-chart quick-link-chart__small" style="background-image: url('@(secondColumnFirstImage.Image != null ? !string.IsNullOrEmpty(secondColumnFirstImage.Image.Src) ? secondColumnFirstImage.Image.Src : "images/components/navigation/charts.svg" : "images/components/navigation/charts.svg")')">
+                                                                                            <a href="#" class="quick-link-chart quick-link-chart__small" style="background-image: url('@(secondColumnFirstImage.Image != null ? !string.IsNullOrEmpty(secondColumnFirstImage.Image.Src) ? secondColumnFirstImage.Image.Src : "dist/images/components/navigation/charts.svg" : "dist/images/components/navigation/charts.svg")')">
                                                                                                 <span class="quick-link-chart__title">@Html.Glass().Editable(secondColumnFirstImage, z => z.Title)</span>
                                                                                                 <span class="quick-link-chart__text">@Html.Glass().Editable(secondColumnFirstImage, z => z.Description)</span>
                                                                                             </a>
@@ -410,10 +400,10 @@
                                                                                         if (secondColumnSecondImage.Link != null || Sitecore.Context.PageMode.IsExperienceEditor)
                                                                                         {
                                                                                             using (Html.Glass().BeginRenderLink(
-                                                                                                secondColumnSecondImage, z => z.Link, 
-                                                                                                new NameValueCollection { 
-                                                                                                    { "class", "quick-link-chart quick-link-chart__small" }, 
-                                                                                                    { "style", "background-image: url('" + secondColumnSecondImage.Image != null ? !string.IsNullOrEmpty(secondColumnSecondImage.Image.Src) ? secondColumnSecondImage.Image.Src : "images/components/navigation/charts.svg" : "images/components/navigation/charts.svg" + "')" } }, 
+                                                                                                secondColumnSecondImage, z => z.Link,
+                                                                                                new NameValueCollection {
+                                                                                                    { "class", "quick-link-chart quick-link-chart__small" },
+                                                                                                    { "style", "background-image: url('" + secondColumnSecondImage.Image != null ? !string.IsNullOrEmpty(secondColumnSecondImage.Image.Src) ? secondColumnSecondImage.Image.Src : "dist/images/components/navigation/charts.svg" : "dist/images/components/navigation/charts.svg" + "')" } },
                                                                                                 isEditable: true))
                                                                                             {
                                                                                                 <span class="quick-link-chart__title">@Html.Glass().Editable(secondColumnSecondImage, z => z.Title)</span>
@@ -422,7 +412,7 @@
                                                                                         }
                                                                                         else
                                                                                         {
-                                                                                            <a href="#" class="quick-link-chart quick-link-chart__small" style="background-image: url('@(secondColumnSecondImage.Image !=null ? !string.IsNullOrEmpty(secondColumnSecondImage.Image.Src) ? secondColumnSecondImage.Image.Src : "images/components/navigation/charts.svg" : "images/components/navigation/charts.svg")')">
+                                                                                            <a href="#" class="quick-link-chart quick-link-chart__small" style="background-image: url('@(secondColumnSecondImage.Image !=null ? !string.IsNullOrEmpty(secondColumnSecondImage.Image.Src) ? secondColumnSecondImage.Image.Src : "dist/images/components/navigation/charts.svg" : "dist/images/components/navigation/charts.svg")')">
                                                                                                 <span class="quick-link-chart__title">@Html.Glass().Editable(secondColumnSecondImage, z => z.Title)</span>
                                                                                                 <span class="quick-link-chart__text">@Html.Glass().Editable(secondColumnSecondImage, z => z.Description)</span>
                                                                                             </a>
@@ -455,15 +445,14 @@
                 }
 
                 <a href="#" class="header-navbar__user-link">
-                    <img src="images/components/header/user.svg" alt="user profile">
+                    <img src="dist/images/components/header/user.svg" alt="user profile">
                 </a>
                 <div class="header-navbar__btn-search">
-                    <img src="images/components/header/search.svg" alt="search">
+                    <img src="dist/images/components/header/search.svg" alt="search">
                 </div>
             </div>
-
-            @Html.Partial("~/Views/Navigation/Menu.cshtml", Model)
         </section>
+            @Html.Partial("~/Views/Navigation/Menu.cshtml", Model)        
     </header>
 }
 else if (Sitecore.Context.PageMode.IsExperienceEditor)

@@ -1,8 +1,8 @@
 ﻿---
-ID: "6ced57e9-cfb0-4d79-b251-0e6cc5e5608c"
+ID: "9207e8e3-7842-44bb-b2bf-fed184a2c081"
 Parent: "e7bb0a63-81a6-4742-97ab-2dfa76064e34"
 Template: "e064bed9-a890-4e84-834d-44255b384405"
-Path: /sitecore/content/Liontrust/Page Settings/Header Configuration/Our Funds/Images/Interactive Fund Centre
+Path: /sitecore/content/Liontrust/Page Settings/Header Configuration/Our Funds/Images/Copy of Interactive Fund Centre
 DB: master
 Languages:
 - Language: en
@@ -10,7 +10,12 @@ Languages:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Value: "20210406T123821:637533095019728337Z"
+      Hint: __Created
+      Value: 20210406T123313Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
     - ID: "7ff41320-58c1-4a05-b2c5-dd1e4f9c2191"
       Hint: Description
       Value: Lorem ipsum dolor sit amet, consectetur adipiscing elit

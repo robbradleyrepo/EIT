@@ -13,8 +13,8 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>@Html.Sitecore().Field("BrowserTitle", new { DisableWebEdit = true })</title>
     @Html.Sitecore().VisitorIdentification()
-    <link rel="icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="icon" href="dist/images/favicon.ico">
+    <link rel="stylesheet" href="dist/css/styles.min.css">
 </head>
 <body>
     @Html.Sitecore().Placeholder("header")
@@ -23,8 +23,8 @@
         @Html.Sitecore().Placeholder("main")
     </main>
     @Html.Sitecore().Placeholder("footer")
-    <script src="js/script.js"></script>
-    <script src="js/search-page.min.js"></script>
+    <script src="dist/js/app.min.js"></script>
+    <script src="dist/js/search-page.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>
