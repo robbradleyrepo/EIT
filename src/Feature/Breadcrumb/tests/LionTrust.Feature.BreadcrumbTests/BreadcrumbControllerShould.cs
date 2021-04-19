@@ -1,13 +1,13 @@
-﻿using Glass.Mapper.Sc.Web;
-using LionTrust.Feature.Breadcrumb;
-using LionTrust.Feature.Breadcrumb.Models;
-using LionTrust.Feature.Breadcrumb.Services;
-using Moq;
-using NUnit.Framework;
-using System.Web.Mvc;
-
-namespace LionTrust.Feature.BreadcrumbTests
+﻿namespace LionTrust.Feature.BreadcrumbTests
 {
+    using Glass.Mapper.Sc.Web;
+    using LionTrust.Feature.Breadcrumb;
+    using LionTrust.Feature.Breadcrumb.Models;
+    using LionTrust.Feature.Breadcrumb.Services;
+    using Moq;
+    using NUnit.Framework;
+    using System.Web.Mvc;
+
     [TestFixture]
     public class BreadcrumbControllerShould
     {

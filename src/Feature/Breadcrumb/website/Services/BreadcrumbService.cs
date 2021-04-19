@@ -1,9 +1,9 @@
-﻿using LionTrust.Feature.Breadcrumb.Models;
-using LionTrust.Foundation.DI;
-using System.Collections.Generic;
-
-namespace LionTrust.Feature.Breadcrumb.Services
+﻿namespace LionTrust.Feature.Breadcrumb.Services
 {
+    using LionTrust.Feature.Breadcrumb.Models;
+    using LionTrust.Foundation.DI;
+    using System.Collections.Generic;
+
     [Service(ServiceType = typeof(IBreadcrumbService), Lifetime = Lifetime.Singleton)]
     public class BreadcrumbService : IBreadcrumbService
     {

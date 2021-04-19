@@ -1,11 +1,11 @@
-﻿using Glass.Mapper.Sc.Web;
-using LionTrust.Feature.Breadcrumb.Models;
-using LionTrust.Feature.Breadcrumb.Services;
-using Sitecore.Mvc.Controllers;
-using System.Web.Mvc;
-
-namespace LionTrust.Feature.Breadcrumb
+﻿namespace LionTrust.Feature.Breadcrumb
 {
+    using Glass.Mapper.Sc.Web;
+    using LionTrust.Feature.Breadcrumb.Models;
+    using LionTrust.Feature.Breadcrumb.Services;
+    using Sitecore.Mvc.Controllers;
+    using System.Web.Mvc;
+
     public class BreadcrumbController : SitecoreController
     {
         private readonly IRequestContext context;

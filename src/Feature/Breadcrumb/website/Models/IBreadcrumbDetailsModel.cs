@@ -1,19 +1,17 @@
-﻿using Glass.Mapper.Sc.Configuration.Attributes;
-using Glass.Mapper.Sc.Fields;
-using LionTrust.Foundation.ORM.Models;
+﻿namespace LionTrust.Feature.Breadcrumb.Models
+{
+    using Glass.Mapper.Sc.Configuration.Attributes;
+    using LionTrust.Foundation.ORM.Models;
 
-namespace LionTrust.Feature.Breadcrumb.Models
-{    
     public interface IBreadcrumbDetailsModel: IGlassBase
     {
         [SitecoreParent()]
         IBreadcrumbDetailsModel Parent { get; set; }
 
-        [SitecoreField("Breadcrumb_IncludeInBreadcrumb")]
+        [SitecoreField(Constants.FieldIds.IncludeInBreadcrumb)]
         bool IncludeInBreadcrumb { get; set; }
 
-        [SitecoreField("Breadcrumb_BreadcrumbTitle")]
+        [SitecoreField(Constants.FieldIds.BreadcrumbTitle)]
         string BreadcrumbTitle { get; set; }
-
     }
 }

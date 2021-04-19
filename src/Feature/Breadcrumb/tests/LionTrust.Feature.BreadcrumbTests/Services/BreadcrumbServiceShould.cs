@@ -1,10 +1,10 @@
-﻿using LionTrust.Feature.Breadcrumb.Models;
-using LionTrust.Feature.Breadcrumb.Services;
-using Moq;
-using NUnit.Framework;
-
-namespace LionTrust.Feature.BreadcrumbTests.Services
+﻿namespace LionTrust.Feature.BreadcrumbTests.Services
 {
+    using LionTrust.Feature.Breadcrumb.Models;
+    using LionTrust.Feature.Breadcrumb.Services;
+    using Moq;
+    using NUnit.Framework;
+
     [TestFixture]
     public class BreadcrumbServiceShould
     {
