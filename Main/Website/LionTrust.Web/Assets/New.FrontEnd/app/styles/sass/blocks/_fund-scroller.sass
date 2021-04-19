@@ -1,5 +1,4 @@
 .fundscroller
-    // padding: 45px 0
     position: relative
     @include breakpoint(desktop, up)
         padding: 70px 0
@@ -46,42 +45,3 @@
 .swiper-container-funds
     width: 100%
     height: 100%
-
-.swiper-container-funds .swiper-slide
-    text-align: center
-    font-size: 18px
-    /* Center slide text vertically */
-    display: flex
-    width: 100% !important
-    @include breakpoint(mobile-large, up)
-        width: 274px !important
-    @include breakpoint(tablet, up)
-        width: 370px !important
-    @include breakpoint(desktop-large, up)
-        width: 456px !important
-
-.swiper-container-funds .swiper-pagination
-    bottom: -6px
-
-.swiper-container-funds .swiper-pagination-bullet
-    background: $white
-    opacity: 1
-    outline: none
-
-.swiper-container-funds .swiper-pagination-bullet-active
-    background: $gold
-
-.fundscroller .swiper-button-next
-    right: -45px
-    top: 60%
-    outline: none
-
-.fundscroller .swiper-button-prev
-    left: -45px
-    top: 60%
-    outline: none
-
-.fundscroller .swiper-button-next:after, .fundscroller .swiper-button-prev:after
-    color: $white
-    font-size: 50px
-    z-index: 999
