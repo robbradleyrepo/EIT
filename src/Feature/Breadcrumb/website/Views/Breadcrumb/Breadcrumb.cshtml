@@ -1,0 +1,21 @@
+@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Breadcrumb.Models.BreadcrumbViewModel
+<div class="breadcrumb">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <nav class="breadcrumb__nav">
+                    @foreach (var ancestor in Model.Ancestors)
+                    {
+                        <a class="breadcrumb__path" href="@ancestor.Url">@ancestor.BreadcrumbTitle</a>
+
+                        <span class="breadcrumb__divider">/</span>
+                    }
+
+                    <a class="breadcrumb__path active" href="@Model.CurrentPage.Url">@Html.Glass().Editable(Model.CurrentPage, m => m.BreadcrumbTitle)</a>
+
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
