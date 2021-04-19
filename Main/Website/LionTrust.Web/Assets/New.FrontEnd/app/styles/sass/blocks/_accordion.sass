@@ -1,6 +1,6 @@
-.accordion-section  
+.accordion-section
     padding: 20px 0 150px
-    background: linear-gradient(82.6deg, #000000 3.35%, rgba(0, 0, 0, 0) 50.61%), linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 34.86%), radial-gradient(43.27% 43.9% at 70.37% 85.26%, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(82.62deg, #0D1927 4.49%, #253931 96.65%);
+    background: linear-gradient(82.6deg, #000000 3.35%, rgba(0, 0, 0, 0) 50.61%), linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 34.86%), radial-gradient(43.27% 43.9% at 70.37% 85.26%, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(82.62deg, #0D1927 4.49%, #253931 96.65%)
 
     .container
         position: relative
@@ -11,22 +11,26 @@
         @include breakpoint(tablet, up)
             width: 50%
     &__body
-        font-size: 18
+        padding: 10px 0
+        font-size: 18px
         line-height: 26px
-
+        @include breakpoint(desktop-large, up)
+            font-size: 20px
+            line-height: 30px
+            padding: 25px 0
     &__link
         color: $gold!important
         font-weight: 300
         font-size: 26px
         padding: 10px 0
         position: relative
-        border-bottom: 1px solid #414855 
+        border-bottom: 1px solid #414855
         align-items: center
         display: flex
         justify-content: space-between
         cursor: pointer
-        
-    &__link:before 
+
+    &__link:before
         position: absolute
         display: block
         content: ''
@@ -36,11 +40,10 @@
         transition: width .5s linear
 
     &__link.collapsed
-        border-bottom: 1px solid #414855 
+        border-bottom: 1px solid #414855
 
     &__link.collapsed:before
         width: 0
-
 
     &__plus, &__minus
         color: $white
@@ -89,14 +92,14 @@
         opacity: .9
     &__vid
         position: absolute
-        width: 100px 
-        height: 100px 
+        width: 100px
+        height: 100px
         transition: opacity 400ms linear
     &__vidicon
         background: url(../../../images/components/banners/btn-video.svg) no-repeat
         background-size: contain
         opacity: 1
-   
+
     &__vidicon-active
         background: url(../../../images/components/banners/btn-video-active.svg) no-repeat
         opacity: 0
