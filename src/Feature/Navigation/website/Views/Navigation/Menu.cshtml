@@ -3,7 +3,7 @@
 @model LionTrust.Feature.Navigation.Models.NavigationViewModel
 @if (Model != null && Model.RootItem != null && Model.HomeItem != null)
 {
-    <div class="sidebar sidebar_border">
+    <div class="sidebar">
         <div class="sidebar__top">
             <div class="sidebar__header">
                 <button class="sidebar__close-btn"></button>
@@ -178,9 +178,9 @@
                                                 }
                                                 navigationColumnCount++;
 
+                                                <h4 class="dropdown-nav__title">@Html.Glass().Editable(navigationColumn, z => z.ColumnTitle)</h4>
                                                 if (navigationColumn.ShowColumnLink)
-                                                {
-                                                    <h4 class="dropdown-nav__title">@Html.Glass().Editable(navigationColumn, z => z.ColumnTitle)</h4>
+                                                {                                                    
                                                     using (Html.Glass().BeginRenderLink(navigationColumn, z => z.ColumnLink, new NameValueCollection { { "class", "link-styles d-block mb-4" } }, isEditable: true))
                                                     {
                                                         @Html.Glass().Editable(navigationColumn, z => z.ColumnLinkLabel) <i class="icon-arrow-right"></i>
