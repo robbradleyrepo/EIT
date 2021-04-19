@@ -1,0 +1,48 @@
+﻿---
+ID: "7502b69e-d154-4861-a033-bc0cb30a91b5"
+Parent: "5ac6cf7a-26b8-47a1-a326-8cd790317be0"
+Template: "51d3a578-6e10-4ec6-bb5b-5c1307a6d661"
+Path: "/sitecore/content/LionTrustNew/Home-conflict"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0d831d08-90c7-4e31-b880-5a93146b3029"
+      Hint: Contact Us Page
+      Value: "{14602B3E-274A-4307-B8A0-D87C96423EDE}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210329T142931Z
+    - ID: "5d68cc82-ea43-4789-b892-0e49244f68d5"
+      Hint: MenuItems
+      Type: Treelist
+      Value: |
+        {477C9F45-9BBE-42D1-9FAE-13E65503206F}
+        {49CE5327-AFB3-44CD-B907-7877339AED1C}
+        {FF88557C-DD4A-47FA-8CD9-3B39832F6B95}
+    - ID: "6eb0248b-457f-491c-8f9e-13aefe2cdec8"
+      Hint: SignUpNewsletter
+      Value: "{E4735412-929A-48A3-96C9-9DDBA002DF25}"
+    - ID: "6f6a49b5-c780-4ede-9eb4-9ea509204434"
+      Hint: MyPreferences
+      Value: "{D2857E0A-9589-4025-AEC5-6005FDD6BF4A}"
+    - ID: "95f0787b-70e6-4164-98c0-f9502163d720"
+      Hint: Header Configuration
+      Value: "{8AF83FDB-F9D8-4B35-8C8E-C0F9465ED7B2}"
+    - ID: "960fe422-ace9-47e8-9e18-5d7e5ffa218f"
+      Hint: Menu Title
+      Value: Home
+    - ID: "b5c82f2d-eedd-4a5a-ab05-7afc42087cc2"
+      Hint: CloseLabel
+      Value: Close
+    - ID: "b810a405-73f4-48cc-af61-778c82531262"
+      Hint: MyLionTrust
+      Value: "{A2C6B1D1-DBE3-4032-81BE-1B66BBF2709E}"
+    - ID: "d20415aa-976a-425f-a853-dd0fd845d47c"
+      Hint: BrowserTitle
+      Value: Home
+    - ID: "e27b5db1-ce93-4cb1-ba69-f78556aacaf0"
+      Hint: Footer Configuration
+      Value: "{8362F08B-C427-4B66-B703-EB98AC1D9183}"

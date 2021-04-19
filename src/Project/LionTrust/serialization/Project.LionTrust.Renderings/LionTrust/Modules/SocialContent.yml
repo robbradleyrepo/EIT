@@ -1,0 +1,34 @@
+﻿---
+ID: "c6395a06-c38d-4fa8-a016-e7a18d0cb9b5"
+Parent: "465968e7-d150-4532-8d18-f95b9bc7081f"
+Template: "2a3e91a0-7987-44b5-ab34-35c2d9de83b9"
+Path: /sitecore/layout/renderings/Project/LionTrust/Modules/SocialContent
+DB: master
+SharedFields:
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: /sitecore/templates/LionTrust/Modules/Footer/SocialPanelCollection
+- ID: "94069f66-609c-48b0-8281-521c30fb269d"
+  Hint: Open Properties after Add
+  Value: 1
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: /sitecore/content/Modules/Social Content Module
+- ID: "ded9e431-3604-4921-a4b3-a6ec7636a5b6"
+  Hint: Controller Action
+  Value: GetSocialContent
+- ID: "e64ad073-dfcc-4d20-8c0b-fe5aa6226cd7"
+  Hint: Controller
+  Value: CustomModules
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20191128T014656Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\ragnar
