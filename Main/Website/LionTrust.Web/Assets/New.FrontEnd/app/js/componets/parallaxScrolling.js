@@ -19,15 +19,15 @@ export default () => {
     y: -500,
   });
 
-  // gsap.to(".shevron-bg", {
-  //   scrollTrigger: {
-  //     trigger: ".shevron-bg",
-  //     start: "top center",
-  //     // markers: true,
-  //     scrub: true,
-  //   },
-  //   x: 500,
-  // });
+  gsap.to(".shevron-bg", {
+    scrollTrigger: {
+      trigger: ".shevron-bg",
+      start: "top center",
+      // markers: true,
+      scrub: true,
+    },
+    x: 500,
+  });
 
   gsap.to(".lead-banner__bg", {
     scrollTrigger: {
