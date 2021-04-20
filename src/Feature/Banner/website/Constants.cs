@@ -37,9 +37,6 @@
             public const string TextAlignment_FieldName = "PromoBannerRendering_TextAlignment";
             public const string TextAlignment_FieldId = "{AECE4F5D-41F0-4888-916B-AB0F0F0AF345}";
 
-            public const string StyleDepth_FieldName = "PromoBannerRendering_StyleDepth";
-            public const string StyleDepth_FieldId = "{EF4AD5DB-8823-48B3-BFF6-A46456CFE32E}";
-
             public const string HideImage_FieldName = "PromoBannerRendering_HideImage";
             public const string HideImage_FieldId = "{507B2750-46FB-465C-95AA-FD3ABA8ECC94}";
 
