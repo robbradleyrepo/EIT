@@ -70,11 +70,13 @@
     <Content Include="Views\Promo\ImagePromo.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="App_Config\Feature\Feature.Promo.Serialization.config" />
+    <Content Include="Views\Promo\PodcastPromo.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Models\IImagePromo.cs" />
+    <Compile Include="Models\IPodcastPromo.cs" />
     <Compile Include="Models\IPromoGlassBase.cs" />
     <Compile Include="Models\IPromoLookup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

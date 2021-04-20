@@ -1,0 +1,57 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using System.Collections.Specialized;
+@model LionTrust.Feature.Promo.Models.IPodcastPromo
+<div class="podcast">
+    <div class="container">
+        <div class="row">
+            <div class="podcast__box">
+                @Html.Glass().RenderImage(Model, x => x.BackgroundImage, new NameValueCollection { { "class", "podcast__back" } })
+                <div class="podcast__front">
+                    <div class="podcast__head">
+                        <i class="icon-mic podcast__mic"></i>
+                        @Html.Glass().Editable(Model, x => x.Heading)
+                    </div>
+
+                    <div class="podcast__tit txtlimit">
+                        @Html.Glass().Editable(Model, x => x.Title)
+                    </div>
+
+                    <div class="podcast__desc txtlimit">
+                        @Html.Glass().Editable(Model, x => x.Body)
+                    </div>
+
+                    <div class="podcast__footer">
+                        @if (Sitecore.Context.PageMode.IsExperienceEditor
+                            || Model.ItunesLink != null
+                            || Model.SpotifyLink != null
+                            || Model.PodbeanLink != null)
+                        {
+                            <span>@Html.Glass().Editable(Model, x => x.PodcastsLabel) </span>
+                        }
+                        @if (Model.ItunesLink != null || Sitecore.Context.PageMode.IsExperienceEditor)
+                        {
+                            using (Html.Glass().BeginRenderLink(Model, m => m.ItunesLink, isEditable: true))
+                            {
+                                <i class="icon-apple"></i>
+                            }
+                        }
+                        @if (Model.PodbeanLink != null || Sitecore.Context.PageMode.IsExperienceEditor)
+                        {
+                            using (Html.Glass().BeginRenderLink(Model, m => m.PodbeanLink, isEditable: true))
+                            {
+                                <i class="icon-wifi"></i>
+                            }
+                        }
+                        @if (Model.SpotifyLink != null || Sitecore.Context.PageMode.IsExperienceEditor)
+                        {
+                            using (Html.Glass().BeginRenderLink(Model, m => m.SpotifyLink, isEditable: true))
+                            {
+                                <i class="icon-spotify"></i>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

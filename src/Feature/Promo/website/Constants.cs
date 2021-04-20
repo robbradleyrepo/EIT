@@ -61,5 +61,32 @@
             public const string Value_FieldName = "Value";
             public const string Value_FieldId = "{1B5CD3C2-03F1-4675-9B2C-E36DE11902FA}";
         }
+
+        public static class PodcastPromo
+        {
+            public const string Heading_FieldName = "PodcastPromo_Heading";
+            public const string Heading_FieldId = "{B040620B-5868-4F90-A613-291199DCCA80}";
+
+            public const string Title_FieldName = "PodcastPromo_Title";
+            public const string Title_FieldId = "{7AAE9C1D-09D6-458E-9C08-9E17202F5E27}";
+
+            public const string Body_FieldName = "PodcastPromo_Body";
+            public const string Body_FieldId = "{D0038738-1EFD-4F46-980D-03EEE85972CC}";
+
+            public const string BackgroundImage_FieldName = "PodcastPromo_BackgroundImage";
+            public const string BackgroundImage_FieldId = "{E6F7F113-DFE6-4D4F-8ABA-FFE70D681CED}";
+
+            public const string PodcastsLabel_FieldName = "PodcastPromo_PodcastsLabel";
+            public const string PodcastsLabel_FieldId = "{3519A624-39F9-4992-B2FD-AD40770C21E0}";
+
+            public const string ItunesLink_FieldName = "PodcastPromo_ItunesLink";
+            public const string ItunesLink_FieldId = "{0D9416A5-E6F3-4856-86FD-39353D1A2844}";
+
+            public const string SpotifyLink_FieldName = "PodcastPromo_SpotifyLink";
+            public const string SpotifyLink_FieldId = "{2E24B77A-6D65-4540-A41B-30BA12FF917D}";
+
+            public const string PodbeanLink_FieldName = "PodcastPromo_PodbeanLink";
+            public const string PodbeanLink_FieldId = "{0692C3EC-34FF-47E3-BE79-B17DA5A6C28F}";
+        }
     }
 }
