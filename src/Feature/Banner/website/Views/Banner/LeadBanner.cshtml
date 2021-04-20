@@ -1,0 +1,34 @@
+@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Banner.Models.LeadBannerModel
+@if (Model != null)
+{
+    <div class="leadbanner">
+
+        <div>
+            <div class="leadbanner__headbox">
+                <div class="leadbanner__head ">
+
+                    <h1 class="txtlimit twoline">
+                        @Html.Glass().Editable(Model, m => m.Title)
+                    </h1>
+
+                </div>
+            </div>
+            <div class="leadbanner__contentbox">
+                <div class="leadbanner__content">
+                    <div class="txtlimit fourline" style="text-align:@Model.TextAlignValue">
+                        @Html.Glass().Editable(Model, m => m.Body)
+                    </div>
+
+                </div>
+            </div>
+            @if (Model.Icon != null)
+            {
+                <div class="leadbanner__btnbox">
+                    @Html.Glass().Editable(Model, m => m.Icon)
+                </div>
+            }
+        </div>
+
+    </div>
+}
