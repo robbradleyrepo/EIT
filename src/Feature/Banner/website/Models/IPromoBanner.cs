@@ -28,9 +28,6 @@
         [SitecoreField(Constants.PromoBanner.SecondaryCTALink_FieldId, SitecoreFieldType.GeneralLink, "Promo Banner")]
         Link SecondaryCTALink { get; set; }
 
-        [SitecoreField(Constants.PromoBanner.HideImage_FieldId, SitecoreFieldType.Checkbox, "Design")]
-        bool HideImage { get; set; }
-
         [SitecoreField(Constants.PromoBanner.ShowPrimaryCTA_FieldId, SitecoreFieldType.Checkbox, "Design")]
         bool ShowPrimaryCTA { get; set; }
 

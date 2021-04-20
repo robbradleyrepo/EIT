@@ -19,7 +19,7 @@
             public const string Body_FieldName = "PromoBanner_Body";
             public const string Body_FieldId = "{8BB7FCD3-F2A0-416D-8BE8-7BF2E3027597}";
 
-            public const string Image_FieldName = "PromoBanner_Image";
+            public const string Image_FieldName = "PromoBanner_BackgroundImage";
             public const string Image_FieldId = "{DC4D7AEA-7E87-4AB5-9FBB-2A96ECAFE1D8}";
 
             public const string PrimaryCTALink_FieldName = "PromoBanner_PrimaryCTALink";
@@ -36,9 +36,6 @@
 
             public const string TextAlignment_FieldName = "PromoBannerRendering_TextAlignment";
             public const string TextAlignment_FieldId = "{AECE4F5D-41F0-4888-916B-AB0F0F0AF345}";
-
-            public const string HideImage_FieldName = "PromoBannerRendering_HideImage";
-            public const string HideImage_FieldId = "{507B2750-46FB-465C-95AA-FD3ABA8ECC94}";
 
             public const string ShowPrimaryCTA_FieldName = "PromoBannerRendering_ShowPrimaryCTA";
             public const string ShowPrimaryCTA_FieldId = "{8604D5D0-C54F-4FA6-BAE4-F482D3458E84}";
