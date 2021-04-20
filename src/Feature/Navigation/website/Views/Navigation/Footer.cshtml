@@ -26,13 +26,13 @@
                             {
                                 using (Html.Glass().BeginRenderLink(Model.FooterConfiguration, m => m.GoogleMapsLink, new NameValueCollection { { "class", "footer__map-link" } }, isEditable: true))
                                 {
-                                    @Html.Glass().Editable(Model.FooterConfiguration, x => x.GoogleMapsCTALabel)<i class="icon-tab"></i>
+                                    @Html.Glass().Editable(Model.FooterConfiguration, x => x.GoogleMapsCTALabel) <i class="icon-tab"></i>
                                 }
                             }
                             else
                             {
                                 <a href="#" class="footer__map-link">
-                                    @Html.Glass().Editable(Model.FooterConfiguration, x => x.GoogleMapsCTALabel)<i class="icon-tab"></i>
+                                    @Html.Glass().Editable(Model.FooterConfiguration, x => x.GoogleMapsCTALabel) <i class="icon-tab"></i>
                                 </a>
                             }
                         </div>
@@ -122,13 +122,13 @@
                                     new NameValueCollection { { "class", "footer__link footer__link_arrow footer__link_sign" } }, 
                                     isEditable: true))
                                 {
-                                    @Html.Glass().Editable(Model.FooterConfiguration, x => x.SubscribeCTALabel)<i class="icon-arrow-right"></i>
+                                    @Html.Glass().Editable(Model.FooterConfiguration, x => x.SubscribeCTALabel) <i class="icon-arrow-right"></i>
                                 }
                             }
                             else
                             {
                                 <a href="#" class="footer__link footer__link_arrow footer__link_sign">
-                                    @Html.Glass().Editable(Model.FooterConfiguration, x => x.SubscribeCTALabel)<i class="icon-arrow-right"></i>
+                                    @Html.Glass().Editable(Model.FooterConfiguration, x => x.SubscribeCTALabel) <i class="icon-arrow-right"></i>
                                 </a>
                             }
                         </div>

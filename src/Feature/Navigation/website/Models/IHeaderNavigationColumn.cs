@@ -17,7 +17,7 @@
         Link ColumnLink { get; set; }
 
         [SitecoreField(Constants.HeaderNavigationColumn.ColumnLinkLabel_FieldName)]
-        Link ColumnLinkLabel { get; set; }
+        string ColumnLinkLabel { get; set; }
 
         [SitecoreField(Constants.HeaderNavigationColumn.PageLinks_FieldName)]
         IEnumerable<INavigablePage> PageLinks { get; set; }

@@ -138,6 +138,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Analytics", "Analytics", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionTrust.Foundation.Analytics", "src\Foundation\Analytics\website\LionTrust.Foundation.Analytics.csproj", "{71010683-02EB-4E0D-B0E1-6643922799EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionTrust.Feature.NavigationTests", "src\Feature\Navigation\tests\LionTrust.Feature.NavigationTests\LionTrust.Feature.NavigationTests.csproj", "{E7D555DF-7460-458F-A921-F2F2FD93C1BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -272,6 +274,10 @@ Global
 		{71010683-02EB-4E0D-B0E1-6643922799EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71010683-02EB-4E0D-B0E1-6643922799EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71010683-02EB-4E0D-B0E1-6643922799EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7D555DF-7460-458F-A921-F2F2FD93C1BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7D555DF-7460-458F-A921-F2F2FD93C1BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7D555DF-7460-458F-A921-F2F2FD93C1BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7D555DF-7460-458F-A921-F2F2FD93C1BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -337,6 +343,7 @@ Global
 		{4A26FEA6-189C-4C6F-8211-E5C084E4A010} = {86605A72-7A1C-4232-99DA-CCFFA5E39B7E}
 		{44652CEA-D4F0-4060-8D43-6DE80EE358DE} = {C3F57797-2D54-4626-B842-51F30272E972}
 		{71010683-02EB-4E0D-B0E1-6643922799EE} = {44652CEA-D4F0-4060-8D43-6DE80EE358DE}
+		{E7D555DF-7460-458F-A921-F2F2FD93C1BA} = {1481F59E-A34C-45D1-A0D1-D84F19837B91}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {845F548C-FD53-4C61-AB7F-953C2225A13B}
