@@ -10,5 +10,14 @@
 
             public const string CopyField = "{E21C6470-0045-4FB7-8CE1-3B72F54D7CA4}";
         }
+
+        public static class AccordionRenderingParameters
+        {
+            public const string ThemeFieldId = "{58E2AF21-FE7B-4538-8574-6B87207970D3}";
+
+            public const string TextAlignFieldId = "{AB4A19DC-DE18-4E5B-A763-095F990CC0CA}";
+
+            public const string BackgroundColourFieldId = "{1841944B-D6A8-48CA-BAB1-071C8C7C603E}";
+        }
     }
 }
