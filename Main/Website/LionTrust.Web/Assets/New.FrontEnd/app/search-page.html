@@ -126,6 +126,7 @@
                 href="#"
                 @click.prevent="prevPage"
                 class="pagination__step pagination__step_forward"
+                :class="disablePrevBtn ? 'pagination__step_disabled' : ''"
                 ><i class="icon-arrow-left"></i> Previous</a
               >
               <ul class="pagination__list">
@@ -165,6 +166,7 @@
               <a
                 href="#"
                 @click.prevent="nextPage"
+                :class="disabledNextBtn ? 'pagination__step_disabled' : ''"
                 class="pagination__step pagination__step_next"
                 >Next <i class="icon-arrow-right"></i
               ></a>

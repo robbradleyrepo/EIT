@@ -161,7 +161,7 @@ export default () => {
         const entries = Object.entries(this.searchParams);
         entries.forEach(([key, value], index) => {
           if (value) query += `${key}=${value}`;
-          if (index !== entries.length - 1 ) query += '&';
+          if (index !== entries.length - 1) query += "&";
         });
         return query;
       },
@@ -203,6 +203,12 @@ export default () => {
       },
       showNextPageBtn() {
         return !this.getPages.includes(this.getPageAmount);
+      },
+      disablePrevBtn() {
+        return this.getPage === 1;
+      },
+      disabledNextBtn() {
+        return this.getPage === this.getPageAmount;
       },
     },
     methods: {
