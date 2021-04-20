@@ -4,6 +4,8 @@
 
     .container
         position: relative
+
+.accordion
     &__card
         background: none
         width: 100%
@@ -52,32 +54,20 @@
     &__minus
         font-size: 33px
 
-    &__link.collapsed .accordion-section__minus
+    &__link.collapsed .accordion__minus
         display: none
 
-    &__link .accordion-section__minus
+    &__link .accordion__minus
         display: block
 
-    &__link.collapsed .accordion-section__plus
+    &__link.collapsed .accordion__plus
         display: block
 
-    &__link .accordion-section__plus
+    &__link .accordion__plus
         display: none
 
     &__smartcard
         position: relative
-        width: 100%
-        margin-top: 1rem
-        display: flex
-        height: 100%
-        justify-content: center
-        align-items: center
-        cursor: pointer
-        &:hover .accordion__vidicon-active
-            opacity: 1
-        &:hover .accordion__vidicon
-            opacity: 0
-
         @include breakpoint(tablet, up)
             position: absolute
             width: 50%
@@ -104,3 +94,5 @@
         background: url(../../../images/components/banners/btn-video-active.svg) no-repeat
         opacity: 0
         background-size: contain
+    .collapsing
+        position: static!important
