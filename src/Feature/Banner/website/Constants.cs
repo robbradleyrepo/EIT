@@ -49,11 +49,5 @@
             public const string ShowSecondaryCTA_FieldName = "PromoBannerRendering_ShowSecondaryCTA";
             public const string ShowSecondaryCTA_FieldId = "{45517CB0-DE4F-41EC-A268-78878D7D2F83}";
         }
-
-        public static class StyleDepthValue
-        {
-            public const string Value_FieldName = "StyleDepthValue_Value";
-            public const string Value_FieldId = "{7186DA0C-38F0-419B-90A0-E9B4E94AA2EE}";
-        }
     }
 }

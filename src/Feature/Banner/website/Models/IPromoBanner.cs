@@ -39,8 +39,5 @@
 
         [SitecoreField(Constants.PromoBanner.TextAlignment_FieldId, SitecoreFieldType.Droplink, "Design")]
         ILookupValue TextAlignment { get; set; }
-
-        [SitecoreField(Constants.PromoBanner.StyleDepth_FieldId, SitecoreFieldType.Droplink, "Design")]
-        IStyleDepthValue StyleDepth { get; set; }
     }
 }
