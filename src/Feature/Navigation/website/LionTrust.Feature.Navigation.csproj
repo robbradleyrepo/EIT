@@ -82,6 +82,7 @@
     <Content Include="App_Config\Include\Feature\Feature.Navigation.Serialization.config" />
     <Content Include="Views\Navigation\Footer.cshtml" />
     <Content Include="App_Config\Include\Feature\Feature.Navigation.RegisterContainer.config" />
+    <Content Include="Views\Navigation\Breadcrumb.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -93,8 +94,11 @@
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\BreadcrumbController.cs" />
     <Compile Include="Controllers\NavigationController.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
+    <Compile Include="Models\BreadcrumbViewModel.cs" />
+    <Compile Include="Models\IBreadcrumbDetailsModel.cs" />
     <Compile Include="Models\IFooterConfiguration.cs" />
     <Compile Include="Models\IHeaderConfiguration.cs" />
     <Compile Include="Models\IHeaderDropdown.cs" />
@@ -111,8 +115,14 @@
     <Compile Include="Repositories\INavigationRepository.cs" />
     <Compile Include="Repositories\NavigationRepository.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="Services\BreadcrumbService.cs" />
+    <Compile Include="Services\IBreadcrumbService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Foundation\DI\website\LionTrust.Foundation.DI.csproj">
+      <Project>{0d3a6f11-b5ff-4d8c-8a74-19501d2e80d4}</Project>
+      <Name>LionTrust.Foundation.DI</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\ORM\website\LionTrust.Foundation.ORM.csproj">
       <Project>{5e91a7d9-8e93-44fd-857f-f9ce145b6022}</Project>
       <Name>LionTrust.Foundation.ORM</Name>
