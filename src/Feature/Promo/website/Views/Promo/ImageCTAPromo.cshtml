@@ -1,0 +1,29 @@
+﻿@using System.Collections.Specialized;
+@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Promo.Models.IImageCTAPromo
+<div class="team-card">
+    <h2 class="team-card__title">
+        @Html.Glass().Editable(Model, x => x.Title)
+    </h2>
+    <div class="row">
+        <div class="col-lg-6 order-1 order-lg-0">
+            <div class="team-card__text">
+                <p class="font-500">@Html.Glass().Editable(Model, x => x.Subtitle)</p>
+                <p>
+                    @Html.Glass().Editable(Model, x => x.Body)
+                </p>
+            </div>
+            @if (Model.CTALink != null || Sitecore.Context.PageMode.IsExperienceEditor)
+            {
+                using (Html.Glass().BeginRenderLink(Model, m => m.CTALink, new NameValueCollection { { "class", "btn btn-primary team-card__btn" } }, isEditable: true))
+                {
+                    @Html.Glass().Editable(Model, x => x.CTALabel)
+                    <i class="icon-arrow-right animate-arrow"></i>
+                }
+            }
+        </div>
+        <div class="col-lg-6">
+            @Html.Glass().RenderImage(Model, x => x.Image, new NameValueCollection { { "class", "team-card__img" }, { "alt", "Meet the tea" } }, isEditable: true)
+        </div>
+    </div>
+</div>
