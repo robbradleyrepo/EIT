@@ -157,6 +157,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Design", "Design", "{335457
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionTrust.Foundation.Design", "src\Foundation\Design\website\LionTrust.Foundation.Design.csproj", "{7F86DD63-BE79-4107-804A-514DCA76E01E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Video", "Video", "{50CE1B03-1309-4A85-B8B6-9F5FC716E6F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionTrust.Foundation.Video", "src\Foundation\Video\website\LionTrust.Foundation.Video.csproj", "{8C1C0247-65A6-4675-8326-0B243A81B392}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -307,6 +311,10 @@ Global
 		{7F86DD63-BE79-4107-804A-514DCA76E01E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F86DD63-BE79-4107-804A-514DCA76E01E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F86DD63-BE79-4107-804A-514DCA76E01E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C1C0247-65A6-4675-8326-0B243A81B392}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C1C0247-65A6-4675-8326-0B243A81B392}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C1C0247-65A6-4675-8326-0B243A81B392}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C1C0247-65A6-4675-8326-0B243A81B392}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -379,6 +387,8 @@ Global
 		{E2E4700A-A486-43EE-9FFB-E37D4F2AC716} = {7CB0E7BF-213B-4E7E-AA49-ED01CC1BBF9F}
 		{335457E3-81F6-4C8C-AAA7-0A742DE9F740} = {C3F57797-2D54-4626-B842-51F30272E972}
 		{7F86DD63-BE79-4107-804A-514DCA76E01E} = {335457E3-81F6-4C8C-AAA7-0A742DE9F740}
+		{50CE1B03-1309-4A85-B8B6-9F5FC716E6F8} = {C3F57797-2D54-4626-B842-51F30272E972}
+		{8C1C0247-65A6-4675-8326-0B243A81B392} = {50CE1B03-1309-4A85-B8B6-9F5FC716E6F8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {845F548C-FD53-4C61-AB7F-953C2225A13B}

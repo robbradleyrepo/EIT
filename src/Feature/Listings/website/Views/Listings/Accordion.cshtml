@@ -1,36 +1,43 @@
 @using Glass.Mapper.Sc.Web.Mvc
 @model LionTrust.Feature.Listings.Models.AccordionViewModel
-<div class="accordion-section">
+    @{ 
+        var wrapperClass = Model.RenderingData.BackgroundColour != null && Model.RenderingData.BackgroundColour.Value == "white" ? string.Empty : "accordion-section";
+        var textColour = Model.RenderingData.BackgroundColour != null && Model.RenderingData.BackgroundColour.Value != "white" ? string.Empty : "accordion_white";
+    }
+<div class="@wrapperClass">
     <div class="container">
-        <div id="accordionFlushExample" class="accordion">
+        <div id="accordionFlushExample" class="accordion @textColour">
             @foreach (var item in Model.Data.Children)
             {
-                <div class="card accordion-section__card">
-                    <div class="card-header accordion-section__header">
-                        <div class="card-link accordion-section__link collapsed"
-                             data-bs-toggle="collapse"
-                             data-bs-target="#flush-collapseOne"
-                             aria-expanded="false"
-                             aria-controls="flush-collapseOne">
-                            @Html.Glass().Editable(item, i => i.Header)
-                            <i class="icon-plus accordion-section__plus"></i>
-                            <i class="icon-minus accordion-section__minus"></i>
+                using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/Accordion Row", item.Id.ToString()))
+                {
+                    <div class="card accordion-section__card">
+                        <div class="card-header accordion-section__header">
+                            <div class="card-link accordion-section__link collapsed"
+                                 data-bs-toggle="collapse"
+                                 data-bs-target="#flush-collapseOne"
+                                 aria-expanded="false"
+                                 aria-controls="flush-collapseOne">
+                                @Html.Glass().Editable(item, i => i.Header)
+                                <i class="icon-plus accordion-section__plus"></i>
+                                <i class="icon-minus accordion-section__minus"></i>
+                            </div>
+                        </div>
+                        <div id="flush-collapseOne" class="collapse show"
+                             aria-labelledby="flush-headingOne"
+                             data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-section__body">
+                                @Html.Glass().Editable(item, i => i.Copy)
+                            </div>
+                            <div class="accordion-section__smartcard">
+                                @Html.Glass().Editable(item, i => i.Image, new { @class = "accordion-section__smartimg" })
+                                <span class="accordion-section__vid accordion-section__vidicon"></span>
+                                <span class="accordion-section__vid accordion-section__vidicon-active"></span>
+                            </div>
                         </div>
                     </div>
-                    <div id="flush-collapseOne" class="collapse show"
-                         aria-labelledby="flush-headingOne"
-                         data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-section__body">
-                            @Html.Glass().Editable(item, i => i.Copy)
-                        </div>
-                        <div class="accordion-section__smartcard">
-                            @Html.Glass().Editable(item, i=> i.Image, new {@class= "accordion-section__smartimg"})                            
-                            <span class="accordion-section__vid accordion-section__vidicon"></span>
-                            <span class="accordion-section__vid accordion-section__vidicon-active"></span>
-                        </div>
-                    </div>
-                </div>
-            }
+                    }
+                }
         </div>
     </div>
 </div>

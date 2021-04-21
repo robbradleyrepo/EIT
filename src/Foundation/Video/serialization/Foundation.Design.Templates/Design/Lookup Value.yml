@@ -1,16 +1,14 @@
 ﻿---
-ID: "868d6501-4712-4081-b3d7-a754b81dcdba"
-Parent: "23584a43-0595-4473-98d8-cbd848832dbb"
+ID: "3a81a69a-dc92-4946-b6d0-810a3d8feed2"
+Parent: "d5cda70c-2004-4c6d-9fed-4ac0a32c6005"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Feature/Listings/Accordion/_Accordion Row
+Path: /sitecore/templates/Foundation/Design/Lookup Value
 DB: master
 SharedFields:
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
   Type: tree list
-  Value: |
-    {1930BBEB-7805-471A-A3BE-4858AC7CF696}
-    {593FF5B2-13E7-4609-9C48-09796ECC8B2B}
+  Value: "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"
 Languages:
 - Language: en
   Versions:
@@ -18,7 +16,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210419T161026Z
+      Value: 20210415T085551Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |

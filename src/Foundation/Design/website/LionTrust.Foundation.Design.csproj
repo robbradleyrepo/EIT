@@ -84,6 +84,10 @@
       <Project>{acd53016-c45a-4a10-8b46-9a4a82a69d7b}</Project>
       <Name>LionTrust.Foundation.Indexing</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\ORM\website\LionTrust.Foundation.ORM.csproj">
+      <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>
+      <Name>LionTrust.Foundation.ORM</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\SitecoreExtensions\website\LionTrust.Foundation.SitecoreExtensions.csproj">
       <Project>{a57b01c5-75ad-47c0-beda-93079fd37317}</Project>
       <Name>LionTrust.Foundation.SitecoreExtensions</Name>
