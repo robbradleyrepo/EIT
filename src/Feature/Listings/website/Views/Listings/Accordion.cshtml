@@ -18,7 +18,7 @@
                 var isCollapsed = item != Model.Data.Children.First();
                 var collapsedClass = isCollapsed ? "collapsed" : string.Empty;
                 var showClass = isCollapsed ? string.Empty : "show";
-                var rowName = LionTrust.Feature.Listings.Utils.RandomString(10, true);
+                var rowName = LionTrust.Feature.Listings.Utils.RandomString(10, true);                
 
                 using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/Accordion Row", item.Id.ToString()))
                 {
@@ -41,7 +41,7 @@
                                 @Html.Glass().Editable(item, i => i.Copy)
                             </div>
                             <div class="accordion__smartcard">
-                                <a class="video-box__link" data-fancybox="" href="https://www.youtube.com/watch?v=ARoGZIN5oC4" style="background-image: url('@imageSrc')">
+                                <a class="video-box__link" data-fancybox=""  data-type="iframe" data-src="@item.VideoId" style="background-image: url('@imageSrc')">
                                     <svg class="video-box__play-btn" xmlns="http://www.w3.org/2000/svg" width="188" height="188">
                                         <defs>
                                             <style>
