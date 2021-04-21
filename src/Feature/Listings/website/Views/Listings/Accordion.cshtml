@@ -1,43 +1,71 @@
 @using Glass.Mapper.Sc.Web.Mvc
 @model LionTrust.Feature.Listings.Models.AccordionViewModel
     @{ 
-        var wrapperClass = Model.RenderingData.BackgroundColour != null && Model.RenderingData.BackgroundColour.Value == "white" ? string.Empty : "accordion-section";
-        var textColour = Model.RenderingData.BackgroundColour != null && Model.RenderingData.BackgroundColour.Value != "white" ? string.Empty : "accordion_white";
+        var wrapperClass = Model.RenderingData.Theme != null && Model.RenderingData.Theme.Value == "light" ? string.Empty : "accordion-section";
+        var textColour = Model.RenderingData.Theme != null && Model.RenderingData.Theme.Value == "light" ? "accordion_white" : string.Empty;
+        var containerId = LionTrust.Feature.Listings.Utils.RandomString(10, true);
+        var textAlign = Model.RenderingData.TextAlign != null ? Model.RenderingData.TextAlign.Value : "left";
     }
 <div class="@wrapperClass">
     <div class="container">
-        <div id="accordionFlushExample" class="accordion @textColour">
+        <div id="@containerId" class="accordion @textColour">
+            @{ 
+                var counter = 0;
+            }
             @foreach (var item in Model.Data.Children)
             {
+                var imageSrc = counter == 0;                
+                var isCollapsed = item != Model.Data.Children.First();
+                var collapsedClass = isCollapsed ? "collapsed" : string.Empty;
+                var showClass = isCollapsed ? string.Empty : "show";
+                var rowName = LionTrust.Feature.Listings.Utils.RandomString(10, true);
+
                 using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/Accordion Row", item.Id.ToString()))
                 {
-                    <div class="card accordion-section__card">
-                        <div class="card-header accordion-section__header">
-                            <div class="card-link accordion-section__link collapsed"
-                                 data-bs-toggle="collapse"
-                                 data-bs-target="#flush-collapseOne"
-                                 aria-expanded="false"
-                                 aria-controls="flush-collapseOne">
+                    <div class="card accordion__card">
+                        <div class="card-header accordion__header">
+                            <div class="card-link accordion__link @collapsedClass"
+                                 data-toggle="collapse"
+                                 data-target="#@rowName"
+                                 aria-expanded="@isCollapsed"
+                                 aria-controls="@rowName">
                                 @Html.Glass().Editable(item, i => i.Header)
-                                <i class="icon-plus accordion-section__plus"></i>
-                                <i class="icon-minus accordion-section__minus"></i>
+                                <i class="icon-plus accordion__plus"></i>
+                                <i class="icon-minus accordion__minus"></i>
                             </div>
                         </div>
-                        <div id="flush-collapseOne" class="collapse show"
-                             aria-labelledby="flush-headingOne"
-                             data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-section__body">
+                        <div id="@rowName" class="collapse @showClass"
+                             aria-labelledby="flush-heading-@rowName"
+                             data-parent="#@containerId">
+                            <div class="accordion__body" style="text-align:@textAlign">
                                 @Html.Glass().Editable(item, i => i.Copy)
                             </div>
-                            <div class="accordion-section__smartcard">
-                                @Html.Glass().Editable(item, i => i.Image, new { @class = "accordion-section__smartimg" })
-                                <span class="accordion-section__vid accordion-section__vidicon"></span>
-                                <span class="accordion-section__vid accordion-section__vidicon-active"></span>
+                            <div class="accordion__smartcard">
+                                <a class="video-box__link" data-fancybox="" href="https://www.youtube.com/watch?v=ARoGZIN5oC4" style="background-image: url('@imageSrc')">
+                                    <svg class="video-box__play-btn" xmlns="http://www.w3.org/2000/svg" width="188" height="188">
+                                        <defs>
+                                            <style>
+                                                .c {
+                                                    stroke: none;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <g fill="transparent">
+                                            <g stroke="#fff">
+                                                <circle class="c" cx="94" cy="94" r="94"></circle>
+                                                <circle cx="94" cy="94" r="93.5" fill="none"></circle>
+                                            </g>
+                                            <path class="triangle" d="M79.5 119.63V72.37L120.008 96 79.5 119.63z"></path>
+                                            <path d="M119.015 96L80 73.241v45.518L119.015 96M121 96l-42 24.5v-49L121 96z" fill="#fff"></path>
+                                        </g>
+                                    </svg>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    }
                 }
+                counter++;
+            }
         </div>
     </div>
 </div>
