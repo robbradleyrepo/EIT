@@ -16,7 +16,7 @@ export default () => {
       // markers: true,
       scrub: true,
     },
-    y: -500,
+    y: -200,
   });
 
   gsap.to(".shevron-bg", {
@@ -26,7 +26,7 @@ export default () => {
       // markers: true,
       scrub: true,
     },
-    x: 500,
+    y: 500,
   });
 
   gsap.to(".lead-banner__bg", {
