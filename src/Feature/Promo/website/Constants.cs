@@ -76,8 +76,8 @@
             public const string CTALink_FieldName = "ImageCTAPromo_CTALink";
             public const string CTALink_FieldId = "{143867DB-9BBA-4097-9EB4-0099C175AD91}";
 
-            public const string CTALabel_FieldName = "ImageCTAPromo_CTALabel";
-            public const string CTALabel_FieldId = "{BED833FE-BFD7-40EC-9C28-18EFF032C463}";
+            public const string CTAGoal_FieldName = "ImageCTAPromo_CTAGoal";
+            public const string CTAGoal_FieldId = "{BED833FE-BFD7-40EC-9C28-18EFF032C463}";
         }
 
         public static class PromoLookup

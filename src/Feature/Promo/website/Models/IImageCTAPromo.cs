@@ -1,9 +1,11 @@
 ﻿namespace LionTrust.Feature.Promo.Models
 {
+    using System;
+
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
-
+    
     public interface IImageCTAPromo : IPromoGlassBase
     {
         [SitecoreField(Constants.ImageCTAPromo.Image_FieldId, SitecoreFieldType.Image, "Image CTA Promo")]
@@ -21,8 +23,7 @@
         [SitecoreField(Constants.ImageCTAPromo.CTALink_FieldId, SitecoreFieldType.GeneralLink, "Image CTA Promo")]
         Link CTALink { get; set; }
 
-        [SitecoreField(Constants.ImageCTAPromo.CTALabel_FieldId, SitecoreFieldType.SingleLineText, "Image CTA Promo")]
-        string CTALabel { get; set; }
-
+        [SitecoreField(Constants.ImageCTAPromo.CTAGoal_FieldId, SitecoreFieldType.Droplink, "Image CTA Promo")]
+        Guid CTAGoal { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿@using System.Collections.Specialized;
 @using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Foundation.Analytics.Goals
 @model LionTrust.Feature.Promo.Models.IImageCTAPromo
 <div class="team-card">
     <h2 class="team-card__title">
@@ -15,9 +16,12 @@
             </div>
             @if (Model.CTALink != null || Sitecore.Context.PageMode.IsExperienceEditor)
             {
-                using (Html.Glass().BeginRenderLink(Model, m => m.CTALink, new NameValueCollection { { "class", "btn btn-primary team-card__btn" } }, isEditable: true))
+                using (Html.BeginRenderLinkWithGoal(Model, m => m.CTALink, Model.CTAGoal, new NameValueCollection { { "class", "btn btn-primary team-card__btn" } }, isEditable: true))
                 {
-                    @Html.Glass().Editable(Model, x => x.CTALabel)
+                    if (Model.CTALink != null && !string.IsNullOrEmpty(Model.CTALink.Text))
+                    {
+                        @Model.CTALink.Text
+                    }
                     <i class="icon-arrow-right animate-arrow"></i>
                 }
             }
