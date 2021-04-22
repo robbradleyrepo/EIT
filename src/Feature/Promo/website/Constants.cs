@@ -25,14 +25,14 @@
             public const string PrimaryCTALink_FieldName = "ImagePromo_PrimaryCTALink";
             public const string PrimaryCTALink_FieldId = "{5E64582A-9F42-465F-8122-6553D6F8A477}";
 
-            public const string PrimaryCTALabel_FieldName = "ImagePromo_PrimaryCTALabel";
-            public const string PrimaryCTALabel_FieldId = "{C32068A3-585A-4621-9F86-C83F8940D06D}";
+            public const string PrimaryCTAGoal_FieldName = "ImagePromo_PrimaryCTAGoal";
+            public const string PrimaryCTAGoal_FieldId = "{C32068A3-585A-4621-9F86-C83F8940D06D}";
 
             public const string SecondaryCTALink_FieldName = "ImagePromo_SecondaryCTALink";
             public const string SecondaryCTALink_FieldId = "{8C0C61D8-8CC9-489D-B3AD-9A789290401B}";
 
-            public const string SecondaryCTALabel_FieldName = "ImagePromo_SecondaryCTALabel";
-            public const string SecondaryCTALabel_FieldId = "{84FCB3D3-01F5-47DD-843C-9B28D3D55BF0}";
+            public const string SecondaryCTAGoal_FieldName = "ImagePromo_SecondaryCTAGoal";
+            public const string SecondaryCTAGoal_FieldId = "{84FCB3D3-01F5-47DD-843C-9B28D3D55BF0}";
 
             public const string TextAlignment_FieldName = "ImagePromo_TextAlignment";
             public const string TextAlignment_FieldId = "{D73BD953-0554-47FA-B1EC-3053B7BB2826}";
