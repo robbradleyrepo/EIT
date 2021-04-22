@@ -2,7 +2,7 @@
 using Glass.Mapper.Sc.Fields;
 using Sitecore.Data;
 
-namespace LionTrust.Feature.LeadBanner.Models
+namespace LionTrust.Feature.Banner.Models
 {
     public class LeadBannerModel
     {   

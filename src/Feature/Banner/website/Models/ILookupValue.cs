@@ -1,7 +1,7 @@
 ﻿using Glass.Mapper.Sc.Configuration.Attributes;
 using Sitecore.Data;
 
-namespace LionTrust.Feature.LeadBanner.Models
+namespace LionTrust.Feature.Banner.Models
 {
     public interface ILookupValue
     {

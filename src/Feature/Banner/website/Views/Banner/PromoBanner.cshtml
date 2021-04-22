@@ -1,5 +1,6 @@
 ﻿@using System.Collections.Specialized;
 @using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Foundation.Analytics.Goals
 @model LionTrust.Feature.Banner.Models.IPromoBanner
 @{
     var textAlignmentCss = "text-center";
@@ -27,13 +28,13 @@
                         <div class="lead-banner__content">
                             <h2 class="lead-banner__title mb-3">@Html.Glass().Editable(Model, x => x.Heading)</h2>
                             <span class="lead-banner__text pb-lg-3">
-                                @Html.Glass().Editable(Model, x => x.Body)                                
+                                @Html.Glass().Editable(Model, x => x.Body)
                             </span>
 
                             <div class="lead-banner__btnbox mt-4">
                                 @if (Model.ShowPrimaryCTA)
                                 {
-                                    using (Html.Glass().BeginRenderLink(Model, m => m.PrimaryCTALink, new NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
+                                    using (Html.BeginRenderLinkWithGoal(Model, m => m.PrimaryCTALink, Model.PrimaryCtaGoal, new NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
                                     {
                                         @Html.Glass().Editable(Model, x => x.PrimaryCTALabel)
                                         <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
@@ -42,7 +43,7 @@
 
                                 @if (Model.ShowSecondaryCTA)
                                 {
-                                    using (Html.Glass().BeginRenderLink(Model, m => m.SecondaryCTALink, new NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }, isEditable: true))
+                                    using (Html.BeginRenderLinkWithGoal(Model, m => m.SecondaryCTALink, Model.SecondaryCtaGoal, new NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }, isEditable: true))
                                     {
                                         @Html.Glass().Editable(Model, x => x.SecondaryCTALabel)
                                         <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
