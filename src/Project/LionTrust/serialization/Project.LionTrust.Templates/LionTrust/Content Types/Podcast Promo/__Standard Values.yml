@@ -4,6 +4,11 @@ Parent: "4fd5c75c-bd9d-4615-8538-a00c51bb2238"
 Template: "4fd5c75c-bd9d-4615-8538-a00c51bb2238"
 Path: /sitecore/templates/Project/LionTrust/Content Types/Podcast Promo/__Standard Values
 DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{A7F75F55-C371-4177-8F4C-25C416795856}"
 Languages:
 - Language: en
   Versions:

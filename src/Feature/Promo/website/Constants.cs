@@ -78,15 +78,15 @@
 
             public const string PodcastsLabel_FieldName = "PodcastPromo_PodcastsLabel";
             public const string PodcastsLabel_FieldId = "{3519A624-39F9-4992-B2FD-AD40770C21E0}";
+        }
 
-            public const string ItunesLink_FieldName = "PodcastPromo_ItunesLink";
-            public const string ItunesLink_FieldId = "{0D9416A5-E6F3-4856-86FD-39353D1A2844}";
+        public static class PodcastLink
+        {
+            public const string Link_FieldName = "PodcastLink_Link";
+            public const string Link_FieldId = "{C57000E5-D8F4-45B4-8BA5-794E95FA3763}";
 
-            public const string SpotifyLink_FieldName = "PodcastPromo_SpotifyLink";
-            public const string SpotifyLink_FieldId = "{2E24B77A-6D65-4540-A41B-30BA12FF917D}";
-
-            public const string PodbeanLink_FieldName = "PodcastPromo_PodbeanLink";
-            public const string PodbeanLink_FieldId = "{0692C3EC-34FF-47E3-BE79-B17DA5A6C28F}";
+            public const string Icon_FieldName = "PodcastLink_Icon";
+            public const string Icon_FieldId = "{C57000E5-D8F4-45B4-8BA5-794E95FA3763}";
         }
     }
 }

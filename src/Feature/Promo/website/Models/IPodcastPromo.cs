@@ -3,6 +3,7 @@
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
+    using System.Collections.Generic;
 
     public interface IPodcastPromo : IPromoGlassBase
     {
@@ -20,14 +21,8 @@
 
         [SitecoreField(Constants.PodcastPromo.PodcastsLabel_FieldId, SitecoreFieldType.SingleLineText, "Podcast Promo")]
         string PodcastsLabel { get; set; }
-
-        [SitecoreField(Constants.PodcastPromo.ItunesLink_FieldId, SitecoreFieldType.GeneralLink, "Podcast Promo")]
-        Link ItunesLink { get; set; }
-
-        [SitecoreField(Constants.PodcastPromo.SpotifyLink_FieldId, SitecoreFieldType.GeneralLink, "Podcast Promo")]
-        Link SpotifyLink { get; set; }
-
-        [SitecoreField(Constants.PodcastPromo.PodbeanLink_FieldId, SitecoreFieldType.GeneralLink, "Podcast Promo")]
-        Link PodbeanLink { get; set; }        
+        
+        [SitecoreChildren]
+        IEnumerable<IPodcastLink> PodcastLinks { get; set; }
     }
 }
