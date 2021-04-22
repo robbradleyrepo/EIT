@@ -2,7 +2,7 @@
 {
     using Glass.Mapper.Sc.Fields;
 
-    public  static class FieldExtensions
+    public static class FieldExtensions
     {
         public static string ImageSrc(this Image image, string defaultValue = "")
         {
@@ -26,6 +26,11 @@
             {
                 return defaultValue;
             }
+        }
+
+        public static bool NotNullOrExperienceEditor(this Link link)
+        {
+            return link != null || Sitecore.Context.PageMode.IsExperienceEditor;
         }
     }
 }
