@@ -3,7 +3,7 @@
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
-    using LionTrust.Feature.LeadBanner.Models;
+    using System;
 
     public interface IPromoBanner : IBannerGlassBase
     {
@@ -36,5 +36,11 @@
 
         [SitecoreField(Constants.PromoBanner.TextAlignment_FieldId, SitecoreFieldType.Droplink, "Design")]
         ILookupValue TextAlignment { get; set; }
+
+        [SitecoreField(Constants.PromoBanner.PrimaryCtaGoalFieldId)]
+        Guid PrimaryCtaGoal { get; set; }
+
+        [SitecoreField(Constants.PromoBanner.SecondaryCtaGoalFieldId)]
+        Guid SecondaryCtaGoal { get; set; }
     }
 }
