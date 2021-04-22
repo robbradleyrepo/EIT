@@ -1,13 +1,13 @@
 ﻿---
-ID: "0a21c074-6f82-42bf-bf33-4cca5795fba6"
+ID: "720fed32-32a1-431d-819c-020803fcdaac"
 Parent: "cb097e73-228a-4d91-91ff-76bda0f6f691"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Feature/Promo/_ImagePromo
+Path: /sitecore/templates/Feature/Promo/_PodcastLink
 DB: master
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
-  Value: office/32x32/photo_landscape.png
+  Value: Office/32x32/loudspeaker4.png
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
   Type: tree list
@@ -19,4 +19,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210420T095620Z
+      Value: 20210422T085806Z

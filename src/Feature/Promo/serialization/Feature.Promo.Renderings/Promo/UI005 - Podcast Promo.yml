@@ -1,24 +1,24 @@
 ﻿---
-ID: "278645fd-b7c1-4b02-a4ff-dd47e01aed93"
+ID: "c1e344e3-1017-4ece-a44e-21727844e3ce"
 Parent: "82de5fa6-f423-47d1-96f4-67aa7891723f"
 Template: "99f8905d-4a87-4eb8-9f8b-a9bebfb3add6"
-Path: "/sitecore/layout/renderings/Feature/Promo/UI006 - 4 Image Promo"
+Path: "/sitecore/layout/renderings/Feature/Promo/UI005 - Podcast Promo"
 DB: master
 SharedFields:
 - ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
   Hint: Datasource Template
-  Value: /sitecore/templates/Project/LionTrust/Content Types/Image Promo
+  Value: /sitecore/templates/Project/LionTrust/Content Types/Podcast Promo
 - ID: "51b435bc-f7b9-478a-9c51-52916af96ff5"
   Hint: Path
-  Value: ~/Views/Promo/ImagePromo.cshtml
+  Value: ~/Views/Promo/PodcastPromo.cshtml
 - ID: "a2f5d9df-8cba-4a1d-99eb-51acb94cb057"
   Hint: Page Editor Buttons
   Type: Treelist
-  Value: "{6489CBFC-15AD-4A09-980C-D79734046802}"
+  Value: "{10640277-0529-4639-B0BB-F394105624AB}"
 - ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
   Hint: __Thumbnail
   Value: |
-    <image mediaid="{942C8EFB-A373-47F8-8598-56396F3A0D5A}" />
+    <image mediaid="{6380B1E9-D6E9-4410-A952-43EC9DEE55FC}" />
 Languages:
 - Language: en
   Versions:
@@ -30,4 +30,4 @@ Languages:
       Value: 1
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210420T100940Z
+      Value: 20210420T171250Z

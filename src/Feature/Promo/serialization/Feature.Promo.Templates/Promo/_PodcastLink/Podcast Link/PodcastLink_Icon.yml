@@ -1,28 +1,25 @@
 ﻿---
-ID: "c32068a3-585a-4621-9f86-c83f8940d06d"
-Parent: "1d9fc2e8-fa34-4c72-b159-14eb5e47d94f"
+ID: "a5d6221a-a46a-48b6-bc49-8407afd8d8a0"
+Parent: "1dca4156-d51d-4f4f-b40e-bada91a5f0fe"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Promo/_ImagePromo/Image Promo/ImagePromo_PrimaryCTAGoal
+Path: /sitecore/templates/Feature/Promo/_PodcastLink/Podcast Link/PodcastLink_Icon
 DB: master
 SharedFields:
-- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
-  Hint: Source
-  Value: /sitecore/system/Marketing Control Panel/Goals
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: Droplink
+  Value: Image
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 800
+  Value: 200
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Primary CTA Goal
+    Value: Podcast Icon
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210420T100347Z
+      Value: 20210422T085909Z

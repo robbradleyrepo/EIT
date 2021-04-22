@@ -1,8 +1,8 @@
 ﻿---
-ID: "6489cbfc-15ad-4a09-980c-d79734046802"
+ID: "10640277-0529-4639-b0bb-f394105624ab"
 Parent: "f7a7cc71-0475-4c45-bb16-7c792329e354"
 Template: "1ab4f9ad-b004-413c-8924-3e07143a614b"
-Path: /sitecore/content/Applications/WebEdit/Custom Experience Buttons/Feature/Promo/Edit Image Promo Component
+Path: /sitecore/content/Applications/WebEdit/Custom Experience Buttons/Feature/Promo/Edit Podcast Promo Component
 DB: core
 SharedFields:
 - ID: "4431914a-c40b-437c-8add-d2ed12cc8cc3"
@@ -10,7 +10,7 @@ SharedFields:
   Value: Applications/32x32/contract.png
 - ID: "cf738220-908d-4c3f-9482-32e625daf13c"
   Hint: Fields
-  Value: ImagePromo_TextAlignment|ImagePromo_ShowPrimaryCTA|ImagePromo_ShowSecondaryCTA|ImagePromo_HideFirstImage|ImagePromo_HideSecondImage|ImagePromo_HideThirdImage|ImagePromo_HideFourthImage
+  Value: PodcastPromo_BackgroundImage
 Languages:
 - Language: en
   Fields:
