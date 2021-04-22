@@ -16,6 +16,7 @@ export default () => {
     centeredSlides: true,
     breakpointsInverse: true,
     longSwipes: false,
+    slideToClickedSlide: true,
     setWrapperSize: true,
     spaceBetween: 5,
     coverflowEffect: {
@@ -65,10 +66,6 @@ export default () => {
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
     },
   });
 };
