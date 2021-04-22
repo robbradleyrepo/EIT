@@ -4,94 +4,100 @@
 @using LionTrust.Foundation.Analytics.Goals
 @using LionTrust.Foundation.ORM.Extensions
 @model LionTrust.Feature.Carousel.Models.IHomepageCarousel
-
-<div class="leadbanner">
-    <div class="leadbanner__headbox">
-        <div class="leadbanner__head">
-            <h1>@Html.Glass().Editable(Model, x => x.Heading)</h1>
-        </div>
-    </div>
-    <div class="leadbanner__contentbox">
-        <div class="leadbanner__content">
-            @Html.Glass().Editable(Model, x => x.Body)
-        </div>
-    </div>
-    <div class="leadbanner__btnbox">
-        @if (Model.PrimaryCTALink != null || Sitecore.Context.PageMode.IsExperienceEditorEditing)
-        {
-            <div class="newsletter__btnbox">
-                @Html.GenerateGoalAnchor(m => m.PrimaryCTALink, () => Model.PrimaryCTALink.Url, "btn btn-primary imagepromo__btn", Model.PrimaryCTAGoal, () => string.Format("{0}<i class='icon-arrow-right imagepromo__arrow animate-arrow'></i>", Model.PrimaryCTALabel))
+@if (Model != null)
+{
+    <div class="leadbanner">
+        <div class="leadbanner__headbox">
+            <div class="leadbanner__head">
+                <h1>@Html.Glass().Editable(Model, x => x.Heading)</h1>
             </div>
-        }
-
-        @if (Model.SecondaryCTALink != null || Sitecore.Context.PageMode.IsExperienceEditorEditing)
-        {
-            <div class="newsletter__btnbox">
-                @Html.GenerateGoalAnchor(m => m.SecondaryCTALink, () => Model.SecondaryCTALink.Url, "btn btn-primary-forward imagepromo__btn", Model.SecondaryCTAGoal, () => string.Format("{0}<i class='icon-arrow-right imagepromo__arrow animate-arrow'></i>", Model.SecondaryCTALabel))
+        </div>
+        <div class="leadbanner__contentbox">
+            <div class="leadbanner__content">
+                @Html.Glass().Editable(Model, x => x.Body)
             </div>
-        }
-    </div>
-
-</div>
-<div class="carousel-box">
-    <div class="swiper-container-carousel carousel">
-        @if (Sitecore.Context.PageMode.IsExperienceEditor)
-        {
-            using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Carousel/HomePageCarousel", Model.Id.ToString(), "Edit Carousel"))
+        </div>
+        <div class="leadbanner__btnbox">
+            @if (Model.PrimaryCTALink != null || Sitecore.Context.PageMode.IsExperienceEditorEditing)
             {
-                <div>Add/Edit the Carousel</div>
+                <div class="newsletter__btnbox">
+                    @Html.GenerateGoalAnchor(m => m.PrimaryCTALink, () => Model.PrimaryCTALink.Url, "btn btn-primary imagepromo__btn", Model.PrimaryCTAGoal, () => string.Format("{0}<i class='icon-arrow-right imagepromo__arrow animate-arrow'></i>", Model.PrimaryCTALabel))
+                </div>
             }
-        }
-        <div class="swiper-wrapper">
-            @{
-                IEnumerable<ICarousel> carouselCards = null;
-                if (!Sitecore.Context.PageMode.IsExperienceEditor && Model.NumberOfItems > 0)
-                {
-                    carouselCards = Model.CarouselCards.Take(Model.NumberOfItems);
-                }
-                else
-                {
-                    carouselCards = Model.CarouselCards;
-                }
 
-                foreach (var carouselCard in carouselCards)
+            @if (Model.SecondaryCTALink != null || Sitecore.Context.PageMode.IsExperienceEditorEditing)
+            {
+                <div class="newsletter__btnbox">
+                    @Html.GenerateGoalAnchor(m => m.SecondaryCTALink, () => Model.SecondaryCTALink.Url, "btn btn-primary-forward imagepromo__btn", Model.SecondaryCTAGoal, () => string.Format("{0}<i class='icon-arrow-right imagepromo__arrow animate-arrow'></i>", Model.SecondaryCTALabel))
+                </div>
+            }
+        </div>
+
+    </div>
+    <div class="carousel-box">
+        <div class="swiper-container-carousel carousel">
+            @if (Sitecore.Context.PageMode.IsExperienceEditor)
+            {
+                using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Carousel/HomePageCarousel", Model.Id.ToString(), "Edit Carousel"))
                 {
-                    using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Carousel/Carousel Card", carouselCard.Id.ToString(), "Edit Carousel Item"))
+                    <div>Add/Edit the Carousel</div>
+                }
+            }
+            <div class="swiper-wrapper">
+                @{
+                    IEnumerable<ICarousel> carouselCards = null;
+                    if (!Sitecore.Context.PageMode.IsExperienceEditor && Model.NumberOfItems > 0)
                     {
-                        <div class="swiper-slide">
-                            <div class="slide" style="background-image: url('@carouselCard.Image.ImageSrc()');">
-                                <div class="slide__content">
-                                    <div class="slide__head">
-                                        @Html.Glass().RenderImage(carouselCard, x => x.AuthorImage, new NameValueCollection { { "class", "slide__head-img" }, { "alt", carouselCard.AuthorName } })
-                                        <span class="slide__name">@Html.Glass().Editable(carouselCard, x => x.AuthorName)</span>
-                                    </div>
-                                    <h2 class="slide__title">
-                                        @Html.Glass().Editable(carouselCard, x => x.Heading)
-                                    </h2>
-                                </div>
+                        carouselCards = Model.CarouselCards.Take(Model.NumberOfItems);
+                    }
+                    else
+                    {
+                        carouselCards = Model.CarouselCards;
+                    }
 
-                                <button class="slide__play" data-goal-trigger="@carouselCard.CTAGoal.ToString()" data-type="iframe" data-fancybox data-src="@carouselCard.CTALink.LinkUrl()">
-                                    @Html.Glass().Editable(carouselCard, x => x.CTALabel)
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="53" height="53" fill="rgba(255,255,255,0)" xmlns:v="https://vecta.io/nano">
-                                        <g stroke="#fff"><circle cx="26.5" cy="26.5" r="26.5" stroke="none" /><circle cx="26.5" cy="26.5" r="26" fill="none" /></g>
-                                        <g transform="matrix(0 1 -1 0 38.182 16.543)">
-                                            <path class="triangle" d="M19.789 18.075H.85l9.47-17.045 9.47 17.045z" />
-                                            <path d="M10.319 2.059L1.7 17.575h17.239l-8.62-15.516m0-2.059l10.319 18.575H0L10.319 0z" fill="#fff" />
-                                        </g>
-                                    </svg>
-                                </button>
+                    foreach (var carouselCard in carouselCards)
+                    {
+                        using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Carousel/Carousel Card", carouselCard.Id.ToString(), "Edit Carousel Item"))
+                        {
+                            <div class="swiper-slide">
+                                <div class="slide" style="background-image: url('@carouselCard.Image.ImageSrc()');">
+                                    <div class="slide__content">
+                                        <div class="slide__head">
+                                            @Html.Glass().RenderImage(carouselCard, x => x.AuthorImage, new NameValueCollection { { "class", "slide__head-img" }, { "alt", carouselCard.AuthorName } })
+                                            <span class="slide__name">@Html.Glass().Editable(carouselCard, x => x.AuthorName)</span>
+                                        </div>
+                                        <h2 class="slide__title">
+                                            @Html.Glass().Editable(carouselCard, x => x.Heading)
+                                        </h2>
+                                    </div>
+
+                                    <button class="slide__play" data-goal-trigger="@carouselCard.CTAGoal.ToString()" data-type="iframe" data-fancybox data-src="@carouselCard.CTALink.LinkUrl()">
+                                        @Html.Glass().Editable(carouselCard, x => x.CTALabel)
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="53" height="53" fill="rgba(255,255,255,0)" xmlns:v="https://vecta.io/nano">
+                                            <g stroke="#fff"><circle cx="26.5" cy="26.5" r="26.5" stroke="none" /><circle cx="26.5" cy="26.5" r="26" fill="none" /></g>
+                                            <g transform="matrix(0 1 -1 0 38.182 16.543)">
+                                                <path class="triangle" d="M19.789 18.075H.85l9.47-17.045 9.47 17.045z" />
+                                                <path d="M10.319 2.059L1.7 17.575h17.239l-8.62-15.516m0-2.059l10.319 18.575H0L10.319 0z" fill="#fff" />
+                                            </g>
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
-                        </div>
+                        }
                     }
                 }
-            }
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
         </div>
-
-        <div class="swiper-pagination"></div>
-
-
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-
     </div>
-</div>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <div>Please assign datasource for Homepage Carousel component!</div>
+}
