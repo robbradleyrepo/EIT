@@ -61,32 +61,5 @@
             public const string Value_FieldName = "Value";
             public const string Value_FieldId = "{1B5CD3C2-03F1-4675-9B2C-E36DE11902FA}";
         }
-
-        public static class PodcastPromo
-        {
-            public const string Heading_FieldName = "PodcastPromo_Heading";
-            public const string Heading_FieldId = "{B040620B-5868-4F90-A613-291199DCCA80}";
-
-            public const string Title_FieldName = "PodcastPromo_Title";
-            public const string Title_FieldId = "{7AAE9C1D-09D6-458E-9C08-9E17202F5E27}";
-
-            public const string Body_FieldName = "PodcastPromo_Body";
-            public const string Body_FieldId = "{D0038738-1EFD-4F46-980D-03EEE85972CC}";
-
-            public const string BackgroundImage_FieldName = "PodcastPromo_BackgroundImage";
-            public const string BackgroundImage_FieldId = "{E6F7F113-DFE6-4D4F-8ABA-FFE70D681CED}";
-
-            public const string PodcastsLabel_FieldName = "PodcastPromo_PodcastsLabel";
-            public const string PodcastsLabel_FieldId = "{3519A624-39F9-4992-B2FD-AD40770C21E0}";
-        }
-
-        public static class PodcastLink
-        {
-            public const string Link_FieldName = "PodcastLink_Link";
-            public const string Link_FieldId = "{C57000E5-D8F4-45B4-8BA5-794E95FA3763}";
-
-            public const string Icon_FieldName = "PodcastLink_Icon";
-            public const string Icon_FieldId = "{C57000E5-D8F4-45B4-8BA5-794E95FA3763}";
-        }
     }
 }

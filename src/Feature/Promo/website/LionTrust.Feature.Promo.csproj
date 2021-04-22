@@ -75,8 +75,6 @@
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Models\IImagePromo.cs" />
-    <Compile Include="Models\IPodcastLink.cs" />
-    <Compile Include="Models\IPodcastPromo.cs" />
     <Compile Include="Models\IPromoGlassBase.cs" />
     <Compile Include="Models\IPromoLookup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
