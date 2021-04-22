@@ -15,6 +15,6 @@
             }
 
             return MainUtil.GetBool(checkboxField.Value, false);
-        }
+        }        
     }
 }

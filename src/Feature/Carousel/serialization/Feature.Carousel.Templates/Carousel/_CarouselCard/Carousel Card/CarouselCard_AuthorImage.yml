@@ -1,25 +1,25 @@
 ﻿---
-ID: "84fcb3d3-01f5-47dd-843c-9b28d3d55bf0"
-Parent: "1d9fc2e8-fa34-4c72-b159-14eb5e47d94f"
+ID: "fca56162-7081-4c2b-8726-2c5cc1b24635"
+Parent: "4a73b81d-eb99-4d64-8462-d9e9c7bcad9b"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Promo/_ImagePromo/Image Promo/ImagePromo_SecondaryCTALabel
+Path: /sitecore/templates/Feature/Carousel/_CarouselCard/Carousel Card/CarouselCard_AuthorImage
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: "Single-Line Text"
+  Value: Image
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 1000
+  Value: 200
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Secondary CTA Label
+    Value: Author Image
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210420T100347Z
+      Value: 20210421T114658Z

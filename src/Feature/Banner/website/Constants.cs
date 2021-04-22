@@ -42,6 +42,10 @@
 
             public const string ShowSecondaryCTA_FieldName = "PromoBannerRendering_ShowSecondaryCTA";
             public const string ShowSecondaryCTA_FieldId = "{45517CB0-DE4F-41EC-A268-78878D7D2F83}";
+
+            public const string PrimaryCtaGoalFieldId = "{8C3AA537-AD28-4338-936C-D0E0F0FB83D7}";
+
+            public const string SecondaryCtaGoalFieldId = "{F3FF2CD3-4DE7-4EBE-B740-9540D23F67E2}";
         }
     }
 }
