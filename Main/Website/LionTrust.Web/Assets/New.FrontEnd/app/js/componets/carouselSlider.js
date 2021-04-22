@@ -12,7 +12,6 @@ export default () => {
     // grabCursor: true,
     slidesPerView: "auto",
     watchSlidesVisibility: true,
-    loop: false,
     centeredSlides: true,
     breakpointsInverse: true,
     longSwipes: false,
