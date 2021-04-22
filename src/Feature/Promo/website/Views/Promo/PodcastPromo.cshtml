@@ -1,5 +1,4 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
-@using LionTrust.Foundation.ORM.Extensions
 @using System.Collections.Specialized;
 @model LionTrust.Feature.Promo.Models.IPodcastPromo
 @if (Model != null)
@@ -28,26 +27,20 @@
                             {
                                 using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Promo/PodcastPromo", Model.Id.ToString(), "Edit Podcast Promo"))
                                 {
-                                    <div>Add/Edit the Podcast Promo</div>
+                                    <p>Add Podcast Link </p>
                                 }
                             }
                             @if (Model.PodcastLinks != null && Model.PodcastLinks.Any() || Sitecore.Context.PageMode.IsExperienceEditor)
                             {
                                 <span>@Html.Glass().Editable(Model, x => x.PodcastsLabel) </span>
-
                                 foreach (var podcastLink in Model.PodcastLinks)
                                 {
-                                    using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Promo/PodcastLink", podcastLink.Id.ToString(), "Edit Podcast Link"))
-                                    {                                        
-                                        using (Html.BeginRenderLinkWithGoal(podcastLink, m => m.Link, isEditable: true))
-                                        {
-
-                                            <i class="icon-apple"></i>
-                                        }
+                                    if (podcastLink != null)
+                                    {
+                                        @Html.Partial("~/Views/Promo/PodcastLink.cshtml", podcastLink)
                                     }
                                 }
                             }
-
                         </div>
                     </div>
                 </div>

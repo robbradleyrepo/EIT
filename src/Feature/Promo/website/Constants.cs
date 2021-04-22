@@ -89,7 +89,10 @@
             public const string Link_FieldId = "{C57000E5-D8F4-45B4-8BA5-794E95FA3763}";
 
             public const string Icon_FieldName = "PodcastLink_Icon";
-            public const string Icon_FieldId = "{C57000E5-D8F4-45B4-8BA5-794E95FA3763}";
+            public const string Icon_FieldId = "{A5D6221A-A46A-48B6-BC49-8407AFD8D8A0}";
+
+            public const string LinkGoal_FieldName = "PodcastLink_Goal";
+            public const string LinkGoal_FieldId = "{01D8CA32-EC72-47E8-A6D5-93B060250A4D}";
         }
     }
 }
