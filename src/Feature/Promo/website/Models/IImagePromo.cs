@@ -3,6 +3,7 @@
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
+    using System;
 
     public interface IImagePromo : IPromoGlassBase
     {
@@ -56,5 +57,11 @@
 
         [SitecoreField(Constants.ImagePromo.TextAlignment_FieldId, SitecoreFieldType.Droplink, "Design")]
         IPromoLookup TextAlignment { get; set; }
+
+        [SitecoreField(Constants.ImagePromo.PrimaryCtaGoalFieldId)]
+        Guid PrimaryCtaGoal { get; set; }
+
+        [SitecoreField(Constants.ImagePromo.SecondaryCtaGoalFieldId)]
+        Guid SecondaryCtaGoal{ get; set; }
     }
 }
