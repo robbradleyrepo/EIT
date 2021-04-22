@@ -1,0 +1,49 @@
+﻿---
+ID: "307928c3-32fe-4791-9ec3-b64e67bdf032"
+Parent: "a55bf78f-965d-4b8f-848c-cac677887145"
+Template: "79659d0c-8e6c-47b5-b5d2-40ab5bec74cd"
+Path: "/sitecore/content/LionTrustNew/Home/jasons-page"
+DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        s:l="{CD1590E1-6573-4CC7-B0A9-E3BB6A9DADE4}" />
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{DE4EADD8-8C19-4CB2-8B0E-98FDE04B4664}"
+              p:before="*"
+              s:ds="{5936A08B-8783-416D-9E25-C1C6B19F162F}"
+              s:id="{E975E590-8880-467B-A459-C4B214A66C77}"
+              s:par="AccordionRenderingParameters_BackgroundColour&amp;AccordionRenderingParameters_Theme=%7B7E297036-BFFF-4080-B0E1-FF6C358A4916%7D&amp;AccordionRenderingParameters_TextAlign=%7B68D6465E-0D2B-45D0-A5E7-E3578757CEC7%7D"
+              s:ph="main" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210420T133257Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "960fe422-ace9-47e8-9e18-5d7e5ffa218f"
+      Hint: Menu Title
+      Value: "jasons-page"
