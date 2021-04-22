@@ -1,9 +1,10 @@
 ﻿namespace LionTrust.Feature.Promo.Models
 {
+    using System;
+
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
-    using Glass.Mapper.Sc.Fields;
-    using System;
+    using Glass.Mapper.Sc.Fields;    
 
     public interface IImagePromo : IPromoGlassBase
     {
@@ -25,14 +26,14 @@
         [SitecoreField(Constants.ImagePromo.FourthImage_FieldId, SitecoreFieldType.Image, "Promo Banner")]
         Image FourthImage { get; set; }
 
-        [SitecoreField(Constants.ImagePromo.PrimaryCTALabel_FieldId, SitecoreFieldType.SingleLineText, "Promo Banner")]
-        string PrimaryCTALabel { get; set; }
+        [SitecoreField(Constants.ImagePromo.PrimaryCTAGoal_FieldId, SitecoreFieldType.Droplink, "Promo Banner")]
+        Guid PrimaryCTAGoal { get; set; }
 
         [SitecoreField(Constants.ImagePromo.PrimaryCTALink_FieldId, SitecoreFieldType.GeneralLink, "Promo Banner")]
         Link PrimaryCTALink { get; set; }
 
-        [SitecoreField(Constants.ImagePromo.SecondaryCTALabel_FieldId, SitecoreFieldType.SingleLineText, "Promo Banner")]
-        string SecondaryCTALabel { get; set; }
+        [SitecoreField(Constants.ImagePromo.SecondaryCTAGoal_FieldId, SitecoreFieldType.Droplink, "Promo Banner")]
+        Guid SecondaryCTAGoal { get; set; }
 
         [SitecoreField(Constants.ImagePromo.SecondaryCTALink_FieldId, SitecoreFieldType.GeneralLink, "Promo Banner")]
         Link SecondaryCTALink { get; set; }
@@ -57,11 +58,5 @@
 
         [SitecoreField(Constants.ImagePromo.TextAlignment_FieldId, SitecoreFieldType.Droplink, "Design")]
         IPromoLookup TextAlignment { get; set; }
-
-        [SitecoreField(Constants.ImagePromo.PrimaryCtaGoalFieldId)]
-        Guid PrimaryCtaGoal { get; set; }
-
-        [SitecoreField(Constants.ImagePromo.SecondaryCtaGoalFieldId)]
-        Guid SecondaryCtaGoal{ get; set; }
     }
 }

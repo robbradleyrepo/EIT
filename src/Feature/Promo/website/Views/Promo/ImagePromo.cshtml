@@ -1,4 +1,5 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Foundation.Analytics.Goals
 @using System.Collections.Specialized;
 @using LionTrust.Foundation.Analytics.Goals
 @model LionTrust.Feature.Promo.Models.IImagePromo
@@ -45,17 +46,23 @@
                         <div class="imagepromo__btnbox">
                             @if (Model.ShowPrimaryCTA)
                             {
-                                using (Html.BeginRenderLinkWithGoal(Model, m => m.PrimaryCTALink, Model.PrimaryCtaGoal, new NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
+                                using (Html.BeginRenderLinkWithGoal(Model, m => m.PrimaryCTALink, Model.PrimaryCTAGoal, new NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
                                 {
-                                    @Html.Glass().Editable(Model, x => x.PrimaryCTALabel)
+                                    if (Model.PrimaryCTALink != null && !string.IsNullOrEmpty(Model.PrimaryCTALink.Text))
+                                    {
+                                        @Model.PrimaryCTALink.Text
+                                    }
                                     <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
                                 }
                             }
                             @if (Model.ShowSecondaryCTA)
                             {
-                                using (Html.BeginRenderLinkWithGoal(Model, m => m.SecondaryCTALink, Model.SecondaryCtaGoal, new NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }, isEditable: true))
+                                using (Html.BeginRenderLinkWithGoal(Model, m => m.SecondaryCTALink, Model.SecondaryCTAGoal, new NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }, isEditable: true))
                                 {
-                                    @Html.Glass().Editable(Model, x => x.SecondaryCTALabel)
+                                    if (Model.SecondaryCTALink != null && !string.IsNullOrEmpty(Model.SecondaryCTALink.Text))
+                                    {
+                                        @Model.SecondaryCTALink.Text
+                                    }
                                     <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
                                 }
                             }
