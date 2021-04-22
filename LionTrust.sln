@@ -124,9 +124,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{C95C4E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionTrust.Foundation.Models", "src\Foundation\Models\website\LionTrust.Foundation.Models.csproj", "{366D70BB-816F-46DC-8C37-5C0C0D40DDFB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LeadBanner", "LeadBanner", "{2389A6D4-D219-42A6-BF69-7D4FA14EBA08}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Banner", "Banner", "{2389A6D4-D219-42A6-BF69-7D4FA14EBA08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionTrust.Feature.LeadBanner", "src\Feature\LeadBanner\website\LionTrust.Feature.LeadBanner.csproj", "{4A438B76-4E52-498F-BA0B-57D43C598973}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionTrust.Feature.Banner", "src\Feature\Banner\website\LionTrust.Feature.Banner.csproj", "{4A438B76-4E52-498F-BA0B-57D43C598973}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Newsletter", "Newsletter", "{86605A72-7A1C-4232-99DA-CCFFA5E39B7E}"
 EndProject
@@ -143,6 +143,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Promo", "Promo", "{79B90806-4A8B-40D3-B821-602092EB0EEC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionTrust.Feature.Promo", "src\Feature\Promo\website\LionTrust.Feature.Promo.csproj", "{1A32EAA8-5FD7-4FDB-9411-C1165DF6D9D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Carousel", "Carousel", "{EB3652D3-E4E8-44BF-90AE-2459AD5E1DAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionTrust.Feature.Carousel", "src\Feature\Carousel\website\LionTrust.Feature.Carousel.csproj", "{21D0AF18-11D2-474C-8DC9-CA4E8ABF5F47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -286,6 +290,10 @@ Global
 		{1A32EAA8-5FD7-4FDB-9411-C1165DF6D9D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A32EAA8-5FD7-4FDB-9411-C1165DF6D9D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A32EAA8-5FD7-4FDB-9411-C1165DF6D9D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21D0AF18-11D2-474C-8DC9-CA4E8ABF5F47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21D0AF18-11D2-474C-8DC9-CA4E8ABF5F47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21D0AF18-11D2-474C-8DC9-CA4E8ABF5F47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21D0AF18-11D2-474C-8DC9-CA4E8ABF5F47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -354,6 +362,8 @@ Global
 		{E7D555DF-7460-458F-A921-F2F2FD93C1BA} = {1481F59E-A34C-45D1-A0D1-D84F19837B91}
 		{79B90806-4A8B-40D3-B821-602092EB0EEC} = {60DA3F20-DEED-4580-AE38-A296D76ADE79}
 		{1A32EAA8-5FD7-4FDB-9411-C1165DF6D9D8} = {79B90806-4A8B-40D3-B821-602092EB0EEC}
+		{EB3652D3-E4E8-44BF-90AE-2459AD5E1DAB} = {60DA3F20-DEED-4580-AE38-A296D76ADE79}
+		{21D0AF18-11D2-474C-8DC9-CA4E8ABF5F47} = {EB3652D3-E4E8-44BF-90AE-2459AD5E1DAB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {845F548C-FD53-4C61-AB7F-953C2225A13B}

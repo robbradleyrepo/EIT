@@ -1,0 +1,63 @@
+﻿@using System.Collections.Specialized;
+@using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Foundation.Analytics.Goals
+@model LionTrust.Feature.Banner.Models.IPromoBanner
+@{
+    var textAlignmentCss = "text-center";
+    if (Model.TextAlignment != null && !string.IsNullOrEmpty(Model.TextAlignment.Value))
+    {
+        switch (Model.TextAlignment.Value)
+        {
+            case "left":
+                textAlignmentCss = "text-left";
+                break;
+            case "right":
+                textAlignmentCss = "text-right";
+                break;
+            default:
+                break;
+        }
+    }
+}
+<section class="lead-banner__wrapper">
+    <div class="absolute-center z-index-10">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="lead-banner @textAlignmentCss">
+                        <div class="lead-banner__content">
+                            <h2 class="lead-banner__title mb-3">@Html.Glass().Editable(Model, x => x.Heading)</h2>
+                            <span class="lead-banner__text pb-lg-3">
+                                @Html.Glass().Editable(Model, x => x.Body)
+                            </span>
+
+                            <div class="lead-banner__btnbox mt-4">
+                                @if (Model.ShowPrimaryCTA)
+                                {
+                                    using (Html.BeginRenderLinkWithGoal(Model, m => m.PrimaryCTALink, Model.PrimaryCtaGoal, new NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
+                                    {
+                                        @Html.Glass().Editable(Model, x => x.PrimaryCTALabel)
+                                        <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
+                                    }
+                                }
+
+                                @if (Model.ShowSecondaryCTA)
+                                {
+                                    using (Html.BeginRenderLinkWithGoal(Model, m => m.SecondaryCTALink, Model.SecondaryCtaGoal, new NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }, isEditable: true))
+                                    {
+                                        @Html.Glass().Editable(Model, x => x.SecondaryCTALabel)
+                                        <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lead-banner__overlay">
+        <div class="lead-banner__bg"
+             style="background-image: url(@(Model.Image != null && !string.IsNullOrEmpty(Model.Image.Src) ? Model.Image.Src : string.Empty))"></div>
+    </div>
+</section>

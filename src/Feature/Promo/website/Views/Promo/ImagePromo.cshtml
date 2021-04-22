@@ -1,7 +1,12 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @using LionTrust.Foundation.Analytics.Goals
 @using System.Collections.Specialized;
+@using LionTrust.Foundation.Analytics.Goals
 @model LionTrust.Feature.Promo.Models.IImagePromo
+@if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    return;
+}
 <div class="imagepromo">
     <div class="container">
         <div class="row">

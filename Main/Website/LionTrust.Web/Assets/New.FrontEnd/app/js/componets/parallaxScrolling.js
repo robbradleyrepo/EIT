@@ -2,6 +2,12 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default () => {
+  // Check if EI
+  if (window.document.documentMode) {
+    // Do IE stuff
+    window.requestAnimationFrame = window.requestAnimationFrame.bind(window);
+  }
+
   gsap.registerPlugin(ScrollTrigger);
   gsap.to(".paralax-circle__item", {
     scrollTrigger: {
