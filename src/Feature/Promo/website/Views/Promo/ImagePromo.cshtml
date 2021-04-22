@@ -1,6 +1,11 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @using System.Collections.Specialized;
+@using LionTrust.Foundation.Analytics.Goals
 @model LionTrust.Feature.Promo.Models.IImagePromo
+@if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    return;
+}
 <div class="imagepromo">
     <div class="container">
         <div class="row">
@@ -40,7 +45,7 @@
                         <div class="imagepromo__btnbox">
                             @if (Model.ShowPrimaryCTA)
                             {
-                                using (Html.Glass().BeginRenderLink(Model, m => m.PrimaryCTALink, new NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
+                                using (Html.BeginRenderLinkWithGoal(Model, m => m.PrimaryCTALink, Model.PrimaryCtaGoal, new NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
                                 {
                                     @Html.Glass().Editable(Model, x => x.PrimaryCTALabel)
                                     <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
@@ -48,7 +53,7 @@
                             }
                             @if (Model.ShowSecondaryCTA)
                             {
-                                using (Html.Glass().BeginRenderLink(Model, m => m.SecondaryCTALink, new NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }, isEditable: true))
+                                using (Html.BeginRenderLinkWithGoal(Model, m => m.SecondaryCTALink, Model.SecondaryCtaGoal, new NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }, isEditable: true))
                                 {
                                     @Html.Glass().Editable(Model, x => x.SecondaryCTALabel)
                                     <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
