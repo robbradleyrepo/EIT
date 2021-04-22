@@ -69,7 +69,7 @@
   <ItemGroup>
     <Content Include="Views\Promo\ImagePromo.cshtml" />
     <Content Include="Views\Web.config" />
-    <Content Include="App_Config\Feature\Feature.Promo.Serialization.config" />
+    <Content Include="App_Config\Include\Feature\Feature.Promo.Serialization.config" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -81,6 +81,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Foundation\Analytics\website\LionTrust.Foundation.Analytics.csproj">
+      <Project>{71010683-02eb-4e0d-b0e1-6643922799ee}</Project>
+      <Name>LionTrust.Foundation.Analytics</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\ORM\website\LionTrust.Foundation.ORM.csproj">
       <Project>{5e91a7d9-8e93-44fd-857f-f9ce145b6022}</Project>
       <Name>LionTrust.Foundation.ORM</Name>
