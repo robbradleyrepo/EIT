@@ -3,7 +3,7 @@
     using LionTrust.Foundation.ORM.Models;
     using System.Collections.Generic;
 
-    public interface IAccordionModel: IGlassBase
+    public interface IAccordionModel: IListingsGlassBase
     {
         IEnumerable<IAccordionRowModel> Children { get; set; }
     }
