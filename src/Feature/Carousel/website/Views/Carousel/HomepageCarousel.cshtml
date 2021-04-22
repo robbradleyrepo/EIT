@@ -6,41 +6,13 @@
 @model LionTrust.Feature.Carousel.Models.IHomepageCarousel
 @if (Model != null)
 {
-    <div class="leadbanner">
-        <div class="leadbanner__headbox">
-            <div class="leadbanner__head">
-                <h1>@Html.Glass().Editable(Model, x => x.Heading)</h1>
-            </div>
-        </div>
-        <div class="leadbanner__contentbox">
-            <div class="leadbanner__content">
-                @Html.Glass().Editable(Model, x => x.Body)
-            </div>
-        </div>
-        <div class="leadbanner__btnbox">
-            @if (Model.PrimaryCTALink != null || Sitecore.Context.PageMode.IsExperienceEditorEditing)
-            {
-                <div class="newsletter__btnbox">
-                    @Html.GenerateGoalAnchor(m => m.PrimaryCTALink, () => Model.PrimaryCTALink.Url, "btn btn-primary imagepromo__btn", Model.PrimaryCTAGoal, () => string.Format("{0}<i class='icon-arrow-right imagepromo__arrow animate-arrow'></i>", Model.PrimaryCTALabel))
-                </div>
-            }
-
-            @if (Model.SecondaryCTALink != null || Sitecore.Context.PageMode.IsExperienceEditorEditing)
-            {
-                <div class="newsletter__btnbox">
-                    @Html.GenerateGoalAnchor(m => m.SecondaryCTALink, () => Model.SecondaryCTALink.Url, "btn btn-primary-forward imagepromo__btn", Model.SecondaryCTAGoal, () => string.Format("{0}<i class='icon-arrow-right imagepromo__arrow animate-arrow'></i>", Model.SecondaryCTALabel))
-                </div>
-            }
-        </div>
-
-    </div>
     <div class="carousel-box">
         <div class="swiper-container-carousel carousel">
             @if (Sitecore.Context.PageMode.IsExperienceEditor)
             {
                 using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Carousel/HomePageCarousel", Model.Id.ToString(), "Edit Carousel"))
                 {
-                    <div>Add/Edit the Carousel</div>
+                    <div>Add Carousel items</div>
                 }
             }
             <div class="swiper-wrapper">
@@ -72,7 +44,10 @@
                                     </div>
 
                                     <button class="slide__play" data-goal-trigger="@carouselCard.CTAGoal.ToString()" data-type="iframe" data-fancybox data-src="@carouselCard.CTALink.LinkUrl()">
-                                        @Html.Glass().Editable(carouselCard, x => x.CTALabel)
+                                        @if (carouselCard.CTALink != null && !string.IsNullOrEmpty(carouselCard.CTALink.Text))
+                                        {
+                                            @carouselCard.CTALink.Text
+                                        }
                                         <svg xmlns="http://www.w3.org/2000/svg" width="53" height="53" fill="rgba(255,255,255,0)" xmlns:v="https://vecta.io/nano">
                                             <g stroke="#fff"><circle cx="26.5" cy="26.5" r="26.5" stroke="none" /><circle cx="26.5" cy="26.5" r="26" fill="none" /></g>
                                             <g transform="matrix(0 1 -1 0 38.182 16.543)">

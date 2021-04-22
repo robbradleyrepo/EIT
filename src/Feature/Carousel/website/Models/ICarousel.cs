@@ -23,9 +23,6 @@
         [SitecoreField(Constants.CarouselCard.CTAGoal_FieldId, SitecoreFieldType.Droplink, "Carousel Card")]
         Guid CTAGoal { get; set; }
 
-        [SitecoreField(Constants.CarouselCard.CTALabel_FieldId, SitecoreFieldType.SingleLineText, "Carousel Card")]
-        string CTALabel { get; set; }
-
         [SitecoreField(Constants.CarouselCard.Image_FieldId, SitecoreFieldType.Image, "Carousel Card")]
         Image Image { get; set; }
     }
