@@ -1,0 +1,95 @@
+﻿@using System.Collections.Specialized;
+@model LionTrust.Feature.Promo.Models.ArticleScrollerViewModel
+<section class="article">
+    <div class="article__box">
+        <div class="container">
+            <div class="row">
+                <div class="article__head">
+                    <h2>@Html.Glass().Editable(Model.ArticleScroller, m => m.Heading)</h2>
+                    @using (Html.Glass().BeginRenderLink(Model.ArticleScroller, m => m.CTA, new NameValueCollection { { "class", "btn btn-secondary-nav article__btn" } }, , isEditable: true))
+                    {
+                        if (Model.ArticleScroller.CTA != null && !string.IsNullOrEmpty(Model.ArticleScroller.CTA.Text))
+                        {
+                            @Model.ArticleScroller.CTA.Text
+                        }
+                        <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
+                    }
+                </div>
+            </div>
+        </div>
+        <!-- Swiper -->
+        <div class="container-left-gutter">
+            <div class="swiper-container-article">
+                <div class="swiper-wrapper">
+                    @if (Model.ArticleScroller.SelectedArticles != null && Model.ArticleScroller.SelectedArticles.Any())
+                    {
+                        @foreach (var article in Model.ArticleScroller.SelectedArticles)
+                        {
+                            if (article.ArticleType != null && !string.IsNullOrEmpty(article.ArticleType.Value))
+                            {
+                                switch (article.ArticleType.Value)
+                                {
+                                    case "fund-manager":
+                                        {
+                                            <div class="swiper-slide">
+                                                @Html.Partial("~/Views/Promo/FundManagerPromo.cshtml", article)
+                                            </div>
+                                            break;
+                                        }
+                                    case "podcast":
+                                        {
+                                            <div class="swiper-slide">
+                                                @Html.Partial("~/Views/Promo/PodcastPromo.cshtml", article)
+                                            </div>
+                                            break;
+                                        }
+                                    case "fund-update":
+                                        {
+                                            <div class="swiper-slide">
+                                                @Html.Partial("~/Views/Promo/FundUpatePromo.cshtml", article)
+                                            </div>
+                                            break;
+                                        }
+                                    case "video":
+                                        {
+                                            @Html.Partial("~/Views/Promo/VidePromo.cshtml", article)
+                                            break;
+                                        }
+                                    case "magazine-reports":
+                                        {
+                                            <div class="swiper-slide">
+                                                @Html.Partial("~/Views/Promo/MagazineReportsPromo.cshtml", article)
+                                            </div>
+                                            break;
+                                        }
+                                    default:
+                                        {
+                                            <div class="swiper-slide">
+                                                @Html.Partial("~/Views/Promo/FundManagerPromo.cshtml", article)
+                                            </div>
+                                        }
+                                        break;
+                                }
+                            }
+                            else
+                            {
+                                <div class="swiper-slide">
+                                    @Html.Partial("~/Views/Promo/FundManagerPromo.cshtml", article)
+                                </div>
+                            }
+                        }
+                    }
+                </div>
+            </div>
+
+            @using (Html.Glass().BeginRenderLink(Model.ArticleScroller, m => m.CTA, new NameValueCollection { { "class", "btn btn-secondary-nav d-lg-none" } }))
+            {
+                if (Model.ArticleScroller.CTA != null && !string.IsNullOrEmpty(Model.ArticleScroller.CTA.Text))
+                {
+                    @Model.ArticleScroller.CTA.Text
+                }
+                <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
+            }
+        </div>
+    </div>
+</section>

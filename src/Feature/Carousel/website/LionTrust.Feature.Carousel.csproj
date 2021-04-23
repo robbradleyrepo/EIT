@@ -86,6 +86,14 @@
       <Project>{71010683-02eb-4e0d-b0e1-6643922799ee}</Project>
       <Name>LionTrust.Foundation.Analytics</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Indexing\website\LionTrust.Foundation.Indexing.csproj">
+      <Project>{acd53016-c45a-4a10-8b46-9a4a82a69d7b}</Project>
+      <Name>LionTrust.Foundation.Indexing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Legacy\website\LionTrust.Foundation.Legacy.csproj">
+      <Project>{43ee972b-2002-4719-a878-a66a99c42c40}</Project>
+      <Name>LionTrust.Foundation.Legacy</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\ORM\website\LionTrust.Foundation.ORM.csproj">
       <Project>{5e91a7d9-8e93-44fd-857f-f9ce145b6022}</Project>
       <Name>LionTrust.Foundation.ORM</Name>

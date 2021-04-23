@@ -1,13 +1,13 @@
 ﻿---
-ID: "ed63cdc5-4759-4afc-89dd-c80bd63f1c64"
+ID: "a6024662-8af0-4296-864f-e580a183582f"
 Parent: "726bafd3-74f9-492e-8394-730230c6e00a"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Feature/Carousel/_HomepageCarousel
+Path: /sitecore/templates/Feature/Carousel/_ArticleScroller
 DB: master
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
-  Value: office/32x32/elements3.png
+  Value: Office/32x32/copy.png
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
   Type: tree list
@@ -19,4 +19,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210421T114346Z
+      Value: 20210423T152256Z

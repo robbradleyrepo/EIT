@@ -1,28 +1,25 @@
 ﻿---
-ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
-Parent: "4cb10d12-60c5-4425-aac3-6785e126b230"
+ID: "93854c18-0919-445e-bc88-2d353c8491e8"
+Parent: "4ba7eb4e-8797-45f9-9582-8d2e3a2e9ed6"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Foundation/Legacy/_LegacyArticle/Article page data/LegacyArticle_BlogType
+Path: /sitecore/templates/Feature/Carousel/_ArticleScroller/Article Scroller/ArticleScroller_Heading
 DB: master
 SharedFields:
-- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
-  Hint: Source
-  Value: /sitecore/content/Global/Blog Type
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: Droplink
+  Value: "Single-Line Text"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 600
+  Value: 100
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Article type
+    Value: Heading
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20160406T074759Z
+      Value: 20210423T152312Z
