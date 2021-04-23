@@ -133,6 +133,16 @@
             public static readonly ID TwitterAccounts_FieldID = new ID("{9568F987-E036-4144-B158-B2084D778CE2}");
         }
 
+        public static class AnchorLinks
+        {
+            public const string HeadingFieldId = "{2DFCB4D4-7986-47A1-A0F3-79E139F3F976}";
+        }
+
+        public static class LinkWithGoal
+        {
+            public const string GoalFieldId = "{FEE8CC02-9E0E-4510-9343-F642A9ABAFEC}";
+        }
+
         public static class PageLink
         {
             public const string Link_FieldName = "Link";
