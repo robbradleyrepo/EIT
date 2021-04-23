@@ -1,51 +1,32 @@
-<div class="container" style="height: 1000px; background-color: #0a0c0b;">
-    <div class="row">
-        <div class="offset-lg-6 col-lg-6">
-            <div class="video-box">
-                <a class="video-box__link" data-fancybox href="https://www.youtube.com/watch?v=ARoGZIN5oC4"
-                    style="background-image: url('https://i.ytimg.com/vi/ARoGZIN5oC4/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBAf3NQm-_gP4PSfAI5Ot4E-JgUrQ');">
-                    <svg class="video-box__play-btn" xmlns="http://www.w3.org/2000/svg" width="188" height="188"
-                        viewBox="0 0 188 188">
-                        <defs>
-                            <style>
-                                .a,
-                                .b {
-                                    fill: rgba(255, 255, 255, 0);
-                                }
-
-                                .a {
-                                    stroke: #fff;
-                                }
-
-                                .c,
-                                .e {
-                                    stroke: none;
-                                }
-
-                                .d {
-                                    fill: none;
-                                }
-
-                                .e {
-                                    fill: #fff;
-                                }
-                            </style>
-                        </defs>
-                        <g transform="translate(-256 -104)">
-                            <g class="a" transform="translate(256 104)">
-                                <circle class="c" cx="94" cy="94" r="94" />
-                                <circle class="d" cx="94" cy="94" r="93.5" />
-                            </g>
-                            <g class="b" transform="translate(377 175.5) rotate(90)">
-                                <path class="c"
-                                    d="M 48.12947845458984 41.5 L 0.8705216646194458 41.5 L 24.5 0.9923228621482849 L 48.12947845458984 41.5 Z" />
-                                <path class="e"
-                                    d="M 24.5 1.984634399414062 L 1.741039276123047 41 L 47.25896072387695 41 L 24.5 1.984634399414062 M 24.5 0 L 49 42 L 0 42 L 24.5 0 Z" />
-                            </g>
-                        </g>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
+<a
+  class="video-box__link"
+  data-fancybox
+  href="https://www.youtube.com/watch?v=ARoGZIN5oC4"
+  style="background-image: url('images/components/video/video-bg.png')"
+>
+  <svg
+    class="video-box__play-btn"
+    xmlns="http://www.w3.org/2000/svg"
+    width="188"
+    height="188"
+  >
+    <defs>
+      <style>
+        .c {
+          stroke: none;
+        }
+      </style>
+    </defs>
+    <g fill="transparent">
+      <g stroke="#fff">
+        <circle class="c" cx="94" cy="94" r="94" />
+        <circle cx="94" cy="94" r="93.5" fill="none" />
+      </g>
+      <path class="triangle" d="M79.5 119.63V72.37L120.008 96 79.5 119.63z" />
+      <path
+        d="M119.015 96L80 73.241v45.518L119.015 96M121 96l-42 24.5v-49L121 96z"
+        fill="#fff"
+      />
+    </g>
+  </svg>
+</a>

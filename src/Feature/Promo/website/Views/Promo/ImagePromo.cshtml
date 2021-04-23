@@ -1,0 +1,75 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Foundation.Analytics.Goals
+@using System.Collections.Specialized;
+@using LionTrust.Foundation.Analytics.Goals
+@model LionTrust.Feature.Promo.Models.IImagePromo
+@if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    return;
+}
+<div class="imagepromo">
+    <div class="container">
+        <div class="row">
+            <div class="imagepromo__box">
+                <div class="imagepromo__body">
+                    <div class="imagepromo__imagebox @(Model.TextAlignment != null && !string.IsNullOrEmpty(Model.TextAlignment.Value) && Model.TextAlignment.Value.Equals("right") ? "order-1" : string.Empty)">
+                        <div class="imagepromo__imageboxchild">
+                            @if (!Model.HideFirstImage)
+                            {
+                                @Html.Glass().RenderImage(Model, x => x.FirstImage, new NameValueCollection { { "class", "imagepromo__image-bg" } }, isEditable: true)
+                            }
+                            @if (!Model.HideSecondImage)
+                            {
+                                @Html.Glass().RenderImage(Model, x => x.SecondImage, new NameValueCollection { { "class", "imagepromo__image-sm" } }, isEditable: true)
+                            }
+                        </div>
+
+                        <div class="imagepromo__imageboxchild">
+                            @if (!Model.HideThirdImage)
+                            {
+                                @Html.Glass().RenderImage(Model, x => x.ThirdImage, new NameValueCollection { { "class", "imagepromo__image-sm" } }, isEditable: true)
+                            }
+                            @if (!Model.HideFourthImage)
+                            {
+                                @Html.Glass().RenderImage(Model, x => x.FourthImage, new NameValueCollection { { "class", "imagepromo__image-bg" } }, isEditable: true)
+                            }
+                        </div>
+                    </div>
+                    <div class="imagepromo__content">
+                        <div class="imagepromo__headbox text">
+                            <h2>@Html.Glass().Editable(Model, x=>x.Heading)</h2>
+                        </div>
+                        <p class="imagepromo__contentbox text-white">
+                            @Html.Glass().Editable(Model, x => x.Body)
+                        </p>
+
+                        <div class="imagepromo__btnbox">
+                            @if (Model.ShowPrimaryCTA)
+                            {
+                                using (Html.BeginRenderLinkWithGoal(Model, m => m.PrimaryCTALink, Model.PrimaryCTAGoal, new NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
+                                {
+                                    if (Model.PrimaryCTALink != null && !string.IsNullOrEmpty(Model.PrimaryCTALink.Text))
+                                    {
+                                        @Model.PrimaryCTALink.Text
+                                    }
+                                    <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
+                                }
+                            }
+                            @if (Model.ShowSecondaryCTA)
+                            {
+                                using (Html.BeginRenderLinkWithGoal(Model, m => m.SecondaryCTALink, Model.SecondaryCTAGoal, new NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }, isEditable: true))
+                                {
+                                    if (Model.SecondaryCTALink != null && !string.IsNullOrEmpty(Model.SecondaryCTALink.Text))
+                                    {
+                                        @Model.SecondaryCTALink.Text
+                                    }
+                                    <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
