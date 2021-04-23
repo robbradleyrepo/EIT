@@ -3,18 +3,27 @@
 @using LionTrust.Foundation.Analytics.Goals
 @model LionTrust.Feature.Promo.Models.IImageCTAPromo
 <div class="team-card">
-    <h2 class="team-card__title">
-        @Html.Glass().Editable(Model, x => x.Title)
-    </h2>
+    @if (!Model.HideTitle)
+    {
+        <h2 class="team-card__title">
+            @Html.Glass().Editable(Model, x => x.Title)
+        </h2>
+    }
     <div class="row">
-        <div class="col-lg-6 order-1 order-lg-0">
+        <div class="col-lg-6 @(Model.TextAlignment != null && !string.IsNullOrEmpty(Model.TextAlignment.Value) && Model.TextAlignment.Value.Equals("rigth") ? "order-1" : "order-lg-0")">
             <div class="team-card__text">
-                <p class="font-500">@Html.Glass().Editable(Model, x => x.Subtitle)</p>
-                <p>
-                    @Html.Glass().Editable(Model, x => x.Body)
-                </p>
+                @if (!Model.HideSubtitle)
+                {
+                    <p class="font-500">@Html.Glass().Editable(Model, x => x.Subtitle)</p>
+                }
+                @if (!Model.HideBody)
+                {
+                    <p>
+                        @Html.Glass().Editable(Model, x => x.Body)
+                    </p>
+                }
             </div>
-            @if (Model.CTALink != null || Sitecore.Context.PageMode.IsExperienceEditor)
+            @if (!Model.HideCTA && (Model.CTALink != null || Sitecore.Context.PageMode.IsExperienceEditor))
             {
                 using (Html.BeginRenderLinkWithGoal(Model, m => m.CTALink, Model.CTAGoal, new NameValueCollection { { "class", "btn btn-primary team-card__btn" } }, isEditable: true))
                 {
@@ -26,8 +35,11 @@
                 }
             }
         </div>
-        <div class="col-lg-6">
-            @Html.Glass().RenderImage(Model, x => x.Image, new NameValueCollection { { "class", "team-card__img" }, { "alt", "Meet the tea" } }, isEditable: true)
-        </div>
+        @if (!Model.HideImage)
+        {
+            <div class="col-lg-6">
+                @Html.Glass().RenderImage(Model, x => x.Image, new NameValueCollection { { "class", "team-card__img" }, { "alt", "Meet the tea" } }, isEditable: true)
+            </div>
+        }
     </div>
 </div>
