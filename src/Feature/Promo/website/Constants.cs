@@ -71,13 +71,31 @@
             public const string Subtitle_FieldId = "{4C838697-DBEB-4998-A261-CCC77BC59259}";
 
             public const string Body_FieldName = "ImageCTAPromo_Body";
-            public const string Body_FieldId = "{48BF236B-0681-4A09-9085-4933FA1C4A7A}";
+            public const string Body_FieldId = "{48BF236B-0681-4A09-9085-4933FA1C4A7A}";            
 
             public const string CTALink_FieldName = "ImageCTAPromo_CTALink";
             public const string CTALink_FieldId = "{143867DB-9BBA-4097-9EB4-0099C175AD91}";
 
             public const string CTAGoal_FieldName = "ImageCTAPromo_CTAGoal";
             public const string CTAGoal_FieldId = "{BED833FE-BFD7-40EC-9C28-18EFF032C463}";
+
+            public const string TextAlignment_FieldName = "ImageCTAPromo_TextAlignment";
+            public const string TextAlignment_FieldId = "{4F8E0E85-38F1-4AB6-9AD6-DCE0008C8304}";
+            
+            public const string HideImage_FieldName = "ImageCTAPromo_HideImage";
+            public const string HideImage_FieldId = "{707408BE-0AA5-4783-B122-A8A48718AD48}";
+
+            public const string HideTitle_FieldName = "ImageCTAPromo_HideTitle";
+            public const string HideTitle_FieldId = "{CE5FAD99-9B14-462C-9902-57190B33966E}";
+
+            public const string HideSubtitle_FieldName = "ImageCTAPromo_HideSubtitle";
+            public const string HideSubtitle_FieldId = "{10B4E0C3-B1FB-4B38-A6B7-D64D387B50BD}";
+
+            public const string HideBody_FieldName = "ImageCTAPromo_HideBody";
+            public const string HideBody_FieldId = "{432487DA-7E50-4D60-B3A0-3F5B3027F96D}";
+
+            public const string HideCTA_FieldName = "ImageCTAPromo_HideCTA";
+            public const string HideCTA_FieldId = "{40C6A5BF-9F0E-4F69-A0C7-28C96288F6EE}";
         }
 
         public static class PromoLookup

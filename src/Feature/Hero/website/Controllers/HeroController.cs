@@ -11,12 +11,10 @@ namespace LionTrust.Feature.Hero.Controllers
     public class HeroController : SitecoreController
     {
         private readonly IHeroMediator _heroMediator;
-        private readonly IMvcContext _mvcContext;
 
-        public HeroController(IHeroMediator heroMediator, IMvcContext mvcContext)
+        public HeroController(IHeroMediator heroMediator)
         {
             _heroMediator = heroMediator;
-            _mvcContext = mvcContext;
         }
 
         public ActionResult Hero()

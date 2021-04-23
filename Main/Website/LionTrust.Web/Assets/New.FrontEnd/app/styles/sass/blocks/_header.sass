@@ -1,6 +1,8 @@
 .header
     background-repeat: no-repeat
     background-size: cover
+    position: relative
+    z-index: 1
     &_fund-manager
         background: none
     &__fixed
@@ -11,6 +13,18 @@
         min-height: 470px
         @include breakpoint(desktop, up)
             min-height: 640px
+
+.header-overlay
+    &:after
+        position: absolute
+        content: ''
+        background: $black
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        z-index: -1
+        opacity: 0.6
 
 .header-bg-gradient
     background-image: url('../images/components/header/bg-desktop.svg')
