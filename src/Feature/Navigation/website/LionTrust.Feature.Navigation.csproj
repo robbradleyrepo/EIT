@@ -117,9 +117,17 @@
       <Project>{f8f55034-fa55-4d27-b115-0ab4eeb9a0a8}</Project>
       <Name>LionTrust.Foundation.Content</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\DI\website\LionTrust.Foundation.DI.csproj">
+      <Project>{0d3a6f11-b5ff-4d8c-8a74-19501d2e80d4}</Project>
+      <Name>LionTrust.Foundation.DI</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\ORM\website\LionTrust.Foundation.ORM.csproj">
       <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>
       <Name>LionTrust.Foundation.ORM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\SitecoreExtensions\website\LionTrust.Foundation.SitecoreExtensions.csproj">
+      <Project>{a57b01c5-75ad-47c0-beda-93079fd37317}</Project>
+      <Name>LionTrust.Foundation.SitecoreExtensions</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

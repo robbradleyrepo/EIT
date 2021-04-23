@@ -55,6 +55,10 @@
       <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>
       <Name>LionTrust.Foundation.ORM</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\website\LionTrust.Feature.Navigation.csproj">
+      <Project>{bc43a9c4-f63a-44d4-9b7f-866e1ccdb66d}</Project>
+      <Name>LionTrust.Feature.Navigation</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Moq">
