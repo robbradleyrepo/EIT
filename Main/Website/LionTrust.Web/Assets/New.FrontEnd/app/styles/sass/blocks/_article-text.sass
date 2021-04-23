@@ -1,0 +1,74 @@
+.article-with-big
+    max-width: 1138px
+    width: 100%
+    margin: 0 auto
+.article-with-medium
+    max-width: 994px
+    width: 100%
+    margin: 0 auto
+.article-with-small
+    max-width: 700px
+    width: 100%
+    margin: 0 auto
+    p
+        margin-bottom: 37px
+        font-size: 18px
+        line-height: 28px
+        @include breakpoint(desktop, up)
+            margin-bottom: 40px
+            font-size: 20px
+            line-height: 30px
+.big-quote
+    font-size: 22px
+    line-height: 28px
+    margin: 32px 0
+    @include breakpoint(desktop, up)
+        font-size: 26px
+        line-height: 36px
+        margin: 40px 0
+
+.article-quote
+    border-top: 1px solid $gold
+    border-bottom: 1px solid $gold
+    font-size: 18px
+    line-height: 28px
+    background: $secondary-silver
+    padding: 14px 5px
+    margin: 32px auto
+    width: 100%
+    max-width: 764px
+    @include breakpoint(desktop, up)
+        padding: 15px 32px
+        font-size: 20px
+        margin-bottom: 45px auto
+
+.gold-qoute
+    font-size: 26px
+    line-height: 36px
+    letter-spacing: 0.26px
+    color: $gold
+    @include breakpoint(desktop, up)
+        font-size: 42px
+        line-height: 52px
+
+.full-with-img
+    width: 100%
+    height: auto
+    margin-bottom: 30px
+    @include breakpoint(desktop, up)
+        margin-bottom: 40px
+
+.article-small-title
+    color: $black
+    font-size: 8px
+    font-weight: 700
+    line-height: 10px
+    letter-spacing: 0.64px
+    text-transform: uppercase
+    @include breakpoint(desktop, up)
+        font-size: 12px
+        line-height: 14px
+        letter-spacing: 2.4px
+
+.glossary-cta
+    margin: 40px 0
