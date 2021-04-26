@@ -88,6 +88,8 @@
 
         public static class PodcastPromo
         {
+            public const string TemplateId = "{4FD5C75C-BD9D-4615-8538-A00C51BB2238}";
+
             public const string Heading_FieldName = "PodcastPromo_Heading";
             public const string Heading_FieldId = "{B040620B-5868-4F90-A613-291199DCCA80}";
 

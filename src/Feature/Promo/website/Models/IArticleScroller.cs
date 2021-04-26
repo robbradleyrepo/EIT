@@ -16,7 +16,7 @@
         Link CTA { get; set; }
 
         [SitecoreField(Constants.ArticleScroller.SelectedArticles_FieldId, SitecoreFieldType.Treelist, "Article Scroller")]
-        IEnumerable<IArticle> SelectedArticles { get; set; }
+        IEnumerable<IArticlePromo> SelectedArticles { get; set; }
 
         [SitecoreField(Constants.ArticleScroller.SelectedTags_FieldId, SitecoreFieldType.GeneralLink, "Article Scroller")]
         IEnumerable<ITag> SelectedTags { get; set; }

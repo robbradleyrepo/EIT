@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="article__head">
                     <h2>@Html.Glass().Editable(Model.ArticleScroller, m => m.Heading)</h2>
-                    @using (Html.Glass().BeginRenderLink(Model.ArticleScroller, m => m.CTA, new NameValueCollection { { "class", "btn btn-secondary-nav article__btn" } }, , isEditable: true))
+                    @using (Html.Glass().BeginRenderLink(Model.ArticleScroller, m => m.CTA, new NameValueCollection { { "class", "btn btn-secondary-nav article__btn" } }, isEditable: true))
                     {
                         if (Model.ArticleScroller.CTA != null && !string.IsNullOrEmpty(Model.ArticleScroller.CTA.Text))
                         {
@@ -23,11 +23,11 @@
                 <div class="swiper-wrapper">
                     @if (Model.ArticleScroller.SelectedArticles != null && Model.ArticleScroller.SelectedArticles.Any())
                     {
-                        @foreach (var article in Model.ArticleScroller.SelectedArticles)
+                        foreach (var article in Model.ArticleScroller.SelectedArticles)
                         {
-                            if (article.ArticleType != null && !string.IsNullOrEmpty(article.ArticleType.Value))
+                            if (article.PromoType != null && !string.IsNullOrEmpty(article.PromoType.Name))
                             {
-                                switch (article.ArticleType.Value)
+                                switch (article.PromoType.Name)
                                 {
                                     case "fund-manager":
                                         {
@@ -38,9 +38,12 @@
                                         }
                                     case "podcast":
                                         {
-                                            <div class="swiper-slide">
-                                                @Html.Partial("~/Views/Promo/PodcastPromo.cshtml", article)
-                                            </div>
+                                            if (article.PodcastPromo != null && article.PodcastPromo.Any())
+                                            {
+                                                <div class="swiper-slide">
+                                                    @Html.Partial("~/Views/Promo/PodcastPromo.cshtml", article.PodcastPromo.FirstOrDefault())
+                                                </div>
+                                            }                                            
                                             break;
                                         }
                                     case "fund-update":

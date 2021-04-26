@@ -72,14 +72,18 @@
     <Content Include="App_Config\Include\Feature\Feature.Promo.Serialization.config" />
     <Content Include="Views\Promo\ImageCTAPromo.cshtml" />
     <Content Include="Views\Promo\PodcastPromo.cshtml" />
-    <Content Include="Views\Promo\PodcastLink.cshtml" />
+    <Content Include="Views\Promo\_PodcastLink.cshtml" />
     <Content Include="Views\Promo\ArticleScroller.cshtml" />
+    <Content Include="Views\Promo\VideoPromo.cshtml" />
+    <Content Include="Views\Promo\FundUpdatePromo.cshtml" />
+    <Content Include="Views\Promo\FundManagerView.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\CarouselController.cs" />
     <Compile Include="Models\ArticleScrollerViewModel.cs" />
+    <Compile Include="Models\IArticlePromo.cs" />
     <Compile Include="Models\IArticleScroller.cs" />
     <Compile Include="Models\IImageCTAPromo.cs" />
     <Compile Include="Models\IImagePromo.cs" />

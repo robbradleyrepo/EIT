@@ -6,6 +6,6 @@
     public class ArticleScrollerViewModel
     {
         public IArticleScroller ArticleScroller { get; set; }
-        public IEnumerable<IArticle> ArticleList { get; set; }
+        public IEnumerable<IArticlePromo> ArticleList { get; set; }
     }
 }

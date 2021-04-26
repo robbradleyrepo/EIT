@@ -5,6 +5,7 @@
     using Glass.Mapper.Sc.Fields;
     using System.Collections.Generic;
 
+    [SitecoreType(TemplateId = Constants.PodcastPromo.TemplateId, EnforceTemplate = SitecoreEnforceTemplate.Template)]
     public interface IPodcastPromo : IPromoGlassBase
     {
         [SitecoreField(Constants.PodcastPromo.Heading_FieldId, SitecoreFieldType.SingleLineText, "Podcast Promo")]
