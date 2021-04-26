@@ -6,9 +6,26 @@
     using Sitecore.Data;
     using Sitecore.Data.Fields;
     using Sitecore.Data.Items;
+    using Sitecore.Links;
+    using Sitecore.Resources.Media;
 
     public static class ItemExtensions
     {
+        public static string Url(this Item item, UrlOptions options = null)
+        {
+            if (item == null)
+            {
+                return string.Empty;
+                // throw new ArgumentNullException(nameof(item));
+            }
+
+            if (options != null)
+            {
+                return LinkManager.GetItemUrl(item, options);
+            }
+            return !item.Paths.IsMediaItem ? LinkManager.GetItemUrl(item) : MediaManager.GetMediaUrl(item);
+        }
+
         public static Item GetAncestorOrSelfOfTemplate(this Item item, ID templateID)
         {
             if (item == null)

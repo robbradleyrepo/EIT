@@ -14,7 +14,7 @@
             public const string Body_FieldId = "{D8CF5DA5-F35F-46D8-B15E-8B388DC01000}";
 
             public const string PromoType_FieldName = "LegacyArticle_PromoType";
-            public const string PromoType_FieldId = "{D8CF5DA5-F35F-46D8-B15E-8B388DC01000}";
+            public const string PromoType_FieldId = "{A57E5061-EEE7-48A2-A8BF-88FFDF014FD4}";
 
             public const string Authors_FieldName = "LegacyArticle_Authors";
             public const string Authors_FieldId = "{15F3AFE1-AB21-4B6B-A434-4C0F7B927921}";

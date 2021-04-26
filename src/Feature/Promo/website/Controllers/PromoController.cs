@@ -27,12 +27,20 @@
         {
             var articleScrollerViewModel = new ArticleScrollerViewModel();
             articleScrollerViewModel.ArticleScroller = _mvcContext.GetDataSourceItem<IArticleScroller>();
-            if (articleScrollerViewModel.ArticleScroller.SelectedArticles != null)
+            if (articleScrollerViewModel.ArticleScroller != null && articleScrollerViewModel.ArticleScroller.SelectedArticles != null)
             {
                 articleScrollerViewModel.ArticleList = articleScrollerViewModel.ArticleScroller.SelectedArticles;
             }
+            else if (articleScrollerViewModel.ArticleScroller.SelectedTags != null)
+            {
+                // Search by articleScrollerViewModel.ArticleScroller.SelectedTags
+            }
+            else
+            {
+                // Search by RenderingContext.Current.ContextItem["__semantics"]
+            }
 
-            return View("~/Views/Carousel/ArticleScroller.cshtml", articleScrollerViewModel);
+            return View("~/Views/Promo/ArticleScroller.cshtml", articleScrollerViewModel);
         }
     }
 }
