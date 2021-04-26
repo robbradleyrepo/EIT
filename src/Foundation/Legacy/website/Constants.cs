@@ -2,7 +2,7 @@
 {
     public static class Constants
     {
-        public static class IArticle
+        public static class Article
         {
             public const string Title_FieldName = "LegacyArticle_Title";
             public const string Title_FieldId = "{1C19356A-6E47-4D77-BA56-ADE349F17B9D}";
@@ -13,8 +13,8 @@
             public const string Body_FieldName = "LegacyArticle_Body";
             public const string Body_FieldId = "{D8CF5DA5-F35F-46D8-B15E-8B388DC01000}";
 
-            public const string ArticleType_FieldName = "LegacyArticle_BlogType";
-            public const string ArticleType_FieldId = "{D8CF5DA5-F35F-46D8-B15E-8B388DC01000}";
+            public const string PromoType_FieldName = "LegacyArticle_PromoType";
+            public const string PromoType_FieldId = "{D8CF5DA5-F35F-46D8-B15E-8B388DC01000}";
 
             public const string Authors_FieldName = "LegacyArticle_Authors";
             public const string Authors_FieldId = "{15F3AFE1-AB21-4B6B-A434-4C0F7B927921}";
@@ -27,16 +27,19 @@
 
             public const string PublishDate_FieldName = "__Publish";
             public const string PublishDate_FieldId = "{86FE4F77-4D9A-4EC3-9ED9-263D03BD1965}";
+
+            public const string Fund_FieldName = "LegacyArticle_Fund";
+            public const string Fund_FieldId = "{52161005-9691-46CD-AF73-E2B5455474C0}";
         }
 
-        public static class IArticleType
+        public static class ArticleType
         {
             // TO DO
             public const string Value_FieldName = "LegacyArticleType_Value";
             public const string Value_FieldId = "{898AC194-D89A-4CBD-957B-AFAF99F21A9D}";
         }
 
-        public static class IAuthor
+        public static class Author
         {
             public const string Image_FieldName = "LegacyProfessional_Thumbnail";
             public const string Image_FieldId = "{898AC194-D89A-4CBD-957B-AFAF99F21A9D}";
@@ -60,14 +63,25 @@
             public const string ShortBio_FieldId = "{A6306774-24CA-4250-99AD-48BFD132ADCB}";  
         }
 
-        public static class IFund 
+        public static class Fund 
         {
+            public const string FundReference_FieldName = "LegacyFundPageData_FundReference";
+            public const string FundReference_FieldId = "{CCE4E679-7E94-450D-8CC1-691BDF17CA78}";
         }
 
         public static class HeroImagePageData
         {
             public const string HeaderImage_FieldName = "LegacyHeroImagePageData_PageHeaderImage";
             public const string HeaderImage_FieldId = "{B3A97116-0825-4197-A212-31849BDC54A2}";
+        }
+
+        public static class PresentationBase
+        {
+            public const string PageTitle_FieldName = "LegacyPresentationBase_PageTitle";
+            public const string PageTitle_FieldId = "{AEBDD235-46DD-490A-BAE3-C613C670A8BF}";
+
+            public const string ShortDescription_FieldName = "LegacyPresentationBase_ShortDescription";
+            public const string ShortDescription_FieldId = "{8A3692C4-8014-4BDD-9F9F-74ACFCC1C501}";
         }
     }
 }

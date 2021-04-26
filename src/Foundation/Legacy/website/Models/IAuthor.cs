@@ -6,25 +6,25 @@
 
     public interface IAuthor : ILegacyGlassBase
     {
-        [SitecoreField(Constants.IAuthor.FullName_FieldId, SitecoreFieldType.SingleLineText, "Personal details")]
+        [SitecoreField(Constants.Author.FullName_FieldId, SitecoreFieldType.SingleLineText, "Personal details")]
         string FullName { get; set; }
 
-        [SitecoreField(Constants.IAuthor.Image_FieldId, SitecoreFieldType.Image, "Personal details")]
+        [SitecoreField(Constants.Author.Image_FieldId, SitecoreFieldType.Image, "Personal details")]
         Image Image { get; set; }
 
-        [SitecoreField(Constants.IAuthor.Telephone_FieldId, SitecoreFieldType.SingleLineText, "Personal details")]
+        [SitecoreField(Constants.Author.Telephone_FieldId, SitecoreFieldType.SingleLineText, "Personal details")]
         string Telephone { get; set; }
 
-        [SitecoreField(Constants.IAuthor.Mobile_FieldId, SitecoreFieldType.SingleLineText, "Personal details")]
+        [SitecoreField(Constants.Author.Mobile_FieldId, SitecoreFieldType.SingleLineText, "Personal details")]
         string Mobile { get; set; }
 
-        [SitecoreField(Constants.IAuthor.Email_FieldId, SitecoreFieldType.SingleLineText, "Personal details")]
+        [SitecoreField(Constants.Author.Email_FieldId, SitecoreFieldType.SingleLineText, "Personal details")]
         string Email { get; set; }
 
-        [SitecoreField(Constants.IAuthor.JobTitle_FieldId, SitecoreFieldType.SingleLineText, "Additional details")]
+        [SitecoreField(Constants.Author.JobTitle_FieldId, SitecoreFieldType.SingleLineText, "Additional details")]
         Image JobTitle { get; set; }
 
-        [SitecoreField(Constants.IAuthor.ShortBio_FieldId, SitecoreFieldType.RichText, "Additional details")]
+        [SitecoreField(Constants.Author.ShortBio_FieldId, SitecoreFieldType.RichText, "Additional details")]
         string ShortBio { get; set; }
     }
 }

@@ -67,7 +67,11 @@
     <Compile Include="Models\ArticleType.cs" />
     <Compile Include="Models\IArticle.cs" />
     <Compile Include="Models\IAuthor.cs" />
+    <Compile Include="Models\IFund.cs" />
+    <Compile Include="Models\IFundPage.cs" />
+    <Compile Include="Models\IHeroHomePageData.cs" />
     <Compile Include="Models\ILegacyGlassBase.cs" />
+    <Compile Include="Models\IPresentationBase.cs" />
     <Compile Include="Models\ITag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

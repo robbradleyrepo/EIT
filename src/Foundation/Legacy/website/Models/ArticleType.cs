@@ -6,7 +6,7 @@
 
     public interface IArticleType : ILegacyGlassBase
     {
-        [SitecoreField(Constants.IArticleType.Value_FieldId, SitecoreFieldType.SingleLineText, "Article Type")]
+        [SitecoreField(Constants.ArticleType.Value_FieldId, SitecoreFieldType.SingleLineText, "Article Type")]
         string Value { get; set; }
     }
 }
