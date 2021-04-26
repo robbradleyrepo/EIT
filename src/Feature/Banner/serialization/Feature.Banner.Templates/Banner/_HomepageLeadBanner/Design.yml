@@ -1,9 +1,13 @@
 ﻿---
-ID: "de1a286b-a27f-44eb-a1ea-4fa314573449"
-Parent: "de36e933-8fc9-497d-9ea5-2ea8acd6ceef"
+ID: "127583c0-7d7d-4ab8-ba05-f851e298e563"
+Parent: "2f039da8-ff77-4788-a92e-99cc7d33bcb9"
 Template: "e269fbb5-3750-427a-9149-7aa950b49301"
-Path: /sitecore/templates/Feature/Banner/Lookup Value/LookupValue
+Path: /sitecore/templates/Feature/Banner/_HomepageLeadBanner/Design
 DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
 Languages:
 - Language: en
   Versions:
@@ -11,7 +15,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210415T085608Z
+      Value: 20210423T205056Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
