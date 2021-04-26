@@ -34,7 +34,7 @@
 
             <div class="lead-banner__btnbox mt-4">
 
-                @using (Html.BeginRenderLinkWithGoal(Model, m => m.PrimaryCta, Model.PrimaryCtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }))
+                @using (Html.BeginRenderLinkWithGoal(Model, m => m.PrimaryCta, Model.PrimaryCtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
                 {
                     if (Model.PrimaryCta != null)
                     {
@@ -44,7 +44,7 @@
                     <i class='icon-arrow-right imagepromo__arrow animate-arrow'></i>
                 }
 
-                @using (Html.BeginRenderLinkWithGoal(Model, m => m.SecondaryCta, Model.SecondaryCtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }))
+                @using (Html.BeginRenderLinkWithGoal(Model, m => m.SecondaryCta, Model.SecondaryCtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }, isEditable: true))
                 {
                     if (Model.SecondaryCta != null)
                     {
