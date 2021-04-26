@@ -69,13 +69,16 @@
   <ItemGroup>
     <Content Include="Views\Carousel\HomepageCarousel.cshtml" />
     <Content Include="Views\Web.config" />
-    <Content Include="App_Config\Feature\Feature.Carousel.Serialization.config" />
+    <Content Include="App_Config\Include\Feature\Feature.Carousel.Serialization.config" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="Controllers\FundScrollerController.cs" />
+    <Compile Include="Models\IAuthor.cs" />
     <Compile Include="Models\ICarousel.cs" />
     <Compile Include="Models\ICarouselGlassBase.cs" />
+    <Compile Include="Models\IFundScroller.cs" />
     <Compile Include="Models\IHomepageCarousel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

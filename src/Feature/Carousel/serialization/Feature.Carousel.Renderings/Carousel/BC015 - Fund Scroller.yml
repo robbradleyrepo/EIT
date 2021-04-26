@@ -1,0 +1,32 @@
+﻿---
+ID: "c4570003-4866-4eaa-b069-8fa6611dc0ec"
+Parent: "3c735f67-9b79-4e58-ac34-eeb39667ed98"
+Template: "2a3e91a0-7987-44b5-ab34-35c2d9de83b9"
+Path: "/sitecore/layout/Renderings/Feature/Carousel/BC015 - Fund Scroller"
+DB: master
+SharedFields:
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "site:fundscroller"
+- ID: "ded9e431-3604-4921-a4b3-a6ec7636a5b6"
+  Hint: Controller Action
+  Value: Render
+- ID: "e64ad073-dfcc-4d20-8c0b-fe5aa6226cd7"
+  Hint: Controller
+  Value: FundScroller
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04437558-ac18-42cb-ab21-1243a66abe67"
+      Hint: Supports Local Datasource
+      Type: Checkbox
+      Value: 1
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210426T110231Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
