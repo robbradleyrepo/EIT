@@ -29,14 +29,14 @@
                             {
                                 switch (article.PromoType.Name)
                                 {
-                                    case "fund-manager":
+                                    case "Fund Manager View":
                                         {
                                             <div class="swiper-slide">
                                                 @Html.Partial("~/Views/Promo/FundManagerPromo.cshtml", article)
                                             </div>
                                             break;
                                         }
-                                    case "podcast":
+                                    case "Podcast":
                                         {
                                             if (article.PodcastPromo != null && article.PodcastPromo.Any())
                                             {
@@ -46,19 +46,19 @@
                                             }                                            
                                             break;
                                         }
-                                    case "fund-update":
+                                    case "Fund Update":
                                         {
                                             <div class="swiper-slide">
                                                 @Html.Partial("~/Views/Promo/FundUpatePromo.cshtml", article)
                                             </div>
                                             break;
                                         }
-                                    case "video":
+                                    case "Video":
                                         {
                                             @Html.Partial("~/Views/Promo/VidePromo.cshtml", article)
                                             break;
                                         }
-                                    case "magazine-reports":
+                                    case "Magazine And Reports":
                                         {
                                             <div class="swiper-slide">
                                                 @Html.Partial("~/Views/Promo/MagazineReportsPromo.cshtml", article)
@@ -68,7 +68,7 @@
                                     default:
                                         {
                                             <div class="swiper-slide">
-                                                @Html.Partial("~/Views/Promo/FundManagerPromo.cshtml", article)
+                                                @Html.Partial("~/Views/Promo/FundManagerViewPromo.cshtml", article)
                                             </div>
                                         }
                                         break;
@@ -77,7 +77,7 @@
                             else
                             {
                                 <div class="swiper-slide">
-                                    @Html.Partial("~/Views/Promo/FundManagerPromo.cshtml", article)
+                                    @Html.Partial("~/Views/Promo/FundManagerViewPromo.cshtml", article)
                                 </div>
                             }
                         }
