@@ -61,8 +61,6 @@
     <Reference Include="System.Configuration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\GlassMapperSc.cs" />
-    <Compile Include="App_Start\GlassMapperScCustom.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Models\ArticleType.cs" />
     <Compile Include="Models\IArticle.cs" />
@@ -77,9 +75,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Foundation\Foundation.Legacy.Serialization.config" />
-    <Content Include="App_Config\Include\Glass\z.Glass.Mapper.Sc.ViewRender.config.exclude" />
-    <Content Include="App_Config\Include\Glass\Glass.Mapper.Sc.Start.config" />
-    <Content Include="App_Config\Include\Glass\Glass.Mapper.Sc.config" />
     <None Include="packages.config" />
     <None Include="Web.config" />
   </ItemGroup>
