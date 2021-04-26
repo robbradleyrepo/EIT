@@ -19,7 +19,7 @@
             public const string ThirdImage_FieldName = "ImagePromo_ThirdImage";
             public const string ThirdImage_FieldId = "{F66C45E0-1653-4F01-B5A8-A7DD4DD2D97F}";
 
-            public const string FourthImage_FieldName = "ImagePromo_FourthImage"; 
+            public const string FourthImage_FieldName = "ImagePromo_FourthImage";
             public const string FourthImage_FieldId = "{AD6C37D6-928D-4D1D-8CB2-BA17F02FE4AB}";
 
             public const string PrimaryCTALink_FieldName = "ImagePromo_PrimaryCTALink";
@@ -49,7 +49,7 @@
             public const string HideSecondImage_FieldName = "ImagePromo_HideSecondImage";
             public const string HideSecondImage_FieldId = "{8D6A97F3-D7D4-42E9-8D10-BDA6E1D783C5}";
 
-            public const string HideThirdImage_FieldName = "ImagePromo_HideThirdImage"; 
+            public const string HideThirdImage_FieldName = "ImagePromo_HideThirdImage";
             public const string HideThirdImage_FieldId = "{94934379-AD71-4637-A707-D6DFACAE2B5A}";
 
             public const string HideFourthImage_FieldName = "ImagePromo_HideFourthImage";
@@ -71,7 +71,7 @@
             public const string Subtitle_FieldId = "{4C838697-DBEB-4998-A261-CCC77BC59259}";
 
             public const string Body_FieldName = "ImageCTAPromo_Body";
-            public const string Body_FieldId = "{48BF236B-0681-4A09-9085-4933FA1C4A7A}";            
+            public const string Body_FieldId = "{48BF236B-0681-4A09-9085-4933FA1C4A7A}";
 
             public const string CTALink_FieldName = "ImageCTAPromo_CTALink";
             public const string CTALink_FieldId = "{143867DB-9BBA-4097-9EB4-0099C175AD91}";
@@ -81,7 +81,7 @@
 
             public const string TextAlignment_FieldName = "ImageCTAPromo_TextAlignment";
             public const string TextAlignment_FieldId = "{4F8E0E85-38F1-4AB6-9AD6-DCE0008C8304}";
-            
+
             public const string HideImage_FieldName = "ImageCTAPromo_HideImage";
             public const string HideImage_FieldId = "{707408BE-0AA5-4783-B122-A8A48718AD48}";
 
@@ -122,6 +122,8 @@
 
             public const string PodcastsLabel_FieldName = "PodcastPromo_PodcastsLabel";
             public const string PodcastsLabel_FieldId = "{3519A624-39F9-4992-B2FD-AD40770C21E0}";
+
+            public const string MobileBackgroundImageFieldId = "{78F493E4-73EA-47CF-97F7-F5DE15DF6BF8}";
         }
 
         public static class PodcastLink
@@ -150,5 +152,5 @@
             public const string SelectedTags_FieldName = "ArticleScroller_SelectedTags";
             public const string SelectedTags_FieldId = "{23CB5FCD-BCFA-4A06-AE30-8991CC839A4C}";
         }
-    }
+    }    
 }

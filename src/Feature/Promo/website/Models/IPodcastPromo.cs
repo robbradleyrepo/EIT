@@ -20,6 +20,10 @@
         [SitecoreField(Constants.PodcastPromo.BackgroundImage_FieldId, SitecoreFieldType.Image, "Podcast Promo")]
         Image BackgroundImage { get; set; }
 
+        [SitecoreField(Constants.PodcastPromo.MobileBackgroundImageFieldId)]
+        Image MobileBackgroundImage { get; set; }
+
+
         [SitecoreField(Constants.PodcastPromo.PodcastsLabel_FieldId, SitecoreFieldType.SingleLineText, "Podcast Promo")]
         string PodcastsLabel { get; set; }
         

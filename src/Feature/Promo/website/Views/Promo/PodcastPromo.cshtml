@@ -1,5 +1,5 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
-@using System.Collections.Specialized;
+@using LionTrust.Feature.Promo;
 @model LionTrust.Feature.Promo.Models.IPodcastPromo
 @if (Model != null)
 {
@@ -7,7 +7,11 @@
         <div class="container">
             <div class="row">
                 <div class="podcast__box">
-                    @Html.Glass().RenderImage(Model, x => x.BackgroundImage, new NameValueCollection { { "class", "podcast__back" } })
+                    <picture>
+                        <source media="(max-width:425px)" srcset="@Extensions.GetSafeSitecoreImageUrl(Model.MobileBackgroundImage)" />
+                        <source media="(min-width:426px)" srcset="@Extensions.GetSafeSitecoreImageUrl(Model.BackgroundImage)" />
+                        <img class="podcast__back" src="@Extensions.GetSafeSitecoreImageUrl(Model.BackgroundImage)" alt="@Extensions.GetSafeSitecoreImageAltText(Model.BackgroundImage)" />                        
+                    </picture>
                     <div class="podcast__front">
                         <div class="podcast__head">
                             <i class="icon-mic podcast__mic"></i>
