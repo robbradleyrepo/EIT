@@ -169,6 +169,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionTrust.Foundation.Legacy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionTrust.Feature.Banner", "src\Feature\Banner\website\LionTrust.Feature.Banner.csproj", "{B100E90C-5AD3-4EBF-A614-6C3F30D8C0DA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Video", "Video", "{3E2FBFBF-AF79-45AA-A463-A794069ADD08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionTrust.Feature.Video", "src\Feature\Video\website\LionTrust.Feature.Video.csproj", "{57D2C02C-1697-44EF-90D6-8C15AB0065D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -331,6 +335,10 @@ Global
 		{B100E90C-5AD3-4EBF-A614-6C3F30D8C0DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B100E90C-5AD3-4EBF-A614-6C3F30D8C0DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B100E90C-5AD3-4EBF-A614-6C3F30D8C0DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57D2C02C-1697-44EF-90D6-8C15AB0065D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57D2C02C-1697-44EF-90D6-8C15AB0065D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57D2C02C-1697-44EF-90D6-8C15AB0065D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57D2C02C-1697-44EF-90D6-8C15AB0065D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -409,6 +417,8 @@ Global
 		{4EC2F36A-A513-44E9-B681-E6D2B94B75CD} = {C3F57797-2D54-4626-B842-51F30272E972}
 		{43EE972B-2002-4719-A878-A66A99C42C40} = {4EC2F36A-A513-44E9-B681-E6D2B94B75CD}
 		{B100E90C-5AD3-4EBF-A614-6C3F30D8C0DA} = {2389A6D4-D219-42A6-BF69-7D4FA14EBA08}
+		{3E2FBFBF-AF79-45AA-A463-A794069ADD08} = {60DA3F20-DEED-4580-AE38-A296D76ADE79}
+		{57D2C02C-1697-44EF-90D6-8C15AB0065D9} = {3E2FBFBF-AF79-45AA-A463-A794069ADD08}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {845F548C-FD53-4C61-AB7F-953C2225A13B}
