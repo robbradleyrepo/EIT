@@ -4,6 +4,14 @@
 
     public static class Constants
     {
+        public static class Cta
+        {
+            public const string PrimaryCtaFieldId = "{43CE5EC7-2F35-438D-B0C0-7913DD98F40F}";
+            public const string SecondaryCtaFieldId = "{D775550A-E906-4F7F-BBFD-7B3763F6DA35}";
+            public const string PrimaryCtaGoalFieldId = "{52A16EAE-A5CD-4ADF-8614-260548E9049C}";
+            public const string SecondaryCtaGoalFieldId = "{D6B121EC-192B-4E84-A3EF-90A68BD305DE}";
+        }
+
         public static class Breadcrumb
         {
             public const string IncludeInBreadcrumb = "{E409CE1D-3E4E-4C73-A01D-BA8E98BDF25F}";

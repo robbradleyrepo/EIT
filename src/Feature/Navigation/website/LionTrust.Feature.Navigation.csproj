@@ -79,6 +79,7 @@
     <Content Include="Views\Navigation\Footer.cshtml" />
     <Content Include="Views\Navigation\Header.cshtml" />
     <Content Include="Views\Navigation\Menu.cshtml" />
+    <Content Include="Views\Navigation\Cta.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -89,6 +90,7 @@
     <Compile Include="Models\BreadcrumbViewModel.cs" />
     <Compile Include="Models\IAnchorLinks.cs" />
     <Compile Include="Models\IBreadcrumbDetailsModel.cs" />
+    <Compile Include="Models\ICta.cs" />
     <Compile Include="Models\IFooterConfiguration.cs" />
     <Compile Include="Models\IHeaderConfiguration.cs" />
     <Compile Include="Models\IHeaderDropdown.cs" />
