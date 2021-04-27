@@ -1,0 +1,13 @@
+﻿@using System.Collections.Specialized;
+@model LionTrust.Feature.Promo.Models.IPodcastLink
+@using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Promo/PodcastLink", Model.Id.ToString(), "Edit Podcast Link"))
+{
+    if (Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        @:Edit Icon
+    }
+    using (Html.Glass().BeginRenderLink(Model, m => m.Link, isEditable: true))
+    {
+        @Html.Glass().RenderImage(Model, m => m.Icon, new NameValueCollection { { "class", "article-promo__footer-icon" } }, isEditable: true)
+    }
+}

@@ -1,0 +1,62 @@
+﻿@using System.Collections.Specialized;
+@model LionTrust.Feature.Promo.Models.IArticlePromo
+@{ 
+    var podcast = Model.PodcastPromo != null ? Model.PodcastPromo.FirstOrDefault() : null;
+}
+<div class="article-promo">
+    <a href="#article promo" class="article-promo__front">
+    </a>
+    <a href="#" class="article-promo__body">
+        <div class="article-promo__head">
+            <i class="icon-mic text-primary"></i>
+            @if (podcast != null)
+            {
+                <span class="article-promo__head-title">@Html.Glass().Editable(podcast, m => m.Heading)</span>
+            }
+            else if (Sitecore.Context.PageMode.IsExperienceEditor)
+            {
+                using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Foundation/Legacy/Article Podcast", Model.Id.ToString(), "Add Podcast for article"))
+                {
+                    <span class="article-promo__head-title">Add podcast for article</span>
+                }                
+            }
+        </div>
+        <span class="article-promo__title">
+            @Html.Glass().Editable(Model, m => m.Title)
+        </span>
+        <span class="article-promo__desc">
+            @Html.Glass().Editable(Model, m => m.Subitle)
+        </span>
+    </a>
+    <div class="article-promo__footer">
+        <div class="article-promo__footer-item">
+            <span class="article-promo__footer-text">Listen on:</span>
+            @if (Sitecore.Context.PageMode.IsExperienceEditor)
+            {
+                using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Promo/PodcastPromo", Model.Id.ToString(), "Edit Article Podcast"))
+                {
+                    <p>Add Podcast Link </p>
+                }
+            }
+            @if (podcast != null && podcast.PodcastLinks != null)
+            {
+                foreach (var podcastLink in podcast.PodcastLinks)
+                {
+                    if (podcastLink != null)
+                    {
+                        @Html.Partial("~/Views/Promo/ScrollerPromos/_PodcastPromoLink.cshtml", podcastLink)
+                    }
+                }
+            }
+        </div>
+    </div>
+
+    @if ((Model.Image != null && !string.IsNullOrEmpty(Model.Image.Src)) || Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        @Html.Glass().RenderImage(Model, m => m.Image, new NameValueCollection { { "class", "article-promo__back" } }, isEditable: true)
+    }
+    else
+    {
+        @Html.Glass().RenderImage(Model, m => m.HeaderImage, new NameValueCollection { { "class", "article-promo__back" } }, isEditable: true)
+    }
+</div>

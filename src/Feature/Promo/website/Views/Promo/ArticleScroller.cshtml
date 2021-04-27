@@ -32,43 +32,42 @@
                                     case "Fund Manager View":
                                         {
                                             <div class="swiper-slide">
-                                                @Html.Partial("~/Views/Promo/FundManagerViewPromo.cshtml", article)
+                                                @Html.Partial("~/Views/Promo/ScrollerPromos/_FundManagerViewPromo.cshtml", article)
                                             </div>
                                             break;
                                         }
                                     case "Podcast":
                                         {
-                                            if (article.PodcastPromo != null && article.PodcastPromo.Any())
-                                            {
-                                                <div class="swiper-slide">
-                                                    @Html.Partial("~/Views/Promo/PodcastPromo.cshtml", article.PodcastPromo.FirstOrDefault())
-                                                </div>
-                                            }                                            
+                                            <div class="swiper-slide">
+                                                @Html.Partial("~/Views/Promo/ScrollerPromos/_PodcastPromo.cshtml", article.PodcastPromo.FirstOrDefault())
+                                            </div>
                                             break;
                                         }
                                     case "Fund Update":
                                         {
                                             <div class="swiper-slide">
-                                                @Html.Partial("~/Views/Promo/FundUpdatePromo.cshtml", article)
+                                                @Html.Partial("~/Views/Promo/ScrollerPromos/_FundUpdatePromo.cshtml", article)
                                             </div>
                                             break;
                                         }
                                     case "Video":
                                         {
-                                            @Html.Partial("~/Views/Promo/VideoPromo.cshtml", article)
+                                            <div class="swiper-slide">
+                                                @Html.Partial("~/Views/Promo/ScrollerPromos/_VideoPromo.cshtml", article)
+                                            </div>
                                             break;
                                         }
                                     case "Magazine And Reports":
                                         {
                                             <div class="swiper-slide">
-                                                @Html.Partial("~/Views/Promo/MagazineReportsPromo.cshtml", article)
+                                                @Html.Partial("~/Views/Promo/ScrollerPromos/_MagazineReportsPromo.cshtml", article)
                                             </div>
                                             break;
                                         }
                                     default:
                                         {
                                             <div class="swiper-slide">
-                                                @Html.Partial("~/Views/Promo/FundManagerViewPromo.cshtml", article)
+                                                @Html.Partial("~/Views/Promo/ScrollerPromos/_FundManagerViewPromo.cshtml", article)
                                             </div>
                                         }
                                         break;

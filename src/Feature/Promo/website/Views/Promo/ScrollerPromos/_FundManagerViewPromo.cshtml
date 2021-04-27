@@ -1,14 +1,22 @@
 ﻿@using System.Collections.Specialized;
-@using LionTrust.Foundation.ORM.Extensions
 @model LionTrust.Feature.Promo.Models.IArticlePromo
 <div class="article-promo">
     <a href="#article promo" class="article-promo__front">
     </a>
     <a href="#" class="article-promo__body">
         <div class="article-promo__head">
-            <img class="article-promo__head-img" src="images/components/banners/writer.jpeg" alt="">
-            <!--TO DO Magazine Reports heading-->
-            <span class="article-promo__head-title">Magazine and Reports</span>
+            @if (Model.Author != null)
+            {
+                @Html.Glass().RenderImage(Model.Author, m => m.Image, new NameValueCollection { { "class", "article-promo__head-img" } }, isEditable: true)
+                <span class="article-promo__head-title">@Html.Glass().Editable(Model.Author, m => m.Name)</span>
+            }
+            else if (Sitecore.Context.PageMode.IsExperienceEditor)
+            {
+                using (Html.Glass().BeginEditFrame(Model, "Select Article Author", x => x.Author))
+                {
+                    <span class="article-promo__head-title">Select author for article</span>
+                }
+            }
         </div>
         <span class="article-promo__title">
             @Html.Glass().Editable(Model, m => m.Title)
