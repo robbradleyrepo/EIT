@@ -7,18 +7,31 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            @using (Html.BeginRenderLinkWithGoal(Model, m => m.PrimaryCta, Model.PrimaryCtaGoal, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary" } }, isEditable: true))
+            @if (Model.PrimaryCta != null || Sitecore.Context.PageMode.IsExperienceEditor)
             {
-                @Model.PrimaryCta.Text
-                <i class="icon-arrow-right animate-arrow"></i>
+                using (Html.BeginRenderLinkWithGoal(Model, m => m.PrimaryCta, Model.PrimaryCtaGoal, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary" } }, isEditable: true))
+                {
+                    if (Model.PrimaryCta != null)
+                    {
+                        @Model.PrimaryCta.Text
+                    }
+
+                    <i class="icon-arrow-right animate-arrow"></i>
+                }
             }
 
-            @using (Html.BeginRenderLinkWithGoal(Model, m => m.SecondaryCta, Model.SecondaryCtaGoal, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-secondary" } }, isEditable: true))
+            @if (Model.SecondaryCta != null || Sitecore.Context.PageMode.IsExperienceEditor)
             {
-                @Model.SecondaryCta.Text
-                <i class="icon-arrow-right animate-arrow"></i>
-            }
+                using (Html.BeginRenderLinkWithGoal(Model, m => m.SecondaryCta, Model.SecondaryCtaGoal, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-secondary" } }, isEditable: true))
+                {
+                    if (Model.SecondaryCta != null)
+                    {
+                        @Model.SecondaryCta.Text
+                    }
 
+                    <i class="icon-arrow-right animate-arrow"></i>
+                }
+            }
         </div>
     </div>
 </div>
