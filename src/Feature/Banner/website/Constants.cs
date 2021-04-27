@@ -9,6 +9,19 @@
             public const string LeadBannerIcon_FieldName = "LeadBanner_Icon";
             public const string LeadBannerBackgroundImage_FieldName = "LeadBanner_BackgroundImage";
             public const string LeadBannerTextAlign_FieldName = "LeadBanner_TextAlign";
+
+            public const string LeadBannerTextAlignFieldId = "{B7ECDEE2-BA93-4F86-A7D5-05DB6E572A80}";
+        }
+
+        public static class HomepageLeadBanner
+        {
+            public const string HomepageBannerHeadingFieldId = "{E0B1CD77-CF3A-4CE0-BB48-545985A11121}";
+            public const string HomepageBannerPrimaryCtaFieldId = "{FEDD5F78-07DA-44BB-8C46-8149A03834E4}";
+            public const string HomepageBannerSecondaryCtaFieldId = "{0C566B1C-47D3-48A5-A2ED-EF342735ED54}";
+            public const string HomepageBannerPrimaryCtaGoalFieldId = "{250606C9-E9C3-4B65-B015-2367F6D2DEA2}";
+            public const string HomepageBannerSecondaryCtaGoalFieldId = "{82348CFD-EACB-40B4-A6A7-E1B411B657BB}";
+            public const string HomepageBannerCopyFieldId = "{DBD747A7-AA9C-480E-9C93-4FDB575A3716}";
+            public const string HomepageBannerTextAlignFieldId = "{B9D99264-5432-4883-B933-0EE7415FDE28}";
         }
 
         public static class PromoBanner

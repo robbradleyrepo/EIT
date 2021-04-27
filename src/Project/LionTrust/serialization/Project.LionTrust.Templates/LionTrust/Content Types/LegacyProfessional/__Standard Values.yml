@@ -1,0 +1,30 @@
+﻿---
+ID: "8d35e707-9dbf-4f14-aee5-a5833513ad2f"
+Parent: "a6462a09-c446-45a5-9238-bdff5170602b"
+Template: "a6462a09-c446-45a5-9238-bdff5170602b"
+Path: /sitecore/templates/Project/LionTrust/Content Types/LegacyProfessional/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140922T122011
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "a6306774-24ca-4250-99ad-48bfd132adcb"
+      Hint: ShortBio
+      Value: |
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+    - ID: "b1d2851d-fe49-4ee3-8fc2-32ecf70cb3ae"
+      Hint: FullName
+      Value: $name

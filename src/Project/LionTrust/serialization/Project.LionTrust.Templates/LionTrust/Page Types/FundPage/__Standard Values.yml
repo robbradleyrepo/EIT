@@ -1,0 +1,27 @@
+﻿---
+ID: "f5067ab3-c12f-4924-8d34-cbd3b8cf2c24"
+Parent: "1f294bcb-1f17-4000-94bd-501a96bec59a"
+Template: "1f294bcb-1f17-4000-94bd-501a96bec59a"
+Path: /sitecore/templates/Project/LionTrust/Page Types/FundPage/__Standard Values
+DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{14030E9F-CE92-49C6-AD87-7D49B50E42EA}" />
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140922T105831Z
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: PageTitle
+      Value: $name

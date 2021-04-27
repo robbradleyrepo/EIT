@@ -1,0 +1,34 @@
+﻿---
+ID: "9df10bcd-3175-4dfe-a57b-8b74b3b76f40"
+Parent: "e75fa89b-5be8-4c35-ba29-4fbff448296c"
+Template: "e75fa89b-5be8-4c35-ba29-4fbff448296c"
+Path: /sitecore/templates/Project/LionTrust/Content Types/DocumentFolder/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: |
+    {66E09D5B-4F8E-4313-9DF3-FA7E53FBE83A}
+    {E75FA89B-5BE8-4C35-BA29-4FBFF448296C}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "208d44b3-8ffc-49ea-8d03-68fd6289c199"
+      Hint: DownloadText
+      Value: Download
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140919T121321
+    - ID: "45fd77a0-8249-4d0b-88d0-947fca97d513"
+      Hint: DownloadLinkText
+      Value: Download Message
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "a9e362cc-4ae9-4202-b2a1-edce877102fa"
+      Hint: NameText
+      Value: Name

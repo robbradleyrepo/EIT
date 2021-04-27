@@ -1,0 +1,34 @@
+﻿---
+ID: "436ed13b-2e6b-482d-8f22-da8c28df9d7a"
+Parent: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/templates/Project/LionTrust/Page Types/ArticlePage/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: 
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{14030E9F-CE92-49C6-AD87-7D49B50E42EA}" />
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: ArticleTitle
+      Value: $name
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20141003T142816Z
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: PageTitle
+      Value: $name

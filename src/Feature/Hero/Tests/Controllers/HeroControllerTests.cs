@@ -26,7 +26,7 @@ namespace LionTrust.Feature.Hero.Tests.Controllers
         {
             _heroMediator = Substitute.For<IHeroMediator>();
 
-            //_controller = new HeroController(_heroMediator);
+            _controller = new HeroController(_heroMediator);
         }
 
         [TestMethod]

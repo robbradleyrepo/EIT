@@ -1,10 +1,11 @@
 ﻿namespace LionTrust.Feature.Carousel.Models
 {
+    using System;
+
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
-    using LionTrust.Feature.Carousel;
-    using System;
+    using LionTrust.Feature.Carousel;    
 
     public interface ICarousel : ICarouselGlassBase
     {

@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{EEDA31E9-58A3-448A-A3FC-F519ED051503}</ProjectGuid>
+    <ProjectGuid>{BC43A9C4-F63A-44D4-9B7F-866E1CCDB66D}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -53,78 +53,80 @@
     <PackageReference Include="Microsoft.AspNet.Mvc">
       <Version>5.2.4</Version>
     </PackageReference>
-    <PackageReference Include="Microsoft.AspNet.Razor">
-      <Version>3.2.7</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.AspNet.WebPages">
-      <Version>3.2.7</Version>
+    <PackageReference Include="Microsoft.AspNet.Web.Optimization">
+      <Version>1.1.3</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="1.0.5" />
     <PackageReference Include="Microsoft.Net.Compilers" Version="2.1.0" />
-    <PackageReference Include="Microsoft.Web.Infrastructure">
-      <Version>1.0.0</Version>
-    </PackageReference>
     <PackageReference Include="Sitecore.Kernel" Version="9.2.0" />
     <PackageReference Include="Sitecore.Mvc">
       <Version>9.2.0</Version>
     </PackageReference>
-    <PackageReference Include="Unicorn.Core" Version="4.0.8" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Navigation\Header.cshtml" />
-    <Content Include="Views\Web.config" />
-    <Content Include="Views\Navigation\Menu.cshtml" />
-    <Content Include="App_Config\Include\Feature\Feature.Navigation.Serialization.config" />
-    <Content Include="Views\Navigation\Footer.cshtml" />
+    <Content Include="Views\web.config" />
     <Content Include="App_Config\Include\Feature\Feature.Navigation.RegisterContainer.config" />
+    <Content Include="App_Config\Include\Feature\Feature.Navigation.Serialization.config" />
+    <Content Include="App_Config\Include\Unicorn\z.Feature.Navigation.config" />
+    <Content Include="Views\Navigation\anchorlinks.cshtml" />
     <Content Include="Views\Navigation\Breadcrumb.cshtml" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="Views\Navigation\Footer.cshtml" />
+    <Content Include="Views\Navigation\Header.cshtml" />
+    <Content Include="Views\Navigation\Menu.cshtml" />
+    <Content Include="Views\Navigation\Cta.cshtml" />
+    <Content Include="Views\Navigation\secondarynavigation.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants.cs" />
     <Compile Include="Controllers\BreadcrumbController.cs" />
     <Compile Include="Controllers\NavigationController.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Models\BreadcrumbViewModel.cs" />
+    <Compile Include="Models\IAnchorLinks.cs" />
     <Compile Include="Models\IBreadcrumbDetailsModel.cs" />
+    <Compile Include="Models\ICta.cs" />
     <Compile Include="Models\IFooterConfiguration.cs" />
     <Compile Include="Models\IHeaderConfiguration.cs" />
     <Compile Include="Models\IHeaderDropdown.cs" />
     <Compile Include="Models\IHeaderImage.cs" />
     <Compile Include="Models\IHeaderNavigationColumn.cs" />
-    <Compile Include="Models\IPageLink.cs" />
+    <Compile Include="Models\IHome.cs" />
+    <Compile Include="Models\ILinkWithGoal.cs" />
     <Compile Include="Models\INavigablePage.cs" />
+    <Compile Include="Models\INavigationGlassBase.cs" />
+    <Compile Include="Models\IPageLink.cs" />
+    <Compile Include="Models\ISecondaryNav.cs" />
+    <Compile Include="Models\ISiteRoot.cs" />
     <Compile Include="Models\ISocialIcon.cs" />
     <Compile Include="Models\NavigationViewModel.cs" />
-    <Compile Include="Models\IHome.cs" />
-    <Compile Include="Models\INavigationGlassBase.cs" />
-    <Compile Include="Models\ISiteRoot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\INavigationRepository.cs" />
     <Compile Include="Repositories\NavigationRepository.cs" />
-    <Compile Include="Constants.cs" />
     <Compile Include="Services\BreadcrumbService.cs" />
     <Compile Include="Services\IBreadcrumbService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Foundation\Analytics\website\LionTrust.Foundation.Analytics.csproj">
+      <Project>{71010683-02eb-4e0d-b0e1-6643922799ee}</Project>
+      <Name>LionTrust.Foundation.Analytics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Content\website\LionTrust.Foundation.Content.csproj">
+      <Project>{f8f55034-fa55-4d27-b115-0ab4eeb9a0a8}</Project>
+      <Name>LionTrust.Foundation.Content</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\DI\website\LionTrust.Foundation.DI.csproj">
       <Project>{0d3a6f11-b5ff-4d8c-8a74-19501d2e80d4}</Project>
       <Name>LionTrust.Foundation.DI</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\ORM\website\LionTrust.Foundation.ORM.csproj">
-      <Project>{5e91a7d9-8e93-44fd-857f-f9ce145b6022}</Project>
+      <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>
       <Name>LionTrust.Foundation.ORM</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\SitecoreExtensions\website\LionTrust.Foundation.SitecoreExtensions.csproj">
@@ -132,7 +134,6 @@
       <Name>LionTrust.Foundation.SitecoreExtensions</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
