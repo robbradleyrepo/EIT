@@ -141,6 +141,11 @@
             public static readonly ID TwitterAccounts_FieldID = new ID("{9568F987-E036-4144-B158-B2084D778CE2}");
         }
 
+        public static class SecondaryNavigation
+        {
+            public const string HeadingFieldId = "{60E11875-0FD3-4029-8E88-D217A2735B47}";
+        }
+
         public static class AnchorLinks
         {
             public const string HeadingFieldId = "{2DFCB4D4-7986-47A1-A0F3-79E139F3F976}";

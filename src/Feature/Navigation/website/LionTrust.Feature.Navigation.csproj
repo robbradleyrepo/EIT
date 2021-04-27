@@ -80,6 +80,7 @@
     <Content Include="Views\Navigation\Header.cshtml" />
     <Content Include="Views\Navigation\Menu.cshtml" />
     <Content Include="Views\Navigation\Cta.cshtml" />
+    <Content Include="Views\Navigation\secondarynavigation.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -101,6 +102,7 @@
     <Compile Include="Models\INavigablePage.cs" />
     <Compile Include="Models\INavigationGlassBase.cs" />
     <Compile Include="Models\IPageLink.cs" />
+    <Compile Include="Models\ISecondaryNav.cs" />
     <Compile Include="Models\ISiteRoot.cs" />
     <Compile Include="Models\ISocialIcon.cs" />
     <Compile Include="Models\NavigationViewModel.cs" />
