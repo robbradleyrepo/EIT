@@ -1,0 +1,33 @@
+﻿---
+ID: "37aaae6e-5aba-4ccf-8ed1-6a297623e1cb"
+Parent: "729f58d5-f93b-4f6d-922c-b86b1c468fdc"
+Template: "66e09d5b-4f8e-4313-9df3-fa7e53fbe83a"
+Path: /sitecore/content/Funds/GF Special Situations Fund/Documents/KIID French
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 400
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20161206T120847Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "a4a7f9dd-a218-4f33-b72a-7dc2251ccd43"
+      Hint: DocumentTypes
+      Type: Multilist
+      Value: "{47476B16-8600-4EBD-BC6F-AE6E84EC1AC2}"
+    - ID: "c794210e-6107-4d69-841f-773cb9943bba"
+      Hint: DownloadLink
+      Value: |
+        <link target="" linktype="media" id="{ED8BFF83-0E13-4B21-A556-CA288561BF14}" url="/LionTrust/files/fund-literature/kiids/french/IE00B8CL0730_Liontrust_GF_Special_Situations_C3_Inst_Acc_GBP_FR_KID" />
+    - ID: "eeb8db99-7da8-4973-adf7-bcf7b29eba79"
+      Hint: DocumentName
+      Value: KIID C3 Acc (French)
