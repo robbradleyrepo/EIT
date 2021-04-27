@@ -8,6 +8,6 @@
     }
     using (Html.Glass().BeginRenderLink(Model, m => m.Link, isEditable: true))
     {
-        @Html.Glass().RenderImage(Model, m => m.Icon, new NameValueCollection { { "class", "article-promo__footer-icon" } }, isEditable: true)
+        @Html.Glass().RenderImage(Model, m => m.Icon, new NameValueCollection { { "class", "image-icon" } }, isEditable: true)
     }
 }
