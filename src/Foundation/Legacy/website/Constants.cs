@@ -82,6 +82,12 @@
 
             public const string ShortDescription_FieldName = "LegacyPresentationBase_ShortDescription";
             public const string ShortDescription_FieldId = "{8A3692C4-8014-4BDD-9F9F-74ACFCC1C501}";
+
+            public const string Tag_FieldName = "LegacyPresentationBase_PageTags";
+            public const string Tag_FieldId = "{42994F09-31F9-4570-9C0B-91BD4A698540}";
+
+            public const string ExcludeInSearchResults_FieldName = "LegacyPresentationBase_ExcludeInSearchResults";
+            public const string ExcludeInSearchResults_FieldId = "{C7D0C7F7-B27C-4F96-B813-32BB19174B6A}";
         }
     }
 }

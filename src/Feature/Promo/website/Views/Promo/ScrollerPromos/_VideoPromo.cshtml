@@ -1,4 +1,5 @@
 ﻿@using System.Collections.Specialized;
+@using LionTrust.Foundation.SitecoreExtensions.Extensions;
 @model LionTrust.Feature.Promo.Models.IArticlePromo
 @if (Model != null)
 {
@@ -35,11 +36,11 @@
                     {
                         if (Model.Date != DateTime.MinValue || Sitecore.Context.PageMode.IsExperienceEditor)
                         {
-                            @Model.Date.ToString("d MMMM yyyy")
+                            @Model.Date.ToDateString("d MMMM yyyy", "Today")
                         }
                         else
                         {
-                            @Model.PublishedDate.ToString("d MMMM yyyy")
+                            @Model.PublishedDate.ToDateString("d MMMM yyyy", "Today")
                         }
                     }
                 </span>

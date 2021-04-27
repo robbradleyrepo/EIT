@@ -5,6 +5,7 @@
     using Glass.Mapper.Sc.Web.Mvc;
     using LionTrust.Feature.Promo.Models;
     using LionTrust.Foundation.Indexing.Repositories;
+    using LionTrust.Foundation.Legacy.Models;
     using Sitecore.Mvc.Controllers;
     using Sitecore.Mvc.Presentation;
 
@@ -37,7 +38,9 @@
             }
             else
             {
-                // Search by RenderingContext.Current.ContextItem["__semantics"]
+                var articleItem = _mvcContext.GetPageContextItem<IArticle>();
+                var articleTags = articleItem.PageTags;
+                // Search articles by articleTags
             }
 
             return View("~/Views/Promo/ArticleScroller.cshtml", articleScrollerViewModel);

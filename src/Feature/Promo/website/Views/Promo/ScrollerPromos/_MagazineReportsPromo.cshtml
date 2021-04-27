@@ -1,22 +1,29 @@
 ﻿@using System.Collections.Specialized;
+@using LionTrust.Foundation.SitecoreExtensions.Extensions;
 @model LionTrust.Feature.Promo.Models.IArticlePromo
 <div class="article-promo">
     <a href="#article promo" class="article-promo__front">
     </a>
     <a href="#" class="article-promo__body">
         <div class="article-promo__head">
-            @if (Model.Author != null)
-            {
-                @Html.Glass().RenderImage(Model.Author, m => m.Image, new NameValueCollection { { "class", "article-promo__head-img" } }, isEditable: true)
-                <span class="article-promo__head-title">@Html.Glass().Editable(Model.Author, m => m.Name)</span>
-            }
-            else if (Sitecore.Context.PageMode.IsExperienceEditor)
-            {
-                using (Html.Glass().BeginEditFrame(Model, "Select Article Author", x => x.Author))
-                {
-                    <span class="article-promo__head-title">Select author for article</span>
+            <span class="article-promo__head-title">
+                @{
+                    var first = true;
+                    foreach (var pageTag in Model.PageTags)
+                    {
+                        if (!first)
+                        {
+                            <span class="dot-divider"></span>
+                        }
+                        else
+                        {
+                            first = false;
+                        }
+
+                        @pageTag.Name
+                    }
                 }
-            }
+            </span>
         </div>
         <span class="article-promo__title">
             @Html.Glass().Editable(Model, m => m.Title)
@@ -31,20 +38,13 @@
             <span class="article-promo__footer-text">
                 @using (Html.Glass().BeginEditFrame(Model, "Edit Article Date", x => x.Date))
                 {
-                    if (Sitecore.Context.PageMode.IsExperienceEditor)
+                    if (Sitecore.Context.PageMode.IsExperienceEditor || Model.Date != DateTime.MinValue)
                     {
-                        @Model.Date.ToString("d MMMM yyyy")
+                        @Model.Date.ToDateString("d MMMM yyyy", "Today")
                     }
                     else
                     {
-                        if (Model.Date != DateTime.MinValue)
-                        {
-                            @Model.Date.ToString("d MMMM yyyy")
-                        }
-                        else
-                        {
-                            @Model.PublishedDate.ToString("d MMMM yyyy")
-                        }
+                        @Model.PublishedDate.ToDateString("d MMMM yyyy", "Today")
                     }
                 }
             </span>
