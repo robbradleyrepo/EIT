@@ -1,0 +1,33 @@
+﻿---
+ID: "dec87559-386a-419a-af8b-fa735732fc37"
+Parent: "2901aba3-5b07-493e-8c47-0671c43df9b9"
+Template: "66e09d5b-4f8e-4313-9df3-fa7e53fbe83a"
+Path: /sitecore/content/Funds/MA UK Equity Fund/Documents/KIID A Inc English
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20201102T141213Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "8de3f234-7880-4703-8534-02bb8320c09c"
+      Hint: RelatedFunds
+      Type: Multilist
+      Value: "{29ADABD7-04AE-4A1B-B2CF-6AEA256E119B}"
+    - ID: "a4a7f9dd-a218-4f33-b72a-7dc2251ccd43"
+      Hint: DocumentTypes
+      Type: Multilist
+      Value: "{47476B16-8600-4EBD-BC6F-AE6E84EC1AC2}"
+    - ID: "c794210e-6107-4d69-841f-773cb9943bba"
+      Hint: DownloadLink
+      Value: |
+        <link id="{CF98628D-67D5-4D26-A9D1-B6604F88989C}" url="/LionTrust/files/fund-literature/kiids/english/GB00B8882D80_Liontrust_Multi_Asset_UK_Equity_A_Inc_EN_KID" linktype="media" />
+    - ID: "eeb8db99-7da8-4973-adf7-bcf7b29eba79"
+      Hint: DocumentName
+      Value: KIID A Inc English

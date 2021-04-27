@@ -1,0 +1,36 @@
+﻿---
+ID: "bd2da3a6-7489-4160-806a-a4259a616299"
+Parent: "c8e97f82-4fb2-46d3-b162-8fa1fb9fe0ff"
+Template: "66e09d5b-4f8e-4313-9df3-fa7e53fbe83a"
+Path: "/sitecore/content/Funds/Shared documents/Liontrust Multi-Asset Protector ICVC Prospectus"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20201030T170220Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "8de3f234-7880-4703-8534-02bb8320c09c"
+      Hint: RelatedFunds
+      Type: Multilist
+      Value: |
+        {DDFF9002-52DB-4431-BA40-AAA9C3FA735F}
+        {DBC5ABE6-AF26-4192-BCBE-67255AC54874}
+        {1C9E6800-D786-42D2-8DFE-47E2C7AC447C}
+    - ID: "a4a7f9dd-a218-4f33-b72a-7dc2251ccd43"
+      Hint: DocumentTypes
+      Type: Multilist
+      Value: "{93BD5BD5-AF14-4FD5-96EC-59F7ABB6C172}"
+    - ID: "c794210e-6107-4d69-841f-773cb9943bba"
+      Hint: DownloadLink
+      Value: |
+        <link linktype="media" target="" id="{14B78903-CD26-4B4A-B34C-A0DE677A1BF6}" />
+    - ID: "eeb8db99-7da8-4973-adf7-bcf7b29eba79"
+      Hint: DocumentName
+      Value: "Liontrust Multi-Asset Protector ICVC Prospectus"

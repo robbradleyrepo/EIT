@@ -1,0 +1,33 @@
+﻿---
+ID: "b9add19b-e08a-4594-958c-3fefe7287668"
+Parent: "9a6a4a93-15e1-41a9-8cac-6b0903e074e4"
+Template: "66e09d5b-4f8e-4313-9df3-fa7e53fbe83a"
+Path: /sitecore/content/Funds/MA Active Progressive Fund/Documents/MA Active Progressive Fund Factsheet S Acc
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20201030T152934Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "8de3f234-7880-4703-8534-02bb8320c09c"
+      Hint: RelatedFunds
+      Type: Multilist
+      Value: "{8660503A-AA78-4871-9783-A84BEAC9954A}"
+    - ID: "a4a7f9dd-a218-4f33-b72a-7dc2251ccd43"
+      Hint: DocumentTypes
+      Type: Multilist
+      Value: "{D4DC9F77-EC92-429D-A975-839A13F17C2A}"
+    - ID: "c794210e-6107-4d69-841f-773cb9943bba"
+      Hint: DownloadLink
+      Value: |
+        <link linktype="media" target="" id="{B7E56D31-4C31-40D1-92D0-B4F791A2DB69}" />
+    - ID: "eeb8db99-7da8-4973-adf7-bcf7b29eba79"
+      Hint: DocumentName
+      Value: Factsheet S Acc

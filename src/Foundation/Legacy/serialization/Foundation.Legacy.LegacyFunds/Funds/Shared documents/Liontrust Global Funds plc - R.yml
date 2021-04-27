@@ -1,0 +1,42 @@
+﻿---
+ID: "8d80a70c-e836-4d37-9408-d2b3152e3722"
+Parent: "c8e97f82-4fb2-46d3-b162-8fa1fb9fe0ff"
+Template: "66e09d5b-4f8e-4313-9df3-fa7e53fbe83a"
+Path: "/sitecore/content/Funds/Shared documents/Liontrust Global Funds plc - Remuneration policy"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20161207T110808Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "8de3f234-7880-4703-8534-02bb8320c09c"
+      Hint: RelatedFunds
+      Type: Multilist
+      Value: |
+        {068227AB-8DEF-4A60-9C7B-D34739B4FB39}
+        {DD1FB6FB-0E70-4487-8E77-C985DAE34407}
+        {AAD03E4B-CD82-4DF0-BB19-AD4F43706FA3}
+        {A222ECBF-7442-4884-B13B-3FBFEA108A77}
+        {6EC98D5F-B68E-4E89-96BA-E3DC283F1B56}
+        {DB186D8E-97D4-4BF7-B87C-EAB6C44C21BC}
+        {F0851E0C-4F1A-4A72-A58B-867D503CC93B}
+        {CAB2FB23-6928-475A-B0CF-EA5BA70EE2CA}
+        {2335DB68-AD95-4E4E-B11B-007605557258}
+    - ID: "a4a7f9dd-a218-4f33-b72a-7dc2251ccd43"
+      Hint: DocumentTypes
+      Type: Multilist
+      Value: "{93BD5BD5-AF14-4FD5-96EC-59F7ABB6C172}"
+    - ID: "c794210e-6107-4d69-841f-773cb9943bba"
+      Hint: DownloadLink
+      Value: |
+        <link target="" linktype="media" id="{A0F94457-07C6-4121-A99B-41180DF9607C}" url="/LionTrust/files/fund-literature/prospectus-fund-legal/liontrust-global-funds-remuneration-policy" />
+    - ID: "eeb8db99-7da8-4973-adf7-bcf7b29eba79"
+      Hint: DocumentName
+      Value: "Liontrust Global Funds plc - Remuneration policy"
