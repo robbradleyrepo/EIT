@@ -4,6 +4,7 @@
 
     using LionTrust.Foundation.SitecoreExtensions.Extensions;
     using Sitecore;
+    using Sitecore.Data;
     using Sitecore.Data.Items;
 
     public class NavigationRepository : INavigationRepository
@@ -26,12 +27,12 @@
 
         public Item GetNavigationSiteRoot(Item contextItem)
         {
-            return contextItem.GetAncestorOrSelfOfTemplate(Navigation.Constants.NavigationSiteRoot.TemplateID) ?? Context.Site.GetContextItem(Navigation.Constants.NavigationSiteRoot.TemplateID);
+            return contextItem.GetAncestorOrSelfOfTemplate(new ID(Navigation.Constants.NavigationSiteRoot.TemplateID)) ?? Context.Site.GetContextItem(new ID(Navigation.Constants.NavigationSiteRoot.TemplateID));
         }
 
         public Item GetNavigationRoot(Item contextItem)
         {
-            return contextItem.GetAncestorOrSelfOfTemplate(Navigation.Constants.NavigationRoot.TemplateID) ?? Context.Site.GetContextItem(Navigation.Constants.NavigationRoot.TemplateID);
+            return contextItem.GetAncestorOrSelfOfTemplate(new ID(Navigation.Constants.NavigationRoot.TemplateID)) ?? Context.Site.GetContextItem(new ID(Navigation.Constants.NavigationRoot.TemplateID));
         }
     }
 }

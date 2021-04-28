@@ -203,15 +203,5 @@
             public const string ContactUsPage_FieldName = "Contact Us Page";
             public const string ContactUsPage_FieldID = "{0D831D08-90C7-4E31-B880-5A93146B3029}";
         }
-
-        public static class Navigation
-        {
-            public const string MenuTitle_FieldName = "Menu Title";
-            public const string MenuTitle_FieldId = "{960FE422-ACE9-47E8-9E18-5D7E5FFA218F}";
-            public const string MenuSummary_FieldName = "Menu Summary";
-            public const string MenuSummary_FieldId = "{8D6CE9FF-806D-4FC1-82A0-E36537346397}";
-            public const string ShowInNavigation_FieldName = "ShowInNavigation";
-            public const string ShowInNavigation_FieldId = "{D306DABF-C78F-434A-B1DB-17C13ED095A0}";
-        }
     }
 }

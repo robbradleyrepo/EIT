@@ -37,7 +37,7 @@
                                         @if (dropDown.PageItem != null)
                                         {
                                             <a href="@dropDown.PageItem.Url" class="nav-desktop__link">
-                                                @Html.Glass().Editable(dropDown.PageItem, z => z.MenuTitle)
+                                                @Html.Glass().Editable(dropDown.PageItem, z => z.PageTitle)
                                             </a>
                                         }
                                         else
@@ -76,7 +76,7 @@
                                                                             @foreach (var pageLink in firstNavigationColumn.PageLinks)
                                                                             {
                                                                                 <li class="dropdown-nav__item">
-                                                                                    <a href="@pageLink.Url" class="dropdown-nav__link">@Html.Glass().Editable(pageLink, z => z.MenuTitle)</a>
+                                                                                    <a href="@pageLink.Url" class="dropdown-nav__link">@Html.Glass().Editable(pageLink, z => z.PageTitle)</a>
                                                                                 </li>
                                                                             }
                                                                         </ul>
@@ -103,7 +103,7 @@
                                                                             @foreach (var pageLink in secondNavigationColumn.PageLinks)
                                                                             {
                                                                                 <li class="dropdown-nav__item">
-                                                                                    <a href="@pageLink.Url" class="dropdown-nav__link">@Html.Glass().Editable(pageLink, z => z.MenuTitle)</a>
+                                                                                    <a href="@pageLink.Url" class="dropdown-nav__link">@Html.Glass().Editable(pageLink, z => z.PageTitle)</a>
                                                                                 </li>
                                                                             }
                                                                         </ul>
@@ -130,7 +130,7 @@
                                                                                 @foreach (var pageLink in thirdNavigationColumn.PageLinks)
                                                                                 {
                                                                                     <li class="dropdown-nav__item">
-                                                                                        <a href="@pageLink.Url" class="dropdown-nav__link">@Html.Glass().Editable(pageLink, z => z.MenuTitle)</a>
+                                                                                        <a href="@pageLink.Url" class="dropdown-nav__link">@Html.Glass().Editable(pageLink, z => z.PageTitle)</a>
                                                                                     </li>
                                                                                 }
                                                                             </ul>
@@ -436,7 +436,7 @@
                             {
                                 <li class="nav-desktop__item">
                                     <a href="@Model.HomeItem.ContactUsPage.Url" class="nav-desktop__link nav-desktop__link_contact">
-                                        @Html.Glass().Editable(Model.HomeItem.ContactUsPage, z => z.MenuTitle)
+                                        @Html.Glass().Editable(Model.HomeItem.ContactUsPage, z => z.PageTitle)
                                     </a>
                                 </li>
                             }

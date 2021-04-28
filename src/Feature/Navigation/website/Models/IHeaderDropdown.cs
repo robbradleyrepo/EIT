@@ -7,7 +7,7 @@
 
     public interface IHeaderDropdown : INavigationGlassBase
     {
-        [SitecoreField(Constants.HeaderDropDown.PageItem_FieldName, SitecoreFieldType.DropTree, "Header Configuration")])]
+        [SitecoreField(Constants.HeaderDropDown.PageItem_FieldName, SitecoreFieldType.DropTree, "Header Configuration")]
         INavigablePage PageItem { get; set; } 
 
         [SitecoreField(Constants.HeaderDropDown.NavigationColumns_FieldName, SitecoreFieldType.Treelist, "Header Configuration")]
