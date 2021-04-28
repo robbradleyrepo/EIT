@@ -22,10 +22,12 @@
         @include breakpoint(desktop, up)
             font-size: 20px
             line-height: 30px
-            padding-left: 80px
+            padding-left: 85px
             margin-bottom: 44px
         @include breakpoint(desktop-large, up)
             padding-right: 40px
+    &__link
+        color: $black
         &:before
             position: absolute
             font-size: 60px
@@ -39,7 +41,5 @@
             @include breakpoint(desktop, up)
                 font-size: 80px
                 top: 20px
-    &__link
-        color: $black
         &:hover
             color: $black
