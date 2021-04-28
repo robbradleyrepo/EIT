@@ -151,7 +151,10 @@
                                         {
                                             using (Html.Glass().BeginRenderLink(dropDown, x => x.CTALink, new NameValueCollection { { "class", "btn btn-primary btn-block mb-4" } }, isEditable: true))
                                             {
-                                                @Html.Glass().Editable(dropDown, x => x.CTALabel)
+                                                if (dropDown.CTALink != null && !string.IsNullOrEmpty(dropDown.CTALink.Text))
+                                                {
+                                                    @dropDown.CTALink.Text
+                                                }
                                             }
                                         }
                                     </li>
@@ -183,10 +186,15 @@
 
                                                 <h4 class="dropdown-nav__title">@Html.Glass().Editable(navigationColumn, z => z.ColumnTitle)</h4>
                                                 if (navigationColumn.ShowColumnLink)
-                                                {                                                    
+                                                {
                                                     using (Html.Glass().BeginRenderLink(navigationColumn, z => z.ColumnLink, new NameValueCollection { { "class", "link-styles d-block mb-4" } }, isEditable: true))
                                                     {
-                                                        @Html.Glass().Editable(navigationColumn, z => z.ColumnLinkLabel) <i class="icon-arrow-right"></i>
+                                                        if (navigationColumn.ColumnLink != null
+                                                            && !string.IsNullOrEmpty(navigationColumn.ColumnLink.Text))
+                                                        {
+                                                            @navigationColumn.ColumnLink.Text
+                                                        }
+                                                        <i class="icon-arrow-right"></i>
                                                     }
 
                                                     if (navigationColumn.PageLinks != null && navigationColumn.PageLinks.Any())
@@ -456,7 +464,7 @@
                                     }
                                 }
                             </div>
-                        </div>
+                            </div>
                     }
                 }
             </div>

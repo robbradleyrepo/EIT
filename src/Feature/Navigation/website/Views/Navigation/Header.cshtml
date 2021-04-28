@@ -56,7 +56,11 @@
                                                                 {
                                                                     using (Html.Glass().BeginRenderLink(dropDown, z => z.CTALink, new NameValueCollection { { "class", "btn btn-primary btn-block mb-5" } }, isEditable: true))
                                                                     {
-                                                                        @Html.Glass().Editable(dropDown, z => z.CTALabel) <i class="icon-arrow-right animate-arrow"></i>
+                                                                        if (dropDown.CTALink != null && !string.IsNullOrEmpty(dropDown.CTALink.Text))
+                                                                        {
+                                                                            @dropDown.CTALink.Text
+                                                                        }
+                                                                        <i class="icon-arrow-right animate-arrow"></i>
                                                                     }
                                                                 }
 
@@ -67,7 +71,12 @@
                                                                     {
                                                                         using (Html.Glass().BeginRenderLink(firstNavigationColumn, z => z.ColumnLink, new NameValueCollection { { "class", "link-styles d-block mb-4" } }, isEditable: true))
                                                                         {
-                                                                            @Html.Glass().Editable(firstNavigationColumn, z => z.ColumnLinkLabel) <i class="icon-arrow-right"></i>
+                                                                            if (firstNavigationColumn.ColumnLink != null 
+                                                                                && !string.IsNullOrEmpty(firstNavigationColumn.ColumnLink.Text))
+                                                                            {
+                                                                                @firstNavigationColumn.ColumnLink.Text
+                                                                            }
+                                                                            <i class="icon-arrow-right"></i>
                                                                         }
                                                                     }
                                                                     if (firstNavigationColumn.PageLinks != null && firstNavigationColumn.PageLinks.Any())
@@ -94,7 +103,12 @@
                                                                     {
                                                                         using (Html.Glass().BeginRenderLink(secondNavigationColumn, z => z.ColumnLink, new NameValueCollection { { "class", "link-styles d-block mb-4" } }, isEditable: true))
                                                                         {
-                                                                            @Html.Glass().Editable(secondNavigationColumn, z => z.ColumnLinkLabel) <i class="icon-arrow-right"></i>
+                                                                            if (secondNavigationColumn.ColumnLink != null
+                                                                                && !string.IsNullOrEmpty(secondNavigationColumn.ColumnLink.Text))
+                                                                            {
+                                                                                @secondNavigationColumn.ColumnLink.Text
+                                                                            }
+                                                                            <i class="icon-arrow-right"></i>
                                                                         }
                                                                     }
                                                                     @if (secondNavigationColumn.PageLinks != null && secondNavigationColumn.PageLinks.Any())
@@ -121,7 +135,12 @@
                                                                         {
                                                                             using (Html.Glass().BeginRenderLink(thirdNavigationColumn, z => z.ColumnLink, new NameValueCollection { { "class", "link-styles d-block mb-4" } }, isEditable: true))
                                                                             {
-                                                                                @Html.Glass().Editable(thirdNavigationColumn, z => z.ColumnLinkLabel) <i class="icon-arrow-right"></i>
+                                                                                if (thirdNavigationColumn.ColumnLink != null
+                                                                                && !string.IsNullOrEmpty(thirdNavigationColumn.ColumnLink.Text))
+                                                                                {
+                                                                                    @thirdNavigationColumn.ColumnLink.Text
+                                                                                }
+                                                                                <i class="icon-arrow-right"></i>
                                                                             }
                                                                         }
                                                                         @if (thirdNavigationColumn.PageLinks != null && thirdNavigationColumn.PageLinks.Any())
