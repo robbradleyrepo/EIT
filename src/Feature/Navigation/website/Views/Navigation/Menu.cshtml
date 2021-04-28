@@ -22,11 +22,13 @@
                     <ul class="navigation__list">
                         @foreach (var menuItem in Model.HomeItem.MenuItems)
                         {
-                            if (menuItem.Children != null && menuItem.Children.Any())
+                            var filteredChildrens = menuItem.Children.Where(m => !m.ExcludeInSearchResults);
+
+                            if (filteredChildrens != null && filteredChildrens.Any())
                             {
                                 <li class="navigation__item">
                                     <label class="navigation__link" for="Our Funds">
-                                        @Html.Glass().Editable(menuItem, z => z.MenuTitle)
+                                        @Html.Glass().Editable(menuItem, z => z.PageTitle)
                                     </label>
                                 </li>
                             }
@@ -34,7 +36,7 @@
                             {
                                 <li class="navigation__item">
                                     <a href="@menuItem.Url" class="navigation__link">
-                                        @Html.Glass().Editable(menuItem, z => z.MenuTitle)
+                                        @Html.Glass().Editable(menuItem, z => z.PageTitle)
                                     </a>
                                 </li>
                             }
@@ -48,7 +50,7 @@
                 <div class="sidebar__profile-btn">
                     <a href="@Model.HomeItem.MyLionTrust.Url" class="btn btn-primary btn-block">
                         <i class="icon-user"></i>
-                        @Html.Glass().Editable(Model.HomeItem.MyLionTrust, z => z.MenuTitle)
+                        @Html.Glass().Editable(Model.HomeItem.MyLionTrust, z => z.PageTitle)
                     </a>
                 </div>
             }
@@ -59,7 +61,7 @@
                         <li class="sidebar-actions__item">
                             <a href="@Model.HomeItem.MyPreferences.Url" class="sidebar-actions__link">
                                 <i class="icon-settings"></i>
-                                @Html.Glass().Editable(Model.HomeItem.MyPreferences, z => z.MenuTitle)
+                                @Html.Glass().Editable(Model.HomeItem.MyPreferences, z => z.PageTitle)
                             </a>
                         </li>
                     }
@@ -68,7 +70,7 @@
                         <li class="sidebar-actions__item">
                             <a href="@Model.HomeItem.SignupNewsLetter.Url" class="sidebar-actions__link">
                                 <i class="icon-email"></i>
-                                @Html.Glass().Editable(Model.HomeItem.SignupNewsLetter, z => z.MenuTitle)
+                                @Html.Glass().Editable(Model.HomeItem.SignupNewsLetter, z => z.PageTitle)
                             </a>
                         </li>
                     }
@@ -77,7 +79,7 @@
                         <li class="sidebar-actions__item">
                             <a href="@Model.HomeItem.ContactUsPage.Url" class="sidebar-actions__link">
                                 <i class="icon-chat"></i>
-                                @Html.Glass().Editable(Model.HomeItem.ContactUsPage, z => z.MenuTitle)
+                                @Html.Glass().Editable(Model.HomeItem.ContactUsPage, z => z.PageTitle)
                             </a>
                         </li>
                     }
@@ -98,11 +100,12 @@
                     <ul class="navigation__list">
                         @foreach (var menuItem in Model.HomeItem.MenuItems)
                         {
-                            if (menuItem.Children != null && menuItem.Children.Any())
+                            var filteredChildrens = menuItem.Children.Where(m => !m.ExcludeInSearchResults);
+                            if (filteredChildrens != null && filteredChildrens.Any())
                             {
                                 <li class="navigation__item">
                                     <label class="navigation__link" for="@menuItem.Name">
-                                        @Html.Glass().Editable(menuItem, z => z.MenuTitle)
+                                        @Html.Glass().Editable(menuItem, z => z.PageTitle)
                                     </label>
                                 </li>
                             }
@@ -110,7 +113,7 @@
                             {
                                 <li class="navigation__item">
                                     <a href="@menuItem.Url" class="navigation__link">
-                                        @Html.Glass().Editable(menuItem, z => z.MenuTitle)
+                                        @Html.Glass().Editable(menuItem, z => z.PageTitle)
                                     </a>
                                 </li>
                             }
@@ -130,7 +133,7 @@
                 {
                     if (dropDown.PageItem != null)
                     {
-                        var dropDownLabel = !string.IsNullOrEmpty(dropDown.PageItem.MenuTitle) ? dropDown.PageItem.MenuTitle : dropDown.PageItem.Name;
+                        var dropDownLabel = !string.IsNullOrEmpty(dropDown.PageItem.PageTitle) ? dropDown.PageItem.PageTitle : dropDown.PageItem.Name;
                         var navigationColumnCount = 0;
                         <div class="navigation__item">
                             <input type="checkbox" id="@dropDownLabel" class="navigation__checkbox">
@@ -142,13 +145,16 @@
                                 <ul class="navigation__sub-list">
                                     <li class="navigation__sub-item">
                                         <a class="mb-3 navigation__sub-link navigation__sub-link_heading" href="@dropDown.PageItem.Url">
-                                            @Html.Glass().Editable(dropDown.PageItem, z => z.MenuTitle)
+                                            @Html.Glass().Editable(dropDown.PageItem, z => z.PageTitle)
                                         </a>
                                         @if (dropDown.ShowCTA)
                                         {
                                             using (Html.Glass().BeginRenderLink(dropDown, x => x.CTALink, new NameValueCollection { { "class", "btn btn-primary btn-block mb-4" } }, isEditable: true))
                                             {
-                                                @Html.Glass().Editable(dropDown, x => x.CTALabel)
+                                                if (dropDown.CTALink != null && !string.IsNullOrEmpty(dropDown.CTALink.Text))
+                                                {
+                                                    @dropDown.CTALink.Text
+                                                }
                                             }
                                         }
                                     </li>
@@ -180,10 +186,15 @@
 
                                                 <h4 class="dropdown-nav__title">@Html.Glass().Editable(navigationColumn, z => z.ColumnTitle)</h4>
                                                 if (navigationColumn.ShowColumnLink)
-                                                {                                                    
+                                                {
                                                     using (Html.Glass().BeginRenderLink(navigationColumn, z => z.ColumnLink, new NameValueCollection { { "class", "link-styles d-block mb-4" } }, isEditable: true))
                                                     {
-                                                        @Html.Glass().Editable(navigationColumn, z => z.ColumnLinkLabel) <i class="icon-arrow-right"></i>
+                                                        if (navigationColumn.ColumnLink != null
+                                                            && !string.IsNullOrEmpty(navigationColumn.ColumnLink.Text))
+                                                        {
+                                                            @navigationColumn.ColumnLink.Text
+                                                        }
+                                                        <i class="icon-arrow-right"></i>
                                                     }
 
                                                     if (navigationColumn.PageLinks != null && navigationColumn.PageLinks.Any())
@@ -192,7 +203,7 @@
                                                             @foreach (var pageLink in navigationColumn.PageLinks)
                                                             {
                                                                 <li class="dropdown-nav__item">
-                                                                    <a href="@pageLink.Url" class="dropdown-nav__link">@Html.Glass().Editable(pageLink, z => z.MenuTitle)</a>
+                                                                    <a href="@pageLink.Url" class="dropdown-nav__link">@Html.Glass().Editable(pageLink, z => z.PageTitle)</a>
                                                                 </li>
                                                             }
                                                         </ul>
@@ -453,7 +464,7 @@
                                     }
                                 }
                             </div>
-                        </div>
+                            </div>
                     }
                 }
             </div>
@@ -465,6 +476,7 @@
         <div class="navigation__sublinks-items">
             @foreach (var menuItem in Model.HomeItem.MenuItems)
             {
+                var filteredChildrens = menuItem.Children.Where(m => !m.ExcludeInSearchResults);
                 <div class="navigation__item">
                     <input type="checkbox" id="@menuItem.Name-@menuItem.Id.ToString()" class="navigation__checkbox">
                     <div class="navigation__submenu">
@@ -475,16 +487,16 @@
                         <ul class="navigation__sub-list">
                             <li class="navigation__sub-item">
                                 <a class="navigation__sub-link navigation__sub-link_heading" href="@menuItem.Url">
-                                    @Html.Glass().Editable(menuItem, z => z.MenuTitle)
+                                    @Html.Glass().Editable(menuItem, z => z.PageTitle)
                                     <i class="icon-chevron-right"></i>
                                 </a>
                             </li>
-                            @if (menuItem.Children != null && menuItem.Children.Any())
+                            @if (filteredChildrens != null && filteredChildrens.Any())
                             {
-                                foreach (var child in menuItem.Children)
+                                foreach (var child in filteredChildrens)
                                 {
                                     <li class="navigation__sub-item">
-                                        <a class="navigation__sub-link" href="@child.Url">@Html.Glass().Editable(child, z => z.MenuTitle)</a>
+                                        <a class="navigation__sub-link" href="@child.Url">@Html.Glass().Editable(child, z => z.PageTitle)</a>
                                     </li>
                                 }
                             }

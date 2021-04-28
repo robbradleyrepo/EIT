@@ -26,14 +26,12 @@
                             {
                                 using (Html.Glass().BeginRenderLink(Model.FooterConfiguration, m => m.GoogleMapsLink, new NameValueCollection { { "class", "footer__map-link" } }, isEditable: true))
                                 {
-                                    @Html.Glass().Editable(Model.FooterConfiguration, x => x.GoogleMapsCTALabel) <i class="icon-tab"></i>
+                                    if (!string.IsNullOrEmpty(Model.FooterConfiguration.GoogleMapsLink.Text))
+                                    {
+                                        @Model.FooterConfiguration.GoogleMapsLink.Text
+                                    }
+                                    <i class="icon-tab"></i>
                                 }
-                            }
-                            else
-                            {
-                                <a href="#" class="footer__map-link">
-                                    @Html.Glass().Editable(Model.FooterConfiguration, x => x.GoogleMapsCTALabel) <i class="icon-tab"></i>
-                                </a>
                             }
                         </div>
                         <div class="col-6 col-lg-3 footer__bottom-item">
@@ -118,18 +116,16 @@
                             {
                                 using (Html.Glass().BeginRenderLink(
                                     Model.FooterConfiguration,
-                                    m => m.SubscribeCTALink, 
-                                    new NameValueCollection { { "class", "footer__link footer__link_arrow footer__link_sign" } }, 
+                                    m => m.SubscribeCTALink,
+                                    new NameValueCollection { { "class", "footer__link footer__link_arrow footer__link_sign" } },
                                     isEditable: true))
                                 {
-                                    @Html.Glass().Editable(Model.FooterConfiguration, x => x.SubscribeCTALabel) <i class="icon-arrow-right"></i>
+                                    if (!string.IsNullOrEmpty(Model.FooterConfiguration.SubscribeCTALink.Text))
+                                    {
+                                        @Model.FooterConfiguration.SubscribeCTALink.Text
+                                    }
+                                    <i class="icon-arrow-right"></i>
                                 }
-                            }
-                            else
-                            {
-                                <a href="#" class="footer__link footer__link_arrow footer__link_sign">
-                                    @Html.Glass().Editable(Model.FooterConfiguration, x => x.SubscribeCTALabel) <i class="icon-arrow-right"></i>
-                                </a>
                             }
                         </div>
                     </div>

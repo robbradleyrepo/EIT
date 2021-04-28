@@ -3,12 +3,10 @@
     using System.Collections.Generic;
 
     using Glass.Mapper.Sc.Configuration.Attributes;
-    
-    public interface INavigablePage : INavigationGlassBase
-    {
-        [SitecoreField(Constants.Navigation.MenuTitle_FieldName)]
-        string MenuTitle { get; set; }
+    using LionTrust.Foundation.Legacy.Models;
 
+    public interface INavigablePage : IPresentationBase, INavigationGlassBase
+    {
         [SitecoreChildren]
         IEnumerable<INavigablePage> Children { get; set; }
     }

@@ -1,36 +1,36 @@
 ﻿namespace LionTrust.Feature.Navigation.Models
 {
     using System.Collections.Generic;
-
+    using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
 
     public interface IHome : INavigationGlassBase
     {
-        [SitecoreField(Constants.NavigationRoot.HeaderConfiguration_FieldName)]
+        [SitecoreField(Constants.NavigationRoot.HeaderConfiguration_FieldID, SitecoreFieldType.DropTree, "Header")]
         IHeaderConfiguration HeaderConfiguration { get; set; }
 
-        [SitecoreField(Constants.NavigationRoot.ContactUsPage_FieldName)]
+        [SitecoreField(Constants.NavigationRoot.ContactUsPage_FieldID, SitecoreFieldType.DropTree, "Header")]
         INavigablePage ContactUsPage { get; set; }
 
-        [SitecoreField(Constants.NavigationRoot.FooterConfiguration_FieldName)]
+        [SitecoreField(Constants.NavigationRoot.FooterConfiguration_FieldId, SitecoreFieldType.DropTree, "Footer")]
         IFooterConfiguration FooterConfiguration { get; set; }
 
-        [SitecoreField(Constants.Menu.MyLionTrust_FieldName)]
+        [SitecoreField(Constants.NavigationRoot.MyLionTrust_FieldID, SitecoreFieldType.DropTree, "Menu")]
         INavigablePage MyLionTrust { get; set; }
 
-        [SitecoreField(Constants.Menu.MyPreferences_FieldName)]
+        [SitecoreField(Constants.NavigationRoot.MyPreferences_FieldID, SitecoreFieldType.DropTree, "Menu")]
         INavigablePage MyPreferences { get; set; }
 
-        [SitecoreField(Constants.Menu.SignUpNewsletter_FieldName)]
+        [SitecoreField(Constants.NavigationRoot.SignUpNewsletter_FieldID, SitecoreFieldType.DropTree, "Menu")]
         INavigablePage SignupNewsLetter { get; set; }
 
-        [SitecoreField(Constants.Menu.YouAreViewingLabel_FieldName)]
+        [SitecoreField(Constants.NavigationRoot.YouAreViewingLabel_FieldID, SitecoreFieldType.SingleLineText, "Menu")]
         string YouAreViewingLabel { get; set; }
 
-        [SitecoreField(Constants.Menu.ChangeLabel_FieldName)]
+        [SitecoreField(Constants.NavigationRoot.ChangeLabel_FieldID, SitecoreFieldType.SingleLineText, "Menu")]
         string ChangeLabel { get; set; }
         
-        [SitecoreField(Constants.Menu.MenuItems_FieldName)]
+        [SitecoreField(Constants.NavigationRoot.MenuItems_FieldID, SitecoreFieldType.Treelist, "Menu")]
         IEnumerable<INavigablePage> MenuItems { get; set; }
     }
 }
