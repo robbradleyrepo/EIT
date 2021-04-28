@@ -14,7 +14,7 @@
         IEnumerable<IHeaderNavigationColumn> NavigationColumns { get; set; }
 
         [SitecoreField(Constants.HeaderDropDown.Images_FieldID, SitecoreFieldType.Treelist, "Header Configuration")]
-        IEnumerable<IQuickLinkCTA> Images { get; set; }
+        IEnumerable<IHeaderImage> Images { get; set; }
 
         [SitecoreField(Constants.HeaderDropDown.ShowCTA_FieldID, SitecoreFieldType.Checkbox, "Header Configuration")]
         bool ShowCTA { get; set; }
