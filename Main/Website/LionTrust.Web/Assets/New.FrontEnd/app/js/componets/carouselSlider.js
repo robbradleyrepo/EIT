@@ -8,15 +8,15 @@ SwiperCore.use([Navigation, Pagination]);
 
 export default () => {
   const swiper = new Swiper(".swiper-container-carousel", {
-    effect: "coverflow",
+    // effect: "coverflow",
     // grabCursor: true,
-    slidesPerView: "auto",
+    slidesPerView: 3,
     watchSlidesVisibility: true,
     centeredSlides: true,
     breakpointsInverse: true,
     longSwipes: false,
     slideToClickedSlide: true,
-    setWrapperSize: true,
+    setWrapperSize: false,
     spaceBetween: 5,
     coverflowEffect: {
       rotate: 0,
