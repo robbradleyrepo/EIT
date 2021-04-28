@@ -1,0 +1,13 @@
+﻿@model LionTrust.Feature.Text.Models.ITextComponent
+@if (Model != null)
+{
+    <div class="@Model.TextColor.Value">
+        <div class="@(Model.SmallSize ? "article-with-small" : "article-with-big")">
+            @Html.Raw(Model.Text)
+        </div>
+    </div>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @: Add datasource for Text component
+}
