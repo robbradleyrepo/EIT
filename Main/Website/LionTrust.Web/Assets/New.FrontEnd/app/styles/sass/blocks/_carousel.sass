@@ -1,12 +1,14 @@
 .carousel-box
     overflow-x: clip
+    position: relative
     .swiper-container-carousel
         width: 100%
         padding-bottom: 40px
-        margin: 60px 0
+        margin-top: 10px
     @include breakpoint(tablet, up)
         padding-bottom: 0
-
+    @include breakpoint(desktop, up)
+        margin: 70px 0 60px
     .swiper-container-carousel .swiper-slide
         position: relative
         transition: transform .4s ease
@@ -70,14 +72,15 @@
             background-size: contain
             background-repeat: no-repeat
     .swiper-slide-active
-        transform: scale(1.9)
-        z-index: 5
+        @include breakpoint(desktop, up)
+            transform: scale(1.9)
+            z-index: 5
         .slide
             padding-top: 50%
             &__content
                 visibility: visible
             &__play
-                visibility: visible
+                display: flex
             &:after
                 opacity: 0.2
             &:hover
@@ -88,10 +91,12 @@
     background-size: cover
     padding: 16px 10px 20px
     border-radius: 10px
+    height: 100%
     position: relative
-    height: 0
-    padding-top: 56%
-    position: relative
+    padding-top: 50%
+    @include breakpoint(desktop, up)
+        height: 0
+        padding-top: 56%
     &:hover
         &::after
             opacity: .4
@@ -107,8 +112,10 @@
         z-index: 1
         background: $black
         border-radius: 10px
+        opacity: 0.3
         transition: .3s opacity ease
-        opacity: 0.7
+        @include breakpoint(desktop, up)
+            opacity: 0.7
     &__content
         z-index: 2
         display: flex
@@ -140,18 +147,18 @@
         color: $white
         font-size: 26px
         line-height: 32px
+        margin-top: 20px
         @include breakpoint(desktop, up)
-            // font-size: 42px
-            // line-height: 48px
+            font-size: 20px
             width: 80%
+            margin-top: 0
         @include breakpoint(desktop-large, up)
-            // font-size: 52px
-            // line-height: 58px
+            font-size: 26px
             margin-top: 16px
             width: 60%
     &__play
         cursor: pointer
-        font-size: .5em
+        font-size: 0.6em
         text-transform: uppercase
         display: flex
         align-items: center
@@ -168,13 +175,9 @@
         border: none
         outline: none
         color: $white
-        visibility: hidden
+        display: none
         @include breakpoint(desktop, up)
-            // bottom: 20px
-            // left: 23px
-        @include breakpoint(desktop-large, up)
-            // bottom: 40px
-            // left: 43px
+            font-size: 0.6em
         svg
             transform: scale(0.6)
             path
