@@ -65,7 +65,8 @@
         font-weight: 600
         letter-spacing: 2.4px
         text-transform: uppercase
-
+        display: flex
+        align-items: center
     &__title
         font-size: 26px
         font-weight: 300
@@ -150,3 +151,11 @@
             min-width: 245px
         @include breakpoint(tablet, up)
             display: inline-block
+
+.dot-divider
+    width: 4px
+    height: 4px
+    border-radius: 50%
+    display: inline-block
+    background: $primary
+    margin: 0 5px
