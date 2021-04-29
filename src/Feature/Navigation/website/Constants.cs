@@ -4,6 +4,12 @@
 
     public static class Constants
     {
+        public static class CopyWithCta
+        {
+            public const string CopyFieldId = "{D7CD16BD-DBB5-44D9-AB26-8BBB1C9B7C2A}";
+            public const string CtaFieldId = "{9FFE2DD1-92AE-4208-98BD-C1D9C73DA582}";
+        }
+
         public static class Cta
         {
             public const string PrimaryCtaFieldId = "{43CE5EC7-2F35-438D-B0C0-7913DD98F40F}";
