@@ -1,0 +1,42 @@
+@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Article.Models.ArticleViewModel
+<header class="header header-hero d-flex flex-column justify-content-between" style="background-image: url('@Model.BackgroundImageUrl');">
+    @Html.Sitecore().Placeholder("navigation")
+    <div class="d-flex flex-column">
+        <div class="row">
+            <div class="col-xl-6 offset-xl-3">
+                <div class="article-hero">
+                    <div class="hero-author hero-author_big">
+                        @using (Html.Glass().BeginEditFrame(Model.ArticleData, "Edit author", m => m.Author))
+                        {
+                            <img src="@Model.AuthorImageUrl"
+                                 alt="@Model.AuthorName" class="hero-author__img">
+                        }
+                        <div class="hero-author__content">
+                            <span class="hero-author__name">
+                                @Model.AuthorName <i class="icon-follow"></i>
+                            </span>
+                            <span class="hero-author__date">
+                                @Html.Glass().Editable(m => m.ArticleData.Date, d => d.ArticleData.Date.ToString("dd-MM-yy"))
+                            </span>
+                        </div>
+                    </div>
+                    <div class="article-hero__content text-center">
+                        <h1 class="article-hero__title">
+                            @Html.Glass().Editable(m => m.ArticleData.Title)
+                        </h1>
+                        @using (Html.Glass().BeginEditFrame(Model.ArticleData, "Edit topics", m => m.Topics))
+                        {
+                            <div class="topic-follow d-none d-lg-flex">
+                                @foreach (var item in Model.ArticleData.Topics)
+                                {
+                                    <a href="@item.Url" class="follow-btn mr-3"><i class="icon-follow"></i>@item.Title</a>
+                                }
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
