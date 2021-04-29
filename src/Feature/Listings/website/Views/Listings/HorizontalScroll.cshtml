@@ -1,0 +1,32 @@
+﻿@model LionTrust.Feature.Listings.Models.IHorizontalScroll
+@{
+    var counter = Model.NumberOfItems;
+    if (Model.NumberOfItems == 0)
+    {
+        counter = int.MaxValue;
+    }
+    using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/HorizontalScroll", Model.Id.ToString(), "Edit Horizontal Scroll"))
+    {
+        <section class="container-left-gutter investment-card-container">
+            <div class="row">
+                <h3>
+                    @Html.Glass().Editable(Model, m => m.Title)
+                </h3>
+            </div>
+            <div id="investment-slider" class="swiper-container">
+                <div class="swiper-wrapper">
+                    @foreach (var scrollerCard in Model.ScrollerCards)
+                    {
+                        @Html.Partial("~/Views/Listings/_ScrollerCard.cshtml", scrollerCard)
+
+                        counter--;
+                        if (counter == 0)
+                        {
+                            break;
+                        }
+                    }
+                </div>
+            </div>
+        </section>
+    }
+}
