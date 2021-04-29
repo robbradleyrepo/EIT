@@ -81,6 +81,8 @@
     <Content Include="Views\Navigation\Menu.cshtml" />
     <Content Include="Views\Navigation\Cta.cshtml" />
     <Content Include="Views\Navigation\secondarynavigation.cshtml" />
+    <Content Include="Views\Navigation\QuickLinkCTA.cshtml" />
+    <Content Include="Views\Navigation\QuickLinks.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -102,6 +104,7 @@
     <Compile Include="Models\INavigablePage.cs" />
     <Compile Include="Models\INavigationGlassBase.cs" />
     <Compile Include="Models\IPageLink.cs" />
+    <Compile Include="Models\IQuickLinks.cs" />
     <Compile Include="Models\ISecondaryNav.cs" />
     <Compile Include="Models\ISiteRoot.cs" />
     <Compile Include="Models\ISocialIcon.cs" />

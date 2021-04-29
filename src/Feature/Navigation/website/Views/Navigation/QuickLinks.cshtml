@@ -1,0 +1,23 @@
+﻿@model LionTrust.Feature.Navigation.Models.IQuickLinks
+@if (Model != null)
+{
+    using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Navigation/QuickLinks", Model.Id.ToString(), "Add Quick Link"))
+    {
+        <section class="quick-link-chart-wrapper container-left-gutter">
+            <div class="container-lg">
+                <div class="row">
+                    @foreach (var quickLinkCTA in Model.QuickLinksList)
+                    {
+                        <div class="col-8 col-sm-5 col-lg-3">
+                            @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", quickLinkCTA)
+                        </div>
+                    }
+                </div>
+            </div>
+        </section>
+    }
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @: Add datasource for Quick Links component
+}
