@@ -1,0 +1,33 @@
+﻿---
+ID: "6a1cd366-2f99-4315-a0b6-2d7cdd455eed"
+Parent: "c46981e0-0f52-4913-9c60-d39cc551e3a2"
+Template: "c46981e0-0f52-4913-9c60-d39cc551e3a2"
+Path: /sitecore/templates/Project/LionTrust/Page Types/Article/__Standard Values
+DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{CD1590E1-6573-4CC7-B0A9-E3BB6A9DADE4}">
+        <r
+          id="{F3C472CC-4F9E-40D3-AC04-81AD4CC6D07D}"
+          ph="main"
+          uid="{4552A251-A51B-4362-80B5-08ED2A2FBC99}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210428T102844Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
