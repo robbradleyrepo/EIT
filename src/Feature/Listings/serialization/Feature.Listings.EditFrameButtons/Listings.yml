@@ -1,14 +1,9 @@
 ﻿---
-ID: "752bed30-e962-4f06-b871-0a60064f4c3f"
-Parent: "6b7913a3-8a11-4db8-859f-f9542be7e6c3"
+ID: "611ca9b2-3301-4897-80eb-983abd536d54"
+Parent: "1c843291-51dd-41ff-987b-6b46cccae5ff"
 Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
 Path: /sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings
 DB: core
-SharedFields:
-- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
-  Hint: __Masters
-  Type: tree list
-  Value: "{B0666CFE-8C7B-4CC1-8E32-8253742EBFA9}"
 Languages:
 - Language: en
   Versions:
@@ -16,8 +11,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210420T195558Z
-    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
-      Hint: __Created by
-      Value: |
-        sitecore\admin
+      Value: 20210429T113826Z
