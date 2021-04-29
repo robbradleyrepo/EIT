@@ -71,6 +71,7 @@ function scriptsMain() {
       // 'node_modules/bootstrap/dist/js/bootstrap.min.js', // import bootstrap modal
       "node_modules/bootstrap/js/dist/modal.js", // import bootstrap modal
       "node_modules/bootstrap/js/dist/collapse.js", // import bootstrap modal
+      "node_modules/bootstrap/js/dist/scrollspy.js", // import utils for scrollspy
     ],
     { sourcemaps: true }
   )
