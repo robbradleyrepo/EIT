@@ -20,5 +20,21 @@
                 return ArticleData.Author.FullName;
             }
         }
+
+        public string BackgroundImageUrl
+        {
+            get
+            {
+                return ComponentData?.BackgroundImage?.Src;
+            }
+        }
+
+        public string AuthorImageUrl
+        {
+            get
+            {
+                return this.ArticleData?.Author?.Image.Src;
+            }
+        }
     }
 }
