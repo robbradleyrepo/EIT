@@ -194,5 +194,11 @@
             public const string MenuItems_FieldName = "NavigationRoot_MenuItems";
             public const string MenuItems_FieldID = "{5D68CC82-EA43-4789-B892-0E49244F68D5}";
         }
+
+        public static class QuickLinks
+        {
+            public const string QuickLinksList_FieldName = "QuickLinks_QuickLinksList";
+            public const string QuickLinksList_FieldId = "{0D827B79-FD2F-46C0-8C0B-6EC87D4BC086}";
+        }
     }
 }

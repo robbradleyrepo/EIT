@@ -1,22 +1,22 @@
 ﻿---
-ID: "73ba8165-b3ff-429e-9268-b91fafced6b9"
+ID: "f6b5c22c-0b85-45bb-bb44-d743ff235639"
 Parent: "e9bb794a-b514-4ff5-8386-008fda7f7f66"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Project/LionTrust/Content Types/QuickLinkCTA
+Path: /sitecore/templates/Project/LionTrust/Content Types/QuickLinks
 DB: master
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
-  Value: Office/32x32/hand_touch.png
+  Value: Office/32x32/elements4.png
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
   Type: tree list
   Value: |
     {1930BBEB-7805-471A-A3BE-4858AC7CF696}
-    {64C4A67F-9A06-4258-8AB0-A17082394729}
+    {B5D44890-D63C-49FE-A09E-17688E836B20}
 - ID: "f7d48a55-2158-4f02-9356-756654404f73"
   Hint: __Standard values
-  Value: "{4EC957CE-457D-49EA-95C9-D268DE097D63}"
+  Value: "{94210A52-AEF4-42CF-83B3-E2EA2A451C8C}"
 Languages:
 - Language: en
   Versions:
@@ -24,4 +24,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210428T122611Z
+      Value: 20210428T233738Z
