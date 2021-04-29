@@ -6,7 +6,7 @@
 
     public interface IQuickLinks : INavigationGlassBase
     {
-        [SitecoreField(Constants.QuickLinks.QuickLinksList_FieldName, SitecoreFieldType.Treelist, "Content")]
+        [SitecoreField(Constants.QuickLinks.QuickLinksList_FieldId, SitecoreFieldType.Treelist, "Content")]
         IEnumerable<IQuickLinkCTA> QuickLinksList { get; set; }
     }
 }
