@@ -1,10 +1,20 @@
 <div class="container">
-  <div class="podcast">
-    <img
+  <div class="podcast">    
+    <picture>
+      <source
+        media="(max-width: 425px)"
+        srcset="images/components/banners/Covid-19-fusion-medical-animation.png"
+      />
+      <source
+        media="(min-width: 426px)"
+        srcset="images/components/banners/podcast.png"
+      />
+      <img
       class="podcast__back"
-      src="../images/components/banners/podcast.png"
-      alt=""
-    />
+        src="images/components/banners/podcast.png"
+        alt="podcast"
+      />
+    </picture>
     <div class="podcast__front">
       <div class="podcast__head">
         <i class="icon-mic podcast__mic"></i>

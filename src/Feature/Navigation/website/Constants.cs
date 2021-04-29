@@ -42,19 +42,25 @@
             public const string CTALink_FieldName = "HeaderDropDown_CTALink";
         }
 
-        public static class HeaderImage
+        public static class QuickLinkCTA
         {
             public const string Image_FieldID = "{C0A0281F-CFE6-45E1-A095-B02D109A8952}";
-            public const string Image_FieldName = "HeaderDropDownImage_Image";
+            public const string Image_FieldName = "QuickLinkCTA_Image";
 
             public const string Title_FieldID = "{D6596C9A-E05A-49DD-98E6-7BA505D79842}";
-            public const string Title_FieldName = "HeaderDropDownImage_Title";
+            public const string Title_FieldName = "QuickLinkCTA_Title";
 
             public const string Description_FieldID = "{7FF41320-58C1-4A05-B2C5-DD1E4F9C2191}";
-            public const string Description_FieldName = "HeaderDropDownImage_Description";
+            public const string Description_FieldName = "QuickLinkCTA_Description";
 
             public const string Link_FieldID = "{2DAF00E2-B3E8-4BB2-836A-C47F505EE481}";
-            public const string Link_FieldName = "HeaderDropDownImage_Link";
+            public const string Link_FieldName = "QuickLinkCTA_Link";
+
+            public const string LinkGoal_FieldID = "{1B29316A-053F-406D-A6CB-BFC62CBB3A3B}";
+            public const string LinkGoal_FieldName = "QuickLinkCTA_LinkGoal";
+
+            public const string SmallSize_FieldID = "{AEF64917-7C2C-4435-B7BF-0FDD2AA40974}";
+            public const string SmallSize_FieldName = "QuickLinkCTA_SmallSize";
         }
 
         public static class HeaderNavigationColumn
