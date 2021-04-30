@@ -1,15 +1,17 @@
 export default () => {
   document.addEventListener("scroll", stickyNav);
 
-  const navbar = document.querySelector("#sticky-navbar");
-  const sticky = navbar.offsetTop;
-  const offset = navbar.offsetHeight;
+  const navbar = $("#sticky-navbar");
+  const sticky = navbar.offset()?.top
+  const offset = navbar.outerHeight();
+
+  console.log('navbar',navbar);
 
   function stickyNav() {
     if (window.pageYOffset >= sticky) {
-      navbar.classList.add("sticky");
+      $("#sticky-navbar").addClass("sticky");
     } else {
-      navbar.classList.remove("sticky");
+      $("#sticky-navbar").removeClass("sticky");
     }
   }
 
@@ -70,12 +72,4 @@ export default () => {
     openBtn.removeClass("active");
   });
 
-  // $(window).resize(function () {
-  //   const win = $(this);
-  //   console.log("win", win);
-  //   if (win.width() >= 992) {
-  //     console.log("ture");
-  //     $(".page-anchor__links").stop().slideUp().css("display", "inline-block");
-  //   }
-  // });
 };
