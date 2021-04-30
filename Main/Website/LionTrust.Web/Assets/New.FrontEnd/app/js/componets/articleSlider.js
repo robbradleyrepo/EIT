@@ -21,7 +21,7 @@ export default () => {
         slidesPerView: 3.125,
       },
       1800: {
-        slidesPerView: 3.53,
+        slidesPerView: 4,
       },
       2560: {
         slidesPerView: 4.5,
