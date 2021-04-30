@@ -6,7 +6,7 @@ services:
     container_name: liontrustsql
     image: ${REGISTRY}sitecore-xp-sqldev:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
     volumes:
-      - .\data\sql:C:\Data
+      - .\data\sql\legacy:C:\Data
     ports:
       - "44010:1433"
 
@@ -74,7 +74,7 @@ services:
     entrypoint: powershell.exe -NoLogo -NoProfile -File C:\\tools\\entrypoints\\iis\\Development.ps1
     volumes:
       - .\site:C:\src
-      #- ..\..\Main\Website\LionTrust.Web\Assets\New.FrontEnd\dist:C:\inetpub\wwwroot\dist
+      - ..\..\Main\Website\LionTrust.Web\Assets\New.FrontEnd\dist:C:\inetpub\wwwroot\dist
       - ${LICENSE_PATH}:C:\license
       - .\data\cd:C:\inetpub\wwwroot\App_Data\logs
     ports:
@@ -90,7 +90,7 @@ services:
     entrypoint: powershell.exe -NoLogo -NoProfile -File C:\\tools\\entrypoints\\iis\\Development.ps1
     volumes:
       - ..\..\src:C:\projects\LionTrust\src\  
-      #- ..\..\Main\Website\LionTrust.Web\Assets\New.FrontEnd\dist:C:\inetpub\wwwroot\dist
+      - ..\..\Main\Website\LionTrust.Web\Assets\New.FrontEnd\dist:C:\inetpub\wwwroot\dist
       - .\site:C:\src
       - ${LICENSE_PATH}:C:\license
       - .\data\cm:C:\inetpub\wwwroot\App_Data\logs

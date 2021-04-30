@@ -26,5 +26,8 @@
 
         [SitecoreField(Constants.Author.ShortBio_FieldId, SitecoreFieldType.RichText, "Additional details")]
         string ShortBio { get; set; }
+
+        [SitecoreField(Constants.Author.TitleFieldId, SitecoreFieldType.RichText, "Additional details")]
+        string Title { get; set; }
     }
 }
