@@ -12,13 +12,19 @@
         margin-bottom: 100px
 .investment-card
     color: $black
-    height: 382px
+    min-height: 274px
     padding: 20px
     background: #F8FAFA
     border-radius: $border-radius
     overflow: hidden
     position: relative
+    background-size: cover
+    display: block
+    &:hover
+        color: $black
     @include breakpoint(desktop-large, up)
+        min-height: 382px
+    @include breakpoint(desktop-large, up)    
         padding: 40px
     &::before
         // counter-increment: section

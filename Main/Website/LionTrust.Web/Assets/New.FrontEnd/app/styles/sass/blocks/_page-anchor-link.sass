@@ -1,0 +1,82 @@
+.page-anchor-link
+    background: $secondary-silver
+    // height: 62px
+    // display: flex
+    // align-items: center
+    color: $black
+    padding: 10px 0
+    &.sticky
+        position: fixed
+        top: 0
+        width: 100%
+        z-index: 10
+    .btn
+        height: 42px
+        line-height: 42px
+        padding: 0 0.5rem
+
+.page-anchor
+    @include breakpoint(desktop, up)
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__right
+        display: none
+        @include breakpoint(desktop, up)
+            display: flex
+            align-items: center
+        &-mobile
+            display: inline-block
+            @include breakpoint(desktop, up)
+                display: none
+
+    &__left
+        display: inline-block
+        float: right
+        @include breakpoint(desktop, up)
+            float: none
+    &__title
+        @extend .btn-unset
+        font-weight: 500
+        display: inline-block
+        padding: 0
+        margin-right: 3em
+        white-space: nowrap
+        line-height: 41px
+        display: inline-block
+        position: relative
+        &:after
+            position: absolute
+            top: 2px
+            right: -18px
+            font-family: icomoon
+            content: "\e906"
+            font-size: 6px
+            @include breakpoint(desktop, up)
+                visibility: hidden
+    &__title.active
+        &:after
+            content: "\e916"
+            font-size: 8px
+            right: -16px
+            @include breakpoint(desktop, up)
+                visibility: hidden                
+    &__links
+        display: none
+        // display: flex
+        // flex-direction: column
+        @include breakpoint(desktop, up)
+            display: inline-block
+    &__link
+        color: $black
+        margin-right: 3em
+        display: block
+        line-height: 28px
+        @include breakpoint(desktop, up)
+            line-height: 41px
+        &:hover
+            color: $black
+        @include breakpoint(desktop, up)
+            display: inline-block
+    .active-link
+        font-weight: 500
