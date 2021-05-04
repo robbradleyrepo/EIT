@@ -12,15 +12,16 @@
 
     public class ArticleContentSearchRepository : IArticleContentSearchRepository
     {
-        private static readonly string _articleIndexName = $"liontrust_article_{Sitecore.Context.Database.Name.ToLowerInvariant()}_index";
-
         // Doesn't need facet counts initially
-        public ContentSearchResults GetArticleSearchResultItems(Expression<Func<ArticleSearchResultItem, bool>> predicate, int skip, int take)
+        public ContentSearchResults GetArticleSearchResultItems(Expression<Func<ArticleSearchResultItem, bool>> predicate, int skip, int take, string database = "web")
         {
-            using (IProviderSearchContext context = ContentSearchManager.GetIndex(_articleIndexName).CreateSearchContext(SearchSecurityOptions.DisableSecurityCheck))
+            using (IProviderSearchContext context = ContentSearchManager
+                                                            .GetIndex($"liontrust_article_{database}_index")
+                                                            .CreateSearchContext(SearchSecurityOptions.DisableSecurityCheck))
             {
                 var query = context.GetQueryable<ArticleSearchResultItem>()
                                  .Where(predicate);
+                
                 var results = query.GetResults();
 
                 return new ContentSearchResults { SearchResults = results.Hits.Skip(skip).Take(take), TotalResults = results.TotalSearchResults };

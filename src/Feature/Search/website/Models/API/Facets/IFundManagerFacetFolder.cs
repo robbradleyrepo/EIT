@@ -6,7 +6,7 @@
 
     public interface IFundManagerFacetFolder : ISearchGlassBase
     {
-        [SitecoreChildren(TemplateId = Constants.APIFacets.FundManagerFacetOption.TemplateId, InferType = true)]
+        [SitecoreChildren(TemplateId = Constants.APIFacets.FundManagerFacetOption.TemplateId)]
         IEnumerable<IFundManagerFacetOption> Children { get; set; }
     }
 }

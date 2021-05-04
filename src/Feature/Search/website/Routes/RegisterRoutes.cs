@@ -13,13 +13,13 @@ namespace LionTrust.Feature.Search.Routes
         /// <param name="args"></param>
         public void Process(PipelineArgs args)
         {
-            RouteTable.Routes.MapRoute("Feature.Search.Facets", "ArticleSearchApi/Facets/Get",
+            RouteTable.Routes.MapRoute("Feature.Search.Facets", "ArticleSearchApi/Facets",
                 new
                 {
                     controller = "SearchAPI",
                     action = "GetArticleListingFacets"
                 });
-            RouteTable.Routes.MapRoute("Feature.Search.FilteredArticles", "ArticleSearchApi/Search/Get",///?funds={funds}&fundManagers={fundManagers}&fundCategories={fundCategories}",
+            RouteTable.Routes.MapRoute("Feature.Search.FilteredArticles", "ArticleSearchApi/Search",
                 new
                 {
                     controller = "SearchAPI",

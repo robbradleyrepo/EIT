@@ -7,6 +7,8 @@
 
     public class ArticleSearchRequest : ITaxonomySearchRequest
     {
+        public string DatabaseName { get; set; }
+
         public DateTime FromDate { get; set; }
 
         public IEnumerable<string> Funds { get; set; }

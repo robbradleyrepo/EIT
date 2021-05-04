@@ -53,12 +53,26 @@
                 listingArticleFacetsResponse.FundCategoriesFacets = filterFacetConfigItem.FundCategoriesFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString(), Name = x.Name });
                 listingArticleFacetsResponse.FundManagersFacets = filterFacetConfigItem.FundManagersFolder?.Children?.Where(x => x.IsFundManager)?.Select(x => new FacetItem { Identifier = x.Id.ToString(), Name = x.Name });
                 listingArticleFacetsResponse.FundTeamsFacets = filterFacetConfigItem.FundTeamsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString(), Name = x.Name });
+                listingArticleFacetsResponse.FundTeamsFacets = filterFacetConfigItem.FundTeamsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString(), Name = x.Name });
+            }
+            else if (filterFacetConfigItem.FundsFolder == null
+                    && filterFacetConfigItem.FundCategoriesFolder == null
+                    && filterFacetConfigItem.FundManagersFolder == null 
+                    && filterFacetConfigItem.FundTeamsFolder == null)
+            {
+                listingArticleFacetsResponse.StatusCode = 404;
+                listingArticleFacetsResponse.Message = "Config item found but no facets set";
+            }
+            else
+            {
+                listingArticleFacetsResponse.StatusCode = 404;
+                listingArticleFacetsResponse.Message = "Could not find config item in the database";
             }
 
             return listingArticleFacetsResponse;
         }
 
-        public ITaxonomySearchResponse GetArticleListingResponse(string funds, string fundCategories, string fundManagers, string fundTeams, int? month, int? year, string searchTerm, int page)
+        public ITaxonomySearchResponse GetArticleListingResponse(string database, string funds, string fundCategories, string fundManagers, string fundTeams, int? month, int? year, string searchTerm, int page)
         {
             var fromYear = year ?? 2000;
             var fromMonth = month ?? 1;
@@ -68,6 +82,7 @@
 
             var articleSearchRequest = new ArticleSearchRequest
             {
+                DatabaseName = database,
                 FromDate = new DateTime(fromYear, fromMonth, 1),
                 Funds = funds?.Split('|'),
                 FundCategories = fundCategories?.Split('|'),
@@ -81,11 +96,19 @@
 
             var contentSearchResults = this._articleContentSearchService.GetDatedTaxonomyRelatedArticles(articleSearchRequest);
 
-            var articleSearchResponse = new ArticleSearchResponse
+            var articleSearchResponse = new ArticleSearchResponse();
+            if(contentSearchResults.TotalResults > 0)
             {
-                SearchResults = this.MapArticleResultHits(contentSearchResults.SearchResults),
-                TotalResults = contentSearchResults.TotalResults
-            };
+                articleSearchResponse.SearchResults = this.MapArticleResultHits(contentSearchResults.SearchResults);
+                articleSearchResponse.StatusMessage = "Success"; 
+                articleSearchResponse.StatusCode = 200;
+                articleSearchResponse.TotalResults = contentSearchResults.TotalResults;
+            }
+            else
+            {
+                articleSearchResponse.StatusMessage = "No search results found";
+                articleSearchResponse.StatusCode = 404;
+            }
 
             return articleSearchResponse;
         }

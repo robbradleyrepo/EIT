@@ -8,6 +8,11 @@
     public class ArticleSearchResponse : ITaxonomySearchResponse
     {
         public IEnumerable<ITaxonomyContentResult> SearchResults { get; set; }
+
+        public int StatusCode { get; set; }
+
+        public string StatusMessage { get; set; }
+
         public int TotalResults { get; set; }
     }
 }

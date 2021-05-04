@@ -38,22 +38,27 @@
             }
 
             var response = _articleListingDataManager.GetArticleFilterFacets(config);
-            var json = new JavaScriptSerializer().Serialize(response);
+            if (response.StatusCode != 200)
+            {
+                return new HttpStatusCodeResult(response.StatusCode, response.Message);
+            }
 
-            return Content(json);
+            return Json(response);
         }
-
 
         /// <summary>
         /// Gets articles based on filters in the request.
         /// </summary>
         /// <returns>A list of articles.</returns>
-        public ActionResult GetFilteredArticles(string funds, string fundCategories, string fundManagers, string fundTeams, int? month, int? year, string searchTerm, int page = 1)
+        public ActionResult GetFilteredArticles(string funds, string fundCategories, string fundManagers, string fundTeams, int? month, int? year, string searchTerm, string database = "web", int page = 1)
         {
-            var response = this._articleListingDataManager.GetArticleListingResponse(funds, fundCategories, fundManagers, fundTeams, month, year, searchTerm, page);
-            var json = new JavaScriptSerializer().Serialize(response);
+            var response = this._articleListingDataManager.GetArticleListingResponse(database, funds, fundCategories, fundManagers, fundTeams, month, year, searchTerm, page);
+            if(response.StatusCode != 200)
+            {
+                return new HttpStatusCodeResult(response.StatusCode, response.StatusMessage);
+            }
 
-            return Content(json);
+            return Json(response);
         }
     }
 }
