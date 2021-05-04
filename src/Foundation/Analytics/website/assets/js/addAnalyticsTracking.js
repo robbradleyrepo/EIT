@@ -6,8 +6,10 @@
 		$.get($goalURL);
 	}
 	var $target = $(this).attr("href");
-	// Use setTimeout to allow for the above get call to complete
-	setTimeout(function () { window.location = $target; }, 500);
+	if ($target) {
+		// Use setTimeout to allow for the above get call to complete
+		setTimeout(function () { window.location = $target; }, 500);
+	}
 });
 
 $("button[data-goal-trigger]").click(function (e) {
@@ -18,6 +20,8 @@ $("button[data-goal-trigger]").click(function (e) {
 		$.get($goalURL);
 	}
 	var $target = $(this).data("src");
-	// Use setTimeout to allow for the above get call to complete
-	setTimeout(function () { window.location = $target; }, 500);
+	if ($target) {
+		// Use setTimeout to allow for the above get call to complete
+		setTimeout(function () { window.location = $target; }, 500);
+	}
 });

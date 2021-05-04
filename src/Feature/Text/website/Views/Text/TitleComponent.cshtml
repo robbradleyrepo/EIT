@@ -1,0 +1,9 @@
+﻿@model LionTrust.Feature.Text.Models.ITitleComponent
+@{ 
+    var headingType = Model.HeadingType != null && !string.IsNullOrEmpty(Model.HeadingType.Value) ? Model.HeadingType.Value : "h1";
+    var textColor = Model.TextColor != null && !string.IsNullOrEmpty(Model.TextColor.Value) ? Model.TextColor.Value : "text-black";
+    var textAlignment = Model.TextAlignment != null && !string.IsNullOrEmpty(Model.TextAlignment.Value) ? "text-" + Model.TextAlignment.Value : "text-center";
+}
+<div class="@textColor @textAlignment">
+    <@headingType>@Html.Glass().Editable(Model, m => m.Title)</@headingType>
+</div>

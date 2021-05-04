@@ -9,15 +9,22 @@
 
     if (Model.Link != null || Sitecore.Context.PageMode.IsExperienceEditor)
     {
-        using (Html.BeginRenderLinkWithGoal(
-            Model, 
-            m => m.Link, 
-            Model.LinkGoal, 
-            new NameValueCollection { { "class", imageCss }, { "style", "background-image: url('" + imageSrc + "');" } }, 
-            isEditable: true))
+        using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Navigation/QuickLinks/QuickLinkCTA", Model.Id.ToString(), "Edit Quick Link CTA"))
         {
-            <span class="quick-link-chart__title">@Html.Glass().Editable(Model, z => z.Title)</span>
-            <span class="quick-link-chart__text">@Html.Glass().Editable(Model, z => z.Description)</span>
+            if (Sitecore.Context.PageMode.IsExperienceEditor)
+            {
+                <div class="text-gold">Edit Quick Link</div> 
+            }
+            using (Html.BeginRenderLinkWithGoal(
+                Model,
+                m => m.Link,
+                Model.LinkGoal,
+                new NameValueCollection { { "class", imageCss }, { "style", "background-image: url('" + imageSrc + "');" } },
+                isEditable: true))
+            {
+                <span class="quick-link-chart__title">@Html.Glass().Editable(Model, z => z.Title)</span>
+                <span class="quick-link-chart__text">@Html.Glass().Editable(Model, z => z.Description)</span>
+            }
         }
     }
     else
