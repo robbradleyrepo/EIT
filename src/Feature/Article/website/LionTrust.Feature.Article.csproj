@@ -73,6 +73,7 @@
     <Content Include="Views\Article\ArticleHeader.cshtml" />
     <Content Include="Views\web.config" />
     <Content Include="App_Config\Include\Feature\Feature.Article.Serialization.config" />
+    <Content Include="Views\Article\FeaturedArticles.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -81,6 +82,8 @@
     <Compile Include="Models\IArticle.cs" />
     <Compile Include="Models\ArticleViewModel.cs" />
     <Compile Include="Models\IArticleHeader.cs" />
+    <Compile Include="Models\IFeaturedArticles.cs" />
+    <Compile Include="Models\ILink.cs" />
     <Compile Include="Models\ITopic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

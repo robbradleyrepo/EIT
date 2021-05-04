@@ -1,0 +1,24 @@
+@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Article.Models.IFeaturedArticles
+<section class="featured-articles">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="featured-articles__title">
+                    @Html.Glass().Editable(m => m.Heading)
+                </h2>
+            </div>
+        </div>
+        <ul class="featured-article">
+            @foreach (var item in Model.Articles)
+            {
+                <li class="featured-article__item">
+                    <a href="#" class="featured-article__link">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua ut enim ad minim.
+                    </a>
+                </li>
+            }               
+            </ul>
+    </div>
+</section>
