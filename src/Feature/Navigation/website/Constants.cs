@@ -4,6 +4,12 @@
 
     public static class Constants
     {
+        public static class CopyWithCta
+        {
+            public const string CopyFieldId = "{D7CD16BD-DBB5-44D9-AB26-8BBB1C9B7C2A}";
+            public const string CtaFieldId = "{9FFE2DD1-92AE-4208-98BD-C1D9C73DA582}";
+        }
+
         public static class Cta
         {
             public const string PrimaryCtaFieldId = "{43CE5EC7-2F35-438D-B0C0-7913DD98F40F}";
@@ -193,6 +199,12 @@
 
             public const string MenuItems_FieldName = "NavigationRoot_MenuItems";
             public const string MenuItems_FieldID = "{5D68CC82-EA43-4789-B892-0E49244F68D5}";
+        }
+
+        public static class QuickLinks
+        {
+            public const string QuickLinksList_FieldName = "QuickLinks_QuickLinksList";
+            public const string QuickLinksList_FieldId = "{0D827B79-FD2F-46C0-8C0B-6EC87D4BC086}";
         }
     }
 }

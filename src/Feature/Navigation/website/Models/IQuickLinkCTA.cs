@@ -13,7 +13,7 @@
         [SitecoreField(Constants.QuickLinkCTA.Title_FieldID, SitecoreFieldType.SingleLineText, "Content")]
         string Title { get; set; }
 
-        [SitecoreField(Constants.QuickLinkCTA.Description_FieldID, SitecoreFieldType.SingleLineText, "Content")]
+        [SitecoreField(Constants.QuickLinkCTA.Description_FieldID, SitecoreFieldType.MultiLineText, "Content")]
         string Description { get; set; }
 
         [SitecoreField(Constants.QuickLinkCTA.Link_FieldID, SitecoreFieldType.GeneralLink, "Content")]

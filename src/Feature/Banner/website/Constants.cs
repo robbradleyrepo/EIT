@@ -60,5 +60,38 @@
 
             public const string SecondaryCtaGoalFieldId = "{F3FF2CD3-4DE7-4EBE-B740-9540D23F67E2}";
         }
+
+        public static class BannerWithIcons
+        {
+            public const string Heading_FieldName = "BannerWithIcons_Heading";
+            public const string Heading_FieldId = "{443586E2-109C-49A6-95AD-01F6C1FBFFB2}";
+
+            public const string PrimaryCTALink_FieldName = "BannerWithIcons_PrimaryCTALink";
+            public const string PrimaryCTALink_FieldId = "{505E3930-1D34-4DC7-8CA1-926B18FF1195}";
+
+            public const string PrimaryCTALinkGoal_FieldName = "BannerWithIcons_PrimaryCTALinkGoal";
+            public const string PrimaryCTALinkGoal_FieldId = "{D073DC33-55E5-4466-B5BF-23BBF2B06945}";
+
+            public const string ShowPrimaryCTA_FieldName = "BannerWithIcons_ShowPrimaryCTA";
+            public const string ShowPrimaryCTA_FieldId = "{DD6AD3D6-38D3-4339-BA20-1825085DC535}";
+
+            public const string SecondaryCTALink_FieldName = "BannerWithIcons_SecondaryCTALink";
+            public const string SecondaryCTALink_FieldId = "{673A4649-CFFB-4CB4-A056-E0CF96A40E33}";
+
+            public const string SecondaryCTALinkGoal_FieldName = "BannerWithIcons_SecondaryCTALinkGoal";
+            public const string SecondaryCTALinkGoal_FieldId = "{FDEBCA2F-D107-40A8-B1EE-898B91EAF049}";
+
+            public const string ShowSecondaryCTA_FieldName = "BannerWithIcons_ShowSecondaryCTA";
+            public const string ShowSecondaryCTA_FieldId = "{DF42BE07-8F94-4670-9D2A-5F04C66C0BB9}";
+        }
+
+        public static class IconWithText
+        {
+            public const string Text_FieldName = "IconWithText_Text";
+            public const string Text_FieldId = "{0F0B582F-4DBC-4EAA-A233-2BF2BB9A95BA}";
+
+            public const string Icon_FieldName = "IconWithText_Icon";
+            public const string Icon_FieldId = "{BE707199-2471-444B-8794-55174CC40A9B}";
+        }
     }
 }
