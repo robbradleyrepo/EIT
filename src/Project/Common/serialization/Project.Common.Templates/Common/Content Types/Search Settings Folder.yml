@@ -1,23 +1,20 @@
 ﻿---
-ID: "a6462a09-c446-45a5-9238-bdff5170602b"
-Parent: "e9bb794a-b514-4ff5-8386-008fda7f7f66"
+ID: "65a82429-f2a0-4541-b014-675e22e9992c"
+Parent: "3ab26534-592c-450e-929d-b7dc884b49a0"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Project/LionTrust/Content Types/LegacyProfessional
+Path: /sitecore/templates/Project/Common/Content Types/Search Settings Folder
 DB: master
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
-  Value: Business/32x32/businessman.png
+  Value: applications/32x32/gear_view.png
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
   Type: tree list
-  Value: |
-    {1930BBEB-7805-471A-A3BE-4858AC7CF696}
-    {EF782EED-D72F-4BCD-A429-8B769F932EFC}
-    {73EFF6F8-D95A-43B1-A069-5EF0B709CBB4}
+  Value: "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"
 - ID: "f7d48a55-2158-4f02-9356-756654404f73"
   Hint: __Standard values
-  Value: "{8D35E707-9DBF-4F14-AEE5-A5833513AD2F}"
+  Value: "{04FD2F46-BDC7-471E-BF6E-4A7B456BD33E}"
 Languages:
 - Language: en
   Versions:
@@ -25,7 +22,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20140911T092431Z
+      Value: 20210503T091328Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
