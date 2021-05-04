@@ -18,8 +18,6 @@
                                 @Html.Glass().Editable(m => m.Description)
                             </p>
                         </div>
-                        @Html.Glass().Editable(Model, m => m.PrimaryCta, m => Extensions.GenerateLink(m.PrimaryCta, m.PrimaryCtaGoalId, "<i class='icon-arrow-right imagepromo__arrow animate-arrow'></i>", "btn btn-primary imagepromo__btn"), new { @class = "btn btn-primary imagepromo__btn" })
-                        @Html.Glass().Editable(Model, m => m.SecondaryCta, m => Extensions.GenerateLink(m.SecondaryCta, m.SecondaryCtaGoalId, "<i class='icon-arrow-right imagepromo__arrow animate-arrow'></i>", "btn btn-primary-forward imagepromo__btn"), new { @class = "btn btn-primary-forward imagepromo__btn" })
                         <div class="imagepromo__btnbox">
                             @using (Html.BeginRenderLinkWithGoal(Model, m => m.PrimaryCta, Model.PrimaryCtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
                             {
