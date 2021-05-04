@@ -74,11 +74,12 @@
     <Content Include="App_Config\Include\Feature\Feature.Text.Serialization.config" />
     <Content Include="Views\Text\TextComponent.cshtml" />
     <Content Include="Views\Text\TitleComponent.cshtml" />
+    <Content Include="Views\Text\Disclaimer.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
-    <Compile Include="Models\ITextComponent.cs" />
+    <Compile Include="Models\IRichText.cs" />
     <Compile Include="Models\ITextGlassBase.cs" />
     <Compile Include="Models\ITitleComponent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
