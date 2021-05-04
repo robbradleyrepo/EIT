@@ -1,25 +1,25 @@
 ﻿---
-ID: "dd6ad3d6-38d3-4339-ba20-1825085dc535"
-Parent: "d9ad1803-9719-41f7-824c-947b17b17501"
+ID: "673a4649-cffb-4cb4-a056-e0cf96a40e33"
+Parent: "f1401bd6-42fe-486d-99d5-6e359fac5b4f"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Banner/_BannerWithIcons/Design/BannerWithIcons_ShowPrimaryCTA
+Path: /sitecore/templates/Feature/Banner/_BannerWithIcons/Content/BannerWithIcons_SecondaryCTALink
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: Checkbox
+  Value: General Link
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 100
+  Value: 400
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Show Primary CTA
+    Value: Secondary CTA Link
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210429T144617Z
+      Value: 20210429T140946Z

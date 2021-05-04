@@ -72,17 +72,11 @@
             public const string PrimaryCTALinkGoal_FieldName = "BannerWithIcons_PrimaryCTALinkGoal";
             public const string PrimaryCTALinkGoal_FieldId = "{D073DC33-55E5-4466-B5BF-23BBF2B06945}";
 
-            public const string ShowPrimaryCTA_FieldName = "BannerWithIcons_ShowPrimaryCTA";
-            public const string ShowPrimaryCTA_FieldId = "{DD6AD3D6-38D3-4339-BA20-1825085DC535}";
-
             public const string SecondaryCTALink_FieldName = "BannerWithIcons_SecondaryCTALink";
             public const string SecondaryCTALink_FieldId = "{673A4649-CFFB-4CB4-A056-E0CF96A40E33}";
 
             public const string SecondaryCTALinkGoal_FieldName = "BannerWithIcons_SecondaryCTALinkGoal";
             public const string SecondaryCTALinkGoal_FieldId = "{FDEBCA2F-D107-40A8-B1EE-898B91EAF049}";
-
-            public const string ShowSecondaryCTA_FieldName = "BannerWithIcons_ShowSecondaryCTA";
-            public const string ShowSecondaryCTA_FieldId = "{DF42BE07-8F94-4670-9D2A-5F04C66C0BB9}";
         }
 
         public static class IconWithText

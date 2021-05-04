@@ -20,16 +20,10 @@
         [SitecoreField(Constants.BannerWithIcons.PrimaryCTALinkGoal_FieldId, SitecoreFieldType.Droplink, "Content")]
         Guid PrimaryCTALinkGoal { get; set; }
 
-        [SitecoreField(Constants.BannerWithIcons.ShowPrimaryCTA_FieldId, SitecoreFieldType.Checkbox, "Design")]
-        bool ShowPrimaryCTA { get; set; }
-
         [SitecoreField(Constants.BannerWithIcons.SecondaryCTALink_FieldId, SitecoreFieldType.GeneralLink, "Content")]
         Link SecondaryCTALink { get; set; }
 
         [SitecoreField(Constants.BannerWithIcons.SecondaryCTALinkGoal_FieldId, SitecoreFieldType.Droplink, "Content")]
         Guid SecondaryCTALinkGoal { get; set; }
-
-        [SitecoreField(Constants.BannerWithIcons.ShowSecondaryCTA_FieldId, SitecoreFieldType.Checkbox, "Design")]
-        bool ShowSecondaryCTA { get; set; }
     }
 }

@@ -35,28 +35,24 @@
                             </div>
 
                             <div class="howtoinvest__footer">
-                                @if (Model.ShowPrimaryCTA)
+                                @using (Html.BeginRenderLinkWithGoal(Model, m => m.PrimaryCTALink, Model.PrimaryCTALinkGoal, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
                                 {
-                                    using (Html.BeginRenderLinkWithGoal(Model, m => m.PrimaryCTALink, Model.PrimaryCTALinkGoal, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
+                                    if (Model.PrimaryCTALink != null)
                                     {
-                                        if (Model.PrimaryCTALink != null)
-                                        {
-                                            @Model.PrimaryCTALink.Text
-                                        }
-                                        <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
+                                        @Model.PrimaryCTALink.Text
                                     }
+                                    <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
                                 }
-                                @if (Model.ShowPrimaryCTA)
+
+                                @using (Html.BeginRenderLinkWithGoal(Model, m => m.SecondaryCTALink, Model.SecondaryCTALinkGoal, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }, isEditable: true))
                                 {
-                                    using (Html.BeginRenderLinkWithGoal(Model, m => m.SecondaryCTALink, Model.SecondaryCTALinkGoal, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }, isEditable: true))
+                                    if (Model.SecondaryCTALink != null)
                                     {
-                                        if (Model.SecondaryCTALink != null)
-                                        {
-                                            @Model.SecondaryCTALink.Text
-                                        }
-                                        <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
+                                        @Model.SecondaryCTALink.Text
                                     }
+                                    <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
                                 }
+
                             </div>
                         </div>
                     </div>
@@ -67,5 +63,5 @@
 }
 else if (Sitecore.Context.PageMode.IsExperienceEditor)
 {
-    @: Add datasource for BannerWithIconsComponent
+    @: Add datasource for Banner With Icons component
 }
