@@ -1,0 +1,49 @@
+@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Fund.Models.FundManagerViewModel
+@if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    return;
+}
+<div class="article-with-small">
+    <div class="fund-manager mt-5">
+        <div class="fund-manager__item d-block">
+            <div class="row">
+                <div class="col-4">
+                    <img src="@Model.ImageUrl"
+                         alt="@Model.FullName"
+                         class="fund-manager__img" />
+                </div>
+                <div class="col-8">
+                    <div class="fund-manager__content">
+                        <div class="fund-manager__title d-flex align-items-end">
+                            @Model.FullName
+                            <button class="ml-2 btn-unset">
+                                <i class="icon-follow text-black"></i>
+                            </button>
+                        </div>
+                        @if (!string.IsNullOrEmpty(Model.Title))
+                        {
+                            <span class="fund-manager__text font-500 d-none d-xl-block">
+                                @Html.Raw(Model.Title)
+                            </span>
+                        }
+                        <span class="fund-manager__text">
+                            @Html.Raw(Model.Bio)
+                        </span>
+                        <div class="mt-2">
+                            <a href="@Model.Url" class="link-styles">
+                                View profile
+                                <i class="icon-arrow-right"></i>
+                            </a>
+                            <a href="#"
+                               class="link-styles text-black ml-4 d-none d-xl-inline">
+                                Follow @Model.FirstName
+                                <i class="icon-follow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

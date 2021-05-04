@@ -60,7 +60,9 @@
             public const string JobTitle_FieldId = "{76EA7252-4AAD-4B5C-A8F7-7DB684C280ED}";
 
             public const string ShortBio_FieldName = "LegacyProfessional_ShortBio";
-            public const string ShortBio_FieldId = "{A6306774-24CA-4250-99AD-48BFD132ADCB}";  
+            public const string ShortBio_FieldId = "{A6306774-24CA-4250-99AD-48BFD132ADCB}";
+
+            public const string TitleFieldId = "{132E494D-67B4-4D90-B21D-AF9FF5D9C146}";
         }
 
         public static class Fund 
