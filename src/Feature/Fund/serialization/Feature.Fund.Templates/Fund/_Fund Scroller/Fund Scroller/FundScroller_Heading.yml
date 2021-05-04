@@ -1,8 +1,8 @@
 ﻿---
-ID: "3edce7ca-6000-48fa-90c3-607b821a5f6b"
-Parent: "85aaeaba-8d34-4757-a8b7-62b02e9e5e56"
+ID: "8e11c5f7-1fca-4a99-ad05-b81511f973d9"
+Parent: "2e087151-f60b-4752-8b1a-3eb7b702fa10"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Carousel/_FundScroller/Fund scroller/FundScroller_Heading
+Path: /sitecore/templates/Feature/Fund/_Fund Scroller/Fund Scroller/FundScroller_Heading
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
@@ -10,7 +10,7 @@ SharedFields:
   Value: "Single-Line Text"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 200
+  Value: 100
 Languages:
 - Language: en
   Fields:
@@ -22,8 +22,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210426T105605Z
-    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
-      Hint: __Created by
-      Value: |
-        sitecore\admin
+      Value: 20210430T140042Z

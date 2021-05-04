@@ -1,17 +1,14 @@
 ﻿---
-ID: "01ec8314-2975-4ecc-abd6-b60314ac9258"
-Parent: "e9bb794a-b514-4ff5-8386-008fda7f7f66"
+ID: "1f0cb7de-71d1-4de8-a45c-bc65c76d8b41"
+Parent: "157f9844-ea1c-4fab-b9dc-98caa06b0adc"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Project/LionTrust/Content Types/Fund Scroller
+Path: /sitecore/templates/Feature/Fund/_Fund Scroller
 DB: master
 SharedFields:
-- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
-  Hint: __Icon
-  Value: Applications/32x32/scroll.png
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
   Type: tree list
-  Value: "{CE1CEBF6-87D0-4922-850F-0F43199B9BD6}"
+  Value: "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"
 Languages:
 - Language: en
   Versions:
@@ -19,7 +16,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210426T110037Z
+      Value: 20210430T135931Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |

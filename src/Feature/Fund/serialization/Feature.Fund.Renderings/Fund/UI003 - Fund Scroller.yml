@@ -1,13 +1,16 @@
 ﻿---
 ID: "c4570003-4866-4eaa-b069-8fa6611dc0ec"
-Parent: "3c735f67-9b79-4e58-ac34-eeb39667ed98"
+Parent: "a00fc4a2-2931-4607-88bb-c19d1833086a"
 Template: "2a3e91a0-7987-44b5-ab34-35c2d9de83b9"
-Path: "/sitecore/layout/Renderings/Feature/Carousel/BC015 - Fund Scroller"
+Path: "/sitecore/layout/Renderings/Feature/Fund/UI003 - Fund Scroller"
 DB: master
 SharedFields:
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
   Value: "site:fundscroller"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
 - ID: "ded9e431-3604-4921-a4b3-a6ec7636a5b6"
   Hint: Controller Action
   Value: Render

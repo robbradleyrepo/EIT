@@ -1,9 +1,7 @@
-﻿namespace LionTrust.Feature.Carousel.Controllers
+﻿namespace LionTrust.Feature.Fund.Controllers
 {
-    using Glass.Mapper.Sc;
-    using Glass.Mapper.Sc.Web;
     using Glass.Mapper.Sc.Web.Mvc;
-    using LionTrust.Feature.Carousel.Models;
+    using LionTrust.Feature.Fund.Models;
     using Sitecore.Mvc.Controllers;
     using System.Web.Mvc;
 
@@ -24,7 +22,7 @@
                 return null;
             }
 
-            return View();
+            return View("/views/fund/fundscroller.cshtml", datasource);
         }
     }
 }

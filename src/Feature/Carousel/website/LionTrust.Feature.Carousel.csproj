@@ -72,16 +72,13 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="App_Config\Include\Feature\Feature.Carousel.Serialization.config" />
-    <Content Include="Views\Carousel\FundScroller.cshtml" />
     <Content Include="Views\Carousel\HomepageCarousel.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
-    <Compile Include="Controllers\FundScrollerController.cs" />
     <Compile Include="Models\ICarousel.cs" />
     <Compile Include="Models\ICarouselGlassBase.cs" />
-    <Compile Include="Models\IFundScroller.cs" />
     <Compile Include="Models\IHomepageCarousel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -103,6 +100,7 @@
       <Name>LionTrust.Foundation.ORM</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
