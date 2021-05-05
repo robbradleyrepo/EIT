@@ -54,14 +54,7 @@
                 listingArticleFacetsResponse.FundManagersFacets = filterFacetConfigItem.FundManagersFolder?.Children?.Where(x => x.IsFundManager)?.Select(x => new FacetItem { Identifier = x.Id.ToString(), Name = x.Name });
                 listingArticleFacetsResponse.FundTeamsFacets = filterFacetConfigItem.FundTeamsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString(), Name = x.Name });
                 listingArticleFacetsResponse.FundTeamsFacets = filterFacetConfigItem.FundTeamsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString(), Name = x.Name });
-            }
-            else if (filterFacetConfigItem.FundsFolder == null
-                    && filterFacetConfigItem.FundCategoriesFolder == null
-                    && filterFacetConfigItem.FundManagersFolder == null 
-                    && filterFacetConfigItem.FundTeamsFolder == null)
-            {
-                listingArticleFacetsResponse.StatusCode = 404;
-                listingArticleFacetsResponse.Message = "Config item found but no facets set";
+                listingArticleFacetsResponse.StatusCode = 200;
             }
             else
             {

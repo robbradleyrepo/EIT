@@ -43,7 +43,7 @@
                 return new HttpStatusCodeResult(response.StatusCode, response.Message);
             }
 
-            return Json(response);
+            return Json(response, JsonRequestBehavior.AllowGet);
         }
 
         /// <summary>
@@ -58,7 +58,7 @@
                 return new HttpStatusCodeResult(response.StatusCode, response.StatusMessage);
             }
 
-            return Json(response);
+            return Json(response, JsonRequestBehavior.AllowGet);
         }
     }
 }
