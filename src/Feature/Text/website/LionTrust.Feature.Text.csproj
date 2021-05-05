@@ -75,11 +75,13 @@
     <Content Include="Views\Text\TextComponent.cshtml" />
     <Content Include="Views\Text\TitleComponent.cshtml" />
     <Content Include="Views\Text\Disclaimer.cshtml" />
+    <Content Include="Views\Text\Testimonial.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Models\IRichText.cs" />
+    <Compile Include="Models\ITestimonial.cs" />
     <Compile Include="Models\ITextGlassBase.cs" />
     <Compile Include="Models\ITitleComponent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
