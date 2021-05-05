@@ -3,7 +3,7 @@
 #  This template allows you to validate your NodeJS code.
 #  The workflow allows running tests and code linting on the default branch.
 
-image: node:10.15.3
+image: node:14.16.1
 
 pipelines:
   default:
@@ -16,4 +16,4 @@ pipelines:
               - cd ./tests/ui-tests/
               - yarn install
               - yarn run build
-              - node .\build\index.js
+              - node ./build/index.js
