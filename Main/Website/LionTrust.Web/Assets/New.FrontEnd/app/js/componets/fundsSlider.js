@@ -21,13 +21,15 @@ export default () => {
         spaceBetween: 20,
       },
       992: {
-        slidesPerView: 1.2,
+        slidesPerView: 1.6,
       },
       1200: {
-        slidesPerView: 1.2,
+        slidesPerView: 1.6,
+        slidesOffsetAfter: 100,
       },
       1440: {
         slidesPerView: 1.8,
+        slidesOffsetAfter: 220,
       },
     },
   });
