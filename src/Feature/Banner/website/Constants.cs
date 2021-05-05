@@ -87,5 +87,23 @@
             public const string Icon_FieldName = "IconWithText_Icon";
             public const string Icon_FieldId = "{BE707199-2471-444B-8794-55174CC40A9B}";
         }
+
+        public static class ImageWithTitleAndText
+        {
+            public const string Title_FieldName = "ImageWithTitleAndText_Title";
+            public const string Title_FieldId = "{435D92A9-F046-4BFE-ADD2-2026EF143CBB}";
+
+            public const string Text_FieldName = "ImageWithTitleAndText_Text";
+            public const string Text_FieldId = "{CAEDA688-AD37-4B32-84DF-EE176D47E780}";
+
+            public const string Image_FieldName = "ImageWithTitleAndText_Image";
+            public const string Image_FieldId = "{60D2759F-95DF-492C-8F4A-D1A3A80956F7}";
+        }
+
+        public static class BannerWithSlider
+        {
+            public const string Heading_FieldName = "BannerWithSlider_Heading";
+            public const string Heading_FieldId = "{80C119C8-E2B9-45A8-BFA7-25E65218B121}";
+        }
     }
 }

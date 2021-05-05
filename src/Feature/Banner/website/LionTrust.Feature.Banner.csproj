@@ -76,14 +76,17 @@
     <Content Include="Views\Banner\PromoBanner.cshtml" />
     <Content Include="App_Config\Include\Feature\Feature.Banner.Serialization.config" />
     <Content Include="Views\Banner\BannerWithIcons.cshtml" />
+    <Content Include="Views\Banner\BannerWithSlider.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Models\IBannerGlassBase.cs" />
+    <Compile Include="Models\IBannerWithSlider.cs" />
     <Compile Include="Models\IBannerWithIcons.cs" />
     <Compile Include="Models\IHomepageLeadBannerModel.cs" />
     <Compile Include="Models\IIconWithText.cs" />
+    <Compile Include="Models\IImageWithTitleAndText.cs" />
     <Compile Include="Models\IPromoBanner.cs" />
     <Compile Include="Models\LeadBannerModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
