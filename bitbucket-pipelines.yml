@@ -1,19 +1,21 @@
-#  Template NodeJS build
-
-#  This template allows you to validate your NodeJS code.
-#  The workflow allows running tests and code linting on the default branch.
-
-image: node:14.16.1
+image: node:latest
 
 pipelines:
-  default:
-    - parallel:
-        - step:
-            name: Build and Test
-            caches:
-              - node
-            script:
-              - cd ./tests/ui-tests/
-              - yarn install
-              - yarn run build
-              - node ./build/index.js
+  custom:
+    lighthouse-checks:
+      - step:
+          name: Lighthouse Checks
+          caches:
+            - node
+          script:
+            - apt-get update && apt-get install apt-transport-https -y
+            - wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+            - sh -c 'echo "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+            - apt-get update && apt-get install google-chrome-stable -y
+            - npm i -g @lhci/cli@"^0.7.0"
+            - lhci healthcheck
+            - lhci collect --url $LIGHTHOUSE_URL
+            - lhci assert
+            - mv .lighthouseci lighthouse-results
+          artifacts:
+            - lighthouse-results/**
