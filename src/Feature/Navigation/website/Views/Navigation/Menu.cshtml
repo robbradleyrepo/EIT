@@ -3,7 +3,7 @@
 @model LionTrust.Feature.Navigation.Models.NavigationViewModel
 @if (Model != null && Model.RootItem != null && Model.HomeItem != null)
 {
-    <div class="sidebar">
+    <div class="sidebar sidebar_border">
         <div class="sidebar__top">
             <div class="sidebar__header">
                 <button class="sidebar__close-btn"></button>
@@ -167,59 +167,61 @@
                                         {
                                             case 0:
                                                 {
-                                                    break;
-                                                }
-                                            case 1:
-                                                {
-                                                    @:<div class="mt-3">
+                                                    @:<div>
                                                         break;
                                                     }
-                                                case 2:
+                                                case 1:
                                                     {
-                                                        @:<div class="mt-4">
+                                                        @:<div class="mt-3">
                                                             break;
                                                         }
-                                                    default:
-                                                        break;
-                                                }
-                                                navigationColumnCount++;
-
-                                                <h4 class="dropdown-nav__title">@Html.Glass().Editable(navigationColumn, z => z.ColumnTitle)</h4>
-                                                if (navigationColumn.ShowColumnLink)
-                                                {
-                                                    using (Html.Glass().BeginRenderLink(navigationColumn, z => z.ColumnLink, new NameValueCollection { { "class", "link-styles d-block mb-4" } }, isEditable: true))
-                                                    {
-                                                        if (navigationColumn.ColumnLink != null
-                                                            && !string.IsNullOrEmpty(navigationColumn.ColumnLink.Text))
+                                                    case 2:
                                                         {
-                                                            @navigationColumn.ColumnLink.Text
-                                                        }
-                                                        <i class="icon-arrow-right"></i>
-                                                    }
-
-                                                    if (navigationColumn.PageLinks != null && navigationColumn.PageLinks.Any())
-                                                    {
-                                                        <ul class="dropdown-nav__list">
-                                                            @foreach (var pageLink in navigationColumn.PageLinks)
-                                                            {
-                                                                <li class="dropdown-nav__item">
-                                                                    <a href="@pageLink.Url" class="dropdown-nav__link">@Html.Glass().Editable(pageLink, z => z.PageTitle)</a>
-                                                                </li>
+                                                            @:<div class="mt-4">
+                                                                break;
                                                             }
-                                                        </ul>
-                                                    }
-                                                }
+                                                        default:
+                                                            @:<div>
+                                                                break;
+                                                        }
+                                                        navigationColumnCount++;
 
-                                                if (navigationColumnCount > 0)
-                                                {
-                                                @:</div>
-                                                if (navigationColumnCount >= 2)
-                                                {
-                                                    break;
+                                                        <h4 class="dropdown-nav__title">@Html.Glass().Editable(navigationColumn, z => z.ColumnTitle)</h4>
+                                                        if (navigationColumn.ShowColumnLink)
+                                                        {
+                                                            using (Html.Glass().BeginRenderLink(navigationColumn, z => z.ColumnLink, new NameValueCollection { { "class", "link-styles d-block mb-4" } }, isEditable: true))
+                                                            {
+                                                                if (navigationColumn.ColumnLink != null
+                                                                    && !string.IsNullOrEmpty(navigationColumn.ColumnLink.Text))
+                                                                {
+                                                                    @navigationColumn.ColumnLink.Text
+                                                                }
+                                                                <i class="icon-arrow-right"></i>
+                                                            }
+
+                                                            if (navigationColumn.PageLinks != null && navigationColumn.PageLinks.Any())
+                                                            {
+                                                                <ul class="dropdown-nav__list">
+                                                                    @foreach (var pageLink in navigationColumn.PageLinks)
+                                                                    {
+                                                                        <li class="dropdown-nav__item">
+                                                                            <a href="@pageLink.Url" class="dropdown-nav__link">@Html.Glass().Editable(pageLink, z => z.PageTitle)</a>
+                                                                        </li>
+                                                                    }
+                                                                </ul>
+                                                            }
+                                                        }
+
+                                                        if (navigationColumnCount > 0)
+                                                        {
+                                                        @:</div>
+                                                        if (navigationColumnCount >= 2)
+                                                        {
+                                                            break;
+                                                        }
+                                                    }
                                                 }
                                             }
-                                        }
-                                    }
                                 @if (navigationColumnCount < 3 && dropDown.Images != null && dropDown.Images.Any())
                                 {
                                     if (navigationColumnCount < 2)
@@ -464,7 +466,7 @@
                                     }
                                 }
                             </div>
-                            </div>
+                        </div>
                     }
                 }
             </div>
@@ -507,6 +509,7 @@
         </div>
     }
     <div class="sidebar-overlay"></div>
+
 }
 else if (Sitecore.Context.PageMode.IsExperienceEditor)
 {

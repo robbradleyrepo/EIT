@@ -13,7 +13,7 @@
         {
             if (Sitecore.Context.PageMode.IsExperienceEditor)
             {
-                <div class="text-gold">Edit Quick Link</div> 
+                <div class="text-gold">Edit Quick Link</div>
             }
             using (Html.BeginRenderLinkWithGoal(
                 Model,
@@ -29,7 +29,7 @@
     }
     else
     {
-        <div class="quick-link-chart quick-link-chart__small" style="background-image: url('@imageSrc');">
+        <div class="@imageCss" style="background-image: url('@imageSrc');">
             <span class="quick-link-chart__title">@Html.Glass().Editable(Model, z => z.Title)</span>
             <span class="quick-link-chart__text">@Html.Glass().Editable(Model, z => z.Description)</span>
         </div>
