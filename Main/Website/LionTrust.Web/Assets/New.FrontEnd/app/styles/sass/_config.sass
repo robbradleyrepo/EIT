@@ -78,6 +78,13 @@ a
 		color: $white
 		text-decoration: none
 
+p
+	font-size: 18px
+	line-height: 28px
+	@include breakpoint(desktop, up)
+		font-size: 20px
+		line-height: 30px
+
 .link-styles
 	font-size: 12px
 	font-weight: 500
@@ -89,6 +96,9 @@ a
 		font-size: 10px
 	i.icon-follow
 		font-size: 18px
+		vertical-align: text-bottom
+	.icon-file
+		font-size: 15px
 		vertical-align: text-bottom
 	&:hover
 		color: $primary
