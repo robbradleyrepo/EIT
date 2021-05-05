@@ -165,6 +165,7 @@
                                                                         @if (dropDown.Images.Count() == 1)
                                                                         {
                                                                             var image = dropDown.Images.FirstOrDefault();
+                                                                            image.SmallSize = false;
                                                                             @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", image)                                                                            
                                                                         }
                                                                         else
@@ -199,6 +200,7 @@
                                                                     var image = dropDown.Images.FirstOrDefault();
                                                                     if (image != null)
                                                                     {
+                                                                        image.SmallSize = false;
                                                                         <div class="col-xl-4 col-lg-5 offset-lg-4 offset-xl-5">
                                                                             @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", image)                                                                            
                                                                         </div>
@@ -215,6 +217,7 @@
                                                                                     var firstImage = dropDown.Images.FirstOrDefault();
                                                                                     if (firstImage != null)
                                                                                     {
+                                                                                        firstImage.SmallSize = false;
                                                                                         @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", firstImage)
                                                                                     }
                                                                                     imageCollecion = imageCollecion.Skip(1);
@@ -242,6 +245,7 @@
                                                                                     var secondColumnImage = dropDown.Images.FirstOrDefault();
                                                                                     if (secondColumnImage != null)
                                                                                     {
+                                                                                        secondColumnImage.SmallSize = false;
                                                                                         @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", secondColumnImage)
                                                                                     }
                                                                                 }
