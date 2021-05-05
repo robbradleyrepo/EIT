@@ -13,7 +13,7 @@ pipelines:
             caches:
               - node
             script:
-              - cd .\test\ui-tests\
+              - cd ./tests/ui-tests/
               - yarn install
               - yarn run build
               - node .\build\index.js
