@@ -2,7 +2,7 @@ using System.Linq;
 using LionTrust.Feature.Hero.Models;
 using LionTrust.Foundation.Content.Repositories;
 using LionTrust.Foundation.Logging.Repositories;
-using LionTrust.Foundation.Search.Models;
+using LionTrust.Foundation.Search.Models.ContentSearch;
 using Sitecore.ContentSearch.Linq.Utilities;
 using Sitecore.Data.Items;
 

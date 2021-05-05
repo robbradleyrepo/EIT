@@ -1,25 +1,16 @@
+.swiper-container-awards
+    overflow: hidden
 .awards
-    display: flex
-    background: $white
-    padding: 50px 0
-    position: relative
-
-    &__box
-        display: flex
-        flex-direction: column
-        justify-content: center
-        align-items: center   
-        overflow: hidden
-
-
-    &__head
-        font-size: 32px
-        font-weight: 300
-        color: $gold
-        margin-bottom: 20px
-        @include breakpoint(tablet, up)
-            font-size: 42px
-
+    margin: 100px 0
+    padding-top: 23px
+    padding-bottom: 16px
+    background: #F7F9FC
+    @include breakpoint(desktop, up)
+        padding-top: 88px
+    &__heading
+        margin-bottom: 30px
+        @include breakpoint(desktop, up)
+            margin-bottom: 44px
     &__slide
         display: flex
         // width: 270px
@@ -43,9 +34,7 @@
         color: $primary
         text-transform: uppercase
         text-align: center
-        padding: 5px
-        // margin-bottom: 10px
-
+        line-height: 14px
         @include breakpoint(desktop, up)
             font-size: 12px
             letter-spacing: 2.4px
@@ -54,38 +43,26 @@
         color: $secondary-gray
         text-align: center
         line-height: 1.4
-        padding: 10px
         @include breakpoint(desktop, up)
             font-size: 18px
-
+            line-height: 28px
 
 .swiper-container-awards
     width: 100%
     height: 100%
-    
+    position: relative
+    padding-bottom: 45px
+    @include breakpoint(desktop, up)
+        padding-bottom: 88px
 
-.swiper-container-awards .swiper-slide 
-    display: flex
-    width: fit-content!important
-
-    /* Center slide text vertically */
-    display: -webkit-box
-    display: -ms-flexbox
-    display: -webkit-flex
-    display: flex
-    -webkit-box-pack: center
-    -ms-flex-pack: center
-    -webkit-justify-content: center
-    justify-content: center
-    -webkit-box-align: center
-    -ms-flex-align: center
-    -webkit-align-items: center
-    align-items: center
-
+.swiper-container-awards
+    .swiper-button-next, .swiper-button-prev
+        top: 30%
+        color: $gold
 .swiper-container-awards .swiper-pagination
     visibility: visible
     bottom: 10px
-
+    right: 50%
 
 .swiper-container-awards .swiper-pagination-bullet
     opacity: 1
@@ -99,20 +76,16 @@
     background: $gold
 
 .swiper-container-awards .swiper-button-next, .swiper-container-awards .swiper-button-prev
-    opacity: 0
-    outline: none
-    @include breakpoint(tablet, up)
-        opacity: 1
+    visibility: hidden
+    @include breakpoint(desktop, up)
+        visibility: visible
 
+// .swiper-container-awards .swiper-button-next
+//     right: 20px
 
+// .swiper-container-awards .swiper-button-prev
+//     left: 20px
 
-.swiper-container-awards .swiper-button-next
-    right: 20px
-
-.swiper-container-awards .swiper-button-prev
-    left: 20px
-
-.swiper-container-awards .swiper-button-next:after, .swiper-container-awards .swiper-button-prev:after
-    font-size: 50px
-    color: #C0A961
-   
+// .swiper-container-awards .swiper-button-next:after, .swiper-container-awards .swiper-button-prev:after
+//     font-size: 50px
+//     color: #C0A961

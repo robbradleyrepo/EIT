@@ -1,5 +1,5 @@
 using LionTrust.Feature.Hero.Models;
-using LionTrust.Foundation.Search.Models;
+using LionTrust.Foundation.Search.Models.ContentSearch;
 
 namespace LionTrust.Feature.Hero.Services
 {

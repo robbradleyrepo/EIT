@@ -14,7 +14,7 @@ import awardsSlider from "./componets/awardsSlider";
 import investmentCard from "./componets/investmentCard";
 import articleFilter from "./componets/articleFilter";
 import parallaxScrolling from "./componets/parallaxScrolling";
-
+import stickyNavbar from "./componets/stickyNavbar";
 
 document.addEventListener("DOMContentLoaded", () => {
   onboardingOverlay();
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fundsSlider();
   articleSlider();
   awardsSlider();
-  if (document.querySelector(".article-page")) articleFilter(); 
+  stickyNavbar();
+  if (document.querySelector(".article-page")) articleFilter();
   if (document.querySelector(".main-page")) parallaxScrolling();
-
 });

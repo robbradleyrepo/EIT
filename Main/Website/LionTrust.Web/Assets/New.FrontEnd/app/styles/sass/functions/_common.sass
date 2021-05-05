@@ -1,9 +1,10 @@
 // generate container-left-gutter width for all breakpoints
 @each $name, $size in $breakpoints
     .container-left-gutter
-        @if $size != 0
+        @if $size >= 992
             @include breakpoint($name, up)
-                margin-left: calc((100vw - #{$size}px) / 2)
+                margin-left: calc((100vw - #{$size}px) / 2)!important
+                max-width: 100%!important
         @else
             padding-left: var(--bs-gutter-x,16px)
 
