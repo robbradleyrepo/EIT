@@ -1,6 +1,9 @@
 .fund-overview
     margin-bottom: 40px
     color: $black
+    @include breakpoint(desktop, down)
+        padding-right: 16px
+        padding-left: 16px
     @include breakpoint(desktop, up)
         margin-bottom: 48px
 
@@ -8,6 +11,9 @@
     display: flex
     align-items: center
     margin: 36px 0 30px
+    @include breakpoint(desktop, down)
+        padding-right: 16px
+        padding-left: 16px
     &__title
         color: $black
         margin-right: 16px
@@ -29,3 +35,10 @@
         color: $black
         &::before
             content: "\e906"
+
+.additional-info
+    margin-top: 40px
+    margin-bottom: 33px
+    @include breakpoint(desktop, up)
+        margin-top: 100px
+        margin-bottom: 80px
