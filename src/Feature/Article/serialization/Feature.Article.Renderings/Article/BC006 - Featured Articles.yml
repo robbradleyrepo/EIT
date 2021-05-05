@@ -1,10 +1,13 @@
 ﻿---
 ID: "7f3ddf4d-5190-4c04-836d-41325114723d"
 Parent: "ff86fe68-77e1-45a3-aa4f-be9108439a84"
-Template: "99f8905d-4a87-4eb8-9f8b-a9bebfb3add6"
+Template: "2a3e91a0-7987-44b5-ab34-35c2d9de83b9"
 Path: "/sitecore/layout/Renderings/Feature/Article/BC006 - Featured Articles"
 DB: master
 SharedFields:
+- ID: "13f89250-ad6b-4548-882e-118a12c18094"
+  Hint: Parameters Template
+  Value: "{B0C943DC-16B9-44A0-B4ED-92D7492B3813}"
 - ID: "51b435bc-f7b9-478a-9c51-52916af96ff5"
   Hint: Path
   Value: /views/article/featuredarticles.cshtml
@@ -19,6 +22,12 @@ SharedFields:
   Hint: __Thumbnail
   Value: |
     <image mediaid="{742686B4-EB44-4E16-9323-FDDA4946029B}" />
+- ID: "ded9e431-3604-4921-a4b3-a6ec7636a5b6"
+  Hint: Controller Action
+  Value: Render
+- ID: "e64ad073-dfcc-4d20-8c0b-fe5aa6226cd7"
+  Hint: Controller
+  Value: FeaturedArticles
 Languages:
 - Language: en
   Versions:

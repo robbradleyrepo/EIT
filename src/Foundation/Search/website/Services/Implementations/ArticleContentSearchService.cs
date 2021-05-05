@@ -84,7 +84,7 @@
 
             predicate = this.PopoulateDatedTaxonomyPredicate(predicate, articleSearchRequest);
 
-            return _articleContentSearchRepository.GetArticleSearchResultItems(predicate, articleSearchRequest.Skip, articleSearchRequest.Take);
+            return _articleContentSearchRepository.GetArticleSearchResultItems(predicate, articleSearchRequest.Skip, articleSearchRequest.Take, articleSearchRequest.DatabaseName);
         }
     }
 }

@@ -6,7 +6,7 @@
         {
             public static class Defaults
             {
-                public const string ArticleSearchFacetsConfig = "{770AE272-CF31-4A44-A694-16484966507D}";
+                public const string ArticleSearchFacetsConfig = "{D61FC1B3-9969-4F95-8796-FEFBC864CA1F}";
             }
             public static class ArticleSearchFacetsConfig
             {

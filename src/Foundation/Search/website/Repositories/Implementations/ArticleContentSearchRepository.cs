@@ -23,6 +23,11 @@
                                  .Where(predicate);
                 
                 var results = query.GetResults();
+                
+                if (results == null)
+                {
+                    return null;
+                }
 
                 return new ContentSearchResults { SearchResults = results.Hits.Skip(skip).Take(take), TotalResults = results.TotalSearchResults };
             }

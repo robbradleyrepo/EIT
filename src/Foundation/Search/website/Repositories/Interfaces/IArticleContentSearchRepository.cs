@@ -7,6 +7,6 @@
 
     public interface IArticleContentSearchRepository
     {
-        ContentSearchResults GetArticleSearchResultItems(Expression<Func<ArticleSearchResultItem, bool>> predicate, int skip, int take, string database = "web");
+        ContentSearchResults GetArticleSearchResultItems(Expression<Func<ArticleSearchResultItem, bool>> predicate, int skip, int take, string database);
     }
 }

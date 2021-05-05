@@ -30,8 +30,8 @@
 
         private IEnumerable<ITaxonomyContentResult> MapArticleResultHits(IEnumerable<SearchHit<ArticleSearchResultItem>> hits)
         {
-            return hits.Select(x => new ArticleResult{ 
-                                                        Authors = x.Document.ArticleAuthors, 
+            return hits.Select(x => new ArticleResult{
+                                                        Authors = x.Document.ArticleAuthors,
                                                         Category = x.Document.ArticleCategory,
                                                         Content = x.Document.ArticleContent,
                                                         Date = x.Document.ArticleDate,
@@ -47,21 +47,19 @@
             var filterFacetConfigItem = _contentRepository.GetItem<IArticleListingFacetsConfig>(new GetItemByIdOptions(articleFilterFacetConfigId));
 
             var listingArticleFacetsResponse = new ArticleFacetsResponse();
-            if(filterFacetConfigItem != null)
+            if(filterFacetConfigItem == null || filterFacetConfigItem.FundsFolder == null
+                    || filterFacetConfigItem.FundCategoriesFolder == null
+                    || filterFacetConfigItem.FundManagersFolder == null
+                    || filterFacetConfigItem.FundTeamsFolder == null)
             {
-                listingArticleFacetsResponse.FundFacets = filterFacetConfigItem.FundsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString(), Name = x.Name });
-                listingArticleFacetsResponse.FundCategoriesFacets = filterFacetConfigItem.FundCategoriesFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString(), Name = x.Name });
-                listingArticleFacetsResponse.FundManagersFacets = filterFacetConfigItem.FundManagersFolder?.Children?.Where(x => x.IsFundManager)?.Select(x => new FacetItem { Identifier = x.Id.ToString(), Name = x.Name });
-                listingArticleFacetsResponse.FundTeamsFacets = filterFacetConfigItem.FundTeamsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString(), Name = x.Name });
-                listingArticleFacetsResponse.FundTeamsFacets = filterFacetConfigItem.FundTeamsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString(), Name = x.Name });
-                listingArticleFacetsResponse.StatusCode = 200;
-            }
-            else
-            {
-                listingArticleFacetsResponse.StatusCode = 404;
-                listingArticleFacetsResponse.Message = "Could not find config item in the database";
+                return null;
             }
 
+            listingArticleFacetsResponse.FundFacets = filterFacetConfigItem.FundsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString(), Name = x.Name });
+            listingArticleFacetsResponse.FundCategoriesFacets = filterFacetConfigItem.FundCategoriesFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString(), Name = x.Name });
+            listingArticleFacetsResponse.FundManagersFacets = filterFacetConfigItem.FundManagersFolder?.Children?.Where(x => x.IsFundManager)?.Select(x => new FacetItem { Identifier = x.Id.ToString(), Name = x.Name });
+            listingArticleFacetsResponse.FundTeamsFacets = filterFacetConfigItem.FundTeamsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString(), Name = x.Name });
+            listingArticleFacetsResponse.FundTeamsFacets = filterFacetConfigItem.FundTeamsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString(), Name = x.Name });
             return listingArticleFacetsResponse;
         }
 
@@ -93,7 +91,7 @@
             if(contentSearchResults.TotalResults > 0)
             {
                 articleSearchResponse.SearchResults = this.MapArticleResultHits(contentSearchResults.SearchResults);
-                articleSearchResponse.StatusMessage = "Success"; 
+                articleSearchResponse.StatusMessage = "Success";
                 articleSearchResponse.StatusCode = 200;
                 articleSearchResponse.TotalResults = contentSearchResults.TotalResults;
             }
