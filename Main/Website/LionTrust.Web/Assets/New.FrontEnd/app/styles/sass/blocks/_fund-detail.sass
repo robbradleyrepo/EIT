@@ -3,3 +3,29 @@
     color: $black
     @include breakpoint(desktop, up)
         margin-bottom: 48px
+
+.class-dropdown
+    display: flex
+    align-items: center
+    margin: 36px 0 30px
+    &__title
+        color: $black
+        margin-right: 16px
+        font-weight: 500
+        white-space: nowrap
+    &__select
+        width: 100%
+        position: relative
+        select
+            border-bottom: 1px solid $gray
+            font-size: 16px
+            padding: 12px
+            @include breakpoint(desktop, up)
+                border-bottom: 1px solid $black
+                padding-top: 14px
+    i.article-filters__icon-arrow
+        font-size: 6px
+        right: 0
+        color: $black
+        &::before
+            content: "\e906"
