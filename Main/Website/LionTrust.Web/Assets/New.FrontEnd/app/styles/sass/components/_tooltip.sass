@@ -1,0 +1,21 @@
+.tooltip-inner
+    border: 1px solid $gold
+    text-align: left
+
+.tooltip
+    margin-top: -15px
+    margin-left: 5px
+    .arrow
+        &::before
+            z-index: 1
+            right: -1px
+            border-width: 0.5rem 0.5rem 0.5rem 0px
+        &::after
+            position: absolute
+            content: ""
+            border-color: transparent
+            border-style: solid
+            right: 0px
+            top: -1px
+            border-width: 0.6rem 0.5rem 0.5rem 0
+            border-right-color: $gold

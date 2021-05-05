@@ -28,4 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
   stickyNavbar();
   if (document.querySelector(".article-page")) articleFilter();
   if (document.querySelector(".main-page")) parallaxScrolling();
+
+  $('[data-toggle="tooltip"]').tooltip({
+    offset: 5
+  })
+  
 });
