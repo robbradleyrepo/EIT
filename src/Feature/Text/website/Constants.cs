@@ -28,5 +28,17 @@
             public const string TextColor_FieldName = "TitleComponent_TextColor";
             public const string TextColor_FieldId = "{ED1EC554-3049-42ED-BCE7-419D27C1E0F7}";
         }
+
+        public static class Testimonial
+        {
+            public const string Author_FieldName = "Testimonial_Author";
+            public const string Author_FieldId = "{BDC73BDE-7A8E-408C-8CC0-B7AA706D99B2}";
+
+            public const string Quote_FieldName = "Testimonial_Quote";
+            public const string Quote_FieldId = "{9AE10805-E946-4661-AB29-DE0C6A9019A5}";
+
+            public const string BackgroundImage_FieldName = "Testimonial_BackgroundImage";
+            public const string BackgroundImage_FieldId = "{0B4E60B8-849F-4CF1-A975-2647AFEA630B}";
+        }
     }
 }
