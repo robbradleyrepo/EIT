@@ -28,7 +28,7 @@ export default () => {
         slidesOffsetAfter: 100,
       },
       1440: {
-        slidesPerView: 1.8,
+        slidesPerView: 2.1,
         slidesOffsetAfter: 220,
       },
     },
