@@ -182,7 +182,7 @@
             public const string ContactUsPage_FieldName = "NavigationRoot_ContactUsPage";
             public const string ContactUsPage_FieldID = "{0D831D08-90C7-4E31-B880-5A93146B3029}";
 
-            public const string MyLionTrust_FieldName = "NavigationRoot__MyLionTrust";
+            public const string MyLionTrust_FieldName = "NavigationRoot_MyLionTrust";
             public const string MyLionTrust_FieldID = "{B810A405-73F4-48CC-AF61-778C82531262}";
 
             public const string MyPreferences_FieldName = "NavigationRoot_MyPreferences";
