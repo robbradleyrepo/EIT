@@ -7,7 +7,7 @@ DB: master
 SharedFields:
 - ID: "51b435bc-f7b9-478a-9c51-52916af96ff5"
   Hint: Path
-  Value: /views/articles/featuredarticles.cshtml
+  Value: /views/article/featuredarticles.cshtml
 - ID: "a2f5d9df-8cba-4a1d-99eb-51acb94cb057"
   Hint: Page Editor Buttons
   Type: Treelist
@@ -15,6 +15,10 @@ SharedFields:
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
   Value: "site:featuredarticles"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{742686B4-EB44-4E16-9323-FDDA4946029B}" />
 Languages:
 - Language: en
   Versions:

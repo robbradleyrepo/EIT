@@ -1,8 +1,37 @@
 version: "2.4"
 
 services:
-
+  # traefik:
+  #   isolation: hyperv
+  #   image: traefik:v2.2.0-windowsservercore-1809
+  #   command:
+  #     - "--ping"
+  #     - "--api.insecure=true"
+  #     - "--providers.docker.endpoint=npipe:////./pipe/docker_engine"
+  #     - "--providers.docker.exposedByDefault=false"
+  #     - "--providers.file.directory=C:/etc/traefik/config/dynamic"
+  #     - "--entryPoints.web.address=:80"
+  #     - "--entryPoints.websecure.address=:443"
+  #   ports:
+  #     - "8080:80"
+  #     - "443:443"
+  #     - "8079:8080"
+  #   healthcheck:
+  #     test: ["CMD", "traefik", "healthcheck", "--ping"]
+  #   volumes:
+  #     - source: \\.\pipe\docker_engine
+  #       target: \\.\pipe\docker_engine
+  #       type: npipe
+  #     - ./traefik:C:/etc/traefik
+  #   depends_on:
+  #     id:
+  #       condition: service_healthy
+  #     cd:
+  #       condition: service_healthy
+  #     cm:
+  #       condition: service_healthy
   sql:
+    isolation: hyperv
     container_name: liontrustsql
     image: ${REGISTRY}sitecore-xp-sqldev:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
     volumes:
@@ -11,6 +40,7 @@ services:
       - "44010:1433"
 
   solr:
+    isolation: hyperv
     container_name: liontrustsolr
     image: ${REGISTRY}sitecore-xp-solr:${SITECORE_VERSION}-nanoserver-${NANOSERVER_VERSION}
     volumes:
@@ -19,6 +49,7 @@ services:
       - "44011:8983"
 
   xconnect:
+    isolation: hyperv
     container_name: liontrustxconnect
     image: ${REGISTRY}sitecore-xp-xconnect:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
     volumes:
@@ -33,6 +64,7 @@ services:
       - solr
 
   xconnect-automationengine:
+    isolation: hyperv
     container_name: liontrustxconnectautomationengine
     image: ${REGISTRY}sitecore-xp-xconnect-automationengine:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
     volumes:
@@ -44,6 +76,7 @@ services:
       - xconnect
 
   xconnect-indexworker:
+    isolation: hyperv
     container_name: liontrustxconnectindexworker
     image: ${REGISTRY}sitecore-xp-xconnect-indexworker:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
     volumes:
@@ -55,6 +88,7 @@ services:
       - solr
 
   xconnect-processingengine:
+    isolation: hyperv
     container_name: liontrustxconnectprocessingengine
     image: ${REGISTRY}sitecore-xp-xconnect-processingengine:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
     volumes:
@@ -69,6 +103,7 @@ services:
       - xconnect
 
   cd:
+    isolation: hyperv
     container_name: liontrustcd
     image: ${REGISTRY}sitecore-xp-cd:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
     entrypoint: powershell.exe -NoLogo -NoProfile -File C:\\tools\\entrypoints\\iis\\Development.ps1
@@ -85,6 +120,7 @@ services:
       - xconnect
 
   cm:
+    isolation: hyperv
     container_name: liontrustcm
     image: ${REGISTRY}sitecore-xp-standalone:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
     entrypoint: powershell.exe -NoLogo -NoProfile -File C:\\tools\\entrypoints\\iis\\Development.ps1
@@ -101,13 +137,19 @@ services:
       - solr
       - xconnect
 
-  identity:
+  id:
+    isolation: hyperv
     container_name: liontrustidentity
     image: ${REGISTRY}sitecore-xp-identity:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
     volumes:
       - ${LICENSE_PATH}:C:\license
       - .\data\identity:C:\inetpub\wwwroot\wwwroot\logs
     mem_limit: 500MB
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.id-secure.entrypoints=websecure"
+      - "traefik.http.routers.id-secure.rule=Host(`${ID_HOST}`)"
+      - "traefik.http.routers.id-secure.tls=true"
     ports:
       - "44005:80"
     links:
