@@ -1,0 +1,32 @@
+.fund-stats
+    background: $secondary
+    margin-top: 30px
+    padding: 26px 20px 10px
+    border-radius: $border-radius
+    .row [class*=col-]
+        &:last-child   
+            .fund-stats__item:after
+                display: none
+    &__item
+        text-align: center
+        margin-bottom: 18px
+        position: relative
+        @include breakpoint(desktop, up)
+            &::after
+                content: ''
+                position: absolute
+                right: 0
+                bottom: 0
+                width: 1px
+                height: 100%
+                background: $gray
+                opacity: 0.2        
+    &__title
+        font-size: 12px
+        font-weight: bold
+        color: $gold
+        display: block
+    &__value
+        font-weight: 300
+        font-size: 26px
+        line-height: 32px
