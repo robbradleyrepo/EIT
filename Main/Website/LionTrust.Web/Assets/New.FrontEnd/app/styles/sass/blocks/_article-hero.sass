@@ -108,3 +108,22 @@
 .article-links.article-links_primary
     .article-links__link
         color: $primary
+
+.fund-detail-page
+    .article-hero
+        margin-top: 0
+        &__title
+            margin-bottom: 2rem
+            @include breakpoint(desktop, up)
+                margin-bottom: 2.3rem
+    .article-links
+        display: inline
+        margin: 0 auto
+        &__item
+            display: inline-block
+            margin-right: 50px
+            @include breakpoint(desktop, up)
+                margin-right: 60px
+            &:last-child
+                margin-right: 0
+

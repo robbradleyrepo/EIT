@@ -68,6 +68,7 @@ function scriptsMain() {
       "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js", // import fancybox
       "node_modules/bootstrap/js/dist/modal.js", // import bootstrap modal
       "node_modules/bootstrap/js/dist/collapse.js", // import bootstrap modal
+      "node_modules/bootstrap/js/dist/tooltip.js", // import tooltip
     ],
     { sourcemaps: true }
   )
