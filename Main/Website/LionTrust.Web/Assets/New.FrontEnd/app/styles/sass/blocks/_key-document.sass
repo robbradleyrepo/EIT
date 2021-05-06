@@ -1,0 +1,34 @@
+.key-document
+    background: #F7F9FC
+    margin-top: 40px
+    padding-top: 16px
+    margin-bottom: 22px
+    padding-bottom: 42px
+    color: $black
+    text-align: center
+    @include breakpoint(desktop, up)
+        margin-top: 48px
+        padding-top: 40px
+        margin-bottom: 88px
+        padding-bottom: 48px
+        p
+            margin-bottom: 36px
+    &__link-block
+        @include breakpoint(desktop, up)
+            display: flex
+            justify-content: space-between
+    &__link
+        color: $primary
+        font-size: 12px
+        letter-spacing: 2.4px
+        text-transform: uppercase
+        display: block
+        margin-bottom: 21px
+        // white-space: nowrap
+        &:hover
+            color: $primary
+        @include breakpoint(desktop, up)
+            margin-bottom: 48px
+            i
+                display: block
+                margin-bottom: 7px
