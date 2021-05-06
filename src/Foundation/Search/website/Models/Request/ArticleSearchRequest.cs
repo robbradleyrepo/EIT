@@ -1,9 +1,7 @@
-﻿namespace LionTrust.Feature.Search.Models.API.Request
+﻿namespace LionTrust.Foundation.Search.Models.Request
 {
     using System;
     using System.Collections.Generic;
-
-    using LionTrust.Foundation.Search.Models.Request;
 
     public class ArticleSearchRequest : ITaxonomySearchRequest
     {

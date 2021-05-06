@@ -1,8 +1,10 @@
 ﻿namespace LionTrust.Feature.Article.RelatedArticleMappers
 {
     using LionTrust.Feature.Article.Models;
-    using LionTrust.Feature.Search.Models.API.Request;
+    using LionTrust.Foundation.Search.Models.ContentSearch;
+    using LionTrust.Foundation.Search.Models.Request;
     using LionTrust.Foundation.Search.Services.Interfaces;
+    using Sitecore.Abstractions;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -10,10 +12,12 @@
     public class SearchedRelatedArticles
     {
         private readonly IArticleContentSearchService searchService;
+        private readonly BaseLinkManager linkManager;
 
-        public SearchedRelatedArticles(IArticleContentSearchService searchService)
+        public SearchedRelatedArticles(IArticleContentSearchService searchService, BaseLinkManager linkManager)
         {
             this.searchService = searchService;
+            this.linkManager = linkManager;
         }
 
         public IEnumerable<RelatedArticle> Map(IArticleFilter filter, string databaseName)
@@ -30,7 +34,7 @@
                 ToDate = DateTime.MaxValue
             };
 
-            var results = searchService.GetDatedTaxonomyRelatedArticles(request);
+            var results = searchService.GetDatedTaxonomyRelatedArticles(request, result => result.OrderByDescending(hit => hit.ArticleDate));
             if (results == null || results.SearchResults == null)
             {
                 return new RelatedArticle[0];
@@ -38,7 +42,24 @@
 
             return results.SearchResults
                 .Where(sr => sr.Document != null)
-                .Select(sr => new RelatedArticle { Url = sr.Document.Url, Content = sr.Document.ArticleTitle });
+                .Select(sr => BuildArticle(sr.Document));
+        }
+
+        private RelatedArticle BuildArticle(ArticleSearchResultItem hit)
+        {
+            if (hit == null)
+            {
+                return null;
+            }
+
+            var item = hit.GetItem();
+            if (item == null)
+            {
+                return null;
+            }
+            var link = linkManager.GetItemUrl(item);
+
+            return new RelatedArticle { Content = hit.ArticleTitle, Url = link };            
         }
     }
 }

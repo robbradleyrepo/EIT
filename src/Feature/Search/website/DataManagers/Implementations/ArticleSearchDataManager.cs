@@ -8,11 +8,11 @@
     using LionTrust.Feature.Search.DataManagers.Interfaces;
     using LionTrust.Feature.Search.Models.API;
     using LionTrust.Feature.Search.Models.API.Facets;
-    using LionTrust.Feature.Search.Models.API.Request;
     using LionTrust.Feature.Search.Models.API.Response;
     using LionTrust.Foundation.Content.Repositories;
     using LionTrust.Foundation.Search.Models;
     using LionTrust.Foundation.Search.Models.ContentSearch;
+    using LionTrust.Foundation.Search.Models.Request;
     using LionTrust.Foundation.Search.Models.Response;
     using LionTrust.Foundation.Search.Services.Interfaces;
     using Sitecore.ContentSearch.Linq;

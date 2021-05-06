@@ -115,10 +115,6 @@
       <Project>{22686DC6-4E6C-4D98-84B7-C48042F5B8FC}</Project>
       <Name>LionTrust.Foundation.Search</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Search\website\LionTrust.Feature.Search.csproj">
-      <Project>{AAFFED79-3927-404C-99DB-94B8D27D774E}</Project>
-      <Name>LionTrust.Feature.Search</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

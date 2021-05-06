@@ -5,6 +5,7 @@
     using LionTrust.Feature.Article.Models;
     using LionTrust.Feature.Article.RelatedArticleMappers;
     using LionTrust.Foundation.Search.Services.Interfaces;
+    using Sitecore.Abstractions;
     using Sitecore.Mvc.Controllers;
     using System.Linq;
     using System.Web.Mvc;
@@ -13,12 +14,14 @@
     {
         private readonly IMvcContext context;
         private readonly IArticleContentSearchService contentSearchService;
+        private readonly BaseLinkManager linkManager;
         private readonly string databaseName;
 
-        public FeaturedArticlesController(IMvcContext context, IArticleContentSearchService contentSearchService, IRequestContext requestContext)
+        public FeaturedArticlesController(IMvcContext context, IArticleContentSearchService contentSearchService, IRequestContext requestContext, BaseLinkManager linkManager)
         {
             this.context = context;
             this.contentSearchService = contentSearchService;
+            this.linkManager = linkManager;
             databaseName = requestContext.SitecoreService.Database.Name;
         }
 
@@ -45,7 +48,7 @@
                 var searchParameters = context.GetRenderingParameters<IArticleFilter>();
                 if (searchParameters != null)
                 {
-                    result.RelatedArticles = new SearchedRelatedArticles(contentSearchService).Map(searchParameters, databaseName);
+                    result.RelatedArticles = new SearchedRelatedArticles(contentSearchService, linkManager).Map(searchParameters, databaseName);
                 }
             }
             

@@ -8,7 +8,7 @@
     {
         public static IEnumerable<RelatedArticle> Map(IFeaturedArticles data)
         {
-            if (data.Articles == null || !data.Articles.Any())
+            if (data == null || data.Articles == null || !data.Articles.Any())
             {
                 return new RelatedArticle[0];
             }
