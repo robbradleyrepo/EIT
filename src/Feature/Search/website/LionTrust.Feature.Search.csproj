@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.Mvc">
+      <Version>5.2.4</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="1.0.5" />
     <PackageReference Include="Microsoft.Net.Compilers" Version="2.1.0" />
     <PackageReference Include="Sitecore.ContentSearch">
@@ -88,7 +91,6 @@
     <Compile Include="Models\API\Facets\IFacetFolder.cs" />
     <Compile Include="Models\API\Facets\IFundManagerFacetFolder.cs" />
     <Compile Include="Models\API\Facets\IFundManagerFacetOption.cs" />
-    <Compile Include="Models\API\Request\ArticleSearchRequest.cs" />
     <Compile Include="Models\API\Response\ArticleFacetsResponse.cs" />
     <Compile Include="Models\API\Response\ArticleSearchResponse.cs" />
     <Compile Include="Models\ISearchGlassBase.cs" />

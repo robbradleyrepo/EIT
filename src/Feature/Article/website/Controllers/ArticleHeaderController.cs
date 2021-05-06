@@ -1,11 +1,6 @@
 ﻿using Glass.Mapper.Sc.Web.Mvc;
 using LionTrust.Feature.Article.Models;
-using LionTrust.Foundation.Legacy.Models;
 using Sitecore.Mvc.Controllers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace LionTrust.Feature.Article.Controllers

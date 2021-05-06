@@ -5,6 +5,8 @@
 
     public interface ITaxonomySearchRequest
     {
+        string DatabaseName { get; set; }
+
         DateTime FromDate { get; set; }
 
         IEnumerable<string> Funds { get; set; }

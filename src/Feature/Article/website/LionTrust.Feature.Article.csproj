@@ -73,16 +73,26 @@
     <Content Include="Views\Article\ArticleHeader.cshtml" />
     <Content Include="Views\web.config" />
     <Content Include="App_Config\Include\Feature\Feature.Article.Serialization.config" />
+    <Content Include="Views\Article\FeaturedArticles.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\ArticleHeaderController.cs" />
+    <Compile Include="Controllers\FeaturedArticlesController.cs" />
     <Compile Include="Models\IArticle.cs" />
     <Compile Include="Models\ArticleViewModel.cs" />
+    <Compile Include="Models\IArticleFilter.cs" />
     <Compile Include="Models\IArticleHeader.cs" />
+    <Compile Include="Models\IFeaturedArticles.cs" />
+    <Compile Include="Models\ILink.cs" />
     <Compile Include="Models\ITopic.cs" />
+    <Compile Include="Models\RelatedArticle.cs" />
+    <Compile Include="Models\RelatedArticlesViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RelatedArticleMappers\RelatedArticleLink.cs" />
+    <Compile Include="RelatedArticleMappers\SearchedRelatedArticles.cs" />
+    <Compile Include="RelatedArticleMappers\UrlLink.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Foundation\Analytics\website\LionTrust.Foundation.Analytics.csproj">
@@ -100,6 +110,10 @@
     <ProjectReference Include="..\..\..\Foundation\ORM\website\LionTrust.Foundation.ORM.csproj">
       <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>
       <Name>LionTrust.Foundation.ORM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Search\website\LionTrust.Foundation.Search.csproj">
+      <Project>{22686DC6-4E6C-4D98-84B7-C48042F5B8FC}</Project>
+      <Name>LionTrust.Foundation.Search</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
