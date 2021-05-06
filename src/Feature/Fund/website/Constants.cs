@@ -25,5 +25,14 @@
         {
             public const string ManagerFieldId = "{6B4AFD6F-A05F-4141-8E9D-EC71E79A3936}";
         }
+
+        public static class FundOverview
+        {
+            public const string LatestUpdateCTA_FieldName = "FundOverview_LatestUpdateCTA";
+            public const string LatestUpdateCTA_FieldId = "{624E51CE-F2EE-48A1-B49F-EB4A852B713F}";
+
+            public const string DownloadCTA_FieldName = "FundOverview_DownloadCTA";
+            public const string DownloadCTA_FieldId = "{361F876B-0D9B-4827-A7AD-F9245A3A79A2}";
+        }
     }
 }

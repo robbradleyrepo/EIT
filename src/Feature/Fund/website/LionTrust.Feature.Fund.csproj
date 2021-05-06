@@ -74,14 +74,19 @@
     <Content Include="App_Config\Include\Feature\Feature.Fund.Serialization.config" />
     <Content Include="Views\Fund\FundManagerPromo.cshtml" />
     <Content Include="Views\Fund\FundScroller.cshtml" />
+    <Content Include="Views\Fund\FundOverview.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\FundManagerPromoController.cs" />
+    <Compile Include="Controllers\FundsController.cs" />
     <Compile Include="Controllers\FundScrollerController.cs" />
     <Compile Include="Models\FundManagerViewModel.cs" />
+    <Compile Include="Models\FundOverviewViewModel.cs" />
+    <Compile Include="Models\IFundGlassBase.cs" />
     <Compile Include="Models\IFundManagerPage.cs" />
+    <Compile Include="Models\IFundOverview.cs" />
     <Compile Include="Models\IFundScroller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
