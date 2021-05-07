@@ -29,5 +29,19 @@
 
             return View("~/Views/Fund/FundOverview.cshtml", viewModel);
         }
+
+        public ActionResult FourFundStats()
+        {
+            var viewModel = new FourFundStatsViewModel();
+            var fundPageData = _context.GetPageContextItem<IFundPage>();
+            if (fundPageData != null && fundPageData.FundReference != null)
+            {
+                viewModel.Fund = fundPageData.FundReference;
+            }
+
+            viewModel.FourFundStatsComponent = _context.GetDataSourceItem<IFourFundStats>();
+
+            return View("~/Views/Fund/FourFundStats.cshtml", viewModel);
+        }
     }
 }
