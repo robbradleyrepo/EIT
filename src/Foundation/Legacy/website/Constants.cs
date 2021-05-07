@@ -98,5 +98,14 @@
             public const string ExcludeInSearchResults_FieldName = "LegacyPresentationBase_ExcludeInSearchResults";
             public const string ExcludeInSearchResults_FieldId = "{C7D0C7F7-B27C-4F96-B813-32BB19174B6A}";
         }
+
+        public static class FundOverviewData
+        {
+            public const string OverviewTitle_FieldName = "LegacyFundOverviewData_OverviewTitle";
+            public const string OverviewTitle_FieldId = "{7994E108-44FB-4349-BB80-736E783FBBB3}";
+
+            public const string OverviewText_FieldName = "LegacyFundOverviewData_OverviewText";
+            public const string OverviewText_FieldId = "{1844ECC6-C68F-4989-96D5-296C34EDE6E9}";
+        }
     }
 }
