@@ -57,6 +57,7 @@
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Models\ContentSearch\ContentSearchResults.cs" />
     <Compile Include="Models\ITaxonomyContentResult.cs" />
+    <Compile Include="Models\Request\ArticleSearchRequest.cs" />
     <Compile Include="Models\Request\ITaxonomySearchRequest.cs" />
     <Compile Include="Models\Response\ITaxonomySearchResponse.cs" />
     <Compile Include="Models\ContentSearch\ArticleSearchResultItem.cs" />

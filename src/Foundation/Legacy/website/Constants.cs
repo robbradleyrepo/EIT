@@ -2,6 +2,13 @@
 {
     public static class Constants
     {
+        public static class FundTeam
+        {
+            public const string ProfessionalsFieldId = "{34A577FE-C0A4-4ED9-A532-BC464CE91766}";
+            public const string DescriptionFieldId = "{89CF97D4-0AA1-46BC-BE4D-A1C4238923A6}";
+            public const string TeamImageFieldId = "{5B1F0984-348D-49A8-89ED-A8900742DA90}";
+        }
+
         public static class Article
         {
             public const string Title_FieldName = "LegacyArticle_Title";
