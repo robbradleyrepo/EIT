@@ -34,5 +34,20 @@
             public const string DownloadCTA_FieldName = "FundOverview_DownloadCTA";
             public const string DownloadCTA_FieldId = "{361F876B-0D9B-4827-A7AD-F9245A3A79A2}";
         }
+
+        public static class KeyFundDocuments
+        {
+            public const string Title_FieldName = "KeyFundDocuments_Title";
+            public const string Title_FieldId = "{10B9FA41-4F22-4FD2-81BE-EE105DFB4329}";
+
+            public const string Description_FieldName = "KeyFundDocuments_Description";
+            public const string Description_FieldId = "{760716CF-64D5-4C0D-9DFF-2DBB9F0D476A}";
+
+            public const string KeyDocuments_FieldName = "KeyFundDocuments_KeyDocuments";
+            public const string KeyDocuments_FieldId = "{4189960D-9AAE-42E3-8008-3EF3309002D6}";
+
+            public const string ViewAllDocumentsLabel_FieldName = "KeyFundDocuments_ViewAllDocumentsLabel";
+            public const string ViewAllDocumentsLabel_FieldId = "{99B18B81-5C97-47E1-9EDC-9F83C5F49947}";
+        }
     }
 }
