@@ -84,6 +84,7 @@
     <Content Include="Views\Navigation\QuickLinkCTA.cshtml" />
     <Content Include="Views\Navigation\QuickLinks.cshtml" />
     <Content Include="Views\Navigation\copywithcta.cshtml" />
+    <Content Include="Views\Navigation\anchor.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -92,6 +93,7 @@
     <Compile Include="Controllers\NavigationController.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Models\BreadcrumbViewModel.cs" />
+    <Compile Include="Models\IAnchor.cs" />
     <Compile Include="Models\IAnchorLinks.cs" />
     <Compile Include="Models\IBreadcrumbDetailsModel.cs" />
     <Compile Include="Models\ICopyWithCta.cs" />
