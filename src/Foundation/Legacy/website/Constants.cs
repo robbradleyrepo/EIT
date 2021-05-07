@@ -72,7 +72,7 @@
             public const string TitleFieldId = "{132E494D-67B4-4D90-B21D-AF9FF5D9C146}";
         }
 
-        public static class Fund 
+        public static class Fund
         {
             public const string FundReference_FieldName = "LegacyFundPageData_FundReference";
             public const string FundReference_FieldId = "{CCE4E679-7E94-450D-8CC1-691BDF17CA78}";
@@ -106,6 +106,42 @@
 
             public const string OverviewText_FieldName = "LegacyFundOverviewData_OverviewText";
             public const string OverviewText_FieldId = "{1844ECC6-C68F-4989-96D5-296C34EDE6E9}";
+        }
+
+        public static class Document
+        {
+            public const string DocumentName_FieldName = "LegacyDocument_DocumentName";
+            public const string DocumentName_FieldId = "{EEB8DB99-7DA8-4973-ADF7-BCF7B29EBA79}";
+
+            public const string DownloadLink_FieldName = "LegacyDocument_DownloadLink";
+            public const string DownloadLink_FieldId = "{C794210E-6107-4D69-841F-773CB9943BBA}";
+
+            public const string DocumentTypes_FieldName = "LegacyDocument_DocumentTypes";
+            public const string DocumentTypes_FieldId = "{A4A7F9DD-A218-4F33-B72A-7DC2251CCD43}";
+
+            public const string RelatedFunds_FieldName = "LegacyDocument_RelatedFunds";
+            public const string RelatedFunds_FieldId = "{8DE3F234-7880-4703-8534-02BB8320C09C}";
+
+            public const string Archived_FieldName = "LegacyDocument_Archived";
+            public const string Archived_FieldId = "{7B3E7E19-BF1C-41D8-A730-163ED548D092}";
+
+            public const string CustomSortOrder_FieldName = "LegacyDocument_CustomSortOrder";
+            public const string CustomSortOrder_FieldId = "{E75FF909-3E2A-44F6-A4A7-3B1888A752BB}";
+
+            public const string DocumentKeywords_FieldName = "LegacyDocument_DocumentKeywords";
+            public const string DocumentKeywords_FieldId = "{B16AB4AE-3D9E-4C5E-86E7-2B3EF3510877}";
+
+            public const string ArchivedDate_FieldName = "LegacyDocument_ArchivedDate";
+            public const string ArchivedDate_FieldId = "{7EE62633-2012-42E3-8C62-C6051EA0CD19}";
+        }
+
+        public static class LookupItem
+        {
+            public const string ItemName_FieldName = "LegacyLookupItem_ItemName";
+            public const string ItemName_FieldId = "{2E85DD57-4E64-4C2B-BE7C-B8F3B3C80FAC}";
+
+            public const string TagName_FieldName = "LegacyLookupItem_TagName";
+            public const string TagName_FieldId = "{9AF0C179-A4F0-4067-8416-34E584737680}";
         }
     }
 }

@@ -46,6 +46,8 @@
             public const string KeyDocuments_FieldName = "KeyFundDocuments_KeyDocuments";
             public const string KeyDocuments_FieldId = "{4189960D-9AAE-42E3-8008-3EF3309002D6}";
 
+            public const string ViewAllDocumentsLabel_FieldName = "KeyFundDocuments_ViewAllDocumentsLabel";
+            public const string ViewAllDocumentsLabel_FieldId = "{99B18B81-5C97-47E1-9EDC-9F83C5F49947}";
         }
     }
 }
