@@ -1,0 +1,11 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Navigation.Models.IAnchor
+@if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    return;
+}
+<span id="@Model.AnchorId"></span>
+@if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @Html.Glass().Editable(m => m.AnchorId)
+}

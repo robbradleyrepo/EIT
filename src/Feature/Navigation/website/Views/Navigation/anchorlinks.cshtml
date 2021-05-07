@@ -5,20 +5,47 @@
 {
     return;
 }
-<div class="anchorbox">
+<div class="page-anchor-link" id="sticky-navbar">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-xl-2">
-                <div class="anchorbox__head">
-                    @Html.Glass().Editable(m => m.Heading)
+        <div class="page-anchor">
+            <div class="page-anchor__right page-anchor__right-mobile">
+                <button class="page-anchor__title" id="open-page-anchor">
+                    <span>@Html.Glass().Editable(m => m.Heading)</span>
+                </button>
+                <div class="page-anchor__links page-anchor__links-mobile navbar">
+                    @foreach (var item in Model.Children)
+                    {
+                        using (Html.Glass().BeginEditFrame<LionTrust.Feature.Navigation.Models.IAnchor>(item, null, i => i.AnchorId))
+                        {
+                            <a href="#@item.AnchorId" class="page-anchor__link">@Html.Glass().Editable(item, i => i.AnchorName)</a>
+                        }
+                    }
                 </div>
             </div>
-            @foreach (var item in Model.Children)
-            {
-                <div class="col-6 col-md-6 col-lg-3 col-xl-2">
-                    @using (Html.Glass().BeginEditFrame<LionTrust.Feature.Navigation.Models.ILinkWithGoal>(item, null, i => i.Goal))
+            <div class="page-anchor__right">
+                <button class="page-anchor__title">
+                    <span>@Html.Glass().Editable(m => m.Heading)</span>
+                </button>
+                <div class="page-anchor__links navbar">
+                    @foreach (var item in Model.Children)
                     {
-                        @Html.Glass().AnalyticsGlass().GenerateGoalAnchor(item, i => i.PageLink, () => item.PageLink.Url, "btn btn-anchor anchorbox__btn", item.Goal, () => item.PageLink.Text)            
+                        using (Html.Glass().BeginEditFrame<LionTrust.Feature.Navigation.Models.IAnchor>(item, null, i => i.AnchorId))
+                        {
+                            <a href="#@item.AnchorId" class="page-anchor__link">@Html.Glass().Editable(item, i => i.AnchorName)</a>
+                        }
+                    }
+                </div>
+            </div>
+            @if (Model.Cta != null || Sitecore.Context.PageMode.IsExperienceEditor)
+            {
+                <div class="page-anchor__left">
+                    @using (Html.BeginRenderLinkWithGoal(Model, m => m.Cta, Model.GoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary display-inline-block" } }, isEditable: true))
+                    {
+                        if (Model.Cta != null)
+                        {
+                            @Model.Cta.Text
+                        }                       
+                        <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>                
                     }
                 </div>
             }
