@@ -1,0 +1,33 @@
+﻿@using System.Collections.Specialized;
+@model LionTrust.Feature.Fund.Models.IKeyFundDocuments
+<section class="key-document">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <h3 class="h3 text-center">
+                    @Html.Glass().Editable(Model, m => m.Title)
+                </h3>
+                <p>
+                    @Html.Glass().Editable(Model, m => m.Description)
+                </p>
+                @if (Model.KeyDocuments != null)
+                {
+                    <div class="key-document__link-block">
+                        @foreach (var document in Model.KeyDocuments)
+                        {
+                            using (Html.Glass().BeginRenderLink(document, m => m.DocumentLink, new NameValueCollection { { "class", "key-document__link" } }, isEditable: true))
+                            {
+                                <i class="icon-file"></i>@:Download @Html.Glass().Editable(document, m => m.DocumentName)
+                            }
+                        }
+                    </div>
+                }
+                <div class="text-center key-document__button">
+                    <a href="#" class="btn btn-primary-forward">
+                        @Html.Glass().Editable(Model, m => m.ViewAllDocumentsLabel) <i class="icon-arrow-right animate-arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
