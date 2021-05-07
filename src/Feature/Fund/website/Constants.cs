@@ -34,5 +34,23 @@
             public const string DownloadCTA_FieldName = "FundOverview_DownloadCTA";
             public const string DownloadCTA_FieldId = "{361F876B-0D9B-4827-A7AD-F9245A3A79A2}";
         }
+
+        public static class FourFundStats
+        {
+            public const string FundLaunchDateLabel_FieldName = "FourFundStats_FundLaunchDateLabel";
+            public const string FundLaunchDateLabel_FieldId = "{41A6502D-CE3F-4938-9746-1B6D0EB9A057}";
+
+            public const string FundSizeLabel_FieldName = "FourFundStats_FundSizeLabel";
+            public const string FundSizeLabel_FieldId = "{3DC4DB39-AF37-4BDC-B8A8-7C06458BB9B5}";
+
+            public const string NumberOfHoldingsLabel_FieldName = "FourFundStats_NumberOfHoldingsLabel";
+            public const string NumberOfHoldingsLabel_FieldId = "{4D0F2400-C512-4457-BBE4-AFE776D25FEA}";
+
+            public const string ManagedByCurrentTeamForLabel_FieldName = "FourFundStats_ManagedByCurrentTeamForLabel";
+            public const string ManagedByCurrentTeamForLabel_FieldId = "{8E7A0A72-4F42-4FC3-8C5F-BB44152FD189}";
+
+            public const string ManagedByCurrentTeamForValue_FieldName = "FourFundStats_ManagedByCurrentTeamForValue";
+            public const string ManagedByCurrentTeamForValue_FieldId = "{B141A98C-B927-4C25-AA97-6314C24A974F}";
+        }
     }
 }

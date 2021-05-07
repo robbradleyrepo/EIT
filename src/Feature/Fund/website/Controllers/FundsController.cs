@@ -9,25 +9,39 @@
 
     public class FundsController : SitecoreController
     {
-        private readonly IMvcContext context;
+        private readonly IMvcContext _context;
 
         public FundsController(IMvcContext context)
         {
-            this.context = context;
+            this._context = context;
         }
 
         public ActionResult FundOverview()
         {
             var viewModel = new FundOverviewViewModel();
-            var fundPageData = context.GetPageContextItem<IFundPage>();
+            var fundPageData = _context.GetPageContextItem<IFundPage>();
             if (fundPageData != null && fundPageData.FundReference != null)
             {
                 viewModel.FundPage = fundPageData.FundReference;
             }
 
-            viewModel.OverviewComponent = context.GetDataSourceItem<IFundOverview>();
+            viewModel.OverviewComponent = _context.GetDataSourceItem<IFundOverview>();
 
             return View("~/Views/Fund/FundOverview.cshtml", viewModel);
+        }
+
+        public ActionResult FourFundStats()
+        {
+            var viewModel = new FourFundStatsViewModel();
+            var fundPageData = _context.GetPageContextItem<IFundPage>();
+            if (fundPageData != null && fundPageData.FundReference != null)
+            {
+                viewModel.Fund = fundPageData.FundReference;
+            }
+
+            viewModel.FourFundStatsComponent = _context.GetDataSourceItem<IFourFundStats>();
+
+            return View("~/Views/Fund/FourFundStats.cshtml", viewModel);
         }
     }
 }
