@@ -5,8 +5,6 @@ export default () => {
   const sticky = navbar.offset()?.top
   const offset = navbar.outerHeight();
 
-  console.log('navbar',navbar);
-
   function stickyNav() {
     if (window.pageYOffset >= sticky) {
       $("#sticky-navbar").addClass("sticky");
