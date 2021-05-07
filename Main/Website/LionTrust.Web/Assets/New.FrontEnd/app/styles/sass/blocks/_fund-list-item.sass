@@ -1,0 +1,33 @@
+.fund-item-list
+    color: $black
+    margin-top: 40px
+    padding-bottom: 20px
+    border-bottom: 1px solid #4148551A
+    &__title
+        font-weight: 500
+        font-size: 18px
+        line-height: 28px
+    &__badge
+        margin: 10px 0 15px
+        @include breakpoint(desktop, up)
+            display: inline-block
+            margin: 0
+    &__links
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 15px
+        @include breakpoint(desktop, up)
+            margin: 0
+    .btn
+        display: block
+
+.link-gray
+    @extend .btn-unset
+    @extend .link-styles
+    color: $black
+    letter-spacing: 1.2px
+    padding: 0
+    line-height: 17px
+    i.icon-folder
+        font-size: 13px
