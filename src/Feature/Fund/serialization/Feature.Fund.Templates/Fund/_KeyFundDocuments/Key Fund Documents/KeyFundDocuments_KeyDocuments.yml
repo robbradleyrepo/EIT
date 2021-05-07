@@ -1,16 +1,16 @@
 ﻿---
-ID: "a4a7f9dd-a218-4f33-b72a-7dc2251ccd43"
-Parent: "d20a644f-ee8e-475d-9727-1e542ce883d3"
+ID: "4189960d-9aae-42e3-8008-3ef3309002d6"
+Parent: "fade4948-257b-4376-86fe-6e53fc715e00"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Foundation/Legacy/_LegacyDocument/Document content/DocumentTypes
+Path: /sitecore/templates/Feature/Fund/_KeyFundDocuments/Key Fund Documents/KeyFundDocuments_KeyDocuments
 DB: master
 SharedFields:
 - ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
   Hint: Source
-  Value: /sitecore/content/Global/Document Types
+  Value: Datasource=/sitecore/content/Funds&IncludeTemplatesForDisplay=Folder,SharedDocuments,DocumentFolder,Fund,Document&IncludeTemplatesForSelection=Document
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: Multilist
+  Value: Treelist
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 300
@@ -19,10 +19,10 @@ Languages:
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Document types
+    Value: Key Documents
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20141001T141735
+      Value: 20210507T085100Z
