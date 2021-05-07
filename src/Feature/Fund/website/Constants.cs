@@ -25,5 +25,18 @@
         {
             public const string ManagerFieldId = "{6B4AFD6F-A05F-4141-8E9D-EC71E79A3936}";
         }
+
+        public static class KeyFundDocuments
+        {
+            public const string Title_FieldName = "KeyFundDocuments_Title";
+            public const string Title_FieldId = "{10B9FA41-4F22-4FD2-81BE-EE105DFB4329}";
+
+            public const string Description_FieldName = "KeyFundDocuments_Description";
+            public const string Description_FieldId = "{760716CF-64D5-4C0D-9DFF-2DBB9F0D476A}";
+
+            public const string KeyDocuments_FieldName = "KeyFundDocuments_KeyDocuments";
+            public const string KeyDocuments_FieldId = "{4189960D-9AAE-42E3-8008-3EF3309002D6}";
+
+        }
     }
 }

@@ -74,6 +74,7 @@
     <Content Include="App_Config\Include\Feature\Feature.Fund.Serialization.config" />
     <Content Include="Views\Fund\FundManagerPromo.cshtml" />
     <Content Include="Views\Fund\FundScroller.cshtml" />
+    <Content Include="Views\Fund\KeyFundDocuments.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -83,6 +84,7 @@
     <Compile Include="Models\FundManagerViewModel.cs" />
     <Compile Include="Models\IFundManagerPage.cs" />
     <Compile Include="Models\IFundScroller.cs" />
+    <Compile Include="Models\IKeyFundDocuments.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
