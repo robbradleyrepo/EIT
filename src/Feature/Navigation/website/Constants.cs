@@ -4,6 +4,13 @@
 
     public static class Constants
     {
+        public static class Anchor
+        {
+            public const string AnchorFieldId = "{98B43E92-3166-4986-A181-E6EF91093454}";
+
+            public const string AnchorNameFieldId = "{AA0A9DE9-8D65-4233-A9D5-DFAB02BB9B5A}";
+        }
+
         public static class CopyWithCta
         {
             public const string CopyFieldId = "{D7CD16BD-DBB5-44D9-AB26-8BBB1C9B7C2A}";
@@ -149,6 +156,8 @@
         public static class AnchorLinks
         {
             public const string HeadingFieldId = "{2DFCB4D4-7986-47A1-A0F3-79E139F3F976}";
+            public const string CtaFieldId = "{8D463FE0-E08E-4BE8-88F5-727ACEF0E1C8}";
+            public const string CtaGoalFieldId = "{632237D3-8942-415E-AB0D-3F6051E31D63}";
         }
 
         public static class LinkWithGoal

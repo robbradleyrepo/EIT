@@ -13,7 +13,7 @@
     public class ArticleContentSearchRepository : IArticleContentSearchRepository
     {
         // Doesn't need facet counts initially
-        public ContentSearchResults GetArticleSearchResultItems(Expression<Func<ArticleSearchResultItem, bool>> predicate, int skip, int take, string database = "web")
+        public ContentSearchResults GetArticleSearchResultItems(Expression<Func<ArticleSearchResultItem, bool>> predicate, int skip, int take, string database = "web", Func<IQueryable<ArticleSearchResultItem>, IQueryable<ArticleSearchResultItem>> sort = null)
         {
             using (IProviderSearchContext context = ContentSearchManager
                                                             .GetIndex($"liontrust_article_{database}_index")
@@ -22,7 +22,17 @@
                 var query = context.GetQueryable<ArticleSearchResultItem>()
                                  .Where(predicate);
                 
+                if (sort != null)
+                {
+                    query = sort(query);
+                }
+                
                 var results = query.GetResults();
+                
+                if (results == null)
+                {
+                    return null;
+                }
 
                 return new ContentSearchResults { SearchResults = results.Hits.Skip(skip).Take(take), TotalResults = results.TotalSearchResults };
             }

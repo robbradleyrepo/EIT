@@ -33,7 +33,7 @@
                                                                                             (current, category) => current
                                                                                                                     .Or(item => item.ArticleCategory == category));
 
-                taxonomyFilter = taxonomyFilter.And(fundCategoryPredicate);
+                taxonomyFilter = taxonomyFilter.Or(fundCategoryPredicate);
             }
 
             if (articleSearchRequest.Funds != null && articleSearchRequest.Funds.Any())
@@ -43,10 +43,10 @@
                                                                           (current, category) => current
                                                                                                   .Or(item => item.ArticleFund == category));
 
-                taxonomyFilter = taxonomyFilter.And(fundPredicate);
+                taxonomyFilter = taxonomyFilter.Or(fundPredicate);
             }
 
-            if (articleSearchRequest.FundManagers != null && articleSearchRequest.FundManagers.Any())
+            if (articleSearchRequest.FundManagers != null && articleSearchRequest.FundManagers. Any())
             {
                 var managerPredicate = PredicateBuilder.False<ArticleSearchResultItem>();
                 managerPredicate = articleSearchRequest
@@ -56,7 +56,7 @@
                                                                                 => current
                                                                                      .Or(item => item.ArticleAuthors.Contains(manager)));
 
-                taxonomyFilter = taxonomyFilter.And(managerPredicate);
+                taxonomyFilter = taxonomyFilter.Or(managerPredicate);
             }
 
             predicate = predicate.And(taxonomyFilter);
@@ -69,14 +69,14 @@
                 searchTermPredicate = searchTermPredicate.Or(item => item.ArticleTitle.Contains(articleSearchRequest.SearchTerm));
                 searchTermPredicate = searchTermPredicate.Or(item => item.ArticleSubtitle.Contains(articleSearchRequest.SearchTerm));
 
-                predicate = predicate.And(searchTermPredicate);
+                predicate = predicate.Or(searchTermPredicate);
             }
 
             return predicate;
         }
 
 
-        public ContentSearchResults GetDatedTaxonomyRelatedArticles(ITaxonomySearchRequest articleSearchRequest)
+        public ContentSearchResults GetDatedTaxonomyRelatedArticles(ITaxonomySearchRequest articleSearchRequest, Func<IQueryable<ArticleSearchResultItem>, IQueryable<ArticleSearchResultItem>> sort = null)
         {
             var predicate = PredicateBuilder.True<ArticleSearchResultItem>();
             var language = Sitecore.Context.Language?.Name ?? "en";
@@ -84,7 +84,7 @@
 
             predicate = this.PopoulateDatedTaxonomyPredicate(predicate, articleSearchRequest);
 
-            return _articleContentSearchRepository.GetArticleSearchResultItems(predicate, articleSearchRequest.Skip, articleSearchRequest.Take);
+            return _articleContentSearchRepository.GetArticleSearchResultItems(predicate, articleSearchRequest.Skip, articleSearchRequest.Take, articleSearchRequest.DatabaseName, sort);
         }
     }
 }

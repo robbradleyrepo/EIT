@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{22C847F8-4F9E-4804-BF0A-FB610E5D0F37}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LionTrust.Feature.Article.Tests</RootNamespace>
+    <AssemblyName>LionTrust.Feature.Article.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RelatedArticlesMappers\RelatedArticleLinkShould.cs" />
+    <Compile Include="RelatedArticlesMappers\SearchedRelatedArticlesShould.cs" />
+    <Compile Include="RelatedArticlesMappers\UrlLinkShould.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Foundation\Content\website\LionTrust.Foundation.Content.csproj">
+      <Project>{F8F55034-FA55-4D27-B115-0AB4EEB9A0A8}</Project>
+      <Name>LionTrust.Foundation.Content</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Foundation\Legacy\website\LionTrust.Foundation.Legacy.csproj">
+      <Project>{43ee972b-2002-4719-a878-a66a99c42c40}</Project>
+      <Name>LionTrust.Foundation.Legacy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Foundation\ORM\website\LionTrust.Foundation.ORM.csproj">
+      <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>
+      <Name>LionTrust.Foundation.ORM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Foundation\Search\website\LionTrust.Foundation.Search.csproj">
+      <Project>{22686DC6-4E6C-4D98-84B7-C48042F5B8FC}</Project>
+      <Name>LionTrust.Foundation.Search</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Carousel\website\LionTrust.Feature.Carousel.csproj">
+      <Project>{21D0AF18-11D2-474C-8DC9-CA4E8ABF5F47}</Project>
+      <Name>LionTrust.Feature.Carousel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\website\LionTrust.Feature.Article.csproj">
+      <Project>{C3CEB6CA-3590-43F6-8DC2-50A1176180A5}</Project>
+      <Name>LionTrust.Feature.Article</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Moq">
+      <Version>4.16.1</Version>
+    </PackageReference>
+    <PackageReference Include="NUnit">
+      <Version>3.13.1</Version>
+    </PackageReference>
+    <PackageReference Include="NUnit3TestAdapter">
+      <Version>3.17.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

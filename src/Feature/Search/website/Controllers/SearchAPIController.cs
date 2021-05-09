@@ -20,7 +20,7 @@
         /// Gets article facets that will be used for filtering.
         /// </summary>
         /// <param name="articleListingFacetConfig">Guid of the articleListingFacetConfig to use in multi site scenario - default is used if none set</param>
-        /// <returns>A list of articles.</returns>
+        /// <returns>A list of articles.</returns>        
         public ActionResult GetArticleListingFacets(string articleListingFacetConfig)
         {
             Guid config;
@@ -38,9 +38,9 @@
             }
 
             var response = _articleListingDataManager.GetArticleFilterFacets(config);
-            if (response.StatusCode != 200)
+            if (response == null)
             {
-                return new HttpStatusCodeResult(response.StatusCode, response.Message);
+                return new HttpNotFoundResult();
             }
 
             return Json(response, JsonRequestBehavior.AllowGet);

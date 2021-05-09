@@ -187,6 +187,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionTrust.Feature.Fund", "s
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionTrust.Feature.Carousel.Tests", "src\Feature\Carousel\tests\LionTrust.Feature.NavigationTests\LionTrust.Feature.Carousel.Tests.csproj", "{2F5DE07D-5469-4D23-B03D-9F915E73DB45}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionTrust.Feature.Article.Tests", "src\Feature\Article\tests\LionTrust.Feature.Article.Tests\LionTrust.Feature.Article.Tests.csproj", "{22C847F8-4F9E-4804-BF0A-FB610E5D0F37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -369,6 +371,10 @@ Global
 		{2F5DE07D-5469-4D23-B03D-9F915E73DB45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F5DE07D-5469-4D23-B03D-9F915E73DB45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F5DE07D-5469-4D23-B03D-9F915E73DB45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22C847F8-4F9E-4804-BF0A-FB610E5D0F37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22C847F8-4F9E-4804-BF0A-FB610E5D0F37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22C847F8-4F9E-4804-BF0A-FB610E5D0F37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22C847F8-4F9E-4804-BF0A-FB610E5D0F37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -456,6 +462,7 @@ Global
 		{BB571804-F86D-4B0D-AD3C-CDE78094D4BC} = {60DA3F20-DEED-4580-AE38-A296D76ADE79}
 		{1E4C852F-6C77-4F15-B102-19F6784D0492} = {BB571804-F86D-4B0D-AD3C-CDE78094D4BC}
 		{2F5DE07D-5469-4D23-B03D-9F915E73DB45} = {EB3652D3-E4E8-44BF-90AE-2459AD5E1DAB}
+		{22C847F8-4F9E-4804-BF0A-FB610E5D0F37} = {45C9FFA1-E6F4-488F-9787-B1BB77980D53}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {845F548C-FD53-4C61-AB7F-953C2225A13B}
