@@ -1,0 +1,54 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Foundation.Analytics.Goals
+@model LionTrust.Feature.Navigation.Models.IAnchorLinks
+@if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    return;
+}
+<div class="page-anchor-link" id="sticky-navbar">
+    <div class="container">
+        <div class="page-anchor">
+            <div class="page-anchor__right page-anchor__right-mobile">
+                <button class="page-anchor__title" id="open-page-anchor">
+                    <span>@Html.Glass().Editable(m => m.Heading)</span>
+                </button>
+                <div class="page-anchor__links page-anchor__links-mobile navbar">
+                    @foreach (var item in Model.Children)
+                    {
+                        using (Html.Glass().BeginEditFrame<LionTrust.Feature.Navigation.Models.IAnchor>(item, null, i => i.AnchorId))
+                        {
+                            <a href="#@item.AnchorId" class="page-anchor__link">@Html.Glass().Editable(item, i => i.AnchorName)</a>
+                        }
+                    }
+                </div>
+            </div>
+            <div class="page-anchor__right">
+                <button class="page-anchor__title">
+                    <span>@Html.Glass().Editable(m => m.Heading)</span>
+                </button>
+                <div class="page-anchor__links navbar">
+                    @foreach (var item in Model.Children)
+                    {
+                        using (Html.Glass().BeginEditFrame<LionTrust.Feature.Navigation.Models.IAnchor>(item, null, i => i.AnchorId))
+                        {
+                            <a href="#@item.AnchorId" class="page-anchor__link">@Html.Glass().Editable(item, i => i.AnchorName)</a>
+                        }
+                    }
+                </div>
+            </div>
+            @if (Model.Cta != null || Sitecore.Context.PageMode.IsExperienceEditor)
+            {
+                <div class="page-anchor__left">
+                    @using (Html.BeginRenderLinkWithGoal(Model, m => m.Cta, Model.GoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary display-inline-block" } }, isEditable: true))
+                    {
+                        if (Model.Cta != null)
+                        {
+                            @Model.Cta.Text
+                        }                       
+                        <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>                
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</div>

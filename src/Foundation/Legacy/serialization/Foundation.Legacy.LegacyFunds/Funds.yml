@@ -1,0 +1,27 @@
+﻿---
+ID: "92aba568-f063-4316-a3b3-27aa0b4f154a"
+Parent: "0de95ae4-41ab-4d01-9eb0-67441b7c2450"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/Funds
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{562A4F6C-EE2C-40F7-8701-DB0A0D8B7E3D}"
+- ID: "dec8d2d5-e3cf-48b6-a653-8e69e2716641"
+  Hint: __Security
+  Value: |
+    au|sitecore\JackH|pe|+item:rename|+item:write|+item:read|+item:create|pd|+item:rename|+item:write|+item:read|+item:create|
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140911T122158
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

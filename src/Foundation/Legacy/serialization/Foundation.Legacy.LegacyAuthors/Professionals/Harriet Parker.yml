@@ -1,0 +1,30 @@
+﻿---
+ID: "e8a37df3-39a5-4c66-915f-779142411a1a"
+Parent: "55fd6306-d4db-49ba-8471-07bdc35a1727"
+Template: "a6462a09-c446-45a5-9238-bdff5170602b"
+Path: /sitecore/content/Professionals/Harriet Parker
+DB: master
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{906A4E09-A8F8-4648-825D-EC1FE2516355}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170403T100254Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "898ac194-d89a-4cbd-957b-afaf99f21a9d"
+      Hint: LegacyProfessional_Thumbnail
+      Value: |
+        <image mediaid="{1FD64537-2E10-445F-B7CF-472D915F2D00}" />
+    - ID: "b1d2851d-fe49-4ee3-8fc2-32ecf70cb3ae"
+      Hint: LegacyProfessional_FullName
+      Value: Harriet Parker

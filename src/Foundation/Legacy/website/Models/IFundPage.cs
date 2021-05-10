@@ -5,7 +5,7 @@
 
     public interface IFundPage : IHeroHomePageData
     {
-        [SitecoreField(Constants.Fund.FundReference_FieldId, SitecoreFieldType.Droplink, "Fund page data")]
+        [SitecoreField(Constants.FundPage.FundReference_FieldId, SitecoreFieldType.Droplink, "Fund page data")]
         IFund FundReference { get; set; }
     }
 }

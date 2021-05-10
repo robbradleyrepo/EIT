@@ -1,0 +1,33 @@
+.hero-manager-link
+    display: inline-block
+    margin: 0 auto
+    margin-bottom: 20px
+    @include breakpoint(desktop, up)
+        margin-bottom: 56px
+    &__link
+        display: inline-block
+        margin-right: 70px
+        &:last-child
+            margin-right: 0
+        @include breakpoint(desktop, up)
+            margin-right: 130px
+    &__img
+        border-radius: 50%
+        width: 25px
+        height: 25px
+        margin-bottom: 10px
+        @include breakpoint(desktop, up)
+            width: 50px
+            height: 50px
+            margin-bottom: 15px
+    &__name
+        font-size: 10px
+        font-weight: 500
+        display: block
+        letter-spacing: 2.4px
+        text-transform: uppercase
+        span
+            display: block
+            @include breakpoint(desktop, up)
+                display: inline
+                font-size: 12px

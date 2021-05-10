@@ -1,0 +1,33 @@
+﻿---
+ID: "c578f8ba-7001-4285-8d55-b913f21e60e0"
+Parent: "ad887c47-c4ee-48cb-a429-7ff13fd09094"
+Template: "99f8905d-4a87-4eb8-9f8b-a9bebfb3add6"
+Path: "/sitecore/layout/Renderings/Feature/Navigation/BC001 - Copy with CTA"
+DB: master
+SharedFields:
+- ID: "51b435bc-f7b9-478a-9c51-52916af96ff5"
+  Hint: Path
+  Value: /views/navigation/copywithcta.cshtml
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "site:copywithcta"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{F2B1358D-7C21-4C39-94CC-D5EFBBA79071}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04437558-ac18-42cb-ab21-1243a66abe67"
+      Hint: Supports Local Datasource
+      Type: Checkbox
+      Value: 1
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210429T094204Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

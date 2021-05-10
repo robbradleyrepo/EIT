@@ -1,5 +1,6 @@
 ﻿using Glass.Mapper.Sc.Configuration.Attributes;
 using Glass.Mapper.Sc.Fields;
+using LionTrust.Foundation.Design;
 using Sitecore.Data;
 
 namespace LionTrust.Feature.Banner.Models
@@ -20,7 +21,7 @@ namespace LionTrust.Feature.Banner.Models
         [SitecoreField("LeadBanner_BackgroundImage")]
         public virtual Image BackgroundImage { get; set; }
 
-        [SitecoreField("LeadBanner_TextAlign")]
+        [SitecoreField(Banner.Constants.LeadBanner.LeadBannerTextAlignFieldId)]
         public virtual ILookupValue TextAlign { get; set; }
 
         public string TextAlignValue 

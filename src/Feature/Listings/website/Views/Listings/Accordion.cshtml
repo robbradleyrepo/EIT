@@ -22,9 +22,9 @@
 
                 using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/Accordion Row", item.Id.ToString()))
                 {
-                    <div class="card accordion__card">
-                        <div class="card-header accordion__header">
-                            <div class="card-link accordion__link @collapsedClass"
+                    <div class="accordion__card">
+                        <div class="accordion__header">
+                            <div class="accordion__link @collapsedClass"
                                  data-toggle="collapse"
                                  data-target="#@rowName"
                                  aria-expanded="@isCollapsed"

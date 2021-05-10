@@ -72,14 +72,12 @@
     <Content Include="App_Config\Include\Feature\Feature.Promo.Serialization.config" />
     <Content Include="Views\Promo\ImageCTAPromo.cshtml" />
     <Content Include="Views\Promo\PodcastPromo.cshtml" />
-    <Content Include="Views\Promo\_PodcastPromoLink.cshtml" />
+    <Content Include="Views\Promo\_PodcastLink.cshtml" />
     <Content Include="Views\Promo\ArticleScroller.cshtml" />
-    <Content Include="Views\Promo\ScrollerPromos\_VideoPromo.cshtml" />
-    <Content Include="Views\Promo\ScrollerPromos\_FundUpdatePromo.cshtml" />
-    <Content Include="Views\Promo\ScrollerPromos\_FundManagerViewPromo.cshtml" />
-    <Content Include="Views\Promo\ScrollerPromos\_MagazineReportsPromo.cshtml" />
-    <Content Include="Views\Promo\ScrollerPromos\_PodcastPromo.cshtml" />
-    <Content Include="Views\Promo\ScrollerPromos\_PodcastPromoLink.cshtml" />
+    <Content Include="Views\Promo\VideoPromo.cshtml" />
+    <Content Include="Views\Promo\FundUpdatePromo.cshtml" />
+    <Content Include="Views\Promo\FundManagerViewPromo.cshtml" />
+    <Content Include="Views\Promo\MagazineReportsPromo.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -88,6 +86,7 @@
     <Compile Include="Models\ArticleScrollerViewModel.cs" />
     <Compile Include="Models\IArticlePromo.cs" />
     <Compile Include="Models\IArticleScroller.cs" />
+    <Compile Include="Extensions.cs" />
     <Compile Include="Models\IImageCTAPromo.cs" />
     <Compile Include="Models\IImagePromo.cs" />
     <Compile Include="Models\IPodcastLink.cs" />
@@ -113,10 +112,6 @@
     <ProjectReference Include="..\..\..\Foundation\ORM\website\LionTrust.Foundation.ORM.csproj">
       <Project>{5e91a7d9-8e93-44fd-857f-f9ce145b6022}</Project>
       <Name>LionTrust.Foundation.ORM</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Foundation\SitecoreExtensions\website\LionTrust.Foundation.SitecoreExtensions.csproj">
-      <Project>{a57b01c5-75ad-47c0-beda-93079fd37317}</Project>
-      <Name>LionTrust.Foundation.SitecoreExtensions</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

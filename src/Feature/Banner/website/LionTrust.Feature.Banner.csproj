@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4A438B76-4E52-498F-BA0B-57D43C598973}</ProjectGuid>
+    <ProjectGuid>{B100E90C-5AD3-4EBF-A614-6C3F30D8C0DA}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -71,15 +71,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
-    <Content Include="App_Config\Include\Feature\Feature.Banner.Serialization.config" />
+    <Content Include="Views\Banner\HomepageLeadBanner.cshtml" />
     <Content Include="Views\Banner\LeadBanner.cshtml" />
     <Content Include="Views\Banner\PromoBanner.cshtml" />
+    <Content Include="App_Config\Include\Feature\Feature.Banner.Serialization.config" />
+    <Content Include="Views\Banner\BannerWithIcons.cshtml" />
+    <Content Include="Views\Banner\BannerWithSlider.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Models\IBannerGlassBase.cs" />
-    <Compile Include="Models\ILookupValue.cs" />
+    <Compile Include="Models\IBannerWithSlider.cs" />
+    <Compile Include="Models\IBannerWithIcons.cs" />
+    <Compile Include="Models\IHomepageLeadBannerModel.cs" />
+    <Compile Include="Models\IIconWithText.cs" />
+    <Compile Include="Models\IImageWithTitleAndText.cs" />
     <Compile Include="Models\IPromoBanner.cs" />
     <Compile Include="Models\LeadBannerModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,6 +99,10 @@
     <ProjectReference Include="..\..\..\Foundation\Content\website\LionTrust.Foundation.Content.csproj">
       <Project>{f8f55034-fa55-4d27-b115-0ab4eeb9a0a8}</Project>
       <Name>LionTrust.Foundation.Content</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Design\website\LionTrust.Foundation.Design.csproj">
+      <Project>{7F86DD63-BE79-4107-804A-514DCA76E01E}</Project>
+      <Name>LionTrust.Foundation.Design</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\ORM\website\LionTrust.Foundation.ORM.csproj">
       <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>

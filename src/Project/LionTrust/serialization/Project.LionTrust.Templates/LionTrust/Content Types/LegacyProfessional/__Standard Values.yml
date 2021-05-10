@@ -17,7 +17,7 @@ Languages:
       Value: |
         sitecore\admin
     - ID: "a6306774-24ca-4250-99ad-48bfd132adcb"
-      Hint: ShortBio
+      Hint: LegacyProfessional_ShortBio
       Value: |
         <ul>
             <li>Item 1</li>
@@ -26,5 +26,5 @@ Languages:
             <li>Item 4</li>
         </ul>
     - ID: "b1d2851d-fe49-4ee3-8fc2-32ecf70cb3ae"
-      Hint: FullName
+      Hint: LegacyProfessional_FullName
       Value: $name

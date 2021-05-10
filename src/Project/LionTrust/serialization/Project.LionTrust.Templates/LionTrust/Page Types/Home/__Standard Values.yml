@@ -9,7 +9,8 @@ SharedFields:
   Hint: __Masters
   Type: TreelistEx
   Value: |
-    {79659D0C-8E6C-47B5-B5D2-40AB5BEC74CD}
+    {C1D35F9A-A7D0-47F9-903D-5ED33A15A795}
+    {EC2BBBDD-7D39-4598-A98C-4BA5E4163A07}
     {4C4E3993-F6D4-4040-A3FD-E5DEB438BFF8}
     {5CBA079C-D5AD-4342-B6F5-DA1D08D72F47}
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
@@ -35,9 +36,6 @@ Languages:
   Versions:
   - Version: 1
     Fields:
-    - ID: "05aba786-3d35-479b-ada4-ecee716ad9f5"
-      Hint: FindUsLabel
-      Value: Find Us
     - ID: "15999105-600f-43fb-b206-ed93304a98e6"
       Hint: YouAreViewingLabel
       Value: You are viewing as a
@@ -48,18 +46,12 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\Admin
-    - ID: "6a0f17ab-b448-474a-a275-5ee5f12f8d10"
-      Hint: SubscribeNewsletterLabel
-      Value: Subscribe to our weekly newsletter
     - ID: "960fe422-ace9-47e8-9e18-5d7e5ffa218f"
       Hint: Menu Title
       Value: $name
-    - ID: "a38b21b3-2bd4-4bab-9808-41319e81a763"
-      Hint: SubscribeCTALabel
-      Value: Sign Up
-    - ID: "ca58e5ab-3275-422c-b18f-79d43dcc58f1"
-      Hint: GoogleMapsCTALabel
-      Value: google maps
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: $name
     - ID: "d20415aa-976a-425f-a853-dd0fd845d47c"
       Hint: BrowserTitle
       Value: $name
@@ -67,15 +59,6 @@ Languages:
       Hint: ShowInNavigation
       Type: Checkbox
       Value: 0
-    - ID: "e168f770-7271-4dc4-9242-72805145acdc"
-      Hint: Copyright
-      Value: "Copyright © Liontrust Asset Management PLC 2001-2021"
     - ID: "e4a364e6-2e1a-4854-abd8-6a02acf832cd"
       Hint: ChangeLabel
       Value: Change
-    - ID: "e4ca4419-efee-45a0-bef9-2f611004d7a7"
-      Hint: EmailCTALabel
-      Value: CONTACT US
-    - ID: "eaf0ce55-4593-4771-924b-e078f3aa3407"
-      Hint: GetInTouchLabel
-      Value: Get in touch

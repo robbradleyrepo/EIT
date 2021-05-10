@@ -1,0 +1,198 @@
+﻿---
+ID: "80bfaa5a-ccd9-4d0a-98a9-3f78b62488aa"
+Parent: "92aba568-f063-4316-a3b3-27aa0b4f154a"
+Template: "dadec9bf-b6e8-4e04-a082-f4eb20b76ff9"
+Path: /sitecore/content/Funds/Income Fund
+DB: master
+BranchID: "562a4f6c-ee2c-40f7-8701-db0a0d8b7e3d"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Business/32x32/currency_pound.png
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{9F34A121-9D36-4EB8-9670-FEAA6EAA981C}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "13671185-84c9-49e4-8799-6135f386f3e5"
+      Hint: FiveYears
+      Value: 27.411%
+    - ID: "1844ecc6-c68f-4989-96d5-296c34ede6e9"
+      Hint: LegacyFundOverviewData_OverviewText
+      Value: |
+        <p><span style="background: white; color: #222222;">The Fund, which has been managed by Robin Geffen since launch in December 2002, aims to deliver a net target yield of at least the net yield of the FTSE All Share index every year, with the potential for long term (5 years or more) capital growth. The Fund, which has the ability to invest up to 20% in income opportunities outside the UK, seeks companies that offer the most attractive dividend growth potential by focusing on those with strong free cash flow, balance sheets and earnings. The portfolio is dividend into three distinct silos to negate any major style bias: steady eddies, hidden fruits and tactical plays.</span></p>
+    - ID: "1d2ca9ff-d734-4e78-8459-3b94da9723bf"
+      Hint: LegacyBenchmarkFundData_BenchmarkYear4
+      Value: 11.941%
+    - ID: "205ed0c5-d7b3-413a-8937-4b728937efef"
+      Hint: FundTeam
+      Value: "{7DD7CE76-EF32-471F-B075-79EFFF994691}"
+    - ID: "221e703d-5ba7-4141-a98c-b76d2e5a663a"
+      Hint: RiskWarning
+      Value: |
+        <h4>Key Risks&nbsp;</h4>
+        <br>
+        <strong>Past performance is not a guide to future performance.&nbsp;</strong>Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital.&nbsp;Investment in funds managed by the Global Equity (GE) team may involve investment in smaller companies - these stocks may be less liquid and the price swings greater than those in, for example, larger companies. Investment in funds managed by the GE team may involve foreign currencies and may be subject to fluctuations in value due to movements in exchange rates. The team may invest in emerging markets/soft currencies or in financial derivative instruments, both of which may have the effect of increasing volatility. Some of the funds managed by the GE team hold a concentrated portfolio of stocks, meaning that if the price of one of these stocks should move significantly, this may have a notable effect on the value of that portfolio.<br>
+        <br>
+        <h4>Disclaimer</h4>
+        <p>
+        <br>
+        The information and opinions provided should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.&nbsp;</p>
+        <p>Source: Financial Express. Total return, bid-to-bid. This page is showing performance data and information for an income producing share class. Please go to our&nbsp;<a href="~/link.aspx?_id=9E780821321E4C3496DFD663882802BB&amp;_z=z">Interactive Fund Centre</a>&nbsp;for performance data and information on the Fund&rsquo;s other share classes.<span style="font-size: 1.5rem;"></span></p>
+        <p>&copy; $currentYear$ Morningstar. All Rights Reserved. The information contained herein: (1) is proprietary to Morningstar and/or its content providers; (2) may not be copied or distributed; and (3) is not warranted to be accurate, complete or timely. Neither Morningstar nor its content providers are responsible for any damages or losses arising from any use of this information. &nbsp;Past performance is no guarantee of future results.</p>
+    - ID: "225f8602-2cd0-4926-9e39-d4f5cb37ce5e"
+      Hint: Type
+      Value: "{7FBAE005-95AA-4ABE-A600-9BE8716AA7ED}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190926T135214Z
+    - ID: "2f3d22c2-88a4-4414-a6f4-d2a1fece4fbe"
+      Hint: Year5
+      Value: 16.737%
+    - ID: "30054d3b-d471-469d-a82a-c575dc220cf2"
+      Hint: BenchmarkName
+      Value: FTSE All Share
+    - ID: "31d5f858-8358-49c2-986e-3e2e69013d00"
+      Hint: LegacySectorFundData_SectorYear4
+      Value: 10.588%
+    - ID: "3e03b753-49e9-451f-9530-7a0a393ff881"
+      Hint: ActiveShare
+      Value: 59.68%
+    - ID: "41480335-d753-48ae-bdd4-d85bb711334b"
+      Hint: LegacyBenchmarkFundData_BenchmarkSixMonths
+      Value: 7.401%
+    - ID: "44c4349f-8ad1-4259-a14c-9be2ea3e0fd5"
+      Hint: Name
+      Value: Liontrust Income
+    - ID: "5419905c-ef5b-4577-95b8-c331fccfc261"
+      Hint: LegacySectorFundData_SectorFiveYears
+      Value: 11.538%
+    - ID: "57f1c36c-0d4c-4817-9bb1-250ae40ec7a8"
+      Hint: LegacyBenchmarkFundData_BenchmarkYear1
+      Value: "-16.594%"
+    - ID: "5c1402ef-7663-49d6-9c3c-a777a2238768"
+      Hint: LegacySectorFundData_SectorYear1
+      Value: "-17.236%"
+    - ID: "5cad2e1d-1e43-4b02-a684-fcab2cf85003"
+      Hint: LegacySectorFundData_SectorThreeYears
+      Value: "-5.421%"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "69a48b1d-00fe-4fb6-9e2e-44c630e60bea"
+      Hint: TenYears
+      Value: 78.163%
+    - ID: "6afb4eb4-25c4-472b-aa65-8ad9ddb3be2c"
+      Hint: FundName
+      Value: Income Fund
+    - ID: "6cbf0ed2-94b3-4f2a-a84d-a36501e38105"
+      Hint: LaunchDate
+      Value: 20121003T000000
+    - ID: "6d258747-e783-4579-9c3c-f8f23d03ccf6"
+      Hint: LegacySectorFundData_SectorOneYear
+      Value: "-10.696%"
+    - ID: "737790ec-a3de-49a7-aa58-7c0f574c0e4a"
+      Hint: LegacyBenchmarkFundData_BenchmarkOneYear
+      Value: "-9.822%"
+    - ID: "745247e0-72cf-441e-905d-4d35608d5724"
+      Hint: LegacySectorFundData_SectorSixMonths
+      Value: 8.699%
+    - ID: "776341a4-f1e7-4a9e-9b44-7da25ed3505e"
+      Hint: Process
+      Type: Treelist
+      Value: "{41762DA9-50DE-4630-917B-34790190F874}"
+    - ID: "78b7b037-16f3-4d3f-bd57-f7ecd52abc46"
+      Hint: Year4
+      Value: 13.173%
+    - ID: "7994e108-44fb-4349-bb80-736e783fbbb3"
+      Hint: LegacyFundOverviewData_OverviewTitle
+      Value: The Fund
+    - ID: "7b91fb4b-1ec0-4d49-9aba-d31f17c3d0f5"
+      Hint: Year2
+      Value: 5.021%
+    - ID: "855d1e7b-3d08-4526-ad2d-fa2e86e9be9b"
+      Hint: FundManagers
+      Type: Treelist
+      Value: "{8A9DB932-B36C-42AD-BBEB-1A0EF9284BBB}"
+    - ID: "86f07fa6-a576-4462-b343-c4af970a2576"
+      Hint: HistoricYield
+      Value: 7.220%
+    - ID: "885f3d37-44b1-4a78-8d48-4873a39c638e"
+      Hint: Year3
+      Value: 7.588%
+    - ID: "899548af-6e4d-4b51-af9f-24bb58ac9b53"
+      Hint: LaunchDateByAuthor
+      Value: 20021231T000000Z
+    - ID: "8f1d085a-547e-4c60-b936-081b456d4659"
+      Hint: Year1
+      Value: "-12.094%"
+    - ID: "90a7b1e0-c14e-4a3d-a717-72bec978a99a"
+      Hint: CitiCode
+      Value: GQKZ
+    - ID: "9238823c-d3a1-4b63-940c-867e606716aa"
+      Hint: HistoricYieldText
+      Value: <p>Fund size and number of holdings data is as at previous month end. Performance data is as at previous working day.</p>
+    - ID: "925a2a5a-c73b-46bc-9eb9-726361aa881d"
+      Hint: ThreeYears
+      Value: 1.020%
+    - ID: "93ffb351-abd8-42a3-a672-15d82fa2783f"
+      Hint: LegacyBenchmarkFundData_BenchmarkFiveYears
+      Value: 23.768%
+    - ID: "9bb40c8a-ca0f-4dfe-a6e7-e779591b2b03"
+      Hint: LegacySectorFundData_SectorYear2
+      Value: "-0.174%"
+    - ID: "a3f8d30b-b1a3-4135-8cb0-1921cbac3e5c"
+      Hint: LegacyBenchmarkFundData_BenchmarkYear5
+      Value: 16.823%
+    - ID: "a8840688-dce2-49f2-85fa-a2f1bce02746"
+      Hint: LegacyBenchmarkFundData_BenchmarkSinceLaunch
+      Value: 258.723%
+    - ID: "a9e47f4b-123f-4121-ac01-7d0b07820939"
+      Hint: LegacyBenchmarkFundData_BenchmarkYear3
+      Value: 5.868%
+    - ID: "aa7b22ee-71c9-4781-826f-0ccfd357a03f"
+      Hint: LegacySectorFundData_SectorYear3
+      Value: 3.435%
+    - ID: "acd80b46-146c-415a-9e5a-bf0f35b0392e"
+      Hint: OneYear
+      Value: "-10.167%"
+    - ID: "ad147349-080a-4902-8ae0-5cf5ef9cca43"
+      Hint: LegacyBenchmarkFundData_BenchmarkThreeYears
+      Value: "-0.973%"
+    - ID: "b5af47a5-20d0-4b27-8ad2-34ce9a1ffc89"
+      Hint: LegacyBenchmarkFundData_BenchmarkTenYears
+      Value: 75.627%
+    - ID: "bf364003-b633-48a4-877f-3e553d116ceb"
+      Hint: Sector
+      Value: IA UK Equity Income
+    - ID: "c0960c1b-84de-4c1c-bbb9-8c7d86db3c76"
+      Hint: LegacySectorFundData_SectorSinceLaunch
+      Value: 238.505%
+    - ID: "c1a9bff3-bcc0-40c8-a849-32b923e6e323"
+      Hint: SinceLaunch
+      Value: 293.720%
+    - ID: "c50511fa-ae6d-446b-ab43-aa1bcbbaa079"
+      Hint: SixMonths
+      Value: 6.646%
+    - ID: "d3a5bbc1-32dc-492d-9c70-645a8e47fb34"
+      Hint: FundSize
+      Value: £331111000.000
+    - ID: "d8e953d2-a550-47f4-80d4-a28c6e117b2c"
+      Hint: LegacyBenchmarkFundData_BenchmarkYear2
+      Value: 2.684%
+    - ID: "da4173d0-1f60-4edc-84a0-04c140de97d0"
+      Hint: FundDescription
+      Value: 
+    - ID: "db79496e-bcc5-443f-bba6-e8d5bf0a31a3"
+      Hint: NumberOfHoldings
+      Value: 34
+    - ID: "e456c092-dda4-4179-aa02-1505821fd2a1"
+      Hint: LegacySectorFundData_SectorYear5
+      Value: 11.393%
+    - ID: "f1426edd-1a46-4af0-9967-0743eab156d7"
+      Hint: LegacySectorFundData_SectorTenYears
+      Value: 78.408%

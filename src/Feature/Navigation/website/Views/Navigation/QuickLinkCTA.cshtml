@@ -1,0 +1,41 @@
+﻿@using System.Collections.Specialized;
+@using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Foundation.Analytics.Goals
+@model LionTrust.Feature.Navigation.Models.IQuickLinkCTA
+@if (Model != null)
+{
+    var imageSrc = Model.Image != null && !string.IsNullOrEmpty(Model.Image.Src) ? Model.Image.Src : "images/components/navigation/charts.svg";
+    var imageCss = Model.SmallSize ? "quick-link-chart quick-link-chart__small" : "quick-link-chart";
+
+    if (Model.Link != null || Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Navigation/QuickLinks/QuickLinkCTA", Model.Id.ToString(), "Edit Quick Link CTA"))
+        {
+            if (Sitecore.Context.PageMode.IsExperienceEditor)
+            {
+                <div class="text-gold">Edit Quick Link</div>
+            }
+            using (Html.BeginRenderLinkWithGoal(
+                Model,
+                m => m.Link,
+                Model.LinkGoal,
+                new NameValueCollection { { "class", imageCss }, { "style", "background-image: url('" + imageSrc + "');" } },
+                isEditable: true))
+            {
+                <span class="quick-link-chart__title">@Html.Glass().Editable(Model, z => z.Title)</span>
+                <span class="quick-link-chart__text">@Html.Glass().Editable(Model, z => z.Description)</span>
+            }
+        }
+    }
+    else
+    {
+        <div class="@imageCss" style="background-image: url('@imageSrc');">
+            <span class="quick-link-chart__title">@Html.Glass().Editable(Model, z => z.Title)</span>
+            <span class="quick-link-chart__text">@Html.Glass().Editable(Model, z => z.Description)</span>
+        </div>
+    }
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @:Add datasource for Quick Link CTA component
+}

@@ -1,0 +1,192 @@
+﻿---
+ID: "8bf2aab7-37b4-46c0-9599-d4fb3530709d"
+Parent: "92aba568-f063-4316-a3b3-27aa0b4f154a"
+Template: "dadec9bf-b6e8-4e04-a082-f4eb20b76ff9"
+Path: /sitecore/content/Funds/European Enhanced Income Fund
+DB: master
+BranchID: "562a4f6c-ee2c-40f7-8701-db0a0d8b7e3d"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Business/32x32/currency_pound.png
+- ID: "b0a67b2a-8b07-4e0b-8809-69f751709806"
+  Hint: __Tracking
+  Type: Tracking
+  Value: |
+    <tracking>
+      <event
+        id="{717E12BF-53E8-4398-ADC6-909A985A87CE}"
+        name="Visited EEIF Fund Page" />
+    </tracking>
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: 
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "13671185-84c9-49e4-8799-6135f386f3e5"
+      Hint: FiveYears
+      Value: 11.255%
+    - ID: "1844ecc6-c68f-4989-96d5-296c34ede6e9"
+      Hint: LegacyFundOverviewData_OverviewText
+      Value: <p>The manager of the Fund changed from the European Income team to the Cashflow Solution team on 2 October 2020. Liontrust is proposing to merge the Fund with the Liontrust European Growth Fund, which will be subject to investor and regulatory approval.</p>
+    - ID: "200ea310-b6b4-4066-97f8-1f8b7c3e5a6d"
+      Hint: FundTeamManager
+      Value: 
+    - ID: "205ed0c5-d7b3-413a-8937-4b728937efef"
+      Hint: FundTeam
+      Value: "{7B370435-9AB2-4E6F-9B1C-16209BA9C8BD}"
+    - ID: "221e703d-5ba7-4141-a98c-b76d2e5a663a"
+      Hint: RiskWarning
+      Value: |
+        <h4>Key Risks</h4>
+        <p><span style="font-size: 15px;"><strong>Past performance is not a guide to future performance.</strong> Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. Investment in Funds managed by the team involves foreign currencies and may be subject to fluctuations in value due to movements in exchange rates. The Fund’s expenses are charged to capital. This has the effect of increasing dividends while constraining capital appreciation. Investment in the Liontrust European Enhanced Income Fund writes out of the money call options to generate additional income. These call options will be “covered”. Unitholders should note that potential capital growth of the Fund would be capped if these call options are exercised against the Fund and the Fund’s capital returns could therefore be lower than the market in periods of rapidly rising share prices.</span></p>
+        <br />
+        <h4>Disclaimer</h4>
+        <p><span style="font-size: 15px;">The information and opinions provided should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</span></p>
+        <br />
+        <p><span style="font-size: 15px;"><strong>This share class is hedged so investors do not benefit from or are disadvantaged from any movement in the value of the base currency of the fund against investible currencies. In contrast, if applicable, the index returns are in local currency and the average returns of the sector are in sterling.</strong></span></p>
+        <p>&nbsp;</p>
+        <p><span style="font-size: 15px;">Source: Financial Express. Total return, bid-to-bid. The FP Argonaut Enhanced European Income Fund was launched on 30.04.10 and merged with the Liontrust European Enhanced Income Fund on 08.07.16. The performance record of the Fund starts on 30.04.10.&nbsp;Citywire information is proprietary and confidential to Citywire Financial Publishers Ltd ('Citywire'), may not be copied and Citywire excludes any liability arising out of its use.</span></p>
+        <p><span style="font-size: 15px;">&nbsp;</span></p>
+        <p><span style="font-size: 15px;">© $currentYear$ Morningstar. All Rights Reserved. The information contained herein: (1) is proprietary to Morningstar and/or its content providers; (2) may not be copied or distributed; and (3) is not warranted to be accurate, complete or timely. Neither Morningstar nor its content providers are responsible for any damages or losses arising from any use of this information. &nbsp;Past performance is no guarantee of future results.</span></p>
+    - ID: "225f8602-2cd0-4926-9e39-d4f5cb37ce5e"
+      Hint: Type
+      Value: "{7FBAE005-95AA-4ABE-A600-9BE8716AA7ED}"
+    - ID: "239febfa-4def-40c5-8e2a-6186984962c9"
+      Hint: CalendarPerformanceTableIntroText
+      Value: 
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20160815T143846Z
+    - ID: "2f3d22c2-88a4-4414-a6f4-d2a1fece4fbe"
+      Hint: Year5
+      Value: "-4.825%"
+    - ID: "31d5f858-8358-49c2-986e-3e2e69013d00"
+      Hint: LegacySectorFundData_SectorYear4
+      Value: 21.878%
+    - ID: "3e03b753-49e9-451f-9530-7a0a393ff881"
+      Hint: ActiveShare
+      Value: 77.61%
+    - ID: "44c4349f-8ad1-4259-a14c-9be2ea3e0fd5"
+      Hint: Name
+      Value: Liontrust European Enhanced Income
+    - ID: "5419905c-ef5b-4577-95b8-c331fccfc261"
+      Hint: LegacySectorFundData_SectorFiveYears
+      Value: 56.987%
+    - ID: "5c1402ef-7663-49d6-9c3c-a777a2238768"
+      Hint: LegacySectorFundData_SectorYear1
+      Value: 3.060%
+    - ID: "5cad1fc2-f50d-45a6-9a05-6dec3f005bb0"
+      Hint: Awards
+      Type: Treelist
+      Value: 
+    - ID: "5cad2e1d-1e43-4b02-a684-fcab2cf85003"
+      Hint: LegacySectorFundData_SectorThreeYears
+      Value: 12.356%
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "69a48b1d-00fe-4fb6-9e2e-44c630e60bea"
+      Hint: TenYears
+      Value: 93.063%
+    - ID: "6afb4eb4-25c4-472b-aa65-8ad9ddb3be2c"
+      Hint: FundName
+      Value: European Enhanced Income Fund
+    - ID: "6cbf0ed2-94b3-4f2a-a84d-a36501e38105"
+      Hint: LaunchDate
+      Value: 20100430T000000
+    - ID: "6d258747-e783-4579-9c3c-f8f23d03ccf6"
+      Hint: LegacySectorFundData_SectorOneYear
+      Value: 8.205%
+    - ID: "745247e0-72cf-441e-905d-4d35608d5724"
+      Hint: LegacySectorFundData_SectorSixMonths
+      Value: 15.817%
+    - ID: "776341a4-f1e7-4a9e-9b44-7da25ed3505e"
+      Hint: Process
+      Type: Treelist
+      Value: "{3C72A90A-F550-432B-83FF-45F2DF7A4BE1}"
+    - ID: "78b7b037-16f3-4d3f-bd57-f7ecd52abc46"
+      Hint: Year4
+      Value: 18.044%
+    - ID: "7994e108-44fb-4349-bb80-736e783fbbb3"
+      Hint: LegacyFundOverviewData_OverviewTitle
+      Value: The Fund
+    - ID: "7b91fb4b-1ec0-4d49-9aba-d31f17c3d0f5"
+      Hint: Year2
+      Value: 3.926%
+    - ID: "855d1e7b-3d08-4526-ad2d-fa2e86e9be9b"
+      Hint: FundManagers
+      Type: Treelist
+      Value: |
+        {3668EA85-45A7-4CF0-9131-85BA30A3F1E4}
+        {6E586116-1EA0-4F93-B711-357D06487909}
+    - ID: "86f07fa6-a576-4462-b343-c4af970a2576"
+      Hint: HistoricYield
+      Value: 3.453%
+    - ID: "885f3d37-44b1-4a78-8d48-4873a39c638e"
+      Hint: Year3
+      Value: "-1.534%"
+    - ID: "899548af-6e4d-4b51-af9f-24bb58ac9b53"
+      Hint: LaunchDateByAuthor
+      Value: 20160707T230000Z
+    - ID: "8d126770-f164-4e20-94a0-0666798f3201"
+      Hint: Quote
+      Value: 
+    - ID: "8f1d085a-547e-4c60-b936-081b456d4659"
+      Hint: Year1
+      Value: "-4.067%"
+    - ID: "90a7b1e0-c14e-4a3d-a717-72bec978a99a"
+      Hint: CitiCode
+      Value: ILA1
+    - ID: "9238823c-d3a1-4b63-940c-867e606716aa"
+      Hint: HistoricYieldText
+      Value: <p>Fund size and number of holdings data is as at previous month end. Performance data is as at previous working day.</p>
+    - ID: "925a2a5a-c73b-46bc-9eb9-726361aa881d"
+      Hint: ThreeYears
+      Value: 5.113%
+    - ID: "9bb40c8a-ca0f-4dfe-a6e7-e779591b2b03"
+      Hint: LegacySectorFundData_SectorYear2
+      Value: 2.154%
+    - ID: "aa7b22ee-71c9-4781-826f-0ccfd357a03f"
+      Hint: LegacySectorFundData_SectorYear3
+      Value: 1.893%
+    - ID: "acd80b46-146c-415a-9e5a-bf0f35b0392e"
+      Hint: OneYear
+      Value: "-0.847%"
+    - ID: "b3e71185-b6c6-44f9-8b44-902957935bba"
+      Hint: ActiveShareText
+      Value: "<p><strong>Active Share:</strong> The percentage of a portfolio invested differently to its benchmark. A 100% active share is a portfolio with no weightings in the benchmark, a 0% active share is a portfolio identical to the benchmark.</p>"
+    - ID: "bf364003-b633-48a4-877f-3e553d116ceb"
+      Hint: Sector
+      Value: IA Europe Excluding UK
+    - ID: "c0960c1b-84de-4c1c-bbb9-8c7d86db3c76"
+      Hint: LegacySectorFundData_SectorSinceLaunch
+      Value: 129.708%
+    - ID: "c1a9bff3-bcc0-40c8-a849-32b923e6e323"
+      Hint: SinceLaunch
+      Value: 92.020%
+    - ID: "c50511fa-ae6d-446b-ab43-aa1bcbbaa079"
+      Hint: SixMonths
+      Value: 12.847%
+    - ID: "d3a5bbc1-32dc-492d-9c70-645a8e47fb34"
+      Hint: FundSize
+      Value: £24223200.000
+    - ID: "da4173d0-1f60-4edc-84a0-04c140de97d0"
+      Hint: FundDescription
+      Value: 
+    - ID: "db79496e-bcc5-443f-bba6-e8d5bf0a31a3"
+      Hint: NumberOfHoldings
+      Value: 52
+    - ID: "e456c092-dda4-4179-aa02-1505821fd2a1"
+      Hint: LegacySectorFundData_SectorYear5
+      Value: 18.404%
+    - ID: "ec65712d-5b34-40aa-ae21-fb887d85d44f"
+      Hint: PerformanceTableIntroText
+      Value: 
+    - ID: "f1426edd-1a46-4af0-9967-0743eab156d7"
+      Hint: LegacySectorFundData_SectorTenYears
+      Value: 127.071%

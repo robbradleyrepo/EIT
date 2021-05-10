@@ -5,17 +5,6 @@ Template: "2a3e91a0-7987-44b5-ab34-35c2d9de83b9"
 Path: "/sitecore/layout/Renderings/Feature/Promo/BC016 - Article Scroller"
 DB: master
 SharedFields:
-- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
-  Hint: Datasource Template
-  Value: /sitecore/templates/Project/LionTrust/Content Types/Article Scroller
-- ID: "a2f5d9df-8cba-4a1d-99eb-51acb94cb057"
-  Hint: Page Editor Buttons
-  Type: Treelist
-  Value: "{8CDA3814-D667-4186-A7CF-BD07DCC2F7F5}"
-- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
-  Hint: __Thumbnail
-  Value: |
-    <image mediaid="{B72F6625-8D28-47B1-8767-F99CD1FD58DE}" />
 - ID: "ded9e431-3604-4921-a4b3-a6ec7636a5b6"
   Hint: Controller Action
   Value: ArticleScroller
@@ -27,10 +16,6 @@ Languages:
   Versions:
   - Version: 1
     Fields:
-    - ID: "04437558-ac18-42cb-ab21-1243a66abe67"
-      Hint: Supports Local Datasource
-      Type: Checkbox
-      Value: 1
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20210423T173407Z

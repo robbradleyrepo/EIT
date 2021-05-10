@@ -8,30 +8,25 @@ SwiperCore.use([Navigation, Pagination]);
 
 export default () => {
   const swiper = new Swiper(".swiper-container-carousel", {
-    effect: "coverflow",
-    // grabCursor: true,
+    watchSlidesVisibility: true,
     centeredSlides: true,
     breakpointsInverse: true,
-    slidesPerView: "auto",
     longSwipes: false,
-    setWrapperSize: true,
+    slideToClickedSlide: true,
+    setWrapperSize: false,
     spaceBetween: 5,
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 125,
-      depth: 300,
-      modifier: 2,
-      slideShadows: true,
-    },
-
     loop: true,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      992: {
+        slidesPerView: 3,
+      },
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
     },
   });
 };

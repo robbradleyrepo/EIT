@@ -12,9 +12,9 @@ import fundsSlider from "./componets/fundsSlider";
 import articleSlider from "./componets/articleSlider";
 import awardsSlider from "./componets/awardsSlider";
 import investmentCard from "./componets/investmentCard";
-import articleFilder from "./componets/articleFilder";
+import articleFilter from "./componets/articleFilter";
 import parallaxScrolling from "./componets/parallaxScrolling";
-
+import stickyNavbar from "./componets/stickyNavbar";
 
 document.addEventListener("DOMContentLoaded", () => {
   onboardingOverlay();
@@ -25,7 +25,12 @@ document.addEventListener("DOMContentLoaded", () => {
   fundsSlider();
   articleSlider();
   awardsSlider();
-  if (document.querySelector(".article-page")) articleFilder(); 
+  stickyNavbar();
+  if (document.querySelector(".article-page")) articleFilter();
   if (document.querySelector(".main-page")) parallaxScrolling();
 
+  $('[data-toggle="tooltip"]').tooltip({
+    offset: 5
+  })
+  
 });

@@ -9,18 +9,26 @@
             margin-bottom: 1rem
     @include breakpoint(desktop, up)
         margin-top: 80px
-        margin-bottom: 100px        
+        margin-bottom: 100px
 .investment-card
     color: $black
-    height: 382px
+    min-height: 274px
     padding: 20px
     background: #F8FAFA
     border-radius: $border-radius
     overflow: hidden
     position: relative
-    &::before        
-        counter-increment: section
-        content: counter(section)
+    background-size: cover
+    display: block
+    &:hover
+        color: $black
+    @include breakpoint(desktop-large, up)
+        min-height: 382px
+    @include breakpoint(desktop-large, up)    
+        padding: 40px
+    &::before
+        // counter-increment: section
+        // content: counter(section)
         color: #EFF2F4
         position: absolute
         font-weight: bold
@@ -38,4 +46,26 @@
         margin-bottom: 12px
         font-size: 10px
         color: $primary
-        
+    &__text
+        @include breakpoint(desktop, up)
+            font-size: 20px
+            line-height: 30px
+            
+ul.styled-list
+    font-weight: 500
+    @include breakpoint(desktop, up)
+        line-height: 30px
+    li
+        padding-left: 15px
+        position: relative
+        &:before
+            content: ''
+            position: absolute
+            top: 8px
+            left: 0
+            width: 5px
+            height: 5px
+            background: $gold
+            border-radius: 50%
+            @include breakpoint(desktop, up)
+                top: 12px

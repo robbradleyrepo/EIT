@@ -1,0 +1,33 @@
+﻿---
+ID: "011b637c-61e8-4dc9-a5d9-9d0f82d298b2"
+Parent: "59b81251-46c7-47fa-aaf0-3d0e9a0daa02"
+Template: "66e09d5b-4f8e-4313-9df3-fa7e53fbe83a"
+Path: "/sitecore/content/Funds/GF Sustainable Future Pan-European Growth Fund/Documents/Thematic Breakdown"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 1400
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181213T132849Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "a4a7f9dd-a218-4f33-b72a-7dc2251ccd43"
+      Hint: DocumentTypes
+      Type: Multilist
+      Value: "{734A6F88-95E1-461E-A623-27C7AA4C9929}"
+    - ID: "c794210e-6107-4d69-841f-773cb9943bba"
+      Hint: DownloadLink
+      Value: |
+        <link id="{46594A9B-C297-4E7C-A410-09F13371A6C6}" querystring="" text="" title="" class="" linktype="internal" url="/sitecore/media library/LionTrust/files/fund-literature/thematic-breakdowns/gf-sf-pan-european-growth-thematic-breakdown" target="" />
+    - ID: "eeb8db99-7da8-4973-adf7-bcf7b29eba79"
+      Hint: DocumentName
+      Value: Thematic Breakdown
