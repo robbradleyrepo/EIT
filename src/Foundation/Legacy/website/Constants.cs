@@ -72,6 +72,8 @@
             public const string ShortBio_FieldId = "{A6306774-24CA-4250-99AD-48BFD132ADCB}";
 
             public const string TitleFieldId = "{132E494D-67B4-4D90-B21D-AF9FF5D9C146}";
+
+            public const string PageFieldId = "{BAFABAF6-9398-4410-85B6-9F8AF3661EA0}";
         }
 
         public static class FundPage 
