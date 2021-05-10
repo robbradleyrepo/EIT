@@ -17,7 +17,14 @@
                                 @Model.AuthorName <i class="icon-follow"></i>
                             </span>
                             <span class="hero-author__date">
-                                @Html.Glass().Editable(m => m.ArticleData.Date, d => d.ArticleData.Date.ToString("dd-MM-yy"))
+                                @if (!Sitecore.Context.PageMode.IsExperienceEditor)
+                                {
+                                    @Model.ArticleDate.ToString("dd-MM-yy")
+                                }
+                                else
+                                {
+                                    @Html.Glass().Editable(m => m.ArticleData.Date, d => d.ArticleData.Date.ToString("dd-MM-yy"))
+                                }
                             </span>
                         </div>
                     </div>

@@ -1,7 +1,9 @@
 ﻿namespace LionTrust.Feature.Article.Models
 {
-    using LionTrust.Foundation.Article.Models;
+    using System;
     using System.Linq;
+
+    using LionTrust.Foundation.Article.Models;
 
     public class ArticleViewModel
     {
@@ -29,6 +31,20 @@
                 return ComponentData?.BackgroundImage?.Src;
             }
         }
+
+        public DateTime ArticleDate
+        { 
+            get
+            {
+                if (ArticleData == null || ArticleData.Date == null || ArticleData.Date == DateTime.MinValue)
+                {
+                    return DateTime.Now;
+                }
+
+                return ArticleData.Date;
+            }
+        }
+
 
         public string AuthorImageUrl
         {
