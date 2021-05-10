@@ -18,7 +18,7 @@
                     return string.Empty;
                 }
                 // TO DO multiple authors option
-                return ArticleData.Author?.FirstOrDefault().FullName;
+                return ArticleData.Author?.FirstOrDefault()?.FullName;
             }
         }
 
@@ -35,7 +35,7 @@
             get
             {
                 // TO DO multiple authors option
-                return this.ArticleData?.Author?.FirstOrDefault()?.Image.Src;
+                return this.ArticleData?.Author?.FirstOrDefault()?.Image?.Src;
             }
         }
     }
