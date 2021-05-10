@@ -7,16 +7,16 @@
 
     public class FundHeaderController: SitecoreController
     {
-        private readonly IMvcContext context;
+        private readonly IMvcContext _context;
 
         public FundHeaderController(IMvcContext context)
         {
-            this.context = context;
+            this._context = context;
         }
 
         public ActionResult Render()
         {
-            var data = context.GetDataSourceItem<IFundHeader>();
+            var data = _context.GetDataSourceItem<IFundHeader>();
             
             if (data == null)
             {
