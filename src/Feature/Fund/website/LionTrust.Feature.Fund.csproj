@@ -77,10 +77,12 @@
     <Content Include="Views\Fund\KeyFundDocuments.cshtml" />
     <Content Include="Views\Fund\FundOverview.cshtml" />
     <Content Include="Views\Fund\FourFundStats.cshtml" />
+    <Content Include="Views\Fund\FundManagerComponent.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="Controllers\FundManagerComponentController.cs" />
     <Compile Include="Controllers\FundManagerPromoController.cs" />
     <Compile Include="Controllers\FundsController.cs" />
     <Compile Include="Controllers\FundScrollerController.cs" />
@@ -93,6 +95,7 @@
     <Compile Include="Models\IFundOverview.cs" />
     <Compile Include="Models\IFundScroller.cs" />
     <Compile Include="Models\IKeyFundDocuments.cs" />
+    <Compile Include="Models\IFundManagers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
