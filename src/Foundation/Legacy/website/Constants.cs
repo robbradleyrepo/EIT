@@ -37,6 +37,8 @@
 
             public const string Fund_FieldName = "LegacyArticle_Fund";
             public const string Fund_FieldId = "{52161005-9691-46CD-AF73-E2B5455474C0}";
+
+            public const string Topics_FieldId = "{4F9B280F-A22D-4E70-886A-45327E8AA507}";
         }
 
         public static class ArticleType

@@ -1,6 +1,7 @@
 ﻿namespace LionTrust.Feature.Article.Models
 {
-    using LionTrust.Foundation.Legacy.Models;
+    using LionTrust.Foundation.Article.Models;
+    using System.Linq;
 
     public class ArticleViewModel
     {
@@ -16,8 +17,8 @@
                 {
                     return string.Empty;
                 }
-
-                return ArticleData.Author.FullName;
+                // TO DO multiple authors option
+                return ArticleData.Author?.FirstOrDefault().FullName;
             }
         }
 
@@ -33,7 +34,8 @@
         {
             get
             {
-                return this.ArticleData?.Author?.Image.Src;
+                // TO DO multiple authors option
+                return this.ArticleData?.Author?.FirstOrDefault()?.Image.Src;
             }
         }
     }
