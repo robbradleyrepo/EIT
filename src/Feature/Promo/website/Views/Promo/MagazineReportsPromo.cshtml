@@ -7,7 +7,24 @@
     <a href="#" class="article-promo__body">
         <div class="article-promo__head">
             <img class="article-promo__head-img" src="images/components/banners/writer.jpeg" alt="">
-            <span class="article-promo__head-title">Magazine and Reports</span>
+            <span class="article-promo__head-title">
+                @if (Model.Topics != null && Model.Topics.Any())
+                {
+                    var first = true;
+                    foreach (var topic in Model.Topics)
+                    {
+                        if (!first)
+                        {
+                            <span class="dot-divider"></span>
+                        }
+                        else
+                        {
+                            first = false;
+                        }
+                        @topic.Name
+                    }
+                }
+            </span>
         </div>
         <span class="article-promo__title">
             @Html.Glass().Editable(Model, m => m.Title)

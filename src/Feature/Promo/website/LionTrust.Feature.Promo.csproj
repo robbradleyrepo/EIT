@@ -73,11 +73,11 @@
     <Content Include="Views\Promo\ImageCTAPromo.cshtml" />
     <Content Include="Views\Promo\PodcastPromo.cshtml" />
     <Content Include="Views\Promo\_PodcastLink.cshtml" />
-    <Content Include="Views\Promo\ArticleScroller.cshtml" />
     <Content Include="Views\Promo\VideoPromo.cshtml" />
     <Content Include="Views\Promo\FundUpdatePromo.cshtml" />
     <Content Include="Views\Promo\FundManagerViewPromo.cshtml" />
     <Content Include="Views\Promo\MagazineReportsPromo.cshtml" />
+    <Content Include="Views\Promo\ArticleScroller.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -85,8 +85,8 @@
     <Compile Include="Controllers\PromoController.cs" />
     <Compile Include="Models\ArticleScrollerViewModel.cs" />
     <Compile Include="Models\IArticlePromo.cs" />
-    <Compile Include="Models\IArticleScroller.cs" />
     <Compile Include="Extensions.cs" />
+    <Compile Include="Models\IArticleScroller.cs" />
     <Compile Include="Models\IImageCTAPromo.cs" />
     <Compile Include="Models\IImagePromo.cs" />
     <Compile Include="Models\IPodcastLink.cs" />
@@ -100,6 +100,10 @@
     <ProjectReference Include="..\..\..\Foundation\Analytics\website\LionTrust.Foundation.Analytics.csproj">
       <Project>{71010683-02eb-4e0d-b0e1-6643922799ee}</Project>
       <Name>LionTrust.Foundation.Analytics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Article\website\LionTrust.Foundation.Article.csproj">
+      <Project>{cc0386c4-5dc0-480b-85c4-209e87b7fb96}</Project>
+      <Name>LionTrust.Foundation.Article</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Indexing\website\LionTrust.Foundation.Indexing.csproj">
       <Project>{acd53016-c45a-4a10-8b46-9a4a82a69d7b}</Project>

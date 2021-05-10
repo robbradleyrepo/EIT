@@ -1,10 +1,12 @@
-﻿using Glass.Mapper.Sc.Web.Mvc;
-using LionTrust.Feature.Article.Models;
-using Sitecore.Mvc.Controllers;
-using System.Web.Mvc;
-
-namespace LionTrust.Feature.Article.Controllers
+﻿namespace LionTrust.Feature.Article.Controllers
 {
+    using System.Web.Mvc;
+
+    using Glass.Mapper.Sc.Web.Mvc;
+    using LionTrust.Feature.Article.Models;
+    using LionTrust.Foundation.Article.Models;
+    using Sitecore.Mvc.Controllers;
+
     public class ArticleHeaderController: SitecoreController
     {
         private readonly IMvcContext context;
@@ -16,7 +18,7 @@ namespace LionTrust.Feature.Article.Controllers
 
         public ActionResult Render()
         {
-            var article = context.GetContextItem<Models.IArticle>();
+            var article = context.GetContextItem<IArticle>();
             if (article == null)
             {
                 return null;
