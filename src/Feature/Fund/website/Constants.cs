@@ -67,5 +67,10 @@
             public const string ViewAllDocumentsLabel_FieldName = "KeyFundDocuments_ViewAllDocumentsLabel";
             public const string ViewAllDocumentsLabel_FieldId = "{99B18B81-5C97-47E1-9EDC-9F83C5F49947}";
         }
+
+        public static class FundManagers
+        {
+            public const string FundManagersFieldId = "{742FA605-EC20-4EC8-87FD-9E7DAEB8BC84}";
+        }
     }
 }

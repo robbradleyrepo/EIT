@@ -29,5 +29,8 @@
 
         [SitecoreField(Constants.Author.TitleFieldId, SitecoreFieldType.RichText, "Additional details")]
         string Title { get; set; }
+
+        [SitecoreField(Constants.Author.PageFieldId, SitecoreFieldType.GeneralLink, "Additional details")]
+        Link Page { get; set; }
     }
 }
