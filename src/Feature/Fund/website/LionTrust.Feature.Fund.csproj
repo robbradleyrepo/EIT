@@ -79,19 +79,23 @@
     <Content Include="Views\Fund\FourFundStats.cshtml" />
     <Content Include="Views\Fund\AdditionalInfoAndCharges.cshtml" />
     <Content Include="Views\Fund\FundManagerComponent.cshtml" />
+    <Content Include="Views\Fund\FundHeader.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\FundManagerComponentController.cs" />
+    <Compile Include="Controllers\FundHeaderController.cs" />
     <Compile Include="Controllers\FundManagerPromoController.cs" />
     <Compile Include="Controllers\FundsController.cs" />
     <Compile Include="Controllers\FundScrollerController.cs" />
     <Compile Include="Models\FourFundStatsViewModel.cs" />
+    <Compile Include="Models\FundHeaderViewModel.cs" />
     <Compile Include="Models\FundManagerViewModel.cs" />
     <Compile Include="Models\FundOverviewViewModel.cs" />
     <Compile Include="Models\IFourFundStats.cs" />
     <Compile Include="Models\IFundGlassBase.cs" />
+    <Compile Include="Models\IFundHeader.cs" />
     <Compile Include="Models\IFundManagerPage.cs" />
     <Compile Include="Models\IFundOverview.cs" />
     <Compile Include="Models\IFundScroller.cs" />

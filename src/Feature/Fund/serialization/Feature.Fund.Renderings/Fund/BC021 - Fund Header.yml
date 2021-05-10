@@ -1,0 +1,32 @@
+﻿---
+ID: "e8615ae3-e7f7-4fa4-9782-c22612560e79"
+Parent: "a00fc4a2-2931-4607-88bb-c19d1833086a"
+Template: "2a3e91a0-7987-44b5-ab34-35c2d9de83b9"
+Path: "/sitecore/layout/Renderings/Feature/Fund/BC021 - Fund Header"
+DB: master
+SharedFields:
+- ID: "a2f5d9df-8cba-4a1d-99eb-51acb94cb057"
+  Hint: Page Editor Buttons
+  Type: Treelist
+  Value: "{403CF06F-C11F-41C9-ADD0-F992B966EF01}"
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "site:fundheader"
+- ID: "ded9e431-3604-4921-a4b3-a6ec7636a5b6"
+  Hint: Controller Action
+  Value: Render
+- ID: "e64ad073-dfcc-4d20-8c0b-fe5aa6226cd7"
+  Hint: Controller
+  Value: FundHeader
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04437558-ac18-42cb-ab21-1243a66abe67"
+      Hint: Supports Local Datasource
+      Type: Checkbox
+      Value: 1
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210510T120354Z

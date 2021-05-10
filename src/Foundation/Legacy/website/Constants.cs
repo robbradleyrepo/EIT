@@ -82,6 +82,7 @@
 
         public static class Fund 
         {
+            public const string FundManagersFieldId = "{855D1E7B-3D08-4526-AD2D-FA2E86E9BE9B}";
             public const string LaunchDate_FieldName = "LegacyFund_LaunchDate";
             public const string LaunchDate_FieldId = "{6CBF0ED2-94B3-4F2A-A84D-A36501E38105}";
 
