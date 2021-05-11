@@ -11,6 +11,7 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
+	<MvcBuildViews>true</MvcBuildViews>
     <RootNamespace>LionTrust.Feature.Fund</RootNamespace>
     <AssemblyName>LionTrust.Feature.Fund</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
@@ -79,22 +80,28 @@
     <Content Include="Views\Fund\FourFundStats.cshtml" />
     <Content Include="Views\Fund\AdditionalInfoAndCharges.cshtml" />
     <Content Include="Views\Fund\FundManagerComponent.cshtml" />
+    <Content Include="Views\Fund\FundHeader.cshtml" />
+    <Content Include="Views\Fund\fundetailnav.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\FundManagerComponentController.cs" />
+    <Compile Include="Controllers\FundHeaderController.cs" />
     <Compile Include="Controllers\FundManagerPromoController.cs" />
     <Compile Include="Controllers\FundsController.cs" />
     <Compile Include="Controllers\FundScrollerController.cs" />
     <Compile Include="Models\AdditionalInfoAndChargesViewModel.cs" />
     <Compile Include="Models\FourFundStatsViewModel.cs" />
+    <Compile Include="Models\FundHeaderViewModel.cs" />
     <Compile Include="Models\FundManagerViewModel.cs" />
     <Compile Include="Models\FundOverviewViewModel.cs" />
     <Compile Include="Models\IAdditionalInfoAndCharges.cs" />
     <Compile Include="Models\IAdditionalInfoAndChargesComponent.cs" />
     <Compile Include="Models\IFourFundStats.cs" />
+    <Compile Include="Models\IFundDetailNavigation.cs" />
     <Compile Include="Models\IFundGlassBase.cs" />
+    <Compile Include="Models\IFundHeader.cs" />
     <Compile Include="Models\IFundManagerPage.cs" />
     <Compile Include="Models\IFundOverview.cs" />
     <Compile Include="Models\IFundScroller.cs" />
@@ -118,6 +125,10 @@
     <ProjectReference Include="..\..\..\Foundation\Legacy\website\LionTrust.Foundation.Legacy.csproj">
       <Project>{43ee972b-2002-4719-a878-a66a99c42c40}</Project>
       <Name>LionTrust.Foundation.Legacy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Navigation\website\LionTrust.Foundation.Navigation.csproj">
+      <Project>{0E1E5F5C-F4FE-4AFC-BC53-B67A885BBB8C}</Project>
+      <Name>LionTrust.Foundation.Navigation</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\ORM\website\LionTrust.Foundation.ORM.csproj">
       <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>

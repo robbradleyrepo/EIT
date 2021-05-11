@@ -1,6 +1,9 @@
 ﻿namespace LionTrust.Feature.Article.Models
 {
-    using LionTrust.Foundation.Legacy.Models;
+    using System;
+    using System.Linq;
+
+    using LionTrust.Foundation.Article.Models;
 
     public class ArticleViewModel
     {
@@ -16,8 +19,8 @@
                 {
                     return string.Empty;
                 }
-
-                return ArticleData.Author.FullName;
+                // TO DO multiple authors option
+                return ArticleData.Author?.FirstOrDefault()?.FullName;
             }
         }
 
@@ -29,11 +32,26 @@
             }
         }
 
+        public DateTime ArticleDate
+        { 
+            get
+            {
+                if (ArticleData == null || ArticleData.Date == null || ArticleData.Date == DateTime.MinValue)
+                {
+                    return DateTime.Now;
+                }
+
+                return ArticleData.Date;
+            }
+        }
+
+
         public string AuthorImageUrl
         {
             get
             {
-                return this.ArticleData?.Author?.Image.Src;
+                // TO DO multiple authors option
+                return this.ArticleData?.Author?.FirstOrDefault()?.Image?.Src;
             }
         }
     }

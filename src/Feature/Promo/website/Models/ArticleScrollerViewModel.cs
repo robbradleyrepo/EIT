@@ -1,6 +1,5 @@
 ﻿namespace LionTrust.Feature.Promo.Models
 {
-    using LionTrust.Foundation.Legacy.Models;
     using System.Collections.Generic;
 
     public class ArticleScrollerViewModel

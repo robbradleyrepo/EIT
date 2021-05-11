@@ -1,15 +1,15 @@
 ﻿namespace LionTrust.Foundation.Legacy.Models
 {
     using System;
-
+    using System.Collections.Generic;
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
-   
+
     public interface IArticle : IHeroHomePageData
     {
         [SitecoreField(Constants.Article.Authors_FieldId, SitecoreFieldType.Treelist, "Article page data")]
-        IAuthor Author { get; set; }
+        IEnumerable<IAuthor> Author { get; set; }
 
         [SitecoreField(Constants.Article.Title_FieldId, SitecoreFieldType.SingleLineText, "Article page data")]
         string Title { get; set; }

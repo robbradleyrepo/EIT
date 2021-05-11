@@ -37,6 +37,8 @@
 
             public const string Fund_FieldName = "LegacyArticle_Fund";
             public const string Fund_FieldId = "{52161005-9691-46CD-AF73-E2B5455474C0}";
+
+            public const string Topics_FieldId = "{4F9B280F-A22D-4E70-886A-45327E8AA507}";
         }
 
         public static class ArticleType
@@ -82,6 +84,7 @@
 
         public static class Fund 
         {
+            public const string FundManagersFieldId = "{855D1E7B-3D08-4526-AD2D-FA2E86E9BE9B}";
             public const string LaunchDate_FieldName = "LegacyFund_LaunchDate";
             public const string LaunchDate_FieldId = "{6CBF0ED2-94B3-4F2A-A84D-A36501E38105}";
 

@@ -2,6 +2,18 @@
 {
     public static class Constants
     {
+        public static class FundHeader
+        {
+            public const string FundFieldId = "{90BCAB34-B9E0-466E-97A4-73CEC67335F7}";
+            public const string TitleFieldId = "{1ADF8B0C-A198-4CC7-81CC-CFAAC0FE3483}";
+            public const string FundManagerFieldId = "{7A30D0A3-23FD-4863-99FD-A17525112A0E}";
+        }
+        
+        public static class FundDetailNavigation
+        {
+            public const string HeadingFieldId = "{88BD7907-3F4A-40EC-BB50-E24DF11609C5}";
+        }
+
         public static class FundScroller
         {
             public const string HeadingFieldId = "{8E11C5F7-1FCA-4A99-AD05-B81511F973D9}";
