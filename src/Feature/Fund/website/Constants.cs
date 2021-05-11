@@ -8,6 +8,11 @@
             public const string TitleFieldId = "{1ADF8B0C-A198-4CC7-81CC-CFAAC0FE3483}";
             public const string FundManagerFieldId = "{7A30D0A3-23FD-4863-99FD-A17525112A0E}";
         }
+        
+        public static class FundDetailNavigation
+        {
+            public const string HeadingFieldId = "{88BD7907-3F4A-40EC-BB50-E24DF11609C5}";
+        }
 
         public static class FundScroller
         {
