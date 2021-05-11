@@ -94,6 +94,11 @@
             public const string BenchmarkName_FieldId = "{30054D3B-D471-469D-A82A-C575DC220CF2}";
             public const string HistoricYield_FieldId = "{86F07FA6-A576-4462-B343-C4AF970A2576}";
             public const string RiskWarning_FieldId = "{221E703D-5BA7-4141-A98C-B76D2E5A663A}";
+
+            public const string NumberOfHoldings_FieldName = "LegacyFund_NumberOfHoldings";
+            public const string NumberOfHoldings_FieldId = "{DB79496E-BCC5-443F-BBA6-E8D5BF0A31A3}";
+            public const string OverviewDescriptionFieldId = "{1844ECC6-C68F-4989-96D5-296C34EDE6E9}";
+            public const string FundNameFieldId = "{6AFB4EB4-25C4-472B-AA65-8AD9DDB3BE2C}";
         }
 
         public static class HeroImagePageData
