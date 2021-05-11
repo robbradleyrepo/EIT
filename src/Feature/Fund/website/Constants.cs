@@ -87,19 +87,19 @@
 
         public static class KeyInfoPriceComponent
         {
-            public const string KeyInformationLabel_FieldId = "";
-            public const string ClassLaunchDateLabel_FieldId = "";
-            public const string ComparatorLabel_FieldId = "";
-            public const string Benchmark1Label_FieldId = "";
-            public const string FundSizeLabel_FieldId = "";
-            public const string NumberofHoldingsLabel_FieldId = "";
-            public const string NetUnderlyingYieldLabel_FieldId = "";
-            public const string DurationLabel_FieldId = "";
-            public const string PriceLabel_FieldId = "";
-            public const string SinglePriceLabel_FieldId = "";
-            public const string OfferPriceLabel_FieldId = "";
-            public const string PriceDateLabel_FieldId = "";
-            public const string PriceDateTooltipLabel_FieldId = "";
+            public const string KeyInformationLabel_FieldId = "{D1C8B6ED-F85E-4645-82EE-B239CFE6E9AA}";
+            public const string ClassLaunchDateLabel_FieldId = "{FF6466A5-B6D9-499C-A338-42DB7AA720CF}";
+            public const string ComparatorLabel_FieldId = "{B27C9CC5-F16C-4A75-852D-3A9B6FDBE497}";
+            public const string Benchmark1Label_FieldId = "{85A7C8E7-FFFB-4EE9-9372-17DE13A3CEFA}";
+            public const string FundSizeLabel_FieldId = "{9A89E450-3210-4694-8520-345EE6263302}";
+            public const string NumberOfHoldingsLabel_FieldId = "{3368266D-AB74-4ACE-B89F-4C11488E8AC5}";
+            public const string NetUnderlyingYieldLabel_FieldId = "{7F6507B6-3D95-413C-B85B-655688F19DB7}";
+            public const string DurationLabel_FieldId = "{58D81F04-60A8-470A-8880-6D7DC3F4A460}";
+            public const string PriceLabel_FieldId = "{435D1D54-8A35-4B13-B9CB-C59CA752F272}";
+            public const string SinglePriceLabel_FieldId = "{6F5E00C3-5757-4E8C-A479-A753137A1BA1}";
+            public const string OfferPriceLabel_FieldId = "{678F3E21-91D6-4021-BD2A-26C33B839CE1}";
+            public const string PriceDateLabel_FieldId = "{D093B57A-44CA-4867-B0D5-52DB25E3CC11}";
+            public const string PriceDateTooltipLabel_FieldId = "{80C12439-AAA4-4CAD-8787-AB7B35BA60B9}";
         }
     }
 }

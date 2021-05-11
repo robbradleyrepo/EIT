@@ -47,13 +47,13 @@
         public ActionResult KeyInfoPrice()
         {
             var viewModel = new KeyInfoPriceViewModel();
-            var fundPageData = _context.GetPageContextItem<IFundPage>();
-            if (fundPageData != null && fundPageData.FundReference != null)
+            var fundPageData = _context.GetPageContextItem<IFundPageExtended>();
+            if (fundPageData != null && fundPageData.Fund != null)
             {
-                viewModel.Fund = fundPageData.FundReference;
+                viewModel.KeyInfoPrice = fundPageData.Fund;
             }
 
-            viewModel.FourFundStatsComponent = _context.GetDataSourceItem<IFourFundStats>();
+            viewModel.Component = _context.GetDataSourceItem<IKeyInfoPriceComponent>();
 
             return View("~/Views/Fund/FourFundStats.cshtml", viewModel);
         }
