@@ -46,7 +46,7 @@
                         <div class="imagepromo__btnbox">
                             @if (Model.ShowPrimaryCTA)
                             {
-                                using (Html.BeginRenderLinkWithGoal(Model, m => m.PrimaryCTALink, Model.PrimaryCTAGoal, new NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
+                                using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.PrimaryCTALink, Model.PrimaryCTAGoal, new NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
                                 {
                                     if (Model.PrimaryCTALink != null && !string.IsNullOrEmpty(Model.PrimaryCTALink.Text))
                                     {
@@ -57,7 +57,7 @@
                             }
                             @if (Model.ShowSecondaryCTA)
                             {
-                                using (Html.BeginRenderLinkWithGoal(Model, m => m.SecondaryCTALink, Model.SecondaryCTAGoal, new NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }, isEditable: true))
+                                using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.SecondaryCTALink, Model.SecondaryCTAGoal, new NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }, isEditable: true))
                                 {
                                     if (Model.SecondaryCTALink != null && !string.IsNullOrEmpty(Model.SecondaryCTALink.Text))
                                     {

@@ -25,7 +25,7 @@
             </div>
             @if (!Model.HideCTA && (Model.CTALink != null || Sitecore.Context.PageMode.IsExperienceEditor))
             {
-                using (Html.BeginRenderLinkWithGoal(Model, m => m.CTALink, Model.CTAGoal, new NameValueCollection { { "class", "btn btn-primary team-card__btn" } }, isEditable: true))
+                using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.CTALink, Model.CTAGoal, new NameValueCollection { { "class", "btn btn-primary team-card__btn" } }, isEditable: true))
                 {
                     if (Model.CTALink != null && !string.IsNullOrEmpty(Model.CTALink.Text))
                     {

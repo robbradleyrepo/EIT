@@ -7,7 +7,6 @@
     using System.Linq.Expressions;
     using Glass.Mapper.Sc;
     using System.Collections.Specialized;
-    using Glass.Mapper.Sc.Fields;
 
     public class AnalyticsGlassHtmlMvc<T>
     {
@@ -20,7 +19,21 @@
         public HtmlString GenerateGoalAnchor<TK>(TK item, Expression<Func<TK, object>> field, Func<string> url, string cssClass, Guid goalId, Func<string> content, object parameters = null)
         {
             return glass.Editable<TK>(item, field, x => $"<a href={url()} class='{cssClass}' data-goal-trigger='{goalId}'>{content()}</a>", parameters);
-        }        
+        }
+
+        public RenderingResult BeginRenderLinkWithGoal<TK>(TK model, Expression<Func<TK, object>> field, Guid goalId, NameValueCollection attributes = null, bool isEditable = false, bool alwaysRender = false)
+        {
+            if (attributes == null)
+            {
+                attributes = new NameValueCollection { { "data-goal-trigger", goalId.ToString() } };
+            }
+            else
+            {
+                attributes.Add("data-goal-trigger", goalId.ToString());
+            }
+
+            return glass.BeginRenderLink<TK>(model, field, attributes, isEditable, alwaysRender);
+        }
     }
 
     public static class Extensions
@@ -38,20 +51,6 @@
         public static HtmlString GenerateGoalAnchor<T>(this HtmlHelper<T> htmlHelper, Expression<Func<T, object>> field, Func<string> url, string cssClass, Guid goalId, Func<string> content, object parameters = null)
         {
             return htmlHelper.Glass().Editable(field, x => $"<a href={url()} class='{cssClass}' data-goal-trigger='{goalId}'>{content()}</a>", parameters);
-        }
-
-        public static RenderingResult BeginRenderLinkWithGoal<T>(this HtmlHelper<T> htmlHelper, T model, Expression<Func<T, object>> field, Guid goalId, NameValueCollection attributes = null, bool isEditable = false, bool alwaysRender = false)
-        {
-            if (attributes == null)
-            {
-                attributes = new NameValueCollection { { "data-goal-trigger", goalId.ToString() } };
-            }
-            else
-            {
-                attributes.Add("data-goal-trigger", goalId.ToString());
-            }
-
-            return htmlHelper.Glass().BeginRenderLink<T>(model, field, attributes, isEditable, alwaysRender);
         }
     }
 }
