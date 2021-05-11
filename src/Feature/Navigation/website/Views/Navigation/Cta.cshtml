@@ -9,7 +9,7 @@
         <div class="col-12">
             @if (Model.PrimaryCta != null || Sitecore.Context.PageMode.IsExperienceEditor)
             {
-                using (Html.BeginRenderLinkWithGoal(Model, m => m.PrimaryCta, Model.PrimaryCtaGoal, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary" } }, isEditable: true))
+                using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.PrimaryCta, Model.PrimaryCtaGoal, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary" } }, isEditable: true))
                 {
                     if (Model.PrimaryCta != null)
                     {
@@ -22,7 +22,7 @@
 
             @if (Model.SecondaryCta != null || Sitecore.Context.PageMode.IsExperienceEditor)
             {
-                using (Html.BeginRenderLinkWithGoal(Model, m => m.SecondaryCta, Model.SecondaryCtaGoal, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-secondary" } }, isEditable: true))
+                using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.SecondaryCta, Model.SecondaryCtaGoal, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-secondary" } }, isEditable: true))
                 {
                     if (Model.SecondaryCta != null)
                     {

@@ -7,7 +7,7 @@
     {
         @:Edit Icon
     }
-    using (Html.BeginRenderLinkWithGoal(Model, m => m.Link, Model.LinkGoal, isEditable: true))
+    using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.Link, Model.LinkGoal, isEditable: true))
     {
         @Html.Glass().RenderImage(Model, m => m.Icon, new NameValueCollection { { "class", "podcast__icon" } }, isEditable: true)
     }

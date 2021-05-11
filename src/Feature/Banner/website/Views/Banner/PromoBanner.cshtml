@@ -34,7 +34,7 @@
                             <div class="lead-banner__btnbox mt-4">
                                 @if (Model.ShowPrimaryCTA)
                                 {
-                                    using (Html.BeginRenderLinkWithGoal(Model, m => m.PrimaryCTALink, Model.PrimaryCtaGoal, new NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
+                                    using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.PrimaryCTALink, Model.PrimaryCtaGoal, new NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
                                     {
                                         @Html.Glass().Editable(Model, x => x.PrimaryCTALabel)
                                         <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
@@ -43,7 +43,7 @@
 
                                 @if (Model.ShowSecondaryCTA)
                                 {
-                                    using (Html.BeginRenderLinkWithGoal(Model, m => m.SecondaryCTALink, Model.SecondaryCtaGoal, new NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }, isEditable: true))
+                                    using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.SecondaryCTALink, Model.SecondaryCtaGoal, new NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }, isEditable: true))
                                     {
                                         @Html.Glass().Editable(Model, x => x.SecondaryCTALabel)
                                         <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>

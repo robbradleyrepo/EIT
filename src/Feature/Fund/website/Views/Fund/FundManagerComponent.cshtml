@@ -1,4 +1,6 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Foundation.Analytics.Goals
+@using System.Collections.Specialized
 @model LionTrust.Feature.Fund.Models.IFundManagers
 
 <div class="row">
@@ -6,11 +8,11 @@
     {
         <div class="col-lg-6 col-xl-4">
             <div class="fund-manager">
-                @using (@Html.Glass().BeginRenderLink(manager, m => m.Page, new { @class = "fund-manager__item" }, isEditable: true))
+                @using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(manager, m => m.Page, manager.PageGoal, new NameValueCollection { { "class", "fund-manager__item" } }, isEditable: true))
                 {
                     <div class="row">
                         <div class="col-4 col-md-2 col-lg-6">
-                            @Html.Glass().RenderImage(manager, m => m.Image, new { Alt = manager.FullName, @class = "fund-manager__img"  }, isEditable: true)
+                            @Html.Glass().RenderImage(manager, m => m.Image, new { Alt = manager.FullName, @class = "fund-manager__img" }, isEditable: true)
                         </div>
                         <div class="col-8 col-md-10 col-lg-6">
                             <div class="fund-manager__content">
