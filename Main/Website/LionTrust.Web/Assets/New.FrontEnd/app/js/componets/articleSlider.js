@@ -4,7 +4,7 @@ export default () => {
   const swiper = new Swiper(".swiper-container-article", {
     // slidesPerView: 1.2,
     spaceBetween: 32,
-    grabCursor: true,    
+    grabCursor: true,
     breakpointsInverse: true,
     breakpoints: {
       576: {
@@ -17,7 +17,7 @@ export default () => {
         slidesPerView: 2.7,
       },
       1200: {
-        slidesPerView: 3.125,
+        slidesPerView: 3.19,
         slidesOffsetAfter: 200,
       },
       1800: {
