@@ -84,5 +84,22 @@
         {
             public const string FundManagersFieldId = "{742FA605-EC20-4EC8-87FD-9E7DAEB8BC84}";
         }
+
+        public static class KeyInfoPriceComponent
+        {
+            public const string KeyInformationLabel_FieldId = "";
+            public const string ClassLaunchDateLabel_FieldId = "";
+            public const string ComparatorLabel_FieldId = "";
+            public const string Benchmark1Label_FieldId = "";
+            public const string FundSizeLabel_FieldId = "";
+            public const string NumberofHoldingsLabel_FieldId = "";
+            public const string NetUnderlyingYieldLabel_FieldId = "";
+            public const string DurationLabel_FieldId = "";
+            public const string PriceLabel_FieldId = "";
+            public const string SinglePriceLabel_FieldId = "";
+            public const string OfferPriceLabel_FieldId = "";
+            public const string PriceDateLabel_FieldId = "";
+            public const string PriceDateTooltipLabel_FieldId = "";
+        }
     }
 }

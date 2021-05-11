@@ -43,5 +43,19 @@
 
             return View("~/Views/Fund/FourFundStats.cshtml", viewModel);
         }
+
+        public ActionResult KeyInfoPrice()
+        {
+            var viewModel = new KeyInfoPriceViewModel();
+            var fundPageData = _context.GetPageContextItem<IFundPage>();
+            if (fundPageData != null && fundPageData.FundReference != null)
+            {
+                viewModel.Fund = fundPageData.FundReference;
+            }
+
+            viewModel.FourFundStatsComponent = _context.GetDataSourceItem<IFourFundStats>();
+
+            return View("~/Views/Fund/FourFundStats.cshtml", viewModel);
+        }
     }
 }
