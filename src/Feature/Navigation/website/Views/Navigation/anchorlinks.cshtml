@@ -39,7 +39,7 @@
             @if (Model.Cta != null || Sitecore.Context.PageMode.IsExperienceEditor)
             {
                 <div class="page-anchor__left">
-                    @using (Html.BeginRenderLinkWithGoal(Model, m => m.Cta, Model.GoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary display-inline-block" } }, isEditable: true))
+                    @using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.Cta, Model.GoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary display-inline-block" } }, isEditable: true))
                     {
                         if (Model.Cta != null)
                         {

@@ -3,6 +3,7 @@
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
+    using System;
 
     public interface IAuthor : ILegacyGlassBase
     {
@@ -32,5 +33,8 @@
 
         [SitecoreField(Constants.Author.PageFieldId, SitecoreFieldType.GeneralLink, "Additional details")]
         Link Page { get; set; }
+
+        [SitecoreField(Constants.Author.PageGoalFieldId, SitecoreFieldType.Droplink, "Additional details")]
+        Guid PageGoal { get; set; }
     }
 }

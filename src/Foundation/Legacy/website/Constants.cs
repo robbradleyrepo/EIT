@@ -74,6 +74,8 @@
             public const string TitleFieldId = "{132E494D-67B4-4D90-B21D-AF9FF5D9C146}";
 
             public const string PageFieldId = "{BAFABAF6-9398-4410-85B6-9F8AF3661EA0}";
+
+            public const string PageGoalFieldId = "{788D59AD-6BD1-4CF6-B958-D162E6DC5CCA}";
         }
 
         public static class FundPage 
