@@ -87,9 +87,12 @@
     <Compile Include="Controllers\FundManagerPromoController.cs" />
     <Compile Include="Controllers\FundsController.cs" />
     <Compile Include="Controllers\FundScrollerController.cs" />
+    <Compile Include="Models\AdditionalInfoAndChargesViewModel.cs" />
     <Compile Include="Models\FourFundStatsViewModel.cs" />
     <Compile Include="Models\FundManagerViewModel.cs" />
     <Compile Include="Models\FundOverviewViewModel.cs" />
+    <Compile Include="Models\IAdditionalInfoAndCharges.cs" />
+    <Compile Include="Models\IAdditionalInfoAndChargesComponent.cs" />
     <Compile Include="Models\IFourFundStats.cs" />
     <Compile Include="Models\IFundGlassBase.cs" />
     <Compile Include="Models\IFundManagerPage.cs" />

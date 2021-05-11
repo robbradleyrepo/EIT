@@ -89,7 +89,13 @@
             public const string FundSize_FieldId = "{D3A5BBC1-32DC-492D-9C70-645A8E47FB34}";
 
             public const string NumberOfHoldings_FieldName = "LegacyFund_NumberOfHoldings";
-            public const string NumberOfHoldings_FieldId = "{DB79496E-BCC5-443F-BBA6-E8D5BF0A31A3}";            
+            public const string NumberOfHoldings_FieldId = "{DB79496E-BCC5-443F-BBA6-E8D5BF0A31A3}";
+
+            public const string MinimalInitialInvestment_FieldName = "LegacyFund_MinimalInitialInvestment";
+            public const string MinimalInitialInvestment_FieldId = "{C299C924-F1D5-4CDA-AB46-7FF1F935A8C8}";
+
+            public const string MinimumAdditionalInvestment_FieldName = "LegacyFund_MinimumAdditionalInvestment";
+            public const string MinimumAdditionalInvestment_FieldId = "{22093813-F5DB-40EB-AEC1-CBCFB3F135FD}";
         }
 
         public static class HeroImagePageData

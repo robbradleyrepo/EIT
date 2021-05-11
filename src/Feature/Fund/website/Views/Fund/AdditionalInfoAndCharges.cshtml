@@ -1,53 +1,54 @@
-﻿<section class="container additional-info container-p-0">
+﻿@model LionTrust.Feature.Fund.Models.AdditionalInfoAndChargesViewModel 
+<section class="container additional-info container-p-0">
     <div class="card">
         <div class="row">
             <div class="col-lg-5">
                 <div class="card__content">
-                    <div class="card__title">Additional Information</div>
+                    <div class="card__title">@Html.Glass().Editable(Model.Component, m => m.AdditionalInfoLabel)</div>
                     <div class="card__row">
-                        <div class="card__item-left">Minimum initial</div>
-                        <div class="card__item-right">€1,000</div>
+                        <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.MinInitialLabel)</div>
+                        <div class="card__item-right">@Html.Glass().Editable(Model.AdditionalInfoAndCharges, m => m.MinimalInitialInvestment)</div>
                     </div>
                     <div class="card__row">
-                        <div class="card__item-left">Minimum additional investment</div>
-                        <div class="card__item-right">€1,000</div>
+                        <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.MinAdditionalLabel)</div>
+                        <div class="card__item-right">@Html.Glass().Editable(Model.AdditionalInfoAndCharges, m => m.MinimumAdditionalInvestment)</div>
                     </div>
                     <div class="card__row">
-                        <div class="card__item-left">Ex dividend date</div>
-                        <div class="card__item-right"></div>
+                        <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.ExDividendDateLabel)</div>
+                        <div class="card__item-right">@Html.Glass().Editable(Model.AdditionalInfoAndCharges, m => m.ExDividendDate)</div>
                     </div>
                     <div class="card__row">
-                        <div class="card__item-left">Distribution date</div>
-                        <div class="card__item-right">01 Jan</div>
+                        <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.DistributionDateLabel)</div>
+                        <div class="card__item-right">@Html.Glass().Editable(Model.AdditionalInfoAndCharges, m => m.DistributionDate)</div>
                     </div>
                     <div class="card__row">
-                        <div class="card__item-left">Sedol code</div>
-                        <div class="card__item-right">01 Apr</div>
+                        <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.SedolCodeLabel)</div>
+                        <div class="card__item-right">@Html.Glass().Editable(Model.AdditionalInfoAndCharges, m => m.SedolCode)</div>
                     </div>
                     <div class="card__row">
-                        <div class="card__item-left">ISIN code</div>
-                        <div class="card__item-right">BYWSTD5</div>
+                        <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.ISINCodeLabel)</div>
+                        <div class="card__item-right">@Html.Glass().Editable(Model.AdditionalInfoAndCharges, m => m.ISINCode)</div>
                     </div>
                     <div class="card__row">
-                        <div class="card__item-left">Bloomberg code</div>
-                        <div class="card__item-right">IE00BYWSTD52</div>
+                        <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.BloombergCodeLabel)</div>
+                        <div class="card__item-right">@Html.Glass().Editable(Model.AdditionalInfoAndCharges, m => m.BloombergCode)</div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 offset-lg-1">
                 <div class="card__content">
-                    <div class="card__title">Charges</div>
+                    <div class="card__title">@Html.Glass().Editable(Model.Component, m => m.ChargesLabel)</div>
                     <div class="card__row">
-                        <div class="card__item-left">Initial charge</div>
-                        <div class="card__item-right">Up to 5.00%</div>
+                        <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.InitialChargeLabel)</div>
+                        <div class="card__item-right">@Html.Glass().Editable(Model.AdditionalInfoAndCharges, m => m.InitialCharge)</div>
                     </div>
                     <div class="card__row">
-                        <div class="card__item-left">Ongoing Charges Figure</div>
-                        <div class="card__item-right">1.10%</div>
+                        <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.OngoingChargesLabel)</div>
+                        <div class="card__item-right">@Html.Glass().Editable(Model.AdditionalInfoAndCharges, m => m.OngoingCharges)</div>
                     </div>
                     <div class="card__row">
-                        <div class="card__item-left">Included within the OCF is the Annual Management Charge</div>
-                        <div class="card__item-right">1.00%</div>
+                        <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.IncludedOFCLabel)</div>
+                        <div class="card__item-right">@Html.Glass().Editable(Model.AdditionalInfoAndCharges, m => m.IncludedOFC)</div>
                     </div>
                 </div>
             </div>
