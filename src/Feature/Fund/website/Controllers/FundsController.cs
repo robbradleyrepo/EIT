@@ -47,11 +47,10 @@
         public ActionResult AdditionalInfoAndCharges()
         {
             var viewModel = new AdditionalInfoAndChargesViewModel();
-            var fundPageData = _context.GetPageContextItem<IFundPage>();
-            if (fundPageData != null && fundPageData.FundReference != null)
+            var fundPageData = _context.GetPageContextItem<IFundPageExtended>();
+            if (fundPageData != null && fundPageData.Fund != null)
             {
-                viewModel.AdditionalInfoAndCharges = _context.SitecoreService.GetItem<IAdditionalInfoAndCharges>(fundPageData.FundReference.Id);
-                _context.SitecoreService.Populate(viewModel.AdditionalInfoAndCharges);
+                viewModel.AdditionalInfoAndCharges = fundPageData.Fund;
             }
 
             viewModel.Component = _context.GetDataSourceItem<IAdditionalInfoAndChargesComponent>();

@@ -4,7 +4,7 @@
 
     public class AdditionalInfoAndChargesViewModel
     {
-        public IAdditionalInfoAndCharges AdditionalInfoAndCharges { get; set; }
+        public IFundExtended AdditionalInfoAndCharges { get; set; }
         public IAdditionalInfoAndChargesComponent Component { get; set; }
     }
 }

@@ -11,7 +11,7 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-	<MvcBuildViews>true</MvcBuildViews>
+    <MvcBuildViews>true</MvcBuildViews>
     <RootNamespace>LionTrust.Feature.Fund</RootNamespace>
     <AssemblyName>LionTrust.Feature.Fund</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
@@ -100,6 +100,8 @@
     <Compile Include="Models\IAdditionalInfoAndChargesComponent.cs" />
     <Compile Include="Models\IFourFundStats.cs" />
     <Compile Include="Models\IFundDetailNavigation.cs" />
+    <Compile Include="Models\IFundExtended.cs" />
+    <Compile Include="Models\IFundPageExtended.cs" />
     <Compile Include="Models\IFundGlassBase.cs" />
     <Compile Include="Models\IFundHeader.cs" />
     <Compile Include="Models\IFundManagerPage.cs" />

@@ -1,4 +1,6 @@
 ﻿@model LionTrust.Feature.Fund.Models.AdditionalInfoAndChargesViewModel 
+@if (Model != null && Model.AdditionalInfoAndCharges != null && Model.Component)
+{
 <section class="container additional-info container-p-0">
     <div class="card">
         <div class="row">
@@ -55,3 +57,8 @@
         </div>
     </div>
 </section>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @: Add datasource for Additional Information and Charges component
+}
