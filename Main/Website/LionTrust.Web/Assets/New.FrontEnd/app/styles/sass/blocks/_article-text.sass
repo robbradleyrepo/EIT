@@ -52,11 +52,17 @@
     margin: 32px auto
     width: 100%
     max-width: 764px
+    color: $black
     @include breakpoint(desktop, up)
         padding: 15px 32px
         font-size: 20px
-        margin-bottom: 45px auto
-
+        margin-bottom: 45px
+    &_with-margins
+        @include breakpoint(mobile-large, down)
+            margin: 0 16px 41px
+            width: auto
+        @include breakpoint(desktop, down)
+            padding: 14px 13px
 .gold-qoute
     font-size: 26px
     line-height: 36px
