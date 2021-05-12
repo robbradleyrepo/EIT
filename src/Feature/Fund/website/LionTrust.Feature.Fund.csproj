@@ -82,6 +82,7 @@
     <Content Include="Views\Fund\FundManagerComponent.cshtml" />
     <Content Include="Views\Fund\FundHeader.cshtml" />
     <Content Include="Views\Fund\fundetailnav.cshtml" />
+    <Content Include="Views\Fund\KeyInfoPrice.cshtml" />
     <Content Include="Views\Fund\RiskBanner.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
@@ -92,12 +93,17 @@
     <Compile Include="Controllers\FundManagerPromoController.cs" />
     <Compile Include="Controllers\FundsController.cs" />
     <Compile Include="Controllers\FundScrollerController.cs" />
+    <Compile Include="Models\AdditionalInfoAndChargesViewModel.cs" />
     <Compile Include="Models\FourFundStatsViewModel.cs" />
     <Compile Include="Models\FundHeaderViewModel.cs" />
     <Compile Include="Models\FundManagerViewModel.cs" />
     <Compile Include="Models\FundOverviewViewModel.cs" />
+    <Compile Include="Models\IAdditionalInfoAndCharges.cs" />
+    <Compile Include="Models\IAdditionalInfoAndChargesComponent.cs" />
     <Compile Include="Models\IFourFundStats.cs" />
     <Compile Include="Models\IFundDetailNavigation.cs" />
+    <Compile Include="Models\IFundExtended.cs" />
+    <Compile Include="Models\IFundPageExtended.cs" />
     <Compile Include="Models\IFundGlassBase.cs" />
     <Compile Include="Models\IFundHeader.cs" />
     <Compile Include="Models\IFundManagerPage.cs" />
@@ -106,6 +112,9 @@
     <Compile Include="Models\IFundScroller.cs" />
     <Compile Include="Models\IKeyFundDocuments.cs" />
     <Compile Include="Models\IFundManagers.cs" />
+    <Compile Include="Models\IKeyInfoPrice.cs" />
+    <Compile Include="Models\IKeyInfoPriceComponent.cs" />
+    <Compile Include="Models\KeyInfoPriceViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
