@@ -1,4 +1,4 @@
-﻿namespace LionTrust.Foundation.Article.Models
+﻿namespace LionTrust.Feature.Article.Models
 {
     using LionTrust.Foundation.ORM.Models;
 

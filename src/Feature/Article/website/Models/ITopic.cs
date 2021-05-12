@@ -1,8 +1,6 @@
-﻿namespace LionTrust.Foundation.Article.Models
+﻿namespace LionTrust.Feature.Article.Models
 {
     using Glass.Mapper.Sc.Configuration.Attributes;
-    using LionTrust.Foundation.Article;
-    using LionTrust.Foundation.Article.Models;
 
     public interface ITopic: IArticleGlassBase
     {

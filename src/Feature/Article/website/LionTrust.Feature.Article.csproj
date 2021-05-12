@@ -81,10 +81,13 @@
     <Compile Include="Controllers\ArticleHeaderController.cs" />
     <Compile Include="Controllers\FeaturedArticlesController.cs" />
     <Compile Include="Models\ArticleViewModel.cs" />
+    <Compile Include="Models\IArticle.cs" />
     <Compile Include="Models\IArticleFilter.cs" />
+    <Compile Include="Models\IArticleGlassBase.cs" />
     <Compile Include="Models\IArticleHeader.cs" />
     <Compile Include="Models\IFeaturedArticles.cs" />
     <Compile Include="Models\ILink.cs" />
+    <Compile Include="Models\ITopic.cs" />
     <Compile Include="Models\RelatedArticle.cs" />
     <Compile Include="Models\RelatedArticlesViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -96,10 +99,6 @@
     <ProjectReference Include="..\..\..\Foundation\Analytics\website\LionTrust.Foundation.Analytics.csproj">
       <Project>{71010683-02eb-4e0d-b0e1-6643922799ee}</Project>
       <Name>LionTrust.Foundation.Analytics</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Foundation\Article\website\LionTrust.Foundation.Article.csproj">
-      <Project>{cc0386c4-5dc0-480b-85c4-209e87b7fb96}</Project>
-      <Name>LionTrust.Foundation.Article</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Content\website\LionTrust.Foundation.Content.csproj">
       <Project>{f8f55034-fa55-4d27-b115-0ab4eeb9a0a8}</Project>

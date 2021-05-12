@@ -44,9 +44,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
-    <Compile Include="Models\IArticle.cs" />
-    <Compile Include="Models\IArticleGlassBase.cs" />
-    <Compile Include="Models\ITopic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
