@@ -4,7 +4,6 @@
 
     using Glass.Mapper.Sc.Web.Mvc;
     using LionTrust.Feature.Article.Models;
-    using LionTrust.Foundation.Article.Models;
     using Sitecore.Mvc.Controllers;
 
     public class ArticleHeaderController: SitecoreController

@@ -1,26 +1,31 @@
 ﻿@using System.Collections.Specialized;
 @using LionTrust.Foundation.ORM.Extensions
-@model LionTrust.Feature.Promo.Models.IArticlePromo
-@if (Model != null)
-{
+@model LionTrust.Feature.Article.Models.IArticlePromo
 <div class="article-promo">
     <a href="#article promo" class="article-promo__front">
     </a>
     <a href="#" class="article-promo__body">
-        @if (Model.Fund != null)
-        {
-            <div class="article-promo__head">
-                <img class="article-promo__head-img" src="images/components/banners/writer.jpeg" alt="">
-                <span class="article-promo__head-title">@Html.Glass().Editable(Model.Fund, m => m.PageTitle)</span>
-            </div>
-        }
-        else if (Sitecore.Context.PageMode.IsExperienceEditor)
-        {
-            <div class="article-promo__head">
-                <img class="article-promo__head-img" src="images/components/banners/writer.jpeg" alt="">
-                <span class="article-promo__head-title">No Fund selected for Article</span>
-            </div>
-        }
+        <div class="article-promo__head">
+            <img class="article-promo__head-img" src="images/components/banners/writer.jpeg" alt="">
+            <span class="article-promo__head-title">
+                @if (Model.Topics != null && Model.Topics.Any())
+                {
+                    var first = true;
+                    foreach (var topic in Model.Topics)
+                    {
+                        if (!first)
+                        {
+                            <span class="dot-divider"></span>
+                        }
+                        else
+                        {
+                            first = false;
+                        }
+                        @topic.Name
+                    }
+                }
+            </span>
+        </div>
         <span class="article-promo__title">
             @Html.Glass().Editable(Model, m => m.Title)
         </span>
@@ -63,8 +68,3 @@
         @Html.Glass().RenderImage(Model, m => m.HeaderImage, new NameValueCollection { { "class", "article-promo__back" } }, isEditable: true)
     }
 </div>
-}
-else if (Sitecore.Context.PageMode.IsExperienceEditor)
-{
-    @: Please assign datasource for Fund Update component
-}

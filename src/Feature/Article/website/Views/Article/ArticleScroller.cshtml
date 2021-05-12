@@ -1,5 +1,5 @@
 ﻿@using System.Collections.Specialized;
-@model LionTrust.Feature.Promo.Models.ArticleScrollerViewModel
+@model LionTrust.Feature.Article.Models.ArticleScrollerViewModel
 <section class="article">
     <div class="article__box">
         <div class="container">
@@ -32,7 +32,7 @@
                                     case "Fund Manager View":
                                         {
                                             <div class="swiper-slide">
-                                                @Html.Partial("~/Views/Promo/FundManagerPromo.cshtml", article)
+                                                @Html.Partial("~/Views/Article/PromoCards/FundManagerPromo.cshtml", article)
                                             </div>
                                             break;
                                         }
@@ -41,7 +41,7 @@
                                             if (article.PodcastPromo != null && article.PodcastPromo.Any())
                                             {
                                                 <div class="swiper-slide">
-                                                    @Html.Partial("~/Views/Promo/PodcastPromo.cshtml", article.PodcastPromo.FirstOrDefault())
+                                                    @Html.Partial("~/Views/Article/PromoCards/PodcastPromo.cshtml", article.PodcastPromo.FirstOrDefault())
                                                 </div>
                                             }                                            
                                             break;
@@ -49,26 +49,26 @@
                                     case "Fund Update":
                                         {
                                             <div class="swiper-slide">
-                                                @Html.Partial("~/Views/Promo/FundUpatePromo.cshtml", article)
+                                                @Html.Partial("~/Views/Article/PromoCards/FundUpatePromo.cshtml", article)
                                             </div>
                                             break;
                                         }
                                     case "Video":
                                         {
-                                            @Html.Partial("~/Views/Promo/VidePromo.cshtml", article)
+                                            @Html.Partial("~/Views/Article/PromoCards/VidePromo.cshtml", article)
                                             break;
                                         }
                                     case "Magazine And Reports":
                                         {
                                             <div class="swiper-slide">
-                                                @Html.Partial("~/Views/Promo/MagazineReportsPromo.cshtml", article)
+                                                @Html.Partial("~/Views/Article/PromoCards/MagazineReportsPromo.cshtml", article)
                                             </div>
                                             break;
                                         }
                                     default:
                                         {
                                             <div class="swiper-slide">
-                                                @Html.Partial("~/Views/Promo/FundManagerViewPromo.cshtml", article)
+                                                @Html.Partial("~/Views/Article/PromoCards/FundManagerViewPromo.cshtml", article)
                                             </div>
                                         }
                                         break;

@@ -1,4 +1,4 @@
-﻿namespace LionTrust.Feature.Promo.Models
+﻿namespace LionTrust.Feature.Article.Models
 {
     using System.Collections.Generic;
 

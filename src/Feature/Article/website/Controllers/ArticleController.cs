@@ -1,26 +1,17 @@
-﻿namespace LionTrust.Feature.Promo.Controllers
+﻿namespace LionTrust.Feature.Article.Controllers
 {
     using System.Web.Mvc;
-
     using Glass.Mapper.Sc.Web.Mvc;
-    using LionTrust.Feature.Promo.Models;
-    using LionTrust.Foundation.Indexing.Repositories;
+    using LionTrust.Feature.Article.Models;
     using Sitecore.Mvc.Controllers;
-    using Sitecore.Mvc.Presentation;
-
-    public class PromoController : SitecoreController
+    
+    public class ArticleController : SitecoreController
     {
-        private readonly ISearchRepository _searchRepository;
         private readonly IMvcContext _mvcContext;
 
-        public PromoController(IMvcContext mvcContext) : this(new SearchRepository(RenderingContext.Current.ContextItem), mvcContext)
+        public ArticleController(IMvcContext context)
         {
-        }
-
-        public PromoController(ISearchRepository searchRepository, IMvcContext mvcContext)
-        {
-            this._searchRepository = searchRepository;
-            this._mvcContext = mvcContext;
+            this._mvcContext = context;
         }
 
         public ActionResult ArticleScroller()

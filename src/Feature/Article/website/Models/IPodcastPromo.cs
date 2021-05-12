@@ -1,4 +1,4 @@
-﻿namespace LionTrust.Feature.Promo.Models
+﻿namespace LionTrust.Feature.Article.Models
 {
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
@@ -6,7 +6,7 @@
     using System.Collections.Generic;
 
     [SitecoreType(TemplateId = Constants.PodcastPromo.TemplateId, EnforceTemplate = SitecoreEnforceTemplate.Template)]
-    public interface IPodcastPromo : IPromoGlassBase
+    public interface IPodcastPromo : IArticleGlassBase
     {
         [SitecoreField(Constants.PodcastPromo.Heading_FieldId, SitecoreFieldType.SingleLineText, "Podcast Promo")]
         string Heading { get; set; }

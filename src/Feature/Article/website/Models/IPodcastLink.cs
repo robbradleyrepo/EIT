@@ -1,11 +1,11 @@
-﻿namespace LionTrust.Feature.Promo.Models
+﻿namespace LionTrust.Feature.Article.Models
 {
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
     using System;
 
-    public interface IPodcastLink : IPromoGlassBase
+    public interface IPodcastLink : IArticleGlassBase
     {
         [SitecoreField(Constants.PodcastLink.Link_FieldId, SitecoreFieldType.GeneralLink, "Podcast Link")]
         Link Link { get; set; }

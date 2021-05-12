@@ -1,10 +1,12 @@
 ﻿@using System.Collections.Specialized;
 @using LionTrust.Foundation.ORM.Extensions
-@model LionTrust.Feature.Promo.Models.IArticlePromo
+@model LionTrust.Feature.Article.Models.IArticlePromo
+@if (Model != null)
+{
 <div class="article-promo">
     <a href="#article promo" class="article-promo__front">
     </a>
-    <a href="#" class="article-promo__body">
+    <a href="@Model.Url" class="article-promo__body">
         <div class="article-promo__head">
             @if (Model.Author != null && Model.Author.Any())
             {
@@ -21,12 +23,15 @@
                 }
             }
         </div>
+
         <span class="article-promo__title">
             @Html.Glass().Editable(Model, m => m.Title)
         </span>
-        <span class="article-promo__desc">
-            @Html.Glass().Editable(Model, m => m.Subitle)
-        </span>
+        <div class="article-promo__play-video">
+            watch now
+            <img class="article-promo__video-btn" src="\images\components\common\play-btn.svg" alt="play video">
+        </div>
+
     </a>
     <div class="article-promo__footer">
         <div class="article-promo__footer-item">
@@ -34,26 +39,18 @@
             <span class="article-promo__footer-text">
                 @using (Html.Glass().BeginEditFrame(Model, "Edit Article Date", x => x.Date))
                 {
-                    if (Sitecore.Context.PageMode.IsExperienceEditor)
+                    if (Model.Date != DateTime.MinValue || Sitecore.Context.PageMode.IsExperienceEditor)
                     {
                         @Model.Date.ToString("d MMMM yyyy")
                     }
                     else
                     {
-                        if (Model.Date != DateTime.MinValue)
-                        {
-                            @Model.Date.ToString("d MMMM yyyy")
-                        }
-                        else
-                        {
-                            @Model.PublishedDate.ToString("d MMMM yyyy")
-                        }
+                        @Model.PublishedDate.ToString("d MMMM yyyy")
                     }
                 }
             </span>
-        </div>
+        </div>=
     </div>
-
     @if ((Model.Image != null && !string.IsNullOrEmpty(Model.Image.Src)) || Sitecore.Context.PageMode.IsExperienceEditor)
     {
         @Html.Glass().RenderImage(Model, m => m.Image, new NameValueCollection { { "class", "article-promo__back" } }, isEditable: true)
@@ -63,3 +60,8 @@
         @Html.Glass().RenderImage(Model, m => m.HeaderImage, new NameValueCollection { { "class", "article-promo__back" } }, isEditable: true)
     }
 </div>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @: Please assign datasource for Video Promo component
+}

@@ -73,24 +73,13 @@
     <Content Include="Views\Promo\ImageCTAPromo.cshtml" />
     <Content Include="Views\Promo\PodcastPromo.cshtml" />
     <Content Include="Views\Promo\_PodcastLink.cshtml" />
-    <Content Include="Views\Promo\VideoPromo.cshtml" />
-    <Content Include="Views\Promo\FundUpdatePromo.cshtml" />
-    <Content Include="Views\Promo\FundManagerViewPromo.cshtml" />
-    <Content Include="Views\Promo\MagazineReportsPromo.cshtml" />
-    <Content Include="Views\Promo\ArticleScroller.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
-    <Compile Include="Controllers\PromoController.cs" />
-    <Compile Include="Models\ArticleScrollerViewModel.cs" />
-    <Compile Include="Models\IArticlePromo.cs" />
     <Compile Include="Extensions.cs" />
-    <Compile Include="Models\IArticleScroller.cs" />
     <Compile Include="Models\IImageCTAPromo.cs" />
     <Compile Include="Models\IImagePromo.cs" />
-    <Compile Include="Models\IPodcastLink.cs" />
-    <Compile Include="Models\IPodcastPromo.cs" />
     <Compile Include="Models\IPromoGlassBase.cs" />
     <Compile Include="Models\IPromoLookup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

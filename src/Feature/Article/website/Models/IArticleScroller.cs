@@ -1,4 +1,4 @@
-﻿namespace LionTrust.Feature.Promo.Models
+﻿namespace LionTrust.Feature.Article.Models
 {
     using System.Collections.Generic;
 
@@ -7,7 +7,7 @@
     using Glass.Mapper.Sc.Fields;
     using LionTrust.Foundation.Legacy.Models;
 
-    public interface IArticleScroller : IPromoGlassBase
+    public interface IArticleScroller : IArticleGlassBase
     {
         [SitecoreField(Constants.ArticleScroller.Heading_FieldId, SitecoreFieldType.SingleLineText, "Article Scroller")]
         string Heading { get; set; }

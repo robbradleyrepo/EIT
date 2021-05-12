@@ -74,19 +74,32 @@
     <Content Include="Views\web.config" />
     <Content Include="App_Config\Include\Feature\Feature.Article.Serialization.config" />
     <Content Include="Views\Article\FeaturedArticles.cshtml" />
+    <Content Include="Views\Article\PromoCards\_PodcastLink.cshtml" />
+    <Content Include="Views\Article\PromoCards\PodcastPromo.cshtml" />
+    <Content Include="Views\Article\PromoCards\VideoPromo.cshtml" />
+    <Content Include="Views\Article\PromoCards\MagazineReportsPromo.cshtml" />
+    <Content Include="Views\Article\PromoCards\FundUpdatePromo.cshtml" />
+    <Content Include="Views\Article\PromoCards\FundManagerViewPromo.cshtml" />
+    <Content Include="Views\Article\ArticleScroller.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="Controllers\ArticleController.cs" />
     <Compile Include="Controllers\ArticleHeaderController.cs" />
     <Compile Include="Controllers\FeaturedArticlesController.cs" />
+    <Compile Include="Models\ArticleScrollerViewModel.cs" />
     <Compile Include="Models\ArticleViewModel.cs" />
     <Compile Include="Models\IArticle.cs" />
     <Compile Include="Models\IArticleFilter.cs" />
     <Compile Include="Models\IArticleGlassBase.cs" />
     <Compile Include="Models\IArticleHeader.cs" />
+    <Compile Include="Models\IArticlePromo.cs" />
+    <Compile Include="Models\IArticleScroller.cs" />
     <Compile Include="Models\IFeaturedArticles.cs" />
     <Compile Include="Models\ILink.cs" />
+    <Compile Include="Models\IPodcastLink.cs" />
+    <Compile Include="Models\IPodcastPromo.cs" />
     <Compile Include="Models\ITopic.cs" />
     <Compile Include="Models\RelatedArticle.cs" />
     <Compile Include="Models\RelatedArticlesViewModel.cs" />
