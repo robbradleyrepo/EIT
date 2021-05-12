@@ -82,11 +82,14 @@
         margin-right: 16px
         font-size: 10px
         padding: 0 .2rem
-        min-width: 135px
+        width: 100%
+        &:last-child
+            margin-right: 0
         @include breakpoint(tablet, up)
             min-width: 180px
             padding: 0 .5rem
             font-size: 10px
+            width: auto
         @include breakpoint(desktop, up)
             font-size: 12px
             min-width: 200px
