@@ -45,7 +45,8 @@
 
 // new style for lead banner
 .lead-banner
-    margin: 30px 0
+    margin-top: 30px
+    margin-bottom: 40px
     @include breakpoint(desktop, up)
         margin: 80px 0
     &__title
@@ -55,9 +56,14 @@
     &__text
         font-size: 18px
         display: inline-block
+        font-weight: 300
+        line-height: 28px
         @include breakpoint(desktop, up)
             font-size: 20px
     &__content
         display: inline-block
         @include breakpoint(desktop, up)
             width: 40%
+    &__btnbox
+        display: flex
+        justify-content: center

@@ -15,6 +15,7 @@ import investmentCard from "./componets/investmentCard";
 import articleFilter from "./componets/articleFilter";
 import parallaxScrolling from "./componets/parallaxScrolling";
 import stickyNavbar from "./componets/stickyNavbar";
+import literatureOverlay from "./componets/literatureOverlay";
 
 document.addEventListener("DOMContentLoaded", () => {
   onboardingOverlay();
@@ -26,11 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
   articleSlider();
   awardsSlider();
   stickyNavbar();
+  literatureOverlay();
   if (document.querySelector(".article-page")) articleFilter();
   if (document.querySelector(".main-page")) parallaxScrolling();
 
   $('[data-toggle="tooltip"]').tooltip({
-    offset: 5
-  })
-  
+    offset: 5,
+  });
 });
