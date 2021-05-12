@@ -33,10 +33,12 @@
         @include breakpoint(desktop, up)
             display: none
     .swiper-pagination-bullets
-        bottom: -5px
+        bottom: 10px
     .swiper-pagination-bullet
         background: $white
         opacity: 1
+        width: 5px
+        height: 5px
         &-active
             background: $gold
     .swiper-slide:not(.swiper-slide-visible)
@@ -110,7 +112,7 @@
         right: 0
         bottom: 0
         z-index: 1
-        background: $black
+        background: #000
         border-radius: 10px
         opacity: 0.3
         transition: .3s opacity ease
