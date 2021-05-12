@@ -1,9 +1,8 @@
 ﻿namespace LionTrust.Feature.Fund.Models
 {
     using Glass.Mapper.Sc.Configuration.Attributes;
-    using LionTrust.Foundation.Legacy.Models;
 
-    public interface IAdditionalInfoAndCharges : IFundGlassBase, IFund
+    public interface IAdditionalInfoAndCharges : IFundGlassBase
     {
         [SitecoreField(Constants.AdditionalInfoAndCharges.BloombergCode_FieldId)]
         string BloombergCode { get; set; }
