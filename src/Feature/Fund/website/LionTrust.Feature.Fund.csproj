@@ -83,7 +83,6 @@
     <Content Include="Views\Fund\FundHeader.cshtml" />
     <Content Include="Views\Fund\fundetailnav.cshtml" />
     <Content Include="Views\Fund\KeyInfoPrice.cshtml" />
-    <Content Include="Views\Fund\RiskBanner.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -108,7 +107,6 @@
     <Compile Include="Models\IFundHeader.cs" />
     <Compile Include="Models\IFundManagerPage.cs" />
     <Compile Include="Models\IFundOverview.cs" />
-    <Compile Include="Models\IFundRisk.cs" />
     <Compile Include="Models\IFundScroller.cs" />
     <Compile Include="Models\IKeyFundDocuments.cs" />
     <Compile Include="Models\IFundManagers.cs" />

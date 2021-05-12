@@ -112,11 +112,6 @@
             public const string SinglePrice_FieldId = "{ACF74586-B31A-4812-A440-C4C50A6E4F70}";
             public const string OfferPrice_FieldId = "{B834FC27-880B-4ACD-BC10-D6158773B285}";
             public const string PriceDate_FieldId = "{366E54EF-CC6F-4F52-8953-6DDDEA6ED408}";
-        }
-
-        public static class FundRisk
-        {
-            public const string BannerText_FieldId = "{3194D921-A018-40C3-AF6F-BCB17E3BBEBC}";
-        }
+        }       
     }
 }

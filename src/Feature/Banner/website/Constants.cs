@@ -105,5 +105,10 @@
             public const string Heading_FieldName = "BannerWithSlider_Heading";
             public const string Heading_FieldId = "{80C119C8-E2B9-45A8-BFA7-25E65218B121}";
         }
+
+        public static class RiskBanner
+        {
+            public const string BannerTextFieldId = "{3194D921-A018-40C3-AF6F-BCB17E3BBEBC}";
+        }
     }
 }

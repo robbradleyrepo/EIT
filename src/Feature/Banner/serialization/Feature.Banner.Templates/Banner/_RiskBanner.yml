@@ -1,14 +1,20 @@
 ﻿---
 ID: "3c13a232-7e28-4186-acff-f558a8d990db"
-Parent: "157f9844-ea1c-4fab-b9dc-98caa06b0adc"
+Parent: "aba18f33-d1a4-4929-9051-94f86fe3f2fa"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Feature/Fund/_FundRisk
+Path: /sitecore/templates/Feature/Banner/_RiskBanner
 DB: master
 SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: office/32x32/sign_warning.png
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
   Type: tree list
   Value: "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 650
 Languages:
 - Language: en
   Versions:
