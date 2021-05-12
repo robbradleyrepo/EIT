@@ -4,7 +4,7 @@
     using LionTrust.Foundation.Legacy.Models;
     using System;
 
-    public interface IKeyInfoPrice : IFundGlassBase, IFund
+    public interface IKeyInfoPrice : IFundGlassBase
     {
         [SitecoreField(Constants.KeyInfoPrice.ClassLaunchDate_FieldId)]
         DateTime ClassLaunchDate { get; set; }
