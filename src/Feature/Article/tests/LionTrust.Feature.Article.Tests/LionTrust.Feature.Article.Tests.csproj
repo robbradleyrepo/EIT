@@ -43,11 +43,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RelatedArticlesMappers\RelatedArticleLinkShould.cs" />
-    <Compile Include="RelatedArticlesMappers\SearchedRelatedArticlesShould.cs" />
-    <Compile Include="RelatedArticlesMappers\UrlLinkShould.cs" />
+    <Compile Include="FeaturedArticlesMappers\FeaturedArticleLinkShould.cs" />
+    <Compile Include="FeaturedArticlesMappers\SearchedFeaturedArticlesShould.cs" />
+    <Compile Include="FeaturedArticlesMappers\UrlLinkShould.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Foundation\Article\website\LionTrust.Foundation.Article.csproj">
+      <Project>{CC0386C4-5DC0-480B-85C4-209E87B7FB96}</Project>
+      <Name>LionTrust.Foundation.Article</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\..\Foundation\Content\website\LionTrust.Foundation.Content.csproj">
       <Project>{F8F55034-FA55-4D27-B115-0AB4EEB9A0A8}</Project>
       <Name>LionTrust.Foundation.Content</Name>

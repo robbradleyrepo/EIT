@@ -77,6 +77,7 @@
     <Content Include="App_Config\Include\Feature\Feature.Banner.Serialization.config" />
     <Content Include="Views\Banner\BannerWithIcons.cshtml" />
     <Content Include="Views\Banner\BannerWithSlider.cshtml" />
+    <Content Include="Views\Banner\RiskBanner.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -88,6 +89,7 @@
     <Compile Include="Models\IIconWithText.cs" />
     <Compile Include="Models\IImageWithTitleAndText.cs" />
     <Compile Include="Models\IPromoBanner.cs" />
+    <Compile Include="Models\IRiskBanner.cs" />
     <Compile Include="Models\LeadBannerModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

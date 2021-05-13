@@ -1,0 +1,35 @@
+﻿---
+ID: "f11aea8f-6f21-44b3-a1f8-4b795962578e"
+Parent: "a9ef2a39-c7b4-43d5-b088-44310e0f3cd5"
+Template: "61714783-1a29-4442-8cce-81840bcc4044"
+Path: /sitecore/content/LionTrustNew/Home/_Local/Homepage Lead Banner
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0c566b1c-47d3-48a5-a2ed-ef342735ed54"
+      Hint: HomepageLeadBanner_SecondaryCta
+      Value: |
+        <link linktype="internal" text="See All Guidance" querystring="" target="" id="{11111111-1111-1111-1111-111111111111}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210512T141804Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "b9d99264-5432-4883-b933-0ee7415fde28"
+      Hint: HomepageLeadBanner_TextAlign
+      Value: "{68D6465E-0D2B-45D0-A5E7-E3578757CEC7}"
+    - ID: "dbd747a7-aa9c-480e-9c93-4fdb575a3716"
+      Hint: HomepageLeaadBanner_Copy
+      Value: We take pride in offering specialist investment opportunities to private investors looking to generate sustainable growth. We manage risk, maintain integrity and ensure transparency on how your investments are managed.
+    - ID: "e0b1cd77-cf3a-4ce0-bb48-545985a11121"
+      Hint: HomepageLeadBanner_Heading
+      Value: Helping you achieve your financial goals
+    - ID: "fedd5f78-07da-44bb-8c46-8149a03834e4"
+      Hint: HomepageLeaadBanner_PrimaryCta
+      Value: |
+        <link linktype="internal" text="Read More" querystring="" target="" id="{11111111-1111-1111-1111-111111111111}" />

@@ -63,5 +63,12 @@
             public const string SelectedArticles_FieldId = "{725DC6C8-8878-4947-86B3-163E51C5911D}";
             public const string SelectedTags_FieldId = "{23CB5FCD-BCFA-4A06-AE30-8991CC839A4C}";
         }
+        }
+
+        public static class RelatedArticles
+        {
+            public const string HeadingFieldId = "{9B7BD172-7140-40A2-B464-782C99CF7E73}";
+            public const string ArticlesFieldId = "{8146922E-1AF4-48E9-91CD-CA5F37CAB4E5}";
+        }
     }
 }

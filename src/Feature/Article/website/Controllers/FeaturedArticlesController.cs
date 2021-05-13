@@ -3,7 +3,7 @@
     using Glass.Mapper.Sc.Web;
     using Glass.Mapper.Sc.Web.Mvc;
     using LionTrust.Feature.Article.Models;
-    using LionTrust.Feature.Article.RelatedArticleMappers;
+    using LionTrust.Feature.Article.FeaturedArticleMappers;
     using LionTrust.Foundation.Search.Services.Interfaces;
     using Sitecore.Abstractions;
     using Sitecore.Mvc.Controllers;
@@ -33,26 +33,26 @@
                 return null;
             }
 
-            var result = new RelatedArticlesViewModel { Data = datasource };
+            var result = new FeaturedArticlesViewModel { Data = datasource };
             
             if (datasource.Articles != null && datasource.Articles.Any())
             {
-                result.RelatedArticles = RelatedArticleLink.Map(datasource);
+                result.FeaturedArticles = FeaturedArticleLink.Map(datasource);
             }
             else if(datasource.Children != null && datasource.Children.Any())
             {
-                result.RelatedArticles = UrlLink.Map(datasource);
+                result.FeaturedArticles = UrlLink.Map(datasource);
             }
             else
             {
                 var searchParameters = context.GetRenderingParameters<IArticleFilter>();
                 if (searchParameters != null)
                 {
-                    result.RelatedArticles = new SearchedRelatedArticles(contentSearchService, linkManager).Map(searchParameters, databaseName);
+                    result.FeaturedArticles = new SearchedRelatedArticles(contentSearchService, linkManager).Map(searchParameters, databaseName);
                 }
             }
             
-            if ((result.RelatedArticles == null || !result.RelatedArticles.Any()) && !Sitecore.Context.PageMode.IsExperienceEditor)
+            if ((result.FeaturedArticles == null || !result.FeaturedArticles.Any()) && !Sitecore.Context.PageMode.IsExperienceEditor)
             {
                 return null;
             }
