@@ -1,0 +1,33 @@
+.follow-us
+    margin: 30px 0 40px
+    @include breakpoint(desktop-large, up)
+        margin: 90px 0 100px
+    &__title
+        margin-bottom: 0
+    &__text
+        margin-bottom: 23px
+        color: $black
+    &__links
+        display: flex
+        margin-bottom: 23px
+    &__link
+        display: flex
+        align-items: center
+        @include breakpoint(desktop-large, up)
+            &:last-child
+                margin-left: auto
+    a
+        color: $gold
+        display: inline-block
+        margin-right: 16px
+        font-size: 14px
+        @include breakpoint(desktop, up)
+            margin-right: 10px
+        @include breakpoint(desktop-large, up)
+            margin-right: 20px
+        img
+            width: 23px
+            height: 28px
+            margin-right: 5px
+            @include breakpoint(desktop, up)
+                margin-right: 8px
