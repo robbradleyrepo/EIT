@@ -6,7 +6,7 @@
     </a>
     <a href="#" class="article-promo__body">
         <div class="article-promo__head">
-            <img class="article-promo__head-img" src="images/components/banners/writer.jpeg" alt="">
+            <img class="article-promo__head-img" src="/dist/images/components/banners/writer.jpeg" alt="">
             <span class="article-promo__head-title">
                 @if (Model.Topics != null && Model.Topics.Any())
                 {
@@ -35,7 +35,7 @@
     </a>
     <div class="article-promo__footer">
         <div class="article-promo__footer-item">
-            <img class="article-promo__clock" src="\images\components\svg-icons\clock.svg" alt="icon">
+            <img class="article-promo__clock" src="\dist\images\components\svg-icons\clock.svg" alt="icon">
             <span class="article-promo__footer-text">
                 @using (Html.Glass().BeginEditFrame(Model, "Edit Article Date", x => x.Date))
                 {

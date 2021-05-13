@@ -1,6 +1,6 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @using LionTrust.Foundation.ORM.Extensions
-@model LionTrust.Feature.Article.Models.IPodcastPromo
+@model LionTrust.Feature.Article.Models.IArticlePodcastPromo
 @if (Model != null)
 {
     <div class="podcast">
@@ -41,7 +41,7 @@
                                 {
                                     if (podcastLink != null)
                                     {
-                                        @Html.Partial("~/Views/Article/PromoCards/PodcastLink.cshtml", podcastLink)
+                                        @Html.Partial("~/Views/Article/PromoCards/ArticlePodcastLink.cshtml", podcastLink)
                                     }
                                 }
                             }

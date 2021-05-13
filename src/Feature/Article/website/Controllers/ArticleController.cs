@@ -46,7 +46,7 @@
                 }
             }
 
-            return View("~/Views/Carousel/ArticleScroller.cshtml", articleScrollerViewModel);
+            return View("~/Views/Article/ArticleScroller.cshtml", articleScrollerViewModel);
         }
     }
 }

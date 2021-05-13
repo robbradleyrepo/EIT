@@ -4,6 +4,13 @@ Parent: "4ba7eb4e-8797-45f9-9582-8d2e3a2e9ed6"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
 Path: /sitecore/templates/Feature/Article/_ArticleScroller/Article Scroller/ArticleScroller_CTA
 DB: master
+SharedFields:
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: General Link
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 50
 Languages:
 - Language: en
   Fields:

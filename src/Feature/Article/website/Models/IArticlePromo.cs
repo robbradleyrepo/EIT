@@ -7,6 +7,6 @@
     public interface IArticlePromo : IArticle, IArticleGlassBase
     {
         [SitecoreChildren]
-        IEnumerable<IPodcastPromo> PodcastPromo { get; set; }
+        IEnumerable<IArticlePodcastPromo> PodcastPromo { get; set; }
     }
 }
