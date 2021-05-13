@@ -1,8 +1,8 @@
 ﻿---
-ID: "8c679d78-eecb-492e-9f38-dee0127ca516"
+ID: "c3006883-37fd-4736-8a68-977e5608ab1a"
 Parent: "ed158162-1cbd-43e6-ab02-df5f0836ebe9"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Fund/_AdditionalInfo/Fund Info/AdditionalInfo_ISINCode
+Path: /sitecore/templates/Feature/Fund/_Fund/Fund Info/AdditionalInfo_IncludedOFC
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
@@ -10,13 +10,13 @@ SharedFields:
   Value: "Single-Line Text"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 1700
+  Value: 2100
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: ISIN code
+    Value: Included within the OCF is the Annual Management Charge
   Versions:
   - Version: 1
     Fields:

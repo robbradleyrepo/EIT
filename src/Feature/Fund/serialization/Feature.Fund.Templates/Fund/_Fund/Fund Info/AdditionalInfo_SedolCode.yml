@@ -1,8 +1,8 @@
 ﻿---
-ID: "4ba432b4-b112-4a9f-9a06-6637f2211a9c"
+ID: "429e1e3f-3d06-4cce-919b-7d32bab4e104"
 Parent: "ed158162-1cbd-43e6-ab02-df5f0836ebe9"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Fund/_AdditionalInfo/Fund Info/AdditionalInfo_ExDividendDate
+Path: /sitecore/templates/Feature/Fund/_Fund/Fund Info/AdditionalInfo_SedolCode
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
@@ -10,13 +10,13 @@ SharedFields:
   Value: "Single-Line Text"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 1400
+  Value: 1600
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Ex dividend date
+    Value: Sedol code
   Versions:
   - Version: 1
     Fields:
