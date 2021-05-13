@@ -13,10 +13,16 @@
         [SitecoreField(Constants.Fund.LaunchDate_FieldId, SitecoreFieldType.Date,  "Fund Info")]
         DateTime LaunchDate { get; set; }
 
-        [SitecoreField(Constants.Fund.FundSize_FieldId, SitecoreFieldType.SingleLineText, "Fund Info")]
+        [SitecoreField(Constants.Fund.FundSize_FieldId)]
         string FundSize { get; set; }
 
-        [SitecoreField(Constants.Fund.NumberOfHoldings_FieldId, SitecoreFieldType.SingleLineText, "Fund Info")]
+        [SitecoreField(Constants.Fund.NumberOfHoldings_FieldId)]
         string NumberOfHoldings { get; set; }
+
+        [SitecoreField(Constants.Fund.MinimalInitialInvestment_FieldId)]
+        string MinimalInitialInvestment { get; set; }
+
+        [SitecoreField(Constants.Fund.MinimumAdditionalInvestment_FieldId)]
+        string MinimumAdditionalInvestment { get; set; }
     }
 }

@@ -80,21 +80,17 @@
 
         public static class FundPage 
         {
-            public const string FundReference_FieldName = "LegacyFundPageData_FundReference";
             public const string FundReference_FieldId = "{CCE4E679-7E94-450D-8CC1-691BDF17CA78}";
         }
 
         public static class Fund 
         {
             public const string FundManagersFieldId = "{855D1E7B-3D08-4526-AD2D-FA2E86E9BE9B}";
-            public const string LaunchDate_FieldName = "LegacyFund_LaunchDate";
             public const string LaunchDate_FieldId = "{6CBF0ED2-94B3-4F2A-A84D-A36501E38105}";
-
-            public const string FundSize_FieldName = "LegacyFund_FundSize";
             public const string FundSize_FieldId = "{D3A5BBC1-32DC-492D-9C70-645A8E47FB34}";
-
-            public const string NumberOfHoldings_FieldName = "LegacyFund_NumberOfHoldings";
-            public const string NumberOfHoldings_FieldId = "{DB79496E-BCC5-443F-BBA6-E8D5BF0A31A3}";            
+            public const string NumberOfHoldings_FieldId = "{DB79496E-BCC5-443F-BBA6-E8D5BF0A31A3}";
+            public const string MinimalInitialInvestment_FieldId = "{C299C924-F1D5-4CDA-AB46-7FF1F935A8C8}";
+            public const string MinimumAdditionalInvestment_FieldId = "{22093813-F5DB-40EB-AEC1-CBCFB3F135FD}";
         }
 
         public static class HeroImagePageData
