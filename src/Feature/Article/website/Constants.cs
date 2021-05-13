@@ -18,12 +18,18 @@
         public static class FeaturedArticles
         {
             public const string HeadingFieldId = "{B2950181-27E6-4EEF-A1FA-329AA73FCE55}";
-            public const string ArticlesFieldId = "FeaturedArticles_Articles";
+            public const string ArticlesFieldId = "{88BDA130-09AE-4E0E-8FD0-253A7924143E}";
         }        
 
         public static class ArticleHeader
         {            
             public const string BackgroundImageFieldId = "{30451F6B-437D-4473-AE3E-79FE7A1AF36A}";
-        }        
+        }
+
+        public static class RelatedArticles
+        {
+            public const string HeadingFieldId = "{9B7BD172-7140-40A2-B464-782C99CF7E73}";
+            public const string ArticlesFieldId = "{8146922E-1AF4-48E9-91CD-CA5F37CAB4E5}";
+        }
     }
 }

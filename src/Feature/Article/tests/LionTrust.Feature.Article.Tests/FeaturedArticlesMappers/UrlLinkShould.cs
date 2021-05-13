@@ -1,7 +1,7 @@
 ﻿namespace LionTrust.Feature.Article.Tests.RelatedArticlesMappers
 {
     using LionTrust.Feature.Article.Models;
-    using LionTrust.Feature.Article.RelatedArticleMappers;
+    using LionTrust.Feature.Article.FeaturedArticleMappers;
     using Moq;
     using NUnit.Framework;
     using System.Collections.Generic;

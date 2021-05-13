@@ -1,5 +1,5 @@
 @using Glass.Mapper.Sc.Web.Mvc
-@model LionTrust.Feature.Article.Models.RelatedArticlesViewModel
+@model LionTrust.Feature.Article.Models.FeaturedArticlesViewModel
 <section class="featured-articles">
     <div class="container">
         <div class="row">
@@ -10,7 +10,7 @@
             </div>
         </div>
         <ul class="featured-article">
-            @foreach (var item in Model.RelatedArticles)
+            @foreach (var item in Model.FeaturedArticles)
             {
                 <li class="featured-article__item">
                     <a href="@item.Url" class="featured-article__link">

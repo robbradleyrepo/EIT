@@ -1,22 +1,22 @@
 ﻿---
-ID: "009e0e82-76bc-4b6a-a326-6fb97237ba50"
+ID: "acf74586-b31a-4812-a440-c4c50a6e4f70"
 Parent: "ad2ae81c-ea35-4007-8723-3a448fcc5ab5"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Fund/_KeyInfoAndPrice/Key Info And Price/KeyInfoAndPrice_ClassLaunchDate
+Path: /sitecore/templates/Feature/Fund/_Fund/Key Info And Price/KeyInfoAndPrice_SinglePrice
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: Date
+  Value: "Single-Line Text"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 100
+  Value: 400
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Class Launch Date
+    Value: SinglePrice
   Versions:
   - Version: 1
     Fields:

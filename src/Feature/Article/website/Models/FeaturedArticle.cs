@@ -1,6 +1,6 @@
 ﻿namespace LionTrust.Feature.Article.Models
 {
-    public class RelatedArticle
+    public class FeaturedArticle
     {
         public string Url { get; set; }
 
