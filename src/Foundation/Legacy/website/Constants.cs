@@ -91,6 +91,8 @@
             public const string NumberOfHoldings_FieldId = "{DB79496E-BCC5-443F-BBA6-E8D5BF0A31A3}";
             public const string MinimalInitialInvestment_FieldId = "{C299C924-F1D5-4CDA-AB46-7FF1F935A8C8}";
             public const string MinimumAdditionalInvestment_FieldId = "{22093813-F5DB-40EB-AEC1-CBCFB3F135FD}";
+            public const string BenchmarkName_FieldId = "{30054D3B-D471-469D-A82A-C575DC220CF2}";
+            public const string HistoricYield_FieldId = "{86F07FA6-A576-4462-B343-C4AF970A2576}";
         }
 
         public static class HeroImagePageData

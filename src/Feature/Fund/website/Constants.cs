@@ -8,7 +8,7 @@
             public const string TitleFieldId = "{1ADF8B0C-A198-4CC7-81CC-CFAAC0FE3483}";
             public const string FundManagerFieldId = "{7A30D0A3-23FD-4863-99FD-A17525112A0E}";
         }
-        
+
         public static class FundDetailNavigation
         {
             public const string HeadingFieldId = "{88BD7907-3F4A-40EC-BB50-E24DF11609C5}";
@@ -94,7 +94,7 @@
             public const string BloombergCode_FieldId = "{BB426EFD-6B71-49A7-81FF-2CF062D29FD3}";
             public const string InitialCharge_FieldId = "{FA7F0518-4B26-4502-8BC1-281E7C2885FF}";
             public const string OngoingCharges_FieldId = "{557C0FB4-0CC7-4D50-A316-93A2BD948860}";
-            public const string IncludedOFC_FieldId = "{C3006883-37FD-4736-8A68-977E5608AB1A}";            
+            public const string IncludedOFC_FieldId = "{C3006883-37FD-4736-8A68-977E5608AB1A}";
         }
 
         public static class AdditionalInfoAndChargesComponent
@@ -111,6 +111,33 @@
             public const string InitialChargeLabel_FieldId = "{CC91AAA4-ED02-49F4-9027-551ABFFDF4D4}";
             public const string OngoingChargesLabel_FieldId = "{5F132CC3-50F5-42F1-8308-9C751685F733}";
             public const string IncludedOFCLabel_FieldId = "{1417C905-79BB-487B-AF65-2209B53803F6}";
+        }
+
+        public static class KeyInfoPriceComponent
+        {
+            public const string KeyInformationLabel_FieldId = "{D1C8B6ED-F85E-4645-82EE-B239CFE6E9AA}";
+            public const string ClassLaunchDateLabel_FieldId = "{FF6466A5-B6D9-499C-A338-42DB7AA720CF}";
+            public const string ComparatorLabel_FieldId = "{B27C9CC5-F16C-4A75-852D-3A9B6FDBE497}";
+            public const string Benchmark1Label_FieldId = "{85A7C8E7-FFFB-4EE9-9372-17DE13A3CEFA}";
+            public const string FundSizeLabel_FieldId = "{9A89E450-3210-4694-8520-345EE6263302}";
+            public const string NumberOfHoldingsLabel_FieldId = "{3368266D-AB74-4ACE-B89F-4C11488E8AC5}";
+            public const string NetUnderlyingYieldLabel_FieldId = "{7F6507B6-3D95-413C-B85B-655688F19DB7}";
+            public const string DurationLabel_FieldId = "{58D81F04-60A8-470A-8880-6D7DC3F4A460}";
+            public const string PriceLabel_FieldId = "{435D1D54-8A35-4B13-B9CB-C59CA752F272}";
+            public const string SinglePriceLabel_FieldId = "{6F5E00C3-5757-4E8C-A479-A753137A1BA1}";
+            public const string OfferPriceLabel_FieldId = "{678F3E21-91D6-4021-BD2A-26C33B839CE1}";
+            public const string PriceDateLabel_FieldId = "{D093B57A-44CA-4867-B0D5-52DB25E3CC11}";
+            public const string PriceDateTooltipLabel_FieldId = "{80C12439-AAA4-4CAD-8787-AB7B35BA60B9}";
+        }
+
+        public static class KeyInfoPrice
+        {
+            public const string ClassLaunchDate_FieldId = "{009E0E82-76BC-4B6A-A326-6FB97237BA50}";
+            public const string Comparator_FieldId = "{37BB71CA-84B0-4D80-9E3D-320A32C9D6C1}";
+            public const string Duration_FieldId = "{7E88256A-2E5D-42EB-B340-7983804209B8}";
+            public const string SinglePrice_FieldId = "{ACF74586-B31A-4812-A440-C4C50A6E4F70}";
+            public const string OfferPrice_FieldId = "{B834FC27-880B-4ACD-BC10-D6158773B285}";
+            public const string PriceDate_FieldId = "{366E54EF-CC6F-4F52-8953-6DDDEA6ED408}";
         }
     }
 }

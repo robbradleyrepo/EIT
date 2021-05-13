@@ -82,6 +82,7 @@
     <Content Include="Views\Fund\FundManagerComponent.cshtml" />
     <Content Include="Views\Fund\FundHeader.cshtml" />
     <Content Include="Views\Fund\fundetailnav.cshtml" />
+    <Content Include="Views\Fund\KeyInfoPrice.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -108,6 +109,8 @@
     <Compile Include="Models\IFundScroller.cs" />
     <Compile Include="Models\IKeyFundDocuments.cs" />
     <Compile Include="Models\IFundManagers.cs" />
+    <Compile Include="Models\IKeyInfoPriceComponent.cs" />
+    <Compile Include="Models\KeyInfoPriceViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

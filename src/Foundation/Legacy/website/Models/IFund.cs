@@ -24,5 +24,11 @@
 
         [SitecoreField(Constants.Fund.MinimumAdditionalInvestment_FieldId)]
         string MinimumAdditionalInvestment { get; set; }
+
+        [SitecoreField(Constants.Fund.BenchmarkName_FieldId)]
+        string BenchmarkName { get; set; }
+
+        [SitecoreField(Constants.Fund.HistoricYield_FieldId)]
+        string HistoricYield { get; set; }
     }
 }
