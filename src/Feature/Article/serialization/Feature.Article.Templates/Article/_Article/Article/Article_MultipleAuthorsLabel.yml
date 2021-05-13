@@ -1,22 +1,22 @@
 ﻿---
-ID: "7075d230-7438-4f94-a4cc-1760107174ca"
+ID: "b6833539-8781-4788-92f4-d173f0727feb"
 Parent: "0c77b15a-00f8-49a1-9e49-254308187569"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Article/_Article/Article/MultipleAuthors_MultipleAuthorsIcon
+Path: /sitecore/templates/Feature/Article/_Article/Article/Article_MultipleAuthorsLabel
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: Image
+  Value: "Single-Line Text"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 550
+  Value: 500
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Multiple Authors icon to display on cards
+    Value: Multiple Authors card Label
   Versions:
   - Version: 1
     Fields:

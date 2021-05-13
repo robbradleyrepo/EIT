@@ -1,5 +1,6 @@
 ﻿namespace LionTrust.Feature.Article.Models
 {
+    using System;
     using System.Collections.Generic;
 
     using Glass.Mapper.Sc.Configuration.Attributes;
@@ -16,5 +17,10 @@
         [SitecoreField(Constants.Article.MultipleAuthorsIcon_FieldId)]
         Image MultipleAuthorsIcon { get; set; }
 
+        [SitecoreField(Constants.Article.Date_FieldId)]
+        DateTime Date { get; set; }
+
+        [SitecoreField(Constants.Article.Image_FieldId)]
+        Image Image { get; set; }
     }
 }

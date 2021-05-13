@@ -1,25 +1,25 @@
 ﻿---
-ID: "93854c18-0919-445e-bc88-2d353c8491e8"
-Parent: "4ba7eb4e-8797-45f9-9582-8d2e3a2e9ed6"
+ID: "5bd6e9e9-2240-4473-8094-075e811b8438"
+Parent: "0c77b15a-00f8-49a1-9e49-254308187569"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Carousel/_ArticleScroller/Article Scroller/ArticleScroller_Heading
+Path: /sitecore/templates/Feature/Article/_Article/Article/Article_ListingImage
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: "Single-Line Text"
+  Value: Image
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 100
+  Value: 800
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Heading
+    Value: Image used for listing cards
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210423T152312Z
+      Value: 20210423T164658Z

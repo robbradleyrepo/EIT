@@ -32,10 +32,8 @@
                      && articleScrollerViewModel.ArticleScroller.SelectedTags.Any())
             {
                 articleScrollerViewModel.ArticleList = 
-                    new ArticleRepository(_contentSearchService)
-                        .GetArticlesByTopics(
-                            articleScrollerViewModel.ArticleScroller.SelectedTags.Select(x => x.Name), 
-                            _mvcContext.SitecoreService.Database.Name);
+                    new ArticleRepository(_contentSearchService, _mvcContext)
+                        .GetArticlePromosByTopics(articleScrollerViewModel.ArticleScroller.SelectedTags.Select(x => x.Name));
             }
             else
             {
@@ -43,10 +41,8 @@
                 if (currentPage != null && currentPage.Topics != null && currentPage.Topics.Any())
                 {
                     articleScrollerViewModel.ArticleList =
-                        new ArticleRepository(_contentSearchService)
-                            .GetArticlesByTopics(
-                                currentPage.Topics.Select(x => x.Title),
-                                _mvcContext.SitecoreService.Database.Name);
+                        new ArticleRepository(_contentSearchService, _mvcContext)
+                            .GetArticlePromosByTopics(currentPage.Topics.Select(x => x.Title));
                 }
             }
 

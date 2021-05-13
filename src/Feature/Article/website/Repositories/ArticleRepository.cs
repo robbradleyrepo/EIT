@@ -3,33 +3,37 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using Glass.Mapper.Sc.Web.Mvc;
     using LionTrust.Feature.Article.Models;
+    using LionTrust.Foundation.Search.Models.ContentSearch;
     using LionTrust.Foundation.Search.Models.Request;
     using LionTrust.Foundation.Search.Services.Interfaces;
 
     public class ArticleRepository
     {
-        private readonly IArticleContentSearchService searchService;
+        private readonly IArticleContentSearchService _searchService;
+        private readonly IMvcContext _mvcContext;
 
-        public ArticleRepository(IArticleContentSearchService searchService)
+        public ArticleRepository(IArticleContentSearchService searchService, IMvcContext mvcContext)
         {
-            this.searchService = searchService;
+            this._searchService = searchService;
+            this._mvcContext = mvcContext;
         }
 
-        public IEnumerable<IArticlePromo> GetArticlesByTopics(IEnumerable<string> topics, string databaseName)
+        public IEnumerable<IArticlePromo> GetArticlePromosByTopics(IEnumerable<string> topics)
         {
             var request = new ArticleSearchRequest
             {
                 Topics = topics,
-                DatabaseName = databaseName,
+                DatabaseName = _mvcContext.SitecoreService.Database.Name,
                 FromDate = DateTime.MinValue,
                 ToDate = DateTime.MaxValue
             };
 
-            var results = searchService.GetDatedTaxonomyRelatedArticles(request, result => result.OrderByDescending(hit => hit.ArticleDate));
+            var results = _searchService.GetDatedTaxonomyRelatedArticles(request, result => result.OrderByDescending(hit => hit.ArticleDate));
             if (results == null || results.SearchResults == null)
             {
-                return new RelatedArticle[0];
+                return null;
             }
 
             return results.SearchResults
@@ -37,7 +41,7 @@
                 .Select(sr => BuildArticle(sr.Document));
         }
 
-        private RelatedArticle BuildArticle(ArticleSearchResultItem hit)
+        private IArticlePromo BuildArticle(ArticleSearchResultItem hit)
         {
             if (hit == null)
             {
@@ -49,9 +53,8 @@
             {
                 return null;
             }
-            var link = linkManager.GetItemUrl(item);
 
-            return new RelatedArticle { Content = hit.ArticleTitle, Url = link };
+            return _mvcContext.SitecoreService.GetItem<IArticlePromo>(item.ID.Guid);
         }
     }
 }

@@ -11,33 +11,13 @@
 
         public static class Article
         {
-            public const string Title_FieldName = "LegacyArticle_Title";
             public const string Title_FieldId = "{1C19356A-6E47-4D77-BA56-ADE349F17B9D}";
-
-            public const string Subtitle_FieldName = "LegacyArticle_Subtitle";
             public const string Subtitle_FieldId = "{094932B9-FF77-4977-966E-D18F7C7AC091}";
-
-            public const string Body_FieldName = "LegacyArticle_Body";
             public const string Body_FieldId = "{D8CF5DA5-F35F-46D8-B15E-8B388DC01000}";
-
-            public const string PromoType_FieldName = "LegacyArticle_PromoType";
-            public const string PromoType_FieldId = "{A57E5061-EEE7-48A2-A8BF-88FFDF014FD4}";
-
-            public const string Authors_FieldName = "LegacyArticle_Authors";
-            public const string Authors_FieldId = "{15F3AFE1-AB21-4B6B-A434-4C0F7B927921}";
-
-            public const string Image_FieldName = "LegacyArticle_ListingImage";
-            public const string Image_FieldId = "{5BD6E9E9-2240-4473-8094-075E811B8438}";
-
-            public const string Date_FieldName = "LegacyArticle_Date";
-            public const string Date_FieldId = "{79CC76CC-7503-449B-9809-9808CF6C2D26}";
-
-            public const string PublishDate_FieldName = "__Publish";
+            public const string PromoType_FieldId = "{58B0791B-504E-423C-8D9E-E16C419353FA}";
+            public const string Authors_FieldId = "{15F3AFE1-AB21-4B6B-A434-4C0F7B927921}";            
             public const string PublishDate_FieldId = "{86FE4F77-4D9A-4EC3-9ED9-263D03BD1965}";
-
-            public const string Fund_FieldName = "LegacyArticle_Fund";
             public const string Fund_FieldId = "{52161005-9691-46CD-AF73-E2B5455474C0}";
-
             public const string Topics_FieldId = "{4F9B280F-A22D-4E70-886A-45327E8AA507}";
         }
 

@@ -36,6 +36,8 @@
             public const string TopicsFieldId = "{4F9B280F-A22D-4E70-886A-45327E8AA507}";
             public const string MultipleAuthorsLabel_FieldId = "{B6833539-8781-4788-92F4-D173F0727FEB}";
             public const string MultipleAuthorsIcon_FieldId = "{7075D230-7438-4F94-A4CC-1760107174CA}";
+            public const string Image_FieldId = "{5BD6E9E9-2240-4473-8094-075E811B8438}";
+            public const string Date_FieldId = "{79CC76CC-7503-449B-9809-9808CF6C2D26}";
         }
 
         public static class PodcastPromo
@@ -62,8 +64,7 @@
             public const string CTA_FieldId = "{BAD318C3-B9B5-457F-A42D-F51516FC3EC2}";
             public const string SelectedArticles_FieldId = "{725DC6C8-8878-4947-86B3-163E51C5911D}";
             public const string SelectedTags_FieldId = "{23CB5FCD-BCFA-4A06-AE30-8991CC839A4C}";
-        }
-        }
+        }        
 
         public static class RelatedArticles
         {
