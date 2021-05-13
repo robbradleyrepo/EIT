@@ -21,9 +21,9 @@
         <div class="container-left-gutter">
             <div class="swiper-container-article">
                 <div class="swiper-wrapper">
-                    @if (Model.ArticleScroller.SelectedArticles != null && Model.ArticleScroller.SelectedArticles.Any())
+                    @if (Model.ArticleList != null && Model.ArticleList.Any())
                     {
-                        foreach (var article in Model.ArticleScroller.SelectedArticles)
+                        foreach (var article in Model.ArticleList)
                         {
                             if (article.PromoType != null && !string.IsNullOrEmpty(article.PromoType.Name))
                             {

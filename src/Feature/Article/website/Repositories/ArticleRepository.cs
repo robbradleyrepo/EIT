@@ -20,17 +20,18 @@
             this._mvcContext = mvcContext;
         }
 
-        public IEnumerable<IArticlePromo> GetArticlePromosByTopics(IEnumerable<string> topics)
+        public IEnumerable<IArticlePromo> GetArticlePromosByTopics(IEnumerable<Guid> topics)
         {
             var request = new ArticleSearchRequest
             {
                 Topics = topics,
-                DatabaseName = _mvcContext.SitecoreService.Database.Name,
                 FromDate = DateTime.MinValue,
-                ToDate = DateTime.MaxValue
+                ToDate = DateTime.MaxValue,
+                Take = int.MaxValue,
+                DatabaseName = _mvcContext.SitecoreService.Database.Name
             };
 
-            var results = _searchService.GetDatedTaxonomyRelatedArticles(request, result => result.OrderByDescending(hit => hit.ArticleDate));
+            var results = _searchService.GetDatedTaxonomyRelatedArticles(request, result => result.OrderByDescending(hit => hit.Created));
             if (results == null || results.SearchResults == null)
             {
                 return null;

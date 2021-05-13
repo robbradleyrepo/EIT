@@ -18,7 +18,7 @@
 
         public IEnumerable<string> FundTeams { get; set; }
 
-        public IEnumerable<string> Topics { get; set; }
+        public IEnumerable<Guid> Topics { get; set; }
 
         public string SearchTerm { get; set; }
 

@@ -22,8 +22,8 @@
 
         private Expression<Func<ArticleSearchResultItem, bool>> PopoulateDatedTaxonomyPredicate(Expression<Func<ArticleSearchResultItem, bool>> predicate, ITaxonomySearchRequest articleSearchRequest)
         {
-            predicate = predicate.And(x => x.ArticleDate > articleSearchRequest.FromDate);
-            predicate = predicate.And(x => x.ArticleDate < articleSearchRequest.ToDate);
+            predicate = predicate.And(x => x.Created > articleSearchRequest.FromDate);
+            predicate = predicate.And(x => x.Created < articleSearchRequest.ToDate);
 
             var taxonomyFilter = PredicateBuilder.True<ArticleSearchResultItem>();
 
@@ -68,7 +68,7 @@
                                                     .Aggregate(managerPredicate,
                                                                     (current, manager)
                                                                                 => current
-                                                                                     .Or(item => item.Topics.Contains(manager)));
+                                                                                     .Or(item => item.Topics.Contains(IdHelper.NormalizeGuid(manager, true))));
 
                 taxonomyFilter = taxonomyFilter.Or(managerPredicate);
             }

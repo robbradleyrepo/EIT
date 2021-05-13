@@ -33,7 +33,7 @@
             {
                 articleScrollerViewModel.ArticleList = 
                     new ArticleRepository(_contentSearchService, _mvcContext)
-                        .GetArticlePromosByTopics(articleScrollerViewModel.ArticleScroller.SelectedTags.Select(x => x.Name));
+                        .GetArticlePromosByTopics(articleScrollerViewModel.ArticleScroller.SelectedTags.Select(x => x.Id));
             }
             else
             {
@@ -42,7 +42,7 @@
                 {
                     articleScrollerViewModel.ArticleList =
                         new ArticleRepository(_contentSearchService, _mvcContext)
-                            .GetArticlePromosByTopics(currentPage.Topics.Select(x => x.Title));
+                            .GetArticlePromosByTopics(currentPage.Topics.Select(x => x.Id));
                 }
             }
 

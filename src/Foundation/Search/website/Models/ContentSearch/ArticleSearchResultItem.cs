@@ -29,13 +29,16 @@
         public string ArticleCategory { get; set; }
         
         //Fund Team
-        [IndexField("LegacyArticle_Date")]
+        [IndexField("Article_Date")]
         public DateTime ArticleDate { get; set; }
         
         [IndexField("LegacyArticle_Team")]
         public IEnumerable<string> ArticleTeam { get; set; }
 
         [IndexField("Article_Topics")]
-        public string Topics { get; set; }
+        public IEnumerable<string> Topics { get; set; }
+
+        [IndexField("__Created")]
+        public DateTime Created { get; set; }
     }
 }
