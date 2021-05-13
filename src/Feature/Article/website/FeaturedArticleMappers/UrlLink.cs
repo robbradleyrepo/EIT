@@ -1,4 +1,4 @@
-﻿namespace LionTrust.Feature.Article.RelatedArticleMappers
+﻿namespace LionTrust.Feature.Article.FeaturedArticleMappers
 {
     using LionTrust.Feature.Article.Models;
     using System.Collections.Generic;
@@ -6,16 +6,16 @@
 
     public static class UrlLink
     {
-        public static IEnumerable<RelatedArticle> Map(IFeaturedArticles data)
+        public static IEnumerable<FeaturedArticle> Map(IFeaturedArticles data)
         {
             if (data.Children == null || !data.Children.Any())
             {
-                return new RelatedArticle[0];
+                return new FeaturedArticle[0];
             }
 
             return data.Children
                 .Where(c => c.Link != null)
-                .Select(c => new RelatedArticle { Url = c.Link.Url, Content = c.Link.Text });
+                .Select(c => new FeaturedArticle { Url = c.Link.Url, Content = c.Link.Text });
         }
     }
 }

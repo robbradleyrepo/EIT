@@ -1,4 +1,4 @@
-﻿namespace LionTrust.Feature.Article.RelatedArticleMappers
+﻿namespace LionTrust.Feature.Article.FeaturedArticleMappers
 {
     using LionTrust.Feature.Article.Models;
     using LionTrust.Foundation.Search.Models.ContentSearch;
@@ -20,7 +20,7 @@
             this.linkManager = linkManager;
         }
 
-        public IEnumerable<RelatedArticle> Map(IArticleFilter filter, string databaseName)
+        public IEnumerable<FeaturedArticle> Map(IArticleFilter filter, string databaseName)
         {
             var request = new ArticleSearchRequest
             {
@@ -37,7 +37,7 @@
             var results = searchService.GetDatedTaxonomyRelatedArticles(request, result => result.OrderByDescending(hit => hit.ArticleDate));
             if (results == null || results.SearchResults == null)
             {
-                return new RelatedArticle[0];
+                return new FeaturedArticle[0];
             }
 
             return results.SearchResults
@@ -45,7 +45,7 @@
                 .Select(sr => BuildArticle(sr.Document));
         }
 
-        private RelatedArticle BuildArticle(ArticleSearchResultItem hit)
+        private FeaturedArticle BuildArticle(ArticleSearchResultItem hit)
         {
             if (hit == null)
             {
@@ -59,7 +59,7 @@
             }
             var link = linkManager.GetItemUrl(item);
 
-            return new RelatedArticle { Content = hit.ArticleTitle, Url = link };            
+            return new FeaturedArticle { Content = hit.ArticleTitle, Url = link };            
         }
     }
 }
