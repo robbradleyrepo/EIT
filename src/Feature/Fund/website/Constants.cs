@@ -112,6 +112,14 @@
             public const string SinglePrice_FieldId = "{ACF74586-B31A-4812-A440-C4C50A6E4F70}";
             public const string OfferPrice_FieldId = "{B834FC27-880B-4ACD-BC10-D6158773B285}";
             public const string PriceDate_FieldId = "{366E54EF-CC6F-4F52-8953-6DDDEA6ED408}";
-        }       
+        } 
+        
+        public static class TwoColumnComponent
+        {
+            public const string LeftColumnSize_FieldId = "{F6A1DC1F-D9C0-40B8-9590-D5C58D1F2346}";
+            public const string LeftPaddingSize_FieldId = "{0B7847A5-F42B-42E0-B4D0-3CB4350CEE45}";
+            public const string RightColumnSize_FieldId = "{1A02D0A6-1E81-4119-AB01-A0E90D5EB8A8}";
+            public const string RightPaddingSize_FieldId = "{D3A375F2-CB82-4F2B-AF60-550FC662A00D}";
+        }
     }
 }
