@@ -107,6 +107,7 @@
     <Compile Include="RelatedArticleMappers\RelatedArticleLink.cs" />
     <Compile Include="RelatedArticleMappers\SearchedRelatedArticles.cs" />
     <Compile Include="RelatedArticleMappers\UrlLink.cs" />
+    <Compile Include="Repositories\ArticleRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Foundation\Analytics\website\LionTrust.Foundation.Analytics.csproj">

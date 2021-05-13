@@ -22,5 +22,7 @@
         string Title { get; set; }
 
         string Subtitle { get; set; }
+
+        IEnumerable<string> Topics { get; set; }
     }
 }

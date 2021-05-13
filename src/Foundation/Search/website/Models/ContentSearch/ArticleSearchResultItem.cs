@@ -34,5 +34,8 @@
         
         [IndexField("LegacyArticle_Team")]
         public IEnumerable<string> ArticleTeam { get; set; }
+
+        [IndexField("Article_Topics")]
+        public string Topics { get; set; }
     }
 }

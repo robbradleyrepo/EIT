@@ -18,6 +18,8 @@
 
         public IEnumerable<string> FundTeams { get; set; }
 
+        public IEnumerable<string> Topics { get; set; }
+
         public string SearchTerm { get; set; }
 
         public int Skip { get; set; }

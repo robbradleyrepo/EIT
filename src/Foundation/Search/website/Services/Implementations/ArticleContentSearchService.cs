@@ -9,6 +9,7 @@
     using LionTrust.Foundation.Search.Repositories.Interfaces;
     using LionTrust.Foundation.Search.Services.Interfaces;
     using Sitecore.ContentSearch.Linq.Utilities;
+    using Sitecore.ContentSearch.Utilities;
 
     public class ArticleContentSearchService : IArticleContentSearchService
     {
@@ -55,6 +56,19 @@
                                                                     (current, manager)
                                                                                 => current
                                                                                      .Or(item => item.ArticleAuthors.Contains(manager)));
+
+                taxonomyFilter = taxonomyFilter.Or(managerPredicate);
+            }
+
+            if (articleSearchRequest.Topics != null && articleSearchRequest.Topics.Any())
+            {
+                var managerPredicate = PredicateBuilder.False<ArticleSearchResultItem>();
+                managerPredicate = articleSearchRequest
+                                            .Topics
+                                                    .Aggregate(managerPredicate,
+                                                                    (current, manager)
+                                                                                => current
+                                                                                     .Or(item => item.Topics.Contains(manager)));
 
                 taxonomyFilter = taxonomyFilter.Or(managerPredicate);
             }
