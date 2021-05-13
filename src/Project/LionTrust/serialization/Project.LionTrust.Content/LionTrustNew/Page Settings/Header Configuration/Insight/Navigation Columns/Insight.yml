@@ -20,12 +20,15 @@ Languages:
       Hint: Column Title
       Value: Insight
     - ID: "9012ee1a-dea2-49fa-951d-f72e835639ca"
-      Hint: Column Link
-      Value: |
-        <link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{0ABC8FAC-6ED2-430E-BD8B-EA4196AF3F54}" />
+      Hint: HeaderDropDownNavigationColumn_ColumnLink
+      Value: 
     - ID: "9063296f-3bbe-4d1f-9ea6-9a6e2442b520"
       Hint: Column Link Label
       Value: View all Insight
+    - ID: "e6689b09-d0ff-4b12-965c-625b7185f6be"
+      Hint: HeaderDropDownNavigationColumn_PageLinks
+      Type: Treelist
+      Value: 
     - ID: "fe160ab8-1158-46c9-80ad-43557ce4129d"
       Hint: Show Column Link
       Type: Checkbox

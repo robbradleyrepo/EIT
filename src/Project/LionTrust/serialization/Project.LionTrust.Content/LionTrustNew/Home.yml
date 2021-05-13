@@ -30,8 +30,13 @@ Languages:
               <p:d />
             </r>
             <r
-              uid="{2529CE52-C709-4D79-861F-E6E2EB00A7C7}"
+              uid="{579949E2-54CE-454E-B5E6-80AFEDD9A5A0}"
               p:before="*"
+              s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+              s:ph="/header/navigation" />
+            <r
+              uid="{2529CE52-C709-4D79-861F-E6E2EB00A7C7}"
+              p:after="r[@uid='{579949E2-54CE-454E-B5E6-80AFEDD9A5A0}']"
               s:ds="{F11AEA8F-6F21-44B3-A1F8-4B795962578E}"
               s:id="{5201B773-B4FF-4E38-A900-3D3D84F4C91A}"
               s:ph="header" />
@@ -42,14 +47,8 @@ Languages:
               s:id="{79B70F2C-3966-42CE-BC5E-FB3252C320D3}"
               s:ph="main" />
             <r
-              uid="{9D8118DA-BA88-4F7A-8E81-CF79C32CFCC3}"
-              p:after="r[@uid='{529F0292-448B-44E1-8D2E-31D375136CDC}']"
-              s:ds=""
-              s:id="{278645FD-B7C1-4B02-A4FF-DD47E01AED93}"
-              s:ph="main" />
-            <r
               uid="{2BEDA3E9-A2AB-4EA4-9A6A-7F16D04F146A}"
-              p:after="r[@uid='{9D8118DA-BA88-4F7A-8E81-CF79C32CFCC3}']"
+              p:after="r[@uid='{529F0292-448B-44E1-8D2E-31D375136CDC}']"
               s:ds="{134BF211-B8DE-405A-A593-E80F3674C33C}"
               s:id="{C3B11E64-1214-410E-BA83-3347C5B59A7E}"
               s:ph="main" />
@@ -92,3 +91,7 @@ Languages:
     - ID: "e27b5db1-ce93-4cb1-ba69-f78556aacaf0"
       Hint: NavigationRoot_FooterConfiguration
       Value: "{8362F08B-C427-4B66-B703-EB98AC1D9183}"
+    - ID: "f113bf3d-fe80-4a15-9cda-679b3c3cb3be"
+      Hint: Identity_Logo
+      Value: |
+        <image mediaid="{98A09831-DF76-4BFA-A05E-2EE4C55405D4}" />
