@@ -1,0 +1,13 @@
+﻿@model LionTrust.Feature.Banner.Models.IRiskBanner
+@if (Model != null)
+{
+    <div class="article-quote article-quote_with-margins">
+        <span>
+            @Html.Glass().Editable(Model, m => m.RiskBannerText)            
+        </span>
+    </div>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @: Please add datasource for Risk Banner
+}
