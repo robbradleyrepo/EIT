@@ -112,6 +112,12 @@
             public const string SinglePrice_FieldId = "{ACF74586-B31A-4812-A440-C4C50A6E4F70}";
             public const string OfferPrice_FieldId = "{B834FC27-880B-4ACD-BC10-D6158773B285}";
             public const string PriceDate_FieldId = "{366E54EF-CC6F-4F52-8953-6DDDEA6ED408}";
-        }       
+        } 
+        
+        public static class FundDisclaimer
+        {
+            public const string SmallSize_FieldId = "{06013D0B-DB4E-474E-86E7-BB771D5E7577}";
+            public const string TextColor_FieldId = "{98D89D89-CA0F-41FF-A3BF-E0F22F240335}";
+        }
     }
 }
