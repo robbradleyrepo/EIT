@@ -1,7 +1,8 @@
-﻿@model LionTrust.Feature.Listings.Models.IScrollerCard
+﻿@using LionTrust.Foundation.ORM.Extensions;
+@model LionTrust.Feature.Listings.Models.IScrollerCard
 @if (Model != null)
 {
-    var imageSrc = Model.BackgroundImage != null && !string.IsNullOrEmpty(Model.BackgroundImage.Src) ? Model.BackgroundImage.Src : string.Empty;
+    var imageSrc = Model.BackgroundImage.GetSafeSitecoreImageUrl();
 
     using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/ScrollerCard", Model.Id.ToString(), "Edit Scroller Card"))
     {

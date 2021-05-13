@@ -1,5 +1,5 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
-@using LionTrust.Feature.Article;
+@using LionTrust.Foundation.ORM.Extensions
 @model LionTrust.Feature.Article.Models.IPodcastPromo
 @if (Model != null)
 {
@@ -8,9 +8,9 @@
             <div class="row">
                 <div class="podcast__box">
                     <picture>
-                        <source media="(max-width:425px)" srcset="@Extensions.GetSafeSitecoreImageUrl(Model.MobileBackgroundImage)" />
-                        <source media="(min-width:426px)" srcset="@Extensions.GetSafeSitecoreImageUrl(Model.BackgroundImage)" />
-                        <img class="podcast__back" src="@Extensions.GetSafeSitecoreImageUrl(Model.BackgroundImage)" alt="@Extensions.GetSafeSitecoreImageAltText(Model.BackgroundImage)" />                        
+                        <source media="(max-width:425px)" srcset="@Model.MobileBackgroundImage.GetSafeSitecoreImageUrl()" />
+                        <source media="(min-width:426px)" srcset="@Model.BackgroundImage.GetSafeSitecoreImageUrl()" />
+                        <img class="podcast__back" src="@Model.BackgroundImage.GetSafeSitecoreImageUrl()" alt="@Model.BackgroundImage.GetSafeSitecoreImageAltText()" />                        
                     </picture>
                     <div class="podcast__front">
                         <div class="podcast__head">
@@ -41,7 +41,7 @@
                                 {
                                     if (podcastLink != null)
                                     {
-                                        @Html.Partial("~/Views/Article/PromoCards/_PodcastLink.cshtml", podcastLink)
+                                        @Html.Partial("~/Views/Article/PromoCards/PodcastLink.cshtml", podcastLink)
                                     }
                                 }
                             }

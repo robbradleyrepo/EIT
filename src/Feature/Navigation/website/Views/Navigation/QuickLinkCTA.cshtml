@@ -1,10 +1,11 @@
 ﻿@using System.Collections.Specialized;
 @using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Foundation.ORM.Extensions
 @using LionTrust.Foundation.Analytics.Goals
 @model LionTrust.Feature.Navigation.Models.IQuickLinkCTA
 @if (Model != null)
 {
-    var imageSrc = Model.Image != null && !string.IsNullOrEmpty(Model.Image.Src) ? Model.Image.Src : "images/components/navigation/charts.svg";
+    var imageSrc = Model.Image.GetSafeSitecoreImageUrl("images/components/navigation/charts.svg");
     var imageCss = Model.SmallSize ? "quick-link-chart quick-link-chart__small" : "quick-link-chart";
 
     if (Model.Link != null || Sitecore.Context.PageMode.IsExperienceEditor)

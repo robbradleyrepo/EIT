@@ -41,7 +41,7 @@
                                             if (article.PodcastPromo != null && article.PodcastPromo.Any())
                                             {
                                                 <div class="swiper-slide">
-                                                    @Html.Partial("~/Views/Article/PromoCards/PodcastPromo.cshtml", article.PodcastPromo.FirstOrDefault())
+                                                    @Html.Partial("~/Views/Article/PromoCards/ArticlePodcastPromo.cshtml", article.PodcastPromo.FirstOrDefault())
                                                 </div>
                                             }                                            
                                             break;

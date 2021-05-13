@@ -3,8 +3,6 @@
     using System;
     using System.Linq;
 
-    using LionTrust.Foundation.Article.Models;
-
     public class ArticleViewModel
     {
         public IArticleHeader ComponentData { get; set; }

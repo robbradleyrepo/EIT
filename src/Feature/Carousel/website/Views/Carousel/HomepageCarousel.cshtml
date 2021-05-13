@@ -32,7 +32,7 @@
                         using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Carousel/Carousel Card", carouselCard.Id.ToString(), "Edit Carousel Item"))
                         {
                             <div class="swiper-slide">
-                                <div class="slide" style="background-image: url('@carouselCard.Image.ImageSrc()');">
+                                <div class="slide" style="background-image: url('@carouselCard.Image.GetSafeSitecoreImageUrl()');">
                                     <div class="slide__content">
                                         <div class="slide__head">
                                             @Html.Glass().RenderImage(carouselCard, x => x.AuthorImage, new NameValueCollection { { "class", "slide__head-img" }, { "alt", carouselCard.AuthorName } })
