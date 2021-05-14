@@ -83,23 +83,32 @@
     <Content Include="Views\Fund\FundHeader.cshtml" />
     <Content Include="Views\Fund\fundetailnav.cshtml" />
     <Content Include="Views\Fund\KeyInfoPrice.cshtml" />
+    <Content Include="Views\Fund\Disclaimer.cshtml" />
+    <Content Include="Views\Fund\literature.cshtml" />
+    <Content Include="Views\Fund\TwoColumnComponent.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="Controllers\FundLiteratureController.cs" />
     <Compile Include="Controllers\FundManagerComponentController.cs" />
     <Compile Include="Controllers\FundHeaderController.cs" />
     <Compile Include="Controllers\FundManagerPromoController.cs" />
     <Compile Include="Controllers\FundsController.cs" />
     <Compile Include="Controllers\FundScrollerController.cs" />
     <Compile Include="Models\AdditionalInfoAndChargesViewModel.cs" />
+    <Compile Include="Literature\DocumentRepository.cs" />
+    <Compile Include="Literature\DocumentSearchResult.cs" />
+    <Compile Include="Literature\IDocumentRepository.cs" />
     <Compile Include="Models\FourFundStatsViewModel.cs" />
+    <Compile Include="Models\FundDisclaimerViewModel.cs" />
     <Compile Include="Models\FundHeaderViewModel.cs" />
     <Compile Include="Models\FundManagerViewModel.cs" />
     <Compile Include="Models\FundOverviewViewModel.cs" />
     <Compile Include="Models\IAdditionalInfoAndChargesComponent.cs" />
     <Compile Include="Models\IFourFundStats.cs" />
     <Compile Include="Models\IFundDetailNavigation.cs" />
+    <Compile Include="Models\IFundDisclaimer.cs" />
     <Compile Include="Models\IFundExtended.cs" />
     <Compile Include="Models\IFundPageExtended.cs" />
     <Compile Include="Models\IFundGlassBase.cs" />
@@ -110,7 +119,10 @@
     <Compile Include="Models\IKeyFundDocuments.cs" />
     <Compile Include="Models\IFundManagers.cs" />
     <Compile Include="Models\IKeyInfoPriceComponent.cs" />
+    <Compile Include="Models\ITwoColumnComponent.cs" />
     <Compile Include="Models\KeyInfoPriceViewModel.cs" />
+    <Compile Include="Models\ILiterature.cs" />
+    <Compile Include="Models\LiteratureViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -121,6 +133,10 @@
     <ProjectReference Include="..\..\..\Foundation\Content\website\LionTrust.Foundation.Content.csproj">
       <Project>{f8f55034-fa55-4d27-b115-0ab4eeb9a0a8}</Project>
       <Name>LionTrust.Foundation.Content</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Design\website\LionTrust.Foundation.Design.csproj">
+      <Project>{7f86dd63-be79-4107-804a-514dca76e01e}</Project>
+      <Name>LionTrust.Foundation.Design</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\DI\website\LionTrust.Foundation.DI.csproj">
       <Project>{0d3a6f11-b5ff-4d8c-8a74-19501d2e80d4}</Project>

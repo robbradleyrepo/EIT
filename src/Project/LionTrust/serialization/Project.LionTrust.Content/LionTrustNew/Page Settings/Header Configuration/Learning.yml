@@ -1,8 +1,8 @@
 ﻿---
 ID: "28969877-3c3b-4883-b92f-2bad47bd5c51"
-Parent: "8af83fdb-f9d8-4b35-8c8e-c0f9465ed7b2"
+Parent: "dc766d1f-915f-4785-9405-7adee75ebbdd"
 Template: "9e459de5-0d5a-458a-be73-344b939719e1"
-Path: /sitecore/content/LiontrustNew/Page Settings/Header Configuration/Learning
+Path: /sitecore/content/LionTrustNew/Page Settings/Header Configuration/Learning
 DB: master
 BranchID: "376511be-c163-4800-a4e9-7b71c6281a0f"
 SharedFields:
@@ -24,9 +24,8 @@ Languages:
       Hint: ImageCount
       Value: 0
     - ID: "d335cc19-7219-49ba-8782-95def11a5c4d"
-      Hint: NavigationColumns
+      Hint: HeaderDropDown_NavigationColumns
       Type: Treelist
       Value: |
         {33A05BC2-0751-403D-A2EA-BE14570CECDF}
         {36AFC7A1-5F8E-4504-8047-FF213ABBDF68}
-        {7778AD99-3FF8-4F83-A4C5-B35573E94E34}

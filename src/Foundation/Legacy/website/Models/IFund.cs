@@ -30,5 +30,10 @@
 
         [SitecoreField(Constants.Fund.HistoricYield_FieldId)]
         string HistoricYield { get; set; }
+
+        [SitecoreField(Constants.Fund.RiskWarning_FieldId)]
+        string RiskWarning { get; set; }
+        [SitecoreQuery("./Documents", IsRelative = true)]
+        IFundDocuments DocumentsFolder { get; set; }
     }
 }

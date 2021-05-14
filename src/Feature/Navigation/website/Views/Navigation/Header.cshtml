@@ -7,7 +7,7 @@
     <header class="header">
         <section class="container">
             <div class="header-navbar">
-                @using (Html.Glass().BeginEditFrame(Model.HomeItem, "Edit Menu Links", x => x.MenuItems))
+                @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Navigation/Menu", Model.HomeItem.Id.ToString(), "Edit menu items"))
                 {
                     <button class="header-navbar__btn-open"></button>
                 }
@@ -71,7 +71,7 @@
                                                                     {
                                                                         using (Html.Glass().BeginRenderLink(firstNavigationColumn, z => z.ColumnLink, new NameValueCollection { { "class", "link-styles d-block mb-4" } }, isEditable: true))
                                                                         {
-                                                                            if (firstNavigationColumn.ColumnLink != null 
+                                                                            if (firstNavigationColumn.ColumnLink != null
                                                                                 && !string.IsNullOrEmpty(firstNavigationColumn.ColumnLink.Text))
                                                                             {
                                                                                 @firstNavigationColumn.ColumnLink.Text
@@ -166,7 +166,7 @@
                                                                         {
                                                                             var image = dropDown.Images.FirstOrDefault();
                                                                             image.SmallSize = false;
-                                                                            @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", image)                                                                            
+                                                                            @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", image)
                                                                         }
                                                                         else
                                                                         {
@@ -202,7 +202,7 @@
                                                                     {
                                                                         image.SmallSize = false;
                                                                         <div class="col-xl-4 col-lg-5 offset-lg-4 offset-xl-5">
-                                                                            @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", image)                                                                            
+                                                                            @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", image)
                                                                         </div>
                                                                     }
                                                                 }
@@ -234,7 +234,7 @@
                                                                                     if (secondImage != null)
                                                                                     {
                                                                                         secondImage.SmallSize = true;
-                                                                                        @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", secondImage)                                                                                        
+                                                                                        @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", secondImage)
                                                                                     }
                                                                                     imageCollecion = imageCollecion.Skip(2);
                                                                                 }
@@ -261,7 +261,7 @@
                                                                                     if (secondColumnSecondImage != null)
                                                                                     {
                                                                                         secondColumnSecondImage.SmallSize = true;
-                                                                                        @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", secondColumnSecondImage)                                                                                        
+                                                                                        @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", secondColumnSecondImage)
                                                                                     }
                                                                                 }
                                                                             </div>
@@ -297,7 +297,7 @@
                 </div>
             </div>
         </section>
-            @Html.Partial("~/Views/Navigation/Menu.cshtml", Model)        
+        @Html.Partial("~/Views/Navigation/Menu.cshtml", Model)
     </header>
 }
 else if (Sitecore.Context.PageMode.IsExperienceEditor)

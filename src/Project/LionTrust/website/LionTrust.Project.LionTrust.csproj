@@ -67,13 +67,14 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Config\Include\Project\LionTrust.Release.transform">
-		<DependentUpon>LionTrust.config</DependentUpon>
+      <DependentUpon>LionTrust.config</DependentUpon>
     </Content>
     <None Include="Web.config">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -20,12 +20,15 @@ Languages:
       Hint: Column Title
       Value: Fund Teams
     - ID: "9012ee1a-dea2-49fa-951d-f72e835639ca"
-      Hint: Column Link
-      Value: |
-        <link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{9C99253C-2FBC-4C66-B5A4-ACA75C2EE0BB}" />
+      Hint: HeaderDropDownNavigationColumn_ColumnLink
+      Value: 
     - ID: "9063296f-3bbe-4d1f-9ea6-9a6e2442b520"
       Hint: Column Link Label
       Value: View all Teams
+    - ID: "e6689b09-d0ff-4b12-965c-625b7185f6be"
+      Hint: HeaderDropDownNavigationColumn_PageLinks
+      Type: Treelist
+      Value: 
     - ID: "fe160ab8-1158-46c9-80ad-43557ce4129d"
       Hint: Show Column Link
       Type: Checkbox
