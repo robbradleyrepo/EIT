@@ -30,5 +30,7 @@
 
         [SitecoreField(Constants.Fund.HistoricYield_FieldId)]
         string HistoricYield { get; set; }
+        [SitecoreQuery("./Documents", IsRelative = true)]
+        IFundDocuments DocumentsFolder { get; set; }
     }
 }

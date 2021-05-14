@@ -1,27 +1,26 @@
 ﻿---
-ID: "f4301786-a113-4511-ba28-46655d111f73"
+ID: "473a136a-5744-42a9-b430-42ccb92ccc33"
 Parent: "a00fc4a2-2931-4607-88bb-c19d1833086a"
 Template: "2a3e91a0-7987-44b5-ab34-35c2d9de83b9"
-Path: "/sitecore/layout/Renderings/Feature/Fund/UI016 - Fund Manager Component"
+Path: "/sitecore/layout/Renderings/Feature/Fund/BC020 - Literature Overlay"
 DB: master
 SharedFields:
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: 
 - ID: "a2f5d9df-8cba-4a1d-99eb-51acb94cb057"
   Hint: Page Editor Buttons
   Type: Treelist
-  Value: "{04DF9915-8916-4FE6-BA82-D017466961F5}"
+  Value: "{31A3A929-C599-4DD3-91A6-F4A9487CC8B7}"
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
-  Value: "site:fundmanagercomponent"
-- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
-  Hint: __Thumbnail
-  Value: |
-    <image mediaid="{E9A0C734-EAD0-4FC4-B50C-6039A91674C4}" />
+  Value: "site:literatureoverlay"
 - ID: "ded9e431-3604-4921-a4b3-a6ec7636a5b6"
   Hint: Controller Action
   Value: Render
 - ID: "e64ad073-dfcc-4d20-8c0b-fe5aa6226cd7"
   Hint: Controller
-  Value: FundManagerComponent
+  Value: FundLiterature
 Languages:
 - Language: en
   Versions:
@@ -33,8 +32,4 @@ Languages:
       Value: 1
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210506T145844Z
-    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
-      Hint: __Created by
-      Value: |
-        sitecore\Admin
+      Value: 20210512T135433Z
