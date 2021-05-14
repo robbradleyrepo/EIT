@@ -1,40 +1,43 @@
 ﻿---
-ID: "47daddd8-ffff-4b6f-97c6-f5f392edc13f"
-Parent: "ac4ef741-2c08-413e-b316-5082565e5be9"
+ID: "e84ac4b4-6376-4666-8557-51ec9b08a682"
+Parent: "5df31d92-51c8-43ad-8810-61fe45ebbf73"
 Template: "02404208-46d4-49bf-988b-eb363a52a1c9"
-Path: /sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Banner/BannerWithSlider/ImageWithTitleAndText/Move Right
+Path: /sitecore/content/Applications/WebEdit/Custom Experience Buttons/Feature/Banner/BannerWithSlider/Insert
 DB: core
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
-  Value: Office/32x32/navigate_right.png
+  Value: Office/32x32/navigate_plus.png
 - ID: "1bb289d6-44d7-4fcc-af15-db32b841f957"
   Hint: Click
-  Value: "item:movedown"
+  Value: "webedit:new"
+- ID: "a54ec0df-3193-44e4-b7ba-cdabbbfa2d46"
+  Hint: Parameters
+  Value: Navigate=0
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 400
+  Value: 200
 - ID: "e8cc41c7-c304-4282-b782-e21ca32d324c"
   Hint: Icon
-  Value: Office/32x32/navigate_right.png
+  Value: office/32x32/navigate_plus.png
 Languages:
 - Language: en
   Fields:
   - ID: "371e0d96-4f00-4b80-ad14-6284e00493ba"
     Hint: Tooltip
-    Value: Move Image to Right
+    Value: Add Image with Title and Text
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
     Hint: __Display name
-    Value: Move Right
+    Value: Insert
   - ID: "c523aba8-d1a1-4dcb-aeee-52635a4ab2ae"
     Hint: Header
-    Value: Move Image to Right
+    Value: Add Image with Title and Text
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20071015T064903Z
+      Value: 20081224T113450Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |

@@ -1,34 +1,34 @@
 ﻿---
-ID: "1e9dcb87-e64c-4d5d-9569-3e14d4c6c0a2"
-Parent: "ac4ef741-2c08-413e-b316-5082565e5be9"
+ID: "cec0424c-02f8-4116-9d8d-d27fab6a8e9e"
+Parent: "34d70c1e-b15d-42b1-9fe1-33ca3744d7ce"
 Template: "02404208-46d4-49bf-988b-eb363a52a1c9"
-Path: /sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Banner/BannerWithSlider/ImageWithTitleAndText/Move Left
+Path: /sitecore/content/Applications/WebEdit/Custom Experience Buttons/Feature/Banner/BannerWithIcons/IconWithText/Delete
 DB: core
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
-  Value: Office/32x32/navigate_left.png
+  Value: Office/32x32/delete.png
 - ID: "1bb289d6-44d7-4fcc-af15-db32b841f957"
   Hint: Click
-  Value: "item:moveup"
+  Value: "webedit:delete"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 300
+  Value: 500
 - ID: "e8cc41c7-c304-4282-b782-e21ca32d324c"
   Hint: Icon
-  Value: Office/32x32/navigate_left.png
+  Value: office/32x32/delete.png
 Languages:
 - Language: en
   Fields:
   - ID: "371e0d96-4f00-4b80-ad14-6284e00493ba"
     Hint: Tooltip
-    Value: Move Image to Left
+    Value: Delete the carousel card
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
     Hint: __Display name
-    Value: Move Left
+    Value: Delete
   - ID: "c523aba8-d1a1-4dcb-aeee-52635a4ab2ae"
     Hint: Header
-    Value: Move Image to Left
+    Value: Delete Carousel
   Versions:
   - Version: 1
     Fields:
