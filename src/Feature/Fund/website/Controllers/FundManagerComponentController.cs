@@ -4,6 +4,7 @@
     using LionTrust.Feature.Fund.Models;
     using Sitecore.Mvc.Controllers;
     using System.Web.Mvc;
+    using System.Linq;
 
     public class FundManagerComponentController : SitecoreController
     {
@@ -17,7 +18,7 @@
         public ActionResult Render()
         {
             var datasource = context.GetDataSourceItem<IFundManagers>();
-            if (datasource == null)
+            if (datasource == null || (datasource.Managers != null && !datasource.Managers.Any() && !Sitecore.Context.PageMode.IsExperienceEditor))
             {
                 return null;
             }
