@@ -1,0 +1,113 @@
+.follow-us-section
+    margin-top: 30px
+    margin-bottom: 40px
+    @include breakpoint(desktop-large, up)
+        margin: 90px auto 100px
+.follow-us
+    &__title
+        margin-bottom: 0
+    &__text
+        margin-bottom: 23px
+        color: $black
+    &__links
+        display: flex
+        margin-bottom: 23px
+    &__link
+        display: flex
+        align-items: center
+        @include breakpoint(desktop-large, up)
+            &:last-child
+                margin-left: auto
+    a
+        color: $gold
+        display: inline-block
+        margin-right: 16px
+        font-size: 14px
+        @include breakpoint(desktop, up)
+            margin-right: 10px
+        @include breakpoint(desktop-large, up)
+            margin-right: 20px
+        img
+            width: 23px
+            height: 28px
+            margin-right: 5px
+            @include breakpoint(desktop, up)
+                margin-right: 8px
+
+.contact-section
+    margin-top: 30px
+    margin-bottom: 30px
+    @include breakpoint(desktop-large, up)
+        margin: 85px auto 90px
+    &__title
+        margin-bottom: 12px
+    .card
+        @include breakpoint(desktop-large, up)
+            padding: 30px  40px 40px
+.contacts
+    &__title
+        font-size: 26px
+        line-height: 32px
+    &__text
+        font-size: 16px
+        line-height: 20px
+        @include breakpoint(desktop, up)
+            line-height: 30px
+        &-top
+            margin-bottom: 20px
+            @include breakpoint(desktop-large, up)
+                margin-bottom: 29px
+            span
+                display: block
+        .lit-column
+            width: 27px
+            display: inline-block
+            font-weight: 500
+            @include breakpoint(desktop-large, up)
+                margin-right: 4px
+        .gray-text
+            color: $gray
+            font-style: italic
+            @include breakpoint(desktop-large, up)
+                margin-left: 4px
+    &__phones
+        margin-bottom: 16px
+        @include breakpoint(desktop-large, up)
+            display: flex
+            margin-bottom: 0
+        .contacts__phone
+            margin-left: 40px            
+            &:first-child
+                display: block
+            @include breakpoint(desktop-large, up)
+                display: inline-block
+                margin-left: 0
+    &__divider
+        display: none
+        @include breakpoint(desktop-large, up)
+            display: inline-block
+            margin: 0 4px
+    &__btns
+        margin-top: 35px
+        text-align: center
+        @include breakpoint(desktop-large, up)
+            display: flex
+            align-items: center
+    &__btn
+        display: block
+        @include breakpoint(desktop-large, up)
+            display: inline-block
+            margin-right: 32px
+    &__btn-link
+        margin-top: 20px
+        display: inline-block
+        @include breakpoint(desktop-large, up)
+            margin-top: 0            
+        i
+            display: none
+            @include breakpoint(desktop-large, up)
+                display: inline-block
+    &__image
+        width: 100%
+        height: auto
+        border-radius: 10px
