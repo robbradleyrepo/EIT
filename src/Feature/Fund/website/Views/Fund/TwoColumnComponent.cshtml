@@ -1,0 +1,15 @@
+﻿@model LionTrust.Feature.Fund.Models.ITwoColumnComponent
+@{ 
+    var leftColumnSizeCss = Model.LeftColumnSize != 0 ? "col-lg-" + Model.LeftColumnSize.ToString() : string.Empty;
+    var leftPaddingSizeCss = Model.LeftPaddingSize != 0 ? "offset-lg-" + Model.LeftPaddingSize.ToString() : string.Empty;
+    var rightColumnSizeCss = Model.RightColumnSize != 0 ? "col-lg-" + Model.RightColumnSize.ToString() : string.Empty;
+    var rightPaddingSizeCss = Model.RightPaddingSize != 0 ? "offset-lg-" + Model.RightPaddingSize.ToString() : string.Empty;
+}
+<div class="row">
+    <div class="@leftColumnSizeCss @leftPaddingSizeCss">
+        @Html.Sitecore().Placeholder("left-column")
+    </div>
+    <div class="@rightColumnSizeCss @rightPaddingSizeCss">
+        @Html.Sitecore().Placeholder("right-column")
+    </div>
+</div>

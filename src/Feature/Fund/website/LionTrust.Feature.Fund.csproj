@@ -84,6 +84,7 @@
     <Content Include="Views\Fund\fundetailnav.cshtml" />
     <Content Include="Views\Fund\KeyInfoPrice.cshtml" />
     <Content Include="Views\Fund\literature.cshtml" />
+    <Content Include="Views\Fund\TwoColumnComponent.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -115,6 +116,7 @@
     <Compile Include="Models\IKeyFundDocuments.cs" />
     <Compile Include="Models\IFundManagers.cs" />
     <Compile Include="Models\IKeyInfoPriceComponent.cs" />
+    <Compile Include="Models\ITwoColumnComponent.cs" />
     <Compile Include="Models\KeyInfoPriceViewModel.cs" />
     <Compile Include="Models\ILiterature.cs" />
     <Compile Include="Models\LiteratureViewModel.cs" />
