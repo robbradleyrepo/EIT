@@ -33,7 +33,14 @@
 
         [SitecoreField(Constants.Fund.RiskWarning_FieldId)]
         string RiskWarning { get; set; }
+        
         [SitecoreQuery("./Documents", IsRelative = true)]
         IFundDocuments DocumentsFolder { get; set; }
+
+        [SitecoreField(Constants.Fund.FundNameFieldId)]
+        string FundName { get; set; }
+
+        [SitecoreField(Constants.Fund.OverviewDescriptionFieldId)]
+        string OverviewDescription { get; set; }
     }
 }
