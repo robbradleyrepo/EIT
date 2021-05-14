@@ -83,16 +83,21 @@
     <Content Include="Views\Fund\FundHeader.cshtml" />
     <Content Include="Views\Fund\fundetailnav.cshtml" />
     <Content Include="Views\Fund\KeyInfoPrice.cshtml" />
+    <Content Include="Views\Fund\literature.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="Controllers\FundLiteratureController.cs" />
     <Compile Include="Controllers\FundManagerComponentController.cs" />
     <Compile Include="Controllers\FundHeaderController.cs" />
     <Compile Include="Controllers\FundManagerPromoController.cs" />
     <Compile Include="Controllers\FundsController.cs" />
     <Compile Include="Controllers\FundScrollerController.cs" />
     <Compile Include="Models\AdditionalInfoAndChargesViewModel.cs" />
+    <Compile Include="Literature\DocumentRepository.cs" />
+    <Compile Include="Literature\DocumentSearchResult.cs" />
+    <Compile Include="Literature\IDocumentRepository.cs" />
     <Compile Include="Models\FourFundStatsViewModel.cs" />
     <Compile Include="Models\FundHeaderViewModel.cs" />
     <Compile Include="Models\FundManagerViewModel.cs" />
@@ -111,6 +116,8 @@
     <Compile Include="Models\IFundManagers.cs" />
     <Compile Include="Models\IKeyInfoPriceComponent.cs" />
     <Compile Include="Models\KeyInfoPriceViewModel.cs" />
+    <Compile Include="Models\ILiterature.cs" />
+    <Compile Include="Models\LiteratureViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

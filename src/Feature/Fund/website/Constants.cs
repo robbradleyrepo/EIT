@@ -2,6 +2,13 @@
 {
     public static class Constants
     {
+        public static class Literature
+        {
+            public const string HeadingFieldId = "{6B74C5E5-7F94-405C-9E38-2B38FCC30079}";
+            public const string FundFieldId = "{1000613E-6F3E-4DB4-91EF-C1B5D447DEE2}";
+            public const string CtaFieldId = "{EEED7C2E-DC3C-4E29-9855-03BD4F9139AD}";
+        }
+    
         public static class FundHeader
         {
             public const string FundFieldId = "{90BCAB34-B9E0-466E-97A4-73CEC67335F7}";
@@ -51,6 +58,7 @@
             public const string Title_FieldId = "{10B9FA41-4F22-4FD2-81BE-EE105DFB4329}";
             public const string Description_FieldId = "{760716CF-64D5-4C0D-9DFF-2DBB9F0D476A}";
             public const string KeyDocuments_FieldId = "{4189960D-9AAE-42E3-8008-3EF3309002D6}";
+
             public const string ViewAllDocumentsLabel_FieldId = "{99B18B81-5C97-47E1-9EDC-9F83C5F49947}";
         }
 
