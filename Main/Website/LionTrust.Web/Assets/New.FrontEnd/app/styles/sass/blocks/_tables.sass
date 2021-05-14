@@ -31,7 +31,7 @@
             font-weight: 300
             font-size: 18px
             border-top: none
-            border-bottom: 2px dashed #dee2e6
+            border-bottom: 1px dashed #dee2e6
             @include breakpoint(desktop, up)
                 font-size: 20px
                 padding: 19px
@@ -89,7 +89,12 @@
             td, th
                 font-weight: 500
                 color: $primary
+    .percents
+        display: inline-block
+        height: 16px
+        background: $primary
 
+    
 .table.table-full-border
     tbody
         border: 1px solid $secondary-silver
@@ -98,5 +103,10 @@
                 border-bottom: none
                 &::before, &::after
                     display: none
+
+.table.table-horizontal-chart
+    tbody td
+        &:last-child
+            width: 40%
                     
 
