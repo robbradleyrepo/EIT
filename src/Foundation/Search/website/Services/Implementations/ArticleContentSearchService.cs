@@ -9,6 +9,7 @@
     using LionTrust.Foundation.Search.Repositories.Interfaces;
     using LionTrust.Foundation.Search.Services.Interfaces;
     using Sitecore.ContentSearch.Linq.Utilities;
+    using Sitecore.ContentSearch.Utilities;
 
     public class ArticleContentSearchService : IArticleContentSearchService
     {
@@ -21,8 +22,8 @@
 
         private Expression<Func<ArticleSearchResultItem, bool>> PopoulateDatedTaxonomyPredicate(Expression<Func<ArticleSearchResultItem, bool>> predicate, ITaxonomySearchRequest articleSearchRequest)
         {
-            predicate = predicate.And(x => x.ArticleDate > articleSearchRequest.FromDate);
-            predicate = predicate.And(x => x.ArticleDate < articleSearchRequest.ToDate);
+            predicate = predicate.And(x => x.Created > articleSearchRequest.FromDate);
+            predicate = predicate.And(x => x.Created < articleSearchRequest.ToDate);
 
             var taxonomyFilter = PredicateBuilder.True<ArticleSearchResultItem>();
 
@@ -55,6 +56,19 @@
                                                                     (current, manager)
                                                                                 => current
                                                                                      .Or(item => item.ArticleAuthors.Contains(manager)));
+
+                taxonomyFilter = taxonomyFilter.Or(managerPredicate);
+            }
+
+            if (articleSearchRequest.Topics != null && articleSearchRequest.Topics.Any())
+            {
+                var managerPredicate = PredicateBuilder.False<ArticleSearchResultItem>();
+                managerPredicate = articleSearchRequest
+                                            .Topics
+                                                    .Aggregate(managerPredicate,
+                                                                    (current, manager)
+                                                                                => current
+                                                                                     .Or(item => item.Topics.Contains(IdHelper.NormalizeGuid(manager, true))));
 
                 taxonomyFilter = taxonomyFilter.Or(managerPredicate);
             }

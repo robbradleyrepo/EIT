@@ -20,14 +20,8 @@
         [SitecoreField(Constants.Article.Body_FieldId, SitecoreFieldType.RichText, "Article page data")]
         string Body { get; set; }
 
-        [SitecoreField(Constants.Article.Image_FieldId, SitecoreFieldType.Image, "Article page data")]
-        Image Image { get; set; }
-
         [SitecoreField(Constants.Article.PromoType_FieldId, SitecoreFieldType.Droplink, "Article page data")]
         ILegacyGlassBase PromoType { get; set; }
-
-        [SitecoreField(Constants.Article.Date_FieldId, SitecoreFieldType.Date, "Article page data")]
-        DateTime Date { get; set; }
 
         [SitecoreField(Constants.Article.PublishDate_FieldId, SitecoreFieldType.DateTime, "Article page data")]
         DateTime PublishedDate { get; set; }
