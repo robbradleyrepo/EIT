@@ -9,6 +9,6 @@
     }
     using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.Link, Model.LinkGoal, isEditable: true))
     {
-        @Html.Glass().RenderImage(Model, m => m.Icon, new NameValueCollection { { "class", "podcast__icon" } }, isEditable: true)
+        @Html.Glass().RenderImage(Model, m => m.Icon, new NameValueCollection { { "class", "image-icon" } }, isEditable: true)
     }
 }

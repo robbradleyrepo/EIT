@@ -43,7 +43,7 @@
                                                 <div class="swiper-slide">
                                                     @Html.Partial("~/Views/Article/PromoCards/ArticlePodcastPromo.cshtml", article.PodcastPromo.FirstOrDefault())
                                                 </div>
-                                            }                                            
+                                            }
                                             break;
                                         }
                                     case "Fund updates":
@@ -55,7 +55,9 @@
                                         }
                                     case "Video":
                                         {
-                                            @Html.Partial("~/Views/Article/PromoCards/VideoPromo.cshtml", article)
+                                            <div class="swiper-slide">
+                                                @Html.Partial("~/Views/Article/PromoCards/VideoPromo.cshtml", article)
+                                            </div>
                                             break;
                                         }
                                     case "Magazine and Reports":
