@@ -1,0 +1,33 @@
+﻿---
+ID: "d6487829-4393-478e-9840-06df29143199"
+Parent: "8af83fdb-f9d8-4b35-8c8e-c0f9465ed7b2"
+Template: "9e459de5-0d5a-458a-be73-344b939719e1"
+Path: /sitecore/content/LionTrust New/Page Settings/Header Configuration/Insight
+DB: master
+BranchID: "376511be-c163-4800-a4e9-7b71c6281a0f"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{12CF970E-33FF-4672-8BF7-DCF6918B5C99}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210406T123227Z
+    - ID: "c230e8eb-6b8f-44cd-bc43-5b24b540f6ae"
+      Hint: HeaderDropDown_Images
+      Type: Treelist
+      Value: |
+        {81B8B9B9-5386-48FC-97F7-0F5C82AACB97}
+        {34645505-6CEB-41C8-9C09-4CB8D4798E79}
+        {7A49FB4A-6BB1-4FB1-8C8B-F7E954B87A87}
+    - ID: "d335cc19-7219-49ba-8782-95def11a5c4d"
+      Hint: HeaderDropDown_NavigationColumns
+      Type: Treelist
+      Value: "{59873B7C-7971-4158-9FC3-4098E744287A}"
+    - ID: "f01d9f47-3d98-42d9-ab7d-59b5e845b974"
+      Hint: HeaderDropDown_PageItem
+      Value: "{018B19B4-725A-44C3-80F8-C3C9395B44A8}"

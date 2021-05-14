@@ -1,0 +1,237 @@
+﻿---
+ID: "e698d9f6-6ede-458d-8ccf-086440cd8835"
+Parent: "47bd668e-4c0f-4d8a-9e71-b6c8c156b32f"
+Template: "1f294bcb-1f17-4000-94bd-501a96bec59a"
+Path: "/sitecore/content/LionTrust New/Home/funds/asia-income-fund"
+DB: master
+SharedFields:
+- ID: "b0a67b2a-8b07-4e0b-8809-69f751709806"
+  Hint: __Tracking
+  Type: Tracking
+  Value: |
+    <tracking>
+      <event
+        id="{62CE52A7-ACC1-467A-90AC-A67B16156156}"
+        name="Looked at Asia Income Fund Team Page" />
+    </tracking>
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+- ID: "cce4e679-7e94-450d-8cc1-691bdf17ca78"
+  Hint: LegacyFundPageData_FundReference
+  Value: "{B0C7AC70-3895-49C4-8F3C-4DF11EFEDC46}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}"
+          p:before="*"
+          s:ph="/content/fund-page-content" />
+        <r
+          uid="{D85A6667-1593-408E-8574-95F0CD1BDACB}"
+          p:after="r[@uid='{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}']"
+          s:ds="{6068D797-30E4-481A-AAFF-18F699BDA244}"
+          s:id="{8A50B96F-BF28-43E6-87D5-1E3408F8171A}"
+          s:par=""
+          s:ph="/content/fund-page-content" />
+        <r
+          uid="{2BB1A4A6-B110-4B97-9D61-0E963665AA2E}"
+          p:after="r[@uid='{D85A6667-1593-408E-8574-95F0CD1BDACB}']"
+          s:ds="{78BD2E0C-F7B2-4721-B749-D4FE0BE3DF6F}"
+          s:id="{DFF81E23-0704-4716-89DC-50C5E45F4DAE}"
+          s:par=""
+          s:ph="/content/fund-page-content/right-content_{2eb0650d-a47e-4a61-a6e6-eb427e246c86}" />
+        <r
+          uid="{368B0B5D-4D61-4F48-8BE2-64F7AD8E09C9}"
+          p:after="r[@uid='{2BB1A4A6-B110-4B97-9D61-0E963665AA2E}']"
+          s:ds="{411241B4-D482-40A1-A819-067FDEE8399D}"
+          s:id="{DFF81E23-0704-4716-89DC-50C5E45F4DAE}"
+          s:par=""
+          s:ph="/content/fund-page-content/left-content_{2eb0650d-a47e-4a61-a6e6-eb427e246c86}" />
+        <r
+          uid="{CEC4666D-950E-4BB2-ADD3-1A523FA68F4F}">
+          <p:d />
+        </r>
+        <r
+          uid="{E68675B2-194E-4FCD-97FB-AFCFFA66A966}">
+          <p:d />
+        </r>
+        <r
+          uid="{D2F551B2-8E4E-42AB-A016-9E554910D949}">
+          <p:d />
+        </r>
+        <r
+          uid="{F6121C38-616E-4860-827F-01DC600CF588}"
+          p:after="r[@uid='{F3F5DDD8-BCED-4C83-A49B-42E641DFDC1F}']"
+          s:id="{302ADD39-9FA0-4282-8D6B-AD95AE6F0C4A}"
+          s:ph="content" />
+        <r
+          uid="{AD96180D-FB1F-4DE1-97AF-BB7D55D5142A}"
+          p:after="r[@uid='{F6121C38-616E-4860-827F-01DC600CF588}']"
+          s:ds="{97D098D4-326A-444C-BA99-5C3DEF5A732A}"
+          s:id="{777B1AE2-307E-4C65-9987-9BD39085419B}"
+          s:par=""
+          s:ph="/content/fund-page-content" />
+        <r
+          uid="{2EB0650D-A47E-4A61-A6E6-EB427E246C86}"
+          p:after="r[@uid='{AD96180D-FB1F-4DE1-97AF-BB7D55D5142A}']"
+          s:id="{D506C47C-07BC-4D09-B36A-17E5F10F5636}"
+          s:ph="/content/fund-page-content" />
+        <r
+          uid="{4B15ECBA-C6D6-4FE6-A519-EDCAECC6000E}"
+          p:after="r[@uid='{2EB0650D-A47E-4A61-A6E6-EB427E246C86}']"
+          s:ds=""
+          s:id="{8A50B96F-BF28-43E6-87D5-1E3408F8171A}"
+          s:par=""
+          s:ph="/content/fund-page-content" />
+        <r
+          uid="{7D2A9FAB-D42F-4FA0-89BF-BAEAF0A42DA0}">
+          <p:d />
+        </r>
+        <r
+          uid="{1A449E6C-3CAF-4F50-ABE3-70B3E38D974C}">
+          <p:d />
+        </r>
+        <r
+          uid="{E461C5F3-56B7-4810-8CE2-832CE9B4994D}">
+          <p:d />
+        </r>
+        <r
+          uid="{E8B045E9-35F5-4BA8-B0B2-0A02D1BD298B}">
+          <p:d />
+        </r>
+        <r
+          uid="{DBED87B3-2FAB-449A-947F-32D769FC232E}">
+          <p:d />
+        </r>
+        <r
+          uid="{FEED17DB-D2EE-470F-9234-67BC05EE3DA7}"
+          p:after="r[@uid='{ED580DB1-87A7-45EF-A0FD-9C6089D5FD53}']"
+          s:ds="{1C8BD856-5470-4B8A-9085-07F0F5699359}"
+          s:id="{777B1AE2-307E-4C65-9987-9BD39085419B}"
+          s:par=""
+          s:ph="/content/fund-page-content" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}">
+              <p:d />
+            </r>
+            <r
+              uid="{5A98F3D3-4B37-4DCC-A334-2141367BD8AA}"
+              p:before="*"
+              s:ds="{95C04704-C5F5-4F53-B7D9-DE02CE06C7CB}"
+              s:id="{F7E7EFF1-2B5F-4554-9B19-1483BDCD6025}"
+              s:ph="main" />
+            <r
+              uid="{1B6AF445-DC30-4B00-AC07-750033137B8B}"
+              p:after="r[@uid='{5A98F3D3-4B37-4DCC-A334-2141367BD8AA}']"
+              s:ds="{708C733E-4F5A-4613-986A-B516DAA95687}"
+              s:id="{D1F65FAF-D449-484C-AADA-D6733DB1F445}"
+              s:ph="main" />
+            <r
+              uid="{712EA6C9-D17E-437F-AA00-3A1EE638ECC5}"
+              p:after="r[@uid='{1B6AF445-DC30-4B00-AC07-750033137B8B}']"
+              s:ds="{9D39D70E-6402-4B17-91A9-9D4B579D4F0E}"
+              s:id="{AB4777AC-F1FB-44C6-8283-C50F528F4DE2}"
+              s:ph="main" />
+            <r
+              uid="{6969CC42-B40B-49F9-9273-46C61A33B6B1}"
+              p:after="r[@uid='{712EA6C9-D17E-437F-AA00-3A1EE638ECC5}']"
+              s:ds="{2CC30E54-EE67-4C60-94A8-C2BB6D802C99}"
+              s:id="{049F3D5C-E59A-4505-9BDC-B94C11832A93}"
+              s:ph="main" />
+            <r
+              uid="{0EFDD863-2446-491D-B969-CB49386D93A4}"
+              p:after="r[@uid='{6969CC42-B40B-49F9-9273-46C61A33B6B1}']"
+              s:ds="{40A28831-ADB4-4422-B454-6DE2B61E820E}"
+              s:id="{98BE3869-3EA0-4D11-9D64-8F7A33C051B1}"
+              s:ph="main" />
+            <r
+              uid="{AD96180D-FB1F-4DE1-97AF-BB7D55D5142A}">
+              <p:d />
+            </r>
+            <r
+              uid="{FEED17DB-D2EE-470F-9234-67BC05EE3DA7}"
+              p:after="*[1=2]" />
+            <r
+              uid="{2EB0650D-A47E-4A61-A6E6-EB427E246C86}">
+              <p:d />
+            </r>
+            <r
+              uid="{4B15ECBA-C6D6-4FE6-A519-EDCAECC6000E}">
+              <p:d />
+            </r>
+          </d>
+        </r>
+    - ID: "187226f4-9c3e-4d5c-b21f-2c917136f20c"
+      Hint: LegacyPresentationBase_MetaRobots
+      Value: 
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Liontrust Asia Income Fund | What we offer | Liontrust Asset Management PLC
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140922T110753Z
+    - ID: "382cdded-7732-4690-ac7a-8dba5c503403"
+      Hint: LegacyFundPageData_HideCumulativePerformanceTable
+      Type: Checkbox
+      Value: 0
+    - ID: "42994f09-31f9-4570-9c0b-91bd4a698540"
+      Hint: LegacyPresentationBase_PageTags
+      Type: Multilist with Search
+      Value: 
+    - ID: "4ba2c766-77ad-4417-81b2-090d584838c1"
+      Hint: LegacyHeroImagePageData_PageHeaderText
+      Value: Mark Williams, Carolyn Chan and Shashank Savla
+    - ID: "4f86ee15-d758-4f6a-826d-bcd23171073c"
+      Hint: LegacyPresentationBase_MetaKeywords
+      Value: liontrust, funds, fund, investing, investment, unit trust, Asia, income, mark williams, carolyn chan, shashank savla
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{AEA66CB3-FAA5-4F80-A3CE-A418B1EC5468}"
+    - ID: "82426cee-2b8e-411e-9eeb-d54ec3d0ced3"
+      Hint: LegacyPresentationBase_Code
+      Value: 
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: 
+    - ID: "9dc8ae8c-c3e1-4536-aa2a-d0bff7398795"
+      Hint: LegacyPresentationBase_MetaDescription
+      Value: "The Fund, which has been managed since launch in March 2012 by Mark Williams, Carolyn Chan and Shashank Savla, invests in Asia Pacific ex-Japan companies and aims to deliver a high level of income with the potential for capital growth over the long term (5 years or more). The Fund seeks to deliver an annual net target yield of at least 110% of the yield of the MSCI All Countries Asia Pacific Excluding Japan Index."
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Asia Income Fund
+    - ID: "b39af1cd-8c71-4989-bef8-7c0441dd570a"
+      Hint: LegacyFundPageData_HidePerformanceChart
+      Type: Checkbox
+      Value: 0
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{0EF02B4F-ED3B-4543-9475-E9F190292CBA}" height="300" hspace="" width="1200" alt="" vspace="" />
+    - ID: "ba664318-d29c-4166-a901-faa04f7d3aa6"
+      Hint: LegacyFundPageData_HideDescretePerformanceTable
+      Type: Checkbox
+      Value: 0
+    - ID: "f7265233-a676-4848-baa9-7a4629e22a75"
+      Hint: LegacyHeroImagePageData_ImagePosition
+      Value: 

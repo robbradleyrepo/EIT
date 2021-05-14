@@ -1,0 +1,44 @@
+﻿---
+ID: "a7483a45-eb08-4bcf-9c45-17f11475674c"
+Parent: "c8e97f82-4fb2-46d3-b162-8fa1fb9fe0ff"
+Template: "66e09d5b-4f8e-4313-9df3-fa7e53fbe83a"
+Path: "/sitecore/content/LionTrust New/Funds/Shared documents/Non-individual Unit Trust application form"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170811T135057Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "8de3f234-7880-4703-8534-02bb8320c09c"
+      Hint: LegacyDocument_RelatedFunds
+      Type: Multilist
+      Value: |
+        {B0C7AC70-3895-49C4-8F3C-4DF11EFEDC46}
+        {8BF2AAB7-37B4-46C0-9599-D4FB3530709D}
+        {A4C505F9-7BF3-4751-8F97-67FAD4F3668E}
+        {060AA0C3-CDBC-47DD-A43E-E3456E72E443}
+        {AFB533F2-88A3-48A8-BD79-B76C1367EA0F}
+        {35A8464C-A192-460E-A3D7-633CD35AA012}
+        {DE369FF5-D1E8-4D5E-9B07-2ED104D1930D}
+        {F2F17A8F-DEC8-458D-965A-1F53AAE9AF6D}
+        {D8F81E1B-EE41-4385-B5F4-C30A63B6B6CA}
+        {2F0AD879-83D7-44CA-A9E4-BD72C73F4D72}
+        {C553BBA1-C26E-43FB-98AA-E0163F8C54DE}
+    - ID: "a4a7f9dd-a218-4f33-b72a-7dc2251ccd43"
+      Hint: LegacyDocument_DocumentTypes
+      Type: Multilist
+      Value: "{F55E7EB7-656F-499A-804D-23550BF1199F}"
+    - ID: "c794210e-6107-4d69-841f-773cb9943bba"
+      Hint: LegacyDocument_DownloadLink
+      Value: |
+        <link target="" linktype="media" id="{D770F6C5-8A1F-4EA0-9D3E-4E29736A98E7}" url="/LionTrust/files/application-forms/liontrust-funds-account-opening-application-form-non-individual" />
+    - ID: "eeb8db99-7da8-4973-adf7-bcf7b29eba79"
+      Hint: LegacyDocument_DocumentName
+      Value: "Liontrust Account Opening Application Form - Non-individual"

@@ -1,0 +1,38 @@
+﻿---
+ID: "d34d6522-0962-446c-9d92-626c4e3a1fa9"
+Parent: "c8e97f82-4fb2-46d3-b162-8fa1fb9fe0ff"
+Template: "66e09d5b-4f8e-4313-9df3-fa7e53fbe83a"
+Path: /sitecore/content/LionTrust New/Funds/Shared documents/SF Managed Funds Salesaid
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200727T110503Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "8de3f234-7880-4703-8534-02bb8320c09c"
+      Hint: LegacyDocument_RelatedFunds
+      Type: Multilist
+      Value: |
+        {AD3BB77C-D594-422F-81BB-9B6856D8953F}
+        {EEF5C9FD-444C-4C68-9544-6DB766182F61}
+        {01013679-A90F-4C97-B734-0B4CB72BEF56}
+        {FC89CAC1-0261-4E99-9C79-956E34A50251}
+        {C2095FE1-D6B7-4592-AAE7-C46994E21D3B}
+    - ID: "a4a7f9dd-a218-4f33-b72a-7dc2251ccd43"
+      Hint: LegacyDocument_DocumentTypes
+      Type: Multilist
+      Value: "{C5DF9328-E252-4E1F-9DC0-5C283D935A71}"
+    - ID: "c794210e-6107-4d69-841f-773cb9943bba"
+      Hint: LegacyDocument_DownloadLink
+      Value: |
+        <link linktype="media" target="" id="{4CA9F771-7F64-4357-8E47-2AD3196F02FD}" />
+    - ID: "eeb8db99-7da8-4973-adf7-bcf7b29eba79"
+      Hint: LegacyDocument_DocumentName
+      Value: Liontrust Sustainable Future Managed Funds Sales Aid
