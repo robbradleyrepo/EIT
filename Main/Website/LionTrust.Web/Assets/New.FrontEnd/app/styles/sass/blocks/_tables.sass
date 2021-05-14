@@ -1,0 +1,112 @@
+.table-section
+    &__title
+        font-size: 26px
+        line-height: 32px
+        color: $black
+
+// Customize default bootstrap styles
+.table
+    thead
+        th
+            font-weight: 300
+            font-size: 18px
+            border: none
+            &:first-child
+                border-radius: .625rem 0 0 0
+                padding-left: 12px
+                @include breakpoint(desktop, up)
+                    padding-left: 32px
+            &:last-child
+                border-radius: 0 .625rem 0 0
+                padding-right: 12px
+                @include breakpoint(desktop, up)
+                    padding-right: 32px
+            @include breakpoint(desktop, up)
+                font-size: 20px
+    tbody
+        border: 1px solid $secondary-silver
+        // border-right: 1px solid $secondary-silver
+
+        td, th
+            font-weight: 300
+            font-size: 18px
+            border-top: none
+            border-bottom: 1px dashed #dee2e6
+            @include breakpoint(desktop, up)
+                font-size: 20px
+                padding: 19px
+        th
+            position: relative
+            padding-left: 12px
+            @include breakpoint(desktop, up)
+                padding-left: 32px
+            &::before
+                position: absolute
+                left: 0
+                bottom: -2px
+                content: ''
+                display: block
+                height: 3px
+                width: 32px
+                background: $white
+                width: 12px
+                @include breakpoint(desktop, up)
+                    width: 32px
+        td:last-child
+            position: relative
+            padding-right: 12px
+            @include breakpoint(desktop, up)
+                padding-right: 32px
+            &::after
+                position: absolute
+                right: 0
+                bottom: -2px
+                content: ''
+                display: block
+                height: 3px
+                background: $white
+                width: 12px
+                @include breakpoint(desktop, up)
+                    width: 32px
+
+    tfoot
+        border: 1px solid $secondary-silver
+        border-top: none
+        td
+            font-weight: 500
+            color: #000
+            font-size: 18px
+            @include breakpoint(desktop, up)
+                font-size: 20px
+                padding: 19px
+            &:first-child
+                padding-left: 32px
+            &:last-child
+                padding-right: 32px
+            
+    thead, tbody, tfoot
+        .primary-row
+            td, th
+                font-weight: 500
+                color: $primary
+    .percents
+        display: inline-block
+        height: 16px
+        background: $primary
+
+    
+.table.table-full-border
+    tbody
+        border: 1px solid $secondary-silver
+        tr:last-child
+            th, td
+                border-bottom: none
+                &::before, &::after
+                    display: none
+
+.table.table-horizontal-chart
+    tbody td
+        &:last-child
+            width: 40%
+                    
+
