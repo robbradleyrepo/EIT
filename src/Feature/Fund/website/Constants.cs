@@ -11,6 +11,8 @@
     
         public static class FundCard
         {
+            public const string HeadingFieldId = "{6387CA9A-7A5A-4D33-B706-201681C0B74C}";
+            public const string ImageFieldId = "{EB75DFEF-C624-4571-B92B-8F37C36FCEE6}";
             public const string DescriptionFieldId = "{0905F092-B5B5-4971-B87E-57F4810BD729}";
             public const string FundFieldId = "{034CD348-2ADC-47E9-B263-2C839808DAE1}";
         }

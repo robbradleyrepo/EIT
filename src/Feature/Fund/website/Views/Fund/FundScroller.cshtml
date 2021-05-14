@@ -54,21 +54,21 @@
                         <div class="swiper-wrapper row">
                             @foreach (var item in Model.Children)
                             {
-                                using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Fund/Fund Scroller", item.Id.ToString()))
+                                using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Fund/Fund Scroller/", item.Id.ToString()))
                                 {
                                     if (item.FundPage == null && Sitecore.Context.PageMode.IsExperienceEditor)
                                     {
                                         @: Please select a fund page
                                     }
-                                    else
+                                    else if (item.FundPage != null)
                                     {
                                         <div class="col-9 col-sm-6 col-md-5 col-lg-6 col-xl-5 swiper-slide">
                                             <a href="@item.FundPage.Url" class="fund-card">
                                                 <div class="fund-card__head" style="background-image: url('')">
-                                                    <img src="images/components/fund-card/fund-card-lion.png" alt="liontrust" />
+                                                    @Html.Glass().Editable(item, i => i.Image)                                                    
                                                 </div>
                                                 <div class="fund-card__content">
-                                                    <span class="fund-card__subtitle">Sustainable Investment</span>
+                                                    <span class="fund-card__subtitle">@Html.Glass().Editable(item, i => i.Heading)</span>
                                                     <span class="fund-card__title">@item.FundPage.FundReference.FundName</span>
                                                     <div class="fund-card__text">
                                                         <div class="fund-card__text-top">
