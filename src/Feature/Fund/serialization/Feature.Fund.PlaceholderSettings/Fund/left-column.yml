@@ -1,0 +1,28 @@
+﻿---
+ID: "4ce141b8-15b7-44a2-9e55-d7eaf227b4d2"
+Parent: "643123c8-24c4-45de-9e3a-de197b9f39de"
+Template: "5c547d4e-7111-4995-95b0-6b561751bf2e"
+Path: "/sitecore/layout/Placeholder Settings/Feature/Fund/left-column"
+DB: master
+SharedFields:
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: "left-column"
+- ID: "e391b526-d0c5-439d-803e-17512eae6222"
+  Hint: Allowed Controls
+  Type: TreelistEx
+  Value: |
+    {1922AE89-FB11-4FF8-8A56-6AAB8D05F3C2}
+    {D1F65FAF-D449-484C-AADA-D6733DB1F445}
+    {98BE3869-3EA0-4D11-9D64-8F7A33C051B1}
+    {F4301786-A113-4511-BA28-46655D111F73}
+    {049F3D5C-E59A-4505-9BDC-B94C11832A93}
+    {B87F0E98-81D6-4B7F-A351-549255F96DB7}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210513T171213Z

@@ -93,6 +93,7 @@
             public const string MinimumAdditionalInvestment_FieldId = "{22093813-F5DB-40EB-AEC1-CBCFB3F135FD}";
             public const string BenchmarkName_FieldId = "{30054D3B-D471-469D-A82A-C575DC220CF2}";
             public const string HistoricYield_FieldId = "{86F07FA6-A576-4462-B343-C4AF970A2576}";
+            public const string RiskWarning_FieldId = "{221E703D-5BA7-4141-A98C-B76D2E5A663A}";
         }
 
         public static class HeroImagePageData
@@ -150,6 +151,8 @@
 
             public const string ArchivedDate_FieldName = "LegacyDocument_ArchivedDate";
             public const string ArchivedDate_FieldId = "{7EE62633-2012-42E3-8C62-C6051EA0CD19}";
+
+            public const string TemplateId = "{DD62AA1C-9EF9-4891-BA5E-53056A2FE480}";
         }
 
         public static class LookupItem

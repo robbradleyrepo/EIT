@@ -1,0 +1,30 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Fund.Models.LiteratureViewModel
+<div class="lit-overlay">
+    <div class="d-flex justify-content-end">
+        <button class="lit-overlay__close" id="lit-overlay-close" alt="close"><i class="icon-close"></i></button>
+    </div>
+    <div class="lit-overlay__head">
+        <div class="lit-overlay__title">@Html.Glass().Editable(m => m.Literature.Heading)</div>
+        <div class="lit-overlay__subtitle">
+            @Model.FundName
+        </div>
+        @using (Html.Glass().BeginRenderLink(m => m.Literature.Cta, new { @class = "lit-overlay__link" }))
+        {
+            @Model.CtaText
+            <i class="icon-arrow-right animate-arrow"></i>
+        }
+    </div>
+    @foreach (var documentList in Model.Documents)
+    {
+        <div class="lit-overlay__item">
+            <span class="lit-overlay__item-title">@documentList.Key</span>
+            @foreach (var link in documentList.Value)
+            {
+                <a href="@link.DocumentLink.Url" class="lit-overlay__item-link" target="_blank">
+                    <i class="icon-file"></i> @link.DocumentName
+                </a>
+            }
+        </div>
+    }
+</div>

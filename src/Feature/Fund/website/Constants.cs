@@ -2,6 +2,13 @@
 {
     public static class Constants
     {
+        public static class Literature
+        {
+            public const string HeadingFieldId = "{6B74C5E5-7F94-405C-9E38-2B38FCC30079}";
+            public const string FundFieldId = "{1000613E-6F3E-4DB4-91EF-C1B5D447DEE2}";
+            public const string CtaFieldId = "{EEED7C2E-DC3C-4E29-9855-03BD4F9139AD}";
+        }
+    
         public static class FundHeader
         {
             public const string FundFieldId = "{90BCAB34-B9E0-466E-97A4-73CEC67335F7}";
@@ -51,6 +58,7 @@
             public const string Title_FieldId = "{10B9FA41-4F22-4FD2-81BE-EE105DFB4329}";
             public const string Description_FieldId = "{760716CF-64D5-4C0D-9DFF-2DBB9F0D476A}";
             public const string KeyDocuments_FieldId = "{4189960D-9AAE-42E3-8008-3EF3309002D6}";
+
             public const string ViewAllDocumentsLabel_FieldId = "{99B18B81-5C97-47E1-9EDC-9F83C5F49947}";
         }
 
@@ -112,6 +120,20 @@
             public const string SinglePrice_FieldId = "{ACF74586-B31A-4812-A440-C4C50A6E4F70}";
             public const string OfferPrice_FieldId = "{B834FC27-880B-4ACD-BC10-D6158773B285}";
             public const string PriceDate_FieldId = "{366E54EF-CC6F-4F52-8953-6DDDEA6ED408}";
-        }       
+        } 
+        
+        public static class TwoColumnComponent
+        {
+            public const string LeftColumnSize_FieldId = "{F6A1DC1F-D9C0-40B8-9590-D5C58D1F2346}";
+            public const string LeftPaddingSize_FieldId = "{0B7847A5-F42B-42E0-B4D0-3CB4350CEE45}";
+            public const string RightColumnSize_FieldId = "{1A02D0A6-1E81-4119-AB01-A0E90D5EB8A8}";
+            public const string RightPaddingSize_FieldId = "{D3A375F2-CB82-4F2B-AF60-550FC662A00D}";
+        }        
+        
+        public static class FundDisclaimer
+        {
+            public const string SmallSize_FieldId = "{06013D0B-DB4E-474E-86E7-BB771D5E7577}";
+            public const string TextColor_FieldId = "{98D89D89-CA0F-41FF-A3BF-E0F22F240335}";
+        }
     }
 }
