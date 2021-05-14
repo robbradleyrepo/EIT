@@ -1,0 +1,33 @@
+﻿---
+ID: "3ea61d73-8642-439e-88ca-75df78c1a044"
+Parent: "82ccd71f-3f4c-4121-a920-7d2ada02b3cb"
+Template: "66e09d5b-4f8e-4313-9df3-fa7e53fbe83a"
+Path: /sitecore/content/LionTrust New/Funds/Asia Income Fund/Documents/Liontrust Asia Income Fund Factsheet I
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190919T154407Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "8de3f234-7880-4703-8534-02bb8320c09c"
+      Hint: LegacyDocument_RelatedFunds
+      Type: Multilist
+      Value: "{B0C7AC70-3895-49C4-8F3C-4DF11EFEDC46}"
+    - ID: "a4a7f9dd-a218-4f33-b72a-7dc2251ccd43"
+      Hint: LegacyDocument_DocumentTypes
+      Type: Multilist
+      Value: "{D4DC9F77-EC92-429D-A975-839A13F17C2A}"
+    - ID: "c794210e-6107-4d69-841f-773cb9943bba"
+      Hint: LegacyDocument_DownloadLink
+      Value: |
+        <link linktype="media" target="" id="{881C313E-4066-488E-981E-30BF6BF23B4D}" />
+    - ID: "eeb8db99-7da8-4973-adf7-bcf7b29eba79"
+      Hint: LegacyDocument_DocumentName
+      Value: Factsheet I

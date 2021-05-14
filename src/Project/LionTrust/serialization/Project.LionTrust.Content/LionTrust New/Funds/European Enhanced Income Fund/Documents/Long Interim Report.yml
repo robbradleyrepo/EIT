@@ -1,0 +1,33 @@
+﻿---
+ID: "473b5b07-8599-4ca7-8d8b-13b5a67b816b"
+Parent: "5bbb4287-b5d6-434d-8fca-90e7e7341ebe"
+Template: "66e09d5b-4f8e-4313-9df3-fa7e53fbe83a"
+Path: /sitecore/content/LionTrust New/Funds/European Enhanced Income Fund/Documents/Long Interim Report
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 1100
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20171106T124840
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "a4a7f9dd-a218-4f33-b72a-7dc2251ccd43"
+      Hint: LegacyDocument_DocumentTypes
+      Type: Multilist
+      Value: "{07F40446-C241-46ED-B767-23567AE864FE}"
+    - ID: "c794210e-6107-4d69-841f-773cb9943bba"
+      Hint: LegacyDocument_DownloadLink
+      Value: |
+        <link target="" linktype="media" id="{557E1161-ECCB-4E06-AFD4-43CAF93D96CE}" url="/LionTrust/files/fund-literature/report-accounts/long-interim/european-enhanced-income-long-interim-report" />
+    - ID: "eeb8db99-7da8-4973-adf7-bcf7b29eba79"
+      Hint: LegacyDocument_DocumentName
+      Value: Long Interim Report

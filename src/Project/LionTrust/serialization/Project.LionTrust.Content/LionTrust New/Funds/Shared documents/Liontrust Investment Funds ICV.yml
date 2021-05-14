@@ -1,0 +1,39 @@
+﻿---
+ID: "38460b7f-c49a-4dc8-8471-2e484e181942"
+Parent: "c8e97f82-4fb2-46d3-b162-8fa1fb9fe0ff"
+Template: "66e09d5b-4f8e-4313-9df3-fa7e53fbe83a"
+Path: /sitecore/content/LionTrust New/Funds/Shared documents/Liontrust Investment Funds ICVC Prospectus
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 350
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170402T160647Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "8de3f234-7880-4703-8534-02bb8320c09c"
+      Hint: LegacyDocument_RelatedFunds
+      Type: Multilist
+      Value: |
+        {DD0F5697-85A7-4DCD-B62C-649585C8423B}
+        {FBB00F95-750B-4D7A-8FB5-C032F454B376}
+    - ID: "a4a7f9dd-a218-4f33-b72a-7dc2251ccd43"
+      Hint: LegacyDocument_DocumentTypes
+      Type: Multilist
+      Value: "{93BD5BD5-AF14-4FD5-96EC-59F7ABB6C172}"
+    - ID: "c794210e-6107-4d69-841f-773cb9943bba"
+      Hint: LegacyDocument_DownloadLink
+      Value: |
+        <link target="" linktype="media" id="{B369F03D-FE3C-46E4-B213-4C08F428037C}" url="/LionTrust/files/fund-literature/prospectus-fund-legal/liontrust-investment-funds-icvc-prospectus" />
+    - ID: "eeb8db99-7da8-4973-adf7-bcf7b29eba79"
+      Hint: LegacyDocument_DocumentName
+      Value: Liontrust Investment Funds ICVC Prospectus

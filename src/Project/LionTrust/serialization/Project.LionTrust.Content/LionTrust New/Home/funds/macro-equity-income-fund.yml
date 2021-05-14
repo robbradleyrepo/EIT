@@ -1,0 +1,174 @@
+﻿---
+ID: "39a5cde0-86da-4298-a7d0-63cd0aa64514"
+Parent: "47bd668e-4c0f-4d8a-9e71-b6c8c156b32f"
+Template: "1f294bcb-1f17-4000-94bd-501a96bec59a"
+Path: "/sitecore/content/LionTrust New/Home/funds/macro-equity-income-fund"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 3000
+- ID: "cce4e679-7e94-450d-8cc1-691bdf17ca78"
+  Hint: LegacyFundPageData_FundReference
+  Value: "{35A8464C-A192-460E-A3D7-633CD35AA012}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}"
+          p:before="*"
+          s:ph="/content/fund-page-content" />
+        <r
+          uid="{21B27026-D40B-43A7-AB57-D21548E95B3D}"
+          p:after="r[@uid='{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}']"
+          s:ds="{2F00C973-7AAF-44A3-915C-889115C1AC3E}"
+          s:id="{8A50B96F-BF28-43E6-87D5-1E3408F8171A}"
+          s:par=""
+          s:ph="/content/fund-page-content" />
+        <r
+          uid="{C2A2824A-2A58-4FBF-9F3D-C96709FD0A38}"
+          p:after="r[@uid='{21B27026-D40B-43A7-AB57-D21548E95B3D}']"
+          s:ds="{5481096E-2198-41AC-8A0A-C7DBEC20F97F}"
+          s:id="{DFF81E23-0704-4716-89DC-50C5E45F4DAE}"
+          s:par=""
+          s:ph="/content/fund-page-content/left-content_{4410704b-156e-453c-a48d-3b6ced27c9d3}" />
+        <r
+          uid="{CEC4666D-950E-4BB2-ADD3-1A523FA68F4F}">
+          <p:d />
+        </r>
+        <r
+          uid="{E68675B2-194E-4FCD-97FB-AFCFFA66A966}">
+          <p:d />
+        </r>
+        <r
+          uid="{953255D6-C940-4371-8606-24ADB5DF7ED7}"
+          p:after="r[@uid='{F3F5DDD8-BCED-4C83-A49B-42E641DFDC1F}']"
+          s:ds="{FC5512EF-4B7F-410C-98F5-95F465E3C1EA}"
+          s:id="{777B1AE2-307E-4C65-9987-9BD39085419B}"
+          s:par=""
+          s:ph="/content/fund-page-content" />
+        <r
+          uid="{8FCAC765-95A2-4018-BEB9-8C040A1513F7}"
+          p:after="r[@uid='{953255D6-C940-4371-8606-24ADB5DF7ED7}']"
+          s:id="{302ADD39-9FA0-4282-8D6B-AD95AE6F0C4A}"
+          s:ph="content" />
+        <r
+          uid="{C9E34A38-1BD5-4D06-BD0E-636273C293A7}"
+          p:after="r[@uid='{8FCAC765-95A2-4018-BEB9-8C040A1513F7}']"
+          s:id="{D506C47C-07BC-4D09-B36A-17E5F10F5636}"
+          s:ph="/content/fund-page-content" />
+        <r
+          uid="{D2F551B2-8E4E-42AB-A016-9E554910D949}">
+          <p:d />
+        </r>
+        <r
+          uid="{7D2A9FAB-D42F-4FA0-89BF-BAEAF0A42DA0}">
+          <p:d />
+        </r>
+        <r
+          uid="{1A449E6C-3CAF-4F50-ABE3-70B3E38D974C}">
+          <p:d />
+        </r>
+        <r
+          uid="{E461C5F3-56B7-4810-8CE2-832CE9B4994D}">
+          <p:d />
+        </r>
+        <r
+          uid="{E8B045E9-35F5-4BA8-B0B2-0A02D1BD298B}">
+          <p:d />
+        </r>
+        <r
+          uid="{DBED87B3-2FAB-449A-947F-32D769FC232E}">
+          <p:d />
+        </r>
+        <r
+          uid="{E4F47DE2-B820-41EE-A626-F4843BF0BDD0}"
+          p:after="r[@uid='{ED580DB1-87A7-45EF-A0FD-9C6089D5FD53}']"
+          s:ds="{1C8BD856-5470-4B8A-9085-07F0F5699359}"
+          s:id="{777B1AE2-307E-4C65-9987-9BD39085419B}"
+          s:par=""
+          s:ph="/content/fund-page-content" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{0F53F30B-4612-4406-8C41-4E551B5B10A2}"
+              p:before="*"
+              s:ds="{6AE91427-FE80-44D4-96DF-3D426A88970C}"
+              s:id="{DFF81E23-0704-4716-89DC-50C5E45F4DAE}"
+              s:par="DatasourceRule"
+              s:ph="/content/fund-page-content/right-content_{c9e34a38-1bd5-4d06-bd0e-636273c293a7}" />
+            <r
+              uid="{50CB936B-3E4C-4FCB-A91C-D9C0A4C45A78}"
+              p:after="r[@uid='{0F53F30B-4612-4406-8C41-4E551B5B10A2}']"
+              s:ds="{477E807E-BE5D-473A-9F0E-6BC2727F2042}"
+              s:id="{DFF81E23-0704-4716-89DC-50C5E45F4DAE}"
+              s:par="DatasourceRule"
+              s:ph="/content/fund-page-content/left-content_{c9e34a38-1bd5-4d06-bd0e-636273c293a7}" />
+            <r
+              uid="{21B27026-D40B-43A7-AB57-D21548E95B3D}"
+              s:ds="{C5250B5F-3E76-45E6-9681-3CADF0C615FB}" />
+            <r
+              uid="{953255D6-C940-4371-8606-24ADB5DF7ED7}">
+              <p:d />
+            </r>
+          </d>
+        </r>
+    - ID: "187226f4-9c3e-4d5c-b21f-2c917136f20c"
+      Hint: LegacyPresentationBase_MetaRobots
+      Value: 
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Liontrust Macro Equity Income Fund | What we offer | Liontrust Asset Management PLC
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140922T110753Z
+    - ID: "42994f09-31f9-4570-9c0b-91bd4a698540"
+      Hint: LegacyPresentationBase_PageTags
+      Type: Multilist with Search
+      Value: 
+    - ID: "4ba2c766-77ad-4417-81b2-090d584838c1"
+      Hint: LegacyHeroImagePageData_PageHeaderText
+      Value: Robin Geffen
+    - ID: "4f86ee15-d758-4f6a-826d-bcd23171073c"
+      Hint: LegacyPresentationBase_MetaKeywords
+      Value: liontrust, funds, fund, investing, investment, unit trust, macro, equity, income, jamie clark, stephen bailey
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{AEA66CB3-FAA5-4F80-A3CE-A418B1EC5468}"
+    - ID: "82426cee-2b8e-411e-9eeb-d54ec3d0ced3"
+      Hint: LegacyPresentationBase_Code
+      Value: 
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: 
+    - ID: "9dc8ae8c-c3e1-4536-aa2a-d0bff7398795"
+      Hint: LegacyPresentationBase_MetaDescription
+      Value: "The Fund has been managed since launch in October 2003 by Stephen Bailey, and he was joined by Jamie Clark in 2007. The aim of the Fund is to deliver a high level of income with the potential for capital growth over the long term (5 years or more) by investing at least 80% of the portfolio in companies incorporated, domiciled, listed or which conduct significant business in the United Kingdom (UK). The Fund seeks to deliver a net yield of at least 110% of the net yield of the FTSE All-Share Index each year. The managers believe the identification and interpretation of major economic, political and social developments offer scope to add long-term investment value. Their conviction is shown by the fact they may have 0% weightings in major sectors."
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Macro Equity Income Fund
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{C6428CA9-AB6A-4EE7-AF0B-B13CB7DD456C}" />
+    - ID: "f7265233-a676-4848-baa9-7a4629e22a75"
+      Hint: LegacyHeroImagePageData_ImagePosition
+      Value: "{7964B600-D6D9-461F-8813-6C53A12268B1}"

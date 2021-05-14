@@ -1,0 +1,24 @@
+﻿---
+ID: "8ee85111-efb7-4926-a00f-d076701a3f1b"
+Parent: "d6b2f0a4-9b1a-4998-a0cb-ad9fb93c9a19"
+Template: "cf87f1eb-f59d-4e08-bcd6-23e0cdd7362f"
+Path: /sitecore/content/LionTrust New/Home/ArticleListingPage/ArticlePage/_Local/Article Scroller
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210513T130636Z
+    - ID: "725dc6c8-8878-4947-86b3-163e51c5911d"
+      Hint: ArticleScroller_SelectedArticles
+      Type: Treelist
+      Value: |
+        {E439EF9B-4C30-49FD-A7C3-BA590EC82CA0}
+        {15F9CDE8-C3D7-41D5-9080-54CAE0C6E1C0}
+        {167787CA-54B9-45D6-941C-CA80FD969398}
+    - ID: "93854c18-0919-445e-bc88-2d353c8491e8"
+      Hint: ArticleScroller_Heading
+      Value: Article Scroller

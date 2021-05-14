@@ -1,0 +1,210 @@
+﻿---
+ID: "09b1cf0b-3438-4729-abc8-c59d50aa8b29"
+Parent: "47bd668e-4c0f-4d8a-9e71-b6c8c156b32f"
+Template: "1f294bcb-1f17-4000-94bd-501a96bec59a"
+Path: "/sitecore/content/LionTrust New/Home/funds/sustainable-future-global-growth-fund"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 4000
+- ID: "cce4e679-7e94-450d-8cc1-691bdf17ca78"
+  Hint: LegacyFundPageData_FundReference
+  Value: "{C2095FE1-D6B7-4592-AAE7-C46994E21D3B}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{FBF64A1E-F18A-4291-8C44-733F732316B2}"
+          p:before="*"
+          s:ds="{F6C38EEB-C14D-4968-AC95-D8181E974316}"
+          s:id="{8A50B96F-BF28-43E6-87D5-1E3408F8171A}"
+          s:par="DatasourceRule"
+          s:ph="/content/fund-page-content/right-content_{0cc29e02-7fbe-4dbd-b9b3-dbba62eafec7}" />
+        <r
+          uid="{BFFB72CD-5BD1-48AE-8805-3BCFD817A071}"
+          p:after="r[@uid='{FBF64A1E-F18A-4291-8C44-733F732316B2}']"
+          s:ds="{F5067A07-0EC4-45E0-8D1E-67DE27DF6791}"
+          s:id="{8A50B96F-BF28-43E6-87D5-1E3408F8171A}"
+          s:par="DatasourceRule"
+          s:ph="/content/fund-page-content/left-content_{0cc29e02-7fbe-4dbd-b9b3-dbba62eafec7}" />
+        <r
+          uid="{CEC4666D-950E-4BB2-ADD3-1A523FA68F4F}">
+          <p:d />
+        </r>
+        <r
+          uid="{00318A60-8F5D-475B-BFCE-3CA0F1DFAE26}"
+          p:after="r[@uid='{F3F5DDD8-BCED-4C83-A49B-42E641DFDC1F}']"
+          s:id="{302ADD39-9FA0-4282-8D6B-AD95AE6F0C4A}"
+          s:ph="content" />
+        <r
+          uid="{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}"
+          s:ph="/content/fund-page-content" />
+        <r
+          uid="{E68675B2-194E-4FCD-97FB-AFCFFA66A966}">
+          <p:d />
+        </r>
+        <r
+          uid="{D2F551B2-8E4E-42AB-A016-9E554910D949}">
+          <p:d />
+        </r>
+        <r
+          uid="{7D2A9FAB-D42F-4FA0-89BF-BAEAF0A42DA0}">
+          <p:d />
+        </r>
+        <r
+          uid="{712B3E62-D40B-40DF-9FE6-564395D58D91}"
+          p:after="r[@uid='{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}']"
+          s:ds="{16A91A54-F932-4DFB-9E52-38727C81C5BE}"
+          s:id="{8A50B96F-BF28-43E6-87D5-1E3408F8171A}"
+          s:par="DatasourceRule"
+          s:ph="/content/fund-page-content" />
+        <r
+          uid="{EFBC74CE-DECB-4317-8ACA-1802EBE51AA3}"
+          p:after="r[@uid='{712B3E62-D40B-40DF-9FE6-564395D58D91}']"
+          s:ds="{32FBE477-1C82-4083-8285-06BC8405F9B5}"
+          s:id="{777B1AE2-307E-4C65-9987-9BD39085419B}"
+          s:par=""
+          s:ph="/content/fund-page-content" />
+        <r
+          uid="{0CC29E02-7FBE-4DBD-B9B3-DBBA62EAFEC7}"
+          p:after="r[@uid='{EFBC74CE-DECB-4317-8ACA-1802EBE51AA3}']"
+          s:id="{D506C47C-07BC-4D09-B36A-17E5F10F5636}"
+          s:ph="/content/fund-page-content" />
+        <r
+          uid="{1A449E6C-3CAF-4F50-ABE3-70B3E38D974C}">
+          <p:d />
+        </r>
+        <r
+          uid="{E461C5F3-56B7-4810-8CE2-832CE9B4994D}">
+          <p:d />
+        </r>
+        <r
+          uid="{E8B045E9-35F5-4BA8-B0B2-0A02D1BD298B}">
+          <p:d />
+        </r>
+        <r
+          uid="{DBED87B3-2FAB-449A-947F-32D769FC232E}">
+          <p:d />
+        </r>
+        <r
+          uid="{2052B8BE-4888-48BE-A9C0-A9A038840C78}"
+          p:after="r[@uid='{ED580DB1-87A7-45EF-A0FD-9C6089D5FD53}']"
+          s:ds="{1C8BD856-5470-4B8A-9085-07F0F5699359}"
+          s:id="{777B1AE2-307E-4C65-9987-9BD39085419B}"
+          s:par=""
+          s:ph="/content/fund-page-content" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{FBF64A1E-F18A-4291-8C44-733F732316B2}">
+              <p:d />
+            </r>
+            <r
+              uid="{BFFB72CD-5BD1-48AE-8805-3BCFD817A071}">
+              <p:d />
+            </r>
+            <r
+              uid="{5294570D-BA5D-46DE-8DD0-39C06CA78CD5}"
+              p:before="*"
+              s:ds="{EEF57115-E50E-4AAD-B61D-454302D785F9}"
+              s:id="{DFF81E23-0704-4716-89DC-50C5E45F4DAE}"
+              s:par=""
+              s:ph="/content/fund-page-content/left-content_{0cc29e02-7fbe-4dbd-b9b3-dbba62eafec7}" />
+            <r
+              uid="{F95FAE71-4D09-484D-9394-A16710776435}"
+              p:after="r[@uid='{5294570D-BA5D-46DE-8DD0-39C06CA78CD5}']"
+              s:ds="{F5067A07-0EC4-45E0-8D1E-67DE27DF6791}"
+              s:id="{8A50B96F-BF28-43E6-87D5-1E3408F8171A}"
+              s:par="DatasourceRule"
+              s:ph="/content/fund-page-content/left-content_{0cc29e02-7fbe-4dbd-b9b3-dbba62eafec7}" />
+            <r
+              uid="{C657EF3F-3488-43DE-9A5E-DAAA41E5A4DA}"
+              p:after="r[@uid='{F95FAE71-4D09-484D-9394-A16710776435}']"
+              s:ds="{A6B407C0-D72D-4679-BF61-4A829B6BD71F}"
+              s:id="{DFF81E23-0704-4716-89DC-50C5E45F4DAE}"
+              s:par=""
+              s:ph="/content/fund-page-content/right-content_{0cc29e02-7fbe-4dbd-b9b3-dbba62eafec7}" />
+            <r
+              uid="{00D7B2C6-AF9A-40EE-957F-88DACFFD69C8}"
+              p:after="r[@uid='{C657EF3F-3488-43DE-9A5E-DAAA41E5A4DA}']"
+              s:ds="{F6C38EEB-C14D-4968-AC95-D8181E974316}"
+              s:id="{8A50B96F-BF28-43E6-87D5-1E3408F8171A}"
+              s:par="DatasourceRule"
+              s:ph="/content/fund-page-content/right-content_{0cc29e02-7fbe-4dbd-b9b3-dbba62eafec7}" />
+            <r
+              uid="{7913C962-974E-4D74-B9E5-B00CC6EC7F29}"
+              p:after="r[@uid='{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}']"
+              s:ds="{2B734A2D-B83E-453D-82B6-ED6E698A7C18}"
+              s:id="{FA490876-F4C4-4D7B-8F4B-E03AD6EB898A}"
+              s:ph="/content/fund-page-content" />
+            <r
+              uid="{712B3E62-D40B-40DF-9FE6-564395D58D91}"
+              s:par="" />
+            <r
+              uid="{CED3CC09-A303-4627-9214-A36184D43E07}"
+              p:after="r[@uid='{EFBC74CE-DECB-4317-8ACA-1802EBE51AA3}']"
+              s:ds="{99144175-6D45-4D16-907B-35F5875B440C}"
+              s:id="{FA490876-F4C4-4D7B-8F4B-E03AD6EB898A}"
+              s:ph="/content/fund-page-content" />
+            <r
+              uid="{F1A65CCC-477D-4482-ABDB-FBC1DE7022E8}">
+              <p:d />
+            </r>
+            <r
+              uid="{1F207579-D7F0-4C3A-AB68-1FE4E2C85BFF}"
+              p:after="r[@uid='{0CC29E02-7FBE-4DBD-B9B3-DBBA62EAFEC7}']"
+              s:id="{4BB8AB0A-674E-4424-8CAD-546B10F0B535}"
+              s:ph="/content/fund-page-content" />
+          </d>
+        </r>
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Liontrust Sustainable Future Global Growth Fund | What we offer | Liontrust Asset Management PLC
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170403T065124Z
+    - ID: "4ba2c766-77ad-4417-81b2-090d584838c1"
+      Hint: LegacyHeroImagePageData_PageHeaderText
+      Value: <p>Simon Clements,&nbsp;Peter Michaelis &amp; Chris Foster</p>
+    - ID: "4f86ee15-d758-4f6a-826d-bcd23171073c"
+      Hint: LegacyPresentationBase_MetaKeywords
+      Value: liontrust, funds, fund, investing, investment, sustainable, Peter Michaelis, Simon Clements, Sustainable Future Global Growth Fund
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{AEA66CB3-FAA5-4F80-A3CE-A418B1EC5468}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: 
+    - ID: "9dc8ae8c-c3e1-4536-aa2a-d0bff7398795"
+      Hint: LegacyPresentationBase_MetaDescription
+      Value: The Fund aims to deliver capital growth over the long term (5 years or more) using the Sustainable Future investment process to invest in companies globally. This process uses a thematic approach to identify the key structural growth trends that will shape the global economy of the future and the fund managers then seek to invest in well run companies whose products and operations capitalise on these transformative changes.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Sustainable Future Global Growth Fund
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{1CFEA406-E93A-4B6B-AE9D-76A586364072}" />
