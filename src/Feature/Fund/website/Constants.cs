@@ -128,6 +128,12 @@
             public const string LeftPaddingSize_FieldId = "{0B7847A5-F42B-42E0-B4D0-3CB4350CEE45}";
             public const string RightColumnSize_FieldId = "{1A02D0A6-1E81-4119-AB01-A0E90D5EB8A8}";
             public const string RightPaddingSize_FieldId = "{D3A375F2-CB82-4F2B-AF60-550FC662A00D}";
+        }        
+        
+        public static class FundDisclaimer
+        {
+            public const string SmallSize_FieldId = "{06013D0B-DB4E-474E-86E7-BB771D5E7577}";
+            public const string TextColor_FieldId = "{98D89D89-CA0F-41FF-A3BF-E0F22F240335}";
         }
     }
 }
