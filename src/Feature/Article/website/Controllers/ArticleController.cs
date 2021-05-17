@@ -23,12 +23,17 @@
         {
             var articleScrollerViewModel = new ArticleScrollerViewModel();
             articleScrollerViewModel.ArticleScroller = _mvcContext.GetDataSourceItem<IArticleScroller>();
-            if (articleScrollerViewModel.ArticleScroller.SelectedArticles != null
+
+            if(!Sitecore.Context.PageMode.IsExperienceEditor && articleScrollerViewModel.ArticleScroller == null)
+            {
+                return null;
+            }
+            else if (articleScrollerViewModel.ArticleScroller?.SelectedArticles != null
                 && articleScrollerViewModel.ArticleScroller.SelectedArticles.Any())
             {
                 articleScrollerViewModel.ArticleList = articleScrollerViewModel.ArticleScroller.SelectedArticles;
             }
-            else if (articleScrollerViewModel.ArticleScroller.SelectedTags != null
+            else if (articleScrollerViewModel.ArticleScroller?.SelectedTags != null
                      && articleScrollerViewModel.ArticleScroller.SelectedTags.Any())
             {
                 articleScrollerViewModel.ArticleList = 

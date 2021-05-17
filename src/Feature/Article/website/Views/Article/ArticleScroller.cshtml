@@ -1,4 +1,5 @@
-﻿@using System.Collections.Specialized;
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using System.Collections.Specialized;
 @model LionTrust.Feature.Article.Models.ArticleScrollerViewModel
 <section class="article">
     <div class="article__box">
@@ -86,7 +87,6 @@
                     }
                 </div>
             </div>
-
             @using (Html.Glass().BeginRenderLink(Model.ArticleScroller, m => m.CTA, new NameValueCollection { { "class", "btn btn-secondary-nav d-lg-none" } }))
             {
                 if (Model.ArticleScroller.CTA != null && !string.IsNullOrEmpty(Model.ArticleScroller.CTA.Text))
