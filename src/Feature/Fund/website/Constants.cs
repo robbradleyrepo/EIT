@@ -9,6 +9,14 @@
             public const string CtaFieldId = "{EEED7C2E-DC3C-4E29-9855-03BD4F9139AD}";
         }
     
+        public static class FundCard
+        {
+            public const string HeadingFieldId = "{6387CA9A-7A5A-4D33-B706-201681C0B74C}";
+            public const string ImageFieldId = "{EB75DFEF-C624-4571-B92B-8F37C36FCEE6}";
+            public const string DescriptionFieldId = "{0905F092-B5B5-4971-B87E-57F4810BD729}";
+            public const string FundFieldId = "{034CD348-2ADC-47E9-B263-2C839808DAE1}";
+        }
+
         public static class FundHeader
         {
             public const string FundFieldId = "{90BCAB34-B9E0-466E-97A4-73CEC67335F7}";
@@ -27,6 +35,7 @@
             public const string DescriptionFieldId = "{451EFCD2-40A3-4153-8B02-BEC9572A9EC1}";
             public const string SubtitleFieldId = "{EB9E31A0-ED28-48FC-8CBF-820264B17306}";
             public const string FundsFieldId = "{59BCA54C-FCD3-44C9-813A-6A6A244836ED}";
+
             public const string PrimaryCaFieldId = "{63C464EC-3657-4B91-ADF5-28AC9036774F}";
             public const string PrimaryCtaGoalFieldId = "{7DB368D2-CCCF-4423-80FC-2065EA9FA547}";
             public const string SecondaryCtaFieldId = "{E8A3C14F-9976-4734-9FE8-5BB53E1DC9B3}";

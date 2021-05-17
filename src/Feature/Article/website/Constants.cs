@@ -26,6 +26,46 @@
             public const string BackgroundImageFieldId = "{30451F6B-437D-4473-AE3E-79FE7A1AF36A}";
         }
 
+        public static class Topic
+        {
+            public const string TopicTitleFieldId = "{48A28820-BAFD-4DDB-A968-75B57EE0925A}";
+        }
+
+        public static class Article
+        {
+            public const string TopicsFieldId = "{4F9B280F-A22D-4E70-886A-45327E8AA507}";
+            public const string MultipleAuthorsLabel_FieldId = "{B6833539-8781-4788-92F4-D173F0727FEB}";
+            public const string MultipleAuthorsIcon_FieldId = "{7075D230-7438-4F94-A4CC-1760107174CA}";
+            public const string Image_FieldId = "{5BD6E9E9-2240-4473-8094-075E811B8438}";
+            public const string Date_FieldId = "{79CC76CC-7503-449B-9809-9808CF6C2D26}";
+        }
+
+        public static class ArticlePodcastPromo
+        {
+            public const string TemplateId = "{5FA772FC-EA92-47C5-B62C-378240F761F7}";
+            public const string Heading_FieldId = "{D9709962-08AE-4B8B-8A17-8AF53DA5F9CC}";
+            public const string Title_FieldId = "{B43132DB-B2C9-400F-B79C-2DEE790E100B}";
+            public const string Body_FieldId = "{831456DF-6D24-4B5F-BE64-A95B27CB3039}";
+            public const string BackgroundImage_FieldId = "{92FE2900-B171-4FF8-8E36-050BB706AE4B}";
+            public const string PodcastsLabel_FieldId = "{3E49D1A6-BC8A-4924-A77D-AD0966D104EA}";
+            public const string MobileBackgroundImageFieldId = "{0B768256-FD72-4DAF-9EF9-ED075D8AE371}";
+        }
+
+        public static class ArticlePodcastLink
+        {
+            public const string Link_FieldId = "{6145B771-64E1-4595-8331-27AF009B7E39}";
+            public const string Icon_FieldId = "{BB868FC2-144B-4532-818C-BC3FD9338198}";
+            public const string LinkGoal_FieldId = "{A4DF08CC-C027-4155-B6B0-0491D5F0F809}";
+        }
+
+        public static class ArticleScroller
+        {
+            public const string Heading_FieldId = "{93854C18-0919-445E-BC88-2D353C8491E8}";
+            public const string CTA_FieldId = "{BAD318C3-B9B5-457F-A42D-F51516FC3EC2}";
+            public const string SelectedArticles_FieldId = "{725DC6C8-8878-4947-86B3-163E51C5911D}";
+            public const string SelectedTags_FieldId = "{23CB5FCD-BCFA-4A06-AE30-8991CC839A4C}";
+        }        
+
         public static class RelatedArticles
         {
             public const string HeadingFieldId = "{9B7BD172-7140-40A2-B464-782C99CF7E73}";

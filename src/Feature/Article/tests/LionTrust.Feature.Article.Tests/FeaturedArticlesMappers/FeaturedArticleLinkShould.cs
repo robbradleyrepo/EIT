@@ -5,7 +5,6 @@
     using Moq;
     using NUnit.Framework;
     using System.Collections.Generic;
-    using LionTrust.Foundation.Article.Models;
 
     [TestFixture]
     public class FeaturedArticleLinkShould

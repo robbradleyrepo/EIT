@@ -1,6 +1,6 @@
 ﻿@using LionTrust.Foundation.ORM.Extensions
 @model LionTrust.Feature.Text.Models.ITestimonial
-<div class="quote" style="background-image: url(@Model.BackgroundImage.ImageSrc("images/bg/newsletter-bg.svg"));">
+<div class="quote" style="background-image: url(@Model.BackgroundImage.GetSafeSitecoreImageUrl("images/bg/newsletter-bg.svg"));">
     <div class="container">
         <div class="row">
             <div class="quote__headbox">

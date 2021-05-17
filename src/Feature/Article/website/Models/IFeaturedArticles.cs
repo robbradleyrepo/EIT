@@ -1,7 +1,6 @@
 ﻿namespace LionTrust.Feature.Article.Models
 {
     using Glass.Mapper.Sc.Configuration.Attributes;
-    using LionTrust.Foundation.Article.Models;
     using LionTrust.Foundation.ORM.Models;
     using System.Collections.Generic;
 

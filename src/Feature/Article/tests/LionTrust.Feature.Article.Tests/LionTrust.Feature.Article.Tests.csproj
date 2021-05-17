@@ -48,10 +48,6 @@
     <Compile Include="FeaturedArticlesMappers\UrlLinkShould.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Foundation\Article\website\LionTrust.Foundation.Article.csproj">
-      <Project>{CC0386C4-5DC0-480B-85C4-209E87B7FB96}</Project>
-      <Name>LionTrust.Foundation.Article</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\..\Foundation\Content\website\LionTrust.Foundation.Content.csproj">
       <Project>{F8F55034-FA55-4D27-B115-0AB4EEB9A0A8}</Project>
       <Name>LionTrust.Foundation.Content</Name>
