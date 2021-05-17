@@ -82,6 +82,10 @@
     <Content Include="Views\Article\PromoCards\FundManagerViewPromo.cshtml" />
     <Content Include="Views\Article\ArticleScroller.cshtml" />
     <Content Include="Views\Article\RelatedArticles.cshtml" />
+    <Content Include="Views\Article\MainQuote.cshtml" />
+    <Content Include="Views\Article\IntroQuote.cshtml" />
+    <Content Include="Views\Article\ArticleContent.cshtml" />
+    <Content Include="Views\Article\Article.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -96,6 +100,8 @@
     <Compile Include="Models\IArticleFilter.cs" />
     <Compile Include="Models\IArticleGlassBase.cs" />
     <Compile Include="Models\IArticleHeader.cs" />
+    <Compile Include="Models\IArticleRichText.cs" />
+    <Compile Include="Models\IArticleText.cs" />
     <Compile Include="Models\IRelatedArticles.cs" />
     <Compile Include="Models\IArticlePromo.cs" />
     <Compile Include="Models\IArticleScroller.cs" />
