@@ -1,0 +1,168 @@
+﻿---
+ID: "c0aa7a20-f242-4022-b597-2d4bca9a1975"
+Parent: "47bd668e-4c0f-4d8a-9e71-b6c8c156b32f"
+Template: "1f294bcb-1f17-4000-94bd-501a96bec59a"
+Path: "/sitecore/content/LionTrustNew/Home/funds/sustainable-future-uk-growth-fund"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 4300
+- ID: "cce4e679-7e94-450d-8cc1-691bdf17ca78"
+  Hint: LegacyFundPageData_FundReference
+  Value: "{6CB4E6E0-8764-4A8A-9155-153E5DB4738A}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{EE7F83C9-5DBD-4F61-AF17-2F3FC9E45461}"
+          p:before="*"
+          s:ds="{BAB2E08C-53F7-4E2F-982F-8894BB5E13B3}"
+          s:id="{8A50B96F-BF28-43E6-87D5-1E3408F8171A}"
+          s:par="DatasourceRule"
+          s:ph="/content/fund-page-content/right-content_{c49295b2-46b1-4048-973d-c9e94f6b4990}" />
+        <r
+          uid="{89EC846E-626B-407F-8281-FAC63B402E7A}"
+          p:after="r[@uid='{EE7F83C9-5DBD-4F61-AF17-2F3FC9E45461}']"
+          s:ds="{27A81380-F7A6-41A7-A882-3CBC5779A4E7}"
+          s:id="{8A50B96F-BF28-43E6-87D5-1E3408F8171A}"
+          s:par="DatasourceRule"
+          s:ph="/content/fund-page-content/left-content_{c49295b2-46b1-4048-973d-c9e94f6b4990}" />
+        <r
+          uid="{CEC4666D-950E-4BB2-ADD3-1A523FA68F4F}">
+          <p:d />
+        </r>
+        <r
+          uid="{40CA4CA5-B6F1-4B4B-AE61-F40AB8572C3D}"
+          p:after="r[@uid='{F3F5DDD8-BCED-4C83-A49B-42E641DFDC1F}']"
+          s:id="{302ADD39-9FA0-4282-8D6B-AD95AE6F0C4A}"
+          s:ph="content" />
+        <r
+          uid="{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}"
+          s:ph="/content/fund-page-content" />
+        <r
+          uid="{E68675B2-194E-4FCD-97FB-AFCFFA66A966}">
+          <p:d />
+        </r>
+        <r
+          uid="{D2F551B2-8E4E-42AB-A016-9E554910D949}">
+          <p:d />
+        </r>
+        <r
+          uid="{7D2A9FAB-D42F-4FA0-89BF-BAEAF0A42DA0}">
+          <p:d />
+        </r>
+        <r
+          uid="{3BF66F47-B4DC-4427-868D-F233231C79BB}"
+          p:after="r[@uid='{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}']"
+          s:ds="{157E5438-328B-4F7B-AFCD-978AB92C194C}"
+          s:id="{8A50B96F-BF28-43E6-87D5-1E3408F8171A}"
+          s:par="DatasourceRule"
+          s:ph="/content/fund-page-content" />
+        <r
+          uid="{8DC0131A-8148-471F-8116-0CA3354EDF66}"
+          p:after="r[@uid='{3BF66F47-B4DC-4427-868D-F233231C79BB}']"
+          s:ds="{32FBE477-1C82-4083-8285-06BC8405F9B5}"
+          s:id="{777B1AE2-307E-4C65-9987-9BD39085419B}"
+          s:par=""
+          s:ph="/content/fund-page-content" />
+        <r
+          uid="{C49295B2-46B1-4048-973D-C9E94F6B4990}"
+          p:after="r[@uid='{8DC0131A-8148-471F-8116-0CA3354EDF66}']"
+          s:id="{D506C47C-07BC-4D09-B36A-17E5F10F5636}"
+          s:ph="/content/fund-page-content" />
+        <r
+          uid="{1A449E6C-3CAF-4F50-ABE3-70B3E38D974C}">
+          <p:d />
+        </r>
+        <r
+          uid="{E461C5F3-56B7-4810-8CE2-832CE9B4994D}">
+          <p:d />
+        </r>
+        <r
+          uid="{E8B045E9-35F5-4BA8-B0B2-0A02D1BD298B}">
+          <p:d />
+        </r>
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{4078A781-D0B4-4995-A858-3356A47F36F0}"
+              p:before="*"
+              s:ds="{A6B407C0-D72D-4679-BF61-4A829B6BD71F}"
+              s:id="{DFF81E23-0704-4716-89DC-50C5E45F4DAE}"
+              s:par=""
+              s:ph="/content/fund-page-content/right-content_{c49295b2-46b1-4048-973d-c9e94f6b4990}" />
+            <r
+              uid="{DBEBD693-5656-4D6F-9600-D945BB0C0AE4}"
+              p:after="r[@uid='{4078A781-D0B4-4995-A858-3356A47F36F0}']"
+              s:ds="{EEF57115-E50E-4AAD-B61D-454302D785F9}"
+              s:id="{DFF81E23-0704-4716-89DC-50C5E45F4DAE}"
+              s:par=""
+              s:ph="/content/fund-page-content/left-content_{c49295b2-46b1-4048-973d-c9e94f6b4990}" />
+            <r
+              uid="{EE7F83C9-5DBD-4F61-AF17-2F3FC9E45461}"
+              s:par="" />
+            <r
+              uid="{89EC846E-626B-407F-8281-FAC63B402E7A}"
+              s:par="" />
+            <r
+              uid="{3BF66F47-B4DC-4427-868D-F233231C79BB}"
+              s:par="" />
+            <r
+              uid="{AA48078A-0549-4041-A0B5-F5A870B8B414}"
+              p:after="r[@uid='{8DC0131A-8148-471F-8116-0CA3354EDF66}']"
+              s:ds="{A12E3525-FFB9-496D-9300-A6CF5385ED3D}"
+              s:id="{FA490876-F4C4-4D7B-8F4B-E03AD6EB898A}"
+              s:ph="/content/fund-page-content" />
+          </d>
+        </r>
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Liontrust Sustainable Future UK Growth Fund | What we offer | Liontrust Asset Management PLC
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170403T065847Z
+    - ID: "4ba2c766-77ad-4417-81b2-090d584838c1"
+      Hint: LegacyHeroImagePageData_PageHeaderText
+      Value: Peter Michaelis &amp; Martyn Jones
+    - ID: "4f86ee15-d758-4f6a-826d-bcd23171073c"
+      Hint: LegacyPresentationBase_MetaKeywords
+      Value: liontrust, funds, fund, investing, investment, sustainable, Martyn Jones, Peter Michaelis, Sustainable Future UK Growth Fund
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{AEA66CB3-FAA5-4F80-A3CE-A418B1EC5468}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: 
+    - ID: "9dc8ae8c-c3e1-4536-aa2a-d0bff7398795"
+      Hint: LegacyPresentationBase_MetaDescription
+      Value: The Fund aims to deliver capital growth over the long term (5 years or more) using the Sustainable Future investment process to invest in companies incorporated, domiciled or which conduct significant business in the United Kingdom (UK). This process uses a thematic approach to identify the key structural growth trends that will shape the global economy of the future and the fund managers then seek to invest in well run companies whose products and operations capitalise on these transformative changes.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Sustainable Future UK Growth Fund
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{1CFEA406-E93A-4B6B-AE9D-76A586364072}" />

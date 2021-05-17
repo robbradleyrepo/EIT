@@ -1,0 +1,33 @@
+﻿---
+ID: "3ea9ad47-b59a-43f0-bd9d-5bc55371e6d8"
+Parent: "1ed0b018-83aa-43ed-80f7-55682ea3acc7"
+Template: "66e09d5b-4f8e-4313-9df3-fa7e53fbe83a"
+Path: /sitecore/content/LionTrustNew/Funds/MA Strategic Bond Fund/Documents/KIID S Acc English
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20201102T141122Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "8de3f234-7880-4703-8534-02bb8320c09c"
+      Hint: LegacyDocument_RelatedFunds
+      Type: Multilist
+      Value: "{9AE4E660-5C14-44CF-949B-13C4700132AE}"
+    - ID: "a4a7f9dd-a218-4f33-b72a-7dc2251ccd43"
+      Hint: LegacyDocument_DocumentTypes
+      Type: Multilist
+      Value: "{47476B16-8600-4EBD-BC6F-AE6E84EC1AC2}"
+    - ID: "c794210e-6107-4d69-841f-773cb9943bba"
+      Hint: LegacyDocument_DownloadLink
+      Value: |
+        <link id="{5E8DF59F-9BBC-4C7C-90EC-A6CE80537B50}" url="/LionTrust/files/fund-literature/kiids/english/GB00BCZW5N28_Liontrust_Multi_Asset_Strategic_Bond_S_Acc_EN_KID" linktype="media" />
+    - ID: "eeb8db99-7da8-4973-adf7-bcf7b29eba79"
+      Hint: LegacyDocument_DocumentName
+      Value: KIID S Acc English

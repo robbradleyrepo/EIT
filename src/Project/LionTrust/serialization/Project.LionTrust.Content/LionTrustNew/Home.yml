@@ -1,0 +1,67 @@
+﻿---
+ID: "7502b69e-d154-4861-a033-bc0cb30a91b5"
+Parent: "e05195b8-e2b4-4b6b-8b31-a0ffa3b6e9bd"
+Template: "51d3a578-6e10-4ec6-bb5b-5c1307a6d661"
+Path: /sitecore/content/LionTrustNew/Home
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{D9A45391-A92F-4CD6-B5E3-FCDA8229FC95}"
+              p:before="*"
+              s:ds="{0D23B189-3077-4F17-99CE-62BF2C7A92E2}"
+              s:id="{6B2E2A4D-C3CB-4676-B804-B3459E4C9BD6}"
+              s:ph="main" />
+            <r
+              uid="{5C5BBA38-251D-4C86-A35D-D03C6854F206}"
+              p:after="r[@uid='{D9A45391-A92F-4CD6-B5E3-FCDA8229FC95}']"
+              s:ds="{5C01C169-1665-43F8-92EA-97D55E20B489}"
+              s:id="{D7EA03CD-11A9-4A09-9CC6-EE9E8566A692}"
+              s:ph="main" />
+          </d>
+        </r>
+    - ID: "0d831d08-90c7-4e31-b880-5a93146b3029"
+      Hint: NavigationRoot_ContactUsPage
+      Value: "{676D3A1D-479F-4399-80F7-0988E1894B5E}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210329T142931Z
+    - ID: "5d68cc82-ea43-4789-b892-0e49244f68d5"
+      Hint: NavigationRoot_MenuItems
+      Type: Treelist
+      Value: |
+        {477C9F45-9BBE-42D1-9FAE-13E65503206F}
+        {712F3D02-AAC9-4F76-A34C-A04DD9A6208D}
+        {018B19B4-725A-44C3-80F8-C3C9395B44A8}
+    - ID: "6eb0248b-457f-491c-8f9e-13aefe2cdec8"
+      Hint: NavigationRoot_SignUpNewsletter
+      Value: "{E4735412-929A-48A3-96C9-9DDBA002DF25}"
+    - ID: "6f6a49b5-c780-4ede-9eb4-9ea509204434"
+      Hint: NavigationRoot_MyPreferences
+      Value: "{D2857E0A-9589-4025-AEC5-6005FDD6BF4A}"
+    - ID: "95f0787b-70e6-4164-98c0-f9502163d720"
+      Hint: NavigationRoot_HeaderConfiguration
+      Value: "{8AF83FDB-F9D8-4B35-8C8E-C0F9465ED7B2}"
+    - ID: "b5c82f2d-eedd-4a5a-ab05-7afc42087cc2"
+      Hint: NavigationRoot_CloseLabel
+      Value: Close
+    - ID: "b810a405-73f4-48cc-af61-778c82531262"
+      Hint: NavigationRoot_MyLionTrust
+      Value: "{A2C6B1D1-DBE3-4032-81BE-1B66BBF2709E}"
+    - ID: "d20415aa-976a-425f-a853-dd0fd845d47c"
+      Hint: BrowserTitle
+      Value: Home
+    - ID: "e27b5db1-ce93-4cb1-ba69-f78556aacaf0"
+      Hint: NavigationRoot_FooterConfiguration
+      Value: "{8362F08B-C427-4B66-B703-EB98AC1D9183}"

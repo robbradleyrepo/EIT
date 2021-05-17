@@ -1,0 +1,31 @@
+﻿---
+ID: "5deade26-73dc-4f28-a836-92349a2bfbe2"
+Parent: "e698d9f6-6ede-458d-8ccf-086440cd8835"
+Template: "fff5f245-ffc0-4022-a998-9b07aa5e761f"
+Path: "/sitecore/content/LionTrustNew/Home/funds/asia-income-fund/_Local"
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: |
+    {BBFE6C9B-AFBA-423C-9DD4-EFF01EB556F5}
+    {FEF40064-216D-4888-93EF-A5E4A3D1E203}
+    {738DEFC4-9D34-42BB-B07D-FA1908F582E6}
+    {8DE51E60-DEED-4FEF-8B54-D31E6D80DE2F}
+    {76AD2FD1-E1CB-4EA5-86F2-9BAA9A902F74}
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: "-1000"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210507T122204Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

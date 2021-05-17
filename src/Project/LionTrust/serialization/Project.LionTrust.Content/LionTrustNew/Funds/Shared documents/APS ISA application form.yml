@@ -1,0 +1,36 @@
+﻿---
+ID: "6bef2b95-46a7-42e3-b4f5-40ebb5be35fd"
+Parent: "c8e97f82-4fb2-46d3-b162-8fa1fb9fe0ff"
+Template: "66e09d5b-4f8e-4313-9df3-fa7e53fbe83a"
+Path: /sitecore/content/LionTrustNew/Funds/Shared documents/APS ISA application form
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20161206T164037Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "8de3f234-7880-4703-8534-02bb8320c09c"
+      Hint: LegacyDocument_RelatedFunds
+      Type: Multilist
+      Value: 
+    - ID: "a4a7f9dd-a218-4f33-b72a-7dc2251ccd43"
+      Hint: LegacyDocument_DocumentTypes
+      Type: Multilist
+      Value: "{F55E7EB7-656F-499A-804D-23550BF1199F}"
+    - ID: "c794210e-6107-4d69-841f-773cb9943bba"
+      Hint: LegacyDocument_DownloadLink
+      Value: |
+        <link target="" linktype="media" id="{573E1B81-D4E2-416F-ACAC-305318BADC98}" url="/LionTrust/files/isa-jisa-forms/aps-isa-application-form" />
+    - ID: "e75ff909-3e2a-44f6-a4a7-3b1888a752bb"
+      Hint: LegacyDocument_CustomSortOrder
+      Value: 
+    - ID: "eeb8db99-7da8-4973-adf7-bcf7b29eba79"
+      Hint: LegacyDocument_DocumentName
+      Value: Liontrust Additional Permitted Subscription (APS) ISA Application Form
