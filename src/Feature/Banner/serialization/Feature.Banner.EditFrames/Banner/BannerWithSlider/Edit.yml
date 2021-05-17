@@ -1,8 +1,8 @@
 ﻿---
-ID: "078a6c6d-9d2c-4bf0-a2fa-33b71dd1c70a"
-Parent: "34d70c1e-b15d-42b1-9fe1-33ca3744d7ce"
+ID: "221315ff-940e-4c10-b58c-15555c9b74c2"
+Parent: "5df31d92-51c8-43ad-8810-61fe45ebbf73"
 Template: "1ab4f9ad-b004-413c-8924-3e07143a614b"
-Path: /sitecore/content/Applications/WebEdit/Custom Experience Buttons/Feature/Banner/BannerWithIcons/IconWithText/Edit
+Path: /sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Banner/BannerWithSlider/Edit
 DB: core
 SharedFields:
 - ID: "4431914a-c40b-437c-8add-d2ed12cc8cc3"
@@ -13,16 +13,16 @@ SharedFields:
   Value: 200
 - ID: "cf738220-908d-4c3f-9482-32e625daf13c"
   Hint: Fields
-  Value: IconWithText_Text|IconWithText_Icon
+  Value: BannerWithSlider_Heading
 Languages:
 - Language: en
   Fields:
   - ID: "108d3a63-baaa-4560-86d8-3a112ed84717"
     Hint: Header
-    Value: Edit Icon with Text
+    Value: Edit Banner with Slider
   - ID: "5f0812af-d370-4292-afee-f26a39b7406d"
     Hint: Tooltip
-    Value: Edit Icon with Text
+    Value: Edit Banner with Slider
   Versions:
   - Version: 1
     Fields:
