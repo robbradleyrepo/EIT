@@ -10,7 +10,7 @@ Languages:
   - Version: 1
     Fields:
     - ID: "05aba786-3d35-479b-ada4-ecee716ad9f5"
-      Hint: FindUsLabel
+      Hint: FooterConfiguration_FindUsLabel
       Value: Find Us
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
@@ -20,20 +20,14 @@ Languages:
       Value: |
         sitecore\Admin
     - ID: "6a0f17ab-b448-474a-a275-5ee5f12f8d10"
-      Hint: SubscribeNewsletterLabel
+      Hint: FooterConfiguration_SubscribeNewsletterLabel
       Value: Subscribe to our weekly newsletter
-    - ID: "a38b21b3-2bd4-4bab-9808-41319e81a763"
-      Hint: SubscribeCTALabel
-      Value: SIGN UP
-    - ID: "ca58e5ab-3275-422c-b18f-79d43dcc58f1"
-      Hint: GoogleMapsCTALabel
-      Value: GOOGLE MAPS
     - ID: "e168f770-7271-4dc4-9242-72805145acdc"
-      Hint: Copyright
+      Hint: FooterConfiguration_Copyright
       Value: "Copyright © Liontrust Asset Management PLC 2001-2021"
     - ID: "e4ca4419-efee-45a0-bef9-2f611004d7a7"
-      Hint: EmailCTALabel
+      Hint: FooterConfiguration_EmailCTALabel
       Value: CONTACT US
     - ID: "eaf0ce55-4593-4771-924b-e078f3aa3407"
-      Hint: GetInTouchLabel
+      Hint: FooterConfiguration_GetInTouchLabel
       Value: Get in touch

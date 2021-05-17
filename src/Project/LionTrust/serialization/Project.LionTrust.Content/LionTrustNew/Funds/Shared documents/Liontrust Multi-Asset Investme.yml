@@ -1,0 +1,43 @@
+﻿---
+ID: "8b647f3e-6aef-406e-9af0-62d42d9ca603"
+Parent: "c8e97f82-4fb2-46d3-b162-8fa1fb9fe0ff"
+Template: "66e09d5b-4f8e-4313-9df3-fa7e53fbe83a"
+Path: "/sitecore/content/LionTrustNew/Funds/Shared documents/Liontrust Multi-Asset Investments ICVC II Prospectus"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20201030T170033Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "8de3f234-7880-4703-8534-02bb8320c09c"
+      Hint: LegacyDocument_RelatedFunds
+      Type: Multilist
+      Value: |
+        {DAD47E77-0C73-41B0-8A0E-53814473F044}
+        {357BB108-DD2E-4E5D-ABE2-F62F377B337A}
+        {FE6AA79B-1D11-4B78-ACFA-6EA1464E318E}
+        {29ADABD7-04AE-4A1B-B2CF-6AEA256E119B}
+        {6D0A84A1-0871-41AF-BB84-5F8E1840A271}
+        {9AE4E660-5C14-44CF-949B-13C4700132AE}
+        {5B826CCF-D435-4C86-96E9-04DAA99E890F}
+        {81B1B8F3-02FA-46B1-BE9C-4A7F015567ED}
+        {D3A7BDAA-8EB8-4134-9F9A-FF1B973AD6F2}
+        {A6734482-C343-46FC-8AF0-CD60CE244F6F}
+    - ID: "a4a7f9dd-a218-4f33-b72a-7dc2251ccd43"
+      Hint: LegacyDocument_DocumentTypes
+      Type: Multilist
+      Value: "{93BD5BD5-AF14-4FD5-96EC-59F7ABB6C172}"
+    - ID: "c794210e-6107-4d69-841f-773cb9943bba"
+      Hint: LegacyDocument_DownloadLink
+      Value: |
+        <link linktype="media" target="" id="{F3CB33CE-61C5-4C53-94FF-573A091A73B3}" />
+    - ID: "eeb8db99-7da8-4973-adf7-bcf7b29eba79"
+      Hint: LegacyDocument_DocumentName
+      Value: "Liontrust Multi-Asset Investments ICVC II Prospectus"

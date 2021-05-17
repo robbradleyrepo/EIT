@@ -1,0 +1,29 @@
+﻿---
+ID: "fcaa1c65-9d0f-4e38-818e-9bd93bc4c8a1"
+Parent: "8eb8bc76-8c88-4c43-8fcf-28bbcae40c33"
+Template: "95b7738c-e36d-4f6e-bd5e-6e2c5d049940"
+Path: /sitecore/content/LionTrustNew/Home/ArticleListingPage/Article 5/ArticlePodcastPromo/Apple
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210513T145550Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "6145b771-64e1-4595-8331-27af009b7e39"
+      Hint: ArticlePodcastLink_Link
+      Value: |
+        <link linktype="external" url="http://www.google.com" anchor="" target="" />
+    - ID: "a4df08cc-c027-4155-b6b0-0491d5f0f809"
+      Hint: ArticlePodcastLink_Goal
+      Value: "{8FFB183B-DA1A-4C74-8F3A-9729E9FCFF6A}"
+    - ID: "bb868fc2-144b-4532-818c-bc3fd9338198"
+      Hint: ArticlePodcastLink_Icon
+      Value: |
+        <image mediaid="{EC8254C6-4B2C-4EEA-B4CE-9C23EA5F9A5E}" />

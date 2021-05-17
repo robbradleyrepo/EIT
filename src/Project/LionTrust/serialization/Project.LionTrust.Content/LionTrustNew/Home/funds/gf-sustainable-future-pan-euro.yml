@@ -1,0 +1,161 @@
+﻿---
+ID: "c556b42f-45e9-4983-99dc-69766c994a3c"
+Parent: "47bd668e-4c0f-4d8a-9e71-b6c8c156b32f"
+Template: "1f294bcb-1f17-4000-94bd-501a96bec59a"
+Path: "/sitecore/content/LionTrustNew/Home/funds/gf-sustainable-future-pan-european-growth-fund"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 1700
+- ID: "cce4e679-7e94-450d-8cc1-691bdf17ca78"
+  Hint: LegacyFundPageData_FundReference
+  Value: "{CAB2FB23-6928-475A-B0CF-EA5BA70EE2CA}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{EE0F9FC4-3A6E-4E75-B5DE-2F5126AC1514}"
+              p:before="*"
+              s:ds="{A6B407C0-D72D-4679-BF61-4A829B6BD71F}"
+              s:id="{DFF81E23-0704-4716-89DC-50C5E45F4DAE}"
+              s:par="DatasourceRule"
+              s:ph="/content/fund-page-content/right-content_{4ec9b090-46dc-4e76-bf60-1687a3dbd760}" />
+            <r
+              uid="{EC423B81-967B-4AD0-9C5B-D007FB20DF0A}"
+              p:after="r[@uid='{EE0F9FC4-3A6E-4E75-B5DE-2F5126AC1514}']"
+              s:ds="{EEF57115-E50E-4AAD-B61D-454302D785F9}"
+              s:id="{DFF81E23-0704-4716-89DC-50C5E45F4DAE}"
+              s:par="DatasourceRule"
+              s:ph="/content/fund-page-content/left-content_{4ec9b090-46dc-4e76-bf60-1687a3dbd760}" />
+            <r
+              uid="{CEC4666D-950E-4BB2-ADD3-1A523FA68F4F}">
+              <p:d />
+            </r>
+            <r
+              uid="{633823A6-C271-44F8-A73D-9FC3B613FD84}"
+              p:after="r[@uid='{F3F5DDD8-BCED-4C83-A49B-42E641DFDC1F}']"
+              s:id="{302ADD39-9FA0-4282-8D6B-AD95AE6F0C4A}"
+              s:ph="content" />
+            <r
+              uid="{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}"
+              s:ph="/content/fund-page-content" />
+            <r
+              uid="{E68675B2-194E-4FCD-97FB-AFCFFA66A966}">
+              <p:d />
+            </r>
+            <r
+              uid="{D2F551B2-8E4E-42AB-A016-9E554910D949}">
+              <p:d />
+            </r>
+            <r
+              uid="{7D2A9FAB-D42F-4FA0-89BF-BAEAF0A42DA0}">
+              <p:d />
+            </r>
+            <r
+              uid="{1A449E6C-3CAF-4F50-ABE3-70B3E38D974C}">
+              <p:d />
+            </r>
+            <r
+              uid="{E461C5F3-56B7-4810-8CE2-832CE9B4994D}">
+              <p:d />
+            </r>
+            <r
+              uid="{953F0F24-2A25-447A-A9C7-8688E242B5D6}"
+              p:after="r[@uid='{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}']"
+              s:ds="{32FBE477-1C82-4083-8285-06BC8405F9B5}"
+              s:id="{777B1AE2-307E-4C65-9987-9BD39085419B}"
+              s:par=""
+              s:ph="/content/fund-page-content" />
+            <r
+              uid="{2CB02678-0813-4804-97D9-19B2B3A604C8}"
+              p:after="r[@uid='{953F0F24-2A25-447A-A9C7-8688E242B5D6}']"
+              s:ds="{157E5438-328B-4F7B-AFCD-978AB92C194C}"
+              s:id="{8A50B96F-BF28-43E6-87D5-1E3408F8171A}"
+              s:par="DatasourceRule"
+              s:ph="/content/fund-page-content" />
+            <r
+              uid="{3A0DD03D-D8F3-4229-8376-0E6A833E8C02}"
+              p:after="r[@uid='{2CB02678-0813-4804-97D9-19B2B3A604C8}']"
+              s:ds="{CE69A162-DA2E-4AB9-938C-2D1D16C0F67E}"
+              s:id="{FA490876-F4C4-4D7B-8F4B-E03AD6EB898A}"
+              s:ph="/content/fund-page-content" />
+            <r
+              uid="{4EC9B090-46DC-4E76-BF60-1687A3DBD760}"
+              p:after="r[@uid='{3A0DD03D-D8F3-4229-8376-0E6A833E8C02}']"
+              s:id="{D506C47C-07BC-4D09-B36A-17E5F10F5636}"
+              s:ph="/content/fund-page-content" />
+            <r
+              uid="{A3CD5723-C232-437E-B1BE-73961EE62337}"
+              p:after="r[@uid='{4EC9B090-46DC-4E76-BF60-1687A3DBD760}']"
+              s:ds="{9C6991D2-00D7-4390-8E4A-F56E87BA3099}"
+              s:id="{8A50B96F-BF28-43E6-87D5-1E3408F8171A}"
+              s:par="DatasourceRule"
+              s:ph="/content/fund-page-content" />
+            <r
+              uid="{E8B045E9-35F5-4BA8-B0B2-0A02D1BD298B}">
+              <p:d />
+            </r>
+            <r
+              uid="{68AB933F-788F-43CD-A282-30EF5BA1EB84}"
+              p:after="r[@uid='{F1A65CCC-477D-4482-ABDB-FBC1DE7022E8}']"
+              s:ds="{D0BCD97B-FA4C-44D7-9BB5-A78FEAF7DC78}"
+              s:id="{777B1AE2-307E-4C65-9987-9BD39085419B}"
+              s:par=""
+              s:ph="/content/fund-page-content" />
+          </d>
+        </r>
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "Liontrust GF Sustainable Future Pan-European Growth Fund | What we offer | Liontrust Asset Management PLC"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180605T144226Z
+    - ID: "382cdded-7732-4690-ac7a-8dba5c503403"
+      Hint: LegacyFundPageData_HideCumulativePerformanceTable
+      Type: Checkbox
+      Value: 0
+    - ID: "4ba2c766-77ad-4417-81b2-090d584838c1"
+      Hint: LegacyHeroImagePageData_PageHeaderText
+      Value: Peter Michaelis &amp; Martyn Jones
+    - ID: "4f86ee15-d758-4f6a-826d-bcd23171073c"
+      Hint: LegacyPresentationBase_MetaKeywords
+      Value: liontrust, funds, fund, investing, investment, sustainable, Martyn Jones, Peter Michaelis
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{AEA66CB3-FAA5-4F80-A3CE-A418B1EC5468}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: 
+    - ID: "9dc8ae8c-c3e1-4536-aa2a-d0bff7398795"
+      Hint: LegacyPresentationBase_MetaDescription
+      Value: "The Irish-domiciled Liontrust GF Sustainable Future Pan-European Growth Fund, which launched on 19 October 2018, is managed by Peter Michaelis & Martyn Jones. The Luxcellence - Liontrust SF Pan-European Equity Fund, which had launched on 14 March 2001, merged into the Liontrust GF Sustainable Future Pan-European Growth Fund on 19 October 2018. The GF Sustainable Future Pan-European Growth Fund aims to generate capital growth by mainly investing in a broad range of European companies. The Fund seeks to achieve this while benefiting society by identifying the key structural growth trends that will shape the global economy of the future and investing in well-run companies whose products and operations capitalise on these powerful trends and, therefore, may benefit financially."
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: "GF Sustainable Future Pan-European Growth Fund"
+    - ID: "b39af1cd-8c71-4989-bef8-7c0441dd570a"
+      Hint: LegacyFundPageData_HidePerformanceChart
+      Type: Checkbox
+      Value: 0
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{1CFEA406-E93A-4B6B-AE9D-76A586364072}" />
+    - ID: "ba664318-d29c-4166-a901-faa04f7d3aa6"
+      Hint: LegacyFundPageData_HideDescretePerformanceTable
+      Type: Checkbox
+      Value: 0

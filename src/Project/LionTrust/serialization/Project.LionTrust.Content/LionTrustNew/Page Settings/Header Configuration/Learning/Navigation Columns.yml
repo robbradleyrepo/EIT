@@ -1,0 +1,26 @@
+﻿---
+ID: "3e0d22e5-8ad7-4ed0-809b-3d162c0a9505"
+Parent: "28969877-3c3b-4883-b92f-2bad47bd5c51"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/LionTrustNew/Page Settings/Header Configuration/Learning/Navigation Columns
+DB: master
+BranchID: "376511be-c163-4800-a4e9-7b71c6281a0f"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: apps/32x32/way.png
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{857E4B73-6E7E-41CF-972F-0E3CC2EA8E22}"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{02915A18-6A09-4294-A08B-9AB694E51FB3}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210406T123242Z

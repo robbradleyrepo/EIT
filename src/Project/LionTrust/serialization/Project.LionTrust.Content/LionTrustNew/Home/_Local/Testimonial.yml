@@ -1,0 +1,28 @@
+﻿---
+ID: "0d23b189-3077-4f17-99ce-62bf2c7a92e2"
+Parent: "832bdebd-699d-4461-ba09-154ed95b288d"
+Template: "0b50876e-0f9f-479f-8533-a84625b8c7c5"
+Path: /sitecore/content/LionTrustNew/Home/_Local/Testimonial
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0b4e60b8-849f-4cf1-a975-2647afea630b"
+      Hint: Testimonial_BackgroundImage
+      Value: |
+        <image mediaid="{1A51934F-9372-434C-8BCF-1A85ABF4F25D}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210505T123200Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "9ae10805-e946-4661-ab29-de0c6a9019a5"
+      Hint: Testimonial_Quote
+      Value: Lorem ipsum dolor sit amet
+    - ID: "bdc73bde-7a8e-408c-8cc0-b7aa706d99b2"
+      Hint: Testimonial_Author
+      Value: Lorem Ipsum
