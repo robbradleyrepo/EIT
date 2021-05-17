@@ -2,6 +2,16 @@
 {
     public static class Constants
     {
+        public static class ArticleRichText
+        {
+            public const string CopyFieldId = "{6876726D-D5D2-40DF-94A7-A9A6FAE2F683}";
+        }
+
+        public static class ArticleText
+        {
+            public const string CopyFieldId = "{8D298C2B-5646-4EEB-8F1B-2A81BCE70E01}";
+        }
+
         public static class ArticleFilter
         {
             public const string FundTeamsFieldId = "{0E5031B3-9232-42BE-82D4-05579D7827D9}";
