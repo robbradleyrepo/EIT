@@ -1,0 +1,31 @@
+﻿---
+ID: "8eb8bc76-8c88-4c43-8fcf-28bbcae40c33"
+Parent: "bda9e6e7-bc10-44c5-b618-255d62cf313a"
+Template: "5fa772fc-ea92-47c5-b62c-378240f761f7"
+Path: /sitecore/content/LionTrustNew/Home/ArticleListingPage/Article 5/ArticlePodcastPromo
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0b768256-fd72-4daf-9ef9-ed075d8ae371"
+      Hint: ArticlePodcastPromo_MobileBackgroundImage
+      Value: |
+        <image mediaid="{1A51934F-9372-434C-8BCF-1A85ABF4F25D}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210513T145530Z
+    - ID: "831456df-6d24-4b5f-be64-a95b27cb3039"
+      Hint: ArticlePodcastPromo_Body
+      Value: Lorem ipsum dolor sit amet
+    - ID: "92fe2900-b171-4ff8-8e36-050bb706ae4b"
+      Hint: ArticlePodcastPromo_BackgroundImage
+      Value: |
+        <image mediaid="{28B217E5-91DE-411C-915E-BA3560B58B09}" />
+    - ID: "b43132db-b2c9-400f-b79c-2dee790e100b"
+      Hint: ArticlePodcastPromo_Title
+      Value: ArticlePodcastPromo
+    - ID: "d9709962-08ae-4b8b-8a17-8af53da5f9cc"
+      Hint: ArticlePodcastPromo_Heading
+      Value: Listen to our podcast

@@ -1,0 +1,33 @@
+﻿---
+ID: "4ad18e43-1911-4a75-b414-dd632d8c5ba6"
+Parent: "2cb03e53-0e2b-4262-bf7b-cbee4f413769"
+Template: "66e09d5b-4f8e-4313-9df3-fa7e53fbe83a"
+Path: /sitecore/content/LionTrustNew/Funds/US Opportunities Fund/Documents/US Opportunities Fund Factsheet Acc B GBP
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190927T103229Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "8de3f234-7880-4703-8534-02bb8320c09c"
+      Hint: LegacyDocument_RelatedFunds
+      Type: Multilist
+      Value: "{14BC0BF0-FCD9-4867-8421-CEE4FF894E79}"
+    - ID: "a4a7f9dd-a218-4f33-b72a-7dc2251ccd43"
+      Hint: LegacyDocument_DocumentTypes
+      Type: Multilist
+      Value: "{D4DC9F77-EC92-429D-A975-839A13F17C2A}"
+    - ID: "c794210e-6107-4d69-841f-773cb9943bba"
+      Hint: LegacyDocument_DownloadLink
+      Value: |
+        <link linktype="media" target="" id="{FEF53905-D594-4871-B72A-74D86B8D3A19}" />
+    - ID: "eeb8db99-7da8-4973-adf7-bcf7b29eba79"
+      Hint: LegacyDocument_DocumentName
+      Value: Factsheet Acc B

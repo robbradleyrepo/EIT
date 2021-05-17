@@ -1,6 +1,6 @@
 ﻿---
 ID: "28969877-3c3b-4883-b92f-2bad47bd5c51"
-Parent: "dc766d1f-915f-4785-9405-7adee75ebbdd"
+Parent: "8af83fdb-f9d8-4b35-8c8e-c0f9465ed7b2"
 Template: "9e459de5-0d5a-458a-be73-344b939719e1"
 Path: /sitecore/content/LionTrustNew/Page Settings/Header Configuration/Learning
 DB: master
@@ -17,15 +17,13 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20210406T123242Z
-    - ID: "7f27284a-ec01-42a2-a460-5b5c6438d92f"
-      Hint: NavigationColumnCount
-      Value: 3
-    - ID: "9c105ad9-59d2-4134-bb95-95b9b3b3422f"
-      Hint: ImageCount
-      Value: 0
     - ID: "d335cc19-7219-49ba-8782-95def11a5c4d"
       Hint: HeaderDropDown_NavigationColumns
       Type: Treelist
       Value: |
-        {33A05BC2-0751-403D-A2EA-BE14570CECDF}
         {36AFC7A1-5F8E-4504-8047-FF213ABBDF68}
+        {33A05BC2-0751-403D-A2EA-BE14570CECDF}
+        {7778AD99-3FF8-4F83-A4C5-B35573E94E34}
+    - ID: "f01d9f47-3d98-42d9-ab7d-59b5e845b974"
+      Hint: HeaderDropDown_PageItem
+      Value: "{49766078-4397-4668-B13E-4EFBE7CADF55}"

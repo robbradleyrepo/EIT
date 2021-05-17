@@ -1,0 +1,153 @@
+﻿---
+ID: "6ba81bcb-69b9-4712-af2f-37889dd5c47c"
+Parent: "47bd668e-4c0f-4d8a-9e71-b6c8c156b32f"
+Template: "1f294bcb-1f17-4000-94bd-501a96bec59a"
+Path: "/sitecore/content/LionTrustNew/Home/funds/european-growth-fund"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 600
+- ID: "cce4e679-7e94-450d-8cc1-691bdf17ca78"
+  Hint: LegacyFundPageData_FundReference
+  Value: "{A4C505F9-7BF3-4751-8F97-67FAD4F3668E}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}"
+          p:before="*"
+          s:ph="/content/fund-page-content" />
+        <r
+          uid="{DECAAFFE-EB94-4223-A883-35F48F5358B4}"
+          p:after="r[@uid='{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}']"
+          s:ds="{5C06DB82-36A3-4242-9BD4-E5346857D6EA}"
+          s:id="{8A50B96F-BF28-43E6-87D5-1E3408F8171A}"
+          s:par="DatasourceRule"
+          s:ph="/content/fund-page-content" />
+        <r
+          uid="{18C1D58F-8C55-4DE6-937C-5E3915F2268F}"
+          p:after="r[@uid='{DECAAFFE-EB94-4223-A883-35F48F5358B4}']"
+          s:ds="{C7F29F8A-A496-47E2-A691-7ABD25842A40}"
+          s:id="{777B1AE2-307E-4C65-9987-9BD39085419B}"
+          s:par=""
+          s:ph="/content/fund-page-content" />
+        <r
+          uid="{B8AB5004-5199-415A-8D7A-C68F3A1F0118}"
+          p:after="r[@uid='{18C1D58F-8C55-4DE6-937C-5E3915F2268F}']"
+          s:id="{D506C47C-07BC-4D09-B36A-17E5F10F5636}"
+          s:ph="/content/fund-page-content" />
+        <r
+          uid="{CEC4666D-950E-4BB2-ADD3-1A523FA68F4F}">
+          <p:d />
+        </r>
+        <r
+          uid="{E68675B2-194E-4FCD-97FB-AFCFFA66A966}">
+          <p:d />
+        </r>
+        <r
+          uid="{D2F551B2-8E4E-42AB-A016-9E554910D949}">
+          <p:d />
+        </r>
+        <r
+          uid="{7D2A9FAB-D42F-4FA0-89BF-BAEAF0A42DA0}">
+          <p:d />
+        </r>
+        <r
+          uid="{124E5B2A-2569-4C69-B302-7087A8037DFB}"
+          p:after="r[@uid='{F3F5DDD8-BCED-4C83-A49B-42E641DFDC1F}']"
+          s:id="{302ADD39-9FA0-4282-8D6B-AD95AE6F0C4A}"
+          s:ph="content" />
+        <r
+          uid="{4FC11A56-167E-48F5-824D-C1CF7195A979}"
+          p:after="r[@uid='{124E5B2A-2569-4C69-B302-7087A8037DFB}']"
+          s:ds="{0DC06FEA-C229-463A-98BB-0350EE18E185}"
+          s:id="{DFF81E23-0704-4716-89DC-50C5E45F4DAE}"
+          s:par="DatasourceRule"
+          s:ph="/content/fund-page-content/right-content_{b8ab5004-5199-415a-8d7a-c68f3a1f0118}" />
+        <r
+          uid="{EAE3BBD1-F1B8-4EE3-B510-5BE665A1F1B5}"
+          p:after="r[@uid='{4FC11A56-167E-48F5-824D-C1CF7195A979}']"
+          s:ds="{682FCE5C-3DA1-4B1B-A2CD-DF36E3730BCC}"
+          s:id="{8A50B96F-BF28-43E6-87D5-1E3408F8171A}"
+          s:par="DatasourceRule"
+          s:ph="/content/fund-page-content/right-content_{b8ab5004-5199-415a-8d7a-c68f3a1f0118}" />
+        <r
+          uid="{E49467DA-08A4-454F-AF6F-96879C966711}"
+          p:after="r[@uid='{EAE3BBD1-F1B8-4EE3-B510-5BE665A1F1B5}']"
+          s:ds="{13FF4728-D712-4362-9EA6-097C92BFE02D}"
+          s:id="{DFF81E23-0704-4716-89DC-50C5E45F4DAE}"
+          s:par="DatasourceRule"
+          s:ph="/content/fund-page-content/left-content_{b8ab5004-5199-415a-8d7a-c68f3a1f0118}" />
+        <r
+          uid="{6A7F58A6-EB82-4585-8750-316DC74226AA}"
+          p:after="r[@uid='{E49467DA-08A4-454F-AF6F-96879C966711}']"
+          s:ds="{26A5B7A2-D80D-4428-A043-B71491274A33}"
+          s:id="{8A50B96F-BF28-43E6-87D5-1E3408F8171A}"
+          s:par="DatasourceRule"
+          s:ph="/content/fund-page-content/left-content_{b8ab5004-5199-415a-8d7a-c68f3a1f0118}" />
+        <r
+          uid="{1A449E6C-3CAF-4F50-ABE3-70B3E38D974C}">
+          <p:d />
+        </r>
+        <r
+          uid="{E461C5F3-56B7-4810-8CE2-832CE9B4994D}">
+          <p:d />
+        </r>
+        <r
+          uid="{E8B045E9-35F5-4BA8-B0B2-0A02D1BD298B}">
+          <p:d />
+        </r>
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "187226f4-9c3e-4d5c-b21f-2c917136f20c"
+      Hint: LegacyPresentationBase_MetaRobots
+      Value: 
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Liontrust European Growth Fund | What we offer | Liontrust Asset Management PLC
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140922T110753Z
+    - ID: "42994f09-31f9-4570-9c0b-91bd4a698540"
+      Hint: LegacyPresentationBase_PageTags
+      Type: Multilist with Search
+      Value: 
+    - ID: "4ba2c766-77ad-4417-81b2-090d584838c1"
+      Hint: LegacyHeroImagePageData_PageHeaderText
+      Value: "James Inglis-Jones &amp; Samantha Gleave"
+    - ID: "4f86ee15-d758-4f6a-826d-bcd23171073c"
+      Hint: LegacyPresentationBase_MetaKeywords
+      Value: "liontrust, funds, fund, investing, investment, unit trust, europe, european, eu, growth, james inglis-jones, samantha gleave"
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{AEA66CB3-FAA5-4F80-A3CE-A418B1EC5468}"
+    - ID: "82426cee-2b8e-411e-9eeb-d54ec3d0ced3"
+      Hint: LegacyPresentationBase_Code
+      Value: 
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: 
+    - ID: "9dc8ae8c-c3e1-4536-aa2a-d0bff7398795"
+      Hint: LegacyPresentationBase_MetaDescription
+      Value: "The Fund has been managed since launch in November 2006 by James Inglis-Jones, and he was joined by Samantha Gleave in 2012. The Fund aims to deliver capital growth over the long term (5 years or more) by using the Cashflow Solution process to identify and invest in companies incorporated, domiciled, listed or which conduct significant business in the EEA (European Economic Area) and Switzerland. The Fund has an equally weighted portfolio."
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: European Growth Fund
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{1F69D79F-7A2D-42B8-82C6-4A5B5A7FBDA3}" />
+    - ID: "f7265233-a676-4848-baa9-7a4629e22a75"
+      Hint: LegacyHeroImagePageData_ImagePosition
+      Value: 

@@ -1,0 +1,119 @@
+﻿---
+ID: "a369906f-4792-4a08-823c-ab2657d5ddda"
+Parent: "47bd668e-4c0f-4d8a-9e71-b6c8c156b32f"
+Template: "1f294bcb-1f17-4000-94bd-501a96bec59a"
+Path: "/sitecore/content/LionTrustNew/Home/funds/income-fund"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 2500
+- ID: "cce4e679-7e94-450d-8cc1-691bdf17ca78"
+  Hint: LegacyFundPageData_FundReference
+  Value: "{80BFAA5A-CCD9-4D0A-98A9-3F78B62488AA}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{93ED2307-1723-4E3C-95D8-84ABCAC4ED82}"
+              p:before="*"
+              s:ds="{50712AED-688F-42AB-A58B-2A9CE3597B97}"
+              s:id="{8A50B96F-BF28-43E6-87D5-1E3408F8171A}"
+              s:par="DatasourceRule"
+              s:ph="/content/fund-page-left-listing-section" />
+            <r
+              uid="{62ECADA4-A447-45CA-9C0D-1265F75565EC}"
+              p:after="r[@uid='{93ED2307-1723-4E3C-95D8-84ABCAC4ED82}']"
+              s:ds="{1BD66B42-0FFB-4A4E-B7A8-869B33C109DE}"
+              s:id="{DFF81E23-0704-4716-89DC-50C5E45F4DAE}"
+              s:par="DatasourceRule"
+              s:ph="/content/fund-page-right-commentary-section" />
+            <r
+              uid="{C3284D69-DBDF-4E95-B5B1-856E6BDF2E7E}"
+              p:after="r[@uid='{62ECADA4-A447-45CA-9C0D-1265F75565EC}']"
+              s:ds="{477E807E-BE5D-473A-9F0E-6BC2727F2042}"
+              s:id="{DFF81E23-0704-4716-89DC-50C5E45F4DAE}"
+              s:par="DatasourceRule"
+              s:ph="/content/fund-page-left-commentary-section" />
+            <r
+              uid="{4DCF8E34-CD0B-46DE-9702-720548DEA89A}"
+              p:after="r[@uid='{C3284D69-DBDF-4E95-B5B1-856E6BDF2E7E}']"
+              s:ds="{0E000E29-2915-4BB1-B1B3-A87A3679632B}"
+              s:id="{777B1AE2-307E-4C65-9987-9BD39085419B}"
+              s:par=""
+              s:ph="/content/fund-page-process-section" />
+            <r
+              uid="{C7A712A4-5273-4E49-9A59-D08AEF62ECCF}"
+              p:after="r[@uid='{4DCF8E34-CD0B-46DE-9702-720548DEA89A}']"
+              s:ds="{C5250B5F-3E76-45E6-9681-3CADF0C615FB}"
+              s:id="{8A50B96F-BF28-43E6-87D5-1E3408F8171A}"
+              s:par="DatasourceRule"
+              s:ph="/content/fund-page-team-section" />
+            <r
+              uid="{E68675B2-194E-4FCD-97FB-AFCFFA66A966}">
+              <p:d />
+            </r>
+            <r
+              uid="{D2F551B2-8E4E-42AB-A016-9E554910D949}">
+              <p:d />
+            </r>
+            <r
+              uid="{7D2A9FAB-D42F-4FA0-89BF-BAEAF0A42DA0}">
+              <p:d />
+            </r>
+            <r
+              uid="{1A449E6C-3CAF-4F50-ABE3-70B3E38D974C}">
+              <p:d />
+            </r>
+            <r
+              uid="{E461C5F3-56B7-4810-8CE2-832CE9B4994D}">
+              <p:d />
+            </r>
+            <r
+              uid="{E8B045E9-35F5-4BA8-B0B2-0A02D1BD298B}">
+              <p:d />
+            </r>
+          </d>
+        </r>
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Liontrust Income Fund  | What we offer | Liontrust Asset Management PLC
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190927T152807Z
+    - ID: "4ba2c766-77ad-4417-81b2-090d584838c1"
+      Hint: LegacyHeroImagePageData_PageHeaderText
+      Value: Robin Geffen
+    - ID: "4f86ee15-d758-4f6a-826d-bcd23171073c"
+      Hint: LegacyPresentationBase_MetaKeywords
+      Value: liontrust, funds, fund, investing, investment, global equity, robin geffen, income, income fund
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{AEA66CB3-FAA5-4F80-A3CE-A418B1EC5468}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: 
+    - ID: "9dc8ae8c-c3e1-4536-aa2a-d0bff7398795"
+      Hint: LegacyPresentationBase_MetaDescription
+      Value: "The Fund, which has been managed by Robin Geffen since launch in December 2002, aims to deliver a net target yield of at least the net yield of the FTSE All Share index every year, with the potential for long term (5 years or more) capital growth. The Fund, which has the ability to invest up to 20% in income opportunities outside the UK, seeks companies that offer the most attractive dividend growth potential by focusing on those with strong free cash flow, balance sheets and earnings. The portfolio is dividend into three distinct silos to negate any major style bias: steady eddies, hidden fruits and tactical plays."
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Income Fund
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{962B0E29-D24E-4300-95DA-A8211B19E496}" />
