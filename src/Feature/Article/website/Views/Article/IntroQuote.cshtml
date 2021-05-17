@@ -1,0 +1,11 @@
+@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Article.Models.IArticleText
+@if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    return;
+}
+<div class="article-quote">
+    <span>
+        @Html.Glass().Editable(m => m.Copy)
+    </span>
+</div>
