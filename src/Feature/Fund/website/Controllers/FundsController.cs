@@ -71,5 +71,14 @@
 
             return View("~/Views/Fund/AdditionalInfoAndCharges.cshtml", viewModel);
         }
+
+        public ActionResult Disclaimer()
+        {
+            var viewModel = new FundDisclaimerViewModel();
+            viewModel.Fund = _context.GetPageContextItem<IFund>();
+            viewModel.Component = _context.GetDataSourceItem<IFundDisclaimer>();
+
+            return View("~/Views/Fund/Disclaimer.cshtml", viewModel);
+        }
     }
 }

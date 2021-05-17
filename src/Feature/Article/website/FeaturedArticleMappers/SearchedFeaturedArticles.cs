@@ -34,7 +34,7 @@
                 ToDate = DateTime.MaxValue
             };
 
-            var results = searchService.GetDatedTaxonomyRelatedArticles(request, result => result.OrderByDescending(hit => hit.ArticleDate));
+            var results = searchService.GetDatedTaxonomyRelatedArticles(request, result => result.OrderByDescending(hit => hit.Created));
             if (results == null || results.SearchResults == null)
             {
                 return new FeaturedArticle[0];

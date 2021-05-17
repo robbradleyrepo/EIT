@@ -2,6 +2,7 @@
 {
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
+    using LionTrust.Foundation.Legacy.Models;
     using LionTrust.Foundation.ORM.Models;
     using System;
     using System.Collections.Generic;
@@ -17,8 +18,7 @@
         [SitecoreField(Constants.FundScroller.SubtitleFieldId)]
         string Subtitle { get; set; }
 
-        [SitecoreField(Constants.FundScroller.FundsFieldId)]
-        IEnumerable<IGlassBase> Funds { get; set; }
+        IEnumerable<IFundCard> Children { get; set; }
 
         [SitecoreField(Constants.FundScroller.PrimaryCaFieldId)]
         Link PrimaryCta { get; set; }

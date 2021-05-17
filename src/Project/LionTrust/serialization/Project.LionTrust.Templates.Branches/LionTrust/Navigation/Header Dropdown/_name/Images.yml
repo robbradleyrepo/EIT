@@ -1,0 +1,22 @@
+﻿---
+ID: "49f47cfd-931a-4176-a56b-73a59a397304"
+Parent: "12cf970e-33ff-4672-8bf7-dcf6918b5c99"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/templates/Branches/Project/LionTrust/Navigation/Header Dropdown/$name/Images
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: apps/32x32/photos.png
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{E064BED9-A890-4E84-834D-44255B384405}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210406T123007Z

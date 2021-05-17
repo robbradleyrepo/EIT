@@ -9,6 +9,14 @@
             public const string CtaFieldId = "{EEED7C2E-DC3C-4E29-9855-03BD4F9139AD}";
         }
     
+        public static class FundCard
+        {
+            public const string HeadingFieldId = "{6387CA9A-7A5A-4D33-B706-201681C0B74C}";
+            public const string ImageFieldId = "{EB75DFEF-C624-4571-B92B-8F37C36FCEE6}";
+            public const string DescriptionFieldId = "{0905F092-B5B5-4971-B87E-57F4810BD729}";
+            public const string FundFieldId = "{034CD348-2ADC-47E9-B263-2C839808DAE1}";
+        }
+
         public static class FundHeader
         {
             public const string FundFieldId = "{90BCAB34-B9E0-466E-97A4-73CEC67335F7}";
@@ -27,6 +35,7 @@
             public const string DescriptionFieldId = "{451EFCD2-40A3-4153-8B02-BEC9572A9EC1}";
             public const string SubtitleFieldId = "{EB9E31A0-ED28-48FC-8CBF-820264B17306}";
             public const string FundsFieldId = "{59BCA54C-FCD3-44C9-813A-6A6A244836ED}";
+
             public const string PrimaryCaFieldId = "{63C464EC-3657-4B91-ADF5-28AC9036774F}";
             public const string PrimaryCtaGoalFieldId = "{7DB368D2-CCCF-4423-80FC-2065EA9FA547}";
             public const string SecondaryCtaFieldId = "{E8A3C14F-9976-4734-9FE8-5BB53E1DC9B3}";
@@ -120,6 +129,20 @@
             public const string SinglePrice_FieldId = "{ACF74586-B31A-4812-A440-C4C50A6E4F70}";
             public const string OfferPrice_FieldId = "{B834FC27-880B-4ACD-BC10-D6158773B285}";
             public const string PriceDate_FieldId = "{366E54EF-CC6F-4F52-8953-6DDDEA6ED408}";
-        }       
+        } 
+        
+        public static class TwoColumnComponent
+        {
+            public const string LeftColumnSize_FieldId = "{F6A1DC1F-D9C0-40B8-9590-D5C58D1F2346}";
+            public const string LeftPaddingSize_FieldId = "{0B7847A5-F42B-42E0-B4D0-3CB4350CEE45}";
+            public const string RightColumnSize_FieldId = "{1A02D0A6-1E81-4119-AB01-A0E90D5EB8A8}";
+            public const string RightPaddingSize_FieldId = "{D3A375F2-CB82-4F2B-AF60-550FC662A00D}";
+        }        
+        
+        public static class FundDisclaimer
+        {
+            public const string SmallSize_FieldId = "{06013D0B-DB4E-474E-86E7-BB771D5E7577}";
+            public const string TextColor_FieldId = "{98D89D89-CA0F-41FF-A3BF-E0F22F240335}";
+        }
     }
 }
