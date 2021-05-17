@@ -1,0 +1,26 @@
+﻿---
+ID: "709bf5ff-a1ba-4e4a-af67-d784259a6e08"
+Parent: "6cf55936-0b82-4ef5-9dc2-81d8ae0a8ddb"
+Template: "5c547d4e-7111-4995-95b0-6b561751bf2e"
+Path: /sitecore/layout/Placeholder Settings/Project/LionTrust/article
+DB: master
+SharedFields:
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: article
+- ID: "e391b526-d0c5-439d-803e-17512eae6222"
+  Hint: Allowed Controls
+  Type: TreelistEx
+  Value: |
+    {DF18E4D6-F59A-4CDD-B26B-91D902F3A2DB}
+    {010E3C29-6258-4251-9CEB-FEB1FAC64F98}
+    {7626FD78-BC75-4F9C-80E7-DC947364A29B}
+    {22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210517T142528Z
