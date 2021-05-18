@@ -1,7 +1,7 @@
 ﻿@model LionTrust.Feature.Text.Models.IRichText
 @if (Model != null)
 {
-    <div class="@(Model.SmallSize ? "article-with-small" : "article-with-big") @(Model.TextColor != null ? Model.TextColor.Value : "text-black")">
+    <div class="disclaimer-text @(Model.SmallSize ? "article-with-small" : "article-with-big") @(Model.TextColor != null ? Model.TextColor.Value : "text-black")">
         @Html.Raw(Model.Text)
     </div>
 }
