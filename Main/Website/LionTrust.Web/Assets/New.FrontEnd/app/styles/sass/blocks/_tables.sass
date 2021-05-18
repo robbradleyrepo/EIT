@@ -3,9 +3,12 @@
         font-size: 26px
         line-height: 32px
         color: $black
+        &__credit-sec
+            margin-bottom: -6px
 
 // Customize default bootstrap styles
 .table
+    margin-bottom: 2rem
     thead
         th
             font-weight: 300
@@ -83,7 +86,7 @@
                 padding-left: 32px
             &:last-child
                 padding-right: 32px
-            
+
     thead, tbody, tfoot
         .primary-row
             td, th
@@ -93,8 +96,9 @@
         display: inline-block
         height: 16px
         background: $primary
+        &__gold
+            background: $gold
 
-    
 .table.table-full-border
     tbody
         border: 1px solid $secondary-silver
@@ -108,5 +112,25 @@
     tbody td
         &:last-child
             width: 40%
-                    
+    // tbody tr
+    //     &:last-child
+    //         td
+    //             font-weight: 500
+    tbody tr td.column-half
+        width: 55%
 
+.twoline-percent
+    &__number
+        display: flex
+        align-items: center
+        margin-bottom: 5px
+    &__digit
+        margin-right: 5px
+        width: 38px
+        text-align: right
+
+.chart-table
+    border: 1px solid $secondary-silver
+    padding: 12px
+    @include breakpoint(desktop, up)
+        padding: 20px

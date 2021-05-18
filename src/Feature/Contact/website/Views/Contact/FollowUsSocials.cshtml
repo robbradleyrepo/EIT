@@ -1,0 +1,91 @@
+﻿@using LionTrust.Feature.Contact.Models;
+@using System.Collections.Specialized;
+@model LionTrust.Feature.Contact.Models.IFollowUsSocials
+@if (Model != null)
+{
+    var twitterColumn = "col-xl-7";
+    var socialColumn = "col-xl-5";
+    var firstSocialIcon = new FollowUsSocialIcon()
+    {
+        SocialIcon = Model.FirstSocialIcon,
+        SocialLink = Model.FirstSocialLink,
+        TwitterTags = Model.FirstTwitterTags
+    };
+
+    var secondSocialIcon = new FollowUsSocialIcon()
+    {
+        SocialIcon = Model.SecondSocialIcon,
+        SocialLink = Model.SecondSocialLink,
+        TwitterTags = Model.SecondTwitterTags
+    };
+    var thirdSocialIcon = new FollowUsSocialIcon()
+    {
+        SocialIcon = Model.ThirdSocialIcon,
+        SocialLink = Model.ThirdSocialLink,
+        TwitterTags = Model.ThirdTwitterTags
+    };
+
+    <section class="container follow-us-section">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="follow-us">
+                    <h2 class="h2 follow-us__title">@Html.Glass().Editable(Model, m => m.Heading)</h2>
+                    <div class="follow-us__text">
+                        <p>
+                            @Html.Glass().Editable(Model, m => m.Description)
+                        </p>
+                    </div>
+                    <div class="row">
+                        @if (!string.IsNullOrEmpty(firstSocialIcon.TwitterTags))
+                        {
+
+                            <div class="@socialColumn">
+                                <div class="follow-us__links">
+                                    @Html.Partial("~/Views/Contact/_FollowUsSocialIcon.cshtml", secondSocialIcon)
+                                    @Html.Partial("~/Views/Contact/_FollowUsSocialIcon.cshtml", thirdSocialIcon)
+                                </div>
+                            </div>
+                            <div class="@twitterColumn">
+                                <div class="follow-us__links">
+                                    @Html.Partial("~/Views/Contact/_FollowUsSocialIcon.cshtml", firstSocialIcon)
+                                </div>
+                            </div>
+                        }
+                        else if (!string.IsNullOrEmpty(secondSocialIcon.TwitterTags))
+                        {
+                            <div class="@socialColumn">
+                                <div class="follow-us__links">
+                                    @Html.Partial("~/Views/Contact/_FollowUsSocialIcon.cshtml", firstSocialIcon)
+                                    @Html.Partial("~/Views/Contact/_FollowUsSocialIcon.cshtml", thirdSocialIcon)
+                                </div>
+                            </div>
+                            <div class="@twitterColumn">
+                                <div class="follow-us__links">
+                                    @Html.Partial("~/Views/Contact/_FollowUsSocialIcon.cshtml", secondSocialIcon)
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="@socialColumn">
+                                <div class="follow-us__links">
+                                    @Html.Partial("~/Views/Contact/_FollowUsSocialIcon.cshtml", firstSocialIcon)
+                                    @Html.Partial("~/Views/Contact/_FollowUsSocialIcon.cshtml", secondSocialIcon)
+                                </div>
+                            </div>
+                            <div class="@twitterColumn">
+                                <div class="follow-us__links">
+                                    @Html.Partial("~/Views/Contact/_FollowUsSocialIcon.cshtml", thirdSocialIcon)
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @: Add datasource for Follow Us Socials component
+}

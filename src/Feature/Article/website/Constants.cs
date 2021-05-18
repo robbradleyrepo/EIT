@@ -48,6 +48,7 @@
             public const string MultipleAuthorsIcon_FieldId = "{7075D230-7438-4F94-A4CC-1760107174CA}";
             public const string Image_FieldId = "{5BD6E9E9-2240-4473-8094-075E811B8438}";
             public const string Date_FieldId = "{79CC76CC-7503-449B-9809-9808CF6C2D26}";
+            public const string PdfDocument_FieldId = "{AE17B17D-0024-4700-9075-E95D8E7B15EE}";
         }
 
         public static class ArticlePodcastPromo
@@ -80,6 +81,14 @@
         {
             public const string HeadingFieldId = "{9B7BD172-7140-40A2-B464-782C99CF7E73}";
             public const string ArticlesFieldId = "{8146922E-1AF4-48E9-91CD-CA5F37CAB4E5}";
+        }
+
+        public static class ArticleLinks
+        {
+            public const string ShareLabel_FieldId = "{1D03C959-0BBF-4C3A-A5A5-9050E9F4B38F}";
+            public const string ShareLinkGoal_FieldId = "{A4397CD8-98A8-4164-8263-0B323271B169}";
+            public const string DownloadLabel_FieldId = "{338376F5-AB65-4249-878A-E891F1FD465A}";
+            public const string DownloadGoal_FieldId = "{BB708901-B592-4F8C-9119-7F619B26D5B1}";
         }
     }
 }

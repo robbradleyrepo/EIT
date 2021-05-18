@@ -20,5 +20,20 @@
             public const string CTA1Link_FieldId = "{D8099339-37E6-475B-944D-380420324BF3}";
             public const string CTA2Link_FieldId = "{DAF8D62C-6107-43C6-A8EB-F7ACB084908E}";
         }
+
+        public static class FollowUsSocial
+        {
+            public const string Heading_FieldId = "{409F8514-E699-4F19-8F35-425460A598DF}";
+            public const string Description_FieldId = "{B75EECD0-8455-43E3-AE0D-5EBA1DD07809}";
+            public const string FirstSocialIcon_FieldId = "{DD0ED9C5-A7C0-441A-BAA5-6CA7525B90E4}";
+            public const string FirstSocialLink_FieldId = "{CA1AA90E-0099-41A1-B9EC-5B01A027FD87}";
+            public const string FirstTwitterTags_FieldId = "{151517AB-9B46-4911-AB48-B3CA82E98BAE}";
+            public const string SecondSocialIcon_FieldId = "{5591F29F-31A0-4AA6-9C7F-A1B738C63CF0}";
+            public const string SecondSocialLink_FieldId = "{FF9C463F-1F07-434F-93DC-0097008C2F44}";
+            public const string SecondTwitterTags_FieldId = "{90C3AE8A-C106-4265-B385-B449A4962343}";
+            public const string ThirdSocialIcon_FieldId = "{31A7CA3B-2A25-4352-BA11-0F47156A087A}";
+            public const string ThirdSocialLink_FieldId = "{AE572236-19E2-44F7-B901-FA722C06D4EF}";
+            public const string ThirdTwitterTags_FieldId = "{48F948EB-7A98-402A-8134-011FA1DF01E5}";
+        }
     }
 }

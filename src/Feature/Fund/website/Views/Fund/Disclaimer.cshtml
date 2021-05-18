@@ -1,7 +1,7 @@
 ﻿@model LionTrust.Feature.Fund.Models.FundDisclaimerViewModel
 @if (Model != null && Model.Component != null && Model.Fund != null)
 {
-    <div class="@(Model.Component.SmallSize ? "article-with-small" : "article-with-big") @(Model.Component.TextColor != null ? Model.Component.TextColor.Value : "text-black")">
+    <div class="disclaimer-text @(Model.Component.SmallSize ? "article-with-small" : "article-with-big") @(Model.Component.TextColor != null ? Model.Component.TextColor.Value : "text-black")">
         @Html.Raw(Model.Fund.RiskWarning)
     </div>
 }
