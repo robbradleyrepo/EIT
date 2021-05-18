@@ -1,0 +1,21 @@
+﻿---
+ID: "550b8337-9522-4564-a70d-053bbbbad77f"
+Parent: "fdb21766-a746-4b18-9b6d-66f69125772d"
+Template: "c82dc5ff-09ef-4403-96d3-3caf377b8c5b"
+Path: /sitecore/content/LionTrustNew/Settings/Datasources/funddetailnav
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210511T101604Z
+    - ID: "498dd5b6-7dae-44a7-9213-1d32596ad14f"
+      Hint: DatasourceTemplate
+      Value: /sitecore/templates/Project/LionTrust/Content Types/Fund Detail Navigation
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
