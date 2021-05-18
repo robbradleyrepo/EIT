@@ -1,6 +1,6 @@
 ﻿---
 ID: "7502b69e-d154-4861-a033-bc0cb30a91b5"
-Parent: "5ac6cf7a-26b8-47a1-a326-8cd790317be0"
+Parent: "e05195b8-e2b4-4b6b-8b31-a0ffa3b6e9bd"
 Template: "51d3a578-6e10-4ec6-bb5b-5c1307a6d661"
 Path: /sitecore/content/LionTrustNew/Home
 DB: master
@@ -39,14 +39,26 @@ Languages:
               s:id="{79B70F2C-3966-42CE-BC5E-FB3252C320D3}"
               s:ph="main" />
             <r
-              uid="{2BEDA3E9-A2AB-4EA4-9A6A-7F16D04F146A}"
+              uid="{443B0C46-A8DB-46E1-9075-879FCB5D5C5F}"
               p:after="r[@uid='{529F0292-448B-44E1-8D2E-31D375136CDC}']"
-              s:ds="{134BF211-B8DE-405A-A593-E80F3674C33C}"
-              s:id="{C3B11E64-1214-410E-BA83-3347C5B59A7E}"
+              s:ds="{FE442C67-1CF1-4EA8-865A-6914DC0B3838}"
+              s:id="{7166AE9D-EFBD-48B3-B38F-AFD4CAAB5278}"
+              s:ph="main" />
+            <r
+              uid="{CCD71EBC-E202-47FA-8569-B6288FF6832C}"
+              p:after="r[@uid='{443B0C46-A8DB-46E1-9075-879FCB5D5C5F}']"
+              s:ds="{4D6F3EAB-80A9-4E5E-A923-F18427A104CA}"
+              s:id="{C4570003-4866-4EAA-B069-8FA6611DC0EC}"
+              s:ph="main" />
+            <r
+              uid="{8AFADC0D-9AAB-4B4E-A0A1-7942610C3C2D}"
+              p:after="r[@uid='{CCD71EBC-E202-47FA-8569-B6288FF6832C}']"
+              s:ds="{B6F52F29-BA36-45EB-A9DA-94D28BC3F2DD}"
+              s:id="{DC0AC587-3DF0-468C-9F4F-6E8C137ECD47}"
               s:ph="main" />
             <r
               uid="{9FF1B15A-997B-42A0-AF3D-DA66032F7C72}"
-              p:after="r[@uid='{2BEDA3E9-A2AB-4EA4-9A6A-7F16D04F146A}']"
+              p:after="r[@uid='{8AFADC0D-9AAB-4B4E-A0A1-7942610C3C2D}']"
               s:ds="{7D4A1449-1D16-4532-BADF-876BFDD69E34}"
               s:id="{C1E344E3-1017-4ECE-A44E-21727844E3CE}"
               s:ph="main" />
@@ -75,4 +87,14 @@ Languages:
       Hint: NavigationRoot_ContactUsPage
       Value: "{0DE95AE4-41AB-4D01-9EB0-67441B7C2450}"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Value: "20210517T163406:637568660466895035Z"
+      Hint: __Created
+      Value: 20210517T163406Z
+    - ID: "95f0787b-70e6-4164-98c0-f9502163d720"
+      Hint: NavigationRoot_HeaderConfiguration
+      Value: "{8AF83FDB-F9D8-4B35-8C8E-C0F9465ED7B2}"
+    - ID: "e27b5db1-ce93-4cb1-ba69-f78556aacaf0"
+      Hint: NavigationRoot_FooterConfiguration
+      Value: "{8362F08B-C427-4B66-B703-EB98AC1D9183}"
+    - ID: "f113bf3d-fe80-4a15-9cda-679b3c3cb3be"
+      Hint: Identity_Logo
+      Value: 
