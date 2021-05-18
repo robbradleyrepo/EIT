@@ -53,5 +53,14 @@
 
             return View("~/Views/Article/ArticleScroller.cshtml", articleScrollerViewModel);
         }
+
+        public ActionResult ArticleLinks()
+        {
+            var articleLinksViewModel = new ArticleLinksViewModel();
+            articleLinksViewModel.ArticleLinks = _mvcContext.GetDataSourceItem<IArticleLinks>();
+            articleLinksViewModel.Article = _mvcContext.GetPageContextItem<IArticle>();
+
+            return View("~/Views/Article/ArticleLinks.cshtml", articleLinksViewModel);
+        }
     }
 }
