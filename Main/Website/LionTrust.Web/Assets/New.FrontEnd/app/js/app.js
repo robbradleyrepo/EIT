@@ -16,6 +16,7 @@ import articleFilter from "./componets/articleFilter";
 import parallaxScrolling from "./componets/parallaxScrolling";
 import stickyNavbar from "./componets/stickyNavbar";
 import literatureOverlay from "./componets/literatureOverlay";
+import creditRatingChart from "./componets/creditRatingChart";
 
 document.addEventListener("DOMContentLoaded", () => {
   onboardingOverlay();
@@ -28,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   awardsSlider();
   stickyNavbar();
   literatureOverlay();
+  creditRatingChart();
   if (document.querySelector(".article-page")) articleFilter();
   if (document.querySelector(".main-page")) parallaxScrolling();
 
