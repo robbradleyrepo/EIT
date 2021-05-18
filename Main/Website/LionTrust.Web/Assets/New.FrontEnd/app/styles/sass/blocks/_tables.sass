@@ -3,6 +3,8 @@
         font-size: 26px
         line-height: 32px
         color: $black
+        &__credit-sec
+            margin-bottom: -6px
 
 // Customize default bootstrap styles
 .table
@@ -84,7 +86,7 @@
                 padding-left: 32px
             &:last-child
                 padding-right: 32px
-            
+
     thead, tbody, tfoot
         .primary-row
             td, th
@@ -97,7 +99,6 @@
         &__gold
             background: $gold
 
-    
 .table.table-full-border
     tbody
         border: 1px solid $secondary-silver
@@ -127,3 +128,9 @@
         margin-right: 5px
         width: 38px
         text-align: right
+
+.chart-table
+    border: 1px solid $secondary-silver
+    padding: 12px
+    @include breakpoint(desktop, up)
+        padding: 20px
