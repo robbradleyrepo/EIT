@@ -1,20 +1,24 @@
 ﻿---
-ID: "7626fd78-bc75-4f9c-80e7-dc947364a29b"
-Parent: "ff86fe68-77e1-45a3-aa4f-be9108439a84"
+ID: "64b901ea-34eb-48d1-94b9-bd58e494cc07"
+Parent: "0f82e851-c796-4d0f-b472-967ba75b710c"
 Template: "99f8905d-4a87-4eb8-9f8b-a9bebfb3add6"
-Path: /sitecore/layout/renderings/Feature/Article/Article Rich Text
+Path: "/sitecore/layout/Renderings/Feature/Contact/BC035 - Follow Us Socials"
 DB: master
 SharedFields:
 - ID: "51b435bc-f7b9-478a-9c51-52916af96ff5"
   Hint: Path
-  Value: /views/article/articlecontent.cshtml
+  Value: ~/Views/Contact/FollowUsSocials.cshtml
+- ID: "a2f5d9df-8cba-4a1d-99eb-51acb94cb057"
+  Hint: Page Editor Buttons
+  Type: Treelist
+  Value: "{9AC19EB2-BCD5-4032-8E06-961B96F8756F}"
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
-  Value: "site:articlerichtext"
+  Value: "site:followussocial"
 - ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
   Hint: __Thumbnail
   Value: |
-    <image mediaid="{A6B593EB-B3E5-4875-8CAD-D11D02FD410D}" />
+    <image mediaid="{5077DDDC-3C88-4522-96A3-1264976023D1}" />
 Languages:
 - Language: en
   Versions:
@@ -26,4 +30,4 @@ Languages:
       Value: 1
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210517T115217Z
+      Value: 20210517T180943Z

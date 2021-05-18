@@ -22,5 +22,8 @@
 
         [SitecoreField(Constants.Article.Image_FieldId)]
         Image Image { get; set; }
+
+        [SitecoreField(Constants.Article.PdfDocument_FieldId)]
+        File PdfDocument { get; set; }
     }
 }

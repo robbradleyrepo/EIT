@@ -86,6 +86,7 @@
     <Content Include="Views\Article\IntroQuote.cshtml" />
     <Content Include="Views\Article\ArticleContent.cshtml" />
     <Content Include="Views\Article\Article.cshtml" />
+    <Content Include="Views\Article\ArticleLinks.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -94,12 +95,14 @@
     <Compile Include="Controllers\ArticleHeaderController.cs" />
     <Compile Include="Controllers\RelatedArticlesController.cs" />
     <Compile Include="Controllers\FeaturedArticlesController.cs" />
+    <Compile Include="Models\ArticleLinksViewModel.cs" />
     <Compile Include="Models\ArticleScrollerViewModel.cs" />
     <Compile Include="Models\ArticleViewModel.cs" />
     <Compile Include="Models\IArticle.cs" />
     <Compile Include="Models\IArticleFilter.cs" />
     <Compile Include="Models\IArticleGlassBase.cs" />
     <Compile Include="Models\IArticleHeader.cs" />
+    <Compile Include="Models\IArticleLinks.cs" />
     <Compile Include="Models\IArticleRichText.cs" />
     <Compile Include="Models\IArticleText.cs" />
     <Compile Include="Models\IRelatedArticles.cs" />

@@ -1,0 +1,35 @@
+﻿@using LionTrust.Foundation.ORM.Extensions
+@model LionTrust.Feature.Contact.Models.FollowUsSocialIcon
+@if (Model != null)
+{
+    var link = Model.SocialLink.LinkUrl("#");
+    var imageSrc = Model.SocialIcon.GetSafeSitecoreImageUrl();
+    var imageAlt = Model.SocialIcon.GetSafeSitecoreImageAltText();
+
+    if (!string.IsNullOrEmpty(Model.TwitterTags))
+    {
+        var tags = Model.TwitterTags.Split(',');
+
+        <div class="follow-us__link">
+            <a href="#" class="mr-0" target="_blank">
+                <img src="@imageSrc" alt="@imageAlt" />
+            </a>
+            @foreach (var tag in tags)
+            {
+                <a href="https://twitter.com/@tag" class="follow-us__link" target="_blank">@@@tag</a>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="follow-us__link">
+            <a href="@link" class="mr-0" target="_blank"><img src="@imageSrc" alt="@imageAlt" /></a>
+            <a href="@link" target="_blank">
+                @if (Model.SocialLink != null)
+                {
+                    @Model.SocialLink.Text
+                }
+            </a>
+        </div>
+    }
+}
