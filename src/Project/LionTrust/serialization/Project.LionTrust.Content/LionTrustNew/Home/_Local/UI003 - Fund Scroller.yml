@@ -29,11 +29,14 @@ Languages:
     - ID: "63c464ec-3657-4b91-adf5-28ac9036774f"
       Hint: FundScroller_PrimaryCta
       Value: |
-        <link linktype="internal" text="View The Funds" querystring="" target="" id="{F57FDBD9-FF27-4F8B-A1F1-5B3B36C649DB}" />
+        <link text="View The Funds" anchor="" linktype="internal" class="" title=""  querystring="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
     - ID: "8e11c5f7-1fca-4a99-ad05-b81511f973d9"
       Hint: FundScroller_Heading
       Value: Our Private Investor Funds
     - ID: "e8a3c14f-9976-4734-9fe8-5bb53e1dc9b3"
       Hint: FundScroller_SecondaryCta
       Value: |
-        <link linktype="internal" text="See All Guidance" querystring="" target="" id="{F57FDBD9-FF27-4F8B-A1F1-5B3B36C649DB}" />
+        <link text="See All Guidance" anchor="" linktype="internal" class="" title=""  querystring="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
+    - ID: "eb9e31a0-ed28-48fc-8cbf-820264b17306"
+      Hint: FundScroller_Subtitle
+      Value: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex est id porro, quas fugit nostrum, atque, iure mollitia repudiandae non voluptatem. Porro earum mollitia, debitis iusto eveniet ipsam rerum hic?"
