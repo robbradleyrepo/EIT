@@ -69,6 +69,7 @@ export default () => {
           beginAtZero: true,
           ticks: {
             beginAtZero: true,
+            crossAlign: 'far'
           },
           grid: {
             borderDash: [3, 3],
