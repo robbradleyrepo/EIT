@@ -22,41 +22,38 @@
         }
     }
 }
-<header class="header">
-    @Html.Sitecore().Placeholder("navigation")
-    <div class="row">
-        <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-            <div class="lead-banner text-center">
-                <h1 class="lead-banner__title mb-3">
-                    @Html.Glass().Editable(m => m.Heading)
-                </h1>
-                <span class="lead-banner__text @textAlignmentCss">
-                    @Html.Glass().Editable(m => m.Copy)
-                </span>
+<div class="row">
+    <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+        <div class="lead-banner text-center">
+            <h1 class="lead-banner__title mb-3">
+                @Html.Glass().Editable(m => m.Heading)
+            </h1>
+            <span class="lead-banner__text @textAlignmentCss">
+                @Html.Glass().Editable(m => m.Copy)
+            </span>
 
-                <div class="lead-banner__btnbox mt-4">
+            <div class="lead-banner__btnbox mt-4">
 
-                    @using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.PrimaryCta, Model.PrimaryCtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
+                @using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.PrimaryCta, Model.PrimaryCtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
+                {
+                    if (Model.PrimaryCta != null)
                     {
-                        if (Model.PrimaryCta != null)
-                        {
-                            @Model.PrimaryCta.Text
-                        }
-
-                        <i class='icon-arrow-right imagepromo__arrow animate-arrow'></i>
+                        @Model.PrimaryCta.Text
                     }
 
-                    @using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.SecondaryCta, Model.SecondaryCtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }, isEditable: true))
-                    {
-                        if (Model.SecondaryCta != null)
-                        {
-                            @Model.SecondaryCta.Text
-                        }
+                    <i class='icon-arrow-right imagepromo__arrow animate-arrow'></i>
+                }
 
-                        <i class='icon-arrow-right imagepromo__arrow animate-arrow'></i>
+                @using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.SecondaryCta, Model.SecondaryCtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }, isEditable: true))
+                {
+                    if (Model.SecondaryCta != null)
+                    {
+                        @Model.SecondaryCta.Text
                     }
-                </div>
+
+                    <i class='icon-arrow-right imagepromo__arrow animate-arrow'></i>
+                }
             </div>
         </div>
     </div>
-</header>
+</div>
