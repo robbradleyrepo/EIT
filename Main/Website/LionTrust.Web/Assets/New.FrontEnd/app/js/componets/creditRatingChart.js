@@ -1,49 +1,15 @@
-import {
-  Chart,
-  ArcElement,
-  BarElement,
-  PointElement,
-  BarController,
-  CategoryScale,
-  LinearScale,
-  LogarithmicScale,
-  RadialLinearScale,
-  TimeScale,
-  TimeSeriesScale,
-  Decimation,
-  Filler,
-  Legend,
-  Title,
-  // Tooltip
-} from "chart.js";
+import Chart from "chart.js";
 
 export default () => {
   if (document.getElementById("creditRating")) {
     const ctx = document.getElementById("creditRating").getContext("2d");
     const { labels, data, maxValue } = $("#dataCreditRating").data("chart");
-    Chart.defaults.font.size = 20;
-    Chart.defaults.font.family = "futura-pt";
-    Chart.defaults.font.weight = "300";
-    Chart.register(
-      ArcElement,
-      BarElement,
-      PointElement,
-      BarController,
-      CategoryScale,
-      LinearScale,
-      LogarithmicScale,
-      RadialLinearScale,
-      TimeScale,
-      TimeSeriesScale,
-      Decimation,
-      Filler,
-      Legend,
-      Title
-      // Tooltip
-    );
+    Chart.defaults.global.defaultFontSize = 20;
+    Chart.defaults.global.defaultFontFamily = "futura-pt";
+    Chart.defaults.global.defaultFontStyle = "300";
 
     const myChart = new Chart(ctx, {
-      type: "bar",
+      type: "horizontalBar",
       data: {
         labels,
         datasets: [
@@ -64,42 +30,44 @@ export default () => {
         },
         maintainAspectRatio: true,
         responsive: true,
-        indexAxis: "y",
+        // indexAxis: "y",
         scales: {
-          y: {
-            beginAtZero: true,
-            ticks: {
-              beginAtZero: true,
-              crossAlign: "far",
-            },
-            grid: {
-              borderDash: [3, 3],
-              drawTicks: false,
-            },
-          },
-          x: {
-            alignToPixels: true,
-            max: maxValue,
-            // display: false,
-            grid: {
-              display: false,
-            },
-            ticks: {
-              callback: function (value, index, values) {
-                return value + "%";
+          xAxes: [
+            {
+              stacked: true,
+              gridLines: {
+                display: false,
+              },
+              ticks: {
+                callback: function (value, index, values) {
+                  return value + "%";
+                },
+                beginAtZero: true,
+                stepSize: 10,
+                max: maxValue,
               },
             },
-          },
+          ],
+          yAxes: [
+            {
+              gridLines: {
+                color: "#dee2e6",
+                borderDash: [3, 3],
+              },
+            },
+          ],          
         },
-        plugins: {
-          legend: {
+        legend: {
             position: "bottom",
             align: "start",
             labels: {
-              boxWidth: 15,
+              boxWidth: 18,
+              boxHeight: 15,
             },
           },
-        },
+          tooltips: {
+              enabled: false
+          }
       },
     });
   }
