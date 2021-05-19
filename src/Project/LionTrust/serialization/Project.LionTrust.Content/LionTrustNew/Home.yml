@@ -84,16 +84,36 @@ Languages:
         </r>
     - ID: "0d831d08-90c7-4e31-b880-5a93146b3029"
       Hint: NavigationRoot_ContactUsPage
-      Value: "{0DE95AE4-41AB-4D01-9EB0-67441B7C2450}"
+      Value: "{AF114D58-8E0B-462A-B421-78C1FD9C9A13}"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20210517T163406Z
+    - ID: "6eb0248b-457f-491c-8f9e-13aefe2cdec8"
+      Hint: NavigationRoot_SignUpNewsletter
+      Value: "{E4735412-929A-48A3-96C9-9DDBA002DF25}"
+    - ID: "6f6a49b5-c780-4ede-9eb4-9ea509204434"
+      Hint: NavigationRoot_MyPreferences
+      Value: "{D2857E0A-9589-4025-AEC5-6005FDD6BF4A}"
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: LionTrust
     - ID: "95f0787b-70e6-4164-98c0-f9502163d720"
       Hint: NavigationRoot_HeaderConfiguration
       Value: "{8AF83FDB-F9D8-4B35-8C8E-C0F9465ED7B2}"
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: LionTrust
+    - ID: "b810a405-73f4-48cc-af61-778c82531262"
+      Hint: NavigationRoot_MyLionTrust
+      Value: "{A2C6B1D1-DBE3-4032-81BE-1B66BBF2709E}"
     - ID: "e27b5db1-ce93-4cb1-ba69-f78556aacaf0"
       Hint: NavigationRoot_FooterConfiguration
       Value: "{8362F08B-C427-4B66-B703-EB98AC1D9183}"
+    - ID: "e409ce1d-3e4e-4c73-a01d-ba8e98bdf25f"
+      Hint: Breadcrumb_IncludeInBreadcrumb
+      Type: Checkbox
+      Value: 1
     - ID: "f113bf3d-fe80-4a15-9cda-679b3c3cb3be"
       Hint: Identity_Logo
-      Value: 
+      Value: |
+        <image mediaid="{F4A4D6EA-7A38-4BA8-B40A-66FEF9C13B0A}" />

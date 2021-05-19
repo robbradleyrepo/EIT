@@ -13,6 +13,7 @@ SharedFields:
     {EC2BBBDD-7D39-4598-A98C-4BA5E4163A07}
     {4C4E3993-F6D4-4040-A3FD-E5DEB438BFF8}
     {5CBA079C-D5AD-4342-B6F5-DA1D08D72F47}
+    {A3E61FC4-9DCD-4DE8-80BA-A3EAFA5685EC}
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Type: layout
@@ -46,6 +47,9 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\Admin
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: LionTrust
     - ID: "960fe422-ace9-47e8-9e18-5d7e5ffa218f"
       Hint: Menu Title
       Value: $name
@@ -59,6 +63,10 @@ Languages:
       Hint: ShowInNavigation
       Type: Checkbox
       Value: 0
+    - ID: "e409ce1d-3e4e-4c73-a01d-ba8e98bdf25f"
+      Hint: Breadcrumb_IncludeInBreadcrumb
+      Type: Checkbox
+      Value: 1
     - ID: "e4a364e6-2e1a-4854-abd8-6a02acf832cd"
       Hint: ChangeLabel
       Value: Change
