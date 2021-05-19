@@ -1,50 +1,51 @@
-﻿@using System.Collections.Specialized
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using System.Collections.Specialized
 @model LionTrust.Feature.Banner.Models.IBannerWithSlider
 @if (Model != null)
 {
-<div class="awards">
-    <div class="container">
-        <h3 class="text-center awards__heading">
-            @Html.Glass().Editable(Model, m => m.Heading)
-        </h3>
-        @if (Model.Images != null || Sitecore.Context.PageMode.IsExperienceEditor)
-        {
-            using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Banner/BannerWithSlider", Model.Id.ToString(), "Edit Banner with Slider"))
+    <div class="awards">
+        <div class="container">
+            <h3 class="text-center awards__heading">
+                @Html.Glass().Editable(Model, m => m.Heading)
+            </h3>
+            @if (Model.Images != null || Sitecore.Context.PageMode.IsExperienceEditor)
             {
-                if (Sitecore.Context.PageMode.IsExperienceEditor)
+                using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Banner/BannerWithSlider", Model.Id.ToString(), "Edit Banner with Slider"))
                 {
-                    <div class="text-gold">
-                        Edit Banner with Slider
+                    if (Sitecore.Context.PageMode.IsExperienceEditor)
+                    {
+                        <div class="text-gold">
+                            Edit Banner with Slider
+                        </div>
+                    }
+                    <div class="swiper-container-awards">
+                        <div class="swiper-wrapper">
+                            @foreach (var imageWithTitleAndText in Model.Images)
+                            {
+                                using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Banner/BannerWithSlider/ImageWithTitleAndText", imageWithTitleAndText.Id.ToString(), "Edit image with title and text"))
+                                {
+                                    <div class="swiper-slide">
+                                        <div class="awards__slide">
+                                            @Html.Glass().RenderImage(imageWithTitleAndText, m => m.Image, new NameValueCollection { { "class", "awards__img" } }, isEditable: true)
+                                            <span class="awards__title txtlimit twoline">
+                                                @Html.Glass().Editable(imageWithTitleAndText, m => m.Title)
+                                            </span>
+                                            <span class="awards__desc txtlimit twoline">
+                                                @Html.Glass().Editable(imageWithTitleAndText, m => m.Text)
+                                            </span>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
                     </div>
                 }
-                <div class="swiper-container-awards">
-                    <div class="swiper-wrapper">
-                        @foreach (var imageWithTitleAndText in Model.Images)
-                        {
-                            using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Banner/BannerWithSlider/ImageWithTitleAndText", imageWithTitleAndText.Id.ToString(), "Edit image with title and text"))
-                            {                                
-                                <div class="swiper-slide">
-                                    <div class="awards__slide">
-                                        @Html.Glass().RenderImage(imageWithTitleAndText, m => m.Image, new NameValueCollection { { "class", "awards__img" } }, isEditable : true)
-                                        <span class="awards__title txtlimit twoline">
-                                            @Html.Glass().Editable(imageWithTitleAndText, m => m.Title)
-                                        </span>
-                                        <span class="awards__desc txtlimit twoline">
-                                            @Html.Glass().Editable(imageWithTitleAndText, m => m.Text)
-                                        </span>
-                                    </div>
-                                </div>
-                            }
-                        }
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                </div>
             }
-        }
+        </div>
     </div>
-</div>
 }
 else if (Sitecore.Context.PageMode.IsExperienceEditor)
 {

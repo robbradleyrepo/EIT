@@ -10,7 +10,7 @@
                         <div class="imagepromo__headbox">
                             <h2>@Html.Glass().Editable(m => m.Heading)</h2>
                         </div>
-                        <div class="imagepromo__contentbox txtlimit tenline text-white">
+                        <div class="imagepromo__contentbox txtlimit tenline">
                             <p class="font-500">
                                 @Html.Glass().Editable(m => m.Subtitle)
                             </p>
@@ -58,7 +58,7 @@
                                 {
                                     if (item.FundPage == null && Sitecore.Context.PageMode.IsExperienceEditor)
                                     {
-                                        @: Please select a fund page
+                                        @: <span style="color:black">Please select a fund page</span>
                                     }
                                     else if (item.FundPage != null)
                                     {

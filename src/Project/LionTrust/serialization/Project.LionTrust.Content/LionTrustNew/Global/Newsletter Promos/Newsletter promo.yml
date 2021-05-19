@@ -12,7 +12,21 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20210419T104914Z
+    - ID: "559bb249-d525-4a4a-be33-562893664018"
+      Hint: NewsletterPromo_Heading
+      Value: Subscribe to our newsletter
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
         sitecore\Admin
+    - ID: "b13daaf9-bea0-425b-a787-ed1becfdf93c"
+      Hint: NewsletterPromo_BackgroundImage
+      Value: |
+        <image mediaid="{D10FF96F-C0AD-4686-ACE6-5520A7B7664E}" />
+    - ID: "ec509492-de0a-43ac-8db4-45a8a193e9dc"
+      Hint: NewsletterPromo_CTA
+      Value: |
+        <link linktype="internal" text="Sign up" querystring="" target="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
+    - ID: "f14fcd68-12b5-45b5-9a05-fdf8bfa90c9f"
+      Hint: NewsletterPromo_Body
+      Value: Hear from the The Global fixed income team in our weekly newsletter.

@@ -2,6 +2,11 @@
 {
     public static class Constants
     {
+        public static class Image
+        {
+            public const string ImageFieldId = "{48CE5243-5DC9-4B3C-B27F-EA89478F21A5}";
+        }
+
         public static class ArticleRichText
         {
             public const string CopyFieldId = "{6876726D-D5D2-40DF-94A7-A9A6FAE2F683}";

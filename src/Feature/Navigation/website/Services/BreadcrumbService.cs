@@ -3,6 +3,7 @@
     using LionTrust.Feature.Navigation.Models;
     using LionTrust.Foundation.DI;
     using System.Collections.Generic;
+    using System.Linq;
 
     [Service(ServiceType = typeof(IBreadcrumbService), Lifetime = Lifetime.Singleton)]
     public class BreadcrumbService : IBreadcrumbService
@@ -23,6 +24,7 @@
             }
             else
             {
+                ancestorList.Reverse();
                 return ancestorList.ToArray();
             }
 

@@ -17,7 +17,7 @@
         public ActionResult Render()
         {
             var fundManagerPage = context.GetDataSourceItem<IFundManagerPage>();
-            if (fundManagerPage.Manager == null && !Sitecore.Context.PageMode.IsExperienceEditor)
+            if ((fundManagerPage == null || fundManagerPage.Manager == null) && !Sitecore.Context.PageMode.IsExperienceEditor)
             {
                 return null;
             }

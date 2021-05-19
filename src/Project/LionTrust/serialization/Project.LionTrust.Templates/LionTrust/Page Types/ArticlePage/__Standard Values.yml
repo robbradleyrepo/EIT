@@ -19,12 +19,16 @@ SharedFields:
         l="{CD1590E1-6573-4CC7-B0A9-E3BB6A9DADE4}">
         <r
           id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
-          ph="header"
-          uid="{BE8C5C97-D801-42C5-9368-ED6A2E029685}" />
+          ph="navigation"
+          uid="{5D8909EC-92E3-411A-B5CF-8AB5DF23AD34}" />
+        <r
+          id="{29A12478-EBE8-4B5C-BF2E-871026066814}"
+          ph="footer"
+          uid="{03D0CF1B-C611-4378-90D8-78F12ACED81E}" />
         <r
           id="{DD1D438A-3971-438B-B1C9-461415F43488}"
           ph="footer"
-          uid="{4FB00752-0C2B-4E6F-A91A-EDDA689D318B}" />
+          uid="{722E86B8-4512-4BCD-8657-838F5B3EA4F4}" />
       </d>
     </r>
 Languages:
@@ -32,15 +36,37 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{286E3FB0-4AB4-4628-A694-C75BE609BE42}"
+              p:after="*[1=2]"
+              s:id="{A1F6E48A-C7AB-42B2-A8A9-6DB3207F1503}"
+              s:ph="main" />
+          </d>
+        </r>
     - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
       Hint: LegacyArticle_Title
       Value: $name
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20141003T142816Z
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: $name
     - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
       Hint: LegacyPresentationBase_PageTitle
       Value: $name
     - ID: "b6833539-8781-4788-92f4-d173f0727feb"
       Hint: MultipleAuthors_MultipleAuthorsLabel
       Value: Investment Team
+    - ID: "e409ce1d-3e4e-4c73-a01d-ba8e98bdf25f"
+      Hint: Breadcrumb_IncludeInBreadcrumb
+      Type: Checkbox
+      Value: 1

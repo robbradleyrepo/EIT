@@ -1,4 +1,5 @@
-﻿@model LionTrust.Feature.Article.Models.ArticleLinksViewModel
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Article.Models.ArticleLinksViewModel
 @if (Model != null && Model.Article != null && Model.ArticleLinks != null)
 {
     var shareGoal = Model.ArticleLinks.ShareLinkGoal != null ? Model.ArticleLinks.ShareLinkGoal.ToString() : string.Empty;

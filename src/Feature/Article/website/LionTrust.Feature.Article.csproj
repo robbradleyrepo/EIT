@@ -87,6 +87,8 @@
     <Content Include="Views\Article\ArticleContent.cshtml" />
     <Content Include="Views\Article\Article.cshtml" />
     <Content Include="Views\Article\ArticleLinks.cshtml" />
+    <Content Include="Views\Article\Image.cshtml" />
+    <Content Include="Views\Article\GoldQuote.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -105,6 +107,7 @@
     <Compile Include="Models\IArticleLinks.cs" />
     <Compile Include="Models\IArticleRichText.cs" />
     <Compile Include="Models\IArticleText.cs" />
+    <Compile Include="Models\IImage.cs" />
     <Compile Include="Models\IRelatedArticles.cs" />
     <Compile Include="Models\IArticlePromo.cs" />
     <Compile Include="Models\IArticleScroller.cs" />

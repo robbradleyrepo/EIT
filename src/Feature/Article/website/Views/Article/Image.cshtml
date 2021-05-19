@@ -1,0 +1,7 @@
+@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Article.Models.IImage
+@if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    return;
+}
+@Html.Glass().Editable(m => m.Image, new {@class = "full-with-img" })
