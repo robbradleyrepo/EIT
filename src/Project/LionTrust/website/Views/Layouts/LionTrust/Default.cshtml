@@ -27,13 +27,20 @@
             break;
     }
 
+    var mainClass = string.Empty;
+    switch (@Html.Sitecore().CurrentItem.TemplateID.ToString())
+    {
+        case @Constants.PageTypes.HomeTemplateId:
+            mainClass = "main-page-conentent";
+            break;
+    }
+
     var isExperienceEditor = Sitecore.Context.PageMode.IsExperienceEditor ? "experience-editor" : string.Empty;
 }
 
     <body class="@bodyClass @isExperienceEditor">
         @Html.Sitecore().Placeholder("header")
-        <div class="mask"></div>
-        <main id="main" role="main">
+        <main id="main" role="main" class="@mainClass">
             @Html.Sitecore().Placeholder("main")
         </main>
         @Html.Sitecore().Placeholder("footer")
