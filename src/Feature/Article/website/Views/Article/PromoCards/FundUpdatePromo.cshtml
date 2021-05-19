@@ -1,68 +1,69 @@
-﻿@using System.Collections.Specialized;
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using System.Collections.Specialized;
 @using LionTrust.Foundation.ORM.Extensions
 @model LionTrust.Feature.Article.Models.IArticlePromo
 @if (Model != null)
 {
-<div class="article-promo">
-    <a href="#article promo" class="article-promo__front">
-    </a>
-    <a href="#" class="article-promo__body">
-        @if (Model.Fund != null)
-        {
-            <div class="article-promo__head">
-                <img class="article-promo__head-img" src="/dist/images/components/banners/writer.jpeg" alt="">
-                <span class="article-promo__head-title">@Html.Glass().Editable(Model.Fund, m => m.PageTitle)</span>
-            </div>
-        }
-        else if (Sitecore.Context.PageMode.IsExperienceEditor)
-        {
-            <div class="article-promo__head">
-                <img class="article-promo__head-img" src="/dist/images/components/banners/writer.jpeg" alt="">
-                <span class="article-promo__head-title">No Fund selected for Article</span>
-            </div>
-        }
-        <span class="article-promo__title">
-            @Html.Glass().Editable(Model, m => m.Title)
-        </span>
-        <span class="article-promo__desc">
-            @Html.Glass().Editable(Model, m => m.Subitle)
-        </span>
-    </a>
-    <div class="article-promo__footer">
-        <div class="article-promo__footer-item">
-            <img class="article-promo__clock" src="\dist\images\components\svg-icons\clock.svg" alt="icon">
-            <span class="article-promo__footer-text">
-                @using (Html.Glass().BeginEditFrame(Model, "Edit Article Date", x => x.Date))
-                {
-                    if (Sitecore.Context.PageMode.IsExperienceEditor)
+    <div class="article-promo">
+        <a href="#article promo" class="article-promo__front">
+        </a>
+        <a href="#" class="article-promo__body">
+            @if (Model.Fund != null)
+            {
+                <div class="article-promo__head">
+                    <img class="article-promo__head-img" src="/dist/images/components/banners/writer.jpeg" alt="">
+                    <span class="article-promo__head-title">@Html.Glass().Editable(Model.Fund, m => m.PageTitle)</span>
+                </div>
+            }
+            else if (Sitecore.Context.PageMode.IsExperienceEditor)
+            {
+                <div class="article-promo__head">
+                    <img class="article-promo__head-img" src="/dist/images/components/banners/writer.jpeg" alt="">
+                    <span class="article-promo__head-title">No Fund selected for Article</span>
+                </div>
+            }
+            <span class="article-promo__title">
+                @Html.Glass().Editable(Model, m => m.Title)
+            </span>
+            <span class="article-promo__desc">
+                @Html.Glass().Editable(Model, m => m.Subitle)
+            </span>
+        </a>
+        <div class="article-promo__footer">
+            <div class="article-promo__footer-item">
+                <img class="article-promo__clock" src="\dist\images\components\svg-icons\clock.svg" alt="icon">
+                <span class="article-promo__footer-text">
+                    @using (Html.Glass().BeginEditFrame(Model, "Edit Article Date", x => x.Date))
                     {
-                        @Model.Date.ToString("d MMMM yyyy")
-                    }
-                    else
-                    {
-                        if (Model.Date != DateTime.MinValue)
+                        if (Sitecore.Context.PageMode.IsExperienceEditor)
                         {
                             @Model.Date.ToString("d MMMM yyyy")
                         }
                         else
                         {
-                            @Model.PublishedDate.ToString("d MMMM yyyy")
+                            if (Model.Date != DateTime.MinValue)
+                            {
+                                @Model.Date.ToString("d MMMM yyyy")
+                            }
+                            else
+                            {
+                                @Model.PublishedDate.ToString("d MMMM yyyy")
+                            }
                         }
                     }
-                }
-            </span>
+                </span>
+            </div>
         </div>
-    </div>
 
-    @if ((Model.Image != null && !string.IsNullOrEmpty(Model.Image.Src)) || Sitecore.Context.PageMode.IsExperienceEditor)
-    {
-        @Html.Glass().RenderImage(Model, m => m.Image, new NameValueCollection { { "class", "article-promo__back" } }, isEditable: true)
-    }
-    else
-    {
-        @Html.Glass().RenderImage(Model, m => m.HeaderImage, new NameValueCollection { { "class", "article-promo__back" } }, isEditable: true)
-    }
-</div>
+        @if ((Model.Image != null && !string.IsNullOrEmpty(Model.Image.Src)) || Sitecore.Context.PageMode.IsExperienceEditor)
+        {
+            @Html.Glass().RenderImage(Model, m => m.Image, new NameValueCollection { { "class", "article-promo__back" } }, isEditable: true)
+        }
+        else
+        {
+            @Html.Glass().RenderImage(Model, m => m.HeaderImage, new NameValueCollection { { "class", "article-promo__back" } }, isEditable: true)
+        }
+    </div>
 }
 else if (Sitecore.Context.PageMode.IsExperienceEditor)
 {
