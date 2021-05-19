@@ -29,15 +29,19 @@
 
                 foreach (var carouselCard in carouselCards)
                 {
-                    using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Carousel/Carousel Card", carouselCard.Id.ToString(), "Edit Carousel Item"))
+                    if (Sitecore.Context.PageMode.IsExperienceEditor)
                     {
-                        <div>Edit Slide</div>
+                        using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Carousel/Carousel Card", carouselCard.Id.ToString(), "Edit Carousel Item"))
+                        {
+                            @:<div>Edit Slide</div>
+                        }
                     }
 
                     if (carouselCard.Id == carouselCards.FirstOrDefault().Id)
                     {
-                        @:<div class="swiper-wrapper">
+                            @:<div class="swiper-wrapper">
                     }
+
 
                         <div class="swiper-slide">
                             <div class="slide" style="background-image: url('@carouselCard.Image.GetSafeSitecoreImageUrl()');">
@@ -54,7 +58,7 @@
                                 <button class="slide__play" data-goal-trigger="@carouselCard.CTAGoal.ToString()" data-type="iframe" data-fancybox data-src="@carouselCard.CTALink.LinkUrl()">
                                     @if (carouselCard.CTALink != null && !string.IsNullOrEmpty(carouselCard.CTALink.Text))
                                     {
-                                        @carouselCard.CTALink.Text
+                    @carouselCard.CTALink.Text
                                     }
                                     <svg xmlns="http://www.w3.org/2000/svg" width="53" height="53" fill="rgba(255,255,255,0)" xmlns:v="https://vecta.io/nano">
                                         <g stroke="#fff"><circle cx="26.5" cy="26.5" r="26.5" stroke="none" /><circle cx="26.5" cy="26.5" r="26" fill="none" /></g>
@@ -69,14 +73,14 @@
 
 
 
-                        if (carouselCard.Id == carouselCards.FirstOrDefault().Id)
-                        {
+                    if (carouselCard.Id == carouselCards.LastOrDefault().Id)
+                    {
                            @:</div>
                         }
+                    }
+
                 }
 
-         }
-     }
 
             <div class="swiper-pagination"></div>
 
@@ -85,7 +89,7 @@
 
         </div>
     </div>
-}
+                }
 else if (Sitecore.Context.PageMode.IsExperienceEditor)
 {
     <div> Please assign datasource for Homepage Carousel component! </div>
