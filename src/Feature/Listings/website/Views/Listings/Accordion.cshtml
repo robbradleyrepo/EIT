@@ -14,7 +14,7 @@
             }
             @foreach (var item in Model.Data.Children)
             {
-                var imageSrc = counter == 0;                
+                var imageSrc = item.Image != null ? item.Image.Src : string.Empty;               
                 var isCollapsed = item != Model.Data.Children.First();
                 var collapsedClass = isCollapsed ? "collapsed" : string.Empty;
                 var showClass = isCollapsed ? string.Empty : "show";
