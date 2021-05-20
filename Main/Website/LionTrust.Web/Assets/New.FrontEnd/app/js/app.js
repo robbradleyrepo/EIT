@@ -17,6 +17,7 @@ import parallaxScrolling from "./componets/parallaxScrolling";
 import stickyNavbar from "./componets/stickyNavbar";
 import literatureOverlay from "./componets/literatureOverlay";
 import creditRatingChart from "./componets/creditRatingChart";
+import capitalisationChart from "./componets/capitalisationChart";
 
 document.addEventListener("DOMContentLoaded", () => {
   onboardingOverlay();
@@ -30,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   stickyNavbar();
   literatureOverlay();
   creditRatingChart();
+  capitalisationChart();
   if (document.querySelector(".article-page")) articleFilter();
   if (document.querySelector(".main-page")) parallaxScrolling();
 
