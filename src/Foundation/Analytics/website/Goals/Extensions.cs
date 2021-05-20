@@ -18,7 +18,7 @@
         }
         public HtmlString GenerateGoalAnchor<TK>(TK item, Expression<Func<TK, object>> field, Func<string> url, string cssClass, Guid goalId, Func<string> content, object parameters = null)
         {
-            return glass.Editable<TK>(item, field, x => $"<a href={url()} class='{cssClass}' data-goal-trigger='{goalId}'>{content()}</a>", parameters);
+            return glass.Editable<TK>(item, field, x => $"<a href='{url()}' class='{cssClass}' data-goal-trigger='{goalId}'>{content()}</a>", parameters);
         }
 
         public RenderingResult BeginRenderLinkWithGoal<TK>(TK model, Expression<Func<TK, object>> field, Guid goalId, NameValueCollection attributes = null, bool isEditable = false, bool alwaysRender = false)
