@@ -25,19 +25,7 @@
 
         public ActionResult Header()
         {
-            var navigationViewModel = new NavigationViewModel();
-            var item = RenderingContext.Current.Rendering.Item;
-            var rootItem = _navigationRepository.GetNavigationSiteRoot(item);
-            if (rootItem != null)
-            {
-                navigationViewModel.RootItem = _mvcContext.SitecoreService.GetItem<ISiteRoot>(rootItem.ID.Guid);
-            }
-
-            var homeItem = _navigationRepository.GetNavigationRoot(item);
-            if (homeItem != null)
-            {
-                navigationViewModel.HomeItem = _mvcContext.SitecoreService.GetItem<IHome>(homeItem.ID.Guid);
-            }
+            NavigationViewModel navigationViewModel = GetNavigationViewModel();
 
             return View("~/Views/Navigation/Header.cshtml", navigationViewModel);
         }
@@ -53,6 +41,32 @@
             }
 
             return View("~/Views/Navigation/Footer.cshtml", homeModel);
+        }
+
+        public ActionResult Menu()
+        {
+            NavigationViewModel navigationViewModel = GetNavigationViewModel();
+
+            return View("~/Views/Navigation/Menu.cshtml", navigationViewModel);
+        }
+
+        private NavigationViewModel GetNavigationViewModel()
+        {
+            var navigationViewModel = new NavigationViewModel();
+            var item = RenderingContext.Current.Rendering.Item;
+            var rootItem = _navigationRepository.GetNavigationSiteRoot(item);
+            if (rootItem != null)
+            {
+                navigationViewModel.RootItem = _mvcContext.SitecoreService.GetItem<ISiteRoot>(rootItem.ID.Guid);
+            }
+
+            var homeItem = _navigationRepository.GetNavigationRoot(item);
+            if (homeItem != null)
+            {
+                navigationViewModel.HomeItem = _mvcContext.SitecoreService.GetItem<IHome>(homeItem.ID.Guid);
+            }
+
+            return navigationViewModel;
         }
     }
 }
