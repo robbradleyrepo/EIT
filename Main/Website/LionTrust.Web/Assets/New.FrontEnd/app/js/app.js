@@ -18,6 +18,7 @@ import stickyNavbar from "./componets/stickyNavbar";
 import literatureOverlay from "./componets/literatureOverlay";
 import creditRatingChart from "./componets/creditRatingChart";
 import capitalisationChart from "./componets/capitalisationChart";
+import fundChartDropdown from "./componets/fundChartDropdown";
 
 document.addEventListener("DOMContentLoaded", () => {
   onboardingOverlay();
@@ -32,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   literatureOverlay();
   creditRatingChart();
   capitalisationChart();
+  fundChartDropdown();
   if (document.querySelector(".article-page")) articleFilter();
   if (document.querySelector(".main-page")) parallaxScrolling();
 
