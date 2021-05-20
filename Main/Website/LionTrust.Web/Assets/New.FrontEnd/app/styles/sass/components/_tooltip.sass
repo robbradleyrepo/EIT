@@ -2,7 +2,7 @@
     border: 1px solid $gold
     text-align: left
 
-.tooltip
+.tooltip::not(.bs-tooltip-top)
     margin-top: -15px
     margin-left: 5px
     .arrow
@@ -19,3 +19,9 @@
             top: -1px
             border-width: 0.6rem 0.5rem 0.5rem 0
             border-right-color: $gold
+
+.bs-tooltip-top .arrow::before
+    top: -1px
+
+.copy-to-clipbord
+    cursor: pointer
