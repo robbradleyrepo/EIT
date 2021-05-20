@@ -1,7 +1,19 @@
 image: node:latest
-
+clone:
+  depth: full
 pipelines:
   custom:
+    create-lighthouse-app:
+      - step:
+          name: Create Lighthouse app
+          script:
+            - curl https://cli-assets.heroku.com/install.sh | sh
+            - export LIGHTHOUSE_HEROKU_API_KEY
+            - /bin/bash ./lighthouse/create-app.sh $LIGHTHOUSE_HEROKU_APP_NAME $HEROKU_APP_USERNAME $HEROKU_APP_PASSWORD
+            - cd ./lighthouse/installer/
+            - npm ci
+            - npm run build
+            - node ./dist/index.js $LIGHTHOUSE_HEROKU_APP_NAME $HEROKU_APP_USERNAME $HEROKU_APP_PASSWORD $BITBUCKET_USERNAME $BITBUCKET_APP_PASS
     lighthouse-checks:
       - step:
           name: Lighthouse Checks
@@ -12,7 +24,7 @@ pipelines:
             - wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
             - sh -c 'echo "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
             - apt-get update && apt-get install google-chrome-stable -y
-            - cd ./tests/ui-tests/
-            - yarn install
-            - yarn run build
-            - node ./build/index.js
+            - yarn global add @lhci/cli@0.7.x
+            - cd ./lighthouse
+            - lhci collect
+            - lhci upload --basicAuth.username=$HEROKU_APP_USERNAME --basicAuth.password=$HEROKU_APP_PASSWORD 

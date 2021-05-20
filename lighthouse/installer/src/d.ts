@@ -1,0 +1,1 @@
+declare module '@lhci/utils/src/api-client.js';
