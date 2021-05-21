@@ -39,48 +39,64 @@
 
                     if (carouselCard.Id == carouselCards.FirstOrDefault().Id)
                     {
-                            @:<div class="swiper-wrapper">
-                    }
+                        @:<div class="swiper-wrapper">
+                        }
 
 
-                        <div class="swiper-slide">
-                            <div class="slide" style="background-image: url('@carouselCard.Image.GetSafeSitecoreImageUrl()');">
-                                <div class="slide__content">
-                                    <div class="slide__head">
-                                        @Html.Glass().RenderImage(carouselCard, x => x.AuthorImage, new NameValueCollection { { "class", "slide__head-img" }, { "alt", carouselCard.AuthorName } })
-                                        <span class="slide__name">@Html.Glass().Editable(carouselCard, x => x.AuthorName)</span>
-                                    </div>
-                                    <h2 class="slide__title">
-                                        @Html.Glass().Editable(carouselCard, x => x.Heading)
-                                    </h2>
-                                </div>
+                              <div class="swiper-slide">
 
-                                <button class="slide__play" data-goal-trigger="@carouselCard.CTAGoal.ToString()" data-type="iframe" data-fancybox data-src="@carouselCard.CTALink.LinkUrl()">
-                                    @if (carouselCard.CTALink != null && !string.IsNullOrEmpty(carouselCard.CTALink.Text))
-                                    {
-                    @carouselCard.CTALink.Text
-                                    }
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="53" height="53" fill="rgba(255,255,255,0)" xmlns:v="https://vecta.io/nano">
-                                        <g stroke="#fff"><circle cx="26.5" cy="26.5" r="26.5" stroke="none" /><circle cx="26.5" cy="26.5" r="26" fill="none" /></g>
-                                        <g transform="matrix(0 1 -1 0 38.182 16.543)">
-                                            <path class="triangle" d="M19.789 18.075H.85l9.47-17.045 9.47 17.045z" />
-                                            <path d="M10.319 2.059L1.7 17.575h17.239l-8.62-15.516m0-2.059l10.319 18.575H0L10.319 0z" fill="#fff" />
-                                        </g>
-                                    </svg>
-                                </button>
-                            </div>
+                                  <div class="slide" style="background-image: url('@carouselCard.Image.GetSafeSitecoreImageUrl()');">
+                                      @if (!carouselCard.CTAIsVideo)
+                                      {
+                                          using (@Html.Glass().BeginRenderLink(carouselCard, c => c.CTALink, isEditable: true))
+                                          {
+                                              <div class="slide__content">
+                                                  <div class="slide__head">
+                                                      @Html.Glass().RenderImage(carouselCard, x => x.AuthorImage, new NameValueCollection { { "class", "slide__head-img" }, { "alt", carouselCard.AuthorName } })
+                                                      <span class="slide__name">@Html.Glass().Editable(carouselCard, x => x.AuthorName)</span>
+                                                  </div>
+                                                  <h2 class="slide__title">
+                                                      @Html.Glass().Editable(carouselCard, x => x.Heading)
+                                                  </h2>
+                                              </div>
+                                          }
+                                      }
+                                      else
+                                      {
+                                          <div class="slide__content">
+                                              <div class="slide__head">
+                                                  @Html.Glass().RenderImage(carouselCard, x => x.AuthorImage, new NameValueCollection { { "class", "slide__head-img" }, { "alt", carouselCard.AuthorName } })
+                                                  <span class="slide__name">@Html.Glass().Editable(carouselCard, x => x.AuthorName)</span>
+                                              </div>
+                                              <h2 class="slide__title">
+                                                  @Html.Glass().Editable(carouselCard, x => x.Heading)
+                                              </h2>
+                                          </div>
+
+                                          <button class="slide__play" data-goal-trigger="@carouselCard.CTAGoal.ToString()" data-type="iframe" data-fancybox data-src="@carouselCard.CTALink.LinkUrl()">
+                                              @if (carouselCard.CTALink != null && !string.IsNullOrEmpty(carouselCard.CTALink.Text))
+                                              {
+                                                  @carouselCard.CTALink.Text
+                                              }
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="53" height="53" fill="rgba(255,255,255,0)" xmlns:v="https://vecta.io/nano">
+                                                  <g stroke="#fff"><circle cx="26.5" cy="26.5" r="26.5" stroke="none" /><circle cx="26.5" cy="26.5" r="26" fill="none" /></g>
+                                                  <g transform="matrix(0 1 -1 0 38.182 16.543)">
+                                                      <path class="triangle" d="M19.789 18.075H.85l9.47-17.045 9.47 17.045z" />
+                                                      <path d="M10.319 2.059L1.7 17.575h17.239l-8.62-15.516m0-2.059l10.319 18.575H0L10.319 0z" fill="#fff" />
+                                                  </g>
+                                              </svg>
+                                          </button>
+                                      }
+                                  </div>
                         </div>
 
-
-
-                    if (carouselCard.Id == carouselCards.LastOrDefault().Id)
-                    {
-                           @:</div>
-                        }
+                        if (carouselCard.Id == carouselCards.LastOrDefault().Id)
+                                {
+                        @:</div>
                     }
-
                 }
 
+            }
 
             <div class="swiper-pagination"></div>
 
@@ -89,7 +105,7 @@
 
         </div>
     </div>
-                }
+}
 else if (Sitecore.Context.PageMode.IsExperienceEditor)
 {
     <div> Please assign datasource for Homepage Carousel component! </div>
