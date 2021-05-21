@@ -11,30 +11,18 @@
     <div class="container">
         <div class="imagepromo__box">
             <div class="imagepromo__body">
-                <div class="imagepromo__imagebox @(Model.TextAlignment != null && !string.IsNullOrEmpty(Model.TextAlignment.Value) && Model.TextAlignment.Value.Equals("right") ? "order-1" : string.Empty)">
+                <div class="imagepromo__imagebox @(Model.TextAlignment != null && !string.IsNullOrEmpty(Model.TextAlignment.Value) && Model.TextAlignment.Value.Equals("left") ? "order-1" : string.Empty)">
                     <div class="row">
                         <div class="col-6">
                             <div class="imagepromo__imageboxchild">
-                                @if (!Model.HideFirstImage)
-                                {
-                                    @Html.Glass().RenderImage(Model, x => x.FirstImage, new NameValueCollection { { "class", "imagepromo__image-bg" } }, isEditable: true)
-                                }
-                                @if (!Model.HideSecondImage)
-                                {
-                                    @Html.Glass().RenderImage(Model, x => x.SecondImage, new NameValueCollection { { "class", "imagepromo__image-sm" } }, isEditable: true)
-                                }
+                                @Html.Glass().RenderImage(Model, x => x.FirstImage, new NameValueCollection { { "class", "imagepromo__image-bg" } }, isEditable: true)
+                                @Html.Glass().RenderImage(Model, x => x.SecondImage, new NameValueCollection { { "class", "imagepromo__image-sm" } }, isEditable: true)
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="imagepromo__imageboxchild">
-                                @if (!Model.HideThirdImage)
-                                {
-                                    @Html.Glass().RenderImage(Model, x => x.ThirdImage, new NameValueCollection { { "class", "imagepromo__image-sm" } }, isEditable: true)
-                                }
-                                @if (!Model.HideFourthImage)
-                                {
-                                    @Html.Glass().RenderImage(Model, x => x.FourthImage, new NameValueCollection { { "class", "imagepromo__image-bg" } }, isEditable: true)
-                                }
+                                @Html.Glass().RenderImage(Model, x => x.ThirdImage, new NameValueCollection { { "class", "imagepromo__image-sm" } }, isEditable: true)
+                                @Html.Glass().RenderImage(Model, x => x.FourthImage, new NameValueCollection { { "class", "imagepromo__image-bg" } }, isEditable: true)
                             </div>
                         </div>
                     </div>
@@ -48,22 +36,23 @@
                     </p>
 
                     <div class="imagepromo__btnbox">
-                        @if (Model.ShowPrimaryCTA)
+                        @using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.PrimaryCTALink, Model.PrimaryCTAGoal, new NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
                         {
-                            using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.PrimaryCTALink, Model.PrimaryCTAGoal, new NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
+                            if (Model.PrimaryCTALink != null)
                             {
-                                if (Model.PrimaryCTALink != null && !string.IsNullOrEmpty(Model.PrimaryCTALink.Text))
+                                if (!string.IsNullOrEmpty(Model.PrimaryCTALink.Text))
                                 {
                                     @Model.PrimaryCTALink.Text
                                 }
+
                                 <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
                             }
                         }
-                        @if (Model.ShowSecondaryCTA)
+                        @using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.SecondaryCTALink, Model.SecondaryCTAGoal, new NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }, isEditable: true))
                         {
-                            using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.SecondaryCTALink, Model.SecondaryCTAGoal, new NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }, isEditable: true))
+                            if (Model.SecondaryCTALink != null)
                             {
-                                if (Model.SecondaryCTALink != null && !string.IsNullOrEmpty(Model.SecondaryCTALink.Text))
+                                if (!string.IsNullOrEmpty(Model.SecondaryCTALink.Text))
                                 {
                                     @Model.SecondaryCTALink.Text
                                 }
