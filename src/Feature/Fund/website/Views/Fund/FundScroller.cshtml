@@ -59,7 +59,9 @@
                                     {
                                         if (item.FundPage == null && Sitecore.Context.PageMode.IsExperienceEditor)
                                         {
-                                            @: <span style="color:black">Please select a fund page</span>
+                                            <div style="background-color:white">
+                                                <span style="color:black">Please select a fund page</span>
+                                            </div>
                                         }
                                         else if (item.FundPage != null)
                                         {
@@ -70,7 +72,7 @@
                                                 </div>
                                                 <div class="fund-card__content">
                                                     <span class="fund-card__subtitle">@Html.Glass().Editable(item, i => i.Heading)</span>
-                                                    <span class="fund-card__title">@item.FundPage.FundReference.FundName</span>
+                                                    <span class="fund-card__title">@Html.Glass().Editable(@item, i => i.FundPage.FundReference.FundName)</span>
                                                     <div class="fund-card__text">
                                                         <div class="fund-card__text-top">
                                                             <p>
