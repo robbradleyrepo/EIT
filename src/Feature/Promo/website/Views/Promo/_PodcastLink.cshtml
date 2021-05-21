@@ -4,12 +4,8 @@
 @model LionTrust.Feature.Promo.Models.IPodcastLink
 @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Promo/PodcastLink", Model.Id.ToString(), "Edit Podcast Link"))
 {
-    if (Sitecore.Context.PageMode.IsExperienceEditor)
+    using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.Link, Model.LinkGoal)
     {
-        @:Edit Icon
-    }
-    using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.Link, Model.LinkGoal, isEditable: true))
-    {
-        @Html.Glass().RenderImage(Model, m => m.Icon, new NameValueCollection { { "class", "podcast__icon" } }, isEditable: true)
+        @Html.Glass().RenderImage(Model, m => m.Icon, new NameValueCollection { { "class", "podcast__icon" } })
     }
 }
