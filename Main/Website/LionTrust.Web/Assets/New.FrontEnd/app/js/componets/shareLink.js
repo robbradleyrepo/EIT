@@ -1,7 +1,6 @@
 import copy from 'copy-to-clipboard';
 
 export default () => {
-  console.log("works");
 
   $(".copy-to-clipbord").tooltip({
     trigger: "click",
