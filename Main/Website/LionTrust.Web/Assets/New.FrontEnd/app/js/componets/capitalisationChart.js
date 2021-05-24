@@ -1,7 +1,7 @@
 import Chart from "chart.js";
 
 export default () => {
-  if ($(".capitalisation-chart")) {
+  if ($(".capitalisation-chart").length) {
     const ctx = $(".capitalisation-chart")[0].getContext("2d");
     const { labels, data, backgroundColor } = $(".capitalisation-chart").data("chart");
     Chart.defaults.global.defaultFontSize = 20;

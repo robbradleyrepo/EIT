@@ -1,7 +1,7 @@
 import Chart from "chart.js";
 
 export default () => {
-  if ($(".credit-rating-chart")) {
+  if ($(".credit-rating-chart").length) {
     const ctx = $(".credit-rating-chart")[0].getContext("2d");
     const { labels, data, maxValue } = $(".credit-rating-chart").data("chart");
     Chart.defaults.global.defaultFontSize = 20;
