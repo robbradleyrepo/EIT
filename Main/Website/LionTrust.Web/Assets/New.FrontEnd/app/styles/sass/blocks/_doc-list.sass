@@ -1,13 +1,14 @@
 .doc-list
-    @extend .fund-item-list
+    &__item
+        @extend .fund-item-list
     &__checkbox
         margin-bottom: 1rem
         @include breakpoint(desktop, up)
             margin-bottom: 0
     &__links
         @extend .fund-item-list__links
-        @include breakpoint(desktop-large, up)
-            justify-content: flex-end!important
+        // @include breakpoint(desktop-large, up)
+        //     justify-content: flex-end!important
         a
             margin-right: 10px
             @include breakpoint(desktop, up)
@@ -27,3 +28,5 @@
         display: none
         @include breakpoint(desktop, up)
             display: block
+    &__heading
+        @extend .h5
