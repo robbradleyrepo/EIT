@@ -1,0 +1,29 @@
+.doc-list
+    @extend .fund-item-list
+    &__checkbox
+        margin-bottom: 1rem
+        @include breakpoint(desktop, up)
+            margin-bottom: 0
+    &__links
+        @extend .fund-item-list__links
+        @include breakpoint(desktop-large, up)
+            justify-content: flex-end!important
+        a
+            margin-right: 10px
+            @include breakpoint(desktop, up)
+                margin-right: 32px
+            &:last-child
+                margin-right: 0
+        i
+            font-size: 15px
+            vertical-align: text-top
+    &__title
+        @extend .fund-item-list__title
+        margin-bottom: 1rem
+        display: inline-block
+        @include breakpoint(desktop, up)
+            margin-bottom: 0
+    &__right-btn
+        display: none
+        @include breakpoint(desktop, up)
+            display: block
