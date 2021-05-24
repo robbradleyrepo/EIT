@@ -1,5 +1,6 @@
 import searchPage from "./componets/searchPage";
 
 document.addEventListener("DOMContentLoaded", () => {  
-  searchPage();
+  if($('body').hasClass('search-page'))
+    searchPage();
 });
