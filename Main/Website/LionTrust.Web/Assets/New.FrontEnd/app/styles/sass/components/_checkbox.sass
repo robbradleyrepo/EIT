@@ -1,0 +1,30 @@
+.checkbox
+    display: flex
+    &__input
+        position: absolute
+        width: 1px
+        height: 1px
+        overflow: hidden
+        clip: rect(0 0 0 0)        
+        &:checked  + .checkbox__box
+            background: $gold
+            background-image: url("data:image/svg+xml,%3Csvg width='14' height='11' viewBox='0 0 14 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6 0L14 1.4L5 10.4L0 5.4L1.4 4L5 7.6L12.6 0Z' fill='white'/%3E%3C/svg%3E%0A")
+            background-repeat: no-repeat
+            background-position: center
+        &:focus + .checkbox__box
+            border: 1px solid $primary
+        &:disabled  + .checkbox__box
+            opacity: .3
+
+    &__box
+        width: 30px
+        height: 30px
+        display: inline-block
+        border-radius: 4px
+        border: 1px solid rgba(65, 72, 85, 0.25)
+    &__title
+        font-size: 18px
+        line-height: 28px
+        color: $black
+        display: inline-block
+        margin-left: 18px
