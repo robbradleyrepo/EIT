@@ -60,6 +60,8 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Config\Include\Foundation\Foundation.Indexing.config" />
+    <Content Include="App_Config\Include\Foundation\Foundation.Indexing.Serialization.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -74,6 +76,8 @@
     <Compile Include="Models\IQuery.cs" />
     <Compile Include="Models\IQueryPredicateProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ISearchRepository.cs" />
+    <Compile Include="Repositories\SearchRepository.cs" />
     <Compile Include="Services\GetFreeTextPredicateService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -81,6 +85,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Infrastructure\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ORM\website\LionTrust.Foundation.ORM.csproj">
+      <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>
+      <Name>LionTrust.Foundation.ORM</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,26 @@
+﻿---
+ID: "7be89bb6-9662-490c-b44c-650187c34d91"
+Parent: "7d4a1449-1d16-4532-badf-876bfdd69e34"
+Template: "a7f75f55-c371-4177-8f4c-25c416795856"
+Path: /sitecore/content/LionTrustNew/Home/_Local/Podcast Promo/Spotify
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210512T162613Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "a5d6221a-a46a-48b6-bc49-8407afd8d8a0"
+      Hint: PodcastLink_Icon
+      Value: |
+        <image mediaid="{CDA99E29-F124-4A6F-92CE-EC88CDDA296E}" />
+    - ID: "c57000e5-d8f4-45b4-8ba5-794e95fa3763"
+      Hint: PodcastLink_Link
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />

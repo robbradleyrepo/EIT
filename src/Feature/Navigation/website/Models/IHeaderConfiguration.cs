@@ -3,11 +3,10 @@
     using System.Collections.Generic;
 
     using Glass.Mapper.Sc.Configuration.Attributes;
-    using Sitecore.Data.Items;
-    
-    public interface IHeaderConfiguration
+
+    public interface IHeaderConfiguration : INavigationGlassBase
     {
         [SitecoreChildren]
-        IEnumerable<Item> HeaderDropDowns { get; set; }
+        IEnumerable<IHeaderDropdown> HeaderDropDowns { get; set; }
     }
 }

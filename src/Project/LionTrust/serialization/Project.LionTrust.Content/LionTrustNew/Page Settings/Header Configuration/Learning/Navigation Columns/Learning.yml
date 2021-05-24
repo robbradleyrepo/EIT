@@ -1,0 +1,47 @@
+﻿---
+ID: "36afc7a1-5f8e-4504-8047-ff213abbdf68"
+Parent: "3e0d22e5-8ad7-4ed0-809b-3d162c0a9505"
+Template: "857e4b73-6e7e-41cf-972f-0e3cc2ea8e22"
+Path: /sitecore/content/LionTrustNew/Page Settings/Header Configuration/Learning/Navigation Columns/Learning
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210406T123449Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "89cc8946-1499-4d72-9d06-016cc68b0401"
+      Hint: HeaderDropDownNavigationColumn_ColumnTitle
+      Value: Learning
+    - ID: "9012ee1a-dea2-49fa-951d-f72e835639ca"
+      Hint: HeaderDropDownNavigationColumn_ColumnLink
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{49766078-4397-4668-B13E-4EFBE7CADF55}" />
+    - ID: "e6689b09-d0ff-4b12-965c-625b7185f6be"
+      Hint: HeaderDropDownNavigationColumn_PageLinks
+      Type: Treelist
+      Value: |
+        {FAF9D17C-9A84-433D-B128-26AE6968F6F9}
+        {16A5326B-3064-4CB7-AA5A-31C66E6ACC3E}
+        {AB860D7C-AE34-4A6A-9A87-F315DB896838}
+        {5A8B4B16-1CCE-457E-9BA1-22CDD57607E2}
+        {0F4B1166-139C-4B75-8FBE-F807E4620452}
+        {31FD00CC-76BF-4564-86BE-8021D0E10BF9}
+        {2F413324-2200-461C-BB0B-5A7AE79B9EE3}
+        {1353F84C-693C-4885-A770-632617DD2D4D}
+        {7C2C8714-AC2F-4A17-BF92-4F23AFADC731}
+        {16914246-A9B6-4A6A-AA48-1D04A5BCB7A8}
+    - ID: "fe160ab8-1158-46c9-80ad-43557ce4129d"
+      Hint: HeaderDropDownNavigationColumn_ShowColumn Link
+      Type: Checkbox
+      Value: 1

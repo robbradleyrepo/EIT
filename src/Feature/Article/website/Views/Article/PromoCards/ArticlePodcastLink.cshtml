@@ -1,0 +1,15 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using System.Collections.Specialized;
+@using LionTrust.Foundation.Analytics.Goals
+@model LionTrust.Feature.Article.Models.IArticlePodcastLink
+@using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Promo/PodcastLink", Model.Id.ToString(), "Edit Podcast Link"))
+{
+    if (Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        @:Edit Icon
+    }
+    using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.Link, Model.LinkGoal, isEditable: true))
+    {
+        @Html.Glass().RenderImage(Model, m => m.Icon, new NameValueCollection { { "class", "image-icon" } }, isEditable: true)
+    }
+}

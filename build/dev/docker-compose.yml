@@ -1,0 +1,156 @@
+version: "2.4"
+
+services:
+  # traefik:
+  #   isolation: hyperv
+  #   image: traefik:v2.2.0-windowsservercore-1809
+  #   command:
+  #     - "--ping"
+  #     - "--api.insecure=true"
+  #     - "--providers.docker.endpoint=npipe:////./pipe/docker_engine"
+  #     - "--providers.docker.exposedByDefault=false"
+  #     - "--providers.file.directory=C:/etc/traefik/config/dynamic"
+  #     - "--entryPoints.web.address=:80"
+  #     - "--entryPoints.websecure.address=:443"
+  #   ports:
+  #     - "8080:80"
+  #     - "443:443"
+  #     - "8079:8080"
+  #   healthcheck:
+  #     test: ["CMD", "traefik", "healthcheck", "--ping"]
+  #   volumes:
+  #     - source: \\.\pipe\docker_engine
+  #       target: \\.\pipe\docker_engine
+  #       type: npipe
+  #     - ./traefik:C:/etc/traefik
+  #   depends_on:
+  #     id:
+  #       condition: service_healthy
+  #     cd:
+  #       condition: service_healthy
+  #     cm:
+  #       condition: service_healthy
+  sql:
+    isolation: hyperv
+    container_name: liontrustsql
+    image: ${REGISTRY}sitecore-xp-sqldev:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    volumes:
+      - .\data\sql\legacy:C:\Data
+    ports:
+      - "44010:1433"
+
+  solr:
+    isolation: hyperv
+    container_name: liontrustsolr
+    image: ${REGISTRY}sitecore-xp-solr:${SITECORE_VERSION}-nanoserver-${NANOSERVER_VERSION}
+    volumes:
+      - .\data\solr:C:\Data
+    ports:
+      - "44011:8983"
+
+  xconnect:
+    isolation: hyperv
+    container_name: liontrustxconnect
+    image: ${REGISTRY}sitecore-xp-xconnect:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    volumes:
+      - ${LICENSE_PATH}:C:\license
+      - .\data\xconnect:C:\inetpub\wwwroot\App_Data\logs
+    environment:
+      ENTRYPOINT_STDOUT_XCONNECT_LOG_ENABLED: 'true'
+      ENTRYPOINT_STDOUT_IIS_ACCESS_LOG_ENABLED: 'true'
+      ENTRYPOINT_STDOUT_IIS_ERROR_LOG_ENABLED: 'true'
+    links:
+      - sql
+      - solr
+
+  xconnect-automationengine:
+    isolation: hyperv
+    container_name: liontrustxconnectautomationengine
+    image: ${REGISTRY}sitecore-xp-xconnect-automationengine:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    volumes:
+      - ${LICENSE_PATH}:C:\license
+      - .\data\xconnect-automationengine:C:\AutomationEngine\App_Data\logs
+    mem_limit: 500MB
+    links:
+      - sql
+      - xconnect
+
+  xconnect-indexworker:
+    isolation: hyperv
+    container_name: liontrustxconnectindexworker
+    image: ${REGISTRY}sitecore-xp-xconnect-indexworker:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    volumes:
+      - ${LICENSE_PATH}:C:\license
+      - .\data\xconnect-indexworker:C:\IndexWorker\App_Data\logs
+    mem_limit: 500MB
+    links:
+      - sql
+      - solr
+
+  xconnect-processingengine:
+    isolation: hyperv
+    container_name: liontrustxconnectprocessingengine
+    image: ${REGISTRY}sitecore-xp-xconnect-processingengine:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    volumes:
+      - ${LICENSE_PATH}:C:\license
+      - .\data\xconnect-processingengine:C:\ProcessingEngine\App_Data\logs
+    restart: unless-stopped
+    mem_limit: 500MB
+    depends_on: 
+      - xconnect
+    links:
+      - sql
+      - xconnect
+
+  cd:
+    isolation: hyperv
+    container_name: liontrustcd
+    image: ${REGISTRY}sitecore-xp-cd:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    entrypoint: powershell.exe -NoLogo -NoProfile -File C:\\tools\\entrypoints\\iis\\Development.ps1
+    volumes:
+      - .\site:C:\src
+      - ..\..\Main\Website\LionTrust.Web\Assets\New.FrontEnd\dist:C:\inetpub\wwwroot\dist
+      - ${LICENSE_PATH}:C:\license
+      - .\data\cd:C:\inetpub\wwwroot\App_Data\logs
+    ports:
+      - "44002:80"
+    links:
+      - sql
+      - solr
+      - xconnect
+
+  cm:
+    isolation: hyperv
+    container_name: liontrustcm
+    image: ${REGISTRY}sitecore-xp-standalone:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    entrypoint: powershell.exe -NoLogo -NoProfile -File C:\\tools\\entrypoints\\iis\\Development.ps1
+    volumes:
+      - ..\..\src:C:\projects\LionTrust\src\  
+      - ..\..\Main\Website\LionTrust.Web\Assets\New.FrontEnd\dist:C:\inetpub\wwwroot\dist
+      - .\site:C:\src
+      - ${LICENSE_PATH}:C:\license
+      - .\data\cm:C:\inetpub\wwwroot\App_Data\logs
+    ports:
+      - "44001:80"
+    links:
+      - sql
+      - solr
+      - xconnect
+
+  id:
+    isolation: hyperv
+    container_name: liontrustidentity
+    image: ${REGISTRY}sitecore-xp-identity:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    volumes:
+      - ${LICENSE_PATH}:C:\license
+      - .\data\identity:C:\inetpub\wwwroot\wwwroot\logs
+    mem_limit: 500MB
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.id-secure.entrypoints=websecure"
+      - "traefik.http.routers.id-secure.rule=Host(`${ID_HOST}`)"
+      - "traefik.http.routers.id-secure.tls=true"
+    ports:
+      - "44005:80"
+    links:
+      - sql

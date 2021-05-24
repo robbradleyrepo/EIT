@@ -1,0 +1,156 @@
+﻿---
+ID: "07175541-e163-46e0-83d7-0a448165bbd7"
+Parent: "47bd668e-4c0f-4d8a-9e71-b6c8c156b32f"
+Template: "1f294bcb-1f17-4000-94bd-501a96bec59a"
+Path: "/sitecore/content/LionTrustNew/Home/funds/macro-uk-growth-fund"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 3100
+- ID: "cce4e679-7e94-450d-8cc1-691bdf17ca78"
+  Hint: LegacyFundPageData_FundReference
+  Value: "{DE369FF5-D1E8-4D5E-9B07-2ED104D1930D}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}"
+          p:before="*"
+          s:ph="/content/fund-page-content" />
+        <r
+          uid="{6AB41BE0-A806-4B92-AEA5-C6D82B9A14A0}"
+          p:after="r[@uid='{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}']"
+          s:ds="{2F00C973-7AAF-44A3-915C-889115C1AC3E}"
+          s:id="{8A50B96F-BF28-43E6-87D5-1E3408F8171A}"
+          s:par="DatasourceRule"
+          s:ph="/content/fund-page-content" />
+        <r
+          uid="{CEC4666D-950E-4BB2-ADD3-1A523FA68F4F}">
+          <p:d />
+        </r>
+        <r
+          uid="{E68675B2-194E-4FCD-97FB-AFCFFA66A966}">
+          <p:d />
+        </r>
+        <r
+          uid="{CAACE989-BEC6-48CB-B92A-389727EDCE6B}"
+          p:after="r[@uid='{F3F5DDD8-BCED-4C83-A49B-42E641DFDC1F}']"
+          s:ds="{FC5512EF-4B7F-410C-98F5-95F465E3C1EA}"
+          s:id="{777B1AE2-307E-4C65-9987-9BD39085419B}"
+          s:par=""
+          s:ph="/content/fund-page-content" />
+        <r
+          uid="{5F6EC5CA-DCD7-4797-B653-A0F4190C0BDD}"
+          p:after="r[@uid='{CAACE989-BEC6-48CB-B92A-389727EDCE6B}']"
+          s:id="{D506C47C-07BC-4D09-B36A-17E5F10F5636}"
+          s:ph="/content/fund-page-content" />
+        <r
+          uid="{25F5336E-7D73-4C3D-8820-3F27278D8691}"
+          p:after="r[@uid='{5F6EC5CA-DCD7-4797-B653-A0F4190C0BDD}']"
+          s:id="{302ADD39-9FA0-4282-8D6B-AD95AE6F0C4A}"
+          s:ph="content" />
+        <r
+          uid="{D2F551B2-8E4E-42AB-A016-9E554910D949}">
+          <p:d />
+        </r>
+        <r
+          uid="{7D2A9FAB-D42F-4FA0-89BF-BAEAF0A42DA0}">
+          <p:d />
+        </r>
+        <r
+          uid="{1A449E6C-3CAF-4F50-ABE3-70B3E38D974C}">
+          <p:d />
+        </r>
+        <r
+          uid="{E461C5F3-56B7-4810-8CE2-832CE9B4994D}">
+          <p:d />
+        </r>
+        <r
+          uid="{E8B045E9-35F5-4BA8-B0B2-0A02D1BD298B}">
+          <p:d />
+        </r>
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{44F37ACE-7C38-42E5-A0B5-48DDACFC09F1}"
+              p:before="*"
+              s:ds="{95CC7AFB-3520-4B6F-B519-82BFBF53DF52}"
+              s:id="{DFF81E23-0704-4716-89DC-50C5E45F4DAE}"
+              s:par="DatasourceRule"
+              s:ph="/content/fund-page-content/right-content_{5f6ec5ca-dcd7-4797-b653-a0f4190c0bdd}" />
+            <r
+              uid="{E22CCCA6-38C7-456D-B0C8-4743B8DA70A5}"
+              p:after="r[@uid='{44F37ACE-7C38-42E5-A0B5-48DDACFC09F1}']"
+              s:ds="{F4B5C142-A458-4930-9F35-F5B052CC0F7C}"
+              s:id="{DFF81E23-0704-4716-89DC-50C5E45F4DAE}"
+              s:par="DatasourceRule"
+              s:ph="/content/fund-page-content/left-content_{5f6ec5ca-dcd7-4797-b653-a0f4190c0bdd}" />
+            <r
+              uid="{6AB41BE0-A806-4B92-AEA5-C6D82B9A14A0}"
+              s:ds="{4CAAA387-EC78-4353-97F7-D9B8D3C52324}" />
+            <r
+              uid="{CAACE989-BEC6-48CB-B92A-389727EDCE6B}">
+              <p:d />
+            </r>
+          </d>
+        </r>
+    - ID: "187226f4-9c3e-4d5c-b21f-2c917136f20c"
+      Hint: LegacyPresentationBase_MetaRobots
+      Value: 
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Liontrust Macro UK Growth Fund | What we offer | Liontrust Asset Management PLC
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140922T110753Z
+    - ID: "42994f09-31f9-4570-9c0b-91bd4a698540"
+      Hint: LegacyPresentationBase_PageTags
+      Type: Multilist with Search
+      Value: 
+    - ID: "4ba2c766-77ad-4417-81b2-090d584838c1"
+      Hint: LegacyHeroImagePageData_PageHeaderText
+      Value: Anthony Cross &amp; Julian Fosh
+    - ID: "4f86ee15-d758-4f6a-826d-bcd23171073c"
+      Hint: LegacyPresentationBase_MetaKeywords
+      Value: liontrust, funds, fund, investing, investment, unit trust, macro, uk, growth, jamie clark, stephen bailey
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{AEA66CB3-FAA5-4F80-A3CE-A418B1EC5468}"
+    - ID: "82426cee-2b8e-411e-9eeb-d54ec3d0ced3"
+      Hint: LegacyPresentationBase_Code
+      Value: 
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: 
+    - ID: "9dc8ae8c-c3e1-4536-aa2a-d0bff7398795"
+      Hint: LegacyPresentationBase_MetaDescription
+      Value: "The Fund has been managed since launch in August 2002 by Stephen Bailey, and he was joined by Jamie Clark in 2007. The aim of the Fund is to deliver income and capital growth over the long term (5 years or more) by investing at least 80% of the portfolio in companies incorporated, domiciled, listed or which conduct significant business in the United Kingdom (UK). The managers believe the identification and interpretation of major economic, political and social developments offer scope to add long-term investment value. Their conviction is shown by the fact they may have 0% weightings in major sectors."
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Macro UK Growth Fund
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{C6428CA9-AB6A-4EE7-AF0B-B13CB7DD456C}" />
+    - ID: "f7265233-a676-4848-baa9-7a4629e22a75"
+      Hint: LegacyHeroImagePageData_ImagePosition
+      Value: 

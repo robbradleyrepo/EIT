@@ -1,0 +1,33 @@
+﻿---
+ID: "6b1d0b8e-6cef-4927-8d8c-3dfeb73db91a"
+Parent: "687904c0-5b5e-43f1-a31c-2d792abcb0b9"
+Template: "66e09d5b-4f8e-4313-9df3-fa7e53fbe83a"
+Path: /sitecore/content/Funds/UK Smaller Companies Fund/Documents/KIID R Inc
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 400
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180219T111026Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "a4a7f9dd-a218-4f33-b72a-7dc2251ccd43"
+      Hint: DocumentTypes
+      Type: Multilist
+      Value: "{47476B16-8600-4EBD-BC6F-AE6E84EC1AC2}"
+    - ID: "c794210e-6107-4d69-841f-773cb9943bba"
+      Hint: DownloadLink
+      Value: |
+        <link linktype="media" target="" id="{28BB2490-0DF2-49DA-9A1F-ED4E55291025}" />
+    - ID: "eeb8db99-7da8-4973-adf7-bcf7b29eba79"
+      Hint: DocumentName
+      Value: KIID R Inc

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -54,14 +54,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ComputedFields\AllTemplatesIndexField.cs" />
-    <Compile Include="Models\BaseSearchResultItem.cs" />
+    <Compile Include="DI\RegisterContainer.cs" />
+    <Compile Include="Models\ContentSearch\ContentSearchResults.cs" />
+    <Compile Include="Models\ITaxonomyContentResult.cs" />
+    <Compile Include="Models\Request\ArticleSearchRequest.cs" />
+    <Compile Include="Models\Request\ITaxonomySearchRequest.cs" />
+    <Compile Include="Models\Response\ITaxonomySearchResponse.cs" />
+    <Compile Include="Models\ContentSearch\ArticleSearchResultItem.cs" />
+    <Compile Include="Models\ContentSearch\BaseSearchResultItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Implementations\ArticleContentSearchRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IArticleContentSearchRepository.cs" />
+    <Compile Include="Services\Implementations\ArticleContentSearchService.cs" />
+    <Compile Include="Services\Interfaces\IArticleContentSearchService.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <Content Include="App_Config\Include\Foundation\Foundation.Search.RegisterFields.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Config\Include\Foundation\Foundation.Search.RegisterContainer.config" />
     <None Include="Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

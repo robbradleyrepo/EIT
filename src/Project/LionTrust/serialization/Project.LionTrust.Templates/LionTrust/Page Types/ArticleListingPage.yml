@@ -1,0 +1,33 @@
+﻿---
+ID: "4c4e3993-f6d4-4040-a3fd-e5deb438bff8"
+Parent: "ceb8723e-3b4f-478b-8dcf-60ec0cfc6197"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/LionTrust/Page Types/ArticleListingPage
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Business/32x32/messages.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Type: tree list
+  Value: |
+    {1930BBEB-7805-471A-A3BE-4858AC7CF696}
+    {5DFCFE62-DBDF-42BD-AD8A-198E70D8A327}
+    {15CED2EF-9D98-4B78-A451-558B04C799F1}
+    {0E84CB4F-C73B-4A22-BCD5-36A8EEAB6381}
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{E6D1E290-CD4C-4985-8FBF-BAB93D5199BB}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20141003T172306
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

@@ -1,0 +1,35 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Article.Models.ArticleLinksViewModel
+@if (Model != null && Model.Article != null && Model.ArticleLinks != null)
+{
+    var shareGoal = Model.ArticleLinks.ShareLinkGoal != null ? Model.ArticleLinks.ShareLinkGoal.ToString() : string.Empty;
+    var downloadGoal = Model.ArticleLinks.DownloadGoal != null ? Model.ArticleLinks.DownloadGoal.ToString() : string.Empty;
+    var pdfDocumentAvailable = Model.Article.PdfDocument != null && !string.IsNullOrEmpty(Model.Article.PdfDocument.Src);
+    var pdfDocumenSrc = pdfDocumentAvailable ? Model.Article.PdfDocument.Src : "#";
+    <div class="article-with-small">
+        <ul class="article-links article-links_primary py-3">
+            <li class="ritle-links__item">
+                <a href="#" class="article-links__link" data-goal-trigger="@shareGoal">
+                    <i class="icon-share"></i>
+                    @Html.Glass().Editable(Model.ArticleLinks, m => m.ShareLabel)
+                </a>
+            </li>
+            @if (pdfDocumentAvailable || Sitecore.Context.PageMode.IsExperienceEditor)
+            {
+                using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Article/Article Document", Model.Article.Id.ToString(), "Edit Article document"))
+                {
+                    <li class="ritle-links__item">
+                        <a href="@pdfDocumenSrc" class="article-links__link" data-goal-trigger="@downloadGoal" download>
+                            <i class="icon-download"></i>
+                            @Html.Glass().Editable(Model.ArticleLinks, m => m.DownloadLabel)
+                        </a>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @: Add datasource for Article Links component
+}

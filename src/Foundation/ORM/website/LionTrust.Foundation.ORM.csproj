@@ -60,6 +60,8 @@
     <Compile Include="App_Start\GlassMapperSc.cs" />
     <Compile Include="App_Start\GlassMapperScCustom.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
+    <Compile Include="Extensions\FieldExtensions.cs" />
+    <Compile Include="Extensions\ImageExtensions.cs" />
     <Compile Include="Extensions\MapsConfigFactoryExtension.cs" />
     <Compile Include="Mappings\GlassMappings.cs" />
     <Compile Include="Mappings\RegisterMappings.cs" />

@@ -1,0 +1,22 @@
+﻿---
+ID: "b7bbd475-751f-4ad5-b5dd-29dfa04b3915"
+Parent: "eb8c3db5-5c21-4b61-91bd-92c88fe489af"
+Template: "eb8c3db5-5c21-4b61-91bd-92c88fe489af"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Fund Card/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210514T103624Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "eb75dfef-c624-4571-b92b-8f37c36fcee6"
+      Hint: FundCard_Image
+      Value: |
+        <image mediaid="{438CEA59-E77D-4FB0-A495-653BA891E7EC}" />

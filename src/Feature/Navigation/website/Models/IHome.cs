@@ -1,82 +1,36 @@
 ﻿namespace LionTrust.Feature.Navigation.Models
 {
     using System.Collections.Generic;
-
+    using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
-    using Glass.Mapper.Sc.Fields;    
 
     public interface IHome : INavigationGlassBase
     {
-        [SitecoreField(Constants.Header.HeaderConfiguration_FieldName)]
-        IEnumerable<IHeaderConfiguration> HeaderConfiguration { get; set; }
+        [SitecoreField(Constants.NavigationRoot.HeaderConfiguration_FieldID, SitecoreFieldType.DropTree, "Header")]
+        IHeaderConfiguration HeaderConfiguration { get; set; }
 
-        [SitecoreField(Constants.Header.HeaderMenuItems_FieldName)]
-        IEnumerable<INavigationGlassBase> HeaderMenuItems { get; set; }
+        [SitecoreField(Constants.NavigationRoot.ContactUsPage_FieldID, SitecoreFieldType.DropTree, "Header")]
+        INavigablePage ContactUsPage { get; set; }
 
-        [SitecoreField(Constants.Header.ContactUsPage_FieldName)]
-        INavigationGlassBase ContactUsPage { get; set; }
+        [SitecoreField(Constants.NavigationRoot.FooterConfiguration_FieldId, SitecoreFieldType.DropTree, "Footer")]
+        IFooterConfiguration FooterConfiguration { get; set; }
 
-        [SitecoreField(Constants.Menu.MyLionTrust_FieldName)]
-        INavigationGlassBase MyLionTrust { get; set; }
+        [SitecoreField(Constants.NavigationRoot.MyLionTrust_FieldID, SitecoreFieldType.DropTree, "Menu")]
+        INavigablePage MyLionTrust { get; set; }
 
-        [SitecoreField(Constants.Menu.MyPreferences_FieldName)]
-        INavigationGlassBase MyPreferences { get; set; }
+        [SitecoreField(Constants.NavigationRoot.MyPreferences_FieldID, SitecoreFieldType.DropTree, "Menu")]
+        INavigablePage MyPreferences { get; set; }
 
-        [SitecoreField(Constants.Menu.SignUpNewsletter_FieldName)]
-        INavigationGlassBase SignupNewsLetter { get; set; }
+        [SitecoreField(Constants.NavigationRoot.SignUpNewsletter_FieldID, SitecoreFieldType.DropTree, "Menu")]
+        INavigablePage SignupNewsLetter { get; set; }
 
-        [SitecoreField(Constants.Menu.YouAreViewingLabel_FieldName)]
+        [SitecoreField(Constants.NavigationRoot.YouAreViewingLabel_FieldID, SitecoreFieldType.SingleLineText, "Menu")]
         string YouAreViewingLabel { get; set; }
 
-        [SitecoreField(Constants.Menu.ChangeLabel_FieldName)]
+        [SitecoreField(Constants.NavigationRoot.ChangeLabel_FieldID, SitecoreFieldType.SingleLineText, "Menu")]
         string ChangeLabel { get; set; }
         
-        [SitecoreField(Constants.Menu.MenuItems_FieldName)]
-        IEnumerable<INavigationGlassBase> MenuItems { get; set; }
-
-        [SitecoreField(Constants.Footer.FindUsLabel_FieldName)]
-        string FindUsLabel { get; set; }
-
-        [SitecoreField(Constants.Footer.Address_FieldName)]
-        string Address { get; set; }
-
-        [SitecoreField(Constants.Footer.Location_FieldName)]
-        string Location { get; set; }
-
-        [SitecoreField(Constants.Footer.PostalCode_FieldName)]
-        string PostalCode { get; set; }
-
-        [SitecoreField(Constants.Footer.GoogleMapsLink_FieldName)]
-        Link GoogleMapsLink { get; set; }
-
-        [SitecoreField(Constants.Footer.GoogleMapsCTALabel_FieldName)]
-        string GoogleMapsCTALabel { get; set; }
-
-        [SitecoreField(Constants.Footer.GetInTouchLabel_FieldName)]
-        string GetInTouchLabel { get; set; }
-
-        [SitecoreField(Constants.Footer.PhoneNumber_FieldName)]
-        string PhoneNumber { get; set; }        
-
-        [SitecoreField(Constants.Footer.Email_FieldName)]
-        string Email { get; set; }
-
-        [SitecoreField(Constants.Footer.EmailCTALabel_FieldName)]
-        string EmailCTALabel { get; set; }
-
-        [SitecoreField(Constants.Footer.FooterConfiguration_FieldName)]
-        IFooterConfiguration FooterConfiguration { get; set; }
-  
-        [SitecoreField(Constants.Footer.SubscribeNewsletterLabel_FieldName)]
-        string SubscribeNewsletterLabel { get; set; }
-
-        [SitecoreField(Constants.Footer.SubscribeCTALabel_FieldName)]
-        string SubscribeCTALabel { get; set; }
-
-        [SitecoreField(Constants.Footer.SubscribeCTALink_FieldName)]
-        Link SubscribeCTALink_FieldName { get; set; }
-
-        [SitecoreField(Constants.Footer.Copyright_FieldName)]
-        string Copyright { get; set; }
+        [SitecoreField(Constants.NavigationRoot.MenuItems_FieldID, SitecoreFieldType.Treelist, "Menu")]
+        IEnumerable<INavigablePage> MenuItems { get; set; }
     }
 }

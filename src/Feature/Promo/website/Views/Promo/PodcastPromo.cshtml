@@ -1,0 +1,58 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Foundation.ORM.Extensions
+@model LionTrust.Feature.Promo.Models.IPodcastPromo
+@if (Model != null)
+{
+    <div class="container">
+        <div class="podcast">
+            <div class="row">
+                <div class="podcast__box">
+                    <picture>
+                        <source media="(max-width:425px)" srcset="@Model.MobileBackgroundImage.GetSafeSitecoreImageUrl()" />
+                        <source media="(min-width:426px)" srcset="@Model.BackgroundImage.GetSafeSitecoreImageUrl()" />
+                        <img class="podcast__back" src="@Model.BackgroundImage.GetSafeSitecoreImageUrl()" alt="@Model.BackgroundImage.GetSafeSitecoreImageAltText()" />
+                    </picture>
+                    <div class="podcast__front">
+                        <div class="podcast__head">
+                            <i class="icon-mic podcast__mic"></i>
+                            @Html.Glass().Editable(Model, x => x.Heading)
+                        </div>
+
+                        <div class="podcast__tit txtlimit">
+                            @Html.Glass().Editable(Model, x => x.Title)
+                        </div>
+
+                        <div class="podcast__desc txtlimit">
+                            @Html.Glass().Editable(Model, x => x.Body)
+                        </div>
+
+                        <div class="podcast__footer">
+                            @if (Sitecore.Context.PageMode.IsExperienceEditor)
+                            {
+                                using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Promo/PodcastPromo", Model.Id.ToString(), "Edit Podcast Promo"))
+                                {
+                                    <p>Add Podcast Link </p>
+                                }
+                            }
+                            @if (Model.PodcastLinks != null && Model.PodcastLinks.Any() || Sitecore.Context.PageMode.IsExperienceEditor)
+                            {
+                                <span>@Html.Glass().Editable(Model, x => x.PodcastsLabel) </span>
+                                foreach (var podcastLink in Model.PodcastLinks)
+                                {
+                                    if (podcastLink != null)
+                                    {
+                                        @Html.Partial("~/Views/Promo/_PodcastLink.cshtml", podcastLink)
+                                    }
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <div>Please assign datasource for Podcast Promo component!</div>
+}

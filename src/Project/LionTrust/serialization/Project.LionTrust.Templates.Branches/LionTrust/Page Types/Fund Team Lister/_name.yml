@@ -1,0 +1,64 @@
+﻿---
+ID: "a1ce37c6-9237-4407-9235-68674bdef368"
+Parent: "a3e61fc4-9dcd-4de8-80ba-a3eafa5685ec"
+Template: "3ef8af1c-0ff1-4afc-8002-606b85fa4ad6"
+Path: /sitecore/templates/Branches/Project/LionTrust/Page Types/Fund Team Lister/$name
+DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1"
+      s:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{EE24C32D-EF97-4CD1-81C1-C37C0961B093}"
+          p:after="r[@uid='{BE8C5C97-D801-42C5-9368-ED6A2E029685}']"
+          s:ds="{3DAAAEC1-C9FA-4C68-AA94-B08271FC5229}"
+          s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{68A71C7B-0DA3-4EB6-A798-C5E403059F00}"
+          p:after="r[@uid='{EE24C32D-EF97-4CD1-81C1-C37C0961B093}']"
+          s:ds="{625F36EF-8F71-48F1-9148-00158EC3E362}"
+          s:id="{C3B11E64-1214-410E-BA83-3347C5B59A7E}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{748DD613-3E6E-4E79-AE83-98BAB39E2C19}"
+          p:after="r[@uid='{68A71C7B-0DA3-4EB6-A798-C5E403059F00}']"
+          s:ds="{746E8088-3D3A-4295-B6CD-95B9FAD61437}"
+          s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{1BAD071D-5089-49AA-93CF-CB4954BA50E7}"
+          p:after="r[@uid='{748DD613-3E6E-4E79-AE83-98BAB39E2C19}']"
+          s:ds="{DFCFA259-1063-48CD-B0CB-FCAA35CB0497}"
+          s:id="{A811D2B0-D08D-4991-A9DD-6D9FA5799CBD}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{18B06B94-C99A-494B-9A46-AE485780F958}"
+          p:after="r[@uid='{1BAD071D-5089-49AA-93CF-CB4954BA50E7}']"
+          s:id="{29A12478-EBE8-4B5C-BF2E-871026066814}"
+          s:ph="main" />
+        <r
+          uid="{4FB00752-0C2B-4E6F-A91A-EDDA689D318B}"
+          p:after="*[1=2]"
+          s:ds=""
+          s:par="" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210519T083311Z

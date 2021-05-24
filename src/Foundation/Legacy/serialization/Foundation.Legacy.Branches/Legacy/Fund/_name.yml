@@ -1,0 +1,22 @@
+﻿---
+ID: "9f34a121-9d36-4eb8-9670-feaa6eaa981c"
+Parent: "562a4f6c-ee2c-40f7-8701-db0a0d8b7e3d"
+Template: "dadec9bf-b6e8-4e04-a082-f4eb20b76ff9"
+Path: /sitecore/templates/Branches/Foundation/Legacy/Fund/$name
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Business/32x32/currency_pound.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140905T091845
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

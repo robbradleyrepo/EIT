@@ -1,0 +1,50 @@
+﻿---
+ID: "79250d56-cc3b-4907-924b-79488f61ba34"
+Parent: "c8e97f82-4fb2-46d3-b162-8fa1fb9fe0ff"
+Template: "66e09d5b-4f8e-4313-9df3-fa7e53fbe83a"
+Path: /sitecore/content/Funds/Shared documents/Liontrust Multi Asset Global Solutions ICVC Prospectus
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20201030T165055Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "8de3f234-7880-4703-8534-02bb8320c09c"
+      Hint: RelatedFunds
+      Type: Multilist
+      Value: |
+        {DED0278B-CFB1-4413-A6F2-4F174C9150F9}
+        {33BA2F1A-B9D0-4B64-8E23-E13660FAB133}
+        {2A768CDC-9255-4936-B645-B90C33EF23E0}
+        {DB57B1B4-F59A-40BA-9B1C-12231B346025}
+        {B56D00FC-4819-4EED-AB6B-38D6718EF6D0}
+        {586753E0-3B91-441F-BC93-04EB59B4AB8B}
+        {B4300207-1083-45A4-93D5-4F1DDF096EBE}
+        {149B7866-4ABE-447B-A840-732549E781BB}
+        {1DA7ADFE-69DD-4AD3-A3D7-82623FD9466D}
+        {2919C4E9-1C24-43B1-84A5-52D5DC7AB144}
+        {D8C813EA-12C6-4701-9B15-B0E49B259CE7}
+        {542882EB-1CB2-4762-A55F-5B5DBA2023E1}
+        {F3A1C7A7-1D1F-4A0E-88A3-5655E1105211}
+        {4E984EF9-A036-4FE0-AE2A-2B0E3BB6ACCA}
+        {EC799242-4448-42AC-8542-DEF9942DED49}
+        {A91EBFA9-0D3A-4200-8860-C0F4926AF8F4}
+        {7683545C-4A4D-431D-A630-C3C426FCD6F1}
+    - ID: "a4a7f9dd-a218-4f33-b72a-7dc2251ccd43"
+      Hint: DocumentTypes
+      Type: Multilist
+      Value: "{93BD5BD5-AF14-4FD5-96EC-59F7ABB6C172}"
+    - ID: "c794210e-6107-4d69-841f-773cb9943bba"
+      Hint: DownloadLink
+      Value: |
+        <link linktype="media" target="" id="{4B7CEB84-639D-43F0-A843-9D4467DB0810}" />
+    - ID: "eeb8db99-7da8-4973-adf7-bcf7b29eba79"
+      Hint: DocumentName
+      Value: Liontrust Multi Asset Global Solutions ICVC Prospectus

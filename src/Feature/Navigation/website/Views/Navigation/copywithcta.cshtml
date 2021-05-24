@@ -1,0 +1,25 @@
+﻿@using System.Collections.Specialized;
+@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Navigation.Models.ICopyWithCta
+@if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    return;
+}
+<div class="article-with-small">
+    <div class="glossary-cta">
+        <span class="font-500 color-black">@Html.Glass().Editable(m => m.Copy)</span>
+        @using (Html.Glass().BeginRenderLink(m => m.Cta, new NameValueCollection { { "class", "link-styles mx-lg-4 d-block d-lg-inline" } }, isEditable: true))
+        {
+            if (Model.Cta != null)
+            {
+                @Model.Cta.Text
+            }
+            else if (Sitecore.Context.PageMode.IsExperienceEditor)
+            {
+                @:Edit link
+            }
+            <i class="icon-arrow-right"></i>
+        }
+
+    </div>
+</div>

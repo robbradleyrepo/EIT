@@ -16,6 +16,11 @@ import articleFilter from "./componets/articleFilter";
 import parallaxScrolling from "./componets/parallaxScrolling";
 import stickyNavbar from "./componets/stickyNavbar";
 import literatureOverlay from "./componets/literatureOverlay";
+import creditRatingChart from "./componets/creditRatingChart";
+import capitalisationChart from "./componets/capitalisationChart";
+import fundChartDropdown from "./componets/fundChartDropdown";
+import shareLink from "./componets/shareLink";
+import locationAndMap from "./componets/locationAndMap";
 
 document.addEventListener("DOMContentLoaded", () => {
   onboardingOverlay();
@@ -28,6 +33,11 @@ document.addEventListener("DOMContentLoaded", () => {
   awardsSlider();
   stickyNavbar();
   literatureOverlay();
+  creditRatingChart();
+  capitalisationChart();
+  fundChartDropdown();
+  shareLink();
+  locationAndMap();
   if (document.querySelector(".article-page")) articleFilter();
   if (document.querySelector(".main-page")) parallaxScrolling();
 

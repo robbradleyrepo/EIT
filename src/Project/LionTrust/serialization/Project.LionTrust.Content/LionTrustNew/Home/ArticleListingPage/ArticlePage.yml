@@ -1,0 +1,43 @@
+﻿---
+ID: "753fdaad-c810-4ec8-b338-957d212cef5b"
+Parent: "ff86583b-eb8d-4648-a2bc-a59da32cf25e"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/ArticleListingPage/ArticlePage
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{66EF930F-E563-4D5D-B0D0-DC0E59C21832}"
+              p:before="*"
+              s:ds="{5EEF3A9A-B327-46E3-B19B-15428BED0BA1}"
+              s:id="{010E3C29-6258-4251-9CEB-FEB1FAC64F98}"
+              s:ph="/main/article" />
+          </d>
+        </r>
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: Base Page
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210518T160337Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: Base Page
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Base Page

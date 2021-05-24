@@ -1,0 +1,33 @@
+﻿---
+ID: "2ff349b5-e22f-4749-a631-cce0f6ce0cd5"
+Parent: "72455be3-c1a3-46b2-b679-98d83cfcde4f"
+Template: "66e09d5b-4f8e-4313-9df3-fa7e53fbe83a"
+Path: /sitecore/content/LionTrustNew/Funds/Macro UK Growth Fund/Documents/Long Interim Report
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 500
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20161206T172748
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "a4a7f9dd-a218-4f33-b72a-7dc2251ccd43"
+      Hint: LegacyDocument_DocumentTypes
+      Type: Multilist
+      Value: "{07F40446-C241-46ED-B767-23567AE864FE}"
+    - ID: "c794210e-6107-4d69-841f-773cb9943bba"
+      Hint: LegacyDocument_DownloadLink
+      Value: |
+        <link target="" linktype="media" id="{6EEBF438-3B75-4F68-83B3-BFBD6224F76A}" url="/LionTrust/files/fund-literature/report-accounts/long-interim/macro-uk-growth-fund-long-interim-report" />
+    - ID: "eeb8db99-7da8-4973-adf7-bcf7b29eba79"
+      Hint: LegacyDocument_DocumentName
+      Value: Long Interim Report

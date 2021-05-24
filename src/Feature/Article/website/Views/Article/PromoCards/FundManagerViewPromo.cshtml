@@ -1,0 +1,77 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using System.Collections.Specialized;
+@using LionTrust.Foundation.ORM.Extensions
+@model LionTrust.Feature.Article.Models.IArticlePromo
+@if (Model != null)
+{
+    <div class="article-promo">
+        <a href="@Model.Url" class="article-promo__front">
+        </a>
+
+        <a href="@Model.Url" class="article-promo__body">
+            @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Article/Article Scroller", Model.Id.ToString(), "Edit Article"))
+            {
+                <div class="article-promo__head">
+                    @if (Model.Author != null && Model.Author.Any())
+                    {
+                        if (Model.Author.Count() > 1)
+                        {
+                            @Html.Glass().RenderImage(Model, m => m.MultipleAuthorsIcon, new NameValueCollection { { "class", "article-promo__head-img" } }, isEditable: true)
+                            <span class="article-promo__head-title">@Html.Glass().Editable(Model, m => m.MultipleAuthorsLabel)</span>
+                        }
+                        else
+                        {
+                            var author = Model.Author.FirstOrDefault();
+                            @Html.Glass().RenderImage(author, m => m.Image, new NameValueCollection { { "class", "article-promo__head-img" } }, isEditable: true)
+                            <span class="article-promo__head-title">@Html.Glass().Editable(author, m => m.FullName)</span>
+                        }
+                    }
+                </div>
+                <span class="article-promo__title">
+                    @Html.Glass().Editable(Model, m => m.Title)
+                </span>
+                <span class="article-promo__desc">
+                    @Html.Glass().Editable(Model, m => m.Subitle)
+                </span>
+            }
+        </a>
+        <div class="article-promo__footer">
+            <div class="article-promo__footer-item">
+                <img class="article-promo__clock" src="\dist\images\components\svg-icons\clock.svg" alt="icon">
+                <span class="article-promo__footer-text">
+                    @using (Html.Glass().BeginEditFrame(Model, "Edit Article Date", x => x.Date))
+                    {
+                        if (Sitecore.Context.PageMode.IsExperienceEditor)
+                        {
+                            @Model.Date.ToString("d MMMM yyyy")
+                        }
+                        else
+                        {
+                            if (Model.Date != DateTime.MinValue)
+                            {
+                                @Model.Date.ToString("d MMMM yyyy")
+                            }
+                            else
+                            {
+                                @Model.PublishedDate.ToString("d MMMM yyyy")
+                            }
+                        }
+                    }
+                </span>
+            </div>
+        </div>
+
+        @if ((Model.Image != null && !string.IsNullOrEmpty(Model.Image.Src)) || Sitecore.Context.PageMode.IsExperienceEditor)
+        {
+            @Html.Glass().RenderImage(Model, m => m.Image, new NameValueCollection { { "class", "article-promo__back" } }, isEditable: true)
+        }
+        else
+        {
+            @Html.Glass().RenderImage(Model, m => m.HeaderImage, new NameValueCollection { { "class", "article-promo__back" } }, isEditable: true)
+        }
+    </div>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @: Please assign datasource for Manager Promo component
+}

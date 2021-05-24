@@ -1,0 +1,64 @@
+﻿@model LionTrust.Feature.Fund.Models.AdditionalInfoAndChargesViewModel 
+@if (Model != null && Model.AdditionalInfoAndCharges != null && Model.Component != null)
+{
+<section class="container additional-info container-p-0">
+    <div class="card">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="card__content">
+                    <div class="card__title">@Html.Glass().Editable(Model.Component, m => m.AdditionalInfoLabel)</div>
+                    <div class="card__row">
+                        <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.MinInitialLabel)</div>
+                        <div class="card__item-right">@Html.Glass().Editable(Model.AdditionalInfoAndCharges, m => m.MinimalInitialInvestment)</div>
+                    </div>
+                    <div class="card__row">
+                        <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.MinAdditionalLabel)</div>
+                        <div class="card__item-right">@Html.Glass().Editable(Model.AdditionalInfoAndCharges, m => m.MinimumAdditionalInvestment)</div>
+                    </div>
+                    <div class="card__row">
+                        <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.ExDividendDateLabel)</div>
+                        <div class="card__item-right">@Html.Glass().Editable(Model.AdditionalInfoAndCharges, m => m.ExDividendDate)</div>
+                    </div>
+                    <div class="card__row">
+                        <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.DistributionDateLabel)</div>
+                        <div class="card__item-right">@Html.Glass().Editable(Model.AdditionalInfoAndCharges, m => m.DistributionDate)</div>
+                    </div>
+                    <div class="card__row">
+                        <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.SedolCodeLabel)</div>
+                        <div class="card__item-right">@Html.Glass().Editable(Model.AdditionalInfoAndCharges, m => m.SedolCode)</div>
+                    </div>
+                    <div class="card__row">
+                        <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.ISINCodeLabel)</div>
+                        <div class="card__item-right">@Html.Glass().Editable(Model.AdditionalInfoAndCharges, m => m.ISINCode)</div>
+                    </div>
+                    <div class="card__row">
+                        <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.BloombergCodeLabel)</div>
+                        <div class="card__item-right">@Html.Glass().Editable(Model.AdditionalInfoAndCharges, m => m.BloombergCode)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 offset-lg-1">
+                <div class="card__content">
+                    <div class="card__title">@Html.Glass().Editable(Model.Component, m => m.ChargesLabel)</div>
+                    <div class="card__row">
+                        <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.InitialChargeLabel)</div>
+                        <div class="card__item-right">@Html.Glass().Editable(Model.AdditionalInfoAndCharges, m => m.InitialCharge)</div>
+                    </div>
+                    <div class="card__row">
+                        <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.OngoingChargesLabel)</div>
+                        <div class="card__item-right">@Html.Glass().Editable(Model.AdditionalInfoAndCharges, m => m.OngoingCharges)</div>
+                    </div>
+                    <div class="card__row">
+                        <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.IncludedOFCLabel)</div>
+                        <div class="card__item-right">@Html.Glass().Editable(Model.AdditionalInfoAndCharges, m => m.IncludedOFC)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @: Add datasource for Additional Information and Charges component
+}

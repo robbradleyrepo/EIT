@@ -1,0 +1,33 @@
+﻿---
+ID: "a547bfb1-cc2e-459a-abdd-a7cd0d4e4ef8"
+Parent: "01e18bb1-6e1b-48c3-9531-1a7e2fd7d09a"
+Template: "66e09d5b-4f8e-4313-9df3-fa7e53fbe83a"
+Path: /sitecore/content/Funds/Sustainable Future Global Growth Fund/Documents/Holdings
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170413T102122
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "a4a7f9dd-a218-4f33-b72a-7dc2251ccd43"
+      Hint: DocumentTypes
+      Type: Multilist
+      Value: "{EC4083FC-B19F-4C1B-AC0A-82829F69204B}"
+    - ID: "c794210e-6107-4d69-841f-773cb9943bba"
+      Hint: DownloadLink
+      Value: |
+        <link target="" linktype="media" id="{D57E72F8-E19F-4D55-87BB-049D8169DA75}" url="/LionTrust/files/fund-literature/holdings/sustainable-future-global-growth-fund-holdings" />
+    - ID: "eeb8db99-7da8-4973-adf7-bcf7b29eba79"
+      Hint: DocumentName
+      Value: Holdings

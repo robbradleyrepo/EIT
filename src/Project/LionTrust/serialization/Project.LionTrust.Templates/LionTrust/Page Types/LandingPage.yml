@@ -1,0 +1,31 @@
+﻿---
+ID: "c1d35f9a-a7d0-47f9-903d-5ed33a15a795"
+Parent: "ceb8723e-3b4f-478b-8dcf-60ec0cfc6197"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/LionTrust/Page Types/LandingPage
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Applications/32x32/clipboard_empty.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Type: tree list
+  Value: |
+    {AA97AB0E-14B2-4BB5-B69F-ECB5E16865DF}
+    {EC3B08AF-CF1E-4774-BB7E-F114BC9B2191}
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{7E459C81-63B6-46D8-9E48-96F65E1FA21F}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140918T165040
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

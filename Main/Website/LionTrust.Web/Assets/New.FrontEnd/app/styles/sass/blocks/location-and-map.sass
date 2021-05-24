@@ -1,0 +1,49 @@
+.location-and-map-section
+    @extend .contact-section
+    margin-bottom: 2rem 
+    
+.our-location
+    color: $black
+    margin-bottom: 26px
+    @include breakpoint(desktop, up)
+        margin-bottom: 0
+    &__address
+        margin-bottom: 5px
+        @include breakpoint(desktop, up)
+            margin-bottom: 95px
+        span
+            display: block
+    &__container
+        position: absolute
+        top: 70px
+
+.select-office
+    display: flex
+    color: $black
+    &__title
+        font-weight: 500
+    &__tab
+        @extend .btn-unset
+        margin-left: 32px
+        padding: 0
+        &.active
+            color: $primary
+            border-bottom: 2px solid $primary
+            margin-top: 2px
+            
+
+.location-image
+    @include breakpoint(desktop, up)
+        padding-top: 70px
+        padding-bottom: 195px
+        background-size: cover
+    &__img
+        width: 100%
+        height: auto
+
+.location-item
+    display: none
+    &.active
+        display: block
+            
+            
