@@ -54,6 +54,10 @@
     <Content Include="App_Config\Include\Project\z.Common.DevSettings.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Config\Include\Project\Common.Serialization.Release.transform">
+      <SubType>Designer</SubType>
+      <DependentUpon>Common.Serialization.config</DependentUpon>
+    </Content>
     <None Include="web.config" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
