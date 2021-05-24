@@ -54,22 +54,25 @@
                         <div class="swiper-wrapper row">
                             @foreach (var item in Model.Children)
                             {
-                                using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Fund/Fund Scroller/", item.Id.ToString()))
-                                {
-                                    if (item.FundPage == null && Sitecore.Context.PageMode.IsExperienceEditor)
+                                <div class="col-9 col-sm-6 col-md-5 col-lg-6 col-xl-5 swiper-slide">
+                                    @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Fund/Fund Scroller/", item.Id.ToString()))
                                     {
-                                        @: <span style="color:black">Please select a fund page</span>
-                                    }
-                                    else if (item.FundPage != null)
-                                    {
-                                        <div class="col-9 col-sm-6 col-md-5 col-lg-6 col-xl-5 swiper-slide">
+                                        if (item.FundPage == null && Sitecore.Context.PageMode.IsExperienceEditor)
+                                        {
+                                            <div style="background-color:white">
+                                                <span style="color:black">Please select a fund page</span>
+                                            </div>
+                                        }
+                                        else if (item.FundPage != null)
+                                        {
+
                                             <a href="@item.FundPage.Url" class="fund-card">
                                                 <div class="fund-card__head" style="background-image: url('')">
-                                                    @Html.Glass().Editable(item, i => i.Image)                                                    
+                                                    @Html.Glass().Editable(item, i => i.Image)
                                                 </div>
                                                 <div class="fund-card__content">
                                                     <span class="fund-card__subtitle">@Html.Glass().Editable(item, i => i.Heading)</span>
-                                                    <span class="fund-card__title">@item.FundPage.FundReference.FundName</span>
+                                                    <span class="fund-card__title">@Html.Glass().Editable(@item, i => i.FundPage.FundReference.FundName)</span>
                                                     <div class="fund-card__text">
                                                         <div class="fund-card__text-top">
                                                             <p>
@@ -84,10 +87,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </a>                                                                                
-                                        </div>
+                                            </a>
+                                        }
                                     }
-                                }
+                                </div>
                             }
                         </div>
                     </div>

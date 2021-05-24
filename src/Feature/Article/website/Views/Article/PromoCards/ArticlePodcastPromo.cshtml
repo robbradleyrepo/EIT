@@ -5,20 +5,23 @@
 @if (Model != null)
 {
     <div class="article-promo">
-        <a href="#article promo" class="article-promo__front">
+        <a href="@Model.Url" class="article-promo__front">
         </a>
         <a href="@Model.Url" class="article-promo__body">
-            <div class="article-promo__head">
-                <i class="icon-mic text-primary"></i>
-                <span class="article-promo__head-title">@Html.Glass().Editable(Model, x => x.Heading)</span>
-            </div>
-            <span class="article-promo__title">
-                @Html.Glass().Editable(Model, x => x.Title)
-            </span>
-            <span class="article-promo__desc">
-                @Html.Glass().Editable(Model, x => x.Body)
-            </span>
-        </a>
+            @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Article/Article Scroller", Model.Id.ToString(), "Edit Article"))
+            {
+                <div class="article-promo__head">
+                    <i class="icon-mic text-primary"></i>
+                    <span class="article-promo__head-title">@Html.Glass().Editable(Model, x => x.Heading)</span>
+                </div>
+                <span class="article-promo__title">
+                    @Html.Glass().Editable(Model, x => x.Title)
+                </span>
+                <span class="article-promo__desc">
+                    @Html.Glass().Editable(Model, x => x.Body)
+                </span>
+            }
+            </a>
         <div class="article-promo__footer">
             <div class="article-promo__footer-item">
                 @if (Sitecore.Context.PageMode.IsExperienceEditor)

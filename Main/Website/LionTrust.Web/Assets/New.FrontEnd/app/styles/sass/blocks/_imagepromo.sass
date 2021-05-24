@@ -99,3 +99,14 @@
         display: none
         @include breakpoint(tablet, up)
             display: inline-block
+
+.imagepromo.whow-to
+    .imagepromo__content
+        @include breakpoint(desktop, up)
+            padding-left: 80px
+    .imagepromo__headbox
+        text-align-last: left
+        @include breakpoint(desktop, up)
+            margin-top: -45px
+    .imagepromo__contentbox
+        text-align-last: left

@@ -21,6 +21,8 @@
 
             public const string CTAGoal_FieldName = "CarouselCard_CTAGoal";
             public const string CTAGoal_FieldId = "{D286F4D5-171F-422D-8F75-93E8E0B8451E}";
+
+            public const string CTAIsVideo_FieldId = "{A7469F85-01D3-473E-9915-55C2C11913BB}";
         }
 
         public static class HomePageCarousel

@@ -1,11 +1,9 @@
 import Swiper from "swiper/bundle";
-import {isSitecoreExperienceEditor} from './sitecoreHelper';
 
 export default () => {
   const swiper = new Swiper(".swiper-container-funds", {
     grabCursor: true,
     slidesPerView: "auto",
-    slideClass: isSitecoreExperienceEditor() ? 'scEnabledChrome' : 'swiper-slide',
     spaceBetween: 0,
     slidesOffsetAfter: 30,
     breakpointsInverse: true,

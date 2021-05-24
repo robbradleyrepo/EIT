@@ -26,6 +26,6 @@ export default () => {
       // markers: true,
       scrub: true,
     },
-    y: 600,
+    y: 400,
   });
 };

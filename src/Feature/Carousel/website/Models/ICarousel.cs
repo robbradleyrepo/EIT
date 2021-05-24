@@ -26,5 +26,8 @@
 
         [SitecoreField(Constants.CarouselCard.Image_FieldId, SitecoreFieldType.Image, "Carousel Card")]
         Image Image { get; set; }
+
+        [SitecoreField(Constants.CarouselCard.CTAIsVideo_FieldId, SitecoreFieldType.Checkbox, "Carousel Card")]
+        bool CTAIsVideo { get; set; }
     }
 }

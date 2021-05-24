@@ -1,9 +1,9 @@
 import Chart from "chart.js";
 
 export default () => {
-  if (document.getElementById("creditRating")) {
-    const ctx = document.getElementById("creditRating").getContext("2d");
-    const { labels, data, maxValue } = $("#dataCreditRating").data("chart");
+  if ($(".credit-rating-chart").length) {
+    const ctx = $(".credit-rating-chart")[0].getContext("2d");
+    const { labels, data, maxValue } = $(".credit-rating-chart").data("chart");
     Chart.defaults.global.defaultFontSize = 20;
     Chart.defaults.global.defaultFontFamily = "futura-pt";
     Chart.defaults.global.defaultFontStyle = "300";
@@ -30,7 +30,6 @@ export default () => {
         },
         maintainAspectRatio: true,
         responsive: true,
-        // indexAxis: "y",
         scales: {
           xAxes: [
             {
