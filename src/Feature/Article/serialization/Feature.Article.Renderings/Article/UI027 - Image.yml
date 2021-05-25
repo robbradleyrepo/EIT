@@ -2,15 +2,23 @@
 ID: "e9ea1844-f7aa-45d6-a10f-800a467d6e3d"
 Parent: "ff86fe68-77e1-45a3-aa4f-be9108439a84"
 Template: "99f8905d-4a87-4eb8-9f8b-a9bebfb3add6"
-Path: /sitecore/layout/Renderings/Feature/Article/Image
+Path: "/sitecore/layout/Renderings/Feature/Article/UI027 - Image"
 DB: master
 SharedFields:
 - ID: "51b435bc-f7b9-478a-9c51-52916af96ff5"
   Hint: Path
   Value: /views/article/image.cshtml
+- ID: "a2f5d9df-8cba-4a1d-99eb-51acb94cb057"
+  Hint: Page Editor Buttons
+  Type: Treelist
+  Value: "{56BBFE28-BD7A-4ECB-B39B-9EFE9AE26A03}"
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
   Value: "site:articleimage"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{9E630AE8-89C5-464C-8B05-0DDE281AF212}" />
 Languages:
 - Language: en
   Versions:

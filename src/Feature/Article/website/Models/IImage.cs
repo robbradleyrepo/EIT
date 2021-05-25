@@ -7,5 +7,7 @@
     {
         [SitecoreField(Constants.Image.ImageFieldId)]
         Image Image { get; set; }
+        [SitecoreField(Constants.Image.OpacityFieldId)]
+        string Opacity { get; set; }
     }
 }
