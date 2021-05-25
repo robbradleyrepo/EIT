@@ -1,0 +1,32 @@
+.list-mod-item
+    margin-bottom: 40px
+    &__title
+        @extend .h4
+    &__date
+        color: $gray
+        margin-bottom: 18px
+        display: inline-block
+        @include breakpoint(desktop, up)
+            font-size: 18px
+            margin-bottom: 27px
+    &__content
+        font-size: 18px
+        line-height: 30px
+        color: $black
+        @include breakpoint(desktop, up)
+            font-size: 20px
+        p
+            margin-bottom: 18px
+            @include breakpoint(desktop, up)
+                margin-bottom: 27px
+    &__subhead
+        display: block
+        font-weight: 500
+        line-height: 28px
+        font-size: 16px
+        @include breakpoint(desktop, up)
+            font-size: 18px
+        &_normal
+            font-weight: 400
+    &__download
+        margin-bottom: 27px
