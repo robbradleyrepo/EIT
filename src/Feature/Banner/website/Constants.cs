@@ -6,11 +6,7 @@
         {
             public const string LeadBannerTitle_FieldName = "LeadBanner_Title";
             public const string LeadBannerBody_FieldName = "LeadBanner_Body";
-            public const string LeadBannerIcon_FieldName = "LeadBanner_Icon";
             public const string LeadBannerBackgroundImage_FieldName = "LeadBanner_BackgroundImage";
-            public const string LeadBannerTextAlign_FieldName = "LeadBanner_TextAlign";
-
-            public const string LeadBannerTextAlignFieldId = "{B7ECDEE2-BA93-4F86-A7D5-05DB6E572A80}";
         }
 
         public static class HomepageLeadBanner

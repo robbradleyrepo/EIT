@@ -16,16 +16,13 @@
 
         public static class TitleComponent
         {
-            public const string Title_FieldName = "TitleComponent_Title";
             public const string Title_FieldId = "{88C061A0-4E29-4B8D-A560-A62BE5B7D6EF}";
 
             public const string HeadingType_FieldId = "{B680A92F-4B97-4700-90C1-6DC60349AFEB}";
             public const string HeadingType_FieldName = "TitleComponent_HeadingType";
 
-            public const string TextAlign_FieldName = "TitleComponent_TextAlignment";
             public const string TextAlign_FieldId = "{AF43676E-2D5E-4C6E-9DF1-FD700A2516D1}";
 
-            public const string TextColor_FieldName = "TitleComponent_TextColor";
             public const string TextColor_FieldId = "{ED1EC554-3049-42ED-BCE7-419D27C1E0F7}";
         }
 

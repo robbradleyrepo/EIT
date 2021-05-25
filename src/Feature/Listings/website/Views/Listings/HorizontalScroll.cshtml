@@ -1,4 +1,5 @@
-﻿@model LionTrust.Feature.Listings.Models.IHorizontalScroll
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Listings.Models.IHorizontalScroll
 @{
     var counter = Model.NumberOfItems;
     if (Model.NumberOfItems == 0)
@@ -15,15 +16,9 @@
             </div>
             <div id="investment-slider" class="swiper-container">
                 <div class="swiper-wrapper">
-                    @foreach (var scrollerCard in Model.ScrollerCards)
+                    @foreach (var scrollerCard in Model.ScrollerCards.Take(counter))
                     {
                         @Html.Partial("~/Views/Listings/_ScrollerCard.cshtml", scrollerCard)
-
-                        counter--;
-                        if (counter == 0)
-                        {
-                            break;
-                        }
                     }
                 </div>
             </div>

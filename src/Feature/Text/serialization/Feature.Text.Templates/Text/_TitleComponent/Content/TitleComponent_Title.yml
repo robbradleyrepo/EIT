@@ -4,6 +4,13 @@ Parent: "d35ac245-29bb-42dd-8d07-2c11ad2b3e24"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
 Path: /sitecore/templates/Feature/Text/_TitleComponent/Content/TitleComponent_Title
 DB: master
+SharedFields:
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: "Single-Line Text"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 75
 Languages:
 - Language: en
   Fields:

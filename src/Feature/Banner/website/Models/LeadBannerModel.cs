@@ -1,10 +1,9 @@
-﻿using Glass.Mapper.Sc.Configuration.Attributes;
-using Glass.Mapper.Sc.Fields;
-using LionTrust.Foundation.Design;
-using Sitecore.Data;
-
-namespace LionTrust.Feature.Banner.Models
+﻿namespace LionTrust.Feature.Banner.Models
 {
+    using Glass.Mapper.Sc.Configuration.Attributes;
+    using Glass.Mapper.Sc.Fields;
+    using Sitecore.Data;
+
     public class LeadBannerModel
     {   
         public virtual ID Id { get; set; }
@@ -15,25 +14,19 @@ namespace LionTrust.Feature.Banner.Models
         [SitecoreField("LeadBanner_Body")]
         public virtual string Body { get; set; }
 
-        [SitecoreField("LeadBanner_Icon")]
-        public virtual Image Icon { get; set; }
-
         [SitecoreField("LeadBanner_BackgroundImage")]
         public virtual Image BackgroundImage { get; set; }
 
-        [SitecoreField(Banner.Constants.LeadBanner.LeadBannerTextAlignFieldId)]
-        public virtual ILookupValue TextAlign { get; set; }
-
-        public string TextAlignValue 
-        { 
+        public string BackgroundImageUrl
+        {
             get
-            { 
-                if (TextAlign == null)
+            {
+                if (BackgroundImage == null || string.IsNullOrEmpty(BackgroundImage.Src))
                 {
                     return string.Empty;
                 }
 
-                return TextAlign.Value;
+                return BackgroundImage.Src;
             }
         }
     }

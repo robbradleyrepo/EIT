@@ -1,29 +1,29 @@
-﻿@using LionTrust.Foundation.ORM.Extensions;
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Foundation.ORM.Extensions;
 @model LionTrust.Feature.Listings.Models.IScrollerCard
 @if (Model != null)
 {
     var imageSrc = Model.BackgroundImage.GetSafeSitecoreImageUrl();
-
-    using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/ScrollerCard", Model.Id.ToString(), "Edit Scroller Card"))
-    {
         <div class="swiper-slide">
             <div class="investment-card" style="background-image: url(@imageSrc);">
-                <div class="investment-card__content">
-                    <div class="investment-card__title">@Html.Glass().Editable(Model, m => m.Title)</div>
-                    <p class="investment-card__text">
-                        @if (Sitecore.Context.PageMode.IsExperienceEditor)
-                        {
-                            @Html.Glass().Editable(Model, m => m.Description)
-                        }
-                        else
-                        {
-                            @Html.Raw(Model.Description)
-                        }
-                    </p>
-                </div>
+                @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/ScrollerCard", Model.Id.ToString(), "Edit Scroller Card"))
+                {
+                    <div class="investment-card__content">
+                        <div class="investment-card__title">@Html.Glass().Editable(Model, m => m.Title)</div>
+                        <p class="investment-card__text">
+                            @if (Sitecore.Context.PageMode.IsExperienceEditor)
+                            {
+                                @Html.Glass().Editable(Model, m => m.Description)
+                            }
+                            else
+                            {
+                                @Html.Raw(Model.Description)
+                            }
+                        </p>
+                    </div>
+                }
             </div>
-        </div>
-    }
+        </div>    
 }
 else if (Sitecore.Context.PageMode.IsExperienceEditor)
 {
