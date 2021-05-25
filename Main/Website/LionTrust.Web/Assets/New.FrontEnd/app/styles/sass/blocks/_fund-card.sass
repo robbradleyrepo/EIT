@@ -17,6 +17,20 @@
                 transform: scale(1.05)
             i.icon-arrow-right
                 transform: translate(10px, 0)
+    &_grid
+        margin-bottom: 32px
+        height: auto
+        display: flex
+        flex-direction: column
+        max-height: fit-content
+        .fund-card__head
+            min-height: 188px
+            @include breakpoint(desktop-large, up)
+                min-height: 250px
+        .fund-card__content
+            display: flex
+            flex-direction: column
+            justify-content: space-between
     &__head
         background-size: cover
         border-radius: 10px 10px 0 0
@@ -64,4 +78,15 @@
             @include breakpoint(desktop-large, up)
                 font-size: 18px
                 line-height: 28px
-                margin-bottom: 33px
+                margin-bottom: 32px
+    &__btn
+        @extend .btn-unset
+        @extend .link-styles
+        color: $black
+        padding-left: 0
+        margin-right: 32px
+        margin-bottom: 16px
+        .icon-folder
+            font-size: 12px
+        &:hover
+            color: $black
