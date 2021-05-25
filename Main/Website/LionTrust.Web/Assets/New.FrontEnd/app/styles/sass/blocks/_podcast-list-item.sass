@@ -1,0 +1,27 @@
+.podcast-list-item
+    color: $black
+    margin-bottom: 16px
+    @include breakpoint(desktop, up)
+        margin-bottom: 32px
+    &__title
+        @extend .h4
+    &__text
+        font-size: 16px
+        line-height: 28px
+        margin-bottom: 16px
+        @include breakpoint(desktop, up)
+            margin-bottom: 32px
+            font-size: 20px
+            line-height: 30px
+            font-size: 18px
+    &__img
+        width: 100%
+        height: auto
+        margin-bottom: 1rem
+        @include breakpoint(desktop, up)
+            margin-bottom: 0
+    &__links
+        display: flex
+        flex-direction: column
+        a
+            margin-bottom: 1rem
