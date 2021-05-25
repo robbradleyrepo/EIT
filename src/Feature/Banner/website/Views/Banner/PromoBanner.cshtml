@@ -32,20 +32,20 @@
                             </span>
 
                             <div class="lead-banner__btnbox mt-4">
-                                @if (Model.ShowPrimaryCTA)
+                                @using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.PrimaryCTALink, Model.PrimaryCtaGoal, new NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
                                 {
-                                    using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.PrimaryCTALink, Model.PrimaryCtaGoal, new NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
+                                    if (Model.PrimaryCTALink != null)
                                     {
-                                        @Html.Glass().Editable(Model, x => x.PrimaryCTALabel)
+                                        @Model.PrimaryCTALink.Text;
                                         <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
                                     }
                                 }
 
-                                @if (Model.ShowSecondaryCTA)
+                                @using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.SecondaryCTALink, Model.SecondaryCtaGoal, new NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }, isEditable: true))
                                 {
-                                    using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.SecondaryCTALink, Model.SecondaryCtaGoal, new NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }, isEditable: true))
+                                    if (Model.SecondaryCTALink != null)
                                     {
-                                        @Html.Glass().Editable(Model, x => x.SecondaryCTALabel)
+                                        @Model.SecondaryCTALink.Text;
                                         <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
                                     }
                                 }
