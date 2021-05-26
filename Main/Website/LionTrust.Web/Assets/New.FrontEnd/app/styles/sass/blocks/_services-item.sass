@@ -1,0 +1,42 @@
+.services-item
+    color: $black
+    display: flex
+    &__img
+
+        width: 40px
+        height: 100%
+        max-width: 120px
+        margin-right: 10px
+        @include breakpoint(desktop, up)
+            width: 100%
+            margin-right: 20px
+    &__title
+        @extend .h4
+        margin-bottom: 13px
+    &__subtitle
+        font-weight: 500
+        font-size: 18px
+        @include breakpoint(desktop, up)
+            font-size: 20px
+
+.services-item-list
+    @extend .styled-list
+    margin-bottom: 10px
+    @include breakpoint(desktop, up)
+        margin-bottom: 20px
+    li
+        font-weight: normal
+    &_checked
+        li
+            &:before
+                content: "\e925"!important
+                font-family: icomoon!important
+                width: auto!important
+                height: auto!important
+                background: transparent!important
+                font-size: 10px
+                top: 5px!important
+                left: -2px!important
+                color: $gold
+                @include breakpoint(desktop, up)
+                    top: 1px!important
