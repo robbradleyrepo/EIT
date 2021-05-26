@@ -5,6 +5,7 @@
         public static class Image
         {
             public const string ImageFieldId = "{48CE5243-5DC9-4B3C-B27F-EA89478F21A5}";
+            public const string OpacityFieldId = "{B59F2B9F-73B9-4BED-9E7A-900D0CDB125D}";
         }
 
         public static class ArticleRichText

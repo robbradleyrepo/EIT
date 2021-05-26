@@ -28,8 +28,15 @@ SharedFields:
           s:par=""
           s:ph="main" />
         <r
-          uid="{9C8EBC77-2B59-4C45-B3A5-94E014FCB048}"
+          uid="{60487F84-BC4D-4A13-AB2A-FEC8A23DD410}"
           p:after="r[@uid='{A4C4C561-2A2D-4372-B2F6-3348E9A6F808}']"
+          s:ds="{B25D241A-662E-4C88-A11D-6B904B082798}"
+          s:id="{F4301786-A113-4511-BA28-46655D111F73}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{9C8EBC77-2B59-4C45-B3A5-94E014FCB048}"
+          p:after="r[@uid='{60487F84-BC4D-4A13-AB2A-FEC8A23DD410}']"
           s:ds="{95E8EFD5-A552-423C-981E-2087F7108C51}"
           s:id="{6B2E2A4D-C3CB-4676-B804-B3459E4C9BD6}"
           s:par=""

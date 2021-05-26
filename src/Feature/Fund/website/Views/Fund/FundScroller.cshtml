@@ -72,7 +72,12 @@
                                                 </div>
                                                 <div class="fund-card__content">
                                                     <span class="fund-card__subtitle">@Html.Glass().Editable(item, i => i.Heading)</span>
-                                                    <span class="fund-card__title">@Html.Glass().Editable(@item, i => i.FundPage.FundReference.FundName)</span>
+                                                    <span class="fund-card__title">
+                                                        @if (item.FundPage.FundReference != null)
+                                                        {
+                                                            @Html.Glass().Editable(@item, i => i.FundPage.FundReference.FundName)
+                                                        }
+                                                    </span>
                                                     <div class="fund-card__text">
                                                         <div class="fund-card__text-top">
                                                             <p>

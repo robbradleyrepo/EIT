@@ -1,34 +1,23 @@
 @using Glass.Mapper.Sc.Web.Mvc
 @model LionTrust.Feature.Banner.Models.LeadBannerModel
-@if (Model != null)
+@if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
 {
-    <div class="leadbanner">
-
-        <div>
-            <div class="leadbanner__headbox">
-                <div class="leadbanner__head ">
-
-                    <h1 class="txtlimit twoline">
+    return;
+}
+<header class="header" style="background-image:url(@Model.BackgroundImageUrl)">
+    <section class="container">
+        @Html.Sitecore().Placeholder("navigation")
+        <div class="row">
+            <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                <div class="lead-banner text-center">
+                    <h1 class="lead-banner__title">
                         @Html.Glass().Editable(Model, m => m.Title)
                     </h1>
-
-                </div>
-            </div>
-            <div class="leadbanner__contentbox">
-                <div class="leadbanner__content">
-                    <div class="txtlimit fourline" style="text-align:@Model.TextAlignValue">
+                    <span class="lead-banner__text">
                         @Html.Glass().Editable(Model, m => m.Body)
-                    </div>
-
+                    </span>
                 </div>
             </div>
-            @if (Model.Icon != null)
-            {
-                <div class="leadbanner__btnbox">
-                    @Html.Glass().Editable(Model, m => m.Icon)
-                </div>
-            }
         </div>
-
-    </div>
-}
+    </section>
+</header>

@@ -2,7 +2,10 @@
 @using LionTrust.Foundation.Analytics.Goals
 @using System.Collections.Specialized
 @model LionTrust.Feature.Fund.Models.IFundManagers
-
+@if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    return;
+}
 <div class="row">
     @foreach (var manager in Model.Managers)
     {

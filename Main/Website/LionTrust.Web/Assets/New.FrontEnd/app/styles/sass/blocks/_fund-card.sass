@@ -17,6 +17,35 @@
                 transform: scale(1.05)
             i.icon-arrow-right
                 transform: translate(10px, 0)
+    &_grid
+        margin-bottom: 32px
+        height: auto
+        display: flex
+        flex-direction: column
+        max-height: fit-content
+        .fund-card__head
+            height: auto
+            img
+                width: 102%
+            @include breakpoint(desktop, up)
+            min-height: 188px
+        .fund-card__title
+            font-size: 26px
+            line-height: 32px
+            margin-bottom: 5px
+        .fund-card__subtitle
+            margin-bottom: 2px
+        .fund-card__content
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            padding: 16px 8px 13px
+            .fund-card__text p
+                font-size: 16px
+                line-height: 24px
+                margin-bottom: 0
+                @include breakpoint(mobile-large, up)
+                    margin-bottom: 8px
     &__head
         background-size: cover
         border-radius: 10px 10px 0 0
@@ -64,4 +93,17 @@
             @include breakpoint(desktop-large, up)
                 font-size: 18px
                 line-height: 28px
-                margin-bottom: 33px
+                margin-bottom: 32px
+    &__btn
+        @extend .btn-unset
+        @extend .link-styles
+        color: $black
+        padding-left: 0
+        margin-bottom: 4px
+        .icon-folder
+            font-size: 12px
+        &:hover
+            color: $black
+    &__btns-block
+        display: flex
+        justify-content: space-between

@@ -4,4 +4,9 @@
 {
     return;
 }
-@Html.Glass().Editable(m => m.Image, new {@class = "full-with-img" })
+
+@{
+    var opacity = string.IsNullOrWhiteSpace(@Model.Opacity) ? "opacity: 1" : "opacity: " + @Model.Opacity;
+}
+
+@Html.Glass().RenderImage(m => m.Image, new { @class = "full-with-img", style = opacity })
