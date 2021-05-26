@@ -69,6 +69,9 @@
     <Content Include="App_Config\Include\Project\LionTrust.Release.transform">
       <DependentUpon>LionTrust.config</DependentUpon>
     </Content>
+    <Content Include="App_Config\Include\Project\LionTrust.Articles.Index.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Web.config">
       <SubType>Designer</SubType>
     </None>
