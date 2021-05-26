@@ -1,0 +1,36 @@
+﻿---
+ID: "3a7a1b9a-7aca-4dfa-81ce-0e07b7706dd7"
+Parent: "9fe30769-f02c-4863-93e2-d05322422005"
+Template: "4e106225-a950-4b0c-8dc0-2092d4897b63"
+Path: /sitecore/content/LionTrustNew/Home/_Local/Homepage Carousel/CarouselCard3
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210512T140016Z
+    - ID: "69be8278-228e-48f0-9e22-72351237e500"
+      Hint: CarouselCard_CTALink
+      Value: |
+        <link linktype="external" url="https://video.liontrust.co.uk/v.ihtml/player.html?token=70c960aa58e512e65ed6ba97094a8d8a&amp;source=embed&amp;photo%5fid=68193386" anchor="" target="" />
+    - ID: "8a233aaa-9955-4e29-a15f-9d8366047617"
+      Hint: CarouselCard_Heading
+      Value: Investing for a cleaner, safer and healthier world.
+    - ID: "9bf9ebaa-ad4e-4853-a848-85df925d9beb"
+      Hint: CarouselCard_Image
+      Value: |
+        <image mediaid="{CD6A2BF6-4A62-423C-A0E1-C7E66BEC2237}" />
+    - ID: "a7469f85-01d3-473e-9915-55c2c11913bb"
+      Hint: CarouselCard_CTAIsVideo
+      Type: Checkbox
+      Value: 1
+    - ID: "e57baffa-a701-4053-b5d2-617f132e1d32"
+      Hint: CarouselCard_AuthorName
+      Value: Marwan Saleh
+    - ID: "fca56162-7081-4c2b-8726-2c5cc1b24635"
+      Hint: CarouselCard_AuthorImage
+      Value: |
+        <image mediaid="{3D4915E8-A68C-488B-8924-CC569F409FCA}" />
