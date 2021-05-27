@@ -2,7 +2,8 @@ const url = `https://${process.env.LIGHTHOUSE_HEROKU_APP_NAME}.herokuapp.com/`
 module.exports = {
     ci: {
         collect: {
-            url: ['http://www.liontrust.co.uk/'],   
+            url: ['https://cm-liontrust-it.sagittarius.agency/', 
+            'https://cm-liontrust-it.sagittarius.agency/articles/improving-prospects-for-the-land-of-the-rising-sun'],   
             settings:{
                 chromeFlags:'--no-sandbox'
             }   

@@ -2,19 +2,8 @@ image: node:latest
 clone:
   depth: full
 pipelines:
-  custom:
-    create-lighthouse-app:
-      - step:
-          name: Create Lighthouse app
-          script:
-            - curl https://cli-assets.heroku.com/install.sh | sh
-            - export LIGHTHOUSE_HEROKU_API_KEY
-            - /bin/bash ./lighthouse/create-app.sh $LIGHTHOUSE_HEROKU_APP_NAME $HEROKU_APP_USERNAME $HEROKU_APP_PASSWORD
-            - cd ./lighthouse/installer/
-            - npm ci
-            - npm run build
-            - node ./dist/index.js $LIGHTHOUSE_HEROKU_APP_NAME $HEROKU_APP_USERNAME $HEROKU_APP_PASSWORD $BITBUCKET_USERNAME $BITBUCKET_APP_PASS
-    lighthouse-checks:
+  branches:
+    develop:
       - step:
           name: Lighthouse Checks
           caches:
@@ -28,3 +17,16 @@ pipelines:
             - cd ./lighthouse
             - lhci collect
             - lhci upload --basicAuth.username=$HEROKU_APP_USERNAME --basicAuth.password=$HEROKU_APP_PASSWORD 
+  custom:
+    create-lighthouse-app:
+      - step:
+          name: Create Lighthouse app
+          script:
+            - curl https://cli-assets.heroku.com/install.sh | sh
+            - export LIGHTHOUSE_HEROKU_API_KEY
+            - /bin/bash ./lighthouse/create-app.sh $LIGHTHOUSE_HEROKU_APP_NAME $HEROKU_APP_USERNAME $HEROKU_APP_PASSWORD
+            - cd ./lighthouse/installer/
+            - npm ci
+            - npm run build
+            - node ./dist/index.js $LIGHTHOUSE_HEROKU_APP_NAME $HEROKU_APP_USERNAME $HEROKU_APP_PASSWORD $BITBUCKET_USERNAME $BITBUCKET_APP_PASS
+    
