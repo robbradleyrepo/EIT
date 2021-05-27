@@ -34,22 +34,18 @@
             }
 
             var result = new FeaturedArticlesViewModel { Data = datasource };
-            
+
             if (datasource.Articles != null && datasource.Articles.Any())
             {
                 result.FeaturedArticles = FeaturedArticleLink.Map(datasource);
             }
-            else if(datasource.Children != null && datasource.Children.Any())
+            else if (datasource.Children != null && datasource.Children.Any())
             {
                 result.FeaturedArticles = UrlLink.Map(datasource);
             }
             else
             {
-                var searchParameters = context.GetRenderingParameters<IArticleFilter>();
-                if (searchParameters != null)
-                {
-                    result.FeaturedArticles = new SearchedRelatedArticles(contentSearchService, linkManager).Map(searchParameters, databaseName);
-                }
+                result.FeaturedArticles = new SearchedRelatedArticles(contentSearchService, linkManager).Map(datasource, databaseName);
             }
             
             if ((result.FeaturedArticles == null || !result.FeaturedArticles.Any()) && !Sitecore.Context.PageMode.IsExperienceEditor)
