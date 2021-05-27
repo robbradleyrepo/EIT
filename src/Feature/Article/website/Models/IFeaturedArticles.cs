@@ -4,7 +4,7 @@
     using LionTrust.Foundation.ORM.Models;
     using System.Collections.Generic;
 
-    public interface IFeaturedArticles: IGlassBase
+    public interface IFeaturedArticles: IGlassBase, IArticleFilter
     {
         [SitecoreField(Constants.FeaturedArticles.HeadingFieldId)]
         string Heading { get; set; }
