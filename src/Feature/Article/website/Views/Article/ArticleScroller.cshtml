@@ -4,18 +4,16 @@
 <section class="article">
     <div class="article__box">
         <div class="container">
-            <div class="row">
-                <div class="article__head">
-                    <h2>@Html.Glass().Editable(Model.ArticleScroller, m => m.Heading)</h2>
-                    @using (Html.Glass().BeginRenderLink(Model.ArticleScroller, m => m.CTA, new NameValueCollection { { "class", "btn btn-secondary-nav article__btn" } }, isEditable: true))
+            <div class="article__head">
+                <h2>@Html.Glass().Editable(Model.ArticleScroller, m => m.Heading)</h2>
+                @using (Html.Glass().BeginRenderLink(Model.ArticleScroller, m => m.CTA, new NameValueCollection { { "class", "btn btn-secondary-nav article__btn" } }, isEditable: true))
+                {
+                    if (Model.ArticleScroller.CTA != null && !string.IsNullOrEmpty(Model.ArticleScroller.CTA.Text))
                     {
-                        if (Model.ArticleScroller.CTA != null && !string.IsNullOrEmpty(Model.ArticleScroller.CTA.Text))
-                        {
-                            @Model.ArticleScroller.CTA.Text
-                        }
-                        <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
+                        @Model.ArticleScroller.CTA.Text
                     }
-                </div>
+                    <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
+                }
             </div>
         </div>
         <!-- Swiper -->

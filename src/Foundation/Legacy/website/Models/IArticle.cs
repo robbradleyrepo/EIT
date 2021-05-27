@@ -9,7 +9,7 @@
     public interface IArticle : IHeroHomePageData
     {
         [SitecoreField(Constants.Article.Authors_FieldId, SitecoreFieldType.Treelist, "Article page data")]
-        IEnumerable<IAuthor> Author { get; set; }
+        IEnumerable<IAuthor> Authors { get; set; }
 
         [SitecoreField(Constants.Article.Title_FieldId, SitecoreFieldType.SingleLineText, "Article page data")]
         string Title { get; set; }
@@ -21,7 +21,7 @@
         string Body { get; set; }
 
         [SitecoreField(Constants.Article.PromoType_FieldId, SitecoreFieldType.Droplink, "Article page data")]
-        ILegacyGlassBase PromoType { get; set; }
+        IFundCategory PromoType { get; set; }
 
         [SitecoreField(Constants.Article.PublishDate_FieldId, SitecoreFieldType.DateTime, "Article page data")]
         DateTime PublishedDate { get; set; }

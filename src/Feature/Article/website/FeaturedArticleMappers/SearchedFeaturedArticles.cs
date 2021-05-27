@@ -26,7 +26,7 @@
             {
                 Funds = filter.Funds?.Select(f => f.Id.ToString().Replace("-", string.Empty)),
                 FundCategories = filter.FundCategories?.Select(fc => fc.Id.ToString().Replace("-", string.Empty)),
-                FundTeams = filter.FundTeam?.Select(ft => ft.Id.ToString().Replace("-", string.Empty)),
+                FundTeams = filter.FundTeams?.Select(ft => ft.Id.ToString().Replace("-", string.Empty)),
                 FundManagers = filter.FundManagers?.Select(fm => fm.Id.ToString().Replace("-", string.Empty)),
                 Take = 6,
                 DatabaseName = databaseName,

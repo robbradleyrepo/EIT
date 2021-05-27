@@ -5,6 +5,7 @@
     using System.Linq;
     using Glass.Mapper.Sc.Web.Mvc;
     using LionTrust.Feature.Article.Models;
+    using LionTrust.Foundation.Legacy.Models;
     using LionTrust.Foundation.Search.Models.ContentSearch;
     using LionTrust.Foundation.Search.Models.Request;
     using LionTrust.Foundation.Search.Services.Interfaces;
@@ -43,14 +44,15 @@
                 .Select(sr => BuildArticle(sr.Document));
         }
 
-        public IEnumerable<IArticlePromo> Map(IArticleFilter filter, string databaseName)
+        public IEnumerable<IArticlePromo> Map(IEnumerable<IFund> funds, IEnumerable<IFundCategory> fundCategories, IEnumerable<IFundTeam> fundTeams, IEnumerable<IAuthor> fundManagers, IEnumerable<ITopic> topics, string databaseName)
         {
             var request = new ArticleSearchRequest
             {
-                Funds = filter.Funds?.Select(f => f.Id.ToString().Replace("-", string.Empty)),
-                FundCategories = filter.FundCategories?.Select(fc => fc.Id.ToString().Replace("-", string.Empty)),
-                FundTeams = filter.FundTeam?.Select(ft => ft.Id.ToString().Replace("-", string.Empty)),
-                FundManagers = filter.FundManagers?.Select(fm => fm.Id.ToString().Replace("-", string.Empty)),
+                Topics = topics?.Select(t => t.Id),
+                Funds = funds?.Select(f => f.Id.ToString().Replace("-", string.Empty)),
+                FundCategories = fundCategories?.Select(fc => fc.Id.ToString().Replace("-", string.Empty)),
+                FundTeams = fundTeams?.Select(ft => ft.Id.ToString().Replace("-", string.Empty)),
+                FundManagers = fundManagers?.Select(fm => fm.Id.ToString().Replace("-", string.Empty)),
                 Take = 6,
                 DatabaseName = databaseName,
                 FromDate = DateTime.MinValue,
@@ -58,7 +60,7 @@
             };
 
             var results = _searchService.GetDatedTaxonomyRelatedArticles(request, result => result.OrderByDescending(hit => hit.Created));
-            
+
             if (results == null || results.SearchResults == null)
             {
                 return new IArticlePromo[0];
@@ -67,6 +69,11 @@
             return results.SearchResults
                 .Where(sr => sr.Document != null)
                 .Select(sr => BuildArticle(sr.Document));
+        }
+
+        public IEnumerable<IArticlePromo> Map(IArticleFilter filter, string databaseName)
+        {
+            return Map(filter.Funds, filter.FundCategories, filter.FundTeams, filter.FundManagers, filter.Topics, databaseName);
         }
 
         private IArticlePromo BuildArticle(ArticleSearchResultItem hit)

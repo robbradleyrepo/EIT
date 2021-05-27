@@ -17,6 +17,9 @@
         IEnumerable<IAuthor> FundManagers { get; set; }
 
         [SitecoreField(Constants.ArticleFilter.FundTeamsFieldId)]
-        IEnumerable<IFundTeam> FundTeam { get; set; }
+        IEnumerable<IFundTeam> FundTeams { get; set; }
+
+        [SitecoreField(Constants.ArticleFilter.TopicsFieldId)]
+        IEnumerable<ITopic> Topics { get; set; }
     }
 }
