@@ -11,16 +11,16 @@
             @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Article/Article Scroller", Model.Id.ToString(), "Edit Article"))
             {
                 <div class="article-promo__head">
-                    @if (Model.Author != null && Model.Author.Any())
+                    @if (Model.Authors != null && Model.Authors.Any())
                     {
-                        if (Model.Author.Count() > 1)
+                        if (Model.Authors.Count() > 1)
                         {
                             @Html.Glass().RenderImage(Model, m => m.MultipleAuthorsIcon, new NameValueCollection { { "class", "article-promo__head-img" } }, isEditable: true)
                             <span class="article-promo__head-title">@Html.Glass().Editable(Model, m => m.MultipleAuthorsLabel)</span>
                         }
                         else
                         {
-                            var author = Model.Author.FirstOrDefault();
+                            var author = Model.Authors.FirstOrDefault();
                             @Html.Glass().RenderImage(author, m => m.Image, new NameValueCollection { { "class", "article-promo__head-img" } }, isEditable: true)
                             <span class="article-promo__head-title">@Html.Glass().Editable(author, m => m.FullName)</span>
                         }

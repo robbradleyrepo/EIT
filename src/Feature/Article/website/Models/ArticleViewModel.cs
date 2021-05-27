@@ -13,12 +13,12 @@
         {
             get
             {
-                if (ArticleData == null || ArticleData.Author == null)
+                if (ArticleData == null || ArticleData.Authors == null)
                 {
                     return string.Empty;
                 }
                 // TO DO multiple authors option
-                return ArticleData.Author?.FirstOrDefault()?.FullName;
+                return ArticleData.Authors?.FirstOrDefault()?.FullName;
             }
         }
 
@@ -49,7 +49,7 @@
             get
             {
                 // TO DO multiple authors option
-                return this.ArticleData?.Author?.FirstOrDefault()?.Image?.Src;
+                return this.ArticleData?.Authors?.FirstOrDefault()?.Image?.Src;
             }
         }
     }

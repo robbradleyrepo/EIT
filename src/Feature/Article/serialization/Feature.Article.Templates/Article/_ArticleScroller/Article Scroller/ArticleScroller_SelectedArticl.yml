@@ -9,9 +9,12 @@ SharedFields:
   Hint: Validation
   Value: |
     ^({[^}]+}\|?){0,6}$
+- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
+  Hint: Source
+  Value: "StartSearchLocation={0DE95AE4-41AB-4D01-9EB0-67441B7C2450}&Filter=+alltemplates_sm:51bda85172564bdeb294ae2a0ce45682"
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: Treelist
+  Value: Multilist with Search
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 300
