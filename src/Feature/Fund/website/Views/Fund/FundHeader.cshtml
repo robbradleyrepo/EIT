@@ -25,9 +25,11 @@
                     </a>
                 </li>*@
                 <li class="article-links__item">
-                    <a href="#" class="article-links__link">
+                    <a href="#" class="article-links__link copy-to-clipbord"
+                       data-link="@Request.Url.ToString()"
+                       data-title="@Model.Data.ShareCopiedText">
                         <i class="icon-share"></i>
-                        Share Article
+                        @Html.Glass().Editable(Model, m => m.Data.ShareText)
                     </a>
                 </li>
             </ul>
