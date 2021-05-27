@@ -1,43 +1,49 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @model LionTrust.Feature.Fund.Models.FundHeaderViewModel
-<section class="container mb-lg-5">
-    <div class="d-flex flex-column">
-        <div class="row">
-            <div class="col-xl-8 offset-xl-2">
-                <div class="article-hero">
-                    <div class="article-hero__content text-center">
-                        <h1 class="article-hero__title mb-4">
-                            @Html.Glass().Editable(m => m.Data.Title)
-                        </h1>
+<header class="header header-bg-gradient header-hero d-flex flex-column justify-content-between">
+    <section class="container">
+        @Html.Sitecore().Placeholder("navigation")
+    </section>
+    <section class="container mb-lg-5">
+        <div class="d-flex flex-column">
+            <div class="row">
+                <div class="col-xl-8 offset-xl-2">
+                    <div class="article-hero">
+                        <div class="article-hero__content text-center">
+                            <h1 class="article-hero__title mb-4">
+                                @Html.Glass().Editable(m => m.Data.Title)
+                            </h1>
+                        </div>
                     </div>
                 </div>
             </div>
+            <ul class="article-links">
+                @*<li class="article-links__item">
+                    <a href="#" class="article-links__link">
+                        <i class="icon-follow"></i>
+                        Follow
+                    </a>
+                </li>*@
+                <li class="article-links__item">
+                    <a href="#" class="article-links__link copy-to-clipbord"
+                       data-link="@Request.Url.ToString()"
+                       data-title="@Model.Data.ShareCopiedText">
+                        <i class="icon-share"></i>
+                        @Html.Glass().Editable(Model, m => m.Data.ShareText)
+                    </a>
+                </li>
+            </ul>
         </div>
-        <ul class="article-links">
-            <li class="article-links__item">
-                <a href="#" class="article-links__link">
-                    <i class="icon-follow"></i>
-                    Follow
+    </section>
+    <div class="container text-center">
+        <div class="hero-manager-link">
+            @foreach (var manager in Model.Managers)
+            {
+                <a href="@manager.Url" class="hero-manager-link__link">
+                    @Html.Glass().RenderImage(manager, m => m.Image, new { @class = "hero-manager-link__img", alt = manager.FullName }, isEditable: true)
+                    <span class="hero-manager-link__name"><span>@Html.Glass().Editable(manager, m => m.FullName)</span></span>
                 </a>
-            </li>
-            <li class="article-links__item">
-                <a href="#" class="article-links__link">
-                    <i class="icon-share"></i>
-                    Share Article
-                </a>
-            </li>
-        </ul>
+            }
+        </div>
     </div>
-</section>
-<div class="container text-center">
-    <div class="hero-manager-link">
-        @foreach (var manager in Model.Managers)
-        {
-            <a href="@manager.Url" class="hero-manager-link__link">
-                <img src="@manager.Image.Src" alt="@manager.FullName"
-                     class="hero-manager-link__img">
-                <span class="hero-manager-link__name"><span>@manager.FullName</span></span>
-            </a>
-        }
-    </div>
-</div>
+</header>

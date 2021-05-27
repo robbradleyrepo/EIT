@@ -14,5 +14,11 @@
 
         [SitecoreField(Constants.FundHeader.FundManagerFieldId)]
         IAuthor FundManager { get; set; }
+
+        [SitecoreField(Constants.FundHeader.ShareTextFieldId)]
+        string ShareText { get; set; }
+
+        [SitecoreField(Constants.FundHeader.ShareCopiedTextFieldId)]
+        string ShareCopiedText { get; set; }
     }
 }
