@@ -1,0 +1,74 @@
+$bg-color: #424242
+$hl-color: $gray
+$muted-color: $black
+$trans-time: 300ms
+$width: 100%
+
+.input-group
+    position: relative
+    input, textarea, select
+        background: none
+        color: $muted-color
+        font-size: 16px
+        padding: 10px 10px 10px 5px
+        display: block
+        width: $width
+        border: none
+        border-radius: 0
+        border-bottom: 1px solid $gray
+        margin-bottom: 20px
+        @include breakpoint(desktop, up)
+            margin-bottom: 32px
+        &:focus
+            outline: none
+
+        &:focus ~ label,
+        &:valid ~ label
+            top: -14px
+            font-size: 12px
+            color: $hl-color
+
+        &:focus ~ .bar:before
+            width: $width
+    select
+        &:valid
+            border-bottom: 1px solid $primary
+    textarea
+        border: 1px solid $gray
+        resize: none
+        margin: 50px 0 30px
+        @include breakpoint(desktop, up)
+            margin: 80px 0 50px
+        &::placeholder
+            color: $black
+    .select-arrow
+        @extend .article-filters__icon-arrow
+        @extend .article-filters__icon-arrow_select
+        color: $black
+        &::before
+            content: "\e906"
+            font-size: 10px
+            @include breakpoint(desktop, up)
+                font-size: 6px
+    label
+        color: $muted-color
+        font-size: 16px
+        font-weight: normal
+        position: absolute
+        pointer-events: none
+        left: 5px
+        top: 10px
+        transition: $trans-time ease all
+    .bar
+        position: relative
+        display: block
+        width: $width
+    &:before
+        content: ''
+        height: 2px
+        width: 0
+        bottom: 0px
+        position: absolute
+        background: $hl-color
+        transition: $trans-time ease all
+        left: 0%

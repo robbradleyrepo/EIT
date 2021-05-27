@@ -1,16 +1,20 @@
 .hero-manager-link
-    display: inline-block
+    display: flex
     margin: 0 auto
     margin-bottom: 20px
     @include breakpoint(desktop, up)
         margin-bottom: 56px
+        justify-content: center
+        display: inline-block
     &__link
         display: inline-block
-        margin-right: 70px
+        padding: 0 10px
+        width: 33%
         &:last-child
             margin-right: 0
         @include breakpoint(desktop, up)
             margin-right: 130px
+            width: auto
     &__img
         border-radius: 50%
         width: 25px
