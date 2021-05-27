@@ -9,6 +9,12 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "23cb5fcd-bcfa-4a06-ae30-8991cc839a4c"
+      Hint: ArticleScroller_SelectedTags
+      Type: Treelist
+      Value: |
+        {B4A230A9-D251-4E23-9289-53031FA8BA0A}
+        {B8BD3FF8-3E07-416A-8F8B-20B63645F0E3}
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20210519T133301Z
@@ -19,3 +25,7 @@ Languages:
     - ID: "93854c18-0919-445e-bc88-2d353c8491e8"
       Hint: ArticleScroller_Heading
       Value: "BC016 - Article Scroller"
+    - ID: "bad318c3-b9b5-457f-a42d-f51516fc3ec2"
+      Hint: ArticleScroller_CTA
+      Value: |
+        <link text="Home" anchor="" linktype="internal" class="" title=""  querystring="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
