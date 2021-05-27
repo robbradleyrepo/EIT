@@ -1,17 +1,22 @@
 ﻿---
-ID: "b0c943dc-16b9-44a0-b4ed-92d7492b3813"
-Parent: "b0f4e3c3-a158-4d9e-9b06-8943b20ee354"
+ID: "e14137dc-817e-40c3-b833-80c4824d2ff6"
+Parent: "e9bb794a-b514-4ff5-8386-008fda7f7f66"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Feature/Article/_FeaturedArticlesSearchParameters
+Path: /sitecore/templates/Project/LionTrust/Content Types/Fund Manager Insights
 DB: master
 SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: People/32x32/user1_message.png
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
   Type: tree list
-  Value: "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"
+  Value: |
+    {1930BBEB-7805-471A-A3BE-4858AC7CF696}
+    {654E526B-3CD6-4182-AB91-838020875A4F}
 - ID: "f7d48a55-2158-4f02-9356-756654404f73"
   Hint: __Standard values
-  Value: "{6F4CD7BB-40AD-4843-99CB-2FACE288C140}"
+  Value: "{38EBF560-7F5B-4B52-A21D-2037A79BABD4}"
 Languages:
 - Language: en
   Versions:
@@ -19,7 +24,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210505T093800Z
+      Value: 20210504T100224Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |

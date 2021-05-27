@@ -1,0 +1,98 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Article.Models.FundManagerInsightsViewModel
+
+@if (Model != null)
+{
+    <div class="insight">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="insight__box">
+                        <div class="insight__head">
+                            <div class="insight__tit">
+                                @Html.Glass().Editable(Model.Data, m => m.Heading)
+                            </div>
+                            @using (Html.Glass().BeginRenderLink(Model.Data, m => m.CTA, new { @class = "insight__more link-styles" }, isEditable: true))
+                            {
+                                if (Model.Data.CTA != null)
+                                {
+                                    @Model.Data.CTA.Text
+                                    <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
+                                }
+                                else if (Sitecore.Context.PageMode.IsExperienceEditorEditing)
+                                {
+                                    @:CTA:[No cta in field]
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-scrollable-mob">
+                @if (Model.Articles != null)
+                {
+                    foreach (var article in Model.Articles)
+                    {
+                        if (article.PromoType != null && !string.IsNullOrEmpty(article.PromoType.Name))
+                        {
+                            switch (article.PromoType.Name)
+                            {
+                                case "Fund manager views":
+                                    {
+                                        <div class="col-8 col-md-6 col-lg-4">
+                                            @Html.Partial("~/Views/Article/PromoCards/FundManagerViewPromo.cshtml", article)
+                                        </div>
+                                        break;
+                                    }
+                                case "Podcast":
+                                    {
+                                        if (article.PodcastPromo != null && article.PodcastPromo.Any())
+                                        {
+                                            <div class="col-8 col-md-6 col-lg-4">
+                                                @Html.Partial("~/Views/Article/PromoCards/ArticlePodcastPromo.cshtml", article.PodcastPromo.FirstOrDefault())
+                                            </div>
+                                        }
+                                        break;
+                                    }
+                                case "Fund updates":
+                                    {
+                                        <div class="col-8 col-md-6 col-lg-4">
+                                            @Html.Partial("~/Views/Article/PromoCards/FundUpdatePromo.cshtml", article)
+                                        </div>
+                                        break;
+                                    }
+                                case "Video":
+                                    {
+                                        <div class="col-8 col-md-6 col-lg-4">
+                                            @Html.Partial("~/Views/Article/PromoCards/VideoPromo.cshtml", article)
+                                        </div>
+                                        break;
+                                    }
+                                case "Magazine and Reports":
+                                    {
+                                        <div class="col-8 col-md-6 col-lg-4">
+                                            @Html.Partial("~/Views/Article/PromoCards/MagazineReportsPromo.cshtml", article)
+                                        </div>
+                                        break;
+                                    }
+                                default:
+                                    {
+                                        <div class="col-8 col-md-6 col-lg-4">
+                                            @Html.Partial("~/Views/Article/PromoCards/FundManagerViewPromo.cshtml", article)
+                                        </div>
+                                    }
+                                    break;
+                            }
+                        }
+                        else
+                        {
+                            <div class="col-8 col-md-6 col-lg-4">
+                                @Html.Partial("~/Views/Article/PromoCards/FundManagerViewPromo.cshtml", article)
+                            </div>
+                        }
+                    }
+                }
+            </div>
+        </div>
+    </div>
+}

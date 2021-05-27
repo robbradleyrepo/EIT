@@ -1,28 +1,28 @@
 ﻿---
-ID: "88bda130-09ae-4e0e-8fd0-253a7924143e"
-Parent: "f4b27d7d-a84c-4a14-bc92-68b1b922461d"
+ID: "71469dcb-2347-4fa2-883b-50f4df0e5244"
+Parent: "4456937f-45a0-44ee-a807-797fac92e5ac"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Article/_FeaturedArticles/Featured articles/FeaturedArticles_Articles
+Path: /sitecore/templates/Feature/Article/_ArticlesSearchParameters/Article Search Parameters/ArticleSearchParameters_FundManagers
 DB: master
 SharedFields:
 - ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
   Hint: Source
-  Value: "StartSearchLocation={0DE95AE4-41AB-4D01-9EB0-67441B7C2450}&Filter=+alltemplates_sm:51bda85172564bdeb294ae2a0ce45682"
+  Value: Datasource=/sitecore/content/Professionals&IncludeTemplatesForSelection=LegacyProfessional
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: Multilist with Search
+  Value: Multilist
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 50
+  Value: 400
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Articles
+    Value: Fund managers
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210504T095820Z
+      Value: 20210505T094000Z

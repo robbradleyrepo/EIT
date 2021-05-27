@@ -96,5 +96,12 @@
             public const string DownloadLabel_FieldId = "{338376F5-AB65-4249-878A-E891F1FD465A}";
             public const string DownloadGoal_FieldId = "{BB708901-B592-4F8C-9119-7F619B26D5B1}";
         }
+
+        public static class FundManagerInsights
+        {
+            public const string SelectedArticles_FieldId = "{C83820F8-FE31-440B-BDB9-61698D79C066}";
+            public const string CTA_FieldId = "{6E1628B0-EBD1-45C5-AD2F-3E0AA6FC19A4}";
+            public const string Heading_FieldId = "{1492465C-0E3C-4FDB-97B8-0FC76924E400}";
+        }
     }
 }

@@ -1,8 +1,8 @@
 ﻿---
-ID: "88bda130-09ae-4e0e-8fd0-253a7924143e"
-Parent: "f4b27d7d-a84c-4a14-bc92-68b1b922461d"
+ID: "c83820f8-fe31-440b-bdb9-61698d79c066"
+Parent: "ed9636ca-07ce-4868-959e-cec19bae11aa"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Article/_FeaturedArticles/Featured articles/FeaturedArticles_Articles
+Path: /sitecore/templates/Feature/Article/_FundManagerInsights/Fund Manager Insights/FundManagerInsights_SelectedArticles
 DB: master
 SharedFields:
 - ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
@@ -13,7 +13,7 @@ SharedFields:
   Value: Multilist with Search
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 50
+  Value: 100
 Languages:
 - Language: en
   Fields:
@@ -25,4 +25,8 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210504T095820Z
+      Value: 20210526T092956Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
