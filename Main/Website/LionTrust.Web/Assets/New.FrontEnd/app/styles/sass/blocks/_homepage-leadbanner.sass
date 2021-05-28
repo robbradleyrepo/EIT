@@ -52,7 +52,22 @@
     &__title
         margin-bottom: 20px
         @include breakpoint(desktop, up)
-        margin-bottom: 2rem
+            margin-bottom: 2rem
+            margin-bottom: 10px
+    &__subtitle
+        font-weight: bold
+        font-weight: 10px
+        margin-bottom: 7px
+        letter-spacing: 2px
+        text-transform: uppercase
+        @include breakpoint(desktop, up)
+            font-size: 15px
+            letter-spacing: 3px
+    &__btns
+        margin-top: 40px
+        margin-bottom: 70px 
+        @include breakpoint(desktop, up)
+            margin-top: 45px
     &__text
         font-size: 18px
         display: inline-block
