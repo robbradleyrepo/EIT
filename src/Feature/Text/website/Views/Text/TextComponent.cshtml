@@ -1,4 +1,5 @@
-﻿@model LionTrust.Feature.Text.Models.IRichText
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Text.Models.IRichText
 @if (Model != null)
 {
     <div class="disclaimer-text @(Model.SmallSize ? "article-with-small" : "article-with-big") @(Model.TextColor != null ? Model.TextColor.Value : "text-black")">
