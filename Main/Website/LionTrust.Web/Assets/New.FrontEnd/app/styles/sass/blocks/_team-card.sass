@@ -32,3 +32,10 @@
         @include breakpoint(desktop, up)
             width: auto
             margin-top: 30px
+    &__link
+        @extend .link-styles
+        color: $black
+        &:hover
+            color: $black
+        i
+            font-size: 16px
