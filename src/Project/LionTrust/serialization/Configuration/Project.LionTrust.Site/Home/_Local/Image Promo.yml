@@ -1,0 +1,47 @@
+﻿---
+ID: "0b73c953-7547-44ff-8ecc-d4f63c1ee9c5"
+Parent: "a9ef2a39-c7b4-43d5-b088-44310e0f3cd5"
+Template: "96b061a7-3c8c-4e47-a2cd-f63a0d975935"
+Path: /sitecore/content/LionTrustNew/Home/_Local/Image Promo
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "03be95e5-ce8f-4baf-b425-5348e86ebd27"
+      Hint: ImagePromo_SecondImage
+      Value: |
+        <image mediaid="{CF2D9815-D588-4044-8C54-73F215827E7D}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210512T150737Z
+    - ID: "5e64582a-9f42-465f-8122-6553d6f8a477"
+      Hint: ImagePromo_PrimaryCTALink
+      Value: |
+        <link text="Read More" anchor="" linktype="internal" class="" title=""  querystring="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
+    - ID: "8c0c61d8-8cc9-489d-b3ad-9a789290401b"
+      Hint: ImagePromo_SecondaryCTALink
+      Value: |
+        <link text="See All Guidance" anchor="" linktype="internal" class="" title=""  querystring="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
+    - ID: "a9bfb452-12c3-4ad5-b58c-b8824eb16816"
+      Hint: ImagePromo_Heading
+      Value: How to Invest
+    - ID: "ad6c37d6-928d-4d1d-8cb2-ba17f02fe4ab"
+      Hint: ImagePromo_FourthImage
+      Value: |
+        <image mediaid="{DF71CC5A-E4ED-481E-8B3A-C6CC33C9B2F1}" />
+    - ID: "cad5c82b-5913-4ab7-b286-aad6219f6420"
+      Hint: ImagePromo_FirstImage
+      Value: |
+        <image mediaid="{E71C22BC-9D3A-4736-99D5-E84BC4EA3A25}" />
+    - ID: "d73bd953-0554-47fa-b1ec-3053b7bb2826"
+      Hint: ImagePromo_TextAlignment
+      Value: "{79DA2651-4E23-42A5-B5B0-94E416E1A3E7}"
+    - ID: "eaf38912-a493-4298-80e0-98b21412feba"
+      Hint: ImagePromo_Body
+      Value: We take pride in offering specialist investment opportunities to private investors looking to generate sustainable growth. We manage risk,
+    - ID: "f66c45e0-1653-4f01-b5a8-a7dd4dd2d97f"
+      Hint: ImagePromo_ThirdImage
+      Value: |
+        <image mediaid="{A35AA134-843B-4652-9F90-A2ADBA66C775}" />

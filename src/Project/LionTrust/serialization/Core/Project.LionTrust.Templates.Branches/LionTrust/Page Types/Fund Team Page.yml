@@ -1,0 +1,114 @@
+﻿---
+ID: "6fc6e05c-d3a3-45ea-a5bd-1caf9339ea78"
+Parent: "2741e68c-a6ab-4fe8-8f7c-9ad184a05264"
+Template: "35e75c72-4985-4e09-88c3-0eac6cd1e64f"
+Path: /sitecore/templates/branches/Project/LionTrust/Page Types/Fund Team Page
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: office/32x32/users_relation.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{202357B3-2CAA-46BB-8902-1D72AEDEB761}"
+              p:after="r[@uid='{BE8C5C97-D801-42C5-9368-ED6A2E029685}']"
+              s:ds="{CAED3AF4-481C-43B0-9FE1-5523D6885C31}"
+              s:id="{56ECB2D2-5D43-4F0F-A5D1-AC267F249E7B}"
+              s:ph="/main/right-column" />
+            <r
+              uid="{B8A25C10-62D9-411A-8480-7CA87535DFAB}"
+              p:after="r[@uid='{202357B3-2CAA-46BB-8902-1D72AEDEB761}']"
+              s:ds="{CF6AB93A-8A4D-4E8E-A230-8861AC02BC40}"
+              s:id="{BA0509C8-337A-45E7-A597-8035DC2F1C21}"
+              s:ph="/main/right-column" />
+            <r
+              uid="{C81B2BA3-0CDE-4D4D-AF24-C332B9EAE459}"
+              p:after="r[@uid='{B8A25C10-62D9-411A-8480-7CA87535DFAB}']"
+              s:ds="{EBDBBD5A-00E8-4057-903B-7E8BDFE96A8D}"
+              s:id="{391E991D-E490-46AC-A04B-6B7E8A19402B}"
+              s:ph="/main/left-column" />
+            <r
+              uid="{53616E6B-9F7C-4563-8B94-27DBB187EDC4}"
+              p:after="r[@uid='{C81B2BA3-0CDE-4D4D-AF24-C332B9EAE459}']"
+              s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
+              s:ph="main" />
+            <r
+              uid="{FD4A1850-1151-423C-B49A-23576B51F99B}"
+              p:after="r[@uid='{53616E6B-9F7C-4563-8B94-27DBB187EDC4}']"
+              s:ds="{504498DE-072F-4982-A2E0-9CC740985109}"
+              s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+              s:ph="main" />
+            <r
+              uid="{95757021-567D-4BFC-9A39-9AD6004E9A04}"
+              p:after="r[@uid='{FD4A1850-1151-423C-B49A-23576B51F99B}']"
+              s:ds="{870E460C-C2D8-4C9E-88A6-205908F1580F}"
+              s:id="{6B2E2A4D-C3CB-4676-B804-B3459E4C9BD6}"
+              s:ph="main" />
+            <r
+              uid="{3D7DEB10-F9B0-4231-BB3A-B3D6C627A9C7}"
+              p:after="r[@uid='{95757021-567D-4BFC-9A39-9AD6004E9A04}']"
+              s:ds="{DF9B7CA1-C523-4109-9869-CD4EF80F1D87}"
+              s:id="{ADCC3DF1-6C80-4064-B4DB-0F3008D9CA2B}"
+              s:ph="main" />
+            <r
+              uid="{DE32B496-86DF-4ECA-9E00-CA495BD3FA97}"
+              p:after="r[@uid='{3D7DEB10-F9B0-4231-BB3A-B3D6C627A9C7}']"
+              s:ds="{6A6DDEA1-074E-4776-9E94-36AA477FB87A}"
+              s:id="{8D47F982-4A0A-4CEB-BA66-DEABA6B71AD1}"
+              s:ph="main" />
+            <r
+              uid="{BBC8C55C-7345-482E-B8BA-6248C21B12D4}"
+              p:after="r[@uid='{DE32B496-86DF-4ECA-9E00-CA495BD3FA97}']"
+              s:ds="{D856029D-57D1-45BC-BB56-822CC7E74AA0}"
+              s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{27948F30-DD8E-43C3-8DC8-C4084632CA29}"
+              p:after="r[@uid='{BBC8C55C-7345-482E-B8BA-6248C21B12D4}']"
+              s:ds="{C098BB53-52BF-4974-A182-7CC87CFF1563}"
+              s:id="{D7EA03CD-11A9-4A09-9CC6-EE9E8566A692}"
+              s:ph="main" />
+            <r
+              uid="{3D6EC753-0B44-4324-BDCB-E0D5F33165CA}"
+              p:after="r[@uid='{27948F30-DD8E-43C3-8DC8-C4084632CA29}']"
+              s:ds="{0DF3A687-C265-47AC-96BB-D7BD65D941BF}"
+              s:id="{C4570003-4866-4EAA-B069-8FA6611DC0EC}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{6D58CD43-C965-412F-8ADC-FE72CF853B36}"
+              p:after="r[@uid='{3D6EC753-0B44-4324-BDCB-E0D5F33165CA}']"
+              s:ds="{45303419-0E11-4D35-8D04-11280D600921}"
+              s:id="{DC0AC587-3DF0-468C-9F4F-6E8C137ECD47}"
+              s:ph="main" />
+            <r
+              uid="{1EAC244C-AD99-422C-A1D1-C46FB4F8DB5C}"
+              p:after="r[@uid='{6D58CD43-C965-412F-8ADC-FE72CF853B36}']"
+              s:ds="{92A0DCFA-50F9-466A-BC9D-B46B0D614ECC}"
+              s:id="{A811D2B0-D08D-4991-A9DD-6D9FA5799CBD}"
+              s:ph="main" />
+            <r
+              uid="{4FB00752-0C2B-4E6F-A91A-EDDA689D318B}"
+              p:after="*[1=2]" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210519T111803Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

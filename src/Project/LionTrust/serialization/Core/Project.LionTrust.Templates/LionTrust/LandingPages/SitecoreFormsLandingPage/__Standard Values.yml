@@ -1,0 +1,60 @@
+﻿---
+ID: "080f74ca-0c68-415d-9b3a-739a19172a88"
+Parent: "ba171771-24c7-4ad6-88a2-2f5440dff9d9"
+Template: "ba171771-24c7-4ad6-88a2-2f5440dff9d9"
+Path: /sitecore/templates/Project/LionTrust/LandingPages/SitecoreFormsLandingPage/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: |
+    {C1D35F9A-A7D0-47F9-903D-5ED33A15A795}
+    {BA171771-24C7-4AD6-88A2-2F5440DFF9D9}
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{CB1FFD50-2729-471D-8233-728AE902CE35}">
+        <r
+          ds="{62555B9F-87B4-4558-84D9-774D72D09083}"
+          id="{4BB80F21-5F20-4CE8-A186-E31FC148F92D}"
+          par=""
+          ph="mvc-header"
+          uid="{78835EFB-21CE-4A25-9667-06CED0F1BD94}" />
+        <r
+          id="{9AFE5B9F-E124-4F6F-A757-E037B6A4BEAD}"
+          ph="mvc-content"
+          uid="{E3DF15A9-A445-4EB2-AC54-73A11D6B4746}" />
+        <r
+          ds="{76D54659-40C8-4B67-BB55-293838EA71AE}"
+          id="{C6395A06-C38D-4FA8-A016-E7A18D0CB9B5}"
+          par=""
+          ph="mvc-footer"
+          uid="{017BAE28-20A8-4595-9AB1-E513A9326A86}" />
+        <r
+          ds="{03675759-0A8A-44E0-A155-4FC23BE74020}"
+          id="{3639860D-C580-4A58-8482-7AD7B0F53F67}"
+          par=""
+          ph="mvc-footer"
+          uid="{9E901BB3-34A6-40C3-A13F-93C669BF89A1}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20191129T050335Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\ragnar
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: $name

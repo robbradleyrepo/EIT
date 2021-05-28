@@ -62,7 +62,7 @@
     <Content Include="sitecore\login\LionTrust_Wallpaper.jpg" />
     <Content Include="Views\Layouts\LionTrust\Default.cshtml" />
     <Content Include="App_Config\Include\Project\z.LionTrust.DevSettings.config" />
-    <Content Include="App_Config\Include\Project\LionTrust.Serialization.config" />
+    <Content Include="App_Config\Include\Project\LionTrust.Serialization.DevSettings.config" />
     <Content Include="App_Config\Include\Project\LionTrust.config">
       <SubType>Designer</SubType>
     </Content>
@@ -72,6 +72,7 @@
     <Content Include="App_Config\Include\Project\LionTrust.Articles.Index.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Config\Include\Project\LionTrust.Serialization.config" />
     <None Include="Web.config">
       <SubType>Designer</SubType>
     </None>

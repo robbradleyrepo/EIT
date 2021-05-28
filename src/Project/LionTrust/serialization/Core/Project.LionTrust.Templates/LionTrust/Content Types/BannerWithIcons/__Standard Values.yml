@@ -1,0 +1,26 @@
+﻿---
+ID: "d518db96-8c28-4cec-999a-9ead151d9dff"
+Parent: "ed529b1c-9937-4186-afde-69543f5b3618"
+Template: "ed529b1c-9937-4186-afde-69543f5b3618"
+Path: /sitecore/templates/Project/LionTrust/Content Types/BannerWithIcons/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{4C75FD4B-18BC-48B9-80CE-B9725C5E0AA7}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210429T141445Z
+    - ID: "443586e2-109c-49a6-95ad-01f6c1fbffb2"
+      Hint: BannerWithIcons_Heading
+      Value: $name
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

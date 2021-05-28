@@ -1,0 +1,68 @@
+﻿---
+ID: "626296cf-b12d-4f39-849b-36b8a3215e27"
+Parent: "51d3a578-6e10-4ec6-bb5b-5c1307a6d661"
+Template: "51d3a578-6e10-4ec6-bb5b-5c1307a6d661"
+Path: /sitecore/templates/Project/LionTrust/Page Types/Home/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: |
+    {C1D35F9A-A7D0-47F9-903D-5ED33A15A795}
+    {EC2BBBDD-7D39-4598-A98C-4BA5E4163A07}
+    {4C4E3993-F6D4-4040-A3FD-E5DEB438BFF8}
+    {5CBA079C-D5AD-4342-B6F5-DA1D08D72F47}
+    {A3E61FC4-9DCD-4DE8-80BA-A3EAFA5685EC}
+    {810226BD-15AA-4F26-AB02-7A63B355D4A8}
+    {6FC6E05C-D3A3-45EA-A5BD-1CAF9339EA78}
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{CD1590E1-6573-4CC7-B0A9-E3BB6A9DADE4}">
+        <r
+          id="{37E7BD25-2361-4C48-8B98-1A3C92719326}"
+          ph="header"
+          uid="{34ED60C4-B3DB-41DD-92D9-5B982EA28A31}" />
+        <r
+          id="{DD1D438A-3971-438B-B1C9-461415F43488}"
+          ph="footer"
+          uid="{4FB00752-0C2B-4E6F-A91A-EDDA689D318B}" />
+        <r
+          id="{C728A955-DA1D-4700-B924-E0D35901DE4B}"
+          ph="footer"
+          uid="{0D39C780-E3C7-42AC-8B1F-A7B9350BD418}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "15999105-600f-43fb-b206-ed93304a98e6"
+      Hint: NavigationRoot_YouAreViewingLabel
+      Value: You are viewing as a
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210323T095312Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: LionTrust
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: $name
+    - ID: "e409ce1d-3e4e-4c73-a01d-ba8e98bdf25f"
+      Hint: Breadcrumb_IncludeInBreadcrumb
+      Type: Checkbox
+      Value: 1
+    - ID: "e4a364e6-2e1a-4854-abd8-6a02acf832cd"
+      Hint: NavigationRoot_ChangeLabel
+      Value: Change
