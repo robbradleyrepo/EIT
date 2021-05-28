@@ -6,7 +6,7 @@
         <div class="container">
             <div class="article__head">
                 <h2>@Html.Glass().Editable(Model.ArticleScroller, m => m.Heading)</h2>
-                @using (Html.Glass().BeginRenderLink(Model.ArticleScroller, m => m.CTA, new NameValueCollection { { "class", "btn btn-secondary-nav article__btn" } }, isEditable: true))
+                @using (Html.Glass().BeginRenderLink(Model.ArticleScroller, m => m.CTA, new NameValueCollection { { "class", "btn btn-black article__btn" } }, isEditable: true))
                 {
                     if (Model.ArticleScroller.CTA != null && !string.IsNullOrEmpty(Model.ArticleScroller.CTA.Text))
                     {
