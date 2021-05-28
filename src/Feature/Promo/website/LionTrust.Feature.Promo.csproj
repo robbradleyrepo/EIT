@@ -73,13 +73,16 @@
     <Content Include="Views\Promo\ImageCTAPromo.cshtml" />
     <Content Include="Views\Promo\PodcastPromo.cshtml" />
     <Content Include="Views\Promo\_PodcastLink.cshtml" />
+    <Content Include="Views\Promo\PagePromo.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Models\IImageCTAPromo.cs" />
     <Compile Include="Models\IImagePromo.cs" />
+    <Compile Include="Models\IPagePromoItem.cs" />
     <Compile Include="Models\IPodcastLink.cs" />
+    <Compile Include="Models\IPagePromo.cs" />
     <Compile Include="Models\IPodcastPromo.cs" />
     <Compile Include="Models\IPromoGlassBase.cs" />
     <Compile Include="Models\IPromoLookup.cs" />
