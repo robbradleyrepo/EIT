@@ -137,5 +137,19 @@
             public const string LinkGoal_FieldName = "PodcastLink_Goal";
             public const string LinkGoal_FieldId = "{01D8CA32-EC72-47E8-A6D5-93B060250A4D}";
         }
-    }    
+
+        public static class PagePromo
+        {
+            public const string TemplateId = "{7EA4E959-032B-4E07-B5EA-1CBD0DC9E1E1}";
+        }
+
+        public static class PagePromoItem
+        {
+            public const string TemplateId = "{BC775C7D-48C1-4F1B-865A-FECAB210DBE3}";
+            public const string HeadingFieldId = "{1058A56C-86FF-4783-A8D2-00C2217CC7FF}";
+            public const string TextFieldId = "{F8DE397F-FE55-4664-894D-8144B77B455A}";
+            public const string ImageFieldId = "{FDCBFC89-A522-4029-A2CE-648E272372D1}";
+            public const string CTAFieldId = "{5DB6612C-40EF-44F7-996B-DA07FCED5370}";
+        }
+    }
 }

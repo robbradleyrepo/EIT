@@ -1,0 +1,44 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Promo.Models.IPagePromo
+@if (Model != null)
+{
+    <div class="container page-promo">
+        <div class="row">
+            @foreach (var promoItem in Model.PromoItems)
+            {
+                using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Promo/PagePromo/PagePromoItem", promoItem.Id.ToString(), "Edit Page Promo Item"))
+                {
+                    <div class="col-lg-6">
+                        <div class="page-promo__item">
+                            @using (Html.Glass().BeginRenderLink(promoItem, p => p.CTA, new { @class = "page-promo__image" }, isEditable: true))
+                            {
+                                @Html.Glass().RenderImage(promoItem, p => p.Image, new { @class = "page-promo__img" }, isEditable: true)
+                            }
+                            <div class="page-promo__content">
+                                @using (Html.Glass().BeginRenderLink(promoItem, p => p.CTA, isEditable: true))
+                                {
+                                    <h2 class="page-promo__title">@Html.Glass().Editable(promoItem, p => p.Heading)</h2>
+                                }
+                                <p class="page-promo__text">
+                                    @Html.Glass().Editable(promoItem, p => p.Text)
+                                </p>
+                                @using (Html.Glass().BeginRenderLink(promoItem, p => p.CTA, new { @class = "page-promo__link" }, isEditable: true))
+                                {
+                                    if (promoItem.CTA != null)
+                                    {
+                                        @promoItem.CTA.Text
+                                    }
+                                    <i class="icon-arrow-right"></i>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <div>Please assign datasource for the page promo component.</div>
+}

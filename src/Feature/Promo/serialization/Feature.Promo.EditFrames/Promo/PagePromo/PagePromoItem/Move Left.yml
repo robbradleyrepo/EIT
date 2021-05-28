@@ -1,34 +1,34 @@
 ﻿---
-ID: "a9010790-ce52-4079-87b4-2d35cc8d0765"
-Parent: "ba503788-c2cb-48bb-8649-619053ccf409"
+ID: "3b69113f-5468-4442-a38e-d5f4951ef2c1"
+Parent: "bf0baf3b-7659-4558-8aab-01822e8ccbad"
 Template: "02404208-46d4-49bf-988b-eb363a52a1c9"
-Path: /sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Navigation/QuickLinks/QuickLinkCTA/Move Right
+Path: /sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Promo/PagePromo/PagePromoItem/Move Left
 DB: core
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
-  Value: Office/32x32/navigate_right.png
+  Value: Office/32x32/navigate_left.png
 - ID: "1bb289d6-44d7-4fcc-af15-db32b841f957"
   Hint: Click
-  Value: "item:movedown"
+  Value: "item:moveup"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 400
+  Value: 300
 - ID: "e8cc41c7-c304-4282-b782-e21ca32d324c"
   Hint: Icon
-  Value: Office/32x32/navigate_right.png
+  Value: Office/32x32/navigate_left.png
 Languages:
 - Language: en
   Fields:
   - ID: "371e0d96-4f00-4b80-ad14-6284e00493ba"
     Hint: Tooltip
-    Value: Move Quick Link CTA to Right
+    Value: Move Page Promo Item to Left
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
     Hint: __Display name
-    Value: Move Right
+    Value: Move Left
   - ID: "c523aba8-d1a1-4dcb-aeee-52635a4ab2ae"
     Hint: Header
-    Value: Move Right
+    Value: Move Left
   Versions:
   - Version: 1
     Fields:
