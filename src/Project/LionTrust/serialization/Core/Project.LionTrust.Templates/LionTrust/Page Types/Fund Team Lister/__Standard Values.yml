@@ -5,6 +5,10 @@ Template: "3ef8af1c-0ff1-4afc-8002-606b85fa4ad6"
 Path: /sitecore/templates/Project/LionTrust/Page Types/Fund Team Lister/__Standard Values
 DB: master
 SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{CBBF480E-6A45-44DF-A485-A7BEE8E19A8A}"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Type: layout

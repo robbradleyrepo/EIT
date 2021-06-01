@@ -1,0 +1,103 @@
+﻿---
+ID: "93d5c43c-10a7-4142-aeb5-2f7ed91b4da9"
+Parent: "b0183a42-a5f7-49f8-bd6f-2e1a97ddd0ac"
+Template: "11bdd781-82d0-417f-bfbf-e955f7402ceb"
+Path: /sitecore/content/LionTrustNew/Home/Fund Team Lister/Fund Team
+DB: master
+BranchID: "cbbf480e-6a45-44df-a485-a7bee8e19a8a"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{FFF11D5F-859B-4B01-8DC7-333F8F4E5E3B}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{AAAAFA50-1D0F-45FC-97C7-752261ADEB5D}"
+              p:before="*"
+              s:ds="{744D69E9-C459-4E88-AA47-8AB31B246F7A}"
+              s:id="{56ECB2D2-5D43-4F0F-A5D1-AC267F249E7B}"
+              s:ph="main" />
+            <r
+              uid="{919A317E-8B0C-4446-8299-D0CE8124F845}"
+              p:after="r[@uid='{AAAAFA50-1D0F-45FC-97C7-752261ADEB5D}']"
+              s:ds="{2422EF24-0368-452B-BDCC-A8E0F745E0F9}"
+              s:id="{56ECB2D2-5D43-4F0F-A5D1-AC267F249E7B}"
+              s:ph="main" />
+            <r
+              uid="{564E54F3-AD2C-4EA6-8D4E-30C6EC555175}"
+              p:after="r[@uid='{919A317E-8B0C-4446-8299-D0CE8124F845}']"
+              s:ds="{1B7707AE-A318-46AF-9B42-2408D4762683}"
+              s:id="{F4301786-A113-4511-BA28-46655D111F73}"
+              s:ph="main" />
+            <r
+              uid="{6E104641-8300-4E17-9ECC-AC93A98235FB}"
+              p:after="r[@uid='{564E54F3-AD2C-4EA6-8D4E-30C6EC555175}']"
+              s:ds="{BC458B1C-5496-495D-B680-9B5ABDE21F79}"
+              s:id="{6B2E2A4D-C3CB-4676-B804-B3459E4C9BD6}"
+              s:ph="main" />
+            <r
+              uid="{A3780ED1-C6E9-4848-AAC2-924C326789A6}"
+              p:after="r[@uid='{6E104641-8300-4E17-9ECC-AC93A98235FB}']"
+              s:ds="{1934A6D9-1AC4-4369-93AC-6036E8A4D1F4}"
+              s:id="{8D47F982-4A0A-4CEB-BA66-DEABA6B71AD1}"
+              s:ph="main" />
+            <r
+              uid="{5694D6D0-92F6-4F0E-98BF-8068888B0921}"
+              p:after="r[@uid='{A3780ED1-C6E9-4848-AAC2-924C326789A6}']"
+              s:ds="{8F7AA55E-2569-4646-A28E-7FA325F64C31}"
+              s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+              s:ph="main" />
+            <r
+              uid="{8628349D-448F-4429-A688-C325E41D0C16}"
+              p:after="r[@uid='{5694D6D0-92F6-4F0E-98BF-8068888B0921}']"
+              s:ds="{7D762068-F1C2-469A-8AE7-D6D93D6E11CB}"
+              s:id="{D7EA03CD-11A9-4A09-9CC6-EE9E8566A692}"
+              s:ph="main" />
+            <r
+              uid="{6D4834BF-A2EF-4A81-988A-513BB5279181}"
+              p:after="r[@uid='{8628349D-448F-4429-A688-C325E41D0C16}']"
+              s:ds="{CA274264-4853-4AFD-919D-F6CD9BE4556B}"
+              s:id="{C4570003-4866-4EAA-B069-8FA6611DC0EC}"
+              s:ph="main" />
+            <r
+              uid="{C68BDFA4-8D38-4DF4-B85B-D1E26839B8E2}"
+              p:after="r[@uid='{6D4834BF-A2EF-4A81-988A-513BB5279181}']"
+              s:ds="{1CBB7273-9A4E-48F0-9876-62C4741684BF}"
+              s:id="{DC0AC587-3DF0-468C-9F4F-6E8C137ECD47}"
+              s:ph="main" />
+            <r
+              uid="{101FA966-4BBC-48CC-BBAD-A3EBD9A4D424}"
+              p:after="r[@uid='{C68BDFA4-8D38-4DF4-B85B-D1E26839B8E2}']"
+              s:ds="{6B9C16B9-02E8-428C-9A6D-0BDDF46CBDAD}"
+              s:id="{A811D2B0-D08D-4991-A9DD-6D9FA5799CBD}"
+              s:ph="main" />
+            <r
+              uid="{1134A5AD-5F84-4C13-8365-167AF77AEEE3}"
+              p:after="r[@uid='{101FA966-4BBC-48CC-BBAD-A3EBD9A4D424}']"
+              s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+              s:ph="/header/navigation" />
+            <r
+              uid="{8E8AD69D-DBB5-4174-81EC-352CF07845BC}"
+              p:after="r[@uid='{1134A5AD-5F84-4C13-8365-167AF77AEEE3}']"
+              s:ds="{A2C0E63A-6FB9-4711-A41A-BF04521A683F}"
+              s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
+              s:ph="header" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210528T202133Z
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: Fund Team

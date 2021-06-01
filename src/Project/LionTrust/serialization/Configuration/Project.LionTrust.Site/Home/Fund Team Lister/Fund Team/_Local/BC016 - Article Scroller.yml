@@ -1,0 +1,32 @@
+﻿---
+ID: "1cbb7273-9a4e-48f0-9876-62c4741684bf"
+Parent: "5683f2cd-758e-4eb0-b377-d3a2a801caa5"
+Template: "cf87f1eb-f59d-4e08-bcd6-23e0cdd7362f"
+Path: "/sitecore/content/LionTrustNew/Home/Fund Team Lister/Fund Team/_Local/BC016 - Article Scroller"
+DB: master
+BranchID: "cbbf480e-6a45-44df-a485-a7bee8e19a8a"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{043670F9-6ADD-46AF-A0E1-A78328FF09E8}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210528T202135Z
+    - ID: "550b2192-38e6-4cee-85f2-0bfca295bcf8"
+      Hint: ArticleSearchParameters_Topics
+      Type: Multilist
+      Value: |
+        {B4A230A9-D251-4E23-9289-53031FA8BA0A}
+        {B8BD3FF8-3E07-416A-8F8B-20B63645F0E3}
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "93854c18-0919-445e-bc88-2d353c8491e8"
+      Hint: ArticleScroller_Heading
+      Value: Latest insight

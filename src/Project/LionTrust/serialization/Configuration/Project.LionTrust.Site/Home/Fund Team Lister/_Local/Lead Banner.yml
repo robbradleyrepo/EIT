@@ -1,0 +1,29 @@
+﻿---
+ID: "9e85b0ce-c95b-4930-b8fd-5d6a4955a7c4"
+Parent: "9fa2fc14-0b6b-47a7-bf95-8a5adc98d3c5"
+Template: "1d2058b8-c7a2-4d41-8fdf-61ac3b786798"
+Path: /sitecore/content/LionTrustNew/Home/Fund Team Lister/_Local/Lead Banner
+DB: master
+BranchID: "a3e61fc4-9dcd-4de8-80ba-a3eafa5685ec"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{3DAAAEC1-C9FA-4C68-AA94-B08271FC5229}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210528T202125Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "a9684a39-4c0e-42df-8066-59be90678b54"
+      Hint: LeadBanner_Title
+      Value: Fund Team Lister
+    - ID: "b7ecdee2-ba93-4f86-a7d5-05db6e572a80"
+      Hint: LeadBanner_TextAlign
+      Value: "{68D6465E-0D2B-45D0-A5E7-E3578757CEC7}"

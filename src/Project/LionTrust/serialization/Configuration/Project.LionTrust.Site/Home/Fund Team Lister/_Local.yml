@@ -1,0 +1,30 @@
+﻿---
+ID: "9fa2fc14-0b6b-47a7-bf95-8a5adc98d3c5"
+Parent: "b0183a42-a5f7-49f8-bd6f-2e1a97ddd0ac"
+Template: "fff5f245-ffc0-4022-a998-9b07aa5e761f"
+Path: /sitecore/content/LionTrustNew/Home/Fund Team Lister/_Local
+DB: master
+BranchID: "a3e61fc4-9dcd-4de8-80ba-a3eafa5685ec"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{F6B5C22C-0B85-45BB-BB44-D743FF235639}"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: "-1000"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{67F7D596-B07F-4BA3-9B01-E25A84E106DB}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210528T202125Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
