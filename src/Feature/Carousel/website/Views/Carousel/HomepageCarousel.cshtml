@@ -56,7 +56,7 @@
                                         </h2>
                                     </div>
 
-                                    <button class="slide__play" data-goal-trigger="@carouselCard.CTAGoal.ToString()" data-type="iframe" data-fancybox data-src="@carouselCard.CTALink.LinkUrl()">
+                                    <a class="slide__play" data-goal-trigger="@carouselCard.CTAGoal.ToString()" data-type="iframe" data-fancybox data-src="@carouselCard.CTALink.LinkUrl()">
                                         @if (carouselCard.CTALink != null && !string.IsNullOrEmpty(carouselCard.CTALink.Text))
                                         {
                                             @carouselCard.CTALink.Text
@@ -68,7 +68,7 @@
                                                 <path d="M10.319 2.059L1.7 17.575h17.239l-8.62-15.516m0-2.059l10.319 18.575H0L10.319 0z" fill="#fff" />
                                             </g>
                                         </svg>
-                                    </button>
+                                    </a>
                                 }
                             </div>
                         </div>
