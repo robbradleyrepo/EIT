@@ -1,20 +1,20 @@
 ﻿---
-ID: "2e821612-ccbf-4106-9bf4-406fc9277b03"
+ID: "0498d56c-f33d-40d5-8527-7169d29ae494"
 Parent: "6cf55936-0b82-4ef5-9dc2-81d8ae0a8ddb"
 Template: "5c547d4e-7111-4995-95b0-6b561751bf2e"
-Path: /sitecore/layout/Placeholder Settings/Project/LionTrust/header
+Path: "/sitecore/layout/Placeholder Settings/Project/LionTrust/header-content"
 DB: master
 SharedFields:
 - ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
   Hint: Placeholder Key
-  Value: header
+  Value: "header-content"
 - ID: "e391b526-d0c5-439d-803e-17512eae6222"
   Hint: Allowed Controls
   Type: TreelistEx
   Value: |
-    {C616CA2E-714D-4DC2-B9C4-46DB291815BE}
-    {37E7BD25-2361-4C48-8B98-1A3C92719326}
-    {1C60CE53-EE27-4652-A76F-199EA4B84BD2}
+    {D0DB0627-8629-4EA8-AEBC-4FCD648C588A}
+    {5201B773-B4FF-4E38-A900-3D3D84F4C91A}
+    {79B70F2C-3966-42CE-BC5E-FB3252C320D3}
 Languages:
 - Language: en
   Versions:
@@ -22,4 +22,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210428T155006Z
+      Value: 20210428T154938Z

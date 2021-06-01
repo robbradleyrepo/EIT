@@ -1,0 +1,41 @@
+﻿---
+ID: "302d78df-b35e-4df8-86e3-e35dece6d262"
+Parent: "6cf55936-0b82-4ef5-9dc2-81d8ae0a8ddb"
+Template: "5c547d4e-7111-4995-95b0-6b561751bf2e"
+Path: /sitecore/layout/Placeholder Settings/Project/LionTrust/footer
+DB: master
+SharedFields:
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: footer
+- ID: "e391b526-d0c5-439d-803e-17512eae6222"
+  Hint: Allowed Controls
+  Type: TreelistEx
+  Value: |
+    {29A12478-EBE8-4B5C-BF2E-871026066814}
+    {984E0D2D-E166-42A2-96CB-8B51FAE59488}
+    {C728A955-DA1D-4700-B924-E0D35901DE4B}
+Languages:
+- Language: en
+  Fields:
+  - ID: "87871ff5-1965-46d6-884f-01d6a0b9c4c1"
+    Hint: Description
+    Value: |
+      <div>
+      <strong>Footer Placeholder</strong>
+      <div>
+      <div style="padding: 8px 8px 0px; width: 200px;">
+      <img width="32" height="32" style="margin: 0px 8px 0px 0px; float: left;" alt="Sample Rendering" src="~/icon/WordProcessing/32x32/footer_h.png?w=32&amp;h=32&amp;as=1"></img>
+      <div>The content placeholder is the footer placeholder.
+      <div></div>
+      </div>
+      </div>
+      </div>
+      <div></div>
+      </div>
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140910T162441Z
