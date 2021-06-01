@@ -44,7 +44,7 @@
                     <i class='icon-arrow-right imagepromo__arrow animate-arrow'></i>
                 }
 
-                @using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.SecondaryCta, Model.SecondaryCtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }, isEditable: true))
+                @using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.SecondaryCta, Model.SecondaryCtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-white imagepromo__btn" } }, isEditable: true))
                 {
                     if (Model.SecondaryCta != null)
                     {
