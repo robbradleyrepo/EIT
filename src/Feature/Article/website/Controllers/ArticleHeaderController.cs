@@ -1,5 +1,6 @@
 ﻿namespace LionTrust.Feature.Article.Controllers
 {
+    using System.Linq;
     using System.Web.Mvc;
 
     using Glass.Mapper.Sc.Web.Mvc;
@@ -21,6 +22,11 @@
             if (article == null)
             {
                 return null;
+            }
+
+            if (article.Authors.Any())
+            {
+                article.Author = article.Authors.First();
             }
 
             var componentData = context.GetDataSourceItem<IArticleHeader>();

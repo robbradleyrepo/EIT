@@ -2,12 +2,14 @@
 {
     using System;
     using System.Collections.Generic;
-
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
-    
+    using LionTrust.Foundation.Legacy.Models;
+
     public interface IArticle : Foundation.Legacy.Models.IArticle
     {
+        IAuthor Author { get; set; }
+
         [SitecoreField(Constants.Article.TopicsFieldId)]
         IEnumerable<ITopic> Topics { get; set; }
 
