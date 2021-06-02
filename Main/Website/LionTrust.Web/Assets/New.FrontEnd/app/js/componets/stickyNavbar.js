@@ -46,7 +46,7 @@ export default () => {
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $("html, body").animate(
         {
-          scrollTop: $(hash).offset().top,
+          scrollTop: $(hash).offset().top - offset,
         },
         800,
         function () {
