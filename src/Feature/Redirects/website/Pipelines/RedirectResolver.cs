@@ -51,7 +51,10 @@ namespace LionTrust.Feature.Redirects.Pipelines
             var path = HttpContext.Current.Request.Url.LocalPath;
 
             if (redirectFolder == null)
-                throw new NullReferenceException(Templates.ErrorMessages.NoRedirectFolder);
+            {
+                Sitecore.Diagnostics.Log.Info("No Redirect Folder", this);
+                return;
+            }
 
             foreach (var redirect in redirectFolder.Children)
             {
