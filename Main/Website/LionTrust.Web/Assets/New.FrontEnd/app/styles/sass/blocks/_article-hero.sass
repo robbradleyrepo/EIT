@@ -91,7 +91,7 @@
 
 .article-links
     display: flex
-    justify-content: space-between
+    justify-content: center
     font-size: 12px
     margin-bottom: 30px
     @include breakpoint(desktop, up)
@@ -99,6 +99,13 @@
     &__link
         display: flex
         align-items: center
+    &__item
+        display: inline-block
+        margin-right: 50px
+        @include breakpoint(desktop, up)
+            margin-right: 31px
+        &:last-child
+            margin-right: 0
         i
             margin-right: 10px
             font-size: 20px
