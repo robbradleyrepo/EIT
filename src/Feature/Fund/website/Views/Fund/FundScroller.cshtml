@@ -50,10 +50,10 @@
             <div class="fundscroller__right">
                 <!-- Swiper -->
                 <div class="swiper-container-funds">
-                    <div class="swiper-wrapper row">
+                    <div class="swiper-wrapper">
                         @foreach (var item in Model.Funds)
                         {
-                            <div class="col-9 col-sm-6 col-md-5 col-lg-6 col-xl-5 swiper-slide">
+                            <div class="swiper-slide">
 
                                 @{
                                     var fundPageUrl = item.Page == null ? string.Empty : item.Page.Url;
