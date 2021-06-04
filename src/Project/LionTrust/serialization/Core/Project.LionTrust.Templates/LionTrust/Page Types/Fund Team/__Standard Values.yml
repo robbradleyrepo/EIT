@@ -4,6 +4,11 @@ Parent: "11bdd781-82d0-417f-bfbf-e955f7402ceb"
 Template: "11bdd781-82d0-417f-bfbf-e955f7402ceb"
 Path: /sitecore/templates/Project/LionTrust/Page Types/Fund Team/__Standard Values
 DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{703AFD5E-25F7-40B3-995B-9BDBAE1D006B}"
 Languages:
 - Language: en
   Versions:
