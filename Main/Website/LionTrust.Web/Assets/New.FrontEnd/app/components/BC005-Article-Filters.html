@@ -23,10 +23,10 @@
         <div class="article-filters__body">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-2 relative">
-                        <div class="article-filters__select">
+                    <div v-for="(facet, i) in getFacets" :key="i" class="col-lg-2 relative">
+                        <div class="article-filters__select" @click="facet.open = !facet.open; console.log(facet)" :class="facet.open ? 'active' : ''">
                             <span class="article-filters__item-title">
-                                Fund
+                                {{facet.name}}
                             </span>
                             <i class="article-filters__icon-arrow"></i>
                         </div>
@@ -35,44 +35,14 @@
                                 <i class="icon-chevron-left"></i>
                                 Fund
                             </div>
-                            <label for="james" class="option-checkbox">
-                                <input id="james" class="option-checkbox__input" type="checkbox">
-                                <span class="option-checkbox__text">James Inglis-Jones</span>
+                            <label v-for="(item, i) in facet.data" :for="item.Name" class="option-checkbox">
+                                <input :id="item.Name" class="option-checkbox__input" type="checkbox" :checked="item.checked" @change="item.checked = !item.checked">
+                                <span class="option-checkbox__text">{{item.Name}}</span>
                                 <span class="option-checkbox__icon"></span>
-                            </label>
-                            <label for="Samantha" class="option-checkbox">
-                                <input id="Samantha" class="option-checkbox__input" type="checkbox">
-                                <span class="option-checkbox__text"> Samantha Gleave</span>
-                                <span class="option-checkbox__icon"></span>
-                            </label>
-                            <label for="Test1" class="option-checkbox">
-                                <input id="Test1" class="option-checkbox__input" type="checkbox">
-                                <span class="option-checkbox__text"> Test1</span>
-                                <span class="option-checkbox__icon"></span>
-                            </label>
-                            <label for="Test2" class="option-checkbox">
-                                <input id="Test2" class="option-checkbox__input" type="checkbox">
-                                <span class="option-checkbox__text"> Test2</span>
-                                <span class="option-checkbox__icon"></span>
-                            </label>
-                            <label for="Test3" class="option-checkbox">
-                                <input id="Test3" class="option-checkbox__input" type="checkbox">
-                                <span class="option-checkbox__text"> Test3</span>
-                                <span class="option-checkbox__icon"></span>
-                            </label>
-                            <label for="Test4" class="option-checkbox">
-                                <input id="Test4" class="option-checkbox__input" type="checkbox">
-                                <span class="option-checkbox__text"> Test4</span>
-                                <span class="option-checkbox__icon"></span>
-                            </label>
-                            <label for="Test5" class="option-checkbox">
-                                <input id="Test5" class="option-checkbox__input" type="checkbox">
-                                <span class="option-checkbox__text"> Test5</span>
-                                <span class="option-checkbox__icon"></span>
-                            </label>
+                            </label>                            
                         </div>
                     </div>
-                    <div class="col-lg-2 relative">
+                    <!-- <div class="col-lg-2 relative">
                         <div class="article-filters__select">
                             <span class="article-filters__item-title">
                                 Fund Team
@@ -190,7 +160,7 @@
                                 <span class="option-checkbox__icon"></span>
                             </label>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-lg-1 relative">
                         <!-- <div class="article-filters__select">Month
                             <i class="article-filters__icon-arrow"></i>      
