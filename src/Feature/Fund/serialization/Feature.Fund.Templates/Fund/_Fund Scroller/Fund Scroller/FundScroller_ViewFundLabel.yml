@@ -1,8 +1,8 @@
 ﻿---
-ID: "8e11c5f7-1fca-4a99-ad05-b81511f973d9"
+ID: "8e43df4a-3439-428d-a642-9bf4a7550842"
 Parent: "2e087151-f60b-4752-8b1a-3eb7b702fa10"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Fund/_Fund Scroller/Fund Scroller/FundScroller_Heading
+Path: /sitecore/templates/Feature/Fund/_Fund Scroller/Fund Scroller/FundScroller_ViewFundLabel
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
@@ -10,16 +10,16 @@ SharedFields:
   Value: "Single-Line Text"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 250
+  Value: 1000
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Heading
+    Value: View fund label
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210430T140042Z
+      Value: 20210604T102934Z

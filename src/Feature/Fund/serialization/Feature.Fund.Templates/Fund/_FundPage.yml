@@ -1,16 +1,14 @@
 ﻿---
-ID: "3244fb96-9392-4edf-b8d9-8f9c778960f1"
+ID: "0cf5e9f6-fee0-472c-b1d3-c4c68e20aa4d"
 Parent: "157f9844-ea1c-4fab-b9dc-98caa06b0adc"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Feature/Fund/_Fund Card
+Path: /sitecore/templates/Feature/Fund/_FundPage
 DB: master
 SharedFields:
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
   Type: tree list
-  Value: |
-    {1930BBEB-7805-471A-A3BE-4858AC7CF696}
-    {0CF5E9F6-FEE0-472C-B1D3-C4C68E20AA4D}
+  Value: "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"
 Languages:
 - Language: en
   Versions:
@@ -18,7 +16,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210511T120600Z
+      Value: 20210604T092532Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
