@@ -1,9 +1,13 @@
 ﻿namespace LionTrust.Feature.Fund.Models
 {
     using Glass.Mapper.Sc.Configuration.Attributes;
+    using LionTrust.Foundation.Legacy.Models;
 
     public interface IKeyInfoPriceComponent : IFundGlassBase
     {
+        [SitecoreField(Constants.KeyInfoPriceComponent.FundClassFieldId)]
+        IFundClass FundClass { get; set; }
+
         [SitecoreField(Constants.KeyInfoPriceComponent.KeyInformationLabel_FieldId)]
         string KeyInformationLabel { get; set; }
 

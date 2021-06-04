@@ -1,0 +1,35 @@
+﻿---
+ID: "7000848e-f5b0-424a-ac8e-04e4917b053b"
+Parent: "7c24ecf0-7e6b-4ec2-8397-9b70239589ab"
+Template: "d3d9d2ce-b2ce-49ac-b50d-6a5ffd4c4ab8"
+Path: "/sitecore/content/LionTrustNew/Home/Fund Detail Page/_Local/UI018 - Image CTA Promo"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1054e4b6-1cf5-4c08-8a6d-d9b02fb17050"
+      Hint: ImageCTAPromo_Image
+      Value: |
+        <image mediaid="{EF7BE8C4-ADDA-4605-B21D-94CB417CC4C5}" />
+    - ID: "143867db-9bba-4097-9eb4-0099c175ad91"
+      Hint: ImageCTAPromo_CTALink
+      Value: |
+        <link linktype="internal" text="Contact the team" querystring="" target="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210602T144512Z
+    - ID: "48bf236b-0681-4a09-9085-4933fa1c4a7a"
+      Hint: ImageCTAPromo_Body
+      Value: "Before joining Liontrust in early 2018, David and Phil worked together at Kames Capital for 14 years, where David was Head of the Fixed income team and Phil was Head of Investment Strategy. They launched one of the first strategic bond funds in 2003 and have been investing in high yield on a global basis since 2003. Donald was previously an investment manager in the Credit team at Baillie Gifford and worked with David and Phil at Kames Capital for three years from 2005 to 2008. He was co-manager of the Baillie Gifford High Yield Bond Fund from June 2010 to 2017 and the US High yield strategy."
+    - ID: "4c838697-dbeb-4998-a261-ccc77bc59259"
+      Hint: ImageCTAPromo_Subtitle
+      Value: David Roberts (left), Phil Milburn (right) and Donald Phillips (centre) manage the Liontrust Global Fixed Income Process.
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "7a84ea30-ff24-4c46-ae8f-51fcff940663"
+      Hint: ImageCTAPromo_Title
+      Value: Meet the team

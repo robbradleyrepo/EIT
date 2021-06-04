@@ -20,6 +20,14 @@ Languages:
     - ID: "00cb1306-1dfb-42e4-9405-fac6a8d6a87b"
       Hint: Isin
       Value: GB00B7GXM507
+    - ID: "036aeb89-b0bd-42c2-b763-a56cdbe32cdc"
+      Hint: Fund_Classes
+      Type: Multilist
+      Value: |
+        {D928D2B3-C2AD-4D73-B2E5-D9A5DA665A0E}
+        {81238531-ED4B-457E-8370-86280902110F}
+        {4B7B6C7A-8979-4F5A-ABBE-76A1571DC256}
+        {F1E67AB7-9A4D-4EEF-9D75-4F752E1AAAC2}
     - ID: "13671185-84c9-49e4-8799-6135f386f3e5"
       Hint: FiveYears
       Value: 81.860%
@@ -127,8 +135,8 @@ Languages:
       Hint: FundName
       Value: Asia Income Fund
     - ID: "6cbf0ed2-94b3-4f2a-a84d-a36501e38105"
-      Hint: LaunchDate
-      Value: 20120305T000000
+      Hint: LegacyFund_LaunchDate
+      Value: 20120305T000000Z
     - ID: "6d258747-e783-4579-9c3c-f8f23d03ccf6"
       Hint: LegacySectorFundData_SectorOneYear
       Value: 18.277%
@@ -147,7 +155,7 @@ Languages:
       Value: 13.080%
     - ID: "7994e108-44fb-4349-bb80-736e783fbbb3"
       Hint: LegacyFundOverviewData_OverviewTitle
-      Value: The Fund
+      Value: Fund Overview
     - ID: "7b91fb4b-1ec0-4d49-9aba-d31f17c3d0f5"
       Hint: Year2
       Value: 7.731%

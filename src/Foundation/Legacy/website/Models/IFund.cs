@@ -7,6 +7,12 @@
 
     public interface IFund : IFundOverviewData, ILegacyGlassBase
     {
+        [SitecoreField(Constants.Fund.CitiCodeFieldId)]
+        string CitiCode { get; set; }
+
+        [SitecoreField(Constants.Fund.ClassesFieldId)]
+        IEnumerable<IFundClass> Classes { get; set; }
+
         [SitecoreField(Constants.Fund.FundManagersFieldId, SectionName ="Fund Info")]
         IEnumerable<IAuthor> FundManagers { get; set; }
 

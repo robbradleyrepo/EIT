@@ -1,5 +1,5 @@
 export default () => {
-  $("#view-documents").on("click", () => {
+  $(".view-documents").on("click", () => {
     $(".lit-overlay").addClass("active");
     $(".sidebar-overlay").addClass("sidebar-overlay_active");
   });

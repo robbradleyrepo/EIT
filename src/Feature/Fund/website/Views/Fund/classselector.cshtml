@@ -1,0 +1,41 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Fund.Models.IFundClassSelector
+@if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    return;
+}
+<div class="container container-p-0">
+    <div class="row">
+        <div class="col-lg-4 offset-lg-8">
+            <div class="class-dropdown">
+                <div class="class-dropdown__title">
+                    @Html.Glass().Editable(m => m.DropDownLabel)
+                </div>
+                <div class="class-dropdown__select">
+                    <select name="classes" id="classes" class="fund-chart-dropdown">
+                        @if (Model.Fund != null)
+                        {
+                            foreach (var item in Model.Fund.Classes)
+                            {
+                                if (Model.DefaultClass != null && Model.DefaultClass.Id == item.Id)
+                                {
+                                    <option value="@item.Value" selected>@item.ClassName</option>
+                                }
+                                else
+                                {
+                                    <option value="@item.Value">@item.ClassName</option>
+                                }
+
+                            }
+                        }
+                        else if (Sitecore.Context.PageMode.IsExperienceEditor)
+                        {
+                            @:Please select a fund for the component
+                        }
+                    </select>
+                    <i class="article-filters__icon-arrow article-filters__icon-arrow_select"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

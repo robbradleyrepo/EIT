@@ -1,0 +1,19 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Fund.Models.HoldingsViewModel
+<div class="table-section">
+    <h3 class="table-section__title">@Html.Glass().Editable(Model.Table, t => t.Heading)</h3>
+    <div class="table-responsive-md">
+        <table class="table table-full-border">
+            <tbody>
+                @foreach (var item in Model.Holdings)
+                {
+                    <tr>
+                        <th scope="row">@item.Name</th>
+                        <td>@item.Weight</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

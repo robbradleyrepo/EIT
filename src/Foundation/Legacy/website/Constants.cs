@@ -63,8 +63,30 @@
             public const string FundReference_FieldId = "{CCE4E679-7E94-450D-8CC1-691BDF17CA78}";
         }
 
+        public static class FundClass
+        {
+            public const string ValueFieldId = "{D2F09153-C85F-48EC-9C15-52C9ECBDEEFB}";
+            public const string ClassNameFieldId = "{0CE0E3BF-4431-4071-A2EA-A3B79D3F0093}";
+            public const string ClassLaunchDate_FieldId = "{D45FD542-D058-4753-A7FD-EAD65FD132D6}";
+            public const string Comparator_FieldId = "{26563B81-843C-40BE-9DA0-924F61AE0B3E}";
+            public const string Duration_FieldId = "{BBF14E98-E868-4DA2-9C11-E83B21DD91D1}";
+            public const string OfferPrice_FieldId = "{0D1337DA-2120-4FF6-847C-C085CD0527D2}";
+            public const string SinglePrice_FieldId = "{0064BABA-59CF-4E55-B5EB-937687F9C50E}";
+            public const string PriceDate_FieldId = "{B3EB8F9D-7CD1-47F8-8CFB-442B41FF7AAF}";
+            public const string BloombergCode_FieldId = "{F3BF4C66-26C7-40D5-A791-291DE4E08A33}";
+            public const string DistributionDate_FieldId = "{13F2C43D-55BB-42F0-ACC8-D0DA1AB614DC}";
+            public const string ExDividendDate_FieldId = "{1BE14077-37B7-419D-9E00-03086878B221}";
+            public const string IncludedOFC_FieldId = "{5F35477A-DE20-4C19-AC91-D5110F62A1AE}";
+            public const string InitialCharge_FieldId = "{CAD6096A-0D1F-4D69-986A-F5749A2856F9}";
+            public const string ISINCode_FieldId = "{2B509BE7-A54F-4663-9104-4E07D51C060B}";
+            public const string OngoingCharges_FieldId = "{0FE085F4-C693-4F16-AEE8-9C2ABFA66A4A}";
+            public const string SedolCode_FieldId = "{79F1B818-4E89-4F71-BF0E-1EFF631A7259}";
+        }
+
         public static class Fund 
         {
+            public const string CitiCodeFieldId = "{90A7B1E0-C14E-4A3D-A717-72BEC978A99A}";
+            public const string ClassesFieldId = "{036AEB89-B0BD-42C2-B763-A56CDBE32CDC}";
             public const string FundManagersFieldId = "{855D1E7B-3D08-4526-AD2D-FA2E86E9BE9B}";
             public const string LaunchDate_FieldId = "{6CBF0ED2-94B3-4F2A-A84D-A36501E38105}";
             public const string FundSize_FieldId = "{D3A5BBC1-32DC-492D-9C70-645A8E47FB34}";
