@@ -4,13 +4,13 @@ export default () => {
   const swiper = new Swiper(".swiper-container-funds", {
     grabCursor: true,
     slidesPerView: "auto",
-    spaceBetween: 0,
+    spaceBetween: 32,
     slidesOffsetAfter: 30,
     breakpointsInverse: true,
     breakpoints: {
       0: {
         // slidesPerView: 1.2,
-        // spaceBetween: 16,
+        spaceBetween: 16,
       },
       576: {
         // slidesPerView: 2.5,
@@ -25,6 +25,7 @@ export default () => {
       },
       1200: {
         // slidesPerView: 1.6,
+        spaceBetween: 32,
         slidesOffsetAfter: 100,
       },
       1440: {
