@@ -8,9 +8,34 @@
     using Sitecore.Data.Fields;
     using Sitecore.Globalization;
     using System.Linq;
+    using Sitecore.ContentSearch;
 
     public static class ComputedValueHelper
     {
+        public static Item CheckCastComputedFieldItem(IIndexable indexable)
+        {
+            if (indexable == null)
+            {
+                throw new ArgumentNullException("indexable");
+            }
+
+            var scIndexable = indexable as SitecoreIndexableItem;
+
+            if (scIndexable == null)
+            {
+                return scIndexable;
+            }
+
+            var item = (Item)scIndexable;
+
+            if (string.Compare(item.Database.Name, "core", StringComparison.OrdinalIgnoreCase) == 0)
+            {
+                item = null;
+            }
+
+            return item;
+        }
+
         public static List<Guid> ExtractIds(Field multiValueField)
         {
             var referencedItemGuids = multiValueField.Value.Split('|');

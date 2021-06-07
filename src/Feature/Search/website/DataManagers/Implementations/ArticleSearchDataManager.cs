@@ -32,7 +32,7 @@
 
         private string GetArticleDate(DateTime indexedDate)
         {
-            string label = string.Empty;
+            var label = string.Empty;
             if(indexedDate.Date == DateTime.Today)
             {
                 label = Translate.Text("Today");

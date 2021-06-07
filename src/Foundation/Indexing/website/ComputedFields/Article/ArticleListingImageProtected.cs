@@ -1,7 +1,7 @@
 ﻿namespace LionTrust.Foundation.Indexing.ComputedFields.Article
 {
     using System;
-
+    using LionTrust.Foundation.Indexing.ComputedFields.SharedLogic;
     using Sitecore.ContentSearch;
     using Sitecore.ContentSearch.ComputedFields;
     using Sitecore.Data.Fields;
@@ -16,34 +16,9 @@
         
         public object ComputeFieldValue(IIndexable indexable)
         {
-            if (indexable == null)
-            {
-                throw new ArgumentNullException("indexable");
-            }
+            var item = ComputedValueHelper.CheckCastComputedFieldItem(indexable);
 
-            var scIndexable = indexable as SitecoreIndexableItem;
-
-            if (scIndexable == null)
-            {
-                Sitecore.Diagnostics.Log.Warn(
-                    this + " : unsupported IIndexable type : " + indexable.GetType(), this);
-                return false;
-            }
-
-            var item = (Item)scIndexable;
-            if (item == null)
-            {
-                Sitecore.Diagnostics.Log.Warn(
-                    this + " : unsupported SitecoreIndexableItem type : " + scIndexable.GetType(), this);
-                return false;
-            }
-
-            if (string.Compare(item.Database.Name, "core", StringComparison.OrdinalIgnoreCase) == 0)
-            {
-                return false;
-            }
-
-            ImageField imageField = item.Fields[Legacy.Constants.Article.Article_ListingImage];
+            ImageField imageField = item?.Fields[Legacy.Constants.Article.Article_ListingImage];
             MediaItem mediaItem;
             if(imageField?.MediaDatabase.Name == "shell")
             {
