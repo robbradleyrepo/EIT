@@ -36,12 +36,13 @@
             public const string HeadingFieldId = "{8E11C5F7-1FCA-4A99-AD05-B81511F973D9}";
             public const string DescriptionFieldId = "{451EFCD2-40A3-4153-8B02-BEC9572A9EC1}";
             public const string SubtitleFieldId = "{EB9E31A0-ED28-48FC-8CBF-820264B17306}";
-            public const string FundsFieldId = "{59BCA54C-FCD3-44C9-813A-6A6A244836ED}";
+            public const string FundsFieldId = "{DD98D557-6E80-4FFB-9E13-498E29DE5566}";
 
             public const string PrimaryCaFieldId = "{63C464EC-3657-4B91-ADF5-28AC9036774F}";
             public const string PrimaryCtaGoalFieldId = "{7DB368D2-CCCF-4423-80FC-2065EA9FA547}";
             public const string SecondaryCtaFieldId = "{E8A3C14F-9976-4734-9FE8-5BB53E1DC9B3}";
             public const string SecondaryCtaGoalId = "{0528E27D-0ACA-4D49-A01A-E3993A81764F}";
+            public const string ViewFundFieldId = "{8E43DF4A-3439-428D-A642-9BF4A7550842}";
         }
 
         public static class FundManager
@@ -53,15 +54,45 @@
         {
             public const string LatestUpdateCTA_FieldId = "{624E51CE-F2EE-48A1-B49F-EB4A852B713F}";
             public const string DownloadCTA_FieldId = "{361F876B-0D9B-4827-A7AD-F9245A3A79A2}";
+            public const string FundFieldId = "{8730606F-4236-4C61-8859-16CB35541365}";
+        }
+
+        public static class FundClassSelector
+        {
+            public const string DefaultClassFieldId = "{41D6C33F-71CD-4183-B2B6-F6EDE935BE4D}";
+
+            public const string DropDownLabelFieldId = "{306EAF63-2D34-4733-872C-2E086009E717}";
+            public const string FundFieldId = "{D765263B-CE31-4E99-8AB3-E1D4594A9D01}";
         }
 
         public static class FourFundStats
         {
+            public const string FundFieldId = "{1AE48213-0A33-405E-8575-EF6369491FA8}";
             public const string FundLaunchDateLabel_FieldId = "{41A6502D-CE3F-4938-9746-1B6D0EB9A057}";
             public const string FundSizeLabel_FieldId = "{3DC4DB39-AF37-4BDC-B8A8-7C06458BB9B5}";
             public const string NumberOfHoldingsLabel_FieldId = "{4D0F2400-C512-4457-BBE4-AFE776D25FEA}";
             public const string ManagedByCurrentTeamForLabel_FieldId = "{8E7A0A72-4F42-4FC3-8C5F-BB44152FD189}";
             public const string ManagedByCurrentTeamForValue_FieldId = "{B141A98C-B927-4C25-AA97-6314C24A974F}";
+        }
+
+        public static class FundPage
+        {
+            public const string PageFieldId = "{E43F6E86-0318-4766-B880-0C4F6512CA4E}";
+        }
+
+        public static class HoldingsTable
+        {
+            public const string HeadingFieldId = "{74B0C999-733F-4EDB-B896-D160EA93B6C8}";
+        }
+
+        public static class GraphSection
+        {
+            public const string HeadingFieldId = "{9D8219A9-94C4-41CA-9B93-7F4416D5A8CA}";
+        }
+
+        public static class FundSelector
+        {
+            public const string FundFieldId = "{3F407D7E-838C-4D99-A6AD-890B6A463037}";
         }
 
         public static class KeyFundDocuments
@@ -92,6 +123,7 @@
 
         public static class AdditionalInfoAndChargesComponent
         {
+            public const string FundClassFieldId = "{5B130B36-26D8-4FB8-AD0E-4AEAD8B6064F}";
             public const string AdditionalInfoLabel_FieldId = "{CE9B820F-2C4E-458D-9A8C-C9C070389669}";
             public const string MinInitialLabel_FieldId = "{B790F7BC-1FA0-4B65-B59F-535DC77D9A86}";
             public const string MinAdditionalLabel_FieldId = "{23206349-163D-422B-8C88-4F3DF0E71B86}";
@@ -108,6 +140,7 @@
 
         public static class KeyInfoPriceComponent
         {
+            public const string FundClassFieldId = "{4D46FA28-CE89-47C2-BD1A-2E187AA6B600}";
             public const string KeyInformationLabel_FieldId = "{D1C8B6ED-F85E-4645-82EE-B239CFE6E9AA}";
             public const string ClassLaunchDateLabel_FieldId = "{FF6466A5-B6D9-499C-A338-42DB7AA720CF}";
             public const string ComparatorLabel_FieldId = "{B27C9CC5-F16C-4A75-852D-3A9B6FDBE497}";

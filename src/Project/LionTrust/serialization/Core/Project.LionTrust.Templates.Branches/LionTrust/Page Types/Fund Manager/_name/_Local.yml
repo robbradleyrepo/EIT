@@ -1,0 +1,27 @@
+﻿---
+ID: "81d4afb9-ef55-4b35-94cd-5f3092d49441"
+Parent: "3f3228f9-2a64-4e90-9dfa-69c6884a8739"
+Template: "fff5f245-ffc0-4022-a998-9b07aa5e761f"
+Path: /sitecore/templates/Branches/Project/LionTrust/Page Types/Fund Manager/$name/_Local
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: |
+    {D3D9D2CE-B2CE-49AC-B50D-6A5FFD4C4AB8}
+    {1D2058B8-C7A2-4D41-8FDF-61AC3B786798}
+    {E14137DC-817E-40C3-B833-80C4824D2FF6}
+    {F91BFF52-8AFB-4056-BBF3-84C16924B92D}
+    {F6B5C22C-0B85-45BB-BB44-D743FF235639}
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: "-1000"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210604T115419Z

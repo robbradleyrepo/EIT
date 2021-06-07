@@ -29,19 +29,7 @@
         [SitecoreField(Constants.ImageCTAPromo.TextAlignment_FieldId, SitecoreFieldType.Droplink, "Design")]
         IPromoLookup TextAlignment { get; set; }
 
-        [SitecoreField(Constants.ImageCTAPromo.HideImage_FieldId, SitecoreFieldType.Checkbox, "Design")]
-        bool HideImage { get; set; }
-
-        [SitecoreField(Constants.ImageCTAPromo.HideTitle_FieldId, SitecoreFieldType.Checkbox, "Design")]
-        bool HideTitle { get; set; }
-
-        [SitecoreField(Constants.ImageCTAPromo.HideSubtitle_FieldId, SitecoreFieldType.Checkbox, "Design")]
-        bool HideSubtitle { get; set; }
-
-        [SitecoreField(Constants.ImageCTAPromo.HideBody_FieldId, SitecoreFieldType.Checkbox, "Design")]
-        bool HideBody { get; set; }
-
-        [SitecoreField(Constants.ImageCTAPromo.HideCTA_FieldId, SitecoreFieldType.Checkbox, "Design")]
-        bool HideCTA { get; set; }
+        [SitecoreField(Constants.ImageCTAPromo.LinkedInUrlFieldId)]
+        Link LinkedInUrl { get; set; }
     }
 }

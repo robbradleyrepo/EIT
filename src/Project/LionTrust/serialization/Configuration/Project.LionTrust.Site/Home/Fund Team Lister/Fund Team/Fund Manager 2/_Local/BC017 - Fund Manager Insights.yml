@@ -1,0 +1,30 @@
+﻿---
+ID: "f3fc71b2-71d2-4667-8b00-28f225448c81"
+Parent: "0379e84a-65fa-4e5f-9da4-1baa56048cc8"
+Template: "e14137dc-817e-40c3-b833-80c4824d2ff6"
+Path: "/sitecore/content/LionTrustNew/Home/Fund Team Lister/Fund Team/Fund Manager 2/_Local/BC017 - Fund Manager Insights"
+DB: master
+BranchID: "703afd5e-25f7-40b3-995b-9bdbae1d006b"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{DB076A43-BFDD-49ED-A4EB-CE95210091A0}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1492465c-0e3c-4fdb-97b8-0fc76924e400"
+      Hint: FundManagerInsights_Heading
+      Value: John's insights
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210604T134458Z
+    - ID: "6e1628b0-ebd1-45c5-ad2f-3e0aa6fc19a4"
+      Hint: FundManagerInsights_CTA
+      Value: |
+        <link linktype="internal" text="See all John's insights" querystring="" target="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
+    - ID: "71469dcb-2347-4fa2-883b-50f4df0e5244"
+      Hint: ArticleSearchParameters_FundManagers
+      Type: Multilist
+      Value: "{666D8658-69FD-4802-B1DF-B4D2FEF1AD18}"

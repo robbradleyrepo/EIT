@@ -18,7 +18,8 @@
         [SitecoreField(Constants.FundScroller.SubtitleFieldId)]
         string Subtitle { get; set; }
 
-        IEnumerable<IFundCard> Children { get; set; }
+        [SitecoreField(Constants.FundScroller.FundsFieldId)]
+        IEnumerable<IFundCard> Funds { get; set; }
 
         [SitecoreField(Constants.FundScroller.PrimaryCaFieldId)]
         Link PrimaryCta { get; set; }
@@ -31,5 +32,8 @@
 
         [SitecoreField(Constants.FundScroller.SecondaryCtaGoalId)]
         Guid SecondaryCtaGoalId { get; set; }
+
+        [SitecoreField(Constants.FundScroller.ViewFundFieldId)]
+        string ViewFundLabel { get; set; }
     }
 }

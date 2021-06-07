@@ -59,6 +59,12 @@
     </PackageReference>
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="1.0.5" />
     <PackageReference Include="Microsoft.Net.Compilers" Version="2.1.0" />
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>11.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="RestSharp">
+      <Version>106.11.7</Version>
+    </PackageReference>
     <PackageReference Include="Sitecore.Kernel" Version="9.2.0" />
     <PackageReference Include="Sitecore.Mvc">
       <Version>9.2.0</Version>
@@ -86,10 +92,22 @@
     <Content Include="Views\Fund\Disclaimer.cshtml" />
     <Content Include="Views\Fund\literature.cshtml" />
     <Content Include="Views\Fund\TwoColumnComponent.cshtml" />
+    <Content Include="Views\Fund\classselector.cshtml" />
+    <Content Include="Views\Fund\FundOverviewRow.cshtml" />
+    <Content Include="Views\Fund\Holdings.cshtml" />
+    <Content Include="App_Config\Include\Feature\Feature.Fund.config" />
+    <Content Include="Views\Fund\GraphSection.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\BasicFundHoldingsBreakdown.cs" />
+    <Compile Include="Api\FundBreakdownModel.cs" />
+    <Compile Include="Api\FundClassDataModel.cs" />
+    <Compile Include="Api\FundDataResponseModel.cs" />
+    <Compile Include="Api\IFundClassDataApi.cs" />
+    <Compile Include="Api\IFundHoldingsBreakdown.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="Controllers\FundHoldingsController.cs" />
     <Compile Include="Controllers\FundLiteratureController.cs" />
     <Compile Include="Controllers\FundManagerComponentController.cs" />
     <Compile Include="Controllers\FundHeaderController.cs" />
@@ -100,13 +118,15 @@
     <Compile Include="Literature\DocumentRepository.cs" />
     <Compile Include="Literature\DocumentSearchResult.cs" />
     <Compile Include="Literature\IDocumentRepository.cs" />
-    <Compile Include="Models\FourFundStatsViewModel.cs" />
+    <Compile Include="Models\FundClassSelector.cs" />
     <Compile Include="Models\FundDisclaimerViewModel.cs" />
     <Compile Include="Models\FundHeaderViewModel.cs" />
     <Compile Include="Models\FundManagerViewModel.cs" />
-    <Compile Include="Models\FundOverviewViewModel.cs" />
+    <Compile Include="Models\HoldingsViewModel.cs" />
     <Compile Include="Models\IAdditionalInfoAndChargesComponent.cs" />
     <Compile Include="Models\IFourFundStats.cs" />
+    <Compile Include="Models\IFundPage.cs" />
+    <Compile Include="Models\IFundSelector.cs" />
     <Compile Include="Models\IFundDetailNavigation.cs" />
     <Compile Include="Models\IFundDisclaimer.cs" />
     <Compile Include="Models\IFundExtended.cs" />
@@ -117,6 +137,8 @@
     <Compile Include="Models\IFundManagerPage.cs" />
     <Compile Include="Models\IFundOverview.cs" />
     <Compile Include="Models\IFundScroller.cs" />
+    <Compile Include="Models\IGraphSection.cs" />
+    <Compile Include="Models\IHoldingsTable.cs" />
     <Compile Include="Models\IKeyFundDocuments.cs" />
     <Compile Include="Models\IFundManagers.cs" />
     <Compile Include="Models\IKeyInfoPriceComponent.cs" />
@@ -125,6 +147,9 @@
     <Compile Include="Models\ILiterature.cs" />
     <Compile Include="Models\LiteratureViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\FundRepository.cs" />
+    <Compile Include="Repository\FundSearchResultItem.cs" />
+    <Compile Include="Repository\IFundRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Foundation\Analytics\website\LionTrust.Foundation.Analytics.csproj">

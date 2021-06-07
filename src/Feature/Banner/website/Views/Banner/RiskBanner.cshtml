@@ -1,9 +1,10 @@
-﻿@model LionTrust.Feature.Banner.Models.IRiskBanner
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Banner.Models.IRiskBanner
 @if (Model != null)
 {
     <div class="article-quote article-quote_with-margins">
         <span>
-            @Html.Glass().Editable(Model, m => m.RiskBannerText)            
+            @Html.Glass().Editable(Model, m => m.RiskBannerText)
         </span>
     </div>
 }

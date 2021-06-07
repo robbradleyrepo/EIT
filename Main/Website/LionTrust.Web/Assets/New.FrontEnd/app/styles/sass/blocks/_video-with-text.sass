@@ -1,0 +1,15 @@
+.video-with-text    
+    margin-top: 30px
+    margin-bottom: 40px
+    @include breakpoint(desktop, up)
+        margin-top: 110px
+        margin-bottom: 80px
+    &__text
+        color: $black
+    &__video-title
+        display: none
+        font-size: 14px
+        color: $primary
+        line-height: 25px
+        @include breakpoint(desktop, up)
+            display: block

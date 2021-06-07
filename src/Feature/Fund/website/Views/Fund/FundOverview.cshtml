@@ -1,38 +1,41 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
-@model LionTrust.Feature.Fund.Models.FundOverviewViewModel
-@if (Model != null && Model.FundPage != null && Model.OverviewComponent != null)
+@model LionTrust.Feature.Fund.Models.IFundOverview
+@if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
 {
-    <div class="fund-overview">
-        <h2 class="h2">
-            @Html.Glass().Editable(Model.FundPage, m => m.OverviewTitle)
-        </h2>
-        <p class="font-500 text-margin">
-            @Html.Glass().Editable(Model.FundPage, m => m.OverviewText)
-        </p>
-        <div>
-            @using (Html.Glass().BeginRenderLink(Model.OverviewComponent, m => m.LatestUpdateCTA, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary-forward mr-1 mr-md-4" } }, isEditable: true))
-            {
-                if (Model.OverviewComponent.LatestUpdateCTA != null)
-                {
-                    @Model.OverviewComponent.LatestUpdateCTA.Text
-                }
+    return;
+}
+@if (Model.Fund == null && Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <div style="background-color:white"><span style="color:black">Please configure a fund on the component</span></div>
+    return;
+}
 
-                <i class="icon-arrow-right animate-arrow"></i>
+<div class="fund-overview">
+    <h2 class="h2">
+        @Html.Glass().Editable(Model.Fund, m => m.OverviewTitle)
+    </h2>
+    <p class="font-500 text-margin">
+        @Html.Glass().Editable(Model.Fund, m => m.OverviewText)
+    </p>
+    <div>
+        @using (Html.Glass().BeginRenderLink(Model, m => m.LatestUpdateCTA, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary-forward mr-1 mr-md-4" } }, isEditable: true))
+        {
+            if (Model.LatestUpdateCTA != null)
+            {
+                @Model.LatestUpdateCTA.Text
             }
 
-            @using (Html.Glass().BeginRenderLink(Model.OverviewComponent, m => m.DownloadCTA, new System.Collections.Specialized.NameValueCollection { { "class", "link-styles" } }, isEditable: true))
-            {
-                if (Model.OverviewComponent.DownloadCTA != null)
-                {
-                    @Model.OverviewComponent.DownloadCTA.Text
-                }
+            <i class="icon-arrow-right animate-arrow"></i>
+        }
 
-                <i class="icon-file d-none d-lg-inline-block"></i>
+        @using (Html.Glass().BeginRenderLink(Model, m => m.DownloadCTA, new System.Collections.Specialized.NameValueCollection { { "class", "link-styles" } }, isEditable: true))
+        {
+            if (Model.DownloadCTA != null)
+            {
+                @Model.DownloadCTA.Text
             }
-        </div>
+
+            <i class="icon-file d-none d-lg-inline-block"></i>
+        }
     </div>
-}
-else if (Sitecore.Context.PageMode.IsExperienceEditor)
-{
-    @: Add datasource for Fund Overview component
-}
+</div>

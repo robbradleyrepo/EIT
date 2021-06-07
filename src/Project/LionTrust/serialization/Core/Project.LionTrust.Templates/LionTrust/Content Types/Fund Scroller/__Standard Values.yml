@@ -8,7 +8,7 @@ SharedFields:
 - ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
   Hint: __Masters
   Type: TreelistEx
-  Value: "{EB8C3DB5-5C21-4B61-91BD-92C88FE489AF}"
+  Value: 
 Languages:
 - Language: en
   Versions:
@@ -21,3 +21,6 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
+    - ID: "8e43df4a-3439-428d-a642-9bf4a7550842"
+      Hint: FundScroller_ViewFundLabel
+      Value: View this fund
