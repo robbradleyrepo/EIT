@@ -1,0 +1,25 @@
+﻿---
+ID: "3921296d-0044-4a1f-9b20-24ed181b1ba8"
+Parent: "50cfd1cc-00ee-4a06-9b49-4a864f1bbfcc"
+Template: "fbfecf7a-bb63-415c-98a5-cf095ff07c99"
+Path: "/sitecore/templates/Branches/Project/LionTrust/Page Types/Common Inner/$name/_Local/UI026 - Text"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210607T105324Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "7a6eea35-2025-43cf-a371-43d99a82e804"
+      Hint: RichText_Text
+      Value: <p><strong>Intro text</strong></p>
+    - ID: "b4d032f0-3342-49a1-ad8a-d0f640c59b4c"
+      Hint: RichText_SmallSize
+      Type: Checkbox
+      Value: 0
