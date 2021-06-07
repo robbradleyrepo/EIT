@@ -22,11 +22,15 @@ export default () => {
       },
       1800: {
         slidesPerView: 4,
-        slidesOffsetAfter: 300,
+        slidesOffsetAfter: 500,
       },
-      2560: {
-        slidesPerView: 4.5,
-        slidesOffsetAfter: 300,
+      2000: {
+        slidesPerView: 4.3,
+        slidesOffsetAfter: 500,
+      },
+      2550: {
+        slidesPerView: 5.3,
+        slidesOffsetAfter: 500,
       },
     },
   });
