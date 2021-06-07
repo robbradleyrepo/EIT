@@ -1,0 +1,25 @@
+﻿---
+ID: "db076a43-bfdd-49ed-a4eb-ce95210091a0"
+Parent: "81d4afb9-ef55-4b35-94cd-5f3092d49441"
+Template: "e14137dc-817e-40c3-b833-80c4824d2ff6"
+Path: "/sitecore/templates/Branches/Project/LionTrust/Page Types/Fund Manager/$name/_Local/BC017 - Fund Manager Insights"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1492465c-0e3c-4fdb-97b8-0fc76924e400"
+      Hint: FundManagerInsights_Heading
+      Value: John's insights
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210604T133029Z
+    - ID: "6e1628b0-ebd1-45c5-ad2f-3e0aa6fc19a4"
+      Hint: FundManagerInsights_CTA
+      Value: |
+        <link linktype="internal" text="See all John's insights" querystring="" target="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
+    - ID: "71469dcb-2347-4fa2-883b-50f4df0e5244"
+      Hint: ArticleSearchParameters_FundManagers
+      Type: Multilist
+      Value: "{666D8658-69FD-4802-B1DF-B4D2FEF1AD18}"

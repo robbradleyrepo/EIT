@@ -1,0 +1,40 @@
+﻿---
+ID: "74e87bbb-a128-4b10-98ff-ab357edad5f6"
+Parent: "0379e84a-65fa-4e5f-9da4-1baa56048cc8"
+Template: "d3d9d2ce-b2ce-49ac-b50d-6a5ffd4c4ab8"
+Path: "/sitecore/content/LionTrustNew/Home/Fund Team Lister/Fund Team/Fund Manager 2/_Local/UI018 - Image CTA Promo"
+DB: master
+BranchID: "703afd5e-25f7-40b3-995b-9bdbae1d006b"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{49490E89-21F7-4C7D-A8CB-FEDF95271213}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0b2aa1e8-e739-4465-b681-c3cc91b08b3b"
+      Hint: ImageCTAPromo_LinkedInUrl
+      Value: |
+        <link linktype="internal" text="Johns linkedin profile" querystring="" target="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
+    - ID: "1054e4b6-1cf5-4c08-8a6d-d9b02fb17050"
+      Hint: ImageCTAPromo_Image
+      Value: |
+        <image mediaid="{BD7E3E1A-284E-4C79-A657-89DDA08BD2C2}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210604T134500Z
+    - ID: "48bf236b-0681-4a09-9085-4933fa1c4a7a"
+      Hint: ImageCTAPromo_Body
+      Value: "Prior to Hendersons, John was responsible for the launch and ongoing management of the portfolio management service at Rothschild Asset Management. In 2005, John founded North Investment Partners. John is one of the most high profile multi-asset managers in the UK retail market."
+    - ID: "4c838697-dbeb-4998-a261-ccc77bc59259"
+      Hint: ImageCTAPromo_Subtitle
+      Value: "John joined Liontrust in 2013 as Head of Multi-Asset. He was previously the Director of Multi-Manager Investment at Henderson Global Investors, where he was responsible for portfolio construction and fund selection of a range of portfolios totalling over £650 million."
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "7a84ea30-ff24-4c46-ae8f-51fcff940663"
+      Hint: ImageCTAPromo_Title
+      Value: About John
