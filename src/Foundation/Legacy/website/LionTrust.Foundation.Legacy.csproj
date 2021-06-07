@@ -105,10 +105,6 @@
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Indexing\website\LionTrust.Foundation.Indexing.csproj">
-      <Project>{acd53016-c45a-4a10-8b46-9a4a82a69d7b}</Project>
-      <Name>LionTrust.Foundation.Indexing</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\ORM\website\LionTrust.Foundation.ORM.csproj">
       <Project>{5e91a7d9-8e93-44fd-857f-f9ce145b6022}</Project>
       <Name>LionTrust.Foundation.ORM</Name>
