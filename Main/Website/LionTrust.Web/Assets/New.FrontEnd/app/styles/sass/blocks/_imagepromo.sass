@@ -35,9 +35,11 @@
     &__image-bg
         object-fit: cover
         width: 100%
-        height: 408px
+        height: 194px
         margin-bottom: 16px
         border-radius: 5px
+        @include breakpoint(mobile-large, up)
+            height: 408px
         @include breakpoint(desktop, up)
             margin-bottom: 20px
         @include breakpoint(desktop-large, up)
@@ -45,9 +47,11 @@
     &__image-sm
         object-fit: cover
         width: 100%
-        height: 188px
+        height: 90px
         margin-bottom: 16px
         border-radius: 5px
+        @include breakpoint(mobile-large, up)
+            height: 188px
         @include breakpoint(desktop, up)
             margin-bottom: 20px
         @include breakpoint(desktop-large, up)
