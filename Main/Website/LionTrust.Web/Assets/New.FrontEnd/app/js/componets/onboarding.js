@@ -30,6 +30,7 @@ export default () => {
   if(!agreePolicy) {
     showTab(currentTab);
     onboarding.addClass('active')
+    $('body').addClass('overflow-hidden')
   }
 
   // move to next step
@@ -62,6 +63,7 @@ export default () => {
   // finish onboarding, close modal
   $("#submit-board").on("click", () => {
     onboarding.removeClass("active");
+    $('body').removeClass('overflow-hidden')
     Cookies.set("agreePolicy", 1, { expires: 365 });
   });
 };
