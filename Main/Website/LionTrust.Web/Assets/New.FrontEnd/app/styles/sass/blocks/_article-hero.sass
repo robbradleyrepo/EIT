@@ -14,15 +14,25 @@
             line-height: 30px
             margin-right: 15%
 
+.hero-author-wrapper
+    display: flex
+    justify-content: center
+    @include breakpoint(desktop, up)
+        justify-content: start
+
 .hero-author
     display: flex
     flex-direction: column
     align-items: center
     margin-bottom: 5px
+    margin-right: 16px
+    &:last-child
+        margin-right: 0
     @include breakpoint(desktop, up)
         align-items: start
         flex-direction: row
         margin-bottom: 1rem
+        margin-right: 32px
     &__img
         width: 30px
         height: 30px
