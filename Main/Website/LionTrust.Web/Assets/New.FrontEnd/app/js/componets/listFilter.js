@@ -184,7 +184,9 @@ export default () => {
   new Vue({
     el: "#lister-app",
     data: {
-     facets: {}
+     facets: {}, 
+     params: {},
+     page: 1
     },
     computed: {
       getFacets() {
@@ -193,21 +195,66 @@ export default () => {
           if( i != 'Message' && i != 'StatusCode')
             res[i] = this.facets[i]
         }
-        console.log('res', res);
         return res
+      },
+      getQuerySring() {
+        let str = '';
+        str = str + 'page=' + this.page;
+        for(let prop in this.params) {
+          console.log('prop',prop);
+          str += '&' +`${prop}=${this.params[prop]}` 
+        }
+        console.log('str', str);
+        return str
       }
     },
     methods: {
-      toggleSelect() { }
+      // adding selected values to query params
+      toggleSelect(item, facet) {
+        // const test = this.queryValues.params[facet.name]
+        if(!this.params[facet.name])
+        this.params[facet.name] = [];
+        const existElem = this.params[facet.name].findIndex((el) => {
+          return  el === item.Identifier
+        }) 
+
+        console.log('existElem',existElem);
+        if(existElem !== - 1)
+          this.params[facet.name].splice(existElem, 1)
+        else        
+          this.params[facet.name].push(item.Identifier);
+        console.log('this.params',this);        
+       },
+       getQuerySring() {
+        let str = '';
+        str = str + 'page=' + this.page;
+        for(let prop in this.params) {
+          console.log('prop',prop);
+          str += '&' +`${prop}=${this.params[prop]}` 
+        }
+        console.log('str', str);
+        return str
+      },
+       applyFilters() {
+          
+          window.history.pushState(
+            { page: "search-page" },
+            "search",
+            `${window.location.href.split("?")[0]}?${this.getQuerySring()}`
+          );
+       },
+       clearFilters() {
+         this.queryValues
+       }
     },
-    watch: {
-      facets: {
-        handler: (newVal, oldVal) => {
-          console.log('newVal, oldVal',newVal, oldVal);
-        },
-        deep: true
-      }
-    },
+    // watch: {
+    //   facets: {
+    //     handler: (newVal, oldVal) => {
+    //       console.log('newVal, oldVal',newVal, oldVal);
+    //     },
+    //     deep: true
+    //   }
+    // },
     mounted() {
       // const req = $.ajax(
       //   "https://cm-liontrust-it.sagittarius.agency/ArticleSearchApi/Facets"
