@@ -1,0 +1,23 @@
+﻿@using Sitecore.ExperienceForms.Mvc.Constants
+@using Sitecore.ExperienceForms.Mvc.Html
+@model Sitecore.ExperienceForms.Mvc.Models.FormViewModel
+
+@{
+    using (Html.BeginRenderRouteForm(Model, IsPost))
+    {
+        @Html.AntiForgeryToken()
+        @Html.Hidden(AttributeNames.FormItemId, Model.ItemId)
+        @Html.ValidationSummary(true)
+        @Html.RenderFields(Model)
+
+        <script type="text/javascript">
+            (function($) {
+                var $formEl = $("form[data-sc-fxb='@Model.ItemId']");
+                if ($formEl.length && typeof $formEl.init_fxbConditions === 'function') {
+                    var options = @Html.RenderConditions(Model);
+                    $formEl.init_fxbConditions(options);
+                }
+            })(jQuery)
+        </script>
+    }
+}
