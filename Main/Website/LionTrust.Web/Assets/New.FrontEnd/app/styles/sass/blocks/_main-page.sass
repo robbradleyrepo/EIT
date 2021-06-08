@@ -1,4 +1,4 @@
-.main-page   
+.main-page
     // background: url('../images/bg/main-page.svg')
     // background-repeat: no-repeat
     // background-size: cover
@@ -12,9 +12,12 @@
 .shevron-bg
     position: absolute
     top: -50%
-    left: 40%
     right: 0
     bottom: 0
+    height: 50%
+    @include breakpoint(desktop, up)
+        left: 40%
+        height: auto
 
 .main-bg
 
