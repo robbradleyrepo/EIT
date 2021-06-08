@@ -1,19 +1,15 @@
 ﻿namespace LionTrust.Feature.Search.Models.API.Response
 {
-    using System.Collections.Generic;
+    using Newtonsoft.Json;
 
     public class ArticleFacetsResponse
     {
-        public IEnumerable<FacetItem> FundFacets { get; set; }
+        public ArticleFacets Facets { get; set; }
 
-        public IEnumerable<FacetItem> FundCategoriesFacets { get; set; }
-
-        public IEnumerable<FacetItem> FundManagersFacets { get; set; }
-
-        public IEnumerable<FacetItem> FundTeamsFacets { get; set; }
-
+        [JsonIgnore]
         public string Message { get; set; }
 
+        [JsonIgnore]
         public int StatusCode { get; set; }
     }
 }

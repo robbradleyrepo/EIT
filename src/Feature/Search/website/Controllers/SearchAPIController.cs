@@ -2,7 +2,6 @@
 {
     using System;
     using System.Web.Mvc;
-    using System.Web.Script.Serialization;
 
     using LionTrust.Feature.Search.DataManagers.Interfaces;
     using Sitecore.Mvc.Controllers;
