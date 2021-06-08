@@ -1,9 +1,10 @@
 .accordion-section
     margin: -110px 0 50px
     // background: linear-gradient(82.6deg, #000000 3.35%, rgba(0, 0, 0, 0) 50.61%), linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 34.86%), radial-gradient(43.27% 43.9% at 70.37% 85.26%, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(82.62deg, #0D1927 4.49%, #253931 96.65%)
+    &_full
+        margin-top: 20px
     @include breakpoint(desktop, up)
-        margin: 50px 0 180px
-
+        margin: 50px 0 180px    
     .container
         position: relative
 
@@ -100,3 +101,8 @@
     color: $black
     .accordion__minus, .accordion__plus
         color: $gold
+    .accordion__link.collapsed
+        border-bottom: 1px solid #E9EDF0
+    .accordion__card
+        @include breakpoint(desktop, up)
+            width: 100%
