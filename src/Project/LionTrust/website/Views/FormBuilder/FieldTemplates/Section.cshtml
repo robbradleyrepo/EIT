@@ -1,5 +1,6 @@
 ﻿@using Sitecore.ExperienceForms.Mvc.Html
 @model Sitecore.ExperienceForms.Mvc.Models.Fields.FieldViewModel
+<<<<<<< HEAD
 <div class="row">
     <div class="col-lg-6">
         <div data-sc-field-key="@Model.ConditionSettings.FieldKey" class="@Model.CssClass">
@@ -7,3 +8,9 @@
         </div>
     </div>
 </div>
+=======
+
+<div data-sc-field-key="@Model.ConditionSettings.FieldKey" class="@Model.CssClass">
+    @Html.RenderFields(Model)
+</div>
+>>>>>>> Introduced form fields, which requires to be adjusted for contact us form
