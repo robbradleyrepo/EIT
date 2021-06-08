@@ -16,6 +16,18 @@
             }
         }
 
+        public static string LinkText(this Link link, string defaultValue = "")
+        {
+            if (link != null && !string.IsNullOrEmpty(link.Text))
+            {
+                return link.Text;
+            }
+            else
+            {
+                return defaultValue;
+            }
+        }
+
         public static bool NotNullOrExperienceEditor(this Link link)
         {
             return link != null || Sitecore.Context.PageMode.IsExperienceEditor;
