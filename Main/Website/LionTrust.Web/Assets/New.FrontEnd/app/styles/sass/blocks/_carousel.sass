@@ -139,11 +139,12 @@
         display: flex
     &__head-img
         @extend .article-promo__head-img
-        width: 30px
-        height: 30px
+        margin-right: 7px
+        width: 28px
+        height: 28px
     &__name
         @extend .article-promo__head-title
-        font-size: 0.5em
+        font-size: 6px
         color: $gold
     &__title
         color: $white
@@ -155,8 +156,8 @@
             width: 80%
             margin-top: 0
         @include breakpoint(desktop-large, up)
-            font-size: 26px
-            margin-top: 16px
+            font-size: 29px
+            margin-top: 13px
             width: 60%
     &__play
         cursor: pointer
@@ -179,8 +180,9 @@
         color: $white
         display: none
         @include breakpoint(desktop, up)
-            font-size: 0.6em
+            font-size: 6px
+            bottom: 27px
         svg
-            transform: scale(0.6)
+            transform: scale(0.55)
             path
                 transition: .3s fill ease

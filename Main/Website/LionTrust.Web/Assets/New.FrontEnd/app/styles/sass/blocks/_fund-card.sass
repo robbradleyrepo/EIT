@@ -6,7 +6,9 @@
     max-width: 274px
     overflow: hidden
     box-shadow: 0px 10px 15px rgba(65, 72, 85, 0.45)
-    @include breakpoint(desktop, up)    
+    @include breakpoint(tablet, up)
+        max-width: 334px
+    @include breakpoint(desktop, up)
         max-width: 456px
         min-width: 334px
         height: 630px
