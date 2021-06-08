@@ -15,14 +15,13 @@
                     @if (Model.MapLinks != null && Model.MapLinks.Any())
                     {
                         foreach (var mapLink in Model.MapLinks)
-                        {
+                        {                            
+                            <button class="select-office__tab @activeCssClass" data-tab="@mapLink.Name">@Html.Glass().Editable(mapLink, m => m.MapLinkName)</button>
                             if (first)
                             {
                                 first = false;
                                 activeCssClass = string.Empty;
-
                             }
-                            <button class="select-office__tab @activeCssClass" data-tab="@mapLink.Name">@Html.Glass().Editable(mapLink, m => m.MapLinkName)</button>
                         }
                     }
                 </div>
@@ -36,12 +35,7 @@
 
         <section>
             @foreach (var mapLink in Model.MapLinks)
-            {
-                if (first)
-                {
-                    first = false;
-                    activeCssClass = string.Empty;
-                }
+            {                
                 using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Contact/MapLink", mapLink.Id.ToString(), "Edit Map Link"))
                 {
                     if (Sitecore.Context.PageMode.IsExperienceEditor)
@@ -100,6 +94,11 @@
                             </div>
                         </div>
                     </div>
+                    if (first)
+                    {
+                        first = false;
+                        activeCssClass = string.Empty;
+                    }
                 }
             }
         </section>
