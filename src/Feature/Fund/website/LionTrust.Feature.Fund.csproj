@@ -97,16 +97,23 @@
     <Content Include="Views\Fund\Holdings.cshtml" />
     <Content Include="App_Config\Include\Feature\Feature.Fund.config" />
     <Content Include="Views\Fund\GraphSection.cshtml" />
+    <Content Include="Views\Fund\SectorBreakdown.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdditionalInfoAndCharges\AdditionalInfoAndChargesDetails.cs" />
+    <Compile Include="AdditionalInfoAndCharges\AdditionalInfoAndChargesModel.cs" />
     <Compile Include="Api\BasicFundHoldingsBreakdown.cs" />
+    <Compile Include="Api\ExternalFundClassRepository.cs" />
     <Compile Include="Api\FundBreakdownModel.cs" />
     <Compile Include="Api\FundClassDataModel.cs" />
     <Compile Include="Api\FundDataResponseModel.cs" />
     <Compile Include="Api\IFundClassDataApi.cs" />
+    <Compile Include="Api\IFundClassRepository.cs" />
     <Compile Include="Api\IFundHoldingsBreakdown.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="FundClass\FundClassDetails.cs" />
+    <Compile Include="FundClass\FundClassController.cs" />
     <Compile Include="Controllers\FundHoldingsController.cs" />
     <Compile Include="Controllers\FundLiteratureController.cs" />
     <Compile Include="Controllers\FundManagerComponentController.cs" />
@@ -114,6 +121,12 @@
     <Compile Include="Controllers\FundManagerPromoController.cs" />
     <Compile Include="Controllers\FundsController.cs" />
     <Compile Include="Controllers\FundScrollerController.cs" />
+    <Compile Include="FundClass\FundClassData.cs" />
+    <Compile Include="FundClass\IFundClassDetails.cs" />
+    <Compile Include="FundClass\FundClassSwitcherHelper.cs" />
+    <Compile Include="FundClass\FundClassViewModel.cs" />
+    <Compile Include="SectorBreakdown\ISectorBreakdownManager.cs" />
+    <Compile Include="SectorBreakdown\ISectorBreakdown.cs" />
     <Compile Include="Models\AdditionalInfoAndChargesViewModel.cs" />
     <Compile Include="Literature\DocumentRepository.cs" />
     <Compile Include="Literature\DocumentSearchResult.cs" />
@@ -150,6 +163,9 @@
     <Compile Include="Repository\FundRepository.cs" />
     <Compile Include="Repository\FundSearchResultItem.cs" />
     <Compile Include="Repository\IFundRepository.cs" />
+    <Compile Include="SectorBreakdown\SectorBreakdownController.cs" />
+    <Compile Include="SectorBreakdown\SectorBreakdownManager.cs" />
+    <Compile Include="SectorBreakdown\SectorBreakdownViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Foundation\Analytics\website\LionTrust.Foundation.Analytics.csproj">

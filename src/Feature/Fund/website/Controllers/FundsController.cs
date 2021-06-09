@@ -1,37 +1,39 @@
 ﻿namespace LionTrust.Feature.Fund.Controllers
 {
+    using System.Linq;
     using System.Web.Mvc;
-    using Glass.Mapper.Sc;
     using Glass.Mapper.Sc.Web.Mvc;
+    using LionTrust.Feature.Fund.FundClass;
     using LionTrust.Feature.Fund.Models;
-    using LionTrust.Feature.Fund.Repository;
     using LionTrust.Foundation.Legacy.Models;
     using Sitecore.Mvc.Controllers;
 
     public class FundsController : SitecoreController
     {
         private readonly IMvcContext _context;
-        private readonly IFundRepository _fundRepository;
-        private readonly ISitecoreService _service;
+        private readonly IFundClassDetails _fundRepository;
 
-        public FundsController(IMvcContext context, IFundRepository fundRepository, ISitecoreService service)
+        public FundsController(IMvcContext context, IFundClassDetails fundRepository)
         {
             this._context = context;
             this._fundRepository = fundRepository;
-            this._service = service;
         }
 
         public ActionResult KeyInfoPrice()
         {
             var viewModel = new KeyInfoPriceViewModel();
             var data = _context.GetDataSourceItem<IKeyInfoPriceComponent>();
-            if (data != null && data.FundClass != null)
+            if (data != null && data.Fund != null)
             {
-                var fund = _fundRepository.GetFundByClass(data.FundClass, _service.Database.Name);
-                if (fund != null)
+                var citiCode = FundClassSwitcherHelper.GetCitiCode(HttpContext, data.Fund);
+                var fundClass = data.Fund.Classes.Where(c => c.CitiCode == citiCode).FirstOrDefault();
+                if (fundClass != null)
                 {
-                    viewModel.Fund = _service.GetItem<IFund>(new GetItemByIdOptions(fund.ItemId.Guid));
+                    viewModel.ClassData = _fundRepository.GetFundClassDetails(fundClass);
                 }
+
+                viewModel.Fund = data.Fund;
+                
             }
 
             viewModel.Component = data;
@@ -44,13 +46,9 @@
             var viewModel = new AdditionalInfoAndChargesViewModel();
             var data = _context.GetDataSourceItem<IAdditionalInfoAndChargesComponent>();
             viewModel.Component = data;
-            if (data != null && data.FundClass != null)
+            if (data != null && data.Fund != null)
             {
-                var fund = _fundRepository.GetFundByClass(data.FundClass, _service.Database.Name);
-                if (fund != null)
-                {
-                    viewModel.Fund = _service.GetItem<IFund>(new GetItemByIdOptions(fund.ItemId.Guid));
-                }
+                viewModel.Fund = data.Fund;
             }
 
             return View("~/Views/Fund/AdditionalInfoAndCharges.cshtml", viewModel);

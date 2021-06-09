@@ -16,6 +16,8 @@
     using LionTrust.Foundation.Search.Models.Response;
     using LionTrust.Foundation.Search.Services.Interfaces;
     using Sitecore.ContentSearch.Linq;
+    using Sitecore.Globalization;
+    using Sitecore.Resources.Media;
 
     public class ArticleSearchDataManager : IArticleSearchDataManager
     {
@@ -28,17 +30,38 @@
             _contentRepository = contentRepository;
         }
 
+        private string GetArticleDate(DateTime indexedDate)
+        {
+            var label = string.Empty;
+            if(indexedDate.Date == DateTime.Today)
+            {
+                label = Translate.Text("Today");
+            }
+            else if (DateTime.Today - indexedDate.Date == TimeSpan.FromDays(1))
+            {
+                label = Translate.Text("Yesterday");
+            }
+
+            if (string.IsNullOrEmpty(label))
+            {
+                label = indexedDate.ToString("D", Sitecore.Context.Culture);
+            }
+
+            return label;
+        }
+
         private IEnumerable<ITaxonomyContentResult> MapArticleResultHits(IEnumerable<SearchHit<ArticleSearchResultItem>> hits)
         {
             return hits.Select(x => new ArticleResult{
-                                                        Authors = x.Document.ArticleAuthors,
-                                                        Category = x.Document.ArticleCategory,
-                                                        Content = x.Document.ArticleContent,
-                                                        Date = x.Document.ArticleDate,
-                                                        Fund = x.Document.ArticleFund,
+                                                        Authors = x.Document.ArticleAuthorNames?.Split('|'),
+                                                        Category = x.Document.ArticleCategoryTagName,
+                                                        Date = this.GetArticleDate(x.Document.ArticleDate),
+                                                        Fund = x.Document.ArticleFundName,
+                                                        ImageUrl = x.Document.ArticleListingImage,
                                                         Subtitle = x.Document.ArticleSubtitle,
                                                         Team = x.Document.ArticleTeam,
-                                                        Title = x.Document.ArticleTitle
+                                                        Title = x.Document.ArticleTitle,
+                                                        Topics = x.Document.TopicNames?.Split('|')
                                                      });
         }
 
@@ -47,7 +70,8 @@
             var filterFacetConfigItem = _contentRepository.GetItem<IArticleListingFacetsConfig>(new GetItemByIdOptions(articleFilterFacetConfigId));
 
             var listingArticleFacetsResponse = new ArticleFacetsResponse();
-            if(filterFacetConfigItem == null || filterFacetConfigItem.FundsFolder == null
+            if(filterFacetConfigItem == null 
+                    || filterFacetConfigItem.FundsFolder == null
                     || filterFacetConfigItem.FundCategoriesFolder == null
                     || filterFacetConfigItem.FundManagersFolder == null
                     || filterFacetConfigItem.FundTeamsFolder == null)
@@ -55,11 +79,13 @@
                 return null;
             }
 
-            listingArticleFacetsResponse.FundFacets = filterFacetConfigItem.FundsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString(), Name = x.Name });
-            listingArticleFacetsResponse.FundCategoriesFacets = filterFacetConfigItem.FundCategoriesFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString(), Name = x.Name });
-            listingArticleFacetsResponse.FundManagersFacets = filterFacetConfigItem.FundManagersFolder?.Children?.Where(x => x.IsFundManager)?.Select(x => new FacetItem { Identifier = x.Id.ToString(), Name = x.Name });
-            listingArticleFacetsResponse.FundTeamsFacets = filterFacetConfigItem.FundTeamsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString(), Name = x.Name });
-            listingArticleFacetsResponse.FundTeamsFacets = filterFacetConfigItem.FundTeamsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString(), Name = x.Name });
+            listingArticleFacetsResponse.Facets = new ArticleFacets {
+                                                    Funds = filterFacetConfigItem.FundsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
+                                                    FundCategories = filterFacetConfigItem.FundCategoriesFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
+                                                    FundManagers = filterFacetConfigItem.FundManagersFolder?.Children?.Where(x => x.IsFundManager)?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
+                                                    FundTeams = filterFacetConfigItem.FundTeamsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name })
+                                                  };
+
             return listingArticleFacetsResponse;
         }
 

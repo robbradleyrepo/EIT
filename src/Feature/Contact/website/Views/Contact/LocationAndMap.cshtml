@@ -1,0 +1,110 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using System.Collections.Specialized
+@using LionTrust.Foundation.ORM.Extensions
+@model LionTrust.Feature.Contact.Models.ILocationAndMap
+@if (Model != null)
+{
+    var first = true;
+    var activeCssClass = "active";
+    <section class="container location-and-map-section">
+        <h2 id="ourlocation" class="h2 contact-section__title">@Html.Glass().Editable(Model, m => m.Heading)</h2>
+        <div class="row">
+            <div class="col-12">
+                <div class="select-office">
+                    <div class="select-office__title">@Html.Glass().Editable(Model, m => m.SelectLabel)</div>
+                    @if (Model.MapLinks != null && Model.MapLinks.Any())
+                    {
+                        foreach (var mapLink in Model.MapLinks)
+                        {                            
+                            <button class="select-office__tab @activeCssClass" data-tab="@mapLink.Name">@Html.Glass().Editable(mapLink, m => m.MapLinkName)</button>
+                            if (first)
+                            {
+                                first = false;
+                                activeCssClass = string.Empty;
+                            }
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+    if (Model.MapLinks != null && Model.MapLinks.Any())
+    {
+        first = true;
+        activeCssClass = "active";
+
+        <section>
+            @foreach (var mapLink in Model.MapLinks)
+            {                
+                using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Contact/MapLink", mapLink.Id.ToString(), "Edit Map Link"))
+                {
+                    if (Sitecore.Context.PageMode.IsExperienceEditor)
+                    {
+                        @:Edit Map Link
+                    }
+                    <div class="location-item @activeCssClass" id="@mapLink.Name">
+                        <div class="d-lg-none">
+                            <div class="container">
+                                <div class="our-location">
+                                    <div class="our-location__address">
+                                        <span> @Html.Glass().Editable(mapLink, m => m.OfficeAddress) </span>
+                                        <span> @Html.Glass().Editable(mapLink, m => m.OfficeCity) </span>
+                                        <span> @Html.Glass().Editable(mapLink, m => m.OfficePostalCode) </span>
+                                    </div>
+                                    @using (Html.Glass().BeginRenderLink(mapLink, m => m.MapLink, new NameValueCollection { { "class", "link-styles" }, { "target", "_blank" } }, isEditable: true))
+                                    {
+                                        @mapLink.MapLink.LinkText("Open in Google Maps")
+                                        <i class="icon-tab"></i>
+                                    }
+                                </div>
+                            </div>
+                            <picture>
+                                <source media="(max-width: 425px)"
+                                        srcset="@mapLink.MobileBackgroundImage.GetSafeSitecoreImageUrl()" />
+                                <source media="(min-width: 600px)"
+                                        srcset="@mapLink.TabletBackgroundImage.GetSafeSitecoreImageUrl()" />
+                                <img class="location-image__img"
+                                     src="@mapLink.DesktopBackgroundImage.GetSafeSitecoreImageUrl()"
+                                     alt="location-map" />
+                            </picture>
+
+                        </div>
+                        <div class="location-image @activeCssClass d-none d-lg-block"
+                             style="background-image: url('@mapLink.DesktopBackgroundImage.GetSafeSitecoreImageUrl()');">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xl-5 col-lg-7">
+                                        <div class="card">
+                                            <div class="card__title">@Html.Glass().Editable(mapLink, m => m.MapLinkName)</div>
+                                            <div class="our-location">
+                                                <div class="our-location__address">
+                                                    <span> @Html.Glass().Editable(mapLink, m => m.OfficeAddress) </span>
+                                                    <span> @Html.Glass().Editable(mapLink, m => m.OfficeCity) </span>
+                                                    <span> @Html.Glass().Editable(mapLink, m => m.OfficePostalCode) </span>
+                                                </div>
+                                                @using (Html.Glass().BeginRenderLink(mapLink, m => m.MapLink, new NameValueCollection { { "class", "link-styles" }, { "target", "_blank" } }, isEditable: true))
+                                                {
+                                                    @mapLink.MapLink.LinkText("Open in Google Maps")
+                                                    <i class="icon-tab"></i>
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    if (first)
+                    {
+                        first = false;
+                        activeCssClass = string.Empty;
+                    }
+                }
+            }
+        </section>
+    }
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @: Assign datasource for Location and Map component
+}

@@ -29,7 +29,10 @@ namespace LionTrust.Foundation.Search.ComputedFields
 
         private void GetAllTemplates(TemplateItem baseTemplate, IList<string> templates)
         {
-            if (baseTemplate.ID == Sitecore.TemplateIDs.StandardTemplate) return;
+            if (baseTemplate == null || baseTemplate.ID == Sitecore.TemplateIDs.StandardTemplate)
+            {
+                return;
+            }
 
             var id = IdHelper.NormalizeGuid(baseTemplate.ID);
             templates.Add(id);

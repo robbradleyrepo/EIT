@@ -13,9 +13,11 @@
 
         public string Content { get; set; }
 
-        public DateTime Date { get; set; }
+        public string Date { get; set; }
 
         public string Fund { get; set; }
+
+        public string ImageUrl { get; set; }
 
         public IEnumerable<string> Team { get; set; }
 

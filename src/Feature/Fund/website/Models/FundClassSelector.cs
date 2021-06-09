@@ -8,9 +8,6 @@
         [SitecoreField(Constants.FundClassSelector.FundFieldId)]
         IFund Fund { get; set; }
 
-        [SitecoreField(Constants.FundClassSelector.DefaultClassFieldId)]
-        IFundClass DefaultClass { get; set; }
-
         [SitecoreField(Constants.FundClassSelector.DropDownLabelFieldId)]
         string DropDownLabel { get; set; }
     }

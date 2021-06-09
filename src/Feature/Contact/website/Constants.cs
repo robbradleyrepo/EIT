@@ -35,5 +35,23 @@
             public const string ThirdSocialLink_FieldId = "{AE572236-19E2-44F7-B901-FA722C06D4EF}";
             public const string ThirdTwitterTags_FieldId = "{48F948EB-7A98-402A-8134-011FA1DF01E5}";
         }
+
+        public static class LocationAndMap
+        {
+            public const string Heading_FieldId = "{614D1A75-754A-4DF3-9CFA-A9902B7C4CAE}";
+            public const string SelectLabel_FieldId = "{66985F2D-D4D8-48CF-B86C-9A9CA3FA197B}";                     
+        }
+
+        public static class MapLink
+        {
+            public const string MaplinkName_FieldId = "{9B9540BE-F46C-4D1C-B5FB-2190A8DAC5F8}";
+            public const string OfficeAddress_FieldId = "{206A4FA5-9A9A-4E7A-8318-C41E60167C93}";
+            public const string OfficeCity_FieldId = "{442FF2DD-9B97-4BB5-B722-72A4CC922A7E}";
+            public const string OfficePostalCode_FieldId = "{FA9A1B5D-E506-4B6B-BCB2-672DDA2FB13F}";
+            public const string MapLink_FieldId = "{0258A156-86E5-48D0-B9A5-6FC8EC5E22ED}";
+            public const string DesktopBackgroundImage_FieldId = "{4BD2348B-4C93-49C3-A3B6-8F9165A75D54}";
+            public const string TabletBackgroundImage_FieldId = "{D96C59C0-BAD5-4C2A-8D3C-775CEB68899E}";
+            public const string MobileBackgroundImage_FieldId = "{466570C2-23F3-4660-9A13-DE2176EC2BBA}";
+        }
     }
 }

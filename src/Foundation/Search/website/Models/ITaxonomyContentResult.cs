@@ -13,7 +13,7 @@
         string Content { get; set; }
 
         //Fund Team
-        DateTime Date { get; set; }
+        string Date { get; set; }
 
         string Fund { get; set; }
 

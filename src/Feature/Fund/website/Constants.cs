@@ -59,8 +59,6 @@
 
         public static class FundClassSelector
         {
-            public const string DefaultClassFieldId = "{41D6C33F-71CD-4183-B2B6-F6EDE935BE4D}";
-
             public const string DropDownLabelFieldId = "{306EAF63-2D34-4733-872C-2E086009E717}";
             public const string FundFieldId = "{D765263B-CE31-4E99-8AB3-E1D4594A9D01}";
         }
@@ -121,9 +119,13 @@
             public const string IncludedOFC_FieldId = "{C3006883-37FD-4736-8A68-977E5608AB1A}";
         }
 
+        public static class SectorBreakdown
+        {
+            public const string HeadingFieldId = "{FE72E4F7-8806-4907-B17F-AA124431957F}";
+        }
+
         public static class AdditionalInfoAndChargesComponent
         {
-            public const string FundClassFieldId = "{5B130B36-26D8-4FB8-AD0E-4AEAD8B6064F}";
             public const string AdditionalInfoLabel_FieldId = "{CE9B820F-2C4E-458D-9A8C-C9C070389669}";
             public const string MinInitialLabel_FieldId = "{B790F7BC-1FA0-4B65-B59F-535DC77D9A86}";
             public const string MinAdditionalLabel_FieldId = "{23206349-163D-422B-8C88-4F3DF0E71B86}";
@@ -140,7 +142,6 @@
 
         public static class KeyInfoPriceComponent
         {
-            public const string FundClassFieldId = "{4D46FA28-CE89-47C2-BD1A-2E187AA6B600}";
             public const string KeyInformationLabel_FieldId = "{D1C8B6ED-F85E-4645-82EE-B239CFE6E9AA}";
             public const string ClassLaunchDateLabel_FieldId = "{FF6466A5-B6D9-499C-A338-42DB7AA720CF}";
             public const string ComparatorLabel_FieldId = "{B27C9CC5-F16C-4A75-852D-3A9B6FDBE497}";

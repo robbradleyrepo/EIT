@@ -5,6 +5,9 @@
 
     public interface IFundClass: ILegacyGlassBase
     {
+        [SitecoreField(Constants.FundClass.CitiCodeFieldId)]
+        string CitiCode { get; set; }
+
         [SitecoreField(Constants.FundClass.ClassNameFieldId)]
         string ClassName { get; set; }
 

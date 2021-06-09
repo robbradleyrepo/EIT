@@ -1,5 +1,5 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
-@model LionTrust.Feature.Fund.Models.IFundClassSelector
+@model LionTrust.Feature.Fund.FundClass.FundClassViewModel
 @if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
 {
     return;
@@ -9,21 +9,21 @@
         <div class="col-lg-4 offset-lg-8">
             <div class="class-dropdown">
                 <div class="class-dropdown__title">
-                    @Html.Glass().Editable(m => m.DropDownLabel)
+                    @Html.Glass().Editable(m => m.FundSelector.DropDownLabel)
                 </div>
                 <div class="class-dropdown__select">
                     <select name="classes" id="classes" class="fund-chart-dropdown">
-                        @if (Model.Fund != null)
+                        @if (Model.FundSelector.Fund != null)
                         {
-                            foreach (var item in Model.Fund.Classes)
+                            foreach (var item in Model.FundSelector.Fund.Classes)
                             {
-                                if (Model.DefaultClass != null && Model.DefaultClass.Id == item.Id)
+                                if (Model.DefaultCitiCode == item.CitiCode)
                                 {
-                                    <option value="@item.Value" selected>@item.ClassName</option>
+                                    <option value="@item.CitiCode" selected>@item.ClassName</option>
                                 }
                                 else
                                 {
-                                    <option value="@item.Value">@item.ClassName</option>
+                                    <option value="@item.CitiCode">@item.ClassName</option>
                                 }
 
                             }

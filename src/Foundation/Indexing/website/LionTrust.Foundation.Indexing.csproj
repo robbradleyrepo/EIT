@@ -73,6 +73,12 @@
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComputedFields\Article\ArticleListingImageProtected.cs" />
+    <Compile Include="ComputedFields\Article\ArticleAuthorNames.cs" />
+    <Compile Include="ComputedFields\Article\ArticleFundName.cs" />
+    <Compile Include="ComputedFields\Article\ArticleCategoryTagName.cs" />
+    <Compile Include="ComputedFields\Article\ArticleTopicNames.cs" />
+    <Compile Include="ComputedFields\SharedLogic\ComputedValueHelper.cs" />
     <Compile Include="Models\IQuery.cs" />
     <Compile Include="Models\IQueryPredicateProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,6 +93,10 @@
     <Folder Include="Infrastructure\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Legacy\website\LionTrust.Foundation.Legacy.csproj">
+      <Project>{43ee972b-2002-4719-a878-a66a99c42c40}</Project>
+      <Name>LionTrust.Foundation.Legacy</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\ORM\website\LionTrust.Foundation.ORM.csproj">
       <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>
       <Name>LionTrust.Foundation.ORM</Name>
