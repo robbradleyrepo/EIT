@@ -1,0 +1,35 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Fund.SectorBreakdown.SectorBreakdownViewModel
+<div class="col-lg-6">
+    <div class="table-section">
+        <h3 class="table-section__title">@Html.Glass().Editable(Model.Component, t => t.Heading)</h3>
+        @if (Model.Breakdown != null)
+        {
+            <div class="table-responsive">
+                <table class="table table-full-border table-horizontal-chart">
+                    <tbody>
+                        @foreach (var item in Model.Breakdown)
+                        {
+                            <tr>
+                                <th scope="row">@item.Name</th>
+                                <td>@item.WeightWithoutPercentage</td>
+                                <td>
+                                    <span class="percents" style="width: @item.Weight;"></span>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+        else if (Sitecore.Context.PageMode.IsExperienceEditor)
+        {
+            <div style="background-color:white">
+                <span style="color:black">
+                    Please select a fund
+                </span>
+            </div>
+        }
+    </div>
+</div>
+

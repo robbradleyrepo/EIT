@@ -1,6 +1,6 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @model LionTrust.Feature.Fund.Models.KeyInfoPriceViewModel
-@if (Model != null && Model.Component != null && Model.Component.FundClass != null)
+@if (Model != null && Model.Component != null && Model.ClassData != null)
 {
     <div class="card">
         <div class="card__content">
@@ -10,29 +10,12 @@
             <div class="card__row">
                 <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.ClassLaunchDateLabel)</div>
                 <div class="card__item-right">
-                    @if (Sitecore.Context.PageMode.IsExperienceEditor)
-                    {
-                        using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Fund/KeyInfoPrice", Model.Component.FundClass.Id.ToString(), "Edit Key Info Price dates"))
-                        {
-                            if (Model.Component.FundClass.ClassLaunchDate != null)
-                            {
-                                @Model.Component.FundClass.ClassLaunchDate.ToString("dd.MM.y")
-                            }
-                            else
-                            {
-                                @:Edit Key Info Price Dates
-                            }
-                        }
-                    }
-                    else
-                    {
-                        @Model.Component.FundClass.ClassLaunchDate.ToString("dd.MM.y")
-                    }
+                    @Model.ClassData.ClassLaunchDate.ToString("dd.MM.y")
                 </div>
             </div>
             <div class="card__row">
                 <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.ComparatorLabel)</div>
-                <div class="card__item-right">@Html.Glass().Editable(Model.Component.FundClass, m => m.Comparator)</div>
+                <div class="card__item-right">@Model.ClassData.Comparator</div>
             </div>
             <div class="card__row">
                 <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.Benchmark1Label)</div>
@@ -52,7 +35,7 @@
             </div>
             <div class="card__row">
                 <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.DurationLabel)</div>
-                <div class="card__item-right">@Html.Glass().Editable(Model.Component.FundClass, m => m.Duration)</div>
+                <div class="card__item-right">@Model.ClassData.Duration</div>
             </div>
         </div>
         <div class="card__content">
@@ -61,11 +44,11 @@
             </span>
             <div class="card__row">
                 <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.SinglePriceLabel)</div>
-                <div class="card__item-right">@Html.Glass().Editable(Model.Component.FundClass, m => m.SinglePrice)</div>
+                <div class="card__item-right">@Model.ClassData.SinglePrice</div>
             </div>
             <div class="card__row">
                 <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.OfferPriceLabel)</div>
-                <div class="card__item-right">@Html.Glass().Editable(Model.Component.FundClass, m => m.OfferPrice)</div>
+                <div class="card__item-right">@Model.ClassData.OfferPrice)</div>
             </div>
             <div class="card__row">
                 <div class="card__item-left">
@@ -85,21 +68,18 @@
                 <div class="card__item-right">
                     @if (Sitecore.Context.PageMode.IsExperienceEditor)
                     {
-                        using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Fund/KeyInfoPrice", Model.Component.FundClass.Id.ToString(), "Edit Key Info Price dates"))
+                        if (Model.ClassData.PriceDate != null)
                         {
-                            if (Model.Component.FundClass.PriceDate != null)
-                            {
-                                @Model.Component.FundClass.PriceDate.ToString("dd.MM.yyyy")
-                            }
-                            else
-                            {
-                                @:Edit Key Info Price Dates
-                            }
+                            @Model.ClassData.PriceDate.ToString("dd.MM.yyyy")
+                        }
+                        else
+                        {
+                            @:Edit Key Info Price Dates
                         }
                     }
                     else
                     {
-                        @Model.Component.FundClass.PriceDate.ToString("dd.MM.yyyy")
+                        @Model.ClassData.PriceDate.ToString("dd.MM.yyyy")
                     }
                 </div>
 

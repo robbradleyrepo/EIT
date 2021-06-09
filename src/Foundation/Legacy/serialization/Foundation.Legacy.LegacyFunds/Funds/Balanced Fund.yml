@@ -17,6 +17,17 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "036aeb89-b0bd-42c2-b763-a56cdbe32cdc"
+      Hint: Fund_Classes
+      Type: Multilist
+      Value: |
+        {4BCC9BF5-CB44-4FA6-BF54-037240D57ABD}
+        {A239A5F4-A628-439A-831A-DEBE6C1FB32B}
+        {EA676D57-7EE6-4AEE-9C3E-FA72FB028D18}
+        {AD0929D0-42A3-4646-8972-9D3FA3C43629}
+        {78CE7013-21F7-4D07-A757-44116255420F}
+        {A229AC95-436A-43A6-AE14-2AFAA57D3C1D}
+        {A40D115E-4CAB-42ED-B0E4-EBF63545BCB0}
     - ID: "13671185-84c9-49e4-8799-6135f386f3e5"
       Hint: FiveYears
       Value: 67.205%
@@ -87,8 +98,8 @@ Languages:
       Hint: FundName
       Value: Balanced Fund
     - ID: "6cbf0ed2-94b3-4f2a-a84d-a36501e38105"
-      Hint: LaunchDate
-      Value: 20121003T000000
+      Hint: LegacyFund_LaunchDate
+      Value: 20121002T230000Z
     - ID: "6d258747-e783-4579-9c3c-f8f23d03ccf6"
       Hint: LegacySectorFundData_SectorOneYear
       Value: 4.341%

@@ -67,6 +67,7 @@
 
         public static class FundClass
         {
+            public const string CitiCodeFieldId = "{9711831E-CA02-40DA-99C4-960DF5305611}";
             public const string ValueFieldId = "{D2F09153-C85F-48EC-9C15-52C9ECBDEEFB}";
             public const string ClassNameFieldId = "{0CE0E3BF-4431-4071-A2EA-A3B79D3F0093}";
             public const string ClassLaunchDate_FieldId = "{D45FD542-D058-4753-A7FD-EAD65FD132D6}";

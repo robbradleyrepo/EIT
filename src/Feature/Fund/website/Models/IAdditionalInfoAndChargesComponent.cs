@@ -3,11 +3,8 @@
     using Glass.Mapper.Sc.Configuration.Attributes;
     using LionTrust.Foundation.Legacy.Models;
 
-    public interface IAdditionalInfoAndChargesComponent : IFundGlassBase
+    public interface IAdditionalInfoAndChargesComponent : IFundSelector
     {
-        [SitecoreField(Constants.AdditionalInfoAndChargesComponent.FundClassFieldId)]
-        IFundClass FundClass { get; set; }
-
         [SitecoreField(Constants.AdditionalInfoAndChargesComponent.AdditionalInfoLabel_FieldId)]
         string AdditionalInfoLabel { get; set; }
 
