@@ -17,7 +17,7 @@
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
-	  <MvcBuildViews>true</MvcBuildViews>
+    <MvcBuildViews>true</MvcBuildViews>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -91,18 +91,21 @@
     <Content Include="Views\Article\Image.cshtml" />
     <Content Include="Views\Article\GoldQuote.cshtml" />
     <Content Include="Views\Article\FundManagerInsights.cshtml" />
+    <Content Include="Views\Article\FeaturedArticleHero.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\ArticleController.cs" />
     <Compile Include="Controllers\ArticleHeaderController.cs" />
+    <Compile Include="Controllers\FeaturedArticleHeroController.cs" />
     <Compile Include="Controllers\FundManagerInsightsController.cs" />
     <Compile Include="Controllers\RelatedArticlesController.cs" />
     <Compile Include="Controllers\FeaturedArticlesController.cs" />
     <Compile Include="Models\ArticleLinksViewModel.cs" />
     <Compile Include="Models\ArticleScrollerViewModel.cs" />
     <Compile Include="Models\ArticleViewModel.cs" />
+    <Compile Include="Models\IFeaturedArticleHero.cs" />
     <Compile Include="Models\FundManagerInsightsViewModel.cs" />
     <Compile Include="Models\IArticle.cs" />
     <Compile Include="Models\IArticleFilter.cs" />
@@ -128,6 +131,7 @@
     <Compile Include="FeaturedArticleMappers\SearchedFeaturedArticles.cs" />
     <Compile Include="FeaturedArticleMappers\UrlLink.cs" />
     <Compile Include="Repositories\ArticleRepository.cs" />
+    <Compile Include="Validation\LimitItemsValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Foundation\Analytics\website\LionTrust.Foundation.Analytics.csproj">
@@ -151,6 +155,7 @@
       <Name>LionTrust.Foundation.Search</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -104,5 +104,12 @@
             public const string CTA_FieldId = "{6E1628B0-EBD1-45C5-AD2F-3E0AA6FC19A4}";
             public const string Heading_FieldId = "{1492465C-0E3C-4FDB-97B8-0FC76924E400}";
         }
+
+        public static class FeaturedArticleHero
+        {
+            public const string Article_FieldId = "{AACB640C-6457-4A38-81E2-7AE97DB0DB3A}";
+            public const string BackgroundImage_FieldId = "{74A7E935-2A62-4192-B046-958C1ADDB98B}";
+            public const string ArticleLinkText_FieldId = "{447AB9EA-F782-41A7-8269-E2AA6EF9862B}";
+        }
     }
 }
