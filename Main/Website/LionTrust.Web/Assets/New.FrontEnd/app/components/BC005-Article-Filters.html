@@ -23,151 +23,34 @@
         <div class="article-filters__body">
             <div class="container">
                 <div class="row">
-                    <div v-for="(facet, i) in getFacets" :key="i" class="col-lg-2 relative">
-                        <div class="article-filters__select" @click="facet.open = !facet.open; console.log(facet)" :class="facet.open ? 'active' : ''">
-                            <span class="article-filters__item-title">
-                                {{facet.name}}
-                            </span>
-                            <i class="article-filters__icon-arrow"></i>
-                        </div>
-                        <div class="article-filters__options">
-                            <div class="article-filters__title">
-                                <i class="icon-chevron-left"></i>
-                                Fund
+                    <select-field inline-template  v-for="(facet, i) in getFacets" :key="i">
+                        <div class="col-lg-2 relative" @click.stop>
+                            <div class="article-filters__select" @click="toggleOption" :class="open ? 'active' : ''">
+                                <span class="article-filters__item-title">
+                                    {{facet.name}}
+                                </span>
+                                <i class="article-filters__icon-arrow"></i>
                             </div>
-                            <label v-for="(item, i) in facet.data" :for="item.Name" class="option-checkbox">
-                                <input :id="item.Name" class="option-checkbox__input" type="checkbox" :checked="item.checked" @change="toggleSelect(item, facet)">
-                                <span class="option-checkbox__text">{{item.Name}}</span>
-                                <span class="option-checkbox__icon"></span>
-                            </label>                            
-                        </div>
-                    </div>
-                    <!-- <div class="col-lg-2 relative">
-                        <div class="article-filters__select">
-                            <span class="article-filters__item-title">
-                                Fund Team
-                            </span>
-                            <i class="article-filters__icon-arrow"></i>
-                        </div>
-                        <div class="article-filters__options">
-                            <div class="article-filters__title">
-                                <i class="icon-chevron-left"></i>
-                                Category 123
+                            <div class="article-filters__options">
+                                <div class="article-filters__title">
+                                    <i class="icon-chevron-left"></i>
+                                    Fund
+                                </div>
+                                <option-field inline-template v-for="(item, i) in facet.data" :for="item.Name">
+                                    <label class="option-checkbox">
+                                        <input :id="item.Name" class="option-checkbox__input" type="checkbox" v-model="checked"  @change="toggleSelect(item, facet)">
+                                        <span class="option-checkbox__text">{{item.Name}}</span>
+                                        <span class="option-checkbox__icon"></span>
+                                    </label>
+                                </option-field>
                             </div>
-                            <label for="james12" class="option-checkbox">
-                                <input id="james12" class="option-checkbox__input" type="checkbox">
-                                <span class="option-checkbox__text">James Inglis-Jones</span>
-                                <span class="option-checkbox__icon"></span>
-                            </label>
-                            <label for="Samantha12" class="option-checkbox">
-                                <input id="Samantha12" class="option-checkbox__input" type="checkbox">
-                                <span class="option-checkbox__text"> Samantha Gleave</span>
-                                <span class="option-checkbox__icon"></span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 relative">
-                        <div class="article-filters__select">
-                            <span class="article-filters__item-title">
-                                Fund Manager
-                            </span>
-                            <i class="article-filters__icon-arrow"></i>
-                        </div>
-                        <div class="article-filters__options">
-                            <div class="article-filters__title">
-                                <i class="icon-chevron-left"></i>
-                                Fund Manager
-                            </div>
-                            <label for="james1" class="option-checkbox">
-                                <input id="james1" class="option-checkbox__input" type="checkbox">
-                                <span class="option-checkbox__text">James Inglis-Jones</span>
-                                <span class="option-checkbox__icon"></span>
-                            </label>
-                            <label for="Samantha1" class="option-checkbox">
-                                <input id="Samantha1" class="option-checkbox__input" type="checkbox">
-                                <span class="option-checkbox__text"> Samantha Gleave</span>
-                                <span class="option-checkbox__icon"></span>
-                            </label>
-                            <label for="Test12" class="option-checkbox">
-                                <input id="Test12" class="option-checkbox__input" type="checkbox">
-                                <span class="option-checkbox__text"> Test1</span>
-                                <span class="option-checkbox__icon"></span>
-                            </label>
-                            <label for="Test22" class="option-checkbox">
-                                <input id="Test22" class="option-checkbox__input" type="checkbox">
-                                <span class="option-checkbox__text"> Test2</span>
-                                <span class="option-checkbox__icon"></span>
-                            </label>
-                            <label for="Test32" class="option-checkbox">
-                                <input id="Test32" class="option-checkbox__input" type="checkbox">
-                                <span class="option-checkbox__text"> Test3</span>
-                                <span class="option-checkbox__icon"></span>
-                            </label>
-                            <label for="Test42" class="option-checkbox">
-                                <input id="Test42" class="option-checkbox__input" type="checkbox">
-                                <span class="option-checkbox__text"> Test4</span>
-                                <span class="option-checkbox__icon"></span>
-                            </label>
-                            <label for="Test52" class="option-checkbox">
-                                <input id="Test52" class="option-checkbox__input" type="checkbox">
-                                <span class="option-checkbox__text"> Test5</span>
-                                <span class="option-checkbox__icon"></span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 relative">
-                        <div class="article-filters__select">Category
-                            <i class="article-filters__icon-arrow"></i>
-                        </div>
-                        <div class="article-filters__options">
-                            <div class="article-filters__title">
-                                <i class="icon-chevron-left"></i>
-                                Fund Manager
-                            </div>
-                            <label for="james3" class="option-checkbox">
-                                <input id="james3" class="option-checkbox__input" type="checkbox">
-                                <span class="option-checkbox__text">James Inglis-Jones</span>
-                                <span class="option-checkbox__icon"></span>
-                            </label>
-                            <label for="Samantha3" class="option-checkbox">
-                                <input id="Samantha3" class="option-checkbox__input" type="checkbox">
-                                <span class="option-checkbox__text"> Samantha Gleave</span>
-                                <span class="option-checkbox__icon"></span>
-                            </label>
-                            <label for="Test431" class="option-checkbox">
-                                <input id="Test431" class="option-checkbox__input" type="checkbox">
-                                <span class="option-checkbox__text"> Test1</span>
-                                <span class="option-checkbox__icon"></span>
-                            </label>
-                            <label for="Test41" class="option-checkbox">
-                                <input id="Test41" class="option-checkbox__input" type="checkbox">
-                                <span class="option-checkbox__text"> Test2</span>
-                                <span class="option-checkbox__icon"></span>
-                            </label>
-                            <label for="Test321" class="option-checkbox">
-                                <input id="Test321" class="option-checkbox__input" type="checkbox">
-                                <span class="option-checkbox__text"> Test3</span>
-                                <span class="option-checkbox__icon"></span>
-                            </label>
-                            <label for="Test422" class="option-checkbox">
-                                <input id="Test422" class="option-checkbox__input" type="checkbox">
-                                <span class="option-checkbox__text"> Test4</span>
-                                <span class="option-checkbox__icon"></span>
-                            </label>
-                            <label for="Test525" class="option-checkbox">
-                                <input id="Test525" class="option-checkbox__input" type="checkbox">
-                                <span class="option-checkbox__text"> Test5</span>
-                                <span class="option-checkbox__icon"></span>
-                            </label>
-                        </div>
-                    </div> -->
+                        </div>   
+                    </select-field>                 
                     <div class="col-lg-1 relative">
-                        <!-- <div class="article-filters__select">Month
-                            <i class="article-filters__icon-arrow"></i>      
-                                         
-                        </div> -->
-                        <select class="article-filters__select-custom">
+                        <button-counter></button-counter>
+                        <select class="article-filters__select-custom" @change="setMonth($event)">
                             <option value="0" disabled selected>Month</option>
+                            <option value="0">All</option>
                             <option value="1">January</option>
                             <option value="2">February</option>
                             <option value="3">March</option>
@@ -184,8 +67,9 @@
                         <i class="article-filters__icon-arrow article-filters__icon-arrow_select"></i>
                     </div>
                     <div class="col-lg-1 relative">
-                        <select class="article-filters__select-custom">
+                        <select class="article-filters__select-custom" @change="setYear()">
                             <option value="0" disabled selected>Year</option>
+                            <option value="0">All</option>
                             <option value="1">2018</option>
                             <option value="2">2019</option>
                             <option value="3">2020</option>
@@ -198,7 +82,7 @@
                             <button class="btn article-filters__btn article-filters__btn_apply" @click="applyFilters">
                                 Apply filters
                             </button>
-                            <button class="clear-filter btn article-filters__btn article-filters__btn_clear">
+                            <button class="clear-filter btn article-filters__btn article-filters__btn_clear" @click="clearFilters">
                                 Clear all
                             </button>
                         </div>

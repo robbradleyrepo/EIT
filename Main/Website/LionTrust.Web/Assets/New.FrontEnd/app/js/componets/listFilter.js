@@ -211,19 +211,17 @@ export default () => {
     methods: {
       // adding selected values to query params
       toggleSelect(item, facet) {
-        // const test = this.queryValues.params[facet.name]
+
         if(!this.params[facet.name])
         this.params[facet.name] = [];
         const existElem = this.params[facet.name].findIndex((el) => {
           return  el === item.Identifier
-        }) 
+        })
 
-        console.log('existElem',existElem);
         if(existElem !== - 1)
-          this.params[facet.name].splice(existElem, 1)
+          this.params[facet.name].splice(existElem, 1);
         else        
           this.params[facet.name].push(item.Identifier);
-        console.log('this.params',this);        
        },
        getQuerySring() {
         let str = '';
@@ -235,33 +233,78 @@ export default () => {
         console.log('str', str);
         return str
       },
+      pushStateLink() {
+        window.history.pushState(
+          { page: "article-lister" },
+          "search",
+          `${window.location.href.split("?")[0]}?${this.getQuerySring()}`
+        );
+      },      
        applyFilters() {
-          
-          window.history.pushState(
-            { page: "search-page" },
-            "search",
-            `${window.location.href.split("?")[0]}?${this.getQuerySring()}`
-          );
+          this.pushStateLink();          
        },
        clearFilters() {
-         this.queryValues
+         this.params = {};
+         this.page = 1;
+         this.open = false
+         this.$emit('clearOption')
+         this.pushStateLink();
+       },
+       setMonth(e) {
+         this.params.month = e.target.value
+         console.log('this.params',this.params);
+       },
+       setYear(e) {
+        this.params.year = e.target.value
        }
     },
-    // watch: {
-    //   facets: {
-    //     handler: (newVal, oldVal) => {
-    //       console.log('newVal, oldVal',newVal, oldVal);
-    //     },
-    //     deep: true
-    //   }
-    // },
     mounted() {
-      // const req = $.ajax(
-      //   "https://cm-liontrust-it.sagittarius.agency/ArticleSearchApi/Facets"
-      // );
-      // console.log("req", req);
       this.facets = facets
-      console.log('this.facets',this.facets);
-    },
+    }
   });
 };
+
+Vue.component('select-field', {
+  data: function () {
+    return {
+      open: false
+    }
+  },
+  methods: {
+    toggleOption() {
+      this.open = !this.open
+    },
+    clearOption() {
+      console.log('toggleOption');
+      this.$emit('clearOptionField');
+    }
+  },
+  mounted() {
+    document.querySelector("body").addEventListener("click", () => {
+          this.open = false
+    });
+  },
+  created() {
+    console.log('this.$parent',this.$parent);
+    this.$parent.$on('clearOption', this.clearOption);
+  }
+
+})
+
+Vue.component('option-field', {
+  data: function () {
+    return {
+      checked: false
+    } 
+  },
+  methods: {
+    clearChecked() {
+      console.log('clearChecked run');
+      this.checked = false
+    }
+  },
+  created: function() {
+    console.log('this.$parent',this.$parent);
+    this.$parent.$on('clearOptionField', this.clearChecked);
+  }
+})
