@@ -35,5 +35,11 @@
             public const string ThirdSocialLink_FieldId = "{AE572236-19E2-44F7-B901-FA722C06D4EF}";
             public const string ThirdTwitterTags_FieldId = "{48F948EB-7A98-402A-8134-011FA1DF01E5}";
         }
+
+        public static class ContactUsForm
+        {
+            public const string Heading_FieldId = "{20EEA52D-E2F5-4044-BA05-2E4F9E01F28C}";
+            public const string Description_FieldId = "{9C6F549A-4035-4989-BECF-73A7ADE8F016}";
+        }
     }
 }
