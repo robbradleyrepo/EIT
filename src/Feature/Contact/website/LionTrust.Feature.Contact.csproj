@@ -75,6 +75,7 @@
     <Content Include="App_Config\Include\Feature\Feature.Contact.Serialization.config" />
     <Content Include="Views\Contact\FollowUsSocials.cshtml" />
     <Content Include="Views\Contact\_FollowUsSocialIcon.cshtml" />
+    <Content Include="Views\Contact\ContactUsForm.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -82,6 +83,7 @@
     <Compile Include="Models\FollowUsSocialIcon.cs" />
     <Compile Include="Models\IContactGlassBase.cs" />
     <Compile Include="Models\IContactUsCard.cs" />
+    <Compile Include="Models\IContactUsForm.cs" />
     <Compile Include="Models\IFollowUsSocials.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
