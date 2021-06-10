@@ -57,7 +57,7 @@
                 var fromEmailAddress = ReplaceKeywords(emailTemplateForSendEmailSaveAction.From, formSubmitContext);
 
                 //Replace keywords in 'FromDisplayName' from form fields
-                var fromDisplayName = ReplaceKeywords(emailTemplateForSendEmailSaveAction.FromDisplyName, formSubmitContext);
+                var fromDisplayName = ReplaceKeywords(emailTemplateForSendEmailSaveAction.FromDisplayName, formSubmitContext);
 
                 //Replace 'TO' email addresses from form fields                
                 var toEmailAddresses = ReplaceKeywords(emailTemplateForSendEmailSaveAction.To, formSubmitContext);

@@ -11,8 +11,8 @@
         public void Configure(IServiceCollection serviceCollection)
         {
             serviceCollection.AddTransient<IMailManager, MailManager>();
+            serviceCollection.AddTransient<ISitecoreFormsCustomSaveActionRepository, SitecoreFormsCustomSaveActionRepository>();
             serviceCollection.AddTransient<ISitecoreFormsCustomSaveActionsService, SitecoreFormsCustomSaveActionsService>();
-            serviceCollection.AddTransient<IViewModelFactory, ViewModelFactory>();
         }
     }
 }

@@ -68,35 +68,19 @@
   <ItemGroup>
     <Content Include="App_Config\Include\Foundation\Foundation.SitecoreForms.Email.config" />
     <Content Include="App_Config\Include\Foundation\Foundation.SitecoreForms.RegisterContainer.config" />
+    <Content Include="App_Config\Include\Foundation\Foundation.SitecoreForms.Serialization.config" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants.cs" />
     <Compile Include="CustomSaveActions\SendEmail.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
-    <Compile Include="Factories\BaseRepository.cs" />
-    <Compile Include="Factories\EntityFactory.cs" />
-    <Compile Include="Factories\IBaseRepository.cs" />
-    <Compile Include="Factories\IEntityFramework.cs" />
-    <Compile Include="Factories\IViewModelFactory.cs" />
-    <Compile Include="Factories\ISitecoreFormsCustomSaveActtionRepository.cs" />
-    <Compile Include="Factories\SitecoreFormsCustomSaveActtionRepository.cs" />
-    <Compile Include="Factories\ViewModelFactory.cs" />
-    <Compile Include="Helpers\ItemHelper.cs" />
+    <Compile Include="Factories\ISitecoreFormsCustomSaveActionRepository.cs" />
+    <Compile Include="Factories\SitecoreFormsCustomSaveActionRepository.cs" />
     <Compile Include="Managers\IMailManager.cs" />
     <Compile Include="Managers\MailManager.cs" />
-    <Compile Include="Models\DropLink.cs" />
-    <Compile Include="Models\Image.cs" />
-    <Compile Include="Models\IProperty.cs" />
-    <Compile Include="Models\ItemProperty.cs" />
-    <Compile Include="Models\Link.cs" />
-    <Compile Include="Models\LinkViewModel.cs" />
+    <Compile Include="Models\ISaveActionSendEmailTemplate.cs" />
     <Compile Include="Models\SendEmailActionData.cs" />
-    <Compile Include="Models\SendEmailTemplate.cs" />
-    <Compile Include="Models\SendEmailTemplateViewModel.cs" />
-    <Compile Include="Models\SitecoreImage.cs" />
-    <Compile Include="Models\SitecoreLink.cs" />
-    <Compile Include="Models\SitecoreText.cs" />
-    <Compile Include="Models\SitecoreToken.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ISitecoreFormsCustomSaceActionsService.cs" />
     <Compile Include="Services\SitecoreFormsCustomSaveActionsService.cs" />
@@ -106,8 +90,14 @@
       <Project>{0d3a6f11-b5ff-4d8c-8a74-19501d2e80d4}</Project>
       <Name>LionTrust.Foundation.DI</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\ORM\website\LionTrust.Foundation.ORM.csproj">
+      <Project>{5e91a7d9-8e93-44fd-857f-f9ce145b6022}</Project>
+      <Name>LionTrust.Foundation.ORM</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

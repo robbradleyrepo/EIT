@@ -1,0 +1,46 @@
+﻿---
+ID: "a8e39fcd-4366-4faa-82d9-70fdbd3924ae"
+Parent: "83bf536e-021b-4e39-aae8-dca97fde0f36"
+Template: "d6453e2f-43b8-4d9a-be1d-847331dd46ec"
+Path: /sitecore/content/LionTrustNew/Global/SitecoreFormsSaveActionEmailTemplates/ContactUsEmail
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "06cf7584-f7f7-44c1-a05b-5b3241eee9dd"
+      Hint: SendEmailSaveActionEmailTemplate_To
+      Value: gerhart@test.com
+    - ID: "09f919e5-1203-45fa-8c64-6f25576ac61d"
+      Hint: SendEmailSaveActionEmailTemplate_CC
+      Value: 
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20191205T215957Z
+    - ID: "2717fca7-8394-427c-8d42-da9f4d0f3593"
+      Hint: SendEmailSaveActionEmailTemplate_Subject
+      Value: Liontrust Contact Us
+    - ID: "44cd553a-743b-4b83-8eae-3238713fe856"
+      Hint: SendEmailSaveActionEmailTemplate_FromDisplayName
+      Value: 
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\ragnar
+    - ID: "66705031-8a50-4cb1-bb2e-1fc9194252ab"
+      Hint: SendEmailSaveActionEmailTemplate_BCC
+      Value: 
+    - ID: "b1ffe662-f00c-42dc-9f4a-48a7263b5ebe"
+      Hint: SendEmailSaveActionEmailTemplate_From
+      Value: test@test.com
+    - ID: "ffb22c77-93ed-41e0-b4d7-c8973bb5fb40"
+      Hint: SendEmailSaveActionEmailTemplate_Message
+      Value: |
+        <p>The following contact us message has been submitted from the Liontrust website.</p>
+        <p>&nbsp;</p>
+        <p>Fund Enquiry: {Fund Enquiry}</p>
+        <p>Liontrust GF Sustainable: {Liontrust GF Sustainable}</p>
+        <p>&nbsp;</p>
+        <p>Email Address: {Email}</p>
+        <p>Telephone Number: {Telephone}</p>

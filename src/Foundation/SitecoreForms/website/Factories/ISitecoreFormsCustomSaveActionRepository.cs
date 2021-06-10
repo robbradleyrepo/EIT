@@ -4,8 +4,8 @@
 
     using LionTrust.Foundation.SitecoreForms.Models;
     
-    public interface ISitecoreFormsCustomSaveActtionRepository
+    public interface ISitecoreFormsCustomSaveActionRepository
     {
-        SendEmailTemplate GetTemplateForSendEmailSaveAction(Guid itemId);
+        ISaveActionSendEmailTemplate GetTemplateForSendEmailSaveAction(Guid itemId);
     }
 }

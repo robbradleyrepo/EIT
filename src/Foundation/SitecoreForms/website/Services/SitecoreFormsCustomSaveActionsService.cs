@@ -12,7 +12,7 @@
     [Service]
     public class SitecoreFormsCustomSaveActionsService : ISitecoreFormsCustomSaveActionsService
     {
-        private readonly ISitecoreFormsCustomSaveActtionRepository _customSaveActionRepository;
+        private readonly ISitecoreFormsCustomSaveActionRepository _customSaveActionRepository;
         private readonly IMailManager _mailManager;
 
         /// <summary>
@@ -21,7 +21,7 @@
         /// <param name="viewModelFactory"></param>
         /// <param name="customSaveActionRepository"></param>
         /// <param name="mailManager"></param>
-        public SitecoreFormsCustomSaveActionsService(ISitecoreFormsCustomSaveActtionRepository customSaveActionRepository, IMailManager mailManager)
+        public SitecoreFormsCustomSaveActionsService(ISitecoreFormsCustomSaveActionRepository customSaveActionRepository, IMailManager mailManager)
         {
             _customSaveActionRepository = customSaveActionRepository;
             _mailManager = mailManager;
@@ -32,19 +32,9 @@
         /// </summary>
         /// <param name="referenceId"></param>
         /// <returns></returns>
-        public SendEmailTemplateViewModel GetEmailTemplate(Guid referenceId)
+        public ISaveActionSendEmailTemplate GetEmailTemplate(Guid referenceId)
         {
-            var emailTemplate = _customSaveActionRepository.GetTemplateForSendEmailSaveAction(referenceId);
-            return new SendEmailTemplateViewModel()
-            {
-                BCC = emailTemplate.BCC,
-                CC = emailTemplate.CC,
-                From = emailTemplate.From,
-                FromDisplyName = emailTemplate.FromDisplyName,
-                Message = emailTemplate.Message,
-                Subject = emailTemplate.Subject,
-                To = emailTemplate.To
-            };
+            return _customSaveActionRepository.GetTemplateForSendEmailSaveAction(referenceId);
         }
 
         //Send email
