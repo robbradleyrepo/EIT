@@ -2,7 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
-
+    using System.Linq;
     using LionTrust.Foundation.SitecoreForms.Models;
     using Sitecore.Data;
     using Sitecore.Data.Fields;
@@ -85,6 +85,56 @@
             return result;
         }
 
+        public static Item GetReferenceFieldValue(this Item item, string fieldName) 
+        {
+            return item.GetMultilistFieldValue(fieldName).FirstOrDefault();
+        }
+
+        public static int? GetNumberFieldValue(this Item item, string fieldName)
+        {
+            if (!string.IsNullOrEmpty(item[fieldName]))
+            {
+                try
+                {
+                    return int.Parse(item[fieldName]);
+                }
+                catch
+                {
+                    return null;
+                }
+            }
+
+            return 0;
+        }
+
+        public static DateTime? GetDateFieldValue(this Item item, string fieldName) 
+        { 
+            if (!string.IsNullOrEmpty(item[fieldName]))
+            {
+                DateField dateField = item.Fields[fieldName];
+                return dateField.DateTime;
+            }
+
+            return null;
+        }
+
+        public static bool? GetBooleanFieldValue(this Item item, string fieldName)
+        {
+            return !string.IsNullOrEmpty(item[fieldName]) && item[fieldName].Equals("1");
+        }
+
+        public static IEnumerable<Item> GetMultilistFieldValue(this Item item, string fieldName) 
+        {
+            if (!string.IsNullOrEmpty(item[fieldName]))
+            {
+                Sitecore.Data.Fields.MultilistField multiselectField = item.Fields[fieldName];
+
+                return multiselectField.GetItems();
+            }
+
+            return null;
+        }
+
         public static IProperty<string> GetIPropertyString(this Item item, string fieldName)
         {
             return new SitecoreText(item, fieldName, item[fieldName]);
@@ -133,20 +183,6 @@
                 SitecoreId = item.ID.Guid,
                 TemplateId = item.TemplateID.Guid
             };
-        }
-
-        public static string GetReferencedItemString(this Item item, string referenceFieldName, string fieldName)
-        {
-            string result = String.Empty;
-
-            var resultItem = item.GetReferenceFieldValue(referenceFieldName);
-
-            if (resultItem != null)
-            {
-                result = resultItem[fieldName];
-            }
-
-            return result;
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace LionTrust.Foundation.SitecoreForms.Models;
+﻿namespace LionTrust.Foundation.SitecoreForms.Models
 {
     using System;
     using System.Globalization;

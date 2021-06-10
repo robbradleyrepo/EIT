@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Reflection;
+    using LionTrust.Foundation.SitecoreForms.Helpers;
     using LionTrust.Foundation.SitecoreForms.Models;
     using Sitecore.Data.Items;
 
