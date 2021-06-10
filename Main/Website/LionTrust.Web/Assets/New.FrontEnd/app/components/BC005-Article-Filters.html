@@ -9,8 +9,8 @@
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <form class="search-form">
-                            <input type="text" name="queryText" class="search-form__input color-black"
+                        <form class="search-form" @submit.prevent="applyFilters">
+                            <input type="text" v-model="searchText" name="searchText" class="search-form__input color-black"
                                 placeholder="Search insight">
                             <button class="search-form__submit pe-0" type="submit">
                                 <i class="icon-search"></i>
@@ -67,7 +67,7 @@
                         <i class="article-filters__icon-arrow article-filters__icon-arrow_select"></i>
                     </div>
                     <div class="col-lg-1 relative">
-                        <select class="article-filters__select-custom" @change="setYear()">
+                        <select class="article-filters__select-custom" @change="setYear($event)">
                             <option value="0" disabled selected>Year</option>
                             <option value="0">All</option>
                             <option value="1">2018</option>

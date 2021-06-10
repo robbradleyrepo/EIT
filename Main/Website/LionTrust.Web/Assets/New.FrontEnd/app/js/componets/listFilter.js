@@ -100,27 +100,23 @@ const facets = {
       Identifier: "c9224be2-659e-4f18-81f5-90991efd1f3d" },
     ]
   },
-  FundCategoriesFacets: {
-    open: false,
+  FundCategories: {
     name: 'Fund Category',
     data: [{
-      Name: "Fund manager views",
-      checked: false,
+      Name: "Fund manager views", 
       Identifier: "a0938a5b-ece4-47d8-8564-421c0d816141",
     },
     {
-      Name: "Fund updates",
-      checked: false,
+      Name: "Fund updates", 
       Identifier: "d0700e76-8bc2-427a-9849-fe3b6d28bd22",
     },
     {
-      Name: "Magazine and Reports",
-      checked: false,
+      Name: "Magazine and Reports", 
       Identifier: "ffdb4296-adc2-42c4-b0dd-c738e4db1441",
     },
-    { Name: "Podcast", checked: false,
+    { Name: "Podcast",
     Identifier: "74a07305-3f24-4766-9595-ad788cad354a" },
-    { Name: "Video", checked: false,
+    { Name: "Video",
     Identifier: "4cbe4422-dcf0-4ffe-8064-bb7cad356e7d" },]
   },
   FundManagersFacets: {
@@ -186,13 +182,13 @@ export default () => {
     data: {
      facets: {}, 
      params: {},
-     page: 1
+     page: 1,
+     searchText: ""
     },
     computed: {
       getFacets() {
         const res = {}
-        for(let i in this.facets) {
-          if( i != 'Message' && i != 'StatusCode')
+        for(let i in this.facets) {         
             res[i] = this.facets[i]
         }
         return res
@@ -226,9 +222,11 @@ export default () => {
        getQuerySring() {
         let str = '';
         str = str + 'page=' + this.page;
+        if(this.searchText)
+          str = str + 'searchText=' + this.searchText;
         for(let prop in this.params) {
-          console.log('prop',prop);
-          str += '&' +`${prop}=${this.params[prop]}` 
+          if(this.params[prop].length)
+            str += '&' +`${prop}=${this.params[prop]}`;
         }
         console.log('str', str);
         return str
@@ -246,20 +244,31 @@ export default () => {
        clearFilters() {
          this.params = {};
          this.page = 1;
-         this.open = false
-         this.$emit('clearOption')
+         this.open = false;
+         this.searchText = '';
+         this.$emit('clearOption');
          this.pushStateLink();
        },
        setMonth(e) {
-         this.params.month = e.target.value
-         console.log('this.params',this.params);
+         this.params.month = e.target.value;
        },
        setYear(e) {
-        this.params.year = e.target.value
+        this.params.year = e.target.value;
        }
     },
     mounted() {
-      this.facets = facets
+      $.get('https://cm-liontrust-it.sagittarius.agency/ArticleSearchApi/Facets')
+      .done(responce => {
+        const facets = []
+        for(let i in responce.Facets) {
+          const name = i.replace(/([a-z])([A-Z])/g, '$1 $2');
+          facets.push({
+            name,
+            data: responce.Facets[i]
+          })
+        }
+        this.facets = facets
+      })
     }
   });
 };
@@ -275,7 +284,6 @@ Vue.component('select-field', {
       this.open = !this.open
     },
     clearOption() {
-      console.log('toggleOption');
       this.$emit('clearOptionField');
     }
   },
@@ -285,10 +293,8 @@ Vue.component('select-field', {
     });
   },
   created() {
-    console.log('this.$parent',this.$parent);
     this.$parent.$on('clearOption', this.clearOption);
   }
-
 })
 
 Vue.component('option-field', {
@@ -304,7 +310,6 @@ Vue.component('option-field', {
     }
   },
   created: function() {
-    console.log('this.$parent',this.$parent);
     this.$parent.$on('clearOptionField', this.clearChecked);
   }
 })
