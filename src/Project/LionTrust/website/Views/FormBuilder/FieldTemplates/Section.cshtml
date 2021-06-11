@@ -1,0 +1,9 @@
+﻿@using Sitecore.ExperienceForms.Mvc.Html
+@model Sitecore.ExperienceForms.Mvc.Models.Fields.FieldViewModel
+<div class="row">
+    <div class="col-lg-6">
+        <div data-sc-field-key="@Model.ConditionSettings.FieldKey" class="@Model.CssClass">
+            @Html.RenderFields(Model)
+        </div>
+    </div>
+</div>

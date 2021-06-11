@@ -53,5 +53,11 @@
             public const string TabletBackgroundImage_FieldId = "{D96C59C0-BAD5-4C2A-8D3C-775CEB68899E}";
             public const string MobileBackgroundImage_FieldId = "{466570C2-23F3-4660-9A13-DE2176EC2BBA}";
         }
+
+        public static class ContactUsForm
+        {
+            public const string Heading_FieldId = "{20EEA52D-E2F5-4044-BA05-2E4F9E01F28C}";
+            public const string Description_FieldId = "{9C6F549A-4035-4989-BECF-73A7ADE8F016}";
+        }
     }
 }

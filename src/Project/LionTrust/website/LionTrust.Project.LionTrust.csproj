@@ -73,6 +73,16 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Config\Include\Project\LionTrust.Serialization.config" />
+    <Content Include="Views\FormBuilder\Field.cshtml" />
+    <Content Include="Views\FormBuilder\FieldTemplates\Button.cshtml" />
+    <Content Include="Views\FormBuilder\FieldTemplates\DropdownList.cshtml" />
+    <Content Include="Views\FormBuilder\FieldTemplates\Email.cshtml" />
+    <Content Include="Views\FormBuilder\FieldTemplates\MultipleLineText.cshtml" />
+    <Content Include="Views\FormBuilder\FieldTemplates\Section.cshtml" />
+    <Content Include="Views\FormBuilder\FieldTemplates\SingleLineText.cshtml" />
+    <Content Include="Views\FormBuilder\FieldTemplates\Telephone.cshtml" />
+    <Content Include="Views\FormBuilder\FieldTemplates\Text.cshtml" />
+    <Content Include="Views\FormBuilder\Form.cshtml" />
     <None Include="Web.config">
       <SubType>Designer</SubType>
     </None>
