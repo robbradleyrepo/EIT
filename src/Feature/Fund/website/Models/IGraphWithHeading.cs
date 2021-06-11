@@ -2,9 +2,9 @@
 {
     using Glass.Mapper.Sc.Configuration.Attributes;
 
-    public interface IGraphSection: IFundSelector
+    public interface IGraphWithHeading: IFundSelector
     {
-        [SitecoreField(Constants.GraphSection.HeadingFieldId)]
+        [SitecoreField(Constants.GraphWithHeading.HeadingFieldId)]
         string Heading { get; set; }
     }
 }

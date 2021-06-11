@@ -26,6 +26,9 @@
         [JsonProperty("SectorBD")]
         public SectorBreakdown SectorBreakdown { get; set; }
 
+        [JsonProperty("RegionBD")]
+        public RegionBreakdown RegionBreakdown { get; set; }
+
         [JsonProperty("InitialCharge")]
         public string InitialCharge { get; set; }
 
@@ -37,6 +40,15 @@
 
         [JsonProperty("Sedol")]
         public string SedolCode { get; set; }
+    }
+
+    public class RegionBreakdown
+    {
+        [JsonProperty("RegionBDDate")]
+        public string Date { get; set; }
+
+        [JsonProperty("Breakdowns")]
+        public Breakdowns Breakdowns { get; set; }
     }
 
     public class SectorBreakdown

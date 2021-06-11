@@ -8,7 +8,12 @@
             public const string FundFieldId = "{1000613E-6F3E-4DB4-91EF-C1B5D447DEE2}";
             public const string CtaFieldId = "{EEED7C2E-DC3C-4E29-9855-03BD4F9139AD}";
         }
-    
+
+        public static class GraphWithHeading
+        {
+            public const string HeadingFieldId = "{AA344985-91C2-4371-AEE9-85A678700BC1}";
+        }
+
         public static class FundCard
         {
             public const string HeadingFieldId = "{6387CA9A-7A5A-4D33-B706-201681C0B74C}";
