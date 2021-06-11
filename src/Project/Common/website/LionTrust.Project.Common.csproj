@@ -58,6 +58,7 @@
       <SubType>Designer</SubType>
       <DependentUpon>Common.Serialization.config</DependentUpon>
     </Content>
+    <Content Include="App_Config\Include\Project\Common.Smtp.config" />
     <None Include="web.config" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
