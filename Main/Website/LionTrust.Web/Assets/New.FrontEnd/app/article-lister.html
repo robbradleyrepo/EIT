@@ -22,42 +22,38 @@
     <!--#include virtual="/components/BC005-Article-Filters.html" -->
     <section class="container">
       <div class="row">
-        <div class="col-md-6 col-lg-4">
-          <!--#include virtual="/components/reusables/article-promo/Article-promo-fund-update.html" -->
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <!--#include virtual="/components/reusables/article-promo/Article-promo-fund-update.html" -->
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <!--#include virtual="/components/reusables/article-promo/Article-promo-fund-update.html" -->
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <!--#include virtual="/components/reusables/article-promo/Article-promo-fund-update.html" -->
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <!--#include virtual="/components/reusables/article-promo/Article-promo-fund-update.html" -->
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <!--#include virtual="/components/reusables/article-promo/Article-promo-fund-update.html" -->
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <!--#include virtual="/components/reusables/article-promo/Article-promo-fund-update.html" -->
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <!--#include virtual="/components/reusables/article-promo/Article-promo-fund-update.html" -->
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <!--#include virtual="/components/reusables/article-promo/Article-promo-fund-update.html" -->
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <!--#include virtual="/components/reusables/article-promo/Article-promo-fund-update.html" -->
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <!--#include virtual="/components/reusables/article-promo/Article-promo-fund-update.html" -->
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <!--#include virtual="/components/reusables/article-promo/Article-promo-fund-update.html" -->
-        </div>
+        <article-item inline-template v-for="(article, i) in searchData" :key="i">
+          <div class="col-md-6 col-lg-4">
+            <div class="article-promo">
+              <a href="#article promo" class="article-promo__front">
+              </a>
+              <a href="#" class="article-promo__body">
+                <div class="article-promo__head">
+                  <img class="article-promo__head-img" src="images/components/banners/writer.jpeg" alt="">
+                  <span class="article-promo__head-title">{{article.Subtitle}}</span>
+                </div>
+                <span class="article-promo__title">
+                  {{article.Title}}
+                </span>
+                <span class="article-promo__desc">
+                  {{article.Subtitle}}
+                </span>
+              </a>
+              <div class="article-promo__footer">
+                <div class="article-promo__footer-item">
+                  <img class="article-promo__clock" src="\images\components\svg-icons\clock.svg" alt="icon">
+                  <span class="article-promo__footer-text">{{article.Date}}</span>
+                </div>
+                <div class="article-promo__footer-item">
+                  <span class="article-promo__footer-text">{{article.Category}}</span>
+                  <i class="icon-booksmark article-promo__bookmark"></i>
+                </div>
+              </div>
+            
+              <img class="article-promo__back" src="images/components/imagepromo/vasily-koloda-8CqDvPuo_kI-unsplash.png" :alt="article.Title">
+            </div>
+          </div>
+      </article-item>    
       </div>
       <!--#include virtual="/components/reusables/pagination.html" -->
     </section>
