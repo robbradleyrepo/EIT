@@ -44,7 +44,7 @@ export default () => {
            const mutatedProp = prop.replace(/ /g,'');
            const lowerCaseProp = mutatedProp.charAt(0).toLowerCase() + mutatedProp.substr(1);
           if(this.params[prop].length)
-            str += '&' +`${lowerCaseProp}=${this.params[prop]}`;
+            str += '&' +`${lowerCaseProp}=${this.params[prop].join("|")}`;
         }
         console.log('str', str);
         return str
@@ -57,12 +57,11 @@ export default () => {
         );
       },      
        applyFilters() {
-          // this.pushStateLink();
-          $.get('https://cm-liontrust-it.sagittarius.agency/ArticleSearchApi/Search?page=1&fundCategories=a0938a5bece447d88564421c0d816141%7Cd0700e768bc2427a9849fe3b6d28bd22')
+        
+          $.get('https://cm-liontrust-it.sagittarius.agency/ArticleSearchApi/Search?' + this.getQuerySring())
           .done(responce => {
             const {SearchResults} = responce;
             this.searchData = SearchResults;
-            console.log('SearchResults',SearchResults);
           })
        },
        clearFilters() {
