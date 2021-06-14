@@ -57,8 +57,8 @@
                                                                 if (dropDown.CTALink != null && !string.IsNullOrEmpty(dropDown.CTALink.Text))
                                                                 {
                                                                     @dropDown.CTALink.Text
+                                                                    <i class="icon-arrow-right animate-arrow"></i>
                                                                 }
-                                                                <i class="icon-arrow-right animate-arrow"></i>
                                                             }
                                                         }
 
@@ -287,13 +287,13 @@
             </nav>
         }
 
-                <a href="#" class="header-navbar__user-link">
-                    <img src="/dist/images/components/header/user.svg" alt="user profile">
-                </a>
-                <div class="header-navbar__btn-search">
-                    <img src="/dist/images/components/header/search.svg" alt="search">
-                </div>
-            </div>
+        <a href="#" class="header-navbar__user-link">
+            <img src="/dist/images/components/header/user.svg" alt="user profile">
+        </a>
+        <div class="header-navbar__btn-search">
+            <img src="/dist/images/components/header/search.svg" alt="search">
+        </div>
+    </div>
 }
 else if (Sitecore.Context.PageMode.IsExperienceEditor)
 {

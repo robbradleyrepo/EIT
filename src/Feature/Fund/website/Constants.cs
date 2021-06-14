@@ -8,7 +8,24 @@
             public const string FundFieldId = "{1000613E-6F3E-4DB4-91EF-C1B5D447DEE2}";
             public const string CtaFieldId = "{EEED7C2E-DC3C-4E29-9855-03BD4F9139AD}";
         }
-    
+
+        public static class CreditRatingRow
+        {
+            public const string NameFieldId = "{5D4C8234-C349-44B9-AA47-652484734A53}";
+            public const string ValueFieldId = "{17793BA8-E9B1-406B-B73D-E10C37D4D2C2}";
+        }
+
+        public static class CreditRating
+        {
+            public const string HeadingFieldId = "{26BD09DF-992E-40F9-A625-77F17A237AC7}";
+            public const string MaxValueFieldId = "{EA8D41F6-9599-4413-A778-8B37F5582E17}";
+        }
+
+        public static class GraphWithHeading
+        {
+            public const string HeadingFieldId = "{AA344985-91C2-4371-AEE9-85A678700BC1}";
+        }
+
         public static class FundCard
         {
             public const string HeadingFieldId = "{6387CA9A-7A5A-4D33-B706-201681C0B74C}";

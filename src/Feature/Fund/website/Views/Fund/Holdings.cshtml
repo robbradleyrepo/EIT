@@ -1,5 +1,9 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @model LionTrust.Feature.Fund.Models.HoldingsViewModel
+@if (Model == null)
+{
+    return;
+}
 <div class="col-lg-6">
     <div class="table-section">
         <h3 class="table-section__title">@Html.Glass().Editable(Model.Table, t => t.Heading)</h3>

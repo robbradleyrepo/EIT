@@ -98,6 +98,8 @@
     <Content Include="App_Config\Include\Feature\Feature.Fund.config" />
     <Content Include="Views\Fund\GraphSection.cshtml" />
     <Content Include="Views\Fund\SectorBreakdown.cshtml" />
+    <Content Include="Views\Fund\geographicalbreakdown.cshtml" />
+    <Content Include="Views\Fund\CreditRating.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -112,6 +114,7 @@
     <Compile Include="Api\IFundClassRepository.cs" />
     <Compile Include="Api\IFundHoldingsBreakdown.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="CreditRating\CreditRatingController.cs" />
     <Compile Include="FundClass\FundClassDetails.cs" />
     <Compile Include="FundClass\FundClassController.cs" />
     <Compile Include="Controllers\FundHoldingsController.cs" />
@@ -125,6 +128,13 @@
     <Compile Include="FundClass\IFundClassDetails.cs" />
     <Compile Include="FundClass\FundClassSwitcherHelper.cs" />
     <Compile Include="FundClass\FundClassViewModel.cs" />
+    <Compile Include="GeographicalBreakdown\GeographicalBreakdownController.cs" />
+    <Compile Include="GeographicalBreakdown\GeographicalBreakdownManager.cs" />
+    <Compile Include="GeographicalBreakdown\IGeographicalBreakdownManager.cs" />
+    <Compile Include="Models\GraphBreakdownViewModel.cs" />
+    <Compile Include="CreditRating\ICreditRating.cs" />
+    <Compile Include="CreditRating\ICreditRatingRow.cs" />
+    <Compile Include="Models\IGraphWithHeading.cs" />
     <Compile Include="SectorBreakdown\ISectorBreakdownManager.cs" />
     <Compile Include="SectorBreakdown\ISectorBreakdown.cs" />
     <Compile Include="Models\AdditionalInfoAndChargesViewModel.cs" />

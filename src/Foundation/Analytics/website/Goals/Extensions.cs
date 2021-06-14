@@ -52,5 +52,19 @@
         {
             return htmlHelper.Glass().Editable(field, x => $"<a href={url()} class='{cssClass}' data-goal-trigger='{goalId}'>{content()}</a>", parameters);
         }
+
+        public static HtmlString GenerateGoalAnchor<TK, T>(this GlassHtmlMvc<TK> glass, T item, Expression<Func<T, object>> field, Guid goalId, NameValueCollection attributes = null)
+        {
+            if (attributes == null)
+            {
+                attributes = new NameValueCollection { { "data-goal-trigger", goalId.ToString() } };
+            }
+            else
+            {
+                attributes.Add("data-goal-trigger", goalId.ToString());
+            }
+
+            return glass.Editable<T>(item, field, attributes);
+        }
     }
 }

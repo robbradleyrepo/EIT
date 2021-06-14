@@ -7,8 +7,6 @@ export default () => {
 
   // default values
   const currentTab = Cookies.get("currentTab") || 1;
-//   const country = Cookies.get("country") || "United Kingdom";
-//   const inverstorType = Cookies.get("inverstorType") || 0;
   const agreePolicy = Cookies.get("agreePolicy") || false;
 
   const showTab = (currentTab) => {
@@ -53,10 +51,10 @@ export default () => {
     Cookies.set("inverstorType", e.target.dataset.investorType, { expires: 365 });
   });
 
-  // set country to cookie
+  // set country
   $(".set-location__item").on("click", (e) => {
     const country = e.target.dataset.isoCountry;
-    Cookies.set("country", country, { expires: 365 });
+	Cookies.set("country", country, { expires: 365 });
     showTab(2);
   });
 

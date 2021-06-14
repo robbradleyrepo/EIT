@@ -1,0 +1,26 @@
+﻿---
+ID: "84b2a571-91fb-429b-9f5b-5f07e98557e8"
+Parent: "6202e3d2-3465-462f-84b8-30cf4ae31d75"
+Template: "6202e3d2-3465-462f-84b8-30cf4ae31d75"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Fund/Credit Rating/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{DAFF5C4E-A4CF-48B5-BD94-E1A71556FF9A}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210611T112247Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "ea8d41f6-9599-4413-a778-8b37f5582e17"
+      Hint: CreditRating_MaxValue
+      Value: 60

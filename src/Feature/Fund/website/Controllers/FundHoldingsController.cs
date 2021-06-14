@@ -38,6 +38,10 @@
             {
                 result.Holdings = _dataManager.GetFundHoldings(data.Fund.CitiCode);
             }
+            else
+            {
+                result.Holdings = new FundBreakdownModel[0];
+            }
 
             return PartialView("/views/fund/holdings.cshtml", result);
         }
