@@ -11,7 +11,7 @@
             </h2>
         }
     <div class="row">
-        <div class="col-lg-5 @(Model.TextAlignment != null && !string.IsNullOrEmpty(Model.TextAlignment.Value) && Model.TextAlignment.Value.Equals("rigth") ? "order-1 offset-lg-1" : "order-lg-0")">
+        <div class="col-lg-5 @(Model.TextAlignment != null && !string.IsNullOrEmpty(Model.TextAlignment.Value) && Model.TextAlignment.Value.Equals("rigth") ? "order-1 offset-lg-1" : "order-1 order-lg-0")">
             <div class="team-card__text">
                 @if (Sitecore.Context.PageMode.IsExperienceEditor || !string.IsNullOrEmpty(Model.Subtitle))
                 {
