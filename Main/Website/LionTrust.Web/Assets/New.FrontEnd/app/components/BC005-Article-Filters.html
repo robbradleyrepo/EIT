@@ -1,11 +1,11 @@
 <div class="article-filter-wrapper">
-    <div class="article-filters">
+    <div class="article-filters" :class="mobileFilter ? 'active' : ''">
         <div class="article-filters__header">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-2 d-lg-none">
                         <div class="article-filters__main-title">Filters
-                            <i id="filters-close" class="icon-close"></i>
+                            <i id="filters-close" @click="toggleMobileFilter" class="icon-close"></i>
                         </div>
                     </div>
                     <div class="col-lg-3">
@@ -32,7 +32,7 @@
                                 <i class="article-filters__icon-arrow"></i>
                             </div>
                             <div class="article-filters__options">
-                                <div class="article-filters__title">
+                                <div class="article-filters__title" @click="toggleOption">
                                     <i class="icon-chevron-left"></i>
                                     Fund
                                 </div>
@@ -138,9 +138,9 @@
 </div>
 
 <div class="container d-lg-none">
-    <div class="d-flex justify-content-between margin-mob-fliter-btn">
-        <btn id="show-article-fliter" class="btn btn-clean">
-            <i class="icon-filter"></i> filter
+    <div class="d-flex justify-content-between margin-mob-fliter-btn" :class="!mobileFilter ? 'relative' : ''">
+        <btn id="show-article-fliter"  class="btn btn-clean" @click="toggleMobileFilter">
+            <i class="icon-filter"></i> filter 123
         </btn>        
     </div>
 </div>

@@ -145,6 +145,7 @@
         padding: 20px
         transition: transform 0.35s
         transform: translate3d(100%, 0, 0)
+        overflow-y: scroll
         &::-webkit-scrollbar
             width: 4px
         &::-webkit-scrollbar-thumb
@@ -160,7 +161,6 @@
             transform: none
             visibility: hidden
             max-height: 350px
-            overflow-y: scroll
     .search-form
         &__input
             @include breakpoint(desktop, up)
@@ -229,6 +229,7 @@
 
 .margin-mob-fliter-btn
     margin-top: -42px
+    z-index: 10
     @include breakpoint(desktop, up)
         margin-top: auto
 
