@@ -21,7 +21,10 @@
     <div id="lister-app">
     <!--#include virtual="/components/BC005-Article-Filters.html" -->
     <section class="container">
-      <div class="row">
+      <!-- <div class="text-center mt-5"> 
+        <div class="spinner-border text-gold" role="status"></div>
+      </div> -->
+      <div class="row">        
         <article-item inline-template v-for="(article, i) in searchData" :key="i">
           <div class="col-md-6 col-lg-4">
             <div class="article-promo">
