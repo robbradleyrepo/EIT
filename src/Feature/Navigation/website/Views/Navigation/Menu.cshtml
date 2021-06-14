@@ -27,7 +27,7 @@
                             if (filteredChildrens != null && filteredChildrens.Any())
                             {
                                 <li class="navigation__item">
-                                    <label class="navigation__link" for="Our Funds">
+                                    <label class="navigation__link" for="@menuItem.Name">
                                         @Html.Glass().Editable(menuItem, z => z.PageTitle)
                                     </label>
                                 </li>
@@ -133,12 +133,11 @@
                 {
                     if (dropDown.PageItem != null)
                     {
-                        var dropDownLabel = !string.IsNullOrEmpty(dropDown.PageItem.PageTitle) ? dropDown.PageItem.PageTitle : dropDown.PageItem.Name;
                         var navigationColumnCount = 0;
                         <div class="navigation__item">
-                            <input type="checkbox" id="@dropDownLabel" class="navigation__checkbox">
+                            <input type="checkbox" id="@dropDown.Name" class="navigation__checkbox">
                             <div class="navigation__submenu">
-                                <label class="navigation__close-submenu" for="@dropDownLabel">
+                                <label class="navigation__close-submenu" for="@dropDown.Name">
                                     <i class="icon-chevron-left"></i>
                                     back
                                 </label>
@@ -480,9 +479,9 @@
             {
                 var filteredChildrens = menuItem.Children.Where(m => !m.ExcludeInSearchResults);
                 <div class="navigation__item">
-                    <input type="checkbox" id="@menuItem.Name-@menuItem.Id.ToString()" class="navigation__checkbox">
+                    <input type="checkbox" id="@menuItem.Name" class="navigation__checkbox">
                     <div class="navigation__submenu">
-                        <label class="navigation__close-submenu" for="@menuItem.Name-@menuItem.Id.ToString()">
+                        <label class="navigation__close-submenu" for="@menuItem.Name">
                             <i class="icon-chevron-left"></i>
                             back
                         </label>
