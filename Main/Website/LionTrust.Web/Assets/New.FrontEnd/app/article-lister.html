@@ -20,10 +20,7 @@
   <main>
     <div id="lister-app">
     <!--#include virtual="/components/BC005-Article-Filters.html" -->
-    <section class="container">
-      <!-- <div class="text-center mt-5"> 
-        <div class="spinner-border text-gold" role="status"></div>
-      </div> -->
+    <section class="container" v-if="!loading">
       <div class="row">        
         <article-item inline-template v-for="(article, i) in searchData" :key="i">
           <div class="col-md-6 col-lg-4">
@@ -58,8 +55,12 @@
           </div>
       </article-item>    
       </div>
+      
       <!--#include virtual="/components/reusables/pagination.html" -->
     </section>
+    <div v-if="loading" class="text-center mt-5">
+      <div class="spinner-border text-gold" role="status"></div>
+    </div>
 
   </div>
     <!--#include virtual="/components/UI023-Newsletter-Promo.html" -->

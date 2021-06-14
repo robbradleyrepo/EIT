@@ -10,7 +10,9 @@ export default () => {
      page: 1,
      searchText: "",
      searchData: [],
-     loading: false
+     loading: true,
+     sortModal: false,
+     sortValue: 'ASC'
     },
     computed: {
       getFacets() {
@@ -36,6 +38,7 @@ export default () => {
         else        
           this.params[facet.name].push(item.Identifier);
        },
+
        getQuerySring() {
         let str = '';
         str = str + 'page=' + this.page;
@@ -50,22 +53,26 @@ export default () => {
         console.log('str', str);
         return str
       },
+
       pushStateLink() {
         window.history.pushState(
           { page: "article-lister" },
           "search",
           `${window.location.href.split("?")[0]}?${this.getQuerySring()}`
         );
-      },      
+      },
+
        applyFilters() {
-          this.pushStateLink();
+         this.loading = true
           $.get('https://cm-liontrust-it.sagittarius.agency/ArticleSearchApi/Search?' + this.getQuerySring())
           .done(responce => {
             const {SearchResults} = responce;
             this.searchData = SearchResults;
             console.log('SearchResults',SearchResults);
+            this.loading = false
           })
        },
+
        clearFilters() {
          this.params = {};
          this.page = 1;
@@ -75,11 +82,21 @@ export default () => {
         //  this.pushStateLink();
        },
        setMonth(e) {
-         this.params.month = e.target.value;
+         this.params.month = [e.target.value];
        },
        setYear(e) {
-        this.params.year = e.target.value;
+        this.params.year = [e.target.value];
+       },
+       showSort() {
+          this.sortModal = true;
        }
+    },
+    watch: {
+      sortValue: function() {
+        this.params.sortValue = [this.sortValue];
+        this.applyFilters();
+        console.log('this.params',this.params);
+      }
     },
     mounted() {
       $.get('https://cm-liontrust-it.sagittarius.agency/ArticleSearchApi/Facets')
@@ -100,7 +117,13 @@ export default () => {
         const {SearchResults} = responce;
         this.searchData = SearchResults;
         console.log('this.searchData',this.searchData);
+        this.loading = false;
+
       })
+
+      document.querySelector("body").addEventListener("click", () => {
+        this.sortModal = false
+  });
     }
   });
 };
