@@ -70,7 +70,18 @@
                                         <div class="fund-card__text">
                                             <div class="fund-card__text-top">
                                                 <p>
-                                                    @Html.Glass().Editable(item, i => i.Description)
+                                                    @if (Sitecore.Context.PageMode.IsExperienceEditor)
+                                                    {
+                                                        @Html.Glass().Editable(item, i => i.Description)
+                                                    }
+                                                    else if (!string.IsNullOrEmpty(item.Description) && item.Description.Count() > 460)
+                                                    {
+                                                        @item.Description.Substring(0, 460) @:...
+                                                    }
+                                                    else
+                                                    {
+                                                        @item.Description
+                                                    }
                                                 </p>
                                             </div>
                                             <div class="fund-card__text-bottom">
