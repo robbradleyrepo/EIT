@@ -1,9 +1,10 @@
 import Vue from "vue/dist/vue.common.prod";
-
+import {pagination} from "./listFilter/mixins/pagination"
 export default () => {
   const host = "http://localhost:3004/article-lister?";
   new Vue({
     el: "#lister-app",
+    mixins: [pagination],
     data: {
      facets: {}, 
      params: {},
@@ -12,7 +13,10 @@ export default () => {
      searchData: [],
      loading: true,
      sortModal: false,
-     sortValue: 'ASC'
+     sortValue: 'ASC',
+     amountResults: 0,
+     showPerPage: 3,
+     showPageInPagination: 7,
     },
     computed: {
       getFacets() {
@@ -66,9 +70,11 @@ export default () => {
          this.loading = true
           $.get('https://cm-liontrust-it.sagittarius.agency/ArticleSearchApi/Search?' + this.getQuerySring())
           .done(responce => {
-            const {SearchResults} = responce;
+            const {SearchResults, TotalResults} = responce;
             this.searchData = SearchResults;
+            this.amountResults = TotalResults;
             console.log('SearchResults',SearchResults);
+            console.log('this.amountResults', this.amountResults);
             this.loading = false
           })
        },
@@ -89,7 +95,15 @@ export default () => {
        },
        showSort() {
           this.sortModal = true;
-       }
+       },
+       changePage(num) {
+        if (this.getPage !== num) {
+          this.page = num;
+          this.params.page = [num]
+          this.applyFilters();
+        }
+      },
+       
     },
     watch: {
       sortValue: function() {
@@ -114,9 +128,11 @@ export default () => {
 
       $.get('https://cm-liontrust-it.sagittarius.agency/ArticleSearchApi/Search?page=1')
       .done(responce => {
-        const {SearchResults} = responce;
+        const {SearchResults, TotalResults} = responce;
         this.searchData = SearchResults;
-        console.log('this.searchData',this.searchData);
+        console.log('this.searchData',responce);
+        this.amountResults = TotalResults;
+        console.log('this.amountResults', this.amountResults);
         this.loading = false;
 
       })
@@ -171,7 +187,5 @@ Vue.component('option-field', {
 Vue.component('article-item', {
   data: function () {
     return { } 
-  },
-  methods: {
   }
 })
