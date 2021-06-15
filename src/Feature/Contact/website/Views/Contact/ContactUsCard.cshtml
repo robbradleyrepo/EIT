@@ -9,7 +9,7 @@
     var showFaxDivider = (!string.IsNullOrEmpty(Model.FaxNumber) && !string.IsNullOrEmpty(Model.OutsideFaxNumber)) || Sitecore.Context.PageMode.IsExperienceEditor;
 
     <section class="container contact-section">
-        <h2 class="h2 contact-section__title"></h2>
+        <h2 class="h2 contact-section__title">@Html.Glass().Editable(Model, m => m.Title)</h2>
         <div class="row">
             <div class="col-lg-11">
                 <div class="card">
