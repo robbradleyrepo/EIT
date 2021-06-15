@@ -2,7 +2,9 @@
 @model LionTrust.Feature.Onboarding.Models.OnboardingViewModel
 @if (Model != null)
 {
-    <div class="onboarding-overlay">
+    var activeClass = @Model.ShowOnboarding && !Sitecore.Context.PageMode.IsExperienceEditor ? "active" : string.Empty;
+
+    <div class="onboarding-overlay @activeClass">
         <div class="onboarding-overlay__content">
             <div class="onboarding-overlay__hint">
                 @Model.Text
@@ -11,8 +13,8 @@
                 <img src="@Model.Logo" class="onboarding-overlay__img" />
             </div>
             @Html.Partial("~/Views/OnBoarding/ChooseCountry.cshtml", Model.ChooseCountry)
-            @Html.Partial("~/Views/OnBoarding/ChooseInvestorRole.cshtml")
-            @Html.Partial("~/Views/OnBoarding/TermsAndConditions.cshtml")
+            @Html.Partial("~/Views/OnBoarding/ChooseInvestorRole.cshtml", Model.ChooseInvestorRole)
+            @Html.Partial("~/Views/OnBoarding/TermsAndConditions.cshtml", Model.TermsAndConditions)
         </div>
         <div class="onboarding-overlay__steps">
             <span data-change-step="1" class="onboarding-overlay__step active"></span>
@@ -26,20 +28,18 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Why are you asking this?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">@Html.Glass().Editable(Model, m => m.ChooseInvestorRole.ModalTitle)</h5>
                 </div>
                 <div class="modal-body">
                     <p class="font-500">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        @Html.Glass().Editable(Model, m => m.ChooseInvestorRole.ModalIntroText)
                     </p>
                     <p class="mb-0">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt.
+                        @Html.Glass().Editable(Model, m => m.ChooseInvestorRole.ModalBodyText)
                     </p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" data-bs-dismiss="modal" aria-label="Close" class="modal-btn">ok <i class="icon-arrow-right"></i></button>
+                    <button type="button" data-bs-dismiss="modal" aria-label="Close" class="modal-btn">@Html.Glass().Editable(Model, m => m.ChooseInvestorRole.ModalButtonText) <i class="icon-arrow-right"></i></button>
                 </div>
             </div>
         </div>

@@ -1,18 +1,24 @@
-﻿<div class="onboarding-overlay__tab" data-tab-number="3">
-    <div class="onboarding-overlay__title">
-        And finally, please confirm the following
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Onboarding.Models.ITermsAndConditions
+@if (Model != null)
+{
+    <div class="onboarding-overlay__tab" data-tab-number="3">
+        <div class="onboarding-overlay__title">
+            @Html.Glass().Editable(Model, m => m.Title)
+        </div>
+        <div class="onboarding-overlay__text">
+            @Model.AcceptanceText
+        </div>
+        <div class="onboarding-overlay__btns">
+            @using (Html.BeginForm())
+            {
+                <input type="hidden" id="Country" name="Country" />
+                <input type="hidden" id="Role" name="Role" />
+                <button class="btn btn-primary" id="submit-board">
+                    @Html.Glass().Editable(Model, m => m.ButtonText)
+                    <i class="icon-arrow-right animate-arrow"></i>
+                </button>
+            }
+        </div>
     </div>
-    <div class="onboarding-overlay__text">
-        I’m a Private Investor in the United Kingdom and I agree to comply with the <a href="#"
-                                                                                       class="onboarding-overlay__link">
-            terms and conditions
-        </a> of the
-        website.
-    </div>
-    <div class="onboarding-overlay__btns">
-        <button class="btn btn-primary" id="submit-board">
-            Yes, I agree
-            <i class="icon-arrow-right animate-arrow"></i>
-        </button>
-    </div>
-</div>
+}
