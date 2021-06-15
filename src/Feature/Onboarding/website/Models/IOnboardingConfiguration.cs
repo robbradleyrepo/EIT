@@ -16,5 +16,22 @@
 
         [SitecoreChildren(TemplateId = Constants.ChooseCountry.TemplateId, EnforceTemplate = SitecoreEnforceTemplate.TemplateAndBase)]
         IEnumerable<IChooseCountry> ChooseCountry { get; set; }
+
+        [SitecoreChildren(TemplateId = Constants.ChooseInvestorRole.TemplateId, EnforceTemplate = SitecoreEnforceTemplate.TemplateAndBase)]
+        IEnumerable<IChooseInvestorRole> ChooseInvestorRole { get; set; }
+
+        [SitecoreChildren(TemplateId = Constants.TermsAndConditions.TemplateId, EnforceTemplate = SitecoreEnforceTemplate.TemplateAndBase)]
+        IEnumerable<ITermsAndConditions> TermsAndConditions { get; set; }
+
+        [SitecoreField(Constants.OnboardingConfiguration.Profile_FieldId)]
+        IGlassBase Profile { get; set; }
+
+        [SitecoreField(Constants.OnboardingConfiguration.PrivateProfileCard_FieldId)]
+        IProfileCard PrivateProfileCard { get; set; }
+
+        [SitecoreField(Constants.OnboardingConfiguration.ProfessionalProfileCard_FieldId)]
+        IProfileCard ProfressionalProfileCard { get; set; }
     }
+
+
 }

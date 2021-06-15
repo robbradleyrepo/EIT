@@ -7,8 +7,7 @@ export default () => {
 
   // default values
   const currentTab = Cookies.get("currentTab") || 1;
-  const agreePolicy = Cookies.get("agreePolicy") || false;
-
+  
   const showTab = (currentTab) => {
     const tabs = $("[data-tab-number]");
     tabs.removeClass("visible");
@@ -23,13 +22,11 @@ export default () => {
 
     Cookies.set("currentTab", currentTab);
   };
-
-  // start showing tab
-  if(!agreePolicy) {
-    showTab(currentTab);
-    onboarding.addClass('active')
-    $('body').addClass('overflow-hidden')
-  }
+	
+	if(onboarding.hasClass('active')){
+		$('body').addClass('overflow-hidden');
+		showTab(currentTab);
+	}
 
   // move to next step
   btnStep.on("click", (e) => {
@@ -48,20 +45,24 @@ export default () => {
 
   // set investor type to cookie
   $("[data-investor-type]").on("click", (e) => {
-    Cookies.set("inverstorType", e.target.dataset.investorType, { expires: 365 });
+	 $('#Role').val(e.target.dataset.investorType);
+	 var acceptText = $('.onboarding-overlay__text');	 
+	 $(acceptText).text($(acceptText).text().replace("{role}", e.target.dataset.investorName));
   });
 
   // set country
   $(".set-location__item").on("click", (e) => {
-    const country = e.target.dataset.isoCountry;
-	Cookies.set("country", country, { expires: 365 });
+     $('#Country').val(e.target.dataset.isoCountry);
+	 var acceptText = $('.onboarding-overlay__text');	 
+	 $(acceptText).text($(acceptText).text().replace("{country}", e.target.dataset.nameCountry));
+	 
+	 if(e.target.dataset.isoCountry != "GB"){
+		 $('.btn.private-investor').toggle();
+		 $('.onboarding-overlay__title.uk-title').toggle();
+	 }
+	 else{
+		 $('.onboarding-overlay__title.non-uk-title').toggle();
+	 }
     showTab(2);
-  });
-
-  // finish onboarding, close modal
-  $("#submit-board").on("click", () => {
-    onboarding.removeClass("active");
-    $('body').removeClass('overflow-hidden')
-    Cookies.set("agreePolicy", 1, { expires: 365 });
   });
 };

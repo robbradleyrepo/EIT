@@ -26,8 +26,8 @@
         [SitecoreField(Constants.ChooseCountry.RestOfTheWorldText_FieldId)]
         string RestOfTheWorldText { get; set; }
 
-        string CurrentCountry { get; set; }
+        string CurrentCountryName { get; set; }
 
-
+        string CurrentCountryIso { get; set; }
     }
 }

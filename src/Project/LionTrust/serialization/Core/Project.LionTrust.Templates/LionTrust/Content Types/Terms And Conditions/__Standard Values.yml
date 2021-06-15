@@ -1,0 +1,27 @@
+﻿---
+ID: "51caafb6-fbe3-4b1e-80bc-2a2257ff6293"
+Parent: "e537b5e3-8aa1-4b45-a8e7-26ae1fd18799"
+Template: "e537b5e3-8aa1-4b45-a8e7-26ae1fd18799"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Terms And Conditions/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04ebf102-7785-40a0-bf5f-040ebcd004a5"
+      Hint: TermsAndConditions_Title
+      Value: And finally, please confirm the following
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210614T160133Z
+    - ID: "30e38aae-22d7-46c3-b51b-d1f54bae5c14"
+      Hint: TermsAndConditions_AcceptanceText
+      Value: "I’m a {role} in the {country} and I agree to comply with the terms and conditions of the website."
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "a2bcc4f0-b7f1-4ac8-bdae-df69211e86c2"
+      Hint: TermsAndConditions_ButtonText
+      Value: Yes, I Agree
