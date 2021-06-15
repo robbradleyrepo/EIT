@@ -1,12 +1,15 @@
 ﻿namespace LionTrust.Feature.Article.Models
 {
-    using Glass.Mapper.Sc.Configuration;
-    using Glass.Mapper.Sc.Configuration.Attributes;
-    using Glass.Mapper.Sc.Fields;
     using System;
+
+    using Glass.Mapper.Sc.Configuration.Attributes;
+    
 
     public interface IArticleLinks : IArticleGlassBase
     {
+        [SitecoreField(Constants.ArticleLinks.ShareTooltip_FieldId)]
+        string ShareTooltip { get; set; }
+
         [SitecoreField(Constants.ArticleLinks.ShareLabel_FieldId)]
         string ShareLabel { get; set; }
 

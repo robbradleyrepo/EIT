@@ -92,6 +92,7 @@
 
         public static class ArticleLinks
         {
+            public const string ShareTooltip_FieldId = "{0C44E5E5-AFE2-426E-A113-E6498BC34A65}";
             public const string ShareLabel_FieldId = "{1D03C959-0BBF-4C3A-A5A5-9050E9F4B38F}";
             public const string ShareLinkGoal_FieldId = "{A4397CD8-98A8-4164-8263-0B323271B169}";
             public const string DownloadLabel_FieldId = "{338376F5-AB65-4249-878A-E891F1FD465A}";
