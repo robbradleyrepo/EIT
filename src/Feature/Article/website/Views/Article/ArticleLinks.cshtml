@@ -8,7 +8,7 @@
     <div class="article-with-small">
         <ul class="article-links article-links_primary py-3">
             <li class="ritle-links__item">
-                <a href="#" class="article-links__link" data-goal-trigger="@shareGoal">
+                <a href="#" class="article-links__link copy-to-clipbord" data-goal-trigger="@shareGoal" data-link="@Model.Article.Url" data-title="@Model.ArticleLinks.ShareTooltip">
                     <i class="icon-share"></i>
                     @Html.Glass().Editable(Model.ArticleLinks, m => m.ShareLabel)
                 </a>
