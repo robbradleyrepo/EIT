@@ -64,4 +64,8 @@ export default () => {
     $('body').removeClass('overflow-hidden')
     Cookies.set("agreePolicy", 1, { expires: 365 });
   });
+
+  $('.onboarding-overlay__link').on('click', function() {
+    $('.onboarding-overlay__scroller').slideToggle();
+  })
 };
