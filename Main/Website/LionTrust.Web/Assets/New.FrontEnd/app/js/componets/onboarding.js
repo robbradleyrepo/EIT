@@ -7,7 +7,7 @@ export default () => {
 
   // default values
   const currentTab = Cookies.get("currentTab") || 1;
-  
+
   const showTab = (currentTab) => {
     const tabs = $("[data-tab-number]");
     tabs.removeClass("visible");
@@ -22,7 +22,7 @@ export default () => {
 
     Cookies.set("currentTab", currentTab);
   };
-	
+
 	if(onboarding.hasClass('active')){
 		$('body').addClass('overflow-hidden');
 		showTab(currentTab);
@@ -46,16 +46,16 @@ export default () => {
   // set investor type to cookie
   $("[data-investor-type]").on("click", (e) => {
 	 $('#Role').val(e.target.dataset.investorType);
-	 var acceptText = $('.onboarding-overlay__text');	 
+	 var acceptText = $('.onboarding-overlay__text');
 	 $(acceptText).text($(acceptText).text().replace("{role}", e.target.dataset.investorName));
   });
 
   // set country
   $(".set-location__item").on("click", (e) => {
      $('#Country').val(e.target.dataset.isoCountry);
-	 var acceptText = $('.onboarding-overlay__text');	 
+	 var acceptText = $('.onboarding-overlay__text');
 	 $(acceptText).text($(acceptText).text().replace("{country}", e.target.dataset.nameCountry));
-	 
+
 	 if(e.target.dataset.isoCountry != "GB"){
 		 $('.btn.private-investor').toggle();
 		 $('.onboarding-overlay__title.uk-title').toggle();
@@ -65,4 +65,15 @@ export default () => {
 	 }
     showTab(2);
   });
+
+  // finish onboarding, close modal
+  $("#submit-board").on("click", () => {
+    onboarding.removeClass("active");
+    $('body').removeClass('overflow-hidden')
+    Cookies.set("agreePolicy", 1, { expires: 365 });
+  });
+
+  $('.onboarding-overlay__link').on('click', function() {
+    $('.onboarding-overlay__scroller').slideToggle();
+  })
 };

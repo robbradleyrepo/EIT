@@ -59,6 +59,7 @@
         margin-bottom: 48px
     &__text
         @extend .onboarding-overlay__hint
+        margin-bottom: 34px
         max-width: 456px
         @extend .onboarding-overlay__btns
     &__link
@@ -84,6 +85,23 @@
             &::after
                 background: $gold
     &__row-location
+    &__scroller
+        margin: 0 auto
+        max-width: 700px
+        padding: 5px 10px
+        max-height: 250px
+        overflow-y: scroll
+        border-top: 1px solid $gold
+        border-bottom: 1px solid $gold
+        display: none
+        &::-webkit-scrollbar
+            width: 4px
+        &::-webkit-scrollbar-thumb
+            background-color: $secondary-silver
+            border-radius: 5px
+        p
+            font-size: 18px
+            font-weight: 300
 
 .set-location
     &__row.row
