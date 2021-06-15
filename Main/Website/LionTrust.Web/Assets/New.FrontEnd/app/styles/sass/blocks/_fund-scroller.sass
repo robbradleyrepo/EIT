@@ -17,9 +17,12 @@
     &__left
         @include breakpoint(desktop, up)
             width: 45%
-        @include breakpoint(desktop-large, up)
+        @media (min-width: 1600px) 
+            width: 40%
+        @media (min-width: 1800px) 
             width: 36%
-
+        @media (min-width: 2560px) 
+            width: 26%
     &__right
         display: flex
         position: relative
@@ -35,8 +38,12 @@
             position: absolute
             width: 50%
             padding: 16px 0 30px 20px
-        @include breakpoint(desktop-large, up)
+        @media (min-width: 1600px) 
+            width: 56%
+        @media (min-width: 1800px) 
             width: 62%
+        @media (min-width: 2560px) 
+            width: 72%
 
     &__slider
         display: flex
