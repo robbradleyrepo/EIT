@@ -78,3 +78,21 @@
         min-width: auto
         &:hover
             color: $primary
+
+.input-btn
+    display: inline-block
+    position: relative
+    input[type="submit"]
+        @extend .btn
+        @extend .btn-primary
+    &::before
+        content: "\e901"
+        font-family: 'icomoon' !important
+        position: absolute
+        right: 25px
+        top: 17px
+        font-size: 12px
+        transition: right .3s ease-out
+    &:hover
+        &::before
+            right: 15px
