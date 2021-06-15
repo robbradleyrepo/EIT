@@ -11,7 +11,7 @@
             </h2>
         }
     <div class="row">
-        <div class="col-lg-6 @(Model.TextAlignment != null && !string.IsNullOrEmpty(Model.TextAlignment.Value) && Model.TextAlignment.Value.Equals("rigth") ? "order-1" : "order-lg-0")">
+        <div class="col-lg-5 @(Model.TextAlignment != null && !string.IsNullOrEmpty(Model.TextAlignment.Value) && Model.TextAlignment.Value.Equals("rigth") ? "order-1 offset-lg-1" : "order-1 order-lg-0")">
             <div class="team-card__text">
                 @if (Sitecore.Context.PageMode.IsExperienceEditor || !string.IsNullOrEmpty(Model.Subtitle))
                 {
@@ -49,7 +49,7 @@
         </div>
         @if (Sitecore.Context.PageMode.IsExperienceEditor || Model.Image != null)
         {
-            <div class="col-lg-6">
+            <div class="col-lg-6 @(Model.TextAlignment != null && !string.IsNullOrEmpty(Model.TextAlignment.Value) && Model.TextAlignment.Value.Equals("rigth") ? "" : "offset-lg-1")">
                 @Html.Glass().RenderImage(Model, x => x.Image, new NameValueCollection { { "class", "team-card__img" }, { "alt", "Meet the tea" } }, isEditable: true)
             </div>
         }
