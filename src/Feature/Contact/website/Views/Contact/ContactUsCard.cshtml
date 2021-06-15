@@ -1,4 +1,5 @@
-﻿@using System.Collections.Specialized
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using System.Collections.Specialized
 @model LionTrust.Feature.Contact.Models.IContactUsCard
 @if (Model != null)
 {
@@ -7,99 +8,100 @@
     var showFaxLabel = !string.IsNullOrEmpty(Model.FaxNumber) || !string.IsNullOrEmpty(Model.OutsideFaxNumber) || Sitecore.Context.PageMode.IsExperienceEditor;
     var showFaxDivider = (!string.IsNullOrEmpty(Model.FaxNumber) && !string.IsNullOrEmpty(Model.OutsideFaxNumber)) || Sitecore.Context.PageMode.IsExperienceEditor;
 
-<section class="container contact-section">
-    <h2 class="h2 contact-section__title"></h2>
-    <div class="row">
-        <div class="col-lg-11">
-            <div class="card">
-                <div class="contacts">
-                    <div class="row">
-                        <div class="col-xl-6">
-                            <h3 class="contacts__title">@Html.Glass().Editable(Model, m => m.Heading)</h3>
-                            <div class="contacts__text">
-                                <div class="contacts__text-top">
-                                    <span class="font-500">@Html.Glass().Editable(Model, m => m.SubHeading)</span>
-                                    <span>@Html.Glass().Editable(Model, m => m.Street)</span>
-                                    <span>@Html.Glass().Editable(Model, m => m.City)</span>
-                                    <span>@Html.Glass().Editable(Model, m => m.PostalCode)</span>
-                                </div>
-                                <div class="contacts__text-bottom">
-                                    <div class="d-xl-flex">
-                                        @if (showTelLabel)
-                                        {
-                                            <span class="lit-column">@Html.Glass().Editable(Model, m => m.TelLabel)</span>
-                                        }
-                                        <div class="contacts__phones">
-                                            <span class="contacts__phone">@Html.Glass().Editable(Model, m => m.TelNumber)</span>
-                                            @if (showTelDivider)
+    <section class="container contact-section">
+        <h2 class="h2 contact-section__title"></h2>
+        <div class="row">
+            <div class="col-lg-11">
+                <div class="card">
+                    <div class="contacts">
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <h3 class="contacts__title">@Html.Glass().Editable(Model, m => m.Heading)</h3>
+                                <div class="contacts__text">
+                                    <div class="contacts__text-top">
+                                        <span class="font-500">@Html.Glass().Editable(Model, m => m.SubHeading)</span>
+                                        <span>@Html.Glass().Editable(Model, m => m.Street)</span>
+                                        <span>@Html.Glass().Editable(Model, m => m.City)</span>
+                                        <span>@Html.Glass().Editable(Model, m => m.PostalCode)</span>
+                                    </div>
+                                    <div class="contacts__text-bottom">
+                                        <div class="d-xl-flex">
+                                            @if (showTelLabel)
                                             {
-                                                <span class="contacts__divider">/</span>
+                                                <span class="lit-column">@Html.Glass().Editable(Model, m => m.TelLabel)</span>
                                             }
-                                            <span class="contacts__phone">@Html.Glass().Editable(Model, m => m.OutsideTelNumber)</span>
-                                            @if (!string.IsNullOrEmpty(Model.OutsideTelNumber) || Sitecore.Context.PageMode.IsExperienceEditor)
-                                            {
-                                                <span class="gray-text">@Html.Glass().Editable(Model, m => m.OutsideLabel)</span>
-                                            }
-                                        </div>
+                                            <div class="contacts__phones">
+                                                <span class="contacts__phone">@Html.Glass().Editable(Model, m => m.TelNumber)</span>
+                                                @if (showTelDivider)
+                                                {
+                                                    <span class="contacts__divider">/</span>
+                                                }
+                                                <span class="contacts__phone">@Html.Glass().Editable(Model, m => m.OutsideTelNumber)</span>
+                                                @if (!string.IsNullOrEmpty(Model.OutsideTelNumber) || Sitecore.Context.PageMode.IsExperienceEditor)
+                                                {
+                                                    <span class="gray-text">@Html.Glass().Editable(Model, m => m.OutsideLabel)</span>
+                                                }
+                                            </div>
 
-                                    </div>
-                                    <div class="d-xl-flex">
-                                        @if (showFaxLabel)
-                                        {
-                                            <span class="lit-column">@Html.Glass().Editable(Model, m => m.FaxLabel)</span>
-                                        }
-                                        <div class="contacts__phones">
-                                            <span class="contacts__phone">@Html.Glass().Editable(Model, m => m.FaxNumber)</span>
-                                            @if (showFaxDivider)
+                                        </div>
+                                        <div class="d-xl-flex">
+                                            @if (showFaxLabel)
                                             {
-                                                <span class="contacts__divider">/</span>
+                                                <span class="lit-column">@Html.Glass().Editable(Model, m => m.FaxLabel)</span>
                                             }
-                                            <span class="contacts__phone">@Html.Glass().Editable(Model, m => m.OutsideFaxNumber)</span>
-                                            @if (!string.IsNullOrEmpty(Model.OutsideFaxNumber) || Sitecore.Context.PageMode.IsExperienceEditor)
-                                            {
-                                                <span class="gray-text">@Html.Glass().Editable(Model, m => m.OutsideLabel)</span>
-                                            }
+                                            <div class="contacts__phones">
+                                                <span class="contacts__phone">@Html.Glass().Editable(Model, m => m.FaxNumber)</span>
+                                                @if (showFaxDivider)
+                                                {
+                                                    <span class="contacts__divider">/</span>
+                                                }
+                                                <span class="contacts__phone">@Html.Glass().Editable(Model, m => m.OutsideFaxNumber)</span>
+                                                @if (!string.IsNullOrEmpty(Model.OutsideFaxNumber) || Sitecore.Context.PageMode.IsExperienceEditor)
+                                                {
+                                                    <span class="gray-text">@Html.Glass().Editable(Model, m => m.OutsideLabel)</span>
+                                                }
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="contacts__btns">
+                                    @using (Html.Glass().BeginRenderLink(Model, m => m.CTA1Link, new NameValueCollection { { "class", "btn btn-primary contacts__btn" } }, isEditable: true))
+                                    {
+                                        if (Model.CTA1Link != null)
+                                        {
+                                            @Model.CTA1Link.Text
+                                        }
+                                        else if (Sitecore.Context.PageMode.IsExperienceEditor)
+                                        {
+                                            @:Edit First CTA
+                                        }
+                                        <i class="icon-arrow-right animate-arrow"></i>
+                                    }
+                                    @using (Html.Glass().BeginRenderLink(Model, m => m.CTA1Link, new NameValueCollection { { "class", "link-styles contacts__btn-link" } }, isEditable: true))
+                                    {
+                                        if (Model.CTA1Link != null)
+                                        {
+                                            @Model.CTA1Link.Text
+                                        }
+                                        else if (Sitecore.Context.PageMode.IsExperienceEditor)
+                                        {
+                                            @:Edit Second CTA
+                                        }
+                                        <i class="icon-arrow-right animate-arrow"></i>
+                                    }
+                                </div>
                             </div>
-                            <div class="contacts__btns">
-                                @using (Html.Glass().BeginRenderLink(Model, m => m.CTA1Link, new NameValueCollection { { "class", "btn btn-primary contacts__btn" } }, isEditable: true))
-                                {
-                                    if (Model.CTA1Link != null)
-                                    {
-                                        @Model.CTA1Link.Text
-                                    }
-                                    else if (Sitecore.Context.PageMode.IsExperienceEditor)
-                                    {
-                                        @:Edit First CTA
-                                    }
-                                    <i class="icon-arrow-right animate-arrow"></i>
-                                }
-                                @using (Html.Glass().BeginRenderLink(Model, m => m.CTA1Link, new NameValueCollection { { "class", "link-styles contacts__btn-link" } }, isEditable: true))
-                                {
-                                    if (Model.CTA1Link != null)
-                                    {
-                                        @Model.CTA1Link.Text
-                                    }
-                                    else if (Sitecore.Context.PageMode.IsExperienceEditor)
-                                    {
-                                        @:Edit Second CTA
-                                    }
-                                    <i class="icon-arrow-right animate-arrow"></i>
-                                }
+                            <div class="col-xl-6 d-none d-xl-block">
+                                @Html.Glass().RenderImage(Model, x => x.Image, new NameValueCollection { { "class", "contacts__image" } }, isEditable: true)
                             </div>
-                        </div>
-                        <div class="col-xl-6 d-none d-xl-block">
-                            @Html.Glass().RenderImage(Model, x => x.Image, new NameValueCollection { { "class", "contacts__image" } }, isEditable: true)
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-} else if (Sitecore.Context.PageMode.IsExperienceEditor)
+    </section>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
 {
     @: Add datasource for Contact Us Card component
 }
