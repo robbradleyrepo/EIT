@@ -111,6 +111,11 @@ export default () => {
       toggleMobileFilter() {
         this.mobileFilter = !this.mobileFilter;
       },
+
+      submitSearchForm(e) {        
+        if(e.target.searchText.value)
+          this.applyFilters()
+      }
     },
     watch: {
       sortValue: function () {
