@@ -11,6 +11,9 @@
         {
             public const string Logo_FieldId = "{B2EFA293-4240-4439-997F-DDAC10179067}";
             public const string Text_FieldId = "{44AFFB73-0BB2-4312-8968-39D3737453E4}";
+            public const string PrivateProfileCard_FieldId = "{0D201AF9-3ADA-4859-8B60-C2DA64C5F059}";
+            public const string ProfessionalProfileCard_FieldId = "{A2546C2D-E821-46F7-8042-D78F3F1CA8F1}";
+            public const string Profile_FieldId = "{0E092A53-4282-4D27-BB59-8FEFD1E28196}";
         }
 
         public static class ChooseCountry
@@ -21,6 +24,28 @@
             public const string CorrectLoctionText_FieldId = "{6A3DB8CD-E179-4927-A577-8B89F9D0F97B}";
             public const string IncorrectLoctionText_FieldId = "{109A3CE4-CC8B-4ADA-A68B-543720275671}";
             public const string RestOfTheWorldText_FieldId = "{F19A60A6-B96E-42DC-A892-DD3FB51E764C}";
+        }
+
+        public static class ChooseInvestorRole
+        {
+            public const string TemplateId = "{908235B6-5238-430C-B9F9-82FBA0EF0B82}";
+            public const string Title_FieldId = "{1D452E5D-B5CC-47BF-948F-ED4C8FD6A030}";
+            public const string PrivateInvestorButtonText_FieldId = "{AC033A48-3AED-433E-B355-EC1E4219A4B1}";
+            public const string ProfessionalInvestorButtonText_FieldId = "{CE5BC780-0AC7-4C6F-9709-6B9F12928FD8}";
+            public const string ModalCTAText_FieldId = "{7162B524-6D00-439F-8A02-7F4380B8C613}";
+            public const string NonUKTitle_FieldId = "{737FC7EA-BD8A-4111-BA19-7449825940BA}";
+            public const string ModalTitle_FieldId = "{3C2BA2CF-F1FE-4BBF-BD43-817702CCC7E7}";
+            public const string ModalIntroText_FieldId = "{6AC57F67-1641-4BFE-8039-0C567B1E994D}";
+            public const string ModalBodyText_FieldId = "{ACD1C722-0258-4BD4-9368-9E37D3FE5273}";
+            public const string ModalButtonText_FieldId = "{B7EDC3EF-95E7-44D4-AE3C-4889D55CBBA7}";
+        }
+
+        public static class TermsAndConditions
+        {
+            public const string TemplateId = "{5BB1E536-F64D-462B-8666-0EB6A811EE8F}";
+            public const string Title_FieldId = "{04EBF102-7785-40A0-BF5F-040EBCD004A5}";
+            public const string ButtonText_FieldId = "{A2BCC4F0-B7F1-4AC8-BDAE-DF69211E86C2}";
+            public const string AcceptanceText_FieldId = "{30E38AAE-22D7-46C3-B51B-D1F54BAE5C14}";
         }
 
         public static class Region
@@ -44,8 +69,25 @@
         public static class Analytics
         {
             public const string DefaultAddress_EntityName = "default";
-
             public const string Addresses_FacetName = "Addresses";
+            public const string PrivateInvestor_ProfileCard_ItemId = "{96ECF117-66C3-4B55-AD1F-07A0BBAD3959}";
+            public const string ProfressionalInvestor_ProfileCard_ItemId = "{A5108E5C-69A2-4939-8D9C-C237E55C7DB5}";
+            public const string ProfileCardValue_FieldId = "{85970AB7-22EA-4206-BE86-C0167178860B}";
+            public const string ProfileCardValueKey_XmlElementName = "key";
+            public const string ProfileCardValueName_XmlAttribute = "name";
+            public const string ProfileCardValueValue_XmlAttribute = "value";
+        }
+
+        public enum Roles
+        {
+            Private,
+            Profressional
+        }
+
+        public enum Tabs
+        {
+            CountryList,
+            CountryGeoIp
         }
     }
 }

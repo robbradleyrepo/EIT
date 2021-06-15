@@ -78,6 +78,7 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Web" />
     <Reference Include="System.Core" />
   </ItemGroup>
@@ -88,9 +89,13 @@
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\OnboardingController.cs" />
     <Compile Include="Models\IChooseCountry.cs" />
+    <Compile Include="Models\IChooseInvestorRole.cs" />
     <Compile Include="Models\ICountry.cs" />
     <Compile Include="Models\IHome.cs" />
     <Compile Include="Models\IOnboardingConfiguration.cs" />
+    <Compile Include="Models\IProfileCard.cs" />
+    <Compile Include="Models\ITermsAndConditions.cs" />
+    <Compile Include="Models\OnboardingSubmit.cs" />
     <Compile Include="Models\IRegion.cs" />
     <Compile Include="Models\OnboardingViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
