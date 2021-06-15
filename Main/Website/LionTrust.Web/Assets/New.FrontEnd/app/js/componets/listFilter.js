@@ -76,7 +76,11 @@ export default () => {
           console.log("SearchResults", SearchResults);
           console.log("this.amountResults", this.amountResults);
           this.loading = false;
-        });
+        })
+        .fail(e => {
+          console.error(e);
+          this.loading = false
+        })
       },
 
       clearFilters() {
@@ -112,7 +116,6 @@ export default () => {
       sortValue: function () {
         this.params.sortValue = [this.sortValue];
         this.applyFilters();
-        console.log("this.params", this.params);
       },
     },
     mounted() {
@@ -128,7 +131,10 @@ export default () => {
           });
         }
         this.facets = facets;
-      });
+      }).fail(e => {
+        console.error(e);
+        this.loading = false
+      })
 
       $.get(
         "https://cm-liontrust-it.sagittarius.agency/ArticleSearchApi/Search?page=1"
@@ -139,7 +145,10 @@ export default () => {
         this.amountResults = TotalResults;
         console.log("this.amountResults", this.amountResults);
         this.loading = false;
-      });
+      }).fail(e => {
+        console.log(e);
+        this.loading = false
+      })
 
       document.querySelector("body").addEventListener("click", () => {
         this.sortModal = false;
