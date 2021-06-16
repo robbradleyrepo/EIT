@@ -1,0 +1,51 @@
+﻿---
+ID: "59c10805-3fd8-43b0-b7a8-6436127fbe65"
+Parent: "7d17762a-c7a1-4313-b970-4b417819c48f"
+Template: "e8041e72-ccbc-41ce-9d69-94a63f153595"
+Path: /sitecore/content/LionTrustNew/Home/Contact us Page/_Local/Follow Us Social
+DB: master
+BranchID: "6e14c10e-64d4-4154-bbe4-fbed8c647c13"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 75
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{15779795-CF8A-46D6-A270-62E768569B4F}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210616T121935Z
+    - ID: "31a7ca3b-2a25-4352-ba11-0f47156a087a"
+      Hint: FollowUsSocial_ThirdSocialIcon
+      Value: |
+        <image mediaid="{A658EF01-E78F-4D22-B85A-3BB6D26A1D9C}" />
+    - ID: "409f8514-e699-4f19-8f35-425460a598df"
+      Hint: FollowUsSocial_Heading
+      Value: Follow Us
+    - ID: "48f948eb-7a98-402a-8134-011fa1df01e5"
+      Hint: FollowUsSocial_ThirdTwitterTags
+      Value: LiontrustHeroes, LiontrustViews, LiontrustFuture
+    - ID: "5591f29f-31a0-4aa6-9c7f-a1b738c63cf0"
+      Hint: FollowUsSocial_SecondSocialIcon
+      Value: |
+        <image mediaid="{0CB29CBF-C218-4830-905B-F2E1CC078DA0}" />
+    - ID: "b75eecd0-8455-43e3-ae0d-5eba1dd07809"
+      Hint: FollowUsSocial_Description
+      Value: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+    - ID: "ca1aa90e-0099-41a1-b9ec-5b01a027fd87"
+      Hint: FollowUsSocial_FirstSocialLink
+      Value: |
+        <link text="Liontrust" linktype="external" url="https://www.linkedin.com/company/liontrust-asset-management/" anchor="" target="" />
+    - ID: "dd0ed9c5-a7c0-441a-baa5-6ca7525b90e4"
+      Hint: FollowUsSocial_FirstSocialIcon
+      Value: |
+        <image mediaid="{F9EFB8C0-E9DC-42D9-9D1F-AEE0E5A0FF14}" />
+    - ID: "ff9c463f-1f07-434f-93dc-0097008c2f44"
+      Hint: FollowUsSocial_SecondSocialLink
+      Value: |
+        <link text="LiontrustHeroes" linktype="external" url="https://www.facebook.com/liontrustheroes/" anchor="" target="" />

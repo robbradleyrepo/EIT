@@ -77,11 +77,11 @@
                                         }
                                         <i class="icon-arrow-right animate-arrow"></i>
                                     }
-                                    @using (Html.Glass().BeginRenderLink(Model, m => m.CTA1Link, new NameValueCollection { { "class", "link-styles contacts__btn-link" } }, isEditable: true))
+                                    @using (Html.Glass().BeginRenderLink(Model, m => m.CTA2Link, new NameValueCollection { { "class", "link-styles contacts__btn-link" } }, isEditable: true))
                                     {
-                                        if (Model.CTA1Link != null)
+                                        if (Model.CTA2Link != null)
                                         {
-                                            @Model.CTA1Link.Text
+                                            @Model.CTA2Link.Text
                                         }
                                         else if (Sitecore.Context.PageMode.IsExperienceEditor)
                                         {
