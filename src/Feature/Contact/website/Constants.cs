@@ -4,6 +4,7 @@
     {
         public static class ContactUsCard
         {
+            public const string Title_FieldId = "{508EF2AD-4DD4-49E8-A95A-436E3ED8F69F}";
             public const string Heading_FieldId = "{933D66BB-1F8C-4754-B619-79FD55F2A2EC}";
             public const string SubHeading_FieldId = "{7678B456-28DF-4C62-AD4B-150DAF5128BA}";
             public const string Image_FieldId = "{23021A8B-4EEB-4497-8D85-2C0291436AF4}";
@@ -52,6 +53,12 @@
             public const string DesktopBackgroundImage_FieldId = "{4BD2348B-4C93-49C3-A3B6-8F9165A75D54}";
             public const string TabletBackgroundImage_FieldId = "{D96C59C0-BAD5-4C2A-8D3C-775CEB68899E}";
             public const string MobileBackgroundImage_FieldId = "{466570C2-23F3-4660-9A13-DE2176EC2BBA}";
+        }
+
+        public static class ContactUsForm
+        {
+            public const string Heading_FieldId = "{20EEA52D-E2F5-4044-BA05-2E4F9E01F28C}";
+            public const string Description_FieldId = "{9C6F549A-4035-4989-BECF-73A7ADE8F016}";
         }
     }
 }

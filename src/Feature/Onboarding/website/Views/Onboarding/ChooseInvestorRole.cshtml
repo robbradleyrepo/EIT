@@ -1,0 +1,26 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Onboarding.Models.IChooseInvestorRole
+@if (Model != null)
+{
+<div class="onboarding-overlay__tab" data-tab-number="2">
+    <div class="onboarding-overlay__title uk-title">
+        @Html.Glass().Editable(Model, m => m.Title)
+    </div>
+    <div class="onboarding-overlay__title non-uk-title">
+        @Html.Glass().Editable(Model, m => m.NonUKTitle)
+    </div>
+    <div class="onboarding-overlay__btns">
+        <button data-set-step="3" data-investor-type="0" data-investor-name="@Model.PrivateInvestorButtonText" class="btn btn-primary m-2 m-sm-0 mr-sm-2 mr-md-3 onboarding-overlay__set-step private-investor">
+            @Html.Glass().Editable(Model, m => m.PrivateInvestorButtonText)
+            <i class="icon-arrow-right animate-arrow"></i>
+        </button>
+        <button data-set-step="3" data-investor-type="1" data-investor-name="@Model.ProfessionalInvestorButtonText" class="btn btn-primary onboarding-overlay__set-step">
+            @Html.Glass().Editable(Model, m => m.ProfessionalInvestorButtonText)
+            <i class="icon-arrow-right animate-arrow"></i>
+        </button>
+    </div>
+    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="onboarding-overlay__get-hint">
+        @Html.Glass().Editable(Model, m => m.ModalCTAText)
+    </a>
+</div>
+}

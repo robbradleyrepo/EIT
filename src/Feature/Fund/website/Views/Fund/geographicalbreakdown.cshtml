@@ -1,0 +1,31 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Fund.Models.GraphBreakdownViewModel
+@if (Model == null)
+{
+    return;
+}
+<div class="col-lg-6">
+    <div class="table-section">
+        <h3 class="table-section__title">@Html.Glass().Editable(m => m.Component.Heading)</h3>
+        <div class="table-responsive">
+            <table class="table table-full-border table-horizontal-chart">
+                <tbody>
+                    @foreach (var item in Model.Breakdown)
+                    {
+                        <tr>
+                            <th scope="row">@item.Name</th>
+                            <td class="column-half">
+                                <div class="twoline-percent">
+                                    <div class="twoline-percent_row">
+                                        <div class="twoline-percent__number"><span class="twoline-percent__digit">@item.FormattedWeight</span> <div class="percents" style="width: @item.Weight;"></div></div>
+                                        <div class="twoline-percent__number"><span class="twoline-percent__digit">@item.FormattedWeight</span> <div class="percents percents__gold" style="width: @item.Weight;"></div></div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

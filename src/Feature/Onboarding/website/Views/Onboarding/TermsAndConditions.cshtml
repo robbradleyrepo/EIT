@@ -1,0 +1,24 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Onboarding.Models.ITermsAndConditions
+@if (Model != null)
+{
+    <div class="onboarding-overlay__tab" data-tab-number="3">
+        <div class="onboarding-overlay__title">
+            @Html.Glass().Editable(Model, m => m.Title)
+        </div>
+        <div class="onboarding-overlay__text">
+            @Model.AcceptanceText
+        </div>
+        <div class="onboarding-overlay__btns">
+            @using (Html.BeginForm())
+            {
+                <input type="hidden" id="Country" name="Country" />
+                <input type="hidden" id="Role" name="Role" />
+                <button class="btn btn-primary" id="submit-board">
+                    @Html.Glass().Editable(Model, m => m.ButtonText)
+                    <i class="icon-arrow-right animate-arrow"></i>
+                </button>
+            }
+        </div>
+    </div>
+}

@@ -5,6 +5,9 @@
 
     public interface IContactUsCard : IContactGlassBase
     {
+        [SitecoreField(Constants.ContactUsCard.Title_FieldId)]
+        string Title { get; set; }
+
         [SitecoreField(Constants.ContactUsCard.Heading_FieldId)]
         string Heading { get; set; }
 

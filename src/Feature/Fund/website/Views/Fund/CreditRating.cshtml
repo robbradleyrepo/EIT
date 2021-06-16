@@ -1,0 +1,17 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Fund.CreditRating.ICreditRating
+@if ((Model == null || Model.Children == null || !Model.Children.Any()) && !Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    return;
+}
+<div class="col-lg-6">
+    <div class="table-section">
+        <h3 class="table-section__title table-section__title_credit-sec">
+            @Html.Glass().Editable(m => m.Heading)
+        </h3>
+        <div class="chart-table">
+            <!-- set values for char in data attribute -->
+            <canvas class="credit-rating-chart" data-chart='@Model.JsonDataObject' width="400" height="300"></canvas>
+        </div>
+    </div>
+</div>

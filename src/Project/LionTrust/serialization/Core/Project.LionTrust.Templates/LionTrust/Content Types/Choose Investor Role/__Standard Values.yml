@@ -1,0 +1,39 @@
+﻿---
+ID: "7888dab1-d6cd-4312-b663-937516ce6a06"
+Parent: "4fe5e8dc-1144-41f6-87cd-25f99e9babb6"
+Template: "4fe5e8dc-1144-41f6-87cd-25f99e9babb6"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Choose Investor Role/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1d452e5d-b5cc-47bf-948f-ed4c8fd6a030"
+      Hint: ChooseInvestorRole_Title
+      Value: Which of these best describes you
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210611T124259Z
+    - ID: "3c2ba2cf-f1fe-4bbf-bd43-817702ccc7e7"
+      Hint: ChooseInvestorRole_ModalTitle
+      Value: "Why are you asking this?"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "7162b524-6d00-439f-8a02-7f4380b8c613"
+      Hint: ChooseInvestorRole_ModalCTAText
+      Value: "Why are you asking this?"
+    - ID: "737fc7ea-bd8a-4111-ba19-7449825940ba"
+      Hint: ChooseInvestorRole_NonUKText
+      Value: We only cater for Professional Investors across your region
+    - ID: "ac033a48-3aed-433e-b355-ec1e4219a4b1"
+      Hint: ChooseInvestorRole_PrivateInvestorButtonText
+      Value: Private investor
+    - ID: "b7edc3ef-95e7-44d4-ae3c-4889d55cbba7"
+      Hint: ChooseInvestorRole_ModalButtonText
+      Value: Ok
+    - ID: "ce5bc780-0ac7-4c6f-9709-6b9f12928fd8"
+      Hint: ChooseInvestorRole_ProfressionalInvestorButtonText
+      Value: Professional investor

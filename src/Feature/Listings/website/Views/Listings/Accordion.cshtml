@@ -3,7 +3,8 @@
 @using Glass.Mapper.Sc.Web.Mvc
 @model LionTrust.Feature.Listings.Models.AccordionViewModel
 @{
-    var wrapperClass = Model.RenderingData.Theme != null && Model.RenderingData.Theme.Value == "light" ? string.Empty : "accordion-section";
+
+    var wrapperClass = Model.Data.Children.Any(x => x.Image.HasValue() && x.VideoId.HasValue()) ? "accordion-section" : "accordion-section accordion-section_full";
     var textColour = Model.RenderingData.Theme != null && Model.RenderingData.Theme.Value == "light" ? "accordion_white" : string.Empty;
     var containerId = LionTrust.Feature.Listings.Utils.RandomString(10, true);
     var textAlign = Model.RenderingData.TextAlign != null ? Model.RenderingData.TextAlign.Value : "left";

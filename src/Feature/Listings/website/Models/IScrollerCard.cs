@@ -14,9 +14,6 @@
         [SitecoreField(Constants.ScrollerCard.Description_FieldID, SitecoreFieldType.RichText, "Content")]
         string Description { get; set; }
 
-        [SitecoreField(Constants.ScrollerCard.BackgroundImage_FieldID, SitecoreFieldType.Image, "Content")]
-        Image BackgroundImage { get; set; }
-
         [SitecoreField(Constants.ScrollerCard.Link_FieldID, SitecoreFieldType.GeneralLink, "Content")]
         Link Link { get; set; }
 

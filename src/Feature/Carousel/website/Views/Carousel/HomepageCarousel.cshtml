@@ -31,18 +31,16 @@
                             <div class="slide" style="background-image: url('@carouselCard.Image.GetSafeSitecoreImageUrl()');">
                                 @if (!carouselCard.CTAIsVideo)
                                 {
-                                    using (@Html.Glass().BeginRenderLink(carouselCard, c => c.CTALink))
-                                    {
-                                        <div class="slide__content">
-                                            <div class="slide__head">
-                                                @Html.Glass().RenderImage(carouselCard, x => x.AuthorImage, new NameValueCollection { { "class", "slide__head-img" }, { "alt", carouselCard.AuthorName } })
-                                                <span class="slide__name">@carouselCard.AuthorName</span>
-                                            </div>
-                                            <h2 class="slide__title">
-                                                @carouselCard.Heading
-                                            </h2>
+                                    <div class="slide__content">
+                                        <div class="slide__head">
+                                            @Html.Glass().RenderImage(carouselCard, x => x.AuthorImage, new NameValueCollection { { "class", "slide__head-img" }, { "alt", carouselCard.AuthorName } })
+                                            <span class="slide__name">@carouselCard.AuthorName</span>
                                         </div>
-                                    }
+                                        <h2 class="slide__title">
+                                            @carouselCard.Heading
+                                        </h2>
+                                    </div>
+                                    @Html.Glass().GenerateGoalAnchor(carouselCard, c => c.CTALink, carouselCard.CTAGoal, new NameValueCollection { { "class", "slide__play" } });
                                 }
                                 else
                                 {

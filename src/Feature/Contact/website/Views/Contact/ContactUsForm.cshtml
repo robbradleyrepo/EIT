@@ -1,0 +1,26 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Contact.Models.IContactUsForm
+@if (Model != null)
+{
+    <section class="container contact-form-section">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 id="send-message" class="">@Html.Glass().Editable(Model, m => m.Heading)</h2>
+                <div class="send-message-text">
+                    <p>
+                        @Html.Glass().Editable(Model, m => m.Description)
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                @Html.Sitecore().Placeholder("contact-form")
+            </div>
+        </div>
+    </section>
+}
+else
+{
+    @: Please assign datasource for Contact Us Form
+}

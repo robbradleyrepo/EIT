@@ -1,0 +1,47 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Onboarding.Models.OnboardingViewModel
+@if (Model != null)
+{
+    var activeClass = @Model.ShowOnboarding && !Sitecore.Context.PageMode.IsExperienceEditor ? "active" : string.Empty;
+
+    <div class="onboarding-overlay @activeClass">
+        <div class="onboarding-overlay__content">
+            <div class="onboarding-overlay__hint">
+                @Model.Text
+            </div>
+            <div class="onboarding-overlay__logo">
+                <img src="@Model.Logo" class="onboarding-overlay__img" />
+            </div>
+            @Html.Partial("~/Views/OnBoarding/ChooseCountry.cshtml", Model.ChooseCountry)
+            @Html.Partial("~/Views/OnBoarding/ChooseInvestorRole.cshtml", Model.ChooseInvestorRole)
+            @Html.Partial("~/Views/OnBoarding/TermsAndConditions.cshtml", Model.TermsAndConditions)
+        </div>
+        <div class="onboarding-overlay__steps">
+            <span data-change-step="1" class="onboarding-overlay__step active"></span>
+            <span data-change-step="2" class="onboarding-overlay__step"></span>
+            <span data-change-step="3" class="onboarding-overlay__step"></span>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">@Html.Glass().Editable(Model, m => m.ChooseInvestorRole.ModalTitle)</h5>
+                </div>
+                <div class="modal-body">
+                    <p class="font-500">
+                        @Html.Glass().Editable(Model, m => m.ChooseInvestorRole.ModalIntroText)
+                    </p>
+                    <p class="mb-0">
+                        @Html.Glass().Editable(Model, m => m.ChooseInvestorRole.ModalBodyText)
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-bs-dismiss="modal" aria-label="Close" class="modal-btn">@Html.Glass().Editable(Model, m => m.ChooseInvestorRole.ModalButtonText) <i class="icon-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+}

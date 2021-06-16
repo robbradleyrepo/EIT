@@ -1,0 +1,44 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Onboarding.Models.IChooseCountry
+@if (Model != null)
+{
+    <div class="onboarding-overlay__tab" data-tab-number="0">
+        <div class="onboarding-overlay__title">
+            @Html.Glass().Editable(Model, m => m.Title)
+        </div>
+        <div class="row set-location__row">
+            @foreach (var region in Model.Regions)
+            {
+                <div class="col-6 col-lg-4 set-location">
+                    <div class="set-location__content">
+                        <div class="set-location__title">@region.Name</div>
+                        <ul class="set-location__list">
+                            @foreach (var country in region.Countries)
+                            {
+                                <li class="set-location__item" data-iso-country="@country.ISO" data-name-country="@country.CountryName">@Html.Glass().Editable(country, c => c.CountryName)</li>
+                            }
+                        </ul>
+                        @if (Model.Regions.Last().Id == region.Id)
+                        {
+                            <div class="set-location__item" data-iso-country="O1">@Html.Glass().Editable(Model, m => m.RestOfTheWorldText)</div>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="onboarding-overlay__tab" data-tab-number="1">
+        <div class="onboarding-overlay__title">
+            @Html.Glass().Editable(Model, m => m.Subtitle) @Model.CurrentCountryName
+        </div>
+        <div class="onboarding-overlay__btns">
+            <button data-set-step="2" class="btn btn-primary onboarding-overlay__set-step" id="correct-location">
+                @Html.Glass().Editable(Model, m => m.CorrectLoctionText)
+                <i class="icon-arrow-right animate-arrow"></i>
+            </button>
+        </div>
+        <a href="#" data-set-step="0" class="onboarding-overlay__get-hint onboarding-overlay__set-step">
+            @Html.Glass().Editable(Model, m => m.IncorrectLocationText)
+        </a>
+    </div>
+}
