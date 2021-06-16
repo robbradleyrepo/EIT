@@ -32,6 +32,4 @@
         [SitecoreField(Constants.OnboardingConfiguration.ProfessionalProfileCard_FieldId)]
         IProfileCard ProfressionalProfileCard { get; set; }
     }
-
-
 }

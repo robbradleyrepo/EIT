@@ -11,5 +11,8 @@
 
         [SitecoreField(Constants.Country.ISO_FieldId)]
         string ISO { get; set; }
+
+        [SitecoreField(Constants.Country.TermsAndConditions_FieldId)]
+        string TermsAndConditions { get; set; }
     }
 }

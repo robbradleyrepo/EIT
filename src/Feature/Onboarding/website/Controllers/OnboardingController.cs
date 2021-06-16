@@ -42,15 +42,15 @@
             var viewModel = new OnboardingViewModel(data.OnboardingConfiguration);
             viewModel.ShowOnboarding = true;
 
-            if (viewModel.ChooseCountry == null 
-                || viewModel.ChooseCountry.Regions == null 
+            if (viewModel.ChooseCountry == null
+                || viewModel.ChooseCountry.Regions == null
                 || viewModel.ChooseCountry.Regions.Any(r => r.Countries == null)
                 || viewModel.ChooseInvestorRole == null
                 || viewModel.TermsAndConditions == null)
             {
                 return null;
             }
-            else if (OnboardingComplete(data.OnboardingConfiguration.Profile.Name))
+            else if (OnboardingComplete(data.OnboardingConfiguration))
             {
                 viewModel.ShowOnboarding = false;
             }
@@ -79,6 +79,35 @@
             }
 
             return View("~/Views/OnBoarding/OnboardingOverlay.cshtml", viewModel);
+        }
+
+        public ActionResult GetTermsAndConditions(string countryIso)
+        {
+            var data = _context.GetHomeItem<IHome>();
+
+            if (data == null || string.IsNullOrWhiteSpace(countryIso))
+            {
+                return null;
+            }
+            else
+            {
+                var termsAndConditions = data.OnboardingConfiguration.TermsAndConditions.FirstOrDefault();
+
+                var country = data.OnboardingConfiguration?
+                    .ChooseCountry?
+                    .SelectMany(x => x.Regions?
+                    .SelectMany(r => r.Countries))?
+                    .FirstOrDefault(c => c.ISO == countryIso);
+
+                if (termsAndConditions == null || country == null)
+                {
+                    return null;
+                }
+                else
+                {
+                    return View("~/Views/OnBoarding/TermsText.cshtml", country);
+                }
+            }
         }
 
         [HttpPost]
@@ -125,17 +154,17 @@
             return Render();
         }
 
-        private bool OnboardingComplete(string profileName)
+        private bool OnboardingComplete(IOnboardingConfiguration config)
         {
             var result = false;
 
-            var profile = GetProfile(profileName);
+            var profile = GetProfile(config.Profile.Name);
 
             if (profile != null && profile.PatternId.HasValue
                 && new List<Guid>
                 {
-                    new Guid(Analytics.PrivateInvestor_ProfileCard_ItemId),
-                    new Guid(Analytics.ProfressionalInvestor_ProfileCard_ItemId)
+                    config.PrivateProfileCard.Id,
+                    config.ProfressionalProfileCard.Id
                 }.Contains(profile.PatternId.Value))
             {
                 result = true;

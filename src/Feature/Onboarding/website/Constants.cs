@@ -59,6 +59,7 @@
             public const string TemplateId = "{8D10EADA-2239-45F5-B93A-33D733FA20D6}";
             public const string CountryName_FieldId = "{1E75B4DB-FBBF-4410-B2F0-99CCFB86A559}";
             public const string ISO_FieldId = "{A46A84E5-E402-4784-95D3-E316A9761EFB}";
+            public const string TermsAndConditions_FieldId = "{BFD9B660-B602-4BEF-82FC-BECC3C9417A6}";
         }
 
         public static class Cookies
@@ -70,8 +71,6 @@
         {
             public const string DefaultAddress_EntityName = "default";
             public const string Addresses_FacetName = "Addresses";
-            public const string PrivateInvestor_ProfileCard_ItemId = "{96ECF117-66C3-4B55-AD1F-07A0BBAD3959}";
-            public const string ProfressionalInvestor_ProfileCard_ItemId = "{A5108E5C-69A2-4939-8D9C-C237E55C7DB5}";
             public const string ProfileCardValue_FieldId = "{85970AB7-22EA-4206-BE86-C0167178860B}";
             public const string ProfileCardValueKey_XmlElementName = "key";
             public const string ProfileCardValueName_XmlAttribute = "name";
