@@ -7,7 +7,7 @@
     margin-bottom: 40px
     @include breakpoint(desktop, up)
         height: 340px
-        margin-bottom: 100px
+        margin-bottom: 109px
     &:hover
         .podcast__back
             transform: scale(1.05)
@@ -34,7 +34,7 @@
         @include breakpoint(desktop, up)
             width: 80%
         @include breakpoint(desktop-large, up)
-            padding: 40px 20px
+            padding: 38px 20px
             width: 62%
     &__head
         display: flex
@@ -47,6 +47,11 @@
         @include breakpoint(tablet, up)
             font-size: 12px
             letter-spacing: 2.4px
+        @include breakpoint(desktop-large, up)
+            font-size: 14px
+            margin-left: 10px
+            margin-bottom: 18px
+            letter-spacing: 3.8px
     &__mic
         color: $primary
         margin-right: 10px
@@ -87,8 +92,12 @@
             font-weight: normal
         > span
             margin-right: 30px
+            font-size: 14px
+            margin-top: 5px
             @include breakpoint(tablet, up)
                 margin-right: 40px
+            @include breakpoint(desktop, up)
+                margin-right: 57px
         > a
             margin-right: 30px
             font-size: 20px
@@ -98,6 +107,10 @@
             @include breakpoint(tablet, up)
                 font-size: 32px
                 margin-right: 40px
+            @include breakpoint(desktop, up)
+                margin-right: 57px
+        @include breakpoint(desktop, up)
+            bottom: 37px
     &__icon
         height: 22px
         @include breakpoint(desktop, up)

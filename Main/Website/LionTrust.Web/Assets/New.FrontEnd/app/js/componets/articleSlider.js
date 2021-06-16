@@ -20,8 +20,12 @@ export default () => {
         slidesPerView: 3.19,
         slidesOffsetAfter: 200,
       },
+      1600: {
+        slidesPerView: 3.27,
+        slidesOffsetAfter: 200,
+      },
       1800: {
-        slidesPerView: 4,
+        slidesPerView: 3.94,
         slidesOffsetAfter: 500,
       },
       2000: {
@@ -29,7 +33,7 @@ export default () => {
         slidesOffsetAfter: 500,
       },
       2550: {
-        slidesPerView: 5.3,
+        slidesPerView: 5.25,
         slidesOffsetAfter: 500,
       },
     },

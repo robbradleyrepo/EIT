@@ -48,12 +48,14 @@
     margin-top: 30px
     margin-bottom: 40px
     @include breakpoint(desktop, up)
-        margin-top: 40px
+        margin-top: 37px
     &__title
         margin-bottom: 20px
+        letter-spacing: 0.42px
         @include breakpoint(desktop, up)
             margin-bottom: 2rem
             margin-bottom: 10px
+            letter-spacing: 1.86px
     &__subtitle
         font-weight: bold
         font-weight: 10px
@@ -67,16 +69,17 @@
             margin-top: 20px
     &__btns
         margin-top: 40px
-        margin-bottom: 70px 
+        margin-bottom: 70px
         @include breakpoint(desktop, up)
             margin-top: 45px
     &__text
         font-size: 18px
         display: inline-block
-        font-weight: 300
         line-height: 28px
         @include breakpoint(desktop, up)
             font-size: 20px
+            line-height: 30px
+            letter-spacing: 0.2px
     &__content
         display: inline-block
         @include breakpoint(desktop, up)
@@ -84,3 +87,6 @@
     &__btnbox
         display: flex
         justify-content: center
+    .imagepromo__btn
+        @include breakpoint(desktop, up)
+            width: 212px

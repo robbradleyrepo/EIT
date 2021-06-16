@@ -1,14 +1,13 @@
 .fundscroller
     position: relative
     @include breakpoint(desktop, up)
-        padding: 16px 0 70px
+        padding: 16px 0 18px
     &__box
         position: relative
         display: flex
         width: 100%
         min-height: 400px
-        padding: 20px 0
-        margin: 10px 0
+        margin: 32px 0
         flex-direction: column
         @include breakpoint(desktop, up)
             flex-direction: row
@@ -39,7 +38,7 @@
             width: 50%
             padding: 16px 0 30px 20px
         @media (min-width: 1600px) 
-            width: 56%
+            width: 55%
         @media (min-width: 1800px) 
             width: 62%
         @media (min-width: 2560px) 
