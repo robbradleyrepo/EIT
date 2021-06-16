@@ -87,8 +87,12 @@
             font-weight: normal
         > span
             margin-right: 30px
+            font-size: 14px
+            margin-top: 5px
             @include breakpoint(tablet, up)
                 margin-right: 40px
+            @include breakpoint(desktop, up)
+                margin-right: 57px
         > a
             margin-right: 30px
             font-size: 20px
@@ -98,6 +102,10 @@
             @include breakpoint(tablet, up)
                 font-size: 32px
                 margin-right: 40px
+            @include breakpoint(desktop, up)
+                margin-right: 57px
+        @include breakpoint(desktop, up)
+            bottom: 37px
     &__icon
         height: 22px
         @include breakpoint(desktop, up)
