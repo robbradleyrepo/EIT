@@ -1,7 +1,7 @@
 import Vue from "vue/dist/vue.common.prod";
 import { pagination } from "./listFilter/mixins/pagination";
 export default () => {
-  const host = "http://localhost:3004/article-lister?";
+  const host = "https://cm-liontrust-it.sagittarius.agency/ArticleSearchApi/";
   new Vue({
     el: "#lister-app",
     mixins: [pagination],
@@ -67,7 +67,7 @@ export default () => {
         this.loading = true;
         this.mobileFilter = false;
         $.get(
-          "https://cm-liontrust-it.sagittarius.agency/ArticleSearchApi/Search?" +
+          host + "Search?" +
             this.getQuerySring()
         ).done((responce) => {
           const { SearchResults, TotalResults } = responce;
@@ -102,6 +102,7 @@ export default () => {
         this.sortModal = true;
       },
       changePage(num) {
+        this.scrollToTop();
         if (this.getPage !== num) {
           this.page = num;
           this.params.page = [num];
@@ -125,7 +126,7 @@ export default () => {
     },
     mounted() {
       $.get(
-        "https://cm-liontrust-it.sagittarius.agency/ArticleSearchApi/Facets"
+        `${host}Facets`
       ).done((responce) => {
         const facets = [];
         for (let i in responce.Facets) {
@@ -142,7 +143,7 @@ export default () => {
       })
 
       $.get(
-        "https://cm-liontrust-it.sagittarius.agency/ArticleSearchApi/Search?page=1"
+        `${host}Search?page=1`
       ).done((responce) => {
         const { SearchResults, TotalResults } = responce;
         this.searchData = SearchResults;

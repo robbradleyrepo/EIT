@@ -42,6 +42,9 @@ export const pagination = {
     disabledNextBtn() {
       return this.getPage === this.getPageAmount;
     },
+    getFilterTopPosition() {
+      return document.getElementById('lister-app').offsetTop;
+    }
   },
 
   methods: {
@@ -66,6 +69,14 @@ export const pagination = {
         if (nextPage <= this.getPageAmount) {
           this.changePage(nextPage);
         }
+      },
+      scrollToTop() {
+        
+        window.scroll({
+          top: this.getFilterTopPosition,
+          left: 0,
+          behavior: 'smooth'
+        })
       },
       changePage(num) {
         if (this.getPage !== num) {
