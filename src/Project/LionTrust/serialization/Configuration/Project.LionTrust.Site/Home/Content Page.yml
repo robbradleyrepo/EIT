@@ -1,0 +1,52 @@
+﻿---
+ID: "07fe7e07-a1ab-4e96-a3cc-b2a0aecc6a66"
+Parent: "7502b69e-d154-4861-a033-bc0cb30a91b5"
+Template: "26e1649f-d891-47c8-91d9-be41231f6fd6"
+Path: /sitecore/content/LionTrustNew/Home/Content Page
+DB: master
+BranchID: "123bc431-2512-47f6-bdeb-93cae56db624"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: office/32x32/document_orientation_portrait.png
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{6FF528FF-B3F7-4976-8478-AA18791AAFA2}"
+          p:after="r[@uid='{21A62FB1-9BA7-42F4-BBAE-893230139CB5}']"
+          s:ds="{AA6BBB48-7ED5-4A84-8F60-64BB75744635}"
+          s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
+          s:par=""
+          s:ph="header" />
+        <r
+          uid="{FC8206EE-92A5-40E1-9083-BF1A99C6064A}"
+          p:after="r[@uid='{6FF528FF-B3F7-4976-8478-AA18791AAFA2}']"
+          s:ds="{DE6219F6-23DC-420A-AA04-704924E315F5}"
+          s:id="{BA0509C8-337A-45E7-A597-8035DC2F1C21}"
+          s:par=""
+          s:ph="main" />
+      </d>
+    </r>
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{1FDDC09C-BE7A-43F1-A68D-B4C36965826A}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210616T105928Z
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: Content Page
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Content Page
