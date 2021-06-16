@@ -1,0 +1,46 @@
+﻿---
+ID: "40d3d732-2692-43a8-90d4-180808c91e06"
+Parent: "3643bd93-3949-4b21-bba3-89cb15934f8c"
+Template: "26e1649f-d891-47c8-91d9-be41231f6fd6"
+Path: /sitecore/templates/Branches/Project/LionTrust/Page Types/Page/$name
+DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{6FF528FF-B3F7-4976-8478-AA18791AAFA2}"
+          p:after="r[@uid='{21A62FB1-9BA7-42F4-BBAE-893230139CB5}']"
+          s:ds="{AA6BBB48-7ED5-4A84-8F60-64BB75744635}"
+          s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
+          s:par=""
+          s:ph="header" />
+        <r
+          uid="{80B5F5E0-79D0-4D46-8ACA-C1641F5BDFC1}"
+          p:after="r[@uid='{6FF528FF-B3F7-4976-8478-AA18791AAFA2}']"
+          s:ds="{378D052F-45F4-4263-94B2-4BE91FD2A7D4}"
+          s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{A99840D1-7422-4CFC-B584-F65EC2F3E7CA}"
+          p:after="r[@uid='{80B5F5E0-79D0-4D46-8ACA-C1641F5BDFC1}']"
+          s:ds="{666AB816-398C-4D75-996C-CD9B16C57273}"
+          s:id="{A811D2B0-D08D-4991-A9DD-6D9FA5799CBD}"
+          s:par=""
+          s:ph="main" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210616T085930Z
