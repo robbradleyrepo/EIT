@@ -1,0 +1,27 @@
+﻿---
+ID: "39ac700a-af02-4493-869e-0c59b0f4e4b3"
+Parent: "ceb8723e-3b4f-478b-8dcf-60ec0cfc6197"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/LionTrust/Page Types/Content Page
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: office/32x32/document_orientation_portrait.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Type: tree list
+  Value: |
+    {1930BBEB-7805-471A-A3BE-4858AC7CF696}
+    {AC1F2CD5-1DC2-4F6B-85B9-C8E622EB7EDB}
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{74C85EDD-6CE5-4446-B1A5-FD7D9E6DFB31}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210616T085623Z

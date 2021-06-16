@@ -1,0 +1,44 @@
+﻿---
+ID: "74c85edd-6ce5-4446-b1a5-fd7d9e6dfb31"
+Parent: "39ac700a-af02-4493-869e-0c59b0f4e4b3"
+Template: "39ac700a-af02-4493-869e-0c59b0f4e4b3"
+Path: /sitecore/templates/Project/LionTrust/Page Types/Content Page/__Standard Values
+DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{CD1590E1-6573-4CC7-B0A9-E3BB6A9DADE4}">
+        <r
+          id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+          ph="/header/navigation"
+          uid="{21A62FB1-9BA7-42F4-BBAE-893230139CB5}" />
+        <r
+          id="{29A12478-EBE8-4B5C-BF2E-871026066814}"
+          ph="footer"
+          uid="{CCBBB036-5788-4F78-AC6A-DF34C178F76C}" />
+        <r
+          id="{DD1D438A-3971-438B-B1C9-461415F43488}"
+          ph="footer"
+          uid="{A9D97645-8E0D-4192-A314-3437510B5AF8}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210616T085705Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: $name
