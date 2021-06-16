@@ -5,10 +5,12 @@
         width: 100%
         padding-bottom: 40px
         margin-top: 10px
+        @include breakpoint(desktop, up)
+            padding-bottom: 27px
     @include breakpoint(tablet, up)
         padding-bottom: 0
     @include breakpoint(desktop, up)
-        margin: 115px 0 60px
+        margin: 70px 0 60px        
     .swiper-container-carousel .swiper-slide
         position: relative
         transition: transform .4s ease
@@ -75,7 +77,8 @@
             background-repeat: no-repeat
     .swiper-slide-active
         @include breakpoint(desktop, up)
-            transform: scale(1.8)
+            transform: scale(1.74)
+            margin-top: 35px
             z-index: 5
         .slide
             padding-top: 50%
@@ -98,7 +101,7 @@
     padding-top: 50%
     @include breakpoint(desktop, up)
         height: 0
-        padding-top: 56%
+        padding-top: 66%
     &:hover
         &::after
             opacity: .4
@@ -133,8 +136,8 @@
             top: 10px
             left: 10px
         @include breakpoint(desktop-large, up)
-            top: 20px
-            left: 20px
+            top: 27px
+            left: 25px
     &__head
         display: flex
     &__head-img
@@ -151,14 +154,16 @@
         font-size: 26px
         line-height: 32px
         margin-top: 20px
+        font-weight: 300
         @include breakpoint(desktop, up)
             font-size: 20px
             width: 80%
             margin-top: 0
         @include breakpoint(desktop-large, up)
+            width: 60%
             font-size: 29px
             margin-top: 13px
-            width: 60%
+            line-height: 34px
     &__play
         cursor: pointer
         font-size: 0.6em
@@ -181,7 +186,9 @@
         display: none
         @include breakpoint(desktop, up)
             font-size: 6px
-            bottom: 27px
+            bottom: 6px
+            left: 6px
+            letter-spacing: 1.9px
         svg
             transform: scale(0.55)
             path
