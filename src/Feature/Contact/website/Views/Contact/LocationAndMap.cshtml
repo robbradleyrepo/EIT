@@ -16,7 +16,7 @@
                     {
                         foreach (var mapLink in Model.MapLinks)
                         {                            
-                            <button class="select-office__tab @activeCssClass" data-tab="@mapLink.Name">@Html.Glass().Editable(mapLink, m => m.MapLinkName)</button>
+                            <button class="select-office__tab @activeCssClass" data-tab="@mapLink.Name">@mapLink.MapLinkName</button>
                             if (first)
                             {
                                 first = false;

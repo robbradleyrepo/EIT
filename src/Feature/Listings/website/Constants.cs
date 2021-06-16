@@ -37,9 +37,6 @@
             public const string Description_FieldID = "{4826908C-F8C8-43E4-8360-0C09ED0C732A}";
             public const string Description_FieldName = "ScrollCard_Description";
 
-            public const string BackgroundImage_FieldID = "{05E19C75-F1A5-4591-BCF1-062C9EFFACC5}";
-            public const string BackgroundImage_FieldName = "ScrollCard_BackgroundImage";
-
             public const string Link_FieldID = "{CE038003-3CA3-4B12-A32A-BB5E664C0595}";
             public const string Link_FieldName = "ScrollCard_Link";
 
