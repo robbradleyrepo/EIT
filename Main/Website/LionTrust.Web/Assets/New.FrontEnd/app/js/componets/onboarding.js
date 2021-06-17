@@ -63,6 +63,14 @@ export default () => {
 	 else{
 		 $('.onboarding-overlay__title.non-uk-title').toggle();
 	 }
+	 
+	 $.ajax({
+		url: "/api/sitecore/Onboarding/GetTermsAndConditions?countryIso=" + e.target.dataset.isoCountry
+	 }).done(function(data) {
+		$(".onboarding-overlay__scroller.terms-text").html(data);
+		$('.onboarding-overlay__scroller').toggle();
+	});
+	 	 
     showTab(2);
   });
 

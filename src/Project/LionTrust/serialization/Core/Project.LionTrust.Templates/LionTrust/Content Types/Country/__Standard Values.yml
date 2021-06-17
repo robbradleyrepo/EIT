@@ -4,6 +4,11 @@ Parent: "6ed40c8d-804a-4d93-b81e-0ed14d4fd138"
 Template: "6ed40c8d-804a-4d93-b81e-0ed14d4fd138"
 Path: /sitecore/templates/Project/LionTrust/Content Types/Country/__Standard Values
 DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{E537B5E3-8AA1-4B45-A8E7-26AE1FD18799}"
 Languages:
 - Language: en
   Versions:

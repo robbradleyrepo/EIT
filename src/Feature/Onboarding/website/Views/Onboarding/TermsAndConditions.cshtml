@@ -9,6 +9,9 @@
         <div class="onboarding-overlay__text">
             @Model.AcceptanceText
         </div>
+        <div class="onboarding-overlay__scroller terms-text">
+           
+        </div>
         <div class="onboarding-overlay__btns">
             @using (Html.BeginForm())
             {
@@ -18,7 +21,7 @@
                     @Html.Glass().Editable(Model, m => m.ButtonText)
                     <i class="icon-arrow-right animate-arrow"></i>
                 </button>
-            }
+                }
         </div>
     </div>
 }
