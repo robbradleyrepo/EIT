@@ -70,10 +70,10 @@
                         <select class="article-filters__select-custom" @change="setYear($event)">
                             <option value="0" disabled selected>Year</option>
                             <option value="0">All</option>
-                            <option value="1">2018</option>
-                            <option value="2">2019</option>
-                            <option value="3">2020</option>
-                            <option value="4">2021</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
                         </select>
                         <i class="article-filters__icon-arrow article-filters__icon-arrow_select"></i>
                     </div>
@@ -121,12 +121,12 @@
                             </span>
                         </div>
                         <label for="newest" class="option-checkbox">
-                            <input id="newest" v-model="sortValue" value="ASC" class="option-checkbox__input" type="radio" name="sort" checked>
+                            <input id="newest" v-model="sortOrder" value="ASC" class="option-checkbox__input" type="radio" name="sort" checked>
                             <span class="option-checkbox__text">Date newest first</span>
                             <span class="option-checkbox__icon"></span>
                         </label>
                         <label for="oldest" class="option-checkbox">
-                            <input id="oldest" v-model="sortValue" value="DESC" class="option-checkbox__input" type="radio" name="sort">
+                            <input id="oldest" v-model="sortOrder" value="DESC" class="option-checkbox__input" type="radio" name="sort">
                             <span class="option-checkbox__text">Date oldest first</span>
                             <span class="option-checkbox__icon"></span>
                         </label>

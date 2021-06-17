@@ -13,9 +13,9 @@ export default () => {
       searchData: [],
       loading: true,
       sortModal: false,
-      sortValue: "ASC",
+      sortOrder: "ASC",
       amountResults: 0,
-      showPerPage: 3,
+      showPerPage: 21,
       showPageInPagination: 7,
       mobileFilter: false,
     },
@@ -43,7 +43,7 @@ export default () => {
       getQuerySring() {
         let str = "";
         str = str + "page=" + this.page;
-        if (this.searchText) str = str + "searchTerm=" + this.searchText;
+        if (this.searchText) str = str + "&searchTerm=" + this.searchText;
         for (let prop in this.params) {
           const mutatedProp = prop.replace(/ /g, "");
           const lowerCaseProp =
@@ -51,7 +51,6 @@ export default () => {
           if (this.params[prop].length)
             str += "&" + `${lowerCaseProp}=${this.params[prop].join("|")}`;
         }
-        console.log("str", str);
         return str;
       },
 
@@ -64,23 +63,9 @@ export default () => {
       },
 
       applyFilters() {
-        this.loading = true;
+        // this.pushStateLink();        
         this.mobileFilter = false;
-        $.get(
-          host + "Search?" +
-            this.getQuerySring()
-        ).done((responce) => {
-          const { SearchResults, TotalResults } = responce;
-          this.searchData = SearchResults;
-          this.amountResults = TotalResults;
-          console.log("SearchResults", SearchResults);
-          console.log("this.amountResults", this.amountResults);
-          this.loading = false;
-        })
-        .fail(e => {
-          console.error(e);
-          this.loading = false
-        })
+        this.getSearchRequest();
       },
 
       clearFilters() {
@@ -90,25 +75,29 @@ export default () => {
         this.searchText = "";
         this.$emit("clearOption");
         this.mobileFilter = false;
-        //  this.pushStateLink();
+        this.applyFilters();
       },
+
       setMonth(e) {
         this.params.month = [e.target.value];
       },
+
       setYear(e) {
         this.params.year = [e.target.value];
       },
+
       showSort() {
         this.sortModal = true;
       },
+
       changePage(num) {
-        this.scrollToTop();
         if (this.getPage !== num) {
+          this.scrollToTop();
           this.page = num;
-          this.params.page = [num];
           this.applyFilters();
         }
       },
+
       toggleMobileFilter() {
         this.mobileFilter = !this.mobileFilter;
       },
@@ -116,45 +105,53 @@ export default () => {
       submitSearchForm(e) {        
         if(e.target.searchText.value)
           this.applyFilters()
+      },
+
+      getFacetsRequest() {
+        $.get(
+          `${host}Facets`
+        ).done((responce) => {
+          const facets = [];
+          for (let i in responce.Facets) {
+            const name = i.replace(/([a-z])([A-Z])/g, "$1 $2");
+            facets.push({
+              name,
+              data: responce.Facets[i],
+            });
+          }
+          this.facets = facets;
+        }).fail(e => {
+          console.error(e);
+          this.loading = false
+        })
+      },
+
+      getSearchRequest() {
+        this.loading = true;
+        $.get(
+          host + "Search?" +
+            this.getQuerySring()
+        ).done((responce) => {
+          const { SearchResults, TotalResults } = responce;
+          this.searchData = SearchResults;
+          this.amountResults = TotalResults;
+          this.loading = false;
+        })
+        .fail(e => {
+          console.error(e);
+          this.loading = false
+        })
       }
     },
     watch: {
-      sortValue: function () {
-        this.params.sortValue = [this.sortValue];
+      sortOrder: function () {
+        this.params.sortOrder = [this.sortOrder];
         this.applyFilters();
       },
     },
     mounted() {
-      $.get(
-        `${host}Facets`
-      ).done((responce) => {
-        const facets = [];
-        for (let i in responce.Facets) {
-          const name = i.replace(/([a-z])([A-Z])/g, "$1 $2");
-          facets.push({
-            name,
-            data: responce.Facets[i],
-          });
-        }
-        this.facets = facets;
-      }).fail(e => {
-        console.error(e);
-        this.loading = false
-      })
-
-      $.get(
-        `${host}Search?page=1`
-      ).done((responce) => {
-        const { SearchResults, TotalResults } = responce;
-        this.searchData = SearchResults;
-        console.log("this.searchData", responce);
-        this.amountResults = TotalResults;
-        console.log("this.amountResults", this.amountResults);
-        this.loading = false;
-      }).fail(e => {
-        console.log(e);
-        this.loading = false
-      })
+      this.getFacetsRequest();
+      this.getSearchRequest();     
 
       document.querySelector("body").addEventListener("click", () => {
         this.sortModal = false;
