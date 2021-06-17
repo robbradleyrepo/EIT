@@ -12,7 +12,7 @@ import fundsSlider from "./componets/fundsSlider";
 import articleSlider from "./componets/articleSlider";
 import awardsSlider from "./componets/awardsSlider";
 import investmentCard from "./componets/investmentCard";
-import articleFilter from "./componets/articleFilter";
+// import articleFilter from "./componets/articleFilter";
 import parallaxScrolling from "./componets/parallaxScrolling";
 import stickyNavbar from "./componets/stickyNavbar";
 import literatureOverlay from "./componets/literatureOverlay";
@@ -21,6 +21,7 @@ import capitalisationChart from "./componets/capitalisationChart";
 import fundChartDropdown from "./componets/fundChartDropdown";
 import shareLink from "./componets/shareLink";
 import locationAndMap from "./componets/locationAndMap";
+import listFilter from "./componets/listFilter";
 
 document.addEventListener("DOMContentLoaded", () => {
   onboardingOverlay();
@@ -38,7 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
   fundChartDropdown();
   shareLink();
   locationAndMap();
-  if (document.querySelector(".article-page")) articleFilter();
+  listFilter();
+  // if (document.querySelector(".article-page")) articleFilter();
   if (document.querySelector(".main-page")) parallaxScrolling();
 
   $('[data-toggle="tooltip"]').tooltip({

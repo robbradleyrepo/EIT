@@ -18,51 +18,75 @@
   </header>
 
   <main>
-    <div class="lister-app">
-    <!--#include virtual="/components/BC005-Article-Filters.html" -->
-    <section class="container">
-      <div class="row">
-        <div class="col-md-6 col-lg-4">
-          <!--#include virtual="/components/reusables/article-promo/Article-promo-fund-update.html" -->
+    <div id="lister-app">
+      <!--#include virtual="/components/BC005-Article-Filters.html" -->
+      <section class="container">
+        <div class="text-center my-5" v-if="loading">
+          <div class="spinner-border text-gold" role="status"></div>
         </div>
-        <div class="col-md-6 col-lg-4">
-          <!--#include virtual="/components/reusables/article-promo/Article-promo-fund-update.html" -->
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <!--#include virtual="/components/reusables/article-promo/Article-promo-fund-update.html" -->
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <!--#include virtual="/components/reusables/article-promo/Article-promo-fund-update.html" -->
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <!--#include virtual="/components/reusables/article-promo/Article-promo-fund-update.html" -->
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <!--#include virtual="/components/reusables/article-promo/Article-promo-fund-update.html" -->
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <!--#include virtual="/components/reusables/article-promo/Article-promo-fund-update.html" -->
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <!--#include virtual="/components/reusables/article-promo/Article-promo-fund-update.html" -->
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <!--#include virtual="/components/reusables/article-promo/Article-promo-fund-update.html" -->
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <!--#include virtual="/components/reusables/article-promo/Article-promo-fund-update.html" -->
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <!--#include virtual="/components/reusables/article-promo/Article-promo-fund-update.html" -->
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <!--#include virtual="/components/reusables/article-promo/Article-promo-fund-update.html" -->
-        </div>
-      </div>
-      <!--#include virtual="/components/reusables/pagination.html" -->
-    </section>
+        <div class="row">
+          <article-item inline-template v-for="(article, i) in searchData" :key="i">
+            <div class="col-md-6 col-lg-4">
+              <div class="article-promo">
+                <a href="#article promo" class="article-promo__front">
+                </a>
+                <a href="#" class="article-promo__body">
+                  <div class="article-promo__head">
+                    <img class="article-promo__head-img" src="images/components/banners/writer.jpeg" alt="">
+                    <span class="article-promo__head-title">{{article.Subtitle}}</span>
+                  </div>
+                  <span class="article-promo__title">
+                    {{article.Title}}
+                  </span>
+                  <span class="article-promo__desc">
+                    {{article.Subtitle}}
+                  </span>
+                </a>
+                <div class="article-promo__footer">
+                  <div class="article-promo__footer-item">
+                    <img class="article-promo__clock" src="\images\components\svg-icons\clock.svg" alt="icon">
+                    <span class="article-promo__footer-text">{{article.Date}}</span>
+                  </div>
+                  <div class="article-promo__footer-item">
+                    <span class="article-promo__footer-text">{{article.Category}}</span>
+                    <i class="icon-booksmark article-promo__bookmark"></i>
+                  </div>
+                </div>
 
-  </div>
+                <img class="article-promo__back"
+                  src="images/components/imagepromo/vasily-koloda-8CqDvPuo_kI-unsplash.png" :alt="article.Title">
+              </div>
+            </div>
+          </article-item>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 offset-lg-3">
+            <nav v-if="getPageAmount > 1" class="pagination mt-3">
+              <a href="#" @click.prevent="prevPage" class="pagination__step pagination__step_forward"
+                :class="disablePrevBtn ? 'pagination__step_disabled' : ''"><i class="icon-arrow-left"></i> Previous</a>
+              <ul class="pagination__list">
+                <li class="pagination__item">
+                  <a @click.prevent="jumpPagesForward" v-if="showForwardPageBtn" href="#"
+                    class="pagination__link pagination__link_steps">...</a>
+                </li>
+                <li v-for="(page, i) in getPages" :key="i" class="pagination__item">
+                  <a @click.prevent="changePage(page)" href="#" class="pagination__link"
+                    :class="getPage === page ? 'active' : ''">
+                    {{page}}
+                  </a>
+                </li>
+                <li class="pagination__item">
+                  <a @click.prevent="jumpPagesNext" v-if="showNextPageBtn" href="#"
+                    class="pagination__link pagination__link_steps">...</a>
+                </li>
+              </ul>
+              <a href="#" @click.prevent="nextPage" :class="disabledNextBtn ? 'pagination__step_disabled' : ''"
+                class="pagination__step pagination__step_next">Next <i class="icon-arrow-right"></i></a>
+            </nav>
+          </div>
+        </div>
+      </section>
+    </div>
     <!--#include virtual="/components/UI023-Newsletter-Promo.html" -->
   </main>
 

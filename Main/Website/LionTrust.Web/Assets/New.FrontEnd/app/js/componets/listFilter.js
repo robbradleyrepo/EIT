@@ -1,58 +1,207 @@
 import Vue from "vue/dist/vue.common.prod";
-
+import { pagination } from "./listFilter/mixins/pagination";
 export default () => {
-  const host = "http://localhost:3004/article-lister?";
+  const host = "https://cm-liontrust-it.sagittarius.agency/ArticleSearchApi/";
   new Vue({
     el: "#lister-app",
+    mixins: [pagination],
     data: {
-      filters: {
-        fund: {
-          name: "Funds",
-          values: [
-            { name: "James James Inglis-Jones", checked: false },
-            { name: "Samantha Gleave", checked: false },
-            { name: "Samantha Gleave 123", checked: false },
-            { name: "Test 34", checked: false },
-            { name: "12323123", checked: false },
-            { name: "432 432 4", checked: false },
-          ],
-        },
-        fundTeam: {
-          name: "Funds",
-          values: [
-            { name: "James James Inglis-Jones", checked: false },
-            { name: "Samantha Gleave", checked: false },
-            { name: "Samantha Gleave 123", checked: false },
-            { name: "Test 34", checked: false },
-            { name: "12323123", checked: false },
-            { name: "432 432 4", checked: false },
-          ],
-        },
-        fundManager: {
-          name: "Funds",
-          values: [
-            { name: "James James Inglis-Jones", checked: false },
-            { name: "Samantha Gleave", checked: false },
-            { name: "Samantha Gleave 123", checked: false },
-            { name: "Test 34", checked: false },
-            { name: "12323123", checked: false },
-            { name: "432 432 4", checked: false },
-          ],
-        },
-        category: {
-          name: "Funds",
-          values: [
-            { name: "James James Inglis-Jones", checked: false },
-            { name: "Samantha Gleave", checked: false },
-            { name: "Samantha Gleave 123", checked: false },
-            { name: "Test 34", checked: false },
-            { name: "12323123", checked: false },
-            { name: "432 432 4", checked: false },
-          ],
-        },
+      facets: {},
+      params: {},
+      page: 1,
+      searchText: "",
+      searchData: [],
+      loading: true,
+      sortModal: false,
+      sortOrder: "ASC",
+      amountResults: 0,
+      showPerPage: 21,
+      showPageInPagination: 7,
+      mobileFilter: false,
+    },
+    computed: {
+      getFacets() {
+        const res = {};
+        for (let i in this.facets) {
+          res[i] = this.facets[i];
+        }
+        return res;
       },
-      month: 0,
-      year: 0,
+    },
+    methods: {
+      // adding selected values to query params
+      toggleSelect(item, facet) {
+        if (!this.params[facet.name]) this.params[facet.name] = [];
+        const existElem = this.params[facet.name].findIndex((el) => {
+          return el === item.Identifier;
+        });
+
+        if (existElem !== -1) this.params[facet.name].splice(existElem, 1);
+        else this.params[facet.name].push(item.Identifier);
+      },
+
+      getQuerySring() {
+        let str = "";
+        str = str + "page=" + this.page;
+        if (this.searchText) str = str + "&searchTerm=" + this.searchText;
+        for (let prop in this.params) {
+          const mutatedProp = prop.replace(/ /g, "");
+          const lowerCaseProp =
+            mutatedProp.charAt(0).toLowerCase() + mutatedProp.substr(1);
+          if (this.params[prop].length)
+            str += "&" + `${lowerCaseProp}=${this.params[prop].join("|")}`;
+        }
+        return str;
+      },
+
+      pushStateLink() {
+        window.history.pushState(
+          { page: "article-lister" },
+          "search",
+          `${window.location.href.split("?")[0]}?${this.getQuerySring()}`
+        );
+      },
+
+      applyFilters() {
+        // this.pushStateLink();        
+        this.mobileFilter = false;
+        this.getSearchRequest();
+      },
+
+      clearFilters() {
+        this.params = {};
+        this.page = 1;
+        this.open = false;
+        this.searchText = "";
+        this.$emit("clearOption");
+        this.mobileFilter = false;
+        this.applyFilters();
+      },
+
+      setMonth(e) {
+        this.params.month = [e.target.value];
+      },
+
+      setYear(e) {
+        this.params.year = [e.target.value];
+      },
+
+      showSort() {
+        this.sortModal = true;
+      },
+
+      changePage(num) {
+        if (this.getPage !== num) {
+          this.scrollToTop();
+          this.page = num;
+          this.applyFilters();
+        }
+      },
+
+      toggleMobileFilter() {
+        this.mobileFilter = !this.mobileFilter;
+      },
+
+      submitSearchForm(e) {        
+        if(e.target.searchText.value)
+          this.applyFilters()
+      },
+
+      getFacetsRequest() {
+        $.get(
+          `${host}Facets`
+        ).done((responce) => {
+          const facets = [];
+          for (let i in responce.Facets) {
+            const name = i.replace(/([a-z])([A-Z])/g, "$1 $2");
+            facets.push({
+              name,
+              data: responce.Facets[i],
+            });
+          }
+          this.facets = facets;
+        }).fail(e => {
+          console.error(e);
+          this.loading = false
+        })
+      },
+
+      getSearchRequest() {
+        this.loading = true;
+        $.get(
+          host + "Search?" +
+            this.getQuerySring()
+        ).done((responce) => {
+          const { SearchResults, TotalResults } = responce;
+          this.searchData = SearchResults;
+          this.amountResults = TotalResults;
+          this.loading = false;          
+        })
+        .fail(e => {
+          console.error(e);
+          this.loading = false
+        })
+      }
+    },
+    watch: {
+      sortOrder: function () {
+        this.params.sortOrder = [this.sortOrder];
+        this.applyFilters();
+      },
+    },
+    mounted() {
+      this.getFacetsRequest();
+      this.getSearchRequest();     
+
+      document.querySelector("body").addEventListener("click", () => {
+        this.sortModal = false;
+      });
     },
   });
 };
+
+Vue.component("select-field", {
+  data: function () {
+    return {
+      open: false,
+    };
+  },
+  methods: {
+    toggleOption() {
+      this.open = !this.open;
+    },
+    clearOption() {
+      this.$emit("clearOptionField");
+    },
+  },
+  mounted() {
+    document.querySelector("body").addEventListener("click", () => {
+      this.open = false;
+    });
+  },
+  created() {
+    this.$parent.$on("clearOption", this.clearOption);
+  },
+});
+
+Vue.component("option-field", {
+  data: function () {
+    return {
+      checked: false,
+    };
+  },
+  methods: {
+    clearChecked() {
+      this.checked = false;
+    },
+  },
+  created: function () {
+    this.$parent.$on("clearOptionField", this.clearChecked);
+  },
+});
+
+Vue.component("article-item", {
+  data: function () {
+    return {};
+  },
+});
