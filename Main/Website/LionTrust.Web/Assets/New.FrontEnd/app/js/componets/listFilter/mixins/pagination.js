@@ -27,7 +27,6 @@ export const pagination = {
           else pages.push(i + step);
         }
       }
-      console.log('pages',pages);
       return pages;
     },
     showForwardPageBtn() {

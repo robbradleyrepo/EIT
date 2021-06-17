@@ -135,7 +135,7 @@ export default () => {
           const { SearchResults, TotalResults } = responce;
           this.searchData = SearchResults;
           this.amountResults = TotalResults;
-          this.loading = false;
+          this.loading = false;          
         })
         .fail(e => {
           console.error(e);
