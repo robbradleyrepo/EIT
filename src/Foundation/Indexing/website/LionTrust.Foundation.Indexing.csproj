@@ -79,6 +79,7 @@
     <Compile Include="ComputedFields\Article\ArticleCategoryTagName.cs" />
     <Compile Include="ComputedFields\Article\ArticleTopicNames.cs" />
     <Compile Include="ComputedFields\SharedLogic\ComputedValueHelper.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="Models\IQuery.cs" />
     <Compile Include="Models\IQueryPredicateProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

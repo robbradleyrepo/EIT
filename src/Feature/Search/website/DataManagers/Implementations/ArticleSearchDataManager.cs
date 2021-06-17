@@ -89,7 +89,7 @@
             return listingArticleFacetsResponse;
         }
 
-        public ITaxonomySearchResponse GetArticleListingResponse(string database, string funds, string fundCategories, string fundManagers, string fundTeams, int? month, int? year, string searchTerm, int page)
+        public ITaxonomySearchResponse GetArticleListingResponse(string database, string funds, string fundCategories, string fundManagers, string fundTeams, int? month, int? year, string searchTerm, string sortOrder, int page)
         {
             var fromYear = year ?? 2000;
             var fromMonth = month ?? 1;
@@ -106,12 +106,24 @@
                 FundManagers = fundManagers?.Split('|'),
                 FundTeams = fundTeams?.Split('|'),
                 SearchTerm = searchTerm,
-                Skip = page * 10,
-                Take = 10,
+                Skip = page * 21,
+                Take = 21,
                 ToDate = new DateTime(toYear, toMonth, 31)
             };
 
-            var contentSearchResults = this._articleContentSearchService.GetDatedTaxonomyRelatedArticles(articleSearchRequest);
+            ContentSearchResults contentSearchResults;
+            if (sortOrder == "ASC")
+            {
+                contentSearchResults = this._articleContentSearchService.GetDatedTaxonomyRelatedArticles(articleSearchRequest, result => result.OrderBy(x => x.ArticleDate));
+            }
+            else if (sortOrder == "DESC")
+            {
+                contentSearchResults = this._articleContentSearchService.GetDatedTaxonomyRelatedArticles(articleSearchRequest, result => result.OrderByDescending(x => x.ArticleDate));
+            }
+            else
+            {
+                contentSearchResults = this._articleContentSearchService.GetDatedTaxonomyRelatedArticles(articleSearchRequest);
+            }
 
             var articleSearchResponse = new ArticleSearchResponse();
             if(contentSearchResults.TotalResults > 0)
