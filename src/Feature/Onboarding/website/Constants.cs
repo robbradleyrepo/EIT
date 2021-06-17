@@ -46,6 +46,7 @@
             public const string Title_FieldId = "{04EBF102-7785-40A0-BF5F-040EBCD004A5}";
             public const string ButtonText_FieldId = "{A2BCC4F0-B7F1-4AC8-BDAE-DF69211E86C2}";
             public const string AcceptanceText_FieldId = "{30E38AAE-22D7-46C3-B51B-D1F54BAE5C14}";
+            public const string Goal_FieldId = "{851BFD5D-4776-43F7-884E-CA5C3EB5AD48}";
         }
 
         public static class Region
