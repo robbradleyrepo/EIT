@@ -1,9 +1,9 @@
 ﻿namespace LionTrust.Foundation.Indexing.ComputedFields.Article
 {
-    using System;
     using LionTrust.Foundation.Indexing.ComputedFields.SharedLogic;
     using Sitecore.ContentSearch;
     using Sitecore.ContentSearch.ComputedFields;
+    using Sitecore.Data;
     using Sitecore.Data.Fields;
     using Sitecore.Data.Items;
     using Sitecore.Resources.Media;
@@ -13,24 +13,38 @@
         public string FieldName { get; set; }
         
         public string ReturnType { get; set; }
-        
+
+        private MediaItem GetDefaultListingImage(Database database)
+        {
+            return database.GetItem(Constants.DefaultListingImagePath);
+        }
+
         public object ComputeFieldValue(IIndexable indexable)
         {
             var item = ComputedValueHelper.CheckCastComputedFieldItem(indexable);
+            var publishedDatabase = Sitecore.Data.Database.GetDatabase("web");
 
             ImageField imageField = item?.Fields[Legacy.Constants.Article.Article_ListingImage];
             MediaItem mediaItem;
             if(imageField?.MediaDatabase.Name == "shell")
             {
-                var publishedDatabase = Sitecore.Data.Database.GetDatabase("web");
-                mediaItem = publishedDatabase.GetItem(imageField.MediaID);
+                mediaItem = publishedDatabase.GetItem(imageField.MediaID) ?? GetDefaultListingImage(publishedDatabase);
             }
             else
             {
-                mediaItem = imageField?.MediaItem ?? imageField.MediaDatabase.GetItem(imageField.MediaID);
+                var database = 
+                        imageField != null && imageField.MediaDatabase != null && imageField.MediaDatabase.Name != "shell"
+                                ? imageField.MediaDatabase 
+                                : publishedDatabase;
+
+                mediaItem = imageField?.MediaItem ?? database.GetItem(imageField.MediaID);
+                if(mediaItem == null)
+                {
+                    mediaItem = GetDefaultListingImage(database);
+                }
             }
 
-            string hashedUrl = string.Empty;
+            var hashedUrl = string.Empty;
             if (mediaItem != null)
             {
                 var imageUrl = MediaManager.GetMediaUrl(mediaItem, new MediaUrlOptions() { AlwaysIncludeServerUrl = false, Database = mediaItem.Database, LowercaseUrls = true });

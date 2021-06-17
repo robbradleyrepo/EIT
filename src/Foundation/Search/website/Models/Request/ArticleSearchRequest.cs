@@ -18,8 +18,6 @@
 
         public IEnumerable<string> FundTeams { get; set; }
 
-        public IEnumerable<Guid> Topics { get; set; }
-
         public string SearchTerm { get; set; }
 
         public int Skip { get; set; }
@@ -27,5 +25,7 @@
         public int Take { get; set; }
 
         public DateTime ToDate { get; set; }
+
+        public IEnumerable<Guid> Topics { get; set; }
     }
 }

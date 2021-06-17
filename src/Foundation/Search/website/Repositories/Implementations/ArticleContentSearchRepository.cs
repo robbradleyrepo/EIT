@@ -27,14 +27,14 @@
                     query = sort(query);
                 }
                 
-                var results = query.GetResults();
+                var results = query.Skip(skip).Take(take).GetResults();
                 
                 if (results == null)
                 {
                     return null;
                 }
 
-                return new ContentSearchResults { SearchResults = results.Hits.Skip(skip).Take(take), TotalResults = results.TotalSearchResults };
+                return new ContentSearchResults { SearchResults = results, TotalResults = results.TotalSearchResults };
             }
         }
     }
