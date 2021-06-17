@@ -17,7 +17,7 @@
             {
                 <input type="hidden" id="Country" name="Country" />
                 <input type="hidden" id="Role" name="Role" />
-                <button class="btn btn-primary" id="submit-board" data-goal-trigger="@Model.Goal.Id">
+                <button class="btn btn-primary" id="submit-board" data-goal-trigger="@Model.Goal?.Id">
                     @Html.Glass().Editable(Model, m => m.ButtonText)
                     <i class="icon-arrow-right animate-arrow"></i>
                 </button>
