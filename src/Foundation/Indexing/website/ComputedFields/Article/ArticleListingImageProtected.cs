@@ -32,11 +32,15 @@
             }
             else
             {
-                var database = imageField?.MediaDatabase ?? publishedDatabase;
-                mediaItem = imageField?.MediaItem ?? imageField?.MediaDatabase.GetItem(imageField.MediaID);
+                var database = 
+                        imageField != null && imageField.MediaDatabase != null && imageField.MediaDatabase.Name != "shell"
+                                ? imageField.MediaDatabase 
+                                : publishedDatabase;
+
+                mediaItem = imageField?.MediaItem ?? database.GetItem(imageField.MediaID);
                 if(mediaItem == null)
                 {
-                    GetDefaultListingImage(database);
+                    mediaItem = GetDefaultListingImage(database);
                 }
             }
 
