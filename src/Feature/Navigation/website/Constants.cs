@@ -208,5 +208,10 @@
             public const string QuickLinksList_FieldName = "QuickLinks_QuickLinksList";
             public const string QuickLinksList_FieldId = "{0D827B79-FD2F-46C0-8C0B-6EC87D4BC086}";
         }
+
+        public static class PageTypes
+        {
+            public const string LearningResourcesTemplateId = "{7B3DCDF5-5735-4FC8-89EB-DCB0F2F72972}";
+        }
     }
 }

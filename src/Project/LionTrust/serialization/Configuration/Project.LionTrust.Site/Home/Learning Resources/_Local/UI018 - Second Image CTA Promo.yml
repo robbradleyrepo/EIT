@@ -1,0 +1,46 @@
+﻿---
+ID: "37305e11-1cce-41a3-bc51-1946c38b4462"
+Parent: "f68a7a20-597f-4ccd-b896-414eaeb3dd11"
+Template: "d3d9d2ce-b2ce-49ac-b50d-6a5ffd4c4ab8"
+Path: "/sitecore/content/LionTrustNew/Home/Learning Resources/_Local/UI018 - Second Image CTA Promo"
+DB: master
+BranchID: "2b568216-2952-4a37-9a6f-0c1d2cc00c98"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 700
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{6D458FED-F84F-49DE-A88C-CA6055D6A489}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1054e4b6-1cf5-4c08-8a6d-d9b02fb17050"
+      Hint: ImageCTAPromo_Image
+      Value: |
+        <image mediaid="{438CEA59-E77D-4FB0-A495-653BA891E7EC}" />
+    - ID: "143867db-9bba-4097-9eb4-0099c175ad91"
+      Hint: ImageCTAPromo_CTALink
+      Value: |
+        <link linktype="external" text="Liontrust" url="http://www.google.com" anchor="" target="" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210617T151118Z
+    - ID: "48bf236b-0681-4a09-9085-4933fa1c4a7a"
+      Hint: ImageCTAPromo_Body
+      Value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dignissim vulputate mauris, vitae rhoncus nisl ultricies ac.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dignissim vulputate mauris, vitae rhoncus nisl ultricies ac.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dignissim vulputate mauris, vitae rhoncus nisl ultricies ac.
+    - ID: "4c838697-dbeb-4998-a261-ccc77bc59259"
+      Hint: ImageCTAPromo_Subtitle
+      Value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dignissim vulputate mauris, vitae rhoncus nisl ultricies ac.
+    - ID: "4f8e0e85-38f1-4ab6-9ad6-dce0008c8304"
+      Hint: ImageCTAPromo_TextAlignment
+      Value: "{79DA2651-4E23-42A5-B5B0-94E416E1A3E7}"
+    - ID: "7a84ea30-ff24-4c46-ae8f-51fcff940663"
+      Hint: ImageCTAPromo_Title
+      Value: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    - ID: "9a62f3e5-e428-4df1-ab96-ed4b651e352b"
+      Hint: ImageCTAPromo_CTALink2
+      Value: |
+        <link linktype="external" text="LiontrustHeroes" url="http://www.google.com" anchor="" target="" />

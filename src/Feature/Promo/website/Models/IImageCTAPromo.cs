@@ -26,6 +26,12 @@
         [SitecoreField(Constants.ImageCTAPromo.CTAGoal_FieldId, SitecoreFieldType.Droplink, "Image CTA Promo")]
         Guid CTAGoal { get; set; }
 
+        [SitecoreField(Constants.ImageCTAPromo.CTALink2_FieldId, SitecoreFieldType.GeneralLink, "Image CTA Promo")]
+        Link CTALink2 { get; set; }
+
+        [SitecoreField(Constants.ImageCTAPromo.CTAGoal2_FieldId, SitecoreFieldType.Droplink, "Image CTA Promo")]
+        Guid CTAGoal2 { get; set; }
+
         [SitecoreField(Constants.ImageCTAPromo.TextAlignment_FieldId, SitecoreFieldType.Droplink, "Design")]
         IPromoLookup TextAlignment { get; set; }
 

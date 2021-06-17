@@ -1,4 +1,12 @@
-﻿<header class="header">
+﻿@using Navigation = LionTrust.Feature.Navigation
+@{ 
+    var headerCssClass = "header";
+    if (@Html.Sitecore().CurrentItem.TemplateID.ToString().Equals(Navigation.Constants.PageTypes.LearningResourcesTemplateId))
+    {
+        headerCssClass = "gradient-header-bg";
+    }
+}
+<header class="@headerCssClass">
     <section class="container">
         @Html.Sitecore().Placeholder("header-content")
     </section>
