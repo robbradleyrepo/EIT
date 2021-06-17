@@ -1,10 +1,9 @@
 ﻿---
-ID: "cf40b93d-4888-46cc-a347-ca2308385946"
-Parent: "7502b69e-d154-4861-a033-bc0cb30a91b5"
+ID: "cf5f1c1d-dae3-4279-9be2-0d2e0dcc6398"
+Parent: "6e14c10e-64d4-4154-bbe4-fbed8c647c13"
 Template: "152e985e-1632-4c9b-ab1b-38fd0db4dcaa"
-Path: /sitecore/content/LionTrustNew/Home/Contact Us
+Path: /sitecore/templates/Branches/Project/LionTrust/Page Types/Contact us Page/$name
 DB: master
-BranchID: "6e14c10e-64d4-4154-bbe4-fbed8c647c13"
 SharedFields:
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
@@ -22,21 +21,21 @@ SharedFields:
         <r
           uid="{DAD370A4-315F-4E7A-93AC-2639CED53024}"
           p:after="r[@uid='{DFC8AD61-0877-496A-9C75-2DDFCF3B2769}']"
-          s:ds="{FE7D499F-A816-4F26-AA12-E5CFCAF2F047}"
+          s:ds="{1B8583B0-BC6D-4869-9C62-E0643C8B9F68}"
           s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
           s:par=""
           s:ph="header" />
         <r
           uid="{C8F5E716-0BF9-4C0C-BA11-6751D4D39B0B}"
           p:after="r[@uid='{DAD370A4-315F-4E7A-93AC-2639CED53024}']"
-          s:ds="{8E61C844-8C7C-4788-900E-F0F6E70FE955}"
+          s:ds="{FC478840-C629-41E9-9100-D6E224C0BEED}"
           s:id="{C3B11E64-1214-410E-BA83-3347C5B59A7E}"
           s:par=""
           s:ph="header" />
         <r
           uid="{D2B57D83-1170-4A95-9725-573B261BEBED}"
           p:after="r[@uid='{C8F5E716-0BF9-4C0C-BA11-6751D4D39B0B}']"
-          s:ds="{867029A3-66B7-4CDA-B334-50546398DFBA}"
+          s:ds="{293C973E-2B74-4CEB-8533-44B2818B1429}"
           s:id="{FFA446FC-5FDC-4D40-95DA-481D863ACEEF}"
           s:par=""
           s:ph="main" />
@@ -50,28 +49,28 @@ SharedFields:
         <r
           uid="{C8880426-8D0B-43F4-9FEF-B66FFCC1464E}"
           p:after="r[@uid='{C083509B-15CD-4A57-97DA-94AE44D4050E}']"
-          s:ds="{B780FE79-A8EA-4599-8831-FE6B1CDE4269}"
+          s:ds="{99BBED6B-5932-454F-B1B9-4933A59D339B}"
           s:id="{74429AC9-FE9D-453B-BBA9-389DDA2335B2}"
           s:par=""
           s:ph="main" />
         <r
           uid="{19A9A19D-FAB2-4181-938A-BA2B2012995E}"
           p:after="r[@uid='{C8880426-8D0B-43F4-9FEF-B66FFCC1464E}']"
-          s:ds="{D2DEEA00-B71F-4B8D-83D6-D3519F1F4C1B}"
+          s:ds="{F3562A2C-020D-46E5-AB03-A63FA2462316}"
           s:id="{0D2BC18F-5CEA-432E-A94D-16007F1FDE49}"
           s:par=""
           s:ph="main" />
         <r
           uid="{E40F8BCF-4E68-45D0-B538-10C33989A11A}"
           p:after="r[@uid='{19A9A19D-FAB2-4181-938A-BA2B2012995E}']"
-          s:ds="{59C10805-3FD8-43B0-B7A8-6436127FBE65}"
+          s:ds="{15779795-CF8A-46D6-A270-62E768569B4F}"
           s:id="{64B901EA-34EB-48D1-94B9-BD58E494CC07}"
           s:par=""
           s:ph="main" />
         <r
           uid="{533771AE-A624-432F-B9EC-6154F5802409}"
           p:after="r[@uid='{E40F8BCF-4E68-45D0-B538-10C33989A11A}']"
-          s:ds="{E319430D-539B-4711-B089-DC9727C2DD08}"
+          s:ds="{7A9D2DED-7418-414E-8059-EC811C0D10E8}"
           s:id="{BA0509C8-337A-45E7-A597-8035DC2F1C21}"
           s:par=""
           s:ph="main" />
@@ -85,9 +84,6 @@ SharedFields:
           p:after="*[1=2]" />
       </d>
     </r>
-- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
-  Hint: __Originator
-  Value: "{CF5F1C1D-DAE3-4279-9BE2-0D2E0DCC6398}"
 Languages:
 - Language: en
   Versions:
@@ -95,7 +91,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210616T121935Z
-    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
-      Hint: Breadcrumb_BreadcrumbTitle
-      Value: Contact us Page
+      Value: 20210608T104625Z

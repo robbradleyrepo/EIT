@@ -1,9 +1,13 @@
 ﻿---
-ID: "9cac6600-5a13-4917-b0a4-7ae02a5e56c2"
-Parent: "e8de5fb3-5be2-442a-8470-6718874f57e8"
+ID: "3646678d-a2b4-4797-81f1-2223f36a33fd"
+Parent: "b780fe79-a8ea-4599-8831-fe6b1cde4269"
 Template: "f24277b2-f97c-4933-9642-b1bd66876388"
-Path: /sitecore/content/LionTrustNew/Home/Contact Us/_Local/Location and Map/London
+Path: /sitecore/content/LionTrustNew/Home/Contact Us/_Local/Location And Map/London
 DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
 Languages:
 - Language: en
   Versions:
@@ -12,13 +16,13 @@ Languages:
     - ID: "0258a156-86e5-48d0-b9a5-6fc8ec5e22ed"
       Hint: MapLink_MapLink
       Value: |
-        <link linktype="external" text="Open in Google Maps" url="https://goo.gl/maps/yx2sG2ygKmGDZzxq7" anchor="" target="" />
+        <link text="OPEN IN GOOGLE MAPS" linktype="external" url="https://goo.gl/maps/dFcF8eub5bePrRMC9" anchor="" target="" />
     - ID: "206a4fa5-9a9a-4e7a-8318-c41e60167c93"
       Hint: MapLink_OfficeAddress
       Value: 2 Savoy Court
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210608T083837Z
+      Value: 20210616T123716Z
     - ID: "442ff2dd-9b97-4bb5-b722-72a4cc922a7e"
       Hint: MapLink_OfficeCity
       Value: London
@@ -43,4 +47,4 @@ Languages:
         <image mediaid="{1DA8E2F4-1BCC-49F2-83A4-6D69EF5A4752}" />
     - ID: "fa9a1b5d-e506-4b6b-bcb2-672dda2fb13f"
       Hint: MapLink_PostalCode
-      Value: WCR2 OEZ
+      Value: WC2R OEZ

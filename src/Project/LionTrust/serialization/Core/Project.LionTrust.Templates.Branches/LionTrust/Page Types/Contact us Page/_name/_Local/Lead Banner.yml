@@ -1,0 +1,28 @@
+﻿---
+ID: "1b8583b0-bc6d-4869-9c62-e0643c8b9f68"
+Parent: "e56a1496-645e-4975-9fd1-68d59e471ec1"
+Template: "1d2058b8-c7a2-4d41-8fdf-61ac3b786798"
+Path: /sitecore/templates/Branches/Project/LionTrust/Page Types/Contact us Page/$name/_Local/Lead Banner
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: "-100"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210608T122727Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "a9684a39-4c0e-42df-8066-59be90678b54"
+      Hint: LeadBanner_Title
+      Value: $name
+    - ID: "b7ecdee2-ba93-4f86-a7d5-05db6e572a80"
+      Hint: LeadBanner_TextAlign
+      Value: "{68D6465E-0D2B-45D0-A5E7-E3578757CEC7}"

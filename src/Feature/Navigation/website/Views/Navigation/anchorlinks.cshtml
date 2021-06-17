@@ -7,12 +7,12 @@
 }
 <div class="page-anchor-link" id="sticky-navbar">
     <div class="container">
-        <div class="page-anchor">
+        <div class="page-anchor full-wigth">
             <div class="page-anchor__right page-anchor__right-mobile">
                 <button class="page-anchor__title" id="open-page-anchor">
                     <span>@Html.Glass().Editable(m => m.Heading)</span>
                 </button>
-                <div class="page-anchor__links page-anchor__links-mobile navbar">
+                <div class="page-anchor__links page-anchor__links-mobile">
                     @foreach (var item in Model.Children)
                     {
                         using (Html.Glass().BeginEditFrame<LionTrust.Foundation.Navigation.Models.IAnchor>(item, null, i => i.AnchorId))
