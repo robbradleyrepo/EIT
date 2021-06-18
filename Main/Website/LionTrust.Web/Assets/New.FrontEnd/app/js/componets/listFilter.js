@@ -66,7 +66,7 @@ export default () => {
       },
 
       applyFilters() {
-        this.pushStateLink();        
+        // this.pushStateLink();        
         this.mobileFilter = false;
         this.getSearchRequest();
       },
