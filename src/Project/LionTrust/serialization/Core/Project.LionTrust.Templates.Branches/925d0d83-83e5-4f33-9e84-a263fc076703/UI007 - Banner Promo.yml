@@ -1,0 +1,32 @@
+﻿---
+ID: "ecefa1cc-3437-4336-b908-d346de01efcd"
+Parent: "925d0d83-83e5-4f33-9e84-a263fc076703"
+Template: "c83df526-c557-4146-bef9-f4e891ac7721"
+Path: "/sitecore/templates/Branches/Project/LionTrust/Page Types/Learning Resources/$name/_Local/UI007 - Banner Promo"
+DB: master
+BranchID: "22af9add-5237-4ef5-a539-fd26cb1dc8f7"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{F8EEC5D4-A197-45D6-8A1A-AF51893895E5}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210617T135948Z
+    - ID: "9b69e8cf-c2bc-4d89-89f0-7ba153cf8d59"
+      Hint: PromoBanner_Heading
+      Value: 
+    - ID: "aece4f5d-41f0-4888-916b-ab0f0f0af345"
+      Hint: PromoBanner_TextAlign
+      Value: 
+    - ID: "dc4d7aea-7e87-4ab5-9fbb-2a96ecafe1d8"
+      Hint: PromoBanner_BackgroundImage
+      Value: |
+        <image mediaid="{8C038CB5-FC55-4F88-8934-CC2B85C604C5}" />

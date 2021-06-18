@@ -74,6 +74,10 @@
 
             public const string CTAGoal_FieldId = "{BED833FE-BFD7-40EC-9C28-18EFF032C463}";
 
+            public const string CTALink2_FieldId = "{9A62F3E5-E428-4DF1-AB96-ED4B651E352B}";
+
+            public const string CTAGoal2_FieldId = "{E3DE385B-8512-4403-A95C-F5174EC6A235}";
+
             public const string TextAlignment_FieldId = "{4F8E0E85-38F1-4AB6-9AD6-DCE0008C8304}";
         }
 
