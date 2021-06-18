@@ -2,6 +2,7 @@ import Vue from "vue/dist/vue.common.prod";
 import { pagination } from "./listFilter/mixins/pagination";
 export default () => {
   const host = "https://cm-liontrust-it.sagittarius.agency/ArticleSearchApi/";
+  const months = ['January','February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   new Vue({
     el: "#lister-app",
     mixins: [pagination],
@@ -18,6 +19,8 @@ export default () => {
       showPerPage: 21,
       showPageInPagination: 7,
       mobileFilter: false,
+      months: [],
+      years: []
     },
     computed: {
       getFacets() {
@@ -111,15 +114,24 @@ export default () => {
         $.get(
           `${host}Facets`
         ).done((responce) => {
+          const {Facets, Dates} = responce;
           const facets = [];
-          for (let i in responce.Facets) {
+          for (let i in Facets) {
             const name = i.replace(/([a-z])([A-Z])/g, "$1 $2");
             facets.push({
               name,
-              data: responce.Facets[i],
+              data: Facets[i],
             });
           }
           this.facets = facets;
+
+          if(Dates.Months.length)
+            for(let i in Dates.Months) {
+              this.months.push(months[i])
+            }
+          if(Dates.Years.length)
+            this.years = Dates.Years;
+
         }).fail(e => {
           console.error(e);
           this.loading = false
