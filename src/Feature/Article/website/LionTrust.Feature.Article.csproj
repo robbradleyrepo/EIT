@@ -92,6 +92,7 @@
     <Content Include="Views\Article\GoldQuote.cshtml" />
     <Content Include="Views\Article\FundManagerInsights.cshtml" />
     <Content Include="Views\Article\FeaturedArticleHero.cshtml" />
+    <Content Include="Views\Article\ArticleLister.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -105,6 +106,7 @@
     <Compile Include="Models\ArticleLinksViewModel.cs" />
     <Compile Include="Models\ArticleScrollerViewModel.cs" />
     <Compile Include="Models\ArticleViewModel.cs" />
+    <Compile Include="Models\IArticleLister.cs" />
     <Compile Include="Models\IFeaturedArticleHero.cs" />
     <Compile Include="Models\FundManagerInsightsViewModel.cs" />
     <Compile Include="Models\IArticle.cs" />
