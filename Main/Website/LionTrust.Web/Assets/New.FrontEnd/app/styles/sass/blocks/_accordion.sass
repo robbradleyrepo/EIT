@@ -7,17 +7,19 @@
             @include breakpoint(desktop, up)
                 width: 100%
     @include breakpoint(desktop, up)
-        margin: 50px 0 180px    
+        margin: 50px 0 180px
     .container
         position: relative
+        .order-1
+            .accordion
+                &__smartcard
+                    right: 100%
 
 .accordion
     &__card
         background: none
         width: 100%
         position: inherit
-        @include breakpoint(desktop, up)
-            width: 50%
     &__body
         padding: 10px 0
         font-size: 18px
@@ -73,10 +75,10 @@
         position: relative
         @include breakpoint(desktop, up)
             position: absolute
-            width: 49%
-            right: 16px
             top: 0
-            padding-left: 32px
+            width: 100%
+            right: -100%
+            padding-left: 32px    
     &__smartimg
         width: 100%
         height: 100%
@@ -100,10 +102,11 @@
     .collapsing
         position: static!important
 
+
+
 .accordion.accordion_white
     color: $black
     .accordion__minus, .accordion__plus
         color: $gold
     .accordion__link.collapsed
         border-bottom: 1px solid #E9EDF0
-    
