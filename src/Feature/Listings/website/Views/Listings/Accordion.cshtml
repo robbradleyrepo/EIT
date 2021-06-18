@@ -8,12 +8,12 @@
     var textColour = Model.RenderingData.Theme != null && Model.RenderingData.Theme.Value == "light" ? "accordion_white" : string.Empty;
     var containerId = LionTrust.Feature.Listings.Utils.RandomString(10, true);
     var textAlign = Model.RenderingData.TextAlign != null ? Model.RenderingData.TextAlign.Value : "left";
-    var accordionAlign = Model.RenderingData.AccordionAlign != null && Model.RenderingData.AccordionAlign.Value == "Left" ? string.Empty : "order-1";
+    var rightAccordionAlign = Model.RenderingData.AccordionAlign != null && Model.RenderingData.AccordionAlign.Value == "Right";
 }
 <div class="@wrapperClass">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 @accordionAlign">
+            <div class="col-lg-6 @(rightAccordionAlign ? "order-1" : "order-0")">
                 <div id="@containerId" class="accordion @textColour">
                     @{
                         var counter = 0;
@@ -77,6 +77,7 @@
                     }
                 </div>
             </div>
+            <div class="col-lg-6 @(rightAccordionAlign ? "order-0" : "order-1")"></div>
         </div>
     </div>
 </div>
