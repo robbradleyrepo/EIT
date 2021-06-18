@@ -11,5 +11,8 @@
 
         [SitecoreField(Listings.Constants.AccordionRenderingParameters.TextAlignFieldId)]
         ILookupValue TextAlign { get; set; }
+
+        [SitecoreField(Listings.Constants.AccordionRenderingParameters.AccordionAlignFieldId)]
+        ILookupValue AccordionAlign { get; set; }
     }
 }

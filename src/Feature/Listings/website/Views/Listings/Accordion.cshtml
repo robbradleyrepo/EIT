@@ -8,70 +8,75 @@
     var textColour = Model.RenderingData.Theme != null && Model.RenderingData.Theme.Value == "light" ? "accordion_white" : string.Empty;
     var containerId = LionTrust.Feature.Listings.Utils.RandomString(10, true);
     var textAlign = Model.RenderingData.TextAlign != null ? Model.RenderingData.TextAlign.Value : "left";
+    var accordionAlign = Model.RenderingData.AccordionAlign != null && Model.RenderingData.AccordionAlign.Value == "Left" ? string.Empty : "order-1";
 }
 <div class="@wrapperClass">
     <div class="container">
-        <div id="@containerId" class="accordion @textColour">
-            @{
-                var counter = 0;
-            }
-            @foreach (var item in Model.Data.Children)
-            {
-                var imageSrc = item.Image != null ? item.Image.Src : string.Empty;
-                var isCollapsed = item != Model.Data.Children.First();
-                var collapsedClass = isCollapsed ? "collapsed" : string.Empty;
-                var showClass = isCollapsed ? string.Empty : "show";
-                var rowName = LionTrust.Feature.Listings.Utils.RandomString(10, true);
+        <div class="row">
+            <div class="col-lg-6 @accordionAlign">
+                <div id="@containerId" class="accordion @textColour">
+                    @{
+                        var counter = 0;
+                    }
+                    @foreach (var item in Model.Data.Children)
+                    {
+                        var imageSrc = item.Image != null ? item.Image.Src : string.Empty;
+                        var isCollapsed = item != Model.Data.Children.First();
+                        var collapsedClass = isCollapsed ? "collapsed" : string.Empty;
+                        var showClass = isCollapsed ? string.Empty : "show";
+                        var rowName = LionTrust.Feature.Listings.Utils.RandomString(10, true);
 
-                using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/Accordion Row", item.Id.ToString()))
-                {
-                    <div class="accordion__card">
-                        <div class="accordion__header">
-                            <div class="accordion__link @collapsedClass"
-                                 data-toggle="collapse"
-                                 data-target="#@rowName"
-                                 aria-expanded="@isCollapsed"
-                                 aria-controls="@rowName">
-                                @Html.Glass().Editable(item, i => i.Header)
-                                <i class="icon-plus accordion__plus"></i>
-                                <i class="icon-minus accordion__minus"></i>
-                            </div>
-                        </div>
-                        <div id="@rowName" class="collapse @showClass"
-                             aria-labelledby="flush-heading-@rowName"
-                             data-parent="#@containerId">
-                            <div class="accordion__body" style="text-align:@textAlign">
-                                @Html.Glass().Editable(item, i => i.Copy)
-                            </div>
-                            @if (item.Image.HasValue() && item.VideoId.HasValue())
-                            {
-                                <div class="accordion__smartcard">
-                                    <a class="video-box__link" data-fancybox="" data-type="iframe" data-src="@item.VideoId" style="background-image: url('@imageSrc')">
-                                        <svg class="video-box__play-btn" xmlns="http://www.w3.org/2000/svg" width="188" height="188">
-                                            <defs>
-                                                <style>
-                                                    .c {
-                                                        stroke: none;
-                                                    }
-                                                </style>
-                                            </defs>
-                                            <g fill="transparent">
-                                                <g stroke="#fff">
-                                                    <circle class="c" cx="94" cy="94" r="94"></circle>
-                                                    <circle cx="94" cy="94" r="93.5" fill="none"></circle>
-                                                </g>
-                                                <path class="triangle" d="M79.5 119.63V72.37L120.008 96 79.5 119.63z"></path>
-                                                <path d="M119.015 96L80 73.241v45.518L119.015 96M121 96l-42 24.5v-49L121 96z" fill="#fff"></path>
-                                            </g>
-                                        </svg>
-                                    </a>
+                        using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/Accordion Row", item.Id.ToString()))
+                        {
+                            <div class="accordion__card">
+                                <div class="accordion__header">
+                                    <div class="accordion__link @collapsedClass"
+                                         data-toggle="collapse"
+                                         data-target="#@rowName"
+                                         aria-expanded="@isCollapsed"
+                                         aria-controls="@rowName">
+                                        @Html.Glass().Editable(item, i => i.Header)
+                                        <i class="icon-plus accordion__plus"></i>
+                                        <i class="icon-minus accordion__minus"></i>
+                                    </div>
                                 </div>
-                            }
-                        </div>
-                    </div>
-                }
-                counter++;
-            }
+                                <div id="@rowName" class="collapse @showClass"
+                                     aria-labelledby="flush-heading-@rowName"
+                                     data-parent="#@containerId">
+                                    <div class="accordion__body" style="text-align:@textAlign">
+                                        @Html.Glass().Editable(item, i => i.Copy)
+                                    </div>
+                                    @if (item.Image.HasValue() && item.VideoId.HasValue())
+                                    {
+                                        <div class="accordion__smartcard">
+                                            <a class="video-box__link" data-fancybox="" data-type="iframe" data-src="@item.VideoId" style="background-image: url('@imageSrc')">
+                                                <svg class="video-box__play-btn" xmlns="http://www.w3.org/2000/svg" width="188" height="188">
+                                                    <defs>
+                                                        <style>
+                                                            .c {
+                                                                stroke: none;
+                                                            }
+                                                        </style>
+                                                    </defs>
+                                                    <g fill="transparent">
+                                                        <g stroke="#fff">
+                                                            <circle class="c" cx="94" cy="94" r="94"></circle>
+                                                            <circle cx="94" cy="94" r="93.5" fill="none"></circle>
+                                                        </g>
+                                                        <path class="triangle" d="M79.5 119.63V72.37L120.008 96 79.5 119.63z"></path>
+                                                        <path d="M119.015 96L80 73.241v45.518L119.015 96M121 96l-42 24.5v-49L121 96z" fill="#fff"></path>
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        }
+                        counter++;
+                    }
+                </div>
+            </div>
         </div>
     </div>
 </div>
