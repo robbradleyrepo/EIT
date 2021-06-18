@@ -8,7 +8,6 @@
         z-index: 2
     .imagepromo__contentbox
         color: #ffffff
-
 .shevron-bg
     position: absolute
     top: -50%
@@ -18,6 +17,10 @@
     @include breakpoint(desktop, up)
         left: 40%
         height: auto
+
+body:not(.main-page)
+    .shevron-bg
+        display: none
 
 .main-bg
 
