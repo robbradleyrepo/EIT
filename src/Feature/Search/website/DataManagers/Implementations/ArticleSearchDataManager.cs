@@ -108,7 +108,7 @@
                 SearchTerm = searchTerm,
                 Skip = page * 21,
                 Take = 21,
-                ToDate = new DateTime(toYear, toMonth, 31)
+                ToDate = new DateTime(toYear, toMonth, DateTime.DaysInMonth(toYear, toMonth))
             };
 
             ContentSearchResults contentSearchResults;

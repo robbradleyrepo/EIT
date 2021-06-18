@@ -86,6 +86,7 @@
     <Compile Include="DataManagers\Interfaces\IArticleSearchDataManager.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Models\API\ArticleResult.cs" />
+    <Compile Include="Models\API\Dates.cs" />
     <Compile Include="Models\API\FacetItem.cs" />
     <Compile Include="Models\API\ArticleFacets.cs" />
     <Compile Include="Models\API\Facets\IArticleSearchFacetsConfig.cs" />
