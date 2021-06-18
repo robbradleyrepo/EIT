@@ -6,6 +6,8 @@
     {
         public ArticleFacets Facets { get; set; }
 
+        public Dates Dates = new Dates();
+
         [JsonIgnore]
         public string Message { get; set; }
 
