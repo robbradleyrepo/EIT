@@ -18,6 +18,8 @@
             public const string TextAlignFieldId = "{AB4A19DC-DE18-4E5B-A763-095F990CC0CA}";
 
             public const string BackgroundColourFieldId = "{1841944B-D6A8-48CA-BAB1-071C8C7C603E}";
+
+            public const string AccordionAlignFieldId = "{BB4CC394-B829-45DF-B106-CC4E803B88C2}";
         }
 
         public static class HorizontalScroll
