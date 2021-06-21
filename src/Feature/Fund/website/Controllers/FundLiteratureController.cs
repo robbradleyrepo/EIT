@@ -24,7 +24,19 @@
         {
             var datasource = _context.GetDataSourceItem<ILiterature>();
             var model = new LiteratureViewModel(datasource);
-            model.Documents = ArrangeDocuments(datasource.Fund);
+            if (datasource.Fund == null)
+            {
+                var page = _context.GetContextItem<IFundSelector>();
+                if (page != null && page.Fund != null)
+                {
+                    model.Documents = ArrangeDocuments(page.Fund);
+                }
+            }
+            else
+            {
+                model.Documents = ArrangeDocuments(datasource.Fund);
+            }
+
             return View("/views/fund/literature.cshtml", model);
         }
 

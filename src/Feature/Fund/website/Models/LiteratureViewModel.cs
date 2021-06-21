@@ -8,6 +8,7 @@ namespace LionTrust.Feature.Fund.Models
         public LiteratureViewModel(ILiterature literature)
         {
             Literature = literature;
+            Documents = new Dictionary<string, List<IDocument>>();
         }
 
         public ILiterature Literature { get; }
