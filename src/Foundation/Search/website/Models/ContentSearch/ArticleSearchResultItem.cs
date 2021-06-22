@@ -15,7 +15,6 @@
         [IndexField("article_author_image_protected")]
         public string ArticleAuthorImage { get; set; }
 
-
         [IndexField("article_url")]
         public string ArticleUrl { get; set; }
 
