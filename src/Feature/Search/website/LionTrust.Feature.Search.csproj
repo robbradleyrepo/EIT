@@ -69,6 +69,9 @@
     <Content Include="App_Config\Include\Feature\Feature.Search.RegisterContainer.config" />
     <Content Include="App_Config\Include\Feature\Feature.Search.Routes.config" />
     <Content Include="App_Config\Include\Feature\Feature.Search.Serialization.config" />
+    <Content Include="Views\Search\ArticleLister.cshtml" />
+    <Content Include="Views\Search\_Pagination.cshtml" />
+    <Content Include="Views\web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -94,7 +97,9 @@
     <Compile Include="Models\API\Facets\IFundManagerFacetOption.cs" />
     <Compile Include="Models\API\Response\ArticleFacetsResponse.cs" />
     <Compile Include="Models\API\Response\ArticleSearchResponse.cs" />
+    <Compile Include="Models\IArticleLister.cs" />
     <Compile Include="Models\ISearchGlassBase.cs" />
+    <Compile Include="Models\Pagination.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Routes\RegisterRoutes.cs" />
   </ItemGroup>

@@ -1,8 +1,8 @@
 ﻿---
-ID: "5ab5a6fe-85d0-4bae-8b0e-8446bed3fa3c"
+ID: "ee10a0f8-834b-4c8b-9ec5-9b643fcd112c"
 Parent: "bd797634-96ae-40a8-9ebb-b77f793fa367"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Article/_ArticleLister/ArticleLister/ArticleLister_YearLabel
+Path: /sitecore/templates/Feature/Search/_ArticleLister/ArticleLister/ArticleLister_PreviousLabel
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
@@ -10,16 +10,16 @@ SharedFields:
   Value: "Single-Line Text"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 200
+  Value: 900
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Year Label
+    Value: Previous Label
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210617T162622Z
+      Value: 20210617T162913Z

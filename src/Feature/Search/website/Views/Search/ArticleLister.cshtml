@@ -1,5 +1,6 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
-@model LionTrust.Feature.Article.Models.IArticleLister
+@using LionTrust.Feature.Search.Models 
+@model LionTrust.Feature.Search.Models.IArticleLister
 @if (Model != null)
 {
     <div id="lister-app">
@@ -101,12 +102,12 @@
                     <div class="col-6 col-lg-2 offset-6 col-md-4 offset-md-8 offset-lg-10 margin-sort-btn">
                         <div class="relative">
                             <button class="btn btn-clean d-block ml-auto button-sort" @@click.stop="showSort">
-                                sort <i class="icon-sort"></i>
+                                @Model.SortLabel <i class="icon-sort"></i>
                             </button>
                             <div class="sort-dropdown" :class="sortModal ? 'active' : ''">
                                 <div class="text-right">
                                     <span class="btn btn-clean">
-                                        sort <i class="icon-sort"></i>
+                                        @Model.SortLabel <i class="icon-sort"></i>
                                     </span>
                                 </div>
                                 <label for="newest" class="option-checkbox">
@@ -129,7 +130,7 @@
         <div class="container d-lg-none">
             <div class="d-flex justify-content-between margin-mob-fliter-btn" :class="!mobileFilter ? 'relative' : ''">
                 <btn id="show-article-fliter" class="btn btn-clean" @@click="toggleMobileFilter">
-                    <i class="icon-filter"></i> filter
+                    <i class="icon-filter"></i> @Model.FilterLabel
                 </btn>
             </div>
         </div>
@@ -145,7 +146,7 @@
                             </a>
                             <a href="#" class="article-promo__body">
                                 <div class="article-promo__head">
-                                    <img class="article-promo__head-img" :src="article.WriterImage" alt="">
+                                    <img class="article-promo__head-img" :src="article.AuthorImage" alt="">
                                     <span class="article-promo__head-title">{{article.Subtitle}}</span>
                                 </div>
                                 <span class="article-promo__title">
@@ -172,32 +173,7 @@
                     </div>
                 </article-item>
             </div>
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <nav v-if="getPageAmount > 1" class="pagination mt-3">
-                        <a href="#" @@click.prevent="prevPage" class="pagination__step pagination__step_forward"
-                           :class="disablePrevBtn ? 'pagination__step_disabled' : ''"><i class="icon-arrow-left"></i> @Model.PreviousLabel</a>
-                        <ul class="pagination__list">
-                            <li class="pagination__item">
-                                <a @@click.prevent="jumpPagesForward" v-if="showForwardPageBtn" href="#"
-                                   class="pagination__link pagination__link_steps">...</a>
-                            </li>
-                            <li v-for="(page, i) in getPages" :key="i" class="pagination__item">
-                                <a @@click.prevent="changePage(page)" href="#" class="pagination__link"
-                                   :class="getPage === page ? 'active' : ''">
-                                    {{page}}
-                                </a>
-                            </li>
-                            <li class="pagination__item">
-                                <a @@click.prevent="jumpPagesNext" v-if="showNextPageBtn" href="#"
-                                   class="pagination__link pagination__link_steps">...</a>
-                            </li>
-                        </ul>
-                        <a href="#" @@click.prevent="nextPage" :class="disabledNextBtn ? 'pagination__step_disabled' : ''"
-                           class="pagination__step pagination__step_next">@Model.NextLabel <i class="icon-arrow-right"></i></a>
-                    </nav>
-                </div>
-            </div>
+            @Html.Partial("~/Views/Search/_Pagination.cshtml", new Pagination { NextLabel = Model.NextLabel, PreviousLabel = Model.PreviousLabel })
         </section>
     </div>
 }

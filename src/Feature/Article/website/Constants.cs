@@ -111,22 +111,6 @@
             public const string Article_FieldId = "{AACB640C-6457-4A38-81E2-7AE97DB0DB3A}";
             public const string BackgroundImage_FieldId = "{74A7E935-2A62-4192-B046-958C1ADDB98B}";
             public const string ArticleLinkText_FieldId = "{447AB9EA-F782-41A7-8269-E2AA6EF9862B}";
-        }
-
-        public static class ArticleLister
-        {
-            public const string FiltersLabel_FieldId = "{176B6BA4-37A4-4853-9753-690C7D1A3C9E}";
-            public const string FundLabel_FieldId = "{0674EA3D-C9DB-4C66-B6F2-FF84C0A8E218}";
-            public const string MonthLabel_FieldId = "{6468D4A5-9157-4A80-81AA-70615FB875A9}";
-            public const string YearLabel_FieldId = "{5AB5A6FE-85D0-4BAE-8B0E-8446BED3FA3C}";
-            public const string ApplyFiltersLabel_FieldId = "{8895C4A2-26CF-4F3E-A990-B0A26FDB0802}";
-            public const string ClearFiltersLabel_FieldId = "{B2BC0424-664C-4737-A680-9B2A17296852}";
-            public const string DateNewestFirstLabel_FieldId = "{F72DC2B2-2396-401F-AFD5-3A4075892A86}";
-            public const string DateOldestFirstLabel_FieldId = "{EE6AF776-8D37-4B81-A29F-551E7BB1D481}";
-            public const string DateIcon_FieldId = "{B3FF2403-3560-4DC1-B9B1-F9D93D85775D}";
-            public const string PreviousLabel_FieldId = "{EE10A0F8-834B-4C8B-9EC5-9B643FCD112C}";
-            public const string NextLabel_FieldId = "{87E96566-897A-4D4C-8DA5-8727BD4E436E}";
-            public const string SearchPlaceholder_FieldId = "{0EBA5571-B102-467C-993A-3025A1176831}";
-        }
+        }        
     }
 }
