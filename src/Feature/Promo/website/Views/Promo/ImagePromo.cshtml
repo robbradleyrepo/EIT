@@ -31,7 +31,7 @@
                     <div class="imagepromo__headbox text">
                         <h2>@Html.Glass().Editable(Model, x => x.Heading)</h2>
                     </div>
-                    <p class="imagepromo__contentbox text-white">
+                    <p class="imagepromo__contentbox @(Model.TextColour != null ? Model.TextColour.Value : "text-white")">
                         @Html.Glass().Editable(Model, x => x.Body)
                     </p>
 

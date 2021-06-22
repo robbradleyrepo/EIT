@@ -57,6 +57,8 @@
 
             public const string PrimaryCtaGoalFieldId = "{291905A9-AF12-4560-9A2F-E4FAF4D15FB1}";
             public const string SecondaryCtaGoalFieldId = "{188E1540-E08D-4AB2-A130-01D66E0E57F4}";
+
+            public const string TextColour_FieldId = "{FED476C0-044E-4001-8F67-20FB0E0D735B}";
         }
 
         public static class ImageCTAPromo

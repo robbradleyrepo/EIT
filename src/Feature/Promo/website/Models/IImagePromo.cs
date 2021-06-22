@@ -4,8 +4,8 @@
 
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
-    using Glass.Mapper.Sc.Fields;    
-
+    using Glass.Mapper.Sc.Fields;
+  
     public interface IImagePromo : IPromoGlassBase
     {
         [SitecoreField(Constants.ImagePromo.Heading_FieldId, SitecoreFieldType.SingleLineText, "Promo Banner")]
@@ -58,5 +58,8 @@
 
         [SitecoreField(Constants.ImagePromo.TextAlignment_FieldId, SitecoreFieldType.Droplink, "Design")]
         IPromoLookup TextAlignment { get; set; }
+
+        [SitecoreField(Constants.ImagePromo.TextColour_FieldId)]
+        Foundation.Design.ILookupValue TextColour { get; set; }
     }
 }
