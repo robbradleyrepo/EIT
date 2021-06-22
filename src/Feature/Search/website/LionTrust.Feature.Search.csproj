@@ -100,7 +100,7 @@
     <Compile Include="Models\API\Response\ArticleSearchResponse.cs" />
     <Compile Include="Models\IArticleLister.cs" />
     <Compile Include="Models\ISearchGlassBase.cs" />
-    <Compile Include="Models\Pagination.cs" />
+    <Compile Include="Models\IPagination.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Routes\RegisterRoutes.cs" />
   </ItemGroup>
