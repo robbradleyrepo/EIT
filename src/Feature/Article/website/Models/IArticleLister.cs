@@ -1,5 +1,6 @@
 ﻿namespace LionTrust.Feature.Article.Models
 {
+    using Glass.Mapper.Sc.Fields;
     using Glass.Mapper.Sc.Configuration.Attributes;
 
     public interface IArticleLister : IArticleGlassBase
@@ -24,6 +25,12 @@
 
         [SitecoreField(Constants.ArticleLister.MonthLabel_FieldId)]
         string MonthLabel { get; set; }
+
+        [SitecoreField(Constants.ArticleLister.CardIcon_FieldId)]
+        Image CardIcon { get; set; }
+
+        [SitecoreField(Constants.ArticleLister.DateIcon_FieldId)]
+        Image DateIcon { get; set; }
 
         [SitecoreField(Constants.ArticleLister.NextLabel_FieldId)]
         string NextLabel { get; set; }

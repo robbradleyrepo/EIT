@@ -123,6 +123,7 @@
             public const string ClearFiltersLabel_FieldId = "{B2BC0424-664C-4737-A680-9B2A17296852}";
             public const string DateNewestFirstLabel_FieldId = "{F72DC2B2-2396-401F-AFD5-3A4075892A86}";
             public const string DateOldestFirstLabel_FieldId = "{EE6AF776-8D37-4B81-A29F-551E7BB1D481}";
+            public const string DateIcon_FieldId = "{B3FF2403-3560-4DC1-B9B1-F9D93D85775D}";
             public const string PreviousLabel_FieldId = "{EE10A0F8-834B-4C8B-9EC5-9B643FCD112C}";
             public const string NextLabel_FieldId = "{87E96566-897A-4D4C-8DA5-8727BD4E436E}";
             public const string SearchPlaceholder_FieldId = "{0EBA5571-B102-467C-993A-3025A1176831}";
