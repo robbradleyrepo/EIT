@@ -15,6 +15,13 @@
             public const string ValueFieldId = "{17793BA8-E9B1-406B-B73D-E10C37D4D2C2}";
         }
 
+        public static class FundPerformanceGraph
+        {
+            public const string HeadingFieldId = "{46C68BF8-8D80-4959-81D6-0EECAE187697}";
+            public const string FactsheetTextFieldId = "{09768300-13A0-46E6-BD44-474DB7AAA852}";
+            public const string DetailUrlFieldId = "{7BA56456-C580-4919-8B04-9156BB341B4C}";
+        }
+
         public static class CreditRating
         {
             public const string HeadingFieldId = "{26BD09DF-992E-40F9-A625-77F17A237AC7}";

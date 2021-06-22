@@ -100,6 +100,7 @@
     <Content Include="Views\Fund\SectorBreakdown.cshtml" />
     <Content Include="Views\Fund\geographicalbreakdown.cshtml" />
     <Content Include="Views\Fund\CreditRating.cshtml" />
+    <Content Include="Views\Fund\fundperformancegraph.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -128,6 +129,9 @@
     <Compile Include="FundClass\IFundClassDetails.cs" />
     <Compile Include="FundClass\FundClassSwitcherHelper.cs" />
     <Compile Include="FundClass\FundClassViewModel.cs" />
+    <Compile Include="FundPerformance\FundPerformanceGraphController.cs" />
+    <Compile Include="FundPerformance\FundPerformanceGraphViewModel.cs" />
+    <Compile Include="FundPerformance\IFundPerformanceGraph.cs" />
     <Compile Include="GeographicalBreakdown\GeographicalBreakdownController.cs" />
     <Compile Include="GeographicalBreakdown\GeographicalBreakdownManager.cs" />
     <Compile Include="GeographicalBreakdown\IGeographicalBreakdownManager.cs" />

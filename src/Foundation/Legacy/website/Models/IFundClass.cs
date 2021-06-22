@@ -1,6 +1,7 @@
 ﻿namespace LionTrust.Foundation.Legacy.Models
 {
     using Glass.Mapper.Sc.Configuration.Attributes;
+    using Glass.Mapper.Sc.Fields;
     using System;
 
     public interface IFundClass: ILegacyGlassBase
@@ -54,5 +55,8 @@
 
         [SitecoreField(Constants.FundClass.SedolCode_FieldId)]
         string SedolCode { get; set; }
+
+        [SitecoreField(Constants.FundClass.FactsheetFieldId)]
+        Image Factsheet { get; set; } 
     }
 }

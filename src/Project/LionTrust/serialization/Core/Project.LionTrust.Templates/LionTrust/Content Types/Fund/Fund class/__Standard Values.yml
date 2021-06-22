@@ -4,6 +4,11 @@ Parent: "9d9ef67f-806e-4303-8ac8-9f091313b551"
 Template: "9d9ef67f-806e-4303-8ac8-9f091313b551"
 Path: /sitecore/templates/Project/LionTrust/Content Types/Fund/Fund class/__Standard Values
 DB: master
+SharedFields:
+- ID: "c9283d9e-7c29-4419-9c28-5a5c8ff53e84"
+  Hint: __Bucketable
+  Type: Checkbox
+  Value: 1
 Languages:
 - Language: en
   Versions:

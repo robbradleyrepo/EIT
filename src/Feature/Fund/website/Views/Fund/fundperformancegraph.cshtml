@@ -1,0 +1,55 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Fund.FundPerformance.FundPerformanceGraphViewModel
+@if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    return;
+}
+<section class="container graph-section">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="h2">@Html.Glass().Editable(Model.Component, m => m.Heading)</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-9">
+            <div class="d-lg-flex align-items-center h-100">
+                <a href="@Model.FactsheetUrl" class="link-styles d-block d-lg-inline-block mb-3 mr-3 mb-lg-0">
+                    @Html.Glass().Editable(Model.Component, c => c.FactsheetText) <i class="icon-file"></i>
+                </a>
+                @using (Html.Glass().BeginRenderLink(Model.Component, c => c.DetailUrl, new { @class = "link-styles d-block d-lg-inline-block mb-3 mr-3 mb-lg-0" }, isEditable: true))
+                {
+                    if (Model.Component != null && Model.Component.DetailUrl != null)
+                    {
+                        @Model.Component.DetailUrl.Text
+                    }
+                    <i class="icon-arrow-right animate-arrow"></i>
+                }
+            </div>
+        </div>
+        @if (Model.Component.Fund != null)
+        {
+            <div class="col-lg-3">
+                <div class="class-dropdown">
+                    <div class="class-dropdown__select">
+                        <select name="perfomance" id="perfomance" class="fund-chart-dropdown">
+                            @foreach (var item in Model.Component.Fund.Classes)
+                            {
+                                if (item.CitiCode == Model.CitiCode)
+                                {
+                                    <option value="@item.CitiCode" selected>@item.ClassName</option>
+                                }
+                                else
+                                {
+                                    <option value="@item.CitiCode">@item.ClassName</option>
+                                }
+
+                            }
+                        </select>
+                        <i class="article-filters__icon-arrow article-filters__icon-arrow_select"></i>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+<iframe class="mt-3 mb-5" id="childFrame" src="@Model.GraphUrl()" height="650" width="100%" frameborder="0" scrolling="no"></iframe>

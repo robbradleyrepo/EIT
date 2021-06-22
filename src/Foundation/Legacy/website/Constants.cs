@@ -84,6 +84,7 @@
             public const string ISINCode_FieldId = "{2B509BE7-A54F-4663-9104-4E07D51C060B}";
             public const string OngoingCharges_FieldId = "{0FE085F4-C693-4F16-AEE8-9C2ABFA66A4A}";
             public const string SedolCode_FieldId = "{79F1B818-4E89-4F71-BF0E-1EFF631A7259}";
+            public const string FactsheetFieldId = "{E22A6228-B13F-4EA0-B795-6429E50588F9}";
         }
 
         public static class Fund 
