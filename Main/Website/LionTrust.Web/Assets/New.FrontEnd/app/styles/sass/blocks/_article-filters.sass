@@ -244,3 +244,35 @@
             @include breakpoint(desktop, up)
                 order: 0
                 padding: 38px 0
+
+.view-buttons-container
+    background: $secondary-silver
+    height: 62px
+    display: flex
+    align-items: center
+    flex: 1
+
+.view-btn
+    border-radius: 0
+    height: 37px
+    line-height: 37px
+    &:hover
+        color: $gold
+    &.active
+        color: $gold
+        border-bottom: 2px solid $gold
+
+.view-buttons
+    color: $black
+    text-transform: uppercase
+    font-size: 12px
+    display: flex
+    align-items: center
+    i
+        margin-left: 1rem
+
+.view-button-link
+    height: 62px
+    display: flex
+    align-items: center
+    justify-content: center

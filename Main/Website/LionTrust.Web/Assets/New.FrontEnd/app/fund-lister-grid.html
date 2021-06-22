@@ -18,20 +18,70 @@
     </header>
 
     <main>
-        <div class="lister-app">
-            <!--#include virtual="/components/BC005-Article-Filters.html" -->
+        <div class="lister-app" id="lister-app">
+            <!--#include virtual="/components/BC005-Fund-Filters.html" -->
             <section class="container">
                 <div class="row">
-                    <!--#include virtual="/components/BC019-Fund-Grid-Item.html" -->
-                    <!--#include virtual="/components/BC019-Fund-Grid-Item.html" -->
-                    <!--#include virtual="/components/BC019-Fund-Grid-Item.html" -->
-                    <!--#include virtual="/components/BC019-Fund-Grid-Item.html" -->
-                    <!--#include virtual="/components/BC019-Fund-Grid-Item.html" -->
-                    <!--#include virtual="/components/BC019-Fund-Grid-Item.html" -->
-                    <!--#include virtual="/components/BC019-Fund-Grid-Item.html" -->
-                    <!--#include virtual="/components/BC019-Fund-Grid-Item.html" -->
+                    <article-item inline-template v-for="(article, i) in searchData" :key="i">
+                        <div class="col-md-6 col-lg-4 col-xl-3 d-flex">
+                            <div class="fund-card fund-card_grid">
+                                <div class="fund-card__head">
+                                    <img src="images/components/fund-card/fund-card-lion.png" alt="liontrust" />
+                                </div>
+                                <div class="fund-card__content">
+                                    <div class="fund-card__content-top">
+                                        <span class="fund-card__subtitle">Sustainable Investment</span>
+                                        <span class="fund-card__title">Liontrust GF Sustainable Future European Corporate Bond</span>
+                                        <div class="fund-card__text">
+                                            <div class="fund-card__text-top">
+                                                <p>
+                                                    The Fund has been managed since launch in April 2014 by James Inglis-Jones and Samantha
+                                                    Gleave. The fund managers seek to deliver a positive absolute return over the long term.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="fund-card__text-bottom">
+                                        <div class="fund-card__btns-block">
+                                            <button class="fund-card__btn">Factsheet <i class="icon-file"></i></button>
+                                            <button class="fund-card__btn">All documents <i class="icon-folder"></i></button>
+                                        </div>
+                                        <a href="#" class="link-styles">
+                                            View this fund
+                                            <i class="icon-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </article-item>
                 </div>
-                <!--#include virtual="/components/reusables/pagination.html" -->
+                <div class="row">
+                    <div class="col-lg-6 offset-lg-3">
+                      <nav v-if="getPageAmount > 1" class="pagination mt-3">
+                        <a href="#" @click.prevent="prevPage" class="pagination__step pagination__step_forward"
+                          :class="disablePrevBtn ? 'pagination__step_disabled' : ''"><i class="icon-arrow-left"></i> Previous</a>
+                        <ul class="pagination__list">
+                          <li class="pagination__item">
+                            <a @click.prevent="jumpPagesForward" v-if="showForwardPageBtn" href="#"
+                              class="pagination__link pagination__link_steps">...</a>
+                          </li>
+                          <li v-for="(page, i) in getPages" :key="i" class="pagination__item">
+                            <a @click.prevent="changePage(page)" href="#" class="pagination__link"
+                              :class="getPage === page ? 'active' : ''">
+                              {{page}}
+                            </a>
+                          </li>
+                          <li class="pagination__item">
+                            <a @click.prevent="jumpPagesNext" v-if="showNextPageBtn" href="#"
+                              class="pagination__link pagination__link_steps">...</a>
+                          </li>
+                        </ul>
+                        <a href="#" @click.prevent="nextPage" :class="disabledNextBtn ? 'pagination__step_disabled' : ''"
+                          class="pagination__step pagination__step_next">Next <i class="icon-arrow-right"></i></a>
+                      </nav>
+                    </div>
+                  </div>
             </section>
 
         </div>
