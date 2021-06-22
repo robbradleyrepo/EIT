@@ -1,9 +1,10 @@
 ﻿---
-ID: "eef8865f-03e7-4695-9fc9-20527a6c141f"
+ID: "c25c4eb8-b10f-4cec-ba10-20e7522bf8bd"
 Parent: "7502b69e-d154-4861-a033-bc0cb30a91b5"
 Template: "4c4e3993-f6d4-4040-a3fd-e5deb438bff8"
 Path: /sitecore/content/LionTrustNew/Home/ArticleListerPage
 DB: master
+BranchID: "ca116de7-3554-48d7-81d2-0d02f0d24c28"
 SharedFields:
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
@@ -12,42 +13,55 @@ SharedFields:
     <r xmlns:p="p" xmlns:s="s"
       p:p="1">
       <d
-        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
-        s:l="{CD1590E1-6573-4CC7-B0A9-E3BB6A9DADE4}">
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{055B50B4-F283-4B6C-9440-C651FBDCD03C}">
-          <p:d />
-        </r>
+          uid="{CBE49421-A760-4D3D-A074-EEB88B28C6A2}"
+          p:before="*"
+          s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+          s:ph="/header/navigation" />
         <r
-          uid="{899D4149-15B7-4456-978C-804201A92C6B}"
+          uid="{39027940-F8BC-4D9F-B0A3-08D99A7DE30A}"
+          p:after="r[@uid='{CBE49421-A760-4D3D-A074-EEB88B28C6A2}']"
+          s:ds="{2ABEFCD5-F000-4C20-B679-45465146EB0B}"
+          s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
+          s:par=""
+          s:ph="header" />
+        <r
+          uid="{7C462703-C357-4398-825D-CF851C59598E}"
+          p:after="r[@uid='{39027940-F8BC-4D9F-B0A3-08D99A7DE30A}']"
+          s:ds="{81FEB837-D3FC-467C-8504-BEF48E2F442B}"
+          s:id="{7166AE9D-EFBD-48B3-B38F-AFD4CAAB5278}"
+          s:par=""
+          s:ph="/header/secondary-navigation" />
+        <r
+          uid="{7005301F-9753-4AD3-AA57-8A4143F46665}"
+          p:after="r[@uid='{7C462703-C357-4398-825D-CF851C59598E}']"
           s:id="{CB2277A4-8384-4EB1-94AC-D28D9E979831}"
           s:ph="main" />
         <r
-          uid="{F3F5DDD8-BCED-4C83-A49B-42E641DFDC1F}">
-          <p:d />
-        </r>
-        <r
-          uid="{4581C414-880F-4314-BC8F-57D77FC409F6}">
-          <p:d />
-        </r>
-        <r
-          uid="{0F0BD969-2B02-49D7-B567-F32217AB6F14}">
-          <p:d />
-        </r>
-        <r
-          uid="{FAFE694E-9C4A-4D3D-9DA9-C032AF0A3974}">
-          <p:d />
-        </r>
-        <r
-          uid="{6EF1721C-9DBD-4505-A950-FD64CA9FE3D8}">
-          <p:d />
-        </r>
+          uid="{8825FBFC-41A5-47D5-96C4-71868122312E}"
+          p:after="r[@uid='{7005301F-9753-4AD3-AA57-8A4143F46665}']"
+          s:ds="{8F7AA55E-2569-4646-A28E-7FA325F64C31}"
+          s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+          s:par=""
+          s:ph="main" />
       </d>
     </r>
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{5C03508F-C544-4D72-86BE-E34F04C2D5D3}"
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Value: "20210618T112123:637596120834637918Z"
+      Hint: __Created
+      Value: 20210622T114514Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: ArticleListerPage

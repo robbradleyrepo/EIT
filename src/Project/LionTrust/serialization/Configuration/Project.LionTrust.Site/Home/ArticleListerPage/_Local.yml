@@ -1,9 +1,10 @@
 ﻿---
-ID: "b4b7bf9c-e198-44a4-813c-f582f4e0092e"
-Parent: "eef8865f-03e7-4695-9fc9-20527a6c141f"
+ID: "b50791b3-c2e3-4b9a-a327-114205baded0"
+Parent: "c25c4eb8-b10f-4cec-ba10-20e7522bf8bd"
 Template: "fff5f245-ffc0-4022-a998-9b07aa5e761f"
 Path: /sitecore/content/LionTrustNew/Home/ArticleListerPage/_Local
 DB: master
+BranchID: "ca116de7-3554-48d7-81d2-0d02f0d24c28"
 SharedFields:
 - ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
   Hint: __Masters
@@ -14,6 +15,9 @@ SharedFields:
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: "-1000"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{7DF260F9-DF44-467A-B975-12E08D133307}"
 Languages:
 - Language: en
   Versions:
@@ -21,7 +25,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210617T155852Z
+      Value: 20210622T114514Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |

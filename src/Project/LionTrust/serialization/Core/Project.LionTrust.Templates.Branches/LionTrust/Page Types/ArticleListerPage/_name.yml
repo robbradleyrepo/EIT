@@ -33,8 +33,13 @@ SharedFields:
           s:par=""
           s:ph="/header/secondary-navigation" />
         <r
-          uid="{8825FBFC-41A5-47D5-96C4-71868122312E}"
+          uid="{7005301F-9753-4AD3-AA57-8A4143F46665}"
           p:after="r[@uid='{7C462703-C357-4398-825D-CF851C59598E}']"
+          s:id="{CB2277A4-8384-4EB1-94AC-D28D9E979831}"
+          s:ph="main" />
+        <r
+          uid="{8825FBFC-41A5-47D5-96C4-71868122312E}"
+          p:after="r[@uid='{7005301F-9753-4AD3-AA57-8A4143F46665}']"
           s:ds="{8F7AA55E-2569-4646-A28E-7FA325F64C31}"
           s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
           s:par=""
