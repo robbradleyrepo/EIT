@@ -1,16 +1,14 @@
 ﻿---
-ID: "14397930-4d1f-4d36-9e04-0f09ba735d3b"
+ID: "39188a30-6bc8-40b0-b6dc-c3673aa29554"
 Parent: "13f197e9-03e8-420c-8b34-6f93657e5551"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Feature/Search/_ArticleLister
+Path: /sitecore/templates/Feature/Search/_Pagination
 DB: master
 SharedFields:
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
   Type: tree list
-  Value: |
-    {1930BBEB-7805-471A-A3BE-4858AC7CF696}
-    {39188A30-6BC8-40B0-B6DC-C3673AA29554}
+  Value: "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"
 Languages:
 - Language: en
   Versions:
@@ -18,4 +16,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210617T162539Z
+      Value: 20210622T120303Z

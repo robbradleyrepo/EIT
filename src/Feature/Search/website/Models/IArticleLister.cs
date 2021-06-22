@@ -3,7 +3,7 @@
     using Glass.Mapper.Sc.Fields;
     using Glass.Mapper.Sc.Configuration.Attributes;
 
-    public interface IArticleLister : ISearchGlassBase
+    public interface IArticleLister : IPagination, ISearchGlassBase
     {
         [SitecoreField(Constants.ArticleLister.ApplyFiltersLabel_FieldId)]
         string ApplyFiltersLabel { get; set; }
@@ -33,13 +33,7 @@
         string SortLabel { get; set; }
 
         [SitecoreField(Constants.ArticleLister.FilterLabel_FieldId)]
-        string FilterLabel { get; set; }
-
-        [SitecoreField(Constants.ArticleLister.NextLabel_FieldId)]
-        string NextLabel { get; set; }
-
-        [SitecoreField(Constants.ArticleLister.PreviousLabel_FieldId)]
-        string PreviousLabel { get; set; }
+        string FilterLabel { get; set; }        
 
         [SitecoreField(Constants.ArticleLister.SearchPlaceholder_FieldId)]
         string SearchPlaceholder { get; set; }
