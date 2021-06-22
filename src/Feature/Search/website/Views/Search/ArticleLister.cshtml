@@ -173,7 +173,7 @@
                     </div>
                 </article-item>
             </div>
-            @Html.Partial("~/Views/Search/_Pagination.cshtml", new Pagination { NextLabel = Model.NextLabel, PreviousLabel = Model.PreviousLabel })
+            @Html.Partial("~/Views/Search/_Pagination.cshtml", Model)
         </section>
     </div>
 }
