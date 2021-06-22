@@ -9,6 +9,8 @@
     { 
         public IEnumerable<string> Authors { get; set; }
 
+        public string AuthorImageUrl { get; set; }
+
         public string Category { get; set; }
 
         public string Content { get; set; }

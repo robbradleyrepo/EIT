@@ -61,7 +61,8 @@
                                                         Subtitle = x.Document.ArticleSubtitle,
                                                         Team = x.Document.ArticleTeam,
                                                         Title = x.Document.ArticleTitle,
-                                                        Topics = x.Document.TopicNames?.Split('|')
+                                                        Topics = x.Document.TopicNames?.Split('|'),
+                                                        AuthorImageUrl = x.Document.ArticleAuthorImage
                                                      });
         }
 

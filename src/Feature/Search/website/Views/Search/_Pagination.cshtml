@@ -1,0 +1,27 @@
+﻿@model LionTrust.Feature.Search.Models.Pagination 
+<div class="row">
+    <div class="col-lg-6 offset-lg-3">
+        <nav v-if="getPageAmount > 1" class="pagination mt-3">
+            <a href="#" @@click.prevent="prevPage" class="pagination__step pagination__step_forward"
+               :class="disablePrevBtn ? 'pagination__step_disabled' : ''"><i class="icon-arrow-left"></i> @Model.PreviousLabel</a>
+            <ul class="pagination__list">
+                <li class="pagination__item">
+                    <a @@click.prevent="jumpPagesForward" v-if="showForwardPageBtn" href="#"
+                       class="pagination__link pagination__link_steps">...</a>
+                </li>
+                <li v-for="(page, i) in getPages" :key="i" class="pagination__item">
+                    <a @@click.prevent="changePage(page)" href="#" class="pagination__link"
+                       :class="getPage === page ? 'active' : ''">
+                        {{page}}
+                    </a>
+                </li>
+                <li class="pagination__item">
+                    <a @@click.prevent="jumpPagesNext" v-if="showNextPageBtn" href="#"
+                       class="pagination__link pagination__link_steps">...</a>
+                </li>
+            </ul>
+            <a href="#" @@click.prevent="nextPage" :class="disabledNextBtn ? 'pagination__step_disabled' : ''"
+               class="pagination__step pagination__step_next">@Model.NextLabel <i class="icon-arrow-right"></i></a>
+        </nav>
+    </div>
+</div>
