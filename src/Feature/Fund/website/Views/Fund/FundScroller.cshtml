@@ -1,103 +1,107 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @using LionTrust.Foundation.Analytics.Goals
 @model LionTrust.Feature.Fund.Models.IFundScroller
-<div class="fundscroller fundscroller-bg">
-    <div class="container-left-gutter">
-        <div class="fundscroller__box">
-            <div class="fundscroller__left">
-                <div class="imagepromo__content">
-                    <div class="imagepromo__headbox">
-                        <h2>@Html.Glass().Editable(m => m.Heading)</h2>
-                    </div>
-                    <div class="imagepromo__contentbox txtlimit tenline">
-                        <p>
-                            @Html.Glass().Editable(m => m.Subtitle)
-                        </p>
-                        <p class="font-300">
-                            @Html.Glass().Editable(m => m.Description)
-                        </p>
-                    </div>
-                    <div class="imagepromo__btnbox">
-                        @using (@Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.PrimaryCta, Model.PrimaryCtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
-                        {
-                            if (Model.PrimaryCta != null)
-                            {
-                                @Model.PrimaryCta.Text
-                            }
-                            else if (Sitecore.Context.PageMode.IsExperienceEditor)
-                            {
-                                @: Edit primary link
-                            }
-                            <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
-                        }
 
-                        @using (@Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.SecondaryCta, Model.SecondaryCtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }, isEditable: true))
-                        {
-                            if (Model.SecondaryCta != null)
+@if (Model != null)
+{
+    <div class="fundscroller fundscroller-bg">
+        <div class="container-left-gutter">
+            <div class="fundscroller__box">
+                <div class="fundscroller__left">
+                    <div class="imagepromo__content">
+                        <div class="imagepromo__headbox">
+                            <h2>@Html.Glass().Editable(m => m.Heading)</h2>
+                        </div>
+                        <div class="imagepromo__contentbox txtlimit tenline @(Model.TextColour != null ? Model.TextColour.Value : string.Empty)">
+                            <p>
+                                @Html.Glass().Editable(m => m.Subtitle)
+                            </p>
+                            <p class="font-300">
+                                @Html.Glass().Editable(m => m.Description)
+                            </p>
+                        </div>
+                        <div class="imagepromo__btnbox">
+                            @using (@Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.PrimaryCta, Model.PrimaryCtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
                             {
-                                @Model.SecondaryCta.Text
+                                if (Model.PrimaryCta != null)
+                                {
+                                    @Model.PrimaryCta.Text
+                                }
+                                else if (Sitecore.Context.PageMode.IsExperienceEditor)
+                                {
+                                    @: Edit primary link
+                                }
+                                <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
                             }
-                            else if (Sitecore.Context.PageMode.IsExperienceEditor)
+
+                            @using (@Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.SecondaryCta, Model.SecondaryCtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }, isEditable: true))
                             {
-                                @: Edit secondary link
+                                if (Model.SecondaryCta != null)
+                                {
+                                    @Model.SecondaryCta.Text
+                                }
+                                else if (Sitecore.Context.PageMode.IsExperienceEditor)
+                                {
+                                    @: Edit secondary link
+                                }
+                                <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
                             }
-                            <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
-                        }
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="fundscroller__right">
-                <!-- Swiper -->
-                <div class="swiper-container-funds">
-                    <div class="swiper-wrapper">
-                        @foreach (var item in Model.Funds)
-                        {
-                            <div class="swiper-slide">
+                <div class="fundscroller__right">
+                    <!-- Swiper -->
+                    <div class="swiper-container-funds">
+                        <div class="swiper-wrapper">
+                            @foreach (var item in Model.Funds)
+                            {
+                                <div class="swiper-slide">
 
-                                @{
-                                    var fundPageUrl = item.Page == null ? string.Empty : item.Page.Url;
-                                }
-                                <a href="@fundPageUrl" class="fund-card">
-                                    <div class="fund-card__head" style="background-image: url('')">
-                                        @Html.Glass().Editable(item, i => i.Image)
-                                    </div>
-                                    <div class="fund-card__content">
-                                        <span class="fund-card__subtitle">@Html.Glass().Editable(item, i => i.Heading)</span>
-                                        <span class="fund-card__title">
-                                            @Html.Glass().Editable(@item, i => i.FundName)
-                                        </span>
-                                        <div class="fund-card__text">
-                                            <div class="fund-card__text-top">
-                                                <p>
-                                                    @if (Sitecore.Context.PageMode.IsExperienceEditor)
-                                                    {
-                                                        @Html.Glass().Editable(item, i => i.Description)
-                                                    }
-                                                    else if (!string.IsNullOrEmpty(item.Description) && item.Description.Count() > 460)
-                                                    {
-                                                        @item.Description.Substring(0, 460) @:...
-                                                    }
-                                                    else
-                                                    {
-                                                        @item.Description
-                                                    }
-                                                </p>
-                                            </div>
-                                            <div class="fund-card__text-bottom">
-                                                <span class="link-styles">
-                                                    @Html.Glass().Editable(m => m.ViewFundLabel)
-                                                    <i class="icon-arrow-right"></i>
-                                                </span>
+                                    @{
+                                        var fundPageUrl = item.Page == null ? string.Empty : item.Page.Url;
+                                    }
+                                    <a href="@fundPageUrl" class="fund-card">
+                                        <div class="fund-card__head" style="background-image: url('')">
+                                            @Html.Glass().Editable(item, i => i.Image)
+                                        </div>
+                                        <div class="fund-card__content">
+                                            <span class="fund-card__subtitle">@Html.Glass().Editable(item, i => i.Heading)</span>
+                                            <span class="fund-card__title">
+                                                @Html.Glass().Editable(@item, i => i.FundName)
+                                            </span>
+                                            <div class="fund-card__text">
+                                                <div class="fund-card__text-top">
+                                                    <p>
+                                                        @if (Sitecore.Context.PageMode.IsExperienceEditor)
+                                                        {
+                                                            @Html.Glass().Editable(item, i => i.Description)
+                                                        }
+                                                        else if (!string.IsNullOrEmpty(item.Description) && item.Description.Count() > 460)
+                                                        {
+                                                            @item.Description.Substring(0, 460) @:...
+                                                        }
+                                                        else
+                                                        {
+                                                            @item.Description
+                                                        }
+                                                    </p>
+                                                </div>
+                                                <div class="fund-card__text-bottom">
+                                                    <span class="link-styles">
+                                                        @Html.Glass().Editable(m => m.ViewFundLabel)
+                                                        <i class="icon-arrow-right"></i>
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                        }
+                                    </a>
+                                </div>
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+}

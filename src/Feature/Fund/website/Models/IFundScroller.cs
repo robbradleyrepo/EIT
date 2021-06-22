@@ -2,12 +2,11 @@
 {
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
-    using LionTrust.Foundation.Legacy.Models;
     using LionTrust.Foundation.ORM.Models;
     using System;
     using System.Collections.Generic;
 
-    public interface IFundScroller: IGlassBase
+    public interface IFundScroller : IGlassBase
     {
         [SitecoreField(Constants.FundScroller.HeadingFieldId)]
         string Heading { get; set; }
@@ -35,5 +34,8 @@
 
         [SitecoreField(Constants.FundScroller.ViewFundFieldId)]
         string ViewFundLabel { get; set; }
+
+        [SitecoreField(Constants.FundScroller.TextColourFieldId)]
+        Foundation.Design.ILookupValue TextColour { get; set; }
     }
 }
