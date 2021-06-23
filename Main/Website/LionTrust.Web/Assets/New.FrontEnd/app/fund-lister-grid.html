@@ -22,24 +22,20 @@
             <!--#include virtual="/components/BC005-Fund-Filters.html" -->
             <section class="container">
                 <div class="row" v-if="grid">
-                    <article-item inline-template v-for="(article, i) in searchData" :key="i">
+                    <article-item inline-template v-for="(fund, i) in searchData" :key="i">
                         <div class="col-md-6 col-lg-4 col-xl-3 d-flex">
                             <div class="fund-card fund-card_grid">
                                 <div class="fund-card__head">
-                                    <img src="images/components/fund-card/fund-card-lion.png" alt="liontrust" />
+                                    <img :src="fund.FundCardImageUrl" :alt="fund.FundCardHeading" />
                                 </div>
                                 <div class="fund-card__content">
                                     <div class="fund-card__content-top">
-                                        <span class="fund-card__subtitle">Sustainable Investment</span>
-                                        <span class="fund-card__title">Liontrust GF Sustainable Future European
-                                            Corporate Bond</span>
+                                        <span class="fund-card__subtitle">{{fund.FundCategory}}</span>
+                                        <span class="fund-card__title"> {{fund.FundCardHeading}}</span>
                                         <div class="fund-card__text">
                                             <div class="fund-card__text-top">
                                                 <p>
-                                                    The Fund has been managed since launch in April 2014 by James
-                                                    Inglis-Jones and Samantha
-                                                    Gleave. The fund managers seek to deliver a positive absolute return
-                                                    over the long term.
+                                                    {{fund.FundCardDescription}}
                                                 </p>
                                             </div>
                                         </div>
@@ -50,7 +46,7 @@
                                             <button class="fund-card__btn">All documents <i
                                                     class="icon-folder"></i></button>
                                         </div>
-                                        <a href="#" class="link-styles">
+                                        <a :href="fund.Url" class="link-styles">
                                             View this fund
                                             <i class="icon-arrow-right"></i>
                                         </a>
@@ -60,32 +56,30 @@
                         </div>
                     </article-item>
                 </div>
-                <article-item v-else inline-template v-for="(article, i) in searchData" :key="i">
+                <article-item v-else inline-template v-for="(fund, i) in searchData" :key="i">
                     <div class="fund-item-list">
                         <div class="row align-items-center">
                             <div class="col-xl-4">
-                                <span class="fund-item-list__title">Liontrust GF Sustainable Future European Corporate
-                                    Bond</span>
+                                <span class="fund-item-list__title">{{fund.FundCardHeading}}</span>
 
                             </div>
                             <div class="col-xl-2">
                                 <div class="fund-item-list__badge">
                                     <span class="badge-secondary">
-                                        The Sustainable Investment Team
+                                        {{fund.FundCategory}}
                                     </span>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-xl-4">
                                 <div class="fund-item-list__links">
                                     <button href="#" class="link-gray">Follow <i class="icon-follow"></i></button>
-                                    <a href="#" target="_blank" class="link-gray">Factsheet <i
-                                            class="icon-file"></i></a>
-                                    <button class="link-gray">All documents <i class="icon-folder"></i></button>
+                                    <a href="#" target="_blank" class="link-gray">Factsheet <i class="icon-file"></i></a>
+                                    <button class="link-gray view-documents">All documents <i class="icon-folder"></i></button>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-xl-2">
                                 <div class="fund-item-list__right-btn">
-                                    <a href="#" class="btn btn-primary-forward">
+                                    <a :href="fund.Url" class="btn btn-primary-forward">
                                         View this fund <i class="icon-arrow-right animate-arrow"></i>
                                     </a>
                                 </div>
@@ -128,6 +122,7 @@
     </main>
 
     <!--#include virtual="/components/GC009-Breadcrumb-Nav.html" -->
+    <!--#include virtual="/components/BC020-Literature-Overlay.html" -->
     <!--#include virtual="/components/LDC-190-Footer.html" -->
     <!--#include virtual="/components/GC008-Onboarding-Overlay.html" -->
     <!--#include virtual="/components/GC006-Search-Overlay.html" -->
