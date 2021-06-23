@@ -24,6 +24,9 @@
         display: flex
         flex-direction: column
         max-height: fit-content
+        max-width: 100%
+        @include breakpoint(desktop, up)
+            min-width: 100%
         .fund-card__head
             height: auto
             img

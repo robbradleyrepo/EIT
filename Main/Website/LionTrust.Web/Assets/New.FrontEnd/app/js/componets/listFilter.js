@@ -22,7 +22,8 @@ export default () => {
       showPageInPagination: 7,
       mobileFilter: false,
       months: [],
-      years: []
+      years: [],
+      grid: false
     },
     computed: {
       getFacets() {
@@ -166,8 +167,12 @@ export default () => {
       },
     },
     mounted() {
-      this.getFacetsRequest();
-      this.getSearchRequest();     
+      // this.getFacetsRequest();
+      // this.getSearchRequest();   
+      this.facets = facets;
+      const { SearchResults, TotalResults } = responce;
+      this.searchData = SearchResults;
+      this.amountResults = TotalResults;  
 
       document.querySelector("body").addEventListener("click", () => {
         this.sortModal = false;

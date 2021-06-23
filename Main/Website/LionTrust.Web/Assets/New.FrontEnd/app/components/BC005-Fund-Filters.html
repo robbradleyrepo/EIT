@@ -17,15 +17,15 @@
                             </button>
                         </form>                        
                     </div>   
-                    <div class="col-lg-9">
+                    <div class="col-lg-9 d-none d-lg-block">
                         <div class="text-right">
-                            <button class="btn btn-clean view-btn active  mr-3">
+                            <button @click="grid = false" :class="!grid ? 'active' : ''" class="btn btn-clean view-btn mr-3">
                                 View as list <i class="icon-grid-view"></i>
                             </button>
-                            <button class="btn btn-clean view-btn  mr-3">
+                            <button @click="grid = true" :class="grid ? 'active' : ''" class="btn btn-clean view-btn mr-3">
                                 View as grid <i class="icon-list-view"></i>
                             </button>
-                            <a href="#" class="link-styles">Interactive fund centre <i class="icon-tab"></i></a>
+                            <a href="#" target="_blank" class="link-styles">Interactive fund centre <i class="icon-tab"></i></a>
                         </div>
                     </div>                 
                 </div>
@@ -56,21 +56,7 @@
                                 </option-field>
                             </div>
                         </div>   
-                    </select-field>                 
-                    <div class="col-lg-1 relative" v-if="months.length">
-                        <select class="article-filters__select-custom" @change="setMonth($event)">
-                            <option value="0" disabled selected>Month</option>
-                            <option  v-for="(month, i) in months" :key="i" :value="i + 1">{{month}}</option>           
-                        </select>
-                        <i class="article-filters__icon-arrow article-filters__icon-arrow_select"></i>
-                    </div>
-                    <div class="col-lg-1 relative" v-if="years.length">
-                        <select class="article-filters__select-custom" @change="setYear($event)">
-                            <option value="0" disabled selected>Year</option>
-                            <option v-for="(year, i) in years" :key="i" :value="year">{{year}}</option>                        
-                        </select>
-                        <i class="article-filters__icon-arrow article-filters__icon-arrow_select"></i>
-                    </div>
+                    </select-field>
                     <div class="col-lg-2">
                         <div class="article-filters__btns">
                             <button class="btn article-filters__btn article-filters__btn_apply" @click="applyFilters">
@@ -111,10 +97,10 @@
             </btn>
             <div class="view-buttons">
                 View
-                <button class="btn btn-clean ml-auto button-sort">
+                <button @click="grid = false" :class="!grid ? 'active' : ''" class="btn btn-clean btn-view-mob ml-auto button-sort">
                     <i class="icon-grid-view"></i>
                 </button>
-                <button class="btn btn-clean ml-auto button-sort">
+                <button @click="grid = true" :class="grid ? 'active' : ''" class="btn btn-clean btn-view-mob ml-auto button-sort">
                     <i class="icon-list-view"></i>
                 </button>            
             </div>
