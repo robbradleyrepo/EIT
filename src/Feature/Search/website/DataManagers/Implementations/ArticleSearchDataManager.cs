@@ -58,6 +58,7 @@
                                                         Date = this.GetArticleDate(x.Document.ArticleDate),
                                                         Fund = x.Document.ArticleFundName,
                                                         ImageUrl = x.Document.ArticleListingImage,
+                                                        ImageOpacity = x.Document.ArticleListingImageOpacity == 0 ? 1 : x.Document.ArticleListingImageOpacity,
                                                         Subtitle = x.Document.ArticleSubtitle,
                                                         Team = x.Document.ArticleTeam,
                                                         Title = x.Document.ArticleTitle,

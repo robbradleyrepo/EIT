@@ -46,6 +46,9 @@
         [IndexField("article_listing_image_protected")]
         public string ArticleListingImage { get; set; }
 
+        [IndexField("Article_ListingImageOpacity")]
+        public float ArticleListingImageOpacity { get; set; }
+
         [IndexField("LegacyArticle_Team")]
         public IEnumerable<string> ArticleTeam { get; set; }
 
