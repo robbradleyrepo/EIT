@@ -85,9 +85,14 @@
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\SearchAPIController.cs" />
+    <Compile Include="DataManagers\Implementations\FundSearchDataManager.cs" />
     <Compile Include="DataManagers\Implementations\ArticleSearchDataManager.cs" />
+    <Compile Include="DataManagers\Interfaces\IFundSearchDataManager.cs" />
     <Compile Include="DataManagers\Interfaces\IArticleSearchDataManager.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
+    <Compile Include="Models\API\FundResult.cs" />
+    <Compile Include="Models\API\Facets\IFundSearchFacetsConfig.cs" />
+    <Compile Include="Models\API\FundFacets.cs" />
     <Compile Include="Models\API\ArticleResult.cs" />
     <Compile Include="Models\API\Dates.cs" />
     <Compile Include="Models\API\FacetItem.cs" />
@@ -96,8 +101,9 @@
     <Compile Include="Models\API\Facets\IFacetFolder.cs" />
     <Compile Include="Models\API\Facets\IFundManagerFacetFolder.cs" />
     <Compile Include="Models\API\Facets\IFundManagerFacetOption.cs" />
+    <Compile Include="Models\API\Response\FundFacetsResponse.cs" />
     <Compile Include="Models\API\Response\ArticleFacetsResponse.cs" />
-    <Compile Include="Models\API\Response\ArticleSearchResponse.cs" />
+    <Compile Include="Models\API\Response\SearchResponse.cs" />
     <Compile Include="Models\IArticleLister.cs" />
     <Compile Include="Models\ISearchGlassBase.cs" />
     <Compile Include="Models\IPagination.cs" />

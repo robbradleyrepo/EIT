@@ -92,7 +92,7 @@
             return listingArticleFacetsResponse;
         }
 
-        public ITaxonomySearchResponse GetArticleListingResponse(string database, string funds, string fundCategories, string fundManagers, string fundTeams, int? month, int? year, string searchTerm, string sortOrder, int page)
+        public ISearchResponse<ITaxonomyContentResult> GetArticleListingResponse(string database, string funds, string fundCategories, string fundManagers, string fundTeams, int? month, int? year, string searchTerm, string sortOrder, int page)
         {
             var fromYear = year ?? 2000;
             var fromMonth = month ?? 1;
@@ -114,7 +114,7 @@
                 ToDate = new DateTime(toYear, toMonth, DateTime.DaysInMonth(toYear, toMonth))
             };
 
-            ContentSearchResults contentSearchResults;
+            ContentSearchResults<ArticleSearchResultItem > contentSearchResults;
             if (sortOrder == "ASC")
             {
                 contentSearchResults = this._articleContentSearchService.GetDatedTaxonomyRelatedArticles(articleSearchRequest, result => result.OrderBy(x => x.ArticleDate));
@@ -128,7 +128,7 @@
                 contentSearchResults = this._articleContentSearchService.GetDatedTaxonomyRelatedArticles(articleSearchRequest);
             }
 
-            var articleSearchResponse = new ArticleSearchResponse();
+            var articleSearchResponse = new SearchResponse<ITaxonomyContentResult>();
             if(contentSearchResults.TotalResults > 0)
             {
                 articleSearchResponse.SearchResults = this.MapArticleResultHits(contentSearchResults.SearchResults);
