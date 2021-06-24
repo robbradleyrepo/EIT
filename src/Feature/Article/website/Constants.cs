@@ -54,6 +54,7 @@
             public const string MultipleAuthorsLabel_FieldId = "{B6833539-8781-4788-92F4-D173F0727FEB}";
             public const string MultipleAuthorsIcon_FieldId = "{7075D230-7438-4F94-A4CC-1760107174CA}";
             public const string Image_FieldId = "{5BD6E9E9-2240-4473-8094-075E811B8438}";
+            public const string ImageOpacity_FieldId = "{FE72ED1F-986F-475E-A40F-B95DA77091B8}";
             public const string Date_FieldId = "{79CC76CC-7503-449B-9809-9808CF6C2D26}";
             public const string PdfDocument_FieldId = "{AE17B17D-0024-4700-9075-E95D8E7B15EE}";
         }
@@ -65,6 +66,7 @@
             public const string Title_FieldId = "{B43132DB-B2C9-400F-B79C-2DEE790E100B}";
             public const string Body_FieldId = "{831456DF-6D24-4B5F-BE64-A95B27CB3039}";
             public const string BackgroundImage_FieldId = "{92FE2900-B171-4FF8-8E36-050BB706AE4B}";
+            public const string BackgroundImageOpacity_FieldId = "{E2CB26F2-4036-48EA-8734-A270EA5D845C}";
             public const string PodcastsLabel_FieldId = "{3E49D1A6-BC8A-4924-A77D-AD0966D104EA}";
             public const string MobileBackgroundImageFieldId = "{0B768256-FD72-4DAF-9EF9-ED075D8AE371}";
         }

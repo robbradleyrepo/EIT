@@ -3,13 +3,15 @@
 @model LionTrust.Feature.Promo.Models.IPodcastPromo
 @if (Model != null)
 {
+    var opacity = string.IsNullOrWhiteSpace(Model.BackgroundImageOpacity) ? "opacity: 1" : "opacity: " + Model.BackgroundImageOpacity;
+
     <div class="container">
         <div class="podcast">
             <div class="podcast__box">
                 <picture>
                     <source media="(max-width:425px)" srcset="@Model.MobileBackgroundImage.GetSafeSitecoreImageUrl()" />
                     <source media="(min-width:426px)" srcset="@Model.BackgroundImage.GetSafeSitecoreImageUrl()" />
-                    <img class="podcast__back" src="@Model.BackgroundImage.GetSafeSitecoreImageUrl()" alt="@Model.BackgroundImage.GetSafeSitecoreImageAltText()" />
+                    <img class="podcast__back" style="@opacity" src="@Model.BackgroundImage.GetSafeSitecoreImageUrl()" alt="@Model.BackgroundImage.GetSafeSitecoreImageAltText()" />
                 </picture>
                 <div class="podcast__front">
                     <div class="podcast__head">

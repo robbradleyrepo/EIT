@@ -23,6 +23,8 @@
 
         public string ImageUrl { get; set; }
 
+        public string ImageOpacity { get; set; }
+
         public IEnumerable<string> Team { get; set; }
 
         public string Title { get; set; }
