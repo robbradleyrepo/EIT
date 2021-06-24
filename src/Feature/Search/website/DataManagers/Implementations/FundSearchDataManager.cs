@@ -91,7 +91,7 @@
             return listingFundFacetsResponse;
         }
 
-        public ISearchResponse<IFundContentResult> GetFundListingResponse(string database, string fundTeams, string fundCategories, string fundManagers, string searchTerm, int page)
+        public ISearchResponse<IFundContentResult> GetFundListingResponse(string database, string fundTeams,string fundManagers, string fundRegions, string fundRanges, string searchTerm, int page)
         {
             page = page - 1;
 
@@ -100,6 +100,8 @@
                 DatabaseName = database,
                 FundManagers = fundManagers?.Split('|'),
                 FundTeams = fundTeams?.Split('|'),
+                FundRegions = fundRegions?.Split('|'),
+                FundRanges = fundRanges?.Split('|'),
                 SearchTerm = searchTerm,
                 Skip = page * 21,
                 Take = 21,

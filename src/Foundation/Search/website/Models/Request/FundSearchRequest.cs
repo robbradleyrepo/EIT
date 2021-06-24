@@ -10,9 +10,9 @@
 
         public IEnumerable<string> FundTeams { get; set; }
 
-        public IEnumerable<string> FundRange { get; set; }
+        public IEnumerable<string> FundRanges { get; set; }
 
-        public IEnumerable<string> FundRegion { get; set; }
+        public IEnumerable<string> FundRegions { get; set; }
 
         public string SearchTerm { get; set; }
 

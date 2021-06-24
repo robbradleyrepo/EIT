@@ -50,11 +50,11 @@
                 fundFilter = fundFilter.Or(teamPredicate);
             }
 
-            if (fundSearchRequest.FundRange != null && fundSearchRequest.FundRange.Any())
+            if (fundSearchRequest.FundRanges != null && fundSearchRequest.FundRanges.Any())
             {
                 var rangePredicate = PredicateBuilder.False<FundSearchResultItem>();
                 rangePredicate = fundSearchRequest
-                                            .FundRange
+                                            .FundRanges
                                                     .Aggregate(rangePredicate,
                                                                     (current, range)
                                                                                 => current
@@ -63,11 +63,11 @@
                 fundFilter = fundFilter.Or(rangePredicate);
             }
 
-            if (fundSearchRequest.FundRegion != null && fundSearchRequest.FundRegion.Any())
+            if (fundSearchRequest.FundRegions != null && fundSearchRequest.FundRegions.Any())
             {
                 var regionPredicate = PredicateBuilder.False<FundSearchResultItem>();
                 regionPredicate = fundSearchRequest
-                                            .FundRegion
+                                            .FundRegions
                                                     .Aggregate(regionPredicate,
                                                                     (current, range)
                                                                                 => current

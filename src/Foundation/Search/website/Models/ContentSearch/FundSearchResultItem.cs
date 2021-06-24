@@ -11,13 +11,13 @@
         public IEnumerable<string> FundManagers { get; set; }
 
         [IndexField("LegacyFund_FundTeam")]
-        public IEnumerable<string> FundTeam { get; set; }
+        public string FundTeam { get; set; }
 
-        [IndexField("FundFacets_FundRange")]
+        [IndexField("FundFacets_FundRanges")]
         public IEnumerable<string> FundRange { get; set; }
 
         [IndexField("FundFacets_FundRegion")]
-        public IEnumerable<string> FundRegion { get; set; }
+        public string FundRegion { get; set; }
 
         [IndexField("FundPage_PageUrl")]
         public string FundPageUrl { get; set; }

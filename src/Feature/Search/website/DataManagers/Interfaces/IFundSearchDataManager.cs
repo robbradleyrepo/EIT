@@ -10,6 +10,6 @@
     {
         FundFacetsResponse GetFundFilterFacets(Guid fundFilterFacetConfigId);
 
-        ISearchResponse<IFundContentResult> GetFundListingResponse(string database, string fundTeams, string fundCategories, string fundManagers, string searchTerm, int page);
+        ISearchResponse<IFundContentResult> GetFundListingResponse(string database, string fundTeams, string fundManagers, string fundRegions, string fundRanges, string searchTerm, int page);
     }
 }
