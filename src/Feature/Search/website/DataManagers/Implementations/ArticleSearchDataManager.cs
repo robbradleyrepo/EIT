@@ -114,7 +114,7 @@
                 ToDate = new DateTime(toYear, toMonth, DateTime.DaysInMonth(toYear, toMonth))
             };
 
-            ContentSearchResults<ArticleSearchResultItem > contentSearchResults;
+            ContentSearchResults<ArticleSearchResultItem> contentSearchResults;
             if (sortOrder == "ASC")
             {
                 contentSearchResults = this._articleContentSearchService.GetDatedTaxonomyRelatedArticles(articleSearchRequest, result => result.OrderBy(x => x.ArticleDate));
