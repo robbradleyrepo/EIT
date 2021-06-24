@@ -28,7 +28,7 @@
             {
                 public const string FundRangesFieldId = "{FBE9329C-271B-4573-B4FD-6DC4B7C692C9}";
                 public const string FundManagersFieldId = "{EC744986-7D64-459D-A2E6-8CB5A9C0848D}";
-                public const string FundTeamsFieldId = "{37E555BE-6426-4E66-A991-FDC782125A46}";
+                public const string FundTeamsFieldId = "{38DD3B5E-9E3E-402C-8F5F-8D595EBDAB19}";
                 public const string FundRegionsFieldId = "{D859AD9C-7473-420D-A7C3-ACE454F18D07}";
             }
         }
