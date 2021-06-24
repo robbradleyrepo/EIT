@@ -1,6 +1,7 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @using System.Collections.Specialized;
 @using LionTrust.Feature.Navigation.Models;
+@using LionTrust.Foundation.Analytics.Goals
 @model LionTrust.Feature.Navigation.Models.IHome
 @if (Model != null && Model.FooterConfiguration != null)
 {
@@ -24,7 +25,7 @@
                             </ul>
                             @if (Model.FooterConfiguration.GoogleMapsLink != null || Sitecore.Context.PageMode.IsExperienceEditor)
                             {
-                                using (Html.Glass().BeginRenderLink(Model.FooterConfiguration, m => m.GoogleMapsLink, new NameValueCollection { { "class", "footer__map-link" } }, isEditable: true))
+                                using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model.FooterConfiguration, m => m.GoogleMapsLink, Model.FooterConfiguration.GoogleMapsGoal, new NameValueCollection { { "class", "footer__map-link" } }, isEditable: true))
                                 {
                                     if (!string.IsNullOrEmpty(Model.FooterConfiguration.GoogleMapsLink.Text))
                                     {
@@ -39,23 +40,13 @@
                                 <span class="footer__title h5">@Html.Glass().Editable(Model.FooterConfiguration, x => x.GetInTouchLabel)</span>
                                 <ul class="footer__list">
                                     <li class="footer__item">
-                                        <a href="tel:@Model.FooterConfiguration.PhoneNumber" class="footer__link">@Html.Glass().Editable(Model.FooterConfiguration, x => x.PhoneNumber)</a>
+                                        <a href="tel:@Model.FooterConfiguration.PhoneNumber" class="footer__link" data-goal-trigger="@Model.FooterConfiguration.PhoneGoal">@Html.Glass().Editable(Model.FooterConfiguration, x => x.PhoneNumber)</a>
                                     </li>
                                     <li class="footer__item">
-                                        @if (Sitecore.Context.PageMode.IsExperienceEditor)
-                                        {
-                                            <div class="footer__link footer__link_arrow">
-                                                @Html.Glass().Editable(Model.FooterConfiguration, x => x.Email)
-                                                @Html.Glass().Editable(Model.FooterConfiguration, x => x.EmailCTALabel)<i class="icon-arrow-right"></i>
-                                            </div>
-                                        }
-                                        else
-                                        {
-                                            <a href="mailto:@Model.FooterConfiguration.Email" class="footer__link footer__link_arrow">
-                                                @Model.FooterConfiguration.EmailCTALabel
-                                                <i class="icon-arrow-right"></i>
-                                            </a>
-                                        }
+                                        <a href="mailto:@Model.FooterConfiguration.Email" class="footer__link footer__link_arrow" data-goal-trigger="@Model.FooterConfiguration.EmailCTAGoal">
+                                            @Model.FooterConfiguration.EmailCTALabel
+                                            <i class="icon-arrow-right"></i>
+                                        </a>                                        
                                     </li>
                                 </ul>
                             </div>
@@ -66,18 +57,18 @@
                                 {
                                     foreach (var socialLink in Model.FooterConfiguration.SocialIcons)
                                     {
-                                        if (string.IsNullOrEmpty(socialLink.TwitterAccounts))
+                                        if (socialLink.TwitterAccounts == null)
                                         {
                                             if (socialLink.SocialLink != null || Sitecore.Context.PageMode.IsExperienceEditor)
                                             {
-                                                using (Html.Glass().BeginRenderLink(socialLink, m => m.SocialLink, new NameValueCollection { { "class", "social__link" } }, isEditable: true))
+                                                using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(socialLink, m => m.SocialLink, socialLink.SocialLinkGoal, new NameValueCollection { { "class", "social__link" } }, isEditable: true))
                                                 {
                                                     @Html.Glass().RenderImage(socialLink, x => x.SocialIcon, new NameValueCollection { { "class", "social__link-icon" } }, isEditable: true)
                                                 }
                                             }
                                             else
                                             {
-                                                <a href="#" class="social__link">
+                                                <a href="#" class="social__link" data-goal-trigger="@socialLink.SocialLinkGoal">
                                                     @Html.Glass().RenderImage(socialLink, x => x.SocialIcon, new NameValueCollection { { "class", "social__link-icon" } }, isEditable: true)
                                                 </a>
                                             }
@@ -87,21 +78,9 @@
                                             <span class="social__link">
                                                 @Html.Glass().RenderImage(socialLink, x => x.SocialIcon, new NameValueCollection { { "class", "social__link-icon" } }, isEditable: true)
                                                 <div class="social__twitter">
-                                                    @if (Sitecore.Context.PageMode.IsExperienceEditor)
+                                                    @foreach (var account in socialLink.TwitterAccounts)
                                                     {
-                                                        @:Add here the twitter account names delimited by space:
-                                                        <div class="social__twitter-link">@Html.Glass().Editable(socialLink, m => m.TwitterAccounts)</div>
-                                                    }
-                                                    else
-                                                    {
-                                                        if (!string.IsNullOrEmpty(socialLink.TwitterAccounts))
-                                                        {
-                                                            var accounts = socialLink.TwitterAccounts.Split(',');
-                                                            foreach (var account in accounts)
-                                                            {
-                                                                <a href="https://twitter.com/@account" class="social__twitter-link">@@@account</a>
-                                                            }
-                                                        }
+                                                        <a href="https://twitter.com/@account.TwitterAccountName" data-goal-trigger="@account.CTAGoal" class="social__twitter-link">@@@account.TwitterAccountName</a>
                                                     }
                                                 </div>
                                             </span>
@@ -114,9 +93,10 @@
                             <span class="footer__title h5">@Html.Glass().Editable(Model.FooterConfiguration, m => m.SubscribeNewsletterLabel)</span>
                             @if (Model.FooterConfiguration.SubscribeCTALink != null || Sitecore.Context.PageMode.IsExperienceEditor)
                             {
-                                using (Html.Glass().BeginRenderLink(
+                                using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(
                                     Model.FooterConfiguration,
                                     m => m.SubscribeCTALink,
+                                    Model.FooterConfiguration.SubscribeCTAGoal,
                                     new NameValueCollection { { "class", "footer__link footer__link_arrow footer__link_sign" } },
                                     isEditable: true))
                                 {
@@ -155,8 +135,13 @@
                                                 if (footerLink != null && (footerLink.PageLink != null || Sitecore.Context.PageMode.IsExperienceEditor))
                                                 {
                                                     <li class="footer__list-item">
-                                                        @Html.Glass().RenderLink(footerLink, m => m.PageLink, new NameValueCollection { { "class", "footer__mav-list" } }, isEditable: true)
-                                                        
+                                                        @using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(footerLink, m => m.PageLink, footerLink.PageLinkGoal, new NameValueCollection { { "class", "footer__mav-list" } }, isEditable: true))
+                                                        {
+                                                            if (footerLink.PageLink != null)
+                                                            {
+                                                                @footerLink.PageLink.Text
+                                                            }
+                                                        }
                                                     </li>
                                                 }
                                             }
@@ -174,7 +159,13 @@
                                                 if (footerLink != null && (footerLink.PageLink != null || Sitecore.Context.PageMode.IsExperienceEditor))
                                                 {
                                                     <li class="footer__list-item">
-                                                        @Html.Glass().RenderLink(footerLink, m => m.PageLink, new NameValueCollection { { "class", "footer__mav-list" } }, isEditable: true)
+                                                        @using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(footerLink, m => m.PageLink, footerLink.PageLinkGoal, new NameValueCollection { { "class", "footer__mav-list" } }, isEditable: true))
+                                                        {
+                                                            if (footerLink.PageLink != null)
+                                                            {
+                                                                @footerLink.PageLink.Text
+                                                            }
+                                                        }
                                                     </li>
                                                 }
                                             }

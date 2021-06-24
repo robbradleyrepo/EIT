@@ -113,6 +113,7 @@
     <Compile Include="Models\ISecondaryNav.cs" />
     <Compile Include="Models\ISiteRoot.cs" />
     <Compile Include="Models\ISocialIcon.cs" />
+    <Compile Include="Models\ITwitterAccount.cs" />
     <Compile Include="Models\NavigationViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\INavigationRepository.cs" />
