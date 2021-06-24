@@ -7,10 +7,19 @@
             @Html.Glass().Editable(Model, m => m.Title)
         </div>
         <div class="onboarding-overlay__text">
-            @Model.AcceptanceText
+            @Html.Glass().Editable(Model, m => m.AcceptanceFirstText)
+
+            @using (Html.Glass().BeginRenderLink(Model, m => m.AcceptanceLink, new System.Collections.Specialized.NameValueCollection { { "class", "onboarding-overlay__link" } }, isEditable: true))
+            {
+                if (Model.AcceptanceLink != null)
+                {
+                    @Model.AcceptanceLink.Text
+                }
+            }
+            @Html.Glass().Editable(Model, m => m.AcceptanceSecondText)
         </div>
         <div class="onboarding-overlay__scroller terms-text">
-           
+
         </div>
         <div class="onboarding-overlay__btns">
             @using (Html.BeginForm())
@@ -21,7 +30,7 @@
                     @Html.Glass().Editable(Model, m => m.ButtonText)
                     <i class="icon-arrow-right animate-arrow"></i>
                 </button>
-                }
+            }
         </div>
     </div>
 }
