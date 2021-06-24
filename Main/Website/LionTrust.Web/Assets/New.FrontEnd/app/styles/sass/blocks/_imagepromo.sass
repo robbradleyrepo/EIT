@@ -59,7 +59,7 @@
     &__content
         display: flex
         flex-direction: column
-        width: 100%
+        width: 100%        
         @include breakpoint(desktop, up)
             width: 48%
     &__headbox
@@ -71,10 +71,12 @@
         margin-bottom: 40px
         @include font-size(20px)
         color: $black
+        @include p-1-book-20
         @include breakpoint(desktop, up)
             margin-bottom: 29px
         p
-            margin-bottom: 1.4rem
+            @include breakpoint(desktop-large, up)
+                margin-bottom: 1.4rem
     &__btnbox
         display: flex
         justify-content: left

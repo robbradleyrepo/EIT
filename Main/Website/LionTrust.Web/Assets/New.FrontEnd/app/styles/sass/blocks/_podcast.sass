@@ -57,7 +57,7 @@
         margin-right: 10px
         width: 13px
         height: 18px
-        font-size: 18px
+        @include font-size(18px)
     &__tit
         font-size: 32px
         font-weight: 300
@@ -66,16 +66,15 @@
         color: $gold
         @include breakpoint(tablet, up)
             -webkit-line-clamp: 1 /* number of lines to show */
-            font-size: 52px
+            @include font-size(52px)
             max-height: 72px
     &__desc
-        font-size: 16px
+        @include p-1-normal-18
         font-weight: normal
         -webkit-line-clamp: 4 /* number of lines to show */
         margin-bottom: 10px
         @include breakpoint(tablet, up)
             -webkit-line-clamp: 2 /* number of lines to show */
-            font-size: 18px
             width: 70%
         @include breakpoint(desktop, up)
             width: 70%

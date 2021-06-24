@@ -59,15 +59,12 @@
             height: auto
             transition: transform .8s ease-out
     &__title
-        font-size: 26px
-        line-height: 32px
+        @extend .h4
         font-weight: 300
         display: block
         color: $gold
         margin-bottom: 6px
         @include breakpoint(desktop, up)
-            font-size: 32px
-            line-height: 38px
             margin-bottom: 14px
     &__subtitle
         font-size: 14px
@@ -91,12 +88,9 @@
     &__text
         p
             color: $black
-            font-size: 16px
-            line-height: 24px
+            @include p-1-normal-18
             margin-bottom: 12px
             @include breakpoint(desktop, up)
-                font-size: 18px
-                line-height: 28px
                 margin-bottom: 32px
     &__btn
         @extend .btn-unset

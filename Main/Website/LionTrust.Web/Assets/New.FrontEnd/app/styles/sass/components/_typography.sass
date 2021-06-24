@@ -94,6 +94,39 @@ h6, .h6
         @include font-size(20px)
         line-height: 1.5em
 
+@mixin p-1-medium-18
+    font-weight: 500
+    @include font-size(14px)
+    line-height: 1.428em
+    @include breakpoint(desktop, up)
+        @include font-size(16px)
+        line-height: 1.375em
+    @include breakpoint(desktop-large, up)
+        @include font-size(18px)
+        line-height: 1.55em
+
+@mixin p-1-normal-18
+    font-weight: 400
+    @include font-size(14px)
+    line-height: 1.428em
+    @include breakpoint(desktop, up)
+        @include font-size(16px)
+        line-height: 1.375em
+    @include breakpoint(desktop-large, up)
+        @include font-size(18px)
+        line-height: 1.55em
+
+@mixin p-1-book-18
+    font-weight: 300
+    @include font-size(14px)
+    line-height: 1.428em
+    @include breakpoint(desktop, up)
+        @include font-size(16px)
+        line-height: 1.375em
+    @include breakpoint(desktop-large, up)
+        @include font-size(18px)
+        line-height: 1.55em
+
 .text-margin
     margin-bottom: 18px
     @include breakpoint(desktop-large, up)
