@@ -46,6 +46,20 @@
             public const string LinkGoal_FieldName = "ScrollCard_LinkGoal";
         }
 
+        public static class GenericListingModule
+        {
+            public const string Title_FieldID = "{3C5309E0-2068-4614-984E-F1AE3D04C026}";
+        }
+
+        public static class GenericListingModuleItem
+        {
+            public const string TemplateId = "{FF052B94-76BD-4482-855F-AF3712EE4872}";
+            public const string Title_FieldID = "{62FA783B-735E-4510-91DA-900018033CCC}";
+            public const string Subtitle_FieldID = "{F0C2DFC2-0F2E-4082-A532-87B9AD9B9B9E}";
+            public const string Image_FieldID = "{146CBBD2-0E88-4FD6-B4B4-49B462266089}";
+            public const string Text_FieldID = "{694C3F81-60C0-4719-AA8C-5A4264623FEB}";
+        }
+
         public static class DocumentLister
         {
             public const string SortText_FieldID = "{707223F8-4670-4008-910F-C572046D0815}";

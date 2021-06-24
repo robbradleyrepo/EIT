@@ -1,0 +1,27 @@
+﻿@model LionTrust.Feature.Listings.Models.IGenericListingModule
+<div class="lister-app legacy-listmode">
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-9">
+                @foreach (var listingItem in Model.ListingItems)
+                {
+                <div class="services-item">
+                    @Html.Glass().RenderImage(listingItem, m=> m.Image, new { @class = "services-item__img" }, isEditable: true)
+
+                    <div class="services-item__content">
+                        <div class="services-item__title">
+                            @Html.Glass().Editable(listingItem, m => m.Title)
+                        </div>
+                        <span class="services-item__subtitle">
+                            @Html.Glass().Editable(listingItem, m => m.Subtitle)
+                        </span>
+                        @Html.Glass().Editable(listingItem, m => m.Text)
+                    </div>
+
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+
+</div>

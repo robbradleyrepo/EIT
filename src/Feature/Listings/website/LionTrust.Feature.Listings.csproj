@@ -82,6 +82,7 @@
     <Content Include="Views\Listings\DocumentsList.cshtml" />
     <Content Include="App_Config\Include\Feature\Feature.Listings.config" />
     <Content Include="App_Config\Include\Feature\Feature.Listings.Routes.config" />
+    <Content Include="Views\Listings\GenericListingModule.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -96,6 +97,8 @@
     <Compile Include="Models\IAccordionRenderingParameters.cs" />
     <Compile Include="Models\IAccordionRowModel.cs" />
     <Compile Include="Models\IDocumentLister.cs" />
+    <Compile Include="Models\IGenericListingModule.cs" />
+    <Compile Include="Models\IGenericListingModuleItem.cs" />
     <Compile Include="Models\IHorizontalScroll.cs" />
     <Compile Include="Models\IListingsGlassBase.cs" />
     <Compile Include="Models\IScrollerCard.cs" />

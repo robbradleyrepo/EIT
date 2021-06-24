@@ -1,0 +1,26 @@
+﻿---
+ID: "d9fca639-c5e1-481d-9b51-89cfda197f21"
+Parent: "7474cfba-30cc-4e88-9fc5-0848fce4c77c"
+Template: "7474cfba-30cc-4e88-9fc5-0848fce4c77c"
+Path: /sitecore/templates/Project/LionTrust/Content Types/GenericListingModule/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{FF052B94-76BD-4482-855F-AF3712EE4872}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140916T082729Z
+    - ID: "3c5309e0-2068-4614-984e-f1ae3d04c026"
+      Hint: ListingTitle
+      Value: $name
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
