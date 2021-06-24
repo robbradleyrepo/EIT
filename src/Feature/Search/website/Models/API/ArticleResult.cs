@@ -21,7 +21,7 @@
 
         public string ImageUrl { get; set; }
 
-        public float ImageOpacity { get; set; }
+        public string ImageOpacity { get; set; }
 
         public IEnumerable<string> Team { get; set; }
 

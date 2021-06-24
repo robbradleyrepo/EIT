@@ -3,7 +3,7 @@
 @model LionTrust.Feature.Promo.Models.IPodcastPromo
 @if (Model != null)
 {
-    var opacity = string.IsNullOrWhiteSpace(Model.BackgroundImageOpacity.ToString()) ? "opacity: 1" : "opacity: " + Model.BackgroundImageOpacity.ToString();
+    var opacity = string.IsNullOrWhiteSpace(Model.BackgroundImageOpacity) ? "opacity: 1" : "opacity: " + Model.BackgroundImageOpacity;
 
     <div class="container">
         <div class="podcast">

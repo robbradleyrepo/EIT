@@ -21,7 +21,7 @@
         Image BackgroundImage { get; set; }
 
         [SitecoreField(Constants.PodcastPromo.BackgroundImageOpacity_FieldId)]
-        int BackgroundImageOpacity { get; set; }
+        string BackgroundImageOpacity { get; set; }
 
         [SitecoreField(Constants.PodcastPromo.MobileBackgroundImageFieldId)]
         Image MobileBackgroundImage { get; set; }

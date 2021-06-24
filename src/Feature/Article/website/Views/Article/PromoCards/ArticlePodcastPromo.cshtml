@@ -4,7 +4,7 @@
 @model LionTrust.Feature.Article.Models.IArticlePodcastPromo
 @if (Model != null)
 {
-    var opacity = string.IsNullOrWhiteSpace(Model.BackgroundImageOpacity.ToString()) ? "opacity: 1" : "opacity: " + Model.BackgroundImageOpacity.ToString();
+    var opacity = string.IsNullOrWhiteSpace(Model.BackgroundImageOpacity) ? "opacity: 1" : "opacity: " + Model.BackgroundImageOpacity;
     <div class="article-promo">
         <a href="@Model.Url" class="article-promo__front">
         </a>
