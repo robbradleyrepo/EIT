@@ -1,0 +1,56 @@
+﻿---
+ID: "f83d5382-8c52-4769-a0c1-5f5c5c2a5293"
+Parent: "196ea78f-08c6-456c-95af-027f662537e1"
+Template: "196ea78f-08c6-456c-95af-027f662537e1"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Article Lister/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{21828A6A-4880-48AD-9CAE-0E1CFDB46F5A}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0674ea3d-c9db-4c66-b6f2-ff84c0a8e218"
+      Hint: ArticleLister_FundLabel
+      Value: Fund
+    - ID: "0eba5571-b102-467c-993a-3025a1176831"
+      Hint: ArticleLister_SearchPlaceholderLabel
+      Value: Search Insights
+    - ID: "176b6ba4-37a4-4853-9753-690c7d1a3c9e"
+      Hint: ArticleLister_FiltersLabel
+      Value: Filters
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210617T163321Z
+    - ID: "5ab5a6fe-85d0-4bae-8b0e-8446bed3fa3c"
+      Hint: ArticleLister_YearLabel
+      Value: Year
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "6468d4a5-9157-4a80-81aa-70615fb875a9"
+      Hint: ArticleLister_MonthLabel
+      Value: Month
+    - ID: "87e96566-897a-4d4c-8da5-8727bd4e436e"
+      Hint: Pagination_NextLabel
+      Value: Next
+    - ID: "8895c4a2-26cf-4f3e-a990-b0a26fdb0802"
+      Hint: ArticleLister_ApplyFiltersLabel
+      Value: Apply Filters
+    - ID: "b2bc0424-664c-4737-a680-9b2a17296852"
+      Hint: ArticleLister_ClearFiltersLabel
+      Value: Clear Filters
+    - ID: "ee10a0f8-834b-4c8b-9ec5-9b643fcd112c"
+      Hint: Pagination_PreviousLabel
+      Value: Previous
+    - ID: "ee6af776-8d37-4b81-a29f-551e7bb1d481"
+      Hint: ArticleLister_DateOldestFirstLabel
+      Value: Date Oldest First
+    - ID: "f72dc2b2-2396-401f-afd5-3a4075892a86"
+      Hint: ArticleLister_DateNewestFirstLabel
+      Value: Date Newest First

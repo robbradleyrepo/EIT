@@ -17,6 +17,7 @@
     using LionTrust.Foundation.Search.Services.Interfaces;
     using Sitecore.ContentSearch.Linq;
     using Sitecore.Globalization;
+    using Sitecore.Links;
     using Sitecore.Resources.Media;
 
     public class ArticleSearchDataManager : IArticleSearchDataManager
@@ -53,6 +54,7 @@
         private IEnumerable<ITaxonomyContentResult> MapArticleResultHits(IEnumerable<SearchHit<ArticleSearchResultItem>> hits)
         {
             return hits.Select(x => new ArticleResult{
+                                                        Url = x.Document.ArticleUrl,
                                                         Authors = x.Document.ArticleAuthorNames?.Split('|'),
                                                         Category = x.Document.ArticleCategoryTagName,
                                                         Date = this.GetArticleDate(x.Document.ArticleDate),
@@ -61,7 +63,8 @@
                                                         Subtitle = x.Document.ArticleSubtitle,
                                                         Team = x.Document.ArticleTeam,
                                                         Title = x.Document.ArticleTitle,
-                                                        Topics = x.Document.TopicNames?.Split('|')
+                                                        Topics = x.Document.TopicNames?.Split('|'),
+                                                        AuthorImageUrl = x.Document.ArticleAuthorImage
                                                      });
         }
 

@@ -4,11 +4,65 @@ Parent: "7502b69e-d154-4861-a033-bc0cb30a91b5"
 Template: "4c4e3993-f6d4-4040-a3fd-e5deb438bff8"
 Path: /sitecore/content/LionTrustNew/Home/articles
 DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        s:l="{CD1590E1-6573-4CC7-B0A9-E3BB6A9DADE4}">
+        <r
+          uid="{055B50B4-F283-4B6C-9440-C651FBDCD03C}">
+          <p:d />
+        </r>
+        <r
+          uid="{1517482C-703F-409F-9C46-50269DD229AB}"
+          s:id="{CB2277A4-8384-4EB1-94AC-D28D9E979831}"
+          s:ph="main" />
+        <r
+          uid="{F3F5DDD8-BCED-4C83-A49B-42E641DFDC1F}">
+          <p:d />
+        </r>
+        <r
+          uid="{4581C414-880F-4314-BC8F-57D77FC409F6}">
+          <p:d />
+        </r>
+        <r
+          uid="{0F0BD969-2B02-49D7-B567-F32217AB6F14}">
+          <p:d />
+        </r>
+        <r
+          uid="{FAFE694E-9C4A-4D3D-9DA9-C032AF0A3974}">
+          <p:d />
+        </r>
+        <r
+          uid="{6EF1721C-9DBD-4505-A950-FD64CA9FE3D8}">
+          <p:d />
+        </r>
+      </d>
+    </r>
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{1517482C-703F-409F-9C46-50269DD229AB}"
+              s:ds="{0796C985-57CA-42CD-B936-EE606105429C}"
+              s:par="" />
+          </d>
+        </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20210513T123245Z

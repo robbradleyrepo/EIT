@@ -1,12 +1,14 @@
 ﻿namespace LionTrust.Foundation.Indexing.ComputedFields.Article
 {
     using LionTrust.Foundation.Indexing.ComputedFields.SharedLogic;
+    using Sitecore.Configuration;
     using Sitecore.ContentSearch;
     using Sitecore.ContentSearch.ComputedFields;
     using Sitecore.Data;
     using Sitecore.Data.Fields;
     using Sitecore.Data.Items;
     using Sitecore.Resources.Media;
+    using Sitecore.Sites;
 
     public class ArticleListingImageProtected : IComputedIndexField
     {
@@ -26,29 +28,29 @@
 
             ImageField imageField = item?.Fields[Legacy.Constants.Article.Article_ListingImage];
             MediaItem mediaItem;
-            if(imageField?.MediaDatabase.Name == "shell")
-            {
-                mediaItem = publishedDatabase.GetItem(imageField.MediaID) ?? GetDefaultListingImage(publishedDatabase);
-            }
-            else
-            {
-                var database = 
-                        imageField != null && imageField.MediaDatabase != null && imageField.MediaDatabase.Name != "shell"
-                                ? imageField.MediaDatabase 
-                                : publishedDatabase;
 
-                mediaItem = imageField?.MediaItem ?? database.GetItem(imageField.MediaID);
-                if(mediaItem == null)
-                {
-                    mediaItem = GetDefaultListingImage(database);
-                }
+            var database = 
+                    imageField != null && imageField.MediaDatabase != null && imageField.MediaDatabase.Name != "shell"
+                            ? imageField.MediaDatabase 
+                            : publishedDatabase;
+
+            mediaItem = imageField?.MediaItem ?? database.GetItem(imageField.MediaID);
+            if(mediaItem == null)
+            {
+                mediaItem = GetDefaultListingImage(database);
             }
+            
 
             var hashedUrl = string.Empty;
             if (mediaItem != null)
             {
-                var imageUrl = MediaManager.GetMediaUrl(mediaItem, new MediaUrlOptions() { AlwaysIncludeServerUrl = false, Database = mediaItem.Database, LowercaseUrls = true });
-                hashedUrl = imageUrl != null ? HashingUtils.ProtectAssetUrl(imageUrl) : string.Empty;
+                var mediaOption = new MediaUrlOptions() { AlwaysIncludeServerUrl = false, AbsolutePath = true, Database = mediaItem.Database, LowercaseUrls = true };
+                using (new SiteContextSwitcher(Factory.GetSite(Constants.SiteName)))
+                {
+                    var imageUrl = MediaManager.GetMediaUrl(mediaItem, mediaOption);
+                    hashedUrl = imageUrl != null ? HashingUtils.ProtectAssetUrl(imageUrl) : string.Empty;
+                }
+                
             }
 
             return hashedUrl;

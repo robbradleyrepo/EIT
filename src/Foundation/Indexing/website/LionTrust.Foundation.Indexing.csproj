@@ -73,11 +73,13 @@
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComputedFields\Article\ArticleAuthorImageProtected.cs" />
     <Compile Include="ComputedFields\Article\ArticleListingImageProtected.cs" />
     <Compile Include="ComputedFields\Article\ArticleAuthorNames.cs" />
     <Compile Include="ComputedFields\Article\ArticleFundName.cs" />
     <Compile Include="ComputedFields\Article\ArticleCategoryTagName.cs" />
     <Compile Include="ComputedFields\Article\ArticleTopicNames.cs" />
+    <Compile Include="ComputedFields\Article\ArticleUrl.cs" />
     <Compile Include="ComputedFields\SharedLogic\ComputedValueHelper.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Models\IQuery.cs" />

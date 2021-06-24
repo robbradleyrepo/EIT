@@ -1,0 +1,60 @@
+﻿---
+ID: "5c03508f-c544-4d72-86be-e34f04c2d5d3"
+Parent: "ca116de7-3554-48d7-81d2-0d02f0d24c28"
+Template: "4c4e3993-f6d4-4040-a3fd-e5deb438bff8"
+Path: /sitecore/templates/Branches/Project/LionTrust/Page Types/ArticleListerPage/$name
+DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{CBE49421-A760-4D3D-A074-EEB88B28C6A2}"
+          p:before="*"
+          s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+          s:ph="/header/navigation" />
+        <r
+          uid="{39027940-F8BC-4D9F-B0A3-08D99A7DE30A}"
+          p:after="r[@uid='{CBE49421-A760-4D3D-A074-EEB88B28C6A2}']"
+          s:ds="{9DCEAA3B-63AC-4F92-B769-D00CC1718845}"
+          s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
+          s:par=""
+          s:ph="header" />
+        <r
+          uid="{7C462703-C357-4398-825D-CF851C59598E}"
+          p:after="r[@uid='{39027940-F8BC-4D9F-B0A3-08D99A7DE30A}']"
+          s:ds="{65972917-145B-415F-8810-AF769EFDD1F8}"
+          s:id="{7166AE9D-EFBD-48B3-B38F-AFD4CAAB5278}"
+          s:par=""
+          s:ph="/header/secondary-navigation" />
+        <r
+          uid="{7005301F-9753-4AD3-AA57-8A4143F46665}"
+          p:after="r[@uid='{7C462703-C357-4398-825D-CF851C59598E}']"
+          s:id="{CB2277A4-8384-4EB1-94AC-D28D9E979831}"
+          s:ph="main" />
+        <r
+          uid="{8825FBFC-41A5-47D5-96C4-71868122312E}"
+          p:after="r[@uid='{7005301F-9753-4AD3-AA57-8A4143F46665}']"
+          s:ds="{8F7AA55E-2569-4646-A28E-7FA325F64C31}"
+          s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+          s:par=""
+          s:ph="main" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210617T155637Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

@@ -7,7 +7,11 @@
 
     public class ArticleResult : ITaxonomyContentResult
     { 
+        public string Url { get; set; }
+
         public IEnumerable<string> Authors { get; set; }
+
+        public string AuthorImageUrl { get; set; }
 
         public string Category { get; set; }
 

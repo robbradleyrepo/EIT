@@ -1,0 +1,183 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Feature.Search.Models 
+@model LionTrust.Feature.Search.Models.IArticleLister
+@if (Model != null)
+{
+    <div id="lister-app">
+        <div class="article-filter-wrapper">
+            <div class="article-filters" :class="mobileFilter ? 'active' : ''">
+                <div class="article-filters__header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-2 d-lg-none">
+                                <div class="article-filters__main-title">
+                                    @Model.FiltersLabel
+                                    <i id="filters-close" @@click="toggleMobileFilter" class="icon-close"></i>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <form class="search-form" @@submit.prevent="submitSearchForm($event)">
+                                    <input type="text" v-model="searchText" name="searchText" class="search-form__input color-black"
+                                           placeholder="@Model.SearchPlaceholder">
+                                    <button class="search-form__submit pe-0" type="submit">
+                                        <i class="icon-search"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="article-filters__body">
+                    <div class="container">
+                        <div class="row">
+                            <select-field inline-template v-for="(facet, i) in getFacets" :key="i">
+                                <div class="col-lg-2 relative" @@click.stop>
+                                    <div class="article-filters__select" @@click="toggleOption" :class="open ? 'active' : ''">
+                                        <span class="article-filters__item-title">
+                                            {{facet.name}}
+                                        </span>
+                                        <i class="article-filters__icon-arrow"></i>
+                                    </div>
+                                    <div class="article-filters__options">
+                                        <div class="article-filters__title" @@click="toggleOption">
+                                            <i class="icon-chevron-left"></i>
+                                            @Model.FundLabel
+                                        </div>
+                                        <option-field inline-template v-for="(item, i) in facet.data" :for="item.Name">
+                                            <label class="option-checkbox">
+                                                <input :id="item.Name" class="option-checkbox__input" type="checkbox" v-model="checked" @@change="toggleSelect(item, facet)">
+                                                <span class="option-checkbox__text">{{item.Name}}</span>
+                                                <span class="option-checkbox__icon"></span>
+                                            </label>
+                                        </option-field>
+                                    </div>
+                                </div>
+                            </select-field>
+                            <div class="col-lg-1 relative" v-if="months.length">
+                                <select class="article-filters__select-custom" @@change="setMonth($event)">
+                                    <option value="0" disabled selected>@Model.MonthLabel</option>
+                                    <option v-for="(month, i) in months" :key="i" :value="i + 1">{{month}}</option>
+                                </select>
+                                <i class="article-filters__icon-arrow article-filters__icon-arrow_select"></i>
+                            </div>
+                            <div class="col-lg-1 relative" v-if="years.length">
+                                <select class="article-filters__select-custom" @@change="setYear($event)">
+                                    <option value="0" disabled selected>@Model.YearLabel</option>
+                                    <option v-for="(year, i) in years" :key="i" :value="year">{{year}}</option>
+                                </select>
+                                <i class="article-filters__icon-arrow article-filters__icon-arrow_select"></i>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="article-filters__btns">
+                                    <button class="btn article-filters__btn article-filters__btn_apply" @@click="applyFilters">
+                                        @Model.FiltersLabel
+                                    </button>
+                                    <button class="clear-filter btn article-filters__btn article-filters__btn_clear" @@click="clearFilters">
+                                        @Model.ClearFiltersLabel
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="article-filters__footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6">
+                                <button class="btn btn-primary min-width-100" @@click="applyFilters">
+                                    @Model.ApplyFiltersLabel
+                                </button>
+                            </div>
+                            <div class="col-6">
+                                <button class="clear-filter btn btn-primary-forward min-width-100" @@click="clearFilters">
+                                    @Model.ClearFiltersLabel
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-lg-2 offset-6 col-md-4 offset-md-8 offset-lg-10 margin-sort-btn">
+                        <div class="relative">
+                            <button class="btn btn-clean d-block ml-auto button-sort" @@click.stop="showSort">
+                                @Model.SortLabel <i class="icon-sort"></i>
+                            </button>
+                            <div class="sort-dropdown" :class="sortModal ? 'active' : ''">
+                                <div class="text-right">
+                                    <span class="btn btn-clean">
+                                        @Model.SortLabel <i class="icon-sort"></i>
+                                    </span>
+                                </div>
+                                <label for="newest" class="option-checkbox">
+                                    <input id="newest" v-model="sortOrder" value="ASC" class="option-checkbox__input" type="radio" name="sort" checked>
+                                    <span class="option-checkbox__text">@Model.DateNewestFirstLabel</span>
+                                    <span class="option-checkbox__icon"></span>
+                                </label>
+                                <label for="oldest" class="option-checkbox">
+                                    <input id="oldest" v-model="sortOrder" value="DESC" class="option-checkbox__input" type="radio" name="sort">
+                                    <span class="option-checkbox__text">@Model.DateOldestFirstLabel</span>
+                                    <span class="option-checkbox__icon"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-lg-none">
+            <div class="d-flex justify-content-between margin-mob-fliter-btn" :class="!mobileFilter ? 'relative' : ''">
+                <btn id="show-article-fliter" class="btn btn-clean" @@click="toggleMobileFilter">
+                    <i class="icon-filter"></i> @Model.FilterLabel
+                </btn>
+            </div>
+        </div>
+        <section class="container">
+            <div class="text-center my-5" v-if="loading">
+                <div class="spinner-border text-gold" role="status"></div>
+            </div>
+            <div class="row">
+                <article-item inline-template v-for="(article, i) in searchData" :key="i">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="article-promo">
+                            <a href="#article promo" class="article-promo__front">
+                            </a>
+                            <a href="#" class="article-promo__body">
+                                <div class="article-promo__head">
+                                    <img class="article-promo__head-img" :src="article.AuthorImage" alt="">
+                                    <span class="article-promo__head-title">{{article.Subtitle}}</span>
+                                </div>
+                                <span class="article-promo__title">
+                                    {{article.Title}}
+                                </span>
+                                <span class="article-promo__desc">
+                                    {{article.Subtitle}}
+                                </span>
+                            </a>
+                            <div class="article-promo__footer">
+                                <div class="article-promo__footer-item">
+                                    <img class="article-promo__clock" src="@Model.DateIcon" alt="icon">
+                                    <span class="article-promo__footer-text">{{article.Date}}</span>
+                                </div>
+                                <div class="article-promo__footer-item">
+                                    <span class="article-promo__footer-text">{{article.Category}}</span>
+                                    <i class="icon-booksmark article-promo__bookmark"></i>
+                                </div>
+                            </div>
+
+                            <img class="article-promo__back"
+                                 :src="article.ImageUrl" :alt="article.Title">
+                        </div>
+                    </div>
+                </article-item>
+            </div>
+            @Html.Partial("~/Views/Search/_Pagination.cshtml", Model)
+        </section>
+    </div>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @: Assign datasource for Article Lister component
+}

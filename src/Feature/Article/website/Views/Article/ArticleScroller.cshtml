@@ -17,9 +17,9 @@
             </div>
         </div>
         <!-- Swiper -->
-        <div class="container-left-gutter">
+        <div class="container">
             <div class="swiper-container-article">
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper row">
                     @if (Model.ArticleList != null && Model.ArticleList.Any())
                     {
                         foreach (var article in Model.ArticleList)
@@ -30,7 +30,7 @@
                                 {
                                     case "Fund manager views":
                                         {
-                                            <div class="swiper-slide">
+                                            <div class="swiper-slide col-md-6 col-lg-4">
                                                 @Html.Partial("~/Views/Article/PromoCards/FundManagerViewPromo.cshtml", article)
                                             </div>
                                             break;
@@ -39,7 +39,7 @@
                                         {
                                             if (article.PodcastPromo != null && article.PodcastPromo.Any())
                                             {
-                                                <div class="swiper-slide">
+                                                <div class="swiper-slide col-md-6 col-lg-4">
                                                     @Html.Partial("~/Views/Article/PromoCards/ArticlePodcastPromo.cshtml", article.PodcastPromo.FirstOrDefault())
                                                 </div>
                                             }
@@ -47,28 +47,28 @@
                                         }
                                     case "Fund updates":
                                         {
-                                            <div class="swiper-slide">
+                                            <div class="swiper-slide col-md-6 col-lg-4">
                                                 @Html.Partial("~/Views/Article/PromoCards/FundUpdatePromo.cshtml", article)
                                             </div>
                                             break;
                                         }
                                     case "Video":
                                         {
-                                            <div class="swiper-slide">
+                                            <div class="swiper-slide col-md-6 col-lg-4">
                                                 @Html.Partial("~/Views/Article/PromoCards/VideoPromo.cshtml", article)
                                             </div>
                                             break;
                                         }
                                     case "Magazine and Reports":
                                         {
-                                            <div class="swiper-slide">
+                                            <div class="swiper-slide col-md-6 col-lg-4">
                                                 @Html.Partial("~/Views/Article/PromoCards/MagazineReportsPromo.cshtml", article)
                                             </div>
                                             break;
                                         }
                                     default:
                                         {
-                                            <div class="swiper-slide">
+                                            <div class="swiper-slide col-md-6 col-lg-4">
                                                 @Html.Partial("~/Views/Article/PromoCards/FundManagerViewPromo.cshtml", article)
                                             </div>
                                         }
@@ -77,7 +77,7 @@
                             }
                             else
                             {
-                                <div class="swiper-slide">
+                                <div class="swiper-slide col-md-6 col-lg-4">
                                     @Html.Partial("~/Views/Article/PromoCards/FundManagerViewPromo.cshtml", article)
                                 </div>
                             }

@@ -111,6 +111,6 @@
             public const string Article_FieldId = "{AACB640C-6457-4A38-81E2-7AE97DB0DB3A}";
             public const string BackgroundImage_FieldId = "{74A7E935-2A62-4192-B046-958C1ADDB98B}";
             public const string ArticleLinkText_FieldId = "{447AB9EA-F782-41A7-8269-E2AA6EF9862B}";
-        }
+        }        
     }
 }
