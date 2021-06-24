@@ -32,5 +32,10 @@
         
         [SitecoreField(Constants.NavigationRoot.MenuItems_FieldID, SitecoreFieldType.Treelist, "Menu")]
         IEnumerable<INavigablePage> MenuItems { get; set; }
+
+        [SitecoreField(Constants.NavigationRoot.OnboardingConfiguation_FieldId)]
+        Sitecore.Data.Items.Item OnboardingConfiguration { get; set; }
+
+        OnboardingRole OnboardingRole { get; set; }
     }
 }

@@ -3,6 +3,7 @@
     using System.Web.Mvc;
 
     using Glass.Mapper.Sc.Web.Mvc;
+    using LionTrust.Feature.Navigation.Helpers;
     using LionTrust.Feature.Navigation.Models;
     using LionTrust.Feature.Navigation.Repositories;
     using Sitecore.Mvc.Controllers;
@@ -38,6 +39,13 @@
             if (homeItem != null)
             {
                 homeModel = _mvcContext.SitecoreService.GetItem<IHome>(homeItem.ID.Guid);
+                if (homeModel.OnboardingConfiguration != null)
+                {
+                    homeModel.OnboardingRole = OnboardingHelper.ProfileRole(
+                        homeModel.OnboardingConfiguration.Name,
+                        homeModel.OnboardingConfiguration[Constants.OnboardingConfiguration.PrivateProfileCard_FieldId],
+                        homeModel.OnboardingConfiguration[Constants.OnboardingConfiguration.ProfessionalProfileCard_FieldId]);
+                }
             }
 
             return View("~/Views/Navigation/Footer.cshtml", homeModel);

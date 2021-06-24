@@ -144,35 +144,17 @@
 
         public static class NavigationRoot
         {
-            public const string TemplateName = "_NavigationRoot";
             public const string TemplateID = "{93962463-4F5F-45E8-BE15-79F96D0CBB04}";
-
-            public const string FooterConfiguration_FieldName = "NavigationRoot_FooterConfiguration";
             public const string FooterConfiguration_FieldId = "{E27B5DB1-CE93-4CB1-BA69-F78556AACAF0}";
-
-            public const string HeaderConfiguration_FieldName = "NavigationRoot_HeaderConfiguration";
             public const string HeaderConfiguration_FieldID = "{95F0787B-70E6-4164-98C0-F9502163D720}";
-
-            public const string ContactUsPage_FieldName = "NavigationRoot_ContactUsPage";
             public const string ContactUsPage_FieldID = "{0D831D08-90C7-4E31-B880-5A93146B3029}";
-
-            public const string MyLionTrust_FieldName = "NavigationRoot_MyLionTrust";
             public const string MyLionTrust_FieldID = "{B810A405-73F4-48CC-AF61-778C82531262}";
-
-            public const string MyPreferences_FieldName = "NavigationRoot_MyPreferences";
             public const string MyPreferences_FieldID = "{6F6A49B5-C780-4EDE-9EB4-9EA509204434}";
-
-            public const string SignUpNewsletter_FieldName = "NavigationRoot_SignUpNewsletter";
             public const string SignUpNewsletter_FieldID = "{6EB0248B-457F-491C-8F9E-13AEFE2CDEC8}";
-
-            public const string YouAreViewingLabel_FieldName = "NavigationRoot_YouAreViewingLabel";
             public const string YouAreViewingLabel_FieldID = "{15999105-600F-43FB-B206-ED93304A98E6}";
-
-            public const string ChangeLabel_FieldName = "NavigationRoot_ChangeLabel";
             public const string ChangeLabel_FieldID = "{E4A364E6-2E1A-4854-ABD8-6A02ACF832CD}";
-
-            public const string MenuItems_FieldName = "NavigationRoot_MenuItems";
             public const string MenuItems_FieldID = "{5D68CC82-EA43-4789-B892-0E49244F68D5}";
+            public const string OnboardingConfiguation_FieldId = "{16512055-116D-48B5-936C-ECA678249335}";
         }
 
         public static class QuickLinks
@@ -191,6 +173,12 @@
             public const string TemplateId = "{23084602-8AE7-4B97-96C0-E89784C376D7}";
             public const string TwitterAccountName_FieldId = "{12150827-6E1A-4A38-91A1-70EB00F3E7B0}";
             public const string TwitterLinkGoal_FieldId = "{01E1D852-248A-450D-9A14-AB7EF92DBFE0}";
+        }
+
+        public static class OnboardingConfiguration
+        {
+            public const string PrivateProfileCard_FieldId = "{0D201AF9-3ADA-4859-8B60-C2DA64C5F059}";
+            public const string ProfessionalProfileCard_FieldId = "{A2546C2D-E821-46F7-8042-D78F3F1CA8F1}";
         }
     }
 }
