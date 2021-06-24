@@ -1,8 +1,8 @@
 ﻿---
-ID: "c299c924-f1d5-4cda-ab46-7ff1f935a8c8"
-Parent: "89d66d24-7794-49d7-a5d9-12acd95d1a63"
+ID: "9c0c144e-6e77-49a6-9dc5-e291d2e43796"
+Parent: "7a035e6f-3ab8-4deb-b67b-9568e1d44a82"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Foundation/Legacy/_LegacyFund/Fund Info/LegacyFund_MinimalInitialInvestment
+Path: /sitecore/templates/Foundation/Legacy/_FundClass/Additional info/AdditionalInfo_MinimumInitialInvestment
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
@@ -10,16 +10,16 @@ SharedFields:
   Value: "Single-Line Text"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 1500
+  Value: 900
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Minimal initial investment
+    Value: Minimum initial investment
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20160525T100122
+      Value: 20210622T103538Z

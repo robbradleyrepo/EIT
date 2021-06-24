@@ -1,9 +1,7 @@
 ﻿namespace LionTrust.Feature.Fund.AdditionalInfoAndCharges
 {
     public class AdditionalInfoAndChargesModel
-    {
-        public string BloombergCode { get; set; }
-
+    {        
         public string DistributionDate { get; set; }
 
 

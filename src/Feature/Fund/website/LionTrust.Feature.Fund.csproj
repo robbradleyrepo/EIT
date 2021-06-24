@@ -106,6 +106,9 @@
   <ItemGroup>
     <Compile Include="AdditionalInfoAndCharges\AdditionalInfoAndChargesDetails.cs" />
     <Compile Include="AdditionalInfoAndCharges\AdditionalInfoAndChargesModel.cs" />
+    <Compile Include="AdditionalInfoAndCharges\AddtionalFundInformationManager.cs" />
+    <Compile Include="AdditionalInfoAndCharges\FundAdditionalInfoController.cs" />
+    <Compile Include="AdditionalInfoAndCharges\IAdditionalFundInformationManager.cs" />
     <Compile Include="Api\BasicFundHoldingsBreakdown.cs" />
     <Compile Include="Api\ExternalFundClassRepository.cs" />
     <Compile Include="Api\FundBreakdownModel.cs" />

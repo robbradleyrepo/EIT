@@ -25,12 +25,6 @@
         [SitecoreField(Constants.Fund.NumberOfHoldings_FieldId)]
         string NumberOfHoldings { get; set; }
 
-        [SitecoreField(Constants.Fund.MinimalInitialInvestment_FieldId)]
-        string MinimalInitialInvestment { get; set; }
-
-        [SitecoreField(Constants.Fund.MinimumAdditionalInvestment_FieldId)]
-        string MinimumAdditionalInvestment { get; set; }
-
         [SitecoreField(Constants.Fund.BenchmarkName_FieldId)]
         string BenchmarkName { get; set; }
 

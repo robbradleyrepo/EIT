@@ -35,8 +35,8 @@
         [JsonProperty("ISIN")]
         public string ISINCode { get; set; }
 
-        [JsonProperty("OngoingCharges")]
-        public string OngoingCharges { get; set; }
+        [JsonProperty("OngoingCharge")]
+        public string OngoingCharge { get; set; }
 
         [JsonProperty("Sedol")]
         public string SedolCode { get; set; }

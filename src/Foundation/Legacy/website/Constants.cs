@@ -68,6 +68,8 @@
 
         public static class FundClass
         {
+            public const string MinimalInitialInvestmentFieldId = "{9C0C144E-6E77-49A6-9DC5-E291D2E43796}";
+            public const string MinimumAdditionalInvestmentFieldId = "{27E1A236-5D68-48E0-B7E8-1832B1DF0A01}";
             public const string CitiCodeFieldId = "{9711831E-CA02-40DA-99C4-960DF5305611}";
             public const string ValueFieldId = "{D2F09153-C85F-48EC-9C15-52C9ECBDEEFB}";
             public const string ClassNameFieldId = "{0CE0E3BF-4431-4071-A2EA-A3B79D3F0093}";
@@ -77,7 +79,6 @@
             public const string OfferPrice_FieldId = "{0D1337DA-2120-4FF6-847C-C085CD0527D2}";
             public const string SinglePrice_FieldId = "{0064BABA-59CF-4E55-B5EB-937687F9C50E}";
             public const string PriceDate_FieldId = "{B3EB8F9D-7CD1-47F8-8CFB-442B41FF7AAF}";
-            public const string BloombergCode_FieldId = "{F3BF4C66-26C7-40D5-A791-291DE4E08A33}";
             public const string DistributionDate_FieldId = "{13F2C43D-55BB-42F0-ACC8-D0DA1AB614DC}";
             public const string ExDividendDate_FieldId = "{1BE14077-37B7-419D-9E00-03086878B221}";
             public const string IncludedOFC_FieldId = "{5F35477A-DE20-4C19-AC91-D5110F62A1AE}";
@@ -96,8 +97,8 @@
             public const string LaunchDate_FieldId = "{6CBF0ED2-94B3-4F2A-A84D-A36501E38105}";
             public const string FundSize_FieldId = "{D3A5BBC1-32DC-492D-9C70-645A8E47FB34}";
             public const string NumberOfHoldings_FieldId = "{DB79496E-BCC5-443F-BBA6-E8D5BF0A31A3}";
-            public const string MinimalInitialInvestment_FieldId = "{C299C924-F1D5-4CDA-AB46-7FF1F935A8C8}";
-            public const string MinimumAdditionalInvestment_FieldId = "{22093813-F5DB-40EB-AEC1-CBCFB3F135FD}";
+            
+            
             public const string BenchmarkName_FieldId = "{30054D3B-D471-469D-A82A-C575DC220CF2}";
             public const string HistoricYield_FieldId = "{86F07FA6-A576-4462-B343-C4AF970A2576}";
             public const string RiskWarning_FieldId = "{221E703D-5BA7-4141-A98C-B76D2E5A663A}";

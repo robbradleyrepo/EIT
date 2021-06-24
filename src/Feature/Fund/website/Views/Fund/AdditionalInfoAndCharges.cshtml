@@ -10,11 +10,11 @@
                         <div class="card__title">@Html.Glass().Editable(Model.Component, m => m.AdditionalInfoLabel)</div>
                         <div class="card__row">
                             <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.MinInitialLabel)</div>
-                            <div class="card__item-right">@Html.Glass().Editable(Model.Fund, m => m.MinimalInitialInvestment)</div>
+                            <div class="card__item-right">@Html.Glass().Editable(Model.FundClass, m => m.MinimalInitialInvestment)</div>
                         </div>
                         <div class="card__row">
                             <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.MinAdditionalLabel)</div>
-                            <div class="card__item-right">@Html.Glass().Editable(Model.Fund, m => m.MinimumAdditionalInvestment)</div>
+                            <div class="card__item-right">@Html.Glass().Editable(Model.FundClass, m => m.MinimumAdditionalInvestment)</div>
                         </div>
                         <div class="card__row">
                             <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.ExDividendDateLabel)</div>
@@ -22,15 +22,15 @@
                         </div>
                         <div class="card__row">
                             <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.DistributionDateLabel)</div>
-                            <div class="card__item-right">@Model.Data.DistributionDate)</div>
+                            <div class="card__item-right">@Model.Data.DistributionDate</div>
                         </div>
                         <div class="card__row">
                             <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.SedolCodeLabel)</div>
-                            <div class="card__item-right">@Model.Data.SedolCode)</div>
+                            <div class="card__item-right">@Model.Data.SedolCode</div>
                         </div>
                         <div class="card__row">
                             <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.ISINCodeLabel)</div>
-                            <div class="card__item-right">@Model.Data.ISINCode)</div>
+                            <div class="card__item-right">@Model.Data.ISINCode</div>
                         </div>
                     </div>
                 </div>
@@ -39,15 +39,15 @@
                         <div class="card__title">@Html.Glass().Editable(Model.Component, m => m.ChargesLabel)</div>
                         <div class="card__row">
                             <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.InitialChargeLabel)</div>
-                            <div class="card__item-right">@Model.Data.InitialCharge)</div>
+                            <div class="card__item-right">@Model.Data.InitialCharge</div>
                         </div>
                         <div class="card__row">
                             <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.OngoingChargesLabel)</div>
-                            <div class="card__item-right">@Model.Data.OngoingCharges)</div>
+                            <div class="card__item-right">@Model.Data.OngoingCharges</div>
                         </div>
                         <div class="card__row">
                             <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.IncludedOFCLabel)</div>
-                            <div class="card__item-right">@Model.Data.IncludedOFC)</div>
+                            <div class="card__item-right">@Model.Data.IncludedOFC</div>
                         </div>
                     </div>
                 </div>

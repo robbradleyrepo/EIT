@@ -5,7 +5,7 @@
 
     public class AdditionalInfoAndChargesViewModel
     {
-        public IFund Fund { get; set; }
+        public IFundClass FundClass { get; set; }
 
         public AdditionalInfoAndChargesModel Data { get; set; }
 
