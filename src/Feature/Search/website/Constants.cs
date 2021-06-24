@@ -1,7 +1,19 @@
 ﻿namespace LionTrust.Feature.Search
 {
+    using System;
+
     public static class Constants
     { 
+        public static class SearchAnalytics
+        {
+            public static Guid SearchPageEvent = new Guid("{0C179613-2073-41AB-992E-027D03D523BF}");
+        }
+
+        public static class SearchOverlay
+        {
+            public const string PlaceholdertextFieldId = "{29F9E9E1-C66C-40D6-9669-4C170097B381}";
+        }
+
         public static class APIFacets
         {
             public static class Defaults

@@ -213,6 +213,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SitecoreForms", "SitecoreFo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionTrust.Foundation.SitecoreForms", "src\Foundation\SitecoreForms\website\LionTrust.Foundation.SitecoreForms.csproj", "{FE487F41-0C3A-465B-A46C-C0481709BD4B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Liontrust.Feature.Search.Tests", "src\Feature\Search\tests\Liontrust.Feature.Search.Tests\Liontrust.Feature.Search.Tests.csproj", "{B334C3E0-4AA9-457C-B64C-1F86A2D430C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -423,6 +425,10 @@ Global
 		{FE487F41-0C3A-465B-A46C-C0481709BD4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE487F41-0C3A-465B-A46C-C0481709BD4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE487F41-0C3A-465B-A46C-C0481709BD4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B334C3E0-4AA9-457C-B64C-1F86A2D430C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B334C3E0-4AA9-457C-B64C-1F86A2D430C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B334C3E0-4AA9-457C-B64C-1F86A2D430C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B334C3E0-4AA9-457C-B64C-1F86A2D430C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -523,6 +529,7 @@ Global
 		{B8A511C1-FD51-471B-AF8B-E2C9D0C269F1} = {136E38AB-B606-4BB1-B5BB-91CBF9812827}
 		{DE57B1E2-31C0-4337-A24D-599D307DB6AB} = {C3F57797-2D54-4626-B842-51F30272E972}
 		{FE487F41-0C3A-465B-A46C-C0481709BD4B} = {DE57B1E2-31C0-4337-A24D-599D307DB6AB}
+		{B334C3E0-4AA9-457C-B64C-1F86A2D430C9} = {801BEA75-8384-46D0-905D-0CA828DEAF20}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {845F548C-FD53-4C61-AB7F-953C2225A13B}
