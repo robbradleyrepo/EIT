@@ -36,37 +36,40 @@ namespace LionTrust.Foundation.Indexing.ComputedFields.Fund
 
                     if (fundClass != null)
                     {
-                        var factSheet = (ImageField)fundClass.Fields[Legacy.Constants.FundClass.FactsheetFieldId];
+                        var factSheet = (FileField)fundClass.Fields[Legacy.Constants.FundClass.FactsheetFieldId];
 
-                        MediaItem mediaItem;
-                        if (factSheet?.MediaDatabase.Name == "shell")
+                        if (!string.IsNullOrWhiteSpace(factSheet.Value))
                         {
-                            mediaItem = publishedDatabase.GetItem(factSheet.MediaID);
-                        }
-                        else
-                        {
-                            var database =
-                                    factSheet != null && factSheet.MediaDatabase != null && factSheet.MediaDatabase.Name != "shell"
-                                            ? factSheet.MediaDatabase
-                                            : publishedDatabase;
-
-                            mediaItem = factSheet?.MediaItem ?? database.GetItem(factSheet.MediaID);
-
-                        }
-
-                        if (mediaItem != null)
-                        {
-                            var mediaOption = new MediaUrlOptions() { AlwaysIncludeServerUrl = false, AbsolutePath = true, Database = mediaItem.Database, LowercaseUrls = true };
-                            using (new SiteContextSwitcher(Factory.GetSite(Constants.SiteName)))
+                            MediaItem mediaItem;
+                            if (factSheet?.MediaDatabase.Name == "shell")
                             {
-                                var imageUrl = MediaManager.GetMediaUrl(mediaItem, mediaOption);
-                                hashedUrl = imageUrl != null ? HashingUtils.ProtectAssetUrl(imageUrl) : string.Empty;
+                                mediaItem = publishedDatabase.GetItem(factSheet.MediaID);
+                            }
+                            else
+                            {
+                                var database =
+                                        factSheet != null && factSheet.MediaDatabase != null && factSheet.MediaDatabase.Name != "shell"
+                                                ? factSheet.MediaDatabase
+                                                : publishedDatabase;
+
+                                mediaItem = factSheet?.MediaItem ?? database.GetItem(factSheet.MediaID);
+
+                            }
+
+                            if (mediaItem != null)
+                            {
+                                var mediaOption = new MediaUrlOptions() { AlwaysIncludeServerUrl = false, AbsolutePath = true, Database = mediaItem.Database, LowercaseUrls = true };
+                                using (new SiteContextSwitcher(Factory.GetSite(Constants.SiteName)))
+                                {
+                                    var imageUrl = MediaManager.GetMediaUrl(mediaItem, mediaOption);
+                                    hashedUrl = imageUrl != null ? HashingUtils.ProtectAssetUrl(imageUrl) : string.Empty;
+                                }
                             }
                         }
                     }
                 }
             }
-                return hashedUrl; 
+            return hashedUrl;
         }
     }
 }
