@@ -37,6 +37,10 @@
 //     filter: blur(4px)
 //     transition: all .5s ease-out
 
-.swiper-container-article .swiper-slide
-    display: flex
-    // margin-bottom: 20px
+.swiper-container-article 
+    .swiper-wrapper.row
+        flex-wrap: nowrap
+        box-sizing: border-box
+        width: auto
+    .swiper-slide
+        display: flex

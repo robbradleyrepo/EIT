@@ -1,6 +1,7 @@
 ﻿namespace LionTrust.Feature.Onboarding.Models
 {
     using Glass.Mapper.Sc.Configuration.Attributes;
+    using Glass.Mapper.Sc.Fields;
     using LionTrust.Foundation.ORM.Models;
 
     [SitecoreType(TemplateId = Constants.TermsAndConditions.TemplateId)]
@@ -12,8 +13,14 @@
         [SitecoreField(Constants.TermsAndConditions.ButtonText_FieldId)]
         string ButtonText { get; set; }
 
-        [SitecoreField(Constants.TermsAndConditions.AcceptanceText_FieldId)]
-        string AcceptanceText { get; set; }
+        [SitecoreField(Constants.TermsAndConditions.AcceptanceFirstText_FieldId)]
+        string AcceptanceFirstText { get; set; }
+
+        [SitecoreField(Constants.TermsAndConditions.AcceptanceLink_FieldId)]
+        Link AcceptanceLink { get; set; }
+
+        [SitecoreField(Constants.TermsAndConditions.AcceptanceSecondText_FieldId)]
+        string AcceptanceSecondText { get; set; }
 
         [SitecoreField(Constants.TermsAndConditions.Goal_FieldId)]
         IGlassBase Goal { get; set; }
