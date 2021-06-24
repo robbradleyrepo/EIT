@@ -23,39 +23,34 @@
     padding: 0 20px
     @include breakpoint(desktop-large, up)
         padding: 0
-    p
-        margin-bottom: 37px
-        font-size: 18px
-        line-height: 28px
+    p   
+        @include p-1-normal-20
+        margin-bottom: 1.5em
         @include breakpoint(desktop, up)
-            margin-bottom: 40px
-            font-size: 20px
-            line-height: 30px
+            margin-bottom: 2em
 .big-quote
-    font-size: 22px
-    line-height: 28px
+    @include font-size(22px)
+    line-height: 1.272em
     margin: 32px 0
     font-weight: 500
     font-style: italic
     @include breakpoint(desktop, up)
-        font-size: 26px
-        line-height: 36px
+        @include font-size(26px)
+        line-height: 1.384em
         margin: 40px 0
 
 .article-quote
     border-top: 1px solid $gold
     border-bottom: 1px solid $gold
-    font-size: 18px
-    line-height: 28px
     background: rgba($secondary-silver, 0.6)
     padding: 14px 5px
     margin: 32px auto
     width: 100%
     max-width: 764px
     color: $black
+    @include p-1-normal-20
     @include breakpoint(desktop, up)
         padding: 15px 32px
-        font-size: 20px
         margin-bottom: 45px
     &_with-margins
         @include breakpoint(mobile-large, down)

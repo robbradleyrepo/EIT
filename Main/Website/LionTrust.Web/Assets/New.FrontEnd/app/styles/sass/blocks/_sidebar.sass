@@ -126,7 +126,7 @@
                 color: $gold
     &_desktop
         display: block
-        font-size: 20px
+        @include font-size(20px)
         .navigation__link
             font-weight: 300
             line-height: 60px
@@ -139,12 +139,12 @@
         margin-bottom: 40px
     &__link
         color: $white
-        font-size: 18px
+        @include font-size(18px)
         display: flex
         align-items: center
         @include navlink-behaviour
         @include breakpoint(desktop, up)
-            font-size: 20px
+            @include font-size(20px)
         i
             display: inline-block
             margin-right: 26px
@@ -185,7 +185,7 @@
 
 .bottom-links
     display: none
-    font-size: 20px
-    line-height: 60px
+    @include font-size(20px)
+    line-height: 3em
     @include breakpoint(desktop, up)
         display: block

@@ -6,14 +6,10 @@
     &__title
         @extend .h4
     &__text
-        font-size: 16px
-        line-height: 28px
-        margin-bottom: 16px
+        margin-bottom: 1em
+        @include p-1-normal-20
         @include breakpoint(desktop, up)
             margin-bottom: 32px
-            font-size: 20px
-            line-height: 30px
-            font-size: 18px
     &__img
         width: 100%
         height: auto

@@ -27,9 +27,9 @@
         @extend .h1
     &__subtitle
         color: $black
-        font-size: 20px
+        @include font-size(20px)
+        line-height: 1.5em
         font-weight: 500
-        line-height: 30px
     &__link
         @extend .link-styles
     &__item

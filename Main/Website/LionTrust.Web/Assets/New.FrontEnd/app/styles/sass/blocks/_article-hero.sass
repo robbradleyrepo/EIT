@@ -7,11 +7,10 @@
     &__content
         margin-bottom: 20px
     &__text
+        @include p-1-normal-20
         display: none
         @include breakpoint(desktop, up)
             display: block
-            font-size: 20px
-            line-height: 30px
             margin-right: 15%
 
 .hero-author-wrapper
@@ -118,9 +117,9 @@
             margin-right: 0
         i
             margin-right: 10px
-            font-size: 20px
+            @include font-size(20px)
             @include breakpoint(desktop, up)
-                font-size: 25px
+                @include font-size(25px)
 
 header .article-links
     .article-links__link
