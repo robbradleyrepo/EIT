@@ -7,6 +7,7 @@
             public static class Defaults
             {
                 public const string ArticleSearchFacetsConfig = "{D61FC1B3-9969-4F95-8796-FEFBC864CA1F}";
+                public const string FundSearchFacetsConfig = "{64E0343F-FF1C-4B78-9461-C57CD8B1050D}";
             }
             public static class ArticleSearchFacetsConfig
             {
@@ -21,6 +22,14 @@
                 public const string TemplateId = "{73EFF6F8-D95A-43B1-A069-5EF0B709CBB4}";
 
                 public const string IsFundManagerFieldId = "{AD3AF339-1FD6-47EA-B506-7ED32F5D6246}";
+            }
+
+            public static class FundSearchFacetsConfig
+            {
+                public const string FundRangesFieldId = "{FBE9329C-271B-4573-B4FD-6DC4B7C692C9}";
+                public const string FundManagersFieldId = "{EC744986-7D64-459D-A2E6-8CB5A9C0848D}";
+                public const string FundTeamsFieldId = "{37E555BE-6426-4E66-A991-FDC782125A46}";
+                public const string FundRegionsFieldId = "{D859AD9C-7473-420D-A7C3-ACE454F18D07}";
             }
         }
 

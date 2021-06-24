@@ -90,7 +90,7 @@
         }
 
 
-        public ContentSearchResults GetDatedTaxonomyRelatedArticles(ITaxonomySearchRequest articleSearchRequest, Func<IQueryable<ArticleSearchResultItem>, IQueryable<ArticleSearchResultItem>> sort = null)
+        public ContentSearchResults<ArticleSearchResultItem> GetDatedTaxonomyRelatedArticles(ITaxonomySearchRequest articleSearchRequest, Func<IQueryable<ArticleSearchResultItem>, IQueryable<ArticleSearchResultItem>> sort = null)
         {
             var predicate = PredicateBuilder.True<ArticleSearchResultItem>();
             var language = Sitecore.Context.Language?.Name ?? "en";

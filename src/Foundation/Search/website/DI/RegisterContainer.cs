@@ -13,6 +13,8 @@ namespace LionTrust.Foundation.Search.DI
         {
             serviceCollection.AddTransient<IArticleContentSearchService, ArticleContentSearchService>();
             serviceCollection.AddTransient<IArticleContentSearchRepository, ArticleContentSearchRepository>();
+            serviceCollection.AddTransient<IFundContentSearchService, FundContentSearchService>();
+            serviceCollection.AddTransient<IFundContentSearchRepository, FundContentSearchRepository>();
         }
     }
 }

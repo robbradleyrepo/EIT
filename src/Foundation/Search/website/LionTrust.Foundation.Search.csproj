@@ -55,17 +55,25 @@
   <ItemGroup>
     <Compile Include="ComputedFields\AllTemplatesIndexField.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
+    <Compile Include="Models\ContentSearch\FundSearchResultItem.cs" />
     <Compile Include="Models\ContentSearch\ContentSearchResults.cs" />
+    <Compile Include="Models\IFundContentResult.cs" />
     <Compile Include="Models\ITaxonomyContentResult.cs" />
+    <Compile Include="Models\Request\FundSearchRequest.cs" />
     <Compile Include="Models\Request\ArticleSearchRequest.cs" />
+    <Compile Include="Models\Request\ISearchReques.cs" />
     <Compile Include="Models\Request\ITaxonomySearchRequest.cs" />
-    <Compile Include="Models\Response\ITaxonomySearchResponse.cs" />
+    <Compile Include="Models\Response\ISearchResponse.cs" />
     <Compile Include="Models\ContentSearch\ArticleSearchResultItem.cs" />
     <Compile Include="Models\ContentSearch\BaseSearchResultItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Implementations\FundContentSearchRepository.cs" />
     <Compile Include="Repositories\Implementations\ArticleContentSearchRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IFundContentSearchRepository.cs" />
     <Compile Include="Repositories\Interfaces\IArticleContentSearchRepository.cs" />
+    <Compile Include="Services\Implementations\FundContentSearchService.cs" />
     <Compile Include="Services\Implementations\ArticleContentSearchService.cs" />
+    <Compile Include="Services\Interfaces\IFundContentSearchService.cs" />
     <Compile Include="Services\Interfaces\IArticleContentSearchService.cs" />
   </ItemGroup>
   <ItemGroup />

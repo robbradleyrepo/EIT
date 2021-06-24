@@ -2,9 +2,9 @@
 {
     using System.Collections.Generic;
 
-    public interface ITaxonomySearchResponse
+    public interface ISearchResponse<T>
     {        
-        IEnumerable<ITaxonomyContentResult> SearchResults { get; set; }
+        IEnumerable<T> SearchResults { get; set; }
 
         int StatusCode { get; set; }
 
