@@ -4,6 +4,10 @@ Parent: "12bd7e35-437b-449c-b931-23cfa12c03d8"
 Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
 Path: /sitecore/system/Marketing Control Panel/Profiles/LionTrust
 DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
 Languages:
 - Language: en
   Versions:

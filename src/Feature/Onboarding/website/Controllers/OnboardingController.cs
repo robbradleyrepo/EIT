@@ -251,7 +251,7 @@
         {
             var scores = new Dictionary<string, double>();
 
-            if (profileCard != null && !string.IsNullOrEmpty(profileCard.ProfileCardValue))
+            if (profileCard != null)
             {
                 var xmlData = XDocument.Parse(profileCard.ProfileCardValue);
                 var xmlDoc = xmlData;

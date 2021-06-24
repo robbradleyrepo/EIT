@@ -36,6 +36,6 @@
         [SitecoreField(Constants.NavigationRoot.OnboardingConfiguation_FieldId)]
         Sitecore.Data.Items.Item OnboardingConfiguration { get; set; }
 
-        OnboardingRole OnboardingRole { get; set; }
+        string OnboardingRoleName { get; set; }
     }
 }

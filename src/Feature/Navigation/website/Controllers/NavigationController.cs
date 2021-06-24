@@ -41,7 +41,7 @@
                 homeModel = _mvcContext.SitecoreService.GetItem<IHome>(homeItem.ID.Guid);
                 if (homeModel.OnboardingConfiguration != null)
                 {
-                    homeModel.OnboardingRole = OnboardingHelper.ProfileRole(
+                    homeModel.OnboardingRoleName = OnboardingHelper.ProfileRoleName(
                         homeModel.OnboardingConfiguration.Name,
                         homeModel.OnboardingConfiguration[Constants.OnboardingConfiguration.PrivateProfileCard_FieldId],
                         homeModel.OnboardingConfiguration[Constants.OnboardingConfiguration.ProfessionalProfileCard_FieldId]);

@@ -2,10 +2,11 @@
 {
     using LionTrust.Feature.Navigation.Models;
     using Sitecore.Analytics;
+    using System;
 
     public static class OnboardingHelper
     {
-        public static OnboardingRole ProfileRole(string profileName, string privateId, string professionalId)
+        public static string ProfileRoleName(string profileName, string privateId, string professionalId)
         {
             var tracker = Tracker.Current;
             if (tracker != null && tracker.Interaction != null && tracker.Interaction.Profiles != null)
@@ -13,21 +14,17 @@
                 if (tracker.Interaction.Profiles.ContainsProfile(profileName))
                 {
                     var profile = tracker.Interaction.Profiles[profileName];
-                    if (profile.PatternId != null)
+                    if (profile.PatternId.Value != null)
                     {
-                        if (profile.PatternId.Value.ToString().Equals(privateId))
+                        if (profile.PatternId.Value.Equals(new Guid(privateId)) || profile.PatternId.Value.Equals(new Guid(professionalId)))
                         {
-                            return OnboardingRole.PrivateInvestor;
-                        }
-                        else if (profile.PatternId.Value.ToString().Equals(professionalId))
-                        {
-                            return OnboardingRole.ProfessionalInestor;
+                            return profile.PatternLabel;
                         }
                     }                    
                 }
             }
 
-            return OnboardingRole.Null;
+            return string.Empty;
         }
     }
 }
