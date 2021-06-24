@@ -17,21 +17,104 @@
         </section>
     </header>
 
-    <main>
-        <div class="lister-app">
-            <!--#include virtual="/components/BC005-Article-Filters.html" -->
+    <main class="relative z-index-0">
+        <div class="lister-app" id="lister-app" data-host="https://cm-liontrust-it.sagittarius.agency/ArticleSearchApi/">
+            <!--#include virtual="/components/BC005-Fund-Filters.html" -->
             <section class="container">
-                <div class="row">
-                    <!--#include virtual="/components/BC019-Fund-Grid-Item.html" -->
-                    <!--#include virtual="/components/BC019-Fund-Grid-Item.html" -->
-                    <!--#include virtual="/components/BC019-Fund-Grid-Item.html" -->
-                    <!--#include virtual="/components/BC019-Fund-Grid-Item.html" -->
-                    <!--#include virtual="/components/BC019-Fund-Grid-Item.html" -->
-                    <!--#include virtual="/components/BC019-Fund-Grid-Item.html" -->
-                    <!--#include virtual="/components/BC019-Fund-Grid-Item.html" -->
-                    <!--#include virtual="/components/BC019-Fund-Grid-Item.html" -->
+                <div class="row" v-if="grid">
+                    <article-item inline-template v-for="(fund, i) in searchData" :key="i">
+                        <div class="col-md-6 col-lg-4 col-xl-3 d-flex">
+                            <div class="fund-card fund-card_grid">
+                                <div class="fund-card__head">
+                                    <img :src="fund.FundCardImageUrl" :alt="fund.FundCardHeading" />
+                                </div>
+                                <div class="fund-card__content">
+                                    <div class="fund-card__content-top">
+                                        <span class="fund-card__subtitle">{{fund.FundCategory}}</span>
+                                        <span class="fund-card__title"> {{fund.FundCardHeading}}</span>
+                                        <div class="fund-card__text">
+                                            <div class="fund-card__text-top">
+                                                <p>
+                                                    {{fund.FundCardDescription}}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="fund-card__text-bottom">
+                                        <div class="fund-card__btns-block">
+                                            <button class="fund-card__btn">Factsheet <i class="icon-file"></i></button>
+                                            <button class="fund-card__btn">All documents <i
+                                                    class="icon-folder"></i></button>
+                                        </div>
+                                        <a :href="fund.Url" class="link-styles">
+                                            View this fund
+                                            <i class="icon-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article-item>
                 </div>
-                <!--#include virtual="/components/reusables/pagination.html" -->
+                <article-item v-else inline-template v-for="(fund, i) in searchData" :key="i">
+                    <div class="fund-item-list">
+                        <div class="row align-items-center">
+                            <div class="col-xl-4">
+                                <span class="fund-item-list__title">{{fund.FundCardHeading}}</span>
+
+                            </div>
+                            <div class="col-xl-2">
+                                <div class="fund-item-list__badge">
+                                    <span class="badge-secondary">
+                                        {{fund.FundCategory}}
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-xl-4">
+                                <div class="fund-item-list__links">
+                                    <button href="#" class="link-gray">Follow <i class="icon-follow"></i></button>
+                                    <a href="#" target="_blank" class="link-gray">Factsheet <i class="icon-file"></i></a>
+                                    <button class="link-gray view-documents">All documents <i class="icon-folder"></i></button>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-xl-2">
+                                <div class="fund-item-list__right-btn">
+                                    <a :href="fund.Url" class="btn btn-primary-forward">
+                                        View this fund <i class="icon-arrow-right animate-arrow"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article-item>
+                <div class="row">
+                    <div class="col-lg-6 offset-lg-3">
+                        <nav v-if="getPageAmount > 1" class="pagination mt-3">
+                            <a href="#" @click.prevent="prevPage" class="pagination__step pagination__step_forward"
+                                :class="disablePrevBtn ? 'pagination__step_disabled' : ''"><i
+                                    class="icon-arrow-left"></i> Previous</a>
+                            <ul class="pagination__list">
+                                <li class="pagination__item">
+                                    <a @click.prevent="jumpPagesForward" v-if="showForwardPageBtn" href="#"
+                                        class="pagination__link pagination__link_steps">...</a>
+                                </li>
+                                <li v-for="(page, i) in getPages" :key="i" class="pagination__item">
+                                    <a @click.prevent="changePage(page)" href="#" class="pagination__link"
+                                        :class="getPage === page ? 'active' : ''">
+                                        {{page}}
+                                    </a>
+                                </li>
+                                <li class="pagination__item">
+                                    <a @click.prevent="jumpPagesNext" v-if="showNextPageBtn" href="#"
+                                        class="pagination__link pagination__link_steps">...</a>
+                                </li>
+                            </ul>
+                            <a href="#" @click.prevent="nextPage"
+                                :class="disabledNextBtn ? 'pagination__step_disabled' : ''"
+                                class="pagination__step pagination__step_next">Next <i class="icon-arrow-right"></i></a>
+                        </nav>
+                    </div>
+                </div>
             </section>
 
         </div>
@@ -39,6 +122,7 @@
     </main>
 
     <!--#include virtual="/components/GC009-Breadcrumb-Nav.html" -->
+    <!--#include virtual="/components/BC020-Literature-Overlay.html" -->
     <!--#include virtual="/components/LDC-190-Footer.html" -->
     <!--#include virtual="/components/GC008-Onboarding-Overlay.html" -->
     <!--#include virtual="/components/GC006-Search-Overlay.html" -->
