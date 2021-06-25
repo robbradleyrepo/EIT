@@ -1,0 +1,27 @@
+﻿---
+ID: "2e71a4d9-8115-47e6-973a-7de681370739"
+Parent: "ceb8723e-3b4f-478b-8dcf-60ec0cfc6197"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/LionTrust/Page Types/Insight Page
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/lightbulb_on.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Type: tree list
+  Value: |
+    {1930BBEB-7805-471A-A3BE-4858AC7CF696}
+    {AC1F2CD5-1DC2-4F6B-85B9-C8E622EB7EDB}
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{267F8BA6-60E3-4A82-94EF-BA4E26B732F4}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210625T103103Z

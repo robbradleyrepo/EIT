@@ -4,7 +4,7 @@
 @model LionTrust.Feature.Search.Models.IArticleLister
 @if (Model != null)
 {
-    <div class="lister-app" id="lister-app" data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.ArticleApiRoute_SettingName))">
+    <div id="lister-app" data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.ArticleApiRoute_SettingName))">
         <div class="article-filter-wrapper">
             <div class="article-filters" :class="mobileFilter ? 'active' : ''">
                 <div class="article-filters__header">
@@ -135,7 +135,7 @@
                 </btn>
             </div>
         </div>
-        <section class="container">
+        <div class="container">
             <div class="text-center my-5" v-if="loading">
                 <div class="spinner-border text-gold" role="status"></div>
             </div>
@@ -175,7 +175,7 @@
                 </article-item>
             </div>
             @Html.Partial("~/Views/Search/_Pagination.cshtml", Model)
-        </section>
+        </div>
     </div>
 }
 else if (Sitecore.Context.PageMode.IsExperienceEditor)

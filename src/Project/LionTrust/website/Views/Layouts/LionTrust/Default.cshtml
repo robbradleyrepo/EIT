@@ -28,6 +28,9 @@
         case @Constants.PageTypes.FundPageTemplateId:
             bodyClass = "fund-detail-page";
             break;
+        case @Constants.PageTypes.InsightPageTemplateId:
+            bodyClass = "article-page";
+            break;
     }
 
     var mainClass = string.Empty;
@@ -36,6 +39,7 @@
         case @Constants.PageTypes.HomeTemplateId:
             mainClass = "main-page-conentent";
             break;
+        
     }
 
     var isExperienceEditor = Sitecore.Context.PageMode.IsExperienceEditor ? "experience-editor" : string.Empty;
