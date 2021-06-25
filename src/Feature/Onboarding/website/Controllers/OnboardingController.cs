@@ -2,6 +2,7 @@
 {
     using Glass.Mapper.Sc.Web.Mvc;
     using LionTrust.Feature.Onboarding.Models;
+    using LionTrust.Foundation.Onboarding.Models;
     using Sitecore.Analytics;
     using Sitecore.Analytics.Model;
     using Sitecore.Analytics.Model.Entities;
@@ -154,7 +155,7 @@
             return Render();
         }
 
-        private bool OnboardingComplete(IOnboardingConfiguration config)
+        private bool OnboardingComplete(Feature.Onboarding.Models.IOnboardingConfiguration config)
         {
             var result = false;
 

@@ -1,25 +1,28 @@
 ﻿---
-ID: "e990e03d-0332-45cc-a5e7-613996deda74"
+ID: "283a74f1-ebfb-4eb8-acd7-6d4e4ab5e58c"
 Parent: "b3305bbc-554c-4c67-9891-3d75d6ac7544"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Navigation/_SocialIcon/Social Icon/SocialIcon_Link
+Path: /sitecore/templates/Feature/Navigation/_SocialIcon/Social Icon/SocialIcon_LinkGoal
 DB: master
 SharedFields:
+- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
+  Hint: Source
+  Value: /sitecore/system/Marketing Control Panel/Goals
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: General Link
+  Value: Droplink
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 100
+  Value: 150
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: "Social Icon Link - Let empty for Twitter icon and add it on child"
+    Value: "Social Icon Link Goal - Let empty for Twitter icon and add it on child"
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210416T100650Z
+      Value: 20210624T082847Z
