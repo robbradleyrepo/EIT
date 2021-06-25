@@ -2,59 +2,61 @@
 @model LionTrust.Feature.Article.Models.IFeaturedArticleHero
 @if (Model != null)
 {
-<header class="header-hero header-overlay" style="background-image: url('@Model.BackgroundImage.Src');">
-    <section class="container">
-        @Html.Sitecore().Placeholder("navigation")
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="article-hero">
-                    @if (Model.Article != null)
-                    {
-                        if (Model.Article.Author != null)
-                        {
-                            <div class="hero-author">
-                                @if (Model.Article.Authors.Count() > 1)
+    <header class="header header-hero header-overlay d-flex flex-column justify-content-between" style="background-image: url('@Model.BackgroundImage.Src');">
+        <section class="container">
+            @Html.Sitecore().Placeholder("navigation")
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="article-hero">
+                        <div class="hero-author-wrapper">
+                            @if (Model.Article != null)
+                            {
+                                if (Model.Article.Author != null)
                                 {
-                                    @Html.Glass().RenderImage(Model.Article.Author, a => a.Image, new { alt = Model.Article.Author.FullName, @class = "hero-author__img" }, isEditable: true)
-                                }
-                                else
-                                {
-                                    @Html.Glass().RenderImage(Model.Article, a => a.MultipleAuthorsIcon, new { alt = Model.Article.Author.FullName, @class = "hero-author__img" }, isEditable: true)
-                                }
-                                <div class="hero-author__content">
-                                    <span class="hero-author__name">
+                                    <div class="hero-author">
                                         @if (Model.Article.Authors.Count() > 1)
                                         {
-                                            @Html.Glass().Editable(Model.Article, a => a.MultipleAuthorsLabel)
+                                            @Html.Glass().RenderImage(Model.Article.Author, a => a.Image, new { alt = Model.Article.Author.FullName, @class = "hero-author__img" }, isEditable: true)
                                         }
                                         else
                                         {
-                                            @Html.Glass().Editable(Model.Article.Author, a => a.FullName)
+                                            @Html.Glass().RenderImage(Model.Article, a => a.MultipleAuthorsIcon, new { alt = Model.Article.Author.FullName, @class = "hero-author__img" }, isEditable: true)
                                         }
-                                        <i class="icon-follow"></i>
-                                    </span>
-                                    <span class="hero-author__date">
-                                        @Model.Article.Date?.ToString("dd/M/yyyy")
-                                    </span>
+                                        <div class="hero-author__content">
+                                            <span class="hero-author__name">
+                                                @if (Model.Article.Authors.Count() > 1)
+                                                {
+                                                    @Html.Glass().Editable(Model.Article, a => a.MultipleAuthorsLabel)
+                                                }
+                                                else
+                                                {
+                                                    @Html.Glass().Editable(Model.Article.Author, a => a.FullName)
+                                                }
+                                                <i class="icon-follow"></i>
+                                            </span>
+                                            <span class="hero-author__date">
+                                                @Model.Article.Date?.ToString("dd/M/yyyy")
+                                            </span>
+                                        </div>
+                                    </div>
+                                }
+                                <div class="article-hero__content">
+                                    <h1 class="article-hero__title">
+                                        @Html.Glass().Editable(Model.Article, m => m.Title)
+                                    </h1>
+                                    <p class="article-hero__text">
+                                        @Html.Glass().Editable(Model.Article, m => m.PageShortDescription)
+                                    </p>
                                 </div>
-                            </div>
-                        }
-                        <div class="article-hero__content">
-                            <h1 class="article-hero__title">
-                                @Html.Glass().Editable(Model.Article, m => m.Title)
-                            </h1>
-                            <p class="article-hero__text">
-                                @Html.Glass().Editable(Model.Article, m => m.PageShortDescription)
-                            </p>
+                                <a href="@Model.Article.Url" class="link-styles">
+                                    @Html.Glass().Editable(Model, m => m.LinkText) <i class="icon-arrow-right"></i>
+                                </a>
+                            }
                         </div>
-                        <a href="@Model.Article.Url" class="link-styles">
-                            @Html.Glass().Editable(Model, m => m.LinkText) <i class="icon-arrow-right"></i>
-                        </a>
-                    }
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    @Html.Sitecore().Placeholder("secondary-navigation")
-</header>
+        </section>
+        @Html.Sitecore().Placeholder("secondary-navigation")
+    </header>
 }
