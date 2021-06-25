@@ -70,11 +70,16 @@
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Config\Include\Feature\Feature.Search.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Search\ArticleLister.cshtml" />
     <Content Include="Views\Search\FundLister.cshtml" />
     <Content Include="Views\Search\SearchOverlay.cshtml" />
     <Content Include="Views\Search\_Pagination.cshtml" />
+    <Content Include="App_Config\Include\Unicorn\z.Feature.Search.config" />
+    <Content Include="App_Config\Include\Feature\Feature.Search.RegisterContainer.config" />
+    <Content Include="App_Config\Include\Feature\Feature.Search.Routes.config" />
+    <Content Include="App_Config\Include\Feature\Feature.Search.Serialization.config" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -109,9 +114,7 @@
     <Compile Include="SearchOverlay\ISearchOverlay.cs" />
     <Compile Include="SearchOverlay\SearchOverlayController.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Config\Include\Feature\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\..\Foundation\Analytics\website\LionTrust.Foundation.Analytics.csproj">
       <Project>{71010683-02eb-4e0d-b0e1-6643922799ee}</Project>
