@@ -1,7 +1,12 @@
 import Vue from "vue/dist/vue.common.prod";
 import { pagination } from "./listFilter/mixins/pagination";
 export default () => {
-  const host = document.getElementById('lister-app').dataset.host;
+  let host = document.getElementById('lister-app').dataset.host;
+  if (window.location.hostname == "localhost" || window.location.hostname === "127.0.0.1") 
+    host = "https://cm-liontrust-it.sagittarius.agency/" + host;
+   else 
+    host = "/" + host;
+  
   const months = ['January','February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   new Vue({
     el: "#lister-app",
@@ -113,7 +118,7 @@ export default () => {
 
       getFacetsRequest() {
         $.get(
-          `${host}Facets`
+          `${host}/Facets`
         ).done((responce) => {
           const {Facets, Dates} = responce;
           const facets = [];
@@ -125,13 +130,11 @@ export default () => {
             });
           }
           this.facets = facets;
-          console.log('this.facets',JSON.stringify(this.facets));
-
-          if(Dates.Months.length)
+          if(Dates && Dates.Months.length)
             for(let i in Dates.Months) {
               this.months.push(months[i])
             }
-          if(Dates.Years.length)
+          if(Dates && Dates.Years.length)
             this.years = Dates.Years;
 
         }).fail(e => {
@@ -143,10 +146,9 @@ export default () => {
       getSearchRequest() {
         this.loading = true;
         $.get(
-          host + "Search?" +
+          host + "/Search?" +
             this.getQuerySring()
         ).done((responce) => {
-          console.log('responce',JSON.stringify(responce));
           const { SearchResults, TotalResults } = responce;
           this.searchData = SearchResults;
           this.amountResults = TotalResults;
