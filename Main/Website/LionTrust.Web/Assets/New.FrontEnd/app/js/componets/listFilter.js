@@ -72,7 +72,7 @@ export default () => {
       },
 
       applyFilters() {
-        // this.pushStateLink();        
+        this.pushStateLink();
         this.mobileFilter = false;
         this.getSearchRequest();
       },
@@ -149,6 +149,7 @@ export default () => {
           host + "/Search?" +
             this.getQuerySring()
         ).done((responce) => {
+          console.log('responce',responce);
           const { SearchResults, TotalResults } = responce;
           this.searchData = SearchResults;
           this.amountResults = TotalResults;
@@ -157,7 +158,16 @@ export default () => {
         .fail(e => {
           console.error(e);
           this.loading = false
-        })
+        })        
+      },
+
+      showLiteratureOverlay(fund) {
+        $.ajax({
+          url: `${host}/GetOverlayHtml?fundId=`
+         }).done(function(data) {
+          $(".onboarding-overlay__scroller.terms-text").html(data);
+          $('.onboarding-overlay__scroller').toggle();
+        });
       }
     },
     watch: {
