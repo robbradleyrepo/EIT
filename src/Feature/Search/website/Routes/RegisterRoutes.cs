@@ -25,13 +25,13 @@ namespace LionTrust.Feature.Search.Routes
                     controller = "SearchAPI",
                     action = "GetFilteredArticles"
                 });
-            RouteTable.Routes.MapRoute("Feature.Search.FundFacets", "FundSearchApi/Facets",
+            RouteTable.Routes.MapRoute("Feature.Search.FundFacets", $"{Settings.GetSetting(Constants.Settings.FundApiRoute_SettingName)}/Facets",
                 new
                 {
                     controller = "SearchAPI",
                     action = "GetFundListingFacets"
                 });
-            RouteTable.Routes.MapRoute("Feature.Search.FilteredFunds", "FundSearchApi/Search",
+            RouteTable.Routes.MapRoute("Feature.Search.FilteredFunds", $"{Settings.GetSetting(Constants.Settings.FundApiRoute_SettingName)}/Search",
                 new
                 {
                     controller = "SearchAPI",

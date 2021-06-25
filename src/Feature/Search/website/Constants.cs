@@ -3,7 +3,7 @@
     using System;
 
     public static class Constants
-    { 
+    {
         public static class SearchAnalytics
         {
             public static Guid SearchPageEvent = new Guid("{0C179613-2073-41AB-992E-027D03D523BF}");
@@ -55,7 +55,7 @@
             public const string ClearFiltersLabel_FieldId = "{B2BC0424-664C-4737-A680-9B2A17296852}";
             public const string DateNewestFirstLabel_FieldId = "{F72DC2B2-2396-401F-AFD5-3A4075892A86}";
             public const string DateOldestFirstLabel_FieldId = "{EE6AF776-8D37-4B81-A29F-551E7BB1D481}";
-            public const string DateIcon_FieldId = "{B3FF2403-3560-4DC1-B9B1-F9D93D85775D}";            
+            public const string DateIcon_FieldId = "{B3FF2403-3560-4DC1-B9B1-F9D93D85775D}";
             public const string SearchPlaceholder_FieldId = "{0EBA5571-B102-467C-993A-3025A1176831}";
             public const string SortLabel_FieldId = "{745B2803-4617-45DB-9C43-E6D910E50EC3}";
             public const string FilterLabel_FieldId = "{6AF33400-0709-4517-B1F7-8D01C5D66C06}";
@@ -67,9 +67,27 @@
             public const string NextLabel_FieldId = "{87E96566-897A-4D4C-8DA5-8727BD4E436E}";
         }
 
+        public static class FundLister
+        {
+            public const string ApplyFiltersLabel_FieldId = "{881C5CC5-745E-4156-A0E0-0E4E4F4306D5}";
+            public const string ClearFiltersLabel_FieldId = "{35663C96-FC62-4171-94B8-6BA42639F94C}";
+            public const string ViewAsGridLabel_FieldId = "{9421B84A-C63F-47C1-A73E-F442F401ED26}";
+            public const string ViewAsListLabel_FieldId = "{59731A11-3890-4FDF-9D9F-0592A4A35B50}";
+            public const string FiltersLabel_FieldId = "{F1742CC9-02A1-488D-AF97-7A793B8018A9}";
+            public const string FundCentreLink_FieldId = "{79982F65-F681-40F9-A526-63BE0E149EB3}";
+            public const string SearchPlaceholder_FieldId = "{450AF31C-6B9F-4EC0-BB4E-4A681DCD6127}";
+            public const string MobileViewLabel_FieldId = "{846F7732-B5EC-470F-8DC9-277ACF08A232}";
+            public const string FundLiterature_FieldId = "{01B10884-E8D0-4983-9C9C-FAF781087DA8}";
+            public const string AllDocumentsLabel_FieldId = "{061CF8AB-5D59-47E6-88AA-BDF808FC3BE3}";
+            public const string FollowLabel_FieldId = "{373D3F32-A145-4B77-830C-96083118CACA}";
+            public const string FactsheetLabel_FieldId = "{AD4992D4-588A-4AB0-B4EC-793A08E648D2}";
+        }
+
         public static class Settings
         {
             public const string ArticleApiRoute_SettingName = "Feature.Search.ArticleApiRoute";
+            public const string FundApiRoute_SettingName = "Feature.Search.FundApiRoute";
         }
+    }
     }
 }

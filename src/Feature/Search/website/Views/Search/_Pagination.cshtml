@@ -1,9 +1,10 @@
-﻿@model LionTrust.Feature.Search.Models.IPagination 
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Search.Models.IPagination
 <div class="row">
     <div class="col-lg-6 offset-lg-3">
         <nav v-if="getPageAmount > 1" class="pagination mt-3">
             <a href="#" @@click.prevent="prevPage" class="pagination__step pagination__step_forward"
-               :class="disablePrevBtn ? 'pagination__step_disabled' : ''"><i class="icon-arrow-left"></i> @Model.PreviousLabel</a>
+               :class="disablePrevBtn ? 'pagination__step_disabled' : ''"><i class="icon-arrow-left"></i> @Html.Glass().Editable(Model, m => m.PreviousLabel)</a>
             <ul class="pagination__list">
                 <li class="pagination__item">
                     <a @@click.prevent="jumpPagesForward" v-if="showForwardPageBtn" href="#"
@@ -21,7 +22,7 @@
                 </li>
             </ul>
             <a href="#" @@click.prevent="nextPage" :class="disabledNextBtn ? 'pagination__step_disabled' : ''"
-               class="pagination__step pagination__step_next">@Model.NextLabel <i class="icon-arrow-right"></i></a>
+               class="pagination__step pagination__step_next">@Html.Glass().Editable(Model, m => m.NextLabel) <i class="icon-arrow-right"></i></a>
         </nav>
     </div>
 </div>
