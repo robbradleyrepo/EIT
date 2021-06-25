@@ -45,19 +45,19 @@
                             <div class="article-filters__options">
                                 <div class="article-filters__title" @click="toggleOption">
                                     <i class="icon-chevron-left"></i>
-                                    Fund
+                                    {{facet.name}}
                                 </div>
                                 <option-field inline-template v-for="(item, i) in facet.data" :for="item.Name">
                                     <label class="option-checkbox">
                                         <input :id="item.Name" class="option-checkbox__input" type="checkbox" v-model="checked"  @change="toggleSelect(item, facet)">
-                                        <span class="option-checkbox__text">{{item.Name}}</span>
+                                        <span class="option-checkbox__text">{{item.Name}} </span>
                                         <span class="option-checkbox__icon"></span>
                                     </label>
                                 </option-field>
                             </div>
                         </div>   
                     </select-field>
-                    <div class="col-lg-2">
+                    <div class="col-lg-2 ml-lg-auto">
                         <div class="article-filters__btns">
                             <button class="btn article-filters__btn article-filters__btn_apply" @click="applyFilters">
                                 Apply filters
