@@ -3,9 +3,9 @@
     using System.Web.Mvc;
 
     using Glass.Mapper.Sc.Web.Mvc;
-    using LionTrust.Feature.Navigation.Helpers;
     using LionTrust.Feature.Navigation.Models;
     using LionTrust.Feature.Navigation.Repositories;
+    using LionTrust.Foundation.Navigation.Helpers;
     using Sitecore.Mvc.Controllers;
     using Sitecore.Mvc.Presentation;
 
@@ -41,10 +41,7 @@
                 homeModel = _mvcContext.SitecoreService.GetItem<IHome>(homeItem.ID.Guid);
                 if (homeModel.OnboardingConfiguration != null)
                 {
-                    homeModel.OnboardingRoleName = OnboardingHelper.ProfileRoleName(
-                        homeModel.OnboardingConfiguration.Name,
-                        homeModel.OnboardingConfiguration[Constants.OnboardingConfiguration.PrivateProfileCard_FieldId],
-                        homeModel.OnboardingConfiguration[Constants.OnboardingConfiguration.ProfessionalProfileCard_FieldId]);
+                    homeModel.OnboardingRoleName = OnboardingHelper.ProfileRoleName(homeModel.OnboardingConfiguration);                        
                 }
             }
 

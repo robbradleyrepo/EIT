@@ -93,7 +93,6 @@
     <Compile Include="Models\ICountry.cs" />
     <Compile Include="Models\IHome.cs" />
     <Compile Include="Models\IOnboardingConfiguration.cs" />
-    <Compile Include="Models\IProfileCard.cs" />
     <Compile Include="Models\ITermsAndConditions.cs" />
     <Compile Include="Models\OnboardingSubmit.cs" />
     <Compile Include="Models\IRegion.cs" />
@@ -126,6 +125,10 @@
     <ProjectReference Include="..\..\..\Foundation\Legacy\website\LionTrust.Foundation.Legacy.csproj">
       <Project>{43ee972b-2002-4719-a878-a66a99c42c40}</Project>
       <Name>LionTrust.Foundation.Legacy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Onboarding\website\LionTrust.Foundation.Onboarding.csproj">
+      <Project>{78b2a114-3eda-4cc7-81eb-d096d9bfc0cc}</Project>
+      <Name>LionTrust.Foundation.Onboarding</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\ORM\website\LionTrust.Foundation.ORM.csproj">
       <Project>{5e91a7d9-8e93-44fd-857f-f9ce145b6022}</Project>
