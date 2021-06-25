@@ -21,6 +21,9 @@
         <div class="lister-app" id="lister-app" data-host="FundSearchApi">
             <!--#include virtual="/components/BC005-Fund-Filters.html" -->
             <section class="container">
+                <div class="text-center my-5" v-if="loading">
+                    <div class="spinner-border text-gold" role="status"></div>
+                  </div>
                 <div class="row" v-if="grid">
                     <article-item inline-template v-for="(fund, i) in searchData" :key="i + fund.FundName">
                         <div class="col-md-6 col-lg-4 col-xl-3 d-flex">
