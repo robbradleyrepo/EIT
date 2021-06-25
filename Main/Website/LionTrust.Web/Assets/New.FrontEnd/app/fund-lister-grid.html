@@ -22,7 +22,7 @@
             <!--#include virtual="/components/BC005-Fund-Filters.html" -->
             <section class="container">
                 <div class="row" v-if="grid">
-                    <article-item inline-template v-for="(fund, i) in searchData" :key="i">
+                    <article-item inline-template v-for="(fund, i) in searchData" :key="i + fund.FundName">
                         <div class="col-md-6 col-lg-4 col-xl-3 d-flex">
                             <div class="fund-card fund-card_grid">
                                 <div class="fund-card__head">
@@ -56,7 +56,7 @@
                         </div>
                     </article-item>
                 </div>
-                <article-item v-else inline-template v-for="(fund, i) in searchData" :key="i">
+                <article-item v-else inline-template v-for="(fund, i) in searchData" :key="i + fund.FundName">
                     <div class="fund-item-list">
                         <div class="row align-items-center">
                             <div class="col-xl-4">
@@ -74,7 +74,7 @@
                                 <div class="fund-item-list__links">
                                     <button href="#" class="link-gray">Follow <i class="icon-follow"></i></button>
                                     <a href="#" target="_blank" class="link-gray">Factsheet <i class="icon-file"></i></a>
-                                    <button class="link-gray view-documents">All documents <i class="icon-folder"></i></button>
+                                    <button class="link-gray" @click="showLiteratureOverlay">All documents <i class="icon-folder"></i></button>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-xl-2">
