@@ -3,7 +3,7 @@
 @model LionTrust.Feature.Search.Models.IArticleLister
 @if (Model != null)
 {
-    <div id="lister-app">
+    <div class="lister-app" id="lister-app" data-host="@string.Format("//{0}/ArticleSearchApi/Search", HttpContext.Current.Request.Url.Host)">
         <div class="article-filter-wrapper">
             <div class="article-filters" :class="mobileFilter ? 'active' : ''">
                 <div class="article-filters__header">
