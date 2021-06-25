@@ -1,9 +1,10 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @using LionTrust.Feature.Search.Models 
+@using Sitecore.Configuration
 @model LionTrust.Feature.Search.Models.IArticleLister
 @if (Model != null)
 {
-    <div class="lister-app" id="lister-app" data-host="@string.Format("//{0}/ArticleSearchApi/Search", HttpContext.Current.Request.Url.Host)">
+    <div class="lister-app" id="lister-app" data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.ArticleApiRoute_SettingName))">
         <div class="article-filter-wrapper">
             <div class="article-filters" :class="mobileFilter ? 'active' : ''">
                 <div class="article-filters__header">
