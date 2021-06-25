@@ -2,7 +2,7 @@
 {
     using System;
     using System.Web.Mvc;
-
+    using LionTrust.Feature.Search.ActionResults;
     using LionTrust.Feature.Search.DataManagers.Interfaces;
     using Sitecore.Mvc.Controllers;
     
@@ -44,7 +44,7 @@
                 return new HttpNotFoundResult();
             }
 
-            return Json(response, JsonRequestBehavior.AllowGet);
+            return new JsonCamelCaseResult(response, JsonRequestBehavior.AllowGet);
         }
 
         /// <summary>
@@ -59,7 +59,7 @@
                 return new HttpStatusCodeResult(response.StatusCode, response.StatusMessage);
             }
 
-            return Json(response, JsonRequestBehavior.AllowGet);
+            return new JsonCamelCaseResult(response, JsonRequestBehavior.AllowGet);
         }
 
         /// <summary>
@@ -89,7 +89,7 @@
                 return new HttpNotFoundResult();
             }
 
-            return Json(response, JsonRequestBehavior.AllowGet);
+            return new JsonCamelCaseResult(response, JsonRequestBehavior.AllowGet);
         }
 
         /// <summary>
@@ -104,7 +104,7 @@
                 return new HttpStatusCodeResult(response.StatusCode, response.StatusMessage);
             }
 
-            return Json(response, JsonRequestBehavior.AllowGet);
+            return new JsonCamelCaseResult(response, JsonRequestBehavior.AllowGet);
         }
     }
 }

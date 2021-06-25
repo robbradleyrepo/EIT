@@ -8,7 +8,7 @@
 
     public interface IFundSearchDataManager
     {
-        FundFacetsResponse GetFundFilterFacets(Guid fundFilterFacetConfigId);
+        FacetsResponse GetFundFilterFacets(Guid fundFilterFacetConfigId);
 
         ISearchResponse<IFundContentResult> GetFundListingResponse(string database, string fundTeams, string fundManagers, string fundRegions, string fundRanges, string searchTerm, int page);
     }

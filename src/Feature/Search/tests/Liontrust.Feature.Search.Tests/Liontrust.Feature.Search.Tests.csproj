@@ -54,6 +54,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Glass.Mapper.Sc.92">
+      <Version>5.8.177</Version>
+    </PackageReference>
+    <PackageReference Include="Glass.Mapper.Sc.92.Mvc">
+      <Version>5.8.177</Version>
+    </PackageReference>
     <PackageReference Include="Moq">
       <Version>4.16.1</Version>
     </PackageReference>

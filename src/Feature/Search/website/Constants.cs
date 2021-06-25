@@ -24,9 +24,13 @@
             public static class ArticleSearchFacetsConfig
             {
                 public const string FundsFieldId = "{3F4BC13E-73FC-45D7-B858-8D54F2F4F51B}";
+                public const string FundsLabelFieldId = "{3B09D368-CBF7-46BC-AD32-E922B9922667}";
                 public const string FundCategoriesFieldId = "{FDDD0447-86EA-4E24-9F48-BCDC60D48922}";
+                public const string FundCategoriesLabelFieldId = "{630F512C-B754-49C0-AEDC-719960FE72D7}";
                 public const string FundManagersFieldId = "{6FC49C6C-12C1-455E-951D-70BEB68AEE68}";
+                public const string FundManagersLabelFieldId = "{08DEFE33-E04E-42EC-BF84-2872A25A73E1}";
                 public const string FundTeamsFieldId = "{3E5ADEE5-081E-40A4-BFA5-77A3449A93ED}";
+                public const string FundTeamsLabelFieldId = "{6591FE6B-328E-48A4-AE60-C25673C22F68}";
             }
 
             public static class FundManagerFacetOption
@@ -38,10 +42,14 @@
 
             public static class FundSearchFacetsConfig
             {
-                public const string FundRangesFieldId = "{FBE9329C-271B-4573-B4FD-6DC4B7C692C9}";
+                public const string FundRangesFieldId = "{F9DAF380-33EB-424C-B24C-6FFE0D9C98BD}";
                 public const string FundManagersFieldId = "{EC744986-7D64-459D-A2E6-8CB5A9C0848D}";
                 public const string FundTeamsFieldId = "{38DD3B5E-9E3E-402C-8F5F-8D595EBDAB19}";
                 public const string FundRegionsFieldId = "{D859AD9C-7473-420D-A7C3-ACE454F18D07}";
+                public const string FundRangesLabelFieldId = "{FBE9329C-271B-4573-B4FD-6DC4B7C692C9}";
+                public const string FundManagersLabelFieldId = "{848574BD-2F11-48D3-8868-E0377F188BA7}";
+                public const string FundTeamsLabelFieldId = "{A533F896-A92A-4897-9A4A-70F5038C2D28}";
+                public const string FundRegionsLabelFieldId = "{5E6F002F-6B6B-43F5-B665-5D1E03622456}";
             }
         }
 
@@ -88,6 +96,5 @@
             public const string ArticleApiRoute_SettingName = "Feature.Search.ArticleApiRoute";
             public const string FundApiRoute_SettingName = "Feature.Search.FundApiRoute";
         }
-    }
     }
 }
