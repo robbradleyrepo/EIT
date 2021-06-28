@@ -8,11 +8,11 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="article-hero">
-                        <div class="hero-author-wrapper">
-                            @if (Model.Article != null)
+                        @if (Model.Article != null)
+                        {
+                            if (Model.Article.Author != null)
                             {
-                                if (Model.Article.Author != null)
-                                {
+                                <div class="hero-author-wrapper">
                                     <div class="hero-author">
                                         @if (Model.Article.Authors.Count() > 1)
                                         {
@@ -39,20 +39,20 @@
                                             </span>
                                         </div>
                                     </div>
-                                }
-                                <div class="article-hero__content">
-                                    <h1 class="article-hero__title">
-                                        @Html.Glass().Editable(Model.Article, m => m.Title)
-                                    </h1>
-                                    <p class="article-hero__text">
-                                        @Html.Glass().Editable(Model.Article, m => m.PageShortDescription)
-                                    </p>
                                 </div>
-                                <a href="@Model.Article.Url" class="link-styles">
-                                    @Html.Glass().Editable(Model, m => m.LinkText) <i class="icon-arrow-right"></i>
-                                </a>
                             }
-                        </div>
+                            <div class="article-hero__content">
+                                <h1 class="article-hero__title">
+                                    @Html.Glass().Editable(Model.Article, m => m.Title)
+                                </h1>
+                                <p class="article-hero__text">
+                                    @Html.Glass().Editable(Model.Article, m => m.PageShortDescription)
+                                </p>
+                            </div>
+                        }
+                        <a href="@Model.Article.Url" class="link-styles">
+                            @Html.Glass().Editable(Model, m => m.LinkText) <i class="icon-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
