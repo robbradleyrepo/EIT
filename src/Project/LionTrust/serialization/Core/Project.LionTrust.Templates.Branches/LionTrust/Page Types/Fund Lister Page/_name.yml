@@ -1,0 +1,54 @@
+﻿---
+ID: "3ec70ea0-2274-43fb-ae73-788b1f6b8099"
+Parent: "07b7baa4-4f71-42c4-8927-650585f56cdc"
+Template: "c4945161-f2d7-4a90-a512-cbfb5669b951"
+Path: /sitecore/templates/Branches/Project/LionTrust/Page Types/Fund Lister Page/$name
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{EF1CDEC2-A2AD-4D7D-A715-83F5CC7350D8}"
+              p:before="*"
+              s:ds="{87280BF3-CE68-4BD4-814F-CC1DCF70B8C3}"
+              s:id="{7166AE9D-EFBD-48B3-B38F-AFD4CAAB5278}"
+              s:ph="/header/secondary-navigation" />
+            <r
+              uid="{62902721-B5F8-4B3B-B0C9-99E938B15326}"
+              p:after="r[@uid='{EF1CDEC2-A2AD-4D7D-A715-83F5CC7350D8}']"
+              s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+              s:ph="/header/navigation" />
+            <r
+              uid="{549DC13B-0873-43BE-B84A-E72E9161BF24}"
+              p:after="r[@uid='{62902721-B5F8-4B3B-B0C9-99E938B15326}']"
+              s:ds="{071A382A-99AD-4E44-9D87-AB54A0E51D8B}"
+              s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
+              s:ph="header" />
+            <r
+              uid="{16A52667-5CA0-4900-9B85-298CB2B82289}"
+              p:after="r[@uid='{30A0A4C8-974F-4822-9DCB-DE14881E0400}']"
+              s:ds="{1F050A9C-0656-4E99-91E5-146F365F69DF}"
+              s:id="{A1BF8122-5117-4D37-BB1F-AE092FAF8142}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{8CA8060E-AF94-4C82-B3BA-A023F6711309}"
+              p:after="*[1=2]"
+              s:ds="{8F7AA55E-2569-4646-A28E-7FA325F64C31}"
+              s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+              s:ph="main" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210628T084432Z
