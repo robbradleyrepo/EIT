@@ -58,6 +58,7 @@
             public const string Subtitle_FieldID = "{F0C2DFC2-0F2E-4082-A532-87B9AD9B9B9E}";
             public const string Image_FieldID = "{146CBBD2-0E88-4FD6-B4B4-49B462266089}";
             public const string Text_FieldID = "{694C3F81-60C0-4719-AA8C-5A4264623FEB}";
+            public const string Date_FieldID = "{25BED78C-4957-4165-998A-CA1B52F67497}";
         }
 
         public static class DocumentLister

@@ -1,8 +1,9 @@
 ﻿namespace LionTrust.Feature.Listings.Models
 {
+    using System;
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
-
+    
     [SitecoreType(TemplateId = Constants.GenericListingModuleItem.TemplateId, EnforceTemplate = SitecoreEnforceTemplate.Template)]
     public interface IGenericListingModuleItem : IListingsGlassBase
     {
@@ -17,5 +18,8 @@
 
         [SitecoreField(Constants.GenericListingModuleItem.Text_FieldID)]
         string Text { get; set; }
+
+        [SitecoreField(Constants.GenericListingModuleItem.Date_FieldID)]
+        DateTime Date { get; set; }
     }
 }

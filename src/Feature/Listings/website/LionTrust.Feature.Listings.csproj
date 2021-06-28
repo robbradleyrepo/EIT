@@ -83,6 +83,11 @@
     <Content Include="App_Config\Include\Feature\Feature.Listings.config" />
     <Content Include="App_Config\Include\Feature\Feature.Listings.Routes.config" />
     <Content Include="Views\Listings\GenericListingModule.cshtml" />
+    <Content Include="Views\Listings\ModuleItems\_PodcastItem.cshtml" />
+    <Content Include="Views\Listings\ModuleItems\_ServiceItem.cshtml" />
+    <Content Include="Views\Listings\ModuleItems\_DownloadWithTitleItem.cshtml" />
+    <Content Include="Views\Listings\ModuleItems\_DownloadWithTitleAndDateItem.cshtml" />
+    <Content Include="Views\Listings\ModuleItems\_TitleDescriptionDateItem.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
