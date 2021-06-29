@@ -77,9 +77,9 @@
                                                         {
                                                             @Html.Glass().Editable(item, i => i.Description)
                                                         }
-                                                        else if (!string.IsNullOrEmpty(item.Description) && item.Description.Count() > 460)
+                                                        else if (!string.IsNullOrEmpty(item.Description) && item.Description.Count() > 420)
                                                         {
-                                                            @item.Description.Substring(0, 460) @:...
+                                                            @item.Description.Substring(0, 420) @:...
                                                         }
                                                         else
                                                         {
