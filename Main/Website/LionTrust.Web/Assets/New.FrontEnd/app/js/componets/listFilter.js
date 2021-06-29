@@ -42,11 +42,11 @@ export default () => {
       toggleSelect(item, facet) {
         if (!this.params[facet.name]) this.params[facet.name] = [];
         const existElem = this.params[facet.name].findIndex((el) => {
-          return el === item.Identifier;
+          return el === item.identifier;
         });
 
         if (existElem !== -1) this.params[facet.name].splice(existElem, 1);
-        else this.params[facet.name].push(item.Identifier);
+        else this.params[facet.name].push(item.identifier);
       },
 
       getQuerySring() {
