@@ -66,12 +66,12 @@
             });
         }
 
-        public FundFacetsResponse GetFundFilterFacets(Guid fundFilterFacetConfigId)
+        public FacetsResponse GetFundFilterFacets(Guid fundFilterFacetConfigId)
         {
             var filterFacetConfigItem = _contentRepository.GetItem<IFundListingFacetsConfig>(new GetItemByIdOptions(fundFilterFacetConfigId));
 
-            var listingFundFacetsResponse = new FundFacetsResponse();
-            if(filterFacetConfigItem == null 
+            var listingFundFacetsResponse = new FacetsResponse();
+            if (filterFacetConfigItem == null
                     || filterFacetConfigItem.FundRegionsFolder == null
                     || filterFacetConfigItem.FundManagersFolder == null
                     || filterFacetConfigItem.FundTeamsFolder == null
@@ -80,12 +80,28 @@
                 return null;
             }
 
-            listingFundFacetsResponse.Facets = new FundFacets
+            listingFundFacetsResponse.Facets = new List<Facet>
             {
-                FundRegions = filterFacetConfigItem.FundRegionsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
-                FundManagers = filterFacetConfigItem.FundManagersFolder?.Children?.Where(x => x.IsFundManager)?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
-                FundTeams = filterFacetConfigItem.FundTeamsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
-                FundRanges = filterFacetConfigItem.FundTeamsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name })
+                new Facet
+                {
+                    Name = filterFacetConfigItem.FundRegionsLabel,
+                    Items = filterFacetConfigItem.FundRegionsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name })
+                },
+                new Facet
+                {
+                    Name = filterFacetConfigItem.FundManagersLabel,
+                    Items = filterFacetConfigItem.FundManagersFolder?.Children?.Where(x => x.IsFundManager)?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name })
+                },
+                new Facet
+                {
+                    Name = filterFacetConfigItem.FundTeamsLabel,
+                    Items = filterFacetConfigItem.FundTeamsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name })
+                },
+                new Facet
+                {
+                    Name = filterFacetConfigItem.FundRangesLabel,
+                    Items = filterFacetConfigItem.FundTeamsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name })
+                }
             };
 
             return listingFundFacetsResponse;

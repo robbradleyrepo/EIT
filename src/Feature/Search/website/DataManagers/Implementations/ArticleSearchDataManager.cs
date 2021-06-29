@@ -34,7 +34,7 @@
         private string GetArticleDate(DateTime indexedDate)
         {
             var label = string.Empty;
-            if(indexedDate.Date == DateTime.Today)
+            if (indexedDate.Date == DateTime.Today)
             {
                 label = Translate.Text("Today");
             }
@@ -74,7 +74,7 @@
             var filterFacetConfigItem = _contentRepository.GetItem<IArticleListingFacetsConfig>(new GetItemByIdOptions(articleFilterFacetConfigId));
 
             var listingArticleFacetsResponse = new ArticleFacetsResponse();
-            if(filterFacetConfigItem == null 
+            if (filterFacetConfigItem == null
                     || filterFacetConfigItem.FundsFolder == null
                     || filterFacetConfigItem.FundCategoriesFolder == null
                     || filterFacetConfigItem.FundManagersFolder == null
@@ -83,12 +83,29 @@
                 return null;
             }
 
-            listingArticleFacetsResponse.Facets = new ArticleFacets {
-                                                    Funds = filterFacetConfigItem.FundsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
-                                                    FundCategories = filterFacetConfigItem.FundCategoriesFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
-                                                    FundManagers = filterFacetConfigItem.FundManagersFolder?.Children?.Where(x => x.IsFundManager)?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
-                                                    FundTeams = filterFacetConfigItem.FundTeamsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name })
-                                                  };
+            listingArticleFacetsResponse.Facets = new List<Facet>
+            {
+                new Facet
+                {
+                    Name = filterFacetConfigItem.FundsLabel,
+                    Items = filterFacetConfigItem.FundsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
+                },
+                new Facet
+                {
+                    Name = filterFacetConfigItem.FundCategoriesLabel,
+                    Items = filterFacetConfigItem.FundCategoriesFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
+                },
+                new Facet
+                {
+                    Name = filterFacetConfigItem.FundManagersLabel,
+                    Items = filterFacetConfigItem.FundManagersFolder?.Children?.Where(x => x.IsFundManager)?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
+                },
+                new Facet
+                {
+                    Name = filterFacetConfigItem.FundTeamsLabel,
+                    Items = filterFacetConfigItem.FundTeamsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name })
+                }
+            };
 
             return listingArticleFacetsResponse;
         }
@@ -130,7 +147,7 @@
             }
 
             var articleSearchResponse = new SearchResponse<ITaxonomyContentResult>();
-            if(contentSearchResults.TotalResults > 0)
+            if (contentSearchResults.TotalResults > 0)
             {
                 articleSearchResponse.SearchResults = this.MapArticleResultHits(contentSearchResults.SearchResults);
                 articleSearchResponse.StatusMessage = "Success";

@@ -1,0 +1,27 @@
+﻿---
+ID: "ad4a1911-b416-4acb-87ce-df537ef09e70"
+Parent: "3c052f27-3ef6-4add-9126-91bc25ce514d"
+Template: "196ea78f-08c6-456c-95af-027f662537e1"
+Path: "/sitecore/templates/Branches/Project/LionTrust/Page Types/Insight Page/$name/_Local/BC018 - Article Lister"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0eba5571-b102-467c-993a-3025a1176831"
+      Hint: ArticleLister_SearchPlaceholderLabel
+      Value: Search
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210622T114317Z
+    - ID: "6af33400-0709-4517-b1f7-8d01c5d66c06"
+      Hint: ArticleLister_FilterLabel
+      Value: filter
+    - ID: "745b2803-4617-45db-9c43-e6d910e50ec3"
+      Hint: ArticleLister_SortLabel
+      Value: sort
+    - ID: "b3ff2403-3560-4dc1-b9b1-f9d93d85775d"
+      Hint: ArticleLister_DateIcon
+      Value: |
+        <image mediaid="{5DCBA912-D9EB-4560-B245-BC35FBE7A551}" />

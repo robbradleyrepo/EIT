@@ -3,6 +3,7 @@
     using System.Collections.Generic;
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
+    using LionTrust.Foundation.Onboarding.Models;
 
     public interface IHome : INavigationGlassBase
     {
@@ -32,5 +33,10 @@
         
         [SitecoreField(Constants.NavigationRoot.MenuItems_FieldID, SitecoreFieldType.Treelist, "Menu")]
         IEnumerable<INavigablePage> MenuItems { get; set; }
+
+        [SitecoreField(Constants.NavigationRoot.OnboardingConfiguation_FieldId)]
+        IOnboardingConfiguration OnboardingConfiguration { get; set; }
+
+        string OnboardingRoleName { get; set; }
     }
 }

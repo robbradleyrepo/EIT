@@ -44,25 +44,25 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNet.Mvc">
-      <Version>5.2.4</Version>
+    <PackageReference Include="Glass.Mapper.Sc.92">
+      <Version>5.8.177</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNet.Razor">
+      <Version>3.2.7</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNet.WebPages">
+      <Version>3.2.7</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="1.0.5" />
     <PackageReference Include="Microsoft.Net.Compilers" Version="2.1.0" />
-    <PackageReference Include="Sitecore.Analytics">
-      <Version>9.2.0</Version>
-    </PackageReference>
-    <PackageReference Include="Sitecore.ContentSearch">
-      <Version>9.2.0</Version>
+    <PackageReference Include="Microsoft.Web.Infrastructure">
+      <Version>1.0.0</Version>
     </PackageReference>
     <PackageReference Include="Sitecore.Kernel" Version="9.2.0" />
-    <PackageReference Include="Sitecore.Mvc">
-      <Version>9.2.0</Version>
-    </PackageReference>
+    <PackageReference Include="Unicorn.Core" Version="4.0.8" />
     <PackageReference Include="Sitecore.Mvc.Analytics">
       <Version>9.2.0</Version>
     </PackageReference>
-    <PackageReference Include="Unicorn.Core" Version="4.0.8" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
@@ -70,67 +70,78 @@
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Unicorn\z.Feature.Search.config" />
     <Content Include="App_Config\Include\Feature\Feature.Search.config" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Search\ArticleLister.cshtml" />
+    <Content Include="Views\Search\FundLister.cshtml" />
+    <Content Include="Views\Search\SearchOverlay.cshtml" />
+    <Content Include="Views\Search\_Pagination.cshtml" />
+    <Content Include="App_Config\Include\Unicorn\z.Feature.Search.config" />
     <Content Include="App_Config\Include\Feature\Feature.Search.RegisterContainer.config" />
     <Content Include="App_Config\Include\Feature\Feature.Search.Routes.config" />
     <Content Include="App_Config\Include\Feature\Feature.Search.Serialization.config" />
-    <Content Include="Views\Search\ArticleLister.cshtml" />
-    <Content Include="Views\Search\_Pagination.cshtml" />
-    <Content Include="Views\web.config" />
-    <Content Include="Views\Search\SearchOverlay.cshtml" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\SearchAnalyticsController.cs" />
     <Compile Include="Controllers\SearchAPIController.cs" />
-    <Compile Include="DataManagers\Implementations\FundSearchDataManager.cs" />
     <Compile Include="DataManagers\Implementations\ArticleSearchDataManager.cs" />
-    <Compile Include="DataManagers\Interfaces\IFundSearchDataManager.cs" />
+    <Compile Include="DataManagers\Implementations\FundSearchDataManager.cs" />
     <Compile Include="DataManagers\Interfaces\IArticleSearchDataManager.cs" />
+    <Compile Include="DataManagers\Interfaces\IFundSearchDataManager.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Models\API\FundResult.cs" />
     <Compile Include="Models\API\Facets\IFundSearchFacetsConfig.cs" />
-    <Compile Include="Models\API\FundFacets.cs" />
+    <Compile Include="Models\API\Facet.cs" />
     <Compile Include="Models\API\ArticleResult.cs" />
     <Compile Include="Models\API\Dates.cs" />
     <Compile Include="Models\API\FacetItem.cs" />
-    <Compile Include="Models\API\ArticleFacets.cs" />
     <Compile Include="Models\API\Facets\IArticleSearchFacetsConfig.cs" />
     <Compile Include="Models\API\Facets\IFacetFolder.cs" />
     <Compile Include="Models\API\Facets\IFundManagerFacetFolder.cs" />
     <Compile Include="Models\API\Facets\IFundManagerFacetOption.cs" />
-    <Compile Include="Models\API\Response\FundFacetsResponse.cs" />
+    <Compile Include="Models\API\Response\FacetsResponse.cs" />
     <Compile Include="Models\API\Response\ArticleFacetsResponse.cs" />
     <Compile Include="Models\API\Response\SearchResponse.cs" />
     <Compile Include="Models\IArticleLister.cs" />
-    <Compile Include="Models\ISearchGlassBase.cs" />
+    <Compile Include="Models\IFundLister.cs" />
     <Compile Include="Models\IPagination.cs" />
+    <Compile Include="Models\ISearchGlassBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ActionResults\JsonCamelCaseResult.cs" />
     <Compile Include="Routes\RegisterRoutes.cs" />
     <Compile Include="SearchOverlay\ISearchOverlay.cs" />
     <Compile Include="SearchOverlay\SearchOverlayController.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Foundation\Analytics\website\LionTrust.Foundation.Analytics.csproj">
+      <Project>{71010683-02eb-4e0d-b0e1-6643922799ee}</Project>
+      <Name>LionTrust.Foundation.Analytics</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Content\website\LionTrust.Foundation.Content.csproj">
-      <Project>{F8F55034-FA55-4D27-B115-0AB4EEB9A0A8}</Project>
+      <Project>{f8f55034-fa55-4d27-b115-0ab4eeb9a0a8}</Project>
       <Name>LionTrust.Foundation.Content</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Design\website\LionTrust.Foundation.Design.csproj">
+      <Project>{7F86DD63-BE79-4107-804A-514DCA76E01E}</Project>
+      <Name>LionTrust.Foundation.Design</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Indexing\website\LionTrust.Foundation.Indexing.csproj">
+      <Project>{acd53016-c45a-4a10-8b46-9a4a82a69d7b}</Project>
+      <Name>LionTrust.Foundation.Indexing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Legacy\website\LionTrust.Foundation.Legacy.csproj">
+      <Project>{43ee972b-2002-4719-a878-a66a99c42c40}</Project>
+      <Name>LionTrust.Foundation.Legacy</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\ORM\website\LionTrust.Foundation.ORM.csproj">
-      <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>
+      <Project>{5e91a7d9-8e93-44fd-857f-f9ce145b6022}</Project>
       <Name>LionTrust.Foundation.ORM</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Search\website\LionTrust.Foundation.Search.csproj">
-      <Project>{22686DC6-4E6C-4D98-84B7-C48042F5B8FC}</Project>
+      <Project>{22686dc6-4e6c-4d98-84b7-c48042f5b8fc}</Project>
       <Name>LionTrust.Foundation.Search</Name>
     </ProjectReference>
   </ItemGroup>

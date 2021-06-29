@@ -1,0 +1,32 @@
+﻿---
+ID: "d5fb95a1-77b7-4620-8dd0-0f594be27058"
+Parent: "2e7c79e4-06a4-4984-997d-d86bd20cdb53"
+Template: "196ea78f-08c6-456c-95af-027f662537e1"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/_Local/BC018 - Article Lister"
+DB: master
+BranchID: "be0adc6b-80fd-49b1-a699-baefacec4b70"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{AD4A1911-B416-4ACB-87CE-DF537EF09E70}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0eba5571-b102-467c-993a-3025a1176831"
+      Hint: ArticleLister_SearchPlaceholderLabel
+      Value: Search
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210625T110235Z
+    - ID: "6af33400-0709-4517-b1f7-8d01c5d66c06"
+      Hint: ArticleLister_FilterLabel
+      Value: filter
+    - ID: "745b2803-4617-45db-9c43-e6d910e50ec3"
+      Hint: ArticleLister_SortLabel
+      Value: sort
+    - ID: "b3ff2403-3560-4dc1-b9b1-f9d93d85775d"
+      Hint: ArticleLister_DateIcon
+      Value: |
+        <image mediaid="{5DCBA912-D9EB-4560-B245-BC35FBE7A551}" />

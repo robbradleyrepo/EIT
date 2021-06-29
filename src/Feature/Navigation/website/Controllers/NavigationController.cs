@@ -5,6 +5,7 @@
     using Glass.Mapper.Sc.Web.Mvc;
     using LionTrust.Feature.Navigation.Models;
     using LionTrust.Feature.Navigation.Repositories;
+    using LionTrust.Foundation.Navigation.Helpers;
     using Sitecore.Mvc.Controllers;
     using Sitecore.Mvc.Presentation;
 
@@ -38,6 +39,10 @@
             if (homeItem != null)
             {
                 homeModel = _mvcContext.SitecoreService.GetItem<IHome>(homeItem.ID.Guid);
+                if (homeModel.OnboardingConfiguration != null)
+                {
+                    homeModel.OnboardingRoleName = OnboardingHelper.ProfileRoleName(homeModel.OnboardingConfiguration);                        
+                }
             }
 
             return View("~/Views/Navigation/Footer.cshtml", homeModel);
