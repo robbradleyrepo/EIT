@@ -42,6 +42,7 @@
 
             var viewModel = new OnboardingViewModel(data.OnboardingConfiguration);
             viewModel.ShowOnboarding = true;
+            string countryName;
 
             if (viewModel.ChooseCountry == null
                 || viewModel.ChooseCountry.Regions == null
@@ -59,14 +60,24 @@
                 && _tracker.Interaction.HasGeoIpData
                 && !string.IsNullOrWhiteSpace(_tracker.Interaction.GeoData.Country))
             {
-                var countryName = _tracker.Interaction.GeoData.Country;
-                var iso = CultureInfo.GetCultures(CultureTypes.SpecificCultures)?
-                    .FirstOrDefault(x => x.EnglishName.Equals(countryName, System.StringComparison.InvariantCultureIgnoreCase)).TwoLetterISOLanguageName;
+                countryName = _tracker.Interaction.GeoData.Country;
 
-                if (string.IsNullOrWhiteSpace(iso))
+                var cultureList = CultureInfo.GetCultures(CultureTypes.SpecificCultures);
+                var iso = string.Empty;
+
+                if (cultureList != null)
+                {
+                    var regionInfoList = cultureList.Select(x => new RegionInfo(x.TextInfo.CultureName));
+                    if (regionInfoList != null)
+                    {
+                        iso = regionInfoList.FirstOrDefault(r => r.EnglishName.Equals(countryName, StringComparison.InvariantCultureIgnoreCase))?.TwoLetterISORegionName;
+                    }
+                }
+
+                if (!string.IsNullOrWhiteSpace(iso))
                 {
                     viewModel.ChooseCountry.CurrentCountryName = countryName;
-                    viewModel.ChooseCountry.CurrentCountryIso = countryName;
+                    viewModel.ChooseCountry.CurrentCountryIso = iso;
                     SetTab(Tabs.CountryGeoIp);
                 }
                 else
