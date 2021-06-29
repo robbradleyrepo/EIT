@@ -120,22 +120,15 @@ export default () => {
         $.get(
           `${host}/Facets`
         ).done((responce) => {
-          const {Facets, Dates} = responce;
-          const facets = [];
-          for (let i in Facets) {
-            const name = i.replace(/([a-z])([A-Z])/g, "$1 $2");
-            facets.push({
-              name,
-              data: Facets[i],
-            });
-          }
+          const {facets, dates} = responce;
           this.facets = facets;
-          if(Dates && Dates.Months.length)
-            for(let i in Dates.Months) {
+
+          if(dates && dates.months)
+            for(let i in dates.months) {
               this.months.push(months[i])
             }
-          if(Dates && Dates.Years.length)
-            this.years = Dates.Years;
+          if(dates && dates.years)
+            this.years = dates.years;
 
         }).fail(e => {
           console.error(e);
@@ -149,10 +142,9 @@ export default () => {
           host + "/Search?" +
             this.getQuerySring()
         ).done((responce) => {
-          console.log('responce',responce);
-          const { SearchResults, TotalResults } = responce;
-          this.searchData = SearchResults;
-          this.amountResults = TotalResults;
+          const { searchResults, totalResults } = responce;
+          this.searchData = searchResults;
+          this.amountResults = totalResults;
           this.loading = false;          
         })
         .fail(e => {
