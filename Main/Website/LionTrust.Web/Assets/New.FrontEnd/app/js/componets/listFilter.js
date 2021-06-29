@@ -1,7 +1,9 @@
 import Vue from "vue/dist/vue.common.prod";
 import { pagination } from "./listFilter/mixins/pagination";
 export default () => {
-  let host = document.getElementById('lister-app').dataset.host;
+  const rootDom = document.getElementById('lister-app')
+  let host = rootDom.dataset.host;
+  let literatureId = rootDom.dataset.literatureId;
   if (window.location.hostname == "localhost" || window.location.hostname === "127.0.0.1") 
     host = "https://cm-liontrust-it.sagittarius.agency/" + host;
    else 
@@ -42,11 +44,11 @@ export default () => {
       toggleSelect(item, facet) {
         if (!this.params[facet.name]) this.params[facet.name] = [];
         const existElem = this.params[facet.name].findIndex((el) => {
-          return el === item.Identifier;
+          return el === item.identifier;
         });
 
         if (existElem !== -1) this.params[facet.name].splice(existElem, 1);
-        else this.params[facet.name].push(item.Identifier);
+        else this.params[facet.name].push(item.identifier);
       },
 
       getQuerySring() {
@@ -72,7 +74,7 @@ export default () => {
       },
 
       applyFilters() {
-        // this.pushStateLink();        
+        this.pushStateLink();
         this.mobileFilter = false;
         this.getSearchRequest();
       },
@@ -120,22 +122,16 @@ export default () => {
         $.get(
           `${host}/Facets`
         ).done((responce) => {
-          const {Facets, Dates} = responce;
-          const facets = [];
-          for (let i in Facets) {
-            const name = i.replace(/([a-z])([A-Z])/g, "$1 $2");
-            facets.push({
-              name,
-              data: Facets[i],
-            });
-          }
+          const {facets, dates} = responce;
+          console.log('facets',facets);
           this.facets = facets;
-          if(Dates && Dates.Months.length)
-            for(let i in Dates.Months) {
+
+          if(dates && dates.months)
+            for(let i in dates.months) {
               this.months.push(months[i])
             }
-          if(Dates && Dates.Years.length)
-            this.years = Dates.Years;
+          if(dates && dates.years)
+            this.years = dates.years;
 
         }).fail(e => {
           console.error(e);
@@ -149,15 +145,26 @@ export default () => {
           host + "/Search?" +
             this.getQuerySring()
         ).done((responce) => {
-          const { SearchResults, TotalResults } = responce;
-          this.searchData = SearchResults;
-          this.amountResults = TotalResults;
+          const { searchResults, totalResults } = responce;
+          console.log('searchResults',searchResults);
+          this.searchData = searchResults;
+          this.amountResults = totalResults;
           this.loading = false;          
         })
         .fail(e => {
           console.error(e);
           this.loading = false
-        })
+        })        
+      },
+
+      showLiteratureOverlay(fundId, id) {
+        console.log('fundId',fundId, id);
+        $.ajax({
+          url: `${host}/api/sitecore/FundLiterature/GetOverlayHtml?fundId=${fundId}&literatureId=${literatureId}`
+         }).done(function(data) {
+          $(".onboarding-overlay__scroller.terms-text").html(data);
+          $('.onboarding-overlay__scroller').toggle();
+        });
       }
     },
     watch: {
