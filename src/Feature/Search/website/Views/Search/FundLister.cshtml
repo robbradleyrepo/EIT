@@ -1,5 +1,5 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
-@using Sitecore.Configuration 
+@using Sitecore.Configuration
 @model LionTrust.Feature.Search.Models.IFundLister
 
 @if (Model != null)
@@ -61,10 +61,10 @@
                                             <i class="icon-chevron-left"></i>
                                             Fund
                                         </div>
-                                        <option-field inline-template v-for="(item, i) in facet.data" :for="item.Name">
+                                        <option-field inline-template v-for="(item, i) in facet.items" :for="item.name">
                                             <label class="option-checkbox">
-                                                <input :id="item.Name" class="option-checkbox__input" type="checkbox" v-model="checked" @@change="toggleSelect(item, facet)">
-                                                <span class="option-checkbox__text">{{item.Name}}</span>
+                                                <input :id="item.name" class="option-checkbox__input" type="checkbox" v-model="checked" @@change="toggleSelect(item, facet)">
+                                                <span class="option-checkbox__text">{{item.name}}</span>
                                                 <span class="option-checkbox__icon"></span>
                                             </label>
                                         </option-field>
@@ -127,34 +127,39 @@
             <a href="#" class="link-styles d-block">Interactive fund centre <i class="icon-tab"></i></a>
         </div>
         <section class="container">
+            <div class="text-center my-5" v-if="loading">
+                <div class="spinner-border text-gold" role="status"></div>
+            </div>
             <div class="row" v-if="grid">
-                <article-item inline-template v-for="(fund, i) in searchData" :key="i">
+                <article-item inline-template v-for="(fund, i) in searchData" :key="i + fund.fundName">
                     <div class="col-md-6 col-lg-4 col-xl-3 d-flex">
                         <div class="fund-card fund-card_grid">
                             <div class="fund-card__head">
-                                <img :src="fund.FundCardImageUrl" :alt="fund.FundCardHeading" />
+                                <img :src="fund.fundCardImageUrl" :alt="fund.fundCardHeading" />
                             </div>
                             <div class="fund-card__content">
                                 <div class="fund-card__content-top">
-                                    <span class="fund-card__subtitle">{{fund.FundCategory}}</span>
-                                    <span class="fund-card__title"> {{fund.FundCardHeading}}</span>
+                                    <span class="fund-card__subtitle">{{fund.fundCardHeading}}</span>
+                                    <span class="fund-card__title"> {{fund.fundName}}</span>
                                     <div class="fund-card__text">
                                         <div class="fund-card__text-top">
                                             <p>
-                                                {{fund.FundCardDescription}}
+                                                {{fund.fundCardDescription}}
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="fund-card__text-bottom">
                                     <div class="fund-card__btns-block">
-                                        <button class="fund-card__btn">@Html.Glass().Editable(Model, m => m.FactsheetLabel) <i class="icon-file"></i></button>
-                                        <button class="fund-card__btn">
+                                        <a :href="fund.fundFactSheet" class="fund-card__btn">
+                                            @Html.Glass().Editable(Model, m => m.FactsheetLabel) <i class="icon-file"></i>
+                                        </a>
+                                        <button class="fund-card__btn" @@click="showLiteratureOverlay">
                                             @Html.Glass().Editable(Model, m => m.AllDocumentsLabel) <i class="icon-folder"></i>
                                         </button>
                                     </div>
-                                    <a :href="fund.Url" class="link-styles">
-                                        View this fund
+                                    <a :href="fund.url" class="link-styles">
+                                        {{fund.ctaText ? fund.ctaText : 'View this fund'}}
                                         <i class="icon-arrow-right"></i>
                                     </a>
                                 </div>
@@ -163,31 +168,30 @@
                     </div>
                 </article-item>
             </div>
-            <article-item v-else inline-template v-for="(fund, i) in searchData" :key="i">
+            <article-item v-else inline-template v-for="(fund, i) in searchData" :key="i + fund.fundName">
                 <div class="fund-item-list">
                     <div class="row align-items-center">
                         <div class="col-xl-4">
-                            <span class="fund-item-list__title">{{fund.FundCardHeading}}</span>
-
+                            <span class="fund-item-list__title">{{fund.fundName}}</span>
                         </div>
                         <div class="col-xl-2">
                             <div class="fund-item-list__badge">
                                 <span class="badge-secondary">
-                                    {{fund.FundCategory}}
+                                    {{fund.fundCardHeading}}
                                 </span>
                             </div>
                         </div>
                         <div class="col-lg-6 col-xl-4">
                             <div class="fund-item-list__links">
                                 @*<button href="#" class="link-gray">@Html.Glass().Editable(Model, m => m.FollowLabel) <i class="icon-follow"></i></button>*@
-                                <a href="#" target="_blank" class="link-gray">@Html.Glass().Editable(Model, m => m.FactsheetLabel) <i class="icon-file"></i></a>
-                                <button class="link-gray view-documents">@Html.Glass().Editable(Model, m => m.AllDocumentsLabel) <i class="icon-folder"></i></button>
+                                <a :href="fund.fundFactSheet" target="_blank" class="link-gray">@Html.Glass().Editable(Model, m => m.FactsheetLabel) <i class="icon-file"></i></a>
+                                <button class="link-gray view-documents" @@click="showLiteratureOverlay">@Html.Glass().Editable(Model, m => m.AllDocumentsLabel) <i class="icon-folder"></i></button>
                             </div>
                         </div>
                         <div class="col-lg-6 col-xl-2">
                             <div class="fund-item-list__right-btn">
-                                <a :href="fund.Url" class="btn btn-primary-forward">
-                                    View this fund <i class="icon-arrow-right animate-arrow"></i>
+                                <a :href="fund.url" class="btn btn-primary-forward">
+                                    {{fund.ctaText ? fund.ctaText : 'View this fund'}} <i class="icon-arrow-right animate-arrow"></i>
                                 </a>
                             </div>
                         </div>
