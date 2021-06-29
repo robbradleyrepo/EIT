@@ -95,22 +95,22 @@
         <div class="row">
             <div class="col-6 col-lg-2 offset-6 col-md-4 offset-md-8 offset-lg-10 margin-sort-btn d-lg-none">
                 <div class="relative">
-                    <button class="btn btn-clean d-block ml-auto button-sort">
+                    <button class="btn btn-clean d-block ml-auto button-sort" @click.stop="showSort">
                         sort <i class="icon-sort"></i>
                     </button>
-                    <div class="sort-dropdown">
+                    <div class="sort-dropdown" :class="sortModal ? 'active' : ''">
                         <div class="text-right">
                             <span class="btn btn-clean">
                                 sort <i class="icon-sort"></i>
                             </span>
                         </div>
                         <label for="newest" class="option-checkbox">
-                            <input id="newest" class="option-checkbox__input" type="radio" name="sort" checked>
+                            <input id="newest" v-model="sortOrder" value="ASC" class="option-checkbox__input" type="radio" name="sort" checked>
                             <span class="option-checkbox__text">Date newest first</span>
                             <span class="option-checkbox__icon"></span>
                         </label>
                         <label for="oldest" class="option-checkbox">
-                            <input id="oldest" class="option-checkbox__input" type="radio" name="sort">
+                            <input id="oldest" v-model="sortOrder" value="DESC" class="option-checkbox__input" type="radio" name="sort">
                             <span class="option-checkbox__text">Date oldest first</span>
                             <span class="option-checkbox__icon"></span>
                         </label>
@@ -122,8 +122,8 @@
 </div>
 
 <div class="container d-lg-none">
-    <div class="d-flex justify-content-between margin-mob-fliter-btn">
-        <btn id="show-article-fliter" class="btn btn-clean">
+    <div class="d-flex justify-content-between margin-mob-fliter-btn w-100" :class="!mobileFilter ? 'relative' : ''">
+        <btn id="show-article-fliter"  class="btn btn-clean" @click="toggleMobileFilter">
             <i class="icon-filter"></i> filter
         </btn>        
     </div>
