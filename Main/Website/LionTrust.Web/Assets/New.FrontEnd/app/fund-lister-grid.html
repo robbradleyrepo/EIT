@@ -18,7 +18,7 @@
     </header>
 
     <main>
-        <div class="lister-app" id="lister-app" data-host="FundSearchApi">
+        <div class="lister-app" id="lister-app" data-host="FundSearchApi" data-literatureId="2A60AA49-72DB-4D51-A5FB-E4F25B1B9E19">
             <!--#include virtual="/components/BC005-Fund-Filters.html" -->
             <section class="container">
                 <div class="text-center my-5" v-if="loading">
@@ -46,7 +46,7 @@
                                     <div class="fund-card__text-bottom">
                                         <div class="fund-card__btns-block">
                                             <a :href="fund.fundFactSheet" class="fund-card__btn">Factsheet <i class="icon-file"></i></a>
-                                            <button class="fund-card__btn" @click="showLiteratureOverlay">All documents <i
+                                            <button class="fund-card__btn" @click="showLiteratureOverlay(fund.fundId)">All documents <i
                                                     class="icon-folder"></i></button>
                                         </div>
                                         <a :href="fund.url" class="link-styles">

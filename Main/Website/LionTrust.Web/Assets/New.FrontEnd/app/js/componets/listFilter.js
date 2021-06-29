@@ -1,7 +1,9 @@
 import Vue from "vue/dist/vue.common.prod";
 import { pagination } from "./listFilter/mixins/pagination";
 export default () => {
-  let host = document.getElementById('lister-app').dataset.host;
+  const rootDom = document.getElementById('lister-app')
+  let host = rootDom.dataset.host;
+  let literatureId = rootDom.dataset.literatureId;
   if (window.location.hostname == "localhost" || window.location.hostname === "127.0.0.1") 
     host = "https://cm-liontrust-it.sagittarius.agency/" + host;
    else 
@@ -121,6 +123,7 @@ export default () => {
           `${host}/Facets`
         ).done((responce) => {
           const {facets, dates} = responce;
+          console.log('facets',facets);
           this.facets = facets;
 
           if(dates && dates.months)
@@ -143,6 +146,7 @@ export default () => {
             this.getQuerySring()
         ).done((responce) => {
           const { searchResults, totalResults } = responce;
+          console.log('searchResults',searchResults);
           this.searchData = searchResults;
           this.amountResults = totalResults;
           this.loading = false;          
@@ -153,9 +157,10 @@ export default () => {
         })        
       },
 
-      showLiteratureOverlay(fund) {
+      showLiteratureOverlay(fundId, id) {
+        console.log('fundId',fundId, id);
         $.ajax({
-          url: `${host}/GetOverlayHtml?fundId=`
+          url: `${host}/api/sitecore/FundLiterature/GetOverlayHtml?fundId=${fundId}&literatureId=${literatureId}`
          }).done(function(data) {
           $(".onboarding-overlay__scroller.terms-text").html(data);
           $('.onboarding-overlay__scroller').toggle();
