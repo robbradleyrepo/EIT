@@ -8,11 +8,11 @@
         [SitecoreField(Constants.DocumentLister.SortText_FieldID)]
         string SortText { get; set; }
 
-        [SitecoreField(Constants.DocumentLister.DateNewestText_FieldID)]
-        string DateNewestText { get; set; }
+        [SitecoreField(Constants.DocumentLister.AZText_FieldID)]
+        string AZText { get; set; }
 
-        [SitecoreField(Constants.DocumentLister.DateOldestText_FieldID)]
-        string DateOldestText { get; set; }
+        [SitecoreField(Constants.DocumentLister.ZAText_FieldID)]
+        string ZAText { get; set; }
 
         [SitecoreField(Constants.DocumentLister.NextText_FieldID)]
         string NextText { get; set; }

@@ -82,7 +82,9 @@
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\AccordionController.cs" />
+    <Compile Include="Controllers\DocumentsController.cs" />
     <Compile Include="Models\AccordionViewModel.cs" />
+    <Compile Include="Models\DocumentModel.cs" />
     <Compile Include="Models\IAccordionModel.cs" />
     <Compile Include="Models\IAccordionRenderingParameters.cs" />
     <Compile Include="Models\IAccordionRowModel.cs" />
