@@ -1,8 +1,8 @@
 ﻿---
-ID: "208d44b3-8ffc-49ea-8d03-68fd6289c199"
-Parent: "bd28bf6a-78ff-42a9-a7a1-e6bb67ceacef"
+ID: "d3733e07-651d-4602-a5e6-9ea7953199bc"
+Parent: "9d037d6a-a198-4d2a-8101-7c85c0500b00"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Foundation/Legacy/_LegacyDocumentFolder/Data/DownloadText
+Path: /sitecore/templates/Feature/Listings/_DocumentLister/Data/DocumentLister_DateOldest
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
@@ -10,20 +10,16 @@ SharedFields:
   Value: "Single-Line Text"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 200
+  Value: 146
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Download text
+    Value: Date Oldest Text
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20161101T135853
-    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
-      Hint: __Created by
-      Value: |
-        sitecore\Codehouse
+      Value: 20210629T142259Z

@@ -76,6 +76,7 @@
     <Content Include="Views\Listings\EmptyAccordion.cshtml" />
     <Content Include="Views\Listings\HorizontalScroll.cshtml" />
     <Content Include="Views\Listings\_ScrollerCard.cshtml" />
+    <Content Include="Views\Listings\DocumentsList.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +86,7 @@
     <Compile Include="Models\IAccordionModel.cs" />
     <Compile Include="Models\IAccordionRenderingParameters.cs" />
     <Compile Include="Models\IAccordionRowModel.cs" />
+    <Compile Include="Models\IDocumentLister.cs" />
     <Compile Include="Models\IHorizontalScroll.cs" />
     <Compile Include="Models\IListingsGlassBase.cs" />
     <Compile Include="Models\IScrollerCard.cs" />
@@ -103,6 +105,10 @@
     <ProjectReference Include="..\..\..\Foundation\Design\website\LionTrust.Foundation.Design.csproj">
       <Project>{7F86DD63-BE79-4107-804A-514DCA76E01E}</Project>
       <Name>LionTrust.Foundation.Design</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Legacy\website\LionTrust.Foundation.Legacy.csproj">
+      <Project>{43ee972b-2002-4719-a878-a66a99c42c40}</Project>
+      <Name>LionTrust.Foundation.Legacy</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\ORM\website\LionTrust.Foundation.ORM.csproj">
       <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>
