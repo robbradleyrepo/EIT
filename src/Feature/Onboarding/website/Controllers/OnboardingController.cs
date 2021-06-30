@@ -42,7 +42,7 @@
 
             var viewModel = new OnboardingViewModel(data.OnboardingConfiguration);
             viewModel.ShowOnboarding = true;
-            string countryName;
+            string isoCode;
 
             if (viewModel.ChooseCountry == null
                 || viewModel.ChooseCountry.Regions == null
@@ -60,24 +60,24 @@
                 && _tracker.Interaction.HasGeoIpData
                 && !string.IsNullOrWhiteSpace(_tracker.Interaction.GeoData.Country))
             {
-                countryName = _tracker.Interaction.GeoData.Country;
+                isoCode = _tracker.Interaction.GeoData.Country;
 
                 var cultureList = CultureInfo.GetCultures(CultureTypes.SpecificCultures);
-                var iso = string.Empty;
+                var countryName = string.Empty;
 
                 if (cultureList != null)
                 {
                     var regionInfoList = cultureList.Select(x => new RegionInfo(x.TextInfo.CultureName));
                     if (regionInfoList != null)
                     {
-                        iso = regionInfoList.FirstOrDefault(r => r.EnglishName.Equals(countryName, StringComparison.InvariantCultureIgnoreCase))?.TwoLetterISORegionName;
+                        countryName = regionInfoList.FirstOrDefault(r => r.TwoLetterISORegionName.Equals(isoCode, StringComparison.InvariantCultureIgnoreCase))?.EnglishName;
                     }
                 }
 
-                if (!string.IsNullOrWhiteSpace(iso))
+                if (!string.IsNullOrWhiteSpace(countryName))
                 {
                     viewModel.ChooseCountry.CurrentCountryName = countryName;
-                    viewModel.ChooseCountry.CurrentCountryIso = iso;
+                    viewModel.ChooseCountry.CurrentCountryIso = isoCode;
                     SetTab(Tabs.CountryGeoIp);
                 }
                 else
