@@ -13,10 +13,9 @@
     &__title
         display: inline-block
         margin-right: 16px
-        font-weight: 500
+        @include p-1-medium-18
         @include breakpoint(desktop-large, up)
             margin-right: 32px
-            font-size: 18px
     &__btn
         margin-right: 16px
         @extend .btn
@@ -29,7 +28,7 @@
         @include breakpoint(desktop, up)
             display: inline-block
         @include breakpoint(desktop-large, up)
-            font-size: 18px
+            @include font-size(18px)
             height: 48px
             line-height: 45px
             margin-right: 32px

@@ -12,13 +12,12 @@
     &__head
         white-space: nowrap
         margin-bottom: 5px
-        font-size: 18px
+        @include font-size(18px)
+        line-height: 2.66em
         font-weight: 500
-        line-height: 48px
         text-align: center
         @include breakpoint(desktop, up)
             margin-bottom: 0
-            font-size: 18px
             text-align-last: left
 
     &__btn
@@ -33,7 +32,7 @@
         text-transform: none
         @include breakpoint(desktop, up)
             height: 48px
-            font-size: 18px
+            @include font-size(18px)
             font-weight: 300
             letter-spacing: 0
             text-transform: none

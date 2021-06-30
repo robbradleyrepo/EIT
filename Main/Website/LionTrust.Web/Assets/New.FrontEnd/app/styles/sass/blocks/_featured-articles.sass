@@ -2,8 +2,8 @@
     background: #F7F9FC
     padding-top: 18px
     padding-bottom: 10px
-    font-size: 18px
-    line-height: 26px
+    @include font-size(18px)
+    line-height: 1.44em
     counter-reset: section
     @include breakpoint(desktop, up)
         padding-top: 30px
@@ -19,9 +19,8 @@
         margin-bottom: 20px
         position: relative
         padding-left: 52px
+        @include p-1-normal-20
         @include breakpoint(desktop, up)
-            font-size: 20px
-            line-height: 30px
             padding-left: 85px
             margin-bottom: 44px
         @include breakpoint(desktop-large, up)
@@ -30,7 +29,7 @@
         color: $black
         &:before
             position: absolute
-            font-size: 60px
+            font-size: 3.75em
             font-weight: bold
             color: $primary
             counter-increment: section
@@ -39,7 +38,7 @@
             left: 0
             top: 13px
             @include breakpoint(desktop, up)
-                font-size: 80px
+                font-size: 4em
                 top: 20px
         &:hover
             color: $black

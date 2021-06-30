@@ -7,66 +7,130 @@ h1, .h1
     font-size: 42px
     line-height: 48px
     @include breakpoint(desktop, up)
-        font-size: 62px
-        line-height: 66px
+        @include font-size(52px)
+        line-height: 1.115em
+    @include breakpoint(desktop-large, up)
+        @include font-size(62px)
+        line-height: 1.064em
 
 h2, .h2
     font-size: 32px
     line-height: 38px
     @include breakpoint(desktop, up)
-        font-size: 52px
-        line-height: 58px
+        @include font-size(42px)
+        line-height: 1.142em
+    @include breakpoint(desktop-large, up)
+        @include font-size(52px)
+        line-height: 1.115em
 
 h3, .h3
     font-size: 26px
     line-height: 32px
     @include breakpoint(desktop, up)
-        font-size: 42px
-        line-height: 48px
+        @include font-size(32px)
+        line-height: 1.1875em
+    @include breakpoint(desktop-large, up)
+        @include font-size(42px)
+        line-height: 1.142em
 
 h4, .h4
     font-size: 22px
     line-height: 32px
     @include breakpoint(desktop, up)
-        font-size: 32px
-        line-height: 38px
+        @include font-size(26px)
+        line-height: 1.23em
+    @include breakpoint(desktop-large, up)
+        @include font-size(32px)
+        line-height: 1.1875em
 
 h5, .h5
     font-size: 20px
     line-height: 26px
     @include breakpoint(desktop, up)
-        font-size: 26px
-        line-height: 32px
+        @include font-size(15px)
+        line-height: 1.33em
+    @include breakpoint(desktop-large, up)
+        @include font-size(26px)
+        line-height: 1.23em
 
 h6, .h6
     font-size: 12px
     line-height: 16px
     font-weight: bold
-    @include breakpoint(desktop, up)
-        font-size: 15px
-        line-height: 20px
+    @include breakpoint(desktop-large, up)
+        @include font-size(15px)
+        line-height: 1.33em
 
-@mixin p-1-medium
-    font-size: 18px
+@mixin p-1-medium-20
     font-weight: 500
-    line-height: 28px
+    @include font-size(16px)
+    line-height: 1.375em
     @include breakpoint(desktop, up)
-        font-size: 20px
-        line-height: 30px
+        @include font-size(18px)
+        line-height: 1.55em
+    @include breakpoint(desktop-large, up)
+        @include font-size(20px)
+        line-height: 1.5em
 
-@mixin p-1-book
-    font-size: 18px
-    font-weight: 500
-    line-height: 28px
+@mixin p-1-normal-20
+    font-weight: 400
+    @include font-size(16px)
+    line-height: 1.375em
     @include breakpoint(desktop, up)
-        font-size: 20px
-        line-height: 30px
+        @include font-size(18px)
+        line-height: 1.55em
+    @include breakpoint(desktop-large, up)
+        @include font-size(20px)
+        line-height: 1.5em
+
+@mixin p-1-book-20
+    font-weight: 300
+    @include font-size(16px)
+    line-height: 1.375em
+    @include breakpoint(desktop, up)
+        @include font-size(18px)
+        line-height: 1.55em
+    @include breakpoint(desktop-large, up)
+        @include font-size(20px)
+        line-height: 1.5em
+
+@mixin p-1-medium-18
+    font-weight: 500
+    @include font-size(14px)
+    line-height: 1.428em
+    @include breakpoint(desktop, up)
+        @include font-size(16px)
+        line-height: 1.375em
+    @include breakpoint(desktop-large, up)
+        @include font-size(18px)
+        line-height: 1.55em
+
+@mixin p-1-normal-18
+    font-weight: 400
+    @include font-size(14px)
+    line-height: 1.428em
+    @include breakpoint(desktop, up)
+        @include font-size(16px)
+        line-height: 1.375em
+    @include breakpoint(desktop-large, up)
+        @include font-size(18px)
+        line-height: 1.55em
+
+@mixin p-1-book-18
+    font-weight: 300
+    @include font-size(14px)
+    line-height: 1.428em
+    @include breakpoint(desktop, up)
+        @include font-size(16px)
+        line-height: 1.375em
+    @include breakpoint(desktop-large, up)
+        @include font-size(18px)
+        line-height: 1.55em
 
 .text-margin
     margin-bottom: 18px
-    @include breakpoint(desktop, up)
+    @include breakpoint(desktop-large, up)
         margin-bottom: 27px
-
 
 .font-300
     font-weight: 300
@@ -76,4 +140,3 @@ h6, .h6
 
 .font-500
     font-weight: 500
-    
