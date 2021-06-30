@@ -20,7 +20,7 @@
         [SitecoreField(Constants.DocumentLister.ViewPageText_FieldID)]
         string ViewPageText { get; set; }
 
-        [SitecoreField(Constants.DocumentLister.WatchVideoText_FieldID]
+        [SitecoreField(Constants.DocumentLister.WatchVideoText_FieldID)]
         string WatchVideoText { get; set; }
 
         [SitecoreField(Constants.DocumentLister.PreviousText_FieldID)]

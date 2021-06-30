@@ -4,7 +4,7 @@
 
     public class DocumentModel
     {
-        [JsonProperty("ritle")]
+        [JsonProperty("title")]
         public string Title { get; set; }
 
         [JsonProperty("documentLink")]

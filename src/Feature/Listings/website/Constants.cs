@@ -56,5 +56,10 @@
             public const string NextText_FieldID = "{EB373C6D-B8F8-4E56-B711-F574E2FAB67F}";
             public const string PreviousText_FieldID = "{EA027445-01E2-488B-A94C-A2FBF460972A}";
         }
+
+        public static class Settings
+        {
+            public const string DocumentApiRoute_SettingName = "Feature.Listings.DocumentsApiRoute";
+        }
     }
 }
