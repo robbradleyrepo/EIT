@@ -15,16 +15,39 @@
         @include p-1-normal-20
         p
             margin-bottom: 18px
+            font-weight: 400!important
             @include breakpoint(desktop, up)
                 margin-bottom: 27px
-    &__subhead
+        a
+            @extend .link-styles
+            position: relative
+            &::after
+                font-family: icomoon!important
+                content: "\e901"
+                position: absolute
+                top: 0px
+                right: -22px
+    &__subhead, h5, span, p
+        color: $black
         display: block
         font-weight: 500
         @include font-size(16px)
         line-height: 1.75em
         @include breakpoint(desktop-large, up)
             @include font-size(18px)
-        &_normal
+        &_normal, span, p
             font-weight: 400
     &__download
         margin-bottom: 27px
+        p
+            margin-bottom: 0
+        a
+            @extend .link-styles
+            position: relative
+            &::after
+                font-family: icomoon!important
+                content: "\e918"
+                position: absolute
+                top: 0px
+                right: -19px 
+                font-size: 15px

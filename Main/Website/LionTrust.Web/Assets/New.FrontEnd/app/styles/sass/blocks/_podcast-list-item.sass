@@ -21,3 +21,15 @@
         flex-direction: column
         a
             margin-bottom: 1rem
+    ul li a
+        @extend .link-styles
+        margin-bottom: 1rem
+        display: inline-block
+        position: relative
+        &::after
+            font-family: icomoon!important
+            content: "\e901"
+            position: absolute
+            top: 0px
+            right: -22px
+    
