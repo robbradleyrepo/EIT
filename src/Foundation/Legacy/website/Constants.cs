@@ -192,5 +192,11 @@ namespace LionTrust.Foundation.Legacy
             public const string TagName_FieldName = "LegacyLookupItem_TagName";
             public const string TagName_FieldId = "{9AF0C179-A4F0-4067-8416-34E584737680}";
         }
+
+        public static class ListingItemType
+        {
+            public const string TemplateId = "{D8D33736-F77C-47B5-AD00-C5230FB7E41C}";
+            public const string ListingItemTypeName_FieldId = "{443409D5-2DCA-42F7-9A3E-613F07988AD6}";
+        }
     }
 }

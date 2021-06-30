@@ -95,15 +95,24 @@
     <Compile Include="Controllers\AccordionController.cs" />
     <Compile Include="Controllers\DocumentsController.cs" />
     <Compile Include="Helpers\DocumentHelper.cs" />
+    <Compile Include="Controllers\GenericListingApiController.cs" />
+    <Compile Include="DataManagers\Implementations\GenericListingDataManager.cs" />
+    <Compile Include="DataManagers\Interfaces\IGenericListingDataManager.cs" />
     <Compile Include="Models\AccordionViewModel.cs" />
     <Compile Include="Models\Document.cs" />
     <Compile Include="Models\DocumentModel.cs" />
+    <Compile Include="Models\GenericListerFacetResponse.cs" />
+    <Compile Include="Models\GenericListingFacets.cs" />
+    <Compile Include="Models\GenericListingResponse.cs" />
     <Compile Include="Models\IAccordionModel.cs" />
     <Compile Include="Models\IAccordionRenderingParameters.cs" />
     <Compile Include="Models\IAccordionRowModel.cs" />
+    <Compile Include="Models\IGenericListingFacetsConfig.cs" />
+    <Compile Include="Models\IGenericListingItemTypeFolder.cs" />
     <Compile Include="Models\IDocumentLister.cs" />
     <Compile Include="Models\IGenericListingModule.cs" />
     <Compile Include="Models\IGenericListingModuleItem.cs" />
+    <Compile Include="Models\GenericListingModuleItemSearchResult.cs" />
     <Compile Include="Models\IHorizontalScroll.cs" />
     <Compile Include="Models\IListingsGlassBase.cs" />
     <Compile Include="Models\IScrollerCard.cs" />
@@ -136,12 +145,18 @@
       <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>
       <Name>LionTrust.Foundation.ORM</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Search\website\LionTrust.Foundation.Search.csproj">
+      <Project>{22686dc6-4e6c-4d98-84b7-c48042f5b8fc}</Project>
+      <Name>LionTrust.Foundation.Search</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Video\website\LionTrust.Foundation.Video.csproj">
       <Project>{8C1C0247-65A6-4675-8326-0B243A81B392}</Project>
       <Name>LionTrust.Foundation.Video</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\GenericListing\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -76,5 +76,15 @@
         {
             public const string DocumentApiRoute_SettingName = "Feature.Listings.DocumentsApiRoute";
         }
+
+        public static class Defaults
+        {
+            public const string GenericListingFacetsConfig = "{D61FC1B3-9969-4F95-8796-FEFBC864CA1F}";
+        }
+
+        public static class GenericListingFacetsConfig 
+        {
+            public const string ListingItemTypeFolder_FieldId = "{5F44334E-8B52-4BCE-AB02-59629AC4DC98}";
+        }
     }
 }

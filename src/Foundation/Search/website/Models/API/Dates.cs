@@ -1,4 +1,4 @@
-﻿namespace LionTrust.Feature.Search.Models.API
+﻿namespace LionTrust.Foundation.Search.Models.API
 {
     using System.Collections.Generic;
 

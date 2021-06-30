@@ -1,6 +1,9 @@
 ﻿namespace LionTrust.Feature.Search.Models.API.Response
 {
-    public class ArticleFacetsResponse : FacetsResponse
+    using LionTrust.Foundation.Search.Models.API;
+    using Newtonsoft.Json;
+
+    public class ArticleFacetsResponse
     {
         public Dates Dates = new Dates();
     }
