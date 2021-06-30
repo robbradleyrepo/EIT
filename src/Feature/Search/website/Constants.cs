@@ -42,11 +42,11 @@
 
             public static class FundSearchFacetsConfig
             {
-                public const string FundRangesFieldId = "{F9DAF380-33EB-424C-B24C-6FFE0D9C98BD}";
+                public const string FundRangesFieldId = "{FBE9329C-271B-4573-B4FD-6DC4B7C692C9}";
                 public const string FundManagersFieldId = "{EC744986-7D64-459D-A2E6-8CB5A9C0848D}";
                 public const string FundTeamsFieldId = "{38DD3B5E-9E3E-402C-8F5F-8D595EBDAB19}";
                 public const string FundRegionsFieldId = "{D859AD9C-7473-420D-A7C3-ACE454F18D07}";
-                public const string FundRangesLabelFieldId = "{FBE9329C-271B-4573-B4FD-6DC4B7C692C9}";
+                public const string FundRangesLabelFieldId = "{F9DAF380-33EB-424C-B24C-6FFE0D9C98BD}";
                 public const string FundManagersLabelFieldId = "{848574BD-2F11-48D3-8868-E0377F188BA7}";
                 public const string FundTeamsLabelFieldId = "{A533F896-A92A-4897-9A4A-70F5038C2D28}";
                 public const string FundRegionsLabelFieldId = "{5E6F002F-6B6B-43F5-B665-5D1E03622456}";
