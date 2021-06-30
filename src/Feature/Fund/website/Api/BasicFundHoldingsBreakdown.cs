@@ -22,7 +22,13 @@
                 return new FundBreakdownModel[0];
             }
 
-            return fundDetails.First().Holdings.Breakdowns.Data.Select(b => new FundBreakdownModel { Name = b.Name, Weight = b.Weight });
+            var dataForClass = fundDetails.FirstOrDefault(c => c.CitiCode == citiCode);
+            if (dataForClass == null)
+            {
+                return new FundBreakdownModel[0];
+            }
+
+            return dataForClass.Holdings.Breakdowns.Data.Select(b => new FundBreakdownModel { Name = b.Name, Weight = b.Weight });
         }
     }
 }

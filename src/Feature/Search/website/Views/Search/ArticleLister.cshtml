@@ -1,9 +1,10 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @using LionTrust.Feature.Search.Models 
+@using Sitecore.Configuration
 @model LionTrust.Feature.Search.Models.IArticleLister
 @if (Model != null)
 {
-    <div id="lister-app">
+    <div id="lister-app" data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.ArticleApiRoute_SettingName))">
         <div class="article-filter-wrapper">
             <div class="article-filters" :class="mobileFilter ? 'active' : ''">
                 <div class="article-filters__header">
@@ -134,7 +135,7 @@
                 </btn>
             </div>
         </div>
-        <section class="container">
+        <div class="container">
             <div class="text-center my-5" v-if="loading">
                 <div class="spinner-border text-gold" role="status"></div>
             </div>
@@ -142,39 +143,39 @@
                 <article-item inline-template v-for="(article, i) in searchData" :key="i">
                     <div class="col-md-6 col-lg-4">
                         <div class="article-promo">
-                            <a href="#article promo" class="article-promo__front">
+                            <a :href="article.url" class="article-promo__front">
                             </a>
-                            <a href="#" class="article-promo__body">
+                            <a :href="article.url" class="article-promo__body">
                                 <div class="article-promo__head">
-                                    <img class="article-promo__head-img" :src="article.AuthorImage" alt="">
-                                    <span class="article-promo__head-title">{{article.Subtitle}}</span>
+                                    <img class="article-promo__head-img" :src="article.authorImageUrl" :alt="article.title">
+                                    <span class="article-promo__head-title">{{article.subtitle}}</span>
                                 </div>
                                 <span class="article-promo__title">
-                                    {{article.Title}}
+                                    {{article.title}}
                                 </span>
                                 <span class="article-promo__desc">
-                                    {{article.Subtitle}}
+                                    {{article.subtitle}}
                                 </span>
                             </a>
                             <div class="article-promo__footer">
                                 <div class="article-promo__footer-item">
                                     <img class="article-promo__clock" src="@Model.DateIcon" alt="icon">
-                                    <span class="article-promo__footer-text">{{article.Date}}</span>
+                                    <span class="article-promo__footer-text">{{article.date}}</span>
                                 </div>
                                 <div class="article-promo__footer-item">
-                                    <span class="article-promo__footer-text">{{article.Category}}</span>
+                                    <span class="article-promo__footer-text">{{article.category}}</span>
                                     <i class="icon-booksmark article-promo__bookmark"></i>
                                 </div>
                             </div>
 
                             <img class="article-promo__back"
-                                 :src="article.ImageUrl" :alt="article.Title">
+                                 :src="article.imageUrl" :alt="article.title" :style="{opacity: article.imageOpacity}">
                         </div>
                     </div>
                 </article-item>
             </div>
             @Html.Partial("~/Views/Search/_Pagination.cshtml", Model)
-        </section>
+        </div>
     </div>
 }
 else if (Sitecore.Context.PageMode.IsExperienceEditor)

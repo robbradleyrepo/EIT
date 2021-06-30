@@ -1,0 +1,32 @@
+﻿---
+ID: "507a99ba-03da-4a9b-8d55-ebe065da07fb"
+Parent: "2e7c79e4-06a4-4984-997d-d86bd20cdb53"
+Template: "4fd5c75c-bd9d-4615-8538-a00c51bb2238"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/_Local/UI005 - Podcast Promo"
+DB: master
+BranchID: "be0adc6b-80fd-49b1-a699-baefacec4b70"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{FEBC5FCC-9503-4C87-8522-32BCB89C9A42}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210625T110235Z
+    - ID: "7aae9c1d-09d6-458e-9c08-9e17202f5e27"
+      Hint: PodcastPromo_Title
+      Value: Lorem ipsum dolor sit amet, consectetur
+    - ID: "b040620b-5868-4f90-a613-291199dcca80"
+      Hint: PodcastPromo_Heading
+      Value: LIONTRUST RADIO PODCAST
+    - ID: "d0038738-1efd-4f46-980d-03eee85972cc"
+      Hint: PodcastPromo_Body
+      Value: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora minus eum repellendus doloribus quod expedita pariatur in numquam fuga similique. Quasi sunt
+    - ID: "e6f7f113-dfe6-4d4f-8aba-ffe70d681ced"
+      Hint: PodcastPromo_BackgroundImage
+      Value: |
+        <image mediaid="{95DCA926-3A47-4008-B3E2-2C9CB68C6754}" />

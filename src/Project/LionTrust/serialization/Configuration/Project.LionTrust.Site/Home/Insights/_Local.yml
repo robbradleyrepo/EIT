@@ -1,0 +1,30 @@
+﻿---
+ID: "2e7c79e4-06a4-4984-997d-d86bd20cdb53"
+Parent: "42267455-7066-40b8-9290-228c7dbfc8e3"
+Template: "fff5f245-ffc0-4022-a998-9b07aa5e761f"
+Path: /sitecore/content/LionTrustNew/Home/Insights/_Local
+DB: master
+BranchID: "be0adc6b-80fd-49b1-a699-baefacec4b70"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{4FD5C75C-BD9D-4615-8538-A00C51BB2238}"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: "-1000"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{3C052F27-3EF6-4ADD-9126-91BC25CE514D}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210625T110235Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

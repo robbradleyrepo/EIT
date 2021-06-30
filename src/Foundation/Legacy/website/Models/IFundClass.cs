@@ -6,6 +6,12 @@
 
     public interface IFundClass: ILegacyGlassBase
     {
+        [SitecoreField(Constants.FundClass.MinimalInitialInvestmentFieldId)]
+        string MinimalInitialInvestment { get; set; }
+
+        [SitecoreField(Constants.FundClass.MinimumAdditionalInvestmentFieldId)]
+        string MinimumAdditionalInvestment { get; set; }
+
         [SitecoreField(Constants.FundClass.CitiCodeFieldId)]
         string CitiCode { get; set; }
 
@@ -32,9 +38,7 @@
 
         [SitecoreField(Constants.FundClass.PriceDate_FieldId)]
         DateTime PriceDate { get; set; }
-        [SitecoreField(Constants.FundClass.BloombergCode_FieldId)]
-        string BloombergCode { get; set; }
-
+        
         [SitecoreField(Constants.FundClass.DistributionDate_FieldId)]
         string DistributionDate { get; set; }
 

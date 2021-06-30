@@ -63,7 +63,7 @@
 
             if (string.IsNullOrEmpty(model.OngoingCharges))
             {
-                model.OngoingCharges = apiData.OngoingCharges;
+                model.OngoingCharges = apiData.OngoingCharge;
             }
 
             if (string.IsNullOrEmpty(model.SedolCode))
@@ -77,8 +77,7 @@
         private static AdditionalInfoAndChargesModel Map(IFundClass fundClass)
         {
             return new AdditionalInfoAndChargesModel
-            {
-                BloombergCode = fundClass.BloombergCode,
+            {                
                 DistributionDate = fundClass.DistributionDate,
                 ExDividendDate = fundClass.ExDividendDate,
                 IncludedOFC = fundClass.IncludedOFC,

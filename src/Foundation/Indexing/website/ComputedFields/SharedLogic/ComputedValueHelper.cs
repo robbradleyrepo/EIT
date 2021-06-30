@@ -111,6 +111,6 @@
             }
 
             return fields;
-        }
+        } 
     }
 }

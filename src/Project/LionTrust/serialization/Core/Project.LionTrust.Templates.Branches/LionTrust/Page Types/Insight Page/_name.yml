@@ -1,0 +1,73 @@
+﻿---
+ID: "435fa5fe-2f46-4eb9-ba52-fef175105344"
+Parent: "be0adc6b-80fd-49b1-a699-baefacec4b70"
+Template: "2e71a4d9-8115-47e6-973a-7de681370739"
+Path: /sitecore/templates/Branches/Project/LionTrust/Page Types/Insight Page/$name
+DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1"
+      s:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{080B041B-8BA0-44BB-85E4-FEAF440651E1}"
+          p:before="*"
+          s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+          s:ph="/header/navigation" />
+        <r
+          uid="{EA655983-AC69-4016-A707-83C8D96366D6}"
+          p:after="r[@uid='{080B041B-8BA0-44BB-85E4-FEAF440651E1}']"
+          s:ds="{4DBCCF0D-3EBA-4931-B298-1219A7A7AF15}"
+          s:id="{3528DA32-F96D-4392-8B1E-4B2B33C9AFA9}"
+          s:par=""
+          s:ph="header" />
+        <r
+          uid="{3CEADB2F-F118-4205-B8E7-FBFC311424D8}"
+          p:after="r[@uid='{EA655983-AC69-4016-A707-83C8D96366D6}']"
+          s:ds="{527F0216-AC83-4130-B7C2-CDCC82491AF8}"
+          s:id="{7166AE9D-EFBD-48B3-B38F-AFD4CAAB5278}"
+          s:par=""
+          s:ph="/header/secondary-navigation" />
+        <r
+          uid="{22DA56E1-4A45-4329-BF79-96456CD419A8}"
+          p:after="r[@uid='{3CEADB2F-F118-4205-B8E7-FBFC311424D8}']"
+          s:ds="{AD4A1911-B416-4ACB-87CE-DF537EF09E70}"
+          s:id="{CB2277A4-8384-4EB1-94AC-D28D9E979831}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{97B58E1F-EE44-4948-9A01-07C863233E84}"
+          p:after="r[@uid='{22DA56E1-4A45-4329-BF79-96456CD419A8}']"
+          s:ds="{FEBC5FCC-9503-4C87-8522-32BCB89C9A42}"
+          s:id="{C1E344E3-1017-4ECE-A44E-21727844E3CE}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{2DAEBAF3-9D4A-4715-8296-11AE17F87AA8}"
+          p:after="r[@uid='{97B58E1F-EE44-4948-9A01-07C863233E84}']"
+          s:ds="{BCB9B517-6A35-4B78-A477-E6AD7A069BF2}"
+          s:id="{7F3DDF4D-5190-4C04-836D-41325114723D}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{C0E39DC0-1BA1-42DB-BBA4-2E605C61C595}"
+          p:after="r[@uid='{2DAEBAF3-9D4A-4715-8296-11AE17F87AA8}']"
+          s:ds="{8F7AA55E-2569-4646-A28E-7FA325F64C31}"
+          s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+          s:par=""
+          s:ph="main" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210625T103348Z

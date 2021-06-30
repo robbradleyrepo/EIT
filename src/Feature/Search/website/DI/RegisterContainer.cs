@@ -10,6 +10,7 @@ namespace LionTrust.Feature.Search.DI
         public void Configure(IServiceCollection serviceCollection)
         {
             serviceCollection.AddTransient<IArticleSearchDataManager, ArticleSearchDataManager>();
+            serviceCollection.AddTransient<IFundSearchDataManager, FundSearchDataManager>();
         }
     }
 }

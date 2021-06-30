@@ -33,25 +33,12 @@
                 }
 
                 viewModel.Fund = data.Fund;
-                
+
             }
 
             viewModel.Component = data;
-            
+
             return View("~/Views/Fund/KeyInfoPrice.cshtml", viewModel);
-        }
-
-        public ActionResult AdditionalInfoAndCharges()
-        {
-            var viewModel = new AdditionalInfoAndChargesViewModel();
-            var data = _context.GetDataSourceItem<IAdditionalInfoAndChargesComponent>();
-            viewModel.Component = data;
-            if (data != null && data.Fund != null)
-            {
-                viewModel.Fund = data.Fund;
-            }
-
-            return View("~/Views/Fund/AdditionalInfoAndCharges.cshtml", viewModel);
         }
 
         public ActionResult Disclaimer()

@@ -34,7 +34,7 @@
         private string GetArticleDate(DateTime indexedDate)
         {
             var label = string.Empty;
-            if(indexedDate.Date == DateTime.Today)
+            if (indexedDate.Date == DateTime.Today)
             {
                 label = Translate.Text("Today");
             }
@@ -60,6 +60,7 @@
                                                         Date = this.GetArticleDate(x.Document.ArticleDate),
                                                         Fund = x.Document.ArticleFundName,
                                                         ImageUrl = x.Document.ArticleListingImage,
+                                                        ImageOpacity = string.IsNullOrWhiteSpace(x.Document.ArticleListingImageOpacity) ? "1" : x.Document.ArticleListingImageOpacity,
                                                         Subtitle = x.Document.ArticleSubtitle,
                                                         Team = x.Document.ArticleTeam,
                                                         Title = x.Document.ArticleTitle,
@@ -73,7 +74,7 @@
             var filterFacetConfigItem = _contentRepository.GetItem<IArticleListingFacetsConfig>(new GetItemByIdOptions(articleFilterFacetConfigId));
 
             var listingArticleFacetsResponse = new ArticleFacetsResponse();
-            if(filterFacetConfigItem == null 
+            if (filterFacetConfigItem == null
                     || filterFacetConfigItem.FundsFolder == null
                     || filterFacetConfigItem.FundCategoriesFolder == null
                     || filterFacetConfigItem.FundManagersFolder == null
@@ -82,17 +83,34 @@
                 return null;
             }
 
-            listingArticleFacetsResponse.Facets = new ArticleFacets {
-                                                    Funds = filterFacetConfigItem.FundsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
-                                                    FundCategories = filterFacetConfigItem.FundCategoriesFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
-                                                    FundManagers = filterFacetConfigItem.FundManagersFolder?.Children?.Where(x => x.IsFundManager)?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
-                                                    FundTeams = filterFacetConfigItem.FundTeamsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name })
-                                                  };
+            listingArticleFacetsResponse.Facets = new List<Facet>
+            {
+                new Facet
+                {
+                    Name = filterFacetConfigItem.FundsLabel,
+                    Items = filterFacetConfigItem.FundsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
+                },
+                new Facet
+                {
+                    Name = filterFacetConfigItem.FundCategoriesLabel,
+                    Items = filterFacetConfigItem.FundCategoriesFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
+                },
+                new Facet
+                {
+                    Name = filterFacetConfigItem.FundManagersLabel,
+                    Items = filterFacetConfigItem.FundManagersFolder?.Children?.Where(x => x.IsFundManager)?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
+                },
+                new Facet
+                {
+                    Name = filterFacetConfigItem.FundTeamsLabel,
+                    Items = filterFacetConfigItem.FundTeamsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name })
+                }
+            };
 
             return listingArticleFacetsResponse;
         }
 
-        public ITaxonomySearchResponse GetArticleListingResponse(string database, string funds, string fundCategories, string fundManagers, string fundTeams, int? month, int? year, string searchTerm, string sortOrder, int page)
+        public ISearchResponse<ITaxonomyContentResult> GetArticleListingResponse(string database, string funds, string fundCategories, string fundManagers, string fundTeams, int? month, int? year, string searchTerm, string sortOrder, int page)
         {
             var fromYear = year ?? 2000;
             var fromMonth = month ?? 1;
@@ -114,7 +132,7 @@
                 ToDate = new DateTime(toYear, toMonth, DateTime.DaysInMonth(toYear, toMonth))
             };
 
-            ContentSearchResults contentSearchResults;
+            ContentSearchResults<ArticleSearchResultItem> contentSearchResults;
             if (sortOrder == "ASC")
             {
                 contentSearchResults = this._articleContentSearchService.GetDatedTaxonomyRelatedArticles(articleSearchRequest, result => result.OrderBy(x => x.ArticleDate));
@@ -128,8 +146,8 @@
                 contentSearchResults = this._articleContentSearchService.GetDatedTaxonomyRelatedArticles(articleSearchRequest);
             }
 
-            var articleSearchResponse = new ArticleSearchResponse();
-            if(contentSearchResults.TotalResults > 0)
+            var articleSearchResponse = new SearchResponse<ITaxonomyContentResult>();
+            if (contentSearchResults.TotalResults > 0)
             {
                 articleSearchResponse.SearchResults = this.MapArticleResultHits(contentSearchResults.SearchResults);
                 articleSearchResponse.StatusMessage = "Success";

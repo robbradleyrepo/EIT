@@ -25,6 +25,9 @@
         [SitecoreField(Constants.Article.Image_FieldId)]
         Image Image { get; set; }
 
+        [SitecoreField(Constants.Article.ImageOpacity_FieldId)]
+        string ImageOpacity { get; set; }
+
         [SitecoreField(Constants.Article.PdfDocument_FieldId)]
         File PdfDocument { get; set; }
     }

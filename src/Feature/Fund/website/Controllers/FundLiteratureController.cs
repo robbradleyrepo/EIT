@@ -5,6 +5,7 @@
     using LionTrust.Feature.Fund.Models;
     using LionTrust.Foundation.Legacy.Models;
     using Sitecore.Mvc.Controllers;
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Web.Mvc;
@@ -38,6 +39,24 @@
             }
 
             return View("/views/fund/literature.cshtml", model);
+        }
+
+        public ActionResult GetOverlayHtml(Guid fundId, Guid literatureId)
+        {
+            var literature = _context.SitecoreService.GetItem<ILiterature>(literatureId);
+            var fund = _context.SitecoreService.GetItem<IFund>(fundId);
+
+            if (literature == null && fund == null)
+            {
+                return null;
+            }
+            else
+            {
+                literature.Fund = fund;
+                var model = new LiteratureViewModel(literature);
+                model.Documents = ArrangeDocuments(fund);
+                return View("/views/fund/literature.cshtml", model);
+            }
         }
 
         private Dictionary<string, List<IDocument>> ArrangeDocuments(IFund fund)

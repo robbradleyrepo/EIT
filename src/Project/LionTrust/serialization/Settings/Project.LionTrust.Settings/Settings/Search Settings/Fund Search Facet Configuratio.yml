@@ -1,0 +1,45 @@
+﻿---
+ID: "64e0343f-ff1c-4b78-9461-c57cd8b1050d"
+Parent: "e3d69a3a-69fc-4794-a43f-f61ef7dd6d6f"
+Template: "9e484635-c128-4f63-8ca1-99d05f2d27d9"
+Path: /sitecore/content/LionTrustNew/Settings/Search Settings/Fund Search Facet Configuration
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210622T143158Z
+    - ID: "37e555be-6426-4e66-a991-fdc782125a46"
+      Hint: FundFacetConfig_FundTeams
+      Value: "{CE164BFD-E4D5-4ED3-B3D6-7E9528C34156}"
+    - ID: "38dd3b5e-9e3e-402c-8f5f-8d595ebdab19"
+      Hint: FundFacetConfig_FundTeams
+      Value: "{CE164BFD-E4D5-4ED3-B3D6-7E9528C34156}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "5e6f002f-6b6b-43f5-b665-5d1e03622456"
+      Hint: FundFacetConfig_FundRegionsLabel
+      Value: Fund Regions
+    - ID: "848574bd-2f11-48d3-8868-e0377f188ba7"
+      Hint: FundFacetConfig_FundManagersLabel
+      Value: Fund Managers
+    - ID: "a533f896-a92a-4897-9a4a-70f5038c2d28"
+      Hint: FundFacetConfig_FundTeamsLabel
+      Value: Fund Teams
+    - ID: "d859ad9c-7473-420d-a7c3-ace454f18d07"
+      Hint: FundFacetConfig_FundsRegions
+      Value: "{C3863478-8A49-48C5-A5F6-9AE9531B461A}"
+    - ID: "ec744986-7d64-459d-a2e6-8cb5a9c0848d"
+      Hint: FundFacetConfig_FundManagers
+      Value: "{55FD6306-D4DB-49BA-8471-07BDC35A1727}"
+    - ID: "f9daf380-33eb-424c-b24c-6ffe0d9c98bd"
+      Hint: FundFacetConfig_FundRangesLabel
+      Value: Fund Ranges
+    - ID: "fbe9329c-271b-4573-b4fd-6dc4b7c692c9"
+      Hint: FundFacetConfig_FundsRange
+      Value: "{656E71A9-E833-4166-B682-8FEF115AFB6C}"

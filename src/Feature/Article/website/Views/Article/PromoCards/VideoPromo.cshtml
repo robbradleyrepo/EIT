@@ -4,6 +4,7 @@
 @model LionTrust.Feature.Article.Models.IArticlePromo
 @if (Model != null)
 {
+    var opacity = string.IsNullOrWhiteSpace(Model.ImageOpacity) ? "opacity: 1" : "opacity: " + Model.ImageOpacity;
     <div class="article-promo">
         <a href="@Model.Url" class="article-promo__front">
         </a>
@@ -34,7 +35,7 @@
                     <img class="article-promo__video-btn" src="dist\images\components\common\play-btn.svg" alt="play video">
                 </div>
             }
-            </a>
+        </a>
         <div class="article-promo__footer">
             <div class="article-promo__footer-item">
                 <img class="article-promo__clock" src="dist\images\components\svg-icons\clock.svg" alt="icon">
@@ -55,7 +56,7 @@
         </div>
         @if ((Model.Image != null && !string.IsNullOrEmpty(Model.Image.Src)) || Sitecore.Context.PageMode.IsExperienceEditor)
         {
-            @Html.Glass().RenderImage(Model, m => m.Image, new NameValueCollection { { "class", "article-promo__back" } }, isEditable: true)
+            @Html.Glass().RenderImage(Model, m => m.Image, new { @class = "article-promo__back", style = opacity }, isEditable: true)
         }
         else
         {
