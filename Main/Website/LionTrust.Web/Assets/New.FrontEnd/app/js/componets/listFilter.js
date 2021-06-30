@@ -4,6 +4,7 @@ export default () => {
   const rootDom = document.getElementById('lister-app')
   let host = rootDom.dataset.host;
   let literatureId = rootDom.dataset.literatureId;
+  let fundFacetId = rootDom.dataset.fundfacetid;
   if (window.location.hostname == "localhost" || window.location.hostname === "127.0.0.1") 
     host = "https://cm-liontrust-it.sagittarius.agency/" + host;
    else 
@@ -119,8 +120,12 @@ export default () => {
       },
 
       getFacetsRequest() {
+        console.log('fundFacetId',fundFacetId);
+        const facetUrl = fundFacetId
+          ? `${host}/Facets?fundListingFacetConfig=${fundFacetId}`
+          : `${host}/Facets`
         $.get(
-          `${host}/Facets`
+          facetUrl
         ).done((responce) => {
           const {facets, dates} = responce;
           console.log('facets',facets);
@@ -158,7 +163,6 @@ export default () => {
       },
 
       showLiteratureOverlay(fundId, id) {
-        console.log('fundId',fundId, id);
         $.ajax({
           url: `${host}/api/sitecore/FundLiterature/GetOverlayHtml?fundId=${fundId}&literatureId=${literatureId}`
          }).done(function(data) {
