@@ -40,18 +40,18 @@
             return Json(response, JsonRequestBehavior.AllowGet);
         }
 
-        public IEnumerable<DocumentModel> BuildDocumentsList(IDocumentLister documentLister, bool sortyByAZ, int page = 0, int resultsPerPage = 10)
+        public IEnumerable<DocumentModel> BuildDocumentsList(IDocumentLister documentLister, bool sortyByAZ, int page = 1, int resultsPerPage = 10)
         {
             IEnumerable<DocumentModel> documentsListSorted = null;
             if (documentLister.DocumentList != null && documentLister.DocumentList.Any())
             {
                 if (sortyByAZ)
                 {
-                    documentsListSorted = documentLister.DocumentList.Select(x => new DocumentModel { Title = x.DocumentName, DocumentLink = x.DocumentLink?.Url, DocumentLinkText = x.DocumentLink?.Text, DocumentPageLink = x.Url }).OrderBy(x => x.Title).Skip(page*resultsPerPage).Take(resultsPerPage);
+                    documentsListSorted = documentLister.DocumentList.Select(x => new DocumentModel { Title = x.DocumentName, DocumentLink = x.DocumentLink?.Url, DocumentLinkText = x.DocumentLink?.Text, DocumentPageLink = x.Url }).OrderBy(x => x.Title).Skip((page - 1)*resultsPerPage).Take(resultsPerPage);
                 }
                 else
                 {
-                    documentsListSorted = documentLister.DocumentList.Select(x => new DocumentModel { Title = x.DocumentName, DocumentLink = x.DocumentLink?.Url, DocumentLinkText = x.DocumentLink?.Text, DocumentPageLink = x.Url }).OrderByDescending(x => x.Title).Skip(page * resultsPerPage).Take(resultsPerPage);
+                    documentsListSorted = documentLister.DocumentList.Select(x => new DocumentModel { Title = x.DocumentName, DocumentLink = x.DocumentLink?.Url, DocumentLinkText = x.DocumentLink?.Text, DocumentPageLink = x.Url }).OrderByDescending(x => x.Title).Skip((page - 1) * resultsPerPage).Take(resultsPerPage);
                 }
             }
 
