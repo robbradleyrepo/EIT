@@ -14,39 +14,33 @@
             this._genericListingDataManager = genericListingDataManager;
         }
 
-        public ActionResult Facets(string articleListingFacetConfig)
+        public ActionResult GetFacets(string articleListingFacetConfig)
         {
             Guid config;
-            if (string.IsNullOrEmpty(articleListingFacetConfig))
-            {
-                config = new Guid(Constants.Defaults.GenericListingFacetsConfig);
-            }
-            else
+            if (!string.IsNullOrEmpty(articleListingFacetConfig))
             {
                 var success = Guid.TryParse(articleListingFacetConfig, out config);
                 if (!success)
                 {
                     return Content("Configuration ID could not be parsed as a Guid");
                 }
+                var response = _genericListingDataManager.GetGenericListingFilterFacets(config);
+                return Json(response, JsonRequestBehavior.AllowGet);
             }
-
-            var response = _genericListingDataManager.GetGenericListingFilterFacets(config);
-            if (response == null)
+            else
             {
                 return new HttpNotFoundResult();
-            }
-
-            return Json(response, JsonRequestBehavior.AllowGet);
+            }           
         }
 
-        public ActionResult GetFilteredResults(string listingType, int? month, int? year, string searchTerm, string database = "web", int page = 1)
+        public ActionResult GetFilteredResults(string listingType, string parentId, int? month, int? year, string searchTerm, string database = "web", int page = 1)
         {
-            var response = this._genericListingDataManager.GetGenericListingResponse(database, listingType, month, year, searchTerm, page);
+            var response = this._genericListingDataManager.GetGenericListingResponse(database, parentId, listingType, month, year, searchTerm, page);
             if (response.StatusCode != 200)
             {
                 return new HttpStatusCodeResult(response.StatusCode, response.StatusMessage);
             }
-
+            var responseJson = Json(response);
             return Json(response, JsonRequestBehavior.AllowGet);
         }
     }

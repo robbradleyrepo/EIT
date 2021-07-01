@@ -44,14 +44,14 @@
 
             public const string LinkGoal_FieldID = "{BB76C1D8-044A-4813-B4DE-E36D21085304}";
             public const string LinkGoal_FieldName = "ScrollCard_LinkGoal";
-        }
+        }    
 
-        public static class GenericListingModule
+        public static class Defaults
         {
-            public const string Title_FieldID = "{3C5309E0-2068-4614-984E-F1AE3D04C026}";
+            public const string GenericListingFacetsConfig = "{D61FC1B3-9969-4F95-8796-FEFBC864CA1F}";
         }
 
-        public static class GenericListingModuleItem
+        public static class GenericListingFolder
         {
             public const string TemplateId = "{FF052B94-76BD-4482-855F-AF3712EE4872}";
             public const string Title_FieldID = "{62FA783B-735E-4510-91DA-900018033CCC}";
@@ -80,11 +80,12 @@
         public static class Defaults
         {
             public const string GenericListingFacetsConfig = "{D61FC1B3-9969-4F95-8796-FEFBC864CA1F}";
+            public const string ListingTypeList_FieldId = "{882BBA30-5BFE-41D6-AC98-A85BEC219EE0}";
         }
 
-        public static class GenericListingFacetsConfig 
+        public static class Settings
         {
-            public const string ListingItemTypeFolder_FieldId = "{5F44334E-8B52-4BCE-AB02-59629AC4DC98}";
+            public const string GenericListingApiRoute_SettingName = "Feature.Listings.GenericListingApiRoute";
         }
     }
 }

@@ -198,5 +198,21 @@ namespace LionTrust.Foundation.Legacy
             public const string TemplateId = "{D8D33736-F77C-47B5-AD00-C5230FB7E41C}";
             public const string ListingItemTypeName_FieldId = "{443409D5-2DCA-42F7-9A3E-613F07988AD6}";
         }
+
+        public static class GenericListingModule
+        {
+            public const string Title_FieldID = "{3C5309E0-2068-4614-984E-F1AE3D04C026}";
+        }
+
+        public static class GenericListingModuleItem
+        {
+            public const string TemplateId = "{FF052B94-76BD-4482-855F-AF3712EE4872}";
+            public const string Title_FieldID = "{62FA783B-735E-4510-91DA-900018033CCC}";
+            public const string Subtitle_FieldID = "{F0C2DFC2-0F2E-4082-A532-87B9AD9B9B9E}";
+            public const string Image_FieldID = "{146CBBD2-0E88-4FD6-B4B4-49B462266089}";
+            public const string Text_FieldID = "{694C3F81-60C0-4719-AA8C-5A4264623FEB}";
+            public const string Date_FieldID = "{25BED78C-4957-4165-998A-CA1B52F67497}";
+            public const string ListingType_FieldID = "{FF934E56-BADD-46E1-BFB4-695F32B1D6C5}";
+        }
     }
 }

@@ -88,6 +88,9 @@
     <Content Include="Views\Listings\ModuleItems\_DownloadWithTitleItem.cshtml" />
     <Content Include="Views\Listings\ModuleItems\_DownloadWithTitleAndDateItem.cshtml" />
     <Content Include="Views\Listings\ModuleItems\_TitleDescriptionDateItem.cshtml" />
+    <Content Include="App_Config\Include\Feature\Feature.Listings.Routes.config" />
+    <Content Include="App_Config\Include\Feature\Feature.Listings.config" />
+    <Content Include="App_Config\Include\Feature\Feature.Listings.RegisterContainer.config" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -98,12 +101,14 @@
     <Compile Include="Controllers\GenericListingApiController.cs" />
     <Compile Include="DataManagers\Implementations\GenericListingDataManager.cs" />
     <Compile Include="DataManagers\Interfaces\IGenericListingDataManager.cs" />
+    <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Models\AccordionViewModel.cs" />
     <Compile Include="Models\Document.cs" />
     <Compile Include="Models\DocumentModel.cs" />
-    <Compile Include="Models\GenericListerFacetResponse.cs" />
-    <Compile Include="Models\GenericListingFacets.cs" />
     <Compile Include="Models\GenericListingResponse.cs" />
+    <Compile Include="Models\API\Response\GenericListerFacetResponse.cs" />
+    <Compile Include="Models\API\Facets\GenericListingFacets.cs" />
+    <Compile Include="Models\API\Response\GenericListingSearchResponse.cs" />
     <Compile Include="Models\IAccordionModel.cs" />
     <Compile Include="Models\IAccordionRenderingParameters.cs" />
     <Compile Include="Models\IAccordionRowModel.cs" />
@@ -116,6 +121,8 @@
     <Compile Include="Models\IHorizontalScroll.cs" />
     <Compile Include="Models\IListingsGlassBase.cs" />
     <Compile Include="Models\IScrollerCard.cs" />
+    <Compile Include="Models\API\GenericListingResult.cs" />
+    <Compile Include="Models\ListingItemTypeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Routes\RegisterRoutes.cs" />
     <Compile Include="Utils.cs" />

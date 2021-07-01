@@ -51,22 +51,33 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ComputedFields\AllTemplatesIndexField.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
+    <Compile Include="JsonExtension\JsonDateConverter.cs" />
     <Compile Include="Models\ContentSearch\ContentSearchResults.cs" />
     <Compile Include="Models\API\Dates.cs" />
+    <Compile Include="Models\ContentSearch\GenericSearchResultItem.cs" />
+    <Compile Include="Models\ContentSearch\GenericSearchResults.cs" />
+    <Compile Include="Models\IGenericContentResult.cs" />
     <Compile Include="Models\ITaxonomyContentResult.cs" />
     <Compile Include="Models\Request\ArticleSearchRequest.cs" />
+    <Compile Include="Models\Request\GenericSearchRequest.cs" />
     <Compile Include="Models\Request\ITaxonomySearchRequest.cs" />
+    <Compile Include="Models\Response\IGenericSearchResponse.cs" />
     <Compile Include="Models\Response\ITaxonomySearchResponse.cs" />
     <Compile Include="Models\ContentSearch\ArticleSearchResultItem.cs" />
     <Compile Include="Models\ContentSearch\BaseSearchResultItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Implementations\GenericContentSearchRepository.cs" />
     <Compile Include="Repositories\Implementations\ArticleContentSearchRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IGenericContentSearchRepository.cs" />
     <Compile Include="Repositories\Interfaces\IArticleContentSearchRepository.cs" />
+    <Compile Include="Services\Implementations\GenericContentSearchService.cs" />
     <Compile Include="Services\Implementations\ArticleContentSearchService.cs" />
+    <Compile Include="Services\Interfaces\IGenericContentSearchService.cs" />
     <Compile Include="Services\Interfaces\IArticleContentSearchService.cs" />
   </ItemGroup>
   <ItemGroup />
