@@ -3,9 +3,9 @@ import { pagination } from "./listFilter/mixins/pagination";
 export default () => {
   const rootDom = document.getElementById('lister-app')
   let host = rootDom.dataset.host;
-  let literatureId = rootDom.dataset.literatureId;
+  let literatureId = rootDom.dataset.literatureid;
   let fundFacetId = rootDom.dataset.fundfacetid;
-  if (window.location.hostname == "localhost" || window.location.hostname === "127.0.0.1") 
+  if (window.location.hostname == "localhost" || window.location.hostname === "127.0.0.1")
     host = "https://cm-liontrust-it.sagittarius.agency/" + host;
    else 
     host = "/" + host;
@@ -43,6 +43,7 @@ export default () => {
     methods: {
       // adding selected values to query params
       toggleSelect(item, facet) {
+        console.log('item, facet',item, facet);
         if (!this.params[facet.name]) this.params[facet.name] = [];
         const existElem = this.params[facet.name].findIndex((el) => {
           return el === item.identifier;
@@ -190,56 +191,68 @@ export default () => {
       });
     },
   });
+
+  Vue.component("select-field", {
+    data: function () {
+      return {
+        open: false,
+      };
+    },
+    methods: {
+      toggleOption() {
+        this.open = !this.open;
+      },
+      clearOption() {
+        this.$emit("clearOptionField");
+      },
+    },
+    mounted() {
+      document.querySelector("body").addEventListener("click", () => {
+        this.open = false;
+      });
+    },
+    created() {
+      this.$parent.$on("clearOption", this.clearOption);
+    },
+  });
+  
+  Vue.component("option-field", {
+    data: function () {
+      return {
+        checked: false,
+      };
+    },
+    methods: {
+      clearChecked() {
+        this.checked = false;
+      },
+    },
+    created: function () {
+      this.$parent.$on("clearOptionField", this.clearChecked);
+    },
+  });
+  
+  Vue.component("article-item", {
+    data: function () {
+      return {};
+    },
+    methods: {
+      showLiteratureOverlay(fundId) {
+        $.ajax({
+          url: `${host}/api/sitecore/FundLiterature/GetOverlayHtml?fundId=${fundId}&literatureId=${literatureId}`
+         }).done(function(data) {
+          $(".onboarding-overlay__scroller.terms-text").html(data);
+          $('.onboarding-overlay__scroller').toggle();
+        });
+      }
+    }
+  });
+  
+  Vue.component("fund-item", {
+    data: function () {
+      return {};
+    },
+  });
 };
 
-Vue.component("select-field", {
-  data: function () {
-    return {
-      open: false,
-    };
-  },
-  methods: {
-    toggleOption() {
-      this.open = !this.open;
-    },
-    clearOption() {
-      this.$emit("clearOptionField");
-    },
-  },
-  mounted() {
-    document.querySelector("body").addEventListener("click", () => {
-      this.open = false;
-    });
-  },
-  created() {
-    this.$parent.$on("clearOption", this.clearOption);
-  },
-});
 
-Vue.component("option-field", {
-  data: function () {
-    return {
-      checked: false,
-    };
-  },
-  methods: {
-    clearChecked() {
-      this.checked = false;
-    },
-  },
-  created: function () {
-    this.$parent.$on("clearOptionField", this.clearChecked);
-  },
-});
-
-Vue.component("article-item", {
-  data: function () {
-    return {};
-  },
-});
-
-Vue.component("fund-item", {
-  data: function () {
-    return {};
-  },
-});
