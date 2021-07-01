@@ -1,0 +1,45 @@
+﻿---
+ID: "78e1e358-3322-435e-b2b0-cf644b6dd71a"
+Parent: "72c58ec9-64be-41f7-b957-b6ea0e793352"
+Template: "72c58ec9-64be-41f7-b957-b6ea0e793352"
+Path: /sitecore/templates/Project/LionTrust/Content Types/My Funds Lister/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210630T100207Z
+    - ID: "36bbbef9-10c6-486b-b783-879a24077a83"
+      Hint: MyFundsLister_ClearFiltersLabel
+      Value: Clear all
+    - ID: "45fbc71c-f3e7-4ea4-8e2a-90624c890371"
+      Hint: MyFundsLister_FundUpdateCTAText
+      Value: Update fund
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "7f5c9ede-fb85-48c2-8652-ac39a1e91d5b"
+      Hint: MyFundsLister_FiltersLabel
+      Value: Filters
+    - ID: "8975eeef-70fb-4d50-8c96-1c633a0b999e"
+      Hint: MyFundsLister_ViewFundCTAText
+      Value: View fund
+    - ID: "a00b7878-bc89-4ed8-a31d-88c9cf99425e"
+      Hint: MyFundsLister_ApplyFiltersLabel
+      Value: Apply filters
+    - ID: "c416e63e-f51d-46cc-be24-317c910da7d2"
+      Hint: MyFundsLister_SortLabel
+      Value: Sort
+    - ID: "e6bf180c-fa50-411f-9892-1dc5f6ad06ca"
+      Hint: MyFundsLister_Title
+      Value: My Funds
+    - ID: "e8da7b24-c7e1-4481-8b95-23cba236b58a"
+      Hint: MyFundsLister_AllDocumentsCTAText
+      Value: All factsheets & documents
+    - ID: "fc052c32-950e-499d-b07f-0a47a29a76dc"
+      Hint: MyFundsLister_FacetsConfiguration
+      Value: "{657DBE54-41A2-4412-9639-958C08A34FC8}"
