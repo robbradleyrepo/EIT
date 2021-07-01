@@ -63,7 +63,6 @@ export default () => {
     methods: {
       // adding selected values to query params
       toggleSelect(item, facet) {
-        console.log('item, facet',item, facet);
         if (!this.params[facet.name]) this.params[facet.name] = [];
         const existElem = this.params[facet.name].findIndex((el) => {
           return el === item.identifier;
@@ -243,6 +242,7 @@ export default () => {
         $.ajax({
           url: `${root}api/sitecore/FundLiterature/GetOverlayHtml?fundId=${fundId}&literatureId=${literatureId}`,
         }).done(function (data) {
+          console.log('data',data);
           $(".onboarding-overlay__scroller.terms-text").html(data);
           $(".onboarding-overlay__scroller").toggle();
         });
