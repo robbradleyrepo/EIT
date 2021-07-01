@@ -24,20 +24,22 @@
         public object ComputeFieldValue(IIndexable indexable)
         {
             var item = ComputedValueHelper.CheckCastComputedFieldItem(indexable);
-            var publishedDatabase = Sitecore.Data.Database.GetDatabase("web");
+            var publishedDatabase = Database.GetDatabase("web");
 
-            ImageField imageField = item?.Fields[Legacy.Constants.Article.Article_ListingImage];
-            MediaItem mediaItem;
+            var imageField = (ImageField) item?.Fields[Legacy.Constants.Article.Article_ListingImage];
+            MediaItem mediaItem = null;
 
             var database = 
                     imageField != null && imageField.MediaDatabase != null && imageField.MediaDatabase.Name != "shell"
                             ? imageField.MediaDatabase 
                             : publishedDatabase;
-
-            mediaItem = imageField?.MediaItem ?? database.GetItem(imageField.MediaID);
-            if(mediaItem == null)
+            if (imageField != null)
             {
-                mediaItem = GetDefaultListingImage(database);
+                mediaItem = imageField?.MediaItem ?? database.GetItem(imageField.MediaID);
+                if (mediaItem == null)
+                {
+                    mediaItem = GetDefaultListingImage(database);
+                }
             }
             
 

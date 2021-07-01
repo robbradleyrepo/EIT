@@ -58,7 +58,7 @@
         right: 0
         border: none
         background: transparent
-        font-size: 20px
+        @include font-size(20px)
         color: $white
         transition: color 0.3s ease-in-out
         @include breakpoint(desktop, up)
@@ -66,12 +66,10 @@
             top: 23px
 
 .recent
-    font-size: 18px
-    line-height: 25px
+    @include p-1-normal-20
     margin-top: 24px
     @include breakpoint(desktop, up)
         margin-top: 33px
-        font-size: 20px
     &__title
         font-weight: 800
         color: #9A9A9A

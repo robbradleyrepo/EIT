@@ -22,24 +22,27 @@
     var bodyClass = string.Empty;
     switch (@Html.Sitecore().CurrentItem.TemplateID.ToString())
     {
-        case @Constants.PageTypes.HomeTemplateId:
+        case Constants.PageTypes.HomeTemplateId:
             bodyClass = "main-page";
             break;
-        case @Constants.PageTypes.FundPageTemplateId:
+        case Constants.PageTypes.FundPageTemplateId:
             bodyClass = "fund-detail-page";
             break;
-        case @Constants.PageTypes.InsightPageTemplateId:
+        case Constants.PageTypes.InsightPageTemplateId:
             bodyClass = "article-page";
+            break;
+        case Constants.PageTypes.FundListerPageTemplateId:
+            bodyClass = "find-lister-page";
             break;
     }
 
     var mainClass = string.Empty;
     switch (@Html.Sitecore().CurrentItem.TemplateID.ToString())
     {
-        case @Constants.PageTypes.HomeTemplateId:
+        case Constants.PageTypes.HomeTemplateId:
             mainClass = "main-page-conentent";
             break;
-        
+
     }
 
     var isExperienceEditor = Sitecore.Context.PageMode.IsExperienceEditor ? "experience-editor" : string.Empty;

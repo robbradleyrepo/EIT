@@ -1,5 +1,7 @@
 ﻿namespace LionTrust.Feature.Fund
 {
+    using System;
+
     public static class Constants
     {
         public static class Literature
@@ -72,6 +74,7 @@
 
         public static class FundManager
         {
+            public static Guid TemplateId = Guid.Parse("{A0702CF0-48EB-48A9-8E89-8FDBCD2B9F1D}");
             public const string ManagerFieldId = "{6B4AFD6F-A05F-4141-8E9D-EC71E79A3936}";
         }
 
@@ -100,6 +103,7 @@
 
         public static class FundPage
         {
+            public static Guid TemplateId = Guid.Parse("{CFF8E8CF-7EA0-435F-AB8F-9BFA1FD61BBA}");
             public const string PageFieldId = "{E43F6E86-0318-4766-B880-0C4F6512CA4E}";
         }
 

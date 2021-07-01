@@ -16,7 +16,6 @@
             if (item == null)
             {
                 return string.Empty;
-                // throw new ArgumentNullException(nameof(item));
             }
 
             if (options != null)

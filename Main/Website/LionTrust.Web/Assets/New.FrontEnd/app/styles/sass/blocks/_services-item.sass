@@ -14,10 +14,13 @@
         @extend .h4
         margin-bottom: 13px
     &__subtitle
-        font-weight: 500
-        font-size: 18px
-        @include breakpoint(desktop, up)
-            font-size: 20px
+        @include p-1-medium-20
+    &__descript
+        p
+            @include p-1-medium-20
+        ul
+            @extend .services-item-list
+
 
 .services-item-list
     @extend .styled-list

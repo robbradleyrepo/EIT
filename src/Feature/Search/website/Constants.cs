@@ -13,6 +13,22 @@
         {
             public const string PlaceholdertextFieldId = "{29F9E9E1-C66C-40D6-9669-4C170097B381}";
         }
+        public static class SiteSearch
+        {
+            public const string ViewAllFilterTextFieldId = "{34D19244-FFEA-42CC-8310-3D4BCF89B4F8}";
+            public const string HeadingFieldId = "{A7C70493-A174-455B-BF2D-67A38143A1E7}";
+            public const string SearchLabelFieldId = "{7E350BBA-B71B-49AA-910F-5316636CAC17}";
+            public const string ResultsPerPageFieldId = "{2056E3A0-3765-4DF0-8836-349180E8D7F5}";
+            public const string SearchResultsFoundLabelFieldId = "{83D03CE9-1F83-4F04-8D65-474AB9BFBFC0}";
+
+        public const string FactsheetLinkTextFieldId = "{94CAE85F-6AED-4D42-BA9B-C487AF809CC7}";
+        }
+
+        public static class SiteSearchFilter
+        {
+            public const string PageNameFieldId = "{A7F99C6C-A5AF-4968-9C11-EC961745460F}";
+            public const string TemplateFieldId = "{2CD1668B-43FA-4854-8D91-84ED2AD9FB3C}";
+        }
 
         public static class APIFacets
         {
@@ -42,11 +58,11 @@
 
             public static class FundSearchFacetsConfig
             {
-                public const string FundRangesFieldId = "{F9DAF380-33EB-424C-B24C-6FFE0D9C98BD}";
+                public const string FundRangesFieldId = "{FBE9329C-271B-4573-B4FD-6DC4B7C692C9}";
                 public const string FundManagersFieldId = "{EC744986-7D64-459D-A2E6-8CB5A9C0848D}";
                 public const string FundTeamsFieldId = "{38DD3B5E-9E3E-402C-8F5F-8D595EBDAB19}";
                 public const string FundRegionsFieldId = "{D859AD9C-7473-420D-A7C3-ACE454F18D07}";
-                public const string FundRangesLabelFieldId = "{FBE9329C-271B-4573-B4FD-6DC4B7C692C9}";
+                public const string FundRangesLabelFieldId = "{F9DAF380-33EB-424C-B24C-6FFE0D9C98BD}";
                 public const string FundManagersLabelFieldId = "{848574BD-2F11-48D3-8868-E0377F188BA7}";
                 public const string FundTeamsLabelFieldId = "{A533F896-A92A-4897-9A4A-70F5038C2D28}";
                 public const string FundRegionsLabelFieldId = "{5E6F002F-6B6B-43F5-B665-5D1E03622456}";

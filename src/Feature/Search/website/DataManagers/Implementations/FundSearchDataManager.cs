@@ -72,42 +72,70 @@
 
             var listingFundFacetsResponse = new FacetsResponse();
             if (filterFacetConfigItem == null
-                    || filterFacetConfigItem.FundRegionsFolder == null
-                    || filterFacetConfigItem.FundManagersFolder == null
-                    || filterFacetConfigItem.FundTeamsFolder == null
-                    || filterFacetConfigItem.FundRegionsFolder == null)
+                    && filterFacetConfigItem.FundRegionsFolder == null
+                    && filterFacetConfigItem.FundManagersFolder == null
+                    && filterFacetConfigItem.FundTeamsFolder == null
+                    && filterFacetConfigItem.FundRegionsFolder == null)
             {
                 return null;
             }
 
-            listingFundFacetsResponse.Facets = new List<Facet>
+            var facets = new List<Facet>();
+
+            if (filterFacetConfigItem.FundRegionsFolder != null && filterFacetConfigItem.FundRegionsFolder.Children != null && filterFacetConfigItem.FundRegionsFolder.Children.Any())
             {
-                new Facet
-                {
-                    Name = filterFacetConfigItem.FundRegionsLabel,
-                    Items = filterFacetConfigItem.FundRegionsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name })
-                },
-                new Facet
-                {
-                    Name = filterFacetConfigItem.FundManagersLabel,
-                    Items = filterFacetConfigItem.FundManagersFolder?.Children?.Where(x => x.IsFundManager)?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name })
-                },
-                new Facet
-                {
-                    Name = filterFacetConfigItem.FundTeamsLabel,
-                    Items = filterFacetConfigItem.FundTeamsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name })
-                },
-                new Facet
-                {
-                    Name = filterFacetConfigItem.FundRangesLabel,
-                    Items = filterFacetConfigItem.FundTeamsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name })
-                }
-            };
+                facets.Add
+                    (
+                        new Facet
+                        {
+                            Name = filterFacetConfigItem.FundRegionsLabel,
+                            Items = filterFacetConfigItem.FundRegionsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name })
+                        }
+                    );
+            }
+
+            if (filterFacetConfigItem.FundManagersFolder != null && filterFacetConfigItem.FundManagersFolder.Children != null && filterFacetConfigItem.FundManagersFolder.Children.Any())
+            {
+                facets.Add
+                    (
+                        new Facet
+                        {
+                            Name = filterFacetConfigItem.FundManagersLabel,
+                            Items = filterFacetConfigItem.FundManagersFolder?.Children?.Where(x => x.IsFundManager)?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name })
+                        }
+                    );
+            }
+
+            if (filterFacetConfigItem.FundTeamsFolder != null && filterFacetConfigItem.FundTeamsFolder.Children != null && filterFacetConfigItem.FundTeamsFolder.Children.Any())
+            {
+                facets.Add
+                    (
+                       new Facet
+                       {
+                           Name = filterFacetConfigItem.FundTeamsLabel,
+                           Items = filterFacetConfigItem.FundTeamsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name })
+                       }
+                    );
+            }
+
+            if (filterFacetConfigItem.FundRangesFolder != null && filterFacetConfigItem.FundRangesFolder.Children != null && filterFacetConfigItem.FundRangesFolder.Children.Any())
+            {
+                facets.Add
+                    (
+                        new Facet
+                        {
+                            Name = filterFacetConfigItem.FundRangesLabel,
+                            Items = filterFacetConfigItem.FundRangesFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name })
+                        }
+                    );
+            }
+
+            listingFundFacetsResponse.Facets = facets;
 
             return listingFundFacetsResponse;
         }
 
-        public ISearchResponse<IFundContentResult> GetFundListingResponse(string database, string fundTeams,string fundManagers, string fundRegions, string fundRanges, string searchTerm, int page)
+        public ISearchResponse<IFundContentResult> GetFundListingResponse(string database, string fundTeams,string fundManagers, string fundRegions, string fundRanges, string searchTerm, string sortOrder, int page)
         {
             page = page - 1;
 
@@ -123,8 +151,21 @@
                 Take = 21,
             };
 
-            var contentSearchResults = this._fundContentSearchService.GetFunds(fundSearchRequest); 
-            
+            ContentSearchResults<FundSearchResultItem> contentSearchResults;
+
+            if (sortOrder == "ASC")
+            {
+                contentSearchResults = _fundContentSearchService.GetFunds(fundSearchRequest, result => result.OrderBy(x => x.FundName));
+            }
+            else if (sortOrder == "DESC")
+            {
+                contentSearchResults = _fundContentSearchService.GetFunds(fundSearchRequest, result => result.OrderByDescending(x => x.FundName));
+            }
+            else
+            {
+                contentSearchResults = _fundContentSearchService.GetFunds(fundSearchRequest);
+            }
+
             var fundSearchResponse = new SearchResponse<IFundContentResult>();
             if(contentSearchResults.TotalResults > 0)
             {

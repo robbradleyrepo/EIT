@@ -1,7 +1,14 @@
 ﻿namespace LionTrust.Feature.Article
 {
+    using System;
+
     public static class Constants
     {
+        public static class ArticlePage
+        {
+            public static Guid ArticlePageTemplateId = new Guid("{51BDA851-7256-4BDE-B294-AE2A0CE45682}");
+        }
+
         public static class Image
         {
             public const string ImageFieldId = "{48CE5243-5DC9-4B3C-B27F-EA89478F21A5}";

@@ -1,4 +1,6 @@
-﻿namespace LionTrust.Foundation.Legacy
+﻿using System;
+
+namespace LionTrust.Foundation.Legacy
 {
     public static class Constants
     {
@@ -7,6 +9,8 @@
             public const string ProfessionalsFieldId = "{34A577FE-C0A4-4ED9-A532-BC464CE91766}";
             public const string DescriptionFieldId = "{89CF97D4-0AA1-46BC-BE4D-A1C4238923A6}";
             public const string TeamImageFieldId = "{5B1F0984-348D-49A8-89ED-A8900742DA90}";
+            public const string TeamPageFieldId = "{D4652338-A634-4905-9FBB-E9478AC01388}";
+            public const string NameFieldId = "{4194326A-CC1D-4C79-95DC-9DB268E0B97B}";
         }
 
         public static class Article
@@ -17,6 +21,8 @@
             public const string PromoType_FieldId = "{58B0791B-504E-423C-8D9E-E16C419353FA}";
             public const string Authors_FieldId = "{15F3AFE1-AB21-4B6B-A434-4C0F7B927921}";
             public const string MultipleAuthorsIcon_FieldId = "{7075D230-7438-4F94-A4CC-1760107174CA}";
+            public const string MultipleAuthors_FieldId = "{B6833539-8781-4788-92F4-D173F0727FEB}";
+            
             public const string PublishDate_FieldId = "{86FE4F77-4D9A-4EC3-9ED9-263D03BD1965}";
             public const string Fund_FieldId = "{52161005-9691-46CD-AF73-E2B5455474C0}";
             public const string Topics_FieldId = "{4F9B280F-A22D-4E70-886A-45327E8AA507}";
@@ -88,9 +94,10 @@
             public const string SedolCode_FieldId = "{79F1B818-4E89-4F71-BF0E-1EFF631A7259}";
             public const string FactsheetFieldId = "{E22A6228-B13F-4EA0-B795-6429E50588F9}";
         }
-
+        
         public static class Fund 
         {
+            public const string FundTeamFieldId = "{205ED0C5-D7B3-413A-8937-4B728937EFEF}";
             public const string CitiCodeFieldId = "{90A7B1E0-C14E-4A3D-A717-72BEC978A99A}";
             public const string ClassesFieldId = "{036AEB89-B0BD-42C2-B763-A56CDBE32CDC}";
             public const string FundManagersFieldId = "{855D1E7B-3D08-4526-AD2D-FA2E86E9BE9B}";
@@ -116,6 +123,7 @@
 
         public static class PresentationBase
         {
+            public static Guid TemplateId = Guid.Parse("{AA97AB0E-14B2-4BB5-B69F-ECB5E16865DF}");
             public const string PageTitle_FieldName = "LegacyPresentationBase_PageTitle";
             public const string PageTitle_FieldId = "{AEBDD235-46DD-490A-BAE3-C613C670A8BF}";
 

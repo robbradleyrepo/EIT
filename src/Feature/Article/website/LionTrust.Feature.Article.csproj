@@ -102,6 +102,12 @@
     <Compile Include="Controllers\FundManagerInsightsController.cs" />
     <Compile Include="Controllers\RelatedArticlesController.cs" />
     <Compile Include="Controllers\FeaturedArticlesController.cs" />
+    <Compile Include="Fields\ArticleSearchResultTypeField.cs" />
+    <Compile Include="Fields\ArticleBaseField.cs" />
+    <Compile Include="Fields\ArticleAuthorField.cs" />
+    <Compile Include="Fields\ArticleAuthorImageField.cs" />
+    <Compile Include="Fields\FundTeamUrlField.cs" />
+    <Compile Include="Fields\FundTeamField.cs" />
     <Compile Include="Models\ArticleLinksViewModel.cs" />
     <Compile Include="Models\ArticleScrollerViewModel.cs" />
     <Compile Include="Models\ArticleViewModel.cs" />
@@ -141,6 +147,14 @@
     <ProjectReference Include="..\..\..\Foundation\Content\website\LionTrust.Foundation.Content.csproj">
       <Project>{f8f55034-fa55-4d27-b115-0ab4eeb9a0a8}</Project>
       <Name>LionTrust.Foundation.Content</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\DI\website\LionTrust.Foundation.DI.csproj">
+      <Project>{0D3A6F11-B5FF-4D8C-8A74-19501D2E80D4}</Project>
+      <Name>LionTrust.Foundation.DI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Indexing\website\LionTrust.Foundation.Indexing.csproj">
+      <Project>{acd53016-c45a-4a10-8b46-9a4a82a69d7b}</Project>
+      <Name>LionTrust.Foundation.Indexing</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Legacy\website\LionTrust.Foundation.Legacy.csproj">
       <Project>{43EE972B-2002-4719-A878-A66A99C42C40}</Project>

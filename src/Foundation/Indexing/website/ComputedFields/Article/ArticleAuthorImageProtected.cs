@@ -1,5 +1,6 @@
 ﻿namespace LionTrust.Foundation.Indexing.ComputedFields.Article
 {
+    using LionTrust.Foundation.DI;
     using LionTrust.Foundation.Indexing.ComputedFields.SharedLogic;
     using Sitecore.Configuration;
     using Sitecore.ContentSearch;
@@ -11,6 +12,7 @@
     using Sitecore.Sites;
     using System.Linq;
 
+    [Service(ServiceType = typeof(IComputedIndexField), Lifetime = Lifetime.Singleton)]
     public class ArticleAuthorImageProtected : IComputedIndexField
     {
         public string FieldName { get; set; }
@@ -41,7 +43,7 @@
                     authorImage = author?.Fields[Legacy.Constants.Author.Image_FieldId];                    
                 }
 
-                MediaItem mediaItem;
+                MediaItem mediaItem = null;
                 if (authorImage?.MediaDatabase.Name == "shell")
                 {
                     mediaItem = publishedDatabase.GetItem(authorImage.MediaID) ?? GetDefaultListingImage(publishedDatabase);
@@ -52,12 +54,19 @@
                             authorImage != null && authorImage.MediaDatabase != null && authorImage.MediaDatabase.Name != "shell"
                                     ? authorImage.MediaDatabase
                                     : publishedDatabase;
-
-                    mediaItem = authorImage?.MediaItem ?? database.GetItem(authorImage.MediaID);
-                    if (mediaItem == null)
+                    if (authorImage != null)
                     {
-                        mediaItem = GetDefaultListingImage(database);
+                        mediaItem = authorImage?.MediaItem ?? database.GetItem(authorImage.MediaID);
+                        if (mediaItem == null)
+                        {
+                            mediaItem = GetDefaultListingImage(database);
+                        }
                     }
+                }
+
+                if (mediaItem == null)
+                {
+                    return string.Empty;
                 }
 
                 var hashedUrl = string.Empty;

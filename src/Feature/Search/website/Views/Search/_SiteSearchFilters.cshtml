@@ -1,0 +1,14 @@
+﻿@model LionTrust.Feature.Search.SiteSearch.SiteSearchFilters
+<div class="search-filter">
+    <label>
+        <input type="checkbox" name="filter" checked class="search-filter__checkbox">
+        <span class="btn search-filter__btn"> @Model.ViewAllText </span>
+    </label>
+    @foreach (var item in Model.Filters)
+    {
+        <label>
+            <input type="checkbox" name="filter" class="search-filter__checkbox" data-templateid="@item.PageTemplateId">
+            <span class="btn search-filter__btn"> @item.FilterName </span>
+        </label>
+    }
+</div>

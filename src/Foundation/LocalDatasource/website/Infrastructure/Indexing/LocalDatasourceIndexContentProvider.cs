@@ -11,15 +11,15 @@
     using Sitecore.ContentSearch.SearchTypes;
     using Sitecore.Data;
 
-    public class LocalDatasourceQueryPredicateProvider : ProviderBase, IQueryPredicateProvider
+    public class LocalDatasourceQueryPredicateProvider<T>: ProviderBase, IQueryPredicateProvider<T> where T : SearchResultItem
     {
         public IEnumerable<ID> SupportedTemplates => new[] { TemplateIDs.StandardTemplate };
 
-        public Expression<Func<SearchResultItem, bool>> GetQueryPredicate(IQuery query)
+        public Expression<Func<T, bool>> GetQueryPredicate(IQuery query)
         {
             var fieldNames = new[] { Templates.Index.Fields.LocalDatasourceContent_IndexFieldName };
 
-            return GetFreeTextPredicateService.GetFreeTextPredicate(fieldNames, query);
+            return GetFreeTextPredicateService<T>.GetFreeTextPredicate(fieldNames, query);
         }
     }
 }
