@@ -19,7 +19,7 @@
             {
                 <div class="col-12">
                     <div class="newsletter__btnbox">
-                        @Html.GenerateGoalAnchor(m => m.Data.Cta, () => Model.Data.Cta.Url, "btn btn-anchor", Model.GoalId, () => string.Format("{0}<i class='icon-arrow-right animate-arrow'></i>", Model.Data.Cta.Text))
+                        @Html.GenerateGoalAnchor(m => m.Data.Cta, () => Model.Data.Cta.Url, "btn btn-anchor", Model.GoalId, () => string.Format("{0}&nbsp;<i class='icon-arrow-right animate-arrow'></i>", Model.Data.Cta.Text))
                     </div>
                 </div>
             }
