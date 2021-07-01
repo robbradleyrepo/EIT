@@ -1,0 +1,26 @@
+﻿@model LionTrust.Feature.Search.SiteSearch.ISiteSearch
+@if (Model == null)
+{
+    return;
+}
+<header class="header header-bg-gradient">
+    <section class="container">
+        @Html.Sitecore().Placeholder("navigation")
+    </section>
+
+        <section class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="search-header">
+                        <div class="search-header__mobile">
+                            <div class="search-header__title">@Model.Heading</div>
+                            <span class="search-header__mob-result" id="mob-result"></span>
+                            <button class="btn search-header__search-header-mobile">
+                                <i class="icon-search"></i> @Model.SearchLabel
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+</header>

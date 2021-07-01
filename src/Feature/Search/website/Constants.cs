@@ -13,6 +13,22 @@
         {
             public const string PlaceholdertextFieldId = "{29F9E9E1-C66C-40D6-9669-4C170097B381}";
         }
+        public static class SiteSearch
+        {
+            public const string ViewAllFilterTextFieldId = "{34D19244-FFEA-42CC-8310-3D4BCF89B4F8}";
+            public const string HeadingFieldId = "{A7C70493-A174-455B-BF2D-67A38143A1E7}";
+            public const string SearchLabelFieldId = "{7E350BBA-B71B-49AA-910F-5316636CAC17}";
+            public const string ResultsPerPageFieldId = "{2056E3A0-3765-4DF0-8836-349180E8D7F5}";
+            public const string SearchResultsFoundLabelFieldId = "{83D03CE9-1F83-4F04-8D65-474AB9BFBFC0}";
+
+        public const string FactsheetLinkTextFieldId = "{94CAE85F-6AED-4D42-BA9B-C487AF809CC7}";
+        }
+
+        public static class SiteSearchFilter
+        {
+            public const string PageNameFieldId = "{A7F99C6C-A5AF-4968-9C11-EC961745460F}";
+            public const string TemplateFieldId = "{2CD1668B-43FA-4854-8D91-84ED2AD9FB3C}";
+        }
 
         public static class APIFacets
         {

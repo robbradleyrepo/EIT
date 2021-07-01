@@ -1,0 +1,25 @@
+﻿---
+ID: "135ae9bd-4b37-4797-a829-e702fff9f545"
+Parent: "6b0f9c6c-2e2d-4f66-a34c-7a1d7290ca4d"
+Template: "6b0f9c6c-2e2d-4f66-a34c-7a1d7290ca4d"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Fund/FundTeam/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20160422T165149
+    - ID: "5b1f0984-348d-49a8-89ed-a8900742da90"
+      Hint: TeamImage
+      Value: |
+        <image mediaid="{A008A180-8F9A-4A34-A2E1-2CDE8D3F99A0}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "89cf97d4-0aa1-46bc-be4d-a1c4238923a6"
+      Hint: Description
+      Value: Description of the team

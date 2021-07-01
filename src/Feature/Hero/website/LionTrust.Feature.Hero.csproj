@@ -103,6 +103,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Foundation\Core\website\LionTrust.Foundation.Core.csproj">
+      <Project>{0c1e2fec-ac54-4cf0-905a-890d3bf711d5}</Project>
+      <Name>LionTrust.Foundation.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Logging\website\LionTrust.Foundation.Logging.csproj">
       <Project>{9B72C426-123C-4782-BEF8-0D52E5F2A396}</Project>
       <Name>LionTrust.Foundation.Logging</Name>
@@ -118,10 +122,6 @@
     <ProjectReference Include="..\..\..\Foundation\Content\website\LionTrust.Foundation.Content.csproj">
       <Project>{F8F55034-FA55-4D27-B115-0AB4EEB9A0A8}</Project>
       <Name>LionTrust.Foundation.Content</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Foundation\Core\website\LionTrust.Foundation.Core.csproj">
-      <Project>{0C1E2FEC-AC54-4CF0-905A-890D3BF711D5}</Project>
-      <Name>LionTrust.Foundation.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

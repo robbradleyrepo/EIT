@@ -1,10 +1,10 @@
 ﻿namespace LionTrust.Foundation.Search.Services.Interfaces
 {
-    using LionTrust.Foundation.Search.Models.ContentSearch;
-    using LionTrust.Foundation.Search.Models.Request;
     using System;
     using System.Linq;
-    using System.Linq.Expressions;
+
+    using LionTrust.Foundation.Search.Models.ContentSearch;
+    using LionTrust.Foundation.Search.Models.Request;
 
     public interface IArticleContentSearchService
     {

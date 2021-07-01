@@ -62,6 +62,7 @@
   <ItemGroup>
     <Content Include="App_Config\Include\Foundation\Foundation.Indexing.config" />
     <Content Include="App_Config\Include\Foundation\Foundation.Indexing.Serialization.config" />
+    <Content Include="App_Config\Include\Foundation\Foundation.Indexing.SiteSearch.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -92,6 +93,21 @@
     <Compile Include="Repositories\ISearchRepository.cs" />
     <Compile Include="Repositories\SearchRepository.cs" />
     <Compile Include="Services\GetFreeTextPredicateService.cs" />
+    <Compile Include="Services\IndexableLinkGenerator.cs" />
+    <Compile Include="SiteSearch\IFieldHandler.cs" />
+    <Compile Include="SiteSearch\ILegacyContentField.cs" />
+    <Compile Include="SiteSearch\LegacyContentField.cs" />
+    <Compile Include="SiteSearch\SearchResultTypeField.cs" />
+    <Compile Include="SiteSearch\FundTeamField.cs" />
+    <Compile Include="SiteSearch\IFundTeamField.cs" />
+    <Compile Include="SiteSearch\ISearchResultType.cs" />
+    <Compile Include="SiteSearch\IFundTeamUrlField.cs" />
+    <Compile Include="SiteSearch\IPageFundTeam.cs" />
+    <Compile Include="SiteSearch\IPageAuthorField.cs" />
+    <Compile Include="SiteSearch\IPageAuthorImageField.cs" />
+    <Compile Include="SiteSearch\FundTeamUrlField.cs" />
+    <Compile Include="SiteSearch\PageAuthorField.cs" />
+    <Compile Include="SiteSearch\PageAuthorImageField.cs" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
@@ -100,6 +116,10 @@
     <Folder Include="Infrastructure\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\DI\website\LionTrust.Foundation.DI.csproj">
+      <Project>{0D3A6F11-B5FF-4D8C-8A74-19501D2E80D4}</Project>
+      <Name>LionTrust.Foundation.DI</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Legacy\website\LionTrust.Foundation.Legacy.csproj">
       <Project>{43ee972b-2002-4719-a878-a66a99c42c40}</Project>
       <Name>LionTrust.Foundation.Legacy</Name>
@@ -107,6 +127,10 @@
     <ProjectReference Include="..\..\ORM\website\LionTrust.Foundation.ORM.csproj">
       <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>
       <Name>LionTrust.Foundation.ORM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Search\website\LionTrust.Foundation.Search.csproj">
+      <Project>{22686DC6-4E6C-4D98-84B7-C48042F5B8FC}</Project>
+      <Name>LionTrust.Foundation.Search</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

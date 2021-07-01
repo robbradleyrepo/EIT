@@ -13,5 +13,11 @@
 
         [SitecoreField(Constants.FundTeam.TeamImageFieldId)]
         Image TeamImage { get; set; }
+
+        [SitecoreField(Constants.FundTeam.TeamPageFieldId)]
+        ILegacyGlassBase Page { get; set; }
+
+        [SitecoreField(Constants.FundTeam.NameFieldId)]
+        string TeamName { get; set; }
     }
 }

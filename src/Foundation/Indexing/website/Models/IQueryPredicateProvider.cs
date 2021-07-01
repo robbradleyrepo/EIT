@@ -7,9 +7,9 @@
     using Sitecore.ContentSearch.SearchTypes;
     using Sitecore.Data;
 
-    public interface IQueryPredicateProvider
+    public interface IQueryPredicateProvider<T> where T : SearchResultItem
     {
-        Expression<Func<SearchResultItem, bool>> GetQueryPredicate(IQuery query);
+        Expression<Func<T, bool>> GetQueryPredicate(IQuery query);
         IEnumerable<ID> SupportedTemplates { get; }
     }
 }

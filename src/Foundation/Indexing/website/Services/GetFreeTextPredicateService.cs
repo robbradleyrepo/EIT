@@ -7,11 +7,11 @@
     using Sitecore.ContentSearch.Linq.Utilities;
     using Sitecore.ContentSearch.SearchTypes;
 
-    public static class GetFreeTextPredicateService
+    public static class GetFreeTextPredicateService<T> where T : SearchResultItem
     {
-        public static Expression<Func<SearchResultItem, bool>> GetFreeTextPredicate(string[] fieldNames, IQuery query)
+        public static Expression<Func<T, bool>> GetFreeTextPredicate(string[] fieldNames, IQuery query)
         {
-            var predicate = PredicateBuilder.False<SearchResultItem>();
+            var predicate = PredicateBuilder.False<T>();
             if (string.IsNullOrWhiteSpace(query.QueryText))
             {
                 return predicate;

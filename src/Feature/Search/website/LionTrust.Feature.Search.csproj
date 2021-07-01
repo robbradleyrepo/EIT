@@ -80,16 +80,33 @@
     <Content Include="App_Config\Include\Feature\Feature.Search.RegisterContainer.config" />
     <Content Include="App_Config\Include\Feature\Feature.Search.Routes.config" />
     <Content Include="App_Config\Include\Feature\Feature.Search.Serialization.config" />
+    <Content Include="Views\Search\ArticleLister.cshtml" />
+    <Content Include="Views\Search\_Pagination.cshtml" />
+    <Content Include="Views\web.config" />
+    <Content Include="Views\Search\SearchResults.cshtml" />
+    <Content Include="Views\Search\_SiteSearchFilters.cshtml" />
+    <Content Include="Views\Search\SearchHeader.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\SearchAnalyticsController.cs" />
-    <Compile Include="Controllers\SearchAPIController.cs" />
-    <Compile Include="DataManagers\Implementations\ArticleSearchDataManager.cs" />
     <Compile Include="DataManagers\Implementations\FundSearchDataManager.cs" />
+    <Compile Include="Controllers\SearchAPIController .cs" />
+    <Compile Include="DataManagers\Implementations\SiteSearchDataManager.cs" />
+    <Compile Include="DataManagers\Implementations\ArticleSearchDataManager.cs" />
+    <Compile Include="DataManagers\Interfaces\ISiteSearchDataManager.cs" />
     <Compile Include="DataManagers\Interfaces\IArticleSearchDataManager.cs" />
     <Compile Include="DataManagers\Interfaces\IFundSearchDataManager.cs" />
+    <Compile Include="DataManagers\Interfaces\SiteSearchResult.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Models\API\FundResult.cs" />
     <Compile Include="Models\API\Facets\IFundSearchFacetsConfig.cs" />
@@ -102,17 +119,27 @@
     <Compile Include="Models\API\Facets\IFundManagerFacetFolder.cs" />
     <Compile Include="Models\API\Facets\IFundManagerFacetOption.cs" />
     <Compile Include="Models\API\Response\FacetsResponse.cs" />
-    <Compile Include="Models\API\Response\ArticleFacetsResponse.cs" />
     <Compile Include="Models\API\Response\SearchResponse.cs" />
     <Compile Include="Models\IArticleLister.cs" />
     <Compile Include="Models\IFundLister.cs" />
     <Compile Include="Models\IPagination.cs" />
+    <Compile Include="Models\API\Response\SiteFacetsResponse.cs" />
+    <Compile Include="Models\API\Response\ArticleFacetsResponse.cs" />
     <Compile Include="Models\ISearchGlassBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ActionResults\JsonCamelCaseResult.cs" />
     <Compile Include="Routes\RegisterRoutes.cs" />
     <Compile Include="SearchOverlay\ISearchOverlay.cs" />
     <Compile Include="SearchOverlay\SearchOverlayController.cs" />
+    <Compile Include="SiteSearch\ISiteSearch.cs" />
+    <Compile Include="SiteSearch\ISiteSearchFilter.cs" />
+    <Compile Include="SiteSearch\LegacyArticleContentField.cs" />
+    <Compile Include="SiteSearch\LegacyQueryPredicateProvider.cs" />
+    <Compile Include="SiteSearch\SiteSearchFilters.cs" />
+    <Compile Include="SiteSearch\SiteSearchController.cs" />
+    <Compile Include="SiteSearch\SiteSearchHit.cs" />
+    <Compile Include="SiteSearch\SiteSearchResultItem.cs" />
+    <Compile Include="SiteSearch\SiteSearchViewModel.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -128,6 +155,10 @@
       <Project>{7F86DD63-BE79-4107-804A-514DCA76E01E}</Project>
       <Name>LionTrust.Foundation.Design</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\DI\website\LionTrust.Foundation.DI.csproj">
+      <Project>{0D3A6F11-B5FF-4D8C-8A74-19501D2E80D4}</Project>
+      <Name>LionTrust.Foundation.DI</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Indexing\website\LionTrust.Foundation.Indexing.csproj">
       <Project>{acd53016-c45a-4a10-8b46-9a4a82a69d7b}</Project>
       <Name>LionTrust.Foundation.Indexing</Name>
@@ -135,6 +166,14 @@
     <ProjectReference Include="..\..\..\Foundation\Legacy\website\LionTrust.Foundation.Legacy.csproj">
       <Project>{43ee972b-2002-4719-a878-a66a99c42c40}</Project>
       <Name>LionTrust.Foundation.Legacy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Indexing\website\LionTrust.Foundation.Indexing.csproj">
+      <Project>{ACD53016-C45A-4A10-8B46-9A4A82A69D7B}</Project>
+      <Name>LionTrust.Foundation.Indexing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\LocalDatasource\website\LionTrust.Foundation.LocalDatasource.csproj">
+      <Project>{02ACF4F4-F561-4B57-AB00-49D97079BA28}</Project>
+      <Name>LionTrust.Foundation.LocalDatasource</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\ORM\website\LionTrust.Foundation.ORM.csproj">
       <Project>{5e91a7d9-8e93-44fd-857f-f9ce145b6022}</Project>
@@ -144,7 +183,12 @@
       <Project>{22686dc6-4e6c-4d98-84b7-c48042f5b8fc}</Project>
       <Name>LionTrust.Foundation.Search</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\SitecoreExtensions\website\LionTrust.Foundation.SitecoreExtensions.csproj">
+      <Project>{a57b01c5-75ad-47c0-beda-93079fd37317}</Project>
+      <Name>LionTrust.Foundation.SitecoreExtensions</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
