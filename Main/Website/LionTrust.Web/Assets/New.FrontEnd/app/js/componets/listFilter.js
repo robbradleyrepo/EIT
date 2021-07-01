@@ -1,16 +1,36 @@
 import Vue from "vue/dist/vue.common.prod";
 import { pagination } from "./listFilter/mixins/pagination";
 export default () => {
-  const rootDom = document.getElementById('lister-app')
+  const rootDom = document.getElementById("lister-app");
   let host = rootDom.dataset.host;
-  let literatureId = rootDom.dataset.literatureid;
-  let fundFacetId = rootDom.dataset.fundfacetid;
-  if (window.location.hostname == "localhost" || window.location.hostname === "127.0.0.1")
-    host = "https://cm-liontrust-it.sagittarius.agency/" + host;
-   else 
+  const literatureId = rootDom.dataset.literatureid;
+  const fundFacetId = rootDom.dataset.fundfacetid;
+  const location = "https://cm-liontrust-it.sagittarius.agency/";
+  let root = "";
+  if (
+    window.location.hostname == "localhost" ||
+    window.location.hostname === "127.0.0.1"
+  ) {
+    host = location + host;
+    root = location
+  } else {
     host = "/" + host;
-  
-  const months = ['January','February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  }
+
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
   new Vue({
     el: "#lister-app",
     mixins: [pagination],
@@ -29,7 +49,7 @@ export default () => {
       mobileFilter: false,
       months: [],
       years: [],
-      grid: false
+      grid: false,
     },
     computed: {
       getFacets() {
@@ -115,62 +135,48 @@ export default () => {
         this.mobileFilter = !this.mobileFilter;
       },
 
-      submitSearchForm(e) {        
-        if(e.target.searchText.value)
-          this.applyFilters()
+      submitSearchForm(e) {
+        if (e.target.searchText.value) this.applyFilters();
       },
 
       getFacetsRequest() {
-        console.log('fundFacetId',fundFacetId);
+        console.log("fundFacetId", fundFacetId);
         const facetUrl = fundFacetId
           ? `${host}/Facets?fundListingFacetConfig=${fundFacetId}`
-          : `${host}/Facets`
-        $.get(
-          facetUrl
-        ).done((responce) => {
-          const {facets, dates} = responce;
-          console.log('facets',facets);
-          this.facets = facets;
+          : `${host}/Facets`;
+        $.get(facetUrl)
+          .done((responce) => {
+            const { facets, dates } = responce;
+            console.log("facets", facets);
+            this.facets = facets;
 
-          if(dates && dates.months)
-            for(let i in dates.months) {
-              this.months.push(months[i])
-            }
-          if(dates && dates.years)
-            this.years = dates.years;
-
-        }).fail(e => {
-          console.error(e);
-          this.loading = false
-        })
+            if (dates && dates.months)
+              for (let i in dates.months) {
+                this.months.push(months[i]);
+              }
+            if (dates && dates.years) this.years = dates.years;
+          })
+          .fail((e) => {
+            console.error(e);
+            this.loading = false;
+          });
       },
 
       getSearchRequest() {
         this.loading = true;
-        $.get(
-          host + "/Search?" +
-            this.getQuerySring()
-        ).done((responce) => {
-          const { searchResults, totalResults } = responce;
-          console.log('searchResults',searchResults);
-          this.searchData = searchResults;
-          this.amountResults = totalResults;
-          this.loading = false;          
-        })
-        .fail(e => {
-          console.error(e);
-          this.loading = false
-        })        
-      },
-
-      showLiteratureOverlay(fundId, id) {
-        $.ajax({
-          url: `${host}/api/sitecore/FundLiterature/GetOverlayHtml?fundId=${fundId}&literatureId=${literatureId}`
-         }).done(function(data) {
-          $(".onboarding-overlay__scroller.terms-text").html(data);
-          $('.onboarding-overlay__scroller').toggle();
-        });
-      }
+        $.get(host + "/Search?" + this.getQuerySring())
+          .done((responce) => {
+            const { searchResults, totalResults } = responce;
+            console.log("searchResults", searchResults);
+            this.searchData = searchResults;
+            this.amountResults = totalResults;
+            this.loading = false;
+          })
+          .fail((e) => {
+            console.error(e);
+            this.loading = false;
+          });
+      },      
     },
     watch: {
       sortOrder: function () {
@@ -180,11 +186,7 @@ export default () => {
     },
     mounted() {
       this.getFacetsRequest();
-      this.getSearchRequest();   
-      // this.facets = facets;
-      // const { SearchResults, TotalResults } = responce;
-      // this.searchData = SearchResults;
-      // this.amountResults = TotalResults;  
+      this.getSearchRequest();
 
       document.querySelector("body").addEventListener("click", () => {
         this.sortModal = false;
@@ -215,7 +217,7 @@ export default () => {
       this.$parent.$on("clearOption", this.clearOption);
     },
   });
-  
+
   Vue.component("option-field", {
     data: function () {
       return {
@@ -231,7 +233,7 @@ export default () => {
       this.$parent.$on("clearOptionField", this.clearChecked);
     },
   });
-  
+
   Vue.component("article-item", {
     data: function () {
       return {};
@@ -239,20 +241,18 @@ export default () => {
     methods: {
       showLiteratureOverlay(fundId) {
         $.ajax({
-          url: `${host}/api/sitecore/FundLiterature/GetOverlayHtml?fundId=${fundId}&literatureId=${literatureId}`
-         }).done(function(data) {
+          url: `${root}api/sitecore/FundLiterature/GetOverlayHtml?fundId=${fundId}&literatureId=${literatureId}`,
+        }).done(function (data) {
           $(".onboarding-overlay__scroller.terms-text").html(data);
-          $('.onboarding-overlay__scroller').toggle();
+          $(".onboarding-overlay__scroller").toggle();
         });
-      }
-    }
+      },
+    },
   });
-  
+
   Vue.component("fund-item", {
     data: function () {
       return {};
     },
   });
 };
-
-
