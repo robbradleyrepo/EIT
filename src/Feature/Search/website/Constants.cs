@@ -111,6 +111,23 @@
         {
             public const string ArticleApiRoute_SettingName = "Feature.Search.ArticleApiRoute";
             public const string FundApiRoute_SettingName = "Feature.Search.FundApiRoute";
+            public const string MyFundsApiRoute_SettingName = "Feature.Search.MyFundsApiRoute";
+        }
+
+        public static class MyFundsLister
+        {
+            public const string ApplyFiltersLabel_FieldId = "{A00B7878-BC89-4ED8-A31D-88C9CF99425E}";
+            public const string ClearFiltersLabel_FieldId = "{36BBBEF9-10C6-486B-B783-879A24077A83}";
+            public const string FiltersLabel_FieldId = "{7F5C9EDE-FB85-48C2-8652-AC39A1E91D5B}";
+            public const string FundLiterature_FieldId = "{C497ED1B-8CFC-4E2F-BA18-B5E60F40B04F}";
+            public const string AllDocumentsCtaText_FieldId = "{E8DA7B24-C7E1-4481-8B95-23CBA236B58A}";
+            public const string FundUpdateCtaText_FieldId = "{45FBC71C-F3E7-4EA4-8E2A-90624C890371}";
+            public const string ViewFundCtaText_FieldId = "{8975EEEF-70FB-4D50-8C96-1C633A0B999E}";
+            public const string SortLabel_FieldId = "{C416E63E-F51D-46CC-BE24-317C910DA7D2}";
+            public const string FacetsConfiguration_FieldId = "{FC052C32-950E-499D-B07F-0A47A29A76DC}";
+            public const string Title_FieldId = "{E6BF180C-FA50-411F-9892-1DC5F6AD06CA}";
+            public const string SortAZLabel_FieldId = "{0680177D-A5DE-4F84-8CAE-986FD4B00B57}";
+            public const string SortZALabel_FieldId_FieldId = "{EA75175B-B960-4494-BD20-FD5B3B949934}";
         }
     }
 }

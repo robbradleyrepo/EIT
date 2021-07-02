@@ -94,5 +94,13 @@
         {
             public const string BannerTextFieldId = "{3194D921-A018-40C3-AF6F-BCB17E3BBEBC}";
         }
+
+        public static class MyFundsLeadBanner
+        {
+            public const string TitleFieldId = "{50FC7275-F1D5-4391-BFB8-1268DCBD15A4}";
+            public const string CtaFieldId = "{07F07757-D439-4B90-9430-0C3F3D9BF9BF}";
+            public const string CtaGoalFieldId = "{7EEBE834-1B0C-433D-A5B5-BDFB93BE49DE}";
+            public const string BodyFieldId = "{838AB617-CCE0-4319-964E-4FA17315D6BD}";
+        }
     }
 }

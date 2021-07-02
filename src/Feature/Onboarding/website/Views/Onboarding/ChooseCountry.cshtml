@@ -32,7 +32,7 @@
             @Html.Glass().Editable(Model, m => m.Subtitle) @Model.CurrentCountryName
         </div>
         <div class="onboarding-overlay__btns">
-            <button data-set-step="2" class="btn btn-primary onboarding-overlay__set-step" id="correct-location">
+            <button data-set-step="2" data-iso-country="@Model.CurrentCountryIso" data-name-country="@Model.CurrentCountryName" class="btn btn-primary onboarding-overlay__set-step" id="correct-location">
                 @Html.Glass().Editable(Model, m => m.CorrectLoctionText)
                 <i class="icon-arrow-right animate-arrow"></i>
             </button>

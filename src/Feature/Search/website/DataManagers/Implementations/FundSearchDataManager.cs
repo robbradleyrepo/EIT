@@ -182,5 +182,51 @@
 
             return fundSearchResponse;
         }
+
+        public ISearchResponse<IFundContentResult> GetMyFundListingResponse(string database, string fundTeams, string funds, string sortOrder, int page)
+        {
+            page = page - 1;
+
+            var fundSearchRequest = new FundSearchRequest
+            {
+                DatabaseName = database,
+                FundTeams = fundTeams?.Split('|'),
+                Skip = page * 21,
+                Take = 21,
+                Funds = funds?.Split('|'),
+            };
+
+            ContentSearchResults<FundSearchResultItem> contentSearchResults;
+
+            if (sortOrder == "ASC")
+            {
+                contentSearchResults = _fundContentSearchService.GetFunds(fundSearchRequest, result => result.OrderBy(x => x.FundName));
+            }
+            else if (sortOrder == "DESC")
+            {
+                contentSearchResults = _fundContentSearchService.GetFunds(fundSearchRequest, result => result.OrderByDescending(x => x.FundName));
+            }
+            else
+            {
+                contentSearchResults = _fundContentSearchService.GetFunds(fundSearchRequest);
+            }
+
+            var fundSearchResponse = new SearchResponse<IFundContentResult>();
+            if (contentSearchResults.TotalResults > 0)
+            {
+                fundSearchResponse.SearchResults = this.MapFundResultHits(contentSearchResults.SearchResults);
+                fundSearchResponse.StatusMessage = "Success";
+                fundSearchResponse.StatusCode = 200;
+                fundSearchResponse.TotalResults = contentSearchResults.TotalResults;
+            }
+            else
+            {
+                fundSearchResponse.StatusMessage = "No search results found";
+                fundSearchResponse.StatusCode = 404;
+            }
+
+            return fundSearchResponse;
+        }
+
     }
 }

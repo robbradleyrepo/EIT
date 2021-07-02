@@ -31,6 +31,11 @@ export default () => {
   // move to next step
   btnStep.on("click", (e) => {
     e.preventDefault();
+	
+	if(e.target.dataset.isoCountry) {
+		SetCountry(e);
+	}
+	
     const tab = e.target.dataset.setStep;
     showTab(tab);
   });
@@ -51,8 +56,24 @@ export default () => {
   });
 
   // set country
-  $(".set-location__item").on("click", (e) => {
-     $('#Country').val(e.target.dataset.isoCountry);
+  $(".set-location__item").on("click", (e) => {  
+	SetCountry(e);
+    showTab(2);
+  });
+
+  // finish onboarding, close modal
+  $("#submit-board").on("click", () => {
+    onboarding.removeClass("active");
+    $('body').removeClass('overflow-hidden')
+    Cookies.set("agreePolicy", 1, { expires: 365 });
+  });
+
+  $('.onboarding-overlay__link').on('click', function() {
+    $('.onboarding-overlay__scroller').slideToggle();
+  })
+  
+  const SetCountry = (e) => {
+	  $('#Country').val(e.target.dataset.isoCountry);
 	 var acceptText = $('.onboarding-overlay__text');
 	 $(acceptText).text($(acceptText).text().replace("{country}", e.target.dataset.nameCountry));
 
@@ -70,18 +91,5 @@ export default () => {
 		$(".onboarding-overlay__scroller.terms-text").html(data);
 		$('.onboarding-overlay__scroller').toggle();
 	});
-	 	 
-    showTab(2);
-  });
-
-  // finish onboarding, close modal
-  $("#submit-board").on("click", () => {
-    onboarding.removeClass("active");
-    $('body').removeClass('overflow-hidden')
-    Cookies.set("agreePolicy", 1, { expires: 365 });
-  });
-
-  $('.onboarding-overlay__link').on('click', function() {
-    $('.onboarding-overlay__scroller').slideToggle();
-  })
+  }
 };

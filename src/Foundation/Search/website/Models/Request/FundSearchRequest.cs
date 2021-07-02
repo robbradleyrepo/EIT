@@ -14,6 +14,8 @@
 
         public IEnumerable<string> FundRegions { get; set; }
 
+        public IEnumerable<string> Funds { get; set; }
+
         public string SearchTerm { get; set; }
 
         public int Skip { get; set; }

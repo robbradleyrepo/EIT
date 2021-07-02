@@ -80,6 +80,7 @@
     <Content Include="App_Config\Include\Feature\Feature.Search.RegisterContainer.config" />
     <Content Include="App_Config\Include\Feature\Feature.Search.Routes.config" />
     <Content Include="App_Config\Include\Feature\Feature.Search.Serialization.config" />
+    <Content Include="Views\Search\MyFundsLister.cshtml" />
     <Content Include="Views\Search\ArticleLister.cshtml" />
     <Content Include="Views\Search\_Pagination.cshtml" />
     <Content Include="Views\web.config" />
@@ -121,6 +122,7 @@
     <Compile Include="Models\API\Response\FacetsResponse.cs" />
     <Compile Include="Models\API\Response\SearchResponse.cs" />
     <Compile Include="Models\IArticleLister.cs" />
+    <Compile Include="Models\IMyFundsLister.cs" />
     <Compile Include="Models\IFundLister.cs" />
     <Compile Include="Models\IPagination.cs" />
     <Compile Include="Models\API\Response\SiteFacetsResponse.cs" />
@@ -146,6 +148,10 @@
     <ProjectReference Include="..\..\..\Foundation\Analytics\website\LionTrust.Foundation.Analytics.csproj">
       <Project>{71010683-02eb-4e0d-b0e1-6643922799ee}</Project>
       <Name>LionTrust.Foundation.Analytics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Contact\website\LionTrust.Foundation.Contact.csproj">
+      <Project>{8ee89ae6-2e22-48cc-9fa9-f4c9225f76e8}</Project>
+      <Name>LionTrust.Foundation.Contact</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Content\website\LionTrust.Foundation.Content.csproj">
       <Project>{f8f55034-fa55-4d27-b115-0ab4eeb9a0a8}</Project>

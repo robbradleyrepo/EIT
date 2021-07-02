@@ -76,6 +76,19 @@
                 fundFilter = fundFilter.Or(regionPredicate);
             }
 
+            if (fundSearchRequest.Funds != null && fundSearchRequest.Funds.Any())
+            {
+                var fundsPredicate = PredicateBuilder.False<FundSearchResultItem>();
+                fundsPredicate = fundSearchRequest
+                                            .Funds
+                                                    .Aggregate(fundsPredicate,
+                                                                    (current, fund)
+                                                                                => current
+                                                                                     .Or(item => item.ItemId.ToString().Contains(fund)));
+
+                fundFilter = fundFilter.Or(fundsPredicate);
+            }
+
             predicate = predicate.And(fundFilter);
 
             if (!string.IsNullOrEmpty(fundSearchRequest.SearchTerm))
