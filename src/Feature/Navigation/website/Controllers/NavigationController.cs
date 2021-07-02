@@ -6,6 +6,7 @@
     using LionTrust.Feature.Navigation.Models;
     using LionTrust.Feature.Navigation.Repositories;
     using LionTrust.Foundation.Navigation.Helpers;
+    using Sitecore.Abstractions;
     using Sitecore.Mvc.Controllers;
     using Sitecore.Mvc.Presentation;
 
@@ -13,15 +14,13 @@
     {
         private readonly INavigationRepository _navigationRepository;
         private readonly IMvcContext _mvcContext;
+        private readonly BaseLog _log;
 
-        public NavigationController(IMvcContext mvcContext) : this(new NavigationRepository(RenderingContext.Current.ContextItem), mvcContext)
-        {
-        }
-
-        public NavigationController(INavigationRepository navigationRepository, IMvcContext mvcContext)
+        public NavigationController(INavigationRepository navigationRepository, IMvcContext mvcContext, BaseLog log)
         {
             this._navigationRepository = navigationRepository;
             this._mvcContext = mvcContext;
+            this._log = log;
         }
 
         public ActionResult Header()
@@ -41,7 +40,7 @@
                 homeModel = _mvcContext.SitecoreService.GetItem<IHome>(homeItem.ID.Guid);
                 if (homeModel.OnboardingConfiguration != null)
                 {
-                    homeModel.OnboardingRoleName = OnboardingHelper.ProfileRoleName(homeModel.OnboardingConfiguration);                        
+                    homeModel.OnboardingRoleName = OnboardingHelper.ProfileRoleName(homeModel.OnboardingConfiguration, _log);                        
                 }
             }
 

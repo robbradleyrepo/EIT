@@ -223,6 +223,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contact", "Contact", "{1BDC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionTrust.Foundation.Contact", "src\Foundation\Contact\website\LionTrust.Foundation.Contact.csproj", "{8EE89AE6-2E22-48CC-9FA9-F4C9225F76E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionTrust.Foundation.Onboarding.Tests", "src\Foundation\Onboarding\tests\LionTrust.Foundation.Onboarding.Tests\LionTrust.Foundation.Onboarding.Tests.csproj", "{C82AF945-3908-40E1-B401-E2B519D0209A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -445,6 +447,10 @@ Global
 		{8EE89AE6-2E22-48CC-9FA9-F4C9225F76E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EE89AE6-2E22-48CC-9FA9-F4C9225F76E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EE89AE6-2E22-48CC-9FA9-F4C9225F76E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C82AF945-3908-40E1-B401-E2B519D0209A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C82AF945-3908-40E1-B401-E2B519D0209A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C82AF945-3908-40E1-B401-E2B519D0209A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C82AF945-3908-40E1-B401-E2B519D0209A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -550,6 +556,7 @@ Global
 		{78B2A114-3EDA-4CC7-81EB-D096D9BFC0CC} = {BA5B2FC2-AD94-4895-952A-666A15E7E40E}
 		{1BDC1D37-FEEC-4EC6-A0F3-94DA0B845021} = {C3F57797-2D54-4626-B842-51F30272E972}
 		{8EE89AE6-2E22-48CC-9FA9-F4C9225F76E8} = {1BDC1D37-FEEC-4EC6-A0F3-94DA0B845021}
+		{C82AF945-3908-40E1-B401-E2B519D0209A} = {BA5B2FC2-AD94-4895-952A-666A15E7E40E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {845F548C-FD53-4C61-AB7F-953C2225A13B}
