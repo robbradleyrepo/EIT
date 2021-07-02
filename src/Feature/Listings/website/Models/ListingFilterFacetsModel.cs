@@ -2,7 +2,7 @@
 {
     using Newtonsoft.Json;
 
-    public class ListingItemTypeModel
+    public class ListingFilterFacetsModel
     {
         [JsonProperty("name")]
         public string Name { get; set; }

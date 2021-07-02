@@ -23,10 +23,24 @@
 
         private Expression<Func<GenericSearchResultItem, bool>> PopoulateDatedTaxonomyPredicate(Expression<Func<GenericSearchResultItem, bool>> predicate, GenericSearchRequest genericSearchRequest)
         {
-            predicate = predicate.And(x => x.Created > genericSearchRequest.FromDate);
-            predicate = predicate.And(x => x.Created < genericSearchRequest.ToDate);
-
             var taxonomyFilter = PredicateBuilder.True<GenericSearchResultItem>();
+            if (genericSearchRequest.Months != null && genericSearchRequest.Months.Any())
+            {
+                var monthPredicate = PredicateBuilder.False<GenericSearchResultItem>();
+                monthPredicate = genericSearchRequest.Months.Aggregate(monthPredicate,
+                                                                          (current, month) => current
+                                                                                                  .Or(item => item.Month == month));
+                taxonomyFilter = taxonomyFilter.And(monthPredicate);
+            }
+
+            if (genericSearchRequest.Years != null && genericSearchRequest.Years.Any())
+            {
+                var yearPredicate = PredicateBuilder.False<GenericSearchResultItem>();
+                yearPredicate = genericSearchRequest.Years.Aggregate(yearPredicate,
+                                                                          (current, year) => current
+                                                                                                  .Or(item => item.Year == year));
+                taxonomyFilter = taxonomyFilter.And(yearPredicate);
+            }
                         
             if (genericSearchRequest.ListingType != null && genericSearchRequest.ListingType.Any())
             {
@@ -35,10 +49,11 @@
                                                                           (current, listingType) => current
                                                                                                   .Or(item => item.GenericListingType == IdHelper.NormalizeGuid(listingType, true)));
 
-                taxonomyFilter = taxonomyFilter.Or(listingTypePredicate);
-                predicate = predicate.And(taxonomyFilter);
+                taxonomyFilter = taxonomyFilter.And(listingTypePredicate);                
             }
-                        
+
+            predicate = predicate.And(taxonomyFilter);
+
             if (!string.IsNullOrEmpty(genericSearchRequest.SearchTerm))
             {
                 var searchTermPredicate = PredicateBuilder.False<GenericSearchResultItem>();

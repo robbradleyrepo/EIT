@@ -31,39 +31,45 @@
 
         public GenericListerFacetResponse GetGenericListingFilterFacets(Guid genericFilterFacetConfigId)
         {
-            var filterFacetConfigItem = _contentRepository.GetItem<IGenericListingFacetsConfig>(new GetItemByIdOptions(genericFilterFacetConfigId));
+            var filterFacetConfigItem = _contentRepository.GetItem<IGenericListingFilters>(new GetItemByIdOptions(genericFilterFacetConfigId));
 
             var listingGenericListingResponse = new GenericListerFacetResponse();
-            if (filterFacetConfigItem == null 
-                    || filterFacetConfigItem.ListingTypeList == null)
+            listingGenericListingResponse.Facets = new GenericListingFacets();
+            if (filterFacetConfigItem != null)
             {
-                return null;
+                if (filterFacetConfigItem.ListingTypeList != null)
+                {
+                    listingGenericListingResponse.Facets.ListingItemTypes = filterFacetConfigItem.ListingTypeList.Select(x => new ListingFilterFacetsModel { Name = x.ListingItemTypeName, Identifier = x.Id.ToString() });
+                }
+
+                if (filterFacetConfigItem.Months != null)
+                {
+                    listingGenericListingResponse.Facets.Months = filterFacetConfigItem.Months.Select(x=> new ListingFilterFacetsModel { Name = x.Title, Identifier = x.Value });
+                }
+
+                if (filterFacetConfigItem.Years != null)
+                {
+                    listingGenericListingResponse.Facets.Years = filterFacetConfigItem.Years.Select(x => new ListingFilterFacetsModel { Name = x.Title, Identifier = !string.IsNullOrEmpty(x.Value) ? x.Value : x.Name });
+                }
             }
-            listingGenericListingResponse.Facets = new GenericListingFacets {
-                ListingItemTypes = filterFacetConfigItem.ListingTypeList.Select(x => new ListingItemTypeModel { Name = x.ListingItemTypeName, Identifier = x.Id.ToString() })
-            };
 
             return listingGenericListingResponse;
         }
 
-        public IGenericSearchResponse GetGenericListingResponse(string database, string parent, string listingType, int? month, int? year, string searchTerm, int page)
+        public IGenericSearchResponse GetGenericListingResponse(string database, string parent, string listingType, List<int> months, List<int> years, string searchTerm, int page)
         {
-            var fromYear = year ?? 2000;
-            var fromMonth = month ?? 1;
-            var toYear = year ?? DateTime.Now.Year + 1;
-            var toMonth = month ?? 12;
             page = page - 1;
 
             var genericSearchRequest = new GenericSearchRequest
             {
                 DatabaseName = database,
-                FromDate = new DateTime(fromYear, fromMonth, 1),
                 Parent = parent,
                 ListingType = listingType?.Split('|'),
+                Months = months,
+                Years = years,
                 SearchTerm = searchTerm,
                 Skip = page * 21,
-                Take = 21,
-                ToDate = new DateTime(toYear, toMonth, DateTime.DaysInMonth(toYear, toMonth))
+                Take = 21
             };
 
             GenericSearchResults contentSearchResults;

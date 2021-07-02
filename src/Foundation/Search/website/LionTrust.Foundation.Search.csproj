@@ -43,6 +43,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Glass.Mapper.Sc.92">
+      <Version>5.8.177</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="1.0.5" />
     <PackageReference Include="Microsoft.Net.Compilers" Version="2.1.0" />
     <PackageReference Include="Sitecore.ContentSearch" Version="9.2.0" />
@@ -55,12 +58,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ComputedFields\AllTemplatesIndexField.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="JsonExtension\JsonDateConverter.cs" />
     <Compile Include="Models\ContentSearch\ContentSearchResults.cs" />
     <Compile Include="Models\API\Dates.cs" />
     <Compile Include="Models\ContentSearch\GenericSearchResultItem.cs" />
     <Compile Include="Models\ContentSearch\GenericSearchResults.cs" />
+    <Compile Include="Models\IFacetItem.cs" />
     <Compile Include="Models\IGenericContentResult.cs" />
     <Compile Include="Models\ITaxonomyContentResult.cs" />
     <Compile Include="Models\Request\ArticleSearchRequest.cs" />
@@ -80,12 +85,18 @@
     <Compile Include="Services\Interfaces\IGenericContentSearchService.cs" />
     <Compile Include="Services\Interfaces\IArticleContentSearchService.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\ORM\website\LionTrust.Foundation.ORM.csproj">
+      <Project>{5e91a7d9-8e93-44fd-857f-f9ce145b6022}</Project>
+      <Name>LionTrust.Foundation.ORM</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Foundation\Foundation.Search.RegisterFields.config">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Config\Include\Foundation\Foundation.Search.RegisterContainer.config" />
+    <Content Include="App_Config\Include\Foundation\Foundation.Search.Serialization.config" />
     <None Include="Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

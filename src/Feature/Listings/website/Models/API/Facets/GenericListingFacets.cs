@@ -5,6 +5,8 @@
 
     public class GenericListingFacets
     {
-        public IEnumerable<ListingItemTypeModel> ListingItemTypes { get; set; }
+        public IEnumerable<ListingFilterFacetsModel> ListingItemTypes { get; set; }
+        public IEnumerable<ListingFilterFacetsModel> Years { get; set; }
+        public IEnumerable<ListingFilterFacetsModel> Months { get; set; }
     }
 }

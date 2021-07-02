@@ -1,4 +1,4 @@
-﻿namespace LionTrust.Foundation.Indexing.ComputedFields.Article
+﻿namespace LionTrust.Foundation.Indexing.ComputedFields.GenericListingModuleItem
 {
     using LionTrust.Foundation.Indexing.ComputedFields.SharedLogic;
     using Sitecore.Configuration;

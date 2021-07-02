@@ -22,10 +22,16 @@
         [IndexField("genericlistingmoduleitem_listingtype")]
         public string GenericListingType { get; set; }
 
-        [IndexField("__Created")]
-        public DateTime Created { get; set; }
+        [IndexField("genericlistingmoduleitem_year")]
+        public int Year { get; set; }
+
+        [IndexField("genericlistingmoduleitem_month")]
+        public int Month { get; set; }
 
         [IndexField("_parent")]
         public Guid GenericListingParent { get; set; }
+
+        [IndexField("__Created")]
+        public DateTime Created { get; set; }
     }
 }

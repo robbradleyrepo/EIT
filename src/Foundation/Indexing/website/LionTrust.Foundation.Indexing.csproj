@@ -87,6 +87,8 @@
     <Compile Include="ComputedFields\Fund\FundPageUrl.cs" />
     <Compile Include="ComputedFields\GenericListingModuleItem\ListingTypeName.cs" />
     <Compile Include="ComputedFields\GenericListingModuleItem\ImageProtected.cs" />
+    <Compile Include="ComputedFields\GenericListingModuleItem\Month.cs" />
+    <Compile Include="ComputedFields\GenericListingModuleItem\Year.cs" />
     <Compile Include="ComputedFields\SharedLogic\ComputedValueHelper.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Models\IQuery.cs" />

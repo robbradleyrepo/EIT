@@ -1,6 +1,8 @@
 ﻿namespace LionTrust.Feature.Listings.Controllers
 {
     using System;
+    using System.Collections.Generic;
+    using System.Linq;
     using System.Web.Mvc;
     using LionTrust.Feature.Listings.DataManagers.Interfaces;
     using Sitecore.Mvc.Controllers;
@@ -33,9 +35,9 @@
             }           
         }
 
-        public ActionResult GetFilteredResults(string listingType, string parentId, int? month, int? year, string searchTerm, string database = "web", int page = 1)
+        public ActionResult GetFilteredResults(string listingType, string parentId, List<int> months, List<int> years, string searchTerm, string database = "web", int page = 1)
         {
-            var response = this._genericListingDataManager.GetGenericListingResponse(database, parentId, listingType, month, year, searchTerm, page);
+            var response = this._genericListingDataManager.GetGenericListingResponse(database, parentId, listingType, months?.ToList(), years?.ToList(), searchTerm, page);
             if (response.StatusCode != 200)
             {
                 return new HttpStatusCodeResult(response.StatusCode, response.StatusMessage);

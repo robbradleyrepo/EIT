@@ -1,23 +1,22 @@
 ﻿---
-ID: "7474cfba-30cc-4e88-9fc5-0848fce4c77c"
+ID: "b2601592-66da-421f-9327-44fb8b433df6"
 Parent: "e9bb794a-b514-4ff5-8386-008fda7f7f66"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Project/LionTrust/Content Types/GenericListingModule
+Path: /sitecore/templates/Project/LionTrust/Content Types/FacetItem
 DB: master
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
-  Value: people/32x32/books.png
+  Value: Office/32x32/radio_button_group.png
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
   Type: tree list
   Value: |
     {1930BBEB-7805-471A-A3BE-4858AC7CF696}
-    {E271B759-F311-402A-B779-46FF36FBC1EF}
-    {25AF7718-706A-44AF-9B09-B8F1E312AAF5}
+    {3E88E7D4-0152-4103-B8FD-D7E866005981}
 - ID: "f7d48a55-2158-4f02-9356-756654404f73"
   Hint: __Standard values
-  Value: "{D9FCA639-C5E1-481D-9B51-89CFDA197F21}"
+  Value: "{AF4BA807-3AE7-4537-8AD6-E9DD8C68FFDC}"
 Languages:
 - Language: en
   Versions:
@@ -25,8 +24,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20140916T102536Z
-    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
-      Hint: __Created by
-      Value: |
-        sitecore\admin
+      Value: 20210702T073233Z

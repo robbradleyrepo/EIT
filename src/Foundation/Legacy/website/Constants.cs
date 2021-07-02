@@ -202,6 +202,7 @@ namespace LionTrust.Foundation.Legacy
         public static class GenericListingModule
         {
             public const string Title_FieldID = "{3C5309E0-2068-4614-984E-F1AE3D04C026}";
+            public const string ListingTypeList_FieldId = "{882BBA30-5BFE-41D6-AC98-A85BEC219EE0}";
         }
 
         public static class GenericListingModuleItem

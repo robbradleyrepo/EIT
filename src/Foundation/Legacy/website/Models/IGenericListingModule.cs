@@ -10,5 +10,8 @@
 
         [SitecoreField(Constants.GenericListingModule.Title_FieldID)]
         string Title { get; set; }
+
+        [SitecoreField(Constants.GenericListingModule.ListingTypeList_FieldId)]
+        IEnumerable<IListingItemType> ListingTypeList { get; set; }
     }
 }

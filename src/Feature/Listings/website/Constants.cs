@@ -81,6 +81,8 @@
         {
             public const string GenericListingFacetsConfig = "{D61FC1B3-9969-4F95-8796-FEFBC864CA1F}";
             public const string ListingTypeList_FieldId = "{882BBA30-5BFE-41D6-AC98-A85BEC219EE0}";
+            public const string YearsList_FieldId = "{EBCE5416-BA23-40D1-8FBB-58487F247107}";
+            public const string MonthsList_FieldId = "{EC94129F-5DAF-484D-852F-551008F7B82C}";
         }
 
         public static class Settings

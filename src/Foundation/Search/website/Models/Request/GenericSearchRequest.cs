@@ -9,18 +9,18 @@ namespace LionTrust.Foundation.Search.Models.Request
     {
         public string DatabaseName { get; set; }
 
-        public DateTime FromDate { get; set; }
-
         public string Parent { get; set; }
 
         public IEnumerable<string> ListingType { get; set; }
+
+        public IEnumerable<int> Years { get; set; }
+
+        public IEnumerable<int> Months { get; set; }
 
         public string SearchTerm { get; set; }
 
         public int Skip { get; set; }
 
         public int Take { get; set; }
-
-        public DateTime ToDate { get; set; }
     }
 }
