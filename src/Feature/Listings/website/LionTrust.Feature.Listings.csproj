@@ -106,8 +106,8 @@
     <Compile Include="Models\Document.cs" />
     <Compile Include="Models\DocumentModel.cs" />
     <Compile Include="Models\GenericListingResponse.cs" />
+    <Compile Include="Models\API\Facets\GenericListingFacet.cs" />
     <Compile Include="Models\API\Response\GenericListerFacetResponse.cs" />
-    <Compile Include="Models\API\Facets\GenericListingFacets.cs" />
     <Compile Include="Models\API\Response\GenericListingSearchResponse.cs" />
     <Compile Include="Models\IAccordionModel.cs" />
     <Compile Include="Models\IAccordionRenderingParameters.cs" />

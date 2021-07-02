@@ -34,22 +34,22 @@
             var filterFacetConfigItem = _contentRepository.GetItem<IGenericListingFilters>(new GetItemByIdOptions(genericFilterFacetConfigId));
 
             var listingGenericListingResponse = new GenericListerFacetResponse();
-            listingGenericListingResponse.Facets = new GenericListingFacets();
+            listingGenericListingResponse.Facets = new List<GenericListingFacet>();
             if (filterFacetConfigItem != null)
             {
                 if (filterFacetConfigItem.ListingTypeList != null)
                 {
-                    listingGenericListingResponse.Facets.ListingItemTypes = filterFacetConfigItem.ListingTypeList.Select(x => new ListingFilterFacetsModel { Name = x.ListingItemTypeName, Identifier = x.Id.ToString() });
+                    listingGenericListingResponse.Facets.Add(new GenericListingFacet { Name = "ListingType", Items = filterFacetConfigItem.ListingTypeList.Select(x => new ListingFilterFacetsModel { Name = x.ListingItemTypeName, Identifier = x.Id.ToString() }) });
                 }
 
                 if (filterFacetConfigItem.Months != null)
                 {
-                    listingGenericListingResponse.Facets.Months = filterFacetConfigItem.Months.Select(x=> new ListingFilterFacetsModel { Name = x.Title, Identifier = x.Value });
+                    listingGenericListingResponse.Facets.Add(new GenericListingFacet { Name = "Month", Items = filterFacetConfigItem.Months.Select(x => new ListingFilterFacetsModel { Name = x.Title, Identifier = x.Value }) });
                 }
 
                 if (filterFacetConfigItem.Years != null)
                 {
-                    listingGenericListingResponse.Facets.Years = filterFacetConfigItem.Years.Select(x => new ListingFilterFacetsModel { Name = x.Title, Identifier = !string.IsNullOrEmpty(x.Value) ? x.Value : x.Name });
+                    listingGenericListingResponse.Facets.Add(new GenericListingFacet { Name = "Year", Items = filterFacetConfigItem.Years.Select(x => new ListingFilterFacetsModel { Name = x.Title, Identifier = !string.IsNullOrEmpty(x.Value) ? x.Value : x.Name }) });
                 }
             }
 
