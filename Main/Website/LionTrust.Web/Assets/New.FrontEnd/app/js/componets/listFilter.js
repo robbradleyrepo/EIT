@@ -243,8 +243,7 @@ export default () => {
           url: `${root}api/sitecore/FundLiterature/GetOverlayHtml?fundId=${fundId}&literatureId=${literatureId}`,
         }).done(function (data) {
           console.log('data',data);
-          $(".onboarding-overlay__scroller.terms-text").html(data);
-          $(".onboarding-overlay__scroller").toggle();
+          $(".lit-overlay__wrapper").html(data).addClass("active");
         });
       },
     },

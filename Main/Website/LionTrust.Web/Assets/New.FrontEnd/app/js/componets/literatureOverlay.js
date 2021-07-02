@@ -4,7 +4,7 @@ export default () => {
     $(".sidebar-overlay").addClass("sidebar-overlay_active");
   });
 
-  $("#lit-overlay-close").on("click", () => {
+  $(document).on("click", "#lit-overlay-close", () => {
     $(".lit-overlay__wrapper").removeClass("active");
     $(".sidebar-overlay").removeClass("sidebar-overlay_active");
   });
