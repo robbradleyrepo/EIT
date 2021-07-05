@@ -3,7 +3,7 @@
     .container-left-gutter
         @if $size >= 1200
             @include breakpoint($name, up)
-                margin-left: calc((100vw - #{$size}px) / 2)!important
+                margin-left: calc((100vw - #{$size}px - 16px) / 2)!important
                 max-width: 100%!important
         @else
             padding-left: var(--bs-gutter-x,16px)
