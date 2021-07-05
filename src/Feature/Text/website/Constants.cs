@@ -43,5 +43,11 @@
             public const string Title_FieldId = "{8C8CC08F-ECCB-4544-B939-00894079DF35}";
             public const string Text_FieldId = "{00B4400B-5D7B-48DD-AC49-27CC563E4047}";
         }
+
+        public static class FreeTextModule
+        {
+            public const string Title_FieldId = "{BED8EAD5-C4A6-4257-88B2-0B530F6BA84D}";
+            public const string Body_FieldId = "{32A56573-5DA9-4172-97AD-7CB45F2077F4}";
+        }
     }
 }
