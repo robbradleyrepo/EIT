@@ -47,11 +47,11 @@
             {
                 if (sortyByAZ)
                 {
-                    documentsListSorted = documentLister.DocumentList.Select(x => new DocumentModel { Title = x.DocumentName, DocumentLink = x.DocumentLink?.Url, DocumentLinkText = x.DocumentLink?.Text, DocumentPageLink = x.Url }).OrderBy(x => x.Title).Skip((page - 1)*resultsPerPage).Take(resultsPerPage);
+                    documentsListSorted = documentLister.DocumentList.Select(x => new DocumentModel { Title = x.DocumentName, DocumentLink = x.DocumentLink?.Url, DocumentLinkText = x.DocumentLink?.Text, DocumentPageLink = x.Url, DocumentId = x.Id, DocumentVideoLink = x.VideoLink?.Url }).OrderBy(x => x.Title).Skip((page - 1)*resultsPerPage).Take(resultsPerPage);
                 }
                 else
                 {
-                    documentsListSorted = documentLister.DocumentList.Select(x => new DocumentModel { Title = x.DocumentName, DocumentLink = x.DocumentLink?.Url, DocumentLinkText = x.DocumentLink?.Text, DocumentPageLink = x.Url }).OrderByDescending(x => x.Title).Skip((page - 1) * resultsPerPage).Take(resultsPerPage);
+                    documentsListSorted = documentLister.DocumentList.Select(x => new DocumentModel { Title = x.DocumentName, DocumentLink = x.DocumentLink?.Url, DocumentLinkText = x.DocumentLink?.Text, DocumentPageLink = x.Url, DocumentVideoLink = x.VideoLink?.Url }).OrderByDescending(x => x.Title).Skip((page - 1) * resultsPerPage).Take(resultsPerPage);
                 }
             }
 

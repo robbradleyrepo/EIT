@@ -172,6 +172,8 @@ namespace LionTrust.Foundation.Legacy
             public const string ArchivedDate_FieldName = "LegacyDocument_ArchivedDate";
             public const string ArchivedDate_FieldId = "{7EE62633-2012-42E3-8C62-C6051EA0CD19}";
 
+            public const string VideoLink_FieldId = "{6422E263-957B-4BC4-B063-6DD40ED3FA22}";
+
             public const string TemplateId = "{DD62AA1C-9EF9-4891-BA5E-53056A2FE480}";
         }
 

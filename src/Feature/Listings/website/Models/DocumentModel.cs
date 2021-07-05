@@ -1,6 +1,7 @@
 ﻿namespace LionTrust.Feature.Listings.Models
 {
     using Newtonsoft.Json;
+    using System;
 
     public class DocumentModel
     {
@@ -18,5 +19,8 @@
 
         [JsonProperty("documentVideoLink")]
         public string DocumentVideoLink { get; set; }
+
+        [JsonProperty("documentId")]
+        public Guid DocumentId { get; set; }
     }
 }
