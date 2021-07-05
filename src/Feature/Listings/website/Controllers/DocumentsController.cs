@@ -4,6 +4,7 @@
     using ICSharpCode.SharpZipLib.Zip;
     using LionTrust.Feature.Listings.Helpers;
     using LionTrust.Feature.Listings.Models;
+    using LionTrust.Foundation.Core.ActionResults;
     using Sitecore.Mvc.Controllers;
     using System;
     using System.Collections.Generic;
@@ -41,7 +42,7 @@
                 }
             }
 
-            return JsonCamelResult(documentsListSorted, JsonRequestBehavior.AllowGet);
+            return new JsonCamelCaseResult(documentsListSorted, JsonRequestBehavior.AllowGet);
         }
 
         [HttpPost]
