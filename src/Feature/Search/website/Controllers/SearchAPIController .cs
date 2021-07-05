@@ -6,7 +6,7 @@
     using LionTrust.Foundation.Contact.Services;
     using Sitecore.Analytics;
     using LionTrust.Foundation.Core.ActionResults;
-    using Sitecore.Analytics;    
+    using LionTrust.Feature.Search.DataManagers.Interfaces;   
     using Sitecore.Mvc.Controllers;
 
     public class SearchAPIController : SitecoreController
