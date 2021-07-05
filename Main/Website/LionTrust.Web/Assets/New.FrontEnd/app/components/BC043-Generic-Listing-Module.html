@@ -87,35 +87,22 @@
     <section class="container">
         <div class="row">
             <div class="col-lg-6">
-                <div class="list-mod-item">
-                    <h2 class="list-mod-item__title">Lorem ipsum dolor sit amet consectetur adipiscing elit sed
-                        do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua</h2>
-                    <span class="list-mod-item__date">21.02.2020</span>
-                    <div class="list-mod-item__content">
-                        <p>
-                            Liontrust Asset Management Plc (“Liontrust” or the “Company”), the specialist
-                            independent fund management group, today announces that its indirect subsidiaries,
-                            Liontrust Investment Partners LLP and Liontrust Fund Partners LLP (together the
-                            “Liontrust Sellers”), have entered into a conditional agreement (the “Agreement”) to
-                            sell (the “Sale”) the Asia Income investment team (the “Asia Income Team”) to
-                            Somerset Capital Management LLP (“Somerset”).
-                        </p>
-                        <p>
-                            Mark Williams, Carolyn Chan and Shashank Savla, the members of the Asia Income Team,
-                            will join Somerset. The Sale
-                            includes the right to manage the Liontrust Asia Income Fund (the “Fund”). The
-                            Liontrust GF Asia Income Fund is not part of the Sale and will be closed.
-                        </p>
-                        <p>
-                            Liontrust also announces the closure of the European Income and Macro Thematic
-                            investment teams (“Team Closures”).
-                        </p>
-                        <a href="#">
-                            read more
-                        </a>
+                <article-item inline-template v-for="(article, i) in searchData" :key="i">
+                    <div class="list-mod-item">
+                        <h2 class="list-mod-item__title">{{article.title}}</h2>
+                        <span class="list-mod-item__date">{{article.date}}</span>
+                        <div class="list-mod-item__content">
+                            <p>
+                                {{article.subtitle}}
+                            </p>
+                            
+                            <a href="#">
+                                {{article.text}}
+                            </a>
+                        </div>
                     </div>
-                </div>
+                </article-item>
+                
                 <div class="list-mod-item">
                     <h2 class="list-mod-item__title">
                         Lorem ipsum dolor sit amet consectetur adipiscing elit sed
