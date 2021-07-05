@@ -2,10 +2,10 @@
 {
     using System;
     using System.Web.Mvc;
-    using LionTrust.Feature.Search.ActionResults;
     using LionTrust.Feature.Search.DataManagers.Interfaces;
     using LionTrust.Foundation.Contact.Services;
     using Sitecore.Analytics;
+    using LionTrust.Foundation.Core.ActionResults;
     using Sitecore.Mvc.Controllers;
 
     public class SearchAPIController : SitecoreController

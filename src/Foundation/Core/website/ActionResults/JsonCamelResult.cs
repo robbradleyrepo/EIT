@@ -1,4 +1,4 @@
-﻿namespace LionTrust.Feature.Search.ActionResults
+﻿namespace LionTrust.Foundation.Core.ActionResults
 {
     using Newtonsoft.Json;
     using Newtonsoft.Json.Serialization;
