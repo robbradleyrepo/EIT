@@ -5,6 +5,7 @@
     using System.Linq;
     using System.Web.Mvc;
     using LionTrust.Feature.Listings.DataManagers.Interfaces;
+    using LionTrust.Foundation.Core.ActionResults;
     using Sitecore.Mvc.Controllers;
 
     public class GenericListingApiController : SitecoreController
@@ -27,7 +28,7 @@
                     return Content("Configuration ID could not be parsed as a Guid");
                 }
                 var response = _genericListingDataManager.GetGenericListingFilterFacets(config);
-                return Json(response, JsonRequestBehavior.AllowGet);
+                return new JsonCamelCaseResult(response, JsonRequestBehavior.AllowGet);
             }
             else
             {
@@ -43,7 +44,7 @@
                 return new HttpStatusCodeResult(response.StatusCode, response.StatusMessage);
             }
             var responseJson = Json(response);
-            return Json(response, JsonRequestBehavior.AllowGet);
+            return new JsonCamelCaseResult(response, JsonRequestBehavior.AllowGet);
         }
     }
 }

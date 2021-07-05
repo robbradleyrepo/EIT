@@ -3,7 +3,7 @@
     using LionTrust.Foundation.Search.Models.API;
     using Newtonsoft.Json;
 
-    public class ArticleFacetsResponse
+    public class ArticleFacetsResponse : FacetsResponse
     {
         public Dates Dates = new Dates();
     }
