@@ -88,6 +88,7 @@
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\AccordionController.cs" />
     <Compile Include="Controllers\DocumentsController.cs" />
+    <Compile Include="Helpers\DocumentHelper.cs" />
     <Compile Include="Models\AccordionViewModel.cs" />
     <Compile Include="Models\Document.cs" />
     <Compile Include="Models\DocumentModel.cs" />
@@ -110,6 +111,10 @@
     <ProjectReference Include="..\..\..\Foundation\Content\website\LionTrust.Foundation.Content.csproj">
       <Project>{f8f55034-fa55-4d27-b115-0ab4eeb9a0a8}</Project>
       <Name>LionTrust.Foundation.Content</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Core\website\LionTrust.Foundation.Core.csproj">
+      <Project>{0c1e2fec-ac54-4cf0-905a-890d3bf711d5}</Project>
+      <Name>LionTrust.Foundation.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Design\website\LionTrust.Foundation.Design.csproj">
       <Project>{7F86DD63-BE79-4107-804A-514DCA76E01E}</Project>
