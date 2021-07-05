@@ -1,0 +1,27 @@
+﻿---
+ID: "3531460d-08c1-45f2-9bc2-d993e03e3ad3"
+Parent: "dee59db0-b8de-45d6-b615-5ef873f84bca"
+Template: "dee59db0-b8de-45d6-b615-5ef873f84bca"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Fund/Performance Table/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "21554471-1768-4c04-9a5d-a5fab1b4d8f4"
+      Hint: PerformanceTable_QuartileRowName
+      Value: Quartile Ranking
+    - ID: "24b821f2-896b-4bbe-ab3a-6c943a3d8b8f"
+      Hint: PerformanceTable_TableHeadingLabel
+      Value: "To previous quarter 12 months ending:"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210702T132546Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8ff8ecb3-3ca7-47d7-89df-76e1df36ba79"
+      Hint: PerformanceTable_ColumnMonth
+      Value: Dec
