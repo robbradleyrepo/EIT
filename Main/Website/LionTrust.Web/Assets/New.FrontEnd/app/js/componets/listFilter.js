@@ -188,54 +188,61 @@ export default () => {
   });
 };
 
-Vue.component("select-field", {
-  data: function () {
-    return {
-      open: false,
-    };
-  },
-  methods: {
-    toggleOption() {
-      this.open = !this.open;
+  Vue.component("select-field", {
+    data: function () {
+      return {
+        open: false,
+      };
     },
-    clearOption() {
-      this.$emit("clearOptionField");
+    methods: {
+      toggleOption() {
+        this.open = !this.open;
+      },
+      clearOption() {
+        this.$emit("clearOptionField");
+      },
     },
-  },
-  mounted() {
-    document.querySelector("body").addEventListener("click", () => {
-      this.open = false;
-    });
-  },
-  created() {
-    this.$parent.$on("clearOption", this.clearOption);
-  },
-});
-
-Vue.component("option-field", {
-  data: function () {
-    return {
-      checked: false,
-    };
-  },
-  methods: {
-    clearChecked() {
-      this.checked = false;
+    mounted() {
+      document.querySelector("body").addEventListener("click", () => {
+        this.open = false;
+      });
     },
-  },
-  created: function () {
-    this.$parent.$on("clearOptionField", this.clearChecked);
-  },
-});
+    created() {
+      this.$parent.$on("clearOption", this.clearOption);
+    },
+  });
 
-Vue.component("article-item", {
-  data: function () {
-    return {};
-  },
-});
+  Vue.component("option-field", {
+    data: function () {
+      return {
+        checked: false,
+      };
+    },
+    methods: {
+      clearChecked() {
+        this.checked = false;
+      },
+    },
+    created: function () {
+      this.$parent.$on("clearOptionField", this.clearChecked);
+    },
+  });
 
-Vue.component("fund-item", {
-  data: function () {
-    return {};
-  },
-});
+  Vue.component("article-item", {
+    data: function () {
+      return {};
+    },
+  });
+
+  Vue.component("fund-item", {
+    data: function () {
+      return {};
+    },
+  });
+
+  Vue.component("document-item", {
+    data: function () {
+      return {};
+    },
+  });
+};
