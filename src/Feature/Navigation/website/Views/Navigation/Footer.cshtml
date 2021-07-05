@@ -25,7 +25,7 @@
                             </ul>
                             @if (Model.FooterConfiguration.GoogleMapsLink != null || Sitecore.Context.PageMode.IsExperienceEditor)
                             {
-                                using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model.FooterConfiguration, m => m.GoogleMapsLink, Model.FooterConfiguration.GoogleMapsGoal, new NameValueCollection { { "class", "footer__map-link" } }, isEditable: true))
+                                using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model.FooterConfiguration, m => m.GoogleMapsLink, Model.FooterConfiguration.GoogleMapsGoal, new NameValueCollection { { "class", "footer__map-link" }, { "target", "_blank"} }, isEditable: true))
                                 {
                                     if (!string.IsNullOrEmpty(Model.FooterConfiguration.GoogleMapsLink.Text))
                                     {

@@ -4,11 +4,18 @@
 		var $goalURL = "https://" + document.domain + "/-/media/foundation/analytics/pixel?sc_trk=" + $goalId;
 		$.get($goalURL);
 	}
+	var $windowOpen = $(this).attr("target");
 	var $target = $(this).attr("href");
+	
 	if ($target) {
 		e.preventDefault();
 		// Use setTimeout to allow for the above get call to complete
-		setTimeout(function () { window.location = $target; }, 500);
+		if ($windowOpen) {
+			window.open($target);
+		}
+		else {
+			setTimeout(function () { window.location = $target; }, 500);
+		}
 	}
 });
 
