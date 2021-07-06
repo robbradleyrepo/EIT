@@ -25,6 +25,12 @@
                 if (documentItem != null)
                 {
                     LinkField documentDownloadLink = documentItem.Fields[Foundation.Legacy.Constants.Document.DownloadLink_FieldId];
+
+                    if (documentDownloadLink == null)
+                    {
+                        return null;
+                    }
+
                     var documentMediaItemId = documentDownloadLink.TargetID;
 
                     if (documentMediaItemId != ID.Null)
