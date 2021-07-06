@@ -86,8 +86,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Analytics\IProfileCardManager.cs" />
+    <Compile Include="Analytics\ProfileCardManager.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\OnboardingController.cs" />
+    <Compile Include="ITrackerResolver.cs" />
     <Compile Include="Models\IChooseCountry.cs" />
     <Compile Include="Models\IChooseInvestorRole.cs" />
     <Compile Include="Models\ICountry.cs" />
@@ -98,6 +101,7 @@
     <Compile Include="Models\IRegion.cs" />
     <Compile Include="Models\OnboardingViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrackerResolver.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Onboarding\ChooseCountry.cshtml" />
@@ -121,6 +125,10 @@
     <ProjectReference Include="..\..\..\Foundation\Design\website\LionTrust.Foundation.Design.csproj">
       <Project>{7f86dd63-be79-4107-804a-514dca76e01e}</Project>
       <Name>LionTrust.Foundation.Design</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\DI\website\LionTrust.Foundation.DI.csproj">
+      <Project>{0D3A6F11-B5FF-4D8C-8A74-19501D2E80D4}</Project>
+      <Name>LionTrust.Foundation.DI</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Legacy\website\LionTrust.Foundation.Legacy.csproj">
       <Project>{43ee972b-2002-4719-a878-a66a99c42c40}</Project>

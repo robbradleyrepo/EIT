@@ -1,8 +1,9 @@
 ﻿namespace LionTrust.Feature.Onboarding.Controllers
 {
     using Glass.Mapper.Sc.Web.Mvc;
+    using LionTrust.Feature.Onboarding.Analytics;
     using LionTrust.Feature.Onboarding.Models;
-    using LionTrust.Foundation.Onboarding.Models;
+    using Sitecore.Abstractions;
     using Sitecore.Analytics;
     using Sitecore.Analytics.Model;
     using Sitecore.Analytics.Model.Entities;
@@ -15,17 +16,21 @@
     using System.Linq;
     using System.Web;
     using System.Web.Mvc;
-    using System.Xml.Linq;
     using static LionTrust.Feature.Onboarding.Constants;
 
     public class OnboardingController : SitecoreController
     {
         private IMvcContext _context;
+        private readonly BaseLog _log;
+        private readonly IProfileCardManager _cardManager;
         private ITracker _tracker;
-        public OnboardingController(IMvcContext context)
+
+        public OnboardingController(IMvcContext context, BaseLog log, ITrackerResolver resolver, IProfileCardManager cardManager)
         {
             _context = context;
-            _tracker = Tracker.Current;
+            this._log = log;
+            this._cardManager = cardManager;
+            _tracker = resolver.GetTracker();
         }
 
         public ActionResult Render()
@@ -144,6 +149,11 @@
                 {
                     return null;
                 }
+                else if (data.OnboardingConfiguration.Profile == null)
+                {
+                    _log.Error("Onboarding configuration profile has not been set", this);
+                    return null;
+                }
                 else
                 {
                     var profile = GetProfile(data.OnboardingConfiguration.Profile.Name, true);
@@ -153,11 +163,11 @@
 
                         if (OnboardingSubmit.Role == Roles.Private)
                         {
-                            AddPointsFromProfileCard(data.OnboardingConfiguration.PrivateProfileCard, profile);
+                            _cardManager.AddPointsFromProfileCard(data.OnboardingConfiguration.PrivateProfileCard, profile);
                         }
                         else if (OnboardingSubmit.Role == Roles.Profressional)
                         {
-                            AddPointsFromProfileCard(data.OnboardingConfiguration.ProfressionalProfileCard, profile);
+                            _cardManager.AddPointsFromProfileCard(data.OnboardingConfiguration.ProfressionalProfileCard, profile);
                         }
                     }
                 }
@@ -257,43 +267,6 @@
 
             return profile;
 
-        }
-
-        private void AddPointsFromProfileCard(IProfileCard profileCard, Profile profile)
-        {
-            var scores = new Dictionary<string, double>();
-
-            if (profileCard != null)
-            {
-                var xmlData = XDocument.Parse(profileCard.ProfileCardValue);
-                var xmlDoc = xmlData;
-
-                if (xmlDoc != null)
-                {
-                    var parentNode = xmlDoc.Elements(Analytics.ProfileCardValueKey_XmlElementName);
-
-                    if (parentNode != null)
-                    {
-                        foreach (var childrenNode in parentNode)
-                        {
-                            if (childrenNode.HasAttributes
-                                && childrenNode.Attribute(Analytics.ProfileCardValueName_XmlAttribute) != null && !string.IsNullOrWhiteSpace(childrenNode.Attribute(Analytics.ProfileCardValueName_XmlAttribute).Value)
-                                && childrenNode.Attribute(Analytics.ProfileCardValueValue_XmlAttribute) != null && !string.IsNullOrWhiteSpace(childrenNode.Attribute(Analytics.ProfileCardValueValue_XmlAttribute).Value))
-                            {
-                                scores.Add(childrenNode.Attribute(Analytics.ProfileCardValueName_XmlAttribute).Value, Convert.ToDouble(childrenNode.Attribute(Analytics.ProfileCardValueValue_XmlAttribute).Value));
-                            }
-                        }
-
-                        profile.Score(scores);
-                        profile.PatternId = profileCard.Id;
-                        profile.PatternLabel = profileCard.Name;
-
-                        // update the pattern based on the scores you updated - this is supposed to be called from Score as well
-                        // but doesn't always update unless you call it explicitly
-                        profile.UpdatePattern();
-                    }
-                }
-            }
-        }
+        }        
     }
 }
