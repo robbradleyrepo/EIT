@@ -123,7 +123,76 @@
         public IEnumerable<Benchmark> Benchmarks { get; set; }
 
         [JsonProperty("SectorNameShort")]
-        public string SectorName { get; internal set; }
+        public string SectorName { get; set; }
+
+        [JsonProperty("Cumulative1m_DE")]
+        public string Cumulative1m { get; set; }
+
+        [JsonProperty("CumulativeYTD_DE")]
+        public string CumulativeYearToDate { get; set; }
+
+        [JsonProperty("Cumulative3m_DE")]
+        public string Cumulative3m { get; set; }
+
+        [JsonProperty("Cumulative6m_DE")]
+        public string Cumulative6m { get; set; }
+
+        [JsonProperty("Cumulative1y_DE")]
+        public string Cumulative1y { get; set; }
+
+        [JsonProperty("Cumulative3y_DE")]
+        public string Cumulative3y { get; set; }
+
+        [JsonProperty("Cumulative5y_DE")]
+        public string Cumulative5y { get; set; }
+
+        [JsonProperty("CumulativeSinceLaunch_DE")]
+        public string CumulativeSinceInception { get; set; }
+
+        [JsonProperty("SectorCumulative1m_DE")]
+        public string SectorCumulative1m { get; set; }
+
+        [JsonProperty("SectorCumulativeYTD_DE")]
+        public string SectorCumulativeYearToDate { get; set; }
+
+        [JsonProperty("SectorCumulative3m_DE")]
+        public string SectorCumulative3m { get; set; }
+
+        [JsonProperty("SectorCumulative6m_DE")]
+        public string SectorCumulative6m { get; set; }
+
+        [JsonProperty("SectorCumulative1y_DE")]
+        public string SectorCumulative1y { get; set; }
+
+        [JsonProperty("SectorCumulative3y_DE")]
+        public string SectorCumulative3y { get; set; }
+
+        [JsonProperty("SectorCumulative5y_DE")]
+        public string SectorCumulative5y { get; set; }
+
+        [JsonProperty("SectorCumulativeSinceUnitLaunch_DE")]
+        public string SectorCumulativeSinceUnitLaunch { get; set; }
+
+        [JsonProperty("Cumulative1mQuart_DE")]
+        public string Cumulative1mQuart { get; set; }
+
+        [JsonProperty("CumulativeYTDQuart_DE")]
+        public string CumulativeYearToDateQuart { get; set; }
+
+        [JsonProperty("Cumulative3mQuart_DE")]
+        public string Cumulative3mQuart { get; set; }
+
+        [JsonProperty("Cumulative6mQuart_DE")]
+        public string Cumulative6mQuart { get; set; }
+
+        [JsonProperty("Cumulative1yQuart_DE")]
+        public string Cumulative1yQuart { get; set; }
+
+        [JsonProperty("Cumulative3yQuart_DE")]
+        public string Cumulative3yQuart { get; set; }
+
+        [JsonProperty("Cumulative5yQuart_DE")]
+        public string Cumulative5yQuart { get; set; }
     }
 
     public class RegionBreakdown

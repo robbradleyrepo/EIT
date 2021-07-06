@@ -40,10 +40,10 @@
         DateTime PriceDate { get; set; }
         
         [SitecoreField(Constants.FundClass.DistributionDate_FieldId)]
-        string DistributionDate { get; set; }
+        DateTime DistributionDate { get; set; }
 
         [SitecoreField(Constants.FundClass.ExDividendDate_FieldId)]
-        string ExDividendDate { get; set; }
+        DateTime ExDividendDate { get; set; }
 
         [SitecoreField(Constants.FundClass.IncludedOFC_FieldId)]
         string IncludedOFC { get; set; }

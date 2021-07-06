@@ -147,11 +147,15 @@
     <Compile Include="CreditRating\ICreditRating.cs" />
     <Compile Include="CreditRating\ICreditRatingRow.cs" />
     <Compile Include="Models\IGraphWithHeading.cs" />
+    <Compile Include="PerformanceTables\CumulativePerformanceController.cs" />
     <Compile Include="PerformanceTables\DiscretePerformanceController.cs" />
+    <Compile Include="PerformanceTables\CumulativePerformanceManager.cs" />
     <Compile Include="PerformanceTables\DiscretePerformanceManager.cs" />
+    <Compile Include="PerformanceTables\ICumulativePerformanceManager.cs" />
     <Compile Include="PerformanceTables\IDiscretePerformanceManager.cs" />
     <Compile Include="PerformanceTables\IPerformanceTable.cs" />
     <Compile Include="PerformanceTables\PerformanceTableRow.cs" />
+    <Compile Include="PerformanceTables\CumulativePerformanceTableViewModel.cs" />
     <Compile Include="PerformanceTables\PerformanceTableViewModel.cs" />
     <Compile Include="SectorBreakdown\ISectorBreakdownManager.cs" />
     <Compile Include="SectorBreakdown\ISectorBreakdown.cs" />

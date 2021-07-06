@@ -11,7 +11,7 @@
 
         public PerformanceTableRow QuartileRow { get; set; }
 
-        public string[] ColumnHeadings
+        public virtual string[] ColumnHeadings
         {
             get
             {

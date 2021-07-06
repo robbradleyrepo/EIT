@@ -1,12 +1,7 @@
 ﻿namespace LionTrust.Feature.Fund.AdditionalInfoAndCharges
 {
     public class AdditionalInfoAndChargesModel
-    {        
-        public string DistributionDate { get; set; }
-
-
-        public string ExDividendDate { get; set; }
-
+    {                
         public string IncludedOFC { get; set; }
 
         public string InitialCharge { get; set; }
