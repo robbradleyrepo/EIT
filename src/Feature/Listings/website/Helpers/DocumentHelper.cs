@@ -22,54 +22,58 @@
             {
                 var documentItem = mvcContext.SitecoreService.Database.GetItem(id);
 
-                if (documentItem != null)
+                if (documentItem == null)
                 {
-                    LinkField documentDownloadLink = documentItem.Fields[Foundation.Legacy.Constants.Document.DownloadLink_FieldId];
+                    return null;
+                }
 
-                    if (documentDownloadLink == null)
+                LinkField documentDownloadLink = documentItem.Fields[Foundation.Legacy.Constants.Document.DownloadLink_FieldId];
+
+                if (documentDownloadLink == null)
+                {
+                    return null;
+                }
+
+                var documentMediaItemId = documentDownloadLink.TargetID;
+
+                if (documentMediaItemId == ID.Null)
+                {
+                    return null;
+                }
+                // get the media item from Sitecore, using the ID
+                MediaItem mediaItem = mvcContext.SitecoreService.Database.GetItem(documentMediaItemId);
+
+                var documentName = documentItem[LionTrust.Foundation.Legacy.Constants.Document.DocumentName_FieldId];
+
+                if (documentName == string.Empty)
+                {
+                    documentName = documentItem.Name;
+                }
+
+                Media media = MediaManager.GetMedia(mediaItem);
+
+                if (media != null)
+                {
+                    // initiate media stream
+                    var options = new MediaOptions();
+                    options.UseMediaCache = true;
+
+                    using (MediaStream mediaStream = media.GetStream(options))
                     {
-                        return null;
-                    }
-
-                    var documentMediaItemId = documentDownloadLink.TargetID;
-
-                    if (documentMediaItemId != ID.Null)
-                    {
-                        // get the media item from Sitecore, using the ID
-                        MediaItem mediaItem = mvcContext.SitecoreService.Database.GetItem(documentMediaItemId);
-
-                        var documentName = documentItem[LionTrust.Foundation.Legacy.Constants.Document.DocumentName_FieldId];
-
-                        if (documentName == string.Empty)
+                        using (var stream = mediaStream.Stream)
                         {
-                            documentName = documentItem.Name;
-                        }
-
-                        Media media = MediaManager.GetMedia(mediaItem);
-
-                        if (media != null)
-                        {
-                            // initiate media stream
-                            var options = new MediaOptions();
-                            options.UseMediaCache = true;
-
-                            using (MediaStream mediaStream = media.GetStream(options))
+                            result.Add(new Document
                             {
-                                using (var stream = mediaStream.Stream)
-                                {
-                                    result.Add(new Document
-                                    {
-                                        DocumentName = documentName,
-                                        Name = mediaStream.FileName,
-                                        Bytes = DocumentHelper.GetByteArray(stream),
-                                        Length = stream.Length
-                                    });
-                                }
-                            }
+                                DocumentName = documentName,
+                                Name = mediaStream.FileName,
+                                Bytes = DocumentHelper.GetByteArray(stream),
+                                Length = stream.Length
+                            });
                         }
                     }
                 }
             }
+
             return result;
         }
 
