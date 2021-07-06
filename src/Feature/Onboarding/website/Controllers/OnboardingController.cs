@@ -36,11 +36,7 @@
         public ActionResult Render()
         {
             var data = _context.GetHomeItem<IHome>();
-
-            if (data?.OnboardingConfiguration == null
-                || data.OnboardingConfiguration.Profile == null
-                || data.OnboardingConfiguration.PrivateProfileCard == null
-                || data.OnboardingConfiguration.ProfressionalProfileCard == null)
+            if (!IsOnboardingConfigured(data))
             {
                 return null;
             }
@@ -49,11 +45,7 @@
             viewModel.ShowOnboarding = true;
             string isoCode;
 
-            if (viewModel.ChooseCountry == null
-                || viewModel.ChooseCountry.Regions == null
-                || viewModel.ChooseCountry.Regions.Any(r => r.Countries == null)
-                || viewModel.ChooseInvestorRole == null
-                || viewModel.TermsAndConditions == null)
+            if (!IsViewModelValid(viewModel))
             {
                 return null;
             }
@@ -174,6 +166,82 @@
             }
 
             return Render();
+        }
+
+        private bool IsOnboardingConfigured(IHome data)
+        {
+            if (data == null)
+            {
+                _log.Error("Unable to resolve home item", this);
+                return false;
+            }
+
+            if (data?.OnboardingConfiguration == null)
+            {
+                _log.Error("Onboarding configuration has not been set", this);
+                return false;
+            }
+
+            if (data.OnboardingConfiguration.Profile == null)
+            {
+                _log.Error("Onboarding configuration profile has not been set", this);
+                return false;
+            }
+
+            if (data.OnboardingConfiguration.PrivateProfileCard == null)
+            {
+                _log.Error("Onboarding configuration private profile card has not been set", this);
+                return false;
+            }
+
+            if (data.OnboardingConfiguration.ProfressionalProfileCard == null)
+            {
+                _log.Error("Onboarding configuration professional profile card has not been set", this);
+                return false;
+            }
+
+            return true;
+        }
+
+        private bool IsViewModelValid(OnboardingViewModel viewModel)
+        {
+            if (viewModel == null)
+            {
+                _log.Error("View model is null so unable to render onboarding component", this);
+                return false;
+            }
+
+            if (viewModel.ChooseCountry == null)
+            {
+                _log.Error("View model choose country is null so unable to render onboarding component", this);
+                return false;
+            }
+
+            if (viewModel.ChooseCountry.Regions == null)
+            {
+                _log.Error("Choose country regions are null so unable to render onboarding component", this);
+                return false;
+            }
+
+            if (viewModel.ChooseCountry.Regions.Any(r => r.Countries == null))
+            {
+                _log.Error("One region has a country that is set to null. Unable to render onboarding component", this);
+                return false;
+            }
+
+            if (viewModel.ChooseInvestorRole == null)
+            {
+                _log.Error("Choose investor role is null. Unable to render onboarding component", this);
+                return false;
+            }
+
+            if (viewModel.TermsAndConditions == null)
+            {
+                _log.Error("Terms and conditions are null. Unable to render onboarding component", this);
+                return false;
+            }
+
+            return true;
         }
 
         private bool OnboardingComplete(Feature.Onboarding.Models.IOnboardingConfiguration config)
