@@ -129,7 +129,6 @@
     <Compile Include="Models\API\Response\ArticleFacetsResponse.cs" />
     <Compile Include="Models\ISearchGlassBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ActionResults\JsonCamelCaseResult.cs" />
     <Compile Include="Routes\RegisterRoutes.cs" />
     <Compile Include="SearchOverlay\ISearchOverlay.cs" />
     <Compile Include="SearchOverlay\SearchOverlayController.cs" />
@@ -156,6 +155,10 @@
     <ProjectReference Include="..\..\..\Foundation\Content\website\LionTrust.Foundation.Content.csproj">
       <Project>{f8f55034-fa55-4d27-b115-0ab4eeb9a0a8}</Project>
       <Name>LionTrust.Foundation.Content</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Core\website\LionTrust.Foundation.Core.csproj">
+      <Project>{0c1e2fec-ac54-4cf0-905a-890d3bf711d5}</Project>
+      <Name>LionTrust.Foundation.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Design\website\LionTrust.Foundation.Design.csproj">
       <Project>{7F86DD63-BE79-4107-804A-514DCA76E01E}</Project>

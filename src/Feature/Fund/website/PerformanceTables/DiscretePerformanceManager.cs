@@ -1,0 +1,133 @@
+﻿namespace LionTrust.Feature.Fund.PerformanceTables
+{
+    using LionTrust.Feature.Fund.Api;
+    using LionTrust.Foundation.DI;
+    using System.Linq;
+    using System.Collections.Generic;
+
+    [Service(ServiceType = typeof(IDiscretePerformanceManager), Lifetime = Lifetime.Singleton)]
+    public class DiscretePerformanceManager : IDiscretePerformanceManager
+    {
+        private readonly IFundClassRepository _repository;
+
+        public DiscretePerformanceManager(IFundClassRepository repository)
+        {
+            this._repository = repository;
+        }
+
+        public IEnumerable<PerformanceTableRow> GetPerformanceTableRows(string citiCode)
+        {
+            var fundClass = _repository.GetData().FirstOrDefault(d => d.CitiCode == citiCode);
+            if (fundClass == null)
+            {
+                return new PerformanceTableRow[0];
+            }
+
+            var result = new List<PerformanceTableRow>();
+            if (!string.IsNullOrEmpty(fundClass.FundName))
+            {
+                result.Add(BuildPerformanceTableRow(fundClass.FundName, 
+                    new string[] 
+                    { 
+                        fundClass.DiscretePerformance0To12, 
+                        fundClass.DiscretePerformance12To24, 
+                        fundClass.DiscretePerformance24To36, 
+                        fundClass.DiscretePerformance36To48 
+                    }));
+            }
+
+            if (fundClass.Benchmarks == null)
+            {
+                return new PerformanceTableRow[0];
+            }
+
+            var benchmark0 = fundClass.Benchmarks.FirstOrDefault(b => b.BenchmarkTypeName == "Benchmark");
+            if (benchmark0 != null)
+            {
+                result.Add(BuildPerformanceTableRow(benchmark0.BenchmarkName, new string[]
+                {
+                    fundClass.Benchmark0DiscretePerformance0To12,
+                    fundClass.Benchmark0DiscretePerformance12To24,
+                    fundClass.Benchmark0DiscretePerformance24To36,
+                    fundClass.Benchmark0DiscretePerformance36To48
+                }));
+            }
+
+            var benchmark1 = fundClass.Benchmarks.FirstOrDefault(b => b.BenchmarkTypeName == "Benchmark Comparator 1");
+            if (benchmark1 != null)
+            {
+                result.Add(BuildPerformanceTableRow(benchmark1.BenchmarkName, new string[]
+                {
+                    fundClass.Benchmark1DiscretePerformance0To12,
+                    fundClass.Benchmark1DiscretePerformance12To24,
+                    fundClass.Benchmark1DiscretePerformance24To36,
+                    fundClass.Benchmark1DiscretePerformance36To48
+                }));
+            }
+
+            var benchmark2 = fundClass.Benchmarks.FirstOrDefault(b => b.BenchmarkTypeName == "Benchmark Comparator 2");
+            if (benchmark2 != null)
+            {
+                result.Add(BuildPerformanceTableRow(benchmark2.BenchmarkName, new string[]
+                {
+                    fundClass.Benchmark2DiscretePerformance0To12,
+                    fundClass.Benchmark2DiscretePerformance12To24,
+                    fundClass.Benchmark2DiscretePerformance24To36,
+                    fundClass.Benchmark2DiscretePerformance36To48
+                }));
+            }
+
+            if (!string.IsNullOrEmpty(fundClass.SectorName))
+            {
+                result.Add(BuildPerformanceTableRow(fundClass.SectorName, new string[]
+                {
+                    fundClass.SectorDiscretePerformance0To12,
+                    fundClass.SectorDiscretePerformance12To24,
+                    fundClass.SectorDiscretePerformance24To36,
+                    fundClass.SectorDiscretePerformance36To48
+                }));
+            }
+
+            return result;
+        }               
+
+        public PerformanceTableRow GetQuartile(string citiCode)
+        {
+            var fundClass = _repository.GetData().FirstOrDefault(d => d.CitiCode == citiCode);
+            if (fundClass == null)
+            {
+                return null;
+            }
+
+            return BuildPerformanceTableRow(string.Empty, new string[] 
+            { 
+                fundClass.DiscreteQuartile0To12m, 
+                fundClass.DiscreteQuartile12mTo24m, 
+                fundClass.DiscreteQuartile24mTo36m, 
+                fundClass.DiscreteQuartile36mTo48m 
+            });
+        }
+
+        private static PerformanceTableRow BuildPerformanceTableRow(string name, string[] columns)
+        {
+            return new PerformanceTableRow { Name = name, Columns = columns.Select(c => StripPercentageAndConvertToDouble(c)).ToArray() };
+        }
+
+        private static double? StripPercentageAndConvertToDouble(string input)
+        {
+            if (string.IsNullOrEmpty(input))
+            {
+                return null;
+            }
+
+            input = input.Replace("%", string.Empty);
+
+            if (double.TryParse(input, out double result))
+            {
+                return result;
+            }
+
+            return null;
+        }
+    }
+}
