@@ -50,6 +50,8 @@ export default () => {
       months: [],
       years: [],
       grid: false,
+      selectAllDocuments: false,
+      selectedDocumentIds: [],
     },
     computed: {
       getFacets() {
@@ -136,6 +138,17 @@ export default () => {
 
       submitSearchForm(e) {
         if (e.target.searchText.value) this.applyFilters();
+      },
+
+      setDocumentId(id) {
+        const index = this.selectedDocumentIds.findIndex((el) => el === id);
+        if (index !== -1)
+          this.selectedDocumentIds.splice(index, 1);
+        else this.selectedDocumentIds.push(id);
+      },
+
+      startDownload() {
+        // logic for downloading
       },
 
       getFacetsRequest() {
@@ -259,11 +272,18 @@ export default () => {
     },
   });
 
-Vue.component("document-item", {
-  data: function () {
-    return {};
-  },
-});
+  Vue.component("document-item", {
+    data: function () {
+      return {
+        selected: false,
+      };
+    },
+    methods: {
+      selectDocument(id) {
+        this.$parent.setDocumentId(id);
+      },
+    },
+  });
 };
 
 

@@ -4,7 +4,7 @@
             <div class="row align-items-center">
                 <div class="col-xl-1 col-md-1 d-none d-md-block">
                     <label class="checkbox doc-list__checkbox mb-0">
-                        <input type="checkbox" class="checkbox__input">
+                        <input type="checkbox" class="checkbox__input" v-model="selectAllDocuments">
                         <span class="checkbox__box mx-auto"></span>
                     </label>
     
@@ -50,7 +50,7 @@
                 <div class="row align-items-center">
                     <div class="col-xl-1 col-md-1 d-none d-md-block">
                         <label class="checkbox doc-list__checkbox">
-                            <input type="checkbox" class="checkbox__input">
+                            <input type="checkbox" class="checkbox__input" v-model="selected" @change="selectDocument(document.identifier)">
                             <span class="checkbox__box mx-auto"></span>
                         </label>
         
@@ -81,7 +81,12 @@
     </div>
     <div class="row align-items-center doc-list-nav">
         <div class="col-xl-3">
-            <button class="btn btn-primary d-none d-md-block mb-3 mb-xl-0">Download all selected <i class="icon-download"></i></button>
+            <button 
+                v-if="selectAllDocuments || selectedDocumentIds.length"
+                @click="startDownload"
+                class="btn btn-primary d-none d-md-block mb-3 mb-xl-0"                
+                 >Download all selected <i class="icon-download"></i>
+            </button>
         </div>
         <div class="col-xl-6">
             <nav v-if="getPageAmount > 1" class="pagination mt-3">
