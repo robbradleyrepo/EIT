@@ -3,7 +3,7 @@
 
 <body class="fund-dashboard">
     <header class="header header-bg-gradient">
-        <section class="container">            
+        <section class="container">
             <!--#include virtual="/components/GC001-Header.html" -->
             <!--#include virtual="/components/UI014- Lead-Banner-Variation.html" -->
 
@@ -11,12 +11,39 @@
     </header>
 
     <main>
-        <div class="lister-app">
+        <div class="lister-app" id="lister-app" data-host="FundSearchApi" data-fundfacetid="{657DBE54-41A2-4412-9639-958C08A34FC8}">
             <h2 class="h3 text-center mt-3 mt-lg-4">
                 My Funds
             </h2>
             <!--#include virtual="/components/BC019-Fund-Lister-Filter-(Variation).html" -->
             <!--#include virtual="/components/BC019-Fund-List-Item-(Variation).html" -->
+
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                  <nav v-if="getPageAmount > 1" class="pagination mt-3">
+                    <a href="#" @click.prevent="prevPage" class="pagination__step pagination__step_forward"
+                      :class="disablePrevBtn ? 'pagination__step_disabled' : ''"><i class="icon-arrow-left"></i> Previous</a>
+                    <ul class="pagination__list">
+                      <li class="pagination__item">
+                        <a @click.prevent="jumpPagesForward" v-if="showForwardPageBtn" href="#"
+                          class="pagination__link pagination__link_steps">...</a>
+                      </li>
+                      <li v-for="(page, i) in getPages" :key="i" class="pagination__item">
+                        <a @click.prevent="changePage(page)" href="#" class="pagination__link"
+                          :class="getPage === page ? 'active' : ''">
+                          {{page}}
+                        </a>
+                      </li>
+                      <li class="pagination__item">
+                        <a @click.prevent="jumpPagesNext" v-if="showNextPageBtn" href="#"
+                          class="pagination__link pagination__link_steps">...</a>
+                      </li>
+                    </ul>
+                    <a href="#" @click.prevent="nextPage" :class="disabledNextBtn ? 'pagination__step_disabled' : ''"
+                      class="pagination__step pagination__step_next">Next <i class="icon-arrow-right"></i></a>
+                  </nav>
+                </div>
+              </div>
 
 
         </div>
