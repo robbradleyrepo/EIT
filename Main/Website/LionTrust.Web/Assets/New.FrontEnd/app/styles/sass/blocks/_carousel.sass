@@ -59,7 +59,7 @@
         &:hover
             &:before
                 visibility: visible
-    .swiper-slide-prev:not(.swiper-slide-active)
+    .swiper-slide-prev
         &:before
             top: 50%
             left: 50%
@@ -70,7 +70,7 @@
             display: none
             @include breakpoint(desktop, up)
                 display: block
-    .swiper-slide-next:not(.swiper-slide-active)
+    .swiper-slide-next
         &::before
             top: 50%
             left: 60%
