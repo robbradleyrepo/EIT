@@ -30,10 +30,12 @@ export default () => {
       },
       1440: {
         // slidesPerView: 1.8,
+        spaceBetween: 32,
         slidesOffsetAfter: 220,
       },
       1800: {
         // slidesPerView: 2.1,
+        spaceBetween: 32,
         slidesOffsetAfter: 220,
       },
     },
