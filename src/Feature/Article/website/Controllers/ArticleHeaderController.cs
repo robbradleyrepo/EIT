@@ -30,10 +30,6 @@
             }
 
             var componentData = context.GetDataSourceItem<IArticleHeader>();
-            if (componentData == null)
-            {
-                return null;
-            }
 
             return View("/views/article/articleheader.cshtml", new ArticleViewModel { ComponentData = componentData, ArticleData = article });
         }

@@ -85,13 +85,14 @@
     <Content Include="Views\Article\RelatedArticles.cshtml" />
     <Content Include="Views\Article\MainQuote.cshtml" />
     <Content Include="Views\Article\IntroQuote.cshtml" />
-    <Content Include="Views\Article\ArticleContent.cshtml" />
+    <Content Include="Views\Article\ArticleRichText.cshtml" />
     <Content Include="Views\Article\Article.cshtml" />
     <Content Include="Views\Article\ArticleLinks.cshtml" />
     <Content Include="Views\Article\Image.cshtml" />
     <Content Include="Views\Article\GoldQuote.cshtml" />
     <Content Include="Views\Article\FundManagerInsights.cshtml" />
     <Content Include="Views\Article\FeaturedArticleHero.cshtml" />
+    <Content Include="Views\Article\ArticleContent.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

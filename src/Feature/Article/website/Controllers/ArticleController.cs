@@ -73,6 +73,20 @@
             return View("~/Views/Article/ArticleLinks.cshtml", articleLinksViewModel);
         }
 
+        public ActionResult ArticleContent()
+        {
+            var articleDatasourceContent = _mvcContext.GetDataSourceItem<IArticleRichText>();
+            if (articleDatasourceContent != null)
+            {
+                return View("~/Views/Article/ArticleRichText.cshtml", articleDatasourceContent);
+            }
+            else
+            {
+                var articlePage = _mvcContext.GetPageContextItem<IArticle>();
+                return View("~/Views/Article/ArticleContent.cshtml", articlePage);
+            }
+        }
+
         private bool IsFilterSet(IArticleFilter filter)
         {
             var result = false;
