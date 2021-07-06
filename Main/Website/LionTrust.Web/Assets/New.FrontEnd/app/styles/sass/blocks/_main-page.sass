@@ -44,7 +44,8 @@ body:not(.main-page)
         background-repeat: no-repeat
         background-size: cover
         position: relative
-        background-attachment: fixed
+        @include breakpoint(desktop, up)
+            background-attachment: fixed
         &:after
             position: absolute
             content: ''
@@ -52,8 +53,6 @@ body:not(.main-page)
             left: 0
             right: 0
             bottom: 0
-            // background: linear-gradient(180deg, rgba(0, 0, 0, 0) 69.2%, #000000 100%), linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 34.28%)
-            // @include breakpoint(desktop, up)
             background: linear-gradient(180deg, rgba(0, 0, 0, 0) 69.2%, #000000 100%), linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, .2) 34.28%)
 
 .main-page-conentent

@@ -67,6 +67,9 @@
             background: url('../images/svg-icons/prev-arrow.svg')
             background-size: contain
             background-repeat: no-repeat
+            display: none
+            @include breakpoint(desktop, up)
+                display: block
     .swiper-slide-next:not(.swiper-slide-active)
         &::before
             top: 50%
@@ -75,6 +78,9 @@
             background: url('../images/svg-icons/next-arrow.svg')
             background-size: contain
             background-repeat: no-repeat
+            display: none
+            @include breakpoint(desktop, up)
+                display: block
     .swiper-slide-active
         @include breakpoint(desktop, up)
             transform: scale(1.74)

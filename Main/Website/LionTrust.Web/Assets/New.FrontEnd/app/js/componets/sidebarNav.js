@@ -7,10 +7,12 @@ export default () => {
     const showMenu = () => {
       sidebar.addClass("sidebar_active");
       $(".sidebar-overlay").addClass("sidebar-overlay_active");
+      $("body").addClass("overflow-hidden");
     };
 
     const hideMenu = () => {
       sidebar.removeClass("sidebar_active");
+      $("body").removeClass("overflow-hidden");
       $(".sidebar-overlay").removeClass("sidebar-overlay_active");
       checkboxes.prop("checked", false);
       navLinks.removeClass("active");

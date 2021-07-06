@@ -1,15 +1,15 @@
 export default () => {
   $(document).on("click",".view-documents", () => {
-    $(".lit-overlay").addClass("active");
+    $(".lit-overlay__wrapper").addClass("active");
     $(".sidebar-overlay").addClass("sidebar-overlay_active");
   });
 
-  $("#lit-overlay-close").on("click", () => {
-    $(".lit-overlay").removeClass("active");
+  $(document).on("click", "#lit-overlay-close", () => {
+    $(".lit-overlay__wrapper").removeClass("active");
     $(".sidebar-overlay").removeClass("sidebar-overlay_active");
   });
 
   $(".sidebar-overlay").on("click", () => {
-    $(".lit-overlay").removeClass("active");
+    $(".lit-overlay__wrapper").removeClass("active");
   });
 };

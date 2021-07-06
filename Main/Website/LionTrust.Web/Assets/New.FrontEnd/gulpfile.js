@@ -62,9 +62,7 @@ function browsersync() {
 function scriptsMain() {
   return src(
     [
-      "app/js/*.js",
-      "!app/js/search-page.js",
-      "!app/js/*.min.js",
+      "app/js/app.js",
       "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js", // import fancybox
       "node_modules/bootstrap/js/dist/modal.js", // import bootstrap modal
       "node_modules/bootstrap/js/dist/collapse.js", // import bootstrap modal
@@ -82,7 +80,7 @@ function scriptsMain() {
 }
 
 function scriptsSearch() {
-  return src(["!app/js/*.js", "app/js/search-page.js", "!app/js/*.min.js"], {
+  return src(["app/js/search-page.js"], {
     sourcemaps: true,
   })
     .pipe(webpack(webPackConfig))
@@ -93,6 +91,20 @@ function scriptsSearch() {
     .pipe(dest("app/js", { sourcemaps: true }))
     .pipe(browserSync.stream());
 }
+
+function scriptsListing() {
+  return src(["app/js/listing-page.js"], {
+    sourcemaps: true,
+  })
+    .pipe(webpack(webPackConfig))
+    .on("error", function handleError() {
+      this.emit("end");
+    })
+    .pipe(rename("listing-page.min.js"))
+    .pipe(dest("app/js", { sourcemaps: true }))
+    .pipe(browserSync.stream());
+}
+
 
 function styles() {
   return src(
@@ -149,7 +161,7 @@ function startwatch() {
   watch(
     ["app/js/**/*.js", "!app/js/**/*.min.js"],
     { usePolling: true },
-    parallel(scriptsMain, scriptsSearch)
+    parallel(scriptsMain, scriptsSearch, scriptsListing)
   );
   watch(
     "app/images/src/**/*.{jpg,jpeg,png,webp,svg,gif}",
@@ -162,14 +174,15 @@ function startwatch() {
   );
 }
 
-exports.scripts = series(scriptsMain, scriptsSearch);
+exports.scripts = series(scriptsMain, scriptsSearch, scriptsListing);
 exports.styles = styles;
 exports.images = images;
-exports.assets = series(scriptsMain, scriptsSearch, styles, images);
+exports.assets = series(scriptsMain, scriptsSearch, scriptsListing, styles, images);
 exports.build = series(
   cleandist,
   scriptsMain,
   scriptsSearch,
+  scriptsListing,
   styles,
   images,
   buildcopy,
@@ -178,6 +191,7 @@ exports.build = series(
 exports.default = series(
   scriptsMain,
   scriptsSearch,
+  scriptsListing,
   styles,
   images,
   parallel(browsersync, startwatch)

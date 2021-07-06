@@ -10,6 +10,11 @@
     // justify-content: center
     flex-direction: column
     display: none
+    &::-webkit-scrollbar
+            width: 4px
+    &::-webkit-scrollbar-thumb
+        background-color: trasparent
+        border-radius: 5px
     @include breakpoint(tablet, up)
         padding-top: 120px
     &.active
