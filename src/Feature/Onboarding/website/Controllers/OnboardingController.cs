@@ -127,11 +127,19 @@
                 var address = GetAddress(true);
                 if (address != null)
                 {
-                    var regionInfo = new RegionInfo(OnboardingSubmit.Country);
-
-                    if (regionInfo != null)
+                    try
                     {
-                        address.Country = regionInfo.EnglishName;
+                        var regionInfo = new RegionInfo(OnboardingSubmit.Country);
+
+                        if (regionInfo != null)
+                        {
+                            address.Country = regionInfo.EnglishName;
+                        }
+                    }
+                    catch (ArgumentException)
+                    {
+                        _log.Info($"{OnboardingSubmit.Country} is not an valid value", this);
+                        return null;
                     }
                 }
 

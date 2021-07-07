@@ -46,10 +46,22 @@
                 var currentPage = _mvcContext.GetPageContextItem<IArticle>();
                 if (currentPage != null && currentPage.Topics != null && currentPage.Topics.Any())
                 {
+                    var fundList = new List<Foundation.Legacy.Models.IFund>();
+                    if (currentPage.Fund.FundReference != null)
+                    {
+                        fundList.Add(currentPage.Fund.FundReference);
+                    }
+
+                    var fundCategories = new List<Foundation.Legacy.Models.IFundCategory>();
+                    if (currentPage.PromoType != null)
+                    {
+                        fundCategories.Add(currentPage.PromoType);
+                    }
+
                     articleScrollerViewModel.ArticleList = 
                         new ArticleRepository(_contentSearchService, _mvcContext).Map(
-                            new List<Foundation.Legacy.Models.IFund> { currentPage.Fund.FundReference }, 
-                            new List<Foundation.Legacy.Models.IFundCategory> { currentPage.PromoType },
+                            fundList, 
+                            fundCategories,
                             null, 
                             currentPage.Authors,
                             currentPage.Topics, 
