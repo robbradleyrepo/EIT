@@ -5,7 +5,7 @@ export default () => {
     grabCursor: true,
     slidesPerView: "auto",
     // spaceBetween: 32,
-    slidesOffsetAfter: 30,
+    slidesOffsetAfter: 600,
     breakpointsInverse: true,
     // breakpoints: {
     //   0: {
