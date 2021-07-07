@@ -161,6 +161,11 @@
             public const string HeadingFieldId = "{FE72E4F7-8806-4907-B17F-AA124431957F}";
         }
 
+        public static class FundManagerPromo
+        {
+            public const string MangerFieldId = "{87A9CDD9-1B0D-466E-AA0C-36927B1954E4}";
+        }
+
         public static class AdditionalInfoAndChargesComponent
         {
             public const string AdditionalInfoLabel_FieldId = "{CE9B820F-2C4E-458D-9A8C-C9C070389669}";

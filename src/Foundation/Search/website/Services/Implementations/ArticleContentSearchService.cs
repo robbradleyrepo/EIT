@@ -95,6 +95,7 @@
             var predicate = PredicateBuilder.True<ArticleSearchResultItem>();
             var language = Sitecore.Context.Language?.Name ?? "en";
             predicate = predicate.And(x => x.Language == language);
+            predicate = predicate.And(x => x.IsLatestVersion);
 
             predicate = this.PopoulateDatedTaxonomyPredicate(predicate, articleSearchRequest);
 

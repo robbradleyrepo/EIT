@@ -1,13 +1,9 @@
 ﻿---
-ID: "12b75129-a849-456a-afc4-d842811f3fcf"
-Parent: "cddf0391-bdcf-4e9b-9995-0e012895d6b1"
+ID: "43eccc78-2c62-4dfc-b04b-340fc8fbbe49"
+Parent: "b31143d6-232d-42f8-b8db-48ba9dc528fb"
 Template: "6ed40c8d-804a-4d93-b81e-0ed14d4fd138"
-Path: /sitecore/content/LionTrustNew/Global/Onboarding Configuration/Choose Country/Europe/Italy
+Path: /sitecore/content/LionTrustNew/Global/Onboarding/Onboarding Configuration/Choose Country/Asia/Japan
 DB: master
-SharedFields:
-- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
-  Hint: __Sortorder
-  Value: 400
 Languages:
 - Language: en
   Versions:
@@ -15,10 +11,10 @@ Languages:
     Fields:
     - ID: "1e75b4db-fbbf-4410-b2f0-99ccfb86a559"
       Hint: Country_CountryName
-      Value: Italy
+      Value: Japan
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210610T095041Z
+      Value: 20210610T095124Z
     - ID: "a46a84e5-e402-4784-95d3-e316a9761efb"
       Hint: Country_Iso
-      Value: IT
+      Value: JP

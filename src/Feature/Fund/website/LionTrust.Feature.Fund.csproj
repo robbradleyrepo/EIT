@@ -127,13 +127,14 @@
     <Compile Include="Controllers\FundLiteratureController.cs" />
     <Compile Include="Controllers\FundManagerComponentController.cs" />
     <Compile Include="Controllers\FundHeaderController.cs" />
-    <Compile Include="Controllers\FundManagerPromoController.cs" />
+    <Compile Include="FundManagerPromo\FundManagerPromoController.cs" />
     <Compile Include="Controllers\FundsController.cs" />
     <Compile Include="Controllers\FundScrollerController.cs" />
     <Compile Include="FundClass\FundClassData.cs" />
     <Compile Include="FundClass\IFundClassDetails.cs" />
     <Compile Include="FundClass\FundClassSwitcherHelper.cs" />
     <Compile Include="FundClass\FundClassViewModel.cs" />
+    <Compile Include="FundManagerPromo\IFundManagerPromo.cs" />
     <Compile Include="FundPerformance\FundPerformanceGraphController.cs" />
     <Compile Include="FundPerformance\FundPerformanceGraphViewModel.cs" />
     <Compile Include="FundPerformance\IFundPerformanceGraph.cs" />
@@ -166,7 +167,7 @@
     <Compile Include="Models\FundClassSelector.cs" />
     <Compile Include="Models\FundDisclaimerViewModel.cs" />
     <Compile Include="Models\FundHeaderViewModel.cs" />
-    <Compile Include="Models\FundManagerViewModel.cs" />
+    <Compile Include="FundManagerPromo\FundManagerViewModel.cs" />
     <Compile Include="Models\HoldingsViewModel.cs" />
     <Compile Include="Models\IAdditionalInfoAndChargesComponent.cs" />
     <Compile Include="Models\IFourFundStats.cs" />

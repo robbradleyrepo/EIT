@@ -1,13 +1,9 @@
 ﻿---
-ID: "6b3ae8fc-e3fe-4971-98ab-9ef5c7e69450"
-Parent: "cddf0391-bdcf-4e9b-9995-0e012895d6b1"
+ID: "fdf1779a-2fb4-4f33-b6e5-a17e9a0b6866"
+Parent: "be8cd1ad-d1c3-43a6-8f1c-a8976a31c8d5"
 Template: "6ed40c8d-804a-4d93-b81e-0ed14d4fd138"
-Path: /sitecore/content/LionTrustNew/Global/Onboarding Configuration/Choose Country/Europe/Spain
+Path: /sitecore/content/LionTrustNew/Global/Onboarding/Onboarding Configuration/Choose Country/America/United States
 DB: master
-SharedFields:
-- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
-  Hint: __Sortorder
-  Value: 300
 Languages:
 - Language: en
   Versions:
@@ -15,10 +11,10 @@ Languages:
     Fields:
     - ID: "1e75b4db-fbbf-4410-b2f0-99ccfb86a559"
       Hint: Country_CountryName
-      Value: Spain
+      Value: United States
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210610T095030Z
+      Value: 20210610T095205Z
     - ID: "a46a84e5-e402-4784-95d3-e316a9761efb"
       Hint: Country_Iso
-      Value: ES
+      Value: US
