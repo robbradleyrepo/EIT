@@ -141,6 +141,7 @@
 
         public static class FundManagers
         {
+            public const string TitleFieldId = "{4EF859A1-6CD4-4213-8EAB-94CC974C6C08}";
             public const string FundManagersFieldId = "{742FA605-EC20-4EC8-87FD-9E7DAEB8BC84}";
         }
 

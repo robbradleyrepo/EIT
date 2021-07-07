@@ -7,10 +7,12 @@
     return;
 }
 <div class="container mb-3">
+    <h3 class="text-black">@Html.Glass().Editable(Model, m => m.Title)</h3>
     <div class="row">
         @foreach (var manager in Model.Managers)
         {
             <div class="col-lg-6 col-xl-4">
+
                 <div class="fund-manager">
                     @using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(manager, m => m.Page, manager.PageGoal, new NameValueCollection { { "class", "fund-manager__item" } }, isEditable: true))
                     {
