@@ -1,16 +1,20 @@
-﻿namespace LionTrust.Feature.Fund.Models
+﻿namespace LionTrust.Feature.Fund.FundManagerPromo
 {
+    using LionTrust.Foundation.Legacy.Models;
     using System.Linq;
 
     public class FundManagerViewModel
     {
-        public FundManagerViewModel(IFundManagerPage managerPage)
+        public FundManagerViewModel(IAuthor manager)
         {
-            ImageUrl = managerPage.Manager?.Image?.Src;
-            FullName = managerPage.Manager?.FullName;
-            Url = managerPage.Url;
-            Bio = managerPage.Manager?.ShortBio;
-            Title = managerPage.Manager?.Title;
+            if (manager != null)
+            {
+                ImageUrl = manager.Image?.Src;
+                FullName = manager.FullName;
+                Url = manager.Page?.Url;
+                Bio = manager.ShortBio;
+                Title = manager.Title;
+            }
         }
 
         public string ImageUrl { get; private set; }

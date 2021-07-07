@@ -23,17 +23,18 @@
         {
             var viewModel = new KeyInfoPriceViewModel();
             var data = _context.GetDataSourceItem<IKeyInfoPriceComponent>();
-            if (data != null && data.Fund != null)
+            var pageData = _context.GetPageContextItem<IFundSelector>();
+            var fund = data != null && data.Fund != null ? data.Fund : pageData?.Fund;
+            if (fund != null)
             {
-                var citiCode = FundClassSwitcherHelper.GetCitiCode(HttpContext, data.Fund);
-                var fundClass = data.Fund.Classes.Where(c => c.CitiCode == citiCode).FirstOrDefault();
+                var citiCode = FundClassSwitcherHelper.GetCitiCode(HttpContext, fund);
+                var fundClass = fund.Classes.Where(c => c.CitiCode == citiCode).FirstOrDefault();
                 if (fundClass != null)
                 {
                     viewModel.ClassData = _fundRepository.GetFundClassDetails(fundClass);
                 }
 
-                viewModel.Fund = data.Fund;
-
+                viewModel.Fund = fund;
             }
 
             viewModel.Component = data;

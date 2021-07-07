@@ -8,6 +8,9 @@
 
     public class ArticleSearchResultItem : SearchResultItem
     {
+        [IndexField("_latestversion")]
+        public bool IsLatestVersion { get; set; }
+
         //Fund Manager        
         [IndexField("LegacyArticle_Authors")]
         public IEnumerable<string> ArticleAuthors { get; set; }
