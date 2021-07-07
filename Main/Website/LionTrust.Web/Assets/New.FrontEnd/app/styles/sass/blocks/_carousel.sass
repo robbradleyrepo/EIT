@@ -82,6 +82,8 @@
             @include breakpoint(desktop, up)
                 display: block
     .swiper-slide-active
+        &::before
+            display: none
         @include breakpoint(desktop, up)
             transform: scale(1.74)
             margin-top: 35px

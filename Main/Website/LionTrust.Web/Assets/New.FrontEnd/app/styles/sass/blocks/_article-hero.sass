@@ -126,6 +126,10 @@ header .article-links
     .article-links__link
         color: $white
 
+main .article-links
+    @include breakpoint(desktop, up)
+        justify-content: start
+
 .article-links
     .article-links__link
         color: $primary

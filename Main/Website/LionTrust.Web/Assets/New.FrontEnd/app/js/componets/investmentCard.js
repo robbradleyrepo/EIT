@@ -4,7 +4,7 @@ export default () => {
     const swiper = new Swiper('#investment-slider', {
         slidesPerView: 1.2,
         spaceBetween: 32,
-        slidesOffsetAfter: 220,
+        slidesOffsetAfter: 320,
         breakpointsInverse: true,
         breakpoints: {
             0: {
@@ -29,11 +29,13 @@ export default () => {
             },
             1400: {
                 slidesPerView: 4,
-                spaceBetween: 32
+                spaceBetween: 32,
+                slidesOffsetAfter: 700,
             },
             2560: {
                 slidesPerView: 4.5,
-                spaceBetween: 32
+                spaceBetween: 32,
+                slidesOffsetAfter: 700,
             }
         }
       });
