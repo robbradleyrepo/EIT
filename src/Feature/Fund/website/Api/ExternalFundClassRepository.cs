@@ -4,10 +4,11 @@
     using Newtonsoft.Json;
     using RestSharp;
     using Sitecore.Abstractions;
+    using System;
     using System.Linq;
 
     [Service(ServiceType = typeof(IFundClassRepository), Lifetime = Lifetime.Singleton)]
-    public class ExtrnalFundClassRepository : IFundClassRepository
+    public class ExternalFundClassRepository : IFundClassRepository
     {
         private readonly BaseSettings _settings;
 
@@ -15,7 +16,7 @@
 
         private object locker = new object();
 
-        public ExtrnalFundClassRepository(BaseSettings settings)
+        public ExternalFundClassRepository(BaseSettings settings)
         {
             this._settings = settings;
         }
@@ -56,6 +57,21 @@
                 }
 
                 return _data;
+            }
+        }
+
+        public void UpdateData()
+        {
+            try
+            {
+                lock (locker)
+                {
+                    LoadData();
+                }
+            }
+            catch (Exception ex)
+            {
+                Sitecore.Diagnostics.Log.Error("Error updating External Fund Data: ", ex, this);
             }
         }
     }

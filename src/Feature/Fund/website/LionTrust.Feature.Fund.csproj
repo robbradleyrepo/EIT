@@ -113,6 +113,7 @@
     <Compile Include="AdditionalInfoAndCharges\IAdditionalFundInformationManager.cs" />
     <Compile Include="Api\BasicFundHoldingsBreakdown.cs" />
     <Compile Include="Api\ExternalFundClassRepository.cs" />
+    <Compile Include="Api\ExternalFundDataScheduledJob.cs" />
     <Compile Include="Api\FundBreakdownModel.cs" />
     <Compile Include="Api\FundClassDataModel.cs" />
     <Compile Include="Api\FundDataResponseModel.cs" />
@@ -237,7 +238,9 @@
       <Name>LionTrust.Foundation.SitecoreExtensions</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DI\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
