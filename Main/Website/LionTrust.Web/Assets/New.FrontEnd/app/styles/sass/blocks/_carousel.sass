@@ -1,6 +1,8 @@
 .carousel-box
-    overflow-x: clip
+    overflow-x: hidden
     position: relative
+    @include breakpoint(desktop, up)
+        overflow-x: clip
     .swiper-container-carousel
         width: 100%
         padding-bottom: 40px
