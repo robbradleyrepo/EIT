@@ -25,6 +25,11 @@
         {
             var datasource = _context.GetDataSourceItem<ILiterature>();
             var model = new LiteratureViewModel(datasource);
+            if (datasource == null)
+            {
+                return null;
+            }
+
             if (datasource.Fund == null)
             {
                 var page = _context.GetContextItem<IFundSelector>();
