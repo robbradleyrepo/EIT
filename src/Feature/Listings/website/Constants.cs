@@ -49,6 +49,9 @@
         public static class Defaults
         {
             public const string GenericListingFacetsConfig = "{D61FC1B3-9969-4F95-8796-FEFBC864CA1F}";
+            public const string ListingTypeList_FieldId = "{882BBA30-5BFE-41D6-AC98-A85BEC219EE0}";
+            public const string YearsList_FieldId = "{EBCE5416-BA23-40D1-8FBB-58487F247107}";
+            public const string MonthsList_FieldId = "{EC94129F-5DAF-484D-852F-551008F7B82C}";
         }
 
         public static class GenericListingFolder
@@ -59,6 +62,8 @@
             public const string Image_FieldID = "{146CBBD2-0E88-4FD6-B4B4-49B462266089}";
             public const string Text_FieldID = "{694C3F81-60C0-4719-AA8C-5A4264623FEB}";
             public const string Date_FieldID = "{25BED78C-4957-4165-998A-CA1B52F67497}";
+            public const string YearsList_FieldId = "{EBCE5416-BA23-40D1-8FBB-58487F247107}";
+            public const string MonthsList_FieldId = "{EC94129F-5DAF-484D-852F-551008F7B82C}";
         }
 
         public static class DocumentLister
@@ -75,18 +80,6 @@
         public static class Settings
         {
             public const string DocumentApiRoute_SettingName = "Feature.Listings.DocumentsApiRoute";
-        }
-
-        public static class Defaults
-        {
-            public const string GenericListingFacetsConfig = "{D61FC1B3-9969-4F95-8796-FEFBC864CA1F}";
-            public const string ListingTypeList_FieldId = "{882BBA30-5BFE-41D6-AC98-A85BEC219EE0}";
-            public const string YearsList_FieldId = "{EBCE5416-BA23-40D1-8FBB-58487F247107}";
-            public const string MonthsList_FieldId = "{EC94129F-5DAF-484D-852F-551008F7B82C}";
-        }
-
-        public static class Settings
-        {
             public const string GenericListingApiRoute_SettingName = "Feature.Listings.GenericListingApiRoute";
         }
     }
