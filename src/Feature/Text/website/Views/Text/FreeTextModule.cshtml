@@ -1,0 +1,17 @@
+﻿@model LionTrust.Feature.Text.Models.IFreeTextModule
+@if (Model != null)
+{
+    <h2 class="text-gold">@Html.Glass().Editable(Model, m => m.Title)</h2>
+    if (Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        @Html.Glass().Editable(Model, m => m.Body)
+    }
+    else
+    {
+        @Html.Raw(Model.Body)
+    }
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @: Add datasource for the component!
+}
