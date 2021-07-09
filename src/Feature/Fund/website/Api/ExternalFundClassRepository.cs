@@ -14,6 +14,8 @@
 
         private FundDataResponseModel[] _data;
 
+        static bool isInitialized;
+
         private object locker = new object();
 
         public ExternalFundClassRepository(BaseSettings settings)
@@ -62,16 +64,24 @@
 
         public void UpdateData()
         {
-            try
+            if (!isInitialized)
             {
-                lock (locker)
+                try
                 {
-                    LoadData();
+                    lock (locker)
+                    {
+                        if (!isInitialized)
+                        {
+                            LoadData();
+
+                            isInitialized = true;
+                        }
+                    }
                 }
-            }
-            catch (Exception ex)
-            {
-                Sitecore.Diagnostics.Log.Error("Error updating External Fund Data: ", ex, this);
+                catch (Exception ex)
+                {
+                    Sitecore.Diagnostics.Log.Error("Error updating External Fund Data: ", ex, this);
+                }
             }
         }
     }
