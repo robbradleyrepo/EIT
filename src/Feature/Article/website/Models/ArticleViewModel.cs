@@ -26,7 +26,14 @@
         {
             get
             {
-                return ComponentData?.BackgroundImage?.Src;
+                if (ComponentData != null && ComponentData.BackgroundImage != null && !string.IsNullOrEmpty(ComponentData.BackgroundImage.Src))
+                {
+                    return ComponentData?.BackgroundImage?.Src;
+                }
+                else
+                {
+                    return ArticleData?.HeaderImage?.Src;
+                }
             }
         }
 

@@ -1,11 +1,11 @@
-﻿@using Glass.Mapper.Sc.Web.Mvc
-@model LionTrust.Feature.Article.Models.IArticle
+@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Article.Models.IArticleRichText
 @if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
 {
     return;
 }
 <div class="article-with-small">
     <span>
-        @Html.Glass().Editable(m => m.Body)
+        @Html.Glass().Editable(m => m.Copy)
     </span>
 </div>
