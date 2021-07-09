@@ -17,7 +17,12 @@
                 {
                     return string.Empty;
                 }
-                // TO DO multiple authors option
+
+                if (ArticleData.Authors.Any() && ArticleData.Authors.Count() > 1)
+                {
+                    return ArticleData.MultipleAuthorsLabel;
+                }
+                
                 return ArticleData.Authors?.FirstOrDefault()?.FullName;
             }
         }
@@ -55,7 +60,11 @@
         {
             get
             {
-                // TO DO multiple authors option
+                if (ArticleData.Authors.Any() && ArticleData.Authors.Count() > 1)
+                {
+                    return ArticleData.MultipleAuthorsIcon?.Src;
+                }
+
                 return this.ArticleData?.Authors?.FirstOrDefault()?.Image?.Src;
             }
         }
