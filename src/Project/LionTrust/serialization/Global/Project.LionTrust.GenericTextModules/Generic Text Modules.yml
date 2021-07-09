@@ -1,0 +1,25 @@
+﻿---
+ID: "2b25a21b-abe4-486d-8966-a13e271cde9e"
+Parent: "de347e52-3823-4c3d-96a5-6dda2dcf0d85"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/LionTrustNew/Global/Generic Text Modules
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: |
+    {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
+    {4106B92A-F983-4273-9F74-4F0EA80BE7F0}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140918T162035
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
