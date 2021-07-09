@@ -1,0 +1,14 @@
+﻿@model LionTrust.Feature.Listings.Models.IGenericListingModuleItem
+<div class="col-lg-9">
+    <div class="services-item">
+        @Html.Glass().RenderImage(Model, m => m.Image, new { @class = "services-item__img" }, isEditable: true)
+        <div class="services-item__content">
+            <div class="services-item__title">
+                @Html.Glass().Editable(Model, m => m.Title)
+            </div>
+            <div class="services-item__text">
+                @Html.Glass().Editable(Model, m => m.Text)
+            </div>
+        </div>
+    </div>
+</div>  

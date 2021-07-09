@@ -1,0 +1,21 @@
+﻿@model LionTrust.Feature.Listings.Models.IGenericListingModuleItem
+<div class="col-lg-6">
+    <div class="list-mod-item">
+        <h2 class="list-mod-item__title">
+            @Html.Glass().Editable(Model, m => m.Title)
+        </h2>
+        <span class="list-mod-item__date">
+            @if (!Sitecore.Context.PageMode.IsExperienceEditor)
+            {
+                @Model.Date.ToString("dd.MM.yyyy")
+            }
+            else
+            {
+                @Html.Glass().Editable(m => m.Date.Date, d => d.Date.Date.ToString("dd.MM.yyyy"))
+            }
+        </span>
+        <div class="list-mod-item__content">
+            @Html.Glass().Editable(Model, m => m.Text)
+        </div>
+    </div>
+</div>
