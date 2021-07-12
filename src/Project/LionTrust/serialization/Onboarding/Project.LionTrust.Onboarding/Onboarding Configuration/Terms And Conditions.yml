@@ -1,0 +1,21 @@
+﻿---
+ID: "d1aa69a2-82e9-4e77-8668-6772c7b800fd"
+Parent: "bdc1f34d-bbd9-4887-81df-2eb5db933504"
+Template: "e537b5e3-8aa1-4b45-a8e7-26ae1fd18799"
+Path: /sitecore/content/LionTrustNew/Global/Onboarding Configuration/Terms And Conditions
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210614T160237Z
+    - ID: "851bfd5d-4776-43f7-884e-ca5c3eb5ad48"
+      Hint: TermsAndConditions_Goal
+      Value: "{ECA1DE34-02FD-4C49-9072-8DD8921D5853}"
+    - ID: "a19de9da-fd4f-4a5b-b17b-9fb9373f0bac"
+      Hint: TermsAndConditions_AcceptanceLink
+      Value: |
+        <link text="accept" anchor="" linktype="internal" class="" title=""  querystring="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />

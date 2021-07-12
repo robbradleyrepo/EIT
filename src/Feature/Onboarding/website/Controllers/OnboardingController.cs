@@ -35,13 +35,14 @@
 
         public ActionResult Render()
         {
-            var data = _context.GetDataSourceItem<IOnboardingConfiguration>();
+            var data = _context.GetHomeItem<IHome>();
+
             if (!IsOnboardingConfigured(data))
             {
                 return null;
             }
 
-            var viewModel = new OnboardingViewModel(data);
+            var viewModel = new OnboardingViewModel(data.OnboardingConfiguration);
             viewModel.ShowOnboarding = true;
             string isoCode;
 
@@ -49,7 +50,7 @@
             {
                 return null;
             }
-            else if (OnboardingComplete(data))
+            else if (OnboardingComplete(data.OnboardingConfiguration))
             {
                 viewModel.ShowOnboarding = false;
             }
@@ -176,27 +177,33 @@
             return Render();
         }
 
-        private bool IsOnboardingConfigured(IOnboardingConfiguration data)
+        private bool IsOnboardingConfigured(IHome data)
         {
             if (data == null)
+            {
+                _log.Error("Home item is not found", this);
+                return false;
+            }
+
+            if (data.OnboardingConfiguration == null)
             {
                 _log.Error("Onboarding configuration has not been set", this);
                 return false;
             }
 
-            if (data.Profile == null)
+            if (data.OnboardingConfiguration.Profile == null)
             {
                 _log.Error("Onboarding configuration profile has not been set", this);
                 return false;
             }
 
-            if (data.PrivateProfileCard == null)
+            if (data.OnboardingConfiguration.PrivateProfileCard == null)
             {
                 _log.Error("Onboarding configuration private profile card has not been set", this);
                 return false;
             }
 
-            if (data.ProfressionalProfileCard == null)
+            if (data.OnboardingConfiguration.ProfressionalProfileCard == null)
             {
                 _log.Error("Onboarding configuration professional profile card has not been set", this);
                 return false;

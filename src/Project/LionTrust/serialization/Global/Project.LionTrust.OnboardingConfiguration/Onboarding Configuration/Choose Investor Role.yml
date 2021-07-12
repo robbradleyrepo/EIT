@@ -1,0 +1,24 @@
+﻿---
+ID: "6dd21a68-fba0-46a5-819e-c01ac95ea6f7"
+Parent: "bdc1f34d-bbd9-4887-81df-2eb5db933504"
+Template: "4fe5e8dc-1144-41f6-87cd-25f99e9babb6"
+Path: /sitecore/content/LionTrustNew/Global/Onboarding Configuration/Choose Investor Role
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210611T124124Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "6ac57f67-1641-4bfe-8039-0c567b1e994d"
+      Hint: ChooseInvestorRole_ModalIntroText
+      Value: intro text
+    - ID: "acd1c722-0258-4bd4-9368-9e37d3fe5273"
+      Hint: ChooseInvestorRole_ModalBodyText
+      Value: body text
