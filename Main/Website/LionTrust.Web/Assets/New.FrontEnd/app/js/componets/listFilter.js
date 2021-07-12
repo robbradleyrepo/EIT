@@ -5,6 +5,7 @@ export default () => {
   let host = rootDom.dataset.host;
   const literatureId = rootDom.dataset.literatureid;
   const fundFacetId = rootDom.dataset.fundfacetid;
+  const folderId = rootDom.dataset.folderid;
   const location = "https://cm-liontrust-it.sagittarius.agency/";
   let root = "";
   if (
@@ -12,7 +13,7 @@ export default () => {
     window.location.hostname === "127.0.0.1"
   ) {
     host = location + host;
-    root = location
+    root = location;
   } else {
     host = "/" + host;
   }
@@ -142,13 +143,26 @@ export default () => {
 
       setDocumentId(id) {
         const index = this.selectedDocumentIds.findIndex((el) => el === id);
-        if (index !== -1)
-          this.selectedDocumentIds.splice(index, 1);
+        if (index !== -1) this.selectedDocumentIds.splice(index, 1);
         else this.selectedDocumentIds.push(id);
+        console.log('this.selectedDocumentIds',this.selectedDocumentIds);
+      },
+      
+      dowloadDocument(title, id) {
+        $.post(
+          `https://cm-liontrust-it.sagittarius.agency/DocumentsApi/DownloadDocuments?downloadFileIds={${id}}`
+        ).done((data) => {
+          var blob = new Blob([data]);
+          var link = document.createElement("a");
+          link.href = window.URL.createObjectURL(blob);
+          link.download = title + '.zip';
+          link.click();
+        });
       },
 
-      startDownload() {
-        // logic for downloading
+      downloadDocumentMultiple() {
+        const docsIds = this.selectedDocumentIds.join();
+        this.dowloadDocReq('Document archive', docsIds)
       },
 
       getFacetsRequest() {
@@ -285,5 +299,3 @@ export default () => {
     },
   });
 };
-
-

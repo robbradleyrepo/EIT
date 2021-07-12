@@ -1,4 +1,4 @@
-<section class="container" id="lister-app" data-host="ArticleSearchApi">
+<section class="container" id="lister-app" data-host="DocumentsApi" data-folderid="80861075-D778-474D-B62B-A9384CC4636E">
     <div class="doc-list">
         <div class="doc-list__item">
             <div class="row align-items-center">
@@ -50,7 +50,7 @@
                 <div class="row align-items-center">
                     <div class="col-xl-1 col-md-1 d-none d-md-block">
                         <label class="checkbox doc-list__checkbox">
-                            <input type="checkbox" class="checkbox__input" v-model="selected" @change="selectDocument(document.identifier)">
+                            <input type="checkbox" class="checkbox__input" v-model="selected" @change="selectDocument(document.documentId)">
                             <span class="checkbox__box mx-auto"></span>
                         </label>
         
@@ -62,7 +62,7 @@
                     </div>
                     <div class="col-lg-6 col-xl-3">
                         <div class="doc-list__links">
-                            <a :href="document.documentLink" target="_blank" class="link-gray">Download file <i class="icon-download"></i></a>
+                            <button @click="dowloadDocument(document.title, document.documentId)" class="link-gray">Download file <i class="icon-download"></i></button>
                             <a :href="document.documentPageLink" target="_blank" class="link-gray d-lg-none">View page <i class="icon-file"></i></a>
                             <button v-if="document.documentVideoLink" data-type="iframe" data-fancybox
                             :data-src="document.documentVideoLink" class="link-gray">watch video <i class="icon-play"></i></button>
@@ -82,6 +82,7 @@
     <div class="row align-items-center doc-list-nav">
         <div class="col-xl-3">
             <button 
+                @click="downloadDocumentMultiple"
                 v-if="selectAllDocuments || selectedDocumentIds.length"
                 @click="startDownload"
                 class="btn btn-primary d-none d-md-block mb-3 mb-xl-0"                
