@@ -11,7 +11,7 @@
         var tags = Model.TwitterTags.Split(',');
 
         <div class="follow-us__link">
-            <a href="#" class="mr-0" target="_blank">
+            <a href="https://twitter.com/@tags.FirstOrDefault()" class="mr-0" target="_blank">
                 <img src="@imageSrc" alt="@imageAlt" />
             </a>
             @foreach (var tag in tags)
