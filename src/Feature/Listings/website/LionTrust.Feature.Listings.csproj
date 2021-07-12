@@ -58,6 +58,9 @@
     </PackageReference>
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="1.0.5" />
     <PackageReference Include="Microsoft.Net.Compilers" Version="2.1.0" />
+    <PackageReference Include="Sitecore.Analytics">
+      <Version>9.2.0</Version>
+    </PackageReference>
     <PackageReference Include="Sitecore.Kernel" Version="9.2.0" />
     <PackageReference Include="Sitecore.Mvc">
       <Version>9.2.0</Version>
@@ -76,19 +79,47 @@
     <Content Include="Views\Listings\EmptyAccordion.cshtml" />
     <Content Include="Views\Listings\HorizontalScroll.cshtml" />
     <Content Include="Views\Listings\_ScrollerCard.cshtml" />
+    <Content Include="Views\Listings\DocumentsList.cshtml" />
+    <Content Include="App_Config\Include\Feature\Feature.Listings.config" />
+    <Content Include="App_Config\Include\Feature\Feature.Listings.Routes.config" />
+    <Content Include="Views\Listings\GenericListingModule.cshtml" />
+    <Content Include="Views\Listings\ModuleItems\_PodcastItem.cshtml" />
+    <Content Include="Views\Listings\ModuleItems\_ServiceItem.cshtml" />
+    <Content Include="Views\Listings\ModuleItems\_DownloadWithTitleItem.cshtml" />
+    <Content Include="Views\Listings\ModuleItems\_DownloadWithTitleAndDateItem.cshtml" />
+    <Content Include="Views\Listings\ModuleItems\_TitleDescriptionDateItem.cshtml" />
+    <Content Include="App_Config\Include\Feature\Feature.Listings.Routes.config" />
+    <Content Include="App_Config\Include\Feature\Feature.Listings.config" />
+    <Content Include="App_Config\Include\Feature\Feature.Listings.RegisterContainer.config" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\AccordionController.cs" />
+    <Compile Include="Controllers\DocumentsController.cs" />
+    <Compile Include="Helpers\DocumentHelper.cs" />
+    <Compile Include="Controllers\GenericListingApiController.cs" />
+    <Compile Include="DataManagers\Implementations\GenericListingDataManager.cs" />
+    <Compile Include="DataManagers\Interfaces\IGenericListingDataManager.cs" />
+    <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Models\AccordionViewModel.cs" />
+    <Compile Include="Models\Document.cs" />
+    <Compile Include="Models\DocumentModel.cs" />
+    <Compile Include="Models\API\Facets\GenericListingFacet.cs" />
+    <Compile Include="Models\API\Response\GenericListerFacetResponse.cs" />
+    <Compile Include="Models\API\Response\GenericListingSearchResponse.cs" />
     <Compile Include="Models\IAccordionModel.cs" />
     <Compile Include="Models\IAccordionRenderingParameters.cs" />
     <Compile Include="Models\IAccordionRowModel.cs" />
+    <Compile Include="Models\IDocumentLister.cs" />
+    <Compile Include="Models\IGenericListingFilters.cs" />
     <Compile Include="Models\IHorizontalScroll.cs" />
     <Compile Include="Models\IListingsGlassBase.cs" />
     <Compile Include="Models\IScrollerCard.cs" />
+    <Compile Include="Models\API\GenericListingResult.cs" />
+    <Compile Include="Models\ListingFilterFacetsModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Routes\RegisterRoutes.cs" />
     <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -100,20 +131,34 @@
       <Project>{f8f55034-fa55-4d27-b115-0ab4eeb9a0a8}</Project>
       <Name>LionTrust.Foundation.Content</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Core\website\LionTrust.Foundation.Core.csproj">
+      <Project>{0c1e2fec-ac54-4cf0-905a-890d3bf711d5}</Project>
+      <Name>LionTrust.Foundation.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Design\website\LionTrust.Foundation.Design.csproj">
       <Project>{7F86DD63-BE79-4107-804A-514DCA76E01E}</Project>
       <Name>LionTrust.Foundation.Design</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Legacy\website\LionTrust.Foundation.Legacy.csproj">
+      <Project>{43ee972b-2002-4719-a878-a66a99c42c40}</Project>
+      <Name>LionTrust.Foundation.Legacy</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\ORM\website\LionTrust.Foundation.ORM.csproj">
       <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>
       <Name>LionTrust.Foundation.ORM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Search\website\LionTrust.Foundation.Search.csproj">
+      <Project>{22686dc6-4e6c-4d98-84b7-c48042f5b8fc}</Project>
+      <Name>LionTrust.Foundation.Search</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Video\website\LionTrust.Foundation.Video.csproj">
       <Project>{8C1C0247-65A6-4675-8326-0B243A81B392}</Project>
       <Name>LionTrust.Foundation.Video</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\GenericListing\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

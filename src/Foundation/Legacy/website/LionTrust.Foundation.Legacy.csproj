@@ -86,6 +86,7 @@
     <Compile Include="Models\IArticle.cs" />
     <Compile Include="Models\IAuthor.cs" />
     <Compile Include="Models\IDocument.cs" />
+    <Compile Include="Models\IDocumentFolder.cs" />
     <Compile Include="Models\IFund.cs" />
     <Compile Include="Models\IFundClass.cs" />
     <Compile Include="Models\IFundDocuments.cs" />
@@ -93,8 +94,11 @@
     <Compile Include="Models\IFundCategory.cs" />
     <Compile Include="Models\IFundPage.cs" />
     <Compile Include="Models\IFundTeam.cs" />
+    <Compile Include="Models\IGenericListingModule.cs" />
+    <Compile Include="Models\IGenericListingModuleItem.cs" />
     <Compile Include="Models\IHeroHomePageData.cs" />
     <Compile Include="Models\ILegacyGlassBase.cs" />
+    <Compile Include="Models\IListingItemType.cs" />
     <Compile Include="Models\ILookupItem.cs" />
     <Compile Include="Models\IPresentationBase.cs" />
     <Compile Include="Models\ITag.cs" />

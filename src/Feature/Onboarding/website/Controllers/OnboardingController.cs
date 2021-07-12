@@ -1,8 +1,9 @@
 ﻿namespace LionTrust.Feature.Onboarding.Controllers
 {
     using Glass.Mapper.Sc.Web.Mvc;
+    using LionTrust.Feature.Onboarding.Analytics;
     using LionTrust.Feature.Onboarding.Models;
-    using LionTrust.Foundation.Onboarding.Models;
+    using Sitecore.Abstractions;
     using Sitecore.Analytics;
     using Sitecore.Analytics.Model;
     using Sitecore.Analytics.Model.Entities;
@@ -15,27 +16,28 @@
     using System.Linq;
     using System.Web;
     using System.Web.Mvc;
-    using System.Xml.Linq;
     using static LionTrust.Feature.Onboarding.Constants;
 
     public class OnboardingController : SitecoreController
     {
         private IMvcContext _context;
+        private readonly BaseLog _log;
+        private readonly IProfileCardManager _cardManager;
         private ITracker _tracker;
-        public OnboardingController(IMvcContext context)
+
+        public OnboardingController(IMvcContext context, BaseLog log, ITrackerResolver resolver, IProfileCardManager cardManager)
         {
             _context = context;
-            _tracker = Tracker.Current;
+            this._log = log;
+            this._cardManager = cardManager;
+            _tracker = resolver.GetTracker();
         }
 
         public ActionResult Render()
         {
             var data = _context.GetHomeItem<IHome>();
 
-            if (data?.OnboardingConfiguration == null
-                || data.OnboardingConfiguration.Profile == null
-                || data.OnboardingConfiguration.PrivateProfileCard == null
-                || data.OnboardingConfiguration.ProfressionalProfileCard == null)
+            if (!IsOnboardingConfigured(data))
             {
                 return null;
             }
@@ -44,11 +46,7 @@
             viewModel.ShowOnboarding = true;
             string isoCode;
 
-            if (viewModel.ChooseCountry == null
-                || viewModel.ChooseCountry.Regions == null
-                || viewModel.ChooseCountry.Regions.Any(r => r.Countries == null)
-                || viewModel.ChooseInvestorRole == null
-                || viewModel.TermsAndConditions == null)
+            if (!IsViewModelValid(viewModel))
             {
                 return null;
             }
@@ -130,11 +128,19 @@
                 var address = GetAddress(true);
                 if (address != null)
                 {
-                    var regionInfo = new RegionInfo(OnboardingSubmit.Country);
-
-                    if (regionInfo != null)
+                    try
                     {
-                        address.Country = regionInfo.EnglishName;
+                        var regionInfo = new RegionInfo(OnboardingSubmit.Country);
+
+                        if (regionInfo != null)
+                        {
+                            address.Country = regionInfo.EnglishName;
+                        }
+                    }
+                    catch (ArgumentException)
+                    {
+                        _log.Info($"{OnboardingSubmit.Country} is not an valid value", this);
+                        return null;
                     }
                 }
 
@@ -142,6 +148,11 @@
 
                 if (data?.OnboardingConfiguration == null)
                 {
+                    return null;
+                }
+                else if (data.OnboardingConfiguration.Profile == null)
+                {
+                    _log.Error("Onboarding configuration profile has not been set", this);
                     return null;
                 }
                 else
@@ -153,17 +164,93 @@
 
                         if (OnboardingSubmit.Role == Roles.Private)
                         {
-                            AddPointsFromProfileCard(data.OnboardingConfiguration.PrivateProfileCard, profile);
+                            _cardManager.AddPointsFromProfileCard(data.OnboardingConfiguration.PrivateProfileCard, profile);
                         }
                         else if (OnboardingSubmit.Role == Roles.Profressional)
                         {
-                            AddPointsFromProfileCard(data.OnboardingConfiguration.ProfressionalProfileCard, profile);
+                            _cardManager.AddPointsFromProfileCard(data.OnboardingConfiguration.ProfressionalProfileCard, profile);
                         }
                     }
                 }
             }
 
             return Render();
+        }
+
+        private bool IsOnboardingConfigured(IHome data)
+        {
+            if (data == null)
+            {
+                _log.Error("Home item is not found", this);
+                return false;
+            }
+
+            if (data.OnboardingConfiguration == null)
+            {
+                _log.Error("Onboarding configuration has not been set", this);
+                return false;
+            }
+
+            if (data.OnboardingConfiguration.Profile == null)
+            {
+                _log.Error("Onboarding configuration profile has not been set", this);
+                return false;
+            }
+
+            if (data.OnboardingConfiguration.PrivateProfileCard == null)
+            {
+                _log.Error("Onboarding configuration private profile card has not been set", this);
+                return false;
+            }
+
+            if (data.OnboardingConfiguration.ProfressionalProfileCard == null)
+            {
+                _log.Error("Onboarding configuration professional profile card has not been set", this);
+                return false;
+            }
+
+            return true;
+        }
+
+        private bool IsViewModelValid(OnboardingViewModel viewModel)
+        {
+            if (viewModel == null)
+            {
+                _log.Error("View model is null so unable to render onboarding component", this);
+                return false;
+            }
+
+            if (viewModel.ChooseCountry == null)
+            {
+                _log.Error("View model choose country is null so unable to render onboarding component", this);
+                return false;
+            }
+
+            if (viewModel.ChooseCountry.Regions == null)
+            {
+                _log.Error("Choose country regions are null so unable to render onboarding component", this);
+                return false;
+            }
+
+            if (viewModel.ChooseCountry.Regions.Any(r => r.Countries == null))
+            {
+                _log.Error("One region has a country that is set to null. Unable to render onboarding component", this);
+                return false;
+            }
+
+            if (viewModel.ChooseInvestorRole == null)
+            {
+                _log.Error("Choose investor role is null. Unable to render onboarding component", this);
+                return false;
+            }
+
+            if (viewModel.TermsAndConditions == null)
+            {
+                _log.Error("Terms and conditions are null. Unable to render onboarding component", this);
+                return false;
+            }
+
+            return true;
         }
 
         private bool OnboardingComplete(Feature.Onboarding.Models.IOnboardingConfiguration config)
@@ -257,43 +344,6 @@
 
             return profile;
 
-        }
-
-        private void AddPointsFromProfileCard(IProfileCard profileCard, Profile profile)
-        {
-            var scores = new Dictionary<string, double>();
-
-            if (profileCard != null)
-            {
-                var xmlData = XDocument.Parse(profileCard.ProfileCardValue);
-                var xmlDoc = xmlData;
-
-                if (xmlDoc != null)
-                {
-                    var parentNode = xmlDoc.Elements(Analytics.ProfileCardValueKey_XmlElementName);
-
-                    if (parentNode != null)
-                    {
-                        foreach (var childrenNode in parentNode)
-                        {
-                            if (childrenNode.HasAttributes
-                                && childrenNode.Attribute(Analytics.ProfileCardValueName_XmlAttribute) != null && !string.IsNullOrWhiteSpace(childrenNode.Attribute(Analytics.ProfileCardValueName_XmlAttribute).Value)
-                                && childrenNode.Attribute(Analytics.ProfileCardValueValue_XmlAttribute) != null && !string.IsNullOrWhiteSpace(childrenNode.Attribute(Analytics.ProfileCardValueValue_XmlAttribute).Value))
-                            {
-                                scores.Add(childrenNode.Attribute(Analytics.ProfileCardValueName_XmlAttribute).Value, Convert.ToDouble(childrenNode.Attribute(Analytics.ProfileCardValueValue_XmlAttribute).Value));
-                            }
-                        }
-
-                        profile.Score(scores);
-                        profile.PatternId = profileCard.Id;
-                        profile.PatternLabel = profileCard.Name;
-
-                        // update the pattern based on the scores you updated - this is supposed to be called from Score as well
-                        // but doesn't always update unless you call it explicitly
-                        profile.UpdatePattern();
-                    }
-                }
-            }
-        }
+        }        
     }
 }

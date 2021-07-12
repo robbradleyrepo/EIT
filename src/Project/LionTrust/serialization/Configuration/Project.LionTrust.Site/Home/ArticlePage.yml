@@ -6,6 +6,23 @@ Path: /sitecore/content/LionTrustNew/Home/ArticlePage
 DB: master
 BranchID: "810226bd-15aa-4f26-ab02-7a63b355d4a8"
 SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{D93091D4-8A9A-46B9-9313-03DDE504393F}"
+          p:after="*[1=2]"
+          s:ds="{06B257A0-4507-4A1C-9AAC-6D32D6E680BA}"
+          s:id="{B8AC8410-5F0F-47C9-9CF5-16734B114D2B}"
+          s:par=""
+          s:ph="main" />
+      </d>
+    </r>
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: "{BA2439A2-5D38-4691-8F50-1B8A94ACD903}"
@@ -96,7 +113,7 @@ Languages:
               s:ph="/main/article" />
             <r
               uid="{C7EE86D7-3A10-4411-9C69-71EF27E583E4}"
-              p:after="r[@uid='{286E3FB0-4AB4-4628-A694-C75BE609BE42}']"
+              p:after="r[@uid='{722E86B8-4512-4BCD-8657-838F5B3EA4F4}']"
               s:ds="{8F7AA55E-2569-4646-A28E-7FA325F64C31}"
               s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
               s:ph="main" />

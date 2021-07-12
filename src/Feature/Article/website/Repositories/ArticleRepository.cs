@@ -49,7 +49,7 @@
             var request = new ArticleSearchRequest
             {
                 Topics = topics?.Select(t => t.Id),
-                Funds = funds?.Select(f => f.Id.ToString().Replace("-", string.Empty)),
+                Funds = funds?.Select(f => f?.Id.ToString().Replace("-", string.Empty)),
                 FundCategories = fundCategories?.Select(fc => fc.Id.ToString().Replace("-", string.Empty)),
                 FundTeams = fundTeams?.Select(ft => ft.Id.ToString().Replace("-", string.Empty)),
                 FundManagers = fundManagers?.Select(fm => fm.Id.ToString().Replace("-", string.Empty)),

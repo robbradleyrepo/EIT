@@ -30,11 +30,6 @@
         {
             var result = new AdditionalInfoAndChargesModel
             {
-                DistributionDate = fundClass.DistributionDate,
-
-                /// TODO
-                ExDividendDate = "TODO",
-
                 OngoingCharges = string.IsNullOrEmpty(fundClass.OngoingCharges) ? apiData?.OngoingCharge : fundClass.OngoingCharges,
                 SedolCode = string.IsNullOrEmpty(fundClass.SedolCode) ? apiData?.SedolCode : fundClass.SedolCode,
                 ISINCode = string.IsNullOrEmpty(fundClass.ISINCode) ? apiData?.ISINCode : fundClass.ISINCode,

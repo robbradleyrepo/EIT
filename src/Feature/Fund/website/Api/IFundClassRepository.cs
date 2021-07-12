@@ -3,5 +3,6 @@
     public interface IFundClassRepository
     {
         FundDataResponseModel[] GetData();
+        void UpdateData();
     }
 }

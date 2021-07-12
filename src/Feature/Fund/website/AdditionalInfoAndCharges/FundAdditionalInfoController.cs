@@ -1,7 +1,6 @@
 ﻿namespace LionTrust.Feature.Fund.AdditionalInfoAndCharges
 {
     using Glass.Mapper.Sc.Web.Mvc;
-    using LionTrust.Feature.Fund.Api;
     using LionTrust.Feature.Fund.FundClass;
     using LionTrust.Feature.Fund.Models;
     using Sitecore.Mvc.Controllers;
@@ -20,18 +19,31 @@
         }
 
         public ActionResult Render()
-        {
-            
+        {            
             var viewModel = new AdditionalInfoAndChargesViewModel();
-            var datasource = _context.GetDataSourceItem<IAdditionalInfoAndChargesComponent>();
-            
-            viewModel.Component = datasource;
-            if (datasource != null && datasource.Fund != null)
+            var datasource = _context.GetDataSourceItem<IAdditionalInfoAndChargesComponent>();            
+            if (datasource == null)
             {
-                var citiCode = FundClassSwitcherHelper.GetCitiCode(HttpContext, datasource.Fund);
+                return null;
+            }
+
+            viewModel.Component = datasource;
+            var fund = datasource.Fund;
+            if (fund == null)
+            {
+                var fundPage = _context.GetContextItem<IFundSelector>();
+                if (fundPage != null)
+                {
+                    fund = fundPage.Fund;
+                }
+            }
+
+            if (fund != null)
+            {
+                var citiCode = FundClassSwitcherHelper.GetCitiCode(HttpContext, fund);
                 if (!string.IsNullOrEmpty(citiCode))
                 {
-                    var fundClass = datasource.Fund.Classes.FirstOrDefault(c => c.CitiCode == citiCode);
+                    var fundClass = fund.Classes.FirstOrDefault(c => c.CitiCode == citiCode);
                     if (fundClass != null)
                     {
                         viewModel.Data = _manager.GetAdditionalInformation(fundClass, citiCode);

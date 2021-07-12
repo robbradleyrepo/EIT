@@ -75,10 +75,14 @@
     <Content Include="Views\Text\TextComponent.cshtml" />
     <Content Include="Views\Text\TitleComponent.cshtml" />
     <Content Include="Views\Text\Testimonial.cshtml" />
+    <Content Include="Views\Text\GenericTextModule.cshtml" />
+    <Content Include="Views\Text\FreeTextModule.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="Models\IGenericTextModule.cs" />
+    <Compile Include="Models\IFreeTextModule.cs" />
     <Compile Include="Models\IRichText.cs" />
     <Compile Include="Models\ITestimonial.cs" />
     <Compile Include="Models\ITextGlassBase.cs" />

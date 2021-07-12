@@ -113,6 +113,7 @@
     <Compile Include="AdditionalInfoAndCharges\IAdditionalFundInformationManager.cs" />
     <Compile Include="Api\BasicFundHoldingsBreakdown.cs" />
     <Compile Include="Api\ExternalFundClassRepository.cs" />
+    <Compile Include="Api\ExternalFundDataScheduledJob.cs" />
     <Compile Include="Api\FundBreakdownModel.cs" />
     <Compile Include="Api\FundClassDataModel.cs" />
     <Compile Include="Api\FundDataResponseModel.cs" />
@@ -127,13 +128,14 @@
     <Compile Include="Controllers\FundLiteratureController.cs" />
     <Compile Include="Controllers\FundManagerComponentController.cs" />
     <Compile Include="Controllers\FundHeaderController.cs" />
-    <Compile Include="Controllers\FundManagerPromoController.cs" />
+    <Compile Include="FundManagerPromo\FundManagerPromoController.cs" />
     <Compile Include="Controllers\FundsController.cs" />
     <Compile Include="Controllers\FundScrollerController.cs" />
     <Compile Include="FundClass\FundClassData.cs" />
     <Compile Include="FundClass\IFundClassDetails.cs" />
     <Compile Include="FundClass\FundClassSwitcherHelper.cs" />
     <Compile Include="FundClass\FundClassViewModel.cs" />
+    <Compile Include="FundManagerPromo\IFundManagerPromo.cs" />
     <Compile Include="FundPerformance\FundPerformanceGraphController.cs" />
     <Compile Include="FundPerformance\FundPerformanceGraphViewModel.cs" />
     <Compile Include="FundPerformance\IFundPerformanceGraph.cs" />
@@ -147,11 +149,15 @@
     <Compile Include="CreditRating\ICreditRating.cs" />
     <Compile Include="CreditRating\ICreditRatingRow.cs" />
     <Compile Include="Models\IGraphWithHeading.cs" />
+    <Compile Include="PerformanceTables\CumulativePerformanceController.cs" />
     <Compile Include="PerformanceTables\DiscretePerformanceController.cs" />
+    <Compile Include="PerformanceTables\CumulativePerformanceManager.cs" />
     <Compile Include="PerformanceTables\DiscretePerformanceManager.cs" />
+    <Compile Include="PerformanceTables\ICumulativePerformanceManager.cs" />
     <Compile Include="PerformanceTables\IDiscretePerformanceManager.cs" />
     <Compile Include="PerformanceTables\IPerformanceTable.cs" />
     <Compile Include="PerformanceTables\PerformanceTableRow.cs" />
+    <Compile Include="PerformanceTables\CumulativePerformanceTableViewModel.cs" />
     <Compile Include="PerformanceTables\PerformanceTableViewModel.cs" />
     <Compile Include="SectorBreakdown\ISectorBreakdownManager.cs" />
     <Compile Include="SectorBreakdown\ISectorBreakdown.cs" />
@@ -162,7 +168,7 @@
     <Compile Include="Models\FundClassSelector.cs" />
     <Compile Include="Models\FundDisclaimerViewModel.cs" />
     <Compile Include="Models\FundHeaderViewModel.cs" />
-    <Compile Include="Models\FundManagerViewModel.cs" />
+    <Compile Include="FundManagerPromo\FundManagerViewModel.cs" />
     <Compile Include="Models\HoldingsViewModel.cs" />
     <Compile Include="Models\IAdditionalInfoAndChargesComponent.cs" />
     <Compile Include="Models\IFourFundStats.cs" />
@@ -233,7 +239,9 @@
       <Name>LionTrust.Foundation.SitecoreExtensions</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DI\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

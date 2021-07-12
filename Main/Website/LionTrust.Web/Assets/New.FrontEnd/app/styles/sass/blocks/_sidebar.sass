@@ -21,6 +21,8 @@
     @include breakpoint(desktop, up)
         padding: 27px 32px 64px 84px
         overflow-y: initial
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+            overflow: hidden
     &_active
         transform: translate3d(0, 0, 0)
     &__header

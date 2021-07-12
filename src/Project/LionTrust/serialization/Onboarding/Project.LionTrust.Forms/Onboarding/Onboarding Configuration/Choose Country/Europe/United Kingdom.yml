@@ -1,0 +1,48 @@
+﻿---
+ID: "1d96b26e-4cb3-4a94-bc59-fb91fe0716a1"
+Parent: "7bf968c8-3a50-4585-a0ea-b85806ac486f"
+Template: "6ed40c8d-804a-4d93-b81e-0ed14d4fd138"
+Path: /sitecore/content/LionTrustNew/Global/Onboarding/Onboarding Configuration/Choose Country/Europe/United Kingdom
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1e75b4db-fbbf-4410-b2f0-99ccfb86a559"
+      Hint: Country_CountryName
+      Value: United Kingdom
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210610T095000Z
+    - ID: "a46a84e5-e402-4784-95d3-e316a9761efb"
+      Hint: Country_Iso
+      Value: GB
+    - ID: "bfd9b660-b602-4bef-82fc-becc3c9417a6"
+      Hint: Country_TermsAndConditions
+      Value: |
+        <p>
+                        <strong>
+                            Before we show you our UK Investors website we need to show you this important information.
+                        </strong>
+                        <br />
+                        By clicking on UK, you have confirmed that you are based in the United Kingdom and that you meet the
+                        following requirements.The information in this area of the website is intended for institutional
+                        investors and consultants in the United Kingdom only. It is not intended for use by any other
+                        persons including members of the general public or investors from other jurisdictions. Please
+                        remember that all investment strategies have the potential for profit and loss and your or your
+                        clients’ capital may be at risk. Baillie Gifford & Co and Baillie Gifford & Co Limited are
+                        authorised and regulated by the Financial Conduct Authority. Baillie Gifford & Co Limited is an
+                        Authorised Corporate Director of OEICs. The information contained in this website has been compiled
+                        with considerable care to ensure its accuracy at the date of publication. However, no representation
+                        or warranty, express or implied, is made to its accuracy or completeness. Nothing in this
+                        information or elsewhere in this website shall exclude, limit or restrict our duties and liabilities
+                        to you under the United Kingdom’s Financial Services and Markets Act 2000 or any conduct of business
+                        rules which we are bound to comply with. This website is informative only and the information
+                        provided should not be considered as investment or other advice or a recommendation to buy, sell or
+                        hold a particular investment. You can read details of our Legal and Important Information here.
+                    </p>

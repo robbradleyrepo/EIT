@@ -6,7 +6,7 @@
         <div class="container">
             <div class="article__head">
                 <h2>@Html.Glass().Editable(Model.ArticleScroller, m => m.Heading)</h2>
-                @using (Html.Glass().BeginRenderLink(Model.ArticleScroller, m => m.CTA, new NameValueCollection { { "class", "btn btn-black article__btn" } }, isEditable: true))
+                @using (Html.Glass().BeginRenderLink(Model.ArticleScroller, m => m.CTA, new NameValueCollection { { "class", "btn btn-black article__btn d-none d-lg-block ml-1" } }, isEditable: true))
                 {
                     if (Model.ArticleScroller.CTA != null && !string.IsNullOrEmpty(Model.ArticleScroller.CTA.Text))
                     {
@@ -30,7 +30,7 @@
                                 {
                                     case "Fund manager views":
                                         {
-                                            <div class="swiper-slide col-md-6 col-lg-4">
+                                            <div class="swiper-slide col-10 col-md-6 col-lg-4">
                                                 @Html.Partial("~/Views/Article/PromoCards/FundManagerViewPromo.cshtml", article)
                                             </div>
                                             break;
@@ -39,7 +39,7 @@
                                         {
                                             if (article.PodcastPromo != null && article.PodcastPromo.Any())
                                             {
-                                                <div class="swiper-slide col-md-6 col-lg-4">
+                                                <div class="swiper-slide col-10 col-md-6 col-lg-4">
                                                     @Html.Partial("~/Views/Article/PromoCards/ArticlePodcastPromo.cshtml", article.PodcastPromo.FirstOrDefault())
                                                 </div>
                                             }
@@ -47,28 +47,28 @@
                                         }
                                     case "Fund updates":
                                         {
-                                            <div class="swiper-slide col-md-6 col-lg-4">
+                                            <div class="swiper-slide col-10 col-md-6 col-lg-4">
                                                 @Html.Partial("~/Views/Article/PromoCards/FundUpdatePromo.cshtml", article)
                                             </div>
                                             break;
                                         }
                                     case "Video":
                                         {
-                                            <div class="swiper-slide col-md-6 col-lg-4">
+                                            <div class="swiper-slide col-10 col-md-6 col-lg-4">
                                                 @Html.Partial("~/Views/Article/PromoCards/VideoPromo.cshtml", article)
                                             </div>
                                             break;
                                         }
                                     case "Magazine and Reports":
                                         {
-                                            <div class="swiper-slide col-md-6 col-lg-4">
+                                            <div class="swiper-slide col-10 col-md-6 col-lg-4">
                                                 @Html.Partial("~/Views/Article/PromoCards/MagazineReportsPromo.cshtml", article)
                                             </div>
                                             break;
                                         }
                                     default:
                                         {
-                                            <div class="swiper-slide col-md-6 col-lg-4">
+                                            <div class="swiper-slide col-10 col-md-6 col-lg-4">
                                                 @Html.Partial("~/Views/Article/PromoCards/FundManagerViewPromo.cshtml", article)
                                             </div>
                                         }
@@ -77,7 +77,7 @@
                             }
                             else
                             {
-                                <div class="swiper-slide col-md-6 col-lg-4">
+                                <div class="swiper-slide col-10 col-md-6 col-lg-4">
                                     @Html.Partial("~/Views/Article/PromoCards/FundManagerViewPromo.cshtml", article)
                                 </div>
                             }
@@ -85,7 +85,7 @@
                     }
                 </div>
             </div>
-            @using (Html.Glass().BeginRenderLink(Model.ArticleScroller, m => m.CTA, new NameValueCollection { { "class", "btn btn-secondary-nav d-lg-none" } }))
+            @using (Html.Glass().BeginRenderLink(Model.ArticleScroller, m => m.CTA, new NameValueCollection { { "class", "btn btn-black d-lg-none" } }))
             {
                 if (Model.ArticleScroller.CTA != null && !string.IsNullOrEmpty(Model.ArticleScroller.CTA.Text))
                 {

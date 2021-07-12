@@ -16,14 +16,20 @@
                             <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.MinAdditionalLabel)</div>
                             <div class="card__item-right">@Html.Glass().Editable(Model.FundClass, m => m.MinimumAdditionalInvestment)</div>
                         </div>
-                        <div class="card__row">
-                            <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.ExDividendDateLabel)</div>
-                            <div class="card__item-right">@Model.Data.ExDividendDate</div>
-                        </div>
-                        <div class="card__row">
-                            <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.DistributionDateLabel)</div>
-                            <div class="card__item-right">@Model.Data.DistributionDate</div>
-                        </div>
+                        @if ((Model.FundClass != null && Model.FundClass.ExDividendDate.Ticks > 0) || Sitecore.Context.PageMode.IsExperienceEditor)
+                        {
+                            <div class="card__row">
+                                <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.ExDividendDateLabel)</div>
+                                <div class="card__item-right">@Html.Glass().Editable(Model.FundClass, m => m.ExDividendDate, m => m.ExDividendDate.ToString("dd MMM")) </div>
+                            </div>
+                        }
+                        @if ((Model.FundClass != null && Model.FundClass.DistributionDate.Ticks > 0) || Sitecore.Context.PageMode.IsExperienceEditor)
+                        {
+                            <div class="card__row">
+                                <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.DistributionDateLabel)</div>
+                                <div class="card__item-right">@Html.Glass().Editable(Model.FundClass, m => m.DistributionDate, m => m.DistributionDate.ToString("dd MMM"))</div>
+                            </div>
+                        }
                         <div class="card__row">
                             <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.SedolCodeLabel)</div>
                             <div class="card__item-right">@Model.Data.SedolCode</div>

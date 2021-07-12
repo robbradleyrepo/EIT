@@ -34,18 +34,6 @@
         private static AdditionalInfoAndChargesModel Consolidate(AdditionalInfoAndChargesModel model, FundDataResponseModel apiData)
         {
             /// TBD
-            if (string.IsNullOrEmpty(model.DistributionDate))
-            {
-
-            }
-            
-            /// TBD
-            if (string.IsNullOrEmpty(model.ExDividendDate))
-            {
-
-            }
-
-            /// TBD
             if (string.IsNullOrEmpty(model.IncludedOFC))
             {
 
@@ -78,8 +66,6 @@
         {
             return new AdditionalInfoAndChargesModel
             {                
-                DistributionDate = fundClass.DistributionDate,
-                ExDividendDate = fundClass.ExDividendDate,
                 IncludedOFC = fundClass.IncludedOFC,
                 InitialCharge = fundClass.InitialCharge,
                 ISINCode = fundClass.ISINCode,

@@ -1,7 +1,6 @@
 ﻿namespace LionTrust.Feature.Fund.Models
 {
-    using Glass.Mapper.Sc.Configuration.Attributes;
-    using LionTrust.Foundation.Legacy.Models;
+    using Glass.Mapper.Sc.Configuration.Attributes;    
 
     public interface IAdditionalInfoAndChargesComponent : IFundSelector
     {
