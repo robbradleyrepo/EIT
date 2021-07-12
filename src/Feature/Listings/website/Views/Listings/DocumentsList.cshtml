@@ -1,0 +1,145 @@
+﻿@model LionTrust.Feature.Listings.Models.IDocumentLister
+@if (Model != null)
+{
+    <section class="container">
+        <div class="doc-list">
+            <div class="doc-list__item">
+                <div class="row align-items-center">
+                    <div class="col-xl-1 col-md-1 d-none d-md-block">
+                        <label class="checkbox doc-list__checkbox mb-0">
+                            <input type="checkbox" class="checkbox__input">
+                            <span class="checkbox__box mx-auto"></span>
+                        </label>
+
+                    </div>
+                    <div class="col-xl-6 col-md-9 d-none d-md-block">
+                        <span class="doc-list__heading">
+                            @Html.Glass().Editable(Model, m => m.NameText)
+                        </span>
+                    </div>
+                    <div class="col-lg-6 col-xl-3 d-none d-lg-block">
+                        <span class="doc-list__heading">
+                            @Html.Glass().Editable(Model, m => m.DownloadText)
+                        </span>
+                    </div>
+                    <div class="col-md-2 col-lg-6 col-xl-2">
+                        <div class="relative">
+                            <button class="btn btn-clean d-block ml-auto button-sort">
+                                @Html.Glass().Editable(Model, m => m.SortText) <i class="icon-sort"></i>
+                            </button>
+                            <div class="sort-dropdown">
+                                <div class="text-right">
+                                    <span class="btn btn-clean">
+                                        @Html.Glass().Editable(Model, m => m.SortText) <i class="icon-sort"></i>
+                                    </span>
+                                </div>
+                                <label for="newest" class="option-checkbox">
+                                    <input id="newest" class="option-checkbox__input" type="radio" name="sort" checked="">
+                                    <span class="option-checkbox__text">@Html.Glass().Editable(Model, m => m.AZText)</span>
+                                    <span class="option-checkbox__icon"></span>
+                                </label>
+                                <label for="oldest" class="option-checkbox">
+                                    <input id="oldest" class="option-checkbox__input" type="radio" name="sort">
+                                    <span class="option-checkbox__text">@Html.Glass().Editable(Model, m => m.ZAText)</span>
+                                    <span class="option-checkbox__icon"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @if (Model.DocumentList != null && Model.DocumentList.Any())
+            {
+                foreach (var document in Model.DocumentList)
+                {
+                    <div class="doc-list__item">
+                        <div class="row align-items-center">
+                            <div class="col-xl-1 col-md-1 d-none d-md-block">
+                                <label class="checkbox doc-list__checkbox">
+                                    <input type="checkbox" class="checkbox__input">
+                                    <span class="checkbox__box mx-auto"></span>
+                                </label>
+
+                            </div>
+                            <div class="col-xl-6 col-md-11">
+                                <span class="doc-list__title">
+                                    @Html.Glass().Editable(document, m => m.DocumentName)
+                                </span>
+                            </div>
+                            <div class="col-lg-6 col-xl-3">
+                                <div class="doc-list__links">
+                                    <a href="@document.DocumentLink" target="_blank" class="link-gray">@(document.DocumentLink != null ? document.DocumentLink.Text : "Download File") <i class="icon-download"></i></a>
+                                    <a href="@document.Url" target="_blank" class="link-gray d-lg-none">@Html.Glass().Editable(Model, m => m.ViewPageText) <i class="icon-file"></i></a>
+                                    <button class="link-gray">@Html.Glass().Editable(Model, m => m.WatchVideoText) <i class="icon-play"></i></button>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-xl-2">
+                                <div class="doc-list__right-btn">
+                                    <a href="@document.Url" class="btn btn-primary-forward">
+                                        @Html.Glass().Editable(Model, m => m.ViewPageText) <i class="icon-arrow-right animate-arrow"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+        <div class="row align-items-center doc-list-nav">
+            <div class="col-xl-3">
+                <button class="btn btn-primary d-none d-md-block mb-3 mb-xl-0">@Html.Glass().Editable(Model, m => m.DownloadLinkText) <i class="icon-download"></i></button>
+            </div>
+            <div class="col-xl-6">
+                <nav class="pagination mt-2">
+                    <a href="#" class="pagination__step pagination__step_forward">
+                        <i class="icon-arrow-left"></i>
+                        @Html.Glass().Editable(Model, m => m.PreviousText)
+                    </a>
+                    <ul class="pagination__list">
+                        <li class="pagination__item"><a href="#" class="pagination__link pagination__link_steps">...</a></li>
+                        <li class="pagination__item">
+                            <a href="#" class="pagination__link">
+                                2
+                            </a>
+                        </li>
+                        <li class="pagination__item">
+                            <a href="#" class="pagination__link">
+                                3
+                            </a>
+                        </li>
+                        <li class="pagination__item">
+                            <a href="#" class="pagination__link">
+                                4
+                            </a>
+                        </li>
+                        <li class="pagination__item">
+                            <a href="#" class="pagination__link active">
+                                5
+                            </a>
+                        </li>
+                        <li class="pagination__item">
+                            <a href="#" class="pagination__link">
+                                6
+                            </a>
+                        </li>
+                        <li class="pagination__item">
+                            <a href="#" class="pagination__link">
+                                7
+                            </a>
+                        </li>
+                        <li class="pagination__item">
+                            <a href="#" class="pagination__link">
+                                8
+                            </a>
+                        </li>
+                        <li class="pagination__item"><a href="#" class="pagination__link pagination__link_steps">...</a></li>
+                    </ul> <a href="#" class="pagination__step pagination__step_next">@Html.Glass().Editable(Model, m => m.NextText) <i class="icon-arrow-right"></i></a>
+                </nav>
+            </div>
+        </div>
+    </section>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @:Assign datasource for Documents List component
+}

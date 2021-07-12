@@ -71,7 +71,7 @@
                             var fundPageUrl = item.Page == null ? string.Empty : item.Page.Url;
                         }
                         <a href="@fundPageUrl" class="fund-card">
-                            <div class="fund-card__head" style="background-image: url('')">
+                            <div class="fund-card__head">
                                 @Html.Glass().Editable(item, i => i.Image)
                             </div>
                             <div class="fund-card__content">

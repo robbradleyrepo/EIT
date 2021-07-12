@@ -1,0 +1,17 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Text.Models.IGenericTextModule
+@if (Model != null)
+{
+    <div class="article-with-big">
+        <h2 class="text-gold">
+            @Html.Glass().Editable(Model, m => m.Title)
+        </h2>
+        <span class="text-black">
+            @Html.Glass().Editable(Model, m => m.Text)
+        </span>
+    </div>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @: Please assign datasource for the component
+}

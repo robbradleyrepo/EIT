@@ -17,7 +17,12 @@
                 {
                     return string.Empty;
                 }
-                // TO DO multiple authors option
+
+                if (ArticleData.Authors.Any() && ArticleData.Authors.Count() > 1)
+                {
+                    return ArticleData.MultipleAuthorsLabel;
+                }
+                
                 return ArticleData.Authors?.FirstOrDefault()?.FullName;
             }
         }
@@ -26,7 +31,14 @@
         {
             get
             {
-                return ComponentData?.BackgroundImage?.Src;
+                if (ComponentData != null && ComponentData.BackgroundImage != null && !string.IsNullOrEmpty(ComponentData.BackgroundImage.Src))
+                {
+                    return ComponentData?.BackgroundImage?.Src;
+                }
+                else
+                {
+                    return ArticleData?.HeaderImage?.Src;
+                }
             }
         }
 
@@ -48,7 +60,11 @@
         {
             get
             {
-                // TO DO multiple authors option
+                if (ArticleData.Authors.Any() && ArticleData.Authors.Count() > 1)
+                {
+                    return ArticleData.MultipleAuthorsIcon?.Src;
+                }
+
                 return this.ArticleData?.Authors?.FirstOrDefault()?.Image?.Src;
             }
         }

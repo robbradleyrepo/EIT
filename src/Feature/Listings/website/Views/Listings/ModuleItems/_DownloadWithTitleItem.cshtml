@@ -1,0 +1,9 @@
+﻿@model LionTrust.Feature.Listings.Models.IGenericListingModuleItem
+<div class="col-lg-6">
+    <div class="list-mod-item__download">
+        <span class="list-mod-item__subhead">
+            @Html.Glass().Editable(Model, m => m.Title)
+        </span>
+        @Html.Glass().Editable(Model, m => m.Text)
+    </div>
+</div>
