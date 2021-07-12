@@ -1,6 +1,8 @@
 .carousel-box
-    overflow-x: clip
+    overflow-x: hidden
     position: relative
+    @include breakpoint(desktop, up)
+        overflow-x: clip
     .swiper-container-carousel
         width: 100%
         padding-bottom: 40px
@@ -10,7 +12,7 @@
     @include breakpoint(tablet, up)
         padding-bottom: 0
     @include breakpoint(desktop, up)
-        margin: 70px 0 60px        
+        margin: 70px 0 60px
     .swiper-container-carousel .swiper-slide
         position: relative
         transition: transform .4s ease
@@ -99,6 +101,8 @@
             &:hover
                 &:after
                     opacity: 0.1
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+        overflow-x: visible
 
 .slide
     background-size: cover
@@ -131,18 +135,14 @@
             opacity: 0.7
     &__content
         z-index: 2
-        display: flex
-        position: relative
-        flex-direction: column
-        justify-content: space-between
         position: absolute
         top: 10px
         left: 10px
         padding-right: 10px
-        visibility: hidden
         @include breakpoint(desktop, up)
             top: 10px
             left: 10px
+            visibility: hidden
         @include breakpoint(desktop-large, up)
             top: 27px
             left: 25px
@@ -172,7 +172,10 @@
             width: 60%
             @include font-size(29px)
             line-height: 34px
-            margin-top: 1.17em
+            margin-top: 0.17em
+            // @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+            //     width: 44%
+            //     margin-top: 0
     &__play
         cursor: pointer
         font-size: 0.6em
@@ -193,6 +196,8 @@
         outline: none
         color: $white
         display: none
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+            width: auto
         @include breakpoint(desktop, up)
             font-size: 6px
             bottom: 6px
