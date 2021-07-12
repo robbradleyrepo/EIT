@@ -1,6 +1,7 @@
 ﻿@using Sitecore.Links
 @using Sitecore.Mvc.Analytics.Extensions
 @using Sitecore.Web
+@using LionTrust.Foundation.SitecoreExtensions.Extensions
 @{
     Layout = null;
 }
@@ -16,6 +17,7 @@
     @Html.Sitecore().VisitorIdentification()
     <link rel="icon" href="/dist/images/favicon.ico">
     <link rel="stylesheet" href="/dist/css/styles.min.css">
+    <link rel="canonical" href="@Html.Sitecore().CurrentItem.GetCanonicalUrl()">
 </head>
 
 @{ 
