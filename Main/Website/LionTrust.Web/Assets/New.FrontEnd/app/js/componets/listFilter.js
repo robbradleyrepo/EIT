@@ -146,39 +146,32 @@ export default () => {
         const index = this.selectedDocumentIds.findIndex((el) => el === id);
         if (index !== -1) this.selectedDocumentIds.splice(index, 1);
         else this.selectedDocumentIds.push(id);
-        console.log("this.selectedDocumentIds", this.selectedDocumentIds);
       },
 
       clearDocumentIds() {
         this.selectedDocumentIds = []
-      },
+      },      
 
-      downloadDocument(title, id) {
+      downloadDocumentMultiple() {
+        const docsIds = this.selectedDocumentIds.join();
         $.post(
-          `https://cm-liontrust-it.sagittarius.agency/DocumentsApi/DownloadDocuments?downloadFileIds={${id}}`
+          `${host}/DownloadDocuments?downloadFileIds={${docsIds}}`
         ).done((data) => {
-          var blob = new Blob([data]);
-          var link = document.createElement("a");
+          const blob = new Blob([data]);
+          const link = document.createElement("a");
           link.href = window.URL.createObjectURL(blob);
-          link.download = title + ".zip";
+          link.download = "Documents" + ".zip";
           link.click();
         });
       },
 
-      downloadDocumentMultiple() {
-        const docsIds = this.selectedDocumentIds.join();
-        this.downloadDocReq("Document archive", docsIds);
-      },
-
       getFacetsRequest() {
-        console.log("fundFacetId", fundFacetId);
         const facetUrl = fundFacetId
           ? `${host}/Facets?fundListingFacetConfig=${fundFacetId}`
           : `${host}/Facets`;
         $.get(facetUrl)
           .done((response) => {
             const { facets, dates } = response;
-            console.log("facets", facets);
             this.facets = facets;
 
             if (dates && dates.months)
@@ -195,10 +188,10 @@ export default () => {
 
       getSearchRequest() {
         this.loading = true;
-        $.get(host + "/Search?" + this.getQueryString())
+        const hostUrl = folderId ? `${host}/GetDocuments?documentFolderId={${folderId}}&` : host + "/Search?"
+        $.get(hostUrl + this.getQueryString())
           .done((response) => {
             const { searchResults, totalResults } = response;
-            console.log("searchResults", searchResults);
             this.searchData = searchResults;
             this.amountResults = totalResults;
             this.loading = false;
@@ -216,7 +209,6 @@ export default () => {
       },
       selectAllDocuments: function (value)  {
         this.selectedDocumentIds = [];
-        console.log("value", value);
         eventBus.$emit("toggleSelected", value);
       },
     },
@@ -283,7 +275,6 @@ export default () => {
         $.ajax({
           url: `${root}api/sitecore/FundLiterature/GetOverlayHtml?fundId=${fundId}&literatureId=${literatureId}`,
         }).done(function (data) {
-          console.log('data',data);
           $(".lit-overlay__wrapper").html(data).addClass("active");
         });
       },
@@ -306,6 +297,18 @@ export default () => {
     methods: {
       selectDocument() {
         this.$parent.setDocumentId(this.id);
+      },
+
+      downloadDocument() {
+        $.post(
+          `${host}/DownloadDocuments?downloadFileIds={${this.id}}`
+        ).done((data) => {
+          const blob = new Blob([data]);
+          const link = document.createElement("a");
+          link.href = window.URL.createObjectURL(blob);
+          link.download = this.title + ".pdf";
+          link.click();
+        });
       },
     },
     created() {
