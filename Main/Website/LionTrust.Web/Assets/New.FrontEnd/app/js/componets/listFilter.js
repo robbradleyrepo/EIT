@@ -149,25 +149,25 @@ export default () => {
       },
 
       clearDocumentIds() {
-        this.selectedDocumentIds = []
-      },      
+        this.selectedDocumentIds = [];
+      },
 
       downloadDocumentMultiple() {
         const docsIds = this.selectedDocumentIds.join();
-        $.post(
-          `${host}/DownloadDocuments?downloadFileIds={${docsIds}}`
-        ).done((data) => {
-          const blob = new Blob([data]);
-          const link = document.createElement("a");
-          link.href = window.URL.createObjectURL(blob);
-          link.download = "Documents" + ".zip";
-          link.click();
-        });
+        $.post(`${host}/DownloadDocuments?downloadFileIds={${docsIds}}`).done(
+          (data) => {
+            const blob = new Blob([data]);
+            const link = document.createElement("a");
+            link.href = window.URL.createObjectURL(blob);
+            link.download = "Documents" + ".zip";
+            link.click();
+          }
+        );
       },
 
       getFacetsRequest() {
         const facetUrl = fundFacetId
-          ? `${host}/Facets?fundListingFacetConfig=${fundFacetId}`
+          ? `${host}/Facets?articleListingFacetConfig={${fundFacetId}}`
           : `${host}/Facets`;
         $.get(facetUrl)
           .done((response) => {
@@ -188,7 +188,12 @@ export default () => {
 
       getSearchRequest() {
         this.loading = true;
-        const hostUrl = folderId ? `${host}/GetDocuments?documentFolderId={${folderId}}&` : host + "/Search?"
+        let hostUrl;
+        if (folderId)
+          hostUrl = `${host}/GetDocuments?documentFolderId={${folderId}}&`;
+        else if (parentId) hostUrl = `${host}/Search?parentId={${parentId}}&`;
+        else hostUrl = host + "/Search?";
+
         $.get(hostUrl + this.getQueryString())
           .done((response) => {
             const { searchResults, totalResults } = response;
@@ -207,7 +212,7 @@ export default () => {
         this.params.sortOrder = [this.sortOrder];
         this.applyFilters();
       },
-      selectAllDocuments: function (value)  {
+      selectAllDocuments: function (value) {
         this.selectedDocumentIds = [];
         eventBus.$emit("toggleSelected", value);
       },
@@ -300,22 +305,21 @@ export default () => {
       },
 
       downloadDocument() {
-        $.post(
-          `${host}/DownloadDocuments?downloadFileIds={${this.id}}`
-        ).done((data) => {
-          const blob = new Blob([data]);
-          const link = document.createElement("a");
-          link.href = window.URL.createObjectURL(blob);
-          link.download = this.title + ".pdf";
-          link.click();
-        });
+        $.post(`${host}/DownloadDocuments?downloadFileIds={${this.id}}`).done(
+          (data) => {
+            const blob = new Blob([data]);
+            const link = document.createElement("a");
+            link.href = window.URL.createObjectURL(blob);
+            link.download = this.title + ".pdf";
+            link.click();
+          }
+        );
       },
     },
     created() {
       eventBus.$on("toggleSelected", (selected) => {
-        this.selected = selected;        
-        if(selected)
-          this.selectDocument(this.id);
+        this.selected = selected;
+        if (selected) this.selectDocument(this.id);
       });
     },
   });
