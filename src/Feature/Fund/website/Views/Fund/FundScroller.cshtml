@@ -4,51 +4,52 @@
 
 @if (Model != null)
 {
-<div class="fundscroller relative">
-    <div class="container">
-        <div class="fundscroller__box">
-            <div class="row">
-                <div class="imagepromo__content">
-                    <div class="col-lg-5">
-                        <div class="fundscroller__left">
-                            <div class="imagepromo__content">
-                                <div class="imagepromo__headbox">
-                                    <h2>@Html.Glass().Editable(m => m.Heading)</h2>
-                                </div>
-                                <div class="imagepromo__contentbox txtlimit tenline @(Model.TextColour != null ? Model.TextColour.Value : string.Empty)">
-                                    <p>
-                                        @Html.Glass().Editable(m => m.Subtitle)
-                                    </p>
-                                    <p class="font-300">
-                                        @Html.Glass().Editable(m => m.Description)
-                                    </p>
-                                </div>
-                                <div class="imagepromo__btnbox">
-                                    @using (@Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.PrimaryCta, Model.PrimaryCtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
-                                    {
-                                        if (Model.PrimaryCta != null)
+    <div class="fundscroller relative">
+        <div class="container">
+            <div class="fundscroller__box">
+                <div class="row">
+                    <div class="imagepromo__content">
+                        <div class="col-lg-5">
+                            <div class="fundscroller__left">
+                                <div class="imagepromo__content">
+                                    <div class="imagepromo__headbox">
+                                        <h2>@Html.Glass().Editable(m => m.Heading)</h2>
+                                    </div>
+                                    <div class="imagepromo__contentbox txtlimit tenline @(Model.TextColour != null ? Model.TextColour.Value : string.Empty)">
+                                        <p>
+                                            @Html.Glass().Editable(m => m.Subtitle)
+                                        </p>
+                                        <p class="font-300">
+                                            @Html.Glass().Editable(m => m.Description)
+                                        </p>
+                                    </div>
+                                    <div class="imagepromo__btnbox">
+                                        @using (@Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.PrimaryCta, Model.PrimaryCtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
                                         {
-                                            @Model.PrimaryCta.Text
+                                            if (Model.PrimaryCta != null)
+                                            {
+                                                @Model.PrimaryCta.Text
+                                            }
+                                            else if (Sitecore.Context.PageMode.IsExperienceEditor)
+                                            {
+                                                @: Edit primary link
+                                            }
+                                            <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
                                         }
-                                        else if (Sitecore.Context.PageMode.IsExperienceEditor)
-                                        {
-                                            @: Edit primary link
-                                        }
-                                        <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
-                                    }
 
-                                    @using (@Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.SecondaryCta, Model.SecondaryCtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }, isEditable: true))
-                                    {
-                                        if (Model.SecondaryCta != null)
+                                        @using (@Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.SecondaryCta, Model.SecondaryCtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }, isEditable: true))
                                         {
-                                            @Model.SecondaryCta.Text
+                                            if (Model.SecondaryCta != null)
+                                            {
+                                                @Model.SecondaryCta.Text
+                                            }
+                                            else if (Sitecore.Context.PageMode.IsExperienceEditor)
+                                            {
+                                                @: Edit secondary link
+                                            }
+                                            <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
                                         }
-                                        else if (Sitecore.Context.PageMode.IsExperienceEditor)
-                                        {
-                                            @: Edit secondary link
-                                        }
-                                        <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
-                                    }
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -57,6 +58,7 @@
             </div>
         </div>
     </div>
+
     <div class="container fundscroller-container">
         <!-- Swiper -->
         <div class="swiper-container-funds">
@@ -108,5 +110,4 @@
             </div>
         </div>
     </div>
-</div>  
 }
