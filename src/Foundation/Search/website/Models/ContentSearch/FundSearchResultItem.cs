@@ -14,7 +14,7 @@
         public string FundTeam { get; set; }
 
         [IndexField("FundFacets_FundRanges")]
-        public IEnumerable<string> FundRange { get; set; }
+        public IEnumerable<string> FundRanges { get; set; }
 
         [IndexField("FundFacets_FundRegion")]
         public string FundRegion { get; set; }

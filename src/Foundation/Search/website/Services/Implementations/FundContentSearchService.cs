@@ -58,7 +58,7 @@
                                                     .Aggregate(rangePredicate,
                                                                     (current, range)
                                                                                 => current
-                                                                                     .Or(item => item.FundRange.Contains(range)));
+                                                                                     .Or(item => item.FundRanges.Contains(range)));
 
                 fundFilter = fundFilter.Or(rangePredicate);
             }
@@ -87,6 +87,19 @@
                                                                                      .Or(item => item.ItemId.ToString().Contains(fund)));
 
                 fundFilter = fundFilter.Or(fundsPredicate);
+            }
+
+            if (fundSearchRequest.ExcludeFunds != null && fundSearchRequest.ExcludeFunds.Any())
+            {
+                var excludeFundsPredicate = PredicateBuilder.False<FundSearchResultItem>();
+                excludeFundsPredicate = fundSearchRequest
+                                            .ExcludeFunds
+                                                    .Aggregate(excludeFundsPredicate,
+                                                                    (current, fund)
+                                                                                => current
+                                                                                     .And(item => !item.ItemId.ToString().Contains(fund)));
+
+                fundFilter = fundFilter.Or(excludeFundsPredicate);
             }
 
             predicate = predicate.And(fundFilter);
