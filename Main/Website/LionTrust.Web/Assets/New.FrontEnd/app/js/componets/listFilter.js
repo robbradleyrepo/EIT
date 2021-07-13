@@ -1,4 +1,5 @@
 import Vue from "vue/dist/vue.common.prod";
+const eventBus = new Vue();
 import { pagination } from "./listFilter/mixins/pagination";
 export default () => {
   const rootDom = document.getElementById("lister-app");
@@ -9,7 +10,7 @@ export default () => {
   const location = "https://cm-liontrust-it.sagittarius.agency/";
   let root = "";
   if (
-    window.location.hostname == "localhost" ||
+    window.location.hostname === "localhost" ||
     window.location.hostname === "127.0.0.1"
   ) {
     host = location + host;
@@ -75,7 +76,7 @@ export default () => {
         else this.params[facet.name].push(item.identifier);
       },
 
-      getQuerySring() {
+      getQueryString() {
         let str = "";
         str = str + "page=" + this.page;
         if (this.searchText) str = str + "&searchTerm=" + this.searchText;
@@ -93,7 +94,7 @@ export default () => {
         window.history.pushState(
           { page: "article-lister" },
           "search",
-          `${window.location.href.split("?")[0]}?${this.getQuerySring()}`
+          `${window.location.href.split("?")[0]}?${this.getQueryString()}`
         );
       },
 
@@ -145,24 +146,28 @@ export default () => {
         const index = this.selectedDocumentIds.findIndex((el) => el === id);
         if (index !== -1) this.selectedDocumentIds.splice(index, 1);
         else this.selectedDocumentIds.push(id);
-        console.log('this.selectedDocumentIds',this.selectedDocumentIds);
+        console.log("this.selectedDocumentIds", this.selectedDocumentIds);
       },
-      
-      dowloadDocument(title, id) {
+
+      clearDocumentIds() {
+        this.selectedDocumentIds = []
+      },
+
+      downloadDocument(title, id) {
         $.post(
           `https://cm-liontrust-it.sagittarius.agency/DocumentsApi/DownloadDocuments?downloadFileIds={${id}}`
         ).done((data) => {
           var blob = new Blob([data]);
           var link = document.createElement("a");
           link.href = window.URL.createObjectURL(blob);
-          link.download = title + '.zip';
+          link.download = title + ".zip";
           link.click();
         });
       },
 
       downloadDocumentMultiple() {
         const docsIds = this.selectedDocumentIds.join();
-        this.dowloadDocReq('Document archive', docsIds)
+        this.downloadDocReq("Document archive", docsIds);
       },
 
       getFacetsRequest() {
@@ -171,8 +176,8 @@ export default () => {
           ? `${host}/Facets?fundListingFacetConfig=${fundFacetId}`
           : `${host}/Facets`;
         $.get(facetUrl)
-          .done((responce) => {
-            const { facets, dates } = responce;
+          .done((response) => {
+            const { facets, dates } = response;
             console.log("facets", facets);
             this.facets = facets;
 
@@ -190,9 +195,9 @@ export default () => {
 
       getSearchRequest() {
         this.loading = true;
-        $.get(host + "/Search?" + this.getQuerySring())
-          .done((responce) => {
-            const { searchResults, totalResults } = responce;
+        $.get(host + "/Search?" + this.getQueryString())
+          .done((response) => {
+            const { searchResults, totalResults } = response;
             console.log("searchResults", searchResults);
             this.searchData = searchResults;
             this.amountResults = totalResults;
@@ -208,6 +213,11 @@ export default () => {
       sortOrder: function () {
         this.params.sortOrder = [this.sortOrder];
         this.applyFilters();
+      },
+      selectAllDocuments: function (value)  {
+        this.selectedDocumentIds = [];
+        console.log("value", value);
+        eventBus.$emit("toggleSelected", value);
       },
     },
     mounted() {
@@ -287,15 +297,23 @@ export default () => {
   });
 
   Vue.component("document-item", {
+    props: ["id", "title"],
     data: function () {
       return {
         selected: false,
       };
     },
     methods: {
-      selectDocument(id) {
-        this.$parent.setDocumentId(id);
+      selectDocument() {
+        this.$parent.setDocumentId(this.id);
       },
+    },
+    created() {
+      eventBus.$on("toggleSelected", (selected) => {
+        this.selected = selected;        
+        if(selected)
+          this.selectDocument(this.id);
+      });
     },
   });
 };
