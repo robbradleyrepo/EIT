@@ -1,0 +1,141 @@
+﻿---
+ID: "a7065d70-1a7b-41bd-af93-9a1911bcfa78"
+Parent: "42267455-7066-40b8-9290-228c7dbfc8e3"
+Template: "7b3dcdf5-5735-4fc8-89eb-dcb0f2f72972"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Learning Resources
+DB: master
+BranchID: "2b568216-2952-4a37-9a6f-0c1d2cc00c98"
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{21A62FB1-9BA7-42F4-BBAE-893230139CB5}">
+          <p:d />
+        </r>
+        <r
+          uid="{6C7A0B30-A2F1-4311-AD23-DBF3D026C297}"
+          p:before="*"
+          s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+          s:ph="/header/header-content" />
+        <r
+          uid="{AA0F83BD-90B0-4DC8-8381-DFF372FA48B1}"
+          p:after="r[@uid='{6C7A0B30-A2F1-4311-AD23-DBF3D026C297}']"
+          s:ds="{D960EF1E-6FBE-4E93-83AB-27E8E9BA602D}"
+          s:id="{5201B773-B4FF-4E38-A900-3D3D84F4C91A}"
+          s:par=""
+          s:ph="/header/header-content" />
+        <r
+          uid="{27D92EB5-45F2-4D16-A79B-C2C2EF17D921}"
+          p:after="r[@uid='{AA0F83BD-90B0-4DC8-8381-DFF372FA48B1}']"
+          s:ds="{35D601FA-2861-44CE-8C3C-7C06794583C3}"
+          s:id="{79B70F2C-3966-42CE-BC5E-FB3252C320D3}"
+          s:par=""
+          s:ph="/header/header-content" />
+        <r
+          uid="{8E0391BC-5BF8-4816-BA5E-56E3FF48BEE3}"
+          p:after="r[@uid='{27D92EB5-45F2-4D16-A79B-C2C2EF17D921}']"
+          s:ds="{9DB83F0C-3571-4EB1-B5A1-07D57D7BAA77}"
+          s:id="{7166AE9D-EFBD-48B3-B38F-AFD4CAAB5278}"
+          s:par=""
+          s:ph="/header/secondary-navigation" />
+        <r
+          uid="{3F7C03E7-C798-4037-91AC-82D3F1AC1FB4}"
+          p:after="r[@uid='{8E0391BC-5BF8-4816-BA5E-56E3FF48BEE3}']"
+          s:id="{37E7BD25-2361-4C48-8B98-1A3C92719326}"
+          s:ph="header" />
+        <r
+          uid="{2761A3B1-CB6D-430B-A4F2-47DDBF6B58A0}"
+          p:after="r[@uid='{3F7C03E7-C798-4037-91AC-82D3F1AC1FB4}']"
+          s:ds="{3FAA9D41-6E63-44BB-8C46-D03E00E131B6}"
+          s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{B762310E-45A0-453A-99CA-2B891F12A3CD}"
+          p:after="r[@uid='{2761A3B1-CB6D-430B-A4F2-47DDBF6B58A0}']"
+          s:ds="{1EFC1E00-749E-4A11-91B4-5FE4FC80866C}"
+          s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{5EC21256-0B1A-4366-943C-21AC2726554F}"
+          p:after="r[@uid='{B762310E-45A0-453A-99CA-2B891F12A3CD}']"
+          s:ds="{2230AF4B-1DFB-4E72-959A-78C1B44A35EB}"
+          s:id="{56ECB2D2-5D43-4F0F-A5D1-AC267F249E7B}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{E3106077-1681-48AC-ABF4-18091355FDB2}"
+          p:after="r[@uid='{5EC21256-0B1A-4366-943C-21AC2726554F}']"
+          s:ds="{FD9DE5E7-838E-48D9-913A-F2BFC967165F}"
+          s:id="{BA0509C8-337A-45E7-A597-8035DC2F1C21}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{BB919EAA-B777-48F1-B0D0-F6B4EC29B1F1}"
+          p:after="r[@uid='{E3106077-1681-48AC-ABF4-18091355FDB2}']"
+          s:ds="{9C0083E6-A513-4B0F-B858-239F85329919}"
+          s:id="{E06589BD-EA4D-48EA-8913-4CB37A690E72}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{4ED45CE9-7197-4CEE-A39D-9B2A66EEEB5D}"
+          p:after="r[@uid='{BB919EAA-B777-48F1-B0D0-F6B4EC29B1F1}']"
+          s:ds="{2BFA429E-BADE-4E6F-99AF-162C01024FC3}"
+          s:id="{8D47F982-4A0A-4CEB-BA66-DEABA6B71AD1}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{70CF7595-7294-4B24-BA33-F4066027846E}"
+          p:after="r[@uid='{4ED45CE9-7197-4CEE-A39D-9B2A66EEEB5D}']"
+          s:ds="{4AFCE868-A358-4C5B-A6C2-5A16708B3125}"
+          s:id="{727114BC-F412-4035-9035-172DA5297320}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{D9FDA14F-3AAC-4F5C-B92A-8494A4F3D67F}"
+          p:after="r[@uid='{70CF7595-7294-4B24-BA33-F4066027846E}']"
+          s:ds="{8F7AA55E-2569-4646-A28E-7FA325F64C31}"
+          s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{1BBE48ED-5B5C-4436-AC52-6E5675982BCF}"
+          p:after="r[@uid='{D9FDA14F-3AAC-4F5C-B92A-8494A4F3D67F}']"
+          s:ds="{8BDD8018-B6B9-4113-9990-F03AE3D7CB69}"
+          s:id="{A811D2B0-D08D-4991-A9DD-6D9FA5799CBD}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{E7D3B00B-B2CF-4434-9533-F64A19EB36F7}"
+          p:after="r[@uid='{CCBBB036-5788-4F78-AC6A-DF34C178F76C}']"
+          s:id="{C728A955-DA1D-4700-B924-E0D35901DE4B}"
+          s:ph="footer" />
+        <r
+          uid="{A9D97645-8E0D-4192-A314-3437510B5AF8}"
+          p:after="*[1=2]" />
+      </d>
+    </r>
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{7654D7F4-32E4-4519-9E61-A69365F9AB7A}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210617T151117Z
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: Learning Resources
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Learning Resources
