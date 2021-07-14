@@ -4,11 +4,15 @@
         padding: 16px 0 18px
     &__box
         position: relative
-        display: block
+        display: flex
         width: 100%
         min-height: 400px
         margin: 32px 0
+        flex-direction: column
+        > .row
+            width: 100%
         @include breakpoint(desktop, up)
+            flex-direction: row
             min-height: 673px
 
     // &__left

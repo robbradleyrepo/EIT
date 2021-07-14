@@ -18,9 +18,23 @@ SharedFields:
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
         l="{CD1590E1-6573-4CC7-B0A9-E3BB6A9DADE4}">
         <r
+          id="{C616CA2E-714D-4DC2-B9C4-46DB291815BE}"
+          ph="header"
+          uid="{2357D609-B5DF-4FA4-97F2-304F1C94FF90}" />
+        <r
           id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
           ph="navigation"
           uid="{5D8909EC-92E3-411A-B5CF-8AB5DF23AD34}" />
+        <r
+          id="{A1F6E48A-C7AB-42B2-A8A9-6DB3207F1503}"
+          ph="main"
+          uid="{BFF16C46-D990-4D2F-886F-E909524464A9}" />
+        <r
+          ds=""
+          id="{7626FD78-BC75-4F9C-80E7-DC947364A29B}"
+          par=""
+          ph="/main/article"
+          uid="{99599971-958A-48EA-BA66-EF285EF0F9D8}" />
         <r
           id="{29A12478-EBE8-4B5C-BF2E-871026066814}"
           ph="footer"
@@ -36,21 +50,6 @@ Languages:
   Versions:
   - Version: 1
     Fields:
-    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
-      Hint: __Final Renderings
-      Type: Layout
-      Value: |
-        <r xmlns:p="p" xmlns:s="s"
-          p:p="1">
-          <d
-            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
-            <r
-              uid="{286E3FB0-4AB4-4628-A694-C75BE609BE42}"
-              p:after="*[1=2]"
-              s:id="{A1F6E48A-C7AB-42B2-A8A9-6DB3207F1503}"
-              s:ph="main" />
-          </d>
-        </r>
     - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
       Hint: LegacyArticle_Title
       Value: $name

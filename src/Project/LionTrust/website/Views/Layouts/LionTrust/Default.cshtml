@@ -1,6 +1,7 @@
 ﻿@using Sitecore.Links
 @using Sitecore.Mvc.Analytics.Extensions
 @using Sitecore.Web
+@using LionTrust.Foundation.SitecoreExtensions.Extensions
 @{
     Layout = null;
 }
@@ -16,6 +17,7 @@
     @Html.Sitecore().VisitorIdentification()
     <link rel="icon" href="/dist/images/favicon.ico">
     <link rel="stylesheet" href="/dist/css/styles.min.css">
+    <link rel="canonical" href="@Html.Sitecore().CurrentItem.GetCanonicalUrl()">
 </head>
 
 @{ 
@@ -63,7 +65,8 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="/dist/js/app.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/dist/js/listing-page.min.js"></script>
+    <script src="/dist/js/search-page.min.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>

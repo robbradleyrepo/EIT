@@ -36,6 +36,7 @@
         public ActionResult Render()
         {
             var data = _context.GetHomeItem<IHome>();
+
             if (!IsOnboardingConfigured(data))
             {
                 return null;
@@ -127,11 +128,19 @@
                 var address = GetAddress(true);
                 if (address != null)
                 {
-                    var regionInfo = new RegionInfo(OnboardingSubmit.Country);
-
-                    if (regionInfo != null)
+                    try
                     {
-                        address.Country = regionInfo.EnglishName;
+                        var regionInfo = new RegionInfo(OnboardingSubmit.Country);
+
+                        if (regionInfo != null)
+                        {
+                            address.Country = regionInfo.EnglishName;
+                        }
+                    }
+                    catch (ArgumentException)
+                    {
+                        _log.Info($"{OnboardingSubmit.Country} is not an valid value", this);
+                        return null;
                     }
                 }
 
@@ -172,11 +181,11 @@
         {
             if (data == null)
             {
-                _log.Error("Unable to resolve home item", this);
+                _log.Error("Home item is not found", this);
                 return false;
             }
 
-            if (data?.OnboardingConfiguration == null)
+            if (data.OnboardingConfiguration == null)
             {
                 _log.Error("Onboarding configuration has not been set", this);
                 return false;

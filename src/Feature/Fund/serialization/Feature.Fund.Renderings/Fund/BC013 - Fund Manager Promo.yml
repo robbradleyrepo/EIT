@@ -5,6 +5,10 @@ Template: "2a3e91a0-7987-44b5-ab34-35c2d9de83b9"
 Path: "/sitecore/layout/Renderings/Feature/Fund/BC013 - Fund Manager Promo"
 DB: master
 SharedFields:
+- ID: "a2f5d9df-8cba-4a1d-99eb-51acb94cb057"
+  Hint: Page Editor Buttons
+  Type: Treelist
+  Value: "{699D2274-005F-4E52-BE43-03AA5683C07C}"
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
   Value: "site:fundmanagerpromo"
@@ -26,7 +30,7 @@ Languages:
     - ID: "04437558-ac18-42cb-ab21-1243a66abe67"
       Hint: Supports Local Datasource
       Type: Checkbox
-      Value: 0
+      Value: 1
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20210429T153319Z

@@ -1,0 +1,18 @@
+﻿@model LionTrust.Feature.Listings.Models.IGenericListingModule
+<div class="lister-app legacy-listmode">
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-9">
+                @foreach (var listingItem in Model.ListingItems)
+                {
+                    @Html.Partial("~/Views/Listings/_DownloadWithTitleAndDateItem.cshtml", listingItem)
+                    @Html.Partial("~/Views/Listings/_DownloadWithTitleItem.cshtml", listingItem)
+                    @Html.Partial("~/Views/Listings/_PodcastItem.cshtml", listingItem)
+                    @Html.Partial("~/Views/Listings/_ServiceItem.cshtml", listingItem)
+                    @Html.Partial("~/Views/Listings/_TitleDescriptionDateItem.cshtml", listingItem)
+                }
+            </div>
+        </div>
+    </section>
+
+</div>

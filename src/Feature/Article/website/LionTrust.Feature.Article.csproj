@@ -59,6 +59,9 @@
     </PackageReference>
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="1.0.5" />
     <PackageReference Include="Microsoft.Net.Compilers" Version="2.1.0" />
+    <PackageReference Include="Sitecore.Analytics">
+      <Version>9.2.0</Version>
+    </PackageReference>
     <PackageReference Include="Sitecore.Kernel" Version="9.2.0" />
     <PackageReference Include="Sitecore.Mvc">
       <Version>9.2.0</Version>
@@ -85,13 +88,14 @@
     <Content Include="Views\Article\RelatedArticles.cshtml" />
     <Content Include="Views\Article\MainQuote.cshtml" />
     <Content Include="Views\Article\IntroQuote.cshtml" />
-    <Content Include="Views\Article\ArticleContent.cshtml" />
+    <Content Include="Views\Article\ArticleRichText.cshtml" />
     <Content Include="Views\Article\Article.cshtml" />
     <Content Include="Views\Article\ArticleLinks.cshtml" />
     <Content Include="Views\Article\Image.cshtml" />
     <Content Include="Views\Article\GoldQuote.cshtml" />
     <Content Include="Views\Article\FundManagerInsights.cshtml" />
     <Content Include="Views\Article\FeaturedArticleHero.cshtml" />
+    <Content Include="Views\Article\ArticleContent.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -99,6 +103,7 @@
     <Compile Include="Controllers\ArticleController.cs" />
     <Compile Include="Controllers\ArticleHeaderController.cs" />
     <Compile Include="Controllers\FeaturedArticleHeroController.cs" />
+    <Compile Include="Controllers\MyFundsManagerInsightsController.cs" />
     <Compile Include="Controllers\FundManagerInsightsController.cs" />
     <Compile Include="Controllers\RelatedArticlesController.cs" />
     <Compile Include="Controllers\FeaturedArticlesController.cs" />
@@ -111,6 +116,7 @@
     <Compile Include="Models\ArticleLinksViewModel.cs" />
     <Compile Include="Models\ArticleScrollerViewModel.cs" />
     <Compile Include="Models\ArticleViewModel.cs" />
+    <Compile Include="Models\FundResult.cs" />
     <Compile Include="Models\IFeaturedArticleHero.cs" />
     <Compile Include="Models\FundManagerInsightsViewModel.cs" />
     <Compile Include="Models\IArticle.cs" />
@@ -120,6 +126,7 @@
     <Compile Include="Models\IArticleLinks.cs" />
     <Compile Include="Models\IArticleRichText.cs" />
     <Compile Include="Models\IArticleText.cs" />
+    <Compile Include="Models\IFundManagerInsightsBase.cs" />
     <Compile Include="Models\IFundManagerInsights.cs" />
     <Compile Include="Models\IImage.cs" />
     <Compile Include="Models\IRelatedArticles.cs" />
@@ -143,6 +150,10 @@
     <ProjectReference Include="..\..\..\Foundation\Analytics\website\LionTrust.Foundation.Analytics.csproj">
       <Project>{71010683-02eb-4e0d-b0e1-6643922799ee}</Project>
       <Name>LionTrust.Foundation.Analytics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Contact\website\LionTrust.Foundation.Contact.csproj">
+      <Project>{8EE89AE6-2E22-48CC-9FA9-F4C9225F76E8}</Project>
+      <Name>LionTrust.Foundation.Contact</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Content\website\LionTrust.Foundation.Content.csproj">
       <Project>{f8f55034-fa55-4d27-b115-0ab4eeb9a0a8}</Project>

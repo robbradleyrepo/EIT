@@ -1,5 +1,6 @@
 ﻿namespace LionTrust.Feature.Article.Controllers
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Web.Mvc;
@@ -46,13 +47,25 @@
                 var currentPage = _mvcContext.GetPageContextItem<IArticle>();
                 if (currentPage != null && currentPage.Topics != null && currentPage.Topics.Any())
                 {
+                    var fundList = new List<Guid>();
+                    if (currentPage.Fund.FundReference != null)
+                    {
+                        fundList.Add(currentPage.Fund.FundReference.Id);
+                    }
+
+                    var fundCategories = new List<Guid>();
+                    if (currentPage.PromoType != null)
+                    {
+                        fundCategories.Add(currentPage.PromoType.Id);
+                    }
+
                     articleScrollerViewModel.ArticleList = 
                         new ArticleRepository(_contentSearchService, _mvcContext).Map(
-                            new List<Foundation.Legacy.Models.IFund> { currentPage.Fund.FundReference }, 
-                            new List<Foundation.Legacy.Models.IFundCategory> { currentPage.PromoType },
+                            fundList, 
+                            fundCategories,
                             null, 
-                            currentPage.Authors,
-                            currentPage.Topics, 
+                            currentPage.Authors?.Select(a => a.Id),
+                            currentPage.Topics?.Select(t => t.Id), 
                             _databaseName);
 
 
@@ -71,6 +84,20 @@
             articleLinksViewModel.Article = _mvcContext.GetPageContextItem<IArticle>();
 
             return View("~/Views/Article/ArticleLinks.cshtml", articleLinksViewModel);
+        }
+
+        public ActionResult ArticleContent()
+        {
+            var articleDatasourceContent = _mvcContext.GetDataSourceItem<IArticleRichText>();
+            if (articleDatasourceContent != null)
+            {
+                return View("~/Views/Article/ArticleRichText.cshtml", articleDatasourceContent);
+            }
+            else
+            {
+                var articlePage = _mvcContext.GetPageContextItem<IArticle>();
+                return View("~/Views/Article/ArticleContent.cshtml", articlePage);
+            }
         }
 
         private bool IsFilterSet(IArticleFilter filter)

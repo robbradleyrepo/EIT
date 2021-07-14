@@ -44,7 +44,7 @@ export default () => {
   $('[data-change-step]').on("click", (e) => {
     e.preventDefault();
     const tab = e.target.dataset.changeStep;
-    if (tab > currentTab) return;
+    if (tab > Cookies.get("currentTab")) return;
     showTab(tab);
   });  
 

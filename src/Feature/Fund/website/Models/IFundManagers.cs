@@ -7,6 +7,9 @@
 
     public interface IFundManagers : IGlassBase
     {
+        [SitecoreField(Constants.FundManagers.TitleFieldId)]
+        string Title { get; set; }
+
         [SitecoreField(Constants.FundManagers.FundManagersFieldId)]
         IEnumerable<IAuthor> Managers { get; set; }
     }

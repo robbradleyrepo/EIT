@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using Sitecore.Configuration;
     using Sitecore.Data;
     using Sitecore.Data.Fields;
     using Sitecore.Data.Items;
@@ -23,6 +24,34 @@
                 return LinkManager.GetItemUrl(item, options);
             }
             return !item.Paths.IsMediaItem ? LinkManager.GetItemUrl(item) : MediaManager.GetMediaUrl(item);
+        }
+
+        public static string GetCanonicalUrl(this Item item)
+        {
+            UrlOptions urlOptions = LinkManager.GetDefaultUrlOptions();
+            urlOptions.LowercaseUrls = true;
+            urlOptions.AlwaysIncludeServerUrl = true;
+            // Copy option from setting
+            urlOptions.SiteResolving = Settings.Rendering.SiteResolving;
+            // If we ever include the language in the path,
+            // then we always include the language in the canonical URL.
+            if (urlOptions.LanguageLocation == LanguageLocation.FilePath
+                && urlOptions.LanguageEmbedding != LanguageEmbedding.Never)
+            {
+                urlOptions.LanguageEmbedding = LanguageEmbedding.Always;
+            }
+            string url = LinkManager.GetItemUrl(item, urlOptions);
+            // Don't include /language.aspx for home pages.
+            if (urlOptions.LanguageEmbedding == LanguageEmbedding.Always)
+            {
+                string[] parsed = url.Split('/');
+                if (parsed.Length == 4)
+                {
+                    url = string.Join("/", new[] { parsed[0], parsed[1], parsed[2] }) + '/';
+                }
+            }
+
+            return url;
         }
 
         public static Item GetAncestorOrSelfOfTemplate(this Item item, ID templateID)

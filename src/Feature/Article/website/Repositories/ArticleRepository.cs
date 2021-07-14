@@ -5,7 +5,6 @@
     using System.Linq;
     using Glass.Mapper.Sc.Web.Mvc;
     using LionTrust.Feature.Article.Models;
-    using LionTrust.Foundation.Legacy.Models;
     using LionTrust.Foundation.Search.Models.ContentSearch;
     using LionTrust.Foundation.Search.Models.Request;
     using LionTrust.Foundation.Search.Services.Interfaces;
@@ -44,15 +43,15 @@
                 .Select(sr => BuildArticle(sr.Document));
         }
 
-        public IEnumerable<IArticlePromo> Map(IEnumerable<IFund> funds, IEnumerable<IFundCategory> fundCategories, IEnumerable<IFundTeam> fundTeams, IEnumerable<IAuthor> fundManagers, IEnumerable<ITopic> topics, string databaseName)
+        public IEnumerable<IArticlePromo> Map(IEnumerable<Guid> funds, IEnumerable<Guid> fundCategories, IEnumerable<Guid> fundTeams, IEnumerable<Guid> fundManagers, IEnumerable<Guid> topics, string databaseName)
         {
             var request = new ArticleSearchRequest
             {
-                Topics = topics?.Select(t => t.Id),
-                Funds = funds?.Select(f => f.Id.ToString().Replace("-", string.Empty)),
-                FundCategories = fundCategories?.Select(fc => fc.Id.ToString().Replace("-", string.Empty)),
-                FundTeams = fundTeams?.Select(ft => ft.Id.ToString().Replace("-", string.Empty)),
-                FundManagers = fundManagers?.Select(fm => fm.Id.ToString().Replace("-", string.Empty)),
+                Topics = topics,
+                Funds = funds?.Select(f => f.ToString().Replace("-", string.Empty)),
+                FundCategories = fundCategories?.Select(fc => fc.ToString().Replace("-", string.Empty)),
+                FundTeams = fundTeams?.Select(ft => ft.ToString().Replace("-", string.Empty)),
+                FundManagers = fundManagers?.Select(fm => fm.ToString().Replace("-", string.Empty)),
                 Take = 6,
                 DatabaseName = databaseName,
                 FromDate = DateTime.MinValue,
@@ -73,7 +72,7 @@
 
         public IEnumerable<IArticlePromo> Map(IArticleFilter filter, string databaseName)
         {
-            return Map(filter.Funds, filter.FundCategories, filter.FundTeams, filter.FundManagers, filter.Topics, databaseName);
+            return Map(filter.Funds?.Select(f => f.Id), filter.FundCategories?.Select(fc => fc.Id), filter.FundTeams?.Select(ft => ft.Id), filter.FundManagers?.Select(fm => fm.Id), filter.Topics?.Select(t => t.Id), databaseName);
         }
 
         private IArticlePromo BuildArticle(ArticleSearchResultItem hit)

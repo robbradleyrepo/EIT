@@ -80,6 +80,11 @@
             public const string TextColourFieldId = "{81691A12-5AE2-433A-AEB4-7D7F5D4713E4}";
         }
 
+        public static class MyFundsScroller
+        {
+            public const string MaxFundsFieldId = "{77B3427C-896C-4F53-9DA4-7F8354D861D1}";
+        }
+
         public static class FundManager
         {
             public static Guid TemplateId = Guid.Parse("{A0702CF0-48EB-48A9-8E89-8FDBCD2B9F1D}");
@@ -141,6 +146,7 @@
 
         public static class FundManagers
         {
+            public const string TitleFieldId = "{4EF859A1-6CD4-4213-8EAB-94CC974C6C08}";
             public const string FundManagersFieldId = "{742FA605-EC20-4EC8-87FD-9E7DAEB8BC84}";
         }
 
@@ -159,6 +165,11 @@
         public static class SectorBreakdown
         {
             public const string HeadingFieldId = "{FE72E4F7-8806-4907-B17F-AA124431957F}";
+        }
+
+        public static class FundManagerPromo
+        {
+            public const string MangerFieldId = "{87A9CDD9-1B0D-466E-AA0C-36927B1954E4}";
         }
 
         public static class AdditionalInfoAndChargesComponent
