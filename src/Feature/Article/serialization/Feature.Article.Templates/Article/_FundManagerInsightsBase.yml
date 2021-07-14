@@ -1,17 +1,14 @@
 ﻿---
-ID: "654e526b-3cd6-4182-ab91-838020875a4f"
+ID: "be5befaa-f6b0-401d-a2ea-8a1912dd4f1d"
 Parent: "b0f4e3c3-a158-4d9e-9b06-8943b20ee354"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Feature/Article/_FundManagerInsights
+Path: /sitecore/templates/Feature/Article/_FundManagerInsightsBase
 DB: master
 SharedFields:
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
   Type: tree list
-  Value: |
-    {1930BBEB-7805-471A-A3BE-4858AC7CF696}
-    {B0C943DC-16B9-44A0-B4ED-92D7492B3813}
-    {BE5BEFAA-F6B0-401D-A2EA-8A1912DD4F1D}
+  Value: "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"
 Languages:
 - Language: en
   Versions:
