@@ -1,4 +1,5 @@
 import Vue from "vue/dist/vue.common.prod";
+import download from "downloadjs";
 const eventBus = new Vue();
 import { pagination } from "./listFilter/mixins/pagination";
 export default () => {
@@ -7,6 +8,7 @@ export default () => {
   const literatureId = rootDom.dataset.literatureid;
   const fundFacetId = rootDom.dataset.fundfacetid;
   const folderId = rootDom.dataset.folderid;
+  const parentId = rootDom.dataset.parentid;
   const location = "https://cm-liontrust-it.sagittarius.agency/";
   let root = "";
   if (
@@ -32,6 +34,81 @@ export default () => {
     "October",
     "November",
     "December",
+  ];
+
+  const results = [
+    {
+      title: "Liontrust GF Absolute Return Bond Fund Sales Aid",
+      documentLink:
+        "/sitecore/media-library/liontrust/files/fund-literature/sales-aids/offshore/liontrust-gf-absolute-return-bond-fund-sales-aid-2020-q2",
+      documentLinkText:
+        "Liontrust GF Absolute Return Bond Fund Sales Aid 2020 Q2",
+      documentPageLink:
+        "/sitecore/content/modules/documents/adviser-support/liontrust-gf-absolute-return-bond-fund-sales-aid",
+      documentVideoLink: null,
+      documentId: "567e5295-f425-4825-84a0-ed9a0e5282a9",
+    },
+    {
+      title: "Liontrust GF Absolute Return Bond Fund Sales Aid (International)",
+      documentLink:
+        "/-/media/liontrust/files/fund-literature/sales-aids/offshore/liontrust-gf-absolute-return-bond-fund-sales-aid-2020-q2-international.ashx",
+      documentLinkText: "",
+      documentPageLink:
+        "/sitecore/content/modules/documents/adviser-support/liontrust-gf-absolute-return-bond-fund-sales-aid-international",
+      documentVideoLink: null,
+      documentId: "861af72c-8a93-4f1f-8079-5848c32ff349",
+    },
+    {
+      title: "Liontrust GF High Yield Bond Fund Sales Aid",
+      documentLink:
+        "/-/media/liontrust/files/fund-literature/sales-aids/offshore/liontrust-gf-high-yield-fund-sales-aid-2020-q2.ashx",
+      documentLinkText: "",
+      documentPageLink:
+        "/sitecore/content/modules/documents/adviser-support/liontrust-gf-high-yield-bond-fund-sales-aid",
+      documentVideoLink: null,
+      documentId: "7d0287be-36a8-4ad0-81fb-f0a9fdec2435",
+    },
+    {
+      title: "Liontrust GF High Yield Bond Fund Sales Aid (International)",
+      documentLink:
+        "/sitecore/media-library/liontrust/files/fund-literature/sales-aids/offshore/liontrust-gf-high-yield-fund-sales-aid-2020-q2-international",
+      documentLinkText:
+        "Liontrust GF High Yield Fund Sales Aid 2020 Q2 International",
+      documentPageLink:
+        "/sitecore/content/modules/documents/adviser-support/liontrust-gf-high-yield-bond-fund-sales-aid-international",
+      documentVideoLink: null,
+      documentId: "64b3feea-8835-4f53-a982-8d20356f12aa",
+    },
+    {
+      title: "Liontrust GF Strategic Bond Fund Sales Aid",
+      documentLink:
+        "/-/media/liontrust/files/fund-literature/sales-aids/offshore/liontrust-gf-strategic-bond-fund-sales-aid-2020-q2.ashx",
+      documentLinkText: "",
+      documentPageLink:
+        "/sitecore/content/modules/documents/adviser-support/liontrust-gf-strategic-bond-fund-sales-aid",
+      documentVideoLink: null,
+      documentId: "ad2334a7-a0f0-4ad9-bd50-bcdae80bde2f",
+    },
+    {
+      title: "Liontrust GF Sustainable Future Global Growth Fund Sales Aid",
+      documentLink:
+        "/-/media/liontrust/files/fund-literature/sales-aids/offshore/liontrust-gf-sf-global-growth-fund-sales-aid.ashx",
+      documentLinkText: "",
+      documentPageLink:
+        "/sitecore/content/modules/documents/adviser-support/liontrust-gf-sustainable-future-global-growth-fund-sales-aid",
+      documentVideoLink: null,
+      documentId: "03b5904f-c94c-4a9d-8ff2-b671f5533421",
+    },
+    {
+      title: "Liontrust Strategic Bond Fund Sales Aid",
+      documentLink:
+        "/-/media/liontrust/files/adviser-support/lt-strategic-bond-fund-sales-aid-build24-online-single-pages.ashx",
+      documentLinkText: "",
+      documentPageLink:
+        "/sitecore/content/modules/documents/adviser-support/liontrust-strategic-bond-fund-sales-aid",
+      documentVideoLink: null,
+      documentId: "045b2230-0a55-43d3-9f2a-8bdca88cc52c",
+    },
   ];
   new Vue({
     el: "#lister-app",
@@ -154,15 +231,28 @@ export default () => {
 
       downloadDocumentMultiple() {
         const docsIds = this.selectedDocumentIds.join();
-        $.post(`${host}/DownloadDocuments?downloadFileIds={${docsIds}}`).done(
-          (data) => {
-            const blob = new Blob([data]);
-            const link = document.createElement("a");
-            link.href = window.URL.createObjectURL(blob);
-            link.download = "Documents" + ".zip";
-            link.click();
-          }
-        );
+        $.post({
+          type: "POST",
+          url: `${host}/DownloadDocuments`,
+          // contentType: 'application/json',
+          responseType: 'blob',
+          data: {
+            downloadFileIds: [
+              "{567E5295-F425-4825-84A0-ED9A0E5282A9}",
+              "{861AF72C-8A93-4F1F-8079-5848C32FF349}",
+            ],
+          },
+        }).done((data) => {
+          console.log("data", data);
+          const blob = new Blob([data], {
+            type: "application/pdf",
+          });
+          FileSaver.saveAs(blob, "hello world.zip");
+          // const link = document.createElement("a");
+          // link.href = window.URL.createObjectURL(blob);
+          // link.download = "Documents" + ".zip";
+          // link.click();
+        });
       },
 
       getFacetsRequest() {
@@ -172,6 +262,7 @@ export default () => {
         $.get(facetUrl)
           .done((response) => {
             const { facets, dates } = response;
+            console.log("facets res", response);
             this.facets = facets;
 
             if (dates && dates.months)
@@ -197,6 +288,7 @@ export default () => {
         $.get(hostUrl + this.getQueryString())
           .done((response) => {
             const { searchResults, totalResults } = response;
+            console.log("searchResults", searchResults);
             this.searchData = searchResults;
             this.amountResults = totalResults;
             this.loading = false;
@@ -219,11 +311,11 @@ export default () => {
     },
     mounted() {
       this.getFacetsRequest();
-      this.getSearchRequest();   
+      this.getSearchRequest();
       // this.facets = facets;
       // const { SearchResults, TotalResults } = responce;
-      // this.searchData = SearchResults;
-      // this.amountResults = TotalResults;  
+      // this.searchData = results;
+      // this.amountResults = TotalResults;
 
       document.querySelector("body").addEventListener("click", () => {
         this.sortModal = false;
@@ -304,17 +396,77 @@ export default () => {
         this.$parent.setDocumentId(this.id);
       },
 
-      downloadDocument() {
-        $.post(`${host}/DownloadDocuments?downloadFileIds={${this.id}}`).done(
+       downloadDocument() {
+        // const response = await fetch(`${host}/DownloadDocuments`, {
+        //   method: "POST",
+        //   headers: {
+        //     'Content-Type': 'application/json'
+        //     // 'Content-Type': 'application/x-www-form-urlencoded',
+        //   },
+        //   body: JSON.stringify({ "downloadFileIds": this.id })
+        // })
+        // console.log('response',response);
+
+        // var x=new XMLHttpRequest();
+        // x.open( "POST", `${host}/DownloadDocuments` , true);
+        // x.responseType="blob";
+        // // x.onload= function(e){download(e.target.response, "awesomesauce.pdf", "application/pdf");};
+        // x.onreadystatechange = function() {//Call a function when the state changes.
+        //   if(x.readyState == 4 && x.status == 200) {
+        //       console.log(x)
+        //   }
+        // }
+        // x.send(JSON.stringify({
+        //   downloadFileIds: this.id
+        // }));
+
+        $.post({
+          xhrFields: { responseType: "application/pdf" },
+          // contentType: "application/json",
+          url: `${host}/DownloadDocuments`,
+          data: {
+            downloadFileIds: this.id
+          }
+        }).done(
           (data) => {
-            const blob = new Blob([data]);
-            const link = document.createElement("a");
-            link.href = window.URL.createObjectURL(blob);
-            link.download = this.title + ".pdf";
+            console.log(data.length);
+            // const file = new Uint8Array(data);
+            // console.log('file',file);
+            
+            // return download("data" + data, "CUSTOM_NAME.pdf", "application/pdf");
+            const url = window.URL.createObjectURL(new Blob([data], { type: "application/pdf;charset=base-64" }));
+            const link = document.createElement('a');
+            link.href = url;
+            link.setAttribute('download', 'file.pdf');
+            document.body.appendChild(link);
             link.click();
+          //   const blob = new Blob([data],{
+          //     type: "application/pdf"
+          // });          
+          //   const link = document.createElement("a");
+          //   link.href = window.URL.createObjectURL(blob);
+          //   link.download = this.title + ".pdf";
+          //   link.click();
           }
         );
+
+        // axios({
+        //   url: `${host}/DownloadDocuments`,
+        //   data: {
+        //     downloadFileIds: this.id
+        //   },
+        //   method: 'post',
+        //   // responseType: 'blob', // important
+        // }).then((response) => {
+        //   const url = window.URL.createObjectURL(new Blob([response.data]));
+        //   const link = document.createElement('a');
+        //   link.href = url;
+        //   link.setAttribute('download', 'file.pdf');
+        //   document.body.appendChild(link);
+        //   link.click();
+        // });
       },
+      
     },
     created() {
       eventBus.$on("toggleSelected", (selected) => {
