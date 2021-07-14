@@ -56,21 +56,25 @@
             return listingGenericListingResponse;
         }
 
-        public IGenericSearchResponse GetGenericListingResponse(string database, string parent, string listingType, List<int> months, List<int> years, string searchTerm, int page)
+        public IGenericSearchResponse GetGenericListingResponse(string parent, string listingType = "", List<int> months = null, List<int> years = null, string searchTerm = "", int page = 1, string database = "web")
         {
             page = page - 1;
 
             var genericSearchRequest = new GenericSearchRequest
             {
                 DatabaseName = database,
-                Parent = parent,
-                ListingType = listingType?.Split('|'),
+                Parent = parent,                
                 Months = months,
                 Years = years,
                 SearchTerm = searchTerm,
                 Skip = page * 21,
                 Take = 21
             };
+
+            if (!string.IsNullOrEmpty(listingType))
+            {
+                genericSearchRequest.ListingType = listingType.Split('|');
+            }
 
             GenericSearchResults contentSearchResults;
             contentSearchResults = this._genericContentSearchService.GetTaxonomyRelatedGenericItems(genericSearchRequest);

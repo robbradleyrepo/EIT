@@ -36,7 +36,7 @@
             }           
         }
 
-        public ActionResult GetFilteredResults(string listingType, string parentId, List<int> months, List<int> years, string searchTerm, string database = "web", int page = 1)
+        public ActionResult GetFilteredResults(string parentId, string listingType = "", List<int> months = null, List<int> years = null, string searchTerm = "", string database = "web", int page = 1)
         {
             var response = this._genericListingDataManager.GetGenericListingResponse(database, parentId, listingType, months?.ToList(), years?.ToList(), searchTerm, page);
             if (response.StatusCode != 200)
