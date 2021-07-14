@@ -80,7 +80,7 @@
             contentSearchResults = this._genericContentSearchService.GetTaxonomyRelatedGenericItems(genericSearchRequest);
             
             var genericSearchResponse = new GenericListingSearchResponse();
-            if (contentSearchResults.TotalResults > 0)
+            if (contentSearchResults != null && contentSearchResults.TotalResults > 0)
             {
                 genericSearchResponse.SearchResults = this.MapGenericResultHits(contentSearchResults.SearchResults);
                 genericSearchResponse.StatusMessage = "Success";
