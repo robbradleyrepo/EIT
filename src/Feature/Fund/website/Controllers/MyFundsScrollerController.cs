@@ -87,7 +87,7 @@
                 return null;
             }
 
-            return View("/views/fund/myfundsscroller.cshtml", datasource);
+            return View("/views/fund/fundscroller.cshtml", datasource);
         }
 
         private IEnumerable<IFundContentResult> MapFundResultHits(IEnumerable<SearchHit<FundSearchResultItem>> hits)
