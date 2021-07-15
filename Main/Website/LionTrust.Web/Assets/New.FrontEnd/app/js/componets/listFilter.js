@@ -155,25 +155,26 @@ export default () => {
       },
 
       downloadDocumentMultiple() {
-        document.body.style.cursor='wait';
+        document.body.style.cursor = "wait";
         $.post({
           type: "POST",
           xhrFields: { responseType: "arraybuffer" },
           url: `${host}/DownloadDocuments`,
-          data: {downloadFileIds: this.selectedDocumentIds},
-        }).done((data) => {
-          const url = window.URL.createObjectURL(new Blob([data]));
-          const link = document.createElement("a");
-          link.href = url;
-          link.setAttribute("download", "Documents.zip");
-          document.body.appendChild(link);
-          link.click();
-          document.body.style.cursor='default';
+          data: { downloadFileIds: this.selectedDocumentIds },
         })
-        .fail((e) => {
-          console.error(e);
-          document.body.style.cursor='default';
-        });
+          .done((data) => {
+            const url = window.URL.createObjectURL(new Blob([data]));
+            const link = document.createElement("a");
+            link.href = url;
+            link.setAttribute("download", "Documents.zip");
+            document.body.appendChild(link);
+            link.click();
+            document.body.style.cursor = "default";
+          })
+          .fail((e) => {
+            console.error(e);
+            document.body.style.cursor = "default";
+          });
       },
 
       getFacetsRequest() {
@@ -322,27 +323,29 @@ export default () => {
         this.$parent.setDocumentId(this.id);
       },
       downloadDocument() {
-        document.body.style.cursor='wait';
+        document.body.style.cursor = "wait";
         $.post({
           xhrFields: { responseType: "arraybuffer" },
           url: `${host}/DownloadDocuments`,
           data: {
             downloadFileIds: this.id,
           },
-        }).done((data) => {
-          const url = window.URL.createObjectURL(
-            new Blob([data], { type: "application/pdf;charset=base-64" })
-          );
-          const link = document.createElement("a");
-          link.href = url;
-          link.setAttribute("download", this.title + ".pdf");
-          document.body.appendChild(link);
-          link.click();
-          document.body.style.cursor='default';
-        }).fail((e) => {
-          console.error(e);
-          document.body.style.cursor='default';
-        });
+        })
+          .done((data) => {
+            const url = window.URL.createObjectURL(
+              new Blob([data], { type: "application/pdf;charset=base-64" })
+            );
+            const link = document.createElement("a");
+            link.href = url;
+            link.setAttribute("download", this.title + ".pdf");
+            document.body.appendChild(link);
+            link.click();
+            document.body.style.cursor = "default";
+          })
+          .fail((e) => {
+            console.error(e);
+            document.body.style.cursor = "default";
+          });
       },
     },
     created() {
@@ -353,6 +356,6 @@ export default () => {
     },
     beforeDestroy() {
       eventBus.$off("toggleSelected");
-    }
+    },
   });
 };
