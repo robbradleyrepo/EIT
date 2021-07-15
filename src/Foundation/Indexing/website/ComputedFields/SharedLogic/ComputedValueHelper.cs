@@ -83,6 +83,15 @@
             return string.Join("|", referencedItemFieldValues);
         }
 
+        public static string GetDropLinkFieldValue(LookupField dropLinkField, params string[] textFieldNames)
+        {
+            if (dropLinkField == null || dropLinkField.TargetItem == null)
+            {
+                return null;
+            }
+            return GetFieldValue(dropLinkField.TargetItem, textFieldNames);
+        }
+
         private static string GetFieldValue(Item item, params string[] textFieldNames)
         {
             if (textFieldNames == null)
