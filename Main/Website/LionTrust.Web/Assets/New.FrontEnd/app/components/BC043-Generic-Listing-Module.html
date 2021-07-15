@@ -29,7 +29,7 @@
                             <div class="col-lg-3 relative" @click.stop>
                                 <div class="article-filters__select" @click="toggleOption"
                                     :class="open ? 'active' : ''">
-                                    <span class="article-filters__item-title">
+                                    <span class="article-filters__item-title" :class="active ? 'active' : ''">
                                         {{facet.name}}
                                     </span>
                                     <i class="article-filters__icon-arrow"></i>
@@ -43,7 +43,7 @@
                                         :key="i + item.name">
                                         <label class="option-checkbox">
                                             <input :id="item.name" class="option-checkbox__input" type="checkbox"
-                                                v-model="checked" @change="toggleSelect(item, facet)">
+                                                v-model="checked" @change="toggleSelect(item, facet)" @click="setChoosen(!checked)">
                                             <span class="option-checkbox__text">{{item.name}} </span>
                                             <span class="option-checkbox__icon"></span>
                                         </label>

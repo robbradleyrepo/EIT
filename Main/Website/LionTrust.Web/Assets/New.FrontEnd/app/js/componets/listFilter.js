@@ -248,6 +248,7 @@ export default () => {
     data: function () {
       return {
         open: false,
+        active: 0,
       };
     },
     methods: {
@@ -256,6 +257,10 @@ export default () => {
       },
       clearOption() {
         this.$emit("clearOptionField");
+      },
+      setChoosen(val) {
+        if (val) this.active++;
+        else this.active--;
       },
     },
     mounted() {
