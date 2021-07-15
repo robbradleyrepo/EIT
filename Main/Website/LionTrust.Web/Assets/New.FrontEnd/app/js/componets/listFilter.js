@@ -1,5 +1,4 @@
 import Vue from "vue/dist/vue.common.prod";
-import download from "downloadjs";
 const eventBus = new Vue();
 import { pagination } from "./listFilter/mixins/pagination";
 export default () => {
@@ -347,5 +346,8 @@ export default () => {
         if (selected) this.selectDocument(this.id);
       });
     },
+    beforeDestroy() {
+      eventBus.$off("toggleSelected");
+    }
   });
 };
