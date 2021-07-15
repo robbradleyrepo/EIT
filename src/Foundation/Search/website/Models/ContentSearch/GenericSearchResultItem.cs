@@ -10,6 +10,9 @@
         [IndexField("genericlistingmoduleitem_image")]
         public string GenericListingImage { get; set; }
 
+        [IndexField("genericlistingmoduleitem_imagewidth")]
+        public string GenericListingImageWidth { get; set; }
+
         [IndexField("genericlistingmoduleitem_richtext")]
         public string GenericListingText { get; set; }
 

@@ -100,6 +100,7 @@
         {
             return hits.Select(x => new GenericListingResult
             {
+                ImageWidth = x.Document.GenericListingImageWidth,
                 ImageUrl = x.Document.GenericListingImage,
                 Subtitle = x.Document.GenericListingSubtitle,
                 Title = x.Document.GenericListingTitle,

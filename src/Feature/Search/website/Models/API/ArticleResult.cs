@@ -32,5 +32,9 @@
         public string Subtitle { get; set; }
         
         public IEnumerable<string> Topics { get; set; }
+
+        public string VideoUrl { get; set; }
+
+        public PodcastModel Podcast { get; set; }
     }
 }
