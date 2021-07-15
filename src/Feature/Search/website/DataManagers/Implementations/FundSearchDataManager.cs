@@ -62,7 +62,11 @@
                 FundCardHeading = x.Document.FundCardHeading,
                 FundCardDescription = x.Document.FundCardDescription,
                 CTAText = x.Document.FundPageLinkText,
-                FundFactSheet = x.Document.FundFactSheet
+                FundFactSheet = x.Document.FundFactSheet,
+                FundManagers = x.Document.FundManagers,
+                FundRange = x.Document.FundRanges,
+                FundRegion = x.Document.FundRegion,
+                FundTeam = x.Document.FundTeam
             });
         }
 

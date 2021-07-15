@@ -43,8 +43,11 @@ export default () => {
   // navigation on tabs
   $('[data-change-step]').on("click", (e) => {
     e.preventDefault();
-    const tab = e.target.dataset.changeStep;
-    if (tab > currentTab) return;
+    var tab = e.target.dataset.changeStep;
+    if (tab > Cookies.get("currentTab")) return;
+	else if(tab == 1){
+		tab = $('#correct-location').data('isoCountry').length > 0 ? 1 : 0 
+	}
     showTab(tab);
   });  
 
@@ -78,11 +81,14 @@ export default () => {
 	 $(acceptText).text($(acceptText).text().replace("{country}", e.target.dataset.nameCountry));
 
 	 if(e.target.dataset.isoCountry != "GB"){
-		 $('.btn.private-investor').toggle();
-		 $('.onboarding-overlay__title.uk-title').toggle();
+		 $('.btn.private-investor').hide();
+		 $('.onboarding-overlay__title.uk-title').hide();
+		 $('.onboarding-overlay__title.non-uk-title').show();
 	 }
 	 else{
-		 $('.onboarding-overlay__title.non-uk-title').toggle();
+		 $('.btn.private-investor').show();
+		 $('.onboarding-overlay__title.uk-title').show();
+		 $('.onboarding-overlay__title.non-uk-title').hide();
 	 }
 	 
 	 $.ajax({

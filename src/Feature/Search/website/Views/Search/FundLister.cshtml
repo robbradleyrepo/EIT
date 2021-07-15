@@ -154,7 +154,7 @@
                                         <a :href="fund.fundFactSheet" class="fund-card__btn">
                                             @Html.Glass().Editable(Model, m => m.FactsheetLabel) <i class="icon-file"></i>
                                         </a>
-                                        <button class="fund-card__btn" @@click="showLiteratureOverlay">
+                                        <button class="fund-card__btn" @@click="showLiteratureOverlay(fund.FundId)">
                                             @Html.Glass().Editable(Model, m => m.AllDocumentsLabel) <i class="icon-folder"></i>
                                         </button>
                                     </div>
@@ -185,7 +185,7 @@
                             <div class="fund-item-list__links">
                                 @*<button href="#" class="link-gray">@Html.Glass().Editable(Model, m => m.FollowLabel) <i class="icon-follow"></i></button>*@
                                 <a :href="fund.fundFactSheet" target="_blank" class="link-gray">@Html.Glass().Editable(Model, m => m.FactsheetLabel) <i class="icon-file"></i></a>
-                                <button class="link-gray view-documents" @@click="showLiteratureOverlay">@Html.Glass().Editable(Model, m => m.AllDocumentsLabel) <i class="icon-folder"></i></button>
+                                <button class="link-gray view-documents" @@click="showLiteratureOverlay(fund.fundId)">@Html.Glass().Editable(Model, m => m.AllDocumentsLabel) <i class="icon-folder"></i></button>
                             </div>
                         </div>
                         <div class="col-lg-6 col-xl-2">

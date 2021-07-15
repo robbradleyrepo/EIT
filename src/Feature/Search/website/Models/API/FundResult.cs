@@ -2,6 +2,7 @@
 {
     using LionTrust.Foundation.Search.Models;
     using System;
+    using System.Collections.Generic;
 
     public class FundResult : IFundContentResult
     {
@@ -20,5 +21,13 @@
         public string FundCardDescription { get; set; }
 
         public string FundFactSheet { get; set; }
+
+        public string FundTeam { get; set; }
+
+        public IEnumerable<string> FundManagers { get; set; }
+
+        public IEnumerable<string> FundRange { get; set; }
+
+        public string FundRegion { get; set; }
     }
 }

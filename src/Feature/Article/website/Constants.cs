@@ -111,6 +111,10 @@
         public static class FundManagerInsights
         {
             public const string SelectedArticles_FieldId = "{C83820F8-FE31-440B-BDB9-61698D79C066}";
+        }
+
+        public static class FundManagerInsightsBase
+        {
             public const string CTA_FieldId = "{6E1628B0-EBD1-45C5-AD2F-3E0AA6FC19A4}";
             public const string Heading_FieldId = "{1492465C-0E3C-4FDB-97B8-0FC76924E400}";
         }

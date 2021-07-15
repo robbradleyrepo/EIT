@@ -80,6 +80,11 @@
             public const string TextColourFieldId = "{81691A12-5AE2-433A-AEB4-7D7F5D4713E4}";
         }
 
+        public static class MyFundsScroller
+        {
+            public const string MaxFundsFieldId = "{77B3427C-896C-4F53-9DA4-7F8354D861D1}";
+        }
+
         public static class FundManager
         {
             public static Guid TemplateId = Guid.Parse("{A0702CF0-48EB-48A9-8E89-8FDBCD2B9F1D}");

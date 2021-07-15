@@ -16,6 +16,8 @@
 
         public IEnumerable<string> Funds { get; set; }
 
+        public IEnumerable<string> ExcludeFunds { get; set; }
+
         public string SearchTerm { get; set; }
 
         public int Skip { get; set; }

@@ -21,7 +21,7 @@
             _mvcContext = mvcContext;
         }
 
-        public ActionResult GetDocuments(string documentFolderId, bool sortyByAZ = true, int page = 1, int resultsPerPage = 10)
+        public ActionResult GetDocuments(string documentFolderId, string sortOrder = "ASC", int page = 1, int resultsPerPage = 10)
         {
             if (string.IsNullOrEmpty(documentFolderId))
             {
@@ -40,10 +40,10 @@
             }
 
             var documentLister = _mvcContext.SitecoreService.GetItem<IDocumentLister>(documentFolderGuid);
-            IEnumerable<DocumentModel> documentsListSorted = null;
+            var documentsResponse = new DocumentsResponse();
             if (documentLister.DocumentList != null && documentLister.DocumentList.Any())
             {
-                documentsListSorted = documentLister.DocumentList.Select(
+                documentsResponse.SearchResults = documentLister.DocumentList.Select(
                     x => new DocumentModel
                     {
                         Title = x.DocumentName,
@@ -54,24 +54,27 @@
                         DocumentVideoLink = x.VideoLink?.Url
                     });
 
-                if (sortyByAZ)
+                if (sortOrder == "ASC")
                 {
-                    documentsListSorted = documentsListSorted.OrderBy(x => x.Title);
+                    documentsResponse.SearchResults = documentsResponse.SearchResults.OrderBy(x => x.Title);
                 }
                 else
                 {
-                    documentsListSorted = documentsListSorted.OrderByDescending(x => x.Title);
+                    documentsResponse.SearchResults = documentsResponse.SearchResults.OrderByDescending(x => x.Title);
                 }
 
-                documentsListSorted = documentsListSorted.Skip((page - 1) * resultsPerPage).Take(resultsPerPage);
+                documentsResponse.SearchResults = documentsResponse.SearchResults.Skip((page - 1) * resultsPerPage).Take(resultsPerPage);
             }
 
-            if (documentsListSorted == null || !documentsListSorted.Any())
+            if (documentsResponse.SearchResults == null || !documentsResponse.SearchResults.Any())
             {
                 return new HttpNotFoundResult();
             }
 
-            return new JsonCamelCaseResult(documentsListSorted, JsonRequestBehavior.AllowGet);
+            documentsResponse.TotalResults = documentsResponse.SearchResults.Count();
+            documentsResponse.StatusCode = 200;
+
+            return new JsonCamelCaseResult(documentsResponse, JsonRequestBehavior.AllowGet);
         }
 
         [HttpPost]

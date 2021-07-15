@@ -1,5 +1,6 @@
 ﻿namespace LionTrust.Feature.Article.Controllers
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Web.Mvc;
@@ -46,16 +47,16 @@
                 var currentPage = _mvcContext.GetPageContextItem<IArticle>();
                 if (currentPage != null && currentPage.Topics != null && currentPage.Topics.Any())
                 {
-                    var fundList = new List<Foundation.Legacy.Models.IFund>();
+                    var fundList = new List<Guid>();
                     if (currentPage.Fund.FundReference != null)
                     {
-                        fundList.Add(currentPage.Fund.FundReference);
+                        fundList.Add(currentPage.Fund.FundReference.Id);
                     }
 
-                    var fundCategories = new List<Foundation.Legacy.Models.IFundCategory>();
+                    var fundCategories = new List<Guid>();
                     if (currentPage.PromoType != null)
                     {
-                        fundCategories.Add(currentPage.PromoType);
+                        fundCategories.Add(currentPage.PromoType.Id);
                     }
 
                     articleScrollerViewModel.ArticleList = 
@@ -63,8 +64,8 @@
                             fundList, 
                             fundCategories,
                             null, 
-                            currentPage.Authors,
-                            currentPage.Topics, 
+                            currentPage.Authors?.Select(a => a.Id),
+                            currentPage.Topics?.Select(t => t.Id), 
                             _databaseName);
 
 

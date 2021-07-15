@@ -1,6 +1,7 @@
 ﻿namespace LionTrust.Foundation.Search.Models
 {
     using System;
+    using System.Collections.Generic;
 
     public interface IFundContentResult
     {
@@ -19,6 +20,14 @@
         string Url { get; set; }
 
         string FundFactSheet { get; set; }
+
+        string FundTeam { get; set; }
+
+        IEnumerable<string> FundManagers { get; set; }
+
+        IEnumerable<string> FundRange { get; set; }
+
+        string FundRegion { get; set; }
 
     }
 }
