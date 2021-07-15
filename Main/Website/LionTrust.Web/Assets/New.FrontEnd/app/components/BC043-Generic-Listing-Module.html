@@ -1,4 +1,5 @@
-<div class="lister-app legacy-listmode" id="lister-app" data-host="GenericListingApi" data-fundfacetid="7BE813CE-126D-42C8-B4AE-9370E32F9B50" data-parentid="4DAD140E-E3B4-4D83-8005-5B4BA47F20FB">
+<div class="lister-app legacy-listmode" id="lister-app" data-host="GenericListingApi"
+    data-fundfacetid="7BE813CE-126D-42C8-B4AE-9370E32F9B50" data-parentid="C8DD748E-C4C8-4852-B644-E7F40EC7ABD9">
     <div class="article-filter-wrapper">
         <div class="article-filters" :class="mobileFilter ? 'active' : ''">
             <div class="article-filters__header">
@@ -11,8 +12,8 @@
                         </div>
                         <div class="col-lg-3">
                             <form class="search-form" @submit.prevent="submitSearchForm($event)">
-                                <input type="text" v-model="searchText" name="searchText" class="search-form__input color-black"
-                                    placeholder="Search by keyword">
+                                <input type="text" v-model="searchText" name="searchText"
+                                    class="search-form__input color-black" placeholder="Search by keyword">
                                 <button class="search-form__submit pe-0" type="submit">
                                     <i class="icon-search"></i>
                                 </button>
@@ -24,9 +25,10 @@
             <div class="article-filters__body">
                 <div class="container">
                     <div class="row">
-                        <select-field inline-template  v-for="(facet, i) in getFacets" :key="i">
+                        <select-field inline-template v-for="(facet, i) in getFacets" :key="i">
                             <div class="col-lg-3 relative" @click.stop>
-                                <div class="article-filters__select" @click="toggleOption" :class="open ? 'active' : ''">
+                                <div class="article-filters__select" @click="toggleOption"
+                                    :class="open ? 'active' : ''">
                                     <span class="article-filters__item-title">
                                         {{facet.name}}
                                     </span>
@@ -37,19 +39,22 @@
                                         <i class="icon-chevron-left"></i>
                                         {{facet.name}}
                                     </div>
-                                    <option-field inline-template v-for="(item, i) in facet.items" :for="item.name" :key="i + item.name">
+                                    <option-field inline-template v-for="(item, i) in facet.items" :for="item.name"
+                                        :key="i + item.name">
                                         <label class="option-checkbox">
-                                            <input :id="item.name" class="option-checkbox__input" type="checkbox" v-model="checked"  @change="toggleSelect(item, facet)">
+                                            <input :id="item.name" class="option-checkbox__input" type="checkbox"
+                                                v-model="checked" @change="toggleSelect(item, facet)">
                                             <span class="option-checkbox__text">{{item.name}} </span>
                                             <span class="option-checkbox__icon"></span>
                                         </label>
                                     </option-field>
                                 </div>
-                            </div>   
+                            </div>
                         </select-field>
                         <div class="col-lg-3">
                             <div class="article-filters__btns justify-content-end">
-                                <button class="clear-filter btn article-filters__btn article-filters__btn_clear" @click="clearFilters">
+                                <button class="clear-filter btn article-filters__btn article-filters__btn_clear"
+                                    @click="clearFilters">
                                     Clear all
                                 </button>
                             </div>
@@ -78,31 +83,58 @@
 
     <div class="container d-lg-none">
         <div class="d-flex justify-content-between margin-mob-fliter-btn mt-0" :class="!mobileFilter ? 'relative' : ''">
-            <btn id="show-article-fliter"  class="btn btn-clean" @click="toggleMobileFilter">
+            <btn id="show-article-fliter" class="btn btn-clean" @click="toggleMobileFilter">
                 <i class="icon-filter"></i> filter
-            </btn>        
+            </btn>
         </div>
     </div>
 
     <section class="container">
-        <div class="row">
-            <div class="col-lg-6">
+        
+            <!-- <div class="col-lg-6"> -->
                 <article-item inline-template v-for="(article, i) in searchData" :key="i">
-                    <div class="list-mod-item">
-                        <h2 class="list-mod-item__title">{{article.title}}</h2>
-                        <span class="list-mod-item__date">{{article.date}}</span>
-                        <div class="list-mod-item__content">
-                            <p>
-                                {{article.subtitle}}
-                            </p>
-                            
-                            <a href="#">
-                                {{article.text}}
-                            </a>
+                    <div class="row">
+                        <div class="col-lg-7 read more" v-if="!article.imageUrl">
+                        <div class="list-mod-item" >
+                            <h2 class="list-mod-item__title" v-if="article.title">{{article.title}}</h2>
+                            <span class="list-mod-item__date" v-if="article.date">{{article.date}}</span>
+                            <div class="list-mod-item__content">
+                                <p v-if="article.subtitle">
+                                    {{article.subtitle}}
+                                </p>
+                                <p v-html="article.text"></p>
+    
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-lg-7" v-if="!article.imageUrl && !article.title">
+                        <div class="list-mod-item">  
+                            <div class="list-mod-item__content">
+                                <div class="list-mod-item__download">
+                                    <h5>{{article.subtitle}}
+                                </h5> 
+                                <span v-html="article.text"></span>
+                                </div>     
                         </div>
                     </div>
+                        </div>        
+                        <div class="col-lg-9" v-if="article.imageUrl">
+                        <div class="services-item">
+                            <img :src="article.imageUrl"
+                                alt="Transparency" class="services-item__img">
+                            <div class="services-item__content">
+                                <div class="services-item__title">
+                                    {{article.title}}
+                                </div>
+                                <div class="services-item__descript" v-html="article.text">
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                </div>
                 </article-item>
-                
+                <hr>
+
                 <div class="list-mod-item">
                     <h2 class="list-mod-item__title">
                         Lorem ipsum dolor sit amet consectetur adipiscing elit sed
@@ -175,7 +207,7 @@
                             <p>
                                 <span>Lorem ipsum dolor
                                     sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                    labore et dolore magna aliqua.</span>                                
+                                    labore et dolore magna aliqua.</span>
                             </p>
                             <p>
                                 <a href="#">
@@ -204,13 +236,13 @@
                             </p>
                         </div>
                     </div>
-                </div>                
-            </div>
+                </div>
+            <!-- </div> -->
             <div class="col-lg-9">
                 <!--#include virtual="/components/BC043-ListMod-Podcast.html" -->
                 <!--#include virtual="/components/BC043-ListMod-Services.html" -->
             </div>
-        </div>
+        
         <!--#include virtual="/components/reusables/pagination.html" -->
     </section>
 
