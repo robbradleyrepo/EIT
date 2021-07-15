@@ -4,7 +4,6 @@
     using LionTrust.Foundation.Indexing.ComputedFields.SharedLogic;
     using Sitecore.ContentSearch;
     using Sitecore.ContentSearch.ComputedFields;
-    using Sitecore.Web.UI.XslControls;
 
     public class Text : IComputedIndexField
     {
@@ -16,12 +15,7 @@
         {
             var item = ComputedValueHelper.CheckCastComputedFieldItem(indexable);
 
-            if (!string.IsNullOrEmpty(item[Legacy.Constants.GenericListingModuleItem.Text_FieldID]))
-            {
-                return Sitecore.Web.UI.WebControls.FieldRenderer.Render(item, Legacy.Constants.GenericListingModuleItem.Text_FieldName);
-            }
-
-            return string.Empty;
+            return item[Legacy.Constants.GenericListingModuleItem.Text_FieldID];
         }
     }
 }
