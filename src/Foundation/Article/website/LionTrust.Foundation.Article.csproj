@@ -63,5 +63,8 @@
       <Name>LionTrust.Foundation.ORM</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Config\Include\Foundation\Foundation.Article.Serialization.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

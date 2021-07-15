@@ -1,13 +1,13 @@
 ﻿---
-ID: "ad101a0b-f16c-4b8c-83d6-cce649eb1929"
-Parent: "b0f4e3c3-a158-4d9e-9b06-8943b20ee354"
+ID: "95b7738c-e36d-4f6e-bd5e-6e2c5d049940"
+Parent: "a6df8b19-322d-4774-816b-518e6a912196"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Feature/Article/_ArticlePodcastPromo
+Path: /sitecore/templates/Foundation/Article/_ArticlePodcastLink
 DB: master
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
-  Value: apps/32x32/microphone.png
+  Value: Office/32x32/loudspeaker4.png
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
   Type: tree list
@@ -19,4 +19,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210420T164526Z
+      Value: 20210422T085806Z

@@ -1,25 +1,22 @@
 ﻿---
-ID: "a4df08cc-c027-4155-b6b0-0491d5f0f809"
+ID: "6145b771-64e1-4595-8331-27af009b7e39"
 Parent: "7dda379b-e328-40d2-b66a-b3ba7229190e"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Article/_ArticlePodcastLink/Podcast Link/ArticlePodcastLink_Goal
+Path: /sitecore/templates/Foundation/Article/_ArticlePodcastLink/Podcast Link/ArticlePodcastLink_Link
 DB: master
 SharedFields:
-- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
-  Hint: Source
-  Value: "{0CB97A9F-CAFB-42A0-8BE1-89AB9AE32BD9}"
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: Droptree
+  Value: General Link
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 100
+  Value: 300
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Podcast Link Goal
+    Value: Podcast Link
   Versions:
   - Version: 1
     Fields:
