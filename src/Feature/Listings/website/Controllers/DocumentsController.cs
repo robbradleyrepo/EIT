@@ -21,7 +21,7 @@
             _mvcContext = mvcContext;
         }
 
-        public ActionResult GetDocuments(string documentFolderId, bool sortyByAZ = true, int page = 1, int resultsPerPage = 10)
+        public ActionResult GetDocuments(string documentFolderId, string sortOrder = "ASC", int page = 1, int resultsPerPage = 10)
         {
             if (string.IsNullOrEmpty(documentFolderId))
             {
@@ -54,7 +54,7 @@
                         DocumentVideoLink = x.VideoLink?.Url
                     });
 
-                if (sortyByAZ)
+                if (sortOrder == "ASC")
                 {
                     documentsResponse.SearchResults = documentsResponse.SearchResults.OrderBy(x => x.Title);
                 }

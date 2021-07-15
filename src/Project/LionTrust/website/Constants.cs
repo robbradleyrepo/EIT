@@ -11,6 +11,8 @@
             public const string InsightPageTemplateId = "{2E71A4D9-8115-47E6-973A-7DE681370739}";
 
             public const string FundListerPageTemplateId = "{C4945161-F2D7-4A90-A512-CBFB5669B951}";
+
+            public const string FundDashboardPageTemplateId = "{7784DCE4-0F3B-4518-81F8-4BCB042373B1}";
         }
     }
 }

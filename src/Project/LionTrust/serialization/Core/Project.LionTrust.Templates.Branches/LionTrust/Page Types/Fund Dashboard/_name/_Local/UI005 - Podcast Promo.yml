@@ -1,0 +1,29 @@
+﻿---
+ID: "5f833ac3-e47b-4a8e-a676-fac79a57c95a"
+Parent: "4abe96cd-c3e2-4c68-a244-1bf17476102d"
+Template: "4fd5c75c-bd9d-4615-8538-a00c51bb2238"
+Path: "/sitecore/templates/Branches/Project/LionTrust/Page Types/Fund Dashboard/$name/_Local/UI005 - Podcast Promo"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210714T103856Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "78f493e4-73ea-47cf-97f7-f5de15df6bf8"
+      Hint: PodcastPromo_MobileBackgroundImage
+      Value: |
+        <image mediaid="{95DCA926-3A47-4008-B3E2-2C9CB68C6754}" />
+    - ID: "7aae9c1d-09d6-458e-9c08-9e17202f5e27"
+      Hint: PodcastPromo_Title
+      Value: "UI005 - Podcast Promo"
+    - ID: "e6f7f113-dfe6-4d4f-8aba-ffe70d681ced"
+      Hint: PodcastPromo_BackgroundImage
+      Value: |
+        <image mediaid="{95DCA926-3A47-4008-B3E2-2C9CB68C6754}" />

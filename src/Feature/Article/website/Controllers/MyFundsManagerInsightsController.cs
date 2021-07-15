@@ -51,7 +51,7 @@
             {
                 return null;
             }
-            else
+            else if(contactData != null && contactData.SalesforceFundIds != null && contactData.SalesforceFundIds.Any())
             {
                 //Get the funds that are followed.
                 var fundSearchRequest = new FundSearchRequest
@@ -81,12 +81,10 @@
                 {
                     return null;
                 }
-                else
-                {
-                    var fundManagerInsightsViewModel = new FundManagerInsightsViewModel(data, articles);
-                    return View("/views/article/fundmanagerinsights.cshtml", fundManagerInsightsViewModel);
-                }
             }
+
+            var fundManagerInsightsViewModel = new FundManagerInsightsViewModel(data, articles);
+            return View("/views/article/fundmanagerinsights.cshtml", fundManagerInsightsViewModel);
         }
 
         private IEnumerable<IFundContentResult> MapFundResultHits(IEnumerable<SearchHit<FundSearchResultItem>> hits)

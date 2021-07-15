@@ -3,9 +3,12 @@
     using LionTrust.Foundation.Indexing.ComputedFields.SharedLogic;
     using LionTrust.Foundation.Indexing.Services;
     using Microsoft.Extensions.DependencyInjection;
+    using Sitecore.Configuration;
     using Sitecore.ContentSearch;
     using Sitecore.ContentSearch.ComputedFields;
     using Sitecore.DependencyInjection;
+    using Sitecore.Links;
+    using Sitecore.Sites;
 
     public class ArticleUrl : IComputedIndexField
     {
@@ -23,7 +26,15 @@
         public object ComputeFieldValue(IIndexable indexable)
         {
             var item = ComputedValueHelper.CheckCastComputedFieldItem(indexable);
-            return _linkGenerator.GenerateLink(item);
+            if (item != null)
+            {
+                using (new SiteContextSwitcher(Factory.GetSite(Constants.SiteName)))
+                {
+                    return LinkManager.GetItemUrl(item);
+                }
+            }
+
+            return string.Empty;
         }
     }
 }

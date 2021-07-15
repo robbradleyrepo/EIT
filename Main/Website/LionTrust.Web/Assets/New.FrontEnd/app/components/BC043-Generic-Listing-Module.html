@@ -1,18 +1,18 @@
-<div class="lister-app legacy-listmode">
+<div class="lister-app legacy-listmode" id="lister-app" data-host="GenericListingApi" data-fundfacetid="7BE813CE-126D-42C8-B4AE-9370E32F9B50" data-parentid="4DAD140E-E3B4-4D83-8005-5B4BA47F20FB">
     <div class="article-filter-wrapper">
-        <div class="article-filters">
+        <div class="article-filters" :class="mobileFilter ? 'active' : ''">
             <div class="article-filters__header">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-2 d-lg-none">
                             <div class="article-filters__main-title">Filters
-                                <i id="filters-close" class="icon-close"></i>
+                                <i id="filters-close" @click="toggleMobileFilter" class="icon-close"></i>
                             </div>
                         </div>
                         <div class="col-lg-3">
-                            <form class="search-form">
-                                <input type="text" name="queryText" class="search-form__input color-black"
-                                    placeholder="Search insight">
+                            <form class="search-form" @submit.prevent="submitSearchForm($event)">
+                                <input type="text" v-model="searchText" name="searchText" class="search-form__input color-black"
+                                    placeholder="Search by keyword">
                                 <button class="search-form__submit pe-0" type="submit">
                                     <i class="icon-search"></i>
                                 </button>
@@ -24,89 +24,32 @@
             <div class="article-filters__body">
                 <div class="container">
                     <div class="row">
-
-                        <div class="col-lg-3 relative">
-                            <!-- <div class="article-filters__select">Month
-                            <i class="article-filters__icon-arrow"></i>      
-                                         
-                        </div> -->
-                            <select class="article-filters__select-custom">
-                                <option value="0" disabled selected>Month</option>
-                                <option value="1">January</option>
-                                <option value="2">February</option>
-                                <option value="3">March</option>
-                                <option value="4">April</option>
-                                <option value="5">May</option>
-                                <option value="6">June</option>
-                                <option value="7">July</option>
-                                <option value="8">August</option>
-                                <option value="9">September</option>
-                                <option value="10">October </option>
-                                <option value="11">November</option>
-                                <option value="12">December</option>
-                            </select>
-                            <i class="article-filters__icon-arrow article-filters__icon-arrow_select"></i>
-                        </div>
-                        <div class="col-lg-3 relative">
-                            <select class="article-filters__select-custom">
-                                <option value="0" disabled selected>Year</option>
-                                <option value="1">2018</option>
-                                <option value="2">2019</option>
-                                <option value="3">2020</option>
-                                <option value="4">2021</option>
-                            </select>
-                            <i class="article-filters__icon-arrow article-filters__icon-arrow_select"></i>
-                        </div>
-                        <div class="col-lg-3 relative">
-                            <div class="article-filters__select">Type
-                                <i class="article-filters__icon-arrow"></i>
-                            </div>
-                            <div class="article-filters__options">
-                                <div class="article-filters__title">
-                                    <i class="icon-chevron-left"></i>
-                                    Fund Manager
+                        <select-field inline-template  v-for="(facet, i) in getFacets" :key="i">
+                            <div class="col-lg-3 relative" @click.stop>
+                                <div class="article-filters__select" @click="toggleOption" :class="open ? 'active' : ''">
+                                    <span class="article-filters__item-title">
+                                        {{facet.name}}
+                                    </span>
+                                    <i class="article-filters__icon-arrow"></i>
                                 </div>
-                                <label for="james3" class="option-checkbox">
-                                    <input id="james3" class="option-checkbox__input" type="checkbox">
-                                    <span class="option-checkbox__text">James Inglis-Jones</span>
-                                    <span class="option-checkbox__icon"></span>
-                                </label>
-                                <label for="Samantha3" class="option-checkbox">
-                                    <input id="Samantha3" class="option-checkbox__input" type="checkbox">
-                                    <span class="option-checkbox__text"> Samantha Gleave</span>
-                                    <span class="option-checkbox__icon"></span>
-                                </label>
-                                <label for="Test431" class="option-checkbox">
-                                    <input id="Test431" class="option-checkbox__input" type="checkbox">
-                                    <span class="option-checkbox__text"> Test1</span>
-                                    <span class="option-checkbox__icon"></span>
-                                </label>
-                                <label for="Test41" class="option-checkbox">
-                                    <input id="Test41" class="option-checkbox__input" type="checkbox">
-                                    <span class="option-checkbox__text"> Test2</span>
-                                    <span class="option-checkbox__icon"></span>
-                                </label>
-                                <label for="Test321" class="option-checkbox">
-                                    <input id="Test321" class="option-checkbox__input" type="checkbox">
-                                    <span class="option-checkbox__text"> Test3</span>
-                                    <span class="option-checkbox__icon"></span>
-                                </label>
-                                <label for="Test422" class="option-checkbox">
-                                    <input id="Test422" class="option-checkbox__input" type="checkbox">
-                                    <span class="option-checkbox__text"> Test4</span>
-                                    <span class="option-checkbox__icon"></span>
-                                </label>
-                                <label for="Test525" class="option-checkbox">
-                                    <input id="Test525" class="option-checkbox__input" type="checkbox">
-                                    <span class="option-checkbox__text"> Test5</span>
-                                    <span class="option-checkbox__icon"></span>
-                                </label>
-                            </div>
-                        </div>
+                                <div class="article-filters__options">
+                                    <div class="article-filters__title" @click="toggleOption">
+                                        <i class="icon-chevron-left"></i>
+                                        {{facet.name}}
+                                    </div>
+                                    <option-field inline-template v-for="(item, i) in facet.items" :for="item.name" :key="i + item.name">
+                                        <label class="option-checkbox">
+                                            <input :id="item.name" class="option-checkbox__input" type="checkbox" v-model="checked"  @change="toggleSelect(item, facet)">
+                                            <span class="option-checkbox__text">{{item.name}} </span>
+                                            <span class="option-checkbox__icon"></span>
+                                        </label>
+                                    </option-field>
+                                </div>
+                            </div>   
+                        </select-field>
                         <div class="col-lg-3">
                             <div class="article-filters__btns justify-content-end">
-                                <button
-                                    class="clear-filter btn article-filters__btn article-filters__btn_clear">
+                                <button class="clear-filter btn article-filters__btn article-filters__btn_clear" @click="clearFilters">
                                     Clear all
                                 </button>
                             </div>
@@ -118,12 +61,12 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-6">
-                            <button class="btn btn-primary min-width-100">
+                            <button class="btn btn-primary min-width-100" @click="applyFilters">
                                 Apply Filters
                             </button>
                         </div>
                         <div class="col-6">
-                            <button class="clear-filter btn btn-primary-forward min-width-100">
+                            <button class="clear-filter btn btn-primary-forward min-width-100" @click="clearFilters">
                                 clear all
                             </button>
                         </div>
@@ -131,76 +74,35 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <!-- <div class="col-6 col-lg-2 offset-6 col-md-4 offset-md-8 offset-lg-10 margin-sort-btn">
-                <div class="relative">
-                    <button class="btn btn-clean d-block ml-auto button-sort">
-                        sort <i class="icon-sort"></i>
-                    </button>
-                    <div class="sort-dropdown">
-                        <div class="text-right">
-                            <span class="btn btn-clean">
-                                sort <i class="icon-sort"></i>
-                            </span>
-                        </div>
-                        <label for="newest" class="option-checkbox">
-                            <input id="newest" class="option-checkbox__input" type="radio" name="sort" checked>
-                            <span class="option-checkbox__text">Date newest first</span>
-                            <span class="option-checkbox__icon"></span>
-                        </label>
-                        <label for="oldest" class="option-checkbox">
-                            <input id="oldest" class="option-checkbox__input" type="radio" name="sort">
-                            <span class="option-checkbox__text">Date oldest first</span>
-                            <span class="option-checkbox__icon"></span>
-                        </label>
-                    </div>
-                </div>
-            </div> -->
-            </div>
-        </div>
     </div>
 
     <div class="container d-lg-none">
-        <div class="d-flex justify-content-between margin-mob-fliter-btn">
-            <btn id="show-article-fliter" class="btn btn-clean">
+        <div class="d-flex justify-content-between margin-mob-fliter-btn mt-0" :class="!mobileFilter ? 'relative' : ''">
+            <btn id="show-article-fliter"  class="btn btn-clean" @click="toggleMobileFilter">
                 <i class="icon-filter"></i> filter
-            </btn>
+            </btn>        
         </div>
     </div>
 
     <section class="container">
         <div class="row">
             <div class="col-lg-6">
-                <div class="list-mod-item">
-                    <h2 class="list-mod-item__title">Lorem ipsum dolor sit amet consectetur adipiscing elit sed
-                        do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua</h2>
-                    <span class="list-mod-item__date">21.02.2020</span>
-                    <div class="list-mod-item__content">
-                        <p>
-                            Liontrust Asset Management Plc (“Liontrust” or the “Company”), the specialist
-                            independent fund management group, today announces that its indirect subsidiaries,
-                            Liontrust Investment Partners LLP and Liontrust Fund Partners LLP (together the
-                            “Liontrust Sellers”), have entered into a conditional agreement (the “Agreement”) to
-                            sell (the “Sale”) the Asia Income investment team (the “Asia Income Team”) to
-                            Somerset Capital Management LLP (“Somerset”).
-                        </p>
-                        <p>
-                            Mark Williams, Carolyn Chan and Shashank Savla, the members of the Asia Income Team,
-                            will join Somerset. The Sale
-                            includes the right to manage the Liontrust Asia Income Fund (the “Fund”). The
-                            Liontrust GF Asia Income Fund is not part of the Sale and will be closed.
-                        </p>
-                        <p>
-                            Liontrust also announces the closure of the European Income and Macro Thematic
-                            investment teams (“Team Closures”).
-                        </p>
-                        <a href="#">
-                            read more
-                        </a>
+                <article-item inline-template v-for="(article, i) in searchData" :key="i">
+                    <div class="list-mod-item">
+                        <h2 class="list-mod-item__title">{{article.title}}</h2>
+                        <span class="list-mod-item__date">{{article.date}}</span>
+                        <div class="list-mod-item__content">
+                            <p>
+                                {{article.subtitle}}
+                            </p>
+                            
+                            <a href="#">
+                                {{article.text}}
+                            </a>
+                        </div>
                     </div>
-                </div>
+                </article-item>
+                
                 <div class="list-mod-item">
                     <h2 class="list-mod-item__title">
                         Lorem ipsum dolor sit amet consectetur adipiscing elit sed
