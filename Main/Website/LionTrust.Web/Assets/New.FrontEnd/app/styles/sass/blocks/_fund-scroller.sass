@@ -9,8 +9,9 @@
         min-height: 400px
         margin: 32px 0
         flex-direction: column
-        > .row
-            width: 100%
+        @include breakpoint(desktop, up)
+            > .row
+                width: 100%
         @include breakpoint(desktop, up)
             flex-direction: row
             min-height: 673px
