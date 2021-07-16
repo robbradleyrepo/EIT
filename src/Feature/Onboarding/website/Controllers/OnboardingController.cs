@@ -14,6 +14,7 @@
     using System.Collections.Generic;
     using System.Globalization;
     using System.Linq;
+    using System.Net;
     using System.Web;
     using System.Web.Mvc;
     using static LionTrust.Feature.Onboarding.Constants;
@@ -121,7 +122,7 @@
         }
 
         [HttpPost]
-        public ActionResult Render([NotNull] OnboardingSubmit OnboardingSubmit)
+        public ActionResult Submit([NotNull] OnboardingSubmit OnboardingSubmit)
         {
             if (ModelState.IsValid)
             {
@@ -139,8 +140,9 @@
                     }
                     catch (ArgumentException)
                     {
-                        _log.Info($"{OnboardingSubmit.Country} is not an valid value", this);
-                        return null;
+                        string message = $"{OnboardingSubmit.Country} is not an valid value";
+                        _log.Info(message, this);
+                        return new HttpStatusCodeResult(System.Net.HttpStatusCode.NotFound, message);
                     }
                 }
 
@@ -148,12 +150,13 @@
 
                 if (data?.OnboardingConfiguration == null)
                 {
-                    return null;
+                    return new HttpStatusCodeResult(HttpStatusCode.NotFound);
                 }
                 else if (data.OnboardingConfiguration.Profile == null)
                 {
-                    _log.Error("Onboarding configuration profile has not been set", this);
-                    return null;
+                    string message = "Onboarding configuration profile has not been set";
+                    _log.Error(message, this);
+                    return new HttpStatusCodeResult(HttpStatusCode.NotFound, message);
                 }
                 else
                 {
@@ -170,11 +173,19 @@
                         {
                             _cardManager.AddPointsFromProfileCard(data.OnboardingConfiguration.ProfressionalProfileCard, profile);
                         }
+
+                        return new HttpStatusCodeResult(HttpStatusCode.OK, "Onboarding complete.");
+                    }
+                    else
+                    {
+                        return new HttpStatusCodeResult(HttpStatusCode.NotFound, "Profile not found.");
                     }
                 }
             }
-
-            return Render();
+            else
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
         }
 
         private bool IsOnboardingConfigured(IHome data)
@@ -259,12 +270,7 @@
 
             var profile = GetProfile(config.Profile.Name);
 
-            if (profile != null && profile.PatternId.HasValue
-                && new List<Guid>
-                {
-                    config.PrivateProfileCard.Id,
-                    config.ProfressionalProfileCard.Id
-                }.Contains(profile.PatternId.Value))
+            if (profile != null && profile.PatternId.HasValue)
             {
                 result = true;
             }

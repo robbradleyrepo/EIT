@@ -1,0 +1,35 @@
+﻿---
+ID: "0eaf6e2a-5b8d-418c-8fb4-5029fd141fc8"
+Parent: "423807e1-f44a-4c7e-a8d1-3b9c71f8ae00"
+Template: "0fc09ea4-8d87-4b0e-a5c9-8076ae863d9c"
+Path: /sitecore/system/Marketing Control Panel/Profiles/Liontrust/Onboarding Screen Investor Type/Profile Cards/Private Investor
+DB: master
+SharedFields:
+- ID: "85970ab7-22ea-4206-be86-c0167178860b"
+  Hint: Profile Card Value
+  Value: |
+    <tracking>
+      <profile id="2f782a8a-eb68-4cec-8776-af97fea461cd" name="Onboarding Screen Investor Type">
+        <key name="International Professional Investor" value="0" />
+        <key name="Journalist" value="0" />
+        <key name="Private Investor" value="10" />
+        <key name="Professional Investor" value="0" />
+        <key name="Shareholder" value="0" />
+      </profile>
+    </tracking>
+Languages:
+- Language: en
+  Fields:
+  - ID: "a26fc256-1db0-44aa-ba3d-1c830bf882a2"
+    Hint: Name
+    Value: Private Investor
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210715T132853Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\NatalieW

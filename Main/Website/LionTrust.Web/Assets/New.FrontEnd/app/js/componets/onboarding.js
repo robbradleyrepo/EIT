@@ -66,9 +66,18 @@ export default () => {
 
   // finish onboarding, close modal
   $("#submit-board").on("click", () => {
-    onboarding.removeClass("active");
-    $('body').removeClass('overflow-hidden')
-    Cookies.set("agreePolicy", 1, { expires: 365 });
+	  $.ajax({
+		type: "POST",
+		url: "/api/sitecore/Onboarding/Submit",
+		data: {Country : $('#Country').val(), Role: $('#Role').val()},
+		success: function(data){
+			onboarding.removeClass("active");
+			$('body').removeClass('overflow-hidden')
+		},
+		error: function(data) {
+			console.log(data.message);
+		}
+	  });
   });
 
   $('.onboarding-overlay__link').on('click', function() {

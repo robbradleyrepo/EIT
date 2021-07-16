@@ -48,8 +48,6 @@
                             }
 
                             profile.Score(scores);
-                            profile.PatternId = profileCard.Id;
-                            profile.PatternLabel = profileCard.Name;
 
                             // update the pattern based on the scores you updated - this is supposed to be called from Score as well
                             // but doesn't always update unless you call it explicitly
