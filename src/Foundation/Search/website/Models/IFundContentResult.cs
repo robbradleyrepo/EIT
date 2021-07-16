@@ -29,5 +29,7 @@
 
         string FundRegion { get; set; }
 
+        string FundTeamName { get; set; }
+
     }
 }

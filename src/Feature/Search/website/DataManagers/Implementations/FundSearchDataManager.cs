@@ -66,7 +66,8 @@
                 FundManagers = x.Document.FundManagers,
                 FundRange = x.Document.FundRanges,
                 FundRegion = x.Document.FundRegion,
-                FundTeam = x.Document.FundTeam
+                FundTeam = x.Document.FundTeam,
+                FundTeamName = x.Document.FundTeamName
             });
         }
 
