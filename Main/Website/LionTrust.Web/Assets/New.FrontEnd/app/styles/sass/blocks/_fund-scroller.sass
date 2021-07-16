@@ -9,8 +9,9 @@
         min-height: 400px
         margin: 32px 0
         flex-direction: column
-        > .row 
-            width: 100%
+        @include breakpoint(desktop, up)
+            > .row
+                width: 100%
         @include breakpoint(desktop, up)
             flex-direction: row
             min-height: 673px
@@ -55,6 +56,7 @@
     background: radial-gradient(70.56% 228.27% at -4.25% 47.85%, rgba(16, 160, 71, 0.37) 0%, rgba(16, 160, 71, 0) 100%), #000000
 
 .fundscroller-container
+    padding-bottom: 2rem
     @include breakpoint(desktop, up)
         overflow: hidden
         position: absolute
