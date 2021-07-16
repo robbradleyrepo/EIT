@@ -14,8 +14,18 @@
         public object ComputeFieldValue(IIndexable indexable)
         {
             var item = ComputedValueHelper.CheckCastComputedFieldItem(indexable);
+            if (item != null && !string.IsNullOrEmpty(item[Legacy.Constants.GenericListingModuleItem.Text_FieldName]))
+            {
+                try
+                {
+                    return Sitecore.Web.UI.WebControls.FieldRenderer.Render(item, Legacy.Constants.GenericListingModuleItem.Text_FieldName);
+                }
+                catch
+                {
+                }
+            }
 
-            return item[Legacy.Constants.GenericListingModuleItem.Text_FieldID];
+            return string.Empty;
         }
     }
 }
