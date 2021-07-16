@@ -62,6 +62,9 @@
             public const string FiltersLabel_FieldId = "{5B8C8965-29EC-449E-8014-282D40EE5F12}";
             public const string YearsList_FieldId = "{EBCE5416-BA23-40D1-8FBB-58487F247107}";
             public const string MonthsList_FieldId = "{EC94129F-5DAF-484D-852F-551008F7B82C}";
+            public const string SearchByKeywordLabel_FieldId = "{40F16D11-306F-4EE5-A862-C4C6FB61B56A}";
+            public const string PreviousLabel_FieldId = "{B2D0A268-DD2E-4428-B55E-AC7D7299036D}";
+            public const string NextLabel_FieldId = "{FA926DEF-DD37-4E78-969E-BCBCFE14D123}";
         }
 
         public static class DocumentLister

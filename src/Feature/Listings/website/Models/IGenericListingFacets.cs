@@ -24,5 +24,14 @@
 
         [SitecoreField(FieldId = Constants.GenericListingFacet.FiltersLabel_FieldId)]
         string FiltersLabel { get; set; }
+
+        [SitecoreField(FieldId = Constants.GenericListingFacet.SearchByKeywordLabel_FieldId)]
+        string SearchByKeywordLabel { get; set; }
+
+        [SitecoreField(FieldId = Constants.GenericListingFacet.PreviousLabel_FieldId)]
+        string PreviousLabel { get; set; }
+
+        [SitecoreField(FieldId = Constants.GenericListingFacet.NextLabel_FieldId)]
+        string NextLabel { get; set; }
     }
 }
