@@ -25,15 +25,7 @@
                 {
                     using (new SiteContextSwitcher(Factory.GetSite(Constants.SiteName)))
                     {
-                        if (videoUrlField.TargetItem != null)
-                        {
-
-                            videoUrl = videoUrlField.GetFriendlyUrl();
-                        }
-                        else
-                        {
-                            videoUrl = videoUrlField.Url;
-                        }
+                        videoUrl = videoUrlField.Url;                        
                     }
                 }
             }
