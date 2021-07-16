@@ -95,15 +95,8 @@ Languages:
               s:id="{DC0AC587-3DF0-468C-9F4F-6E8C137ECD47}"
               s:ph="main" />
             <r
-              uid="{DB0A99C7-55F3-4538-BE3C-F4890E334112}"
-              p:after="r[@uid='{905245D4-A196-4A6C-A58D-69C74A1E0210}']"
-              s:ds="{91BB3E1C-0837-4848-9789-BF54E67B84E8}"
-              s:id="{B87F0E98-81D6-4B7F-A351-549255F96DB7}"
-              s:par=""
-              s:ph="main" />
-            <r
               uid="{BBB2192D-FA6A-46AE-AE95-15DD426DC1C0}"
-              p:after="r[@uid='{DB0A99C7-55F3-4538-BE3C-F4890E334112}']"
+              p:after="r[@uid='{905245D4-A196-4A6C-A58D-69C74A1E0210}']"
               s:ds="{DED097E8-DC55-4BBE-8A40-85A12F96ACAC}"
               s:id="{7F3DDF4D-5190-4C04-836D-41325114723D}"
               s:ph="main" />
@@ -113,6 +106,9 @@ Languages:
               s:ds="{D14EC299-26C8-483F-A67D-08A436E46AD4}"
               s:id="{29206264-421A-41D5-8869-A7D1EA60566B}"
               s:ph="main" />
+            <r
+              uid="{763DC34A-B9D9-4AF7-A794-A79879906B51}"
+              p:after="r[@uid='{79DF7224-7866-417D-91E6-6C95F795301F}']" />
             <r
               uid="{136B2778-E8D5-477F-A7EA-E29FEBC69BB6}"
               p:after="*[1=2]"

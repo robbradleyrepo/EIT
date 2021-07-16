@@ -88,7 +88,7 @@
             <div class="user-status">
                 <div class="user-status_hr"></div>
                 <span class="user-status__text">
-                    @Html.Glass().Editable(Model.HomeItem, z => z.YouAreViewingLabel) <span class="user-status__name">TO DO - Private Investor</span>
+                    @Html.Glass().Editable(Model.HomeItem, z => z.YouAreViewingLabel) <span class="user-status__name">@Model.HomeItem.OnboardingRoleName</span>
                     <i class="icon-chevron user-status__icon"></i>
                 </span>
             </div>
