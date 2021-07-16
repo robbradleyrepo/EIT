@@ -16,7 +16,7 @@
         public object ComputeFieldValue(IIndexable indexable)
         {
             var item = ComputedValueHelper.CheckCastComputedFieldItem(indexable);
-            if (item != null && !string.IsNullOrEmpty(item[Legacy.Constants.GenericListingModuleItem.Text_FieldName]) && item[Legacy.Constants.GenericListingModuleItem.Text_FieldName].Contains("Download"))
+            if (item != null && !string.IsNullOrEmpty(item[Legacy.Constants.GenericListingModuleItem.Text_FieldName]))
             {
                 try
                 {
