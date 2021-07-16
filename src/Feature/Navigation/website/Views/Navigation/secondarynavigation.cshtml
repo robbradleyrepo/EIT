@@ -22,9 +22,6 @@
                         if (item.PageLink != null)
                         {
                             @Html.Glass().AnalyticsGlass().RenderLinkWithGoal(item, m => m.PageLink, item.Goal, new NameValueCollection { { "class", "btn btn-anchor anchorbox__btn" } }, isEditable: true)
-                            {
-                                @item.PageLink.Text
-                            }
                         }
                     }
                 </div>
