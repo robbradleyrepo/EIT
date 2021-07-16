@@ -3,6 +3,7 @@
     using LionTrust.Foundation.Indexing.ComputedFields.SharedLogic;
     using Sitecore.ContentSearch;
     using Sitecore.ContentSearch.ComputedFields;
+    using Sitecore.Data;
     using System.Linq;
 
     public class ArticlePodcast : IComputedIndexField
@@ -20,7 +21,7 @@
                 return string.Empty;
             }
 
-            var articlePodcast = itemChildrens.Where(x => x != null && x.TemplateID.Equals(Constants.PodcastTemplateId))?.FirstOrDefault();
+            var articlePodcast = itemChildrens.Where(x => x != null && x.TemplateID.Equals(new ID(Constants.PodcastTemplateId)))?.FirstOrDefault();
             if (articlePodcast == null)
             {
                 return string.Empty;
