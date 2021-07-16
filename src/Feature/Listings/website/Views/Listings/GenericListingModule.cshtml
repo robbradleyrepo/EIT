@@ -2,7 +2,7 @@
 @using Glass.Mapper.Sc
 @using Glass.Mapper.Sc.Web.Mvc
 @model LionTrust.Feature.Listings.Models.IGenericListingFacets
-<div class="lister-app legacy-listmode" id="lister-app" data-host="GenericListingApi" data-parentid="@Model.Id">
+<div class="lister-app legacy-listmode" id="lister-app" data-host="GenericListingApi" data-fundfacetid="@Model.Id" data-parentid="@Model.Id">
     <div class="article-filter-wrapper">
         <div class="article-filters" :class="mobileFilter ? 'active' : ''">
             <div class="article-filters__header">
