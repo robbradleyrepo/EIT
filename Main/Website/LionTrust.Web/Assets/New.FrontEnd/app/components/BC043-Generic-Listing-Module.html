@@ -43,7 +43,8 @@
                                         :key="i + item.name">
                                         <label class="option-checkbox">
                                             <input :id="item.name" class="option-checkbox__input" type="checkbox"
-                                                v-model="checked" @change="toggleSelect(item, facet)" @click="setChoosen(!checked)">
+                                                v-model="checked" @change="toggleSelect(item, facet)"
+                                                @click="setChoosen(!checked)">
                                             <span class="option-checkbox__text">{{item.name}} </span>
                                             <span class="option-checkbox__icon"></span>
                                         </label>
@@ -53,7 +54,8 @@
                         </select-field>
                         <div class="col-lg-3">
                             <div class="article-filters__btns justify-content-end">
-                                <button class="btn article-filters__btn article-filters__btn_apply" @click="applyFilters">
+                                <button class="btn article-filters__btn article-filters__btn_apply mr-1"
+                                    @click="applyFilters">
                                     Apply filters
                                 </button>
                                 <button class="clear-filter btn article-filters__btn article-filters__btn_clear"
@@ -93,160 +95,85 @@
     </div>
 
     <section class="container">
-        
-            <!-- <div class="col-lg-6"> -->
-                <article-item inline-template v-for="(article, i) in searchData" :key="i">
-                    <div class="row">
-                        <div class="col-lg-7 read more" v-if="!article.imageUrl">
-                        <div class="list-mod-item" >
-                            <h2 class="list-mod-item__title" v-if="article.title">{{article.title}}</h2>
-                            <span class="list-mod-item__date" v-if="article.date">{{article.date}}</span>
-                            <div class="list-mod-item__content">
-                                <p v-if="article.subtitle">
-                                    {{article.subtitle}}
-                                </p>
-                                <p v-html="article.text"></p>
-    
+        <div class="text-center my-5" v-if="loading">
+            <div class="spinner-border text-gold" role="status"></div>
+        </div>
+        <!-- <div class="col-lg-6"> -->
+        <article-item inline-template v-for="(article, i) in searchData" :key="i">
+            <div class="row">
+                <div class="col-lg-9" v-if="article.imageWidth > 200 && article.imageUrl">
+                    <div class="podcast-list-item">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img :src="article.imageUrl" :alt="article.title" class="podcast-list-item__img">
                             </div>
-                        </div>
-                        </div>
-                        <div class="col-lg-7" v-if="!article.imageUrl && !article.title">
-                        <div class="list-mod-item">  
-                            <div class="list-mod-item__content">
-                                <div class="list-mod-item__download">
-                                    <h5>{{article.subtitle}}
-                                </h5> 
-                                <span v-html="article.text"></span>
-                                </div>     
-                        </div>
-                    </div>
-                        </div>        
-                        <div class="col-lg-9" v-if="article.imageUrl">
-                        <div class="services-item">
-                            <img :src="article.imageUrl"
-                                alt="Transparency" class="services-item__img">
-                            <div class="services-item__content">
-                                <div class="services-item__title">
+                            <div class="col-md-6">
+                                <div class="podcast-list-item__title">
                                     {{article.title}}
                                 </div>
-                                <div class="services-item__descript" v-html="article.text">
+                                <div class="podcast-list-item__text" v-html="article.text">
+
                                 </div>
+
                             </div>
                         </div>
-                        </div>
-                </div>
-                </article-item>
-                <hr>
-
-                <div class="list-mod-item">
-                    <h2 class="list-mod-item__title">
-                        Lorem ipsum dolor sit amet consectetur adipiscing elit sed
-                        do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua
-                    </h2>
-                    <span class="list-mod-item__date">21.02.2020</span>
-                    <div class="list-mod-item__content">
-                        <div class="list-mod-item__download">
-                            <h5>Proposed acquisition of Architas Multi-Manager
-                                and
-                                Architas Advisory Services Limited and Notice of General Meeting</h5>
-                            <a href="#">
-                                Download file
-                            </a>
-                        </div>
-                        <div class="list-mod-item__download">
-                            <h5>Form of Proxy</h5>
-                            <a href="#">
-                                Download file
-                            </a>
-                        </div>
-                        <div class="list-mod-item__download">
-                            <h5>Liontrust Annual Report & Financial Statements
-                                2020</h5>
-                            <a href="#">
-                                Download file
-                            </a>
-                        </div>
-                        <div class="list-mod-item__download">
-                            <h5>Ordinary & Special Resolutions of Liontrust
-                                Asset Management PLC</h5>
-                            <a href="#">
-                                Download file
-                            </a>
-                        </div>
-                        <div class="list-mod-item__download">
-                            <h5>RSM Consent Letter</h5>
-                            <a href="#">
-                                Download file
-                            </a>
-                        </div>
-                        <div class="list-mod-item__download">
-                            <h5>Panmure Gordon Consent Letter</h5>
-                            <a href="#">
-                                Download file
-                            </a>
-                        </div>
-
                     </div>
                 </div>
-                <div class="list-mod-item">
-                    <h2 class="list-mod-item__title">
-                        TR1 Notification of major holdings
-                    </h2>
-                    <span class="list-mod-item__date mb-0">21.02.2020</span>
-                    <div class="list-mod-item__content">
-                        <a href="#">
-                            Download file
-                        </a>
-                    </div>
-                </div>
-                <div class="list-mod-item">
-                    <h2 class="list-mod-item__title">
-                        Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod
-                    </h2>
-                    <span class="list-mod-item__date">21.02.2020</span>
-                    <div class="list-mod-item__content">
-                        <div class="list-mod-item__download">
-                            <p>
-                                <span>Lorem ipsum dolor
-                                    sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                    labore et dolore magna aliqua.</span>
-                            </p>
-                            <p>
-                                <a href="#">
-                                    Download file
-                                </a>
-                            </p>
+                <div class="col-lg-9" v-if="article.imageWidth <= 200 && article.imageUrl">
+                    <div class="services-item">
+                        <img :src="article.imageUrl" :alt="article.title" class="services-item__img">
+                        <div class="services-item__content">
+                            <div class="services-item__title">
+                                {{article.title}}
+                            </div>
+                            <div class="services-item__descript" v-html="article.text"></div>
                         </div>
                     </div>
                 </div>
-                <div class="list-mod-item">
-                    <h2 class="list-mod-item__title">
-                        Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod
-                    </h2>
-                    <span class="list-mod-item__date">21.02.2020</span>
-                    <div class="list-mod-item__content">
+                <div class="col-lg-7" v-if="article.title && !article.subtitle && !article.imageUrl">
+                    <div class="list-mod-item">
+                        <h2 class="list-mod-item__title">
+                            {{article.title}}
+                        </h2>
+                        <span class="list-mod-item__date mb-0">{{article.date}}</span>
+                        <div class="list-mod-item__content" v-html="article.text"></div>
+                    </div>
+                </div>
+                <div class="col-lg-7" v-if="!article.title && article.subtitle && !article.imageUrl">
+                    <div class="list-mod-item m-0">
                         <div class="list-mod-item__download">
-                            <p>
-                                <span>Lorem ipsum dolor
-                                    sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                    labore et dolore magna aliqua.</span>
-                            </p>
-                            <p>
-                                <a href="#">
-                                    Download file
-                                </a>
-                            </p>
+                            <h5>{{article.subtitle}}</h5>
+                            <div v-html="article.text"></div>
                         </div>
                     </div>
                 </div>
-            <!-- </div> -->
-            <div class="col-lg-9">
-                <!--#include virtual="/components/BC043-ListMod-Podcast.html" -->
-                <!--#include virtual="/components/BC043-ListMod-Services.html" -->
             </div>
-        
-        <!--#include virtual="/components/reusables/pagination.html" -->
+        </article-item>
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+              <nav v-if="getPageAmount > 1" class="pagination mt-3">
+                <a href="#" @click.prevent="prevPage" class="pagination__step pagination__step_forward"
+                  :class="disablePrevBtn ? 'pagination__step_disabled' : ''"><i class="icon-arrow-left"></i> Previous</a>
+                <ul class="pagination__list">
+                  <li class="pagination__item">
+                    <a @click.prevent="jumpPagesForward" v-if="showForwardPageBtn" href="#"
+                      class="pagination__link pagination__link_steps">...</a>
+                  </li>
+                  <li v-for="(page, i) in getPages" :key="i" class="pagination__item">
+                    <a @click.prevent="changePage(page)" href="#" class="pagination__link"
+                      :class="getPage === page ? 'active' : ''">
+                      {{page}}
+                    </a>
+                  </li>
+                  <li class="pagination__item">
+                    <a @click.prevent="jumpPagesNext" v-if="showNextPageBtn" href="#"
+                      class="pagination__link pagination__link_steps">...</a>
+                  </li>
+                </ul>
+                <a href="#" @click.prevent="nextPage" :class="disabledNextBtn ? 'pagination__step_disabled' : ''"
+                  class="pagination__step pagination__step_next">Next <i class="icon-arrow-right"></i></a>
+              </nav>
+            </div>
+          </div>
     </section>
-
 </div>
