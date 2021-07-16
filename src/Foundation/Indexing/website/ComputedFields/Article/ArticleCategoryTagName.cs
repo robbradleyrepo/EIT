@@ -20,7 +20,7 @@
             var multiValueField = item?.Fields[Legacy.Constants.Article.BlogType_FieldId];
 
             return multiValueField != null
-                                    ? ComputedValueHelper.GetMultiListValue(multiValueField, "LegacyLookupItem_TagName")
+                                    ? ComputedValueHelper.GetMultiListValue(multiValueField, "LegacyLookupItem_ItemName")
                                     : null;
         }
     }
