@@ -1,4 +1,4 @@
-﻿namespace LionTrust.Feature.Article.Models
+﻿namespace LionTrust.Foundation.Article.Models
 {
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;

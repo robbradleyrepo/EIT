@@ -79,13 +79,16 @@
     <Compile Include="ComputedFields\Article\ArticleAuthorNames.cs" />
     <Compile Include="ComputedFields\Article\ArticleFundName.cs" />
     <Compile Include="ComputedFields\Article\ArticleCategoryTagName.cs" />
+    <Compile Include="ComputedFields\Article\ArticlePodcast.cs" />
     <Compile Include="ComputedFields\Article\ArticleTopicNames.cs" />
+    <Compile Include="ComputedFields\Article\ArticleVideoUrl.cs" />
     <Compile Include="ComputedFields\Article\ArticleUrl.cs" />
     <Compile Include="ComputedFields\Fund\FundCardImageProtected.cs" />
     <Compile Include="ComputedFields\Fund\FundFactSheetProtected.cs" />
     <Compile Include="ComputedFields\Fund\FundPageLinkText.cs" />
     <Compile Include="ComputedFields\Fund\FundPageUrl.cs" />
     <Compile Include="ComputedFields\Fund\FundTeamName.cs" />
+    <Compile Include="ComputedFields\GenericListingModuleItem\ImageWidth.cs" />
     <Compile Include="ComputedFields\GenericListingModuleItem\ImageProtected.cs" />
     <Compile Include="ComputedFields\GenericListingModuleItem\Month.cs" />
     <Compile Include="ComputedFields\GenericListingModuleItem\Text.cs" />

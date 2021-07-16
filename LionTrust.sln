@@ -229,6 +229,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionTrust.Feature.Onboardin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionTrust.Feature.Fund.Tests", "src\Feature\Fund\tests\LionTrust.Feature.Fund.Tests\LionTrust.Feature.Fund.Tests.csproj", "{E7D555DF-7460-458F-A921-F2F2FD93C1BC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Article", "Article", "{DE4B17D7-5568-4497-9DB7-56FFACAE6CB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionTrust.Foundation.Article", "src\Foundation\Article\website\LionTrust.Foundation.Article.csproj", "{7EAE8866-CB76-4275-8D05-577C712CFCE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -463,6 +467,10 @@ Global
 		{E7D555DF-7460-458F-A921-F2F2FD93C1BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7D555DF-7460-458F-A921-F2F2FD93C1BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7D555DF-7460-458F-A921-F2F2FD93C1BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EAE8866-CB76-4275-8D05-577C712CFCE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EAE8866-CB76-4275-8D05-577C712CFCE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EAE8866-CB76-4275-8D05-577C712CFCE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EAE8866-CB76-4275-8D05-577C712CFCE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -571,6 +579,8 @@ Global
 		{C82AF945-3908-40E1-B401-E2B519D0209A} = {BA5B2FC2-AD94-4895-952A-666A15E7E40E}
 		{E7D555DF-7460-458F-A921-F3F2FD93C1BA} = {136E38AB-B606-4BB1-B5BB-91CBF9812827}
 		{E7D555DF-7460-458F-A921-F2F2FD93C1BC} = {BB571804-F86D-4B0D-AD3C-CDE78094D4BC}
+		{DE4B17D7-5568-4497-9DB7-56FFACAE6CB2} = {C3F57797-2D54-4626-B842-51F30272E972}
+		{7EAE8866-CB76-4275-8D05-577C712CFCE3} = {DE4B17D7-5568-4497-9DB7-56FFACAE6CB2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {845F548C-FD53-4C61-AB7F-953C2225A13B}

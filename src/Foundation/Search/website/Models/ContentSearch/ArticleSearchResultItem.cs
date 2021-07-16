@@ -61,6 +61,12 @@
         [IndexField("Article_Topics")]
         public IEnumerable<string> Topics { get; set; }
 
+        [IndexField("article_videourl")]
+        public string ArticleVideoUrl { get; set; }
+
+        [IndexField("article_podcast")]
+        public string ArticlePodcast { get; set; }
+
         [IndexField("article_topic_names")]
         public string TopicNames { get; set; }
 

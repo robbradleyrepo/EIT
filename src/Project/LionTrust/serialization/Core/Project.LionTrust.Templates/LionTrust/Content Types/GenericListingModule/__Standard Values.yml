@@ -20,7 +20,19 @@ Languages:
     - ID: "3c5309e0-2068-4614-984e-f1ae3d04c026"
       Hint: ListingTitle
       Value: $name
+    - ID: "4080f6c2-22e4-4c9c-89f1-cc0758e75f44"
+      Hint: GenericListingModule_ClearAllLabel
+      Value: Clear all
+    - ID: "5b8c8965-29ec-449e-8014-282d40ee5f12"
+      Hint: GenericListingModule_FiltersLabel
+      Value: Filters
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
         sitecore\admin
+    - ID: "93f357a7-248d-43f2-9f0d-75c4be0d734d"
+      Hint: GenericListingModule_ApplyFiltersLabel
+      Value: Apply Filters 
+    - ID: "c24afee2-ba7f-4440-97a2-9495910c65c6"
+      Hint: GenericListingModule_FilterLabel
+      Value: filter

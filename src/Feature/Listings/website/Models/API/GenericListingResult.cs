@@ -14,6 +14,8 @@
 
         public string ImageUrl { get; set; }
 
+        public string ImageWidth { get; set; }
+
         public string ListingType { get; set; }
 
         public string Date { get; set; }

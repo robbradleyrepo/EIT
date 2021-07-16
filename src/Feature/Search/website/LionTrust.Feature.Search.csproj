@@ -118,6 +118,8 @@
     <Compile Include="Models\API\Facets\IFacetFolder.cs" />
     <Compile Include="Models\API\Facets\IFundManagerFacetFolder.cs" />
     <Compile Include="Models\API\Facets\IFundManagerFacetOption.cs" />
+    <Compile Include="Models\API\PodcastLink.cs" />
+    <Compile Include="Models\API\PodcastModel.cs" />
     <Compile Include="Models\API\Response\FacetsResponse.cs" />
     <Compile Include="Models\API\Response\SearchResponse.cs" />
     <Compile Include="Models\IArticleLister.cs" />
@@ -146,6 +148,10 @@
     <ProjectReference Include="..\..\..\Foundation\Analytics\website\LionTrust.Foundation.Analytics.csproj">
       <Project>{71010683-02eb-4e0d-b0e1-6643922799ee}</Project>
       <Name>LionTrust.Foundation.Analytics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Article\website\LionTrust.Foundation.Article.csproj">
+      <Project>{7eae8866-cb76-4275-8d05-577c712cfce3}</Project>
+      <Name>LionTrust.Foundation.Article</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Contact\website\LionTrust.Foundation.Contact.csproj">
       <Project>{8ee89ae6-2e22-48cc-9fa9-f4c9225f76e8}</Project>

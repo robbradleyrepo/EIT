@@ -1,16 +1,114 @@
-﻿@model LionTrust.Feature.Listings.Models.IGenericListingModule
-<div class="lister-app legacy-listmode">
+﻿@using Glass.Mapper;
+@using Glass.Mapper.Sc
+@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Listings.Models.IGenericListingFacets
+<div class="lister-app legacy-listmode" id="lister-app" data-host="GenericListingApi" data-fundfacetid="@Model.Id" data-parentid="@Model.Id">
+    <div class="article-filter-wrapper">
+        <div class="article-filters" :class="mobileFilter ? 'active' : ''">
+            <div class="article-filters__header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-2 d-lg-none">
+                            <div class="article-filters__main-title">
+                                @Html.Glass().Editable(Model, x => x.FiltersLabel)
+                                <i id="filters-close" @@click="toggleMobileFilter" class="icon-close"></i>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <form class="search-form" @@submit.prevent="submitSearchForm($event)">
+                                <input type="text" v-model="searchText" name="searchText" class="search-form__input color-black"
+                                       placeholder="Search by keyword">
+                                <button class="search-form__submit pe-0" type="submit">
+                                    <i class="icon-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="article-filters__body">
+                <div class="container">
+                    <div class="row">
+                        <select-field inline-template v-for="(facet, i) in getFacets" :key="i">
+                            <div class="col-lg-3 relative" @@click.stop>
+                                <div class="article-filters__select" @@click="toggleOption" :class="open ? 'active' : ''">
+                                    <span class="article-filters__item-title">
+                                        {{facet.name}}
+                                    </span>
+                                    <i class="article-filters__icon-arrow"></i>
+                                </div>
+                                <div class="article-filters__options">
+                                    <div class="article-filters__title" @@click="toggleOption">
+                                        <i class="icon-chevron-left"></i>
+                                        {{facet.name}}
+                                    </div>
+                                    <option-field inline-template v-for="(item, i) in facet.items" :for="item.name" :key="i + item.name">
+                                        <label class="option-checkbox">
+                                            <input :id="item.name" class="option-checkbox__input" type="checkbox" v-model="checked" @@change="toggleSelect(item, facet)">
+                                            <span class="option-checkbox__text">{{item.name}} </span>
+                                            <span class="option-checkbox__icon"></span>
+                                        </label>
+                                    </option-field>
+                                </div>
+                            </div>
+                        </select-field>
+                        <div class="col-lg-3">
+                            <div class="article-filters__btns justify-content-end">
+                                <button class="clear-filter btn article-filters__btn article-filters__btn_clear" @@click="clearFilters">
+                                    @Html.Glass().Editable(Model, x => x.ClearAllLabel)
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="article-filters__footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <button class="btn btn-primary min-width-100" @@click="applyFilters">
+                                @Html.Glass().Editable(Model, x => x.ApplyFiltersLabel)
+                            </button>
+                        </div>
+                        <div class="col-6">
+                            <button class="clear-filter btn btn-primary-forward min-width-100" @@click="clearFilters">
+                                @Html.Glass().Editable(Model, x => x.ClearAllLabel)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container d-lg-none">
+        <div class="d-flex justify-content-between margin-mob-fliter-btn mt-0" :class="!mobileFilter ? 'relative' : ''">
+            <btn id="show-article-fliter" class="btn btn-clean" @@click="toggleMobileFilter">
+                <i class="icon-filter"></i> @Html.Glass().Editable(Model, x => x.FilterLabel)
+            </btn>
+        </div>
+    </div>
+
     <section class="container">
         <div class="row">
+            <div class="col-lg-6">
+                <article-item inline-template v-for="(article, i) in searchData" :key="i">
+                    <div class="list-mod-item">
+                        <h2 class="list-mod-item__title">{{article.title}}</h2>
+                        <span class="list-mod-item__date">{{article.date}}</span>
+                        <div class="list-mod-item__content">
+                            <p>
+                                {{article.subtitle}}
+                            </p>
+
+                            <a href="#">
+                                {{article.text}}
+                            </a>
+                        </div>
+                    </div>
+                </article-item>
+            </div>
             <div class="col-lg-9">
-                @foreach (var listingItem in Model.ListingItems)
-                {
-                    @Html.Partial("~/Views/Listings/_DownloadWithTitleAndDateItem.cshtml", listingItem)
-                    @Html.Partial("~/Views/Listings/_DownloadWithTitleItem.cshtml", listingItem)
-                    @Html.Partial("~/Views/Listings/_PodcastItem.cshtml", listingItem)
-                    @Html.Partial("~/Views/Listings/_ServiceItem.cshtml", listingItem)
-                    @Html.Partial("~/Views/Listings/_TitleDescriptionDateItem.cshtml", listingItem)
-                }
             </div>
         </div>
     </section>

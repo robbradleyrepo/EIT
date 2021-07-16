@@ -54,14 +54,12 @@
             public const string MonthsList_FieldId = "{EC94129F-5DAF-484D-852F-551008F7B82C}";
         }
 
-        public static class GenericListingFolder
+        public static class GenericListingFacet
         {
-            public const string TemplateId = "{FF052B94-76BD-4482-855F-AF3712EE4872}";
-            public const string Title_FieldID = "{62FA783B-735E-4510-91DA-900018033CCC}";
-            public const string Subtitle_FieldID = "{F0C2DFC2-0F2E-4082-A532-87B9AD9B9B9E}";
-            public const string Image_FieldID = "{146CBBD2-0E88-4FD6-B4B4-49B462266089}";
-            public const string Text_FieldID = "{694C3F81-60C0-4719-AA8C-5A4264623FEB}";
-            public const string Date_FieldID = "{25BED78C-4957-4165-998A-CA1B52F67497}";
+            public const string ClearAllLabel_FieldId = "{4080F6C2-22E4-4C9C-89F1-CC0758E75F44}";
+            public const string ApplyFiltersLabel_FieldId = "{93F357A7-248D-43F2-9F0D-75C4BE0D734D}";
+            public const string FilterLabel_FieldId = "{C24AFEE2-BA7F-4440-97A2-9495910C65C6}";
+            public const string FiltersLabel_FieldId = "{5B8C8965-29EC-449E-8014-282D40EE5F12}";
             public const string YearsList_FieldId = "{EBCE5416-BA23-40D1-8FBB-58487F247107}";
             public const string MonthsList_FieldId = "{EC94129F-5DAF-484D-852F-551008F7B82C}";
         }

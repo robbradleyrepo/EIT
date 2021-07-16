@@ -1,4 +1,5 @@
-﻿@using Glass.Mapper.Sc.Web.Mvc
+﻿@using System.Collections.Specialized
+@using Glass.Mapper.Sc.Web.Mvc
 @using LionTrust.Foundation.Analytics.Goals
 @model LionTrust.Feature.Navigation.Models.ISecondaryNav
 @if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
@@ -20,7 +21,10 @@
                     {
                         if (item.PageLink != null)
                         {
-                            @Html.Glass().AnalyticsGlass().GenerateGoalAnchor(item, i => i.PageLink, () => item.PageLink.Url, "btn btn-anchor anchorbox__btn", item.Goal, () => item.PageLink.Text)   
+                            @Html.Glass().AnalyticsGlass().RenderLinkWithGoal(item, m => m.PageLink, item.Goal, new NameValueCollection { { "class", "btn btn-anchor anchorbox__btn" } }, isEditable: true)
+                            {
+                                @item.PageLink.Text
+                            }
                         }
                     }
                 </div>
