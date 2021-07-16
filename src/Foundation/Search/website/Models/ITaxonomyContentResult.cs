@@ -24,5 +24,9 @@
         string Subtitle { get; set; }
 
         IEnumerable<string> Topics { get; set; }
+
+        string Url { get; set; }
+
+        string FundId { get; set; }
     }
 }

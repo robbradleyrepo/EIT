@@ -10,6 +10,6 @@
     {
         ArticleFacetsResponse GetArticleFilterFacets(Guid articleFilterFacetConfigId);
 
-        ISearchResponse<ITaxonomyContentResult> GetArticleListingResponse(string database, string funds, string fundCategories, string fundManagers, string fundTeams, int? month, int? year, string searchTerm, string sortOrder, int page);
+        ISearchResponse<ITaxonomyContentResult> GetArticleListingResponse(string database, string funds, string fundCategories, string fundManagers, string fundTeams, int? month, int? year, string searchTerm, string sortOrder, int page, int take = 21);
     }
 }

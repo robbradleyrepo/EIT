@@ -69,7 +69,8 @@
                     Title = hit.Document.ArticleTitle,
                     Topics = hit.Document.TopicNames?.Split('|'),
                     AuthorImageUrl = hit.Document.ArticleAuthorImage,
-                    VideoUrl = hit.Document.ArticleVideoUrl
+                    VideoUrl = hit.Document.ArticleVideoUrl,
+                    FundId = hit.Document.ArticleFund
                 };
 
                 if (!string.IsNullOrEmpty(hit.Document.ArticlePodcast))
@@ -94,7 +95,7 @@
                                     PodcastLinkUrl = x.Link?.Url,
                                     PodcastLinkGoal = x.LinkGoal.ToString(),
                                     PodcastLinkIcon = x.Icon?.Src
-                                })
+                                }),
                             };
                         }
                     }
@@ -150,7 +151,7 @@
             return listingArticleFacetsResponse;
         }
 
-        public ISearchResponse<ITaxonomyContentResult> GetArticleListingResponse(string database, string funds, string fundCategories, string fundManagers, string fundTeams, int? month, int? year, string searchTerm, string sortOrder, int page)
+        public ISearchResponse<ITaxonomyContentResult> GetArticleListingResponse(string database, string funds, string fundCategories, string fundManagers, string fundTeams, int? month, int? year, string searchTerm, string sortOrder, int page, int take = 21)
         {
             var fromYear = year ?? 2000;
             var fromMonth = month ?? 1;
@@ -167,8 +168,8 @@
                 FundManagers = fundManagers?.Split('|'),
                 FundTeams = fundTeams?.Split('|'),
                 SearchTerm = searchTerm,
-                Skip = page * 21,
-                Take = 21,
+                Skip = page * take,
+                Take = take,
                 ToDate = new DateTime(toYear, toMonth, DateTime.DaysInMonth(toYear, toMonth))
             };
 

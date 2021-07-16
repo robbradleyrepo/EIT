@@ -29,6 +29,8 @@
 
         string FundRegion { get; set; }
 
+        string FundUpdateUrl { get; set; }
+
         string FundTeamName { get; set; }
 
     }

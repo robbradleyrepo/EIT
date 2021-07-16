@@ -159,7 +159,7 @@
                             <button @@click="showLiteratureOverlay(fund.FundId)" class="btn btn-primary">
                                 @Html.Glass().Editable(Model, m => m.AllDocumentsLabel) <i class="icon-folder"></i>
                             </button>
-                            <a href="#" target="_blank" class="btn btn-primary-forward min-width-auto">@Html.Glass().Editable(Model, m => m.UpdateFundCtaText)</a>
+                            <a :href="fund.fundUpdateUrl" target="_blank" class="btn btn-primary-forward min-width-auto">@Html.Glass().Editable(Model, m => m.UpdateFundCtaText)</a>
                             <a :href="fund.url" class="btn btn-link">
                                 @Html.Glass().Editable(Model, m => m.ViewFundCtaText)
                                 <i class="icon-arrow-right animate-arrow"></i>

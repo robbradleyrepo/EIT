@@ -36,5 +36,7 @@
         public string VideoUrl { get; set; }
 
         public PodcastModel Podcast { get; set; }
+
+        public string FundId { get; set; }
     }
 }
