@@ -5,9 +5,9 @@
     using LionTrust.Feature.Search.DataManagers.Interfaces;
     using LionTrust.Foundation.Contact.Services;
     using Sitecore.Analytics;
-    using LionTrust.Foundation.Core.ActionResults;
-    using LionTrust.Feature.Search.DataManagers.Interfaces;   
+    using LionTrust.Foundation.Core.ActionResults;  
     using Sitecore.Mvc.Controllers;
+    using System.Linq;
 
     public class SearchAPIController : SitecoreController
     {
@@ -103,10 +103,29 @@
         /// <returns>A list of funds.</returns>
         public ActionResult GetFilteredFunds(string fundTeams, string fundManagers, string fundRegions, string fundRanges, string searchTerm, string sortOrder, string database = "web", int page = 1)
         {
-            var response = this._fundListingDataManager.GetFundListingResponse(database, fundTeams, fundManagers, fundRegions, fundRanges, searchTerm, sortOrder, page);
+            var response = _fundListingDataManager.GetFundListingResponse(database, fundTeams, fundManagers, fundRegions, fundRanges, searchTerm, sortOrder, page);
             if (response.StatusCode != 200)
             {
                 return new HttpStatusCodeResult(response.StatusCode, response.StatusMessage);
+            }
+            else if(response.TotalResults > 0 && response.SearchResults != null)
+            {
+                var fundUpdateArticles = _articleListingDataManager.GetArticleListingResponse(database, string.Join("|", response.SearchResults.Select(f => f.FundId.ToString("N"))), "review", null, null, null, null, null, "ASC", 1, int.MaxValue);
+                var funds = response.SearchResults.ToList();
+
+                if (fundUpdateArticles != null && fundUpdateArticles.TotalResults > 0)
+                {
+                    foreach (var fund in funds)
+                    {
+                        var latestFundUpdateArticle = fundUpdateArticles.SearchResults.FirstOrDefault(a => a.FundId == fund.FundId.ToString("N"));
+                        if (latestFundUpdateArticle != null && !string.IsNullOrWhiteSpace(latestFundUpdateArticle.Url))
+                        {
+                            fund.FundUpdateUrl = latestFundUpdateArticle.Url;
+                        }
+                    }
+
+                    response.SearchResults = funds;
+                }
             }
 
             return new JsonCamelCaseResult(response, JsonRequestBehavior.AllowGet);

@@ -30,5 +30,9 @@
         public IEnumerable<string> FundRange { get; set; }
 
         public string FundRegion { get; set; }
+
+        public string FundTeamName { get; set; }
+
+        public string FundUpdateUrl { get; set; }
     }
 }

@@ -9,6 +9,7 @@
     using LionTrust.Feature.Search.Models.API;
     using LionTrust.Feature.Search.Models.API.Facets;
     using LionTrust.Feature.Search.Models.API.Response;
+    using LionTrust.Foundation.Article.Models;
     using LionTrust.Foundation.Content.Repositories;
     using LionTrust.Foundation.Search.Models;
     using LionTrust.Foundation.Search.Models.ContentSearch;
@@ -17,8 +18,6 @@
     using LionTrust.Foundation.Search.Services.Interfaces;
     using Sitecore.ContentSearch.Linq;
     using Sitecore.Globalization;
-    using Sitecore.Links;
-    using Sitecore.Resources.Media;
 
     public class ArticleSearchDataManager : IArticleSearchDataManager
     {
@@ -53,20 +52,62 @@
 
         private IEnumerable<ITaxonomyContentResult> MapArticleResultHits(IEnumerable<SearchHit<ArticleSearchResultItem>> hits)
         {
-            return hits.Select(x => new ArticleResult{
-                                                        Url = x.Document.ArticleUrl,
-                                                        Authors = x.Document.ArticleAuthorNames?.Split('|'),
-                                                        Category = x.Document.ArticleCategoryTagName,
-                                                        Date = this.GetArticleDate(x.Document.ArticleDate),
-                                                        Fund = x.Document.ArticleFundName,
-                                                        ImageUrl = x.Document.ArticleListingImage,
-                                                        ImageOpacity = string.IsNullOrWhiteSpace(x.Document.ArticleListingImageOpacity) ? "0" : x.Document.ArticleListingImageOpacity,
-                                                        Subtitle = x.Document.ArticleSubtitle,
-                                                        Team = x.Document.ArticleTeam,
-                                                        Title = x.Document.ArticleTitle,
-                                                        Topics = x.Document.TopicNames?.Split('|'),
-                                                        AuthorImageUrl = x.Document.ArticleAuthorImage
-                                                     });
+            var result = new List<ITaxonomyContentResult>();
+            foreach (var hit in hits)
+            {
+                var articleResult = new ArticleResult
+                {
+                    Url = hit.Document.ArticleUrl,
+                    Authors = hit.Document.ArticleAuthorNames?.Split('|'),
+                    Category = hit.Document.ArticleCategoryTagName,
+                    Date = this.GetArticleDate(hit.Document.ArticleDate),
+                    Fund = hit.Document.ArticleFundName,
+                    ImageUrl = hit.Document.ArticleListingImage,
+                    ImageOpacity = string.IsNullOrWhiteSpace(hit.Document.ArticleListingImageOpacity) || hit.Document.ArticleListingImageOpacity == "" ? "1" : hit.Document.ArticleListingImageOpacity,
+                    Subtitle = hit.Document.ArticleSubtitle,
+                    Team = hit.Document.ArticleTeam,
+                    Title = hit.Document.ArticleTitle,
+                    Topics = hit.Document.TopicNames?.Split('|'),
+                    AuthorImageUrl = hit.Document.ArticleAuthorImage,
+                    VideoUrl = hit.Document.ArticleVideoUrl,
+                    FundId = hit.Document.ArticleFund
+                };
+
+                if (!string.IsNullOrEmpty(hit.Document.ArticlePodcast))
+                {
+                    try
+                    {
+                        var podcastId = new Guid(hit.Document.ArticlePodcast);
+                        var podcast = _contentRepository.GetItem<IArticlePodcastPromo>(new GetItemByIdOptions(podcastId));
+                        if (podcast != null)
+                        {
+                            articleResult.Podcast = new PodcastModel()
+                            {
+                                Heading = podcast.Heading,
+                                Title = podcast.Title,
+                                Body = podcast.Body,
+                                BackgroundImageUrl = podcast.BackgroundImage?.Src,
+                                MobileBackgroundImageUrl = podcast.MobileBackgroundImage?.Src,
+                                BackgroundImageOpacity = podcast.BackgroundImageOpacity,
+                                PodcastsLabel = podcast.PodcastsLabel,
+                                PodcastLinks = podcast.PodcastLinks?.Select(x => new PodcastLink
+                                {
+                                    PodcastLinkUrl = x.Link?.Url,
+                                    PodcastLinkGoal = x.LinkGoal.ToString(),
+                                    PodcastLinkIcon = x.Icon?.Src
+                                }),
+                            };
+                        }
+                    }
+                    catch
+                    {
+                    }
+                }
+
+                result.Add(articleResult);
+            }
+
+            return result;
         }
 
         public ArticleFacetsResponse GetArticleFilterFacets(Guid articleFilterFacetConfigId)
@@ -110,7 +151,7 @@
             return listingArticleFacetsResponse;
         }
 
-        public ISearchResponse<ITaxonomyContentResult> GetArticleListingResponse(string database, string funds, string fundCategories, string fundManagers, string fundTeams, int? month, int? year, string searchTerm, string sortOrder, int page)
+        public ISearchResponse<ITaxonomyContentResult> GetArticleListingResponse(string database, string funds, string fundCategories, string fundManagers, string fundTeams, int? month, int? year, string searchTerm, string sortOrder, int page, int take = 21)
         {
             var fromYear = year ?? 2000;
             var fromMonth = month ?? 1;
@@ -127,8 +168,8 @@
                 FundManagers = fundManagers?.Split('|'),
                 FundTeams = fundTeams?.Split('|'),
                 SearchTerm = searchTerm,
-                Skip = page * 21,
-                Take = 21,
+                Skip = page * take,
+                Take = take,
                 ToDate = new DateTime(toYear, toMonth, DateTime.DaysInMonth(toYear, toMonth))
             };
 

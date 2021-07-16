@@ -1,5 +1,4 @@
 import Vue from "vue/dist/vue.common.prod";
-import download from "downloadjs";
 const eventBus = new Vue();
 import { pagination } from "./listFilter/mixins/pagination";
 export default () => {
@@ -36,80 +35,6 @@ export default () => {
     "December",
   ];
 
-  const results = [
-    {
-      title: "Liontrust GF Absolute Return Bond Fund Sales Aid",
-      documentLink:
-        "/sitecore/media-library/liontrust/files/fund-literature/sales-aids/offshore/liontrust-gf-absolute-return-bond-fund-sales-aid-2020-q2",
-      documentLinkText:
-        "Liontrust GF Absolute Return Bond Fund Sales Aid 2020 Q2",
-      documentPageLink:
-        "/sitecore/content/modules/documents/adviser-support/liontrust-gf-absolute-return-bond-fund-sales-aid",
-      documentVideoLink: null,
-      documentId: "567e5295-f425-4825-84a0-ed9a0e5282a9",
-    },
-    {
-      title: "Liontrust GF Absolute Return Bond Fund Sales Aid (International)",
-      documentLink:
-        "/-/media/liontrust/files/fund-literature/sales-aids/offshore/liontrust-gf-absolute-return-bond-fund-sales-aid-2020-q2-international.ashx",
-      documentLinkText: "",
-      documentPageLink:
-        "/sitecore/content/modules/documents/adviser-support/liontrust-gf-absolute-return-bond-fund-sales-aid-international",
-      documentVideoLink: null,
-      documentId: "861af72c-8a93-4f1f-8079-5848c32ff349",
-    },
-    {
-      title: "Liontrust GF High Yield Bond Fund Sales Aid",
-      documentLink:
-        "/-/media/liontrust/files/fund-literature/sales-aids/offshore/liontrust-gf-high-yield-fund-sales-aid-2020-q2.ashx",
-      documentLinkText: "",
-      documentPageLink:
-        "/sitecore/content/modules/documents/adviser-support/liontrust-gf-high-yield-bond-fund-sales-aid",
-      documentVideoLink: null,
-      documentId: "7d0287be-36a8-4ad0-81fb-f0a9fdec2435",
-    },
-    {
-      title: "Liontrust GF High Yield Bond Fund Sales Aid (International)",
-      documentLink:
-        "/sitecore/media-library/liontrust/files/fund-literature/sales-aids/offshore/liontrust-gf-high-yield-fund-sales-aid-2020-q2-international",
-      documentLinkText:
-        "Liontrust GF High Yield Fund Sales Aid 2020 Q2 International",
-      documentPageLink:
-        "/sitecore/content/modules/documents/adviser-support/liontrust-gf-high-yield-bond-fund-sales-aid-international",
-      documentVideoLink: null,
-      documentId: "64b3feea-8835-4f53-a982-8d20356f12aa",
-    },
-    {
-      title: "Liontrust GF Strategic Bond Fund Sales Aid",
-      documentLink:
-        "/-/media/liontrust/files/fund-literature/sales-aids/offshore/liontrust-gf-strategic-bond-fund-sales-aid-2020-q2.ashx",
-      documentLinkText: "",
-      documentPageLink:
-        "/sitecore/content/modules/documents/adviser-support/liontrust-gf-strategic-bond-fund-sales-aid",
-      documentVideoLink: null,
-      documentId: "ad2334a7-a0f0-4ad9-bd50-bcdae80bde2f",
-    },
-    {
-      title: "Liontrust GF Sustainable Future Global Growth Fund Sales Aid",
-      documentLink:
-        "/-/media/liontrust/files/fund-literature/sales-aids/offshore/liontrust-gf-sf-global-growth-fund-sales-aid.ashx",
-      documentLinkText: "",
-      documentPageLink:
-        "/sitecore/content/modules/documents/adviser-support/liontrust-gf-sustainable-future-global-growth-fund-sales-aid",
-      documentVideoLink: null,
-      documentId: "03b5904f-c94c-4a9d-8ff2-b671f5533421",
-    },
-    {
-      title: "Liontrust Strategic Bond Fund Sales Aid",
-      documentLink:
-        "/-/media/liontrust/files/adviser-support/lt-strategic-bond-fund-sales-aid-build24-online-single-pages.ashx",
-      documentLinkText: "",
-      documentPageLink:
-        "/sitecore/content/modules/documents/adviser-support/liontrust-strategic-bond-fund-sales-aid",
-      documentVideoLink: null,
-      documentId: "045b2230-0a55-43d3-9f2a-8bdca88cc52c",
-    },
-  ];
   new Vue({
     el: "#lister-app",
     mixins: [pagination],
@@ -176,7 +101,7 @@ export default () => {
       },
 
       applyFilters() {
-        this.pushStateLink();
+        // this.pushStateLink();
         this.mobileFilter = false;
         this.getSearchRequest();
       },
@@ -230,25 +155,26 @@ export default () => {
       },
 
       downloadDocumentMultiple() {
-        document.body.style.cursor='wait';
+        document.body.style.cursor = "wait";
         $.post({
           type: "POST",
           xhrFields: { responseType: "arraybuffer" },
           url: `${host}/DownloadDocuments`,
-          data: {downloadFileIds: this.selectedDocumentIds},
-        }).done((data) => {
-          const url = window.URL.createObjectURL(new Blob([data]));
-          const link = document.createElement("a");
-          link.href = url;
-          link.setAttribute("download", "Documents.zip");
-          document.body.appendChild(link);
-          link.click();
-          document.body.style.cursor='default';
+          data: { downloadFileIds: this.selectedDocumentIds },
         })
-        .fail((e) => {
-          console.error(e);
-          document.body.style.cursor='default';
-        });
+          .done((data) => {
+            const url = window.URL.createObjectURL(new Blob([data]));
+            const link = document.createElement("a");
+            link.href = url;
+            link.setAttribute("download", "Documents.zip");
+            document.body.appendChild(link);
+            link.click();
+            document.body.style.cursor = "default";
+          })
+          .fail((e) => {
+            console.error(e);
+            document.body.style.cursor = "default";
+          });
       },
 
       getFacetsRequest() {
@@ -323,6 +249,7 @@ export default () => {
     data: function () {
       return {
         open: false,
+        active: 0,
       };
     },
     methods: {
@@ -331,6 +258,10 @@ export default () => {
       },
       clearOption() {
         this.$emit("clearOptionField");
+      },
+      setChoosen(val) {
+        if (val) this.active++;
+        else this.active--;
       },
     },
     mounted() {
@@ -392,27 +323,29 @@ export default () => {
         this.$parent.setDocumentId(this.id);
       },
       downloadDocument() {
-        document.body.style.cursor='wait';
+        document.body.style.cursor = "wait";
         $.post({
           xhrFields: { responseType: "arraybuffer" },
           url: `${host}/DownloadDocuments`,
           data: {
             downloadFileIds: this.id,
           },
-        }).done((data) => {
-          const url = window.URL.createObjectURL(
-            new Blob([data], { type: "application/pdf;charset=base-64" })
-          );
-          const link = document.createElement("a");
-          link.href = url;
-          link.setAttribute("download", this.title + ".pdf");
-          document.body.appendChild(link);
-          link.click();
-          document.body.style.cursor='default';
-        }).fail((e) => {
-          console.error(e);
-          document.body.style.cursor='default';
-        });
+        })
+          .done((data) => {
+            const url = window.URL.createObjectURL(
+              new Blob([data], { type: "application/pdf;charset=base-64" })
+            );
+            const link = document.createElement("a");
+            link.href = url;
+            link.setAttribute("download", this.title + ".pdf");
+            document.body.appendChild(link);
+            link.click();
+            document.body.style.cursor = "default";
+          })
+          .fail((e) => {
+            console.error(e);
+            document.body.style.cursor = "default";
+          });
       },
     },
     created() {
@@ -420,6 +353,9 @@ export default () => {
         this.selected = selected;
         if (selected) this.selectDocument(this.id);
       });
+    },
+    beforeDestroy() {
+      eventBus.$off("toggleSelected");
     },
   });
 };

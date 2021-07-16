@@ -43,6 +43,9 @@
         [IndexField("Fund_FactSheet_Protected")]
         public string FundFactSheet { get; set; }
 
+        [IndexField("Fund_FundTeamName")]
+        public string FundTeamName { get; set; }
+
 
 
     }

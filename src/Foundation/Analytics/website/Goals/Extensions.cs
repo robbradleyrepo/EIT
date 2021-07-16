@@ -34,6 +34,20 @@
 
             return glass.BeginRenderLink<TK>(model, field, attributes, isEditable, alwaysRender);
         }
+
+        public HtmlString RenderLinkWithGoal<TK>(TK model, Expression<Func<TK, object>> field, Guid goalId, NameValueCollection attributes = null, bool isEditable = false)
+        {
+            if (attributes == null)
+            {
+                attributes = new NameValueCollection { { "data-goal-trigger", goalId.ToString() } };
+            }
+            else
+            {
+                attributes.Add("data-goal-trigger", goalId.ToString());
+            }
+
+            return glass.RenderLink<TK>(model, field, attributes, isEditable);
+        }
     }
 
     public static class Extensions

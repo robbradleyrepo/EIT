@@ -1,16 +1,18 @@
-﻿@model LionTrust.Feature.Listings.Models.IDocumentLister
+﻿@using Glass.Mapper;
+@using Glass.Mapper.Sc
+@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Listings.Models.IDocumentLister
 @if (Model != null)
 {
-    <section class="container">
+    <section class="container" id="lister-app" data-host="DocumentsApi" data-folderid="@Model.Id">
         <div class="doc-list">
             <div class="doc-list__item">
                 <div class="row align-items-center">
                     <div class="col-xl-1 col-md-1 d-none d-md-block">
                         <label class="checkbox doc-list__checkbox mb-0">
-                            <input type="checkbox" class="checkbox__input">
+                            <input type="checkbox" class="checkbox__input" v-model="selectAllDocuments">
                             <span class="checkbox__box mx-auto"></span>
                         </label>
-
                     </div>
                     <div class="col-xl-6 col-md-9 d-none d-md-block">
                         <span class="doc-list__heading">
@@ -24,22 +26,22 @@
                     </div>
                     <div class="col-md-2 col-lg-6 col-xl-2">
                         <div class="relative">
-                            <button class="btn btn-clean d-block ml-auto button-sort">
+                            <button class="btn btn-clean d-block ml-auto button-sort" @@click.stop="showSort">
                                 @Html.Glass().Editable(Model, m => m.SortText) <i class="icon-sort"></i>
                             </button>
-                            <div class="sort-dropdown">
+                            <div class="sort-dropdown" :class="sortModal ? 'active' : ''">
                                 <div class="text-right">
                                     <span class="btn btn-clean">
                                         @Html.Glass().Editable(Model, m => m.SortText) <i class="icon-sort"></i>
                                     </span>
                                 </div>
                                 <label for="newest" class="option-checkbox">
-                                    <input id="newest" class="option-checkbox__input" type="radio" name="sort" checked="">
+                                    <input id="newest" v-model="sortOrder" value="ASC" class="option-checkbox__input" type="radio" name="sort" checked>
                                     <span class="option-checkbox__text">@Html.Glass().Editable(Model, m => m.AZText)</span>
                                     <span class="option-checkbox__icon"></span>
                                 </label>
                                 <label for="oldest" class="option-checkbox">
-                                    <input id="oldest" class="option-checkbox__input" type="radio" name="sort">
+                                    <input id="oldest" v-model="sortOrder" value="DESC" class="option-checkbox__input" type="radio" name="sort">
                                     <span class="option-checkbox__text">@Html.Glass().Editable(Model, m => m.ZAText)</span>
                                     <span class="option-checkbox__icon"></span>
                                 </label>
@@ -48,92 +50,76 @@
                     </div>
                 </div>
             </div>
-            @if (Model.DocumentList != null && Model.DocumentList.Any())
-            {
-                foreach (var document in Model.DocumentList)
-                {
-                    <div class="doc-list__item">
-                        <div class="row align-items-center">
-                            <div class="col-xl-1 col-md-1 d-none d-md-block">
-                                <label class="checkbox doc-list__checkbox">
-                                    <input type="checkbox" class="checkbox__input">
-                                    <span class="checkbox__box mx-auto"></span>
-                                </label>
+            <document-item inline-template v-for="(document, i) in searchData" :key="i + document.title" :id="document.documentId" :title="document.title">
+                <div class="doc-list__item">
+                    <div class="row align-items-center">
+                        <div class="col-xl-1 col-md-1 d-none d-md-block">
+                            <label class="checkbox doc-list__checkbox">
+                                <input type="checkbox" class="checkbox__input" v-model="selected" @@change="selectDocument(document.documentId)">
+                                <span class="checkbox__box mx-auto"></span>
+                            </label>
 
+                        </div>
+                        <div class="col-xl-6 col-md-11">
+                            <span class="doc-list__title">
+                                {{document.title}}
+                            </span>
+                        </div>
+                        <div class="col-lg-6 col-xl-3">
+                            <div class="doc-list__links">
+                                <button @@click="downloadDocument" class="link-gray">Download file <i class="icon-download"></i></button>
+                                <a :href="document.documentPageLink" target="_blank" class="link-gray d-lg-none">@Html.Glass().Editable(Model, m => m.ViewPageText) <i class="icon-file"></i></a>
+                                <button v-if="document.documentVideoLink" data-type="iframe" data-fancybox
+                                        :data-src="document.documentVideoLink" class="link-gray">
+                                    @Html.Glass().Editable(Model, m => m.WatchVideoText) <i class="icon-play"></i>
+                                </button>
                             </div>
-                            <div class="col-xl-6 col-md-11">
-                                <span class="doc-list__title">
-                                    @Html.Glass().Editable(document, m => m.DocumentName)
-                                </span>
-                            </div>
-                            <div class="col-lg-6 col-xl-3">
-                                <div class="doc-list__links">
-                                    <a href="@document.DocumentLink" target="_blank" class="link-gray">@(document.DocumentLink != null ? document.DocumentLink.Text : "Download File") <i class="icon-download"></i></a>
-                                    <a href="@document.Url" target="_blank" class="link-gray d-lg-none">@Html.Glass().Editable(Model, m => m.ViewPageText) <i class="icon-file"></i></a>
-                                    <button class="link-gray">@Html.Glass().Editable(Model, m => m.WatchVideoText) <i class="icon-play"></i></button>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-xl-2">
-                                <div class="doc-list__right-btn">
-                                    <a href="@document.Url" class="btn btn-primary-forward">
-                                        @Html.Glass().Editable(Model, m => m.ViewPageText) <i class="icon-arrow-right animate-arrow"></i>
-                                    </a>
-                                </div>
+                        </div>
+                        <div class="col-lg-6 col-xl-2">
+                            <div class="doc-list__right-btn">
+                                <a :href="document.documentPageLink" class="btn btn-primary-forward">
+                                    {{document.documentLinkText}} <i class="icon-arrow-right animate-arrow"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
-                }
-            }
+                </div>
+            </document-item>
         </div>
         <div class="row align-items-center doc-list-nav">
             <div class="col-xl-3">
-                <button class="btn btn-primary d-none d-md-block mb-3 mb-xl-0">@Html.Glass().Editable(Model, m => m.DownloadLinkText) <i class="icon-download"></i></button>
+                <button @@click="downloadDocumentMultiple"
+                        v-if="selectAllDocuments || selectedDocumentIds.length"
+                        @@click="startDownload"
+                        class="btn btn-primary d-none d-md-block mb-3 mb-xl-0">
+                    @Html.Glass().Editable(Model, m => m.DownloadLinkText) <i class="icon-download"></i>
+                </button>
             </div>
             <div class="col-xl-6">
-                <nav class="pagination mt-2">
-                    <a href="#" class="pagination__step pagination__step_forward">
-                        <i class="icon-arrow-left"></i>
-                        @Html.Glass().Editable(Model, m => m.PreviousText)
+                <nav v-if="getPageAmount > 1" class="pagination mt-3">
+                    <a href="#" @@click.prevent="prevPage" class="pagination__step pagination__step_forward"
+                       :class="disablePrevBtn ? 'pagination__step_disabled' : ''">
+                        <i class="icon-arrow-left"></i> @Html.Glass().Editable(Model, m => m.PreviousText)
                     </a>
                     <ul class="pagination__list">
-                        <li class="pagination__item"><a href="#" class="pagination__link pagination__link_steps">...</a></li>
                         <li class="pagination__item">
-                            <a href="#" class="pagination__link">
-                                2
+                            <a @@click.prevent="jumpPagesForward" v-if="showForwardPageBtn" href="#"
+                               class="pagination__link pagination__link_steps">...</a>
+                        </li>
+                        <li v-for="(page, i) in getPages" :key="i" class="pagination__item">
+                            <a @@click.prevent="changePage(page)" href="#" class="pagination__link"
+                               :class="getPage === page ? 'active' : ''">
+                                {{page}}
                             </a>
                         </li>
                         <li class="pagination__item">
-                            <a href="#" class="pagination__link">
-                                3
-                            </a>
+                            <a @@click.prevent="jumpPagesNext" v-if="showNextPageBtn" href="#"
+                               class="pagination__link pagination__link_steps">...</a>
                         </li>
-                        <li class="pagination__item">
-                            <a href="#" class="pagination__link">
-                                4
-                            </a>
-                        </li>
-                        <li class="pagination__item">
-                            <a href="#" class="pagination__link active">
-                                5
-                            </a>
-                        </li>
-                        <li class="pagination__item">
-                            <a href="#" class="pagination__link">
-                                6
-                            </a>
-                        </li>
-                        <li class="pagination__item">
-                            <a href="#" class="pagination__link">
-                                7
-                            </a>
-                        </li>
-                        <li class="pagination__item">
-                            <a href="#" class="pagination__link">
-                                8
-                            </a>
-                        </li>
-                        <li class="pagination__item"><a href="#" class="pagination__link pagination__link_steps">...</a></li>
-                    </ul> <a href="#" class="pagination__step pagination__step_next">@Html.Glass().Editable(Model, m => m.NextText) <i class="icon-arrow-right"></i></a>
+                    </ul>
+                    <a href="#" @@click.prevent="nextPage"
+                       :class="disabledNextBtn ? 'pagination__step_disabled' : ''"
+                       class="pagination__step pagination__step_next">@Html.Glass().Editable(Model, m => m.NextText) <i class="icon-arrow-right"></i></a>
                 </nav>
             </div>
         </div>
