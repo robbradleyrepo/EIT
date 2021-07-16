@@ -78,6 +78,7 @@
             public const string SecondaryCtaGoalId = "{0528E27D-0ACA-4D49-A01A-E3993A81764F}";
             public const string ViewFundFieldId = "{8E43DF4A-3439-428D-A642-9BF4A7550842}";
             public const string TextColourFieldId = "{81691A12-5AE2-433A-AEB4-7D7F5D4713E4}";
+            public const string BackgroundImageFieldId = "{CF042356-7423-4D3E-A295-4F175C40DF99}";
         }
 
         public static class MyFundsScroller

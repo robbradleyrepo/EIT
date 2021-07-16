@@ -37,5 +37,8 @@
 
         [SitecoreField(Constants.FundScroller.TextColourFieldId)]
         Foundation.Design.ILookupValue TextColour { get; set; }
+
+        [SitecoreField(Constants.FundScroller.BackgroundImageFieldId)]
+        Image BackgroundImage { get; set; } 
     }
 }
