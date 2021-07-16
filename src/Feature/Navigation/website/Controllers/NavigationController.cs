@@ -50,6 +50,10 @@
         public ActionResult Menu()
         {
             NavigationViewModel navigationViewModel = GetNavigationViewModel();
+            if (navigationViewModel.HomeItem != null && navigationViewModel.HomeItem.OnboardingConfiguration != null)
+            {
+                navigationViewModel.HomeItem.OnboardingRoleName = OnboardingHelper.ProfileRoleName(navigationViewModel.HomeItem.OnboardingConfiguration, _log);
+            }
 
             return View("~/Views/Navigation/Menu.cshtml", navigationViewModel);
         }
