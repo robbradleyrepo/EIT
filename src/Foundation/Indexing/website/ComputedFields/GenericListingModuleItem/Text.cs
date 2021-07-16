@@ -2,8 +2,10 @@
 {
     using System;
     using LionTrust.Foundation.Indexing.ComputedFields.SharedLogic;
+    using Sitecore.Configuration;
     using Sitecore.ContentSearch;
     using Sitecore.ContentSearch.ComputedFields;
+    using Sitecore.Sites;
 
     public class Text : IComputedIndexField
     {
@@ -18,10 +20,14 @@
             {
                 try
                 {
-                    return Sitecore.Web.UI.WebControls.FieldRenderer.Render(item, Legacy.Constants.GenericListingModuleItem.Text_FieldName);
+                    using (new SiteContextSwitcher(Factory.GetSite(Constants.SiteName)))
+                    {
+                        return Sitecore.Web.UI.WebControls.FieldRenderer.Render(item, Legacy.Constants.GenericListingModuleItem.Text_FieldName);
+                    }
                 }
-                catch
+                catch (Exception ex)
                 {
+                    Sitecore.Diagnostics.Log.Error("Error at rich text index field for the item with the ID: " + item.ID.ToString(), ex, this);
                 }
             }
 
