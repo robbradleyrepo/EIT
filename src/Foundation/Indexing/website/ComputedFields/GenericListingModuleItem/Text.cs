@@ -25,8 +25,9 @@
                         return Sitecore.Web.UI.WebControls.FieldRenderer.Render(item, Legacy.Constants.GenericListingModuleItem.Text_FieldName);
                     }
                 }
-                catch
+                catch (Exception ex)
                 {
+                    Sitecore.Diagnostics.Log.Error("Error at rich text index field for the item with the ID: " + item.ID.ToString(), ex, this);
                 }
             }
 
