@@ -93,7 +93,9 @@
     </div>
 
     <section class="container">
-        
+        <div class="text-center my-5" v-if="loading">
+            <div class="spinner-border text-gold" role="status"></div>
+          </div>
             <!-- <div class="col-lg-6"> -->
                 <article-item inline-template v-for="(article, i) in searchData" :key="i">
                     <div class="row">
