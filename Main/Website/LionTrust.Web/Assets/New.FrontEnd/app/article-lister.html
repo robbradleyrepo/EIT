@@ -44,7 +44,7 @@
                 </a> 
                 <div class="article-promo__footer">
                   <div class="article-promo__footer-item" v-if="article.podcast">
-                    <span class="article-promo__footer-text">Listen on:</span>
+                    <span class="article-promo__footer-text">{{article.podcast.podcastsLabel}}:</span>
                       <a 
                         v-for="(link, i) in article.podcast.podcastLinks"
                         v-if="!!article.podcast.podcastLinks"
