@@ -25,7 +25,7 @@
           <div class="spinner-border text-gold" role="status"></div>
         </div>
         <div class="row">
-          <article-item inline-template v-for="(article, i) in searchData" :key="i">
+          <article-item inline-template v-for="(article, i) in searchData" :key="i + article.title">
             <div class="col-md-6 col-lg-4">
               <div class="article-promo">
                 <a :href="article.url" class="article-promo__front">
@@ -53,6 +53,43 @@
                   </div>
                 </div>
 
+                <img class="article-promo__back"
+                :src="article.imageUrl" :alt="article.title" :style="{opacity: article.imageOpacity}">
+              </div>
+              <div class="text-black">
+                {{article.category}}
+              </div>
+              <div class="article-promo" v-if="article.category === 'Podcast'">
+                <a :href="article.url" class="article-promo__front">       
+                </a>
+                <a :href="article.url" class="article-promo__body">
+                  <div class="article-promo__head">
+                   <i class="icon-mic text-primary"></i>
+                    <span class="article-promo__head-title ">{{article.podcast.heading}}</span>
+                  </div>
+                  <span class="article-promo__title">
+                    {{article.title}}
+                  </span>
+                  <span class="article-promo__desc">
+                    {{article.content}}
+                  </span>
+                </a> 
+                <div class="article-promo__footer">
+                  <div class="article-promo__footer-item" v-if="article.podcast">
+                    <span class="article-promo__footer-text">Listen on:</span>
+                      <a 
+                        v-for="(link, i) in article.podcast.podcastLinks"
+                        v-if="!!article.podcast.podcastLinks"
+                        :href="link.podcastLinkUrl"
+                        >
+                        <img
+                          :src="link.podcastLinkIcon"
+                          class="image-icon"
+                          alt="apple-podcast"
+                        />
+                      </a>
+                  </div>      
+                </div>
                 <img class="article-promo__back"
                 :src="article.imageUrl" :alt="article.title" :style="{opacity: article.imageOpacity}">
               </div>
