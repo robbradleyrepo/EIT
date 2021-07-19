@@ -26,6 +26,9 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20210617T163321Z
+    - ID: "566136f8-0d80-4b50-8ecc-9db53fc96161"
+      Hint: ArticleLister_WatchNowLabel
+      Value: watch now
     - ID: "5ab5a6fe-85d0-4bae-8b0e-8446bed3fa3c"
       Hint: ArticleLister_YearLabel
       Value: Year
@@ -36,6 +39,16 @@ Languages:
     - ID: "6468d4a5-9157-4a80-81aa-70615fb875a9"
       Hint: ArticleLister_MonthLabel
       Value: Month
+    - ID: "68cada79-69a0-454a-a9eb-1e5c3e6a6ce2"
+      Hint: ArticleLister_VideoIcon
+      Value: |
+        <image mediaid="{CC0E9513-4398-41A6-9FAE-DB5E088BBBA5}" />
+    - ID: "6af33400-0709-4517-b1f7-8d01c5d66c06"
+      Hint: ArticleLister_FilterLabel
+      Value: filter
+    - ID: "745b2803-4617-45db-9c43-e6d910e50ec3"
+      Hint: ArticleLister_SortLabel
+      Value: sort
     - ID: "87e96566-897a-4d4c-8da5-8727bd4e436e"
       Hint: Pagination_NextLabel
       Value: Next
@@ -45,6 +58,10 @@ Languages:
     - ID: "b2bc0424-664c-4737-a680-9b2a17296852"
       Hint: ArticleLister_ClearFiltersLabel
       Value: Clear Filters
+    - ID: "b3ff2403-3560-4dc1-b9b1-f9d93d85775d"
+      Hint: ArticleLister_DateIcon
+      Value: |
+        <image mediaid="{5DCBA912-D9EB-4560-B245-BC35FBE7A551}" />
     - ID: "ee10a0f8-834b-4c8b-9ec5-9b643fcd112c"
       Hint: Pagination_PreviousLabel
       Value: Previous

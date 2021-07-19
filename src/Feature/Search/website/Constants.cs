@@ -84,7 +84,6 @@
             public const string SortLabel_FieldId = "{745B2803-4617-45DB-9C43-E6D910E50EC3}";
             public const string FilterLabel_FieldId = "{6AF33400-0709-4517-B1F7-8D01C5D66C06}";
             public const string VideoIcon_FieldId = "{68CADA79-69A0-454A-A9EB-1E5C3E6A6CE2}";
-            public const string FundUpdateIcon_FieldId = "{47AB8640-7EC7-4FFC-A843-BC28EE631532}";
             public const string WhatcNowLabel_FieldId = "{566136F8-0D80-4B50-8ECC-9DB53FC96161}";
         }
 

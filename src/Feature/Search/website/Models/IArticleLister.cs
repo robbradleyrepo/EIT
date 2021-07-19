@@ -32,9 +32,6 @@
         [SitecoreField(Constants.ArticleLister.DateIcon_FieldId)]
         Image DateIcon { get; set; }
 
-        [SitecoreField(Constants.ArticleLister.FundUpdateIcon_FieldId)]
-        Image FundUpdatesIcon { get; set; }
-
         [SitecoreField(Constants.ArticleLister.WhatcNowLabel_FieldId)]
         string WhatcNowLabel { get; set; }
 
