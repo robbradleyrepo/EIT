@@ -113,6 +113,10 @@
         position: absolute
         top: 50%
         transform: translateY(-50%)
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+            position: static
+            transform: none
+            top: inherit
 
 .set-location
     &__row.row
