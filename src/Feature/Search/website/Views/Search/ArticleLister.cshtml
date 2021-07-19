@@ -33,7 +33,7 @@
                     <div class="container">
                         <div class="row">
                             <select-field inline-template v-for="(facet, i) in getFacets" :key="i">
-                                <div class="col-lg-2 relative" @@click.stop>
+                                <div class="col-lg-2 relative" @@click.stop style="display: none;" :style="init ? 'display: block' : ''">
                                     <div class="article-filters__select" @@click="toggleOption" :class="open ? 'active' : ''">
                                         <span class="article-filters__item-title">
                                             {{facet.name}}
@@ -137,7 +137,7 @@
         </div>
 
         <section class="container">
-            <div class="text-center my-5" v-if="loading">
+            <div class="text-center my-5" :style="!loading ? 'display: none' : ''">
                 <div class="spinner-border text-gold" role="status"></div>
             </div>
 
@@ -274,7 +274,7 @@
                 </article-item>
             </div>
             <div class="row">
-                <div class="col-lg-6 offset-lg-3">
+                <div class="col-lg-6 offset-lg-3" style="display: none;" :style="init ? 'display: block;' : ''">
                     <nav v-if="getPageAmount > 1" class="pagination mt-3">
                         <a href="#" @@click.prevent="prevPage" class="pagination__step pagination__step_forward"
                            :class="disablePrevBtn ? 'pagination__step_disabled' : ''"><i class="icon-arrow-left"></i> @Model.PreviousLabel</a>
