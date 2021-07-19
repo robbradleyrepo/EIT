@@ -45,6 +45,7 @@ export default () => {
       searchText: "",
       searchData: [],
       loading: true,
+      init: true,
       sortModal: false,
       sortOrder: "ASC",
       amountResults: 0,
