@@ -257,6 +257,7 @@ export default () => {
         this.open = !this.open;
       },
       clearOption() {
+        this.active = 0
         this.$emit("clearOptionField");
       },
       setChoosen(val) {
