@@ -26,8 +26,14 @@
         [SitecoreField(Constants.ArticleLister.MonthLabel_FieldId)]
         string MonthLabel { get; set; }
 
+        [SitecoreField(Constants.ArticleLister.VideoIcon_FieldId)]
+        Image VideoIcon { get; set; }
+
         [SitecoreField(Constants.ArticleLister.DateIcon_FieldId)]
         Image DateIcon { get; set; }
+
+        [SitecoreField(Constants.ArticleLister.WhatcNowLabel_FieldId)]
+        string WhatcNowLabel { get; set; }
 
         [SitecoreField(Constants.ArticleLister.SortLabel_FieldId)]
         string SortLabel { get; set; }

@@ -24,7 +24,7 @@
             <div class="container">
                 <div class="row">
                     <select-field inline-template v-for="(facet, i) in getFacets" :key="i">
-                        <div class="col-lg-2 relative" @click.stop>
+                        <div class="col-lg-2 relative" @click.stop style="display: none;" :style="init ? 'display: block' : ''">
                             <div class="article-filters__select" @click="toggleOption" :class="open ? 'active' : ''">
                                 <span class="article-filters__item-title" :class="active ? 'active' : ''">
                                     {{facet.name}}

@@ -83,6 +83,8 @@
             public const string SearchPlaceholder_FieldId = "{0EBA5571-B102-467C-993A-3025A1176831}";
             public const string SortLabel_FieldId = "{745B2803-4617-45DB-9C43-E6D910E50EC3}";
             public const string FilterLabel_FieldId = "{6AF33400-0709-4517-B1F7-8D01C5D66C06}";
+            public const string VideoIcon_FieldId = "{68CADA79-69A0-454A-A9EB-1E5C3E6A6CE2}";
+            public const string WhatcNowLabel_FieldId = "{566136F8-0D80-4B50-8ECC-9DB53FC96161}";
         }
 
         public static class Pagination

@@ -1,5 +1,6 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @using LionTrust.Feature.Search.Models 
+@using LionTrust.Foundation.ORM.Extensions 
 @using Sitecore.Configuration
 @model LionTrust.Feature.Search.Models.IArticleLister
 @if (Model != null)
@@ -32,7 +33,7 @@
                     <div class="container">
                         <div class="row">
                             <select-field inline-template v-for="(facet, i) in getFacets" :key="i">
-                                <div class="col-lg-2 relative" @@click.stop>
+                                <div class="col-lg-2 relative" @@click.stop style="display: none;" :style="init ? 'display: block' : ''">
                                     <div class="article-filters__select" @@click="toggleOption" :class="open ? 'active' : ''">
                                         <span class="article-filters__item-title">
                                             {{facet.name}}
@@ -71,7 +72,7 @@
                             <div class="col-lg-2">
                                 <div class="article-filters__btns">
                                     <button class="btn article-filters__btn article-filters__btn_apply" @@click="applyFilters">
-                                        @Model.FiltersLabel
+                                        @Model.FilterLabel
                                     </button>
                                     <button class="clear-filter btn article-filters__btn article-filters__btn_clear" @@click="clearFilters">
                                         @Model.ClearFiltersLabel
@@ -127,7 +128,6 @@
                 </div>
             </div>
         </div>
-
         <div class="container d-lg-none">
             <div class="d-flex justify-content-between margin-mob-fliter-btn" :class="!mobileFilter ? 'relative' : ''">
                 <btn id="show-article-fliter" class="btn btn-clean" @@click="toggleMobileFilter">
@@ -135,20 +135,90 @@
                 </btn>
             </div>
         </div>
-        <div class="container">
-            <div class="text-center my-5" v-if="loading">
+
+        <section class="container">
+            <div class="text-center my-5" :style="!loading ? 'display: none' : ''">
                 <div class="spinner-border text-gold" role="status"></div>
             </div>
+
             <div class="row">
-                <article-item inline-template v-for="(article, i) in searchData" :key="i">
+                <article-item inline-template v-for="(article, i) in searchData" :key="i + article.title">
                     <div class="col-md-6 col-lg-4">
-                        <div class="article-promo">
+                        <div class="article-promo" v-if="article.category === 'Podcast'">
+                            <a :href="article.url" class="article-promo__front">
+                            </a>
+                            <a :href="article.url" class="article-promo__body">
+                                <div class="article-promo__head">
+                                    <i class="icon-mic text-primary"></i>
+                                    <span class="article-promo__head-title" v-if="article.podcast.heading">{{article.podcast.heading}}</span>
+                                </div>
+                                <span class="article-promo__title text-gold">
+                                    {{article.title}}
+                                </span>
+                                <span class="article-promo__desc">
+                                    {{article.content}}
+                                </span>
+                            </a>
+                            <div class="article-promo__footer">
+                                <div class="article-promo__footer-item" v-if="article.podcast">
+                                    <span class="article-promo__footer-text">{{article.podcast.podcastsLabel}}</span>
+                                    <a v-for="(link, i) in article.podcast.podcastLinks"
+                                       v-if="!!article.podcast.podcastLinks"
+                                       :href="link.podcastLinkUrl">
+                                        <img :src="link.podcastLinkIcon"
+                                             class="image-icon"
+                                             alt="apple-podcast" />
+                                    </a>
+                                </div>
+                            </div>
+                            <img class="article-promo__back"
+                                 :src="article.imageUrl" :alt="article.title" :style="{opacity: article.imageOpacity}">
+                        </div>
+                        <div class="article-promo" v-else-if="article.category === 'Video'">
                             <a :href="article.url" class="article-promo__front">
                             </a>
                             <a :href="article.url" class="article-promo__body">
                                 <div class="article-promo__head">
                                     <img class="article-promo__head-img" :src="article.authorImageUrl" :alt="article.title">
-                                    <span class="article-promo__head-title">{{article.subtitle}}</span>
+                                    <span class="article-promo__head-title text-gold">
+                                        <span v-for="author in article.authors" :key="author">{{author}}</span>
+                                    </span>
+                                </div>
+                                <span class="article-promo__title">
+                                    {{article.title}}
+                                </span>
+                                <div class="article-promo__play-video">
+                                    @Html.Glass().Editable(Model, m => m.WhatcNowLabel)
+                                    <img class="article-promo__video-btn" src="@Model.VideoIcon.GetSafeSitecoreImageUrl()" alt="play video">
+                                </div>
+
+                            </a>
+                            <div class="article-promo__footer">
+                                <div class="article-promo__footer-item">
+                                    <img class="article-promo__clock" src="@Model.DateIcon.GetSafeSitecoreImageUrl()" alt="icon">
+                                    <span class="article-promo__footer-text">{{article.date}}</span>
+                                </div>
+                                <div class="article-promo__footer-item">
+                                    <i class="icon-booksmark article-promo__bookmark"></i>
+                                </div>
+                            </div>
+
+                            <img class="article-promo__back"
+                                 :src="article.imageUrl" :alt="article.title" :style="{opacity: article.imageOpacity}">
+
+                        </div>
+                        <div class="article-promo" v-else-if="article.category === 'Fund manager views'">
+                            <a :href="article.url" class="article-promo__front">
+                            </a>
+                            <a :href="article.url" class="article-promo__body">
+                                <div class="article-promo__head">
+                                    <img class="article-promo__head-img" :src="article.authorImageUrl" :alt="article.title">
+                                    <span class="article-promo__head-title text-gold">
+                                        <span v-for="(author,i) in article.authors">
+                                            {{author}}
+                                            <span v-if="i % 2" class="dot-divider"></span>
+                                        </span>
+                                    </span>
                                 </div>
                                 <span class="article-promo__title">
                                     {{article.title}}
@@ -159,7 +229,70 @@
                             </a>
                             <div class="article-promo__footer">
                                 <div class="article-promo__footer-item">
-                                    <img class="article-promo__clock" src="@Model.DateIcon" alt="icon">
+                                    <img class="article-promo__clock" src="\images\components\svg-icons\clock.svg" alt="icon">
+                                    <span class="article-promo__footer-text">{{article.date}}</span>
+                                </div>
+                                <div class="article-promo__footer-item">
+                                    <span class="article-promo__footer-text">{{article.category}}</span>
+                                    <i class="icon-booksmark article-promo__bookmark"></i>
+                                </div>
+                            </div>
+
+                            <img class="article-promo__back"
+                                 :src="article.imageUrl" :alt="article.title" :style="{opacity: article.imageOpacity}">
+                        </div>
+                        <div class="article-promo" v-else-if="article.category === 'Magazine & Reports'">
+                            <a :href="article.url" class="article-promo__front">
+                            </a>
+                            <a :href="article.url" class="article-promo__body">
+                                <div class="article-promo__head">
+                                    <img class="article-promo__head-img" :src="article.authorImageUrl" :alt="article.title">
+                                    <span class="article-promo__head-title">
+                                        <span v-for="(topic, i) in article.topics" :key="topic">
+                                            {{topic}}
+                                            <span v-if="!(i % 2)" class="dot-divider"></span>
+                                        </span>
+                                    </span>
+                                </div>
+                                <span class="article-promo__title text-gold">
+                                    {{article.title}}
+                                </span>
+                                <span class="article-promo__desc">
+                                    {{article.subtitle}}
+                                </span>
+                            </a>
+                            <div class="article-promo__footer">
+                                <div class="article-promo__footer-item">
+                                    <img class="article-promo__clock" src="@Model.DateIcon.GetSafeSitecoreImageUrl()" alt="icon">
+                                    <span class="article-promo__footer-text">{{article.date}}</span>
+                                </div>
+                                <div class="article-promo__footer-item">
+                                    <span class="article-promo__footer-text">{{article.category}}</span>
+                                    <i class="icon-booksmark article-promo__bookmark"></i>
+                                </div>
+                            </div>
+
+                            <img class="article-promo__back"
+                                 :src="article.imageUrl" :alt="article.title" :style="{opacity: article.imageOpacity}">
+                        </div>
+                        <div class="article-promo" v-else>
+                            <a :href="article.url" class="article-promo__front">
+                            </a>
+                            <a :href="article.url" class="article-promo__body">
+                                <div class="article-promo__head">
+                                    <img class="article-promo__head-img" :src="article.authorImageUrl" :alt="article.title">
+                                    <span class="article-promo__head-title text-gold">{{article.subtitle}}</span>
+                                </div>
+                                <span class="article-promo__title">
+                                    {{article.title}}
+                                </span>
+                                <span class="article-promo__desc">
+                                    {{article.subtitle}}
+                                </span>
+                            </a>
+                            <div class="article-promo__footer">
+                                <div class="article-promo__footer-item">
+                                    <img class="article-promo__clock" src="@Model.DateIcon.GetSafeSitecoreImageUrl()" alt="icon">
                                     <span class="article-promo__footer-text">{{article.date}}</span>
                                 </div>
                                 <div class="article-promo__footer-item">
@@ -174,8 +307,34 @@
                     </div>
                 </article-item>
             </div>
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3" style="display: none;" :style="init ? 'display: block;' : ''">
+                    <nav v-if="getPageAmount > 1" class="pagination mt-3">
+                        <a href="#" @@click.prevent="prevPage" class="pagination__step pagination__step_forward"
+                           :class="disablePrevBtn ? 'pagination__step_disabled' : ''"><i class="icon-arrow-left"></i> @Model.PreviousLabel</a>
+                        <ul class="pagination__list">
+                            <li class="pagination__item">
+                                <a @@click.prevent="jumpPagesForward" v-if="showForwardPageBtn" href="#"
+                                   class="pagination__link pagination__link_steps">...</a>
+                            </li>
+                            <li v-for="(page, i) in getPages" :key="i" class="pagination__item">
+                                <a @@click.prevent="changePage(page)" href="#" class="pagination__link"
+                                   :class="getPage === page ? 'active' : ''">
+                                    {{page}}
+                                </a>
+                            </li>
+                            <li class="pagination__item">
+                                <a @@click.prevent="jumpPagesNext" v-if="showNextPageBtn" href="#"
+                                   class="pagination__link pagination__link_steps">...</a>
+                            </li>
+                        </ul>
+                        <a href="#" @@click.prevent="nextPage" :class="disabledNextBtn ? 'pagination__step_disabled' : ''"
+                           class="pagination__step pagination__step_next">@Model.NextLabel <i class="icon-arrow-right"></i></a>
+                    </nav>
+                </div>
+            </div>
             @Html.Partial("~/Views/Search/_Pagination.cshtml", Model)
-        </div>
+        </section>
     </div>
 }
 else if (Sitecore.Context.PageMode.IsExperienceEditor)

@@ -21,7 +21,7 @@
     <div id="lister-app" data-host="ArticleSearchApi">
       <!--#include virtual="/components/BC005-Article-Filters.html" -->
       <section class="container">
-        <div class="text-center my-5" v-if="loading">
+        <div class="text-center my-5" :style="!loading ? 'display: none' : ''">
           <div class="spinner-border text-gold" role="status"></div>
         </div>
         <div class="row">
@@ -44,7 +44,7 @@
                 </a> 
                 <div class="article-promo__footer">
                   <div class="article-promo__footer-item" v-if="article.podcast">
-                    <span class="article-promo__footer-text">Listen on:</span>
+                    <span class="article-promo__footer-text">{{article.podcast.podcastsLabel}}:</span>
                       <a 
                         v-for="(link, i) in article.podcast.podcastLinks"
                         v-if="!!article.podcast.podcastLinks"
@@ -128,6 +128,40 @@
                 <img class="article-promo__back"
                 :src="article.imageUrl" :alt="article.title" :style="{opacity: article.imageOpacity}">
               </div>  
+              <div class="article-promo" v-else-if="article.category === 'Fund manager views'">
+                <a :href="article.url" class="article-promo__front">
+                </a>
+                <a :href="article.url" class="article-promo__body">
+                  <div class="article-promo__head">
+                    <img class="article-promo__head-img" :src="article.authorImageUrl" :alt="article.title">
+                    <span class="article-promo__head-title text-gold">
+                      <span v-for="(author,i) in article.authors">
+                        {{author}}
+                        <span v-if="i % 2" class="dot-divider"></span>
+                      </span>
+                    </span>
+                  </div>
+                  <span class="article-promo__title">
+                    {{article.title}}
+                  </span>
+                  <span class="article-promo__desc">
+                    {{article.subtitle}}
+                  </span>
+                </a>
+                <div class="article-promo__footer">
+                  <div class="article-promo__footer-item">
+                    <img class="article-promo__clock" src="\images\components\svg-icons\clock.svg" alt="icon">
+                    <span class="article-promo__footer-text">{{article.date}}</span>
+                  </div>
+                  <div class="article-promo__footer-item">
+                    <span class="article-promo__footer-text">{{article.category}}</span>
+                    <i class="icon-booksmark article-promo__bookmark"></i>
+                  </div>
+                </div>
+
+                <img class="article-promo__back"
+                :src="article.imageUrl" :alt="article.title" :style="{opacity: article.imageOpacity}">
+              </div> 
               <div class="article-promo" v-else>
                 <a :href="article.url" class="article-promo__front">
                 </a>
@@ -161,7 +195,7 @@
           </article-item>
         </div>
         <div class="row">
-          <div class="col-lg-6 offset-lg-3">
+          <div class="col-lg-6 offset-lg-3" style="display: none;" :style="init ? 'display: block;' : ''">
             <nav v-if="getPageAmount > 1" class="pagination mt-3">
               <a href="#" @click.prevent="prevPage" class="pagination__step pagination__step_forward"
                 :class="disablePrevBtn ? 'pagination__step_disabled' : ''"><i class="icon-arrow-left"></i> Previous</a>
