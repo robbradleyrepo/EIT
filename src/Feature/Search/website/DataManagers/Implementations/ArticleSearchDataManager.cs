@@ -60,7 +60,7 @@
                     Url = hit.Document.ArticleUrl,
                     Authors = hit.Document.ArticleAuthorNames?.Split('|'),
                     Category = hit.Document.ArticleCategoryTagName,
-                    Date = this.GetArticleDate(hit.Document.ArticleDate),
+                    Date = this.GetArticleDate(!hit.Document.ArticleDate.Equals(DateTime.MinValue) ? hit.Document.ArticleDate : hit.Document.Created),
                     Fund = hit.Document.ArticleFundName,
                     ImageUrl = hit.Document.ArticleListingImage,
                     ImageOpacity = string.IsNullOrWhiteSpace(hit.Document.ArticleListingImageOpacity) || hit.Document.ArticleListingImageOpacity == "" ? "1" : hit.Document.ArticleListingImageOpacity,

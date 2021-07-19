@@ -28,6 +28,7 @@ namespace LionTrust.Foundation.Legacy
             public const string Topics_FieldId = "{4F9B280F-A22D-4E70-886A-45327E8AA507}";
             public const string BlogType_FieldId = "{58B0791B-504E-423C-8D9E-E16C419353FA}";
             public const string Article_ListingImage = "{5BD6E9E9-2240-4473-8094-075E811B8438}";
+            public const string CreatedDate_FieldId = "{25BED78C-4957-4165-998A-CA1B52F67497}";
         }
 
         public static class ArticleType

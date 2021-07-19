@@ -21,7 +21,14 @@
                                 <span class="hero-author__date">
                                     @if (!Sitecore.Context.PageMode.IsExperienceEditor)
                                     {
-                                        @Model.ArticleDate.ToString("dd-MM-yy")
+                                        if (Model.ArticleData.Date.Equals(DateTime.MinValue))
+                                        {
+                                            @Model.ArticleData.CreatedDate.ToString("dd-MM-yy")
+                                        }
+                                        else
+                                        {
+                                            @Model.ArticleDate.Date.ToString("dd-MM-yy")
+                                        }
                                     }
                                     else
                                     {
