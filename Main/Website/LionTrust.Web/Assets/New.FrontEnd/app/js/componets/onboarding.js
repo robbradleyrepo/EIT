@@ -4,6 +4,7 @@ import Cookies from "js-cookie";
 export default () => {
   const onboarding = $(".onboarding-overlay");
   const btnStep = $("[data-set-step]");
+  const rawAcceptText = $('.onboarding-overlay__text').text();
 
   // default values
   const currentTab = Cookies.get("currentTab") || 1;
@@ -55,7 +56,7 @@ export default () => {
   $("[data-investor-type]").on("click", (e) => {
 	 $('#Role').val(e.target.dataset.investorType);
 	 var acceptText = $('.onboarding-overlay__text');
-	 $(acceptText).text($(acceptText).text().replace("{role}", e.target.dataset.investorName));
+	 $(acceptText).text(rawAcceptText.replace("{role}", e.target.dataset.investorName));
   });
 
   // set country
@@ -87,7 +88,7 @@ export default () => {
   const SetCountry = (e) => {
 	  $('#Country').val(e.target.dataset.isoCountry);
 	 var acceptText = $('.onboarding-overlay__text');
-	 $(acceptText).text($(acceptText).text().replace("{country}", e.target.dataset.nameCountry));
+	 $(acceptText).text(rawAcceptText.replace("{country}", e.target.dataset.nameCountry));
 
 	 if(e.target.dataset.isoCountry != "GB"){
 		 $('.btn.private-investor').hide();
