@@ -161,7 +161,7 @@
                             </a>
                             <div class="article-promo__footer">
                                 <div class="article-promo__footer-item" v-if="article.podcast">
-                                    <span class="article-promo__footer-text">Listen on:</span>
+                                    <span class="article-promo__footer-text">{{article.podcast.podcastsLabel}}</span>
                                     <a v-for="(link, i) in article.podcast.podcastLinks"
                                        v-if="!!article.podcast.podcastLinks"
                                        :href="link.podcastLinkUrl">
@@ -206,6 +206,40 @@
                             <img class="article-promo__back"
                                  :src="article.imageUrl" :alt="article.title" :style="{opacity: article.imageOpacity}">
 
+                        </div>
+                        <div class="article-promo" v-else-if="article.category === 'Fund manager views'">
+                            <a :href="article.url" class="article-promo__front">
+                            </a>
+                            <a :href="article.url" class="article-promo__body">
+                                <div class="article-promo__head">
+                                    <img class="article-promo__head-img" :src="article.authorImageUrl" :alt="article.title">
+                                    <span class="article-promo__head-title text-gold">
+                                        <span v-for="(author,i) in article.authors">
+                                            {{author}}
+                                            <span v-if="i % 2" class="dot-divider"></span>
+                                        </span>
+                                    </span>
+                                </div>
+                                <span class="article-promo__title">
+                                    {{article.title}}
+                                </span>
+                                <span class="article-promo__desc">
+                                    {{article.subtitle}}
+                                </span>
+                            </a>
+                            <div class="article-promo__footer">
+                                <div class="article-promo__footer-item">
+                                    <img class="article-promo__clock" src="\images\components\svg-icons\clock.svg" alt="icon">
+                                    <span class="article-promo__footer-text">{{article.date}}</span>
+                                </div>
+                                <div class="article-promo__footer-item">
+                                    <span class="article-promo__footer-text">{{article.category}}</span>
+                                    <i class="icon-booksmark article-promo__bookmark"></i>
+                                </div>
+                            </div>
+
+                            <img class="article-promo__back"
+                                 :src="article.imageUrl" :alt="article.title" :style="{opacity: article.imageOpacity}">
                         </div>
                         <div class="article-promo" v-else-if="article.category === 'Magazine & Reports'">
                             <a :href="article.url" class="article-promo__front">
