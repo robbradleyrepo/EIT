@@ -55,10 +55,7 @@
 
                 <img class="article-promo__back"
                 :src="article.imageUrl" :alt="article.title" :style="{opacity: article.imageOpacity}">
-              </div>
-              <div class="text-black">
-                {{article.category}}
-              </div>
+              </div>              
               <div class="article-promo" v-if="article.category === 'Podcast'">
                 <a :href="article.url" class="article-promo__front">       
                 </a>
@@ -92,6 +89,42 @@
                 </div>
                 <img class="article-promo__back"
                 :src="article.imageUrl" :alt="article.title" :style="{opacity: article.imageOpacity}">
+              </div>
+              <div class="text-black">
+                {{article.category}}
+              </div>
+              <div class="article-promo" v-if="article.category === 'Video'">
+                <a :href="article.url" class="article-promo__front">       
+                </a>
+                <a :href="article.url" class="article-promo__body">
+                  <div class="article-promo__head">
+                    <img class="article-promo__head-img" :src="article.authorImageUrl" :alt="article.title">
+                    <span class="article-promo__head-title text-gold">
+                      <span v-for="author in article.authors" :key="author">{{author}}</span>
+                    </span>
+                  </div>
+                  <span class="article-promo__title">
+                    {{article.title}}
+                  </span>
+                  <div class="article-promo__play-video">
+                    watch now
+                    <img class="article-promo__video-btn" src="\images\components\common\play-btn.svg" alt="play video">
+                  </div>
+                  
+                </a>
+                <div class="article-promo__footer">
+                  <div class="article-promo__footer-item">
+                    <img class="article-promo__clock" src="\images\components\svg-icons\clock.svg" alt="icon">
+                    <span class="article-promo__footer-text">{{article.date}}</span>
+                  </div>
+                  <div class="article-promo__footer-item">
+                    <i class="icon-booksmark article-promo__bookmark"></i>
+                  </div>
+                </div>
+              
+                <img class="article-promo__back"
+                :src="article.imageUrl" :alt="article.title" :style="{opacity: article.imageOpacity}">
+
               </div>
             </div>
           </article-item>
