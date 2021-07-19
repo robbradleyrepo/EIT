@@ -58,14 +58,20 @@
 .fundscroller-container
     padding-bottom: 2rem
     @include breakpoint(desktop, up)
+        padding: 2rem 0
+    @include breakpoint(desktop, up)
         overflow: hidden
         position: absolute
         top: 0
         left: 50%
+        padding: 4rem 0
 
 .main-page
     .fundscroller-bg
         background: none
+    @include breakpoint(desktop, up)
+        .fundscroller-container
+            padding: 2rem 0
 
 .swiper-container-funds
     width: 100%
