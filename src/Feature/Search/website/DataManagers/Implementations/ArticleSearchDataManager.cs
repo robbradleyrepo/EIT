@@ -70,7 +70,8 @@
                     Topics = hit.Document.TopicNames?.Split('|'),
                     AuthorImageUrl = hit.Document.ArticleAuthorImage,
                     VideoUrl = hit.Document.ArticleVideoUrl,
-                    FundId = hit.Document.ArticleFund
+                    FundId = hit.Document.ArticleFund,
+                    Content = hit.Document.ArticleContent
                 };
 
                 if (!string.IsNullOrEmpty(hit.Document.ArticlePodcast))
