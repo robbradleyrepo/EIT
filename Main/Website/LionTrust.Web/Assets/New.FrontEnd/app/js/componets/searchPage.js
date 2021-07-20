@@ -23,13 +23,14 @@ export default () => {
     data: {
       results: [],
       amountResults: 10,
-      showPerPage: 9,
+      showPerPage: 10,
       showPageInPagination: 7,
       loading: true,
       searchParams: {
         query: "",
         type: "",
         page: 1,
+        take: 10
       },
       allResults: true,
       labels: [
@@ -79,6 +80,9 @@ export default () => {
       getQueryText() {
         return this.searchParams.query;
       },
+      getFilterTopPosition() {
+        return document.getElementsByTagName('body')[0].offsetTop;
+      }
     },
     methods: {
       labelClick() {
@@ -90,13 +94,13 @@ export default () => {
       },
       serchRequest(params = this.generateSearchParams) {
         this.changeUrl(params);
-        const url = `${host}/search?query=article`
+        const url = `${host}/search?${params}`
         console.log('url',url);
         $.ajax(url)
           .done((request) => {
-            const { searchResults, amountResults } = request;
+            const { searchResults, totalResults } = request;
             this.results = searchResults;
-            this.amountResults = amountResults;
+            this.amountResults = totalResults;
             console.log("request", request);
             this.loading = false;
           })

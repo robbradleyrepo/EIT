@@ -79,7 +79,8 @@ export const pagination = {
       },
       changePage(num) {
         if (this.getPage !== num) {
-          this.page = num;
+          this.scrollToTop();
+          this.searchParams.page = num;
           this.serchRequest();
         }
       },
