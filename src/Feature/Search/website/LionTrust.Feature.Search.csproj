@@ -105,7 +105,6 @@
     <Compile Include="DataManagers\Interfaces\ISiteSearchDataManager.cs" />
     <Compile Include="DataManagers\Interfaces\IArticleSearchDataManager.cs" />
     <Compile Include="DataManagers\Interfaces\IFundSearchDataManager.cs" />
-    <Compile Include="DataManagers\Interfaces\SiteSearchResult.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Models\API\FundResult.cs" />
     <Compile Include="Models\API\Facets\IFundSearchFacetsConfig.cs" />
@@ -139,7 +138,6 @@
     <Compile Include="SiteSearch\SiteSearchController.cs" />
     <Compile Include="SiteSearch\SiteSearchHit.cs" />
     <Compile Include="SiteSearch\SiteSearchResultItem.cs" />
-    <Compile Include="SiteSearch\SiteSearchViewModel.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -14,12 +14,14 @@
         private readonly IArticleSearchDataManager _articleListingDataManager;
         private readonly IFundSearchDataManager _fundListingDataManager;
         private readonly IContactService _contactService;
+        private readonly ISiteSearchDataManager _siteSearchDataManager;
 
-        public SearchAPIController(IArticleSearchDataManager articleListingDataManager, IFundSearchDataManager fundListingDataManager, IContactService contactService)
+        public SearchAPIController(IArticleSearchDataManager articleListingDataManager, IFundSearchDataManager fundListingDataManager, IContactService contactService, ISiteSearchDataManager siteSearchDataManager)
         {
             this._articleListingDataManager = articleListingDataManager;
             this._fundListingDataManager = fundListingDataManager;
             this._contactService = contactService;
+            this._siteSearchDataManager = siteSearchDataManager;
         }
 
         /// <summary>
@@ -152,6 +154,21 @@
             var funds = string.Join("|", contactFacetData.SalesforceFundIds);
             var response = this._fundListingDataManager.GetMyFundListingResponse(database, fundTeams, funds, sortOrder, page);
 
+            if (response.StatusCode != 200)
+            {
+                return new HttpStatusCodeResult(response.StatusCode, response.StatusMessage);
+            }
+
+            return new JsonCamelCaseResult(response, JsonRequestBehavior.AllowGet);
+        }
+
+        /// <summary>
+        /// Gets pages based on site search in the request.
+        /// </summary>
+        /// <returns>A list of site search results.</returns>
+        public ActionResult GetFilteredSearch(string query, string[] templateIds, string database = "web", int page = 1, int take = 21)
+        {
+            var response = _siteSearchDataManager.Search(query, database, templateIds, Sitecore.Context.Language.Name, take, page);
             if (response.StatusCode != 200)
             {
                 return new HttpStatusCodeResult(response.StatusCode, response.StatusMessage);

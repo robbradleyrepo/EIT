@@ -16,7 +16,7 @@
         public ActionResult Render()
         {
             var datasource = _context.GetDataSourceItem<ISearchOverlay>();
-            if (datasource == null)
+            if (datasource == null || datasource.SearchResultsPage == null)
             {
                 return null;
             }

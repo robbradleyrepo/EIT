@@ -1,6 +1,7 @@
 ﻿namespace LionTrust.Feature.Search.SiteSearch
 {
     using System;
+    using System.Collections.Generic;
 
     public class SiteSearchHit
     {
@@ -8,13 +9,9 @@
 
         public string PageTitle { get; set; }
 
-        public DateTime PageDate { get; set; }
-
-        public string Team { get; set; }
+        public string PageDate { get; set; }
 
         public string Author { get; set; }
-
-        public string PageType { get; set; }
 
         public string Copy { get; set; }
 
@@ -27,5 +24,7 @@
         public string FundTeam { get; set; }
 
         public string FundTeamUrl { get; set; }
+
+        public Guid TemplateId { get; set; }
     }
 }
