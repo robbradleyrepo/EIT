@@ -24,7 +24,7 @@
     </section>
   </header>
 
-  <main id="result-list-app">
+  <main id="result-list-app" data-host="SiteSearchApi">
     <div class="container search-page">
       <div class="row">
         <div class="col-lg-7">
@@ -34,7 +34,7 @@
             </div>
             <form class="search-form" @submit.prevent="submit">
               <input
-                v-model="searchParams.queryText"
+                v-model="searchParams.query"
                 type="text"
                 class="search-form__input"
                 :placeholder="getQueryText"
@@ -78,34 +78,34 @@
                 :key="i"
               >
                 <div class="search-item__header">
-                  <a :href="item.link" class="search-item__title"
-                    >{{item.title}}</a
+                  <a :href="item.url" class="search-item__title"
+                    >{{item.pageTitle}}</a
                   >
-                  <div class="badge search-item__badge">{{item.type}}</div>
+                  <div class="badge search-item__badge">{{item.resultType}}</div>
                 </div>
-                <a :href="item.link">
-                  <p class="search-item__text">{{item.bodyText}}</p>
+                <a :href="item.url">
+                  <p class="search-item__text">{{item.copy}}</p>
                 </a>
                 <div class="search-item__date">
                   <i class="icon-clock"></i>
-                  {{item.date}}
+                  {{item.pageDate}}
                 </div>
-                <div v-if="item.type === 'Article'" class="search-item__footer">
+                <div v-if="item.resultType === 'Article'" class="search-item__footer">
                   <div class="search-item__author search-item__footer-item">
                     <img
-                      :src="item.footer.author.imageSrc"
-                      :alt="item.footer.author.name"
+                      :src="item.authorImage"
+                      :alt="item.author"
                       class="search-item__author-img"
                     />
-                    {{item.footer.author.name}}
+                    {{item.author}}
                   </div>
                   <div class="search-item__tag search-item__footer-item">
-                    <a :href="item.footer.team.link">
-                      <i class="icon-team"></i> {{item.footer.team.name}}
+                    <a :href="item.fundTeamUrl">
+                      <i class="icon-team"></i> {{item.fundTeam}}
                     </a>
                   </div>
                 </div>
-                <div v-if="item.type === 'Fund'" class="search-item__footer">
+                <div v-if="item.resultType === 'Fund'" class="search-item__footer">
                   <div class="search-item__author search-item__footer-item">
                     <div class="search-item__tag search-item__footer-item">
                       <a :href="item.footer.factsheet.link"
@@ -121,55 +121,27 @@
                 </div>
               </div>
             </div>
-            <nav v-if="getPageAmount > 1" class="pagination">
-              <a
-                href="#"
-                @click.prevent="prevPage"
-                class="pagination__step pagination__step_forward"
-                :class="disablePrevBtn ? 'pagination__step_disabled' : ''"
-                ><i class="icon-arrow-left"></i> Previous</a
-              >
+            <nav v-if="getPageAmount > 1" class="pagination mt-3">
+              <a href="#" @click.prevent="prevPage" class="pagination__step pagination__step_forward"
+                :class="disablePrevBtn ? 'pagination__step_disabled' : ''"><i class="icon-arrow-left"></i> Previous</a>
               <ul class="pagination__list">
                 <li class="pagination__item">
-                  <a
-                    @click.prevent="jumpPagesForward"
-                    v-if="showForwardPageBtn"
-                    href="#"
-                    class="pagination__link pagination__link_steps"
-                    >...</a
-                  >
+                  <a @click.prevent="jumpPagesForward" v-if="showForwardPageBtn" href="#"
+                    class="pagination__link pagination__link_steps">...</a>
                 </li>
-                <li
-                  v-for="(page, i) in getPages"
-                  :key="i"
-                  class="pagination__item"
-                >
-                  <a
-                    @click.prevent="changePage(page)"
-                    href="#"
-                    class="pagination__link"
-                    :class="getPage === page ? 'active' : ''"
-                  >
+                <li v-for="(page, i) in getPages" :key="i" class="pagination__item">
+                  <a @click.prevent="changePage(page)" href="#" class="pagination__link"
+                    :class="getPage === page ? 'active' : ''">
                     {{page}}
                   </a>
                 </li>
                 <li class="pagination__item">
-                  <a
-                    @click.prevent="jumpPagesNext"
-                    v-if="showNextPageBtn"
-                    href="#"
-                    class="pagination__link pagination__link_steps"
-                    >...</a
-                  >
+                  <a @click.prevent="jumpPagesNext" v-if="showNextPageBtn" href="#"
+                    class="pagination__link pagination__link_steps">...</a>
                 </li>
               </ul>
-              <a
-                href="#"
-                @click.prevent="nextPage"
-                :class="disabledNextBtn ? 'pagination__step_disabled' : ''"
-                class="pagination__step pagination__step_next"
-                >Next <i class="icon-arrow-right"></i
-              ></a>
+              <a href="#" @click.prevent="nextPage" :class="disabledNextBtn ? 'pagination__step_disabled' : ''"
+                class="pagination__step pagination__step_next">Next <i class="icon-arrow-right"></i></a>
             </nav>
           </div>
         </div>
