@@ -179,8 +179,8 @@
                             </a>
                             <a :href="article.url" class="article-promo__body">
                                 <div class="article-promo__head">
-                                    <img class="article-promo__head-img" :src="article.authorImageUrl" :alt="article.title">
-                                    <span class="article-promo__head-title text-gold">
+                                    <img v-if="article.authorImageUrl" class="article-promo__head-img" :src="article.authorImageUrl" :alt="article.title">
+                                    <span v-if="article.authors" class="article-promo__head-title text-gold">
                                         <span v-for="author in article.authors" :key="author">{{author}}</span>
                                     </span>
                                 </div>
@@ -213,11 +213,11 @@
                             </a>
                             <a :href="article.url" class="article-promo__body">
                                 <div class="article-promo__head">
-                                    <img class="article-promo__head-img" :src="article.authorImageUrl" :alt="article.title">
-                                    <span class="article-promo__head-title text-gold">
+                                    <img v-if="article.authorImageUrl" class="article-promo__head-img" :src="article.authorImageUrl" :alt="article.title">
+                                    <span v-if="article.authors" class="article-promo__head-title text-gold">
                                         <span v-for="(author,i) in article.authors">
                                             {{author}}
-                                            <span v-if="article.topics.length > 1 && i < article.topics.length - 1" class="dot-divider"></span>
+                                            <span v-if="article.authors.length > 1 && i < article.authors.length - 1" class="dot-divider"></span>
                                         </span>
                                     </span>
                                 </div>
@@ -247,7 +247,7 @@
                             </a>
                             <a :href="article.url" class="article-promo__body">
                                 <div class="article-promo__head">
-                                    <span class="article-promo__head-title">
+                                    <span v-if="article.topics"  class="article-promo__head-title">
                                         <span v-for="(topic, i) in article.topics" :key="topic">
                                             {{topic}}
                                             <span v-if="article.topics.length > 1 && i < article.topics.length - 1" class="dot-divider"></span>
@@ -281,7 +281,7 @@
                             <a :href="article.url" class="article-promo__body">
                                 <div class="article-promo__head">
                                     <img v-if="article.authorImageUrl" class="article-promo__head-img" :src="article.authorImageUrl" :alt="article.title">
-                                    <span class="article-promo__head-title text-gold">{{article.subtitle}}</span>
+                                    <span v-if="article.subtitle" class="article-promo__head-title text-gold">{{article.subtitle}}</span>
                                 </div>
                                 <span class="article-promo__title">
                                     {{article.title}}
