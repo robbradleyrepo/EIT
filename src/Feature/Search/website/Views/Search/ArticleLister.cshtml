@@ -5,7 +5,7 @@
 @model LionTrust.Feature.Search.Models.IArticleLister
 @if (Model != null)
 {
-    <div id="lister-app" data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.ArticleApiRoute_SettingName))">
+    <div id="lister-app" data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.ArticleApiRoute_SettingName))" data-contenttype="@Model.ContentType">
         <div class="article-filter-wrapper">
             <div class="article-filters" :class="mobileFilter ? 'active' : ''">
                 <div class="article-filters__header">
