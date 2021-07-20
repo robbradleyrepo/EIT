@@ -167,7 +167,7 @@
                 </a>
                 <a :href="article.url" class="article-promo__body">
                   <div class="article-promo__head">
-                    <img class="article-promo__head-img" :src="article.authorImageUrl" :alt="article.title">
+                    <img v-if="article.authorImageUrl" class="article-promo__head-img" :src="article.authorImageUrl" :alt="article.title">
                     <span class="article-promo__head-title text-gold">{{article.subtitle}}</span>
                   </div>
                   <span class="article-promo__title">
