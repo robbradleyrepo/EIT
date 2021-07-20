@@ -20,12 +20,12 @@
             public const string SearchLabelFieldId = "{7E350BBA-B71B-49AA-910F-5316636CAC17}";
             public const string ResultsPerPageFieldId = "{2056E3A0-3765-4DF0-8836-349180E8D7F5}";
             public const string SearchResultsFoundLabelFieldId = "{83D03CE9-1F83-4F04-8D65-474AB9BFBFC0}";
-
-        public const string FactsheetLinkTextFieldId = "{94CAE85F-6AED-4D42-BA9B-C487AF809CC7}";
+            public const string FactsheetLinkTextFieldId = "{94CAE85F-6AED-4D42-BA9B-C487AF809CC7}";
         }
 
         public static class SiteSearchFilter
         {
+            public const string TemplateId = "{0A9F55CF-A607-43DF-8C09-2922DACE816C}";
             public const string PageNameFieldId = "{A7F99C6C-A5AF-4968-9C11-EC961745460F}";
             public const string TemplateFieldId = "{2CD1668B-43FA-4854-8D91-84ED2AD9FB3C}";
         }
@@ -36,6 +36,7 @@
             {
                 public const string ArticleSearchFacetsConfig = "{D61FC1B3-9969-4F95-8796-FEFBC864CA1F}";
                 public const string FundSearchFacetsConfig = "{64E0343F-FF1C-4B78-9461-C57CD8B1050D}";
+                public const string SiteSearchFacetsConfig = "{AF6DCE28-F51A-44BB-A3CC-BD0009BDBC76}";
             }
             public static class ArticleSearchFacetsConfig
             {

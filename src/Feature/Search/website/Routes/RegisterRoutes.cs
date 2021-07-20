@@ -49,6 +49,12 @@ namespace LionTrust.Feature.Search.Routes
                   controller = "SearchAPI",
                   action = "GetFilteredSearch"
               });
+            RouteTable.Routes.MapRoute("Feature.Search.SiteSearchFacets", $"{Settings.GetSetting(Constants.Settings.SiteSearchApiRoute_SettingName)}/Facets",
+                new
+                {
+                    controller = "SearchApi",
+                    action = "GetSiteSearchFacets"
+                });
         }
     }
 }
