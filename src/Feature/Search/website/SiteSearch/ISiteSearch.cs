@@ -4,7 +4,7 @@
     using LionTrust.Feature.Search.Models;
     using System.Collections.Generic;
 
-    public interface ISiteSearch: ISearchGlassBase
+    public interface ISiteSearch: IPagination
     {
         [SitecoreField(Constants.SiteSearch.SearchResultsFoundLabelFieldId)]
         string SearchResultsFoundCopy { get; set; }

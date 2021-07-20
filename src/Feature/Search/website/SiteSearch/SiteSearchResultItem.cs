@@ -28,5 +28,8 @@
 
         [IndexField("search_result_type_s")]
         public string ResultType { get; set; }
+
+        [IndexField("fund_factsheet_url")]
+        public string FactSheetUrl { get; set; }
     }
 }
