@@ -114,6 +114,7 @@
             public const string ArticleApiRoute_SettingName = "Feature.Search.ArticleApiRoute";
             public const string FundApiRoute_SettingName = "Feature.Search.FundApiRoute";
             public const string MyFundsApiRoute_SettingName = "Feature.Search.MyFundsApiRoute";
+            public const string SiteSearchApiRoute_SettingName = "Feature.Search.SiteSearchApiRoute";
         }
 
         public static class MyFundsLister

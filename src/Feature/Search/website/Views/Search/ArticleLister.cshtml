@@ -1,6 +1,6 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
-@using LionTrust.Feature.Search.Models 
-@using LionTrust.Foundation.ORM.Extensions 
+@using LionTrust.Feature.Search.Models
+@using LionTrust.Foundation.ORM.Extensions
 @using Sitecore.Configuration
 @model LionTrust.Feature.Search.Models.IArticleLister
 @if (Model != null)
@@ -35,7 +35,7 @@
                             <select-field inline-template v-for="(facet, i) in getFacets" :key="i">
                                 <div class="col-lg-2 relative" @@click.stop style="display: none;" :style="init ? 'display: block' : ''">
                                     <div class="article-filters__select" @@click="toggleOption" :class="open ? 'active' : ''">
-                                        <span class="article-filters__item-title">
+                                        <span class="article-filters__item-title" :class="active ? 'active' : ''">
                                             {{facet.name}}
                                         </span>
                                         <i class="article-filters__icon-arrow"></i>
@@ -47,7 +47,7 @@
                                         </div>
                                         <option-field inline-template v-for="(item, i) in facet.items" :for="item.name" :key="i + item.name">
                                             <label class="option-checkbox">
-                                                <input :id="item.name" class="option-checkbox__input" type="checkbox" v-model="checked" @@change="toggleSelect(item, facet)">
+                                                <input :id="item.name" class="option-checkbox__input" type="checkbox" v-model="checked" @@change="toggleSelect(item, facet)" @@click="setChoosen(!checked)">
                                                 <span class="option-checkbox__text">{{item.name}}</span>
                                                 <span class="option-checkbox__icon"></span>
                                             </label>
@@ -217,7 +217,7 @@
                                     <span class="article-promo__head-title text-gold">
                                         <span v-for="(author,i) in article.authors">
                                             {{author}}
-                                            <span v-if="i % 2" class="dot-divider"></span>
+                                            <span v-if="article.topics.length > 1 && i < article.topics.length - 1" class="dot-divider"></span>
                                         </span>
                                     </span>
                                 </div>
@@ -247,11 +247,10 @@
                             </a>
                             <a :href="article.url" class="article-promo__body">
                                 <div class="article-promo__head">
-                                    <img class="article-promo__head-img" :src="article.authorImageUrl" :alt="article.title">
                                     <span class="article-promo__head-title">
                                         <span v-for="(topic, i) in article.topics" :key="topic">
                                             {{topic}}
-                                            <span v-if="!(i % 2)" class="dot-divider"></span>
+                                            <span v-if="article.topics.length > 1 && i < article.topics.length - 1" class="dot-divider"></span>
                                         </span>
                                     </span>
                                 </div>
@@ -281,7 +280,7 @@
                             </a>
                             <a :href="article.url" class="article-promo__body">
                                 <div class="article-promo__head">
-                                    <img v-if="article.authorImageUrl"class="article-promo__head-img" :src="article.authorImageUrl" :alt="article.title">
+                                    <img v-if="article.authorImageUrl" class="article-promo__head-img" :src="article.authorImageUrl" :alt="article.title">
                                     <span class="article-promo__head-title text-gold">{{article.subtitle}}</span>
                                 </div>
                                 <span class="article-promo__title">
@@ -307,7 +306,7 @@
                         </div>
                     </div>
                 </article-item>
-            </div>           
+            </div>
             @Html.Partial("~/Views/Search/_Pagination.cshtml", Model)
         </section>
     </div>
