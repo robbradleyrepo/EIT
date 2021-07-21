@@ -1,6 +1,6 @@
 ﻿namespace LionTrust.Foundation.Legacy.Models
 {
-    public interface IFundCategory: ILegacyGlassBase
+    public interface IContentType: ILegacyGlassBase
     {
     }
 }

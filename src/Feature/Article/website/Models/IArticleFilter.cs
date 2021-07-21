@@ -10,8 +10,8 @@
         [SitecoreField(Constants.ArticleFilter.FundsFieldId)]
         IEnumerable<IFund> Funds { get; set; }
 
-        [SitecoreField(Constants.ArticleFilter.FundCategoriesFieldId)]
-        IEnumerable<IFundCategory> FundCategories { get; set; }
+        [SitecoreField(Constants.ArticleFilter.ContentTypesFieldId)]
+        IEnumerable<IContentType> ContentTypes { get; set; }
 
         [SitecoreField(Constants.ArticleFilter.FundManagersFieldId)]
         IEnumerable<IAuthor> FundManagers { get; set; }

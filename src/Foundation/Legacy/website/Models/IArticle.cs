@@ -21,7 +21,7 @@
         string Body { get; set; }
 
         [SitecoreField(Constants.Article.PromoType_FieldId, SitecoreFieldType.Droplink, "Article page data")]
-        IFundCategory PromoType { get; set; }
+        IContentType PromoType { get; set; }
 
         [SitecoreField(Constants.Article.PublishDate_FieldId, SitecoreFieldType.DateTime, "Article page data")]
         DateTime PublishedDate { get; set; }

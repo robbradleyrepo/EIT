@@ -78,7 +78,7 @@
                         <div class="col-lg-6 col-xl-2">
                             <div class="doc-list__right-btn">
                                 <a :href="document.documentPageLink" class="btn btn-primary-forward">
-                                    {{document.documentLinkText}} <i class="icon-arrow-right animate-arrow"></i>
+                                    @Html.Glass().Editable(Model, m => m.ViewPageText) <i class="icon-arrow-right animate-arrow"></i>
                                 </a>
                             </div>
                         </div>

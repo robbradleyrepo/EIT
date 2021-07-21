@@ -25,7 +25,7 @@
             var request = new ArticleSearchRequest
             {
                 Funds = filter.Funds?.Select(f => f.Id.ToString().Replace("-", string.Empty)),
-                FundCategories = filter.FundCategories?.Select(fc => fc.Id.ToString().Replace("-", string.Empty)),
+                Categories = filter.ContentTypes?.Select(fc => fc.Id.ToString().Replace("-", string.Empty)),
                 FundTeams = filter.FundTeams?.Select(ft => ft.Id.ToString().Replace("-", string.Empty)),
                 FundManagers = filter.FundManagers?.Select(fm => fm.Id.ToString().Replace("-", string.Empty)),
                 Take = 6,

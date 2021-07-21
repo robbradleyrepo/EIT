@@ -104,7 +104,7 @@
         {
             var result = false;
 
-            if(filter.FundCategories != null && filter.FundCategories.Any())
+            if(filter.ContentTypes != null && filter.ContentTypes.Any())
             {
                 result = true;
             }
