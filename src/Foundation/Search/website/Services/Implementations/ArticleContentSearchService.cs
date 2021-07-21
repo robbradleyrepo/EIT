@@ -27,14 +27,14 @@
 
             var taxonomyFilter = PredicateBuilder.True<ArticleSearchResultItem>();
 
-            if (articleSearchRequest.FundCategories != null && articleSearchRequest.FundCategories.Any())
+            if (articleSearchRequest.ContentTypes != null && articleSearchRequest.ContentTypes.Any())
             {
-                var fundCategoryPredicate = PredicateBuilder.False<ArticleSearchResultItem>();
-                fundCategoryPredicate = articleSearchRequest.FundCategories.Aggregate(fundCategoryPredicate,
-                                                                                            (current, category) => current
-                                                                                                                    .Or(item => item.ArticleCategory == category));
+                var contentTypePredicate = PredicateBuilder.False<ArticleSearchResultItem>();
+                contentTypePredicate = articleSearchRequest.ContentTypes.Aggregate(contentTypePredicate,
+                                                                                            (current, contentType) => current
+                                                                                                                    .Or(item => item.ArticleContentType == contentType));
 
-                taxonomyFilter = taxonomyFilter.Or(fundCategoryPredicate);
+                taxonomyFilter = taxonomyFilter.Or(contentTypePredicate);
             }
 
             if (articleSearchRequest.Funds != null && articleSearchRequest.Funds.Any())
@@ -47,7 +47,7 @@
                 taxonomyFilter = taxonomyFilter.Or(fundPredicate);
             }
 
-            if (articleSearchRequest.FundManagers != null && articleSearchRequest.FundManagers. Any())
+            if (articleSearchRequest.FundManagers != null && articleSearchRequest.FundManagers.Any())
             {
                 var managerPredicate = PredicateBuilder.False<ArticleSearchResultItem>();
                 managerPredicate = articleSearchRequest
@@ -60,15 +60,15 @@
                 taxonomyFilter = taxonomyFilter.Or(managerPredicate);
             }
 
-            if (articleSearchRequest.Topics != null && articleSearchRequest.Topics.Any())
+            if (articleSearchRequest.Categories != null && articleSearchRequest.Categories.Any())
             {
                 var managerPredicate = PredicateBuilder.False<ArticleSearchResultItem>();
                 managerPredicate = articleSearchRequest
-                                            .Topics
+                                            .Categories
                                                     .Aggregate(managerPredicate,
-                                                                    (current, manager)
+                                                                    (current, category)
                                                                                 => current
-                                                                                     .Or(item => item.Topics.Contains(IdHelper.NormalizeGuid(manager, true))));
+                                                                                     .Or(item => item.Topics.Contains(IdHelper.NormalizeGuid(category, true))));
 
                 taxonomyFilter = taxonomyFilter.Or(managerPredicate);
             }

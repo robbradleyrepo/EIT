@@ -78,7 +78,7 @@
                     && filterFacetConfigItem.FundRegionsFolder == null
                     && filterFacetConfigItem.FundManagersFolder == null
                     && filterFacetConfigItem.FundTeamsFolder == null
-                    && filterFacetConfigItem.FundRegionsFolder == null)
+                    && filterFacetConfigItem.FundRangesFolder == null)
             {
                 return null;
             }

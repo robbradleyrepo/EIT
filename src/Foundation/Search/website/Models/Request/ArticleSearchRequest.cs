@@ -9,9 +9,11 @@
 
         public DateTime FromDate { get; set; }
 
+        public IEnumerable<string> ContentTypes { get; set; }
+
         public IEnumerable<string> Funds { get; set; }
 
-        public IEnumerable<string> FundCategories { get; set; }
+        public IEnumerable<string> Categories { get; set; }
 
         //Currently this is used against Authors
         public IEnumerable<string> FundManagers { get; set; }

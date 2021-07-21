@@ -7,7 +7,7 @@
     using Sitecore.ContentSearch.ComputedFields;
     using Sitecore.Data.Items;
 
-    public class ArticleCategoryTagName : IComputedIndexField
+    public class ArticleContentTypeName : IComputedIndexField
     {
         public string FieldName { get; set; }
         
