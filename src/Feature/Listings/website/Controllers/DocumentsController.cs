@@ -49,7 +49,7 @@
                         Title = x.DocumentName,
                         DocumentLink = x.DocumentLink?.Url,
                         DocumentLinkText = x.DocumentLink?.Text,
-                        DocumentPageLink = x.Url,
+                        DocumentPageLink = x.PageLink?.Url,
                         DocumentId = x.Id,
                         DocumentVideoLink = x.VideoLink?.Url
                     });
