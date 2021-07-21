@@ -31,7 +31,7 @@
                 </div>
             </div>
         </div>
-        <div class="article-filters__body">
+        <div class="article-filters__body" v-if="getFacetsLength">
             <div class="container">
                 <div class="row">
                     <select-field inline-template  v-for="(facet, i) in getFacets" :key="i">
@@ -94,7 +94,7 @@
 <div class="container">
     <div class="hr mb-4"></div>
 </div>
-<div class="view-buttons-container d-lg-none">
+<div class="view-buttons-container d-lg-none" v-if="getFacetsLength">
     <div class="container">
         <div class="d-flex justify-content-between w-100" :class="!mobileFilter ? 'relative' : ''">
             <btn id="show-article-fliter"  class="btn btn-clean" @click="toggleMobileFilter">
