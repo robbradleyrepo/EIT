@@ -176,5 +176,30 @@
 
             return new JsonCamelCaseResult(response, JsonRequestBehavior.AllowGet);
         }
+
+        public ActionResult GetSiteSearchFacets(string facetConfig)
+        {
+            Guid config;
+            if (string.IsNullOrEmpty(facetConfig))
+            {
+                config = new Guid(Search.Constants.APIFacets.Defaults.SiteSearchFacetsConfig);
+            }
+            else
+            {
+                var success = Guid.TryParse(facetConfig, out config);
+                if (!success)
+                {
+                    return Content("Configuration ID could not be parsed as a Guid");
+                }
+            }
+
+            var response = _siteSearchDataManager.GetFilterFacets(config);
+            if (response == null)
+            {
+                return new HttpNotFoundResult();
+            }
+
+            return new JsonCamelCaseResult(response, JsonRequestBehavior.AllowGet);
+        }
     }
 }

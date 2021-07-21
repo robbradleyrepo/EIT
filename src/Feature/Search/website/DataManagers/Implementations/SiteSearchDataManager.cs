@@ -17,9 +17,19 @@
     using SiteSearchResultItem = SiteSearch.SiteSearchResultItem;
     using System;
     using Sitecore.Diagnostics;
+    using LionTrust.Foundation.Content.Repositories;
+    using Glass.Mapper.Sc;
+    using LionTrust.Feature.Search.Models.API;
+    using Log = Sitecore.Diagnostics.Log;
 
     public class SiteSearchDataManager : ISiteSearchDataManager
     {
+        private readonly IContentRepository _contentRepository;
+
+        public SiteSearchDataManager(IContentRepository contentRepository)
+        {
+            _contentRepository = contentRepository;
+        }
         public class BasicQuery : IQuery
         {
             public string QueryText { get; set; }
@@ -51,7 +61,12 @@
                         var templateQuery = PredicateBuilder.True<SiteSearchResultItem>();
                         foreach (var item in templatesIds)
                         {
-                            templateQuery = templateQuery.Or(s => s.TemplateId == new ID(item));
+                            var templateId = new ID(item);
+
+                            if (!ID.IsNullOrEmpty(templateId))
+                            {
+                                templateQuery = templateQuery.Or(s => s.TemplateId == templateId);
+                            }
                         }
 
                         predicate = predicate.And(templateQuery);
@@ -103,7 +118,7 @@
             foreach (var hit in hits)
             {
                 if (hit.Document != null)
-                {           
+                {
                     var siteSearchHit = new SiteSearchHit
                     {
                         Url = hit.Document.PageUrl,
@@ -124,6 +139,33 @@
             }
 
             return results;
+        }
+
+        public FacetsResponse GetFilterFacets(Guid facetConfigId)
+        {
+            var facetConfigItem = _contentRepository.GetItem<ISiteSearch>(new GetItemByIdOptions(facetConfigId));
+
+            var facetResponse = new FacetsResponse();
+            if (facetConfigItem == null || facetConfigItem.Filters == null || !facetConfigItem.Filters.Any())
+            {
+                return null;
+            }
+
+            var facets = new List<Facet>();
+
+
+            foreach (var filter in facetConfigItem.Filters)
+            {
+                facets.Add(new Facet
+                {
+                    Name = filter.FilterName,
+                    Items = filter.PageTemplates.Select(t => new FacetItem { Identifier = t.Id.ToString("N"), Name = t.Name })
+                });
+            }
+
+            facetResponse.Facets = facets;
+
+            return facetResponse;
         }
     }
 }

@@ -17,8 +17,6 @@
     using LionTrust.Foundation.Search.Services.Interfaces;
     using Sitecore.ContentSearch.Linq;
     using Sitecore.Globalization;
-    using Sitecore.Links;
-    using Sitecore.Resources.Media;
 
     public class FundSearchDataManager : IFundSearchDataManager
     {

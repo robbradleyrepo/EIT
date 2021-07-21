@@ -2,13 +2,14 @@
 {
     using Glass.Mapper.Sc.Configuration.Attributes;
     using LionTrust.Feature.Search.Models;
-    using System;
+    using LionTrust.Foundation.ORM.Models;
+    using System.Collections.Generic;
 
-
+    [SitecoreType(TemplateId = Constants.SiteSearchFilter.TemplateId)]
     public interface ISiteSearchFilter: ISearchGlassBase
     {
         [SitecoreField(Constants.SiteSearchFilter.TemplateFieldId)]
-        Guid PageTemplateId { get; set; }
+        IEnumerable<IGlassBase> PageTemplates { get; set; }
 
         [SitecoreField(Constants.SiteSearchFilter.PageNameFieldId)]
         string FilterName { get; set; }

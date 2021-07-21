@@ -116,6 +116,18 @@
                 predicate = predicate.Or(searchTermPredicate);
             }
 
+            var validationPredicate = PredicateBuilder.True<FundSearchResultItem>();
+            validationPredicate = validationPredicate.And(item => item.FundPageUrl != null && item.FundPageUrl != string.Empty);
+            validationPredicate = validationPredicate.And(item => item.FundCardImage != null && item.FundCardImage != string.Empty);
+            validationPredicate = validationPredicate.And(item => item.FundName != null && item.FundName != string.Empty);
+            validationPredicate = validationPredicate.And(item => item.FundCardHeading != null && item.FundCardHeading != string.Empty);
+            validationPredicate = validationPredicate.And(item => item.FundCardDescription != null && item.FundCardDescription != string.Empty);
+            validationPredicate = validationPredicate.And(item => item.FundPageLinkText != null && item.FundPageLinkText != string.Empty);
+            validationPredicate = validationPredicate.And(item => item.FundTeamName != null && item.FundTeamName != string.Empty);
+            validationPredicate = validationPredicate.And(item => item.FundFactSheet != null && item.FundFactSheet != string.Empty);
+
+            predicate = predicate.And(validationPredicate);
+
             return predicate;
         }
 
