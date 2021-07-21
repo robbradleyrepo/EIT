@@ -57,6 +57,7 @@ export default () => {
       grid: false,
       selectAllDocuments: false,
       selectedDocumentIds: [],
+      activeButton: false
     },
     computed: {
       getFacets() {
@@ -70,6 +71,7 @@ export default () => {
     methods: {
       // adding selected values to query params
       toggleSelect(item, facet) {
+        this.activeButton = true;
         if (!this.params[facet.name]) this.params[facet.name] = [];
         const existElem = this.params[facet.name].findIndex((el) => {
           return el === item.identifier;
@@ -105,6 +107,7 @@ export default () => {
         // this.pushStateLink();
         this.mobileFilter = false;
         this.getSearchRequest();
+        this.activeButton = false;
       },
 
       clearFilters() {
@@ -118,10 +121,12 @@ export default () => {
       },
 
       setMonth(e) {
+        this.activeButton = true;
         this.params.month = [e.target.value];
       },
 
       setYear(e) {
+        this.activeButton = true;
         this.params.year = [e.target.value];
       },
 
