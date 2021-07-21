@@ -60,7 +60,7 @@
                         <div class="col-lg-3">
                             <div class="article-filters__btns justify-content-end">
                                 <button class="btn article-filters__btn article-filters__btn_apply mr-1"
-                                        @@click="applyFilters">
+                                        @@click="applyFilters" :class="activeButton ? 'article-filters__btn_primary' : ''">
                                     @Html.Glass().Editable(Model, x => x.ApplyFiltersLabel)
                                 </button>
                                 <button class="clear-filter btn article-filters__btn article-filters__btn_clear"
