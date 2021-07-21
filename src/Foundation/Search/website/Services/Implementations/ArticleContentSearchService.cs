@@ -31,10 +31,10 @@
             {
                 var contentTypePredicate = PredicateBuilder.False<ArticleSearchResultItem>();
                 contentTypePredicate = articleSearchRequest.ContentTypes.Aggregate(contentTypePredicate,
-                                                                                            (current, contentType) => current
-                                                                                                                    .Or(item => item.ArticleContentType == contentType));
+                                                                                            (current, contentType) => current                                                                                                                    
+                                                                                            .Or(item => item.ArticleContentType == IdHelper.NormalizeGuid(contentType, true)));
 
-                taxonomyFilter = taxonomyFilter.Or(contentTypePredicate);
+                taxonomyFilter = taxonomyFilter.And(contentTypePredicate);
             }
 
             if (articleSearchRequest.Funds != null && articleSearchRequest.Funds.Any())
