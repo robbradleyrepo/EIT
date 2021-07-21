@@ -96,6 +96,7 @@ export default () => {
         this.changeUrl(params);
         const url = `${host}/search?${params}`
         console.log('url',url);
+        this.loading = true;
         $.ajax(url)
           .done((request) => {
             const { searchResults, totalResults } = request;
@@ -109,6 +110,16 @@ export default () => {
             throw new Error("Data does not fetch ", e);
           });
 
+      },
+      getFacets() {        
+        $.get(`${host}/facets`)
+          .done((responce) =>{
+            console.log('res', responce);
+            this.labels = responce;
+          }).fail((e) => {
+            this.loading = false;
+            throw new Error("Data does not fetch ", e);
+          })
       },
       changeUrl(searchParams) {
         window.history.pushState(
@@ -144,6 +155,8 @@ export default () => {
     mounted() {
       this.searchParams.query = this.getReqValue.query;
       this.serchRequest();
+      this.getFacets();
+
     },
   });
 };
