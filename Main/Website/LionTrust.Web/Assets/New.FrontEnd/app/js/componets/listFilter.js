@@ -3,11 +3,12 @@ const eventBus = new Vue();
 import { pagination } from "./listFilter/mixins/pagination";
 export default () => {
   const rootDom = document.getElementById("lister-app");
-  let host = rootDom.dataset.host;
-  const literatureId = rootDom.dataset.literatureid;
-  const fundFacetId = rootDom.dataset.fundfacetid;
-  const folderId = rootDom.dataset.folderid;
-  const parentId = rootDom.dataset.parentid;
+  let host = rootDom.dataset?.host;
+  const literatureId = rootDom.dataset?.literatureid;
+  const fundFacetId = rootDom.dataset?.fundfacetid;
+  const folderId = rootDom.dataset?.folderid;
+  const parentId = rootDom.dataset?.parentid;
+  const contentType = rootDom.dataset?.contenttype;
   const location = "https://cm-liontrust-it.sagittarius.agency/";
   let root = "";
   if (
@@ -57,6 +58,7 @@ export default () => {
       grid: false,
       selectAllDocuments: false,
       selectedDocumentIds: [],
+      activeButton: false
     },
     computed: {
       getFacets() {
@@ -70,7 +72,7 @@ export default () => {
     methods: {
       // adding selected values to query params
       toggleSelect(item, facet) {
-        if (!this.params[facet.name]) this.params[facet.name] = [];
+        if (!this.params[facet.name]) Vue.set(this.params, facet.name, []);
         const existElem = this.params[facet.name].findIndex((el) => {
           return el === item.identifier;
         });
@@ -90,6 +92,8 @@ export default () => {
           if (this.params[prop].length)
             str += "&" + `${lowerCaseProp}=${this.params[prop].join("|")}`;
         }
+        if(contentType) str += `&contentType=${contentType}`;
+        
         return str;
       },
 
@@ -105,6 +109,7 @@ export default () => {
         // this.pushStateLink();
         this.mobileFilter = false;
         this.getSearchRequest();
+        this.activeButton = false;
       },
 
       clearFilters() {
@@ -117,7 +122,7 @@ export default () => {
         this.applyFilters();
       },
 
-      setMonth(e) {
+      setMonth(e) {        
         this.params.month = [e.target.value];
       },
 
@@ -215,6 +220,7 @@ export default () => {
             this.searchData = searchResults;
             this.amountResults = totalResults;
             this.loading = false;
+            this.activeButton = false;
           })
           .fail((e) => {
             console.error(e);
@@ -231,6 +237,13 @@ export default () => {
         this.selectedDocumentIds = [];
         eventBus.$emit("toggleSelected", value);
       },
+      params: {
+        deep: true,
+        handler: function () {
+          this.activeButton = true;
+        }
+      }
+      
     },
     mounted() {
       this.getFacetsRequest();
