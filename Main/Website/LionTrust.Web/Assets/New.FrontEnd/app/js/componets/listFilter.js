@@ -62,12 +62,11 @@ export default () => {
     },
     computed: {
       getFacets() {
-        const res = {};
-        for (let i in this.facets) {
-          res[i] = this.facets[i];
-        }
-        return res;
+        return this.facets;
       },
+      getFacetsLength() {
+        return this.facets.length;
+      }
     },
     methods: {
       // adding selected values to query params
