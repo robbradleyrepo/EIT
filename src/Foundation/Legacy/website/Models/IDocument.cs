@@ -35,5 +35,8 @@
 
         [SitecoreField(Constants.Document.VideoLink_FieldId)]
         Link VideoLink { get; set; }
+
+        [SitecoreField(Constants.Document.PageLink_FieldId)]
+        Link PageLink { get; set; }
     }
 }
