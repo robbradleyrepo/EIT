@@ -88,5 +88,9 @@
             <div class="paralax-circle__item" style="transform: translate3d(0px, 92.9684px, 0px);"></div>
         </div>
     }
+    @if (new List<string> { Constants.PageTypes.FundListerPageTemplateId, Constants.PageTypes.FundDashboardPageTemplateId }.Contains(Html.Sitecore().CurrentItem.TemplateID.ToString()))
+    {
+        <div class="lit-overlay__wrapper"></div>
+    }
 </body>
 </html>

@@ -78,7 +78,7 @@
     <Compile Include="ComputedFields\Article\ArticleListingImageProtected.cs" />
     <Compile Include="ComputedFields\Article\ArticleAuthorNames.cs" />
     <Compile Include="ComputedFields\Article\ArticleFundName.cs" />
-    <Compile Include="ComputedFields\Article\ArticleCategoryTagName.cs" />
+    <Compile Include="ComputedFields\Article\ArticleContentTypeName.cs" />
     <Compile Include="ComputedFields\Article\ArticlePodcast.cs" />
     <Compile Include="ComputedFields\Article\ArticleTopicNames.cs" />
     <Compile Include="ComputedFields\Article\ArticleVideoUrl.cs" />
@@ -102,7 +102,9 @@
     <Compile Include="Repositories\SearchRepository.cs" />
     <Compile Include="Services\GetFreeTextPredicateService.cs" />
     <Compile Include="Services\IndexableLinkGenerator.cs" />
+    <Compile Include="SiteSearch\FundFactsheetUrlField.cs" />
     <Compile Include="SiteSearch\IFieldHandler.cs" />
+    <Compile Include="SiteSearch\IFundFactsheetUrlField.cs" />
     <Compile Include="SiteSearch\ILegacyContentField.cs" />
     <Compile Include="SiteSearch\LegacyContentField.cs" />
     <Compile Include="SiteSearch\SearchResultTypeField.cs" />

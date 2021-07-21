@@ -43,13 +43,13 @@
                 .Select(sr => BuildArticle(sr.Document));
         }
 
-        public IEnumerable<IArticlePromo> Map(IEnumerable<Guid> funds, IEnumerable<Guid> fundCategories, IEnumerable<Guid> fundTeams, IEnumerable<Guid> fundManagers, IEnumerable<Guid> topics, string databaseName)
+        public IEnumerable<IArticlePromo> Map(IEnumerable<Guid> funds, IEnumerable<Guid> categories, IEnumerable<Guid> fundTeams, IEnumerable<Guid> fundManagers, IEnumerable<Guid> topics, string databaseName)
         {
             var request = new ArticleSearchRequest
             {
                 Topics = topics,
                 Funds = funds?.Select(f => f.ToString().Replace("-", string.Empty)),
-                FundCategories = fundCategories?.Select(fc => fc.ToString().Replace("-", string.Empty)),
+                Categories = categories?.Select(fc => fc.ToString().Replace("-", string.Empty)),
                 FundTeams = fundTeams?.Select(ft => ft.ToString().Replace("-", string.Empty)),
                 FundManagers = fundManagers?.Select(fm => fm.ToString().Replace("-", string.Empty)),
                 Take = 6,
@@ -72,7 +72,7 @@
 
         public IEnumerable<IArticlePromo> Map(IArticleFilter filter, string databaseName)
         {
-            return Map(filter.Funds?.Select(f => f.Id), filter.FundCategories?.Select(fc => fc.Id), filter.FundTeams?.Select(ft => ft.Id), filter.FundManagers?.Select(fm => fm.Id), filter.Topics?.Select(t => t.Id), databaseName);
+            return Map(filter.Funds?.Select(f => f.Id), filter.ContentTypes?.Select(fc => fc.Id), filter.FundTeams?.Select(ft => ft.Id), filter.FundManagers?.Select(fm => fm.Id), filter.Topics?.Select(t => t.Id), databaseName);
         }
 
         private IArticlePromo BuildArticle(ArticleSearchResultItem hit)

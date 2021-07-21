@@ -20,12 +20,12 @@
             public const string SearchLabelFieldId = "{7E350BBA-B71B-49AA-910F-5316636CAC17}";
             public const string ResultsPerPageFieldId = "{2056E3A0-3765-4DF0-8836-349180E8D7F5}";
             public const string SearchResultsFoundLabelFieldId = "{83D03CE9-1F83-4F04-8D65-474AB9BFBFC0}";
-
-        public const string FactsheetLinkTextFieldId = "{94CAE85F-6AED-4D42-BA9B-C487AF809CC7}";
+            public const string FactsheetLinkTextFieldId = "{94CAE85F-6AED-4D42-BA9B-C487AF809CC7}";
         }
 
         public static class SiteSearchFilter
         {
+            public const string TemplateId = "{0A9F55CF-A607-43DF-8C09-2922DACE816C}";
             public const string PageNameFieldId = "{A7F99C6C-A5AF-4968-9C11-EC961745460F}";
             public const string TemplateFieldId = "{2CD1668B-43FA-4854-8D91-84ED2AD9FB3C}";
         }
@@ -36,13 +36,15 @@
             {
                 public const string ArticleSearchFacetsConfig = "{D61FC1B3-9969-4F95-8796-FEFBC864CA1F}";
                 public const string FundSearchFacetsConfig = "{64E0343F-FF1C-4B78-9461-C57CD8B1050D}";
+                public const string SiteSearchFacetsConfig = "{AF6DCE28-F51A-44BB-A3CC-BD0009BDBC76}";
+                public const string FundUpdateContentTypeId = "{D0700E76-8BC2-427A-9849-FE3B6D28BD22}";
             }
             public static class ArticleSearchFacetsConfig
             {
                 public const string FundsFieldId = "{3F4BC13E-73FC-45D7-B858-8D54F2F4F51B}";
                 public const string FundsLabelFieldId = "{3B09D368-CBF7-46BC-AD32-E922B9922667}";
-                public const string FundCategoriesFieldId = "{FDDD0447-86EA-4E24-9F48-BCDC60D48922}";
-                public const string FundCategoriesLabelFieldId = "{630F512C-B754-49C0-AEDC-719960FE72D7}";
+                public const string CategoriesFieldId = "{FDDD0447-86EA-4E24-9F48-BCDC60D48922}";
+                public const string CategoriesLabelFieldId = "{630F512C-B754-49C0-AEDC-719960FE72D7}";
                 public const string FundManagersFieldId = "{6FC49C6C-12C1-455E-951D-70BEB68AEE68}";
                 public const string FundManagersLabelFieldId = "{08DEFE33-E04E-42EC-BF84-2872A25A73E1}";
                 public const string FundTeamsFieldId = "{3E5ADEE5-081E-40A4-BFA5-77A3449A93ED}";
@@ -71,6 +73,7 @@
 
         public static class ArticleLister
         {
+            public const string ContentType_FieldId = "{83905E71-9FD1-4FCE-9F8F-1ED4532D7575}";
             public const string FiltersLabel_FieldId = "{176B6BA4-37A4-4853-9753-690C7D1A3C9E}";
             public const string FundLabel_FieldId = "{0674EA3D-C9DB-4C66-B6F2-FF84C0A8E218}";
             public const string MonthLabel_FieldId = "{6468D4A5-9157-4A80-81AA-70615FB875A9}";
@@ -114,6 +117,7 @@
             public const string ArticleApiRoute_SettingName = "Feature.Search.ArticleApiRoute";
             public const string FundApiRoute_SettingName = "Feature.Search.FundApiRoute";
             public const string MyFundsApiRoute_SettingName = "Feature.Search.MyFundsApiRoute";
+            public const string SiteSearchApiRoute_SettingName = "Feature.Search.SiteSearchApiRoute";
         }
 
         public static class MyFundsLister

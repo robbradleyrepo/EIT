@@ -17,8 +17,6 @@
     using LionTrust.Foundation.Search.Services.Interfaces;
     using Sitecore.ContentSearch.Linq;
     using Sitecore.Globalization;
-    using Sitecore.Links;
-    using Sitecore.Resources.Media;
 
     public class FundSearchDataManager : IFundSearchDataManager
     {
@@ -80,7 +78,7 @@
                     && filterFacetConfigItem.FundRegionsFolder == null
                     && filterFacetConfigItem.FundManagersFolder == null
                     && filterFacetConfigItem.FundTeamsFolder == null
-                    && filterFacetConfigItem.FundRegionsFolder == null)
+                    && filterFacetConfigItem.FundRangesFolder == null)
             {
                 return null;
             }

@@ -37,17 +37,17 @@
             listingGenericListingResponse.Facets = new List<GenericListingFacet>();
             if (filterFacetConfigItem != null)
             {
-                if (filterFacetConfigItem.ListingTypeList != null)
+                if (filterFacetConfigItem.ListingTypeList != null && filterFacetConfigItem.ListingTypeList.Any())
                 {
                     listingGenericListingResponse.Facets.Add(new GenericListingFacet { Name = "ListingType", Items = filterFacetConfigItem.ListingTypeList.Select(x => new ListingFilterFacetsModel { Name = x.ListingItemTypeName, Identifier = x.Id.ToString() }) });
                 }
 
-                if (filterFacetConfigItem.Months != null)
+                if (filterFacetConfigItem.Months != null && filterFacetConfigItem.Months.Any())
                 {
                     listingGenericListingResponse.Facets.Add(new GenericListingFacet { Name = "Month", Items = filterFacetConfigItem.Months.Select(x => new ListingFilterFacetsModel { Name = x.Title, Identifier = x.Value }) });
                 }
 
-                if (filterFacetConfigItem.Years != null)
+                if (filterFacetConfigItem.Years != null && filterFacetConfigItem.Years.Any())
                 {
                     listingGenericListingResponse.Facets.Add(new GenericListingFacet { Name = "Year", Items = filterFacetConfigItem.Years.Select(x => new ListingFilterFacetsModel { Name = x.Title, Identifier = !string.IsNullOrEmpty(x.Value) ? x.Value : x.Name }) });
                 }
