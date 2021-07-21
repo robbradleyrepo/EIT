@@ -71,8 +71,7 @@ export default () => {
     methods: {
       // adding selected values to query params
       toggleSelect(item, facet) {
-        this.activeButton = true;
-        if (!this.params[facet.name]) this.params[facet.name] = [];
+        if (!this.params[facet.name]) Vue.set(this.params, facet.name, []);
         const existElem = this.params[facet.name].findIndex((el) => {
           return el === item.identifier;
         });
@@ -116,17 +115,15 @@ export default () => {
         this.open = false;
         this.searchText = "";
         this.$emit("clearOption");
-        this.mobileFilter = false;
+        this.mobileFilter = false;       
         this.applyFilters();
       },
 
-      setMonth(e) {
-        this.activeButton = true;
+      setMonth(e) {        
         this.params.month = [e.target.value];
       },
 
       setYear(e) {
-        this.activeButton = true;
         this.params.year = [e.target.value];
       },
 
@@ -220,6 +217,7 @@ export default () => {
             this.searchData = searchResults;
             this.amountResults = totalResults;
             this.loading = false;
+            this.activeButton = false;
           })
           .fail((e) => {
             console.error(e);
@@ -236,6 +234,13 @@ export default () => {
         this.selectedDocumentIds = [];
         eventBus.$emit("toggleSelected", value);
       },
+      params: {
+        deep: true,
+        handler: function () {
+          this.activeButton = true;
+        }
+      }
+      
     },
     mounted() {
       this.getFacetsRequest();
