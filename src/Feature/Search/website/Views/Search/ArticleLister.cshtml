@@ -29,7 +29,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="article-filters__body">
+                <div class="article-filters__body" v-if="getFacetsLength">
                     <div class="container">
                         <div class="row">
                             <select-field inline-template v-for="(facet, i) in getFacets" :key="i">
@@ -69,7 +69,7 @@
                                 </select>
                                 <i class="article-filters__icon-arrow article-filters__icon-arrow_select"></i>
                             </div>
-                            <div class="col-lg-2">
+                            <div class="col-lg-2 ml-auto">
                                 <div class="article-filters__btns">
                                     <button class="btn article-filters__btn article-filters__btn_apply" @@click="applyFilters" :class="activeButton ? 'article-filters__btn_primary' : ''">
                                         @Model.FilterLabel
@@ -128,7 +128,7 @@
                 </div>
             </div>
         </div>
-        <div class="container d-lg-none">
+        <div class="container d-lg-none" v-if="getFacetsLength">
             <div class="d-flex justify-content-between margin-mob-fliter-btn" :class="!mobileFilter ? 'relative' : ''">
                 <btn id="show-article-fliter" class="btn btn-clean" @@click="toggleMobileFilter">
                     <i class="icon-filter"></i> @Model.FilterLabel
