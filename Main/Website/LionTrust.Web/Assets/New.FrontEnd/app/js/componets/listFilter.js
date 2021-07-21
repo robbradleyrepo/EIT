@@ -3,11 +3,12 @@ const eventBus = new Vue();
 import { pagination } from "./listFilter/mixins/pagination";
 export default () => {
   const rootDom = document.getElementById("lister-app");
-  let host = rootDom.dataset.host;
-  const literatureId = rootDom.dataset.literatureid;
-  const fundFacetId = rootDom.dataset.fundfacetid;
-  const folderId = rootDom.dataset.folderid;
-  const parentId = rootDom.dataset.parentid;
+  let host = rootDom.dataset?.host;
+  const literatureId = rootDom.dataset?.literatureid;
+  const fundFacetId = rootDom.dataset?.fundfacetid;
+  const folderId = rootDom.dataset?.folderid;
+  const parentId = rootDom.dataset?.parentid;
+  const contentType = rootDom.dataset?.contenttype;
   const location = "https://cm-liontrust-it.sagittarius.agency/";
   let root = "";
   if (
@@ -91,6 +92,8 @@ export default () => {
           if (this.params[prop].length)
             str += "&" + `${lowerCaseProp}=${this.params[prop].join("|")}`;
         }
+        if(contentType) str += `&contentType=${contentType}`;
+        
         return str;
       },
 
@@ -115,7 +118,7 @@ export default () => {
         this.open = false;
         this.searchText = "";
         this.$emit("clearOption");
-        this.mobileFilter = false;       
+        this.mobileFilter = false;
         this.applyFilters();
       },
 
