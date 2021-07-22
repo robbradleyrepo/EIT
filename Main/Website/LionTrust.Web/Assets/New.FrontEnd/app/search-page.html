@@ -108,14 +108,14 @@
                 <div v-if="item.resultType === 'Fund'" class="search-item__footer">
                   <div class="search-item__author search-item__footer-item">
                     <div class="search-item__tag search-item__footer-item">
-                      <a :href="item.footer.factsheet.link"
+                      <a :href="item.factsheetUrl"
                         ><i class="icon-file"></i> Factsheet</a
                       >
                     </div>
                   </div>
                   <div class="search-item__tag search-item__footer-item">
-                    <a :href="item.footer.team.link">
-                      <i class="icon-team"></i> {{item.footer.team.name}}
+                    <a :href="item.fundTeamUrl">
+                      <i class="icon-team"></i> {{item.fundTeam}}
                     </a>
                   </div>
                 </div>
