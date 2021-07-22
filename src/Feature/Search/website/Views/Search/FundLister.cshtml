@@ -154,7 +154,7 @@
                                         <a :href="fund.fundFactSheet" class="fund-card__btn">
                                             @Html.Glass().Editable(Model, m => m.FactsheetLabel) <i class="icon-file"></i>
                                         </a>
-                                        <button class="fund-card__btn" @@click="showLiteratureOverlay(fund.FundId)">
+                                        <button class="fund-card__btn" @@click="showLiteratureOverlay(fund.fundId)">
                                             @Html.Glass().Editable(Model, m => m.AllDocumentsLabel) <i class="icon-folder"></i>
                                         </button>
                                     </div>
