@@ -41,7 +41,7 @@
             public int Page { get; set; }
         }
 
-        public ISearchResponse<SiteSearchHit> Search(string query, string database, string[] templatesIds, string language, int resultsPerPage, int page)
+        public ISearchResponse<SiteSearchHit> Search(string query, string database, string templatesIds, string language, int resultsPerPage, int page)
         {
             var SearchResponse = new SearchResponse<SiteSearchHit>();
             try
@@ -56,12 +56,12 @@
                     var legacyPredicate = new LegacyQueryPredicateProvider<SiteSearchResultItem>().GetQueryPredicate(new BasicQuery { QueryText = query });
 
                     predicate = predicate.Or(legacyPredicate);
-                    if (templatesIds != null && templatesIds.Length > 0)
+                    if (!string.IsNullOrWhiteSpace(templatesIds))
                     {
                         var templateQuery = PredicateBuilder.True<SiteSearchResultItem>();
-                        foreach (var item in templatesIds)
+                        foreach (var id in templatesIds.Split('|'))
                         {
-                            var templateId = new ID(item);
+                            var templateId = new ID(id);
 
                             if (!ID.IsNullOrEmpty(templateId))
                             {

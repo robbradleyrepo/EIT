@@ -7,7 +7,7 @@
 
     public interface ISiteSearchDataManager
     {
-        ISearchResponse<SiteSearchHit> Search(string query, string database, string[] templatesIds, string language, int resultsPerPage, int page);
+        ISearchResponse<SiteSearchHit> Search(string query, string database, string templatesIds, string language, int resultsPerPage, int page);
         FacetsResponse GetFilterFacets(Guid facetConfigId);
     }
 }

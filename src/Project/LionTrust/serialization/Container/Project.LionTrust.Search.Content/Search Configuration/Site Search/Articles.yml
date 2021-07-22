@@ -1,0 +1,27 @@
+﻿---
+ID: "f596742e-b499-4fe3-8ba3-c8050a06f5bb"
+Parent: "af6dce28-f51a-44bb-a3cc-bd0009bdbc76"
+Template: "265516b5-70b3-44c6-809f-77052c76eb21"
+Path: /sitecore/content/LionTrustNew/Global/Search Configuration/Site Search/Articles
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210719T114332Z
+    - ID: "2cd1668b-43fa-4854-8d91-84ed2ad9fb3c"
+      Hint: SiteSearchFilter_Template
+      Type: Treelist
+      Value: |
+        {AB8309B9-E012-4C89-88BB-6D364FB5E0DB}
+        {C46981E0-0F52-4913-9C60-D39CC551E3A2}
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "a7f99c6c-a5af-4968-9c11-ec961745460f"
+      Hint: SiteSearchFilter_PageName
+      Value: Articles
