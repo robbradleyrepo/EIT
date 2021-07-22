@@ -106,6 +106,7 @@
     <Content Include="Views\Fund\fundperformancegraph.cshtml" />
     <Content Include="Views\Fund\FundList.cshtml" />
     <Content Include="Views\Fund\PerformanceTable.cshtml" />
+    <Content Include="Views\Fund\FourFundStatsManual.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -152,6 +153,7 @@
     <Compile Include="Models\GraphBreakdownViewModel.cs" />
     <Compile Include="CreditRating\ICreditRating.cs" />
     <Compile Include="CreditRating\ICreditRatingRow.cs" />
+    <Compile Include="Models\IFourFundStatsManual.cs" />
     <Compile Include="Models\IMyFundsScroller.cs" />
     <Compile Include="Models\IGraphWithHeading.cs" />
     <Compile Include="PerformanceTables\CumulativePerformanceController.cs" />
