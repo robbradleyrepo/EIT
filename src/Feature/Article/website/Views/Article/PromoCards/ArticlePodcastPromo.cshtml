@@ -45,9 +45,9 @@
                 }
             </div>
         </div>
-        @if ((Model.BackgroundImage != null && !string.IsNullOrEmpty(Model.BackgroundImage.Src)) || Sitecore.Context.PageMode.IsExperienceEditor)
+        @if ((Model.MobileBackgroundImage != null && !string.IsNullOrEmpty(Model.MobileBackgroundImage.Src)) || Sitecore.Context.PageMode.IsExperienceEditor)
         {
-            @Html.Glass().RenderImage(Model, m => m.BackgroundImage, new  { @class = "article-promo__back", style = opacity }, isEditable: true)
+            @Html.Glass().RenderImage(Model, m => m.MobileBackgroundImage, new  { @class = "article-promo__back", style = opacity }, isEditable: true)
         }
     </div>
 }
