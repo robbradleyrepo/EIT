@@ -131,17 +131,17 @@
                 {
                     Name = filterFacetConfigItem.FundsLabel,
                     Items = filterFacetConfigItem.FundsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
-                },                
-                new Facet
-                {
-                    Name = filterFacetConfigItem.FundManagersLabel,
-                    Items = filterFacetConfigItem.FundManagersFolder?.Children?.Where(x => x.IsFundManager)?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
                 },
                 new Facet
                 {
                     Name = filterFacetConfigItem.FundTeamsLabel,
                     Items = filterFacetConfigItem.FundTeamsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name })
                 },
+                new Facet
+                {
+                    Name = filterFacetConfigItem.FundManagersLabel,
+                    Items = filterFacetConfigItem.FundManagersFolder?.Children?.Where(x => x.IsFundManager)?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
+                },                
                 new Facet
                 {
                     Name = filterFacetConfigItem.CategoriesLabel,
