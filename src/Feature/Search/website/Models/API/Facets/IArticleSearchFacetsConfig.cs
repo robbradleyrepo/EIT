@@ -10,11 +10,11 @@
         [SitecoreField(FieldId = Constants.APIFacets.ArticleSearchFacetsConfig.FundsLabelFieldId)]
         string FundsLabel { get; set; }
 
-        [SitecoreField(FieldId = Constants.APIFacets.ArticleSearchFacetsConfig.FundCategoriesFieldId)]
-        IFacetFolder FundCategoriesFolder { get; set; }
+        [SitecoreField(FieldId = Constants.APIFacets.ArticleSearchFacetsConfig.CategoriesFieldId)]
+        IFacetFolder CategoriesFolder { get; set; }
 
-        [SitecoreField(FieldId = Constants.APIFacets.ArticleSearchFacetsConfig.FundCategoriesLabelFieldId)]
-        string FundCategoriesLabel { get; set; }
+        [SitecoreField(FieldId = Constants.APIFacets.ArticleSearchFacetsConfig.CategoriesLabelFieldId)]
+        string CategoriesLabel { get; set; }
 
         [SitecoreField(FieldId = Constants.APIFacets.ArticleSearchFacetsConfig.FundManagersFieldId)]
         IFundManagerFacetFolder FundManagersFolder { get; set; }

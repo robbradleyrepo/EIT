@@ -1,28 +1,28 @@
 ﻿---
-ID: "a03d4f9e-4bda-401d-9639-dd0247f50fab"
-Parent: "4456937f-45a0-44ee-a807-797fac92e5ac"
+ID: "fddd0447-86ea-4e24-9f48-bcdc60d48922"
+Parent: "eb62c005-fd96-47cb-a1bd-2a38ada5a47e"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Article/_ArticlesSearchParameters/Article Search Parameters/ArticleSearchParameters_FundCategories
+Path: /sitecore/templates/Feature/Search/_ArticleFacetConfig/Article Facet Configuration/ArticleFacetConfig_Categories
 DB: master
 SharedFields:
 - ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
   Hint: Source
-  Value: "{D4950391-B632-4658-8F17-B11DA51C1D35}"
+  Value: "{0DE95AE4-41AB-4D01-9EB0-67441B7C2450}"
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: Multilist
+  Value: Droptree
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 300
+  Value: 200
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Article Type
+    Value: Fund Categories
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210505T094000Z
+      Value: 20210503T084354Z

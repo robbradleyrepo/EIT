@@ -41,10 +41,10 @@
 
         //Fund Category
         [IndexField("LegacyArticle_BlogType")]
-        public string ArticleCategory { get; set; }
+        public string ArticleContentType { get; set; }
 
-        [IndexField("article_category_tag_name")]
-        public string ArticleCategoryTagName { get; set; }
+        [IndexField("article_contentType_name")]
+        public string ArticleContentTypeName { get; set; }
 
         [IndexField("Article_Date")]
         public DateTime ArticleDate { get; set; }

@@ -1,0 +1,26 @@
+﻿---
+ID: "d4a5138b-5c2b-493b-8788-ffc0e3caa758"
+Parent: "4ac0c827-2da9-4322-9820-4a0e4bad3471"
+Template: "196ea78f-08c6-456c-95af-027f662537e1"
+Path: "/sitecore/content/LionTrustNew/Home/Podcasts/_Local/BC018 - Article Lister"
+DB: master
+BranchID: "ca116de7-3554-48d7-81d2-0d02f0d24c28"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{7AC27A20-3DBA-4311-9BAD-42AFFC9BB44D}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0eba5571-b102-467c-993a-3025a1176831"
+      Hint: ArticleLister_SearchPlaceholderLabel
+      Value: Search
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210721T134016Z
+    - ID: "83905e71-9fd1-4fce-9f8f-1ed4532d7575"
+      Hint: ArticleLister_ContentType
+      Type: Treelist
+      Value: "{74A07305-3F24-4766-9595-AD788CAD354A}"

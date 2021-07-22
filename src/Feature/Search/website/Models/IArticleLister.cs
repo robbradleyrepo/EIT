@@ -1,10 +1,13 @@
 ﻿namespace LionTrust.Feature.Search.Models
-{
+{    
     using Glass.Mapper.Sc.Fields;
     using Glass.Mapper.Sc.Configuration.Attributes;
 
     public interface IArticleLister : IPagination, ISearchGlassBase
     {
+        [SitecoreField(Constants.ArticleLister.ContentType_FieldId)]
+        string ContentType { get; set; }
+
         [SitecoreField(Constants.ArticleLister.ApplyFiltersLabel_FieldId)]
         string ApplyFiltersLabel { get; set; }
 

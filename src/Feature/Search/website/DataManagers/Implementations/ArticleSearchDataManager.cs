@@ -59,7 +59,7 @@
                 {
                     Url = hit.Document.ArticleUrl,
                     Authors = hit.Document.ArticleAuthorNames?.Split('|'),
-                    Category = hit.Document.ArticleCategoryTagName,
+                    Category = hit.Document.ArticleContentTypeName,
                     Date = this.GetArticleDate(!hit.Document.ArticleDate.Equals(DateTime.MinValue) ? hit.Document.ArticleDate : hit.Document.Created),
                     Fund = hit.Document.ArticleFundName,
                     ImageUrl = hit.Document.ArticleListingImage,
@@ -118,7 +118,7 @@
             var listingArticleFacetsResponse = new ArticleFacetsResponse();
             if (filterFacetConfigItem == null
                     || filterFacetConfigItem.FundsFolder == null
-                    || filterFacetConfigItem.FundCategoriesFolder == null
+                    || filterFacetConfigItem.CategoriesFolder == null
                     || filterFacetConfigItem.FundManagersFolder == null
                     || filterFacetConfigItem.FundTeamsFolder == null)
             {
@@ -131,12 +131,7 @@
                 {
                     Name = filterFacetConfigItem.FundsLabel,
                     Items = filterFacetConfigItem.FundsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
-                },
-                new Facet
-                {
-                    Name = filterFacetConfigItem.FundCategoriesLabel,
-                    Items = filterFacetConfigItem.FundCategoriesFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
-                },
+                },                
                 new Facet
                 {
                     Name = filterFacetConfigItem.FundManagersLabel,
@@ -146,13 +141,18 @@
                 {
                     Name = filterFacetConfigItem.FundTeamsLabel,
                     Items = filterFacetConfigItem.FundTeamsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name })
-                }
+                },
+                new Facet
+                {
+                    Name = filterFacetConfigItem.CategoriesLabel,
+                    Items = filterFacetConfigItem.CategoriesFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
+                },
             };
 
             return listingArticleFacetsResponse;
         }
 
-        public ISearchResponse<ITaxonomyContentResult> GetArticleListingResponse(string database, string funds, string fundCategories, string fundManagers, string fundTeams, int? month, int? year, string searchTerm, string sortOrder, int page, int take = 21)
+        public ISearchResponse<ITaxonomyContentResult> GetArticleListingResponse(string database, string contentTypes, string funds, string categories, string fundManagers, string fundTeams, int? month, int? year, string searchTerm, string sortOrder, int page, int take = 21)
         {
             var fromYear = year ?? 2000;
             var fromMonth = month ?? 1;
@@ -164,8 +164,9 @@
             {
                 DatabaseName = database,
                 FromDate = new DateTime(fromYear, fromMonth, 1),
+                ContentTypes = contentTypes?.Split('|'),
                 Funds = funds?.Split('|'),
-                FundCategories = fundCategories?.Split('|'),
+                Categories = categories?.Split('|'),
                 FundManagers = fundManagers?.Split('|'),
                 FundTeams = fundTeams?.Split('|'),
                 SearchTerm = searchTerm,

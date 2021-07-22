@@ -58,9 +58,9 @@
         /// Gets articles based on filters in the request.
         /// </summary>
         /// <returns>A list of articles.</returns>
-        public ActionResult GetFilteredArticles(string funds, string fundCategories, string fundManagers, string fundTeams, int? month, int? year, string searchTerm, string sortOrder, string database = "web", int page = 1)
+        public ActionResult GetFilteredArticles(string contentType, string funds, string categories, string fundManagers, string fundTeams, int? month, int? year, string searchTerm, string sortOrder, string database = "web", int page = 1)
         {
-            var response = this._articleListingDataManager.GetArticleListingResponse(database, funds, fundCategories, fundManagers, fundTeams, month, year, searchTerm, sortOrder, page);
+            var response = this._articleListingDataManager.GetArticleListingResponse(database, contentType, funds, categories, fundManagers, fundTeams, month, year, searchTerm, sortOrder, page);
             if (response.StatusCode != 200)
             {
                 return new HttpStatusCodeResult(response.StatusCode, response.StatusMessage);
@@ -112,7 +112,19 @@
             }
             else if(response.TotalResults > 0 && response.SearchResults != null)
             {
-                var fundUpdateArticles = _articleListingDataManager.GetArticleListingResponse(database, string.Join("|", response.SearchResults.Select(f => f.FundId.ToString("N"))), "review", null, null, null, null, null, "ASC", 1, int.MaxValue);
+                var fundUpdateArticles = _articleListingDataManager.GetArticleListingResponse(
+                                            database, 
+                                            Search.Constants.APIFacets.Defaults.FundUpdateContentTypeId, 
+                                            string.Join("|", response.SearchResults.Select(f => f.FundId.ToString("N"))),
+                                            null,
+                                            fundManagers,
+                                            fundTeams, 
+                                            null, 
+                                            null,
+                                            searchTerm,
+                                            sortOrder,
+                                            page,
+                                            int.MaxValue);
                 var funds = response.SearchResults.ToList();
 
                 if (fundUpdateArticles != null && fundUpdateArticles.TotalResults > 0)
