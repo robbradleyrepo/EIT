@@ -54,7 +54,6 @@ export default () => {
         const urlParams = {};
         while ((match = search.exec(query)))
           urlParams[decode(match[1])] = decode(match[2]);
-        console.log('urlParams',urlParams);
         return urlParams;
       },
       generateSearchParams() {
@@ -63,7 +62,6 @@ export default () => {
         entries.forEach(([key, value], index) => {
           if (value) query += `${key}=${value}&`;
         });
-        console.log("query", query);
         return query;
       },
 
@@ -85,14 +83,12 @@ export default () => {
       serchRequest(params = this.generateSearchParams) {
         this.changeUrl(params);
         const url = `${host}/search?${params}`;
-        console.log("url", url);
         this.loading = true;
         $.ajax(url)
           .done((request) => {
             const { searchResults, totalResults } = request;
             this.results = searchResults;
             this.amountResults = totalResults;
-            console.log("request", request);
             this.loading = false;
           })
           .fail((e) => {
