@@ -87,6 +87,7 @@ export default () => {
         $.ajax(url)
           .done((request) => {
             const { searchResults, totalResults } = request;
+            console.log('searchResults',searchResults);
             this.results = searchResults;
             this.amountResults = totalResults;
             this.loading = false;

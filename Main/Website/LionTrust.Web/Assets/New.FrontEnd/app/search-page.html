@@ -74,8 +74,8 @@
             <div class="search-page__items">              
               <div
                 v-for="(item, i) in getSearchResult"
-                class="search-item"
                 :key="i + item.pageTitle"
+                class="search-item"
               >
                 <div class="search-item__header">
                   <a :href="item.url" class="search-item__title"
@@ -121,7 +121,7 @@
                 </div>
               </div>
             </div>
-            <nav v-if="getPageAmount > 1" class="pagination mt-3 mb-5">
+            <nav v-if="getPageAmount > 1" class="pagination justify-content-start mt-3 mb-5">
               <a href="#" @click.prevent="prevPage" class="pagination__step pagination__step_forward"
                 :class="disablePrevBtn ? 'pagination__step_disabled' : ''"><i class="icon-arrow-left"></i> Previous</a>
               <ul class="pagination__list">
