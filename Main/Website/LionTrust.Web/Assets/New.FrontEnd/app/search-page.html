@@ -24,7 +24,7 @@
     </section>
   </header>
 
-  <main id="result-list-app" data-host="SiteSearchApi">
+  <main id="result-list-app" class="result-list-app" data-host="SiteSearchApi">
     <div class="container search-page">
       <div class="row">
         <div class="col-lg-7">
@@ -61,13 +61,13 @@
                 class="search-filter__checkbox"
                 name="filter"
               />
-              <span class="btn search-filter__btn"> {{label.title}} </span>
+              <span class="btn search-filter__btn"> {{label.name}} </span>
             </label>
           </div>
-          <div v-if="loading" class="text-center mt-5">
+          <div v-if="loading" class="text-center my-5">
             <div class="spinner-border text-gold" role="status"></div>
           </div>
-          <div v-else>
+          <div v-if="init">
             <div class="search-page__items">
               <p v-if="!results.length" class="h2 text-center py-5">
                 On your request nothing has been found. Please try again
@@ -121,7 +121,7 @@
                 </div>
               </div>
             </div>
-            <nav v-if="getPageAmount > 1" class="pagination mt-3">
+            <nav v-if="getPageAmount > 1" class="pagination mt-3 mb-5">
               <a href="#" @click.prevent="prevPage" class="pagination__step pagination__step_forward"
                 :class="disablePrevBtn ? 'pagination__step_disabled' : ''"><i class="icon-arrow-left"></i> Previous</a>
               <ul class="pagination__list">

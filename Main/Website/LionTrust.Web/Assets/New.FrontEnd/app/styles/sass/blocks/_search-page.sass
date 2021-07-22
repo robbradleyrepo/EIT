@@ -1,7 +1,8 @@
 .search-page
+    main
+        z-index: 2
+.result-list-app
     padding-top: 66px
-    padding-bottom: 65px
-    color: $black
 
 .search-filter
     overflow-x: scroll
@@ -41,6 +42,7 @@
 
 .search-item
     margin-bottom: 30px
+    color: $black
     @include breakpoint(desktop, up)
         margin-bottom: 50px
     &__header
@@ -98,6 +100,7 @@
     border-radius: 10px
     display: none
     box-shadow: 0px 10px 20px #20242B
+    margin-bottom: 2rem
     @include breakpoint(desktop, up)
         display: block
     &__title

@@ -15,35 +15,25 @@ if (
   host = "/" + host;
 }
 
-
 export default () => {
   new Vue({
     el: "#result-list-app",
     mixins: [pagination],
     data: {
       results: [],
-      amountResults: 10,
+      init: false,
+      amountResults: 0,
       showPerPage: 10,
       showPageInPagination: 7,
       loading: true,
       searchParams: {
         query: "",
-        type: "",
+        filters: "",
         page: 1,
-        take: 10
+        take: 10,
       },
       allResults: true,
-      labels: [
-        { title: "Funds", categoryName: "Funds", checked: false },
-        {
-          title: "Funds Managers",
-          categoryName: "Funds Managers",
-          checked: false,
-        },
-        { title: "Articles", categoryName: "Article", checked: false },
-        { title: "Documents", categoryName: "Document", checked: false },
-        { title: "Pages", categoryName: "Page", checked: false },
-      ],
+      labels: [],
     },
     computed: {
       getSearchResult() {
@@ -64,7 +54,7 @@ export default () => {
         const urlParams = {};
         while ((match = search.exec(query)))
           urlParams[decode(match[1])] = decode(match[2]);
-
+        console.log('urlParams',urlParams);
         return urlParams;
       },
       generateSearchParams() {
@@ -73,7 +63,7 @@ export default () => {
         entries.forEach(([key, value], index) => {
           if (value) query += `${key}=${value}&`;
         });
-        console.log('query',query);
+        console.log("query", query);
         return query;
       },
 
@@ -81,8 +71,8 @@ export default () => {
         return this.searchParams.query;
       },
       getFilterTopPosition() {
-        return document.getElementsByTagName('body')[0].offsetTop;
-      }
+        return document.getElementsByTagName("body")[0].offsetTop;
+      },
     },
     methods: {
       labelClick() {
@@ -94,8 +84,8 @@ export default () => {
       },
       serchRequest(params = this.generateSearchParams) {
         this.changeUrl(params);
-        const url = `${host}/search?${params}`
-        console.log('url',url);
+        const url = `${host}/search?${params}`;
+        console.log("url", url);
         this.loading = true;
         $.ajax(url)
           .done((request) => {
@@ -107,19 +97,24 @@ export default () => {
           })
           .fail((e) => {
             this.loading = false;
-            throw new Error("Data does not fetch ", e);
+            this.results = [];
+            this.amountResults = 0;
+            this.init = false;
+            console.error("Data is not being retrieved", e)
           });
-
       },
-      getFacets() {        
+      getFacets() {
         $.get(`${host}/facets`)
-          .done((responce) =>{
-            console.log('res', responce);
-            this.labels = responce;
-          }).fail((e) => {
-            this.loading = false;
-            throw new Error("Data does not fetch ", e);
+          .done(({ facets }) => {
+            const newFacets = facets.map((item) => {
+              return { ...item, checked: false };
+            });
+            this.labels = newFacets;
           })
+          .fail((e) => {
+            this.loading = false;
+            throw new Error("Facets does not fetch ", e);
+          });
       },
       changeUrl(searchParams) {
         window.history.pushState(
@@ -136,12 +131,13 @@ export default () => {
       labels: {
         handler(val) {
           const filters = val.filter((item) => item.checked);
-          let type = "";
-          filters.forEach((item, i) => {
-            if (filters.length - 1 !== i) type += `${item.categoryName},`;
-            else type += `${item.categoryName}`;
+          const type = [];
+          filters.forEach((item) => {
+            item.items.forEach((element) => {
+              type.push(element.identifier);
+            });
           });
-          this.searchParams.type = type;
+          this.searchParams.filters = type.join("|");
           this.serchRequest();
         },
         deep: true,
@@ -153,10 +149,10 @@ export default () => {
       },
     },
     mounted() {
-      this.searchParams.query = this.getReqValue.query;
-      this.serchRequest();
+      this.searchParams.query = this.getReqValue.query;      
       this.getFacets();
-
+      this.serchRequest();
+      this.init = true;
     },
   });
 };

@@ -41,7 +41,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // if (document.querySelector(".article-page")) articleFilter();
   if (document.querySelector(".main-page")) parallaxScrolling();
 
+  // init tooltips
   $('[data-toggle="tooltip"]').tooltip({
     offset: 5,
   });
+
+  // set z-index for 
+  $('.nav-desktop__item').on('mouseenter', () => {
+    $('.header').css('z-index', '3')
+  })
+  $('.nav-desktop__item').on('mouseleave', () => {
+    $('.header').css('z-index', '2')
+  })
+
 });
