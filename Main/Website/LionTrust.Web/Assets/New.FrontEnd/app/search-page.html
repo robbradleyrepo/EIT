@@ -64,18 +64,18 @@
               <span class="btn search-filter__btn"> {{label.name}} </span>
             </label>
           </div>
-          <div v-if="loading" class="text-center my-5">
+          <div v-if="loading" class="text-center mb-5">
             <div class="spinner-border text-gold" role="status"></div>
           </div>
-          <div v-if="init">
-            <div class="search-page__items">
-              <p v-if="!results.length" class="h2 text-center py-5">
-                On your request nothing has been found. Please try again
-              </p>
+          <p v-if="!results.length && !loading" class="h2 text-center mb-5">
+            On your request nothing has been found. Please try again
+          </p>
+          <div v-if="init">     
+            <div class="search-page__items">              
               <div
                 v-for="(item, i) in getSearchResult"
                 class="search-item"
-                :key="i"
+                :key="i + item.pageTitle"
               >
                 <div class="search-item__header">
                   <a :href="item.url" class="search-item__title"

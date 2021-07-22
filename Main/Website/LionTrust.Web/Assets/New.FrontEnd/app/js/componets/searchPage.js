@@ -106,10 +106,9 @@ export default () => {
       getFacets() {
         $.get(`${host}/facets`)
           .done(({ facets }) => {
-            const newFacets = facets.map((item) => {
+            this.labels = facets.map((item) => {
               return { ...item, checked: false };
             });
-            this.labels = newFacets;
           })
           .fail((e) => {
             this.loading = false;
@@ -150,9 +149,9 @@ export default () => {
     },
     mounted() {
       this.searchParams.query = this.getReqValue.query;      
+      this.init = true;
       this.getFacets();
       this.serchRequest();
-      this.init = true;
     },
   });
 };
