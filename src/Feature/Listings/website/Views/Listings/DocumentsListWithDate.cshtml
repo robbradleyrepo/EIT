@@ -13,19 +13,22 @@
                     {
                         <tr>
                             <th scope="row">
-                                @if (Sitecore.Context.PageMode.IsExperienceEditor)
+                                @using (Html.Glass().BeginEditFrame(document, "Edit Article Date", x => x.Date))
                                 {
-                                    @Html.Glass().Editable(document, m => m.Date.ToString("dd/MM/yy"))
+                                    if (Sitecore.Context.PageMode.IsExperienceEditor)
+                                    {
+                                        @Html.Glass().Editable(document, m => m.Date.ToString("dd/MM/yy"))
+                                    }
+                                    else if (document.Date != DateTime.MinValue)
+                                    {
+                                        @document.Date.ToString("dd/MM/yy")
+                                    }
+                                    else
+                                    {
+                                        @document.Created.ToString("dd/MM/yy")
+                                    }
                                 }
-                                else if (document.Date != DateTime.MinValue)
-                                {
-                                    @document.Date.ToString("dd/MM/yy")
-                                }
-                                else
-                                {
-                                    @document.Created.ToString("dd/MM/yy")
-                                }
-                            </th>
+                                </th>
                             <td>@document.DocumentName</td>
                             <td class="table-document__link">
                                 @using (Html.Glass().BeginRenderLink(document, m => m.DocumentLink, new NameValueCollection { { "class", "link-gray" }, { "target", "_blank" } }))
