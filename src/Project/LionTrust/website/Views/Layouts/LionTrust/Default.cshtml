@@ -20,7 +20,7 @@
     <link rel="canonical" href="@Html.Sitecore().CurrentItem.GetCanonicalUrl()">
 </head>
 
-@{ 
+@{
     var bodyClass = string.Empty;
     switch (@Html.Sitecore().CurrentItem.TemplateID.ToString())
     {
@@ -38,6 +38,9 @@
             break;
         case Constants.PageTypes.FundDashboardPageTemplateId:
             bodyClass = "fund-dashboard";
+            break;
+        case Constants.PageTypes.SearchPageTemplateId:
+            bodyClass = "search-page";
             break;
     }
 
@@ -69,7 +72,10 @@
     <![endif]-->
     <script src="/dist/js/app.min.js"></script>
     <script src="/dist/js/listing-page.min.js"></script>
-    <script src="/dist/js/search-page.min.js"></script>
+    @if (Html.Sitecore().CurrentItem.TemplateID.ToString() == Constants.PageTypes.SearchPageTemplateId)
+    {
+        <script src="/dist/js/search-page.min.js"></script>
+    }
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>

@@ -117,7 +117,7 @@
 
         public static class FundPage
         {
-            public static Guid TemplateId = Guid.Parse("{CFF8E8CF-7EA0-435F-AB8F-9BFA1FD61BBA}");
+            public static Guid TemplateId = Guid.Parse("{0CF5E9F6-FEE0-472C-B1D3-C4C68E20AA4D}");
             public const string PageFieldId = "{E43F6E86-0318-4766-B880-0C4F6512CA4E}";
         }
 

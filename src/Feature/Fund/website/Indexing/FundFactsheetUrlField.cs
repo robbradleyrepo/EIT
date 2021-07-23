@@ -1,4 +1,4 @@
-﻿namespace LionTrust.Feature.Article.Fields
+﻿namespace LionTrust.Feature.Fund.Indexing
 {
     using LionTrust.Foundation.DI;
     using LionTrust.Foundation.Indexing.SiteSearch;
@@ -8,16 +8,22 @@
     using Sitecore.Data.Items;
     using Sitecore.Resources.Media;
     using Sitecore.Sites;
+    using System.Collections.Generic;
     using System.Linq;
 
     [Service(ServiceType = typeof(IFundFactsheetUrlField), Lifetime = Lifetime.Singleton)]
-    public class FundFactsheetUrlField : ArticleBaseField, IFundFactsheetUrlField
+    public class FundFactsheetUrlField : IFundFactsheetUrlField
     {
         private readonly BaseFactory _factory;
 
         public FundFactsheetUrlField(BaseFactory factory)
         {
             _factory = factory;
+        }
+
+        public bool CanHandle(IEnumerable<System.Guid> templateIds)
+        {
+            return templateIds.Contains(Constants.FundPage.TemplateId);
         }
 
         public string GetFundFactsheetUrl(Item item)
@@ -27,7 +33,7 @@
                 return null;
             }
 
-            var fundField = (LookupField)item.Fields[Foundation.Legacy.Constants.Article.Fund_FieldId];
+            var fundField = (LookupField)item.Fields[Constants.FundSelector.FundFieldId];
             if (fundField == null || fundField.TargetItem == null)
             {
                 return null;

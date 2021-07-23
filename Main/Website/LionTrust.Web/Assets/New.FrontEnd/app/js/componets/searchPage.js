@@ -5,6 +5,7 @@ const location = "https://cm-liontrust-it.sagittarius.agency/";
 const rootDom = document.getElementById("result-list-app");
 let root = "";
 let host = rootDom.dataset.host;
+const pageSize = rootDom.dataset.pageSize;
 if (
   window.location.hostname === "localhost" ||
   window.location.hostname === "127.0.0.1"
@@ -23,14 +24,14 @@ export default () => {
       results: [],
       init: false,
       amountResults: 0,
-      showPerPage: 10,
+      showPerPage: pageSize,
       showPageInPagination: 7,
       loading: true,
       searchParams: {
         query: "",
         filters: "",
         page: 1,
-        take: 10,
+        take: pageSize,
       },
       allResults: true,
       labels: [],

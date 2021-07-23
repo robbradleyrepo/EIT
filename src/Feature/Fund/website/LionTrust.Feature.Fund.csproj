@@ -148,7 +148,11 @@
     <Compile Include="GeographicalBreakdown\IGeographicalBreakdownManager.cs" />
     <Compile Include="Indexing\DocumentSearchResultTypeField.cs" />
     <Compile Include="Indexing\FundDetailSearchResultTypeField.cs" />
+    <Compile Include="Indexing\DocumentUrlField.cs" />
+    <Compile Include="Indexing\FundFactsheetUrlField.cs" />
     <Compile Include="Indexing\FundManagerSearchResultTypeField.cs" />
+    <Compile Include="Indexing\FundTeamField.cs" />
+    <Compile Include="Indexing\FundTeamUrlField.cs" />
     <Compile Include="Models\GraphBreakdownViewModel.cs" />
     <Compile Include="CreditRating\ICreditRating.cs" />
     <Compile Include="CreditRating\ICreditRatingRow.cs" />

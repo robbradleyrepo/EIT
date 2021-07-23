@@ -122,8 +122,8 @@
                     var siteSearchHit = new SiteSearchHit
                     {
                         Url = hit.Document.PageUrl,
-                        Copy = hit.Document.Copy,
-                        PageTitle = hit.Document.PageTitle,
+                        Copy = !string.IsNullOrWhiteSpace(hit.Document.DocumentDescription) ? hit.Document.DocumentDescription : hit.Document.Copy,
+                        PageTitle = !string.IsNullOrWhiteSpace(hit.Document.DocumentName) ? hit.Document.DocumentName : hit.Document.PageTitle,
                         Author = hit.Document.Authors,
                         AuthorImage = hit.Document.AuthorImageUrl,
                         FundTeam = hit.Document.FundTeamName,
