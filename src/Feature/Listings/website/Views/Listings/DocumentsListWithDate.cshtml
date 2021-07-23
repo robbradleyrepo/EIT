@@ -19,11 +19,11 @@
                                 }
                                 else if (document.Date != DateTime.MinValue)
                                 {
-                                    document.Date.ToString("dd/MM/yy");
+                                    @document.Date.ToString("dd/MM/yy")
                                 }
                                 else
                                 {
-                                    document.Created.ToString("dd/MM/yy");
+                                    @document.Created.ToString("dd/MM/yy")
                                 }
                             </th>
                             <td>@document.DocumentName</td>
