@@ -76,6 +76,7 @@
             public const string WatchVideoText_FieldID = "{40FD447E-6459-4EE2-B86D-DE9AB7008604}";           
             public const string NextText_FieldID = "{EB373C6D-B8F8-4E56-B711-F574E2FAB67F}";
             public const string PreviousText_FieldID = "{EA027445-01E2-488B-A94C-A2FBF460972A}";
+            public const string DownloadFileLabel_FieldID = "{58E70FCF-1799-4A4B-8DA7-EF4EEDAA07A4}";
         }
 
         public static class Settings

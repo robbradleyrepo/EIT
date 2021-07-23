@@ -177,6 +177,10 @@ namespace LionTrust.Foundation.Legacy
 
             public const string PageLink_FieldId = "{F2F713BA-8324-4551-965F-ECEB065AD324}";
 
+            public const string Date_FieldId = "{F47124A7-6A71-437B-BD00-455B0E9942CF}";
+
+            public const string Created_FieldId = "{25BED78C-4957-4165-998A-CA1B52F67497}";
+
             public const string TemplateId = "{DD62AA1C-9EF9-4891-BA5E-53056A2FE480}";
 
             public const string DocumentDescription_FieldName = "LegacyDocument_DocumentDescription";

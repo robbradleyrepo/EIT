@@ -25,5 +25,8 @@
 
         [SitecoreField(Constants.DocumentLister.PreviousText_FieldID)]
         string PreviousText { get; set; }
+
+        [SitecoreField(Constants.DocumentLister.DownloadFileLabel_FieldID)]
+        string DownloadFileLabel { get; set; }
     }
 }

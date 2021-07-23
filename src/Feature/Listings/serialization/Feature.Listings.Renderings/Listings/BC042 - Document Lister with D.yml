@@ -1,20 +1,24 @@
 ﻿---
-ID: "7b266af4-b0f6-40c7-a383-6b5998dfa814"
+ID: "555e5709-7531-4523-8ea5-8a23ccea3b10"
 Parent: "24f14312-98cd-4560-8e59-ec05fd396495"
 Template: "99f8905d-4a87-4eb8-9f8b-a9bebfb3add6"
-Path: "/sitecore/layout/Renderings/Feature/Listings/BC043 - Generic Listing Module"
+Path: "/sitecore/layout/Renderings/Feature/Listings/BC042 - Document Lister with Date"
 DB: master
 SharedFields:
 - ID: "51b435bc-f7b9-478a-9c51-52916af96ff5"
   Hint: Path
-  Value: ~/Views/Listings/GenericListingModule.cshtml
+  Value: ~/Views/Listings/DocumentsListWithDate.cshtml
+- ID: "a2f5d9df-8cba-4a1d-99eb-51acb94cb057"
+  Hint: Page Editor Buttons
+  Type: Treelist
+  Value: "{31A3A929-C599-4DD3-91A6-F4A9487CC8B7}"
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
-  Value: "site:genericListingModule"
+  Value: "site:documentslistwithdate"
 - ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
   Hint: __Thumbnail
   Value: |
-    <image mediaid="{782AB168-5EC5-4E04-B9A4-3B61FCE07115}" />
+    <image mediaid="{EAB53826-AACF-498A-AFA3-6DE4BC895401}" />
 Languages:
 - Language: en
   Versions:
@@ -26,8 +30,4 @@ Languages:
       Value: 1
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210624T150716Z
-    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
-      Hint: __Created by
-      Value: |
-        sitecore\liontrust_admin
+      Value: 20210723T102652Z
