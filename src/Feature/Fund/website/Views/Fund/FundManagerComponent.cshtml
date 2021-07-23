@@ -6,7 +6,7 @@
 {
     return;
 }
-<div class="container mb-3">
+<section class="container">
     <h3 class="text-black">@Html.Glass().Editable(Model, m => m.Title)</h3>
     <div class="row">
         @foreach (var manager in Model.Managers)
@@ -34,4 +34,4 @@
             </div>
         }
     </div>
-</div>
+</section>

@@ -1,21 +1,23 @@
 ﻿namespace LionTrust.Feature.Text.Models
 {
-    using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
-    using System;
-
+    using LionTrust.Foundation.Design;
+   
     public interface ITitleComponent : ITextGlassBase
     {
-        [SitecoreField(Constants.TitleComponent.Title_FieldId, SitecoreFieldType.SingleLineText, "Content")]
+        [SitecoreField(Text.Constants.TitleComponent.Title_FieldId)]
         string Title { get; set; }
 
-        [SitecoreField(Constants.TitleComponent.HeadingType_FieldId, SitecoreFieldType.Droplink, "Content")]
-        Foundation.Design.ILookupValue HeadingType { get; set; }
+        [SitecoreField(Text.Constants.TitleComponent.HeadingType_FieldId)]
+        ILookupValue HeadingType { get; set; }
 
-        [SitecoreField(Constants.TitleComponent.TextAlign_FieldId, SitecoreFieldType.Droplink, "Content")]
-        Foundation.Design.ILookupValue TextAlignment { get; set; }
+        [SitecoreField(Text.Constants.TitleComponent.TextAlign_FieldId)]
+        ILookupValue TextAlignment { get; set; }
 
-        [SitecoreField(Constants.TitleComponent.TextColor_FieldId, SitecoreFieldType.Droplink, "Content")]
-        Foundation.Design.ILookupValue TextColor { get; set; }
+        [SitecoreField(Text.Constants.TitleComponent.TextColor_FieldId)]
+        ILookupValue TextColor { get; set; }
+
+        [SitecoreField(Text.Constants.TitleComponent.AddToContainer_FieldId)]
+        bool AddIntoContainer { get; set; }
     }
 }
