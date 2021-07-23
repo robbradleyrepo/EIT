@@ -133,3 +133,34 @@
     @include breakpoint(desktop, up)
         padding: 20px 32px
         margin-bottom: 0
+
+table.table-document
+    tbody
+        tr
+            display: flex
+            flex-direction: column
+            @include breakpoint(desktop, up)
+                display: table-row
+        border: none
+        border-top: 1px solid $secondary-silver
+        td, th            
+            border-bottom: none
+            padding: 10px 0 0px
+            @include p-1-medium-18          
+            &::after, &::before
+                display: none
+            @include breakpoint(desktop, up)
+                padding: 28px 0
+                border-bottom: 1px solid $secondary-silver
+        td:last-child
+            padding-right: 0
+            border-bottom: 1px solid $secondary-silver
+            padding-bottom: 10px
+            &::after
+                display: none
+            
+        &__link
+            @include breakpoint(desktop, up)
+                text-align: right
+                
+
