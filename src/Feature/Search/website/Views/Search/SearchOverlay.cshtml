@@ -5,7 +5,7 @@
     <div class="container">
         <div class="search-overlay__close"><button class="icon-close search-overlay__icon-close"></button></div>
         <div class="search-overlay__serch-content">
-            <form class="search-form" action="search-page.html" autocomplete="off">
+            <form class="search-form" action="@Model.SearchResultsPage.Url" autocomplete="off">
                 <input type="text" name="query" class="search-form__input" placeholder="@Model.Placeholdertext">
                 <button class="search-form__submit" type="submit">
                     <i class="icon-search"></i>

@@ -12,6 +12,7 @@
         public static class SearchOverlay
         {
             public const string PlaceholdertextFieldId = "{29F9E9E1-C66C-40D6-9669-4C170097B381}";
+            public const string SearchResultsPageFieldId = "{B5302FE9-36D0-4AF6-A7BC-F07129B4C5FA}";
         }
         public static class SiteSearch
         {
