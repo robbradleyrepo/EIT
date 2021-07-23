@@ -1,8 +1,8 @@
 ﻿---
-ID: "f596742e-b499-4fe3-8ba3-c8050a06f5bb"
+ID: "4468f23d-7632-43a9-a998-94360a0e349f"
 Parent: "af6dce28-f51a-44bb-a3cc-bd0009bdbc76"
 Template: "265516b5-70b3-44c6-809f-77052c76eb21"
-Path: /sitecore/content/LionTrustNew/Global/Search Configuration/Site Search/Site Search Filter
+Path: /sitecore/content/LionTrustNew/Global/Search Configuration/Site Search/Pages
 DB: master
 Languages:
 - Language: en
@@ -11,17 +11,19 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210719T114332Z
+      Value: 20210722T075256Z
     - ID: "2cd1668b-43fa-4854-8d91-84ed2ad9fb3c"
       Hint: SiteSearchFilter_Template
       Type: Treelist
       Value: |
-        {AB8309B9-E012-4C89-88BB-6D364FB5E0DB}
-        {C46981E0-0F52-4913-9C60-D39CC551E3A2}
+        {26E1649F-D891-47C8-91D9-BE41231F6FD6}
+        {C1D35F9A-A7D0-47F9-903D-5ED33A15A795}
+        {AE7E1757-B052-4751-B940-A9712E5247FD}
+        {39AC700A-AF02-4493-869E-0C59B0F4E4B3}
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
         sitecore\admin
     - ID: "a7f99c6c-a5af-4968-9c11-ec961745460f"
       Hint: SiteSearchFilter_PageName
-      Value: Articles
+      Value: Pages

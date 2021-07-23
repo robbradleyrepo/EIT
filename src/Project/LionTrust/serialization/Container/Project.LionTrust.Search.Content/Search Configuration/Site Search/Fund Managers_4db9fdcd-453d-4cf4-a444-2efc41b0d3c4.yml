@@ -1,0 +1,25 @@
+﻿---
+ID: "4db9fdcd-453d-4cf4-a444-2efc41b0d3c4"
+Parent: "af6dce28-f51a-44bb-a3cc-bd0009bdbc76"
+Template: "265516b5-70b3-44c6-809f-77052c76eb21"
+Path: /sitecore/content/LionTrustNew/Global/Search Configuration/Site Search/Fund Managers
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210722T080604Z
+    - ID: "2cd1668b-43fa-4854-8d91-84ed2ad9fb3c"
+      Hint: SiteSearchFilter_Template
+      Type: Treelist
+      Value: "{A742A8B9-B315-4895-8D46-8754962176FF}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "a7f99c6c-a5af-4968-9c11-ec961745460f"
+      Hint: SiteSearchFilter_PageName
+      Value: Fund Managers

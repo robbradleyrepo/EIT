@@ -33,7 +33,7 @@
             var field = fields.FirstOrDefault(f => f.CanHandle(item.Template.BaseTemplates.Select(t => t.ID.Guid)));
             if (field == null)
             {
-                return null;
+                return "Page";
             }
 
             return field.GetSearchResultType();
