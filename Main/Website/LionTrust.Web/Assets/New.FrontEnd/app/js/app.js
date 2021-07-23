@@ -21,6 +21,7 @@ import capitalisationChart from "./componets/capitalisationChart";
 import fundChartDropdown from "./componets/fundChartDropdown";
 import shareLink from "./componets/shareLink";
 import locationAndMap from "./componets/locationAndMap";
+import barStuckedChart from "./componets/barStuckedChart";
 
 document.addEventListener("DOMContentLoaded", () => {
   onboardingOverlay();
@@ -38,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fundChartDropdown();
   shareLink();
   locationAndMap();
+  barStuckedChart();
   // if (document.querySelector(".article-page")) articleFilter();
   if (document.querySelector(".main-page")) parallaxScrolling();
 
