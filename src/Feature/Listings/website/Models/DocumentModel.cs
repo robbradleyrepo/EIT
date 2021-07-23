@@ -20,9 +20,6 @@
         [JsonProperty("documentVideoLink")]
         public string DocumentVideoLink { get; set; }
 
-        [JsonProperty("documentDate")]
-        public string DocumentDate { get; set; }
-
         [JsonProperty("documentId")]
         public Guid DocumentId { get; set; }
     }

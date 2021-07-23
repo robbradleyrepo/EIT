@@ -51,8 +51,7 @@
                         DocumentLinkText = x.DocumentLink?.Text,
                         DocumentPageLink = x.PageLink?.Url,
                         DocumentId = x.Id,
-                        DocumentVideoLink = x.VideoLink?.Url,
-                        DocumentDate = x.Date != DateTime.MinValue ? x.Date.ToString("dd/MM/yy") : x.Created.ToString("dd/MM/yy")
+                        DocumentVideoLink = x.VideoLink?.Url
                     });
 
                 if (sortOrder == "ASC")
