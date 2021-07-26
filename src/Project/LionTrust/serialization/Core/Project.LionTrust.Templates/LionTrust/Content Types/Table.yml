@@ -1,0 +1,27 @@
+﻿---
+ID: "31f15e11-7a89-46f6-bdde-32ba02250d8d"
+Parent: "e9bb794a-b514-4ff5-8386-008fda7f7f66"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Table
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/table.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Type: tree list
+  Value: |
+    {1930BBEB-7805-471A-A3BE-4858AC7CF696}
+    {8023A760-3E34-43E9-8988-CAF0847EE2EF}
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{8E078991-8A24-4989-8588-EB85F84C9E89}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210726T113021Z
