@@ -2,8 +2,6 @@
 {
     using System;
     using System.Collections.Generic;
-
-    using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
     
@@ -38,5 +36,11 @@
 
         [SitecoreField(Constants.Document.PageLink_FieldId)]
         Link PageLink { get; set; }
+
+        [SitecoreField(Constants.Document.Date_FieldId)]
+        DateTime Date { get; set; }
+
+        [SitecoreField(Constants.Document.Created_FieldId)]
+        DateTime Created { get; set; }
     }
 }

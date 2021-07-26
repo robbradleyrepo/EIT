@@ -178,9 +178,9 @@
         /// Gets pages based on site search in the request.
         /// </summary>
         /// <returns>A list of site search results.</returns>
-        public ActionResult GetFilteredSearch(string query, string templateIds, string database = "web", int page = 1, int take = 21)
+        public ActionResult GetFilteredSearch(string query, string filters, string database = "web", int page = 1, int take = 21)
         {
-            var response = _siteSearchDataManager.Search(query, database, templateIds, Sitecore.Context.Language.Name, take, page);
+            var response = _siteSearchDataManager.Search(query, database, filters, Sitecore.Context.Language.Name, take, page);
             if (response.StatusCode != 200)
             {
                 return new HttpStatusCodeResult(response.StatusCode, response.StatusMessage);

@@ -1,5 +1,6 @@
-﻿@model LionTrust.Feature.Search.SiteSearch.ISiteSearch
-<div class="container search-page">
+﻿@using Sitecore.Configuration
+@model LionTrust.Feature.Search.SiteSearch.ISiteSearch
+<div class="container" id="result-list-app" data-pagesize="@(!string.IsNullOrWhiteSpace(@Model.ResultsPerPage) ? "10" : @Model.ResultsPerPage)" data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.SiteSearchApiRoute_SettingName))">
     <div class="row">
         <div class="col-lg-7">
             <div class="search-header__desktop">
@@ -7,7 +8,7 @@
                     {{amountResults}} search results for:
                 </div>
                 <form class="search-form" @@submit.prevent="submit">
-                    <input v-model="searchParams.queryText"
+                    <input v-model="searchParams.query"
                            type="text"
                            class="search-form__input"
                            :placeholder="getQueryText" />
@@ -17,29 +18,30 @@
                 </form>
             </div>
             @Html.Partial("~/views/search/_SiteSearchFilters.cshtml", Model)
-            <div v-if="loading" class="text-center mt-5">
+            <div v-if="loading" class="text-center mb-5">
                 <div class="spinner-border text-gold" role="status"></div>
             </div>
-            <div v-else>
+            <p v-if="!results.length && !loading" class="h2 text-center mb-5">
+                @Model.SearchResultsFoundCopy
+            </p>
+            <div v-if="init">
                 <div class="search-page__items">
-                    <p v-if="!results.length" class="h2 text-center py-5">
-                        @Model.SearchResultsFoundCopy
-                    </p>
+
                     <div v-for="(item, i) in getSearchResult"
-                         class="search-item"
-                         :key="i">
+                         :key="i + item.pageTitle"
+                         class="search-item">
                         <div class="search-item__header">
-                            <a :href="item.link" class="search-item__title">{{item.pageTitle}}</a>
-                            <div class="badge search-item__badge">{{item.pageType}}</div>
+                            <a :href="item.url" class="search-item__title">{{item.pageTitle}}</a>
+                            <div class="badge search-item__badge">{{item.resultType}}</div>
                         </div>
-                        <a :href="item.link">
+                        <a :href="item.url">
                             <p class="search-item__text">{{item.copy}}</p>
                         </a>
                         <div class="search-item__date">
                             <i class="icon-clock"></i>
                             {{item.pageDate}}
                         </div>
-                        <div v-if="item.type === 'Article'" class="search-item__footer">
+                        <div v-if="item.resultType === 'Article'" class="search-item__footer">
                             <div class="search-item__author search-item__footer-item">
                                 <img :src="item.authorImage"
                                      :alt="item.author"
@@ -47,19 +49,19 @@
                                 {{item.author}}
                             </div>
                             <div class="search-item__tag search-item__footer-item">
-                                <a :href="item.footer.team.link">
+                                <a :href="item.fundTeamUrl">
                                     <i class="icon-team"></i> {{item.fundTeam}}
                                 </a>
                             </div>
                         </div>
-                        <div v-if="item.type === 'Fund'" class="search-item__footer">
+                        <div v-if="item.resultType === 'Fund'" class="search-item__footer">
                             <div class="search-item__author search-item__footer-item">
                                 <div class="search-item__tag search-item__footer-item">
-                                    <a :href="item.footer.factsheet.link"><i class="icon-file"></i> Factsheet</a>
+                                    <a :href="item.factsheetUrl"><i class="icon-file"></i> Factsheet</a>
                                 </div>
                             </div>
                             <div class="search-item__tag search-item__footer-item">
-                                <a :href="item.footer.team.link">
+                                <a :href="item.fundTeamUrl">
                                     <i class="icon-team"></i> {{item.fundTeam}}
                                 </a>
                             </div>

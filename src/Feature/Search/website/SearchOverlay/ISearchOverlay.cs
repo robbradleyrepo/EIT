@@ -9,6 +9,7 @@
         [SitecoreField(Constants.SearchOverlay.PlaceholdertextFieldId)]
         string Placeholdertext { get; set; }
 
+        [SitecoreField(Constants.SearchOverlay.SearchResultsPageFieldId)]
         IGlassBase SearchResultsPage { get; set; }
     }
 }

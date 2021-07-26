@@ -1,0 +1,46 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using System.Collections.Specialized
+@model LionTrust.Feature.Listings.Models.IDocumentLister
+@if (Model != null)
+{
+    <section class="container">
+        <h2 class="text-black mb-3">@Html.Glass().Editable(Model, m => m.NameText)</h2>
+        @if (Model.DocumentList != null && Model.DocumentList.Any())
+        {
+            <table class="table table-document">
+                <tbody>
+                    @foreach (var document in Model.DocumentList)
+                    {
+                        <tr>
+                            <th scope="row">
+                                @using (Html.Glass().BeginEditFrame(document, "Edit Article Date", x => x.Date))
+                                {
+                                    if (Sitecore.Context.PageMode.IsExperienceEditor || document.Date != DateTime.MinValue)
+                                    {
+                                        @document.Date.ToString("dd/MM/yy")
+                                    }
+                                    else
+                                    {
+                                        @document.Created.ToString("dd/MM/yy")
+                                    }
+                                }
+                            </th>
+                            <td>@document.DocumentName</td>
+                            <td class="table-document__link">
+                                @using (Html.Glass().BeginRenderLink(document, m => m.DocumentLink, new NameValueCollection { { "class", "link-gray" }, { "target", "_blank" } }))
+                                {
+                                    @Html.Glass().Editable(Model, m => m.DownloadFileLabel)
+                                    <i class="icon-file"></i>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </section>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+                                {
+    @:Assign datasource for Documents List component
+}

@@ -106,7 +106,9 @@
     <Compile Include="SiteSearch\IFieldHandler.cs" />
     <Compile Include="SiteSearch\IFundFactsheetUrlField.cs" />
     <Compile Include="SiteSearch\ILegacyContentField.cs" />
+    <Compile Include="SiteSearch\ISearchUrlField.cs" />
     <Compile Include="SiteSearch\LegacyContentField.cs" />
+    <Compile Include="SiteSearch\SearchUrlField.cs" />
     <Compile Include="SiteSearch\SearchResultTypeField.cs" />
     <Compile Include="SiteSearch\FundTeamField.cs" />
     <Compile Include="SiteSearch\IFundTeamField.cs" />

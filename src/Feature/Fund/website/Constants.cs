@@ -115,9 +115,22 @@
             public const string ManagedByCurrentTeamForValue_FieldId = "{B141A98C-B927-4C25-AA97-6314C24A974F}";
         }
 
+        public static class FourFundStatsManual
+        {
+            public const string Heading_FieldId = "{06DA2ADC-4F41-4674-A432-50ADD4AE5220}";
+            public const string FirstTitle_FieldId = "{7057D082-6FF9-4FCC-BC25-6E68D2E504D3}";
+            public const string FirstValue_FieldId = "{C19C8970-62A2-4FBA-AAFA-BE7B112B2DCC}";
+            public const string SecondTitle_FieldId = "{96BC6D5C-4CF5-4C01-9A05-84E935F76673}";
+            public const string SecondValue_FieldId = "{CAA6C4AD-6997-4C8D-A16F-CD400FF7A355}";
+            public const string ThirdTitle_FieldId = "{4770ED05-A29D-41A4-AC27-5E6F1F2105C5}";
+            public const string ThirdValue_FieldId = "{C66D9A07-8DEE-483B-AD1D-5AA7AFFE3A34}";
+            public const string FourthTitle_FieldId = "{AB724582-2780-4933-BA84-7B19502D8FA4}";
+            public const string FourthValue_FieldId = "{CF15FA34-EB8F-4747-9BAC-35109A04FB6D}";
+        }
+
         public static class FundPage
         {
-            public static Guid TemplateId = Guid.Parse("{CFF8E8CF-7EA0-435F-AB8F-9BFA1FD61BBA}");
+            public static Guid TemplateId = Guid.Parse("{0CF5E9F6-FEE0-472C-B1D3-C4C68E20AA4D}");
             public const string PageFieldId = "{E43F6E86-0318-4766-B880-0C4F6512CA4E}";
         }
 

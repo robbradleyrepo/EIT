@@ -67,7 +67,7 @@
                         </div>
                         <div class="col-lg-6 col-xl-3">
                             <div class="doc-list__links">
-                                <button @@click="downloadDocument" class="link-gray">Download file <i class="icon-download"></i></button>
+                                <button @@click="downloadDocument" class="link-gray">@Html.Glass().Editable(Model, m => m.DownloadFileLabel) <i class="icon-download"></i></button>
                                 <a :href="document.documentPageLink" target="_blank" class="link-gray d-lg-none">@Html.Glass().Editable(Model, m => m.ViewPageText) <i class="icon-file"></i></a>
                                 <button v-if="document.documentVideoLink" data-type="iframe" data-fancybox
                                         :data-src="document.documentVideoLink" class="link-gray">

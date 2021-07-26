@@ -31,5 +31,11 @@
 
         [IndexField("fund_factsheet_url")]
         public string FactSheetUrl { get; set; }
+
+        [IndexField("LegacyDocument_DocumentName")]
+        public string DocumentName { get; set; }
+
+        [IndexField("LegacyDocument_DocumentDescription")]
+        public string DocumentDescription { get; set; }
     }
 }
