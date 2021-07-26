@@ -3,7 +3,6 @@ import Chart from "chart.js";
 export default () => {
   console.log("works");
   const charts = document.getElementsByClassName("stucked-chart");
-  console.log("charts", charts);
   if (charts) {
     charts.forEach((chart) => {
       console.log("chart", chart);
@@ -13,7 +12,7 @@ export default () => {
       //   );
       Chart.defaults.global.defaultFontSize = 20;
       Chart.defaults.global.defaultFontFamily = "futura-pt";
-    //   Chart.defaults.global.defaultFontStyle = "300";
+      //   Chart.defaults.global.defaultFontStyle = "300";
 
       const myChart = new Chart(ctx, {
         type: "bar",
@@ -58,7 +57,7 @@ export default () => {
                 stacked: true,
                 gridLines: {
                   display: false,
-                },                
+                },
               },
             ],
             yAxes: [
@@ -69,13 +68,13 @@ export default () => {
                   borderDash: [3, 3],
                 },
                 ticks: {
-                    callback: function (value, index, values) {
-                      return value + "%";
-                    },
-                    beginAtZero: true,
-                    stepSize: 10,
-                    // max: 100,
+                  callback: function (value, index, values) {
+                    return value + "%";
                   },
+                  beginAtZero: true,
+                  stepSize: 10,
+                  // max: 100,
+                },
               },
             ],
           },
@@ -85,14 +84,38 @@ export default () => {
             labels: {
               boxWidth: 18,
               boxHeight: 15,
-              borderRadius: "50%"
+              borderRadius: "50%",
             },
           },
           tooltips: {
-            enabled: false
+            enabled: false,
+          },
+          legend: {
+            display: false,
+          },
+          legendCallback: function ({ data }) {
+            const text = [];
+            text.push('<ul class="stucked-legend">');
+            console.log("data", data);
+            for (let i = 0; i < data.datasets.length; i++) {
+              text.push(
+                '<li><span class="dot" style="background-color:' +
+                  data.datasets[i].backgroundColor[0] +
+                  '"></span>'
+              );
+              text.push(
+                '<span class="label">' + data.datasets[i].label + "</span></li>"
+              );
+            }
+
+            text.push("</ul>");
+
+            return text.join("");
           },
         },
       });
+      // add legend to chart bottom
+      $(chart.parentNode).append(myChart.generateLegend());
     });
   }
 };

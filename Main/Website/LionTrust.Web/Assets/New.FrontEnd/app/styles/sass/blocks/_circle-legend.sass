@@ -5,7 +5,7 @@
     padding: 20px 32px
     @include breakpoint(desktop, up)
         padding: 20px 50px
-    
+
 .circle-legend, .capitalisation-legend
     color: $black
     width: 100%
@@ -35,3 +35,19 @@
     background: $white
     border: 1px solid $secondary-silver
     padding: 1rem 2rem
+    border-bottom: none
+
+.stucked-legend
+    @extend .circle-legend
+    background: $white
+    flex-direction: row
+    margin: 0
+    justify-content: space-between
+    border: 1px solid $secondary-silver
+    border-top: none
+    padding: 0 2rem
+    .dot
+        margin-right: 0.5rem
+        width: 20px
+    .label
+        font-size: 1rem
