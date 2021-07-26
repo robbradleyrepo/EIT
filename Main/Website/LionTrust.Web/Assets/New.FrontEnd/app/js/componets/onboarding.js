@@ -5,6 +5,7 @@ export default () => {
   const onboarding = $(".onboarding-overlay");
   const btnStep = $("[data-set-step]");
   const rawAcceptText = $('.onboarding-overlay__text').text();
+  var countryName = '';
 
   // default values
   const currentTab = Cookies.get("currentTab") || 1;
@@ -56,7 +57,7 @@ export default () => {
   $("[data-investor-type]").on("click", (e) => {
 	 $('#Role').val(e.target.dataset.investorType);
 	 var acceptText = $('.onboarding-overlay__text');
-	 $(acceptText).text(rawAcceptText.replace("{role}", e.target.dataset.investorName));
+	 $(acceptText).text(rawAcceptText.replace("{role}", e.target.dataset.investorName).replace("{country}", countryName));
   });
 
   // set country
@@ -87,8 +88,7 @@ export default () => {
   
   const SetCountry = (e) => {
 	  $('#Country').val(e.target.dataset.isoCountry);
-	 var acceptText = $('.onboarding-overlay__text');
-	 $(acceptText).text(rawAcceptText.replace("{country}", e.target.dataset.nameCountry));
+	  countryName = e.target.dataset.nameCountry;
 
 	 if(e.target.dataset.isoCountry != "GB"){
 		 $('.btn.private-investor').hide();
