@@ -1,15 +1,23 @@
 import Chart from "chart.js";
+import chartColors from "./chart/chartColors";
 
 export default () => {
   console.log("works");
   const charts = document.getElementsByClassName("stucked-chart");
   if (charts) {
     charts.forEach((chart) => {
-      console.log("chart", chart);
       const ctx = chart.getContext("2d");
-      //   const { labels, data, backgroundColor } = $(".capitalisation-chart").data(
-      //     "chart"
-      //   );
+      const data = $(chart).data("chart");
+      const {labels, datasets} = data; 
+      // add colors array to dataset
+      const genericDataset = datasets.map((set, i) => {
+          const backgroundColor = []
+          for(let item in set.data) {
+            backgroundColor.push(chartColors[i])
+          }
+          return {...set, backgroundColor}
+      })
+
       Chart.defaults.global.defaultFontSize = 20;
       Chart.defaults.global.defaultFontFamily = "futura-pt";
       //   Chart.defaults.global.defaultFontStyle = "300";
@@ -17,29 +25,8 @@ export default () => {
       const myChart = new Chart(ctx, {
         type: "bar",
         data: {
-          labels: ["FY18", "FY19", "FY20"],
-          datasets: [
-            {
-              label: "First Quartile",
-              data: [70, 60, 50],
-              backgroundColor: ["#0E8039", "#0E8039", "#0E8039"],
-            },
-            {
-              label: "Second Quartile",
-              data: [20, 25, 30],
-              backgroundColor: ["#E77B05", "#E77B05", "#E77B05"],
-            },
-            {
-              label: "Third Quartile",
-              data: [5, 10, 15],
-              backgroundColor: ["#0C97AC", "#0C97AC", "#0C97AC"],
-            },
-            {
-              label: "Fourth Quartile",
-              data: [5, 5, 5],
-              backgroundColor: ["#C0A961", "#C0A961", "#C0A961"],
-            },
-          ],
+          labels,
+          datasets: genericDataset,
         },
         options: {
           layout: {
@@ -96,7 +83,7 @@ export default () => {
           legendCallback: function ({ data }) {
             const text = [];
             text.push('<ul class="stucked-legend">');
-            console.log("data", data);
+            console.log("data", data.datasets);
             for (let i = 0; i < data.datasets.length; i++) {
               text.push(
                 '<li><span class="dot" style="background-color:' +
