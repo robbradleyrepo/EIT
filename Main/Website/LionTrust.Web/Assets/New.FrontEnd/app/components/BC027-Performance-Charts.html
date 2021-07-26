@@ -1,9 +1,57 @@
 <section class="container">
     <div class="row">
         <div class="col-lg-6">
-            <!-- set values for char in data attribute -->
-            <h5 class="text-black">AuMA* weighted quartile ranking since launch or manager inception</h5>
-            <canvas class="stucked-chart" width="400" height="400" data-chart='{"labels":["FY18","FY19","FY20"],"datasets":[{"label":"First Quartile","data":[70,60,50]},{"label":"Second Quartile","data":[20,25,30]},{"label":"Third Quartile","data":[5,10,15]},{"label":"Fourth Quartile","data":[5,5,5]}]}'></canvas>
+            <div class="stucked-chart">
+                <h5 class="stucked-chart__title">AuMA<span class="text-gold">*</span> weighted quartile ranking since launch or manager inception</h5>
+                <div class="stucked-chart__wrapper">
+                    <!-- set values for char in data attribute -->
+                    <canvas height="440" class="stucked-chart__item"
+                        data-chart='{"labels":["FY18","FY19","FY20"],"datasets":[{"label":"First Quartile","data":["70",60,50]},{"label":"Second Quartile","data":[20,25,30]},{"label":"Third Quartile","data":[5,10,15]},{"label":"Fourth Quartile","data":[5,5,5]}],"config":{"scale": "%"}}'></canvas>
+                    <small class="small-text stucked-chart__small">
+                        <span class="text-gold">*</span> This is an alternative performance measure (‘APM’).
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="stucked-chart">
+                <h5 class="stucked-chart__title">AuMA<span class="text-gold">*</span> by investor type £’million</h5>
+                <div class="stucked-chart__wrapper">
+                    <!-- set values for char in data attribute -->
+                    <canvas height="440" class="stucked-chart__item"
+                        data-chart='{"labels":["FY18","FY19","FY20"],"datasets":[{"label":"UK Retail funds","data":[1000,2000,3000]},{"label":"Institutional","data":[8000,10000,13000]},{"label":"Offshore funds","data":[3000,4000,4500]},{"label":"Multi Asset","data":[2000,3000,3000]}]}'></canvas>
+                    <small class="small-text stucked-chart__small">
+                        <span class="text-gold">*</span> This is an alternative performance measure (‘APM’).
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="stucked-chart">
+                <h5 class="stucked-chart__title">Net flows £’ million</h5>
+                <div class="stucked-chart__wrapper">
+                    <!-- set values for char in data attribute -->
+                    <canvas height="440" class="stucked-chart__item"
+                        data-chart='{"labels":["FY18","FY19","FY20"],"datasets":[{"data":[1000,2000,3000]}], "config":{"scale": "£"}}'></canvas>
+                    <small class="small-text stucked-chart__small">
+                        <span class="text-gold">*</span> This is an alternative performance measure (‘APM’).
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="stucked-chart">
+                <h5 class="stucked-chart__title">Adjusted profit before tax<span class="text-gold">*</span> £’000</h5>
+                <div class="stucked-chart__wrapper">
+                    <!-- set values for char in data attribute -->
+                    <canvas height="440" class="stucked-chart__item"
+                        data-chart='{"labels":["FY18","FY19","FY20"],"datasets":[{"data":[23000,29000,37000]}]}'></canvas>
+                    <small class="small-text stucked-chart__small">
+                        <span class="text-gold">*</span> This is an alternative performance measure (‘APM’).
+                    </small>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>

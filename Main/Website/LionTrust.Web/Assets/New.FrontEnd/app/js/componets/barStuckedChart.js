@@ -2,21 +2,20 @@ import Chart from "chart.js";
 import chartColors from "./chart/chartColors";
 
 export default () => {
-  console.log("works");
-  const charts = document.getElementsByClassName("stucked-chart");
+  const charts = document.getElementsByClassName("stucked-chart__item");
   if (charts) {
     charts.forEach((chart) => {
       const ctx = chart.getContext("2d");
       const data = $(chart).data("chart");
-      const {labels, datasets} = data; 
+      const { labels, datasets, config } = data;
       // add colors array to dataset
       const genericDataset = datasets.map((set, i) => {
-          const backgroundColor = []
-          for(let item in set.data) {
-            backgroundColor.push(chartColors[i])
-          }
-          return {...set, backgroundColor}
-      })
+        const backgroundColor = [];
+        for (let item in set.data) {
+          backgroundColor.push(chartColors[i]);
+        }
+        return { ...set, backgroundColor };
+      });
 
       Chart.defaults.global.defaultFontSize = 20;
       Chart.defaults.global.defaultFontFamily = "futura-pt";
@@ -35,8 +34,8 @@ export default () => {
             top: 15,
             bottom: 0,
           },
-          maintainAspectRatio: true,
-          responsive: true,
+          maintainAspectRatio: false,
+          aspectRatio:0,
           scales: {
             xAxes: [
               {
@@ -56,10 +55,12 @@ export default () => {
                 },
                 ticks: {
                   callback: function (value, index, values) {
-                    return value + "%";
+                    if (config?.scale === "%") return value + config.scale;
+                    if (config?.scale === "£") return config.scale + value;
+                    return value;
                   },
                   beginAtZero: true,
-                  stepSize: 10,
+                  //   stepSize: 10,
                   // max: 100,
                 },
               },
@@ -83,26 +84,27 @@ export default () => {
           legendCallback: function ({ data }) {
             const text = [];
             text.push('<ul class="stucked-legend">');
-            console.log("data", data.datasets);
             for (let i = 0; i < data.datasets.length; i++) {
-              text.push(
-                '<li><span class="dot" style="background-color:' +
-                  data.datasets[i].backgroundColor[0] +
-                  '"></span>'
-              );
-              text.push(
-                '<span class="label">' + data.datasets[i].label + "</span></li>"
-              );
+              if (data.datasets[i].label) {
+                text.push(
+                  '<li><span class="dot" style="background-color:' +
+                    data.datasets[i].backgroundColor[0] +
+                    '"></span>'
+                );
+                text.push(
+                  '<span class="label">' +
+                    data.datasets[i].label +
+                    "</span></li>"
+                );
+              }
             }
-
             text.push("</ul>");
-
             return text.join("");
           },
         },
       });
       // add legend to chart bottom
-      $(chart.parentNode).append(myChart.generateLegend());
+      $(chart).after(myChart.generateLegend());
     });
   }
 };
