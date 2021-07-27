@@ -104,9 +104,6 @@
     <Compile Include="DataManagers\Interfaces\IGenericListingDataManager.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Models\AccordionViewModel.cs" />
-    <Compile Include="Models\PerformanceCharts\IChartColumnFolder.cs" />
-    <Compile Include="Models\PerformanceCharts\IChartRangeValueFolder.cs" />
-    <Compile Include="Models\PerformanceCharts\IChartRangeValue.cs" />
     <Compile Include="Models\PerformanceCharts\ChartColumnModel.cs" />
     <Compile Include="Models\PerformanceCharts\ChartsModel.cs" />
     <Compile Include="Models\Document.cs" />
@@ -129,6 +126,7 @@
     <Compile Include="Models\API\GenericListingResult.cs" />
     <Compile Include="Models\ListingFilterFacetsModel.cs" />
     <Compile Include="Models\PerformanceCharts\PerformanceChartsViewModel.cs" />
+    <Compile Include="Models\PerformanceCharts\YAxeConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Routes\RegisterRoutes.cs" />
     <Compile Include="Utils.cs" />

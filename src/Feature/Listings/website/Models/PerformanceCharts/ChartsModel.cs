@@ -5,7 +5,7 @@
     public class ChartsModel
     {
         public List<string> Labels { get; set; }
-        public IEnumerable<string> Ranges { get; set; }
+        public YAxeConfig YAxeConfig { get; set; }
         public List<ChartColumnModel> Datasets { get; set; }
     }
 }

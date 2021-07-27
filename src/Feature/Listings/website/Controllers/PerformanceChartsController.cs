@@ -3,7 +3,6 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Web.Mvc;
-    using LionTrust.Feature.Listings.Models;
     using LionTrust.Feature.Listings.Models.PerformanceCharts;
     using LionTrust.Foundation.Content.Repositories;
     using Newtonsoft.Json;
@@ -25,65 +24,46 @@
             viewModel.Data = _renderingRepository.GetDataSourceItem<IPerformanceCharts>();
             var chartModel = new ChartsModel();
 
-            if (viewModel.Data == null
-                || viewModel.Data.ChartColumnFolder == null
-                || !viewModel.Data.ChartColumnFolder.Any()
-                || viewModel.Data.ChartRangeValueFolder == null
-                || !viewModel.Data.ChartRangeValueFolder.Any())
-            {
-                return null;
-            }
-
-            viewModel.ChartColumnFolder = viewModel.Data.ChartColumnFolder.FirstOrDefault();
-            viewModel.ChartRangeValueFolder = viewModel.Data.ChartRangeValueFolder.FirstOrDefault();
-            if (viewModel.ChartColumnFolder == null
-                || viewModel.ChartColumnFolder.ChartColumns == null
-                || !viewModel.ChartColumnFolder.ChartColumns.Any())
-            {
-                return null;
-            }
-
-            if (viewModel.ChartRangeValueFolder != null
-                && viewModel.ChartRangeValueFolder.ChartRanges != null
-                && viewModel.ChartRangeValueFolder.ChartRanges.Any())
-            {
-                chartModel.Ranges = viewModel.ChartRangeValueFolder.ChartRanges.Select(x => !string.IsNullOrEmpty(x.Value) ? x.Value : x.Name);
-            }
-                       
-            chartModel.Labels = new List<string>();
-            chartModel.Datasets = new List<ChartColumnModel>(viewModel.ChartColumnFolder.ChartColumns.Count());
+            chartModel.YAxeConfig = new YAxeConfig(){
+                Scale = viewModel.Data.Scale 
+            };
+            chartModel.Labels = new List<string>();            
             var columnValueCount = 0;
             var first = true;
 
-            foreach (var chart in viewModel.ChartColumnFolder.ChartColumns)
+            if (viewModel.Data != null && viewModel.Data.ChartColumns != null)
             {
-                chartModel.Labels.Add(!string.IsNullOrEmpty(chart.Title) ? chart.Title : chart.Name);
-                if (chart.ChartValues != null && chart.ChartValues.Any())
+                chartModel.Datasets = new List<ChartColumnModel>(viewModel.Data.ChartColumns.Count());
+                foreach (var chart in viewModel.Data.ChartColumns)
                 {
-                    foreach (var chartColumn in chart.ChartValues)
+                    chartModel.Labels.Add(!string.IsNullOrEmpty(chart.Title) ? chart.Title : chart.Name);
+                    if (chart.ChartValues != null && chart.ChartValues.Any())
                     {
-                        if (first)
+                        foreach (var chartColumn in chart.ChartValues)
                         {
-                            chartModel.Datasets.Add(new ChartColumnModel
+                            if (first)
                             {
-                                Data = new List<int>() { chartColumn.Value },
-                                Color = chartColumn.Color.Value,
-                                Label = chartColumn.Title
-                            });
-                        }
-                        else
-                        {
-                            chartModel.Datasets[columnValueCount].Data.Add(chartColumn.Value);
-                            chartModel.Datasets[columnValueCount].Color = chartColumn.Color.Value;
-                            chartModel.Datasets[columnValueCount].Label = chartColumn.Title;
-                        }
+                                chartModel.Datasets.Add(new ChartColumnModel
+                                {
+                                    Data = new List<int>() { chartColumn.Value },
+                                    Color = chartColumn.Color.Value,
+                                    Label = chartColumn.Title
+                                });
+                            }
+                            else
+                            {
+                                chartModel.Datasets[columnValueCount].Data.Add(chartColumn.Value);
+                                chartModel.Datasets[columnValueCount].Color = chartColumn.Color.Value;
+                                chartModel.Datasets[columnValueCount].Label = chartColumn.Title;
+                            }
 
-                        columnValueCount++;
+                            columnValueCount++;
+                        }
                     }
-                }
 
-                first = false;
-                columnValueCount = 0;
+                    first = false;
+                    columnValueCount = 0;
+                }
             }
 
             var jsonSerializerSettings = new JsonSerializerSettings

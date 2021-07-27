@@ -82,18 +82,12 @@
         public static class PerformanceCharts
         {
             public const string Title_FieldId = "{18AD469C-30AB-420C-A9AA-1FE500163A10}";
+            public const string LegendDescription_FieldId = "{EEAA9FA2-ACB3-4DE1-978B-0FA58D7B0221}";
             public const string Width_FieldId = "{AE97152E-D708-47EE-9F64-62CAFD9D6929}";
             public const string Height_FieldId = "{AE5BC6E7-8584-42D2-B908-37183FED6035}";
-        }
-
-        public static class ChartColumnFolder
-        {
-            public const string TemplateId = "{5C4A353C-6BA0-40A3-9638-188C47BA7CA2}";
-        }
-
-        public static class ChartRangeValueFolder
-        {
-            public const string TemplateId = "{2B2295C9-93DE-49CF-83CE-D2C826E0DCD8}";
+            public const string Scale_FieldId = "{91102FF9-F609-4ADE-A427-0676FCA53279}";
+            public const string Range_FieldId = "{E350A26A-5CCE-4A24-A220-90610CFE740C}";
+            public const string MaxRange_FieldId = "{0A7A9253-28D8-4544-B566-43E9909ECA08}";
         }
 
         public static class ChartColumns
@@ -107,12 +101,6 @@
             public const string Title_FieldId = "{346103D5-FD6A-462A-BDC2-F025A1AC46E1}";
             public const string Value_FieldId = "{C8A3907E-8191-4DCE-B0BD-83BCBA1F4A18}";
             public const string Color_FieldId = "{F50C3989-9037-4B6D-847A-80584D65C963}";
-        }
-
-        public static class ChartRangeValues
-        {
-            public const string TemplateId = "{9D8D89E0-FF7E-4F85-BC18-2AEF9CD7AC7D}";
-            public const string Value_FieldId = "{E350A26A-5CCE-4A24-A220-90610CFE740C}";
         }
 
         public static class Settings

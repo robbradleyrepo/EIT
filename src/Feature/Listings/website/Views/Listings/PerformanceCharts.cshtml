@@ -11,13 +11,13 @@
                         data-chart='@Model.ChartJson'>
                 </canvas>
             }
-            else if (Model.ChartColumnFolder != null && Model.ChartRangeValueFolder != null)
+            else if (Model.Data.ChartColumns != null && Model.Data.ChartColumns != null)
             {
-                using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/PerformanceCharts", Model.ChartColumnFolder.Id.ToString(), "Add new chart column"))
+                using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/PerformanceCharts", Model.Data.Id.ToString(), "Edit Performance Chart"))
                 {
                     <div class="table-responsive-lg">
                         <table class="table table-striped mb-3">
-                            @foreach (var chart in Model.ChartColumnFolder.ChartColumns)
+                            @foreach (var chart in Model.Data.ChartColumns)
                             {
                                 <tr>
                                     <th>
@@ -41,29 +41,13 @@
                                 </tr>
                             }
                         </table>
-                        <table class="table table-striped mb-3">
-                            <tr>
-                                <th>
-                                    @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/PerformanceCharts/ChartRange", Model.ChartRangeValueFolder.Id.ToString(), "Add new chart range"))
-                                    {
-                                        @:Add Chart Ranges
-                                    }
-                                </th>
-                                @foreach (var chartRange in Model.ChartRangeValueFolder.ChartRanges)
-                                {
-                                    <td>
-                                        @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/PerformanceCharts/ChartRange/Edit", chartRange.Id.ToString(), "Edit chart range"))
-                                        {
-                                            @Html.Glass().Editable(chartRange, cr => cr.Value)
-                                        }
-                                    </td>
-                                }
-                            </tr>
-                        </table>
                     </div>
                 }
 
             }
+            <small class="small-text stucked-chart__small">
+                <span class="text-gold">*</span> @Html.Glass().Editable(Model.Data, m => m.LegendDescription)
+            </small>
         </div>
     </div>
 </section>
