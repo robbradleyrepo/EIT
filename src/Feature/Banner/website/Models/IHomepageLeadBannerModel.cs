@@ -7,8 +7,11 @@
 
     public interface IHomepageLeadBannerModel: IBannerGlassBase
     {
-        [SitecoreField(Banner.Constants.HomepageLeadBanner.HomepageBannerHeadingFieldId)]
-        string Heading { get; set; }
+        [SitecoreField(Banner.Constants.HomepageLeadBanner.HomepageBannerHeadingLine1FieldId)]
+        string HeadingLine1 { get; set; }
+
+        [SitecoreField(Banner.Constants.HomepageLeadBanner.HomepageBannerHeadingLine2FieldId)]
+        string HeadingLine2 { get; set; }
 
         [SitecoreField(Banner.Constants.HomepageLeadBanner.HomepageBannerPrimaryCtaFieldId)]
         Link PrimaryCta { get; set; }

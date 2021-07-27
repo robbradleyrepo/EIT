@@ -11,7 +11,8 @@
 
         public static class HomepageLeadBanner
         {
-            public const string HomepageBannerHeadingFieldId = "{E0B1CD77-CF3A-4CE0-BB48-545985A11121}";
+            public const string HomepageBannerHeadingLine1FieldId = "{E0B1CD77-CF3A-4CE0-BB48-545985A11121}";
+            public const string HomepageBannerHeadingLine2FieldId = "{BC673FAB-9FDC-40BD-87F9-6D3140806092}";
             public const string HomepageBannerPrimaryCtaFieldId = "{FEDD5F78-07DA-44BB-8C46-8149A03834E4}";
             public const string HomepageBannerSecondaryCtaFieldId = "{0C566B1C-47D3-48A5-A2ED-EF342735ED54}";
             public const string HomepageBannerPrimaryCtaGoalFieldId = "{250606C9-E9C3-4B65-B015-2367F6D2DEA2}";
