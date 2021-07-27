@@ -34,32 +34,13 @@ SharedFields:
           s:par="DatasourceRule"
           s:ph="/content/fund-page-content/left-content_{cc89e078-0d7d-4ab4-ba3c-e3eb28432dea}" />
         <r
-          uid="{CEC4666D-950E-4BB2-ADD3-1A523FA68F4F}">
-          <p:d />
-        </r>
-        <r
           uid="{21DEEBAE-4051-4D37-ADE8-ACB979963634}"
           p:after="r[@uid='{F3F5DDD8-BCED-4C83-A49B-42E641DFDC1F}']"
           s:id="{302ADD39-9FA0-4282-8D6B-AD95AE6F0C4A}"
           s:ph="content" />
         <r
-          uid="{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}"
-          s:ph="/content/fund-page-content" />
-        <r
-          uid="{E68675B2-194E-4FCD-97FB-AFCFFA66A966}">
-          <p:d />
-        </r>
-        <r
-          uid="{D2F551B2-8E4E-42AB-A016-9E554910D949}">
-          <p:d />
-        </r>
-        <r
-          uid="{7D2A9FAB-D42F-4FA0-89BF-BAEAF0A42DA0}">
-          <p:d />
-        </r>
-        <r
           uid="{659E7BA8-467A-43C4-82DB-B46DE0333154}"
-          p:after="r[@uid='{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}']"
+          p:after="r[@uid='{6EF1721C-9DBD-4505-A950-FD64CA9FE3D8}']"
           s:ds="{AAC3F2EE-EEE2-4DFA-8B5E-098E5501466A}"
           s:id="{8A50B96F-BF28-43E6-87D5-1E3408F8171A}"
           s:par="DatasourceRule"
@@ -73,21 +54,9 @@ SharedFields:
           s:ph="/content/fund-page-content" />
         <r
           uid="{CC89E078-0D7D-4AB4-BA3C-E3EB28432DEA}"
-          p:after="r[@uid='{89F122B2-6FEA-43A5-B23F-307B967A2AC7}']"
+          p:after="*[1=2]"
           s:id="{D506C47C-07BC-4D09-B36A-17E5F10F5636}"
           s:ph="/content/fund-page-content" />
-        <r
-          uid="{1A449E6C-3CAF-4F50-ABE3-70B3E38D974C}">
-          <p:d />
-        </r>
-        <r
-          uid="{E461C5F3-56B7-4810-8CE2-832CE9B4994D}">
-          <p:d />
-        </r>
-        <r
-          uid="{E8B045E9-35F5-4BA8-B0B2-0A02D1BD298B}">
-          <p:d />
-        </r>
       </d>
     </r>
 Languages:
@@ -132,6 +101,9 @@ Languages:
               s:ds="{FE19410A-2BC3-4FC5-8D04-A5CCA5DFB8C8}"
               s:id="{FA490876-F4C4-4D7B-8F4B-E03AD6EB898A}"
               s:ph="/content/fund-page-content" />
+            <r
+              uid="{CC89E078-0D7D-4AB4-BA3C-E3EB28432DEA}"
+              p:after="*[1=2]" />
           </d>
         </r>
     - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"

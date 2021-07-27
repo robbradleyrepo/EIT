@@ -46,36 +46,13 @@ Languages:
               s:par="DatasourceRule"
               s:ph="/content/fund-page-content/left-content_{5757be4c-2b08-45a4-a8e6-92d75385bb0e}" />
             <r
-              uid="{CEC4666D-950E-4BB2-ADD3-1A523FA68F4F}">
-              <p:d />
-            </r>
-            <r
               uid="{B64A2AF9-5049-4B71-B429-91F6FCE4F608}"
               p:after="r[@uid='{F3F5DDD8-BCED-4C83-A49B-42E641DFDC1F}']"
               s:id="{302ADD39-9FA0-4282-8D6B-AD95AE6F0C4A}"
               s:ph="content" />
             <r
-              uid="{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}"
-              s:ph="/content/fund-page-content" />
-            <r
-              uid="{E68675B2-194E-4FCD-97FB-AFCFFA66A966}">
-              <p:d />
-            </r>
-            <r
-              uid="{D2F551B2-8E4E-42AB-A016-9E554910D949}">
-              <p:d />
-            </r>
-            <r
-              uid="{7D2A9FAB-D42F-4FA0-89BF-BAEAF0A42DA0}">
-              <p:d />
-            </r>
-            <r
-              uid="{1A449E6C-3CAF-4F50-ABE3-70B3E38D974C}">
-              <p:d />
-            </r>
-            <r
               uid="{80B7C4B5-52DC-42D4-85AD-EA657E295759}"
-              p:after="r[@uid='{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}']"
+              p:after="r[@uid='{6EF1721C-9DBD-4505-A950-FD64CA9FE3D8}']"
               s:ds="{E56BAC1D-F9BF-4472-85FA-35EEE42F0B9B}"
               s:id="{8A50B96F-BF28-43E6-87D5-1E3408F8171A}"
               s:par="DatasourceRule"
@@ -98,24 +75,8 @@ Languages:
               s:id="{4BB8AB0A-674E-4424-8CAD-546B10F0B535}"
               s:ph="/content/fund-page-content" />
             <r
-              uid="{E461C5F3-56B7-4810-8CE2-832CE9B4994D}">
-              <p:d />
-            </r>
-            <r
-              uid="{E8B045E9-35F5-4BA8-B0B2-0A02D1BD298B}">
-              <p:d />
-            </r>
-            <r
-              uid="{F1A65CCC-477D-4482-ABDB-FBC1DE7022E8}">
-              <p:d />
-            </r>
-            <r
-              uid="{DBED87B3-2FAB-449A-947F-32D769FC232E}">
-              <p:d />
-            </r>
-            <r
               uid="{02CBEB44-EE27-4A3D-B1DB-FF550BE3E428}"
-              p:after="r[@uid='{ED580DB1-87A7-45EF-A0FD-9C6089D5FD53}']"
+              p:after="*[1=2]"
               s:ds="{1C8BD856-5470-4B8A-9085-07F0F5699359}"
               s:id="{777B1AE2-307E-4C65-9987-9BD39085419B}"
               s:par=""

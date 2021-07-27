@@ -4,33 +4,6 @@ Parent: "26e1649f-d891-47c8-91d9-be41231f6fd6"
 Template: "26e1649f-d891-47c8-91d9-be41231f6fd6"
 Path: /sitecore/templates/Project/LionTrust/Page Types/Page/__Standard Values
 DB: master
-SharedFields:
-- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
-  Hint: __Renderings
-  Type: layout
-  Value: |
-    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-      <d
-        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
-        l="{CD1590E1-6573-4CC7-B0A9-E3BB6A9DADE4}">
-        <r
-          id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
-          ph="/header/navigation"
-          uid="{21A62FB1-9BA7-42F4-BBAE-893230139CB5}" />
-        <r
-          id="{29A12478-EBE8-4B5C-BF2E-871026066814}"
-          ph="footer"
-          uid="{CCBBB036-5788-4F78-AC6A-DF34C178F76C}" />
-        <r
-          id="{DD1D438A-3971-438B-B1C9-461415F43488}"
-          ph="footer"
-          uid="{A9D97645-8E0D-4192-A314-3437510B5AF8}" />
-        <r
-          id="{C728A955-DA1D-4700-B924-E0D35901DE4B}"
-          ph="footer"
-          uid="{18D730E1-9A24-4B28-A03A-672CF127E47B}" />
-      </d>
-    </r>
 Languages:
 - Language: en
   Versions:

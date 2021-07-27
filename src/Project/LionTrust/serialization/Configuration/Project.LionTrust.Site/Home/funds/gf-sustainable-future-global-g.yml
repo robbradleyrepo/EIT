@@ -34,32 +34,13 @@ SharedFields:
           s:par="DatasourceRule"
           s:ph="/content/fund-page-content/left-content_{0cc29e02-7fbe-4dbd-b9b3-dbba62eafec7}" />
         <r
-          uid="{CEC4666D-950E-4BB2-ADD3-1A523FA68F4F}">
-          <p:d />
-        </r>
-        <r
           uid="{00318A60-8F5D-475B-BFCE-3CA0F1DFAE26}"
           p:after="r[@uid='{F3F5DDD8-BCED-4C83-A49B-42E641DFDC1F}']"
           s:id="{302ADD39-9FA0-4282-8D6B-AD95AE6F0C4A}"
           s:ph="content" />
         <r
-          uid="{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}"
-          s:ph="/content/fund-page-content" />
-        <r
-          uid="{E68675B2-194E-4FCD-97FB-AFCFFA66A966}">
-          <p:d />
-        </r>
-        <r
-          uid="{D2F551B2-8E4E-42AB-A016-9E554910D949}">
-          <p:d />
-        </r>
-        <r
-          uid="{7D2A9FAB-D42F-4FA0-89BF-BAEAF0A42DA0}">
-          <p:d />
-        </r>
-        <r
           uid="{712B3E62-D40B-40DF-9FE6-564395D58D91}"
-          p:after="r[@uid='{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}']"
+          p:after="r[@uid='{6EF1721C-9DBD-4505-A950-FD64CA9FE3D8}']"
           s:ds="{16A91A54-F932-4DFB-9E52-38727C81C5BE}"
           s:id="{8A50B96F-BF28-43E6-87D5-1E3408F8171A}"
           s:par="DatasourceRule"
@@ -77,24 +58,8 @@ SharedFields:
           s:id="{D506C47C-07BC-4D09-B36A-17E5F10F5636}"
           s:ph="/content/fund-page-content" />
         <r
-          uid="{1A449E6C-3CAF-4F50-ABE3-70B3E38D974C}">
-          <p:d />
-        </r>
-        <r
-          uid="{E461C5F3-56B7-4810-8CE2-832CE9B4994D}">
-          <p:d />
-        </r>
-        <r
-          uid="{E8B045E9-35F5-4BA8-B0B2-0A02D1BD298B}">
-          <p:d />
-        </r>
-        <r
-          uid="{DBED87B3-2FAB-449A-947F-32D769FC232E}">
-          <p:d />
-        </r>
-        <r
           uid="{2052B8BE-4888-48BE-A9C0-A9A038840C78}"
-          p:after="r[@uid='{ED580DB1-87A7-45EF-A0FD-9C6089D5FD53}']"
+          p:after="*[1=2]"
           s:ds="{1C8BD856-5470-4B8A-9085-07F0F5699359}"
           s:id="{777B1AE2-307E-4C65-9987-9BD39085419B}"
           s:par=""
@@ -167,10 +132,6 @@ Languages:
             <r
               uid="{0CC29E02-7FBE-4DBD-B9B3-DBBA62EAFEC7}"
               s:ds="{E50CBCEF-3323-4C9E-9A79-2485A6B6E903}" />
-            <r
-              uid="{F1A65CCC-477D-4482-ABDB-FBC1DE7022E8}">
-              <p:d />
-            </r>
           </d>
         </r>
     - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"

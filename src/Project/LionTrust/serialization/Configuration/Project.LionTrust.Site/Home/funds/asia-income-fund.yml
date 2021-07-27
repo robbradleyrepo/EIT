@@ -29,12 +29,8 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}"
-          p:before="*"
-          s:ph="/content/fund-page-content" />
-        <r
           uid="{D85A6667-1593-408E-8574-95F0CD1BDACB}"
-          p:after="r[@uid='{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}']"
+          p:before="*"
           s:ds="{6068D797-30E4-481A-AAFF-18F699BDA244}"
           s:id="{8A50B96F-BF28-43E6-87D5-1E3408F8171A}"
           s:par=""
@@ -53,18 +49,6 @@ SharedFields:
           s:id="{DFF81E23-0704-4716-89DC-50C5E45F4DAE}"
           s:par=""
           s:ph="/content/fund-page-content/left-content_{2eb0650d-a47e-4a61-a6e6-eb427e246c86}" />
-        <r
-          uid="{CEC4666D-950E-4BB2-ADD3-1A523FA68F4F}">
-          <p:d />
-        </r>
-        <r
-          uid="{E68675B2-194E-4FCD-97FB-AFCFFA66A966}">
-          <p:d />
-        </r>
-        <r
-          uid="{D2F551B2-8E4E-42AB-A016-9E554910D949}">
-          <p:d />
-        </r>
         <r
           uid="{F6121C38-616E-4860-827F-01DC600CF588}"
           p:after="r[@uid='{F3F5DDD8-BCED-4C83-A49B-42E641DFDC1F}']"
@@ -90,28 +74,8 @@ SharedFields:
           s:par=""
           s:ph="/content/fund-page-content" />
         <r
-          uid="{7D2A9FAB-D42F-4FA0-89BF-BAEAF0A42DA0}">
-          <p:d />
-        </r>
-        <r
-          uid="{1A449E6C-3CAF-4F50-ABE3-70B3E38D974C}">
-          <p:d />
-        </r>
-        <r
-          uid="{E461C5F3-56B7-4810-8CE2-832CE9B4994D}">
-          <p:d />
-        </r>
-        <r
-          uid="{E8B045E9-35F5-4BA8-B0B2-0A02D1BD298B}">
-          <p:d />
-        </r>
-        <r
-          uid="{DBED87B3-2FAB-449A-947F-32D769FC232E}">
-          <p:d />
-        </r>
-        <r
           uid="{FEED17DB-D2EE-470F-9234-67BC05EE3DA7}"
-          p:after="r[@uid='{ED580DB1-87A7-45EF-A0FD-9C6089D5FD53}']"
+          p:after="*[1=2]"
           s:ds="{1C8BD856-5470-4B8A-9085-07F0F5699359}"
           s:id="{777B1AE2-307E-4C65-9987-9BD39085419B}"
           s:par=""
@@ -132,29 +96,20 @@ Languages:
           <d
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
             <r
-              uid="{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}">
-              <p:d />
-            </r>
-            <r
-              uid="{84FE41B1-17ED-4B3C-9D78-A7D8A7CF22FE}"
-              p:before="*"
-              s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
-              s:ph="/header/navigation" />
-            <r
-              uid="{11BDA335-0E6E-48EF-AC0C-1C6392F87BD6}"
-              p:after="r[@uid='{84FE41B1-17ED-4B3C-9D78-A7D8A7CF22FE}']"
-              s:ds="{3FBFD8C7-C488-4FFD-845F-98D6344798C2}"
-              s:id="{E8615AE3-E7F7-4FA4-9782-C22612560E79}"
-              s:ph="header" />
-            <r
               uid="{5A98F3D3-4B37-4DCC-A334-2141367BD8AA}"
-              p:after="r[@uid='{11BDA335-0E6E-48EF-AC0C-1C6392F87BD6}']"
+              p:before="*"
               s:ds="{95C04704-C5F5-4F53-B7D9-DE02CE06C7CB}"
               s:id="{F7E7EFF1-2B5F-4554-9B19-1483BDCD6025}"
               s:ph="main" />
             <r
-              uid="{712EA6C9-D17E-437F-AA00-3A1EE638ECC5}"
+              uid="{1B6AF445-DC30-4B00-AC07-750033137B8B}"
               p:after="r[@uid='{5A98F3D3-4B37-4DCC-A334-2141367BD8AA}']"
+              s:ds="{708C733E-4F5A-4613-986A-B516DAA95687}"
+              s:id="{D1F65FAF-D449-484C-AADA-D6733DB1F445}"
+              s:ph="main" />
+            <r
+              uid="{712EA6C9-D17E-437F-AA00-3A1EE638ECC5}"
+              p:after="r[@uid='{1B6AF445-DC30-4B00-AC07-750033137B8B}']"
               s:ds="{9D39D70E-6402-4B17-91A9-9D4B579D4F0E}"
               s:id="{AB4777AC-F1FB-44C6-8283-C50F528F4DE2}"
               s:ph="main" />
@@ -171,16 +126,9 @@ Languages:
               s:id="{98BE3869-3EA0-4D11-9D64-8F7A33C051B1}"
               s:ph="main" />
             <r
-              uid="{BE8C5C97-D801-42C5-9368-ED6A2E029685}">
-              <p:d />
-            </r>
-            <r
               uid="{AD96180D-FB1F-4DE1-97AF-BB7D55D5142A}">
               <p:d />
             </r>
-            <r
-              uid="{FEED17DB-D2EE-470F-9234-67BC05EE3DA7}"
-              p:after="*[1=2]" />
             <r
               uid="{2EB0650D-A47E-4A61-A6E6-EB427E246C86}">
               <p:d />

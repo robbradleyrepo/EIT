@@ -20,13 +20,6 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{E9CF8A0F-3476-4FBA-B022-985B8AC16830}"
-          p:after="r[@uid='{DBED87B3-2FAB-449A-947F-32D769FC232E}']"
-          s:ds="{1C8BD856-5470-4B8A-9085-07F0F5699359}"
-          s:id="{777B1AE2-307E-4C65-9987-9BD39085419B}"
-          s:par=""
-          s:ph="/content/fund-page-content" />
-        <r
           uid="{CDCCFD84-C892-491B-A293-3988B506C6EB}"
           p:after="r[@uid='{6EF1721C-9DBD-4505-A950-FD64CA9FE3D8}']"
           s:ds="{AAC3F2EE-EEE2-4DFA-8B5E-098E5501466A}"
@@ -37,6 +30,13 @@ SharedFields:
           uid="{765ADA2A-6875-4549-8D3A-275642D89F91}"
           p:after="r[@uid='{CDCCFD84-C892-491B-A293-3988B506C6EB}']"
           s:ds="{52105240-FD83-45EA-96D0-259E5207EA1C}"
+          s:id="{777B1AE2-307E-4C65-9987-9BD39085419B}"
+          s:par=""
+          s:ph="/content/fund-page-content" />
+        <r
+          uid="{E9CF8A0F-3476-4FBA-B022-985B8AC16830}"
+          p:after="r[@uid='{765ADA2A-6875-4549-8D3A-275642D89F91}']"
+          s:ds="{1C8BD856-5470-4B8A-9085-07F0F5699359}"
           s:id="{777B1AE2-307E-4C65-9987-9BD39085419B}"
           s:par=""
           s:ph="/content/fund-page-content" />
@@ -89,36 +89,14 @@ Languages:
               s:par=""
               s:ph="/content/fund-page-content/right-content_{a30d54b4-29ef-46e3-9fea-ff6ca7bdf3d0}" />
             <r
-              uid="{CEC4666D-950E-4BB2-ADD3-1A523FA68F4F}">
-              <p:d />
-            </r>
-            <r
               uid="{FB8E5093-FD6E-4F2F-974F-50266D7CB679}"
               p:after="r[@uid='{F3F5DDD8-BCED-4C83-A49B-42E641DFDC1F}']"
               s:id="{302ADD39-9FA0-4282-8D6B-AD95AE6F0C4A}"
               s:ph="content" />
             <r
-              uid="{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}"
-              s:ph="/content/fund-page-content" />
-            <r
-              uid="{E68675B2-194E-4FCD-97FB-AFCFFA66A966}">
+              uid="{E9CF8A0F-3476-4FBA-B022-985B8AC16830}">
               <p:d />
             </r>
-            <r
-              uid="{D2F551B2-8E4E-42AB-A016-9E554910D949}">
-              <p:d />
-            </r>
-            <r
-              uid="{7D2A9FAB-D42F-4FA0-89BF-BAEAF0A42DA0}">
-              <p:d />
-            </r>
-            <r
-              uid="{1A449E6C-3CAF-4F50-ABE3-70B3E38D974C}">
-              <p:d />
-            </r>
-            <r
-              uid="{765ADA2A-6875-4549-8D3A-275642D89F91}"
-              p:after="r[@uid='{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}']" />
             <r
               uid="{CDCCFD84-C892-491B-A293-3988B506C6EB}"
               p:after="r[@uid='{765ADA2A-6875-4549-8D3A-275642D89F91}']"
@@ -131,21 +109,9 @@ Languages:
               s:ph="/content/fund-page-content" />
             <r
               uid="{A30D54B4-29EF-46E3-9FEA-FF6CA7BDF3D0}"
-              p:after="r[@uid='{9B06F3E5-74C2-4201-A473-30DEE2904AA1}']"
+              p:after="*[1=2]"
               s:id="{D506C47C-07BC-4D09-B36A-17E5F10F5636}"
               s:ph="/content/fund-page-content" />
-            <r
-              uid="{E461C5F3-56B7-4810-8CE2-832CE9B4994D}">
-              <p:d />
-            </r>
-            <r
-              uid="{E8B045E9-35F5-4BA8-B0B2-0A02D1BD298B}">
-              <p:d />
-            </r>
-            <r
-              uid="{E9CF8A0F-3476-4FBA-B022-985B8AC16830}">
-              <p:d />
-            </r>
           </d>
         </r>
     - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"

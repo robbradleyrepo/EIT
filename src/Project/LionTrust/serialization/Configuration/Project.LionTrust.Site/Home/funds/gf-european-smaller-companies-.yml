@@ -34,36 +34,13 @@ SharedFields:
           s:par="DatasourceRule"
           s:ph="/content/fund-page-content/left-content_{fefa5ac5-51f3-4b3b-8875-ec3e6682fd8d}" />
         <r
-          uid="{CEC4666D-950E-4BB2-ADD3-1A523FA68F4F}">
-          <p:d />
-        </r>
-        <r
           uid="{C9383A8B-ECF0-44B0-9C70-6C0D7D9CDCEF}"
           p:after="r[@uid='{F3F5DDD8-BCED-4C83-A49B-42E641DFDC1F}']"
           s:id="{302ADD39-9FA0-4282-8D6B-AD95AE6F0C4A}"
           s:ph="content" />
         <r
-          uid="{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}"
-          s:ph="/content/fund-page-content" />
-        <r
-          uid="{E68675B2-194E-4FCD-97FB-AFCFFA66A966}">
-          <p:d />
-        </r>
-        <r
-          uid="{D2F551B2-8E4E-42AB-A016-9E554910D949}">
-          <p:d />
-        </r>
-        <r
-          uid="{7D2A9FAB-D42F-4FA0-89BF-BAEAF0A42DA0}">
-          <p:d />
-        </r>
-        <r
-          uid="{1A449E6C-3CAF-4F50-ABE3-70B3E38D974C}">
-          <p:d />
-        </r>
-        <r
           uid="{CFB322FB-6C0B-40B1-8C2B-925DC711B1AF}"
-          p:after="r[@uid='{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}']"
+          p:after="r[@uid='{6EF1721C-9DBD-4505-A950-FD64CA9FE3D8}']"
           s:ds="{5C06DB82-36A3-4242-9BD4-E5346857D6EA}"
           s:id="{8A50B96F-BF28-43E6-87D5-1E3408F8171A}"
           s:par="DatasourceRule"
@@ -82,19 +59,11 @@ SharedFields:
           s:ph="/content/fund-page-content" />
         <r
           uid="{526AD2CF-26DB-40E2-B778-64E2A2E07452}"
-          p:after="r[@uid='{FEFA5AC5-51F3-4B3B-8875-EC3E6682FD8D}']"
+          p:after="*[1=2]"
           s:ds="{CA03B803-43E7-4F73-9D6D-AAD9032FF67C}"
           s:id="{8A50B96F-BF28-43E6-87D5-1E3408F8171A}"
           s:par="DatasourceRule"
           s:ph="/content/fund-page-content" />
-        <r
-          uid="{E461C5F3-56B7-4810-8CE2-832CE9B4994D}">
-          <p:d />
-        </r>
-        <r
-          uid="{E8B045E9-35F5-4BA8-B0B2-0A02D1BD298B}">
-          <p:d />
-        </r>
       </d>
     </r>
 Languages:

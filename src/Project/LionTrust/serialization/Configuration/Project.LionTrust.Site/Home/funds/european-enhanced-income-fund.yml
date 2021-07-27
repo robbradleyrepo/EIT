@@ -20,12 +20,8 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}"
-          p:before="*"
-          s:ph="/content/fund-page-content" />
-        <r
           uid="{DC462045-E88E-4C1C-9D4B-7A77860E3B4F}"
-          p:after="r[@uid='{DEDE4FA0-7D3C-4C67-B4E4-36A74A993FC2}']"
+          p:before="*"
           s:ds="{BC7D13F2-B0DF-4656-80E5-24416B910CAC}"
           s:id="{8A50B96F-BF28-43E6-87D5-1E3408F8171A}"
           s:par=""
@@ -37,18 +33,6 @@ SharedFields:
           s:id="{DFF81E23-0704-4716-89DC-50C5E45F4DAE}"
           s:par=""
           s:ph="/content/fund-page-content/left-content_{4410704b-156e-453c-a48d-3b6ced27c9d3}" />
-        <r
-          uid="{CEC4666D-950E-4BB2-ADD3-1A523FA68F4F}">
-          <p:d />
-        </r>
-        <r
-          uid="{E68675B2-194E-4FCD-97FB-AFCFFA66A966}">
-          <p:d />
-        </r>
-        <r
-          uid="{D2F551B2-8E4E-42AB-A016-9E554910D949}">
-          <p:d />
-        </r>
         <r
           uid="{EF50C26A-94B3-4383-8A9D-7ACB68DF0BDD}"
           p:after="r[@uid='{F3F5DDD8-BCED-4C83-A49B-42E641DFDC1F}']"
@@ -74,28 +58,8 @@ SharedFields:
           s:id="{D506C47C-07BC-4D09-B36A-17E5F10F5636}"
           s:ph="/content/fund-page-content" />
         <r
-          uid="{7D2A9FAB-D42F-4FA0-89BF-BAEAF0A42DA0}">
-          <p:d />
-        </r>
-        <r
-          uid="{1A449E6C-3CAF-4F50-ABE3-70B3E38D974C}">
-          <p:d />
-        </r>
-        <r
-          uid="{E461C5F3-56B7-4810-8CE2-832CE9B4994D}">
-          <p:d />
-        </r>
-        <r
-          uid="{E8B045E9-35F5-4BA8-B0B2-0A02D1BD298B}">
-          <p:d />
-        </r>
-        <r
-          uid="{DBED87B3-2FAB-449A-947F-32D769FC232E}">
-          <p:d />
-        </r>
-        <r
           uid="{FF9D5C22-35B6-42AC-B087-D955E632555D}"
-          p:after="r[@uid='{ED580DB1-87A7-45EF-A0FD-9C6089D5FD53}']"
+          p:after="*[1=2]"
           s:ds="{1C8BD856-5470-4B8A-9085-07F0F5699359}"
           s:id="{777B1AE2-307E-4C65-9987-9BD39085419B}"
           s:par=""
