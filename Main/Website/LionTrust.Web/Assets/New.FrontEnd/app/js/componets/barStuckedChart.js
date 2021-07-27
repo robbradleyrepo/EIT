@@ -1,5 +1,4 @@
 import Chart from "chart.js";
-import chartColors from "./chart/chartColors";
 
 export default () => {
   const charts = document.getElementsByClassName("stucked-chart__item");
@@ -12,7 +11,7 @@ export default () => {
       const genericDataset = datasets.map((set, i) => {
         const backgroundColor = [];
         for (let item in set.data) {
-          backgroundColor.push(chartColors[i]);
+          backgroundColor.push(set.color);
         }
         return { ...set, backgroundColor };
       });
