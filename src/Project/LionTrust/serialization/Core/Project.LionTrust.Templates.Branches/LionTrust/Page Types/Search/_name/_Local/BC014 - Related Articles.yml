@@ -1,0 +1,24 @@
+﻿---
+ID: "0a775610-1ac9-47d3-a2ea-9b2f1fcb8d38"
+Parent: "6f62afbc-7836-40be-98bc-1542a9f69453"
+Template: "a4bebbc7-4928-485f-aed7-f349fce9a132"
+Path: "/sitecore/templates/Branches/Project/LionTrust/Page Types/Search/$name/_Local/BC014 - Related Articles"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210726T124515Z
+    - ID: "8146922e-1af4-48e9-91cd-ca5f37cab4e5"
+      Hint: RelatedArticles_Articles
+      Type: Multilist with Search
+      Value: |
+        {3E03D801-3124-4466-AA26-E2A010B6CE4A}
+        {B22D191D-EE3E-442B-BA30-E7E128FB9D64}
+        {0ADE9C27-B302-432D-980E-5ECA2B5F127C}
+    - ID: "9b7bd172-7140-40a2-b464-782c99cf7e73"
+      Hint: RelatedArticles_Heading
+      Value: "BC014 - Related Articles"

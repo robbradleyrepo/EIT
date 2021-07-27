@@ -50,7 +50,9 @@
         case Constants.PageTypes.HomeTemplateId:
             mainClass = "main-page-conentent";
             break;
-
+        case Constants.PageTypes.SearchPageTemplateId:
+            mainClass = "result-list-app";
+            break;
     }
 
     var isExperienceEditor = Sitecore.Context.PageMode.IsExperienceEditor ? "experience-editor" : string.Empty;
