@@ -6,6 +6,7 @@
     using Sitecore.Analytics.Tracking;
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     using System.Xml;
     using System.Xml.Linq;
     using static LionTrust.Feature.Onboarding.Constants;
@@ -33,7 +34,7 @@
 
                     if (xmlDoc != null)
                     {
-                        var parentNode = xmlDoc.Elements(Analytics.ProfileCardValueKey_XmlElementName);
+                        var parentNode = xmlDoc.Descendants(Analytics.ProfileCardValueKey_XmlElementName);
 
                         if (parentNode != null)
                         {
@@ -47,7 +48,10 @@
                                 }
                             }
 
-                            profile.Score(scores);
+                            if (scores.Any(s => s.Value > 0))
+                            {
+                                profile.Score(scores);
+                            }
 
                             // update the pattern based on the scores you updated - this is supposed to be called from Score as well
                             // but doesn't always update unless you call it explicitly

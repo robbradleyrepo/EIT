@@ -22,7 +22,7 @@
                     var profile = tracker.Interaction.Profiles[onboardingConfiguration.Profile.Name];                    
                     if (profile.PatternId != null && profile.PatternId.Value != null)
                     {
-                        if (profile.PatternId.Value.Equals(onboardingConfiguration.PrivateProfileCard.Id) || profile.PatternId.Value.Equals(onboardingConfiguration.ProfressionalProfileCard.Id))
+                        if (profile.PatternId.HasValue)
                         {
                             return profile.PatternLabel;
                         }
