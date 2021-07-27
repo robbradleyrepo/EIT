@@ -3,7 +3,8 @@
         <div class="search-overlay__close"><button class="icon-close search-overlay__icon-close"></button></div>
         <div class="search-overlay__serch-content">
             <form class="search-form" action="search-page.html" autocomplete="off">
-                <input type="text" name="query" class="search-form__input" placeholder="Search for funds, insight or guidance">
+                <input type="text" name="query" class="search-form__input" placeholder="Search for funds, insight or guidance" onfocus="this.placeholder = ''"
+onblur="this.placeholder = 'Search for funds, insight or guidance'">
                 <button class="search-form__submit" type="submit">
                     <i class="icon-search"></i>
                 </button>
