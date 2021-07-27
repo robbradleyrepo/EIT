@@ -31,14 +31,13 @@ export default () => {
 	}
 
   // move to next step
-  btnStep.on("click", (e) => {
+  btnStep.on("click", function (e) {
     e.preventDefault();
-	
 	if(e.target.dataset.isoCountry) {
 		SetCountry(e);
 	}
 	
-    const tab = e.target.dataset.setStep;
+    const tab = $(this).data('setStep');
     showTab(tab);
   });
 
@@ -48,7 +47,7 @@ export default () => {
     var tab = e.target.dataset.changeStep;
     if (tab > Cookies.get("currentTab")) return;
 	else if(tab == 1){
-		tab = $('#correct-location').data('isoCountry').length > 0 ? 1 : 0 
+		tab = $('#correct-location').data('isoCountry')?.length > 0 ? 1 : 0 
 	}
     showTab(tab);
   });  
