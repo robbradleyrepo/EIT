@@ -1,0 +1,21 @@
+﻿---
+ID: "49c743df-44de-4946-9ab2-eb74a1975c58"
+Parent: "fdb21766-a746-4b18-9b6d-66f69125772d"
+Template: "c82dc5ff-09ef-4403-96d3-3caf377b8c5b"
+Path: /sitecore/content/LionTrustNew/Settings/Datasources/performanceCharts
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210726T205359Z
+    - ID: "498dd5b6-7dae-44a7-9213-1d32596ad14f"
+      Hint: DatasourceTemplate
+      Value: /sitecore/templates/Branches/Project/LionTrust/Content Type/Performance Charts
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

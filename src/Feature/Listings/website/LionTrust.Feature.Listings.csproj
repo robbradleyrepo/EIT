@@ -90,18 +90,25 @@
     <Content Include="Views\Listings\ModuleItems\_TitleDescriptionDateItem.cshtml" />
     <Content Include="App_Config\Include\Feature\Feature.Listings.RegisterContainer.config" />
     <Content Include="Views\Listings\DocumentsListWithDate.cshtml" />
+    <Content Include="Views\Listings\PerformanceCharts.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\AccordionController.cs" />
     <Compile Include="Controllers\DocumentsController.cs" />
+    <Compile Include="Controllers\PerformanceChartsController.cs" />
     <Compile Include="Helpers\DocumentHelper.cs" />
     <Compile Include="Controllers\GenericListingApiController.cs" />
     <Compile Include="DataManagers\Implementations\GenericListingDataManager.cs" />
     <Compile Include="DataManagers\Interfaces\IGenericListingDataManager.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Models\AccordionViewModel.cs" />
+    <Compile Include="Models\PerformanceCharts\IChartColumnFolder.cs" />
+    <Compile Include="Models\PerformanceCharts\IChartRangeValueFolder.cs" />
+    <Compile Include="Models\PerformanceCharts\IChartRangeValue.cs" />
+    <Compile Include="Models\PerformanceCharts\ChartColumnModel.cs" />
+    <Compile Include="Models\PerformanceCharts\ChartsModel.cs" />
     <Compile Include="Models\Document.cs" />
     <Compile Include="Models\DocumentModel.cs" />
     <Compile Include="Models\API\Facets\GenericListingFacet.cs" />
@@ -111,13 +118,17 @@
     <Compile Include="Models\IAccordionModel.cs" />
     <Compile Include="Models\IAccordionRenderingParameters.cs" />
     <Compile Include="Models\IAccordionRowModel.cs" />
+    <Compile Include="Models\PerformanceCharts\IChartColumn.cs" />
+    <Compile Include="Models\PerformanceCharts\IChartColumnValue.cs" />
     <Compile Include="Models\IDocumentLister.cs" />
     <Compile Include="Models\IGenericListingFacets.cs" />
     <Compile Include="Models\IHorizontalScroll.cs" />
     <Compile Include="Models\IListingsGlassBase.cs" />
+    <Compile Include="Models\PerformanceCharts\IPerformanceCharts.cs" />
     <Compile Include="Models\IScrollerCard.cs" />
     <Compile Include="Models\API\GenericListingResult.cs" />
     <Compile Include="Models\ListingFilterFacetsModel.cs" />
+    <Compile Include="Models\PerformanceCharts\PerformanceChartsViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Routes\RegisterRoutes.cs" />
     <Compile Include="Utils.cs" />
@@ -156,9 +167,7 @@
       <Name>LionTrust.Foundation.Video</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\GenericListing\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

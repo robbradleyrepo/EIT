@@ -1,0 +1,69 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Listings.Models.PerformanceCharts.PerformanceChartsViewModel
+<section class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <!-- set values for char in data attribute -->
+            <h5 class="text-black">@Html.Glass().Editable(Model.Data, m => m.Title)</h5>
+            @if (!Sitecore.Context.PageMode.IsExperienceEditor)
+            {
+                <canvas class="stucked-chart" width="@Model.Data.Width" height="@Model.Data.Height"
+                        data-chart='@Model.ChartJson'>
+                </canvas>
+            }
+            else if (Model.ChartColumnFolder != null && Model.ChartRangeValueFolder != null)
+            {
+                using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/PerformanceCharts", Model.ChartColumnFolder.Id.ToString(), "Add new chart column"))
+                {
+                    <div class="table-responsive-lg">
+                        <table class="table table-striped mb-3">
+                            @foreach (var chart in Model.ChartColumnFolder.ChartColumns)
+                            {
+                                <tr>
+                                    <th>
+                                        @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/PerformanceCharts/Chart", chart.Id.ToString(), "Add new color/value for chart column"))
+                                        {
+                                            @Html.Glass().Editable(chart, c => c.Title)
+                                        }
+                                    </th>
+                                    @if (chart.ChartValues != null)
+                                    {
+                                        foreach (var chartValue in chart.ChartValues)
+                                        {
+                                            <td>
+                                                @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/PerformanceCharts/ChartValue", chartValue.Id.ToString(), "Edit Chart values"))
+                                                {
+                                                    @Html.Glass().Editable(chartValue, cv => cv.Value)
+                                                }
+                                            </td>
+                                        }
+                                    }
+                                </tr>
+                            }
+                        </table>
+                        <table class="table table-striped mb-3">
+                            <tr>
+                                <th>
+                                    @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/PerformanceCharts/ChartRange", Model.ChartRangeValueFolder.Id.ToString(), "Add new chart range"))
+                                    {
+                                        @:Add Chart Ranges
+                                    }
+                                </th>
+                                @foreach (var chartRange in Model.ChartRangeValueFolder.ChartRanges)
+                                {
+                                    <td>
+                                        @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/PerformanceCharts/ChartRange/Edit", chartRange.Id.ToString(), "Edit chart range"))
+                                        {
+                                            @Html.Glass().Editable(chartRange, cr => cr.Value)
+                                        }
+                                    </td>
+                                }
+                            </tr>
+                        </table>
+                    </div>
+                }
+
+            }
+        </div>
+    </div>
+</section>

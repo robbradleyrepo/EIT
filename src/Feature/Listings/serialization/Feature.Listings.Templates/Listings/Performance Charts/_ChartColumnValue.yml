@@ -1,8 +1,8 @@
 ﻿---
-ID: "954a8d28-a7a2-438c-8395-7f9e3e8ff660"
-Parent: "3e6b8d81-802d-4497-88f2-f02dbb092e1d"
+ID: "26e48f1a-b3f9-4dbc-adc2-15cdac7707d1"
+Parent: "736ff779-ce33-49af-b566-357dcee2b344"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Feature/Listings/_ScrollCard
+Path: /sitecore/templates/Feature/Listings/Performance Charts/_ChartColumnValue
 DB: master
 SharedFields:
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
@@ -11,7 +11,7 @@ SharedFields:
   Value: "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 600
+  Value: 150
 Languages:
 - Language: en
   Versions:
@@ -19,4 +19,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210429T094917Z
+      Value: 20210726T195440Z
