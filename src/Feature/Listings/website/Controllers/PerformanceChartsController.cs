@@ -21,13 +21,60 @@
         public ActionResult Render()
         {
             var viewModel = new PerformanceChartsViewModel();
-            viewModel.Data = _renderingRepository.GetDataSourceItem<IPerformanceCharts>();
+            
+            var performanceCharts = _renderingRepository.GetDataSourceItem<IPerformanceCharts>();
+            if (performanceCharts.PerformanceCharts != null && performanceCharts.PerformanceCharts.Any())
+            {
+                var count = performanceCharts.PerformanceCharts.Count();
+                var jsonSerializerSettings = new JsonSerializerSettings
+                {
+                    ContractResolver = new CamelCasePropertyNamesContractResolver(),
+                    Formatting = Formatting.Indented,
+                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
+                    PreserveReferencesHandling = PreserveReferencesHandling.None
+                };
+
+                viewModel.FirstChart = new PerformanceChartViewModel();
+                viewModel.FirstChart.Data = performanceCharts.PerformanceCharts.Take(1).FirstOrDefault();
+                this.PopulateChart(viewModel.FirstChart, jsonSerializerSettings);
+                if (count == 1)
+                {
+                    return View("~/Views/Listings/PerformanceCharts.cshtml", viewModel);
+                }
+
+                viewModel.SecondChart = new PerformanceChartViewModel();
+                viewModel.SecondChart.Data = performanceCharts.PerformanceCharts.Skip(1).Take(1).FirstOrDefault();
+                this.PopulateChart(viewModel.SecondChart, jsonSerializerSettings);
+                if (count == 2)
+                {
+                    return View("~/Views/Listings/PerformanceCharts.cshtml", viewModel);
+                }
+
+                viewModel.ThirdChart = new PerformanceChartViewModel();
+                viewModel.ThirdChart.Data = performanceCharts.PerformanceCharts.Skip(2).Take(1).FirstOrDefault();
+                this.PopulateChart(viewModel.ThirdChart, jsonSerializerSettings);
+                if (count == 3)
+                {
+                    return View("~/Views/Listings/PerformanceCharts.cshtml", viewModel);
+                }
+
+                viewModel.FourthChart = new PerformanceChartViewModel();
+                viewModel.FourthChart.Data = performanceCharts.PerformanceCharts.Skip(2).Take(1).FirstOrDefault();
+                this.PopulateChart(viewModel.FourthChart, jsonSerializerSettings);                
+            }
+
+            return View("~/Views/Listings/PerformanceCharts.cshtml", viewModel);
+        }
+
+        private void PopulateChart(PerformanceChartViewModel viewModel, JsonSerializerSettings serializerSettings)
+        {
             var chartModel = new ChartsModel();
 
-            chartModel.YAxeConfig = new YAxeConfig(){
-                Scale = viewModel.Data.Scale 
+            chartModel.YAxeConfig = new YAxeConfig()
+            {
+                Scale = viewModel.Data.Scale
             };
-            chartModel.Labels = new List<string>();            
+            chartModel.Labels = new List<string>();
             var columnValueCount = 0;
             var first = true;
 
@@ -64,18 +111,9 @@
                     first = false;
                     columnValueCount = 0;
                 }
-            }
+            }            
 
-            var jsonSerializerSettings = new JsonSerializerSettings
-            {
-                ContractResolver = new CamelCasePropertyNamesContractResolver(),
-                Formatting = Formatting.Indented,
-                ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
-                PreserveReferencesHandling = PreserveReferencesHandling.None
-            };
-
-            viewModel.ChartJson = JsonConvert.SerializeObject(chartModel, jsonSerializerSettings);
-            return View("~/Views/Listings/PerformanceCharts.cshtml", viewModel);
+            viewModel.ChartJson = JsonConvert.SerializeObject(chartModel, serializerSettings);
         }
     }
 }

@@ -91,6 +91,7 @@
     <Content Include="App_Config\Include\Feature\Feature.Listings.RegisterContainer.config" />
     <Content Include="Views\Listings\DocumentsListWithDate.cshtml" />
     <Content Include="Views\Listings\PerformanceCharts.cshtml" />
+    <Content Include="Views\Listings\_PerformanceChart.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -121,11 +122,13 @@
     <Compile Include="Models\IGenericListingFacets.cs" />
     <Compile Include="Models\IHorizontalScroll.cs" />
     <Compile Include="Models\IListingsGlassBase.cs" />
-    <Compile Include="Models\PerformanceCharts\IPerformanceCharts.cs" />
+    <Compile Include="Models\PerformanceCharts\IPerformanceChart.cs" />
     <Compile Include="Models\IScrollerCard.cs" />
     <Compile Include="Models\API\GenericListingResult.cs" />
     <Compile Include="Models\ListingFilterFacetsModel.cs" />
+    <Compile Include="Models\PerformanceCharts\IPerformanceCharts.cs" />
     <Compile Include="Models\PerformanceCharts\PerformanceChartsViewModel.cs" />
+    <Compile Include="Models\PerformanceCharts\PerformanceChartViewModel.cs" />
     <Compile Include="Models\PerformanceCharts\YAxeConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Routes\RegisterRoutes.cs" />

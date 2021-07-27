@@ -1,53 +1,37 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @model LionTrust.Feature.Listings.Models.PerformanceCharts.PerformanceChartsViewModel
-<section class="container">
-    <div class="row">
-        <div class="col-lg-6">
-            <!-- set values for char in data attribute -->
-            <h5 class="text-black">@Html.Glass().Editable(Model.Data, m => m.Title)</h5>
-            @if (!Sitecore.Context.PageMode.IsExperienceEditor)
+@if (Model != null)
+{
+    <section class="container">
+        <div class="row">
+            @if (Model.FirstChart != null)
             {
-                <canvas class="stucked-chart" width="@Model.Data.Width" height="@Model.Data.Height"
-                        data-chart='@Model.ChartJson'>
-                </canvas>
+                <div class="col-lg-6">
+                    @Html.Partial("~/Views/Listings/_PerformanceChart.cshtml", Model.FirstChart)
+                </div>
             }
-            else if (Model.Data.ChartColumns != null && Model.Data.ChartColumns != null)
+            @if (Model.SecondChart != null)
             {
-                using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/PerformanceCharts", Model.Data.Id.ToString(), "Edit Performance Chart"))
-                {
-                    <div class="table-responsive-lg">
-                        <table class="table table-striped mb-3">
-                            @foreach (var chart in Model.Data.ChartColumns)
-                            {
-                                <tr>
-                                    <th>
-                                        @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/PerformanceCharts/Chart", chart.Id.ToString(), "Add new color/value for chart column"))
-                                        {
-                                            @Html.Glass().Editable(chart, c => c.Title)
-                                        }
-                                    </th>
-                                    @if (chart.ChartValues != null)
-                                    {
-                                        foreach (var chartValue in chart.ChartValues)
-                                        {
-                                            <td>
-                                                @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/PerformanceCharts/ChartValue", chartValue.Id.ToString(), "Edit Chart values"))
-                                                {
-                                                    @Html.Glass().Editable(chartValue, cv => cv.Value)
-                                                }
-                                            </td>
-                                        }
-                                    }
-                                </tr>
-                            }
-                        </table>
-                    </div>
-                }
-
+                <div class="col-lg-6">
+                    @Html.Partial("~/Views/Listings/_PerformanceChart.cshtml", Model.SecondChart)
+                </div>
             }
-            <small class="small-text stucked-chart__small">
-                <span class="text-gold">*</span> @Html.Glass().Editable(Model.Data, m => m.LegendDescription)
-            </small>
+            @if (Model.ThirdChart != null)
+            {
+                <div class="col-lg-6">
+                    @Html.Partial("~/Views/Listings/_PerformanceChart.cshtml", Model.ThirdChart)
+                </div>
+            }
+            @if (Model.FourthChart != null)
+            {
+                <div class="col-lg-6">
+                    @Html.Partial("~/Views/Listings/_PerformanceChart.cshtml", Model.FourthChart)
+                </div>
+            }
         </div>
-    </div>
-</section>
+    </section>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @: Please assign datasource for component
+}

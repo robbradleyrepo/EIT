@@ -1,10 +1,10 @@
 ﻿namespace LionTrust.Feature.Listings.Models.PerformanceCharts
 {
-    using System.Collections.Generic;
-
     public class PerformanceChartsViewModel
     {
-        public IPerformanceCharts Data { get; set; }
-        public string ChartJson { get; set; }
+        public PerformanceChartViewModel FirstChart { get; set; }
+        public PerformanceChartViewModel SecondChart { get; set; }
+        public PerformanceChartViewModel ThirdChart { get; set; }
+        public PerformanceChartViewModel FourthChart { get; set; }
     }
 }
