@@ -6,7 +6,7 @@ export default () => {
     charts.forEach((chart) => {
       const ctx = chart.getContext("2d");
       const data = $(chart).data("chart");
-      const { labels, datasets, config } = data;
+      const { labels, datasets, yAxeConfig } = data;
       // add colors array to dataset
       const genericDataset = datasets.map((set, i) => {
         const backgroundColor = [];
@@ -54,13 +54,13 @@ export default () => {
                 },
                 ticks: {
                   callback: function (value, index, values) {
-                    if (config?.scale === "%") return value + config.scale;
-                    if (config?.scale === "£") return config.scale + value;
+                    if (yAxeConfig?.scale === "%") return value + yAxeConfig.scale;
+                    if (yAxeConfig?.scale && yAxeConfig.scale && yAxeConfig?.scale !== "%") return yAxeConfig.scale + value;
                     return value;
                   },
                   beginAtZero: true,
-                  //   stepSize: 10,
-                  // max: 100,
+                  stepSize: yAxeConfig?.ranges,
+                  max: yAxeConfig?.maxRange,
                 },
               },
             ],
