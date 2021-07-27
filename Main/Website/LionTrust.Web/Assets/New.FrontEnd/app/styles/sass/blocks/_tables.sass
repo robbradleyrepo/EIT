@@ -163,4 +163,31 @@ table.table-document
             @include breakpoint(desktop, up)
                 text-align: right
                 
-
+table.table-striped
+    thead
+        tr th
+            @include p-1-medium-20
+            &:first-child
+                padding-left: 12px
+                font-weight: 500
+        tr.table-head-green th
+            font-weight: 300
+            color: $primary
+    td, th
+       @include p-1-medium-18
+       @include breakpoint(desktop, up)
+        padding: 18px 10px
+        border-bottom: 1px solid $secondary-silver
+        text-align: center
+        &:first-child
+            text-align: left
+            font-weight: 400
+        &::after, &::before
+                display: none
+    td:last-child
+            padding-right: 0
+            border-bottom: 1px solid $secondary-silver
+            padding-bottom: 10px
+            &::after
+                display: none
+    

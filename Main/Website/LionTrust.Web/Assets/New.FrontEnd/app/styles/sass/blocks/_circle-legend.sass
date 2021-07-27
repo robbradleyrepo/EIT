@@ -5,7 +5,7 @@
     padding: 20px 32px
     @include breakpoint(desktop, up)
         padding: 20px 50px
-    
+
 .circle-legend, .capitalisation-legend
     color: $black
     width: 100%
@@ -30,3 +30,57 @@
         justify-content: space-between
         width: 100%
         @include p-1-normal-20
+.stucked-chart
+    height: 100%
+    position: relative
+    margin-bottom: 4rem
+    // max-height: 440px
+    &__title
+        @extend .h5
+        color: $black
+        font-size: 20px
+        margin-top: 3rem
+        @include breakpoint(desktop, up)
+            font-size: 26px
+    &__wrapper
+        max-height: 440px
+        // position: relative
+    &__item
+        background: $white
+        border: 1px solid $secondary-silver
+        border-bottom: none
+        padding: 1rem 1.2rem
+        @include breakpoint(desktop, up)
+            padding: 1rem 2rem
+    &__small
+        // position: absolute
+        // bottom: -15px
+
+.stucked-legend
+    @extend .circle-legend
+    background: $white
+    flex-direction: row
+    margin: 0
+    justify-content: space-between
+    border: 1px solid $secondary-silver
+    border-top: none
+    padding: 0 1.2rem
+    @include breakpoint(desktop, up)
+        padding: 0 2rem
+    li
+        flex-direction: column
+        text-align: center
+        @include breakpoint(desktop, up)
+            flex-direction: row
+    .dot
+        width: 12px
+        height: 12px
+        margin-right: 0
+        @include breakpoint(desktop, up)
+            margin-right: 0.5rem
+            width: 20px
+            height: 15px
+    .label
+        font-size: 12px
+        @include breakpoint(desktop, up)
+            font-size: 1rem
