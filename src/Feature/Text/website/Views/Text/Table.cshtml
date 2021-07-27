@@ -1,0 +1,17 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Text.Models.ITable
+@if (Model != null)
+{
+    <section class="container mb-30">
+        <div class="table-responsive-lg">
+            @Html.Glass().Editable(Model, m => m.Value)
+            <small class="small-text">
+                @Html.Glass().Editable(Model, m => m.Text)
+            </small>
+        </div>
+    </section>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @: Please assign datasource for component!
+}

@@ -14,6 +14,12 @@
             public const string TextColor_FieldId = "{0422A25C-25C0-4B34-8CD5-8E39B76BBF3F}";
         }
 
+        public static class Table
+        {
+            public const string Text_FieldId = "{1188DFFC-78C4-4388-88A0-DEC5068BA85D}";
+            public const string Value_FieldId = "{0AB50D27-7E96-4187-8EF3-C617F40488F9}";
+        }
+
         public static class TitleComponent
         {
             public const string Title_FieldId = "{88C061A0-4E29-4B8D-A560-A62BE5B7D6EF}";

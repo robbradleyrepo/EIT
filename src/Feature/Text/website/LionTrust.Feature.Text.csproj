@@ -77,6 +77,7 @@
     <Content Include="Views\Text\Testimonial.cshtml" />
     <Content Include="Views\Text\GenericTextModule.cshtml" />
     <Content Include="Views\Text\FreeTextModule.cshtml" />
+    <Content Include="Views\Text\Table.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -84,6 +85,7 @@
     <Compile Include="Models\IGenericTextModule.cs" />
     <Compile Include="Models\IFreeTextModule.cs" />
     <Compile Include="Models\IRichText.cs" />
+    <Compile Include="Models\ITable.cs" />
     <Compile Include="Models\ITestimonial.cs" />
     <Compile Include="Models\ITextGlassBase.cs" />
     <Compile Include="Models\ITitleComponent.cs" />
