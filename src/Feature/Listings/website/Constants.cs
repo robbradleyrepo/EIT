@@ -103,6 +103,12 @@
             public const string Color_FieldId = "{F50C3989-9037-4B6D-847A-80584D65C963}";
         }
 
+        public static class DividendChart
+        {
+            public const string Title_FieldId = "{0955F2D3-783E-4FF5-BF3F-9B7623FB00AC}";
+            public const string TableContent_FieldId = "{8F6DB058-9E75-4A0B-8F19-CD79D3F28FB0}";
+        }
+
         public static class Settings
         {
             public const string DocumentApiRoute_SettingName = "Feature.Listings.DocumentsApiRoute";
