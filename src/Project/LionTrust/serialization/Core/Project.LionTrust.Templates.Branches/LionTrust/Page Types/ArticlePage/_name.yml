@@ -24,8 +24,14 @@ Languages:
               s:id="{00E6D57B-DFBB-4C64-8D9F-B9F59A979D23}"
               s:ph="/header/article-header" />
             <r
-              uid="{34A6F516-20A4-4E10-8D36-5120670F54DF}"
+              uid="{1506F1D2-D095-4E6C-8488-FFF7C90E1ADB}"
               p:after="r[@uid='{C8B3B2D1-D42B-4F7F-A536-F647A1CF9C18}']"
+              s:ds="{E511FC0B-4F0D-4C20-A51F-FA6B62C3BA34}"
+              s:id="{C616CA2E-714D-4DC2-B9C4-46DB291815BE}"
+              s:ph="header" />
+            <r
+              uid="{34A6F516-20A4-4E10-8D36-5120670F54DF}"
+              p:after="r[@uid='{1506F1D2-D095-4E6C-8488-FFF7C90E1ADB}']"
               s:ds="{52F34BAA-D2FD-4609-96AF-599332FE6F6C}"
               s:id="{010E3C29-6258-4251-9CEB-FEB1FAC64F98}"
               s:ph="/main/article" />
@@ -86,7 +92,7 @@ Languages:
               s:ph="/main/article" />
             <r
               uid="{8FCDAE13-103E-410F-A79E-9E1C59DDACEC}"
-              p:after="r[@uid='{763DC34A-B9D9-4AF7-A794-A79879906B51}']"
+              p:after="r[@uid='{286E3FB0-4AB4-4628-A694-C75BE609BE42}']"
               s:ds="{A2AA01D8-2DB4-41F2-85B9-48E905BD807B}"
               s:id="{B87F0E98-81D6-4B7F-A351-549255F96DB7}"
               s:par=""
