@@ -1,8 +1,9 @@
-﻿namespace LionTrust.Foundation.Navigation.Helpers
+﻿namespace LionTrust.Foundation.Onboarding.Helpers
 {
     using LionTrust.Foundation.Onboarding.Models;
     using Sitecore.Abstractions;
     using Sitecore.Analytics;
+    using static LionTrust.Foundation.Onboarding.Constants;
 
     public static class OnboardingHelper
     {
@@ -31,6 +32,12 @@
             }
 
             return string.Empty;
+        }
+
+        public static InvestorType GetInvestorType(IOnboardingConfiguration onboardingConfiguration, BaseLog log)
+        {
+            //TODO: logic to return correct investor type.
+            return InvestorType.Private;
         }
 
         private static bool IsValidConfiguration(IOnboardingConfiguration configuration, BaseLog log)

@@ -22,11 +22,11 @@
         private readonly IMvcContext _context;
         private readonly IArticleContentSearchService _contentSearchService;
         private readonly string _databaseName;
-        private readonly IContactService _contactService;
+        private readonly ISitecoreContactUtility _contactService;
         private readonly IFundContentSearchService _fundContentSearchService;
 
 
-        public MyFundsManagerInsightsController(IMvcContext context, IArticleContentSearchService contentSearchService, IRequestContext requestContext, IContactService contactService, IFundContentSearchService fundContentSearchService)
+        public MyFundsManagerInsightsController(IMvcContext context, IArticleContentSearchService contentSearchService, IRequestContext requestContext, ISitecoreContactUtility contactService, IFundContentSearchService fundContentSearchService)
         {
             _context = context;
             _contentSearchService = contentSearchService;

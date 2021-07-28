@@ -10,9 +10,9 @@
     public class MyFundsLeadBannerController : SitecoreController
     {
         private readonly IMvcContext _mvcContext;
-        private readonly IContactService _contactService;
+        private readonly ISitecoreContactUtility _contactService;
 
-        public MyFundsLeadBannerController(IMvcContext context, IContactService contactService)
+        public MyFundsLeadBannerController(IMvcContext context, ISitecoreContactUtility contactService)
         {
             _mvcContext = context;
             _contactService = contactService;

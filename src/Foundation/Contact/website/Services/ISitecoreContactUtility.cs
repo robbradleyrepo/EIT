@@ -3,7 +3,7 @@
     using LionTrust.Foundation.Contact.Models;
     using System.Collections.Generic;
 
-    public interface IContactService
+    public interface ISitecoreContactUtility
     {
         void SaveCustomSFDataIntoS4SInfoFacet(string scVisitorId, ScContactFacetData sfDataForSaving);
 

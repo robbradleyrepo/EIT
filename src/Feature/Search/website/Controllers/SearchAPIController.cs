@@ -13,10 +13,10 @@
     {
         private readonly IArticleSearchDataManager _articleListingDataManager;
         private readonly IFundSearchDataManager _fundListingDataManager;
-        private readonly IContactService _contactService;
+        private readonly ISitecoreContactUtility _contactService;
         private readonly ISiteSearchDataManager _siteSearchDataManager;
 
-        public SearchAPIController(IArticleSearchDataManager articleListingDataManager, IFundSearchDataManager fundListingDataManager, IContactService contactService, ISiteSearchDataManager siteSearchDataManager)
+        public SearchAPIController(IArticleSearchDataManager articleListingDataManager, IFundSearchDataManager fundListingDataManager, ISitecoreContactUtility contactService, ISiteSearchDataManager siteSearchDataManager)
         {
             this._articleListingDataManager = articleListingDataManager;
             this._fundListingDataManager = fundListingDataManager;

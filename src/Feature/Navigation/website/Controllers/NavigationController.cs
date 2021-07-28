@@ -5,7 +5,7 @@
     using Glass.Mapper.Sc.Web.Mvc;
     using LionTrust.Feature.Navigation.Models;
     using LionTrust.Feature.Navigation.Repositories;
-    using LionTrust.Foundation.Navigation.Helpers;
+    using LionTrust.Foundation.Onboarding.Helpers;
     using Sitecore.Abstractions;
     using Sitecore.Mvc.Controllers;
     using Sitecore.Mvc.Presentation;

@@ -20,5 +20,11 @@
             public const string ProfileCardValueName_XmlAttribute = "name";
             public const string ProfileCardValueValue_XmlAttribute = "value";
         }
+
+        public enum InvestorType
+        {
+            Private,
+            Professional
+        }
     }
 }

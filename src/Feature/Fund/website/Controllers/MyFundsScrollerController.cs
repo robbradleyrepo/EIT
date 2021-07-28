@@ -19,10 +19,10 @@
     public class MyFundsScrollerController: SitecoreController
     {
         private readonly IMvcContext _context;
-        private readonly IContactService _contactService;
+        private readonly ISitecoreContactUtility _contactService;
         private readonly IFundContentSearchService _fundContentSearchService;
 
-        public MyFundsScrollerController(IMvcContext context, IContactService contactService, IFundContentSearchService fundContentSearchService)
+        public MyFundsScrollerController(IMvcContext context, ISitecoreContactUtility contactService, IFundContentSearchService fundContentSearchService)
         {
             _context = context;
             _contactService = contactService;

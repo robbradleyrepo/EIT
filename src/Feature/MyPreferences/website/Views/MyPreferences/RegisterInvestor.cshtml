@@ -1,0 +1,91 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.MyPreferences.Models.RegisterInvestorViewModel
+<div class="reg-prof-investor">
+    <h3 class="reg-investor-title-label">@Html.Glass().Editable(x => x.Content.Title)</h3>
+    <div class="reg-investor-subtitle-label-light">
+        @Html.Glass().Editable(x => x.Content.Subtitle)
+    </div>
+    <p class="reg-investor-description">
+        @Html.Glass().Editable(x => x.Content.Description)
+    </p>
+    <div class="reg-prof-investor-error">
+        <div id="RegProfGlobalError" runat="server" class="reg-investor-error-global-label"></div>
+    </div>
+    <div class="reg-prof-investor-form-div">
+        @using (Html.BeginRouteForm(Sitecore.Mvc.Configuration.MvcSettings.SitecoreRouteName, FormMethod.Post))
+        {
+            <div class="reg-investor-row">
+                <div class="reg-investor-col-25">
+                    <label>First Name *</label>
+                </div>
+                <div class="reg-investor-col-75">
+                    @Html.TextBoxFor(x => x.FirstName)
+                    @*<asp:RequiredFieldValidator ID="RegProfFirstNameValidator" runat="server" ControlToValidate="RegProfFirstName" ErrorMessage="Required" CssClass="reg-investor-error-label">
+                    </asp:RequiredFieldValidator>*@
+                </div>
+            </div>
+            <div class="reg-investor-row">
+                <div class="reg-investor-col-25">
+                    <label>Last Name *</label>
+                </div>
+                <div class="reg-investor-col-75">
+                    @Html.TextBoxFor(x => x.LastName)
+                    @*<asp:RequiredFieldValidator ID="RegProfLastNameValidator" runat="server" ControlToValidate="RegProfLastName" ErrorMessage="Required" CssClass="reg-investor-error-label">
+                    </asp:RequiredFieldValidator>*@
+                </div>
+            </div>
+            <div class="reg-investor-row">
+                <div class="reg-investor-col-25">
+                    <label>Email *</label>
+                </div>
+                <div class="reg-investor-col-75">
+                    @Html.TextBoxFor(x => x.Email)
+                    @*<asp:RequiredFieldValidator ID="RegProfEmailRequiedValidator" runat="server" ControlToValidate="RegProfEmail" ErrorMessage="Required" CssClass="reg-investor-error-label">
+                    </asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="RegProfEmailFormatValidator"
+                                                    runat="server" ErrorMessage="Invalid Email"
+                                                    ControlToValidate="RegProfEmail"
+                                                    ValidationExpression="^([\w\.\-]+)@([\w\-] +)((\.(\w){2,3})+)$" CssClass="reg-investor-error-label" />*@
+                </div>
+            </div>
+            if (Model.InvestorType == LionTrust.Foundation.Onboarding.Constants.InvestorType.Professional)
+            {
+            <div class="reg-investor-row">
+                <div class="reg-investor-col-25">
+                    <label>Individual FCA Reference Number</label>
+                </div>
+                <div class="reg-investor-col-75">
+                    @Html.TextBoxFor(x => x.CompanyId)
+                    <asp:TextBox ID="RegProfCompanyId" runat="server"></asp:TextBox>
+                </div>
+            </div>
+            <div class="reg-investor-row">
+                <div class="reg-investor-col-25">
+                    <label>Company Name</label>
+                </div>
+                <div class="reg-investor-col-75">
+                    @Html.TextBoxFor(x => x.CompanyName)
+                </div>
+            </div>
+            }
+            <div class="reg-investor-row">
+                <div class="reg-investor-col-25">
+                    <label>UK Resident *</label>
+                </div>
+                <div class="reg-investor-col-75">
+                    @Html.DropDownListFor(x => x.UKResident, new SelectList(new Dictionary<string, bool> { { "Yes", true }, { "No", false } }, "Please Select")  )
+                    @*<asp:DropDownList ID="RegProfUkResidentDropdown" runat="server" AppendDataBoundItems="True" CssClass="reg-investor-ukresident-selectlist">
+                        <asp:ListItem Value="">Please Select</asp:ListItem>
+                        <asp:ListItem Value="true">Yes</asp:ListItem>
+                        <asp:ListItem Value="false">No</asp:ListItem>
+                    </asp:DropDownList>
+                    <asp:RequiredFieldValidator ID="RegProfUkResidentDropdownValidator" runat="server" CssClass="reg-investor-error-label" ControlToValidate="RegProfUkResidentDropdown" ErrorMessage="Required" InitialValue="">
+                    </asp:RequiredFieldValidator>*@
+                </div>
+            </div>
+            <div class="reg-investor-row">
+                <button type="submit" class="rte-button reg-investor-submit-btn">Register</button>
+            </div>
+        }
+    </div>
+</div>

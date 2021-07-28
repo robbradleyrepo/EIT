@@ -11,7 +11,7 @@
     using System.Linq;
     using LionTrust.Foundation.Contact.Models;
 
-    public class ContactService : IContactService
+    public class SitecoreContactUtility : ISitecoreContactUtility
     {
 
         /// <summary>
