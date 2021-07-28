@@ -1,8 +1,7 @@
-﻿using Glass.Mapper.Sc.Configuration.Attributes;
-using LionTrust.Foundation.ORM.Models;
-
-namespace LionTrust.Feature.MyPreferences.Models
+﻿namespace LionTrust.Feature.MyPreferences.Models
 {
+    using Glass.Mapper.Sc.Configuration.Attributes;
+    using LionTrust.Foundation.ORM.Models;
     public interface IRegisterInvestor : IGlassBase
     {
         [SitecoreField(Constants.RegisterInvestor.Title_FieldId)]

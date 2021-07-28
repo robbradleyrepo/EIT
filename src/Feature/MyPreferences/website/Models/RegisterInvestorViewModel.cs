@@ -12,6 +12,11 @@ namespace LionTrust.Feature.MyPreferences.Models
             InvestorType = investorType;
         }
 
+        public RegisterInvestorViewModel()
+        {
+
+        }
+
         public IRegisterInvestor Content { get; set; }
 
         public string GenericErrorLabel { get; set; }
@@ -26,7 +31,6 @@ namespace LionTrust.Feature.MyPreferences.Models
 
         [Required]
         [EmailAddress]
-        [RegularExpression(@"^([\w\.\-]+)@([\w\-] +)((\.(\w){2,3})+)$")]
         public string Email { get; set; }
 
         public string CompanyName { get; set; }

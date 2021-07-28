@@ -30,7 +30,7 @@
 
         public ActionResult Render()
         {
-            var data = _context.GetHomeItem<IRegisterInvestor>();
+            var data = _context.GetDataSourceItem<IRegisterInvestor>();
 
             if (data == null)
             {
@@ -50,6 +50,17 @@
         {
             try
             {
+                var data = _context.GetDataSourceItem<IRegisterInvestor>();
+
+                if (data == null)
+                {
+                    return null;
+                }
+                else
+                {
+                    registerInvestorViewModel.Content = data;
+                }
+
                 if (ModelState.IsValid)
                 {
                     var userExists = false;
@@ -61,7 +72,7 @@
 
                         var company = (!string.IsNullOrEmpty(registerInvestorViewModel.Content.CompanyFieldDefaultValue)) ? registerInvestorViewModel.Content.CompanyFieldDefaultValue : "Self";
 
-                        var nonProfUserViewModel = new NonProfUserViewModel
+                        var nonProfUserViewModel = new NonProfessionalUser
                         {
                             FirstName = registerInvestorViewModel.FirstName,
                             LastName = registerInvestorViewModel.LastName,
@@ -82,7 +93,7 @@
                         successPageId = new ID(Foundation.Contact.Constants.ItemIds.Content.Global.EmailPreferences.RegisterProfUserSuccess);
                         var sfOrganisationId = (!string.IsNullOrEmpty(registerInvestorViewModel.Content.DefaultSFOrganisationId)) ? registerInvestorViewModel.Content.DefaultSFOrganisationId : string.Empty;
 
-                        var profUserViewModel = new ProfUserViewModel
+                        var profUserViewModel = new ProfessionalUser
                         {
                             FirstName = registerInvestorViewModel.FirstName,
                             LastName = registerInvestorViewModel.LastName,

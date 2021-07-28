@@ -84,10 +84,10 @@
         /// </summary>
         /// <param name="nonProfUserViewModel"></param>
         /// <returns></returns>
-        public ReturnedNonProfUserViewModel SaveNonProfUserAsSFLead(NonProfUserViewModel nonProfUserViewModel)
+        public ReturnedNonProfUserViewModel SaveNonProfUserAsSFLead(NonProfessionalUser nonProfessionalUser)
         {
-            var nonProfUserObj = Mapper.Map<NonProfessionalUser>(nonProfUserViewModel);
-            var returnedObj = _emailPreferencesRepository.SaveNonProfUserAsSFLead(nonProfUserObj);
+            //var nonProfUserObj = Mapper.Map<NonProfessionalUser>(nonProfUserViewModel);
+            var returnedObj = _emailPreferencesRepository.SaveNonProfUserAsSFLead(nonProfessionalUser);
             if (returnedObj != null)
             {
                 //Send email to the the new users with the link to edit email preferences
@@ -108,10 +108,9 @@
         /// </summary>
         /// <param name="nonProfUserViewModel"></param>
         /// <returns></returns>
-        public ReturnedProfUserViewModel SaveProfUserAsSFContact(ProfUserViewModel nonProfUserViewModel)
+        public ReturnedProfUserViewModel SaveProfUserAsSFContact(ProfessionalUser professionalUser)
         {
-            var nonProfUserObj = Mapper.Map<ProfessionalUser>(nonProfUserViewModel);
-            var returnedObj = _emailPreferencesRepository.SaveProfUserAsSFContact(nonProfUserObj);
+            var returnedObj = _emailPreferencesRepository.SaveProfUserAsSFContact(professionalUser);
             if (returnedObj != null)
             {
                 //Send email to the the new users with the link to edit email preferences

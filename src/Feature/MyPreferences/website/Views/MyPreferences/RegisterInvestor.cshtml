@@ -1,15 +1,15 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @model LionTrust.Feature.MyPreferences.Models.RegisterInvestorViewModel
 <div class="reg-prof-investor">
-    <h3 class="reg-investor-title-label">@Html.Glass().Editable(x => x.Content.Title)</h3>
+    <h3 class="reg-investor-title-label">@Html.Glass().Editable(Model.Content, x => x.Title)</h3>
     <div class="reg-investor-subtitle-label-light">
-        @Html.Glass().Editable(x => x.Content.Subtitle)
+        @Html.Glass().Editable(Model.Content, x => x.Subtitle)
     </div>
     <p class="reg-investor-description">
-        @Html.Glass().Editable(x => x.Content.Description)
+        @Html.Glass().Editable(Model.Content, x => x.Description)
     </p>
     <div class="reg-prof-investor-error">
-        <div id="RegProfGlobalError" runat="server" class="reg-investor-error-global-label"></div>
+        <div id="RegProfGlobalError" runat="server" class="reg-investor-error-global-label"> @Html.Glass().Editable(Model, x => x.Error)</div>
     </div>
     <div class="reg-prof-investor-form-div">
         @using (Html.BeginRouteForm(Sitecore.Mvc.Configuration.MvcSettings.SitecoreRouteName, FormMethod.Post))
@@ -73,7 +73,7 @@
                     <label>UK Resident *</label>
                 </div>
                 <div class="reg-investor-col-75">
-                    @Html.DropDownListFor(x => x.UKResident, new SelectList(new Dictionary<string, bool> { { "Yes", true }, { "No", false } }, "Please Select")  )
+                    @Html.DropDownListFor(x => x.UKResident, new List<SelectListItem>() { new SelectListItem { Text = "Yes", Value = "true" }, new SelectListItem { Text = "No", Value = "false" } }, "Please Select")  )
                     @*<asp:DropDownList ID="RegProfUkResidentDropdown" runat="server" AppendDataBoundItems="True" CssClass="reg-investor-ukresident-selectlist">
                         <asp:ListItem Value="">Please Select</asp:ListItem>
                         <asp:ListItem Value="true">Yes</asp:ListItem>
