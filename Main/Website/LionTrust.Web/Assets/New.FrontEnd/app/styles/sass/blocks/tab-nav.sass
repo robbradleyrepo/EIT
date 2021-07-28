@@ -1,0 +1,24 @@
+.tab-nav
+    color: $black
+    &__item-text
+        @include p-1-medium-18
+    &__item
+        @include p-1-medium-18
+        cursor: pointer  
+        text-align: center 
+        color: $gray
+        border-bottom: 2px solid $gray
+        padding: 11px
+        transition: color .3s ease-out, border-color .3s ease-out
+        &:hover
+            color: $primary
+            border-color: $primary
+        &.active
+            color: $primary
+            border-color: $primary
+
+.tab-nav-content
+    .doc-list
+        display: none          
+        &.active
+            display: block
