@@ -1,12 +1,24 @@
-<section class="container">
-    <div class="tab-nav row">
+<section class="container mb-5" id="tab-content">
+    <div class="lister-select d-lg-none">
+        <select name="document-filter" id="document-select-filter" data-select-for="tab-content"
+            class="class-dropdown__select document-select-filter">
+            <!-- value should be the same as id of doc-list -->
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017+</option>
+        </select>
+        <i class="article-filters__icon-arrow  article-filters__icon-arrow_select"></i>
+    </div>
+    <div class="tab-nav d-none d-lg-flex row" data-select-for="tab-content">
         <div class=" col-md-2">
             <div class="tab-nav__item-text">
                 Select a year to view:
-
             </div>
         </div>
         <div class="col-md-2">
+            <!-- data-tab-target should refer to id of doc-list -->
             <div class="tab-nav__item active" data-tab-target="2021">
                 2021
             </div>
@@ -31,7 +43,7 @@
                 2017+
             </div>
         </div>
-    </div>    
+    </div>
     <div class="tab-nav-content">
         <div class="doc-list active" role="tabelement" id="2021">
             <div class="doc-list__item">
@@ -48,9 +60,11 @@
                     </div>
                     <div class="col-lg-12 col-xl-5">
                         <div class="doc-list__links">
-                            <a href="#" target="_blank" class="link-styles">Read press release <i class="icon-file"></i></a>
-                            <a href="#" target="_blank" class="link-styles">Read report <i class="icon-list-view"></i></a>                        
-                            <a href="#" target="_blank" class="link-styles d-none d-xl-block">
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read press release
+                                <i class="icon-file"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read report <i
+                                    class="icon-list-view"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile d-none d-xl-block">
                                 View Presentation <i class="icon-arrow-right"></i>
                             </a>
                         </div>
@@ -74,9 +88,11 @@
                     </div>
                     <div class="col-lg-12 col-xl-5">
                         <div class="doc-list__links">
-                            <a href="#" target="_blank" class="link-styles">Read press release <i class="icon-file"></i></a>
-                            <a href="#" target="_blank" class="link-styles">Read report <i class="icon-list-view"></i></a>                        
-                            <a href="#" target="_blank" class="link-styles d-none d-xl-block">
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read press release
+                                <i class="icon-file"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read report <i
+                                    class="icon-list-view"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile d-none d-xl-block">
                                 View Presentation <i class="icon-arrow-right"></i>
                             </a>
                         </div>
@@ -100,9 +116,11 @@
                     </div>
                     <div class="col-lg-12 col-xl-5">
                         <div class="doc-list__links">
-                            <a href="#" target="_blank" class="link-styles">Read press release <i class="icon-file"></i></a>
-                            <a href="#" target="_blank" class="link-styles">Read report <i class="icon-list-view"></i></a>                        
-                            <a href="#" target="_blank" class="link-styles d-none d-xl-block">
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read press release
+                                <i class="icon-file"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read report <i
+                                    class="icon-list-view"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile d-none d-xl-block">
                                 View Presentation <i class="icon-arrow-right"></i>
                             </a>
                         </div>
@@ -126,9 +144,11 @@
                     </div>
                     <div class="col-lg-12 col-xl-5">
                         <div class="doc-list__links">
-                            <a href="#" target="_blank" class="link-styles">Read press release <i class="icon-file"></i></a>
-                            <a href="#" target="_blank" class="link-styles">Read report <i class="icon-list-view"></i></a>                        
-                            <a href="#" target="_blank" class="link-styles d-none d-xl-block">
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read press release
+                                <i class="icon-file"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read report <i
+                                    class="icon-list-view"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile d-none d-xl-block">
                                 View Presentation <i class="icon-arrow-right"></i>
                             </a>
                         </div>
@@ -152,9 +172,11 @@
                     </div>
                     <div class="col-lg-12 col-xl-5">
                         <div class="doc-list__links">
-                            <a href="#" target="_blank" class="link-styles">Read press release <i class="icon-file"></i></a>
-                            <a href="#" target="_blank" class="link-styles">Read report <i class="icon-list-view"></i></a>                        
-                            <a href="#" target="_blank" class="link-styles d-none d-xl-block">
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read press release
+                                <i class="icon-file"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read report <i
+                                    class="icon-list-view"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile d-none d-xl-block">
                                 View Presentation <i class="icon-arrow-right"></i>
                             </a>
                         </div>
@@ -178,9 +200,11 @@
                     </div>
                     <div class="col-lg-12 col-xl-5">
                         <div class="doc-list__links">
-                            <a href="#" target="_blank" class="link-styles">Read press release <i class="icon-file"></i></a>
-                            <a href="#" target="_blank" class="link-styles">Read report <i class="icon-list-view"></i></a>                        
-                            <a href="#" target="_blank" class="link-styles d-none d-xl-block">
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read press release
+                                <i class="icon-file"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read report <i
+                                    class="icon-list-view"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile d-none d-xl-block">
                                 View Presentation <i class="icon-arrow-right"></i>
                             </a>
                         </div>
@@ -204,9 +228,11 @@
                     </div>
                     <div class="col-lg-12 col-xl-5">
                         <div class="doc-list__links">
-                            <a href="#" target="_blank" class="link-styles">Read press release <i class="icon-file"></i></a>
-                            <a href="#" target="_blank" class="link-styles">Read report <i class="icon-list-view"></i></a>                        
-                            <a href="#" target="_blank" class="link-styles d-none d-xl-block">
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read press release
+                                <i class="icon-file"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read report <i
+                                    class="icon-list-view"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile d-none d-xl-block">
                                 View Presentation <i class="icon-arrow-right"></i>
                             </a>
                         </div>
@@ -227,14 +253,17 @@
                     </div>
                     <div class="col-lg-12 col-xl-5">
                         <span class="doc-list__title">
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit
+                            Lorem ipsum dolor sit amet consectetur adipiscing elit Lorem ipsum dolor sit amet
+                            consectetur adipiscing elit Lorem ipsum dolor sit amet consectetur adipiscing elit
                         </span>
                     </div>
                     <div class="col-lg-12 col-xl-5">
                         <div class="doc-list__links">
-                            <a href="#" target="_blank" class="link-styles">Read press release <i class="icon-file"></i></a>
-                            <a href="#" target="_blank" class="link-styles">Read report <i class="icon-list-view"></i></a>                        
-                            <a href="#" target="_blank" class="link-styles d-none d-xl-block">
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read press release
+                                <i class="icon-file"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read report <i
+                                    class="icon-list-view"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile d-none d-xl-block">
                                 View Presentation <i class="icon-arrow-right"></i>
                             </a>
                         </div>
@@ -258,9 +287,11 @@
                     </div>
                     <div class="col-lg-12 col-xl-5">
                         <div class="doc-list__links">
-                            <a href="#" target="_blank" class="link-styles">Read press release <i class="icon-file"></i></a>
-                            <a href="#" target="_blank" class="link-styles">Read report <i class="icon-list-view"></i></a>                        
-                            <a href="#" target="_blank" class="link-styles d-none d-xl-block">
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read press release
+                                <i class="icon-file"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read report <i
+                                    class="icon-list-view"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile d-none d-xl-block">
                                 View Presentation <i class="icon-arrow-right"></i>
                             </a>
                         </div>
@@ -284,9 +315,11 @@
                     </div>
                     <div class="col-lg-12 col-xl-5">
                         <div class="doc-list__links">
-                            <a href="#" target="_blank" class="link-styles">Read press release <i class="icon-file"></i></a>
-                            <a href="#" target="_blank" class="link-styles">Read report <i class="icon-list-view"></i></a>                        
-                            <a href="#" target="_blank" class="link-styles d-none d-xl-block">
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read press release
+                                <i class="icon-file"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read report <i
+                                    class="icon-list-view"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile d-none d-xl-block">
                                 View Presentation <i class="icon-arrow-right"></i>
                             </a>
                         </div>
@@ -295,7 +328,7 @@
                         </a>
                     </div>
                 </div>
-            </div>            
+            </div>
         </div>
         <div class="doc-list" role="tabelement" id="2019">
             <div class="doc-list__item">
@@ -312,9 +345,11 @@
                     </div>
                     <div class="col-lg-12 col-xl-5">
                         <div class="doc-list__links">
-                            <a href="#" target="_blank" class="link-styles">Read press release <i class="icon-file"></i></a>
-                            <a href="#" target="_blank" class="link-styles">Read report <i class="icon-list-view"></i></a>                        
-                            <a href="#" target="_blank" class="link-styles d-none d-xl-block">
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read press release
+                                <i class="icon-file"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read report <i
+                                    class="icon-list-view"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile d-none d-xl-block">
                                 View Presentation <i class="icon-arrow-right"></i>
                             </a>
                         </div>
@@ -338,9 +373,11 @@
                     </div>
                     <div class="col-lg-12 col-xl-5">
                         <div class="doc-list__links">
-                            <a href="#" target="_blank" class="link-styles">Read press release <i class="icon-file"></i></a>
-                            <a href="#" target="_blank" class="link-styles">Read report <i class="icon-list-view"></i></a>                        
-                            <a href="#" target="_blank" class="link-styles d-none d-xl-block">
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read press release
+                                <i class="icon-file"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read report <i
+                                    class="icon-list-view"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile d-none d-xl-block">
                                 View Presentation <i class="icon-arrow-right"></i>
                             </a>
                         </div>
@@ -364,9 +401,11 @@
                     </div>
                     <div class="col-lg-12 col-xl-5">
                         <div class="doc-list__links">
-                            <a href="#" target="_blank" class="link-styles">Read press release <i class="icon-file"></i></a>
-                            <a href="#" target="_blank" class="link-styles">Read report <i class="icon-list-view"></i></a>                        
-                            <a href="#" target="_blank" class="link-styles d-none d-xl-block">
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read press release
+                                <i class="icon-file"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read report <i
+                                    class="icon-list-view"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile d-none d-xl-block">
                                 View Presentation <i class="icon-arrow-right"></i>
                             </a>
                         </div>
@@ -390,9 +429,11 @@
                     </div>
                     <div class="col-lg-12 col-xl-5">
                         <div class="doc-list__links">
-                            <a href="#" target="_blank" class="link-styles">Read press release <i class="icon-file"></i></a>
-                            <a href="#" target="_blank" class="link-styles">Read report <i class="icon-list-view"></i></a>                        
-                            <a href="#" target="_blank" class="link-styles d-none d-xl-block">
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read press release
+                                <i class="icon-file"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read report <i
+                                    class="icon-list-view"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile d-none d-xl-block">
                                 View Presentation <i class="icon-arrow-right"></i>
                             </a>
                         </div>
@@ -416,9 +457,11 @@
                     </div>
                     <div class="col-lg-12 col-xl-5">
                         <div class="doc-list__links">
-                            <a href="#" target="_blank" class="link-styles">Read press release <i class="icon-file"></i></a>
-                            <a href="#" target="_blank" class="link-styles">Read report <i class="icon-list-view"></i></a>                        
-                            <a href="#" target="_blank" class="link-styles d-none d-xl-block">
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read press release
+                                <i class="icon-file"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read report <i
+                                    class="icon-list-view"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile d-none d-xl-block">
                                 View Presentation <i class="icon-arrow-right"></i>
                             </a>
                         </div>
@@ -442,9 +485,11 @@
                     </div>
                     <div class="col-lg-12 col-xl-5">
                         <div class="doc-list__links">
-                            <a href="#" target="_blank" class="link-styles">Read press release <i class="icon-file"></i></a>
-                            <a href="#" target="_blank" class="link-styles">Read report <i class="icon-list-view"></i></a>                        
-                            <a href="#" target="_blank" class="link-styles d-none d-xl-block">
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read press release
+                                <i class="icon-file"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read report <i
+                                    class="icon-list-view"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile d-none d-xl-block">
                                 View Presentation <i class="icon-arrow-right"></i>
                             </a>
                         </div>
@@ -468,9 +513,11 @@
                     </div>
                     <div class="col-lg-12 col-xl-5">
                         <div class="doc-list__links">
-                            <a href="#" target="_blank" class="link-styles">Read press release <i class="icon-file"></i></a>
-                            <a href="#" target="_blank" class="link-styles">Read report <i class="icon-list-view"></i></a>                        
-                            <a href="#" target="_blank" class="link-styles d-none d-xl-block">
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read press release
+                                <i class="icon-file"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read report <i
+                                    class="icon-list-view"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile d-none d-xl-block">
                                 View Presentation <i class="icon-arrow-right"></i>
                             </a>
                         </div>
@@ -496,9 +543,11 @@
                     </div>
                     <div class="col-lg-12 col-xl-5">
                         <div class="doc-list__links">
-                            <a href="#" target="_blank" class="link-styles">Read press release <i class="icon-file"></i></a>
-                            <a href="#" target="_blank" class="link-styles">Read report <i class="icon-list-view"></i></a>                        
-                            <a href="#" target="_blank" class="link-styles d-none d-xl-block">
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read press release
+                                <i class="icon-file"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read report <i
+                                    class="icon-list-view"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile d-none d-xl-block">
                                 View Presentation <i class="icon-arrow-right"></i>
                             </a>
                         </div>
@@ -522,9 +571,11 @@
                     </div>
                     <div class="col-lg-12 col-xl-5">
                         <div class="doc-list__links">
-                            <a href="#" target="_blank" class="link-styles">Read press release <i class="icon-file"></i></a>
-                            <a href="#" target="_blank" class="link-styles">Read report <i class="icon-list-view"></i></a>                        
-                            <a href="#" target="_blank" class="link-styles d-none d-xl-block">
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read press release
+                                <i class="icon-file"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read report <i
+                                    class="icon-list-view"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile d-none d-xl-block">
                                 View Presentation <i class="icon-arrow-right"></i>
                             </a>
                         </div>
@@ -548,9 +599,11 @@
                     </div>
                     <div class="col-lg-12 col-xl-5">
                         <div class="doc-list__links">
-                            <a href="#" target="_blank" class="link-styles">Read press release <i class="icon-file"></i></a>
-                            <a href="#" target="_blank" class="link-styles">Read report <i class="icon-list-view"></i></a>                        
-                            <a href="#" target="_blank" class="link-styles d-none d-xl-block">
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read press release
+                                <i class="icon-file"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read report <i
+                                    class="icon-list-view"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile d-none d-xl-block">
                                 View Presentation <i class="icon-arrow-right"></i>
                             </a>
                         </div>
@@ -574,9 +627,11 @@
                     </div>
                     <div class="col-lg-12 col-xl-5">
                         <div class="doc-list__links">
-                            <a href="#" target="_blank" class="link-styles">Read press release <i class="icon-file"></i></a>
-                            <a href="#" target="_blank" class="link-styles">Read report <i class="icon-list-view"></i></a>                        
-                            <a href="#" target="_blank" class="link-styles d-none d-xl-block">
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read press release
+                                <i class="icon-file"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read report <i
+                                    class="icon-list-view"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile d-none d-xl-block">
                                 View Presentation <i class="icon-arrow-right"></i>
                             </a>
                         </div>
@@ -600,9 +655,11 @@
                     </div>
                     <div class="col-lg-12 col-xl-5">
                         <div class="doc-list__links">
-                            <a href="#" target="_blank" class="link-styles">Read press release <i class="icon-file"></i></a>
-                            <a href="#" target="_blank" class="link-styles">Read report <i class="icon-list-view"></i></a>                        
-                            <a href="#" target="_blank" class="link-styles d-none d-xl-block">
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read press release
+                                <i class="icon-file"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read report <i
+                                    class="icon-list-view"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile d-none d-xl-block">
                                 View Presentation <i class="icon-arrow-right"></i>
                             </a>
                         </div>
@@ -626,9 +683,11 @@
                     </div>
                     <div class="col-lg-12 col-xl-5">
                         <div class="doc-list__links">
-                            <a href="#" target="_blank" class="link-styles">Read press release <i class="icon-file"></i></a>
-                            <a href="#" target="_blank" class="link-styles">Read report <i class="icon-list-view"></i></a>                        
-                            <a href="#" target="_blank" class="link-styles d-none d-xl-block">
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read press release
+                                <i class="icon-file"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read report <i
+                                    class="icon-list-view"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile d-none d-xl-block">
                                 View Presentation <i class="icon-arrow-right"></i>
                             </a>
                         </div>
@@ -652,9 +711,11 @@
                     </div>
                     <div class="col-lg-12 col-xl-5">
                         <div class="doc-list__links">
-                            <a href="#" target="_blank" class="link-styles">Read press release <i class="icon-file"></i></a>
-                            <a href="#" target="_blank" class="link-styles">Read report <i class="icon-list-view"></i></a>                        
-                            <a href="#" target="_blank" class="link-styles d-none d-xl-block">
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read press release
+                                <i class="icon-file"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read report <i
+                                    class="icon-list-view"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile d-none d-xl-block">
                                 View Presentation <i class="icon-arrow-right"></i>
                             </a>
                         </div>
@@ -680,9 +741,11 @@
                     </div>
                     <div class="col-lg-12 col-xl-5">
                         <div class="doc-list__links">
-                            <a href="#" target="_blank" class="link-styles">Read press release <i class="icon-file"></i></a>
-                            <a href="#" target="_blank" class="link-styles">Read report <i class="icon-list-view"></i></a>                        
-                            <a href="#" target="_blank" class="link-styles d-none d-xl-block">
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read press release
+                                <i class="icon-file"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read report <i
+                                    class="icon-list-view"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile d-none d-xl-block">
                                 View Presentation <i class="icon-arrow-right"></i>
                             </a>
                         </div>
@@ -706,9 +769,11 @@
                     </div>
                     <div class="col-lg-12 col-xl-5">
                         <div class="doc-list__links">
-                            <a href="#" target="_blank" class="link-styles">Read press release <i class="icon-file"></i></a>
-                            <a href="#" target="_blank" class="link-styles">Read report <i class="icon-list-view"></i></a>                        
-                            <a href="#" target="_blank" class="link-styles d-none d-xl-block">
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read press release
+                                <i class="icon-file"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read report <i
+                                    class="icon-list-view"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile d-none d-xl-block">
                                 View Presentation <i class="icon-arrow-right"></i>
                             </a>
                         </div>
@@ -732,9 +797,11 @@
                     </div>
                     <div class="col-lg-12 col-xl-5">
                         <div class="doc-list__links">
-                            <a href="#" target="_blank" class="link-styles">Read press release <i class="icon-file"></i></a>
-                            <a href="#" target="_blank" class="link-styles">Read report <i class="icon-list-view"></i></a>                        
-                            <a href="#" target="_blank" class="link-styles d-none d-xl-block">
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read press release
+                                <i class="icon-file"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read report <i
+                                    class="icon-list-view"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile d-none d-xl-block">
                                 View Presentation <i class="icon-arrow-right"></i>
                             </a>
                         </div>
@@ -758,9 +825,11 @@
                     </div>
                     <div class="col-lg-12 col-xl-5">
                         <div class="doc-list__links">
-                            <a href="#" target="_blank" class="link-styles">Read press release <i class="icon-file"></i></a>
-                            <a href="#" target="_blank" class="link-styles">Read report <i class="icon-list-view"></i></a>                        
-                            <a href="#" target="_blank" class="link-styles d-none d-xl-block">
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read press release
+                                <i class="icon-file"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile">Read report <i
+                                    class="icon-list-view"></i></a>
+                            <a href="#" target="_blank" class="link-styles link-styles_black-mobile d-none d-xl-block">
                                 View Presentation <i class="icon-arrow-right"></i>
                             </a>
                         </div>
@@ -769,7 +838,7 @@
                         </a>
                     </div>
                 </div>
-            </div>            
+            </div>
         </div>
     </div>
 </section>

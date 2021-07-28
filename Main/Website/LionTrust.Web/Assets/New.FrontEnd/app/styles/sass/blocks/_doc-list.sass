@@ -20,6 +20,9 @@
             i.icon-list-view, i.icon-arrow-right
                 font-size: 12px
                 vertical-align: inherit
+            &_black-mobile
+                @include breakpoint(desktop, down)
+                    color: $black
     &__title
         @extend .fund-item-list__title
         margin-bottom: 1rem
