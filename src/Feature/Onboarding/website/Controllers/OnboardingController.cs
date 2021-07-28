@@ -122,7 +122,7 @@
         }
 
         [HttpPost]
-        public ActionResult Submit([NotNull] OnboardingSubmit OnboardingSubmit)
+        public ActionResult Render([NotNull] OnboardingSubmit OnboardingSubmit)
         {
             if (ModelState.IsValid)
             {
@@ -142,7 +142,6 @@
                     {
                         string message = $"{OnboardingSubmit.Country} is not an valid value";
                         _log.Info(message, this);
-                        return new HttpStatusCodeResult(System.Net.HttpStatusCode.NotFound, message);
                     }
                 }
 
@@ -150,13 +149,11 @@
 
                 if (data?.OnboardingConfiguration == null)
                 {
-                    return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+                    _log.Error("Onboarding configuration has not been set", this);
                 }
                 else if (data.OnboardingConfiguration.Profile == null)
                 {
-                    string message = "Onboarding configuration profile has not been set";
-                    _log.Error(message, this);
-                    return new HttpStatusCodeResult(HttpStatusCode.NotFound, message);
+                    _log.Error("Onboarding configuration profile has not been set", this);
                 }
                 else
                 {
@@ -174,18 +171,19 @@
                             _cardManager.AddPointsFromProfileCard(data.OnboardingConfiguration.ProfressionalProfileCard, profile);
                         }
 
-                        return new HttpStatusCodeResult(HttpStatusCode.OK, "Onboarding complete.");
                     }
                     else
                     {
-                        return new HttpStatusCodeResult(HttpStatusCode.NotFound, "Profile not found.");
+                        _log.Error("Profile not found", this);
                     }
                 }
             }
             else
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                _log.Error("invalid data submitted", this);
             }
+
+            return Redirect(Request.RawUrl);
         }
 
         private bool IsOnboardingConfigured(IHome data)

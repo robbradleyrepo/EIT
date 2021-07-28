@@ -65,22 +65,6 @@ export default () => {
     showTab(2);
   });
 
-  // finish onboarding, close modal
-  $("#submit-board").on("click", () => {
-	  $.ajax({
-		type: "POST",
-		url: "/api/sitecore/Onboarding/Submit",
-		data: {Country : $('#Country').val(), Role: $('#Role').val()},
-		success: function(data){
-			onboarding.removeClass("active");
-			$('body').removeClass('overflow-hidden')
-		},
-		error: function(data) {
-			console.log(data.message);
-		}
-	  });
-  });
-
   $('.onboarding-overlay__link').on('click', function() {
     $('.onboarding-overlay__scroller').slideToggle();
   })
