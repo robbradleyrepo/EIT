@@ -108,5 +108,23 @@
             public const string DocumentApiRoute_SettingName = "Feature.Listings.DocumentsApiRoute";
             public const string GenericListingApiRoute_SettingName = "Feature.Listings.GenericListingApiRoute";
         }
+
+        public static class DocumentListerVariant
+        {
+            public const string SelectYearLabel_FieldId = "";
+            public const string PressReleaseLabel_FieldId = "";
+            public const string ReportLabel_FieldId = "";
+            public const string PresentationLabel_FieldId = "";
+        }
+
+        public static class DocumentVariant
+        {
+            public const string Title_FieldID = "";
+            public const string PressReleaseDocument_FieldID = "";
+            public const string ReportDocument_FieldID = "";
+            public const string PresentationLink_FieldID = "";
+            public const string Date_FieldID = "";
+
+        }
     }
 }
