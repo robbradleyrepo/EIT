@@ -1,6 +1,6 @@
 .gallary-app
     color: $black
-    
+
 .gallery-filter
     background: #F7F9FC
     padding: 18px 0
@@ -26,13 +26,24 @@
 .media-item
     display: flex
     flex-direction: column
-    margin-top: 27px
-    margin-bottom: 60px
-    &__image        
+    justify-content: space-between
+    height: 100%
+    padding-top: 27px
+    padding-bottom: 60px
+    &__image
         border-radius: 6px
         margin-bottom: 5px
+        width: 100%
+        height: auto
+    &__checkboxes
+        display: flex
+        justify-content: space-between
+        margin-top: 8px
     &__footer
         margin-top: 21px
         display: flex
         justify-content: space-between
-
+        align-items: center
+        height: 21px
+        i.icon-download
+            font-size: 12px

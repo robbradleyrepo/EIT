@@ -6,72 +6,27 @@ import {
 } from "./listFilter/mixins/baseDownload";
 const data = [
   {
-    images: [
-      {
-        thumbnailSrc: "../images/components/media-gallery/christin-hume.png",
-        src: "../images/components/media-gallery/christin-hume.png",
-      },
-      {
-        thumbnailSrc: "../images/components/media-gallery/christin-hume2.png",
-        src: "../images/components/media-gallery/christin-hume2.png",
-      },
-      {
-        thumbnailSrc: "../images/components/media-gallery/christin-hume2.png",
-        src: "../images/components/media-gallery/large-image.jpg",
-      },
-    ],
+    headshotimage: {
+      url: "../images/components/media-gallery/christin-hume.png",
+      id: "b7a024e4-5595-475a-b4a1-cfa582f453f9",
+    },
+    fullbodyimage: null,
     description:
-      "123123Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.",
-    downloadLink: "#some link",
-    id: 1,
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.",
+    id: "e2a024e4-5595-475a-b4a1-cfa532f453f9",
   },
   {
-    images: [
-      {
-        thumbnailSrc: "../images/components/media-gallery/christin-hume.png",
-        src: "../images/components/media-gallery/christin-hume.png",
-      },
-      {
-        thumbnailSrc: "../images/components/media-gallery/christin-hume2.png",
-        src: "../images/components/media-gallery/christin-hume2.png",
-      },
-    ],
+    headshotimage: {
+      url: "../images/components/media-gallery/christin-hume2.png",
+      id: "b7a024e4-5595-475a-b4a1-cfa582f453f9",
+    },
+    fullbodyimage: {
+      url: "../images/components/media-gallery/christin-hume.png",
+      id: "4e17f047-ca05-4491-a0f8-1f87a7f1056a",
+    },
     description:
-      "333333Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.",
-    downloadLink: "#some link",
-    id: 2,
-  },
-  {
-    images: [
-      {
-        thumbnailSrc: "../images/components/media-gallery/christin-hume.png",
-        src: "../images/components/media-gallery/christin-hume.png",
-      },
-      {
-        thumbnailSrc: "../images/components/media-gallery/christin-hume2.png",
-        src: "../images/components/media-gallery/christin-hume2.png",
-      },
-    ],
-    description:
-      "44444444444Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.",
-    downloadLink: "#some link",
-    id: 3,
-  },
-  {
-    images: [
-      {
-        thumbnailSrc: "../images/components/media-gallery/christin-hume.png",
-        src: "../images/components/media-gallery/christin-hume.png",
-      },
-      {
-        thumbnailSrc: "../images/components/media-gallery/christin-hume2.png",
-        src: "../images/components/media-gallery/christin-hume2.png",
-      },
-    ],
-    description:
-      "555555Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.",
-    downloadLink: "#some link",
-    id: 4,
+      "John Smith",
+    id: "e2a024e4-5595-475a-b4a1-cfa532f453f9",
   },
 ];
 
@@ -118,20 +73,20 @@ export default () => {
   $(".media-item-image-gallary").fancybox({
     infobar: false,
     buttons: [
-        // "zoom",
-        //"share",
-        // "slideShow",
-        //"fullScreen",
-        //"download",
-        // "thumbs",
-        "close"
-      ],
+      // "zoom",
+      //"share",
+      // "slideShow",
+      //"fullScreen",
+      //"download",
+      // "thumbs",
+      "close",
+    ],
     caption(instance, obj) {
-       return `<div class="fancy-nav">
+      return `<div class="fancy-nav">
             <p>
                 <span data-fancybox-index></span>/<span data-fancybox-count></span>
             </p>
-            <p>${$(this).data('caption')}</p>
+            <p>${$(this).data("caption")}</p>
             <a href="${obj.src}" download target="_blank" class="link-styles">
                 <i class="icon-download"></i> Download
             </a>

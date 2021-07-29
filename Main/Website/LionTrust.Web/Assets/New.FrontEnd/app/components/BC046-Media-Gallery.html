@@ -39,23 +39,39 @@
                 <media-item inline-template v-for="(item,i) in items" :key="i" :element="item" :index="i">
                     <div class="col-6 col-lg-2">
                         <div class="media-item">
-                            <div class="media-item__gallery">
-                                <a :href="getThumbnailImage.src" :data-caption="element.description" class="media-item-image-gallary" :data-fancybox="'images' + index">
-                                    <img class="media-item__image" :src="getThumbnailImage.thumbnailSrc" width="212"
-                                        height="119" />
-                                </a>
-                                <div style="display: none;">
-                                    <a v-for="(image, indx) in getImagesToOverlay" :data-caption="element.description" class="media-item-image-gallary" :key="indx" :href="image.src"
-                                        :data-fancybox="'images' + index">
-                                        <img class="media-item__image" :src="image.thumbnailSrc"/>
+                            <div class="media-item__body">
+                                <div class="media-item__gallery">
+                                    <a :href="element.headshotimage.url" :data-caption="element.description"
+                                        class="media-item-image-gallary" :data-fancybox="'images' + index">
+                                        <img class="media-item__image" :src="element.headshotimage.url" />
                                     </a>
+                                    <div v-if="element.fullbodyimage" style="display: none;">
+                                        <a :data-caption="element.description" class="media-item-image-gallary"
+                                            :href="element.fullbodyimage.url" :data-fancybox="'images' + index">
+                                            <img class="media-item__image" :src="element.fullbodyimage.url" />
+                                        </a>
+                                    </div>
                                 </div>
+                                <div class="media-item__text">
+                                    <span>{{element.description}}</span>
+                                    <div class="media-item__checkboxes" v-if="element.fullbodyimage">
+                                        <label class="checkbox checkbox-sm">
+                                            <input :checked="selected" @change="selectDocument" type="checkbox"
+                                                class="checkbox__input">
+                                            <span class="checkbox__box"></span>
+                                            <div class="checkbox__title">Headshot</div>
+                                        </label>
+                                        <label class="checkbox checkbox-sm">
+                                            <input :checked="selected" @change="selectDocument" type="checkbox"
+                                                class="checkbox__input">
+                                            <span class="checkbox__box"></span>
+                                            <div class="checkbox__title">Full Body</div>
+                                        </label>
+                                    </div>
+                                </div>                                
                             </div>
-                            <span class="media-item__text">
-                                {{element.description}}
-                            </span>
                             <div class="media-item__footer">
-                                <label class="checkbox checkbox-sm">
+                                <label v-if="!element.fullbodyimage" class="checkbox checkbox-sm">
                                     <input :checked="selected" @change="selectDocument" type="checkbox"
                                         class="checkbox__input">
                                     <span class="checkbox__box"></span>
@@ -63,8 +79,9 @@
                                 </label>
                                 <a :href="element.downloadLink" class="link-styles"><i class="icon-download"></i>
                                     Download</a>
-                            </div>
+                            </div>                           
                         </div>
+                    </div>
                 </media-item>
             </div>
         </div>
