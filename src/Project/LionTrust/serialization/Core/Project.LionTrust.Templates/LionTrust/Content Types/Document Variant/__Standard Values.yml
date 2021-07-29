@@ -1,0 +1,24 @@
+﻿---
+ID: "18d53643-51b3-40f1-9b48-4c1e7d8b20d1"
+Parent: "478760af-46c6-45b4-a7ee-b8f2ba4f0c3e"
+Template: "478760af-46c6-45b4-a7ee-b8f2ba4f0c3e"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Document Variant/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "17789fcd-d4ee-4fbf-983b-89aacfff3b82"
+      Hint: DocumentVariant_Date
+      Value: $date
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210729T062417Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "dfda05d5-803c-4595-9460-f6af0ae633b4"
+      Hint: DocumentVariant_Title
+      Value: $name

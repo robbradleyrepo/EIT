@@ -11,7 +11,6 @@
     using LionTrust.Feature.Listings.Helpers;
     using LionTrust.Feature.Listings.Models;
     using LionTrust.Foundation.Content.Repositories;
-    using LionTrust.Foundation.Core.ActionResults;
     using Sitecore.Mvc.Controllers;
 
     public class DocumentListerVariantController : SitecoreController
@@ -42,15 +41,17 @@
             else
             {
                 viewModel.Years = new List<string>();
-                var years = viewModel.Data.DocumentVariants.GroupBy(x => x.Date).OrderBy(x => x.Key);
+                var years = viewModel.Data.DocumentVariants.GroupBy(x => x.Date).OrderByDescending(x => x.Key);
                 viewModel.FirstYear = years.FirstOrDefault().Key.ToString("yyyy");
+                viewModel.DocumentsByYears = new List<DocumentVariantYears>();
                 DocumentVariantYears tmpDocumentVariantYear;
                 foreach (var year in years)
                 {
                     tmpDocumentVariantYear = new DocumentVariantYears();
                     tmpDocumentVariantYear.Year = year.Key.ToString("yyyy");
                     viewModel.Years.Add(tmpDocumentVariantYear.Year);
-                                        
+                    tmpDocumentVariantYear.Documents = new List<IDocumentVariant>();
+
                     foreach (var document in year) 
                     {
                         tmpDocumentVariantYear.Documents.Add(document);
