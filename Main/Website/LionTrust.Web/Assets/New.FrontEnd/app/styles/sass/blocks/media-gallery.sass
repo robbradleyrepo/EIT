@@ -1,0 +1,38 @@
+.gallary-app
+    color: $black
+    
+.gallery-filter
+    background: #F7F9FC
+    padding: 18px 0
+    .select
+        border-bottom-color: $gray
+    .search-form
+        margin-top: 8px
+        &__input
+            font-weight: 400
+
+.gallary-download-check
+    padding: 2rem 0
+    display: flex
+    justify-content: space-between
+    border-bottom: 1px solid #4148551A
+    min-height: 107px
+    @include breakpoint(desktop, up)
+        min-height: 116px
+
+.media-listing
+    border-bottom: 1px solid #4148551A
+
+.media-item
+    display: flex
+    flex-direction: column
+    margin-top: 27px
+    margin-bottom: 60px
+    &__image        
+        border-radius: 6px
+        margin-bottom: 5px
+    &__footer
+        margin-top: 21px
+        display: flex
+        justify-content: space-between
+
