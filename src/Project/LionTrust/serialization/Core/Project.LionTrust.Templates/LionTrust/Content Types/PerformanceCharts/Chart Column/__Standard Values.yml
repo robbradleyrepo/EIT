@@ -1,0 +1,26 @@
+﻿---
+ID: "5e0cd0cb-44e1-4722-bbb1-b265ac99bc87"
+Parent: "66461e0a-7825-474e-8528-1f49e5d5123b"
+Template: "66461e0a-7825-474e-8528-1f49e5d5123b"
+Path: /sitecore/templates/Project/LionTrust/Content Types/PerformanceCharts/Chart Column/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{B6BFE6A3-3638-4F80-B602-3CE6564273C2}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210726T224334Z
+    - ID: "2bd45bb0-bff1-470d-9ed4-76023872b1a2"
+      Hint: ChartColumn_Title
+      Value: $name
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

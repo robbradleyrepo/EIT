@@ -1,0 +1,37 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Listings.Models.PerformanceCharts.PerformanceChartsViewModel
+@if (Model != null)
+{
+    <section class="container">
+        <div class="row">
+            @if (Model.FirstChart != null)
+            {
+                <div class="col-lg-6">
+                    @Html.Partial("~/Views/Listings/_PerformanceChart.cshtml", Model.FirstChart)
+                </div>
+            }
+            @if (Model.SecondChart != null)
+            {
+                <div class="col-lg-6">
+                    @Html.Partial("~/Views/Listings/_PerformanceChart.cshtml", Model.SecondChart)
+                </div>
+            }
+            @if (Model.ThirdChart != null)
+            {
+                <div class="col-lg-6">
+                    @Html.Partial("~/Views/Listings/_PerformanceChart.cshtml", Model.ThirdChart)
+                </div>
+            }
+            @if (Model.FourthChart != null)
+            {
+                <div class="col-lg-6">
+                    @Html.Partial("~/Views/Listings/_PerformanceChart.cshtml", Model.FourthChart)
+                </div>
+            }
+        </div>
+    </section>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @: Please assign datasource for component
+}

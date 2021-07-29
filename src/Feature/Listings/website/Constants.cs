@@ -79,6 +79,30 @@
             public const string DownloadFileLabel_FieldID = "{58E70FCF-1799-4A4B-8DA7-EF4EEDAA07A4}";
         }
 
+        public static class PerformanceCharts
+        {
+            public const string Title_FieldId = "{18AD469C-30AB-420C-A9AA-1FE500163A10}";
+            public const string LegendDescription_FieldId = "{EEAA9FA2-ACB3-4DE1-978B-0FA58D7B0221}";
+            public const string Width_FieldId = "{AE97152E-D708-47EE-9F64-62CAFD9D6929}";
+            public const string Height_FieldId = "{AE5BC6E7-8584-42D2-B908-37183FED6035}";
+            public const string Scale_FieldId = "{91102FF9-F609-4ADE-A427-0676FCA53279}";
+            public const string Range_FieldId = "{E350A26A-5CCE-4A24-A220-90610CFE740C}";
+            public const string MaxRange_FieldId = "{0A7A9253-28D8-4544-B566-43E9909ECA08}";
+        }
+
+        public static class ChartColumns
+        {
+            public const string TemplateId = "{66461E0A-7825-474E-8528-1F49E5D5123B}";
+            public const string Title_FieldId = "{2BD45BB0-BFF1-470D-9ED4-76023872B1A2}";
+        }
+
+        public static class ChartColumnValue
+        {
+            public const string Title_FieldId = "{346103D5-FD6A-462A-BDC2-F025A1AC46E1}";
+            public const string Value_FieldId = "{C8A3907E-8191-4DCE-B0BD-83BCBA1F4A18}";
+            public const string Color_FieldId = "{F50C3989-9037-4B6D-847A-80584D65C963}";
+        }
+
         public static class Settings
         {
             public const string DocumentApiRoute_SettingName = "Feature.Listings.DocumentsApiRoute";
