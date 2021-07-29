@@ -44,7 +44,7 @@
 
             public const string LinkGoal_FieldID = "{BB76C1D8-044A-4813-B4DE-E36D21085304}";
             public const string LinkGoal_FieldName = "ScrollCard_LinkGoal";
-        }    
+        }
 
         public static class Defaults
         {
@@ -73,7 +73,7 @@
             public const string AZText_FieldID = "{AAE23341-C861-4FBC-B0AB-16EA97A7FFC7}";
             public const string ZAText_FieldID = "{D3733E07-651D-4602-A5E6-9EA7953199BC}";
             public const string ViewPageText_FieldID = "{FEA256FA-27B1-46E9-935C-69BF920571A5}";
-            public const string WatchVideoText_FieldID = "{40FD447E-6459-4EE2-B86D-DE9AB7008604}";           
+            public const string WatchVideoText_FieldID = "{40FD447E-6459-4EE2-B86D-DE9AB7008604}";
             public const string NextText_FieldID = "{EB373C6D-B8F8-4E56-B711-F574E2FAB67F}";
             public const string PreviousText_FieldID = "{EA027445-01E2-488B-A94C-A2FBF460972A}";
             public const string DownloadFileLabel_FieldID = "{58E70FCF-1799-4A4B-8DA7-EF4EEDAA07A4}";
@@ -126,5 +126,26 @@
             public const string Date_FieldID = "{17789FCD-D4EE-4FBF-983B-89AACFFF3B82}";
 
         }
+            public const string MediGalleryApiRoute_SettingName = "Feature.Listings.MediaGalleryApiRoute";
+        }
+
+        public static class MediaItem
+        {
+            public const string HeadShotImage_FieldId = "";
+            public const string FullBodyImage_FieldId = "";
+            public const string Description_FieldId = "";
+            public const string Categories_FieldId = "";
+        }
+
+        public static class MediaLister 
+        {
+            public const string SearchByKeywordLabel_FieldId = "";
+            public const string FilterByCategoryLabel_FieldId = "";
+            public const string DownloadSelectedLabel_FieldId = "";
+            public const string SelectAllLabel_FieldId = "";
+            public const string SelectLabel_FieldId = "";
+            public const string HeadshotLabel_FieldId = "";
+            public const string FullBodyLabel_FieldId = "";
+        }    
     }
 }

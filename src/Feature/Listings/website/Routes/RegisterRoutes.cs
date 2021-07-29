@@ -38,6 +38,18 @@
                     controller = "Documents",
                     action = "GetDocuments"
                 });
+            RouteTable.Routes.MapRoute("Feature.Listings.DownloadMediaImages", $"{Settings.GetSetting(Constants.Settings.MediGalleryApiRoute_SettingName)}/DownloadMediaImages",
+                new
+                {
+                    controller = "MediaGallery",
+                    action = "DownloadDocuments"
+                });
+            RouteTable.Routes.MapRoute("Feature.Listings.GetMediaItems", $"{Settings.GetSetting(Constants.Settings.MediaGalleryApiRoute_SettingName)}/GetMediaItems",
+                new
+                {
+                    controller = "MediaGallery",
+                    action = "GetDocuments"
+                });
         }
     }
 }

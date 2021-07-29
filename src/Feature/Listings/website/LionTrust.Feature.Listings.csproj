@@ -99,6 +99,7 @@
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\AccordionController.cs" />
     <Compile Include="Controllers\DocumentsController.cs" />
+    <Compile Include="Controllers\MediaGalleryController.cs" />
     <Compile Include="Controllers\PerformanceChartsController.cs" />
     <Compile Include="Controllers\DocumentListerVariantController.cs" />
     <Compile Include="Helpers\DocumentHelper.cs" />
@@ -107,6 +108,11 @@
     <Compile Include="DataManagers\Interfaces\IGenericListingDataManager.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Models\AccordionViewModel.cs" />
+    <Compile Include="Models\ImageModel.cs" />
+    <Compile Include="Models\IMediaItem.cs" />
+    <Compile Include="Models\IMediaGallery.cs" />
+    <Compile Include="Models\MediaGalleryResponse.cs" />
+    <Compile Include="Models\MediaItemModel.cs" />
     <Compile Include="Models\PerformanceCharts\ChartColumnModel.cs" />
     <Compile Include="Models\PerformanceCharts\ChartsModel.cs" />
     <Compile Include="Models\Document.cs" />
