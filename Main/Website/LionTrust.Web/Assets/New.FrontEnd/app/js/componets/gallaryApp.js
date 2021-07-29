@@ -1,5 +1,6 @@
 import Vue from "vue/dist/vue.common";
-const eventBus = new Vue();
+// const eventBus = new Vue();
+import { baseDownloadChild, baseDownloadParent } from "./listFilter/mixins/baseDownload";
 const data = [
   {
     images: [
@@ -71,6 +72,7 @@ export default () => {
   const mediaItem = Vue.component("media-item", {
     name: "mediaItem",
     props: ["element", "index"],
+    mixins: [baseDownloadChild],
     data: function () {
       return {
         selected: false,
@@ -86,46 +88,22 @@ export default () => {
         return res;
       },
     },
-    methods: {
-      selectDocument() {
-        this.$parent.setDocumentId(this.element.id);
-      },
-    },
-    created() {
-      eventBus.$on("toggleSelected", (selected) => {
-        this.selected = selected;
-        if (selected) this.selectDocument(this.id);
-      });
-    },
-    beforeDestroy() {
-      eventBus.$off("toggleSelected");
-    },
+
   });
 
   new Vue({
     el: "#gallary-app",
     components: { "media-item": mediaItem },
-    data: {
-      searchText: "",
-      items: data,
-      selectedDocumentIds: [],
-      selectAllDocuments: false
+    mixins: [baseDownloadParent],
+    data: function () {
+      return {
+        searchText: "",
+        items: data,
+      };
     },
     methods: {
-      setDocumentId(id) {
-        console.log("id", id);
-        const index = this.selectedDocumentIds.findIndex((el) => el === id);
-        if (index !== -1) this.selectedDocumentIds.splice(index, 1);
-        else this.selectedDocumentIds.push(id);
-      },
       downloadDocumentMultiple() {
-          console.log('download');
-      }
-    },
-    watch: {
-      selectAllDocuments: function (value) {
-        this.selectedDocumentIds = [];
-        eventBus.$emit("toggleSelected", value);
+        console.log("download");
       },
     },
   });

@@ -1,4 +1,5 @@
 import Vue from "vue/dist/vue.common.prod";
+import { baseDownloadChild, baseDownloadParent } from "./listFilter/mixins/baseDownload";
 const eventBus = new Vue();
 import { pagination } from "./listFilter/mixins/pagination";
 export default () => {
@@ -38,7 +39,7 @@ export default () => {
 
   new Vue({
     el: "#lister-app",
-    mixins: [pagination],
+    mixins: [pagination, baseDownloadParent],
     data: {
       facets: {},
       params: {},
@@ -56,8 +57,6 @@ export default () => {
       months: [],
       years: [],
       grid: false,
-      selectAllDocuments: false,
-      selectedDocumentIds: [],
       activeButton: false
     },
     computed: {
@@ -147,13 +146,7 @@ export default () => {
 
       submitSearchForm(e) {
         if (e.target.searchText.value) this.applyFilters();
-      },
-
-      setDocumentId(id) {
-        const index = this.selectedDocumentIds.findIndex((el) => el === id);
-        if (index !== -1) this.selectedDocumentIds.splice(index, 1);
-        else this.selectedDocumentIds.push(id);
-      },
+      },      
 
       clearDocumentIds() {
         this.selectedDocumentIds = [];
@@ -231,10 +224,6 @@ export default () => {
       sortOrder: function () {
         this.params.sortOrder = [this.sortOrder];
         this.applyFilters();
-      },
-      selectAllDocuments: function (value) {
-        this.selectedDocumentIds = [];
-        eventBus.$emit("toggleSelected", value);
       },
       params: {
         deep: true,
@@ -327,6 +316,7 @@ export default () => {
 
   Vue.component("document-item", {
     props: ["id", "title"],
+    mixins: [baseDownloadChild],
     data: function () {
       return {
         selected: false,
@@ -361,15 +351,6 @@ export default () => {
             document.body.style.cursor = "default";
           });
       },
-    },
-    created() {
-      eventBus.$on("toggleSelected", (selected) => {
-        this.selected = selected;
-        if (selected) this.selectDocument(this.id);
-      });
-    },
-    beforeDestroy() {
-      eventBus.$off("toggleSelected");
     },
   });
 };
