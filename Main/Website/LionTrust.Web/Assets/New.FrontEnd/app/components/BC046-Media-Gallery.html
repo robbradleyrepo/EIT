@@ -40,16 +40,14 @@
                     <div class="col-6 col-lg-2">
                         <div class="media-item">
                             <div class="media-item__gallery">
-                                <a :href="getThumbnailImage.src" :data-fancybox="'images' + index" data-width="1500"
-                                    data-height="1000">
+                                <a :href="getThumbnailImage.src" :data-caption="element.description" class="media-item-image-gallary" :data-fancybox="'images' + index">
                                     <img class="media-item__image" :src="getThumbnailImage.thumbnailSrc" width="212"
                                         height="119" />
                                 </a>
                                 <div style="display: none;">
-                                    <a v-for="(image, indx) in getImagesToOverlay" :key="indx" :href="image.src"
-                                        :data-fancybox="'images' + index" data-width="1500" data-height="1000">
-                                        <img class="media-item__image" :src="image.thumbnailSrc" width="212"
-                                            height="119" />
+                                    <a v-for="(image, indx) in getImagesToOverlay" :data-caption="element.description" class="media-item-image-gallary" :key="indx" :href="image.src"
+                                        :data-fancybox="'images' + index">
+                                        <img class="media-item__image" :src="image.thumbnailSrc"/>
                                     </a>
                                 </div>
                             </div>

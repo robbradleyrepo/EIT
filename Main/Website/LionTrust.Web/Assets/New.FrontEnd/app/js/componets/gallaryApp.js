@@ -1,6 +1,9 @@
 import Vue from "vue/dist/vue.common";
 // const eventBus = new Vue();
-import { baseDownloadChild, baseDownloadParent } from "./listFilter/mixins/baseDownload";
+import {
+  baseDownloadChild,
+  baseDownloadParent,
+} from "./listFilter/mixins/baseDownload";
 const data = [
   {
     images: [
@@ -11,6 +14,10 @@ const data = [
       {
         thumbnailSrc: "../images/components/media-gallery/christin-hume2.png",
         src: "../images/components/media-gallery/christin-hume2.png",
+      },
+      {
+        thumbnailSrc: "../images/components/media-gallery/christin-hume2.png",
+        src: "../images/components/media-gallery/large-image.jpg",
       },
     ],
     description:
@@ -88,7 +95,6 @@ export default () => {
         return res;
       },
     },
-
   });
 
   new Vue({
@@ -105,6 +111,31 @@ export default () => {
       downloadDocumentMultiple() {
         console.log("download");
       },
+    },
+  });
+
+  // init fancybox image carousel
+  $(".media-item-image-gallary").fancybox({
+    infobar: false,
+    buttons: [
+        // "zoom",
+        //"share",
+        // "slideShow",
+        //"fullScreen",
+        //"download",
+        // "thumbs",
+        "close"
+      ],
+    caption(instance, obj) {
+       return `<div class="fancy-nav">
+            <p>
+                <span data-fancybox-index></span>/<span data-fancybox-count></span>
+            </p>
+            <p>${$(this).data('caption')}</p>
+            <a href="${obj.src}" download target="_blank" class="link-styles">
+                <i class="icon-download"></i> Download
+            </a>
+        </div>`;
     },
   });
 };
