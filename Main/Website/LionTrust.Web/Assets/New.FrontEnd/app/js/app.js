@@ -22,6 +22,7 @@ import fundChartDropdown from "./componets/fundChartDropdown";
 import shareLink from "./componets/shareLink";
 import locationAndMap from "./componets/locationAndMap";
 import barStuckedChart from "./componets/barStuckedChart";
+import gallaryApp from "./componets/gallaryApp";
 
 document.addEventListener("DOMContentLoaded", () => {
   onboardingOverlay();
@@ -40,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   shareLink();
   locationAndMap();
   barStuckedChart();
+  gallaryApp();
   // if (document.querySelector(".article-page")) articleFilter();
   if (document.querySelector(".main-page")) parallaxScrolling();
 

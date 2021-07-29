@@ -1,0 +1,80 @@
+<section id="gallary-app" class="gallary-app">
+    <div class="gallery-filter">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 offset-lg-3 relative">
+                    <select name="filterby" id="filterby" class="select">
+                        <option value="1">Filter by Category</option>
+                        <option value="2">Fund</option>
+                        <option value="3">Article</option>
+                        <option value="4">Fund detail</option>
+                        <option value="5">Manager</option>
+                    </select>
+                    <i class="article-filters__icon-arrow article-filters__icon-arrow_select"></i>
+                </div>
+                <div class="col-lg-3">
+                    <form class="search-form" @submit.prevent="submitSearchForm($event)">
+                        <input type="text" v-model="searchText" name="searchText" class="search-form__input color-black"
+                            placeholder="Search Gallery">
+                        <button class="search-form__submit pe-0" type="submit">
+                            <i class="icon-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="gallary-download-check">
+            <label class="checkbox">
+                <input type="checkbox" class="checkbox__input">
+                <span class="checkbox__box"></span>
+                <div class="checkbox__title">Select all</div>
+            </label>
+            <button class="btn btn-primary">Download all selected <i class="icon-download"></i></button>
+        </div>
+        <div class="media-listing">
+            <div class="row">
+                <div class="col-6 col-lg-2">
+                    <div class="media-item">
+                        <div class="media-item__gallery">
+                            <a href="../images/components/media-gallery/christin-hume.png" data-fancybox="images"
+                            data-width="1500" data-height="1000">
+                            <img class="media-item__image"
+                                src="../images/components/media-gallery/christin-hume-thumbnail.png" width="212"
+                                height="119" />
+                            </a>
+                            <div style="display: none;">
+                                <a href="../images/components/media-gallery/christin-hume2.png" data-fancybox="images"
+                            data-width="1500" data-height="1000">
+                            <img class="media-item__image"
+                                src="../images/components/media-gallery/christin-hume-thumbnail2.png" width="212"
+                                height="119" />
+                            </a>
+                            </div>
+                        </div>                        
+                        <span class="media-item__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.
+                        </span>
+                        <div class="media-item__footer">
+                            <label class="checkbox checkbox-sm">
+                                <input type="checkbox" class="checkbox__input">
+                                <span class="checkbox__box"></span>
+                                <div class="checkbox__title">Select</div>
+                            </label>
+                            <a href="#" class="link-styles"><i class="icon-download"></i> Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gallary-download-check">
+            <label class="checkbox">
+                <input type="checkbox" class="checkbox__input">
+                <span class="checkbox__box"></span>
+                <div class="checkbox__title">Select all</div>
+            </label>
+            <button class="btn btn-primary">Download all selected <i class="icon-download"></i></button>
+        </div>
+    </div>
+</section>
