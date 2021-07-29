@@ -7,8 +7,6 @@
             margin-bottom: 0
     &__links
         @extend .fund-item-list__links
-        // @include breakpoint(desktop-large, up)
-        //     justify-content: flex-end!important
         a
             margin-right: 10px
             @include breakpoint(desktop, up)
@@ -18,6 +16,13 @@
         i
             font-size: 15px
             vertical-align: text-top
+        .link-styles
+            i.icon-list-view, i.icon-arrow-right
+                font-size: 12px
+                vertical-align: inherit
+            &_black-mobile
+                @include breakpoint(desktop, down)
+                    color: $black
     &__title
         @extend .fund-item-list__title
         margin-bottom: 1rem
@@ -30,7 +35,6 @@
             display: block
     &__heading
         @extend .h5
-
 
 .doc-list-nav
     margin-top: 30px
