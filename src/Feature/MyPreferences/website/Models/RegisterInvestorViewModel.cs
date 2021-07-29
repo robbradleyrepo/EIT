@@ -24,20 +24,26 @@ namespace LionTrust.Feature.MyPreferences.Models
         public string UserExistsErrorLabel { get; set; }
 
         [Required]
+        [Display(Name = "First Name *")]
         public string FirstName { get; set; }
 
         [Required]
+        [Display(Name = "Last Name *")]
         public string LastName { get; set; }
 
         [Required]
         [EmailAddress]
+        [Display(Name = "Email *")]
         public string Email { get; set; }
 
+        [Display(Name = "Company Name")]
         public string CompanyName { get; set; }
 
+        [Display(Name = "Individual FCA Reference Number")]
         public string CompanyId { get; set; }
 
         [Required]
+        [Display(Name = "UK Resident *")]
         public bool UKResident { get; set; }
 
         public InvestorType InvestorType { get; set; }

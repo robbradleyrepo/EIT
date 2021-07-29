@@ -1,91 +1,74 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @model LionTrust.Feature.MyPreferences.Models.RegisterInvestorViewModel
-<div class="reg-prof-investor">
-    <h3 class="reg-investor-title-label">@Html.Glass().Editable(Model.Content, x => x.Title)</h3>
-    <div class="reg-investor-subtitle-label-light">
-        @Html.Glass().Editable(Model.Content, x => x.Subtitle)
-    </div>
-    <p class="reg-investor-description">
-        @Html.Glass().Editable(Model.Content, x => x.Description)
-    </p>
-    <div class="reg-prof-investor-error">
-        <div id="RegProfGlobalError" runat="server" class="reg-investor-error-global-label"> @Html.Glass().Editable(Model, x => x.Error)</div>
-    </div>
-    <div class="reg-prof-investor-form-div">
-        @using (Html.BeginRouteForm(Sitecore.Mvc.Configuration.MvcSettings.SitecoreRouteName, FormMethod.Post))
-        {
-            <div class="reg-investor-row">
-                <div class="reg-investor-col-25">
-                    <label>First Name *</label>
-                </div>
-                <div class="reg-investor-col-75">
-                    @Html.TextBoxFor(x => x.FirstName)
-                    @*<asp:RequiredFieldValidator ID="RegProfFirstNameValidator" runat="server" ControlToValidate="RegProfFirstName" ErrorMessage="Required" CssClass="reg-investor-error-label">
-                    </asp:RequiredFieldValidator>*@
-                </div>
+@{
+    Html.EnableClientValidation(true);
+}
+<section class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <h2>@Html.Glass().Editable(Model.Content, x => x.Title)</h2>
+            <div>
+                <p>
+                    @Html.Glass().Editable(Model.Content, x => x.Subtitle)
+                </p>
             </div>
-            <div class="reg-investor-row">
-                <div class="reg-investor-col-25">
-                    <label>Last Name *</label>
-                </div>
-                <div class="reg-investor-col-75">
-                    @Html.TextBoxFor(x => x.LastName)
-                    @*<asp:RequiredFieldValidator ID="RegProfLastNameValidator" runat="server" ControlToValidate="RegProfLastName" ErrorMessage="Required" CssClass="reg-investor-error-label">
-                    </asp:RequiredFieldValidator>*@
-                </div>
+            <div>
+                <p>
+                    @Html.Glass().Editable(Model.Content, x => x.Description)
+                </p>
             </div>
-            <div class="reg-investor-row">
-                <div class="reg-investor-col-25">
-                    <label>Email *</label>
-                </div>
-                <div class="reg-investor-col-75">
-                    @Html.TextBoxFor(x => x.Email)
-                    @*<asp:RequiredFieldValidator ID="RegProfEmailRequiedValidator" runat="server" ControlToValidate="RegProfEmail" ErrorMessage="Required" CssClass="reg-investor-error-label">
-                    </asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="RegProfEmailFormatValidator"
-                                                    runat="server" ErrorMessage="Invalid Email"
-                                                    ControlToValidate="RegProfEmail"
-                                                    ValidationExpression="^([\w\.\-]+)@([\w\-] +)((\.(\w){2,3})+)$" CssClass="reg-investor-error-label" />*@
-                </div>
-            </div>
-            if (Model.InvestorType == LionTrust.Foundation.Onboarding.Constants.InvestorType.Professional)
+            @if (!string.IsNullOrWhiteSpace(Model.Error))
             {
-            <div class="reg-investor-row">
-                <div class="reg-investor-col-25">
-                    <label>Individual FCA Reference Number</label>
+                <div>
+                    <p> @Html.Glass().Editable(Model, x => x.Error)</p>
                 </div>
-                <div class="reg-investor-col-75">
-                    @Html.TextBoxFor(x => x.CompanyId)
-                    <asp:TextBox ID="RegProfCompanyId" runat="server"></asp:TextBox>
-                </div>
-            </div>
-            <div class="reg-investor-row">
-                <div class="reg-investor-col-25">
-                    <label>Company Name</label>
-                </div>
-                <div class="reg-investor-col-75">
-                    @Html.TextBoxFor(x => x.CompanyName)
-                </div>
-            </div>
             }
-            <div class="reg-investor-row">
-                <div class="reg-investor-col-25">
-                    <label>UK Resident *</label>
-                </div>
-                <div class="reg-investor-col-75">
-                    @Html.DropDownListFor(x => x.UKResident, new List<SelectListItem>() { new SelectListItem { Text = "Yes", Value = "true" }, new SelectListItem { Text = "No", Value = "false" } }, "Please Select")  )
-                    @*<asp:DropDownList ID="RegProfUkResidentDropdown" runat="server" AppendDataBoundItems="True" CssClass="reg-investor-ukresident-selectlist">
-                        <asp:ListItem Value="">Please Select</asp:ListItem>
-                        <asp:ListItem Value="true">Yes</asp:ListItem>
-                        <asp:ListItem Value="false">No</asp:ListItem>
-                    </asp:DropDownList>
-                    <asp:RequiredFieldValidator ID="RegProfUkResidentDropdownValidator" runat="server" CssClass="reg-investor-error-label" ControlToValidate="RegProfUkResidentDropdown" ErrorMessage="Required" InitialValue="">
-                    </asp:RequiredFieldValidator>*@
-                </div>
-            </div>
-            <div class="reg-investor-row">
-                <button type="submit" class="rte-button reg-investor-submit-btn">Register</button>
-            </div>
-        }
+        </div>
     </div>
-</div>
+    <div class="row">
+        <div class="col-lg-6">
+            @using (Html.BeginRouteForm(Sitecore.Mvc.Configuration.MvcSettings.SitecoreRouteName, FormMethod.Post))
+            {
+            <div class="input-group">
+                @Html.LabelFor(x => x.FirstName)
+                @Html.TextBoxFor(x => x.FirstName)
+                @Html.ValidationMessageFor(x => x.FirstName)
+            </div>
+
+            <div class="input-group">
+                @Html.LabelFor(x => x.LastName)
+                @Html.TextBoxFor(x => x.LastName)
+                @Html.ValidationMessageFor(x => x.LastName)
+            </div>
+
+            <div class="input-group">
+                @Html.LabelFor(x => x.Email)
+                @Html.TextBoxFor(x => x.Email)
+                @Html.ValidationMessageFor(x => x.Email)
+            </div>
+                if (Model.InvestorType == LionTrust.Foundation.Onboarding.Constants.InvestorType.Professional)
+                {
+                    <div class="input-group">
+                        @Html.LabelFor(x => x.CompanyId)
+                        @Html.TextBoxFor(x => x.CompanyId)
+                    </div>
+
+                    <div class="input-group">
+                        @Html.LabelFor(x => x.CompanyName)
+                        @Html.TextBoxFor(x => x.CompanyName)
+                    </div>
+                }
+
+        <div class="input-group">
+            @Html.LabelFor(x => x.UKResident)
+            @Html.DropDownListFor(x => x.UKResident, new List<SelectListItem>() { new SelectListItem { Text = "Yes", Value = "true" }, new SelectListItem { Text = "No", Value = "false" } }, "Please Select")
+            @Html.ValidationMessageFor(x => x.UKResident)
+        </div>
+
+                <div class="input-btn">
+                    <input type="submit" class="btn-primary" value="Register" />
+                </div>
+            }
+        </div>
+    </div>
+</section>

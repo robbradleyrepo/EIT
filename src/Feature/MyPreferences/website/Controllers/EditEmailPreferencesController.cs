@@ -12,33 +12,62 @@
     using System.Web.Mvc;
     using static LionTrust.Foundation.Onboarding.Constants;
 
-    public class RegisterInvestorController : SitecoreController
+    public class EditEmailPreferencesController : SitecoreController
     {
         private readonly IMvcContext _context;
         private readonly BaseLog _log;
         private readonly EmailPreferencesService _emailPreferencesService;
 
-        public RegisterInvestorController(IMvcContext context, BaseLog log, IMailService mailManager, IEmailPreferencesRepository editEmailPreferencesRepository)
+        public EditEmailPreferencesController(IMvcContext context, BaseLog log, IMailService mailManager, IEmailPreferencesRepository editEmailPreferencesRepository)
         {
             _context = context;
             _log = log;
             _emailPreferencesService = new EmailPreferencesService(editEmailPreferencesRepository, mailManager);
         }
 
-        public ActionResult Render()
+        public ActionResult Render(string @ref)
         {
             var data = _context.GetDataSourceItem<IRegisterInvestor>();
-
+            
             if (data == null)
             {
                 return null;
             }
 
-            //OnboardingHelper.GetInvestorType()
 
-            var viewModel = new RegisterInvestorViewModel(data, InvestorType.Private);
+            var sfEntityId = string.Empty;
+            var sfRandomGUID = string.Empty;
 
-            return View("~/Views/MyPreferences/RegisterInvestor.cshtml", viewModel);
+
+
+            //Query string "ref" should have the format as follows: {GUID}_{entityId}
+            if (!string.IsNullOrEmpty(@ref))
+            {
+                var queryStringParts = @ref.Split('_');
+                if (queryStringParts.Length >= 2)
+                {
+                    sfRandomGUID = queryStringParts[0];
+                    sfEntityId = queryStringParts[1];
+                }
+            }
+
+            if (!string.IsNullOrEmpty(sfEntityId) && (sfEntityId.StartsWith("003", StringComparison.CurrentCultureIgnoreCase) || sfEntityId.StartsWith("00Q", StringComparison.CurrentCultureIgnoreCase)) && !string.IsNullOrEmpty(sfRandomGUID))
+            {
+                var isContact = (sfEntityId.StartsWith("003", StringComparison.CurrentCultureIgnoreCase)) ? true : false;
+                var emailPreferences = _emailPreferencesService.GetEmailPreferences(sfEntityId, sfRandomGUID, isContact);
+
+
+
+
+
+
+
+                var viewModel = new EditEmailPreferencesViewModel(emailPreferences);
+
+                return View("~/Views/MyPreferences/EditEmailPreferences.cshtml", viewModel);
+            }
+
+            return null;
         }
 
         [HttpPost]
@@ -141,7 +170,7 @@
         {
             var data = _context.GetDataSourceItem<IRegisterInvestor>();
 
-            if (data == null)
+            if(data == null)
             {
                 return null;
             }
@@ -152,8 +181,8 @@
             {
                 isSuccess = _emailPreferencesService.ResendEditEmailPrefLink(email, isContact, data.ResendEditPreferencesEmailTemplate, data.EditPreferencesPage.Url);
             }
-
-            if (isSuccess)
+            
+            if(isSuccess)
             {
                 return Redirect(data.ResendEmailSuccessPage.Url);
             }

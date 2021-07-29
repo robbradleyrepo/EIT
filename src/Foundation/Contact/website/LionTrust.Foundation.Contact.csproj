@@ -31,12 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Codehouse.Common">
-      <HintPath>..\..\..\..\dependencies\Codehouse\Codehouse.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Codehouse.Common.Sitecore">
-      <HintPath>..\..\..\..\dependencies\Codehouse\Codehouse.Common.Sitecore.dll</HintPath>
-    </Reference>
     <Reference Include="FuseIT.S4S.WebToSalesforce">
       <HintPath>..\..\..\..\dependencies\FuseIT.S4S\FuseIT.S4S.WebToSalesforce.dll</HintPath>
     </Reference>
@@ -65,79 +59,14 @@
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
-    <Compile Include="Extensions\AutoMapperExtensions.cs" />
-    <Compile Include="Extensions\FieldExtensions.cs" />
-    <Compile Include="Extensions\ItemExtensions.cs" />
-    <Compile Include="Extensions\StreamExtensions.cs" />
-    <Compile Include="Extensions\StringExtensions.cs" />
-    <Compile Include="Models\EditEmailPreferences\EditEmailPrefEmailTemplateViewModel.cs" />
-    <Compile Include="Models\EditEmailPreferences\EmailPreferences.cs" />
-    <Compile Include="Models\EditEmailPreferences\EmailPreferencesViewModel.cs" />
-    <Compile Include="Models\EditEmailPreferences\NonProfessionalUser.cs" />
-    <Compile Include="Models\EditEmailPreferences\NonProfUserViewModel.cs" />
-    <Compile Include="Models\EditEmailPreferences\ProfessionalUser.cs" />
-    <Compile Include="Models\EditEmailPreferences\ProfUserViewModel.cs" />
-    <Compile Include="Models\EditEmailPreferences\RegisterdUserReturnViewModel.cs" />
-    <Compile Include="Models\EditEmailPreferences\RegisterdUserWithEmailDetails.cs" />
-    <Compile Include="Models\EditEmailPreferences\RegisterNonProfUserViewModel.cs" />
-    <Compile Include="Models\EditEmailPreferences\RegisterProfUserViewModel.cs" />
-    <Compile Include="Models\EditEmailPreferences\ResendEmailPrefEmailDetails.cs" />
-    <Compile Include="Models\EditEmailPreferences\ResendEmailPrefLinkUIDetails.cs" />
-    <Compile Include="Models\EditEmailPreferences\ResendEmailPrefLinkViewModel.cs" />
-    <Compile Include="Models\EditEmailPreferences\ResendEmailPrefUserDetails.cs" />
-    <Compile Include="Models\EditEmailPreferences\ReturnedNonProfUserViewModel.cs" />
-    <Compile Include="Models\EditEmailPreferences\ReturnedProfUserViewModel.cs" />
-    <Compile Include="Models\EditEmailPreferences\SFCountryListItem.cs" />
-    <Compile Include="Models\EditEmailPreferences\SFCountryListViewModel.cs" />
-    <Compile Include="Models\EditEmailPreferences\SFFund.cs" />
-    <Compile Include="Models\EditEmailPreferences\SFFundViewModel.cs" />
-    <Compile Include="Models\EditEmailPreferences\SFProcess.cs" />
-    <Compile Include="Models\EditEmailPreferences\SFProcessEmailPreferenceViewModel.cs" />
-    <Compile Include="Models\Labels\EditEmailPreferencesLabels.cs" />
-    <Compile Include="Models\Labels\FundLabels.cs" />
-    <Compile Include="Models\Labels\GenericLabels.cs" />
-    <Compile Include="Models\Labels\ILabelsRepository.cs" />
-    <Compile Include="Models\Labels\ListingFilterLabels.cs" />
-    <Compile Include="Models\Labels\PersonalizedContentComponentLabels.cs" />
-    <Compile Include="Models\Labels\RegisterNonProfUserLabels.cs" />
-    <Compile Include="Models\Labels\RegisterProfUserLabels.cs" />
-    <Compile Include="Models\Labels\SearchResultPageLabels.cs" />
-    <Compile Include="Models\Labels\SharePriceLabels.cs" />
-    <Compile Include="Models\Links\LinkViewModel.cs" />
-    <Compile Include="Models\Types\DropLink.cs" />
-    <Compile Include="Models\Types\Image.cs" />
-    <Compile Include="Models\Types\IProperty.cs" />
-    <Compile Include="Models\Types\ItemProperty.cs" />
-    <Compile Include="Models\Types\Link.cs" />
-    <Compile Include="Models\Types\SitecoreImage.cs" />
-    <Compile Include="Models\Types\SitecoreLink.cs" />
-    <Compile Include="Models\Types\SitecoreText.cs" />
-    <Compile Include="Repositories\ApplicationCacheRepository.cs" />
-    <Compile Include="Repositories\BaseRepository.cs" />
-    <Compile Include="Repositories\EmailPreferencesRepository.cs" />
-    <Compile Include="Repositories\EntityFactory.cs" />
-    <Compile Include="Repositories\IApplicationCacheRepository.cs" />
-    <Compile Include="Repositories\IBaseRepository.cs" />
-    <Compile Include="Repositories\IEmailPreferencesRepository.cs" />
-    <Compile Include="Repositories\IEntityFactory.cs" />
-    <Compile Include="Repositories\ILabelsRepository.cs" />
-    <Compile Include="Repositories\IViewModelFactory.cs" />
-    <Compile Include="Repositories\LabelsRepository.cs" />
-    <Compile Include="Services\BaseService.cs" />
     <Compile Include="Services\IMailService.cs" />
     <Compile Include="Services\MailService.cs" />
-    <Compile Include="Services\S4SSessionSingleton.cs" />
     <Compile Include="Services\SitecoreContactUtility.cs" />
-    <Compile Include="Services\EmailPreferenceService.cs" />
     <Compile Include="Services\ISitecoreContactUtility.cs" />
     <Compile Include="Models\ScContactFacetData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\SFEntityService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="AutoMapper">
-      <Version>3.2.1</Version>
-    </PackageReference>
     <PackageReference Include="Glass.Mapper.Sc.92.Mvc">
       <Version>5.8.177</Version>
     </PackageReference>
@@ -157,5 +86,12 @@
   <ItemGroup>
     <Content Include="App_Config\Include\Feature\Foundation.Contact.RegisterContainer.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ORM\website\LionTrust.Foundation.ORM.csproj">
+      <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>
+      <Name>LionTrust.Foundation.ORM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

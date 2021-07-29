@@ -5,6 +5,9 @@ Template: "2a3e91a0-7987-44b5-ab34-35c2d9de83b9"
 Path: /sitecore/layout/Renderings/Feature/MyPreferences/RegisterInvestor
 DB: master
 SharedFields:
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: /sitecore/templates/Project/LionTrust/Content Types/Register Investor
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
   Value: "site:registerinvestor"
@@ -22,7 +25,7 @@ Languages:
     - ID: "04437558-ac18-42cb-ab21-1243a66abe67"
       Hint: Supports Local Datasource
       Type: Checkbox
-      Value: 1
+      Value: 0
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20210728T131907Z
