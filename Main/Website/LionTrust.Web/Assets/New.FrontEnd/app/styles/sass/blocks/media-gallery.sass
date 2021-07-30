@@ -6,10 +6,30 @@
     padding: 18px 0
     .select
         border-bottom-color: $gray
+        color: $black
+        @include breakpoint(desktop, down)
+            padding: 10px 0
+    .select-arrow
+        @include breakpoint(desktop, down)
+            &::before
+                content: "\e906"
+                font-size: 5px
     .search-form
         margin-top: 8px
+        height: 100%
+        display: flex
+        justify-content: flex-end
+        @include breakpoint(desktop, up)
+            margin-top: 0
         &__input
             font-weight: 400
+            font-size: 16px
+            padding-bottom: 6px
+            @include breakpoint(desktop, up)
+                padding-bottom: 0
+        .search-form__submit
+            @include breakpoint(desktop, up)
+                top: 12px
 
 .gallary-download-check
     position: relative

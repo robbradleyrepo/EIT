@@ -8,7 +8,7 @@
                         <option v-for="facet in facets" :key="facet.identifier" :value="facet.identifier">{{facet.name}}</option>
                         
                     </select>
-                    <i class="article-filters__icon-arrow article-filters__icon-arrow_select"></i>
+                    <i class="article-filters__icon-arrow article-filters__icon-arrow_select select-arrow"></i>
                 </div>
                 <div class="col-lg-3">
                     <form class="search-form" @submit.prevent="submitSearchForm($event)">
