@@ -1,5 +1,6 @@
 import Vue from "vue/dist/vue.common";
-// const eventBus = new Vue();
+import { eventBus } from "./listFilter/bus";
+
 import {
   baseDownloadChild,
   baseDownloadParent,
@@ -8,7 +9,7 @@ const data = [
   {
     headshotimage: {
       url: "../images/components/media-gallery/christin-hume.png",
-      id: "b7a024e4-5595-475a-b4a1-cfa582f453f9",
+      id: "b7a02424-5595-475a-b4a1-cfa582f453f9",
     },
     fullbodyimage: null,
     description:
@@ -18,11 +19,11 @@ const data = [
   {
     headshotimage: {
       url: "../images/components/media-gallery/christin-hume2.png",
-      id: "b7a024e4-5595-475a-b4a1-cfa582f453f9",
+      id: "b7a024e4-5593-475a-b4a1-cfa582f453f9",
     },
     fullbodyimage: {
       url: "../images/components/media-gallery/christin-hume.png",
-      id: "4e17f047-ca05-4491-a0f8-1f87a7f1056a",
+      id: "4e17f047-ca05-4491-a0f5-1f87a7f1056a",
     },
     description:
       "John Smith",
@@ -31,25 +32,38 @@ const data = [
 ];
 
 export default () => {
+  const selectField = Vue.component("select-field", {
+    name: "selectField",
+    data:() => ({
+      selected: false
+    }),
+    methods: {
+      onChange() {
+        this.$emit('on-check')
+      }
+    },
+    created() {
+      eventBus.$on("toggleSelected", (selected) => {
+        this.selected = selected;
+        if (selected) this.onChange();
+      });
+    },
+    beforeDestroy() {
+      eventBus.$off("toggleSelected");
+    },
+  })
+
   const mediaItem = Vue.component("media-item", {
     name: "mediaItem",
+    components: {selectField},
     props: ["element", "index"],
     mixins: [baseDownloadChild],
     data: function () {
-      return {
-        selected: false,
-      };
+      return {};
     },
-    computed: {
-      getThumbnailImage() {
-        return this.element.images[0];
-      },
-      getImagesToOverlay() {
-        const res = this.element.images.slice(1, this.element.images.length);
-        console.log(res);
-        return res;
-      },
-    },
+    computed: {},
+    methods: {},
+    
   });
 
   new Vue({

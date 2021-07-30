@@ -55,28 +55,35 @@
                                 <div class="media-item__text">
                                     <span>{{element.description}}</span>
                                     <div class="media-item__checkboxes" v-if="element.fullbodyimage">
-                                        <label class="checkbox checkbox-sm">
-                                            <input :checked="selected" @change="selectDocument(element.headshotimage.id)" type="checkbox"
-                                                class="checkbox__input">
-                                            <span class="checkbox__box"></span>
-                                            <div class="checkbox__title">Headshot</div>
-                                        </label>
-                                        <label class="checkbox checkbox-sm">
-                                            <input :checked="selected" @change="selectDocument(element.fullbodyimage.id)" type="checkbox"
-                                                class="checkbox__input">
-                                            <span class="checkbox__box"></span>
-                                            <div class="checkbox__title">Full Body</div>
-                                        </label>
+                                        <select-field inline-template @on-check="selectDocument(element.headshotimage.id)">
+                                            <label class="checkbox checkbox-sm">
+                                                <input :checked="selected" @change="onChange"  type="checkbox"
+                                                    class="checkbox__input">
+                                                <span class="checkbox__box"></span>
+                                                <div class="checkbox__title">Headshot</div>
+                                            </label>
+                                        </select-field>
+                                        <select-field inline-template @on-check="selectDocument(element.fullbodyimage.id)">
+                                            <label class="checkbox checkbox-sm">
+                                                <input :checked="selected" @change="onChange" type="checkbox"
+                                                    class="checkbox__input">
+                                                <span class="checkbox__box"></span>
+                                                <div class="checkbox__title">Full Body</div>
+                                            </label>
+                                        </select-field>                  
                                     </div>
-                                </div>                                
+                                </div>
                             </div>
                             <div class="media-item__footer">
-                                <label v-if="!element.fullbodyimage" class="checkbox checkbox-sm">
-                                    <input :checked="selected" @change="selectDocument(element.headshotimage.id)" type="checkbox"
-                                        class="checkbox__input">
-                                    <span class="checkbox__box"></span>
-                                    <div class="checkbox__title">Select</div>
-                                </label>
+                                <select-field inline-template @on-check="selectDocument(element.headshotimage.id)" v-if="!element.fullbodyimage">
+                                    <label class="checkbox checkbox-sm">
+                                        <input :checked="selected" @change="onChange" type="checkbox"
+                                            class="checkbox__input">
+                                        <span class="checkbox__box"></span>
+                                        <div class="checkbox__title">Select</div>
+                                    </label>
+                                </select-field>
+                                
                                 <a :href="element.downloadLink" class="link-styles"><i class="icon-download"></i>
                                     Download</a>
                             </div>                           
