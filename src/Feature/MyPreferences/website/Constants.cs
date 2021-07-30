@@ -34,6 +34,8 @@
                 public static readonly string RefQueryStringKey = "ref";
                 public static readonly string EmailQueryStringKey = "email";
                 public static readonly string IsContactQueryStringKey = "iscontact";
+                public static readonly string ErrorQueryStringKey = "error";
+                public static readonly string DatasourceIdQueryStringKey = "dataSourceId";
             }
         }
 
@@ -129,6 +131,11 @@
 
         public const string IdentifierSourceConfigName = "S4S.Analytics.IdentifierSource";
 
-        
+        public enum Errors
+        {
+            UserExists,
+            General,
+            None
+        }
     }
 }

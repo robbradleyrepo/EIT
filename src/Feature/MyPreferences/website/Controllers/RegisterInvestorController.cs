@@ -6,10 +6,10 @@
     using LionTrust.Feature.MyPreferences.Services;
     using LionTrust.Foundation.Contact.Services;
     using Sitecore.Abstractions;
-    using Sitecore.Annotations;
     using Sitecore.Mvc.Controllers;
     using System;
     using System.Web.Mvc;
+    using static LionTrust.Feature.MyPreferences.Constants;
     using static LionTrust.Foundation.Onboarding.Constants;
 
     public class RegisterInvestorController : SitecoreController
@@ -25,7 +25,8 @@
             _emailPreferencesService = new EmailPreferencesService(editEmailPreferencesRepository, mailManager);
         }
 
-        public ActionResult Render()
+        [HttpGet]
+        public ActionResult RegisterInvestor(Errors error = Errors.None, string email = "")
         {
             var data = _context.GetDataSourceItem<IRegisterInvestor>();
 
@@ -34,44 +35,51 @@
                 return null;
             }
 
-            //OnboardingHelper.GetInvestorType()
-
             var viewModel = new RegisterInvestorViewModel(data, InvestorType.Private);
+
+            if (error == Errors.UserExists)
+            {
+                var resendEmailPageUrl = $"/api/{Sitecore.Mvc.Configuration.MvcSettings.SitecoreRouteName}/{ControllerContext.RouteData.Values["controller"].ToString()}/ResendEmail";
+                resendEmailPageUrl = string.Format("{0}?{1}={2}&{3}=false&{4}={5}", resendEmailPageUrl, QueryStringNames.EmailPreferencefParams.EmailQueryStringKey, email, QueryStringNames.EmailPreferencefParams.IsContactQueryStringKey, QueryStringNames.EmailPreferencefParams.DatasourceIdQueryStringKey, data.Id);
+
+                var userExistsErrorMessage = data.UserExistsErrorLabel;
+                userExistsErrorMessage = userExistsErrorMessage.Replace(SitecoreTokens.RegisterUserProcess.ResendEmailLinkToken, resendEmailPageUrl);
+                viewModel.Error = userExistsErrorMessage;
+            }
+
+            //OnboardingHelper.GetInvestorType()
 
             return View("~/Views/MyPreferences/RegisterInvestor.cshtml", viewModel);
         }
 
         [HttpPost]
-        public ActionResult Render([NotNull] RegisterInvestorViewModel registerInvestorViewModel)
+        public ActionResult Submit(RegisterInvestorSubmit registerInvestorSubmit)
         {
+            var error = Errors.None;
+            var data = _context.SitecoreService.GetItem<IRegisterInvestor>(registerInvestorSubmit.DatasourceId);
+
+            if (data == null)
+            {
+                return null;
+            }
+
             try
             {
-                var data = _context.GetDataSourceItem<IRegisterInvestor>();
-
-                if (data == null)
-                {
-                    return null;
-                }
-                else
-                {
-                    registerInvestorViewModel.Content = data;
-                }
-
                 if (ModelState.IsValid)
                 {
                     var userExists = false;
-                    var emailTemplate = registerInvestorViewModel.UKResident ? data.UKEmailTemplate : data.NonUKEmailTemplate;
+                    var emailTemplate = registerInvestorSubmit.UKResident ? data.UKEmailTemplate : data.NonUKEmailTemplate;
 
-                    if (registerInvestorViewModel.InvestorType == InvestorType.Private)
+                    if (registerInvestorSubmit.InvestorType == InvestorType.Private)
                     {
-                        var company = (!string.IsNullOrEmpty(registerInvestorViewModel.Content.CompanyFieldDefaultValue)) ? registerInvestorViewModel.Content.CompanyFieldDefaultValue : "Self";
+                        var company = (!string.IsNullOrEmpty(data.CompanyFieldDefaultValue)) ? data.CompanyFieldDefaultValue : "Self";
 
                         var nonProfUserViewModel = new NonProfessionalUser
                         {
-                            FirstName = registerInvestorViewModel.FirstName,
-                            LastName = registerInvestorViewModel.LastName,
-                            Email = registerInvestorViewModel.Email,
-                            IsUKResident = registerInvestorViewModel.UKResident,
+                            FirstName = registerInvestorSubmit.FirstName,
+                            LastName = registerInvestorSubmit.LastName,
+                            Email = registerInvestorSubmit.Email,
+                            IsUKResident = registerInvestorSubmit.UKResident,
                             Company = company
                         };
 
@@ -82,22 +90,22 @@
                             userExists = savedUser.IsUserExists;
                         }
                     }
-                    else if (registerInvestorViewModel.InvestorType == InvestorType.Professional)
+                    else if (registerInvestorSubmit.InvestorType == InvestorType.Professional)
                     {
-                        var sfOrganisationId = (!string.IsNullOrEmpty(registerInvestorViewModel.Content.DefaultSFOrganisationId)) ? registerInvestorViewModel.Content.DefaultSFOrganisationId : string.Empty;
+                        var sfOrganisationId = (!string.IsNullOrEmpty(data.DefaultSFOrganisationId)) ? data.DefaultSFOrganisationId : string.Empty;
 
-                        var profUserViewModel = new ProfessionalUser
+                        var professionalUser = new ProfessionalUser
                         {
-                            FirstName = registerInvestorViewModel.FirstName,
-                            LastName = registerInvestorViewModel.LastName,
-                            Email = registerInvestorViewModel.Email,
-                            IsUKResident = registerInvestorViewModel.UKResident,
-                            CompanyId = registerInvestorViewModel.CompanyId,
-                            CompanyName = registerInvestorViewModel.CompanyName,
+                            FirstName = registerInvestorSubmit.FirstName,
+                            LastName = registerInvestorSubmit.LastName,
+                            Email = registerInvestorSubmit.Email,
+                            IsUKResident = registerInvestorSubmit.UKResident,
+                            CompanyId = registerInvestorSubmit.CompanyId,
+                            CompanyName = registerInvestorSubmit.CompanyName,
                             Organisation = sfOrganisationId
                         };
 
-                        var savedUser = _emailPreferencesService.SaveProfUserAsSFContact(profUserViewModel, emailTemplate, data.EditPreferencesPage.Url);
+                        var savedUser = _emailPreferencesService.SaveProfUserAsSFContact(professionalUser, emailTemplate, data.EditPreferencesPage.Url);
 
                         if (savedUser != null)
                         {
@@ -105,41 +113,32 @@
                         }
                     }
 
-                    if (userExists)
+                    if (!userExists)
                     {
-                        return Redirect(registerInvestorViewModel.Content.ConfirmationPage.Url);
+                        return Redirect(data.ConfirmationPage.Url);
                     }
                     else
                     {
-                        //Generate resend email pref link 
-
-                        var resendEmailPageUrl = $"/api/{Sitecore.Mvc.Configuration.MvcSettings.SitecoreRouteName}/{ControllerContext.RouteData.Values["controller"].ToString()}/ResendEmail";
-                        resendEmailPageUrl = string.Format("{0}?{1}={2}&{3}=false", resendEmailPageUrl, Constants.QueryStringNames.EmailPreferencefParams.EmailQueryStringKey, registerInvestorViewModel.Email, Constants.QueryStringNames.EmailPreferencefParams.IsContactQueryStringKey);
-
-                        var userExistsErrorMessage = registerInvestorViewModel.Content.UserExistsErrorLabel;
-                        userExistsErrorMessage = userExistsErrorMessage.Replace(Constants.SitecoreTokens.RegisterUserProcess.ResendEmailLinkToken, resendEmailPageUrl);
-
-                        registerInvestorViewModel.Error = userExistsErrorMessage;
+                        error = Errors.UserExists;
                     }
                 }
                 else
                 {
-                    registerInvestorViewModel.Error = registerInvestorViewModel.Content.GenericErrorLabel;
+                    error = Errors.General;
                 }
-
             }
             catch (Exception ex)
             {
                 _log.Error("Exception occured when registering new user as a SF Lead.", ex, this);
-                registerInvestorViewModel.Error = registerInvestorViewModel.Content.GenericErrorLabel;
+                error = Errors.General;
             }
 
-            return View("~/Views/MyPreferences/RegisterInvestor.cshtml", registerInvestorViewModel);
+            return Redirect($"{Request.RawUrl}?{QueryStringNames.EmailPreferencefParams.ErrorQueryStringKey}={(int)error}&{QueryStringNames.EmailPreferencefParams.EmailQueryStringKey}={registerInvestorSubmit.Email}");
         }
 
-        public ActionResult ResendEmail(string email, bool isContact)
+        public ActionResult ResendEmail(string email, bool isContact, Guid dataSourceId)
         {
-            var data = _context.GetDataSourceItem<IRegisterInvestor>();
+            var data = _context.SitecoreService.GetItem<IRegisterInvestor>(dataSourceId);
 
             if (data == null)
             {

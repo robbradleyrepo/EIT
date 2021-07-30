@@ -12,6 +12,9 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20210728T133135Z
+    - ID: "2b64a25f-bc2e-4c05-8192-97f2c141d433"
+      Hint: RegisterInvestor_DefaultSFOrganisationId
+      Value: 0011r000024moOy
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
@@ -22,3 +25,14 @@ Languages:
     - ID: "dd96af02-2c1f-42c3-82ab-273bce9bfd54"
       Hint: RegisterInvestor_Title
       Value: Welcome to the Liontrust email preference centre
+    - ID: "e030ce1e-7790-4879-96d2-0c3f45d8df72"
+      Hint: RegisterInvestor_GenericErrorLabel
+      Value: |
+        Unfortunately there was an error when registering the new user. Please try again. If the issue persists, please contact <a href="mailto:clientservices@liontrust.co.uk?subject=Register Private Investor Failed" target="_blank">clientservices@liontrust.co.uk</a>.
+    - ID: "e87507ff-ac7b-40e0-b4de-5d19d8533aa8"
+      Hint: RegisterInvestor_CompanyFieldDefaultValue
+      Value: Self
+    - ID: "eb33c97a-2a88-4e74-9b0b-427398434015"
+      Hint: RegisterInvestor_UserExistsErrorLabel
+      Value: |
+        Your user name already exists with the same email address. Please click <a target="_blank" href="{ResendEmailLink}">here</a> to request the link to the preference centre or please try again with a different email address. If you have any questions or would like more information, please contact us by sending an email to <a href="mailto:clientservices@liontrust.co.uk?subject=Register Private Investor Failed" target="_blank">clientservices@liontrust.co.uk</a>

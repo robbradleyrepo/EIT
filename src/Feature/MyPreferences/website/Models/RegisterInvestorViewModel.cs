@@ -12,11 +12,6 @@ namespace LionTrust.Feature.MyPreferences.Models
             InvestorType = investorType;
         }
 
-        public RegisterInvestorViewModel()
-        {
-
-        }
-
         public IRegisterInvestor Content { get; set; }
 
         public string GenericErrorLabel { get; set; }

@@ -1,8 +1,5 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @model LionTrust.Feature.MyPreferences.Models.RegisterInvestorViewModel
-@{
-    Html.EnableClientValidation(true);
-}
 <section class="container">
     <div class="row">
         <div class="col-lg-6">
@@ -20,7 +17,7 @@
             @if (!string.IsNullOrWhiteSpace(Model.Error))
             {
                 <div>
-                    <p> @Html.Glass().Editable(Model, x => x.Error)</p>
+                    <p>@Html.Raw(Model.Error)</p>
                 </div>
             }
         </div>
@@ -29,23 +26,26 @@
         <div class="col-lg-6">
             @using (Html.BeginRouteForm(Sitecore.Mvc.Configuration.MvcSettings.SitecoreRouteName, FormMethod.Post))
             {
-            <div class="input-group">
-                @Html.LabelFor(x => x.FirstName)
-                @Html.TextBoxFor(x => x.FirstName)
-                @Html.ValidationMessageFor(x => x.FirstName)
-            </div>
+                @Html.Sitecore().FormHandler("RegisterInvestor", "Submit")
+                @Html.Hidden("DatasourceId", Model.Content.Id)
+                @Html.HiddenFor(x => x.InvestorType)
+                <div class="input-group">
+                    @Html.LabelFor(x => x.FirstName)
+                    @Html.TextBoxFor(x => x.FirstName)
+                    @Html.ValidationMessageFor(x => x.FirstName)
+                </div>
 
-            <div class="input-group">
-                @Html.LabelFor(x => x.LastName)
-                @Html.TextBoxFor(x => x.LastName)
-                @Html.ValidationMessageFor(x => x.LastName)
-            </div>
+                <div class="input-group">
+                    @Html.LabelFor(x => x.LastName)
+                    @Html.TextBoxFor(x => x.LastName)
+                    @Html.ValidationMessageFor(x => x.LastName)
+                </div>
 
-            <div class="input-group">
-                @Html.LabelFor(x => x.Email)
-                @Html.TextBoxFor(x => x.Email)
-                @Html.ValidationMessageFor(x => x.Email)
-            </div>
+                <div class="input-group">
+                    @Html.LabelFor(x => x.Email)
+                    @Html.TextBoxFor(x => x.Email)
+                    @Html.ValidationMessageFor(x => x.Email)
+                </div>
                 if (Model.InvestorType == LionTrust.Foundation.Onboarding.Constants.InvestorType.Professional)
                 {
                     <div class="input-group">
@@ -59,11 +59,11 @@
                     </div>
                 }
 
-        <div class="input-group">
-            @Html.LabelFor(x => x.UKResident)
-            @Html.DropDownListFor(x => x.UKResident, new List<SelectListItem>() { new SelectListItem { Text = "Yes", Value = "true" }, new SelectListItem { Text = "No", Value = "false" } }, "Please Select")
-            @Html.ValidationMessageFor(x => x.UKResident)
-        </div>
+                <div class="input-group">
+                    @Html.LabelFor(x => x.UKResident)
+                    @Html.DropDownListFor(x => x.UKResident, new List<SelectListItem>() { new SelectListItem { Text = "Yes", Value = "true" }, new SelectListItem { Text = "No", Value = "false" } }, "Please Select")
+                    @Html.ValidationMessageFor(x => x.UKResident)
+                </div>
 
                 <div class="input-btn">
                     <input type="submit" class="btn-primary" value="Register" />

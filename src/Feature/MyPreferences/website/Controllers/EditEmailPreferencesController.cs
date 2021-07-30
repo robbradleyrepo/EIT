@@ -34,11 +34,8 @@
                 return null;
             }
 
-
             var sfEntityId = string.Empty;
             var sfRandomGUID = string.Empty;
-
-
 
             //Query string "ref" should have the format as follows: {GUID}_{entityId}
             if (!string.IsNullOrEmpty(@ref))
@@ -55,12 +52,6 @@
             {
                 var isContact = (sfEntityId.StartsWith("003", StringComparison.CurrentCultureIgnoreCase)) ? true : false;
                 var emailPreferences = _emailPreferencesService.GetEmailPreferences(sfEntityId, sfRandomGUID, isContact);
-
-
-
-
-
-
 
                 var viewModel = new EditEmailPreferencesViewModel(emailPreferences);
 
