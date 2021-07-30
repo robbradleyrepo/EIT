@@ -18,6 +18,18 @@ SharedFields:
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
         l="{CD1590E1-6573-4CC7-B0A9-E3BB6A9DADE4}">
         <r
+          id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+          ph="/header/navigation"
+          uid="{A5ABA86E-B474-48B5-9393-0CB47D410681}" />
+        <r
+          id="{A1F6E48A-C7AB-42B2-A8A9-6DB3207F1503}"
+          ph="main"
+          uid="{B67D5368-0E6E-4E58-A908-BA42BDC6D66A}" />
+        <r
+          id="{11AF5BA3-3231-462B-988E-D50BCF963DBC}"
+          ph="/main/article"
+          uid="{4D961424-9B36-4BF2-BEB1-D6EF93129E16}" />
+        <r
           id="{29A12478-EBE8-4B5C-BF2E-871026066814}"
           ph="footer"
           uid="{CCBBB036-5788-4F78-AC6A-DF34C178F76C}" />
@@ -41,10 +53,6 @@ SharedFields:
           par=""
           ph="footer"
           uid="{30A0A4C8-974F-4822-9DCB-DE14881E0400}" />
-        <r
-          id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
-          ph="/header/navigation"
-          uid="{A5ABA86E-B474-48B5-9393-0CB47D410681}" />
       </d>
     </r>
 Languages:
