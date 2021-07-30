@@ -23,6 +23,7 @@ import shareLink from "./componets/shareLink";
 import locationAndMap from "./componets/locationAndMap";
 import barStuckedChart from "./componets/barStuckedChart";
 import gallaryApp from "./componets/gallaryApp";
+import tabNav from "./componets/tabNav";
 
 document.addEventListener("DOMContentLoaded", () => {
   onboardingOverlay();
@@ -42,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
   locationAndMap();
   barStuckedChart();
   gallaryApp();
+  tabNav();
   // if (document.querySelector(".article-page")) articleFilter();
   if (document.querySelector(".main-page")) parallaxScrolling();
 
