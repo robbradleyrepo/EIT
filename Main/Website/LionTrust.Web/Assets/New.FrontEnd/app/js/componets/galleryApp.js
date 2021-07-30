@@ -31,6 +31,25 @@ const data = [
   },
 ];
 
+const facets = [
+  {
+    identifier: "c8e97f824fb246d3b1628fa1fb9fe0f2",
+    name: "Fund",
+  },
+  {
+    identifier: "c8e97f824fb246d3b1628fa1fb9fe0f3",
+    name: "Manager",
+  },
+  {
+    identifier: "c8e97f824fb246d3b1628fa1fb9fe0f4",
+    name: "Article",
+  },
+  {
+    identifier: "c8e97f824fb246d3b1628fa1fb9fe0f5",
+    name: "Fund detail",
+  },
+];
+
 export default () => {
   const selectField = Vue.component("select-field", {
     name: "selectField",
@@ -77,7 +96,7 @@ export default () => {
         if (index !== -1) this.ids.splice(index, 1);
         else this.ids.push(id);
       },
-      download() {        
+      download() {
         // API.downloadDocument('', {downloadFileIds: this.getImagesIds})
       },
     },
@@ -93,15 +112,57 @@ export default () => {
     data: function () {
       return {
         searchText: "",
+        loading: false,
         items: data,
+        facets: facets,
+        filter: "",
       };
     },
+    computed: {
+      getQuery() {
+        let str = "";
+        if (this.searchText) str += "searchTerm=" + this.searchText;
+        if (this.filter && this.searchText) str += "&filter=" + this.filter;
+        if (this.filter) str += "filter=" + this.filter;
+        return str;
+      },
+    },
     methods: {
+      setFilter(e) {
+        this.filter = e.target.value;
+        this.getData();
+      },
+      submitSearchForm() {
+        this.getData();
+      },
       downloadDocumentMultiple() {
         console.log("download");
         // API.downloadDocument('', {downloadFileIds: this.selectedDocumentIds})
       },
+      getData() {
+        console.log("getData");
+        this.loading = true;
+        setTimeout(() => {
+          this.loading = false
+        }, 1500);
+        return;
+        this.loading = true;
+        let hostUrl = "";
+        $.get(hostUrl + this.getQuery)
+          .done((response) => {
+            const { searchResults } = response;
+            this.items = searchResults;
+            this.loading = false;
+          })
+          .fail((e) => {
+            console.error(e);
+            this.loading = false;
+          });
+      },
     },
+    mounted() {
+      this.getData();
+    }
   });
 
   // init fancybox image carousel

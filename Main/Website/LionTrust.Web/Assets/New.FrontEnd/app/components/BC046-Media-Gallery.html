@@ -3,12 +3,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 offset-lg-3 relative">
-                    <select name="filterby" id="filterby" class="select">
-                        <option value="1">Filter by Category</option>
-                        <option value="2">Fund</option>
-                        <option value="3">Article</option>
-                        <option value="4">Fund detail</option>
-                        <option value="5">Manager</option>
+                    <select @change="setFilter($event)" name="filterby" id="filterby" class="select">
+                        <option disabled selected>Filter By Category</option>
+                        <option v-for="facet in facets" :key="facet.identifier" :value="facet.identifier">{{facet.name}}</option>
+                        
                     </select>
                     <i class="article-filters__icon-arrow article-filters__icon-arrow_select"></i>
                 </div>
@@ -26,6 +24,9 @@
     </div>
     <div class="container">
         <div class="gallary-download-check">
+            <div class="text-center spineer-loader" :style="!loading ? 'display: none' : ''">
+                <div class="spinner-border text-gold" role="status"></div>
+              </div>
             <label class="checkbox">
                 <input v-model="selectAllDocuments" type="checkbox" class="checkbox__input">
                 <span class="checkbox__box"></span>

@@ -12,6 +12,7 @@
             font-weight: 400
 
 .gallary-download-check
+    position: relative
     padding: 2rem 0
     display: flex
     justify-content: space-between
@@ -19,6 +20,11 @@
     min-height: 107px
     @include breakpoint(desktop, up)
         min-height: 116px
+
+.spineer-loader
+    position: absolute
+    width: 100%
+    top: 15px
 
 .media-listing
     border-bottom: 1px solid #4148551A
@@ -29,7 +35,7 @@
     justify-content: space-between
     height: 100%
     padding-top: 27px
-    padding-bottom: 60px
+    padding-bottom: 15px
     &__image
         border-radius: 6px
         margin-bottom: 5px
@@ -42,7 +48,7 @@
         flex-wrap: wrap
         .checkbox
             margin-bottom: 0.5em
-        
+
     &__footer
         margin-top: 10px
         display: flex
@@ -53,7 +59,7 @@
         @include breakpoint(desktop, up)
             margin-bottom: 21px
         i.icon-download
-            font-size: 12px  
+            font-size: 12px
         .checkbox
             margin-bottom: 0.5em
             @include breakpoint(mobile-large, up)
