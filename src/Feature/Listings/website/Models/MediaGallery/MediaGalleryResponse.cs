@@ -4,7 +4,7 @@
 
     public class MediaGalleryResponse
     {
-        public IEnumerable<MediaItemModel> SearchResults { get; set; }
+        public IEnumerable<MediaItemResponseModel> SearchResults { get; set; }
 
         public int StatusCode { get; set; }
 

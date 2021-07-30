@@ -93,6 +93,7 @@
     <Content Include="Views\Listings\PerformanceCharts.cshtml" />
     <Content Include="Views\Listings\_PerformanceChart.cshtml" />
     <Content Include="Views\Listings\DocumentListerVariant.cshtml" />
+    <Content Include="Views\Listings\MediaGallery.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -107,12 +108,15 @@
     <Compile Include="DataManagers\Implementations\GenericListingDataManager.cs" />
     <Compile Include="DataManagers\Interfaces\IGenericListingDataManager.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
+    <Compile Include="Helpers\FileHelper.cs" />
+    <Compile Include="Helpers\MediaGalleryHelper.cs" />
     <Compile Include="Models\AccordionViewModel.cs" />
-    <Compile Include="Models\ImageModel.cs" />
-    <Compile Include="Models\IMediaItem.cs" />
-    <Compile Include="Models\IMediaGallery.cs" />
-    <Compile Include="Models\MediaGalleryResponse.cs" />
-    <Compile Include="Models\MediaItemModel.cs" />
+    <Compile Include="Models\MediaGallery\ImageResponseModel.cs" />
+    <Compile Include="Models\MediaGallery\IMediaItem.cs" />
+    <Compile Include="Models\MediaGallery\IMediaGallery.cs" />
+    <Compile Include="Models\MediaGallery\MediaFileModel.cs" />
+    <Compile Include="Models\MediaGallery\MediaGalleryResponse.cs" />
+    <Compile Include="Models\MediaGallery\MediaItemResponseModel.cs" />
     <Compile Include="Models\PerformanceCharts\ChartColumnModel.cs" />
     <Compile Include="Models\PerformanceCharts\ChartsModel.cs" />
     <Compile Include="Models\Document.cs" />

@@ -9,24 +9,24 @@
         IEnumerable<IMediaItem> MediaItems { get; set; }
 
         [SitecoreField(Constants.MediaLister.SearchByKeywordLabel_FieldId)]
-        public string SearchByKeywordLabel { get; set; }
+        string SearchByKeywordLabel { get; set; }
 
         [SitecoreField(Constants.MediaLister.FilterByCategoryLabel_FieldId)]
-        public string FilterByCategoryLabel { get; set; }
+        string FilterByCategoryLabel { get; set; }
 
         [SitecoreField(Constants.MediaLister.DownloadSelectedLabel_FieldId)]
-        public string DownloadSelectedLabel { get; set; }
+        string DownloadSelectedLabel { get; set; }
 
         [SitecoreField(Constants.MediaLister.SelectAllLabel_FieldId)]
-        public string SelectAllLabel { get; set; }
+        string SelectAllLabel { get; set; }
 
         [SitecoreField(Constants.MediaLister.SelectLabel_FieldId)]
-        public string SelectLabel { get; set; }
+        string SelectLabel { get; set; }
 
         [SitecoreField(Constants.MediaLister.HeadshotLabel_FieldId)]
-        public string HeadshotLabel { get; set; }
+        string HeadshotLabel { get; set; }
 
         [SitecoreField(Constants.MediaLister.FullBodyLabel_FieldId)]
-        public string FullBodyLabel { get; set; }
+        string FullBodyLabel { get; set; }
     }
 }

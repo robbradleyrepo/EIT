@@ -1,0 +1,12 @@
+﻿@model LionTrust.Feature.Listings.Models.IMediaGallery
+@if (Model != null)
+{
+    @Html.Glass().Editable(Model, m => m.FilterByCategoryLabel)
+    @Html.Glass().Editable(Model, m => m.SearchByKeywordLabel)
+    @Html.Glass().Editable(Model, m => m.SelectAllLabel)
+    @Html.Glass().Editable(Model, m => m.DownloadSelectedLabel)
+    @Html.Glass().Editable(Model, m => m.SelectLabel)
+    @Html.Glass().Editable(Model, m => m.HeadshotLabel)
+    @Html.Glass().Editable(Model, m => m.FullBodyLabel)
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor) { }

@@ -131,21 +131,22 @@
 
         public static class MediaItem
         {
-            public const string HeadShotImage_FieldId = "";
-            public const string FullBodyImage_FieldId = "";
-            public const string Description_FieldId = "";
-            public const string Categories_FieldId = "";
+            public const string HeadshotImage_FieldId = "{C9550910-8553-4B8E-B381-3FADF7B58D37}";
+            public const string FullBodyImage_FieldId = "{A3CC90AF-CF8B-4BE1-BDC9-0C6CC77C1BD1}";
+            public const string Description_FieldId = "{156DF9F6-B34D-4F08-8A46-CE1F2A8EC6C2}";
+            public const string Categories_FieldId = "{26B1D6BA-647A-4951-9AD7-CD169C1D8685}";
         }
 
         public static class MediaLister 
         {
-            public const string SearchByKeywordLabel_FieldId = "";
-            public const string FilterByCategoryLabel_FieldId = "";
-            public const string DownloadSelectedLabel_FieldId = "";
-            public const string SelectAllLabel_FieldId = "";
-            public const string SelectLabel_FieldId = "";
-            public const string HeadshotLabel_FieldId = "";
-            public const string FullBodyLabel_FieldId = "";
+            public const string SearchByKeywordLabel_FieldId = "{D8AA5782-4853-4F54-8E39-826F1137145D}";
+            public const string FilterByCategoryLabel_FieldId = "{39D797A8-CDA0-49AD-BDF0-6F6A31B0FB17}";
+            public const string DownloadSelectedLabel_FieldId = "{F3579F0A-A68F-49D5-85E0-F13176200FC9}";
+            public const string SelectAllLabel_FieldId = "{8A8B5A57-B1B2-4C91-AE64-C94EA37A58BB}";
+            public const string SelectLabel_FieldId = "{D4A05A85-C36E-4CDE-8875-D1B96D38920F}";
+            public const string HeadshotLabel_FieldId = "{CD510600-285E-47FC-847B-B33785EFD904}";
+            public const string FullBodyLabel_FieldId = "{D1B479B5-1FDB-46FD-A06D-61A0D0DEBE11}";
+            public const string FilterSource_FieldId = "{2A00B22E-F809-40A6-A53A-4818158A1DE9}";
         }    
     }
 }

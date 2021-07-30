@@ -38,7 +38,7 @@
                     controller = "Documents",
                     action = "GetDocuments"
                 });
-            RouteTable.Routes.MapRoute("Feature.Listings.DownloadMediaImages", $"{Settings.GetSetting(Constants.Settings.MediGalleryApiRoute_SettingName)}/DownloadMediaImages",
+            RouteTable.Routes.MapRoute("Feature.Listings.DownloadMediaImages", $"{Settings.GetSetting(Constants.Settings.MediaGalleryApiRoute_SettingName)}/DownloadMediaImages",
                 new
                 {
                     controller = "MediaGallery",
