@@ -1,6 +1,5 @@
 export const API = {
     downloadDocument(url, data, title = 'document', extension = '.zip', type = 'POST' ) {
-        console.log('data',data);
         document.body.style.cursor = "wait";
         $.ajax({
           type,

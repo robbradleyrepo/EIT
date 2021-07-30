@@ -39,11 +39,22 @@
         display: flex
         justify-content: space-between
         margin-top: 8px
+        flex-wrap: wrap
+        .checkbox
+            margin-bottom: 0.5em
+        
     &__footer
-        margin-top: 21px
+        margin-top: 10px
         display: flex
         justify-content: space-between
         align-items: center
         height: 21px
+        flex-wrap: wrap
+        @include breakpoint(desktop, up)
+            margin-bottom: 21px
         i.icon-download
-            font-size: 12px
+            font-size: 12px  
+        .checkbox
+            margin-bottom: 0.5em
+            @include breakpoint(mobile-large, up)
+                margin-bottom: 0
