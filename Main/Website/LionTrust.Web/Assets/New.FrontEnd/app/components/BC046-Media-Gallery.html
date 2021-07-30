@@ -47,13 +47,13 @@
                         <div class="media-item">
                             <div class="media-item__body">
                                 <div class="media-item__gallery">
-                                    <a href="#" :data-caption="element.description"
+                                    <a :href="element.headshotimage.url" :data-caption="element.description"
                                         class="media-item-image-gallary" :data-fancybox="'images' + index">
                                         <img class="media-item__image" :src="element.headshotimage.url" />
                                     </a>
                                     <div v-if="element.fullbodyimage" style="display: none;">
                                         <a :data-caption="element.description" class="media-item-image-gallary"
-                                            href="#" :data-fancybox="'images' + index">
+                                        :href="element.fullbodyimage.url" :data-fancybox="'images' + index">
                                             <img class="media-item__image" :src="element.fullbodyimage.url" />
                                         </a>
                                     </div>
