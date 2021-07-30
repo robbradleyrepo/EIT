@@ -36,18 +36,24 @@
         </div>
         <div class="media-listing">
             <div class="row">
-                <media-item inline-template v-for="(item,i) in items" :key="item.id" :element="item" :index="i">
+                <media-item
+                    inline-template
+                    v-for="(item,i) in items"
+                    :key="item.id"
+                    :element="item"
+                    :index="i"
+                    >
                     <div class="col-6 col-lg-2">
                         <div class="media-item">
                             <div class="media-item__body">
                                 <div class="media-item__gallery">
-                                    <a :href="element.headshotimage.url" :data-caption="element.description"
+                                    <a href="#" :data-caption="element.description"
                                         class="media-item-image-gallary" :data-fancybox="'images' + index">
                                         <img class="media-item__image" :src="element.headshotimage.url" />
                                     </a>
                                     <div v-if="element.fullbodyimage" style="display: none;">
                                         <a :data-caption="element.description" class="media-item-image-gallary"
-                                            :href="element.fullbodyimage.url" :data-fancybox="'images' + index">
+                                            href="#" :data-fancybox="'images' + index">
                                             <img class="media-item__image" :src="element.fullbodyimage.url" />
                                         </a>
                                     </div>
@@ -84,7 +90,7 @@
                                     </label>
                                 </select-field>
                                 
-                                <a :href="element.downloadLink" class="link-styles"><i class="icon-download"></i>
+                                <a href="#" @click.prevent="download" class="link-styles"><i class="icon-download"></i>
                                     Download</a>
                             </div>                           
                         </div>

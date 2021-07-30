@@ -14,7 +14,6 @@ export const baseDownloadParent = {
       const index = this.selectedDocumentIds.findIndex((el) => el === id);
       if (index !== -1) this.selectedDocumentIds.splice(index, 1);
       else this.selectedDocumentIds.push(id);
-      console.log('selectedDocumentIds', this.selectedDocumentIds);
     },
   },
   watch: {
