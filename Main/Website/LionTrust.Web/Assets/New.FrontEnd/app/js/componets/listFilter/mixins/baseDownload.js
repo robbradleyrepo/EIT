@@ -27,8 +27,8 @@ export const baseDownloadParent = {
 // mixin for download functional for chind component
 export const baseDownloadChild = {
   methods: {
-    selectDocument() {
-      this.$parent.setDocumentId(this.element.id);
+    selectDocument(id) {
+      this.$parent.setDocumentId(id);
     },
   },
   created() {

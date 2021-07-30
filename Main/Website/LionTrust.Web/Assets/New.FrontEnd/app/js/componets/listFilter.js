@@ -1,6 +1,9 @@
 import Vue from "vue/dist/vue.common.prod";
-import { baseDownloadChild, baseDownloadParent } from "./listFilter/mixins/baseDownload";
-const eventBus = new Vue();
+import { API } from "./listFilter/api/api";
+import {
+  baseDownloadChild,
+  baseDownloadParent,
+} from "./listFilter/mixins/baseDownload";
 import { pagination } from "./listFilter/mixins/pagination";
 export default () => {
   const rootDom = document.getElementById("lister-app");
@@ -57,7 +60,7 @@ export default () => {
       months: [],
       years: [],
       grid: false,
-      activeButton: false
+      activeButton: false,
     },
     computed: {
       getFacets() {
@@ -65,7 +68,7 @@ export default () => {
       },
       getFacetsLength() {
         return this.facets.length;
-      }
+      },
     },
     methods: {
       // adding selected values to query params
@@ -90,8 +93,8 @@ export default () => {
           if (this.params[prop].length)
             str += "&" + `${lowerCaseProp}=${this.params[prop].join("|")}`;
         }
-        if(contentType) str += `&contentType=${contentType}`;
-        
+        if (contentType) str += `&contentType=${contentType}`;
+
         return str;
       },
 
@@ -120,7 +123,7 @@ export default () => {
         this.applyFilters();
       },
 
-      setMonth(e) {        
+      setMonth(e) {
         this.params.month = [e.target.value];
       },
 
@@ -146,33 +149,19 @@ export default () => {
 
       submitSearchForm(e) {
         if (e.target.searchText.value) this.applyFilters();
-      },      
+      },
 
       clearDocumentIds() {
         this.selectedDocumentIds = [];
       },
 
       downloadDocumentMultiple() {
-        document.body.style.cursor = "wait";
-        $.post({
-          type: "POST",
-          xhrFields: { responseType: "arraybuffer" },
-          url: `${host}/DownloadDocuments`,
-          data: { downloadFileIds: this.selectedDocumentIds },
-        })
-          .done((data) => {
-            const url = window.URL.createObjectURL(new Blob([data]));
-            const link = document.createElement("a");
-            link.href = url;
-            link.setAttribute("download", "Documents.zip");
-            document.body.appendChild(link);
-            link.click();
-            document.body.style.cursor = "default";
-          })
-          .fail((e) => {
-            console.error(e);
-            document.body.style.cursor = "default";
-          });
+        API.downloadDocument(
+          `${host}/DownloadDocuments`,
+          { downloadFileIds: this.selectedDocumentIds },
+          "Documents",
+          ".zip"
+        );
       },
 
       getFacetsRequest() {
@@ -229,9 +218,8 @@ export default () => {
         deep: true,
         handler: function () {
           this.activeButton = true;
-        }
-      }
-      
+        },
+      },
     },
     mounted() {
       this.getFacetsRequest();
@@ -259,7 +247,7 @@ export default () => {
         this.open = !this.open;
       },
       clearOption() {
-        this.active = 0
+        this.active = 0;
         this.$emit("clearOptionField");
       },
       setChoosen(val) {
@@ -327,29 +315,14 @@ export default () => {
         this.$parent.setDocumentId(this.id);
       },
       downloadDocument() {
-        document.body.style.cursor = "wait";
-        $.post({
-          xhrFields: { responseType: "arraybuffer" },
-          url: `${host}/DownloadDocuments`,
-          data: {
+        API.downloadDocument(
+          `${host}/DownloadDocuments`,
+          {
             downloadFileIds: this.id,
           },
-        })
-          .done((data) => {
-            const url = window.URL.createObjectURL(
-              new Blob([data], { type: "application/pdf;charset=base-64" })
-            );
-            const link = document.createElement("a");
-            link.href = url;
-            link.setAttribute("download", this.title + ".pdf");
-            document.body.appendChild(link);
-            link.click();
-            document.body.style.cursor = "default";
-          })
-          .fail((e) => {
-            console.error(e);
-            document.body.style.cursor = "default";
-          });
+          this.title,
+          ".pdf"
+        );
       },
     },
   });

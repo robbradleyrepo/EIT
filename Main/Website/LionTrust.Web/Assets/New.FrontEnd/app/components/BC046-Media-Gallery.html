@@ -36,7 +36,7 @@
         </div>
         <div class="media-listing">
             <div class="row">
-                <media-item inline-template v-for="(item,i) in items" :key="i" :element="item" :index="i">
+                <media-item inline-template v-for="(item,i) in items" :key="item.id" :element="item" :index="i">
                     <div class="col-6 col-lg-2">
                         <div class="media-item">
                             <div class="media-item__body">
@@ -56,13 +56,13 @@
                                     <span>{{element.description}}</span>
                                     <div class="media-item__checkboxes" v-if="element.fullbodyimage">
                                         <label class="checkbox checkbox-sm">
-                                            <input :checked="selected" @change="selectDocument" type="checkbox"
+                                            <input :checked="selected" @change="selectDocument(element.headshotimage.id)" type="checkbox"
                                                 class="checkbox__input">
                                             <span class="checkbox__box"></span>
                                             <div class="checkbox__title">Headshot</div>
                                         </label>
                                         <label class="checkbox checkbox-sm">
-                                            <input :checked="selected" @change="selectDocument" type="checkbox"
+                                            <input :checked="selected" @change="selectDocument(element.fullbodyimage.id)" type="checkbox"
                                                 class="checkbox__input">
                                             <span class="checkbox__box"></span>
                                             <div class="checkbox__title">Full Body</div>
@@ -72,7 +72,7 @@
                             </div>
                             <div class="media-item__footer">
                                 <label v-if="!element.fullbodyimage" class="checkbox checkbox-sm">
-                                    <input :checked="selected" @change="selectDocument" type="checkbox"
+                                    <input :checked="selected" @change="selectDocument(element.headshotimage.id)" type="checkbox"
                                         class="checkbox__input">
                                     <span class="checkbox__box"></span>
                                     <div class="checkbox__title">Select</div>
