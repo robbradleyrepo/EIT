@@ -53,7 +53,7 @@ export default () => {
   });
 
   new Vue({
-    el: "#gallary-app",
+    el: "#gallery-app",
     components: { "media-item": mediaItem },
     mixins: [baseDownloadParent],
     data: function () {
