@@ -1,0 +1,38 @@
+.people-info
+    text-align: center
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 33%
+    margin-bottom: 10px
+    padding: 0 8px
+    &__container
+        display: flex
+        justify-content: space-between
+    &__images
+        display: flex
+        align-items: flex-end
+    &__number
+        display: block
+        color: $primary
+    &__image
+        &:first-child
+            margin-right: 10px
+            @include breakpoint(desktop, up)
+                margin-right: 32px
+    &__svg
+        margin-bottom: 8px
+        height: 55px
+        @include breakpoint(desktop, up)
+            height: auto
+    &__number
+        @include font-size(26px)
+        font-weight: 300
+    &__text
+        color: $gold
+        font-weight: 700
+        font-size: 12px
+    &__bottom-text
+        font-size: 16px
+        @include breakpoint(desktop, up)
+            @include font-size(18px)
