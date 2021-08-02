@@ -1,4 +1,4 @@
-﻿namespace LionTrust.Feature.MyPreferences.Models
+﻿namespace LionTrust.Foundation.Contact.Models
 {
     public class RegisterdUserReturnViewModel
     {

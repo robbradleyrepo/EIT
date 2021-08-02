@@ -1,6 +1,7 @@
 ﻿namespace LionTrust.Feature.MyPreferences.Repositories
 {
     using LionTrust.Feature.MyPreferences.Models;
+    using LionTrust.Foundation.Contact.Models;
 
     public interface IEmailPreferencesRepository
     {

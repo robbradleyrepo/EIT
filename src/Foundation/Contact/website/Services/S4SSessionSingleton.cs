@@ -1,4 +1,4 @@
-﻿namespace LionTrust.Feature.MyPreferences.Services
+﻿namespace LionTrust.Foundation.Contact.Services
 {
     using FuseIT.Sitecore.SalesforceConnector;
 

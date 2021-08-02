@@ -4,7 +4,7 @@
     using LionTrust.Feature.MyPreferences.Models;
     using System;
     using System.Web;
-    using LionTrust.Feature.MyPreferences.Services;
+    using LionTrust.Foundation.Contact.Services;
 
     public class EmailPreferencesRepository : IEmailPreferencesRepository
     {

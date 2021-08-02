@@ -5,6 +5,7 @@
     using LionTrust.Feature.MyPreferences.Repositories;
     using LionTrust.Feature.MyPreferences.Services;
     using LionTrust.Foundation.Contact.Managers;
+    using LionTrust.Foundation.Contact.Models;
     using LionTrust.Foundation.Contact.Services;
     using LionTrust.Foundation.Onboarding.Helpers;
     using LionTrust.Foundation.Onboarding.Models;
@@ -13,6 +14,7 @@
     using System;
     using System.Web.Mvc;
     using static LionTrust.Feature.MyPreferences.Constants;
+    using static LionTrust.Foundation.Contact.Constants;
     using static LionTrust.Foundation.Onboarding.Constants;
 
     public class RegisterInvestorController : SitecoreController

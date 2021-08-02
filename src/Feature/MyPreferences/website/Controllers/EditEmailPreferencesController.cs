@@ -5,12 +5,14 @@
     using LionTrust.Feature.MyPreferences.Repositories;
     using LionTrust.Feature.MyPreferences.Services;
     using LionTrust.Foundation.Contact.Managers;
+    using LionTrust.Foundation.Contact.Models;
     using LionTrust.Foundation.Contact.Services;
     using Sitecore.Abstractions;
     using Sitecore.Annotations;
     using Sitecore.Mvc.Controllers;
     using System;
     using System.Web.Mvc;
+    using static LionTrust.Foundation.Contact.Constants;
     using static LionTrust.Foundation.Onboarding.Constants;
 
     public class EditEmailPreferencesController : SitecoreController
@@ -135,7 +137,7 @@
                         //Generate resend email pref link 
 
                         var resendEmailPageUrl = $"/api/{Sitecore.Mvc.Configuration.MvcSettings.SitecoreRouteName}/{ControllerContext.RouteData.Values["controller"].ToString()}/ResendEmail";
-                        resendEmailPageUrl = string.Format("{0}?{1}={2}&{3}=false", resendEmailPageUrl, Constants.QueryStringNames.EmailPreferencefParams.EmailQueryStringKey, registerInvestorViewModel.Email, Constants.QueryStringNames.EmailPreferencefParams.IsContactQueryStringKey);
+                        resendEmailPageUrl = string.Format("{0}?{1}={2}&{3}=false", resendEmailPageUrl, QueryStringNames.EmailPreferencefParams.EmailQueryStringKey, registerInvestorViewModel.Email, QueryStringNames.EmailPreferencefParams.IsContactQueryStringKey);
 
                         var userExistsErrorMessage = registerInvestorViewModel.Content.UserExistsErrorLabel;
                         userExistsErrorMessage = userExistsErrorMessage.Replace(Constants.SitecoreTokens.RegisterUserProcess.ResendEmailLinkToken, resendEmailPageUrl);

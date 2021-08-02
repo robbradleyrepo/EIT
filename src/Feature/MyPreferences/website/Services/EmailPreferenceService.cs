@@ -3,7 +3,7 @@
     using LionTrust.Feature.MyPreferences.Models;
     using LionTrust.Feature.MyPreferences.Repositories;
     using LionTrust.Foundation.Contact.Managers;
-    using LionTrust.Foundation.Contact.Services;
+    using LionTrust.Foundation.Contact.Models;
     using Sitecore.Diagnostics;
     using System;
 

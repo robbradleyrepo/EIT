@@ -1,4 +1,6 @@
-﻿namespace LionTrust.Feature.MyPreferences.Models
+﻿using LionTrust.Foundation.Contact.Models;
+
+namespace LionTrust.Feature.MyPreferences.Models
 {
     public class EditEmailPreferencesViewModel
     {

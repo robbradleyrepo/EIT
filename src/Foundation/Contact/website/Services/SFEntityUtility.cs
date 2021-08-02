@@ -1,4 +1,4 @@
-﻿namespace LionTrust.Feature.MyPreferences.Services
+﻿namespace LionTrust.Foundation.Contact.Services
 {
     using FuseIT.S4S.WebToSalesforce;
     using FuseIT.Sitecore.SalesforceConnector;
@@ -8,16 +8,14 @@
     using FuseIT.Sitecore.SalesforceConnector.SalesforceServiceWrappers;
     using FuseIT.Sitecore.SalesforceConnector.Services;
     using FuseIT.Sitecore.SalesforceConnector.Soql;
-    using LionTrust.Feature.MyPreferences.Models;
     using LionTrust.Foundation.Contact.Models;
-    using LionTrust.Foundation.Contact.Services;
     using Sitecore.Diagnostics;
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Web;
 
-    internal class SFEntityUtility
+    public class SFEntityUtility
     {
         private SalesforceSession _salesforceSession = null;
         private SalesforceSession SalesforceSession

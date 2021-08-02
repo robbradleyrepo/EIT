@@ -61,10 +61,30 @@
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Managers\IMailManager.cs" />
     <Compile Include="Managers\MailManager.cs" />
+    <Compile Include="Models\EmailPreferences.cs" />
+    <Compile Include="Models\NonProfessionalUser.cs" />
+    <Compile Include="Models\ProfessionalUser.cs" />
+    <Compile Include="Models\RegisterdUserReturnViewModel.cs" />
+    <Compile Include="Models\RegisterdUserWithEmailDetails.cs" />
+    <Compile Include="Models\ResendEmailPrefEmailDetails.cs" />
+    <Compile Include="Models\ResendEmailPrefUserDetails.cs" />
+    <Compile Include="Models\SFCountryListItem.cs" />
+    <Compile Include="Models\SFCountryListViewModel.cs" />
+    <Compile Include="Models\SFFund.cs" />
+    <Compile Include="Models\SFProcess.cs" />
+    <Compile Include="Models\SFProcessEmailPreferenceViewModel.cs" />
+    <Compile Include="Repositories\IPersonalizedContentPageRepository.cs" />
+    <Compile Include="Repositories\IXConnectUtilityRepository.cs" />
+    <Compile Include="Repositories\PersonalizedContentPageRepository.cs" />
+    <Compile Include="Services\IPersonalizedContentService.cs" />
+    <Compile Include="Services\PersonalizedContentService.cs" />
+    <Compile Include="Services\S4SSessionSingleton.cs" />
+    <Compile Include="Services\SFEntityUtility.cs" />
     <Compile Include="Services\SitecoreContactUtility.cs" />
     <Compile Include="Services\ISitecoreContactUtility.cs" />
     <Compile Include="Models\ScContactFacetData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\XConnectUtilityRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Glass.Mapper.Sc.92.Mvc">

@@ -103,30 +103,16 @@
     <Compile Include="Controllers\RegisterInvestorController.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Models\EditEmailPreferencesViewModel.cs" />
-    <Compile Include="Models\EmailPreferences.cs" />
     <Compile Include="Models\IEditEmailPrefTemplate.cs" />
     <Compile Include="Models\IRegisterInvestor.cs" />
-    <Compile Include="Models\NonProfessionalUser.cs" />
-    <Compile Include="Models\ProfessionalUser.cs" />
-    <Compile Include="Models\RegisterdUserReturnViewModel.cs" />
-    <Compile Include="Models\RegisterdUserWithEmailDetails.cs" />
     <Compile Include="Models\RegisterInvestorSubmit.cs" />
     <Compile Include="Models\RegisterInvestorViewModel.cs" />
-    <Compile Include="Models\ResendEmailPrefEmailDetails.cs" />
-    <Compile Include="Models\ResendEmailPrefUserDetails.cs" />
-    <Compile Include="Models\SFCountryListItem.cs" />
-    <Compile Include="Models\SFCountryListViewModel.cs" />
-    <Compile Include="Models\SFFund.cs" />
-    <Compile Include="Models\SFProcess.cs" />
-    <Compile Include="Models\SFProcessEmailPreferenceViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ApplicationCacheRepository.cs" />
     <Compile Include="Repositories\EmailPreferencesRepository.cs" />
     <Compile Include="Repositories\IApplicationCacheRepository.cs" />
     <Compile Include="Repositories\IEmailPreferencesRepository.cs" />
     <Compile Include="Services\EmailPreferenceService.cs" />
-    <Compile Include="Services\S4SSessionSingleton.cs" />
-    <Compile Include="Services\SFEntityService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />

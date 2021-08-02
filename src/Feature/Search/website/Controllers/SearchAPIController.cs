@@ -13,14 +13,14 @@
     {
         private readonly IArticleSearchDataManager _articleListingDataManager;
         private readonly IFundSearchDataManager _fundListingDataManager;
-        private readonly ISitecoreContactUtility _contactService;
+        private readonly IPersonalizedContentService _personalizedContentService;
         private readonly ISiteSearchDataManager _siteSearchDataManager;
 
-        public SearchAPIController(IArticleSearchDataManager articleListingDataManager, IFundSearchDataManager fundListingDataManager, ISitecoreContactUtility contactService, ISiteSearchDataManager siteSearchDataManager)
+        public SearchAPIController(IArticleSearchDataManager articleListingDataManager, IFundSearchDataManager fundListingDataManager, IPersonalizedContentService personalizedContentService, ISiteSearchDataManager siteSearchDataManager)
         {
             this._articleListingDataManager = articleListingDataManager;
             this._fundListingDataManager = fundListingDataManager;
-            this._contactService = contactService;
+            this._personalizedContentService = personalizedContentService;
             this._siteSearchDataManager = siteSearchDataManager;
         }
 
@@ -149,14 +149,14 @@
         /// Gets funds that a user is following.
         /// </summary>
         /// <returns>A list of funds.</returns>
-        public ActionResult GetMyFilteredFunds(string fundTeams, string sortOrder, string database = "web", int page = 1)
+        public ActionResult GetMyFilteredFunds(string @ref, string fundTeams, string sortOrder, string database = "web", int page = 1)
         {
             if (Tracker.Current == null || Tracker.Current.Contact == null)
             {
                 return new HttpStatusCodeResult(System.Net.HttpStatusCode.NotFound);
             }
 
-            var contactFacetData = _contactService.GetCurrentSitecoreContactFacetData(Tracker.Current.Contact.ContactId.ToString());
+            var contactFacetData = _personalizedContentService.GetContactFacetData(@ref);
 
             if (contactFacetData == null)
             {
