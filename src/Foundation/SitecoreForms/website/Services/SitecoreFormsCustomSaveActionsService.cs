@@ -1,9 +1,9 @@
 ﻿namespace LionTrust.Foundation.SitecoreForms.Services
 {
     using System;
+    using LionTrust.Foundation.Contact.Managers;
     using LionTrust.Foundation.DI;
     using LionTrust.Foundation.SitecoreForms.Factories;
-    using LionTrust.Foundation.SitecoreForms.Managers;
     using LionTrust.Foundation.SitecoreForms.Models;
 
     /// <summary>

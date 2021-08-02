@@ -22,20 +22,20 @@
         private readonly IMvcContext _context;
         private readonly IArticleContentSearchService _contentSearchService;
         private readonly string _databaseName;
-        private readonly IContactService _contactService;
+        private readonly IPersonalizedContentService _personalizedContentService;
         private readonly IFundContentSearchService _fundContentSearchService;
 
 
-        public MyFundsManagerInsightsController(IMvcContext context, IArticleContentSearchService contentSearchService, IRequestContext requestContext, IContactService contactService, IFundContentSearchService fundContentSearchService)
+        public MyFundsManagerInsightsController(IMvcContext context, IArticleContentSearchService contentSearchService, IRequestContext requestContext, IPersonalizedContentService personalizedContentService, IFundContentSearchService fundContentSearchService)
         {
             _context = context;
             _contentSearchService = contentSearchService;
             _databaseName = requestContext.SitecoreService.Database.Name;
-            _contactService = contactService;
+            _personalizedContentService = personalizedContentService;
             _fundContentSearchService = fundContentSearchService;
         }
 
-        public ActionResult Render()
+        public ActionResult Render(string @ref)
         {
             var data = _context.GetDataSourceItem<IFundManagerInsightsBase>();
             IEnumerable<IArticlePromo> articles = new List<IArticlePromo>();
@@ -45,7 +45,7 @@
                 return null;
             }
 
-            var contactData = _contactService.GetCurrentSitecoreContactFacetData(Tracker.Current.Contact.ContactId.ToString());
+            var contactData = _personalizedContentService.GetContactFacetData(@ref);
 
             if (!Sitecore.Context.PageMode.IsExperienceEditor && (contactData == null || contactData.SalesforceFundIds == null || !contactData.SalesforceFundIds.Any()))
             {
