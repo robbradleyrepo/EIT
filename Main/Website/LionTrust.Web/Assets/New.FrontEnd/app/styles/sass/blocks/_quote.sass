@@ -8,10 +8,19 @@
     background-size: cover
     position: relative
     overflow: hidden
+    margin: 2rem 0
     @include breakpoint(tablet, up)
         padding: 80px 0
     @include breakpoint(desktop, up)
         padding: 100px 0
+        min-height: 340px
+    &.quote-people
+        justify-content: space-around
+        padding: 40px 20px 20px
+        @include breakpoint(mobile-large, up)
+            padding: 50px 20px 40px
+        @include breakpoint(tablet, up)
+            padding: 20px
     &__head
         display: flex
         color: $white
