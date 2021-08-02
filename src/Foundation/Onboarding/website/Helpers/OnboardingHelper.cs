@@ -36,8 +36,38 @@
 
         public static InvestorType GetInvestorType(IOnboardingConfiguration onboardingConfiguration, BaseLog log)
         {
-            //TODO: logic to return correct investor type.
-            return InvestorType.Private;
+            var investorType = InvestorType.Private;
+
+            var tracker = Tracker.Current;
+            if (!IsValidConfiguration(onboardingConfiguration, log))
+            {
+                return investorType;
+            }
+
+            if (tracker != null && tracker.Interaction != null
+                && tracker.Interaction.Profiles != null)
+            {
+                if (tracker.Interaction.Profiles.ContainsProfile(onboardingConfiguration.Profile.Name))
+                {
+                    var profile = tracker.Interaction.Profiles[onboardingConfiguration.Profile.Name];
+                    if (profile.PatternId != null && profile.PatternId.Value != null)
+                    {
+                        if (profile.PatternId.HasValue)
+                        {
+                            if (profile.PatternId == onboardingConfiguration.PrivatePatternCard.Id)
+                            {
+                                investorType = InvestorType.Private;
+                            }
+                            else if (profile.PatternId == onboardingConfiguration.ProfressionalPatternCard.Id)
+                            {
+                                investorType = InvestorType.Professional;
+                            }
+                        }
+                    }
+                }
+            }
+
+            return investorType;
         }
 
         private static bool IsValidConfiguration(IOnboardingConfiguration configuration, BaseLog log)

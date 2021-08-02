@@ -9,6 +9,6 @@ namespace LionTrust.Feature.Onboarding.Models
         public string Country { get; set; }
 
         [Required(AllowEmptyStrings = false)]
-        public Roles Role { get; set; }
+        public Foundation.Onboarding.Constants.InvestorType InvestorType { get; set; }
     }
 }

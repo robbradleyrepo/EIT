@@ -1,5 +1,6 @@
 ﻿namespace LionTrust.Feature.Onboarding.Models
 {
+    using LionTrust.Foundation.Onboarding.Models;
     using System.Linq;
 
     public class OnboardingViewModel

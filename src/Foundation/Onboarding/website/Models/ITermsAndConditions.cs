@@ -1,4 +1,4 @@
-﻿namespace LionTrust.Feature.Onboarding.Models
+﻿namespace LionTrust.Foundation.Onboarding.Models
 {
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;

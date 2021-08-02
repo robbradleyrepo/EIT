@@ -3,6 +3,8 @@
     using Glass.Mapper.Sc.Fields;
     using Glass.Mapper.Sc.Configuration.Attributes;
     using LionTrust.Foundation.ORM.Models;
+    using System.Collections.Generic;
+    using Glass.Mapper.Sc.Configuration;
 
     public interface IOnboardingConfiguration : IGlassBase
     {
@@ -20,5 +22,20 @@
 
         [SitecoreField(Constants.OnboardingConfiguration.ProfessionalProfileCard_FieldId)]
         IProfileCard ProfressionalProfileCard { get; set; }
+
+        [SitecoreField(Constants.OnboardingConfiguration.PrivatePatternCard_FieldId)]
+        IGlassBase PrivatePatternCard { get; set; }
+
+        [SitecoreField(Constants.OnboardingConfiguration.ProfessionalPatternCard_FieldId)]
+        IGlassBase ProfressionalPatternCard { get; set; }
+
+        [SitecoreChildren(TemplateId = Constants.ChooseCountry.TemplateId, EnforceTemplate = SitecoreEnforceTemplate.TemplateAndBase)]
+        IEnumerable<IChooseCountry> ChooseCountry { get; set; }
+
+        [SitecoreChildren(TemplateId = Constants.ChooseInvestorRole.TemplateId, EnforceTemplate = SitecoreEnforceTemplate.TemplateAndBase)]
+        IEnumerable<IChooseInvestorRole> ChooseInvestorRole { get; set; }
+
+        [SitecoreChildren(TemplateId = Constants.TermsAndConditions.TemplateId, EnforceTemplate = SitecoreEnforceTemplate.TemplateAndBase)]
+        IEnumerable<ITermsAndConditions> TermsAndConditions { get; set; }
     }
 }

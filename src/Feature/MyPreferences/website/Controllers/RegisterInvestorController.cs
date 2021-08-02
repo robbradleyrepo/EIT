@@ -5,6 +5,8 @@
     using LionTrust.Feature.MyPreferences.Repositories;
     using LionTrust.Feature.MyPreferences.Services;
     using LionTrust.Foundation.Contact.Services;
+    using LionTrust.Foundation.Onboarding.Helpers;
+    using LionTrust.Foundation.Onboarding.Models;
     using Sitecore.Abstractions;
     using Sitecore.Mvc.Controllers;
     using System;
@@ -29,13 +31,15 @@
         public ActionResult RegisterInvestor(Errors error = Errors.None, string email = "")
         {
             var data = _context.GetDataSourceItem<IRegisterInvestor>();
+            var home = _context.GetHomeItem<IHome>();
 
-            if (data == null)
+            if (data == null || home == null)
             {
                 return null;
             }
 
-            var viewModel = new RegisterInvestorViewModel(data, InvestorType.Private);
+            var investorType = OnboardingHelper.GetInvestorType(home.OnboardingConfiguration, _log);
+            var viewModel = new RegisterInvestorViewModel(data, investorType);
 
             if (error == Errors.UserExists)
             {
@@ -46,8 +50,6 @@
                 userExistsErrorMessage = userExistsErrorMessage.Replace(SitecoreTokens.RegisterUserProcess.ResendEmailLinkToken, resendEmailPageUrl);
                 viewModel.Error = userExistsErrorMessage;
             }
-
-            //OnboardingHelper.GetInvestorType()
 
             return View("~/Views/MyPreferences/RegisterInvestor.cshtml", viewModel);
         }
