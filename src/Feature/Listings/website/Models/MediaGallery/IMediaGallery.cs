@@ -28,5 +28,8 @@
 
         [SitecoreField(Constants.MediaLister.FullBodyLabel_FieldId)]
         string FullBodyLabel { get; set; }
+
+        [SitecoreField(Constants.MediaLister.DownloadLabel_FieldId)]
+        string DownloadLabel { get; set; }
     }
 }

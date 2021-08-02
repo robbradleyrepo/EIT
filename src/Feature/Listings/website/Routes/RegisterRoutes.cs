@@ -42,13 +42,13 @@
                 new
                 {
                     controller = "MediaGallery",
-                    action = "DownloadDocuments"
+                    action = "DownloadMediaImages"
                 });
             RouteTable.Routes.MapRoute("Feature.Listings.GetMediaItems", $"{Settings.GetSetting(Constants.Settings.MediaGalleryApiRoute_SettingName)}/GetMediaItems",
                 new
                 {
                     controller = "MediaGallery",
-                    action = "GetDocuments"
+                    action = "GetMediaItems"
                 });
         }
     }

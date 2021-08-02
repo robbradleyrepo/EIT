@@ -147,6 +147,7 @@
             public const string HeadshotLabel_FieldId = "{CD510600-285E-47FC-847B-B33785EFD904}";
             public const string FullBodyLabel_FieldId = "{D1B479B5-1FDB-46FD-A06D-61A0D0DEBE11}";
             public const string FilterSource_FieldId = "{2A00B22E-F809-40A6-A53A-4818158A1DE9}";
+            public const string DownloadLabel_FieldId = "{A54E01C5-8988-446D-A04D-D439F461A2D3}";
         }    
     }
 }
