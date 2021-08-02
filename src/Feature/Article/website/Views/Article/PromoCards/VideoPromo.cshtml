@@ -17,13 +17,13 @@
                         if (Model.Authors.Count() > 1)
                         {
                             @Html.Glass().RenderImage(Model, m => m.MultipleAuthorsIcon, new NameValueCollection { { "class", "article-promo__head-img" } }, isEditable: true)
-                            <span class="article-promo__head-title">@Html.Glass().Editable(Model, m => m.MultipleAuthorsLabel)</span>
+                            <span class="article-promo__head-title text-gold">@Html.Glass().Editable(Model, m => m.MultipleAuthorsLabel)</span>
                         }
                         else
                         {
                             var author = Model.Authors.FirstOrDefault();
                             @Html.Glass().RenderImage(author, m => m.Image, new NameValueCollection { { "class", "article-promo__head-img" } }, isEditable: true)
-                            <span class="article-promo__head-title">@Html.Glass().Editable(author, m => m.FullName)</span>
+                            <span class="article-promo__head-title text-gold">@Html.Glass().Editable(author, m => m.FullName)</span>
                         }
                     }
                 </div>
