@@ -1,0 +1,140 @@
+﻿html, body {
+    box-sizing: border-box;
+    height: 100%;
+    font-family: 'Open Sans', Arial, 'Microsoft YaHei', sans-serif;
+    font-size: 13px;
+    margin: 0px;
+    color: #131313;
+}
+
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+}
+
+
+a:link {
+	text-decoration: none;
+	color: #0088cc;
+}
+	
+a:hover {
+	text-decoration: underline;
+}
+	
+#CenterColumn {
+	margin: auto;
+	padding-right: 20px;
+	padding-left: 20px;
+	max-width: 1170px;
+	min-height: 402px;
+	background: white url('-/media/Default Website/cover.ashx') no-repeat;
+	background-size: 1170px 402px;
+	text-align: left;
+}	
+	
+#InnerCenter {
+	margin: auto;	
+	position:relative;
+	width:1150px;
+	height:700px;
+}	
+	
+#Header {
+	height:402px;
+}	
+	
+#Footer {
+	width:100%;
+	clear:both; 
+	padding-top:2px;
+}	
+	
+#LeftContent {
+    width:750px;
+	text-align: justify;
+}
+	
+#scLogo {
+	margin-top:20px;
+}
+	
+.contentTitle {
+	margin-top: 50px;
+	font-weight:400;
+	font-size: 36px;
+}
+	
+.divider {
+	background-color: #DCDCDC;
+	border: 0 none;
+	clear: both;
+	display: block;
+	height: 1px;
+	float:none;
+	margin: 50px auto;
+	width: 100%;
+}
+	
+.contentDescription{
+	padding-right:20px;
+	line-height: 22px;
+}	
+.fz-20{
+font-size: 20px;
+}
+.text-primary{
+	color: #10A047;
+}
+.text-black {
+	color: #414855;
+}
+.text-secondary {
+	color: #20242B;
+}
+.text-secondary-gray
+{
+	color: #414855;
+}
+.text-secondary-silver
+{
+	color: #E9EDF0;
+}
+.text-gold
+{
+	color: #C0A961;
+}
+.text-green
+{
+	color: #006B72;
+}
+.text-blue
+{
+	color: #0097AC;
+}
+.text-red
+{
+	color: #B13122;
+}
+.text-orange
+{
+	color: #E77B05;
+}
+.text-brown
+{
+	color: #877945;
+}
+.text-white
+{
+	color: #FFFFFF;
+}
+.text-primary-forward
+{
+	color: #00A339;
+}
+.text-blue-bold
+{
+	color: #083274C7;
+}
+.text-gray {
+	color: #9D9D9D;
+}

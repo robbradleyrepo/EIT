@@ -1,0 +1,124 @@
+﻿@model LionTrust.Feature.Listings.Models.IMediaGallery
+@if (Model != null)
+{
+    <section id="gallery-app" class="gallery-app" data-host="MediaGalleryApi" data-galleryid="@Model.Id">
+        <div class="gallery-filter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 offset-lg-3 relative">
+                        <select @@change="setFilter($event)" name="filterby" id="filterby" class="select">
+                            <option disabled selected>@Html.Glass().Editable(Model, m => m.FilterByCategoryLabel)</option>
+                            <option v-for="facet in facets" :key="facet.identifier" :value="facet.identifier">{{facet.name}}</option>
+
+                        </select>
+                        <i class="article-filters__icon-arrow article-filters__icon-arrow_select select-arrow"></i>
+                    </div>
+                    <div class="col-lg-3">
+                        <form class="search-form" @@submit.prevent="submitSearchForm($event)">
+                            <input type="text" v-model="searchText" name="searchText" class="search-form__input color-black"
+                                   placeholder="@Html.Glass().Editable(Model, m => m.SearchByKeywordLabel)">
+                            <button class="search-form__submit pe-0" type="submit">
+                                <i class="icon-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="gallary-download-check">
+                <div class="text-center spineer-loader" :style="!loading ? 'display: none' : ''">
+                    <div class="spinner-border text-gold" role="status"></div>
+                </div>
+                <label class="checkbox">
+                    <input v-model="selectAllDocuments" type="checkbox" class="checkbox__input">
+                    <span class="checkbox__box"></span>
+                    <div class="checkbox__title">@Html.Glass().Editable(Model, m => m.SelectAllLabel)</div>
+                </label>
+                <button @@click="downloadDocumentMultiple" v-if="selectAllDocuments || selectedDocumentIds.length"
+                        class="btn btn-primary">
+                    @Html.Glass().Editable(Model, m => m.DownloadSelectedLabel) <i class="icon-download"></i>
+                </button>
+            </div>
+            <div class="media-listing">
+                <div class="row">
+                    <media-item inline-template
+                                v-for="(item,i) in items"
+                                :key="item.id"
+                                :element="item"
+                                :index="i">
+                        <div class="col-sm-6 col-lg-3 col-xl-2">
+                            <div class="media-item">
+                                <div class="media-item__body">
+                                    <div class="media-item__gallery">
+                                        <a :href="element.headshotimage.url" :data-caption="element.description"
+                                           class="media-item-image-gallary" :data-fancybox="'images' + index">
+                                            <img class="media-item__image" :src="element.headshotimage.url" />
+                                        </a>
+                                        <div v-if="element.fullbodyimage" style="display: none;">
+                                            <a :data-caption="element.description" class="media-item-image-gallary"
+                                               :href="element.fullbodyimage.url" :data-fancybox="'images' + index">
+                                                <img class="media-item__image" :src="element.fullbodyimage.url" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="media-item__text">
+                                        <span>{{element.description}}</span>
+                                        <div class="media-item__checkboxes" v-if="element.fullbodyimage">
+                                            <select-field inline-template @@on -check="selectDocument(element.headshotimage.id)">
+                                                <label class="checkbox checkbox-sm">
+                                                    <input :checked="selected" @@change="onChange" type="checkbox"
+                                                           class="checkbox__input">
+                                                    <span class="checkbox__box"></span>
+                                                    <div class="checkbox__title">@Html.Glass().Editable(Model, m => m.HeadshotLabel)</div>
+                                                </label>
+                                            </select-field>
+                                            <select-field inline-template @@on -check="selectDocument(element.fullbodyimage.id)">
+                                                <label class="checkbox checkbox-sm">
+                                                    <input :checked="selected" @@change="onChange" type="checkbox"
+                                                           class="checkbox__input">
+                                                    <span class="checkbox__box"></span>
+                                                    <div class="checkbox__title">@Html.Glass().Editable(Model, m => m.FullBodyLabel)</div>
+                                                </label>
+                                            </select-field>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="media-item__footer">
+                                    <select-field inline-template @@on -check="selectDocument(element.headshotimage.id)" v-if="!element.fullbodyimage">
+                                        <label class="checkbox checkbox-sm">
+                                            <input :checked="selected" @@change="onChange" type="checkbox"
+                                                   class="checkbox__input">
+                                            <span class="checkbox__box"></span>
+                                            <div class="checkbox__title">@Html.Glass().Editable(Model, m => m.SelectLabel)</div>
+                                        </label>
+                                    </select-field>
+
+                                    <a href="#" @@click.prevent="download" class="link-styles">
+                                        <i class="icon-download"></i>
+                                        @Html.Glass().Editable(Model, m => m.DownloadLabel)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </media-item>
+                </div>
+            </div>
+            <div class="gallary-download-check">
+                <label class="checkbox">
+                    <input v-model="selectAllDocuments" type="checkbox" class="checkbox__input">
+                    <span class="checkbox__box"></span>
+                    <div class="checkbox__title">@Html.Glass().Editable(Model, m => m.SelectAllLabel)</div>
+                </label>
+                <button @@click="downloadDocumentMultiple" v-if="selectAllDocuments || selectedDocumentIds.length"
+                        class="btn btn-primary">
+                    @Html.Glass().Editable(Model, m => m.DownloadSelectedLabel) <i class="icon-download"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @:Please assign datasource for the component
+}

@@ -1,0 +1,28 @@
+﻿---
+ID: "8f6db058-9e75-4a0b-8f19-cd79d3f28fb0"
+Parent: "cebb4a66-f90d-45d8-9d1c-63369987b753"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/Text/_DividendChart/Dividend Chart/DividendChart_TableContent
+DB: master
+SharedFields:
+- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
+  Hint: Source
+  Value: /sitecore/system/Settings/Html Editor Profiles/Feature/Text/Table Rich Text
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: Rich Text
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+Languages:
+- Language: en
+  Fields:
+  - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
+    Hint: Title
+    Value: Table Content
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210727T152740Z

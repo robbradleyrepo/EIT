@@ -1,8 +1,9 @@
-﻿namespace LionTrust.Foundation.Navigation.Helpers
+﻿namespace LionTrust.Foundation.Onboarding.Helpers
 {
     using LionTrust.Foundation.Onboarding.Models;
     using Sitecore.Abstractions;
     using Sitecore.Analytics;
+    using static LionTrust.Foundation.Onboarding.Constants;
 
     public static class OnboardingHelper
     {
@@ -31,6 +32,42 @@
             }
 
             return string.Empty;
+        }
+
+        public static InvestorType GetInvestorType(IOnboardingConfiguration onboardingConfiguration, BaseLog log)
+        {
+            var investorType = InvestorType.Private;
+
+            var tracker = Tracker.Current;
+            if (!IsValidConfiguration(onboardingConfiguration, log))
+            {
+                return investorType;
+            }
+
+            if (tracker != null && tracker.Interaction != null
+                && tracker.Interaction.Profiles != null)
+            {
+                if (tracker.Interaction.Profiles.ContainsProfile(onboardingConfiguration.Profile.Name))
+                {
+                    var profile = tracker.Interaction.Profiles[onboardingConfiguration.Profile.Name];
+                    if (profile.PatternId != null && profile.PatternId.Value != null)
+                    {
+                        if (profile.PatternId.HasValue)
+                        {
+                            if (profile.PatternId == onboardingConfiguration.PrivatePatternCard.Id)
+                            {
+                                investorType = InvestorType.Private;
+                            }
+                            else if (profile.PatternId == onboardingConfiguration.ProfressionalPatternCard.Id)
+                            {
+                                investorType = InvestorType.Professional;
+                            }
+                        }
+                    }
+                }
+            }
+
+            return investorType;
         }
 
         private static bool IsValidConfiguration(IOnboardingConfiguration configuration, BaseLog log)

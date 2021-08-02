@@ -19,17 +19,17 @@
     public class MyFundsScrollerController: SitecoreController
     {
         private readonly IMvcContext _context;
-        private readonly IContactService _contactService;
+        private readonly IPersonalizedContentService _personalizedContentService;
         private readonly IFundContentSearchService _fundContentSearchService;
 
-        public MyFundsScrollerController(IMvcContext context, IContactService contactService, IFundContentSearchService fundContentSearchService)
+        public MyFundsScrollerController(IMvcContext context, IPersonalizedContentService personalizedContentService, IFundContentSearchService fundContentSearchService)
         {
             _context = context;
-            _contactService = contactService;
+            _personalizedContentService = personalizedContentService;
             _fundContentSearchService = fundContentSearchService;
         }
 
-        public ActionResult Render()
+        public ActionResult Render(string @ref)
         {
             var datasource = _context.GetDataSourceItem<IMyFundsScroller>();
             if (datasource == null || Tracker.Current == null || !Tracker.IsActive || Tracker.Current.Contact == null)
@@ -37,7 +37,7 @@
                 return null;
             }
 
-            var contactData = _contactService.GetCurrentSitecoreContactFacetData(Tracker.Current.Contact.ContactId.ToString());
+            var contactData = _personalizedContentService.GetContactFacetData(@ref);
 
             var fundSearchRequest = new FundSearchRequest 
             { 
