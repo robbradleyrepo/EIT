@@ -1,25 +1,25 @@
 ﻿---
-ID: "bc673fab-9fdc-40bd-87f9-6d3140806092"
-Parent: "e7f4a866-481f-4e68-b7b7-d5f939bb32bc"
+ID: "ce59e663-c78f-462b-920d-4ef6ebecae37"
+Parent: "5075e305-dd6c-4fa7-816c-9dadc30958ff"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Banner/_HomepageLeadBanner/Home page lead banner/HomepageLeadBanner_HeadingLine2
+Path: /sitecore/templates/Feature/Banner/_PeopleInfo/People Info/PeopleInfo_FemaleCount
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: "Single-Line Text"
+  Value: Integer
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 700
+  Value: 200
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Heading Line 2
+    Value: Female Count
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210727T095040Z
+      Value: 20210802T191122Z

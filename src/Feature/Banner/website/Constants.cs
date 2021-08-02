@@ -103,5 +103,20 @@
             public const string CtaGoalFieldId = "{7EEBE834-1B0C-433D-A5B5-BDFB93BE49DE}";
             public const string BodyFieldId = "{838AB617-CCE0-4319-964E-4FA17315D6BD}";
         }
+
+        public static class PeopleInfoBanner
+        { 
+            public const string BackgroundImage_FieldId = "{80FEBFB6-5701-4CDB-8E9C-00DE7BAC4AE4}";
+            public const string Description_FieldId = "{48233729-410C-4B76-B832-8B882641BE12}";
+            public const string MaleCountIcon_FieldId = "{A3170887-8A89-4C9A-B628-E1870512C8C0}";
+            public const string FemaleCountIcon_FieldId = "{AAC8FE4F-62A8-47F8-8AB4-18FD43915B9D}";
+        }
+
+        public static class PeopleInfo
+        {
+            public const string Title_FieldId = "{D2A9FB8C-7265-464B-9210-71E8A55237FF}";
+            public const string MaleCount_FieldId = "{84D065C0-0D30-4BFD-8223-88926E7EF4AE}";
+            public const string FemaleCount_FieldId = "{CE59E663-C78F-462B-920D-4EF6EBECAE37}";
+        }
     }
 }

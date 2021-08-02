@@ -82,6 +82,7 @@
     <Content Include="Views\Banner\BannerWithSlider.cshtml" />
     <Content Include="Views\Banner\RiskBanner.cshtml" />
     <Content Include="Views\Banner\MyFundsLeadBanner.cshtml" />
+    <Content Include="Views\Banner\PeopleInfoBanner.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -94,6 +95,8 @@
     <Compile Include="Models\IHomepageLeadBannerModel.cs" />
     <Compile Include="Models\IIconWithText.cs" />
     <Compile Include="Models\IImageWithTitleAndText.cs" />
+    <Compile Include="Models\IPeopleInfo.cs" />
+    <Compile Include="Models\IPeopleInfoBanner.cs" />
     <Compile Include="Models\IPromoBanner.cs" />
     <Compile Include="Models\IRiskBanner.cs" />
     <Compile Include="Models\LeadBannerModel.cs" />
