@@ -107,6 +107,7 @@
         {
             public const string DocumentApiRoute_SettingName = "Feature.Listings.DocumentsApiRoute";
             public const string GenericListingApiRoute_SettingName = "Feature.Listings.GenericListingApiRoute";
+            public const string MediGalleryApiRoute_SettingName = "Feature.Listings.MediaGalleryApiRoute";
         }
 
         public static class DocumentListerVariant
@@ -123,10 +124,7 @@
             public const string PressReleaseDocument_FieldID = "{F09637BD-1F1B-4590-8D0C-DA6F9B52155C}";
             public const string ReportDocument_FieldID = "{F4DF3EE6-5A99-4795-A7FB-E1DC960DAAAD}";
             public const string PresentationLink_FieldID = "{791F04C8-C42D-49F9-9EEA-B3E68EC99E5E}";
-            public const string Date_FieldID = "{17789FCD-D4EE-4FBF-983B-89AACFFF3B82}";
-
-        }
-            public const string MediGalleryApiRoute_SettingName = "Feature.Listings.MediaGalleryApiRoute";
+            public const string Date_FieldID = "{17789FCD-D4EE-4FBF-983B-89AACFFF3B82}";            
         }
 
         public static class MediaItem
