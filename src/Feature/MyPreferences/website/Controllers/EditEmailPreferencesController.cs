@@ -4,6 +4,7 @@
     using LionTrust.Feature.MyPreferences.Models;
     using LionTrust.Feature.MyPreferences.Repositories;
     using LionTrust.Feature.MyPreferences.Services;
+    using LionTrust.Foundation.Contact.Managers;
     using LionTrust.Foundation.Contact.Services;
     using Sitecore.Abstractions;
     using Sitecore.Annotations;
@@ -18,7 +19,7 @@
         private readonly BaseLog _log;
         private readonly EmailPreferencesService _emailPreferencesService;
 
-        public EditEmailPreferencesController(IMvcContext context, BaseLog log, IMailService mailManager, IEmailPreferencesRepository editEmailPreferencesRepository)
+        public EditEmailPreferencesController(IMvcContext context, BaseLog log, IMailManager mailManager, IEmailPreferencesRepository editEmailPreferencesRepository)
         {
             _context = context;
             _log = log;

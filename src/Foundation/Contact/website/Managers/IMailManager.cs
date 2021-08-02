@@ -1,4 +1,4 @@
-﻿namespace LionTrust.Foundation.SitecoreForms.Managers
+﻿namespace LionTrust.Foundation.Contact.Managers
 {
     public interface IMailManager
     {

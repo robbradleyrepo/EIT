@@ -59,8 +59,8 @@
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
-    <Compile Include="Services\IMailService.cs" />
-    <Compile Include="Services\MailService.cs" />
+    <Compile Include="Managers\IMailManager.cs" />
+    <Compile Include="Managers\MailManager.cs" />
     <Compile Include="Services\SitecoreContactUtility.cs" />
     <Compile Include="Services\ISitecoreContactUtility.cs" />
     <Compile Include="Models\ScContactFacetData.cs" />

@@ -76,8 +76,6 @@
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Factories\ISitecoreFormsCustomSaveActionRepository.cs" />
     <Compile Include="Factories\SitecoreFormsCustomSaveActionRepository.cs" />
-    <Compile Include="Managers\IMailManager.cs" />
-    <Compile Include="Managers\MailManager.cs" />
     <Compile Include="Models\ISaveActionSendEmailTemplate.cs" />
     <Compile Include="Models\SendEmailActionData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,6 +83,10 @@
     <Compile Include="Services\SitecoreFormsCustomSaveActionsService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Contact\website\LionTrust.Foundation.Contact.csproj">
+      <Project>{8EE89AE6-2E22-48CC-9FA9-F4C9225F76E8}</Project>
+      <Name>LionTrust.Foundation.Contact</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\DI\website\LionTrust.Foundation.DI.csproj">
       <Project>{0d3a6f11-b5ff-4d8c-8a74-19501d2e80d4}</Project>
       <Name>LionTrust.Foundation.DI</Name>

@@ -2,6 +2,7 @@
 {
     using LionTrust.Feature.MyPreferences.Models;
     using LionTrust.Feature.MyPreferences.Repositories;
+    using LionTrust.Foundation.Contact.Managers;
     using LionTrust.Foundation.Contact.Services;
     using Sitecore.Diagnostics;
     using System;
@@ -9,9 +10,9 @@
     public class EmailPreferencesService
     {
         private readonly IEmailPreferencesRepository _emailPreferencesRepository;
-        private readonly IMailService _mailManager;
+        private readonly IMailManager _mailManager;
 
-        public EmailPreferencesService(IEmailPreferencesRepository editEmailPreferencesRepository, IMailService mailManager)
+        public EmailPreferencesService(IEmailPreferencesRepository editEmailPreferencesRepository, IMailManager mailManager)
         {
             _emailPreferencesRepository = editEmailPreferencesRepository;
             _mailManager = mailManager;

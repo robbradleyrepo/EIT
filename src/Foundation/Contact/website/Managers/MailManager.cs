@@ -1,4 +1,4 @@
-﻿namespace LionTrust.Foundation.SitecoreForms.Managers
+﻿namespace LionTrust.Foundation.Contact.Managers
 {
     using System.Net.Mail;
 
