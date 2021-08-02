@@ -5,9 +5,9 @@
     public interface IDividendChart : IListingsGlassBase
     {
         [SitecoreField(Listings.Constants.DividendChart.Title_FieldId)]
-        public string Title { get; set; }
+        string Title { get; set; }
 
         [SitecoreField(Listings.Constants.DividendChart.TableContent_FieldId)]
-        public string TableContent { get; set; }
+        string TableContent { get; set; }
     }
 }
