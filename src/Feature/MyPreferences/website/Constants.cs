@@ -19,7 +19,7 @@
             public const string NonUKEmailTemplate_FieldId = "{478C282E-A696-45A5-9FCC-26440C77B2D0}";
             public const string ResendEditPreferencesEmailTemplate_FieldId = "{BC08AE09-D936-4BEE-9B68-421A8A540193}";
         }
-        public class EditEmailPrefTemplate
+        public static class EditEmailPrefTemplate
         {
             public const string FromAddress_FieldId = "{7D7FA98C-6223-4572-BB3C-C7C055125A5A}";
             public const string FromDisplayName_FieldId = "{469A6D86-9FEE-4344-872C-ADD443848237}";
