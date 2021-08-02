@@ -108,5 +108,23 @@
             public const string DocumentApiRoute_SettingName = "Feature.Listings.DocumentsApiRoute";
             public const string GenericListingApiRoute_SettingName = "Feature.Listings.GenericListingApiRoute";
         }
+
+        public static class DocumentListerVariant
+        {
+            public const string SelectYearLabel_FieldId = "{B64882EB-08C1-4DF0-85DB-00712CE4A076}";
+            public const string PressReleaseLabel_FieldId = "{D0F4D54F-25A6-4432-8872-488A881D30B4}";
+            public const string ReportLabel_FieldId = "{D440A386-E392-4561-926F-BF6B80B7BEB1}";
+            public const string PresentationLabel_FieldId = "{898294D2-A8E4-4570-88CA-C415AD0F5D05}";
+        }
+
+        public static class DocumentVariant
+        {
+            public const string Title_FieldID = "{DFDA05D5-803C-4595-9460-F6AF0AE633B4}";
+            public const string PressReleaseDocument_FieldID = "{F09637BD-1F1B-4590-8D0C-DA6F9B52155C}";
+            public const string ReportDocument_FieldID = "{F4DF3EE6-5A99-4795-A7FB-E1DC960DAAAD}";
+            public const string PresentationLink_FieldID = "{791F04C8-C42D-49F9-9EEA-B3E68EC99E5E}";
+            public const string Date_FieldID = "{17789FCD-D4EE-4FBF-983B-89AACFFF3B82}";
+
+        }
     }
 }

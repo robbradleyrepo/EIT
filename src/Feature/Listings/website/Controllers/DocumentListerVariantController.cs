@@ -10,72 +10,58 @@
     using ICSharpCode.SharpZipLib.Zip;
     using LionTrust.Feature.Listings.Helpers;
     using LionTrust.Feature.Listings.Models;
-    using LionTrust.Foundation.Core.ActionResults;
+    using LionTrust.Foundation.Content.Repositories;
     using Sitecore.Mvc.Controllers;
-    
-    public class DocumentsController : SitecoreController
+
+    public class DocumentListerVariantController : SitecoreController
     {
         private readonly IMvcContext _mvcContext;
+        private readonly IRenderingRepository _repository;
 
-        public DocumentsController(IMvcContext mvcContext)
+        public DocumentListerVariantController(IMvcContext mvcContext, IRenderingRepository repository)
         {
             _mvcContext = mvcContext;
+            _repository = repository;
         }
 
-        public ActionResult GetDocuments(string documentFolderId, string sortOrder = "ASC", int page = 1, int resultsPerPage = 10)
+        public ActionResult Render()
         {
-            if (string.IsNullOrEmpty(documentFolderId))
+            var viewModel = new DocumentListerVariantViewModel();
+            viewModel.Data = _repository.GetDataSourceItem<IDocumentListerVariants>();
+            
+            if (viewModel.Data == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest, "Document Folder ID required!");
+                return null;
             }
 
-            Guid documentFolderGuid;
-
-            try
+            if (viewModel.Data.DocumentVariants == null || !viewModel.Data.DocumentVariants.Any())
             {
-                documentFolderGuid = new Guid(documentFolderId);
+                return View("~/Views/Listings/DocumentListerVariant.cshtml", viewModel);
             }
-            catch
+            else
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest, "Invalid Document Folder ID!");
-            }
+                viewModel.Years = new List<string>();
+                var years = viewModel.Data.DocumentVariants.GroupBy(x => x.Date).OrderByDescending(x => x.Key);
+                viewModel.FirstYear = years.FirstOrDefault().Key.ToString("yyyy");
+                viewModel.DocumentsByYears = new List<DocumentVariantYears>();
+                DocumentVariantYears tmpDocumentVariantYear;
+                foreach (var year in years)
+                {
+                    tmpDocumentVariantYear = new DocumentVariantYears();
+                    tmpDocumentVariantYear.Year = year.Key.ToString("yyyy");
+                    viewModel.Years.Add(tmpDocumentVariantYear.Year);
+                    tmpDocumentVariantYear.Documents = new List<IDocumentVariant>();
 
-            var documentLister = _mvcContext.SitecoreService.GetItem<IDocumentLister>(documentFolderGuid);
-            var documentsResponse = new DocumentsResponse();
-            if (documentLister.DocumentList != null && documentLister.DocumentList.Any())
-            {
-                documentsResponse.SearchResults = documentLister.DocumentList.Select(
-                    x => new DocumentModel
+                    foreach (var document in year) 
                     {
-                        Title = x.DocumentName,
-                        DocumentLink = x.DocumentLink?.Url,
-                        DocumentLinkText = x.DocumentLink?.Text,
-                        DocumentPageLink = x.PageLink?.Url,
-                        DocumentId = x.Id,
-                        DocumentVideoLink = x.VideoLink?.Url
-                    });
+                        tmpDocumentVariantYear.Documents.Add(document);
+                    }
 
-                if (sortOrder == "ASC")
-                {
-                    documentsResponse.SearchResults = documentsResponse.SearchResults.OrderBy(x => x.Title);
-                }
-                else
-                {
-                    documentsResponse.SearchResults = documentsResponse.SearchResults.OrderByDescending(x => x.Title);
+                    viewModel.DocumentsByYears.Add(tmpDocumentVariantYear);
                 }
 
-                documentsResponse.SearchResults = documentsResponse.SearchResults.Skip((page - 1) * resultsPerPage).Take(resultsPerPage);
+                return View("~/Views/Listings/DocumentListerVariant.cshtml", viewModel);
             }
-
-            if (documentsResponse.SearchResults == null || !documentsResponse.SearchResults.Any())
-            {
-                return new HttpNotFoundResult();
-            }
-
-            documentsResponse.TotalResults = documentsResponse.SearchResults.Count();
-            documentsResponse.StatusCode = 200;
-
-            return new JsonCamelCaseResult(documentsResponse, JsonRequestBehavior.AllowGet);
         }
 
         [HttpPost]
