@@ -15,10 +15,10 @@
         string Scale { get; set; }
 
         [SitecoreField(Constants.PerformanceCharts.Range_FieldId)]
-        string Range { get; set; }
+        int Range { get; set; }
 
         [SitecoreField(Constants.PerformanceCharts.MaxRange_FieldId)]
-        string MaxRange { get; set; }
+        int MaxRange { get; set; }
 
         [SitecoreField(Constants.PerformanceCharts.Width_FieldId)]
         int Width { get; set; }

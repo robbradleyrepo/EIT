@@ -15,31 +15,21 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{6FF528FF-B3F7-4976-8478-AA18791AAFA2}"
-          p:after="r[@uid='{21A62FB1-9BA7-42F4-BBAE-893230139CB5}']"
-          s:ds="{25E812C8-5250-497E-8036-E110E66A5A5E}"
-          s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
-          s:par=""
-          s:ph="header" />
-        <r
-          uid="{80B5F5E0-79D0-4D46-8ACA-C1641F5BDFC1}"
-          p:after="r[@uid='{6FF528FF-B3F7-4976-8478-AA18791AAFA2}']"
-          s:ds="{E3741480-1B17-43E1-9713-4B0BF69AB3F1}"
-          s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
-          s:par=""
-          s:ph="main" />
+          uid="{F100020C-98C6-4D33-BCCE-6C46079A6D08}">
+          <p:d />
+        </r>
         <r
           uid="{06CF49AC-6A1F-45FF-A9F1-9F037B6D8051}"
-          p:after="r[@uid='{80B5F5E0-79D0-4D46-8ACA-C1641F5BDFC1}']"
+          p:after="r[@uid='{30A0A4C8-974F-4822-9DCB-DE14881E0400}']"
           s:ds="{6D90C521-08F8-480E-9EFF-1718FB085BEB}"
           s:id="{3B73D504-B273-4264-A6E0-156B60F97119}"
           s:par=""
           s:ph="main" />
         <r
-          uid="{A99840D1-7422-4CFC-B584-F65EC2F3E7CA}"
-          p:after="r[@uid='{06CF49AC-6A1F-45FF-A9F1-9F037B6D8051}']"
-          s:ds="{741A1008-03B9-48E8-B0A6-70A25CC9BD3B}"
-          s:id="{A811D2B0-D08D-4991-A9DD-6D9FA5799CBD}"
+          uid="{694F2972-D0D4-4927-9CF8-912AEC04D51F}"
+          p:after="*[1=2]"
+          s:ds="{B98610F0-B651-43EA-A7C6-90331023B931}"
+          s:id="{EAF00D3A-180F-4537-A2A4-F3CBEDFDEEF7}"
           s:par=""
           s:ph="main" />
       </d>

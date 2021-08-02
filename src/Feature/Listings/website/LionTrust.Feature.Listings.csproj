@@ -94,7 +94,6 @@
     <Content Include="Views\Listings\_PerformanceChart.cshtml" />
     <Content Include="Views\Listings\DocumentListerVariant.cshtml" />
     <Content Include="Views\Listings\MediaGallery.cshtml" />
-    <Content Include="Views\Listings\DividendChart.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -133,7 +132,6 @@
     <Compile Include="Models\IAccordionRowModel.cs" />
     <Compile Include="Models\PerformanceCharts\IChartColumn.cs" />
     <Compile Include="Models\PerformanceCharts\IChartColumnValue.cs" />
-    <Compile Include="Models\IDividendChart.cs" />
     <Compile Include="Models\IDocumentLister.cs" />
     <Compile Include="Models\IDocumentVariant.cs" />
     <Compile Include="Models\IDocumentListerVariants.cs" />

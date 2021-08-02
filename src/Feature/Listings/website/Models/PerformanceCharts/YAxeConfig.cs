@@ -3,7 +3,7 @@
     public class YAxeConfig
     {
         public string Scale { get; set; }
-        public int Range { get; set; }
+        public int Ranges { get; set; }
         public int MaxRange { get; set; }
     }
 }
