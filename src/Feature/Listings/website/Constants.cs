@@ -44,7 +44,7 @@
 
             public const string LinkGoal_FieldID = "{BB76C1D8-044A-4813-B4DE-E36D21085304}";
             public const string LinkGoal_FieldName = "ScrollCard_LinkGoal";
-        }    
+        }
 
         public static class Defaults
         {
@@ -73,7 +73,7 @@
             public const string AZText_FieldID = "{AAE23341-C861-4FBC-B0AB-16EA97A7FFC7}";
             public const string ZAText_FieldID = "{D3733E07-651D-4602-A5E6-9EA7953199BC}";
             public const string ViewPageText_FieldID = "{FEA256FA-27B1-46E9-935C-69BF920571A5}";
-            public const string WatchVideoText_FieldID = "{40FD447E-6459-4EE2-B86D-DE9AB7008604}";           
+            public const string WatchVideoText_FieldID = "{40FD447E-6459-4EE2-B86D-DE9AB7008604}";
             public const string NextText_FieldID = "{EB373C6D-B8F8-4E56-B711-F574E2FAB67F}";
             public const string PreviousText_FieldID = "{EA027445-01E2-488B-A94C-A2FBF460972A}";
             public const string DownloadFileLabel_FieldID = "{58E70FCF-1799-4A4B-8DA7-EF4EEDAA07A4}";
@@ -107,6 +107,7 @@
         {
             public const string DocumentApiRoute_SettingName = "Feature.Listings.DocumentsApiRoute";
             public const string GenericListingApiRoute_SettingName = "Feature.Listings.GenericListingApiRoute";
+            public const string MediGalleryApiRoute_SettingName = "Feature.Listings.MediaGalleryApiRoute";
         }
 
         public static class DocumentListerVariant
@@ -123,8 +124,28 @@
             public const string PressReleaseDocument_FieldID = "{F09637BD-1F1B-4590-8D0C-DA6F9B52155C}";
             public const string ReportDocument_FieldID = "{F4DF3EE6-5A99-4795-A7FB-E1DC960DAAAD}";
             public const string PresentationLink_FieldID = "{791F04C8-C42D-49F9-9EEA-B3E68EC99E5E}";
-            public const string Date_FieldID = "{17789FCD-D4EE-4FBF-983B-89AACFFF3B82}";
-
+            public const string Date_FieldID = "{17789FCD-D4EE-4FBF-983B-89AACFFF3B82}";            
         }
+
+        public static class MediaItem
+        {
+            public const string HeadshotImage_FieldId = "{C9550910-8553-4B8E-B381-3FADF7B58D37}";
+            public const string FullBodyImage_FieldId = "{A3CC90AF-CF8B-4BE1-BDC9-0C6CC77C1BD1}";
+            public const string Description_FieldId = "{156DF9F6-B34D-4F08-8A46-CE1F2A8EC6C2}";
+            public const string Categories_FieldId = "{26B1D6BA-647A-4951-9AD7-CD169C1D8685}";
+        }
+
+        public static class MediaLister 
+        {
+            public const string SearchByKeywordLabel_FieldId = "{D8AA5782-4853-4F54-8E39-826F1137145D}";
+            public const string FilterByCategoryLabel_FieldId = "{39D797A8-CDA0-49AD-BDF0-6F6A31B0FB17}";
+            public const string DownloadSelectedLabel_FieldId = "{F3579F0A-A68F-49D5-85E0-F13176200FC9}";
+            public const string SelectAllLabel_FieldId = "{8A8B5A57-B1B2-4C91-AE64-C94EA37A58BB}";
+            public const string SelectLabel_FieldId = "{D4A05A85-C36E-4CDE-8875-D1B96D38920F}";
+            public const string HeadshotLabel_FieldId = "{CD510600-285E-47FC-847B-B33785EFD904}";
+            public const string FullBodyLabel_FieldId = "{D1B479B5-1FDB-46FD-A06D-61A0D0DEBE11}";
+            public const string FilterSource_FieldId = "{2A00B22E-F809-40A6-A53A-4818158A1DE9}";
+            public const string DownloadLabel_FieldId = "{A54E01C5-8988-446D-A04D-D439F461A2D3}";
+        }    
     }
 }

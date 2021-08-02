@@ -86,7 +86,7 @@
                 return;
             }
 
-            var files = DocumentHelper.GetMediaFilesById(downloadFileIds, _mvcContext);
+            var files = DocumentHelper.GetDocumentFilesById(downloadFileIds, _mvcContext);
             if (files.Any())
             {
                 DocumentHelper.TriggerGoalsForDocumentDownload(downloadFileIds, _mvcContext);
