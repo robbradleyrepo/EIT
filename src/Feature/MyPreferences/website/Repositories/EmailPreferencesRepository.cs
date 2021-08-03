@@ -28,10 +28,10 @@
             return sfEntityUtility.SaveEmailPreferences(emailPreferences);
         }
 
-        public RegisterdUserWithEmailDetails SaveNonProfUserAsSFLead(NonProfessionalUser nonProfessionalUser, IEditEmailPrefTemplate emailTemplate, string preferencesUrl)
+        public RegisterdUserWithEmailDetails SaveNonProfUserAsSFLead(NonProfessionalUser nonProfessionalUser, IEditEmailPrefTemplate emailTemplate, string preferencesUrl, string fundDashboardUrl)
         {
             var sfEntityUtility = new SFEntityUtility();
-            var savedUserEmailDetails = sfEntityUtility.SaveNonProfUserAsSFLead(nonProfessionalUser, preferencesUrl);
+            var savedUserEmailDetails = sfEntityUtility.SaveNonProfUserAsSFLead(nonProfessionalUser, preferencesUrl, fundDashboardUrl);
             if (savedUserEmailDetails != null)
             {
                 if (savedUserEmailDetails.IsUserExists)
@@ -61,10 +61,10 @@
             return null;
         }
 
-        public RegisterdUserWithEmailDetails SaveProfUserAsSFContact(ProfessionalUser professionalUser, IEditEmailPrefTemplate emailTemplate, string preferencesUrl)
+        public RegisterdUserWithEmailDetails SaveProfUserAsSFContact(ProfessionalUser professionalUser, IEditEmailPrefTemplate emailTemplate, string preferencesUrl, string fundDashboardUrl)
         {
             var sfEntityUtility = new SFEntityUtility();
-            var savedUserEmailDetails = sfEntityUtility.SaveProfUserAsSFContact(professionalUser, preferencesUrl);
+            var savedUserEmailDetails = sfEntityUtility.SaveProfUserAsSFContact(professionalUser, preferencesUrl, fundDashboardUrl);
             if (savedUserEmailDetails != null)
             {
                 if (savedUserEmailDetails.IsUserExists)
@@ -75,6 +75,7 @@
                 var emailMessageBody = emailTemplate.Message;
                 emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.FullNameToken, savedUserEmailDetails.FullName);
                 emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.EditPrefLinkToken, savedUserEmailDetails.EditEmailPrefLink);
+                emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.FundDashboardLinkToken, savedUserEmailDetails.FundDashboardLink);
                 emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.SiteURLToken, string.Format("https://{0}", HttpContext.Current.Request.Url.Host));
 
                 var returnObj = new RegisterdUserWithEmailDetails
@@ -109,10 +110,10 @@
             return countryListViewModel;
         }
 
-        public ResendEmailPrefEmailDetails GetEmailDetailsForResendEmailPrefLink(string email, bool isContact, IEditEmailPrefTemplate emailTemplate, string preferencesUrl)
+        public ResendEmailPrefEmailDetails GetEmailDetailsForResendEmailPrefLink(string email, bool isContact, IEditEmailPrefTemplate emailTemplate, string preferencesUrl, string fundDashboardUrl)
         {
             var sfEntityUtility = new SFEntityUtility();
-            var userDetails = sfEntityUtility.GetEmailDetailsForResendEmailPrefLink(email, isContact, preferencesUrl);
+            var userDetails = sfEntityUtility.GetEmailDetailsForResendEmailPrefLink(email, isContact, preferencesUrl, fundDashboardUrl);
 
             if (userDetails != null)
             {
@@ -121,6 +122,7 @@
                 var emailMessageBody = emailTemplate.Message;
                 emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.FullNameToken, userDetails.FullName);
                 emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.EditPrefLinkToken, userDetails.EditEmailPrefLink);
+                emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.FundDashboardLinkToken, userDetails.FundDashboardLink);
                 emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.SiteURLToken, string.Format("https://{0}", HttpContext.Current.Request.Url.Host));
 
                 var returnObj = new ResendEmailPrefEmailDetails

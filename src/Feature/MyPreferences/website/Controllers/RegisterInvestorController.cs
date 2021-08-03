@@ -6,7 +6,6 @@
     using LionTrust.Feature.MyPreferences.Services;
     using LionTrust.Foundation.Contact.Managers;
     using LionTrust.Foundation.Contact.Models;
-    using LionTrust.Foundation.Contact.Services;
     using LionTrust.Foundation.Onboarding.Helpers;
     using LionTrust.Foundation.Onboarding.Models;
     using Sitecore.Abstractions;
@@ -30,7 +29,6 @@
             _emailPreferencesService = new EmailPreferencesService(editEmailPreferencesRepository, mailManager);
         }
 
-        [HttpGet]
         public ActionResult RegisterInvestor(Errors error = Errors.None, string email = "")
         {
             var data = _context.GetDataSourceItem<IRegisterInvestor>();
@@ -88,7 +86,7 @@
                             Company = company
                         };
 
-                        var savedUser = _emailPreferencesService.SaveNonProfUserAsSFLead(nonProfUserViewModel, emailTemplate, data.EditPreferencesPage.Url);
+                        var savedUser = _emailPreferencesService.SaveNonProfUserAsSFLead(nonProfUserViewModel, emailTemplate, data.EditPreferencesPage.Url, data.FundDashboardyPage.Url);
 
                         if (savedUser != null)
                         {
@@ -110,7 +108,7 @@
                             Organisation = sfOrganisationId
                         };
 
-                        var savedUser = _emailPreferencesService.SaveProfUserAsSFContact(professionalUser, emailTemplate, data.EditPreferencesPage.Url);
+                        var savedUser = _emailPreferencesService.SaveProfUserAsSFContact(professionalUser, emailTemplate, data.EditPreferencesPage.Url, data.FundDashboardyPage.Url);
 
                         if (savedUser != null)
                         {
@@ -154,7 +152,7 @@
 
             if (!string.IsNullOrEmpty(email))
             {
-                isSuccess = _emailPreferencesService.ResendEditEmailPrefLink(email, isContact, data.ResendEditPreferencesEmailTemplate, data.EditPreferencesPage.Url);
+                isSuccess = _emailPreferencesService.ResendEditEmailPrefLink(email, isContact, data.ResendEditPreferencesEmailTemplate, data.EditPreferencesPage.Url, data.FundDashboardyPage.Url);
             }
 
             if (isSuccess)

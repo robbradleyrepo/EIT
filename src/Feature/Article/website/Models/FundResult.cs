@@ -34,5 +34,7 @@
         public string FundTeamName { get; set; }
 
         public string FundUpdateUrl { get; set; }
+
+        public string CitiCode { get; set; }
     }
 }

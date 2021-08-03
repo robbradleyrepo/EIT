@@ -33,5 +33,7 @@
 
         string FundTeamName { get; set; }
 
+        string CitiCode { get; set; }
+
     }
 }

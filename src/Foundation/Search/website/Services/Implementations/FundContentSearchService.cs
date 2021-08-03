@@ -76,28 +76,28 @@
                 fundFilter = fundFilter.Or(regionPredicate);
             }
 
-            if (fundSearchRequest.Funds != null && fundSearchRequest.Funds.Any())
+            if (fundSearchRequest.CitiCodes != null && fundSearchRequest.CitiCodes.Any())
             {
                 var fundsPredicate = PredicateBuilder.False<FundSearchResultItem>();
                 fundsPredicate = fundSearchRequest
-                                            .Funds
+                                            .CitiCodes
                                                     .Aggregate(fundsPredicate,
-                                                                    (current, fund)
+                                                                    (current, citiCode)
                                                                                 => current
-                                                                                     .Or(item => item.ItemId.ToString().Contains(fund)));
+                                                                                     .Or(item => item.CitiCode.Contains(citiCode)));
 
                 fundFilter = fundFilter.Or(fundsPredicate);
             }
 
-            if (fundSearchRequest.ExcludeFunds != null && fundSearchRequest.ExcludeFunds.Any())
+            if (fundSearchRequest.ExcludeCitiCodes != null && fundSearchRequest.ExcludeCitiCodes.Any())
             {
                 var excludeFundsPredicate = PredicateBuilder.False<FundSearchResultItem>();
                 excludeFundsPredicate = fundSearchRequest
-                                            .ExcludeFunds
+                                            .ExcludeCitiCodes
                                                     .Aggregate(excludeFundsPredicate,
-                                                                    (current, fund)
+                                                                    (current, citiCode)
                                                                                 => current
-                                                                                     .And(item => !item.ItemId.ToString().Contains(fund)));
+                                                                                     .And(item => !item.CitiCode.Contains(citiCode)));
 
                 fundFilter = fundFilter.Or(excludeFundsPredicate);
             }

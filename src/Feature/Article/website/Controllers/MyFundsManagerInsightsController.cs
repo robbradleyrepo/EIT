@@ -11,6 +11,7 @@
     using LionTrust.Foundation.Search.Services.Interfaces;
     using Sitecore.Analytics;
     using Sitecore.ContentSearch.Linq;
+    using Sitecore.Data;
     using Sitecore.Mvc.Controllers;
     using System;
     using System.Collections.Generic;
@@ -56,10 +57,10 @@
                 //Get the funds that are followed.
                 var fundSearchRequest = new FundSearchRequest
                 {
-                    Funds = contactData.SalesforceFundIds
+                    DatabaseName = _databaseName,
+                    CitiCodes = contactData.SalesforceFundIds
                 };
 
-                fundSearchRequest.Funds = contactData.SalesforceFundIds;
                 var fundSearchResults = _fundContentSearchService.GetFunds(fundSearchRequest);
 
                 if (fundSearchResults == null || fundSearchResults.TotalResults < 1)
@@ -68,12 +69,15 @@
                 }
                 var followedFunds = MapFundResultHits(_fundContentSearchService.GetFunds(fundSearchRequest)?.SearchResults);
 
+                //Clear the funds from the search request.
+                fundSearchRequest.CitiCodes = null;
+
                 //search based on these funds.
                 fundSearchRequest.FundManagers = followedFunds.SelectMany(f => f.FundManagers).Distinct();
                 fundSearchRequest.FundTeams = followedFunds.Select(f => f.FundTeam);
                 fundSearchRequest.FundRanges = followedFunds.SelectMany(f => f.FundRange).Distinct();
                 fundSearchRequest.FundRegions = followedFunds.Select(f => f.FundRegion);
-                fundSearchRequest.ExcludeFunds = followedFunds.Select(f => f.FundId.ToString());
+                fundSearchRequest.ExcludeCitiCodes = followedFunds.Select(f => f.CitiCode);
 
                 articles = new ArticleRepository(_contentSearchService, _context).Map(contactData.SalesforceFundIds.Select(f => new Guid(f)), null, followedFunds.Select(f => new Guid(f.FundTeam))?.Distinct(), followedFunds.SelectMany(f => f.FundManagers.Select(fm => new Guid(fm)))?.Distinct(), null, _databaseName);
 
@@ -103,7 +107,8 @@
                 FundRange = x.Document.FundRanges,
                 FundRegion = x.Document.FundRegion,
                 FundTeam = x.Document.FundTeam,
-                FundTeamName = x.Document.FundTeamName
+                FundTeamName = x.Document.FundTeamName,
+                CitiCode = x.Document.CitiCode
             });
         }
     }

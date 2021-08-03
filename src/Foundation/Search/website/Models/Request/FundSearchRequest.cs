@@ -14,9 +14,9 @@
 
         public IEnumerable<string> FundRegions { get; set; }
 
-        public IEnumerable<string> Funds { get; set; }
+        public IEnumerable<string> CitiCodes { get; set; }
 
-        public IEnumerable<string> ExcludeFunds { get; set; }
+        public IEnumerable<string> ExcludeCitiCodes { get; set; }
 
         public string SearchTerm { get; set; }
 

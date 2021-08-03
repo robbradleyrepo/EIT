@@ -7,11 +7,11 @@
     using System.Collections.Generic;
     using System.Linq;
 
-    internal class PersonalizedContentPageRepository : IPersonalizedContentPageRepository
+    public class PersonalizedContentPageRepository : IPersonalizedContentPageRepository
     {
         private readonly ISitecoreContactUtility _sitecoreContactUtility;
 
-        internal PersonalizedContentPageRepository(ISitecoreContactUtility sitecoreContactUtility) 
+        public PersonalizedContentPageRepository(ISitecoreContactUtility sitecoreContactUtility) 
         {
             _sitecoreContactUtility = sitecoreContactUtility;
         }

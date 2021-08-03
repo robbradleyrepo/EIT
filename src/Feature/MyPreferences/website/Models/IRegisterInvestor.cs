@@ -35,8 +35,10 @@
         [SitecoreField(Constants.RegisterInvestor.ConfirmationPage_FieldId)]
         IGlassBase ConfirmationPage { get; set; }
 
-        [SitecoreField(Constants.RegisterInvestor.PreferencesPage_FieldId)]
+        [SitecoreField(Constants.RegisterInvestor.EditPreferencesPage_FieldId)]
         IGlassBase EditPreferencesPage { get; set; }
+        [SitecoreField(Constants.RegisterInvestor.FundDashboardPage_FieldId)]
+        IGlassBase FundDashboardyPage { get; set; }
 
         [SitecoreField(Constants.RegisterInvestor.UKEmailTemplate_FieldId)]
         IEditEmailPrefTemplate UKEmailTemplate { get; set; }

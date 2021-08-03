@@ -8,6 +8,7 @@
     using LionTrust.Foundation.Core.ActionResults;  
     using Sitecore.Mvc.Controllers;
     using System.Linq;
+    using Sitecore.Data;
 
     public class SearchAPIController : SitecoreController
     {
@@ -163,8 +164,8 @@
                 return new HttpStatusCodeResult(System.Net.HttpStatusCode.NotFound);
             }
 
-            var funds = string.Join("|", contactFacetData.SalesforceFundIds);
-            var response = this._fundListingDataManager.GetMyFundListingResponse(database, fundTeams, funds, sortOrder, page);
+            var citiCodes = contactFacetData.SalesforceFundIds;
+            var response = this._fundListingDataManager.GetMyFundListingResponse(database, fundTeams, citiCodes, null, sortOrder, page);
 
             if (response.StatusCode != 200)
             {

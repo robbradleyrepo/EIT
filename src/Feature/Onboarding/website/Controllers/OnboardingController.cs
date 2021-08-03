@@ -183,7 +183,7 @@
                 _log.Error("invalid data submitted", this);
             }
 
-            return Redirect(Request.RawUrl);
+            return Redirect(Request.Url.ToString());
         }
 
         private bool IsOnboardingConfigured(IHome data)

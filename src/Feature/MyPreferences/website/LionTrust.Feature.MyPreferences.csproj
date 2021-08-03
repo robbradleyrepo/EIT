@@ -102,6 +102,7 @@
     <Compile Include="Controllers\EditEmailPreferencesController.cs" />
     <Compile Include="Controllers\RegisterInvestorController.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
+    <Compile Include="Models\IEditEmailPreferences.cs" />
     <Compile Include="Models\EditEmailPreferencesViewModel.cs" />
     <Compile Include="Models\IEditEmailPrefTemplate.cs" />
     <Compile Include="Models\IRegisterInvestor.cs" />
