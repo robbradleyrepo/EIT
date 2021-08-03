@@ -1,0 +1,35 @@
+﻿---
+ID: "ab9a4655-a282-4eb2-a698-6ce81aff6525"
+Parent: "e8a95ba8-3e15-4486-936a-d41ebd1284a5"
+Template: "e8a95ba8-3e15-4486-936a-d41ebd1284a5"
+Path: /sitecore/templates/Project/LionTrust/Content Types/People Info Banner/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{DC146C0F-9D5F-416D-BB3E-903F15AA0B7A}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210802T191450Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "80febfb6-5701-4cdb-8e9c-00de7bac4ae4"
+      Hint: PeopleInfoBanner_BackgroundImage
+      Value: |
+        <image mediaid="{CBC372C0-D0D1-412C-84AC-6F62398B0F78}" />
+    - ID: "a3170887-8a89-4c9a-b628-e1870512c8c0"
+      Hint: PeopleInfoBanner_MenCountIcon
+      Value: |
+        <image mediaid="{20C85D1D-48E3-4E4E-B40A-EEE8D0452AC8}" />
+    - ID: "aac8fe4f-62a8-47f8-8ab4-18fd43915b9d"
+      Hint: PeopleInfoBanner_WomenCountIcon
+      Value: |
+        <image mediaid="{259B790A-7A12-427E-86BB-F8AA531E3E1A}" />
