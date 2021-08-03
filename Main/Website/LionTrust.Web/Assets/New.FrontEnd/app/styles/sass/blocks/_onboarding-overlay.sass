@@ -11,7 +11,7 @@
     flex-direction: column
     display: none
     &::-webkit-scrollbar
-            width: 4px
+        width: 4px
     &::-webkit-scrollbar-thumb
         background-color: trasparent
         border-radius: 5px
@@ -62,6 +62,22 @@
         text-align: center
         margin-top: 34px
         margin-bottom: 48px
+        max-width: 500px
+        width: 100%
+        margin-left: auto
+        margin-right: auto
+        .onboarding-overlay__set-step
+            margin: 8px
+        &.three-buttons
+            width: auto
+            .onboarding-overlay__set-step
+                display: block
+                margin: 16px auto
+                @include breakpoint(tablet, up)
+                    display: inline-block
+                    margin-right: 1rem
+                    &:last-child
+                        margin-right: 0
     &__text
         @extend .onboarding-overlay__hint
         margin-bottom: 34px
