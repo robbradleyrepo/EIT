@@ -74,11 +74,13 @@ export default () => {
 	  countryName = e.target.dataset.nameCountry;
 
 	 if(e.target.dataset.isoCountry != "GB"){
+     $('.onboarding-overlay__btns').addClass('three-buttons')
 		 $('.btn.private-investor').hide();
 		 $('.onboarding-overlay__title.uk-title').hide();
 		 $('.onboarding-overlay__title.non-uk-title').show();
 	 }
 	 else{
+     $('.onboarding-overlay__btns').removeClass('three-buttons')
 		 $('.btn.private-investor').show();
 		 $('.onboarding-overlay__title.uk-title').show();
 		 $('.onboarding-overlay__title.non-uk-title').hide();
