@@ -6,30 +6,23 @@ import {
   baseDownloadChild,
   baseDownloadParent,
 } from "./listFilter/mixins/baseDownload";
-const data = [
-  {
-    headshotimage: {
-      url: "../images/components/media-gallery/christin-hume.png",
-      id: "b7a02424-5595-475a-b4a1-cfa582f453f9",
-    },
-    fullbodyimage: null,
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.",
-    id: "e2a024e4-5595-475a-b4a1-cfa532f453f9",
-  },
-  {
-    headshotimage: {
-      url: "../images/components/media-gallery/christin-hume2.png",
-      id: "b7a024e4-5593-475a-b4a1-cfa582f453f9",
-    },
-    fullbodyimage: {
-      url: "../images/components/media-gallery/christin-hume.png",
-      id: "4e17f047-ca05-4491-a0f5-1f87a7f1056a",
-    },
-    description: "John Smith",
-    id: "e2a024e1-5595-475a-b2a1-cfa532f453f9",
-  },
-];
+
+const rootDom = document.getElementById("gallery-app");
+
+const mediaGalleryId = rootDom?.dataset?.galleryid;
+let host = rootDom?.dataset?.host;
+
+const location = "https://cm-liontrust-it.sagittarius.agency/";
+let root = "";
+if (
+  window.location.hostname === "localhost" ||
+  window.location.hostname === "127.0.0.1"
+) {
+  host = location + host;
+  root = location;
+} else {
+  host = "/" + host;
+}
 
 const facets = [
   {
@@ -84,8 +77,8 @@ export default () => {
       getImagesIds() {
         if (this.ids.length) return this.ids;
         const arr = [];
-        arr.push(this.element.headshotimage.id);
-        if (this.element.fullbodyimage) arr.push(this.element.fullbodyimage.id);
+        arr.push(this.element.headShotImage.id);
+        if (this.element.fullBodyImage) arr.push(this.element.fullBodyImage.id);
         return arr;
       },
     },
@@ -96,13 +89,12 @@ export default () => {
         if (index !== -1) this.ids.splice(index, 1);
         else this.ids.push(id);
       },
-      download() {
-        // API.downloadDocument('', {downloadFileIds: this.getImagesIds})
+      downloadDocument() {
+        API.downloadDocument(`${host}/DownloadMediaImages`, {
+          downloadMediaIds: this.getImagesIds,
+        }, 'images');
       },
-    },
-    created() {
-      console.log("this.element", this.element);
-    },
+    } 
   });
 
   new Vue({
@@ -113,7 +105,7 @@ export default () => {
       return {
         searchText: "",
         loading: false,
-        items: data,
+        items: [],
         facets: facets,
         filter: "",
       };
@@ -136,19 +128,15 @@ export default () => {
         this.getData();
       },
       downloadDocumentMultiple() {
-        console.log("download");
-        // API.downloadDocument('', {downloadFileIds: this.selectedDocumentIds})
+        API.downloadDocument(`${host}/DownloadMediaImages`, {
+          downloadMediaIds: this.selectedDocumentIds,
+        }, 'images');
       },
       getData() {
-        console.log("getData");
         this.loading = true;
-        setTimeout(() => {
-          this.loading = false
-        }, 1500);
-        return;
-        this.loading = true;
-        let hostUrl = "";
-        $.get(hostUrl + this.getQuery)
+        $.get(
+          `${host}/GetmediaItems?mediaGalleryId=${mediaGalleryId}${this.getQuery}`
+        )
           .done((response) => {
             const { searchResults } = response;
             this.items = searchResults;
@@ -162,7 +150,7 @@ export default () => {
     },
     mounted() {
       this.getData();
-    }
+    },
   });
 
   // init fancybox image carousel

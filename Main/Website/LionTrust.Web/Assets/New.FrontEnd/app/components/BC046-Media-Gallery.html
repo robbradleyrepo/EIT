@@ -1,4 +1,4 @@
-<section id="gallery-app" class="gallery-app">
+<section id="gallery-app" class="gallery-app" data-host="MediaGalleryApi" data-galleryid="A9221E1F-2E20-4F24-872B-FFEBBFE9805A">
     <div class="gallery-filter">
         <div class="container">
             <div class="row">
@@ -48,21 +48,21 @@
                         <div class="media-item">
                             <div class="media-item__body">
                                 <div class="media-item__gallery">
-                                    <a :href="element.headshotimage.url" :data-caption="element.description"
+                                    <a :href="element.headShotImage.url" :data-caption="element.description"
                                         class="media-item-image-gallary" :data-fancybox="'images' + index">
-                                        <img class="media-item__image" :src="element.headshotimage.url" />
+                                        <img class="media-item__image" :src="element.headShotImage.url" />
                                     </a>
-                                    <div v-if="element.fullbodyimage" style="display: none;">
+                                    <div v-if="element.fullBodyImage" style="display: none;">
                                         <a :data-caption="element.description" class="media-item-image-gallary"
-                                        :href="element.fullbodyimage.url" :data-fancybox="'images' + index">
-                                            <img class="media-item__image" :src="element.fullbodyimage.url" />
+                                        :href="element.fullBodyImage.url" :data-fancybox="'images' + index">
+                                            <img class="media-item__image" :src="element.fullBodyImage.url" />
                                         </a>
                                     </div>
                                 </div>
                                 <div class="media-item__text">
                                     <span>{{element.description}}</span>
-                                    <div class="media-item__checkboxes" v-if="element.fullbodyimage">
-                                        <select-field inline-template @on-check="selectDocument(element.headshotimage.id)">
+                                    <div class="media-item__checkboxes" v-if="element.fullBodyImage">
+                                        <select-field inline-template @on-check="selectDocument(element.headShotImage.id)">
                                             <label class="checkbox checkbox-sm">
                                                 <input :checked="selected" @change="onChange"  type="checkbox"
                                                     class="checkbox__input">
@@ -70,7 +70,7 @@
                                                 <div class="checkbox__title">Headshot</div>
                                             </label>
                                         </select-field>
-                                        <select-field inline-template @on-check="selectDocument(element.fullbodyimage.id)">
+                                        <select-field inline-template @on-check="selectDocument(element.fullBodyImage.id)">
                                             <label class="checkbox checkbox-sm">
                                                 <input :checked="selected" @change="onChange" type="checkbox"
                                                     class="checkbox__input">
@@ -82,7 +82,7 @@
                                 </div>
                             </div>
                             <div class="media-item__footer">
-                                <select-field inline-template @on-check="selectDocument(element.headshotimage.id)" v-if="!element.fullbodyimage">
+                                <select-field inline-template @on-check="selectDocument(element.headShotImage.id)" v-if="!element.fullBodyImage">
                                     <label class="checkbox checkbox-sm">
                                         <input :checked="selected" @change="onChange" type="checkbox"
                                             class="checkbox__input">
@@ -91,8 +91,10 @@
                                     </label>
                                 </select-field>
                                 
-                                <a href="#" @click.prevent="download" class="link-styles"><i class="icon-download"></i>
-                                    Download</a>
+                                <a href="#" @click.prevent="downloadDocument" @click.prevent="download" class="link-styles">
+                                    <i class="icon-download"></i>
+                                    Download
+                                </a>
                             </div>                           
                         </div>
                     </div>
