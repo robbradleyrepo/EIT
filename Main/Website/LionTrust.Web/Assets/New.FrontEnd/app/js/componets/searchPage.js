@@ -97,7 +97,6 @@ export default () => {
             this.loading = false;
             this.results = [];
             this.amountResults = 0;
-            this.init = false;
             console.error("Data is not being retrieved", e)
           });
       },
