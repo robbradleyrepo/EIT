@@ -1,0 +1,35 @@
+﻿---
+ID: "a78cd286-e049-4aa5-ae1a-2371650c6538"
+Parent: "e395a31b-22c4-493a-a8ad-531ec47298e5"
+Template: "e395a31b-22c4-493a-a8ad-531ec47298e5"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Document Lister Variant/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{478760AF-46C6-45B4-A7EE-B8F2BA4F0C3E}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210729T062428Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "898294d2-a8e4-4570-88ca-c415ad0f5d05"
+      Hint: DocumentListerVariant_PresentationLabel
+      Value: View Presentation
+    - ID: "b64882eb-08c1-4df0-85db-00712ce4a076"
+      Hint: DocumentListerVariant_SelectYearLabel
+      Value: "Select a year to view:"
+    - ID: "d0f4d54f-25a6-4432-8872-488a881d30b4"
+      Hint: DocumentListerVariant_PressReleaseLabel
+      Value: Read Press Release
+    - ID: "d440a386-e392-4561-926f-bf6b80b7beb1"
+      Hint: DocumentListerVariant_ReportLabel
+      Value: Read Report

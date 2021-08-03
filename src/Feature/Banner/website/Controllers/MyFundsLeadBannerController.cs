@@ -10,15 +10,15 @@
     public class MyFundsLeadBannerController : SitecoreController
     {
         private readonly IMvcContext _mvcContext;
-        private readonly IContactService _contactService;
+        private readonly IPersonalizedContentService _personalizedContentService;
 
-        public MyFundsLeadBannerController(IMvcContext context, IContactService contactService)
+        public MyFundsLeadBannerController(IMvcContext context, IPersonalizedContentService personalizedContentService)
         {
             _mvcContext = context;
-            _contactService = contactService;
+            _personalizedContentService = personalizedContentService;
         }
 
-        public ActionResult Render()
+        public ActionResult Render(string @ref)
         {
             var dataSource = _mvcContext.GetDataSourceItem<IMyFundsLeadBanner>();
 
@@ -27,7 +27,7 @@
                 return null;
             }
 
-            var contactData = _contactService.GetCurrentSitecoreContactFacetData(Tracker.Current.Contact.ContactId.ToString());
+            var contactData = _personalizedContentService.GetContactFacetData(@ref);
             var viewModel = new MyFundsLeadBannerViewModel(dataSource);
 
             if (!Sitecore.Context.PageMode.IsExperienceEditor && contactData == null)

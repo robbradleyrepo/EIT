@@ -1,7 +1,20 @@
-﻿namespace LionTrust.Foundation.Contact
+﻿using System;
+
+namespace LionTrust.Foundation.Contact
 {
     public static class Constants
     {
+        //Facet key name to store Salesforce fund ids in S4SInfo.Fields facet
+        public const string SFFundIdFacetKey = "SalesforceFundIds";
+        public const string SFRandomGuidFacetKey = "RandomGuid";
+        public const string SFLeadIdFacetKey = "S4SSalesforceLeadId";
+        public const string SFContactIdFacetKey = "S4SSalesforceContactId";
+        public const string SFOrgIdFacetKey = "S4SSalesforceOrgId";
+        public const string SFFirstNameFacetKey = "FirstName";
+        public const string SFLastNameFacetKey = "LastName";
+        public const string PrefixSalesforceContact = "003";
+        public const string PrefixSalesforceLead = "00Q";
+
         public const string SFProductEntityName = "Product__c";
         public const string SFFundPreferenceEntityName = "Fund_Preference__c";
         public const string SFContactEntityName = "Contact";
@@ -71,16 +84,16 @@
 
         public const string IdentifierSourceConfigName = "S4S.Analytics.IdentifierSource";
 
-        //Facet key name to store Salesforce fund ids in S4SInfo.Fields facet
-        public const string SFFundIdFacetKey = "SalesforceFundIds";
-        public const string SFFirstNameFacetKey = "FirstName";
-        public const string SFLastNameFacetKey = "LastName";
-        public const string SFRandomGuidFacetKey = "RandomGuid";
-        public const string SFLeadIdFacetKey = "S4SSalesforceLeadId";
-        public const string SFContactIdFacetKey = "S4SSalesforceContactId";
-        public const string SFOrgIdFacetKey = "S4SSalesforceOrgId";
-
-        public const string PrefixSalesforceContact = "003";
-        public const string PrefixSalesforceLead = "00Q";
+        public static class QueryStringNames
+        {
+            public static class EmailPreferencefParams
+            {
+                public static readonly string RefQueryStringKey = "ref";
+                public static readonly string EmailQueryStringKey = "email";
+                public static readonly string IsContactQueryStringKey = "iscontact";
+                public static readonly string ErrorQueryStringKey = "error";
+                public static readonly string DatasourceIdQueryStringKey = "dataSourceId";
+            }
+        }
     }
 }

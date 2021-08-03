@@ -45,8 +45,14 @@
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Helpers\OnboardingHelper.cs" />
+    <Compile Include="Models\IChooseCountry.cs" />
+    <Compile Include="Models\IChooseInvestorRole.cs" />
+    <Compile Include="Models\ICountry.cs" />
+    <Compile Include="Models\IHome.cs" />
     <Compile Include="Models\IOnboardingConfiguration.cs" />
     <Compile Include="Models\IProfileCard.cs" />
+    <Compile Include="Models\IRegion.cs" />
+    <Compile Include="Models\ITermsAndConditions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

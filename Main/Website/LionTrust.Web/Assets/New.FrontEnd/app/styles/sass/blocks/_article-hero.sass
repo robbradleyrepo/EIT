@@ -3,7 +3,10 @@
     margin-top: 30px
     @include breakpoint(desktop, up)
         text-align: left
-        margin-top: 80px
+        margin-top: 57px
+    &__title
+        @include breakpoint(desktop, up)
+            letter-spacing: 1.86px
     &__content
         margin-bottom: 20px
     &__text
@@ -12,6 +15,8 @@
         @include breakpoint(desktop, up)
             display: block
             margin-right: 15%
+
+header
 
 .hero-author-wrapper
     display: flex
@@ -65,19 +70,24 @@
             display: block
 
 .hero-author.hero-author_big
+    margin: 0
     @include breakpoint(desktop, up)
         display: block
         text-align: center
+        margin-bottom: 11px
     .hero-author__name
         @include breakpoint(desktop, up)
             justify-content: center
             margin: 11px 0 9px
             font-size: 15px
             line-height: 18px
+            letter-spacing: 3px
+            font-family: $font-family-bold
     .hero-author__img
         @include breakpoint(desktop, up)
             width: 60px
             height: 60px
+            margin-right: 0
     .hero-author__date
         @include font-size(18px)
         font-weight: 500
@@ -86,10 +96,14 @@
             text-align: center
 
 .topic-follow
-    margin-top: 1.6rem
+    margin-top: 1.4rem
     display: flex
     align-items: center
     justify-content: center
+    .follow-btn
+        margin-right: 1.8rem
+        &:last-child
+            margin-right: 0
 
 .follow-btn
     @include font-size(18px)
@@ -103,7 +117,7 @@
     display: flex
     justify-content: center
     font-size: 12px
-    margin-bottom: 30px
+    margin-bottom: 22px
     @include breakpoint(desktop, up)
         @include font-size(18px)
     &__link
@@ -113,14 +127,18 @@
         display: inline-block
         margin-right: 50px
         @include breakpoint(desktop, up)
-            margin-right: 31px
+            margin-right: 53px
         &:last-child
             margin-right: 0
         i
             margin-right: 10px
             @include font-size(20px)
             @include breakpoint(desktop, up)
-                @include font-size(25px)
+                margin-top: 6px
+                @include font-size(27px)
+        i.icon-share
+            @include breakpoint(desktop, up)
+                font-size: 23px
 
 header .article-links
     .article-links__link
@@ -152,4 +170,3 @@ main .article-links
                 margin-right: 60px
             &:last-child
                 margin-right: 0
-

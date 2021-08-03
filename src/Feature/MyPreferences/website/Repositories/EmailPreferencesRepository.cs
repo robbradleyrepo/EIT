@@ -1,0 +1,141 @@
+﻿namespace LionTrust.Feature.MyPreferences.Repositories
+{
+    using LionTrust.Foundation.Contact.Models;
+    using LionTrust.Feature.MyPreferences.Models;
+    using System;
+    using System.Web;
+    using LionTrust.Foundation.Contact.Services;
+
+    public class EmailPreferencesRepository : IEmailPreferencesRepository
+    {
+        private readonly IApplicationCacheRepository _applicationCacheRepository;
+        private const string SFContactCountryListCacheKey = "salesforce-contact-country-list";
+        private const string SFLeadCountryListCacheKey = "salesforce-lead-country-list";
+
+        public EmailPreferencesRepository(IApplicationCacheRepository applicationCacheRepository)
+        {
+            _applicationCacheRepository = applicationCacheRepository;
+        }
+        public EmailPreferences GetEmailPreferences(string sfContactId, string sfRandomGUID, bool isContact)
+        {
+            var sfEntityUtility = new SFEntityUtility();
+            return sfEntityUtility.GetSFEmailPreferences(sfContactId, sfRandomGUID, isContact);
+        }
+
+        public bool SaveEmailPreferneces(EmailPreferences emailPreferences)
+        {
+            var sfEntityUtility = new SFEntityUtility();
+            return sfEntityUtility.SaveEmailPreferences(emailPreferences);
+        }
+
+        public RegisterdUserWithEmailDetails SaveNonProfUserAsSFLead(NonProfessionalUser nonProfessionalUser, IEditEmailPrefTemplate emailTemplate, string preferencesUrl)
+        {
+            var sfEntityUtility = new SFEntityUtility();
+            var savedUserEmailDetails = sfEntityUtility.SaveNonProfUserAsSFLead(nonProfessionalUser, preferencesUrl);
+            if (savedUserEmailDetails != null)
+            {
+                if (savedUserEmailDetails.IsUserExists)
+                {
+                    return new RegisterdUserWithEmailDetails { IsUserExists = savedUserEmailDetails.IsUserExists };
+                }
+
+                //Generate email body
+                var emailMessageBody = emailTemplate.Message;
+                emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.FullNameToken, savedUserEmailDetails.FullName);
+                emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.EditPrefLinkToken, savedUserEmailDetails.EditEmailPrefLink);
+                emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.SiteURLToken, string.Format("https://{0}", HttpContext.Current.Request.Url.Host));
+
+                var returnObj = new RegisterdUserWithEmailDetails
+                {
+                    IsUserExists = savedUserEmailDetails.IsUserExists,
+                    FromAddress = emailTemplate.FromAddress,
+                    FromDisplyName = emailTemplate.FromDisplayName,
+                    ToAddresses = savedUserEmailDetails.EmailAddress,
+                    Subject = emailTemplate.Subject,
+                    Message = emailMessageBody
+                };
+
+                return returnObj;
+            }
+
+            return null;
+        }
+
+        public RegisterdUserWithEmailDetails SaveProfUserAsSFContact(ProfessionalUser professionalUser, IEditEmailPrefTemplate emailTemplate, string preferencesUrl)
+        {
+            var sfEntityUtility = new SFEntityUtility();
+            var savedUserEmailDetails = sfEntityUtility.SaveProfUserAsSFContact(professionalUser, preferencesUrl);
+            if (savedUserEmailDetails != null)
+            {
+                if (savedUserEmailDetails.IsUserExists)
+                {
+                    return new RegisterdUserWithEmailDetails { IsUserExists = savedUserEmailDetails.IsUserExists };
+                }
+                //Generate email body
+                var emailMessageBody = emailTemplate.Message;
+                emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.FullNameToken, savedUserEmailDetails.FullName);
+                emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.EditPrefLinkToken, savedUserEmailDetails.EditEmailPrefLink);
+                emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.SiteURLToken, string.Format("https://{0}", HttpContext.Current.Request.Url.Host));
+
+                var returnObj = new RegisterdUserWithEmailDetails
+                {
+                    IsUserExists = savedUserEmailDetails.IsUserExists,
+                    FromAddress = emailTemplate.FromAddress,
+                    FromDisplyName = emailTemplate.FromDisplayName,
+                    ToAddresses = savedUserEmailDetails.EmailAddress,
+                    Subject = emailTemplate.Subject,
+                    Message = emailMessageBody
+                };
+
+                return returnObj;
+
+            }
+
+            return null;
+        }
+
+        public SFCountryListViewModel GetCountryListFromSF(bool isFromContact, string defaultOptionText)
+        {
+            var sfEntityUtility = new SFEntityUtility();
+            var cacheKey = (isFromContact) ? SFContactCountryListCacheKey : SFLeadCountryListCacheKey;
+            var countryListViewModel = _applicationCacheRepository.Read<SFCountryListViewModel>(cacheKey);
+            //If not in cache, retrieve directly from SF
+            if (countryListViewModel == default(SFCountryListViewModel))
+            {
+                countryListViewModel = sfEntityUtility.GetCountryListFromSF(isFromContact, defaultOptionText);
+                _applicationCacheRepository.Write(cacheKey, countryListViewModel, new TimeSpan(6, 0, 0));
+            }
+
+            return countryListViewModel;
+        }
+
+        public ResendEmailPrefEmailDetails GetEmailDetailsForResendEmailPrefLink(string email, bool isContact, IEditEmailPrefTemplate emailTemplate, string preferencesUrl)
+        {
+            var sfEntityUtility = new SFEntityUtility();
+            var userDetails = sfEntityUtility.GetEmailDetailsForResendEmailPrefLink(email, isContact, preferencesUrl);
+
+            if (userDetails != null)
+            {
+
+                //Generate email body
+                var emailMessageBody = emailTemplate.Message;
+                emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.FullNameToken, userDetails.FullName);
+                emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.EditPrefLinkToken, userDetails.EditEmailPrefLink);
+                emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.SiteURLToken, string.Format("https://{0}", HttpContext.Current.Request.Url.Host));
+
+                var returnObj = new ResendEmailPrefEmailDetails
+                {
+                    FromAddress = emailTemplate.FromAddress,
+                    FromDisplyName = emailTemplate.FromDisplayName,
+                    ToAddresses = email,
+                    Subject = emailTemplate.Subject,
+                    Message = emailMessageBody
+                };
+
+                return returnObj;
+            }
+
+            return null;
+        }
+    }
+}

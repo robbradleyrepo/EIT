@@ -1,6 +1,6 @@
 ﻿namespace LionTrust.Foundation.Onboarding.Tests.Helpers
 {
-    using LionTrust.Foundation.Navigation.Helpers;
+    using LionTrust.Foundation.Onboarding.Helpers;
     using LionTrust.Foundation.Onboarding.Models;
     using Moq;
     using NUnit.Framework;

@@ -3,6 +3,7 @@
     using Glass.Mapper.Sc.Web.Mvc;
     using LionTrust.Feature.Onboarding.Analytics;
     using LionTrust.Feature.Onboarding.Models;
+    using LionTrust.Foundation.Onboarding.Models;
     using Sitecore.Abstractions;
     using Sitecore.Analytics;
     using Sitecore.Analytics.Model;
@@ -14,7 +15,6 @@
     using System.Collections.Generic;
     using System.Globalization;
     using System.Linq;
-    using System.Net;
     using System.Web;
     using System.Web.Mvc;
     using static LionTrust.Feature.Onboarding.Constants;
@@ -162,11 +162,11 @@
                     if (profile != null)
                     {
 
-                        if (OnboardingSubmit.Role == Roles.Private)
+                        if (OnboardingSubmit.InvestorType == Foundation.Onboarding.Constants.InvestorType.Private)
                         {
                             _cardManager.AddPointsFromProfileCard(data.OnboardingConfiguration.PrivateProfileCard, profile);
                         }
-                        else if (OnboardingSubmit.Role == Roles.Profressional)
+                        else if (OnboardingSubmit.InvestorType == Foundation.Onboarding.Constants.InvestorType.Professional)
                         {
                             _cardManager.AddPointsFromProfileCard(data.OnboardingConfiguration.ProfressionalProfileCard, profile);
                         }
@@ -262,7 +262,7 @@
             return true;
         }
 
-        private bool OnboardingComplete(Feature.Onboarding.Models.IOnboardingConfiguration config)
+        private bool OnboardingComplete(IOnboardingConfiguration config)
         {
             var result = false;
 

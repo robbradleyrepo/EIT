@@ -1,0 +1,127 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.MyPreferences.Models.RegisterInvestorViewModel
+<section class="cf edit-email-preferences">
+    <h3 class="email-pref-title-label"><%= Model.MainTitleText %></h3>
+    <%if(Model.IsDataRetrievalSuccess){ %>
+    <div class="subtitle-label-light">
+        <%= Model.TitleText %>
+    </div>
+    <div class="div-content-padding-top email-preferennce-disply-inline">
+        <form>
+            <div class="main-processlist-div">
+                <div class="email-preferennce-disply-inline">
+                    <h5 class="prefernece-center-main-label prefernece-center-main-label-font"><%= Model.LTNewsLabel %></h5>
+                    <div class="div-preferencecentre-input-label">
+                        <%= Model.LTNewsLabelSubtitle %>
+                    </div>
+                    <div class="div-preferencecentre-input sp-checkbox-identity">
+                        <label class="green-checkbox">
+                            <input type="checkbox" runat="server" id="CheckboxIncludeLTNews" class="chk-lt-news"><span></span>
+                        </label>
+                    </div>
+                </div>
+                <%if(Model.IsInstitutionalBulletinChecked){ %>
+                <div class="email-preferennce-disply-inline div-content-padding-top">
+                    <h5 class="prefernece-center-main-label prefernece-center-main-label-font"><%= Model.InstitutionalBulletinLabel %></h5>
+                    <div class="div-preferencecentre-input-label">
+                        <%= Model.InstitutionalBulletinLabelSubtitle %>
+                    </div>
+                    <div class="div-preferencecentre-input sp-checkbox-identity">
+                        <label class="green-checkbox">
+                            <input type="checkbox" runat="server" id="CheckboxInstitutionalBulletin" class="chk-lt-InstitutionalBulletin"><span></span>
+                        </label>
+                    </div>
+                </div>
+                <% } %>
+                <%if(Model.IsUkResident){ %>
+                <div class="email-preferennce-disply-inline div-content-padding-top">
+                    <h5 class="prefernece-center-main-label prefernece-center-main-label-font "><%= Model.ProcessListTitle %></h5>
+                    <div><%= Model.ProcessListSubTitle %></div>
+                    <%if(Model.SFProcessList.Count > 0){ %>
+                    <div class="div-checkbox-instructions"><%= Model.CheckboxInstructionText %></div>
+                    <div class="div-selectall">
+                        <div class="selectall-label-div subtitle-label"><%=Model.GlobalSelectAllCheckboxLabel%></div>
+                        <div class="selectall-input-div sp-checkbox-identity">
+                            <label class="green-checkbox">
+                                <input type="checkbox" runat="server" id="GlobalSelectAllCheckbox" class="chk-global" /><span></span>
+                            </label>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+                <div class="process-fund-checkbox-section">
+                    <asp:repeater runat="server" id="SFProcessRepeater" onitemdatabound="SFProcessRepeater_ItemDataBound" itemtype="LionTrust.Web.Application.ViewModels.Modules.EditEmailPreferences.SFProcessEmailPreferenceViewModel">
+                        <ItemTemplate>
+                            <div class="div-process-item">
+                                <div class="process-rpt-processname subtitle-label">
+                                    <%--<span class="rpt-process-panel-icon">+</span><span><%#Item.SFProcessName%></span>--%>
+                                    <div class="rpt-process-panel-icon rpt-process-panel-icon-left">+</div>
+                                    <div class="rpt-processname-div"><%#Item.SFProcessName%></div>
+                                </div>
+                                <div class="process-rpt-processinput sp-checkbox-identity">
+                                    <label class="green-checkbox">
+                                        <input type="checkbox" runat="server" id="CheckboxProcess" class="chk-process checkbox-common"><span></span>
+                                    </label>
+                                </div>
+                                <input type="hidden" runat="server" id="HiddenProcessId" value="<%#Item.SFProcessId%>" />
+                                <div class="div-fund-rpt">
+                                    <asp:Repeater runat="server" ID="SFFundRepeater" OnItemDataBound="SFFundRepeater_ItemDataBound" itemtype="LionTrust.Web.Application.ViewModels.Modules.EditEmailPreferences.SFFundViewModel">
+                                        <ItemTemplate>
+                                            <div class="fund-rpt-fundname">
+                                                <span class="fund-rpt-fundname-label"><%#Item.SFFundName%></span>
+                                            </div>
+                                            <div class="fund-rpt-fundinput sp-checkbox-identity">
+                                                <label class="white-checkbox">
+                                                    <input type="checkbox" /><span></span>
+                                                </label>
+                                            </div>
+                                            <input type="hidden" runat="server" id="HiddenFundId" value="<%#Item.SFFundId%>" />
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                </div>
+                            </div>
+                        </ItemTemplate>
+                        <FooterTemplate>
+                            <div class="div-content-padding-top">
+                                <asp:Label ID="lblNoDataForSFProcessRepeater" CssClass="subtitle-label-light" Visible="<%#Model.SFProcessList.Count==0%>" Text="No funds available" runat="server"></asp:Label>
+                            </div>
+                        </FooterTemplate>
+                    </asp:repeater>
+                </div>
+                <% } %>
+            </div>
+            <%{%>
+            <%string customCssClassName = "main-otherlist-div";%>
+            <%if(!Model.IsUkResident)%>
+            <%{%>
+            <%customCssClassName = (Model.IsInstitutionalBulletinChecked)? "main-otherlist-alt-bulletin-div": "main-otherlist-alt-div";%>
+            <%}%>
+            <div class="<%=customCssClassName%>">
+                <div class="email-preferennce-disply-inline">
+                    <div class="div-lt-unsuball-label">
+                        <h5 class="prefernece-center-main-label-font"><%= Model.LTUnsubscribeAllLabel %></h5>
+                    </div>
+                    <div class="div-lt-unsuball-input sp-checkbox-identity">
+                        <label class="green-checkbox">
+                            <input type="checkbox" runat="server" id="CheckboxUnsubAll" class="chk-unsubscribe"><span></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="email-preferennce-disply-inline div-privacy-policy"><%= Model.PrivacyPolicyText %></div>
+                <div class="email-pref-button-div">
+                    <input type="submit" value="Submit" class="btn-primary" />
+                </div>
+                <input type="hidden" id="HiddenSFEntityId" runat="server" />
+                <input type="hidden" id="HiddenRandomGUID" runat="server" />
+                <input type="hidden" id="HiddenEmailAddress" runat="server" />
+                <input type="hidden" id="HiddenConsentGivenDateEmpty" runat="server" />
+                <input type="hidden" id="HiddenIsUKResident" runat="server" />
+            </div>
+            <%}%>
+        </form>
+    </div>
+    <% } %>
+    <% else {%>
+    <div><%=Model.PageLoadErrorText%></div>
+    <% } %>
+</section>

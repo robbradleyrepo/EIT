@@ -1,17 +1,18 @@
 ﻿namespace LionTrust.Feature.Listings.Controllers
 {
-    using Glass.Mapper.Sc.Web.Mvc;
-    using ICSharpCode.SharpZipLib.Zip;
-    using LionTrust.Feature.Listings.Helpers;
-    using LionTrust.Feature.Listings.Models;
-    using LionTrust.Foundation.Core.ActionResults;
-    using Sitecore.Mvc.Controllers;
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Net;
     using System.Web.Mvc;
 
+    using Glass.Mapper.Sc.Web.Mvc;
+    using ICSharpCode.SharpZipLib.Zip;
+    using LionTrust.Feature.Listings.Helpers;
+    using LionTrust.Feature.Listings.Models;
+    using LionTrust.Foundation.Core.ActionResults;
+    using Sitecore.Mvc.Controllers;
+    
     public class DocumentsController : SitecoreController
     {
         private readonly IMvcContext _mvcContext;
@@ -85,7 +86,7 @@
                 return;
             }
 
-            var files = DocumentHelper.GetMediaFilesById(downloadFileIds, _mvcContext);
+            var files = DocumentHelper.GetDocumentFilesById(downloadFileIds, _mvcContext);
             if (files.Any())
             {
                 DocumentHelper.TriggerGoalsForDocumentDownload(downloadFileIds, _mvcContext);

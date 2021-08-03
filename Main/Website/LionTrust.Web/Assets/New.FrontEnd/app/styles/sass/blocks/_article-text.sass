@@ -29,6 +29,7 @@
         @include breakpoint(desktop, up)
             margin-bottom: 2em
 .big-quote
+    letter-spacing: 0.26px
     @include font-size(22px)
     line-height: 1.272em
     margin: 32px 0
@@ -37,12 +38,12 @@
     @include breakpoint(desktop, up)
         @include font-size(26px)
         line-height: 1.384em
-        margin: 40px 0
+        margin: 40px 0 47px
 
 .article-quote
     border-top: 1px solid $gold
     border-bottom: 1px solid $gold
-    background: rgba($secondary-silver, 0.6)
+    background: rgba($secondary-silver, 0.2)
     padding: 14px 5px
     margin: 32px auto
     width: 100%
@@ -100,3 +101,5 @@
 
 .glossary-cta
     margin: 40px 0
+    @include breakpoint(desktop, up)
+        font-size: 20px

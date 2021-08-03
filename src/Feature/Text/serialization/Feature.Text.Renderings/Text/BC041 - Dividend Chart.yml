@@ -1,0 +1,29 @@
+﻿---
+ID: "eaf00d3a-180f-4537-a2a4-f3cbedfdeef7"
+Parent: "3205b88b-7107-4788-80fc-2a86e6347121"
+Template: "99f8905d-4a87-4eb8-9f8b-a9bebfb3add6"
+Path: "/sitecore/layout/Renderings/Feature/Text/BC041 - Dividend Chart"
+DB: master
+SharedFields:
+- ID: "51b435bc-f7b9-478a-9c51-52916af96ff5"
+  Hint: Path
+  Value: ~/Views/Text/DividendChart.cshtml
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "site:dividendChart"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{3C4DB064-6AF2-462B-8837-84D2EF5819F8}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04437558-ac18-42cb-ab21-1243a66abe67"
+      Hint: Supports Local Datasource
+      Type: Checkbox
+      Value: 1
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210727T153424Z
