@@ -1,4 +1,4 @@
-﻿namespace LionTrust.Feature.Listings.Models
+﻿namespace LionTrust.Feature.Listings.Models.MediaGallery
 {
     public class MediaItemResponseModel
     {

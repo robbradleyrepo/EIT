@@ -111,6 +111,7 @@
     <Compile Include="Helpers\FileHelper.cs" />
     <Compile Include="Helpers\MediaGalleryHelper.cs" />
     <Compile Include="Models\AccordionViewModel.cs" />
+    <Compile Include="Models\MediaGallery\IFilterCategory.cs" />
     <Compile Include="Models\MediaGallery\ImageResponseModel.cs" />
     <Compile Include="Models\MediaGallery\IMediaItem.cs" />
     <Compile Include="Models\MediaGallery\IMediaGallery.cs" />
