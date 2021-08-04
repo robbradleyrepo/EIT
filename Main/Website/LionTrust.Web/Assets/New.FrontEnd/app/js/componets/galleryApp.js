@@ -147,8 +147,22 @@ export default () => {
             this.loading = false;
           });
       },
+      getFacets() {
+        $.get(
+          `${host}/GetMediaFacet?mediaGalleryId={${mediaGalleryId}}`
+        )
+          .done((response) => {
+            const { searchResults } = response;
+            console.log('response',response);
+            // this.items = searchResults;
+          })
+          .fail((e) => {
+            console.error(e);
+          });
+      }
     },
     mounted() {
+      this.getFacets();
       this.getData();
     },
   });
