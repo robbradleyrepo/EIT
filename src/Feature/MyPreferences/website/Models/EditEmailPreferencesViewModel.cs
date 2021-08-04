@@ -10,15 +10,18 @@ namespace LionTrust.Feature.MyPreferences.Models
     {
         public EditEmailPreferencesViewModel(EmailPreferences emailPreferences, IEditEmailPreferences editEmailPreferences)
         {
-            SFEntityId = emailPreferences.SFEntityId;
-            SFRandomGUID = emailPreferences.SFRandomGUID;
-            SFProcessList = emailPreferences.SFProcessList;
-            IncludeInLTNews = emailPreferences.IncludeInLTNews;
-            UnsubscribeAll = emailPreferences.IsContact;
-            IsConsentGivenDateEmpty = emailPreferences.IsConsentGivenDateEmpty;
-            IsUkResident = emailPreferences.IsUkResident;
-            IsInstitutionalBulletin = emailPreferences.IsInstitutionalBulletinChecked;
-            EmailAddress = emailPreferences.EmailAddress;
+            if (emailPreferences != null)
+            {
+                SFEntityId = emailPreferences.SFEntityId;
+                SFRandomGUID = emailPreferences.SFRandomGUID;
+                SFProcessList = emailPreferences.SFProcessList;
+                IncludeInLTNews = emailPreferences.IncludeInLTNews;
+                UnsubscribeAll = emailPreferences.IsContact;
+                IsConsentGivenDateEmpty = emailPreferences.IsConsentGivenDateEmpty;
+                IsUkResident = emailPreferences.IsUkResident;
+                IsInstitutionalBulletin = emailPreferences.IsInstitutionalBulletinChecked;
+                EmailAddress = emailPreferences.EmailAddress;
+            }
 
             Content = editEmailPreferences;
         }

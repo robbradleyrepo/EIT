@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using static LionTrust.Foundation.Onboarding.Constants;
 
 namespace LionTrust.Feature.MyPreferences.Models
@@ -18,16 +17,16 @@ namespace LionTrust.Feature.MyPreferences.Models
 
         public string UserExistsErrorLabel { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "First name is required")]
         [Display(Name = "First Name *")]
         public string FirstName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Last name is required")]
         [Display(Name = "Last Name *")]
         public string LastName { get; set; }
 
-        [Required]
-        [EmailAddress]
+        [Required(ErrorMessage = "Email address is required")]
+        [EmailAddress(ErrorMessage = "Invalid Email address")]
         [Display(Name = "Email *")]
         public string Email { get; set; }
 
@@ -37,9 +36,9 @@ namespace LionTrust.Feature.MyPreferences.Models
         [Display(Name = "Individual FCA Reference Number")]
         public string CompanyId { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "UK Resident is required")]
         [Display(Name = "UK Resident *")]
-        public bool UKResident { get; set; }
+        public bool? UKResident { get; set; }
 
         public InvestorType InvestorType { get; set; }
 
