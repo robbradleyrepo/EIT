@@ -72,7 +72,7 @@
             return new JsonCamelCaseResult(mediaGalleryResponse, JsonRequestBehavior.AllowGet);
         }
 
-        public ActionResult GetMediaFacet(string mediaGalleryId) 
+        public ActionResult GetMediaFacets(string mediaGalleryId) 
         {
             if (string.IsNullOrEmpty(mediaGalleryId))
             {
