@@ -99,37 +99,48 @@ export default () => {
 
   const optionField = Vue.component("option-field", {
     name: "option-field",
+    props: ['option'],
     data: () => ({      
         open: false,
-        active: 0        
+        active: 0,
+        name: '',
     }),
     methods: {
       toggleOption() {}
+    },
+    mounted() {
+      console.log(this.facets);
     }
   })
   const seclectField = Vue.component("select-field", {
     name: "select-field",
-    data: () => ({
-      facet: '',
-      init: true
+    props: ['facets'],
+    components: { optionField },
+    data: () => ({      
+      init: true,
+      open: false,
+      active: false
     }),
     methods: {
       selectFacet() {
 
-      }
+      },
+      toggleOption() {
+        this.open = !this.open;
+      },
     }
   })
 
   new Vue({
     el: "#gallery-app",
-    components: { "media-item": mediaItem },
+    components: { mediaItem, seclectField },
     mixins: [baseDownloadParent],
     data: function () {
       return {
         searchText: "",
         loading: false,
         items: [],
-        facets: facets,
+        facets: [],
         filter: "",
       };
     },
@@ -172,12 +183,11 @@ export default () => {
       },
       getFacets() {
         $.get(
-          `${host}/GetMediaFacet?mediaGalleryId={${mediaGalleryId}}`
+          `${host}/GetMediaFacets?mediaGalleryId={${mediaGalleryId}}`
         )
           .done((response) => {
-            const { searchResults } = response;
             console.log('response',response);
-            // this.items = searchResults;
+            this.facets = response;
           })
           .fail((e) => {
             console.error(e);

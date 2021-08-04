@@ -7,10 +7,9 @@
   <div class="gallery-filter">
     <div class="container">
       <div class="row">
-        <div class="col-lg-3 offset-lg-3 relative">
-          <select-field inline-template>
+          <select-field inline-template :facets="facets">
             <div
-              class="col-lg-1 relative"
+              class="col-lg-3 offset-lg-3 relative"
               @click.stop
               style="display: none"
               :style="init ? 'display: block' : ''"
@@ -31,14 +30,14 @@
               <div class="article-filters__options">
                 <div class="article-filters__title" @click="toggleOption">
                   <i class="icon-chevron-left"></i>
-                  Fund
+                  Year
                 </div>
                 <option-field inline-template>
                   <label class="option-checkbox">
                     <input
                       class="option-checkbox__input"
-                      name="facet"
-                      v-model="facet"
+                      name="facetname"
+                      v-model="name"
                       value="All"
                       type="radio"
                     />
@@ -46,40 +45,24 @@
                     <span class="option-checkbox__icon"></span>
                   </label>
                 </option-field>
-                <option-field inline-template v-for="(factet, i) in facets" :key="i">
-                  <label class="option-checkbox">
-                    <input
+                <option-field  inline-template v-for="facet in option" :key="facet.name" :option="facets">
+                  <label class="option-checkbox"> 
+                    
+                    <!-- <input
                       class="option-checkbox__input"
-                      name="facet"
-                      v-model="facet"
-                      value="All"
+                      name="facetname"
+                      v-model="name"
+                      value="facet.name"
                       type="radio"
                       @click="selectFacet(facet)"
                     />
-                    <span class="option-checkbox__text">All</span>
+                    <span class="option-checkbox__text">{{facet.name}}</span> -->
                     <span class="option-checkbox__icon"></span>
                   </label>
-                </option-field>
-                <option-field
-                  inline-template                  
-                >
-                  <label class="option-checkbox">
-                    <input
-                      class="option-checkbox__input"
-                      name="year"
-                      v-model="year"
-                      :value="year"
-                      type="radio"
-                      @click="setYear(year)"
-                    />
-                    <span class="option-checkbox__text">year</span>
-                    <span class="option-checkbox__icon"></span>
-                  </label>
-                </option-field>
+                </option-field>             
               </div>
             </div>
           </select-field>
-        </div>
         <div class="col-lg-3">
           <form class="search-form" @submit.prevent="submitSearchForm($event)">
             <input
