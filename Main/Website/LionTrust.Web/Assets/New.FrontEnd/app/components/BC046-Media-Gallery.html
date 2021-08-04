@@ -1,114 +1,254 @@
-<section id="gallery-app" class="gallery-app" data-host="MediaGalleryApi" data-galleryid="A9221E1F-2E20-4F24-872B-FFEBBFE9805A">
-    <div class="gallery-filter">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 offset-lg-3 relative">
-                    <select @change="setFilter($event)" name="filterby" id="filterby" class="select">
-                        <option disabled selected>Filter By Category</option>
-                        <option v-for="facet in facets" :key="facet.identifier" :value="facet.identifier">{{facet.name}}</option>
-                        
-                    </select>
-                    <i class="article-filters__icon-arrow article-filters__icon-arrow_select select-arrow"></i>
-                </div>
-                <div class="col-lg-3">
-                    <form class="search-form" @submit.prevent="submitSearchForm($event)">
-                        <input type="text" v-model="searchText" name="searchText" class="search-form__input color-black"
-                            placeholder="Search Gallery">
-                        <button class="search-form__submit pe-0" type="submit">
-                            <i class="icon-search"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+<section
+  id="gallery-app"
+  class="gallery-app"
+  data-host="MediaGalleryApi"
+  data-galleryid="A9221E1F-2E20-4F24-872B-FFEBBFE9805A"
+>
+  <div class="gallery-filter">
     <div class="container">
-        <div class="gallary-download-check">
-            <div class="text-center spineer-loader" :style="!loading ? 'display: none' : ''">
-                <div class="spinner-border text-gold" role="status"></div>
+      <div class="row">
+        <div class="col-lg-3 offset-lg-3 relative">
+          <select-field inline-template>
+            <div
+              class="col-lg-1 relative"
+              @click.stop
+              style="display: none"
+              :style="init ? 'display: block' : ''"
+            >
+              <div
+                class="article-filters__select"
+                @click="toggleOption"
+                :class="open ? 'active' : ''"
+              >
+                <span
+                  class="article-filters__item-title"
+                  :class="active ? 'active' : ''"
+                >
+                  Year
+                </span>
+                <i class="article-filters__icon-arrow"></i>
               </div>
-            <label class="checkbox">
-                <input v-model="selectAllDocuments" type="checkbox" class="checkbox__input">
-                <span class="checkbox__box"></span>
-                <div class="checkbox__title">Select all</div>
-            </label>
-            <button @click="downloadDocumentMultiple" v-if="selectAllDocuments || selectedDocumentIds.length"
-                class="btn btn-primary">Download all selected <i class="icon-download"></i></button>
-        </div>
-        <div class="media-listing">
-            <div class="row">
-                <media-item
-                    inline-template
-                    v-for="(item,i) in items"
-                    :key="item.id"
-                    :element="item"
-                    :index="i"
-                    >
-                    <div class="col-sm-6 col-lg-3 col-xl-2">
-                        <div class="media-item">
-                            <div class="media-item__body">
-                                <div class="media-item__gallery">
-                                    <a :href="element.headShotImage.url" :data-caption="element.description"
-                                        class="media-item-image-gallary" :data-fancybox="'images' + index">
-                                        <img class="media-item__image" :src="element.headShotImage.url" />
-                                    </a>
-                                    <div v-if="element.fullBodyImage" style="display: none;">
-                                        <a :data-caption="element.description" class="media-item-image-gallary"
-                                        :href="element.fullBodyImage.url" :data-fancybox="'images' + index">
-                                            <img class="media-item__image" :src="element.fullBodyImage.url" />
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="media-item__text">
-                                    <span>{{element.description}}</span>
-                                    <div class="media-item__checkboxes" v-if="element.fullBodyImage">
-                                        <select-field inline-template @on-check="selectDocument(element.headShotImage.id)">
-                                            <label class="checkbox checkbox-sm">
-                                                <input :checked="selected" @change="onChange"  type="checkbox"
-                                                    class="checkbox__input">
-                                                <span class="checkbox__box"></span>
-                                                <div class="checkbox__title">Headshot</div>
-                                            </label>
-                                        </select-field>
-                                        <select-field inline-template @on-check="selectDocument(element.fullBodyImage.id)">
-                                            <label class="checkbox checkbox-sm">
-                                                <input :checked="selected" @change="onChange" type="checkbox"
-                                                    class="checkbox__input">
-                                                <span class="checkbox__box"></span>
-                                                <div class="checkbox__title">Full Body</div>
-                                            </label>
-                                        </select-field>                  
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="media-item__footer">
-                                <select-field inline-template @on-check="selectDocument(element.headShotImage.id)" v-if="!element.fullBodyImage">
-                                    <label class="checkbox checkbox-sm">
-                                        <input :checked="selected" @change="onChange" type="checkbox"
-                                            class="checkbox__input">
-                                        <span class="checkbox__box"></span>
-                                        <div class="checkbox__title">Select</div>
-                                    </label>
-                                </select-field>
-                                
-                                <a href="#" @click.prevent="downloadDocument" @click.prevent="download" class="link-styles">
-                                    <i class="icon-download"></i>
-                                    Download
-                                </a>
-                            </div>                           
-                        </div>
-                    </div>
-                </media-item>
+              <div class="article-filters__options">
+                <div class="article-filters__title" @click="toggleOption">
+                  <i class="icon-chevron-left"></i>
+                  Fund
+                </div>
+                <option-field inline-template>
+                  <label class="option-checkbox">
+                    <input
+                      class="option-checkbox__input"
+                      name="facet"
+                      v-model="facet"
+                      value="All"
+                      type="radio"
+                    />
+                    <span class="option-checkbox__text">All</span>
+                    <span class="option-checkbox__icon"></span>
+                  </label>
+                </option-field>
+                <option-field inline-template v-for="(factet, i) in facets" :key="i">
+                  <label class="option-checkbox">
+                    <input
+                      class="option-checkbox__input"
+                      name="facet"
+                      v-model="facet"
+                      value="All"
+                      type="radio"
+                      @click="selectFacet(facet)"
+                    />
+                    <span class="option-checkbox__text">All</span>
+                    <span class="option-checkbox__icon"></span>
+                  </label>
+                </option-field>
+                <option-field
+                  inline-template                  
+                >
+                  <label class="option-checkbox">
+                    <input
+                      class="option-checkbox__input"
+                      name="year"
+                      v-model="year"
+                      :value="year"
+                      type="radio"
+                      @click="setYear(year)"
+                    />
+                    <span class="option-checkbox__text">year</span>
+                    <span class="option-checkbox__icon"></span>
+                  </label>
+                </option-field>
+              </div>
             </div>
+          </select-field>
         </div>
-        <div class="gallary-download-check">
-            <label class="checkbox">
-                <input v-model="selectAllDocuments" type="checkbox" class="checkbox__input">
-                <span class="checkbox__box"></span>
-                <div class="checkbox__title">Select all</div>
-            </label>
-            <button @click="downloadDocumentMultiple" v-if="selectAllDocuments || selectedDocumentIds.length"
-                class="btn btn-primary">Download all selected <i class="icon-download"></i></button>
+        <div class="col-lg-3">
+          <form class="search-form" @submit.prevent="submitSearchForm($event)">
+            <input
+              type="text"
+              v-model="searchText"
+              name="searchText"
+              class="search-form__input color-black"
+              placeholder="Search Gallery"
+            />
+            <button class="search-form__submit pe-0" type="submit">
+              <i class="icon-search"></i>
+            </button>
+          </form>
         </div>
+      </div>
     </div>
+  </div>
+  <div class="container">
+    <div class="gallary-download-check">
+      <div
+        class="text-center spineer-loader"
+        :style="!loading ? 'display: none' : ''"
+      >
+        <div class="spinner-border text-gold" role="status"></div>
+      </div>
+      <label class="checkbox">
+        <input
+          v-model="selectAllDocuments"
+          type="checkbox"
+          class="checkbox__input"
+        />
+        <span class="checkbox__box"></span>
+        <div class="checkbox__title">Select all</div>
+      </label>
+      <button
+        @click="downloadDocumentMultiple"
+        v-if="selectAllDocuments || selectedDocumentIds.length"
+        class="btn btn-primary"
+      >
+        Download all selected <i class="icon-download"></i>
+      </button>
+    </div>
+    <div class="media-listing">
+      <div class="row">
+        <media-item
+          inline-template
+          v-for="(item,i) in items"
+          :key="item.id"
+          :element="item"
+          :index="i"
+        >
+          <div class="col-sm-6 col-lg-3 col-xl-2">
+            <div class="media-item">
+              <div class="media-item__body">
+                <div class="media-item__gallery">
+                  <a
+                    :href="element.headShotImage.url"
+                    :data-caption="element.description"
+                    class="media-item-image-gallary"
+                    :data-fancybox="'images' + index"
+                  >
+                    <img
+                      class="media-item__image"
+                      :src="element.headShotImage.url"
+                    />
+                  </a>
+                  <div v-if="element.fullBodyImage" style="display: none">
+                    <a
+                      :data-caption="element.description"
+                      class="media-item-image-gallary"
+                      :href="element.fullBodyImage.url"
+                      :data-fancybox="'images' + index"
+                    >
+                      <img
+                        class="media-item__image"
+                        :src="element.fullBodyImage.url"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="media-item__text">
+                  <span>{{element.description}}</span>
+                  <div
+                    class="media-item__checkboxes"
+                    v-if="element.fullBodyImage"
+                  >
+                    <select-field
+                      inline-template
+                      @on-check="selectDocument(element.headShotImage.id)"
+                    >
+                      <label class="checkbox checkbox-sm">
+                        <input
+                          :checked="selected"
+                          @change="onChange"
+                          type="checkbox"
+                          class="checkbox__input"
+                        />
+                        <span class="checkbox__box"></span>
+                        <div class="checkbox__title">Headshot</div>
+                      </label>
+                    </select-field>
+                    <select-field
+                      inline-template
+                      @on-check="selectDocument(element.fullBodyImage.id)"
+                    >
+                      <label class="checkbox checkbox-sm">
+                        <input
+                          :checked="selected"
+                          @change="onChange"
+                          type="checkbox"
+                          class="checkbox__input"
+                        />
+                        <span class="checkbox__box"></span>
+                        <div class="checkbox__title">Full Body</div>
+                      </label>
+                    </select-field>
+                  </div>
+                </div>
+              </div>
+              <div class="media-item__footer">
+                <select-field
+                  inline-template
+                  @on-check="selectDocument(element.headShotImage.id)"
+                  v-if="!element.fullBodyImage"
+                >
+                  <label class="checkbox checkbox-sm">
+                    <input
+                      :checked="selected"
+                      @change="onChange"
+                      type="checkbox"
+                      class="checkbox__input"
+                    />
+                    <span class="checkbox__box"></span>
+                    <div class="checkbox__title">Select</div>
+                  </label>
+                </select-field>
+
+                <a
+                  href="#"
+                  @click.prevent="downloadDocument"
+                  @click.prevent="download"
+                  class="link-styles"
+                >
+                  <i class="icon-download"></i>
+                  Download
+                </a>
+              </div>
+            </div>
+          </div>
+        </media-item>
+      </div>
+    </div>
+    <div class="gallary-download-check">
+      <label class="checkbox">
+        <input
+          v-model="selectAllDocuments"
+          type="checkbox"
+          class="checkbox__input"
+        />
+        <span class="checkbox__box"></span>
+        <div class="checkbox__title">Select all</div>
+      </label>
+      <button
+        @click="downloadDocumentMultiple"
+        v-if="selectAllDocuments || selectedDocumentIds.length"
+        class="btn btn-primary"
+      >
+        Download all selected <i class="icon-download"></i>
+      </button>
+    </div>
+  </div>
 </section>

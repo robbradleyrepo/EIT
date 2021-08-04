@@ -97,6 +97,29 @@ export default () => {
     } 
   });
 
+  const optionField = Vue.component("option-field", {
+    name: "option-field",
+    data: () => ({      
+        open: false,
+        active: 0        
+    }),
+    methods: {
+      toggleOption() {}
+    }
+  })
+  const seclectField = Vue.component("select-field", {
+    name: "select-field",
+    data: () => ({
+      facet: '',
+      init: true
+    }),
+    methods: {
+      selectFacet() {
+
+      }
+    }
+  })
+
   new Vue({
     el: "#gallery-app",
     components: { "media-item": mediaItem },
