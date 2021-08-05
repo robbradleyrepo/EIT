@@ -7,7 +7,7 @@
   <div class="gallery-filter">
     <div class="container">
       <div class="row">
-          <select-field inline-template :facets="facets">
+          <select-field inline-template>
             <div
               class="col-lg-3 offset-lg-3 relative"
               @click.stop
@@ -23,14 +23,14 @@
                   class="article-filters__item-title"
                   :class="active ? 'active' : ''"
                 >
-                  Year
+                Filter by Category
                 </span>
                 <i class="article-filters__icon-arrow"></i>
               </div>
               <div class="article-filters__options">
                 <div class="article-filters__title" @click="toggleOption">
                   <i class="icon-chevron-left"></i>
-                  Year
+                  Filter by Category
                 </div>
                 <option-field inline-template>
                   <label class="option-checkbox">
@@ -40,26 +40,32 @@
                       v-model="name"
                       value="All"
                       type="radio"
+                      @click="selectFacet('')"
                     />
                     <span class="option-checkbox__text">All</span>
                     <span class="option-checkbox__icon"></span>
                   </label>
                 </option-field>
-                <option-field  inline-template v-for="facet in option" :key="facet.name" :option="facets">
-                  <label class="option-checkbox"> 
-                    
-                    <!-- <input
-                      class="option-checkbox__input"
-                      name="facetname"
-                      v-model="name"
-                      value="facet.name"
-                      type="radio"
-                      @click="selectFacet(facet)"
-                    />
-                    <span class="option-checkbox__text">{{facet.name}}</span> -->
-                    <span class="option-checkbox__icon"></span>
-                  </label>
-                </option-field>             
+                <option-field  
+                inline-template 
+                v-for="facet in facets"
+                :key="facet.identifier"
+                :facet="facet"
+                @close-tab="toggleOption"
+                >                            
+                    <label class="option-checkbox">
+                        <input
+                          class="option-checkbox__input"
+                          name="facetname"
+                          type="radio"
+                          v-model="name"
+                          :value="facet.name"
+                          @click="selectFacet(facet.identifier)"
+                        />
+                        <span class="option-checkbox__text">{{facet.name}}</span>
+                        <span class="option-checkbox__icon"></span>
+                    </label>
+                </option-field>
               </div>
             </div>
           </select-field>

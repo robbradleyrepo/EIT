@@ -90,46 +90,62 @@ export default () => {
         else this.ids.push(id);
       },
       downloadDocument() {
-        API.downloadDocument(`${host}/DownloadMediaImages`, {
-          downloadMediaIds: this.getImagesIds,
-        }, 'images');
+        API.downloadDocument(
+          `${host}/DownloadMediaImages`,
+          {
+            downloadMediaIds: this.getImagesIds,
+          },
+          "images"
+        );
       },
-    } 
+    },
   });
 
   const optionField = Vue.component("option-field", {
     name: "option-field",
-    props: ['option'],
-    data: () => ({      
-        open: false,
-        active: 0,
-        name: '',
+    props: ["facet"],
+    data: () => ({
+      active: 0,
+      name: "All",
     }),
     methods: {
-      toggleOption() {}
-    },
-    mounted() {
-      console.log(this.facets);
-    }
-  })
+      selectFacet(facetid) {
+        eventBus.$emit("setFaccets", facetid);
+        this.$emit("close-tab");
+      },
+    },    
+  });
+
   const seclectField = Vue.component("select-field", {
     name: "select-field",
-    props: ['facets'],
     components: { optionField },
-    data: () => ({      
+    data: () => ({
       init: true,
       open: false,
-      active: false
+      active: false,
+      facets: [],
     }),
     methods: {
-      selectFacet() {
-
-      },
       toggleOption() {
         this.open = !this.open;
       },
-    }
-  })
+      getFacets() {  
+        $.get(`${host}/GetMediaFacets?mediaGalleryId={${mediaGalleryId}}`)
+          .done((response) => {
+            this.facets = response;
+          })
+          .fail((e) => {
+            console.error(e);
+          });
+      },
+    },
+    mounted() {
+      this.getFacets();
+      document.querySelector("body").addEventListener("click", () => {
+        this.open = false;
+      });
+    },
+  });
 
   new Vue({
     el: "#gallery-app",
@@ -140,7 +156,6 @@ export default () => {
         searchText: "",
         loading: false,
         items: [],
-        facets: [],
         filter: "",
       };
     },
@@ -149,22 +164,26 @@ export default () => {
         let str = "";
         if (this.searchText) str += "searchTerm=" + this.searchText;
         if (this.filter && this.searchText) str += "&filter=" + this.filter;
-        if (this.filter) str += "filter=" + this.filter;
+        if (this.filter) str += "&filter=" + this.filter;
         return str;
       },
     },
     methods: {
-      setFilter(e) {
-        this.filter = e.target.value;
+      setFilter(id) {
+        this.filter = id;
         this.getData();
       },
       submitSearchForm() {
         this.getData();
       },
       downloadDocumentMultiple() {
-        API.downloadDocument(`${host}/DownloadMediaImages`, {
-          downloadMediaIds: this.selectedDocumentIds,
-        }, 'images');
+        API.downloadDocument(
+          `${host}/DownloadMediaImages`,
+          {
+            downloadMediaIds: this.selectedDocumentIds,
+          },
+          "images"
+        );
       },
       getData() {
         this.loading = true;
@@ -181,22 +200,17 @@ export default () => {
             this.loading = false;
           });
       },
-      getFacets() {
-        $.get(
-          `${host}/GetMediaFacets?mediaGalleryId={${mediaGalleryId}}`
-        )
-          .done((response) => {
-            console.log('response',response);
-            this.facets = response;
-          })
-          .fail((e) => {
-            console.error(e);
-          });
-      }
     },
     mounted() {
-      this.getFacets();
       this.getData();
+    },
+    created() {
+      eventBus.$on("setFaccets", (id) => {
+        this.setFilter(id);
+      });
+    },
+    beforeDestroy() {
+      eventBus.$off("setFaccets");
     },
   });
 
