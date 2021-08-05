@@ -20,6 +20,8 @@
         padding-top: 6px
     &__link
         line-height: 26px
+        &:hover
+            text-decoration: underline
         @include breakpoint(desktop, up)
             @include font-size(18px)
             line-height: 28px
@@ -30,6 +32,8 @@
             display: block
             i.icon-arrow-right
                 color: $primary
+            &:hover
+                text-decoration: none
         &_sign
             margin-top: 16px
             @include breakpoint(desktop, up)
@@ -40,11 +44,15 @@
         font-size: 12px
         margin-top: 12px
         letter-spacing: 2.4px
+        &:hover
+            color: #0E8039
         @include breakpoint(desktop, up)
             margin-top: 2rem
     &__list-item
         line-height: 34px
         font-size: 14px
+        a:hover
+            text-decoration: underline
     &__copy
         font-size: 10px
         line-height: 13px
@@ -73,6 +81,7 @@
         cursor: pointer
         position: relative
         &:hover
+            text-decoration: none
             .social__twitter
                 visibility: visible
                 opacity: 1
@@ -93,3 +102,5 @@
     &__twitter-link
         font-size: 14px
         line-height: 24px
+        &:hover
+            text-decoration: underline
