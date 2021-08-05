@@ -72,10 +72,13 @@
         margin-right: 3em
         display: block
         line-height: 28px
+        border-bottom: 2px solid transparent
+        transition: border-color .3s ease, color .3s ease
         @include breakpoint(desktop, up)
             line-height: 41px
         &:hover
-            color: $black
+            color: $primary
+            border-bottom: 2px solid $primary
         @include breakpoint(desktop, up)
             display: inline-block
     .active-link
