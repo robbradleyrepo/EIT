@@ -14,6 +14,10 @@
             &::before
                 content: "\e906"
                 font-size: 5px
+    .article-filters__select
+        border-bottom-color: $gray
+        &.active
+            border-color: $primary
     .search-form
         margin-top: 8px
         height: 100%
@@ -26,6 +30,8 @@
             font-size: 16px
             padding-bottom: 6px
             margin-bottom: 1rem
+            &:focus
+                border-color: $primary
             @include breakpoint(desktop, up)
                 padding-bottom: 0
                 margin-bottom: 0
