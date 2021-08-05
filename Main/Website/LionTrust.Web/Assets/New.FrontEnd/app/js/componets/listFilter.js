@@ -55,6 +55,8 @@ export default () => {
       mobileFilter: false,
       months: [],
       years: [],
+      month: "",
+      year: "",
       grid: false,
       selectAllDocuments: false,
       selectedDocumentIds: [],
@@ -116,17 +118,24 @@ export default () => {
         this.page = 1;
         this.open = false;
         this.searchText = "";
+        this.month = this.year = "All";
         this.$emit("clearOption");
         this.mobileFilter = false;
         this.applyFilters();
       },
 
-      setMonth(e) {        
-        this.params.month = [e.target.value];
+      setMonth(month) {
+        if(month === "All")
+          this.params.month = []
+        else
+          this.params.month = [month];
       },
 
-      setYear(e) {
-        this.params.year = [e.target.value];
+      setYear(year) {
+        if(year === "All")
+          this.params.year = [];
+        else
+          this.params.year = [year];
       },
 
       showSort() {
