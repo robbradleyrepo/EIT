@@ -19,12 +19,13 @@
         margin-bottom: 20px
         position: relative
         padding-left: 52px
-        min-height: 42px
+        min-height: 50px
+        overflow: hidden
         @include p-1-normal-20
         @include breakpoint(desktop, up)
             padding-left: 85px
-            margin-bottom: 44px
-            min-height: 54px
+            margin-bottom: 32px
+            min-height: 65px
         @include breakpoint(desktop-large, up)
             padding-right: 40px
     &__link
@@ -40,7 +41,7 @@
             left: 0
             top: 13px
             @include breakpoint(desktop, up)
-                font-size: 4em
+                // font-size: 4em
                 top: 20px
         &:hover
             color: $black
