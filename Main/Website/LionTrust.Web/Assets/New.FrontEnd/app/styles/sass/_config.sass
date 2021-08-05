@@ -77,9 +77,14 @@ a
 	color: $white
 	transition: color .3s ease-in
 	text-decoration: none
+	i.icon-arrow-right
+			transition: transform .3s ease-out
+			display: inline-block
 	&:hover
 		color: $white
-		text-decoration: none
+		text-decoration: none	
+		i.icon-arrow-right	
+			transform: translateX(10px)
 
 p
 	@mixin p-1-book-20
