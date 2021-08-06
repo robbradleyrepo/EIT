@@ -18,7 +18,7 @@
         @include breakpoint(desktop-large, up)
             &:last-child
                 margin-left: auto
-            &:first-child                
+            &:first-child
                 margin-left: 0
     a
         color: $gold
@@ -43,10 +43,19 @@
         margin: 85px auto 90px
     &__title, h2
         margin-bottom: 12px
+    &__margin
+        @include breakpoint(desktop, up)
+            margin-left: -1rem
     .card
+        display: inline-block
+        margin-bottom: 1rem
+        @include breakpoint(desktop, up)
+            margin: 1rem
         @include breakpoint(desktop-large, up)
-            padding: 30px  40px 40px
+            padding: 30px 40px 40px
+            
 .contacts
+    display: table
     &__title
         font-size: 26px
         line-height: 32px
@@ -78,7 +87,7 @@
             display: flex
             margin-bottom: 0
         .contacts__phone
-            margin-left: 40px            
+            margin-left: 40px
             &:first-child
                 display: block
             @include breakpoint(desktop-large, up)
@@ -104,7 +113,7 @@
         margin-top: 20px
         display: inline-block
         @include breakpoint(desktop-large, up)
-            margin-top: 0            
+            margin-top: 0
         i
             display: none
             @include breakpoint(desktop-large, up)
@@ -113,7 +122,16 @@
         width: 100%
         height: auto
         border-radius: 10px
-
+    &__row
+        display: table-row
+    &__cell
+        display: table-cell
+        vertical-align: top
+        width: 50%
+    &__cell-image
+        display: none
+        @include breakpoint(desktop, up)
+            display: table-cell
 
 .contact-form-section
     @extend .contact-section
