@@ -8,6 +8,9 @@
         border-radius: 10px
     &__title
         @extend .h5
+        font-size: 20px
+        @include breakpoint(desktop, up)
+            font-size: 26px
         @include breakpoint(desktop-large, up)
             margin-bottom: 6px
     &__text
@@ -15,3 +18,15 @@
         @include breakpoint(desktop-large, up)
             @include font-size(18px)
             line-height: 1.44em
+        p
+            margin-bottom: 0.5rem
+
+.fund-manager-director
+    margin-bottom: 3rem
+    @include breakpoint(desktop, up)
+        margin-bottom: 60px
+    @include breakpoint(desktop-large, up)
+        margin-bottom: 100px
+    .fund-manager__text
+        @include breakpoint(desktop-large, up)
+            @include font-size(20px)
