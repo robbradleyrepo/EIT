@@ -4,44 +4,49 @@
     padding-bottom: 10px
     @include font-size(18px)
     line-height: 1.44em
-    counter-reset: section
     @include breakpoint(desktop, up)
         padding-top: 30px
-        padding-bottom: 0
+        padding-bottom: 20px
     &__title
         @include breakpoint(desktop, up)
             margin-bottom: 38px
 
 .featured-article
-    @include breakpoint(desktop, up)
-        columns: 2
+    // @include breakpoint(desktop, up)
+    //     columns: 2
     &__item
         margin-bottom: 20px
         position: relative
-        padding-left: 52px
-        min-height: 50px
+        // padding-left: 52px
+        // min-height: 50px
         overflow: hidden
         @include p-1-normal-20
         @include breakpoint(desktop, up)
-            padding-left: 85px
+            // padding-left: 85px
             margin-bottom: 32px
-            min-height: 65px
+            // min-height: 65px
         @include breakpoint(desktop-large, up)
             padding-right: 40px
     &__link
         color: $black
-        &:before
-            position: absolute
-            font-size: 3.75em
-            font-weight: bold
-            color: $primary
-            counter-increment: section
-            content: counter(section)
-            width: 36px
-            left: 0
-            top: 13px
-            @include breakpoint(desktop, up)
-                // font-size: 4em
-                top: 20px
+        display: flex
         &:hover
             color: $black
+    &__text
+        display: inline-block
+        margin-right: 1rem
+        @include breakpoint(desktop, up)
+            margin-left: 1.5rem
+        @include breakpoint(desktop-large, up)
+            margin-left: 2rem
+    &__number
+        font-size: 3.75em
+        font-weight: bold
+        color: $primary
+        display: flex
+        align-items: center   
+        margin-right: 1rem 
+        @include breakpoint(desktop, up)
+            font-size: 4em       
+            margin-right: 0    
+        
