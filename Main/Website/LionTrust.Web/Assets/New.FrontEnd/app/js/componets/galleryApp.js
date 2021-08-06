@@ -24,25 +24,6 @@ if (
   host = "/" + host;
 }
 
-const facets = [
-  {
-    identifier: "c8e97f824fb246d3b1628fa1fb9fe0f2",
-    name: "Fund",
-  },
-  {
-    identifier: "c8e97f824fb246d3b1628fa1fb9fe0f3",
-    name: "Manager",
-  },
-  {
-    identifier: "c8e97f824fb246d3b1628fa1fb9fe0f4",
-    name: "Article",
-  },
-  {
-    identifier: "c8e97f824fb246d3b1628fa1fb9fe0f5",
-    name: "Fund detail",
-  },
-];
-
 export default () => {
   const selectField = Vue.component("select-field", {
     name: "selectField",
