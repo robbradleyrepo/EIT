@@ -233,6 +233,9 @@ export default () => {
           .fail((e) => {
             console.error(e);
             this.loading = false;
+            this.searchData = [];
+            this.amountResults = 0;
+            this.activeButton = false;
           });
       },
     },
