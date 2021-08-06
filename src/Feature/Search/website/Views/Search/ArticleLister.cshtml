@@ -244,10 +244,7 @@
                                     <img class="article-promo__clock" src="@Model.DateIcon.GetSafeSitecoreImageUrl()" alt="icon">
                                     <span class="article-promo__footer-text">{{article.date}}</span>
                                 </div>
-                                <div class="article-promo__footer-item">
-                                    <span class="article-promo__footer-text">{{article.category}}</span>
-                                    <i class="icon-booksmark article-promo__bookmark"></i>
-                                </div>
+                                <div class="article-promo__footer-item"></div>
                             </div>
 
                             <img class="article-promo__back"
@@ -279,15 +276,13 @@
                                     <img class="article-promo__clock" src="@Model.DateIcon.GetSafeSitecoreImageUrl()" alt="icon">
                                     <span class="article-promo__footer-text">{{article.date}}</span>
                                 </div>
-                                <div class="article-promo__footer-item">
-                                    <span class="article-promo__footer-text">{{article.category}}</span>
-                                    <i class="icon-booksmark article-promo__bookmark"></i>
-                                </div>
-                            </div>
+                                <div class="article-promo__footer-item"></div>
 
-                            <img class="article-promo__back"
-                                 :src="article.imageUrl" :alt="article.title" :style="{opacity: article.imageOpacity}">
-                        </div>
+                                </div>
+
+                                <img class="article-promo__back"
+                                     :src="article.imageUrl" :alt="article.title" :style="{opacity: article.imageOpacity}">
+                            </div>
                         <div class="article-promo" v-else-if="article.category === 'Magazine & Reports'">
                             <a :href="article.url" class="article-promo__front">
                             </a>
@@ -312,10 +307,7 @@
                                     <img class="article-promo__clock" src="@Model.DateIcon.GetSafeSitecoreImageUrl()" alt="icon">
                                     <span class="article-promo__footer-text">{{article.date}}</span>
                                 </div>
-                                <div class="article-promo__footer-item">
-                                    <span class="article-promo__footer-text">{{article.category}}</span>
-                                    <i class="icon-booksmark article-promo__bookmark"></i>
-                                </div>
+                                <div class="article-promo__footer-item"></div>
                             </div>
 
                             <img class="article-promo__back"
@@ -341,10 +333,7 @@
                                     <img class="article-promo__clock" src="@Model.DateIcon.GetSafeSitecoreImageUrl()" alt="icon">
                                     <span class="article-promo__footer-text">{{article.date}}</span>
                                 </div>
-                                <div class="article-promo__footer-item">
-                                    <span class="article-promo__footer-text">{{article.category}}</span>
-                                    <i class="icon-booksmark article-promo__bookmark"></i>
-                                </div>
+                                <div class="article-promo__footer-item"></div>
                             </div>
 
                             <img class="article-promo__back"
