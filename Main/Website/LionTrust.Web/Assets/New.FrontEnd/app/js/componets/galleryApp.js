@@ -198,6 +198,7 @@ export default () => {
           .fail((e) => {
             console.error(e);
             this.loading = false;
+            this.items = [];
           });
       },
     },
