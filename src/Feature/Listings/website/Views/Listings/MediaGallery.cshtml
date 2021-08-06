@@ -1,18 +1,62 @@
-﻿@model LionTrust.Feature.Listings.Models.MediaGallery.IMediaGallery
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Listings.Models.MediaGallery.IMediaGallery
 @if (Model != null)
 {
     <section id="gallery-app" class="gallery-app" data-host="MediaGalleryApi" data-galleryid="@Model.Id">
         <div class="gallery-filter">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 offset-lg-3 relative">
-                        <select @@change="setFilter($event)" name="filterby" id="filterby" class="select">
-                            <option disabled selected>@Html.Glass().Editable(Model, m => m.FilterByCategoryLabel)</option>
-                            <option v-for="facet in facets" :key="facet.identifier" :value="facet.identifier">{{facet.name}}</option>
+                    <select-field inline-template>
+                        <div class="col-lg-3 offset-lg-3 relative"
+                             @@click.stop
+                             style="display: none"
+                             :style="init ? 'display: block' : ''">
+                            <div class="article-filters__select"
+                                 @@click="toggleOption"
+                                 :class="open ? 'active' : ''">
+                                <span class="article-filters__item-title"
+                                      :class="active ? 'active' : ''">
+                                    @Html.Glass().Editable(Model, m => m.FilterByCategoryLabel)
+                                </span>
+                                <i class="article-filters__icon-arrow"></i>
+                            </div>
+                            <div class="article-filters__options">
+                                <div class="article-filters__title" @@click="toggleOption">
+                                    <i class="icon-chevron-left"></i>
+                                    @Html.Glass().Editable(Model, m => m.FilterByCategoryLabel)
+                                </div>
+                                <option-field inline-template>
+                                    <label class="option-checkbox">
+                                        <input class="option-checkbox__input"
+                                               name="facetname"
+                                               v-model="name"
+                                               value="All"
+                                               type="radio"
+                                               @@click="selectFacet('')" />
+                                        <span class="option-checkbox__text">All</span>
+                                        <span class="option-checkbox__icon"></span>
+                                    </label>
+                                </option-field>
+                                <option-field inline-template
+                                              v-for="facet in facets"
+                                              :key="facet.identifier"
+                                              :facet="facet"
+                                              @@close -tab="toggleOption">
+                                    <label class="option-checkbox">
+                                        <input class="option-checkbox__input"
+                                               name="facetname"
+                                               type="radio"
+                                               v-model="name"
+                                               :value="facet.name"
+                                               @@click="selectFacet(facet.identifier)" />
+                                        <span class="option-checkbox__text">{{facet.name}}</span>
+                                        <span class="option-checkbox__icon"></span>
+                                    </label>
+                                </option-field>
+                            </div>
+                        </div>
+                    </select-field>
 
-                        </select>
-                        <i class="article-filters__icon-arrow article-filters__icon-arrow_select select-arrow"></i>
-                    </div>
                     <div class="col-lg-3">
                         <form class="search-form" @@submit.prevent="submitSearchForm($event)">
                             <input type="text" v-model="searchText" name="searchText" class="search-form__input color-black"
@@ -94,7 +138,7 @@
                                         </label>
                                     </select-field>
 
-                                    <a href="#" @@click.prevent="download" class="link-styles">
+                                    <a href="#" @@click.prevent="download" @@click.prevent="downloadDocument" class="link-styles">
                                         <i class="icon-download"></i>
                                         @Html.Glass().Editable(Model, m => m.DownloadLabel)
                                     </a>
