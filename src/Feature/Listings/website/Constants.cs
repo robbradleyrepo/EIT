@@ -146,6 +146,19 @@
             public const string FullBodyLabel_FieldId = "{D1B479B5-1FDB-46FD-A06D-61A0D0DEBE11}";
             public const string FilterSource_FieldId = "{2A00B22E-F809-40A6-A53A-4818158A1DE9}";
             public const string DownloadLabel_FieldId = "{A54E01C5-8988-446D-A04D-D439F461A2D3}";
-        }    
+        }
+
+        public static class DirectorList
+        {
+            public const string Title_FieldId = "{900E55EF-A2DE-4AE7-86D2-E6F6C5D6F987}";
+        }
+
+        public static class Director
+        {
+            public const string Image_FieldId = "{1202E300-6635-4D4B-AB9E-21990AC3D601}";
+            public const string FullName_FieldId = "{40EC24BE-E4C8-4D5A-9226-6AFDBFF86698}";
+            public const string Role_FieldId = "{0930A4BB-1CC6-471D-BC6B-FFD4097E2008}";
+            public const string ShortBio_FieldId = "{97454B15-76C1-4AE0-AB59-C3F8D2304CCC}";
+        }
     }
 }

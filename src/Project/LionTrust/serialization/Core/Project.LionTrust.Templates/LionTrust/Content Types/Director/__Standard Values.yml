@@ -1,0 +1,21 @@
+﻿---
+ID: "c4834008-08e7-4fc4-ba8b-17ccd73b7539"
+Parent: "ad84655e-81dc-43e8-ac04-e9c718f6c674"
+Template: "ad84655e-81dc-43e8-ac04-e9c718f6c674"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Director/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210805T162813Z
+    - ID: "40ec24be-e4c8-4d5a-9226-6afdbff86698"
+      Hint: Director_FullName
+      Value: $name
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

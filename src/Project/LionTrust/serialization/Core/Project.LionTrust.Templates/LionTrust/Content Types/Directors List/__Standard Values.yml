@@ -1,0 +1,26 @@
+﻿---
+ID: "bd7c30f7-1a22-415c-b412-2acd6b352d0e"
+Parent: "4e4d4915-ddc7-46e5-950e-c39f715b7472"
+Template: "4e4d4915-ddc7-46e5-950e-c39f715b7472"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Directors List/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{AD84655E-81DC-43E8-AC04-E9C718F6C674}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210805T162747Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "900e55ef-a2de-4ae7-86d2-e6f6c5d6f987"
+      Hint: DirectorsList_Title
+      Value: $name
