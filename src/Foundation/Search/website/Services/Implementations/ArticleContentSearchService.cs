@@ -44,7 +44,7 @@
                                                                           (current, category) => current
                                                                                                   .Or(item => item.ArticleFund == category));
 
-                taxonomyFilter = taxonomyFilter.Or(fundPredicate);
+                taxonomyFilter = taxonomyFilter.And(fundPredicate);
             }
 
             if (articleSearchRequest.FundManagers != null && articleSearchRequest.FundManagers.Any())
@@ -57,7 +57,7 @@
                                                                                 => current
                                                                                      .Or(item => item.ArticleAuthors.Contains(manager)));
 
-                taxonomyFilter = taxonomyFilter.Or(managerPredicate);
+                taxonomyFilter = taxonomyFilter.And(managerPredicate);
             }
 
             if (articleSearchRequest.Categories != null && articleSearchRequest.Categories.Any())
@@ -70,7 +70,7 @@
                                                                                 => current
                                                                                      .Or(item => item.Topics.Contains(IdHelper.NormalizeGuid(category, true))));
 
-                taxonomyFilter = taxonomyFilter.Or(managerPredicate);
+                taxonomyFilter = taxonomyFilter.And(managerPredicate);
             }
 
             predicate = predicate.And(taxonomyFilter);
@@ -83,7 +83,7 @@
                 searchTermPredicate = searchTermPredicate.Or(item => item.ArticleTitle.Contains(articleSearchRequest.SearchTerm));
                 searchTermPredicate = searchTermPredicate.Or(item => item.ArticleSubtitle.Contains(articleSearchRequest.SearchTerm));
 
-                predicate = predicate.Or(searchTermPredicate);
+                predicate = predicate.And(searchTermPredicate);
             }
 
             return predicate;

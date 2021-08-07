@@ -34,7 +34,7 @@
                                                                                 => current
                                                                                      .Or(item => item.FundManagers.Contains(manager)));
 
-                fundFilter = fundFilter.Or(managerPredicate);
+                fundFilter = fundFilter.And(managerPredicate);
             }
 
             if(fundSearchRequest.FundTeams != null && fundSearchRequest.FundTeams.Any())
@@ -47,7 +47,7 @@
                                                                                 => current
                                                                                      .Or(item => item.FundTeam.Contains(team)));
 
-                fundFilter = fundFilter.Or(teamPredicate);
+                fundFilter = fundFilter.And(teamPredicate);
             }
 
             if (fundSearchRequest.FundRanges != null && fundSearchRequest.FundRanges.Any())
@@ -60,7 +60,7 @@
                                                                                 => current
                                                                                      .Or(item => item.FundRanges.Contains(range)));
 
-                fundFilter = fundFilter.Or(rangePredicate);
+                fundFilter = fundFilter.And(rangePredicate);
             }
 
             if (fundSearchRequest.FundRegions != null && fundSearchRequest.FundRegions.Any())
@@ -73,7 +73,7 @@
                                                                                 => current
                                                                                      .Or(item => item.FundRegion.Contains(range)));
 
-                fundFilter = fundFilter.Or(regionPredicate);
+                fundFilter = fundFilter.And(regionPredicate);
             }
 
             if (fundSearchRequest.CitiCodes != null && fundSearchRequest.CitiCodes.Any())
@@ -86,7 +86,7 @@
                                                                                 => current
                                                                                      .Or(item => item.CitiCode.Contains(citiCode)));
 
-                fundFilter = fundFilter.Or(fundsPredicate);
+                fundFilter = fundFilter.And(fundsPredicate);
             }
 
             if (fundSearchRequest.ExcludeCitiCodes != null && fundSearchRequest.ExcludeCitiCodes.Any())
@@ -99,7 +99,7 @@
                                                                                 => current
                                                                                      .And(item => !item.CitiCode.Contains(citiCode)));
 
-                fundFilter = fundFilter.Or(excludeFundsPredicate);
+                fundFilter = fundFilter.And(excludeFundsPredicate);
             }
 
             predicate = predicate.And(fundFilter);
@@ -113,7 +113,7 @@
                 searchTermPredicate = searchTermPredicate.Or(item => item.FundCardHeading.Contains(fundSearchRequest.SearchTerm));
                 searchTermPredicate = searchTermPredicate.Or(item => item.FundCardDescription.Contains(fundSearchRequest.SearchTerm));
 
-                predicate = predicate.Or(searchTermPredicate);
+                predicate = predicate.And(searchTermPredicate);
             }
 
             var validationPredicate = PredicateBuilder.True<FundSearchResultItem>();
