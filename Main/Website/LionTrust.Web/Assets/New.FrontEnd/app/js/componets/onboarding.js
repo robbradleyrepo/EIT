@@ -8,7 +8,7 @@ export default () => {
   var countryName = '';
 
   // default values
-  const currentTab = Cookies.get("currentTab") || 1;
+  const currentTab = Cookies.get("currentTab") || 0;
 
   const showTab = (currentTab) => {
     const tabs = $("[data-tab-number]");
