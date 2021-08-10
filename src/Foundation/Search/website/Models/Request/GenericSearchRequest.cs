@@ -5,7 +5,7 @@ using System.Web;
 
 namespace LionTrust.Foundation.Search.Models.Request
 {
-    public class GenericSearchRequest
+    public class GenericSearchRequest : ISearchRequest
     {
         public string DatabaseName { get; set; }
 
@@ -22,5 +22,7 @@ namespace LionTrust.Foundation.Search.Models.Request
         public int Skip { get; set; }
 
         public int Take { get; set; }
+
+        public string Country { get; set; }
     }
 }

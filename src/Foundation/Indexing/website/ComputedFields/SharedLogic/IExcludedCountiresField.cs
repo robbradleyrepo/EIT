@@ -1,0 +1,13 @@
+﻿namespace LionTrust.Foundation.Indexing.ComputedFields.SharedLogic
+{
+    using System;
+    using System.Collections.Generic;
+    using Sitecore.Data.Items;
+
+    public interface IExcludedCountriesField
+    {
+        bool CanHandle(IEnumerable<Guid> templateIds);
+
+        IList<string> GetExcludedCountries(Item item);
+    }
+}

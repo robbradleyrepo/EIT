@@ -3,7 +3,7 @@
     using System;
     using System.Linq;
     using System.Linq.Expressions;
-
+    using LionTrust.Foundation.Onboarding.Helpers;
     using LionTrust.Foundation.Search.Models.ContentSearch;
     using LionTrust.Foundation.Search.Models.Request;
     using LionTrust.Foundation.Search.Repositories.Interfaces;
@@ -96,6 +96,9 @@
             var language = Sitecore.Context.Language?.Name ?? "en";
             predicate = predicate.And(x => x.Language == language);
             predicate = predicate.And(x => x.IsLatestVersion);
+
+            var country = OnboardingHelper.GetCurrentContactAddress()?.Country;
+            predicate = predicate.And(x => !x.ExcludedCountries.Contains(country));
 
             predicate = this.PopoulateDatedTaxonomyPredicate(predicate, articleSearchRequest);
 

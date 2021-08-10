@@ -9,5 +9,7 @@
         int Skip { get; set; }
 
         int Take { get; set; }
+
+        string Country { get; set; }
     }
 }

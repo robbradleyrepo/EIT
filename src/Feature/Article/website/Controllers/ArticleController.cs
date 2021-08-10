@@ -8,6 +8,7 @@
     using Glass.Mapper.Sc.Web.Mvc;
     using LionTrust.Feature.Article.Models;
     using LionTrust.Feature.Article.Repositories;
+    using LionTrust.Foundation.Onboarding.Helpers;
     using LionTrust.Foundation.Search.Services.Interfaces;
     using Sitecore.Mvc.Controllers;
     
@@ -29,14 +30,15 @@
             var articleScrollerViewModel = new ArticleScrollerViewModel();
             articleScrollerViewModel.ArticleScroller = _mvcContext.GetDataSourceItem<IArticleScroller>();
 
-            if(!Sitecore.Context.PageMode.IsExperienceEditor && articleScrollerViewModel.ArticleScroller == null)
+            if (!Sitecore.Context.PageMode.IsExperienceEditor && articleScrollerViewModel.ArticleScroller == null)
             {
                 return null;
             }
-            else if (articleScrollerViewModel.ArticleScroller?.SelectedArticles != null
-                && articleScrollerViewModel.ArticleScroller.SelectedArticles.Any())
+            else if (HasSelectedArticles(articleScrollerViewModel))
             {
-                articleScrollerViewModel.ArticleList = articleScrollerViewModel.ArticleScroller.SelectedArticles.OrderByDescending(a => a.Date);
+                articleScrollerViewModel.ArticleList = articleScrollerViewModel.ArticleScroller.SelectedArticles
+                    .Where(a => OnboardingHelper.HasAccess(a.Fund.FundReference.ExcludedCountries))?
+                    .OrderByDescending(a => a.Date);
             }
             else if (IsFilterSet(articleScrollerViewModel.ArticleScroller))
             {
@@ -45,33 +47,41 @@
             else
             {
                 var currentPage = _mvcContext.GetPageContextItem<IArticle>();
-                if (currentPage != null && currentPage.Topics != null && currentPage.Topics.Any())
+
+                if (currentPage == null || currentPage.Topics == null || !currentPage.Topics.Any())
                 {
-                    var fundList = new List<Guid>();
-                    if (currentPage.Fund.FundReference != null)
-                    {
-                        fundList.Add(currentPage.Fund.FundReference.Id);
-                    }
-
-                    var fundCategories = new List<Guid>();
-                    if (currentPage.PromoType != null)
-                    {
-                        fundCategories.Add(currentPage.PromoType.Id);
-                    }
-
-                    articleScrollerViewModel.ArticleList = 
-                        new ArticleRepository(_contentSearchService, _mvcContext).Map(
-                            fundList, 
-                            fundCategories,
-                            null, 
-                            currentPage.Authors?.Select(a => a.Id),
-                            currentPage.Topics?.Select(t => t.Id), 
-                            _databaseName);
-
-
-                    new ArticleRepository(_contentSearchService, _mvcContext)
-                            .GetArticlePromosByTopics(currentPage.Topics.Select(x => x.Id));
+                    return new EmptyResult();
                 }
+
+                var fundList = new List<Guid>();
+                if (currentPage.Fund != null)
+                {
+                    fundList.Add(currentPage.Fund.Id);
+                }
+
+                var fundCategories = new List<Guid>();
+                if (currentPage.PromoType != null)
+                {
+                    fundCategories.Add(currentPage.PromoType.Id);
+                }
+
+                articleScrollerViewModel.ArticleList =
+                    new ArticleRepository(_contentSearchService, _mvcContext).Map(
+                        fundList,
+                        fundCategories,
+                        null,
+                        currentPage.Authors?.Select(a => a.Id),
+                        currentPage.Topics?.Select(t => t.Id),
+                        _databaseName);
+
+
+                new ArticleRepository(_contentSearchService, _mvcContext)
+                        .GetArticlePromosByTopics(currentPage.Topics.Select(x => x.Id));
+            }
+
+            if (!Sitecore.Context.PageMode.IsExperienceEditor && (articleScrollerViewModel.ArticleList == null || !articleScrollerViewModel.ArticleList.Any()))
+            {
+                return null;
             }
 
             return View("~/Views/Article/ArticleScroller.cshtml", articleScrollerViewModel);
@@ -98,6 +108,20 @@
                 var articlePage = _mvcContext.GetPageContextItem<IArticle>();
                 return View("~/Views/Article/ArticleContent.cshtml", articlePage);
             }
+        }
+
+        private bool HasSelectedArticles(ArticleScrollerViewModel articleScrollerViewModel)
+        {
+            bool result = false;
+
+            if (articleScrollerViewModel != null
+                && articleScrollerViewModel.ArticleScroller?.SelectedArticles != null
+                && articleScrollerViewModel.ArticleScroller.SelectedArticles.Any())
+            {
+                result = true;
+            }
+
+            return result;
         }
 
         private bool IsFilterSet(IArticleFilter filter)

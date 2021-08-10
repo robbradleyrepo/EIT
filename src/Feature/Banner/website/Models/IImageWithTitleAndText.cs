@@ -3,6 +3,7 @@
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
+    using LionTrust.Foundation.Legacy.Models;
 
     public interface IImageWithTitleAndText : IBannerGlassBase
     {
@@ -14,5 +15,8 @@
 
         [SitecoreField(Constants.ImageWithTitleAndText.Image_FieldId, SitecoreFieldType.Image, "Content")]
         Image Image { get; set; }
+
+        [SitecoreField(Constants.ImageWithTitleAndText.Fund_FieldId)]
+        IFund Fund { get; set; }
     }
 }

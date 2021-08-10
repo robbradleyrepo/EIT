@@ -17,5 +17,8 @@
 
         [SitecoreField(Constants.PresentationBase.ExcludeInSearchResults_FieldId, SitecoreFieldType.Checkbox, "Search data")]
         bool ExcludeInSearchResults { get; set; }
+
+        [SitecoreField(Constants.FundPage.FundReference_FieldId)]
+        IFund Fund { get; set; }
     }
 }

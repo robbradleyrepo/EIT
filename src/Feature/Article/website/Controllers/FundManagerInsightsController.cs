@@ -4,6 +4,7 @@
     using Glass.Mapper.Sc.Web.Mvc;
     using LionTrust.Feature.Article.Models;
     using LionTrust.Feature.Article.Repositories;
+    using LionTrust.Foundation.Onboarding.Helpers;
     using LionTrust.Foundation.Search.Services.Interfaces;
     using Sitecore.Abstractions;
     using Sitecore.Mvc.Controllers;
@@ -35,7 +36,7 @@
             }
             else if (data.SelectedArticles != null && data.SelectedArticles.Any())
             {
-                articles = data.SelectedArticles.OrderByDescending(x => x.Date).Take(6);
+                articles = data.SelectedArticles.Where(x => OnboardingHelper.HasAccess(x.Fund?.FundReference?.ExcludedCountries))?.OrderByDescending(x => x.Date).Take(6);
             }
             else
             {

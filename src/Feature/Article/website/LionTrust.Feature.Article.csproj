@@ -107,6 +107,7 @@
     <Compile Include="Controllers\FundManagerInsightsController.cs" />
     <Compile Include="Controllers\RelatedArticlesController.cs" />
     <Compile Include="Controllers\FeaturedArticlesController.cs" />
+    <Compile Include="Fields\ArticleExcludedCountiesField.cs" />
     <Compile Include="Fields\ArticleSearchResultTypeField.cs" />
     <Compile Include="Fields\ArticleBaseField.cs" />
     <Compile Include="Fields\ArticleAuthorField.cs" />
@@ -172,6 +173,10 @@
     <ProjectReference Include="..\..\..\Foundation\Legacy\website\LionTrust.Foundation.Legacy.csproj">
       <Project>{43EE972B-2002-4719-A878-A66A99C42C40}</Project>
       <Name>LionTrust.Foundation.Legacy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Onboarding\website\LionTrust.Foundation.Onboarding.csproj">
+      <Project>{78b2a114-3eda-4cc7-81eb-d096d9bfc0cc}</Project>
+      <Name>LionTrust.Foundation.Onboarding</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\ORM\website\LionTrust.Foundation.ORM.csproj">
       <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>

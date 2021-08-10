@@ -146,6 +146,7 @@
 
         public static class FundSelector
         {
+            public static Guid TemplateId = new Guid("{BC7B0647-141D-499D-964B-6F46DB539031}");
             public const string FundFieldId = "{3F407D7E-838C-4D99-A6AD-890B6A463037}";
         }
 

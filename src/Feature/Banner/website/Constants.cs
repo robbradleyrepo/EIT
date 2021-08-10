@@ -83,6 +83,8 @@
 
             public const string Image_FieldName = "ImageWithTitleAndText_Image";
             public const string Image_FieldId = "{60D2759F-95DF-492C-8F4A-D1A3A80956F7}";
+
+            public const string Fund_FieldId = "{17B76D03-8FCF-409A-8954-41C025A2ABB0}";
         }
 
         public static class BannerWithSlider

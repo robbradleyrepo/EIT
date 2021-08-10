@@ -116,6 +116,11 @@ namespace LionTrust.Foundation.Legacy
             public const string FundNameFieldId = "{6AFB4EB4-25C4-472B-AA65-8AD9DDB3BE2C}";
         }
 
+        public static class FundAccess
+        {
+            public const string ExcludedCountires_FieldId = "{77C63A9A-2144-4021-91FD-388D6E5DAD52}";
+        }
+
         public static class HeroImagePageData
         {
             public const string HeaderImage_FieldName = "LegacyHeroImagePageData_PageHeaderImage";

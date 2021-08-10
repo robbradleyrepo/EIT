@@ -1,8 +1,8 @@
 ﻿---
 ID: "d7ea03cd-11a9-4a09-9cc6-ee9e8566a692"
 Parent: "0913dc6f-3612-49a9-ba50-c0e4a00d3eae"
-Template: "99f8905d-4a87-4eb8-9f8b-a9bebfb3add6"
-Path: "/sitecore/layout/renderings/Feature/Banner/UI020 - Banner with Slider"
+Template: "2a3e91a0-7987-44b5-ab34-35c2d9de83b9"
+Path: "/sitecore/layout/Renderings/Feature/Banner/UI020 - Banner with Slider"
 DB: master
 SharedFields:
 - ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
@@ -15,6 +15,12 @@ SharedFields:
   Hint: __Thumbnail
   Value: |
     <image mediaid="{E7BBDEDB-4E66-4582-831D-66B50519861E}" />
+- ID: "ded9e431-3604-4921-a4b3-a6ec7636a5b6"
+  Hint: Controller Action
+  Value: Render
+- ID: "e64ad073-dfcc-4d20-8c0b-fe5aa6226cd7"
+  Hint: Controller
+  Value: BannerWithSlider
 Languages:
 - Language: en
   Versions:

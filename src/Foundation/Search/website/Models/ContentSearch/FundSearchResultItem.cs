@@ -5,7 +5,7 @@
     using Sitecore.ContentSearch;
     using Sitecore.ContentSearch.SearchTypes;
 
-    public class FundSearchResultItem : SearchResultItem
+    public class FundSearchResultItem : BaseSearchResultItem
     {       
         [IndexField("LegacyFund_FundManagers")]
         public IEnumerable<string> FundManagers { get; set; }

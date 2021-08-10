@@ -3,6 +3,7 @@
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
+    using LionTrust.Foundation.Legacy.Models;
     using System.Collections.Generic;
 
     [SitecoreType(TemplateId = Constants.PodcastPromo.TemplateId, EnforceTemplate = SitecoreEnforceTemplate.Template)]
@@ -31,5 +32,8 @@
         
         [SitecoreChildren]
         IEnumerable<IPodcastLink> PodcastLinks { get; set; }
+
+        [SitecoreField(LionTrust.Foundation.Legacy.Constants.FundPage.FundReference_FieldId)]
+        IFund Fund { get; set; }
     }
 }

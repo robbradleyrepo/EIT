@@ -6,7 +6,7 @@
     using Sitecore.ContentSearch;
     using Sitecore.ContentSearch.SearchTypes;
 
-    public class ArticleSearchResultItem : SearchResultItem
+    public class ArticleSearchResultItem : BaseSearchResultItem
     {
         [IndexField("_latestversion")]
         public bool IsLatestVersion { get; set; }

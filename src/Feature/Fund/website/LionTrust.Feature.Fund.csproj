@@ -151,6 +151,8 @@
     <Compile Include="Indexing\DocumentSearchResultTypeField.cs" />
     <Compile Include="Indexing\FundDetailSearchResultTypeField.cs" />
     <Compile Include="Indexing\DocumentUrlField.cs" />
+    <Compile Include="Indexing\FundDetailPageExcludedCountiresField.cs" />
+    <Compile Include="Indexing\FundExcludedCountiresField.cs" />
     <Compile Include="Indexing\FundFactsheetUrlField.cs" />
     <Compile Include="Indexing\FundManagerFundTeamField.cs" />
     <Compile Include="Indexing\FundManagerSearchResultTypeField.cs" />
@@ -249,6 +251,10 @@
     <ProjectReference Include="..\..\..\Foundation\Navigation\website\LionTrust.Foundation.Navigation.csproj">
       <Project>{0E1E5F5C-F4FE-4AFC-BC53-B67A885BBB8C}</Project>
       <Name>LionTrust.Foundation.Navigation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Onboarding\website\LionTrust.Foundation.Onboarding.csproj">
+      <Project>{78b2a114-3eda-4cc7-81eb-d096d9bfc0cc}</Project>
+      <Name>LionTrust.Foundation.Onboarding</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\ORM\website\LionTrust.Foundation.ORM.csproj">
       <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>

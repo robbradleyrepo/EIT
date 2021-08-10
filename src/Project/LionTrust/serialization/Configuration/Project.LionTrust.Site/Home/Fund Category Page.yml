@@ -1,0 +1,101 @@
+﻿---
+ID: "5fbb6475-cd37-4a66-a670-4f695f25fad4"
+Parent: "7502b69e-d154-4861-a033-bc0cb30a91b5"
+Template: "c4dce7fc-ba44-4bfb-902c-575c28d82969"
+Path: /sitecore/content/LionTrustNew/Home/Fund Category Page
+DB: master
+BranchID: "1604dbf2-1db4-44b7-b02f-cb86a3bf1e97"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{AF33FEAB-7E64-4472-8C4F-C03AADCFAE3E}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{D589B549-8CF9-418D-B2E2-78ADC0D09995}"
+              p:before="*"
+              s:ds="{FD4199E9-4A7E-4EDB-93EA-E4D6845F7C39}"
+              s:id="{C3B11E64-1214-410E-BA83-3347C5B59A7E}"
+              s:ph="main" />
+            <r
+              uid="{9694658F-9621-40E3-9D4A-601909C6CD6E}"
+              p:after="r[@uid='{D589B549-8CF9-418D-B2E2-78ADC0D09995}']"
+              s:ds="{59D7179D-A852-443F-8AB2-6B10615CEFD9}"
+              s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+              s:ph="main" />
+            <r
+              uid="{442A3026-53C4-48B5-B80C-E33B1DED6CC9}"
+              p:after="r[@uid='{9694658F-9621-40E3-9D4A-601909C6CD6E}']"
+              s:ds="{647AFBA5-D409-45FF-B53F-E32666C7649F}"
+              s:id="{E975E590-8880-467B-A459-C4B214A66C77}"
+              s:ph="main" />
+            <r
+              uid="{EA459392-D268-466C-B6FF-65A430CBD4BD}"
+              p:after="r[@uid='{442A3026-53C4-48B5-B80C-E33B1DED6CC9}']"
+              s:ds="{AEA44643-62F4-4AA1-8F7D-9F8467C8D9A6}"
+              s:id="{C4570003-4866-4EAA-B069-8FA6611DC0EC}"
+              s:ph="main" />
+            <r
+              uid="{2E8F8A6E-B777-4913-86CA-27FCC63B90BD}"
+              p:after="r[@uid='{EA459392-D268-466C-B6FF-65A430CBD4BD}']"
+              s:ds="{2F400D32-10E8-4D24-AB60-2C65E6EE446C}"
+              s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+              s:ph="main" />
+            <r
+              uid="{580238FA-E9D8-42CA-913E-6170F033A2E3}"
+              p:after="r[@uid='{2E8F8A6E-B777-4913-86CA-27FCC63B90BD}']"
+              s:ds="{84F182B6-3539-4365-AB0C-EC40F026BCA1}"
+              s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+              s:ph="main" />
+            <r
+              uid="{1C32E937-7F32-449F-9C16-FE4D5DF8399B}"
+              p:after="r[@uid='{580238FA-E9D8-42CA-913E-6170F033A2E3}']"
+              s:ds="{C6754115-9573-418D-85DA-DB603F6A1214}"
+              s:id="{DC0AC587-3DF0-468C-9F4F-6E8C137ECD47}"
+              s:ph="main" />
+            <r
+              uid="{5BD1B35C-A750-47FA-B852-9B17050E5A6B}"
+              p:after="r[@uid='{1C32E937-7F32-449F-9C16-FE4D5DF8399B}']"
+              s:ds="{9C7328FD-1A72-4FE3-8B8B-D095759AEFDC}"
+              s:id="{278645FD-B7C1-4B02-A4FF-DD47E01AED93}"
+              s:ph="main" />
+            <r
+              uid="{F1EBE6F1-C0B7-4356-99C5-2CC12DB9377D}"
+              p:after="r[@uid='{5BD1B35C-A750-47FA-B852-9B17050E5A6B}']"
+              s:ds="{790A9DD5-9153-42A0-8648-BAB0C10C70B1}"
+              s:id="{A811D2B0-D08D-4991-A9DD-6D9FA5799CBD}"
+              s:ph="main" />
+            <r
+              uid="{187D55A1-B3A8-4E22-97F3-43B525A2958B}"
+              p:after="r[@uid='{F1EBE6F1-C0B7-4356-99C5-2CC12DB9377D}']"
+              s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+              s:ph="/header/navigation" />
+            <r
+              uid="{3C32544C-1F91-451E-9F0D-0DF8DB18CA42}"
+              p:after="r[@uid='{187D55A1-B3A8-4E22-97F3-43B525A2958B}']"
+              s:ds="{967FA988-1D5C-466D-BCD7-F8814AB0C202}"
+              s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
+              s:ph="header" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210806T104104Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: Fund Category Page

@@ -76,7 +76,7 @@
                 genericSearchRequest.ListingType = listingType.Split('|');
             }
 
-            GenericSearchResults contentSearchResults;
+            ContentSearchResults<GenericSearchResultItem> contentSearchResults;
             contentSearchResults = this._genericContentSearchService.GetTaxonomyRelatedGenericItems(genericSearchRequest);
             
             var genericSearchResponse = new GenericListingSearchResponse();

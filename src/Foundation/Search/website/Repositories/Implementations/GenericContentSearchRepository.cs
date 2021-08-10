@@ -13,7 +13,7 @@
     public class GenericContentSearchRepository : IGenericContentSearchRepository
     {
         // Doesn't need facet counts initially
-        public GenericSearchResults GetGenericSearchResultItems(Expression<Func<GenericSearchResultItem, bool>> predicate, int skip, int take, string database = "web")
+        public ContentSearchResults<GenericSearchResultItem> GetGenericSearchResultItems(Expression<Func<GenericSearchResultItem, bool>> predicate, int skip, int take, string database = "web")
         {
             using (IProviderSearchContext context = ContentSearchManager
                                                             .GetIndex($"liontrust_generic_{database}_index")
@@ -29,7 +29,7 @@
                     return null;
                 }
 
-                return new GenericSearchResults { SearchResults = results, TotalResults = results.TotalSearchResults };
+                return new ContentSearchResults<GenericSearchResultItem> { SearchResults = results, TotalResults = results.TotalSearchResults };
             }
         }
     }

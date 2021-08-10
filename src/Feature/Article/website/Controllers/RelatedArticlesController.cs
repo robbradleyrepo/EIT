@@ -3,6 +3,7 @@
     using Glass.Mapper.Sc.Web;
     using Glass.Mapper.Sc.Web.Mvc;
     using LionTrust.Feature.Article.Models;
+    using LionTrust.Foundation.Onboarding.Helpers;
     using LionTrust.Foundation.Search.Services.Interfaces;
     using Sitecore.Abstractions;
     using Sitecore.Mvc.Controllers;
@@ -27,7 +28,7 @@
             }
             else
             {
-                datasource.Articles = datasource.Articles.Take(3);
+                datasource.Articles = datasource.Articles.Where(a => OnboardingHelper.HasAccess(a.Fund?.FundReference?.ExcludedCountries))?.Take(3);
             }
 
             return View("/views/article/RelatedArticles.cshtml", datasource);
