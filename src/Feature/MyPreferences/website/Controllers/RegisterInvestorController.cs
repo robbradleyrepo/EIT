@@ -86,7 +86,7 @@
                             Company = company
                         };
 
-                        var savedUser = _emailPreferencesService.SaveNonProfUserAsSFLead(nonProfUserViewModel, emailTemplate, data.EditPreferencesPage.Url, data.FundDashboardyPage.Url);
+                        var savedUser = _emailPreferencesService.SaveNonProfUserAsSFLead(nonProfUserViewModel, emailTemplate, data.EditPreferencesPage.AbsoluteUrl, data.FundDashboardyPage.AbsoluteUrl);
 
                         if (savedUser != null)
                         {
@@ -108,7 +108,7 @@
                             Organisation = sfOrganisationId
                         };
 
-                        var savedUser = _emailPreferencesService.SaveProfUserAsSFContact(professionalUser, emailTemplate, data.EditPreferencesPage.Url, data.FundDashboardyPage.Url);
+                        var savedUser = _emailPreferencesService.SaveProfUserAsSFContact(professionalUser, emailTemplate, data.EditPreferencesPage.AbsoluteUrl, data.FundDashboardyPage.AbsoluteUrl);
 
                         if (savedUser != null)
                         {
@@ -152,7 +152,7 @@
 
             if (!string.IsNullOrEmpty(email))
             {
-                isSuccess = _emailPreferencesService.ResendEditEmailPrefLink(email, isContact, data.ResendEditPreferencesEmailTemplate, data.EditPreferencesPage.Url, data.FundDashboardyPage.Url);
+                isSuccess = _emailPreferencesService.ResendEditEmailPrefLink(email, isContact, data.ResendEditPreferencesEmailTemplate, data.EditPreferencesPage.AbsoluteUrl, data.FundDashboardyPage.AbsoluteUrl);
             }
 
             if (isSuccess)

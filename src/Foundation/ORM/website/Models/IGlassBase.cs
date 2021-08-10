@@ -21,6 +21,9 @@ namespace LionTrust.Foundation.ORM.Models
         [SitecoreInfo(SitecoreInfoType.Url)]
         string Url { get; set; }
 
+        [SitecoreInfo(SitecoreInfoType.Url, UrlOptions = SitecoreInfoUrlOptions.AlwaysIncludeServerUrl)]
+        string AbsoluteUrl { get; set; }
+
         [SitecoreInfo(SitecoreInfoType.Name)]
         string Name { get; set; }
 
