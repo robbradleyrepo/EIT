@@ -16,11 +16,12 @@
                                     <div class="hero-author">
                                         @if (Model.Article.Authors.Count() > 1)
                                         {
-                                            @Html.Glass().RenderImage(Model.Article.Author, a => a.Image, new { alt = Model.Article.Author.FullName, @class = "hero-author__img" }, isEditable: true)
+                                            @Html.Glass().RenderImage(Model.Article, a => a.MultipleAuthorsIcon, new { alt = Model.Article.Author.FullName, @class = "hero-author__img" }, isEditable: true)
+
                                         }
                                         else
                                         {
-                                            @Html.Glass().RenderImage(Model.Article, a => a.MultipleAuthorsIcon, new { alt = Model.Article.Author.FullName, @class = "hero-author__img" }, isEditable: true)
+                                            @Html.Glass().RenderImage(Model.Article.Author, a => a.Image, new { alt = Model.Article.Author.FullName, @class = "hero-author__img" }, isEditable: true)
                                         }
                                         <div class="hero-author__content">
                                             <span class="hero-author__name">
@@ -35,7 +36,7 @@
                                                 <i class="icon-follow"></i>
                                             </span>
                                             <span class="hero-author__date">
-                                                @Model.Article.Date?.ToString("dd/M/yyyy")
+                                                @Model.Article.Date.ToString("dd-MM-yy")
                                             </span>
                                         </div>
                                     </div>
