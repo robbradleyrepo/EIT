@@ -18,7 +18,7 @@ namespace LionTrust.Foundation.Navigation.Pipelines
 
             var fundReference = (LookupField)Sitecore.Context.Item.Fields[Legacy.Constants.FundPage.FundReference_FieldId];
 
-            if(fundReference != null)
+            if(fundReference != null && fundReference.TargetItem != null)
             {
                 var countryExclusions = (MultilistField)fundReference.TargetItem.Fields[Legacy.Constants.FundAccess.ExcludedCountires_FieldId];
                 
@@ -38,7 +38,7 @@ namespace LionTrust.Foundation.Navigation.Pipelines
 
                     if (!OnboardingHelper.HasAccess(countryNames))
                     {
-                        throw new HttpException((int)HttpStatusCode.NotFound, "Country not authorised to access this page.");
+                        throw new HttpException((int)HttpStatusCode.Unauthorized, "Country not authorised to access this page.");
                     }
                 }
             }

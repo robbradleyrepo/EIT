@@ -2,7 +2,7 @@
 @using LionTrust.Foundation.ORM.Extensions
 @using LionTrust.Foundation.Onboarding.Helpers;
 @model LionTrust.Feature.Promo.Models.IPodcastPromo
-@if (Model != null && OnboardingHelper.HasAccess(Model.Fund?.ExcludedCountries))
+@if (Model != null && (Model.Fund == null || OnboardingHelper.HasAccess(Model.Fund.ExcludedCountries)))
 {
     var opacity = string.IsNullOrWhiteSpace(Model.BackgroundImageOpacity) ? "opacity: 1" : "opacity: " + Model.BackgroundImageOpacity;
 
