@@ -22,7 +22,7 @@
                 @if (Model.HomeItem.MenuItems != null && Model.HomeItem.MenuItems.Any())
                 {
                     <ul class="navigation__list">
-                        @foreach (var menuItem in Model.HomeItem.MenuItems.Where(x => OnboardingHelper.HasAccess(x.Fund.ExcludedCountries)))
+                        @foreach (var menuItem in Model.HomeItem.MenuItems.Where(x => x.Fund == null || OnboardingHelper.HasAccess(x.Fund.ExcludedCountries)))
                         {
                             var filteredChildrens = menuItem.Children.Where(m => !m.ExcludeInSearchResults);
 
