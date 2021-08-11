@@ -13,7 +13,7 @@
 
         ISearchResponse<IFundContentResult> GetFundListingResponse(string database, string fundTeams, string fundManagers, string fundRegions, string fundRanges, string searchTerm, string sortOrder, int page);
 
-        ISearchResponse<IFundContentResult> GetMyFundListingResponse(string database, string fundTeams, IEnumerable<string> citiCodes, IEnumerable<string> excludecitiCodes, string sortOrder, int page);
+        ISearchResponse<IFundContentResult> GetMyFundListingResponse(string database, string fundTeams, IEnumerable<string> salesforceFundIds, IEnumerable<string> excludecitiCodes, string sortOrder, int page);
 
     }
 }

@@ -270,8 +270,9 @@
             var result = false;
 
             var profile = GetProfile(config.Profile.Name);
+            var address = OnboardingHelper.GetCurrentContactAddress();
 
-            if (profile != null && profile.PatternId.HasValue)
+            if (profile != null && profile.PatternId.HasValue && address != null && !string.IsNullOrWhiteSpace(address.Country))
             {
                 result = true;
             }

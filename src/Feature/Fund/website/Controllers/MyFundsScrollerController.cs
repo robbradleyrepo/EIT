@@ -54,7 +54,7 @@
             else if (contactData!= null && contactData.SalesforceFundIds != null && contactData.SalesforceFundIds.Any())
             {
                 //Get the funds that are followed.
-                fundSearchRequest.CitiCodes = contactData.SalesforceFundIds;
+                fundSearchRequest.SalesforceFundIds = contactData.SalesforceFundIds;
                 fundSearchResults = _fundContentSearchService.GetFunds(fundSearchRequest);
 
                 if (fundSearchResults != null && fundSearchResults.TotalResults > 0)
@@ -66,12 +66,12 @@
                     fundSearchRequest.FundTeams = followedFunds.Select(f => f.FundTeam);
                     fundSearchRequest.FundRanges = followedFunds.SelectMany(f => f.FundRange).Distinct();
                     fundSearchRequest.FundRegions = followedFunds.Select(f => f.FundRegion);
-                    fundSearchRequest.ExcludeCitiCodes = followedFunds.Select(f => f.CitiCode);
+                    fundSearchRequest.ExcludeSalesforceFundIds = followedFunds.Select(f => f.SalesforceFundId);
                 }
                 else
                 {
                     //clear the followed funds as we don't want to search for these again if no results.
-                    fundSearchRequest.CitiCodes = null;
+                    fundSearchRequest.SalesforceFundIds = null;
                 }
 
             }
@@ -108,7 +108,7 @@
                 FundRegion = x.Document.FundRegion,
                 FundTeam = x.Document.FundTeam,
                 FundTeamName = x.Document.FundTeamName,
-                CitiCode = x.Document.CitiCode
+                SalesforceFundId = x.Document.SalesforceFundId
             });
         }
     }

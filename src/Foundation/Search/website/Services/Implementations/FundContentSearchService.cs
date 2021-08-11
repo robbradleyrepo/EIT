@@ -76,28 +76,28 @@
                 fundFilter = fundFilter.And(regionPredicate);
             }
 
-            if (fundSearchRequest.CitiCodes != null && fundSearchRequest.CitiCodes.Any())
+            if (fundSearchRequest.SalesforceFundIds != null && fundSearchRequest.SalesforceFundIds.Any())
             {
                 var fundsPredicate = PredicateBuilder.False<FundSearchResultItem>();
                 fundsPredicate = fundSearchRequest
-                                            .CitiCodes
+                                            .SalesforceFundIds
                                                     .Aggregate(fundsPredicate,
-                                                                    (current, citiCode)
+                                                                    (current, salesforceFundId)
                                                                                 => current
-                                                                                     .Or(item => item.CitiCode.Contains(citiCode)));
+                                                                                     .Or(item => item.SalesforceFundId.Contains(salesforceFundId)));
 
                 fundFilter = fundFilter.And(fundsPredicate);
             }
 
-            if (fundSearchRequest.ExcludeCitiCodes != null && fundSearchRequest.ExcludeCitiCodes.Any())
+            if (fundSearchRequest.ExcludeSalesforceFundIds != null && fundSearchRequest.ExcludeSalesforceFundIds.Any())
             {
                 var excludeFundsPredicate = PredicateBuilder.False<FundSearchResultItem>();
                 excludeFundsPredicate = fundSearchRequest
-                                            .ExcludeCitiCodes
+                                            .ExcludeSalesforceFundIds
                                                     .Aggregate(excludeFundsPredicate,
-                                                                    (current, citiCode)
+                                                                    (current, salesforceFundId)
                                                                                 => current
-                                                                                     .And(item => !item.CitiCode.Contains(citiCode)));
+                                                                                     .And(item => !item.SalesforceFundId.Contains(salesforceFundId)));
 
                 fundFilter = fundFilter.And(excludeFundsPredicate);
             }

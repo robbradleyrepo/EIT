@@ -67,7 +67,7 @@
                 FundRegion = x.Document.FundRegion,
                 FundTeam = x.Document.FundTeam,
                 FundTeamName = x.Document.FundTeamName,
-                CitiCode = x.Document.CitiCode
+                SalesforceFundId = x.Document.SalesforceFundId
             }); ;
         }
 
@@ -188,7 +188,7 @@
             return fundSearchResponse;
         }
 
-        public ISearchResponse<IFundContentResult> GetMyFundListingResponse(string database, string fundTeams, IEnumerable<string> citiCodes, IEnumerable<string> excludeCitiCodes, string sortOrder, int page)
+        public ISearchResponse<IFundContentResult> GetMyFundListingResponse(string database, string fundTeams, IEnumerable<string> salesforceFundIds, IEnumerable<string> excludeCitiCodes, string sortOrder, int page)
         {
             page = page - 1;
 
@@ -198,8 +198,8 @@
                 FundTeams = fundTeams?.Split('|'),
                 Skip = page * 21,
                 Take = 21,
-                CitiCodes = citiCodes,
-                ExcludeCitiCodes = excludeCitiCodes
+                SalesforceFundIds = salesforceFundIds,
+                ExcludeSalesforceFundIds = excludeCitiCodes
             };
 
             ContentSearchResults<FundSearchResultItem> contentSearchResults;

@@ -164,8 +164,8 @@
                 return new HttpStatusCodeResult(System.Net.HttpStatusCode.NotFound);
             }
 
-            var citiCodes = contactFacetData.SalesforceFundIds;
-            var response = this._fundListingDataManager.GetMyFundListingResponse(database, fundTeams, citiCodes, null, sortOrder, page);
+            var salesforceFundIds = contactFacetData.SalesforceFundIds;
+            var response = this._fundListingDataManager.GetMyFundListingResponse(database, fundTeams, salesforceFundIds, null, sortOrder, page);
 
             if (response.StatusCode != 200)
             {

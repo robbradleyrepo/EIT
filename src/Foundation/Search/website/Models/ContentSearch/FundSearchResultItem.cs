@@ -46,7 +46,7 @@
         [IndexField("Fund_FundTeamName")]
         public string FundTeamName { get; set; }
 
-        [IndexField("LegacyFund_CitiCode")]
-        public string CitiCode { get; set; }
+        [IndexField("salesforce_fundid")]
+        public string SalesforceFundId { get; set; }
     }
 }

@@ -58,7 +58,7 @@
                 var fundSearchRequest = new FundSearchRequest
                 {
                     DatabaseName = _databaseName,
-                    CitiCodes = contactData.SalesforceFundIds
+                    SalesforceFundIds = contactData.SalesforceFundIds
                 };
 
                 var fundSearchResults = _fundContentSearchService.GetFunds(fundSearchRequest);
@@ -70,14 +70,14 @@
                 var followedFunds = MapFundResultHits(_fundContentSearchService.GetFunds(fundSearchRequest)?.SearchResults);
 
                 //Clear the funds from the search request.
-                fundSearchRequest.CitiCodes = null;
+                fundSearchRequest.SalesforceFundIds = null;
 
                 //search based on these funds.
                 fundSearchRequest.FundManagers = followedFunds.SelectMany(f => f.FundManagers).Distinct();
                 fundSearchRequest.FundTeams = followedFunds.Select(f => f.FundTeam);
                 fundSearchRequest.FundRanges = followedFunds.SelectMany(f => f.FundRange).Distinct();
                 fundSearchRequest.FundRegions = followedFunds.Select(f => f.FundRegion);
-                fundSearchRequest.ExcludeCitiCodes = followedFunds.Select(f => f.CitiCode);
+                fundSearchRequest.ExcludeSalesforceFundIds = followedFunds.Select(f => f.SalesforceFundId);
 
                 articles = new ArticleRepository(_contentSearchService, _context).Map(contactData.SalesforceFundIds.Select(f => new Guid(f)), null, followedFunds.Select(f => new Guid(f.FundTeam))?.Distinct(), followedFunds.SelectMany(f => f.FundManagers.Select(fm => new Guid(fm)))?.Distinct(), null, _databaseName);
 
@@ -108,7 +108,7 @@
                 FundRegion = x.Document.FundRegion,
                 FundTeam = x.Document.FundTeam,
                 FundTeamName = x.Document.FundTeamName,
-                CitiCode = x.Document.CitiCode
+                SalesforceFundId = x.Document.SalesforceFundId
             });
         }
     }

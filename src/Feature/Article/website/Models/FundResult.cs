@@ -35,6 +35,6 @@
 
         public string FundUpdateUrl { get; set; }
 
-        public string CitiCode { get; set; }
+        public string SalesforceFundId { get; set; }
     }
 }
