@@ -100,7 +100,7 @@
             {
                 <nav class="navigation navigation_desktop">
                     <ul class="navigation__list">
-                        @foreach (var menuItem in Model.HomeItem.MenuItems.Where(x => OnboardingHelper.HasAccess(x.Fund.ExcludedCountries)))
+                        @foreach (var menuItem in Model.HomeItem.MenuItems.Where(x => x.Fund == null || OnboardingHelper.HasAccess(x.Fund.ExcludedCountries)))
                         {
                             var filteredChildrens = menuItem.Children.Where(m => !m.ExcludeInSearchResults);
                             if (filteredChildrens != null && filteredChildrens.Any())
@@ -477,7 +477,7 @@
     if (Model.HomeItem.MenuItems != null && Model.HomeItem.MenuItems.Any())
     {
         <div class="navigation__sublinks-items">
-            @foreach (var menuItem in Model.HomeItem.MenuItems.Where(x => OnboardingHelper.HasAccess(x.Fund.ExcludedCountries)))
+            @foreach (var menuItem in Model.HomeItem.MenuItems.Where(x => x.Fund == null || OnboardingHelper.HasAccess(x.Fund.ExcludedCountries)))
             {
                 var filteredChildrens = menuItem.Children.Where(m => !m.ExcludeInSearchResults);
                 <div class="navigation__item">
