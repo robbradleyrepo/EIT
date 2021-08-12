@@ -58,7 +58,8 @@
                 var fundSearchRequest = new FundSearchRequest
                 {
                     DatabaseName = _databaseName,
-                    SalesforceFundIds = contactData.SalesforceFundIds
+                    SalesforceFundIds = contactData.SalesforceFundIds,
+                    Take = int.MaxValue
                 };
 
                 var fundSearchResults = _fundContentSearchService.GetFunds(fundSearchRequest);
@@ -67,7 +68,7 @@
                 {
                     return null;
                 }
-                var followedFunds = MapFundResultHits(_fundContentSearchService.GetFunds(fundSearchRequest)?.SearchResults);
+                var followedFunds = MapFundResultHits(fundSearchResults.SearchResults.ToList());
 
                 //Clear the funds from the search request.
                 fundSearchRequest.SalesforceFundIds = null;
@@ -75,11 +76,20 @@
                 //search based on these funds.
                 fundSearchRequest.FundManagers = followedFunds.SelectMany(f => f.FundManagers).Distinct();
                 fundSearchRequest.FundTeams = followedFunds.Select(f => f.FundTeam);
-                fundSearchRequest.FundRanges = followedFunds.SelectMany(f => f.FundRange).Distinct();
+                fundSearchRequest.FundRanges = followedFunds.Where(x => x.FundRange != null && x.FundRegion.Any()).SelectMany(f => f.FundRange).Distinct();
                 fundSearchRequest.FundRegions = followedFunds.Select(f => f.FundRegion);
                 fundSearchRequest.ExcludeSalesforceFundIds = followedFunds.Select(f => f.SalesforceFundId);
 
-                articles = new ArticleRepository(_contentSearchService, _context).Map(contactData.SalesforceFundIds.Select(f => new Guid(f)), null, followedFunds.Select(f => new Guid(f.FundTeam))?.Distinct(), followedFunds.SelectMany(f => f.FundManagers.Select(fm => new Guid(fm)))?.Distinct(), null, _databaseName);
+                fundSearchResults = _fundContentSearchService.GetFunds(fundSearchRequest);
+
+                if(fundSearchResults == null || fundSearchResults.TotalResults < 1)
+                {
+                    return null;
+                }
+
+                var funds = MapFundResultHits(fundSearchResults.SearchResults.ToList())?.Select(f => f.FundId);
+
+                articles = new ArticleRepository(_contentSearchService, _context).Map(funds, null, followedFunds.Select(f => new Guid(f.FundTeam))?.Distinct(), followedFunds.SelectMany(f => f.FundManagers.Select(fm => new Guid(fm)))?.Distinct(), null, _databaseName);
 
                 if (articles == null || !articles.Any())
                 {

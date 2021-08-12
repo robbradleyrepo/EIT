@@ -73,18 +73,18 @@
         /// <summary>
         /// Gets fund facets that will be used for filtering.
         /// </summary>
-        /// <param name="fundListingFacetConfig">Guid of the fundListingFacetConfig to use in multi site scenario - default is used if none set</param>
+        /// <param name="facetConfig">Guid of the fundListingFacetConfig to use in multi site scenario - default is used if none set</param>
         /// <returns>A list of funds.</returns>        
-        public ActionResult GetFundListingFacets(string fundListingFacetConfig)
+        public ActionResult GetFundListingFacets(string facetConfig)
         {
             Guid config;
-            if (string.IsNullOrEmpty(fundListingFacetConfig))
+            if (string.IsNullOrEmpty(facetConfig))
             {
                 config = new Guid(Search.Constants.APIFacets.Defaults.FundSearchFacetsConfig);
             }
             else
             {
-                var success = Guid.TryParse(fundListingFacetConfig, out config);
+                var success = Guid.TryParse(facetConfig, out config);
                 if (!success)
                 {
                     return Content("Configuration ID could not be parsed as a Guid");
@@ -165,6 +165,7 @@
             }
 
             var salesforceFundIds = contactFacetData.SalesforceFundIds;
+            
             var response = this._fundListingDataManager.GetMyFundListingResponse(database, fundTeams, salesforceFundIds, null, sortOrder, page);
 
             if (response.StatusCode != 200)

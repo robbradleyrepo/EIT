@@ -9,6 +9,7 @@ export default () => {
   const folderId = rootDom.dataset?.folderid;
   const parentId = rootDom.dataset?.parentid;
   const contentType = rootDom.dataset?.contenttype;
+  const ref = rootDom.dataset?.ref;
   const location = "https://cm-liontrust-it.sagittarius.agency/";
   let root = "";
   if (
@@ -86,6 +87,7 @@ export default () => {
         let str = "";
         str = str + "page=" + this.page;
         if (this.searchText) str = str + "&searchTerm=" + this.searchText;
+		if (ref) str = str + "&ref=" + ref;
         for (let prop in this.params) {
           const mutatedProp = prop.replace(/ /g, "");
           const lowerCaseProp =
@@ -193,7 +195,7 @@ export default () => {
 
       getFacetsRequest() {
         const facetUrl = fundFacetId
-          ? `${host}/Facets?articleListingFacetConfig={${fundFacetId}}`
+          ? `${host}/Facets?facetConfig={${fundFacetId}}`
           : `${host}/Facets`;
         $.get(facetUrl)
           .done((response) => {

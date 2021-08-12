@@ -188,7 +188,7 @@
             return fundSearchResponse;
         }
 
-        public ISearchResponse<IFundContentResult> GetMyFundListingResponse(string database, string fundTeams, IEnumerable<string> salesforceFundIds, IEnumerable<string> excludeCitiCodes, string sortOrder, int page)
+        public ISearchResponse<IFundContentResult> GetMyFundListingResponse(string database, string fundTeams, IEnumerable<string> salesforceFundIds, IEnumerable<string> excludeSalesforceFundIds, string sortOrder, int page)
         {
             page = page - 1;
 
@@ -199,7 +199,7 @@
                 Skip = page * 21,
                 Take = 21,
                 SalesforceFundIds = salesforceFundIds,
-                ExcludeSalesforceFundIds = excludeCitiCodes
+                ExcludeSalesforceFundIds = excludeSalesforceFundIds
             };
 
             ContentSearchResults<FundSearchResultItem> contentSearchResults;

@@ -64,7 +64,7 @@
                     //search based on these funds.
                     fundSearchRequest.FundManagers = followedFunds.SelectMany(f => f.FundManagers).Distinct();
                     fundSearchRequest.FundTeams = followedFunds.Select(f => f.FundTeam);
-                    fundSearchRequest.FundRanges = followedFunds.SelectMany(f => f.FundRange).Distinct();
+                    fundSearchRequest.FundRanges = followedFunds.Where(x => x.FundRange != null && x.FundRange.Any())?.SelectMany(f => f.FundRange).Distinct();
                     fundSearchRequest.FundRegions = followedFunds.Select(f => f.FundRegion);
                     fundSearchRequest.ExcludeSalesforceFundIds = followedFunds.Select(f => f.SalesforceFundId);
                 }

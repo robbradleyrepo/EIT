@@ -14,10 +14,20 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "07f07757-d439-4b90-9430-0c3f3d9bf9bf"
+      Hint: MyFundsLeadBanner_Cta
+      Value: |
+        <link text="Edit Preferences" anchor="" linktype="internal" class="" title=""  querystring="" id="{50C3858D-8102-46FE-8C3B-E479142BC87E}" />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20210811T120454Z
+    - ID: "50fc7275-f1d5-4391-bfb8-1268dcbd15a4"
+      Hint: MyFundsLeadBanner_Title
+      Value: Welcome
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
         sitecore\admin
+    - ID: "838ab617-cce0-4319-964e-4fa17315d6bd"
+      Hint: MyFundsLeadBanner_Body
+      Value: Welcome body

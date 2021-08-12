@@ -1,10 +1,12 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @using Sitecore.Configuration
+@using Sitecore.Web
 @model LionTrust.Feature.Search.Models.IMyFundsLister
 @if (Model != null)
 {
-<div class="lister-app" id="lister-app" data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.FundApiRoute_SettingName))" data-literatureid="@(Model.FundLiterature != null ? Model.FundLiterature.Id.ToString() : string.Empty)" data-fundfacetid="@(Model.FacetsConfiguration != null ? Model.FacetsConfiguration.Id.ToString() : string.Empty)">
-    <h2 class="h3 text-center mt-3 mt-lg-4">@Html.Glass().Editable(Model, m => m.Title)</h2>
+    <div class="lister-app" id="lister-app" data-ref="@WebUtil.GetQueryString(LionTrust.Foundation.Contact.Constants.QueryStringNames.EmailPreferencefParams.RefQueryStringKey)" data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.MyFundsApiRoute_SettingName))" data-literatureid="@(Model.FundLiterature != null ? Model.FundLiterature.Id.ToString() : string.Empty)" data-fundfacetid="@(Model.FacetsConfiguration != null ? Model.FacetsConfiguration.Id.ToString() : string.Empty)">
+    <h2 class="h3 text-center mt-3 mt-lg-4">
+        @Html.Glass().Editable(Model, m => m.Title)</h2>
     <div class="article-filter-wrapper">
         <div class="article-filters" :class="mobileFilter ? 'active' : ''">
             <div class="article-filters__header d-lg-none">
@@ -178,5 +180,5 @@
         </div>
     </div>
     @Html.Partial("~/Views/Search/_Pagination.cshtml", Model)
-    </div>
-    }
+</div>
+}

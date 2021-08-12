@@ -86,7 +86,7 @@
                                                                                 => current
                                                                                      .Or(item => item.SalesforceFundId.Contains(salesforceFundId)));
 
-                fundFilter = fundFilter.And(fundsPredicate);
+                predicate = predicate.And(fundsPredicate);
             }
 
             if (fundSearchRequest.ExcludeSalesforceFundIds != null && fundSearchRequest.ExcludeSalesforceFundIds.Any())
@@ -99,7 +99,7 @@
                                                                                 => current
                                                                                      .And(item => !item.SalesforceFundId.Contains(salesforceFundId)));
 
-                fundFilter = fundFilter.And(excludeFundsPredicate);
+                predicate = predicate.And(excludeFundsPredicate);
             }
 
             predicate = predicate.And(fundFilter);
