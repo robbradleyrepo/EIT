@@ -41,8 +41,8 @@
             {
                 var fundPredicate = PredicateBuilder.False<ArticleSearchResultItem>();
                 fundPredicate = articleSearchRequest.Funds.Aggregate(fundPredicate,
-                                                                          (current, category) => current
-                                                                                                  .Or(item => item.ArticleFund == category));
+                                                                          (current, fund) => current
+                                                                                                  .Or(item => item.ArticleFund == IdHelper.NormalizeGuid(fund, true)));
 
                 taxonomyFilter = taxonomyFilter.And(fundPredicate);
             }

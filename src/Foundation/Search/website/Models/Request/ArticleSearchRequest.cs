@@ -30,6 +30,5 @@
 
         public IEnumerable<Guid> Topics { get; set; }
 
-        public string Country { get; set; }
     }
 }

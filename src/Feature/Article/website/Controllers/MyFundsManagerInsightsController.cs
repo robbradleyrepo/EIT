@@ -11,7 +11,7 @@
     using LionTrust.Foundation.Search.Services.Interfaces;
     using Sitecore.Analytics;
     using Sitecore.ContentSearch.Linq;
-    using Sitecore.Data;
+    using Sitecore.ContentSearch.Utilities;
     using Sitecore.Mvc.Controllers;
     using System;
     using System.Collections.Generic;
@@ -52,52 +52,44 @@
             {
                 return null;
             }
-            else if(contactData != null && contactData.SalesforceFundIds != null && contactData.SalesforceFundIds.Any())
+            //Get the funds that are followed.
+            var fundSearchRequest = new FundSearchRequest
             {
-                //Get the funds that are followed.
-                var fundSearchRequest = new FundSearchRequest
-                {
-                    DatabaseName = _databaseName,
-                    SalesforceFundIds = contactData.SalesforceFundIds,
-                    Take = int.MaxValue
-                };
+                DatabaseName = _databaseName,
+                SalesforceFundIds = contactData.SalesforceFundIds,
+                Take = int.MaxValue
+            };
 
-                var fundSearchResults = _fundContentSearchService.GetFunds(fundSearchRequest);
+            var fundSearchResults = _fundContentSearchService.GetFunds(fundSearchRequest);
 
-                if (fundSearchResults == null || fundSearchResults.TotalResults < 1)
-                {
-                    return null;
-                }
-                var followedFunds = MapFundResultHits(fundSearchResults.SearchResults.ToList());
+            if (fundSearchResults == null || fundSearchResults.TotalResults < 1)
+            {
+                return null;
+            }
 
-                //Clear the funds from the search request.
-                fundSearchRequest.SalesforceFundIds = null;
+            var followedFunds = MapFundResultHits(fundSearchResults.SearchResults.ToList());
 
-                //search based on these funds.
-                fundSearchRequest.FundManagers = followedFunds.SelectMany(f => f.FundManagers).Distinct();
-                fundSearchRequest.FundTeams = followedFunds.Select(f => f.FundTeam);
-                fundSearchRequest.FundRanges = followedFunds.Where(x => x.FundRange != null && x.FundRegion.Any()).SelectMany(f => f.FundRange).Distinct();
-                fundSearchRequest.FundRegions = followedFunds.Select(f => f.FundRegion);
-                fundSearchRequest.ExcludeSalesforceFundIds = followedFunds.Select(f => f.SalesforceFundId);
+            var fundTeams = followedFunds.Select(t => new Guid(t.FundTeam))?.Distinct();
 
-                fundSearchResults = _fundContentSearchService.GetFunds(fundSearchRequest);
+            if(fundTeams == null || !fundTeams.Any())
+            {
+                return null;
+            }
 
-                if(fundSearchResults == null || fundSearchResults.TotalResults < 1)
-                {
-                    return null;
-                }
+            articles = new ArticleRepository(_contentSearchService, _context).Map(null, null, fundTeams, null, null, _databaseName);
 
-                var funds = MapFundResultHits(fundSearchResults.SearchResults.ToList())?.Select(f => f.FundId);
-
-                articles = new ArticleRepository(_contentSearchService, _context).Map(funds, null, followedFunds.Select(f => new Guid(f.FundTeam))?.Distinct(), followedFunds.SelectMany(f => f.FundManagers.Select(fm => new Guid(fm)))?.Distinct(), null, _databaseName);
-
-                if (articles == null || !articles.Any())
-                {
-                    return null;
-                }
+            if (articles == null || !articles.Any())
+            {
+                return null;
             }
 
             var fundManagerInsightsViewModel = new FundManagerInsightsViewModel(data, articles);
+
+            if (fundManagerInsightsViewModel.Data.CTA != null)
+            {
+                fundManagerInsightsViewModel.Data.CTA.Query = $"fundTeams={string.Join("|", fundTeams.Select(t => IdHelper.NormalizeGuid(t, true)))}";
+            }
+
             return View("/views/article/fundmanagerinsights.cshtml", fundManagerInsightsViewModel);
         }
 

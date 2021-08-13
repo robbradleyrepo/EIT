@@ -14,6 +14,9 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "0680177d-a5de-4f84-8cae-986fd4b00b57"
+      Hint: MyFundsLister_SortAZLabel
+      Value: Ascending 
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20210811T120454Z
@@ -21,3 +24,15 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
+    - ID: "87e96566-897a-4d4c-8da5-8727bd4e436e"
+      Hint: Pagination_NextLabel
+      Value: Next
+    - ID: "c497ed1b-8cfc-4e2f-ba18-b5e60f40b04f"
+      Hint: MyFundsLister_FundLiterature
+      Value: "{2A60AA49-72DB-4D51-A5FB-E4F25B1B9E19}"
+    - ID: "ea75175b-b960-4494-bd20-fd5b3b949934"
+      Hint: MyFundsLister_SortZALabel
+      Value: Descending 
+    - ID: "ee10a0f8-834b-4c8b-9ec5-9b643fcd112c"
+      Hint: Pagination_PreviousLabel
+      Value: Previous

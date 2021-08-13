@@ -82,7 +82,7 @@
             {
                 datasource.Funds = fundSearchResults.SearchResults.Select(f => _context.SitecoreService.GetItem<IFundCard>(f.Document.ItemId.Guid));
             }
-            else if(datasource.Funds == null)
+            else if(datasource.Funds == null || !datasource.Funds.Any())
             {
                 //No Funds found.
                 return null;

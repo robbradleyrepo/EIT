@@ -103,32 +103,32 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-6 col-lg-2 offset-6 col-md-4 offset-md-8 offset-lg-10 margin-sort-btn d-lg-none">
-                    <div class="relative">
-                        <button class="btn btn-clean d-block ml-auto button-sort" @@click.stop="showSort">
-                            @Html.Glass().Editable(Model, m => m.SortLabel) <i class="icon-sort"></i>
-                        </button>
-                        <div class="sort-dropdown" :class="sortModal ? 'active' : ''">
-                            <div class="text-right">
-                                <span class="btn btn-clean">
+                        <div class="col-6 col-lg-2 offset-6 col-md-4 offset-md-8 offset-lg-10 margin-sort-btn">
+                            <div class="relative">
+                                <button class="btn btn-clean d-block ml-auto button-sort" @@click.stop="showSort">
                                     @Html.Glass().Editable(Model, m => m.SortLabel) <i class="icon-sort"></i>
-                                </span>
+                                </button>
+                                <div class="sort-dropdown" :class="sortModal ? 'active' : ''">
+                                    <div class="text-right">
+                                        <span class="btn btn-clean">
+                                            @Html.Glass().Editable(Model, m => m.SortLabel) <i class="icon-sort"></i>
+                                        </span>
+                                    </div>
+                                    <label for="newest" class="option-checkbox">
+                                        <input id="newest" v-model="sortOrder" value="ASC" class="option-checkbox__input" type="radio" name="sort" checked>
+                                        <span class="option-checkbox__text">@Html.Glass().Editable(Model, m => m.SortAZLabel)</span>
+                                        <span class="option-checkbox__icon"></span>
+                                    </label>
+                                    <label for="oldest" class="option-checkbox">
+                                        <input id="oldest" v-model="sortOrder" value="DESC" class="option-checkbox__input" type="radio" name="sort">
+                                        <span class="option-checkbox__text">@Html.Glass().Editable(Model, m => m.SortZALabel)</span>
+                                        <span class="option-checkbox__icon"></span>
+                                    </label>
+                                </div>
                             </div>
-                            <label for="newest" class="option-checkbox">
-                                <input id="newest" v-model="sortOrder" value="ASC" class="option-checkbox__input" type="radio" name="sort" checked>
-                                <span class="option-checkbox__text">@Html.Glass().Editable(Model, m => m.SortAZLabel)</span>
-                                <span class="option-checkbox__icon"></span>
-                            </label>
-                            <label for="oldest" class="option-checkbox">
-                                <input id="oldest" v-model="sortOrder" value="DESC" class="option-checkbox__input" type="radio" name="sort">
-                                <span class="option-checkbox__text">@Html.Glass().Editable(Model, m => m.SortZALabel)</span>
-                                <span class="option-checkbox__icon"></span>
-                            </label>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
     </div>
 
     <div class="container d-lg-none" v-if="getFacetsLength">
@@ -152,7 +152,7 @@
                     <div class="col-lg-3 col-xl-2">
                         <div class="fund-item-list__badge">
                             <span class="badge-secondary">
-                                {{fund.fundCardHeading}}
+                                {{fund.fundTeamName}}
                             </span>
                         </div>
                     </div>
