@@ -46,9 +46,11 @@
         text-align: center
         line-height: 28px
         margin: 0 auto
-        margin-bottom: 55px
+        margin-bottom: 55px            
         @include breakpoint(tablet, up)
             margin-bottom: 120px
+        @media screen and (max-height: 800px) and (min-width: 992px)
+            margin-bottom: 55px
     &__img
         width: 197px
         height: auto
@@ -91,6 +93,8 @@
     &__steps
         position: absolute
         bottom: 16px
+        @media screen and (max-height: 800px) and (min-width: 992px)
+            bottom: -110px
     &__step
         display: inline-block
         margin: 0 5px
