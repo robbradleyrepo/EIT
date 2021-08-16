@@ -4,6 +4,10 @@ Parent: "8e0523c3-981a-466c-9fe2-6aa5fdeb06dc"
 Template: "1d2058b8-c7a2-4d41-8fdf-61ac3b786798"
 Path: /sitecore/templates/Branches/Project/LionTrust/Page Types/Investment Case/$name/_Local/Lead Banner
 DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: "-200"
 Languages:
 - Language: en
   Versions:
