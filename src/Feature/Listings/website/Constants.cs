@@ -160,5 +160,16 @@
             public const string Role_FieldId = "{0930A4BB-1CC6-471D-BC6B-FFD4097E2008}";
             public const string ShortBio_FieldId = "{97454B15-76C1-4AE0-AB59-C3F8D2304CCC}";
         }
+
+        public static class OurValues
+        {
+            public const string Heading_FieldId = "{82E11A79-E14E-4140-BE21-6EB9B623CF71}";
+            public const string FirstTitle_FieldId = "{8196CCDD-B06B-433F-8445-6919A4D39216}";
+            public const string FirstBodyCopy_FieldId = "{21A76102-EDD0-4248-98D3-B320C5E25909}";
+            public const string SecondTitle_FieldId = "{C78D6936-DECA-4E02-B5E0-F76BD11BCF88}";
+            public const string SecondBodyCopy_FieldId = "{562DD82E-0639-4CE5-8379-A00B855FBF98}";
+            public const string ThirdTitle_FieldId = "{F71792B2-D652-4F8C-B6B2-73D5E67B1AF1}";
+            public const string ThirdBodyCopy_FieldId = "{CD3C0151-27B3-43E4-9B7D-B66B248529AA}";
+        }
     }
 }
