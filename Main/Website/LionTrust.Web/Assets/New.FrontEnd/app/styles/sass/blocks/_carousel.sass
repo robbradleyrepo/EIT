@@ -8,11 +8,9 @@
         padding-bottom: 40px
         margin-top: 10px
         @include breakpoint(desktop, up)
-            padding-bottom: 27px
+            padding: 70px 0 80px
     @include breakpoint(tablet, up)
-        padding-bottom: 0
-    @include breakpoint(desktop, up)
-        margin: 70px 0 60px
+        padding-bottom: 0    
     .swiper-container-carousel .swiper-slide
         position: relative
         transition: transform .4s ease
@@ -101,10 +99,6 @@
             &:hover
                 &:after
                     opacity: 0.1
-    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
-        overflow-x: visible
-    @media screen and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0)
-        overflow-x: visible
 
 .slide
     background-size: cover
@@ -161,6 +155,7 @@
         @extend .article-promo__head-title
         font-size: 6px
         color: $gold
+        line-height: inherit
     &__title
         color: $white
         @include font-size(26px)
