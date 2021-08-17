@@ -2,8 +2,8 @@
 @model LionTrust.Feature.Listings.Models.IOurValues
 @if (Model != null)
 {
-<div class="container">
-    <h2 class="text-center text-black">@Html.Glass().Editable(Model, m => m.Heading)</h2>
+<div class="container mb-5">
+    <h2 class="text-center text-black mb-3">@Html.Glass().Editable(Model, m => m.Heading)</h2>
     <div class="row">
         <div class="col-lg-4">
             <h4 class="text-center text-primary">@Html.Glass().Editable(Model, m => m.FirstTitle)</h4>
