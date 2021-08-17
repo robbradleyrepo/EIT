@@ -1,0 +1,30 @@
+﻿---
+ID: "a0d06e95-9bb2-4377-8dfc-fb6a5b8caced"
+Parent: "86e1d7f9-c77b-4edc-be86-757bfa43b205"
+Template: "f48be9e1-dcea-4734-952f-ba5b4799fa46"
+Path: /sitecore/content/LionTrustNew/Global/My Preferences/Email Templates/Fund Import Result
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0eb6aa93-9568-495d-b538-73c313511d11"
+      Hint: FromDisplayName
+      Value: Noreply
+    - ID: "10b60e42-7623-4916-970e-f8f590e2cc82"
+      Hint: ToAddresses
+      Value: hayley.aronberg@liontrust.co.uk;Ragnar.Rahuoja@alphafmc.com;Jack.Hilliam@liontrust.co.uk;liontrust@fuseit.com
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20141001T150358Z
+    - ID: "548f8d1d-ee61-4f5a-bc44-a2aad347f59a"
+      Hint: Subject
+      Value: "Liontrust fund import failure - Prod"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "ee11b3cb-b454-4d08-b32e-082d0173006d"
+      Hint: FromAddress
+      Value: noreply@liontrustassetmanagement.co.uk

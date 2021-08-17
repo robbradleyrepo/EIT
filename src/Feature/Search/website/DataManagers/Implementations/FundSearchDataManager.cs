@@ -16,6 +16,7 @@
     using LionTrust.Foundation.Search.Models.Response;
     using LionTrust.Foundation.Search.Services.Interfaces;
     using Sitecore.ContentSearch.Linq;
+    using Sitecore.Data;
     using Sitecore.Globalization;
 
     public class FundSearchDataManager : IFundSearchDataManager
@@ -65,8 +66,9 @@
                 FundRange = x.Document.FundRanges,
                 FundRegion = x.Document.FundRegion,
                 FundTeam = x.Document.FundTeam,
-                FundTeamName = x.Document.FundTeamName
-            });
+                FundTeamName = x.Document.FundTeamName,
+                SalesforceFundId = x.Document.SalesforceFundId
+            }); ;
         }
 
         public FacetsResponse GetFundFilterFacets(Guid fundFilterFacetConfigId)
@@ -186,7 +188,7 @@
             return fundSearchResponse;
         }
 
-        public ISearchResponse<IFundContentResult> GetMyFundListingResponse(string database, string fundTeams, string funds, string sortOrder, int page)
+        public ISearchResponse<IFundContentResult> GetMyFundListingResponse(string database, string fundTeams, IEnumerable<string> salesforceFundIds, IEnumerable<string> excludeSalesforceFundIds, string sortOrder, int page)
         {
             page = page - 1;
 
@@ -196,7 +198,8 @@
                 FundTeams = fundTeams?.Split('|'),
                 Skip = page * 21,
                 Take = 21,
-                Funds = funds?.Split('|'),
+                SalesforceFundIds = salesforceFundIds,
+                ExcludeSalesforceFundIds = excludeSalesforceFundIds
             };
 
             ContentSearchResults<FundSearchResultItem> contentSearchResults;

@@ -1,10 +1,9 @@
 ﻿namespace LionTrust.Feature.Fund.Repository
 {
+    using LionTrust.Foundation.Search.Models.ContentSearch;
     using Sitecore.ContentSearch;
-    using Sitecore.ContentSearch.SearchTypes;
-    using System;
 
-    public class FundTeamSearchResultItem : SearchResultItem
+    public class FundTeamSearchResultItem : BaseSearchResultItem
     {
         [IndexField("fundteam_name_t")]
         public string FundTeamName { get; set; }

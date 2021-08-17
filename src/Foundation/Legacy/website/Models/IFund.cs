@@ -2,6 +2,7 @@
 {
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
+    using LionTrust.Foundation.Onboarding.Models;
     using System;
     using System.Collections.Generic;
 
@@ -42,5 +43,8 @@
 
         [SitecoreField(Constants.Fund.OverviewDescriptionFieldId)]
         string OverviewDescription { get; set; }
+
+        [SitecoreField(Constants.FundAccess.ExcludedCountires_FieldId)]
+        IEnumerable<ICountry> ExcludedCountries { get; set; }
     }
 }

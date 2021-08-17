@@ -82,10 +82,12 @@
     <Content Include="Views\Banner\BannerWithSlider.cshtml" />
     <Content Include="Views\Banner\RiskBanner.cshtml" />
     <Content Include="Views\Banner\MyFundsLeadBanner.cshtml" />
+    <Content Include="Views\Banner\PeopleInfoBanner.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="Controllers\BannerWithSliderController.cs" />
     <Compile Include="Controllers\MyFundsLeadBannerController.cs" />
     <Compile Include="Models\IBannerGlassBase.cs" />
     <Compile Include="Models\IBannerWithSlider.cs" />
@@ -94,6 +96,8 @@
     <Compile Include="Models\IHomepageLeadBannerModel.cs" />
     <Compile Include="Models\IIconWithText.cs" />
     <Compile Include="Models\IImageWithTitleAndText.cs" />
+    <Compile Include="Models\IPeopleInfo.cs" />
+    <Compile Include="Models\IPeopleInfoBanner.cs" />
     <Compile Include="Models\IPromoBanner.cs" />
     <Compile Include="Models\IRiskBanner.cs" />
     <Compile Include="Models\LeadBannerModel.cs" />
@@ -116,6 +120,14 @@
     <ProjectReference Include="..\..\..\Foundation\Design\website\LionTrust.Foundation.Design.csproj">
       <Project>{7F86DD63-BE79-4107-804A-514DCA76E01E}</Project>
       <Name>LionTrust.Foundation.Design</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Legacy\website\LionTrust.Foundation.Legacy.csproj">
+      <Project>{43EE972B-2002-4719-A878-A66A99C42C40}</Project>
+      <Name>LionTrust.Foundation.Legacy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Onboarding\website\LionTrust.Foundation.Onboarding.csproj">
+      <Project>{78B2A114-3EDA-4CC7-81EB-D096D9BFC0CC}</Project>
+      <Name>LionTrust.Foundation.Onboarding</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\ORM\website\LionTrust.Foundation.ORM.csproj">
       <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>

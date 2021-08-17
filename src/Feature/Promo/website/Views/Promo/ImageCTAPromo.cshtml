@@ -7,11 +7,11 @@
 }
 <div class="container">
     <div class="team-card">
+        <h2 class="team-card__title">
+            @Html.Glass().Editable(Model, x => x.Title)
+        </h2>
         <div class="row">
             <div class="col-lg-5 @(righTextAlignment ? "order-1 offset-lg-1" : "order-1 order-lg-0")">
-                <h2 class="team-card__title">
-                    @Html.Glass().Editable(Model, x => x.Title)
-                </h2>
                 <div class="team-card__text">
                     @if (Sitecore.Context.PageMode.IsExperienceEditor || !string.IsNullOrEmpty(Model.Subtitle))
                     {

@@ -14,8 +14,7 @@ namespace LionTrust.Foundation.Contact.DI
             serviceCollection.AddTransient<IXConnectUtilityRepository, XConnectUtilityRepository>();
             serviceCollection.AddTransient<IPersonalizedContentPageRepository, PersonalizedContentPageRepository>();
             serviceCollection.AddTransient<IPersonalizedContentService, PersonalizedContentService>();
-
-
+            serviceCollection.AddTransient<ISitecoreContactUtility, SitecoreContactUtility>();
         }
     }
 }

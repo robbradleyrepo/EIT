@@ -103,6 +103,8 @@
                     opacity: 0.1
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
         overflow-x: visible
+    @media screen and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0)
+        overflow-x: visible
 
 .slide
     background-size: cover
@@ -119,6 +121,8 @@
             opacity: .4
         .triangle
             fill: $white
+        circle
+            fill: rgba($white,.1)
     &:after
         position: absolute
         content: ''
@@ -205,5 +209,5 @@
             letter-spacing: 1.9px
         svg
             transform: scale(0.55)
-            path
+            path, circle
                 transition: .3s fill ease

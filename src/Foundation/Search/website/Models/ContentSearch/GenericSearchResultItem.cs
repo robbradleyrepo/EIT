@@ -5,7 +5,7 @@
     using Sitecore.ContentSearch;
     using Sitecore.ContentSearch.SearchTypes;
     
-    public class GenericSearchResultItem : SearchResultItem
+    public class GenericSearchResultItem : BaseSearchResultItem
     {
         [IndexField("genericlistingmoduleitem_image")]
         public string GenericListingImage { get; set; }

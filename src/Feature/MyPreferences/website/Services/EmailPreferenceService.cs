@@ -25,9 +25,29 @@
         /// <param name="sfRandomGUID"></param>
         /// <param name="IsContact"></param>
         /// <returns></returns>
-        public EmailPreferences GetEmailPreferences(string sfEntityId, string sfRandomGUID, bool isContact)
+        public EmailPreferences GetEmailPreferences(string queryStringRef)
         {
-            var emailPreferences = _emailPreferencesRepository.GetEmailPreferences(sfEntityId, sfRandomGUID, isContact);
+            EmailPreferences emailPreferences = null;
+            string sfEntityId = string.Empty, sfRandomGUID = string.Empty;
+
+            //Query string "ref" should have the format as follows: {GUID}_{entityId}
+            if (!string.IsNullOrEmpty(queryStringRef))
+            {
+                var queryStringParts = queryStringRef.Split('_');
+                if (queryStringParts.Length >= 2)
+                {
+                    sfRandomGUID = queryStringParts[0];
+                    sfEntityId = queryStringParts[1];
+                }
+            }
+
+            if (!string.IsNullOrEmpty(sfEntityId) && (sfEntityId.StartsWith("003", StringComparison.CurrentCultureIgnoreCase) || sfEntityId.StartsWith("00Q", StringComparison.CurrentCultureIgnoreCase)) && !string.IsNullOrEmpty(sfRandomGUID))
+            {
+                var isContact = (sfEntityId.StartsWith("003", StringComparison.CurrentCultureIgnoreCase)) ? true : false;
+
+                emailPreferences = _emailPreferencesRepository.GetEmailPreferences(sfEntityId, sfRandomGUID, isContact);
+            }
+
             return emailPreferences;
         }
 
@@ -46,9 +66,9 @@
         /// </summary>
         /// <param name="nonProfUserViewModel"></param>
         /// <returns></returns>
-        public RegisterdUserWithEmailDetails SaveNonProfUserAsSFLead(NonProfessionalUser nonProfessionalUser, IEditEmailPrefTemplate emailTemplate, string preferencesUrl)
+        public RegisterdUserWithEmailDetails SaveNonProfUserAsSFLead(NonProfessionalUser nonProfessionalUser, IEditEmailPrefTemplate emailTemplate, string preferencesUrl, string fundDashboardUrl)
         {
-            var returnedObj = _emailPreferencesRepository.SaveNonProfUserAsSFLead(nonProfessionalUser, emailTemplate, preferencesUrl);
+            var returnedObj = _emailPreferencesRepository.SaveNonProfUserAsSFLead(nonProfessionalUser, emailTemplate, preferencesUrl, fundDashboardUrl);
             if (returnedObj != null)
             {
                 //Send email to the the new users with the link to edit email preferences
@@ -69,9 +89,9 @@
         /// </summary>
         /// <param name="nonProfUserViewModel"></param>
         /// <returns></returns>
-        public RegisterdUserWithEmailDetails SaveProfUserAsSFContact(ProfessionalUser professionalUser, IEditEmailPrefTemplate emailTemplate, string preferencesUrl)
+        public RegisterdUserWithEmailDetails SaveProfUserAsSFContact(ProfessionalUser professionalUser, IEditEmailPrefTemplate emailTemplate, string preferencesUrl, string fundDashboardUrl)
         {
-            var registerdUserWithEmailDetails = _emailPreferencesRepository.SaveProfUserAsSFContact(professionalUser, emailTemplate, preferencesUrl);
+            var registerdUserWithEmailDetails = _emailPreferencesRepository.SaveProfUserAsSFContact(professionalUser, emailTemplate, preferencesUrl, fundDashboardUrl);
             if (registerdUserWithEmailDetails != null)
             {
                 //Send email to the the new users with the link to edit email preferences
@@ -91,11 +111,11 @@
         /// Resend edit email pref link
         /// </summary>
         /// <returns></returns>
-        public bool ResendEditEmailPrefLink(string email, bool IsContact, IEditEmailPrefTemplate emailTemplate, string preferencesUrl)
+        public bool ResendEditEmailPrefLink(string email, bool IsContact, IEditEmailPrefTemplate emailTemplate, string preferencesUrl, string fundDashboardUrl)
         {
             try
             {
-                var emailDetailObj = _emailPreferencesRepository.GetEmailDetailsForResendEmailPrefLink(email, IsContact, emailTemplate, preferencesUrl);
+                var emailDetailObj = _emailPreferencesRepository.GetEmailDetailsForResendEmailPrefLink(email, IsContact, emailTemplate, preferencesUrl, fundDashboardUrl);
                 if (emailDetailObj != null)
                 {
                     _mailManager.SendEmail(emailDetailObj.FromAddress, emailDetailObj.FromDisplyName, emailDetailObj.ToAddresses, emailDetailObj.Subject,

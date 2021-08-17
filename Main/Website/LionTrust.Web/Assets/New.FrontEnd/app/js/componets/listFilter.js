@@ -13,6 +13,7 @@ export default () => {
   const folderId = rootDom.dataset?.folderid;
   const parentId = rootDom.dataset?.parentid;
   const contentType = rootDom.dataset?.contenttype;
+  const ref = rootDom.dataset?.ref;
   const location = "https://cm-liontrust-it.sagittarius.agency/";
   let root = "";
   if (
@@ -59,6 +60,8 @@ export default () => {
       mobileFilter: false,
       months: [],
       years: [],
+      month: "",
+      year: "",
       grid: false,
       activeButton: false,
     },
@@ -86,6 +89,7 @@ export default () => {
         let str = "";
         str = str + "page=" + this.page;
         if (this.searchText) str = str + "&searchTerm=" + this.searchText;
+		if (ref) str = str + "&ref=" + ref;
         for (let prop in this.params) {
           const mutatedProp = prop.replace(/ /g, "");
           const lowerCaseProp =
@@ -118,17 +122,24 @@ export default () => {
         this.page = 1;
         this.open = false;
         this.searchText = "";
+        this.month = this.year = "All";
         this.$emit("clearOption");
         this.mobileFilter = false;
         this.applyFilters();
       },
 
-      setMonth(e) {
-        this.params.month = [e.target.value];
+      setMonth(month) {
+        if(month === "All")
+          this.params.month = []
+        else
+          this.params.month = [month];
       },
 
-      setYear(e) {
-        this.params.year = [e.target.value];
+      setYear(year) {
+        if(year === "All")
+          this.params.year = [];
+        else
+          this.params.year = [year];
       },
 
       showSort() {
@@ -166,7 +177,7 @@ export default () => {
 
       getFacetsRequest() {
         const facetUrl = fundFacetId
-          ? `${host}/Facets?articleListingFacetConfig={${fundFacetId}}`
+          ? `${host}/Facets?facetConfig={${fundFacetId}}`
           : `${host}/Facets`;
         $.get(facetUrl)
           .done((response) => {
@@ -206,6 +217,9 @@ export default () => {
           .fail((e) => {
             console.error(e);
             this.loading = false;
+            this.searchData = [];
+            this.amountResults = 0;
+            this.activeButton = false;
           });
       },
     },

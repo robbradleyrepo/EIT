@@ -4,8 +4,10 @@
     using LionTrust.Feature.Fund.Models;
     using Sitecore.Mvc.Controllers;
     using System.Web.Mvc;
+    using System.Linq;
+    using LionTrust.Foundation.Onboarding.Helpers;
 
-    public class FundScrollerController: SitecoreController
+    public class FundScrollerController : SitecoreController
     {
         private readonly IMvcContext context;
 
@@ -21,6 +23,8 @@
             {
                 return null;
             }
+
+            datasource.Funds = datasource.Funds.Where(f => OnboardingHelper.HasAccess(f.ExcludedCountries));
 
             return View("/views/fund/fundscroller.cshtml", datasource);
         }

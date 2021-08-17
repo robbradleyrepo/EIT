@@ -29,7 +29,6 @@
                 var jsonSerializerSettings = new JsonSerializerSettings
                 {
                     ContractResolver = new CamelCasePropertyNamesContractResolver(),
-                    Formatting = Formatting.Indented,
                     ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
                     PreserveReferencesHandling = PreserveReferencesHandling.None
                 };
@@ -72,7 +71,9 @@
 
             chartModel.YAxeConfig = new YAxeConfig()
             {
-                Scale = viewModel.Data.Scale
+                Scale = viewModel.Data.Scale,
+                MaxRange = viewModel.Data.MaxRange,
+                Ranges = viewModel.Data.Range
             };
             chartModel.Labels = new List<string>();
             var columnValueCount = 0;

@@ -8,11 +8,11 @@
     /// <summary>
     /// Repository to contain functionalities related to read/write data using xconnect
     /// </summary>
-    internal class XConnectUtilityRepository : IXConnectUtilityRepository
+    public class XConnectUtilityRepository : IXConnectUtilityRepository
     {
         private readonly ISitecoreContactUtility _sitecoreContactUtility;
 
-        internal XConnectUtilityRepository(ISitecoreContactUtility sitecoreContactUtility)
+        public XConnectUtilityRepository(ISitecoreContactUtility sitecoreContactUtility)
         {
             _sitecoreContactUtility = sitecoreContactUtility;
         }

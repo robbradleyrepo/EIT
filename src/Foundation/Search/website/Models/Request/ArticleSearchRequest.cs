@@ -29,5 +29,6 @@
         public DateTime ToDate { get; set; }
 
         public IEnumerable<Guid> Topics { get; set; }
+
     }
 }

@@ -1,10 +1,12 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @using Sitecore.Configuration
+@using Sitecore.Web
 @model LionTrust.Feature.Search.Models.IMyFundsLister
 @if (Model != null)
 {
-<div class="lister-app" id="lister-app" data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.FundApiRoute_SettingName))" data-literatureid="@(Model.FundLiterature != null ? Model.FundLiterature.Id.ToString() : string.Empty)" data-fundfacetid="@(Model.FacetsConfiguration != null ? Model.FacetsConfiguration.Id.ToString() : string.Empty)">
-    <h2 class="h3 text-center mt-3 mt-lg-4">@Html.Glass().Editable(Model, m => m.Title)</h2>
+    <div class="lister-app" id="lister-app" data-ref="@WebUtil.GetQueryString(LionTrust.Foundation.Contact.Constants.QueryStringNames.EmailPreferencefParams.RefQueryStringKey)" data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.MyFundsApiRoute_SettingName))" data-literatureid="@(Model.FundLiterature != null ? Model.FundLiterature.Id.ToString() : string.Empty)" data-fundfacetid="@(Model.FacetsConfiguration != null ? Model.FacetsConfiguration.Id.ToString() : string.Empty)">
+    <h2 class="h3 text-center mt-3 mt-lg-4">
+        @Html.Glass().Editable(Model, m => m.Title)</h2>
     <div class="article-filter-wrapper">
         <div class="article-filters" :class="mobileFilter ? 'active' : ''">
             <div class="article-filters__header d-lg-none">
@@ -45,8 +47,8 @@
                                 </div>
                             </div>
                         </select-field>
-                        <div class="col-lg-2 ml-auto">
-                            <div class="article-filters__btns">
+                        <div class="col-lg-3">
+                            <div class="article-filters__btns justify-content-start">
                                 <button class="btn article-filters__btn article-filters__btn_apply" @@click="applyFilters" :class="activeButton ? 'article-filters__btn_primary' : ''">
                                     @Html.Glass().Editable(Model, m => m.ApplyFiltersLabel)
                                 </button>
@@ -57,7 +59,7 @@
                         </div>
                         <div class="col-6 col-lg-2 offset-6 col-md-4 offset-md-8 offset-lg-10 margin-sort-btn d-none d-lg-block">
                             <div class="relative">
-                                <button class="btn btn-clean d-block ml-auto button-sort" @@click.stop="showSort">
+                                <button class="btn btn-clean d-block ml-auto button-sort mt-1" @@click.stop="showSort">
                                     @Html.Glass().Editable(Model, m => m.SortLabel) <i class="icon-sort"></i>
                                 </button>
                                 <div class="sort-dropdown" :class="sortModal ? 'active' : ''">
@@ -101,33 +103,33 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-6 col-lg-2 offset-6 col-md-4 offset-md-8 offset-lg-10 margin-sort-btn d-lg-none">
-                    <div class="relative">
-                        <button class="btn btn-clean d-block ml-auto button-sort" @@click.stop="showSort">
-                            @Html.Glass().Editable(Model, m => m.SortLabel) <i class="icon-sort"></i>
-                        </button>
-                        <div class="sort-dropdown" :class="sortModal ? 'active' : ''">
-                            <div class="text-right">
-                                <span class="btn btn-clean">
+                        <div class="col-6 col-lg-2 offset-6 col-md-4 offset-md-8 offset-lg-10 margin-sort-btn">
+                            <div class="relative">
+                                <button class="btn btn-clean d-block ml-auto button-sort" @@click.stop="showSort">
                                     @Html.Glass().Editable(Model, m => m.SortLabel) <i class="icon-sort"></i>
-                                </span>
+                                </button>
+                                <div class="sort-dropdown" :class="sortModal ? 'active' : ''">
+                                    <div class="text-right">
+                                        <span class="btn btn-clean">
+                                            @Html.Glass().Editable(Model, m => m.SortLabel) <i class="icon-sort"></i>
+                                        </span>
+                                    </div>
+                                    <label for="newest" class="option-checkbox">
+                                        <input id="newest" v-model="sortOrder" value="ASC" class="option-checkbox__input" type="radio" name="sort" checked>
+                                        <span class="option-checkbox__text">@Html.Glass().Editable(Model, m => m.SortAZLabel)</span>
+                                        <span class="option-checkbox__icon"></span>
+                                    </label>
+                                    <label for="oldest" class="option-checkbox">
+                                        <input id="oldest" v-model="sortOrder" value="DESC" class="option-checkbox__input" type="radio" name="sort">
+                                        <span class="option-checkbox__text">@Html.Glass().Editable(Model, m => m.SortZALabel)</span>
+                                        <span class="option-checkbox__icon"></span>
+                                    </label>
+                                </div>
                             </div>
-                            <label for="newest" class="option-checkbox">
-                                <input id="newest" v-model="sortOrder" value="ASC" class="option-checkbox__input" type="radio" name="sort" checked>
-                                <span class="option-checkbox__text">@Html.Glass().Editable(Model, m => m.SortAZLabel)</span>
-                                <span class="option-checkbox__icon"></span>
-                            </label>
-                            <label for="oldest" class="option-checkbox">
-                                <input id="oldest" v-model="sortOrder" value="DESC" class="option-checkbox__input" type="radio" name="sort">
-                                <span class="option-checkbox__text">@Html.Glass().Editable(Model, m => m.SortZALabel)</span>
-                                <span class="option-checkbox__icon"></span>
-                            </label>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
+</div>
 
     <div class="container d-lg-none" v-if="getFacetsLength">
         <div class="d-flex justify-content-between margin-mob-fliter-btn w-100" :class="!mobileFilter ? 'relative' : ''">
@@ -150,7 +152,7 @@
                     <div class="col-lg-3 col-xl-2">
                         <div class="fund-item-list__badge">
                             <span class="badge-secondary">
-                                {{fund.fundCardHeading}}
+                                {{fund.fundTeamName}}
                             </span>
                         </div>
                     </div>
@@ -178,5 +180,5 @@
         </div>
     </div>
     @Html.Partial("~/Views/Search/_Pagination.cshtml", Model)
-    </div>
-    }
+</div>
+}

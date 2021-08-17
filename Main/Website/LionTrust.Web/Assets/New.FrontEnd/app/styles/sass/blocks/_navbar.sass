@@ -28,12 +28,13 @@
     &__btn-search
         margin-top: 16px
         cursor: pointer
-        @include breakpoint(desktop, up)
-            margin-top: 14px
     &__user-link
         display: none
-        margin: 16px 36px 0 44px
         position: relative
+        @include breakpoint(desktop, up)
+            margin: 1rem 1rem 0 1rem
+        @include breakpoint(desktop-large, up)
+            margin: 16px 36px 0 44px
         &:after
             visibility: hidden
             opacity: 0
@@ -90,6 +91,7 @@
         color: $white
         letter-spacing: 1.4px
         position: relative
+        white-space: nowrap
         &:before
             content: ""
             visibility: hidden
@@ -99,14 +101,14 @@
             bottom: -9px
             transition: visible .3s ease-out, background .3s ease-out
         &_contact
-            padding: 11px 26px
-            line-height: 17px
-            border-radius: 6px
-            background: rgba(255, 255, 255, .1)
-            transition: all .3s ease-out
-            &:before
-                display: none
-            &:hover
-                background: $white
-                color: $primary
-                
+            @include breakpoint(desktop-large, up)
+                padding: 11px 26px
+                line-height: 17px
+                border-radius: 6px
+                background: rgba(255, 255, 255, .1)
+                transition: all .3s ease-out
+                &:before
+                    display: none
+                &:hover
+                    background: $white
+                    color: $primary

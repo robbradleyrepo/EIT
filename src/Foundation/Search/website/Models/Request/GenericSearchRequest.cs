@@ -5,7 +5,7 @@ using System.Web;
 
 namespace LionTrust.Foundation.Search.Models.Request
 {
-    public class GenericSearchRequest
+    public class GenericSearchRequest : ISearchRequest
     {
         public string DatabaseName { get; set; }
 

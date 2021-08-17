@@ -3,7 +3,7 @@
     using System;
     using System.Linq;
     using System.Linq.Expressions;
-
+    using LionTrust.Foundation.Onboarding.Helpers;
     using LionTrust.Foundation.Search.Models.ContentSearch;
     using LionTrust.Foundation.Search.Models.Request;
     using LionTrust.Foundation.Search.Repositories.Interfaces;
@@ -41,10 +41,10 @@
             {
                 var fundPredicate = PredicateBuilder.False<ArticleSearchResultItem>();
                 fundPredicate = articleSearchRequest.Funds.Aggregate(fundPredicate,
-                                                                          (current, category) => current
-                                                                                                  .Or(item => item.ArticleFund == category));
+                                                                          (current, fund) => current
+                                                                                                  .Or(item => item.ArticleFund == IdHelper.NormalizeGuid(fund, true)));
 
-                taxonomyFilter = taxonomyFilter.Or(fundPredicate);
+                taxonomyFilter = taxonomyFilter.And(fundPredicate);
             }
 
             if (articleSearchRequest.FundManagers != null && articleSearchRequest.FundManagers.Any())
@@ -57,7 +57,7 @@
                                                                                 => current
                                                                                      .Or(item => item.ArticleAuthors.Contains(manager)));
 
-                taxonomyFilter = taxonomyFilter.Or(managerPredicate);
+                taxonomyFilter = taxonomyFilter.And(managerPredicate);
             }
 
             if (articleSearchRequest.Categories != null && articleSearchRequest.Categories.Any())
@@ -70,7 +70,7 @@
                                                                                 => current
                                                                                      .Or(item => item.Topics.Contains(IdHelper.NormalizeGuid(category, true))));
 
-                taxonomyFilter = taxonomyFilter.Or(managerPredicate);
+                taxonomyFilter = taxonomyFilter.And(managerPredicate);
             }
 
             predicate = predicate.And(taxonomyFilter);
@@ -83,7 +83,7 @@
                 searchTermPredicate = searchTermPredicate.Or(item => item.ArticleTitle.Contains(articleSearchRequest.SearchTerm));
                 searchTermPredicate = searchTermPredicate.Or(item => item.ArticleSubtitle.Contains(articleSearchRequest.SearchTerm));
 
-                predicate = predicate.Or(searchTermPredicate);
+                predicate = predicate.And(searchTermPredicate);
             }
 
             return predicate;
@@ -96,6 +96,9 @@
             var language = Sitecore.Context.Language?.Name ?? "en";
             predicate = predicate.And(x => x.Language == language);
             predicate = predicate.And(x => x.IsLatestVersion);
+
+            var country = OnboardingHelper.GetCurrentContactAddress()?.Country;
+            predicate = predicate.And(x => !x.ExcludedCountries.Contains(country));
 
             predicate = this.PopoulateDatedTaxonomyPredicate(predicate, articleSearchRequest);
 

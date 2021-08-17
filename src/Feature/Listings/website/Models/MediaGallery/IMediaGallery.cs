@@ -1,4 +1,4 @@
-﻿namespace LionTrust.Feature.Listings.Models
+﻿namespace LionTrust.Feature.Listings.Models.MediaGallery
 {
     using System.Collections.Generic;
     using Glass.Mapper.Sc.Configuration.Attributes;
@@ -31,5 +31,8 @@
 
         [SitecoreField(Constants.MediaLister.DownloadLabel_FieldId)]
         string DownloadLabel { get; set; }
+
+        [SitecoreField(Constants.MediaLister.FilterSource_FieldId)]
+        IFilterCategory FilterCategoryFolder { get; set; }
     }
 }

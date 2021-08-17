@@ -1,9 +1,9 @@
 ﻿namespace LionTrust.Feature.Search.SiteSearch
 {
+    using LionTrust.Foundation.Search.Models.ContentSearch;
     using Sitecore.ContentSearch;
-    using Sitecore.ContentSearch.SearchTypes;
 
-    public class SiteSearchResultItem: SearchResultItem
+    public class SiteSearchResultItem : BaseSearchResultItem
     {
         [IndexField("page_url_s")]
         public string PageUrl { get; set; }

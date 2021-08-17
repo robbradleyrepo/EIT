@@ -111,6 +111,10 @@
       <Project>{71010683-02eb-4e0d-b0e1-6643922799ee}</Project>
       <Name>LionTrust.Foundation.Analytics</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Contact\website\LionTrust.Foundation.Contact.csproj">
+      <Project>{8EE89AE6-2E22-48CC-9FA9-F4C9225F76E8}</Project>
+      <Name>LionTrust.Foundation.Contact</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Content\website\LionTrust.Foundation.Content.csproj">
       <Project>{f8f55034-fa55-4d27-b115-0ab4eeb9a0a8}</Project>
       <Name>LionTrust.Foundation.Content</Name>

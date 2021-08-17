@@ -14,9 +14,9 @@
 
         public IEnumerable<string> FundRegions { get; set; }
 
-        public IEnumerable<string> Funds { get; set; }
+        public IEnumerable<string> SalesforceFundIds { get; set; }
 
-        public IEnumerable<string> ExcludeFunds { get; set; }
+        public IEnumerable<string> ExcludeSalesforceFundIds { get; set; }
 
         public string SearchTerm { get; set; }
 

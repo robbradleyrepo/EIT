@@ -94,6 +94,9 @@
     <Compile Include="ComputedFields\GenericListingModuleItem\Text.cs" />
     <Compile Include="ComputedFields\GenericListingModuleItem\Year.cs" />
     <Compile Include="ComputedFields\SharedLogic\ComputedValueHelper.cs" />
+    <Compile Include="ComputedFields\SharedLogic\ExcludedCountiresField.cs" />
+    <Compile Include="ComputedFields\SharedLogic\SalesforceFundIdField.cs" />
+    <Compile Include="ComputedFields\SharedLogic\ISalesforceFundIdField.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Models\IQuery.cs" />
     <Compile Include="Models\IQueryPredicateProvider.cs" />
@@ -106,6 +109,7 @@
     <Compile Include="SiteSearch\IFieldHandler.cs" />
     <Compile Include="SiteSearch\IFundFactsheetUrlField.cs" />
     <Compile Include="SiteSearch\ILegacyContentField.cs" />
+    <Compile Include="ComputedFields\SharedLogic\IExcludedCountiresField.cs" />
     <Compile Include="SiteSearch\ISearchUrlField.cs" />
     <Compile Include="SiteSearch\LegacyContentField.cs" />
     <Compile Include="SiteSearch\SearchUrlField.cs" />

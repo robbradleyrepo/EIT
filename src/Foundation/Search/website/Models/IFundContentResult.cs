@@ -33,5 +33,7 @@
 
         string FundTeamName { get; set; }
 
+        string SalesforceFundId { get; set; }
+
     }
 }

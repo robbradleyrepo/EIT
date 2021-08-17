@@ -22,9 +22,9 @@
 
         </div>
         <div class="onboarding-overlay__btns">
-            @using (Html.BeginRouteForm(Sitecore.Mvc.Configuration.MvcSettings.SitecoreRouteName, FormMethod.Post))
+            @using (Html.BeginForm())
             {
-
+                @Html.AntiForgeryToken()
                 <input type="hidden" id="Country" name="Country" />
                 <input type="hidden" id="Role" name="Role" />
                 <button class="btn btn-primary" id="submit-board" data-goal-trigger="@Model.Goal?.Id">

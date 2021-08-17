@@ -2,7 +2,7 @@ export default () => {
   document.addEventListener("scroll", stickyNav);
 
   const navbar = $("#sticky-navbar");
-  const sticky = navbar.offset()?.top
+  const sticky = navbar.offset()?.top;
   const offset = navbar.outerHeight();
 
   function stickyNav() {
@@ -44,10 +44,10 @@ export default () => {
       var hash = this.hash;
       // Using jQuery's animate() method to add smooth page scroll
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      // Calculate offsetTop
+      const scrollTop = $("#sticky-navbar").hasClass('sticky') ? $(hash).offset().top - offset : $(hash).offset().top - offset * 2;
       $("html, body").stop().animate(
-        {
-          scrollTop: $(hash).offset().top - offset,
-        },
+        { scrollTop },
         800,
         function () {
           // Add hash (#) to URL when done scrolling (default click behavior)

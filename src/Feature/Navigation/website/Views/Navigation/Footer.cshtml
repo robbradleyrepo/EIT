@@ -58,20 +58,11 @@
                                     foreach (var socialLink in Model.FooterConfiguration.SocialIcons)
                                     {
                                         if (socialLink.TwitterAccounts == null)
-                                        {
-                                            if (socialLink.SocialLink != null || Sitecore.Context.PageMode.IsExperienceEditor)
-                                            {
-                                                using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(socialLink, m => m.SocialLink, socialLink.SocialLinkGoal, new NameValueCollection { { "class", "social__link" } }, isEditable: true))
-                                                {
-                                                    @Html.Glass().RenderImage(socialLink, x => x.SocialIcon, new NameValueCollection { { "class", "social__link-icon" } }, isEditable: true)
-                                                }
-                                            }
-                                            else
-                                            {
-                                                <a href="#" class="social__link" data-goal-trigger="@socialLink.SocialLinkGoal">
-                                                    @Html.Glass().RenderImage(socialLink, x => x.SocialIcon, new NameValueCollection { { "class", "social__link-icon" } }, isEditable: true)
-                                                </a>
-                                            }
+                                        {                                            
+                                            <a href="@(socialLink.SocialLink != null ? socialLink.SocialLink.Url : "#")"
+                                               class="social__link" data-goal-trigger="@socialLink.SocialLinkGoal" target="_blank">
+                                                @Html.Glass().RenderImage(socialLink, x => x.SocialIcon, new NameValueCollection { { "class", "social__link-icon" } }, isEditable: true)
+                                            </a>
                                         }
                                         else
                                         {
@@ -80,7 +71,7 @@
                                                 <div class="social__twitter">
                                                     @foreach (var account in socialLink.TwitterAccounts)
                                                     {
-                                                        <a href="https://twitter.com/@account.TwitterAccountName" data-goal-trigger="@account.CTAGoal" class="social__twitter-link">@@@account.TwitterAccountName</a>
+                                                        <a href="https://twitter.com/@account.TwitterAccountName" target="_blank" data-goal-trigger="@account.CTAGoal" class="social__twitter-link">@@@account.TwitterAccountName</a>
                                                     }
                                                 </div>
                                             </span>

@@ -3,7 +3,7 @@
     using System;
     using System.Linq;
     using System.Linq.Expressions;
-
+    using LionTrust.Foundation.Onboarding.Helpers;
     using LionTrust.Foundation.Search.Models.ContentSearch;
     using LionTrust.Foundation.Search.Models.Request;
     using LionTrust.Foundation.Search.Repositories.Interfaces;
@@ -34,7 +34,7 @@
                                                                                 => current
                                                                                      .Or(item => item.FundManagers.Contains(manager)));
 
-                fundFilter = fundFilter.Or(managerPredicate);
+                fundFilter = fundFilter.And(managerPredicate);
             }
 
             if(fundSearchRequest.FundTeams != null && fundSearchRequest.FundTeams.Any())
@@ -47,7 +47,7 @@
                                                                                 => current
                                                                                      .Or(item => item.FundTeam.Contains(team)));
 
-                fundFilter = fundFilter.Or(teamPredicate);
+                fundFilter = fundFilter.And(teamPredicate);
             }
 
             if (fundSearchRequest.FundRanges != null && fundSearchRequest.FundRanges.Any())
@@ -60,7 +60,7 @@
                                                                                 => current
                                                                                      .Or(item => item.FundRanges.Contains(range)));
 
-                fundFilter = fundFilter.Or(rangePredicate);
+                fundFilter = fundFilter.And(rangePredicate);
             }
 
             if (fundSearchRequest.FundRegions != null && fundSearchRequest.FundRegions.Any())
@@ -73,33 +73,33 @@
                                                                                 => current
                                                                                      .Or(item => item.FundRegion.Contains(range)));
 
-                fundFilter = fundFilter.Or(regionPredicate);
+                fundFilter = fundFilter.And(regionPredicate);
             }
 
-            if (fundSearchRequest.Funds != null && fundSearchRequest.Funds.Any())
+            if (fundSearchRequest.SalesforceFundIds != null && fundSearchRequest.SalesforceFundIds.Any())
             {
                 var fundsPredicate = PredicateBuilder.False<FundSearchResultItem>();
                 fundsPredicate = fundSearchRequest
-                                            .Funds
+                                            .SalesforceFundIds
                                                     .Aggregate(fundsPredicate,
-                                                                    (current, fund)
+                                                                    (current, salesforceFundId)
                                                                                 => current
-                                                                                     .Or(item => item.ItemId.ToString().Contains(fund)));
+                                                                                     .Or(item => item.SalesforceFundId.Contains(salesforceFundId)));
 
-                fundFilter = fundFilter.Or(fundsPredicate);
+                predicate = predicate.And(fundsPredicate);
             }
 
-            if (fundSearchRequest.ExcludeFunds != null && fundSearchRequest.ExcludeFunds.Any())
+            if (fundSearchRequest.ExcludeSalesforceFundIds != null && fundSearchRequest.ExcludeSalesforceFundIds.Any())
             {
                 var excludeFundsPredicate = PredicateBuilder.False<FundSearchResultItem>();
                 excludeFundsPredicate = fundSearchRequest
-                                            .ExcludeFunds
+                                            .ExcludeSalesforceFundIds
                                                     .Aggregate(excludeFundsPredicate,
-                                                                    (current, fund)
+                                                                    (current, salesforceFundId)
                                                                                 => current
-                                                                                     .And(item => !item.ItemId.ToString().Contains(fund)));
+                                                                                     .And(item => !item.SalesforceFundId.Contains(salesforceFundId)));
 
-                fundFilter = fundFilter.Or(excludeFundsPredicate);
+                predicate = predicate.And(excludeFundsPredicate);
             }
 
             predicate = predicate.And(fundFilter);
@@ -113,7 +113,7 @@
                 searchTermPredicate = searchTermPredicate.Or(item => item.FundCardHeading.Contains(fundSearchRequest.SearchTerm));
                 searchTermPredicate = searchTermPredicate.Or(item => item.FundCardDescription.Contains(fundSearchRequest.SearchTerm));
 
-                predicate = predicate.Or(searchTermPredicate);
+                predicate = predicate.And(searchTermPredicate);
             }
 
             var validationPredicate = PredicateBuilder.True<FundSearchResultItem>();
@@ -137,6 +137,9 @@
             var predicate = PredicateBuilder.True<FundSearchResultItem>();
             var language = Sitecore.Context.Language?.Name ?? "en";
             predicate = predicate.And(x => x.Language == language);
+
+            var country = OnboardingHelper.GetCurrentContactAddress()?.Country;
+            predicate = predicate.And(x => !x.ExcludedCountries.Contains(country));
 
             predicate = this.PopoulateFundPredicate(predicate, fundSearchRequest);
 

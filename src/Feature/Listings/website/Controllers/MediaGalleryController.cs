@@ -8,8 +8,9 @@
     using Glass.Mapper.Sc.Web.Mvc;
     using ICSharpCode.SharpZipLib.Zip;
     using LionTrust.Feature.Listings.Helpers;
-    using LionTrust.Feature.Listings.Models;
+    using LionTrust.Feature.Listings.Models.MediaGallery;
     using LionTrust.Foundation.Core.ActionResults;
+    using LionTrust.Foundation.Legacy.Models;
     using Sitecore.Mvc.Controllers;
 
     public class MediaGalleryController : SitecoreController
@@ -69,6 +70,42 @@
             }
 
             return new JsonCamelCaseResult(mediaGalleryResponse, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult GetMediaFacets(string mediaGalleryId) 
+        {
+            if (string.IsNullOrEmpty(mediaGalleryId))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest, "Media Folder ID required!");
+            }
+
+            Guid mediaGalleryFolderGuid;
+
+            try
+            {
+                mediaGalleryFolderGuid = new Guid(mediaGalleryId);
+            }
+            catch
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest, "Invalid Media Folder ID!");
+            }
+
+            var mediaGallery = _mvcContext.SitecoreService.GetItem<IMediaGallery>(mediaGalleryFolderGuid);
+            if (mediaGallery.FilterCategoryFolder == null 
+                || mediaGallery.FilterCategoryFolder.FundTeams == null 
+                || !mediaGallery.FilterCategoryFolder.FundTeams.Any())
+            {
+                return new HttpNotFoundResult();
+            }
+
+            var facetResponse = mediaGallery.FilterCategoryFolder.FundTeams.Select(ft => 
+                                                                                new ListingFilterFacetsModel()
+                                                                                {
+                                                                                    Identifier = ft.Id.ToString(),
+                                                                                    Name = ft.TeamName
+                                                                                });
+
+            return new JsonCamelCaseResult(facetResponse, JsonRequestBehavior.AllowGet);
         }
 
         [HttpPost]

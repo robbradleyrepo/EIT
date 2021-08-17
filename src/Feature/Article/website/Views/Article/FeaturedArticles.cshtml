@@ -9,15 +9,20 @@
                 </h2>
             </div>
         </div>
-        <ul class="featured-article">
-            @foreach (var item in Model.FeaturedArticles)
-            {
-                <li class="featured-article__item">
-                    <a href="@item.Url" class="featured-article__link">
-                        @item.Content
-                    </a>
-                </li>
-            }               
-            </ul>
+        <div class="featured-article">
+            <div class="row">
+                @foreach (var item in Model.FeaturedArticles)
+                {
+                    <div class="col-lg-6">
+                        <div class="featured-article__item">
+                            <a href="@item.Url" class="featured-article__link">
+                                @item.Content
+                            </a>
+                        </div>
+                    </div>
+
+                }
+            </div>
+        </div>
     </div>
 </section>

@@ -92,7 +92,7 @@
                 </div>
                 <div v-if="item.resultType === 'Article'" class="search-item__footer">
                   <div class="search-item__author search-item__footer-item">
-                    <img
+                    <img v-if="item.authorImage"
                       :src="item.authorImage"
                       :alt="item.author"
                       class="search-item__author-img"

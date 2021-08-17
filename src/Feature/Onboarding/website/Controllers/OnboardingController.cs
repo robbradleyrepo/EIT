@@ -3,13 +3,14 @@
     using Glass.Mapper.Sc.Web.Mvc;
     using LionTrust.Feature.Onboarding.Analytics;
     using LionTrust.Feature.Onboarding.Models;
+    using LionTrust.Foundation.Onboarding.Helpers;
     using LionTrust.Foundation.Onboarding.Models;
     using Sitecore.Abstractions;
     using Sitecore.Analytics;
     using Sitecore.Analytics.Model;
-    using Sitecore.Analytics.Model.Entities;
     using Sitecore.Analytics.Tracking;
     using Sitecore.Annotations;
+    using Sitecore.Configuration;
     using Sitecore.Mvc.Controllers;
     using System;
     using System.Collections.Generic;
@@ -126,7 +127,7 @@
         {
             if (ModelState.IsValid)
             {
-                var address = GetAddress(true);
+                var address = OnboardingHelper.GetCurrentContactAddress(true);
                 if (address != null)
                 {
                     try
@@ -138,13 +139,14 @@
                             address.Country = regionInfo.EnglishName;
                         }
                     }
+
                     catch (ArgumentException)
                     {
                         string message = $"{OnboardingSubmit.Country} is not an valid value";
                         _log.Info(message, this);
                     }
                 }
-
+  
                 var data = _context.GetHomeItem<IHome>();
 
                 if (data?.OnboardingConfiguration == null)
@@ -161,7 +163,6 @@
 
                     if (profile != null)
                     {
-
                         if (OnboardingSubmit.InvestorType == Foundation.Onboarding.Constants.InvestorType.Private)
                         {
                             _cardManager.AddPointsFromProfileCard(data.OnboardingConfiguration.PrivateProfileCard, profile);
@@ -171,6 +172,8 @@
                             _cardManager.AddPointsFromProfileCard(data.OnboardingConfiguration.ProfressionalProfileCard, profile);
                         }
 
+                        var contactManager = Factory.CreateObject("tracking/contactManager", true) as ContactManager;
+                        contactManager.SaveContactToCollectionDb(_tracker.Contact);
                     }
                     else
                     {
@@ -183,7 +186,7 @@
                 _log.Error("invalid data submitted", this);
             }
 
-            return Redirect(Request.RawUrl);
+            return Redirect(Request.Url.ToString());
         }
 
         private bool IsOnboardingConfigured(IHome data)
@@ -267,8 +270,9 @@
             var result = false;
 
             var profile = GetProfile(config.Profile.Name);
+            var address = OnboardingHelper.GetCurrentContactAddress();
 
-            if (profile != null && profile.PatternId.HasValue)
+            if (profile != null && profile.PatternId.HasValue && address != null && !string.IsNullOrWhiteSpace(address.Country))
             {
                 result = true;
             }
@@ -293,27 +297,7 @@
             Response.SetCookie(currentTab);
         }
 
-        private IAddress GetAddress(bool createIfNull = false)
-        {
-            IAddress address = null;
-
-            if (_tracker != null && _tracker.Contact != null)
-            {
-                var contact = _tracker.Contact;
-                var addresses = contact.GetFacet<IContactAddresses>(Onboarding.Constants.Analytics.Addresses_FacetName);
-
-                if (addresses != null && addresses.Entries.Contains(Onboarding.Constants.Analytics.DefaultAddress_EntityName))
-                {
-                    address = addresses.Entries[Onboarding.Constants.Analytics.DefaultAddress_EntityName];
-                }
-                else if (addresses != null && createIfNull)
-                {
-                    address = addresses.Entries.Create(Onboarding.Constants.Analytics.DefaultAddress_EntityName);
-                }
-            }
-
-            return address;
-        }
+       
 
         private Profile GetProfile(string profileName, bool createNew = false)
         {

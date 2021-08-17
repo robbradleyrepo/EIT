@@ -45,21 +45,67 @@
                                 </option-field>
                             </div>
                         </div>   
-                    </select-field>                 
-                    <div class="col-lg-1 relative" v-if="months.length">
-                        <select class="article-filters__select-custom" @change="setMonth($event)">
-                            <option value="0" disabled selected>Month</option>
-                            <option  v-for="(month, i) in months" :key="i" :value="i + 1">{{month}}</option>           
-                        </select>
-                        <i class="article-filters__icon-arrow article-filters__icon-arrow_select"></i>
-                    </div>
-                    <div class="col-lg-1 relative" v-if="years.length">
-                        <select class="article-filters__select-custom" @change="setYear($event)">
-                            <option value="0" disabled selected>Year</option>
-                            <option v-for="(year, i) in years" :key="i" :value="year">{{year}}</option>                        
-                        </select>
-                        <i class="article-filters__icon-arrow article-filters__icon-arrow_select"></i>
-                    </div>
+                    </select-field>
+                    <select-field inline-template  v-if="years.length">
+                        <div class="col-lg-1 relative" @click.stop style="display: none;" :style="init ? 'display: block' : ''">
+                            <div class="article-filters__select" @click="toggleOption" :class="open ? 'active' : ''">
+                                <span class="article-filters__item-title" :class="active ? 'active' : ''">
+                                    Year
+                                </span>
+                                <i class="article-filters__icon-arrow"></i>
+                            </div>
+                            <div class="article-filters__options">
+                                <div class="article-filters__title" @click="toggleOption">
+                                    <i class="icon-chevron-left"></i>
+                                    Fund
+                                </div>
+                                <option-field inline-template>
+                                    <label class="option-checkbox" @click="setChoosen(!checked)">
+                                        <input  class="option-checkbox__input" name="year" v-model="year" value="All" type="radio" @click="setYear('All')">
+                                        <span class="option-checkbox__text">All</span>
+                                        <span class="option-checkbox__icon"></span>
+                                    </label>
+                                </option-field>                        
+                                <option-field inline-template  v-for="(year, i) in years" :key="i">
+                                    <label class="option-checkbox" @click="setChoosen(!checked)">
+                                        <input  class="option-checkbox__input" name="year" v-model="year" :value="year" type="radio" @click="setYear(year)">
+                                        <span class="option-checkbox__text">{{year}}</span>
+                                        <span class="option-checkbox__icon"></span>
+                                    </label>                                   
+                                </option-field>            
+                            </div>
+                        </div>   
+                    </select-field>
+                    <select-field inline-template  v-if="months.length">
+                        <div class="col-lg-1 relative" @click.stop style="display: none;" :style="init ? 'display: block' : ''">
+                            <div class="article-filters__select" @click="toggleOption" :class="open ? 'active' : ''">
+                                <span class="article-filters__item-title" :class="active ? 'active' : ''">
+                                    Month
+                                </span>
+                                <i class="article-filters__icon-arrow"></i>
+                            </div>
+                            <div class="article-filters__options">
+                                <div class="article-filters__title" @click="toggleOption">
+                                    <i class="icon-chevron-left"></i>
+                                    Fund
+                                </div>   
+                                <option-field inline-template>
+                                    <label class="option-checkbox" @click="setChoosen(!checked)">
+                                        <input  class="option-checkbox__input" name="month" value="All" type="radio" v-model="month" @click="setMonth('All')">
+                                        <span class="option-checkbox__text">{{month}}</span>
+                                        <span class="option-checkbox__icon"></span>
+                                    </label>
+                                </option-field>                                
+                                <option-field inline-template  v-for="(month, i) in months" :key="i">
+                                    <label class="option-checkbox" @click="setChoosen(!checked)">
+                                        <input  class="option-checkbox__input" name="month" type="radio" v-model="month" :value="month"  @click="setMonth(month)">
+                                        <span class="option-checkbox__text">{{month}}</span>
+                                        <span class="option-checkbox__icon"></span>
+                                    </label>
+                                </option-field>                                
+                            </div>
+                        </div>   
+                    </select-field>
                     <div class="col-lg-2 ml-auto">
                         <div class="article-filters__btns">
                             <button 

@@ -101,13 +101,7 @@
             public const string Title_FieldId = "{346103D5-FD6A-462A-BDC2-F025A1AC46E1}";
             public const string Value_FieldId = "{C8A3907E-8191-4DCE-B0BD-83BCBA1F4A18}";
             public const string Color_FieldId = "{F50C3989-9037-4B6D-847A-80584D65C963}";
-        }
-
-        public static class DividendChart
-        {
-            public const string Title_FieldId = "{0955F2D3-783E-4FF5-BF3F-9B7623FB00AC}";
-            public const string TableContent_FieldId = "{8F6DB058-9E75-4A0B-8F19-CD79D3F28FB0}";
-        }
+        }        
 
         public static class Settings
         {
@@ -152,6 +146,19 @@
             public const string FullBodyLabel_FieldId = "{D1B479B5-1FDB-46FD-A06D-61A0D0DEBE11}";
             public const string FilterSource_FieldId = "{2A00B22E-F809-40A6-A53A-4818158A1DE9}";
             public const string DownloadLabel_FieldId = "{A54E01C5-8988-446D-A04D-D439F461A2D3}";
-        }    
+        }
+
+        public static class DirectorList
+        {
+            public const string Title_FieldId = "{900E55EF-A2DE-4AE7-86D2-E6F6C5D6F987}";
+        }
+
+        public static class Director
+        {
+            public const string Image_FieldId = "{1202E300-6635-4D4B-AB9E-21990AC3D601}";
+            public const string FullName_FieldId = "{40EC24BE-E4C8-4D5A-9226-6AFDBFF86698}";
+            public const string Role_FieldId = "{0930A4BB-1CC6-471D-BC6B-FFD4097E2008}";
+            public const string ShortBio_FieldId = "{97454B15-76C1-4AE0-AB59-C3F8D2304CCC}";
+        }
     }
 }

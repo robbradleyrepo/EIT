@@ -25,11 +25,13 @@
             right: 0
             bottom: 0
             background: transparentize($secondary, 0.8)
-        .triangle
+        .triangle, circle
             transition: fill .3s ease-out
         &:hover
             .triangle
                 fill: $white
+            circle
+                fill: rgba($white,.1)
     &__play-btn
         position: absolute
         top: 50%

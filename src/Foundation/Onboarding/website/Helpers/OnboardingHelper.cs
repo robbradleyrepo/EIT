@@ -3,7 +3,11 @@
     using LionTrust.Foundation.Onboarding.Models;
     using Sitecore.Abstractions;
     using Sitecore.Analytics;
+    using Sitecore.Analytics.Model.Entities;
     using static LionTrust.Foundation.Onboarding.Constants;
+    using System.Linq;
+    using System.Collections.Generic;
+    using System;
 
     public static class OnboardingHelper
     {
@@ -68,6 +72,59 @@
             }
 
             return investorType;
+        }
+
+        public static bool HasAccess(IEnumerable<ICountry> excludedCountries)
+        {
+            var hasAccess = true;
+
+            if (excludedCountries != null && excludedCountries.Any())
+            {
+                hasAccess = HasAccess(excludedCountries.Select(c => c.CountryName));
+            }
+
+            return hasAccess;
+        }
+
+        public static bool HasAccess(IEnumerable<string> excludedCountries)
+        {
+            var hasAccess = true;
+
+            if (excludedCountries != null && excludedCountries.Any())
+            {
+                var address = GetCurrentContactAddress();
+
+                if (address != null
+                    && excludedCountries.Any(e => e.Equals(address.Country, StringComparison.InvariantCultureIgnoreCase)))
+                {
+                    hasAccess = false;
+                }
+            }
+
+            return hasAccess;
+        }
+
+        public static IAddress GetCurrentContactAddress(bool createIfNull = false)
+        {
+            IAddress address = null;
+          
+
+            if (Tracker.Current != null &&  Tracker.Current.Contact != null)
+            {
+                var contact = Tracker.Current.Contact;
+                var addresses = contact.GetFacet<IContactAddresses>(Analytics.Addresses_FacetName);
+
+                if (addresses != null && addresses.Entries.Contains(Analytics.DefaultAddress_EntityName))
+                {
+                    address = addresses.Entries[Analytics.DefaultAddress_EntityName];
+                }
+                else if (addresses != null && createIfNull)
+                {
+                    address = addresses.Entries.Create(Analytics.DefaultAddress_EntityName);
+                }
+            }
+            
+            return address;
         }
 
         private static bool IsValidConfiguration(IOnboardingConfiguration configuration, BaseLog log)

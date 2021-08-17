@@ -6,26 +6,28 @@
     var downloadGoal = Model.ArticleLinks.DownloadGoal != null ? Model.ArticleLinks.DownloadGoal.ToString() : string.Empty;
     var pdfDocumentAvailable = Model.Article.PdfDocument != null && !string.IsNullOrEmpty(Model.Article.PdfDocument.Src);
     var pdfDocumenSrc = pdfDocumentAvailable ? Model.Article.PdfDocument.Src : "#";
-    <ul class="article-links">
-        <li class="article-links__item">
-            <a href="#" class="article-links__link copy-to-clipbord" data-goal-trigger="@shareGoal" data-link="@Model.Article.Url" data-title="@Model.ArticleLinks.ShareTooltip">
-                <i class="icon-share"></i>
-                @Html.Glass().Editable(Model.ArticleLinks, m => m.ShareLabel)
-            </a>
-        </li>
-        @if (pdfDocumentAvailable || Sitecore.Context.PageMode.IsExperienceEditor)
-        {
-            using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Article/Article Document", Model.Article.Id.ToString(), "Edit Article document"))
+    <div class="article-with-small">
+        <ul class="article-links">
+            <li class="article-links__item">
+                <a href="#" class="article-links__link copy-to-clipbord" data-goal-trigger="@shareGoal" data-link="@Model.Article.Url" data-title="@Model.ArticleLinks.ShareTooltip">
+                    <i class="icon-share"></i>
+                    @Html.Glass().Editable(Model.ArticleLinks, m => m.ShareLabel)
+                </a>
+            </li>
+            @if (pdfDocumentAvailable || Sitecore.Context.PageMode.IsExperienceEditor)
             {
-                <li class="article-links__item">
-                    <a href="@pdfDocumenSrc" class="article-links__link" data-goal-trigger="@downloadGoal" download>
-                        <i class="icon-download"></i>
-                        @Html.Glass().Editable(Model.ArticleLinks, m => m.DownloadLabel)
-                    </a>
-                </li>
+                using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Article/Article Document", Model.Article.Id.ToString(), "Edit Article document"))
+                {
+                    <li class="article-links__item">
+                        <a href="@pdfDocumenSrc" class="article-links__link" data-goal-trigger="@downloadGoal" download>
+                            <i class="icon-download"></i>
+                            @Html.Glass().Editable(Model.ArticleLinks, m => m.DownloadLabel)
+                        </a>
+                    </li>
+                }
             }
-        }
-    </ul>
+        </ul>
+    </div>
 }
 else if (Sitecore.Context.PageMode.IsExperienceEditor)
 {

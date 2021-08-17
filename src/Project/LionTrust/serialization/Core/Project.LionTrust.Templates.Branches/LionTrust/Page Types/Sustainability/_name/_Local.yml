@@ -1,0 +1,31 @@
+﻿---
+ID: "87d8eeb1-072c-4df3-a743-3668fc6db6c7"
+Parent: "6294f940-5845-4367-a670-d14d08d2fcff"
+Template: "fff5f245-ffc0-4022-a998-9b07aa5e761f"
+Path: /sitecore/templates/Branches/Project/LionTrust/Page Types/Sustainability/$name/_Local
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: |
+    {FBFECF7A-BB63-415C-98A5-CF095FF07C99}
+    {D3D9D2CE-B2CE-49AC-B50D-6A5FFD4C4AB8}
+    {0B50876E-0F9F-479F-8533-A84625B8C7C5}
+    {F6B5C22C-0B85-45BB-BB44-D743FF235639}
+    {938850B8-54BC-46F7-B76E-9C83A331F8DC}
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: "-1000"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210816T110431Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

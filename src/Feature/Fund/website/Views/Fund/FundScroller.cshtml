@@ -66,10 +66,8 @@
                     {
                         <div class="swiper-slide col-10 col-sm-7 col-md-6 col-lg-5 col-xl-4">
 
-                            @{
-                                var fundPageUrl = item.Page == null ? string.Empty : item.Page.Url;
-                            }
-                            <a href="@fundPageUrl" class="fund-card">
+                            @using (Html.Glass().BeginRenderLink(item, i => i.CTA, new { @class = "fund-card" }, isEditable: true))
+                            {
                                 <div class="fund-card__head">
                                     @Html.Glass().Editable(item, i => i.Image)
                                 </div>
@@ -97,13 +95,16 @@
                                         </div>
                                         <div class="fund-card__text-bottom">
                                             <span class="link-styles">
-                                                @Html.Glass().Editable(m => m.ViewFundLabel)
+                                                @if (item.CTA != null && !string.IsNullOrWhiteSpace(item.CTA.Text))
+                                                {
+                                                    @item.CTA.Text
+                                                }
                                                 <i class="icon-arrow-right"></i>
                                             </span>
                                         </div>
                                     </div>
                                 </div>
-                            </a>
+                            }
                         </div>
                     }
                 </div>

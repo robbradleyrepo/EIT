@@ -9,5 +9,8 @@ namespace LionTrust.Foundation.Search.Models.ContentSearch
     {
         [IndexField("alltemplates")]
         public IList<Guid> Templates { get; set; }
+
+        [IndexField("excluded_countries")]
+        public IList<string> ExcludedCountries { get; set; }
     }
 }

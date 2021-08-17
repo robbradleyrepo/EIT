@@ -12,7 +12,7 @@
         public static class HomepageLeadBanner
         {
             public const string HomepageBannerHeadingLine1FieldId = "{E0B1CD77-CF3A-4CE0-BB48-545985A11121}";
-            public const string HomepageBannerHeadingLine2FieldId = "{BC673FAB-9FDC-40BD-87F9-6D3140806092}";
+            public const string HomepageBannerHeadingLine2FieldId = "{133D6304-B40C-4F4D-8CD9-1C4590443DD5}";
             public const string HomepageBannerPrimaryCtaFieldId = "{FEDD5F78-07DA-44BB-8C46-8149A03834E4}";
             public const string HomepageBannerSecondaryCtaFieldId = "{0C566B1C-47D3-48A5-A2ED-EF342735ED54}";
             public const string HomepageBannerPrimaryCtaGoalFieldId = "{250606C9-E9C3-4B65-B015-2367F6D2DEA2}";
@@ -83,6 +83,8 @@
 
             public const string Image_FieldName = "ImageWithTitleAndText_Image";
             public const string Image_FieldId = "{60D2759F-95DF-492C-8F4A-D1A3A80956F7}";
+
+            public const string Fund_FieldId = "{17B76D03-8FCF-409A-8954-41C025A2ABB0}";
         }
 
         public static class BannerWithSlider
@@ -102,6 +104,21 @@
             public const string CtaFieldId = "{07F07757-D439-4B90-9430-0C3F3D9BF9BF}";
             public const string CtaGoalFieldId = "{7EEBE834-1B0C-433D-A5B5-BDFB93BE49DE}";
             public const string BodyFieldId = "{838AB617-CCE0-4319-964E-4FA17315D6BD}";
+        }
+
+        public static class PeopleInfoBanner
+        { 
+            public const string BackgroundImage_FieldId = "{80FEBFB6-5701-4CDB-8E9C-00DE7BAC4AE4}";
+            public const string Description_FieldId = "{48233729-410C-4B76-B832-8B882641BE12}";
+            public const string MaleCountIcon_FieldId = "{A3170887-8A89-4C9A-B628-E1870512C8C0}";
+            public const string FemaleCountIcon_FieldId = "{AAC8FE4F-62A8-47F8-8AB4-18FD43915B9D}";
+        }
+
+        public static class PeopleInfo
+        {
+            public const string Title_FieldId = "{D2A9FB8C-7265-464B-9210-71E8A55237FF}";
+            public const string MaleCount_FieldId = "{84D065C0-0D30-4BFD-8223-88926E7EF4AE}";
+            public const string FemaleCount_FieldId = "{CE59E663-C78F-462B-920D-4EF6EBECAE37}";
         }
     }
 }

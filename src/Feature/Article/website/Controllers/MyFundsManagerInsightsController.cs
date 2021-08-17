@@ -11,6 +11,7 @@
     using LionTrust.Foundation.Search.Services.Interfaces;
     using Sitecore.Analytics;
     using Sitecore.ContentSearch.Linq;
+    using Sitecore.ContentSearch.Utilities;
     using Sitecore.Mvc.Controllers;
     using System;
     using System.Collections.Generic;
@@ -51,39 +52,44 @@
             {
                 return null;
             }
-            else if(contactData != null && contactData.SalesforceFundIds != null && contactData.SalesforceFundIds.Any())
+            //Get the funds that are followed.
+            var fundSearchRequest = new FundSearchRequest
             {
-                //Get the funds that are followed.
-                var fundSearchRequest = new FundSearchRequest
-                {
-                    Funds = contactData.SalesforceFundIds
-                };
+                DatabaseName = _databaseName,
+                SalesforceFundIds = contactData.SalesforceFundIds,
+                Take = int.MaxValue
+            };
 
-                fundSearchRequest.Funds = contactData.SalesforceFundIds;
-                var fundSearchResults = _fundContentSearchService.GetFunds(fundSearchRequest);
+            var fundSearchResults = _fundContentSearchService.GetFunds(fundSearchRequest);
 
-                if (fundSearchResults == null || fundSearchResults.TotalResults < 1)
-                {
-                    return null;
-                }
-                var followedFunds = MapFundResultHits(_fundContentSearchService.GetFunds(fundSearchRequest)?.SearchResults);
+            if (fundSearchResults == null || fundSearchResults.TotalResults < 1)
+            {
+                return null;
+            }
 
-                //search based on these funds.
-                fundSearchRequest.FundManagers = followedFunds.SelectMany(f => f.FundManagers).Distinct();
-                fundSearchRequest.FundTeams = followedFunds.Select(f => f.FundTeam);
-                fundSearchRequest.FundRanges = followedFunds.SelectMany(f => f.FundRange).Distinct();
-                fundSearchRequest.FundRegions = followedFunds.Select(f => f.FundRegion);
-                fundSearchRequest.ExcludeFunds = followedFunds.Select(f => f.FundId.ToString());
+            var followedFunds = MapFundResultHits(fundSearchResults.SearchResults.ToList());
 
-                articles = new ArticleRepository(_contentSearchService, _context).Map(contactData.SalesforceFundIds.Select(f => new Guid(f)), null, followedFunds.Select(f => new Guid(f.FundTeam))?.Distinct(), followedFunds.SelectMany(f => f.FundManagers.Select(fm => new Guid(fm)))?.Distinct(), null, _databaseName);
+            var fundTeams = followedFunds.Select(t => new Guid(t.FundTeam))?.Distinct();
 
-                if (articles == null || !articles.Any())
-                {
-                    return null;
-                }
+            if(fundTeams == null || !fundTeams.Any())
+            {
+                return null;
+            }
+
+            articles = new ArticleRepository(_contentSearchService, _context).Map(null, null, fundTeams, null, null, _databaseName);
+
+            if (articles == null || !articles.Any())
+            {
+                return null;
             }
 
             var fundManagerInsightsViewModel = new FundManagerInsightsViewModel(data, articles);
+
+            if (fundManagerInsightsViewModel.Data.CTA != null)
+            {
+                fundManagerInsightsViewModel.Data.CTA.Query = $"fundTeams={string.Join("|", fundTeams.Select(t => IdHelper.NormalizeGuid(t, true)))}";
+            }
+
             return View("/views/article/fundmanagerinsights.cshtml", fundManagerInsightsViewModel);
         }
 
@@ -103,7 +109,8 @@
                 FundRange = x.Document.FundRanges,
                 FundRegion = x.Document.FundRegion,
                 FundTeam = x.Document.FundTeam,
-                FundTeamName = x.Document.FundTeamName
+                FundTeamName = x.Document.FundTeamName,
+                SalesforceFundId = x.Document.SalesforceFundId
             });
         }
     }

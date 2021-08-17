@@ -4,7 +4,7 @@
     using System.Collections.Generic;
 
     using Glass.Mapper.Sc.Web.Mvc;
-    using LionTrust.Feature.Listings.Models;
+    using LionTrust.Feature.Listings.Models.MediaGallery;
     using Sitecore.Data.Items;
     using Sitecore.Resources.Media;
 

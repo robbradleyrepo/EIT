@@ -15,6 +15,7 @@
     using LionTrust.Foundation.Search.Models.Request;
     using LionTrust.Feature.Fund.Repository;
     using FundSearchResultItem = Foundation.Search.Models.ContentSearch.FundSearchResultItem;
+    using Sitecore.Data;
 
     public class MyFundsScrollerController: SitecoreController
     {
@@ -53,7 +54,7 @@
             else if (contactData!= null && contactData.SalesforceFundIds != null && contactData.SalesforceFundIds.Any())
             {
                 //Get the funds that are followed.
-                fundSearchRequest.Funds = contactData.SalesforceFundIds;
+                fundSearchRequest.SalesforceFundIds = contactData.SalesforceFundIds;
                 fundSearchResults = _fundContentSearchService.GetFunds(fundSearchRequest);
 
                 if (fundSearchResults != null && fundSearchResults.TotalResults > 0)
@@ -63,14 +64,14 @@
                     //search based on these funds.
                     fundSearchRequest.FundManagers = followedFunds.SelectMany(f => f.FundManagers).Distinct();
                     fundSearchRequest.FundTeams = followedFunds.Select(f => f.FundTeam);
-                    fundSearchRequest.FundRanges = followedFunds.SelectMany(f => f.FundRange).Distinct();
+                    fundSearchRequest.FundRanges = followedFunds.Where(x => x.FundRange != null && x.FundRange.Any())?.SelectMany(f => f.FundRange).Distinct();
                     fundSearchRequest.FundRegions = followedFunds.Select(f => f.FundRegion);
-                    fundSearchRequest.ExcludeFunds = followedFunds.Select(f => f.FundId.ToString());
+                    fundSearchRequest.ExcludeSalesforceFundIds = followedFunds.Select(f => f.SalesforceFundId);
                 }
                 else
                 {
                     //clear the followed funds as we don't want to search for these again if no results.
-                    fundSearchRequest.Funds = null;
+                    fundSearchRequest.SalesforceFundIds = null;
                 }
 
             }
@@ -81,7 +82,7 @@
             {
                 datasource.Funds = fundSearchResults.SearchResults.Select(f => _context.SitecoreService.GetItem<IFundCard>(f.Document.ItemId.Guid));
             }
-            else if(datasource.Funds == null)
+            else if(datasource.Funds == null || !datasource.Funds.Any())
             {
                 //No Funds found.
                 return null;
@@ -106,7 +107,8 @@
                 FundRange = x.Document.FundRanges,
                 FundRegion = x.Document.FundRegion,
                 FundTeam = x.Document.FundTeam,
-                FundTeamName = x.Document.FundTeamName
+                FundTeamName = x.Document.FundTeamName,
+                SalesforceFundId = x.Document.SalesforceFundId
             });
         }
     }

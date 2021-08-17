@@ -114,6 +114,13 @@ namespace LionTrust.Foundation.Legacy
             public const string NumberOfHoldings_FieldName = "LegacyFund_NumberOfHoldings";
             public const string OverviewDescriptionFieldId = "{1844ECC6-C68F-4989-96D5-296C34EDE6E9}";
             public const string FundNameFieldId = "{6AFB4EB4-25C4-472B-AA65-8AD9DDB3BE2C}";
+
+            public const string SalesforceFundFieldId = "{E5D3DEC0-9CBB-435E-A231-391006503C1C}";
+        }
+
+        public static class FundAccess
+        {
+            public const string ExcludedCountires_FieldId = "{77C63A9A-2144-4021-91FD-388D6E5DAD52}";
         }
 
         public static class HeroImagePageData

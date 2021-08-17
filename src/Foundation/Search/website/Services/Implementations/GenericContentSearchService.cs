@@ -3,7 +3,7 @@
     using System;
     using System.Linq;
     using System.Linq.Expressions;
-
+    using LionTrust.Foundation.Onboarding.Helpers;
     using LionTrust.Foundation.Search.Models.ContentSearch;
     using LionTrust.Foundation.Search.Models.Request;
     using LionTrust.Foundation.Search.Repositories.Interfaces;
@@ -67,7 +67,7 @@
             return predicate;
         }
 
-        public GenericSearchResults GetTaxonomyRelatedGenericItems(GenericSearchRequest genericSearchRequest)
+        public ContentSearchResults<GenericSearchResultItem> GetTaxonomyRelatedGenericItems(GenericSearchRequest genericSearchRequest)
         {
             var predicate = PredicateBuilder.True<GenericSearchResultItem>();
             var language = Sitecore.Context.Language?.Name ?? "en";
@@ -77,6 +77,9 @@
                 var parent = new ID(genericSearchRequest.Parent);
                 predicate = predicate.And(x => x.Parent == parent);
             }
+
+            var country = OnboardingHelper.GetCurrentContactAddress()?.Country;
+            predicate = predicate.And(x => !x.ExcludedCountries.Contains(country));
 
             predicate = this.PopoulateDatedTaxonomyPredicate(predicate, genericSearchRequest);
 

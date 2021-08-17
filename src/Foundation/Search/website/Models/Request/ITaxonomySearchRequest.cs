@@ -3,10 +3,8 @@
     using System;
     using System.Collections.Generic;
 
-    public interface ITaxonomySearchRequest
+    public interface ITaxonomySearchRequest : ISearchRequest
     {
-        string DatabaseName { get; set; }
-
         DateTime FromDate { get; set; }
 
         IEnumerable<string> ContentTypes { get; set; }
@@ -20,12 +18,6 @@
         
         IEnumerable<string> FundTeams { get; set; }
         
-        string SearchTerm { get; set; }
-
-        int Skip { get; set; }
-
-        int Take { get; set; }
-
         DateTime ToDate { get; set; }
 
         IEnumerable<Guid> Topics { get; set; }

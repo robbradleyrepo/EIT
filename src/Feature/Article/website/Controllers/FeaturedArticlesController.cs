@@ -9,6 +9,7 @@
     using Sitecore.Mvc.Controllers;
     using System.Linq;
     using System.Web.Mvc;
+    using LionTrust.Foundation.Onboarding.Helpers;
 
     public class FeaturedArticlesController: SitecoreController
     {
@@ -37,6 +38,7 @@
 
             if (datasource.Articles != null && datasource.Articles.Any())
             {
+                datasource.Articles = datasource.Articles.Where(a => OnboardingHelper.HasAccess(a.Fund?.FundReference?.ExcludedCountries));
                 result.FeaturedArticles = FeaturedArticleLink.Map(datasource);
             }
             else if (datasource.Children != null && datasource.Children.Any())

@@ -1,7 +1,6 @@
 ﻿namespace LionTrust.Feature.Navigation.Controllers
 {
     using System.Web.Mvc;
-
     using Glass.Mapper.Sc.Web.Mvc;
     using LionTrust.Feature.Navigation.Models;
     using LionTrust.Feature.Navigation.Repositories;
@@ -9,6 +8,7 @@
     using Sitecore.Abstractions;
     using Sitecore.Mvc.Controllers;
     using Sitecore.Mvc.Presentation;
+    using System.Linq;
 
     public class NavigationController : SitecoreController
     {
@@ -40,7 +40,7 @@
                 homeModel = _mvcContext.SitecoreService.GetItem<IHome>(homeItem.ID.Guid);
                 if (homeModel.OnboardingConfiguration != null)
                 {
-                    homeModel.OnboardingRoleName = OnboardingHelper.ProfileRoleName(homeModel.OnboardingConfiguration, _log);                        
+                    homeModel.OnboardingRoleName = OnboardingHelper.ProfileRoleName(homeModel.OnboardingConfiguration, _log);
                 }
             }
 
@@ -74,6 +74,8 @@
                 navigationViewModel.HomeItem = _mvcContext.SitecoreService.GetItem<IHome>(homeItem.ID.Guid);
             }
 
+            navigationViewModel.HomeItem.MenuItems = navigationViewModel.HomeItem.MenuItems.Where(x => OnboardingHelper.HasAccess(x.Fund?.ExcludedCountries));
+            
             return navigationViewModel;
         }
     }

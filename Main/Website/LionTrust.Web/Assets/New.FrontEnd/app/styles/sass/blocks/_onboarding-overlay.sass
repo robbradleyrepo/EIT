@@ -11,7 +11,7 @@
     flex-direction: column
     display: none
     &::-webkit-scrollbar
-            width: 4px
+        width: 4px
     &::-webkit-scrollbar-thumb
         background-color: trasparent
         border-radius: 5px
@@ -46,9 +46,11 @@
         text-align: center
         line-height: 28px
         margin: 0 auto
-        margin-bottom: 55px
+        margin-bottom: 55px            
         @include breakpoint(tablet, up)
             margin-bottom: 120px
+        @media screen and (max-height: 800px) and (min-width: 992px)
+            margin-bottom: 55px
     &__img
         width: 197px
         height: auto
@@ -62,6 +64,22 @@
         text-align: center
         margin-top: 34px
         margin-bottom: 48px
+        max-width: 500px
+        width: 100%
+        margin-left: auto
+        margin-right: auto
+        .onboarding-overlay__set-step
+            margin: 8px
+        &.three-buttons
+            width: auto
+            .onboarding-overlay__set-step
+                display: block
+                margin: 16px auto
+                @include breakpoint(tablet, up)
+                    display: inline-block
+                    margin-right: 1rem
+                    &:last-child
+                        margin-right: 0
     &__text
         @extend .onboarding-overlay__hint
         margin-bottom: 34px
@@ -75,6 +93,8 @@
     &__steps
         position: absolute
         bottom: 16px
+        @media screen and (max-height: 800px) and (min-width: 992px)
+            bottom: -110px
     &__step
         display: inline-block
         margin: 0 5px
@@ -92,6 +112,9 @@
         &.active
             &::after
                 background: $gold
+        &:hover
+            &::after
+                background: $primary
     &__row-location
     &__scroller
         margin: 0 auto

@@ -9,29 +9,32 @@
 <section class="container">
     <h3 class="text-black">@Html.Glass().Editable(Model, m => m.Title)</h3>
     <div class="row">
-        @foreach (var manager in Model.Managers)
+        @if (Model.Managers != null)
         {
-            <div class="col-lg-6 col-xl-4">
+            foreach (var manager in Model.Managers)
+            {
+                <div class="col-lg-6 col-xl-4">
 
-                <div class="fund-manager">
-                    @using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(manager, m => m.Page, manager.PageGoal, new NameValueCollection { { "class", "fund-manager__item" } }, isEditable: true))
-                    {
-                        <div class="row">
-                            <div class="col-4 col-md-2 col-lg-6">
-                                @Html.Glass().RenderImage(manager, m => m.Image, new { Alt = manager.FullName, @class = "fund-manager__img" }, isEditable: true)
-                            </div>
-                            <div class="col-8 col-md-10 col-lg-6">
-                                <div class="fund-manager__content">
-                                    <div class="fund-manager__title">@Html.Glass().Editable(manager, m => m.FullName)</div>
-                                    <span class="fund-manager__text">
-                                        @Html.Glass().Editable(manager, m => m.ShortBio)
-                                    </span>
+                    <div class="fund-manager">
+                        @using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(manager, m => m.Page, manager.PageGoal, new NameValueCollection { { "class", "fund-manager__item" } }, isEditable: true))
+                        {
+                            <div class="row">
+                                <div class="col-4 col-md-2 col-lg-6">
+                                    @Html.Glass().RenderImage(manager, m => m.Image, new { Alt = manager.FullName, @class = "fund-manager__img" }, isEditable: true)
+                                </div>
+                                <div class="col-8 col-md-10 col-lg-6">
+                                    <div class="fund-manager__content">
+                                        <div class="fund-manager__title">@Html.Glass().Editable(manager, m => m.FullName)</div>
+                                        <span class="fund-manager__text">
+                                            @Html.Glass().Editable(manager, m => m.ShortBio)
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    }
+                        }
+                    </div>
                 </div>
-            </div>
+            }
         }
     </div>
 </section>

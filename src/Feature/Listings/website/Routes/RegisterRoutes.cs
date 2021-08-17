@@ -50,6 +50,12 @@
                     controller = "MediaGallery",
                     action = "GetMediaItems"
                 });
+            RouteTable.Routes.MapRoute("Feature.Listings.GetMediaFacets", $"{Settings.GetSetting(Constants.Settings.MediGalleryApiRoute_SettingName)}/GetMediaFacets",
+                new
+                {
+                    controller = "MediaGallery",
+                    action = "GetMediaFacets"
+                });
         }
     }
 }

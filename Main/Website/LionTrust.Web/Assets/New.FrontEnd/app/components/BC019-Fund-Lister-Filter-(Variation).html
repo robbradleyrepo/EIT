@@ -37,8 +37,8 @@
                             </div>
                         </div>   
                     </select-field>
-                    <div class="col-lg-2 ml-auto">
-                        <div class="article-filters__btns">
+                    <div class="col-lg-3">
+                        <div class="article-filters__btns justify-content-start">
                             <button class="btn article-filters__btn article-filters__btn_apply" @click="applyFilters">
                                 Apply filters
                             </button>
@@ -49,7 +49,7 @@
                     </div>
                     <div class="col-6 col-lg-2 offset-6 col-md-4 offset-md-8 offset-lg-10 margin-sort-btn d-none d-lg-block">
                         <div class="relative">
-                            <button class="btn btn-clean d-block ml-auto button-sort" @click.stop="showSort">
+                            <button class="btn btn-clean d-block ml-auto button-sort mt-1" @click.stop="showSort">
                                 sort <i class="icon-sort"></i>
                             </button>
                             <div class="sort-dropdown" :class="sortModal ? 'active' : ''">

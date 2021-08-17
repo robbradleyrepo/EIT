@@ -49,6 +49,7 @@
             public const string ImageFieldId = "{EB75DFEF-C624-4571-B92B-8F37C36FCEE6}";
             public const string DescriptionFieldId = "{0905F092-B5B5-4971-B87E-57F4810BD729}";
             public const string FundFieldId = "{034CD348-2ADC-47E9-B263-2C839808DAE1}";
+            public const string CTAFieldId = "{76AF5024-2B12-421A-96CD-46E756F1DB9A}";
         }
 
         public static class FundHeader
@@ -76,7 +77,6 @@
             public const string PrimaryCtaGoalFieldId = "{7DB368D2-CCCF-4423-80FC-2065EA9FA547}";
             public const string SecondaryCtaFieldId = "{E8A3C14F-9976-4734-9FE8-5BB53E1DC9B3}";
             public const string SecondaryCtaGoalId = "{0528E27D-0ACA-4D49-A01A-E3993A81764F}";
-            public const string ViewFundFieldId = "{8E43DF4A-3439-428D-A642-9BF4A7550842}";
             public const string TextColourFieldId = "{81691A12-5AE2-433A-AEB4-7D7F5D4713E4}";
             public const string BackgroundImageFieldId = "{CF042356-7423-4D3E-A295-4F175C40DF99}";
         }
@@ -146,6 +146,7 @@
 
         public static class FundSelector
         {
+            public static Guid TemplateId = new Guid("{BC7B0647-141D-499D-964B-6F46DB539031}");
             public const string FundFieldId = "{3F407D7E-838C-4D99-A6AD-890B6A463037}";
         }
 
@@ -241,6 +242,11 @@
         {
             public const string SmallSize_FieldId = "{06013D0B-DB4E-474E-86E7-BB771D5E7577}";
             public const string TextColor_FieldId = "{98D89D89-CA0F-41FF-A3BF-E0F22F240335}";
+        }
+
+        public static class SalesforceFund
+        {
+            public const string SalesforceFundId_FieldId = "{CDEA92C0-C31B-4E6D-BC15-A772FF2AFA95}";
         }
     }
 }

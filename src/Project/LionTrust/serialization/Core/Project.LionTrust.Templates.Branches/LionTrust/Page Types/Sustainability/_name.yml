@@ -1,0 +1,108 @@
+﻿---
+ID: "6294f940-5845-4367-a670-d14d08d2fcff"
+Parent: "ee74385f-5e37-4283-b0af-ddbfa7a3186a"
+Template: "aef83073-cabc-4c94-8e30-7d76c7abe05d"
+Path: /sitecore/templates/Branches/Project/LionTrust/Page Types/Sustainability/$name
+DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1"
+      s:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{31CB9F7C-04BF-4C70-9224-BF76498D95AC}"
+          p:before="*"
+          s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+          s:ph="/header/navigation" />
+        <r
+          uid="{A092C9FF-FB8D-42E2-9C58-6365C61DF696}"
+          p:after="r[@uid='{31CB9F7C-04BF-4C70-9224-BF76498D95AC}']"
+          s:ds="{6B0A0973-BA19-4574-81F5-E32B8C8151DC}"
+          s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
+          s:par=""
+          s:ph="header" />
+        <r
+          uid="{CE0C5C3E-D9E5-4DC3-8ECB-0915B95C6A01}"
+          p:after="r[@uid='{A092C9FF-FB8D-42E2-9C58-6365C61DF696}']"
+          s:ds="{3AA12A75-E543-42F5-A9DD-408402AE9A90}"
+          s:id="{7166AE9D-EFBD-48B3-B38F-AFD4CAAB5278}"
+          s:par=""
+          s:ph="/header/secondary-navigation" />
+        <r
+          uid="{4D1A1D5F-0420-4BAB-84D2-C17DF0472E26}"
+          p:after="r[@uid='{CE0C5C3E-D9E5-4DC3-8ECB-0915B95C6A01}']"
+          s:ds="{428E37BE-03A6-4A5F-8C01-80469866F0FF}"
+          s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{235D069D-D6CC-43B1-9C27-ED0116A0F5EB}"
+          p:after="r[@uid='{4D1A1D5F-0420-4BAB-84D2-C17DF0472E26}']"
+          s:ds="{264F90BF-BC80-4F5E-83B0-48113BB7F558}"
+          s:id="{6B2E2A4D-C3CB-4676-B804-B3459E4C9BD6}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{B9BDE4C3-A7E2-44B7-8CBA-C88484066C9F}"
+          p:after="r[@uid='{235D069D-D6CC-43B1-9C27-ED0116A0F5EB}']"
+          s:ds="{24914634-0502-4C32-BAD5-4EA7EAB38EA8}"
+          s:id="{56ECB2D2-5D43-4F0F-A5D1-AC267F249E7B}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{F368AD5F-0958-4181-A17C-D37D0BDA5653}"
+          p:after="r[@uid='{B9BDE4C3-A7E2-44B7-8CBA-C88484066C9F}']"
+          s:ds="{BB47B8D5-940A-40CE-B9DD-B797C5F187F6}"
+          s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{FAA3D7A3-1683-4A1C-883B-71722E25BAE6}"
+          p:after="r[@uid='{F368AD5F-0958-4181-A17C-D37D0BDA5653}']"
+          s:ds="{538A1EB0-EFD3-4D89-862D-2E0C44247FC7}"
+          s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{2E48F8B5-A083-4475-A842-D7C90CBDC74F}"
+          p:after="r[@uid='{FAA3D7A3-1683-4A1C-883B-71722E25BAE6}']"
+          s:ds="{79D095E0-1A0C-4030-9612-6B0876C27929}"
+          s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{8538E71F-04E5-4FD5-9721-6BEC2D28201B}"
+          p:after="r[@uid='{2E48F8B5-A083-4475-A842-D7C90CBDC74F}']"
+          s:ds="{B2C4976F-E0EA-4B22-B167-7D002B5C7AEB}"
+          s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{1C275B4A-2BB1-443E-9F6B-E62DC4EF6F3E}"
+          p:after="r[@uid='{8538E71F-04E5-4FD5-9721-6BEC2D28201B}']"
+          s:ds="{B9EA4575-2C97-4EA1-BAD0-2E9E469B8804}"
+          s:id="{6B2E2A4D-C3CB-4676-B804-B3459E4C9BD6}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{9A85E096-C394-40BA-AB44-2688D32DF393}"
+          p:after="r[@uid='{1C275B4A-2BB1-443E-9F6B-E62DC4EF6F3E}']"
+          s:ds="{112CC746-2C1D-48D2-9DD6-7827837522B4}"
+          s:id="{0D2BC18F-5CEA-432E-A94D-16007F1FDE49}"
+          s:par=""
+          s:ph="main" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210816T120224Z

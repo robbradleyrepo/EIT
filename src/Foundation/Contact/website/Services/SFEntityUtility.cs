@@ -398,7 +398,7 @@
         /// </summary>
         /// <param name=""></param>
         /// <returns></returns>
-        public RegisterdUserReturnViewModel SaveNonProfUserAsSFLead(NonProfessionalUser nonProfUser, string PreferencesUrl)
+        public RegisterdUserReturnViewModel SaveNonProfUserAsSFLead(NonProfessionalUser nonProfUser, string PreferencesUrl, string fundDashboardUrl)
         {
             try
             {
@@ -472,11 +472,13 @@
 
                         //Generate the link to edit email pref page
                         var queryStringParams = string.Format("{0}={1}_{2}", Constants.QueryStringNames.EmailPreferencefParams.RefQueryStringKey, randomGuid, sfEntityId);
-                        var editEmailPrefPagelink = string.Format("https://{0}{1}?{2}", HttpContext.Current.Request.Url.Host, PreferencesUrl, queryStringParams);
+                        var editEmailPrefPagelink = string.Format("{0}?{1}", PreferencesUrl, queryStringParams);
+                        var fundDashboardlink = string.Format("{0}?{1}", fundDashboardUrl, queryStringParams);
 
                         returnObj.FullName = string.Format("{0} {1}", firstName, lastName);
                         returnObj.EmailAddress = emailAddress;
                         returnObj.EditEmailPrefLink = editEmailPrefPagelink;
+                        returnObj.FundDashboardLink = fundDashboardlink;
                         return returnObj;
                     }
                 }
@@ -494,7 +496,7 @@
         /// </summary>
         /// <param name="profUser"></param>
         /// <returns></returns>
-        public RegisterdUserReturnViewModel SaveProfUserAsSFContact(ProfessionalUser profUser, string preferencesUrl)
+        public RegisterdUserReturnViewModel SaveProfUserAsSFContact(ProfessionalUser profUser, string preferencesUrl, string fundDashboardUrl)
         {
             try
             {
@@ -570,11 +572,14 @@
 
                         //Generate the link to edit email pref page
                         var queryStringParams = string.Format("{0}={1}_{2}", Constants.QueryStringNames.EmailPreferencefParams.RefQueryStringKey, randomGuid, sfEntityId);
-                        var editEmailPrefPagelink = string.Format("https://{0}{1}?{2}", HttpContext.Current.Request.Url.Host, preferencesUrl, queryStringParams);
+                        var editEmailPrefPagelink = string.Format("{0}?{1}", preferencesUrl, queryStringParams);
+                        var fundDashboardPagelink = string.Format("{0}?{1}", fundDashboardUrl, queryStringParams);
+
 
                         returnObj.FullName = string.Format("{0} {1}", firstName, lastName);
                         returnObj.EmailAddress = emailAddress;
                         returnObj.EditEmailPrefLink = editEmailPrefPagelink;
+                        returnObj.FundDashboardLink = fundDashboardPagelink;
                         return returnObj;
                     }
                 }
@@ -593,7 +598,7 @@
         /// <param name="email"></param>
         /// <param name="isContact"></param>
         /// <returns></returns>
-        public ResendEmailPrefUserDetails GetEmailDetailsForResendEmailPrefLink(string email, bool isContact, string preferencesUrl)
+        public ResendEmailPrefUserDetails GetEmailDetailsForResendEmailPrefLink(string email, bool isContact, string preferencesUrl, string fundDashboardUrl)
         {
             try
             {
@@ -628,9 +633,10 @@
                 {
                     //Generate the link to edit email pref page
                     var queryStringParams = string.Format("{0}={1}_{2}", Constants.QueryStringNames.EmailPreferencefParams.RefQueryStringKey, randomGuid, entityId);
-                    var editEmailPrefPagelink = string.Format("https://{0}{1}?{2}", HttpContext.Current.Request.Url.Host, preferencesUrl, queryStringParams);
+                    var editEmailPrefPagelink = string.Format("{0}?{1}", preferencesUrl, queryStringParams);
+                    var fundDashboardPagelink = string.Format("{0}?{1}", fundDashboardUrl, queryStringParams);
 
-                    return new ResendEmailPrefUserDetails { FullName = fullName, EditEmailPrefLink = editEmailPrefPagelink };
+                    return new ResendEmailPrefUserDetails { FullName = fullName, EditEmailPrefLink = editEmailPrefPagelink, FundDashboardLink = fundDashboardPagelink };
                 }
             }
             catch (Exception ex)

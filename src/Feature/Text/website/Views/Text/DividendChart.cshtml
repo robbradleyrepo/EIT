@@ -1,0 +1,15 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Text.Models.IDividendChart
+@if (Model != null)
+{
+    <section class="container">
+        <h2 class="text-black">@Html.Glass().Editable(Model, m => m.Title)</h2>
+        <div class="table-responsive-lg">
+            @Html.Glass().Editable(Model, m => m.TableContent)
+        </div>
+    </section>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @: Assign datasource for component
+}

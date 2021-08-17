@@ -2,7 +2,6 @@
 {
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
-    using LionTrust.Foundation.Design;
     using System;
 
     public interface IMyFundsLeadBanner: IBannerGlassBase

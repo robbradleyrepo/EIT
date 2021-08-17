@@ -32,9 +32,6 @@
         [SitecoreField(Constants.FundScroller.SecondaryCtaGoalId)]
         Guid SecondaryCtaGoalId { get; set; }
 
-        [SitecoreField(Constants.FundScroller.ViewFundFieldId)]
-        string ViewFundLabel { get; set; }
-
         [SitecoreField(Constants.FundScroller.TextColourFieldId)]
         Foundation.Design.ILookupValue TextColour { get; set; }
 

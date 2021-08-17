@@ -21,6 +21,7 @@
     using Glass.Mapper.Sc;
     using LionTrust.Feature.Search.Models.API;
     using Log = Sitecore.Diagnostics.Log;
+    using LionTrust.Foundation.Onboarding.Helpers;
 
     public class SiteSearchDataManager : ISiteSearchDataManager
     {
@@ -70,7 +71,12 @@
                         }
 
                         predicate = predicate.And(templateQuery);
+                        
                     }
+
+                    var country = OnboardingHelper.GetCurrentContactAddress()?.Country;
+                    predicate = predicate.And(x => !x.ExcludedCountries.Contains(country));
+
                     var searchQuery = context.GetQueryable<SiteSearchResultItem>()
                         .Where(predicate)
                         .Where(r => r.Language == language)

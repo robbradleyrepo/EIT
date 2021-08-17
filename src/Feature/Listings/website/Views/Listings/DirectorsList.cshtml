@@ -1,0 +1,39 @@
+﻿@using System.Collections.Specialized
+@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Listings.Models.IDirectorsList
+<section class="container">
+    <h2 class="h2 mb-4">@Html.Glass().Editable(Model, m => m.Title)</h2>
+    <div class="row">
+        @if (Model.DirectorsList != null && Model.DirectorsList.Any())
+        {
+            foreach (var director in Model.DirectorsList)
+            {
+                using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/DirectorsList", director.Id.ToString(), "Edit director"))
+                {
+                    <div class="col-lg-6">
+                        <div class="fund-manager fund-manager-director">
+                            <div class="fund-manager__item d-block">
+                                <div class="row">
+                                    <div class="col-4">
+                                        @Html.Glass().RenderImage(director, d => d.Image, new NameValueCollection { { "class", "fund-manager__img" } }, isEditable: true)
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="fund-manager__content">
+                                            <div class="fund-manager__title text-black">@Html.Glass().Editable(director, d => d.FullName)</div>
+                                            <div class="fund-manager__text">
+                                                <p class="text-primary">
+                                                    @Html.Glass().Editable(director, d => d.Role)
+                                                </p>
+                                                @Html.Glass().Editable(director, d => d.ShortBio)
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        }
+    </div>
+</section>

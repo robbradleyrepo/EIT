@@ -52,5 +52,11 @@
             public const string Title_FieldId = "{BED8EAD5-C4A6-4257-88B2-0B530F6BA84D}";
             public const string Body_FieldId = "{32A56573-5DA9-4172-97AD-7CB45F2077F4}";
         }
+
+        public static class DividendChart
+        {
+            public const string Title_FieldId = "{0955F2D3-783E-4FF5-BF3F-9B7623FB00AC}";
+            public const string TableContent_FieldId = "{8F6DB058-9E75-4A0B-8F19-CD79D3F28FB0}";
+        }
     }
 }
