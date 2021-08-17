@@ -1,6 +1,7 @@
 @using Glass.Mapper;
 @using Glass.Mapper.Sc
 @using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Foundation.ORM.Extensions;
 @model LionTrust.Feature.Listings.Models.AccordionViewModel
 @{
 
@@ -20,7 +21,7 @@
                     }
                     @foreach (var item in Model.Data.Children)
                     {
-                        var imageSrc = item.Image != null ? item.Image.Src : string.Empty;
+                        var imageSrc = item.Image != null ? item.Image.GetSafeBackgroundImageStyle() : string.Empty;
                         var isCollapsed = item != Model.Data.Children.First();
                         var collapsedClass = isCollapsed ? "collapsed" : string.Empty;
                         var showClass = isCollapsed ? string.Empty : "show";
@@ -49,7 +50,7 @@
                                     @if (item.Image.HasValue() && item.VideoId.HasValue())
                                     {
                                         <div class="accordion__smartcard">
-                                            <a class="video-box__link" data-fancybox="" data-type="iframe" data-src="@item.VideoId" style="background-image: url('@imageSrc')">
+                                            <a class="video-box__link" data-fancybox="" data-type="iframe" data-src="@item.VideoId" style="@imageSrc">
                                                 <svg class="video-box__play-btn" xmlns="http://www.w3.org/2000/svg" width="188" height="188">
                                                     <defs>
                                                         <style>

@@ -16,6 +16,20 @@
             }
         }
 
+        public static string GetSafeBackgroundImageStyle(this Image image, string defaultValue = "")
+        {
+            var backgoundStyle = string.Empty;
+
+            var background = GetSafeSitecoreImageUrl(image, defaultValue);
+
+            if (!string.IsNullOrWhiteSpace(background))
+            {
+                backgoundStyle = $"background-image: url('{background}')";
+            }
+
+            return backgoundStyle;
+        }
+
         public static string GetSafeSitecoreImageAltText(this Image image, string defaultValue = "")
         {
             if (image != null && !string.IsNullOrEmpty(image.Src))

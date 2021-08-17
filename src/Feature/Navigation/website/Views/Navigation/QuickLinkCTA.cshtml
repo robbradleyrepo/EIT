@@ -5,7 +5,7 @@
 @model LionTrust.Feature.Navigation.Models.IQuickLinkCTA
 @if (Model != null)
 {
-    var imageSrc = Model.Image.GetSafeSitecoreImageUrl("images/components/navigation/charts.svg");
+    var imageSrc = Model.Image.GetSafeBackgroundImageStyle("images/components/navigation/charts.svg");
     var imageCss = Model.SmallSize ? "quick-link-chart quick-link-chart__small" : "quick-link-chart";
 
     if (Model.Link != null || Sitecore.Context.PageMode.IsExperienceEditor)
@@ -20,7 +20,7 @@
                 Model,
                 m => m.Link,
                 Model.LinkGoal,
-                new NameValueCollection { { "class", imageCss }, { "style", "background-image: url('" + imageSrc + "');" } },
+                new NameValueCollection { { "class", imageCss }, { "style", imageSrc } },
                 isEditable: true))
             {
                 <span class="quick-link-chart__title">@Html.Glass().Editable(Model, z => z.Title)</span>
@@ -30,7 +30,7 @@
     }
     else
     {
-        <div class="@imageCss" style="background-image: url('@imageSrc');">
+        <div class="@imageCss" style="@imageSrc">
             <span class="quick-link-chart__title">@Html.Glass().Editable(Model, z => z.Title)</span>
             <span class="quick-link-chart__text">@Html.Glass().Editable(Model, z => z.Description)</span>
         </div>

@@ -1,5 +1,6 @@
 ﻿namespace LionTrust.Feature.Banner.Models
 {
+    using Foundation.ORM.Extensions;
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
     using Sitecore.Data;
@@ -17,16 +18,11 @@
         [SitecoreField("LeadBanner_BackgroundImage")]
         public virtual Image BackgroundImage { get; set; }
 
-        public string BackgroundImageUrl
+        public string BackgroundImageStyle
         {
             get
             {
-                if (BackgroundImage == null || string.IsNullOrEmpty(BackgroundImage.Src))
-                {
-                    return string.Empty;
-                }
-
-                return BackgroundImage.Src;
+                return BackgroundImage?.GetSafeBackgroundImageStyle();
             }
         }
     }

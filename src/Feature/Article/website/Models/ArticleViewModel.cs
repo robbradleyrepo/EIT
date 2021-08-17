@@ -2,6 +2,7 @@
 {
     using System;
     using System.Linq;
+    using LionTrust.Foundation.ORM.Extensions;
 
     public class ArticleViewModel
     {
@@ -27,17 +28,17 @@
             }
         }
 
-        public string BackgroundImageUrl
+        public string BackgroundImageStyle
         {
             get
             {
                 if (ComponentData != null && ComponentData.BackgroundImage != null && !string.IsNullOrEmpty(ComponentData.BackgroundImage.Src))
                 {
-                    return ComponentData?.BackgroundImage?.Src;
+                    return ComponentData.BackgroundImage.GetSafeBackgroundImageStyle();
                 }
                 else
                 {
-                    return ArticleData?.HeaderImage?.Src;
+                    return ArticleData?.HeaderImage?.GetSafeBackgroundImageStyle();
                 }
             }
         }

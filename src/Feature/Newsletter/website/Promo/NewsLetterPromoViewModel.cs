@@ -1,7 +1,8 @@
-﻿using System;
-
-namespace LionTrust.Feature.Newsletter.Promo
+﻿namespace LionTrust.Feature.Newsletter.Promo
 {
+    using Foundation.ORM.Extensions;
+    using System;
+
     public class NewsletterPromoViewModel
     {
         public NewsletterPromoViewModel(INewsletterPromoModel data)
@@ -24,16 +25,11 @@ namespace LionTrust.Feature.Newsletter.Promo
             }
         }
 
-        public string BackgroundImageUrl
+        public string BackgroundImageStyle
         {
             get
             {
-                if (Data?.BackgroundImage == null)
-                {
-                    return string.Empty;
-                }
-
-                return Data?.BackgroundImage.Src;
+                return Data?.BackgroundImage?.GetSafeBackgroundImageStyle();
             }
         }
     }
