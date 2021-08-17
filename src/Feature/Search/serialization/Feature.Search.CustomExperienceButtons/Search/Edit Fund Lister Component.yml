@@ -1,8 +1,8 @@
 ﻿---
-ID: "84caa8f3-aeab-4d03-9c4a-c3accf37ccf2"
+ID: "0e29411d-26dd-4655-9eff-32c28c365489"
 Parent: "937aea6f-5745-4b7c-ad1e-57e1887d8701"
 Template: "1ab4f9ad-b004-413c-8924-3e07143a614b"
-Path: /sitecore/content/Applications/WebEdit/Custom Experience Buttons/Feature/Search/Edit My Funds Lister Component
+Path: /sitecore/content/Applications/WebEdit/Custom Experience Buttons/Feature/Search/Edit Fund Lister Component
 DB: core
 SharedFields:
 - ID: "4431914a-c40b-437c-8add-d2ed12cc8cc3"
@@ -10,7 +10,7 @@ SharedFields:
   Value: Applications/32x32/contract.png
 - ID: "cf738220-908d-4c3f-9482-32e625daf13c"
   Hint: Fields
-  Value: MyFundsLister_FundLiterature|MyFundsLister_FacetsConfiguration|MyFundsLister_SortAZLabel|MyFundsLister_SortZALabel
+  Value: FundLister_FundLiterature|FundLister_SearchPlaceholder|FundLister_FacetsConfiguration
 Languages:
 - Language: en
   Fields:

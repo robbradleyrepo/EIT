@@ -97,8 +97,11 @@
             predicate = predicate.And(x => x.Language == language);
             predicate = predicate.And(x => x.IsLatestVersion);
 
-            var country = OnboardingHelper.GetCurrentContactAddress()?.Country;
-            predicate = predicate.And(x => !x.ExcludedCountries.Contains(country));
+            if (!Sitecore.Context.PageMode.IsExperienceEditorEditing)
+            {
+                var country = OnboardingHelper.GetCurrentContactAddress()?.Country;
+                predicate = predicate.And(x => !x.ExcludedCountries.Contains(country));
+            }
 
             predicate = this.PopoulateDatedTaxonomyPredicate(predicate, articleSearchRequest);
 
