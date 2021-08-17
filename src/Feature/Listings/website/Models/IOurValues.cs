@@ -7,6 +7,9 @@
         [SitecoreField(Constants.OurValues.Heading_FieldId)]
         string Heading { get; set; }
 
+        [SitecoreField(Constants.OurValues.HeadingColor_FieldId)]
+        Foundation.Design.ILookupValue HeadingColor { get; set; }
+
         [SitecoreField(Constants.OurValues.FirstTitle_FieldId)]
         string FirstTitle { get; set; }
 

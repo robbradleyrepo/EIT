@@ -163,6 +163,7 @@
 
         public static class OurValues
         {
+            public const string HeadingColor_FieldId = "{2D65D3D3-95D0-4FA4-AB20-4702211B97B5}";
             public const string Heading_FieldId = "{82E11A79-E14E-4140-BE21-6EB9B623CF71}";
             public const string FirstTitle_FieldId = "{8196CCDD-B06B-433F-8445-6919A4D39216}";
             public const string FirstBodyCopy_FieldId = "{21A76102-EDD0-4248-98D3-B320C5E25909}";

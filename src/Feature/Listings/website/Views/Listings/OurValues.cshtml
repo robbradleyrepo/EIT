@@ -2,23 +2,24 @@
 @model LionTrust.Feature.Listings.Models.IOurValues
 @if (Model != null)
 {
-<div class="container mb-5">
-    <h2 class="text-center text-black mb-3">@Html.Glass().Editable(Model, m => m.Heading)</h2>
-    <div class="row">
-        <div class="col-lg-4">
-            <h4 class="text-center text-primary">@Html.Glass().Editable(Model, m => m.FirstTitle)</h4>
-            <div class="text-center text-black">@Html.Glass().Editable(Model, m => m.FirstBodyCopy)</div>
-        </div>
-        <div class="col-lg-4">
-            <h4 class="text-center text-primary">@Html.Glass().Editable(Model, m => m.SecondTitle)</h4>
-            <div class="text-center text-black">@Html.Glass().Editable(Model, m => m.SecondBodyCopy)</div>
-        </div>
-        <div class="col-lg-4">
-            <h4 class="text-center text-primary">@Html.Glass().Editable(Model, m => m.ThirdTitle)</h4>
-            <div class="text-center text-black">@Html.Glass().Editable(Model, m => m.ThirdBodyCopy)</div>
+    var titleColor = Model.HeadingColor != null && !string.IsNullOrEmpty(Model.HeadingColor.Value) ? Model.HeadingColor.Value : "text-black";
+    <div class="container mb-5">
+        <h2 class="text-center @titleColor mb-3">@Html.Glass().Editable(Model, m => m.Heading)</h2>
+        <div class="row">
+            <div class="col-lg-4">
+                <h4 class="text-center text-primary">@Html.Glass().Editable(Model, m => m.FirstTitle)</h4>
+                <div class="text-center text-black">@Html.Glass().Editable(Model, m => m.FirstBodyCopy)</div>
+            </div>
+            <div class="col-lg-4">
+                <h4 class="text-center text-primary">@Html.Glass().Editable(Model, m => m.SecondTitle)</h4>
+                <div class="text-center text-black">@Html.Glass().Editable(Model, m => m.SecondBodyCopy)</div>
+            </div>
+            <div class="col-lg-4">
+                <h4 class="text-center text-primary">@Html.Glass().Editable(Model, m => m.ThirdTitle)</h4>
+                <div class="text-center text-black">@Html.Glass().Editable(Model, m => m.ThirdBodyCopy)</div>
+            </div>
         </div>
     </div>
-</div>
 }
 else if (Sitecore.Context.PageMode.IsExperienceEditor)
 {
