@@ -13,7 +13,7 @@ export default () => {
         spaceBetween: 16,
       },
       992: {
-        spaceBetween: 32,
+        spaceBetween: 28,
       },
     },
   });
