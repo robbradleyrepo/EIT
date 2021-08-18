@@ -1,0 +1,33 @@
+﻿---
+ID: "33a05bc2-0751-403d-a2ea-be14570cecdf"
+Parent: "3e0d22e5-8ad7-4ed0-809b-3d162c0a9505"
+Template: "857e4b73-6e7e-41cf-972f-0e3cc2ea8e22"
+Path: /sitecore/content/LionTrustNew/Page Settings/Headers/Private Investor Header Configuration/Learning/Navigation Columns/About Us
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210406T123518Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "89cc8946-1499-4d72-9d06-016cc68b0401"
+      Hint: HeaderDropDownNavigationColumn_ColumnTitle
+      Value: About Us
+    - ID: "9012ee1a-dea2-49fa-951d-f72e835639ca"
+      Hint: HeaderDropDownNavigationColumn_ColumnLink
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{477C9F45-9BBE-42D1-9FAE-13E65503206F}" />
+    - ID: "e6689b09-d0ff-4b12-965c-625b7185f6be"
+      Hint: HeaderDropDownNavigationColumn_PageLinks
+      Type: Treelist
+      Value: 
+    - ID: "fe160ab8-1158-46c9-80ad-43557ce4129d"
+      Hint: HeaderDropDownNavigationColumn_ShowColumn Link
+      Type: Checkbox
+      Value: 1

@@ -65,7 +65,7 @@
                             result.Add(new Document
                             {
                                 DocumentName = documentName,
-                                Name = mediaStream.FileName,
+                                Name = mediaStream.MimeType,
                                 Bytes = FileHelper.GetByteArray(stream),
                                 Length = stream.Length
                             });

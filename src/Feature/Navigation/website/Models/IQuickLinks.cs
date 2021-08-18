@@ -3,6 +3,7 @@
     using System.Collections.Generic;
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
+    using LionTrust.Foundation.Navigation.Models;
 
     public interface IQuickLinks : INavigationGlassBase
     {
