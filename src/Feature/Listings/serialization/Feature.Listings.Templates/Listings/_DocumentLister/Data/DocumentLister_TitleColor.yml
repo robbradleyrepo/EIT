@@ -1,25 +1,28 @@
 ﻿---
-ID: "508ef2ad-4dd4-49e8-a95a-436e3ed8f69f"
-Parent: "614d8aae-347a-47aa-a894-cc39e1c696eb"
+ID: "7a95493e-b21a-4be2-a4b2-87ce0894157b"
+Parent: "9d037d6a-a198-4d2a-8101-7c85c0500b00"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Contact/_ContactUsCard/Contact Us/ContactUsCard_Title
+Path: /sitecore/templates/Feature/Listings/_DocumentLister/Data/DocumentLister_TitleColor
 DB: master
 SharedFields:
+- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
+  Hint: Source
+  Value: /sitecore/system/Settings/Foundation/Design/Text Color
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: "Single-Line Text"
+  Value: Droplink
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 50
+  Value: 150
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Title
+    Value: Title Color
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210615T142524Z
+      Value: 20210817T141215Z

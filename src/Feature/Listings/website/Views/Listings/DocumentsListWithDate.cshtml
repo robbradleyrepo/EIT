@@ -3,8 +3,9 @@
 @model LionTrust.Feature.Listings.Models.IDocumentLister
 @if (Model != null)
 {
+    var titleColor = Model.TitleColor != null && !string.IsNullOrEmpty(Model.TitleColor.Value) ? Model.TitleColor.Value : "text-black";
     <section class="container">
-        <h2 class="text-black mb-3">@Html.Glass().Editable(Model, m => m.NameText)</h2>
+        <h2 class="@titleColor mb-3">@Html.Glass().Editable(Model, m => m.NameText)</h2>
         @if (Model.DocumentList != null && Model.DocumentList.Any())
         {
             <table class="table table-document">

@@ -1,8 +1,8 @@
 ﻿---
-ID: "6489cbfc-15ad-4a09-980c-d79734046802"
-Parent: "f7a7cc71-0475-4c45-bb16-7c792329e354"
+ID: "d32402c2-c3e6-4382-bfb5-36f863e336dd"
+Parent: "88076ab0-e40e-4c96-812d-c65c6a75f123"
 Template: "1ab4f9ad-b004-413c-8924-3e07143a614b"
-Path: /sitecore/content/Applications/WebEdit/Custom Experience Buttons/Feature/Promo/Edit Image Promo Component
+Path: /sitecore/content/Applications/WebEdit/Custom Experience Buttons/Feature/Contact/Edit Contact Us Card
 DB: core
 SharedFields:
 - ID: "4431914a-c40b-437c-8add-d2ed12cc8cc3"
@@ -10,16 +10,16 @@ SharedFields:
   Value: Applications/32x32/contract.png
 - ID: "cf738220-908d-4c3f-9482-32e625daf13c"
   Hint: Fields
-  Value: ImagePromo_TextAlignment|ImagePromo_TextColour|ImagePromo_TitleColor
+  Value: ContactUsCard_TitleColor
 Languages:
 - Language: en
   Fields:
   - ID: "108d3a63-baaa-4560-86d8-3a112ed84717"
     Hint: Header
-    Value: Edit Component
+    Value: Edit Contact Us Card
   - ID: "5f0812af-d370-4292-afee-f26a39b7406d"
     Hint: Tooltip
-    Value: Edit component
+    Value: Edit Contact Us Card
   Versions:
   - Version: 1
     Fields:

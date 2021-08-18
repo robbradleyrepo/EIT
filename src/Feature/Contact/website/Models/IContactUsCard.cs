@@ -8,6 +8,9 @@
         [SitecoreField(Constants.ContactUsCard.Title_FieldId)]
         string Title { get; set; }
 
+        [SitecoreField(Constants.ContactUsCard.TitleColor_FieldId)]
+        Foundation.Design.ILookupValue TitleColor { get; set; }
+
         [SitecoreField(Constants.ContactUsCard.Heading_FieldId)]
         string Heading { get; set; }
 

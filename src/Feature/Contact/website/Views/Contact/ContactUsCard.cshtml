@@ -7,9 +7,10 @@
     var showTelDivider = (!string.IsNullOrEmpty(Model.TelNumber) && !string.IsNullOrEmpty(Model.OutsideTelNumber)) || Sitecore.Context.PageMode.IsExperienceEditor;
     var showFaxLabel = !string.IsNullOrEmpty(Model.FaxNumber) || !string.IsNullOrEmpty(Model.OutsideFaxNumber) || Sitecore.Context.PageMode.IsExperienceEditor;
     var showFaxDivider = (!string.IsNullOrEmpty(Model.FaxNumber) && !string.IsNullOrEmpty(Model.OutsideFaxNumber)) || Sitecore.Context.PageMode.IsExperienceEditor;
+    var titleColor = Model.TitleColor != null && !string.IsNullOrEmpty(Model.TitleColor.Value) ? Model.TitleColor.Value : "text-black";
 
     <section class="container contact-section">
-        <h2 class="h2 contact-section__title">@Html.Glass().Editable(Model, m => m.Title)</h2>
+        <h2 class="h2 contact-section__title @titleColor">@Html.Glass().Editable(Model, m => m.Title)</h2>
         <div class="row">
             <div class="col-lg-11">
                 <div class="card">

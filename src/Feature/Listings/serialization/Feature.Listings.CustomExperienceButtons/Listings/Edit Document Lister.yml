@@ -1,8 +1,8 @@
 ﻿---
-ID: "6489cbfc-15ad-4a09-980c-d79734046802"
-Parent: "f7a7cc71-0475-4c45-bb16-7c792329e354"
+ID: "688805ca-86f8-4d65-aab8-edbb18e8692a"
+Parent: "a7e1df00-d246-4c72-9aaa-916be6d726bf"
 Template: "1ab4f9ad-b004-413c-8924-3e07143a614b"
-Path: /sitecore/content/Applications/WebEdit/Custom Experience Buttons/Feature/Promo/Edit Image Promo Component
+Path: /sitecore/content/Applications/WebEdit/Custom Experience Buttons/Feature/Listings/Edit Document Lister
 DB: core
 SharedFields:
 - ID: "4431914a-c40b-437c-8add-d2ed12cc8cc3"
@@ -10,16 +10,16 @@ SharedFields:
   Value: Applications/32x32/contract.png
 - ID: "cf738220-908d-4c3f-9482-32e625daf13c"
   Hint: Fields
-  Value: ImagePromo_TextAlignment|ImagePromo_TextColour|ImagePromo_TitleColor
+  Value: DocumentLister_TitleColor
 Languages:
 - Language: en
   Fields:
   - ID: "108d3a63-baaa-4560-86d8-3a112ed84717"
     Hint: Header
-    Value: Edit Component
+    Value: Edit Document Lister
   - ID: "5f0812af-d370-4292-afee-f26a39b7406d"
     Hint: Tooltip
-    Value: Edit component
+    Value: Edit Document Lister
   Versions:
   - Version: 1
     Fields:

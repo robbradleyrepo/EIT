@@ -5,6 +5,9 @@
 
     public interface IDocumentLister : IDocumentFolder, IListingsGlassBase
     {
+        [SitecoreField(Constants.DocumentLister.TitleColor_FieldID)]
+        Foundation.Design.ILookupValue TitleColor { get; set; }
+
         [SitecoreField(Constants.DocumentLister.SortText_FieldID)]
         string SortText { get; set; }
 

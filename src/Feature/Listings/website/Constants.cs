@@ -69,6 +69,7 @@
 
         public static class DocumentLister
         {
+            public const string TitleColor_FieldID = "{7A95493E-B21A-4BE2-A4B2-87CE0894157B}";
             public const string SortText_FieldID = "{707223F8-4670-4008-910F-C572046D0815}";
             public const string AZText_FieldID = "{AAE23341-C861-4FBC-B0AB-16EA97A7FFC7}";
             public const string ZAText_FieldID = "{D3733E07-651D-4602-A5E6-9EA7953199BC}";
@@ -120,7 +121,7 @@
 
         public static class DocumentVariant
         {
-            public const string Title_FieldID = "{DFDA05D5-803C-4595-9460-F6AF0AE633B4}";
+            public const string Title_FieldID = "{DFDA05D5-803C-4595-9460-F6AF0AE633B4}";            
             public const string PressReleaseDocument_FieldID = "{F09637BD-1F1B-4590-8D0C-DA6F9B52155C}";
             public const string ReportDocument_FieldID = "{F4DF3EE6-5A99-4795-A7FB-E1DC960DAAAD}";
             public const string PresentationLink_FieldID = "{791F04C8-C42D-49F9-9EEA-B3E68EC99E5E}";
