@@ -1,0 +1,22 @@
+﻿---
+ID: "1e292a7b-3110-4c38-bbe3-3dd1a4eaaad1"
+Parent: "cb15bccd-f423-4cb0-b3dc-d4db939599f4"
+Template: "cb15bccd-f423-4cb0-b3dc-d4db939599f4"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Fund Header/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210818T130224Z
+    - ID: "5d55ee9c-7778-47e7-833d-9d692e0e8aab"
+      Hint: FundHeader_BackgroundImage
+      Value: |
+        <image mediaid="{F46F52BB-1AD6-436E-A4DC-2EEF83472387}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
