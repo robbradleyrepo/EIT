@@ -14,9 +14,11 @@
     <h2 class="h2">
         @Html.Glass().Editable(Model.Fund, m => m.OverviewTitle)
     </h2>
-    <p class="font-500 text-margin">
-        @Html.Glass().Editable(Model.Fund, m => m.OverviewText)
-    </p>
+    <div class="fund-overview__text">
+        <p class="font-500 text-margin">
+            @Html.Glass().Editable(Model.Fund, m => m.OverviewText)
+        </p>
+    </div>
     <div>
         @using (Html.Glass().BeginRenderLink(Model, m => m.LatestUpdateCTA, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary-forward mr-1 mr-md-4" } }, isEditable: true))
         {
