@@ -5,7 +5,8 @@
 @model LionTrust.Feature.Listings.Models.AccordionViewModel
 @{
 
-    var wrapperClass = Model.Data.Children.Any(x => x.Image.HasValue() && x.VideoId.HasValue()) ? "accordion-section" : "accordion-section accordion-section_full";
+    var fullWidth = !Model.Data.Children.Any(x => x.Image.HasValue() && x.VideoId.HasValue());
+    var wrapperClass = fullWidth ? "accordion-section accordion-section_full" : "accordion-section";
     var textColour = Model.RenderingData.Theme != null && Model.RenderingData.Theme.Value == "light" ? "accordion_white" : string.Empty;
     var containerId = LionTrust.Feature.Listings.Utils.RandomString(10, true);
     var textAlign = Model.RenderingData.TextAlign != null ? Model.RenderingData.TextAlign.Value : "left";
@@ -13,8 +14,8 @@
 }
 <div class="@wrapperClass">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6 @(rightAccordionAlign ? "order-1" : "order-0")">
+        <div class="@(fullWidth ? "" : "row")">
+            <div class="@(fullWidth ? "" : "col-lg-6") @(rightAccordionAlign ? "order-1" : "order-0")">
                 <div id="@containerId" class="accordion @textColour">
                     @{
                         var counter = 0;
@@ -78,7 +79,7 @@
                     }
                 </div>
             </div>
-            <div class="col-lg-6 @(rightAccordionAlign ? "order-0" : "order-1")"></div>
+            <div class="@(fullWidth ? "" : "col-lg-6") @(rightAccordionAlign ? "order-0" : "order-1")"></div>
         </div>
     </div>
 </div>
