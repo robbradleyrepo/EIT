@@ -40,14 +40,49 @@
             return string.Empty;
         }
 
-        public static InvestorType GetInvestorType(IOnboardingConfiguration onboardingConfiguration, BaseLog log)
-        {
-            var investorType = InvestorType.Private;
+        //public static InvestorType GetInvestorType(IOnboardingConfiguration onboardingConfiguration, BaseLog log)
+        //{
+        //    var investorType = InvestorType.Private;
 
+        //    var tracker = Tracker.Current;
+        //    if (!IsValidConfiguration(onboardingConfiguration, log))
+        //    {
+        //        return investorType;
+        //    }
+
+        //    if (tracker != null && tracker.Interaction != null
+        //        && tracker.Interaction.Profiles != null)
+        //    {
+        //        if (tracker.Interaction.Profiles.ContainsProfile(onboardingConfiguration.Profile.Name))
+        //        {
+        //            var profile = tracker.Interaction.Profiles[onboardingConfiguration.Profile.Name];
+        //            if (profile.PatternId != null && profile.PatternId.Value != null)
+        //            {
+        //                if (profile.PatternId.HasValue)
+        //                {
+        //                    if (profile.PatternId == onboardingConfiguration.PrivatePatternCard.Id)
+        //                    {
+        //                        investorType = InvestorType.Private;
+        //                    }
+        //                    else if (profile.PatternId == onboardingConfiguration.ProfressionalPatternCard.Id)
+        //                    {
+        //                        investorType = InvestorType.Professional;
+        //                    }
+        //                }
+        //            }
+        //        }
+        //    }
+
+        //    return investorType;
+        //}
+
+        public static IInvestor GetCurrentContactInvestor(IOnboardingConfiguration onboardingConfiguration, BaseLog log)
+        {
+            IInvestor inverstor = null;
             var tracker = Tracker.Current;
             if (!IsValidConfiguration(onboardingConfiguration, log))
             {
-                return investorType;
+                return null;
             }
 
             if (tracker != null && tracker.Interaction != null
@@ -60,20 +95,16 @@
                     {
                         if (profile.PatternId.HasValue)
                         {
-                            if (profile.PatternId == onboardingConfiguration.PrivatePatternCard.Id)
-                            {
-                                investorType = InvestorType.Private;
-                            }
-                            else if (profile.PatternId == onboardingConfiguration.ProfressionalPatternCard.Id)
-                            {
-                                investorType = InvestorType.Professional;
-                            }
+                            inverstor = onboardingConfiguration.ChooseInvestorRole?
+                                .FirstOrDefault()?
+                                .Investors?
+                                .FirstOrDefault(i => i?.PatternCard.Id == profile.PatternId);
                         }
                     }
                 }
             }
 
-            return investorType;
+            return inverstor;
         }
 
         public static bool HasAccess(IEnumerable<ICountry> excludedCountries)
@@ -162,18 +193,6 @@
             if (configuration.Profile == null)
             {
                 log.Error("Onboarding configuration has no profile set", configuration);
-                return false;
-            }
-
-            if (configuration.PrivateProfileCard == null)
-            {
-                log.Error("Onboarding configuration has no private profile card set", configuration);
-                return false;
-            }
-
-            if (configuration.ProfressionalProfileCard == null)
-            {
-                log.Error("Onboarding configuration has no professional profile card set", configuration);
                 return false;
             }
 

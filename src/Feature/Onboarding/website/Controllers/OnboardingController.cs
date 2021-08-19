@@ -122,6 +122,31 @@
             }
         }
 
+        public ActionResult GetInvestorRoles(string countryIso)
+        {
+            var data = _context.GetHomeItem<IHome>();
+
+            if (data == null || string.IsNullOrWhiteSpace(countryIso))
+            {
+                return null;
+            }
+
+            var chooseInvestor = data.OnboardingConfiguration?
+                .ChooseInvestorRole?
+                .FirstOrDefault();
+
+            chooseInvestor.Investors = chooseInvestor?
+                .Investors?
+                .Where(i => !i.ExcludedCountires.Any(c => c.ISO == countryIso));
+
+            if (chooseInvestor == null || chooseInvestor.Investors == null)
+            {
+                return null;
+            }
+
+            return View("~/Views/OnBoarding/ChooseInvestorRole.cshtml", chooseInvestor);
+        }
+
         [HttpPost]
         public ActionResult Render([NotNull] OnboardingSubmit OnboardingSubmit)
         {
@@ -146,7 +171,7 @@
                         _log.Info(message, this);
                     }
                 }
-  
+
                 var data = _context.GetHomeItem<IHome>();
 
                 if (data?.OnboardingConfiguration == null)
@@ -163,14 +188,12 @@
 
                     if (profile != null)
                     {
-                        if (OnboardingSubmit.InvestorType == Foundation.Onboarding.Constants.InvestorType.Private)
-                        {
-                            _cardManager.AddPointsFromProfileCard(data.OnboardingConfiguration.PrivateProfileCard, profile);
-                        }
-                        else if (OnboardingSubmit.InvestorType == Foundation.Onboarding.Constants.InvestorType.Professional)
-                        {
-                            _cardManager.AddPointsFromProfileCard(data.OnboardingConfiguration.ProfressionalProfileCard, profile);
-                        }
+                        var investor = data.OnboardingConfiguration.ChooseInvestorRole?
+                            .FirstOrDefault()?
+                            .Investors?
+                            .FirstOrDefault(x => x.Id == OnboardingSubmit.InvestorId);
+
+                        _cardManager.AddPointsFromProfileCard(investor.ProfileCard, profile);
 
                         var contactManager = Factory.CreateObject("tracking/contactManager", true) as ContactManager;
                         contactManager.SaveContactToCollectionDb(_tracker.Contact);
@@ -209,18 +232,6 @@
                 return false;
             }
 
-            if (data.OnboardingConfiguration.PrivateProfileCard == null)
-            {
-                _log.Error("Onboarding configuration private profile card has not been set", this);
-                return false;
-            }
-
-            if (data.OnboardingConfiguration.ProfressionalProfileCard == null)
-            {
-                _log.Error("Onboarding configuration professional profile card has not been set", this);
-                return false;
-            }
-
             return true;
         }
 
@@ -256,6 +267,12 @@
                 return false;
             }
 
+            if (viewModel.ChooseInvestorRole.Investors == null)
+            {
+                _log.Error("Investors are null. Unable to render onboarding component", this);
+                return false;
+            }
+
             if (viewModel.TermsAndConditions == null)
             {
                 _log.Error("Terms and conditions are null. Unable to render onboarding component", this);
@@ -270,9 +287,12 @@
             var result = false;
 
             var profile = GetProfile(config.Profile.Name);
-            var address = OnboardingHelper.GetCurrentContactAddress();
+            var country = OnboardingHelper.GetCurrentContactCountry(_context);
 
-            if (profile != null && profile.PatternId.HasValue && address != null && !string.IsNullOrWhiteSpace(address.Country))
+            if (profile != null 
+                && profile.PatternId.HasValue 
+                && config.ChooseInvestorRole.FirstOrDefault().Investors.Any(p => p.PatternCard.Id == profile.PatternId.Value) 
+                && country != null)
             {
                 result = true;
             }
@@ -296,8 +316,6 @@
 
             Response.SetCookie(currentTab);
         }
-
-       
 
         private Profile GetProfile(string profileName, bool createNew = false)
         {
@@ -331,7 +349,6 @@
             }
 
             return profile;
-
         }        
     }
 }

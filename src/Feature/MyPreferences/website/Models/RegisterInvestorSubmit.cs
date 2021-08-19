@@ -25,6 +25,6 @@ namespace LionTrust.Feature.MyPreferences.Models
         [Required]
         public bool UKResident { get; set; }
 
-        public InvestorType InvestorType { get; set; }
+        public bool ProfessionalInvestor { get; set; }
     }
 }

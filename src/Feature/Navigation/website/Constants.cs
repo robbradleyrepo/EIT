@@ -3,7 +3,7 @@
     using Sitecore.Data;
 
     public static class Constants
-    {     
+    {
         public static class CopyWithCta
         {
             public const string CopyFieldId = "{D7CD16BD-DBB5-44D9-AB26-8BBB1C9B7C2A}";
@@ -28,10 +28,10 @@
         {
             public const string Logo_FieldName = "Identity_Logo";
             public const string Logo_FieldID = "{F113BF3D-FE80-4A15-9CDA-679B3C3CB3BE}";
-        } 
+        }
 
         public static class FooterConfiguration
-        {           
+        {
             public const string FindUsLabel_FieldID = "{05ABA786-3D35-479B-ADA4-ECEE716AD9F5}";
             public const string Address_FieldID = "{F53DF5DE-4D7D-4278-8DAE-59D0C79D0B0C}";
             public const string Location_FieldID = "{C77B9712-2755-4657-BDF2-C43AED9BEE02}";
@@ -119,12 +119,6 @@
             public const string TemplateId = "{23084602-8AE7-4B97-96C0-E89784C376D7}";
             public const string TwitterAccountName_FieldId = "{12150827-6E1A-4A38-91A1-70EB00F3E7B0}";
             public const string TwitterLinkGoal_FieldId = "{01E1D852-248A-450D-9A14-AB7EF92DBFE0}";
-        }
-
-        public static class OnboardingConfiguration
-        {
-            public const string PrivateProfileCard_FieldId = "{0D201AF9-3ADA-4859-8B60-C2DA64C5F059}";
-            public const string ProfessionalProfileCard_FieldId = "{A2546C2D-E821-46F7-8042-D78F3F1CA8F1}";
         }
     }
 }

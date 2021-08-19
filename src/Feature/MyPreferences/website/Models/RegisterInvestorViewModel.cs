@@ -5,10 +5,10 @@ namespace LionTrust.Feature.MyPreferences.Models
 {
     public class RegisterInvestorViewModel
     {
-        public RegisterInvestorViewModel(IRegisterInvestor content, InvestorType investorType)
+        public RegisterInvestorViewModel(IRegisterInvestor content, bool professionalInvestor)
         {
             Content = content;
-            InvestorType = investorType;
+            ProfessionalInvestor = professionalInvestor;
         }
 
         public IRegisterInvestor Content { get; set; }
@@ -40,7 +40,7 @@ namespace LionTrust.Feature.MyPreferences.Models
         [Display(Name = "UK Resident *")]
         public bool? UKResident { get; set; }
 
-        public InvestorType InvestorType { get; set; }
+        public bool ProfessionalInvestor { get; set; }
 
         public string Error { get; set; }
     }

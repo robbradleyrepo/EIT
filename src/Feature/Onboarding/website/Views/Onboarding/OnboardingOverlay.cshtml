@@ -13,15 +13,17 @@
                 <img src="@Model.Logo" class="onboarding-overlay__img" />
             </div>
             @Html.Partial("~/Views/OnBoarding/ChooseCountry.cshtml", Model.ChooseCountry)
-            @Html.Partial("~/Views/OnBoarding/ChooseInvestorRole.cshtml", Model.ChooseInvestorRole)
-            @Html.Partial("~/Views/OnBoarding/TermsAndConditions.cshtml", Model.TermsAndConditions)
+            <div class="onboarding-overlay__tab choose-investor-role" data-tab-number="2">
+            </div>
+                @*@Html.Partial("~/Views/OnBoarding/ChooseInvestorRole.cshtml", Model.ChooseInvestorRole)*@
+                @Html.Partial("~/Views/OnBoarding/TermsAndConditions.cshtml", Model.TermsAndConditions)
+            </div>
+            <div class="onboarding-overlay__steps">
+                <span data-change-step="1" class="onboarding-overlay__step active"></span>
+                <span data-change-step="2" class="onboarding-overlay__step"></span>
+                <span data-change-step="3" class="onboarding-overlay__step"></span>
+            </div>
         </div>
-        <div class="onboarding-overlay__steps">
-            <span data-change-step="1" class="onboarding-overlay__step active"></span>
-            <span data-change-step="2" class="onboarding-overlay__step"></span>
-            <span data-change-step="3" class="onboarding-overlay__step"></span>
-        </div>
-    </div>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
