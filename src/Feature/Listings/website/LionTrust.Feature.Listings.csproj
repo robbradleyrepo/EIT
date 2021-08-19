@@ -96,6 +96,7 @@
     <Content Include="Views\Listings\MediaGallery.cshtml" />
     <Content Include="Views\Listings\DirectorsList.cshtml" />
     <Content Include="Views\Listings\OurValues.cshtml" />
+    <Content Include="Views\Listings\LatestResultsAndPresentations.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -115,6 +116,8 @@
     <Compile Include="Models\AccordionViewModel.cs" />
     <Compile Include="Models\IDirector.cs" />
     <Compile Include="Models\IDirectorsList.cs" />
+    <Compile Include="Models\ILatestResultsAndPresentations.cs" />
+    <Compile Include="Models\IListingPageWithChildren.cs" />
     <Compile Include="Models\IOurValues.cs" />
     <Compile Include="Models\MediaGallery\IFilterCategory.cs" />
     <Compile Include="Models\MediaGallery\ImageResponseModel.cs" />
