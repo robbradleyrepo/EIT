@@ -1,0 +1,76 @@
+﻿.ltadmin-form-row {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.ltadmin-form-label-div {
+    width: 215px;
+    float: left;
+}
+
+.ltadmin-form-dropdown {
+    width: 250px;
+}
+
+.ltadmin-documentupload-form-error-div {
+    color: red;
+    font-weight: bold;
+}
+
+.ltadmin-documentupload-form-success-div {
+    color: green;
+    font-weight: bold;
+}
+
+
+.ltadmin-mediapath-mapping-table tr th {
+    background-color: #474747;
+    color: white;
+    font-weight: unset;
+    padding: 10px;
+}
+
+    .ltadmin-mediapath-mapping-table tr th:nth-child(1) {
+        width: 250px;
+    }
+
+    .ltadmin-mediapath-mapping-table tr th:nth-child(2) {
+        width: 400px;
+    }
+
+.ltadmin-mediapath-mapping-table tr td {
+    padding: 10px;
+    border: 1px solid #cccccc;
+}
+
+    .ltadmin-mediapath-mapping-table tr td select {
+        width: 300px;
+    }
+
+    .ltadmin-mediapath-mapping-table tr td input[type=text] {
+        width: 300px;
+    }
+
+.ltadmin-loader-gif {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('/sitecore/shell/client/Liontrust/ltadmin-loader.gif') 50% 50% no-repeat rgb(255, 255, 255);
+    opacity: 0.6;
+    display: none;
+}
+
+.ltadmin-textcenter{
+    text-align:center;
+}
+
+.ltadmin-cursor-pointer{
+    cursor:pointer;
+}
+
+.ltadmin-ul-leftpadding{
+    padding-left:16px;
+}

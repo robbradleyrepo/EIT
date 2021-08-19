@@ -94,7 +94,7 @@
                 {
                     var document = files.First();
                     WebClient client = new WebClient();
-                    HttpContext.Response.ContentType = "application/pdf";
+                    HttpContext.Response.ContentType = document.DocumentExtension;
                     HttpContext.Response.AddHeader("content-length", document.Bytes.Length.ToString());
                     HttpContext.Response.BinaryWrite(document.Bytes);
                     HttpContext.Response.AppendHeader("Content-Disposition", "inline; filename=" + document.Name);

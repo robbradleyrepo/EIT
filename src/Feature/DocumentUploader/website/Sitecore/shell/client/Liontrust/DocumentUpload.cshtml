@@ -1,0 +1,51 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@using Sitecore.Web.UI.Controls.Common.UserControls
+@model RenderingModel
+@{
+    var rendering = Html.Sitecore().Controls().GetUserControl(Model.Rendering);
+    rendering.Class = "sc-DocumentUpload";
+    rendering.Requires.Script("client", "DocumentUpload.js");
+
+    var htmlAttributes = rendering.HtmlAttributes;
+}
+<link rel="stylesheet" type="text/css" href="/sitecore/shell/client/Liontrust/LTAdminStyles.css">
+<div class="ltadmin-loader-gif"></div>
+<div @htmlAttributes>
+    <div class="ltadmin-documentupload-form-container">
+        <div class="ltadmin-documentupload-form-div">
+            <div class="ltadmin-documentupload-status-div"></div>            
+            @*<div class="ltadmin-form-row">
+                <div class="ltadmin-form-label-div">
+                    Document Type *
+                </div>
+                <div>
+                    <select class="dropdown-documenttype ltadmin-form-dropdown"></select>
+                </div>
+            </div>*@
+            <div class="ltadmin-form-row">
+                <div class="ltadmin-form-label-div">
+                    Choose File(s) *
+                </div>
+                <div>
+                    <input type="file" name="UploadFile" id="InputDocumentUpload" class="input-upload-documents" accept="application/xml,application/pdf" multiple />
+                </div>
+            </div>
+            <div class="ltadmin-form-row ltadmin-mediaitem-mappings-div">
+                <div class="ltadmin-form-label-div">
+                    Map files to sitecore media library *
+                </div>
+                <div>
+                    <table class="ltadmin-mediapath-mapping-table">                        
+                    </table>
+                </div>
+            </div>
+            <div class="ltadmin-form-row">* Denotes required fields</div>            
+            <input type="hidden" class="hidden-doctypeid-factsheet"/>
+            <input type="hidden" class="hidden-doctypeid-kiid" />
+            <div class="ltadmin-form-row">
+                <button class="btn sc-button btn-primary btn-submit-documentUpload">Upload Documents</button>
+            </div>
+        </div>
+    </div>
+</div>

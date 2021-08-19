@@ -6,23 +6,22 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2BECC48F-FAD8-4475-974D-E9C233EF1CDB}</ProjectGuid>
+    <ProjectGuid>{D1D2E278-7825-4F5A-8402-0064D1596502}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LionTrust.Website</RootNamespace>
-    <AssemblyName>LionTrust.Website</AssemblyName>
+    <RootNamespace>LionTrust.Feature.DocumentUploader</RootNamespace>
+    <AssemblyName>LionTrust.Feature.DocumentUploader</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44391</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,31 +42,64 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="RichardSzalay.Helix.Publishing.WebRoot" Version="1.5.4" />
-    <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="1.0.5" />
-    <PackageReference Include="Sitecore.Kernel" Version="9.2.0" />
-  </ItemGroup>
-  <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="sysglobl" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="AssemblyLists\Sitecore.Platform.Assemblies 9.2.0 rev. 002893.csv" />
-    <None Include="AssemblyLists\Sitecore.XConnect.Platform.Assemblies 9.2.0 rev. 002893.csv" />
-    <None Include="Web.config">
-      <SubType>Designer</SubType>
-    </None>
+    <Content Include="Sitecore\shell\client\Liontrust\delete.png" />
+    <Content Include="Sitecore\shell\client\Liontrust\DocumentUpload.js" />
+    <Content Include="Sitecore\shell\client\Liontrust\DocumentUpload.test.js" />
+    <Content Include="Sitecore\shell\client\Liontrust\ltadmin-loader.gif" />
+    <Content Include="Sitecore\shell\client\Liontrust\LTAdminStyles.css" />
+    <Content Include="App_Config\Include\Feature\Feature.DocumentUploader.Serialization.config" />
+    <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\DocumentsUploaderController.cs" />
+    <Compile Include="DI\RegisterContainer.cs" />
+    <Compile Include="Models\DocumentUploaderViewModel.cs" />
+    <Compile Include="Models\UploadedDocumentsResult.cs" />
+    <Compile Include="Models\UploadedFileViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\DocumentUploadRepository.cs" />
+    <Compile Include="Repository\IDocumentUploadRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Directory.build.props">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="LionTrust.Website.wpp.targets" />
-    <None Include="Properties\PublishProfiles\Package.pubxml" />
-    <None Include="Properties\PublishProfiles\Local.pubxml" />
+    <None Include="Views\web.config" />
+    <Content Include="App_Config\Include\Feature\Feature.DocumentUploader.RegisterContainer.config" />
+    <Content Include="Sitecore\shell\client\Liontrust\DocumentUpload.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -75,19 +107,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="default.css" />
-    <Content Include="Robots.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Feature\DocumentUploader\LionTrust.Feature.DocumentUploader\LionTrust.Feature.DocumentUploader.csproj">
-      <Project>{d1d2e278-7825-4f5a-8402-0064d1596502}</Project>
-      <Name>LionTrust.Feature.DocumentUploader</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <PropertyGroup>
-    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
-  </PropertyGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -95,24 +115,7 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
-  <ProjectExtensions>
-    <VisualStudio>
-      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
-        <WebProjectProperties>
-          <UseIIS>True</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>53498</DevelopmentServerPort>
-          <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:53498/</IISUrl>
-          <NTLMAuthentication>False</NTLMAuthentication>
-          <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
-          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
-        </WebProjectProperties>
-      </FlavorProperties>
-    </VisualStudio>
-  </ProjectExtensions>
+  <ProjectExtensions />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
