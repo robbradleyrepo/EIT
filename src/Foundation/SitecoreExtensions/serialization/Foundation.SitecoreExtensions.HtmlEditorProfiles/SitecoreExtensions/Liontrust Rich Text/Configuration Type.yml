@@ -1,0 +1,22 @@
+﻿---
+ID: "1ce0eaee-f965-4838-a648-62dd51202d46"
+Parent: "9e3e9cd4-7f9f-45e3-b227-f0bf89065971"
+Template: "eca6e291-bb55-47ab-bd02-be76b1bc884f"
+Path: /sitecore/system/Settings/Html Editor Profiles/Foundation/SitecoreExtensions/Liontrust Rich Text/Configuration Type
+DB: core
+SharedFields:
+- ID: "ff617570-33a4-4d0e-931e-ffeb9fab450f"
+  Hint: Type
+  Value: Sitecore.Shell.Controls.RichTextEditor.EditorConfiguration,Sitecore.Client
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20090811T153354
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
