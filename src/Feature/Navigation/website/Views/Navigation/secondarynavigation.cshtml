@@ -6,21 +6,26 @@
 {
     return;
 }
-
-<div class="container">
-    <div class="header-btn-nav">
-        <span class="header-btn-nav__title">
-            @Html.Glass().Editable(m => m.Heading)
-        </span>
-        @foreach (var item in Model.Children)
-        {
-            using (Html.Glass().BeginEditFrame<LionTrust.Feature.Navigation.Models.ILinkWithGoal>(item, null, i => i.Goal))
+<div class="anchorbox">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-xl-2">
+                <div class="anchorbox__head">
+                    @Html.Glass().Editable(m => m.Heading)
+                </div>
+            </div>
+            @foreach (var item in Model.Children)
             {
-                if (item.PageLink != null)
-                {
-                    @Html.Glass().AnalyticsGlass().RenderLinkWithGoal(item, m => m.PageLink, item.Goal, new NameValueCollection { { "class", "header-btn-nav__btn" } }, isEditable: true)
-                }
+                <div class="col-6 col-md-6 col-lg-3 col-xl-2">
+                    @using (Html.Glass().BeginEditFrame<LionTrust.Feature.Navigation.Models.ILinkWithGoal>(item, null, i => i.Goal))
+                    {
+                        if (item.PageLink != null)
+                        {
+                            @Html.Glass().AnalyticsGlass().RenderLinkWithGoal(item, m => m.PageLink, item.Goal, new NameValueCollection { { "class", "btn btn-anchor anchorbox__btn" } }, isEditable: true)                            
+                        }
+                    }
+                </div>
             }
-        }
+        </div>
     </div>
 </div>
