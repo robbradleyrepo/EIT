@@ -1,10 +1,13 @@
 ﻿namespace LionTrust.Foundation.Onboarding.Models
 {
-    using Glass.Mapper.Sc.Fields;
-    using Glass.Mapper.Sc.Configuration.Attributes;
-    using LionTrust.Foundation.ORM.Models;
+    using System;
     using System.Collections.Generic;
+
+    using Glass.Mapper.Sc.Fields;
+    using Glass.Mapper.Sc.Configuration.Attributes;     
     using Glass.Mapper.Sc.Configuration;
+
+    using LionTrust.Foundation.ORM.Models;
 
     public interface IOnboardingConfiguration : IGlassBase
     {
@@ -21,7 +24,7 @@
         IProfileCard PrivateProfileCard { get; set; }
 
         [SitecoreField(Constants.OnboardingConfiguration.PrivateHeaderConfiguration_FieldId)]
-        IHeaderConfiguration PrivateHeaderConfiguration { get; set; }
+        Guid PrivateHeaderConfiguration { get; set; }
 
         [SitecoreField(Constants.OnboardingConfiguration.ProfessionalProfileCard_FieldId)]
         IProfileCard ProfressionalProfileCard { get; set; }
@@ -33,13 +36,13 @@
         IGlassBase ProfressionalPatternCard { get; set; }
 
         [SitecoreField(Constants.OnboardingConfiguration.ProfessionalHeaderConfiguration_FieldId)]
-        IHeaderConfiguration ProfessionalHeaderConfiguration { get; set; }
+        Guid ProfessionalHeaderConfiguration { get; set; }
 
         [SitecoreField(Constants.OnboardingConfiguration.JournalistHeaderConfigurationÜFieldId)]
-        IHeaderConfiguration JournalistHeaderConfiguration { get; set; }
+        Guid JournalistHeaderConfiguration { get; set; }
 
         [SitecoreField(Constants.OnboardingConfiguration.AnalystHeaderConfigurationÜFieldId)]
-        IHeaderConfiguration AnalystHeaderConfiguration { get; set; }
+        Guid AnalystHeaderConfiguration { get; set; }
 
         [SitecoreChildren(TemplateId = Constants.ChooseCountry.TemplateId, EnforceTemplate = SitecoreEnforceTemplate.TemplateAndBase)]
         IEnumerable<IChooseCountry> ChooseCountry { get; set; }

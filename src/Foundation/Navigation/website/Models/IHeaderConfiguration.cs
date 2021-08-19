@@ -1,4 +1,4 @@
-﻿namespace LionTrust.Foundation.Onboarding.Models
+﻿namespace LionTrust.Foundation.Navigation.Models
 {
     using System.Collections.Generic;
 
