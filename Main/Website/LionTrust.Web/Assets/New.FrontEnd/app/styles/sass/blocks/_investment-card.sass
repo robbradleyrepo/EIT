@@ -4,6 +4,8 @@
 .investment-card-container
     margin-top: 30px
     counter-reset: section
+    @include breakpoint(desktop, down)
+        overflow: hidden
     h3
         margin-bottom: -1rem
     @include breakpoint(desktop, up)
