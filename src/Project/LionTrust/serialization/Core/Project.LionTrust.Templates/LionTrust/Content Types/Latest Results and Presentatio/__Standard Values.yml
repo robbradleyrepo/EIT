@@ -1,0 +1,35 @@
+﻿---
+ID: "4ed88059-d016-4134-9830-719ea413e0b6"
+Parent: "83f3353f-ae46-4cf6-8888-90122899a0a2"
+Template: "83f3353f-ae46-4cf6-8888-90122899a0a2"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Latest Results and Presentations/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "19d705df-98ba-459b-b335-58043c3c95b5"
+      Hint: LatestResultsAndPresentations_ViewAllLabel
+      Value: SEE ALL LATEST RESULTS & PRESENTATIONS
+    - ID: "24be9452-a36b-4bba-96cf-4ec74874a6a9"
+      Hint: LatestResultsAndPresentations_TitleColor
+      Value: "{CAB398B8-B1BE-4F5E-99EA-387D1B46F231}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210819T094441Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "65490ab6-def9-4911-9c44-2ae66cbeac85"
+      Hint: LatestResultsAndPresentations_DateIcon
+      Value: |
+        <image mediaid="{5DCBA912-D9EB-4560-B245-BC35FBE7A551}" />
+    - ID: "7142fde5-caf5-4bff-b653-b61a7048903b"
+      Hint: LatestResultsAndPresentations_Title
+      Value: $name
+    - ID: "f7cc5a31-e016-4799-a108-a8420e333434"
+      Hint: LatestResultsAndPresentations_AllResultsPage
+      Type: Treelist
+      Value: "{087D3CEF-C3F1-4D81-B69B-46B8932AE974}"

@@ -186,6 +186,7 @@
             public const string PressReleaseIcon_FieldId = "{6BE86AC3-6ED0-4AFD-8AB5-E39DC0FF3C90}";
             public const string ReportIcon_FieldId = "{C4D7FCDD-7187-4A38-93DB-CC9C557B72C2}";
             public const string PresentationIcon_FieldId = "{E98F39E1-6B0D-4680-8DFB-643B487F5D39}";
+            public const string DateIcon_FieldId = "{65490AB6-DEF9-4911-9C44-2AE66CBEAC85}";
         }
     }
 }

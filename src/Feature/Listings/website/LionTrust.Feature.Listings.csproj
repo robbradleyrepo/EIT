@@ -103,6 +103,7 @@
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\AccordionController.cs" />
     <Compile Include="Controllers\DocumentsController.cs" />
+    <Compile Include="Controllers\LatestResultsAndPresentationsController.cs" />
     <Compile Include="Controllers\MediaGalleryController.cs" />
     <Compile Include="Controllers\PerformanceChartsController.cs" />
     <Compile Include="Controllers\DocumentListerVariantController.cs" />
@@ -119,6 +120,7 @@
     <Compile Include="Models\ILatestResultsAndPresentations.cs" />
     <Compile Include="Models\IListingPageWithChildren.cs" />
     <Compile Include="Models\IOurValues.cs" />
+    <Compile Include="Models\LatestResultsAndPresentationsViewModel.cs" />
     <Compile Include="Models\MediaGallery\IFilterCategory.cs" />
     <Compile Include="Models\MediaGallery\ImageResponseModel.cs" />
     <Compile Include="Models\MediaGallery\IMediaItem.cs" />
