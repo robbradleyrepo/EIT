@@ -63,13 +63,13 @@
                                         </span>
                                         <i class="article-filters__icon-arrow"></i>
                                     </div>
-                                    <div class="article-filters__options">
+                                    <div class="article-filters__options article-filters__options_small">
                                         <div class="article-filters__title" @@click="toggleOption">
                                             <i class="icon-chevron-left"></i>
                                             @Model.YearLabel
                                         </div>
                                         <option-field inline-template>
-                                            <label class="option-checkbox" @@click="setChoosen(!checked)">
+                                            <label class="option-checkbox option-checkbox_small" @@click="setChoosen(!checked)">
                                                 <input class="option-checkbox__input" name="year" v-model="year" value="All" type="radio" @@click="setYear('All')">
                                                 <span class="option-checkbox__text">All</span>
                                                 <span class="option-checkbox__icon"></span>
@@ -93,13 +93,13 @@
                                         </span>
                                         <i class="article-filters__icon-arrow"></i>
                                     </div>
-                                    <div class="article-filters__options">
+                                    <div class="article-filters__options article-filters__options_small">
                                         <div class="article-filters__title" @@click="toggleOption">
                                             <i class="icon-chevron-left"></i>
                                             @Model.MonthLabel
                                         </div>
                                         <option-field inline-template>
-                                            <label class="option-checkbox" @@click="setChoosen(!checked)">
+                                            <label class="option-checkbox option-checkbox_small" @@click="setChoosen(!checked)">
                                                 <input class="option-checkbox__input" name="month" value="All" type="radio" v-model="month" @@click="setMonth('All')">
                                                 <span class="option-checkbox__text">{{month}}</span>
                                                 <span class="option-checkbox__icon"></span>
