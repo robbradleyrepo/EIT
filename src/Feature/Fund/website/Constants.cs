@@ -59,6 +59,7 @@
             public const string FundManagerFieldId = "{7A30D0A3-23FD-4863-99FD-A17525112A0E}";
             public const string ShareTextFieldId = "{651FF26A-8AF8-449E-B831-109F2F9C7851}";
             public const string ShareCopiedTextFieldId = "{8505F318-1D55-472B-ABEB-A4B4B372E2B2}";
+            public const string BackgroundImageFieldId = "{5D55EE9C-7778-47E7-833D-9D692E0E8AAB}";
         }
 
         public static class FundDetailNavigation
