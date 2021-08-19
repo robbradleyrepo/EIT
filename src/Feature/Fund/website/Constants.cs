@@ -249,5 +249,10 @@
         {
             public const string SalesforceFundId_FieldId = "{CDEA92C0-C31B-4E6D-BC15-A772FF2AFA95}";
         }
+
+        public static class FundCentre
+        {
+            public const string IFrameRootUrl_FieldId = "{96028547-DF10-4FEA-BC33-3C73107E64E5}";
+        }
     }
 }

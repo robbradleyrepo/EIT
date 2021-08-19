@@ -60,6 +60,7 @@
             public const string CountryName_FieldId = "{1E75B4DB-FBBF-4410-B2F0-99CCFB86A559}";
             public const string ISO_FieldId = "{A46A84E5-E402-4784-95D3-E316A9761EFB}";
             public const string TermsAndConditions_FieldId = "{BFD9B660-B602-4BEF-82FC-BECC3C9417A6}";
+            public const string FundCentreCountryCode_FieldId = "{87460E4B-38FA-4B00-898A-3071546DE530}";
         }
 
         public static class Analytics

@@ -8,6 +8,8 @@
     using System.Linq;
     using System.Collections.Generic;
     using System;
+    using System.Globalization;
+    using Glass.Mapper.Sc.Web.Mvc;
 
     public static class OnboardingHelper
     {
@@ -84,6 +86,28 @@
             }
 
             return hasAccess;
+        }
+
+        public static ICountry GetCurrentContactCountry(IMvcContext context)
+        {
+            var home = context.GetHomeItem<IHome>();
+            var address = GetCurrentContactAddress();
+
+            if (address == null || string.IsNullOrWhiteSpace(address.Country) || home == null || home.OnboardingConfiguration == null)
+            {
+                return null;
+            }
+
+            var twoLetterISO = CultureInfo.GetCultures(CultureTypes.SpecificCultures)?
+                .Select(x => new RegionInfo(x.TextInfo.CultureName))
+                .FirstOrDefault(c => c?.EnglishName == address.Country)?
+                .TwoLetterISORegionName;
+
+            var country = home.OnboardingConfiguration.ChooseCountry?
+                .SelectMany(x => x.Regions?.SelectMany(c => c.Countries))
+                .FirstOrDefault(c => c.ISO == twoLetterISO);
+
+            return country;
         }
 
         public static bool HasAccess(IEnumerable<string> excludedCountries)
