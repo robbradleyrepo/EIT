@@ -6,6 +6,7 @@
     using Glass.Mapper.Sc.Fields;
     using Glass.Mapper.Sc.Configuration.Attributes;     
     using Glass.Mapper.Sc.Configuration;
+    using System;
 
     using LionTrust.Foundation.ORM.Models;
 
