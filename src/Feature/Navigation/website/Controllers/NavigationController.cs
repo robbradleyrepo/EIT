@@ -75,7 +75,7 @@
                 navigationViewModel.HomeItem = _mvcContext.SitecoreService.GetItem<IHome>(homeItem.ID.Guid);
                 if (navigationViewModel.HomeItem.OnboardingConfiguration != null) 
                 {
-                    navigationViewModel.HomeItem.HeaderConfiguration = NavigationHelper.GetCurrentHeaderConfiguration(navigationViewModel.HomeItem.OnboardingConfiguration, _log);
+                    navigationViewModel.HomeItem.HeaderConfiguration = NavigationHelper.GetCurrentHeaderConfiguration(_mvcContext, navigationViewModel.HomeItem.OnboardingConfiguration, _log);
                 }
             }
 
