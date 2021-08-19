@@ -1,0 +1,32 @@
+﻿---
+ID: "3ca79d8a-e409-440f-a346-6a18cbd44c7e"
+Parent: "53578044-c6de-42a5-adb8-d8685630d4da"
+Template: "857e4b73-6e7e-41cf-972f-0e3cc2ea8e22"
+Path: /sitecore/content/LionTrustNew/Page Settings/Headers/Analyst Header Configuration/Sustainability/Navigation Columns/Sustainability and ESG
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210406T123536Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "89cc8946-1499-4d72-9d06-016cc68b0401"
+      Hint: HeaderDropDownNavigationColumn_ColumnTitle
+      Value: Sustainability and ESG
+    - ID: "e6689b09-d0ff-4b12-965c-625b7185f6be"
+      Hint: HeaderDropDownNavigationColumn_PageLinks
+      Type: Treelist
+      Value: |
+        {5A0CE233-F7B7-4C42-BA7F-4F92961CB646}
+        {69F321A7-4788-4D04-AF0A-0B36B1550184}
+        {6E434A75-8869-4A21-AEF5-7CE103202780}
+        {37987B9B-1932-4A4D-BFC5-4388649CF5F1}
+        {D10294B1-1E11-4ED8-8CD4-9F6C4959FC9B}
+        {F8EFCF09-B2C8-432A-AFA2-13487963CAFA}
+        {825696CB-6E64-4A39-97F8-0A77FB19B075}

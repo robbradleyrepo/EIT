@@ -20,6 +20,9 @@
         [SitecoreField(Constants.OnboardingConfiguration.PrivateProfileCard_FieldId)]
         IProfileCard PrivateProfileCard { get; set; }
 
+        [SitecoreField(Constants.OnboardingConfiguration.PrivateHeaderConfiguration_FieldId)]
+        IHeaderConfiguration PrivateHeaderConfiguration { get; set; }
+
         [SitecoreField(Constants.OnboardingConfiguration.ProfessionalProfileCard_FieldId)]
         IProfileCard ProfressionalProfileCard { get; set; }
 
@@ -28,6 +31,15 @@
 
         [SitecoreField(Constants.OnboardingConfiguration.ProfessionalPatternCard_FieldId)]
         IGlassBase ProfressionalPatternCard { get; set; }
+
+        [SitecoreField(Constants.OnboardingConfiguration.ProfessionalHeaderConfiguration_FieldId)]
+        IHeaderConfiguration ProfessionalHeaderConfiguration { get; set; }
+
+        [SitecoreField(Constants.OnboardingConfiguration.JournalistHeaderConfigurationÜFieldId)]
+        IHeaderConfiguration JournalistHeaderConfiguration { get; set; }
+
+        [SitecoreField(Constants.OnboardingConfiguration.AnalystHeaderConfigurationÜFieldId)]
+        IHeaderConfiguration AnalystHeaderConfiguration { get; set; }
 
         [SitecoreChildren(TemplateId = Constants.ChooseCountry.TemplateId, EnforceTemplate = SitecoreEnforceTemplate.TemplateAndBase)]
         IEnumerable<IChooseCountry> ChooseCountry { get; set; }

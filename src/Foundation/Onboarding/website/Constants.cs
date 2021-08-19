@@ -6,8 +6,12 @@
         {
             public const string Logo_FieldId = "{B2EFA293-4240-4439-997F-DDAC10179067}";
             public const string Text_FieldId = "{44AFFB73-0BB2-4312-8968-39D3737453E4}";
+            public const string PrivateHeaderConfiguration_FieldId = "{4B595CEF-4B28-4D27-83AC-7E97829F3B28}";
             public const string PrivateProfileCard_FieldId = "{0D201AF9-3ADA-4859-8B60-C2DA64C5F059}";
             public const string ProfessionalProfileCard_FieldId = "{A2546C2D-E821-46F7-8042-D78F3F1CA8F1}";
+            public const string ProfessionalHeaderConfiguration_FieldId = "{47BF0D29-4E9B-4637-954A-3D86C717226F}";
+            public const string JournalistHeaderConfigurationÜFieldId = "{4B43E0D2-DF4C-4F98-A61E-566923FD3B3C}";
+            public const string AnalystHeaderConfigurationÜFieldId = "{B9D08ADF-892E-49AB-ABDE-4F9F2C5BB7F3}";
             public const string Profile_FieldId = "{0E092A53-4282-4D27-BB59-8FEFD1E28196}";
             public const string PrivatePatternCard_FieldId = "{40470DD4-5FFB-421E-92A0-DE6AA5A36A8C}";
             public const string ProfessionalPatternCard_FieldId = "{4A17B879-0909-4B19-BD38-E09C3F989CE1}";
@@ -81,7 +85,9 @@
         public enum InvestorType
         {
             Private,
-            Professional
+            Professional,
+            Analyst,
+            Journalyst
         }
     }
 }
