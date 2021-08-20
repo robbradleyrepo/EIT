@@ -81,9 +81,11 @@
         -webkit-line-clamp: 3
         -webkit-box-orient: vertical
         margin-bottom: 10px
-        @include breakpoint(desktop, up)
-            @include font-size(1.6rem)
+        @include breakpoint(tablet, up)
+            @include font-size(3rem)
             line-height: 1.142em
+        @include breakpoint(desktop, up)
+            @include font-size(2rem)
         @media screen and (min-width: 1200px)
             @include font-size(3rem)
             line-height: 1.142em
