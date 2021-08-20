@@ -79,12 +79,6 @@
     <Content Include="default.css" />
     <Content Include="Robots.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Feature\DocumentUploader\LionTrust.Feature.DocumentUploader\LionTrust.Feature.DocumentUploader.csproj">
-      <Project>{d1d2e278-7825-4f5a-8402-0064d1596502}</Project>
-      <Name>LionTrust.Feature.DocumentUploader</Name>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup>
     <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
   </PropertyGroup>
