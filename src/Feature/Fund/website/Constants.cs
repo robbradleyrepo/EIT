@@ -254,5 +254,13 @@
         {
             public const string IFrameRootUrl_FieldId = "{96028547-DF10-4FEA-BC33-3C73107E64E5}";
         }
+
+        public static class FundAccessPopUp
+        {
+            public const string Title_FieldId = "{09F68CB9-E658-46ED-BB71-06F8F2FFBC63}";
+            public const string BackButtonText_FieldId = "{D6B06D59-9338-4D49-A00F-841D94E096CE}";
+            public const string PrimaryCTA_FieldId = "{0068183C-62B7-412C-8B96-B6C1FEB2B3C7}";
+            public const string SecondaryCTA_FieldId = "{11C16829-F61D-4638-A5AB-F50A2C21319C}";
+        }
     }
 }
