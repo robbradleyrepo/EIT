@@ -1,25 +1,24 @@
 <!-- Modal -->
-<button class="btn btn-primary" data-toggle="modal" data-target="#popUp">Show modal</button>
-<div class="modal fade" id="popUp" tabindex="-1" aria-labelledby="popUpModalLabel" aria-hidden="true">
+<div class="modal fade" id="popUp" tabindex="-1" aria-labelledby="popUpModalLabel" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content text-left">
             <div class="ml-3 ml-md-0">
-                <button type="button" data-dismiss="modal" aria-label="Close" class="modal-btn">
+                <a href="#" aria-label="Close" class="modal-btn link-styles">
                     <i class="icon-arrow-left"></i> Back
-                </button>
+                </a>
             </div>
-            <div class="modal-body text-center">                
+            <div class="modal-body text-center">
                 <h3 class="h3 mt-4">
                     Unfortunaly we are unable to show you the contents on this page due to the location tou are from.
                 </h3>
                 <div class="mt-5">
                     <a href="#" class="btn btn-primary mr-4">
                         Primary button
-                        <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
+                        <i class="icon-arrow-right animate-arrow"></i>
                     </a>
                     <a href="#" class="btn btn-primary-forward">
                         Secondary button
-                        <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
+                        <i class="icon-arrow-right animate-arrow"></i>
                     </a>
                 </div>
             </div>
@@ -27,3 +26,10 @@
         </div>
     </div>
 </div>
+
+<!-- script init show modal when page loaded -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        $('#popUp').modal('show');
+    })
+</script>
