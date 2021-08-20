@@ -1,0 +1,25 @@
+﻿---
+ID: "9eddb5e7-2fc9-4753-b628-1ab20ea1c4ac"
+Parent: "be23ff18-aeb7-4243-aa87-86f98fcf955a"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/LionTrustNew/Page Settings/Headers/Journalist Header Configuration/Media Centre/Images
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: apps/32x32/photos.png
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{E064BED9-A890-4E84-834D-44255B384405}"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{49F47CFD-931A-4176-A56B-73A59A397304}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210406T123242Z

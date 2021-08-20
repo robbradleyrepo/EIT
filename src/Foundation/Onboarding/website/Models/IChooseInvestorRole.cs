@@ -1,7 +1,9 @@
 ﻿namespace LionTrust.Foundation.Onboarding.Models
 {
+    using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
     using LionTrust.Foundation.ORM.Models;
+    using System.Collections.Generic;
 
     [SitecoreType(TemplateId = Constants.ChooseInvestorRole.TemplateId)]
     public interface IChooseInvestorRole : IGlassBase
@@ -32,5 +34,8 @@
 
         [SitecoreField(Constants.ChooseInvestorRole.ModalButtonText_FieldId)]
         string ModalButtonText { get; set; }
+
+        [SitecoreChildren(TemplateId = Constants.Investor.TemplateId, EnforceTemplate = SitecoreEnforceTemplate.TemplateAndBase)]
+        IEnumerable<IInvestor> Investors { get; set; }
     }
 }

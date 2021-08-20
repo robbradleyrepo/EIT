@@ -1,0 +1,27 @@
+﻿---
+ID: "e86157ca-78b9-4db6-9a06-e40bef9c55ac"
+Parent: "6dd21a68-fba0-46a5-819e-c01ac95ea6f7"
+Template: "b0e7c6c9-c2f3-45a8-89fc-a14817d9286c"
+Path: /sitecore/content/LionTrustNew/Global/Onboarding Configuration/Choose Investor Role/Private
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 75
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210819T084239Z
+    - ID: "34e7cbb9-226b-41f2-b03f-736bceeb7b06"
+      Hint: Investor_PatternCard
+      Value: "{78A022B0-40B4-4FA0-9657-7DD3E7499DE1}"
+    - ID: "4cad945a-dfc5-4001-86ec-e24f204caafb"
+      Hint: Investor_ProfileCard
+      Value: "{0EAF6E2A-5B8D-418C-8FB4-5029FD141FC8}"
+    - ID: "c038b21d-c75c-47ce-97b2-04e665dd486c"
+      Hint: Investor_Name
+      Value: Private

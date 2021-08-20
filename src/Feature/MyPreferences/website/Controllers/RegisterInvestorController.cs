@@ -39,8 +39,16 @@
                 return null;
             }
 
-            var investorType = OnboardingHelper.GetInvestorType(home.OnboardingConfiguration, _log);
-            var viewModel = new RegisterInvestorViewModel(data, investorType);
+            var investor = OnboardingHelper.GetCurrentContactInvestor(home.OnboardingConfiguration, _log);
+
+            if(investor == null)
+            {
+                return null;
+            }
+
+            var professionalInvestor = investor.Id == home.OnboardingConfiguration.ProfressionalInvestor.Id;
+
+            var viewModel = new RegisterInvestorViewModel(data, professionalInvestor);
 
             if (error == Errors.UserExists)
             {
@@ -73,7 +81,7 @@
                     var userExists = false;
                     var emailTemplate = registerInvestorSubmit.UKResident ? data.UKEmailTemplate : data.NonUKEmailTemplate;
 
-                    if (registerInvestorSubmit.InvestorType == InvestorType.Private)
+                    if (!registerInvestorSubmit.ProfessionalInvestor)
                     {
                         var company = (!string.IsNullOrEmpty(data.CompanyFieldDefaultValue)) ? data.CompanyFieldDefaultValue : "Self";
 
@@ -93,7 +101,7 @@
                             userExists = savedUser.IsUserExists;
                         }
                     }
-                    else if (registerInvestorSubmit.InvestorType == InvestorType.Professional)
+                    else
                     {
                         var sfOrganisationId = (!string.IsNullOrEmpty(data.DefaultSFOrganisationId)) ? data.DefaultSFOrganisationId : string.Empty;
 

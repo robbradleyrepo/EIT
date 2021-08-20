@@ -14,5 +14,8 @@
 
         [SitecoreField(Constants.Country.TermsAndConditions_FieldId)]
         string TermsAndConditions { get; set; }
+
+        [SitecoreField(Constants.Country.FundCentreCountryCode_FieldId)]
+        string FundCentreCountryCode { get; set; }
     }
 }

@@ -1,10 +1,12 @@
 @using Glass.Mapper;
 @using Glass.Mapper.Sc
 @using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Foundation.ORM.Extensions;
 @model LionTrust.Feature.Listings.Models.AccordionViewModel
 @{
 
-    var wrapperClass = Model.Data.Children.Any(x => x.Image.HasValue() && x.VideoId.HasValue()) ? "accordion-section" : "accordion-section accordion-section_full";
+    var fullWidth = !Model.Data.Children.Any(x => x.Image.HasValue() && x.VideoId.HasValue());
+    var wrapperClass = fullWidth ? "accordion-section accordion-section_full" : "accordion-section";
     var textColour = Model.RenderingData.Theme != null && Model.RenderingData.Theme.Value == "light" ? "accordion_white" : string.Empty;
     var containerId = LionTrust.Feature.Listings.Utils.RandomString(10, true);
     var textAlign = Model.RenderingData.TextAlign != null ? Model.RenderingData.TextAlign.Value : "left";
@@ -12,15 +14,15 @@
 }
 <div class="@wrapperClass">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6 @(rightAccordionAlign ? "order-1" : "order-0")">
+        <div class="@(fullWidth ? "" : "row")">
+            <div class="@(fullWidth ? "" : "col-lg-6") @(rightAccordionAlign ? "order-1" : "order-0")">
                 <div id="@containerId" class="accordion @textColour">
                     @{
                         var counter = 0;
                     }
                     @foreach (var item in Model.Data.Children)
                     {
-                        var imageSrc = item.Image != null ? item.Image.Src : string.Empty;
+                        var imageSrc = item.Image != null ? item.Image.GetSafeBackgroundImageStyle() : string.Empty;
                         var isCollapsed = item != Model.Data.Children.First();
                         var collapsedClass = isCollapsed ? "collapsed" : string.Empty;
                         var showClass = isCollapsed ? string.Empty : "show";
@@ -49,7 +51,7 @@
                                     @if (item.Image.HasValue() && item.VideoId.HasValue())
                                     {
                                         <div class="accordion__smartcard">
-                                            <a class="video-box__link" data-fancybox="" data-type="iframe" data-src="@item.VideoId" style="background-image: url('@imageSrc')">
+                                            <a class="video-box__link" data-fancybox="" data-type="iframe" data-src="@item.VideoId" style="@imageSrc">
                                                 <svg class="video-box__play-btn" xmlns="http://www.w3.org/2000/svg" width="188" height="188">
                                                     <defs>
                                                         <style>
@@ -77,7 +79,7 @@
                     }
                 </div>
             </div>
-            <div class="col-lg-6 @(rightAccordionAlign ? "order-0" : "order-1")"></div>
+            <div class="@(fullWidth ? "" : "col-lg-6") @(rightAccordionAlign ? "order-0" : "order-1")"></div>
         </div>
     </div>
 </div>

@@ -10,7 +10,6 @@
     using Sitecore.Resources.Media;
     using System;
     using System.Collections.Generic;
-    using System.IO;
 
     public static class DocumentHelper
     {
@@ -67,7 +66,8 @@
                                 DocumentName = documentName,
                                 Name = mediaStream.FileName,
                                 Bytes = FileHelper.GetByteArray(stream),
-                                Length = stream.Length
+                                Length = stream.Length,
+                                DocumentExtension = mediaStream.MimeType
                             });
                         }
                     }

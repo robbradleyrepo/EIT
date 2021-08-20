@@ -1,0 +1,26 @@
+﻿@using System.Collections.Specialized
+@using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Foundation.Analytics.Goals
+@model LionTrust.Feature.Navigation.Models.ISecondaryNav
+@if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    return;
+}
+
+<div class="container">
+    <div class="header-btn-nav">
+        <span class="header-btn-nav__title">
+            @Html.Glass().Editable(m => m.Heading)
+        </span>
+        @foreach (var item in Model.Children)
+        {
+            using (Html.Glass().BeginEditFrame<LionTrust.Feature.Navigation.Models.ILinkWithGoal>(item, null, i => i.Goal))
+            {
+                if (item.PageLink != null)
+                {
+                    @Html.Glass().AnalyticsGlass().RenderLinkWithGoal(item, m => m.PageLink, item.Goal, new NameValueCollection { { "class", "header-btn-nav__btn" } }, isEditable: true)
+                }
+            }
+        }
+    </div>
+</div>

@@ -28,7 +28,7 @@
 
                         <div class="swiper-slide">
 
-                            <div class="slide" style="background-image: url('@carouselCard.Image.GetSafeSitecoreImageUrl()');">
+                            <div class="slide" style="@carouselCard.Image.GetSafeBackgroundImageStyle()">
                                 @if (!carouselCard.CTAIsVideo)
                                 {
                                     <div class="slide__content">

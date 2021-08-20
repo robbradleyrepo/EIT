@@ -6,11 +6,8 @@
         {
             public const string Logo_FieldId = "{B2EFA293-4240-4439-997F-DDAC10179067}";
             public const string Text_FieldId = "{44AFFB73-0BB2-4312-8968-39D3737453E4}";
-            public const string PrivateProfileCard_FieldId = "{0D201AF9-3ADA-4859-8B60-C2DA64C5F059}";
-            public const string ProfessionalProfileCard_FieldId = "{A2546C2D-E821-46F7-8042-D78F3F1CA8F1}";
+            public const string ProfessionalInvestor_FieldId = "{A2546C2D-E821-46F7-8042-D78F3F1CA8F1}";  
             public const string Profile_FieldId = "{0E092A53-4282-4D27-BB59-8FEFD1E28196}";
-            public const string PrivatePatternCard_FieldId = "{40470DD4-5FFB-421E-92A0-DE6AA5A36A8C}";
-            public const string ProfessionalPatternCard_FieldId = "{4A17B879-0909-4B19-BD38-E09C3F989CE1}";
         }
 
         public static class ChooseCountry
@@ -60,6 +57,7 @@
             public const string CountryName_FieldId = "{1E75B4DB-FBBF-4410-B2F0-99CCFB86A559}";
             public const string ISO_FieldId = "{A46A84E5-E402-4784-95D3-E316A9761EFB}";
             public const string TermsAndConditions_FieldId = "{BFD9B660-B602-4BEF-82FC-BECC3C9417A6}";
+            public const string FundCentreCountryCode_FieldId = "{87460E4B-38FA-4B00-898A-3071546DE530}";
         }
 
         public static class Analytics
@@ -77,10 +75,14 @@
             public const string OnboardingConfiguation_FieldId = "{16512055-116D-48B5-936C-ECA678249335}";
         }
 
-        public enum InvestorType
+        public static class Investor
         {
-            Private,
-            Professional
+            public const string TemplateId = "{515B02C8-0C38-46BD-8060-72BE80EC99F0}";
+            public const string Name_FieldId = "{C038B21D-C75C-47CE-97B2-04E665DD486C}";
+            public const string ProfileCard_FieldId = "{4CAD945A-DFC5-4001-86EC-E24F204CAAFB}";
+            public const string PatternCard_FieldId = "{34E7CBB9-226B-41F2-B03F-736BCEEB7B06}";
+            public const string ExcludedCountires_FieldId = "{37CDAEBE-7CD2-4D45-BD7B-CB58C9585328}";
+            public const string Header_FieldId = "{1B479915-F4DF-4559-AADB-F74A744C85B1}";
         }
     }
 }

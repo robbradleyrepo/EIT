@@ -1,6 +1,7 @@
 ﻿@using System.Collections.Specialized;
 @using Glass.Mapper.Sc.Web.Mvc
 @using LionTrust.Foundation.Analytics.Goals
+@using LionTrust.Foundation.ORM.Extensions;
 @model LionTrust.Feature.Banner.Models.IPromoBanner
 @{
     var textAlignmentCss = "text-center";
@@ -58,6 +59,6 @@
     </div>
     <div class="lead-banner__overlay">
         <div class="lead-banner__bg"
-             style="background-image: url(@(Model.Image != null && !string.IsNullOrEmpty(Model.Image.Src) ? Model.Image.Src : string.Empty))"></div>
+             style="@(Model.Image != null ? Model.Image.GetSafeBackgroundImageStyle() : string.Empty)"></div>
     </div>
 </section>

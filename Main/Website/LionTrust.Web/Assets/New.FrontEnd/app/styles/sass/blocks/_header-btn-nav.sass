@@ -2,7 +2,7 @@
     display: flex
     align-items: center
     padding-bottom: 20px
-    overflow-y: scroll
+    // overflow-y: scroll
     flex-wrap: nowrap
     @include breakpoint(desktop, up)
         padding-bottom: 30px
@@ -11,13 +11,8 @@
         @include breakpoint(desktop-large, up)
             overflow-y: visible
     &__title
-        display: inline-block
-        margin-right: 16px
         @include p-1-medium-18
-        @include breakpoint(desktop-large, up)
-            margin-right: 32px
     &__btn
-        margin-right: 16px
         @extend .btn
         @extend .btn-anchor
         text-transform: initial
@@ -31,4 +26,7 @@
             @include font-size(18px)
             height: 48px
             line-height: 45px
-            margin-right: 32px
+    .swiper-wrapper
+        align-items: center
+    .swiper-slide
+        width: auto    

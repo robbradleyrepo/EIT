@@ -138,8 +138,11 @@
             var language = Sitecore.Context.Language?.Name ?? "en";
             predicate = predicate.And(x => x.Language == language);
 
-            var country = OnboardingHelper.GetCurrentContactAddress()?.Country;
-            predicate = predicate.And(x => !x.ExcludedCountries.Contains(country));
+            if (!Sitecore.Context.PageMode.IsExperienceEditorEditing)
+            {
+                var country = OnboardingHelper.GetCurrentContactAddress()?.Country;
+                predicate = predicate.And(x => !x.ExcludedCountries.Contains(country));
+            }
 
             predicate = this.PopoulateFundPredicate(predicate, fundSearchRequest);
 

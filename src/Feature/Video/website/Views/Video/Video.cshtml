@@ -10,7 +10,7 @@
    data-type="iframe"
    data-fancybox
    data-src="@Model.VideoId"
-   style="background-image: url('@thumbnailUrl')">
+   style="@Model.Thumbnail?.GetSafeBackgroundImageStyle()">
     <svg class="video-box__play-btn"
          xmlns="http://www.w3.org/2000/svg"
          width="188"

@@ -1,16 +1,14 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @using LionTrust.Foundation.ORM.Extensions
 @model LionTrust.Feature.Text.Models.ITestimonial
-<div class="quote" style="background-image: url(@Model.BackgroundImage.GetSafeSitecoreImageUrl());">
+<div class="quote" style="@Model.BackgroundImage.GetSafeBackgroundImageStyle()">
     <div class="container">
-        <div class="row">
-            <div class="quote__headbox">
-                <h2 class="quote__head">
-                    @Html.Glass().Editable(Model, m => m.Quote)
-                </h2>
-                <div class="quote__footer">
-                    <span class="quote__writer">@Html.Glass().Editable(Model, m => m.Author)</span>
-                </div>
+        <div class="quote__headbox">
+            <h2 class="quote__head">
+                @Html.Glass().Editable(Model, m => m.Quote)
+            </h2>
+            <div class="quote__footer">
+                <span class="quote__writer">@Html.Glass().Editable(Model, m => m.Author)</span>
             </div>
         </div>
     </div>

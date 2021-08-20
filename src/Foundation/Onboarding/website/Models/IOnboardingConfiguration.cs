@@ -1,10 +1,14 @@
 ﻿namespace LionTrust.Foundation.Onboarding.Models
 {
-    using Glass.Mapper.Sc.Fields;
-    using Glass.Mapper.Sc.Configuration.Attributes;
-    using LionTrust.Foundation.ORM.Models;
+    using System;
     using System.Collections.Generic;
+
+    using Glass.Mapper.Sc.Fields;
+    using Glass.Mapper.Sc.Configuration.Attributes;     
     using Glass.Mapper.Sc.Configuration;
+    using System;
+
+    using LionTrust.Foundation.ORM.Models;
 
     public interface IOnboardingConfiguration : IGlassBase
     {
@@ -17,17 +21,8 @@
         [SitecoreField(Constants.OnboardingConfiguration.Profile_FieldId)]
         IGlassBase Profile { get; set; }
 
-        [SitecoreField(Constants.OnboardingConfiguration.PrivateProfileCard_FieldId)]
-        IProfileCard PrivateProfileCard { get; set; }
-
-        [SitecoreField(Constants.OnboardingConfiguration.ProfessionalProfileCard_FieldId)]
-        IProfileCard ProfressionalProfileCard { get; set; }
-
-        [SitecoreField(Constants.OnboardingConfiguration.PrivatePatternCard_FieldId)]
-        IGlassBase PrivatePatternCard { get; set; }
-
-        [SitecoreField(Constants.OnboardingConfiguration.ProfessionalPatternCard_FieldId)]
-        IGlassBase ProfressionalPatternCard { get; set; }
+        [SitecoreField(Constants.OnboardingConfiguration.ProfessionalInvestor_FieldId)]
+        IInvestor ProfressionalInvestor { get; set; }
 
         [SitecoreChildren(TemplateId = Constants.ChooseCountry.TemplateId, EnforceTemplate = SitecoreEnforceTemplate.TemplateAndBase)]
         IEnumerable<IChooseCountry> ChooseCountry { get; set; }

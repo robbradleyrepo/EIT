@@ -10,7 +10,7 @@
         IEnumerable<IDocument> DocumentList { get; set; }
 
         [SitecoreField(Constants.DocumentFolder.NameText_FieldId)]
-        string NameText { get; set; }
+        string NameText { get; set; }        
 
         [SitecoreField(Constants.DocumentFolder.DownloadText_FieldId)]
         string DownloadText { get; set; }

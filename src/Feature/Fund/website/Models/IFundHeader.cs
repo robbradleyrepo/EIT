@@ -4,11 +4,11 @@
     using LionTrust.Foundation.Legacy.Models;
     using LionTrust.Foundation.ORM.Models;
 
-    public interface IFundHeader: IGlassBase
+    public interface IFundHeader : IGlassBase
     {
         [SitecoreField(Constants.FundHeader.FundFieldId)]
         IFund Fund { get; set; }
-        
+
         [SitecoreField(Constants.FundHeader.TitleFieldId)]
         string Title { get; set; }
 
@@ -20,5 +20,8 @@
 
         [SitecoreField(Constants.FundHeader.ShareCopiedTextFieldId)]
         string ShareCopiedText { get; set; }
+
+        [SitecoreField(Constants.FundHeader.BackgroundImageFieldId)]
+        Glass.Mapper.Sc.Fields.Image BackgroundImage { get;set; }
     }
 }
