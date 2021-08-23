@@ -245,6 +245,7 @@
 
         public static class TwoColumnComponent
         {
+            public const string AddMargins_FieldId = "{2D0CDBA3-FDC7-4D1C-9A4E-BCCCCB81D1D8}";
             public const string LeftColumnSize_FieldId = "{F6A1DC1F-D9C0-40B8-9590-D5C58D1F2346}";
             public const string LeftPaddingSize_FieldId = "{0B7847A5-F42B-42E0-B4D0-3CB4350CEE45}";
             public const string RightColumnSize_FieldId = "{1A02D0A6-1E81-4119-AB01-A0E90D5EB8A8}";
