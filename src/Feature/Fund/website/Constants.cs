@@ -25,6 +25,13 @@
             public const string ValueFieldId = "{17793BA8-E9B1-406B-B73D-E10C37D4D2C2}";
         }
 
+        public static class CapitalisationChartEntry
+        {
+            public const string NameFieldId = "{7FF12937-2E4B-4FB0-BBED-3B27E399339E}";
+            public const string ValueFieldId = "{0F549840-F03B-426E-A71F-71B009E78690}";
+            public const string BackgroundColorFieldId = "{A5716B6A-3E75-48C6-8344-3F2BE2D0F6C6}";
+        }
+
         public static class FundPerformanceGraph
         {
             public const string HeadingFieldId = "{46C68BF8-8D80-4959-81D6-0EECAE187697}";
@@ -36,6 +43,11 @@
         {
             public const string HeadingFieldId = "{26BD09DF-992E-40F9-A625-77F17A237AC7}";
             public const string MaxValueFieldId = "{EA8D41F6-9599-4413-A778-8B37F5582E17}";
+        }
+
+        public static class CapitalisationChart
+        {
+            public const string HeadingFieldId = "{0C319F29-5F95-4061-849B-E27634734863}";
         }
 
         public static class GraphWithHeading

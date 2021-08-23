@@ -110,6 +110,7 @@
     <Content Include="Views\Fund\GreyContainer.cshtml" />
     <Content Include="Views\Fund\FundCentre.cshtml" />
     <Content Include="Views\Fund\FundAccessPopUp.cshtml" />
+    <Content Include="Views\Fund\CapitalisationChart.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -127,6 +128,9 @@
     <Compile Include="Api\IFundClassDataApi.cs" />
     <Compile Include="Api\IFundClassRepository.cs" />
     <Compile Include="Api\IFundHoldingsBreakdown.cs" />
+    <Compile Include="CapitalisationChart\CapitalisationChartController.cs" />
+    <Compile Include="CapitalisationChart\ICapitalisationChart.cs" />
+    <Compile Include="CapitalisationChart\ICapitalisationChartEntry.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\FundAccessController.cs" />
     <Compile Include="Controllers\FundCentreController.cs" />
@@ -278,6 +282,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DI\" />
+    <Folder Include="Views\CapitalisationChart\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
