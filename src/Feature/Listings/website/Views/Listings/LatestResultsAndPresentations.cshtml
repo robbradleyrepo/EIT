@@ -61,7 +61,16 @@
                                                 }
                                             </span>
                                         </div>
-                                        <div class="article-promo__footer-item"></div>
+                                        <div class="article-promo__footer-item">
+                                            @if (document.PressReleaseDocument != null)
+                                            {
+                                                @Html.Glass().RenderImage(Model.Data, m => m.PressReleaseIcon, new NameValueCollection { { "class", "article-promo__clock" } }, isEditable: true)
+                                            }
+                                            @if (document.ReportDocument != null)
+                                            {
+                                                @Html.Glass().RenderImage(Model.Data, m => m.ReportIcon, new NameValueCollection { { "class", "article-promo__clock" } }, isEditable: true)
+                                            }
+                                        </div>
                                     </div>
                                     @Html.Glass().RenderImage(Model.Data, m => m.FirstImage, new NameValueCollection { { "class", "article-promo__back" } }, isEditable: true)
                                 </div>
@@ -107,7 +116,16 @@
                                                     }
                                                 </span>
                                             </div>
-                                            <div class="article-promo__footer-item"></div>
+                                            <div class="article-promo__footer-item">
+                                                @if (document.PressReleaseDocument != null)
+                                                {
+                                                    @Html.Glass().RenderImage(Model.Data, m => m.PressReleaseIcon, new NameValueCollection { { "class", "article-promo__clock" } }, isEditable: true)
+                                                }
+                                                @if (document.ReportDocument != null)
+                                                {
+                                                    @Html.Glass().RenderImage(Model.Data, m => m.ReportIcon, new NameValueCollection { { "class", "article-promo__clock" } }, isEditable: true)
+                                                }
+                                            </div>
                                         </div>
                                         @Html.Glass().RenderImage(Model.Data, m => m.SecondImage, new NameValueCollection { { "class", "article-promo__back" } }, isEditable: true)
                                     </div>
@@ -154,7 +172,16 @@
                                                         }
                                                     </span>
                                                 </div>
-                                                <div class="article-promo__footer-item"></div>
+                                                <div class="article-promo__footer-item">
+                                                    @if (document.PressReleaseDocument != null)
+                                                    {
+                                                        @Html.Glass().RenderImage(Model.Data, m => m.PressReleaseIcon, new NameValueCollection { { "class", "article-promo__clock" } }, isEditable: true)
+                                                    }
+                                                    @if (document.ReportDocument != null)
+                                                    {
+                                                        @Html.Glass().RenderImage(Model.Data, m => m.ReportIcon, new NameValueCollection { { "class", "article-promo__clock" } }, isEditable: true)
+                                                    }
+                                                </div>
                                             </div>
                                             @Html.Glass().RenderImage(Model.Data, m => m.ThirdImage, new NameValueCollection { { "class", "article-promo__back" } }, isEditable: true)
                                         </div>
