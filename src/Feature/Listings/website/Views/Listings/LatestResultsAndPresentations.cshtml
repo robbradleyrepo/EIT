@@ -18,9 +18,7 @@
                         var documentsCount = Model.LatestDocuments.Count();
                         var documentDownloadUrl = document.PressReleaseDocument.Url != null
                                                 ? document.PressReleaseDocument.Url
-                                                : (document.ReportDocument.Url != null
-                                                    ? document.ReportDocument.Url
-                                                    : document.PresentationLink.Url);
+                                                : document.ReportDocument.Url;
 
                         <a href="@Model.Data.AllResultsPage.Url" class="link-styles d-none d-lg-block ml-1 no-wrap">
                             @Html.Glass().Editable(Model.Data, m => m.ViewAllLabel)
@@ -71,9 +69,7 @@
                                     imageSrc = Model.Data.SecondImage.GetSafeBackgroundImageStyle();
                                     documentDownloadUrl = document.PressReleaseDocument.Url != null
                                                 ? document.PressReleaseDocument.Url
-                                                : (document.ReportDocument.Url != null
-                                                    ? document.ReportDocument.Url
-                                                    : document.PresentationLink.Url);
+                                                : document.ReportDocument.Url;
                                     <div class="col-lg-4">
                                         <div class="article-promo">
                                             <a href="@documentDownloadUrl" class="article-promo__front" download></a>
@@ -118,9 +114,7 @@
                                         imageSrc = Model.Data.SecondImage.GetSafeBackgroundImageStyle();
                                         documentDownloadUrl = document.PressReleaseDocument.Url != null
                                                 ? document.PressReleaseDocument.Url
-                                                : (document.ReportDocument.Url != null
-                                                    ? document.ReportDocument.Url
-                                                    : document.PresentationLink.Url);
+                                                :  document.ReportDocument.Url;
                                         <div class="col-lg-4">
                                             <div class="article-promo">
                                                 <a href="@documentDownloadUrl" class="article-promo__front" download></a>

@@ -32,9 +32,6 @@
         [SitecoreField(Constants.LatestResultsAndPresentation.ReportIcon_FieldId)]
         Image ReportIcon { get; set; }
 
-        [SitecoreField(Constants.LatestResultsAndPresentation.PresentationIcon_FieldId)]
-        Image PresentationIcon { get; set; }
-
         [SitecoreField(Constants.LatestResultsAndPresentation.DateIcon_FieldId)]
         Image DateIcon { get; set; }
     }
