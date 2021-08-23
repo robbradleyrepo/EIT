@@ -1,6 +1,8 @@
 .checkbox
     display: flex
     margin-bottom: 0
+    align-items: center
+    cursor: pointer
     &__input
         position: absolute
         width: 1px
@@ -29,3 +31,10 @@
         color: $black
         display: inline-block
         margin-left: 18px
+    &-sm
+        .checkbox__box
+            width: 20px
+            height: 20px
+        .checkbox__title
+            font-size: 14px
+            margin: 0 8px
