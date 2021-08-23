@@ -1,0 +1,22 @@
+﻿---
+ID: "fb353576-4768-4716-b876-ea4be9bf0f4e"
+Parent: "d92bdd24-c48b-4f14-94fd-1632422180e4"
+Template: "16dbe2d7-209a-409c-ae84-a8148d5ba6b2"
+Path: /sitecore/content/LionTrustNew/Global/Fund Access/Fund Access Pop Up
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0068183c-62b7-412c-8b96-b6c1feb2b3c7"
+      Hint: FundAccessPopUp_PrimaryCTA
+      Value: |
+        <link text="Primary CTA Text" anchor="" linktype="internal" class="" title=""  querystring="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
+    - ID: "11c16829-f61d-4638-a5ab-f50a2c21319c"
+      Hint: FundAccessPopUp_SecondaryCTA
+      Value: |
+        <link text="Secondary CTA Text" anchor="" linktype="internal" class="" title=""  querystring="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210820T141759Z
