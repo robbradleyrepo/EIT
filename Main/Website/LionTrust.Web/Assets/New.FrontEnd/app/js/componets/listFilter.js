@@ -200,7 +200,6 @@ export default () => {
         $.get(facetUrl)
           .done((response) => {
             const { facets, dates } = response;
-            console.log("facets res", response);
             this.facets = facets;
 
             if (dates && dates.months)
@@ -226,7 +225,6 @@ export default () => {
         $.get(hostUrl + this.getQueryString())
           .done((response) => {
             const { searchResults, totalResults } = response;
-            console.log("searchResults", searchResults);
             this.searchData = searchResults;
             this.amountResults = totalResults;
             this.loading = false;
