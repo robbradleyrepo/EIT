@@ -26,13 +26,13 @@
             var result = new List<PerformanceTableRow>();
             if (!string.IsNullOrEmpty(fundClass.FundName))
             {
-                result.Add(new PerformanceTableRow(fundClass.FundName, 
-                    new string[] 
-                    { 
-                        fundClass.DiscretePerformance0To12, 
-                        fundClass.DiscretePerformance12To24, 
-                        fundClass.DiscretePerformance24To36, 
-                        fundClass.DiscretePerformance36To48 
+                result.Add(new PerformanceTableRow(fundClass.FundName,
+                    new string[]
+                    {
+                        fundClass.DiscretePerformance0To12,
+                        fundClass.DiscretePerformance12To24,
+                        fundClass.DiscretePerformance24To36,
+                        fundClass.DiscretePerformance36To48
                     }));
             }
 
@@ -88,8 +88,8 @@
                 }));
             }
 
-            return result;
-        }               
+            return result.Where(x => x.Columns.Any(v => v.HasValue));
+        }
 
         public PerformanceTableRow GetQuartile(string citiCode)
         {
@@ -99,12 +99,12 @@
                 return null;
             }
 
-            return new PerformanceTableRow(string.Empty, new string[] 
-            { 
-                fundClass.DiscreteQuartile0To12m, 
-                fundClass.DiscreteQuartile12mTo24m, 
-                fundClass.DiscreteQuartile24mTo36m, 
-                fundClass.DiscreteQuartile36mTo48m 
+            return new PerformanceTableRow(string.Empty, new string[]
+            {
+                fundClass.DiscreteQuartile0To12m,
+                fundClass.DiscreteQuartile12mTo24m,
+                fundClass.DiscreteQuartile24mTo36m,
+                fundClass.DiscreteQuartile36mTo48m
             });
         }
     }
