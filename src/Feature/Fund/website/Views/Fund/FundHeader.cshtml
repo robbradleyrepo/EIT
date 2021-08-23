@@ -1,6 +1,8 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Foundation.ORM.Extensions
 @model LionTrust.Feature.Fund.Models.FundHeaderViewModel
-<header class="header header-bg-gradient header-hero d-flex flex-column justify-content-between">
+<header class="header header-bg-gradient header-hero d-flex flex-column justify-content-between"
+        style="@(Model.Data.BackgroundImage != null ? Model.Data.BackgroundImage.GetSafeBackgroundImageStyle("/dist/images/components/header/bg-desktop.svg") : string.Empty)">
     <section class="container">
         @Html.Sitecore().Placeholder("navigation")
     </section>
@@ -40,4 +42,18 @@
             }
         </div>
     </div>
+    <svg class="bubbls-big" width="1210" height="386" viewBox="0 0 1117 386" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g style="mix-blend-mode: lighten" opacity="0.104">
+            <path class="one" d="M904.5 385C964.975 385 1014 336.199 1014 276C1014 215.801 964.975 167 904.5 167C844.025 167 795 215.801 795 276C795 336.199 844.025 385 904.5 385Z" fill="white"></path>
+        </g>
+        <g style="mix-blend-mode: lighten" opacity="0.172">
+            <path class="two" d="M807 249C822.464 249 835 236.464 835 221C835 205.536 822.464 193 807 193C791.536 193 779 205.536 779 221C779 236.464 791.536 249 807 249Z" fill="white"></path>
+        </g>
+        <path class="three" opacity="0.173" d="M984.5 290C1057.68 290 1117 230.454 1117 157C1117 83.5461 1057.68 24 984.5 24C911.322 24 852 83.5461 852 157C852 230.454 911.322 290 984.5 290Z" fill="white"></path>
+        <path class="four" opacity="0.056" d="M842 146C881.765 146 914 113.765 914 74C914 34.2355 881.765 2 842 2C802.235 2 770 34.2355 770 74C770 113.765 802.235 146 842 146Z" fill="white"></path>
+        <path class="five" opacity="0.094" d="M791.5 47C804.479 47 815 36.4787 815 23.5C815 10.5213 804.479 0 791.5 0C778.521 0 768 10.5213 768 23.5C768 36.4787 778.521 47 791.5 47Z" fill="white"></path>
+        <path class="six" opacity="0.094" d="M184 309C197.807 309 209 297.807 209 284C209 270.193 197.807 259 184 259C170.193 259 159 270.193 159 284C159 297.807 170.193 309 184 309Z" fill="white"></path>
+        <path class="seven" opacity="0.159" d="M42 311C65.196 311 84 292.196 84 269C84 245.804 65.196 227 42 227C18.804 227 0 245.804 0 269C0 292.196 18.804 311 42 311Z" fill="white"></path>
+        <path class="eight" opacity="0.094" d="M227.5 386C244.897 386 259 371.225 259 353C259 334.775 244.897 320 227.5 320C210.103 320 196 334.775 196 353C196 371.225 210.103 386 227.5 386Z" fill="white"></path>
+    </svg>
 </header>

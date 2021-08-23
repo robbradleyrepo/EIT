@@ -59,6 +59,7 @@
             public const string FundManagerFieldId = "{7A30D0A3-23FD-4863-99FD-A17525112A0E}";
             public const string ShareTextFieldId = "{651FF26A-8AF8-449E-B831-109F2F9C7851}";
             public const string ShareCopiedTextFieldId = "{8505F318-1D55-472B-ABEB-A4B4B372E2B2}";
+            public const string BackgroundImageFieldId = "{5D55EE9C-7778-47E7-833D-9D692E0E8AAB}";
         }
 
         public static class FundDetailNavigation
@@ -247,6 +248,19 @@
         public static class SalesforceFund
         {
             public const string SalesforceFundId_FieldId = "{CDEA92C0-C31B-4E6D-BC15-A772FF2AFA95}";
+        }
+
+        public static class FundCentre
+        {
+            public const string IFrameRootUrl_FieldId = "{96028547-DF10-4FEA-BC33-3C73107E64E5}";
+        }
+
+        public static class FundAccessPopUp
+        {
+            public const string Title_FieldId = "{09F68CB9-E658-46ED-BB71-06F8F2FFBC63}";
+            public const string BackButtonText_FieldId = "{D6B06D59-9338-4D49-A00F-841D94E096CE}";
+            public const string PrimaryCTA_FieldId = "{0068183C-62B7-412C-8B96-B6C1FEB2B3C7}";
+            public const string SecondaryCTA_FieldId = "{11C16829-F61D-4638-A5AB-F50A2C21319C}";
         }
     }
 }

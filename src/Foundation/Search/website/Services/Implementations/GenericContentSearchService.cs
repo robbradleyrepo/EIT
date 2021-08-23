@@ -78,8 +78,11 @@
                 predicate = predicate.And(x => x.Parent == parent);
             }
 
-            var country = OnboardingHelper.GetCurrentContactAddress()?.Country;
-            predicate = predicate.And(x => !x.ExcludedCountries.Contains(country));
+            if (!Sitecore.Context.PageMode.IsExperienceEditorEditing)
+            {
+                var country = OnboardingHelper.GetCurrentContactAddress()?.Country;
+                predicate = predicate.And(x => !x.ExcludedCountries.Contains(country));
+            }
 
             predicate = this.PopoulateDatedTaxonomyPredicate(predicate, genericSearchRequest);
 

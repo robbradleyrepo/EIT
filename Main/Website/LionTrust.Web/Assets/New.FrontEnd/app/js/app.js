@@ -24,6 +24,7 @@ import locationAndMap from "./componets/locationAndMap";
 import barStuckedChart from "./componets/barStuckedChart";
 import galleryApp from "./componets/galleryApp";
 import tabNav from "./componets/tabNav";
+import headerCtaNav from "./componets/headerCtaNav";
 
 document.addEventListener("DOMContentLoaded", () => {
   onboardingOverlay();
@@ -44,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
   barStuckedChart();
   galleryApp();
   tabNav();
+  headerCtaNav();
   // if (document.querySelector(".article-page")) articleFilter();
   if (document.querySelector(".main-page")) parallaxScrolling();
 

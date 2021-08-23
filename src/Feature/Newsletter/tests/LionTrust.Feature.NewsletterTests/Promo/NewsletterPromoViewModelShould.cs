@@ -39,7 +39,7 @@ namespace LionTrust.Feature.NewsletterTests.Promo
             // Act
 
             // Assert
-            Assert.IsNotEmpty(target.BackgroundImageUrl);
+            Assert.IsNotEmpty(target.BackgroundImageStyle);
         }
     }
 }

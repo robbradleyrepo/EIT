@@ -8,58 +8,61 @@
   
     public interface IImagePromo : IPromoGlassBase
     {
-        [SitecoreField(Constants.ImagePromo.Heading_FieldId, SitecoreFieldType.SingleLineText, "Promo Banner")]
+        [SitecoreField(Constants.ImagePromo.Heading_FieldId)]
         string Heading { get; set; }
 
-        [SitecoreField(Constants.ImagePromo.Body_FieldId, SitecoreFieldType.MultiLineText, "Promo Banner")]
+        [SitecoreField(Constants.ImagePromo.Body_FieldId)]
         string Body { get; set; }
 
-        [SitecoreField(Constants.ImagePromo.FirstImage_FieldId, SitecoreFieldType.Image, "Promo Banner")]
+        [SitecoreField(Constants.ImagePromo.FirstImage_FieldId)]
         Image FirstImage { get; set; }
 
-        [SitecoreField(Constants.ImagePromo.SecondImage_FieldId, SitecoreFieldType.Image, "Promo Banner")]
+        [SitecoreField(Constants.ImagePromo.SecondImage_FieldId)]
         Image SecondImage { get; set; }
 
-        [SitecoreField(Constants.ImagePromo.ThirdImage_FieldId, SitecoreFieldType.Image, "Promo Banner")]
+        [SitecoreField(Constants.ImagePromo.ThirdImage_FieldId)]
         Image ThirdImage { get; set; }
 
-        [SitecoreField(Constants.ImagePromo.FourthImage_FieldId, SitecoreFieldType.Image, "Promo Banner")]
+        [SitecoreField(Constants.ImagePromo.FourthImage_FieldId)]
         Image FourthImage { get; set; }
 
-        [SitecoreField(Constants.ImagePromo.PrimaryCTAGoal_FieldId, SitecoreFieldType.Droplink, "Promo Banner")]
+        [SitecoreField(Constants.ImagePromo.PrimaryCTAGoal_FieldId)]
         Guid PrimaryCTAGoal { get; set; }
 
-        [SitecoreField(Constants.ImagePromo.PrimaryCTALink_FieldId, SitecoreFieldType.GeneralLink, "Promo Banner")]
+        [SitecoreField(Constants.ImagePromo.PrimaryCTALink_FieldId)]
         Link PrimaryCTALink { get; set; }
 
-        [SitecoreField(Constants.ImagePromo.SecondaryCTAGoal_FieldId, SitecoreFieldType.Droplink, "Promo Banner")]
+        [SitecoreField(Constants.ImagePromo.SecondaryCTAGoal_FieldId)]
         Guid SecondaryCTAGoal { get; set; }
 
-        [SitecoreField(Constants.ImagePromo.SecondaryCTALink_FieldId, SitecoreFieldType.GeneralLink, "Promo Banner")]
+        [SitecoreField(Constants.ImagePromo.SecondaryCTALink_FieldId)]
         Link SecondaryCTALink { get; set; }
 
-        [SitecoreField(Constants.ImagePromo.HideFirstImage_FieldId, SitecoreFieldType.Checkbox, "Design")]
+        [SitecoreField(Constants.ImagePromo.HideFirstImage_FieldId)]
         bool HideFirstImage { get; set; }
 
-        [SitecoreField(Constants.ImagePromo.HideSecondImage_FieldId, SitecoreFieldType.Checkbox, "Design")]
+        [SitecoreField(Constants.ImagePromo.HideSecondImage_FieldId)]
         bool HideSecondImage { get; set; }
 
-        [SitecoreField(Constants.ImagePromo.HideThirdImage_FieldId, SitecoreFieldType.Checkbox, "Design")]
+        [SitecoreField(Constants.ImagePromo.HideThirdImage_FieldId)]
         bool HideThirdImage { get; set; }
 
-        [SitecoreField(Constants.ImagePromo.HideFourthImage_FieldId, SitecoreFieldType.Checkbox, "Design")]
+        [SitecoreField(Constants.ImagePromo.HideFourthImage_FieldId)]
         bool HideFourthImage { get; set; }
 
-        [SitecoreField(Constants.ImagePromo.ShowPrimaryCTA_FieldId, SitecoreFieldType.Checkbox, "Design")]
+        [SitecoreField(Constants.ImagePromo.ShowPrimaryCTA_FieldId)]
         bool ShowPrimaryCTA { get; set; }
 
-        [SitecoreField(Constants.ImagePromo.ShowSecondaryCTA_FieldId, SitecoreFieldType.Checkbox, "Design")]
+        [SitecoreField(Constants.ImagePromo.ShowSecondaryCTA_FieldId)]
         bool ShowSecondaryCTA { get; set; }
 
-        [SitecoreField(Constants.ImagePromo.TextAlignment_FieldId, SitecoreFieldType.Droplink, "Design")]
+        [SitecoreField(Constants.ImagePromo.TextAlignment_FieldId)]
         IPromoLookup TextAlignment { get; set; }
 
         [SitecoreField(Constants.ImagePromo.TextColour_FieldId)]
         Foundation.Design.ILookupValue TextColour { get; set; }
+
+        [SitecoreField(Constants.ImagePromo.TitleColor_FieldId)]
+        Foundation.Design.ILookupValue TitleColor { get; set; }
     }
 }

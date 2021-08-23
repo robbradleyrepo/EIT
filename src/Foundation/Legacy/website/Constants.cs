@@ -196,7 +196,7 @@ namespace LionTrust.Foundation.Legacy
 
         public static class DocumentFolder
         {
-            public const string NameText_FieldId = "{A9E362CC-4AE9-4202-B2A1-EDCE877102FA}";
+            public const string NameText_FieldId = "{A9E362CC-4AE9-4202-B2A1-EDCE877102FA}";            
             public const string DownloadText_FieldId = "{208D44B3-8FFC-49EA-8D03-68FD6289C199}";
             public const string DownloadLinkText_FieldId = "{45FD77A0-8249-4D0B-88D0-947FCA97D513}";
         }

@@ -4,7 +4,7 @@
 @model LionTrust.Feature.Banner.Models.IPeopleInfoBanner
 @if (Model != null)
 {
-    <div class="quote quote-people" style="background-image: url('@Model.BackgroundImage.GetSafeSitecoreImageUrl()');">
+    <div class="quote quote-people" style="@Model.BackgroundImage.GetSafeBackgroundImageStyle()">
         <div style="visibility: hidden;"></div>
         <div class="container">
             <div class="article-with-small p-0">

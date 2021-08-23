@@ -59,6 +59,7 @@
             public const string SecondaryCtaGoalFieldId = "{188E1540-E08D-4AB2-A130-01D66E0E57F4}";
 
             public const string TextColour_FieldId = "{FED476C0-044E-4001-8F67-20FB0E0D735B}";
+            public const string TitleColor_FieldId = "{78CBE6DD-501F-44E5-8DF1-10AE8AD9652B}";
         }
 
         public static class ImageCTAPromo
@@ -67,6 +68,7 @@
             public const string Image_FieldId = "{1054E4B6-1CF5-4C08-8A6D-D9B02FB17050}";
 
             public const string Title_FieldId = "{7A84EA30-FF24-4C46-AE8F-51FCFF940663}";
+            public const string TitleColor_FieldId = "{94EB1B3F-6B14-4A34-9B12-62DBED7A269E}";
 
             public const string Subtitle_FieldId = "{4C838697-DBEB-4998-A261-CCC77BC59259}";
 

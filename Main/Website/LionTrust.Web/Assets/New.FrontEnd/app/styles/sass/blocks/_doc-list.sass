@@ -34,7 +34,13 @@
         @include breakpoint(desktop, up)
             display: block
     &__heading
-        @extend .h5
+        color: $gold
+        font-weight: 300
+        font-size: 20px
+        line-height: 26px
+        @include breakpoint(desktop-large, up)
+            font-size: 26px
+            line-height: 1.23em
 
 .doc-list-nav
     margin-top: 30px

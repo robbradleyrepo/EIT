@@ -1,0 +1,33 @@
+﻿---
+ID: "5477326e-483d-4f00-afcc-2de8a52800d2"
+Parent: "3b618930-d9fb-4d00-a42b-dd51f8c43bba"
+Template: "857e4b73-6e7e-41cf-972f-0e3cc2ea8e22"
+Path: /sitecore/content/LionTrustNew/Page Settings/Headers/Analyst Header Configuration/Investor Relations/Navigation Columns/Manage Your Investments
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210406T123509Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "89cc8946-1499-4d72-9d06-016cc68b0401"
+      Hint: HeaderDropDownNavigationColumn_ColumnTitle
+      Value: Manage Your Investments
+    - ID: "9012ee1a-dea2-49fa-951d-f72e835639ca"
+      Hint: HeaderDropDownNavigationColumn_ColumnLink
+      Value: |
+        <link id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" querystring="" text="" anchor="" url="/Liontrust New/Home" title="" class="" linktype="internal" />
+    - ID: "e6689b09-d0ff-4b12-965c-625b7185f6be"
+      Hint: HeaderDropDownNavigationColumn_PageLinks
+      Type: Treelist
+      Value: 
+    - ID: "fe160ab8-1158-46c9-80ad-43557ce4129d"
+      Hint: HeaderDropDownNavigationColumn_ShowColumn Link
+      Type: Checkbox
+      Value: 1

@@ -14,16 +14,10 @@
 
     &__head
         display: flex
-        font-size: 32px
-        color: $gold
-        font-weight: 300
+        @extend .h2
         margin-bottom: 20px
         text-align: center
         justify-content: center
-
-        @include breakpoint(desktop, up)
-            font-size: 52px
-
     &__body
         display: flex
         margin-bottom: 20px
@@ -70,3 +64,6 @@
 
         > a
             margin-bottom: 10px
+    .btn
+        @include breakpoint(desktop, up)
+            padding: 0 1rem

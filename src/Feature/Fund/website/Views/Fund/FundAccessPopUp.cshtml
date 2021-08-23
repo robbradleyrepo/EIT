@@ -1,0 +1,50 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Fund.Models.IFundAccessPopUp
+@if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    return;
+}
+
+<div class="modal fade" id="popUp" tabindex="-1" aria-labelledby="popUpModalLabel" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content text-left">
+            <div class="ml-3 ml-md-0">
+                <a href="javascript:history.back()" aria-label="Close" class="modal-btn link-styles">
+                    <i class="icon-arrow-left"></i> @Model.BackButtonText
+                </a>
+            </div>
+            <div class="modal-body text-center">
+                <h3 class="h3 mt-4">
+                    @Model.Title
+                </h3>
+                <div class="mt-5">
+                    @using (Html.Glass().BeginRenderLink(m => m.PrimaryCTA, new { @class = "btn btn-primary mr-4" }))
+                    {
+                        if (Model.PrimaryCTA != null && !string.IsNullOrWhiteSpace(Model.PrimaryCTA.Text))
+                        {
+                            @Model.PrimaryCTA.Text
+                        }
+                        <i class="icon-arrow-right animate-arrow"></i>
+                    }
+                    @using (Html.Glass().BeginRenderLink(m => m.SecondaryCTA, new { @class = "btn btn-primary-forward" }))
+                    {
+                        if (Model.SecondaryCTA != null && !string.IsNullOrWhiteSpace(Model.SecondaryCTA.Text))
+                        {
+                            @Model.SecondaryCTA.Text
+                        }
+                        <i class="icon-arrow-right animate-arrow"></i>
+                    }
+                </div>
+            </div>
+            <div class="modal-footer"></div>
+        </div>
+    </div>
+</div>
+
+<!-- script init show modal when page loaded -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        $('#popUp').modal('show');
+    })
+</script>

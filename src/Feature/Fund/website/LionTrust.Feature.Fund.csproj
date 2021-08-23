@@ -108,6 +108,8 @@
     <Content Include="Views\Fund\PerformanceTable.cshtml" />
     <Content Include="Views\Fund\FourFundStatsManual.cshtml" />
     <Content Include="Views\Fund\GreyContainer.cshtml" />
+    <Content Include="Views\Fund\FundCentre.cshtml" />
+    <Content Include="Views\Fund\FundAccessPopUp.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -126,6 +128,8 @@
     <Compile Include="Api\IFundClassRepository.cs" />
     <Compile Include="Api\IFundHoldingsBreakdown.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="Controllers\FundAccessController.cs" />
+    <Compile Include="Controllers\FundCentreController.cs" />
     <Compile Include="Controllers\MyFundsScrollerController.cs" />
     <Compile Include="CreditRating\CreditRatingController.cs" />
     <Compile Include="FundClass\FundClassDetails.cs" />
@@ -164,6 +168,8 @@
     <Compile Include="CreditRating\ICreditRating.cs" />
     <Compile Include="CreditRating\ICreditRatingRow.cs" />
     <Compile Include="Models\IFourFundStatsManual.cs" />
+    <Compile Include="Models\IFundAccessPopUp.cs" />
+    <Compile Include="Models\IFundCentre.cs" />
     <Compile Include="Models\IMyFundsScroller.cs" />
     <Compile Include="Models\IGraphWithHeading.cs" />
     <Compile Include="PerformanceTables\CumulativePerformanceController.cs" />

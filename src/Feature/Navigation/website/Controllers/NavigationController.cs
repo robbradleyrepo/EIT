@@ -9,6 +9,7 @@
     using Sitecore.Mvc.Controllers;
     using Sitecore.Mvc.Presentation;
     using System.Linq;
+    using LionTrust.Foundation.Navigation.Helpers;
 
     public class NavigationController : SitecoreController
     {
@@ -72,6 +73,10 @@
             if (homeItem != null)
             {
                 navigationViewModel.HomeItem = _mvcContext.SitecoreService.GetItem<IHome>(homeItem.ID.Guid);
+                if (navigationViewModel.HomeItem.OnboardingConfiguration != null) 
+                {
+                    navigationViewModel.HomeItem.HeaderConfiguration = NavigationHelper.GetCurrentHeaderConfiguration(_mvcContext, navigationViewModel.HomeItem.OnboardingConfiguration, _log);
+                }
             }
 
             navigationViewModel.HomeItem.MenuItems = navigationViewModel.HomeItem.MenuItems.Where(x => OnboardingHelper.HasAccess(x.Fund?.ExcludedCountries));

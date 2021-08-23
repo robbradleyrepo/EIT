@@ -4,6 +4,11 @@ Parent: "4fe5e8dc-1144-41f6-87cd-25f99e9babb6"
 Template: "4fe5e8dc-1144-41f6-87cd-25f99e9babb6"
 Path: /sitecore/templates/Project/LionTrust/Content Types/Choose Investor Role/__Standard Values
 DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{B0E7C6C9-C2F3-45A8-89FC-A14817D9286C}"
 Languages:
 - Language: en
   Versions:

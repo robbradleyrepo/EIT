@@ -69,6 +69,7 @@
 
         public static class DocumentLister
         {
+            public const string TitleColor_FieldID = "{7A95493E-B21A-4BE2-A4B2-87CE0894157B}";
             public const string SortText_FieldID = "{707223F8-4670-4008-910F-C572046D0815}";
             public const string AZText_FieldID = "{AAE23341-C861-4FBC-B0AB-16EA97A7FFC7}";
             public const string ZAText_FieldID = "{D3733E07-651D-4602-A5E6-9EA7953199BC}";
@@ -120,7 +121,7 @@
 
         public static class DocumentVariant
         {
-            public const string Title_FieldID = "{DFDA05D5-803C-4595-9460-F6AF0AE633B4}";
+            public const string Title_FieldID = "{DFDA05D5-803C-4595-9460-F6AF0AE633B4}";            
             public const string PressReleaseDocument_FieldID = "{F09637BD-1F1B-4590-8D0C-DA6F9B52155C}";
             public const string ReportDocument_FieldID = "{F4DF3EE6-5A99-4795-A7FB-E1DC960DAAAD}";
             public const string PresentationLink_FieldID = "{791F04C8-C42D-49F9-9EEA-B3E68EC99E5E}";
@@ -159,6 +160,18 @@
             public const string FullName_FieldId = "{40EC24BE-E4C8-4D5A-9226-6AFDBFF86698}";
             public const string Role_FieldId = "{0930A4BB-1CC6-471D-BC6B-FFD4097E2008}";
             public const string ShortBio_FieldId = "{97454B15-76C1-4AE0-AB59-C3F8D2304CCC}";
+        }
+
+        public static class OurValues
+        {
+            public const string HeadingColor_FieldId = "{2D65D3D3-95D0-4FA4-AB20-4702211B97B5}";
+            public const string Heading_FieldId = "{82E11A79-E14E-4140-BE21-6EB9B623CF71}";
+            public const string FirstTitle_FieldId = "{8196CCDD-B06B-433F-8445-6919A4D39216}";
+            public const string FirstBodyCopy_FieldId = "{21A76102-EDD0-4248-98D3-B320C5E25909}";
+            public const string SecondTitle_FieldId = "{C78D6936-DECA-4E02-B5E0-F76BD11BCF88}";
+            public const string SecondBodyCopy_FieldId = "{562DD82E-0639-4CE5-8379-A00B855FBF98}";
+            public const string ThirdTitle_FieldId = "{F71792B2-D652-4F8C-B6B2-73D5E67B1AF1}";
+            public const string ThirdBodyCopy_FieldId = "{CD3C0151-27B3-43E4-9B7D-B66B248529AA}";
         }
     }
 }

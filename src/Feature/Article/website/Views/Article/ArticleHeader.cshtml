@@ -1,7 +1,8 @@
 @using Glass.Mapper.Sc.Web.Mvc
 @using Sitecore.Mvc
+@using LionTrust.Foundation.ORM.Extensions;
 @model LionTrust.Feature.Article.Models.ArticleViewModel
-<header class="header header-hero d-flex flex-column justify-content-between" style="background-image: url('@Model.BackgroundImageUrl');">
+<header class="header header-hero d-flex flex-column justify-content-between" style="@Model.BackgroundImageStyle">
     <section class="container">
         @Html.Sitecore().Placeholder("navigation")
         <div class="d-flex flex-column">

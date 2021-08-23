@@ -9,11 +9,9 @@
     using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/HorizontalScroll", Model.Id.ToString(), "Edit Horizontal Scroll"))
     {
         <section class="container-left-gutter investment-card-container">
-            <div class="row">
-                <h3>
-                    @Html.Glass().Editable(Model, m => m.Title)
-                </h3>
-            </div>
+            <h3>
+                @Html.Glass().Editable(Model, m => m.Title)
+            </h3>
             <div id="investment-slider" class="swiper-container">
                 <div class="swiper-wrapper">
                     @foreach (var scrollerCard in Model.ScrollerCards.Take(counter))

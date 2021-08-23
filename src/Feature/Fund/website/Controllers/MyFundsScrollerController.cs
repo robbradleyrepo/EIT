@@ -59,7 +59,7 @@
 
                 if (fundSearchResults != null && fundSearchResults.TotalResults > 0)
                 {
-                    var followedFunds = MapFundResultHits(_fundContentSearchService.GetFunds(fundSearchRequest)?.SearchResults);
+                    var followedFunds = MapFundResultHits(fundSearchResults.SearchResults);
 
                     //search based on these funds.
                     fundSearchRequest.FundManagers = followedFunds.SelectMany(f => f.FundManagers).Distinct();
@@ -67,9 +67,7 @@
                     fundSearchRequest.FundRanges = followedFunds.Where(x => x.FundRange != null && x.FundRange.Any())?.SelectMany(f => f.FundRange).Distinct();
                     fundSearchRequest.FundRegions = followedFunds.Select(f => f.FundRegion);
                     fundSearchRequest.ExcludeSalesforceFundIds = followedFunds.Select(f => f.SalesforceFundId);
-                }
-                else
-                {
+
                     //clear the followed funds as we don't want to search for these again if no results.
                     fundSearchRequest.SalesforceFundIds = null;
                 }
