@@ -5,9 +5,12 @@
     <div class="stucked-chart__wrapper">
         @if (!Sitecore.Context.PageMode.IsExperienceEditor)
         {
-            <canvas class="stucked-chart" width="@Model.Data.Width" height="@Model.Data.Height"
+            <canvas class="stucked-chart__item" width="@Model.Data.Width" height="@Model.Data.Height"
                     data-chart='@Model.ChartJson'>
             </canvas>
+            <small class="small-text stucked-chart__small">
+                <span class="text-gold">*</span> @Html.Glass().Editable(Model.Data, m => m.LegendDescription)
+            </small>
         }
         else if (Model.Data.ChartColumns != null && Model.Data.ChartColumns != null)
         {
@@ -41,10 +44,6 @@
                     </table>
                 </div>
             }
-
         }
-        <small class="small-text stucked-chart__small">
-            <span class="text-gold">*</span> @Html.Glass().Editable(Model.Data, m => m.LegendDescription)
-        </small>
     </div>
 </div>
