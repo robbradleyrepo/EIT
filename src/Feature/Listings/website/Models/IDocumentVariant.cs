@@ -23,5 +23,7 @@
 
         [SitecoreField(Foundation.Legacy.Constants.Document.Created_FieldId)]
         DateTime Created { get; set; }
+
+        string ZipDocumentUrl { get; set; }
     }
 }

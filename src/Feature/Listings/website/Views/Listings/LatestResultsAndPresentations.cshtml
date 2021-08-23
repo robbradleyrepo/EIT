@@ -9,23 +9,72 @@
     <section class="article">
         <div class="article__box">
             <div class="container">
-                <div class="article__head">
-                    <h2 class="@titleColor mb-3">@Html.Glass().Editable(Model.Data, m => m.Title)</h2>
-                    @if (Model.LatestDocuments != null && Model.LatestDocuments.Any())
-                    {
-                        var document = Model.LatestDocuments.FirstOrDefault();
-                        var imageSrc = Model.Data.FirstImage.GetSafeBackgroundImageStyle();
-                        var documentsCount = Model.LatestDocuments.Count();
-                        var documentDownloadUrl = document.PressReleaseDocument.Url != null
+                @if (Model.LatestDocuments != null && Model.LatestDocuments.Any())
+                {
+                    var document = Model.LatestDocuments.FirstOrDefault();
+                    var imageSrc = Model.Data.FirstImage.GetSafeBackgroundImageStyle();
+                    var documentsCount = Model.LatestDocuments.Count();
+                    var documentDownloadUrl = !string.IsNullOrEmpty(document.ZipDocumentUrl)
+                                                ? document.ZipDocumentUrl
+                                                : document.PressReleaseDocument.Url != null
                                                 ? document.PressReleaseDocument.Url
                                                 : document.ReportDocument.Url;
+                    <div class="article__head">
+                        <h2 class="@titleColor mb-3">@Html.Glass().Editable(Model.Data, m => m.Title)</h2>
 
                         <a href="@Model.Data.AllResultsPage.Url" class="link-styles d-none d-lg-block ml-1 no-wrap">
                             @Html.Glass().Editable(Model.Data, m => m.ViewAllLabel)
                             <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
-                        </a>
-                        <div class="container">
-                            <div class="row">
+                        </a>                        
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="article-promo">
+                                    <a href="@documentDownloadUrl" class="article-promo__front" download></a>
+                                    <a href="@documentDownloadUrl" class="article-promo__body" download>
+                                        <span class="article-promo__title text-white">
+                                            @Html.Glass().Editable(document, z => z.Title)
+                                        </span>
+                                    </a>
+                                    <div class="article-promo__footer">
+                                        <div class="article-promo__footer-item">
+                                            @Html.Glass().RenderImage(Model.Data, m => m.DateIcon, new NameValueCollection { { "class", "article-promo__clock" } }, isEditable: true)
+                                            <span class="article-promo__footer-text">
+                                                @using (Html.Glass().BeginEditFrame(document, "Edit Document Date", x => x.Date))
+                                                {
+                                                    if (Sitecore.Context.PageMode.IsExperienceEditor)
+                                                    {
+                                                        @document.Date.ToString("d MMMM yyyy")
+                                                    }
+                                                    else
+                                                    {
+                                                        if (document.Date != DateTime.MinValue)
+                                                        {
+                                                            @document.Date.ToString("d MMMM yyyy")
+                                                        }
+                                                        else
+                                                        {
+                                                            @document.Created.ToString("d MMMM yyyy")
+                                                        }
+                                                    }
+                                                }
+                                            </span>
+                                        </div>
+                                        <div class="article-promo__footer-item"></div>
+                                    </div>
+                                    @Html.Glass().RenderImage(Model.Data, m => m.FirstImage, new NameValueCollection { { "class", "article-promo__back" } }, isEditable: true)
+                                </div>
+                            </div>
+                            @if (documentsCount > 1)
+                            {
+                                document = Model.LatestDocuments.Skip(1).Take(1).FirstOrDefault();
+                                imageSrc = Model.Data.SecondImage.GetSafeBackgroundImageStyle();
+                                documentDownloadUrl = !string.IsNullOrEmpty(document.ZipDocumentUrl)
+                                                ? document.ZipDocumentUrl
+                                                : document.PressReleaseDocument.Url != null
+                                                ? document.PressReleaseDocument.Url
+                                                : document.ReportDocument.Url;
                                 <div class="col-lg-4">
                                     <div class="article-promo">
                                         <a href="@documentDownloadUrl" class="article-promo__front" download></a>
@@ -60,14 +109,17 @@
                                             </div>
                                             <div class="article-promo__footer-item"></div>
                                         </div>
-                                        @Html.Glass().RenderImage(Model.Data, m => m.FirstImage, new NameValueCollection { { "class", "article-promo__back" } }, isEditable: true)
+                                        @Html.Glass().RenderImage(Model.Data, m => m.SecondImage, new NameValueCollection { { "class", "article-promo__back" } }, isEditable: true)
                                     </div>
                                 </div>
-                                @if (documentsCount > 1)
+
+                                if (documentsCount > 2)
                                 {
-                                    document = Model.LatestDocuments.Skip(1).Take(1).FirstOrDefault();
+                                    document = Model.LatestDocuments.Skip(2).Take(1).FirstOrDefault();
                                     imageSrc = Model.Data.SecondImage.GetSafeBackgroundImageStyle();
-                                    documentDownloadUrl = document.PressReleaseDocument.Url != null
+                                    documentDownloadUrl = !string.IsNullOrEmpty(document.ZipDocumentUrl)
+                                                ? document.ZipDocumentUrl
+                                                : document.PressReleaseDocument.Url != null
                                                 ? document.PressReleaseDocument.Url
                                                 : document.ReportDocument.Url;
                                     <div class="col-lg-4">
@@ -104,61 +156,16 @@
                                                 </div>
                                                 <div class="article-promo__footer-item"></div>
                                             </div>
-                                            @Html.Glass().RenderImage(Model.Data, m => m.SecondImage, new NameValueCollection { { "class", "article-promo__back" } }, isEditable: true)
+                                            @Html.Glass().RenderImage(Model.Data, m => m.ThirdImage, new NameValueCollection { { "class", "article-promo__back" } }, isEditable: true)
                                         </div>
                                     </div>
-
-                                    if (documentsCount > 2)
-                                    {
-                                        document = Model.LatestDocuments.Skip(2).Take(1).FirstOrDefault();
-                                        imageSrc = Model.Data.SecondImage.GetSafeBackgroundImageStyle();
-                                        documentDownloadUrl = document.PressReleaseDocument.Url != null
-                                                ? document.PressReleaseDocument.Url
-                                                :  document.ReportDocument.Url;
-                                        <div class="col-lg-4">
-                                            <div class="article-promo">
-                                                <a href="@documentDownloadUrl" class="article-promo__front" download></a>
-                                                <a href="@documentDownloadUrl" class="article-promo__body" download>
-                                                    <span class="article-promo__title text-white">
-                                                        @Html.Glass().Editable(document, z => z.Title)
-                                                    </span>
-                                                </a>
-                                                <div class="article-promo__footer">
-                                                    <div class="article-promo__footer-item">
-                                                        @Html.Glass().RenderImage(Model.Data, m => m.DateIcon, new NameValueCollection { { "class", "article-promo__clock" } }, isEditable: true)
-                                                        <span class="article-promo__footer-text">
-                                                            @using (Html.Glass().BeginEditFrame(document, "Edit Document Date", x => x.Date))
-                                                            {
-                                                                if (Sitecore.Context.PageMode.IsExperienceEditor)
-                                                                {
-                                                                    @document.Date.ToString("d MMMM yyyy")
-                                                                }
-                                                                else
-                                                                {
-                                                                    if (document.Date != DateTime.MinValue)
-                                                                    {
-                                                                        @document.Date.ToString("d MMMM yyyy")
-                                                                    }
-                                                                    else
-                                                                    {
-                                                                        @document.Created.ToString("d MMMM yyyy")
-                                                                    }
-                                                                }
-                                                            }
-                                                        </span>
-                                                    </div>
-                                                    <div class="article-promo__footer-item"></div>
-                                                </div>
-                                                @Html.Glass().RenderImage(Model.Data, m => m.ThirdImage, new NameValueCollection { { "class", "article-promo__back" } }, isEditable: true)
-                                            </div>
-                                        </div>
-                                    }
                                 }
-                            </div>
+                            }
                         </div>
-                    }
+                    </div>
+                }
                 </div>
-            </div>
+                
         </div>
     </section>
 }

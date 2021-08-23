@@ -109,10 +109,12 @@
             public const string DocumentApiRoute_SettingName = "Feature.Listings.DocumentsApiRoute";
             public const string GenericListingApiRoute_SettingName = "Feature.Listings.GenericListingApiRoute";
             public const string MediGalleryApiRoute_SettingName = "Feature.Listings.MediaGalleryApiRoute";
+            public const string LatestResultApiRoute_SettingName = "Feature.Listings.LatestResultsApiRoute";
         }
 
         public static class DocumentListerVariant
         {
+            public const string TemplateId = "{C7C8B796-6413-4CB6-946C-5B593ADCD693}";
             public const string SelectYearLabel_FieldId = "{B64882EB-08C1-4DF0-85DB-00712CE4A076}";
             public const string PressReleaseLabel_FieldId = "{D0F4D54F-25A6-4432-8872-488A881D30B4}";
             public const string ReportLabel_FieldId = "{D440A386-E392-4561-926F-BF6B80B7BEB1}";

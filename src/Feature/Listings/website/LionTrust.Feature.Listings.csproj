@@ -182,6 +182,10 @@
       <Project>{43ee972b-2002-4719-a878-a66a99c42c40}</Project>
       <Name>LionTrust.Foundation.Legacy</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\LocalDatasource\website\LionTrust.Foundation.LocalDatasource.csproj">
+      <Project>{02acf4f4-f561-4b57-ab00-49d97079ba28}</Project>
+      <Name>LionTrust.Foundation.LocalDatasource</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\ORM\website\LionTrust.Foundation.ORM.csproj">
       <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>
       <Name>LionTrust.Foundation.ORM</Name>
