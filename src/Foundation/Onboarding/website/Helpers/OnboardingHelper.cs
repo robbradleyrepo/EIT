@@ -134,9 +134,32 @@
                 .FirstOrDefault(c => c?.EnglishName == address.Country)?
                 .TwoLetterISORegionName;
 
-            var country = home.OnboardingConfiguration.ChooseCountry?
-                .SelectMany(x => x.Regions?.SelectMany(c => c.Countries))
-                .FirstOrDefault(c => c.ISO == twoLetterISO);
+            return GetCountryFromIso(context, twoLetterISO);
+        }
+
+        public static ICountry GetCountryFromIso(IMvcContext context, string twoLetterISO)
+        {
+            var home = context.GetHomeItem<IHome>();
+
+            if (home == null)
+            {
+                return null;
+            }
+
+            var countries = home.OnboardingConfiguration.ChooseCountry?
+                .SelectMany(x => x.Regions?.SelectMany(c => c.Countries));
+
+            if (countries == null)
+            {
+                return null;
+            }
+
+            var country = countries.FirstOrDefault(c => c.ISO == twoLetterISO);
+
+            if (country == null || country.ISO == Country.RestOfWorldIso)
+            {
+                country = countries.FirstOrDefault(c => c.ISO == Country.RestOfWorldIso);
+            }
 
             return country;
         }
