@@ -89,7 +89,7 @@
         public void GetLatestResultDocuments(string firstDoc, string secondDoc)
         {
             HttpContext.Response.ContentType = "application/zip, application/octet-stream";
-            HttpContext.Response.AppendHeader("content-disposition", "attachment; filename=\"MediaGallery.zip\"");
+            HttpContext.Response.AppendHeader("content-disposition", "attachment; filename=\"Press Releases & Reports Documents.zip\"");
             HttpContext.Response.CacheControl = "Private";
             HttpContext.Response.Cache.SetExpires(DateTime.Now.AddMinutes(3));
 

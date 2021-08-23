@@ -16,7 +16,7 @@
                     var documentsCount = Model.LatestDocuments.Count();
                     var documentDownloadUrl = !string.IsNullOrEmpty(document.ZipDocumentUrl)
                                                 ? document.ZipDocumentUrl
-                                                : document.PressReleaseDocument.Url != null
+                                                : document.PressReleaseDocument != null
                                                 ? document.PressReleaseDocument.Url
                                                 : document.ReportDocument.Url;
                     <div class="article__head">
@@ -72,7 +72,7 @@
                                 imageSrc = Model.Data.SecondImage.GetSafeBackgroundImageStyle();
                                 documentDownloadUrl = !string.IsNullOrEmpty(document.ZipDocumentUrl)
                                                 ? document.ZipDocumentUrl
-                                                : document.PressReleaseDocument.Url != null
+                                                : document.PressReleaseDocument != null
                                                 ? document.PressReleaseDocument.Url
                                                 : document.ReportDocument.Url;
                                 <div class="col-lg-4">
@@ -119,7 +119,7 @@
                                     imageSrc = Model.Data.SecondImage.GetSafeBackgroundImageStyle();
                                     documentDownloadUrl = !string.IsNullOrEmpty(document.ZipDocumentUrl)
                                                 ? document.ZipDocumentUrl
-                                                : document.PressReleaseDocument.Url != null
+                                                : document.PressReleaseDocument != null
                                                 ? document.PressReleaseDocument.Url
                                                 : document.ReportDocument.Url;
                                     <div class="col-lg-4">
