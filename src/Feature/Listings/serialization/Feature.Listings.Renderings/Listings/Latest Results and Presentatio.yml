@@ -1,0 +1,36 @@
+﻿---
+ID: "93be9e6f-a146-438a-8b3b-2f456a65787b"
+Parent: "24f14312-98cd-4560-8e59-ec05fd396495"
+Template: "2a3e91a0-7987-44b5-ab34-35c2d9de83b9"
+Path: /sitecore/layout/Renderings/Feature/Listings/Latest Results and Presentations
+DB: master
+SharedFields:
+- ID: "a2f5d9df-8cba-4a1d-99eb-51acb94cb057"
+  Hint: Page Editor Buttons
+  Type: Treelist
+  Value: "{27572BEF-E65E-48A4-ADDB-7BD024F09907}"
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "site:latestrestultsandpresentations"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{18DDB046-112A-4DA8-97F3-D2F1836DE6E8}" />
+- ID: "ded9e431-3604-4921-a4b3-a6ec7636a5b6"
+  Hint: Controller Action
+  Value: Render
+- ID: "e64ad073-dfcc-4d20-8c0b-fe5aa6226cd7"
+  Hint: Controller
+  Value: LatestResultsAndPresentations
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04437558-ac18-42cb-ab21-1243a66abe67"
+      Hint: Supports Local Datasource
+      Type: Checkbox
+      Value: 1
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210823T220548Z

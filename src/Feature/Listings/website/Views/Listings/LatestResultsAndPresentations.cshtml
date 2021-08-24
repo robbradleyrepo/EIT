@@ -1,0 +1,208 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Foundation.ORM.Extensions
+@using System.Collections.Specialized
+@model LionTrust.Feature.Listings.Models.LatestResultsAndPresentationsViewModel
+
+@if (Model != null && Model.Data != null)
+{
+    var titleColor = Model.Data.TitleColor != null && !string.IsNullOrEmpty(Model.Data.TitleColor.Value) ? Model.Data.TitleColor.Value : "text-black";
+    <section class="article">
+        <div class="article__box">
+            <div class="container">
+                @if (Model.LatestDocuments != null && Model.LatestDocuments.Any())
+                {
+                    var document = Model.LatestDocuments.FirstOrDefault();
+                    var imageSrc = Model.Data.FirstImage.GetSafeBackgroundImageStyle();
+                    var documentsCount = Model.LatestDocuments.Count();
+                    var documentDownloadUrl = !string.IsNullOrEmpty(document.ZipDocumentUrl)
+                                                ? document.ZipDocumentUrl
+                                                : document.PressReleaseDocument != null
+                                                ? document.PressReleaseDocument.Url
+                                                : document.ReportDocument.Url;
+                    <div class="article__head">
+                        <h2 class="@titleColor mb-3">@Html.Glass().Editable(Model.Data, m => m.Title)</h2>
+
+                        <a href="@Model.Data.AllResultsPage.Url" class="link-styles d-none d-lg-block ml-1 no-wrap">
+                            @Html.Glass().Editable(Model.Data, m => m.ViewAllLabel)
+                            <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
+                        </a>                        
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="article-promo">
+                                    <a href="@documentDownloadUrl" class="article-promo__front" download></a>
+                                    <a href="@documentDownloadUrl" class="article-promo__body" download>
+                                        <span class="article-promo__title text-white">
+                                            @Html.Glass().Editable(document, z => z.Title)
+                                        </span>
+                                    </a>
+                                    <div class="article-promo__footer">
+                                        <div class="article-promo__footer-item">
+                                            @Html.Glass().RenderImage(Model.Data, m => m.DateIcon, new NameValueCollection { { "class", "article-promo__clock" } }, isEditable: true)
+                                            <span class="article-promo__footer-text">
+                                                @using (Html.Glass().BeginEditFrame(document, "Edit Document Date", x => x.Date))
+                                                {
+                                                    if (Sitecore.Context.PageMode.IsExperienceEditor)
+                                                    {
+                                                        @document.Date.ToString("d MMMM yyyy")
+                                                    }
+                                                    else
+                                                    {
+                                                        if (document.Date != DateTime.MinValue)
+                                                        {
+                                                            @document.Date.ToString("d MMMM yyyy")
+                                                        }
+                                                        else
+                                                        {
+                                                            @document.Created.ToString("d MMMM yyyy")
+                                                        }
+                                                    }
+                                                }
+                                            </span>
+                                        </div>
+                                        <div class="article-promo__footer-item">
+                                            @if (document.PressReleaseDocument != null)
+                                            {
+                                                @Html.Glass().RenderImage(Model.Data, m => m.PressReleaseIcon, new NameValueCollection { { "class", "article-promo__clock" } }, isEditable: true)
+                                                <span class="article-promo__footer-text">@Html.Glass().Editable(Model.Data, m => m.PressReleaseLabel)</span>
+                                            }
+                                            @if (document.ReportDocument != null)
+                                            {
+                                                @Html.Glass().RenderImage(Model.Data, m => m.ReportIcon, new NameValueCollection { { "class", "article-promo__clock" } }, isEditable: true)
+                                                <span class="article-promo__footer-text">@Html.Glass().Editable(Model.Data, m => m.ReportLabel)</span>
+                                            }
+                                        </div>
+                                    </div>
+                                    @Html.Glass().RenderImage(Model.Data, m => m.FirstImage, new NameValueCollection { { "class", "article-promo__back" }, { "style", "opacity:" + Model.Data.FirstImageOpacity } }, isEditable: true)
+                                </div>
+                            </div>
+                            @if (documentsCount > 1)
+                            {
+                                document = Model.LatestDocuments.Skip(1).Take(1).FirstOrDefault();
+                                imageSrc = Model.Data.SecondImage.GetSafeBackgroundImageStyle();
+                                documentDownloadUrl = !string.IsNullOrEmpty(document.ZipDocumentUrl)
+                                                ? document.ZipDocumentUrl
+                                                : document.PressReleaseDocument != null
+                                                ? document.PressReleaseDocument.Url
+                                                : document.ReportDocument.Url;
+                                <div class="col-lg-4">
+                                    <div class="article-promo">
+                                        <a href="@documentDownloadUrl" class="article-promo__front" download></a>
+                                        <a href="@documentDownloadUrl" class="article-promo__body" download>
+                                            <span class="article-promo__title text-white">
+                                                @Html.Glass().Editable(document, z => z.Title)
+                                            </span>
+                                        </a>
+                                        <div class="article-promo__footer">
+                                            <div class="article-promo__footer-item">
+                                                @Html.Glass().RenderImage(Model.Data, m => m.DateIcon, new NameValueCollection { { "class", "article-promo__clock" } }, isEditable: true)
+                                                <span class="article-promo__footer-text">
+                                                    @using (Html.Glass().BeginEditFrame(document, "Edit Document Date", x => x.Date))
+                                                    {
+                                                        if (Sitecore.Context.PageMode.IsExperienceEditor)
+                                                        {
+                                                            @document.Date.ToString("d MMMM yyyy")
+                                                        }
+                                                        else
+                                                        {
+                                                            if (document.Date != DateTime.MinValue)
+                                                            {
+                                                                @document.Date.ToString("d MMMM yyyy")
+                                                            }
+                                                            else
+                                                            {
+                                                                @document.Created.ToString("d MMMM yyyy")
+                                                            }
+                                                        }
+                                                    }
+                                                </span>
+                                            </div>
+                                            <div class="article-promo__footer-item">
+                                                @if (document.PressReleaseDocument != null)
+                                                {
+                                                    @Html.Glass().RenderImage(Model.Data, m => m.PressReleaseIcon, new NameValueCollection { { "class", "article-promo__clock" } }, isEditable: true)
+                                                    <span class="article-promo__footer-text">@Html.Glass().Editable(Model.Data, m => m.PressReleaseLabel)</span>
+                                                }
+                                                @if (document.ReportDocument != null)
+                                                {
+                                                    @Html.Glass().RenderImage(Model.Data, m => m.ReportIcon, new NameValueCollection { { "class", "article-promo__clock" } }, isEditable: true)
+                                                    <span class="article-promo__footer-text">@Html.Glass().Editable(Model.Data, m => m.ReportLabel)</span>
+                                                }
+                                            </div>
+                                        </div>
+                                        @Html.Glass().RenderImage(Model.Data, m => m.SecondImage, new NameValueCollection { { "class", "article-promo__back" }, { "style", "opacity:" + Model.Data.SecondImageOpacity } }, isEditable: true)
+                                    </div>
+                                </div>
+
+                                if (documentsCount > 2)
+                                {
+                                    document = Model.LatestDocuments.Skip(2).Take(1).FirstOrDefault();
+                                    imageSrc = Model.Data.SecondImage.GetSafeBackgroundImageStyle();
+                                    documentDownloadUrl = !string.IsNullOrEmpty(document.ZipDocumentUrl)
+                                                ? document.ZipDocumentUrl
+                                                : document.PressReleaseDocument != null
+                                                ? document.PressReleaseDocument.Url
+                                                : document.ReportDocument.Url;
+                                    <div class="col-lg-4">
+                                        <div class="article-promo">
+                                            <a href="@documentDownloadUrl" class="article-promo__front" download></a>
+                                            <a href="@documentDownloadUrl" class="article-promo__body" download>
+                                                <span class="article-promo__title text-white">
+                                                    @Html.Glass().Editable(document, z => z.Title)
+                                                </span>
+                                            </a>
+                                            <div class="article-promo__footer">
+                                                <div class="article-promo__footer-item">
+                                                    @Html.Glass().RenderImage(Model.Data, m => m.DateIcon, new NameValueCollection { { "class", "article-promo__clock" } }, isEditable: true)
+                                                    <span class="article-promo__footer-text">
+                                                        @using (Html.Glass().BeginEditFrame(document, "Edit Document Date", x => x.Date))
+                                                        {
+                                                            if (Sitecore.Context.PageMode.IsExperienceEditor)
+                                                            {
+                                                                @document.Date.ToString("d MMMM yyyy")
+                                                            }
+                                                            else
+                                                            {
+                                                                if (document.Date != DateTime.MinValue)
+                                                                {
+                                                                    @document.Date.ToString("d MMMM yyyy")
+                                                                }
+                                                                else
+                                                                {
+                                                                    @document.Created.ToString("d MMMM yyyy")
+                                                                }
+                                                            }
+                                                        }
+                                                    </span>
+                                                </div>
+                                                <div class="article-promo__footer-item">
+                                                    @if (document.PressReleaseDocument != null)
+                                                    {
+                                                        @Html.Glass().RenderImage(Model.Data, m => m.PressReleaseIcon, new NameValueCollection { { "class", "article-promo__clock" } }, isEditable: true)
+                                                        <span class="article-promo__footer-text">@Html.Glass().Editable(Model.Data, m => m.PressReleaseLabel)</span>
+                                                    }
+                                                    @if (document.ReportDocument != null)
+                                                    {
+                                                        @Html.Glass().RenderImage(Model.Data, m => m.ReportIcon, new NameValueCollection { { "class", "article-promo__clock" } }, isEditable: true)
+                                                        <span class="article-promo__footer-text">@Html.Glass().Editable(Model.Data, m => m.ReportLabel)</span>
+                                                    }
+                                                </div>
+                                            </div>
+                                            @Html.Glass().RenderImage(Model.Data, m => m.ThirdImage, new NameValueCollection { { "class", "article-promo__back" }, { "style", "opacity:" + Model.Data.ThirdImageOpacity } }, isEditable: true)
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </div>
+                }
+                </div>
+                
+        </div>
+    </section>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @: Add datasource for component
+}

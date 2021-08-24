@@ -7,6 +7,7 @@ using LionTrust.Foundation.Content.Tests.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NSubstitute;
 using Ploeh.AutoFixture;
+using System;
 
 namespace LionTrust.Foundation.Content.Tests.Repositories
 {
@@ -51,7 +52,7 @@ namespace LionTrust.Foundation.Content.Tests.Repositories
             var createItemResponse = fixture.Build<TestItem>()
                 .With(x => x.Name, newItemName)
                 .With(x => x.Title, newItemTitle)
-                .With(x => x.BaseTemplateIds, new List<string>())
+                .With(x => x.BaseTemplateIds, new List<Guid>())
                 .Create();
 
             _requestContext.SitecoreService.CreateItem<TestItem>(createOptions)
@@ -84,7 +85,7 @@ namespace LionTrust.Foundation.Content.Tests.Repositories
             var fixture = new Fixture();
             var createItemResponse = fixture.Build<TestItem>()
                 .With(x => x.Name, newItemName)
-                .With(x => x.BaseTemplateIds, new List<string>())
+                .With(x => x.BaseTemplateIds, new List<Guid>())
                 .Create();
 
             _requestContext.SitecoreService.CreateItem<TestItem>(createOptions)

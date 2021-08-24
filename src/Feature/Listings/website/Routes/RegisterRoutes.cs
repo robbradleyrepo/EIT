@@ -56,6 +56,12 @@
                     controller = "MediaGallery",
                     action = "GetMediaFacets"
                 });
+            RouteTable.Routes.MapRoute("Feature.Listings.GetLatestResultDocument", $"{Settings.GetSetting(Constants.Settings.LatestResultApiRoute_SettingName)}/GetLatestResultDocuments",
+                new
+                {
+                    controller = "LatestResultsAndPresentations",
+                    action = "GetLatestResultDocuments"
+                });
         }
     }
 }
