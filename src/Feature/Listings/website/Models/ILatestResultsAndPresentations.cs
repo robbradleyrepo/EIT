@@ -38,8 +38,14 @@
         [SitecoreField(Constants.LatestResultsAndPresentation.PressReleaseIcon_FieldId)]
         Image PressReleaseIcon { get; set; }
 
+        [SitecoreField(Constants.LatestResultsAndPresentation.PressReleaseLabel_FieldId)]
+        string PressReleaseLabel { get; set; }
+
         [SitecoreField(Constants.LatestResultsAndPresentation.ReportIcon_FieldId)]
         Image ReportIcon { get; set; }
+
+        [SitecoreField(Constants.LatestResultsAndPresentation.ReportLabel_FieldId)]
+        string ReportLabel { get; set; }
 
         [SitecoreField(Constants.LatestResultsAndPresentation.DateIcon_FieldId)]
         Image DateIcon { get; set; }

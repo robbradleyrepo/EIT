@@ -65,10 +65,12 @@
                                             @if (document.PressReleaseDocument != null)
                                             {
                                                 @Html.Glass().RenderImage(Model.Data, m => m.PressReleaseIcon, new NameValueCollection { { "class", "article-promo__clock" } }, isEditable: true)
+                                                <span class="article-promo__footer-text">@Html.Glass().Editable(Model.Data, m => m.PressReleaseLabel)</span>
                                             }
                                             @if (document.ReportDocument != null)
                                             {
                                                 @Html.Glass().RenderImage(Model.Data, m => m.ReportIcon, new NameValueCollection { { "class", "article-promo__clock" } }, isEditable: true)
+                                                <span class="article-promo__footer-text">@Html.Glass().Editable(Model.Data, m => m.ReportLabel)</span>
                                             }
                                         </div>
                                     </div>
@@ -120,10 +122,12 @@
                                                 @if (document.PressReleaseDocument != null)
                                                 {
                                                     @Html.Glass().RenderImage(Model.Data, m => m.PressReleaseIcon, new NameValueCollection { { "class", "article-promo__clock" } }, isEditable: true)
+                                                    <span class="article-promo__footer-text">@Html.Glass().Editable(Model.Data, m => m.PressReleaseLabel)</span>
                                                 }
                                                 @if (document.ReportDocument != null)
                                                 {
                                                     @Html.Glass().RenderImage(Model.Data, m => m.ReportIcon, new NameValueCollection { { "class", "article-promo__clock" } }, isEditable: true)
+                                                    <span class="article-promo__footer-text">@Html.Glass().Editable(Model.Data, m => m.ReportLabel)</span>
                                                 }
                                             </div>
                                         </div>
@@ -176,10 +180,12 @@
                                                     @if (document.PressReleaseDocument != null)
                                                     {
                                                         @Html.Glass().RenderImage(Model.Data, m => m.PressReleaseIcon, new NameValueCollection { { "class", "article-promo__clock" } }, isEditable: true)
+                                                        <span class="article-promo__footer-text">@Html.Glass().Editable(Model.Data, m => m.PressReleaseLabel)</span>
                                                     }
                                                     @if (document.ReportDocument != null)
                                                     {
                                                         @Html.Glass().RenderImage(Model.Data, m => m.ReportIcon, new NameValueCollection { { "class", "article-promo__clock" } }, isEditable: true)
+                                                        <span class="article-promo__footer-text">@Html.Glass().Editable(Model.Data, m => m.ReportLabel)</span>
                                                     }
                                                 </div>
                                             </div>

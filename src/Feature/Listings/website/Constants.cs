@@ -183,11 +183,15 @@
             public const string ViewAllLabel_FieldId = "{19D705DF-98BA-459B-B335-58043C3C95B5}";
             public const string AllResultsPage_FieldId = "{F7CC5A31-E016-4799-A108-A8420E333434}";
             public const string FirstImage_FieldId = "{3A9D2ACD-60AC-494F-9C21-FDC2A0AA6E72}";
+            public const string FirstImageOpacity_FieldId = "{8974C202-3496-474C-B145-05081BBCD994}";
             public const string SecondImage_FieldId = "{4B14F272-608F-44DC-AA3B-F76D29FEE7B8}";
-            public const string ThirdImage_FieldId = "{359E3DED-A233-442A-A495-D1BDC07EC018}";            
-            public const string PressReleaseIcon_FieldId = "{6BE86AC3-6ED0-4AFD-8AB5-E39DC0FF3C90}";
+            public const string SecondImageOpacity_FieldId = "{63B4954A-AD0E-46BF-B2D2-08291EF43784}";
+            public const string ThirdImage_FieldId = "{359E3DED-A233-442A-A495-D1BDC07EC018}";
+            public const string ThirdImageOpacity_FieldId = "{F7B4AF4C-DDFF-416E-981C-4F7CD9EBA101}";
             public const string ReportIcon_FieldId = "{C4D7FCDD-7187-4A38-93DB-CC9C557B72C2}";
-            public const string PresentationIcon_FieldId = "{E98F39E1-6B0D-4680-8DFB-643B487F5D39}";
+            public const string ReportLabel_FieldId = "{327D008F-C0D4-46C5-99D5-38D2C10F5BA4}";
+            public const string PressReleaseIcon_FieldId = "{6BE86AC3-6ED0-4AFD-8AB5-E39DC0FF3C90}";
+            public const string PressReleaseLabel_FieldId = "{F83E8D46-F1C3-41E2-A7AF-4CE0AE9A6306}";
             public const string DateIcon_FieldId = "{65490AB6-DEF9-4911-9C44-2AE66CBEAC85}";
         }
     }

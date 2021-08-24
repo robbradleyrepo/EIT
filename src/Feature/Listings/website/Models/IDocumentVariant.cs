@@ -10,7 +10,7 @@
         string Title { get; set; }
 
         [SitecoreField(Constants.DocumentVariant.PressReleaseDocument_FieldID)]
-        Link PressReleaseDocument { get; set; }
+        Link PressReleaseDocument { get; set; }        
 
         [SitecoreField(Constants.DocumentVariant.ReportDocument_FieldID)]
         Link ReportDocument { get; set; }
