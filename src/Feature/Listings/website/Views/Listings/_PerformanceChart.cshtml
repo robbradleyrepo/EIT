@@ -14,32 +14,45 @@
         }
         else if (Model.Data.ChartColumns != null && Model.Data.ChartColumns != null)
         {
+            <strong class="text-black">NOTE: This table is just for Experience editor view, use the preview mode to view the chart</strong>
             using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/PerformanceCharts", Model.Data.Id.ToString(), "Edit Performance Chart"))
             {
+                var columnCount = 0;
                 <div class="table-responsive-lg">
                     <table class="table table-striped mb-3">
+                        <thead>
+                            <tr>
+                                <td>Column No.</td>
+                                <td>Column Title</td>
+                                <td>Column Values</td>
+                            </tr>
+                        </thead>
                         @foreach (var chart in Model.Data.ChartColumns)
                         {
-                            <tr>
-                                <th>
-                                    @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/PerformanceCharts/Chart", chart.Id.ToString(), "Add new color/value for chart column"))
+                            columnCount++;
+                            <tbody>
+                                <tr>
+                                    <td>@columnCount. column values </td>
+                                    <th>
+                                        @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/PerformanceCharts/Chart", chart.Id.ToString(), "Add new color/value for chart column"))
+                                        {
+                                            @Html.Glass().Editable(chart, c => c.Title)
+                                        }
+                                    </th>
+                                    @if (chart.ChartValues != null)
                                     {
-                                        @Html.Glass().Editable(chart, c => c.Title)
+                                        foreach (var chartValue in chart.ChartValues)
+                                        {
+                                            <td>
+                                                @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/PerformanceCharts/ChartValue", chartValue.Id.ToString(), "Edit Chart values"))
+                                                {
+                                                    @Html.Glass().Editable(chartValue, cv => cv.Value)
+                                                }
+                                            </td>
+                                        }
                                     }
-                                </th>
-                                @if (chart.ChartValues != null)
-                                {
-                                    foreach (var chartValue in chart.ChartValues)
-                                    {
-                                        <td>
-                                            @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/PerformanceCharts/ChartValue", chartValue.Id.ToString(), "Edit Chart values"))
-                                            {
-                                                @Html.Glass().Editable(chartValue, cv => cv.Value)
-                                            }
-                                        </td>
-                                    }
-                                }
-                            </tr>
+                                </tr>
+                            </tbody>
                         }
                     </table>
                 </div>
