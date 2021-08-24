@@ -2,15 +2,18 @@
 @model LionTrust.Feature.Text.Models.IRichText
 @if (Model != null)
 {
-    <div class="disclaimer-text @(Model.SmallSize ? "article-with-small" : "article-with-big") @(Model.TextColor != null ? Model.TextColor.Value : "text-black")">
-        @if (Sitecore.Context.PageMode.IsExperienceEditor)
-        {
-            @Html.Glass().Editable(Model, m => m.Text)
-        }
-        else
-        {
-            @Html.Raw(Model.Text)
-        }
+    var container = Model.MarginsContainer != null ? Model.MarginsContainer.Value : string.Empty;
+    <div class="@container">
+        <div class="disclaimer-text @(Model.TextColor != null ? Model.TextColor.Value : "text-black")">
+            @if (Sitecore.Context.PageMode.IsExperienceEditor)
+            {
+                @Html.Glass().Editable(Model, m => m.Text)
+            }
+            else
+            {
+                @Html.Raw(Model.Text)
+            }
+        </div>
     </div>
 }
 else if (Sitecore.Context.PageMode.IsExperienceEditor)

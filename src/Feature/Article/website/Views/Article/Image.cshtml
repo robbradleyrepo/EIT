@@ -7,6 +7,8 @@
 
 @{
     var opacity = string.IsNullOrWhiteSpace(@Model.Opacity) ? "opacity: 1" : "opacity: " + @Model.Opacity;
+    var container = Model.MarginsContainer != null ? Model.MarginsContainer.Value : string.Empty;
 }
-
-@Html.Glass().RenderImage(m => m.Image, new { @class = "full-with-img", style = opacity }, isEditable: true)
+<div class="@container">
+    @Html.Glass().RenderImage(m => m.Image, new { @class = "full-with-img", style = opacity }, isEditable: true)
+</div>

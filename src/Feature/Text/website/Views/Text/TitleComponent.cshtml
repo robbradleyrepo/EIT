@@ -4,18 +4,10 @@
     var headingType = Model.HeadingType != null && !string.IsNullOrEmpty(Model.HeadingType.Value) ? Model.HeadingType.Value : "h1";
     var textColor = Model.TextColor != null && !string.IsNullOrEmpty(Model.TextColor.Value) ? Model.TextColor.Value : "text-black";
     var textAlignment = Model.TextAlignment != null && !string.IsNullOrEmpty(Model.TextAlignment.Value) ? "text-" + Model.TextAlignment.Value : "text-center";
+    var container = Model.MarginsContainer != null ? Model.MarginsContainer.Value : string.Empty;
 }
-@if (Model.AddIntoContainer)
-{
-    <section class="container mt-4 mt-lg-5">
-        <div class="@textAlignment">
-            <@headingType class="@textColor">@Html.Glass().Editable(Model, m => m.Title)</@headingType>
-        </div>
-    </section>
-}
-else
-{
+<div class="@container">
     <div class="@textAlignment">
         <@headingType class="@textColor">@Html.Glass().Editable(Model, m => m.Title)</@headingType>
     </div>
-}
+</div>
