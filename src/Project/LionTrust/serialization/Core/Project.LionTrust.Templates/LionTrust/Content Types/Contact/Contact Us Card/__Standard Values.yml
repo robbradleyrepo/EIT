@@ -4,6 +4,11 @@ Parent: "0d4a81a1-3101-41e3-9e50-5fa10460ce6e"
 Template: "0d4a81a1-3101-41e3-9e50-5fa10460ce6e"
 Path: /sitecore/templates/Project/LionTrust/Content Types/Contact/Contact Us Card/__Standard Values
 DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{C67B0FEE-EE02-4564-9D7A-BF776A54D9FB}"
 Languages:
 - Language: en
   Versions:
@@ -18,6 +23,9 @@ Languages:
     - ID: "390479c7-361c-463b-8e25-4acd2eba51a0"
       Hint: ContactUsCard_OutsideUkLabel
       Value: if outside the UK
+    - ID: "508ef2ad-4dd4-49e8-a95a-436e3ed8f69f"
+      Hint: ContactUsCard_Title
+      Value: $name
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
@@ -28,3 +36,6 @@ Languages:
     - ID: "b79d731a-62cd-444e-95b5-3a7a42c1fc6e"
       Hint: ContactUsCard_FaxLabel
       Value: Fax.
+    - ID: "c3a46114-6fae-4c20-baac-ad09f3295bce"
+      Hint: ContactUsCard_TitleColor
+      Value: "{ABC9B1B3-78C4-4493-A681-576EA253919E}"

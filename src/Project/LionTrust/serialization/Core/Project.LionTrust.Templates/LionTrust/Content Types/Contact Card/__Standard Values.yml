@@ -1,0 +1,30 @@
+﻿---
+ID: "01e0b529-15c6-4fb7-9834-f60b96224c79"
+Parent: "c67b0fee-ee02-4564-9d7a-bf776a54d9fb"
+Template: "c67b0fee-ee02-4564-9d7a-bf776a54d9fb"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Contact Card/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "016242c6-2f08-481a-8f81-4eaeee7f134c"
+      Hint: ContactCard_TelephoneLabel
+      Value: Tel.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210824T143538Z
+    - ID: "390479c7-361c-463b-8e25-4acd2eba51a0"
+      Hint: ContactCard_OutsideUkLabel
+      Value: if outside the UK
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "933d66bb-1f8c-4754-b619-79fd55f2a2ec"
+      Hint: ContactCard_Heading
+      Value: Contact Us
+    - ID: "b79d731a-62cd-444e-95b5-3a7a42c1fc6e"
+      Hint: ContactCard_FaxLabel
+      Value: Fax.
