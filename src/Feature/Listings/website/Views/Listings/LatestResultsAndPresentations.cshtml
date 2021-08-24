@@ -72,7 +72,7 @@
                                             }
                                         </div>
                                     </div>
-                                    @Html.Glass().RenderImage(Model.Data, m => m.FirstImage, new NameValueCollection { { "class", "article-promo__back" } }, isEditable: true)
+                                    @Html.Glass().RenderImage(Model.Data, m => m.FirstImage, new NameValueCollection { { "class", "article-promo__back" }, { "style", "opacity:" + Model.Data.FirstImageOpacity } }, isEditable: true)
                                 </div>
                             </div>
                             @if (documentsCount > 1)
@@ -127,7 +127,7 @@
                                                 }
                                             </div>
                                         </div>
-                                        @Html.Glass().RenderImage(Model.Data, m => m.SecondImage, new NameValueCollection { { "class", "article-promo__back" } }, isEditable: true)
+                                        @Html.Glass().RenderImage(Model.Data, m => m.SecondImage, new NameValueCollection { { "class", "article-promo__back" }, { "style", "opacity:" + Model.Data.SecondImageOpacity } }, isEditable: true)
                                     </div>
                                 </div>
 
@@ -183,7 +183,7 @@
                                                     }
                                                 </div>
                                             </div>
-                                            @Html.Glass().RenderImage(Model.Data, m => m.ThirdImage, new NameValueCollection { { "class", "article-promo__back" } }, isEditable: true)
+                                            @Html.Glass().RenderImage(Model.Data, m => m.ThirdImage, new NameValueCollection { { "class", "article-promo__back" }, { "style", "opacity:" + Model.Data.ThirdImageOpacity } }, isEditable: true)
                                         </div>
                                     </div>
                                 }

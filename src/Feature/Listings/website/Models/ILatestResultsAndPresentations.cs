@@ -20,11 +20,20 @@
         [SitecoreField(Constants.LatestResultsAndPresentation.FirstImage_FieldId)]
         Image FirstImage { get; set; }
 
+        [SitecoreField(Constants.LatestResultsAndPresentation.FirstImageOpacity_FieldId)]
+        string FirstImageOpacity { get; set; }
+
         [SitecoreField(Constants.LatestResultsAndPresentation.SecondImage_FieldId)]
         Image SecondImage { get; set; }
 
+        [SitecoreField(Constants.LatestResultsAndPresentation.SecondImageOpacity_FieldId)]
+        string SecondImageOpacity { get; set; }
+
         [SitecoreField(Constants.LatestResultsAndPresentation.ThirdImage_FieldId)]
         Image ThirdImage { get; set; }
+
+        [SitecoreField(Constants.LatestResultsAndPresentation.ThirdImageOpacity_FieldId)]
+        string ThirdImageOpacity { get; set; }
 
         [SitecoreField(Constants.LatestResultsAndPresentation.PressReleaseIcon_FieldId)]
         Image PressReleaseIcon { get; set; }
