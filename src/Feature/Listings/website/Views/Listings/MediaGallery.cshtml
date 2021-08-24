@@ -59,8 +59,15 @@
 
                     <div class="col-lg-3">
                         <form class="search-form" @@submit.prevent="submitSearchForm($event)">
-                            <input type="text" v-model="searchText" name="searchText" class="search-form__input color-black"
-                                   placeholder="@Html.Glass().Editable(Model, m => m.SearchByKeywordLabel)">
+                            @if (Sitecore.Context.PageMode.IsExperienceEditor)
+                            {
+                                @Html.Glass().Editable(Model, m => m.SearchByKeywordLabel)
+                            }
+                            else
+                            {
+                                <input type="text" v-model="searchText" name="searchText" class="search-form__input color-black"
+                                       placeholder="@Model.SearchByKeywordLabel">
+                            }
                             <button class="search-form__submit pe-0" type="submit">
                                 <i class="icon-search"></i>
                             </button>

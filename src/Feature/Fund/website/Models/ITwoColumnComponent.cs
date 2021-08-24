@@ -4,6 +4,9 @@
 
     public interface ITwoColumnComponent : IFundGlassBase
     {
+        [SitecoreField(Constants.TwoColumnComponent.AddMargins_FieldId)]
+        bool AddMargins { get; set; }
+
         [SitecoreField(Constants.TwoColumnComponent.LeftColumnSize_FieldId)]
         int LeftColumnSize { get; set; }
 
