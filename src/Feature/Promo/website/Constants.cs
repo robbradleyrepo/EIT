@@ -83,6 +83,7 @@
             public const string CTAGoal2_FieldId = "{E3DE385B-8512-4403-A95C-F5174EC6A235}";
 
             public const string TextAlignment_FieldId = "{4F8E0E85-38F1-4AB6-9AD6-DCE0008C8304}";
+            public const string TitleInSide_FieldId = "{5F6CDA9B-99EC-4BFC-8DDB-258D248BC1AE}";
         }
 
         public static class PromoLookup

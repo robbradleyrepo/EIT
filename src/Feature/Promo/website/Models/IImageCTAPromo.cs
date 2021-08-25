@@ -40,5 +40,8 @@
 
         [SitecoreField(Constants.ImageCTAPromo.LinkedInUrlFieldId)]
         Link LinkedInUrl { get; set; }
+
+        [SitecoreField(Constants.ImageCTAPromo.TitleInSide_FieldId)]
+        bool TitleInSide { get; set; }
     }
 }
