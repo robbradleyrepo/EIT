@@ -1,4 +1,4 @@
-import Chart from "chart.js";
+import Chart from 'chart.js/dist/Chart.js'
 
 export default () => {
   if ($(".capitalisation-chart").length) {
