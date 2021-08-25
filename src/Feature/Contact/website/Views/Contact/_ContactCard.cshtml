@@ -7,6 +7,8 @@
     var showTelDivider = (!string.IsNullOrEmpty(Model.TelNumber) && !string.IsNullOrEmpty(Model.OutsideTelNumber)) || Sitecore.Context.PageMode.IsExperienceEditor;
     var showFaxLabel = !string.IsNullOrEmpty(Model.FaxNumber) || !string.IsNullOrEmpty(Model.OutsideFaxNumber) || Sitecore.Context.PageMode.IsExperienceEditor;
     var showFaxDivider = (!string.IsNullOrEmpty(Model.FaxNumber) && !string.IsNullOrEmpty(Model.OutsideFaxNumber)) || Sitecore.Context.PageMode.IsExperienceEditor;
+    var halfCardClass = (Model.Image != null && !string.IsNullOrEmpty(Model.Image.Src)) || Sitecore.Context.PageMode.IsExperienceEditor ? "col-lg-6 contact-section__half-card" : string.Empty;
+<div class="@halfCardClass">
     <div class="card">
         <div class="contacts">
             <div class="contacts__row">
@@ -92,4 +94,5 @@
             </div>
         </div>
     </div>
+</div>
 }
