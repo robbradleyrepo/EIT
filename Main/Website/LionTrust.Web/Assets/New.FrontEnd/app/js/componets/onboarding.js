@@ -56,7 +56,7 @@ export default () => {
 		$('.onboarding-overlay__scroller').slideToggle();
 	})
 
-	const ChangeStep = (e) => {
+	const changeStep = (e) => {
 		e.preventDefault();
 		var tab = e.target.dataset.changeStep;
 		if (tab > Cookies.get("currentTab")) return;

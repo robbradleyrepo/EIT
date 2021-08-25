@@ -30,6 +30,9 @@
     &__link
         color: $black
         display: flex
+        min-height: 50px
+        @include breakpoint(desktop, up)
+            min-height: 60px
         &:hover
             color: $black
     &__text
