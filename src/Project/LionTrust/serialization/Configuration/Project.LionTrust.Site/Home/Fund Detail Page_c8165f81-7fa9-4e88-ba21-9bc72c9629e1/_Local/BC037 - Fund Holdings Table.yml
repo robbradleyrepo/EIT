@@ -1,0 +1,24 @@
+﻿---
+ID: "7000264b-643f-4ef6-aeca-b04fed1154b1"
+Parent: "28e9be66-ee43-4d9f-b031-1f8204e7afda"
+Template: "12c66dc9-f31e-42a5-af22-11a1c2c7e92c"
+Path: "/sitecore/content/LionTrustNew/Home/Fund Detail Page/_Local/BC037 - Fund Holdings Table"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210609T140232Z
+    - ID: "3f407d7e-838c-4d99-a6ad-890b6a463037"
+      Hint: FundSelector_Fund
+      Value: "{A4C505F9-7BF3-4751-8F97-67FAD4F3668E}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "74b0c999-733f-4edb-b896-d160ea93b6c8"
+      Hint: FundHoldingsTable_Heading
+      Value: Top 10 Holdings

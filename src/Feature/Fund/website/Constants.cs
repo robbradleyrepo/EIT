@@ -37,6 +37,7 @@
             public const string HeadingFieldId = "{46C68BF8-8D80-4959-81D6-0EECAE187697}";
             public const string FactsheetTextFieldId = "{09768300-13A0-46E6-BD44-474DB7AAA852}";
             public const string DetailUrlFieldId = "{7BA56456-C580-4919-8B04-9156BB341B4C}";
+            public const string ChartTitleFieldId = "{C1C2ECF9-5EA9-44AA-B2E0-6E4D5E2F4645}";
         }
 
         public static class CreditRating

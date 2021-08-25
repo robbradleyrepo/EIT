@@ -1,0 +1,25 @@
+﻿---
+ID: "7b28be7e-79bd-4be8-98c2-92648e0620d1"
+Parent: "28e9be66-ee43-4d9f-b031-1f8204e7afda"
+Template: "10bf3f6c-ae91-42d5-adfd-a2ae935ce1c5"
+Path: "/sitecore/content/LionTrustNew/Home/Fund Detail Page/_Local/UI002 - Anchor Links"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210609T141916Z
+    - ID: "2dfcb4d4-7986-47a1-a0f3-79e139f3f976"
+      Hint: AnchorLinks_Heading
+      Value: "On this page: "
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "8d463fe0-e08e-4be8-88f5-727acef0e1c8"
+      Hint: AnchorLinks_Cta
+      Value: |
+        <link linktype="external" text="View documents" class="view-documents" url="http://#" anchor="" target="" />
