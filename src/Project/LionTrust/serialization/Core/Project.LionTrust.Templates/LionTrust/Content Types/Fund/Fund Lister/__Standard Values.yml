@@ -1,0 +1,64 @@
+﻿---
+ID: "3b717d24-f41e-4af3-a0e8-ae1df0724097"
+Parent: "e9532621-2d9f-47c2-bd85-aea698b4aea9"
+Template: "e9532621-2d9f-47c2-bd85-aea698b4aea9"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Fund/Fund Lister/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "01b10884-e8d0-4983-9c9c-faf781087da8"
+      Hint: FundLister_FundLiterature
+      Value: "{2A60AA49-72DB-4D51-A5FB-E4F25B1B9E19}"
+    - ID: "061cf8ab-5d59-47e6-88aa-bdf808fc3be3"
+      Hint: FundLister_AllDocumentsLabel
+      Value: All Documents
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210621T145459Z
+    - ID: "35663c96-fc62-4171-94b8-6ba42639f94c"
+      Hint: FundLister_ClearFiltersLabel
+      Value: Clear all
+    - ID: "373d3f32-a145-4b77-830c-96083118caca"
+      Hint: FundLister_FollowLabel
+      Value: Follow
+    - ID: "450af31c-6b9f-4ec0-bb4e-4a681dcd6127"
+      Hint: FundLister_SearchPlaceholder
+      Value: Search insight
+    - ID: "59731a11-3890-4fdf-9d9f-0592a4a35b50"
+      Hint: FundLister_ViewAsListLabel
+      Value: View as list
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "79982f65-f681-40f9-a526-63be0e149eb3"
+      Hint: FundLister_FundCentreLink
+      Value: |
+        <link text="Interactive fund centre " anchor="" linktype="internal" class="" title=""  querystring="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
+    - ID: "846f7732-b5ec-470f-8dc9-277acf08a232"
+      Hint: FundLister_MobileViewLabel
+      Value: Year
+    - ID: "87e96566-897a-4d4c-8da5-8727bd4e436e"
+      Hint: Pagination_NextLabel
+      Value: Next
+    - ID: "881c5cc5-745e-4156-a0e0-0e4e4f4306d5"
+      Hint: FundLister_ApplyFiltersLabel
+      Value: Apply filters
+    - ID: "9421b84a-c63f-47c1-a73e-f442f401ed26"
+      Hint: FundLister_ViewAsGridLabel
+      Value: View as grid
+    - ID: "ad4992d4-588a-4ab0-b4ec-793a08e648d2"
+      Hint: FundLister_FactSheetLabel
+      Value: Factsheet
+    - ID: "b5e7cf28-aebf-4a7b-83a3-efd0bd65c6aa"
+      Hint: FundLister_FacetsConfiguration
+      Value: "{64E0343F-FF1C-4B78-9461-C57CD8B1050D}"
+    - ID: "ee10a0f8-834b-4c8b-9ec5-9b643fcd112c"
+      Hint: Pagination_PreviousLabel
+      Value: Previous
+    - ID: "f1742cc9-02a1-488d-af97-7a793b8018a9"
+      Hint: FundLister_FiltersLabel
+      Value: Filters

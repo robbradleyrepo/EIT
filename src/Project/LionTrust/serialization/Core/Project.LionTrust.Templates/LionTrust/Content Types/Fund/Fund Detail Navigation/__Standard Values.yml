@@ -1,0 +1,23 @@
+﻿---
+ID: "e92d8e1d-cb4b-4a32-9613-3cb6f92aedc1"
+Parent: "f0878cb0-0065-447b-8236-edcff795640d"
+Template: "f0878cb0-0065-447b-8236-edcff795640d"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Fund/Fund Detail Navigation/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{B074A5E0-B766-481C-869C-8C2E3034C4BC}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210511T101418Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

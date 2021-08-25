@@ -1,0 +1,38 @@
+﻿---
+ID: "dadec9bf-b6e8-4e04-a082-f4eb20b76ff9"
+Parent: "76e6689e-84d3-41e2-a676-3b260827558c"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Fund/Fund
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: business/32x32/currency_pound.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Type: tree list
+  Value: |
+    {1930BBEB-7805-471A-A3BE-4858AC7CF696}
+    {22558845-9674-47BD-A133-B177FBC6EB18}
+    {6C412D42-1FE8-4CC0-A2C9-7E8AE3D1E06F}
+    {DEBA3E71-D35C-45B0-98C0-1712C8901FEA}
+    {8F25A221-3AD5-4F81-8214-B119BA27B445}
+    {3244FB96-9392-4EDF-B8D9-8F9C778960F1}
+    {0CF5E9F6-FEE0-472C-B1D3-C4C68E20AA4D}
+    {E0764606-5BD7-4185-A64A-FC0C121D876E}
+    {CBE63D63-290B-4F58-9449-8670BD64966C}
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{02CC60D2-31A5-43A7-ACDA-5F8C08832ABB}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140919T112108Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

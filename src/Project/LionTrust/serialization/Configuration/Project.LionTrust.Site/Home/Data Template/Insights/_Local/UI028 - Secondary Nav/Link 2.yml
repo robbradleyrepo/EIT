@@ -1,0 +1,26 @@
+﻿---
+ID: "205db4cd-0b16-4447-ad83-efdacf8d56e1"
+Parent: "b14361b2-955f-45cf-8cdc-fdaa0c19ff3b"
+Template: "0b8174f1-7295-45d8-9a50-ce3df53507af"
+Path: "/sitecore/content/LionTrustNew/Home/Data Template/Insights/_Local/UI028 - Secondary Nav/Link 2"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{EA07FC34-F76E-4299-B2B8-BA48B8F41318}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210625T110235Z
+    - ID: "3f39e86e-0426-46f0-8f64-c5636372e13a"
+      Hint: PageLink_Link
+      Value: |
+        <link text="Fund Manager Views" linktype="external" url="http://www.test.com" anchor="" target="" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

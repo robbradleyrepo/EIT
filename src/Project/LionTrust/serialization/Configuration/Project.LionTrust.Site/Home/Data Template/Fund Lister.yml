@@ -1,0 +1,62 @@
+﻿---
+ID: "79650460-606d-469d-9e1f-20c68a5681b6"
+Parent: "079981f3-54a2-4ab4-917a-ec4ba57a63ad"
+Template: "c4945161-f2d7-4a90-a512-cbfb5669b951"
+Path: /sitecore/content/LionTrustNew/Home/Data Template/Fund Lister
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{3EC70EA0-2274-43FB-AE73-788B1F6B8099}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{62902721-B5F8-4B3B-B0C9-99E938B15326}"
+              p:before="*"
+              s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+              s:ph="/header/navigation" />
+            <r
+              uid="{549DC13B-0873-43BE-B84A-E72E9161BF24}"
+              p:after="r[@uid='{62902721-B5F8-4B3B-B0C9-99E938B15326}']"
+              s:ds="{045D0D49-135C-4510-852D-0D7335AB233B}"
+              s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
+              s:ph="header" />
+            <r
+              uid="{16A52667-5CA0-4900-9B85-298CB2B82289}"
+              p:after="r[@uid='{30A0A4C8-974F-4822-9DCB-DE14881E0400}']"
+              s:ds="{1D178C89-DB52-4D86-AEF3-D7C9E2729D45}"
+              s:id="{A1BF8122-5117-4D37-BB1F-AE092FAF8142}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{CC5C573C-0F57-4C51-8D9A-3F6DCABBFF5D}"
+              p:after="r[@uid='{16A52667-5CA0-4900-9B85-298CB2B82289}']" />
+            <r
+              uid="{8CA8060E-AF94-4C82-B3BA-A023F6711309}"
+              p:after="*[1=2]"
+              s:ds="{8F7AA55E-2569-4646-A28E-7FA325F64C31}"
+              s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+              s:ph="main" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210811T121518Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: Fund Lister

@@ -1,0 +1,27 @@
+﻿---
+ID: "94210a52-aef4-42cf-83b3-e2ea2a451c8c"
+Parent: "f6b5c22c-0b85-45bb-bb44-d743ff235639"
+Template: "f6b5c22c-0b85-45bb-bb44-d743ff235639"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Navigation/QuickLinks/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{73BA8165-B3FF-429E-9268-B91FAFCED6B9}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0d827b79-fd2f-46c0-8c0b-6ec87d4bc086"
+      Hint: QuickLinks_QuickLinksList
+      Type: Treelist
+      Value: 
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210428T233824Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

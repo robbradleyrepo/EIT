@@ -1,0 +1,98 @@
+﻿---
+ID: "f38d7354-5916-43e3-a04f-86b7c2c3a8d5"
+Parent: "079981f3-54a2-4ab4-917a-ec4ba57a63ad"
+Template: "7784dce4-0f3b-4518-81f8-4bcb042373b1"
+Path: /sitecore/content/LionTrustNew/Home/Data Template/Fund Dashboard
+DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{F100020C-98C6-4D33-BCCE-6C46079A6D08}"
+          s:ds="" />
+      </d>
+    </r>
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{D84E926E-75BF-4388-99EE-A0F383252071}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{034A4312-5F1C-49D3-89B3-4C212B4B5145}"
+              p:before="*"
+              s:ds="{11A66BF9-721F-4F69-9A81-D9BB96CC0C6B}"
+              s:id="{7166AE9D-EFBD-48B3-B38F-AFD4CAAB5278}"
+              s:par=""
+              s:ph="/header/secondary-navigation" />
+            <r
+              uid="{7D4BE00A-6BB5-4672-B139-094C074D7493}"
+              p:after="r[@uid='{034A4312-5F1C-49D3-89B3-4C212B4B5145}']"
+              s:ds="{5D8108F8-2029-4CE9-A015-38069CCA9AC3}"
+              s:id="{AD1CC579-1968-488E-AC0E-CA2124C476B4}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{3F2AD04F-4805-4508-9B35-77A8C335E05F}"
+              p:after="r[@uid='{7D4BE00A-6BB5-4672-B139-094C074D7493}']"
+              s:ds="{6999827C-3DC3-44A2-AB59-CCD2771697CF}"
+              s:id="{B012C2F7-57D9-417A-9FD2-1BDAF0945580}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{51440ED0-4C2D-4A07-B0AA-C82A8CBE975A}"
+              p:after="r[@uid='{3F2AD04F-4805-4508-9B35-77A8C335E05F}']"
+              s:ds="{52E71C45-610B-46AD-9240-516C40349114}"
+              s:id="{09D8DFE5-9518-4591-B07B-6BDDF6534315}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{63E98D5A-6343-4A8A-81D9-E1C25423439F}"
+              p:after="r[@uid='{51440ED0-4C2D-4A07-B0AA-C82A8CBE975A}']"
+              s:ds="{C49FDA36-A0BB-456C-B7B9-F861816E45C2}"
+              s:id="{C1E344E3-1017-4ECE-A44E-21727844E3CE}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{A09C0D49-0377-4BFD-8AD4-F84504CB0551}"
+              p:after="r[@uid='{63E98D5A-6343-4A8A-81D9-E1C25423439F}']"
+              s:ds="{4E8D260C-6802-4587-A9AB-732D5686B536}"
+              s:id="{A811D2B0-D08D-4991-A9DD-6D9FA5799CBD}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{B6A78187-E892-4CC9-A14F-7F1FF5DB6237}"
+              p:after="r[@uid='{A09C0D49-0377-4BFD-8AD4-F84504CB0551}']"
+              s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+              s:ph="/header/navigation" />
+            <r
+              uid="{2C5386E4-1FF5-4AF9-9627-F301533C9DFE}"
+              p:after="r[@uid='{B6A78187-E892-4CC9-A14F-7F1FF5DB6237}']"
+              s:ds="{FB90A7CD-A74F-437F-B325-50D68B4233B5}"
+              s:id="{26EACCDC-DFF8-4DA3-AB85-78ECE95A56AC}"
+              s:par=""
+              s:ph="header" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210811T120453Z
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: Fund Dashboard

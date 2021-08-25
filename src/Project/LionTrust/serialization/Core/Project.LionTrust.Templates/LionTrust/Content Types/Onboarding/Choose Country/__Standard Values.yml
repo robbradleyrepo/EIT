@@ -1,0 +1,35 @@
+﻿---
+ID: "d3339c36-f7d7-4dfe-9268-f0341e1bc7f5"
+Parent: "c26048aa-9e1a-4366-bd81-a2897c7d3722"
+Template: "c26048aa-9e1a-4366-bd81-a2897c7d3722"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Onboarding/Choose Country/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{D696F5BA-740E-4037-92F2-74FCBA700C43}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "109a3ce4-cc8b-4ada-a68b-543720275671"
+      Hint: ChooseCountry_IncorrectLocationText
+      Value: "Not your location?"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210610T093723Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "5e2f5ff7-2cd8-44ef-a7ad-665101ef471f"
+      Hint: ChooseCountry_Title
+      Value: "Where are you from?"
+    - ID: "6a3db8cd-e179-4927-a577-8b89f9d0f97b"
+      Hint: ChooseCountry_CorrectLocationText
+      Value: Yes, that's correct
+    - ID: "a3f44151-18e7-4e67-9f4c-48cab2ce0e0c"
+      Hint: ChooseCountry_Subtitle
+      Value: It looks like you’re in the

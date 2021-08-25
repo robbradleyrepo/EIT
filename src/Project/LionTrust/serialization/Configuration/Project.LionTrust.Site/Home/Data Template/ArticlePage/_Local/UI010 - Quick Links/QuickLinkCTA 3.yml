@@ -1,0 +1,32 @@
+﻿---
+ID: "e7765a17-40b3-4825-858f-2b77a6a84f83"
+Parent: "c2c0699c-4f3f-4a1e-ba1b-2d2265b9c646"
+Template: "73ba8165-b3ff-429e-9268-b91fafced6b9"
+Path: "/sitecore/content/LionTrustNew/Home/Data Template/ArticlePage/_Local/UI010 - Quick Links/QuickLinkCTA 3"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{6BCD0157-DAAA-4719-B1CB-BD8EAC959EF1}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210527T113136Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "7ff41320-58c1-4a05-b2c5-dd1e4f9c2191"
+      Hint: QuickLinkCTA_Description
+      Value: Quickly check fund performance with our interactive fund centre.
+    - ID: "c0a0281f-cfe6-45e1-a095-b02d109a8952"
+      Hint: QuickLinkCTA_Image
+      Value: |
+        <image mediaid="{151CB697-B7F9-4F42-BB8A-98B7B00BE053}" />
+    - ID: "d6596c9a-e05a-49dd-98e6-7ba505d79842"
+      Hint: QuickLinkCTA_Title
+      Value: Interactive fund center
