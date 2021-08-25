@@ -4,7 +4,7 @@
 {
     return;
 }
-<section class="container graph-section">
+<section id="performance-graph" class="container graph-section">
     <div class="row">
         <div class="col-12">
             <h2 class="h2">@Html.Glass().Editable(Model.Component, m => m.Heading)</h2>
@@ -31,7 +31,7 @@
             <div class="col-lg-3">
                 <div class="class-dropdown">
                     <div class="class-dropdown__select">
-                        <select name="perfomance" id="perfomance" class="fund-chart-dropdown">
+                        <select name="perfomance" id="perfomance" class="fund-chart-dropdown" data-anchor="performance-graph">
                             @foreach (var item in Model.Component.Fund.Classes)
                             {
                                 if (item.CitiCode == Model.CitiCode)
