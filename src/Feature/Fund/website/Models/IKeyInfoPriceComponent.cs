@@ -7,14 +7,14 @@
         [SitecoreField(Constants.KeyInfoPriceComponent.KeyInformationLabel_FieldId)]
         string KeyInformationLabel { get; set; }
 
-        [SitecoreField(Constants.KeyInfoPriceComponent.Benchmark1Label_FieldId)]
-        string Benchmark1Label { get; set; }
-
         [SitecoreField(Constants.KeyInfoPriceComponent.ClassLaunchDateLabel_FieldId)]
         string ClassLaunchDateLabel { get; set; }
 
-        [SitecoreField(Constants.KeyInfoPriceComponent.ComparatorLabel_FieldId)]
-        string ComparatorLabel { get; set; }
+        [SitecoreField(Constants.KeyInfoPriceComponent.Comparator1Label_FieldId)]
+        string Comparator1Label { get; set; }
+
+        [SitecoreField(Constants.KeyInfoPriceComponent.Comparator2Label_FieldId)]
+        string Comparator2Label { get; set; }
 
         [SitecoreField(Constants.KeyInfoPriceComponent.DurationLabel_FieldId)]
         string DurationLabel { get; set; }

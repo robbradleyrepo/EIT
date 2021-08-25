@@ -24,8 +24,11 @@
         [SitecoreField(Constants.FundClass.ClassLaunchDate_FieldId)]
         DateTime ClassLaunchDate { get; set; }
 
-        [SitecoreField(Constants.FundClass.Comparator_FieldId)]
-        string Comparator { get; set; }
+        [SitecoreField(Constants.FundClass.Comparator1_FieldId)]
+        string Comparator1 { get; set; }
+
+        [SitecoreField(Constants.FundClass.Comparator2_FieldId)]
+        string Comparator2 { get; set; }
 
         [SitecoreField(Constants.FundClass.Duration_FieldId)]
         string Duration { get; set; }

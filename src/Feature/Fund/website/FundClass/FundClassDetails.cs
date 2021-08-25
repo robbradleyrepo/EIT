@@ -38,11 +38,20 @@
                 }
             }
 
-            /// TBD
-            if (string.IsNullOrEmpty(data.Comparator))
+            if (string.IsNullOrEmpty(data.Comparator1))
             {
-                
+                data.Comparator1 = apiData?.Benchmarks?
+                    .FirstOrDefault(x => x.BenchmarkTypeName.ToLower().Contains("benchmark comparator 1"))?
+                    .BenchmarkName;
             }
+
+            if (string.IsNullOrEmpty(data.Comparator2))
+            {
+                data.Comparator2 = apiData?.Benchmarks?
+                    .FirstOrDefault(x => x.BenchmarkTypeName.ToLower().Contains("benchmark comparator 2"))?
+                    .BenchmarkName;
+            }
+
             /// TBD
             if (string.IsNullOrEmpty(data.Duration))
             {
@@ -75,7 +84,8 @@
             return new FundClassData
             {
                 ClassLaunchDate = fundClass.ClassLaunchDate,
-                Comparator = fundClass.Comparator,
+                Comparator1 = fundClass.Comparator1,
+                Comparator2 = fundClass.Comparator2,
                 Duration = fundClass.Duration,
                 OfferPrice = fundClass.OfferPrice,
                 PriceDate = fundClass.PriceDate,
