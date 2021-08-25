@@ -29,7 +29,7 @@
         {
             public const string NameFieldId = "{7FF12937-2E4B-4FB0-BBED-3B27E399339E}";
             public const string ValueFieldId = "{0F549840-F03B-426E-A71F-71B009E78690}";
-            public const string BackgroundColorFieldId = "{A5716B6A-3E75-48C6-8344-3F2BE2D0F6C6}";
+            public const string BackgroundColourFieldId = "{A5716B6A-3E75-48C6-8344-3F2BE2D0F6C6}";
         }
 
         public static class FundPerformanceGraph

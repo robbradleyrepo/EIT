@@ -2,17 +2,24 @@
 ID: "a5716b6a-3e75-48c6-8344-3f2be2d0f6c6"
 Parent: "73ccf17b-2b6f-441a-8934-4c461979fb16"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Fund/_Capitalisation Entry/Capitalisation Entry/BackgroundColor
+Path: /sitecore/templates/Feature/Fund/_Capitalisation Entry/Capitalisation Entry/CapitalisationEntry_BackgroundColor
 DB: master
 SharedFields:
+- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
+  Hint: Source
+  Value: "{D1D799F1-63BE-445A-BAF0-DE3294344354}"
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: "Single-Line Text"
+  Value: Droplink
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 300
 Languages:
 - Language: en
+  Fields:
+  - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
+    Hint: Title
+    Value: Background Colour
   Versions:
   - Version: 1
     Fields:

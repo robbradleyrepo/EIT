@@ -24,7 +24,7 @@
 
             if (datasource.Children != null)
             {
-                var data = new { labels = datasource.Children.Select(c => c.RowName), data = datasource.Children.Select(c => c.Value), backgroundColor = datasource.Children.Select(c => c.BackgroundColor) };
+                var data = new { labels = datasource.Children.Select(c => c.RowName), data = datasource.Children.Select(c => c.Value), backgroundColor = datasource.Children.Select(c => c?.BackgroundColour?.Value) };
                 datasource.JsonDataObject = JsonConvert.SerializeObject(data);
             }
 

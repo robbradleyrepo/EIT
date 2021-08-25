@@ -2,7 +2,10 @@
 {
     using Glass.Mapper.Sc.Configuration.Attributes;
     using LionTrust.Feature.Fund.Models;
-   public interface ICapitalisationChartEntry: IFundGlassBase
+    using LionTrust.Foundation.Design;
+    using Constants = Constants;
+
+    public interface ICapitalisationChartEntry: IFundGlassBase
     {
         [SitecoreField(Constants.CapitalisationChartEntry.NameFieldId)]
         string RowName { get; set; }
@@ -10,7 +13,7 @@
         [SitecoreField(Constants.CapitalisationChartEntry.ValueFieldId)]
         string Value { get; set; }
 
-        [SitecoreField(Constants.CapitalisationChartEntry.BackgroundColorFieldId)]
-        string BackgroundColor { get; set; }
+        [SitecoreField(Constants.CapitalisationChartEntry.BackgroundColourFieldId)]
+        ILookupValue BackgroundColour { get; set; }
     }
 }
