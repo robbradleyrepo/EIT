@@ -1,0 +1,28 @@
+﻿---
+ID: "ce3fc514-d46c-44b0-ae94-d45d325465e6"
+Parent: "37fe0035-1357-497b-bbca-111ac72074c8"
+Template: "daff5c4e-a4cf-48b5-bd94-e1a71556ff9a"
+Path: "/sitecore/templates/Branches/Project/LionTrust/Page Types/Fund Detail Page/$name/_Local/BC041 - Credit Rating Chart/B"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "17793ba8-e9b1-406b-b73d-e10c37d4d2c2"
+      Hint: CreditRatingRow_Value
+      Value: 2.2
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210621T130755Z
+    - ID: "5d4c8234-c349-44b9-aa47-652484734a53"
+      Hint: CreditRatingRow_Name
+      Value: B
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin

@@ -57,7 +57,7 @@
                                 {
                                     foreach (var socialLink in Model.FooterConfiguration.SocialIcons)
                                     {
-                                        if (socialLink.TwitterAccounts == null)
+                                        if (socialLink.TwitterAccounts == null || !socialLink.TwitterAccounts.Any())
                                         {                                            
                                             <a href="@(socialLink.SocialLink != null ? socialLink.SocialLink.Url : "#")"
                                                class="social__link" data-goal-trigger="@socialLink.SocialLinkGoal" target="_blank">

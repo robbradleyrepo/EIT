@@ -22,6 +22,7 @@ import fundChartDropdown from "./componets/fundChartDropdown";
 import shareLink from "./componets/shareLink";
 import locationAndMap from "./componets/locationAndMap";
 import barStuckedChart from "./componets/barStuckedChart";
+import galleryApp from "./componets/galleryApp";
 import tabNav from "./componets/tabNav";
 import headerCtaNav from "./componets/headerCtaNav";
 
@@ -42,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
   shareLink();
   locationAndMap();
   barStuckedChart();
+  galleryApp();
   tabNav();
   headerCtaNav();
   // if (document.querySelector(".article-page")) articleFilter();

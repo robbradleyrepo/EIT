@@ -96,12 +96,14 @@
     <Content Include="Views\Listings\MediaGallery.cshtml" />
     <Content Include="Views\Listings\DirectorsList.cshtml" />
     <Content Include="Views\Listings\OurValues.cshtml" />
+    <Content Include="Views\Listings\LatestResultsAndPresentations.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\AccordionController.cs" />
     <Compile Include="Controllers\DocumentsController.cs" />
+    <Compile Include="Controllers\LatestResultsAndPresentationsController.cs" />
     <Compile Include="Controllers\MediaGalleryController.cs" />
     <Compile Include="Controllers\PerformanceChartsController.cs" />
     <Compile Include="Controllers\DocumentListerVariantController.cs" />
@@ -115,7 +117,10 @@
     <Compile Include="Models\AccordionViewModel.cs" />
     <Compile Include="Models\IDirector.cs" />
     <Compile Include="Models\IDirectorsList.cs" />
+    <Compile Include="Models\ILatestResultsAndPresentations.cs" />
+    <Compile Include="Models\IListingPageWithChildren.cs" />
     <Compile Include="Models\IOurValues.cs" />
+    <Compile Include="Models\LatestResultsAndPresentationsViewModel.cs" />
     <Compile Include="Models\MediaGallery\IFilterCategory.cs" />
     <Compile Include="Models\MediaGallery\ImageResponseModel.cs" />
     <Compile Include="Models\MediaGallery\IMediaItem.cs" />
@@ -176,6 +181,10 @@
     <ProjectReference Include="..\..\..\Foundation\Legacy\website\LionTrust.Foundation.Legacy.csproj">
       <Project>{43ee972b-2002-4719-a878-a66a99c42c40}</Project>
       <Name>LionTrust.Foundation.Legacy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\LocalDatasource\website\LionTrust.Foundation.LocalDatasource.csproj">
+      <Project>{02acf4f4-f561-4b57-ab00-49d97079ba28}</Project>
+      <Name>LionTrust.Foundation.LocalDatasource</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\ORM\website\LionTrust.Foundation.ORM.csproj">
       <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>

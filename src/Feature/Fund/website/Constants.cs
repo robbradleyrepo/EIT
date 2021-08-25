@@ -25,6 +25,13 @@
             public const string ValueFieldId = "{17793BA8-E9B1-406B-B73D-E10C37D4D2C2}";
         }
 
+        public static class CapitalisationChartEntry
+        {
+            public const string NameFieldId = "{7FF12937-2E4B-4FB0-BBED-3B27E399339E}";
+            public const string ValueFieldId = "{0F549840-F03B-426E-A71F-71B009E78690}";
+            public const string BackgroundColourFieldId = "{A5716B6A-3E75-48C6-8344-3F2BE2D0F6C6}";
+        }
+
         public static class FundPerformanceGraph
         {
             public const string HeadingFieldId = "{46C68BF8-8D80-4959-81D6-0EECAE187697}";
@@ -36,6 +43,11 @@
         {
             public const string HeadingFieldId = "{26BD09DF-992E-40F9-A625-77F17A237AC7}";
             public const string MaxValueFieldId = "{EA8D41F6-9599-4413-A778-8B37F5582E17}";
+        }
+
+        public static class CapitalisationChart
+        {
+            public const string HeadingFieldId = "{0C319F29-5F95-4061-849B-E27634734863}";
         }
 
         public static class GraphWithHeading
@@ -233,6 +245,7 @@
 
         public static class TwoColumnComponent
         {
+            public const string AddMargins_FieldId = "{2D0CDBA3-FDC7-4D1C-9A4E-BCCCCB81D1D8}";
             public const string LeftColumnSize_FieldId = "{F6A1DC1F-D9C0-40B8-9590-D5C58D1F2346}";
             public const string LeftPaddingSize_FieldId = "{0B7847A5-F42B-42E0-B4D0-3CB4350CEE45}";
             public const string RightColumnSize_FieldId = "{1A02D0A6-1E81-4119-AB01-A0E90D5EB8A8}";
@@ -253,6 +266,14 @@
         public static class FundCentre
         {
             public const string IFrameRootUrl_FieldId = "{96028547-DF10-4FEA-BC33-3C73107E64E5}";
+        }
+
+        public static class FundAccessPopUp
+        {
+            public const string Title_FieldId = "{09F68CB9-E658-46ED-BB71-06F8F2FFBC63}";
+            public const string BackButtonText_FieldId = "{D6B06D59-9338-4D49-A00F-841D94E096CE}";
+            public const string PrimaryCTA_FieldId = "{0068183C-62B7-412C-8B96-B6C1FEB2B3C7}";
+            public const string SecondaryCTA_FieldId = "{11C16829-F61D-4638-A5AB-F50A2C21319C}";
         }
     }
 }

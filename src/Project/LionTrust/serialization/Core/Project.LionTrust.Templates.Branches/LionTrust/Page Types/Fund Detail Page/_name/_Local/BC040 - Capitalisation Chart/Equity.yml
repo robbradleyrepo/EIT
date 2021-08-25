@@ -1,0 +1,31 @@
+﻿---
+ID: "decb9962-aae5-4ad0-a9bd-c8c1fffc6664"
+Parent: "d8377e34-ca43-4a7a-9191-9fc37d6bfbaa"
+Template: "12f2e95a-0aca-47c3-b0a9-47fb9c20e679"
+Path: "/sitecore/templates/Branches/Project/LionTrust/Page Types/Fund Detail Page/$name/_Local/BC040 - Capitalisation Chart/Equity"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0f549840-f03b-426e-a71f-71b009e78690"
+      Hint: CapitalisationEntry_Data
+      Value: 96.5
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210824T104104Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "7ff12937-2e4b-4fb0-bbed-3b27e399339e"
+      Hint: CapitalisationEntry_Label
+      Value:  Equity
+    - ID: "a5716b6a-3e75-48c6-8344-3f2be2d0f6c6"
+      Hint: CapitalisationEntry_BackgroundColor
+      Value: "{5F9BB42E-31F4-42E8-B9AF-A341C6212889}"

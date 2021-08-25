@@ -2,7 +2,7 @@ namespace LionTrust.Foundation.ORM.Models
 {
     using System;
     using System.Collections;
-
+    using System.Collections.Generic;
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Sitecore.Globalization;
@@ -28,7 +28,7 @@ namespace LionTrust.Foundation.ORM.Models
         string Name { get; set; }
 
         [SitecoreInfo(SitecoreInfoType.BaseTemplateIds)]
-        IEnumerable BaseTemplateIds { get; set; }
+        IEnumerable<Guid> BaseTemplateIds { get; set; }
 
         [SitecoreInfo(SitecoreInfoType.TemplateName)]
         string TemplateName { get; set; }

@@ -79,17 +79,7 @@
                                             @Html.Glass().Editable(Model.Data, d => d.ReportLabel)
                                             <i class="icon-list-view"></i>
                                         }
-                                        @using (Html.Glass().BeginRenderLink(document, d => d.PresentationLink, new NameValueCollection { { "class", "link-styles link-styles_black-mobile" }, { "target", "_blank" } }))
-                                        {
-                                            @Html.Glass().Editable(Model.Data, d => d.PresentationLabel)
-                                            <i class="icon-arrow-right"></i>
-                                        }
                                     </div>
-                                    @using (Html.Glass().BeginRenderLink(document, d => d.PresentationLink, new NameValueCollection { { "class", "btn btn-primary-forward d-block d-xl-none mt-3" } }))
-                                    {
-                                        @Html.Glass().Editable(Model.Data, d => d.PresentationLabel)
-                                        <i class="icon-arrow-right animate-arrow"></i>
-                                    }
                                 </div>
                             </div>
                         </div>

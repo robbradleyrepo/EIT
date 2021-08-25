@@ -1,0 +1,24 @@
+﻿---
+ID: "20f40ccf-4aac-404a-8fd2-efb8e72929dc"
+Parent: "28e9be66-ee43-4d9f-b031-1f8204e7afda"
+Template: "dee59db0-b8de-45d6-b615-5ef873f84bca"
+Path: "/sitecore/templates/Branches/Project/LionTrust/Page Types/Fund Detail Page/$name/_Local/BC036 - Discrete Performance Table"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210708T110333Z
+    - ID: "3f407d7e-838c-4d99-a6ad-890b6a463037"
+      Hint: FundSelector_Fund
+      Value: "{A4C505F9-7BF3-4751-8F97-67FAD4F3668E}"
+    - ID: "450fec5e-b30e-48af-adc4-051fd7b27289"
+      Hint: PerformanceTable_Heading
+      Value: Discrete performance (%)
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin

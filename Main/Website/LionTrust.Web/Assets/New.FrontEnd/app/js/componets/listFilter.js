@@ -1,5 +1,9 @@
 import Vue from "vue/dist/vue.common.prod";
-const eventBus = new Vue();
+import { API } from "./listFilter/api/api";
+import {
+  baseDownloadChild,
+  baseDownloadParent,
+} from "./listFilter/mixins/baseDownload";
 import { pagination } from "./listFilter/mixins/pagination";
 export default () => {
   const rootDom = document.getElementById("lister-app");
@@ -39,7 +43,7 @@ export default () => {
 
   new Vue({
     el: "#lister-app",
-    mixins: [pagination],
+    mixins: [pagination, baseDownloadParent],
     data: {
       facets: {},
       params: {},
@@ -59,9 +63,7 @@ export default () => {
       month: "",
       year: "",
       grid: false,
-      selectAllDocuments: false,
-      selectedDocumentIds: [],
-      activeButton: false
+      activeButton: false,
     },
     computed: {
       getFacets() {
@@ -69,7 +71,7 @@ export default () => {
       },
       getFacetsLength() {
         return this.facets.length;
-      }
+      },
     },
     methods: {
       // adding selected values to query params
@@ -95,8 +97,8 @@ export default () => {
           if (this.params[prop].length)
             str += "&" + `${lowerCaseProp}=${this.params[prop].join("|")}`;
         }
-        if(contentType) str += `&contentType=${contentType}`;
-        
+        if (contentType) str += `&contentType=${contentType}`;
+
         return str;
       },
 
@@ -160,37 +162,17 @@ export default () => {
         if (e.target.searchText.value) this.applyFilters();
       },
 
-      setDocumentId(id) {
-        const index = this.selectedDocumentIds.findIndex((el) => el === id);
-        if (index !== -1) this.selectedDocumentIds.splice(index, 1);
-        else this.selectedDocumentIds.push(id);
-      },
-
       clearDocumentIds() {
         this.selectedDocumentIds = [];
       },
 
       downloadDocumentMultiple() {
-        document.body.style.cursor = "wait";
-        $.post({
-          type: "POST",
-          xhrFields: { responseType: "arraybuffer" },
-          url: `${host}/DownloadDocuments`,
-          data: { downloadFileIds: this.selectedDocumentIds },
-        })
-          .done((data) => {
-            const url = window.URL.createObjectURL(new Blob([data]));
-            const link = document.createElement("a");
-            link.href = url;
-            link.setAttribute("download", "Documents.zip");
-            document.body.appendChild(link);
-            link.click();
-            document.body.style.cursor = "default";
-          })
-          .fail((e) => {
-            console.error(e);
-            document.body.style.cursor = "default";
-          });
+        API.downloadDocument(
+          `${host}/DownloadDocuments`,
+          { downloadFileIds: this.selectedDocumentIds },
+          "Documents",
+          ".zip"
+        );
       },
 
       getFacetsRequest() {
@@ -200,7 +182,6 @@ export default () => {
         $.get(facetUrl)
           .done((response) => {
             const { facets, dates } = response;
-            console.log("facets res", response);
             this.facets = facets;
 
             if (dates && dates.months)
@@ -226,7 +207,6 @@ export default () => {
         $.get(hostUrl + this.getQueryString())
           .done((response) => {
             const { searchResults, totalResults } = response;
-            console.log("searchResults", searchResults);
             this.searchData = searchResults;
             this.amountResults = totalResults;
             this.loading = false;
@@ -246,17 +226,12 @@ export default () => {
         this.params.sortOrder = [this.sortOrder];
         this.applyFilters();
       },
-      selectAllDocuments: function (value) {
-        this.selectedDocumentIds = [];
-        eventBus.$emit("toggleSelected", value);
-      },
       params: {
         deep: true,
         handler: function () {
           this.activeButton = true;
-        }
-      }
-      
+        },
+      },
     },
     mounted() {
       this.getFacetsRequest();
@@ -284,7 +259,7 @@ export default () => {
         this.open = !this.open;
       },
       clearOption() {
-        this.active = 0
+        this.active = 0;
         this.$emit("clearOptionField");
       },
       setChoosen(val) {
@@ -341,6 +316,7 @@ export default () => {
 
   Vue.component("document-item", {
     props: ["id", "title"],
+    mixins: [baseDownloadChild],
     data: function () {
       return {
         selected: false,
@@ -351,39 +327,15 @@ export default () => {
         this.$parent.setDocumentId(this.id);
       },
       downloadDocument() {
-        document.body.style.cursor = "wait";
-        $.post({
-          xhrFields: { responseType: "arraybuffer" },
-          url: `${host}/DownloadDocuments`,
-          data: {
+        API.downloadDocument(
+          `${host}/DownloadDocuments`,
+          {
             downloadFileIds: this.id,
           },
-        })
-          .done((data) => {
-            const url = window.URL.createObjectURL(
-              new Blob([data], { type: "application/pdf;charset=base-64" })
-            );
-            const link = document.createElement("a");
-            link.href = url;
-            link.setAttribute("download", this.title + ".pdf");
-            document.body.appendChild(link);
-            link.click();
-            document.body.style.cursor = "default";
-          })
-          .fail((e) => {
-            console.error(e);
-            document.body.style.cursor = "default";
-          });
+          this.title,
+          ".pdf"
+        );
       },
-    },
-    created() {
-      eventBus.$on("toggleSelected", (selected) => {
-        this.selected = selected;
-        if (selected) this.selectDocument(this.id);
-      });
-    },
-    beforeDestroy() {
-      eventBus.$off("toggleSelected");
     },
   });
 };

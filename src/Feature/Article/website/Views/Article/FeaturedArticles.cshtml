@@ -11,16 +11,21 @@
         </div>
         <div class="featured-article">
             <div class="row">
+                @{ var counter = 1; }
                 @foreach (var item in Model.FeaturedArticles)
                 {
                     <div class="col-lg-6">
                         <div class="featured-article__item">
                             <a href="@item.Url" class="featured-article__link">
-                                @item.Content
+                                <div class="featured-article__number">@(counter)</div>
+                                <span class="featured-article__text">
+                                    @item.Content
+                                </span>
                             </a>
                         </div>
                     </div>
 
+                    counter++;
                 }
             </div>
         </div>

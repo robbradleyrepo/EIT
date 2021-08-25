@@ -14,9 +14,6 @@
         [SitecoreField(Constants.DocumentListerVariant.ReportLabel_FieldId)]
         string ReportLabel { get; set; }
 
-        [SitecoreField(Constants.DocumentListerVariant.PresentationLabel_FieldId)]
-        string PresentationLabel { get; set; }
-
         [SitecoreChildren]
         IEnumerable<IDocumentVariant> DocumentVariants { get; set; }
     }

@@ -18,10 +18,6 @@
                                 <li class="set-location__item" data-iso-country="@country.ISO" data-name-country="@country.CountryName">@Html.Glass().Editable(country, c => c.CountryName)</li>
                             }
                         </ul>
-                        @if (Model.Regions.Last().Id == region.Id)
-                        {
-                            <div class="set-location__item" data-iso-country="O1">@Html.Glass().Editable(Model, m => m.RestOfTheWorldText)</div>
-                        }
                     </div>
                 </div>
             }

@@ -157,14 +157,21 @@
                 {
                     try
                     {
-                        var regionInfo = new RegionInfo(OnboardingSubmit.Country);
+                        var country = OnboardingHelper.GetCountryFromIso(_context, OnboardingSubmit.Country);
 
-                        if (regionInfo != null)
+                        if (country != null)
                         {
-                            address.Country = regionInfo.EnglishName;
+                            if (country.ISO != Foundation.Onboarding.Constants.Country.RestOfWorldIso)
+                            {
+                                var regionInfo = new RegionInfo(country.ISO);
+                                address.Country = regionInfo.EnglishName;
+                            }
+                            else
+                            {
+                                address.Country = country.CountryName;
+                            }
                         }
                     }
-
                     catch (ArgumentException)
                     {
                         string message = $"{OnboardingSubmit.Country} is not an valid value";

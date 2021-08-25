@@ -19,6 +19,7 @@ const imagemin = require("gulp-imagemin");
 const newer = require("gulp-newer");
 const rsync = require("gulp-rsync");
 const del = require("del");
+const uglify = require('gulp-uglify');
 
 const webPackConfig = {
   mode: "development",
@@ -134,6 +135,12 @@ function images() {
     .pipe(browserSync.stream());
 }
 
+function minifyJs() {
+  return src(['app/js/*.min.js'])
+  .pipe(uglify())
+  .pipe(dest('app/js'))
+}
+ 
 function buildcopy() {
   return src(
     [
@@ -183,6 +190,7 @@ exports.build = series(
   scriptsMain,
   scriptsSearch,
   scriptsListing,
+  minifyJs,
   styles,
   images,
   buildcopy,
