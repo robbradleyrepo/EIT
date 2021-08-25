@@ -58,7 +58,7 @@
                 }
 
                 viewModel.FourthChart = new PerformanceChartViewModel();
-                viewModel.FourthChart.Data = performanceCharts.PerformanceCharts.Skip(2).Take(1).FirstOrDefault();
+                viewModel.FourthChart.Data = performanceCharts.PerformanceCharts.Skip(3).Take(1).FirstOrDefault();
                 this.PopulateChart(viewModel.FourthChart, jsonSerializerSettings);                
             }
 
