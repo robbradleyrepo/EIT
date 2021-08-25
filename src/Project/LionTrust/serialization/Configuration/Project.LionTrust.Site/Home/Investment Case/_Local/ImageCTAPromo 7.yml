@@ -1,0 +1,42 @@
+﻿---
+ID: "379ed17a-e0c9-4c19-aa70-a2f8e8919700"
+Parent: "d78fd633-704a-4325-8782-86b9acb54ac4"
+Template: "d3d9d2ce-b2ce-49ac-b50d-6a5ffd4c4ab8"
+Path: /sitecore/content/LionTrustNew/Home/Investment Case/_Local/ImageCTAPromo 7
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{CB1F5D18-2225-45D9-95EE-37E741F6A5CD}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1054e4b6-1cf5-4c08-8a6d-d9b02fb17050"
+      Hint: ImageCTAPromo_Image
+      Value: |
+        <image mediaid="{81F55769-4667-44C9-BA33-79FC35B273EB}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210825T104216Z
+    - ID: "48bf236b-0681-4a09-9085-4933fa1c4a7a"
+      Hint: ImageCTAPromo_Body
+      Value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin fringilla bibendum dapibus. Cras iaculis, enim ut dictum accumsan, velit urna sagittis nunc, mattis mollis quam orci eget sapien.
+    - ID: "4f8e0e85-38f1-4ab6-9ad6-dce0008c8304"
+      Hint: ImageCTAPromo_TextAlignment
+      Value: "{79DA2651-4E23-42A5-B5B0-94E416E1A3E7}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "5f6cda9b-99ec-4bfc-8ddb-258d248bc1ae"
+      Hint: ImageCTAPromo_TitleInSide
+      Type: Checkbox
+      Value: 1
+    - ID: "7a84ea30-ff24-4c46-ae8f-51fcff940663"
+      Hint: ImageCTAPromo_Title
+      Value: Community Engagement
+    - ID: "94eb1b3f-6b14-4a34-9b12-62dbed7a269e"
+      Hint: ImageCTAPromo_TitleColor
+      Value: "{ABC9B1B3-78C4-4493-A681-576EA253919E}"

@@ -1,0 +1,26 @@
+﻿---
+ID: "7a3f2b25-3283-46c9-a602-05ce06f81474"
+Parent: "53bd57e8-03e0-41d8-89d9-a746f495d84f"
+Template: "0b8174f1-7295-45d8-9a50-ce3df53507af"
+Path: "/sitecore/content/LionTrustNew/Home/Investment Case/_Local/UI028 - Secondary Nav/Link 4"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{5DF5505D-F82C-46F5-8223-5698D9B02333}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210825T104212Z
+    - ID: "3f39e86e-0426-46f0-8f64-c5636372e13a"
+      Hint: PageLink_Link
+      Value: |
+        <link text="Case" linktype="external" url="http://www.google.com" anchor="" target="" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin

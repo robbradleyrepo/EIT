@@ -1,0 +1,60 @@
+﻿---
+ID: "ea65057d-c080-4216-b607-b5198151daa5"
+Parent: "199250c8-c3da-4689-b81e-fba3b660d644"
+Template: "0d4a81a1-3101-41e3-9e50-5fa10460ce6e"
+Path: /sitecore/content/LionTrustNew/Home/Sustainability/_Local/Contact Us Card
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{112CC746-2C1D-48D2-9DD6-7827837522B4}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210825T104057Z
+    - ID: "324d0717-f3ea-4501-bd90-8ac0cf27a300"
+      Hint: ContactUsCard_OutsideUKTelephoneNumber
+      Value: 23423423423
+    - ID: "35ddd24e-d5c0-4a9b-8872-3c294c0db7c4"
+      Hint: ContactUsCard_Street
+      Value: PO Box 355
+    - ID: "3b32bc4f-bb7a-413f-8abd-6800460a2ca9"
+      Hint: ContactUsCard_TelephoneNumber
+      Value: 34234234234
+    - ID: "508ef2ad-4dd4-49e8-a95a-436e3ed8f69f"
+      Hint: ContactUsCard_Title
+      Value: Contact Us
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "6dbc1bda-e89e-41ff-9120-6eddd1631c79"
+      Hint: ContactUsCard_OutsideUKFaxNumber
+      Value: 24323423234
+    - ID: "705a4064-d636-4765-8d48-ec3a249f9de5"
+      Hint: ContactUsCard_City
+      Value: London
+    - ID: "8c2f1e3f-6b3b-485d-a743-9e08e8f46ce1"
+      Hint: ContactUsCard_PostalCode
+      Value: BS124
+    - ID: "9cc1c844-5449-458f-80b0-2d0f10eef9d3"
+      Hint: ContactUsCard_FaxNumber
+      Value: 23432424234
+    - ID: "c3a46114-6fae-4c20-baac-ad09f3295bce"
+      Hint: ContactUsCard_TitleColor
+      Value: "{ABC9B1B3-78C4-4493-A681-576EA253919E}"
+    - ID: "d8099339-37e6-475b-944d-380420324bf3"
+      Hint: ContactUsCard_CTA1Link
+      Value: |
+        <link text="Sustainability Contact" linktype="external" url="http://www.google.com" anchor="" target="" />
+    - ID: "daf8d62c-6107-43c6-a8eb-f7acb084908e"
+      Hint: ContactUsCard_CTA2Link
+      Value: |
+        <link text="Contact Us" linktype="external" url="http://www.google.com" anchor="" target="" />

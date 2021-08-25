@@ -1,0 +1,31 @@
+﻿---
+ID: "4540bc3c-79ba-4bdc-ada8-c3fa96e0a12c"
+Parent: "d78fd633-704a-4325-8782-86b9acb54ac4"
+Template: "1d2058b8-c7a2-4d41-8fdf-61ac3b786798"
+Path: /sitecore/content/LionTrustNew/Home/Investment Case/_Local/Lead Banner
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: "-200"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{50CEB45F-B7B2-4752-8F0D-FBB1DBE189C9}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210825T104210Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "a9684a39-4c0e-42df-8066-59be90678b54"
+      Hint: LeadBanner_Title
+      Value: Investment Case
+    - ID: "f5081545-46e8-4dc6-a479-ce094ade09de"
+      Hint: LeadBanner_Body
+      Value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin fringilla bibendum dapibus. Cras iaculis, enim ut dictum accumsan, velit urna sagittis nunc, mattis mollis quam orci eget sapien.

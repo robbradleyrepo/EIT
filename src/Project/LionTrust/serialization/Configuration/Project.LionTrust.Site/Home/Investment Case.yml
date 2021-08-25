@@ -1,0 +1,134 @@
+﻿---
+ID: "81705e13-6917-4828-9888-048f5acb6abf"
+Parent: "7502b69e-d154-4861-a033-bc0cb30a91b5"
+Template: "02cb5861-c91e-47d7-bd6a-a64f5504da52"
+Path: /sitecore/content/LionTrustNew/Home/Investment Case
+DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{37B5ECC8-F053-4EAD-80B8-1283F0F60F7C}"
+          p:before="*"
+          s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+          s:ph="/header/navigation" />
+        <r
+          uid="{AA379C01-0B01-4C0D-875E-A9E18F42265E}"
+          p:after="r[@uid='{37B5ECC8-F053-4EAD-80B8-1283F0F60F7C}']"
+          s:ds="{4540BC3C-79BA-4BDC-ADA8-C3FA96E0A12C}"
+          s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
+          s:par=""
+          s:ph="header" />
+        <r
+          uid="{1B31BBEE-C227-446C-B243-6E5ECC844DAC}"
+          p:after="r[@uid='{AA379C01-0B01-4C0D-875E-A9E18F42265E}']"
+          s:ds="{53BD57E8-03E0-41D8-89D9-A746F495D84F}"
+          s:id="{7166AE9D-EFBD-48B3-B38F-AFD4CAAB5278}"
+          s:par=""
+          s:ph="/header/secondary-navigation" />
+        <r
+          uid="{61E37D94-86D6-4EFC-8B7B-F511EBAA8444}"
+          p:after="r[@uid='{1B31BBEE-C227-446C-B243-6E5ECC844DAC}']"
+          s:ds="{F0A863B2-731A-45E1-89E9-0C1060654389}"
+          s:id="{BA0509C8-337A-45E7-A597-8035DC2F1C21}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{A4CADA8C-8665-4D8F-A687-5B6023150290}"
+          p:after="r[@uid='{61E37D94-86D6-4EFC-8B7B-F511EBAA8444}']"
+          s:ds="{BD2B0C0E-364C-4AD7-8164-AA59E24F9E62}"
+          s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{AF9F1347-FB65-4360-BA78-A89186D4F14B}"
+          p:after="r[@uid='{A4CADA8C-8665-4D8F-A687-5B6023150290}']"
+          s:ds="{43700041-A93C-4458-B754-F02484401DDD}"
+          s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{A470AD76-3012-4F5A-B408-1532A3759721}"
+          p:after="r[@uid='{AF9F1347-FB65-4360-BA78-A89186D4F14B}']"
+          s:ds="{D0E71DF5-7DF0-4769-918A-C181CDD3312F}"
+          s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{D56B3ACC-C768-4D2B-BDDF-C321044058F4}"
+          p:after="r[@uid='{A470AD76-3012-4F5A-B408-1532A3759721}']"
+          s:ds="{F1FB96AC-3F5D-4AAB-B1DA-B3D54B5B2BA5}"
+          s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{FC8D1A51-02FB-45A0-BE6D-545AD52E774E}"
+          p:after="r[@uid='{D56B3ACC-C768-4D2B-BDDF-C321044058F4}']"
+          s:ds="{8FF60ACF-9BFD-4F09-8F2F-E33D8A93DDD8}"
+          s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{8FE2DF51-4D9A-49F3-AE3E-92FB331C48A8}"
+          p:after="r[@uid='{FC8D1A51-02FB-45A0-BE6D-545AD52E774E}']"
+          s:ds="{A28CB88C-D0D4-4A12-BB0C-47EE34535C71}"
+          s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{35CA1396-DD49-4AEF-9D6D-BAD1DD010007}"
+          p:after="r[@uid='{8FE2DF51-4D9A-49F3-AE3E-92FB331C48A8}']"
+          s:ds="{379ED17A-E0C9-4C19-AA70-A2F8E8919700}"
+          s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{1BF7D532-9C09-4DB6-AB5A-7871A4E6C3B9}"
+          p:after="r[@uid='{35CA1396-DD49-4AEF-9D6D-BAD1DD010007}']"
+          s:ds="{7CF45084-614F-4748-BDAD-D5CE5098F0D5}"
+          s:id="{6B2E2A4D-C3CB-4676-B804-B3459E4C9BD6}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{3929E359-CAB7-4328-83A5-99C8D1F2E0ED}"
+          p:after="r[@uid='{1BF7D532-9C09-4DB6-AB5A-7871A4E6C3B9}']"
+          s:ds="{F8B7CA5A-32A3-47E4-BFB4-2F362B8178D1}"
+          s:id="{0D2BC18F-5CEA-432E-A94D-16007F1FDE49}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{06103731-6786-4E6E-8692-00B64E59CC03}"
+          p:after="r[@uid='{3929E359-CAB7-4328-83A5-99C8D1F2E0ED}']"
+          s:ds="{66EDBE78-635D-491A-AB08-5FC141A2AC25}"
+          s:id="{A811D2B0-D08D-4991-A9DD-6D9FA5799CBD}"
+          s:par=""
+          s:ph="main" />
+      </d>
+    </r>
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{C4982A6E-8A66-42BA-8E62-9F0748B00F57}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210825T104208Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: Investment Case
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Investment Case
