@@ -24,7 +24,7 @@ SharedFields:
         <r
           uid="{2F7EBEF8-5B41-4D5B-B3F7-8171BC7985AB}"
           p:after="r[@uid='{6FF528FF-B3F7-4976-8478-AA18791AAFA2}']"
-          s:ds="{5BACF29E-07E3-47A1-ADCA-7CDFEC9E21A0}"
+          s:ds=""
           s:id="{DAF2716B-D106-4BC4-85B1-85D9FCE29965}"
           s:par=""
           s:ph="main" />
@@ -35,6 +35,9 @@ SharedFields:
           s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
           s:par=""
           s:ph="main" />
+        <r
+          uid="{9057DD73-496E-495D-9460-75D38BBB5B7E}"
+          p:after="r[@uid='{80B5F5E0-79D0-4D46-8ACA-C1641F5BDFC1}']" />
         <r
           uid="{A99840D1-7422-4CFC-B584-F65EC2F3E7CA}"
           p:after="*[1=2]"
