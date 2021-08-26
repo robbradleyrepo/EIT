@@ -2,7 +2,7 @@
 @using Glass.Mapper.Sc.Web.Mvc
 @using LionTrust.Foundation.Analytics.Goals
 @model LionTrust.Feature.Promo.Models.IImageCTAPromo
-@{ 
+@{
     var righTextAlignment = Model.TextAlignment != null && !string.IsNullOrEmpty(Model.TextAlignment.Value) && Model.TextAlignment.Value.Equals("right");
     var titleColor = Model.TitleColor != null && !string.IsNullOrEmpty(Model.TitleColor.Value) ? Model.TitleColor.Value : "text-black";
 }
@@ -15,6 +15,8 @@
                     <h2 class="team-card__title @titleColor">
                         @Html.Glass().Editable(Model, x => x.Title)
                     </h2>
+                </div>
+                <div class="col-lg-6 @(righTextAlignment ? "" : "offset-lg-1")">
                 </div>
             </div>
         }
