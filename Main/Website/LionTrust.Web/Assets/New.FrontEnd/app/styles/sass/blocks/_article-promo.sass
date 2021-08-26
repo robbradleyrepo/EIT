@@ -158,7 +158,21 @@
             min-width: 245px
         @include breakpoint(tablet, up)
             display: inline-block
-
+    &_short
+        padding-top: 66%
+        .article-promo__title
+            font-size: 22px
+            display: block
+            @include breakpoint(mobile-large, up)
+                font-size: 2.5rem
+                line-height: 1.2
+            @include breakpoint(tablet, up)
+                font-size: 2rem
+            @include breakpoint(desktop, up)
+                font-size: 2.2rem
+            @include breakpoint(desktop-large, up)
+                font-size: 2.5rem
+                
 .dot-divider
     width: 4px
     height: 4px
