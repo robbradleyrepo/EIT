@@ -14,5 +14,8 @@
 
         [SitecoreField(Constants.FundPerformanceGraph.DetailUrlFieldId)]
         Link DetailUrl { get; set; }
+
+        [SitecoreField(Constants.FundPerformanceGraph.ChartTitleFieldId)]
+        string ChartTitle { get; set; }
     }
 }
