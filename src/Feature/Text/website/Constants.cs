@@ -7,8 +7,7 @@
             public const string Text_FieldName = "RichText_Text";
             public const string Text_FieldId = "{7A6EEA35-2025-43CF-A371-43D99A82E804}";
 
-            public const string SmallSize_FieldName = "RichText_SmallSize";
-            public const string SmallSize_FieldId = "{B4D032F0-3342-49A1-AD8A-D0F640C59B4C}";
+            public const string MarginsContainer_FieldId = "{B4D032F0-3342-49A1-AD8A-D0F640C59B4C}";
 
             public const string TextColor_FieldName = "RichText_TextColor";
             public const string TextColor_FieldId = "{0422A25C-25C0-4B34-8CD5-8E39B76BBF3F}";
@@ -26,7 +25,7 @@
             public const string HeadingType_FieldId = "{B680A92F-4B97-4700-90C1-6DC60349AFEB}";
             public const string TextAlign_FieldId = "{AF43676E-2D5E-4C6E-9DF1-FD700A2516D1}";
             public const string TextColor_FieldId = "{ED1EC554-3049-42ED-BCE7-419D27C1E0F7}";
-            public const string AddToContainer_FieldId = "{6102B67D-17D2-4071-AF02-7D44677A17D3}";
+            public const string MarginsContainer_FieldId = "{6102B67D-17D2-4071-AF02-7D44677A17D3}";
         }
 
         public static class Testimonial

@@ -1,0 +1,21 @@
+﻿---
+ID: "dbad57b4-ecc2-4393-a3c1-8ab72d6937ec"
+Parent: "18f985dc-9c62-4e0c-9e90-4a8b4e48d976"
+Template: "e5c6c4e7-6864-4b28-a961-f0f9539f71a2"
+Path: /sitecore/templates/Branches/Project/LionTrust/Page Types/Our Employees/$name/_Local/Third Section Image
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210824T154306Z
+    - ID: "48ce5243-5dc9-4b3c-b27f-ea89478f21a5"
+      Hint: Image_Image
+      Value: |
+        <image mediaid="{9E630AE8-89C5-464C-8B05-0DDE281AF212}" />
+    - ID: "ed739c9b-001a-4e72-bc67-4141bdef057e"
+      Hint: Image_MarginsContainer
+      Value: "{34FC685B-A73E-45C5-863D-1A828A66C4F1}"

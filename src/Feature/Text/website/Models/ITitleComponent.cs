@@ -17,7 +17,7 @@
         [SitecoreField(Text.Constants.TitleComponent.TextColor_FieldId)]
         ILookupValue TextColor { get; set; }
 
-        [SitecoreField(Text.Constants.TitleComponent.AddToContainer_FieldId)]
-        bool AddIntoContainer { get; set; }
+        [SitecoreField(Text.Constants.TitleComponent.MarginsContainer_FieldId)]
+        ILookupValue MarginsContainer { get; set; }
     }
 }

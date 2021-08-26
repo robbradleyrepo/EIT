@@ -1,0 +1,30 @@
+﻿---
+ID: "59bc6dbd-954b-4d39-9683-0f9f140649f4"
+Parent: "9661dc2c-8000-4a5a-9c9c-6225da1c4068"
+Template: "f6b5c22c-0b85-45bb-bb44-d743ff235639"
+Path: "/sitecore/content/LionTrustNew/Home/Our Employees/_Local/UI010 - Quick Links"
+DB: master
+BranchID: "55979059-a1a2-454f-8766-f50f3d1da1ec"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 2400
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{6ADF664B-AF49-4B0D-9D77-D5E00A884A79}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0d827b79-fd2f-46c0-8c0b-6ec87d4bc086"
+      Hint: QuickLinks_QuickLinksList
+      Type: Treelist
+      Value: |
+        {65CFC6E2-3AA8-4CAB-84AE-70DEFC46E421}
+        {517E3532-A151-43A4-8F3D-EE155069EDB9}
+        {979794B3-109A-4440-A2C3-CD39C1A94DCF}
+        {F25FAE86-8043-480C-9362-807580370B9B}
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210824T151128Z

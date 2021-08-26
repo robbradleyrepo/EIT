@@ -5,13 +5,13 @@
 
     public interface IRichText : ITextGlassBase
     {
-        [SitecoreField(Constants.RichText.Text_FieldId, SitecoreFieldType.RichText, "Content")]
+        [SitecoreField(Constants.RichText.Text_FieldId)]
         string Text { get; set; }
 
-        [SitecoreField(Constants.RichText.SmallSize_FieldId, SitecoreFieldType.Checkbox, "Content")]
-        bool SmallSize { get; set; }
+        [SitecoreField(Constants.RichText.MarginsContainer_FieldId)]
+        Foundation.Design.ILookupValue MarginsContainer { get; set; }
 
-        [SitecoreField(Constants.RichText.TextColor_FieldId, SitecoreFieldType.Droplink, "Content")]
+        [SitecoreField(Constants.RichText.TextColor_FieldId)]
         Foundation.Design.ILookupValue TextColor { get; set; }
     }
 }
