@@ -1,0 +1,32 @@
+﻿---
+ID: "7aa1d75c-5ddd-4902-82db-e929f9676bcf"
+Parent: "f9776ff8-2fbb-48be-8e1e-83c474cfba3c"
+Template: "bc775c7d-48c1-4f1b-865a-fecab210dbe3"
+Path: "/sitecore/content/LionTrustNew/Home/Data Template/Learning Resources/_Local/UI013 - Page Promo/PagePromoItem 1"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{194C8ED0-18B4-43A2-9990-CE0E77F77261}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1058a56c-86ff-4783-a8d2-00c2217cc7ff"
+      Hint: PagePromoItem_Heading
+      Value: Lorem ipsum dolor sit amet
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210617T151117Z
+    - ID: "5db6612c-40ef-44f7-996b-da07fced5370"
+      Hint: PagePromoItem_CTA
+      Value: |
+        <link linktype="external" text="Liontrust Heroes" url="http://www.google.com" anchor="" target="" />
+    - ID: "f8de397f-fe55-4664-894d-8144b77b455a"
+      Hint: PagePromoItem_Text
+      Value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dignissim vulputate mauris, vitae rhoncus nisl ultricies ac.
+    - ID: "fdcbfc89-a522-4029-a2ce-648e272372d1"
+      Hint: PagePromoItem_Image
+      Value: |
+        <image mediaid="{438CEA59-E77D-4FB0-A495-653BA891E7EC}" />

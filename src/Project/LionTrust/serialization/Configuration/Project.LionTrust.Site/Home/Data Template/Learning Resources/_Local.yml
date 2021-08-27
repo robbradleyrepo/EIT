@@ -1,0 +1,37 @@
+﻿---
+ID: "f68a7a20-597f-4ccd-b896-414eaeb3dd11"
+Parent: "56704785-6e03-4d79-b4d5-7ea4652bebf5"
+Template: "fff5f245-ffc0-4022-a998-9b07aa5e761f"
+Path: /sitecore/content/LionTrustNew/Home/Data Template/Learning Resources/_Local
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: |
+    {938850B8-54BC-46F7-B76E-9C83A331F8DC}
+    {FBFECF7A-BB63-415C-98A5-CF095FF07C99}
+    {7EA4E959-032B-4E07-B5EA-1CBD0DC9E1E1}
+    {C7CE8102-D47B-44CC-9A32-23DDF2142210}
+    {C83DF526-C557-4146-BEF9-F4E891AC7721}
+    {F6B5C22C-0B85-45BB-BB44-D743FF235639}
+    {6DDDCA01-92CA-4C15-B50E-A80C6E05C959}
+    {D3D9D2CE-B2CE-49AC-B50D-6A5FFD4C4AB8}
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: "-1000"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{925D0D83-83E5-4F33-9E84-A263FC076703}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210617T151117Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

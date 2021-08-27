@@ -1,0 +1,41 @@
+﻿---
+ID: "18f985dc-9c62-4e0c-9e90-4a8b4e48d976"
+Parent: "7b5a2c51-1f80-4afb-819b-84c5c62f9b04"
+Template: "fff5f245-ffc0-4022-a998-9b07aa5e761f"
+Path: /sitecore/templates/Branches/Project/LionTrust/Page Types/Our Employees/$name/_Local
+DB: master
+BranchID: "55979059-a1a2-454f-8766-f50f3d1da1ec"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: |
+    {1D2058B8-C7A2-4D41-8FDF-61AC3B786798}
+    {10BF3F6C-AE91-42D5-ADFD-A2AE935CE1C5}
+    {D3D9D2CE-B2CE-49AC-B50D-6A5FFD4C4AB8}
+    {61FADA36-A8C5-41CC-B971-70A6F340CC45}
+    {0B50876E-0F9F-479F-8533-A84625B8C7C5}
+    {FBFECF7A-BB63-415C-98A5-CF095FF07C99}
+    {0D4A81A1-3101-41E3-9E50-5FA10460CE6E}
+    {F6B5C22C-0B85-45BB-BB44-D743FF235639}
+    {80B88F21-E7BE-43D5-AC51-636DBD27E18D}
+    {938850B8-54BC-46F7-B76E-9C83A331F8DC}
+    {E5C6C4E7-6864-4B28-A961-F0F9539F71A2}
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: "-1000"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{FE925786-FA5B-4CD9-B482-B4466985BD40}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210824T151124Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

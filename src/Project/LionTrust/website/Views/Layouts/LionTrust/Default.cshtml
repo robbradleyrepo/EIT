@@ -76,6 +76,7 @@
     <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
     <script src="/dist/js/listing-page.min.js"></script>
+    <script src="/dist/js/charts-page.min.js"></script>
     @if (Html.Sitecore().CurrentItem.TemplateID.ToString() == Constants.PageTypes.SearchPageTemplateId)
     {
         <script src="/dist/js/search-page.min.js"></script>
@@ -87,7 +88,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="https://pagecdn.io/lib/zepto/1.2.0/zepto.min.js"></script>
-    @if (!Sitecore.Context.PageMode.IsExperienceEditor)
+    @if (!Sitecore.Context.PageMode.IsExperienceEditorEditing)
     {
         <script src="/assets/js/addAnalyticsTracking.js"></script>
     }

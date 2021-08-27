@@ -1,0 +1,25 @@
+﻿---
+ID: "7c9528cb-29f3-43ba-895f-a56246a49552"
+Parent: "1e9d24d6-bea8-419f-9145-d581afe94d81"
+Template: "196ea78f-08c6-456c-95af-027f662537e1"
+Path: "/sitecore/content/LionTrustNew/Home/Data Template/Article-Lister/_Local/BC018 - Article Lister"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{7AC27A20-3DBA-4311-9BAD-42AFFC9BB44D}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0eba5571-b102-467c-993a-3025a1176831"
+      Hint: ArticleLister_SearchPlaceholderLabel
+      Value: Search
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210806T073717Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

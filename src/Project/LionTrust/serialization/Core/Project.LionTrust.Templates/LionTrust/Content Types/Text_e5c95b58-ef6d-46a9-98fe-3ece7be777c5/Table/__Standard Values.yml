@@ -1,0 +1,59 @@
+﻿---
+ID: "8e078991-8a24-4989-8588-eb85f84c9e89"
+Parent: "31f15e11-7a89-46f6-bdde-32ba02250d8d"
+Template: "31f15e11-7a89-46f6-bdde-32ba02250d8d"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Text/Table/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0ab50d27-7e96-4187-8ef3-c617f40488f9"
+      Hint: Table_Value
+      Value: |
+        <table class="table table-striped mb-3">
+            <thead>
+                <tr class="table-head-green">
+                    <th></th>
+                    <th>Title</th>
+                    <th>Title</th>
+                    <th>Title</th>
+                    <th>Title</th>
+                    <th>Title</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>Title</th>
+                    <th>Title</th>
+                    <th>Title</th>
+                    <th>Title</th>
+                    <th>Title</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Title</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Title</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210726T113247Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

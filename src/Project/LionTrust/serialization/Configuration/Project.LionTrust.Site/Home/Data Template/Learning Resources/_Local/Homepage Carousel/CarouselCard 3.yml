@@ -1,0 +1,29 @@
+﻿---
+ID: "80264ee1-0966-432e-958c-3149acdbe687"
+Parent: "932b1f32-9593-4711-a33f-90e824febebb"
+Template: "4e106225-a950-4b0c-8dc0-2092d4897b63"
+Path: /sitecore/content/LionTrustNew/Home/Data Template/Learning Resources/_Local/Homepage Carousel/CarouselCard 3
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{3FF9A107-6609-4788-8BD4-E9C204700208}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210617T151117Z
+    - ID: "69be8278-228e-48f0-9e22-72351237e500"
+      Hint: CarouselCard_CTALink
+      Value: |
+        <link linktype="external" url="https://video.liontrust.co.uk/v.ihtml/player.html?token=70c960aa58e512e65ed6ba97094a8d8a&amp;source=embed&amp;photo%5fid=68193386" />
+    - ID: "8a233aaa-9955-4e29-a15f-9d8366047617"
+      Hint: CarouselCard_Heading
+      Value: Lorem ipsum dolor sit amet
+    - ID: "9bf9ebaa-ad4e-4853-a848-85df925d9beb"
+      Hint: CarouselCard_Image
+      Value: |
+        <image mediaid="{3715F4DD-72D9-409E-8013-850770BEF9F7}" />

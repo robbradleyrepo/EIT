@@ -13,31 +13,37 @@
                     @Model.ClassData.ClassLaunchDate.ToString("dd.MM.y")
                 </div>
             </div>
-            <div class="card__row">
-                <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.ComparatorLabel)</div>
-                <div class="card__item-right">@Model.ClassData.Comparator</div>
+            @if (!string.IsNullOrWhiteSpace(Model.ClassData.Comparator1) && !string.IsNullOrWhiteSpace(Model.Component.Comparator1Label))
+            {
+                <div class="card__row">
+                    <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.Comparator1Label)</div>
+                    <div class="card__item-right">@Model.ClassData.Comparator1</div>
+                </div>
+            }
+            @if (!string.IsNullOrWhiteSpace(Model.ClassData.Comparator2) && !string.IsNullOrWhiteSpace(Model.Component.Comparator2Label))
+            {
+                <div class="card__row">
+                    <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.Comparator2Label)</div>
+                    <div class="card__item-right">@Html.Glass().Editable(Model.Fund, m => m.BenchmarkName)</div>
+                </div>
+            }
+                <div class="card__row">
+                    <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.FundSizeLabel)</div>
+                    <div class="card__item-right">@Html.Glass().Editable(Model.Fund, m => m.FundSize)</div>
+                </div>
+                <div class="card__row">
+                    <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.NumberofHoldingsLabel)</div>
+                    <div class="card__item-right">@Html.Glass().Editable(Model.Fund, m => m.NumberOfHoldings)</div>
+                </div>
+                <div class="card__row">
+                    <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.NetUnderlyingYieldLabel)</div>
+                    <div class="card__item-right">@Html.Glass().Editable(Model.Fund, m => m.HistoricYield)</div>
+                </div>
+                <div class="card__row">
+                    <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.DurationLabel)</div>
+                    <div class="card__item-right">@Model.ClassData.Duration</div>
+                </div>
             </div>
-            <div class="card__row">
-                <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.Benchmark1Label)</div>
-                <div class="card__item-right">@Html.Glass().Editable(Model.Fund, m => m.BenchmarkName)</div>
-            </div>
-            <div class="card__row">
-                <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.FundSizeLabel)</div>
-                <div class="card__item-right">@Html.Glass().Editable(Model.Fund, m => m.FundSize)</div>
-            </div>
-            <div class="card__row">
-                <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.NumberofHoldingsLabel)</div>
-                <div class="card__item-right">@Html.Glass().Editable(Model.Fund, m => m.NumberOfHoldings)</div>
-            </div>
-            <div class="card__row">
-                <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.NetUnderlyingYieldLabel)</div>
-                <div class="card__item-right">@Html.Glass().Editable(Model.Fund, m => m.HistoricYield)</div>
-            </div>
-            <div class="card__row">
-                <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.DurationLabel)</div>
-                <div class="card__item-right">@Model.ClassData.Duration</div>
-            </div>
-        </div>
         <div class="card__content">
             <span class="card__title">
                 @Html.Glass().Editable(Model.Component, m => m.PriceLabel)

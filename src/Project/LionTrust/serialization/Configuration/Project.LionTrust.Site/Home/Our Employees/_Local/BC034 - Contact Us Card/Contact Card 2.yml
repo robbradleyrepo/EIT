@@ -1,0 +1,51 @@
+﻿---
+ID: "2d8ffa22-b174-47ad-ad87-c10ab82a96e1"
+Parent: "a36848c1-3b4f-4c6d-82eb-05a44c9f9d77"
+Template: "c67b0fee-ee02-4564-9d7a-bf776a54d9fb"
+Path: "/sitecore/content/LionTrustNew/Home/Our Employees/_Local/BC034 - Contact Us Card/Contact Card 2"
+DB: master
+BranchID: "55979059-a1a2-454f-8766-f50f3d1da1ec"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{4A51A2C2-5894-4A22-8F3F-6ED01669B439}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210824T151128Z
+    - ID: "324d0717-f3ea-4501-bd90-8ac0cf27a300"
+      Hint: ContactCard_OutsideUKTelephoneNumber
+      Value: 234234234
+    - ID: "35ddd24e-d5c0-4a9b-8872-3c294c0db7c4"
+      Hint: ContactCard_Street
+      Value: PO Box 373
+    - ID: "3b32bc4f-bb7a-413f-8abd-6800460a2ca9"
+      Hint: ContactCard_TelephoneNumber
+      Value: 314234234
+    - ID: "6dbc1bda-e89e-41ff-9120-6eddd1631c79"
+      Hint: ContactCard_OutsideUKFaxNumber
+      Value: 234234234
+    - ID: "705a4064-d636-4765-8d48-ec3a249f9de5"
+      Hint: ContactCard_City
+      Value: London
+    - ID: "7678b456-28df-4c62-ad4b-150daf5128ba"
+      Hint: ContactCard_Subheading
+      Value: Liontrust Customer Service
+    - ID: "8c2f1e3f-6b3b-485d-a743-9e08e8f46ce1"
+      Hint: ContactCard_PostalCode
+      Value: BO674S
+    - ID: "9cc1c844-5449-458f-80b0-2d0f10eef9d3"
+      Hint: ContactCard_FaxNumber
+      Value: 234234234
+    - ID: "d8099339-37e6-475b-944d-380420324bf3"
+      Hint: ContactCard_CTA1Link
+      Value: |
+        <link linktype="external" text="Enquire About Fund" url="http://www.google.com" anchor="" target="" />
+    - ID: "daf8d62c-6107-43c6-a8eb-f7acb084908e"
+      Hint: ContactCard_CTA2Link
+      Value: |
+        <link linktype="external" text="Administration Enquiries" url="http://www.google.com" anchor="" target="" />

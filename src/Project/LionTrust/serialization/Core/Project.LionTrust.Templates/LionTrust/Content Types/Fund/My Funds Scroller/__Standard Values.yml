@@ -1,0 +1,26 @@
+﻿---
+ID: "e95d09e0-fb59-4cab-9c12-3dd0bc1267a2"
+Parent: "5926b7a1-d9af-45ed-b6d1-d21b859c4496"
+Template: "5926b7a1-d9af-45ed-b6d1-d21b859c4496"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Fund/My Funds Scroller/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: 
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210511T121038Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "77b3427c-896c-4f53-9da4-7f8354d861d1"
+      Hint: MyFundsScroller_MaxFunds
+      Value: 10

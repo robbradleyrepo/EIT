@@ -66,7 +66,7 @@ function scriptsMain() {
       "app/js/app.js",
       "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js", // import fancybox
       "node_modules/bootstrap/js/dist/modal.js", // import bootstrap modal
-      "node_modules/bootstrap/js/dist/collapse.js", // import bootstrap modal
+      "node_modules/bootstrap/js/dist/collapse.js", // import bootstrap collapse
       "node_modules/bootstrap/js/dist/tooltip.js", // import tooltip
     ],
     { sourcemaps: true }
@@ -102,6 +102,19 @@ function scriptsListing() {
       this.emit("end");
     })
     .pipe(rename("listing-page.min.js"))
+    .pipe(dest("app/js", { sourcemaps: true }))
+    .pipe(browserSync.stream());
+}
+
+function scriptsCharts() {
+  return src(["app/js/charts-page.js"], {
+    sourcemaps: true,
+  })
+    .pipe(webpack(webPackConfig))
+    .on("error", function handleError() {
+      this.emit("end");
+    })
+    .pipe(rename("charts-page.min.js"))
     .pipe(dest("app/js", { sourcemaps: true }))
     .pipe(browserSync.stream());
 }
@@ -168,7 +181,7 @@ function startwatch() {
   watch(
     ["app/js/**/*.js", "!app/js/**/*.min.js"],
     { usePolling: true },
-    parallel(scriptsMain, scriptsSearch, scriptsListing)
+    parallel(scriptsMain, scriptsSearch, scriptsListing, scriptsCharts)
   );
   watch(
     "app/images/src/**/*.{jpg,jpeg,png,webp,svg,gif}",
@@ -181,15 +194,16 @@ function startwatch() {
   );
 }
 
-exports.scripts = series(scriptsMain, scriptsSearch, scriptsListing);
+exports.scripts = series(scriptsMain, scriptsSearch, scriptsListing, scriptsCharts);
 exports.styles = styles;
 exports.images = images;
-exports.assets = series(scriptsMain, scriptsSearch, scriptsListing, styles, images);
+exports.assets = series(scriptsMain, scriptsSearch, scriptsListing, scriptsCharts, styles, images);
 exports.build = series(
   cleandist,
   scriptsMain,
   scriptsSearch,
   scriptsListing,
+  scriptsCharts,
   minifyJs,
   styles,
   images,
@@ -200,6 +214,7 @@ exports.default = series(
   scriptsMain,
   scriptsSearch,
   scriptsListing,
+  scriptsCharts,
   styles,
   images,
   parallel(browsersync, startwatch)

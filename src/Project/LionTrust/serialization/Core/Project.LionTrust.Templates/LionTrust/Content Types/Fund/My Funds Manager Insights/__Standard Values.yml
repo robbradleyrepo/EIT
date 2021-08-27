@@ -1,0 +1,23 @@
+﻿---
+ID: "acb9de92-71a0-48b5-8cdd-99f2330e418e"
+Parent: "9fe11a4d-0a67-4152-a59c-805eeb33ecc5"
+Template: "9fe11a4d-0a67-4152-a59c-805eeb33ecc5"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Fund/My Funds Manager Insights/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{33A71106-0D19-4A09-AEEC-5CE5C0E655F7}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210504T100808Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

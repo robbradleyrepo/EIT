@@ -37,6 +37,7 @@
             public const string HeadingFieldId = "{46C68BF8-8D80-4959-81D6-0EECAE187697}";
             public const string FactsheetTextFieldId = "{09768300-13A0-46E6-BD44-474DB7AAA852}";
             public const string DetailUrlFieldId = "{7BA56456-C580-4919-8B04-9156BB341B4C}";
+            public const string ChartTitleFieldId = "{C1C2ECF9-5EA9-44AA-B2E0-6E4D5E2F4645}";
         }
 
         public static class CreditRating
@@ -220,8 +221,8 @@
         {
             public const string KeyInformationLabel_FieldId = "{D1C8B6ED-F85E-4645-82EE-B239CFE6E9AA}";
             public const string ClassLaunchDateLabel_FieldId = "{FF6466A5-B6D9-499C-A338-42DB7AA720CF}";
-            public const string ComparatorLabel_FieldId = "{B27C9CC5-F16C-4A75-852D-3A9B6FDBE497}";
-            public const string Benchmark1Label_FieldId = "{85A7C8E7-FFFB-4EE9-9372-17DE13A3CEFA}";
+            public const string Comparator1Label_FieldId = "{B27C9CC5-F16C-4A75-852D-3A9B6FDBE497}";
+            public const string Comparator2Label_FieldId = "{85A7C8E7-FFFB-4EE9-9372-17DE13A3CEFA}";
             public const string FundSizeLabel_FieldId = "{9A89E450-3210-4694-8520-345EE6263302}";
             public const string NumberOfHoldingsLabel_FieldId = "{3368266D-AB74-4ACE-B89F-4C11488E8AC5}";
             public const string NetUnderlyingYieldLabel_FieldId = "{7F6507B6-3D95-413C-B85B-655688F19DB7}";

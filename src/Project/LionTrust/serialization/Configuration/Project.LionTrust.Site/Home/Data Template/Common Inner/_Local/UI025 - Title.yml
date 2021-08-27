@@ -1,0 +1,28 @@
+﻿---
+ID: "27caf878-cc57-41ff-b26b-0acc39974d2a"
+Parent: "66c24c2c-9cba-4ed4-9cc9-74f65f6d1f1d"
+Template: "938850b8-54bc-46f7-b76e-9c83a331f8dc"
+Path: "/sitecore/content/LionTrustNew/Home/Data Template/Common Inner/_Local/UI025 - Title"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{AFF89E17-AE63-4109-9E1F-6BA8885FE5E3}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210607T110443Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "88c061a0-4e29-4b8d-a560-a62be5b7d6ef"
+      Hint: TitleComponent_Title
+      Value: Page title
+    - ID: "af43676e-2d5e-4c6e-9df1-fd700a2516d1"
+      Hint: TitleComponent_TextAlignment
+      Value: "{0CBA15E9-7556-4865-9155-34CBB3BA59B2}"

@@ -1,0 +1,26 @@
+﻿---
+ID: "2ec3ab43-84a8-462f-9396-a84e45716a25"
+Parent: "c7ce8102-d47b-44cc-9a32-23ddf2142210"
+Template: "c7ce8102-d47b-44cc-9a32-23ddf2142210"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Listing/Horizontal Scroll/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{07E6580A-DA1F-416C-87FE-0122F0E39415}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210429T115744Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "fd89a7af-a29a-42dc-949c-5ce8f66f9c71"
+      Hint: HorizontalScroll_Title
+      Value: $name

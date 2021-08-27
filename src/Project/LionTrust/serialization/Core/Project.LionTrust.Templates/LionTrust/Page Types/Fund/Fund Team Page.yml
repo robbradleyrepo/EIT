@@ -1,0 +1,28 @@
+﻿---
+ID: "6ac50e4b-2d53-4080-9c97-e7f11845ab1e"
+Parent: "3a2fefa4-5d61-4b4d-90bb-878f0fa4cecf"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/LionTrust/Page Types/Fund/Fund Team Page
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/users_relation.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Type: tree list
+  Value: |
+    {1930BBEB-7805-471A-A3BE-4858AC7CF696}
+    {82597E91-AB37-4614-A8E7-6CD139FCB7EB}
+    {D748CB4A-1CB2-4C24-833E-5450FCD48F27}
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{989F4E24-563B-4BD8-897E-84E5BF9ACAE8}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210519T110311Z

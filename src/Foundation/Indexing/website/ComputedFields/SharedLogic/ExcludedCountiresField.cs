@@ -39,7 +39,29 @@
 
             var excludedCountries = field.GetExcludedCountries(item);
 
-            return excludedCountries;
+            if(excludedCountries == null)
+            {
+                return null;
+            }
+
+            var results = new List<string>();
+
+            foreach (var id in excludedCountries)
+            {
+                var country = item.Database.GetItem(id);
+
+                if (country != null)
+                {
+                    var countryIso = country.Fields[Onboarding.Constants.Country.ISO_FieldId].Value;
+
+                    if (!string.IsNullOrWhiteSpace(countryIso))
+                    {
+                        results.Add(countryIso);
+                    }
+                }
+            }
+
+            return results;
         }
     }
 }

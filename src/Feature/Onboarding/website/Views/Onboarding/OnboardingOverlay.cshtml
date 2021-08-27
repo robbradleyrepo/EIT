@@ -2,7 +2,7 @@
 @model LionTrust.Feature.Onboarding.Models.OnboardingViewModel
 @if (Model != null)
 {
-    var activeClass = @Model.ShowOnboarding && !Sitecore.Context.PageMode.IsExperienceEditor ? "active" : string.Empty;
+    var activeClass = @Model.ShowOnboarding && Sitecore.Context.PageMode.IsNormal ? "active" : string.Empty;
 
     <div class="onboarding-overlay @activeClass">
         <div class="onboarding-overlay__content">

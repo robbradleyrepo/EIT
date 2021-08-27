@@ -1,0 +1,33 @@
+﻿---
+ID: "0870e2c2-382d-43b0-a5c1-d492883427d7"
+Parent: "199250c8-c3da-4689-b81e-fba3b660d644"
+Template: "f6b5c22c-0b85-45bb-bb44-d743ff235639"
+Path: "/sitecore/content/LionTrustNew/Home/Sustainability/_Local/UI010 - Quick Links"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{795F312D-2DE3-4891-BF40-144C4D4C915C}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0d827b79-fd2f-46c0-8c0b-6ec87d4bc086"
+      Hint: QuickLinks_QuickLinksList
+      Type: Treelist
+      Value: |
+        {74DB1936-1220-4B84-8455-25EE347F202E}
+        {80347667-448F-485F-BB89-2FC250EBB689}
+        {9877F6B7-E985-407D-9759-583A44793907}
+        {C6913C25-36E2-4FD7-BCC8-96DE93194BB9}
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210825T104058Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin

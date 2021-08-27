@@ -1,0 +1,21 @@
+﻿---
+ID: "af4ba807-3ae7-4537-8ad6-e9dd8c68ffdc"
+Parent: "b2601592-66da-421f-9327-44fb8b433df6"
+Template: "b2601592-66da-421f-9327-44fb8b433df6"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Search/FacetItem/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210702T075652Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "c1a06d8f-e780-480e-9a08-9c5b28514126"
+      Hint: FacetItem_Name
+      Value: $name

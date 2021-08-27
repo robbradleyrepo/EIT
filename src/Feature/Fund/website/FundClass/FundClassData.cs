@@ -4,7 +4,9 @@
 
     public class FundClassData
     {
-        public string Comparator { get; set; }
+        public string Comparator1 { get; set; }
+
+        public string Comparator2 { get; set; }
 
         public string Duration { get; set; }
 

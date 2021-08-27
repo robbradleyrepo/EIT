@@ -81,7 +81,8 @@ namespace LionTrust.Foundation.Legacy
             public const string ValueFieldId = "{D2F09153-C85F-48EC-9C15-52C9ECBDEEFB}";
             public const string ClassNameFieldId = "{0CE0E3BF-4431-4071-A2EA-A3B79D3F0093}";
             public const string ClassLaunchDate_FieldId = "{D45FD542-D058-4753-A7FD-EAD65FD132D6}";
-            public const string Comparator_FieldId = "{26563B81-843C-40BE-9DA0-924F61AE0B3E}";
+            public const string Comparator1_FieldId = "{26563B81-843C-40BE-9DA0-924F61AE0B3E}";
+            public const string Comparator2_FieldId = "{CB665326-8223-45CA-A43A-2C3363A4679E}";
             public const string Duration_FieldId = "{BBF14E98-E868-4DA2-9C11-E83B21DD91D1}";
             public const string OfferPrice_FieldId = "{0D1337DA-2120-4FF6-847C-C085CD0527D2}";
             public const string SinglePrice_FieldId = "{0064BABA-59CF-4E55-B5EB-937687F9C50E}";

@@ -12,16 +12,11 @@ import fundsSlider from "./componets/fundsSlider";
 import articleSlider from "./componets/articleSlider";
 import awardsSlider from "./componets/awardsSlider";
 import investmentCard from "./componets/investmentCard";
-// import articleFilter from "./componets/articleFilter";
 import parallaxScrolling from "./componets/parallaxScrolling";
 import stickyNavbar from "./componets/stickyNavbar";
 import literatureOverlay from "./componets/literatureOverlay";
-import creditRatingChart from "./componets/creditRatingChart";
-import capitalisationChart from "./componets/capitalisationChart";
-import fundChartDropdown from "./componets/fundChartDropdown";
 import shareLink from "./componets/shareLink";
 import locationAndMap from "./componets/locationAndMap";
-import barStuckedChart from "./componets/barStuckedChart";
 import galleryApp from "./componets/galleryApp";
 import tabNav from "./componets/tabNav";
 import headerCtaNav from "./componets/headerCtaNav";
@@ -37,16 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
   awardsSlider();
   stickyNavbar();
   literatureOverlay();
-  creditRatingChart();
-  capitalisationChart();
-  fundChartDropdown();
   shareLink();
   locationAndMap();
-  barStuckedChart();
   galleryApp();
   tabNav();
   headerCtaNav();
-  // if (document.querySelector(".article-page")) articleFilter();
   if (document.querySelector(".main-page")) parallaxScrolling();
 
   // init tooltips

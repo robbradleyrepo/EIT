@@ -92,7 +92,7 @@ export default () => {
     methods: {
       selectFacet(facetid) {
         eventBus.$emit("setFaccets", facetid);
-        this.$emit("close-tab");
+        this.$emit("closetab");
       },
     },    
   });

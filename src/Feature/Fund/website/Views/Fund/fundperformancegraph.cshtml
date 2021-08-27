@@ -4,7 +4,7 @@
 {
     return;
 }
-<section class="container graph-section">
+<section id="performance-graph" class="container graph-section">
     <div class="row">
         <div class="col-12">
             <h2 class="h2">@Html.Glass().Editable(Model.Component, m => m.Heading)</h2>
@@ -31,7 +31,7 @@
             <div class="col-lg-3">
                 <div class="class-dropdown">
                     <div class="class-dropdown__select">
-                        <select name="perfomance" id="perfomance" class="fund-chart-dropdown">
+                        <select name="perfomance" id="perfomance" class="fund-chart-dropdown" data-anchor="performance-graph">
                             @foreach (var item in Model.Component.Fund.Classes)
                             {
                                 if (item.CitiCode == Model.CitiCode)
@@ -52,4 +52,11 @@
         }
     </div>
 </section>
+<div class="container">
+    <div class="col-12">
+        <h3 class="graph-section__title">
+            @Html.Glass().Editable(Model.Component, m => m.ChartTitle)
+        </h3>
+    </div>
+</div>
 <iframe class="mt-3 mb-5" id="childFrame" src="@Model.GraphUrl()" height="650" width="100%" frameborder="0" scrolling="no"></iframe>

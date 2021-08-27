@@ -5,7 +5,11 @@
         public static class ContactUsCard
         {
             public const string Title_FieldId = "{508EF2AD-4DD4-49E8-A95A-436E3ED8F69F}";
-            public const string TitleColor_FieldId = "{C3A46114-6FAE-4C20-BAAC-AD09F3295BCE}";
+            public const string TitleColor_FieldId = "{C3A46114-6FAE-4C20-BAAC-AD09F3295BCE}";            
+        }
+
+        public static class ContactCard
+        {
             public const string Heading_FieldId = "{933D66BB-1F8C-4754-B619-79FD55F2A2EC}";
             public const string SubHeading_FieldId = "{7678B456-28DF-4C62-AD4B-150DAF5128BA}";
             public const string Image_FieldId = "{23021A8B-4EEB-4497-8D85-2C0291436AF4}";

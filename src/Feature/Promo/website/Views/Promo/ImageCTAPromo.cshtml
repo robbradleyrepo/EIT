@@ -2,17 +2,32 @@
 @using Glass.Mapper.Sc.Web.Mvc
 @using LionTrust.Foundation.Analytics.Goals
 @model LionTrust.Feature.Promo.Models.IImageCTAPromo
-@{ 
+@{
     var righTextAlignment = Model.TextAlignment != null && !string.IsNullOrEmpty(Model.TextAlignment.Value) && Model.TextAlignment.Value.Equals("right");
     var titleColor = Model.TitleColor != null && !string.IsNullOrEmpty(Model.TitleColor.Value) ? Model.TitleColor.Value : "text-black";
 }
 <div class="container">
     <div class="team-card">
-        <h2 class="team-card__title @titleColor">
-            @Html.Glass().Editable(Model, x => x.Title)
-        </h2>
+        @if (!Model.TitleInSide)
+        {
+            <div class="row">
+                <div class="col-lg-5 @(righTextAlignment ? "order-1 offset-lg-1" : "order-1 order-lg-0")">
+                    <h2 class="team-card__title @titleColor">
+                        @Html.Glass().Editable(Model, x => x.Title)
+                    </h2>
+                </div>
+                <div class="col-lg-6 @(righTextAlignment ? "" : "offset-lg-1")">
+                </div>
+            </div>
+        }
         <div class="row">
             <div class="col-lg-5 @(righTextAlignment ? "order-1 offset-lg-1" : "order-1 order-lg-0")">
+                @if (Model.TitleInSide)
+                {
+                    <h2 class="team-card__title @titleColor">
+                        @Html.Glass().Editable(Model, x => x.Title)
+                    </h2>
+                }
                 <div class="team-card__text">
                     @if (Sitecore.Context.PageMode.IsExperienceEditor || !string.IsNullOrEmpty(Model.Subtitle))
                     {

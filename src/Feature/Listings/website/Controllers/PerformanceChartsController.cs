@@ -58,7 +58,7 @@
                 }
 
                 viewModel.FourthChart = new PerformanceChartViewModel();
-                viewModel.FourthChart.Data = performanceCharts.PerformanceCharts.Skip(2).Take(1).FirstOrDefault();
+                viewModel.FourthChart.Data = performanceCharts.PerformanceCharts.Skip(3).Take(1).FirstOrDefault();
                 this.PopulateChart(viewModel.FourthChart, jsonSerializerSettings);                
             }
 
@@ -89,20 +89,23 @@
                     {
                         foreach (var chartColumn in chart.ChartValues)
                         {
-                            if (first)
+                            if (chartColumn != null)
                             {
-                                chartModel.Datasets.Add(new ChartColumnModel
+                                if (first)
                                 {
-                                    Data = new List<int>() { chartColumn.Value },
-                                    Color = chartColumn.Color.Value,
-                                    Label = chartColumn.Title
-                                });
-                            }
-                            else
-                            {
-                                chartModel.Datasets[columnValueCount].Data.Add(chartColumn.Value);
-                                chartModel.Datasets[columnValueCount].Color = chartColumn.Color.Value;
-                                chartModel.Datasets[columnValueCount].Label = chartColumn.Title;
+                                    chartModel.Datasets.Add(new ChartColumnModel
+                                    {
+                                        Data = new List<int>() { chartColumn.Value },
+                                        Color = chartColumn.Color?.Value,
+                                        Label = chartColumn.Title
+                                    });
+                                }
+                                else
+                                {
+                                    chartModel.Datasets[columnValueCount].Data.Add(chartColumn.Value);
+                                    chartModel.Datasets[columnValueCount].Color = chartColumn.Color?.Value;
+                                    chartModel.Datasets[columnValueCount].Label = chartColumn.Title;
+                                }
                             }
 
                             columnValueCount++;

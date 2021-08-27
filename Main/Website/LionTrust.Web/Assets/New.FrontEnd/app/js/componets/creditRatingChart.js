@@ -1,4 +1,4 @@
-import Chart from "chart.js";
+import Chart from 'chart.js/dist/Chart.js'
 
 export default () => {
   if ($(".credit-rating-chart").length) {
@@ -6,7 +6,6 @@ export default () => {
     const { labels, data, maxValue } = $(".credit-rating-chart").data("chart");
     Chart.defaults.global.defaultFontSize = 20;
     Chart.defaults.global.defaultFontFamily = "futura-pt";
-    Chart.defaults.global.defaultFontStyle = "300";
 
     const myChart = new Chart(ctx, {
       type: "horizontalBar",
