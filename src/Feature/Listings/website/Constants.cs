@@ -102,7 +102,7 @@
             public const string Title_FieldId = "{346103D5-FD6A-462A-BDC2-F025A1AC46E1}";
             public const string Value_FieldId = "{C8A3907E-8191-4DCE-B0BD-83BCBA1F4A18}";
             public const string Color_FieldId = "{F50C3989-9037-4B6D-847A-80584D65C963}";
-        }        
+        }
 
         public static class Settings
         {
@@ -123,11 +123,11 @@
 
         public static class DocumentVariant
         {
-            public const string Title_FieldID = "{DFDA05D5-803C-4595-9460-F6AF0AE633B4}";            
+            public const string Title_FieldID = "{DFDA05D5-803C-4595-9460-F6AF0AE633B4}";
             public const string PressReleaseDocument_FieldID = "{F09637BD-1F1B-4590-8D0C-DA6F9B52155C}";
             public const string ReportDocument_FieldID = "{F4DF3EE6-5A99-4795-A7FB-E1DC960DAAAD}";
             public const string PresentationLink_FieldID = "{791F04C8-C42D-49F9-9EEA-B3E68EC99E5E}";
-            public const string Date_FieldID = "{17789FCD-D4EE-4FBF-983B-89AACFFF3B82}";            
+            public const string Date_FieldID = "{17789FCD-D4EE-4FBF-983B-89AACFFF3B82}";
         }
 
         public static class MediaItem
@@ -138,7 +138,7 @@
             public const string Categories_FieldId = "{26B1D6BA-647A-4951-9AD7-CD169C1D8685}";
         }
 
-        public static class MediaLister 
+        public static class MediaLister
         {
             public const string SearchByKeywordLabel_FieldId = "{D8AA5782-4853-4F54-8E39-826F1137145D}";
             public const string FilterByCategoryLabel_FieldId = "{39D797A8-CDA0-49AD-BDF0-6F6A31B0FB17}";
@@ -193,6 +193,12 @@
             public const string PressReleaseIcon_FieldId = "{6BE86AC3-6ED0-4AFD-8AB5-E39DC0FF3C90}";
             public const string PressReleaseLabel_FieldId = "{F83E8D46-F1C3-41E2-A7AF-4CE0AE9A6306}";
             public const string DateIcon_FieldId = "{65490AB6-DEF9-4911-9C44-2AE66CBEAC85}";
+        }
+
+        public static class DocumentTypes
+        {
+            public const string SitecoreXMLType = "text/xml";
+            public const string MappedXMLType = "arraybuffer";
         }
     }
 }

@@ -94,6 +94,10 @@
                 {
                     var document = files.First();
                     WebClient client = new WebClient();
+                    if(document.DocumentExtension == Constants.DocumentTypes.SitecoreXMLType)
+                    {
+                        document.DocumentExtension = Constants.DocumentTypes.MappedXMLType;
+                    }
                     HttpContext.Response.ContentType = document.DocumentExtension;
                     HttpContext.Response.AddHeader("content-length", document.Bytes.Length.ToString());
                     HttpContext.Response.BinaryWrite(document.Bytes);
