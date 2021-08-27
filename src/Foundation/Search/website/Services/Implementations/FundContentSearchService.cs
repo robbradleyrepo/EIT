@@ -97,7 +97,7 @@
                                                     .Aggregate(excludeFundsPredicate,
                                                                     (current, salesforceFundId)
                                                                                 => current
-                                                                                     .And(item => !item.SalesforceFundId.Contains(salesforceFundId)));
+                                                                                     .Or(item => !item.SalesforceFundId.Contains(salesforceFundId)));
 
                 predicate = predicate.And(excludeFundsPredicate);
             }
