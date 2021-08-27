@@ -74,7 +74,7 @@
                         
                     }
 
-                    var country = OnboardingHelper.GetCurrentContactAddress()?.Country;
+                    var country = OnboardingHelper.GetCurrentContactCountryCode();
                     predicate = predicate.And(x => !x.ExcludedCountries.Contains(country));
 
                     var searchQuery = context.GetQueryable<SiteSearchResultItem>()

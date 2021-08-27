@@ -140,6 +140,10 @@
       <Project>{43ee972b-2002-4719-a878-a66a99c42c40}</Project>
       <Name>LionTrust.Foundation.Legacy</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Onboarding\website\LionTrust.Foundation.Onboarding.csproj">
+      <Project>{78b2a114-3eda-4cc7-81eb-d096d9bfc0cc}</Project>
+      <Name>LionTrust.Foundation.Onboarding</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\ORM\website\LionTrust.Foundation.ORM.csproj">
       <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>
       <Name>LionTrust.Foundation.ORM</Name>

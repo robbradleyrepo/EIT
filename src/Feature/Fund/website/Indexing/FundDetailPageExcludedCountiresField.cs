@@ -2,6 +2,7 @@
 {
     using LionTrust.Foundation.DI;
     using LionTrust.Foundation.Indexing.ComputedFields.SharedLogic;
+    using Sitecore.Data;
     using Sitecore.Data.Fields;
     using Sitecore.Data.Items;
     using System;
@@ -17,7 +18,7 @@
             return templateIds.Contains(Constants.FundSelector.TemplateId);
         }
 
-        public IList<string> GetExcludedCountries(Item item)
+        public IList<ID> GetExcludedCountries(Item item)
         {
             if (item == null)
             {
@@ -36,26 +37,7 @@
                 return null;
             }
 
-            var results = new List<string>();
-
-            foreach (var id in excludedCountires.TargetIDs)
-            {
-                var country = item.Database.GetItem(id);
-
-                if (country != null)
-                {
-                    var countryIso = country.Fields[Foundation.Onboarding.Constants.Country.ISO_FieldId].Value;
-
-                    var regionInfo = new RegionInfo(countryIso);
-
-                    if (regionInfo != null)
-                    {
-                        results.Add(regionInfo.EnglishName);
-                    }
-                }
-            }
-
-            return results;
+            return excludedCountires.TargetIDs;
         }
     }
 }

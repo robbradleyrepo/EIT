@@ -12,6 +12,9 @@
     using Sitecore.Annotations;
     using Sitecore.Configuration;
     using Sitecore.Mvc.Controllers;
+    using Sitecore.XConnect;
+    using Sitecore.XConnect.Client;
+    using Sitecore.XConnect.Collection.Model;
     using System;
     using System.Collections.Generic;
     using System.Globalization;
@@ -152,33 +155,6 @@
         {
             if (ModelState.IsValid)
             {
-                var address = OnboardingHelper.GetCurrentContactAddress(true);
-                if (address != null)
-                {
-                    try
-                    {
-                        var country = OnboardingHelper.GetCountryFromIso(_context, OnboardingSubmit.Country);
-
-                        if (country != null)
-                        {
-                            if (country.ISO != Foundation.Onboarding.Constants.Country.RestOfWorldIso)
-                            {
-                                var regionInfo = new RegionInfo(country.ISO);
-                                address.Country = regionInfo.EnglishName;
-                            }
-                            else
-                            {
-                                address.Country = country.CountryName;
-                            }
-                        }
-                    }
-                    catch (ArgumentException)
-                    {
-                        string message = $"{OnboardingSubmit.Country} is not an valid value";
-                        _log.Info(message, this);
-                    }
-                }
-
                 var data = _context.GetHomeItem<IHome>();
 
                 if (data?.OnboardingConfiguration == null)
@@ -202,8 +178,7 @@
 
                         _cardManager.AddPointsFromProfileCard(investor.ProfileCard, profile);
 
-                        var contactManager = Factory.CreateObject("tracking/contactManager", true) as ContactManager;
-                        contactManager.SaveContactToCollectionDb(_tracker.Contact);
+                        TrackAnonymousUser(OnboardingSubmit.Country);
                     }
                     else
                     {
@@ -293,15 +268,17 @@
         {
             var result = false;
 
-            var profile = GetProfile(config.Profile.Name);
-            var country = OnboardingHelper.GetCurrentContactCountry(_context);
-
-            if (profile != null 
-                && profile.PatternId.HasValue 
-                && config.ChooseInvestorRole.FirstOrDefault().Investors.Any(p => p.PatternCard.Id == profile.PatternId.Value) 
-                && country != null)
+            using (XConnectClient client = Sitecore.XConnect.Client.Configuration.SitecoreXConnectClientConfiguration.GetClient())
             {
-                result = true;
+                var contact = OnboardingHelper.GetContact(client);
+                var profile = GetProfile(config.Profile.Name);
+
+                if (!string.IsNullOrWhiteSpace(contact?.Addresses()?.PreferredAddress?.CountryCode) 
+                    && profile != null && profile.PatternId.HasValue 
+                    && config.ChooseInvestorRole.FirstOrDefault().Investors.Any(p => p.PatternCard.Id == profile.PatternId.Value))
+                {
+                    result = true;
+                }
             }
 
             return result;
@@ -356,6 +333,49 @@
             }
 
             return profile;
-        }        
+        }
+
+        public void TrackAnonymousUser(string country)
+        {
+            var manager = Sitecore.Configuration.Factory.CreateObject("tracking/contactManager", true) as Sitecore.Analytics.Tracking.ContactManager;
+
+            if (manager != null)
+            {
+                Tracker.Current.Contact.ContactSaveMode = ContactSaveMode.AlwaysSave;
+                manager.SaveContactToCollectionDb(Tracker.Current.Contact);
+
+                using (XConnectClient client = Sitecore.XConnect.Client.Configuration.SitecoreXConnectClientConfiguration.GetClient())
+                {
+                    try
+                    {
+                        var contact = OnboardingHelper.GetContact(client);
+
+                        if (contact != null)
+                        {
+                            var address = new Address
+                            {
+                                CountryCode = country
+                            };
+
+                            if (contact.Addresses() != null)
+                            {
+                                contact.Addresses().PreferredAddress = address;
+                            }
+                            else
+                            {
+                                client.SetAddresses(contact, new AddressList(address, AddressList.DefaultFacetKey));
+                            }
+
+                            client.Submit();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        _log.Error("Error saving data to profile", ex, this);
+                    }
+                }
+            }
+        }
     }
 }
+

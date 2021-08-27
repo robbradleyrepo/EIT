@@ -10,6 +10,10 @@
     using System;
     using System.Globalization;
     using Glass.Mapper.Sc.Web.Mvc;
+    using Sitecore.XConnect;
+    using Sitecore.Diagnostics;
+    using Sitecore.XConnect.Collection.Model;
+    using Sitecore.XConnect.Client;
 
     public static class OnboardingHelper
     {
@@ -39,42 +43,6 @@
 
             return string.Empty;
         }
-
-        //public static InvestorType GetInvestorType(IOnboardingConfiguration onboardingConfiguration, BaseLog log)
-        //{
-        //    var investorType = InvestorType.Private;
-
-        //    var tracker = Tracker.Current;
-        //    if (!IsValidConfiguration(onboardingConfiguration, log))
-        //    {
-        //        return investorType;
-        //    }
-
-        //    if (tracker != null && tracker.Interaction != null
-        //        && tracker.Interaction.Profiles != null)
-        //    {
-        //        if (tracker.Interaction.Profiles.ContainsProfile(onboardingConfiguration.Profile.Name))
-        //        {
-        //            var profile = tracker.Interaction.Profiles[onboardingConfiguration.Profile.Name];
-        //            if (profile.PatternId != null && profile.PatternId.Value != null)
-        //            {
-        //                if (profile.PatternId.HasValue)
-        //                {
-        //                    if (profile.PatternId == onboardingConfiguration.PrivatePatternCard.Id)
-        //                    {
-        //                        investorType = InvestorType.Private;
-        //                    }
-        //                    else if (profile.PatternId == onboardingConfiguration.ProfressionalPatternCard.Id)
-        //                    {
-        //                        investorType = InvestorType.Professional;
-        //                    }
-        //                }
-        //            }
-        //        }
-        //    }
-
-        //    return investorType;
-        //}
 
         public static IInvestor GetCurrentContactInvestor(IOnboardingConfiguration onboardingConfiguration, BaseLog log)
         {
@@ -113,7 +81,7 @@
 
             if (excludedCountries != null && excludedCountries.Any())
             {
-                hasAccess = HasAccess(excludedCountries.Select(c => c.CountryName));
+                hasAccess = HasAccess(excludedCountries.Select(c => c.ISO));
             }
 
             return hasAccess;
@@ -122,19 +90,18 @@
         public static ICountry GetCurrentContactCountry(IMvcContext context)
         {
             var home = context.GetHomeItem<IHome>();
-            var address = GetCurrentContactAddress();
 
-            if (address == null || string.IsNullOrWhiteSpace(address.Country) || home == null || home.OnboardingConfiguration == null)
+            using (XConnectClient client = Sitecore.XConnect.Client.Configuration.SitecoreXConnectClientConfiguration.GetClient())
             {
-                return null;
+                var contact = GetContact(client);
+
+                if (string.IsNullOrWhiteSpace(contact?.Addresses()?.PreferredAddress?.CountryCode) || home == null || home.OnboardingConfiguration == null)
+                {
+                    return null;
+                }
+
+                return GetCountryFromIso(context, contact.Addresses().PreferredAddress.CountryCode);
             }
-
-            var twoLetterISO = CultureInfo.GetCultures(CultureTypes.SpecificCultures)?
-                .Select(x => new RegionInfo(x.TextInfo.CultureName))
-                .FirstOrDefault(c => c?.EnglishName == address.Country)?
-                .TwoLetterISORegionName;
-
-            return GetCountryFromIso(context, twoLetterISO);
         }
 
         public static ICountry GetCountryFromIso(IMvcContext context, string twoLetterISO)
@@ -170,39 +137,35 @@
 
             if (excludedCountries != null && excludedCountries.Any())
             {
-                var address = GetCurrentContactAddress();
+                //var address = GetCurrentContactAddress();
+                //Get contact here
 
-                if (address != null
-                    && excludedCountries.Any(e => e.Equals(address.Country, StringComparison.InvariantCultureIgnoreCase)))
+                using (XConnectClient client = Sitecore.XConnect.Client.Configuration.SitecoreXConnectClientConfiguration.GetClient())
                 {
-                    hasAccess = false;
+                    var contact = GetContact(client);
+
+                    if (excludedCountries.Any(e => e.Equals(contact?.Addresses()?.PreferredAddress?.CountryCode, StringComparison.InvariantCultureIgnoreCase)))
+                    {
+                        hasAccess = false;
+                    }
                 }
             }
 
             return hasAccess;
         }
 
-        public static IAddress GetCurrentContactAddress(bool createIfNull = false)
+        public static string GetCurrentContactCountryCode()
         {
-            IAddress address = null;
-          
+            var countryCode = string.Empty;
 
-            if (Tracker.Current != null &&  Tracker.Current.Contact != null)
+            using (XConnectClient client = Sitecore.XConnect.Client.Configuration.SitecoreXConnectClientConfiguration.GetClient())
             {
-                var contact = Tracker.Current.Contact;
-                var addresses = contact.GetFacet<IContactAddresses>(Analytics.Addresses_FacetName);
+                var contact = GetContact(client);
 
-                if (addresses != null && addresses.Entries.Contains(Analytics.DefaultAddress_EntityName))
-                {
-                    address = addresses.Entries[Analytics.DefaultAddress_EntityName];
-                }
-                else if (addresses != null && createIfNull)
-                {
-                    address = addresses.Entries.Create(Analytics.DefaultAddress_EntityName);
-                }
+                countryCode = contact?.Addresses()?.PreferredAddress?.CountryCode;
             }
-            
-            return address;
+
+            return countryCode;
         }
 
         private static bool IsValidConfiguration(IOnboardingConfiguration configuration, BaseLog log)
@@ -220,6 +183,24 @@
             }
 
             return true;
+        }
+
+        public static Contact GetContact(XConnectClient client)
+        {
+            var trackerIdentifier = new IdentifiedContactReference("xDB.Tracker", Tracker.Current.Contact.ContactId.ToString("N"));
+
+            Contact contact = null;
+
+            try
+            {
+                contact = client.Get(trackerIdentifier, new ContactExpandOptions(AddressList.DefaultFacetKey));
+            }
+            catch (Exception ex)
+            {
+                Log.Error("Error trying to get contact", ex);
+            }
+
+            return contact;
         }
     }
 }
