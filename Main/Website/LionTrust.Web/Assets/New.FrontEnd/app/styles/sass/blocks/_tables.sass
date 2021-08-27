@@ -33,7 +33,7 @@
         td, th
             border-top: none
             border-bottom: 1px dashed #dee2e6
-            @include p-1-normal-18
+            @include p-1-normal-20
             @include breakpoint(desktop, up)
                 padding: 19px
         th
@@ -98,6 +98,15 @@
 .table.table-full-border
     tbody
         border: 1px solid $secondary-silver
+        tr
+            &:first-child, 
+                td, th
+                    padding-top: 25px
+            &:last-child
+                td, th
+                    padding-bottom: 25px
+        th, td
+            padding: 5px 19px
         tr:last-child
             th, td
                 border-bottom: none
@@ -140,12 +149,12 @@ table.table-document
             flex-direction: column
             @include breakpoint(desktop, up)
                 display: table-row
-        border: none
-        border-top: 1px solid $secondary-silver
-        td, th            
+            border: none
+            border-top: 1px solid $secondary-silver
+        td, th
             border-bottom: none
             padding: 10px 0 0px
-            @include p-1-medium-18          
+            @include p-1-medium-18
             &::after, &::before
                 display: none
             @include breakpoint(desktop, up)
@@ -157,11 +166,11 @@ table.table-document
             padding-bottom: 10px
             &::after
                 display: none
-            
+
         &__link
             @include breakpoint(desktop, up)
                 text-align: right
-                
+
 table.table-striped
     thead
         tr th
@@ -173,8 +182,8 @@ table.table-striped
             font-weight: 300
             color: $primary
     td, th
-       @include p-1-medium-18
-       @include breakpoint(desktop, up)
+        @include p-1-medium-18
+        @include breakpoint(desktop, up)
         padding: 18px 10px
         border-bottom: 1px solid $secondary-silver
         text-align: center
@@ -182,14 +191,14 @@ table.table-striped
             text-align: left
             font-weight: 400
         &::after, &::before
-                display: none
+            display: none
     td:last-child
-            padding-right: 0
-            border-bottom: 1px solid $secondary-silver
-            padding-bottom: 10px
-            &::after
-                display: none
-    
+        padding-right: 0
+        border-bottom: 1px solid $secondary-silver
+        padding-bottom: 10px
+        &::after
+            display: none
+
 .divident-table
     tbody
         border: none
@@ -204,5 +213,3 @@ table.table-striped
         &:last-child
             border: none
             padding-right: 3px
-            
-
