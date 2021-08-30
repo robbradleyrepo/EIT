@@ -69,6 +69,9 @@ export default () => {
     },
     methods: {
       toggleOption() {
+        this.$parent.$children.forEach(child =>  {
+            child.open = false
+          })
         this.open = !this.open;
       },
       clearOption() {
@@ -182,6 +185,9 @@ export default () => {
 
         if (existElem !== -1) this.params[facet.name].splice(existElem, 1);
         else this.params[facet.name].push(item.identifier);
+      },
+      hideSelects() {
+        console.log('hide');
       },
 
       getQueryString() {
