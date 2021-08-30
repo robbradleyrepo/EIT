@@ -66,10 +66,10 @@
                                         <span class="option-checkbox__icon"></span>
                                     </label>
                                 </option-field>                        
-                                <option-field inline-template  v-for="(year, i) in years" :key="i">
+                                <option-field inline-template  v-for="(yearItem, i) in years" :key="i">
                                     <label class="option-checkbox option-checkbox_small" @click="setChoosen(!checked)">
-                                        <input  class="option-checkbox__input" name="year" v-model="year" :value="year" type="radio" @click="setYear(year)">
-                                        <span class="option-checkbox__text">{{year}}</span>
+                                        <input  class="option-checkbox__input" name="year" v-model="year" :value="yearItem" type="radio" @click="setYear(yearItem)">
+                                        <span class="option-checkbox__text">{{yearItem}}</span>
                                         <span class="option-checkbox__icon"></span>
                                     </label>                                   
                                 </option-field>            
@@ -96,10 +96,10 @@
                                         <span class="option-checkbox__icon"></span>
                                     </label>
                                 </option-field>                                
-                                <option-field inline-template  v-for="(month, i) in months" :key="i">
+                                <option-field inline-template  v-for="(monthItem, i) in months" :key="i">
                                     <label class="option-checkbox option-checkbox_small" @click="setChoosen(!checked)">
-                                        <input  class="option-checkbox__input" name="month" type="radio" v-model="month" :value="month"  @click="setMonth(month)">
-                                        <span class="option-checkbox__text">{{month}}</span>
+                                        <input  class="option-checkbox__input" name="month" type="radio" v-model="month" :value="monthItem"  @click="setMonth(monthItem)">
+                                        <span class="option-checkbox__text">{{monthItem}}</span>
                                         <span class="option-checkbox__icon"></span>
                                     </label>
                                 </option-field>                                
