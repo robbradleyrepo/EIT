@@ -74,6 +74,9 @@ export default () => {
           })
         this.open = !this.open;
       },
+      hideOption() {
+        this.open = false;
+      },
       clearOption() {
         this.active = 0;
         this.$emit("clearOptionField");

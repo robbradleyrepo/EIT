@@ -35,7 +35,7 @@
                                     <i class="article-filters__icon-arrow"></i>
                                 </div>
                                 <div class="article-filters__options">
-                                    <div class="article-filters__title" @click="toggleOption">
+                                    <div class="article-filters__title" @click="hideOption">
                                         <i class="icon-chevron-left"></i>
                                         {{facet.name}}
                                     </div>
@@ -54,15 +54,26 @@
                         </select-field>
                         <div class="col-lg-3 ml-auto">
                             <div class="article-filters__btns justify-content-end">
-                                <button class="btn article-filters__btn article-filters__btn_apply mr-1"
-                                    :class="activeButton ? 'article-filters__btn_primary' : ''"
-                                    @click="applyFilters">
-                                    Apply filters
-                                </button>
-                                <button class="clear-filter btn article-filters__btn article-filters__btn_clear"
-                                    @click="clearFilters">
-                                    Clear all
-                                </button>
+                                <button 
+                                class="btn article-filters__btn article-filters__btn_apply d-none d-xl-block"
+                                @click="applyFilters"
+                                :class="activeButton ? 'article-filters__btn_primary' : ''"
+                                >
+                                Apply filters
+                            </button>
+                            <button class="clear-filter btn article-filters__btn article-filters__btn_clear d-none d-xl-block" @click="clearFilters">
+                                Clear
+                            </button>
+                            <btn 
+                              @click="applyFilters"
+                              class="btn btn-clean d-none d-md-block d-xl-none"
+                              :class="activeButton ? 'text-primary' : ''"
+                              @click="toggleMobileFilter">
+                                <i class="icon-filter"></i> Apply
+                            </btn>  
+                            <btn @click="clearFilters"  class="btn btn-clean d-none d-md-block d-xl-none" @click="toggleMobileFilter">
+                                <i class="icon-refresh"></i> clear
+                            </btn>  
                             </div>
                         </div>
                     </div>
