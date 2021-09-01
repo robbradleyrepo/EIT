@@ -332,8 +332,7 @@ export default () => {
           {
             downloadFileIds: this.id,
           },
-          this.title,
-          ".pdf"
+          this.title
         );
       },
     },

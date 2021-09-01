@@ -1,5 +1,5 @@
 export const API = {
-    downloadDocument(url, data, title = 'document', extension = '.zip', type = 'POST' ) {
+    downloadDocument(url, data, title = 'document', extension = '', type = 'POST' ) {
         document.body.style.cursor = "wait";
         $.ajax({
           type,
@@ -7,9 +7,10 @@ export const API = {
           url,
           data,
         })
-          .done((data) => {
+          .done((data, status, xhr) => {
+            var documentType = xhr.getResponseHeader("document-type");
             const url = window.URL.createObjectURL(
-              new Blob([data], { type: "application/pdf;charset=base-64" })
+              new Blob([data], { type: documentType+";charset=base-64" })
             );
             const link = document.createElement("a");
             link.href = url;
