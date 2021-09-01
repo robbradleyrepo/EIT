@@ -27,12 +27,13 @@
                         var collapsedClass = isCollapsed ? "collapsed" : string.Empty;
                         var showClass = isCollapsed ? string.Empty : "show";
                         var rowName = LionTrust.Feature.Listings.Utils.RandomString(10, true);
+                        var textColor = item.TextColor != null && !string.IsNullOrEmpty(item.TextColor.Value) ? item.TextColor.Value : "accordion__link-black";
 
                         using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/Accordion Row", item.Id.ToString()))
                         {
                             <div class="accordion__card">
                                 <div class="accordion__header">
-                                    <div class="accordion__link @collapsedClass"
+                                    <div class="accordion__link @collapsedClass @textColor"
                                          data-toggle="collapse"
                                          data-target="#@rowName"
                                          aria-expanded="@isCollapsed"
