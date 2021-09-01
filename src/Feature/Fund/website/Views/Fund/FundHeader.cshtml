@@ -25,7 +25,7 @@
                        data-link="@Request.Url.ToString()"
                        data-title="@Model.Data.ShareCopiedText">
                         <i class="icon-share"></i>
-                        @Html.Glass().Editable(Model, m => m.Data.ShareText)
+                        <span>@Html.Glass().Editable(Model, m => m.Data.ShareText)</span>
                     </a>
                 </li>
             </ul>

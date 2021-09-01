@@ -11,7 +11,7 @@
             <li class="article-links__item">
                 <a href="#" class="article-links__link copy-to-clipbord" data-goal-trigger="@shareGoal" data-link="@Model.Article.Url" data-title="@Model.ArticleLinks.ShareTooltip">
                     <i class="icon-share"></i>
-                    @Html.Glass().Editable(Model.ArticleLinks, m => m.ShareLabel)
+                    <span>@Html.Glass().Editable(Model.ArticleLinks, m => m.ShareLabel)</span>
                 </a>
             </li>
             @if (pdfDocumentAvailable || Sitecore.Context.PageMode.IsExperienceEditor)
@@ -21,7 +21,7 @@
                     <li class="article-links__item">
                         <a href="@pdfDocumenSrc" class="article-links__link" data-goal-trigger="@downloadGoal" download>
                             <i class="icon-download"></i>
-                            @Html.Glass().Editable(Model.ArticleLinks, m => m.DownloadLabel)
+                            <span>@Html.Glass().Editable(Model.ArticleLinks, m => m.DownloadLabel)</span>
                         </a>
                     </li>
                 }
