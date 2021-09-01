@@ -46,7 +46,7 @@
                             linkClass = linkClass + " " + Model.Cta.Class;
                         }
                     }
-                    @using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.Cta, Model.GoalId, new System.Collections.Specialized.NameValueCollection { { "class", linkClass } }, isEditable: true))
+                    @using (Html.Glass().BeginRenderLinkWithGoal(Model, m => m.Cta, Model.GoalId, new System.Collections.Specialized.NameValueCollection { { "class", linkClass } }, isEditable: true))
                     {
                         if (Model.Cta != null)
                         {

@@ -21,7 +21,7 @@
                         @Html.Glass().Editable(Model, m => m.Content.Body)
                     </span>
                     <div class="lead-banner__btns">
-                        @using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.Content.Cta, Model.Content.CtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary" } }, isEditable: true))
+                        @using (Html.Glass().BeginRenderLinkWithGoal(Model, m => m.Content.Cta, Model.Content.CtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary" } }, isEditable: true))
                         {
                             if (Model.Content.Cta != null)
                             {

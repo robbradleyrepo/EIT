@@ -33,7 +33,7 @@
                             </span>
 
                             <div class="lead-banner__btnbox mt-4">
-                                @using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.PrimaryCTALink, Model.PrimaryCtaGoal, new NameValueCollection { { "class", "btn btn-primary" } }, isEditable: true))
+                                @using (Html.Glass().BeginRenderLinkWithGoal(Model, m => m.PrimaryCTALink, Model.PrimaryCtaGoal, new NameValueCollection { { "class", "btn btn-primary" } }, isEditable: true))
                                 {
                                     if (Model.PrimaryCTALink != null)
                                     {
@@ -42,7 +42,7 @@
                                     }
                                 }
 
-                                @using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.SecondaryCTALink, Model.SecondaryCtaGoal, new NameValueCollection { { "class", "btn btn-primary-forward" } }, isEditable: true))
+                                @using (Html.Glass().BeginRenderLinkWithGoal(Model, m => m.SecondaryCTALink, Model.SecondaryCtaGoal, new NameValueCollection { { "class", "btn btn-primary-forward" } }, isEditable: true))
                                 {
                                     if (Model.SecondaryCTALink != null)
                                     {

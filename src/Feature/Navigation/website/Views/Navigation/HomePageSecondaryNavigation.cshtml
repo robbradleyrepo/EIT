@@ -18,7 +18,7 @@
             {
                 if (item.PageLink != null)
                 {
-                    @Html.Glass().AnalyticsGlass().RenderLinkWithGoal(item, m => m.PageLink, item.Goal, new NameValueCollection { { "class", "header-btn-nav__btn" } }, isEditable: true)
+                    @Html.Glass().BeginRenderLinkWithGoal(item, m => m.PageLink, item.Goal, new NameValueCollection { { "class", "header-btn-nav__btn" } }, isEditable: true)
                 }
             }
         }

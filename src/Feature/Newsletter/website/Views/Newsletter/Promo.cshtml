@@ -1,6 +1,6 @@
 @using Glass.Mapper.Sc.Web.Mvc
 @using LionTrust.Foundation.Analytics.Goals
-@using LionTrust.Foundation.ORM.Extensions;
+@using System.Collections.Specialized
 @model LionTrust.Feature.Newsletter.Promo.NewsletterPromoViewModel
 <section class="newsletter-wrapper">
     <div class="newsletter" style="@Model.BackgroundImageStyle">
@@ -20,7 +20,10 @@
             {
                 <div class="col-12">
                     <div class="newsletter__btnbox">
-                        @Html.GenerateGoalAnchor(m => m.Data.Cta, () => Model.Data.Cta.Url, "btn btn-anchor", Model.GoalId, () => string.Format("{0}&nbsp;<i class='icon-arrow-right animate-arrow'></i>", Model.Data.Cta.Text))
+                        @using (Html.Glass().BeginRenderLinkWithGoal(Model, m => m.Data.Cta, Model.GoalId, new NameValueCollection { { "class", "btn btn-anchor" } }))
+                        {
+                            @(Model.Data.Cta.Text ?? string.Empty) <i class='icon-arrow-right animate-arrow'></i>
+                        }
                     </div>
                 </div>
             }

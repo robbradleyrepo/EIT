@@ -14,7 +14,7 @@
                     </h2>
 
                     <div class="howtoinvest__footer">
-                        @using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.PrimaryCTALink, Model.PrimaryCTALinkGoal, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
+                        @using (Html.Glass().BeginRenderLinkWithGoal(Model, m => m.PrimaryCTALink, Model.PrimaryCTALinkGoal, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
                         {
                             if (Model.PrimaryCTALink != null)
                             {
@@ -23,7 +23,7 @@
                             <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
                         }
 
-                        @using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(Model, m => m.SecondaryCTALink, Model.SecondaryCTALinkGoal, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }, isEditable: true))
+                        @using (Html.Glass().BeginRenderLinkWithGoal(Model, m => m.SecondaryCTALink, Model.SecondaryCTALinkGoal, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }, isEditable: true))
                         {
                             if (Model.SecondaryCTALink != null)
                             {
