@@ -110,8 +110,14 @@ header
     display: flex
     align-items: center
     font-weight: 300
+    span
+        transition: .3s ease-out border-color
+        border-bottom: 1px solid transparent
     i
         margin-right: 5px
+    &:hover
+        span
+            border-color: $white
 
 .article-links
     display: flex
@@ -123,6 +129,12 @@ header
     &__link
         display: flex
         align-items: center
+        span
+            transition: .3s ease-out border-color
+            border-bottom: 1px solid transparent
+        &:hover
+            span
+                border-color: $white
     &__item
         display: inline-block
         margin-right: 50px
@@ -149,6 +161,10 @@ main .article-links
     font-weight: 500
     @include breakpoint(desktop, up)
         justify-content: start
+    &__link
+        &:hover
+            span
+                border-color: $primary
 
 .article-links
     .article-links__link

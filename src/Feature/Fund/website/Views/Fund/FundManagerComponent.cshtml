@@ -16,7 +16,7 @@
                 <div class="col-lg-6 col-xl-4">
 
                     <div class="fund-manager">
-                        @using (Html.Glass().AnalyticsGlass().BeginRenderLinkWithGoal(manager, m => m.Page, manager.PageGoal, new NameValueCollection { { "class", "fund-manager__item" } }, isEditable: true))
+                        @using (Html.Glass().BeginRenderLinkWithGoal(manager, m => m.Page, manager.PageGoal, new NameValueCollection { { "class", "fund-manager__item" } }, isEditable: true))
                         {
                             <div class="row">
                                 <div class="col-4 col-md-2 col-lg-6">

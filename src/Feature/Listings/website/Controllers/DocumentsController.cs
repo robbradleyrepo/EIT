@@ -94,12 +94,14 @@
                 {
                     var document = files.First();
                     WebClient client = new WebClient();
+                    var contentType = document.DocumentExtension;
                     if(document.DocumentExtension == Constants.DocumentTypes.SitecoreXMLType)
                     {
-                        document.DocumentExtension = Constants.DocumentTypes.MappedXMLType;
+                        contentType = Constants.DocumentTypes.MappedXMLType;
                     }
-                    HttpContext.Response.ContentType = document.DocumentExtension;
+                    HttpContext.Response.ContentType = contentType;
                     HttpContext.Response.AddHeader("content-length", document.Bytes.Length.ToString());
+                    HttpContext.Response.AddHeader("document-type", document.DocumentExtension);
                     HttpContext.Response.BinaryWrite(document.Bytes);
                     HttpContext.Response.AppendHeader("Content-Disposition", "inline; filename=" + document.Name);
                 }

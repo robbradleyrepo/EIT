@@ -52,12 +52,6 @@
                     .BenchmarkName;
             }
 
-            /// TBD
-            if (string.IsNullOrEmpty(data.Duration))
-            {
-
-            }
-
             if (string.IsNullOrEmpty(data.OfferPrice))
             {
                 data.OfferPrice = apiData.OfferPrice;
@@ -86,7 +80,6 @@
                 ClassLaunchDate = fundClass.ClassLaunchDate,
                 Comparator1 = fundClass.Comparator1,
                 Comparator2 = fundClass.Comparator2,
-                Duration = fundClass.Duration,
                 OfferPrice = fundClass.OfferPrice,
                 PriceDate = fundClass.PriceDate,
                 SinglePrice = fundClass.SinglePrice

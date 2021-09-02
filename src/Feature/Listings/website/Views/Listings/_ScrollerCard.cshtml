@@ -2,25 +2,26 @@
 @model LionTrust.Feature.Listings.Models.IScrollerCard
 @if (Model != null)
 {
-    <a href="#" class="swiper-slide investment-card">
-        @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/ScrollerCard", Model.Id.ToString(), "Edit Scroller Card"))
-        {
-            <div class="investment-card__content">
-                <div class="investment-card__title">@Html.Glass().Editable(Model, m => m.Title)</div>
-                <p class="investment-card__text">
-                    @if (Sitecore.Context.PageMode.IsExperienceEditor)
-                    {
-                        @Html.Glass().Editable(Model, m => m.Description)
-                    }
-                    else
-                    {
-                        @Html.Raw(Model.Description)
-                    }
-                </p>
-
-            </div>
-        }
-    </a>
+    <div class="swiper-slide col-10 col-md-6 col-lg-4">
+        <a href="#" class="investment-card">
+            @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/ScrollerCard", Model.Id.ToString(), "Edit Scroller Card"))
+            {
+                <div class="investment-card__content">
+                    <div class="investment-card__title">@Html.Glass().Editable(Model, m => m.Title)</div>
+                    <p>
+                        @if (Sitecore.Context.PageMode.IsExperienceEditor)
+                        {
+                            @Html.Glass().Editable(Model, m => m.Description)
+                        }
+                        else
+                        {
+                            @Html.Raw(Model.Description)
+                        }
+                    </p>
+                </div>
+            }
+        </a>
+    </div>
 }
 else if (Sitecore.Context.PageMode.IsExperienceEditor)
 {

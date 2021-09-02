@@ -27,7 +27,7 @@
                 @Html.AntiForgeryToken()
                 <input type="hidden" id="Country" name="Country" />
                 <input type="hidden" id="InvestorId" name="InvestorId" />
-                <button class="btn btn-primary" id="submit-board" data-goal-trigger="@Model.Goal?.Id">
+                <button class="btn btn-primary" id="submit-board" data-goal-trigger="@(Model.Goal != null ? Model.Goal.Id.ToString() : string.Empty)">
                     @Html.Glass().Editable(Model, m => m.ButtonText)
                     <i class="icon-arrow-right animate-arrow"></i>
                 </button>

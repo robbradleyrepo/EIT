@@ -6,6 +6,6 @@
         public string Name { get; set; }
         public long Length { get; set; }
         public byte[] Bytes { get; set; }
-        public string DocumentExtension { get; internal set; }
+        public string DocumentExtension { get; set; }
     }
 }

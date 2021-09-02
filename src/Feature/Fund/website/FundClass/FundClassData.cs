@@ -8,8 +8,6 @@
 
         public string Comparator2 { get; set; }
 
-        public string Duration { get; set; }
-
         public string SinglePrice { get; set; }
 
         public string OfferPrice { get; set; }
