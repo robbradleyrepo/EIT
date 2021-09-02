@@ -1,9 +1,10 @@
 ﻿---
-ID: "4abe96cd-c3e2-4c68-a244-1bf17476102d"
+ID: "d5ba8c18-ef45-460b-9d20-2fad995800db"
 Parent: "d84e926e-75bf-4388-99ee-a0f383252071"
 Template: "fff5f245-ffc0-4022-a998-9b07aa5e761f"
 Path: /sitecore/templates/Branches/Project/LionTrust/Page Types/Fund Dashboard/$name/_Local
 DB: master
+BranchID: "817d30af-b9d5-4e8a-882f-bf6c8993ca9a"
 SharedFields:
 - ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
   Hint: __Masters
@@ -15,9 +16,14 @@ SharedFields:
     {4FD5C75C-BD9D-4615-8538-A00C51BB2238}
     {F6B5C22C-0B85-45BB-BB44-D743FF235639}
     {A5AB98AD-A81D-484E-83F8-CDCAF65BB20E}
+    {10BF3F6C-AE91-42D5-ADFD-A2AE935CE1C5}
+    {B074A5E0-B766-481C-869C-8C2E3034C4BC}
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: "-1000"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: 
 Languages:
 - Language: en
   Versions:
@@ -25,4 +31,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210714T102639Z
+      Value: 20210901T161900Z

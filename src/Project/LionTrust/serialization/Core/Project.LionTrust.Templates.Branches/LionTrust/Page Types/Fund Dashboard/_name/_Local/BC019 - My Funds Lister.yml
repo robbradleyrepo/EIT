@@ -1,9 +1,14 @@
 ﻿---
-ID: "c68be762-ecfe-44f6-9389-659388fb4a35"
-Parent: "4abe96cd-c3e2-4c68-a244-1bf17476102d"
+ID: "836e167e-9b93-42a4-a1a5-1adf2dc64cc2"
+Parent: "d5ba8c18-ef45-460b-9d20-2fad995800db"
 Template: "72c58ec9-64be-41f7-b957-b6ea0e793352"
 Path: "/sitecore/templates/Branches/Project/LionTrust/Page Types/Fund Dashboard/$name/_Local/BC019 - My Funds Lister"
 DB: master
+BranchID: "817d30af-b9d5-4e8a-882f-bf6c8993ca9a"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: 
 Languages:
 - Language: en
   Versions:
@@ -11,7 +16,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210714T103153Z
+      Value: 20210901T161900Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
