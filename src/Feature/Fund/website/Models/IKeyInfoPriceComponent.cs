@@ -16,9 +16,6 @@
         [SitecoreField(Constants.KeyInfoPriceComponent.Comparator2Label_FieldId)]
         string Comparator2Label { get; set; }
 
-        [SitecoreField(Constants.KeyInfoPriceComponent.DurationLabel_FieldId)]
-        string DurationLabel { get; set; }
-
         [SitecoreField(Constants.KeyInfoPriceComponent.FundSizeLabel_FieldId)]
         string FundSizeLabel { get; set; }
 
