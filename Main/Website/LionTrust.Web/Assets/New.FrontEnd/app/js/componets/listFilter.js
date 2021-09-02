@@ -39,11 +39,116 @@ export default () => {
     "October",
     "November",
     "December",
-  ];
+  ];  
+
+  const optionField = Vue.component("option-field", {
+    name: "option-field",
+    data: function () {
+      return {
+        checked: false,
+      };
+    },
+    methods: {
+      clearChecked() {
+        this.checked = false;
+      },
+    },
+    created: function () {
+      this.$parent.$on("clearOptionField", this.clearChecked);
+    },
+  });
+
+  const selectField = Vue.component("select-field", {
+    name: "select-field",
+    components: { optionField },
+    data: function () {
+      return {
+        open: false,
+        active: 0,
+      };
+    },
+    methods: {
+      toggleOption() {
+        this.$parent.$children.forEach(child =>  {
+            child.open = false
+          })
+        this.open = !this.open;
+      },
+      hideOption() {
+        this.open = false;
+      },
+      clearOption() {
+        this.active = 0;
+        this.$emit("clearOptionField");
+      },
+      setChoosen(val) {
+        if (val) this.active++;
+        else this.active--;
+      },
+    },
+    mounted() {
+      document.querySelector("body").addEventListener("click", () => {
+        this.open = false;
+      });
+    },
+    created() {
+      this.$parent.$on("clearOption", this.clearOption);
+    },
+  });
+
+  const articleItem = Vue.component("article-item", {
+    name: "article-item",
+    data: function () {
+      return {};
+    },
+    methods: {
+      showLiteratureOverlay(fundId) {
+        $.ajax({
+          url: `${root}api/sitecore/FundLiterature/GetOverlayHtml?fundId=${fundId}&literatureId=${literatureId}`,
+        }).done(function (data) {
+          $(".lit-overlay__wrapper").html(data).addClass("active");
+        });
+      },
+    },
+  });  
+
+  const fundItem = Vue.component("fund-item", {
+    name: "fund-item",
+    data: function () {
+      return {};
+    },
+  });
+
+  const documentItem = Vue.component("document-item", {
+    name: "document-item",
+    props: ["id", "title"],
+    mixins: [baseDownloadChild],
+    data: function () {
+      return {
+        selected: false,
+      };
+    },
+    methods: {
+      selectDocument() {
+        this.$parent.setDocumentId(this.id);
+      },
+      downloadDocument() {
+        API.downloadDocument(
+          `${host}/DownloadDocuments`,
+          {
+            downloadFileIds: this.id,
+          },
+          this.title,
+          ".pdf"
+        );
+      },
+    },
+  });
 
   new Vue({
     el: "#lister-app",
     mixins: [pagination, baseDownloadParent],
+    components: { selectField, articleItem, documentItem },
     data: {
       facets: {},
       params: {},
@@ -60,8 +165,8 @@ export default () => {
       mobileFilter: false,
       months: [],
       years: [],
-      month: "",
-      year: "",
+      month: "All",
+      year: "All",
       grid: false,
       activeButton: false,
     },
@@ -84,12 +189,15 @@ export default () => {
         if (existElem !== -1) this.params[facet.name].splice(existElem, 1);
         else this.params[facet.name].push(item.identifier);
       },
+      hideSelects() {
+        console.log('hide');
+      },
 
       getQueryString() {
         let str = "";
         str = str + "page=" + this.page;
         if (this.searchText) str = str + "&searchTerm=" + this.searchText;
-		if (ref) str = str + "&ref=" + ref;
+        if (ref) str = str + "&ref=" + ref;
         for (let prop in this.params) {
           const mutatedProp = prop.replace(/ /g, "");
           const lowerCaseProp =
@@ -129,17 +237,13 @@ export default () => {
       },
 
       setMonth(month) {
-        if(month === "All")
-          this.params.month = []
-        else
-          this.params.month = [month];
+        if (month === "All") this.params.month = [];
+        else this.params.month = [month];
       },
 
       setYear(year) {
-        if(year === "All")
-          this.params.year = [];
-        else
-          this.params.year = [year];
+        if (year === "All") this.params.year = [];
+        else this.params.year = [year];
       },
 
       showSort() {
@@ -246,95 +350,5 @@ export default () => {
       });
     },
   });
-
-  Vue.component("select-field", {
-    data: function () {
-      return {
-        open: false,
-        active: 0,
-      };
-    },
-    methods: {
-      toggleOption() {
-        this.open = !this.open;
-      },
-      clearOption() {
-        this.active = 0;
-        this.$emit("clearOptionField");
-      },
-      setChoosen(val) {
-        if (val) this.active++;
-        else this.active--;
-      },
-    },
-    mounted() {
-      document.querySelector("body").addEventListener("click", () => {
-        this.open = false;
-      });
-    },
-    created() {
-      this.$parent.$on("clearOption", this.clearOption);
-    },
-  });
-
-  Vue.component("option-field", {
-    data: function () {
-      return {
-        checked: false,
-      };
-    },
-    methods: {
-      clearChecked() {
-        this.checked = false;
-      },
-    },
-    created: function () {
-      this.$parent.$on("clearOptionField", this.clearChecked);
-    },
-  });
-
-  Vue.component("article-item", {
-    data: function () {
-      return {};
-    },
-    methods: {
-      showLiteratureOverlay(fundId) {
-        $.ajax({
-          url: `${root}api/sitecore/FundLiterature/GetOverlayHtml?fundId=${fundId}&literatureId=${literatureId}`,
-        }).done(function (data) {
-          $(".lit-overlay__wrapper").html(data).addClass("active");
-        });
-      },
-    },
-  });
-
-  Vue.component("fund-item", {
-    data: function () {
-      return {};
-    },
-  });
-
-  Vue.component("document-item", {
-    props: ["id", "title"],
-    mixins: [baseDownloadChild],
-    data: function () {
-      return {
-        selected: false,
-      };
-    },
-    methods: {
-      selectDocument() {
-        this.$parent.setDocumentId(this.id);
-      },
-      downloadDocument() {
-        API.downloadDocument(
-          `${host}/DownloadDocuments`,
-          {
-            downloadFileIds: this.id,
-          },
-          this.title
-        );
-      },
-    },
-  });
+          this.title,
 };
