@@ -214,7 +214,7 @@
             public const string ChargesLabel_FieldId = "{387F89AE-2912-44ED-84DC-4662A8ED3522}";
             public const string InitialChargeLabel_FieldId = "{CC91AAA4-ED02-49F4-9027-551ABFFDF4D4}";
             public const string OngoingChargesLabel_FieldId = "{5F132CC3-50F5-42F1-8308-9C751685F733}";
-            public const string IncludedOFCLabel_FieldId = "{1417C905-79BB-487B-AF65-2209B53803F6}";
+            public const string AnnualManagementChargeLabel_FieldId = "{1417C905-79BB-487B-AF65-2209B53803F6}";
         }
 
         public static class KeyInfoPriceComponent

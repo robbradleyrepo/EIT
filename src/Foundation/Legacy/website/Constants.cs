@@ -88,7 +88,7 @@ namespace LionTrust.Foundation.Legacy
             public const string PriceDate_FieldId = "{B3EB8F9D-7CD1-47F8-8CFB-442B41FF7AAF}";
             public const string DistributionDate_FieldId = "{13F2C43D-55BB-42F0-ACC8-D0DA1AB614DC}";
             public const string ExDividendDate_FieldId = "{1BE14077-37B7-419D-9E00-03086878B221}";
-            public const string IncludedOFC_FieldId = "{5F35477A-DE20-4C19-AC91-D5110F62A1AE}";
+            public const string AnnualManagementChargeFieldId = "{5F35477A-DE20-4C19-AC91-D5110F62A1AE}";
             public const string InitialCharge_FieldId = "{CAD6096A-0D1F-4D69-986A-F5749A2856F9}";
             public const string ISINCode_FieldId = "{2B509BE7-A54F-4663-9104-4E07D51C060B}";
             public const string OngoingCharges_FieldId = "{0FE085F4-C693-4F16-AEE8-9C2ABFA66A4A}";

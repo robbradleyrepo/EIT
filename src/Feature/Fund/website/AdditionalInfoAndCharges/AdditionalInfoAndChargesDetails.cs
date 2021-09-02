@@ -33,10 +33,9 @@
 
         private static AdditionalInfoAndChargesModel Consolidate(AdditionalInfoAndChargesModel model, FundDataResponseModel apiData)
         {
-            /// TBD
-            if (string.IsNullOrEmpty(model.IncludedOFC))
+            if (string.IsNullOrEmpty(model.AnnualManagementCharge))
             {
-
+                model.AnnualManagementCharge = apiData.AnnualManagementCharge;
             }
 
             if (string.IsNullOrEmpty(model.InitialCharge))
@@ -66,7 +65,7 @@
         {
             return new AdditionalInfoAndChargesModel
             {                
-                IncludedOFC = fundClass.IncludedOFC,
+                AnnualManagementCharge = fundClass.AnnualManagemnetCharge,
                 InitialCharge = fundClass.InitialCharge,
                 ISINCode = fundClass.ISINCode,
                 OngoingCharges = fundClass.OngoingCharges,

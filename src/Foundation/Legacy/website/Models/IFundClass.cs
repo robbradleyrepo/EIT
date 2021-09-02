@@ -45,9 +45,6 @@
         [SitecoreField(Constants.FundClass.ExDividendDate_FieldId)]
         DateTime ExDividendDate { get; set; }
 
-        [SitecoreField(Constants.FundClass.IncludedOFC_FieldId)]
-        string IncludedOFC { get; set; }
-
         [SitecoreField(Constants.FundClass.InitialCharge_FieldId)]
         string InitialCharge { get; set; }
 
@@ -62,5 +59,8 @@
 
         [SitecoreField(Constants.FundClass.FactsheetFieldId)]
         Image Factsheet { get; set; } 
+
+        [SitecoreField(Constants.FundClass.AnnualManagementChargeFieldId)]
+        string AnnualManagemnetCharge { get; set; }
     }
 }

@@ -19,8 +19,8 @@
         [SitecoreField(Constants.AdditionalInfoAndChargesComponent.ExDividendDateLabel_FieldId)]
         string ExDividendDateLabel { get; set; }
 
-        [SitecoreField(Constants.AdditionalInfoAndChargesComponent.IncludedOFCLabel_FieldId)]
-        string IncludedOFCLabel { get; set; }
+        [SitecoreField(Constants.AdditionalInfoAndChargesComponent.AnnualManagementChargeLabel_FieldId)]
+        string AnnualManagementChargeLabel { get; set; }
 
         [SitecoreField(Constants.AdditionalInfoAndChargesComponent.InitialChargeLabel_FieldId)]
         string InitialChargeLabel { get; set; }

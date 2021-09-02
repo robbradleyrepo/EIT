@@ -2,7 +2,7 @@
 {
     public class AdditionalInfoAndChargesModel
     {                
-        public string IncludedOFC { get; set; }
+        public string AnnualManagementCharge { get; set; }
 
         public string InitialCharge { get; set; }
 

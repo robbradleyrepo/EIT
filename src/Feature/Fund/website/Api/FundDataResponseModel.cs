@@ -193,6 +193,9 @@
 
         [JsonProperty("Cumulative5yQuart_DE")]
         public string Cumulative5yQuart { get; set; }
+
+        [JsonProperty("AMC")]
+        public string AnnualManagementCharge { get; set; }
     }
 
     public class RegionBreakdown

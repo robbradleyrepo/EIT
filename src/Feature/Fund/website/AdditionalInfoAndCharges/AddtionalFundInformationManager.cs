@@ -34,9 +34,7 @@
                 SedolCode = string.IsNullOrEmpty(fundClass.SedolCode) ? apiData?.SedolCode : fundClass.SedolCode,
                 ISINCode = string.IsNullOrEmpty(fundClass.ISINCode) ? apiData?.ISINCode : fundClass.ISINCode,
                 InitialCharge = string.IsNullOrEmpty(fundClass.InitialCharge) ? apiData?.InitialCharge : fundClass.InitialCharge,
-
-                /// TODO
-                IncludedOFC = "TODO"
+                AnnualManagementCharge = string.IsNullOrEmpty(fundClass.AnnualManagemnetCharge) ? apiData?.AnnualManagementCharge : fundClass.AnnualManagemnetCharge,
             };
 
             return result;
