@@ -350,5 +350,4 @@ export default () => {
       });
     },
   });
-          this.title,
 };
