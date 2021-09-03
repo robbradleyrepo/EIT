@@ -85,6 +85,7 @@
     <Content Include="Views\Search\SearchResults.cshtml" />
     <Content Include="Views\Search\_SiteSearchFilters.cshtml" />
     <Content Include="Views\Search\SearchHeader.cshtml" />
+    <Content Include="Views\Search\FundCategoryLister.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -120,6 +121,7 @@
     <Compile Include="Models\API\Response\FacetsResponse.cs" />
     <Compile Include="Models\API\Response\SearchResponse.cs" />
     <Compile Include="Models\IArticleLister.cs" />
+    <Compile Include="Models\IFundCategoryLister.cs" />
     <Compile Include="Models\IMyFundsLister.cs" />
     <Compile Include="Models\IFundLister.cs" />
     <Compile Include="Models\IPagination.cs" />

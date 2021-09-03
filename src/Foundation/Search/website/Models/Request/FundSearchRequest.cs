@@ -1,5 +1,6 @@
 ﻿namespace LionTrust.Foundation.Search.Models.Request
 {
+    using System;
     using System.Collections.Generic;
 
     public class FundSearchRequest : ISearchRequest
@@ -23,5 +24,7 @@
         public int Skip { get; set; }
 
         public int Take { get; set; }
+
+        public IEnumerable<string> Ids { get; set; }
     }
 }

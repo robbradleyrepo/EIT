@@ -1,4 +1,7 @@
-﻿namespace LionTrust.Foundation.Search.Models.Request
+﻿using System;
+using System.Collections.Generic;
+
+namespace LionTrust.Foundation.Search.Models.Request
 {
     public interface ISearchRequest
     {

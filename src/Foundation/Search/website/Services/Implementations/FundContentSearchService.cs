@@ -10,6 +10,7 @@
     using LionTrust.Foundation.Search.Services.Interfaces;
     using Sitecore.ContentSearch.Linq.Utilities;
     using Sitecore.ContentSearch.Utilities;
+    using Sitecore.Data;
 
     public class FundContentSearchService : IFundContentSearchService
     {
@@ -100,6 +101,19 @@
                                                                                      .Or(item => !item.SalesforceFundId.Contains(salesforceFundId)));
 
                 predicate = predicate.And(excludeFundsPredicate);
+            }
+
+            if (fundSearchRequest.Ids != null && fundSearchRequest.Ids.Any())
+            {
+                var fundsPredicate = PredicateBuilder.False<FundSearchResultItem>();
+                fundsPredicate = fundSearchRequest
+                                            .Ids.Select(x => new ID(x))
+                                                    .Aggregate(fundsPredicate,
+                                                                    (current, id)
+                                                                                => current
+                                                                                     .Or(item => item.ItemId == id));
+
+                predicate = predicate.And(fundsPredicate);
             }
 
             predicate = predicate.And(fundFilter);

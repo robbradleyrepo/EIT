@@ -136,5 +136,16 @@
             public const string SortAZLabel_FieldId = "{0680177D-A5DE-4F84-8CAE-986FD4B00B57}";
             public const string SortZALabel_FieldId_FieldId = "{EA75175B-B960-4494-BD20-FD5B3B949934}";
         }
+
+        public static class FundCategoryLister
+        {
+            public const string Title_FieldId = "{5A4EAB30-2BF3-4114-859A-EA1CA9BB7038}";
+            public const string FundLiterature_FieldId = "{41D3ED13-4F5D-4EEC-8D59-79D3605C8751}";
+            public const string ViewFundCtaText_FieldId = "{DDD1C9B5-E9AA-4B9C-8570-3694B53F6D70}";
+            public const string AllDocumentsCtaText_FieldId = "{9A13416A-E0A8-4DC6-8066-F191B629BB69}";
+            public const string FollowCtaText_FieldId = "{5B37AF69-DE18-400A-B5AC-B401F8C1360C}";
+            public const string FactsheetCtaText_FieldId = "{C3A8028A-BE37-4140-9D2E-63A547702AC0}";
+            public const string Funds_FieldId = "{E4C0659D-9D40-4A6F-A117-0D9045D62FE6}";
+        }
     }
 }

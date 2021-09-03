@@ -1,0 +1,33 @@
+﻿---
+ID: "4de59390-440b-423d-8e36-e43c1dab4d82"
+Parent: "f01915af-1185-4618-bed1-e59f75b098c6"
+Template: "f01915af-1185-4618-bed1-e59f75b098c6"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Search/Fund Category Lister/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210902T150320Z
+    - ID: "41d3ed13-4f5d-4eec-8d59-79d3605c8751"
+      Hint: FundCategoryLister_FundLiterature
+      Value: "{2A60AA49-72DB-4D51-A5FB-E4F25B1B9E19}"
+    - ID: "5b37af69-de18-400a-b5ac-b401f8c1360c"
+      Hint: FundCategoryLister_FollowLabel
+      Value: Follow
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "9a13416a-e0a8-4dc6-8066-f191b629bb69"
+      Hint: FundCategoryLister_AllDocumentsCTAText
+      Value: All Documents
+    - ID: "c3a8028a-be37-4140-9d2e-63a547702ac0"
+      Hint: FundCategoryLister_FactSheetLabel
+      Value: Factsheet
+    - ID: "ddd1c9b5-e9aa-4b9c-8570-3694b53f6d70"
+      Hint: FundCategoryLister_ViewFundCTAText
+      Value: View fund

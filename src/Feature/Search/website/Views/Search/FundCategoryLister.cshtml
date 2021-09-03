@@ -1,0 +1,45 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using Sitecore.Configuration
+@model LionTrust.Feature.Search.Models.IFundCategoryLister
+@if (Model != null)
+{
+    <div class="lister-app" id="lister-app" data-funds="@string.Join("|", Model.Funds)" data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.FundApiRoute_SettingName))" data-literatureid="@(Model.FundLiterature != null ? Model.FundLiterature.Id.ToString() : string.Empty)">
+    <h2 class="h3 text-center mt-3 mt-lg-4">
+        @Html.Glass().Editable(Model, m => m.Title)</h2>
+    <section class="container">
+        <div class="text-center my-5" v-if="loading">
+            <div class="spinner-border text-gold" role="status"></div>
+        </div>
+        <article-item inline-template v-for="(fund, i) in searchData" :key="i + fund.fundName">
+            <div class="fund-item-list">
+                <div class="row align-items-center">
+                    <div class="col-xl-4">
+                        <span class="fund-item-list__title mb-lg-3 mb-xl-0">{{fund.fundName}}</span>
+
+                    </div>
+                    <div class="col-lg-3 col-xl-2">
+                        <div class="fund-item-list__badge">
+                            <span class="badge-secondary">
+                                {{fund.fundTeamName}}
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="fund-item-list__links">
+                            <a :href="fund.fundFactSheet" target="_blank" class="link-gray">@Model.FactsheetLabel) <i class="icon-file"></i></a>
+                            <button class="link-gray view-documents" @@click="showLiteratureOverlay(fund.fundId)">@Model.AllDocumentsLabel) <i class="icon-folder"></i></button>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-2">
+                        <div class="fund-item-list__right-btn">
+                            <a :href="fund.url" class="btn btn-primary-forward">
+                                @Model.ViewFundCtaText <i class="icon-arrow-right animate-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <article-item />
+    </section>
+</div>
+}
