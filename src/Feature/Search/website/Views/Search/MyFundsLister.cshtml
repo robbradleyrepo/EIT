@@ -4,181 +4,198 @@
 @model LionTrust.Feature.Search.Models.IMyFundsLister
 @if (Model != null)
 {
-    <div class="lister-app" id="lister-app" data-ref="@WebUtil.GetQueryString(LionTrust.Foundation.Contact.Constants.QueryStringNames.EmailPreferencefParams.RefQueryStringKey)" data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.MyFundsApiRoute_SettingName))" data-literatureid="@(Model.FundLiterature != null ? Model.FundLiterature.Id.ToString() : string.Empty)" data-fundfacetid="@(Model.FacetsConfiguration != null ? Model.FacetsConfiguration.Id.ToString() : string.Empty)">
-    <h2 class="h3 text-center mt-3 mt-lg-4">
-        @Html.Glass().Editable(Model, m => m.Title)</h2>
-    <div class="article-filter-wrapper">
-        <div class="article-filters" :class="mobileFilter ? 'active' : ''">
-            <div class="article-filters__header d-lg-none">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-2 d-lg-none">
-                            <div class="article-filters__main-title">
-                                @Html.Glass().Editable(Model, m => m.FiltersLabel)
-                                <i id="filters-close" @@click="toggleMobileFilter" class="icon-close"></i>
+    <div class="lister-app" id="lister-app"
+         data-ref="@WebUtil.GetQueryString(LionTrust.Foundation.Contact.Constants.QueryStringNames.EmailPreferencefParams.RefQueryStringKey)"
+         data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.MyFundsApiRoute_SettingName))"
+         data-literatureid="@(Model.FundLiterature != null ? Model.FundLiterature.Id.ToString() : string.Empty)"
+         data-fundfacetid="@(Model.FacetsConfiguration != null ? Model.FacetsConfiguration.Id.ToString() : string.Empty)">
+        <h2 class="h3 text-center mt-3 mt-lg-4">
+            @Html.Glass().Editable(Model, m => m.Title)
+        </h2>
+        <div class="article-filter-wrapper">
+            <div class="article-filters" :class="mobileFilter ? 'active' : ''">
+                <div class="article-filters__header d-lg-none">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-2 d-lg-none">
+                                <div class="article-filters__main-title">
+                                    @Html.Glass().Editable(Model, m => m.FiltersLabel)
+                                    <i id="filters-close" @@click="toggleMobileFilter" class="icon-close"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="article-filters__body article-filters__body_no-bg" v-if="getFacetsLength">
-                <div class="container">
-                    <div class="row">
-                        <select-field inline-template v-for="(facet, i) in getFacets" :key="i">
-                            <div class="col-lg-2 relative" @@click.stop>
-                                <div class="article-filters__select" @@click="toggleOption" :class="open ? 'active' : ''">
-                                    <span class="article-filters__item-title" :class="active ? 'active' : ''">
-                                        {{facet.name}}
-                                    </span>
-                                    <i class="article-filters__icon-arrow"></i>
-                                </div>
-                                <div class="article-filters__options">
-                                    <div class="article-filters__title" @@click="toggleOption">
-                                        <i class="icon-chevron-left"></i>
-                                        {{facet.name}}
+                <div class="article-filters__body article-filters__body_no-bg" v-if="getFacetsLength">
+                    <div class="container">
+                        <div class="row">
+                            <select-field inline-template v-for="(facet, i) in getFacets" :key="i">
+                                <div class="col-lg-2 relative" @@click.stop>
+                                    <div class="article-filters__select" @@click="toggleOption" :class="open ? 'active' : ''">
+                                        <span class="article-filters__item-title">
+                                            {{facet.name}}
+                                        </span>
+                                        <i class="article-filters__icon-arrow"></i>
                                     </div>
-                                    <option-field inline-template v-for="(item, i) in facet.items" :for="item.name" :key="i + item.name">
-                                        <label class="option-checkbox">
-                                            <input :id="item.name" class="option-checkbox__input" type="checkbox" v-model="checked" @@change="toggleSelect(item, facet)" @@click="setChoosen(!checked)">
-                                            <span class="option-checkbox__text">{{item.name}} </span>
-                                            <span class="option-checkbox__icon"></span>
-                                        </label>
-                                    </option-field>
+                                    <div class="article-filters__options">
+                                        <div class="article-filters__title" @@click="hideOption">
+                                            <i class="icon-chevron-left"></i>
+                                            {{facet.name}}
+                                        </div>
+                                        <option-field inline-template v-for="(item, i) in facet.items" :for="item.name" :key="i + item.name">
+                                            <label class="option-checkbox">
+                                                <input :id="item.name" class="option-checkbox__input" type="checkbox" v-model="checked" @@change="toggleSelect(item, facet)">
+                                                <span class="option-checkbox__text">{{item.name}} </span>
+                                                <span class="option-checkbox__icon"></span>
+                                            </label>
+                                        </option-field>
+                                    </div>
+                                </div>
+                            </select-field>
+                            <div class="col-lg-3">
+                                <div class="article-filters__btns justify-content-start">
+                                    <button class="btn article-filters__btn article-filters__btn_apply d-none d-xl-block"
+                                            @@click="applyFilters"
+                                            :class="activeButton ? 'article-filters__btn_primary' : ''">
+                                        @Html.Glass().Editable(Model, m => m.ApplyFiltersLabel)
+                                    </button>
+                                    <button class="clear-filter btn article-filters__btn article-filters__btn_clear d-none d-xl-block" @@click="clearFilters">
+                                        @Html.Glass().Editable(Model, m => m.ClearFiltersLabel)
+                                    </button>
+                                    <btn @@click="applyFilters"
+                                         class="btn btn-clean d-none d-md-block d-xl-none"
+                                         :class="activeButton ? 'text-primary' : ''"
+                                         @@click="toggleMobileFilter">
+                                        <i class="icon-filter"></i> @Html.Glass().Editable(Model, m => m.ApplyFiltersLabel)
+                                    </btn>
+                                    <btn @@click="clearFilters" class="btn btn-clean d-none d-md-block d-xl-none" @@click="toggleMobileFilter">
+                                        <i class="icon-refresh"></i> @Html.Glass().Editable(Model, m => m.ClearFiltersLabel)
+                                    </btn>
                                 </div>
                             </div>
-                        </select-field>
-                        <div class="col-lg-3">
-                            <div class="article-filters__btns justify-content-start">
-                                <button class="btn article-filters__btn article-filters__btn_apply" @@click="applyFilters" :class="activeButton ? 'article-filters__btn_primary' : ''">
+                            <div class="col-6 col-lg-2 offset-6 col-md-4 offset-md-8 offset-lg-10 margin-sort-btn d-none d-lg-block">
+                                <div class="relative">
+                                    <button class="btn btn-clean d-block ml-auto button-sort mt-1" @@click.stop="showSort">
+                                        @Html.Glass().Editable(Model, m => m.SortLabel) <i class="icon-sort"></i>
+                                    </button>
+                                    <div class="sort-dropdown" :class="sortModal ? 'active' : ''">
+                                        <div class="text-right">
+                                            <span class="btn btn-clean">
+                                                @Html.Glass().Editable(Model, m => m.SortLabel) <i class="icon-sort"></i>
+                                            </span>
+                                        </div>
+                                        <label for="newest" class="option-checkbox">
+                                            <input id="newest" v-model="sortOrder" value="ASC" class="option-checkbox__input" type="radio" name="sort" checked>
+                                            <span class="option-checkbox__text">@Html.Glass().Editable(Model, m => m.SortAZLabel)</span>
+                                            <span class="option-checkbox__icon"></span>
+                                        </label>
+                                        <label for="oldest" class="option-checkbox">
+                                            <input id="oldest" v-model="sortOrder" value="DESC" class="option-checkbox__input" type="radio" name="sort">
+                                            <span class="option-checkbox__text">@Html.Glass().Editable(Model, m => m.SortZALabel)</span>
+                                            <span class="option-checkbox__icon"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="article-filters__footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6">
+                                <button class="btn btn-primary min-width-100">
                                     @Html.Glass().Editable(Model, m => m.ApplyFiltersLabel)
                                 </button>
-                                <button class="clear-filter btn article-filters__btn article-filters__btn_clear ml-3" @@click="clearFilters">
+                            </div>
+                            <div class="col-6">
+                                <button class="clear-filter btn btn-primary-forward min-width-100">
                                     @Html.Glass().Editable(Model, m => m.ClearFiltersLabel)
                                 </button>
                             </div>
                         </div>
-                        <div class="col-6 col-lg-2 offset-6 col-md-4 offset-md-8 offset-lg-10 margin-sort-btn d-none d-lg-block">
-                            <div class="relative">
-                                <button class="btn btn-clean d-block ml-auto button-sort mt-1" @@click.stop="showSort">
-                                    @Html.Glass().Editable(Model, m => m.SortLabel) <i class="icon-sort"></i>
-                                </button>
-                                <div class="sort-dropdown" :class="sortModal ? 'active' : ''">
-                                    <div class="text-right">
-                                        <span class="btn btn-clean">
-                                            @Html.Glass().Editable(Model, m => m.SortLabel) <i class="icon-sort"></i>
-                                        </span>
-                                    </div>
-                                    <label for="newest" class="option-checkbox">
-                                        <input id="newest" v-model="sortOrder" value="ASC" class="option-checkbox__input" type="radio" name="sort" checked>
-                                        <span class="option-checkbox__text">@Html.Glass().Editable(Model, m => m.SortAZLabel)</span>
-                                        <span class="option-checkbox__icon"></span>
-                                    </label>
-                                    <label for="oldest" class="option-checkbox">
-                                        <input id="oldest" v-model="sortOrder" value="DESC" class="option-checkbox__input" type="radio" name="sort">
-                                        <span class="option-checkbox__text">@Html.Glass().Editable(Model, m => m.SortZALabel)</span>
-                                        <span class="option-checkbox__icon"></span>
-                                    </label>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-lg-2 offset-6 col-md-4 offset-md-8 offset-lg-10 margin-sort-btn d-lg-none">
+                        <div class="relative">
+                            <button class="btn btn-clean d-block ml-auto button-sort" @@click.stop="showSort">
+                                @Html.Glass().Editable(Model, m => m.SortLabel) <i class="icon-sort"></i>
+                            </button>
+                            <div class="sort-dropdown" :class="sortModal ? 'active' : ''">
+                                <div class="text-right">
+                                    <span class="btn btn-clean">
+                                        @Html.Glass().Editable(Model, m => m.SortLabel) <i class="icon-sort"></i>
+                                    </span>
                                 </div>
+                                <label for="newest" class="option-checkbox">
+                                    <input id="newest" v-model="sortOrder" value="ASC" class="option-checkbox__input" type="radio" name="sort" checked>
+                                    <span class="option-checkbox__text">@Html.Glass().Editable(Model, m => m.SortAZLabel)</span>
+                                    <span class="option-checkbox__icon"></span>
+                                </label>
+                                <label for="oldest" class="option-checkbox">
+                                    <input id="oldest" v-model="sortOrder" value="DESC" class="option-checkbox__input" type="radio" name="sort">
+                                    <span class="option-checkbox__text">@Html.Glass().Editable(Model, m => m.SortZALabel)</span>
+                                    <span class="option-checkbox__icon"></span>
+                                </label>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="article-filters__footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-6">
-                            <button class="btn btn-primary min-width-100">
-                                @Html.Glass().Editable(Model, m => m.ApplyFiltersLabel)
-                            </button>
-                        </div>
-                        <div class="col-6">
-                            <button class="clear-filter btn btn-primary-forward min-width-100">
-                                @Html.Glass().Editable(Model, m => m.ClearFiltersLabel)
-                            </button>
-                        </div>
-                    </div>
-                </div>
+        </div>
+
+        <div class="container d-lg-none" v-if="getFacetsLength">
+            <div class="d-flex justify-content-between margin-mob-fliter-btn w-100" :class="!mobileFilter ? 'relative' : ''">
+                <btn id="show-article-fliter" class="btn btn-clean" @@click="toggleMobileFilter">
+                    <i class="icon-filter"></i> @Html.Glass().Editable(Model, m => m.FiltersLabel)
+                </btn>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                        <div class="col-6 col-lg-2 offset-6 col-md-4 offset-md-8 offset-lg-10 margin-sort-btn">
-                            <div class="relative">
-                                <button class="btn btn-clean d-block ml-auto button-sort" @@click.stop="showSort">
-                                    @Html.Glass().Editable(Model, m => m.SortLabel) <i class="icon-sort"></i>
+
+        <section class="container">
+            <div class="text-center my-5" v-if="loading">
+                <div class="spinner-border text-gold" role="status"></div>
+            </div>
+            <article-item inline-template v-for="(fund, i) in searchData" :key="i + fund.fundName">
+                <div class="fund-item-list">
+                    <div class="row align-items-center">
+                        <div class="col-xl-4">
+                            <span class="fund-item-list__title mb-lg-3 mb-xl-0">{{fund.fundName}}</span>
+
+                        </div>
+                        <div class="col-lg-3 col-xl-2">
+                            <div class="fund-item-list__badge">
+                                <span class="badge-secondary">
+                                    {{fund.fundTeamName}}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-xl-6">
+                            <div class="fund-item-list__btns">
+                                <button @@click="showLiteratureOverlay(fund.fundId)" class="btn btn-primary">
+                                    @Html.Glass().Editable(Model, m => m.AllDocumentsLabel) <i class="icon-folder"></i>
                                 </button>
-                                <div class="sort-dropdown" :class="sortModal ? 'active' : ''">
-                                    <div class="text-right">
-                                        <span class="btn btn-clean">
-                                            @Html.Glass().Editable(Model, m => m.SortLabel) <i class="icon-sort"></i>
-                                        </span>
-                                    </div>
-                                    <label for="newest" class="option-checkbox">
-                                        <input id="newest" v-model="sortOrder" value="ASC" class="option-checkbox__input" type="radio" name="sort" checked>
-                                        <span class="option-checkbox__text">@Html.Glass().Editable(Model, m => m.SortAZLabel)</span>
-                                        <span class="option-checkbox__icon"></span>
-                                    </label>
-                                    <label for="oldest" class="option-checkbox">
-                                        <input id="oldest" v-model="sortOrder" value="DESC" class="option-checkbox__input" type="radio" name="sort">
-                                        <span class="option-checkbox__text">@Html.Glass().Editable(Model, m => m.SortZALabel)</span>
-                                        <span class="option-checkbox__icon"></span>
-                                    </label>
-                                </div>
+                                <a :href="fund.fundUpdateUrl" target="_blank" class="btn btn-primary-forward min-width-auto">@Html.Glass().Editable(Model, m => m.UpdateFundCtaText)</a>
+                                <a :href="fund.url" class="btn btn-link">
+                                    @Html.Glass().Editable(Model, m => m.ViewFundCtaText)
+                                    <i class="icon-arrow-right animate-arrow"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-</div>
-
-    <div class="container d-lg-none" v-if="getFacetsLength">
-        <div class="d-flex justify-content-between margin-mob-fliter-btn w-100" :class="!mobileFilter ? 'relative' : ''">
-            <btn id="show-article-fliter" class="btn btn-clean" @@click="toggleMobileFilter">
-                <i class="icon-filter"></i> @Html.Glass().Editable(Model, m => m.FiltersLabel)
-            </btn>
-        </div>
-    </div>
-    <section class="container">
-        <div class="text-center my-5" v-if="loading">
-            <div class="spinner-border text-gold" role="status"></div>
-        </div>
-        <article-item inline-template v-for="(fund, i) in searchData" :key="i + fund.fundName">
-            <div class="fund-item-list">
-                <div class="row align-items-center">
-                    <div class="col-xl-4">
-                        <span class="fund-item-list__title mb-lg-3 mb-xl-0">{{fund.fundName}}</span>
-
-                    </div>
-                    <div class="col-lg-3 col-xl-2">
-                        <div class="fund-item-list__badge">
-                            <span class="badge-secondary">
-                                {{fund.fundTeamName}}
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-lg-9 col-xl-6">
-                        <div class="fund-item-list__btns">
-                            <button @@click="showLiteratureOverlay(fund.fundId)" class="btn btn-primary">
-                                @Html.Glass().Editable(Model, m => m.AllDocumentsLabel) <i class="icon-folder"></i>
-                            </button>
-                            <a :href="fund.fundUpdateUrl" target="_blank" class="btn btn-primary-forward min-width-auto">@Html.Glass().Editable(Model, m => m.UpdateFundCtaText)</a>
-                            <a :href="fund.url" class="btn btn-link">
-                                @Html.Glass().Editable(Model, m => m.ViewFundCtaText)
-                                <i class="icon-arrow-right animate-arrow"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <article-item />
+        </section>
+        <div class="container d-lg-none" v-if="getFacetsLength">
+            <div class="d-flex justify-content-between margin-mob-fliter-btn">
+                <btn id="show-article-fliter" class="btn btn-clean">
+                    <i class="icon-filter"></i> @Html.Glass().Editable(Model, m => m.FiltersLabel)
+                </btn>
             </div>
-            <article-item />
-    </section>
-    <div class="container d-lg-none" v-if="getFacetsLength">
-        <div class="d-flex justify-content-between margin-mob-fliter-btn">
-            <btn id="show-article-fliter" class="btn btn-clean">
-                <i class="icon-filter"></i> @Html.Glass().Editable(Model, m => m.FiltersLabel)
-            </btn>
         </div>
+        @Html.Partial("~/Views/Search/_Pagination.cshtml", Model)
     </div>
-    @Html.Partial("~/Views/Search/_Pagination.cshtml", Model)
-</div>
 }

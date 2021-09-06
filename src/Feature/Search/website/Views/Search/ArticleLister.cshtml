@@ -5,7 +5,9 @@
 @model LionTrust.Feature.Search.Models.IArticleLister
 @if (Model != null)
 {
-    <div id="lister-app" data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.ArticleApiRoute_SettingName))" data-contenttype="@Model.ContentType">
+    <div id="lister-app" 
+         data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.ArticleApiRoute_SettingName))" 
+         data-contenttype="@Model.ContentType">
         <div class="article-filter-wrapper">
             <div class="article-filters" :class="mobileFilter ? 'active' : ''">
                 <div class="article-filters__header">
@@ -41,7 +43,7 @@
                                         <i class="article-filters__icon-arrow"></i>
                                     </div>
                                     <div class="article-filters__options">
-                                        <div class="article-filters__title" @@click="toggleOption">
+                                        <div class="article-filters__title" @@click="hideOption">
                                             <i class="icon-chevron-left"></i>
                                             {{facet.name}}
                                         </div>
@@ -64,7 +66,7 @@
                                         <i class="article-filters__icon-arrow"></i>
                                     </div>
                                     <div class="article-filters__options article-filters__options_small">
-                                        <div class="article-filters__title" @@click="toggleOption">
+                                        <div class="article-filters__title" @@click="hideOption">
                                             <i class="icon-chevron-left"></i>
                                             @Model.YearLabel
                                         </div>
@@ -75,10 +77,10 @@
                                                 <span class="option-checkbox__icon"></span>
                                             </label>
                                         </option-field>
-                                        <option-field inline-template v-for="(year, i) in years" :key="i">
-                                            <label class="option-checkbox" @@click="setChoosen(!checked)">
-                                                <input class="option-checkbox__input" name="year" v-model="year" :value="year" type="radio" @@click="setYear(year)">
-                                                <span class="option-checkbox__text">{{year}}</span>
+                                        <option-field inline-template v-for="(yearItem, i) in years" :key="i">
+                                            <label class="option-checkbox option-checkbox_small" @@click="setChoosen(!checked)">
+                                                <input class="option-checkbox__input" name="year" v-model="year" :value="yearItem" type="radio" @@click="setYear(yearItem)">
+                                                <span class="option-checkbox__text">{{yearItem}}</span>
                                                 <span class="option-checkbox__icon"></span>
                                             </label>
                                         </option-field>
@@ -94,7 +96,7 @@
                                         <i class="article-filters__icon-arrow"></i>
                                     </div>
                                     <div class="article-filters__options article-filters__options_small">
-                                        <div class="article-filters__title" @@click="toggleOption">
+                                        <div class="article-filters__title" @@click="hideOption">
                                             <i class="icon-chevron-left"></i>
                                             @Model.MonthLabel
                                         </div>
@@ -105,10 +107,10 @@
                                                 <span class="option-checkbox__icon"></span>
                                             </label>
                                         </option-field>
-                                        <option-field inline-template v-for="(month, i) in months" :key="i">
-                                            <label class="option-checkbox" @@click="setChoosen(!checked)">
-                                                <input class="option-checkbox__input" name="month" type="radio" v-model="month" :value="month" @@click="setMonth(month)">
-                                                <span class="option-checkbox__text">{{month}}</span>
+                                        <option-field inline-template v-for="(monthItem, i) in months" :key="i">
+                                            <label class="option-checkbox option-checkbox_small" @@click="setChoosen(!checked)">
+                                                <input class="option-checkbox__input" name="month" type="radio" v-model="month" :value="monthItem" @@click="setMonth(monthItem)">
+                                                <span class="option-checkbox__text">{{monthItem}}</span>
                                                 <span class="option-checkbox__icon"></span>
                                             </label>
                                         </option-field>
@@ -117,12 +119,23 @@
                             </select-field>
                             <div class="col-lg-2 ml-auto">
                                 <div class="article-filters__btns">
-                                    <button class="btn article-filters__btn article-filters__btn_apply" @@click="applyFilters" :class="activeButton ? 'article-filters__btn_primary' : ''">
+                                    <button class="btn article-filters__btn article-filters__btn_apply d-none d-xl-block"
+                                            @@click="applyFilters"
+                                            :class="activeButton ? 'article-filters__btn_primary' : ''">
                                         @Model.FilterLabel
                                     </button>
-                                    <button class="clear-filter btn article-filters__btn article-filters__btn_clear" @@click="clearFilters">
+                                    <button class="clear-filter btn article-filters__btn article-filters__btn_clear d-none d-xl-block" @@click="clearFilters">
                                         @Model.ClearFiltersLabel
                                     </button>
+                                    <btn @@click="applyFilters"
+                                         class="btn btn-clean d-none d-md-block d-xl-none"
+                                         :class="activeButton ? 'text-primary' : ''"
+                                         @@click="toggleMobileFilter">
+                                        <i class="icon-filter"></i> @Model.FilterLabel
+                                    </btn>
+                                    <btn @@click="clearFilters" class="btn btn-clean d-none d-md-block d-xl-none" @@click="toggleMobileFilter">
+                                        <i class="icon-refresh"></i> @Model.ClearFiltersLabel
+                                    </btn>
                                 </div>
                             </div>
                         </div>
@@ -174,6 +187,7 @@
                 </div>
             </div>
         </div>
+
         <div class="container d-lg-none" v-if="getFacetsLength">
             <div class="d-flex justify-content-between margin-mob-fliter-btn" :class="!mobileFilter ? 'relative' : ''">
                 <btn id="show-article-fliter" class="btn btn-clean" @@click="toggleMobileFilter">
@@ -278,17 +292,17 @@
                                 </div>
                                 <div class="article-promo__footer-item"></div>
 
-                                </div>
-
-                                <img class="article-promo__back"
-                                     :src="article.imageUrl" :alt="article.title" :style="{opacity: article.imageOpacity}">
                             </div>
+
+                            <img class="article-promo__back"
+                                 :src="article.imageUrl" :alt="article.title" :style="{opacity: article.imageOpacity}">
+                        </div>
                         <div class="article-promo" v-else-if="article.category === 'Magazine & Reports'">
                             <a :href="article.url" class="article-promo__front">
                             </a>
                             <a :href="article.url" class="article-promo__body">
                                 <div class="article-promo__head">
-                                    <span v-if="article.topics"  class="article-promo__head-title">
+                                    <span v-if="article.topics" class="article-promo__head-title">
                                         <span v-for="(topic, i) in article.topics" :key="topic">
                                             {{topic}}
                                             <span v-if="article.topics.length > 1 && i < article.topics.length - 1" class="dot-divider"></span>
