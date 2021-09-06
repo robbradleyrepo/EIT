@@ -1,0 +1,30 @@
+﻿---
+ID: "8533745c-d1c5-40bf-9400-c24ce908d4a9"
+Parent: "627f37e5-aab0-4c9f-9ae7-fb4563f3dd2f"
+Template: "a33314f8-d9aa-4710-b47a-9f66ba58ab13"
+Path: "/sitecore/content/LionTrustNew/Home/Data Template/Fund Multi Assets Category Page/_Local/UI016 - Fund Manager Component"
+DB: master
+BranchID: "f99e0a5b-d9b4-45ca-8304-311c93a7737e"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{AAD761CE-CE32-4208-BC47-63A98DBBE363}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210905T134152Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "742fa605-ec20-4ec8-87fd-9e7daeb8bc84"
+      Hint: FundManagers_Managers
+      Type: Multilist
+      Value: |
+        {BD0F07D0-8CC0-41E5-8105-3BA43C9E9DC8}
+        {039DD4F1-8CEE-408B-A206-93ACB8B512D6}
+        {5A4AD063-A365-4A9E-A33C-F53D23FFDD7F}

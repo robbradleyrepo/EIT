@@ -1,0 +1,29 @@
+﻿---
+ID: "7fbe7666-d2e9-4f8d-a8ac-f340659ea9e1"
+Parent: "eeddcce3-e1be-4cda-826f-0a18316eab4d"
+Template: "a480f54b-9112-4249-8f45-b98cba01228c"
+Path: "/sitecore/templates/Branches/Project/LionTrust/Page Types/Fund Multi Assets Category Page/$name/_Local/BC024 - Fund Overview"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210609T134918Z
+    - ID: "361f876b-0d9b-4827-a7ad-f9245a3a79a2"
+      Hint: FundOverview_DownloadCTA
+      Value: |
+        <link text="Download CTA" anchor="" linktype="internal" class="" title=""  querystring="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "624e51ce-f2ee-48a1-b49f-eb4a852b713f"
+      Hint: FundOverview_LatestUpdateCTA
+      Value: |
+        <link text="Latest Update CTA 1" anchor="" linktype="internal" class="" title=""  querystring="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
+    - ID: "8730606f-4236-4c61-8859-16cb35541365"
+      Hint: FundOverview_Fund
+      Value: "{B0C7AC70-3895-49C4-8F3C-4DF11EFEDC46}"
