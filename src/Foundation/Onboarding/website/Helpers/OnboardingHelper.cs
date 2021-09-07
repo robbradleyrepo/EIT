@@ -14,6 +14,12 @@
     using Sitecore.Diagnostics;
     using Sitecore.XConnect.Collection.Model;
     using Sitecore.XConnect.Client;
+    using System.Xml.Linq;
+    using System.Xml;
+    using Sitecore.Analytics.Tracking;
+    using Contact = Sitecore.XConnect.Contact;
+    using Sitecore.Analytics.Data;
+    using Sitecore.Analytics.Model;
 
     public static class OnboardingHelper
     {
@@ -201,6 +207,87 @@
             }
 
             return contact;
+        }
+
+        public static void AddPointsFromProfileCard(IOnboardingConfiguration configuration, IProfileCard profileCard)
+        {
+            var scores = new Dictionary<string, double>();
+
+            var profile = GetProfile(configuration.Profile.Name, true);
+
+            if (profileCard != null && !string.IsNullOrEmpty(profileCard.ProfileCardValue))
+            {
+                try
+                {
+                    var xmlData = XDocument.Parse(profileCard.ProfileCardValue);
+                    var xmlDoc = xmlData;
+
+                    if (xmlDoc != null)
+                    {
+                        var parentNode = xmlDoc.Descendants(Analytics.ProfileCardValueKey_XmlElementName);
+
+                        if (parentNode != null)
+                        {
+                            foreach (var childrenNode in parentNode)
+                            {
+                                if (childrenNode.HasAttributes
+                                    && childrenNode.Attribute(Analytics.ProfileCardValueName_XmlAttribute) != null && !string.IsNullOrWhiteSpace(childrenNode.Attribute(Analytics.ProfileCardValueName_XmlAttribute).Value)
+                                    && childrenNode.Attribute(Analytics.ProfileCardValueValue_XmlAttribute) != null && !string.IsNullOrWhiteSpace(childrenNode.Attribute(Analytics.ProfileCardValueValue_XmlAttribute).Value))
+                                {
+                                    scores.Add(childrenNode.Attribute(Analytics.ProfileCardValueName_XmlAttribute).Value, Convert.ToDouble(childrenNode.Attribute(Analytics.ProfileCardValueValue_XmlAttribute).Value));
+                                }
+                            }
+
+                            if (scores.Any(s => s.Value > 0))
+                            {
+                                profile.Score(scores);
+                            }
+
+                            // update the pattern based on the scores you updated - this is supposed to be called from Score as well
+                            // but doesn't always update unless you call it explicitly
+                            profile.UpdatePattern();
+                        }
+                    }
+                }
+                catch (XmlException ex)
+                {
+                    Log.Error($"Xml for profile card is invalid. Value is {profileCard.ProfileCardValue}", ex);
+                }
+            }
+        }
+
+        public static Profile GetProfile(string profileName, bool createNew = false)
+        {
+            Profile profile = null;
+
+            if (Tracker.Current != null && Tracker.Current.Interaction != null && Tracker.Current.Interaction.Profiles != null)
+            {
+
+                if (Tracker.Current.Interaction.Profiles.ContainsProfile(profileName))
+                {
+                    if (createNew)
+                    {
+                        Tracker.Current.Interaction.Profiles.Remove(profileName);
+                    }
+                    else
+                    {
+                        profile = Tracker.Current.Interaction.Profiles[profileName];
+                    }
+                }
+
+                if (profile == null && createNew)
+                {
+                    var listOfProfileData = new List<ProfileData>()
+                    {
+                        new ProfileData(profileName)
+                    };
+
+                    Tracker.Current.Interaction.Profiles.Initialize(listOfProfileData);
+                    profile = Tracker.Current.Interaction.Profiles[profileName];
+                }
+            }
+
+            return profile;
         }
     }
 }

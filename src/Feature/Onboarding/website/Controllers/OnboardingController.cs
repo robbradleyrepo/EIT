@@ -1,7 +1,6 @@
 ﻿namespace LionTrust.Feature.Onboarding.Controllers
 {
     using Glass.Mapper.Sc.Web.Mvc;
-    using LionTrust.Feature.Onboarding.Analytics;
     using LionTrust.Feature.Onboarding.Models;
     using LionTrust.Foundation.Onboarding.Helpers;
     using LionTrust.Foundation.Onboarding.Models;
@@ -10,9 +9,7 @@
     using Sitecore.Analytics.Model;
     using Sitecore.Analytics.Tracking;
     using Sitecore.Annotations;
-    using Sitecore.Configuration;
     using Sitecore.Mvc.Controllers;
-    using Sitecore.XConnect;
     using Sitecore.XConnect.Client;
     using Sitecore.XConnect.Collection.Model;
     using System;
@@ -27,14 +24,12 @@
     {
         private IMvcContext _context;
         private readonly BaseLog _log;
-        private readonly IProfileCardManager _cardManager;
         private ITracker _tracker;
 
-        public OnboardingController(IMvcContext context, BaseLog log, ITrackerResolver resolver, IProfileCardManager cardManager)
+        public OnboardingController(IMvcContext context, BaseLog log, ITrackerResolver resolver)
         {
             _context = context;
             this._log = log;
-            this._cardManager = cardManager;
             _tracker = resolver.GetTracker();
         }
 
@@ -167,23 +162,15 @@
                 }
                 else
                 {
-                    var profile = GetProfile(data.OnboardingConfiguration.Profile.Name, true);
 
-                    if (profile != null)
-                    {
-                        var investor = data.OnboardingConfiguration.ChooseInvestorRole?
-                            .FirstOrDefault()?
-                            .Investors?
-                            .FirstOrDefault(x => x.Id == OnboardingSubmit.InvestorId);
+                    var investor = data.OnboardingConfiguration.ChooseInvestorRole?
+                        .FirstOrDefault()?
+                        .Investors?
+                        .FirstOrDefault(x => x.Id == OnboardingSubmit.InvestorId);
 
-                        _cardManager.AddPointsFromProfileCard(investor.ProfileCard, profile);
+                    OnboardingHelper.AddPointsFromProfileCard(data.OnboardingConfiguration, investor.ProfileCard);
 
-                        TrackAnonymousUser(OnboardingSubmit.Country);
-                    }
-                    else
-                    {
-                        _log.Error("Profile not found", this);
-                    }
+                    TrackAnonymousUser(OnboardingSubmit.Country);
                 }
             }
             else
@@ -271,7 +258,7 @@
             using (XConnectClient client = Sitecore.XConnect.Client.Configuration.SitecoreXConnectClientConfiguration.GetClient())
             {
                 var contact = OnboardingHelper.GetContact(client);
-                var profile = GetProfile(config.Profile.Name);
+                var profile = OnboardingHelper.GetProfile(config.Profile.Name);
 
                 if (!string.IsNullOrWhiteSpace(contact?.Addresses()?.PreferredAddress?.CountryCode) 
                     && profile != null && profile.PatternId.HasValue 
@@ -299,40 +286,6 @@
             }
 
             Response.SetCookie(currentTab);
-        }
-
-        private Profile GetProfile(string profileName, bool createNew = false)
-        {
-            Profile profile = null;
-
-            if (_tracker != null && _tracker.Interaction != null && _tracker.Interaction.Profiles != null)
-            {
-
-                if (_tracker.Interaction.Profiles.ContainsProfile(profileName))
-                {
-                    if (createNew)
-                    {
-                        _tracker.Interaction.Profiles.Remove(profileName);
-                    }
-                    else
-                    {
-                        profile = _tracker.Interaction.Profiles[profileName];
-                    }
-                }
-
-                if (profile == null && createNew)
-                {
-                    var listOfProfileData = new List<ProfileData>()
-                    {
-                        new ProfileData(profileName)
-                    };
-
-                    _tracker.Interaction.Profiles.Initialize(listOfProfileData);
-                    profile = _tracker.Interaction.Profiles[profileName];
-                }
-            }
-
-            return profile;
         }
 
         public void TrackAnonymousUser(string country)
