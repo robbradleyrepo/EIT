@@ -36,7 +36,7 @@
             }
             else if (data.SelectedArticles != null && data.SelectedArticles.Any())
             {
-                articles = data.SelectedArticles.Where(x => OnboardingHelper.HasAccess(x.Fund?.FundReference?.ExcludedCountries))?.OrderByDescending(x => x.Date).Take(6);
+                articles = data.SelectedArticles.Where(x => OnboardingHelper.HasAccess(x.Fund?.ExcludedCountries))?.OrderByDescending(x => x.Date).Take(6);
             }
             else
             {

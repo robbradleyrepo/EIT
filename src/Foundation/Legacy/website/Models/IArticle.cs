@@ -28,8 +28,5 @@
 
         [SitecoreField(Constants.Article.CreatedDate_FieldId)]
         DateTime CreatedDate { get; set; }
-
-        [SitecoreField(Constants.Article.Fund_FieldId, SitecoreFieldType.Treelist, "Article page data")]
-        IFundPage Fund { get; set; }
     }
 }

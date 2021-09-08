@@ -38,7 +38,7 @@
 
             if (datasource.Articles != null && datasource.Articles.Any())
             {
-                datasource.Articles = datasource.Articles.Where(a => OnboardingHelper.HasAccess(a.Fund?.FundReference?.ExcludedCountries));
+                datasource.Articles = datasource.Articles.Where(a => OnboardingHelper.HasAccess(a.Fund?.ExcludedCountries));
                 result.FeaturedArticles = FeaturedArticleLink.Map(datasource);
             }
             else if (datasource.Children != null && datasource.Children.Any())

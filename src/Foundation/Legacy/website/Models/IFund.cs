@@ -2,6 +2,7 @@
 {
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
+    using Glass.Mapper.Sc.Fields;
     using LionTrust.Foundation.Onboarding.Models;
     using System;
     using System.Collections.Generic;
@@ -46,5 +47,8 @@
 
         [SitecoreField(Constants.FundAccess.ExcludedCountires_FieldId)]
         IEnumerable<ICountry> ExcludedCountries { get; set; }
+
+        [SitecoreField(Constants.FundPage.Page_FieldId)]
+        Link Page { get; set; }
     }
 }

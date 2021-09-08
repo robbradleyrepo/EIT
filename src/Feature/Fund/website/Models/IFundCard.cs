@@ -2,8 +2,9 @@
 {
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
+    using LionTrust.Foundation.Legacy.Models;
 
-    public interface IFundCard : IFundPage
+    public interface IFundCard : IFund
     {
         [SitecoreField(Constants.FundCard.ImageFieldId)]
         Image Image{ get; set; }

@@ -16,6 +16,7 @@
     using LionTrust.Feature.Fund.Repository;
     using FundSearchResultItem = Foundation.Search.Models.ContentSearch.FundSearchResultItem;
     using Sitecore.Data;
+    using LionTrust.Foundation.Legacy.Models;
 
     public class MyFundsScrollerController: SitecoreController
     {

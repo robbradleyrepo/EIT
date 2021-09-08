@@ -30,7 +30,7 @@
                 }
                 @if (Model.Fund != null)
                 {
-                    <span class="article-promo__head-title">@Html.Glass().Editable(Model.Fund, m => m.PageTitle)</span>
+                    <span class="article-promo__head-title">@Html.Glass().Editable(Model.Fund, m => m.FundName)</span>
                 }
                 else if (Sitecore.Context.PageMode.IsExperienceEditor)
                 {

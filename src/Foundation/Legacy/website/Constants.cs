@@ -70,7 +70,7 @@ namespace LionTrust.Foundation.Legacy
 
         public static class FundPage 
         {
-            public const string FundReference_FieldId = "{CCE4E679-7E94-450D-8CC1-691BDF17CA78}";
+            public const string Page_FieldId = "{E43F6E86-0318-4766-B880-0C4F6512CA4E}";
         }
 
         public static class FundClass
@@ -143,6 +143,8 @@ namespace LionTrust.Foundation.Legacy
 
             public const string ExcludeInSearchResults_FieldName = "LegacyPresentationBase_ExcludeInSearchResults";
             public const string ExcludeInSearchResults_FieldId = "{C7D0C7F7-B27C-4F96-B813-32BB19174B6A}";
+
+            public const string FundReference_FieldId = "{CCE4E679-7E94-450D-8CC1-691BDF17CA78}";
         }
 
         public static class FundOverviewData

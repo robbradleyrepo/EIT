@@ -28,7 +28,7 @@
             }
             else
             {
-                datasource.Articles = datasource.Articles.Where(a => OnboardingHelper.HasAccess(a.Fund?.FundReference?.ExcludedCountries))?.Take(3);
+                datasource.Articles = datasource.Articles.Where(a => OnboardingHelper.HasAccess(a.Fund?.ExcludedCountries))?.Take(3);
             }
 
             return View("/views/article/RelatedArticles.cshtml", datasource);

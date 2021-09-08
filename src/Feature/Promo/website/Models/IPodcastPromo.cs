@@ -33,7 +33,7 @@
         [SitecoreChildren]
         IEnumerable<IPodcastLink> PodcastLinks { get; set; }
 
-        [SitecoreField(LionTrust.Foundation.Legacy.Constants.FundPage.FundReference_FieldId)]
+        [SitecoreField(Foundation.Legacy.Constants.PresentationBase.FundReference_FieldId)]
         IFund Fund { get; set; }
     }
 }

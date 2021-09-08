@@ -37,7 +37,7 @@
             else if (HasSelectedArticles(articleScrollerViewModel))
             {
                 articleScrollerViewModel.ArticleList = articleScrollerViewModel.ArticleScroller.SelectedArticles
-                    .Where(a => OnboardingHelper.HasAccess(a.Fund?.FundReference?.ExcludedCountries))?
+                    .Where(a => OnboardingHelper.HasAccess(a.Fund?.ExcludedCountries))?
                     .OrderByDescending(a => a.Date);
             }
             else if (IsFilterSet(articleScrollerViewModel.ArticleScroller))
