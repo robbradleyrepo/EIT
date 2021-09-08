@@ -196,6 +196,12 @@
 
         [JsonProperty("AMC")]
         public string AnnualManagementCharge { get; set; }
+
+        [JsonProperty("FundSize")]
+        public string FundSize { get; set; }
+
+        [JsonProperty("NumberOfHoldings")]
+        public string NumberOfHoldings { get; set; }
     }
 
     public class RegionBreakdown

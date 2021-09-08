@@ -153,6 +153,11 @@
     <Compile Include="FundPerformance\FundPerformanceGraphController.cs" />
     <Compile Include="FundPerformance\FundPerformanceGraphViewModel.cs" />
     <Compile Include="FundPerformance\IFundPerformanceGraph.cs" />
+    <Compile Include="FundStats\FundStatsController.cs" />
+    <Compile Include="FundStats\FundStatsData.cs" />
+    <Compile Include="FundStats\FundStatsDetails.cs" />
+    <Compile Include="FundStats\FundStatsViewModel.cs" />
+    <Compile Include="FundStats\IFundStatsDetails.cs" />
     <Compile Include="GeographicalBreakdown\GeographicalBreakdownController.cs" />
     <Compile Include="GeographicalBreakdown\GeographicalBreakdownManager.cs" />
     <Compile Include="GeographicalBreakdown\IGeographicalBreakdownManager.cs" />

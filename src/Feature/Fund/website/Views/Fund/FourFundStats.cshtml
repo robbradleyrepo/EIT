@@ -1,21 +1,21 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
-@model LionTrust.Feature.Fund.Models.IFourFundStats
-@if (Model != null && Model.Fund != null)
+@model LionTrust.Feature.Fund.FundStats.FundStatsViewModel
+@if (Model != null && Model.FundSelector != null && Model.FundSelector.Fund != null)
 {
     <section class="container">
         <div class="fund-stats">
             <div class="row">
                 <div class="col-lg-3">
                     <div class="fund-stats__item">
-                        <span class="fund-stats__title">@Html.Glass().Editable(Model, m => m.FundLaunchDateLabel)</span>
+                        <span class="fund-stats__title">@Html.Glass().Editable(Model.FundSelector, m => m.FundLaunchDateLabel)</span>
                         <span class="fund-stats__value">
                             @if (Sitecore.Context.PageMode.IsExperienceEditor)
                             {
-                                using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Fund/FourFundStats", Model.Fund.Id.ToString(), "Edit Fund Launch date"))
+                                using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Fund/FourFundStats", Model.FundSelector.Fund.Id.ToString(), "Edit Fund Launch date"))
                                 {
-                                    if (Model.Fund.LaunchDate != null)
+                                    if (Model.FundSelector.Fund.LaunchDate != null)
                                     {
-                                        @Model.Fund.LaunchDate.ToString("dd/MM/yyyy")
+                                        @Model.FundSelector.Fund.LaunchDate.ToString("dd/MM/yyyy")
                                     }
                                     else
                                     {
@@ -25,9 +25,13 @@
                             }
                             else
                             {
-                                if (Model.Fund.LaunchDate != null)
+                                if (Model.FundValues != null)
                                 {
-                                    @Model.Fund.LaunchDate.ToString("dd/MM/yyyy")
+                                    @Model.FundValues.FundDate;
+                                }
+                                else
+                                {
+                                    @Html.Glass().Editable(Model.FundSelector.Fund, m => m.LaunchDate.ToString("dd/MM/yyyy"))
                                 }
                             }
                         </span>
@@ -35,25 +39,39 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="fund-stats__item">
-                        <span class="fund-stats__title">@Html.Glass().Editable(Model, m => m.FundSizeLabel)</span>
+                        <span class="fund-stats__title">@Html.Glass().Editable(Model.FundSelector, m => m.FundSizeLabel)</span>
                         <span class="fund-stats__value">
-                            @Html.Glass().Editable(Model.Fund, m => m.FundSize)
+                            @if (Model.FundValues != null && !Sitecore.Context.PageMode.IsExperienceEditor)
+                            {
+                                @Model.FundValues.FundSize
+                            }
+                            else
+                            {
+                                @Html.Glass().Editable(Model.FundSelector.Fund, m => m.FundSize)
+                            }
                         </span>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="fund-stats__item">
-                        <span class="fund-stats__title">@Html.Glass().Editable(Model, m => m.NumberOfHoldingsLabel)</span>
+                        <span class="fund-stats__title">@Html.Glass().Editable(Model.FundSelector, m => m.NumberOfHoldingsLabel)</span>
                         <span class="fund-stats__value">
-                            @Html.Glass().Editable(Model.Fund, m => m.NumberOfHoldings)
+                            @if (Model.FundValues != null && !Sitecore.Context.PageMode.IsExperienceEditor)
+                            {
+                                @Model.FundValues.Holdings
+                            }
+                            else
+                            {
+                                @Html.Glass().Editable(Model.FundSelector.Fund, m => m.NumberOfHoldings)
+                            }
                         </span>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="fund-stats__item">
-                        <span class="fund-stats__title">@Html.Glass().Editable(Model, m => m.ManagedByCurrentTeamForLabel)</span>
+                        <span class="fund-stats__title">@Html.Glass().Editable(Model.FundSelector, m => m.ManagedByCurrentTeamForLabel)</span>
                         <span class="fund-stats__value">
-                            @Html.Glass().Editable(Model, m => m.ManagedByCurrentTeamForValue)
+                            @Html.Glass().Editable(Model.FundSelector, m => m.ManagedByCurrentTeamForValue)
                         </span>
                     </div>
                 </div>
@@ -63,7 +81,7 @@
 }
 else if (Sitecore.Context.PageMode.IsExperienceEditor)
 {
-<div style="background-color:black">
-    <span style="color:white">Add datasource for Four Fund Stats Component</span>
-</div>
+    <div style="background-color:black">
+        <span style="color:white">Add datasource for Four Fund Stats Component</span>
+    </div>
 }
