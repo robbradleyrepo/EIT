@@ -105,7 +105,7 @@ export default () => {
     methods: {
       showLiteratureOverlay(fundId) {
         $.ajax({
-          url: `${root}api/sitecore/FundLiterature/GetOverlayHtml?fundId=${fundId}&literatureId=${literatureId}`,
+          url: `${root}/api/sitecore/FundLiterature/GetOverlayHtml?fundId=${fundId}&literatureId=${literatureId}`,
         }).done(function (data) {
           $(".lit-overlay__wrapper").html(data).addClass("active");
         });
