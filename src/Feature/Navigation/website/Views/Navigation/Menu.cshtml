@@ -92,7 +92,7 @@
                 <div class="user-status_hr"></div>
                 <span class="user-status__text">
                     @Html.Glass().Editable(Model.HomeItem, z => z.YouAreViewingLabel) <span class="user-status__name">@Model.HomeItem.OnboardingRoleName</span>
-                    <i class="icon-chevron user-status__icon"></i>
+                    | <a href="@Model.HomeItem.ChangeInvestorUrl" class="user-status__change-type">@Html.Glass().Editable(Model.HomeItem, m => m.ChangeLabel)</a>
                 </span>
             </div>
         </div>

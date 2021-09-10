@@ -15,6 +15,7 @@
     using static LionTrust.Feature.MyPreferences.Constants;
     using static LionTrust.Foundation.Contact.Constants;
     using static LionTrust.Foundation.Onboarding.Constants;
+    using QueryStringNames = Foundation.Contact.Constants.QueryStringNames;
 
     public class RegisterInvestorController : SitecoreController
     {

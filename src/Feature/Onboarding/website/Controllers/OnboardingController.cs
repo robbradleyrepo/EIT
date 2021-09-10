@@ -33,7 +33,7 @@
             _tracker = resolver.GetTracker();
         }
 
-        public ActionResult Render()
+        public ActionResult Render(bool change = false)
         {
             var data = _context.GetHomeItem<IHome>();
 
@@ -50,7 +50,7 @@
             {
                 return null;
             }
-            else if (OnboardingComplete(data.OnboardingConfiguration))
+            else if (!change && OnboardingComplete(data.OnboardingConfiguration))
             {
                 viewModel.ShowOnboarding = false;
             }
@@ -178,7 +178,12 @@
                 _log.Error("invalid data submitted", this);
             }
 
-            return Redirect(Request.Url.ToString());
+            var uriBuilder = new UriBuilder(Request.Url.ToString());
+            var query = HttpUtility.ParseQueryString(uriBuilder.Query);
+            query.Remove(Foundation.Onboarding.Constants.QueryStringNames.Change);
+            uriBuilder.Query = query.ToString();
+
+            return Redirect(uriBuilder.Uri.PathAndQuery);
         }
 
         private bool IsOnboardingConfigured(IHome data)
@@ -260,8 +265,8 @@
                 var contact = OnboardingHelper.GetContact(client);
                 var profile = OnboardingHelper.GetProfile(config.Profile.Name);
 
-                if (!string.IsNullOrWhiteSpace(contact?.Addresses()?.PreferredAddress?.CountryCode) 
-                    && profile != null && profile.PatternId.HasValue 
+                if (!string.IsNullOrWhiteSpace(contact?.Addresses()?.PreferredAddress?.CountryCode)
+                    && profile != null && profile.PatternId.HasValue
                     && config.ChooseInvestorRole.FirstOrDefault().Investors.Any(p => p.PatternCard.Id == profile.PatternId.Value))
                 {
                     result = true;
@@ -331,4 +336,3 @@
         }
     }
 }
-

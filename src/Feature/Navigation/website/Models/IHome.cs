@@ -38,5 +38,7 @@
         string OnboardingRoleName { get; set; }
 
         IHeaderConfiguration HeaderConfiguration { get; set; }
+
+        string ChangeInvestorUrl { get; set; }
     }
 }

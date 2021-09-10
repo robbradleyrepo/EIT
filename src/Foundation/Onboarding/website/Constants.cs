@@ -83,5 +83,10 @@
             public const string ExcludedCountires_FieldId = "{37CDAEBE-7CD2-4D45-BD7B-CB58C9585328}";
             public const string Header_FieldId = "{1B479915-F4DF-4559-AADB-F74A744C85B1}";
         }
+
+        public static class QueryStringNames
+        {
+            public const string Change = "change";
+        }
     }
 }
