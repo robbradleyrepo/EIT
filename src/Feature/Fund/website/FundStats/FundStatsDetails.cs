@@ -24,8 +24,7 @@
                 return new FundStatsData
                 {
                     Holdings = apiData.NumberOfHoldings,
-                    FundSize = apiData.FundSize,
-                    FundDate = apiData.UnitLaunchDate
+                    FundSize = apiData.FundSize
                 };
             }
             return null;

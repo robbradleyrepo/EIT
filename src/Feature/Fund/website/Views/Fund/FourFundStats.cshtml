@@ -25,14 +25,7 @@
                             }
                             else
                             {
-                                if (Model.FundValues != null)
-                                {
-                                    @Model.FundValues.FundDate;
-                                }
-                                else
-                                {
-                                    @Html.Glass().Editable(Model.FundSelector.Fund, m => m.LaunchDate.ToString("dd/MM/yyyy"))
-                                }
+                                @Html.Glass().Editable(Model.FundSelector.Fund, m => m.LaunchDate.ToString("dd/MM/yyyy"))
                             }
                         </span>
                     </div>
@@ -41,13 +34,13 @@
                     <div class="fund-stats__item">
                         <span class="fund-stats__title">@Html.Glass().Editable(Model.FundSelector, m => m.FundSizeLabel)</span>
                         <span class="fund-stats__value">
-                            @if (Model.FundValues != null && !Sitecore.Context.PageMode.IsExperienceEditor)
+                            @if (!string.IsNullOrWhiteSpace(Model.FundSelector.Fund.FundSize) || Sitecore.Context.PageMode.IsExperienceEditor)
                             {
-                                @Model.FundValues.FundSize
+                                @Html.Glass().Editable(Model.FundSelector.Fund, m => m.FundSize)
                             }
                             else
                             {
-                                @Html.Glass().Editable(Model.FundSelector.Fund, m => m.FundSize)
+                                @Model.FundValues.FundSize
                             }
                         </span>
                     </div>
@@ -56,13 +49,13 @@
                     <div class="fund-stats__item">
                         <span class="fund-stats__title">@Html.Glass().Editable(Model.FundSelector, m => m.NumberOfHoldingsLabel)</span>
                         <span class="fund-stats__value">
-                            @if (Model.FundValues != null && !Sitecore.Context.PageMode.IsExperienceEditor)
+                            @if (!string.IsNullOrWhiteSpace(Model.FundSelector.Fund.NumberOfHoldings) || Sitecore.Context.PageMode.IsExperienceEditor)
                             {
-                                @Model.FundValues.Holdings
+                                @Html.Glass().Editable(Model.FundSelector.Fund, m => m.NumberOfHoldings)
                             }
                             else
                             {
-                                @Html.Glass().Editable(Model.FundSelector.Fund, m => m.NumberOfHoldings)
+                                @Model.FundValues.Holdings
                             }
                         </span>
                     </div>
