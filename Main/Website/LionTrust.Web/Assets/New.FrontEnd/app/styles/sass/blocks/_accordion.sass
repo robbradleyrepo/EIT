@@ -24,6 +24,7 @@
         width: 100%
         position: inherit
     &__body
+        //color: #000000
         padding: 10px 0
         @include p-1-normal-20        
         @include breakpoint(desktop-large, up)
@@ -34,7 +35,7 @@
         font-size: 26px
         padding: 10px 0
         position: relative
-        border-bottom: 1px solid #414855
+        border-bottom: 1px solid $black
         align-items: center
         display: flex
         justify-content: space-between
@@ -114,3 +115,13 @@
         color: $gold
     .accordion__link.collapsed
         border-bottom: 1px solid #E9EDF0
+
+.accordion.accordion_black
+    .accordion__link
+        color: $black!important
+    .accordion__body
+        color: #000 
+    .accordion__link.collapsed
+        border-bottom: 1px solid #E9EDF0
+    .accordion__minus, .accordion__plus
+        color: $gold

@@ -170,6 +170,8 @@ export default () => {
       year: "All",
       grid: false,
       activeButton: false,
+      isCheckAll: false,
+
     },
     computed: {
       getFacets() {
@@ -177,7 +179,14 @@ export default () => {
       },
       getFacetsLength() {
         return this.facets.length;
+      }, 
+      checkedLength () {
+        return this.facets.filter(item => item.checked).length
       },
+  
+      allItemsChecked () {
+        return this.checkedLength === this.facets.length
+      }
     },
     methods: {
       // adding selected values to query params
@@ -193,13 +202,21 @@ export default () => {
       hideSelects() {
         console.log('hide');
       },
+      checkAll(){
+        let futureCheckedValue = true
 
+        if (this.allItemsChecked) {
+          futureCheckedValue = false
+        }
+
+        this.facet.items.forEach(item => item.checked = futureCheckedValue)
+      },
       getQueryString() {
         let str = "";
         str = str + "page=" + this.page;
         if (this.searchText) str = str + "&searchTerm=" + this.searchText;
         if (ref) str = str + "&ref=" + ref;
-		if(funds) str = str + "&ids=" + funds;
+		    if(funds) str = str + "&ids=" + funds;
         for (let prop in this.params) {
           const mutatedProp = prop.replace(/ /g, "");
           const lowerCaseProp =
