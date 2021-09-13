@@ -30,12 +30,12 @@
                                             if (Model.PrimaryCta != null)
                                             {
                                                 @Model.PrimaryCta.Text
+                                                <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
                                             }
                                             else if (Sitecore.Context.PageMode.IsExperienceEditor)
                                             {
                                                 @: Edit primary link
                                             }
-                                            <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
                                         }
 
                                         @using (@Html.Glass().BeginRenderLinkWithGoal(Model, m => m.SecondaryCta, Model.SecondaryCtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary-forward imagepromo__btn" } }, isEditable: true))
@@ -43,12 +43,12 @@
                                             if (Model.SecondaryCta != null)
                                             {
                                                 @Model.SecondaryCta.Text
+                                                <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
                                             }
                                             else if (Sitecore.Context.PageMode.IsExperienceEditor)
                                             {
                                                 @: Edit secondary link
                                             }
-                                            <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
                                         }
                                     </div>
                                 </div>
