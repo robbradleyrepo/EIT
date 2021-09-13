@@ -31,26 +31,11 @@
             UrlOptions urlOptions = LinkManager.GetDefaultUrlOptions();
             urlOptions.LowercaseUrls = true;
             urlOptions.AlwaysIncludeServerUrl = true;
-            // Copy option from setting
+            urlOptions.LanguageEmbedding = LanguageEmbedding.Never;
             urlOptions.SiteResolving = Settings.Rendering.SiteResolving;
-            // If we ever include the language in the path,
-            // then we always include the language in the canonical URL.
-            if (urlOptions.LanguageLocation == LanguageLocation.FilePath
-                && urlOptions.LanguageEmbedding != LanguageEmbedding.Never)
-            {
-                urlOptions.LanguageEmbedding = LanguageEmbedding.Always;
-            }
-            string url = LinkManager.GetItemUrl(item, urlOptions);
-            // Don't include /language.aspx for home pages.
-            if (urlOptions.LanguageEmbedding == LanguageEmbedding.Always)
-            {
-                string[] parsed = url.Split('/');
-                if (parsed.Length == 4)
-                {
-                    url = string.Join("/", new[] { parsed[0], parsed[1], parsed[2] }) + '/';
-                }
-            }
 
+            string url = LinkManager.GetItemUrl(item, urlOptions);
+            
             return url;
         }
 
