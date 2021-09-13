@@ -1,7 +1,7 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @using System.Collections.Specialized;
-@using LionTrust.Foundation.Onboarding.Helpers;
 @using LionTrust.Foundation.ORM.Extensions;
+@using LionTrust.Foundation.Navigation;
 
 @model LionTrust.Feature.Navigation.Models.NavigationViewModel
 @if (Model != null && Model.RootItem != null && Model.HomeItem != null)
@@ -23,7 +23,7 @@
                 @if (Model.HomeItem.MenuItems != null && Model.HomeItem.MenuItems.Any())
                 {
                     <ul class="navigation__list">
-                        @foreach (var menuItem in Model.HomeItem.MenuItems.Where(x => x.Fund == null || OnboardingHelper.HasAccess(x.Fund.ExcludedCountries)))
+                        @foreach (var menuItem in Model.HomeItem.MenuItems.WithAccessTo())
                         {
                             var filteredChildrens = menuItem.Children.Where(m => !m.ExcludeInSearchResults);
 
@@ -101,7 +101,7 @@
             {
                 <nav class="navigation navigation_desktop">
                     <ul class="navigation__list">
-                        @foreach (var menuItem in Model.HomeItem.MenuItems.Where(x => x.Fund == null || OnboardingHelper.HasAccess(x.Fund.ExcludedCountries)))
+                        @foreach (var menuItem in Model.HomeItem.MenuItems.WithAccessTo())
                         {
                             var filteredChildrens = menuItem.Children.Where(m => !m.ExcludeInSearchResults);
                             if (filteredChildrens != null && filteredChildrens.Any())
@@ -478,7 +478,7 @@
     if (Model.HomeItem.MenuItems != null && Model.HomeItem.MenuItems.Any())
     {
         <div class="navigation__sublinks-items">
-            @foreach (var menuItem in Model.HomeItem.MenuItems.Where(x => x.Fund == null || OnboardingHelper.HasAccess(x.Fund.ExcludedCountries)))
+            @foreach (var menuItem in Model.HomeItem.MenuItems.WithAccessTo())
             {
                 var filteredChildrens = menuItem.Children.Where(m => !m.ExcludeInSearchResults);
                 <div class="navigation__item">

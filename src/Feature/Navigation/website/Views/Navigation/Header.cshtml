@@ -1,5 +1,6 @@
 ﻿@using System.Collections.Specialized;
 @using Glass.Mapper.Sc.Web.Mvc;
+@using LionTrust.Foundation.Navigation;
 @using LionTrust.Foundation.Navigation.Models;
 @model LionTrust.Feature.Navigation.Models.NavigationViewModel
 @if (Model != null && Model.HomeItem != null && Model.RootItem != null)
@@ -80,7 +81,7 @@
                                                             if (firstNavigationColumn.PageLinks != null && firstNavigationColumn.PageLinks.Any())
                                                             {
                                                                 <ul class="dropdown-nav__list">
-                                                                    @foreach (var pageLink in firstNavigationColumn.PageLinks)
+                                                                    @foreach (var pageLink in firstNavigationColumn.PageLinks.WithAccessTo())
                                                                     {
                                                                         <li class="dropdown-nav__item">
                                                                             <a href="@pageLink.Url" class="dropdown-nav__link">@Html.Glass().Editable(pageLink, z => z.PageTitle)</a>
@@ -112,7 +113,7 @@
                                                             @if (secondNavigationColumn.PageLinks != null && secondNavigationColumn.PageLinks.Any())
                                                             {
                                                                 <ul class="dropdown-nav__list">
-                                                                    @foreach (var pageLink in secondNavigationColumn.PageLinks)
+                                                                    @foreach (var pageLink in secondNavigationColumn.PageLinks.WithAccessTo())
                                                                     {
                                                                         <li class="dropdown-nav__item">
                                                                             <a href="@pageLink.Url" class="dropdown-nav__link">@Html.Glass().Editable(pageLink, z => z.PageTitle)</a>
@@ -144,7 +145,7 @@
                                                                 @if (thirdNavigationColumn.PageLinks != null && thirdNavigationColumn.PageLinks.Any())
                                                                 {
                                                                     <ul class="dropdown-nav__list">
-                                                                        @foreach (var pageLink in thirdNavigationColumn.PageLinks)
+                                                                        @foreach (var pageLink in thirdNavigationColumn.PageLinks.WithAccessTo())
                                                                         {
                                                                             <li class="dropdown-nav__item">
                                                                                 <a href="@pageLink.Url" class="dropdown-nav__link">@Html.Glass().Editable(pageLink, z => z.PageTitle)</a>

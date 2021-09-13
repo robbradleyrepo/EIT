@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="Extensions.cs" />
     <Compile Include="Helpers\NavigationHelper.cs" />
     <Compile Include="Models\IAnchor.cs" />
     <Compile Include="Models\IHeaderConfiguration.cs" />
