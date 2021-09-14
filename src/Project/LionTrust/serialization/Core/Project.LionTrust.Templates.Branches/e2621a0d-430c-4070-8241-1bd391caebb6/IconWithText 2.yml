@@ -1,9 +1,14 @@
 ﻿---
-ID: "ea88950a-b7e4-48f9-a1e1-eb8980bd36e2"
-Parent: "c176f0de-c186-446e-93c0-1ca828aac074"
+ID: "095ea8ab-3441-498b-b2cd-18fc49195dfa"
+Parent: "e2621a0d-430c-4070-8241-1bd391caebb6"
 Template: "4c75fd4b-18bc-48b9-80ce-b9725c5e0aa7"
 Path: "/sitecore/templates/Branches/Project/LionTrust/Page Types/Fund Multi Assets Category Page/$name/_Local/BC002 - Banner with Icons/IconWithText 2"
 DB: master
+BranchID: "f99e0a5b-d9b4-45ca-8304-311c93a7737e"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{EA88950A-B7E4-48F9-A1E1-EB8980BD36E2}"
 Languages:
 - Language: en
   Versions:
@@ -14,8 +19,8 @@ Languages:
       Value: IconWithText 2
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210708T134957Z
+      Value: 20210914T140757Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\liontrust_admin
+        sitecore\admin

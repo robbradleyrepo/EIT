@@ -1,9 +1,14 @@
 ﻿---
-ID: "888d4747-bea7-429e-af19-dd5bd175463d"
-Parent: "94cef5f4-2251-4dd4-ae7d-9dc629f0fa0a"
+ID: "9ba0dd80-b97a-48ea-9cd0-e13faaf6c271"
+Parent: "f4259be7-fcd9-4d57-bb41-ffc8ba32c9c9"
 Template: "747a0143-8317-48af-a0f9-ad66af7df0cf"
 Path: "/sitecore/templates/Branches/Project/LionTrust/Page Types/Fund Multi Assets Category Page/$name/_Local/UI008 - Accordion/Accordion Row 1"
 DB: master
+BranchID: "f99e0a5b-d9b4-45ca-8304-311c93a7737e"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{888D4747-BEA7-429E-AF19-DD5BD175463D}"
 Languages:
 - Language: en
   Versions:
@@ -11,14 +16,14 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210708T135934Z
+      Value: 20210914T140759Z
     - ID: "38e1ed19-3192-47c2-a92b-55a8d15280d0"
       Hint: AccordionRow_Heading
       Value: Sustainable Finance Disclosure Regulation (SFDR)
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\liontrust_admin
+        sitecore\admin
     - ID: "e21c6470-0045-4fb7-8ce1-3b72f54d7ca4"
       Hint: AccordionRow_Copy
       Value: <p>sdfsdfds</p>

@@ -1,9 +1,10 @@
 ﻿---
-ID: "eeddcce3-e1be-4cda-826f-0a18316eab4d"
+ID: "86e6c9b8-81d9-49eb-8ccc-1e3234ca391b"
 Parent: "6b28afcf-fa3d-4505-a8d4-c56f384207e3"
 Template: "fff5f245-ffc0-4022-a998-9b07aa5e761f"
 Path: /sitecore/templates/Branches/Project/LionTrust/Page Types/Fund Multi Assets Category Page/$name/_Local
 DB: master
+BranchID: "f99e0a5b-d9b4-45ca-8304-311c93a7737e"
 SharedFields:
 - ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
   Hint: __Masters
@@ -38,9 +39,13 @@ SharedFields:
     {84CFF857-8E94-4207-AA38-C58BA8F5041A}
     {FBFECF7A-BB63-415C-98A5-CF095FF07C99}
     {AC5A5B49-B85A-4873-9EEB-1B0E43727DDC}
+    {F01915AF-1185-4618-BED1-E59F75B098C6}
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: "-1000"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{EEDDCCE3-E1BE-4CDA-826F-0A18316EAB4D}"
 Languages:
 - Language: en
   Versions:
@@ -48,8 +53,8 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210609T133247Z
+      Value: 20210914T140757Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\liontrust_admin
+        sitecore\admin

@@ -1,9 +1,14 @@
 ﻿---
-ID: "ec239516-0922-4086-8bcb-fe3832a22074"
-Parent: "eeddcce3-e1be-4cda-826f-0a18316eab4d"
+ID: "b18ad1ce-e28a-4b72-bd1e-8019b8a14b80"
+Parent: "86e6c9b8-81d9-49eb-8ccc-1e3234ca391b"
 Template: "c7ce8102-d47b-44cc-9a32-23ddf2142210"
 Path: "/sitecore/templates/Branches/Project/LionTrust/Page Types/Fund Multi Assets Category Page/$name/_Local/BC004 - Horizontal Scroll"
 DB: master
+BranchID: "f99e0a5b-d9b4-45ca-8304-311c93a7737e"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{EC239516-0922-4086-8BCB-FE3832A22074}"
 Languages:
 - Language: en
   Versions:
@@ -11,11 +16,11 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210622T091142Z
+      Value: 20210914T140757Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\liontrust_admin
+        sitecore\admin
     - ID: "fd89a7af-a29a-42dc-949c-5ce8f66f9c71"
       Hint: HorizontalScroll_Title
       Value: Our Investment Process

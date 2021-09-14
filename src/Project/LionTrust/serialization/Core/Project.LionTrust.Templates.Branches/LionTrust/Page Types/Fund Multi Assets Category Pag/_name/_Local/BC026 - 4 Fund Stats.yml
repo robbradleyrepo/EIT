@@ -1,9 +1,14 @@
 ﻿---
-ID: "1e655770-8876-4b61-85cc-d6aef8ae302b"
-Parent: "eeddcce3-e1be-4cda-826f-0a18316eab4d"
+ID: "b50ff873-2727-45f9-8dea-1ad54e8ccf49"
+Parent: "86e6c9b8-81d9-49eb-8ccc-1e3234ca391b"
 Template: "fef40064-216d-4888-93ef-a5e4a3d1e203"
 Path: "/sitecore/templates/Branches/Project/LionTrust/Page Types/Fund Multi Assets Category Page/$name/_Local/BC026 - 4 Fund Stats"
 DB: master
+BranchID: "f99e0a5b-d9b4-45ca-8304-311c93a7737e"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{1E655770-8876-4B61-85CC-D6AEF8AE302B}"
 Languages:
 - Language: en
   Versions:
@@ -14,7 +19,7 @@ Languages:
       Value: "{B0C7AC70-3895-49C4-8F3C-4DF11EFEDC46}"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210609T141834Z
+      Value: 20210914T140757Z
     - ID: "3dc4db39-af37-4bdc-b8a8-7c06458bb9b5"
       Hint: FourFundStats_FundSizeLabel
       Value: Fund Size2
@@ -27,7 +32,7 @@ Languages:
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\liontrust_admin
+        sitecore\admin
     - ID: "8e7a0a72-4f42-4fc3-8c5f-bb44152fd189"
       Hint: FourFundStats_ManagedByCurrentTeamForLabel
       Value: Managed by Current Team for4

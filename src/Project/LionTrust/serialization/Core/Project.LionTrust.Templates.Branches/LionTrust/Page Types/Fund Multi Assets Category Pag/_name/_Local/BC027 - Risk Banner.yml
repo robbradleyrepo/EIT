@@ -1,9 +1,14 @@
 ﻿---
-ID: "72c6ca7c-dfe2-4312-9c05-bd66407fab68"
-Parent: "eeddcce3-e1be-4cda-826f-0a18316eab4d"
+ID: "5f8977af-a779-401a-ad4f-72c99f26f098"
+Parent: "86e6c9b8-81d9-49eb-8ccc-1e3234ca391b"
 Template: "76ad2fd1-e1cb-4ea5-86f2-9baa9a902f74"
 Path: "/sitecore/templates/Branches/Project/LionTrust/Page Types/Fund Multi Assets Category Page/$name/_Local/BC027 - Risk Banner"
 DB: master
+BranchID: "f99e0a5b-d9b4-45ca-8304-311c93a7737e"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{72C6CA7C-DFE2-4312-9C05-BD66407FAB68}"
 Languages:
 - Language: en
   Versions:
@@ -11,11 +16,11 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210819T002445Z
+      Value: 20210914T140758Z
     - ID: "3194d921-a018-40c3-af6f-bcb17e3bbebc"
       Hint: RiskBanner_BannerText
       Value: Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them ca fall as well as rise.
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\liontrust_admin
+        sitecore\admin

@@ -1,13 +1,14 @@
 ﻿---
-ID: "fd6d13c0-17ab-46a9-8857-b3ce1cea1fe0"
-Parent: "91a70020-df09-48c4-bb0a-7fc4c990be5f"
+ID: "f11ce859-1583-49ca-bf55-20fcf2ac1995"
+Parent: "7de30dc6-8258-4e01-80f4-cd7868e386eb"
 Template: "73ba8165-b3ff-429e-9268-b91fafced6b9"
 Path: "/sitecore/templates/Branches/Project/LionTrust/Page Types/Fund Multi Assets Category Page/$name/_Local/UI010 - Quick Links/QuickLinkCTA 4"
 DB: master
+BranchID: "f99e0a5b-d9b4-45ca-8304-311c93a7737e"
 SharedFields:
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
-  Value: "{6858A9C1-B7D2-4F21-9C59-A122D7C581CD}"
+  Value: "{FD6D13C0-17AB-46A9-8857-B3CE1CEA1FE0}"
 Languages:
 - Language: en
   Versions:
@@ -15,11 +16,11 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210628T085202Z
+      Value: 20210914T140800Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\liontrust_admin
+        sitecore\admin
     - ID: "7ff41320-58c1-4a05-b2c5-dd1e4f9c2191"
       Hint: QuickLinkCTA_Description
       Value: Quickly check fund performance with our interactive fund centre.
