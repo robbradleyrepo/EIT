@@ -83,6 +83,10 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\Admin
+    - ID: "679b8b40-1876-4eb5-9280-487bcd8b4a5e"
+      Hint: Sitemap_IncludeInSiteMap
+      Type: Checkbox
+      Value: 1
     - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
       Hint: Breadcrumb_BreadcrumbTitle
       Value: $name
