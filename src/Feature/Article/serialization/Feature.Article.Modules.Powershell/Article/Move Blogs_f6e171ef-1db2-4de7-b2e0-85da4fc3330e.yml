@@ -1,0 +1,58 @@
+﻿---
+ID: "f6e171ef-1db2-4de7-b2e0-85da4fc3330e"
+Parent: "40e5db03-04d9-4fda-8e59-56983944f955"
+Template: "dd22f1b3-bd87-4db2-9e7d-f7a496888d43"
+Path: /sitecore/system/Modules/PowerShell/Script Library/Feature/Article/Move Blogs
+DB: master
+SharedFields:
+- ID: "b1a94ff0-6897-47c0-9c51-aa6acb80b1f0"
+  Hint: Script
+  Value: |
+        $blogs = Get-ChildItem -Path "master:/sitecore/content/LionTrust/home/what-we-think/blogs" -Recurse | Where-Object { $_.TemplateName -eq 'ArticlePage' }
+        $root = "master:/sitecore/content/LionTrustNew/Home"
+        $fundManagerView = "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+        $fundUpdate = "{D0700E76-8BC2-427A-9849-FE3B6D28BD22}"
+    
+        foreach ($blog in $blogs) {
+            
+            $type = $blog["LegacyArticle_BlogType"]
+            $copyToRoot = ""
+            
+            if($type -eq $fundManagerView) {
+                $copyToRoot = $root + "/blogs"
+            }
+            elseif($type -eq $fundUpdate) {
+                $copyToRoot = $root + "/Monthly commentaries"
+            }
+            else {
+                continue
+            }
+            
+            #folder path with year + month
+            $created = [datetime]$blog.Created
+            $dateFolderPath = "$($copyToRoot)/$($created.ToString('yyyy'))/$($created.ToString('MM'))"
+            
+            
+    
+            #test if year folder item exists
+            if (!(Test-Path "$($copyToRoot)/$($created.ToString('yyyy'))")) {
+                 Write-Host "Creating year folder"
+                 New-Item -Force -Path "$($copyToRoot)/$($created.ToString('yyyy'))" -Name "" -ItemType "/sitecore/templates/Common/Folder"
+            }
+             #test if month folder item exists
+            if(!(Test-Path $($dateFolderPath))) {
+                Write-Host "Creating month folder"
+                New-Item -Force -Path $dateFolderPath -Name "" -ItemType "/sitecore/templates/Common/Folder"
+            }
+            
+            Write-Host "folders exists, moving blogs to: $($dateFolderPath)";
+            Move-Item -Path $blog.ItemPath -Destination $dateFolderPath;
+        }
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210920T112342Z
