@@ -16,15 +16,6 @@
         [SitecoreField(Constants.KeyInfoPriceComponent.Comparator2Label_FieldId)]
         string Comparator2Label { get; set; }
 
-        [SitecoreField(Constants.KeyInfoPriceComponent.FundSizeLabel_FieldId)]
-        string FundSizeLabel { get; set; }
-
-        [SitecoreField(Constants.KeyInfoPriceComponent.NetUnderlyingYieldLabel_FieldId)]
-        string NetUnderlyingYieldLabel { get; set; }
-
-        [SitecoreField(Constants.KeyInfoPriceComponent.NumberOfHoldingsLabel_FieldId)]
-        string NumberofHoldingsLabel { get; set; }
-
         [SitecoreField(Constants.KeyInfoPriceComponent.OfferPriceLabel_FieldId)]
         string OfferPriceLabel { get; set; }
 
@@ -39,5 +30,14 @@
 
         [SitecoreField(Constants.KeyInfoPriceComponent.SinglePriceLabel_FieldId)]
         string SinglePriceLabel { get; set; }
+
+        [SitecoreField(Constants.KeyInfoPriceComponent.SectorNameLabel_FieldId)]
+        string SectorLabel { get; set; }
+
+        [SitecoreField(Constants.KeyInfoPriceComponent.ManagerInceptionDateLabel_FieldId)]
+        string ManagerInceptionDateLabel { get; set; }
+
+        [SitecoreField(Constants.KeyInfoPriceComponent.TargetBenchmarkYieldLabel_FieldId)]
+        string TargetBenchmarkYieldLabel { get; set; }
     }
 }

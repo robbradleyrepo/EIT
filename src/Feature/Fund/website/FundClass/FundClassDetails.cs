@@ -30,6 +30,11 @@
 
         private static FundClassData ConsolidateData(FundClassData data, FundDataResponseModel apiData)
         {
+            if(string.IsNullOrEmpty(data.SectorName))
+            {
+                data.SectorName = apiData.SectorName;
+            }
+
             if (data.ClassLaunchDate == null || data.ClassLaunchDate == DateTime.MinValue)
             {
                 if (DateTime.TryParse(apiData.UnitLaunchDate, out DateTime date))
@@ -82,7 +87,10 @@
                 Comparator2 = fundClass.Comparator2,
                 OfferPrice = fundClass.OfferPrice,
                 PriceDate = fundClass.PriceDate,
-                SinglePrice = fundClass.SinglePrice
+                SinglePrice = fundClass.SinglePrice,
+                SectorName = fundClass.SectorName,
+                ManagerInceptionDateOfFund = fundClass.ManagerInceptionDateOfFund,
+                TargetBenchmarkYield = fundClass.TargetBenchmarkYield
             };
         }
     }

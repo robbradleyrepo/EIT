@@ -60,6 +60,15 @@
         [SitecoreField(Constants.FundClass.FactsheetFieldId)]
         Image Factsheet { get; set; } 
 
+        [SitecoreField(Constants.FundClass.SectorNameFieldId)]
+        string SectorName { get; set; }
+
+        [SitecoreField(Constants.FundClass.ManagerInceptionDateFieldId)]
+        DateTime ManagerInceptionDateOfFund { get; set; }
+
+        [SitecoreField(Constants.FundClass.TargetBenchmarkYieldFieldId)]
+        string TargetBenchmarkYield { get;  set; }
+
         [SitecoreField(Constants.FundClass.AnnualManagementChargeFieldId)]
         string AnnualManagemnetCharge { get; set; }
     }

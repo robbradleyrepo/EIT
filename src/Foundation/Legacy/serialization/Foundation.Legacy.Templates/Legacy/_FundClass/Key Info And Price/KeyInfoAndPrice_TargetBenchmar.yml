@@ -1,8 +1,8 @@
 ﻿---
-ID: "3368266d-ab74-4ace-b89f-4c11488e8ac5"
-Parent: "e9ad2cd9-a0fd-4e16-8c26-c57ef435037d"
+ID: "2c52314c-f97d-4d99-853e-1497980389c1"
+Parent: "987e29c7-fee2-4938-ad92-038ee9506d0e"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Fund/_KeyInfoPriceComponent/Key Info Price Component/KeyInfoPriceComponent_NumberOfHoldingsLabel
+Path: /sitecore/templates/Foundation/Legacy/_FundClass/Key Info And Price/KeyInfoAndPrice_TargetBenchmarkYield
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
@@ -10,16 +10,16 @@ SharedFields:
   Value: "Single-Line Text"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 600
+  Value: 1100
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Number Of Holdings Label
+    Value: Target Benchmark Yield
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210511T143823Z
+      Value: 20210917T094539Z

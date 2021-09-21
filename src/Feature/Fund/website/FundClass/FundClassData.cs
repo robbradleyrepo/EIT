@@ -16,5 +16,11 @@
 
         public DateTime ClassLaunchDate { get; set; }
 
+        public string SectorName { get; set; }
+
+        public DateTime ManagerInceptionDateOfFund { get; set; }
+
+        public string TargetBenchmarkYield { get; set; }
+
     }
 }

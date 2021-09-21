@@ -94,6 +94,9 @@ namespace LionTrust.Foundation.Legacy
             public const string OngoingCharges_FieldId = "{0FE085F4-C693-4F16-AEE8-9C2ABFA66A4A}";
             public const string SedolCode_FieldId = "{79F1B818-4E89-4F71-BF0E-1EFF631A7259}";
             public const string FactsheetFieldId = "{E22A6228-B13F-4EA0-B795-6429E50588F9}";
+            public const string SectorNameFieldId = "{24760E0B-A404-43B2-AD28-478EB2CFF63E}";
+            public const string ManagerInceptionDateFieldId = "{AC4F5B6A-ED1D-43B3-B0DE-A6585F20207F}";
+            public const string TargetBenchmarkYieldFieldId = "{2C52314C-F97D-4D99-853E-1497980389C1}";
         }
         
         public static class Fund 

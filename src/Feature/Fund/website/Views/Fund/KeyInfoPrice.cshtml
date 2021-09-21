@@ -8,6 +8,18 @@
                 @Html.Glass().Editable(Model.Component, m => m.KeyInformationLabel)
             </span>
             <div class="card__row">
+                <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.SectorLabel)</div>
+                <div class="card__item-right">
+                    @Model.ClassData.SectorName
+                </div>
+            </div>
+            <div class="card__row">
+                <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.ManagerInceptionDateLabel)</div>
+                <div class="card__item-right">
+                    @Model.ClassData.ManagerInceptionDateOfFund.ToString("dd.MM.y")
+                </div>
+            </div>
+            <div class="card__row">
                 <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.ClassLaunchDateLabel)</div>
                 <div class="card__item-right">
                     @Model.ClassData.ClassLaunchDate.ToString("dd.MM.y")
@@ -27,19 +39,11 @@
                     <div class="card__item-right">@Html.Glass().Editable(Model.Fund, m => m.BenchmarkName)</div>
                 </div>
             }
-                <div class="card__row">
-                    <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.FundSizeLabel)</div>
-                    <div class="card__item-right">@Html.Glass().Editable(Model.Fund, m => m.FundSize)</div>
-                </div>
-                <div class="card__row">
-                    <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.NumberofHoldingsLabel)</div>
-                    <div class="card__item-right">@Html.Glass().Editable(Model.Fund, m => m.NumberOfHoldings)</div>
-                </div>
-                <div class="card__row">
-                    <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.NetUnderlyingYieldLabel)</div>
-                    <div class="card__item-right">@Html.Glass().Editable(Model.Fund, m => m.HistoricYield)</div>
-                </div>
+            <div class="card__row">
+                <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.TargetBenchmarkYieldLabel)</div>
+                <div class="card__item-right">@Html.Glass().Editable(Model.ClassData, m => m.TargetBenchmarkYield)</div>
             </div>
+        </div>
         <div class="card__content">
             <span class="card__title">
                 @Html.Glass().Editable(Model.Component, m => m.PriceLabel)
