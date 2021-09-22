@@ -148,34 +148,31 @@
         [HttpPost]
         public ActionResult Render([NotNull] OnboardingSubmit OnboardingSubmit)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                var data = _context.GetHomeItem<IHome>();
+                return new EmptyResult();
+            }
 
-                if (data?.OnboardingConfiguration == null)
-                {
-                    _log.Error("Onboarding configuration has not been set", this);
-                }
-                else if (data.OnboardingConfiguration.Profile == null)
-                {
-                    _log.Error("Onboarding configuration profile has not been set", this);
-                }
-                else
-                {
+            var data = _context.GetHomeItem<IHome>();
 
-                    var investor = data.OnboardingConfiguration.ChooseInvestorRole?
-                        .FirstOrDefault()?
-                        .Investors?
-                        .FirstOrDefault(x => x.Id == OnboardingSubmit.InvestorId);
-
-                    OnboardingHelper.AddPointsFromProfileCard(data.OnboardingConfiguration, investor.ProfileCard);
-
-                    TrackAnonymousUser(OnboardingSubmit.Country);
-                }
+            if (data?.OnboardingConfiguration == null)
+            {
+                _log.Error("Onboarding configuration has not been set", this);
+            }
+            else if (data.OnboardingConfiguration.Profile == null)
+            {
+                _log.Error("Onboarding configuration profile has not been set", this);
             }
             else
             {
-                _log.Error("invalid data submitted", this);
+                var investor = data.OnboardingConfiguration.ChooseInvestorRole?
+                    .FirstOrDefault()?
+                    .Investors?
+                    .FirstOrDefault(x => x.Id == OnboardingSubmit.InvestorId);
+
+                OnboardingHelper.AddPointsFromProfileCard(data.OnboardingConfiguration, investor.ProfileCard);
+
+                TrackAnonymousUser(OnboardingSubmit.Country);
             }
 
             var uriBuilder = new UriBuilder(Request.Url.ToString());
@@ -208,7 +205,6 @@
 
             return true;
         }
-
         private bool IsViewModelValid(OnboardingViewModel viewModel)
         {
             if (viewModel == null)

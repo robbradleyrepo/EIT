@@ -1,4 +1,6 @@
 ﻿@using Sitecore.Links
+@using Sitecore.ExperienceForms.Mvc.Html
+@using Sitecore.Mvc
 @using Sitecore.Mvc.Analytics.Extensions
 @using Sitecore.Web
 @using LionTrust.Foundation.SitecoreExtensions.Extensions
@@ -77,6 +79,8 @@
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
     <script src="/dist/js/listing-page.min.js"></script>
     <script src="/dist/js/charts-page.min.js"></script>
+    @Html.RenderFormStyles()
+    @Html.RenderFormScripts()
     @if (Html.Sitecore().CurrentItem.TemplateID.ToString() == Constants.PageTypes.SearchPageTemplateId)
     {
         <script src="/dist/js/search-page.min.js"></script>

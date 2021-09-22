@@ -1,7 +1,7 @@
 @using Sitecore.ExperienceForms.Mvc.Html
 @model Sitecore.ExperienceForms.Mvc.Models.Fields.DropDownListViewModel
 <div class="input-group">
-    @Html.ValidationMessageFor(m => Model.Value)
+    @Html.ValidationMessageFor(m => Model.Value, string.Empty, new { @class = "text-danger" })
     <select id="@Html.IdFor(m => Model.Value)" name="@Html.NameFor(m => Model.Value)" class="@Model.CssClass" data-sc-tracking="@Model.IsTrackingEnabled" data-sc-field-name="@Model.Name" data-sc-field-key="@Model.ConditionSettings.FieldKey" @Html.GenerateUnobtrusiveValidationAttributes(m => m.Value)>
         @if (Model.ShowEmptyItem)
         {
