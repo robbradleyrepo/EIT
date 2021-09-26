@@ -26,10 +26,10 @@
     .btn
         display: block
         .animate-arrow
-                transform: translate(-2px,0);
+            transform: translate(-2px,0)
         &:hover
             .animate-arrow
-                transform: translate(2px,0);
+                transform: translate(2px,0)
     &__badge-and-btns
         display: flex
         flex-direction: column
@@ -56,7 +56,9 @@
                 margin-bottom: 0
                 &:last-child
                     margin-right: 0
-
+            i
+                &::before
+                    padding: 6px
 .link-gray
     @extend .btn-unset
     @extend .link-styles
