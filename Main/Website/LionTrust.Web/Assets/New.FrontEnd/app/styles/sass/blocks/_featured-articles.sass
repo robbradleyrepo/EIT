@@ -2,14 +2,23 @@
     background: #F7F9FC
     padding-top: 18px
     padding-bottom: 10px
-    @include font-size(18px)
+
+    +font-size(18px)
+
     line-height: 1.44em
-    @include breakpoint(desktop, up)
+
+    +breakpoint(desktop, up)
         padding-top: 30px
         padding-bottom: 20px
+
+
     &__title
-        @include breakpoint(desktop, up)
-            margin-bottom: 38px
+        font-size: 32px
+        text-transform: capitalize
+        margin-bottom: 38px
+
+        +breakpoint(desktop, up)
+            font-size: 42px
 
 .featured-article
     // @include breakpoint(desktop, up)
@@ -17,39 +26,58 @@
     &__item
         margin-bottom: 20px
         position: relative
+
         // padding-left: 52px
         // min-height: 50px
         overflow: hidden
-        @include p-1-normal-20
-        @include breakpoint(desktop, up)
+
+        +p-1-normal-20
+        +breakpoint(desktop, up)
             // padding-left: 85px
             margin-bottom: 32px
+
             // min-height: 65px
-        @include breakpoint(desktop-large, up)
+
+
+        +breakpoint(desktop-large, up)
             padding-right: 40px
+
     &__link
         color: $black
         display: flex
         min-height: 50px
-        @include breakpoint(desktop, up)
+        align-items: center
+        font-size: 18px
+
+        +breakpoint(desktop, up)
             min-height: 60px
+
+
         &:hover
             color: $black
+
     &__text
         display: inline-block
-        margin-right: 1rem
-        @include breakpoint(desktop, up)
-            margin-left: 1.5rem
-        @include breakpoint(desktop-large, up)
+        margin-left: 1.5rem
+        line-height: 30px
+        font-size: 20px
+
+        +breakpoint(desktop-large, up)
             margin-left: 2rem
+
+
+        +breakpoint(tablet, down)
+            line-height: 26px
+            font-size: 18px
+
     &__number
-        font-size: 3.75em
         font-weight: bold
         color: $primary
         display: flex
-        align-items: center   
-        margin-right: 1rem 
-        @include breakpoint(desktop, up)
-            font-size: 4em       
-            margin-right: 0    
-        
+        align-items: center
+        margin-right: 1rem
+        font-size: 60px
+
+        +breakpoint(desktop, up)
+            font-size: 80px
+            margin-right: 0
