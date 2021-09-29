@@ -1,18 +1,25 @@
 .article-hero
     text-align: center
     margin-top: 30px
-    @include breakpoint(desktop, up)
+
+    +breakpoint(desktop, up)
         text-align: left
         margin-top: 57px
+
+
     &__title
-        @include breakpoint(desktop, up)
+        +breakpoint(desktop, up)
             letter-spacing: 1.86px
+
     &__content
         margin-bottom: 20px
+
     &__text
-        @include p-1-normal-20
+        +p-1-normal-20
+
         display: none
-        @include breakpoint(desktop, up)
+
+        +breakpoint(desktop, up)
             display: block
             margin-right: 15%
 
@@ -21,7 +28,8 @@ header
 .hero-author-wrapper
     display: flex
     justify-content: center
-    @include breakpoint(desktop, up)
+
+    +breakpoint(desktop, up)
         justify-content: start
 
 .hero-author
@@ -30,20 +38,26 @@ header
     align-items: center
     margin-bottom: 5px
     margin-right: 16px
+
     &:last-child
         margin-right: 0
-    @include breakpoint(desktop, up)
+
+    +breakpoint(desktop, up)
         align-items: start
         flex-direction: row
         margin-bottom: 1rem
         margin-right: 32px
+
+
     &__img
         width: 30px
         height: 30px
         border-radius: 50%
         background: $herobg-gradient
-        @include breakpoint(desktop, up)
+
+        +breakpoint(desktop, up)
             margin-right: 10px
+
     &__name
         font-weight: 700
         font-size: 12px
@@ -53,46 +67,59 @@ header
         display: flex
         align-items: center
         line-height: 1
-        @include breakpoint(desktop, up)
+
+        +breakpoint(desktop, up)
             margin: 0
+
+
         i
             display: none
-            @include breakpoint(desktop, up)
+
+            +breakpoint(desktop, up)
                 display: inline
                 margin-left: 5px
                 font-size: 17px
                 cursor: pointer
+
     &__date
         font-size: 14px
         color: $gray
-        @include breakpoint(desktop, up)
+
+        +breakpoint(desktop, up)
             margin-top: -2px
             display: block
 
 .hero-author.hero-author_big
     margin: 0
-    @include breakpoint(desktop, up)
+
+    +breakpoint(desktop, up)
         display: block
         text-align: center
         margin-bottom: 11px
+
+
     .hero-author__name
-        @include breakpoint(desktop, up)
+        +breakpoint(desktop, up)
             justify-content: center
             margin: 11px 0 9px
             font-size: 15px
             line-height: 18px
             letter-spacing: 3px
             font-family: $font-family-bold
+
     .hero-author__img
-        @include breakpoint(desktop, up)
+        +breakpoint(desktop, up)
             width: 60px
             height: 60px
             margin-right: 0
+
     .hero-author__date
-        @include font-size(18px)
+        +font-size(18px)
+
         font-weight: 500
+
     .hero-author__content
-        @include breakpoint(desktop, up)
+        +breakpoint(desktop, up)
             text-align: center
 
 .topic-follow
@@ -100,56 +127,78 @@ header
     display: flex
     align-items: center
     justify-content: center
+
     .follow-btn
         margin-right: 1.8rem
+
         &:last-child
             margin-right: 0
 
 .follow-btn
-    @include font-size(18px)
+    +font-size(18px)
+
     display: flex
     align-items: center
     font-weight: 300
+
     span
-        transition: .3s ease-out border-color
+        transition: 0.3s ease-out border-color
         border-bottom: 1px solid transparent
+
     i
         margin-right: 5px
+
     &:hover
         span
             border-color: $white
 
 .article-links
     display: flex
-    justify-content: center
+    justify-content: space-between
     font-size: 12px
     margin-bottom: 22px
-    @include breakpoint(desktop, up)
-        @include font-size(18px)
+
+    +breakpoint(tablet, up)
+        justify-content: flex-start
+
+
     &__link
         display: flex
         align-items: center
+
         span
-            transition: .3s ease-out border-color
+            transition: 0.3s ease-out border-color
             border-bottom: 1px solid transparent
+
+            +font-size(12px)
+            +breakpoint(tablet, up)
+                +font-size(14px)
+
         &:hover
             span
                 border-color: $white
+
     &__item
         display: inline-block
-        margin-right: 50px
-        @include breakpoint(desktop, up)
-            margin-right: 53px
+        margin-right: 0
+
+        +breakpoint(tablet, up)
+            margin-right: 40px
+
+
         &:last-child
             margin-right: 0
+
         i
-            margin-right: 10px
-            @include font-size(20px)
-            @include breakpoint(desktop, up)
-                margin-top: 6px
-                @include font-size(27px)
+            margin-right: 8px
+
+            +font-size(20px)
+            +breakpoint(desktop, up)
+                //margin-top: 6px
+                +font-size(27px)
+
         i.icon-share
-            @include breakpoint(desktop, up)
+            +breakpoint(desktop, up)
                 font-size: 23px
 
 header .article-links
@@ -159,8 +208,11 @@ header .article-links
 main .article-links
     font-size: 14px
     font-weight: 500
-    @include breakpoint(desktop, up)
+
+    +breakpoint(desktop, up)
         justify-content: start
+
+
     &__link
         &:hover
             span
@@ -173,18 +225,25 @@ main .article-links
 .fund-detail-page
     .article-hero
         margin-top: 0
+
         &__title
             margin-bottom: 2rem
-            @include breakpoint(desktop, up)
+
+            +breakpoint(desktop, up)
                 margin-bottom: 2.3rem
+
     .article-links
         display: inline
         margin: 0 auto
         text-align: center
+
         &__item
             display: inline-block
             margin-right: 50px
-            @include breakpoint(desktop, up)
+
+            +breakpoint(desktop, up)
                 margin-right: 60px
+
+
             &:last-child
                 margin-right: 0
