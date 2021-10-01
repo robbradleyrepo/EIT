@@ -1,0 +1,22 @@
+﻿---
+ID: "380fff9a-ace2-4d0e-b12d-e33e5d1ac0f5"
+Parent: "5fc2cfdc-7062-4b03-b60a-93a501fef1ed"
+Template: "0650b85b-227a-4387-8335-91903bcafef4"
+Path: "/sitecore/content/LionTrustNew/Global/BC011 - Article Headers/Default Article Header"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211001T100003Z
+    - ID: "30451f6b-437d-4473-ae3e-79fe7a1af36a"
+      Hint: ArticleHeader_BackgroundImage
+      Value: |
+        <image mediaid="{2309AD84-5D53-4767-BCD0-0BEDED4C3272}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
