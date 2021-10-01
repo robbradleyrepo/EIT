@@ -8,6 +8,9 @@ namespace LionTrust.Feature.Fund.Models
         [SitecoreField(Constants.FundAccessPopUp.Title_FieldId)]
         string Title { get; set; }
 
+        [SitecoreField(Constants.FundAccessPopUp.Text_FieldId)]
+        string Text { get; set; }
+
         [SitecoreField(Constants.FundAccessPopUp.BackButtonText_FieldId)]
         string BackButtonText { get; set; }
 

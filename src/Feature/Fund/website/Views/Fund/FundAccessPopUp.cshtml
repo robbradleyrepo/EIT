@@ -17,6 +17,9 @@
                 <h3 class="h3 mt-4">
                     @Model.Title
                 </h3>
+                <div class="modal-body__description">
+                    @Model.Text
+                </div>
                 <div class="mt-5">
                     @using (Html.Glass().BeginRenderLink(m => m.PrimaryCTA, new { @class = "btn btn-primary mr-4" }))
                     {
