@@ -3,21 +3,28 @@
     background-size: cover
     position: relative
     z-index: 1
+
     &_fund-manager
         background: none
+
     &__fixed
         position: fixed
         left: 50%
         transform: translateX(-50%)
+
     &-hero
         min-height: 470px
-        @include breakpoint(desktop, up)
+
+        +breakpoint(desktop, up)
             min-height: 640px
+
+    .article-links
+        justify-content: center
 
 .header-overlay
     &:after
         position: absolute
-        content: ''
+        content: ""
         background: #000
         top: 0
         left: 0
@@ -27,7 +34,7 @@
         opacity: 0.6
 
 .header-bg-gradient
-    background-image: url('../images/components/header/bg-desktop.svg')
+    background-image: url("../images/components/header/bg-desktop.svg")
 
 .gradient-header-bg
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 75.88%, #000000 100.19%), radial-gradient(50.75% 33.3% at 30.63% 65.45%, rgba(0, 0, 0, 0.46) 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(51.75% 56.79% at 34.37% -16.81%, rgba(255, 255, 255, 0.21) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(103.68deg, #0D1927 10.2%, #253931 85.33%)
