@@ -7,15 +7,13 @@
     <section class="container contact-section">
         <h2 class="h2 contact-section__title @titleColor">@Html.Glass().Editable(Model, m => m.Title)</h2>
         <div class="row">
-            <div class="col-xl-11 contact-section__margin">
-                @if (Model.ContactCards != null && Model.ContactCards.Any())
+            @if (Model.ContactCards != null && Model.ContactCards.Any())
+            {
+                foreach (var contactCard in Model.ContactCards)
                 {
-                    foreach (var contactCard in Model.ContactCards)
-                    {
-                        @Html.Partial("~/Views/Contact/_ContactCard.cshtml", contactCard)
-                    }
-                }                
-            </div>
+                    @Html.Partial("~/Views/Contact/_ContactCard.cshtml", contactCard)
+                }
+            }
         </div>
     </section>
 }
