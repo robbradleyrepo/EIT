@@ -5,16 +5,16 @@
                 <div class="row">
                     <div class="col-lg-2 d-lg-none">
                         <div class="article-filters__main-title">Filters
-                            <i id="filters-close"  @click="toggleMobileFilter" class="icon-close"></i>
+                            <i id="filters-close" @click="toggleMobileFilter" class="icon-close"></i>
                         </div>
-                    </div>                                 
+                    </div>
                 </div>
             </div>
         </div>
         <div class="article-filters__body article-filters__body_no-bg" v-if="getFacetsLength">
             <div class="container">
                 <div class="row">
-                    <select-field inline-template  v-for="(facet, i) in getFacets" :key="i">
+                    <select-field inline-template v-for="(facet, i) in getFacets" :key="i">
                         <div class="col-lg-2 relative" @click.stop>
                             <div class="article-filters__select" @click="toggleOption" :class="open ? 'active' : ''">
                                 <span class="article-filters__item-title">
@@ -24,8 +24,7 @@
                             </div>
                             <div class="article-filters__options">
                                 <div class="article-filters__title" @click="hideOption">
-                                    <i class="icon-chevron-left"></i>
-                                    {{facet.name}}
+                                    <i class="icon-chevron-left"></i> {{facet.name}}
                                 </div>
                                 <label class="option-checkbox" for="Select all">
                                     <input id="Select all" class="option-checkbox__input" type="checkbox" @click='checkAll()' :checked='allItemsChecked'>
@@ -38,32 +37,24 @@
                                         <span class="option-checkbox__text">{{item.name}} </span>
                                         <span class="option-checkbox__icon"></span>
                                     </label>
-                                </option-field> 
+                                </option-field>
                             </div>
-                        </div>   
+                        </div>
                     </select-field>
                     <div class="col-lg-3">
                         <div class="article-filters__btns justify-content-start">
-                            <button 
-                                class="btn article-filters__btn article-filters__btn_apply d-none d-xl-block"
-                                @click="applyFilters"
-                                :class="activeButton ? 'article-filters__btn_primary' : ''"
-                                >
+                            <button class="btn article-filters__btn article-filters__btn_apply d-none d-xl-block" @click="applyFilters" :class="activeButton ? 'article-filters__btn_primary' : ''">
                                 Apply filters
                             </button>
                             <button class="clear-filter btn article-filters__btn article-filters__btn_clear d-none d-xl-block ml-3" @click="clearFilters">
                                 Clear
                             </button>
-                            <btn 
-                              @click="applyFilters"
-                              class="btn btn-clean d-none d-md-block d-xl-none"
-                              :class="activeButton ? 'text-primary' : ''"
-                              @click="toggleMobileFilter">
+                            <btn @click="applyFilters" class="btn btn-clean d-none d-md-block d-xl-none" :class="activeButton ? 'text-primary' : ''" @click="toggleMobileFilter">
                                 <i class="icon-filter"></i> Apply
-                            </btn>  
-                            <btn @click="clearFilters"  class="btn btn-clean d-none d-md-block d-xl-none" @click="toggleMobileFilter">
+                            </btn>
+                            <btn @click="clearFilters" class="btn btn-clean d-none d-md-block d-xl-none" @click="toggleMobileFilter">
                                 <i class="icon-refresh"></i> clear
-                            </btn>  
+                            </btn>
                         </div>
                     </div>
                     <div class="col-6 col-lg-2 offset-6 col-md-4 offset-md-8 offset-lg-10 margin-sort-btn d-none d-lg-block">
@@ -109,7 +100,7 @@
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-6 col-lg-2 offset-6 col-md-4 offset-md-8 offset-lg-10 margin-sort-btn d-lg-none">
@@ -142,8 +133,8 @@
 
 <div class="container d-lg-none" v-if="getFacetsLength">
     <div class="d-flex justify-content-between margin-mob-fliter-btn w-100" :class="!mobileFilter ? 'relative' : ''">
-        <btn id="show-article-fliter"  class="btn btn-clean" @click="toggleMobileFilter">
+        <btn id="show-article-fliter" class="btn btn-clean" @click="toggleMobileFilter">
             <i class="icon-filter"></i> filter
-        </btn>        
+        </btn>
     </div>
 </div>

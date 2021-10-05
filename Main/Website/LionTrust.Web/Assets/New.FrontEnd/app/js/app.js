@@ -20,36 +20,38 @@ import locationAndMap from "./componets/locationAndMap";
 import galleryApp from "./componets/galleryApp";
 import tabNav from "./componets/tabNav";
 import headerCtaNav from "./componets/headerCtaNav";
+import preferenceCenter from './componets/preferenceCenter';
 
 document.addEventListener("DOMContentLoaded", () => {
-  onboardingOverlay();
-  sidebarNav();
-  searchOvarlay();
-  investmentCard();
-  carouselSlider();
-  fundsSlider();
-  articleSlider();
-  awardsSlider();
-  stickyNavbar();
-  literatureOverlay();
-  shareLink();
-  locationAndMap();
-  galleryApp();
-  tabNav();
-  headerCtaNav();
-  if (document.querySelector(".main-page")) parallaxScrolling();
+    onboardingOverlay();
+    sidebarNav();
+    searchOvarlay();
+    investmentCard();
+    carouselSlider();
+    fundsSlider();
+    articleSlider();
+    awardsSlider();
+    stickyNavbar();
+    literatureOverlay();
+    shareLink();
+    locationAndMap();
+    galleryApp();
+    tabNav();
+    headerCtaNav();
+    preferenceCenter();
+    if (document.querySelector(".main-page")) parallaxScrolling();
 
-  // init tooltips
-  $('[data-toggle="tooltip"]').tooltip({
-    offset: 5,
-  });
+    // init tooltips
+    $('[data-toggle="tooltip"]').tooltip({
+        offset: 5,
+    });
 
-  // set z-index for 
-  $('.nav-desktop__item').on('mouseenter', () => {
-    $('.header').css('z-index', '3')
-  })
-  $('.nav-desktop__item').on('mouseleave', () => {
-    $('.header').css('z-index', '2')
-  })
+    // set z-index for 
+    $('.nav-desktop__item').on('mouseenter', () => {
+        $('.header').css('z-index', '3')
+    })
+    $('.nav-desktop__item').on('mouseleave', () => {
+        $('.header').css('z-index', '2')
+    })
 
 });
