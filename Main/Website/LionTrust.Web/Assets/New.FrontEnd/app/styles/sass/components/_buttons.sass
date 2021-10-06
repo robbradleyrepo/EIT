@@ -1,5 +1,5 @@
 .btn
-    display: inline-block
+    display: inline-flex
     font-weight: 500
     text-transform: uppercase
     color: $white
@@ -19,14 +19,16 @@
     letter-spacing: 1.2px
     transition: color .3s ease-out,background-color .3s ease-out,border-color .3s ease-out,box-shadow .3s ease-out
     overflow: hidden
+    font-family: $userfont
+    align-items: center
     i.animate-arrow
         //display: none
     @include breakpoint(desktop, up)
-        min-width: 212px
+        min-width: unset
         height: 51px
         line-height: 51px
         letter-spacing: 2.4px
-        padding: 0 1rem
+        padding: 0 3.9rem 0 2.38rem
         i.animate-arrow
             display: inline-block
             transition: transform .3s ease-out
@@ -91,10 +93,11 @@
         content: "\e901"
         font-family: 'icomoon' !important
         position: absolute
-        right: 25px
-        top: 17px
+        right: 40px
+        top: 18px
         font-size: 12px
         transition: right .3s ease-out
+        color: $white
     &:hover
         &::before
-            right: 15px
+            right: 30px
