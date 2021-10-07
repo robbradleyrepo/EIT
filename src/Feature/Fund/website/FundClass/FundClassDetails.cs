@@ -46,7 +46,7 @@
             if (string.IsNullOrEmpty(data.Comparator1))
             {
                 data.Comparator1 = apiData?.Benchmarks?
-                    .FirstOrDefault(x => x.BenchmarkTypeName.ToLower().Contains("benchmark comparator 1"))?
+                    .FirstOrDefault(x => x.BenchmarkTypeName.ToLower().Contains("benchmark"))?
                     .BenchmarkName;
             }
 
