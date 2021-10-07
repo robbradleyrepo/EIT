@@ -5,7 +5,6 @@
 @if (Model != null)
 {
     <div class="lister-app" id="lister-app"
-         data-ref="@WebUtil.GetQueryString(LionTrust.Foundation.Contact.Constants.QueryStringNames.EmailPreferencefParams.RefQueryStringKey)"
          data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.MyFundsApiRoute_SettingName))"
          data-literatureid="@(Model.FundLiterature != null ? Model.FundLiterature.Id.ToString() : string.Empty)"
          data-fundfacetid="@(Model.FacetsConfiguration != null ? Model.FacetsConfiguration.Id.ToString() : string.Empty)">

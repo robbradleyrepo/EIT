@@ -42,102 +42,126 @@
         /// <param name="isContact"></param>
         /// <param name="loadFundsForMultiAssetProcesse">By default this parameter is set to false. Becasue in the UI no multi asset funds will be displayed.</param>
         /// <returns></returns>
-        public EmailPreferences GetSFEmailPreferences(string sfEntityId, string sfRandomGUID, bool isContact, bool loadFundsForMultiAssetProcesse = false)
+        public EmailPreferences GetSFEmailPreferences(Context context, bool loadFundsForMultiAssetProcesse = false)
         {
             try
             {
-                var returnObj = (isContact) ? GetEmailPrefViewModelFromSFContact(sfEntityId, sfRandomGUID) : GetEmailPrefViewModelFromSFLead(sfEntityId, sfRandomGUID);
+                var returnObj = (context.IsContact) ? GetEmailPrefViewModelFromSFContact(context) : GetEmailPrefViewModelFromSFLead(context);
                 if (returnObj != null)
                 {
-                    //Retrieve Salesforce Process entities
-                    GenericSalesforceService genericSFService = new GenericSalesforceService(this.SalesforceSession, Constants.SFProductEntityName);
-                    var soqlQuery = string.Format("SELECT {0}, {1}, {2}, (SELECT {3}, {4}, {5}, {6} FROM {7} where RecordType.Name = '{8}' AND {9}='{10}' AND Exclude_from_Preference_Centre__c != True) FROM {11} WHERE RecordType.Name='{12}' AND {13}='{14}' AND Exclude_from_Preference_Centre__c != True",
-                                                  Product2.Fields.Id.Name, Product2.Fields.Name.Name, Constants.SFProduct_IsMutiAssetScenarioField, Product2.Fields.Id.Name, Product2.Fields.Name.Name, Constants.SFProduct_IsMutiAssetScenarioField, Constants.SFProduct_IsNonUKDomicile, Constants.SFProcess_RefFieldForFunds,
-                                                  Constants.SFFundRecordTypeName, Constants.SFProduct_StatusField, Constants.SFProductStatusOpenName, Constants.SFProductEntityName,
-                                                  Constants.SFProcessRecordTypeName, Constants.SFProduct_StatusField, Constants.SFProductStatusOpenName);
-
-                    Log.Debug(string.Format("GetSFEmailPreferences() soqlQuery={0}.", soqlQuery), this);
-
-                    List<GenericSalesforceEntity> sfProcessList = genericSFService.GetBySoql(soqlQuery);
-
-                    if (sfProcessList != null && sfProcessList.Count > 0)
-                    {
-                        var processIdList = sfProcessList.Select(x => x.InternalFields[Product2.Fields.Id.Name]).ToList();
-                        List<GenericSalesforceEntity> fundPreferneceList = GetFundPreferenceEntities(sfEntityId, processIdList, true, isContact);
-
-                        var retrunProcessList = new List<SFProcess>();
-                        foreach (var sfProcess in sfProcessList)
-                        {
-                            //Generate custom process object
-                            var customSfProcessObj = new SFProcess();
-                            var processId = sfProcess.Id;
-
-                            customSfProcessObj.SFProcessId = processId;
-                            customSfProcessObj.SFProcessName = sfProcess.InternalFields[Product2.Fields.Name.Name];
-
-                            var isMultiAssetProcess = sfProcess.InternalFields.GetField<bool>(Constants.SFProduct_IsMutiAssetScenarioField);
-                            var fundList = new List<SFFund>();
-
-                            //Get related SF Funds for each SF Process
-                            var subQueryFundItemList = sfProcess.InternalFields.GetSubQuery<GenericSalesforceEntity>(Constants.SFProcess_RefFieldForFunds);
-                            foreach (var subQueryFundItem in subQueryFundItemList)
-                            {
-                                var isMultiAssetFund = subQueryFundItem.InternalFields.GetField<bool>(Constants.SFProduct_IsMutiAssetScenarioField);
-
-                                //This IF statement included to handle special scenario for "Multi Asset Process".
-                                //For the SF Process called "Multi Asset Process" we only need to consider "Multi Asset Portfolio (Non Platform Specific)" fund.
-                                //To identified  "Multi Asset Process" and "Multi Asset Portfolio (Non Platform Specific)", there is a checkbox called "Is Multi Asset Scenario" in SF.
-                                if (!isMultiAssetProcess || (isMultiAssetProcess && isMultiAssetFund))
-                                {
-                                    //Generate custom fund object
-                                    var sfFundObj = new SFFund();
-                                    sfFundObj.SFFundId = subQueryFundItem.Id;
-                                    sfFundObj.SFFundName = subQueryFundItem.InternalFields[Product2.Fields.Name.Name];
-                                    var IsFundSelected = false;
-
-                                    if (fundPreferneceList.Where(x => x.InternalFields[Constants.SFFundPref_RefFieldForProcessId] == processId && x.InternalFields[Constants.SFFundPref_FundField] == subQueryFundItem.Id).Count() > 0)
-                                    {
-                                        IsFundSelected = true;
-                                    }
-
-                                    //Set PrimarySortOrder according to the "NonUKDomicile" checkbox in SF. If "NonUKDomicile" checked in a fund, set the sort order as 1, so that fund will apear in the bottom of the fund list. 
-                                    sfFundObj.PrimarySortOrder = (subQueryFundItem.InternalFields.GetField<bool>(Constants.SFProduct_IsNonUKDomicile)) ? 1 : 0;
-
-                                    sfFundObj.IsFundSelected = IsFundSelected;
-                                    fundList.Add(sfFundObj);
-                                }
-                            }
-
-                            var isProcessSelect = false;
-                            if ((fundList.Count > 0 && fundList.Where(x => x.IsFundSelected).Count() == fundList.Count))
-                            {
-                                isProcessSelect = true;
-                            }
-
-                            customSfProcessObj.IsProcessSelected = isProcessSelect;
-                            //Load funds if the the process is not categorized as MultiAsst or explicitly passed "loadFundsForMultiAssetProcesse" parameter as true.
-                            //When displying processes and funds in Email preference UI, fund list need not to be display for multi asset processes. 
-                            customSfProcessObj.SFFundList = (!isMultiAssetProcess || loadFundsForMultiAssetProcesse) ? fundList.OrderBy(x => x.PrimarySortOrder).ThenBy(y => y.SFFundName).ToList() : new List<SFFund>();
-                            retrunProcessList.Add(customSfProcessObj);
-                        }
-
-                        returnObj.SFProcessList = retrunProcessList.OrderBy(x => x.SFProcessName).ToList();
-                        return returnObj;
-                    }
-                    else
-                    {
-                        Log.Debug(string.Format("No Salesforce Processes found for Salesforce Entity Id :{0}.", sfEntityId), this);
-                        return null;
-                    }
+                    returnObj.SFProcessList = GetSFProcessList(context, loadFundsForMultiAssetProcesse);
+                    return returnObj;
                 }
-
-                return null;
+                else
+                {
+                    Log.Debug(string.Format("No Salesforce Processes found for Salesforce Entity Id :{0}.", context.SFEntityId), this);
+                    return null;
+                }
             }
             catch (Exception ex)
             {
-                Log.Error(string.Format("Exception occured when retrieving Salesforce entities for Id: {0}.", sfEntityId), ex, this);
+                Log.Error(string.Format("Exception occured when retrieving Salesforce entities for Id: {0}.", context.SFEntityId), ex, this);
                 return null;
             }
+        }
+
+        public List<SFProcess> GetSFProcessList(Context context = null, bool loadFundsForMultiAssetProcesse = false)
+        {
+            var retrunProcessList = new List<SFProcess>();
+
+            //Retrieve Salesforce Process entities
+            GenericSalesforceService genericSFService = new GenericSalesforceService(this.SalesforceSession, Constants.SFProductEntityName);
+            var soqlQuery = string.Format("SELECT {0}, {1}, {2}, (SELECT {3}, {4}, {5}, {6} FROM {7} where RecordType.Name = '{8}' AND {9}='{10}' AND Exclude_from_Preference_Centre__c != True) FROM {11} WHERE RecordType.Name='{12}' AND {13}='{14}' AND Exclude_from_Preference_Centre__c != True",
+                                          Product2.Fields.Id.Name, Product2.Fields.Name.Name, Constants.SFProduct_IsMutiAssetScenarioField, Product2.Fields.Id.Name, Product2.Fields.Name.Name, Constants.SFProduct_IsMutiAssetScenarioField, Constants.SFProduct_IsNonUKDomicile, Constants.SFProcess_RefFieldForFunds,
+                                          Constants.SFFundRecordTypeName, Constants.SFProduct_StatusField, Constants.SFProductStatusOpenName, Constants.SFProductEntityName,
+                                          Constants.SFProcessRecordTypeName, Constants.SFProduct_StatusField, Constants.SFProductStatusOpenName);
+
+            Log.Debug(string.Format("GetSFEmailPreferences() soqlQuery={0}.", soqlQuery), this);
+
+            List<GenericSalesforceEntity> sfProcessList = genericSFService.GetBySoql(soqlQuery);
+
+            if (sfProcessList != null && sfProcessList.Count > 0)
+            {
+
+                List<GenericSalesforceEntity> fundPreferneceList = null;
+
+                if (context != null)
+                {
+                    var processIdList = sfProcessList.Select(x => x.InternalFields[Product2.Fields.Id.Name]).ToList();
+                    fundPreferneceList = GetFundPreferenceEntities(context, processIdList, true);
+                }
+
+                foreach (var sfProcess in sfProcessList)
+                {
+                    //Generate custom process object
+                    var customSfProcessObj = new SFProcess();
+                    var processId = sfProcess.Id;
+
+                    customSfProcessObj.SFProcessId = processId;
+                    customSfProcessObj.SFProcessName = sfProcess.InternalFields[Product2.Fields.Name.Name];
+
+                    var isMultiAssetProcess = sfProcess.InternalFields.GetField<bool>(Constants.SFProduct_IsMutiAssetScenarioField);
+                    var fundList = new List<SFFund>();
+
+                    //Get related SF Funds for each SF Process
+                    var subQueryFundItemList = sfProcess.InternalFields.GetSubQuery<GenericSalesforceEntity>(Constants.SFProcess_RefFieldForFunds);
+                    foreach (var subQueryFundItem in subQueryFundItemList)
+                    {
+                        var isMultiAssetFund = subQueryFundItem.InternalFields.GetField<bool>(Constants.SFProduct_IsMutiAssetScenarioField);
+
+                        //This IF statement included to handle special scenario for "Multi Asset Process".
+                        //For the SF Process called "Multi Asset Process" we only need to consider "Multi Asset Portfolio (Non Platform Specific)" fund.
+                        //To identified  "Multi Asset Process" and "Multi Asset Portfolio (Non Platform Specific)", there is a checkbox called "Is Multi Asset Scenario" in SF.
+                        if (!isMultiAssetProcess || (isMultiAssetProcess && isMultiAssetFund))
+                        {
+                            //Generate custom fund object
+                            var sfFundObj = new SFFund();
+                            sfFundObj.SFFundId = subQueryFundItem.Id;
+                            sfFundObj.SFFundName = subQueryFundItem.InternalFields[Product2.Fields.Name.Name];
+                            var IsFundSelected = false;
+
+                            if (fundPreferneceList != null && fundPreferneceList.Where(x => x.InternalFields[Constants.SFFundPref_RefFieldForProcessId] == processId && x.InternalFields[Constants.SFFundPref_FundField] == subQueryFundItem.Id).Count() > 0)
+                            {
+                                IsFundSelected = true;
+                            }
+
+                            //Set PrimarySortOrder according to the "NonUKDomicile" checkbox in SF. If "NonUKDomicile" checked in a fund, set the sort order as 1, so that fund will apear in the bottom of the fund list. 
+                            sfFundObj.PrimarySortOrder = (subQueryFundItem.InternalFields.GetField<bool>(Constants.SFProduct_IsNonUKDomicile)) ? 1 : 0;
+
+                            sfFundObj.IsFundSelected = IsFundSelected;
+                            fundList.Add(sfFundObj);
+                        }
+                    }
+
+                    var isProcessSelect = false;
+                    if ((fundList.Count > 0 && fundList.Where(x => x.IsFundSelected).Count() == fundList.Count))
+                    {
+                        isProcessSelect = true;
+                    }
+
+                    customSfProcessObj.IsProcessSelected = isProcessSelect;
+                    //Load funds if the the process is not categorized as MultiAsst or explicitly passed "loadFundsForMultiAssetProcesse" parameter as true.
+                    //When displying processes and funds in Email preference UI, fund list need not to be display for multi asset processes. 
+                    customSfProcessObj.SFFundList = (!isMultiAssetProcess || loadFundsForMultiAssetProcesse) ? fundList.OrderBy(x => x.PrimarySortOrder).ThenBy(y => y.SFFundName).ToList() : new List<SFFund>();
+                    retrunProcessList.Add(customSfProcessObj);
+                }
+
+                retrunProcessList = retrunProcessList.OrderBy(x => x.SFProcessName).ToList();
+            }
+            else
+            {
+                if (context != null)
+                {
+                    Log.Debug(string.Format("No Salesforce Processes found for Salesforce Entity Id :{0}.", context.SFEntityId), this);
+                }
+                else
+                {
+                    Log.Debug("No Salesforce Processes found", this);
+
+                }
+            }
+
+            return retrunProcessList;
         }
 
         /// <summary>
@@ -145,13 +169,13 @@
         /// </summary>
         /// <param name="emailPreferences"></param>
         /// <returns></returns>
-        public bool SaveEmailPreferences(EmailPreferences emailPreferences)
+        public bool SaveEmailPreferences(Context context)
         {
             try
             {
                 List<GenericSalesforceEntity> sfFundPreferenceItemsForUpsert = new List<GenericSalesforceEntity>();
-                var sfEntityType = (emailPreferences.IsContact) ? Constants.SFContactEntityName : Constants.SfLeadEntityName;
-                var sfEntityId = emailPreferences.SFEntityId;
+                var sfEntityType = (context.IsContact) ? Constants.SFContactEntityName : Constants.SfLeadEntityName;
+                var sfEntityId = context.SFEntityId;
                 GenericSalesforceService genericService = new GenericSalesforceService(this.SalesforceSession, sfEntityType);
                 var sfEntity = genericService.GetByEntityId(sfEntityId);
 
@@ -161,7 +185,7 @@
                     return false;
                 }
 
-                if (string.IsNullOrEmpty(sfEntity.InternalFields[Constants.SF_GUIDForEmailPref]) || sfEntity.InternalFields[Constants.SF_GUIDForEmailPref] != emailPreferences.SFRandomGUID)
+                if (ValidateEmailPreferenceQueryString(sfEntity.InternalFields[Constants.SF_GUIDForEmailPref], context))
                 {
                     Log.Info(string.Format("Random GUID which sent via query string, mismatched with the one that saved in actual Salesforce Entity with the Id of {0}.", sfEntityId), this);
                     return false;
@@ -170,22 +194,22 @@
                 sfEntityId = sfEntity.Id;
 
                 //Update fields
-                sfEntity.InternalFields.SetField<bool>(Constants.SF_LTNewsField, emailPreferences.IncludeInLTNews);
-                sfEntity.InternalFields.SetField<bool>(Constants.SF_EmailOptOutField, emailPreferences.UnsubscribeAll);
-                sfEntity.InternalFields.SetField<bool>(Constants.SF_Article41NoticeSentField, !emailPreferences.UnsubscribeAll);
+                sfEntity.InternalFields.SetField<bool>(Constants.SF_LTNewsField, context.Preferences.IncludeInLTNews);
+                sfEntity.InternalFields.SetField<bool>(Constants.SF_EmailOptOutField, context.Preferences.Unsubscribe);
+                sfEntity.InternalFields.SetField<bool>(Constants.SF_Article41NoticeSentField, !context.Preferences.Unsubscribe);
                 sfEntity.InternalFields.SetField<DateTime>(Constants.SF_DateOfConcentField, DateTime.Now);
 
                 //Institutional Bulletin checkbox available only for SF Contacts
-                if (emailPreferences.IsContact)
+                if (context.IsContact)
                 {
-                    sfEntity.InternalFields.SetField<bool>(Constants.SFContact_InstitutionalBulletin, emailPreferences.IsInstitutionalBulletinChecked);
+                    sfEntity.InternalFields.SetField<bool>(Constants.SFContact_InstitutionalBulletin, context.Preferences.IsInstitutionalBulletinChecked);
                 }
 
                 var isAnyProcessOrFundSelected = false;
-                if (!emailPreferences.UnsubscribeAll)
+                if (!context.Preferences.Unsubscribe)
                 {
                     //If any SF Process selected from the page, tick FactSheet, RelavantBlog, MonthlyCommentries checkboxes in salesforce                
-                    foreach (var tempProcess in emailPreferences.SFProcessList)
+                    foreach (var tempProcess in context.Preferences.SFProcessList)
                     {
                         if (tempProcess.IsProcessSelected)
                         {
@@ -203,16 +227,16 @@
                     }
                 }
 
-                var isCommonCheckboxesChecked = (!isAnyProcessOrFundSelected || emailPreferences.UnsubscribeAll) ? false : true;
+                var isCommonCheckboxesChecked = (!isAnyProcessOrFundSelected || context.Preferences.Unsubscribe) ? false : true;
 
                 sfEntity.InternalFields.SetField<bool>(Constants.SF_FactSheetField, isCommonCheckboxesChecked);
                 sfEntity.InternalFields.SetField<bool>(Constants.SF_RelBlogField, isCommonCheckboxesChecked);
                 sfEntity.InternalFields.SetField<bool>(Constants.SF_Commentaries, isCommonCheckboxesChecked);
 
                 //If user unsubscribed from the preference center, make the first name and email blank and change the record type to unsubscribe
-                if (emailPreferences.UnsubscribeAll)
+                if (context.Preferences.Unsubscribe)
                 {
-                    if (!emailPreferences.IsContact)
+                    if (!context.IsContact)
                     {
                         sfEntity.InternalFields[Constants.SF_FirstNameField] = string.Empty;
                         sfEntity.InternalFields[Constants.SF_EmailField] = string.Empty;
@@ -221,7 +245,7 @@
                     var entityRecordtypes = GetSFEntityRecordTypes(sfEntityType);
                     if (entityRecordtypes != null)
                     {
-                        var recordTypeValue = (emailPreferences.IsContact) ? Constants.SFContactRecordType_UnSubscribe : Constants.SFLeadRecordType_UnSubscribe;
+                        var recordTypeValue = (context.IsContact) ? Constants.SFContactRecordType_UnSubscribe : Constants.SFLeadRecordType_UnSubscribe;
                         var recordTypeObj = entityRecordtypes.Where(x => x.Value == recordTypeValue).FirstOrDefault();
                         if (recordTypeObj.Key != null)
                         {
@@ -233,9 +257,9 @@
                 var visitorId = string.Empty;
 
                 //Identify current visitor by email and save visitor id in SF
-                if (!string.IsNullOrEmpty(emailPreferences.EmailAddress))
+                if (!string.IsNullOrEmpty(context.Preferences.EmailAddress))
                 {
-                    visitorId = IdentifyVisitorAndGetVisitorId(emailPreferences.EmailAddress);
+                    visitorId = IdentifyVisitorAndGetVisitorId(context.Preferences.EmailAddress);
                     if (!string.IsNullOrEmpty(visitorId))
                     {
                         sfEntity.InternalFields[Constants.SF_SitecoreVistorIdField] = visitorId;
@@ -248,10 +272,10 @@
                 var selectedSFFundIdList = new List<string>();
 
                 //Update FundPreferences SF entities for UK residents only
-                if (emailPreferences.IsUkResident)
+                if (context.Preferences.IsUkResident)
                 {
-                    var processIdList = emailPreferences.SFProcessList.Select(x => x.SFProcessId).ToList();
-                    List<GenericSalesforceEntity> fundPreferneceList = GetFundPreferenceEntities(sfEntityId, processIdList, false, emailPreferences.IsContact);
+                    var processIdList = context.Preferences.SFProcessList.Select(x => x.SFProcessId).ToList();
+                    List<GenericSalesforceEntity> fundPreferneceList = GetFundPreferenceEntities(context, processIdList, false);
 
                     //Generate 'IN' clause for SOQL query
                     var processIdString = string.Empty;
@@ -277,7 +301,7 @@
 
                     List<GenericSalesforceEntity> sfProcessListFromAPI = genericSFService.GetBySoql(soqlQuery);
 
-                    foreach (var sfProcessItemFromClient in emailPreferences.SFProcessList)
+                    foreach (var sfProcessItemFromClient in context.Preferences.SFProcessList)
                     {
                         var sfProcessItemFromAPI = sfProcessListFromAPI.Where(x => x.Id == sfProcessItemFromClient.SFProcessId).FirstOrDefault();
                         if (sfProcessItemFromAPI != null)
@@ -296,7 +320,7 @@
                                 {
                                     var tempFundObj = new SFFund();
                                     tempFundObj.SFFundId = specialMultiAssetFund.Id;
-                                    tempFundObj.IsFundSelected = (emailPreferences.UnsubscribeAll) ? false : sfProcessItemFromClient.IsProcessSelected;
+                                    tempFundObj.IsFundSelected = (context.Preferences.Unsubscribe) ? false : sfProcessItemFromClient.IsProcessSelected;
 
                                     sfProcessItemFromClient.SFFundList.Add(tempFundObj);
                                 }
@@ -325,7 +349,7 @@
                                         if (sfFundItemFromClient.IsFundSelected)
                                         {
                                             var newFundPreferenceItem = new GenericSalesforceEntity(Constants.SFFundPreferenceEntityName);
-                                            if (emailPreferences.IsContact)
+                                            if (context.IsContact)
                                             {
                                                 newFundPreferenceItem.InternalFields.SetField(Constants.SFFundPref_ContactField, sfEntityId);
                                             }
@@ -368,7 +392,7 @@
                 if (!string.IsNullOrEmpty(visitorId))
                 {
                     //Save XDB contact object in Salesforce
-                    SaveXdbContactSFObject(sfEntityId, emailPreferences.IsContact, visitorId);
+                    SaveXdbContactSFObject(sfEntityId, context.IsContact, visitorId);
 
                     var sfDataObj = new ScContactFacetData();
                     sfDataObj.FirstName = sfEntity.InternalFields[Constants.SF_FirstNameField];
@@ -503,7 +527,7 @@
                 var returnObj = new RegisterdUserReturnViewModel();
                 returnObj.IsUserExists = false;
 
-                var contactService = new FuseIT.Sitecore.SalesforceConnector.Services.ContactService(this.SalesforceSession);
+                var contactService = new ContactService(this.SalesforceSession);
                 var sfContact = contactService.GetByEmail(profUser.Email);
                 if (sfContact != null)
                 {
@@ -519,7 +543,7 @@
                 newSFContact.InternalFields[Constants.SF_LastNameField] = profUser.LastName;
                 newSFContact.InternalFields[Constants.SF_EmailField] = profUser.Email;
                 newSFContact.InternalFields[Constants.SFContact_CompanyFCAIdField] = profUser.CompanyId;
-                newSFContact.InternalFields[Constants.SFContact_CompanyNameField] = profUser.CompanyName;
+                newSFContact.InternalFields[Constants.SFContact_CompanyNameField] = profUser.Company;
                 newSFContact.InternalFields.SetField<bool>(Constants.SF_UKResident, profUser.IsUKResident);
                 newSFContact.InternalFields[Constants.SFContact_OrgNameField] = profUser.Organisation;
 
@@ -704,12 +728,9 @@
         /// <param name="emailAddress"></param>
         public string IdentifyVisitorAndGetVisitorId(string emailAddress)
         {
-            string visitorid = string.Empty;
+            var visitorid = string.Empty;
             try
             {
-                string identifierSource = Sitecore.Configuration.Settings.GetSetting(Constants.IdentifierSourceConfigName, "S4S");
-                WebToEntity.IdentifyCurrentVisitor(identifierSource, emailAddress);
-                //Get curret visitor id
                 WebToEntity webToSfEntity = new WebToEntity();
                 visitorid = webToSfEntity.GetCurrentVisitorId();
             }
@@ -756,20 +777,18 @@
         /// <param name="sfEntityId"></param>
         /// <param name="sfRandomGUID"></param>
         /// <returns></returns>
-        private EmailPreferences GetEmailPrefViewModelFromSFContact(string sfEntityId, string sfRandomGUID)
+        private EmailPreferences GetEmailPrefViewModelFromSFContact(Context context)
         {
-            var sfContact = GetSFContactByIdAndRandomGuid(sfEntityId, sfRandomGUID);
+            var sfContact = GetSFContactByIdAndRandomGuid(context);
             if (sfContact != null)
             {
                 var returnObj = new EmailPreferences();
-                returnObj.SFEntityId = sfContact.Id;
                 returnObj.SFOrgId = this.SalesforceSession.SalesforceOrganizationId;
-                returnObj.SFRandomGUID = sfContact.InternalFields[Constants.SF_GUIDForEmailPref];
                 returnObj.EmailAddress = sfContact.Email;
                 returnObj.FirstName = sfContact.FirstName;
                 returnObj.LastName = sfContact.LastName;
                 returnObj.IncludeInLTNews = sfContact.InternalFields.GetField<bool>(Constants.SF_LTNewsField);
-                returnObj.UnsubscribeAll = sfContact.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
+                returnObj.Unsubscribe = sfContact.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
                 returnObj.IsUkResident = sfContact.InternalFields.GetField<bool>(Constants.SF_UKResident);
                 returnObj.IsInstitutionalBulletinChecked = sfContact.InternalFields.GetField<bool>(Constants.SFContact_InstitutionalBulletin);
                 returnObj.IsConsentGivenDateEmpty = (sfContact.InternalFields[Constants.SF_DateOfConcentField] == null) ? true : false;
@@ -786,20 +805,18 @@
         /// <param name="sfEntityId"></param>
         /// <param name="sfRandomGUID"></param>
         /// <returns></returns>
-        private EmailPreferences GetEmailPrefViewModelFromSFLead(string sfEntityId, string sfRandomGUID)
+        private EmailPreferences GetEmailPrefViewModelFromSFLead(Context context)
         {
-            var sfLead = GetSFLeadByIdAndRandomGuid(sfEntityId, sfRandomGUID);
+            var sfLead = GetSFLeadByIdAndRandomGuid(context);
             if (sfLead != null)
             {
                 var returnObj = new EmailPreferences();
-                returnObj.SFEntityId = sfLead.Id;
                 returnObj.SFOrgId = this.SalesforceSession.SalesforceOrganizationId;
-                returnObj.SFRandomGUID = sfLead.InternalFields[Constants.SF_GUIDForEmailPref];
                 returnObj.EmailAddress = sfLead.Email;
                 returnObj.FirstName = sfLead.FirstName;
                 returnObj.LastName = sfLead.LastName;
                 returnObj.IncludeInLTNews = sfLead.InternalFields.GetField<bool>(Constants.SF_LTNewsField);
-                returnObj.UnsubscribeAll = sfLead.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
+                returnObj.Unsubscribe = sfLead.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
                 returnObj.IsUkResident = sfLead.InternalFields.GetField<bool>(Constants.SF_UKResident);
                 returnObj.IsInstitutionalBulletinChecked = false;
                 returnObj.IsConsentGivenDateEmpty = (sfLead.InternalFields[Constants.SF_DateOfConcentField] == null) ? true : false;
@@ -816,24 +833,24 @@
         /// <param name="sfEntityId"></param>
         /// <param name="sfRandomGUID"></param>
         /// <returns></returns>
-        private Contact GetSFContactByIdAndRandomGuid(string sfEntityId, string sfRandomGUID)
+        private Contact GetSFContactByIdAndRandomGuid(Context context)
         {
-            Log.Debug(string.Format("Trying to get Salesforce Contact from Salesforce Contact Id: {0} and Random Guid: {1}", sfEntityId, sfRandomGUID), this);
+            Log.Debug(string.Format("Trying to get Salesforce Contact from Salesforce Contact Id: {0} and Random Guid: {1}", context.SFEntityId, context.SFRandomGUID), this);
 
             var contactService = new ContactService(this.SalesforceSession);
-            var sfContact = contactService.GetById(sfEntityId);
+            var sfContact = contactService.GetById(context.SFEntityId);
 
             if (sfContact == null)
             {
-                Log.Debug(string.Format("No Salesforce Contact found for Id: {0}.", sfEntityId), this);
+                Log.Debug(string.Format("No Salesforce Contact found for Id: {0}.", context.SFEntityId), this);
                 return null;
             }
 
-            if (!string.IsNullOrEmpty(sfContact.InternalFields[Constants.SF_GUIDForEmailPref]) && sfContact.InternalFields[Constants.SF_GUIDForEmailPref] == sfRandomGUID)
+            if (!string.IsNullOrEmpty(sfContact.InternalFields[Constants.SF_GUIDForEmailPref]) && sfContact.InternalFields[Constants.SF_GUIDForEmailPref] == context.SFRandomGUID)
             {
                 if (string.IsNullOrEmpty(sfContact.Email))
                 {
-                    Log.Debug(string.Format("No email address found in Salesforce Contact: {0}.", sfEntityId), this);
+                    Log.Debug(string.Format("No email address found in Salesforce Contact: {0}.", context.SFEntityId), this);
                     return null;
                 }
 
@@ -842,7 +859,7 @@
             }
             else
             {
-                Log.Debug(string.Format("Random GUID which sent via query string, mismatched with the one that saved in actual Salesforce Contact with the Id of {0}.", sfEntityId), this);
+                Log.Debug(string.Format("Random GUID which sent via query string, mismatched with the one that saved in actual Salesforce Contact with the Id of {0}.", context.SFEntityId), this);
                 return null;
             }
         }
@@ -854,30 +871,30 @@
         /// <param name="sfEntityId"></param>
         /// <param name="sfRandomGUID"></param>
         /// <returns></returns>
-        private Lead GetSFLeadByIdAndRandomGuid(string sfEntityId, string sfRandomGUID)
+        private Lead GetSFLeadByIdAndRandomGuid(Context context)
         {
-            Log.Debug(string.Format("Trying to get Salesforce Lead from Salesforce Lead Id: {0} and Random Guid: {1}", sfEntityId, sfRandomGUID), this);
+            Log.Debug(string.Format("Trying to get Salesforce Lead from Salesforce Lead Id: {0} and Random Guid: {1}", context.SFEntityId, context.SFRandomGUID), this);
 
             LeadService leadService = new LeadService(this.SalesforceSession);
-            var sfLead = leadService.GetById(sfEntityId);
+            var sfLead = leadService.GetById(context.SFEntityId);
 
             if (sfLead == null)
             {
-                Log.Debug(string.Format("No Salesforce Lead found for Id: {0}.", sfEntityId), this);
+                Log.Debug(string.Format("No Salesforce Lead found for Id: {0}.", context.SFEntityId), this);
                 return null;
             }
 
             if (sfLead.IsConverted ?? false)
             {
-                Log.Debug(string.Format("Salesforce Lead for Id {0} has been converted. Converted Leads not supported.", sfEntityId), this);
+                Log.Debug(string.Format("Salesforce Lead for Id {0} has been converted. Converted Leads not supported.", context.SFEntityId), this);
                 return null;
             }
 
-            if (!string.IsNullOrEmpty(sfLead.InternalFields[Constants.SF_GUIDForEmailPref]) && sfLead.InternalFields[Constants.SF_GUIDForEmailPref] == sfRandomGUID)
+            if (!string.IsNullOrEmpty(sfLead.InternalFields[Constants.SF_GUIDForEmailPref]) && sfLead.InternalFields[Constants.SF_GUIDForEmailPref] == context.SFRandomGUID)
             {
                 if (string.IsNullOrEmpty(sfLead.Email))
                 {
-                    Log.Debug(string.Format("No email address found in Salesforce Lead: {0}.", sfEntityId), this);
+                    Log.Debug(string.Format("No email address found in Salesforce Lead: {0}.", context.SFEntityId), this);
                     return null;
                 }
 
@@ -886,7 +903,7 @@
             }
             else
             {
-                Log.Debug(string.Format("Random GUID which sent via query string, mismatched with the one that saved in actual Salesforce Lead with the Id of {0}.", sfEntityId), this);
+                Log.Debug(string.Format("Random GUID which sent via query string, mismatched with the one that saved in actual Salesforce Lead with the Id of {0}.", context.SFEntityId), this);
                 return null;
             }
         }
@@ -899,13 +916,13 @@
         /// <param name="includeInterestedFilter"></param>
         /// <param name="isContact"></param>
         /// <returns></returns>
-        private List<GenericSalesforceEntity> GetFundPreferenceEntities(string sfEntityId, List<string> prcessIdList, bool includeInterestedFilter, bool isContact)
+        private List<GenericSalesforceEntity> GetFundPreferenceEntities(Context context, List<string> prcessIdList, bool includeInterestedFilter)
         {
             //Retrieve SF Fund Preferences 
             GenericSalesforceEntityDataSource fundPreferenceDataSource = new GenericSalesforceEntityDataSource(Constants.SFFundPreferenceEntityName, this.SalesforceSession);
             var entityTypeFiedName = string.Empty;
 
-            if (isContact)
+            if (context.IsContact)
             {
                 entityTypeFiedName = Constants.SFFundPref_ContactField;
             }
@@ -914,7 +931,7 @@
                 entityTypeFiedName = Constants.SFFundPref_LeadField;
             }
 
-            fundPreferenceDataSource.AddDataSourceFilter(entityTypeFiedName, ComparisonOperator.Equals, sfEntityId);
+            fundPreferenceDataSource.AddDataSourceFilter(entityTypeFiedName, ComparisonOperator.Equals, context.SFEntityId);
             fundPreferenceDataSource.AddDataSourceFilter(Constants.SFFundPref_FundStatusField, ComparisonOperator.Equals, Constants.SFProductStatusOpenName);
             fundPreferenceDataSource.AddDataSourceFilter(Constants.SFFundPref_ProcessStatusField, ComparisonOperator.Equals, Constants.SFProductStatusOpenName);
             fundPreferenceDataSource.AddDataSourceFilter(Constants.SFFundPref_RefFieldForProcessId, Operator.OperatorFor(ComparisonOperator.In), prcessIdList.ToArray());
@@ -992,6 +1009,11 @@
             {
                 Log.Error($"{nameof(SaveXdbContactSFObject)}(): Error saving {Constants.SFSitecoreXDBContactObjectName} object to Salesforce for visitor id {scVisitorId}.", ex, this);
             }
+        }
+
+        private bool ValidateEmailPreferenceQueryString(string queryString, Context context)
+        {
+            return string.IsNullOrEmpty(queryString) || queryString != context.SFRandomGUID;
         }
     }
 }

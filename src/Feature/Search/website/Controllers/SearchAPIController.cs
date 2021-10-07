@@ -150,14 +150,14 @@
         /// Gets funds that a user is following.
         /// </summary>
         /// <returns>A list of funds.</returns>
-        public ActionResult GetMyFilteredFunds(string @ref, string fundTeams, string sortOrder, string database = "web", int page = 1)
+        public ActionResult GetMyFilteredFunds(string fundTeams, string sortOrder, string database = "web", int page = 1)
         {
             if (Tracker.Current == null || Tracker.Current.Contact == null)
             {
                 return new HttpStatusCodeResult(System.Net.HttpStatusCode.NotFound);
             }
 
-            var contactFacetData = _personalizedContentService.GetContactFacetData(@ref);
+            var contactFacetData = _personalizedContentService.GetContactFacetData();
 
             if (contactFacetData == null)
             {

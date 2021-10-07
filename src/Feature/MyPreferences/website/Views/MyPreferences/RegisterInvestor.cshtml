@@ -1,74 +1,162 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @model LionTrust.Feature.MyPreferences.Models.RegisterInvestorViewModel
-<section class="container">
-    <div class="row">
-        <div class="col-lg-6">
-            <h2>@Html.Glass().Editable(Model.Content, x => x.Title)</h2>
-            <div class="text-black">
-                <p>
-                    @Html.Glass().Editable(Model.Content, x => x.Subtitle)
-                </p>
+
+<div id="retrieve-preferences" class="light-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 section retrieve-preferences">
+                <p>@Html.Glass().Editable(Model.Content, x => x.RetrievePreferencesBannerTitle) <a href="" class="showPreferencesForms">@Html.Glass().Editable(Model.Content, x => x.RetrievePreferencesBannerCTAText)</a></p>
             </div>
-            <div class="text-black">
-                <p>
-                    @Html.Glass().Editable(Model.Content, x => x.Description)
-                </p>
-            </div>
-            @if (!string.IsNullOrWhiteSpace(Model.Error))
-            {
-                <div class="text-danger">
-                    <p>@Html.Raw(Model.Error)</p>
-                </div>
-            }
         </div>
     </div>
-    <div class="row">
-        <div class="col-lg-6">
-            @using (Html.BeginRouteForm(Sitecore.Mvc.Configuration.MvcSettings.SitecoreRouteName, FormMethod.Post))
-            {
-                @Html.Sitecore().FormHandler("RegisterInvestor", "Submit")
-                @Html.Hidden("DatasourceId", Model.Content.Id)
-                @Html.HiddenFor(x => x.ProfessionalInvestor)
-                <div class="input-group">
-                    @Html.ValidationMessageFor(x => x.FirstName, string.Empty, new { @class = "text-danger" })
-                    @Html.TextBoxFor(x => x.FirstName)
-                    @Html.LabelFor(x => x.FirstName)
-                </div>
-
-                <div class="input-group">
-                    @Html.ValidationMessageFor(x => x.LastName, string.Empty, new { @class = "text-danger" })
-                    @Html.TextBoxFor(x => x.LastName)
-                    @Html.LabelFor(x => x.LastName)
-                </div>
-
-                <div class="input-group">
-                    @Html.ValidationMessageFor(x => x.Email, string.Empty, new { @class = "text-danger" })
-                    @Html.TextBoxFor(x => x.Email)
-                    @Html.LabelFor(x => x.Email)
-                </div>
-                if (Model.ProfessionalInvestor)
+</div>
+<div class="article-with-small my-4 text-black">
+    <section class="retrive-preferences-form @(Model.UserExists ? "retrive-preferences-form__show" : string.Empty)">
+        <section class="light-gray">
+            <span>@Html.Glass().Editable(Model.Content, x => x.RetrievePreferencesIntroductionText)</span>
+            <div class="input-group-row">
+                @using (Html.BeginForm("ResendEmail", "RegisterInvestor", FormMethod.Get))
                 {
+                    @Html.AntiForgeryToken()
+                    @Html.Hidden("DatasourceId", Model.Content.Id)
                     <div class="input-group">
-                        @Html.TextBoxFor(x => x.CompanyId)
-                        @Html.LabelFor(x => x.CompanyId)
+                        @Html.ValidationMessageFor(x => x.Email, string.Empty, new { @class = "text-danger" })
+                        @Html.TextBoxFor(x => x.Email)
+                        <label>@Html.Glass().Editable(Model.Content, x => x.RetrievePreferencesEmailLabel)</label>
                     </div>
-
-                    <div class="input-group">
-                        @Html.TextBoxFor(x => x.CompanyName)
-                        @Html.LabelFor(x => x.CompanyName)
+                    <div class="input-btn">
+                        <input value="@Model.Content.RetrievePreferencesCTAText" type="submit">
                     </div>
                 }
+            </div>
+        </section>
+    </section>
 
-                <div class="input-group">
-                    @Html.ValidationMessageFor(x => x.UKResident, string.Empty, new { @class = "text-danger" })
-                    @Html.DropDownListFor(x => x.UKResident, new List<SelectListItem>() { new SelectListItem { Text = "Yes", Value = "true" }, new SelectListItem { Text = "No", Value = "false" } }, "Please Select")
-                    @Html.LabelFor(x => x.UKResident)
-                </div>
+    @if (!string.IsNullOrWhiteSpace(Model.Error))
+    {
+        <p class="text-danger">@Html.Raw(Model.Error)</p>
+    }
 
-                <div class="input-btn">
-                    <input type="submit" class="btn-primary" value="Register" />
+    <p class="text-black">
+        @Html.Glass().Editable(Model.Content, x => x.IntroductionText)
+    </p>
+
+    <section class="info-section">
+        <h3>@Html.Glass().Editable(Model.Content, x => x.AboutYouTitle)</h3>
+        <label class="info-section__label">@Html.Glass().Editable(Model.Content, x => x.YourRoleLabel)</label> @Model.InvestorType<br />
+        <label class="info-section__label">@Html.Glass().Editable(Model.Content, x => x.YourCountryLabel)</label> @Model.CountryName<br />
+        <label class="info-section__label">@Html.Glass().Editable(Model.Content, x => x.NotCorrectLabel)</label> <a href="@Model.ChangeInvestorUrl" class="info-section__link">@Html.Glass().Editable(Model.Content, x => x.ChangeCTAText)</a><br />
+    </section>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.Hidden("DatasourceId", Model.Content.Id)
+        @Html.HiddenFor(x => x.ProfessionalInvestor)
+
+        <div class="article-with-small my-4 text-black">
+            <section class="content-preferences">
+                <h3>@Html.Glass().Editable(Model.Content, x => x.ContentPreferencesTitle)</h3>
+                <span class="content-preferences__subDescription">@Html.Glass().Editable(Model.Content, x => x.ContentPreferencesSubtitle)</span>
+                <div class="accordion-section accordion-section_full content-preferences__accordion">
+                    <div class="container">
+                        <div id="accordionFlushExample" class="accordion accordion_white">
+                            @for (int i = 0; i < Model.SFProcessList.Count; i++)
+                            {
+                                <div class="accordion__card">
+                                    <div class="accordion__header">
+                                        <div class="accordion__link" data-toggle="collapse" data-target="#flush-collapse@(i)" aria-expanded="false" aria-controls="flush-collapse@(i)">
+                                            @Model.SFProcessList[i].SFProcessName
+                                            <div class="content-preferences__accordion-controls">
+                                                <div class="options_count"><span class="content-preferences__category">fund</span><span class="slected_count"></span>of<span class="total_count"></span></div>
+                                                <i class="icon-plus accordion__plus"></i>
+                                                <i class="icon-minus accordion__minus"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="flush-collapse@(i)" class="collapse @(i == 0 ? "show" : string.Empty)" aria-labelledby="flush-heading@(i)" data-parent="#accordionFlushExample">
+                                        <div class="accordion__body">
+                                            <div class="multi-select-card">
+                                                <label class="multi-select-card__row multi-select-card__allSelected">
+                                                    @Html.Glass().Editable(Model.Content, x => x.FollowTeamTitle)
+                                                    @Html.CheckBoxFor(modelItem => modelItem.SFProcessList[i].IsProcessSelected)
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                @Html.HiddenFor(modelItem => modelItem.SFProcessList[i].SFProcessId)
+                                                <h4 class="content-preferences__subtitle">@Html.Glass().Editable(Model.Content, x => x.TeamFundsTitle)</h4>
+                                                <div class="multi-select-card__group">
+                                                    @for (int f = 0; f < Model.SFProcessList[i].SFFundList.Count; f++)
+                                                    {
+                                                        <label class="multi-select-card__row">
+                                                            @Model.SFProcessList[i].SFFundList[f].SFFundName
+                                                            @Html.CheckBoxFor(modelItem => modelItem.SFProcessList[i].SFFundList[f].IsFundSelected)
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        @Html.HiddenFor(modelItem => modelItem.SFProcessList[i].SFFundList[f].SFFundId)
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
                 </div>
-            }
+            </section>
         </div>
-    </div>
-</section>
+        <section>
+            <h3>@Html.Glass().Editable(Model.Content, x => x.EmailPreferencesTitle)</h3>
+            <p class="content-preferences__subDescription">@Html.Glass().Editable(Model.Content, x => x.EmailPreferencesSubtitle)</p>
+            <div class="can-toggle demo-rebrand-2">
+                <input id="SubscribeToEmail" type="checkbox" checked>
+                <label for="SubscribeToEmail">
+                    <div class="can-toggle__switch" data-checked="Yes" data-unchecked="No"></div>
+                </label>
+            </div>
+            <small class="d-block">@Html.Glass().Editable(Model.Content, x => x.SubscribeText)</small>
+            <div class="no-is-checked">
+                @Html.Glass().Editable(Model.Content, x => x.OptOutText)
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        @Html.ValidationMessageFor(x => x.FirstName, string.Empty, new { @class = "text-danger" })
+                        @Html.TextBoxFor(x => x.FirstName)
+                        <label>@Html.Glass().Editable(Model.Content, x => x.FirstNameLabel)</label>
+                    </div>
+                    <div class="input-group">
+                        @Html.ValidationMessageFor(x => x.LastName, string.Empty, new { @class = "text-danger" })
+                        @Html.TextBoxFor(x => x.LastName)
+                        <label>@Html.Glass().Editable(Model.Content, x => x.LastNameLabel)</label>
+                    </div>
+                    <div class="input-group">
+                        @Html.ValidationMessageFor(x => x.Email, string.Empty, new { @class = "text-danger" })
+                        @Html.TextBoxFor(x => x.Email)
+                        <label>@Html.Glass().Editable(Model.Content, x => x.EmailAddressLabel)</label>
+                    </div>
+
+                    <div class="@(!Model.ProfessionalInvestor ? "d-none" : string.Empty)">
+                        <div class="input-group">
+                            @Html.ValidationMessageFor(x => x.CompanyId, string.Empty, new { @class = "text-danger" })
+                            @Html.TextBoxFor(x => x.CompanyId)
+                            <label>@Html.Glass().Editable(Model.Content, x => x.FCALabel)</label>
+                        </div>
+                        <div class="input-group">
+                            @Html.ValidationMessageFor(x => x.CompanyName, string.Empty, new { @class = "text-danger" })
+                            @Html.TextBoxFor(x => x.CompanyName)
+                            <label>@Html.Glass().Editable(Model.Content, x => x.CompanyNameLabel)</label>
+                        </div>
+                    </div>
+                    <div class="input-btn">
+                        <input type="submit" class="btn-primary" value="@Model.Content.SubmitCTAText" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    }
+    <section class="privacy-note mt-4 section-card">
+        <p class="section-card__title">@Html.Glass().Editable(Model.Content, x => x.PrivacyNoticeTitle)</p>
+        <p class="section-card__description">@Html.Glass().Editable(Model.Content, x => x.PrivacyNoticeText)</p>
+    </section>
+</div>

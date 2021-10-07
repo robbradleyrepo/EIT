@@ -10,8 +10,6 @@
     using Sitecore.Mvc.Presentation;
     using System.Linq;
     using LionTrust.Foundation.Navigation.Helpers;
-    using System;
-    using System.Web;
 
     public class NavigationController : SitecoreController
     {
@@ -46,7 +44,7 @@
                     homeModel.OnboardingRoleName = OnboardingHelper.ProfileRoleName(homeModel.OnboardingConfiguration, _log);
                 }
 
-                homeModel.ChangeInvestorUrl = GetChangeUrl();
+                homeModel.ChangeInvestorUrl = OnboardingHelper.GetChangeUrl();
             }
 
             return View("~/Views/Navigation/Footer.cshtml", homeModel);
@@ -85,19 +83,9 @@
 
             navigationViewModel.HomeItem.MenuItems = navigationViewModel.HomeItem.MenuItems.Where(x => OnboardingHelper.HasAccess(x.Fund?.ExcludedCountries));
 
-            navigationViewModel.HomeItem.ChangeInvestorUrl = GetChangeUrl();
+            navigationViewModel.HomeItem.ChangeInvestorUrl = OnboardingHelper.GetChangeUrl();
 
             return navigationViewModel;
-        }
-
-        private string GetChangeUrl()
-        {
-            var uriBuilder = new UriBuilder(Request.Url.ToString());
-            var query = HttpUtility.ParseQueryString(uriBuilder.Query);
-            query.Add(Foundation.Onboarding.Constants.QueryStringNames.Change, bool.TrueString.ToLower());
-            uriBuilder.Query = query.ToString();
-
-            return uriBuilder.Uri.PathAndQuery;
         }
     }
 }

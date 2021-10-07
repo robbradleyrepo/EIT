@@ -88,5 +88,10 @@
         {
             public const string Change = "change";
         }
+
+        public static class CountryCodes
+        {
+            public const string UK = "GB";
+        }
     }
 }

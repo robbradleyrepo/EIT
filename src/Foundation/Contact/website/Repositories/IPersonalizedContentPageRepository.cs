@@ -1,7 +1,9 @@
-﻿namespace LionTrust.Foundation.Contact.Repositories
+﻿using LionTrust.Foundation.Contact.Models;
+
+namespace LionTrust.Foundation.Contact.Repositories
 {
     public interface IPersonalizedContentPageRepository
     {
-        bool IdentifySitecoreContactAndSaveSFDataInFacet(string sfEntityId, string sfRandomGUID, bool isContact);
+        bool IdentifySitecoreContactAndSaveSFDataInFacet(Context context);
     }
 }

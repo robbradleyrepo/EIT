@@ -9,19 +9,83 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "10ace34c-bef0-4890-a325-2cade743f274"
+      Hint: RegisterInvestor_ContentPreferencesTeamFundsTitle
+      Value: Team funds
+    - ID: "25568fa2-e0dc-40bc-b0c7-63fbafc8e30b"
+      Hint: RegisterInvestor_RetrievePreferencesBannerCTAText
+      Value: Retrieve them here
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20210728T133135Z
     - ID: "2b64a25f-bc2e-4c05-8192-97f2c141d433"
       Hint: RegisterInvestor_DefaultSFOrganisationId
       Value: 0011r000024moOy
+    - ID: "2fc980a9-4f18-451d-8270-67424da66bc0"
+      Hint: RegisterInvestor_EmailPreferencesCompanyNameLabel
+      Value: Company name
+    - ID: "327759b0-e24d-4e68-9edd-1972d27855bc"
+      Hint: RegisterInvestor_EmailPreferencesSubtitle
+      Value: "Receive Liontrust insight and Fund updates based on my preferences?"
+    - ID: "40f33faf-cf8c-4888-9cc0-95333e37510b"
+      Hint: RegisterInvestor_EmailPreferencesSubscribeText
+      Value: Save site preferences & subscribe to emails
+    - ID: "44ee3542-38df-4c10-97a8-14636bf87ba6"
+      Hint: RegisterInvestor_SubmitCTAText
+      Value: Subscribe & Save Preferences
+    - ID: "496abd78-9175-44d2-a695-2feb9a3b7ae9"
+      Hint: RegisterInvestor_EmailPreferencesFirstNameLabel
+      Value: First Name *
+    - ID: "4a7ffd21-99b4-4bc8-b34f-542674b0ed63"
+      Hint: RegisterInvestor_AboutYouTitle
+      Value: 1. About you
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
         sitecore\admin
+    - ID: "66d371db-d7ac-42a0-8a6c-a932c85db406"
+      Hint: RegisterInvestor_RetrievePreferencesIntroductionText
+      Value: "We'll send you a link to log in to view your preferences - no password needed."
+    - ID: "6f14dbf5-e3d3-4ac1-b98e-b266c3c8c4f8"
+      Hint: RegisterInvestor_NotCorrectLabel
+      Value: "Not correct?"
+    - ID: "79ed1e30-6df9-4b71-8dba-7e98851c8040"
+      Hint: RegisterInvestor_RetrievePreferencesCTAText
+      Value: Get login link
+    - ID: "9850f151-5e9b-4350-acf6-a3f56ea2627e"
+      Hint: RegisterInvestor_EmailPreferencesEmailAddressLabel
+      Value: Email Address *
+    - ID: "987d00b3-c658-49d7-abae-7bce3c9cf273"
+      Hint: RegisterInvestor_PrivacyNoticeTitle
+      Value: Privacy Notice
+    - ID: "a192bc7f-6b60-4555-853f-ffad8677f29b"
+      Hint: RegisterInvestor_RetrievePreferencesEmailLabel
+      Value: Email Address *
+    - ID: "a8c04620-1e7f-4fbd-bd7b-23acf7d474ae"
+      Hint: RegisterInvestor_EmailPreferencesOptOutText
+      Value: Save site preferences only. We use your email address to send you a link to retrieve your preferences. We will not send you email news and insight unless you change your setting.
+    - ID: "aa6a40d1-af9a-43f0-af77-a3eb780d2229"
+      Hint: RegisterInvestor_ContentPreferencesTitle
+      Value: 2. Set your content preferences
     - ID: "abac9452-b35b-4fea-88d5-8b0846826d46"
       Hint: RegisterInvestor_Description
       Value: To tailor the communications you receive from Liontrust, please register for our email preference centre by completing the form below. Once submitted, we will send you a confirmation email so that you can make your preferences.
+    - ID: "aca1e97a-349c-46af-8030-a187e4228c42"
+      Hint: RegisterInvestor_PrivacyNoticeText
+      Value: |
+        It is important that you understand what personal information we hold and how it is used. You can read our Privacy Notice <a href="~/link.aspx?_id=7502B69ED1544861A033BC0CB30A91B5&amp;_z=z">here</a>.
+    - ID: "b26e0103-149f-4716-9bd1-0847b84d0a65"
+      Hint: RegisterInvestor_ChangeCTAText
+      Value: change here
+    - ID: "caee178b-fb59-429a-97cc-e5473eeacc72"
+      Hint: RegisterInvestor_ContentPreferencesSubtitle
+      Value: Follow teams & funds
+    - ID: "ce4ba61a-2b31-4128-a7f9-ea94091e9251"
+      Hint: RegisterInvestor_EmailPreferencesLastNameLabel
+      Value: Last Name *
+    - ID: "d358c951-ad75-42dc-af8a-76d220cbea05"
+      Hint: RegisterInvestor_EmailPreferencesFCALabel
+      Value: Individual FCA reference number 
     - ID: "dd96af02-2c1f-42c3-82ab-273bce9bfd54"
       Hint: RegisterInvestor_Title
       Value: Welcome to the Liontrust email preference centre
@@ -36,3 +100,18 @@ Languages:
       Hint: RegisterInvestor_UserExistsErrorLabel
       Value: |
         Your user name already exists with the same email address. Please click <a target="_blank" href="{ResendEmailLink}">here</a> to request the link to the preference centre or please try again with a different email address. If you have any questions or would like more information, please contact us by sending an email to <a href="mailto:clientservices@liontrust.co.uk?subject=Register Private Investor Failed" target="_blank">clientservices@liontrust.co.uk</a>
+    - ID: "eb8323f3-80d2-40f8-915a-ec5771d8a940"
+      Hint: RegisterInvestor_RetrievePreferencesBannerTitle
+      Value: "Already set your preferences?"
+    - ID: "ebe943a0-fca3-4f1b-a906-87974c1eb2b4"
+      Hint: RegisterInvestor_YourRoleLabel
+      Value: "Your role:"
+    - ID: "ed187ad0-f4c2-451a-bead-653a06b02fc5"
+      Hint: RegisterInvestor_EmailPreferencesTitle
+      Value: 3. Set email preferences
+    - ID: "f09282fe-40f7-4427-a26a-412b540f1e41"
+      Hint: RegisterInvestor_ContentPreferencesFollowTeamTitle
+      Value: Follow team
+    - ID: "f72c7721-46ad-4a5d-bb73-0ae4fbd10d04"
+      Hint: RegisterInvestor_YourCountryLabel
+      Value: "Your country of residence:"

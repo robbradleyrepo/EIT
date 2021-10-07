@@ -20,6 +20,7 @@
     using Contact = Sitecore.XConnect.Contact;
     using Sitecore.Analytics.Data;
     using Sitecore.Analytics.Model;
+    using System.Web;
 
     public static class OnboardingHelper
     {
@@ -50,11 +51,12 @@
             return string.Empty;
         }
 
-        public static IInvestor GetCurrentContactInvestor(IOnboardingConfiguration onboardingConfiguration, BaseLog log)
+        public static IInvestor GetCurrentContactInvestor(IMvcContext context, BaseLog log)
         {
+            var home = context.GetHomeItem<IHome>();
             IInvestor inverstor = null;
             var tracker = Tracker.Current;
-            if (!IsValidConfiguration(onboardingConfiguration, log))
+            if (home == null || home.OnboardingConfiguration == null || !IsValidConfiguration(home.OnboardingConfiguration, log))
             {
                 return null;
             }
@@ -62,14 +64,14 @@
             if (tracker != null && tracker.Interaction != null
                 && tracker.Interaction.Profiles != null)
             {
-                if (tracker.Interaction.Profiles.ContainsProfile(onboardingConfiguration.Profile.Name))
+                if (tracker.Interaction.Profiles.ContainsProfile(home.OnboardingConfiguration.Profile.Name))
                 {
-                    var profile = tracker.Interaction.Profiles[onboardingConfiguration.Profile.Name];
+                    var profile = tracker.Interaction.Profiles[home.OnboardingConfiguration.Profile.Name];
                     if (profile.PatternId != null && profile.PatternId.Value != null)
                     {
                         if (profile.PatternId.HasValue)
                         {
-                            inverstor = onboardingConfiguration.ChooseInvestorRole?
+                            inverstor = home.OnboardingConfiguration.ChooseInvestorRole?
                                 .FirstOrDefault()?
                                 .Investors?
                                 .FirstOrDefault(i => i?.PatternCard.Id == profile.PatternId);
@@ -288,6 +290,26 @@
             }
 
             return profile;
+        }
+
+        public static string GetChangeUrl()
+        {
+            if(HttpContext.Current == null)
+            {
+                return string.Empty;
+            }
+
+            var uriBuilder = new UriBuilder(HttpContext.Current.Request.Url.ToString());
+            var query = HttpUtility.ParseQueryString(uriBuilder.Query);
+            query.Add(QueryStringNames.Change, bool.TrueString.ToLower());
+            uriBuilder.Query = query.ToString();
+
+            return uriBuilder.Uri.PathAndQuery;
+        }
+
+        public static bool IsUkResident()
+        {
+            return GetCurrentContactCountryCode()?.Equals(CountryCodes.UK, StringComparison.InvariantCultureIgnoreCase) ?? false;
         }
     }
 }

@@ -22,12 +22,12 @@
         /// <param name="sfEntityId"></param>
         /// <param name="sfRandomGUID"></param>
         /// <param name="isContact"></param>
-        public bool IdentifySitecoreContactAndSaveSFDataInFacet(string sfEntityId, string sfRandomGUID, bool isContact)
+        public bool IdentifySitecoreContactAndSaveSFDataInFacet(Context context)
         {
             try
             {
                 var sfEntityUtilityObj = new SFEntityUtility();
-                var sfEmailPref = sfEntityUtilityObj.GetSFEmailPreferences(sfEntityId, sfRandomGUID, isContact, true);
+                var sfEmailPref = context.Preferences;
 
                 if (sfEmailPref != null && !string.IsNullOrEmpty(sfEmailPref.EmailAddress))
                 {
@@ -54,9 +54,7 @@
                         var sfDataObj = new ScContactFacetData();
                         sfDataObj.FirstName = sfEmailPref.FirstName;
                         sfDataObj.LastName = sfEmailPref.LastName;
-                        sfDataObj.SalesforceEntityId = sfEmailPref.SFEntityId;
                         sfDataObj.SalesforceOrgId = sfEmailPref.SFOrgId;
-                        sfDataObj.RandomGuidFromSalesforceEntity = sfEmailPref.SFRandomGUID;
                         sfDataObj.SalesforceFundIds = sfFundIdList;
 
                         //Save relavant Salesforce data in Sitecore contact facet                        
@@ -67,7 +65,7 @@
             }
             catch (Exception ex)
             {
-                Log.Error(string.Format("Exception occured when identifying Sitecore contact and saving relavant Salesforce fund ids in the S4SInfo facet for Sf entity id : {0} and random guid: {1}.", sfEntityId, sfRandomGUID), ex, this);                
+                Log.Error(string.Format("Exception occured when identifying Sitecore contact and saving relavant Salesforce fund ids in the S4SInfo facet for Sf entity id : {0} and random guid: {1}.", context.SFEntityId, context.SFRandomGUID), ex, this);                
             }
 
             return false;

@@ -5,6 +5,7 @@
     using System;
     using System.Web;
     using LionTrust.Foundation.Contact.Services;
+    using System.Collections.Generic;
 
     public class EmailPreferencesRepository : IEmailPreferencesRepository
     {
@@ -16,16 +17,16 @@
         {
             _applicationCacheRepository = applicationCacheRepository;
         }
-        public EmailPreferences GetEmailPreferences(string sfContactId, string sfRandomGUID, bool isContact)
+        public EmailPreferences GetEmailPreferences(Context context)
         {
             var sfEntityUtility = new SFEntityUtility();
-            return sfEntityUtility.GetSFEmailPreferences(sfContactId, sfRandomGUID, isContact);
+            return sfEntityUtility.GetSFEmailPreferences(context);
         }
 
-        public bool SaveEmailPreferneces(EmailPreferences emailPreferences)
+        public bool SaveEmailPreferneces(Context context)
         {
             var sfEntityUtility = new SFEntityUtility();
-            return sfEntityUtility.SaveEmailPreferences(emailPreferences);
+            return sfEntityUtility.SaveEmailPreferences(context);
         }
 
         public RegisterdUserWithEmailDetails SaveNonProfUserAsSFLead(NonProfessionalUser nonProfessionalUser, IEditEmailPrefTemplate emailTemplate, string preferencesUrl, string fundDashboardUrl)
@@ -43,6 +44,7 @@
                 var emailMessageBody = emailTemplate.Message;
                 emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.FullNameToken, savedUserEmailDetails.FullName);
                 emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.EditPrefLinkToken, savedUserEmailDetails.EditEmailPrefLink);
+                emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.FundDashboardLinkToken, savedUserEmailDetails.FundDashboardLink);
                 emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.SiteURLToken, string.Format("https://{0}", HttpContext.Current.Request.Url.Host));
 
                 var returnObj = new RegisterdUserWithEmailDetails
@@ -71,6 +73,7 @@
                 {
                     return new RegisterdUserWithEmailDetails { IsUserExists = savedUserEmailDetails.IsUserExists };
                 }
+
                 //Generate email body
                 var emailMessageBody = emailTemplate.Message;
                 emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.FullNameToken, savedUserEmailDetails.FullName);
@@ -138,6 +141,12 @@
             }
 
             return null;
+        }
+
+        public IEnumerable<SFProcess> GetSFProcessList()
+        {
+            var sfEntityUtility = new SFEntityUtility();
+            return sfEntityUtility.GetSFProcessList();
         }
     }
 }

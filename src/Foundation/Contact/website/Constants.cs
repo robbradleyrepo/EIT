@@ -95,5 +95,10 @@ namespace LionTrust.Foundation.Contact
                 public static readonly string DatasourceIdQueryStringKey = "dataSourceId";
             }
         }
+
+        public static class SessionKeys
+        {
+            public const string ContextSessionKey = "context";
+        }
     }
 }

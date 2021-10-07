@@ -8,19 +8,16 @@ namespace LionTrust.Feature.MyPreferences.Models
 {
     public class EditEmailPreferencesViewModel
     {
-        public EditEmailPreferencesViewModel(EmailPreferences emailPreferences, IEditEmailPreferences editEmailPreferences)
+        public EditEmailPreferencesViewModel(Context context, IEditEmailPreferences editEmailPreferences)
         {
-            if (emailPreferences != null)
+            if (context.Preferences != null)
             {
-                SFEntityId = emailPreferences.SFEntityId;
-                SFRandomGUID = emailPreferences.SFRandomGUID;
-                SFProcessList = emailPreferences.SFProcessList;
-                IncludeInLTNews = emailPreferences.IncludeInLTNews;
-                UnsubscribeAll = emailPreferences.IsContact;
-                IsConsentGivenDateEmpty = emailPreferences.IsConsentGivenDateEmpty;
-                IsUkResident = emailPreferences.IsUkResident;
-                IsInstitutionalBulletin = emailPreferences.IsInstitutionalBulletinChecked;
-                EmailAddress = emailPreferences.EmailAddress;
+                SFProcessList = context.Preferences.SFProcessList;
+                IncludeInLTNews = context.Preferences.IncludeInLTNews;
+                UnsubscribeAll = context.IsContact;
+                IsConsentGivenDateEmpty = context.Preferences.IsConsentGivenDateEmpty;
+                IsInstitutionalBulletin = context.Preferences.IsInstitutionalBulletinChecked;
+                EmailAddress = context.Preferences.EmailAddress;
             }
 
             Content = editEmailPreferences;
@@ -34,12 +31,6 @@ namespace LionTrust.Feature.MyPreferences.Models
         [Required]
         public string EmailAddress { get; set; }
 
-        [Required]
-        public string SFRandomGUID { get; set; }
-
-        [Required]
-        public string SFEntityId { get; set; }
-
         public IEditEmailPreferences Content { get; set; }
 
         public bool IncludeInLTNews { get; set; }
@@ -47,8 +38,6 @@ namespace LionTrust.Feature.MyPreferences.Models
         public bool UnsubscribeAll { get; set; }
 
         public bool IsConsentGivenDateEmpty { get; set; }
-
-        public bool IsUkResident { get; set; }
 
         public bool IsInstitutionalBulletin { get; set; }
 

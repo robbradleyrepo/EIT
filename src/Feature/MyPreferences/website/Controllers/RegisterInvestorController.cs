@@ -6,28 +6,31 @@
     using LionTrust.Feature.MyPreferences.Services;
     using LionTrust.Foundation.Contact.Managers;
     using LionTrust.Foundation.Contact.Models;
+    using LionTrust.Foundation.Contact.Services;
     using LionTrust.Foundation.Onboarding.Helpers;
     using LionTrust.Foundation.Onboarding.Models;
     using Sitecore.Abstractions;
     using Sitecore.Mvc.Controllers;
     using System;
+    using System.Linq;
+    using System.Collections.Generic;
     using System.Web.Mvc;
     using static LionTrust.Feature.MyPreferences.Constants;
-    using static LionTrust.Foundation.Contact.Constants;
-    using static LionTrust.Foundation.Onboarding.Constants;
     using QueryStringNames = Foundation.Contact.Constants.QueryStringNames;
 
     public class RegisterInvestorController : SitecoreController
     {
         private readonly IMvcContext _context;
         private readonly BaseLog _log;
+        private readonly IPersonalizedContentService _personalizedContentService;
         private readonly EmailPreferencesService _emailPreferencesService;
 
-        public RegisterInvestorController(IMvcContext context, BaseLog log, IMailManager mailManager, IEmailPreferencesRepository editEmailPreferencesRepository)
+        public RegisterInvestorController(IMvcContext context, BaseLog log, IMailManager mailManager, IEmailPreferencesRepository editEmailPreferencesRepository, IPersonalizedContentService personalizedContentService)
         {
             _context = context;
             _log = log;
-            _emailPreferencesService = new EmailPreferencesService(editEmailPreferencesRepository, mailManager);
+            _personalizedContentService = personalizedContentService;
+            _emailPreferencesService = new EmailPreferencesService(editEmailPreferencesRepository, mailManager, personalizedContentService);
         }
 
         public ActionResult RegisterInvestor(Errors error = Errors.None, string email = "")
@@ -40,32 +43,47 @@
                 return null;
             }
 
-            var investor = OnboardingHelper.GetCurrentContactInvestor(home.OnboardingConfiguration, _log);
+            var investor = OnboardingHelper.GetCurrentContactInvestor(_context, _log);
 
-            if(investor == null)
+
+            if (!Sitecore.Context.PageMode.IsExperienceEditor && investor == null)
             {
                 return null;
             }
 
-            var professionalInvestor = investor.Id == home.OnboardingConfiguration.ProfressionalInvestor.Id;
+            var viewModel = new RegisterInvestorViewModel(data);
+            viewModel.SFProcessList = _emailPreferencesService.GetSFProcessList()?.ToList();
+            viewModel.CountryName = OnboardingHelper.GetCurrentContactCountry(_context)?.CountryName;
+            viewModel.ChangeInvestorUrl = OnboardingHelper.GetChangeUrl();
 
-            var viewModel = new RegisterInvestorViewModel(data, professionalInvestor);
+            if (!Sitecore.Context.PageMode.IsExperienceEditor)
+            {
+                viewModel.ProfessionalInvestor = investor.Id == home.OnboardingConfiguration.ProfressionalInvestor?.Id;
+                viewModel.InvestorType = investor.InvestorName;
+            }
+
+            //Workaround so model state works as company name & FSA required if professional
+            if (!viewModel.ProfessionalInvestor)
+            {
+                viewModel.CompanyName = !string.IsNullOrEmpty(data.CompanyFieldDefaultValue) ? data.CompanyFieldDefaultValue : "Self";
+                viewModel.CompanyId = "000000";
+            }
 
             if (error == Errors.UserExists)
             {
-                var resendEmailPageUrl = $"/api/{Sitecore.Mvc.Configuration.MvcSettings.SitecoreRouteName}/{ControllerContext.RouteData.Values["controller"].ToString()}/ResendEmail";
-                resendEmailPageUrl = string.Format("{0}?{1}={2}&{3}=false&{4}={5}", resendEmailPageUrl, QueryStringNames.EmailPreferencefParams.EmailQueryStringKey, email, QueryStringNames.EmailPreferencefParams.IsContactQueryStringKey, QueryStringNames.EmailPreferencefParams.DatasourceIdQueryStringKey, data.Id);
-
-                var userExistsErrorMessage = data.UserExistsErrorLabel;
-                userExistsErrorMessage = userExistsErrorMessage.Replace(SitecoreTokens.RegisterUserProcess.ResendEmailLinkToken, resendEmailPageUrl);
-                viewModel.Error = userExistsErrorMessage;
+                viewModel.Error = data.UserExistsErrorLabel;
+                viewModel.UserExists = true;
+            }
+            else if (error == Errors.General)
+            {
+                viewModel.Error = data.GenericErrorLabel;
             }
 
             return View("~/Views/MyPreferences/RegisterInvestor.cshtml", viewModel);
         }
 
         [HttpPost]
-        public ActionResult Submit(RegisterInvestorSubmit registerInvestorSubmit)
+        public ActionResult RegisterInvestor(RegisterInvestorSubmit registerInvestorSubmit)
         {
             var error = Errors.None;
             var data = _context.SitecoreService.GetItem<IRegisterInvestor>(registerInvestorSubmit.DatasourceId);
@@ -80,22 +98,21 @@
                 if (ModelState.IsValid)
                 {
                     var userExists = false;
-                    var emailTemplate = registerInvestorSubmit.UKResident ? data.UKEmailTemplate : data.NonUKEmailTemplate;
+                    var ukResident = OnboardingHelper.IsUkResident();
+                    var emailTemplate = ukResident ? data.UKEmailTemplate : data.NonUKEmailTemplate;
 
                     if (!registerInvestorSubmit.ProfessionalInvestor)
                     {
-                        var company = (!string.IsNullOrEmpty(data.CompanyFieldDefaultValue)) ? data.CompanyFieldDefaultValue : "Self";
-
                         var nonProfUserViewModel = new NonProfessionalUser
                         {
                             FirstName = registerInvestorSubmit.FirstName,
                             LastName = registerInvestorSubmit.LastName,
                             Email = registerInvestorSubmit.Email,
-                            IsUKResident = registerInvestorSubmit.UKResident,
-                            Company = company
+                            IsUKResident = ukResident,
+                            Company = registerInvestorSubmit.CompanyName
                         };
 
-                        var savedUser = _emailPreferencesService.SaveNonProfUserAsSFLead(nonProfUserViewModel, emailTemplate, data.EditPreferencesPage.AbsoluteUrl, data.FundDashboardyPage.AbsoluteUrl);
+                        var savedUser = _emailPreferencesService.SaveNonProfUserAsSFLead(nonProfUserViewModel, emailTemplate, data.EditPreferencesPage.AbsoluteUrl, data.FundDashboardPage.AbsoluteUrl);
 
                         if (savedUser != null)
                         {
@@ -105,19 +122,18 @@
                     else
                     {
                         var sfOrganisationId = (!string.IsNullOrEmpty(data.DefaultSFOrganisationId)) ? data.DefaultSFOrganisationId : string.Empty;
-
                         var professionalUser = new ProfessionalUser
                         {
                             FirstName = registerInvestorSubmit.FirstName,
                             LastName = registerInvestorSubmit.LastName,
                             Email = registerInvestorSubmit.Email,
-                            IsUKResident = registerInvestorSubmit.UKResident,
+                            IsUKResident = ukResident,
                             CompanyId = registerInvestorSubmit.CompanyId,
-                            CompanyName = registerInvestorSubmit.CompanyName,
+                            Company = registerInvestorSubmit.CompanyName,
                             Organisation = sfOrganisationId
                         };
 
-                        var savedUser = _emailPreferencesService.SaveProfUserAsSFContact(professionalUser, emailTemplate, data.EditPreferencesPage.AbsoluteUrl, data.FundDashboardyPage.AbsoluteUrl);
+                        var savedUser = _emailPreferencesService.SaveProfUserAsSFContact(professionalUser, emailTemplate, data.EditPreferencesPage.AbsoluteUrl, data.FundDashboardPage.AbsoluteUrl);
 
                         if (savedUser != null)
                         {
@@ -127,11 +143,20 @@
 
                     if (!userExists)
                     {
-                        return Redirect(data.ConfirmationPage.Url);
+                        var context = _personalizedContentService.GetContext();
+                        if (UpdateEmailPreferences(registerInvestorSubmit, context))
+                        {
+                            return Redirect(data.ConfirmationPage.Url);
+                        }
+                        else
+                        {
+                            error = Errors.General;
+                        }
                     }
                     else
                     {
                         error = Errors.UserExists;
+                        return Redirect($"{Request.RawUrl}?{QueryStringNames.EmailPreferencefParams.ErrorQueryStringKey}={(int)error}&{QueryStringNames.EmailPreferencefParams.EmailQueryStringKey}={registerInvestorSubmit.Email}#retrieve-preferences");
                     }
                 }
                 else
@@ -145,10 +170,10 @@
                 error = Errors.General;
             }
 
-            return Redirect($"{Request.RawUrl}?{QueryStringNames.EmailPreferencefParams.ErrorQueryStringKey}={(int)error}&{QueryStringNames.EmailPreferencefParams.EmailQueryStringKey}={registerInvestorSubmit.Email}");
+            return Redirect($"{Request.RawUrl}?{QueryStringNames.EmailPreferencefParams.ErrorQueryStringKey}={(int)error}");
         }
 
-        public ActionResult ResendEmail(string email, bool isContact, Guid dataSourceId)
+        public ActionResult ResendEmail(string email, Guid dataSourceId)
         {
             var data = _context.SitecoreService.GetItem<IRegisterInvestor>(dataSourceId);
 
@@ -161,7 +186,7 @@
 
             if (!string.IsNullOrEmpty(email))
             {
-                isSuccess = _emailPreferencesService.ResendEditEmailPrefLink(email, isContact, data.ResendEditPreferencesEmailTemplate, data.EditPreferencesPage.AbsoluteUrl, data.FundDashboardyPage.AbsoluteUrl);
+                isSuccess = _emailPreferencesService.ResendEditEmailPrefLink(email, false, data.ResendEditPreferencesEmailTemplate, data.EditPreferencesPage.AbsoluteUrl, data.FundDashboardPage.AbsoluteUrl);
             }
 
             if (isSuccess)
@@ -172,6 +197,53 @@
             {
                 return Redirect(data.ResendEmailFailedPage.Url);
             }
+        }
+
+        private bool UpdateEmailPreferences(RegisterInvestorSubmit registerInvestorSubmit, Context context)
+        {
+            context.Preferences.EmailAddress = registerInvestorSubmit.Email;
+
+            if(registerInvestorSubmit.SubscribeToEmail)
+            {
+                context.Preferences.SubscribeAll();
+            }
+            else
+            {
+                context.Preferences.UnsubscribeAll();
+            }
+
+            context.Preferences.IsUkResident = OnboardingHelper.IsUkResident();
+
+            var sfProcessList = new List<SFProcess>();
+
+            //Iterate through process repeater
+            foreach (var fundCategory in registerInvestorSubmit.SFProcessList)
+            {
+                //Generate SFProcessViewModel
+                var sfProcess = new SFProcess();
+                sfProcess.SFProcessId = fundCategory.SFProcessId;
+                sfProcess.IsProcessSelected = fundCategory.IsProcessSelected;
+
+                //Iterate through fund repeater
+                var sfFundList = new List<SFFund>();
+
+                foreach (var fund in fundCategory.SFFundList)
+                {
+                    var sfFund = new SFFund();
+                    sfFund.SFFundId = fund.SFFundId;
+                    sfFund.IsFundSelected = fund.IsFundSelected;
+                    sfFundList.Add(sfFund);
+
+                }
+
+                sfProcess.SFFundList = sfFundList;
+                sfProcessList.Add(sfProcess);
+            }
+
+            context.Preferences.SFProcessList = sfProcessList;
+
+            return _emailPreferencesService.SaveEmailPreferences(context);
+
         }
     }
 }

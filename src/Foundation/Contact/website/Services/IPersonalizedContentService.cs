@@ -4,6 +4,10 @@
 
     public interface IPersonalizedContentService
     {
-        ScContactFacetData GetContactFacetData(string queryStringRef);
+        ScContactFacetData GetContactFacetData();
+
+        Context GetContext();
+
+        void UpdateContext(Context context);
     }
 }

@@ -18,7 +18,7 @@
             _personalizedContentService = personalizedContentService;
         }
 
-        public ActionResult Render(string @ref)
+        public ActionResult Render()
         {
             var dataSource = _mvcContext.GetDataSourceItem<IMyFundsLeadBanner>();
 
@@ -27,7 +27,7 @@
                 return null;
             }
 
-            var contactData = _personalizedContentService.GetContactFacetData(@ref);
+            var contactData = _personalizedContentService.GetContactFacetData();
             var viewModel = new MyFundsLeadBannerViewModel(dataSource);
 
             if (!Sitecore.Context.PageMode.IsExperienceEditor && contactData == null)
@@ -37,11 +37,6 @@
             else if (contactData != null)
             {
                 viewModel.ContactName = $"{contactData.FirstName} {contactData.LastName}";
-
-                if (viewModel.Content.Cta != null)
-                {
-                    viewModel.Content.Cta.Query = $"{Foundation.Contact.Constants.QueryStringNames.EmailPreferencefParams.RefQueryStringKey}={@ref}";
-                }
             }
 
             return View("~/Views/Banner/MyFundsLeadBanner.cshtml", viewModel);

@@ -31,7 +31,7 @@
             _fundContentSearchService = fundContentSearchService;
         }
 
-        public ActionResult Render(string @ref)
+        public ActionResult Render()
         {
             var datasource = _context.GetDataSourceItem<IMyFundsScroller>();
             if (datasource == null || Tracker.Current == null || !Tracker.IsActive || Tracker.Current.Contact == null)
@@ -39,7 +39,7 @@
                 return null;
             }
 
-            var contactData = _personalizedContentService.GetContactFacetData(@ref);
+            var contactData = _personalizedContentService.GetContactFacetData();
 
             var fundSearchRequest = new FundSearchRequest 
             { 

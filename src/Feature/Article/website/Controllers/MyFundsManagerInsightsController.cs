@@ -36,7 +36,7 @@
             _fundContentSearchService = fundContentSearchService;
         }
 
-        public ActionResult Render(string @ref)
+        public ActionResult Render()
         {
             var data = _context.GetDataSourceItem<IFundManagerInsightsBase>();
             IEnumerable<IArticlePromo> articles = new List<IArticlePromo>();
@@ -46,7 +46,7 @@
                 return null;
             }
 
-            var contactData = _personalizedContentService.GetContactFacetData(@ref);
+            var contactData = _personalizedContentService.GetContactFacetData();
 
             if (!Sitecore.Context.PageMode.IsExperienceEditor && (contactData == null || contactData.SalesforceFundIds == null || !contactData.SalesforceFundIds.Any()))
             {

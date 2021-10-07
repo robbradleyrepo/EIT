@@ -1,53 +1,125 @@
 ﻿namespace LionTrust.Feature.MyPreferences.Models
 {
     using Glass.Mapper.Sc.Configuration.Attributes;
-    using LionTrust.Foundation.Contact.Models;
     using LionTrust.Foundation.ORM.Models;
+
     public interface IRegisterInvestor : IGlassBase
     {
-        [SitecoreField(Constants.RegisterInvestor.Title_FieldId)]
-        string Title { get; set; }
+        [SitecoreField(Constants.RegisterInvestor.Content.IntroductionText_FieldId)]
+        string IntroductionText { get; set; }
 
-        [SitecoreField(Constants.RegisterInvestor.Subtitle_FieldId)]
-        string Subtitle { get; set; }
-
-        [SitecoreField(Constants.RegisterInvestor.Description_FieldId)]
-        string Description { get; set; }
-
-        [SitecoreField(Constants.RegisterInvestor.UserExistsErrorLabel_FieldId)]
+        [SitecoreField(Constants.RegisterInvestor.Content.UserExistsErrorLabel_FieldId)]
         string UserExistsErrorLabel { get; set; }
 
-        [SitecoreField(Constants.RegisterInvestor.GenericErrorLabel_FieldId)]
+        [SitecoreField(Constants.RegisterInvestor.Content.GenericErrorLabel_FieldId)]
         string GenericErrorLabel { get; set; }
 
-        [SitecoreField(Constants.RegisterInvestor.DefaultSFOrganisationId_FieldId)]
+        [SitecoreField(Constants.RegisterInvestor.Content.DefaultSFOrganisationId_FieldId)]
         string DefaultSFOrganisationId { get; set; }
 
-        [SitecoreField(Constants.RegisterInvestor.CompanyFieldDefaultValue_FieldId)]
+        [SitecoreField(Constants.RegisterInvestor.Content.CompanyFieldDefaultValue_FieldId)]
         string CompanyFieldDefaultValue { get; set; }
 
-        [SitecoreField(Constants.RegisterInvestor.ResendEmailSuccessPage_FieldId)]
+        [SitecoreField(Constants.RegisterInvestor.Content.SubmitCTAText_FieldId)]
+        string SubmitCTAText { get; set; }
+
+        [SitecoreField(Constants.RegisterInvestor.Content.PrivacyNoticeTitle_FieldId)]
+        string PrivacyNoticeTitle { get; set; }
+
+        [SitecoreField(Constants.RegisterInvestor.Content.PrivacyNoticeText_FieldId)]
+        string PrivacyNoticeText { get; set; }
+
+        [SitecoreField(Constants.RegisterInvestor.AboutYou.AboutYouTitle_FieldId)]
+        string AboutYouTitle { get; set; }
+
+        [SitecoreField(Constants.RegisterInvestor.AboutYou.YourRoleLabel_FieldId)]
+        string YourRoleLabel { get; set; }
+
+        [SitecoreField(Constants.RegisterInvestor.AboutYou.YourCountryLabel_FieldId)]
+        string YourCountryLabel { get; set; }
+
+        [SitecoreField(Constants.RegisterInvestor.AboutYou.NotCorrectLabel_FieldId)]
+        string NotCorrectLabel { get; set; }
+
+        [SitecoreField(Constants.RegisterInvestor.AboutYou.ChangeCTAText_FieldId)]
+        string ChangeCTAText { get; set; }
+
+        [SitecoreField(Constants.RegisterInvestor.ContentPreferences.ContentPreferencesTitle_FieldId)]
+        string ContentPreferencesTitle { get; set; }
+
+        [SitecoreField(Constants.RegisterInvestor.ContentPreferences.ContentPreferencesSubtitle_FieldId)]
+        string ContentPreferencesSubtitle { get; set; }
+
+        [SitecoreField(Constants.RegisterInvestor.ContentPreferences.TeamFundsTitle_FieldId)]
+        string TeamFundsTitle { get; set; }
+
+        [SitecoreField(Constants.RegisterInvestor.ContentPreferences.FollowTeamTitle_FieldId)]
+        string FollowTeamTitle { get; set; }
+
+        [SitecoreField(Constants.RegisterInvestor.EmailPreferences.EmailPreferencesTitle_FieldId)]
+        string EmailPreferencesTitle { get; set; }
+
+        [SitecoreField(Constants.RegisterInvestor.EmailPreferences.EmailPreferencesSubtitle_FieldId)]
+        string EmailPreferencesSubtitle { get; set; }
+
+        [SitecoreField(Constants.RegisterInvestor.EmailPreferences.SubscribeText_FieldId)]
+        string SubscribeText { get; set; }
+
+        [SitecoreField(Constants.RegisterInvestor.EmailPreferences.FirstNameLabel_FieldId)]
+        string FirstNameLabel { get; set; }
+
+        [SitecoreField(Constants.RegisterInvestor.EmailPreferences.LastNameLabel_FieldId)]
+        string LastNameLabel { get; set; }
+
+        [SitecoreField(Constants.RegisterInvestor.EmailPreferences.EmailAddressLabel_FieldId)]
+        string EmailAddressLabel { get; set; }
+
+        [SitecoreField(Constants.RegisterInvestor.EmailPreferences.FCALabel_FieldId)]
+        string FCALabel { get; set; }
+
+        [SitecoreField(Constants.RegisterInvestor.EmailPreferences.CompanyNameLabel_FieldId)]
+        string CompanyNameLabel { get; set; }
+
+        [SitecoreField(Constants.RegisterInvestor.EmailPreferences.OptOutText_FieldId)]
+        string OptOutText { get; set; }
+
+        [SitecoreField(Constants.RegisterInvestor.Pages.ResendEmailSuccessPage_FieldId)]
         IGlassBase ResendEmailSuccessPage { get; set; }
 
-        [SitecoreField(Constants.RegisterInvestor.ResendEmailFailedPage_FieldId)]
+        [SitecoreField(Constants.RegisterInvestor.Pages.ResendEmailFailedPage_FieldId)]
         IGlassBase ResendEmailFailedPage { get; set; }
 
-        [SitecoreField(Constants.RegisterInvestor.ConfirmationPage_FieldId)]
+        [SitecoreField(Constants.RegisterInvestor.Pages.ConfirmationPage_FieldId)]
         IGlassBase ConfirmationPage { get; set; }
 
-        [SitecoreField(Constants.RegisterInvestor.EditPreferencesPage_FieldId)]
+        [SitecoreField(Constants.RegisterInvestor.Pages.EditPreferencesPage_FieldId)]
         IGlassBase EditPreferencesPage { get; set; }
-        [SitecoreField(Constants.RegisterInvestor.FundDashboardPage_FieldId)]
-        IGlassBase FundDashboardyPage { get; set; }
+        [SitecoreField(Constants.RegisterInvestor.Pages.FundDashboardPage_FieldId)]
+        IGlassBase FundDashboardPage { get; set; }
 
-        [SitecoreField(Constants.RegisterInvestor.UKEmailTemplate_FieldId)]
+        [SitecoreField(Constants.RegisterInvestor.Emails.UKEmailTemplate_FieldId)]
         IEditEmailPrefTemplate UKEmailTemplate { get; set; }
 
-        [SitecoreField(Constants.RegisterInvestor.NonUKEmailTemplate_FieldId)]
+        [SitecoreField(Constants.RegisterInvestor.Emails.NonUKEmailTemplate_FieldId)]
         IEditEmailPrefTemplate NonUKEmailTemplate { get; set; }
 
-        [SitecoreField(Constants.RegisterInvestor.ResendEditPreferencesEmailTemplate_FieldId)]
+        [SitecoreField(Constants.RegisterInvestor.Emails.ResendEditPreferencesEmailTemplate_FieldId)]
         IEditEmailPrefTemplate ResendEditPreferencesEmailTemplate { get; set; }
+
+        [SitecoreField(Constants.RegisterInvestor.RetrievePreferences.BannerTitle_FieldId)]
+        string RetrievePreferencesBannerTitle { get; set; }
+
+        [SitecoreField(Constants.RegisterInvestor.RetrievePreferences.BannerCTAText)]
+        string RetrievePreferencesBannerCTAText { get; set; }
+
+        [SitecoreField(Constants.RegisterInvestor.RetrievePreferences.IntroductionText)]
+        string RetrievePreferencesIntroductionText { get; set; }
+
+        [SitecoreField(Constants.RegisterInvestor.RetrievePreferences.EmailLabel)]
+        string RetrievePreferencesEmailLabel{ get; set; }
+
+        [SitecoreField(Constants.RegisterInvestor.RetrievePreferences.CTAText)]
+        string RetrievePreferencesCTAText { get; set; }
 
 
     }

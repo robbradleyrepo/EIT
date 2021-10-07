@@ -1,47 +1,47 @@
-﻿using System.ComponentModel.DataAnnotations;
-using static LionTrust.Foundation.Onboarding.Constants;
+﻿using LionTrust.Foundation.Contact.Models;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace LionTrust.Feature.MyPreferences.Models
 {
     public class RegisterInvestorViewModel
     {
-        public RegisterInvestorViewModel(IRegisterInvestor content, bool professionalInvestor)
+        public RegisterInvestorViewModel(IRegisterInvestor content)
         {
             Content = content;
-            ProfessionalInvestor = professionalInvestor;
         }
 
         public IRegisterInvestor Content { get; set; }
 
-        public string GenericErrorLabel { get; set; }
+        public bool UserExists { get; set; }
 
-        public string UserExistsErrorLabel { get; set; }
-
-        [Required(ErrorMessage = "First name is required")]
-        [Display(Name = "First Name *")]
+        [Required]
         public string FirstName { get; set; }
 
-        [Required(ErrorMessage = "Last name is required")]
-        [Display(Name = "Last Name *")]
+        [Required]
         public string LastName { get; set; }
 
-        [Required(ErrorMessage = "Email address is required")]
+        [Required]
         [EmailAddress(ErrorMessage = "Invalid Email address")]
-        [Display(Name = "Email *")]
         public string Email { get; set; }
 
-        [Display(Name = "Company Name")]
         public string CompanyName { get; set; }
 
-        [Display(Name = "Individual FCA Reference Number")]
+        [Required]
+        [StringLength(6, MinimumLength = 6)]
         public string CompanyId { get; set; }
 
-        [Required(ErrorMessage = "UK Resident is required")]
-        [Display(Name = "UK Resident *")]
-        public bool? UKResident { get; set; }
-
-        public bool ProfessionalInvestor { get; set; }
+        public bool ProfessionalInvestor { get; set; } = true;
 
         public string Error { get; set; }
+
+        public string InvestorType { get; set; }
+
+        [Required]
+        public string CountryName { get; set; }
+
+        public string ChangeInvestorUrl { get; set; }
+
+        public IList<SFProcess> SFProcessList { get; set; }
     }
 }

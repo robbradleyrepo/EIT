@@ -62,7 +62,7 @@ export default () => {
         var tab = e.target.dataset.changeStep;
         if (tab > Cookies.get("currentTab")) return;
         else if (tab == 1) {
-            tab = $('#correct-location').data('isoCountry') ? .length > 0 ? 1 : 0
+            tab = $('#correct-location').data('isoCountry').length > 0 ? 1 : 0
         }
         showTab(tab);
     }

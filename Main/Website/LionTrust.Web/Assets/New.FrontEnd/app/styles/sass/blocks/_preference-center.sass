@@ -65,13 +65,13 @@ body
         height: 25px
         width: 25px
         border-radius: 50%
-        background-image: url('../../../images/svg-icons/plus.svg')
+        background-image: url('/dist/images/svg-icons/plus.svg')
         //transition: all 2s
       &:hover input ~ .checkmark
             //transform: rotate(90deg)
       /* When the radio button is checked, add a blue background */
       input:checked ~ .checkmark
-        background-image: url('../../../images/svg-icons/checked.svg')
+        background-image: url('/dist/images/svg-icons/checked.svg')
       /* Create the indicator (the dot/circle - hidden when not checked) */
       &.labelChecked
         color: $primary
@@ -113,6 +113,8 @@ body
       .input-group-row
         margin-top: 15px
         display: flex
+		  form
+		    display: -webkit-box
       .input-group
          width: 100%
          padding-right: 15px
@@ -194,7 +196,17 @@ body
   -webkit-transition: background-color 0.3s cubic-bezier(0.86, 0, 0.07, 1)
   transition: background-color 0.3s cubic-bezier(0.86, 0, 0.07, 1)
   background: $secondary-silver
-  color: $secondary-gray
+.can-toggle label .can-toggle__switch:after
+  color: rgba(255, 255, 255, 0.7)
+.can-toggle label .can-toggle__switch:before
+  color: #444
+.can-toggle input[type="checkbox"]:checked~label .can-toggle__switch:before
+    transform: none
+    left: 2px
+    color: $white
+    background-color: $secondary-gray
+.can-toggle label
+  font-size: 13px
 .can-toggle label .can-toggle__switch
   height: 54px
   -webkit-flex: 0 0 212px
@@ -213,5 +225,5 @@ body
   height: 430px
   overflow: unset
 .no-is-checked__show
-  height: 200px
+  height: auto
   overflow: unset

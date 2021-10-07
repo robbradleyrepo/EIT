@@ -61,6 +61,7 @@
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Managers\IMailManager.cs" />
     <Compile Include="Managers\MailManager.cs" />
+    <Compile Include="Models\Context.cs" />
     <Compile Include="Models\EmailPreferences.cs" />
     <Compile Include="Models\NonProfessionalUser.cs" />
     <Compile Include="Models\ProfessionalUser.cs" />
@@ -72,7 +73,7 @@
     <Compile Include="Models\SFCountryListViewModel.cs" />
     <Compile Include="Models\SFFund.cs" />
     <Compile Include="Models\SFProcess.cs" />
-    <Compile Include="Models\SFProcessEmailPreferenceViewModel.cs" />
+    <Compile Include="Models\UserBase.cs" />
     <Compile Include="Repositories\IPersonalizedContentPageRepository.cs" />
     <Compile Include="Repositories\IXConnectUtilityRepository.cs" />
     <Compile Include="Repositories\PersonalizedContentPageRepository.cs" />

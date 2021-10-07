@@ -4,51 +4,22 @@
     using LionTrust.Feature.MyPreferences.Repositories;
     using LionTrust.Foundation.Contact.Managers;
     using LionTrust.Foundation.Contact.Models;
+    using LionTrust.Foundation.Contact.Services;
     using Sitecore.Diagnostics;
     using System;
+    using System.Collections.Generic;
 
     public class EmailPreferencesService
     {
         private readonly IEmailPreferencesRepository _emailPreferencesRepository;
         private readonly IMailManager _mailManager;
+        private readonly IPersonalizedContentService _personalizedContentService;
 
-        public EmailPreferencesService(IEmailPreferencesRepository editEmailPreferencesRepository, IMailManager mailManager)
+        public EmailPreferencesService(IEmailPreferencesRepository editEmailPreferencesRepository, IMailManager mailManager, IPersonalizedContentService personalizedContentService)
         {
             _emailPreferencesRepository = editEmailPreferencesRepository;
             _mailManager = mailManager;
-        }
-
-        /// <summary>
-        /// Get email preferences from Salesforce
-        /// </summary>
-        /// <param name="sfEntityId"></param>
-        /// <param name="sfRandomGUID"></param>
-        /// <param name="IsContact"></param>
-        /// <returns></returns>
-        public EmailPreferences GetEmailPreferences(string queryStringRef)
-        {
-            EmailPreferences emailPreferences = null;
-            string sfEntityId = string.Empty, sfRandomGUID = string.Empty;
-
-            //Query string "ref" should have the format as follows: {GUID}_{entityId}
-            if (!string.IsNullOrEmpty(queryStringRef))
-            {
-                var queryStringParts = queryStringRef.Split('_');
-                if (queryStringParts.Length >= 2)
-                {
-                    sfRandomGUID = queryStringParts[0];
-                    sfEntityId = queryStringParts[1];
-                }
-            }
-
-            if (!string.IsNullOrEmpty(sfEntityId) && (sfEntityId.StartsWith("003", StringComparison.CurrentCultureIgnoreCase) || sfEntityId.StartsWith("00Q", StringComparison.CurrentCultureIgnoreCase)) && !string.IsNullOrEmpty(sfRandomGUID))
-            {
-                var isContact = (sfEntityId.StartsWith("003", StringComparison.CurrentCultureIgnoreCase)) ? true : false;
-
-                emailPreferences = _emailPreferencesRepository.GetEmailPreferences(sfEntityId, sfRandomGUID, isContact);
-            }
-
-            return emailPreferences;
+            _personalizedContentService = personalizedContentService;
         }
 
         /// <summary>
@@ -56,9 +27,16 @@
         /// </summary>
         /// <param name="emailPreferenceViewModel"></param>
         /// <returns></returns>
-        public bool SaveEmailPreferences(EmailPreferences emailPreferences)
+        public bool SaveEmailPreferences(Context context)
         {
-            return _emailPreferencesRepository.SaveEmailPreferneces(emailPreferences);
+            var result = _emailPreferencesRepository.SaveEmailPreferneces(context);
+
+            if (result)
+            {
+                _personalizedContentService.UpdateContext(context);
+            }
+
+            return result;
         }
 
         /// <summary>
@@ -130,6 +108,11 @@
             }
 
             return false;
+        }
+
+        public IEnumerable<SFProcess> GetSFProcessList()
+        {
+            return _emailPreferencesRepository.GetSFProcessList();
         }
     }
 }

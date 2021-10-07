@@ -20,7 +20,7 @@ Languages:
       Value: "{3B47F2D5-3FAF-4D69-9B27-114D59D926A3}"
     - ID: "82ed5593-6b26-406c-a48f-8289f5d915f1"
       Hint: RegisterInvestor_FundDashboardPage
-      Value: "{0728819C-8269-4AD0-9762-3CA7B3778EEC}"
+      Value: "{F38D7354-5916-43E3-A04F-86B7C2C3A8D5}"
     - ID: "98ca7a78-58fc-4713-90a5-1f36bd800800"
       Hint: RegisterInvestor_ResendEmailFailedPage
       Value: "{6ABB4D3E-AEDA-40DB-AA04-CC3F8547994B}"
@@ -33,6 +33,10 @@ Languages:
     - ID: "e7d2b0e3-8266-4b48-8da2-dfaf29038a85"
       Hint: RegisterInvestor_ResendEmailSuccessPage
       Value: "{6ABB4D3E-AEDA-40DB-AA04-CC3F8547994B}"
+    - ID: "eb33c97a-2a88-4e74-9b0b-427398434015"
+      Hint: RegisterInvestor_UserExistsErrorLabel
+      Value: |
+        Your user name already exists with the same email address. Click the button above to request the link to the preference centre or please try again with a different email address. If you have any questions or would like more information, please contact us by sending an email to <a href="mailto:clientservices@liontrust.co.uk?subject=Register Private Investor Failed" target="_blank">clientservices@liontrust.co.uk</a>
     - ID: "ff8c897e-34b4-4181-bfb0-bfce16abc672"
       Hint: RegisterInvestor_ConfirmationPage
-      Value: "{6ABB4D3E-AEDA-40DB-AA04-CC3F8547994B}"
+      Value: "{0D59B003-36D7-4460-A73D-92A53D85DC7C}"
