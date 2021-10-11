@@ -42,7 +42,6 @@
             padding: 25px 0
 
     &__link
-        color: $black
         font-weight: 300
         font-size: 26px
         padding: 10px 0
@@ -127,21 +126,19 @@
     .collapsing
         position: static !important
 
-.accordion.accordion_white
+.accordion .accordion__link,
+    color: $gold
+.accordion .accordion__body
+    color: $white
+.accordion.accordion_white .accordion__link,
+.accordion.accordion_white .accordion__body
     color: $black
 
-    .accordion__minus, .accordion__plus
-        color: $gold
+.accordion__minus, .accordion__plus
+    color: $gold
 
-    .accordion__link.collapsed
-        border-bottom: 1px solid #E9EDF0
-
-.accordion.accordion_black
-    .accordion__link
-        color: $black !important
-
-    .accordion__body
-        color: #000
+.accordion__link.collapsed
+    border-bottom: 1px solid #E9EDF0
 
     .accordion__link.collapsed
         border-bottom: 1px solid #E9EDF0
