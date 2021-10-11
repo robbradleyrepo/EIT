@@ -33,14 +33,13 @@ document.addEventListener("DOMContentLoaded", () => {
     awardsSlider();
     stickyNavbar();
     literatureOverlay();
-    shareLink();
     locationAndMap();
+    shareLink();
     galleryApp();
     tabNav();
     headerCtaNav();
     preferenceCenter();
     if (document.querySelector(".main-page")) parallaxScrolling();
-
     // init tooltips
     $('[data-toggle="tooltip"]').tooltip({
         offset: 5,
