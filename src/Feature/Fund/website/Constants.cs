@@ -111,6 +111,7 @@
             public const string LatestUpdateCTA_FieldId = "{624E51CE-F2EE-48A1-B49F-EB4A852B713F}";
             public const string DownloadCTA_FieldId = "{361F876B-0D9B-4827-A7AD-F9245A3A79A2}";
             public const string FundFieldId = "{8730606F-4236-4C61-8859-16CB35541365}";
+            public const string Alignment_FieldId = "{282195F0-0E21-4E60-885B-53C477323C56}";
         }
 
         public static class FundClassSelector

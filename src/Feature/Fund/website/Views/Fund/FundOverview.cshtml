@@ -10,7 +10,7 @@
     return;
 }
 
-<div class="fund-overview">
+<div class="fund-overview @(Model.Alignment != null ? Model.Alignment.Value : string.Empty)">
     <h2 class="h2">
         @Html.Glass().Editable(Model.Fund, m => m.OverviewTitle)
     </h2>

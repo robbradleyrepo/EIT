@@ -84,7 +84,7 @@ Languages:
               s:ds="{4B7819E8-FA4B-4FCA-A149-64E00AF85A8F}"
               s:id="{1922AE89-FB11-4FF8-8A56-6AAB8D05F3C2}"
               s:par=""
-              s:ph="/main/fundoverview_leftcolumn" />
+              s:ph="main" />
             <r
               uid="{D312293B-788F-40AB-A29E-9EB232B0619E}"
               p:after="r[@uid='{9432CECE-C092-46A0-875B-A448D0987AB0}']"
@@ -93,13 +93,8 @@ Languages:
               s:par=""
               s:ph="/main/fundoverview_leftcolumn" />
             <r
-              uid="{945FFAFC-E579-491E-9E24-2DD6283DBAF7}"
-              p:after="r[@uid='{D312293B-788F-40AB-A29E-9EB232B0619E}']"
-              s:id="{5977731A-5D0C-4CDE-A065-8BA45CF4FE5C}"
-              s:ph="main" />
-            <r
               uid="{A8956A85-6DC8-48D8-8515-7C7248E11877}"
-              p:after="r[@uid='{945FFAFC-E579-491E-9E24-2DD6283DBAF7}']"
+              p:after="r[@uid='{D312293B-788F-40AB-A29E-9EB232B0619E}']"
               s:ds="{F730C1E8-F093-46C8-8552-A8E140D48B31}"
               s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
               s:par=""
