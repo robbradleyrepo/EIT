@@ -205,7 +205,7 @@
 
             if(registerInvestorSubmit.SubscribeToEmail)
             {
-                context.Preferences.SubscribeAll();
+                context.Preferences.SubscribeToInsights();
             }
             else
             {

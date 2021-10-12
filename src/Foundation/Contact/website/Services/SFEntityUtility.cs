@@ -9,11 +9,11 @@
     using FuseIT.Sitecore.SalesforceConnector.Services;
     using FuseIT.Sitecore.SalesforceConnector.Soql;
     using LionTrust.Foundation.Contact.Models;
+    using LionTrust.Foundation.Onboarding.Helpers;
     using Sitecore.Diagnostics;
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Web;
 
     public class SFEntityUtility
     {
@@ -728,11 +728,17 @@
         /// <param name="emailAddress"></param>
         public string IdentifyVisitorAndGetVisitorId(string emailAddress)
         {
-            var visitorid = string.Empty;
+            string visitorid = string.Empty;
             try
             {
-                WebToEntity webToSfEntity = new WebToEntity();
-                visitorid = webToSfEntity.GetCurrentVisitorId();
+                string identifierSource = Sitecore.Configuration.Settings.GetSetting(Constants.IdentifierSourceConfigName, "S4S");
+
+                if (OnboardingHelper.IdentifyAs(identifierSource, emailAddress))
+                {
+                    //Get current visitor id
+                    WebToEntity webToSfEntity = new WebToEntity();
+                    visitorid = webToSfEntity.GetCurrentVisitorId();
+                }
             }
             catch (Exception ex)
             {

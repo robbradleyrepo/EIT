@@ -56,7 +56,7 @@
                         var sfRandomGUID = queryStringParts[0];
                         var sfEntityId = queryStringParts[1];
 
-                        context = CreateContext(sfRandomGUID, sfEntityId);
+                        context = CreateContext(sfEntityId, sfRandomGUID);
                     }
                 }
                 else

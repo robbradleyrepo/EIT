@@ -3,12 +3,10 @@
     using LionTrust.Foundation.Onboarding.Models;
     using Sitecore.Abstractions;
     using Sitecore.Analytics;
-    using Sitecore.Analytics.Model.Entities;
     using static LionTrust.Foundation.Onboarding.Constants;
     using System.Linq;
     using System.Collections.Generic;
     using System;
-    using System.Globalization;
     using Glass.Mapper.Sc.Web.Mvc;
     using Sitecore.XConnect;
     using Sitecore.Diagnostics;
@@ -18,10 +16,11 @@
     using System.Xml;
     using Sitecore.Analytics.Tracking;
     using Contact = Sitecore.XConnect.Contact;
-    using Sitecore.Analytics.Data;
     using Sitecore.Analytics.Model;
     using System.Web;
     using Sitecore.Web;
+    using Sitecore.Analytics.Pipelines.InitializeInteractionProfile;
+    using ContactIdentifier = Sitecore.Analytics.Model.Entities.ContactIdentifier;
 
     public static class OnboardingHelper
     {
@@ -209,7 +208,7 @@
             }
             catch (Exception ex)
             {
-                Log.Error("Error trying to get contact", ex);
+                Log.Error("Error trying to get contact", ex, typeof(OnboardingHelper));
             }
 
             return contact;
@@ -218,6 +217,75 @@
         public static void UpdateContactSession(Contact contact)
         {
             WebUtil.SetSessionValue(SessionKeys.Contact, contact);
+        }
+
+        public static bool IdentifyAs(string source, string identifier)
+        {
+            if (Tracker.Current == null)
+            {
+                return false;
+            }
+
+            // Contact already has the identifier
+            if (Tracker.Current.Session.Contact.Identifiers.Any(x => x.Source == source && x.Identifier == identifier))
+            {
+                return true;
+            }
+
+            var manager = Sitecore.Configuration.Factory.CreateObject("tracking/contactManager", true) as ContactManager;
+
+            if (manager == null)
+            {
+                Log.Error("XConnectContactRepository: Unable to instantiate ContactManager", typeof(OnboardingHelper));
+                return false;
+            }
+
+            // Use default identifyAs for unknown contacts
+            if (Tracker.Current.Contact.IdentificationLevel != ContactIdentificationLevel.Known)
+            {
+                Tracker.Current.Session.IdentifyAs(source, identifier);
+
+                var contactId = Tracker.Current.Contact.ContactId;
+                manager.RemoveFromSession(contactId);
+                Tracker.Current.Session.Contact = manager.LoadContact(contactId);
+                return true;
+            }
+
+            var existingContact = manager.LoadContact(source, identifier);
+
+            // No other contact has this identifier yet: just set it
+            if (existingContact == null)
+            {
+                var contactId = Tracker.Current.Session.Contact.ContactId;
+
+                Log.Info($"Add identifier for contact '{contactId}'. {source} > {identifier}", typeof(OnboardingHelper));
+
+                manager.AddIdentifier(contactId, new ContactIdentifier(source, identifier, ContactIdentificationLevel.Known));
+                manager.RemoveFromSession(contactId);
+                Tracker.Current.Session.Contact = manager.LoadContact(contactId);
+
+                return true;
+            }
+
+            // Other contact with identifier exists: Merge explicitly
+            var currentContact = Tracker.Current.Session.Contact;
+            var hasBehaviourProfiles = currentContact.BehaviorProfiles.Count != 0;
+
+            Log.Info($"Merge contacts '{currentContact.ContactId}' into {existingContact.ContactId}. reason: {source} > {identifier}", typeof(OnboardingHelper));
+
+            Tracker.Current.Session.Contact = manager.MergeContacts(existingContact, currentContact);
+
+            manager.RemoveFromSession(Tracker.Current.Contact.ContactId);
+
+            Tracker.Current.Session.Interaction.ContactId = Tracker.Current.Session.Contact.ContactId;
+            Tracker.Current.Session.Interaction.ContactVisitIndex = Tracker.Current.Session.Contact.System.VisitCount;
+
+            if (hasBehaviourProfiles || Tracker.Current.Interaction.Profiles.GetProfileNames().Length == 0)
+            {
+                InitializeInteractionProfilePipeline.Run(new InitializeInteractionProfileArgs(Tracker.Current.Session));
+            }
+
+            return true;
         }
 
         public static void AddPointsFromProfileCard(IOnboardingConfiguration configuration, IProfileCard profileCard)
@@ -262,7 +330,7 @@
                 }
                 catch (XmlException ex)
                 {
-                    Log.Error($"Xml for profile card is invalid. Value is {profileCard.ProfileCardValue}", ex);
+                    Log.Error($"Xml for profile card is invalid. Value is {profileCard.ProfileCardValue}", ex, typeof(OnboardingHelper));
                 }
             }
         }

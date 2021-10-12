@@ -19,7 +19,7 @@
 
         public ScContactFacetData GetCurrentSitecoreContactFacetData()
         {
-            //Get curret visitor id
+            //Get current visitor id
             WebToEntity webToSfEntity = new WebToEntity();
             var visitorId = webToSfEntity.GetCurrentVisitorId();
 

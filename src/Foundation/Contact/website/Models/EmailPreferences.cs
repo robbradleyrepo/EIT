@@ -27,6 +27,13 @@
             Unsubscribe = true;
         }
 
+        public void SubscribeToInsights()
+        {
+            IsInstitutionalBulletinChecked = false;
+            IncludeInLTNews = false;
+            Unsubscribe = true;
+        }
+
         public void SubscribeAll()
         {
             IsInstitutionalBulletinChecked = true;
