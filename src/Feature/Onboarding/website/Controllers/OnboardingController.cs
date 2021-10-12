@@ -321,6 +321,7 @@
                             }
 
                             client.Submit();
+                            OnboardingHelper.UpdateContactSession(contact);
                         }
                     }
                     catch (Exception ex)

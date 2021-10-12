@@ -21,6 +21,7 @@
     using Sitecore.Analytics.Data;
     using Sitecore.Analytics.Model;
     using System.Web;
+    using Sitecore.Web;
 
     public static class OnboardingHelper
     {
@@ -145,9 +146,6 @@
 
             if (excludedCountries != null && excludedCountries.Any())
             {
-                //var address = GetCurrentContactAddress();
-                //Get contact here
-
                 using (XConnectClient client = Sitecore.XConnect.Client.Configuration.SitecoreXConnectClientConfiguration.GetClient())
                 {
                     var contact = GetContact(client);
@@ -201,7 +199,13 @@
 
             try
             {
-                contact = client.Get(trackerIdentifier, new ContactExpandOptions(AddressList.DefaultFacetKey));
+                contact = (Contact)WebUtil.GetSessionValue(SessionKeys.Contact);
+
+                if (contact == null)
+                {
+                    contact = client.Get(trackerIdentifier, new ContactExpandOptions(AddressList.DefaultFacetKey));
+                    UpdateContactSession(contact);
+                }
             }
             catch (Exception ex)
             {
@@ -209,6 +213,11 @@
             }
 
             return contact;
+        }
+
+        public static void UpdateContactSession(Contact contact)
+        {
+            WebUtil.SetSessionValue(SessionKeys.Contact, contact);
         }
 
         public static void AddPointsFromProfileCard(IOnboardingConfiguration configuration, IProfileCard profileCard)

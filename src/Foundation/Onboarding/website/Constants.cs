@@ -93,5 +93,10 @@
         {
             public const string UK = "GB";
         }
+
+        public static class SessionKeys
+        {
+            public const string Contact = "contact";
+        }
     }
 }
