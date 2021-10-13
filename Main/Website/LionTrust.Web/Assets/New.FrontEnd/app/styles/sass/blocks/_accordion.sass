@@ -1,46 +1,34 @@
 .accordion-section
     margin: (-110px) 0 50px
-
     // background: linear-gradient(82.6deg, #000000 3.35%, rgba(0, 0, 0, 0) 50.61%), linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 34.86%), radial-gradient(43.27% 43.9% at 70.37% 85.26%, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(82.62deg, #0D1927 4.49%, #253931 96.65%)
     &_full
         margin-top: 20px
-
         .accordion__card
             +breakpoint(desktop, up)
                 width: 100%
-
     +breakpoint(desktop, up)
         margin: 50px 0 180px
-
-
     .container
         position: relative
-
         .order-1
             .accordion
                 &__smartcard
                     +breakpoint(desktop, up)
                         right: 103%
-
-
                     +breakpoint(desktop-large, up)
                         right: 102%
-
 .accordion
     &__card
         background: none
         width: 100%
         position: inherit
-
     &__body
-        //color: #000000
         padding: 10px 0
         font-family: $userfont
-
+        color: $black
         +p-1-normal-20
         +breakpoint(desktop-large, up)
             padding: 25px 0
-
     &__link
         font-weight: 300
         font-size: 26px
@@ -51,10 +39,9 @@
         display: flex
         justify-content: space-between
         cursor: pointer
-
+        color: $black
         &-black, &.text-black
             color: $black !important
-
     &__link:before
         position: absolute
         display: block
@@ -63,85 +50,72 @@
         bottom: -1px
         width: 100%
         transition: width 0.5s linear
-
     &__link.collapsed
         border-bottom: 1px solid #414855
-
     &__link.collapsed:before
         width: 0
-
     &__plus, &__minus
-        color: $white
         font-size: 19px
-
+        color: $gold
     &__link.collapsed .accordion__minus
         display: none
-
     &__link .accordion__minus
         display: block
-
     &__link.collapsed .accordion__plus
         display: block
-
     &__link .accordion__plus
         display: none
-
     &__smartcard
         position: relative
-
         +breakpoint(desktop, up)
             position: absolute
             top: 0
             width: 100%
             right: -99%
             padding-left: 32px
-
-
         +breakpoint(desktop-large, up)
             right: -98%
-
     &__smartimg
         width: 100%
         height: 100%
         object-fit: cover
         border-radius: 15px
         opacity: 0.9
-
     &__vid
         position: absolute
         width: 100px
         height: 100px
         transition: opacity 400ms linear
-
     &__vidicon
         background: url(../../../images/components/banners/btn-video.svg) no-repeat
         background-size: contain
         opacity: 1
-
     &__vidicon-active
         background: url(../../../images/components/banners/btn-video-active.svg) no-repeat
         opacity: 0
         background-size: contain
-
     .collapsing
         position: static !important
-
-.accordion .accordion__link,
-    color: $gold
-.accordion .accordion__body
-    color: $white
-.accordion.accordion_white .accordion__link,
-.accordion.accordion_white .accordion__body
-    color: $black
-
-.accordion__minus, .accordion__plus
-    color: $gold
-
 .accordion__link.collapsed
     border-bottom: 1px solid #E9EDF0
-
     .accordion__link.collapsed
         border-bottom: 1px solid #E9EDF0
-
-    .accordion__minus, .accordion__plus
+// Fund Details Page
+//Preferences Center
+.accordion-light-black-theme
+    .accordion__link,.accordion__body
+        color: $black
+    .accordion__plus,.accordion__minus
         color: $gold
+// Fund Category Page
+.accordion-light-gold-theme
+    .accordion__body
+        color: $black
+    .accordion__link,.accordion__plus,.accordion__minus
+        color: $gold
+// USED ON HOME PAGE
+.accordion-dark-gold-theme
+    .accordion__link
+        color: $gold
+    .accordion__body,.accordion__plus,.accordion__minus
+        color: $white
