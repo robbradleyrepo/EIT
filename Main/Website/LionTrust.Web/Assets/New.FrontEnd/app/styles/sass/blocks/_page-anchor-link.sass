@@ -15,7 +15,6 @@
     .btn
         @include breakpoint(desktop, down)
             height: 42px
-            line-height: 42px
             padding: 0 0.5rem
 
 .page-anchor
@@ -39,6 +38,7 @@
         float: right
         @include breakpoint(desktop, up)
             float: none
+            display: none
     &__title
         @extend .btn-unset
         font-weight: 500
@@ -99,3 +99,6 @@
             width: 100%
             display: flex
             justify-content: space-between
+.page-anchor__links.m-link
+    .page-anchor__link
+        margin-right: 3em
