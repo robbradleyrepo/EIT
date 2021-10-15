@@ -1,0 +1,60 @@
+﻿---
+ID: "307157ae-e60b-44f9-9daf-d671eb43ed7c"
+Parent: "c8e97f82-4fb2-46d3-b162-8fa1fb9fe0ff"
+Template: "66e09d5b-4f8e-4313-9df3-fa7e53fbe83a"
+Path: /sitecore/content/LionTrustNew/Global/Funds/Shared documents/Liontrust ICVC and Unit Trust Funds SID
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20161207T110906Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "8de3f234-7880-4703-8534-02bb8320c09c"
+      Hint: LegacyDocument_RelatedFunds
+      Type: Multilist
+      Value: |
+        {B0C7AC70-3895-49C4-8F3C-4DF11EFEDC46}
+        {8BF2AAB7-37B4-46C0-9599-D4FB3530709D}
+        {A4C505F9-7BF3-4751-8F97-67FAD4F3668E}
+        {060AA0C3-CDBC-47DD-A43E-E3456E72E443}
+        {AFB533F2-88A3-48A8-BD79-B76C1367EA0F}
+        {35A8464C-A192-460E-A3D7-633CD35AA012}
+        {DE369FF5-D1E8-4D5E-9B07-2ED104D1930D}
+        {F2F17A8F-DEC8-458D-965A-1F53AAE9AF6D}
+        {D8F81E1B-EE41-4385-B5F4-C30A63B6B6CA}
+        {2F0AD879-83D7-44CA-A9E4-BD72C73F4D72}
+        {C553BBA1-C26E-43FB-98AA-E0163F8C54DE}
+        {DD0F5697-85A7-4DCD-B62C-649585C8423B}
+        {FBB00F95-750B-4D7A-8FB5-C032F454B376}
+        {FC89CAC1-0261-4E99-9C79-956E34A50251}
+        {AD3BB77C-D594-422F-81BB-9B6856D8953F}
+        {478C9CBC-C736-4A04-B555-E65998A64C16}
+        {EEF5C9FD-444C-4C68-9544-6DB766182F61}
+        {CDF0E61F-2535-4486-9183-6A093254A7E9}
+        {C2095FE1-D6B7-4592-AAE7-C46994E21D3B}
+        {01013679-A90F-4C97-B734-0B4CB72BEF56}
+        {6CB4E6E0-8764-4A8A-9155-153E5DB4738A}
+        {8FE8F95A-8609-4C3E-BA69-BCF56A8017F4}
+        {A222ECBF-7442-4884-B13B-3FBFEA108A77}
+        {DB186D8E-97D4-4BF7-B87C-EAB6C44C21BC}
+        {068227AB-8DEF-4A60-9C7B-D34739B4FB39}
+    - ID: "a4a7f9dd-a218-4f33-b72a-7dc2251ccd43"
+      Hint: LegacyDocument_DocumentTypes
+      Type: Multilist
+      Value: |
+        {47476B16-8600-4EBD-BC6F-AE6E84EC1AC2}
+        {93BD5BD5-AF14-4FD5-96EC-59F7ABB6C172}
+    - ID: "c794210e-6107-4d69-841f-773cb9943bba"
+      Hint: LegacyDocument_DownloadLink
+      Value: |
+        <link linktype="media" target="" id="{F63C7BC9-E92B-4C81-BA0D-16A9AB1AC4B3}" />
+    - ID: "eeb8db99-7da8-4973-adf7-bcf7b29eba79"
+      Hint: LegacyDocument_DocumentName
+      Value: Liontrust ICVC and Unit Trust Funds SID
