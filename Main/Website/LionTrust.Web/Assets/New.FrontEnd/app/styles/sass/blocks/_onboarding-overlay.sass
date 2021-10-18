@@ -138,6 +138,8 @@
         position: absolute
         top: 50%
         transform: translateY(-50%)
+        @include breakpoint(desktop, down)
+        width: 88%
         @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
             position: static
             transform: none
