@@ -9,8 +9,8 @@ import {
 
 var rootDom = document.getElementById("gallery-app");
 if (rootDom != null) {
-    var mediaGalleryId = rootDom.dataset.galleryid;
-    var host = rootDom.dataset.host;
+    var mediaGalleryId = rootDom?.dataset?.galleryid;
+    var host = rootDom?.dataset?.host;
 
     var location = window.location.hostname;
     let root = "";
