@@ -1,138 +1,145 @@
-.btn
-    display: inline-flex
-    align-items: center
-    padding: 0
-    font-weight: 500
-    text-transform: uppercase
-    color: $white
-    text-align: center
-    text-decoration: none
-    vertical-align: middle
-    cursor: pointer
-    user-select: none
-    background-color: transparent
-    border: 1px solid transparent
-    min-width: 158px
-    height: 42px
-    font-size: 12px
-    border-radius: 6px
-    letter-spacing: 1.4px
-    transition: color .3s ease-out,background-color .3s ease-out,border-color .3s ease-out,box-shadow .3s ease-out
-    overflow: hidden
-    font-family: $userfont
-    align-items: center
-    justify-content: center
-    padding: 0 10px
-    i.animate-arrow
-        display: none
-    @include breakpoint(desktop, up)
-        min-width: 212px
-        height: 51px
-        letter-spacing: 2.4px
+body  
+    .btn
+        display: inline-flex !important
+        align-items: center
+        padding: 0
+        font-weight: 500
+        text-transform: uppercase
+        color: $white
+        text-align: center
+        text-decoration: none
+        vertical-align: middle
+        cursor: pointer
+        user-select: none
+        background-color: transparent
+        border: 1px solid transparent
+        min-width: 158px
+        height: 42px
+        font-size: 12px
+        border-radius: 6px
+        letter-spacing: 1.4px
+        transition: color .3s ease-out,background-color .3s ease-out,border-color .3s ease-out,box-shadow .3s ease-out
+        overflow: hidden
+        font-family: $userfont
+        align-items: center
+        justify-content: center
+        padding: 0 10px
         i.animate-arrow
+            display: none
+        @include breakpoint(desktop, up)
+            min-width: 212px
+            height: 51px
+            letter-spacing: 2.4px
+            i.animate-arrow
+                display: inline-flex
+                transition: transform .3s ease-out
+                margin-left: 10px
+        &:hover
+            i.animate-arrow
+                transform: translate(10px, 0)
+        &-primary
+            background: $primary
+            border-color: $primary
+            &:hover
+                background: #0E8039
+                border-color: #0E8039
+        &-secondary
+            border-color: $white
+        &-outline-primary
+            border-color: $primary
+            color: $primary
+        &-block
+            width: 100%
+            letter-spacing: 2.4px
+        &-primary-forward
+            border: 1px solid $primary-forward !important
+            color: $primary-forward !important
+            &:hover
+                background: rgba($primary, .1)
+        &-anchor
+            border: 1px solid $white
+            color: $white
+            &:hover
+                background: $white
+                color: $black
+        &-secondary-nav
+            border: 1px solid $white
+            color: $white
+            background: $secondary
+            &:hover
+                background: $white
+                color: $black
+        &-black
+            background: $secondary
+        &-white
+            border: 1px solid $white
+            color: $white
+        &-clean
+            margin: 0
+            color: $black
+            min-width: initial
+        &-link
+            color: $primary
+            min-width: auto
             display: inline-flex
-            transition: transform .3s ease-out
-            margin-left: 10px
-    &:hover
-        i.animate-arrow
-            transform: translate(10px, 0)
-    &-primary
-        background: $primary
-        border-color: $primary
-        &:hover
-            background: #0E8039
-            border-color: #0E8039
-    &-secondary
-        border-color: $white
-    &-outline-primary
-        border-color: $primary
-        color: $primary
-    &-block
-        width: 100%
-        letter-spacing: 2.4px
-    &-primary-forward
-        border: 1px solid $primary-forward !important
-        color: $primary-forward !important
-        &:hover
-            background: rgba($primary, .1)
-    &-anchor
-        border: 1px solid $white
-        color: $white
-        &:hover
-            background: $white
-            color: $black
-    &-secondary-nav
-        border: 1px solid $white
-        color: $white
-        background: $secondary
-        &:hover
-            background: $white
-            color: $black
-    &-black
-        background: $secondary
-    &-white
-        border: 1px solid $white
-        color: $white
-    &-clean
-        margin: 0
-        color: $black
-        min-width: initial
-    &-link
-        color: $primary
-        min-width: auto
+            &:last-child
+            &:hover
+                color: $primary
+    .input-btn
         display: inline-flex
-        &:last-child
-        &:hover
+        position: relative
+        input[type="submit"]
+            @extend .btn
+            @extend .btn-primary
+    .link
+        font-size: 12px
+        letter-spacing: .09rem
+        font-weight: 500
+        text-transform: uppercase
+        border-radius: 4px
+        min-height: 51px
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        &-primary
             color: $primary
-.input-btn
-    display: inline-flex
-    position: relative
-    input[type="submit"]
-        @extend .btn
-        @extend .btn-primary
-.link
-    font-size: 12px
-    letter-spacing: .09rem
-    font-weight: 500
-    text-transform: uppercase
-    border-radius: 4px
-    min-height: 51px
-    display: inline-flex
-    justify-content: center
-    align-items: center
-    &-primary
-        color: $primary
-        padding: 0
-        &:hover
+            padding: 0
+            &:hover
+                color: $primary
+        &-secondary
+            color: white
+            padding: 0
+        &-btn-secondary
+            border: 1px solid $white
+            color: $white
+            min-width: 212px
+            letter-spacing: 0
+            text-transform: capitalize
+            &:hover
+                background: $white
+                color: $black
+        &-btn-primary
+            border: 1px solid $primary
             color: $primary
-    &-secondary
-        color: white
-        padding: 0
-    &-btn-secondary
-        border: 1px solid $white
-        color: $white
-        min-width: 212px
-        letter-spacing: 0
-        text-transform: capitalize
-        &:hover
-            background: $white
-            color: $black
-    &-btn-primary
-        border: 1px solid $primary
-        color: $primary
-        padding: 0 20px
-        &:hover
-            background: rgba($primary, .1)
-            color: $primary
-    &-default
-        color: $white
-    &-custom
-        color: $white
+            padding: 0 20px
+            &:hover
+                background: rgba($primary, .1)
+                color: $primary
+        &-default
+            color: $white
+        &-custom
+            color: $white
+            .animate-arrow
+                color: $primary
         .animate-arrow
-            color: $primary
-    .animate-arrow
-        margin-left: 10px
-        font-size: 10px
-    
-
-
+            margin-left: 10px
+            font-size: 10px
+    .btn-set
+        display: flex
+        &-center
+            justify-content: center
+        &-multiple
+            .btn
+                margin-left: 32px
+        @include breakpoint(tablet, down)
+            justify-content: space-between
