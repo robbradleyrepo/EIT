@@ -6,6 +6,7 @@
     using Sitecore.Mvc.Controllers;
     using System;
     using System.Linq;
+    using System.Text;
     using System.Text.RegularExpressions;
     using System.Web.Mvc;
 
@@ -42,14 +43,12 @@
 
             var citiCode = FundClassSwitcherHelper.GetCitiCode(HttpContext, fund);
 
-
-
             datasource.Fund.FundSize = GetFundSizeFormatted(fund.FundSize);
-
 
             var viewModel = new FundStatsViewModel()
             {
-                FundSelector = datasource
+                FundSelector = datasource,
+                ManagedLength = GetManagedLength(datasource.Fund.LaunchDate)
             };
 
             var fundClass = fund.Classes.Where(c => c.CitiCode == citiCode).FirstOrDefault();
@@ -87,6 +86,44 @@
             }
 
             return fundSize;
+        }
+
+        private string GetManagedLength(DateTime launchDate)
+        {
+            if(launchDate == null)
+            {
+                return null;
+            }
+
+            var now = DateTime.Today;
+            var lengthCount = now.Year - launchDate.Year;
+            var label = new StringBuilder();
+
+            if(lengthCount > 0)
+            {
+                label.Append(Sitecore.Globalization.Translate.Text("Year"));
+            }
+            else
+            {
+                lengthCount = now.Month - launchDate.Month;
+
+                if(lengthCount > 0)
+                {
+                    label.Append(Sitecore.Globalization.Translate.Text("Month"));
+                }
+                else
+                {
+                    lengthCount = now.Day - launchDate.Day;
+                    label.Append(Sitecore.Globalization.Translate.Text("Day"));
+                }
+            }
+
+            if (lengthCount > 1)
+            {
+                label = label.Append("s");
+            }
+
+            return $"{lengthCount} {label}";
         }
     }
 }

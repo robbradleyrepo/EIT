@@ -1,29 +1,22 @@
 ﻿---
-ID: "334c7700-34f1-47c7-8e35-f056a8ceb82e"
+ID: "4992ab1e-2d0a-4c10-bc52-f4ea0f789fac"
 Parent: "b4aaa074-a595-4d76-bc8b-8b3cbcb14afd"
 Template: "6d1cd897-1936-4a3a-a511-289a94c2a7b1"
-Path: /sitecore/content/LionTrustNew/Global/Dictionary Items/Labels/WatchNowLabel
+Path: /sitecore/content/LionTrustNew/Global/Dictionary Items/Labels/Year
 DB: master
 SharedFields:
 - ID: "580c75a8-c01a-4580-83cb-987776ceb3af"
   Hint: Key
-  Value: WatchNowLabel
-- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
-  Hint: __Sortorder
-  Value: 50
+  Value: Year
 Languages:
 - Language: en
   Fields:
   - ID: "2ba3454a-9a9c-4cdf-a9f8-107fd484eb6e"
     Hint: Phrase
-    Value: Watch Now
+    Value: Year
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210520T151157Z
-    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
-      Hint: __Created by
-      Value: |
-        sitecore\Admin
+      Value: 20211015T160749Z

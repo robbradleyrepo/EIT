@@ -6,5 +6,6 @@
     {
         public IFourFundStats FundSelector { get; set; }
         public FundStatsData FundValues { get; set; }
+        public string ManagedLength { get; set; }
     }
 }

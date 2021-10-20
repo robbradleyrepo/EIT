@@ -64,7 +64,7 @@
                     <div class="fund-stats__item">
                         <span class="fund-stats__title">@Html.Glass().Editable(Model.FundSelector, m => m.ManagedByCurrentTeamForLabel)</span>
                         <span class="fund-stats__value">
-                            @Html.Glass().Editable(Model.FundSelector, m => m.ManagedByCurrentTeamForValue)
+                            @Model.ManagedLength
                         </span>
                     </div>
                 </div>
