@@ -52,7 +52,7 @@
             }
 
             var viewModel = new RegisterInvestorViewModel(data);
-            viewModel.SFProcessList = _emailPreferencesService.GetSFProcessList()?.ToList();
+
             viewModel.CountryName = OnboardingHelper.GetCurrentContactCountry(_context)?.CountryName;
             viewModel.ChangeInvestorUrl = OnboardingHelper.GetChangeUrl();
 

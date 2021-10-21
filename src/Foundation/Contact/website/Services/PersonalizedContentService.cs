@@ -96,7 +96,7 @@
                 SFEntityId = sfEntityId
             };
 
-            context.Preferences = sfEntityUtilityObj.GetSFEmailPreferences(context, true);
+            context.Preferences = sfEntityUtilityObj.GetSFEmailPreferences(context, false);
             UpdateContext(context);
 
             return context;

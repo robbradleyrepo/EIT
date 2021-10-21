@@ -41,7 +41,5 @@ namespace LionTrust.Feature.MyPreferences.Models
         public string CountryName { get; set; }
 
         public string ChangeInvestorUrl { get; set; }
-
-        public IList<SFProcess> SFProcessList { get; set; }
     }
 }

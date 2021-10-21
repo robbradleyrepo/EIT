@@ -1,0 +1,7 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.MyPreferences.Models.IPrivacyNotice
+
+<section class="privacy-note mt-4 section-card">
+    <p class="section-card__title">@Html.Glass().Editable(Model, x => x.Title)</p>
+    <p class="section-card__description">@Html.Glass().Editable(Model, x => x.Text)</p>
+</section>

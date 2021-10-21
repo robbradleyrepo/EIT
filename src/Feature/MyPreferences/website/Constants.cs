@@ -12,8 +12,6 @@
                 public const string DefaultSFOrganisationId_FieldId = "{2B64A25F-BC2E-4C05-8192-97F2C141D433}";
                 public const string CompanyFieldDefaultValue_FieldId = "{E87507FF-AC7B-40E0-B4DE-5D19D8533AA8}";
                 public const string SubmitCTAText_FieldId = "{44EE3542-38DF-4C10-97A8-14636BF87BA6}";
-                public const string PrivacyNoticeTitle_FieldId = "{987D00B3-C658-49D7-ABAE-7BCE3C9CF273}";
-                public const string PrivacyNoticeText_FieldId = "{ACA1E97A-349C-46AF-8030-A187E4228C42}";
             }
 
             public static class AboutYou
@@ -29,8 +27,6 @@
             {
                 public const string ContentPreferencesTitle_FieldId = "{AA6A40D1-AF9A-43F0-AF77-A3EB780D2229}";
                 public const string ContentPreferencesSubtitle_FieldId = "{CAEE178B-FB59-429A-97CC-E5473EEACC72}";
-                public const string TeamFundsTitle_FieldId = "{10ACE34C-BEF0-4890-A325-2CADE743F274}";
-                public const string FollowTeamTitle_FieldId = "{F09282FE-40F7-4427-A26A-412B540F1E41}";
             }
 
             public static class EmailPreferences
@@ -71,6 +67,18 @@
                 public const string CTAText = "{79ED1E30-6DF9-4B71-8DBA-7E98851C8040}";
             }
         }
+
+        public static class FundAccordionList
+        {
+            public const string TeamFundsTitle_FieldId = "{10ACE34C-BEF0-4890-A325-2CADE743F274}";
+            public const string FollowTeamTitle_FieldId = "{F09282FE-40F7-4427-A26A-412B540F1E41}";
+        }
+
+        public static class PrivacyNotice
+        {
+            public const string Title_FieldId = "{987D00B3-C658-49D7-ABAE-7BCE3C9CF273}";
+            public const string Text_FieldId = "{ACA1E97A-349C-46AF-8030-A187E4228C42}";
+        }
         public static class EditEmailPrefTemplate
         {
             public const string FromAddress_FieldId = "{7D7FA98C-6223-4572-BB3C-C7C055125A5A}";
@@ -79,23 +87,16 @@
             public const string Message_FieldId = "{0A8BDBC5-3A31-4B6D-B951-757771FD99A0}";
         }
 
-        public static class EditEmailPreferences
+        public static class EditPreferences
         {
             public const string Title_FieldId = "{AE3B72BB-EBDE-4F47-B046-ED56E78DC358}";
-            public const string Subtitle_FieldId = "{781EE4D7-46FF-4D7E-9767-F6F45B6D0055}";
-            public const string NewsTitle_FieldId = "{AB693D21-2EBB-4F6D-8198-EF527BEC01B1}";
-            public const string NewsSubtitle_FieldId = "{89505D61-D495-4661-A130-1503A29555B0}";
-            public const string InstitutionalBulletinTitle_FieldId = "{6D4C1618-7856-4BF4-B0F4-0433228F1999}";
-            public const string InstitutionalBulletinSubtitle_FieldId = "{D85E6A06-6437-4BD5-9233-8BBCC464D01F}";
-            public const string ProcessListTitle_FieldId = "{5B50EE91-3C3A-42FA-8BD9-19DD18F90913}";
-            public const string ProcessListSubtitle_FieldId = "{4C516794-18B3-42C9-AD5B-5D1FEB7146A0}";
-            public const string CheckboxInstructionText_FieldId = "{B02D0482-E724-4FD7-9122-194D11C7DE38}";
-            public const string SuccessPage_FieldId = "{71F7C4F1-2285-48C3-A4EC-98E732B394E2}";
-            public const string FailedPage_FieldId = "{5D11C14A-6325-4D99-A30C-C9F568264C66}";
-            public const string PrivacyPolicyText_FieldId = "{C7E53F1A-D525-4576-9C47-B8C651A95047}";
+            public const string InstitutionalBulletinLabel_FieldId = "{6D4C1618-7856-4BF4-B0F4-0433228F1999}";
+            public const string InstitutionalBulletinText_FieldId = "{D85E6A06-6437-4BD5-9233-8BBCC464D01F}";
+            public const string UnsubscribeAllLabel_FieldId = "{B1204568-EE4B-4DB0-8447-1E18CB3E9291}";
             public const string UnsubscribeAllText_FieldId = "{184A144B-A5E5-4349-A5DC-BB61C5C0FB75}";
-            public const string GlobalSelectAllCheckboxText_FieldId = "{2B444A22-FB51-403E-986D-2097769CE386}";
+            public const string SubmitCTAText_FieldId = "{6AFBB9DE-8C3E-49E1-A38E-78124BC073C1}";
             public const string GenericError_FieldId = "{B00A7599-FD4A-493A-899C-16095ECDE601}";
+            public const string SuccessPage_FieldId = "{71F7C4F1-2285-48C3-A4EC-98E732B394E2}";
         }
 
         public static class SitecoreTokens

@@ -23,11 +23,7 @@
         [SitecoreField(Constants.RegisterInvestor.Content.SubmitCTAText_FieldId)]
         string SubmitCTAText { get; set; }
 
-        [SitecoreField(Constants.RegisterInvestor.Content.PrivacyNoticeTitle_FieldId)]
-        string PrivacyNoticeTitle { get; set; }
-
-        [SitecoreField(Constants.RegisterInvestor.Content.PrivacyNoticeText_FieldId)]
-        string PrivacyNoticeText { get; set; }
+        IPrivacyNotice PrivacyNotice { get; set; }
 
         [SitecoreField(Constants.RegisterInvestor.AboutYou.AboutYouTitle_FieldId)]
         string AboutYouTitle { get; set; }
@@ -49,12 +45,6 @@
 
         [SitecoreField(Constants.RegisterInvestor.ContentPreferences.ContentPreferencesSubtitle_FieldId)]
         string ContentPreferencesSubtitle { get; set; }
-
-        [SitecoreField(Constants.RegisterInvestor.ContentPreferences.TeamFundsTitle_FieldId)]
-        string TeamFundsTitle { get; set; }
-
-        [SitecoreField(Constants.RegisterInvestor.ContentPreferences.FollowTeamTitle_FieldId)]
-        string FollowTeamTitle { get; set; }
 
         [SitecoreField(Constants.RegisterInvestor.EmailPreferences.EmailPreferencesTitle_FieldId)]
         string EmailPreferencesTitle { get; set; }
@@ -116,11 +106,10 @@
         string RetrievePreferencesIntroductionText { get; set; }
 
         [SitecoreField(Constants.RegisterInvestor.RetrievePreferences.EmailLabel)]
-        string RetrievePreferencesEmailLabel{ get; set; }
+        string RetrievePreferencesEmailLabel { get; set; }
 
         [SitecoreField(Constants.RegisterInvestor.RetrievePreferences.CTAText)]
         string RetrievePreferencesCTAText { get; set; }
-
 
     }
 }
