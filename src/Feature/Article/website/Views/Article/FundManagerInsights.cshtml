@@ -12,7 +12,7 @@
                             <div class="insight__tit">
                                 @Html.Glass().Editable(Model.Data, m => m.Heading)
                             </div>
-                            @using (Html.Glass().BeginRenderLink(Model.Data, m => m.CTA, new { @class = "insight__more link-styles" }, isEditable: true))
+                            @using (Html.Glass().BeginRenderLink(Model.Data, m => m.CTA, new { @class = "link-styles" }, isEditable: true))
                             {
                                 if (Model.Data.CTA != null)
                                 {
