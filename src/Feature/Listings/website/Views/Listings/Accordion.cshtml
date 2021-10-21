@@ -7,7 +7,7 @@
 
     var fullWidth = !Model.Data.Children.Any(x => x.Image.HasValue() && x.VideoId.HasValue());
     var wrapperClass = fullWidth ? "accordion-section accordion-section_full" : "accordion-section";
-    var textColour = Model.RenderingData.Theme != null && Model.RenderingData.Theme.Value == "light" ? "accordion_white" : string.Empty;
+    var textColour = Model.RenderingData.Theme != null && !string.IsNullOrWhiteSpace(Model.RenderingData.Theme.Value) ? Model.RenderingData.Theme.Value : string.Empty;
     var containerId = LionTrust.Feature.Listings.Utils.RandomString(10, true);
     var textAlign = Model.RenderingData.TextAlign != null ? Model.RenderingData.TextAlign.Value : "left";
     var rightAccordionAlign = Model.RenderingData.AccordionAlign != null && Model.RenderingData.AccordionAlign.Value == "Right";
@@ -33,7 +33,7 @@
                         {
                             <div class="accordion__card">
                                 <div class="accordion__header">
-                                    <div class="accordion__link @collapsedClass @textColor"
+                                    <div class="accordion__link @collapsedClass"
                                          data-toggle="collapse"
                                          data-target="#@rowName"
                                          aria-expanded="@isCollapsed"
