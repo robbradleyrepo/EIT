@@ -1,8 +1,8 @@
 .article-filters
     color: $black
-
+    background-color: $white
+    z-index: 2
     +font-size(18px)
-
     position: fixed
     top: 0
     left: 0
@@ -10,63 +10,48 @@
     bottom: 0
     transition: transform 0.35s
     transform: translate3d(100%, 0, 0)
-
     +breakpoint(desktop, up)
-        position: static
+        position: relative
         transform: translate3d(0, 0, 0)
         display: flex
         flex-direction: column
         transition: none
-        z-index: 1
-
-
     &.active
         transform: translate3d(0, 0, 0)
         z-index: 12
     &__header
         background: $white
         padding: 15px 0 23px
-
         +breakpoint(desktop, up)
             order: 1
             padding-top: 38px
-
     &__body
         background: #F7F9FC
         height: 100%
-
         +breakpoint(desktop, up)
             height: auto
             padding: 21px 0 22px
-
-
         &_no-bg
             +breakpoint(desktop, up)
                 background: transparent
                 padding-bottom: 0
-
     &__footer
         position: absolute
         left: 0
         right: 0
         bottom: 24px
-
         +breakpoint(desktop, up)
             display: none
-
     &__main-title
         @extend h3
-
         display: flex
         align-items: center
         justify-content: space-between
         margin-bottom: 20px
-
         i
             color: $black
             font-size: 19px
             cursor: pointer
-
     &__select
         border-bottom: 1px solid rgba($secondary-gray, 0.1)
         padding: 18px 0
@@ -74,124 +59,82 @@
         justify-content: space-between
         align-items: center
         cursor: pointer
-
         &.active
             i:before
                 content: ""
                 font-size: 9px
-
             +breakpoint(desktop, up)
                 border-color: $primary
-
         +breakpoint(desktop, up)
             font-size: 16px
             padding: 8px 0 7px
-
-
         &.active + .article-filters__options
             visibility: visible
             transform: translate3d(0, 0, 0)
-
     &__select-custom
         @extend .article-filters__select
-
         background: transparent
         border-top: none
         border-left: none
         border-right: none
         appearance: none
         width: 100%
-
         &:focus
             outline: none
-
     &__item-title
         &.active
             color: $primary
-
             &:after
                 font-family: "icomoon"
                 content: ""
                 position: relative
                 top: 3px
                 left: 5px
-
                 +breakpoint(desktop, up)
                     font-size: 14px
                     top: 0
-
     &__btns
         display: none
-
         .btn-clean
             line-height: 38px
-
         +breakpoint(desktop, up)
             display: flex
             justify-content: space-between
-
-    &__btn
-        color: $secondary
-        min-width: auto
-        height: 38px
-        line-height: 38px
-        white-space: nowrap
-
-        &_apply
-            background: #4148550D
-            padding: 0 0.7rem
-            width: auto
-
-            &:hover
-                background: darken(#4148550D, 50%)
-
-        &_primary
-            background: $primary
-            color: white
-
-            &:hover
-                background: darken($primary, 5%)
-
-        &_clear
-            padding: 0
-            width: auto
-            white-space: nowrap
-            margin-left: 28px
-
+    &__desktop-btns
+        .btn
+            letter-spacing: 1.5px
+            font-size: 12px
+            color: $black
+            min-width: unset
+            height: 38px
+        .article-filters__btn_apply
+            background-color: $smokyWhite
+            border-radius: 6px
+        .article-filters__btn_clear
+            padding: 0 28px
     &__title
         @extend h4
-
         display: flex
         align-items: center
         margin: 10px 0
         cursor: pointer
-
         +breakpoint(desktop, up)
             display: none
-
-
         i
             font-size: 16px
             margin-right: 10px
-
     &__icon-arrow
         @extend [class*=" icon-"]
-
         &::before
             content: ""
-
         +breakpoint(desktop, up)
             font-size: 5px
-
             &::before
                 content: ""
-
-
         &_select
             position: absolute
             right: 10px
             bottom: 20px
-
     &__options
         position: fixed
         top: 0
@@ -199,18 +142,14 @@
         right: 0
         bottom: 0
         background: $white
-        z-index: 5
         padding: 20px
         transition: transform 0.35s
         transform: translate3d(100%, 0, 0)
         overflow-y: scroll
-
         &::-webkit-scrollbar
             width: 4px
-
         &::-webkit-scrollbar-thumb
             background-color: $gray
-
         +breakpoint(desktop, up)
             position: absolute
             top: 40px
@@ -223,35 +162,26 @@
             transform: none
             visibility: hidden
             max-height: 350px
-
-
         +breakpoint(desktop-large, up)
             left: 15px
             right: 15px
-
-
         &_small
             +breakpoint(desktop, up)
                 left: -10px
                 right: -10px
-
 .article-filters, .gallery-filter
     .search-form
         &__input
             +breakpoint(desktop, up)
                 font-size: 16px
-
         &__submit
             color: $primary
-
             +breakpoint(desktop, up)
                 font-size: 16px
                 top: 7px
                 color: initial
-
 .article-filter-wrapper
     position: relative
-
 .option-checkbox
     display: block
     padding-top: 10px
@@ -259,38 +189,28 @@
     display: flex
     align-items: center
     justify-content: space-between
-
     +breakpoint(desktop, up)
         font-size: 16px
         padding-top: 0
         padding-bottom: 10px
-
-
     &__input
         display: none
-
         &:checked ~ .option-checkbox__text
             color: $primary
-
         &:checked ~ .option-checkbox__icon
             &::before
                 content: ""
                 color: $primary
-
     &__icon
         @extend [class*=" icon-"]
-
         &::before
             content: ""
             color: #CFD1D4
-
 #show-article-fliter
     +breakpoint(desktop, up)
         display: none
-
 .sort-dropdown
     @extend .article-filters__options
-
     box-shadow: 0px 10px 20px #414855
     position: absolute
     visibility: hidden
@@ -304,78 +224,61 @@
     color: $black
     height: 120px
     transform: none
-
     +breakpoint(desktop, up)
         right: -14px
         height: auto
-
-
     &.active
         visibility: visible
         opacity: 1
-
 .margin-mob-fliter-btn
     margin-top: -42px
     z-index: 10
     width: 100px
-
     +breakpoint(desktop, up)
         margin-top: auto
-
 .margin-sort-btn
     +breakpoint(desktop, up)
         margin-top: -50px
-
 .legacy-listmode
     .article-filters
         &__header
             +breakpoint(desktop, up)
                 order: 0
                 padding: 38px 0
-
 .view-buttons-container
     background: $secondary-silver
     height: 62px
     display: flex
     align-items: center
     flex: 1
-
 .view-btn
     border-radius: 0
     height: 37px
     line-height: 37px
-
     &:hover
         color: $gold
         border-bottom: 2px solid $gold
-
     &.active
         color: $gold
         border-bottom: 2px solid $gold
-
 .btn-view-mob
     &:hover
         color: $gold
-
     &.active
         color: $gold
-
 .view-buttons
     color: $black
     text-transform: uppercase
     font-size: 12px
     display: flex
     align-items: center
-
     i
         margin-left: 1rem
-
 .view-button-link
     height: 62px
     display: flex
     align-items: center
     justify-content: center
-
 .article-page
     .button-sort
         +breakpoint(desktop, up)

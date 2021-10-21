@@ -27,13 +27,17 @@
                                     <i class="icon-chevron-left"></i> {{facet.name}}
                                 </div>
                                 <label class="option-checkbox" for="Select all">
-                                    <input id="Select all" class="option-checkbox__input" type="checkbox" @click='checkAll()' :checked='allItemsChecked'>
+                                    <input id="Select all" class="option-checkbox__input" type="checkbox"
+                                        @click='checkAll()' :checked='allItemsChecked'>
                                     <span class="option-checkbox__text">Select all</span>
                                     <span class="option-checkbox__icon"></span>
-                                  </label>
-                                <option-field inline-template v-for="(item, i) in facet.items" :for="item.name" :key="i + item.name">
+                                </label>
+                                <option-field inline-template v-for="(item, i) in facet.items" :for="item.name"
+                                    :key="i + item.name">
                                     <label class="option-checkbox">
-                                        <input :id="item.name" class="option-checkbox__input" type="checkbox" v-model="checked" :checked="item.checked"  @change="toggleSelect(item, facet)">
+                                        <input :id="item.name" class="option-checkbox__input" type="checkbox"
+                                            v-model="checked" :checked="item.checked"
+                                            @change="toggleSelect(item, facet)">
                                         <span class="option-checkbox__text">{{item.name}} </span>
                                         <span class="option-checkbox__icon"></span>
                                     </label>
@@ -42,22 +46,28 @@
                         </div>
                     </select-field>
                     <div class="col-lg-3">
-                        <div class="article-filters__btns justify-content-start">
-                            <button class="btn article-filters__btn article-filters__btn_apply d-none d-xl-block" @click="applyFilters" :class="activeButton ? 'article-filters__btn_primary' : ''">
+                        <div class="article-filters__btns justify-content-start article-filters__desktop-btns">
+                            <button class="btn btn-article-filters__btn article-filters__btn_apply d-none d-xl-block"
+                                @click="applyFilters" :class="activeButton ? 'article-filters__btn_primary' : ''">
                                 Apply filters
                             </button>
-                            <button class="clear-filter btn article-filters__btn article-filters__btn_clear d-none d-xl-block" @click="clearFilters">
+                            <button
+                                class="clear-filter btn article-filters__btn article-filters__btn_clear d-none d-xl-block"
+                                @click="clearFilters">
                                 Clear
                             </button>
-                            <btn @click="applyFilters" class="btn btn-clean d-none d-md-block d-xl-none" :class="activeButton ? 'text-primary' : ''" @click="toggleMobileFilter">
+                            <btn @click="applyFilters" class="btn btn-clean d-none d-md-block d-xl-none"
+                                :class="activeButton ? 'text-primary' : ''" @click="toggleMobileFilter">
                                 <i class="icon-filter"></i> Apply
                             </btn>
-                            <btn @click="clearFilters" class="btn btn-clean d-none d-md-block d-xl-none" @click="toggleMobileFilter">
+                            <btn @click="clearFilters" class="btn btn-clean d-none d-md-block d-xl-none"
+                                @click="toggleMobileFilter">
                                 <i class="icon-refresh"></i> clear
                             </btn>
                         </div>
                     </div>
-                    <div class="col-6 col-lg-2 offset-6 col-md-4 offset-md-8 offset-lg-10 margin-sort-btn d-none d-lg-block">
+                    <div
+                        class="col-6 col-lg-2 offset-6 col-md-4 offset-md-8 offset-lg-10 margin-sort-btn d-none d-lg-block">
                         <div class="relative">
                             <button class="btn btn-clean d-block ml-auto button-sort mt-1" @click.stop="showSort">
                                 sort <i class="icon-sort"></i>
@@ -69,12 +79,14 @@
                                     </span>
                                 </div>
                                 <label for="newest" class="option-checkbox">
-                                    <input id="newest" v-model="sortOrder" value="ASC" class="option-checkbox__input" type="radio" name="sort" checked>
+                                    <input id="newest" v-model="sortOrder" value="ASC" class="option-checkbox__input"
+                                        type="radio" name="sort" checked>
                                     <span class="option-checkbox__text">Date newest first</span>
                                     <span class="option-checkbox__icon"></span>
                                 </label>
                                 <label for="oldest" class="option-checkbox">
-                                    <input id="oldest" v-model="sortOrder" value="DESC" class="option-checkbox__input" type="radio" name="sort">
+                                    <input id="oldest" v-model="sortOrder" value="DESC" class="option-checkbox__input"
+                                        type="radio" name="sort">
                                     <span class="option-checkbox__text">Date oldest first</span>
                                     <span class="option-checkbox__icon"></span>
                                 </label>
@@ -88,12 +100,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-6">
-                        <button class="btn btn-primary min-width-100">
+                        <button class="btn btn-primary min-width-100 article-filters__btn article-filters__btn_apply"
+                            @click="applyFilters">
                             Apply Filters
                         </button>
                     </div>
                     <div class="col-6">
-                        <button class="clear-filter btn btn-primary-forward min-width-100">
+                        <button
+                            class="clear-filter btn btn-primary-forward min-width-100 clear-filter btn article-filters__btn article-filters__btn_clear"
+                            @click="clearFilters">
                             clear all
                         </button>
                     </div>
@@ -115,12 +130,14 @@
                             </span>
                         </div>
                         <label for="newest" class="option-checkbox">
-                            <input id="newest" v-model="sortOrder" value="ASC" class="option-checkbox__input" type="radio" name="sort" checked>
+                            <input id="newest" v-model="sortOrder" value="ASC" class="option-checkbox__input"
+                                type="radio" name="sort" checked>
                             <span class="option-checkbox__text">Date newest first</span>
                             <span class="option-checkbox__icon"></span>
                         </label>
                         <label for="oldest" class="option-checkbox">
-                            <input id="oldest" v-model="sortOrder" value="DESC" class="option-checkbox__input" type="radio" name="sort">
+                            <input id="oldest" v-model="sortOrder" value="DESC" class="option-checkbox__input"
+                                type="radio" name="sort">
                             <span class="option-checkbox__text">Date oldest first</span>
                             <span class="option-checkbox__icon"></span>
                         </label>
@@ -130,7 +147,6 @@
         </div>
     </div>
 </div>
-
 <div class="container d-lg-none" v-if="getFacetsLength">
     <div class="d-flex justify-content-between margin-mob-fliter-btn w-100" :class="!mobileFilter ? 'relative' : ''">
         <btn id="show-article-fliter" class="btn btn-clean" @click="toggleMobileFilter">
