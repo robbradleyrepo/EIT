@@ -186,7 +186,7 @@
 
             if (!string.IsNullOrEmpty(email))
             {
-                isSuccess = _emailPreferencesService.ResendEditEmailPrefLink(email, false, data.ResendEditPreferencesEmailTemplate, data.EditPreferencesPage.AbsoluteUrl, data.FundDashboardPage.AbsoluteUrl);
+                isSuccess = _emailPreferencesService.ResendEditEmailPrefLink(email, true, data.ResendEditPreferencesEmailTemplate, data.EditPreferencesPage.AbsoluteUrl, data.FundDashboardPage.AbsoluteUrl);
             }
 
             if (isSuccess)
