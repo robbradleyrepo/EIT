@@ -1,14 +1,14 @@
 ﻿---
-ID: "c1962410-4395-4920-9b14-3130755946f2"
-Parent: "6b9c16b9-02e8-428c-9a6d-0bddf46cbdad"
+ID: "e64a4928-1693-494d-b54e-9deb0578988a"
+Parent: "41b17a19-501a-4aff-8ae8-9281d0121c73"
 Template: "73ba8165-b3ff-429e-9268-b91fafced6b9"
-Path: "/sitecore/content/LionTrustNew/Home/Fund Team Lister/Fund Team/_Local/UI010 - Quick Links/QuickLinkCTA 3"
+Path: /sitecore/content/LionTrustNew/Home/Fund Team Lister/_Local/Quick Links/QuickLinkCTA 2
 DB: master
-BranchID: "cbbf480e-6a45-44df-a485-a7bee8e19a8a"
+BranchID: "a3e61fc4-9dcd-4de8-80ba-a3eafa5685ec"
 SharedFields:
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
-  Value: "{B1497E10-2EB7-48D4-8E79-80EECAD4F54E}"
+  Value: "{5BE2A75A-3A31-45EB-8F26-D9CB5AD24C3C}"
 Languages:
 - Language: en
   Versions:
@@ -16,18 +16,18 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210528T202137Z
+      Value: 20211022T141046Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\admin
+        sitecore\Admin
     - ID: "7ff41320-58c1-4a05-b2c5-dd1e4f9c2191"
       Hint: QuickLinkCTA_Description
-      Value: Quickly check fund performance with our interactive fund centre.
+      Value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consequat lacinia orci vitae fermentum. Sed quis risus nisl. Aliquam ligula nulla, vulputate at ligula sed, pretium euismod erat. Nunc non turpis non elit consequat aliquam id in orci. Mauris interdum consequat urna, nec tristique velit pellentesque ut. 
     - ID: "c0a0281f-cfe6-45e1-a095-b02d109a8952"
       Hint: QuickLinkCTA_Image
       Value: |
         <image mediaid="{151CB697-B7F9-4F42-BB8A-98B7B00BE053}" />
     - ID: "d6596c9a-e05a-49dd-98e6-7ba505d79842"
       Hint: QuickLinkCTA_Title
-      Value: Interactive fund center
+      Value: QuickLinkCTA 1
