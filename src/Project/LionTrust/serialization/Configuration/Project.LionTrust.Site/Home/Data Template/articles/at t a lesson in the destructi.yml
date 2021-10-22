@@ -22,8 +22,15 @@ Languages:
           <d
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
             <r
-              uid="{859C361E-5D15-473C-8AFB-DFF7C942C83B}"
+              uid="{9EC28DF4-42DA-4021-A021-C097B0C9621F}"
               p:before="*"
+              s:ds="{759319A1-ABB6-467F-A5E9-D58DC37A4910}"
+              s:id="{010E3C29-6258-4251-9CEB-FEB1FAC64F98}"
+              s:par=""
+              s:ph="/main/article" />
+            <r
+              uid="{859C361E-5D15-473C-8AFB-DFF7C942C83B}"
+              p:after="r[@uid='{9EC28DF4-42DA-4021-A021-C097B0C9621F}']"
               s:ds="{CAC2C7EA-A967-40C0-988B-1522551B91DB}"
               s:id="{DF18E4D6-F59A-4CDD-B26B-91D902F3A2DB}"
               s:ph="/main/article" />
@@ -77,7 +84,7 @@ Languages:
               s:ph="/main/article" />
             <r
               uid="{C7EE86D7-3A10-4411-9C69-71EF27E583E4}"
-              p:after="r[@uid='{30A0A4C8-974F-4822-9DCB-DE14881E0400}']"
+              p:after="r[@uid='{B67D5368-0E6E-4E58-A908-BA42BDC6D66A}']"
               s:ds="{8F7AA55E-2569-4646-A28E-7FA325F64C31}"
               s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
               s:ph="main" />
@@ -115,7 +122,7 @@ Languages:
         </r>
     - ID: "094932b9-ff77-4977-966e-d18f7c7ac091"
       Hint: LegacyArticle_Subtitle
-      Value: 
+      Value: Lorem ipsum dolor sit amet
     - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
       Hint: LegacyArticle_Authors
       Type: Treelist
@@ -141,32 +148,27 @@ Languages:
     - ID: "5bd6e9e9-2240-4473-8094-075e811b8438"
       Hint: Article_ListingImage
       Value: |
-        <image mediaid="{A35AA134-843B-4652-9F90-A2ADBA66C775}" />
+        <image mediaid="{4B453796-9468-4F46-846F-AD773E555CC6}" />
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
         sitecore\admin
     - ID: "79cc76cc-7503-449b-9809-9808cf6c2d26"
       Hint: Article_Date
-      Value: 20210623T230000Z
+      Value: 20210512T210000Z
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: Lorem ipsum dolor sit amet
     - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
       Hint: Breadcrumb_BreadcrumbTitle
       Value: at t a lesson in the destruction of shareholder value
+    - ID: "ae17b17d-0024-4700-9075-e95d8e7b15ee"
+      Hint: Article_PdfDocument
+      Value: |
+        <file mediaid="{F4280AB0-18BF-4DC2-BA8B-24703E1D6C6B}" src="-/media/f4280ab018bf4dc2ba8b24703e1d6c6b.ashx" />
     - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
       Hint: LegacyPresentationBase_PageTitle
       Value: Article 5
-    - ID: "b6833539-8781-4788-92f4-d173f0727feb"
-      Hint: Article_MultipleAuthorsLabel
-      Value: Investment Team
     - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
       Hint: LegacyArticle_Content
-      Value: |
-        <span style="background-color: #ffffff; text-align: justify; color: #000000;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies ornare nunc.&nbsp;</span>
-  - Version: 2
-    Fields:
-    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Hint: __Created
-      Value: 20210707T205624Z
-    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
-      Hint: __Valid from
-      Value: 20210707T205624Z
+      Value: Lorem ipsum doolor sit amet

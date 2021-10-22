@@ -1,0 +1,29 @@
+﻿---
+ID: "39a61f58-5425-412b-80d9-56c22233b7b6"
+Parent: "c7faeb8d-723f-4133-9a3a-e7e053c483e1"
+Template: "4c75fd4b-18bc-48b9-80ce-b9725c5e0aa7"
+Path: "/sitecore/content/LionTrustNew/Home/Data Template/articles/Video Lorem/_Local/BC002 - Banner with Icons/IconWithText 3"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{0EFED5D9-BE8A-4A08-B954-8FB2E2A83BFE}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0f0b582f-4dbc-4eaa-a233-2bf2bb9a95ba"
+      Hint: IconWithText_Text
+      Value: Sample copy in here
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210525T152101Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "be707199-2471-444b-8794-55174cc40a9b"
+      Hint: IconWithText_Icon
+      Value: |
+        <image mediaid="{0D14DB01-E7A3-4AC2-9E20-C24C41332944}" />

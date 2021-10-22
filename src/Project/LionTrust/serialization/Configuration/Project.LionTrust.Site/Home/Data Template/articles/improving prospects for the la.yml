@@ -5,6 +5,9 @@ Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
 Path: /sitecore/content/LionTrustNew/Home/Data Template/articles/improving prospects for the land of the rising sun
 DB: master
 SharedFields:
+- ID: "cce4e679-7e94-450d-8cc1-691bdf17ca78"
+  Hint: LegacyFundPageData_FundReference
+  Value: "{A4C505F9-7BF3-4751-8F97-67FAD4F3668E}"
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: "{BA2439A2-5D38-4691-8F50-1B8A94ACD903}"
@@ -21,6 +24,10 @@ Languages:
           p:p="1">
           <d
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{18A6223B-77E7-4D4F-B82B-4C383BA8A7EF}">
+              <p:d />
+            </r>
             <r
               uid="{C8B3B2D1-D42B-4F7F-A536-F647A1CF9C18}"
               p:before="*"
@@ -64,8 +71,14 @@ Languages:
               s:id="{E9EA1844-F7AA-45D6-A10F-800A467D6E3D}"
               s:ph="/main/article" />
             <r
-              uid="{055D3003-595D-4BE2-91E8-375FDE37C61E}"
+              uid="{00955F30-775A-4989-AABF-C7DA6150A031}"
               p:after="r[@uid='{EEE1E712-F28F-41A1-A9ED-880DD5CB38FD}']"
+              s:ds="{908B5E2A-FEBD-4644-A69F-4C427E0A935A}"
+              s:id="{533F0057-E6B2-475C-B6A8-F72061551C2F}"
+              s:ph="/main/article" />
+            <r
+              uid="{055D3003-595D-4BE2-91E8-375FDE37C61E}"
+              p:after="r[@uid='{00955F30-775A-4989-AABF-C7DA6150A031}']"
               s:ds="{9C25597B-4CDC-4365-98A3-5723AC691FC8}"
               s:id="{C578F8BA-7001-4285-8D55-B913F21E60E0}"
               s:ph="/main/article" />
@@ -129,10 +142,10 @@ Languages:
     - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
       Hint: LegacyArticle_Authors
       Type: Treelist
-      Value: 
+      Value: "{061107E6-1485-475E-A2D8-D5A3D34F48FF}"
     - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
       Hint: LegacyArticle_Title
-      Value: Improving prospects for the Land of the Rising Sun Improving prospects for the Land of the Rising Sun Improving prospects for the Land of the Rising Sun Improving prospects for the Land of the Rising Sun
+      Value: Improving prospects for the Land of the Rising Sun
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20210525T154147Z
@@ -142,6 +155,9 @@ Languages:
       Value: |
         {B4A230A9-D251-4E23-9289-53031FA8BA0A}
         {B8BD3FF8-3E07-416A-8F8B-20B63645F0E3}
+    - ID: "52161005-9691-46cd-af73-e2b5455474c0"
+      Hint: LegacyArticle_Fund
+      Value: "{A4C505F9-7BF3-4751-8F97-67FAD4F3668E}"
     - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
       Hint: LegacyArticle_BlogType
       Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"

@@ -1,0 +1,29 @@
+﻿---
+ID: "9c666ea6-6faa-43de-81a7-a9ed2c03ffc2"
+Parent: "a8914516-d619-4895-987f-6169424bd044"
+Template: "cf87f1eb-f59d-4e08-bcd6-23e0cdd7362f"
+Path: "/sitecore/content/LionTrustNew/Home/Data Template/articles/Marketing/_Local/BC016 - Article Scroller"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{671F68E6-07AB-4A01-A688-F35A50B89402}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210805T134041Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "93854c18-0919-445e-bc88-2d353c8491e8"
+      Hint: ArticleScroller_Heading
+      Value: "BC016 - Article Scroller"
+    - ID: "bad318c3-b9b5-457f-a42d-f51516fc3ec2"
+      Hint: ArticleScroller_CTA
+      Value: |
+        <link text="Home" anchor="" linktype="internal" class="" title=""  querystring="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
