@@ -1,0 +1,26 @@
+﻿---
+ID: "c621dea8-bbea-494a-aa98-b594b21d0009"
+Parent: "d57f1b71-240f-4c2b-9a1a-1b6938d4f4cb"
+Template: "95b7738c-e36d-4f6e-bd5e-6e2c5d049940"
+Path: /sitecore/content/LionTrustNew/Home/Data Template/articles/lorem ipsum dolor sit amet consecteur/ArticlePodcastPromo/Apple
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210715T153820Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "6145b771-64e1-4595-8331-27af009b7e39"
+      Hint: ArticlePodcastLink_Link
+      Value: |
+        <link text="Liontrust" linktype="external" url="http://www.liontrust.co.uk" anchor="" target="" />
+    - ID: "bb868fc2-144b-4532-818c-bc3fd9338198"
+      Hint: ArticlePodcastLink_Icon
+      Value: |
+        <image mediaid="{262B16B1-73BF-4518-BAE3-E23DC3B6A180}" />

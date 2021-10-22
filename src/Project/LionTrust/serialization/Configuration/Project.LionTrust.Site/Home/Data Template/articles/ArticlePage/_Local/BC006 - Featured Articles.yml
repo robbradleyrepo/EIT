@@ -1,0 +1,25 @@
+﻿---
+ID: "4489cd26-0dc0-47c9-a141-33c93044d368"
+Parent: "13d49694-9569-4bc6-971e-616cacf1f0e0"
+Template: "1e3cbfca-a817-4638-8966-5a5acd945fb7"
+Path: "/sitecore/content/LionTrustNew/Home/Data Template/articles/ArticlePage/_Local/BC006 - Featured Articles"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{125A7BFB-A091-4E07-BAA7-4E54057729C5}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210706T093717Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "b2950181-27e6-4eef-a1fa-329aa73fce55"
+      Hint: FeaturedArticles_Heading
+      Value: Featured articles
