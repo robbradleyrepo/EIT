@@ -26,16 +26,18 @@
                         if (Model.PrimaryCTA != null && !string.IsNullOrWhiteSpace(Model.PrimaryCTA.Text))
                         {
                             @Model.PrimaryCTA.Text
+
+                            <i class="icon-arrow-right animate-arrow"></i>
                         }
-                        <i class="icon-arrow-right animate-arrow"></i>
                     }
                     @using (Html.Glass().BeginRenderLink(m => m.SecondaryCTA, new { @class = "btn btn-primary-forward" }))
                     {
                         if (Model.SecondaryCTA != null && !string.IsNullOrWhiteSpace(Model.SecondaryCTA.Text))
                         {
                             @Model.SecondaryCTA.Text
+
+                            <i class="icon-arrow-right animate-arrow"></i>
                         }
-                        <i class="icon-arrow-right animate-arrow"></i>
                     }
                 </div>
             </div>
