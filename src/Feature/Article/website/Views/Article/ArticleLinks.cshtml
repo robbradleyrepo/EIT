@@ -11,7 +11,7 @@
             {
                 var shareGoal = Model.ArticleLinks.ArticleSharing.ShareLinkGoal != null ? Model.ArticleLinks.ArticleSharing.ShareLinkGoal.ToString() : string.Empty;
                 <li class="article-links__item">
-                    <a href="#" class="article-links__link copy-to-clipbord" data-goal-trigger="@shareGoal" data-link="@Model.Article.Url" data-title="@Model.ArticleLinks.ArticleSharing.ShareTooltip">
+                    <a href="#" class="article-links__link copy-to-clipbord" data-goal-trigger="@shareGoal" data-link="@Model.Article.AbsoluteUrl" data-title="@Model.ArticleLinks.ArticleSharing.ShareTooltip">
                         <i class="icon-share"></i>
                         <span>@Html.Glass().Editable(Model.ArticleLinks.ArticleSharing, m => m.ShareLabel)</span>
                     </a>
