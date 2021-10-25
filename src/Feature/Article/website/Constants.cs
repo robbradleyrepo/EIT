@@ -83,9 +83,7 @@
 
         public static class ArticleLinks
         {
-            public const string ShareTooltip_FieldId = "{0C44E5E5-AFE2-426E-A113-E6498BC34A65}";
-            public const string ShareLabel_FieldId = "{1D03C959-0BBF-4C3A-A5A5-9050E9F4B38F}";
-            public const string ShareLinkGoal_FieldId = "{A4397CD8-98A8-4164-8263-0B323271B169}";
+            public const string ArticleSharing_FieldId = "{1D03C959-0BBF-4C3A-A5A5-9050E9F4B38F}";
             public const string DownloadLabel_FieldId = "{338376F5-AB65-4249-878A-E891F1FD465A}";
             public const string DownloadGoal_FieldId = "{BB708901-B592-4F8C-9119-7F619B26D5B1}";
         }
@@ -106,6 +104,13 @@
             public const string Article_FieldId = "{AACB640C-6457-4A38-81E2-7AE97DB0DB3A}";
             public const string BackgroundImage_FieldId = "{74A7E935-2A62-4192-B046-958C1ADDB98B}";
             public const string ArticleLinkText_FieldId = "{447AB9EA-F782-41A7-8269-E2AA6EF9862B}";
-        }        
+        }
+
+        public static class ArticleShareLink
+        {
+            public const string Label_FieldId = "{D83E057F-DDBD-4603-9C36-56932E3626D7}";
+            public const string Tooltip_FieldId = "{191B3D6F-C419-407E-8B6D-C69F364FED92}";
+            public const string Goal_FieldId = "{C4EA3176-6C3D-4EE4-8924-034F5664117F}";
+        }
     }
 }

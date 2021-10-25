@@ -1,8 +1,8 @@
 ﻿---
-ID: "1d03c959-0bbf-4c3a-a5a5-9050e9f4b38f"
-Parent: "36b02aff-983c-4c17-bacf-442270e27d6e"
+ID: "191b3d6f-c419-407e-8b6d-c69f364fed92"
+Parent: "d37560e0-9876-4a1b-9ac2-69115eb563ff"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Article/_ArticleLinks/Article Links/ArticleLinks_ShareLabel
+Path: /sitecore/templates/Feature/Article/_ArticleShareLink/Article Share Link/ArticleShareLink_Tooltip
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
@@ -10,16 +10,16 @@ SharedFields:
   Value: "Single-Line Text"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 100
+  Value: 125
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Share Article label
+    Value: Article Share Tooltip
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210518T084939Z
+      Value: 20210615T145527Z
