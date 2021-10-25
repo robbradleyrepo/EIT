@@ -25,7 +25,6 @@
         bottom: 0
         overflow-y: scroll
     .btn-primary
-        min-width: 244px
         letter-spacing: 0
         padding: 0
         +breakpoint(tablet, up)
@@ -71,17 +70,23 @@
         text-align: center
         margin-top: 34px
         margin-bottom: 48px
-        max-width: 786px
+        max-width: 521px
         width: 100%
         margin-left: auto
         margin-right: auto
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        align-items: center
         .onboarding-overlay__set-step
             margin: 8px
+            min-width: 244px
+            +breakpoint(mobile-large, down)
+                min-width: 158px
         &.three-buttons
             width: auto
             .onboarding-overlay__set-step
-                display: block
-                margin: 16px auto
+                margin: 16px auto            
                 +breakpoint(tablet, up)
                     display: inline-block
                     margin-right: 1rem
