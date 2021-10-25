@@ -1,29 +1,28 @@
 ﻿---
-ID: "651ff26a-8af8-449e-b831-109f2f9c7851"
-Parent: "012a6406-6e84-4000-9068-e17bdb215b0f"
+ID: "c4ea3176-6c3d-4ee4-8924-034f5664117f"
+Parent: "d37560e0-9876-4a1b-9ac2-69115eb563ff"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Fund/_FundHeader/Fund Header Sharing/FundHeaderSharing_Text
+Path: /sitecore/templates/Feature/Article/_ArticleShareLink/Article Share Link/ArticleShareLink_Goal
 DB: master
 SharedFields:
+- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
+  Hint: Source
+  Value: "{0CB97A9F-CAFB-42A0-8BE1-89AB9AE32BD9}"
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: "Single-Line Text"
+  Value: Droptree
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 50
+  Value: 150
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Share Text
+    Value: Article Share Goal
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210527T155027Z
-    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
-      Hint: __Created by
-      Value: |
-        sitecore\Admin
+      Value: 20210518T090055Z

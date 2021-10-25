@@ -69,10 +69,9 @@
         {
             public const string FundFieldId = "{90BCAB34-B9E0-466E-97A4-73CEC67335F7}";
             public const string TitleFieldId = "{1ADF8B0C-A198-4CC7-81CC-CFAAC0FE3483}";
-            public const string FundManagerFieldId = "{7A30D0A3-23FD-4863-99FD-A17525112A0E}";
-            public const string ShareTextFieldId = "{651FF26A-8AF8-449E-B831-109F2F9C7851}";
-            public const string ShareCopiedTextFieldId = "{8505F318-1D55-472B-ABEB-A4B4B372E2B2}";
+            public const string FundManagerFieldId = "{7A30D0A3-23FD-4863-99FD-A17525112A0E}";            
             public const string BackgroundImageFieldId = "{5D55EE9C-7778-47E7-833D-9D692E0E8AAB}";
+            public const string FundSharingFieldId = "{D4BEBE60-2A4F-4965-AA39-EE3ECD18DF5D}";
         }
 
         public static class FundDetailNavigation
@@ -276,6 +275,12 @@
             public const string BackButtonText_FieldId = "{D6B06D59-9338-4D49-A00F-841D94E096CE}";
             public const string PrimaryCTA_FieldId = "{0068183C-62B7-412C-8B96-B6C1FEB2B3C7}";
             public const string SecondaryCTA_FieldId = "{11C16829-F61D-4638-A5AB-F50A2C21319C}";
+        }
+
+        public static class FundShareLink
+        {
+            public const string Label_FieldId = "{5B61D162-3D78-4F21-ADBC-A58B23D5DB43}";
+            public const string Tooltip_FieldId = "{0117FA4F-F726-4EA8-9038-6BA8C0355FBC}";            
         }
     }
 }

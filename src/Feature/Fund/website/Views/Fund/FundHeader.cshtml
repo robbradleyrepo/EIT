@@ -19,16 +19,19 @@
                     </div>
                 </div>
             </div>
-            <ul class="article-links">
-                <li class="article-links__item">
-                    <a href="#" class="article-links__link copy-to-clipbord"
-                       data-link="@Request.Url.ToString()"
-                       data-title="@Model.Data.ShareCopiedText">
-                        <i class="icon-share"></i>
-                        <span>@Html.Glass().Editable(Model, m => m.Data.ShareText)</span>
-                    </a>
-                </li>
-            </ul>
+            @if (Model.Data.FundSharing != null)
+            {
+                <ul class="article-links">
+                    <li class="article-links__item">
+                        <a href="#" class="article-links__link copy-to-clipbord"
+                           data-link="@Request.Url.ToString()"
+                           data-title="@Model.Data.FundSharing.ShareTooltip">
+                            <i class="icon-share"></i>
+                            <span>@Html.Glass().Editable(Model, m => m.Data.FundSharing.ShareLabel)</span>
+                        </a>
+                    </li>
+                </ul>
+            }
         </div>
     </section>
     <div class="container text-center">

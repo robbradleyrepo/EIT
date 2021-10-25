@@ -15,13 +15,10 @@
         [SitecoreField(Constants.FundHeader.FundManagerFieldId)]
         IAuthor FundManager { get; set; }
 
-        [SitecoreField(Constants.FundHeader.ShareTextFieldId)]
-        string ShareText { get; set; }
-
-        [SitecoreField(Constants.FundHeader.ShareCopiedTextFieldId)]
-        string ShareCopiedText { get; set; }
-
         [SitecoreField(Constants.FundHeader.BackgroundImageFieldId)]
         Glass.Mapper.Sc.Fields.Image BackgroundImage { get;set; }
+
+        [SitecoreField(Constants.FundHeader.FundSharingFieldId)]
+        IFundShareLink FundSharing { get; set; }
     }
 }

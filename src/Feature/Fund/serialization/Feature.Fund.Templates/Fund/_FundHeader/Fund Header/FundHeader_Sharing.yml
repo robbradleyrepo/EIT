@@ -1,28 +1,28 @@
 ﻿---
-ID: "a4397cd8-98a8-4164-8263-0b323271b169"
-Parent: "36b02aff-983c-4c17-bacf-442270e27d6e"
+ID: "d4bebe60-2a4f-4965-aa39-ee3ecd18df5d"
+Parent: "3ed2d0d1-39f9-4fa9-823a-67d7b5518131"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Article/_ArticleLinks/Article Links/ArticleLinks_ShareLinkGoal
+Path: /sitecore/templates/Feature/Fund/_FundHeader/Fund Header/FundHeader_Sharing
 DB: master
 SharedFields:
 - ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
   Hint: Source
-  Value: "{0CB97A9F-CAFB-42A0-8BE1-89AB9AE32BD9}"
+  Value: "query:/sitecore/content/LionTrustNew/Global/Sharing/*[@@templatename='Fund Share Link']"
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: Droptree
+  Value: Droplink
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 150
+  Value: 500
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Share Link Goal
+    Value: Fund Sharing
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210518T090055Z
+      Value: 20211025T110813Z
