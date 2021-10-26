@@ -37,12 +37,12 @@ SharedFields:
             #test if year folder item exists
             if (!(Test-Path "$($copyToRoot)/$($created.ToString('yyyy'))")) {
                  Write-Host "Creating year folder"
-                 New-Item -Force -Path "$($copyToRoot)/$($created.ToString('yyyy'))" -Name "" -ItemType "/sitecore/templates/Common/Folder"
+                 New-Item -Force -Path "$($copyToRoot)/$($created.ToString('yyyy'))" -Name "" -ItemType "/sitecore/templates/Project/LionTrust/Content Types/Article/Article Folder"
             }
              #test if month folder item exists
             if(!(Test-Path $($dateFolderPath))) {
                 Write-Host "Creating month folder"
-                New-Item -Force -Path $dateFolderPath -Name "" -ItemType "/sitecore/templates/Common/Folder"
+                New-Item -Force -Path $dateFolderPath -Name "" -ItemType "/sitecore/templates/Project/LionTrust/Content Types/Article/Article Folder"
             }
             
             Write-Host "folders exists, moving blogs to: $($dateFolderPath)";
