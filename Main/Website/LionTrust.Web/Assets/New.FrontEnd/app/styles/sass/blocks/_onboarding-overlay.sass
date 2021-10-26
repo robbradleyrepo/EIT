@@ -6,8 +6,8 @@
     height: 100vh
     align-items: center
     justify-content: space-between
-    padding: 34px 16px 20px 16px
-    width: 100%
+    padding: 0
+    width: 100vw
     justify-content: center
     flex-direction: column
     display: none
@@ -16,14 +16,15 @@
     &::-webkit-scrollbar-thumb
         background-color: trasparent
         border-radius: 5px
-    +breakpoint(tablet, up)
-        padding-top: 120px
     &.active
         display: flex
         position: fixed
         top: 0
         bottom: 0
         overflow-y: scroll
+        align-items: center
+        justify-content: center
+        flex-direction: column
     .btn-primary
         letter-spacing: 0
         padding: 0
@@ -50,6 +51,9 @@
         margin-bottom: 55px
         +breakpoint(tablet, up)
             margin-bottom: 120px
+        +breakpoint(mobile-large, down)
+            padding-top: 34px
+            margin-bottom: 38px
         @media screen and (max-height: 800px) and (min-width: 992px)
             margin-bottom: 55px
     &__img
@@ -59,13 +63,11 @@
     &__title
         @extend .h1
         font-size: 42px
-        letter-spacing: 2.4px
+        letter-spacing: 0px
         text-align: center
         margin-bottom: 20px
-        padding: 0 16px
         +breakpoint(tablet, up)
             letter-spacing: 0
-            padding: 0
     &__btns
         text-align: center
         margin-top: 34px
@@ -103,13 +105,13 @@
         text-align: center
         display: block
     &__steps
-        position: absolute
-        bottom: 16px
+        position: relative
         display: flex
         justify-content: center
         width: 100%
-        @media screen and (max-height: 800px) and (min-width: 992px)
-            bottom: -110px
+        margin: 50px 0 30px 0
+        +breakpoint(mobile-large, down)
+            margin-top: 50px
     &__step
         display: inline-block
         margin: 0 5px
@@ -117,7 +119,7 @@
         position: relative
         padding: 5px 0
         cursor: pointer
-        pointer-events: none
+        pointer-events: auto
         &::after
             content: ""
             position: absolute
@@ -128,6 +130,8 @@
         &.active
             &::after
                 background: $gold
+        &.active + .onboarding-overlay__step
+            pointer-events: none
         &:hover
             &::after
                 background: $primary
@@ -149,31 +153,35 @@
             font-size: 18px
             font-weight: 300
     &__content
-        position: absolute
-        top: 50%
-        transform: translateY(-50%)
         width: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
         +breakpoint(desktop, down)
         width: 100%
-        left: 0
         @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
             position: static
             transform: none
             top: inherit
 .set-location
-    padding-right: 18px !important
-    padding-left: 18px !important
-    max-width: fit-content
+    padding-right: 0 !important
+    padding-left: 0px !important
+    max-width: 50%
     +breakpoint(tablet, up)
         padding-right: 0px !important
         padding-left: 0px !important
+        max-width: fit-content
+        padding-right: 18px !important
+        padding-left: 18px !important
     &__row.row
-        max-width: 640px
+        max-width: fit-content
         margin: 0 auto
         display: flex
         justify-content: space-between
-    &__list
-        margin-bottom: 30px
+        padding: 0 9px
+        +breakpoint(tablet, up)
+            padding: 0
+            max-width: 640px
     &__title
         font-size: 32px
         line-height: 41px

@@ -1,11 +1,10 @@
 .fund-item-list
     color: $black
-    margin-top: 40px
-    padding-bottom: 20px
+    padding: 23px 0
     border-bottom: 1px solid #4148551A
-    @include breakpoint(desktop, up) 
-        padding-bottom: 25px
-        margin-top: 25px
+    &:first-child
+        border-top: 1px solid #4148551A
+        margin-top: 20px
     &__title
         font-weight: 500
         @include font-size(18px)
@@ -55,6 +54,7 @@
                 margin-bottom: 0
                 &:last-child
                     margin-right: 0
+                    padding: 0
             i
                 &::before
                     padding: 6px
