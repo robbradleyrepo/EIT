@@ -1,0 +1,30 @@
+﻿---
+ID: "d4058bc8-508d-4947-8a04-f3899d0721f6"
+Parent: "d573ca28-b8d2-4fc4-9e23-6aa77a9363fb"
+Template: "d5a5ce40-c6d3-4556-967a-0974120ccb45"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/DR test blog/_Local/BC001 - Copy with CTA"
+DB: master
+BranchID: "810226bd-15aa-4f26-ab02-7a63b355d4a8"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{89FD0941-F7A0-45F7-87EB-0B8D9B6F5C03}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211021T093052Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "9ffe2dd1-92ae-4208-98bd-c1d9c73da582"
+      Hint: CopyWithCta_Cta
+      Value: |
+        <link linktype="internal" text="See our glossary" querystring="" target="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
+    - ID: "d7cd16bd-dbb5-44d9-ab26-8bbb1c9b7c2a"
+      Hint: CopyWithCta_Copy
+      Value: Understand common financial words and terms

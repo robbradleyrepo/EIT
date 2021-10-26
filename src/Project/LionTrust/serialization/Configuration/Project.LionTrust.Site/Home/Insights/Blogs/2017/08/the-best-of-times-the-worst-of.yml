@@ -1,0 +1,126 @@
+﻿---
+ID: "ac301bb5-caff-4144-97d5-a78e902b65ab"
+Parent: "fe7a1b73-8045-4a12-a1a4-49b368a9dc2b"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2017/08/the-best-of-times-the-worst-of-times"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 90000
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{A46ECF73-25EE-4E41-A5D8-D549C9681275}"
+          p:after="r[@uid='{30A0A4C8-974F-4822-9DCB-DE14881E0400}']"
+          s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+          s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+          s:par="DatasourceRule"
+          s:ph="/content/side-content" />
+        <r
+          uid="{1DEE67D6-9123-4D9D-8CF8-F6CC2A288EAC}"
+          p:after="*[1=2]"
+          s:ds=""
+          s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+          s:par="Title=See%20also...&amp;RelatedPages=%7B9EADCB46-7677-4826-AA77-0AC5F81DFFBC%7D%7C%7BFC17F0A6-ECAA-4CD7-B80B-6E67FDE3251B%7D%7C%7B01B3EF98-C64F-4F71-BACE-EA0BAFE8A6E0%7D%7C%7B77B5C263-DEEE-4A04-AE96-C01C2138DFCD%7D&amp;MaximumNoOfLinks=4"
+          s:ph="/content/side-content" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{666D8658-69FD-4802-B1DF-B4D2FEF1AD18}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: The best of times, the worst of times | What we think | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: The best of times, the worst of times
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: "20170816T092547:636384723479364000"
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: "We are living through a time of historic contradictions: political turbulence and yet market highs and low market volatility. John Husselbee analyses four potential triggers that might lead to market falls in the second half of the year."
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: The best of times, the worst of times
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p>I have gone back in time by 158 years to find an explanation of the world we live in today: Charles Dickens&rsquo; <em>A Tale of Two Cities</em>, which was published in 1859 and describes a time of contradictions during the French Revolution. This iconic novel opens with the following lines: </p>
+        <p>&ldquo;It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way . . .&rdquo;</p>
+        <p>Over the past couple of years, we have experienced unprecedented political uncertainty and events, with no sign of calm and stability on the immediate horizon. And yet in spite of this political environment, the global economy and most stock markets have continued to strengthen throughout 2017. </p>
+        <p>At the same time, equity volatility has declined to record lows, although sabre rattling (of the nuclear variety) saw the Vix index in the US &ndash; seen as the main measure of market fear &ndash; spike upwards.</p>
+        <p>Long-term depressed volatility has led to growing fears of a more significant rise to come and perhaps a bear market along with it. To be clear, we are not predicting a global recession at this point &ndash; growth continues to pick up, albeit modestly &ndash; but it is useful to keep an eye on potential risks lurking out there that may a cause a sustained correction.</p>
+        <p>So far this year, we have even avoided the kind of 5-10% pullback that is a function of healthy markets and many commentators have noted a sense of complacency creeping in. The following examines some potential triggers that might knock markets off current highs as we enter the autumn.</p>
+        <p><strong>Unstable politics: Trump</strong><strong> &ndash; and a global rise in protectionism</strong></p>
+        <p>While political volatility has proved unable to derail markets so far, we remain in the midst of an unpredictable environment, particularly in the US.</p>
+        <p>As we have seen, anti-establishment/immigration sentiment can have surprising results &ndash; Brexit, Trump and the UK&rsquo;s General Election &ndash; and there is potential for similar surprises in other parts of the world.</p>
+        <p>Early fears about Trump adopting protectionist policies in his quest to make America great again have abated for now in a storm of multiple other controversies, not least the standoff with North Korea. </p>
+        <p>He is a businessman rather than a politician so is generally seen as pro-business but I have always had concerns over the extent to which he can back up his promises. Enacting political change is a laborious process &ndash; as his travails to repeal Obamacare have shown &ndash; and Trump looks to be finding his business life has not left him well equipped for the slow pace of government. </p>
+        <p>In addition, while his corporate tax reform has dominated sentiment, not all of his likely policies will be so business-friendly. In my view, protectionist agendas can only hurt consumers and economies &ndash; and this could prove a global phenomenon as countries scrabble for economic growth.</p>
+        <p><strong>Rising inflation and interest rates (and withdrawal of quantitative easing)</strong></p>
+        <p>Against such an unstable political backdrop, we also face the looming prospect of ultra-easy monetary policy coming to the end of the road.</p>
+        <p>Close to a decade on from the financial crisis and with growth re-established across much of the world, most countries are at least considering policy tightening in the months ahead. Central banks have interest rate rises back on the agenda but potentially more wide-reaching is the withdrawal of quantitative easing and paring back bond-buying programmes. </p>
+        <p>September finally gave us some certainty here, at least as far as the US Federal Reserve is concerned, as it announced the first stage of the great unwinding plans. The Bank will start cutting its $4.5 trillion balance sheet in October, initially by $10bn per month, and Fed chair Janet Yellen said the normalisation process would be gradual and predictable.</p>
+        <p>On interest rates, policymakers kept them steady this time but guidance from the committee members suggests we could see a hike in December and potentially three more in 2018.</p>
+        <p>This Fed announcement has been trumpeted as historic in some quarters but we would highlight the fairly muted reaction from the market &ndash; ending QE is a major shift in policy but it has long been signposted as due to start in Q4 so cannot be a surprise to anyone.</p>
+        <p>If people do want something Fed-related to get excited about, we would note that Yellen&rsquo;s term as chair is up in February and given her remarks on financial regulation and defending free trade at Jackson Hole in August, it remains to be seen whether she will continue in the role.</p>
+        <p>Adding to the sense of unpredictability, Fed vice chairman Stanley Fischer resigned effective mid-October. This means an ordered transition, as from Ben Bernanke to Yellen, is unlikely and it will be interesting to see who we have in charge of tapering and rate policy by next summer.</p>
+        <p>In the UK, the rate of inflation hit 3% in September and there are growing expectations that interest rates will be raised in November.&nbsp;</p>
+        <p>As for Europe, there have been concerns tightening policy too soon could choke off a still-developing recovery and European Central Bank (ECB) president Mario Draghi seems to understand this. Speaking at the Bank&rsquo;s July meeting he said he is keen to avoid the kind of &lsquo;taper tantrum&rsquo; seen in 2013 when the US began trimming its balance sheet and therefore accommodative monetary policy is still needed. Again, expectations of rate rise and quantitative easing (QE) withdrawal announcements at the Bank&rsquo;s September meeting did not come to fruition and Draghi is expected to say more on this in October.</p>
+        <p>Just as putting money into markets via quantitative easing (QE) was an experiment, taking it out is similarly without precedent and markets are waiting to see what a world without this support looks like. No one is suggesting the money will be withdrawn overnight but the slowing and eventual end of QE has to be a consideration over the coming months. </p>
+        <p>With the Fed hiking rates, the ECB and BoE talking about it and the Bank of Japan also muttering, markets will have to get used to life without the safety net in place for the last decade.</p>
+        <p><strong>China &ndash; a harder landing than feared for the global floor?</strong></p>
+        <p>Like most of the rest of the world, China indulged in heavy duty QE in the wake of the financial crisis and this pump priming has helped keep the country&rsquo;s growth in the 6-7% range while the US struggles along at 2%. Many economists believe China&rsquo;s continued growth has kept a floor under the global economy while G7 countries struggle but concerns are growing about the country&rsquo;s massive debt burden.</p>
+        <p>Key to this was Moody&rsquo;s relegating China&rsquo;s debt from Aa3 to A1 earlier this year &ndash; the first downgrade in 30 years - citing concerns about the country&rsquo;s financial system and economy.</p>
+        <p>With credit growth routinely outstripping GDP in recent years, we felt this downgrade was overdue and fell into the market noise category rather than signalling any kind of major economic shift. That said, China is looking to move to more sustainable growth &ndash; mid single digits as opposed to the 10%-plus of recent memory &ndash; and excessive leverage is one potential hurdle for such a soft landing. </p>
+        <p>China&rsquo;s broad money supply (M2, or cash plus bank deposits) to GDP, was running at 208% at the end of 2016 for example &mdash; among the highest levels in the world.&nbsp;</p>
+        <p><img height="auto" alt="China's money supply as % of GDP 1977-2016 - The best of times, the worst of times" width="600" src="~/media/545572680D3D4DFBAF233C8BA3E9E3A4.ashx?h=auto&amp;w=600" style="width: 600px;" /></p>
+        <p><em>Source: The World Bank, to end 2016</em></p>
+        <p>China has been tightening policy for some time, partly via fiscal means (such as property constraints) and partly via monetary (raising the costs of finance in various channels). This aims to address pockets of excess while not derailing the recovery in growth, and so far they appear to have been successful.</p>
+        <p>One key aim is to orchestrate deleveraging and the Government has been raising interbank borrowing costs while encouraging more normal costs of corporate finance</p>
+        <p>Aggressive deleveraging seems unlikely as this might pose risks to the financial system: if successful, reducing debt is likely to be a multi-year project. </p>
+        <p>We will continue to watch these with interest. China clearly has some issues to deal with to ensure its economic stability; in that, however, given the current climate, it can hardly be said to be alone.</p>
+        <p><strong>Illiquidity in bond markets</strong></p>
+        <p>Another question currently under review is liquidity in UK corporate bonds, with fears growing that a run on this debt could hit the wider market in a similar way to how mortgage-backed exposure came close to crippling the banking system in 2007-2008.</p>
+        <p>Most of the concerns lie in the liquidity mismatch between corporate bond funds, which offer instant redemptions for investors, and the underlying assets that can be hard trade in a crisis. The danger is that forced selling drives bond prices down, creating a feedback loop; for a recent example, consider how many property funds had to suspend dealing in the wake of Brexit last year.</p>
+        <p>According to a recent report from the Bank of England, a 1.3% weekly redemption from corporate bond funds would bring the market to breaking point.&nbsp;The BoE said this level of outflows from credit funds &ndash; a third higher than that seen at the nadir of the 2008 crisis &ndash; would result in bond dealers and hedge funds being unable to absorb any further sales except at "highly dislocated" prices.</p>
+        <p>In October 2008, when outflows from all investment grade corporate bond funds reached 4.2%, the associated impact was a 100 basis point rise in&nbsp;spreads, with around half of this attributable to deteriorating liquidity. A repeat of this level of redemptions&nbsp;would have more severe consequences, the study predicted, because of the greater size of the corporate bond fund universe and lower levels of liquidity. The BoE&rsquo;s report indicate that weekly redemptions from funds equal to 1% of net assets would see spreads rise by 40 basis points &ndash; roughly a third of the average for European credit from 2000 to 2016. Redemptions of 1.3% &ndash; the breaking point level -&ndash; could increase spreads by around 70 basis points, equivalent to 50% of their historical average value.</p>
+        <p>Again, this looks a worse-case scenario but with policy beginning to shift toward higher interest rates, an exodus from bonds should not be discounted entirely. While a sell-off in credit is unlikely to be as damaging as the mortgage-related crisis of 2008, these funds having to close their doors would cause a major dent in sentiment.</p>
+        <p>What are the chances of these triggers occurring? I have said many times that my co-manager Paul and I do not have a crystal ball and no one can accurately predict the future. We are long-term investors who believe in diversification, patience and building portfolios to meet the volatility targets that our investors expect us to achieve. The art of our approach is how to balance these historic behaviours with being alert to the threats and opportunities created by the potential triggers outlined in this article.</p>
+        <p><strong>Disclaimer:</strong></p>
+        <p> </p>
+        <p>&bull; This content contains information and analysis that is believed to be accurate at the date of publication but is subject to change without notice. Whilst care has been taken in compiling this content, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness. Some parts/sections of this content may been compiled from external sources. Whilst these sources are believed to be reliable, the information has not been independently verified and therefore no representation is made as to its accuracy or completeness. &bull; It should not be copied, faxed, reproduced, divulged or distributed, in whole or in part, without the express written consent of Liontrust. &bull; Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. The issue of units/shares in Liontrust Funds may be subject to an initial charge, which will have an impact on the realisable value of the investment, particularly in the short term. Investments should always be considered as long term. &bull; Any decision to invest should be always based on the final Prospectus and Key Investor Information Documents (KIIDs) and you should take independent legal advice if necessary. These documents contain important information which should be read before investing in any fund and they can be obtained, free of charge, <a href="http://www.liontrust.co.uk/what-we-offer/fund-literature">here</a>.</p>
+        <p> </p>
+        <p> &bull; Any performance shown represents model portfolios which are periodically restructured and/or rebalanced. Actual returns may vary from the model returns.&nbsp; There is no certainty the investment objectives of the portfolio will actually be achieved and no warranty or representation is given to this effect.&nbsp; The portfolio therefore should be considered as a medium to long-term investment.</p>

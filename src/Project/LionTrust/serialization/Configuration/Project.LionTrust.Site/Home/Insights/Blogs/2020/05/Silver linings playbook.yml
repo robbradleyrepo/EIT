@@ -1,0 +1,121 @@
+﻿---
+ID: "e52ea899-cb5f-4250-a9e5-73bbd55abc36"
+Parent: "d8708fe1-535e-4a62-a164-83d823bdf98c"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2020/05/Silver linings playbook
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 103900
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{44BE78D2-C29C-45E9-A996-E287B27CBC12}"
+              p:before="*"
+              s:ds="{AD7430E3-57B7-4D9B-B4D4-E52D614FAF1A}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{BF8AA747-6A56-4F15-AAA0-D8C934E25B10}"
+              p:after="r[@uid='{44BE78D2-C29C-45E9-A996-E287B27CBC12}']"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{26251538-B7B7-48CD-AF99-EA93C75F2C55}"
+              p:after="r[@uid='{BF8AA747-6A56-4F15-AAA0-D8C934E25B10}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{DAD57C2C-1EB9-4F97-B7EA-4B85FD709630}"
+              p:after="r[@uid='{26251538-B7B7-48CD-AF99-EA93C75F2C55}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See%20also...&amp;RelatedPages=%7BFC17F0A6-ECAA-4CD7-B80B-6E67FDE3251B%7D%7C%7B64E61C45-C8D4-4104-9262-28D062F805BA%7D%7C%7B395557CD-AC45-4F30-8DFA-4689C4868FD4%7D%7C%7BCDE2DD29-4FE7-49A3-841E-366AD0DF018F%7D&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{039DD4F1-8CEE-408B-A206-93ACB8B512D6}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Silver linings playbook | What we think | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: Silver linings playbook
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200519T094903Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: "Alex Wedge, fund manager in the Economic Advantage team, takes a look at some of the positive themes emerging in the smaller companies and micro-cap space as companies respond to the Covid-19 crisis."
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Silver linings playbook
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p style="text-align: left;"><strong><span>In advertising there is a strategy to “sell the sizzle, not the sausage.” With investing, we sometimes see this sizzle through themes or buzz words like AI. In the Economic Advantage team, we don’t look to invest in themes or take a view on macroeconomics as they can often be fickle. We are instead solely focused on company fundamentals, or the sausage in our analogy. </span></strong></p>
+        <p style="text-align: left;"><span>However, while we don’t set out to invest in themes per se, the bottom-up investment process does lead us into certain types of stocks and, as a result, certain trends can emerge from the portfolio. </span></p>
+        <p style="text-align: left;"><span>Recently, a comment in Microsoft’s quarterly earnings report caught my eye. CEO Satya Nadella talked about seeing “two years of digital transformation in two months” as a result of Covid-19. This got me thinking about the trends that could emerge or accelerate in the smaller companies and micro-cap space due to the pandemic. </span></p>
+        <p style="text-align: left;"><span>Here I explore three of the themes we are seeing, and how these are reflected in our smaller companies and micro-cap funds. &nbsp;</span></p>
+        <p style="text-align: left;"><strong><span>Digital transformation</span></strong></p>
+        <p style="text-align: left;"><span>The CEO of Twilio, Jeff Lawson, commented on the company’s stronger than expected Q1 results by saying: “Technologies such as messaging, email, voice and video have enabled many parts of the economy to continue working […] CV19 has drastically accelerated digital transformation projects across many industries. Projects that could have taken years such as transitioning from an on-prem contact centre to the cloud instead took a weekend.” As a result, Lawson notes: “We saw 25% increase in average daily signups from March 18 through April 30 compared to the first 11 weeks of the quarter”. </span></p>
+        <p style="text-align: left;"><span>As I write this, working from home, I can very much relate to this point of view; being able to work remotely is no longer a luxury, but a business necessity in the current environment. Being able to communicate, sell and service your customers remotely is key for maintaining and growing your business through Covid-19 and beyond. </span></p>
+        <p style="text-align: left;"><span>We didn’t set out to invest in companies who operate in digital transformation, but through the Economic Advantage process we have found great companies in this area. As a reminder, intellectual property is one of the three core types of intangible asset we believe can confer companies with competitive advantage and pricing power, allowing them to compound earnings over time. Because many of our companies have strong intellectual property within their product or service, this often means that we are investing in companies that are driving the digital economy.</span></p>
+        <p style="text-align: left;"><span>For example, we are invested in a company called <strong>Gamma Communications</strong>. The company provides – amongst other things – SIP trunking that enables internet communications for SME businesses, replacing more traditional phone lines. Adoption of this technology has been widespread, but still around a third of the market remains in traditional phone line equipment in the UK. Clearly, there are short term issues with installation and getting to customers on site, but the core reason businesses are pivoting towards this technology has shifted from a cost saving benefit to a necessary measure for us all to efficiently work remotely. The theme of companies needing to be digitally agile is not going away; moreover, it will be even more important in a post Covid-19 world.&nbsp; &nbsp;</span></p>
+        <p style="text-align: left;"><strong><span>Customer loyalty</span></strong></p>
+        <p style="text-align: left;"><span>This is perhaps a more unexpected theme we have picked up from some of our companies: clients are choosing to stick with their providers through the crisis. I suspect that this is partly due to the practicalities of changing at a time like this, but I think it also goes deeper than this: to workflows, and how businesses are going to market. </span></p>
+        <p style="text-align: left;"><span>Being able to work remotely has been crucial, but the tools which allow you to sell digitally have also become even more important. High street retailers are an obvious example. Many are not allowed to even open in the current environment, with online sales being the only way to do business. We all know that the long-term trend to online shopping has been coming, but there is no doubt that Covid-19 will change the way businesses think about online forever. </span></p>
+        <p style="text-align: left;"><span>A good example of customer loyalty is <strong>dotdigital,</strong> an email marketing business we hold. Its technology enables marketers to efficiently create and track email campaigns through its marketing platform. Interestingly dotdigital saw customers becoming more loyal and staying with the service through the crisis, with email and digital sales becoming even more important. Clearly, near-term new customer wins are more challenging, but customers wanting to send more emails and being more loyal to the product is a positive sign for the company long term. </span></p>
+        <p style="background: white; margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">Strong distribution networks are one of the three core types of intangible barrier to competition we look for in the Economic Advantage process. These networks are absolutely critical to the way customers conduct business every day and, as a result, long-term, embedded customer relationships are frequently a real strength for our companies. Indeed, we have picked up the theme of customer loyalty among many of our tech business over the last few weeks, illustrating the extent to which software is embedded and important to their customers. </span></p>
+        <p style="background: white; margin-bottom: 0.0001pt; text-align: left;"><span>&nbsp;</span></p>
+        <p style="text-align: left;"><strong><span>Building long term relationships </span></strong></p>
+        <p style="background: white; margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">From speaking to our companies we have been very encouraged by the drive to forge long-term relationships with customers through the current crisis. This has been driven by a whole host of initiatives from some payment deferrals in extreme cases, additional online support, and going above and beyond to provide products to help customers. No customer is more in need than the government and the NHS at the current time. A recent good example of this long-term relationship building came from <strong>Kainos</strong>, which helps to provide digital transformation projects for the government. In its most recent update, it discussed efforts to support the NHS via an app it has helped to produce. It is also offering pro bono work helping key government departments and care providers with digital services. This activity might shave a bit of near-term earnings, however the long-term relationships it will help create are far more valuable. </span></p>
+        <p style="background: white; margin-bottom: 0.0001pt; text-align: left;"><span>&nbsp;</span></p>
+        <p style="background: white; margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">In the Economic Advantage process, contracted recurring income is the third of the key intangible barriers to competition we look for. Repeat business allows our companies to build on prior years’ success rather than start each year trying to win new business. The actions some of our companies have taken to build long-term relationships during the Covid-19 pandemic help them retain customers, who they can then grow alongside – ultimately supporting the compounding of growth we want them to achieve.</span></p>
+        <p style="background: white; margin-bottom: 0.0001pt; text-align: left;"><span>&nbsp;</span></p>
+        <p style="background: white; margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">All of these themes should bode well for the long-term health of the companies, and below are a few examples of companies in this sweet spot, which is by no way exhaustive:<br /></span></p><p style="background: white; margin-bottom: 0.0001pt; text-align: left;"><br /></p>
+        <p style="background: white; margin-bottom: 0.0001pt; text-align: center;"><span style="color: black;"><img src="-/media/1AB6B5F1C74549838DD206046F341465.ashx?h=601&amp;w=600" style="width:600px; height:601px;" alt="Economic Advantage Companies" class="custom-image-height-auto" /></span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: left;"><span style="color: #222222;">&nbsp;</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: left;"><span style="color: #222222;">For a comprehensive list of common financial words and terms, see our glossary&nbsp;</span><span style="color: black;"><a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms" style="color: inherit;"><span style="color: #34b233;">here</span></a></span><span style="color: #222222;">.<br /></span></p><p style="background: white; margin: 0cm 0cm 10.5pt; text-align: left;"><br /></p>
+        <p style="background: padding-box border-box white; margin: 0cm 0cm 10.5pt; text-align: left;"><strong><span style="color: #222222;">Key Risks</span></strong></p>
+        <p style="background: padding-box border-box white; margin: 0cm 0cm 10.5pt; text-align: left;"><span style="color: black;">Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital.&nbsp;Some of the Funds managed by the Economic Advantage team invest primarily in smaller companies and companies traded on the Alternative Investment Market.&nbsp; These stocks may be less liquid and the price swings greater than those in, for example, larger companies. The performance of the&nbsp;GF UK Growth Fund may differ from the performance of the&nbsp;UK Growth Fund and will be lower than its corresponding Master Fund due to additional fees and expenses.</span></p>
+        <p style="background: padding-box border-box white; margin: 0cm 0cm 10.5pt; text-align: left;"><strong><span style="color: #222222;">Disclaimer</span></strong></p>
+        <p style="background: padding-box border-box white; margin: 0cm 0cm 10.5pt; text-align: left;"><span style="color: #222222;">The information and opinions provided should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product.&nbsp; Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</span></p>

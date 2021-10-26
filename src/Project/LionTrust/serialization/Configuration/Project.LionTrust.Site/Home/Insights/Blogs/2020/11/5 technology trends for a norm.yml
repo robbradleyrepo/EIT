@@ -1,0 +1,118 @@
+﻿---
+ID: "db1639fe-5275-4771-bfe3-38ab05236e7d"
+Parent: "b8e00980-eaaf-47d0-b614-9a2f9d99cf00"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2020/11/5 technology trends for a normal world
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 124300
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{EA551C29-913F-496C-A62F-1CD46CF5B015}"
+              p:before="*"
+              s:ds="{AD7430E3-57B7-4D9B-B4D4-E52D614FAF1A}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{B48AC5AF-786D-401E-A88A-F5815CB0B14B}"
+              p:after="r[@uid='{EA551C29-913F-496C-A62F-1CD46CF5B015}']"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{9239ED45-95D7-43A2-BD25-1F8239D2EE94}"
+              p:after="r[@uid='{B48AC5AF-786D-401E-A88A-F5815CB0B14B}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See%20also...&amp;RelatedPages=%7B52F66480-D846-4649-B159-6C8511A09119%7D%7C%7B84ABF1FA-B13D-464D-BB28-4FD289C8946E%7D%7C%7B86C2E4E3-25AE-461E-B16C-D2BD0AE2E2F0%7D%7C%7BCDE2DD29-4FE7-49A3-841E-366AD0DF018F%7D&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{67CE7C5C-A7A8-48F2-B43A-B5F79C18A0E6}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: 5 technology trends for a “normal” world | What we think | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: 5 technology trends for a “normal” world
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20201123T110529Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: "Covid-19 prompted an acceleration of technological trends, leading to strong returns for the sector in aggregate. But with a return towards normality likely in the next few months, Will Geffen analyses which of these trends might be sustained.  "
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: 5 technology trends for a “normal” world
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p><strong>Before the recent announcements that <span style="color: #222222;">effective and safe vaccines may have been found, </span>the Covid-19 crisis had led to a heavy downturn across global markets, with one sector not just holding firm but actively thriving in the current environment. That sector is of course Technology. </strong></p>
+        <p>There are numerous factors at play that meant technology companies were well positioned for the current crisis. They generally have strong balance sheets (low debt) with strong cashflow and capital light business models. </p>
+        <p>Many technology companies have a great deal of their value tied to future projected growth, which in a world of low growth and near zero interest rates is now more valuable, seeing a positive rerating of their intrinsic value. </p>
+        <p>The key factor, however, has been a massive acceleration of ongoing technological trends during this crisis period, supercharging the returns of technology companies and their stocks. </p>
+        <p>With the possible arrival of vaccines, the question for investors to answer now, however, is: which technological trends are likely to be sustained in the aftermath of Covid-19?</p>
+        <p><strong>1. Next-Gen Communication Software </strong></p>
+        <p>Pre-Covid, we saw steady growth in the uptake of new software designed to improve businesses’ remote working and collaboration. This trend was initially sustained by a small handful of drivers, such as rising costs of living in major urban areas, increased familiarity and comfort with devices such as smartphones and tablets with video calling capabilities and, likely the most important factor, a steady improvement in the underlying technology that meant businesses could reduce spend on expensive equipment and instead focus resources on employees’ own (more familiar) devices. As any communications software developer will tell you, co-ordinating a handful of users’ video conferencing on a range of different devices is quite the technical achievement!</p>
+        <p>This gradual uptake was of course supercharged during lockdown, with adoption rates skyrocketing as these tools became a necessity to sustain business operations as well as to maintain social connections. “Zooming” quickly became part of the day-to-day lexicon, and other tools such as Slack, Microsoft Teams and RingCentral became firmly embedded into operational workflows. </p>
+        <p>While workers will no doubt return to offices, a greater degree of remote working is likely to stay as its advantages for both workers and businesses have been realised (fewer commute hours, greater flexibility, larger talent pool etc). Compound this with the substantial corporate savings reaped by cutting business trips at a time when budgets are likely to be tight, the investment case for these essential communication and collaborative technologies going forward remains strong.</p>
+        <p><strong>2. Ecommerce</strong></p>
+        <p>The convenience and flexibility of ecommerce shopping had been steadily winning over consumers for a decade pre-Covid. The steady decline of the high street is well documented, and traditional brick and mortar shops have now been dealt a potentially mortal wound by the Covid-19 pandemic. In its place, we have seen the rapid uptake of online shopping and delivery services for everything from groceries with Ocado, to bespoke masks on Etsy and of course just about everything else on Amazon. </p>
+        <p>The ongoing case for ecommerce is straightforward. Consumers came out of necessity and will stay for the convenience. The simple ease, flexibility and price transparency of online shopping makes it hard to beat. Businesses know this and are being forced to play catch up along with a dearth of new DIY ecommerce entrepreneurs leveraging platforms offered by not just Amazon and Etsy, but also Shopify, Wix and, of course, the original platform, eBay. </p>
+        <p><strong>3. Digital Payments </strong></p>
+        <p>Hand in hand (or perhaps elbow to elbow?) with ecommerce comes digital payments. Digital payment growth has been on a steady secular trend since the birth of credit cards (and the payments networks Visa and Mastercard) in the 1950s. The enemy has always been cash, with technology advancing to make payments quicker, easier and safer.<span>&nbsp; </span></p>
+        <p>Another lesson from history is that commerce, trade and exchange is a common vector of disease. This is as true now as it was when Venetian trade ships bore the bubonic plague from the black sea to Europe. Thus it is no wonder that the current pandemic has seen consumers shun cash, a potential vector of disease, in favour of digital wallets (like PayPal's Venmo or Square’s CashApp), contactless payments (with PayPal’s iZettle or Square terminal) and online shopping with quick easy payment using PayPal and Square checkout. All, of course, on Visa and Mastercard’s rails. </p>
+        <p>While payments companies have had some short-term setbacks including a sharp decline in the high margin cross-border payment business due to a slowdown in travel and trade, this, like the virus, will prove temporary. The death of cash, however, will be permanent, and the leading digital payments companies will stand to benefit greatly. </p>
+        <p><strong>4. Cloud Computing </strong></p>
+        <p>Software workloads shifting to the cloud has been one of the great technology trends of the last decade, up alongside the monumental uptake of smartphones and social media. Businesses have been shifting their software operations to the cloud to take advantage of the flexibility and scale economics offered by the major cloud platform players <span>−</span> Amazon (with AWS) and Microsoft (with Azure). Software vendors have also been using cloud services as a platform to distribute their own products, favouring usage and subscription models rather than licensing their products for on-prem use.</p>
+        <p>During Covid-19 and the subsequent lockdowns, many business operations have had to be performed remotely via cloud services with cloud vendors, platforms and services all seeing accelerated adoption. </p>
+        <p>Again, we expect this trend to continue, with estimates that the overall migration to the cloud is only around 20% complete. Add to this the increased workload demand from those using cloud platforms in expanding industries such as ecommerce or digital entertainment, and there is a fair amount of runway and growth to come. Those who provide essential cloud services - from the hardware in the data centres such as Nvidia, whose datacentre sales recently topped $1 billion, through the infrastructure platforms like AWS and Azure, to those who provide platforms and services on the cloud like Salesforce, Datadog and ServiceNow - all stand to see rapid growth. </p>
+        <p><strong>5. Home Entertainment </strong></p>
+        <p>The long dark hours of lockdown stuck at home meant there was a glut of demand for entertainment ranging from video streaming and social media to video games. </p>
+        <p>In terms of home video, the so-called “Streaming Wars” have been raging for several years now, with Netflix’s success prompting many me-too streaming products such as Amazon Prime, Hulu and most recently Disney+. </p>
+        <p>Disney has attracted over 60 million subscribers since its launch late last year, and in the UK alone 12 million people have signed up for streaming services since lockdown, with average viewing time doubling to over 70 minutes a day according to Ofcom. Similar to e-commerce, we believe consumers may have come out of necessity but will likely stay out of convenience as the range and quality of streaming content is near impossible for traditional media to beat. </p>
+        <p>Video gaming will likely also continue to see ongoing secular growth even as the effects of the Covid-19 lockdown boost wear off. The proliferation of internet-enabled devices coupled with 5G technology mean that cloud gaming (games streamed to devices with the compute power outsourced to datacentres) is becoming a nearer reality. Games developers such as Activision Blizzard and various Tencent-owned publishers all stand to benefit as do those such as Nvidia, Google and Microsoft who are building the platforms for this cloud gaming revolution. </p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt;"><span style="color: #222222;">For a comprehensive list of common financial words and terms, see our glossary&nbsp;</span><span style="color: #34b233;"><a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms" style="color: inherit;"><span style="color: inherit;">here</span></a>.</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: center;"><a href="~/link.aspx?_id=8288379E20704941B2DADAE442B66077&amp;_z=z"></a><a href="~/link.aspx?_id=8288379E20704941B2DADAE442B66077&amp;_z=z"><img src="-/media/97F38249726D43C4B8F8A1B082A96C0C.ashx?h=150&amp;w=600" style="height:150px; width:600px;" alt="Liontrust Insights" class="custom-image-height-auto" /></a></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;">&nbsp;</p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><strong><span style="color: #222222;">Key Risks</span></strong></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><span style="color: #222222;">Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. Investment in funds managed by the Global Equity (GE) team may involve investment in smaller companies - these stocks may be less liquid and the price swings greater than those in, for example, larger companies. Investment in funds managed by the GE team may involve foreign currencies and may be subject to fluctuations in value due to movements in exchange rates. The team may invest in emerging markets/soft currencies or in financial derivative instruments, both of which may have the effect of increasing volatility. Some of the funds managed by the GE team hold a concentrated portfolio of stocks, meaning that if the price of one of these stocks should move significantly, this may have a notable effect on the value of that portfolio.</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><strong><span style="color: #222222;">Disclaimer</span></strong></p>
+        <p style="background: white; margin: 0cm 0cm 0.0001pt; text-align: start;"><span style="background: white; color: #222222;">The information and opinions provided should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</span></p>

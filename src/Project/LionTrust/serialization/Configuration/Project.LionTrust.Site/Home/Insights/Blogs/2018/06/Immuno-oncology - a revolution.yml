@@ -1,0 +1,110 @@
+﻿---
+ID: "c0800911-c5ba-4e2b-8942-4b8729a6ffbb"
+Parent: "835bb1dd-a6e0-4fec-b3fd-bda65a73d70a"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2018/06/Immuno-oncology - a revolution in cancer treatment"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 10100
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{3C697B65-5E24-4E91-89FC-4B83E8F3CBFC}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{2C3E60C8-8D3A-4EE1-8073-B0DA84F50DDE}"
+              p:after="r[@uid='{3C697B65-5E24-4E91-89FC-4B83E8F3CBFC}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{80148C67-DBB3-45B2-BCD6-617438402C82}"
+              p:after="r[@uid='{2C3E60C8-8D3A-4EE1-8073-B0DA84F50DDE}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See also...&amp;RelatedPages={FA0E822B-9229-47E9-9341-79282A4EE71F}|{FC17F0A6-ECAA-4CD7-B80B-6E67FDE3251B}|{77B5C263-DEEE-4A04-AE96-C01C2138DFCD}|{04578C19-7BC2-4512-A225-02BD2F1DE334}&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{3D5873D2-8F3E-4B53-A8EC-5DEF94420AD5}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "Immuno-oncology: a revolution in cancer treatment | What we think | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: "Immuno-oncology: a revolution in cancer treatment"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20160823T230000Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: Simon Clements, investment manager at ATI, examines current developments in cancer treatment where a new therapy is revolutionising our approach to the disease and creating investment opportunities.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: "Immuno-oncology: a revolution in cancer treatment"
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p><em>This article was first published by Alliance Trust Investments on 24 August 2016.</em></p>
+        <p><strong>Simon Clements, investment manager at ATI, examines current developments in cancer treatment where a new therapy is revolutionising our approach to the disease and creating investment opportunities.</strong></p>
+        <p>In the ATI Sustainable Future team we seek out adaptors and innovators as we believe that companies that are providing solutions to societal and environmental challenges will be the ones to thrive over the long term. One area where we are currently seeing exciting innovation is cancer treatment, or oncology, where therapies are being developed that are revolutionising the way in which we think about and treat cancer. With a number of new treatments already approved, companies at the forefront of this new wave of medicine are set to benefit from what could be the most significant breakthrough in cancer treatment to date. </p>
+        <p><strong>Current landscape</strong></p>
+        <p>Arguably, cancer is the greatest challenge facing medical science today. Every person on earth has around a 50% chance of developing some form of cancer during their lifetime and a 25% chance of dying from the disease (1). Treatment over the past 30 years has focused on eliminating cancerous tumours through a combination of chemotherapy, surgery, radiation and targeted therapy. However, these approaches have had limited success as the disease is often able to adapt to treatments and find new pathways to spread. The other key issue is that healthy cells are also destroyed along with cancerous cells, so the side effects are debilitating. </p>
+        <p>Immuno-oncology is changing the way we think about cancer. Rather than seeking more aggressive ways to target cancerous tumours – which in effect poisons and weakens the body – this new approach attempts to bolster the body’s natural defence system to fight the cancer itself. It seeks to do this in two key ways; by activating the body’s immune system to respond to foreign/cancerous cells, and by removing ‘masks’ from cancerous cells that trick the immune system into thinking that they are in fact normal cells.</p>
+        <p><strong>Medical ‘first’ </strong></p>
+        <p>Results so far have been impressive. Currently, those diagnosed with cancer are assessed within a five year survival rate; those in the early stages tend to survive at least five years while those with late stage cancers that have spread throughout the body have much lower survival rates, in some cases as low as 4% (2). In contrast, immuno-oncology treatments have so far been shown to be curative with survival rates of 40% beyond six years (3). This means that even patients with cancer that has spread throughout the body are enjoying high rates of long-term survival. This is a first in the field of oncology. </p>
+        <p>Interestingly, the approach tends to work best against the most aggressive forms of cancer; particularly lung and skin cancer, against which current treatments have the least success. This may be because aggressive cancers involve the most cell mutations and so the immune system is better able to recognise them as foreign and target them more effectively. These forms also have a much shorter development time and so it is easier to measure the effectiveness of treatment compared to forms like breast cancer that can develop over many years. If patients are also being treated in conjunction with current methods that suppress the immune system (such as chemotherapy or radiotherapy) this may also inhibit the effectiveness of immuno-oncology approaches. </p>
+        <p>Thus as the most aggressive form of cancer, currently the immuno-oncology market is dominated by the potential in lung cancer. In the US alone it is estimated there will be 224,390 new cases of lung cancer and an estimated 158,080 deaths due to the disease in 2016 (4). Surgery is the best treatment for lung cancer, but this is only appropriate for 30% of cases. The second largest opportunity is gastric or stomach cancer, which is the fifth most common cancer in the world and has the highest incidence in Asia (5). According to some estimates, gastric cancer has a market potential globally of $18 billion (6). </p>
+        <p><strong>Investment opportunities</strong></p>
+        <p>Immuno-oncology treatments work by essentially turning off the ‘brake’ that the body’s immune system has activated when you get cancer. There are five key firms globally currently producing and trialling these treatments; Bristol Myers Squibb, Roche*, Merck, AstraZeneca and Pfizer*. Each has a different approach to its trials and with this technology at such an early stage of adoption, the long-term winners are still not clear. However, there have been positive results so far with the drugs working to fight lung, skin and kidney cancer and we continue to see opportunities in this field. </p>
+        <p>Bristol Myers Squibb has a first mover advantage; their Opdivo drug is already approved for use with some lung cancers and skin cancers, while it has another in trial for lung cancer and head and neck cancer. Merck is considered to be the second mover in the field, with its Keytruda therapy approved for treatment of skin cancer. Roche has a treatment called Atezolizumab, which is due to roll out in 2017 for use in lung cancer while Astrazeneca has a drug called Durvalumab that has shown very promising results in early stage trials in lung cancer. Pfizer has a joint venture with Merck KGAA for a treatment called Avelumab, which is currently being trialled; its Ibrance breast cancer drug is also about to hit the market and this could be a $10 billion franchise, making it a central player in the oncology market. </p>
+        <p>Immuno-oncology remains a nascent and not yet fully proven cancer treatment with a number of questions as yet unanswered about its long term effectiveness. There are also questions over how we will pay for these treatments, which can cost between $150,000 and $220,000 per patient, per year. Nonetheless, we are arguably at the beginning of something that could revolutionise the way we treat cancer. Immuno-oncology has already shown that it can offer something that existing treatments can’t, and with a market valuation of around $100 billion over the next five to 10 years, there is a clear opportunity for early investors. </p>
+        <p>* Held within the ATI Sustainable Future fund range</p>
+        <p><strong>Sources</strong></p>
+        <p>1 http://www.cancer.org/cancer/cancerbasics/lifetime-probability-of-developing-or-dying-from-cancer </p>
+        <p>2 http://www.mayoclinic.org/diseases-conditions/cancer/in-depth/cancer/art-20044517 </p>
+        <p>3 Bernstein </p>
+        <p>4 http://www.cancer.org/cancer/lungcancer-non-smallcell/detailedguide/non-small-cell-lung-cancer-key-<br>
+        statistics </p>
+        <p>5 http://www.wcrf.org/int/cancer-facts-figures/data-specific-cancers/stomach-cancer-statistics </p>
+        <p>6 Source: UBS estimates</p><p><br></p>
+        <p>For a comprehensive list of common financial words and terms, see our glossary&nbsp;<a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms"><span style="color: rgb(52, 178, 51);">here</span></a>.</p><p><span style="font-weight: 700;">Key Risks</span></p><p><span style="font-weight: 700;">Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital.</span>&nbsp;The issue of units/shares in Liontrust Funds may be subject to an initial charge, which will have an impact on the realisable value of the investment, particularly in the short term. Investments should always be considered as long term.</p><p>Some of the Funds managed by the Sustainable Future Equities team involve foreign currencies and may be subject to fluctuations in value due to movements in exchange rates.</p><p><span style="font-weight: 700;">Disclaimer</span></p><div>This content should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy.&nbsp; It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, faxed, reproduced, divulged or distributed, in whole or in part, without the express written consent of Liontrust. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.&nbsp;</div>

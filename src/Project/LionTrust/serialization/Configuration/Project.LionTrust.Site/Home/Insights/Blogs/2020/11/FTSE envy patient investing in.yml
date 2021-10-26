@@ -1,0 +1,127 @@
+﻿---
+ID: "2ce233a6-a8c9-480f-9d74-d3cbbade2b0e"
+Parent: "b8e00980-eaaf-47d0-b614-9a2f9d99cf00"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2020/11/FTSE envy patient investing in action
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 123800
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{D53344B7-82EA-427C-9E8E-8740FA8EB446}"
+              p:before="*"
+              s:ds="{AD7430E3-57B7-4D9B-B4D4-E52D614FAF1A}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{25A51B40-3BC5-4522-8889-14FF4A9CD9AB}"
+              p:after="r[@uid='{D53344B7-82EA-427C-9E8E-8740FA8EB446}']"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{3E28C78D-2F76-4B8B-BBB3-889E6A32B7D2}"
+              p:after="r[@uid='{25A51B40-3BC5-4522-8889-14FF4A9CD9AB}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{55138814-F5B2-41FD-BEB0-6C7CD009BE50}"
+              p:after="r[@uid='{3E28C78D-2F76-4B8B-BBB3-889E6A32B7D2}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See%20also...&amp;RelatedPages=%7B9EADCB46-7677-4826-AA77-0AC5F81DFFBC%7D%7C%7BAFF0AA51-76FC-43AA-AB03-BFFE331D6950%7D%7C%7B01B3EF98-C64F-4F71-BACE-EA0BAFE8A6E0%7D%7C%7B77B5C263-DEEE-4A04-AE96-C01C2138DFCD%7D&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{666D8658-69FD-4802-B1DF-B4D2FEF1AD18}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "FTSE envy: patient investing in action | What we think | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: "FTSE envy: patient investing in action"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20201116T131043Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: Behavioural finance suggests that avoiding losses is preferred to generating gains but this can be forgotten by investors during sharp market bounces. John Husselbee reviews the benefits of striving to get rich slowly.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: "FTSE envy: patient investing in action"
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p style="margin-bottom: 0.0001pt;"><strong><span>Anyone who has attended one of our presentations over the last few years will have heard us discuss the concept of winning by not losing, which we often illustrate, care of Aesop, with the fable of the tortoise and the hare.</span></strong></p>
+        <p style="margin-bottom: 0.0001pt;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt;"><span>Patient investing lies at the core of our approach; successful wealth generation is about ignoring short-term market noise as far as possible and fixing your gaze on long-term financial goals. From a practical perspective, this means focusing on minimising downside risk in our portfolios as much as we can and typically prioritising this over the potential upside generation.</span></p>
+        <p style="margin-bottom: 0.0001pt;"><span>&nbsp;</span></p>
+        <p><span>Of course, this question of ignoring noise has become far more difficult given today’s 24-hour news cycle, and in the days of Brexit, Trump and Covid-19, every new dawn seems to bring with it potentially market-moving events, at least in the short term. </span><span>Long-term data show equities have outperformed cash and inflation and we try to encourage investors to imagine this as a straight line moving upwards on a chart, from bottom left to top right. Of course, returns are not linear like this and performance fluctuates up and down, often wildly. But if people can find a way to stay patient (and invested) and ignore the noise, the result has been strong performance.</span></p>
+        <p style="margin-bottom: 0.0001pt;"><span>Highlighting how our long-term, diversified approach can mitigate these fluctuations to some extent, we have charted every market scare of the last decade, where the FTSE 100 has fallen a significant amount over just a few days. To be clear, the FTSE 100 is not the formal benchmark for our portfolios but we have long considered it what we call the ‘News at ten’ index, the basic proxy for ‘equity market performance’ used by most UK investors.</span></p>
+        <p style="margin-bottom: 0.0001pt;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: center;"><span><img src="-/media/B10BDD4304B7448383D3B444E4E6D0E7.ashx?h=314&amp;w=600" style="width:600px; height:314px;" alt="Winning by not losing" class="custom-image-height-auto" /></span></p>
+        <p style="margin-bottom: 0.0001pt;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt;"><span>Anyone familiar with our approach will know the chart in question and that it shows our mid-level portfolio, Risk Grade 4 on our range of 1-10 (which has around 60% in equities and the rest in bonds, alternatives and cash), has proved able to register significantly smaller drawdowns in each of these market scares. Going back to the Taper Tantrum of 2013, for example, which we have lasting from 22 May to 24 June, the FTSE 100 was down 11.6% in total return terms, whereas our portfolio fell 6.3%. And bringing things right up to date, the Coronavirus Crash, from 20 February to 30 April, saw a 32.5% drop in the FTSE 100, while our portfolio was down 20.9%.</span></p>
+        <p style="margin-bottom: 0.0001pt;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt;"><span>Given the growing short-termism of markets, and increasingly of investors, we wanted to analyse this data further to see if we could amplify the core message of patience. Staying the course is always a key part of investing </span><span style="color: black;">– being panicked into selling by short-term market distress can ruin years of compounding returns – and that has been made brutally clear over recent months, with the massive paper losses of March 2020 wiped away just a few months later.</span></p>
+        <p style="margin-bottom: 0.0001pt;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt;"><span>In the vast majority of crashes identified, the FTSE 100 was considerably higher just three months later, epitomising the kind of sharp relief rally that often follows on the heels of a fall; the only exception was after the Red October scare towards the end of 2018 as concerns around Brexit and a trade war between the US and China dragged on into the following year. In all cases apart from this scare, our Growth 4 portfolio lagged the FTSE 100 in this initial recovery run and we faced questions as to why, notwithstanding the fact this is a diversified portfolio and would not be expected to keep pace with equities in a rising market.</span></p>
+        <p style="margin-bottom: 0.0001pt;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: center;"><img src="-/media/231B4742312F479986FC5E94FE4B832C.ashx?h=314&amp;w=600" style="width:600px; height:314px;" alt="FTSE Envy" class="custom-image-height-auto" /></p>
+        <p style="margin-bottom: 0.0001pt;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt;"><span>This reveals a condition we call FTSE envy and, once again, highlights the damaging effect the kind of short-term thinking that often arises when ‘the market’ is rallying can have on long-term wealth generation. Over the full period in question from the end of June 2011 to the end of September 2020, the FTSE 100 was up 42.9% whereas our portfolio registered a 70% return </span><span>– </span><span>a clear example of patient investing in action.</span></p>
+        <p style="margin-bottom: 0.0001pt;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt;"><span>What this shows, to mix our metaphors for a minute, is that investment rarely allows people to have their cake and eat it. Diversification is key to limiting downside but also means it is impossible to capture all the short-term upside, particularly in snap rallies. Behavioral finance suggests that avoiding losses is preferred to acquiring gains </span><span style="color: black;">– s</span><span style="background: white; color: #202122;">ome studies have suggested losses are twice as powerful psychologically </span><span style="color: black;">– but this seems to lapse in the midst of sharp market bounces, with the protective effect of diversification in the earlier downturn quickly forgotten.</span></p>
+        <p style="margin-bottom: 0.0001pt;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt;"><span style="color: black;">Some multi-asset portfolios and funds in the market will, at times, take a more aggressive approach, increasing exposure to momentum equities to try to ride a rise in stock markets for example. It is therefore important to understand the approach taken by each multi-asset manager; for our part, we maintain a consistent long-term investment process built around strategic asset allocation and broad diversification, and while we often tilt towards cheaper assets, large-scale shifts into or out of markets to capture momentum rallies are not possible. In any case, such market timing has rarely proved successful for even the most experienced investors.</span></p>
+        <p style="margin-bottom: 0.0001pt;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt;"><span>Looking back over the last four decades, positive years from the FTSE 100 are three times more likely than negative ones but these stronger periods will typically include drawdowns at one point or another; indeed, such intermittent corrections are a fundamental part of any healthy stock market. This highlights the importance of managing financial expectations: if people are comfortable getting rich slowly, they can ride out short-term rises or falls on the path to long-term goals but more anxious investors often sell on the back of drawdowns or chase after relief rally gains, both of which can ultimately damage returns. </span></p>
+        <p style="margin-bottom: 0.0001pt;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt;"><span>We continue to stress the concept of noise-cancelling investment, focusing on that ultimate shift from bottom left to top right on the performance chart and ignoring fluctuations in between. </span></p>
+        <p style="margin-bottom: 0.0001pt;"><span>&nbsp;</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt;"><span style="color: #222222;">For a comprehensive list of common financial words and terms, see our glossary&nbsp;<a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms" style="color: inherit;">here</a>.</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: center;"><span style="color: #222222;"><a href="~/link.aspx?_id=8288379E20704941B2DADAE442B66077&amp;_z=z"><img src="-/media/97F38249726D43C4B8F8A1B082A96C0C.ashx" style="height:150px; width:600px;" alt="Liontrust Insights" class="custom-image-height-auto" /></a></span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><span style="color: #222222;">&nbsp;</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><strong><span style="color: #222222;">Key Risks &amp; Disclaimer</span></strong></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><span style="color: #222222;">Please remember that past performance is not a guide to future performance and the value of an investment and any income generated from them can fall as well as rise and is not guaranteed, therefore you may not get back the amount originally invested and potentially risk total loss of capital.</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><span style="color: #222222;">This content should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy.&nbsp; It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, faxed, reproduced, divulged or distributed, in whole or in part, without the express written consent of Liontrust.</span></p>

@@ -1,0 +1,178 @@
+﻿---
+ID: "3b097e98-59b5-420d-b7cc-610c3437df8b"
+Parent: "a20ddd78-e286-430a-a38d-2603b1ae91ca"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2018/09/Lehman Brothers 10 years on the policy response
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 12600
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{166FAF09-9E36-4413-96D4-B90284A5F5E5}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{312103EA-1536-49E8-93E9-D586A6C13174}"
+              p:after="r[@uid='{166FAF09-9E36-4413-96D4-B90284A5F5E5}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{0BADBB88-2A2D-41EB-88B5-913DFF84810F}"
+              p:after="r[@uid='{312103EA-1536-49E8-93E9-D586A6C13174}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See also...&amp;RelatedPages={FC17F0A6-ECAA-4CD7-B80B-6E67FDE3251B}|{8869E014-2CF1-49ED-BD0D-DBE46677C220}|{F8415A35-9C34-47F7-BACE-42EAABBFA145}|{77B5C263-DEEE-4A04-AE96-C01C2138DFCD}&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "094932b9-ff77-4977-966e-d18f7c7ac091"
+      Hint: LegacyArticle_Subtitle
+      Value: "Phil Milburn, Olly Russ, James Inglis-Jones, Anthony Cross & Jamie Clark"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "Lehman Brothers – 10 years on: the policy response | What we think | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: "Lehman Brothers – 10 years on: the policy response"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180907T085012Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: "In the second of a three-part series to mark the 10-year anniversary of Lehman Brothers’ collapse, Liontrust fund managers discuss the policy response to the Global Financial Crisis (GFC), the impact on capital markets and the outlook now as the emergency policy measures for developed markets are being withdrawn. "
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: "Lehman Brothers – 10 years on: the policy response"
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p style="text-align: left;"><strong><span>In the second of a three-part series to mark the 10-year anniversary of Lehman Brothers’ collapse, Liontrust fund managers discuss the policy response to the Global Financial Crisis (GFC), the impact on capital markets and the outlook now as the emergency policy measures for developed markets are being withdrawn. </span></strong></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><em><span>The collapse of Lehman Brothers on 15 September 2008 was a symbolic moment in an escalating GFC. As the fallout broadened, government and central bank intervention was required to effect a number of bank bailouts, provide emergency funding and to engage in coordinated global monetary policy stimulus.</span></em></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><em><span>&nbsp;</span></em></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><em><span></span></em><em style="font-size: 1.5rem;">From a starting point of 5.0% in September 2008, the Bank of England had cut rates to 0.5% by March 2009 while the European Central Bank slashed its refinancing rate from 4.25% to 1.25% over the same period (and continued to cut all the way down to 0% by 2016). The US Federal Reserve had already slashed rates to 2.0% from 5.25% a year earlier, and by the end of 2008 had cut rates to a range of 0% - 0.25%, where they would remain for seven years.</em></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><em style="font-size: 1.5rem;">&nbsp;</em></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><em style="font-size: 1.5rem;"></em><em style="font-size: 1.5rem;">In November 2008, the US Federal Reserve also unveiled a bond-buying quantitative easing (QE) programme, which was replicated by the Bank of England in 2009 and, belatedly, the European Central Bank (ECB) in 2015.</em></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><em style="font-size: 1.5rem;"><br>
+        </em></p>
+        <hr>
+        <p style="margin-bottom: 0.0001pt; text-align: left;">&nbsp;</p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span>How would you characterise the policy response to the Global Financial Crisis?<br>
+        <br>
+        </span></strong></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span style="color: #10a53c;"><span style="color: #000000;">Phil Milburn,</span> <a href="https://www.liontrust.co.uk/fund-teams/global-fixed-income-team"><span style="color: #10a53c;">Global Fixed Income team</span></a>:</span></strong><span> The bailout of the financial system by the public purse with programmes such as the US Troubled Asset Relief Program (TARP) ensured that the credit market survived. Without state intervention, the whole of the financial system would almost certainly have collapsed.&nbsp;<br>
+        </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;">&nbsp;</p>
+        <p style="text-align: left;"><strong><span style="color: #10a53c;"><span style="color: #000000;">Olly Russ, </span><a href="https://www.liontrust.co.uk/fund-teams/european-income-team"><span style="color: #10a53c;">European Income team</span></a>: </span></strong><span>From a central bank perspective, t</span><span style="color: black;">he unanimous response globally to the lacklustre global recovery after the financial crisis was to cut rates and pursue various forms of QE.<br>
+        <br>
+        </span><span style="font-size: 1.5rem;">During the last decade, we have been bombarded with phrases such as ‘lower for longer’, in reference to the outlook for interest rates, and ‘whatever it takes’ in respect of the ECB’s approach to supporting the eurozone economy. In fact, in the immediate aftermath of the UK’s Brexit vote, it was felt that ‘zero forever’ was rapidly becoming market consensus!</span></p>
+        <p style="text-align: left;"><strong style="font-size: 1.5rem;">How did this affect the investment environment?</strong></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span style="color: #10a53c;"><span style="color: #000000;">James Inglis-Jones,</span> <a href="https://www.liontrust.co.uk/fund-teams/cashflow-solution-team"><span style="color: #10a53c;">Cashflow Solution team</span></a>: </span></strong><span>The global financial crisis effectively ushered in an era of investor dependency on central banks to drive risk appetite.<br>
+        <br>
+        </span><strong style="font-size: 1.5rem;"><span style="color: #10a53c;"><span style="color: #000000;">Anthony Cross, </span><a href="https://www.liontrust.co.uk/fund-teams/economic-advantage-team"><span style="color: #10a53c;">Economic Advantage team</span></a>: </span></strong><span style="font-size: 1.5rem;">Accommodative policy certainly aided the recovery in stock markets in the years following the GFC.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;">&nbsp;</p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>One of the most interesting aspects of the rally was that it included distinct bouts of ‘risk-on’ investor behaviour during which companies with low-quality balance sheets were actively sought out. The very companies who had been most distressed as the credit crisis and recession escalated were seen as those most likely to be the biggest beneficiaries of loose monetary policy and improving sentiment. ‘Dash for trash’ is a phrase which very succinctly conveys this risk-seeking behaviour.<br>
+        </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;">&nbsp;</p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span>James: </span></strong><span>Another term used to describe the investment environment was “a rising tide lifts all boats”, as asset price inflation pushed markets higher. However, during large chunks of 2012 and 2013, it was often actually the case that the least seaworthy boats were lifted the most!<br>
+        </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;">&nbsp;</p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>Through the prism of our Cashflow Solution process, this effect manifested itself through valuation compression, by which we mean that shares in poor-quality distressed companies were bid up to artificially high multiples, while solid growing companies were not afforded the premium valuation their superior balance sheets and prospects usually command.<br>
+        </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;">&nbsp;</p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span>Was this effect a headwind throughout the decade?<br>
+        <br>
+        </span></strong></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span>James: </span></strong><span>No, not really.<strong> </strong>The<strong> </strong>phenomenon really peaked in the aftermath of ECB President Mario Draghi’s defining “whatever it takes” speech in the summer of 2012. Investors were already becoming accustomed to policymakers providing fresh stimulus at the first sign of a weakening of sentiment, and this comment cemented the perception that central banks were underwriting markets. This, in turn, encouraged indiscriminate buying of risk assets.<br>
+        </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;">&nbsp;</p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>It’s worth clarifying that this behaviour was only a headwind in the relative sense. Equity markets made strong gains during these years, a rally which it was easy to participate in but harder to generate alpha against due to the indiscriminate nature of the gains.<br>
+        </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;">&nbsp;</p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>In recent years, the bull market has seen steadier progress and this has provided a much more benign environment for our process to add value.<br>
+        </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;">&nbsp;</p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span>Anthony</span></strong><span>: The very sharp ‘risk-on’ bouts in the years James highlights – 2012 and 2013 – were frustrating for us. We seek to invest in high-quality companies whose prospects for growth and strong financial performance, while boosted by better economic conditions, are not reliant on them. However, ‘stronger’ companies, which by their nature are less dependent on policy assistance, were relatively out of favour during these periods.<br>
+        </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;">&nbsp;</p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>Outside of these episodes, the backdrop for stock selection has been much more positive.</span><span>&nbsp; </span><span>Fundamentals have gradually reasserted themselves over time as swings in investor sentiment have subsided somewhat.<br>
+        </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;">&nbsp;</p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span>Olly</span></strong><span>: One </span><span>side-effect of the huge bond-buying QE programmes which <em>has</em> persisted throughout the decade has been a smothering of market volatility. A steady stream of money was being pumped into capital markets, inflating asset prices and smoothing out the periods of volatility one would usually expect to experience.<br>
+        </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;">&nbsp;</p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>One of the European Income investment strategies involves enhancing portfolio income by writing ‘covered call’ options on some holdings. The low implied volatility levels consistent with significant investor complacency meant that the level of premium income one receives for writing calls was (and is) – on the whole – not hugely attractive by historical standards.<br>
+        </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;">&nbsp;</p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span>A decade on, these policy measures are now being withdrawn. What is the market outlook as policy normalises?<br>
+        <br>
+        </span></strong></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span>Phil</span></strong><span>: Although interest rates are not going back to their pre-GFC levels, a withdrawal of some monetary stimulus simply has to happen. There are differing paces of normalisation around the world; the US is leading the way, whereas Mario Draghi has signalled that eurozone rates will not increase until after the summer of 2019.<br>
+        </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;">&nbsp;</p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>Traditional bond market correlations have been distorted by central bank buying, so the reassertion of factors such as the inverse relationship between credit spreads and government bond yields is a welcome development.<br>
+        </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;">&nbsp;</p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>In ‘normal’ times, positive economic growth data might push government bond yields up on expectation of higher rates while, at the same time, credit spreads tighten due to improving prospects for the corporate sector (i.e. lower yield risk premia required) – an inverse relationship. However, central bank intervention involved bond-buying across the board, which pushed prices in the same direction.<br>
+        </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;">&nbsp;</p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>There should now be far more volatility in bond markets and managers who focus on alpha (outperforming positions) are likely to thrive compared to those who are just beta (generic market exposure) junkies. At risk of overdoing the market clichés: just as the proverbial rising tide of monetary policy lifted all ships, when this tide goes out we will see who has been swimming naked. Individual company selection will garner greater importance in a credit market that is entering a late cycle phase. Government bond risk throughout Europe should generically be avoided but there are now small positive real yields in the US.<br>
+        </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;">&nbsp;</p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span>Olly: </span></strong><span>At the very least, it seems likely that the very low levels of market volatility experienced over recent years seem set to rise as QE programmes end.<br>
+        </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;">&nbsp;</p>
+        <p style="text-align: left;"><span>Rising interest rates and bond yields could also potentially impact every investment decision, from which asset class, to which region, styles, sectors and even stocks investors should select. If we accept that rates might be moving higher – but not too far – there is a strong correlation between rising rates and the outperformance of ‘value’ over ‘growth’.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span style="color: #10a53c;"><span style="color: #000000;">Jamie Clark, </span><a href="https://www.liontrust.co.uk/fund-teams/macro-thematic-team"><span style="color: #10a53c;">Macro-Thematic team</span></a>: </span></strong><span>We also expect unloved ‘v</span><span>alue’ companies to thrive. Strength in value typically coincides with rising inflation expectations and bond yields, and economic normalisation promises both. From cash-generative miners, to financials reliant on bond income, this explains why our portfolios currently have a broad bias to value.<br>
+        </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;">&nbsp;</p>
+        <p style="text-align: left;"><span>The post-crisis decade of easy money has been a boon to ‘growth’ stocks. Low rates mean a lower cost of capital, or discount rate. Under such conditions, discounted cash flow analysis ensures that growth stocks’ promises of jam tomorrow are worth more today. Higher rates put an end to this.</span></p>
+        <p style="text-align: left;"><span>Bond-proxies should also suffer. Their characteristic stability of earnings has been at a premium in an era of low rates and disinflation. Economic normalisation is a watershed.</span></p>
+        <p style="text-align: left;"><strong><span>James</span></strong><span>: We also</span><span> need to be aware that we are 10 years into a bull market. This has pushed aggregate valuations to levels which are high relative to history. We are also starting to see some signs of investor complacency and corporate over-optimism. Higher rates and a cessation of QE have both been justified by economic improvements, but I feel it’s only prudent to sound a note of caution that the risk of policy error – while small currently – is one possible catalyst which could uncover some underlying fragility in the current stockmarket uptrend. </span></p>
+        <p style="text-align: left;"><strong style="font-size: 1.5rem;">Next week: What lessons have Liontrust’s fund managers learnt in the 10 years since Lehman Brothers’ collapse?<span style="text-decoration: underline;"><br>
+        <br>
+        <strong><span></span></strong></span><strong><span>Last week: <span style="color: #10a53c;"><a href="https://emea01.safelinks.protection.outlook.com/?url=https://www.liontrust.co.uk/what-we-think/blogs/Lehman-Brothers-10-years-on&amp;data=02|01||49cc4540639b4a975def08d617fa988f|4e6acae25b334cf78f09842c7aba2f0f|0|0|636722762389129838&amp;sdata=3mpAau47RC1O+5Xxw+elqV3nAa1ylWeSXyKVuOq82AA=&amp;reserved=0" originalsrc="https://www.liontrust.co.uk/what-we-think/blogs/Lehman-Brothers-10-years-on" shash="dWoe3IfYjsNLloIXlhcI+StobPj4/rYHhxiFY+xYxdLqpMEwFTF01xvNRe452a/cwXWgqQa5O7h+QPDPAeXJ/D8gua/oZhIjb0l0E++v8es78ePvpcQV+2hqj7VgeWJDdD+i4/S3kdCmdld1hqp9ov/Za2npGHv0pONp1l541rQ="><span style="color: #10a53c;">the GFC and its impact on the banking sector.</span></a></span></span></strong><strong><span style="color: #10a53c;"></span></strong><br>
+        </strong></p>
+        <p style="text-align: left;"><strong><span style="text-decoration: underline;"><br>
+        </span></strong></p>
+        <p style="color: #222222; margin: 0px 0px 14px; text-align: left;"><span style="color: #34b233;"><span style="color: #000000;">For a comprehensive list of common financial words and terms, see our glossary&nbsp;</span><a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms"><span style="background-color: #ffffff;"></span></a><a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms" style="background-color: #ffffff;"><span style="color: #34b233;">here</span></a></span>.</p>
+        <p style="color: #222222; margin: 0px 0px 14px; text-align: left;"><span><strong>Key Risks</strong></span></p>
+        <p style="color: #222222; margin: 0px 0px 14px; text-align: left;"><span>Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital.</span>&nbsp;The issue of units/shares in Liontrust Funds may be subject to an initial charge, which will have an impact on the realisable value of the investment, particularly in the short term. Investments should always be considered as long term.</p>
+        <p style="color: #222222; margin: 0px 0px 14px; text-align: left;"><span><strong>Disclaimer</strong></span></p>
+        <p style="color: #222222; margin: 0px 0px 14px; text-align: left;">This content should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy.&nbsp; It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, faxed, reproduced, divulged or distributed, in whole or in part, without the express written consent of Liontrust. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</p>

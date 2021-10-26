@@ -1,0 +1,110 @@
+﻿---
+ID: "61ca585f-b655-43bc-8f6e-0fe10aeeced3"
+Parent: "a20ddd78-e286-430a-a38d-2603b1ae91ca"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2018/09/Jellyfish roast Turkey and a lucky gold ring
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 11900
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{A18E4207-CAE1-4787-B5C8-7923B5810A47}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{30983E09-C1F9-4760-A925-9AF51018272F}"
+              p:after="r[@uid='{A18E4207-CAE1-4787-B5C8-7923B5810A47}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{E389D25D-9C10-46AD-A90E-1F7E655FEBFF}"
+              p:after="r[@uid='{30983E09-C1F9-4760-A925-9AF51018272F}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See also...&amp;RelatedPages={01B3EF98-C64F-4F71-BACE-EA0BAFE8A6E0}|{9EADCB46-7677-4826-AA77-0AC5F81DFFBC}|{F8415A35-9C34-47F7-BACE-42EAABBFA145}|{E30EB0CB-27E6-4CB5-A69E-0BE8D5EFF8A6}&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{666D8658-69FD-4802-B1DF-B4D2FEF1AD18}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Jellyfish, roast Turkey and a lucky gold ring | What we think | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: Jellyfish, roast Turkey and a lucky gold ring
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180903T141344Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: "John Husselbee surveys the investment landscape as summer draws to a close, with recent months reinforcing the importance of riding out short-term market stings."
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Jellyfish roast Turkey and a lucky gold ring
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p style="text-align: left;"><strong><span>Anyone who was hoping the heatwave over the summer would have burnt away the clouds of uncertainty will have been disappointed. As we head into the autumn, the world is no less surreal and unpredictable than it was in the spring.</span></strong></p>
+        <p style="text-align: left;"><span>Impeachment is now a regular part of the political discourse in the US, the Brexit divide seems to be wider than ever, tariffs and trade deals are regular features of the news agenda, and asset classes are not necessarily reacting to rising interest rates and the withdrawal of quantitative easing (QE) </span><span></span><span>in ways expected. And, most surprising of all, England reached the semi-finals of the World Cup after winning a penalty shoot-out.</span></p>
+        <p style="text-align: left;"><span>For us, the unpredictability of the summer has included the performance of US and emerging markets equities. As emerging markets equities had lagged developed markets from the start of 2018 – largely due to a stronger US dollar – we took the opportunity earlier this summer of topping up our weighting towards target levels through our low, medium and high risk portfolios.</span></p>
+        <p style="text-align: left;"><span>At the same time, we cut back exposure to more expensive developed markets, primarily the US and large cap UK equites, and increased our allocation to cheaper European stocks. But the ongoing strength of the US and the emerging market malaise has stretched through the summer, being exacerbated by the recent situation in Turkey.</span></p>
+        <p style="text-align: left;"><span>For me, however – imagining myself back on the beach in Spain – this is the investing equivalent of a jellyfish sting: admittedly painful in the short term but unlikely to do lasting damage.</span></p>
+        <p style="text-align: left;"><span>Turkey’s roasting will have caught people’s attention over the summer and the country’s troubles have undoubtedly soured sentiment towards emerging markets as a whole. I see this as yet another example of noise trumping fundamentals (excuse the pun) and would suggest there is still plenty of opportunity in emerging markets as a whole, particularly at such depressed valuations.</span></p>
+        <p style="text-align: left;"><span>Turkey’s worsening relations with the US have sparked a sharp selloff and exposed weaknesses such as large external debt and inflation, hidden from view by widespread liquidity in recent years. Weaker global growth, combined with higher interest rates and a strengthening US dollar, have laid bare vulnerabilities in countries reliant on external borrowing and large current account deficits, such as Turkey and Argentina. But plenty of other emerging markets, especially in Asia, continue on the path towards sustainable long-term growth.</span></p>
+        <p style="text-align: left;"><span>We see little chance of contagion risk from Turkey and yet markets are once again tarring a whole asset class with the same brush, based on the problems of its weakest constituents. For investors prepared to do the work and look beyond the surface, that represents a significant opportunity. </span></p>
+        <p class="s7" style="margin: 0cm 0cm 0.0001pt; text-align: left;"><span>On that note, I would like to sign off with an anecdote to reinforce the point, coming full circle back to the lucky gold ring in the title. <span class="s14">Some of you may have heard about a recent scam happening in London, where someone&nbsp;</span>walking in front of you bends down to find a ‘gold’ ring on the pavement, presses it upon you under the guide of ‘It’s your lucky day’ and then asks for a small financial token for giving up their find.</span></p>
+        <p class="s7" style="margin: 0cm 0cm 0.0001pt; text-align: left;"><span><br>
+        <span class="s14">I have always been sceptical about such urban horror stories but a friend of mine fell victim to exactly such a ring-dropping scam over the summer – and having parted with £10, subsequently found out the ‘gold’ ring was a compression brass olive ring used by plumbers, retailing for around 15p a piece in Wickes.</span></span></p>
+        <p class="s7" style="margin: 0cm 0cm 0.0001pt; text-align: left;"><span><br>
+        </span></p>
+        <p class="s7" style="margin: 0cm 0cm 0.0001pt; text-align: left;"><span>What this shows is the importance of not taking things on face value: US equities continue to rise but the market is already expensive; emerging markets on the other hand are clearly struggling at present but while certain countries are in a weak position as liquidity recedes, many others can look to the future with genuine confidence.<br></span></p><p class="s7" style="margin: 0cm 0cm 0.0001pt; text-align: left;"><br></p>
+        <p style="text-align: left;"><span>Buy low, sell high is perhaps the oldest and certainly the simplest piece of investment advice, but it is also one of the hardest to put into practice. T</span><span style="color: black;">he evidence of history points to the importance of investing for the long term and staying invested through the ups and downs of markets and political events. </span></p>
+        <p style="text-align: left;"><span style="color: black;">Winning by not losing over a long period of time, rather than chasing gains and fleeing losses, has also proved a good way of building performance towards meeting financial goals. But it does require riding out a few jellyfish stings along the way.</span></p>
+        <p style="color: #222222; margin: 0px 0px 14px; text-align: left;"><span>For a comprehensive list of common financial words and terms, see our glossary&nbsp;</span><a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms" style="color: #000000;"><span style="color: #34b233;">here</span></a><span>.<br>
+        </span></p>
+        <p style="color: #222222; margin: 0px 0px 14px; text-align: left;">&nbsp;</p>
+        <p style="color: #222222; margin: 0px 0px 14px; text-align: left;"><span><strong>Key Risks &amp; Disclaimer<br>
+        </strong></span><br>
+        Please remember that past performance is not a guide to future performance and the value of an investment and any income generated from them can fall as well as rise and is not guaranteed, therefore you may not get back the amount originally invested and potentially risk total loss of capital.&nbsp;<br>
+        <br>
+        This content should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy.&nbsp; It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, faxed, reproduced, divulged or distributed, in whole or in part, without the express written consent of Liontrust.</p>

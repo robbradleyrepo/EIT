@@ -1,0 +1,193 @@
+﻿---
+ID: "6fad2143-7e10-4037-8b8f-839719570dbe"
+Parent: "9f5c0d4f-ecd9-4b2a-8706-2893d1f19b2a"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2017/01/a-desynchronising-world"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 1700
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{423068D5-BB2F-4B40-B492-B4B901C796E8}"
+          p:after="r[@uid='{30A0A4C8-974F-4822-9DCB-DE14881E0400}']"
+          s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+          s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+          s:par="DatasourceRule"
+          s:ph="/content/side-content" />
+        <r
+          uid="{230A97E2-B42E-494C-A0A4-C01710CD3797}"
+          p:after="r[@uid='{423068D5-BB2F-4B40-B492-B4B901C796E8}']"
+          s:ds="{71B20482-B038-49D5-895C-ED6D46D5095F}"
+          s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+          s:par="DatasourceRule"
+          s:ph="/content/side-content" />
+        <r
+          uid="{60EAA78D-AC3C-4DF7-9BD4-85B9E9CCFA32}"
+          p:after="*[1=2]"
+          s:ds=""
+          s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+          s:par="Title=See%20also&amp;RelatedPages=%7B9EADCB46-7677-4826-AA77-0AC5F81DFFBC%7D%7C%7BFEE5A178-44F7-4C2E-957C-DD7429D4FC19%7D%7C%7B01B3EF98-C64F-4F71-BACE-EA0BAFE8A6E0%7D&amp;MaximumNoOfLinks=3"
+          s:ph="/content/side-content" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{666D8658-69FD-4802-B1DF-B4D2FEF1AD18}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: A desynchronising world | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: A desynchronising world
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: "20170112T150636:636198303965358143"
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: "Are you still playing Pokémon Go? The online game was released to the world in early July this year and soon went viral over the summer. However the game today is seemingly unfashionable with its rapid decline in recent months clearly charted by Google Trends. And whilst gamers are abandoning Pokémon Go, it seems that investors are beginning to shy away from government bonds."
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: A desynchronising world
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <strong>Are you still playing Pok&eacute;mon Go? The online game was released to the world in early July this year and soon went viral over the summer. However the game today is seemingly unfashionable with its rapid decline in recent months clearly charted by Google Trends. And whilst gamers are abandoning Pok&eacute;mon Go, it seems that investors are beginning to shy away from government bonds.</strong><br />
+        <br />
+        <br />
+        <img alt="'Pokemon Go' worldwide Google search interest" src="~/media/7F96B277ED0E43459A59F85F83E10EB4.ashx?h=306&amp;w=601" style="height: auto; width: 601px;" /><br />
+        <br />
+        <br />
+        <img alt="UK 10 year gilt yield" src="~/media/DB9A924928EE472F9B6D6BE8BEA09536.ashx?h=306&amp;w=600" style="height: auto; width: 600px;" /><br />
+        <br />
+        <br />
+        <div style="text-align: start;"><span style="text-align: justify; font-size: 1.5rem;">The steep rise of bond yields in recent weeks and months hasn&rsquo;t really been a surprise &ndash; but nor did anyone really know when the sell-off would begin. Investors had recognised the remarkable over-valuation of the asset class for a long time, but the </span><em style="text-align: justify; font-size: 1.5rem;">greater fool theory</em><span style="text-align: justify; font-size: 1.5rem;"> dictated that they had an incentive to stay invested while prices kept rising, with yields compressing.</span></div>
+        <p style="font-size: 1.5rem; text-align: justify;">Bond yields have been incredibly low, and unsustainably so, for some time, with over $13.4tn in debt estimated to be negative yielding in August of this year (source: FT/Tradeweb). The problem is that only a brave investor would shun such an overvalued asset if they believe enough buyers remain in the market such that it may become even more overvalued. <br />
+        <br />
+        </p>
+        <div style="text-align: start;"><span style="font-size: 1.5rem;">
+        </span>
+        <p style="font-size: 1.5rem; text-align: justify;">The bond bubble now looks like it may have finally burst. We must be careful making such predictions as we have seen bond yields back up before, only to subsequently resume their multi-year bull trend. But yields are so low that the asset class on a standalone basis looks one of the most expensive ever, so it seems likely that we may have reached an inflexion point.</p>
+        </div>
+        <div style="text-align: start;">
+        </div>
+        <div style="text-align: start;">
+        <p style="font-size: 1.5rem; text-align: justify;">A range of factors have contributed to the sell-off. Inflation expectations have been edging up to reflect the lagged impact of the early 2016 recovery in energy prices. For UK investors, this has been accentuated post-Brexit vote by the likelihood of imported inflation due to sterling&rsquo;s fall. This year we have also seen growing acceptance that QE and similar monetary measures may be losing their effectiveness in dictating investor behaviour, and therefore may be coming to an end (meaning less demand for bonds).</p>
+        </div>
+        <div style="text-align: start;">
+        </div>
+        <div style="text-align: start;">
+        <p style="font-size: 1.5rem; text-align: justify;">The chart below shows that the annual UK inflation rate &ndash; as measured by the Retail Prices Index &ndash; has largely been decelerating over the last five years.</p>
+        </div>
+        <p style="text-align: justify;">
+        <br />
+        <br />
+        <img alt="Retail prices index" src="~/media/528D8D2E17424346932BD9878A5E1D07.ashx?h=306&amp;w=600" style="height: auto; width: 600px;" /></p>
+        <br />
+        <span style="text-align: justify;"><br />
+        <br />
+        But it has started to pick up again and the next chart shows that bond markets have now moved to price in a 3% average rate of inflation over the next decade, 50bps more than they expected only six months ago.<br />
+        </span><br />
+        <br />
+        <img alt="10 year UK inflation expectations" src="~/media/A50144ABD9B145038AD46BB1BB0E1267.ashx?h=306&amp;w=601" style="height: auto; width: 601px;" /><br />
+        <p style="text-align: justify;">
+        </p>
+        <p style="text-align: justify;">Recently, the rise in inflation expectations and yields has gathered pace. We would attribute a large part of this spike to two related factors: <em>populism</em> and a switch to fiscal stimulus.</p>
+        <div style="text-align: start;"><span style="font-size: 1.5rem;">Populism has gathered further momentum since my </span><a href="~/link.aspx?_id=1CE62E971B344CEFB56036DA4B2AEF77&amp;_z=z" style="font-size: 1.5rem;"><span style="color: #34b233;">early-October musings</span></a><span style="font-size: 1.5rem;"> on the financial implications of this movement. More nations may now follow the UK and US lead and vote to &lsquo;go it alone&rsquo;. The nomination of Francois Fillon in France&rsquo;s presidential primaries has set the scene for a possible presidential election show down next year between centre-right and far-right (in the form of Marine le Penn). Italy&rsquo;s referendum in a few days marks the next opportunity for a populace to make their anti-establishment feelings known.</span></div>
+        <p style="font-size: 1.5rem; text-align: justify;">The driving forces behind this political trend are the same that may see a rejection of globalisation and a rise in domestic fiscal investment &ndash; via infrastructure projects for example. Few would argue that globalisation does not serve to increase productivity within the global economy, but the man-on-the-street in the developed world is becoming increasingly aware that the benefits may be accruing not to them, but rather to developing nations, who are closing the inequality gap, and to international businesses (and their shareholders). As <a href="~/link.aspx?_id=B33B7568B4444D7AA1968C9821B83339&amp;_z=z"><span style="color: #34b233;">suggested by my colleague Hugo</span></a>, our job is not to comment on whether this is a desirable socio-political state of affairs, but to look at the investment implications.<br />
+        <br />
+        </p>
+        <div style="text-align: start;"><span style="font-size: 1.5rem;">
+        </span>
+        <p style="font-size: 1.5rem; text-align: justify;">In recent years, synchronisation between asset classes internationally has been rising, a result of global efforts to stage a recovery from the 2008 global financial crisis. One of the main effects of quantitative easing has been to drive valuations up across the board, defying the traditional negative correlation between equities and bonds.</p>
+        </div>
+        <div style="text-align: start;">
+        </div>
+        <div style="text-align: start;">
+        <p style="font-size: 1.5rem; text-align: justify;">Monetary policy may now be falling out of favour, but fiscal stimulus is back in vogue, underpinned in the UK and US by infrastructure projects. As witnessed in last week&rsquo;s Autumn Statement, in which OBR estimates of a &pound;10bn 2019-20 surplus flipped to a forecast of a &pound;22bn deficit, this has a knock-on effect on debt markets via higher government borrowing. When combined with a trend to restrict the free movement of labour, the takeaway from the Brexit vote and Trump&rsquo;s election is clearly reflationary. Employment in both markets is already fairly full, so turning off the tap of labour immigration will likely inflate wages and prices.</p>
+        </div>
+        <div style="text-align: start;">
+        </div>
+        <div style="text-align: start;">
+        <p style="font-size: 1.5rem; text-align: justify;">With bond yields now rising across the board, it may seem that synchronisation remains firmly in place. However, if we look at the reasons behind this inflexion, I think it reveals something more telling, which points towards increasing de-synchronisation in future.&nbsp;</p>
+        </div>
+        <div style="text-align: start;">
+        </div>
+        <div style="text-align: start;">
+        <p style="font-size: 1.5rem; text-align: justify;">The political forces we have already mentioned are currently driving bond yields in the same direction globally, but we believe they will eventually cause greater heterogeneity of returns. If countries introduce frictions to international trade and the movement of capital and labour, then their economies are likely to diverge and the debt (i.e. bonds) of each country is likely to be increasingly assessed on the merits of its own economy.&nbsp;</p>
+        </div>
+        <div style="text-align: start;">
+        </div>
+        <div style="text-align: start;">
+        <p style="font-size: 1.5rem; text-align: justify;">This is one reason we will be taking an increasing international approach to our fixed income allocation. We have maintained our long-standing underweight position, but the asset class&rsquo; diversification benefits continue to justify an allocation in a balanced portfolio.</p>
+        </div>
+        <div style="text-align: start;">
+        </div>
+        <div style="text-align: start;">
+        <p style="font-size: 1.5rem; text-align: justify;">Investors now have to look to other means of generating income and low-volatility returns, with the options including real estate, long/short equity strategies and strategic bond funds.</p>
+        <span style="font-size: 1.5rem;">&nbsp;</span></div>
+        <div style="text-align: start;">
+        </div>
+        <div style="text-align: start;">
+        <p style="font-size: 1.5rem; text-align: justify;">Unfortunately, rising government bond yields are likely to have negative knock-on effects on other asset classes, all of which are ultimately to some degree priced at a premium to this risk-free rate. Even though their valuations look elevated, we are reluctantly tilted towards risk assets including equities and we are making use of managers with distinct and robust investment processes &ndash; who will, for example, be investing in companies resilient to inflationary pressures &ndash;&nbsp; and those that make use of innovative strategies &ndash; such as enhancing income through writing covered call options.</p>
+        </div>
+        <div style="text-align: start;">
+        </div>
+        <div style="text-align: start;">
+        <p style="font-size: 1.5rem; text-align: justify;">De-synchronisation and greater heterogeneity means an opportunity for active managers to add alpha through their ability to research and differentiate between investments. The days of making straight <em>risk-on</em> or <em>risk-off</em> trades may be behind us as we see less intra-asset and inter-asset correlations. We have already seen sector rotation away from defensives (whose bond proxy characteristics drove share price higher but now represent a millstone around their necks) towards cyclicals, and the next step will be to observe greater differentiation at the security level.&nbsp;</p>
+        <span style="font-size: 1.5rem;">&nbsp;</span></div>
+        <div style="text-align: start;">
+        <p style="font-size: 1.5rem;"><strong><br />
+        </strong></p>
+        </div>
+        <div style="text-align: start;">
+        <p style="font-size: 1.5rem;"><strong>Disclaimer:</strong></p>
+        <span style="font-size: 1.5rem;">
+        </span>
+        <p style="font-size: 1.5rem;"> </p>
+        <span style="font-size: 1.5rem;">
+        </span>
+        <p style="font-size: 1.5rem;">&bull; Past performance is not a guide to future performance. &bull; Do remember that the value of an investment and the income from it can fall as well as rise and you may not get back the amount originally invested. &bull; Any performance shown represents model portfolios which are periodically restructured and/or rebalanced. &bull; Actual returns may vary from the model returns. &bull; There is no certainty the investment objectives of the portfolio will actually be achieved and no warranty or representation is given to this effect. &bull; The portfolio therefore should be considered as a medium to long-term investment.</p>
+        </div>
+        <div style="text-align: start;">
+        </div>
+        <div style="text-align: start;">
+        <p style="font-size: 1.5rem;">&bull; The information and opinions provided should not be construed as advice for investment in any product or security mentioned.&nbsp; &bull; Always research your own investments and consult with a regulated investment adviser or licensed stock broker before investing.</p>
+        <span style="font-size: 1.5rem;">&nbsp;</span></div>
+        <div style="text-align: start;"><span style="font-size: 1.5rem;"><br />
+        </span></div>
+        <div style="text-align: start;"><span style="font-size: 1.5rem;"><em>Originally published on 30 November 2016.</em></span></div>
+        <div style="text-align: start;"><span style="font-size: 1.5rem;"><em><br />
+        </em></span></div>

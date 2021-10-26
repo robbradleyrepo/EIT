@@ -1,0 +1,201 @@
+﻿---
+ID: "b55df13e-0c44-4f1c-b48b-833d395752ce"
+Parent: "d8708fe1-535e-4a62-a164-83d823bdf98c"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2020/05/GFI Quarterly Reasons to be cheerful as well as fearful
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 104300
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{08CC592F-0BBE-41C3-9CFE-678E7DC63BD0}"
+              p:before="*"
+              s:ds="{AD7430E3-57B7-4D9B-B4D4-E52D614FAF1A}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{0B7A02AF-FA5B-4B49-B033-2D969183162C}"
+              p:after="r[@uid='{08CC592F-0BBE-41C3-9CFE-678E7DC63BD0}']"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{66CC1093-65C5-4EC2-B1AF-8F0E46ECB49A}"
+              p:after="r[@uid='{0B7A02AF-FA5B-4B49-B033-2D969183162C}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{9F0602E9-E9E8-464B-874E-CDA9D2D4B6EC}"
+              p:after="r[@uid='{66CC1093-65C5-4EC2-B1AF-8F0E46ECB49A}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See%20also...&amp;RelatedPages=%7BFC17F0A6-ECAA-4CD7-B80B-6E67FDE3251B%7D%7C%7B2301B1D6-2812-4921-AC12-6BCF90F3A836%7D%7C%7B4D7B7C2A-D992-47CA-AE5D-F2DEB5704C2E%7D%7C%7B1EC36DCA-A621-4DDD-B8EA-888A3693BF7B%7D&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{5ADAC049-CD3A-4638-B7D9-12A2DB704394}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "GFI Quarterly: Reasons to be cheerful (as well as fearful) | What we think | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: "GFI Quarterly: Reasons to be cheerful (as well as fearful)"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200528T131148Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: "Covid-19 uncertainty has lowered confidence in economic forecasts. But Phil Milburn explains why there are reasons to be cheerful as well as fearful and where the team is finding investment opportunities in investment grade and high yield."
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: "GFI Quarterly: Reasons to be cheerful (as well as fearful)"
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p><strong><em><span>Executive summary</span></em></strong></p>
+        <p><strong><em><span>The economic backdrop is undoubtedly dire but, as lockdowns are being eased around the globe, there are reasons to be cheerful as well as fearful. </span></em></strong></p>
+        <p><strong><em><span>The economic recovery will be uneven by geography and extremely uneven by sector. Forecasts show real global GDP in 2020 falling by 4.5-5%: developed markets are expected to shrink in aggregate by 6.5-7% in 2020, whereas the collective figures for emerging markets are in the vicinity of a 1-1.5% contraction.</span></em></strong></p>
+        <p><strong><em><span>There has been an extraordinary policy response to the crisis from the monetary and fiscal authorities, both in terms of size and speed. We have seen year-on-year central bank balance sheet growth of over $4.5 trillion already. The ruling by the German Constitutional Court (GCC) against the PSPP bond buying program is a stumbling block on the monetary policy side, which will hopefully be overcome. </span></em></strong></p>
+        <p><strong><em><span>On the European fiscal front, France&rsquo;s Emmanuel Macron and Germany&rsquo;s Angela Merkel have proposed a &euro;500 billion EU recovery fund, showing a desire for greater European cohesion.&nbsp; </span></em></strong></p>
+        <p><strong><em><span>US politics also creates risks, with 2020 being a presidential election year. Tensions between the US and China are increasing and a descent back into a trade war would create a major headwind for economic recovery. We hope Trump remembers the key electoral factor &ndash; &ldquo;it&rsquo;s the economy, stupid&rdquo;.</span></em></strong></p>
+        <p><strong><em><span>The speed and extent of the recovery are partly determined by how deeply scarred economies are by the crisis and lockdown. In the US, over 30 million jobs have been cumulatively lost, with 78% of them viewed as being temporary layoffs. Furthermore, there has been a jump in the savings rate; when this unwinds, it will create a large demand impulse. Added to this, a low oil price naturally adds a boost to other consumption.</span></em></strong></p>
+        <p><strong><em><span>We are positioned for the survival of the system and a gradual recovery, but not a V-shaped recovery. Real GDP is expected to be lower at the end of 2021 than it was in 2019. </span></em></strong></p>
+        <p><strong><em><span>Rates markets are very expensive and rigged to ensure that investors lose real spending power in a classic case of financial repression. With an enormous amount of supply to absorb, and the associated fractured government finances, yields should be much higher, but central banks simply will not allow this.</span></em></strong></p>
+        <p><strong><em><span>Some companies&rsquo; top lines will be fine this year but very few will avoid margin pressure due to alternative working practices. Dividends will continue to be cut and share buybacks suspended as balance sheet strength and servicing debt, paying our mandatory coupons, is prioritised. </span></em></strong></p>
+        <p><strong><em><span>Investment grade spreads have retraced a large portion of their widening yet still offer compelling value for the long-term investor. High yield has not proportionately recovered as much of the spread widening as investment grade and we therefore advocate spending more of the funds&rsquo; risk budgets on the high yield opportunity. We remain highly stock and sector selective and are positioned in those sectors that can withstand a prolonged economic malaise.</span></em></strong></p>
+        <p><strong><em><span>&nbsp;</span></em></strong></p>
+        <hr />
+        <p>&nbsp;</p>
+        <p><strong><em><span>Macroeconomics </span></em></strong></p>
+        <p><span>Economic forecasts normally coalesce into a narrow range but the Covid-19 crisis creates enormous uncertainty and correspondingly lower confidence in any forecasts. Our aim on the macroeconomic front is to have a reasonable foundation on which to project the next couple of years, as well as understanding the upside and downside risks.</span></p>
+        <p><span>Although none of the team trained as an epidemiologist, there are some clear statistical conclusions about Covid-19. To start with, the virus has impacted emerging markets far less than developed nations. The highest proportional human cost has been seen in the Northern Hemisphere in countries with megacities, and the elderly in the population have proved exponentially more vulnerable. </span></p>
+        <p><span>Overall, though, at the time of writing, the moving average of global fatalities has significantly fallen and lockdowns are being eased. This will not be a smooth process as any small flare ups, let alone a second wave, would see restrictions quickly re-imposed.&nbsp; The key is keeping the R rate (reproduction rate) less than one.&nbsp; </span></p>
+        <p><span>The easiest route out of lockdown is to create herd immunity; the best and most humane way of achieving this is of course through a vaccine and there are over 100 development programs across the pharmaceutical industry. A few companies are talking quite bullishly about having a vaccine ready by the end of 2020: Johnson &amp; Johnson, the Glaxo/Sanofi and Astra/Oxford University joint ventures, and Pfizer appear to have made the most progress although biotech Moderna&rsquo;s effective but small first human trial might steal a march on the majors.</span></p>
+        <p><span>In its recent quarterly report, the Bank of England suggested the UK economy could contract by 14% in 2020 before growing by 15% in 2021; note that this rebound would still leave the economy smaller in real terms at the end of 2021 than it was at the end of 2019. This does not include the risk of a hard Brexit occurring while the public&rsquo;s focus is elsewhere.&nbsp; </span></p>
+        <p><span>On a much broader level, Deutsche Bank analysts have looked at the gap between their baseline forecasts and their pre-virus projections for the end of 2021: most large countries end up with a 4-8% shortfall with the aggregate global figure in the 6-7% range. Under a more protracted lockdown scenario, the numbers jump to 8-14% shortfalls for the majors and a global figure in the 10-11% range.</span></p>
+        <p><span>Forecasts show real global GDP in 2020 falling by 4.5-5%. With Covid-19 having had the aforementioned larger impact on developed nations with elderly populations, it is no surprise to see their economies taking a bigger hit. Developed markets are expected to shrink in aggregate by 6.5-7% in 2020, whereas the collective figures for emerging markets are in the vicinity of a 1-1.5% contraction.</span></p>
+        <p><span>Although societies and economies in emerging markets have generally not been as badly hit, they do not have the privilege of a hard currency. Those developed nations with such a currency seem hell-bent on eroding that status through printing money (QE), but for emerging markets this would rapidly lead to capital flight. There will be many more requests for aid to the IMF, and, for example, Moody&rsquo;s predicts a record default rate by count as opposed to value. Obviously, economies based on tourism will have seen activity collapse and for any daydreamers out there, a couple of Maldivian islands have come up for sale.</span></p>
+        <p><span>Examining Chinese data, the economy appears to be returning sustainably to decent activity levels, albeit lower than before. Exports were hit, for obvious reasons, just as the domestic recovery was gaining traction. We anticipate China continuing to lead the recovery in what will be a very geographically uneven distribution.&nbsp; </span></p>
+        <p><span>On the subject of China, we should not forget 2020 is a US presidential election year. Joe Biden has recently accused Trump of being soft on China, then subsequently dialled back the language somewhat. Trump needs little provocation to increase his America First rhetoric and a further trade war between the US and China is a risk that cannot be ruled out. The saving grace is that Trump knows the old electoral mantra &ldquo;it&rsquo;s the economy, stupid&rdquo; so might not want to derail any recovery this side of November.</span></p>
+        <p><span>We have previously highlighted the extraordinary policy response to the crisis: see, for example, an initial assessment of policies on 13 March <a href="~/link.aspx?_id=385B7960410C4B7885AC106187F19A39&amp;_z=z"><span style="color: #34b233;">here</span></a>, </span><span>or an article tallying up the policies on 23 April <a href="~/link.aspx?_id=913C0BB9995044078DF47EC0109F1F55&amp;_z=z"><span style="color: #34b233;">here</span></a>.</span></p>
+        <p><span>As time has progressed, central banks have moved from making shock and awe policy pronouncements to actual implementation, with year-on-year central bank balance sheet growth of over $4.5 trillion. The US Federal Reserve is clearly the biggest driver of this as shown in this chart.</span></p>
+        <p><span>&nbsp;</span></p>
+        <p style="text-align: center;"><img src="-/media/E19C8B1137FE4C9FB50EA9E05EE954AC.ashx?h=335&amp;w=599" style="width:599px; height:335px;" alt="Fed balance sheet assets" class="custom-image-height-auto" /></p>
+        <p>&nbsp;<span style="font-size: 1.5rem;">&nbsp;</span></p>
+        <p><span>We maintain our premise that the current exceptional monetary policy is primarily about addressing the supply side of the equation, with fiscal policy doing the heavy lifting on the demand side of the ledger. The lines are increasingly blurring, though, as central banks are effectively financing fiscal deficits.&nbsp; </span></p>
+        <p><span>A ballpark figure for 2020 for most developed market countries is a fiscal deficit of 15%. The pre-crisis starting point is leading to some variation, with Germany&rsquo;s original surplus likely to end nearer a 10% deficit and the US, originally destined for 5%, now likely to comfortably exceed 20%.&nbsp; </span></p>
+        <p><span>For most developed market countries, higher government debt is a proverbial can that is very easy to kick down the road. One area of stress is Italian government debt, where the already high debt to GDP ratio makes bond markets far less accommodating of issuance.&nbsp; </span></p>
+        <p><span>This stress had been alleviated by the European Central Bank (ECB), but the recent ruling by the German Constitutional Court (GCC) against the PSPP bond buying program, let alone the new PEPP one, has the potential to cause some serious ructions. Our central case is that the ECB will draft a suitable policy reply within the three-month deadline, but this tail risk should certainly not be ignored.&nbsp; </span></p>
+        <p><span>The GCC is right to be concerned about &ldquo;debt mutualisation by proxy&rdquo; but in times of crisis the solution to problems within the eurozone does tend to be &ldquo;more Europe&rdquo;. In this regard, Macron and Merkel have proposed a &euro;500 billion EU recovery fund. Unanimous agreement is needed between the EU27 members so the political horse-trading will take a while to resolve but having the Franco-German axis behind the idea does significantly increase the probability of some form of meaningful recovery fund occurring.&nbsp; </span></p>
+        <p><span>The self-proclaimed frugal EU members in the north should look at rising imbalances again in the Target 2 flows, and the risk of another bout of existential threat to the eurozone before objecting too strongly to some fiscal transfers; after all, many of them have been the beneficiaries of the euro being weaker than their standalone currencies would have been.</span></p>
+        <p><span>Expansion in business lending does provide evidence that money is flowing to where it is needed. Sadly, there will be some businesses that do miss out on liquidity facilities, bankruptcies will increase, and this crisis will create economic scars.&nbsp; </span></p>
+        <p><span>One certainly should not expect the current US capacity utilisation number of 64.9% to last for long; hopefully it will recover mainly through an increase in the numerator. The extent of permanent capacity destruction is one of the key factors that will determine the speed of the rebound in activity. In this regard, of the cumulative 30 million jobs lost in the US, 78% of them are viewed as being temporary layoffs. As employment begins to rebound, consumer spending power will surge and there is also pent-up demand: for those fortunate enough to keep their jobs, the household balance sheet in aggregate is looking pretty healthy.</span></p>
+        <p><span>&nbsp;</span></p>
+        <p style="text-align: center;"><img src="-/media/BC403072A68442B7939891AE6066C085.ashx?h=335&amp;w=599" style="width:599px; height:335px;" alt="US Personal Savings Rate" class="custom-image-height-auto" /></p>
+        <p>&nbsp;</p>
+        <p><span>The unwind of this high savings rate will create a large demand impulse once confidence rises enough to catalyse spending. Consumption remains the backbone of the US economy, representing just under 70% of GDP. The fall in consumption in March was the dominant driver of the 4.8% contraction in the US in Q1; clearly there will be a lot worse to come in the Q2 figures.</span></p>
+        <p><span>Employment is a large driver of consumption and, as alluded to above, late May should see the peak in US unemployment as the flows of job losses are overtaken by those who were on temporary layoffs returning to the workforce. This next chart shows the end of April employment figures.</span></p>
+        <p><span>&nbsp;</span></p>
+        <p style="text-align: center;"><span><img src="-/media/97B17130B31B48618D37336D93DB705E.ashx?h=335&amp;w=599" style="width:599px; height:335px;" alt="US unemployment and wage inflation" class="custom-image-height-auto" /></span></p>
+        <p>&nbsp;</p>
+        <p><span>While the 20 million fall in non-farm payrolls garnered all the attention of the financial press, we believe the 8% increase in hourly wage inflation is also headline-worthy. Some of this is due to the fact that the lower paid suffered a disproportionately high number of job losses, but there have also been some wage increases for those still employed and adjusting their work patterns to account for Covid-19 risks. For the foreseeable future, companies spending more on safety precautions is a cost of doing business that will eat into margins.</span></p>
+        <p><span>Annual inflation is falling but still positive; obviously, the month-on-month changes during lockdown will be negative. We do caution about reading too much into them given static measurement baskets that did not reflect the rapid temporary change to consumption, and challenges in the collection of data.&nbsp; </span></p>
+        <p><span>Global CPI for 2020 is estimated by JP Morgan to be 0.9%. The crisis is clearly disinflationary in the short term due to the collapse in demand, but this is more than reflected in market prices, with 10-year US inflation breakevens trading below 1.2%. Policymakers are likely to want to run economies &ldquo;hot&rdquo; in the medium to long term in order to catch up on lost nominal GDP and reduce unemployment as quickly as possible. Having some cheap inflation protection in funds is a prudent approach as we enter the recovery phase of the economic crisis.</span></p>
+        <p><span>We felt duty bound to examine the ramifications of the oscillations in the oil market. Demand destruction looks to have peaked in April at 22.8mbd, and forecasts have this fading by the end of 2020 to 4.1mbd. While a higher oil price can be good for financial market sentiment, we note a low price naturally adds a boost to consumption and add this tailwind to our list of reasons to be cheerful.</span></p>
+        <p><span>&nbsp;</span></p>
+        <p><strong><em><span>Rates</span></em></strong></p>
+        <p><span>Rates markets are very expensive and rigged to ensure that investors lose real spending power in a classic case of financial repression. With an enormous amount of supply to absorb, and the associated fractured government finances, yields should be much higher, but central banks simply will not allow this. We retain a low beta rates approach with duration in the 2.5-3 years range in our strategic bond funds compared to a neutral level of 4.5 years.</span></p>
+        <p><span>It appears most developed market monetary authorities desire an upward-sloping yield curve with the 10-year tenor 25-50 basis points above base rates. If 10-year yields go higher than 50 basis points above base rates then yield curve targeting, either directly or via rhetoric, increases. Curve steepening of the long end has manifestly occurred, although whether central banks let these longer tenors languish as the proverbial bond vigilantes extract additional yield for fiscal profligacy remains to be seen.&nbsp; </span></p>
+        <p><span>We have had a strong preference for the belly of the curve. After the steepening, we have instigated an initial switch into 30-year US Treasuries but retain a risk budget to be able to do a lot more; in bond parlance, we have reduced the size of our long end steepening position.</span></p>
+        <p><span>Cross market, we retain our strong preference for the major developed markets which have room to rally against those that are at completely rock bottom or even with negative yields. This is predominately manifested in a long-standing strategic preference for US duration over European market exposure.&nbsp; </span></p>
+        <p><span>Overbought indicators are flashing red on both Norway and New Zealand and we have already taken all of our substantial profits on both. Long France versus Germany is a low beta way of gaining exposure to European cohesion as well as being carry positive, while the relative value between Canada and the US continues to offer tactical opportunities.</span></p>
+        <p><span>&nbsp;</span></p>
+        <p><strong><em><span>Spread product</span></em></strong></p>
+        <p><span>Historic credit metrics have been blown out of the water by the Covid-19 pandemic but we do find it reassuring that balance sheets were actually slightly improving before the crisis started. The last few quarters had seen US investment grade gross leverage fall to below 3x, with the net debt/EBITDA figure nearer 2x.&nbsp; Aggregate US high yield debt ratios had also been gradually reducing, with gross leverage of 5x and the net figure of 4.5x. With interest rates being so low, interest coverage is clearly not an issue.</span></p>
+        <p><span>Ratings agencies, not normally known for being brisk, have undertaken a rapid series of downgrades: the rolling three-month downgrade to upgrade ratio is 22:1. Year-to-date, there has been over $200 billion worth of fallen angels, investment grade companies seeing their ratings fall into high yield territory.&nbsp; </span></p>
+        <p><span>Four companies dominate this $200 billion figure: Ford, Occidental Petroleum, Kraft Heinz and Pemex. We treat every fallen angel on a case-by-case basis and see ratings migration as an opportunity to potentially buy cheap credit. Funds with a strict investment grade mandate might take a differing view when they are forced sellers of bonds.&nbsp; </span></p>
+        <p><span>The key is whether the company will rebound. Most large companies that are junked retain various avenues to access liquidity; in the longer term, though, this does not guarantee solvency as business models could have been severely disrupted. With at least the same again in the number of fallen angels likely over the next 12 months, we will be able to have our pick of the crop of those companies that have a sustainable business model and will remain solvent.</span></p>
+        <p><span>Some companies&rsquo; top lines will be fine this year but very few will avoid margin pressure due to alternative working practices. Authorities care about keeping economic infrastructure and capacity alive but not about companies&rsquo; P&amp;L numbers for 2020, and we remain concerned with how much of a rebound is already priced into equity markets. Dividends will continue to be cut and share buybacks suspended as balance sheet strength and servicing debt, paying our mandatory coupons, is prioritised.&nbsp; </span></p>
+        <p><span>Investment grade spreads have retraced a large portion of their widening yet still offer compelling value for the long-term investor. It is clear from this chart just how oversold the US market was and why this was our choice of investment grade market to add exposure.</span></p>
+        <p>&nbsp;</p>
+        <p style="text-align: center;"><img src="-/media/E00A1B91E4A7461883E8759E63FB4C1D.ashx?h=335&amp;w=599" style="width:599px; height:335px;" alt="Investment Grade Spreads" class="custom-image-height-auto" /> </p>
+        <p><span><br />
+        As aggregate level spreads have now converged between the US and Europe, we are very happy to take advantage of relative value opportunities in either currency, obviously while hedging the foreign exchange risk.&nbsp; We remain highly stock and sector selective and are positioned in those sectors that can withstand a prolonged economic malaise. We fastidiously continue to avoid airlines, airports, retail, leisure, reinsurance and bonds with significant coupon risk.&nbsp; </span></p>
+        <p><span>On the CDS index front, the +/- 10 basis point range between the US investment grade index (CDX IG) and the European one (iTraxx Europe, also known as Main) continues to hold for the majority of the time, and any breach of these levels offers an allocation alpha opportunity.</span></p>
+        <p><span>&nbsp;</span></p>
+        <p style="text-align: center;"><img src="-/media/240B988782DD4D60A44684ADB3AE49EB.ashx?h=335&amp;w=599" style="width:599px; height:335px;" alt="Global high yield spreads last 5 years" class="custom-image-height-auto" /></p>
+        <p><span><br />
+        High yield has not proportionately recovered as much of the spread widening as investment grade. The chart above shows our preferred measure of high yield value, an index that excludes CCC-rated credit and the energy sector, thereby giving a truer reflection of a core high yield investment universe. </span></p>
+        <p><span>We advocate spending more of the funds&rsquo; risk budgets on the high yield opportunity although we must reiterate this is not predicated on a rapid recovery. The nature of the companies in which we are investing means they will be long-term survivors; we are not chasing risk in those sectors most exposed to the crisis (for more detail see <a href="~/link.aspx?_id=70A56C89932A491DAD1FEA7DA8D0A768&amp;_z=z"><span style="color: #34b233;">here</span></a>).</span></p>
+        <p><span>Most forecasts for defaults over the next 12 months are in the 8-11% range with the US faring worse than Europe due to a higher exposure to the energy sector. Often, the difference between lower and higher forecasts can be explained by the treatment of distressed exchanges in the calculation. Moody&rsquo;s global speculative grade default forecast is at the top of the range at 11%, again a swifter reaction than in previous cycles.&nbsp; </span></p>
+        <p><span>Companies were also quick to react, with 19 bankruptcies in the speculative grade markets in April. This was a record high count, but with $24 billion bonds and $12 billion leveraged loans impacted it did not make the top five months ever by value. Defaults have historically always been a lagging indicator, with spreads widening long before the peak and distressed bonds often transitioning into the hands of a different investor base before the actual defaults occur.<br />
+        </span></p>
+        <p>&nbsp;</p>
+        <p style="text-align: center;"><span><img src="-/media/AF864A1C81224D6584BA291353394E68.ashx?h=419&amp;w=600" style="width:600px; height:419px;" alt="Spread implied default rates" class="custom-image-height-auto" /></span></p>
+        <p style="text-align: left;"><span style="color: black;">Source: Deutsche Bank</span></p>
+        <p><span>&nbsp;</span></p>
+        <p><span>As can be seen from the Deutsche Bank data in the table above, a lot is already priced into the markets. In US high yield, even if there were to be zero recovery value for bondholders in every default, one would breakeven with a 31.9% default rate over the next five years.</span></p>
+        <p><span>As previously mentioned, by count as opposed to value, Moody&rsquo;s anticipates more emerging markets defaults over the next year than occurred in 2008. The sovereign emerging markets universe has evolved to become far more idiosyncratic rather than systemic, but we continue to prefer the risk/reward in high yield. The US high yield market spread relationship (beta adjusted) suggests there is not a compelling valuation reason for owning emerging markets sovereigns rather than developed market credit.</span></p>
+        <p><span>Technicals were one of the biggest drivers of credit markets during the crisis. Outflows, including a record $109 billion in one week, created forced selling into an already skittish market. Liquid credit, particularly those bonds that appear in ETFs, sold off more than their illiquid cousins; when the market turned, they also rebounded more rapidly.&nbsp; </span></p>
+        <p><span>The announcement of central bank credit buying by the US Federal Reserve in late March helped to assuage fears and fund flows rapidly reversed. In one of the articles we referenced earlier, we gave context to the $850 billion Fed buying program. You can find this <a href="~/link.aspx?_id=913C0BB9995044078DF47EC0109F1F55&amp;_z=z"><span style="color: #34b233;">here</span></a></span><span>. </span><span></span></p>
+        <p><span>It should be noted the ECB continues with its corporate sector purchase program (CSPP), which seems far less politically contentious than the sovereign one that the GCC challenged. The Bank of England is making steady progress in buying another &pound;10 billion of credit and this amount could easily be expanded during the summer.</span></p>
+        <p><span style="color: black;">2020 will be a record year for investment grade non-financial supply. Gross US supply by early May was already over half a trillion dollars as companies built up a liquidity buffer. There was a window of opportunity in late March and early April when the majority of new issues were offering a substantial premium to secondary trading levels. By late April, most deals were pricing at levels akin to their existing bonds. </span></p>
+        <p><span style="color: black;">We are being very selective about which issues we participate in: generally, they will only be bought if they offer much better value than an existing holding in the funds. </span></p>
+        <p><span style="color: black;">High yield supply is at a lower run rate than the 2017-2019 levels as investors are being more circumspect about which companies they offer capital to. Incidences of senior secured bond issuance, which subordinates existing bondholders in a process often referred to as layering, have also increased as borrowers pledge assets in order to access cash.</span></p>
+        <p><span style="color: black;">Risk and sentiment indicators have also seen a retracement from levels that were indicating heightened market stresses. The VIX implied volatility indicator, shown monthly over the last 20 years, shows just how bad things were in March.</span></p>
+        <p><span style="color: black;">&nbsp;</span></p>
+        <p style="text-align: center;"><img src="-/media/7F8F5F60C4094B3891402E3FA16C6088.ashx?h=335&amp;w=599" style="width:599px; height:335px;" alt="VIX Index last 20 years" class="custom-image-height-auto" /></p>
+        <p><span style="color: black;"><br />
+        More worrisome than market fear is funding fear as this has a direct feedback loop into making a crisis worse.&nbsp; The US LIBOR market spiked but has eased since due to the various liquidity facilities that the Fed put in place.&nbsp; </span></p>
+        <p>&nbsp;</p>
+        <p style="text-align: center;"><img src="-/media/6557FFB4E0CA4AF89D865CCD0732301C.ashx?h=335&amp;w=599" style="width:599px; height:335px;" alt="US 3m Libor OIS spreads" class="custom-image-height-auto" /></p>
+        <p><span style="color: black;"><br />
+        A large part of this was due to the funding fears arising from committed undrawn facilities being rapidly drawn down. Of $2.5 trillion of such commitments, only about a quarter has been drawn, and we expect more companies will continue to choose to access the bond markets for long-term borrowing and keep the banks as a backstop facility.&nbsp; </span></p>
+        <p><span style="color: black;">Examining the Senior Loan Officers survey, banks have tightened lending conditions but it is just a blip compared to previous cycles. Authorities continue to view banks as part of the solution to the crisis, helping to provide liquidity, rather than the problem. But this does not mean that the powers that be won&rsquo;t insist on dividend and share buyback suspensions as higher capital levels boost lending capacity</span><span>.</span></p>
+        <p><span>In the environment where cash was king, the difference between CDS spreads and those on physical bonds became extremely negative.&nbsp; There has been some mean reversion, but we remain below pre-crisis levels at an over 1% negative basis in both European and US high yield. Physical bonds are preferred to CDS indices, and as market liquidity has improved, we will look to take advantage of this disparity, reducing overlays and deploying cash accordingly. </span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt;"><span style="color: #222222;">For a comprehensive list of common financial words and terms, see our glossary&nbsp;</span><span style="color: #34b233;"><a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms" style="color: inherit;"><span style="color: inherit;">here</span></a>.</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><span style="color: #222222;">&nbsp;</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><strong><span style="color: #222222;">Key Risks</span></strong></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><span style="color: #222222;">Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. Investment in Funds managed by the Global Fixed Income team involves foreign currencies and may be subject to fluctuations in value due to movements in exchange rates. The value of fixed income securities will fall if the issuer is unable to repay its debt or has its credit rating reduced. Generally, the higher the perceived credit risk of the issuer, the higher the rate of interest. Bond markets may be subject to reduced liquidity. The Funds may invest in emerging markets/soft currencies and in financial derivative instruments, both of which may have the effect of increasing volatility.</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><span style="color: #222222;"><strong><span style="color: #222222;">Disclaimer</span></strong><br />
+        <br />
+        The information and opinions provided should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</span></p>

@@ -1,0 +1,105 @@
+﻿---
+ID: "a02748d5-5e14-46c6-a36a-ed8163058d83"
+Parent: "12dc7623-ff5d-466e-a998-3de16725c2fe"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2017/09/the-pri-12-years-on"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 91000
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{83468511-6078-4864-83A4-DA72F12B1805}"
+          p:before="*"
+          s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+          s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+          s:par="DatasourceRule"
+          s:ph="/content/side-content" />
+        <r
+          uid="{952ED51E-B0D8-4A9A-B268-691C8B03CACA}"
+          p:after="r[@uid='{83468511-6078-4864-83A4-DA72F12B1805}']"
+          s:ds="{71B20482-B038-49D5-895C-ED6D46D5095F}"
+          s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+          s:par="DatasourceRule"
+          s:ph="/content/side-content" />
+        <r
+          uid="{7D0BD2A2-D7DE-4452-BD3C-E91610FB62FE}"
+          p:after="r[@uid='{952ED51E-B0D8-4A9A-B268-691C8B03CACA}']"
+          s:ds=""
+          s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+          s:par="Title=See%20also&amp;RelatedPages=%7BFA0E822B-9229-47E9-9341-79282A4EE71F%7D%7C%7BEB1B6FD8-B497-4758-B015-4344B0948D8A%7D%7C%7B865EC63D-EF4B-42C1-AA24-219B48A92D69%7D%7C%7BCA289698-DE7A-4C0D-A116-888BD5E12B20%7D&amp;MaximumNoOfLinks=4"
+          s:ph="/content/side-content" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{F1DC2199-DDFF-4CF6-8E71-036735EEFF94}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: The PRI 12 years on | What we think | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: The PRI 12 years on
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: "20170927T131201:636421147212790000"
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: 'We must work to make companies do more to respect human rights; to allow collective bargaining; we must develop ways to reduce inequality, to curtail CEO pay; we must accelerate decarbonisation; rein in the tech giants and ensure we achieve the Sustainable Development goals.'
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: The PRI 12 years on
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p><em>Liontrust&rsquo;s Head of Sustainable Investment Peter Michaelis reflects on what has really changed in the 12 years since the Principles for Responsible Investment were signed in 2005.</em></p>
+        <p><strong>'We must work to make companies do more to respect human rights; to allow collective bargaining; we must develop ways to reduce inequality, to curtail CEO pay; we must accelerate decarbonisation; rein in the tech giants and ensure we achieve the Sustainable Development goals.'</strong></p>
+        <p>It sounds like the running order from the Labour Party conference but is actually the content for the Principles for Responsible Investment meeting in Berlin. The PRI membership of 1700 asset managers and asset owners represents $70trillion of assets in equities, fixed income, private equity and infrastructure. Or more simply half of the world's invested assets.</p>
+        In 2005, on behalf of Aviva Investors, I was a founder signatory of the PRI. Back then it was led by a few sustainable investment managers and a handful of progressive asset owners who understood that long-term investment success depends on having a stable society and supportive environment. Therefore, the PRI thinking went, investors should integrate these aspects into their decision making and encourage companies to improve their own environmental and social performance.<br>
+        <br>
+        We could never have hoped that there would be such rapid uptake of membership of the PRI and that 12 years later, over 900 delegates would appear in Berlin representing the largest asset owners and asset managers on the planet. Nor that the topics for discussion would be so wide-ranging and ambitious.<br>
+        <br>
+        The growth in members and their willingness to embrace the Principles has been amazing. &nbsp;And yet listening to many of the talks, I have to say I felt uneasy. For all the ambitious sentiment and desire to improve the state of our world, how much has changed? It is evident that the conversations between asset owners, managers and companies now include analysis of environmental, social and governance factors, and pressure to disclose performance on these non-financial factors has increased. But do the investment portfolios of these very large asset owners look drastically different today because of the PRI? Have any companies found it harder to access capital because of their poor environmental record or involvement in corruption? I fear that the answer is no, or only very modestly. Or maybe not yet&hellip;<br>
+        <br>
+        Take the oil industry. In the past decade, we have realised that the allowable carbon dioxide emissions budget to keep within 2C of warming is far smaller than previously thought. This should have increased the risk around oil companies and diminished their future returns, and yet there certainly has not yet been a marked shift of that &pound;70tn away from this industry [in spite of the great work from Carbon Tracker]. &nbsp;<br>
+        <br>
+        How we invest today shapes the world of tomorrow. So over the coming years, I hope that the PRI sessions are full of stories of action that builds on the excellent aspirations I heard in Berlin over the past few days. Then the PRI will truly be able to claim it has been a major force of change &ndash; helping investors to enjoy good returns, while preserving our environment and enhancing society.
+        <br>
+        <br>
+        <strong>Disclaimer:<br>
+        </strong><br>
+        &bull; Past performance is not a guide to future performance. &bull; Do remember that the value of an investment and the income from it can fall as well as rise and you may not get back the amount originally invested. &bull; The majority of the Liontrust Sustainable Future Funds have holdings which are denominated in currencies other than Sterling and may be affected by movements in exchange rates. Some of these funds invest in emerging markets which may involve a higher element of risk due to less well regulated markets and political and economic instability. Consequently the value of an investment may rise or fall in line with the exchange rates. Liontrust UK Ethical Fund, Liontrust SF European Growth Fund and Liontrust SF UK Growth Fund invest geographically in a narrow range and has a concentrated portfolio of securities, there is an increased risk of volatility which may result in frequent rises and falls in the Fund&rsquo;s share price. &bull; Liontrust SF Managed Fund, Liontrust SF Corporate Bond Fund, Liontrust SF Cautious Managed Fund, Liontrust SF Defensive Managed Fund and Liontrust Monthly Income Bond Fund invest in bonds and other fixed-interest securities - fluctuations in interest rates are likely to affect the value of these financial instruments. &bull; If long-term interest rates rise, the value of your shares is likely to fall. If you need to access your money quickly it is possible that, in difficult market conditions, it could be hard to sell holdings in corporate bond funds. This is because there is low trading activity in the markets for many of the bonds held by these funds. Mentioned above five funds can also invest in derivatives. Derivatives are used to protect against currencies, credit and interests rates move or for investment purposes. &bull; There is a risk that losses could be made on derivative positions or that the counterparties could fail to complete on transactions.<br>
+        <br>
+        &bull; The information and opinions provided should not be construed as advice for investment in any product or security mentioned. &nbsp;&bull; Always research your own investments and consult with a regulated investment adviser before investing.<br>

@@ -1,0 +1,98 @@
+﻿---
+ID: "4199e511-b9f2-45fe-bde6-bd382d680a62"
+Parent: "12dc7623-ff5d-466e-a998-3de16725c2fe"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2017/09/what-does-the-boes-rate-hint-mean-for-stock-pickers"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 94000
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{37DBCA8B-A065-4CA0-8B28-7E5D17B18A4A}"
+          p:after="r[@uid='{30A0A4C8-974F-4822-9DCB-DE14881E0400}']"
+          s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+          s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+          s:par="DatasourceRule"
+          s:ph="/content/side-content" />
+        <r
+          uid="{40DD7C90-7B37-4439-BC18-BDB0088B8D8F}"
+          p:after="r[@uid='{37DBCA8B-A065-4CA0-8B28-7E5D17B18A4A}']"
+          s:ds="{71B20482-B038-49D5-895C-ED6D46D5095F}"
+          s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+          s:par="DatasourceRule"
+          s:ph="/content/side-content" />
+        <r
+          uid="{E762B6B1-A0FD-4DD9-BB02-788A7B9B712D}"
+          p:after="*[1=2]"
+          s:ds=""
+          s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+          s:par="Title=See%20also...&amp;RelatedPages=%7B6BA81BCB-69B9-4712-AF2F-37889DD5C47C%7D%7C%7BF6FEBDDC-30B3-4375-B9DD-26B665170635%7D%7C%7B8AC2C886-33C4-45BC-B0B9-A9A1A08032D7%7D%7C%7B44FBC176-6761-4C7D-8EF7-175AB98F8DC6%7D&amp;MaximumNoOfLinks=4"
+          s:ph="/content/side-content" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{6E586116-1EA0-4F93-B711-357D06487909}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "What does the BoE’s rate hint mean for stock pickers? | What we think | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: "What does the BoE’s rate hint mean for stock pickers?"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: "20170914T132211:636409921312190000"
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: “…monetary policy could need to be tightened by a somewhat greater extent over the forecast period than current market expectations.” Monetary Policy Committee Decision, 14 September 2017.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: "What does the BoE’s rate hint mean for stock pickers?"
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p><strong><em>“…monetary policy could need to be tightened by a somewhat greater extent over the forecast period than current market expectations.”</em></strong><em> </em>Monetary Policy Committee Decision, 14 September 2017.</p>
+        <p>Since the Bank of England’s (BoE) Monetary Policy Committee released its statement at midday, markets have been rapidly attempting to adjust the aforementioned expectations and reprice assets; sterling appreciated&nbsp;by 1.4% in the afternoon (against the US dollar) while the FTSE All-Share dropped by over 40 points (1.0%).</p>
+        <p>We need to be careful before reading too much into today’s announcement – the BoE has yet to reverse its post-referendum rate cut and Quantitative Easing (QE), expectations of the next US Federal Reserve hike are slipping back to 2018, and the ECB has not announced the taper of its own QE programme. We are therefore still a long way short of being able to declare that monetary policy <em>normalisation</em> is substantially underway on a global basis.</p>
+        <p>However, with the BoE hinting at a rate rise in November (“<em>some withdrawal of monetary stimulus is likely to be appropriate over the coming months in order to return inflation sustainably to target</em>”) and the European Central Bank (ECB) expected to finally announce its taper at its October meeting, we are seeing some incremental signs of a shift or inflexion point.&nbsp;In fact, we think this shift could develop into a regime change – resulting in a more benign environment for stock-pickers.</p>
+        <p>We apply a rigorous bottom-up investment process and our inclination would be to shut out as much macro ‘noise’ as possible, especially when it concerns the actions of central bankers. There is, however, no denying the extent to which the top-down impact of monetary policy has distorted the bottom-up pricing of securities in recent years.&nbsp;</p>
+        <p>The phrase “a rising tide lifts all boats” has been used to describe the inflationary effect of QE and ultra-low interest rates on asset prices in recent years, but it was often actually the case that the least seaworthy boats were lifted the most! In the wake of the global financial crisis, near-zero interest rates and massive money printing programmes effectively bailed out the most troubled companies. This ‘dash for trash’ effect led to bouts of valuation compression which meant that high-quality companies were not afforded the rating premium over poor-quality companies that their superior balance sheets and growth prospects would demand in more ‘normal’ times.</p>
+        <p>Any development which increases the extent to which share prices are connected to company fundamentals should be welcomed, and we are hopeful that the gradual withdrawal of stimulus will lead to a concomitant reduction in its distortionary effect on markets. Financial markets could be on the verge of a regime shift as central bank tapering could trigger a move from narrow dispersion (amongst stocks) to wider dispersion in markets. In this environment the pay-off for active managers is typically higher.</p>
+        <p>Any shift is likely to be a long and gradual process, and the next milestone could be the ECB’s 26 October meeting.</p>
+        <p><strong>Disclaimer:</strong></p>
+        <p> </p>
+        <p>• This content contains information and analysis that is believed to be accurate at the date of publication but is subject to change without notice. Whilst care has been taken in compiling this content, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness. Some parts/sections of this content may been compiled from external sources. Whilst these sources are believed to be reliable, the information has not been independently verified and therefore no representation is made as to its accuracy or completeness. • It should not be copied, faxed, reproduced, divulged or distributed, in whole or in part, without the express written consent of Liontrust. • Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. The issue of units/shares in Liontrust Funds may be subject to an initial charge, which will have an impact on the realisable value of the investment, particularly in the short term. Investments should always be considered as long term. • Any decision to invest should be always based on the final Prospectus and Key Investor Information Documents (KIIDs) and you should take independent legal advice if necessary. These documents contain important information which should be read before investing in any fund and they can be obtained, free of charge, <a href="http://www.liontrust.co.uk/what-we-offer/fund-literature">here</a>.</p>
+        <p>• Investment in Funds managed by the Cashflow Solution team involves foreign currencies and may be subject to fluctuations in value due to movements in exchange rates.&nbsp; The Liontrust European Growth Fund holds a concentrated portfolio which could mean that it will be volatile when compared to its benchmark. The Liontrust Global Income Fund's expenses are charged to capital. This has the effect of increasing dividends while constraining capital appreciation.</p>

@@ -1,0 +1,153 @@
+﻿---
+ID: "d1710514-2583-40ab-958d-2e6022ceb222"
+Parent: "56e548c2-ac9d-4039-95c7-8759fa1181da"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2020/01/10 bond ideas for 2020
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{826E3F31-5F6E-470C-8103-934056E18E6B}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{35552E49-DFE3-4770-B0B2-8C64DDA0C242}"
+              p:after="r[@uid='{826E3F31-5F6E-470C-8103-934056E18E6B}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{528BB599-8A89-4E69-B003-1C91E5D7FB7F}"
+              p:after="r[@uid='{35552E49-DFE3-4770-B0B2-8C64DDA0C242}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See%20also...&amp;RelatedPages=%7B2301B1D6-2812-4921-AC12-6BCF90F3A836%7D%7C%7B4D7B7C2A-D992-47CA-AE5D-F2DEB5704C2E%7D%7C%7B1EC36DCA-A621-4DDD-B8EA-888A3693BF7B%7D%7C%7B77B5C263-DEEE-4A04-AE96-C01C2138DFCD%7D&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: |
+        {5ADAC049-CD3A-4638-B7D9-12A2DB704394}
+        {BD0F07D0-8CC0-41E5-8105-3BA43C9E9DC8}
+        {039DD4F1-8CEE-408B-A206-93ACB8B512D6}
+        {5A4AD063-A365-4A9E-A33C-F53D23FFDD7F}
+        {59739F98-04B1-4BAA-BDC3-C1BD4591A91D}
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: 10 bond ideas for 2020 | What we think | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: 10 bond ideas for 2020
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200113T094844Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "4f9b280f-a22d-4e70-886a-45327e8aa507"
+      Hint: Article_Topics
+      Type: Multilist
+      Value: |
+        {B4A230A9-D251-4E23-9289-53031FA8BA0A}
+        {B8BD3FF8-3E07-416A-8F8B-20B63645F0E3}
+    - ID: "52161005-9691-46cd-af73-e2b5455474c0"
+      Hint: LegacyArticle_Fund
+      Value: "{B0C7AC70-3895-49C4-8F3C-4DF11EFEDC46}"
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "79cc76cc-7503-449b-9809-9808cf6c2d26"
+      Hint: Article_Date
+      Value: 20190204T000000Z
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: Phil Milburn provides 10 investment opportunities in bonds at a time when fixed income markets are expensive and stock selection remains key.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: 10 bond ideas for 2020
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p style="text-align: center;"><strong><span><img src="-/media/CE173665ED714A129FEECD924EB8B85E.ashx" style="height:332px; width:600px;" alt="Biomedical sciences  " class="custom-image-height-auto" /></span></strong></p>
+        <p><strong><span>Bonds have become even more expensive after producing excellent returns in 2019 but there are investment opportunities available. Here I analyse 10 of our favourite bond opportunities in a market where the return disparity between different parts of the credit spectrum continues to widen and stock selection remains key.</span></strong></p>
+        <p><strong><span>1. Danaher &euro;1.35% 18/09/2039 &ndash; capital upside in euro bonds as credit spreads converge to those in the US</span></strong></p>
+        <p><span>Danaher is a conglomerate with strong market positions in diagnostics, life sciences, and environmental and applied solutions. A large portion of its subsidiaries follow the &ldquo;razor and razor blade&rdquo; business model, meaning Danaher makes good profits from selling parts to, and servicing, its installed customer base.</span></p>
+        <p><span>Importantly from a bondholder&rsquo;s perspective, this leads to a highly predictable revenue stream and strong cash flows. Danaher is highly acquisitive and, in 2019, undertook jumbo multi-tranche debt issuance to fund its acquisition of the Biopharma division from GE. Danaher&rsquo;s ability to rapidly deleverage makes it a darling of the US investment grade credit market; a lack of name familiarity means that its euro-denominated bonds have much wider credit spreads. If only half of the gap between the spreads on the US and same tenor European bonds closes, there is still over 5% of capital upside in these bonds.</span></p>
+        <p><strong><span>&nbsp;</span></strong></p>
+        <p><strong><span>2. Aroundtown &pound;3.25% 18/07/2027 &ndash; great assets, sterling bonds particularly cheap</span></strong></p>
+        <p><span>Aroundtown is a German commercial property company that has grown by acquisition to be a major player in the Berlin office market, and other key German centres. Its growth has been funded by both debt and equity, proving financial discipline and commitment to its strong credit rating. </span></p>
+        <p><span>An impending merger with TLG Immobilien improves both scale and diversity, lessening the risks for creditors. The sterling-denominated bond we own is senior in Aroundtown&rsquo;s capital structure and is significantly cheaper than its bonds in euros.</span></p>
+        <p><span>&nbsp;</span></p>
+        <p><strong><span>3. Royal Bank of Scotland NV $7.125% 15/10/2093 &ndash; special situation in legacy capital </span></strong></p>
+        <p><span>RBS has been going through over a decade of well-deserved penance post its ill-fated acquisition spree. The epitome of M&amp;A folly was the 2007 ABN Amro acquisition and while most of the largesse has now been unwound, RBS retains a legal entity RBS NV. </span></p>
+        <p><span>We anticipate RBS NV will not be entirely disbanded due to the need for a continental European presence post Brexit but after myriad disposals, including a stake in the Saudi Arabian bank Alawwal, the entity now has significant excess capital. Furthermore, the bonds outstanding are no longer efficient capital and are expensive for RBS to service. We expect RBS to undertake a liability management exercise in 2020 to remove this legacy capital instrument and until such a capital upside event occurs, the bonds are generating decent carry.<br />
+        </span></p>
+        <p>&nbsp;</p>
+        <p><span style="font-size: 1.5rem;"></span></p>
+        <p><strong><span>4. BATS $6.15% 15/09/2043 &ndash; unloved, but improving credit with cheap bonds</span></strong></p>
+        <p><span>BATS is currently deleveraging its balance sheet post the 2017 acquisition of Reynolds American Inc and striving towards a return to a high BBB credit rating. Clearly the tobacco industry is not without its risks, with a core product exhibiting volume shrinkage over time, but for BATS a reasonable proportion of this is mitigated by next- generation heat-not-burn products. There is a growing focus by the US authorities, the FDA, on vaping; fortunately, menthol tobacco seems to be exempt as this is where BATS is most exposed. With a credit spread of approximately 250 basis points, these bonds represent great value and more than compensate investors for the risks mentioned. </span></p>
+        <p><span>We embed the consideration of ESG (environmental, social and governance) factors within our credit analysis. The ESG analysis does not exclude investment in tobacco companies but it does mean we need to be very cognisant of the risks involved.</span></p>
+        <p><span>&nbsp;</span></p>
+        <p><strong><span>5.&nbsp;</span></strong><strong style="font-size: 1.5rem;">Eli Lilly &euro;1.7% 01/11/2049 &ndash; the credit spread on these bonds offers great absolute and relative value</strong></p>
+        <p><span>Eli Lilly is a high-quality pharmaceutical company with a focus on diabetes treatment and growing exposure to oncology and pain management. In 2019, Eli Lilly tweaked its portfolio, acquiring Loxo Oncology for $8bn and divesting Elanco Animal Health to leave the company as a pure play pharmaceutical. </span></p>
+        <p><span>Its organic development pipeline looks excellent and there is only one significant patent expiry before 2025. The euro-denominated bonds trade with credit spreads significantly wider than the host US dollar market and represent fantastic absolute and relative value. We own the 30-year tenor, which is a less-developed part of the euro credit market compared to dollars and sterling. We like the credit spread but not the interest rate risk, so have removed the duration contribution from the bonds using futures.</span></p>
+        <p><span>&nbsp;</span></p>
+        <p><strong><span>6. HSBC $FRN 11/03/2025 &ndash; cheap short-dated senior bond in high-quality bank</span></strong></p>
+        <p><span>The Hongkong and Shanghai Banking Corporation remains a very high-quality bank with a strong funding base and high capital ratios. The US dollar floating rate debt has wider credit spreads than its conventional fixed coupon bond cousins; this five-year FRN still has a spread of around 100 basis points. </span></p>
+        <p><span>One also gets a small yield boost from the extra US LIBOR spread over base rates; even if US LIBOR is retired before the bond matures, it is market convention for this yield boon to be captured in the credit spread when the bond switches to using a different reference rate such as the SOFR (secured overnight funding rate). This holding provides a reasonable yield for senior debt in a high-quality name but should there be significant market-related volatility, we would look to switch this into a riskier holding further down HSBC&rsquo;s bond capital structure.</span></p>
+        <p><span>&nbsp;</span></p>
+        <p><strong><span>7. AMP $4.0% 14/09/2021 &ndash; decent yield for defensive carry</span></strong></p>
+        <p><span>AMP is an Antipodean financial services company and the largest part of its business is investment management. In 2018, AMP got into regulatory trouble for misconduct, charging clients for financial advice that was not received. Management was promptly changed and governance has been improved. The short-dated bonds in US dollars remain cheap due to a relatively low level of name familiarity with AMP in the North American investment community. This is not a stock pick to make you rich, but a little over 2.75% yield for senior debt with less than two years to maturity represents great defensive carry for the funds.</span></p>
+        <p><span>&nbsp;</span></p>
+        <p><strong><span>8. Transdigm $5.5% 15/11/2027 &ndash; under-rated core high yield holding</span></strong></p>
+        <p><span>Transdigm is one of the highest-quality businesses in the global high yield market. It is an aircraft component manufacturer with a high proportion of sales and profits based on aftermarket service, which reduces cyclicality. Such is the degree of Transdigm&rsquo;s entrenchment with customers that proprietary products represent 90% of sales and &nbsp;around 80% where Transdigm is the sole provider. </span></p>
+        <p><span>It generates huge profits and lots of cash. The catch from a credit perspective is that the company is very aggressive with its use of debt. However, it can afford its capital structure, making it highly sustainable. Therefore, we believe the single B credit rating given to this company overstates the credit risk and provides us with an attractive long-term high yield bond investment.</span></p>
+        <p><span>&nbsp;</span></p>
+        <p><strong><span>9. Netflix &euro;3.625% 15/05/2027 &ndash; and chill</span></strong></p>
+        <p><span>We are fans of Netflix as a credit because of its non-advertising based (and therefore non-cyclical) revenue model, sticky and growing customer base and early mover advantage in streaming entertainment. Critics (we get more challenge on owning Netflix than any other company) point to the resources of its competitors and the persistent cash flow deficit the company has after it has paid for its huge content development bill. </span></p>
+        <p><span>We believe there is flexibility in a pinch to reduce this bill without drastically changing the customer offering. We view Netflix as moving towards a cash flow surplus in the coming few years and on a trajectory towards an investment grade rating. Disney and Apple working harder to compete in streaming may inhibit Netflix somewhat in steadily increasing its subscription prices, but we think the biggest victim will be traditional linear television. Meanwhile, the Netflix euro bonds are cheap compared to its US dollar bonds and, within its BB category, offers &nbsp;around 0.75% more yield than comparable bonds.</span></p>
+        <p><span>&nbsp;</span></p>
+        <p><strong><span>10. Allfunds &euro;4.125% 15/08/2024 &ndash; a long-term high yield favourite of ours</span></strong></p>
+        <p><span>Allfunds runs one of the world&rsquo;s largest open architecture fund distribution platforms. As a large financial institution, it is regulated like a bank, which from a creditor&rsquo;s perspective is a good thing in the post financial crisis era. Having owned this bond since we launched our funds, we believe it offers good value: to some extent the market believed it to be bank-like, which tends to command a slightly higher yield premium. We expect this bond to be refinanced when it becomes callable in 2020 and, assuming the new bond is offered at a reasonable yield, we will buy it to extend exposure to this issuer. In the meantime, the bond is paying a nice, steady carry for what is a very high-quality business. </span></p>
+        <p><span>The eagle-eyed reader might also have noticed this is the only company on this list that does not have a listed equity. We maintain our alliterative preference for large, liquid, listed businesses; there are myriad opportunities available in such a bond universe, so we have no need nor desire to invest in opaque unlisted companies and illiquid bonds.</span></p>
+        <p><span>For a comprehensive list of common financial words and terms, see our glossary&nbsp;</span><span style="color: #34b233;"><a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms"><span>here</span></a>.</span></p>
+        <p style="background: white;"><span style="color: #222222;">&nbsp;</span></p>
+        <p style="background: white;"><strong><span style="color: #222222;">Key Risks</span></strong></p>
+        <p style="background: white;"><span style="color: #222222;">Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. Investment in Funds managed by the Global Fixed Income team involves foreign currencies and may be subject to fluctuations in value due to movements in exchange rates. The value of fixed income securities will fall if the issuer is unable to repay its debt or has its credit rating reduced. Generally, the higher the perceived credit risk of the issuer, the higher the rate of interest. Bond markets may be subject to reduced liquidity. The Funds may invest in emerging markets/soft currencies and in financial derivative instruments, both of which may have the effect of increasing volatility.</span></p>
+        <p style="background: white;"><span style="color: #222222;"><br />
+        <strong><span>Disclaimer</span></strong><br />
+        <br />
+        The information and opinions provided should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</span></p>

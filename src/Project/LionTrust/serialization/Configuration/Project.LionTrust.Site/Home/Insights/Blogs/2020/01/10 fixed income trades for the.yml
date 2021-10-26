@@ -1,0 +1,189 @@
+﻿---
+ID: "1dd31410-ba01-4ef5-a552-b712f21f863d"
+Parent: "56e548c2-ac9d-4039-95c7-8759fa1181da"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2020/01/10 fixed income trades for the New Year
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{64AE00A1-5B67-46C3-A0B3-AC6614BC38DA}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{16CC0036-AD9F-4AD1-A1EF-CCF5F5CCC9CD}"
+              p:after="r[@uid='{64AE00A1-5B67-46C3-A0B3-AC6614BC38DA}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{C09B5205-0CB5-40F3-AB2F-CB5278B96C9F}"
+              p:after="r[@uid='{16CC0036-AD9F-4AD1-A1EF-CCF5F5CCC9CD}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See%20also...&amp;RelatedPages=%7B2301B1D6-2812-4921-AC12-6BCF90F3A836%7D%7C%7B4D7B7C2A-D992-47CA-AE5D-F2DEB5704C2E%7D%7C%7B7AAA89F2-3BCF-4DFC-B2F6-C05A7A8E2DDE%7D%7C%7BCDE2DD29-4FE7-49A3-841E-366AD0DF018F%7D&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{DBAE5B17-522C-480D-926B-55EA6C1873D3}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: 10 fixed income trades for the New Year | What we think | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: 10 fixed income trades for the New Year
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200107T094733Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: "Bond markets delivered strong returns last year against many people’s expectations. What does this mean for finding investment opportunities in 2020? David Roberts offers 10 potential ideas among high-quality sovereign debt. "
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: 10 fixed income trades for the New Year
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p style="background: white;"><strong><span style="color: #212121;">Bond markets surprised many by producing excellent returns in 2019. For those looking to add bond risk, however, this means there is less long-term value than there was a year ago.&nbsp;In response to falling equity markets, the US Federal Reserve performed a volte-face and cut rates three times in 2019. Fortunately, however, bond markets continue to offer opportunities for those prepared to look beyond the risk and cost of directional bets. Here is a selection of 10 possible investment ideas in 2020 when only looking at high-quality sovereign debt.</span></strong></p>
+        <p style="background: white;"><strong style="font-size: 1.5rem;">1. Save money and sleepless nights: avoid too much market direction.</strong></p>
+        <p><span style="font-size: 1.5rem;">Bond investors have done incredibly well in recent years. Despite a more challenging 2018 for total returns, prices moved upwards again during 2019 as the Federal Reserve went on a rate-cutting offensive, which was largely designed to offset President Trump’s growth-destroying tariff wars.</span></p>
+        <p><span style="font-size: 1.5rem;">I am using the UK Gilt market as a proxy for global bonds and it makes my point well: 25 years ago, investors in 10-year UK government bonds were paid about 8% a year for their risk; today, they are paid 0.7% (as at 30.11.19). Inflation in the UK was just over 4% in 1995, today it is close to 2%. Therefore, the real return for directional investors is negative, unless we see further capital gains. This is not impossible, of course, but is increasingly unlikely given how high starting prices are.</span></p>
+        <p style="text-align: center;"><span style="font-size: 1.5rem;"><img src="-/media/BE90F6D4D80A4279B7902900479A8BB5.ashx?h=335&amp;w=601" style="width:601px; height:335px;" alt="25 year history of 10-year gilt yields" class="custom-image-height-auto" /></span></p>
+        <p><span style="font-size: 1.5rem;">Source: </span><span style="font-size: 1.5rem;"></span><span style="font-size: 1.5rem;">Bloomberg, 31.03.95 to 04.12.19</span></p>
+        <p><span style="font-size: 1.5rem;">Therefore, directional bond funds will have big headwinds – price and risk – to contend with in 2020. Perhaps concentrating on less directional, arguably less expensive cross market themes may be a way to make money and avoid sleepless nights?</span></p>
+        <p><span>&nbsp;</span></p>
+        <p><strong><span>2. Donald, don’t fight the Fed: the US central bank is under pressure to cut rates. Relative to all other G7 markets, US bonds remain cheap. </span></strong></p>
+        <p><span style="font-size: 1.5rem;">A year ago, everyone thought buying German bonds and selling US Treasuries could make them money. German bonds, when swapped to dollars, gave a big yield. However, this strategy failed to realise US bonds were very cheap compared with German ones and the Federal Reserve could cut rates.</span></p>
+        <p style="text-align: center;"><img src="-/media/767500DBBA82430AAD03E1A6A2FBA0A1.ashx?h=335&amp;w=601" style="width:601px; height:335px;" alt="US bonds were cheap compared with German ones" class="custom-image-height-auto" /></p>
+        <p><span>Source: Bloomberg, 31.12.90 to 04.12.19</span></p>
+        <p><span style="font-size: 1.5rem;">US bonds were unloved, so their yield had already increased to 2.6% above German equivalents when people started proposing the trade, which is off the charts unless you go back to the 1980s. It may take some time, but these things do tend to reverse. And so it has happened: over the following 12 months, in a general bull market, the yield on US bonds fell 0.5% relative to Bunds, giving a relative capital gain of around 5%.</span></p>
+        <p><span style="font-size: 1.5rem;">I doubt this will go all the way back to long-run mean levels in 2020. That would see a further compression of 1.5% in yields (or put it another way, US bonds returning an extra 15% more than German ones).</span></p>
+        <p><span>&nbsp;</span></p>
+        <p><strong><span>3. Oil buy some of those: volatility creates opportunities</span></strong></p>
+        <p><span style="font-size: 1.5rem;">Even closer to home, there are great opportunities to exploit markets. Everyone seems intent to rush around peering into the darkest of corners to find some way to make money – generally in an illiquid, poorly researched corner of the globe. Frequently, this leaves easy opportunities for those of us who stay behind.</span></p>
+        <p><span style="font-size: 1.5rem;">The following chart looks at the relationship between five-year Norwegian and German bonds. These are two of the best-rated economies in the world: the “safest” instruments money can buy. Yet, the trading relationship even over just one year has been highly volatile. I’ll not go in to too much detail, suffice to say the oil price, the trade wars and a bit of bond investor misunderstanding of central banks have all been responsible for this.</span></p>
+        <p style="text-align: center;"><img src="-/media/53A0B6705FA648B99BE3F0F7DFA39ACF.ashx?h=340&amp;w=601" style="width:601px; height:340px;" alt="Volatility in AAA rated assets" class="custom-image-height-auto" /></p>
+        <p><span>Source: Bloomberg, 04.12.18 to 04.12.19</span></p>
+        <p><span style="font-size: 1.5rem;">We are told this is a low volatility world: rubbish. There is plenty of volatility to take advantage of if you take the time to look. It isn’t particularly difficult, it just takes a little work.</span></p>
+        <p><span style="font-size: 1.5rem;">For those interested, the following shows examples of headlines and the reaction to them:<br />
+        </span></p>
+        <ul><li>Q1 – “The Norwegian Central Bank must raise rates”, so bonds sold off.</li>
+            <li>Q2 – “Norway will never issue bonds again”, so bonds&nbsp;surged higher&nbsp;until that fallacy was dispelled.</li>
+            <li>Q3 – “The central bank won’t raise rates ever again” and we came charging all the way back in.<br />
+            </li>
+        </ul>
+        <p><span style="font-size: 1.5rem;"></span></p>
+        <p><span>Know the value, know the fundamentals and oppose “headline” stupidity.</span></p>
+        <p><span>&nbsp;</span></p>
+        <p><strong><span>4. Mean reversion: German v Swiss bonds </span></strong></p>
+        <p><span style="font-size: 1.5rem;">Germany really is the gift that keeps on giving. People have said we hate Bunds because we can get ‘carry positive’ trades shorting them against all other bonds. This is true to a point, but not entirely.</span></p>
+        <p><span style="font-size: 1.5rem;">And so to Switzerland. There was a time when people loved Swiss bonds so much they would lend there for 2% less than in Germany. Not so today.</span></p>
+        <p style="text-align: center;"><img src="-/media/56983432162B493FAF2F9091AC60992C.ashx?h=335&amp;w=601" style="width:601px; height:335px;" alt="Swiss bonds - almost zero premium to German bonds" class="custom-image-height-auto" /></p>
+        <p><span>Source: Bloomberg, 31.03.94 to 04.12.19</span></p>
+        <p><span style="font-size: 1.5rem;">This is a strange one. The Swiss economy ticks along, some would say like the proverbial Swiss watch. Germany, on the other hand, has implicitly accepted the burden of less financially sound euro partners, and while it fights to maintain budget integrity, the pressure to loosen the purse strings has clearly increased. Will Mrs Merkle spend $100 billion on “greening” the country?</span></p>
+        <p><span style="font-size: 1.5rem;">Therefore, it is peculiar indeed that at a time when each country has a negative interest rate policy, the spread between the two has collapsed.</span></p>
+        <p><span style="font-size: 1.5rem;">Anyway, no big deal. The simple point is this: you can lend to Switzerland today and receive almost the same income as you do lending to Germany. And this has simply not been the case before. Buy Swiss bonds, sell German ones and if for any reason this pattern reverses, you’ll be okay.<br />
+        <br />
+        </span></p>
+        <p><strong style="font-size: 1.5rem;"></strong></p>
+        <p><strong><span>5. Compare apples with . . .Kiwi?:</span></strong></p>
+        <p><span style="font-size: 1.5rem;">Examples of highly correlated economies or bonds “diverging” are not confined to the Northern hemisphere.</span></p>
+        <p style="text-align: center;"><img src="-/media/768D58A0B96E43BF8A9A2F999B2B3BD8.ashx?h=335&amp;w=601" style="width:601px; height:335px;" alt="A cheap play on China" class="custom-image-height-auto" /></p>
+        <p><span>Source: Bloomberg, 16.03.18 to 05.12.19</span></p>
+        <p><span style="font-size: 1.5rem;">New Zealand and Australia may be geographic neighbours but their economies are perceived to be driven by different factors. Australia, as we know, is deemed rich in minerals and “heavy” commodities, with a focus on China as a major export market. New Zealand is more agricultural commodity based.</span></p>
+        <p><span style="font-size: 1.5rem;">Have a look at comparative trade patterns, GDP or inflation: they are remarkably correlated. Indeed, today, the central bank of each country has flirted with, and then seemingly moved away from, further aggressive monetary easing.</span></p>
+        <p><span style="font-size: 1.5rem;">But Australia does a little more business with China. And as trade war rhetoric ramped up, so Australian bonds did better than many others, Kiwi included, and the spread between the two has recently jumped to a five-year high. I’ll leave this up to you – the relationship is volatile, is near a one-year wide and is trade related. If Mr Trump is serious about playing nicely, I know which side of the Aus/Kiwi trade I’d be on.</span></p>
+        <p><span>&nbsp;</span></p>
+        <p><strong><span>6. Let me give you a TIP: US TIPs look far too cheap </span></strong></p>
+        <p><span style="font-size: 1.5rem;">It goes without saying that all bonds issued by the US Government should more or less behave the same. Doesn’t it? That may be what you think but the reality is somewhat different. One type of bond that doesn’t behave as normal is the Treasury Inflation Protected Security (TIP). Basically, as inflation expectations rise, most normal bonds will fall in price. TIPs can do the opposite – in short, their “yield” is tied to realised inflation so if investors think inflation is going to rise, they will pay more for the TIPs and drive up the price, potentially moving in the opposite direction to normal bonds.</span></p>
+        <p><span style="font-size: 1.5rem;">And this is another volatile series. The following chart shows a thing called the breakeven rate – if inflation is above this rate, then TIPs look good, if below they look bad compared with normal US Treasuries. So far so good?</span></p>
+        <p style="text-align: center;"><img src="-/media/64A30E48260E4F91BDAE61A5C8840D87.ashx?h=335&amp;w=600" style="width:600px; height:335px;" alt="Inflation expectations have been volatile" class="custom-image-height-auto" /></p>
+        <p><span>Source: Bloomberg, 04.12.14 to 04.12.19</span></p>
+        <p><span style="font-size: 1.5rem;">In recent times, people have started to believe that even the US will fail to find inflation, with Japanification taking hold there too. Of course, all the history and forward-looking evidence is that this won’t happen (or at least not for a few decades). Even as recently as 2018, the “inflation expectation” rate, the breakeven above, was showing 2.2% (the market expected US inflation to average 2.2% between 2018 and 2028).</span></p>
+        <p><span style="font-size: 1.5rem;">Guided by the Fed (“things are fine but we must cut rates three times”), inflation was priced out. Indeed, in the third quarter, inflation expectations fell to under 1.5%. It is worth noting that over the past 20 years, US CPI has averaged 2.2% and last printed at 1.8%, and this includes the allegedly “lost inflation decade” since the Global Financial Crisis (GFC).</span></p>
+        <p><span style="font-size: 1.5rem;">Anyway, again the point isn’t that inflation linked bonds look cheap or expensive, just that they move around. While everyone else is burying their collective heads in the sand ignoring market direction, this little gem might be a better way to invest.</span></p>
+        <p><span>&nbsp;</span></p>
+        <p><strong><span>7. Politics. . . Unfortunately it matters</span></strong></p>
+        <p><span style="font-size: 1.5rem;">I love this chart. It looks at the relationship between long and short-dated UK bonds since I started managing bond funds. Until the GFC, long-dated Gilts generally yielded less than short-dated equivalents. Life and pension funds were regulated to buy long-dated assets – very sensible some would say – with the end result that they distorted the market. Normally, we should be paid more to lend longer, especially to an inflation-prone economy like the UK.</span></p>
+        <p style="text-align: center;"><img src="-/media/A34883984AE943A387906E28D2289BD3.ashx?h=332&amp;w=600" style="width:600px; height:332px;" alt="Demand for long-dated UK assets" class="custom-image-height-auto" /></p>
+        <p><span>Source: Bloomberg, 29.03.96 to 04.12.19</span></p>
+        <p><span style="font-size: 1.5rem;">The great thing about this chart is there is something for everyone: the UK MPC seems unsure whether to raise, cut or stick with rate policy. The only certainty is that post the general election, any government looks set to raise public spending. This normally isn’t good news for long-dated bonds, but if this encourages the Bank of England to raise interest rates, then short dated bonds could do even worse. So a real example: this is likely to be volatile, materially so and, being honest, at present I’m unsure about which direction to choose.</span></p>
+        <p><span>&nbsp;</span></p>
+        <p><strong><span>8. Back seat driver: German curve doesn’t follow directions </span></strong></p>
+        <p><span style="font-size: 1.5rem;">The following chart shows the relationship between five and 10-year German bonds. Until recently, I’d have said this was negatively correlated with the direction of the market or, in short, if bonds went up, the spread between five and 10-year Bunds would fall. This has been a great hedge for us all year.</span></p>
+        <p style="text-align: center;"><img src="-/media/E40D12D3497F49229D1389076FB0824E.ashx?h=341&amp;w=600" style="width:600px; height:341px;" alt="Longer dated German bonds do better in a bull market" class="custom-image-height-auto" /></p>
+        <p><span>Source: Bloomberg, 04.12.18 to 04.12.19</span></p>
+        <p><span style="font-size: 1.5rem;">We have been able to have a modest duration position but take it through 10-year German bonds. This has offset much of our lack of directional beta – we have kept pace with the rally but with much less volatility. Now that yields are much lower than a year ago, the difference in yield between five and 10-year bonds has narrowed.</span></p>
+        <p><span style="font-size: 1.5rem;">I still think there is merit in this trade as a hedge. However, If you look at our overall fund duration and find it hasn’t changed much in the coming weeks, I’d suggest you need to look at “internals” such as this one to give a real idea of interest rate sensitivity. If yields do move a bit higher, then the first thing I’d do is collapse this type of trade rather than add outright duration.</span></p>
+        <p><strong><span>&nbsp;</span></strong></p>
+        <p><strong><span>9. Japan has been low beta. Is this changing? </span></strong></p>
+        <p><span style="font-size: 1.5rem;">Since the introduction of zero interest rates and aggressive forward guidance, the Japanese bond market has been perceived as low beta – for every 20 basis points move in bunds, gilts or Italian BTPs, Japanese bonds might move one.</span></p>
+        <p><span style="font-size: 1.5rem;">Is this changing? Back in August, as all bonds were bid higher, the yield on 10-year Japanese bonds fell to -0.3% (higher than Germany’s but the lowest on domestic record). This was way below the Bank of Japan (BOJ) target range.</span></p>
+        <p style="text-align: center;"><img src="-/media/4E6DD8B7F0594012B531689A8F99035E.ashx?h=335&amp;w=600" style="width:600px; height:335px;" alt="Volatility in Japanese bond yields" class="custom-image-height-auto" /></p>
+        <p><span>Source: Bloomberg, 04.12.18 to 04.12.19</span></p>
+        <p><span style="font-size: 1.5rem;">The BOJ recently joined the growing chorus noting that (deeply) negative rates should only be used in conjunction with other policy tools. Mario Draghi stated that in his farewell address for Europe, of course.</span></p>
+        <p><span style="font-size: 1.5rem;">Since then, German and US yields have risen around 30 basis points; Japan nearly 20. Of course, this is still less than Western equivalents but much closer than it would have been a few years ago. I’d still bet Japan remains lower beta, especially if the West can find some inflation. However, the days of parking money in JGBs and forgetting about them may well be over.</span></p>
+        <p><span>&nbsp;</span></p>
+        <p><strong><span>10. QE . . .Early, Quantitative Evil?<br />
+        <br />
+        </span></strong><span style="font-size: 1.5rem;">A last thought on “direction”. We have had 30 years of a bond bull market. Prices are incredibly high. Investors who buy and hold have little hope of being compensated for inflation and growth. The final madness began in response to the GFC. What most expected to be temporary or emergency policy measures now appear embedded.</span></p>
+        <p><span>It seems at last though that central bankers are starting to understand. Mario Draghi urged politicians to embark on fiscal expansion, banks from Israel to New Zealand haven’t cut rates as expected and the chairman of the Swiss national bank suggested the social “cost” of ZIRP may outweigh the economic “benefit”. </span></p>
+        <p><span style="font-size: 1.5rem;">I leave you with some comments from Mr Philip Lowe, Governor of the Reserve Bank of Australia:<br />
+        </span></p>
+        <ul style="list-style-type: disc;">
+            <li><em><span style="color: black;">There are concerns that low interest rates allow less-productive (zombie) firms to survive</span></em></li>
+            <li><em><span style="color: black;">Political tensions can also arise if the central bank's asset purchases are seen to disproportionality benefit banks and wealthy people, at the expense of the person in the street</span></em></li>
+            <li><em><span style="color: black;">It is possible that the willingness of a central bank to provide liquidity reduces the incentive for financial institutions to hold their own adequate buffers, making episodes of stress more likely in the future</span></em></li>
+            <li><em><span style="background: white; color: black;">It is not clear that the experience with negative interest rates has been a success<br />
+            <br />
+            </span></em></li>
+        </ul>
+        <p><span>Still minded to chase bond direction and still expecting central bankers to have your back? Good luck. </span></p>
+        <p><span style="font-size: 1.5rem;">For a comprehensive list of common financial words and terms, see our glossary&nbsp;</span><span style="font-size: 1.5rem; color: #34b233;"><a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms">here</a>.</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><span style="color: #222222;">&nbsp;</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><strong><span style="color: #222222;">Key Risks</span></strong></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><span style="color: #222222;">Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. Investment in Funds managed by the Global Fixed Income team involves foreign currencies and may be subject to fluctuations in value due to movements in exchange rates. The value of fixed income securities will fall if the issuer is unable to repay its debt or has its credit rating reduced. Generally, the higher the perceived credit risk of the issuer, the higher the rate of interest. Bond markets may be subject to reduced liquidity. The Funds may invest in emerging markets/soft currencies and in financial derivative instruments, both of which may have the effect of increasing volatility.</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><span style="color: #222222;"><br />
+        <strong><span>Disclaimer</span></strong><br />
+        <br />
+        The information and opinions provided should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</span></p>

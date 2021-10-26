@@ -1,0 +1,118 @@
+﻿---
+ID: "c419f2b6-1300-4289-94c2-9aec8b01d04c"
+Parent: "f85b82ba-07e8-4abb-ad53-74a570d1720b"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2018/07/Reappraising the social networks
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 84200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{0D8924D2-7A94-45DC-BD40-9C646EE02CCE}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{B7E86820-CB7A-4007-961E-3603F6AD40D1}"
+              p:after="r[@uid='{0D8924D2-7A94-45DC-BD40-9C646EE02CCE}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{2DA03463-FF92-4998-BBBB-6C426BBC13BD}"
+              p:after="r[@uid='{B7E86820-CB7A-4007-961E-3603F6AD40D1}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See also...&amp;RelatedPages={09B1CF0B-3438-4729-ABC8-C59D50AA8B29}|{7498178E-7261-4CF1-957A-1EE109C4751F}|{B3536495-E355-4365-9773-B05F96D52593}|{FA0E822B-9229-47E9-9341-79282A4EE71F}&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{18287D6F-C09C-49D9-889E-474F5D3F143E}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Reappraising the social networks | What we think | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: Reappraising the social networks
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180717T091601Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: Given the rapid development of social networks across multiple areas, Mike Appleby says close scrutiny is required to ensure these businesses have a positive impact on society and are suitable for sustainable investors. The answer, for certain names, appears to be no at this stage.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Reappraising the social networks
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">History is full of companies that have generated huge profits from driving </span><span style="color: black;">positive transformations in people’s lives, whether in healthcare, technology, or simply how we feed and clothe ourselves.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">Our approach to sustainable investing at Liontrust focuses on i</span><span style="color: black;">dentifying emerging trends and long-term themes</span><span style="color: black;"> as we believe well-run companies </span><span style="color: black;">whose products and operations deliver positive change can make interesting and compelling investments.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">Social media has clearly been a huge global force over the last decade, to the extent that the leading businesses in this space are now among the largest and best-known companies in the world. Many of these have become hugely profitable but, given their rapid development across multiple areas, close scrutiny is required to ensure they </span><span style="color: black;">have a net positive impact on society.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span style="color: black;">&nbsp;</span></strong></p>
+        <p style="text-align: left;"><span style="color: black;">Early in 2017, we assessed Facebook for our funds and rated the company B4 on our sustainability matrix, which meant it was eligible for investment. Following additional analysis, we concluded this was a well-managed, profitable company that looked undervalued and bought the stock for our Global funds in the first quarter of 2017. </span></p>
+        <p style="text-align: left;"><span style="color: black;">Our external advisory committee flagged the stock as controversial however, recommending further investigation into how to assess large social network companies and their sustainability in light of several possible shortcomings in their business models. Concerns focused on three key areas:</span></p>
+        <p style="text-align: left;"><strong><span style="color: black;">Content</span></strong><span style="color: black;">: Whether it can be moderated effectively in a timely manner (this includes illegal and fake content) </span></p>
+        <p style="text-align: left;"><strong><span style="color: black;">Data privacy:</span></strong><span style="color: black;"> Whether tightening regulation materially undermines these businesses’ profit margins </span></p>
+        <p style="text-align: left;"><strong><span style="color: black;">Access to these networks:</span></strong><span style="color: black;"> Whether it is too easy for vulnerable individuals to gain access and social network companies can do more to control addiction to social media</span></p>
+        <p style="text-align: left;"><span style="color: black;">These large networks have, to some extent, been victims of their own success: there were over two billion active Facebook users at the end of last year while a billion people visit YouTube every month. The sheer volume of new content is hard to comprehend: every minute, it is estimated 510,000 comments are posted and 136,000 photos uploaded. On YouTube, 400 hours of videos are uploaded every minute, which means 576,000 hours a day.</span></p>
+        <p style="text-align: left;"><span style="color: black;">While social networks can clearly enhance communication and be used positively, there is also scope for darker activity, from inciting hatred, to bullying and pornography. The question is whether these networks can moderate this growing volume of content effectively and as things stand, the answer looks to be no, or at least not yet.</span></p>
+        <p style="text-align: left;"><span style="color: black;">The European Commission has criticised Facebook, YouTube, Twitter and Microsoft for being too slow in removing hate speech and incitement to terrorism content from their platforms. Back in 2016, the companies signed a code of conduct to remove illegal and offending content within 24 hours but after six months and 600 notifications, much of the material was not coming down within that timeframe.</span></p>
+        <p style="text-align: left;"><span style="color: black;">For our part, we met with Facebook last year and received a fairly underwhelming response to our concerns. At the Annual General Meeting in June 2017, we supported a number of resolutions proposed by shareholders on voting rights of shares, lobbying, fake news, gender pay and the need for an independent Chair.</span></p>
+        <p style="text-align: left;"><span style="color: black;">Over the course of 2017, we met with experts in data privacy, content moderation and fake news, and how social networks fit in with existing media regulation. These meetings helped us come up with a framework to identify the main issues and how to judge whether the company response was suitably robust. </span></p>
+        <p style="text-align: left;"><span style="color: black;">In the second half of the year, we had another meeting with Facebook and concluded that while it (and all of the main listed social networks) is taking steps to address most of the issues we identified, this response is inadequate in light of the risk to its profitability. </span></p>
+        <p style="text-align: left;"><span style="color: black;">We updated how we rate social networks to be more stringent and subsequently downgraded and removed Facebook from our portfolios in Q1 2018 as a result. We also downgraded Google from B2 to B3, although continue to own it in our Global funds, and do not currently hold Twitter. </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">As evident from the Cambridge Analytica scandal this year, which saw Facebook CEO Mark Zuckerberg hauled before Congress, social networks can very quickly become seen as greedy multi-nationals mining personal data for nefarious purposes. This reputational risk is a major factor for investors – especially those who hold themselves out as sustainable.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="text-align: left;"><span style="color: black;">None of the major social networks have been willing to discuss tightening data privacy rules, led by the advent of GDPR in Europe, or guided on the kind of impact these rules will have on their ability to monetise personal data through targeted advertising and other avenues. </span></p>
+        <p style="text-align: left;"><span style="color: black;">What we are seeing is the self-regulating environment being closed down by governments concerned at the sheer size and pervasiveness of these social networks. Given their inability to engage with us on the issue, we believe this industry cannot continue without a material impact from tightening privacy legislation. </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">On the content issue, Facebook and Google have hired thousands of moderators to sift through posts but given the amount being produced, clever automation is required to ensure these people are concentrating on the right material. We believe this will happen but will take time and that will probably stretch to years rather than months.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">Until they do, large user content generated networks will remain a challenging area for sustainable investing as regulation tightens to treat them as publishers responsible for content as opposed to self-regulated internet companies.<br>
+        </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;">&nbsp;</p>
+        <p style="color: #222222; background-color: #ffffff; margin-right: 0px; margin-bottom: 14px; margin-left: 0px;"><span><strong>Key Risks</strong></span></p>
+        <p style="color: #222222; background-color: #ffffff; margin: 0px 0px 14px;"><span><strong>Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital.</strong>&nbsp;</span><span>The issue of units/shares in Liontrust Funds may be subject to an initial charge, which will have an impact on the realisable value of the investment, particularly in the short term. Investments should always be considered as long term.</span></p>
+        <p style="color: #222222; background-color: #ffffff; margin: 0px 0px 14px;">Some of the Funds managed by the Sustainable Future Equities team involve foreign currencies and may be subject to fluctuations in value due to movements in exchange rates.</p>
+        <p style="color: #222222; background-color: #ffffff; margin: 0px 0px 14px;"><span><strong>Disclaimer</strong></span></p>
+        <p style="color: #222222; background-color: #ffffff; margin: 0px 0px 14px;">This content should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy.&nbsp; It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, faxed, reproduced, divulged or distributed, in whole or in part, without the express written consent of Liontrust. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</p>

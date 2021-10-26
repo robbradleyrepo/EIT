@@ -1,0 +1,142 @@
+﻿---
+ID: "51b45612-203b-4f9a-a233-b170a76c2960"
+Parent: "49e7d0dd-8bbd-4c7f-80f9-5d986c2c7afb"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2019/12/What the Conservative majority means for investors
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 93700
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{41C2FE13-1EBB-4E21-9BC0-3EA330DEBE51}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{524A3B6A-101E-4017-95E6-2AD3A43CA0C3}"
+              p:after="r[@uid='{41C2FE13-1EBB-4E21-9BC0-3EA330DEBE51}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{26405796-7809-46F3-9A5B-B55B5C9B1CDD}"
+              p:after="r[@uid='{524A3B6A-101E-4017-95E6-2AD3A43CA0C3}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See%20also...&amp;RelatedPages=%7BFC17F0A6-ECAA-4CD7-B80B-6E67FDE3251B%7D%7C%7B8869E014-2CF1-49ED-BD0D-DBE46677C220%7D%7C%7B1EC36DCA-A621-4DDD-B8EA-888A3693BF7B%7D%7C%7BCDE2DD29-4FE7-49A3-841E-366AD0DF018F%7D&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "094932b9-ff77-4977-966e-d18f7c7ac091"
+      Hint: LegacyArticle_Subtitle
+      Value: James Dowey, Olly Russ, Phil Milburn, Jamie Clark & John Husselbee
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: What the Conservative majority means for investors | What we think | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: What the Conservative majority means for investors
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20191212T071500Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: With Boris Johnson and the Conservative Party achieving a large majority in the General Election, Liontrust fund managers provide their initial views and insights on what this means for markets and investments.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: What the Conservative majority means for investors
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p style="margin-bottom: 0.0001pt; text-align: center;"><strong><span><img src="-/media/5B1C5E447353457B89E28FE73A7C1346.ashx?h=400&amp;w=600" style="height:400px; width:600px;" alt="Polling station" class="custom-image-height-auto" /></span></strong></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span><br />
+        Boris Johnson and the Conservative Party will form a new government after winning a majority in the General Election. Liontrust fund managers explain what this means for markets and investors.</span></strong></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span>&nbsp;</span></strong></p>
+        <hr style="text-align: left;" />
+        <p style="margin-bottom: 0.0001pt; text-align: left;">&nbsp;</p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="font-size: 1.5rem;"><strong>James Dowey, </strong></span><strong><a href="https://www.liontrust.co.uk/fund-teams/global-equity-team" style="font-size: 1.5rem;"><span style="color: #34b233;">Global Equity Team</span></a></strong></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: justify;"><span>This is the best outcome for the market &ndash; nevertheless, no silver bullet. Securing a majority removes the government&rsquo;s main obstacle to implementing the Withdrawal Agreement Bill and leaving the EU, which will now happen in short order. This is a significant step forward in the overall Brexit process, which is clearly holding back the UK economy. As such, in the near term, UK assets should benefit and economic growth accelerate. </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: justify;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: justify;"><span>However, while a way forward has at last been found, it is one that will very likely incur significant long-term economic costs so the bounce back will likely be limited in size and short lived. For example, sterling may find it difficult to get much beyond the mid-1.30s range against the dollar. </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: justify;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: justify;"><span>There are two main reasons for this. First, the UK will now enter negotiations with the EU on the permanent trading relationship. Given the degree of divergence implied by the Withdrawal Agreement Bill, in some ways this phase of Brexit may prove just as challenging as the past three and a half years &ndash; never before in history have two countries or political units embarked on trade negotiations with the aim of raising the costs of trade. That said, the sheer size of the Prime Minister&rsquo;s newly forged majority may give him enough clout within his government to keep the UK a bit closer to the EU than currently envisioned if he chooses to do so. </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: justify;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: justify;"><span>Second, the biggest headwind of all for UK assets remains not Brexit, per se, but the productivity slowdown &ndash; a 90% decline in the rate of productivity growth over this past decade compared with the average of the four preceding decades, a much sharper fall than for any other major developed market. Reduced foreign market access and competition &ndash; basic long-term aspects of Brexit &ndash; are likely to keep UK productivity growth fairly low, necessitating a continued focus on the financial soundness of UK companies for investors.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>&nbsp;</span></p>
+        <hr style="text-align: left;" />
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="font-size: 1.5rem; text-align: left;"></span></p>
+        <p style="text-align: left;"><span>&nbsp;<br />
+        </span><span style="font-size: 1.5rem;"><strong>Olly Russ, </strong></span><strong style="font-size: 1.5rem;"><span style="color: #34b233;"><a href="https://www.liontrust.co.uk/fund-teams/european-income-team">European Income Team</a></span></strong></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>A renewed majority for the Conservative Party gives Boris Johnson an incontestable mandate to push through the first stage of his version of Brexit, although the shape of the ultimate trade deal is yet to be settled. Europe will welcome this, partly due to an end to the interminable last-minute emergency summits and, from a French perspective at least, the opportunity to reshape the EU into a deeper and more centralised union. </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>European corporates generally expect business to be pretty much as usual &ndash; however, international investors have perhaps been put off by the negative headlines and sense of crisis engulfing broader Europe including the UK. </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>A final resolution of the uncertainty could bring the US back to under-loved Europe, boosting risk assets and also potentially driving further gains in sterling. Investors in the UK owning non-sterling assets need to be wary of the unaccustomed risk of a strong pound, which will negatively impact the value of overseas assets held in local currencies.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span>&nbsp;</span></strong></p>
+        <hr style="text-align: left;" />
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span><strong>Phil Milburn,</strong> </span><a href="https://www.liontrust.co.uk/fund-teams/global-fixed-income-team"><span style="color: #34b233;"><strong>Global Fixed Income Team</strong></span></a></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span>&nbsp;</span></strong></p>
+        <p style="text-align: left;"><span>The financial markets&rsquo; most likely reaction for the next few days will be for sterling to continue rallying and Gilt yields to rise as the passage of the Withdrawal Agreement Bill is seen as a fait accompli.&nbsp; I would not dispute this but do think that greater emphasis needs to be placed upon the future trading relationship with the EU27, or lack thereof!&nbsp; </span></p>
+        <p style="text-align: left;"><span>Ahead of the election, many financial market economists had posited that a large majority for the Tories would lead to an extension to the transition period, presently due at the end of 2020, before the July deadline. The rationale for this is that those in the party espousing a hard Brexit would no longer need to be pandered to. The self-named &ldquo;Spartans&rdquo; have already had their doctrine permeate through the higher echelons of the Tories; as evidenced by the constituents of the Cabinet when Johnson took over from May. I therefore think the size of the majority argument is flawed, it is what the Tories collectively choose to do with their majority that matters.</span></p>
+        <p style="text-align: left;"><span>The highest probability scenario now is for the UK to crash out at the end of the 2020 transition period.&nbsp; Regardless of one&rsquo;s longer term view on Brexit, the shorter term huge negative economic impact of crashing out is impossible to argue with. Some mitigation will occur through the inevitable loosening of the fiscal purse strings. The Bank of England is more likely to care about activity levels than the value of sterling so monetary policy easing should be expected. In any rational world, Gilts are still hugely over-valued, but there may be a time in 2020 when tactically buying some UK duration exposure makes sense to counter the political irrationality.&nbsp; </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;">&nbsp;</p>
+        <hr style="text-align: left;" />
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span><strong>Jamie Clark, </strong></span><a href="https://www.liontrust.co.uk/fund-teams/macro-thematic-team"><span><strong><span style="color: #34b233;">Macro-Thematic Team</span></strong></span></a></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span>&nbsp;</span></strong></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>Assuming their word is as good as their campaign pledge, a Conservative majority Parliament holds the tantalising prospect of coming to a Brexit resolution. The intent to Get Brexit Done will draw a line under three years of acute uncertainty for UK business. This has dented confidence, held back investment and stymied UK productivity. Some might object, arguing that the decision to leave addresses few of the multiple unknowns that follow.&nbsp; But when do we ever have perfect foresight in assessing any future outcome?</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>Instead, we think a clear idea of the country&rsquo;s direction of travel will serve as a positive catalyst for the UK&rsquo;s economy and its equity market. We expect business confidence to pick up, investment to increase, UK rates to rise in increments and for global investors to rediscover an appetite for sterling and sterling-denominated assets.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>We expect this to impart a fillip to our portfolio of value-rated, UK Income stocks. These are companies that have delivered operationally since the EU Referendum result, but that the market has failed to reward thanks to Brexit apprehension. A Conservative majority will dispel these doubts and force investors to concentrate on the eye-catching ratings of such businesses.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>&nbsp;</span></p>
+        <hr style="text-align: left;" />
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong style="font-size: 1.5rem;"></strong></p>
+        <p style="text-align: left;"><span style="font-size: 1.5rem;"><strong><br />
+        John Husselbee, </strong></span><strong style="font-size: 1.5rem;"><a href="https://www.liontrust.co.uk/fund-teams/multi-asset-team"><span style="color: #34b233;">Multi-Asset Team</span></a></strong></p>
+        <p style="text-align: left;"><span>An election that was all about Brexit has resulted in a victory for the Conservatives. The nation decided that &ldquo;Get Brexit Done&rdquo; was the priority for the next government and, given this mandate, I expect we will see Prime Minister Johnson act swiftly. This removes the near-term uncertainty and should give a much-needed boost to both corporate and consumer confidence. There is also the post-election pledge to spend on health and safety, which will further support a pickup in UK economic activity. </span></p>
+        <p style="text-align: left;"><span>The initial market reaction will likely be a reversal of the moves since the EU Referendum: a stronger pound, a recovery in domestic industries and, considering the proposed fiscal spend, potentially higher Gilt yields. The relief rally may be short lived, however, as the PM and his cabinet start to negotiate a trade agreement, with the possibility of a hard Brexit still among the options.</span></p>
+        <p style="text-align: left;"><span>&nbsp;</span></p>
+        <p style="text-align: left;">
+        <strong><span>Key Risks &amp; Disclaimer<br />
+        </span></strong><span><br />
+        Please remember that past performance is not a guide to future performance and the value of an investment and any income generated from them can fall as well as rise and is not guaranteed, therefore you may not get back the amount originally invested and potentially risk total loss of capital. <br />
+        <br />
+        This Blog should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy.&nbsp; It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, faxed, reproduced, divulged or distributed, in whole or in part, without the express written consent of Liontrust.</span></p>

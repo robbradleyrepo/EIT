@@ -1,0 +1,119 @@
+﻿---
+ID: "b1ffd858-23ba-47cb-8d7b-e836803124ce"
+Parent: "0cf729d8-3938-4516-a08f-84e59495194e"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2020/06/What are the prospects for Sustainable growth in the UK
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 104600
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{036CB8FB-7C22-4991-902B-AF38E8AACBC5}"
+              p:before="*"
+              s:ds="{AD7430E3-57B7-4D9B-B4D4-E52D614FAF1A}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{894BA4C3-F820-4998-BD07-BB4A52CFB9BB}"
+              p:after="r[@uid='{036CB8FB-7C22-4991-902B-AF38E8AACBC5}']"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{549F6524-BF93-4002-A7CC-57471CBA4502}"
+              p:after="r[@uid='{894BA4C3-F820-4998-BD07-BB4A52CFB9BB}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{E1F82A9A-1681-45C9-BB74-03CCD60032BF}"
+              p:after="r[@uid='{549F6524-BF93-4002-A7CC-57471CBA4502}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See%20also...&amp;RelatedPages=%7BFA0E822B-9229-47E9-9341-79282A4EE71F%7D%7C%7B035EFDA3-BC0A-43D6-9548-FC77F9116B6F%7D%7C%7B1EC36DCA-A621-4DDD-B8EA-888A3693BF7B%7D%7C%7BF8415A35-9C34-47F7-BACE-42EAABBFA145%7D&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{F1DC2199-DDFF-4CF6-8E71-036735EEFF94}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "What are the prospects for Sustainable growth in the UK? | What we think | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: "What are the prospects for Sustainable growth in the UK?"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200604T101026Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: "Following the enforced behavioural changes by Covid-19, Peter Michaelis analyses which UK stocks may benefit from positive structural growth over the long term."
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: "What are the prospects for Sustainable growth in the UK?"
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p><strong><span style="color: black;">Covid-19 has enforced massive change around the world, with years of behavioural shifts squeezed into weeks. But despite its impact on our health, livelihoods and economies, one thing this crisis has not altered is our belief that companies exposed to sustainable themes will continue to see strong growth in coming years.</span></strong></p>
+        <p><span style="color: black;">Our base case remains that sustainable businesses have better growth prospects and are more resilient than those not prioritising ESG – and these advantages remain underappreciated by the wider market.</span></p>
+        <p><span style="color: black;">For UK equities, the make-up of the market may strengthen the argument for active, sustainable investing even further. As we saw in March, the UK was hit particularly hard amid initial Covid-inspired volatility given the index’s large exposure to the oil, mining and airline sectors. With the recovery prospects for these areas anything but straightforward in the short or longer term, we would suggest funds with an active, sustainable focus, and therefore a tilt towards companies still benefiting from positive structural growth, stand a good chance of outperforming the market.</span></p>
+        <p><span style="color: black;">Looking at our UK equity portfolios, the fact we have only removed two names and added one, as well as topping up a number of favoured holdings, shows we largely </span><span style="color: black;">remain confident in the long-term prospects of our companies despite difficult conditions to come.</span></p>
+        <p><span style="color: black;">To recap, our process – developed and honed over two decades – begins with 20 investment themes, all focused on the structural shift towards a more sustainable economy. Our emphasis is on identifying and understanding the changes that will make the world cleaner, healthier and safer and our process is designed to highlight companies that will have been on the right side of this transition.</span></p>
+        <p><span style="color: black;">Building on this thematic work, we also require excellence in ESG and our holdings will have leading processes in place to manage customer relationships, employees and supply chains, as well as energy efficiency, waste reduction and material recycling. We have long believed outperformance on these social and environmental issues will deliver more resilient businesses over the long term.</span></p>
+        <p><span style="color: black;">We then bring all this information into our forecast earnings for companies, only selecting those that can make money from their good work. Where the shares undervalue this success, we will look to invest in these sustainable companies.</span></p>
+        <p><span style="color: black;">This process meant the UK Ethical and SF UK Growth funds came into the crisis with no exposure to airlines, oil, coal, casinos, pub chains, luxury shopping or cruise ships, all sectors that have suffered the worst declines. Because of steps two and three – on ESG and business fundamentals – we are largely invested in companies making products that the world genuinely needs, demonstrating close relationships with their customers, treating employees with respect, and understanding the complexities of modern supply chains. And finally, because of step four on valuations, even after a strong 2019 for our funds, we were not simply invested in a lot of overpriced thematic plays.</span></p>
+        <p><span style="color: black;">Looking at the strongest stocks over the first quarter, certain names encapsulate the acceleration in some of our themes, with Helios Towers under <em>Connecting People</em> and Softcat under <em>Enhancing Digital Security</em>.</span></p>
+        <p><span style="color: black;">We have long recognised the growing demand for more digital communications as we become more connected as a global society, increase our data consumption and become ever-more aware of the environmental impacts of travel – and millions of people working at home can only push this forward. Helios owns and operates telecom towers in rapidly urbanising parts of Africa, and after buying the stock at IPO last October, we have already increased the position to 2% in both SF UK Growth and UK Ethical.</span></p>
+        <p><span style="color: black;">This move to digital communications and online life can only thrive, however, if people are confident their information is safe, and Softcat is a long-term holding that provides outsourced IT services to small and medium-sized UK businesses. Since we first bought the stock in 2016, its share price has tripled and this is one of several holdings we topped up amid recent volatility.</span></p><p><span style="color: black;">
+        Healthcare is another obvious area that should prosper post-Covid 19, and we would highlight the efforts of our holdings in the ongoing fight against this disease. In SF UK Growth (but not in UK Ethical where stricter exclusions on animal testing prevent us investing in many healthcare names), we own stocks contributing to developing therapies against Covid-19 (Abcam), testing for the disease (IP Group via its holding in gene sequencing company Oxford Nanapore) and ultimately producing a vaccine (GlaxoSmithKline and Oxford BioMedica).</span></p><p><span style="color: black;">
+        <strong><span>In terms of recent portfolio activity, the sole addition across both funds has been Oxford Instruments, </span></strong><span style="background: white;">a provider of high technology products, systems and tools to the world's leading industrial companies and scientific research communities.</span></span></p>
+        <p><span>Cineworld is one of two disposals in 2020 and has struggled alongside other consumer-facing businesses as they endure a period of zero revenues. The difference with Cineworld, compared to holdings such as DFS, Crest Nicholson and National Express, is that the company has made two huge acquisitions in recent years, in the US and Canada, by gearing up its balance sheet. A period of no revenues has left the business struggling to finance these borrowing costs and, in hindsight, we should have seen the excess leverage as more of a red flag.</span></p>
+        <p><span>In contrast, high-quality furniture seller DFS continues to do well in terms of online sales and has a track record of growth during difficult periods, increasing its market share from 18% to around 25% in 2008/09. It has subsequently grown market share to 35% and we feel this is one of several consumer holdings that can emerge from Covid-19 stronger despite a severe decline in revenues.</span></p>
+        <p><span>Our other disposal this year, Informa, shines a light on how we will move away from a business if we feel it is no longer excelling on sustainable issues. When we first owned the stock, it was focused on educational publishing but the acquistions of Penton Information Services in 2016 and UBM in 2018 have moved exhibitions to the core of the business, increasing its cyclicality and reducing sustainability in our view.</span></p>
+        <p><span>As we look forward, no one can say with certainty how quickly economies will recover, whether we must brace for second and third waves of the virus or what impact </span><span style="color: black;">the current crisis will have on sustainable issues. What we can do is continue </span><span style="color: black;">to concentrate on where we have expertise and confidence in our predictions, namely the 20 sustainable themes and the companies that are driving, and set to benefit from, the shift towards a cleaner, healthier and safer world. </span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt;"><span style="color: #222222;">For a comprehensive list of common financial words and terms, see our glossary&nbsp;</span><a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms"><span style="color: inherit;">here</span></a><span style="color: #34b233;">.</span></p>
+        <p class="basicparagraph" style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><span><span style="color: #222222;"><br />
+        <strong><span>Key Risks</span></strong></span><strong><br />
+        </strong><br />
+        Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. The majority of the Liontrust Sustainable Future Funds have holdings which are denominated in currencies other than Sterling and may be affected by movements in exchange rates. Some of these funds invest in emerging markets which may involve a higher element of risk due to less well-regulated markets and political and economic instability. Consequently the value of an investment may rise or fall in line with the exchange rates. Liontrust UK Ethical Fund, Liontrust SF European Growth Fund and Liontrust SF UK Growth Fund invest geographically in a narrow range and has a concentrated portfolio of securities, there is an increased risk of volatility which may result in frequent rises and falls in the Fund’s share price. Liontrust SF Managed Fund, Liontrust SF Corporate Bond Fund, Liontrust SF Cautious Managed Fund, Liontrust SF Defensive Managed Fund and Liontrust Monthly Income Bond Fund invest in bonds and other fixed-interest securities - fluctuations in interest rates are likely to affect the value of these financial instruments. If long-term interest rates rise, the value of your shares is likely to fall. If you need to access your money quickly it is possible that, in difficult market conditions, it could be hard to sell holdings in corporate bond funds. This is because there is low trading activity in the markets for many of the bonds held by these funds. Mentioned above five funds can also invest in derivatives. Derivatives are used to protect against currencies, credit and interests rates move or for investment purposes. There is a risk that losses could be made on derivative positions or that the counterparties could fail to complete on transactions.<br />
+        <br />
+        <strong><span>Disclaimer</span></strong><br />
+        <br />
+        The information and opinions provided should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</span></p>

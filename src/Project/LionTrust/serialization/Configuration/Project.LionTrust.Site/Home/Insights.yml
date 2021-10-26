@@ -1,0 +1,88 @@
+﻿---
+ID: "7e9e8706-f864-48e5-b4a2-57f2c408efd7"
+Parent: "7502b69e-d154-4861-a033-bc0cb30a91b5"
+Template: "2e71a4d9-8115-47e6-973a-7de681370739"
+Path: /sitecore/content/LionTrustNew/Home/Insights
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 2000
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1"
+      s:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{080B041B-8BA0-44BB-85E4-FEAF440651E1}"
+          p:before="*"
+          s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+          s:ph="/header/navigation" />
+        <r
+          uid="{EA655983-AC69-4016-A707-83C8D96366D6}"
+          p:after="r[@uid='{080B041B-8BA0-44BB-85E4-FEAF440651E1}']"
+          s:ds="{F6CEFD24-A7B6-413F-99EB-0E7E3A541BC6}"
+          s:id="{3528DA32-F96D-4392-8B1E-4B2B33C9AFA9}"
+          s:par=""
+          s:ph="header" />
+        <r
+          uid="{3CEADB2F-F118-4205-B8E7-FBFC311424D8}"
+          p:after="r[@uid='{EA655983-AC69-4016-A707-83C8D96366D6}']"
+          s:ds="{A6CD6894-ADDC-46B7-85D9-23029C9783DE}"
+          s:id="{7166AE9D-EFBD-48B3-B38F-AFD4CAAB5278}"
+          s:par=""
+          s:ph="/header/secondary-navigation" />
+        <r
+          uid="{22DA56E1-4A45-4329-BF79-96456CD419A8}"
+          p:after="r[@uid='{3CEADB2F-F118-4205-B8E7-FBFC311424D8}']"
+          s:ds="{D7428F9F-AEDD-418D-B84F-E786CC853B93}"
+          s:id="{CB2277A4-8384-4EB1-94AC-D28D9E979831}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{97B58E1F-EE44-4948-9A01-07C863233E84}"
+          p:after="r[@uid='{22DA56E1-4A45-4329-BF79-96456CD419A8}']"
+          s:ds="{A959E09E-EACA-4DC8-A1B9-591A8D5EBF66}"
+          s:id="{C1E344E3-1017-4ECE-A44E-21727844E3CE}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{2DAEBAF3-9D4A-4715-8296-11AE17F87AA8}"
+          p:after="r[@uid='{97B58E1F-EE44-4948-9A01-07C863233E84}']"
+          s:ds="{A4EFCBEB-8C08-4B77-B4E8-ACCCB9874700}"
+          s:id="{7F3DDF4D-5190-4C04-836D-41325114723D}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{C0E39DC0-1BA1-42DB-BBA4-2E605C61C595}"
+          p:after="r[@uid='{2DAEBAF3-9D4A-4715-8296-11AE17F87AA8}']"
+          s:ds="{8F7AA55E-2569-4646-A28E-7FA325F64C31}"
+          s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+          s:par=""
+          s:ph="main" />
+      </d>
+    </r>
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{435FA5FE-2F46-4EB9-BA52-FEF175105344}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210625T110235Z
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: 
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: Insights
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: 

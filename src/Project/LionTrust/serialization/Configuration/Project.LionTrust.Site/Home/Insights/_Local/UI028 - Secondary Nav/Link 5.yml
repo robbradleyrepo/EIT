@@ -1,0 +1,26 @@
+﻿---
+ID: "b3c380f4-2032-4d4d-8591-71260834181a"
+Parent: "a6cd6894-addc-46b7-85d9-23029c9783de"
+Template: "0b8174f1-7295-45d8-9a50-ce3df53507af"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/_Local/UI028 - Secondary Nav/Link 5"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{20506A53-3E9E-4BDE-95F5-499525457582}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210625T110235Z
+    - ID: "3f39e86e-0426-46f0-8f64-c5636372e13a"
+      Hint: PageLink_Link
+      Value: |
+        <link id="{52BA32CC-D2B3-460A-9BFB-544FD4AC20B9}" querystring="" target="" text="Videos" anchor="" title="" class="" url="/LionTrustNew/Home/Data Template/Videos" linktype="internal" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
