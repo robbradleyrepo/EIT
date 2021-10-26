@@ -1,0 +1,109 @@
+﻿---
+ID: "5ae6017c-1ba7-4d7f-8876-40094651b530"
+Parent: "835bb1dd-a6e0-4fec-b3fd-bda65a73d70a"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2018/06/Electric dreams - when will every car be battery powered"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 6400
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{600F4632-A018-442D-A830-51C90BB5CAA8}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{E48A7D22-115B-4A94-9E3B-7749C346ADD3}"
+              p:after="r[@uid='{600F4632-A018-442D-A830-51C90BB5CAA8}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{80F92DF1-49F2-4B3C-8E9D-64A86B943EDD}"
+              p:after="r[@uid='{E48A7D22-115B-4A94-9E3B-7749C346ADD3}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See also...&amp;RelatedPages={FA0E822B-9229-47E9-9341-79282A4EE71F}|{FC17F0A6-ECAA-4CD7-B80B-6E67FDE3251B}|{44B30FD8-9AC1-4D65-8FAA-9AA3CC75B16C}|{77B5C263-DEEE-4A04-AE96-C01C2138DFCD}&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{F1DC2199-DDFF-4CF6-8E71-036735EEFF94}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "Electric dreams: when will every car be battery powered? | What we think | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: "Electric dreams: when will every car be battery powered?"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20160928T230000Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: Investment Managers at ATI investigate how the obstacles currently facing the electric car industry may soon be overcome, presenting a promising investment opportunity.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: "Electric dreams: when will every car be battery powered?"
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p><em>This article was first published by Alliance Trust Investments on 29 September 2016.</em></p>
+        <p><strong>Peter Michaelis, Investment Manager at ATI, investigates how the obstacles currently facing the electric car industry may soon be overcome, presenting a promising investment opportunity.</strong></p>
+        <p>The concept of the electric car has been around for over a century but the question still remains as to when we should expect the Battery Electric Vehicle (BEV) to replace the Internal Combustion Engine (ICE). As technology improves and issues like climate change and global warming dominate the headlines, this question has become increasingly important for investors. Until now, the three factors limiting progress of the BEV have been cost, range (distance per journey), and battery performance/manufacturing. New research has suggested that these obstacles could be overcome sooner than we think, leading us to revisit the electric car industry as a potential investment area in the near future.</p>
+        <p><strong>Cost of electric motoring</strong></p>
+        <p>When considering buying a new car most people are concerned primarily by the price tag. However, while the initial purchase price is important, the Total Cost of Ownership (TCO) is also significant in determining the value of the vehicle. For example, a car that is sold for &pound;15,000 may be far more expensive to run than a car sold at &pound;20,000 when factors such as fuel efficiency, transmission and engine wear and tear are taken into consideration. At present, the cost of running an electric car cannot compete with a traditional vehicle due in large part to the much lower price of oil. Interestingly, in 2012 the total cost of a Nissan Leaf - a standard electric vehicle model - was 15% lower than an equivalent gasoline vehicle as the price of oil was over $125 a barrel. Since then the price of oil has sunk to below $50 a barrel, reversing this dynamic.</p>
+        <p>The unpredictable fluctuation in the price of oil makes it difficult to forecast future electric car sales, with a lower price clearly negative for the sector while a rising price would be a tailwind. Currently, there are a number of incentives in place throughout Europe to encourage consumers to buy electric vehicles. These incentives mainly&nbsp;consist of tax reductions and exemptions, as in countries such as Austria or Germany, and bonus payments and premiums for the buyers of electric vehicles in France and the UK. At the production level, as of 2021 auto manufacturers in Europe will be required to reduce CO2 emissions which could further incentivise mainstream car makers to invest in their electric offerings. Government subsidies could make electric cars up to 25% cheaper than equivalent petrol vehicles, with fuel and running costs 33% lower than the average midsize petrol car (1). If the US follows Europe&rsquo;s lead in subsidising electric vehicles then loyal petrol car consumers could be persuaded to choose electric for the first time.</p>
+        <p><strong>Battery range</strong></p>
+        <p>If subsidies were introduced globally and the price of electric cars dropped across the board, some consumers may still not be convinced enough to make the switch, however, due to the lower distances that electric cars can cover compared to traditional vehicles. The range of most electric car batteries is currently about 160km compared to 500km for a standard gasoline vehicle. A big factor at play is the geographic location of the driver and the intended use of the vehicle. For example, in Germany, 80% of passengers travel less than 50km per day and 95% travel less than 100km per day, with an average of only 12 trips a year exceeding 160km. Some consumers, however, may still feel that a range limit of 160km is insufficient given the price of an electric vehicle. Electric car manufacturers believe that producing electric vehicles with a 300km battery range is a good compromise and could offer consumers enough value to compete with gasoline vehicles. Battery manufacturers are working tirelessly on developing batteries small yet powerful enough to meet the 300km range without compromising on price.</p>
+        <p>Electric car batteries vary greatly in safety performance, cost, energy density, specific power and life span. Moreover, batteries do not provide perfect performance under all climatic conditions, a concern for consumers in certain locations. For example; a battery in a vehicle driven in the Australian outback will be less able to store energy compared to the same vehicle driven on the roads of Beijing. Additionally, lithium ion batteries have a limited number of cycles; meaning there will be little to no sell-on value. This is another big factor putting off many consumers.</p>
+        <p><strong>New research and technologies</strong></p>
+        <p>Scientists at Stanford University in the US believe they are on the brink of revolutionising the electric car, which could see it enter the mainstream sooner than expected. The study reports that the development of a silicon anode material used in lithium ion batteries is underway. This could potentially increase the storage of a battery pack by two or three times. It would also reduce the size and cost of the battery pack, which could tip the economic scale in favour of the electric car.</p>
+        <p>Metal air batteries are another new technology showing great promise. In this model, the lithium battery uses air (oxygen) as the cathode of the cell, which could theoretically mean that the battery generates more energy than gasoline in a traditional combustion engine. If this were proven, it would be a real game-changer in the development of electric vehicles as the biggest hurdle - cost - would be eliminated. However, this technology is not likely to be ready within the next 10 years. If this were to happen sooner though, then the growth and popularity of electric vehicles could gain speed very quickly. It has been found that as the manufacturing capacity of batteries doubles, prices fall by about 15% (2). It is expected that by 2020 electric vehicle battery cells could fall another 32% in price.</p>
+        <p>There is no denying that even if there was a major breakthrough and the obstacles outlined could be sufficiently overcome, it will still take time to phase out the gasoline vehicle. With oil prices and subsidies as they currently are, it is expected that by 2020 only 5% to 10% of vehicles sold globally will be electric. This is still a very low proportion of the overall vehicle industry. For now, ATI will continue to keep a finger on the pulse of the electric car industry as new developments and technologies emerge. As climate change becomes an increasingly important issue politicians may come under further pressure to introduce new legislation and subsidise electric vehicle production. This could mean that the electric vehicle sector will become an increasingly important one for investors over the next three to five years. ATI will therefore continue to look for investment opportunities in this sector as they arise.</p>
+        <p><strong>Source</strong></p>
+        <p><strong></strong>1 http://www.acea.be/publications/article/overview-of-incentives-for-buying-electric-vehicles </p>
+        <p>2 Electric vehicles to be 35% of global new car sales by 2040, Bloomberg New Energy Finance, 2016</p>
+        <p>&nbsp;</p>
+        <p style="color: #222222; background-color: #ffffff; margin-right: 0px; margin-bottom: 14px; margin-left: 0px;">For a comprehensive list of common financial words and terms, see our glossary&nbsp;<a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms" style="color: #000000;"><span style="color: #34b233;">here</span></a>.</p>
+        <p style="color: #222222; background-color: #ffffff; margin: 0px 0px 14px;"><span><strong>Key Risks</strong></span></p>
+        <p style="color: #222222; background-color: #ffffff; margin: 0px 0px 14px;"><span><strong>Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital.</strong></span>&nbsp;The issue of units/shares in Liontrust Funds may be subject to an initial charge, which will have an impact on the realisable value of the investment, particularly in the short term. Investments should always be considered as long term.</p>
+        <p style="color: #222222; background-color: #ffffff; margin: 0px 0px 14px;">Some of the Funds managed by the Sustainable Future Equities team involve foreign currencies and may be subject to fluctuations in value due to movements in exchange rates.</p>
+        <p style="color: #222222; background-color: #ffffff; margin: 0px 0px 14px;"><span><strong>Disclaimer</strong></span></p>
+        <div style="color: #222222; background-color: #ffffff;">This content should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy.&nbsp; It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, faxed, reproduced, divulged or distributed, in whole or in part, without the express written consent of Liontrust. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</div>

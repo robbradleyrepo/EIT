@@ -1,0 +1,107 @@
+﻿---
+ID: "4aaab9f6-627f-4de2-986a-8d8f6f1c106d"
+Parent: "016f2207-b673-43f5-9e91-09612680d249"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2019/03/Dunns Law more fuel for the activepassive fire
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 6200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{9EE887CE-8BB2-4458-845B-F6D36D273234}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{D34F3A2C-B1C8-48C4-B99D-24DBC4CBC2FA}"
+              p:after="r[@uid='{9EE887CE-8BB2-4458-845B-F6D36D273234}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{98EEB36B-62E9-47B1-9C48-78A199A9D79D}"
+              p:after="r[@uid='{D34F3A2C-B1C8-48C4-B99D-24DBC4CBC2FA}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See also...&amp;RelatedPages={AFF0AA51-76FC-43AA-AB03-BFFE331D6950}|{01B3EF98-C64F-4F71-BACE-EA0BAFE8A6E0}|{9EADCB46-7677-4826-AA77-0AC5F81DFFBC}|{F8415A35-9C34-47F7-BACE-42EAABBFA145}&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{666D8658-69FD-4802-B1DF-B4D2FEF1AD18}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "Dunn’s Law – more fuel for the active/passive fire? | What we think | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: "Dunn’s Law – more fuel for the active/passive fire?"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190305T094515Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: John Husselbee runs the rule over Dunn’s Law, a theory out of the US increasingly used to stoke the active/passive debate.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: "Dunn’s Law – more fuel for the active/passive fire?"
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p style="background: #fcfcfc; text-align: center;"><strong><span><img alt="John Husselbee - Dunn’s Law – more fuel for the active/passive fire?" src="-/media/8059AB6E8EBB4238973BEA522220560E.ashx?h=400&amp;w=600" style="height: 400px; width: 600px;" class="custom-image-height-auto"></span></strong></p>
+        <p style="background: #fcfcfc;"><strong style="font-size: 1.5rem;">Despite peace-making attempts by investors pushing the case for a blend of active and passive funds in a diversified portfolio, the so-called Great Debate rumbles on. Our attitude to this has remained constant and we continue to employ active and passive vehicles in our target-risk portfolios. When investing in an asset class, we identify the availability and suitability of tracker options first and then look at whether it is worth paying up for active managers.</strong></p>
+        <p style="background: #fcfcfc;"><span>For those yet to be convinced of the merits of holding both however, many investors will be trying to switch between the two at optimum times and one proposed method on which to judge this is known as Dunn&rsquo;s Law (a</span><span>fter Steve Dunn, a friend and cohort of US financial academic William Bernstein). </span></p>
+        <p style="background: #fcfcfc;"><span>This attempts to explain why certain periods have been kinder to active managers than others and </span><span>the ultimate conclusion is that when an asset class does well, an index tracker in that class will usually outperform actively managed funds, but when an asset class does poorly, actively managed funds will beat the index. </span></p>
+        <p style="background: #fcfcfc;"><span>To explain this, the concept of asset class purity has emerged: </span><span>the reason why more active managers beat their benchmark in underperforming styles is because indices are pure plays on a style while active managers often select at least a few securities outside that style. </span></p>
+        <p style="background: #fcfcfc;"><span>As indices tend to be more &lsquo;style pure&rsquo; than active counterparts, they should be harder to beat when the style they represent has strong relative performance. Conversely, they should be easier to beat when their style has weak relative performance.</span></p>
+        <p style="background: #fcfcfc;"><span>This was the topic of a recent research from Morningstar, with the group looking to put Dunn&rsquo;s Law to the test and establish whether style purity really can be a predictor of performance. Focusing on quarterly rolling one-, three-, and five-year performance from September 2002 to December 2017, Morningstar found that Dunn's Law has some merit, although the results do not always align with the theory's predictions.</span></p>
+        <p><span>&ldquo;It is possible our assumptions about how active managers differ from their index peers could be wrong,&rdquo; said the group. &ldquo;For example, active managers in the large-growth category could have a larger-cap orientation than their index peers, explaining why they might benefit from weaker performance among small-cap stocks.&rdquo;</span></p>
+        <p><span>The best explanation for issues with Dunn&rsquo;s Law however is the simple fact that success rates among active managers are what Morningstar calls &lsquo;noisy&rsquo;. While possible that some periods may be more conducive to stockpicking than others, success across active managers is not highly correlated, so success rates are partially driven by luck of the draw, according to the group.</span></p>
+        <p><span>Just as it is difficult to predict when the general market will do well, it is hard to estimate when certain investment styles will be in favour. With that in mind, the group concludes it is best to accept active managers' success rates will be volatile and not try to time exposure between active and passive funds.</span></p>
+        <p class="Body"><span>For our part, as we have said, we believe a blend of active and passive is appropriate for the majority of investors. It is all about finding the right tool for the right job &ndash; or, in this case, the right market. In the short to medium term, we continue to believe passive funds will offer adequate returns in line with a chosen index; if investors want outperformance over the long-term however, exposure to active managers will be required. </span></p>
+        <p class="Body"><span>It should not be forgotten that the last decade of passive ascendancy has come against largely rising markets but as the latter part of 2018 served to remind us, markets can very much go down as well as up and there is nowhere to hide when you are tracking a falling index.</span></p>
+        <p><span>Ultimately, trying to time anything when it comes to investing has proved all but impossible over the long term. Rather than looking to invest according to Dunn&rsquo;s &ndash; or any other &ndash; Law, we continue to advocate long-term patient portfolios using active and passive funds according to what market and macro conditions, valuations, and ultimately opportunities to enhance returns within our risk targets highlight as the most appropriate option. </span></p>
+        <p><span>For a comprehensive list of common financial words and terms, see our glossary&nbsp;<span style="color: #34b233;"><a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms">here</a>.</span></span></p>
+        <p style="margin-bottom: 0.0001pt;"><strong><span>&nbsp;</span></strong></p>
+        <p style="margin-bottom: 0.0001pt;"><strong><span>&nbsp;</span></strong></p>
+        <p style="margin-bottom: 0.0001pt;"><strong><span>Key Risks &amp; Disclaimer</span></strong></p>
+        <p style="margin-bottom: 0.0001pt;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt;"><span>Please remember that past performance is not a guide to future performance and the value of an investment and any income generated from them can fall as well as rise and is not guaranteed, therefore you may not get back the amount originally invested and potentially risk total loss of capital. </span></p>
+        <p style="margin-bottom: 0.0001pt;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt;"><span>This content should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy.&nbsp; It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, faxed, reproduced, divulged or distributed, in whole or in part, without the express written consent of Liontrust.</span></p>

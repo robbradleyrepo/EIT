@@ -1,0 +1,109 @@
+﻿---
+ID: "2bd7f438-dfd2-41ea-a70e-adb9653e46de"
+Parent: "bdb58bfd-c754-4b57-8d27-f2f4a14ee4dc"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2019/07/A digital postcard from San Francisco
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 1300
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{15E36746-CBF3-47AB-BBC6-3FBC84041EA3}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{E8F3C23A-6E04-430A-9567-DAE2A88B3B5D}"
+              p:after="r[@uid='{15E36746-CBF3-47AB-BBC6-3FBC84041EA3}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{A5DD22B6-61E3-4B7D-BA4E-59C622FF878E}"
+              p:after="r[@uid='{E8F3C23A-6E04-430A-9567-DAE2A88B3B5D}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="RelatedPages=%7b035EFDA3-BC0A-43D6-9548-FC77F9116B6F%7d%7c%7bFA0E822B-9229-47E9-9341-79282A4EE71F%7d%7c%7b78CD7F91-7E07-49DE-8344-7619CE0A64C3%7d%7c%7bF8415A35-9C34-47F7-BACE-42EAABBFA145%7d&amp;Title=See+also...&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{3D5873D2-8F3E-4B53-A8EC-5DEF94420AD5}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: A digital postcard from San Francisco | What we think | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: A digital postcard from San Francisco
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190704T092746Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: As the US celebrates Independence Day, Liontrust’s Simon Clements reflects on his recent visit to the US, and explains how companies such as Paypal are helping make the world a safer and more efficient place.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: A digital postcard from San Francisco
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p style="text-align: center;"><strong><img height="332" alt="San Francisco " width="600" src="-/media/CBCD6D50BC15413BAD37BEF8273FA408.ashx" class="custom-image-height-auto"></strong></p>
+        <p><strong>The fast-changing landscape of our economy, particularly the increasingly rapid digitalisation trend, remains an important growth opportunity for investors. A key question we ask ourselves at Liontrust is how and where these technological trends are contributing to a more sustainable global economy.</strong></p>
+        <p>Three of our core holdings across the Sustainable Future funds illustrate the sort of companies we favour in this space, with great products and growth prospects but also with a focus on making the world a better place. I recently visited all three companies in San Francisco. </p>
+        <p>My first meeting was with <strong>Intuit</strong>, a financial software business with two key platforms, both of which provide important sustainability benefits. One is Quickbooks, a product offering easy-to-use accounting software for small businesses. It allows the small business owner to navigate the tricky area of accounting and book-keeping in a simple way, leaving them more time with customers, employees and their own families. </p>
+        <p>Intuit estimates that Quickbooks saves each customer, on average, 40 hours per month as well as $3,500 in tax a year. Its second key product is another time and money saver: Turbo Tax, which ensures regulation is easier to understand and navigate and that taxes are paid simply and accurately &ndash; we think this is important from an overall societal perspective.</p>
+        <p>Intuit has transitioned its software offering to a cloud-based platform, which has been a critical success for a few reasons. First, the shift to the cloud vastly increases the addressable market for the business: when the price of your product drops from thousands of dollars up front to $20 per month, you obviously have many more customers who can afford it. You also ensure everyone has access to the most up-to-date software, which tends to lead to greater customer &ldquo;stickiness&rdquo;.&nbsp; </p>
+        <p>Cloud computing also has material benefits from an efficiency perspective given that it consumes significantly less energy than having servers and hardware on the premises. This cloud transition has translated into accelerating growth, increased market share and higher profit margins &ndash; although the key, of course, is having compelling products.&nbsp; </p>
+        <p>Another core holding I met on my visit was <strong>Paypal</strong>. By understanding what is important to consumers and merchants, Paypal has risen to become the number one choice for online payment transactions. </p>
+        <p>A customer&rsquo;s priority when they transact online is to ensure their personal and financial information is safe and they are not exposed to fraudulent sellers. The company is able to use the huge amount of data it collects on merchants to ensure the chances of exposure to a fraudulent entity is very small. Further, in creating its digital wallet, Paypal has ensured it is the hub in the network between buyer and seller. As it is accepted on so many websites, you don&rsquo;t need to risk sharing your financial details with an unknown seller &ndash; you only ever need to give your information to Paypal. </p>
+        <p>Merchants&rsquo; priorities are for customer confidence in their purchase, and increased conversion rates. The stats stack up here: figures show customer conversion at checkout is 90% with Paypal, compared to around 50% when merchants use their own payment platform.</p>
+        <p>Given that Paypal has 277 million accounts, it is clearly a market leader and its products continue to offer consumers and merchants a safer and more secure way to transact online. <em>Enhancing digital security</em> is an important theme of the modern age and a key one for our funds, and Paypal is one company that enables a safer online world. </p>
+        <p>Finalising my visit was a session with <strong>Equinix</strong>, another business we see as a key player in the emerging digital economy. Held in our funds since 2011, the company runs co-location data centres, providing a gateway into important digital infrastructure such as public cloud computing networks. </p>
+        <p>The key resource used by the digital sector is power: the technology industry in the US now emits more carbon than ever before, so more efficient data centres are vital. For data centres themselves, power is their biggest cost, giving further incentives to design and run their centres more efficiently.</p>
+        <p>Equinix stands out as the only global player meeting this demand, and its centres have become an integral part of the plumbing for the modern digital economy. Its assets are almost impossible to copy, creating an important competitive advantage. On top of this, its business is addressing critical environmental impacts of the technology industry. Again, this is a company that is thriving amid the shift to a more sustainable global economy.</p>
+        <p><span>For a comprehensive list of common financial words and terms, see our glossary&nbsp;<span style="color: #34b233;"><a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms">here</a>.</span>&nbsp;</span></p>
+        <p><strong><span><br>
+        <strong>Key Risks </strong></span></strong><span><br>
+        <br>
+        <strong>Past performance is not a guide to future performance.</strong> Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. The majority of the Liontrust Sustainable Future Funds have holdings which are denominated in currencies other than Sterling and may be affected by movements in exchange rates. Some of these funds invest in emerging markets which may involve a higher element of risk due to less well-regulated markets and political and economic instability. Consequently the value of an investment may rise or fall in line with the exchange rates. Liontrust UK Ethical Fund, Liontrust SF European Growth Fund and Liontrust SF UK Growth Fund invest geographically in a narrow range and has a concentrated portfolio of securities, there is an increased risk of volatility which may result in frequent rises and falls in the Fund&rsquo;s share price. Liontrust SF Managed Fund, Liontrust SF Corporate Bond Fund, Liontrust SF Cautious Managed Fund, Liontrust SF Defensive Managed Fund and Liontrust Monthly Income Bond Fund invest in bonds and other fixed-interest securities - fluctuations in interest rates are likely to affect the value of these financial instruments. If long-term interest rates rise, the value of your shares is likely to fall. If you need to access your money quickly it is possible that, in difficult market conditions, it could be hard to sell holdings in corporate bond funds. This is because there is low trading activity in the markets for many of the bonds held by these funds. Mentioned above five funds can also invest in derivatives. Derivatives are used to protect against currencies, credit and interests rates move or for investment purposes. There is a risk that losses could be made on derivative positions or that the counterparties could fail to complete on transactions.<br>
+        <br>
+        <strong>Disclaimer</strong><br>
+        <br>
+        The information and opinions provided should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</span></p>

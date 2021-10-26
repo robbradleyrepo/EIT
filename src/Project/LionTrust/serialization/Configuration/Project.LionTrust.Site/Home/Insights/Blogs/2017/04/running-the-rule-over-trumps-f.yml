@@ -1,0 +1,159 @@
+﻿---
+ID: "3b580393-6366-4b54-89a8-4d4b2dea7f9d"
+Parent: "28bb6283-e404-4e73-a894-9886adf1998f"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2017/04/running-the-rule-over-trumps-first-100-days"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 84600
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{A6305754-2072-45B1-8A3B-89E8857EC552}"
+          p:after="r[@uid='{30A0A4C8-974F-4822-9DCB-DE14881E0400}']"
+          s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+          s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+          s:par="DatasourceRule"
+          s:ph="/content/side-content" />
+        <r
+          uid="{E59291D8-7EFD-46B4-9C95-8BAF76C63751}"
+          p:after="r[@uid='{A6305754-2072-45B1-8A3B-89E8857EC552}']"
+          s:ds="{71B20482-B038-49D5-895C-ED6D46D5095F}"
+          s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+          s:par="DatasourceRule"
+          s:ph="/content/side-content" />
+        <r
+          uid="{3B97BBB9-558D-45AD-9DE0-E31352FA4AB1}"
+          p:after="*[1=2]"
+          s:ds=""
+          s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+          s:par="Title=See%20also&amp;RelatedPages=%7B01B3EF98-C64F-4F71-BACE-EA0BAFE8A6E0%7D%7C%7B049E8AFC-178C-4B5E-A49C-DEE723434126%7D%7C%7B44FBC176-6761-4C7D-8EF7-175AB98F8DC6%7D%7C%7BA11C8D77-5074-4481-A6FD-4EA5E55CBDD4%7D%7C%7B700A46C6-F742-461A-BCC9-1C48DD257AC1%7D&amp;MaximumNoOfLinks=4"
+          s:ph="/content/side-content" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "094932b9-ff77-4977-966e-d18f7c7ac091"
+      Hint: LegacyArticle_Subtitle
+      Value: "John Husselbee, Jamie Clark, Mark Williams, James Inglis-Jones & Olly Russ"
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: 
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Running the rule over Trump’s first 100 days | What we think | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: Running the rule over Trump’s first 100 days
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: "20170425T114813:636287176932937695"
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: As President Trump approaches his 100th day in office (29 April), Liontrust’s fund managers take a look at his impact on markets.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Running the rule over Trump’s first 100 days
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p><strong>As President Trump approaches his 100th day in office (29 April), Liontrust’s fund managers take a look at his impact on markets.</strong></p>
+        <p><strong><br>
+        </strong></p>
+        <p><strong><span style="color: #34b233;">Trump’s <em>Apprentice</em>-ship in business did not equip him for political office</span></strong></p>
+        <p><strong><img alt="John Husselbee" src="~/media/C98C7331B5FE4554A29B9E8081E0EB87.ashx?h=102&amp;w=102" style="height: 102px; width: 102px;"></strong></p><p><strong>John Husselbee, Head of <a href="~/link.aspx?_id=01B3EF98C64F4F71BACEEA0BAFE8A6E0&amp;_z=z">Multi-Asset</a></strong>: “Smaller companies are seen to be purer plays on the domestic rather than global economy and, as such, the IA North American Smaller Companies sector has been a big beneficiary of investors looking to express a bullish view of Trump’s first 100 days in office. Trump is a businessman not a politician, so he is seen as pro-business. But I have concerns over the extent to which he will be able to back up his promises, a risk which has been highlighted by his failure on ‘Obamacare’. Enacting political change is a laborious process, and Trump may find that his <em>Apprentice</em>-ship in business has not left him well equipped for the slow pace of government. In addition, while his corporate tax reform has dominated sentiment, not all of his likely policies will be so business-friendly. In my view, his protectionist agenda will only hurt the US consumer and economy.”</p>
+        <p><img alt="John Husselbee - Trump’s Apprentice-ship in business did not equip him for political office" src="~/media/4F13A7E1F453415D9072173C0A88501A.ashx?h=auto&amp;w=600" style="height: auto; width: 600px;"></p>
+        <p style="text-align: justify;"><em>Source: FE, sterling terms total return.</em></p>
+        <p><br>
+        </p>
+        <p><span style="color: #34b233;"><strong>America Last?</strong><br>
+        </span></p>
+        <p><span style="color: #34b233;"><strong><img alt="Jamie Clark" src="~/media/6F5DC19FDEC74543B1DDB16D48140E5F.ashx?h=102&amp;w=102" style="height: 102px; width: 102px;"><br>
+        </strong></span></p>
+        <p style="text-align: justify;"><strong>Jamie Clark, fund manager, <a href="~/link.aspx?_id=700A46C6F742461ABCC91C48DD257AC1&amp;_z=z">Macro-Thematic</a> team</strong>: “The chart below illustrates the unique increase in mortality experienced by white Americans with low levels of educational attainment. Attributed to “increases in drug overdose, suicides and alcohol-related liver mortality”, these are characterised as deaths of despair. Many link this trend to declining real incomes and worsening job opportunities. </p>
+        <p> </p>
+        <p> </p>
+        <p style="text-align: justify;">To be clear, Trump didn’t win for this reason. But his electoral pledge to <em>Make America Great Again</em> was an explicit appeal to Americans aggrieved by the economic factors that likely underlie increasing white mortality rates. </p>
+        <p> </p>
+        <p> This gives good reason to be surprised by Trump’s early foreign policy. Overtures to China, Syrian missile strikes and threats against North Korea are strikingly at odds with the isolationism of <em>America First</em>. Understandably, this has provoked doubts about Trump’s domestic reflationary agenda and markets have recently softened. Concrete policy must be forthcoming, or the <em>Trumpflation</em> rally may unravel further.”<br>
+        <img alt="Jamie Clark - America last?" src="~/media/E702A728BFC64FE490CF90C52D1F3B7E.ashx?h=auto&amp;w=600" style="height: auto; width: 600px;"></p>
+        <p><em>Source: Case and Deaton: “Mortality and Morbidity in the 21st century”, April 2017.</em><br>
+        <br>
+        </p>
+        <p><strong><span style="color: #34b233;">Trump’s approach to Asia proving more pragmatic than his election rhetoric</span></strong></p>
+        <p><span style="color: #34b233;"><strong><img alt="Mark Williams" src="~/media/6A142F4027CD4723897E7F9E3F2A9D07.ashx?h=102&amp;w=102" style="height: 102px; width: 102px;"><br>
+        </strong></span></p>
+        <p><strong>Mark Williams, fund manager, <a href="~/link.aspx?_id=A11C8D7750744481A6FD4EA5E55CBDD4&amp;_z=z">Asia team</a>:</strong> “Trump’s election rhetoric targeted China in three key areas: China manipulating its currency to gain an unfair export advantage; China’s trade advantage being tackled by tariffs; and a change in the US’s regional military stance. In his first 100 days, he has already shown that his presidency may prove to be pragmatic on these matters, recently stating that he will not label China a currency manipulator following a summit with Chinese President Xi Jinping. </p>
+        <p style="text-align: justify;">We believe the likelihood of an escalating trade war with China is low for a number of reasons: any China-specific tariffs would probably lead to jobs going to countries other than the United States; if a broader import duty was placed on goods the impact would be inflationary, domestically impacting the very people that one would expect Trump to want to help; and if China responded with its own tariffs, this would be bad for US exporters to the country such as Boeing. </p>
+        <p style="text-align: justify;">We recognise that Trump is unpredictable, but it seems unlikely that he would deliberately orchestrate a Chinese conflict that we believe would hurt American corporates and consumers.”</p>
+        <strong>US exports by destination, 2015<br>
+        </strong>
+        <p>
+        </p>
+        <div><strong><img height="auto" alt="Mark Williams - Trump’s approach to Asia proving more pragmatic than his election rhetoric " src="~/media/E4E7D97606B1466186E22B9FA23C7251.ashx?h=auto&amp;w=600" style="width: 600px;"><br>
+        </strong></div>
+        <p><em>Source: OEC, UN COMTRADE</em></p>
+        <p><strong><span style="color: #34b233;"><br>
+        </span></strong></p>
+        <p><strong><span style="color: #34b233;">Unusually synchronised upswing underpinned by economic strength</span></strong><br>
+        <br>
+        </p>
+        <p><img alt="James Inglis-Jones" src="~/media/097AB2E032234239A3CD31193FE4F08A.ashx?h=102&amp;w=102" style="height: 102px; width: 102px;"></p>
+        <p style="text-align: justify;"><strong>James Inglis-Jones, fund manager, <a href="~/link.aspx?_id=44FBC17667614C7D8EF7175AB98F8DC6&amp;_z=z">Cashflow Solution team</a></strong>: “The ‘Trump trade’ has coincided with European markets entering an uptrend, as defined by our indicators of market trend regime. A rash of recent good economic data points has also contributed to an unusually synchronised upswing across global markets. Investor anxiety is now at very low levels relative to history, which can be a contrarian indicator of overvalued markets. But there is no sign that this very low level of anxiety is spilling over into overly aggressive corporate investment behaviour that would make us much more cautious on equity market prospects. While markets appear to have taken Trump’s first 100 days in their stride, there is clearly scope for a number of political ‘known unknowns’ to disrupt markets in the next 100 days and beyond – starting with the forthcoming French presidential election and the recently called UK election.”<strong> </strong></p>
+        <p style="text-align: justify;"><strong>Pick up in Manufacturing PMI</strong></p>
+        <p style="text-align: justify;"><img height="auto" alt="James Inglis-Jones - Unusually synchronised upswing underpinned by economic strength" src="~/media/F1D38301FF0B44B7B11015E4E916A799.ashx?h=auto&amp;w=600" style="width: 600px;"></p>
+        <p style="text-align: justify;"><em>Source: Bloomberg, Markit, China Federation of Logistics &amp; Purchasing.</em></p>
+        <p><strong><span style="color: #34b233;"><br>
+        </span></strong></p>
+        <p><strong><span style="color: #34b233;">Crescendo in political ‘noise’ due – but investors should stick with fundamentals</span></strong></p>
+        <p><span style="color: #34b233;"><strong><img alt="Olly Russ" src="~/media/053B1A8CCABA4FCBA33F3DB1B5D95DAF.ashx?h=102&amp;w=102" style="height: 102px; width: 102px;"><br>
+        </strong></span></p>
+        <p>
+        </p>
+        <div>
+        <p style="text-align: justify;"><strong>Olly Russ, fund manager, <a href="~/link.aspx?_id=049E8AFC178C4B5EA49CDEE723434126&amp;_z=z">European Income</a></strong>: “Ahead of a heavy electoral timetable in 2017 – both on the continent and in the UK – Trump’s first 100 days in power have proven something of a case study in the level of political ‘noise’ that can engulf markets. Although investor sentiment has driven markets to new highs on the back of <em>Trumpflation</em>, substantive policy action has been thin on the ground, and the impact on underlying company earnings has therefore been somewhat minimal. We think that political noise will reach a crescendo in Europe this year (now including the UK!) but that investors are best served by a fundamental approach to selecting investments. The reality is that the more dangerous populist parties of the eurozone should remain some distance from the levers of actual power, having little effect on the governments of their various nations, let alone the earnings of the companies in which we are invested. </p>
+        <p> </p>
+        <p> One way in which Trump’s election is affecting European companies’ earnings though is via higher interest rates – as inflation and growth expectations have risen, so too have rate expectations and bond yields (albeit they have softened again more recently). This is a boon for the financials sector, where higher rates mean better net interest margins for banks and better reinvestment rates for insurers.”<br>
+        <br>
+        <strong>US 10 year bond yields since Trump’s election</strong><br>
+        <img height="auto" alt="Olly Russ - Crescendo in political ‘noise’ due – but investors should stick with fundamentals" src="~/media/E145B8D66D944A0586ACD2C689C77908.ashx?h=auto&amp;w=600" style="width: 600px;"></p>
+        </div>
+        <p style="text-align: justify;"><em>Source: Bloomberg.</em></p>
+        <p><strong><br>
+        </strong></p>
+        <p><strong>Disclaimer:</strong></p>
+        <p> </p>
+        <p>• Past performance is not a guide to future performance. • Do remember that the value of an investment and the income from it can fall as well as rise and you may not get back the amount originally invested. • Each Fund carries specific risks and you should refer to the information found on <a href="~/link.aspx?_id=FC17F0A6ECAA4CD7B80B6E67FDE3251B&amp;_z=z"><span style="color: #34b233;">this website</span></a> or in our <a href="~/link.aspx?_id=EB1B6FD8B4974758B0154344B0948D8A&amp;_z=z"><span style="color: #34b233;">literature</span></a> (e.g. Prospectus) for details.</p>
+        <p> </p>
+        <p> </p>
+        <p>• The information and opinions provided should not be construed as advice for investment in any product or security mentioned.&nbsp; • Always research your own investments and consult with a regulated investment adviser before investing.</p>

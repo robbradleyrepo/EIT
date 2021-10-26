@@ -1,0 +1,33 @@
+﻿---
+ID: "f6cefd24-a7b6-413f-99eb-0e7e3a541bc6"
+Parent: "1f99977e-3ff0-41e6-948b-342d9c3edc88"
+Template: "66497cf5-e59e-439f-9331-44abae0ea0cc"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/_Local/BC007 - Featured Article Hero"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{4DBCCF0D-3EBA-4931-B298-1219A7A7AF15}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210625T110235Z
+    - ID: "447ab9ea-f782-41a7-8269-e2aa6ef9862b"
+      Hint: FeaturedArticleHero_ArticleLinkText
+      Value: Read the Article
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "74a7e935-2a62-4192-b046-958c1addb98b"
+      Hint: FeaturedArticleHero_BackgroundImage
+      Value: |
+        <image mediaid="{95BD2557-065A-49D9-BA13-BB8F2D5C12AB}" />
+    - ID: "aacb640c-6457-4a38-81e2-7ae97db0db3a"
+      Hint: FeaturedArticleHero_Article
+      Type: Multilist with Search
+      Value: "{FF806C71-A9C1-499C-9F52-F1F2884A8D93}"

@@ -1,0 +1,114 @@
+﻿---
+ID: "954b364a-c8f5-4025-96dc-aed418226faf"
+Parent: "f4b9ddb2-64f1-4c86-b09e-12d4a3729a5d"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2018/05/five-companies-to-watch-in-sustainable-future-funds"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 7400
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{451AB1A0-7B7F-4A12-8DB0-7623D04E52F7}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{BD6FD6D8-8A8C-4348-A637-71A2228393A7}"
+              p:after="r[@uid='{451AB1A0-7B7F-4A12-8DB0-7623D04E52F7}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{36446775-44C3-4626-8CCB-5799B6DDEA6E}"
+              p:after="r[@uid='{BD6FD6D8-8A8C-4348-A637-71A2228393A7}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See also...&amp;RelatedPages={7B169127-E025-4744-9F25-B4D2C7A49337}|{778CE8AB-FEF1-45AE-9E36-0D8DC319A23B}|{FA0E822B-9229-47E9-9341-79282A4EE71F}|{8C51575E-E456-4F0D-A8CC-E081D251A901}&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{18287D6F-C09C-49D9-889E-474F5D3F143E}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Five companies to watch in Sustainable Future funds | What we think | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: Five companies to watch in Sustainable Future funds
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20160310T000000Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: Mike Appleby, Investment Manager, identifies five companies to watch which demonstrate our investment philosophy in practice. 
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Five companies to watch in Sustainable Future funds
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p style="text-align: left;"><em>This article was first published by Alliance Trust Investments on 1 March 2016.</em></p>
+        <p style="text-align: left;"><strong>Mike Appleby, Investment Manager, identifies five companies to watch which demonstrate our investment philosophy in practice. These include Vectura PLC, Sophos Group PLC, NXP Semiconductors, CHR Hansen Holdings, SAP.</strong></p>
+        <p style="text-align: left;">Below are five companies the team has identified which demonstrate our investment philosophy in practice. This is not a recommendation to buy or sell.</p>
+        <p style="text-align: left;"><strong>Vectura PLC&nbsp;</strong><br>
+        A UK based company exposed to the growing demand for their specialist inhaler products, which are used to treat lung disease such as asthma and Chronic Obstructive Pulmonary Disease (COPD). Their products are licensed to pharmaceutical companies in return for royalty payments. COPD affects older people who smoke or are exposed to polluted air, and is projected by the World Health Organisation to be the fifth largest burden of disease world-wide. Vectura&rsquo;s products help treat and manage these lung conditions.<br>
+        <br>
+        <strong>Sophos Group PLC&nbsp;<br>
+        </strong>A UK listed company providing security software to protect users from cyber crime. There is increasing demand for security as we use more online systems for banking payments and keeping personal data and as our world becomes more interconnected through communications and data networks. Sophos provide a solution to a key challenge for society, which is to keep our data and information secure and is part of our broad resilience investment theme.&nbsp;<br>
+        <br>
+        <strong>NXP Semiconductors&nbsp;<br>
+        </strong>A Dutch company that specialises in semiconductors used in mobiles, consumer electronics, security applications, autos and networking. We believe this company is set to benefit from increased digitisation and connectivity, especially within autos (as electrical content and sensors increase to improve efficiency and safety) as well as identification technologies to improve security (as used in e-government identification and e-banking).&nbsp;<br>
+        <br>
+        <strong>CHR Hansen Holdings&nbsp;<br>
+        </strong>A Danish listed company we identified as having exposure to healthy eating and wellness, through their development and production of natural ingredients for nutritional, pharmaceutical and agricultural industries. Their products are based on natural cultures and enzymes as opposed to the synthetic alternatives and we believe this will capture more demand than their conventional peers and drive sales for the company.&nbsp;<br>
+        <br>
+        <strong>SAP&nbsp;</strong><br>
+        A German company that develops business software to help large companies manage their business as well as customer and supplier relationships. By adopting their comprehensive software applications companies can improve how their business is run. The company&rsquo;s HANA system, quickly and cost effectively, gets large warehoused volumes of data to interact with more structured types of data, which ultimately saves management time and money. Information from this analysis can be used to better manage supply chains and customers and it can also assist companies in managing the environmental and social impacts of their business.<br>
+        <br>
+        </p>
+        <p style="text-align: left;">&nbsp;</p>
+        <div style="text-align: left;"><span style="font-size: 1.5rem;">For a comprehensive list of common financial words and terms, see our glossary&nbsp;</span><a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms" style="font-size: 1.5rem;"><span style="color: #34b233;">here</span></a><span style="font-size: 1.5rem;">.<br>
+        </span></div>
+        <p><span style="font-weight: 700; font-size: 1.5rem;"><br>
+        Key Risks</span></p>
+        <p><span style="font-weight: 700;">Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital.</span><span style="font-weight: 700;"></span>The issue of units/shares in Liontrust Funds may be subject to an initial charge, which will have an impact on the realisable value of the investment, particularly in the short term. Investments should always be considered as long term.</p>
+        <p>Some of the Funds managed by the Sustainable Future Equities team involve foreign currencies and may be subject to fluctuations in value due to movements in exchange rates.</p>
+        <p><span style="font-weight: 700;">Disclaimer</span></p>
+        <div><span style="font-size: 1.5rem;">This content should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy.&nbsp; It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, faxed, reproduced, divulged or distributed, in whole or in part, without the express written consent of Liontrust. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</span><span style="font-size: 1.5rem;"></span>&nbsp;</div>

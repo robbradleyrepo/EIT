@@ -1,0 +1,127 @@
+﻿---
+ID: "d0818178-481b-4777-8635-70f272866a02"
+Parent: "a2d92d05-97c8-4cfe-bc31-2b189da0ac55"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2017/07/living-in-a-low-volatility-world"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 79200
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{1A08369F-FF19-459B-ADB7-BE785A067C1F}"
+          p:after="r[@uid='{30A0A4C8-974F-4822-9DCB-DE14881E0400}']"
+          s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+          s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+          s:par="DatasourceRule"
+          s:ph="/content/side-content" />
+        <r
+          uid="{D278C842-6CA1-499A-A26C-36C482981F07}"
+          p:after="r[@uid='{1A08369F-FF19-459B-ADB7-BE785A067C1F}']"
+          s:ds="{71B20482-B038-49D5-895C-ED6D46D5095F}"
+          s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+          s:par="DatasourceRule"
+          s:ph="/content/side-content" />
+        <r
+          uid="{D839A76C-B31E-4D7C-BC3F-52CE548ED5E9}"
+          p:after="*[1=2]"
+          s:ds=""
+          s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+          s:par="Title=See%20also...&amp;RelatedPages=%7B9EADCB46-7677-4826-AA77-0AC5F81DFFBC%7D%7C%7BAFF0AA51-76FC-43AA-AB03-BFFE331D6950%7D%7C%7BFC17F0A6-ECAA-4CD7-B80B-6E67FDE3251B%7D%7C%7B7B169127-E025-4744-9F25-B4D2C7A49337%7D&amp;MaximumNoOfLinks=4"
+          s:ph="/content/side-content" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{666D8658-69FD-4802-B1DF-B4D2FEF1AD18}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "Living in a low-volatility world | What we think | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: "Living in a low-volatility world"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: "20170717T152727:636359020471300000"
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: "Volatility – or the current lack of it – is a hot topic in investment circles, with the so-called Fear index in the US (known as the Vix) sitting at all-time lows."
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: "Living in a low-volatility world"
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p class="article-summary">Volatility – or the current lack of it – is a hot topic in investment circles, with the so-called Fear index in the US (known as the Vix) sitting at all-time lows.</p>
+        <p> </p>
+        <p class="article-summary">The index dropped under 10 a number of times in May/June, nearing the record low of 9.31 from 22 December 1993. To put these figures in context, the average level since the Vix launched in 1990 has been 19.5 and the high, in October 2008, was above 80.</p>
+        <p><br>
+        </p>
+        <p class="article-summary" style="text-align: center;"><strong>Vix since launch</strong></p>
+        <p class="article-summary" style="text-align: center;"><img alt="John Husselbee: Living in a low-volatility world - Vix since launch" src="~/media/37FCAF3E847E4B829F10BDB2ACA16F93.ashx?h=196&amp;w=600" style="height: 196px; width: 600px;"></p>
+        <p class="article-summary"><i>Source: Bloomberg, Liontrust, as at 30.06.17</i></p>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <p class="article-summary">Commentators have suggested several reasons for such lows, including the market distortion created by the rise of smart beta strategies, widespread central bank intervention over recent years and falling correlations between individual stocks.</p>
+        <p> </p>
+        <p class="article-summary">More importantly, thinking is now turning to whether prevailing low volatility signals a spike to come and perhaps a bear market along with it. Speculation is also increasing about what might spark such a pick up, with the recent Fed rate rise and chaotic UK election both prompting little more than a blip.</p>
+        <p> </p>
+        <p class="article-summary">The end of QE may be a contender to cause a sustained rise in the Vix and mixed messages from central banks, particularly the UK’s Monetary Policy Committee, about the end of low interest rates drove heavy trading in June. Following the second-busiest month for the FTSE 100, in terms of total value traded, since the financial crisis, we saw the Vix edge towards 12 in early July before dropping off again.</p>
+        <p> </p>
+        <p class="article-summary">According to recent press articles, several multi-asset managers are adding protection to portfolios in a bid to protect against future risks, suggesting low volatility signals investor complacency. While I understand that thinking, basic supply/demand suggests that if portfolio protection is popular at present, it will also be increasingly expensive.</p>
+        <p> </p>
+        <p class="Body">Anyone familiar with our approach knows we are patient, long-term investors and we believe current concerns about a potential spike in volatility reinforce the case for a properly diversified portfolio. Another point to bear in mind is if investors are looking to produce a real return by outstripping inflation, the basket of goods that makes up RPI or CPI is far more internationally produced than in the past so a globally diversified portfolio is needed to keep pace with a globalised investment world.</p>
+        <p> </p>
+        <p class="article-summary">We continue to stress our view that intermittent corrections of 5-10% are a common and necessary function of healthy markets and suggest we are overdue such a pullback. Discounting any kind of black swan event however, we are not expecting a bear market to raise its head: there is plenty of political risk out there and equities are expensive but they remain supported while dividend yields continue to outstrip those available on bonds.</p>
+        <p> </p>
+        <p class="article-summary">Taking a wider view, we would also question the assumption that current low volatility, if taken as a sign of complacency, should be seen as an automatic sell signal. Research shows low volatility can persist for a long time and, while sometimes followed by a bear market, it is far from a reliable signal. Also, where low volatility has led into bearish conditions, there has typically been a gradual rise in volatility before the downturn sets in.</p>
+        <p> </p>
+        <p class="article-summary">With the twin shocks of Brexit and Donald Trump last year and a heavy year of election activity in 2017, no one can deny we are in an era of high political volatility and many have understandably asked why this has not fed through into stock markets.</p>
+        <p> </p>
+        <p class="article-summary">A first point to make is that in contrast to previous episodes of political uncertainty (2008 and 2011-12), earnings growth and measures of liquidity have actually improved over recent months.</p>
+        <p> </p>
+        <p class="article-summary">We also agree with the idea that a new form of lower-growth economic stability has emerged in recent years – now spreading from the US and UK into the eurozone. This can explain much of the fall in volatility, with many companies able to achieve robust earnings growth despite little in the way of economic growth.</p>
+        <p> </p>
+        <p class="article-summary">The first-quarter earnings season has been largely positive, with data from Citigroup forecasting annual earnings growth of 14.6% in 2017 compared to just 1.9% in 2016. For Q1, close to 80% of US companies reported positive earnings surprises, and 64% revealed better sales than expected. In Europe, the figures were 65% for earnings surprises and 53% for better-than-expected sales. </p>
+        <p> </p>
+        <p style="margin-bottom: 6pt;">Looking at previous periods of low volatility, it is possible to draw certain conclusions: they typically follow a recession, are defined by relative economic stability and are followed by periods of exuberance.</p>
+        <p> Some might argue we have already seen plenty of exuberance – with markets hitting record highs in recent months – but with many commentators now realistically asking if the FTSE 100 might breach 8000 in the coming months, we are in for a fascinating rest of 2017.</p>
+        <p><strong>Disclaimer:</strong></p>
+        <p> </p>
+        <p>• This content contains information and analysis that is believed to be accurate at the date of publication but is subject to change without notice. Whilst care has been taken in compiling this content, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness. Some parts/sections of this content may been compiled from external sources. Whilst these sources are believed to be reliable, the information has not been independently verified and therefore no representation is made as to its accuracy or completeness. • It should not be copied, faxed, reproduced, divulged or distributed, in whole or in part, without the express written consent of Liontrust. • Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. The issue of units/shares in Liontrust Funds may be subject to an initial charge, which will have an impact on the realisable value of the investment, particularly in the short term. Investments should always be considered as long term. • Any decision to invest should be always based on the final Prospectus and Key Investor Information Documents (KIIDs) and you should take independent legal advice if necessary. These documents contain important information which should be read before investing in any fund and they can be obtained, free of charge, <a href="http://www.liontrust.co.uk/what-we-offer/fund-literature">here</a>.</p>
+        <p> </p>
+        <p> • Any performance shown represents model portfolios which are periodically restructured and/or rebalanced. Actual returns may vary from the model returns.&nbsp; There is no certainty the investment objectives of the portfolio will actually be achieved and no warranty or representation is given to this effect.&nbsp; The portfolio therefore should be considered as a medium to long-term investment.<br>
+        </p>

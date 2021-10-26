@@ -1,0 +1,96 @@
+﻿---
+ID: "c3cd6f1e-8bfd-4261-88e0-2503969e7f8b"
+Parent: "185e2b85-57f7-4f19-93ff-2e40f8e999d7"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2018/04/what-do-3-per-cent-us-bond-yields-mean-for-investors"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 93900
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{629E0D03-3D58-4956-AFE1-66314026FEAB}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par=""
+              s:ph="/content/side-content" />
+            <r
+              uid="{F0267622-F388-4F4D-81FD-FEB9DE2AF699}"
+              p:after="r[@uid='{629E0D03-3D58-4956-AFE1-66314026FEAB}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par=""
+              s:ph="/content/side-content" />
+            <r
+              uid="{664F4263-ABE5-4167-8DBE-74F23D850D80}"
+              p:after="r[@uid='{F0267622-F388-4F4D-81FD-FEB9DE2AF699}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="RelatedPages=%7b423225AC-3A28-40F9-AADE-35C234FAFE15%7d%7c%7b4D7B7C2A-D992-47CA-AE5D-F2DEB5704C2E%7d%7c%7b78CD7F91-7E07-49DE-8344-7619CE0A64C3%7d%7c%7b8C51575E-E456-4F0D-A8CC-E081D251A901%7d&amp;Title=See+also...&amp;Placeholder=%2fcontent%2fside-content&amp;Caching=0%7c0%7c0%7c0%7c0%7c0%7c0%7c0"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{DBAE5B17-522C-480D-926B-55EA6C1873D3}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "What do 3% US bond yields mean for investors? | What we think | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: "What do 3% US bond yields mean for investors?"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180425T151558Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: "With US 10-year bond yields breaching the 3% level today for the first time since 2014, David Roberts examines what this means for fixed income markets."
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: "What do 3% US bond yields mean for investors?"
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p>As several news outlets reported this morning, US 10-year bond yields have climbed above 3% for the first time since 2014 &ndash; which provides a good opportunity to revisit our <a href="~/link.aspx?_id=38B83E560286457EABFB66D0BD080E99&amp;_z=z"><span style="color: #34b233;">February blog</span></a>.</p>
+        <p>Despite the press reaction, 3% is really little surprise given the underlying economics. There is less demand for bonds as quantitative easing (QE) dissipates and those still buying, including us, are demanding a fair price rather than the artificially low levels of the past 10 years.</p>
+        <p>There is also a decent chance we fall back below the 3% level later today.</p>
+        <p>In our previous piece, we mentioned the US yield curve as a lead indicator and we reiterate that view: when the curve stops flattening (where long bonds are outperforming short), that normally signals a recession in six months. The good news is that the market continues to flatten, suggesting we still have some time until growth falters.</p>
+        <p>What does this mean for bonds? Well, we would say yields at around 3% are starting to look worth a punt. Indeed, US corporate bonds are now paying around 4.5% and that has historically been a decent level to start buying. This is not a level where you will get rich, but it does mean you could receive a nominal return of close to 50% over the next 10 years just by buying and holding the asset class. We think that gives us a lot of protection against inflation as well as the potential volatility of the stock market.</p>
+        <p>In our new <a href="~/link.aspx?_id=423225AC3A2840F9AADE35C234FAFE15&amp;_z=z"><span style="color: #34b233;">Liontrust GF Strategic Bond</span></a>&nbsp;portfolio, we have just bought a little US debt. It is more attractively priced than for the past five years and we prefer to buy bonds that have fallen rather than those on the rise. It is still too early to move to a full market/peer group/index risk weighting but increasing our beta from around 0.7 to 0.8 at the new improved level makes sense.</p>
+        <p><strong><span><br>
+        Key Risks &amp; Disclaimer</span></strong></p>
+        <p><span>Please remember that past performance is not a guide to future performance and the value of an investment and any income generated from them can fall as well as rise and is not guaranteed, therefore you may not get back the amount originally invested and potentially risk total loss of capital.</span></p>
+        <p> <span>This blog should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy.&nbsp; It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, faxed, reproduced, divulged or distributed, in whole or in part, without the express written consent of Liontrust.</span></p>

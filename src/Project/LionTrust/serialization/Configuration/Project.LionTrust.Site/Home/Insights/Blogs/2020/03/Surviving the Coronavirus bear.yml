@@ -1,0 +1,107 @@
+﻿---
+ID: "868f1f8d-1bed-4fb3-aec2-18e9a6ad5fd3"
+Parent: "b6e111b4-48fd-4049-9267-7e17c83e5f6c"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2020/03/Surviving the Coronavirus bear market lessons from history
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 86200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{8D6DB856-19B6-46BE-A87C-5779531A254C}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{B4486A1C-D298-46E6-9ECE-51C8695E8B57}"
+              p:after="r[@uid='{8D6DB856-19B6-46BE-A87C-5779531A254C}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{05A17F17-C914-4D67-8491-52215B33D1AE}"
+              p:after="r[@uid='{B4486A1C-D298-46E6-9ECE-51C8695E8B57}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See%20also...&amp;RelatedPages=%7BAFF0AA51-76FC-43AA-AB03-BFFE331D6950%7D%7C%7B9EADCB46-7677-4826-AA77-0AC5F81DFFBC%7D%7C%7B01B3EF98-C64F-4F71-BACE-EA0BAFE8A6E0%7D%7C%7B77B5C263-DEEE-4A04-AE96-C01C2138DFCD%7D&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{666D8658-69FD-4802-B1DF-B4D2FEF1AD18}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "Surviving the Coronavirus bear market: lessons from history | What we think | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: "Surviving the Coronavirus bear market: lessons from history"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200323T113938Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: As investors consider how best to get through the Coronavirus bear market, John Husselbee looks at what history can teach us.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: "Surviving the Coronavirus bear market: lessons from history"
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p><b>There are moments in horror movies when you might not only cover your eyes but also forget it is only a film and you will soon be back in the real world. On occasions, investors can get the same feeling when watching stock markets.</b></p>
+        <p>We have experienced a great deal of turbulence in global markets over the past three months prompted by the Coronavirus (Covid-19) pandemic. This was exacerbated initially by the spat between OPEC and Russia over oil production.&nbsp;</p>
+        <p>This is the fourth bear market of my career and while the catalysts are always different, there are clear similarities that we expect to see this time as well – although, like everyone else, I cannot say exactly when that will be. Market participants are still attempting to analyse whether there will be a U or V-shaped recovery, or other letters besides these.</p>
+        <p>Markets immediately reacted to the pandemic as a classic growth scare: the difference to previous declines was the speed, with the slowest bull run in history giving way to one of the quickest descents into a bear market. Against this backdrop, we saw emergency policy responses from central banks and governments around the world. We will come back to some of the longer-term implications of this later.</p>
+        <p>Shorter term, there remains huge uncertainty and it is imperative we avoid the panic that can overtake markets. It is useful to put dramatic, short-term events into a long-term perspective: over Monday 19 October and Tuesday 20 October 1987, for example, the FTSE 100 fell 23% as Black Monday hit, but over the subsequent five years it produced a total return of 74.8%.&nbsp;</p>
+        <p>Bull markets ultimately last far longer than bear markets and these falls become mere blips on performance graphs the further back in history you go.</p>
+        <p>Another message to get across is that falling markets will always feel uncomfortable but a drawdown only becomes a loss when investors crystallise it by selling. Again, looking at history shows many of the worst days in markets are often followed by some of the best and selling out means missing these recoveries. If you take the FTSE 100 stretching back to 1984, there have only been nine negative years out of 36, meaning positive 12-month periods are four times more likely. The average annual maximum drawdown over the period is 14% but in the majority of cases, the index ended that period in positive territory.</p>
+        <p>What previous bear periods have taught us is that staying calm is vital and getting caught up in the fear and greed-inspired push and pull of volatile markets can be dangerous. No one can control markets but we can control our own emotions – and when it comes to investment, this means falling back on a robust, consistent and repeatable investment process.&nbsp;</p>
+        <p>Equity markets have consistently proved the best way to generate real returns but they rarely ascend in a straight line and we have to expect corrections on the path to long-term reward. Our focus remains on patient investing – what we call winning by not losing – and what this requires is the ability to look through short-term periods and keep faith in the long-term process.</p>
+        <p>Warren Buffett, as perhaps the world’s most famous investor, is finding himself quoted more often than ever in these troubled days and his claim that ‘the best new investment idea is often to buy more of what you already own’ is likely to prove particularly apt for many of our managers over the course of 2020.&nbsp;</p>
+        <p>In terms of our own asset allocation, we have been neutral since October 2018 when we pared back our US equity exposure, favouring areas where we see the best value – namely Europe, Japan Asia and emerging markets. We have also maintained a weighting in bonds for diversification, with a bias towards credit and high yield, and alternatives via hedge funds and absolute return vehicles.&nbsp;</p>
+        <p>At any point in time, our tactical asset allocation ranges from one to five, with one being the most bearish on markets and five the most positive. While the speed of the move into the bear market meant we were unable to move from neutral down to one for protection, we believe current positioning gives us scope to take advantage of increasingly cheap equity valuations as we look forward, increasing risk as we move up to five.</p>
+        <p>Coming back to that huge monetary and fiscal stimulus package, we would suggest trillions of dollars poured into the US might bring an end to recent dollar strength for example and a period of weaker greenback would potentially be positive for emerging markets.&nbsp;</p>
+        <p>Meanwhile, if we go back to a similar period of government largesse, in the wake of the Global Financial Crisis, a major fear was that quantitative easing would spark inflation but, ultimately, the forces of globalisation and technology were enough to keep it in check. Technology is more embedded now than it was then, however, and we might see companies increasingly eschew global supply chains and seek more local suppliers in a post-coronavirus world, both of which would put pressure on inflation.</p>
+        <p>Widespread onshoring would also have implications for issues such as climate change, and these are all things companies – and, of course, our underlying fund managers – will need to consider when we finally come out of these challenging days and can start looking to the future.</p>
+        <p>&nbsp;</p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt;"><span style="color: #222222;">For a comprehensive list of common financial words and terms, see our glossary&nbsp;<a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms" style="color: inherit;">here</a>.</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><span style="color: #222222;">&nbsp;</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><strong><span style="color: #222222;">Key Risks &amp; Disclaimer</span></strong></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><span style="color: #222222;">Please remember that past performance is not a guide to future performance and the value of an investment and any income generated from them can fall as well as rise and is not guaranteed, therefore you may not get back the amount originally invested and potentially risk total loss of capital.</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><span style="color: #222222;">This content should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy.&nbsp; It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, faxed, reproduced, divulged or distributed, in whole or in part, without the express written consent of Liontrust.</span></p>

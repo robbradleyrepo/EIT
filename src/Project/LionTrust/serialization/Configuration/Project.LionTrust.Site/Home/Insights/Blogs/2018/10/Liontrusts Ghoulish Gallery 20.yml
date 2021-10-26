@@ -1,0 +1,162 @@
+﻿---
+ID: "1f2c01a8-cdca-4eda-95b0-b5c11e336c0b"
+Parent: "27399066-72be-41e9-8bab-24069327d60a"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2018/10/Liontrusts Ghoulish Gallery 2018
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 68100
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{9F56B802-7A09-406F-A12C-F34820FC31AE}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{72DCC799-8865-4288-823D-50D279E72793}"
+              p:after="r[@uid='{9F56B802-7A09-406F-A12C-F34820FC31AE}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{AE9AAF50-4B6B-422D-A527-4B9C040B1001}"
+              p:after="r[@uid='{72DCC799-8865-4288-823D-50D279E72793}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See also...&amp;RelatedPages={8869E014-2CF1-49ED-BD0D-DBE46677C220}|{F8415A35-9C34-47F7-BACE-42EAABBFA145}|{E3CCBB0D-06F2-4BC8-BA6B-DE48FCD26D3C}|{77B5C263-DEEE-4A04-AE96-C01C2138DFCD}&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "094932b9-ff77-4977-966e-d18f7c7ac091"
+      Hint: LegacyArticle_Subtitle
+      Value: "David Roberts, Jamie Clark, Mike Appleby, Mark Williams, Olly Russ, James Inglis-Jones, Victoria Stevens & John Husselbee"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Liontrust’s Ghoulish Gallery | What we think | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: Liontrust’s Ghoulish Gallery
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181030T114255Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: We have put together 8 scary investment charts for Hallowe’en. If you feel brave enough, brace yourself and enter our fund managers’ ghoulish gallery.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Liontrust's Ghoulish Gallery 
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong style="text-align: justify; font-size: 1.5rem;">Enter our Ghoulish Gallery to find out which charts, stats and facts our fund managers have picked out for their potential to spook investors and discover how they are positioning portfolios to withstand them.</strong></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span>&nbsp;</span></strong></p>
+        <hr style="text-align: left;">
+        <p style="margin-bottom: 0.0001pt; text-align: left;">&nbsp;</p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span style="color: #34b233;"><span style="color: #000000;">David Roberts,</span> <a href="~/link.aspx?_id=4D7B7C2AD99247CAAE5DF2DEB5704C2E&amp;_z=z">Global Fixed Income team</a></span></strong></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span style="color: #0bb14d;">&nbsp; </span></strong></p>
+        <p style="text-align: center;"> <img alt="Halloween blog infographic GFI" src="-/media/5BA7B6844AE349828819913BD94FA8D2.ashx?h=338&amp;w=601&amp;hash=1B1AE62252020803F3DD2584326838B07671E4A6" style="height: 338px; width: 601px;">&nbsp;</p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="font-size: 1.5rem;">A phantasmagorical transformation has seen the bond market get riskier at the same time as it has got more expensive. A long bull market has driven bond prices up and bond yields down. The companies and governments that issue these bonds have very rationally responded by locking in low interest rates for longer through issuing longer-maturity debt. As a direct result, the sensitivity of bond prices to interest rate changes &ndash; a measure of risk known as &lsquo;duration&rsquo; &ndash; has been drifting up.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>While rising duration has been fine as yields have fallen because it means greater capital gains for investors, it is a troubling feature for those, such as us, who believe benchmark bonds are now dangerously overvalued. If rising interest rates cause bonds to sell-off, the price drops could be pretty terrifying.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>This should be more than enough to give passive bond investors the creeps. Many of them think they are &lsquo;neutral&rsquo; bond risk because their duration is in line with the market. But little do they know that they have much more risk than a decade ago, when bonds were a whole world cheaper!</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong style="font-size: 1.5rem;"><br>
+        Jamie Clark, </strong><strong style="font-size: 1.5rem;"><span style="color: #34b233;"><a href="~/link.aspx?_id=700A46C6F742461ABCC91C48DD257AC1&amp;_z=z">Macro-Thematic team<br>
+        <br>
+        </a></span></strong></p>
+        <p style="text-align: center;"><img height="338" alt="Halloween blog infographic Macro" width="601" src="-/media/351DD6310EF64863998C48A9629B1670.ashx?h=338&amp;w=601&amp;hash=C72301A4623D95D600FF4D2419767EF0C8F56F4C" style="height: 338px; width: 601px;"></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="font-size: 1.5rem;">Fans of zombie films will experience an eerie sense of </span><em style="font-size: 1.5rem;">d&eacute;j&agrave; vu </em><span style="font-size: 1.5rem;">should they consider global tobacco stocks. A mix of anti-smoking regulation, education and lifestyle changes has combined to depress cigarette consumption and inflict a seemingly mortal blow on the sector. But the advent of nominally safer next generation products (NGP), vapes and &lsquo;heat not burn</span><em style="font-size: 1.5rem;">&rsquo;</em><span style="font-size: 1.5rem;"> has calmed investor anxieties and reanimated this corpse-like industry.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>As with all good zombie flicks, however, the undead have a startlingly obvious weakness. In this case, NGPs are proving much less popular than hoped for with veteran smokers. Only this month British American Tobacco cut its 2018 NGP sales guidance by 10 per cent. This echoes the experience of US tobacco giant Philip Morris and weakens a key strand of the sector&rsquo;s bull case.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>&nbsp;</span></p>
+        <p style="text-align: left;"><span>Unlike the hit TV show <em>The Walking Dead</em>, we don&rsquo;t think this story stretches to another season.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span>Mike Appleby, </span></strong><strong><span style="color: #34b233;"><a href="~/link.aspx?_id=035EFDA3BC0A43D69548FC77F9116B6F&amp;_z=z">Sustainable Investment Team - Equities<br>
+        <br>
+        </a></span></strong></p>
+        <p><img height="338" alt="Halloween blog infographic Sustainable" width="601" src="-/media/FD14F00BED194320834BC684B328E902.ashx?h=338&amp;w=601&amp;hash=F171FAABAD207FC775B6AD18418A988E874AFE44" style="height: 338px; width: 601px;"></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>The world is getting warmer and scientists believe we need to reduce total greenhouse gas (GHG) emissions by 50 per cent by 2050 to avoid runaway climate change. This is an ambitious target and most people fail to grasp the magnitude of the shift required and the consequences of not making these changes.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>The energy transition needed to reduce GHG as global temperatures continue to rise is an example of the kind of transformative change the Liontrust Sustainable Investment team looks to find and invest in. Improving the efficiency of energy use is where we see the most opportunities to play this theme, with companies such as Kingspan (a producer of thermal insulation for buildings) and Daikin (the world leader in energy efficient air conditioners) well placed to profit from increased demand for their energy efficient products.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span>Mark Williams,</span></strong><strong><span style="text-decoration: underline; color: #34b233;"> <a href="~/link.aspx?_id=A11C8D7750744481A6FD4EA5E55CBDD4&amp;_z=z">Asia team</a></span></strong><strong><span> </span></strong></p>
+        &nbsp;
+        <p style="margin-bottom: 0.0001pt; text-align: center;"><span><img height="338" alt="Halloween blog infographic Asia" width="601" src="-/media/CBACE997D3D5478DA3D131C648786222.ashx?h=338&amp;w=601&amp;hash=F54A9A22EAA8C9B890611168637B00C3F7AD20EC" style="height: 338px; width: 601px;"></span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span><br>
+        &lsquo;Trade War&rsquo; worries have coincided with the US rate tightening cycle to create a backdrop of general aversion to emerging markets. Higher US interest rates are often seen as a risk to emerging markets due largely to the potential for capital outflows, as investors redirect funds towards the improving yields available in the US. </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>The collateral damage from rising US rates has been most prominent in Argentina &ndash; where the peso has fallen from fewer than 20 to the dollar to almost 40 and interest rates have risen above 70 per cent &ndash; and Turkey, which is grappling with ongoing political issues. Despite its stronger economic backdrop, Asia has not been left unscathed; any country reliant on international capital has been experiencing currency weakness. This has impacted Indonesia, the Philippines and India the most. </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>We see a normalisation of interest rates as a longer-term positive and think that (as with the &lsquo;taper tantrum&rsquo; of 2013) investors&rsquo; &lsquo;risk-off&rsquo; attitude will dissipate with time.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span><strong><br>
+        O</strong></span><strong><span>lly Russ, </span></strong><strong><span style="text-decoration: underline; color: #34b233;"><a href="~/link.aspx?_id=049E8AFC178C4B5EA49CDEE723434126&amp;_z=z">European Income team<br>
+        <br>
+        </a></span></strong></p>
+        <p style="text-align: center;"><img height="338" alt="Halloween blog infographic European Income" width="601" src="-/media/3ED14280660546DD87D12CD39249C3CD.ashx?h=338&amp;w=601&amp;hash=99440F9003EC25CB02615608E48181757913AA0A" style="height: 338px; width: 601px;"></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="font-size: 1.5rem; color: #000000;">Earlier this month, we highlighted some charts which illustrated how </span><a href="~/link.aspx?_id=CFC672E93EDE4F3E96BEB40FC335A900&amp;_z=z" style="font-size: 1.5rem;"><span style="color: #34b233;">bond market weakness can be good news for value investors</span></a><span style="font-size: 1.5rem; color: #000000;">. </span><span style="font-size: 1.5rem; color: #000000;">The flipside to this is that growth investors may be spooked by an increase in yields, which means future growth is discounted at a higher interest rate and has less &lsquo;net present value&rsquo; to investors.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>An increase in inflation is one mechanism by which we could expect to see nominal bond yields rise. The absolute level of inflation in Europe is still fairly subdued by historic standards, albeit at five year highs &ndash; around 2.1 per cent year-on-year at the last reading &ndash; but this is possibly of less significance than the direction of travel. It is particularly notable that wage pressures are starting to build.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>&nbsp;</span></p>
+        <p style="text-align: left;"><span>If inflationary forces keep creeping up, so too will the chances of a shock for bond yields and out-and-out growth areas of the equity market. </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span>James Inglis-Jones, </span></strong><strong><span style="text-decoration: underline; color: #34b233;"><a href="~/link.aspx?_id=44FBC17667614C7D8EF7175AB98F8DC6&amp;_z=z">Cashflow Solution team<br>
+        <br>
+        </a></span></strong></p>
+        <p style="text-align: center;"><img alt="Halloween blog infographic Cashflow" src="-/media/B79908B3ABAE4A2494534BCA4EDE02A3.ashx?h=338&amp;w=601&amp;hash=52DBCB57B034513D7C281B6BDB96E5911575C76A" style="height: 338px; width: 601px;"></p>
+        <p style="text-align: left;"><span>Markets are no longer in what we classify as an uptrend according to our quantitative indicators. It&rsquo;s not yet clear whether an uptrend will reassert itself or markets will instead break to the downside. </span></p>
+        <p style="text-align: left;"><span>History tells us that if market action deteriorates further and a fully-fledged downtrend is triggered, the current valuation backdrop could have some troubling implications &ndash; both for the scale of any correction and the associated volatility. Robert Shiller&rsquo;s cyclically-adjusted price earnings (CAPE) ratio is one of our favourite valuation measures. It is based on average earnings over 10 years, so goes some way to stripping out the shorter-term impact of economic business cycles. </span></p>
+        <p style="text-align: left;"><span>CAPE valuations are very full &ndash; particularly for the US market, which Shiller himself described as the most expensive market in the world during a recent interview. We are heavily underweight US markets in our global portfolios, while our long/short strategies stand ready to adopt a defensive positioning should a downtrend emerge.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span>Victoria Stevens, </span></strong><strong><span style="text-decoration: underline; color: #34b233;"><a href="~/link.aspx?_id=44FBC17667614C7D8EF7175AB98F8DC6&amp;_z=z">Economic Advantage team<br>
+        <br>
+        </a></span></strong></p>
+        <p style="text-align: center;"><img alt="Halloween blog infographic EA" src="-/media/EBC39FC2FBF14CC7A8AA78A7F0F4A069.ashx?h=338&amp;w=601&amp;hash=56C0B6F27D2AC17E523E8FE9BF35CA14BC64391F" style="height: 338px; width: 601px;"></p>
+        <p style="text-align: left;"><span>The secular displacement of physical store sales may continue to cause jitters among investors in the retail sector. ONS data show online sales roughly tripling over the last decade while &ldquo;bricks and mortar&rdquo; store sales struggled to keep pace with inflation. </span></p>
+        <p style="text-align: left;"><span>We have long avoided high street retailers as their store networks don&rsquo;t provide the barriers to competition necessary to qualify as a Distribution intangible asset under our investment process. </span><span>The opportunity for digital disruption is too great. While some high street stalwarts will be able to adapt &ndash; online sales at Next recently overtook store sales for example &ndash; the challenge from online upstarts such as ASOS and Boohoo shows no signs of abating. </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>There are investment opportunities as a result of this shift in spending. For example, we own a selection of companies that provide essential support services to the growing cohort of online retailers. One of these is dotDigital - an omnichannel digital marketing specialist. Its software helps marketing teams build, launch and manage customer engagement campaigns quickly and efficiently, and to monitor vast amounts of useful data in terms of how people are engaging with the campaign.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong style="font-size: 1.5rem;"><br>
+        John Husselbee, </strong><span style="font-size: 1.5rem;"><strong><span style="color: #34b233;"><a href="~/link.aspx?_id=01B3EF98C64F4F71BACEEA0BAFE8A6E0&amp;_z=z">Multi-Asset team<br>
+        <br>
+        </a></span></strong></span></p>
+        <p style="text-align: center;"><img alt="Halloween blog infographic Multi Asset" src="-/media/AB3EC9519CAF416EAE0FAE018C113B5C.ashx?h=338&amp;w=601&amp;hash=80236675F55F3FBA535522D7022A40F4208B0EA2" style="height: 338px; width: 601px;"></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="font-size: 1.5rem;">Central bank balance sheets have been stretched to their limits by almost a decade of quantitative easing. By buying up bonds in an effort to stimulate economic growth, policymakers have spent huge amounts of money racking up massive balance sheet assets, which at some point will need to be unwound (by selling the assets or allowing them to slowly redeem into cash).</span></p>
+        <p style="text-align: left;"><span><br>
+        Ten years after the financial crisis, global growth remains anaemic (the IMF has just downgraded its estimates again) and with central banks now firmly on the path towards unwinding balance sheets &ndash; a process dubbed &lsquo;quantitative tightening&rsquo; &ndash; there are growing concerns about possible recession. Alarmingly, one outspoken commentator is President Trump, who has become increasingly critical of Fed policy in recent months, arguing it risks choking off economic recovery.</span></p>
+        <p style="text-align: left;"><span>Given the sheer amount of central bank balance sheet expansion, this particular well looks dry in the event of a serious downturn.</span></p>
+        <p style="text-align: left;">For a comprehensive list of common financial words and terms, see our glossary&nbsp;<span style="color: #34b233;"><a href="/benefits-of-investing/guide-financial-words-terms">here</a>.</span></p>
+        <p style="text-align: left;">&nbsp;</p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span>Please remember that past performance is not a guide to future performance and the value of an investment and any income generated from it can fall as well as rise and is not guaranteed, therefore you may not get back the amount originally invested and potentially risk total loss of capital. </span></strong></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span>This Blog should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy. It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, faxed, reproduced, divulged or distributed, in whole or in part, without the express written consent of Liontrust.</span></p>

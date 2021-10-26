@@ -1,0 +1,104 @@
+﻿---
+ID: "76387f24-8c1a-42ad-8eaf-05873e204bda"
+Parent: "67db1196-0f6a-4612-b29d-10031cd5bacc"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2019/01/Phil Milburn Are we nearly there yet
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 83500
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{28B977EB-33C4-4A0A-B755-B08E5890FFAF}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{28978854-37BA-4369-B724-44AF0CD0BC48}"
+              p:after="r[@uid='{28B977EB-33C4-4A0A-B755-B08E5890FFAF}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{2DB417B6-8B9C-4C35-90DE-83A1E50ACE8B}"
+              p:after="r[@uid='{28978854-37BA-4369-B724-44AF0CD0BC48}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See also...&amp;RelatedPages={7AAA89F2-3BCF-4DFC-B2F6-C05A7A8E2DDE}|{2301B1D6-2812-4921-AC12-6BCF90F3A836}|{4D7B7C2A-D992-47CA-AE5D-F2DEB5704C2E}|{F8415A35-9C34-47F7-BACE-42EAABBFA145}&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{5ADAC049-CD3A-4638-B7D9-12A2DB704394}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "Are we nearly there yet? | What we think | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: "Are we nearly there yet?"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190131T125449Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: Bond market reaction to yesterday’s dovish Fed comments suggests this new policy stance is wrong given current data. Wages are rising, inflation near target;  Phil Milburn discusses how this is not the time to stop tightening and increases the risk of sharp correction.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: "Are we nearly there yet?"
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p style="text-align: left;"><em><span style="color: windowtext;">This blog was first published in <a href="https://www.heraldscotland.com/business_hq/17386970.phil-milburn-us-monetary-policy-are-we-nearly-there-yet/">The Herald</a> on 26 January 2019.</span></em></p>
+        <p style="text-align: left;"><strong><span>On any journey a commonly asked question is "are we nearly there yet?" The answer to this question when it concerns US monetary policy has huge ramifications for investors – it affects the prices of nearly all financial assets, as well as global economic activity. While there is a rest area for interest rates just around the corner, the final destination for the Federal Reserve's balance sheet is much further away on the horizon.</span></strong></p>
+        <p style="text-align: left;"><span>The Fed Funds rate (akin to the Bank of England base rate) is expressed nowadays as a range; it had languished at 0.00-0.25% for seven years until December 2015. Over the last three years the Federal Open Market Committee (FOMC), the rate setting body of the Federal Reserve, has gradually increased this, culminating in a rise to 2.25-2.50% at their December 2018 meeting. This is now deemed to be at the bottom end of a neutral range, where interest rates are neither stimulating nor restrictive for the US economy.&nbsp; </span></p>
+        <p style="text-align: left;"><span>During the fourth quarter of 2018, and particularly in December, the bond markets adjusted expectations to discount no further rate rises in 2019 from the Fed. This was effectively vindicated by the Fed at its January 30<sup>th</sup> meeting when they moved from a policy of “further gradual increases” to one of being “patient.”&nbsp; But I believe this move is premature, and that there will be two more rate rises in the US this year, taking us to a peak of 2.75-3.00%, the upper end of neutral policy.</span></p>
+        <p style="text-align: left;"><span>So why do I think further rate rises are warranted? My answer is wage inflation. The US employment market continues to be very strong and job creation is evident in the data. The most recent labour market statistics did see a small increase in unemployment, but underlying this was growth in labour force participation with more people entering/re-entering the potential employment pool. This is a very positive sign. US wage inflation has increased to 3.2% and I think the Fed will get a nosebleed if it reaches above 3.5%. All the signs are that it could do with the Phillips Curve, the theory that there is trade-off between unemployment and inflation, starting to bite now that there is a relative scarcity of labour in the US.&nbsp; </span></p>
+        <p style="text-align: left;"><span>I have long maintained that wage inflation is the single largest transmission mechanism that creates a sustained increase in overall inflation. Rises in, for example, commodity prices tend to have more of a substitution effect. In that regard the fall in energy prices over the last few months is a tailwind for consumers too, it frees up the proverbial "consumer wallet" to spend on less essential items. I cannot countenance that a central bank would let an inflationary wage cycle become endemic within the economy. It should be noted that in the Fed's reports they publish a "dot plot" which shows the interest rate expectations of each of the voting members of the FOMC; the median of the dot plots as recently as December was for two rate rises this year.&nbsp; In my opinion the Fed has been whipsawed by the financial markets but once this soft economic patch has passed they will be forced to capitulate again.</span></p>
+        <p style="text-align: left;"><span>Wage rises should be expected at this late stage in the cycle, but there has not been a corresponding gain in productivity so corporate profit margins will come under pressure. The importance of investing in those companies with decent pricing power in 2019 shouldn't be understated. </span></p>
+        <p style="text-align: left;"> <span>Once rates have reached 2.75-3.00% I believe that will be the peak for this cycle in the US. This does not represent the end of the monetary tightening journey though. The Fed continues to unwind some of its quantitative easing, or money printing as I prefer to call it. This quantitative tightening has already led to a reduction in the Federal Reserve's balance sheet of over $400 billion. The current pace of repayments is up to $50 billion a month, meaning by the end of 2019 the balance sheet will have contracted from its peak size by over $1 trillion. In my opinion we will come to a stop in the monetary tightening cycle when the markets encounter a dollar funding crisis. The Fed has adjusted their rhetoric to counter some of this risk, rather than targeting a reduction until the balance sheet was at a level “necessary to implement monetary policy efficiently and effectively” they will be keeping some “excess reserves” in the financial system. This move implies a final balance sheet size of ~$3-3.5trn rather than the prior approximately $2.5trn implicit target. One thing is for certain, the Fed reaching its final destination will cause some accidents to happen along the way!</span></p>
+        <div style="text-align: left;"><span style="font-size: 1.5rem;">For a comprehensive list of common financial words and terms, see our glossary&nbsp;</span><span style="font-size: 1.5rem; color: rgb(52, 178, 51);"><a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms">here</a>.</span><br></div><div>
+        <p style="text-align: left;">&nbsp;</p>
+        <p style="margin-bottom: 0pt; text-align: left;"><strong>Key Risks </strong></p>
+        <p style="margin-bottom: 0pt; text-align: left;">&nbsp;</p>
+        <p style="margin-bottom: 0pt; text-align: left;">Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. Investment in Funds managed by the Global Fixed Income team involves foreign currencies and may be subject to fluctuations in value due to movements in exchange rates. The value of fixed income securities will fall if the issuer is unable to repay its debt or has its credit rating reduced. Generally, the higher the perceived credit risk of the issuer, the higher the rate of interest. Bond markets may be subject to reduced liquidity. The Funds may invest in emerging markets/soft currencies and in financial derivative instruments, both of which may have the effect of increasing volatility.</p>
+        <p style="margin-bottom: 0pt; text-align: left;">&nbsp;</p>
+        <p style="margin-bottom: 0pt; text-align: left;"><strong>Disclaimer</strong></p>
+        <p style="margin-bottom: 0pt; text-align: left;">&nbsp;</p>
+        <p style="margin-bottom: 0pt; text-align: left;">The information and opinions provided should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</p>
+        </div>

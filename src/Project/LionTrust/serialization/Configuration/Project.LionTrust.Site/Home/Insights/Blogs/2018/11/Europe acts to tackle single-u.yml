@@ -1,0 +1,102 @@
+﻿---
+ID: "fca7a5e3-8440-4725-abb7-a67d3358fad1"
+Parent: "0acedebe-0875-4573-81d6-394e9bd71a11"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2018/11/Europe acts to tackle single-use plastics"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 6700
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{C57DA7BA-0CB8-4590-B3E0-D9230CF441D7}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{8376F4EB-F68E-41BB-993D-CCBCF4163732}"
+              p:after="r[@uid='{C57DA7BA-0CB8-4590-B3E0-D9230CF441D7}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{0D48B9E1-15BC-441B-B05B-612E13129359}"
+              p:after="r[@uid='{8376F4EB-F68E-41BB-993D-CCBCF4163732}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="RelatedPages=%7b78CD7F91-7E07-49DE-8344-7619CE0A64C3%7d%7c%7bFA0E822B-9229-47E9-9341-79282A4EE71F%7d%7c%7b035EFDA3-BC0A-43D6-9548-FC77F9116B6F%7d%7c%7bF8415A35-9C34-47F7-BACE-42EAABBFA145%7d&amp;Title=See+also...&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "094932b9-ff77-4977-966e-d18f7c7ac091"
+      Hint: LegacyArticle_Subtitle
+      Value: Neil Brown
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: 
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "Europe acts to tackle single-use plastics | What we think | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: "Europe acts to tackle single-use plastics"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181113T095814Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: "Neil Brown highlights boost for companies tackling plastic pollution as European politicians look to ban worst single-use products. "
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: "Europe acts to tackle single-use plastics"
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p style="text-align: center;"><img alt="Europe acts to tackle single-use plastics" src="-/media/76F341E8A3A84E3AAED25CA3D1834176.ashx?h=400&amp;w=600" style="font-size: 1.5rem; height: 400px; width: 600px;"></p>
+        <p><strong><span>Europe is beginning to act on plastic waste as politicians push ahead on proposals to tackle 10 of the most common single-use products littering beaches, as well as lost and abandoned fishing nets.</span></strong><span> </span></p>
+        <p><span>Plastic pollution is quickly moving up the global agenda and forms a key part of our <em>Increasing waste treatment and recycling</em> theme in the Liontrust Sustainable Future funds.</span></p>
+        <p><span>Data from the European Commission reveals that 10 key products, including cotton buds, straws, food containers and wrappers, account for 43 per cent of litter on the Continent’s beaches, with fishing gear making up a further 27 per cent. </span></p>
+        <p><span>The proposals target different measures for different products depending on their sustainability. Single-use plastics will be banned where alternatives are readily available and affordable, while for products without straightforward alternatives, the focus is on reducing consumption, design and labelling requirements, and waste management/clean-up obligations for producers. </span></p>
+        <p><span>From an investment perspective, we believe </span><span>a single set of rules for the EU market will help companies working to reduce plastic pollution to develop economies of scale and be more competitive in the global marketplace for sustainable products. We welcome this drive for European companies to develop a clear technological lead over global competitors.</span></p>
+        <p>Key holdings exposed to this theme across our funds include <b>Aquafil </b>(which uses fishing nets to create sustainable nylon), <b>Corbion </b>(a leading player in bioplastics) and <b>Smurfit </b>(which continues to innovate in paper packaging).</p>
+        <p class="Body"><span style="font-size: 1.5rem;">For a comprehensive list of common financial words and terms, see our glossary </span><a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms" style="font-size: 1.5rem;"><span style="color: #34b233;">here</span></a><span style="font-size: 1.5rem;">.</span><br></p>
+        <p class="Body"><span>&nbsp;</span></p>
+        <p class="Body"><strong>Key Risks </strong></p>
+        <p class="Body">Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. The majority of the Liontrust Sustainable Future Funds have holdings which are denominated in currencies other than Sterling and may be affected by movements in exchange rates. Some of these funds invest in emerging markets which may involve a higher element of risk due to less well regulated markets and political and economic instability. Consequently the value of an investment may rise or fall in line with the exchange rates. Liontrust UK Ethical Fund, Liontrust SF European Growth Fund and Liontrust SF UK Growth Fund invest geographically in a narrow range and has a concentrated portfolio of securities, there is an increased risk of volatility which may result in frequent rises and falls in the Fund’s share price. Liontrust SF Managed Fund, Liontrust SF Corporate Bond Fund, Liontrust SF Cautious Managed Fund, Liontrust SF Defensive Managed Fund and Liontrust Monthly Income Bond Fund invest in bonds and other fixed-interest securities - fluctuations in interest rates are likely to affect the value of these financial instruments. If long-term interest rates rise, the value of your shares is likely to fall. If you need to access your money quickly it is possible that, in difficult market conditions, it could be hard to sell holdings in corporate bond funds. This is because there is low trading activity in the markets for many of the bonds held by these funds. Mentioned above five funds can also invest in derivatives. Derivatives are used to protect against currencies, credit and interests rates move or for investment purposes. There is a risk that losses could be made on derivative positions or that the counterparties could fail to complete on transactions.</p>
+        <p class="Body"><strong>Disclaimer</strong></p>
+        <p class="Body">The information and opinions provided should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</p>

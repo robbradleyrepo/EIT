@@ -1,0 +1,25 @@
+﻿---
+ID: "67085468-7a69-41a6-8b27-98d26c688cee"
+Parent: "d18c82e2-635a-4164-a613-835a8c545101"
+Template: "d18c82e2-635a-4164-a613-835a8c545101"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Article/Article Folder/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: |
+    {810226BD-15AA-4F26-AB02-7A63B355D4A8}
+    {D18C82E2-635A-4164-A613-835A8C545101}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211025T185236Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

@@ -1,0 +1,111 @@
+﻿---
+ID: "1ce62e97-1b34-4cef-b560-36da4b2aef77"
+Parent: "55f4fff9-d497-4e3f-834f-77e361337a76"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2016/11/do-you-hear-the-people-sing"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 6000
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{D51ACFC7-863F-49D1-A296-56F03989B2CE}"
+          p:after="r[@uid='{30A0A4C8-974F-4822-9DCB-DE14881E0400}']"
+          s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+          s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+          s:par="DatasourceRule"
+          s:ph="/content/side-content" />
+        <r
+          uid="{628297CF-A310-42AB-A7F4-5A290B8C3B9E}"
+          p:after="r[@uid='{D51ACFC7-863F-49D1-A296-56F03989B2CE}']"
+          s:ds="{71B20482-B038-49D5-895C-ED6D46D5095F}"
+          s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+          s:par="DatasourceRule"
+          s:ph="/content/side-content" />
+        <r
+          uid="{3FEF7095-E895-456D-89B8-06F9C8F42BEF}"
+          p:after="*[1=2]"
+          s:ds=""
+          s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+          s:par="Title=See%20also&amp;RelatedPages=%7B9EADCB46-7677-4826-AA77-0AC5F81DFFBC%7D%7C%7B01B3EF98-C64F-4F71-BACE-EA0BAFE8A6E0%7D%7C%7B77B5C263-DEEE-4A04-AE96-C01C2138DFCD%7D&amp;MaximumNoOfLinks=3"
+          s:ph="/content/side-content" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{666D8658-69FD-4802-B1DF-B4D2FEF1AD18}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "Do you hear the people sing? | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: "Do you hear the people sing?"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: "20161125T105300:636156679802628747"
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: In my experience of fund management over the past thirty years, political risk has traditionally been more associated with emerging market economies rather than those of the developed world. The simple rationale has been that emerging market governments are typically considered to be less stable, and so investors should in turn demand a risk premium in the form of a higher expected return. 
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: "Do you hear the people sing?"
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        In my experience of fund management over the past thirty years, political risk has traditionally been more associated with emerging market economies rather than those of the developed world. The simple rationale has been that emerging market governments are typically considered to be less stable, and so investors should in turn demand a risk premium in the form of a higher expected return.&nbsp;<br>
+        <br>
+        However the surprise result in the UK's referendum in late June on EU membership has now challenged this notion and serves as yet another reminder that in politics we can take nothing for granted.&nbsp;<br>
+        <br>
+        It has been suggested that Brexit was a protest vote triggered by the rise of populism. Whether or not this is the case, the voice of nationalism can now be heard louder and louder both here and in the rest of the world. For it seems that many citizens in the West are becoming more and more frustrated by an era of globalisation which has effectively redistributed wealth by promoting the growth of the emerging markets’ middle classes. I recently attended a fund manager presentation which discussed this topic in some depth, with data being presented to show the shrinking of global inequality but more importantly the stagnation of the standard of living in the developed world.<br>
+        <br>
+        This also has to be considered in the context of increasing local inequality – negligible cash yields at the same time as an equity bull market – which has resulted from central bank intervention in the years following the Lehman Brothers collapse.<br>
+        <br>
+        In the US, nationalism is a bandwagon which presidential candidate Donald Trump is more than happy driving. He has already pledged a renegotiation of trade agreements with China and close neighbours Mexico. It also seems that Hilary Clinton is not averse to similar narrative on the question of trade. Whether it's building a wall or US corporates re-shoring their manufacturing from overseas, this is protectionism. These moves are potential barricades to global economic growth, to which the US remains the largest contributor. We should not forget that the global economy is only showing modest growth whilst still trying to shrug off the long term deflationary effects of cheap global manufacturing and – since the summer of 2014 – a significant fall in the oil price.<br>
+        <br>
+        For investors, this means further uncertainty but of a political rather than financial variety. The UK Government has indicated that Article 50 will be triggered by March 2017, but there is still a huge amount of uncertainty surrounding the Brexit process. Across the Atlantic, the US presidential campaign race has now entered the final lap with the first of the live TV debates. It seems for now that markets believe that Clinton will persuade her nation to elect the first female president to the White House. In Europe there is the Italian referendum on political reform. The prediction of such short-term outcomes has never been easy, but it now seems harder than ever.&nbsp;<br>
+        <br>
+        We believe that an investment process should avoid such uncertainty when possible. In order to find that in investment management you have to adopt and maintain a process that focuses on the long term.&nbsp;<br>
+        <br>
+        We follow an approach for our target risk portfolios which is firmly focused on the long term. In simple terms we want to buy assets when we consider them to be cheap and sell them when they become expensive. This 'buy low, sell high' approach is perhaps more important in today's market environment where valuations and sentiment are relatively high but seem guaranteed by central banks. We are wary of the longevity of this guarantee and some of the complacency we are witnessing in the market so believe it is prudent to continue to seek more resilience in the portfolios. That is to say we want to continue to participate in the upside of markets but do so in cheaper assets which we believe would be less vulnerable in a market sell off should investors lose confidence in central banks.<br>
+        <p><br>
+        </p>
+        <p><span style="font-weight: 700; font-size: 13px;"></span></p>
+        <strong>Disclaimer:</strong>
+        <div>
+        <p>• Past performance is not a guide to future performance. • Do remember that the value of an investment and the income from it can fall as well as rise and you may not get back the amount originally invested. • Any performance shown represents model portfolios which are periodically restructured and/or rebalanced. • Actual returns may vary from the model returns. • There is no certainty the investment objectives of the portfolio will actually be achieved and no warranty or representation is given to this effect. • The portfolio therefore should be considered as a medium to long-term investment.&nbsp;</p></div><div><p><br></p></div><div>
+        <p>• The information and opinions provided should not be construed as advice for investment in any product or security mentioned.&nbsp; • Always research your own investments and consult with a regulated investment adviser or licensed stock broker before investing.</p>&nbsp;</div><div><p><em><br></em></p></div><div><p><em>Originally published on 5 October 2016.<br>
+        <br>
+        </em></p>
+        </div>

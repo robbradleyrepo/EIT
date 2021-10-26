@@ -1,0 +1,117 @@
+﻿---
+ID: "c92a1d64-4de7-48eb-9f83-0a0fa1b292f5"
+Parent: "2d09e7fd-ef3a-4315-b270-c3d7de540e4e"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2020/02/Unbottling the gene genie
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 92800
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{48D3A643-8D13-4EB0-AB43-F3893FEC2456}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{C5168C03-9E1C-4A92-9A10-1A6A05967CB7}"
+              p:after="r[@uid='{48D3A643-8D13-4EB0-AB43-F3893FEC2456}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{47A51890-2834-452A-BD8C-5F3BC9576D11}"
+              p:after="r[@uid='{C5168C03-9E1C-4A92-9A10-1A6A05967CB7}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See%20also...&amp;RelatedPages=%7BFA0E822B-9229-47E9-9341-79282A4EE71F%7D%7C%7B035EFDA3-BC0A-43D6-9548-FC77F9116B6F%7D%7C%7BF8415A35-9C34-47F7-BACE-42EAABBFA145%7D%7C%7B77B5C263-DEEE-4A04-AE96-C01C2138DFCD%7D&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{6BB03725-B0C3-4DF1-A72E-DC8F4822D997}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Unbottling the gene genie | What we think | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: Unbottling the gene genie
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200212T133204Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: Gene therapy has the potential to transform the healthcare sector of the future. Laurie Don explains how, and what are the opportunities for investors.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Unbottling the gene genie
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p style="text-align: center;"><strong><span style="color: black;"><img src="-/media/8867F86C667C4A84BD564A4112483FFC.ashx?h=332&amp;w=600" style="height:332px; width:600px;" alt="Gene therapy" class="custom-image-height-auto" /></span></strong></p>
+        <p><strong><span style="color: black;">No longer the preserve of science fiction, gene therapy is set to become an increasingly important part of medical treatment and therefore of many companies we own under our <em>Enabling innovation in healthcare</em> theme.&nbsp; </span></strong></p>
+        <p class="Default"><span style="color: black; font-size: 1.5rem;">In simple terms, this therapy involves the introduction of normal genes into cells in place of missing or defective ones to correct a genetic disorder. With between 4,000 and 6,000 diagnosed genetic disorders in existence, we see an approaching tipping point where gene therapy becomes commonplace, just as happened with antibody drugs in the early 1980s.</span><br /></p>
+        <p class="Default"><span style="color: black; font-size: 1.5rem;">Pure-play gene therapy companies had sales of around $3bn in 2018 and consensus has this increasing to $6bn by next year. Highlighting the possible growth trajectory of this area, this would still only make up 1% of the overall prescription drugs market.</span><br /></p>
+        <p class="Default"><span style="color: black; font-size: 1.5rem;">While antibody and small molecule drugs function by binding to proteins, gene therapy works further upstream in the process, either modifying or replacing a defective gene or altering the messenger RNA before it is translated into the relevant protein. The most common way to get the correct piece of DNA into the body is using viruses and there are various types, each with its own pros and cons.</span><br /></p>
+        <p><span style="color: black; font-size: 1.5rem;">Scientists have been working on these therapies since the 1980s and the ultimate objective is to produce a corrected gene, deliver it to the correct cell, express it at the correct level and not produce any side effects. The body’s immune system may see the newly introduced viruses as intruders and attack them, which can cause inflammation and, in severe cases, organ failure. The most commonly raised example is the death of Jesse Gelsinger, who died in September 1999 due to an immune response triggered by the virus used to transfer the corrected gene into his body.</span><br /></p>
+        <p><span style="color: black; font-size: 1.5rem;">As time has passed, the science has progressed and we can now achieve results with far smaller doses of virus than in the past. That said, with safety implications like these, the potential benefit of gene therapy must be significant – which is why the focus is on curing fatal and severe diseases.</span><br /></p>
+        <p class="Default"><span style="color: black; font-size: 1.5rem;">It is also important to be clear on the scope of the technology, particularly given recent controversies in this area. We are specifically focused on mainstream somatic cell gene therapy, which involves modifications that affect the individual patient and will not be passed on to any offspring.</span><br /></p>
+        <p><span style="color: black; font-size: 1.5rem;">In contrast, the most contentious – and unfortunately newsworthy – side of this universe is called germline cell therapy, which modifies all of a patient’s cells and is passed on to later generations. This is currently banned in most developed countries including the US and UK.</span><br /></p>
+        <p><span style="color: black; font-size: 1.5rem;">We saw recently a case in which a Chinese scientist claimed he had genetically edited babies so they would not be able to contract HIV; this was widely condemned by the global scientific community and he is now in prison.</span><br /></p>
+        <p class="Default"><span style="color: black; font-size: 1.5rem;">A range of pharma and biotechnology companies continue to make progress in the mainstream somatic space, with several trials started and products launched. In recent years, we have seen various gene therapies approved and used commercially in Europe (Glybera from UniQure and Strimvelis from GlaxoSmithKline, for example); more recently, Kymriah (a cell therapy from Novartis) and Luxturna (from Spark Therapeutics) were approved in the US towards the end of 2017.</span><br /></p>
+        <p class="Default"><span style="color: black; font-size: 1.5rem;">From our perspective, the concept of a one-and-done treatment paradigm goes well with our focus on sustainable areas within healthcare, in terms of both innovation and affordability. The premise of gene therapy is that it works at the source and provides a one-time cure, with patient and payment providers both benefitting from clear and hopefully definitive results.</span><br /></p>
+        <p><span style="color: black; font-size: 1.5rem;">Payment for these treatments is expected to be done either as a one-off or on an annuity model; contrast this with the current system in which many healthcare companies get paid on volumes regardless of results and could be considered to benefit from continued illness. As long as someone remains ill, ongoing treatment is required and there is the additional kicker of price hikes for drugs year after year.</span><br /></p>
+        <p><span style="color: black; font-size: 1.5rem;">A further possible advantage lies in the nature of gene therapy, which means that when the FDA is looking at approval, it will likely spend 80% of time on the company’s manufacturing capabilities and processes and 20% on clinical data, reversing the scrutiny given to traditional biopharma products.</span><br /></p>
+        <p><span style="font-size: 1.5rem; color: black;">As gene therapies can cure diseases, they can potentially be approved on a specially designated pathway – much faster than traditional treatments. This means the company involved will potentially have to jump straight from small-scale production to large-scale manufacture, suggesting that when outsourcing, it is sensible to link up early with a partner who can be trusted working at scale. </span><span style="font-size: 1.5rem; color: black;">Given these dynamics, we are looking to find companies that can fill an essential part of the supply chain, on the assumption such stocks will grow with the industry regardless of which specific therapies are most successful.</span><br /></p>
+        <p><span style="font-size: 1.5rem; color: black;">One such play is </span><span style="font-size: 1.5rem; color: black;">Oxford BioMedica: production of viral vectors (the mechanism to introduce new genes to the body) is a key step in developing these therapies and this UK company has invested significant time and money to become the leading producer of one of these vectors (called LentiVector).</span><br /></p>
+        <p><span style="color: black; font-size: 1.5rem;">The majority of its sales are currently from oncology work for Novartis and its CAR-T drug but with a host of further relationships and licensing agreements progressing, we see the company continuing to diversify and benefit from overall growth in gene therapies.</span><br /></p>
+        <p style="border: none;"><span style="color: black; font-size: 1.5rem;">Spark Therapeutics, meanwhile, was the first to obtain approval of a gene therapy in the US and was acquired by Roche, which we hold across our funds. Spark’s lead product Luxturna is a therapy for Inherited Retinal Disease (IRD) caused by mutations in the RPE gene.</span><br /></p>
+        <p><span style="color: black; font-size: 1.5rem;">Spark is committed to challenging the ‘inevitability’ of genetic diseases including blindness, haemophilia, lysosomal storage disorders and neurodegenerative diseases – and adds a further string to Roche, a long-term holding under our </span><em style="color: black; font-size: 1.5rem;">Enabling Innovation in healthcare </em><span style="color: black; font-size: 1.5rem;">theme.</span><br /></p>
+        <p><span style="color: black; font-size: 1.5rem;">Novartis acquired AveXis last year, bringing with it the Zolgensma gene therapy as well as the expertise and platform behind its development, and we would expect to see more companies look to access a market predicted to approach $15bn globally in the next five years.</span><br /></p>
+        <p><span style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-size: 1.5rem;">For a comprehensive list of common financial words and terms, see our glossary&nbsp;</span><span style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-size: 1.5rem; color: rgb(52, 178, 51);"><a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms">here</a>.</span><br /></p><p style="background: white; margin: 0cm 0cm 10.5pt;"><span style="background: white; color: #34b233;">
+        <br />
+        <br />
+        </span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><span><strong><span style="color: #222222;">Key Risks</span></strong></span><strong><span style="color: #222222;"><br />
+        </span></strong><br />
+        <span>Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. The majority of the Liontrust Sustainable Future Funds have holdings which are denominated in currencies other than Sterling and may be affected by movements in exchange rates. Some of these funds invest in emerging markets which may involve a higher element of risk due to less well-regulated markets and political and economic instability. Consequently the value of an investment may rise or fall in line with the exchange rates. Liontrust UK Ethical Fund, Liontrust SF European Growth Fund and Liontrust SF UK Growth Fund invest geographically in a narrow range and has a concentrated portfolio of securities, there is an increased risk of volatility which may result in frequent rises and falls in the Fund’s share price. Liontrust SF Managed Fund, Liontrust SF Corporate Bond Fund, Liontrust SF Cautious Managed Fund, Liontrust SF Defensive Managed Fund and Liontrust Monthly Income Bond Fund invest in bonds and other fixed-interest securities - fluctuations in interest rates are likely to affect the value of these financial instruments. If long-term interest rates rise, the value of your shares is likely to fall. If you need to access your money quickly it is possible that, in difficult market conditions, it could be hard to sell holdings in corporate bond funds. This is because there is low trading activity in the markets for many of the bonds held by these funds. Mentioned above five funds can also invest in derivatives. Derivatives are used to protect against currencies, credit and interests rates move or for investment purposes. There is a risk that losses could be made on derivative positions or that the counterparties could fail to complete on transactions.<br />
+        <br />
+        <strong><span>Disclaimer</span></strong><br />
+        <br />
+        The information and opinions provided should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</span></p>

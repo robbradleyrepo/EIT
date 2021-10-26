@@ -1,0 +1,118 @@
+﻿---
+ID: "6fb4e971-a0b7-4a76-b28e-f34c3deed171"
+Parent: "007f602f-561b-425e-9d9f-65befb319f98"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2019/04/Increasing tailwinds behind renewables
+DB: master
+SharedFields:
+- ID: "7d5906b7-8e61-4b86-a984-c06d0deebd56"
+  Hint: LegacyPresentationBase_Snippet
+  Value: "{2DE55356-117D-45F4-A9B6-67CC91F90C1D}"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 10300
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{CA242C5F-C0BB-4EB9-BD66-625E8F1DB6E4}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{D93E8B09-1961-47CF-9EA2-2C35C4F05C4C}"
+              p:after="r[@uid='{CA242C5F-C0BB-4EB9-BD66-625E8F1DB6E4}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{A5CC10D3-9A44-4BB7-9434-84AF182BC2BA}"
+              p:after="r[@uid='{D93E8B09-1961-47CF-9EA2-2C35C4F05C4C}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="RelatedPages=%7bFA0E822B-9229-47E9-9341-79282A4EE71F%7d%7c%7b78CD7F91-7E07-49DE-8344-7619CE0A64C3%7d%7c%7b7B169127-E025-4744-9F25-B4D2C7A49337%7d%7c%7b4551AFED-C187-463D-904C-EFDE59DC1818%7d&amp;Title=See+also...&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{18287D6F-C09C-49D9-889E-474F5D3F143E}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Increasing tailwinds behind renewables | What we think | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: Increasing tailwinds behind renewables
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190429T134208Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\nikki
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "82426cee-2b8e-411e-9eeb-d54ec3d0ced3"
+      Hint: LegacyPresentationBase_Code
+      Value: |
+        <!-- Avocet Secure JavaScript Pixel - Liontrust / Sustainability - 2 'Increasing Tailwinds What We Think' - 5d307c97a3bf96110023628d --> 
+        <script src="https://ads.avocet.io/s?add=5d307c97a3bf96110023628d&ty=j"></script> 
+        <!-- end -->
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: With wind and solar now the UK’s cheapest forms of electricity, Mike Appleby posits renewables will be virtually impossible to compete against economically as early as 2025. 
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Increasing tailwinds behind renewables
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p style="text-align: center;"><strong><span><img alt="Renewable energy" src="-/media/CB1C65B18EDA4F41BD1274224641E33C.ashx?h=333&amp;w=600&amp;hash=4D26CAC5B098B259B029039006F931BA0FA8E44B" class="custom-image-height-auto" style="height: 333px; width: 600px;"></span></strong></p>
+        <p><strong><span>A recent trip to the Bilbao Wind conference, and meeting several leading wind turbine manufacturers, highlighted how the industry continues to evolve and fundamentals continue to improve.</span></strong></p>
+        <p><span>One of our 20 investment themes across the Sustainable Future fund range is <em>Increasing energy from renewable sources, </em>which we see as a multi-decade structural shift as the world moves towards lower-carbon energy. We feel this a key trend for any fund to get right to generate attractive returns and wind turbine manufacturers are a clear beneficiary of this changing landscape.</span></p>
+        <p><span>Wind and solar are now the cheapest ways to generate electricity in many countries, including the UK, and this should logically translate into even higher demand for renewables: it not only makes sense economically but is also the answer to reducing the carbon intensity of the electricity we use. </span></p>
+        <p><span>In the chart below, we show how the costs of generating electricity from different sources have evolved in the UK over the past four years. This uses the Levelised Cost of Electricity (LCOE), which estimates the costs of building and operating facilities and expresses it in US dollar cost per megawatt hour (MWh) of electricity generated. What this clearly shows is that onshore wind and solar are the cheapest ways to generate electricity while coal and nuclear are the most expensive. There is a similar picture globally although details vary by region.</span></p>
+        <p style="text-align: center;"><img alt="Cost of electricity history in the UK" src="-/media/7D43AD31EE1545D39C2B98AEC48C766D.ashx?h=420&amp;w=600&amp;hash=06CA40EBD9D4F927EA257AC659E6F8EC84805AFF" style="font-size: 1.5rem; height: 420px; width: 600px;" class="custom-image-height-auto"></p>
+        <p><span>T</span><span style="font-size: 1.5rem;">here has been a seismic shift in how electricity markets are regulated in the last few years. We have seen a move away from Feed-In Tariffs (where you get paid for each unit of low-carbon renewable energy you produce, typically for the life of the project – around 20 years) towards an auction system where the cheapest bidder wins a lower payment for a shorter period of time.</span></p>
+        <p><span>One consequence of this has been wind developers see their investment returns get smaller and, in response, turbine manufacturers have had to sell their onshore wares at much lower costs to allow customers to build viable projects. The result has been a drop in turbine prices of about 25% over the past two years, which is clearly painful for manufacturers. In response, many have reacted aggressively and innovatively to ensure that, while their margins have compressed, they are still making high single-digit operating margins.</span></p>
+        <p><span>Scale remains important,<strong> </strong>both in terms of turbine size (the bigger the turbine, the&nbsp; more energy it produces, and this is one of the main drivers of making wind so competitive versus other ways of generating electricity), as well as the size of the manufacturer. </span></p>
+        <p><span>Wind markets are characterised by significant stages of feast or famine in end markets. Put simply, as the economic incentives to support renewables progressively fall, you get periods where developers are rushing to get new wind farms completed before incentives decline. As a result, turbine manufacturers need to cater for a number of different markets and must be a certain size to cope with this.</span></p>
+        <p><span>In light of such a demand picture, these stocks can be volatile. The way the industry works is firm orders are placed and the turbine is delivered about 18 months later: all turbines are built to order. This means manufacturers have limited visibility on orders beyond that timeframe and year-to-year sale volumes can be volatile due to regulatory changes.</span></p>
+        <p><span>To offset this to some extent, service contracts are becoming a bigger part of what these companies are paid for – it is no longer just about selling wind turbines and they make roughly twice the margin on this other part of the business.</span></p>
+        <p><span>Meanwhile, offshore<strong> </strong>wind markets are also opening up as the know-how in building these structures, and the resulting decrease in costs, becomes apparent. Looking at LCOE figures in the chart, we can see the cost of generating electricity from offshore wind has fallen from around $200/MWh to $120 /MWh, a huge and positive fall in price. While offshore is probably less than 10% of the turbine market today, it is a rapidly growing area with less pressure on pricing as the turbine is a much smaller proportion of overall development costs compared to onshore.</span></p>
+        <p><span>Ultimately, we believe a combination of lower costs of turbines, which is making them even more price competitive, and future regulations to support greater adoption of renewable energy will support turbine sales over the next decade and beyond. In the short term, however, we would like to see turbine pricing stabilise and stay around the long-run expectation of 3% to 5% price deflation a year. We also need other wind markets to accommodate the known expected fall in demand for turbines in the US after next year as a result of a lower tax incentives for wind farm investors.</span></p>
+        <p><span>Overall, we continue to highlight a number of negative implications for electricity generation technologies other than renewables. We see a headwind against them for the next decade and beyond, and it will get increasingly difficult for these to compete against wind and solar as the latter become increasingly cost competitive. </span></p>
+        <p><span>We see huge risks to coal, for example, which is effectively dead as it is the most carbon-polluting way to generate electricity. While natural gas will play a role, it will find it hard to compete with an effective marginal cost of energy from renewables of close to zero. Nuclear, while low carbon, is economically uncompetitive and (rightly, we think) out of favour. </span></p>
+        <p><span>The dream of renewables, plus smarter grid plus storage, continues to get closer and we think this will be virtually impossible to compete against economically, maybe as soon as 2025. Here’s hoping, otherwise life will get uncomfortably hot and unpleasant for all of us in the decades to come.</span></p>
+        <p><span style="font-size: 1.5rem;">For a comprehensive list of common financial words and terms, see our glossary&nbsp;</span><span style="font-size: 1.5rem; color: #34b233;"><a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms">here</a>.</span></p>
+        <p><strong style="font-size: 1.5rem;"><br>Key Risks&nbsp;</strong><br></p><p><span style="font-size: 1.5rem;">Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. The majority of the Liontrust Sustainable Future Funds have holdings which are denominated in currencies other than Sterling and may be affected by movements in exchange rates. Some of these funds invest in emerging markets which may involve a higher element of risk due to less well regulated markets and political and economic instability. Consequently the value of an investment may rise or fall in line with the exchange rates. Liontrust UK Ethical Fund, Liontrust SF European Growth Fund and Liontrust SF UK Growth Fund invest geographically in a narrow range and has a concentrated portfolio of securities, there is an increased risk of volatility which may result in frequent rises and falls in the Fund’s share price. Liontrust SF Managed Fund, Liontrust SF Corporate Bond Fund, Liontrust SF Cautious Managed Fund, Liontrust SF Defensive Managed Fund and Liontrust Monthly Income Bond Fund invest in bonds and other fixed-interest securities - fluctuations in interest rates are likely to affect the value of these financial instruments. If long-term interest rates rise, the value of your shares is likely to fall. If you need to access your money quickly it is possible that, in difficult market conditions, it could be hard to sell holdings in corporate bond funds. This is because there is low trading activity in the markets for many of the bonds held by these funds. Mentioned above five funds can also invest in derivatives. Derivatives are used to protect against currencies, credit and interests rates move or for investment purposes. There is a risk that losses could be made on derivative positions or that the counterparties could fail to complete on transactions.<br>
+        <br>
+        <strong>Disclaimer</strong><br>
+        <br>
+        The information and opinions provided should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.&nbsp;</span><span style="font-size: 1.5rem;"></span></p>

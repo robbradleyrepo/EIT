@@ -1,0 +1,129 @@
+﻿---
+ID: "f592d769-7a22-4cea-bcd4-46ea9fafc19b"
+Parent: "f4b9ddb2-64f1-4c86-b09e-12d4a3729a5d"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2018/05/financial-resilience-part-2-peer-to-peer-lenders"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 7000
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{FCBE1E68-5210-4F82-8299-EA750AC29561}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{A8241DFC-5CC1-416B-9E17-030D18C5BF82}"
+              p:after="r[@uid='{FCBE1E68-5210-4F82-8299-EA750AC29561}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{E70BF544-1E68-41B0-983D-82E500A46CC7}"
+              p:after="r[@uid='{A8241DFC-5CC1-416B-9E17-030D18C5BF82}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See also...&amp;RelatedPages={FA0E822B-9229-47E9-9341-79282A4EE71F}|{FC17F0A6-ECAA-4CD7-B80B-6E67FDE3251B}|{CA289698-DE7A-4C0D-A116-888BD5E12B20}|{CDE2DD29-4FE7-49A3-841E-366AD0DF018F}&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{7170277C-D434-4C5D-9945-5D46793D683C}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "Financial resilience part 2: Peer-to-peer lenders | What we think | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: "Financial resilience part 2: Peer-to-peer lenders"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20160219T000000Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: The second of our four part series on financial resilience explores this relatively new market and considers some of the investment possibilities.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: "Financial resilience part 2: Peer-to-peer lenders"
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p><em>This article was first published by Alliance Trust Investments on 19 February 2016.</em></p>
+        <p><strong>The financial crisis, low interest rates, high credit card fees, lack of trust - all an influence on the rise of peer-to-peer lending. The second of our four part series on financial resilience explores this relatively new market and considers some of the investment possibilities.</strong></p>
+        <p><strong>Introduction</strong></p>
+        <p>The 2008 financial crisis has left consumers wary of the &lsquo;big banks&rsquo; and trust in financial services as an industry is remarkably low (1).&nbsp; Annual Percentage Rates, or APR, of credit cards has fluctuated between 12 and 16% since 2005 (2).</p>
+        <p><img alt="Credit Card Interest Rates Over Time" src="-/media/48DCBE0F7CB4493C953ABB0240E4CADA.ashx?h=199&amp;w=455&amp;hash=BA1496C8DEE3867FA0DCA02757C73AECBC3D1170&amp;hash=BA1496C8DEE3867FA0DCA02757C73AECBC3D1170" style="height: 199px; width: 455px;"></p>
+        <p>
+        At the same time, you&rsquo;ll be hard pushed to find cash ISA that pays above 2.6% (3). Cue internet based companies matching borrowers with investors, marrying the respective risk and maturity characteristics. Peer-to-peer (P2P) lending are online marketplaces with complex algorithms that match borrowers with investors (4).</p>
+        <p><img alt="How peer-to-peer lending works" src="-/media/36E7BDF0D45A4C23AECC685A9CA535B2.ashx?h=394&amp;w=455&amp;hash=8C9CEC2A571D65BC033197700CC2CA11DF9AF724&amp;hash=8C9CEC2A571D65BC033197700CC2CA11DF9AF724" style="height: 394px; width: 455px;"></p>
+        <p>
+        Neil Bindoff of PwC speaks of a &ldquo;perfect storm&rdquo; supporting P2P&rsquo;s growth. His reasoning is the following: &ldquo;Interest rates are close to zero, the public is fed up with banks, costs are low (one third of a typical bank&rsquo;s, according to Renaud Laplanche of Lending Club), and e-commerce is becoming part of daily life. People use the internet for peer-to-peer telephony (Skype) and shopping (eBay), so why not loans?&rdquo; (5).&nbsp; As you can see below, P2P lenders offer a gradual scale of rates based on incremental increases in the perceived riskiness of the borrower (6).</p>
+        <strong>Market Potential<br>
+        <br>
+        </strong><span style="font-size: 1.5rem;">By lending money directly to individuals seeking a loan, both lender and borrower reap the benefit of a streamlined, online matching process. For the latter, this translates into a personal loan at a competitive APR, while the former enjoys returns typically in excess of 5 per cent. Compared with the low rates currently being offered by banks on savings accounts, the clamour which has seen the P2P industry breach the &pound;3 billion mark comes as little surprise (7).</span><strong><br>
+        </strong>
+        <p>
+        Lending Club, the world&rsquo;s largest P2P lender (8)&nbsp; experienced loan growth of 92% in 3Q 2015 vs. 3Q 2014.
+        </p>
+        <p><strong><strong><strong>Potential Winners<br>
+        <br>
+        </strong></strong></strong><span style="font-size: 1.5rem;">This is a relatively new space and as a result, many of the established players are still not publicly listed and so are not eligible for investment in the SF funds. As well as the obvious benefits to Peer-to-Peer Lending there are a number of associated risks, such as what might happen in a recession, and what will the regulatory landscape look like for such companies in a couple of years? Our current exposure is via an investment in P2P Global Investments &ndash; a closed ended fund that selectively invests through well known P2P lenders such as Zopa and Lending Club in consumer and SME loans.<br>
+        </span><strong><strong><strong><br>
+        </strong></strong></strong>
+        <strong>
+        <strong>
+        <strong>Sources</strong>
+        </strong>
+        </strong>
+        </p>
+        <p>1 Mind the Gap: Restoring Consumer Trust in Financial Services: Page 6 http://www.fscs.org.uk/globalassets/press-releases/20151111-fscs-trust-white-paper-final.pdf<br>
+        2 http://www.valuepenguin.com/average-credit-card-interest-rates<br>
+        3 Top Cash ISAs 2015/16 http://www.moneysavingexpert.com/savings/best-cash-isa<br>
+        4 http://www.techinsider.io/peer-to-peer-lending-how-digital-lending-marketplaces-are-disrupting-the-predominant-banking-model-2015-05<br>
+        5 http://www.economist.com/news/finance-and-economics/21597932-offering-both-borrowers-and-lenders-better-deal-websites-put-two<br>
+        6 https://www.lendingclub.com/public/steady-returns.action<br>
+        7 Lending Club Q3 2015 presentation http://ir.lendingclub.com/calendar.aspx?iid=4213397<br>
+        8 https://www.lendingclub.com/</p>
+        <p>&nbsp;</p>
+        <p>For a comprehensive list of common financial words and terms, see our glossary&nbsp;<a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms"><span style="color: #34b233;">here</span></a>.</p>
+        <p><span style="font-weight: 700;">Key Risks</span></p>
+        <p><span style="font-weight: 700;">Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital.</span><span style="font-weight: 700;"></span>The issue of units/shares in Liontrust Funds may be subject to an initial charge, which will have an impact on the realisable value of the investment, particularly in the short term. Investments should always be considered as long term.</p>
+        <p>Some of the Funds managed by the Sustainable Future Equities team involve foreign currencies and may be subject to fluctuations in value due to movements in exchange rates.</p>
+        <p><span style="font-weight: 700;">Disclaimer</span></p>
+        <p>This content should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy.&nbsp; It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, faxed, reproduced, divulged or distributed, in whole or in part, without the express written consent of Liontrust. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</p>

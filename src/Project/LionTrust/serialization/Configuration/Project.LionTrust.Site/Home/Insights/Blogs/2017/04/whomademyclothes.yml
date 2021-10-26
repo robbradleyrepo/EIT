@@ -1,0 +1,97 @@
+﻿---
+ID: "5c8b9cb6-4674-44f6-8f13-d6353770aa11"
+Parent: "28bb6283-e404-4e73-a894-9886adf1998f"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2017/04/whomademyclothes
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 94900
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{0238A3D4-080E-4C35-B762-37B0CF5847AF}"
+          p:after="r[@uid='{30A0A4C8-974F-4822-9DCB-DE14881E0400}']"
+          s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+          s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+          s:par="DatasourceRule"
+          s:ph="/content/side-content" />
+        <r
+          uid="{1D3FE335-85C5-437A-894D-470D3EB6E971}"
+          p:after="r[@uid='{0238A3D4-080E-4C35-B762-37B0CF5847AF}']"
+          s:ds="{71B20482-B038-49D5-895C-ED6D46D5095F}"
+          s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+          s:ph="/content/side-content" />
+        <r
+          uid="{47B2461F-1B7E-45B7-ACEE-0E2925D8F220}"
+          p:after="*[1=2]"
+          s:ds=""
+          s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+          s:par="Title=See%20also&amp;RelatedPages=%7BFD37A7D1-11E1-4A39-B0F8-52520A4E2C22%7D%7C%7BC0AA7A20-F242-4022-B597-2D4BCA9A1975%7D%7C%7B96E8775C-CF85-44C0-ADEE-287F45B88BDE%7D%7C%7B035EFDA3-BC0A-43D6-9548-FC77F9116B6F%7D&amp;MaximumNoOfLinks=4"
+          s:ph="/content/side-content" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "094932b9-ff77-4977-966e-d18f7c7ac091"
+      Hint: LegacyArticle_Subtitle
+      Value: Neil Brown
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: 
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: #whomademyclothes | What we think | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: #whomademyclothes
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170428T122520Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: This Sunday marks the end of Fashion Revolution Week, the centrepiece of a campaign to increase transparency in the global garment industry.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: #whomademyclothes
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p><strong>This Sunday marks the end of Fashion Revolution Week, the centrepiece of a campaign to increase transparency in the global garment industry. The Week highlights the anniversary of the 2013 collapse of the Rana Plaza complex in Bangladesh, a disaster which resulted in the loss of more than 1,100 lives. Many of those killed were employed in the garment industry, an industry that supplies the clothes that end up on our high street, to the brands whose shares end up in our pensions and ISAs.</strong></p>
+        <p>Clothing supply chains have lengthened under a relentless pressure on costs in recent decades as emerging economies offered lower wages, weaker labour laws and tax breaks to win valuable contracts from brands competing in what became known as the ‘race to the bottom.’ Consumers are now demonstrating a clear demand for transparency around the products they buy. <a href="http://fashionrevolution.org/" target="_blank"><span style="color: #34b233;">Fashion Revolution</span></a> was formed in the wake of the disaster to raise awareness around production practices in the apparel industry and is leading consumers such as Emma Watson and her 25 million Twitter followers to ask <em>#whomademyclothes. </em></p>
+        <p>We believe these structural changes will continue to erode the profitability of opaque supply chains. We want our investments in European and US retail brands to deliver the highest investment returns possible and believe this is best achieved through safe and decent work throughout those chains. We believe that the widespread consumer interest created by groups like Fashion Revolution will continue to drive revenue opportunities for the best companies.</p>
+        <p>The adoption of better working practices in shorter and more responsive supply chains makes investment sense. While no brand is perfect, we believe Inditex’s management of these issues is impressive and it is translating better social performance into better financial performance. &nbsp;We have owned Inditex, which owns brands including Zara, since our work on global supply chains in 2012 and over the last five years its shares have risen 150% compared to just 75% for the MCSI Europe index.</p>
+        <p>The formation of the Accord on Fire and Building Safety in Bangladesh and Alliance for Bangladesh Worker Safety were rapid and notable wins for an industry that had previously been slow to respond to these issues. Four years on from the Rana Plaza disaster, it is clear that a great deal has changed in the Bangladesh garment industry. It is equally clear, however, that these changes do not go far enough and that they need to be extended beyond Bangladesh and beyond the garment/apparel sector. The Sustainable Investment team was part of a coalition of shareholders representing around US$1tn in AUM which engaged with companies following the disaster. In 2014, the investment team visited Bangladesh on a fact finding tour. During this period, we have focused our company engagement on those that committed to the Accord and engaged directly with those that did not. This has provided us with an investment framework with which to identify those companies whose supply chains will prove most sustainable in the long-term, and that are best placed to deal with consumers who are likely to become increasingly discerning on ethical grounds. </p>
+        We believe that unsafe and degrading working practices make no business, common or investment sense and we will continue to play our role in bringing them to an end.&nbsp; We do this to generate investment returns for our clients. It is also clearly the right thing to do.<br><br>
+        <p><strong>Disclaimer:</strong><strong><br>
+        </strong>• Past performance is not a guide to future performance. • Do remember that the value of an investment and the income from it can fall as well as rise and you may not get back the amount originally invested. •&nbsp;The majority of the Liontrust Sustainable Future Funds have holdings which are denominated in currencies other than Sterling and may be affected by movements in exchange rates. Some of these funds invest in emerging markets which may involve a higher element of risk due to less well regulated markets and political and economic instability. Consequently the value of an investment may rise or fall in line with the exchange rates. Liontrust UK Ethical Fund, Liontrust SF European Growth Fund and Liontrust SF UK Growth Fund invest geographically in a narrow range and has a concentrated portfolio of securities, there is an increased risk of volatility which may result in frequent rises and falls in the Fund’s share price. •&nbsp;Liontrust SF Managed Fund, Liontrust SF Corporate Bond Fund, Liontrust SF Cautious Managed Fund, Liontrust SF Defensive Managed Fund and Liontrust Monthly Income Bond Fund invest in bonds and other fixed-interest securities - fluctuations in interest rates are likely to affect the value of these financial instruments. •&nbsp;If long-term interest rates rise, the value of your shares is likely to fall. If you need to access your money quickly it is possible that, in difficult market conditions, it could be hard to sell holdings in corporate bond funds. This is because there is low trading activity in the markets for many of the bonds held by these funds. Mentioned above five funds can also invest in derivatives. Derivatives are used to protect against currencies, credit and interests rates move or for investment purposes. •&nbsp;There is a risk that losses could be made on derivative positions or that the counterparties could fail to complete on transactions.</p>
+        • The information and opinions provided should not be construed as advice for investment in any product or security mentioned. &nbsp;• Always research your own investments and consult with a regulated investment adviser before investing.
