@@ -1,32 +1,52 @@
-.fund-manager
-    &__item
-        margin-bottom: 30px
-        display: block
-    &__img
-        width: 100%
-        height: auto
-        border-radius: 10px
-    &__title
-        @extend .h5
-        font-size: 20px
-        @include breakpoint(desktop, up)
-            font-size: 26px
-        @include breakpoint(desktop-large, up)
-            margin-bottom: 6px
-    &__text
-        color: $black
-        @include breakpoint(desktop-large, up)
-            @include font-size(18px)
-            line-height: 1.44em
-        p
-            margin-bottom: 0.5rem
-
-.fund-manager-director
-    margin-bottom: 3rem
-    @include breakpoint(desktop, up)
-        margin-bottom: 60px
-    @include breakpoint(desktop-large, up)
+.director-card
+    &__columns
+        display: flex
+        flex-direction: row
+        align-items: flex-start
         margin-bottom: 100px
-    .fund-manager__text
-        @include breakpoint(desktop-large, up)
-            @include font-size(20px)
+        color: $black
+        +breakpoint(mobile-large, down)
+            flex-direction: column
+    &__img-col
+        width: 212px
+        height: 212px
+        border-radius: 10px
+        overflow: hidden
+        img
+            max-width: 100%           
+    &__details-col
+        padding-left: 30px
+        width: calc( 100% - 212px )
+        +breakpoint(mobile-large, down)
+            padding-left: 0
+            width: 100%
+    &__details-title
+        @include font-size(32px)
+        letter-spacing: 0
+        font-family: $userfont 
+        font-weight: 300
+        text-transform: capitalize
+    &__sub-title,
+    &__description
+        @include font-size(20px)
+        letter-spacing: 0.2px
+        font-family: $userfont 
+    &__sub-title
+        color: $primary
+        margin-top: 3px
+        margin-bottom: 14px
+    &__description
+        line-height: 30px
+        margin: 0
+    &__info
+        @include font-size(16px)
+        letter-spacing: 0
+    &__info-label
+        font-weight: 500
+        text-transform: capitalize
+        min-width: 90px
+        display: inline-flex
+        padding-right: 17px
+        margin-top: 7px
+
+

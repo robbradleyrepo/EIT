@@ -11,41 +11,37 @@
                 using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/DirectorsList", director.Id.ToString(), "Edit director"))
                 {
                     <div class="col-lg-6">
-                        <div class="fund-manager fund-manager-director">
-                            <div class="fund-manager__item d-block">
-                                <div class="row">
-                                    <div class="col-4">
-                                        @Html.Glass().RenderImage(director, d => d.Image, new NameValueCollection { { "class", "fund-manager__img" } }, isEditable: true)
+                        <div class="fund-manager fund-manager-director director-card">
+                            <div class="fund-manager__item director-card__columns">
+                                <div class="director-card__img-col">
+                                    @Html.Glass().RenderImage(director, d => d.Image, new NameValueCollection { { "class", "fund-manager__img" } }, isEditable: true)                                    
+                                </div>
+                                <div class="director-card__details-col">
+                                    <div class="director-card__details-title">
+                                        @Html.Glass().Editable(director, d => d.FullName)
                                     </div>
-                                    <div class="col-8">
-                                        <div class="fund-manager__content">
-                                            <div class="fund-manager__title text-black">@Html.Glass().Editable(director, d => d.FullName)</div>
-                                            <div class="fund-manager__text">
-                                                <p class="text-primary">
-                                                    @Html.Glass().Editable(director, d => d.Role)
-                                                </p>
-                                                @Html.Glass().Editable(director, d => d.ShortBio)
-                                                @if (!string.IsNullOrEmpty(director.Email) || Sitecore.Context.PageMode.IsExperienceEditorEditing)
-                                                {
-                                                    <div>
-                                                        @Html.Glass().Editable(director, d => d.EmailLabel)
-                                                        @Html.Glass().Editable(director, d => d.Email)
-                                                    </div>
-                                                }
-                                                @if (!string.IsNullOrEmpty(director.MobileNumber) || Sitecore.Context.PageMode.IsExperienceEditorEditing)
-                                                {
-                                                    <div>
-                                                        @Html.Glass().Editable(director, d => d.MobileLabel)
-                                                        @Html.Glass().Editable(director, d => d.MobileNumber)
-                                                    </div>
-                                                }
-                                                </div>
-                                        </div>
+                                    <p class="director-card__sub-title">
+                                        @Html.Glass().Editable(director, d => d.Role)
+                                    </p>
+                                    <div class="director-card__description">
+                                        @Html.Glass().Editable(director, d => d.ShortBio)
+                                    </div>
+                                    <div class="director-card__info">
+                                        @if (!string.IsNullOrEmpty(director.Email) || Sitecore.Context.PageMode.IsExperienceEditorEditing)
+                                        {
+                                            <span class="director-card__info-label">@Html.Glass().Editable(director, d => d.EmailLabel)</span>
+                                            @Html.Glass().Editable(director, d => d.Email)<br />
+                                        }
+                                        @if (!string.IsNullOrEmpty(director.MobileNumber) || Sitecore.Context.PageMode.IsExperienceEditorEditing)
+                                        {
+                                            <span class="director-card__info-label">@Html.Glass().Editable(director, d => d.MobileLabel)</span>
+                                            @Html.Glass().Editable(director, d => d.MobileNumber)<br />                                            
+                                        }                                       
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>                    
                 }
             }
         }
