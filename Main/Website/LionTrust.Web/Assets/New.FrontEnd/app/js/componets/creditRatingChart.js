@@ -51,7 +51,12 @@ export default () => {
               gridLines: {
                 color: "#dee2e6",
                 borderDash: [3, 3],
+                drawTicks: false,
               },
+              ticks: {
+                padding: 15
+              },
+            
             },
           ],          
         },
