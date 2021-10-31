@@ -22,5 +22,6 @@
 
         public string TargetBenchmarkYield { get; set; }
 
+        public Guid Id { get; set; }
     }
 }
