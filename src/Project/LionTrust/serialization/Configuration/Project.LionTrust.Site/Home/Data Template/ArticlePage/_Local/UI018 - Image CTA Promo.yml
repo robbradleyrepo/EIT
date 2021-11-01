@@ -1,7 +1,7 @@
 ﻿---
-ID: "eae73f3a-b715-4845-94e7-044d8e08cfbb"
+ID: "2de85f50-17ab-4ac4-9d1c-75dbe2253960"
 Parent: "9425b00e-750a-4424-a1e9-764a8a64d451"
-Template: "96b061a7-3c8c-4e47-a2cd-f63a0d975935"
+Template: "d3d9d2ce-b2ce-49ac-b50d-6a5ffd4c4ab8"
 Path: "/sitecore/content/LionTrustNew/Home/Data Template/ArticlePage/_Local/UI018 - Image CTA Promo"
 DB: master
 Languages:
@@ -9,9 +9,27 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "1054e4b6-1cf5-4c08-8a6d-d9b02fb17050"
+      Hint: ImageCTAPromo_Image
+      Value: |
+        <image mediaid="{892C05EF-9E84-4941-A936-D651B263771B}" />
+    - ID: "143867db-9bba-4097-9eb4-0099c175ad91"
+      Hint: ImageCTAPromo_CTALink
+      Value: |
+        <link linktype="internal" text="Fund page" querystring="" target="" id="{313A747A-34BC-46FA-A8AE-5BA31A5797F9}" />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20211101T070752Z
-    - ID: "a9bfb452-12c3-4ad5-b58c-b8824eb16816"
-      Hint: ImagePromo_Heading
+      Value: 20211101T092057Z
+    - ID: "48bf236b-0681-4a09-9085-4933fa1c4a7a"
+      Hint: ImageCTAPromo_Body
+      Value: Test
+    - ID: "4c838697-dbeb-4998-a261-ccc77bc59259"
+      Hint: ImageCTAPromo_Subtitle
+      Value: CTA Promo
+    - ID: "7a84ea30-ff24-4c46-ae8f-51fcff940663"
+      Hint: ImageCTAPromo_Title
       Value: "UI018 - Image CTA Promo"
+    - ID: "9a62f3e5-e428-4df1-ab96-ed4b651e352b"
+      Hint: ImageCTAPromo_CTALink2
+      Value: |
+        <link linktype="internal" text="Coomon inner" querystring="" target="" id="{52CC7461-2D4B-4345-AE96-185B2FB1D393}" />
