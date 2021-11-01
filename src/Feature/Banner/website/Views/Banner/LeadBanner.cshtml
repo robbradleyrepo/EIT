@@ -9,12 +9,12 @@
     <section class="container">
         @Html.Sitecore().Placeholder("navigation")
         <div class="row mb-5 mt-3 text-center">
-            <div class="col-12 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
+            <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
                 <div class="lead-banner">
                     <h1 class="lead-banner__title mb-3">
                         @Html.Glass().Editable(Model, m => m.Title)
                     </h1>
-                    <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                    <div class="col-12">
                         <span class="lead-banner__text">
                             @Html.Glass().Editable(Model, m => m.Body)
                         </span>
