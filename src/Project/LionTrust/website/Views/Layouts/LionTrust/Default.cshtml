@@ -64,6 +64,10 @@
     @Html.Sitecore().Placeholder("header")
     <main id="main" role="main" class="@mainClass">
         @Html.Sitecore().Placeholder("main")
+        @if (Sitecore.Context.PageMode.IsExperienceEditor)
+        {
+            @Html.Sitecore().Placeholder("lit-overlay")
+        }
     </main>
     @Html.Sitecore().Placeholder("footer")
 
@@ -104,6 +108,8 @@
         </div>
     }
 
-    <div class="lit-overlay__wrapper"></div>
+    <div class="lit-overlay__wrapper">
+        @Html.Sitecore().Placeholder("lit-overlay")
+    </div>
 </body>
 </html>
