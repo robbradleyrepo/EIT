@@ -162,8 +162,10 @@
             public const string Role_FieldId = "{0930A4BB-1CC6-471D-BC6B-FFD4097E2008}";
             public const string ShortBio_FieldId = "{97454B15-76C1-4AE0-AB59-C3F8D2304CCC}";
             public const string Email_FieldId = "{F5F940CB-C703-406F-B58D-C8F0AA689C89}";
+            public const string DirectLine_FieldId = "{8E50CB61-DC34-4C4D-8407-FD5575402C4A}";
             public const string MobileNumber_FieldId = "{BFB65241-8F9F-4270-BE5B-194904AEB9E8}";
             public const string EmailLabel_FieldId = "{09F372E5-FEA3-4223-BD92-D2F20EBCC480}";
+            public const string DirectLineLabel_FieldId = "{83BE90B2-30FF-4AB7-863F-AF1ED4B68B82}";
             public const string MobileLabel_FieldId = "{DD918658-BE8B-400F-A2B8-0940951726DB}";
         }
 
