@@ -90,7 +90,8 @@
                 SinglePrice = fundClass.SinglePrice,
                 SectorName = fundClass.SectorName,
                 ManagerInceptionDateOfFund = fundClass.ManagerInceptionDateOfFund,
-                TargetBenchmarkYield = fundClass.TargetBenchmarkYield
+                TargetBenchmarkYield = fundClass.TargetBenchmarkYield,
+                Id = fundClass.Id
             };
         }
     }

@@ -2,13 +2,18 @@
 @using System.Collections.Specialized
 @using LionTrust.Foundation.ORM.Extensions
 @model LionTrust.Foundation.Article.Models.IArticlePodcastPromo
+
+@{ 
+    var articleUrl = ViewData["ArticleUrl"];
+}
+
 @if (Model != null)
 {
     var opacity = string.IsNullOrWhiteSpace(Model.BackgroundImageOpacity) ? "opacity: 1" : "opacity: " + Model.BackgroundImageOpacity;
     <div class="article-promo">
-        <a href="@Model.Url" class="article-promo__front">
+        <a href="@articleUrl" class="article-promo__front">
         </a>
-        <a href="@Model.Url" class="article-promo__body">
+        <a href="@articleUrl" class="article-promo__body">
             @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Article/Article Scroller", Model.Id.ToString(), "Edit Article"))
             {
                 <div class="article-promo__head">
