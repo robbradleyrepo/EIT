@@ -17,6 +17,42 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "034cd348-2adc-47e9-b263-2c839808dae1"
+      Hint: FundCard_Fund
+      Value: "{825F7046-8A7F-4A97-8D55-AB8C703BD4E1}"
+    - ID: "036aeb89-b0bd-42c2-b763-a56cdbe32cdc"
+      Hint: Fund_Classes
+      Type: Multilist
+      Value: |
+        {D928D2B3-C2AD-4D73-B2E5-D9A5DA665A0E}
+        {4B7B6C7A-8979-4F5A-ABBE-76A1571DC256}
+        {F1E67AB7-9A4D-4EEF-9D75-4F752E1AAAC2}
+        {2637D152-24E1-4E02-A226-AF16789E5936}
+        {F28595FB-2528-4E1D-A32A-4E006D49CD0F}
+        {4BCC9BF5-CB44-4FA6-BF54-037240D57ABD}
+        {A239A5F4-A628-439A-831A-DEBE6C1FB32B}
+        {A40D115E-4CAB-42ED-B0E4-EBF63545BCB0}
+        {A229AC95-436A-43A6-AE14-2AFAA57D3C1D}
+        {78CE7013-21F7-4D07-A757-44116255420F}
+        {AD0929D0-42A3-4646-8972-9D3FA3C43629}
+        {EA676D57-7EE6-4AEE-9C3E-FA72FB028D18}
+        {E5A19A9F-A592-4ADD-B5B7-9C596ED786A6}
+        {42284ADA-7139-4AA9-9612-8B9E3BEE6D8E}
+        {DD8BF381-59A2-424A-94C8-A15DCA5742A0}
+        {EB1C4111-C7BF-4161-BFC3-0E310C7EA06A}
+        {4505FDA8-D34F-475F-A00D-BD1E45169273}
+        {2D8F0877-FB30-42E8-B9E2-A907BE4CCF87}
+        {684453E7-EF69-469F-BAB4-96DD04FEEE52}
+        {D7CC8DEC-7927-4020-AF17-66DEB63C1960}
+        {E4352707-99EA-4722-81C6-C099574409BA}
+        {688F270C-357E-4F7B-A018-B0F68932FE30}
+        {E4BB8D41-2F38-4801-A112-BDE1A7DC5E9B}
+        {C5678024-594A-421E-8DCE-2AFA0D33DAA9}
+        {98787CA9-5EBA-4ED5-A6EE-7E046208E703}
+        {29D0D092-902D-4843-B93D-CF24AC8A94E4}
+    - ID: "0905f092-b5b5-4971-b87e-57f4810bd729"
+      Hint: FundCard_Description
+      Value: test
     - ID: "1844ecc6-c68f-4989-96d5-296c34ede6e9"
       Hint: LegacyFundOverviewData_OverviewText
       Value: |
@@ -78,12 +114,15 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\hayleya
+    - ID: "6387ca9a-7a5a-4d33-b706-201681c0b74c"
+      Hint: FundCard_Heading
+      Value: test
     - ID: "6afb4eb4-25c4-472b-aa65-8ad9ddb3be2c"
       Hint: LegacyFund_FundName
       Value: GF European Smaller Companies Fund
     - ID: "6cbf0ed2-94b3-4f2a-a84d-a36501e38105"
       Hint: LegacyFund_LaunchDate
-      Value: 20170201T000000
+      Value: 20170131T220000Z
     - ID: "6d258747-e783-4579-9c3c-f8f23d03ccf6"
       Hint: LegacySectorFundData_SectorOneYear
       Value: 7.765%
@@ -180,3 +219,14 @@ Languages:
     - ID: "db79496e-bcc5-443f-bba6-e8d5bf0a31a3"
       Hint: LegacyFund_NumberOfHoldings
       Value: 34
+    - ID: "e43f6e86-0318-4766-b880-0c4f6512ca4e"
+      Hint: FundPage_Page
+      Value: |
+        <link text="View Fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{313A747A-34BC-46FA-A8AE-5BA31A5797F9}" />
+    - ID: "e5d3dec0-9cbb-435e-a231-391006503c1c"
+      Hint: LegacyFund_SalesforceFunds
+      Value: "{D854FD8E-9A7F-416A-9186-09A134C8A0BC}"
+    - ID: "eb75dfef-c624-4571-b92b-8f37c36fcee6"
+      Hint: FundCard_Image
+      Value: |
+        <image mediaid="{438CEA59-E77D-4FB0-A495-653BA891E7EC}" />

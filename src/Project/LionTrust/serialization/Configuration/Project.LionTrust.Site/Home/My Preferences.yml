@@ -9,6 +9,40 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{DB0C167C-6972-4A3F-8997-332A78F4C4D1}"
+              p:before="*"
+              s:ds="{400795DE-2131-4B25-B056-8982C6124515}"
+              s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
+              s:ph="header" />
+            <r
+              uid="{2850A5F8-7294-4164-8639-63A554A5A81E}"
+              p:after="r[@uid='{DB0C167C-6972-4A3F-8997-332A78F4C4D1}']"
+              s:ds="{80014A7D-4C7C-485E-BDA8-6D3488A74D8F}"
+              s:id="{C3D014E3-0BFA-42A0-A896-E49BF122EE0D}"
+              s:ph="/main/privacy-notice" />
+            <r
+              uid="{B9E70BE2-3A1A-4DB1-8551-EFE5A535B646}"
+              p:after="r[@uid='{2850A5F8-7294-4164-8639-63A554A5A81E}']"
+              s:ds="{148B99BA-A1E8-4622-A3E1-11F2160EA877}"
+              s:id="{56ED4D0F-E184-4667-A404-BE72AEAEB565}"
+              s:ph="/main/fund-accordion-list" />
+            <r
+              uid="{632D1428-53B7-4F67-AD18-CFF0D85AD0ED}"
+              p:after="r[@uid='{B9E70BE2-3A1A-4DB1-8551-EFE5A535B646}']"
+              s:ds="{15518891-53BA-4B83-93D5-F3BAC21D3344}"
+              s:id="{96ABC0AA-4A9D-4009-8B50-582D50F8BE56}"
+              s:ph="main" />
+          </d>
+        </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20210416T182126Z
