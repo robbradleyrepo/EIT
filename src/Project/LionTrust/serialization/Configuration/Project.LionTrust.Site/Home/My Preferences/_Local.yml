@@ -1,0 +1,30 @@
+﻿---
+ID: "69bf1e38-85b4-4444-ac20-336d3d5051af"
+Parent: "d2857e0a-9589-4025-aec5-6005fdd6bf4a"
+Template: "fff5f245-ffc0-4022-a998-9b07aa5e761f"
+Path: /sitecore/content/LionTrustNew/Home/My Preferences/_Local
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: |
+    {0DA96412-E61F-4C5A-A017-10575D71C234}
+    {9E5BAC22-B3A3-416E-B775-3732DDFBD10A}
+    {A5AB98AD-A81D-484E-83F8-CDCAF65BB20E}
+    {1D2058B8-C7A2-4D41-8FDF-61AC3B786798}
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: "-1000"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211102T085300Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
