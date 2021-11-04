@@ -173,6 +173,8 @@
         max-width: fit-content
         padding-right: 18px !important
         padding-left: 18px !important
+    +breakpoint(mobile-large, down)
+        max-width: fit-content
     &__row.row
         max-width: fit-content
         margin: 0 auto
@@ -182,6 +184,10 @@
         +breakpoint(tablet, up)
             padding: 0
             max-width: 640px
+        +breakpoint(mobile-large, down)
+            padding: 0
+            max-width: 326px
+            flex-wrap: wrap
     &__title
         font-size: 32px
         line-height: 41px
