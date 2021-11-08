@@ -9,6 +9,7 @@ namespace LionTrust.Feature.MyPreferences.Models
         public RegisterInvestorViewModel(IRegisterInvestor content)
         {
             Content = content;
+            SubscribeToEmail = true;
         }
 
         public IRegisterInvestor Content { get; set; }
@@ -41,5 +42,7 @@ namespace LionTrust.Feature.MyPreferences.Models
         public string CountryName { get; set; }
 
         public string ChangeInvestorUrl { get; set; }
+
+        public bool SubscribeToEmail { get; set; }
     }
 }
