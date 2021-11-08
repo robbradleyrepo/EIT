@@ -11,11 +11,14 @@
     justify-content: center
     flex-direction: column
     display: none
+
     &::-webkit-scrollbar
         width: 4px
+
     &::-webkit-scrollbar-thumb
         background-color: trasparent
         border-radius: 5px
+
     &.active
         display: flex
         position: fixed
@@ -25,22 +28,28 @@
         align-items: center
         justify-content: center
         flex-direction: column
+
     .btn-primary
         letter-spacing: 0
         padding: 0
+
         +breakpoint(tablet, up)
             letter-spacing: 1.2px
+
     &__tab
         visibility: hidden
         opacity: 0
         height: 0
         transition: opacity 1s ease-out
+
         &.visible
             visibility: visible
             opacity: 1
             height: auto
+
     &__logo
         text-align: center
+
     &__hint
         max-width: 352px
         font-size: 18px
@@ -49,25 +58,31 @@
         line-height: 28px
         margin: 0 auto
         margin-bottom: 55px
+
         +breakpoint(tablet, up)
             margin-bottom: 120px
+
+
         +breakpoint(mobile-large, down)
             padding-top: 34px
             margin-bottom: 38px
-        @media screen and (max-height: 800px) and (min-width: 992px)
-            margin-bottom: 55px
+
     &__img
         width: 197px
         height: auto
         margin-bottom: 30px
+
     &__title
         @extend .h1
+
         font-size: 42px
         letter-spacing: 0px
         text-align: center
         margin-bottom: 20px
+
         +breakpoint(tablet, up)
             letter-spacing: 0
+
     &__btns
         text-align: center
         margin-top: 34px
@@ -80,38 +95,54 @@
         flex-wrap: wrap
         justify-content: center
         align-items: center
+
         .onboarding-overlay__set-step
             margin: 8px
             min-width: 244px
+
             +breakpoint(mobile-large, down)
                 min-width: 158px
+
         &.three-buttons
             width: auto
+
             .onboarding-overlay__set-step
-                margin: 16px auto            
+                margin: 16px auto
+
                 +breakpoint(tablet, up)
                     display: inline-block
                     margin-right: 1rem
+
                     &:last-child
                         margin-right: 0
+
     &__text
         @extend .onboarding-overlay__hint
+
         margin-bottom: 34px
         max-width: 456px
+        padding: 0
+
         @extend .onboarding-overlay__btns
+
     &__link
         text-decoration: underline
+
     &__get-hint
         text-align: center
         display: block
+
     &__steps
         position: relative
         display: flex
         justify-content: center
         width: 100%
-        margin: 50px 0 30px 0
+        margin: 0
+        padding: 30px 0
+
         +breakpoint(mobile-large, down)
-            margin-top: 50px
+            margin-top: 0
+
     &__step
         display: inline-block
         margin: 0 5px
@@ -120,6 +151,7 @@
         padding: 5px 0
         cursor: pointer
         pointer-events: auto
+
         &::after
             content: ""
             position: absolute
@@ -127,15 +159,20 @@
             width: 20px
             height: 1px
             background: $white
+
         &.active
             &::after
                 background: $gold
+
         &.active ~ .onboarding-overlay__step
             pointer-events: none
+
         &:hover
             &::after
                 background: $primary
+
     &__row-location
+
     &__scroller
         margin: 0 auto
         max-width: 700px
@@ -144,29 +181,38 @@
         overflow-y: scroll
         border-top: 1px solid $gold
         border-bottom: 1px solid $gold
+
         &::-webkit-scrollbar
             width: 4px
+
         &::-webkit-scrollbar-thumb
             background-color: $secondary-silver
             border-radius: 5px
+
         p
             font-size: 18px
             font-weight: 300
+
     &__content
         width: 100%
         display: flex
         flex-direction: column
         justify-content: center
+
         +breakpoint(desktop, down)
+
         width: 100%
+
         @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
             position: static
             transform: none
             top: inherit
+
 .set-location
     padding-right: 0 !important
     padding-left: 0px !important
     max-width: 50%
+
     +breakpoint(tablet, up)
         padding-right: 0px !important
         padding-left: 0px !important
@@ -181,6 +227,7 @@
         display: flex
         justify-content: space-between
         padding: 0 9px
+
         +breakpoint(tablet, up)
             padding: 0
             max-width: 640px
@@ -192,15 +239,19 @@
         font-size: 32px
         line-height: 41px
         font-weight: 300
+
     &__item
         line-height: 38px
         font-weight: 300
         cursor: pointer
+
     &__content
         margin: 0 auto
+
 .onboarding-overlay__set-step
     position: relative
     cursor: pointer
+
     &::after
         content: ""
         width: 100%
