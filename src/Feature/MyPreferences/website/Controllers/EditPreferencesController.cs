@@ -54,7 +54,7 @@
         {
             var submitSuccess = true;
 
-            if(registerInvestorViewModel == null)
+            if(registerInvestorViewModel == null || registerInvestorViewModel.DatasourceId == null)
             {
                 return null;
             }
