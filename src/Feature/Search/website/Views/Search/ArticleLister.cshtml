@@ -57,36 +57,6 @@
                                     </div>
                                 </div>
                             </select-field>
-                            <select-field inline-template v-if="years.length">
-                                <div class="col-lg-1 relative" @@click.stop style="display: none;" :style="init ? 'display: block' : ''">
-                                    <div class="article-filters__select" @@click="toggleOption" :class="open ? 'active' : ''">
-                                        <span class="article-filters__item-title" :class="active ? 'active' : ''">
-                                            @Model.YearLabel
-                                        </span>
-                                        <i class="article-filters__icon-arrow"></i>
-                                    </div>
-                                    <div class="article-filters__options article-filters__options_small">
-                                        <div class="article-filters__title" @@click="hideOption">
-                                            <i class="icon-chevron-left"></i>
-                                            @Model.YearLabel
-                                        </div>
-                                        <option-field inline-template>
-                                            <label class="option-checkbox option-checkbox_small" @@click="setChoosen(!checked)">
-                                                <input class="option-checkbox__input" name="year" v-model="year" value="All" type="radio" @@click="setYear('All')">
-                                                <span class="option-checkbox__text">All</span>
-                                                <span class="option-checkbox__icon"></span>
-                                            </label>
-                                        </option-field>
-                                        <option-field inline-template v-for="(yearItem, i) in years" :key="i">
-                                            <label class="option-checkbox option-checkbox_small" @@click="setChoosen(!checked)">
-                                                <input class="option-checkbox__input" name="year" v-model="year" :value="yearItem" type="radio" @@click="setYear(yearItem)">
-                                                <span class="option-checkbox__text">{{yearItem}}</span>
-                                                <span class="option-checkbox__icon"></span>
-                                            </label>
-                                        </option-field>
-                                    </div>
-                                </div>
-                            </select-field>
                             <select-field inline-template v-if="months.length">
                                 <div class="col-lg-1 relative" @@click.stop style="display: none;" :style="init ? 'display: block' : ''">
                                     <div class="article-filters__select" @@click="toggleOption" :class="open ? 'active' : ''">
@@ -111,6 +81,36 @@
                                             <label class="option-checkbox option-checkbox_small" @@click="setChoosen(!checked)">
                                                 <input class="option-checkbox__input" name="month" type="radio" v-model="month" :value="monthItem" @@click="setMonth(monthItem)">
                                                 <span class="option-checkbox__text">{{monthItem}}</span>
+                                                <span class="option-checkbox__icon"></span>
+                                            </label>
+                                        </option-field>
+                                    </div>
+                                </div>
+                            </select-field>
+                            <select-field inline-template v-if="years.length">
+                                <div class="col-lg-1 relative" @@click.stop style="display: none;" :style="init ? 'display: block' : ''">
+                                    <div class="article-filters__select" @@click="toggleOption" :class="open ? 'active' : ''">
+                                        <span class="article-filters__item-title" :class="active ? 'active' : ''">
+                                            @Model.YearLabel
+                                        </span>
+                                        <i class="article-filters__icon-arrow"></i>
+                                    </div>
+                                    <div class="article-filters__options article-filters__options_small">
+                                        <div class="article-filters__title" @@click="hideOption">
+                                            <i class="icon-chevron-left"></i>
+                                            @Model.YearLabel
+                                        </div>
+                                        <option-field inline-template>
+                                            <label class="option-checkbox option-checkbox_small" @@click="setChoosen(!checked)">
+                                                <input class="option-checkbox__input" name="year" v-model="year" value="All" type="radio" @@click="setYear('All')">
+                                                <span class="option-checkbox__text">All</span>
+                                                <span class="option-checkbox__icon"></span>
+                                            </label>
+                                        </option-field>
+                                        <option-field inline-template v-for="(yearItem, i) in years" :key="i">
+                                            <label class="option-checkbox option-checkbox_small" @@click="setChoosen(!checked)">
+                                                <input class="option-checkbox__input" name="year" v-model="year" :value="yearItem" type="radio" @@click="setYear(yearItem)">
+                                                <span class="option-checkbox__text">{{yearItem}}</span>
                                                 <span class="option-checkbox__icon"></span>
                                             </label>
                                         </option-field>
