@@ -97,21 +97,10 @@
         display: none
         .btn-clean
             line-height: 38px
+            padding: 0
         +breakpoint(desktop, up)
             display: flex
-            justify-content: space-between
-    &__desktop-btns
-        .btn
-            letter-spacing: 1.5px
-            font-size: 12px
-            color: $black
-            min-width: unset
-            height: 38px
-        .article-filters__btn_apply
-            background-color: $smokyWhite
-            border-radius: 6px
-        .article-filters__btn_clear
-            padding: 0 28px
+            //justify-content: space-between
     &__title
         @extend h4
         display: flex
@@ -146,6 +135,7 @@
         transition: transform 0.35s
         transform: translate3d(100%, 0, 0)
         overflow-y: scroll
+        z-index: 1
         &::-webkit-scrollbar
             width: 4px
         &::-webkit-scrollbar-thumb
@@ -153,8 +143,8 @@
         +breakpoint(desktop, up)
             position: absolute
             top: 40px
-            left: 10px
-            right: 10px
+            left: 0
+            right: 0
             bottom: inherit
             box-shadow: 0px 10px 20px #414855
             border-radius: 0px 0px 6px 6px
@@ -162,13 +152,23 @@
             transform: none
             visibility: hidden
             max-height: 350px
+    &__dropdown
+        width: 100%
+        +breakpoint(desktop-large, down)
+            width: 100%
+            margin-right: 15px
         +breakpoint(desktop-large, up)
-            left: 15px
-            right: 15px
-        &_small
-            +breakpoint(desktop, up)
-                left: -10px
-                right: -10px
+            width: 212px
+            margin: 0
+    &__lists
+        display: flex
+        justify-content: space-between
+        flex-direction: column
+        +breakpoint(desktop, up)
+            flex-direction: row
+    &__dropdown-small
+        +breakpoint(desktop-large, up)
+            width: 120px
 .article-filters, .gallery-filter
     .search-form
         &__input
@@ -224,6 +224,7 @@
     color: $black
     height: 120px
     transform: none
+    z-index: 2
     +breakpoint(desktop, up)
         right: -14px
         height: auto

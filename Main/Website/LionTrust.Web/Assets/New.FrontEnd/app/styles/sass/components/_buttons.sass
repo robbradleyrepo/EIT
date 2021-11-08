@@ -1,4 +1,4 @@
-body  
+body
     .btn
         display: inline-flex
         align-items: center
@@ -18,85 +18,112 @@ body
         font-size: 12px
         border-radius: 6px
         letter-spacing: 1.4px
-        transition: color .3s ease-out,background-color .3s ease-out,border-color .3s ease-out,box-shadow .3s ease-out
+        transition: color 0.3s ease-out, background-color 0.3s ease-out, border-color 0.3s ease-out, box-shadow 0.3s ease-out
         overflow: hidden
         font-family: $userfont
         align-items: center
         justify-content: center
         padding: 0 10px
         box-sizing: border-box
+
         i.animate-arrow
             display: none
-        @include breakpoint(desktop, up)
+
+        +breakpoint(desktop, up)
             min-width: 212px
             height: 51px
             letter-spacing: 2.4px
+
             i.animate-arrow
                 display: inline-flex
-                transition: transform .3s ease-out
+                transition: transform 0.3s ease-out
                 margin-left: 10px
+
+
         &:hover
             i.animate-arrow
                 transform: translate(10px, 0)
+
         &-primary
             background: $primary
             border-color: $primary
+
             &:hover
                 background: #0E8039
                 border-color: #0E8039
+
         &-secondary
             border-color: $white
+
         &-outline-primary
             border-color: $primary
             color: $primary
+
         &-block
             width: 100%
             letter-spacing: 2.4px
+
         &-primary-forward
             border: 1px solid $primary-forward !important
             color: $primary-forward !important
+
             &:hover
-                background: rgba($primary, .1)
+                background: rgba($primary, 0.1)
+
         &-anchor
             border: 1px solid $white
             color: $white
+
             &:hover
                 background: $white
                 color: $black
+
         &-secondary-nav
             border: 1px solid $white
             color: $white
             background: $secondary
+
             &:hover
                 background: $white
                 color: $black
+
         &-black
             background: $secondary
+
         &-white
             border: 1px solid $white
             color: $white
+
         &-grey
             background-color: $smokyWhite
+
         &-clean
             margin: 0
             color: $black
             min-width: initial
+
         &-link
             color: $primary
             min-width: auto
             display: inline-flex
+
             &:last-child
+
             &:hover
                 color: $primary
+
     .input-btn
         display: inline-flex
         position: relative
+
         input[type="submit"]
             @extend .btn
+
             @extend .btn-primary
+
     .link
         font-size: 12px
-        letter-spacing: .09rem
+        letter-spacing: 0.09rem
         font-weight: 500
         text-transform: uppercase
         border-radius: 4px
@@ -104,45 +131,77 @@ body
         display: inline-flex
         justify-content: center
         align-items: center
+
         &-primary
             color: $primary
             padding: 0
+
             &:hover
                 color: $primary
+
         &-secondary
             color: white
             padding: 0
+
         &-btn-secondary
             border: 1px solid $white
             color: $white
             min-width: 212px
             letter-spacing: 0
             text-transform: capitalize
+
             &:hover
                 background: $white
                 color: $black
+
         &-btn-primary
             border: 1px solid $primary
             color: $primary
             padding: 0 20px
+
             &:hover
-                background: rgba($primary, .1)
+                background: rgba($primary, 0.1)
                 color: $primary
+
         &-default
             color: $white
+
         &-custom
             color: $white
+
             .animate-arrow
                 color: $primary
+
         .animate-arrow
             margin-left: 10px
             font-size: 10px
+
+    .article-filters__btn_apply,
+    .article-filters__btn_clear
+        min-width: 122px
+        font-size: 12px
+        letter-spacing: 2.4px
+        line-height: 17px
+        background-color: $smokyWhite
+        color: $secondary-gray
+        padding: 0
+        height: 38px
+
+    .article-filters__btn_clear
+        background: transparent
+        min-width: unset
+        margin-left: 28px
+        white-space: nowrap
+
     .btn-set
         display: flex
+
         &-center
             justify-content: center
+
         &-multiple
             .btn
                 margin-left: 32px
-        @include breakpoint(tablet, down)
+
+        +breakpoint(tablet, down)
             justify-content: space-between
