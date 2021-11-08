@@ -65,7 +65,7 @@
             <h3>@Html.Glass().Editable(Model.Content, x => x.EmailPreferencesTitle)</h3>
             <p class="content-preferences__subDescription">@Html.Glass().Editable(Model.Content, x => x.EmailPreferencesSubtitle)</p>
             <div class="can-toggle demo-rebrand-2">
-                <input id="SubscribeToEmail" type="checkbox" checked>
+                @Html.CheckBoxFor(x => x.SubscribeToEmail)
                 <label for="SubscribeToEmail">
                     <div class="can-toggle__switch" data-checked="Yes" data-unchecked="No"></div>
                 </label>

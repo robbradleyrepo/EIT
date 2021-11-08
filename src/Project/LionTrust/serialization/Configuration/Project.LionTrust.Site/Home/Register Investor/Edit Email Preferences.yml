@@ -61,13 +61,8 @@ Languages:
               s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
               s:ph="/header/navigation" />
             <r
-              uid="{C64833FA-A8C2-466D-94E1-F7CAFD4D38B6}"
-              p:after="r[@uid='{94C4AA69-0130-48D3-AC4A-73475113F552}']"
-              s:id="{06464072-4612-40D5-B861-7BD9DEF6E851}"
-              s:ph="main" />
-            <r
               uid="{B1964502-F791-49A3-95BD-10A93337E287}"
-              p:after="r[@uid='{C64833FA-A8C2-466D-94E1-F7CAFD4D38B6}']"
+              p:after="r[@uid='{94C4AA69-0130-48D3-AC4A-73475113F552}']"
               s:ds="{E927E602-0CB4-40E6-8F96-BACF7C8F3C32}"
               s:id="{0D0AFCD8-E094-44A3-B9C8-FB2A3AEF77DF}"
               s:ph="main" />
@@ -83,6 +78,20 @@ Languages:
               s:ds="{B635C745-B6C3-4460-9D34-05C6B5B19A7C}"
               s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
               s:ph="header" />
+            <r
+              uid="{0B8A0CD3-67B7-49C0-956D-E004E4D0FF69}"
+              p:after="r[@uid='{50FACAA0-F93E-4652-99EA-33AFC98FF0FE}']"
+              s:ds="{148B99BA-A1E8-4622-A3E1-11F2160EA877}"
+              s:id="{56ED4D0F-E184-4667-A404-BE72AEAEB565}"
+              s:par=""
+              s:ph="fund-accordion-list" />
+            <r
+              uid="{5BDA736E-7D9E-4220-9BE1-99EBEF2E9723}"
+              p:after="*[1=2]"
+              s:ds="{80014A7D-4C7C-485E-BDA8-6D3488A74D8F}"
+              s:id="{C3D014E3-0BFA-42A0-A896-E49BF122EE0D}"
+              s:par=""
+              s:ph="privacy-notice" />
           </d>
         </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"

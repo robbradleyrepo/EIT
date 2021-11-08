@@ -233,15 +233,9 @@
                 sfEntity.InternalFields.SetField<bool>(Constants.SF_RelBlogField, isCommonCheckboxesChecked);
                 sfEntity.InternalFields.SetField<bool>(Constants.SF_Commentaries, isCommonCheckboxesChecked);
 
-                //If user unsubscribed from the preference center, make the first name and email blank and change the record type to unsubscribe
+                //If user unsubscribed from the preference center, change the record type to unsubscribe
                 if (context.Preferences.Unsubscribe)
-                {
-                    if (!context.IsContact)
-                    {
-                        sfEntity.InternalFields[Constants.SF_FirstNameField] = string.Empty;
-                        sfEntity.InternalFields[Constants.SF_EmailField] = string.Empty;
-                    }
-
+                {                    
                     var entityRecordtypes = GetSFEntityRecordTypes(sfEntityType);
                     if (entityRecordtypes != null)
                     {

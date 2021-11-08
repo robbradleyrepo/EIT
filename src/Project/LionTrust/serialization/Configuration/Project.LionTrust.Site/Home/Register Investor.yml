@@ -22,8 +22,14 @@ Languages:
           <d
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
             <r
-              uid="{ADDEB6D9-EE76-462E-AC98-7672876ED04D}"
+              uid="{9C68F9CA-5705-4160-9922-315618039702}"
               p:before="*"
+              s:ds="{148B99BA-A1E8-4622-A3E1-11F2160EA877}"
+              s:id="{56ED4D0F-E184-4667-A404-BE72AEAEB565}"
+              s:ph="/main/fund-accordion-list" />
+            <r
+              uid="{ADDEB6D9-EE76-462E-AC98-7672876ED04D}"
+              p:after="r[@uid='{9C68F9CA-5705-4160-9922-315618039702}']"
               s:ds="{15518891-53BA-4B83-93D5-F3BAC21D3344}"
               s:id="{96ABC0AA-4A9D-4009-8B50-582D50F8BE56}"
               s:ph="main" />
