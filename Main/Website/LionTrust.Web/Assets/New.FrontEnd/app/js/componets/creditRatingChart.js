@@ -27,6 +27,29 @@ export default () => {
           top: 15,
           bottom: 0,
         },
+        plugins: {
+          datalabels: {
+            formatter: (value, ctx) => {
+              let sum = 0;
+              let dataArr = ctx.chart.data.datasets[0].data;
+              dataArr.map(data => {
+                sum += data;
+              });
+              let percentage = (value * 100 / sum).toFixed(2) + "%";
+              return percentage;
+            },
+            color: '#414855',
+            align: 'end',
+            anchor: 'end',
+            labels: {
+              title: {
+                font: {
+                  weight: '300'
+                }
+              },
+            }
+          }
+        },
         maintainAspectRatio: true,
         responsive: true,
         scales: {
@@ -56,21 +79,21 @@ export default () => {
               ticks: {
                 padding: 15
               },
-            
+
             },
-          ],          
+          ],
         },
         legend: {
-            position: "bottom",
-            align: "start",
-            labels: {
-              boxWidth: 18,
-              boxHeight: 15,
-            },
+          position: "bottom",
+          align: "start",
+          labels: {
+            boxWidth: 18,
+            boxHeight: 15,
           },
-          tooltips: {
-              enabled: false
-          }
+        },
+        tooltips: {
+          enabled: false
+        }
       },
     });
   }

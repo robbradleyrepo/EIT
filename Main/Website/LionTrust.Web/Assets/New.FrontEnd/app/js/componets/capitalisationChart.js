@@ -26,32 +26,55 @@ export default () => {
         rotation: 2.7 * Math.PI,
         responsive: true,
         tooltips: {
-            enabled: false
+          enabled: false
         },
         legend: {
-          display: false,          
+          display: false,
+        },
+        plugins: {
+          datalabels: {
+            formatter: (value, ctx) => {
+              let sum = 0;
+              let dataArr = ctx.chart.data.datasets[0].data;
+              dataArr.map(data => {
+                sum += data;
+              });
+              let percentage = (value * 100 / sum).toFixed(2) + "%";
+              return percentage;
+            },
+            color: 'transparent',
+            align: 'end',
+            anchor: 'end',
+            labels: {
+              title: {
+                font: {
+                  weight: '300'
+                }
+              },
+            }
+          }
         },
         legendCallback: function (chart) {
-            const text = [];
-            text.push('<ul class="circle-legend">');
-            for (let i = 0; i < chart.data.labels.length; i++) {
-              text.push(
-                '<li><span class="dot" style="background-color:' +
-                  chart.data.datasets[0].backgroundColor[i] +
-                  '"></span>'
-              );
-                text.push(
-                  '<span class="label">' +
-                    chart.data.labels[i] + '<span class="persents"> '+ chart.data.datasets[0].data[i] +'% </span></span></li>'
-                );
-            }
-
-            text.push("</ul>");
-
-            return text.join("");
+          const text = [];
+          text.push('<ul class="circle-legend">');
+          for (let i = 0; i < chart.data.labels.length; i++) {
+            text.push(
+              '<li><span class="dot" style="background-color:' +
+              chart.data.datasets[0].backgroundColor[i] +
+              '"></span>'
+            );
+            text.push(
+              '<span class="label">' +
+              chart.data.labels[i] + '<span class="persents"> ' + chart.data.datasets[0].data[i] + '% </span></span></li>'
+            );
           }
+
+          text.push("</ul>");
+
+          return text.join("");
+        }
       },
     });
     $(".capitalisation-legend").prepend(myChart.generateLegend());
-  }  
+  }
 };
