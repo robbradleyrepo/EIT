@@ -288,9 +288,10 @@
             </nav>
         }
 
-        <a href="@Model.HomeItem.MyLionTrust.Url" class="header-navbar__user-link">
+        @using (Html.Glass().BeginRenderLink(Model.HomeItem, p => p.MyLionTrust, new { @class = "header-navbar__user-link" }, isEditable: true))
+        {
             <img src="/dist/images/components/header/user.svg" alt="user profile">
-        </a>
+        }       
         <div class="header-navbar__btn-search">
             <img src="/dist/images/components/header/search.svg" alt="search">
         </div>
