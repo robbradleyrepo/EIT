@@ -3,6 +3,7 @@
     using System.Collections.Generic;
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
+    using Glass.Mapper.Sc.Fields;
     using LionTrust.Foundation.Navigation.Models;
     using LionTrust.Foundation.Onboarding.Models;
 
@@ -14,8 +15,8 @@
         [SitecoreField(Constants.NavigationRoot.FooterConfiguration_FieldId, SitecoreFieldType.DropTree, "Footer")]
         IFooterConfiguration FooterConfiguration { get; set; }
 
-        [SitecoreField(Constants.NavigationRoot.MyLionTrust_FieldID, SitecoreFieldType.DropTree, "Menu")]
-        INavigablePage MyLionTrust { get; set; }
+        [SitecoreField(Constants.NavigationRoot.MyLionTrust_FieldID, SitecoreFieldType.GeneralLink, "Menu")]
+        Link MyLionTrust { get; set; }
 
         [SitecoreField(Constants.NavigationRoot.MyPreferences_FieldID, SitecoreFieldType.DropTree, "Menu")]
         INavigablePage MyPreferences { get; set; }
