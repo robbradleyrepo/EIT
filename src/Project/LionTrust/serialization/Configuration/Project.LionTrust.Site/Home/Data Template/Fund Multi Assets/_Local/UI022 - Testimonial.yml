@@ -1,8 +1,8 @@
 ﻿---
-ID: "0db3bdb1-e23a-448f-b349-db71e37196e6"
-Parent: "86e6c9b8-81d9-49eb-8ccc-1e3234ca391b"
+ID: "49879dc0-7f0f-4c21-ae9c-ec2a59dd8f48"
+Parent: "be90c992-f129-482b-932b-80f3e6223371"
 Template: "0b50876e-0f9f-479f-8533-a84625b8c7c5"
-Path: "/sitecore/templates/Branches/Project/LionTrust/Page Types/Fund Multi Assets Category Page/$name/_Local/UI022 - Testimonial"
+Path: "/sitecore/content/LionTrustNew/Home/Data Template/Fund Multi Assets/_Local/UI022 - Testimonial"
 DB: master
 BranchID: "f99e0a5b-d9b4-45ca-8304-311c93a7737e"
 SharedFields:
@@ -11,7 +11,7 @@ SharedFields:
   Value: 1800
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
-  Value: "{35D1A3A1-1DD6-4A1D-A38A-146E554C91B8}"
+  Value: "{0DB3BDB1-E23A-448F-B349-DB71E37196E6}"
 Languages:
 - Language: en
   Versions:
@@ -19,11 +19,11 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210914T140800Z
+      Value: 20211112T115554Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\admin
+        sitecore\Admin
     - ID: "9ae10805-e946-4661-ab29-de0c6a9019a5"
       Hint: Testimonial_Quote
       Value: “In our experience, companies that generate significant free cashflow after investments prove to be rewarding stock market purchases.“

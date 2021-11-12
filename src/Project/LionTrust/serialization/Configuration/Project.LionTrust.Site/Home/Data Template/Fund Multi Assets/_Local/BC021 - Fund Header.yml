@@ -1,8 +1,8 @@
 ﻿---
-ID: "fbaeb77d-a84b-442b-9a60-5d69fd0fdf1b"
-Parent: "86e6c9b8-81d9-49eb-8ccc-1e3234ca391b"
+ID: "46811026-3864-4b18-9ade-5c2890c77d1f"
+Parent: "be90c992-f129-482b-932b-80f3e6223371"
 Template: "cb15bccd-f423-4cb0-b3dc-d4db939599f4"
-Path: "/sitecore/templates/Branches/Project/LionTrust/Page Types/Fund Multi Assets Category Page/$name/_Local/BC021 - Fund Header"
+Path: "/sitecore/content/LionTrustNew/Home/Data Template/Fund Multi Assets/_Local/BC021 - Fund Header"
 DB: master
 BranchID: "f99e0a5b-d9b4-45ca-8304-311c93a7737e"
 SharedFields:
@@ -11,7 +11,7 @@ SharedFields:
   Value: 400
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
-  Value: "{27B0A5E4-3A84-4A5E-9F64-1B370B607103}"
+  Value: "{FBAEB77D-A84B-442B-9A60-5D69FD0FDF1B}"
 Languages:
 - Language: en
   Versions:
@@ -22,11 +22,11 @@ Languages:
       Value: Asia Income Fund
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210914T140757Z
+      Value: 20211112T115553Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\admin
+        sitecore\Admin
     - ID: "90bcab34-b9e0-466e-97a4-73cec67335f7"
       Hint: FundHeader_Fund
       Value: "{A4C505F9-7BF3-4751-8F97-67FAD4F3668E}"
