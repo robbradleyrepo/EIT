@@ -56,8 +56,20 @@ Languages:
               s:id="{DE3BBA47-F726-43E8-A4F3-950B51597BF0}"
               s:ph="/main/fund-graphs" />
             <r
-              uid="{C0C8A814-7030-432E-8FA3-D1B5811E3B2B}"
+              uid="{CD084E5C-7D3E-4A30-9EDD-5C59DBDBE19A}"
               p:after="r[@uid='{42E5EC82-2F09-4D33-BE97-5BDA0773FF6C}']"
+              s:ds="{B788AEA3-B7C4-4932-AD60-97406B331A2F}"
+              s:id="{65A60416-FD52-4573-8DBE-83AAF4CA3978}"
+              s:ph="/main/fund-graphs" />
+            <r
+              uid="{78ABC76F-8462-4AA4-B9B8-693955597FF8}"
+              p:after="r[@uid='{CD084E5C-7D3E-4A30-9EDD-5C59DBDBE19A}']"
+              s:ds="{FA2FA60D-83EE-4A5C-BFDF-E01A44595B1F}"
+              s:id="{034EB997-49B9-4395-949F-BA16995C123D}"
+              s:ph="/main/fund-graphs" />
+            <r
+              uid="{C0C8A814-7030-432E-8FA3-D1B5811E3B2B}"
+              p:after="r[@uid='{78ABC76F-8462-4AA4-B9B8-693955597FF8}']"
               s:ds="{DA693B09-CC8F-465A-851D-D26A49909E47}"
               s:id="{D1F65FAF-D449-484C-AADA-D6733DB1F445}"
               s:ph="/main/fundoverview_rightcolumn" />

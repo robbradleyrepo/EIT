@@ -7,5 +7,8 @@
     {
         [SitecoreField(Constants.SectorBreakdown.HeadingFieldId)]
         string Heading { get; set; }
+
+        [SitecoreField(Constants.SectorBreakdown.InformationFieldId)]
+        string Information { get; set; }
     }
 }

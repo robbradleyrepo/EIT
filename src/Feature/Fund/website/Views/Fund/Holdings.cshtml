@@ -18,8 +18,14 @@
                         </tr>
                     }
                 </tbody>
+                @if (!string.IsNullOrEmpty(Model.Table.Information) || Sitecore.Context.PageMode.IsExperienceEditor)
+                {
+                    <caption>
+                        <p class="graph-section__sub"><span>*</span>@Html.Glass().Editable(Model.Table, t => t.Information)</p>
+                    </caption>
+                }
             </table>
-        </div>
+        </div>            
     </div>
 </div>
 
