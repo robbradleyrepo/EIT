@@ -6,5 +6,8 @@
     {
         [SitecoreField(Constants.GraphWithHeading.HeadingFieldId)]
         string Heading { get; set; }
+
+        [SitecoreField(Constants.GraphWithHeading.InformationFieldId)]
+        string Information { get; set; }
     }
 }

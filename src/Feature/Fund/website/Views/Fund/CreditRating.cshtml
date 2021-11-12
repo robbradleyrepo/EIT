@@ -13,5 +13,9 @@
             <!-- set values for char in data attribute -->
             <canvas class="credit-rating-chart" data-chart='@Model.JsonDataObject' width="400" height="300"></canvas>
         </div>
-    </div>
+        @if (!string.IsNullOrEmpty(Model.Information) || Sitecore.Context.PageMode.IsExperienceEditor)
+        {
+            <p class="graph-section__sub"><span>*</span>@Html.Glass().Editable(m => m.Information)</p>
+        }
+    </div>    
 </div>

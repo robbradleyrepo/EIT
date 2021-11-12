@@ -14,6 +14,9 @@
         [SitecoreField(Constants.CreditRating.MaxValueFieldId)]
         string MaxValue { get;set; }
 
+        [SitecoreField(Constants.CreditRating.InformationFieldId)]
+        string Information { get; set; }
+
         string JsonDataObject { get; set; }
     }
 }
