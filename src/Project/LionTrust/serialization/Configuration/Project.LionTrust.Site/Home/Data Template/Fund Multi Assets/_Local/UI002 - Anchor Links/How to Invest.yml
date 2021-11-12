@@ -1,17 +1,17 @@
 ﻿---
-ID: "7070ada0-0b82-455c-bad9-29a8e669077f"
-Parent: "86e6c9b8-81d9-49eb-8ccc-1e3234ca391b"
+ID: "0be7ed37-ff95-45a1-9e9b-f96385e8bfe2"
+Parent: "5b901959-8dc6-4db6-bed6-596875ac5e8f"
 Template: "b074a5e0-b766-481c-869c-8c2e3034c4bc"
-Path: /sitecore/templates/Branches/Project/LionTrust/Page Types/Fund Multi Assets Category Page/$name/_Local/investmentprocess
+Path: "/sitecore/content/LionTrustNew/Home/Data Template/Fund Multi Assets/_Local/UI002 - Anchor Links/How to Invest"
 DB: master
 BranchID: "f99e0a5b-d9b4-45ca-8304-311c93a7737e"
 SharedFields:
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 1000
+  Value: 600
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
-  Value: "{09349DE3-BB18-4ADC-98B2-6DB0200E687E}"
+  Value: "{1721F08B-799F-47E0-A469-DB1A7405E388}"
 Languages:
 - Language: en
   Versions:
@@ -19,14 +19,14 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210914T140759Z
+      Value: 20211112T115554Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\admin
+        sitecore\Admin
     - ID: "98b43e92-3166-4986-a181-e6ef91093454"
       Hint: Anchor_Id
-      Value: investmentprocess
+      Value: howtoinvest
     - ID: "aa0a9de9-8d65-4233-a9d5-dfab02bb9b5a"
       Hint: Anchor_Name
-      Value: investmentprocess
+      Value: How to Invest
