@@ -40,7 +40,7 @@ export default () => {
               dataArr.map(data => {
                 sum += data;
               });
-              if(value === 0)
+              if(sum === 0)
               {
                 sum = 1;
                  percentage = 0 + "%";
