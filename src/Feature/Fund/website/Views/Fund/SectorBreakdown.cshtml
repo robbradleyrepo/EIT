@@ -1,5 +1,9 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @model LionTrust.Feature.Fund.SectorBreakdown.SectorBreakdownViewModel
+@if ((Model == null || Model.Component == null) && !Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    return;
+}
 <div class="col-lg-6">
     <div class="table-section">
         <h3 class="table-section__title">@Html.Glass().Editable(Model.Component, t => t.Heading)</h3>
@@ -19,6 +23,12 @@
                             </tr>
                         }
                     </tbody>
+                    @if (!string.IsNullOrEmpty(Model.Component.Information) || Sitecore.Context.PageMode.IsExperienceEditor)
+                    {
+                        <caption>
+                            <p class="graph-section__sub"><span>*</span>@Html.Glass().Editable(t => t.Component.Information)</p>
+                        </caption>
+                    }
                 </table>
             </div>
         }
@@ -29,7 +39,7 @@
                     Please select a fund
                 </span>
             </div>
-        }
+        }        
     </div>
 </div>
 

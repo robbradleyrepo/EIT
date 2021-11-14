@@ -51,12 +51,17 @@
             @if (Model.HomeItem.MyLionTrust != null)
             {
                 <div class="sidebar__profile-btn">
-                    <a href="@Model.HomeItem.MyLionTrust.Url" class="btn btn-primary btn-block">
+                    @using (Html.Glass().BeginRenderLink(Model.HomeItem, p => p.MyLionTrust, new { @class = "btn btn-primary btn-block" }, isEditable: true))
+                    {
                         <i class="icon-user"></i>
-                        @Html.Glass().Editable(Model.HomeItem.MyLionTrust, z => z.PageTitle)
-                    </a>
+                        if (!string.IsNullOrWhiteSpace(Model.HomeItem.MyLionTrust.Text))
+                        {
+                            @Model.HomeItem.MyLionTrust.Text
+                        }
+                    }
                 </div>
             }
+
             <div class="sidebar__setting">
                 <ul class="sidebar-actions">
                     @if (Model.HomeItem.MyPreferences != null)

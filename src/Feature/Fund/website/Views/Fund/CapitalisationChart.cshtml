@@ -6,40 +6,46 @@
     return;
 }
 
-<div class="table-section">
-    <h3 class="table-section__title table-section__title_credit-sec">
-        @Html.Glass().Editable(m => m.Heading)
-    </h3>
-    <div class="chart-table chart-table-capitalisation">
-        <!-- set values for char in data attribute -->
-        <canvas class="capitalisation-chart" width="400" height="400" data-chart='@Model.JsonDataObject'></canvas>
-        @if (!Sitecore.Context.PageMode.IsExperienceEditor)
-        {
-            <div class="capitalisation-legend"></div>
-        }
-        else
-        {
+<div class="col-lg-6">
+    <div class="table-section">
+        <h3 class="table-section__title table-section__title_credit-sec">
+            @Html.Glass().Editable(m => m.Heading)
+        </h3>
+        <div class="chart-table chart-table-capitalisation">
+            <!-- set values for char in data attribute -->
+            <canvas class="capitalisation-chart" width="400" height="400" data-chart='@Model.JsonDataObject'></canvas>
+            @if (!Sitecore.Context.PageMode.IsExperienceEditor)
+            {
+                <div class="capitalisation-legend"></div>
+            }
+            else
+            {
 
-            <div class="capitalisation-legend-edit">
-                <ul class="circle-legend">
-                    @foreach (var child in Model.Children)
-                    {
-                        using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Fund/CapitalisationChart", child.Id.ToString()))
+                <div class="capitalisation-legend-edit">
+                    <ul class="circle-legend">
+                        @foreach (var child in Model.Children)
                         {
-                            <li>
-                                @if (child.BackgroundColour != null)
-                                {
-                                    <span class="dot" style="background-color:@child.BackgroundColour.Value"></span>
-                                }
-                                <span class="label">
-                                    @Html.Glass().Editable(child, x => x.RowName)
-                                    <span class="persents">@Html.Glass().Editable(child, x => x.Value)</span>
-                                </span>
-                            </li>
+                            using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Fund/CapitalisationChart", child.Id.ToString()))
+                            {
+                                <li>
+                                    @if (child.BackgroundColour != null)
+                                    {
+                                        <span class="dot" style="background-color:@child.BackgroundColour.Value"></span>
+                                    }
+                                    <span class="label">
+                                        @Html.Glass().Editable(child, x => x.RowName)
+                                        <span class="persents">@Html.Glass().Editable(child, x => x.Value)</span>
+                                    </span>
+                                </li>
+                            }
                         }
-                    }
-                </ul>
-            </div>
+                    </ul>
+                </div>
+            }
+        </div>
+        @if (!string.IsNullOrEmpty(Model.Information) || Sitecore.Context.PageMode.IsExperienceEditor)
+        {
+            <p class="graph-section__sub"><span>*</span>@Html.Glass().Editable(m => m.Information)</p>
         }
     </div>
 </div>

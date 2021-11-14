@@ -6,5 +6,8 @@
     {
         [SitecoreField(Constants.HoldingsTable.HeadingFieldId)]
         string Heading { get; set; }
+
+        [SitecoreField(Constants.HoldingsTable.InformationFieldId)]
+        string Information { get; set; }
     }
 }

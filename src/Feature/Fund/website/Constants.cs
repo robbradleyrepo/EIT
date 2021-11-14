@@ -44,16 +44,19 @@
         {
             public const string HeadingFieldId = "{26BD09DF-992E-40F9-A625-77F17A237AC7}";
             public const string MaxValueFieldId = "{EA8D41F6-9599-4413-A778-8B37F5582E17}";
+            public const string InformationFieldId = "{E080827F-D78F-4885-A072-0F9DBABE9357}";
         }
 
         public static class CapitalisationChart
         {
             public const string HeadingFieldId = "{0C319F29-5F95-4061-849B-E27634734863}";
+            public const string InformationFieldId = "{6D36351D-0024-444F-B9D0-6C826A29338A}";
         }
 
         public static class GraphWithHeading
         {
             public const string HeadingFieldId = "{AA344985-91C2-4371-AEE9-85A678700BC1}";
+            public const string InformationFieldId = "{B52466F4-87EC-44C1-BAD5-34DE932F931E}";
         }
 
         public static class FundCard
@@ -151,6 +154,7 @@
         public static class HoldingsTable
         {
             public const string HeadingFieldId = "{74B0C999-733F-4EDB-B896-D160EA93B6C8}";
+            public const string InformationFieldId = "{AD401719-849A-498E-93D5-18B7C01A55CE}";
         }
 
         public static class GraphSection
@@ -194,6 +198,7 @@
         public static class SectorBreakdown
         {
             public const string HeadingFieldId = "{FE72E4F7-8806-4907-B17F-AA124431957F}";
+            public const string InformationFieldId = "{713919A7-A8A1-491F-B80B-246150E0DE2E}";
         }
 
         public static class FundManagerPromo

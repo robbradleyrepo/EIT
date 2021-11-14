@@ -37,43 +37,8 @@ Languages:
               s:par=""
               s:ph="header" />
             <r
-              uid="{739162E2-69FE-4C57-A83F-C352AFA0A39B}"
-              p:after="r[@uid='{F97098D8-3254-4752-BFCF-ABFC7D64A578}']"
-              s:ds=""
-              s:id="{65A60416-FD52-4573-8DBE-83AAF4CA3978}"
-              s:par=""
-              s:ph="/main/fund-graphs" />
-            <r
-              uid="{E359AC01-5FA3-42AE-B954-EFB91C0CD1AE}"
-              p:after="r[@uid='{739162E2-69FE-4C57-A83F-C352AFA0A39B}']"
-              s:ds=""
-              s:id="{034EB997-49B9-4395-949F-BA16995C123D}"
-              s:par=""
-              s:ph="/main/fund-graphs" />
-            <r
-              uid="{5F35249F-9ACC-44F5-85DE-2C47E3B9D0D2}"
-              p:after="r[@uid='{E359AC01-5FA3-42AE-B954-EFB91C0CD1AE}']"
-              s:ds="{768C518B-E8EC-43F7-A123-EF027E499DC6}"
-              s:id="{E5DD9F72-1F1D-439D-AC28-2B32B06BF019}"
-              s:par=""
-              s:ph="/main/fund-graphs" />
-            <r
-              uid="{A93708F0-60A5-4B5A-A71F-EBAD7534E9F2}"
-              p:after="r[@uid='{5F35249F-9ACC-44F5-85DE-2C47E3B9D0D2}']"
-              s:ds=""
-              s:id="{05FCF7EF-B8E7-44C9-8950-74A08EA81DF2}"
-              s:par=""
-              s:ph="/main/fund-graphs" />
-            <r
-              uid="{09F227F2-D2C9-43CF-96D9-1212F96F8438}"
-              p:after="r[@uid='{A93708F0-60A5-4B5A-A71F-EBAD7534E9F2}']"
-              s:ds=""
-              s:id="{DE3BBA47-F726-43E8-A4F3-950B51597BF0}"
-              s:par=""
-              s:ph="/main/fund-graphs" />
-            <r
               uid="{5AA25FD9-0C14-4CD4-9155-73C7AA55F09B}"
-              p:after="r[@uid='{09F227F2-D2C9-43CF-96D9-1212F96F8438}']"
+              p:after="r[@uid='{F97098D8-3254-4752-BFCF-ABFC7D64A578}']"
               s:ds="{72499362-1385-4451-BCAA-BABECF58E780}"
               s:id="{2A426004-8707-4E51-9772-D999D41FB113}"
               s:par=""
@@ -91,7 +56,7 @@ Languages:
               s:ds="{5F8977AF-A779-401A-AD4F-72C99F26F098}"
               s:id="{F7E7EFF1-2B5F-4554-9B19-1483BDCD6025}"
               s:par=""
-              s:ph="/main/fundoverview_leftcolumn" />
+              s:ph="main" />
             <r
               uid="{A8956A85-6DC8-48D8-8515-7C7248E11877}"
               p:after="r[@uid='{D312293B-788F-40AB-A29E-9EB232B0619E}']"
@@ -128,15 +93,22 @@ Languages:
               s:par=""
               s:ph="main" />
             <r
-              uid="{09310317-A4C8-4A5C-8085-56BE3ADB212B}"
+              uid="{502E2501-2446-44D9-838C-88F115F2C9A4}"
               p:after="r[@uid='{6B54758F-A94E-47E0-A137-DB47A023C285}']"
-              s:ds="{6D03FB52-C018-45C9-8A22-816F0DF16CC5}"
-              s:id="{9608FB83-8C06-4A26-BE98-BC32ED778671}"
+              s:ds="{7B57D482-C766-4F05-ACA6-386979081C15}"
+              s:id="{56ECB2D2-5D43-4F0F-A5D1-AC267F249E7B}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{9CF64375-FEE1-447D-BD81-AA2B9CDE8A35}"
+              p:after="r[@uid='{502E2501-2446-44D9-838C-88F115F2C9A4}']"
+              s:ds="{51C24CE8-1C35-486A-B31D-2D052204B086}"
+              s:id="{E9EA1844-F7AA-45D6-A10F-800A467D6E3D}"
               s:par=""
               s:ph="main" />
             <r
               uid="{DE698B12-AE17-4452-9EAA-5DFC43A069CD}"
-              p:after="r[@uid='{09310317-A4C8-4A5C-8085-56BE3ADB212B}']"
+              p:after="r[@uid='{9CF64375-FEE1-447D-BD81-AA2B9CDE8A35}']"
               s:ds="{B54F1DBB-FD09-42A4-9B42-77F57A3DE8D5}"
               s:id="{2A426004-8707-4E51-9772-D999D41FB113}"
               s:par=""
