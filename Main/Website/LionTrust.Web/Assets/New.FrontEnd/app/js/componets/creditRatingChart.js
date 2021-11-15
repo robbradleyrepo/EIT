@@ -38,7 +38,6 @@ export default () => {
               });
               if(sum === 0)
               {
-                sum = 1;
                  percentage = 0 + "%";
               }
               else
