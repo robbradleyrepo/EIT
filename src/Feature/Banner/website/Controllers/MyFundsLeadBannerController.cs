@@ -30,11 +30,7 @@
             var contactData = _personalizedContentService.GetContactFacetData();
             var viewModel = new MyFundsLeadBannerViewModel(dataSource);
 
-            if (!Sitecore.Context.PageMode.IsExperienceEditor && contactData == null)
-            {
-                return null;
-            }
-            else if (contactData != null)
+            if (contactData != null)
             {
                 viewModel.ContactName = $"{contactData.FirstName} {contactData.LastName}";
             }
