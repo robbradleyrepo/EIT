@@ -13,11 +13,11 @@
         {
             if (attributes == null)
             {
-                attributes = new NameValueCollection { { "data-goal-trigger", goalId.ToString() } };
+                attributes = new NameValueCollection { { "data-goal-trigger", goalId.ToString("B").ToUpperInvariant() } };
             }
             else
             {
-                attributes.Add("data-goal-trigger", goalId.ToString());
+                attributes.Add("data-goal-trigger", goalId.ToString("B").ToUpperInvariant());
             }
 
             return glass.Editable<T>(item, field, attributes);
@@ -27,11 +27,11 @@
         {
             if (attributes == null)
             {
-                attributes = new NameValueCollection { { "data-goal-trigger", goalId.ToString() } };
+                attributes = new NameValueCollection { { "data-goal-trigger", goalId.ToString("B").ToUpperInvariant() } };
             }
             else
             {
-                attributes.Add("data-goal-trigger", goalId.ToString());
+                attributes.Add("data-goal-trigger", goalId.ToString("B").ToUpperInvariant());
             }
 
             return glass.BeginRenderLink<T>(model, field, attributes, isEditable, alwaysRender);
