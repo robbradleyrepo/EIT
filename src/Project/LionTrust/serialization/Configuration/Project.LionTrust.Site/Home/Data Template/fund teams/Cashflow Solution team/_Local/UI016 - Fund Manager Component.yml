@@ -1,0 +1,31 @@
+﻿---
+ID: "578b4b91-ac19-407d-a3a6-b2a87b17b6cd"
+Parent: "db65e940-c03e-421d-aa0e-c1a443d15dbf"
+Template: "a33314f8-d9aa-4710-b47a-9f66ba58ab13"
+Path: "/sitecore/content/LionTrustNew/Home/Data Template/fund teams/Cashflow Solution team/_Local/UI016 - Fund Manager Component fff"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210825T101133Z
+    - ID: "4ef859a1-6cd4-4213-8eab-94cc974c6c08"
+      Hint: FundManager_Title
+      Value: bvbvbvvb
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "742fa605-ec20-4ec8-87fd-9e7daeb8bc84"
+      Hint: FundManagers_Managers
+      Type: Multilist
+      Value: |
+        {59739F98-04B1-4BAA-BDC3-C1BD4591A91D}
+        {5A4AD063-A365-4A9E-A33C-F53D23FFDD7F}
+        {7B6AE18E-ED82-4FF7-980C-7F607736224B}
+        {3AF27AD8-76D9-425C-A072-CBA013C4B0C2}
+        {F491C31A-C2AB-44D8-811B-D308844AA504}
+        {3AF0F46B-301E-45E8-B5F9-6E4BF1FE6D40}
