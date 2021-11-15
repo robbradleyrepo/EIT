@@ -63,20 +63,25 @@
         @include breakpoint(desktop, up)
             width: 48%
     &__headbox
-        margin-bottom: 10px
+        margin-bottom: 7px
         @include breakpoint(desktop, up)
             margin-top: 50px
-            margin-bottom: 19px
+            margin-bottom: 7px
     &__contentbox
-        margin-bottom: 40px
+        margin-bottom: 20px
         @include font-size(20px)
         color: $black
         @include p-1-book-20
         @include breakpoint(desktop, up)
-            margin-bottom: 29px
+            margin-bottom: 39px
         p
+            margin-bottom: 10px
             @include breakpoint(desktop-large, up)
-                margin-bottom: 1.4rem
+                margin-bottom: 11px
+        b
+            @include breakpoint(desktop-large, up)
+                margin-top: 10px
+                display: inline-block
     &__btnbox
         display: flex
         justify-content: left
