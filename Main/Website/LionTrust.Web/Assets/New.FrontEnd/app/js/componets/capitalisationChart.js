@@ -26,32 +26,46 @@ export default () => {
         rotation: 2.7 * Math.PI,
         responsive: true,
         tooltips: {
-            enabled: false
+          enabled: false
         },
         legend: {
-          display: false,          
+          display: false,
+        },
+        plugins: {
+          datalabels: {
+            color: 'transparent',
+            align: 'center',
+            anchor: 'center',
+            labels: {
+              title: {
+                font: {
+                  weight: '300'
+                }
+              },
+            }
+          }
         },
         legendCallback: function (chart) {
-            const text = [];
-            text.push('<ul class="circle-legend">');
-            for (let i = 0; i < chart.data.labels.length; i++) {
-              text.push(
-                '<li><span class="dot" style="background-color:' +
-                  chart.data.datasets[0].backgroundColor[i] +
-                  '"></span>'
-              );
-                text.push(
-                  '<span class="label">' +
-                    chart.data.labels[i] + '<span class="persents"> '+ chart.data.datasets[0].data[i] +'% </span></span></li>'
-                );
-            }
-
-            text.push("</ul>");
-
-            return text.join("");
+          const text = [];
+          text.push('<ul class="circle-legend">');
+          for (let i = 0; i < chart.data.labels.length; i++) {
+            text.push(
+              '<li><span class="dot" style="background-color:' +
+              chart.data.datasets[0].backgroundColor[i] +
+              '"></span>'
+            );
+            text.push(
+              '<span class="label">' +
+              chart.data.labels[i] + '<span class="persents"> ' + chart.data.datasets[0].data[i] + '% </span></span></li>'
+            );
           }
+
+          text.push("</ul>");
+
+          return text.join("");
+        }
       },
     });
     $(".capitalisation-legend").prepend(myChart.generateLegend());
-  }  
+  }
 };

@@ -58,7 +58,8 @@ input, textarea, select
 		border-color: red
 	&:required:valid
 		border-color: $primary
-
+html
+	overflow-x: hidden
 body
 	font-family: $userfont
 	font-size: $fontsize
@@ -67,6 +68,8 @@ body
 	min-width: 320px
 	position: relative
 	overflow-x: hidden
+	.fancybox-content 
+		background: rgba(0, 0, 0, 0) !important
 
 ul
 	list-style-type: none
