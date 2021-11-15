@@ -20,6 +20,20 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
+    - ID: "725dc6c8-8878-4947-86b3-163e51c5911d"
+      Hint: ArticleScroller_SelectedArticles
+      Type: Multilist with Search
+      Value: |
+        {7A33212C-CB7C-4203-811A-4A91263FFC70}
+        {2653D04A-67CC-43CC-876F-20D98B084D8A}
+        {B4612011-4629-4A0B-8029-58F508A5D6D7}
+        {65E56588-C057-45AA-8145-56BA8E2BA4FF}
+        {236193C4-4C29-47DF-A402-917F1C06F6CC}
+        {3C1B417B-D69E-4DCC-B46D-36D20247F080}
     - ID: "93854c18-0919-445e-bc88-2d353c8491e8"
       Hint: ArticleScroller_Heading
       Value: Article Scroller
+    - ID: "bad318c3-b9b5-457f-a42d-f51516fc3ec2"
+      Hint: ArticleScroller_CTA
+      Value: |
+        <link text="See all articles" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{7E9E8706-F864-48E5-B4A2-57F2C408EFD7}" />
