@@ -4,12 +4,12 @@
 {
     using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Navigation/QuickLinks/Quick Links Component", Model.Id.ToString(), "Add Quick Links"))
     {
-        <section class="quick-link-chart-wrapper">
+        <section class="quick-link-chart-wrapper scrollable-cards">
             <div class="container-lg">
                 <div class="row">
                     @foreach (var quickLinkCTA in Model.QuickLinksList)
                     {
-                        <div class="col-8 col-sm-5 col-lg-3">
+                        <div class="col-10 col-sm-5 col-lg-3">
                             @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", quickLinkCTA)
                         </div>
                     }
