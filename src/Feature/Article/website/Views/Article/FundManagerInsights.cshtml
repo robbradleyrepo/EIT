@@ -39,7 +39,7 @@
                             {
                                 case "Fund manager views":
                                     {
-                                        <div class="col-8 col-md-6 col-lg-4">
+                                        <div class="col-10 col-md-6 col-lg-4">
                                             @Html.Partial("~/Views/Article/PromoCards/FundManagerViewPromo.cshtml", article)
                                         </div>
                                         break;
@@ -48,13 +48,13 @@
                                     {
                                         if (article.PodcastPromo != null && article.PodcastPromo.Any())
                                         {
-                                            <div class="col-8 col-md-6 col-lg-4">
+                                            <div class="col-10 col-md-6 col-lg-4">
                                                 @Html.Partial("~/Views/Article/PromoCards/ArticlePodcastPromo.cshtml", article.PodcastPromo.FirstOrDefault(), new ViewDataDictionary { { "ArticleUrl", article.Url } })
                                             </div>
                                         }
                                         else
                                         {
-                                            <div class="col-8 col-md-6 col-lg-4">
+                                            <div class="col-10 col-md-6 col-lg-4">
                                                 @Html.Partial("~/Views/Article/PromoCards/FundManagerViewPromo.cshtml", article)
                                             </div>
                                         }
@@ -62,28 +62,28 @@
                                     }
                                 case "Fund updates":
                                     {
-                                        <div class="col-8 col-md-6 col-lg-4">
+                                        <div class="col-10 col-md-6 col-lg-4">
                                             @Html.Partial("~/Views/Article/PromoCards/FundUpdatePromo.cshtml", article)
                                         </div>
                                         break;
                                     }
                                 case "Video":
                                     {
-                                        <div class="col-8 col-md-6 col-lg-4">
+                                        <div class="col-10 col-md-6 col-lg-4">
                                             @Html.Partial("~/Views/Article/PromoCards/VideoPromo.cshtml", article)
                                         </div>
                                         break;
                                     }
                                 case "Magazine and Reports":
                                     {
-                                        <div class="col-8 col-md-6 col-lg-4">
+                                        <div class="col-10 col-md-6 col-lg-4">
                                             @Html.Partial("~/Views/Article/PromoCards/MagazineReportsPromo.cshtml", article)
                                         </div>
                                         break;
                                     }
                                 default:
                                     {
-                                        <div class="col-8 col-md-6 col-lg-4">
+                                        <div class="col-10 col-md-6 col-lg-4">
                                             @Html.Partial("~/Views/Article/PromoCards/FundManagerViewPromo.cshtml", article)
                                         </div>
                                     }
@@ -92,7 +92,7 @@
                         }
                         else
                         {
-                            <div class="col-8 col-md-6 col-lg-4">
+                            <div class="col-10 col-md-6 col-lg-4">
                                 @Html.Partial("~/Views/Article/PromoCards/FundManagerViewPromo.cshtml", article)
                             </div>
                         }
