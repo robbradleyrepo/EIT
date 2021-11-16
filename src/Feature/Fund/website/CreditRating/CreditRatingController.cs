@@ -25,7 +25,7 @@
 
             if (datasource.Children != null)
             {
-                var data = new { labels = datasource.Children.Select(c => c.RowName), data = datasource.Children.Select(c => double.Parse(c.Value ?? "0")), maxValue = datasource.MaxValue };
+                var data = new { labels = datasource.Children.Select(c => c.RowName), data = datasource.Children.Select(c => (double.TryParse(c.Value, out double val) ? val : 0)), maxValue = datasource.MaxValue };
                 datasource.JsonDataObject = JsonConvert.SerializeObject(data);
             }
 
