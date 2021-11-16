@@ -4,6 +4,11 @@ Parent: "e05195b8-e2b4-4b6b-8b31-a0ffa3b6e9bd"
 Template: "51d3a578-6e10-4ec6-bb5b-5c1307a6d661"
 Path: /sitecore/content/LionTrustNew/Home
 DB: master
+SharedFields:
+- ID: "8d5c486e-a0e3-4dbe-9a4a-cdff93594bda"
+  Hint: IncludeInSearchResults
+  Type: Checkbox
+  Value: 0
 Languages:
 - Language: en
   Versions:
@@ -92,6 +97,17 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20210517T163406Z
+    - ID: "5d68cc82-ea43-4789-b892-0e49244f68d5"
+      Hint: NavigationRoot_MenuItems
+      Type: Treelist
+      Value: |
+        {477C9F45-9BBE-42D1-9FAE-13E65503206F}
+        {A2C6B1D1-DBE3-4032-81BE-1B66BBF2709E}
+        {BE4C1496-1AEB-4F7B-B04C-BBCEA3B2652D}
+    - ID: "679b8b40-1876-4eb5-9280-487bcd8b4a5e"
+      Hint: Sitemap_IncludeInSitemap
+      Type: Checkbox
+      Value: 0
     - ID: "6eb0248b-457f-491c-8f9e-13aefe2cdec8"
       Hint: NavigationRoot_SignUpNewsletter
       Value: "{E4735412-929A-48A3-96C9-9DDBA002DF25}"
@@ -117,7 +133,7 @@ Languages:
     - ID: "e409ce1d-3e4e-4c73-a01d-ba8e98bdf25f"
       Hint: Breadcrumb_IncludeInBreadcrumb
       Type: Checkbox
-      Value: 1
+      Value: 0
     - ID: "f113bf3d-fe80-4a15-9cda-679b3c3cb3be"
       Hint: Identity_Logo
       Value: |
