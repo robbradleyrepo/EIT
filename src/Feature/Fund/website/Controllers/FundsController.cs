@@ -45,7 +45,8 @@
         public ActionResult Disclaimer()
         {
             var viewModel = new FundDisclaimerViewModel();
-            viewModel.Fund = _context.GetPageContextItem<IFund>();
+            var pageData = _context.GetPageContextItem<IPresentationBase>();
+            viewModel.Fund = pageData?.Fund;
             viewModel.Component = _context.GetDataSourceItem<IFundDisclaimer>();
 
             return View("~/Views/Fund/Disclaimer.cshtml", viewModel);
