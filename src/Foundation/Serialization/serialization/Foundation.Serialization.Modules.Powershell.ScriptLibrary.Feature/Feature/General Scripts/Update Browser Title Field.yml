@@ -1,0 +1,45 @@
+﻿---
+ID: "f0f19984-900c-4dc3-8a05-0fa67bab29b5"
+Parent: "28e51f54-cad0-4748-a17b-8380393929d3"
+Template: "dd22f1b3-bd87-4db2-9e7d-f7a496888d43"
+Path: /sitecore/system/Modules/PowerShell/Script Library/Feature/General Scripts/Update Browser Title Field
+DB: master
+SharedFields:
+- ID: "b1a94ff0-6897-47c0-9c51-aa6acb80b1f0"
+  Hint: Script
+  Value: |
+    $items = Get-ChildItem -Path "master:/sitecore/content/LionTrustNew/Home" -Recurse | Where-Object { $_.TemplateName -ne 'Folder' }
+    
+    foreach($item in $items) 
+    {
+         Write-Host $item.Name
+         $hasTemplate = [Sitecore.Data.Managers.TemplateManager]::GetTemplate($item).InheritsFrom("{AA97AB0E-14B2-4BB5-B69F-ECB5E16865DF}");
+         
+         if($hasTemplate) 
+         {
+             Write-Host $item.Fields["LegacyPresentationBase_BrowserTitle"].Value
+             if($item.Fields["LegacyPresentationBase_BrowserTitle"].Value.Contains("$name"))
+             {
+                 $token = '\$name'
+                 $newValue = $item.Fields["LegacyPresentationBase_BrowserTitle"].Value -replace $token, $item.Name
+                 Write-Host $newValue
+                 Write-Host "Update Item " $item.Name
+                 $item.Editing.BeginEdit()
+                 $item.Fields["LegacyPresentationBase_BrowserTitle"].Value = $newValue
+                 Write-Host "Browser Title Update to " $newValue
+                 $item.Editing.EndEdit() | Out-Null
+             }
+         }
+    }
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211117T155450Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
