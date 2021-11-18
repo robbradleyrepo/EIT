@@ -1,0 +1,24 @@
+﻿---
+ID: "d54322cb-b3b4-4bcd-9407-ad70ea6a9e95"
+Parent: "cddf0391-bdcf-4e9b-9995-0e012895d6b1"
+Template: "6ed40c8d-804a-4d93-b81e-0ed14d4fd138"
+Path: /sitecore/content/LionTrustNew/Global/Onboarding Configuration/Choose Country/Section 1/Germany
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 500
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1e75b4db-fbbf-4410-b2f0-99ccfb86a559"
+      Hint: Country_CountryName
+      Value: Germany
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211118T101704Z
+    - ID: "a46a84e5-e402-4784-95d3-e316a9761efb"
+      Hint: Country_Iso
+      Value: DE

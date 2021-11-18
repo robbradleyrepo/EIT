@@ -14,10 +14,10 @@
         [SitecoreField(Constants.ChooseCountry.Subtitle_FieldId)]
         string Subtitle { get; set; }
 
-        [SitecoreField(Constants.ChooseCountry.CorrectLoctionText_FieldId)]
-        string CorrectLoctionText { get; set; }
+        [SitecoreField(Constants.ChooseCountry.CorrectLocationText_FieldId)]
+        string CorrectLocationText { get; set; }
 
-        [SitecoreField(Constants.ChooseCountry.IncorrectLoctionText_FieldId)]
+        [SitecoreField(Constants.ChooseCountry.IncorrectLocationText_FieldId)]
         string IncorrectLocationText { get; set; }
 
         [SitecoreChildren(TemplateId = Constants.Region.TemplateId, EnforceTemplate = SitecoreEnforceTemplate.TemplateAndBase)]

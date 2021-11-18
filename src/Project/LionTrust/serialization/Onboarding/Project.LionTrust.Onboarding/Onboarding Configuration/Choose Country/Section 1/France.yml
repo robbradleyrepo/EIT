@@ -1,0 +1,27 @@
+﻿---
+ID: "75c051d6-661f-4122-9733-2002d5a87dee"
+Parent: "cddf0391-bdcf-4e9b-9995-0e012895d6b1"
+Template: "6ed40c8d-804a-4d93-b81e-0ed14d4fd138"
+Path: /sitecore/content/LionTrustNew/Global/Onboarding Configuration/Choose Country/Section 1/France
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 450
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1e75b4db-fbbf-4410-b2f0-99ccfb86a559"
+      Hint: Country_CountryName
+      Value: France
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210610T095016Z
+    - ID: "87460e4b-38fa-4b00-898a-3071546de530"
+      Hint: Country_FundCentreCountryCode
+      Value: FRA
+    - ID: "a46a84e5-e402-4784-95d3-e316a9761efb"
+      Hint: Country_Iso
+      Value: FR

@@ -15,8 +15,8 @@
             public const string TemplateId = "{F32F4544-6B02-44A1-9C6E-941FED5D6AC8}";
             public const string Title_FieldId = "{5E2F5FF7-2CD8-44EF-A7AD-665101EF471F}";
             public const string Subtitle_FieldId = "{A3F44151-18E7-4E67-9F4C-48CAB2CE0E0C}";
-            public const string CorrectLoctionText_FieldId = "{6A3DB8CD-E179-4927-A577-8B89F9D0F97B}";
-            public const string IncorrectLoctionText_FieldId = "{109A3CE4-CC8B-4ADA-A68B-543720275671}";
+            public const string CorrectLocationText_FieldId = "{6A3DB8CD-E179-4927-A577-8B89F9D0F97B}";
+            public const string IncorrectLocationText_FieldId = "{109A3CE4-CC8B-4ADA-A68B-543720275671}";
             public const string RestOfTheWorldText_FieldId = "{F19A60A6-B96E-42DC-A892-DD3FB51E764C}";
         }
 
