@@ -1,8 +1,8 @@
 ﻿---
-ID: "7c02b9a0-038c-41b6-abc3-bfcb7dbb7cca"
-Parent: "c99bb7b1-ab82-4e51-a1d4-2b939e3b5bd7"
+ID: "2aaff1b4-6ac2-4323-afb4-35e8a476c6fd"
+Parent: "e9ad2cd9-a0fd-4e16-8c26-c57ef435037d"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Fund/_AdditionalInfoComponent/Info Labels/AdditionalInfoComponent_BloombergCodeLabel
+Path: /sitecore/templates/Feature/Fund/_KeyInfoPriceComponent/Key Info Price Component/KeyInfoPriceComponent_TargetBenchmarkYieldValue
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
@@ -10,16 +10,16 @@ SharedFields:
   Value: "Single-Line Text"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 50
+  Value: 1700
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Bloomberg code Label
+    Value: Target Benchmark Yield Value
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: "20210511T122652:637563328127474217Z"
+      Value: 20211118T135742Z

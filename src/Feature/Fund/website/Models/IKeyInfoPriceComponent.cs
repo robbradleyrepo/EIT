@@ -39,5 +39,8 @@
 
         [SitecoreField(Constants.KeyInfoPriceComponent.TargetBenchmarkYieldLabel_FieldId)]
         string TargetBenchmarkYieldLabel { get; set; }
+
+        [SitecoreField(Constants.KeyInfoPriceComponent.TargetBenchmarkYieldValue_FieldId)]
+        string TargetBenchmarkYieldValue { get; set; }
     }
 }

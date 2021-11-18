@@ -20,8 +20,6 @@
 
         public DateTime ManagerInceptionDateOfFund { get; set; }
 
-        public string TargetBenchmarkYield { get; set; }
-
         public Guid Id { get; set; }
     }
 }

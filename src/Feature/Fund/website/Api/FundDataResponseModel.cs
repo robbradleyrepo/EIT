@@ -23,7 +23,7 @@
         [JsonProperty("FundNameLong")]
         public string FundName { get; set; }
 
-        [JsonProperty("citicode")]
+        [JsonProperty("Citicode")]
         public string CitiCode { get; set; }
 
         [JsonProperty("UnitLaunchDate")]
