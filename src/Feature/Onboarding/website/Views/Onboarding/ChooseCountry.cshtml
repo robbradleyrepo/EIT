@@ -11,7 +11,6 @@
             {
                 <div class="col-6 col-lg-4 set-location">
                     <div class="set-location__content">
-                        <div class="set-location__title">@region.Name</div>
                         <ul class="set-location__list">
                             @foreach (var country in region.Countries)
                             {
@@ -29,7 +28,7 @@
         </div>
         <div class="onboarding-overlay__btns">
             <button data-set-step="2" data-iso-country="@Model.CurrentCountryIso" data-name-country="@Model.CurrentCountryName" class="btn btn-primary onboarding-overlay__set-step" id="correct-location">
-                @Html.Glass().Editable(Model, m => m.CorrectLoctionText)
+                @Html.Glass().Editable(Model, m => m.CorrectLocationText)
                 <i class="icon-arrow-right animate-arrow"></i>
             </button>
         </div>
