@@ -1,5 +1,6 @@
 ﻿namespace LionTrust.Feature.Fund.FundClass
 {
+    using Glass.Mapper.Sc.Configuration.Attributes;
     using System;
 
     public class FundClassData
@@ -20,6 +21,9 @@
 
         public DateTime ManagerInceptionDateOfFund { get; set; }
 
+        public string TargetBenchmarkYield { get; set; }
+
+        [SitecoreId]
         public Guid Id { get; set; }
     }
 }

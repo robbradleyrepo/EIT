@@ -236,7 +236,6 @@
             public const string SectorNameLabel_FieldId = "{5291254F-D8DE-4689-811A-C1B862F0B93D}";
             public const string ManagerInceptionDateLabel_FieldId = "{AB8E942C-8129-4A8E-9DD5-2D7F3F9DE270}";
             public const string TargetBenchmarkYieldLabel_FieldId = "{94185463-0638-40C0-AC99-233554578886}";
-            public const string TargetBenchmarkYieldValue_FieldId = "{2AAFF1B4-6AC2-4323-AFB4-35E8A476C6FD}";
         }
 
         public static class KeyInfoPrice
