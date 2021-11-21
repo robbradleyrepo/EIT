@@ -1,223 +1,154 @@
-import Vue from "vue/dist/vue.common";
-import { API } from "./listFilter/api/api";
-import { eventBus } from "./listFilter/bus";
-
-import {
-    baseDownloadChild,
-    baseDownloadParent,
-} from "./listFilter/mixins/baseDownload";
-
-var rootDom = document.getElementById("gallery-app");
-if (rootDom != null) {
-    var mediaGalleryId = rootDom?.dataset?.galleryid;
-    var host = rootDom?.dataset?.host;
-
-    var location = window.location.hostname;
-    let root = "";
-    if (
-        window.location.hostname === "localhost" ||
-        window.location.hostname === "127.0.0.1"
-    ) {
-        host = location + host;
-        root = location;
-    } else {
-        host = "/" + host;
+var Shuffle = window.Shuffle;
+class Demo {
+  constructor(element) {
+    this.element = element;
+    this.shuffle = new Shuffle(element, {
+      itemSelector: '.media-gallery__card',
+      sizer: element.querySelector('.my-sizer-element')
+    });
+    // Log events.
+    this.addShuffleEventListeners();
+    this._activeFilters = [];
+    this.addFilterButtons();
+    this.addSorting();
+    this.addSearchFilter();
+  }
+  /**
+   * Shuffle uses the CustomEvent constructor to dispatch events. You can listen
+   * for them like you normally would (with jQuery for example).
+   */
+  addShuffleEventListeners() {
+    this.shuffle.on(Shuffle.EventType.LAYOUT, data => {
+      console.log('layout. data:', data);
+    });
+    this.shuffle.on(Shuffle.EventType.REMOVED, data => {
+      console.log('removed. data:', data);
+    });
+  }
+  addFilterButtons() {
+    const options = document.querySelector('.filter-gallery__options');
+    if (!options) {
+      return;
     }
+    const filterButtons = Array.from(options.children);
+    const onClick = this._handleFilterClick.bind(this);
+    filterButtons.forEach(button => {
+      button.addEventListener('click', onClick, false);
+    });
+  }
+  _handleFilterClick(evt) {
+    const btn = evt.currentTarget;
+    const isActive = btn.classList.contains('active');
+    const btnGroup = btn.getAttribute('data-group');
+    this._removeActiveClassFromChildren(btn.parentNode);
+    let filterGroup;
+    if (isActive) {
+      btn.classList.remove('active');
+      btn.closest('.filter-gallery__group').classList.remove( 'OptionSlected' );
+      filterGroup = Shuffle.ALL_ITEMS;
+    } else {
+      btn.classList.add('active');
+      btn.closest('.filter-gallery__group').classList.add( 'OptionSlected' );
+      filterGroup = btnGroup;
+    }
+    this.shuffle.filter(filterGroup);
+  }
+  _removeActiveClassFromChildren(parent) {
+    const { children } = parent;
+    for (let i = children.length - 1; i >= 0; i--) {
+      children[i].classList.remove('active');
+    }
+  }
+  addSorting() {
+    const buttonGroup = document.querySelector('.sort-options');
+    if (!buttonGroup) {
+      return;
+    }
+    buttonGroup.addEventListener('change', this._handleSortChange.bind(this));
+  }
+  _handleSortChange(evt) {
+    // Add and remove `active` class from buttons.
+    const buttons = Array.from(evt.currentTarget.children);
+    buttons.forEach(button => {
+      if (button.querySelector('input').value === evt.target.value) {
+        button.classList.add('active');
+      } else {
+        button.classList.remove('active');
+      }
+    });
+    // Create the sort options to give to Shuffle.
+    const { value } = evt.target;
+    let options = {};
+    function sortByDate(element) {
+      return element.getAttribute('data-created');
+    }
+    function sortByTitle(element) {
+      return element.getAttribute('data-title').toLowerCase();
+    }
+    if (value === 'date-created') {
+      options = {
+        reverse: true,
+        by: sortByDate
+      };
+    } else if (value === 'title') {
+      options = {
+        by: sortByTitle
+      };
+    }
+    this.shuffle.sort(options);
+  }
+  // Advanced filtering
+  addSearchFilter() {
+    const searchInput = document.querySelector('.filter-gallery__search-input');
+    if (!searchInput) {
+      return;
+    }
+    searchInput.addEventListener('keyup', this._handleSearchKeyup.bind(this));
+  }
+  /**
+   * Filter the shuffle instance by items with a title that matches the search input.
+   * @param {Event} evt Event object.
+   */
+  _handleSearchKeyup(evt) {
+    const searchText = evt.target.value.toLowerCase();
+    this.shuffle.filter((element, shuffle) => {
+      // If there is a current filter applied, ignore elements that don't match it.
+      if (shuffle.group !== Shuffle.ALL_ITEMS) {
+        // Get the item's groups.
+        const groups = JSON.parse(element.getAttribute('data-groups'));
+        const isElementInCurrentGroup = groups.indexOf(shuffle.group) !== -1;
+        // Only search elements in the current group
+        if (!isElementInCurrentGroup) {
+          return false;
+        }
+      }
+      const titleElement = element.querySelector('.media-gallery__description');
+      const titleText = titleElement.textContent.toLowerCase().trim();
+      return titleText.indexOf(searchText) !== -1;
+    });
+  }
 }
-
-
-export default () => {
-    const selectField = Vue.component("select-field", {
-        name: "selectField",
-        data: () => ({
-            selected: false,
-        }),
-        methods: {
-            onChange() {
-                this.$emit("on-check");
-            },
-        },
-        created() {
-            eventBus.$on("toggleSelected", (selected) => {
-                this.selected = selected;
-                if (selected) this.onChange();
-            });
-        },
-        beforeDestroy() {
-            eventBus.$off("toggleSelected");
-        },
+function filterActive(e) {
+  if (document.querySelector('.filter-gallery__group.active') !== null) {
+    document.querySelector('.filter-gallery__group.active').classList.remove('active');
+    document.querySelector('.filter-gallery__group.active').childrens.forEach(function (e) {
+      e.classList.remove('active');
     });
-
-    const mediaItem = Vue.component("media-item", {
-        name: "mediaItem",
-        components: { selectField },
-        props: ["element", "index"],
-        mixins: [baseDownloadChild],
-        data: () => ({
-            ids: [],
-        }),
-        computed: {
-            getImagesIds() {
-                if (this.ids.length) return this.ids;
-                const arr = [];
-                arr.push(this.element.headShotImage.id);
-                if (this.element.fullBodyImage) arr.push(this.element.fullBodyImage.id);
-                return arr;
-            },
-        },
-        methods: {
-            selectDocument(id) {
-                this.$parent.setDocumentId(id);
-                const index = this.ids.findIndex((el) => el === id);
-                if (index !== -1) this.ids.splice(index, 1);
-                else this.ids.push(id);
-            },
-            downloadDocument() {
-                API.downloadDocument(
-                    `${host}/DownloadMediaImages`, {
-                        downloadMediaIds: this.getImagesIds,
-                    },
-                    "images"
-                );
-            },
-        },
+  }
+  else {
+    document.querySelector('.filter-gallery__group').classList.add('active');
+    document.querySelector('.filter-gallery__group').childrens.forEach(function (e) {
+      e.classList.add('active');
     });
-
-    const optionField = Vue.component("option-field", {
-        name: "option-field",
-        props: ["facet"],
-        data: () => ({
-            active: 0,
-            name: "All",
-        }),
-        methods: {
-            selectFacet(facetid) {
-                eventBus.$emit("setFaccets", facetid);
-                this.$emit("closetab");
-            },
-        },
-    });
-
-    const seclectField = Vue.component("select-field", {
-        name: "select-field",
-        components: { optionField },
-        data: () => ({
-            init: true,
-            open: false,
-            active: false,
-            facets: [],
-        }),
-        methods: {
-            toggleOption() {
-                this.open = !this.open;
-            },
-            getFacets() {
-                $.get(`${host}/GetMediaFacets?mediaGalleryId={${mediaGalleryId}}`)
-                    .done((response) => {
-                        this.facets = response;
-                    })
-                    .fail((e) => {
-                        console.error(e);
-                    });
-            },
-        },
-        mounted() {
-            this.getFacets();
-            document.querySelector("body").addEventListener("click", () => {
-                this.open = false;
-            });
-        },
-    });
-
-    new Vue({
-        el: rootDom,
-        components: { mediaItem, seclectField },
-        mixins: [baseDownloadParent],
-        data: function() {
-            return {
-                searchText: "",
-                loading: false,
-                items: [],
-                filter: "",
-            };
-        },
-        computed: {
-            getQuery() {
-                let str = "";
-                if (this.searchText) str += "searchTerm=" + this.searchText;
-                if (this.filter && this.searchText) str += "&filter=" + this.filter;
-                if (this.filter) str += "&filter=" + this.filter;
-                return str;
-            },
-        },
-        methods: {
-            setFilter(id) {
-                this.filter = id;
-                this.getData();
-            },
-            submitSearchForm() {
-                this.getData();
-            },
-            downloadDocumentMultiple() {
-                API.downloadDocument(
-                    `${host}/DownloadMediaImages`, {
-                        downloadMediaIds: this.selectedDocumentIds,
-                    },
-                    "images"
-                );
-            },
-            getData() {
-                this.loading = true;
-                $.get(
-                        `${host}/GetmediaItems?mediaGalleryId=${mediaGalleryId}${this.getQuery}`
-                    )
-                    .done((response) => {
-                        const { searchResults } = response;
-                        this.items = searchResults;
-                        this.loading = false;
-                    })
-                    .fail((e) => {
-                        console.error(e);
-                        this.loading = false;
-                        this.items = [];
-                    });
-            },
-        },
-        mounted() {
-            this.getData();
-        },
-        created() {
-            eventBus.$on("setFaccets", (id) => {
-                this.setFilter(id);
-            });
-        },
-        beforeDestroy() {
-            eventBus.$off("setFaccets");
-        },
-    });
-
-    // init fancybox image carousel
-    $(".media-item-image-gallary").fancybox({
-        infobar: false,
-        buttons: [
-            // "zoom",
-            //"share",
-            // "slideShow",
-            //"fullScreen",
-            //"download",
-            // "thumbs",
-            "close",
-        ],
-        caption(instance, obj) {
-            return `<div class="fancy-nav">
-            <p>
-                <span data-fancybox-index></span>/<span data-fancybox-count></span>
-            </p>
-            <p>${$(this).data("caption")}</p>
-            <a href="${obj.src}" download target="_blank" class="link-styles">
-                <i class="icon-download"></i> Download
-            </a>
-        </div>`;
-        },
-    });
-};
+  }
+}
+document.querySelector('.filter-gallery__group').addEventListener("click", filterActive);
+document.addEventListener('DOMContentLoaded', () => {
+  window.demo = new Demo(document.getElementById('mediaGallery'));
+});
+document.getElementById('select-all').onclick = function() {
+  var checkboxes = document.querySelectorAll('.media-gallery__controls .checkbox__input');
+  for (var checkbox of checkboxes) {
+    checkbox.checked = this.checked;
+  }
+}
