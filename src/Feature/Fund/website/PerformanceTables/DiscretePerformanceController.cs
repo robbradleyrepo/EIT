@@ -32,6 +32,7 @@
                 var citiCode = FundClassSwitcherHelper.GetCitiCode(HttpContext, datasource.Fund);
                 if (!string.IsNullOrEmpty(citiCode))
                 {
+                    result.ColumnHeadings = _performanceManager.GetColumnHeadings(citiCode);
                     result.Rows = _performanceManager.GetPerformanceTableRows(citiCode).GroupBy(r => r.Name).Select(g => g.First()).ToArray();
                     result.QuartileRow = _performanceManager.GetQuartile(citiCode);
                 }

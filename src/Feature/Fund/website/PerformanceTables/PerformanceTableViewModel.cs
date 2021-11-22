@@ -11,24 +11,7 @@
 
         public PerformanceTableRow QuartileRow { get; set; }
 
-        public virtual string[] ColumnHeadings
-        {
-            get
-            {
-                if (Component == null)
-                {
-                    return new string[0];
-                }
-
-                var result = new List<string>();
-                for (int i = -1; i >= -4; i--)
-                {
-                    result.Add($"{Component.ColumnMonth} {DateTime.Now.AddYears(i).ToString("yy")}");
-                }
-
-                return result.ToArray();
-            }
-        }
+        public virtual string[] ColumnHeadings { get; set; }
 
         public PerformanceTableViewModel()
         {

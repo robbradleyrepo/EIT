@@ -29,10 +29,10 @@
                 result.Add(new PerformanceTableRow(fundClass.FundName, 
                     new string[] 
                     { 
-                        fundClass.Cumulative1m, 
-                        fundClass.CumulativeYearToDate, 
+                        fundClass.Cumulative1m,                         
                         fundClass.Cumulative3m,
                         fundClass.Cumulative6m,
+                        fundClass.CumulativeYearToDate,
                         fundClass.Cumulative1y,
                         fundClass.Cumulative3y,
                         fundClass.Cumulative5y,
@@ -44,10 +44,10 @@
             {
                 result.Add(new PerformanceTableRow(fundClass.SectorName, new string[]
                 {
-                    fundClass.SectorCumulative1m,
-                    fundClass.SectorCumulativeYearToDate,
+                    fundClass.SectorCumulative1m,                    
                     fundClass.SectorCumulative3m,
                     fundClass.SectorCumulative6m,
+                    fundClass.SectorCumulativeYearToDate,
                     fundClass.SectorCumulative1y,
                     fundClass.SectorCumulative3y,
                     fundClass.SectorCumulative5y,
@@ -68,10 +68,10 @@
 
             return new PerformanceTableRow(string.Empty, new string[] 
             { 
-                fundClass.Cumulative1mQuart, 
-                fundClass.CumulativeYearToDateQuart, 
+                fundClass.Cumulative1mQuart,                 
                 fundClass.Cumulative3mQuart, 
                 fundClass.Cumulative6mQuart,
+                fundClass.CumulativeYearToDateQuart,
                 fundClass.Cumulative1yQuart,
                 fundClass.Cumulative3yQuart,
                 fundClass.Cumulative5yQuart

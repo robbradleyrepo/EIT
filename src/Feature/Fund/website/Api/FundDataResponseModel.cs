@@ -59,28 +59,28 @@
         [JsonProperty("Sedol")]
         public string SedolCode { get; set; }
 
-        [JsonProperty("Discrete0To12m_YE")]
+        [JsonProperty("Discrete0To12m_QE")]
         public string DiscretePerformance0To12 { get; set; }
 
-        [JsonProperty("Discrete12mTo24m_YE")]
+        [JsonProperty("Discrete12mTo24m_QE")]
         public string DiscretePerformance12To24 { get; set; }
 
-        [JsonProperty("Discrete24mTo36m_YE")]
+        [JsonProperty("Discrete24mTo36m_QE")]
         public string DiscretePerformance24To36 { get; set; }
 
-        [JsonProperty("Discrete36mTo48m_YE")]
+        [JsonProperty("Discrete36mTo48m_QE")]
         public string DiscretePerformance36To48 { get; set; }
 
-        [JsonProperty("BenchmarkDiscrete0mTo12m_YE")]
+        [JsonProperty("BenchmarkBMDiscrete0To12m_YE")]
         public string Benchmark0DiscretePerformance0To12 { get; set; }
 
-        [JsonProperty("BenchmarkDiscrete12mTo24m_YE")]
+        [JsonProperty("BenchmarkBMDiscrete12mTo24m_YE")]
         public string Benchmark0DiscretePerformance12To24 { get; set; }
 
-        [JsonProperty("BenchmarkDiscrete24mTo36m_YE")]
+        [JsonProperty("BenchmarkBMDiscrete24mTo36m_YE")]
         public string Benchmark0DiscretePerformance24To36 { get; set; }
 
-        [JsonProperty("BenchmarkDiscrete36mTo48m_YE")]
+        [JsonProperty("BenchmarkBMDiscrete36mTo48m_YE")]
         public string Benchmark0DiscretePerformance36To48 { get; set; }
 
         [JsonProperty("BenchmarkP1Discrete0To12m_YE")]
@@ -107,17 +107,20 @@
         [JsonProperty("BenchmarkP2Discrete36mTo48m_YE")]
         public string Benchmark2DiscretePerformance36To48 { get; set; }
 
-        [JsonProperty("SectorDiscrete0To12m_YE")]
+        [JsonProperty("SectorDiscrete0To12m_QE")]
         public string SectorDiscretePerformance0To12 { get; set; }
 
-        [JsonProperty("SectorDiscrete12mTo24m_YE")]
+        [JsonProperty("SectorDiscrete12mTo24m_QE")]
         public string SectorDiscretePerformance12To24 { get; set; }
 
-        [JsonProperty("SectorDiscrete24mTo36m_YE")]
+        [JsonProperty("SectorDiscrete24mTo36m_QE")]
         public string SectorDiscretePerformance24To36 { get; set; }
 
-        [JsonProperty("SectorDiscrete36mTo48m_YE")]
+        [JsonProperty("SectorDiscrete36mTo48m_QE")]
         public string SectorDiscretePerformance36To48 { get; set; }
+
+        [JsonProperty("SectorDiscretePerfAsAt_QE")]
+        public string SectorDiscretePerformanceQE { get; set; }        
 
         [JsonProperty("Benchmarks")]
         public IEnumerable<Benchmark> Benchmarks { get; set; }

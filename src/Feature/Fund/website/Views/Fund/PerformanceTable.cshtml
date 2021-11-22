@@ -21,7 +21,7 @@
                         <th scope="row">@Model.Rows[i].Name</th>
                         @foreach (var item in Model.Rows[i].Columns.Where(c => c != null))
                         {
-                            <td>@item.Value.ToString("##.#")</td>
+                            <td>@item.Value.ToString("#0.0")</td>
                         }
                     </tr>
                 }

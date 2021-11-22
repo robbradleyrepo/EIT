@@ -9,7 +9,6 @@
             public const string TableHeadingFieldId = "{24B821F2-896B-4BBE-AB3A-6C943A3D8B8F}";
             public const string QuartileRowLabelFieldId = "{21554471-1768-4C04-9A5D-A5FAB1B4D8F4}";
             public const string HeadingFieldId = "{450FEC5E-B30E-48AF-ADC4-051FD7B27289}";
-            public const string ColumnMonthPrefixFieldId = "{8FF8ECB3-3CA7-47D7-89DF-76E1DF36BA79}";
         }
 
         public static class Literature
