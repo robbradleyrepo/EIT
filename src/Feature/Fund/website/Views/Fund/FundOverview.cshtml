@@ -32,15 +32,9 @@
                 <i class="icon-arrow-right animate-arrow"></i>
             }
 
-            @using (Html.Glass().BeginRenderLink(Model, m => m.DownloadCTA, new System.Collections.Specialized.NameValueCollection { { "class", "link-styles" } }, isEditable: true))
-            {
-                if (Model.DownloadCTA != null)
-                {
-                    @Model.DownloadCTA.Text
-                }
-
-                <i class="icon-file d-none d-lg-inline-block"></i>
-            }
+            <a href="#" class="link-styles" id="view-documents">
+                @Html.Glass().Editable(Model, m => m.DownloadCTALabel) <i class="icon-file d-none d-lg-inline-block"></i>
+            </a>
         </div>
     </div>
 }
