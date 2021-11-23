@@ -39,5 +39,8 @@
 
         [SitecoreField(Constants.AdditionalInfoAndChargesComponent.SedolCodeLabel_FieldId)]
         string SedolCodeLabel { get; set; }
+
+        [SitecoreField(Constants.AdditionalInfoAndChargesComponent.Tooltips_FieldId)]
+        IAdditionalInfoAndChargesTooltips Tooltips { get; set; }
     }
 }

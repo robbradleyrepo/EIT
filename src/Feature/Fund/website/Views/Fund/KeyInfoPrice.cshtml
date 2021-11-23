@@ -1,4 +1,5 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
+
 @model LionTrust.Feature.Fund.Models.KeyInfoPriceViewModel
 @if (Model != null && Model.Component != null && Model.ClassData != null)
 {
@@ -8,19 +9,55 @@
                 @Html.Glass().Editable(Model.Component, m => m.KeyInformationLabel)
             </span>
             <div class="card__row">
-                <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.SectorLabel)</div>
+                <div class="card__item-left">
+                    @Html.Glass().Editable(Model.Component, m => m.SectorLabel)
+                    @if (Model.ClassData.SectorName != null
+                        && !string.IsNullOrEmpty(Model.ClassData.SectorName)
+                        && Model.Component.Tooltips != null
+                        && !string.IsNullOrEmpty(Model.Component.Tooltips.SectorNameTooltip))
+                    {
+                        <span class="d-inline-flex" data-toggle="tooltip" data-placement="right"
+                                title="@Model.Component.Tooltips.SectorNameTooltip">
+                            <i class="icon-follow text-gold"></i>
+                        </span>
+                    }
+                </div>
                 <div class="card__item-right">
                     @Model.ClassData.SectorName
                 </div>
             </div>
             <div class="card__row">
-                <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.ManagerInceptionDateLabel)</div>
+                <div class="card__item-left">
+                    @Html.Glass().Editable(Model.Component, m => m.ManagerInceptionDateLabel)
+                    @if (Model.ClassData.ManagerInceptionDateOfFund != null
+                        && !string.IsNullOrEmpty(Model.ClassData.ManagerInceptionDateOfFund.ToString("dd.MM.y"))
+                        && Model.Component.Tooltips != null
+                        && !string.IsNullOrEmpty(Model.Component.Tooltips.ManagerInceptionDateTooltip))
+                    {
+                        <span class="d-inline-flex" data-toggle="tooltip" data-placement="right"
+                                title="@Model.Component.Tooltips.ManagerInceptionDateTooltip">
+                            <i class="icon-follow text-gold"></i>
+                        </span>
+                    }
+                </div>
                 <div class="card__item-right">
                     @Model.ClassData.ManagerInceptionDateOfFund.ToString("dd.MM.y")
                 </div>
             </div>
             <div class="card__row">
-                <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.ClassLaunchDateLabel)</div>
+                <div class="card__item-left">
+                    @Html.Glass().Editable(Model.Component, m => m.ClassLaunchDateLabel)
+                    @if (Model.ClassData.ClassLaunchDate != null
+                        && !string.IsNullOrEmpty(Model.ClassData.ClassLaunchDate.ToString("dd.MM.y"))
+                        && Model.Component.Tooltips != null
+                        && !string.IsNullOrEmpty(Model.Component.Tooltips.ClassLaunchDateTooltip))
+                    {
+                        <span class="d-inline-flex" data-toggle="tooltip" data-placement="right"
+                                title="@Model.Component.Tooltips.ClassLaunchDateTooltip">
+                            <i class="icon-follow text-gold"></i>
+                        </span>
+                    }
+                </div>
                 <div class="card__item-right">
                     @Model.ClassData.ClassLaunchDate.ToString("dd.MM.y")
                 </div>
@@ -28,19 +65,55 @@
             @if (!string.IsNullOrWhiteSpace(Model.ClassData.Comparator1) && !string.IsNullOrWhiteSpace(Model.Component.Comparator1Label))
             {
                 <div class="card__row">
-                    <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.Comparator1Label)</div>
+                    <div class="card__item-left">
+                        @Html.Glass().Editable(Model.Component, m => m.Comparator1Label)
+                        @if (Model.ClassData.Comparator1 != null
+                            && !string.IsNullOrEmpty(Model.ClassData.Comparator1)
+                            && Model.Component.Tooltips != null
+                            && !string.IsNullOrEmpty(Model.Component.Tooltips.Comparator1Tooltip))
+                        {
+                            <span class="d-inline-flex" data-toggle="tooltip" data-placement="right"
+                                    title="@Model.Component.Tooltips.Comparator1Tooltip">
+                                <i class="icon-follow text-gold"></i>
+                            </span>
+                        }
+                    </div>
                     <div class="card__item-right">@Model.ClassData.Comparator1</div>
                 </div>
             }
             @if (!string.IsNullOrWhiteSpace(Model.ClassData.Comparator2) && !string.IsNullOrWhiteSpace(Model.Component.Comparator2Label))
             {
                 <div class="card__row">
-                    <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.Comparator2Label)</div>
-                    <div class="card__item-right">@Html.Glass().Editable(Model.Fund, m => m.BenchmarkName)</div>
+                    <div class="card__item-left">
+                        @Html.Glass().Editable(Model.Component, m => m.Comparator2Label)
+                        @if (Model.ClassData.Comparator2 != null
+                                && !string.IsNullOrEmpty(Model.ClassData.Comparator2)
+                                && Model.Component.Tooltips != null
+                                && !string.IsNullOrEmpty(Model.Component.Tooltips.Comparator2Tooltip))
+                        {
+                            <span class="d-inline-flex" data-toggle="tooltip" data-placement="right"
+                                    title="@Model.Component.Tooltips.Comparator2Tooltip">
+                                <i class="icon-follow text-gold"></i>
+                            </span>
+                        }
+                    </div>
+                    <div class="card__item-right">@Model.ClassData.Comparator2</div>
                 </div>
             }
             <div class="card__row">
-                <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.TargetBenchmarkYieldLabel)</div>
+                <div class="card__item-left">
+                    @Html.Glass().Editable(Model.Component, m => m.TargetBenchmarkYieldLabel)
+                    @if (Model.ClassData.TargetBenchmarkYield != null
+                        && !string.IsNullOrEmpty(Model.ClassData.TargetBenchmarkYield)
+                        && Model.Component.Tooltips != null
+                        && !string.IsNullOrEmpty(Model.Component.Tooltips.TargetBenchmarkYieldTooltip))
+                    {
+                        <span class="d-inline-flex" data-toggle="tooltip" data-placement="right"
+                                title="@Model.Component.Tooltips.TargetBenchmarkYieldTooltip">
+                            <i class="icon-follow text-gold"></i>
+                        </span>
+                    }
+                </div>
                 <div class="card__item-right">@Html.Glass().Editable(Model.ClassData, c => c.TargetBenchmarkYield)</div>
             </div>
         </div>
@@ -49,24 +122,47 @@
                 @Html.Glass().Editable(Model.Component, m => m.PriceLabel)
             </span>
             <div class="card__row">
-                <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.SinglePriceLabel)</div>
+                <div class="card__item-left">
+                    @Html.Glass().Editable(Model.Component, m => m.SinglePriceLabel)
+                    @if (Model.ClassData.SinglePrice != null
+                        && !string.IsNullOrEmpty(Model.ClassData.SinglePrice)
+                        && Model.Component.Tooltips != null
+                        && !string.IsNullOrEmpty(Model.Component.Tooltips.SinglePriceTooltip))
+                    {
+                        <span class="d-inline-flex" data-toggle="tooltip" data-placement="right"
+                                title="@Model.Component.Tooltips.SinglePriceTooltip">
+                            <i class="icon-follow text-gold"></i>
+                        </span>
+                    }
+                </div>
                 <div class="card__item-right">@Model.ClassData.SinglePrice</div>
             </div>
             <div class="card__row">
-                <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.OfferPriceLabel)</div>
+                <div class="card__item-left">
+                    @Html.Glass().Editable(Model.Component, m => m.OfferPriceLabel)
+                    @if (Model.ClassData.OfferPrice != null
+                        && !string.IsNullOrEmpty(Model.ClassData.OfferPrice)
+                        && Model.Component.Tooltips != null
+                        && !string.IsNullOrEmpty(Model.Component.Tooltips.OfferPriceTooltip))
+                    {
+                        <span class="d-inline-flex" data-toggle="tooltip" data-placement="right"
+                                title="@Model.Component.Tooltips.OfferPriceTooltip">
+                            <i class="icon-follow text-gold"></i>
+                        </span>
+                    }
+                </div>
                 <div class="card__item-right">@Model.ClassData.OfferPrice</div>
             </div>
             <div class="card__row">
                 <div class="card__item-left">
                     @Html.Glass().Editable(Model.Component, m => m.PriceDateLabel)
-                    @if (Sitecore.Context.PageMode.IsExperienceEditor)
-                    {
-                        @Html.Glass().Editable(Model.Component, m => m.PriceDateTooltipLabel)
-                    }
-                    else
+                    @if (Model.ClassData.PriceDate != null 
+                        && !string.IsNullOrEmpty(Model.ClassData.PriceDate.ToString("dd.MM.yyyy"))
+                        && Model.Component.Tooltips != null 
+                        && !string.IsNullOrEmpty(Model.Component.Tooltips.PriceDateTooltip))
                     {
                         <span class="d-inline-flex" data-toggle="tooltip" data-placement="right"
-                              title="@Model.Component.PriceDateTooltipLabel">
+                              title="@Model.Component.Tooltips.PriceDateTooltip">
                             <i class="icon-follow text-gold"></i>
                         </span>
                     }
