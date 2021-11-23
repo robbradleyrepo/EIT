@@ -269,7 +269,7 @@ Languages:
     - ID: "382cdded-7732-4690-ac7a-8dba5c503403"
       Hint: LegacyFundPageData_HideCumulativePerformanceTable
       Type: Checkbox
-      Value: 1
+      Value: 0
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
@@ -283,8 +283,8 @@ Languages:
     - ID: "b39af1cd-8c71-4989-bef8-7c0441dd570a"
       Hint: LegacyFundPageData_HidePerformanceChart
       Type: Checkbox
-      Value: 1
+      Value: 0
     - ID: "ba664318-d29c-4166-a901-faa04f7d3aa6"
-      Hint: LegacyFundPageData_HideDescretePerformanceTable
+      Hint: LegacyFundPageData_HideDiscretePerformanceTable
       Type: Checkbox
-      Value: 1
+      Value: 0

@@ -13,9 +13,13 @@
 
         public virtual string[] ColumnHeadings { get; set; }
 
+        public bool Hide { get; set; }
+
         public PerformanceTableViewModel()
         {
             Rows = new PerformanceTableRow[0];
         }
+
+
     }
 }

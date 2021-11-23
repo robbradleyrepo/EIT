@@ -1,5 +1,9 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @model LionTrust.Feature.Fund.PerformanceTables.PerformanceTableViewModel
+@if (Model != null && Model.Hide)
+{
+    return;
+}
 <section class="container table-section">
     <h3 class="table-section__title">@Html.Glass().Editable(Model.Component, c => c.Heading)</h3>
     <div class="table-responsive-md">
