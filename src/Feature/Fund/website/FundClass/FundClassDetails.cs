@@ -34,15 +34,7 @@
             {
                 data.SectorName = apiData.SectorName;
             }
-
-            if (data.ClassLaunchDate == null || data.ClassLaunchDate == DateTime.MinValue)
-            {
-                if (DateTime.TryParse(apiData.UnitLaunchDate, out DateTime date))
-                {
-                    data.ClassLaunchDate = date;
-                }
-            }
-
+           
             if (string.IsNullOrEmpty(data.Comparator1))
             {
                 data.Comparator1 = apiData?.Benchmarks?

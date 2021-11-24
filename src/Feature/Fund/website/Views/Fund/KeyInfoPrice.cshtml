@@ -29,8 +29,7 @@
             <div class="card__row">
                 <div class="card__item-left">
                     @Html.Glass().Editable(Model.Component, m => m.ManagerInceptionDateLabel)
-                    @if (Model.ClassData.ManagerInceptionDateOfFund != null
-                        && !string.IsNullOrEmpty(Model.ClassData.ManagerInceptionDateOfFund.ToString("dd.MM.y"))
+                    @if (!string.IsNullOrEmpty(Model.ClassData.ManagerInceptionDateFormatted)
                         && Model.Component.Tooltips != null
                         && !string.IsNullOrEmpty(Model.Component.Tooltips.ManagerInceptionDateTooltip))
                     {
@@ -41,14 +40,13 @@
                     }
                 </div>
                 <div class="card__item-right">
-                    @Model.ClassData.ManagerInceptionDateOfFund.ToString("dd.MM.y")
+                    @Model.ClassData.ManagerInceptionDateFormatted
                 </div>
             </div>
             <div class="card__row">
                 <div class="card__item-left">
                     @Html.Glass().Editable(Model.Component, m => m.ClassLaunchDateLabel)
-                    @if (Model.ClassData.ClassLaunchDate != null
-                        && !string.IsNullOrEmpty(Model.ClassData.ClassLaunchDate.ToString("dd.MM.y"))
+                    @if (!string.IsNullOrEmpty(Model.ClassData.ClassLaunchDateFormatted)
                         && Model.Component.Tooltips != null
                         && !string.IsNullOrEmpty(Model.Component.Tooltips.ClassLaunchDateTooltip))
                     {
@@ -59,7 +57,7 @@
                     }
                 </div>
                 <div class="card__item-right">
-                    @Model.ClassData.ClassLaunchDate.ToString("dd.MM.y")
+                    @Model.ClassData.ClassLaunchDateFormatted
                 </div>
             </div>
             @if (!string.IsNullOrWhiteSpace(Model.ClassData.Comparator1) && !string.IsNullOrWhiteSpace(Model.Component.Comparator1Label))
@@ -156,8 +154,7 @@
             <div class="card__row">
                 <div class="card__item-left">
                     @Html.Glass().Editable(Model.Component, m => m.PriceDateLabel)
-                    @if (Model.ClassData.PriceDate != null 
-                        && !string.IsNullOrEmpty(Model.ClassData.PriceDate.ToString("dd.MM.yyyy"))
+                    @if (!string.IsNullOrEmpty(Model.ClassData.PriceDateFormatted)
                         && Model.Component.Tooltips != null 
                         && !string.IsNullOrEmpty(Model.Component.Tooltips.PriceDateTooltip))
                     {
@@ -168,27 +165,9 @@
                     }
                 </div>
                 <div class="card__item-right">
-                    @if (Sitecore.Context.PageMode.IsExperienceEditor)
-                    {
-                        if (Model.ClassData.PriceDate != null)
-                        {
-                            @Model.ClassData.PriceDate.ToString("dd.MM.yyyy")
-                        }
-                        else
-                        {
-                            @:Edit Key Info Price Dates
-                        }
-                    }
-                    else
-                    {
-                        @Model.ClassData.PriceDate.ToString("dd.MM.yyyy")
-                    }
+                    @Model.ClassData.PriceDateFormatted                   
                 </div>
-
-
             </div>
-
-
         </div>
     </div>
 }

@@ -25,5 +25,44 @@
 
         [SitecoreId]
         public Guid Id { get; set; }
+
+        public string ClassLaunchDateFormatted
+        {
+            get
+            {
+                if (ClassLaunchDate != null && ClassLaunchDate != DateTime.MinValue)
+                {
+                    return ClassLaunchDate.ToString("dd.MM.y");
+                }
+
+                return string.Empty;
+            }
+        }
+
+        public string ManagerInceptionDateFormatted
+        {
+            get
+            {
+                if (ManagerInceptionDateOfFund != null && ManagerInceptionDateOfFund != DateTime.MinValue)
+                {
+                    return ManagerInceptionDateOfFund.ToString("dd.MM.y");
+                }
+
+                return string.Empty;
+            }
+        }
+
+        public string PriceDateFormatted
+        {
+            get
+            {
+                if (PriceDate != null && PriceDate != DateTime.MinValue)
+                {
+                    return PriceDate.ToString("dd.MM.yyyy");
+                }
+
+                return string.Empty;
+            }
+        }
     }
 }

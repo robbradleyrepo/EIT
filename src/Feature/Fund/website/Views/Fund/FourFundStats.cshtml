@@ -13,9 +13,9 @@
                             {
                                 using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Fund/FourFundStats", Model.FundSelector.Fund.Id.ToString(), "Edit Fund Launch date"))
                                 {
-                                    if (Model.FundSelector.Fund.LaunchDate != null)
+                                    if (Model.FundSelector.Fund.LaunchDateByAuthor != null)
                                     {
-                                        @Model.FundSelector.Fund.LaunchDate.ToString("dd/MM/yyyy")
+                                        @Model.FundSelector.Fund.LaunchDateByAuthor.ToString("dd/MM/yyyy")
                                     }
                                     else
                                     {
@@ -25,7 +25,7 @@
                             }
                             else
                             {
-                                @Html.Glass().Editable(Model.FundSelector.Fund, m => m.LaunchDate.ToString("dd/MM/yyyy"))
+                                @Html.Glass().Editable(Model.FundSelector.Fund, m => m.LaunchDateByAuthor.ToString("dd/MM/yyyy"))
                             }
                         </span>
                     </div>

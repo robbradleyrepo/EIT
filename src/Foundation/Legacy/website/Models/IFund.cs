@@ -21,6 +21,9 @@
         [SitecoreField(Constants.Fund.LaunchDate_FieldId, SitecoreFieldType.Date,  "Fund Info")]
         DateTime LaunchDate { get; set; }
 
+        [SitecoreField(Constants.Fund.LaunchDateByAuthor_FieldId, SitecoreFieldType.Date, "Fund Info")]
+        DateTime LaunchDateByAuthor { get; set; }
+
         [SitecoreField(Constants.Fund.FundSize_FieldId)]
         string FundSize { get; set; }
 
