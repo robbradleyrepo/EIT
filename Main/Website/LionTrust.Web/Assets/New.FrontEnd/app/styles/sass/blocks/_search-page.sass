@@ -3,42 +3,39 @@
         z-index: 2
 .result-list-app
     padding-top: 66px
-
-.search-filter
-    overflow-x: scroll
-    white-space: nowrap
-    @include breakpoint(tablet, up)
-        white-space: normal
-        overflow-x: hidden
-        margin-bottom: 20px
-        @include breakpoint(desktop, up)
-            margin-top: 230px
-    &__checkbox
-        display: none
-        &:checked ~ .btn
-            background: $primary
-            color: $white
-            border-color: $primary
-    &__btn
-        color: $black
-        text-transform: inherit
-        font-size: 16px
-        height: 48px
-        line-height: 48px
-        border: 1px solid $secondary-silver
-        padding: 0 24px
-        min-width: auto
-        margin-right: 20px
-        margin-bottom: 20px
-        letter-spacing: 0
-        &:hover
-            background: $primary
-            color: $white
-            border-color: $primary
-        // &.active
-        //     background: $primary
-        //     color: $white
-        //     border-color: $primary
+body
+    .search-filter
+        overflow-x: scroll
+        white-space: nowrap
+        @include breakpoint(tablet, up)
+            white-space: normal
+            overflow-x: hidden
+            margin-bottom: 20px
+            @include breakpoint(desktop, up)
+                margin-top: 230px
+        &__checkbox
+            display: none
+            &:checked ~ .btn
+                background: $primary
+                color: $white
+                border-color: $primary
+        &__btn
+            color: $black
+            text-transform: inherit
+            font-size: 18px
+            height: 48px
+            line-height: 48px
+            border: 1px solid $secondary-silver
+            padding: 0 21px
+            min-width: auto 
+            margin-right: 20px
+            margin-bottom: 20px
+            letter-spacing: 0
+            font-weight: normal
+            &:hover
+                background: $primary
+                color: $white
+                border-color: $primary
 
 .search-item
     margin-bottom: 30px
@@ -49,13 +46,30 @@
         display: flex
         align-items: center
         margin-bottom: 7px
+        a
+            font-size: 26px
+            letter-spacing: 0rem
+            line-height: 34px
+            font-weight: 300
+            font-family: $userfont
+        p
+            font-size: 18px
+            letter-spacing: 0
+            line-height: 28px
+            font-weight: normal
     &__title
         @extend h3
         margin: 0
         &:hover
             color: $gold
     &__badge
-        margin-left: 10px
+        margin-left: 18px
+        letter-spacing: 0
+        line-height: 16px
+        //padding: 2px 6px
+        display: inline-flex
+        align-items: center
+        border-radius: 4px
     &__text
         line-height: 26px
         margin-bottom: 8px
