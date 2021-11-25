@@ -32,7 +32,7 @@
             {
                 if (ClassLaunchDate != null && ClassLaunchDate != DateTime.MinValue)
                 {
-                    return ClassLaunchDate.ToString("dd.MM.y");
+                    return ClassLaunchDate.ToString("dd/MM/yyyy");
                 }
 
                 return string.Empty;
@@ -45,7 +45,7 @@
             {
                 if (ManagerInceptionDateOfFund != null && ManagerInceptionDateOfFund != DateTime.MinValue)
                 {
-                    return ManagerInceptionDateOfFund.ToString("dd.MM.y");
+                    return ManagerInceptionDateOfFund.ToString("dd/MM/yyyy");
                 }
 
                 return string.Empty;
@@ -58,7 +58,7 @@
             {
                 if (PriceDate != null && PriceDate != DateTime.MinValue)
                 {
-                    return PriceDate.ToString("dd.MM.yyyy");
+                    return PriceDate.ToString("dd/MM/yyyy");
                 }
 
                 return string.Empty;
