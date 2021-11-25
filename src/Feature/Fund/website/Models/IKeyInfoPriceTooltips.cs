@@ -14,8 +14,8 @@
         [SitecoreField(Constants.KeyInfoPriceTooltips.Comparator2Tooltip_FieldId)]
         string Comparator2Tooltip { get; set; }
        
-        [SitecoreField(Constants.KeyInfoPriceTooltips.SectorNameTooltip_FieldId)]
-        string SectorNameTooltip { get; set; }
+        [SitecoreField(Constants.KeyInfoPriceTooltips.BenchmarkTooltip_FieldId)]
+        string BenchmarkTooltip { get; set; }
 
         [SitecoreField(Constants.KeyInfoPriceTooltips.ManagerInceptionDateTooltip_FieldId)]
         string ManagerInceptionDateTooltip { get; set; }

@@ -28,8 +28,8 @@
         [SitecoreField(Constants.KeyInfoPriceComponent.SinglePriceLabel_FieldId)]
         string SinglePriceLabel { get; set; }
 
-        [SitecoreField(Constants.KeyInfoPriceComponent.SectorNameLabel_FieldId)]
-        string SectorLabel { get; set; }
+        [SitecoreField(Constants.KeyInfoPriceComponent.BenchmarkLabel_FieldId)]
+        string BenchmarkLabel { get; set; }
 
         [SitecoreField(Constants.KeyInfoPriceComponent.ManagerInceptionDateLabel_FieldId)]
         string ManagerInceptionDateLabel { get; set; }

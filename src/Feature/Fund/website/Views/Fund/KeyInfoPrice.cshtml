@@ -10,20 +10,20 @@
             </span>
             <div class="card__row">
                 <div class="card__item-left">
-                    @Html.Glass().Editable(Model.Component, m => m.SectorLabel)
-                    @if (Model.ClassData.SectorName != null
-                        && !string.IsNullOrEmpty(Model.ClassData.SectorName)
+                    @Html.Glass().Editable(Model.Component, m => m.BenchmarkLabel)
+                    @if (Model.ClassData.Benchmark != null
+                        && !string.IsNullOrEmpty(Model.ClassData.Benchmark)
                         && Model.Component.Tooltips != null
-                        && !string.IsNullOrEmpty(Model.Component.Tooltips.SectorNameTooltip))
+                        && !string.IsNullOrEmpty(Model.Component.Tooltips.BenchmarkTooltip))
                     {
                         <span class="d-inline-flex" data-toggle="tooltip" data-placement="right"
-                                title="@Model.Component.Tooltips.SectorNameTooltip">
+                                title="@Model.Component.Tooltips.BenchmarkTooltip">
                             <i class="icon-follow text-gold"></i>
                         </span>
                     }
                 </div>
                 <div class="card__item-right">
-                    @Model.ClassData.SectorName
+                    @Model.ClassData.Benchmark
                 </div>
             </div>
             <div class="card__row">

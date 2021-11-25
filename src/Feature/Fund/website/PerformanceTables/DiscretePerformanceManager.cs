@@ -37,18 +37,7 @@
                         fundClass.DiscretePerformance36To48
                     }));
             }
-
-            if (!string.IsNullOrEmpty(fundClass.SectorName))
-            {
-                result.Add(new PerformanceTableRow(fundClass.SectorName, new string[]
-                {
-                    fundClass.SectorDiscretePerformance0To12,
-                    fundClass.SectorDiscretePerformance12To24,
-                    fundClass.SectorDiscretePerformance24To36,
-                    fundClass.SectorDiscretePerformance36To48
-                }));
-            }
-
+            
             if (fundClass.Benchmarks == null)
             {
                 return new PerformanceTableRow[0];
@@ -132,9 +121,9 @@
 
             var qeMonth = string.Empty;
 
-            if (!string.IsNullOrEmpty(fundClass.SectorDiscretePerformanceQE))
+            if (!string.IsNullOrEmpty(fundClass.DiscretePerformanceQE))
             {
-                DateTime.TryParseExact(fundClass.SectorDiscretePerformanceQE, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.AllowWhiteSpaces, out DateTime qeDate);
+                DateTime.TryParseExact(fundClass.DiscretePerformanceQE, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.AllowWhiteSpaces, out DateTime qeDate);
                 if (qeDate != null)
                 {
                     qeMonth = qeDate.ToString("MMM");
