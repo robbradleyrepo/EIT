@@ -42,6 +42,7 @@
                 }
 
                 model.CitiCode = citiCode;
+                model.FundId = datasource.Fund.Id.ToString("N");
             }
 
             return View("/views/fund/fundperformancegraph.cshtml", model);

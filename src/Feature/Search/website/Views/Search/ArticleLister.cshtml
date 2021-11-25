@@ -2,12 +2,15 @@
 @using LionTrust.Feature.Search.Models
 @using LionTrust.Foundation.ORM.Extensions
 @using Sitecore.Configuration
+@using System.Web
 @model LionTrust.Feature.Search.Models.IArticleLister
 @if (Model != null)
 {
-    <div id="lister-app" 
-         data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.ArticleApiRoute_SettingName))" 
-         data-contenttype="@Model.ContentType">
+    var fundId = HttpContext.Current.Request.QueryString.Get("ids");
+    <div id="lister-app"
+         data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.ArticleApiRoute_SettingName))"
+         data-contenttype="@Model.ContentType"
+         data-funds="@fundId">
         <div class="article-filter-wrapper">
             <div class="article-filters" :class="mobileFilter ? 'active' : ''">
                 <div class="article-filters__header">
@@ -48,7 +51,7 @@
                                                 <i class="icon-chevron-left"></i>
                                                 {{facet.name}}
                                             </div>
-                                            <option-field inline-template v-for="(item, i) in facet.items" :for="item.name" :key="i + item.name">
+                                            <option-field inline-template v-for="(item, i) in facet.items" :for="item.name" :key="i + item.name" :selected="item.identifier==='@fundId'">
                                                 <label class="option-checkbox">
                                                     <input :id="item.name" class="option-checkbox__input" type="checkbox" v-model="checked" @@change="toggleSelect(item, facet)" @@click="setChoosen(!checked)">
                                                     <span class="option-checkbox__text">{{item.name}}</span>
@@ -138,7 +141,7 @@
                                             <i class="icon-refresh"></i> @Model.ClearFiltersLabel
                                         </btn>
                                     </div>
-                                </div>                                
+                                </div>
                             </div>
                         </div>
                     </div>
