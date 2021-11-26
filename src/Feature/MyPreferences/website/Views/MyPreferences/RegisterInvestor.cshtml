@@ -70,38 +70,49 @@
                     <div class="can-toggle__switch" data-checked="Yes" data-unchecked="No"></div>
                 </label>
             </div>
-            <small class="d-block">@Html.Glass().Editable(Model.Content, x => x.SubscribeText)</small>
-            <div class="no-is-checked">
-                @Html.Glass().Editable(Model.Content, x => x.OptOutText)
-            </div>
+            <small class="d-block">@Html.Glass().Editable(Model.Content, x => x.SubscribeText)</small>            
             <div class="row mt-4">
                 <div class="col-lg-12">
-                    <div class="input-group">
-                        @Html.ValidationMessageFor(x => x.FirstName, string.Empty, new { @class = "text-danger" })
-                        @Html.TextBoxFor(x => x.FirstName)
-                        <label>@Html.Glass().Editable(Model.Content, x => x.FirstNameLabel)</label>
-                    </div>
-                    <div class="input-group">
-                        @Html.ValidationMessageFor(x => x.LastName, string.Empty, new { @class = "text-danger" })
-                        @Html.TextBoxFor(x => x.LastName)
-                        <label>@Html.Glass().Editable(Model.Content, x => x.LastNameLabel)</label>
-                    </div>
-                    <div class="input-group">
-                        @Html.ValidationMessageFor(x => x.Email, string.Empty, new { @class = "text-danger" })
-                        @Html.TextBoxFor(x => x.Email)
-                        <label>@Html.Glass().Editable(Model.Content, x => x.EmailAddressLabel)</label>
-                    </div>
-
-                    <div class="@(!Model.ProfessionalInvestor ? "d-none" : string.Empty)">
+                    <div class="yes-is-checked">
                         <div class="input-group">
-                            @Html.ValidationMessageFor(x => x.CompanyId, string.Empty, new { @class = "text-danger" })
-                            @Html.TextBoxFor(x => x.CompanyId)
-                            <label>@Html.Glass().Editable(Model.Content, x => x.FCALabel)</label>
+                            @Html.ValidationMessageFor(x => x.FirstName, string.Empty, new { @class = "text-danger" })
+                            @Html.TextBoxFor(x => x.FirstName)
+                            <label>@Html.Glass().Editable(Model.Content, x => x.FirstNameLabel)</label>
                         </div>
                         <div class="input-group">
-                            @Html.ValidationMessageFor(x => x.CompanyName, string.Empty, new { @class = "text-danger" })
-                            @Html.TextBoxFor(x => x.CompanyName)
-                            <label>@Html.Glass().Editable(Model.Content, x => x.CompanyNameLabel)</label>
+                            @Html.ValidationMessageFor(x => x.LastName, string.Empty, new { @class = "text-danger" })
+                            @Html.TextBoxFor(x => x.LastName)
+                            <label>@Html.Glass().Editable(Model.Content, x => x.LastNameLabel)</label>
+                        </div>
+                        <div class="input-group">
+                            @Html.ValidationMessageFor(x => x.Email, string.Empty, new { @class = "text-danger" })
+                            @Html.TextBoxFor(x => x.Email)
+                            <label>@Html.Glass().Editable(Model.Content, x => x.EmailAddressLabel)</label>
+                        </div>
+                        @if (Model.ProfessionalInvestor || Sitecore.Context.PageMode.IsExperienceEditor)
+                        {
+                            <div class="input-group">
+                                @Html.ValidationMessageFor(x => x.CompanyId, string.Empty, new { @class = "text-danger" })
+                                @Html.TextBoxFor(x => x.CompanyId)
+                                <label>@Html.Glass().Editable(Model.Content, x => x.FCALabel)</label>
+                            </div>
+                            <div class="input-group">
+                                @Html.ValidationMessageFor(x => x.CompanyName, string.Empty, new { @class = "text-danger" })
+                                @Html.TextBoxFor(x => x.CompanyName)
+                                <label>@Html.Glass().Editable(Model.Content, x => x.CompanyNameLabel)</label>
+                            </div>
+                        }                        
+                    </div>
+                    <div class="no-is-checked">
+                        @Html.Glass().Editable(Model.Content, x => x.OptOutText)
+                        <div class="row mt-4">
+                            <div class="col-lg-12">
+                                <div class="input-group">
+                                    @Html.ValidationMessageFor(x => x.Email, string.Empty, new { @class = "text-danger" })
+                                    @Html.TextBoxFor(x => x.Email)
+                                    <label>@Html.Glass().Editable(Model.Content, x => x.EmailAddressLabel)</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="input-btn">
