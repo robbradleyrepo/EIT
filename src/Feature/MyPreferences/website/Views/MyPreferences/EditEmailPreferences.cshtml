@@ -13,20 +13,24 @@
         @Html.AntiForgeryToken()
         @Html.Hidden("DatasourceId", Model.Content.Id)
         @Html.Sitecore().Placeholder("fund-accordion-list")
-        <div class="input-group">
-            @Html.ValidationMessageFor(x => x.IsInstitutionalBulletin, string.Empty, new { @class = "text-danger" })
-            @Html.CheckBoxFor(x => x.IsInstitutionalBulletin)
-            <label>@Html.Glass().Editable(Model.Content, x => x.InstitutionalBulletinTitle)</label>
-        </div>
-        <div class="input-group">
-            @Html.ValidationMessageFor(x => x.UnsubscribeAll, string.Empty, new { @class = "text-danger" })
-            @Html.CheckBoxFor(x => x.UnsubscribeAll)
-            <label>@Html.Glass().Editable(Model.Content, x => x.UnsubscribeAllText)</label>
-        </div>
-        <div class="input-btn">
-            <input type="submit" class="btn-primary" value="@Model.Content.SubmitCTAText" />
+        <div class="row mt-4">
+            <div class="col-lg-12">
+                <div class="input-group">
+                    @Html.ValidationMessageFor(x => x.IsInstitutionalBulletin, string.Empty, new { @class = "text-danger" })
+                    @Html.CheckBoxFor(x => x.IsInstitutionalBulletin)
+                    <label>@Html.Glass().Editable(Model.Content, x => x.InstitutionalBulletinTitle)</label>
+                </div>
+                <div class="input-group">
+                    @Html.ValidationMessageFor(x => x.UnsubscribeAll, string.Empty, new { @class = "text-danger" })
+                    @Html.CheckBoxFor(x => x.UnsubscribeAll)
+                    <label>@Html.Glass().Editable(Model.Content, x => x.UnsubscribeAllText)</label>
+                </div>
+                <div class="input-btn">
+                    <input type="submit" class="btn-primary" value="@Model.Content.SubmitCTAText" />
+                </div>
+            </div>
         </div>
     }
-</section>
+    </section>
     @Html.Sitecore().Placeholder("privacy-notice")
 </div>
