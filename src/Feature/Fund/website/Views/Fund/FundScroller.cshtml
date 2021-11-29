@@ -18,7 +18,9 @@
                                     </div>
                                     <div class="imagepromo__contentbox txtlimit tenline @(Model.TextColour != null ? Model.TextColour.Value : string.Empty)">
                                         <p>
-                                            @Html.Glass().Editable(m => m.Subtitle)
+                                            <b>
+                                                @Html.Glass().Editable(m => m.Subtitle)
+                                            </b>
                                         </p>
                                         <p class="font-300">
                                             @Html.Glass().Editable(m => m.Description)

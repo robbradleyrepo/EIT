@@ -43,7 +43,11 @@
                             var s4sInfoFacet = xdbContact.S4SInfo() ?? new S4SInfo();
 
                             string sfEntityIdfacetFieldKey = string.Empty;
-                            string objectPrefix = sfDataForSaving.SalesforceEntityId.Substring(0, 3);
+                            string objectPrefix = string.Empty;
+                            if (sfDataForSaving.SalesforceEntityId != null && sfDataForSaving.SalesforceEntityId.Length >= 3)
+                            {
+                                objectPrefix = sfDataForSaving.SalesforceEntityId.Substring(0, 3);
+                            }
 
                             if (objectPrefix.Equals(Foundation.Contact.Constants.PrefixSalesforceContact, StringComparison.InvariantCultureIgnoreCase))
                             {

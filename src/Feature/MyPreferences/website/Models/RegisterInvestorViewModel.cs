@@ -28,7 +28,6 @@ namespace LionTrust.Feature.MyPreferences.Models
 
         public string CompanyName { get; set; }
 
-        [Required]
         [StringLength(6, MinimumLength = 6)]
         public string CompanyId { get; set; }
 

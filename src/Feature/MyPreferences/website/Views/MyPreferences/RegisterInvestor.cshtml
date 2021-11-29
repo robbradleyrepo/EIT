@@ -19,6 +19,7 @@
                 {
                     @Html.AntiForgeryToken()
                     @Html.Hidden("DatasourceId", Model.Content.Id)
+                    @Html.Hidden("IsContact", Model.ProfessionalInvestor)
                     <div class="input-group">
                         @Html.ValidationMessageFor(x => x.Email, string.Empty, new { @class = "text-danger" })
                         @Html.TextBoxFor(x => x.Email)

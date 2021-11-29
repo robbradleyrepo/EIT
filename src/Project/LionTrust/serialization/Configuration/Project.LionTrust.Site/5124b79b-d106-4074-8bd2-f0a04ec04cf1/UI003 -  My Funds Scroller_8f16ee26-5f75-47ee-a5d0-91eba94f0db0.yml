@@ -1,0 +1,26 @@
+﻿---
+ID: "8f16ee26-5f75-47ee-a5d0-91eba94f0db0"
+Parent: "2270f634-e59d-417c-928e-87f2b52dda7a"
+Template: "5926b7a1-d9af-45ed-b6d1-d21b859c4496"
+Path: "/sitecore/content/LionTrustNew/Home/Data Template/Fund Dashboard/_Local/UI003 -  My Funds Scroller"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Value: "20211126T125923:637735283631950302Z"
+    - ID: "451efcd2-40a3-4153-8b02-bec9572a9ec1"
+      Hint: FundScroller_Description
+      Value: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    - ID: "63c464ec-3657-4b91-adf5-28ac9036774f"
+      Hint: FundScroller_PrimaryCta
+      Value: |
+        <link text="View all" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{712F3D02-AAC9-4F76-A34C-A04DD9A6208D}" />
+    - ID: "8e11c5f7-1fca-4a99-ad05-b81511f973d9"
+      Hint: FundScroller_Heading
+      Value: Funds you might like
+    - ID: "eb9e31a0-ed28-48fc-8cbf-820264b17306"
+      Hint: FundScroller_Subtitle
+      Value: Subtitle
