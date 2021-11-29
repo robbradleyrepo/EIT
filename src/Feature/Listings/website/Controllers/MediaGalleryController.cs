@@ -20,93 +20,7 @@
         public MediaGalleryController(IMvcContext mvcContext)
         {
             _mvcContext = mvcContext;
-        }
-
-        public ActionResult GetMediaItems(string mediaGalleryId, string fundCategory = "", string word = "")
-        {
-            if (string.IsNullOrEmpty(mediaGalleryId))
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest, "Media Folder ID required!");
-            }
-
-            Guid mediaGalleryFolderGuid;
-
-            try
-            {
-                mediaGalleryFolderGuid = new Guid(mediaGalleryId);
-            }
-            catch
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest, "Invalid Media Folder ID!");
-            }
-
-            var mediaGallery = _mvcContext.SitecoreService.GetItem<IMediaGallery>(mediaGalleryFolderGuid);
-            var mediaGalleryResponse = new MediaGalleryResponse();
-            var result = mediaGallery.MediaItems;
-            if (result != null)
-            {
-                if (!string.IsNullOrEmpty(fundCategory))
-                {
-                    result = result.Where(m => m.Categories.Any(x => x.Id.ToString().Equals(fundCategory)));
-                }
-
-                if (!string.IsNullOrWhiteSpace(word))
-                {
-                    var lowerWord = word.ToLower();
-                    result = result.Where(m => m.Description.ToLower().Contains(lowerWord));
-                }
-
-                mediaGalleryResponse.SearchResults = result.Select(m => new MediaItemResponseModel()
-                {
-                    Description = m.Description,
-                    Id = m.Id.ToString(),
-                    FullBodyImage = MediaGalleryHelper.GetImageModel(m.FullBodyImage),
-                    HeadShotImage = MediaGalleryHelper.GetImageModel(m.HeadshotImage)
-
-                });
-
-                mediaGalleryResponse.TotalResults = mediaGalleryResponse.SearchResults.Count();
-                mediaGalleryResponse.StatusCode = 200;
-            }
-
-            return new JsonCamelCaseResult(mediaGalleryResponse, JsonRequestBehavior.AllowGet);
-        }
-
-        public ActionResult GetMediaFacets(string mediaGalleryId) 
-        {
-            if (string.IsNullOrEmpty(mediaGalleryId))
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest, "Media Folder ID required!");
-            }
-
-            Guid mediaGalleryFolderGuid;
-
-            try
-            {
-                mediaGalleryFolderGuid = new Guid(mediaGalleryId);
-            }
-            catch
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest, "Invalid Media Folder ID!");
-            }
-
-            var mediaGallery = _mvcContext.SitecoreService.GetItem<IMediaGallery>(mediaGalleryFolderGuid);
-            if (mediaGallery.FilterCategoryFolder == null 
-                || mediaGallery.FilterCategoryFolder.FundTeams == null 
-                || !mediaGallery.FilterCategoryFolder.FundTeams.Any())
-            {
-                return new HttpNotFoundResult();
-            }
-
-            var facetResponse = mediaGallery.FilterCategoryFolder.FundTeams.Select(ft => 
-                                                                                new ListingFilterFacetsModel()
-                                                                                {
-                                                                                    Identifier = ft.Id.ToString(),
-                                                                                    Name = ft.TeamName
-                                                                                });
-
-            return new JsonCamelCaseResult(facetResponse, JsonRequestBehavior.AllowGet);
-        }
+        }        
 
         [HttpPost]
         public void DownloadMediaImages(List<string> downloadMediaIds)
@@ -140,10 +54,10 @@
                     zipOutputStream.PutNextEntry(entry);
                     zipOutputStream.Write(documentDocument.Bytes, 0, documentDocument.Bytes.Length);
                 }
+                
                 zipOutputStream.Close();
                 HttpContext.Response.Flush();
                 HttpContext.Response.End();
-
             }
         }        
     }

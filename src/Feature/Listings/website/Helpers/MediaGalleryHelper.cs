@@ -46,20 +46,6 @@
             }
 
             return result;
-        }
-
-        public static ImageResponseModel GetImageModel(Glass.Mapper.Sc.Fields.Image image)
-        {
-            if (image == null || string.IsNullOrEmpty(image.Src) || image.MediaId.Equals(Guid.Empty))
-            {
-                return null;
-            }
-
-            var model = new ImageResponseModel();            
-            model.Id = image.MediaId.ToString();
-            model.Url = image.Src;
-
-            return model;
-        }
+        }      
     }
 }

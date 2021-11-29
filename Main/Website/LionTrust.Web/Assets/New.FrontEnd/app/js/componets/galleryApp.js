@@ -152,3 +152,41 @@ document.getElementById('select-all').onclick = function() {
     checkbox.checked = this.checked;
   }
 }
+document.getElementById('download-selected').onclick = function() {
+  var checkboxes = document.querySelectorAll('.media-gallery__controls .checkbox__input');
+  var chkArray = [];
+  for (var checkbox of checkboxes) {
+	  if(checkbox.checked) {		
+		chkArray.push(checkbox.getAttribute('data-id'));
+	  }
+  }
+  
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "MediaGalleryApi/DownloadMediaImages", true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.responseType = "blob";
+  xhr.onreadystatechange = function () {
+	if (this.readyState == 4) {	 	  
+		var blob = new Blob([this.response], { type: 'application/zip' });		
+		let a = document.createElement("a");
+		a.style = "display: none";
+		document.body.appendChild(a);		
+		let url = window.URL.createObjectURL(blob);
+		a.href = url;		
+		var fileName = '';
+		var disposition = xhr.getResponseHeader('Content-Disposition');
+		if (disposition && disposition.indexOf('attachment') !== -1) {
+			var filenameRegex = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/;
+			var matches = filenameRegex.exec(disposition);
+			if (matches != null && matches[1]) {
+				fileName = matches[1].replace(/['"]/g, '');
+			}
+		}
+		a.download = fileName;		
+		a.click();
+	}
+  };
+  xhr.send(JSON.stringify({
+	downloadMediaIds: chkArray
+  }));
+}

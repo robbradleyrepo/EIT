@@ -4,6 +4,48 @@ Parent: "7502b69e-d154-4861-a033-bc0cb30a91b5"
 Template: "26e1649f-d891-47c8-91d9-be41231f6fd6"
 Path: /sitecore/content/LionTrustNew/Home/Media Gallery
 DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{6FF528FF-B3F7-4976-8478-AA18791AAFA2}"
+          p:after="r[@uid='{9057DD73-496E-495D-9460-75D38BBB5B7E}']"
+          s:ds="{EAB79467-750F-4F90-A5E3-128FDBD476B3}"
+          s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
+          s:par=""
+          s:ph="header" />
+        <r
+          uid="{45A9AD27-FEF9-4EB0-A8AB-5CE998F04B8A}"
+          p:after="r[@uid='{6FF528FF-B3F7-4976-8478-AA18791AAFA2}']"
+          s:ds="{542C6507-46A2-41D7-8A81-0579DE553787}"
+          s:id="{BC23D3DF-6124-4437-80F5-D53E3F24113C}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{80B5F5E0-79D0-4D46-8ACA-C1641F5BDFC1}"
+          p:after="r[@uid='{45A9AD27-FEF9-4EB0-A8AB-5CE998F04B8A}']"
+          s:ds="{C842DE15-DC91-46A7-86E7-6DFFDAE89566}"
+          s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{A99840D1-7422-4CFC-B584-F65EC2F3E7CA}"
+          p:after="*[1=2]"
+          s:ds="{4BD3E7FC-DFA0-4F8E-BACA-35427A5D0CEC}"
+          s:id="{A811D2B0-D08D-4991-A9DD-6D9FA5799CBD}"
+          s:par=""
+          s:ph="main" />
+      </d>
+    </r>
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{40D3D732-2692-43A8-90D4-180808C91E06}"
 Languages:
 - Language: en
   Versions:
@@ -13,4 +55,15 @@ Languages:
       Hint: LegacyPresentationBase_BrowserTitle
       Value: Media Gallery | Liontrust Asset Management PLC
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Value: "20211118T090425:637728230656192723Z"
+      Hint: __Created
+      Value: 20210823T173621Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: Media Gallery
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Media Gallery
