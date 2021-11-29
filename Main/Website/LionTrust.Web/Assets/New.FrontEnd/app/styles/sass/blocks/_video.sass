@@ -9,14 +9,12 @@
         background-size: cover
         border-radius: 10px
         overflow: hidden
-        height: 0
-        padding-top: 63.75%
+        height: 100%
+        padding-top: 0
         position: relative
         cursor: pointer
-        @include breakpoint(tablet, up)
-            padding-top: 52%
-        @include breakpoint(desktop-large, up)
-            padding-top: 394px
+        opacity: 0
+        transition: all 0.75s ease-in-out
         &:after
             content: ''
             position: absolute
@@ -42,3 +40,8 @@
             transform: translate(-50%, -50%) scale(1)
         .play
             fill: $white
+.collapse.show
+    .video-box__link
+        opacity: 1
+        transition: all 0.75s ease-in-out
+
