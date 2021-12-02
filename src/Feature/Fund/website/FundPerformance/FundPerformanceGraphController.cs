@@ -4,6 +4,7 @@
     using LionTrust.Feature.Fund.FundClass;
     using LionTrust.Foundation.Legacy.Models;
     using Sitecore.Mvc.Controllers;
+    using System;
     using System.Linq;
     using System.Web.Mvc;
 
@@ -36,9 +37,17 @@
             {
                 var citiCode = FundClassSwitcherHelper.GetCitiCode(HttpContext, datasource.Fund);
                 var currentClass = datasource.Fund.Classes.FirstOrDefault(c => c.CitiCode == citiCode);
-                if (currentClass != null && currentClass.Factsheet != null)
+                if (currentClass != null)
                 {
-                    model.FactsheetUrl = currentClass.Factsheet.Src;
+                    if (currentClass.Factsheet != null)
+                    {
+                        model.FactsheetUrl = currentClass.Factsheet.Src;
+                    }
+                    
+                    if (currentClass.GraphStartDate != null && currentClass.GraphStartDate != DateTime.MinValue)
+                    {
+                        model.StartDate = currentClass.GraphStartDate.ToString("dd-MM-yyyy");
+                    }                    
                 }
 
                 model.CitiCode = citiCode;
