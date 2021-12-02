@@ -1,0 +1,47 @@
+﻿---
+ID: "31ef5bc6-06a1-496b-8e07-3e706f940e3c"
+Parent: "67d728c2-6d9b-4c05-bfb0-5455e4dc879b"
+Template: "f91bff52-8afb-4056-bbf3-84c16924b92d"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2020/11/H test 25th Nov/_Local/UI003 - Fund Scroller"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{A9262B85-9890-4924-A622-A4B65C0FC46C}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211125T145555Z
+    - ID: "451efcd2-40a3-4153-8b02-bec9572a9ec1"
+      Hint: FundScroller_Description
+      Value: "We take pride in offering specialist investment opportunities to private investors looking to generate sustainable growth. We manage risk, Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic vero facilis reprehenderit excepturi, itaque distinctio laudantium dicta facere dolorem aspernatur perferendis voluptate, temporibus, cumque iusto architecto nesciunt. Consectetur, eveniet praesentium!"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "63c464ec-3657-4b91-adf5-28ac9036774f"
+      Hint: FundScroller_PrimaryCta
+      Value: |
+        <link linktype="internal" text="Read more" querystring="" target="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
+    - ID: "8e11c5f7-1fca-4a99-ad05-b81511f973d9"
+      Hint: FundScroller_Heading
+      Value: How to invest
+    - ID: "dd98d557-6e80-4ffb-9e13-498e29de5566"
+      Hint: FundScroller_Funds
+      Type: Multilist
+      Value: |
+        {8BF2AAB7-37B4-46C0-9599-D4FB3530709D}
+        {A4C505F9-7BF3-4751-8F97-67FAD4F3668E}
+        {060AA0C3-CDBC-47DD-A43E-E3456E72E443}
+        {1401A2D8-86A4-4932-9D8F-487256DC3B0D}
+    - ID: "e8a3c14f-9976-4734-9fe8-5bb53e1dc9b3"
+      Hint: FundScroller_SecondaryCta
+      Value: |
+        <link linktype="internal" text="See all guidance" querystring="" target="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
+    - ID: "eb9e31a0-ed28-48fc-8cbf-820264b17306"
+      Hint: FundScroller_Subtitle
+      Value: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex est id porro, quas fugit nostrum, atque, iure mollitia repudiandae non voluptatem. Porro earum mollitia, debitis iusto eveniet ipsam rerum hic?"

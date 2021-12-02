@@ -6,6 +6,7 @@
     using Sitecore.Mvc.Controllers;
     using System.Web.Mvc;
     using System.Linq;
+    using System.Collections.Generic;
 
     public class FundManagerPromoController: SitecoreController
     {
@@ -29,31 +30,37 @@
             }
 
             var currentPage = context.GetPageContextItem<IArticle>();
+            var fundManagerList = new List<FundManagerViewModel>();
 
-            //If the current page this is being used on is an article and has one author, use this author.
-            //Otherwise use the default of manually selecting using the datasource item.
-            //If multiple authors are configured this is not possible as everytime you add the compondent it
-            //would just select the first, as instances of this compondent do not know about the others used on the page.
-            if (currentPage != null && currentPage.Authors != null && currentPage.Authors.Count() == 1)
+            //If the current page this is being used on is an article and has authors, use the authors.
+            //Otherwise use the default of manually selecting using the datasource item.            
+            if (currentPage != null && currentPage.Authors != null && currentPage.Authors.Any())
             {
-                datasource.FundManager = currentPage.Authors.First();
+                foreach(var author in currentPage.Authors)
+                {
+                    if (author != null)
+                    {
+                        fundManagerList.Add(new FundManagerViewModel(author));
+                    }
+                }
             }
-
-            if (!Sitecore.Context.PageMode.IsExperienceEditor)
+            else
             {
                 if (datasource.FundManager == null)
                 {
-                    _log.Info($"Fund manager promo {datasource.Id} does not have a fund manager set", this);
-                    return null;
+                    if (!Sitecore.Context.PageMode.IsExperienceEditor)
+                    {
+                        _log.Info($"Fund manager promo {datasource.Id} does not have a fund manager set", this);
+                        return null;
+                    }
+
+                    return View("/views/fund/FundManagerPromo.cshtml", null);
                 }
+
+                fundManagerList.Add(new FundManagerViewModel(datasource.FundManager));
             }
 
-            if (datasource.FundManager == null)
-            {
-                return View("/views/fund/FundManagerPromo.cshtml", null);
-            }
-
-            return View("/views/fund/FundManagerPromo.cshtml", new FundManagerViewModel(datasource.FundManager));
+            return View("/views/fund/FundManagerPromo.cshtml", fundManagerList);
         }
     }
 }

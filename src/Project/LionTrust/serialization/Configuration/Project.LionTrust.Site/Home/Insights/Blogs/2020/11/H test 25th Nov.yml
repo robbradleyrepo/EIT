@@ -1,9 +1,13 @@
 ﻿---
-ID: "ba2439a2-5d38-4691-8f50-1b8a94acd903"
-Parent: "810226bd-15aa-4f26-ab02-7a63b355d4a8"
+ID: "1b959ff6-3e26-477e-ad30-da47fd403859"
+Parent: "b8e00980-eaaf-47d0-b614-9a2f9d99cf00"
 Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
-Path: /sitecore/templates/branches/Project/LionTrust/Page Types/ArticlePage/$name
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2020/11/H test 25th Nov
 DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{BA2439A2-5D38-4691-8F50-1B8A94ACD903}"
 Languages:
 - Language: en
   Versions:
@@ -20,19 +24,19 @@ Languages:
             <r
               uid="{C8B3B2D1-D42B-4F7F-A536-F647A1CF9C18}"
               p:before="*"
-              s:ds="{FECADECD-61A8-4976-950A-2C9F0AE2AA0A}"
+              s:ds="{D75DE35A-8BD9-496F-A44E-93F4813BE42A}"
               s:id="{00E6D57B-DFBB-4C64-8D9F-B9F59A979D23}"
               s:ph="/header/article-header" />
             <r
               uid="{34A6F516-20A4-4E10-8D36-5120670F54DF}"
               p:after="r[@uid='{C8B3B2D1-D42B-4F7F-A536-F647A1CF9C18}']"
-              s:ds="{52F34BAA-D2FD-4609-96AF-599332FE6F6C}"
+              s:ds="{04ED77CA-C068-4877-ABFA-D7E03AD7FA95}"
               s:id="{010E3C29-6258-4251-9CEB-FEB1FAC64F98}"
               s:ph="/main/article" />
             <r
               uid="{44D9CD64-8820-4293-928E-E33DAA95A12C}"
               p:after="r[@uid='{34A6F516-20A4-4E10-8D36-5120670F54DF}']"
-              s:ds="{C98B3C02-F308-4B5D-B602-7C481A0D6FFB}"
+              s:ds="{E6D6CB2B-2DE7-4EC1-ACA0-2BEEF6C4BE3E}"
               s:id="{DF18E4D6-F59A-4CDD-B26B-91D902F3A2DB}"
               s:ph="/main/article" />
             <r
@@ -43,27 +47,39 @@ Languages:
               s:par=""
               s:ph="/main/article" />
             <r
-              uid="{1F957C53-EC39-450C-BD85-F18C9D6D0C39}"
+              uid="{EEE1E712-F28F-41A1-A9ED-880DD5CB38FD}"
               p:after="r[@uid='{14987E99-5543-44CB-AACC-450C42697891}']"
-              s:ds="{6BC2CBA7-2D22-4908-B7DD-DC91791416E2}"
+              s:ds="{5BC3C1C1-6215-4A59-B7FB-8A00ACB17C04}"
+              s:id="{E9EA1844-F7AA-45D6-A10F-800A467D6E3D}"
+              s:ph="/main/article" />
+            <r
+              uid="{1F957C53-EC39-450C-BD85-F18C9D6D0C39}"
+              p:after="r[@uid='{EEE1E712-F28F-41A1-A9ED-880DD5CB38FD}']"
+              s:ds="{871455D0-6379-482F-8969-521600E81FEE}"
               s:id="{7626FD78-BC75-4F9C-80E7-DC947364A29B}"
               s:ph="/main/article" />
             <r
-              uid="{055D3003-595D-4BE2-91E8-375FDE37C61E}"
+              uid="{574BE72F-8451-4451-B001-1EC75FA5D969}"
               p:after="r[@uid='{1F957C53-EC39-450C-BD85-F18C9D6D0C39}']"
-              s:ds="{89FD0941-F7A0-45F7-87EB-0B8D9B6F5C03}"
+              s:ds="{048A1824-63DD-4166-8BAB-948BDCF00C2B}"
+              s:id="{533F0057-E6B2-475C-B6A8-F72061551C2F}"
+              s:ph="/main/article" />
+            <r
+              uid="{055D3003-595D-4BE2-91E8-375FDE37C61E}"
+              p:after="r[@uid='{574BE72F-8451-4451-B001-1EC75FA5D969}']"
+              s:ds="{7D5841A5-2CD0-46F8-8923-59612C3EAC7B}"
               s:id="{C578F8BA-7001-4285-8D55-B913F21E60E0}"
               s:ph="/main/article" />
             <r
               uid="{9EC6B67F-F89B-4B77-872C-0DB79F2D9718}"
               p:after="r[@uid='{055D3003-595D-4BE2-91E8-375FDE37C61E}']"
-              s:ds="{10633E00-F25E-4CCD-9EA4-6D19291A3FD7}"
+              s:ds="{3F7BE846-ABE2-49A2-B062-1C9E4B60C76F}"
               s:id="{7626FD78-BC75-4F9C-80E7-DC947364A29B}"
               s:ph="/main/article" />
             <r
               uid="{0BDBF2FD-B974-4321-8660-8C93C6E90A43}"
               p:after="r[@uid='{9EC6B67F-F89B-4B77-872C-0DB79F2D9718}']"
-              s:ds="{1F893B53-E00F-4EDD-957D-9466B5F17597}"
+              s:ds="{839A5005-9231-4CD3-A2E5-34D677715256}"
               s:id="{00E6D57B-DFBB-4C64-8D9F-B9F59A979D23}"
               s:ph="/main/article" />
             <r
@@ -74,11 +90,11 @@ Languages:
               s:ph="/main/article" />
             <r
               uid="{18A6223B-77E7-4D4F-B82B-4C383BA8A7EF}"
-              s:ds="{E511FC0B-4F0D-4C20-A51F-FA6B62C3BA34}" />
+              s:ds="{B3F702C6-F3F0-4ABD-A28F-51C9C8B3C71E}" />
             <r
               uid="{8FCDAE13-103E-410F-A79E-9E1C59DDACEC}"
               p:after="r[@uid='{BE0557ED-7DE5-4630-92F6-C480810204DD}']"
-              s:ds="{A2AA01D8-2DB4-41F2-85B9-48E905BD807B}"
+              s:ds="{63886FAC-845E-4334-A3B1-F2A0EF66B8B0}"
               s:id="{B87F0E98-81D6-4B7F-A351-549255F96DB7}"
               s:par=""
               s:ph="main" />
@@ -91,65 +107,83 @@ Languages:
             <r
               uid="{05CB20B1-127B-4E38-BAC1-5A826D85A9D1}"
               p:after="r[@uid='{C7EE86D7-3A10-4411-9C69-71EF27E583E4}']"
-              s:ds="{671F68E6-07AB-4A01-A688-F35A50B89402}"
+              s:ds="{5BEAE579-C598-4AD0-A45F-B97D0C18E71D}"
               s:id="{DC0AC587-3DF0-468C-9F4F-6E8C137ECD47}"
               s:par=""
               s:ph="main" />
             <r
               uid="{B6168C0D-C843-4588-B49B-2FAB9D488771}"
               p:after="r[@uid='{05CB20B1-127B-4E38-BAC1-5A826D85A9D1}']"
-              s:ds="{A9262B85-9890-4924-A622-A4B65C0FC46C}"
+              s:ds="{31EF5BC6-06A1-496B-8E07-3E706F940E3C}"
               s:id="{C4570003-4866-4EAA-B069-8FA6611DC0EC}"
               s:ph="main" />
             <r
               uid="{BBB2192D-FA6A-46AE-AE95-15DD426DC1C0}"
               p:after="r[@uid='{B6168C0D-C843-4588-B49B-2FAB9D488771}']"
-              s:ds="{125A7BFB-A091-4E07-BAA7-4E54057729C5}"
+              s:ds="{4A75F62A-F5AA-4468-B0C6-6B3888C2C3CB}"
               s:id="{7F3DDF4D-5190-4C04-836D-41325114723D}"
               s:ph="main" />
             <r
               uid="{79DF7224-7866-417D-91E6-6C95F795301F}"
               p:after="r[@uid='{BBB2192D-FA6A-46AE-AE95-15DD426DC1C0}']"
-              s:ds="{87201971-FC21-4B15-9950-B8E9EF28CAF8}"
+              s:ds="{0CF00829-008D-41AA-A2C7-C092DE809C5C}"
               s:id="{29206264-421A-41D5-8869-A7D1EA60566B}"
               s:ph="main" />
             <r
               uid="{136B2778-E8D5-477F-A7EA-E29FEBC69BB6}"
               p:after="*[1=2]"
-              s:ds="{C8A6199B-05A8-4562-AA5C-66573406858E}"
+              s:ds="{066D3727-F34D-46E6-9535-9E579AA6EDF5}"
               s:id="{A811D2B0-D08D-4991-A9DD-6D9FA5799CBD}"
               s:ph="main" />
           </d>
         </r>
     - ID: "094932b9-ff77-4977-966e-d18f7c7ac091"
       Hint: LegacyArticle_Subtitle
-      Value: 
+      Value: Article 5
     - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
       Hint: LegacyArticle_Authors
       Type: Treelist
-      Value: 
+      Value: |
+        {0F980420-4156-41F4-951F-F156CD3F4359}
+        {BD0F07D0-8CC0-41E5-8105-3BA43C9E9DC8}
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: H test 25th Nov | Insights | Liontrust Asset Management PLC
     - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
       Hint: LegacyArticle_Title
-      Value: 
+      Value: Article 5
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210513T123251Z
+      Value: 20211125T145546Z
     - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
       Hint: LegacyArticle_BlogType
-      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+      Value: "{74A07305-3F24-4766-9595-AD788CAD354A}"
     - ID: "5bd6e9e9-2240-4473-8094-075e811b8438"
       Hint: Article_ListingImage
-      Value: 
+      Value: |
+        <image mediaid="{7C5F4C28-B331-40A1-8B12-1B36A6D930EC}" />
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\Admin
+        sitecore\hayleya
     - ID: "79cc76cc-7503-449b-9809-9808cf6c2d26"
       Hint: Article_Date
-      Value: $now
+      Value: 20210512T210000Z
+    - ID: "8eb78475-c445-4960-84b0-e946d262f81c"
+      Hint: Article_VideoUrl
+      Value: |
+        <link linktype="external" url="https://vimeo.com/manage/videos/647711940" />
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: H test 25th Nov
+    - ID: "ae17b17d-0024-4700-9075-e95d8e7b15ee"
+      Hint: Article_PdfDocument
+      Value: |
+        <file mediaid="{6E0ADA41-D071-41E0-96BE-917439B6DA0E}" src="-/media/6e0ada41d07141e096be917439b6da0e.ashx" />
     - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
       Hint: LegacyPresentationBase_PageTitle
-      Value: $name
+      Value: Article 5
     - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
       Hint: LegacyArticle_Content
-      Value: 
+      Value: |
+        <span style="background-color: #ffffff; text-align: justify; color: #000000;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies ornare nunc.&nbsp;</span>
