@@ -2,6 +2,7 @@
 {
     using Glass.Mapper.Sc.Web.Mvc;
     using LionTrust.Feature.Fund.FundClass;
+    using LionTrust.Foundation.Legacy.Models;
     using Sitecore.Mvc.Controllers;
     using System.Linq;
     using System.Web.Mvc;
@@ -23,7 +24,14 @@
                 return null;
             }
 
-            var model = new FundPerformanceGraphViewModel { Component = datasource };
+            bool hidePerformanceChart = false;
+            var fundDetailPage = _context.GetContextItem<IPresentationBase>();
+            if (fundDetailPage != null)
+            {
+                hidePerformanceChart = fundDetailPage.HidePerformanceChart;
+            }
+
+            var model = new FundPerformanceGraphViewModel { Component = datasource, Hide = hidePerformanceChart };
             if (datasource.Fund != null)
             {
                 var citiCode = FundClassSwitcherHelper.GetCitiCode(HttpContext, datasource.Fund);
@@ -34,6 +42,7 @@
                 }
 
                 model.CitiCode = citiCode;
+                model.FundId = datasource.Fund.Id.ToString("N");
             }
 
             return View("/views/fund/fundperformancegraph.cshtml", model);

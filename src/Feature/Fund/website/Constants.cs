@@ -9,7 +9,6 @@
             public const string TableHeadingFieldId = "{24B821F2-896B-4BBE-AB3A-6C943A3D8B8F}";
             public const string QuartileRowLabelFieldId = "{21554471-1768-4C04-9A5D-A5FAB1B4D8F4}";
             public const string HeadingFieldId = "{450FEC5E-B30E-48AF-ADC4-051FD7B27289}";
-            public const string ColumnMonthPrefixFieldId = "{8FF8ECB3-3CA7-47D7-89DF-76E1DF36BA79}";
         }
 
         public static class Literature
@@ -111,7 +110,7 @@
         public static class FundOverview
         {
             public const string LatestUpdateCTA_FieldId = "{624E51CE-F2EE-48A1-B49F-EB4A852B713F}";
-            public const string DownloadCTA_FieldId = "{361F876B-0D9B-4827-A7AD-F9245A3A79A2}";
+            public const string DownloadCTALabel_FieldId = "{361F876B-0D9B-4827-A7AD-F9245A3A79A2}";
             public const string FundFieldId = "{8730606F-4236-4C61-8859-16CB35541365}";
             public const string Alignment_FieldId = "{282195F0-0E21-4E60-885B-53C477323C56}";
         }
@@ -220,6 +219,7 @@
             public const string InitialChargeLabel_FieldId = "{CC91AAA4-ED02-49F4-9027-551ABFFDF4D4}";
             public const string OngoingChargesLabel_FieldId = "{5F132CC3-50F5-42F1-8308-9C751685F733}";
             public const string AnnualManagementChargeLabel_FieldId = "{1417C905-79BB-487B-AF65-2209B53803F6}";
+            public const string Tooltips_FieldId = "{9582504E-8C9E-4C02-A4EE-7A77D8C085EB}";
         }
 
         public static class KeyInfoPriceComponent
@@ -233,10 +233,11 @@
             public const string OfferPriceLabel_FieldId = "{678F3E21-91D6-4021-BD2A-26C33B839CE1}";
             public const string PriceDateLabel_FieldId = "{D093B57A-44CA-4867-B0D5-52DB25E3CC11}";
             public const string PriceDateTooltipLabel_FieldId = "{80C12439-AAA4-4CAD-8787-AB7B35BA60B9}";
-            public const string SectorNameLabel_FieldId = "{5291254F-D8DE-4689-811A-C1B862F0B93D}";
+            public const string BenchmarkLabel_FieldId = "{5291254F-D8DE-4689-811A-C1B862F0B93D}";
             public const string ManagerInceptionDateLabel_FieldId = "{AB8E942C-8129-4A8E-9DD5-2D7F3F9DE270}";
             public const string TargetBenchmarkYieldLabel_FieldId = "{94185463-0638-40C0-AC99-233554578886}";
-    }
+            public const string Tooltips_FieldId = "{B58A6442-2039-4A2E-83FD-C6CCD6CCA221}";
+        }
 
         public static class KeyInfoPrice
         {
@@ -287,6 +288,32 @@
         {
             public const string Label_FieldId = "{5B61D162-3D78-4F21-ADBC-A58B23D5DB43}";
             public const string Tooltip_FieldId = "{0117FA4F-F726-4EA8-9038-6BA8C0355FBC}";            
+        }
+
+        public static class KeyInfoPriceTooltips
+        {
+            public const string ClassLaunchDateTooltip_FieldId = "{685656EE-0CA1-4C38-A7A4-2AB09F008821}";
+            public const string Comparator1Tooltip_FieldId = "{B1714A77-7578-4004-8399-CC3259022A8C}";
+            public const string Comparator2Tooltip_FieldId = "{41EDA1DE-FAD7-4144-BD0D-027DCFDEDD3D}";
+            public const string BenchmarkTooltip_FieldId = "{6DA207E5-3696-4921-A6B3-AD0922AD99F4}";
+            public const string ManagerInceptionDateTooltip_FieldId = "{EE9594DB-6F49-441E-A55C-FF4FECFAE368}";
+            public const string TargetBenchmarkYieldTooltip_FieldId = "{756526DC-356D-43A0-8028-9D7439391C66}";
+            public const string SinglePriceTooltip_FieldId = "{EEB70AD4-C4D3-4DBD-BBCD-BBE8A73770AE}";
+            public const string OfferPriceTooltip_FieldId = "{488C5C9E-A666-4F84-96EB-62AD15D5367C}";
+            public const string PriceDateTooltip_FieldId = "{A3AAD7B8-0F51-4D39-A43F-278F46345B34}";
+        }
+
+        public static class AdditionalInfoAndChargesTooltips
+        {
+            public const string MinInitialTooltip_FieldId = "{75A2ED94-A717-4E6A-9D0E-B709213020EF}";
+            public const string MinAdditionalTooltip_FieldId = "{FBB22D95-CE7E-4F6E-BC58-2598D090AE52}";
+            public const string ExDividendDateTooltip_FieldId = "{A6250132-541A-401E-A53C-DD7023E75EFF}";
+            public const string DistributionDateTooltip_FieldId = "{C98A9F79-8EAF-45AD-AAFB-136DFDD13B5A}";
+            public const string SedolCodeTooltip_FieldId = "{FD135689-7627-47D7-9F5F-5DF649A3AB93}";
+            public const string ISINCodeTooltip_FieldId = "{F3BFB8C7-289D-46E1-A532-CC6BFCF8BACB}";
+            public const string InitialChargeTooltip_FieldId = "{5FF44035-E9E4-453F-9DAD-20AC58F3B8E3}";
+            public const string OngoingChargesTooltip_FieldId = "{83E4B514-B489-4AB9-83E4-2C4896975598}";
+            public const string AnnualManagementChargeTooltip_FieldId = "{4B5FD293-630A-4CF3-8456-C60BDA4A6F2F}";
         }
     }
 }

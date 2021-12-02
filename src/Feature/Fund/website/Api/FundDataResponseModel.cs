@@ -23,7 +23,7 @@
         [JsonProperty("FundNameLong")]
         public string FundName { get; set; }
 
-        [JsonProperty("citicode")]
+        [JsonProperty("Citicode")]
         public string CitiCode { get; set; }
 
         [JsonProperty("UnitLaunchDate")]
@@ -59,71 +59,59 @@
         [JsonProperty("Sedol")]
         public string SedolCode { get; set; }
 
-        [JsonProperty("Discrete0To12m_YE")]
+        [JsonProperty("DiscretePerfAsAt_QE")]
+        public string DiscretePerformanceQE { get; set; }
+
+        [JsonProperty("Discrete0To12m_QE")]
         public string DiscretePerformance0To12 { get; set; }
 
-        [JsonProperty("Discrete12mTo24m_YE")]
+        [JsonProperty("Discrete12mTo24m_QE")]
         public string DiscretePerformance12To24 { get; set; }
 
-        [JsonProperty("Discrete24mTo36m_YE")]
+        [JsonProperty("Discrete24mTo36m_QE")]
         public string DiscretePerformance24To36 { get; set; }
 
-        [JsonProperty("Discrete36mTo48m_YE")]
+        [JsonProperty("Discrete36mTo48m_QE")]
         public string DiscretePerformance36To48 { get; set; }
 
-        [JsonProperty("BenchmarkDiscrete0mTo12m_YE")]
+        [JsonProperty("BenchmarkBMDiscrete0To12m_QE")]
         public string Benchmark0DiscretePerformance0To12 { get; set; }
 
-        [JsonProperty("BenchmarkDiscrete12mTo24m_YE")]
+        [JsonProperty("BenchmarkBMDiscrete12mTo24m_QE")]
         public string Benchmark0DiscretePerformance12To24 { get; set; }
 
-        [JsonProperty("BenchmarkDiscrete24mTo36m_YE")]
+        [JsonProperty("BenchmarkBMDiscrete24mTo36m_QE")]
         public string Benchmark0DiscretePerformance24To36 { get; set; }
 
-        [JsonProperty("BenchmarkDiscrete36mTo48m_YE")]
+        [JsonProperty("BenchmarkBMDiscrete36mTo48m_QE")]
         public string Benchmark0DiscretePerformance36To48 { get; set; }
 
-        [JsonProperty("BenchmarkP1Discrete0To12m_YE")]
+        [JsonProperty("BenchmarkP1Discrete0To12m_QE")]
         public string Benchmark1DiscretePerformance0To12 { get; set; }
 
-        [JsonProperty("BenchmarkP1Discrete12mTo24m_YE")]
+        [JsonProperty("BenchmarkP1Discrete12mTo24m_QE")]
         public string Benchmark1DiscretePerformance12To24 { get; set; }
 
-        [JsonProperty("BenchmarkP1Discrete24mTo36m_YE")]
+        [JsonProperty("BenchmarkP1Discrete24mTo36m_QE")]
         public string Benchmark1DiscretePerformance24To36 { get; set; }
 
-        [JsonProperty("BenchmarkP1Discrete36mTo48m_YE")]
+        [JsonProperty("BenchmarkP1Discrete36mTo48m_QE")]
         public string Benchmark1DiscretePerformance36To48 { get; set; }
 
-        [JsonProperty("BenchmarkP2Discrete0To12m_YE")]
+        [JsonProperty("BenchmarkP2Discrete0To12m_QE")]
         public string Benchmark2DiscretePerformance0To12 { get; set; }
 
-        [JsonProperty("BenchmarkP2Discrete12mTo24m_YE")]
+        [JsonProperty("BenchmarkP2Discrete12mTo24m_QE")]
         public string Benchmark2DiscretePerformance12To24 { get; set; }
 
-        [JsonProperty("BenchmarkP2Discrete24mTo36m_YE")]
+        [JsonProperty("BenchmarkP2Discrete24mTo36m_QE")]
         public string Benchmark2DiscretePerformance24To36 { get; set; }
 
-        [JsonProperty("BenchmarkP2Discrete36mTo48m_YE")]
-        public string Benchmark2DiscretePerformance36To48 { get; set; }
-
-        [JsonProperty("SectorDiscrete0To12m_YE")]
-        public string SectorDiscretePerformance0To12 { get; set; }
-
-        [JsonProperty("SectorDiscrete12mTo24m_YE")]
-        public string SectorDiscretePerformance12To24 { get; set; }
-
-        [JsonProperty("SectorDiscrete24mTo36m_YE")]
-        public string SectorDiscretePerformance24To36 { get; set; }
-
-        [JsonProperty("SectorDiscrete36mTo48m_YE")]
-        public string SectorDiscretePerformance36To48 { get; set; }
+        [JsonProperty("BenchmarkP2Discrete36mTo48m_QE")]
+        public string Benchmark2DiscretePerformance36To48 { get; set; }            
 
         [JsonProperty("Benchmarks")]
         public IEnumerable<Benchmark> Benchmarks { get; set; }
-
-        [JsonProperty("SectorNameShort")]
-        public string SectorName { get; set; }
 
         [JsonProperty("Cumulative1m_DE")]
         public string Cumulative1m { get; set; }
@@ -149,29 +137,77 @@
         [JsonProperty("CumulativeSinceLaunch_DE")]
         public string CumulativeSinceInception { get; set; }
 
-        [JsonProperty("SectorCumulative1m_DE")]
-        public string SectorCumulative1m { get; set; }
+        [JsonProperty("BenchmarkBMCumulative1m_DE")]
+        public string Benchmark0Cumulative1m { get; set; }
 
-        [JsonProperty("SectorCumulativeYTD_DE")]
-        public string SectorCumulativeYearToDate { get; set; }
+        [JsonProperty("BenchmarkBMCumulativeYTD_DE")]
+        public string Benchmark0CumulativeYearToDate { get; set; }
 
-        [JsonProperty("SectorCumulative3m_DE")]
-        public string SectorCumulative3m { get; set; }
+        [JsonProperty("BenchmarkBMCumulative3m_DE")]
+        public string Benchmark0Cumulative3m { get; set; }
 
-        [JsonProperty("SectorCumulative6m_DE")]
-        public string SectorCumulative6m { get; set; }
+        [JsonProperty("BenchmarkBMCumulative6m_DE")]
+        public string Benchmark0Cumulative6m { get; set; }
 
-        [JsonProperty("SectorCumulative1y_DE")]
-        public string SectorCumulative1y { get; set; }
+        [JsonProperty("BenchmarkBMCumulative1y_DE")]
+        public string Benchmark0Cumulative1y { get; set; }
 
-        [JsonProperty("SectorCumulative3y_DE")]
-        public string SectorCumulative3y { get; set; }
+        [JsonProperty("BenchmarkBMCumulative3y_DE")]
+        public string Benchmark0Cumulative3y { get; set; }
 
-        [JsonProperty("SectorCumulative5y_DE")]
-        public string SectorCumulative5y { get; set; }
+        [JsonProperty("BenchmarkBMCumulative5y_DE")]
+        public string Benchmark0Cumulative5y { get; set; }
 
-        [JsonProperty("SectorCumulativeSinceUnitLaunch_DE")]
-        public string SectorCumulativeSinceUnitLaunch { get; set; }
+        [JsonProperty("BenchmarkBMCumulativeSinceUnitLaunch_DE")]
+        public string Benchmark0CumulativeSinceInception { get; set; }
+
+        [JsonProperty("BenchmarkP1Cumulative1m_DE")]
+        public string Benchmark1Cumulative1m { get; set; }
+
+        [JsonProperty("BenchmarkP1CumulativeYTD_DE")]
+        public string Benchmark1CumulativeYearToDate { get; set; }
+
+        [JsonProperty("BenchmarkP1Cumulative3m_DE")]
+        public string Benchmark1Cumulative3m { get; set; }
+
+        [JsonProperty("BenchmarkP1Cumulative6m_DE")]
+        public string Benchmark1Cumulative6m { get; set; }
+
+        [JsonProperty("BenchmarkP1Cumulative1y_DE")]
+        public string Benchmark1Cumulative1y { get; set; }
+
+        [JsonProperty("BenchmarkP1Cumulative3y_DE")]
+        public string Benchmark1Cumulative3y { get; set; }
+
+        [JsonProperty("BenchmarkP1Cumulative5y_DE")]
+        public string Benchmark1Cumulative5y { get; set; }
+
+        [JsonProperty("BenchmarkP1CumulativeSinceUnitLaunch_DE")]
+        public string Benchmark1CumulativeSinceInception { get; set; }
+
+        [JsonProperty("BenchmarkP2Cumulative1m_DE")]
+        public string Benchmark2Cumulative1m { get; set; }
+
+        [JsonProperty("BenchmarkP2CumulativeYTD_DE")]
+        public string Benchmark2CumulativeYearToDate { get; set; }
+
+        [JsonProperty("BenchmarkP2Cumulative3m_DE")]
+        public string Benchmark2Cumulative3m { get; set; }
+
+        [JsonProperty("BenchmarkP2Cumulative6m_DE")]
+        public string Benchmark2Cumulative6m { get; set; }
+
+        [JsonProperty("BenchmarkP2Cumulative1y_DE")]
+        public string Benchmark2Cumulative1y { get; set; }
+
+        [JsonProperty("BenchmarkP2Cumulative3y_DE")]
+        public string Benchmark2Cumulative3y { get; set; }
+
+        [JsonProperty("BenchmarkP2Cumulative5y_DE")]
+        public string Benchmark2Cumulative5y { get; set; }
+
+        [JsonProperty("BenchmarkP2CumulativeSinceUnitLaunch_DE")]
+        public string Benchmark2CumulativeSinceInception { get; set; }
 
         [JsonProperty("Cumulative1mQuart_DE")]
         public string Cumulative1mQuart { get; set; }

@@ -5,6 +5,7 @@
     using Sitecore.Mvc.Controllers;
     using System.Web.Mvc;
     using System.Linq;
+    using LionTrust.Foundation.Legacy.Models;
 
     public class DiscretePerformanceController: SitecoreController
     {
@@ -25,14 +26,22 @@
                 return null;
             }
 
-            var result = new PerformanceTableViewModel { Component = datasource };
+            bool hideDiscreteTable = false;
+            var fundDetailPage = _context.GetContextItem<IPresentationBase>();
+            if (fundDetailPage != null)
+            {
+                hideDiscreteTable = fundDetailPage.HideDiscretePerformanceTable;
+            }
+
+            var result = new PerformanceTableViewModel { Component = datasource, Hide = hideDiscreteTable };
             
             if (datasource.Fund != null)
             {
                 var citiCode = FundClassSwitcherHelper.GetCitiCode(HttpContext, datasource.Fund);
                 if (!string.IsNullOrEmpty(citiCode))
                 {
-                    result.Rows = _performanceManager.GetPerformanceTableRows(citiCode).ToArray();
+                    result.ColumnHeadings = _performanceManager.GetColumnHeadings(citiCode);
+                    result.Rows = _performanceManager.GetPerformanceTableRows(citiCode).GroupBy(r => r.Name).Select(g => g.First()).ToArray();
                     result.QuartileRow = _performanceManager.GetQuartile(citiCode);
                 }
             }

@@ -1,0 +1,27 @@
+﻿---
+ID: "0bd36a3c-9e6d-469a-aae1-b5d320c95e4b"
+Parent: "8cc89437-a21a-4b3b-a661-d46396cf9802"
+Template: "81d6471c-540d-4ead-afe4-cda3dc805f5b"
+Path: /sitecore/content/LionTrustNew/Global/Tooltips/Fund Additional Info Tooltips
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211123T133034Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "5ff44035-e9e4-453f-9dad-20ac58f3b8e3"
+      Hint: FundTooltip_InitialCharge
+      Value: This is the Initial Charge
+    - ID: "75a2ed94-a717-4e6a-9d0e-b709213020ef"
+      Hint: FundTooltip_MinimumInitialInvestment
+      Value: This is the Minimum Initial Investment
+    - ID: "a6250132-541a-401e-a53c-dd7023e75eff"
+      Hint: FundTooltip_ExDividendDate
+      Value: This is the Ex Dividend Date

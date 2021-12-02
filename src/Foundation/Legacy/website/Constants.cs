@@ -94,7 +94,7 @@ namespace LionTrust.Foundation.Legacy
             public const string OngoingCharges_FieldId = "{0FE085F4-C693-4F16-AEE8-9C2ABFA66A4A}";
             public const string SedolCode_FieldId = "{79F1B818-4E89-4F71-BF0E-1EFF631A7259}";
             public const string FactsheetFieldId = "{E22A6228-B13F-4EA0-B795-6429E50588F9}";
-            public const string SectorNameFieldId = "{24760E0B-A404-43B2-AD28-478EB2CFF63E}";
+            public const string BenchmarkFieldId = "{24760E0B-A404-43B2-AD28-478EB2CFF63E}";
             public const string ManagerInceptionDateFieldId = "{AC4F5B6A-ED1D-43B3-B0DE-A6585F20207F}";
             public const string TargetBenchmarkYieldFieldId = "{2C52314C-F97D-4D99-853E-1497980389C1}";
         }
@@ -108,7 +108,7 @@ namespace LionTrust.Foundation.Legacy
             public const string LaunchDate_FieldId = "{6CBF0ED2-94B3-4F2A-A84D-A36501E38105}";
             public const string FundSize_FieldId = "{D3A5BBC1-32DC-492D-9C70-645A8E47FB34}";
             public const string NumberOfHoldings_FieldId = "{DB79496E-BCC5-443F-BBA6-E8D5BF0A31A3}";
-            
+            public const string LaunchDateByAuthor_FieldId = "{899548AF-6E4D-4B51-AF9F-24BB58AC9B53}";
             
             public const string BenchmarkName_FieldId = "{30054D3B-D471-469D-A82A-C575DC220CF2}";
             public const string HistoricYield_FieldId = "{86F07FA6-A576-4462-B343-C4AF970A2576}";
@@ -148,6 +148,10 @@ namespace LionTrust.Foundation.Legacy
             public const string ExcludeInSearchResults_FieldId = "{C7D0C7F7-B27C-4F96-B813-32BB19174B6A}";
 
             public const string FundReference_FieldId = "{CCE4E679-7E94-450D-8CC1-691BDF17CA78}";
+
+            public const string HidePerformanceChart_FieldId = "{B39AF1CD-8C71-4989-BEF8-7C0441DD570A}";
+            public const string HideDiscretePerformanceTable_FieldId = "{BA664318-D29C-4166-A901-FAA04F7D3AA6}";
+            public const string HideCumulativePerformanceTable_FieldId = "{382CDDED-7732-4690-AC7A-8DBA5C503403}";
         }
 
         public static class FundOverviewData

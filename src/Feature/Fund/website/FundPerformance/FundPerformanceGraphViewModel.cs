@@ -8,9 +8,13 @@
 
         public string FactsheetUrl { get; set; }
 
+        public bool Hide { get; set; }
+
+        public string FundId { get; set; }
+
         public string GraphUrl()
         {
             return $"https://digital-tools.feprecisionplus.com/liontrustchart/charting/en-gb/liontrust?citicode={CitiCode}";
-        }
+        }        
     }
 }

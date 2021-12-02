@@ -11,7 +11,7 @@
         IEnumerable<IFund> Funds { get; set; }
 
         [SitecoreField(Constants.ArticleFilter.ContentTypesFieldId)]
-        IEnumerable<IContentType> ContentTypes { get; set; }
+        IEnumerable<IPromoType> ContentTypes { get; set; }
 
         [SitecoreField(Constants.ArticleFilter.FundManagersFieldId)]
         IEnumerable<IAuthor> FundManagers { get; set; }

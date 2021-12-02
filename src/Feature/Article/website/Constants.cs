@@ -112,5 +112,10 @@
             public const string Tooltip_FieldId = "{191B3D6F-C419-407E-8B6D-C69F364FED92}";
             public const string Goal_FieldId = "{C4EA3176-6C3D-4EE4-8924-034F5664117F}";
         }
+
+        public static class PromoType
+        {
+            public const string ArticleType_FieldId = "{0B122919-9295-4AF9-A77D-4EFC952ED25B}";
+        }
     }
 }

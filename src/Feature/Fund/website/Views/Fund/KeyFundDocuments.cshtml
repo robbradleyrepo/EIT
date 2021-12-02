@@ -18,7 +18,7 @@
                         {
                             using (Html.Glass().BeginRenderLink(document, m => m.DocumentLink, new NameValueCollection { { "class", "key-document__link" } }, isEditable: true))
                             {
-                                <i class="icon-file"></i>@:Download @Html.Glass().Editable(document, m => m.DocumentName)
+                                <i class="icon-file"></i>@Html.Glass().Editable(document, m => m.DocumentName)
                             }
                         }
                     </div>

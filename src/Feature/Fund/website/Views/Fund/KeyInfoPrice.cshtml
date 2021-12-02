@@ -1,4 +1,6 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Feature.Fund.Models
+
 @model LionTrust.Feature.Fund.Models.KeyInfoPriceViewModel
 @if (Model != null && Model.Component != null && Model.ClassData != null)
 {
@@ -7,91 +9,81 @@
             <span class="card__title">
                 @Html.Glass().Editable(Model.Component, m => m.KeyInformationLabel)
             </span>
-            <div class="card__row">
-                <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.SectorLabel)</div>
-                <div class="card__item-right">
-                    @Model.ClassData.SectorName
-                </div>
-            </div>
-            <div class="card__row">
-                <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.ManagerInceptionDateLabel)</div>
-                <div class="card__item-right">
-                    @Model.ClassData.ManagerInceptionDateOfFund.ToString("dd.MM.y")
-                </div>
-            </div>
-            <div class="card__row">
-                <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.ClassLaunchDateLabel)</div>
-                <div class="card__item-right">
-                    @Model.ClassData.ClassLaunchDate.ToString("dd.MM.y")
-                </div>
-            </div>
-            @if (!string.IsNullOrWhiteSpace(Model.ClassData.Comparator1) && !string.IsNullOrWhiteSpace(Model.Component.Comparator1Label))
+            @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml",
+                new FundInfoRowViewModel()
+                {
+                    LabelValue = Html.Glass().Editable(Model.Component, m => m.BenchmarkLabel),
+                    FieldValue = Model.ClassData.Benchmark,
+                    TooltipValue = Model.Component.Tooltips != null ? Model.Component.Tooltips.BenchmarkTooltip : string.Empty
+                })
+            @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml",
+                new FundInfoRowViewModel() 
+                {
+                    LabelValue = Html.Glass().Editable(Model.Component, m => m.ManagerInceptionDateLabel),
+                    FieldValue = Model.ClassData.ManagerInceptionDateFormatted,
+                    TooltipValue = Model.Component.Tooltips != null ? Model.Component.Tooltips.ManagerInceptionDateTooltip : string.Empty
+                })
+            @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", 
+                new FundInfoRowViewModel() 
+                {
+                    LabelValue = Html.Glass().Editable(Model.Component, m => m.ClassLaunchDateLabel),
+                    FieldValue = Model.ClassData.ClassLaunchDateFormatted,
+                    TooltipValue = Model.Component.Tooltips != null ? Model.Component.Tooltips.ClassLaunchDateTooltip : string.Empty
+                })
+
+            @if ((!string.IsNullOrWhiteSpace(Model.ClassData.Comparator1) && !string.IsNullOrWhiteSpace(Model.Component.Comparator1Label)) || Sitecore.Context.PageMode.IsExperienceEditor)
             {
-                <div class="card__row">
-                    <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.Comparator1Label)</div>
-                    <div class="card__item-right">@Model.ClassData.Comparator1</div>
-                </div>
+                @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", 
+                    new FundInfoRowViewModel() 
+                    {
+                        LabelValue = Html.Glass().Editable(Model.Component, m => m.Comparator1Label),
+                        FieldValue = Model.ClassData.Comparator1,
+                        TooltipValue = Model.Component.Tooltips != null ? Model.Component.Tooltips.Comparator1Tooltip : string.Empty
+                    })
             }
-            @if (!string.IsNullOrWhiteSpace(Model.ClassData.Comparator2) && !string.IsNullOrWhiteSpace(Model.Component.Comparator2Label))
+            @if ((!string.IsNullOrWhiteSpace(Model.ClassData.Comparator2) && !string.IsNullOrWhiteSpace(Model.Component.Comparator2Label)) || Sitecore.Context.PageMode.IsExperienceEditor)
             {
-                <div class="card__row">
-                    <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.Comparator2Label)</div>
-                    <div class="card__item-right">@Html.Glass().Editable(Model.Fund, m => m.BenchmarkName)</div>
-                </div>
+                @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", 
+                    new FundInfoRowViewModel() 
+                    {
+                        LabelValue = Html.Glass().Editable(Model.Component, m => m.Comparator2Label),
+                        FieldValue = Model.ClassData.Comparator2,
+                        TooltipValue = Model.Component.Tooltips != null ? Model.Component.Tooltips.Comparator2Tooltip : string.Empty
+                    })
             }
-            <div class="card__row">
-                <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.TargetBenchmarkYieldLabel)</div>
-                <div class="card__item-right">@Html.Glass().Editable(Model.ClassData, m => m.TargetBenchmarkYield)</div>
-            </div>
+            @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", 
+                new FundInfoRowViewModel() 
+                {
+                    LabelValue = Html.Glass().Editable(Model.Component, m => m.TargetBenchmarkYieldLabel),
+                    FieldValue = Model.ClassData.TargetBenchmarkYield,
+                    TooltipValue = Model.Component.Tooltips != null ? Model.Component.Tooltips.TargetBenchmarkYieldTooltip : string.Empty
+                })
         </div>
         <div class="card__content">
             <span class="card__title">
                 @Html.Glass().Editable(Model.Component, m => m.PriceLabel)
             </span>
-            <div class="card__row">
-                <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.SinglePriceLabel)</div>
-                <div class="card__item-right">@Model.ClassData.SinglePrice</div>
-            </div>
-            <div class="card__row">
-                <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.OfferPriceLabel)</div>
-                <div class="card__item-right">@Model.ClassData.OfferPrice</div>
-            </div>
-            <div class="card__row">
-                <div class="card__item-left">
-                    @Html.Glass().Editable(Model.Component, m => m.PriceDateLabel)
-                    @if (Sitecore.Context.PageMode.IsExperienceEditor)
-                    {
-                        @Html.Glass().Editable(Model.Component, m => m.PriceDateTooltipLabel)
-                    }
-                    else
-                    {
-                        <span class="d-inline-flex" data-toggle="tooltip" data-placement="right"
-                              title="@Model.Component.PriceDateTooltipLabel">
-                            <i class="icon-follow text-gold"></i>
-                        </span>
-                    }
-                </div>
-                <div class="card__item-right">
-                    @if (Sitecore.Context.PageMode.IsExperienceEditor)
-                    {
-                        if (Model.ClassData.PriceDate != null)
-                        {
-                            @Model.ClassData.PriceDate.ToString("dd.MM.yyyy")
-                        }
-                        else
-                        {
-                            @:Edit Key Info Price Dates
-                        }
-                    }
-                    else
-                    {
-                        @Model.ClassData.PriceDate.ToString("dd.MM.yyyy")
-                    }
-                </div>
-
-
-            </div>
-
+            @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", 
+                new FundInfoRowViewModel() 
+                {
+                    LabelValue = Html.Glass().Editable(Model.Component, m => m.SinglePriceLabel),
+                    FieldValue = Model.ClassData.SinglePrice,
+                    TooltipValue = Model.Component.Tooltips != null ? Model.Component.Tooltips.SinglePriceTooltip : string.Empty
+                })
+            @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", 
+                 new FundInfoRowViewModel() 
+                 {
+                     LabelValue = Html.Glass().Editable(Model.Component, m => m.OfferPriceLabel),
+                     FieldValue = Model.ClassData.OfferPrice,
+                     TooltipValue = Model.Component.Tooltips != null ? Model.Component.Tooltips.OfferPriceTooltip : string.Empty
+                 })
+            @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", 
+                 new FundInfoRowViewModel() 
+                 {
+                     LabelValue = Html.Glass().Editable(Model.Component, m => m.PriceDateLabel),
+                     FieldValue = Model.ClassData.PriceDateFormatted,
+                     TooltipValue = Model.Component.Tooltips != null ? Model.Component.Tooltips.PriceDateTooltip : string.Empty
+                 })
 
         </div>
     </div>

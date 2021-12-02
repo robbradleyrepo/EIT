@@ -4,6 +4,10 @@
 {
     return;
 }
+@if (Model != null && Model.Hide)
+{
+    return;
+}
 <section id="performance-graph" class="container graph-section">
     <div class="row">
         <div class="col-12">
@@ -16,13 +20,23 @@
                 <a href="@Model.FactsheetUrl" class="link-styles d-block d-lg-inline-block mb-3 mr-3 mb-lg-0">
                     @Html.Glass().Editable(Model.Component, c => c.FactsheetText) <i class="icon-file"></i>
                 </a>
-                @using (Html.Glass().BeginRenderLink(Model.Component, c => c.DetailUrl, new { @class = "link-styles d-block d-lg-inline-block mb-3 mr-3 mb-lg-0" }, isEditable: true))
+                @if (Sitecore.Context.PageMode.IsExperienceEditor)
                 {
-                    if (Model.Component != null && Model.Component.DetailUrl != null)
+                    using (Html.Glass().BeginRenderLink(Model.Component, c => c.DetailUrl, new { @class = "link-styles d-block d-lg-inline-block mb-3 mr-3 mb-lg-0" }, isEditable: true))
                     {
-                        @Model.Component.DetailUrl.Text
+                        if (Model.Component != null && Model.Component.DetailUrl != null)
+                        {
+                            @Model.Component.DetailUrl.Text
+                        }
+                        <i class="icon-arrow-right animate-arrow"></i>
                     }
-                    <i class="icon-arrow-right animate-arrow"></i>
+                }
+                else
+                {
+                    var fundUpdateUrl = Model.Component.DetailUrl != null ? Model.Component.DetailUrl.Url + "?ids=" + Model.FundId : string.Empty;
+                    <a href="@fundUpdateUrl" class="link-styles d-block d-lg-inline-block mb-3 mr-3 mb-lg-0">
+                        @Model.Component.DetailUrl.Text <i class="icon-arrow-right animate-arrow"></i>
+                    </a>
                 }
             </div>
         </div>

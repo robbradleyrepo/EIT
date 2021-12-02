@@ -6,6 +6,7 @@
     using Sitecore.ContentSearch.Security;
     using System;
     using System.Linq;
+    using System.Text.RegularExpressions;
 
     [Service(ServiceType = typeof(IFundRepository), Lifetime = Lifetime.Singleton)]
     public class FundRepository : IFundRepository
@@ -44,6 +45,40 @@
                     .Where(f => f.Professionals.Contains(id));
                 return query.FirstOrDefault();
             }
+        }        
+
+        public static string GetTwoDecimalsFormat(string value)
+        {
+            if (string.IsNullOrEmpty(value))
+            {
+                return string.Empty;
+            }
+
+            double doubleVal;
+            if (double.TryParse(value, out doubleVal))
+            {
+                doubleVal = Math.Floor(100 * doubleVal) / 100;
+                return string.Format("{0:0.00}", doubleVal);
+            }
+
+            return value;
+        }
+
+        public static string GetPercentageTwoDecimalsFormat(string value)
+        {
+            if (string.IsNullOrEmpty(value))
+            {
+                return string.Empty;
+            }
+
+            double doubleVal;
+            if (double.TryParse(value.Replace("%", string.Empty), out doubleVal))
+            {
+                doubleVal = Math.Floor(100 * doubleVal) / 100;
+                return string.Format("{0:0.00}%", doubleVal);
+            }
+
+            return value;
         }
     }
 }
