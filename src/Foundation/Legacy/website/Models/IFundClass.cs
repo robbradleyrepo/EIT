@@ -71,5 +71,8 @@
 
         [SitecoreField(Constants.FundClass.AnnualManagementChargeFieldId)]
         string AnnualManagemnetCharge { get; set; }
+
+        [SitecoreField(Constants.FundClass.GraphStartDate_FieldId)]
+        DateTime GraphStartDate { get; set; }
     }
 }
