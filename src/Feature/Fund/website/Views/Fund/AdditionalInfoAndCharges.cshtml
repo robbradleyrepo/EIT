@@ -1,4 +1,6 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Feature.Fund.Models
+
 @model LionTrust.Feature.Fund.Models.AdditionalInfoAndChargesViewModel
 @if (Model != null && Model.Component != null && Model.Data != null && Model.FundClass != null)
 {
@@ -8,63 +10,72 @@
                 <div class="row">
                     <div class="col-lg-5">
                         <div class="card__title">@Html.Glass().Editable(Model.Component, m => m.AdditionalInfoLabel)</div>
-                        @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", null,
-                            new ViewDataDictionary {
-                                { "LabelValue", Html.Glass().Editable(Model.Component, m => m.MinInitialLabel) },
-                                { "FieldValue", Model.FundClass.MinimalInitialInvestment },
-                                { "TooltipValue", Model.Component.Tooltips != null ? Model.Component.Tooltips.MinInitialTooltip : string.Empty }
+                        @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", 
+                            new FundInfoRowViewModel() 
+                            {
+                                LabelValue = Html.Glass().Editable(Model.Component, m => m.MinInitialLabel),
+                                FieldValue = Model.FundClass.MinimalInitialInvestment,
+                                TooltipValue = Model.Component.Tooltips != null ? Model.Component.Tooltips.MinInitialTooltip : string.Empty
                             })
-                        @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", null,
-                            new ViewDataDictionary {
-                                { "LabelValue", Html.Glass().Editable(Model.Component, m => m.MinAdditionalLabel) },
-                                { "FieldValue", Model.FundClass.MinimumAdditionalInvestment },
-                                { "TooltipValue", Model.Component.Tooltips != null ? Model.Component.Tooltips.MinAdditionalTooltip : string.Empty }
+                        @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", 
+                            new FundInfoRowViewModel() 
+                            {
+                                LabelValue = Html.Glass().Editable(Model.Component, m => m.MinAdditionalLabel),
+                                FieldValue = Model.FundClass.MinimumAdditionalInvestment,
+                                TooltipValue = Model.Component.Tooltips != null ? Model.Component.Tooltips.MinAdditionalTooltip : string.Empty
                             })
-                        @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", null,
-                            new ViewDataDictionary {
-                                { "LabelValue", Html.Glass().Editable(Model.Component, m => m.ExDividendDateLabel) },
-                                { "FieldValue", Model.FundClass.ExDividendDate },
-                                { "TooltipValue", Model.Component.Tooltips != null ? Model.Component.Tooltips.ExDividendDateTooltip : string.Empty }
+                        @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", 
+                            new FundInfoRowViewModel() 
+                            {
+                                LabelValue = Html.Glass().Editable(Model.Component, m => m.ExDividendDateLabel),
+                                FieldValue = Model.FundClass.ExDividendDate,
+                                TooltipValue = Model.Component.Tooltips != null ? Model.Component.Tooltips.ExDividendDateTooltip : string.Empty
                             })
-                        @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", null,
-                            new ViewDataDictionary {
-                                { "LabelValue", Html.Glass().Editable(Model.Component, m => m.DistributionDateLabel) },
-                                { "FieldValue", Model.FundClass.DistributionDate },
-                                { "TooltipValue", Model.Component.Tooltips != null ? Model.Component.Tooltips.DistributionDateTooltip : string.Empty }
+                        @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", 
+                            new FundInfoRowViewModel() 
+                            {
+                                LabelValue = Html.Glass().Editable(Model.Component, m => m.DistributionDateLabel),
+                                FieldValue = Model.FundClass.DistributionDate,
+                                TooltipValue = Model.Component.Tooltips != null ? Model.Component.Tooltips.DistributionDateTooltip : string.Empty
                             })
-                        @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", null,
-                            new ViewDataDictionary {
-                                { "LabelValue", Html.Glass().Editable(Model.Component, m => m.SedolCodeLabel) },
-                                { "FieldValue", Model.Data.SedolCode },
-                                { "TooltipValue", Model.Component.Tooltips != null ? Model.Component.Tooltips.SedolCodeTooltip : string.Empty }
+                        @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", 
+                            new FundInfoRowViewModel() 
+                            {
+                                LabelValue = Html.Glass().Editable(Model.Component, m => m.SedolCodeLabel),
+                                FieldValue = Model.Data.SedolCode,
+                                TooltipValue = Model.Component.Tooltips != null ? Model.Component.Tooltips.SedolCodeTooltip : string.Empty
                             })
-                        @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", null,
-                            new ViewDataDictionary {
-                                { "LabelValue", Html.Glass().Editable(Model.Component, m => m.ISINCodeLabel) },
-                                { "FieldValue", Model.Data.ISINCode },
-                                { "TooltipValue", Model.Component.Tooltips != null ? Model.Component.Tooltips.ISINCodeTooltip : string.Empty }
-                            })                        
-                    </div>                
+                        @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml",
+                            new FundInfoRowViewModel() 
+                            {
+                                LabelValue = Html.Glass().Editable(Model.Component, m => m.ISINCodeLabel),
+                                FieldValue = Model.Data.ISINCode,
+                                TooltipValue = Model.Component.Tooltips != null ? Model.Component.Tooltips.ISINCodeTooltip : string.Empty
+                            })
+                    </div>
                     <div class="col-lg-6 offset-lg-1">
                         <div class="card__content">
                             <div class="card__title">@Html.Glass().Editable(Model.Component, m => m.ChargesLabel)</div>
-                            @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", null,
-                                new ViewDataDictionary {
-                                    { "LabelValue", Html.Glass().Editable(Model.Component, m => m.InitialChargeLabel) },
-                                    { "FieldValue", Model.Data.FormattedInitialCharge },
-                                    { "TooltipValue", Model.Component.Tooltips != null ? Model.Component.Tooltips.InitialChargeTooltip : string.Empty }
+                            @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", 
+                                new FundInfoRowViewModel() 
+                                {
+                                    LabelValue = Html.Glass().Editable(Model.Component, m => m.InitialChargeLabel),
+                                    FieldValue = Model.Data.FormattedInitialCharge,
+                                    TooltipValue = Model.Component.Tooltips != null ? Model.Component.Tooltips.InitialChargeTooltip : string.Empty
                                 })
-                            @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", null,
-                                new ViewDataDictionary {
-                                    { "LabelValue", Html.Glass().Editable(Model.Component, m => m.OngoingChargesLabel) },
-                                    { "FieldValue", Model.Data.FormattedOngoingCharges },
-                                    { "TooltipValue", Model.Component.Tooltips != null ? Model.Component.Tooltips.OngoingChargesTooltip : string.Empty }
+                            @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", 
+                                new FundInfoRowViewModel() 
+                                {
+                                    LabelValue = Html.Glass().Editable(Model.Component, m => m.OngoingChargesLabel),
+                                    FieldValue = Model.Data.FormattedOngoingCharges,
+                                    TooltipValue = Model.Component.Tooltips != null ? Model.Component.Tooltips.OngoingChargesTooltip : string.Empty
                                 })
-                            @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", null,
-                                new ViewDataDictionary {
-                                    { "LabelValue", Html.Glass().Editable(Model.Component, m => m.AnnualManagementChargeLabel) },
-                                    { "FieldValue", Model.Data.FormattedAnnualManagementCharge },
-                                    { "TooltipValue", Model.Component.Tooltips != null ? Model.Component.Tooltips.AnnualManagementChargeTooltip : string.Empty }
+                            @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", 
+                                new FundInfoRowViewModel() 
+                                {
+                                    LabelValue = Html.Glass().Editable(Model.Component, m => m.AnnualManagementChargeLabel),
+                                    FieldValue = Model.Data.FormattedAnnualManagementCharge,
+                                    TooltipValue = Model.Component.Tooltips != null ? Model.Component.Tooltips.AnnualManagementChargeTooltip : string.Empty
                                 })
                         </div>
                     </div>
