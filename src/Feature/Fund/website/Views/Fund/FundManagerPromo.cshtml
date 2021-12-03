@@ -1,56 +1,56 @@
 @using Glass.Mapper.Sc.Web.Mvc
 @model List<LionTrust.Feature.Fund.FundManagerPromo.FundManagerViewModel>
-@if ((Model == null || !Model.Any()) && Sitecore.Context.PageMode.IsExperienceEditor)
+@if (Model == null || !Model.Any())
 {
-    <div style="background-color:white">
-        <span style="color:black">Please configure a fund manager</span>
-    </div>
+    if (Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        <div style="background-color:white">
+            <span style="color:black">Please configure a fund manager</span>
+        </div>
+    }
     return;
 }
-@if (Model != null && Model.Any())
+@foreach (var manager in Model)
 {
-    foreach (var manager in Model)
-    {
-        <div class="article-with-small">
-            <div class="fund-manager mt-5">
-                <div class="fund-manager__item d-block">
-                    <div class="row">
-                        <div class="col-4">
-                            <img src="@manager.ImageUrl"
-                                 alt="@manager.FullName"
-                                 class="fund-manager__img" />
-                        </div>
-                        <div class="col-8">
-                            <div class="fund-manager__content">
-                                <div class="fund-manager__title d-flex align-items-end">
-                                    @manager.FullName
-                                </div>
-                                @if (!string.IsNullOrEmpty(manager.Title))
-                                {
-                                    <span class="fund-manager__text font-500 d-none d-xl-block">
-                                        @Html.Raw(manager.Title)
-                                    </span>
-                                }
-                                <span class="fund-manager__text">
-                                    @Html.Raw(manager.Bio)
+    <div class="article-with-small">
+        <div class="fund-manager mt-5">
+            <div class="fund-manager__item d-block">
+                <div class="row">
+                    <div class="col-4">
+                        <img src="@manager.ImageUrl"
+                             alt="@manager.FullName"
+                             class="fund-manager__img" />
+                    </div>
+                    <div class="col-8">
+                        <div class="fund-manager__content">
+                            <div class="fund-manager__title d-flex align-items-end">
+                                @manager.FullName
+                            </div>
+                            @if (!string.IsNullOrEmpty(manager.Title))
+                            {
+                                <span class="fund-manager__text font-500 d-none d-xl-block">
+                                    @Html.Raw(manager.Title)
                                 </span>
-                                <div class="mt-2">
-                                    <a href="@manager.Url" class="link-styles">
-                                        View profile
-                                        <i class="icon-arrow-right"></i>
-                                    </a>
-                                    <a href="#"
-                                       class="link-styles text-black ml-4 d-none d-xl-inline">
-                                        Follow @manager.FirstName
-                                        <i class="icon-follow"></i>
-                                    </a>
-                                </div>
+                            }
+                            <span class="fund-manager__text">
+                                @Html.Raw(manager.Bio)
+                            </span>
+                            <div class="mt-2">
+                                <a href="@manager.Url" class="link-styles">
+                                    View profile
+                                    <i class="icon-arrow-right"></i>
+                                </a>
+                                <a href="#"
+                                   class="link-styles text-black ml-4 d-none d-xl-inline">
+                                    Follow @manager.FirstName
+                                    <i class="icon-follow"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    }
+    </div>
 }
 
