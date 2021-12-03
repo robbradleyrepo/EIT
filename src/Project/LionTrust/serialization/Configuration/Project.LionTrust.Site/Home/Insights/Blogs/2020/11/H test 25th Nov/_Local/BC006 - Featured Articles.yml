@@ -1,0 +1,29 @@
+﻿---
+ID: "4a75f62a-f5aa-4468-b0c6-6b3888c2c3cb"
+Parent: "67d728c2-6d9b-4c05-bfb0-5455e4dc879b"
+Template: "1e3cbfca-a817-4638-8966-5a5acd945fb7"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2020/11/H test 25th Nov/_Local/BC006 - Featured Articles"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{125A7BFB-A091-4E07-BAA7-4E54057729C5}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211125T145552Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "71469dcb-2347-4fa2-883b-50f4df0e5244"
+      Hint: ArticleSearchParameters_FundManagers
+      Type: Multilist
+      Value: "{BD0F07D0-8CC0-41E5-8105-3BA43C9E9DC8}"
+    - ID: "b2950181-27e6-4eef-a1fa-329aa73fce55"
+      Hint: FeaturedArticles_Heading
+      Value: Featured articles
