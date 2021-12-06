@@ -104,7 +104,7 @@ Languages:
       Value: Sustainable Future UK Growth Fund
     - ID: "6cbf0ed2-94b3-4f2a-a84d-a36501e38105"
       Hint: LegacyFund_LaunchDate
-      Value: 20100430T000000
+      Value: 20100429T210000Z
     - ID: "6d258747-e783-4579-9c3c-f8f23d03ccf6"
       Hint: LegacySectorFundData_SectorOneYear
       Value: 8.205%
@@ -191,6 +191,10 @@ Languages:
     - ID: "db79496e-bcc5-443f-bba6-e8d5bf0a31a3"
       Hint: LegacyFund_NumberOfHoldings
       Value: 52
+    - ID: "e43f6e86-0318-4766-b880-0c4f6512ca4e"
+      Hint: FundPage_Page
+      Value: |
+        <link text="View fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{3D7E5E6E-B6BE-4D67-AA5A-C1CFCFF006FB}" />
     - ID: "e456c092-dda4-4179-aa02-1505821fd2a1"
       Hint: LegacySectorFundData_SectorYear5
       Value: 18.404%

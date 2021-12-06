@@ -204,5 +204,10 @@
             public const string SitecoreXMLType = "text/xml";
             public const string MappedXMLType = "arraybuffer";
         }
+
+        public static class Pagination
+        {
+            public const int PageSize = 12;
+        }
     }
 }

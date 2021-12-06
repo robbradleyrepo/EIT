@@ -29,6 +29,9 @@ Languages:
         {E4352707-99EA-4722-81C6-C099574409BA}
         {688F270C-357E-4F7B-A018-B0F68932FE30}
         {C5678024-594A-421E-8DCE-2AFA0D33DAA9}
+    - ID: "0905f092-b5b5-4971-b87e-57f4810bd729"
+      Hint: FundCard_Description
+      Value: European Opportunities
     - ID: "13671185-84c9-49e4-8799-6135f386f3e5"
       Hint: LegacyFund_FiveYears
       Value: 34.102%
@@ -94,6 +97,9 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\jackh
+    - ID: "6387ca9a-7a5a-4d33-b706-201681c0b74c"
+      Hint: FundCard_Heading
+      Value: European Opportunities
     - ID: "69a48b1d-00fe-4fb6-9e2e-44c630e60bea"
       Hint: LegacyFund_TenYears
       Value: 70.274%
@@ -143,7 +149,7 @@ Languages:
       Value: "-6.614%"
     - ID: "90a7b1e0-c14e-4a3d-a717-72bec978a99a"
       Hint: LegacyFund_CitiCode
-      Value: GQLB
+      Value: GQKV
     - ID: "9238823c-d3a1-4b63-940c-867e606716aa"
       Hint: LegacyFund_HistoricYieldText
       Value: <p>Fund size and number of holdings data is as at previous month end. Performance data is as at previous working day.</p>
@@ -201,9 +207,17 @@ Languages:
     - ID: "db79496e-bcc5-443f-bba6-e8d5bf0a31a3"
       Hint: LegacyFund_NumberOfHoldings
       Value: 37
+    - ID: "e43f6e86-0318-4766-b880-0c4f6512ca4e"
+      Hint: FundPage_Page
+      Value: |
+        <link text="View fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{E33D81E8-8F93-4445-AB57-3152A2431C41}" />
     - ID: "e456c092-dda4-4179-aa02-1505821fd2a1"
       Hint: LegacySectorFundData_SectorYear5
       Value: 18.404%
+    - ID: "eb75dfef-c624-4571-b92b-8f37c36fcee6"
+      Hint: FundCard_Image
+      Value: |
+        <image mediaid="{8C038CB5-FC55-4F88-8934-CC2B85C604C5}" />
     - ID: "f1426edd-1a46-4af0-9967-0743eab156d7"
       Hint: LegacySectorFundData_SectorTenYears
       Value: 127.071%

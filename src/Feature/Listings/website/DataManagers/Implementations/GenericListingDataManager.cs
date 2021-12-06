@@ -59,6 +59,7 @@
         public IGenericSearchResponse GetGenericListingResponse(string parent, string listingType = "", List<int> months = null, List<int> years = null, string searchTerm = "", int page = 1, string database = "web")
         {
             page = page - 1;
+            var pageSize = Constants.Pagination.PageSize;
 
             var genericSearchRequest = new GenericSearchRequest
             {
@@ -67,8 +68,8 @@
                 Months = months,
                 Years = years,
                 SearchTerm = searchTerm,
-                Skip = page * 21,
-                Take = 21
+                Skip = page * pageSize,
+                Take = pageSize
             };
 
             if (!string.IsNullOrEmpty(listingType))

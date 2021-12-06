@@ -20,6 +20,9 @@ Languages:
     - ID: "00cb1306-1dfb-42e4-9405-fac6a8d6a87b"
       Hint: LegacyFund_Isin
       Value: 
+    - ID: "0905f092-b5b5-4971-b87e-57f4810bd729"
+      Hint: FundCard_Description
+      Value: Special Situations
     - ID: "13671185-84c9-49e4-8799-6135f386f3e5"
       Hint: LegacyFund_FiveYears
       Value: 45.863%
@@ -114,6 +117,9 @@ Languages:
     - ID: "63315fbe-9290-4e70-b785-0bddfc0a48b4"
       Hint: LegacyFund_SectorClassCode
       Value: 
+    - ID: "6387ca9a-7a5a-4d33-b706-201681c0b74c"
+      Hint: FundCard_Heading
+      Value: Special Situations
     - ID: "63e27ea6-1a92-417d-8152-a57e3348f1e9"
       Hint: LegacyFund_TypeCode
       Value: 0RHQ
@@ -122,7 +128,7 @@ Languages:
       Value: GF Special Situations Fund
     - ID: "6cbf0ed2-94b3-4f2a-a84d-a36501e38105"
       Hint: LegacyFund_LaunchDate
-      Value: 20121108T000000
+      Value: 20121107T220000Z
     - ID: "6d258747-e783-4579-9c3c-f8f23d03ccf6"
       Hint: LegacySectorFundData_SectorOneYear
       Value: "-9.227%"
@@ -172,7 +178,7 @@ Languages:
       Value: "-4.396%"
     - ID: "90a7b1e0-c14e-4a3d-a717-72bec978a99a"
       Hint: LegacyFund_CitiCode
-      Value: GWGE
+      Value: GWKV
     - ID: "9238823c-d3a1-4b63-940c-867e606716aa"
       Hint: LegacyFund_HistoricYieldText
       Value: <p>Fund size and number of holdings data is as at previous month end. Performance data is as at previous working day.</p>
@@ -242,12 +248,20 @@ Languages:
     - ID: "db79496e-bcc5-443f-bba6-e8d5bf0a31a3"
       Hint: LegacyFund_NumberOfHoldings
       Value: 59
+    - ID: "e43f6e86-0318-4766-b880-0c4f6512ca4e"
+      Hint: FundPage_Page
+      Value: |
+        <link text="View fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{EA48988A-2ED4-4E95-A9C8-128602939A78}" />
     - ID: "e456c092-dda4-4179-aa02-1505821fd2a1"
       Hint: LegacySectorFundData_SectorYear5
       Value: 10.617%
     - ID: "e46ad885-3540-4b5b-8886-8e888f3a16c3"
       Hint: LegacyFund_AssetClass
       Value: 
+    - ID: "eb75dfef-c624-4571-b92b-8f37c36fcee6"
+      Hint: FundCard_Image
+      Value: |
+        <image mediaid="{8C038CB5-FC55-4F88-8934-CC2B85C604C5}" />
     - ID: "ec65712d-5b34-40aa-ae21-fb887d85d44f"
       Hint: LegacyFund_PerformanceTableIntroText
       Value: 
