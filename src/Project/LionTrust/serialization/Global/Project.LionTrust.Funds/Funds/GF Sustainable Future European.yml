@@ -17,6 +17,9 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "0905f092-b5b5-4971-b87e-57f4810bd729"
+      Hint: FundCard_Description
+      Value: Sustainable Future
     - ID: "1844ecc6-c68f-4989-96d5-296c34ede6e9"
       Hint: LegacyFundOverviewData_OverviewText
       Value: |
@@ -71,6 +74,9 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\jackh
+    - ID: "6387ca9a-7a5a-4d33-b706-201681c0b74c"
+      Hint: FundCard_Heading
+      Value: Sustainable Future
     - ID: "6afb4eb4-25c4-472b-aa65-8ad9ddb3be2c"
       Hint: LegacyFund_FundName
       Value: GF Sustainable Future European Corporate Bond Fund
@@ -117,7 +123,7 @@ Languages:
       Value: "-0.979%"
     - ID: "90a7b1e0-c14e-4a3d-a717-72bec978a99a"
       Hint: LegacyFund_CitiCode
-      Value: OVWY
+      Value: GQKV
     - ID: "9238823c-d3a1-4b63-940c-867e606716aa"
       Hint: LegacyFund_HistoricYieldText
       Value: <p>Fund size and number of holdings data is as at previous month end. Performance data is as at previous working day.</p>
@@ -160,4 +166,8 @@ Languages:
     - ID: "e43f6e86-0318-4766-b880-0c4f6512ca4e"
       Hint: FundPage_Page
       Value: |
-        <link linktype="internal" />
+        <link text="View fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{325075F8-C6F9-4EB9-8432-542F525713C3}" />
+    - ID: "eb75dfef-c624-4571-b92b-8f37c36fcee6"
+      Hint: FundCard_Image
+      Value: |
+        <image mediaid="{8C038CB5-FC55-4F88-8934-CC2B85C604C5}" />

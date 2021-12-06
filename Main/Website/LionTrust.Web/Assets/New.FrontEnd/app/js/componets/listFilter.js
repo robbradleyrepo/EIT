@@ -165,7 +165,7 @@ export default () => {
       sortModal: false,
       sortOrder: "ASC",
       amountResults: 0,
-      showPerPage: 21,
+      showPerPage: 12,
       showPageInPagination: 7,
       mobileFilter: false,
       months: [],

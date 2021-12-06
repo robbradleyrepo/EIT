@@ -95,6 +95,7 @@
         {
             public const string PreviousLabel_FieldId = "{EE10A0F8-834B-4C8B-9EC5-9B643FCD112C}";
             public const string NextLabel_FieldId = "{87E96566-897A-4D4C-8DA5-8727BD4E436E}";
+            public const int PageSize = 12;
         }
 
         public static class FundLister

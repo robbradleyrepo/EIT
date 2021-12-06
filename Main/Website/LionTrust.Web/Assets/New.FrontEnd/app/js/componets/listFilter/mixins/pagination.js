@@ -4,14 +4,14 @@ export const pagination = {
       return this.page;
     },
     getPageAmount() {
-      return Math.floor(this.amountResults / this.showPerPage);
+      return Math.ceil(this.amountResults / this.showPerPage);
     },
     showPages() {
       return this.getPage;
     },
     getPages() {
       const pages = [];
-      const median = Math.floor(this.showPageInPagination / 2); // 3
+      const median = Math.ceil(this.showPageInPagination / 2); // 3
       const step = this.getPage - median; // 5 - 4 = 1
       if (this.getPageAmount <= this.showPageInPagination) {
         for (let i = 0; i < this.getPageAmount; i++) {

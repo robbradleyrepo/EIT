@@ -143,6 +143,7 @@
         public ISearchResponse<IFundContentResult> GetFundListingResponse(string database, string fundTeams,string fundManagers, string fundRegions, string fundRanges, string searchTerm, string sortOrder, int page, string ids)
         {
             page = page - 1;
+            var pageSize = Constants.Pagination.PageSize;
 
             var fundSearchRequest = new FundSearchRequest
             {
@@ -152,8 +153,8 @@
                 FundRegions = fundRegions?.Split('|'),
                 FundRanges = fundRanges?.Split('|'),
                 SearchTerm = searchTerm,
-                Skip = page * 21,
-                Take = 21,
+                Skip = page * pageSize,
+                Take = pageSize,
                 Ids = ids?.Split('|'),
             };
 
@@ -192,13 +193,14 @@
         public ISearchResponse<IFundContentResult> GetMyFundListingResponse(string database, string fundTeams, IEnumerable<string> salesforceFundIds, IEnumerable<string> excludeSalesforceFundIds, string sortOrder, int page)
         {
             page = page - 1;
+            var pageSize = Constants.Pagination.PageSize;
 
             var fundSearchRequest = new FundSearchRequest
             {
                 DatabaseName = database,
                 FundTeams = fundTeams?.Split('|'),
-                Skip = page * 21,
-                Take = 21,
+                Skip = page * pageSize,
+                Take = pageSize,
                 SalesforceFundIds = salesforceFundIds,
                 ExcludeSalesforceFundIds = excludeSalesforceFundIds
             };

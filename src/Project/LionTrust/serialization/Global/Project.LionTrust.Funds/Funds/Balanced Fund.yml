@@ -28,6 +28,9 @@ Languages:
         {78CE7013-21F7-4D07-A757-44116255420F}
         {A229AC95-436A-43A6-AE14-2AFAA57D3C1D}
         {A40D115E-4CAB-42ED-B0E4-EBF63545BCB0}
+    - ID: "0905f092-b5b5-4971-b87e-57f4810bd729"
+      Hint: FundCard_Description
+      Value: Balanced Fund
     - ID: "13671185-84c9-49e4-8799-6135f386f3e5"
       Hint: LegacyFund_FiveYears
       Value: 67.205%
@@ -91,6 +94,9 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\jackh
+    - ID: "6387ca9a-7a5a-4d33-b706-201681c0b74c"
+      Hint: FundCard_Heading
+      Value: Balanced Fund
     - ID: "69a48b1d-00fe-4fb6-9e2e-44c630e60bea"
       Hint: LegacyFund_TenYears
       Value: 118.009%
@@ -201,10 +207,14 @@ Languages:
     - ID: "e43f6e86-0318-4766-b880-0c4f6512ca4e"
       Hint: FundPage_Page
       Value: |
-        <link linktype="internal" />
+        <link text="View fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{46AA3809-3972-4C3C-847B-AA44F677A422}" />
     - ID: "e456c092-dda4-4179-aa02-1505821fd2a1"
       Hint: LegacySectorFundData_SectorYear5
       Value: 15.397%
+    - ID: "eb75dfef-c624-4571-b92b-8f37c36fcee6"
+      Hint: FundCard_Image
+      Value: |
+        <image mediaid="{8C038CB5-FC55-4F88-8934-CC2B85C604C5}" />
     - ID: "f1426edd-1a46-4af0-9967-0743eab156d7"
       Hint: LegacySectorFundData_SectorTenYears
       Value: 85.726%
