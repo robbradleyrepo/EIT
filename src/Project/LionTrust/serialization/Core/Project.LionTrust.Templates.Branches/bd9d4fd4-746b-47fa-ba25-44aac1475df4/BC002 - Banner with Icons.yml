@@ -1,0 +1,29 @@
+﻿---
+ID: "fb867974-8dcc-4208-a204-f7378f80a570"
+Parent: "bd9d4fd4-746b-47fa-ba25-44aac1475df4"
+Template: "ed529b1c-9937-4186-afde-69543f5b3618"
+Path: "/sitecore/templates/Branches/Project/LionTrust/Page Types/Article Page Variations/Sustainable Investment/$name/_Local/BC002 - Banner with Icons"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210519T102007Z
+    - ID: "443586e2-109c-49a6-95ad-01f6c1fbffb2"
+      Hint: BannerWithIcons_Heading
+      Value: How to invest in Liontrust funds
+    - ID: "505e3930-1d34-4dc7-8ca1-926b18ff1195"
+      Hint: BannerWithIcons_PrimaryCTALink
+      Value: |
+        <link linktype="internal" text="Read more" querystring="" target="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "673a4649-cffb-4cb4-a056-e0cf96a40e33"
+      Hint: BannerWithIcons_SecondaryCTALink
+      Value: |
+        <link linktype="internal" text="See all guidance" querystring="" target="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />

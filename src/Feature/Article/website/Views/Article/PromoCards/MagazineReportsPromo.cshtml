@@ -14,10 +14,10 @@
                 <div class="article-promo__head">
                     @if (Model.Authors != null && Model.Authors.Any())
                     {
-                        if (Model.Authors.Count() > 1)
+                        if (Model.Authors.Count() > 1 && Model.MultipleAuthorsSetting != null)
                         {
-                            @Html.Glass().RenderImage(Model, m => m.MultipleAuthorsIcon, new NameValueCollection { { "class", "article-promo__head-img" } }, isEditable: true)
-                            <span class="article-promo__head-title">@Html.Glass().Editable(Model, m => m.MultipleAuthorsLabel)</span>
+                            @Html.Glass().RenderImage(Model.MultipleAuthorsSetting, m => m.Icon, new NameValueCollection { { "class", "article-promo__head-img" } }, isEditable: false)
+                            <span class="article-promo__head-title">@Model.MultipleAuthorsSetting.Label</span>
                         }
                         else
                         {

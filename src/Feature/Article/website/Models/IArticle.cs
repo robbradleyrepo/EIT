@@ -27,5 +27,8 @@
 
         [SitecoreField(Constants.Article.PdfDocument_FieldId)]
         File PdfDocument { get; set; }
+
+        [SitecoreField(Constants.Article.ArticleVideoUrl)]
+        Link ArticleVideoUrl { get; set; }
     }
 }
