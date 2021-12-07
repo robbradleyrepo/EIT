@@ -1,0 +1,25 @@
+﻿---
+ID: "58a54e11-fc93-48a8-9864-55d17c4da857"
+Parent: "31cadf65-3f85-49af-9ec9-30f8bf0b0449"
+Template: "29b6b560-4a5e-42ff-a9b2-18107a305e0b"
+Path: /sitecore/content/LionTrustNew/Global/Multiple Authors Settings/Multiple Authors Default
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211206T153944Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "89ba5b06-2d92-4329-bcba-9de16c450ca9"
+      Hint: MultipleAuthorsLabel
+      Value: Investment Team
+    - ID: "f7431439-3bf3-4d7d-a4fb-b1b6745a233d"
+      Hint: MultipleAuthorsIcon
+      Value: |
+        <image mediaid="{BBA82109-AF15-4D2B-95A7-83CCF045C0E0}" />

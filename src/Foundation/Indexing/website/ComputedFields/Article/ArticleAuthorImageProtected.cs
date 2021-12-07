@@ -35,7 +35,9 @@
                 var authorsIds = item[Legacy.Constants.Article.Authors_FieldId].Split('|').Where(x => !string.IsNullOrEmpty(x));
                 if (authorsIds.Count() > 1)
                 {
-                    authorImage = item?.Fields[Legacy.Constants.Article.MultipleAuthorsIcon_FieldId];                    
+                    var multipleAuthorsSetting = (LookupField)item?.Fields[Legacy.Constants.Article.MultipleAuthorsSetting_FieldId];
+                    var multipleAuthorsSettingItem = multipleAuthorsSetting?.TargetItem;
+                    authorImage = multipleAuthorsSettingItem?.Fields[Legacy.Constants.Article.MultipleAuthorsSettingIcon_FieldId];                    
                 }
                 else
                 {

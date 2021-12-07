@@ -59,8 +59,7 @@
         public static class Article
         {
             public const string TopicsFieldId = "{4F9B280F-A22D-4E70-886A-45327E8AA507}";
-            public const string MultipleAuthorsLabel_FieldId = "{B6833539-8781-4788-92F4-D173F0727FEB}";
-            public const string MultipleAuthorsIcon_FieldId = "{7075D230-7438-4F94-A4CC-1760107174CA}";
+            public const string MultipleAuthorsSetting_FieldId = "{B6833539-8781-4788-92F4-D173F0727FEB}";
             public const string Image_FieldId = "{5BD6E9E9-2240-4473-8094-075E811B8438}";
             public const string ImageOpacity_FieldId = "{FE72ED1F-986F-475E-A40F-B95DA77091B8}";
             public const string Date_FieldId = "{79CC76CC-7503-449B-9809-9808CF6C2D26}";
@@ -116,6 +115,12 @@
         public static class PromoType
         {
             public const string ArticleType_FieldId = "{0B122919-9295-4AF9-A77D-4EFC952ED25B}";
+        }
+
+        public static class MultipleAuthorsSetting
+        {
+            public const string Label_FieldId = "{89BA5B06-2D92-4329-BCBA-9DE16C450CA9}";
+            public const string Icon_FieldId = "{F7431439-3BF3-4D7D-A4FB-B1B6745A233D}";
         }
     }
 }

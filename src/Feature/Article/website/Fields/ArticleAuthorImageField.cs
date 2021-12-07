@@ -32,7 +32,14 @@
                 return null;
             }
 
-            var overrideValue = item[Foundation.Legacy.Constants.Article.MultipleAuthorsIcon_FieldId];
+            var multipleAuthorsSetting = (LookupField)item?.Fields[Foundation.Legacy.Constants.Article.MultipleAuthorsSetting_FieldId];
+            var multipleAuthorsSettingItem = multipleAuthorsSetting?.TargetItem;
+            var overrideValue = string.Empty; 
+            if (multipleAuthorsSettingItem != null)
+            {
+                overrideValue = multipleAuthorsSettingItem[Foundation.Legacy.Constants.Article.MultipleAuthorsSettingIcon_FieldId];
+            }
+            
             if (!string.IsNullOrEmpty(overrideValue))
             {
                 return overrideValue;

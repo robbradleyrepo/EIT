@@ -11,22 +11,25 @@
         <a href="@Model.Url" class="article-promo__body">
             @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Article/Article Scroller", Model.Id.ToString(), "Edit Article"))
             {
-                <div class="article-promo__head">
-                    @if (Model.Authors != null && Model.Authors.Any())
+            <div class="article-promo__head">
+                @if (Model.Authors != null && Model.Authors.Any())
+                {
+                    if (Model.Authors.Count() > 1)
                     {
-                        if (Model.Authors.Count() > 1)
+                        if (Model.MultipleAuthorsSetting != null)
                         {
-                            @Html.Glass().RenderImage(Model, m => m.MultipleAuthorsIcon, new NameValueCollection { { "class", "article-promo__head-img" } }, isEditable: true)
-                            <span class="article-promo__head-title text-gold">@Html.Glass().Editable(Model, m => m.MultipleAuthorsLabel)</span>
-                        }
-                        else
-                        {
-                            var author = Model.Authors.FirstOrDefault();
-                            @Html.Glass().RenderImage(author, m => m.Image, new NameValueCollection { { "class", "article-promo__head-img" } }, isEditable: true)
-                            <span class="article-promo__head-title text-gold">@Html.Glass().Editable(author, m => m.FullName)</span>
+                            @Html.Glass().RenderImage(Model.MultipleAuthorsSetting, m => m.Icon, new NameValueCollection { { "class", "article-promo__head-img" } }, isEditable: false)
+                            <span class="article-promo__head-title text-gold">@Model.MultipleAuthorsSetting.Label</span>
                         }
                     }
-                </div>
+                    else
+                    {
+                        var author = Model.Authors.FirstOrDefault();
+                        @Html.Glass().RenderImage(author, m => m.Image, new NameValueCollection { { "class", "article-promo__head-img" } }, isEditable: true)
+                        <span class="article-promo__head-title text-gold">@Html.Glass().Editable(author, m => m.FullName)</span>
+                    }
+                }
+            </div>
                 <span class="article-promo__title">
                     @Html.Glass().Editable(Model, m => m.Title)
                 </span>

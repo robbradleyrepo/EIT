@@ -24,7 +24,9 @@
                 return null;
             }
 
-            var overrideValue = item[Foundation.Legacy.Constants.Article.MultipleAuthors_FieldId];
+            var multipleAuthorsSetting = (LookupField)item?.Fields[Foundation.Legacy.Constants.Article.MultipleAuthorsSetting_FieldId];
+            var multipleAuthorsSettingItem = multipleAuthorsSetting?.TargetItem;
+            var overrideValue = multipleAuthorsSettingItem[Foundation.Legacy.Constants.Article.MultipleAuthorsSettingLabel_FieldId];
             if (!string.IsNullOrEmpty(overrideValue))
             {
                 return overrideValue;
