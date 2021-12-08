@@ -60,8 +60,6 @@ SharedFields:
                 #_Article fields
                 $newItem.Fields["Article_ListingImageOpacity"].Value = $blog.Fields["Article_ListingImageOpacity"].Value
                 $newItem.Fields["Article_Topics"].Value = $blog.Fields["Article_Topics"].Value
-                $newItem.Fields["Article_MultipleAuthorsLabel"].Value = $blog.Fields["Article_MultipleAuthorsLabel"].Value
-                $newItem.Fields["Article_MultipleAuthorsIcon"].Value = $blog.Fields["Article_MultipleAuthorsIcon"].Value
                 $newItem.Fields["Article_ListingImage"].Value = $blog.Fields["Article_ListingImage"].Value
                 $newItem.Fields["Article_Date"].Value = $blog.Fields["Article_Date"].Value
                 $newItem.Fields["Article_VideoUrl"].Value = $blog.Fields["Article_VideoUrl"].Value

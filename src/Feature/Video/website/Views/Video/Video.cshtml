@@ -1,16 +1,18 @@
+@using LionTrust.Foundation.ORM.Extensions;
+
 @model LionTrust.Foundation.Video.IVideoModel
 @if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
 {
     return;
 }
-@{ 
-    var thumbnailUrl = Model.Thumbnail != null ? Model.Thumbnail.Src : string.Empty;
+@{
+    var thumbnailUrl = Model.Thumbnail != null ? Model.Thumbnail.GetSafeBackgroundImageStyle() : string.Empty;
 }
 <a class="video-box__link"
    data-type="iframe"
    data-fancybox
    data-src="@Model.VideoId"
-   style="@Model.Thumbnail?.GetSafeBackgroundImageStyle()">
+   style="@thumbnailUrl">
     <svg class="video-box__play-btn"
          xmlns="http://www.w3.org/2000/svg"
          width="188"

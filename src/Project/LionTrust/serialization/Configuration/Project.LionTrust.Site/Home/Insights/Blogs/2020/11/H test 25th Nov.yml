@@ -34,8 +34,13 @@ Languages:
               s:id="{010E3C29-6258-4251-9CEB-FEB1FAC64F98}"
               s:ph="/main/article" />
             <r
-              uid="{44D9CD64-8820-4293-928E-E33DAA95A12C}"
+              uid="{0657C4B7-B393-4768-A241-1B90A23BF4AD}"
               p:after="r[@uid='{34A6F516-20A4-4E10-8D36-5120670F54DF}']"
+              s:id="{DBC57F56-214A-4C8D-A146-AB7676CCBD95}"
+              s:ph="/main/article" />
+            <r
+              uid="{44D9CD64-8820-4293-928E-E33DAA95A12C}"
+              p:after="r[@uid='{0657C4B7-B393-4768-A241-1B90A23BF4AD}']"
               s:ds="{E6D6CB2B-2DE7-4EC1-ACA0-2BEEF6C4BE3E}"
               s:id="{DF18E4D6-F59A-4CDD-B26B-91D902F3A2DB}"
               s:ph="/main/article" />
@@ -151,13 +156,13 @@ Languages:
       Value: H test 25th Nov | Insights | Liontrust Asset Management PLC
     - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
       Hint: LegacyArticle_Title
-      Value: Article 5
+      Value: H test 25th Nov
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20211125T145546Z
     - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
       Hint: LegacyArticle_BlogType
-      Value: "{74A07305-3F24-4766-9595-AD788CAD354A}"
+      Value: "{4CBE4422-DCF0-4FFE-8064-BB7CAD356E7D}"
     - ID: "5bd6e9e9-2240-4473-8094-075e811b8438"
       Hint: Article_ListingImage
       Value: |
@@ -172,7 +177,7 @@ Languages:
     - ID: "8eb78475-c445-4960-84b0-e946d262f81c"
       Hint: Article_VideoUrl
       Value: |
-        <link linktype="external" url="https://vimeo.com/manage/videos/647711940" />
+        <link linktype="external" text="Video" url="https://player.vimeo.com/video/606662379" anchor="" target="" />
     - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
       Hint: Breadcrumb_BreadcrumbTitle
       Value: H test 25th Nov

@@ -21,7 +21,7 @@
 
                 if (ArticleData.Authors.Any() && ArticleData.Authors.Count() > 1)
                 {
-                    return ArticleData.MultipleAuthorsLabel;
+                    return ArticleData.MultipleAuthorsSetting?.Label;
                 }
                 
                 return ArticleData.Authors?.FirstOrDefault()?.FullName;
@@ -63,7 +63,7 @@
             {
                 if (ArticleData.Authors.Any() && ArticleData.Authors.Count() > 1)
                 {
-                    return ArticleData.MultipleAuthorsIcon?.Src;
+                    return ArticleData.MultipleAuthorsSetting?.Icon?.Src;
                 }
 
                 return this.ArticleData?.Authors?.FirstOrDefault()?.Image?.Src;

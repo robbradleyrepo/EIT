@@ -1,0 +1,17 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using System.Collections.Specialized;
+@model LionTrust.Feature.Article.Models.IArticlePromo
+@if (Model != null && Model.Authors != null && Model.Authors.Any())
+{
+    if (Model.Authors.Count() > 1 && Model.MultipleAuthorsSetting != null)
+    {
+        @Html.Glass().RenderImage(Model.MultipleAuthorsSetting, m => m.Icon, new NameValueCollection { { "class", "article-promo__head-img" } }, isEditable: false)
+        <span class="article-promo__head-title text-gold">@Model.MultipleAuthorsSetting.Label</span>
+    }
+    else
+    {
+        var author = Model.Authors.FirstOrDefault();
+        @Html.Glass().RenderImage(author, m => m.Image, new NameValueCollection { { "class", "article-promo__head-img" } }, isEditable: true)
+        <span class="article-promo__head-title text-gold">@Html.Glass().Editable(author, m => m.FullName)</span>
+    }
+}
