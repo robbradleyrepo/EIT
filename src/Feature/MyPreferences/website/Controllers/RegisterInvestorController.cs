@@ -108,8 +108,9 @@
                             FirstName = registerInvestorSubmit.FirstName,
                             LastName = registerInvestorSubmit.LastName,
                             Email = registerInvestorSubmit.Email,
-                            IsUKResident = ukResident
-                        };
+                            IsUKResident = ukResident,
+                            Company = !string.IsNullOrEmpty(data.CompanyFieldDefaultValue) ? data.CompanyFieldDefaultValue : "Self"
+                    };
 
                         var savedUser = _emailPreferencesService.SaveNonProfUserAsSFLead(nonProfUserViewModel, emailTemplate, data.EditPreferencesPage.AbsoluteUrl, data.FundDashboardPage.AbsoluteUrl);
 
