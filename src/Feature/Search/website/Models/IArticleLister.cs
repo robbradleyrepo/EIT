@@ -9,7 +9,7 @@
         string ContentType { get; set; }
 
         [SitecoreField(Constants.ArticleLister.ApplyFiltersLabel_FieldId)]
-        string ApplyFiltersLabel { get; set; }
+        string ApplyFiltersLabel { get; set; }        
 
         [SitecoreField(Constants.ArticleLister.ClearFiltersLabel_FieldId)]
         string ClearFiltersLabel { get; set; }
@@ -42,7 +42,10 @@
         string SortLabel { get; set; }
 
         [SitecoreField(Constants.ArticleLister.FilterLabel_FieldId)]
-        string FilterLabel { get; set; }        
+        string FilterLabel { get; set; }
+
+        [SitecoreField(Constants.ArticleLister.FilterMobileLabel_FieldId)]
+        string FilterMobileLabel { get; set; }
 
         [SitecoreField(Constants.ArticleLister.SearchPlaceholder_FieldId)]
         string SearchPlaceholder { get; set; }
