@@ -11,6 +11,7 @@ namespace LionTrust.Foundation.Legacy
             public const string TeamImageFieldId = "{5B1F0984-348D-49A8-89ED-A8900742DA90}";
             public const string TeamPageFieldId = "{D4652338-A634-4905-9FBB-E9478AC01388}";
             public const string NameFieldId = "{4194326A-CC1D-4C79-95DC-9DB268E0B97B}";
+            public const string FundTeamTemplateId = "{6B0F9C6C-2E2D-4F66-A34C-7A1D7290CA4D}";
         }
 
         public static class Article
