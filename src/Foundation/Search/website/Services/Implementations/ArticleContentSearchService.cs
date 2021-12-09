@@ -62,15 +62,28 @@
 
             if (articleSearchRequest.Topics != null && articleSearchRequest.Topics.Any())
             {
-                var managerPredicate = PredicateBuilder.False<ArticleSearchResultItem>();
-                managerPredicate = articleSearchRequest
+                var topicPredicate = PredicateBuilder.False<ArticleSearchResultItem>();
+                topicPredicate = articleSearchRequest
                                             .Topics
-                                                    .Aggregate(managerPredicate,
+                                                    .Aggregate(topicPredicate,
                                                                     (current, category)
                                                                                 => current
                                                                                      .Or(item => item.Topics.Contains(IdHelper.NormalizeGuid(category, true))));
 
-                taxonomyFilter = taxonomyFilter.And(managerPredicate);
+                taxonomyFilter = taxonomyFilter.And(topicPredicate);
+            }
+
+            if (articleSearchRequest.FundTeams != null && articleSearchRequest.FundTeams.Any())
+            {
+                var teamPredicate = PredicateBuilder.False<ArticleSearchResultItem>();
+                teamPredicate = articleSearchRequest
+                                            .FundTeams
+                                                    .Aggregate(teamPredicate,
+                                                                    (current, team)
+                                                                                => current
+                                                                                     .Or(item => item.ArticleAuthorTeams.Contains(team)));
+
+                taxonomyFilter = taxonomyFilter.And(teamPredicate);
             }
 
             predicate = predicate.And(taxonomyFilter);
