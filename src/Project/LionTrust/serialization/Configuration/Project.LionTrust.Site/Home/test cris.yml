@@ -1,8 +1,8 @@
 ﻿---
-ID: "bc67911d-0b34-4cd6-a4c0-714394bd4de9"
-Parent: "65b014f2-d643-41a1-8e5f-7204ce5831f7"
+ID: "86000b3e-dd82-4e87-a1ed-eb4fadb4b106"
+Parent: "7502b69e-d154-4861-a033-bc0cb30a91b5"
 Template: "ae7e1757-b052-4751-b940-a9712e5247fd"
-Path: /sitecore/templates/Branches/Project/LionTrust/Page Types/Common Inner/$name
+Path: /sitecore/content/LionTrustNew/Home/test cris
 DB: master
 BranchID: "65b014f2-d643-41a1-8e5f-7204ce5831f7"
 SharedFields:
@@ -42,7 +42,7 @@ SharedFields:
     </r>
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
-  Value: "{6BA4A802-C9D9-487F-B4B8-DB66DB683135}"
+  Value: "{BC67911D-0B34-4CD6-A4C0-714394BD4DE9}"
 Languages:
 - Language: en
   Versions:
@@ -64,13 +64,13 @@ Languages:
             <r
               uid="{BFA90ADF-B2FC-4E12-BC78-DE05D562910C}"
               p:after="r[@uid='{94C4AA69-0130-48D3-AC4A-73475113F552}']"
-              s:ds="{AFF89E17-AE63-4109-9E1F-6BA8885FE5E3}"
+              s:ds="{D9DEDB2B-FC43-432E-8EF8-8375F052AD9F}"
               s:id="{56ECB2D2-5D43-4F0F-A5D1-AC267F249E7B}"
               s:ph="/main/narrow-width" />
             <r
               uid="{A7C0768E-F77B-487B-A98B-F0BDDC75E0FE}"
               p:after="r[@uid='{BFA90ADF-B2FC-4E12-BC78-DE05D562910C}']"
-              s:ds="{3921296D-0044-4A1F-9B20-24ED181B1BA8}"
+              s:ds="{0D2FB922-9A90-44BF-8699-65224CA03230}"
               s:id="{BA0509C8-337A-45E7-A597-8035DC2F1C21}"
               s:ph="/main/narrow-width" />
             <r
@@ -81,7 +81,7 @@ Languages:
             <r
               uid="{01EABB43-86E0-4282-A941-C1B22FC9BCBD}"
               p:after="r[@uid='{C64833FA-A8C2-466D-94E1-F7CAFD4D38B6}']"
-              s:ds="{090B0A20-ADB9-4390-BE16-7066A56F4E16}"
+              s:ds="{A8DBA7DE-5434-453A-9F6C-CA483003D997}"
               s:id="{7626FD78-BC75-4F9C-80E7-DC947364A29B}"
               s:ph="/main/article" />
             <r
@@ -98,24 +98,27 @@ Languages:
             <r
               uid="{48AD1398-C35B-4BD2-A8E8-2DFA0912E0ED}"
               p:after="r[@uid='{E5418B37-8258-4C2D-B3ED-8DD6049E7A18}']"
-              s:ds="{9463D840-77DC-4347-AA8D-A9F01455D383}"
+              s:ds="{8B5690BE-ECE6-4DF4-9335-FFFBABCD40D9}"
               s:id="{A811D2B0-D08D-4991-A9DD-6D9FA5799CBD}"
               s:ph="main" />
             <r
               uid="{21C3C8C1-837E-4D86-AB29-97C4A9E98178}"
               p:after="r[@uid='{48AD1398-C35B-4BD2-A8E8-2DFA0912E0ED}']"
-              s:ds="{44F515B1-8C33-4F27-BBD1-B8F7085720FB}"
+              s:ds="{F5696740-1977-4D46-A2C9-6820BBAD9ED5}"
               s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
               s:ph="header" />
           </d>
         </r>
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: test cris | Liontrust Asset Management PLC
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210604T145921Z
+      Value: 20211209T082036Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\admin
+        sitecore\Admin
     - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
       Hint: Breadcrumb_BreadcrumbTitle
-      Value: $name
+      Value: test cris
