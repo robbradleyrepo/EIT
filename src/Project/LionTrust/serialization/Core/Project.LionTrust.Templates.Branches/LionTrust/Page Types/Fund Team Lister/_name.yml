@@ -20,19 +20,22 @@ SharedFields:
           s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
           s:ph="/header/navigation" />
         <r
+          uid="{F100020C-98C6-4D33-BCCE-6C46079A6D08}"
+          p:after="r[@uid='{7D8BB5E0-6857-45EB-893C-0943B52933A0}']" />
+        <r
           uid="{EE24C32D-EF97-4CD1-81C1-C37C0961B093}"
-          p:after="r[@uid='{B6CB773C-E731-4F36-B72A-AF5BFE57CA6F}']"
+          p:after="r[@uid='{F100020C-98C6-4D33-BCCE-6C46079A6D08}']"
           s:ds="{3DAAAEC1-C9FA-4C68-AA94-B08271FC5229}"
           s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
           s:par=""
           s:ph="header" />
         <r
           uid="{68A71C7B-0DA3-4EB6-A798-C5E403059F00}"
-          p:after="r[@uid='{9057DD73-496E-495D-9460-75D38BBB5B7E}']"
+          p:after="r[@uid='{EE24C32D-EF97-4CD1-81C1-C37C0961B093}']"
           s:ds="{625F36EF-8F71-48F1-9148-00158EC3E362}"
           s:id="{C3B11E64-1214-410E-BA83-3347C5B59A7E}"
           s:par=""
-          s:ph="header" />
+          s:ph="main" />
         <r
           uid="{748DD613-3E6E-4E79-AE83-98BAB39E2C19}"
           p:after="r[@uid='{68A71C7B-0DA3-4EB6-A798-C5E403059F00}']"
@@ -49,7 +52,7 @@ SharedFields:
           s:ph="main" />
         <r
           uid="{18B06B94-C99A-494B-9A46-AE485780F958}"
-          p:after="*[1=2]"
+          p:after="r[@uid='{1BAD071D-5089-49AA-93CF-CB4954BA50E7}']"
           s:id="{29A12478-EBE8-4B5C-BF2E-871026066814}"
           s:ph="main" />
       </d>
