@@ -8,7 +8,6 @@
             {
                 <div class="investment-card__content">
                     <div class="investment-card__title">@Html.Glass().Editable(Model, m => m.Title)</div>
-                    <p>
                         @if (Sitecore.Context.PageMode.IsExperienceEditor)
                         {
                             @Html.Glass().Editable(Model, m => m.Description)
@@ -17,7 +16,6 @@
                         {
                             @Html.Raw(Model.Description)
                         }
-                    </p>
                 </div>
             }
         </a>
