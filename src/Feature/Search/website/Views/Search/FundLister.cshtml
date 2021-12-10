@@ -114,10 +114,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="hr mb-4"></div>
-        </div>
+        </div>       
         <div class="view-buttons-container d-lg-none" v-if="getFacetsLength">
             <div class="container">
                 <div class="d-flex justify-content-between w-100" :class="!mobileFilter ? 'relative' : ''">
@@ -183,7 +180,7 @@
                 </article-item>
             </div>
             <article-item v-else inline-template v-for="(fund, i) in searchData" :key="i + fund.fundName">
-                <div class="fund-item-list">
+                <div class="fund-item-list fund-lister">
                     <div class="row align-items-center">
                         <div class="col-xl-4">
                             <span class="fund-item-list__title">{{fund.fundName}}</span>
