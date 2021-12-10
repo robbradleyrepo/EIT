@@ -5,6 +5,9 @@ Template: "99f8905d-4a87-4eb8-9f8b-a9bebfb3add6"
 Path: "/sitecore/layout/renderings/Feature/Banner/UI014 - Lead Banner"
 DB: master
 SharedFields:
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: /sitecore/templates/Project/LionTrust/Content Types/Banner/Lead Banner
 - ID: "3d08db46-2267-41b0-bc52-be69fd618633"
   Hint: Cacheable
   Type: Checkbox

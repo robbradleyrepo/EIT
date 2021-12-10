@@ -17,8 +17,8 @@ export default () => {
   const sections = {};
   let i = 0;
 
-  Array.prototype.forEach.call(section, function (e) {
-    sections[e.id] = e.offsetTop - offset - 10;
+  Array.prototype.forEach.call(section, function (e) {    
+	sections[e.id] = $("#sticky-navbar").hasClass('sticky') ? e.offsetTop - offset - 10 : e.offsetTop - offset * 2 - 10;
   });
 
   window.onscroll = function () {

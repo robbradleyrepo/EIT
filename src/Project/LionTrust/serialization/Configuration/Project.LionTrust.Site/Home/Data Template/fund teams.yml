@@ -18,13 +18,8 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{BE8C5C97-D801-42C5-9368-ED6A2E029685}"
-          s:ds=""
-          s:par=""
-          s:ph="navigation" />
-        <r
           uid="{EE24C32D-EF97-4CD1-81C1-C37C0961B093}"
-          p:after="r[@uid='{BE8C5C97-D801-42C5-9368-ED6A2E029685}']"
+          p:after="r[@uid='{F100020C-98C6-4D33-BCCE-6C46079A6D08}']"
           s:ds="{9D80D930-CE4D-4C12-9A91-92309C8E405D}"
           s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
           s:par=""
@@ -56,10 +51,17 @@ SharedFields:
           s:id="{29A12478-EBE8-4B5C-BF2E-871026066814}"
           s:ph="main" />
         <r
-          uid="{4FB00752-0C2B-4E6F-A91A-EDDA689D318B}"
-          p:after="*[1=2]"
-          s:ds=""
-          s:par="" />
+          uid="{B6CB773C-E731-4F36-B72A-AF5BFE57CA6F}"
+          p:after="r[@uid='{9057DD73-496E-495D-9460-75D38BBB5B7E}']" />
+        <r
+          uid="{30A0A4C8-974F-4822-9DCB-DE14881E0400}"
+          p:after="r[@uid='{B6CB773C-E731-4F36-B72A-AF5BFE57CA6F}']" />
+        <r
+          uid="{A9D97645-8E0D-4192-A314-3437510B5AF8}"
+          p:after="r[@uid='{30A0A4C8-974F-4822-9DCB-DE14881E0400}']" />
+        <r
+          uid="{CCBBB036-5788-4F78-AC6A-DF34C178F76C}"
+          p:after="*[1=2]" />
       </d>
     </r>
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
@@ -84,14 +86,17 @@ Languages:
               s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
               s:ph="/header/navigation" />
             <r
+              uid="{F100020C-98C6-4D33-BCCE-6C46079A6D08}"
+              p:after="r[@uid='{EE24C32D-EF97-4CD1-81C1-C37C0961B093}']" />
+            <r
+              uid="{68A71C7B-0DA3-4EB6-A798-C5E403059F00}"
+              s:ph="main" />
+            <r
               uid="{4FA93D8D-650E-4431-B39E-4489BD62670E}"
-              p:after="r[@uid='{51CE5D11-56EB-4FA0-9B24-386A48C0F2D3}']"
+              p:after="r[@uid='{68A71C7B-0DA3-4EB6-A798-C5E403059F00}']"
               s:ds="{34D9CE30-4D48-4C17-B9BA-6D44B0334F16}"
               s:id="{2A426004-8707-4E51-9772-D999D41FB113}"
               s:ph="main" />
-            <r
-              uid="{EE24C32D-EF97-4CD1-81C1-C37C0961B093}"
-              p:after="r[@uid='{B6CB773C-E731-4F36-B72A-AF5BFE57CA6F}']" />
             <r
               uid="{09101C76-CF4F-4A4F-B015-0C37095F150D}"
               p:after="r[@uid='{748DD613-3E6E-4E79-AE83-98BAB39E2C19}']"

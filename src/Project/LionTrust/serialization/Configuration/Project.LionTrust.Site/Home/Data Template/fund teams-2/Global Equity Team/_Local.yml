@@ -1,0 +1,40 @@
+﻿---
+ID: "7582765f-83f7-47d5-9780-67c7aaf5bdce"
+Parent: "ad906d62-3004-4d31-b913-d7a6cbc7f0c5"
+Template: "fff5f245-ffc0-4022-a998-9b07aa5e761f"
+Path: "/sitecore/content/LionTrustNew/Home/Data Template/fund teams-2/Global Equity Team/_Local"
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: |
+    {1D2058B8-C7A2-4D41-8FDF-61AC3B786798}
+    {938850B8-54BC-46F7-B76E-9C83A331F8DC}
+    {A33314F8-D9AA-4710-B47A-9F66BA58AB13}
+    {0B50876E-0F9F-479F-8533-A84625B8C7C5}
+    {C7CE8102-D47B-44CC-9A32-23DDF2142210}
+    {ED529B1C-9937-4186-AFDE-69543F5B3618}
+    {205DAAEA-8186-42FE-A43B-A87231BF005F}
+    {F91BFF52-8AFB-4056-BBF3-84C16924B92D}
+    {CF87F1EB-F59D-4E08-BCD6-23E0CDD7362F}
+    {F6B5C22C-0B85-45BB-BB44-D743FF235639}
+    {D3D9D2CE-B2CE-49AC-B50D-6A5FFD4C4AB8}
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: "-1000"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{84A9B3DB-0919-4CAA-88B3-B878E0259429}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210601T085615Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin

@@ -1,0 +1,42 @@
+﻿---
+ID: "27584681-46d3-46b2-96ae-dd7f3461d82a"
+Parent: "3c3bab2a-ec7e-4862-b2c1-1094b2c8f4f1"
+Template: "cf87f1eb-f59d-4e08-bcd6-23e0cdd7362f"
+Path: "/sitecore/content/LionTrustNew/Home/Data Template/fund teams-2/Cashflow Solution team/_Local/BC016 - Article Scroller"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{043670F9-6ADD-46AF-A0E1-A78328FF09E8}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210601T085618Z
+    - ID: "550b2192-38e6-4cee-85f2-0bfca295bcf8"
+      Hint: ArticleSearchParameters_Topics
+      Type: Multilist
+      Value: 
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "725dc6c8-8878-4947-86b3-163e51c5911d"
+      Hint: ArticleScroller_SelectedArticles
+      Type: Multilist with Search
+      Value: |
+        {6F1BDE33-026B-4AA6-BF41-155B7C50DD79}
+        {9279C75A-8805-47F0-B1D3-FDA17384D07E}
+        {FF806C71-A9C1-499C-9F52-F1F2884A8D93}
+        {EA31C250-0606-458B-B69A-F41FFB239D9A}
+        {A4A65DF7-CBC3-4C7F-997F-0A5F9EB9F65B}
+    - ID: "93854c18-0919-445e-bc88-2d353c8491e8"
+      Hint: ArticleScroller_Heading
+      Value: Latest insight
+    - ID: "bad318c3-b9b5-457f-a42d-f51516fc3ec2"
+      Hint: ArticleScroller_CTA
+      Value: |
+        <link text="CTA Link" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
