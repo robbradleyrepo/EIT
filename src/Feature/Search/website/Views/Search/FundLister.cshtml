@@ -30,10 +30,10 @@
                             <div class="col-lg-9 d-none d-lg-block">
                                 <div class="text-right">
                                     <button @@click="grid = false" :class="!grid ? 'active' : ''" class="btn btn-clean view-btn mr-3">
-                                        @Html.Glass().Editable(Model, m => m.ViewAsListLabel) <i class="icon-grid-view"></i>
+                                        @Html.Glass().Editable(Model, m => m.ViewAsListLabel) <i class="icon-list-view"></i>
                                     </button>
                                     <button @@click="grid = true" :class="grid ? 'active' : ''" class="btn btn-clean view-btn mr-3">
-                                        @Html.Glass().Editable(Model, m => m.ViewAsGridLabel) <i class="icon-list-view"></i>
+                                        @Html.Glass().Editable(Model, m => m.ViewAsGridLabel) <i class="icon-grid-view"></i>
                                     </button>
                                     @using (Html.Glass().BeginRenderLink(Model, m => m.FundCentreLink, new { @class = "link-styles" }, isEditable: true))
                                     {
@@ -127,10 +127,10 @@
                     <div class="view-buttons">
                         View
                         <button @@click="grid = false" :class="!grid ? 'active' : ''" class="btn btn-clean btn-view-mob ml-auto button-sort">
-                            <i class="icon-grid-view"></i>
+                            <i class="icon-list-view"></i>
                         </button>
                         <button @@click="grid = true" :class="grid ? 'active' : ''" class="btn btn-clean btn-view-mob ml-auto button-sort">
-                            <i class="icon-list-view"></i>
+                            <i class="icon-grid-view"></i>
                         </button>
                     </div>
                 </div>
