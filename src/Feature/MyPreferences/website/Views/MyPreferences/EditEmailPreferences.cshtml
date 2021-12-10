@@ -16,12 +16,12 @@
         <div class="row mt-4">
             <div class="col-lg-12">
                 <div class="input-group">
-                    @Html.ValidationMessageFor(x => x.IsInstitutionalBulletin, string.Empty, new { @class = "text-danger" })
+                    @Html.ValidationMessageFor(x => x.IsInstitutionalBulletin, string.Empty, new { @class = "text-danger checkbox__input" })
                     @Html.CheckBoxFor(x => x.IsInstitutionalBulletin)
                     <label>@Html.Glass().Editable(Model.Content, x => x.InstitutionalBulletinTitle)</label>
                 </div>
                 <div class="input-group">
-                    @Html.ValidationMessageFor(x => x.UnsubscribeAll, string.Empty, new { @class = "text-danger" })
+                    @Html.ValidationMessageFor(x => x.UnsubscribeAll, string.Empty, new { @class = "text-danger checkbox__input" })
                     @Html.CheckBoxFor(x => x.UnsubscribeAll)
                     <label>@Html.Glass().Editable(Model.Content, x => x.UnsubscribeAllText)</label>
                 </div>
