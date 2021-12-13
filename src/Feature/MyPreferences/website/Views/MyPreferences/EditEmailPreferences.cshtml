@@ -6,7 +6,7 @@
     {
         <p class="text-danger">@Html.Raw(Model.Error)</p>
     }
-<section>
+<section class="edit-preferences">
     <h3>@Html.Glass().Editable(Model.Content, x => x.Title)</h3>
     @using (Html.BeginForm())
     {
@@ -15,16 +15,22 @@
         @Html.Sitecore().Placeholder("fund-accordion-list")
         <div class="row mt-4">
             <div class="col-lg-12">
-                <div class="input-group">
-                    @Html.ValidationMessageFor(x => x.IsInstitutionalBulletin, string.Empty, new { @class = "text-danger checkbox__input" })
-                    @Html.CheckBoxFor(x => x.IsInstitutionalBulletin)
-                    <label>@Html.Glass().Editable(Model.Content, x => x.InstitutionalBulletinTitle)</label>
+                <div class="edit-preferences__select">
+                    <label class="checkbox">
+                        @Html.ValidationMessageFor(x => x.IsInstitutionalBulletin, string.Empty, new { @class = "text-danger" })
+                        @Html.CheckBoxFor(x => x.IsInstitutionalBulletin, new { @class = "checkbox__input" })
+                        <span class="checkbox__box"></span>
+                        @Html.Glass().Editable(Model.Content, x => x.InstitutionalBulletinTitle)
+                    </label>
                 </div>
-                <div class="input-group">
-                    @Html.ValidationMessageFor(x => x.UnsubscribeAll, string.Empty, new { @class = "text-danger checkbox__input" })
-                    @Html.CheckBoxFor(x => x.UnsubscribeAll)
-                    <label>@Html.Glass().Editable(Model.Content, x => x.UnsubscribeAllText)</label>
-                </div>
+                <div class="edit-preferences__select">
+                    <label class="checkbox">
+                        @Html.ValidationMessageFor(x => x.UnsubscribeAll, string.Empty, new { @class = "text-danger" })
+                        @Html.CheckBoxFor(x => x.UnsubscribeAll, new { @class = "checkbox__input" })
+                        <span class="checkbox__box"></span>
+                        @Html.Glass().Editable(Model.Content, x => x.UnsubscribeAllText)
+                    </label>
+                </div>              
                 <div class="input-btn">
                     <input type="submit" class="btn-primary" value="@Model.Content.SubmitCTAText" />
                 </div>
