@@ -1,0 +1,31 @@
+﻿---
+ID: "4ddb427c-c9a4-4824-b491-aa9932fb1413"
+Parent: "fb92ab64-c503-4816-952c-0d222f1fb947"
+Template: "dc146c0f-9d5f-416d-bb3e-903f15aa0b7a"
+Path: "/sitecore/content/LionTrustNew/Home/BTR Page/_Local/BC043 - People Info Banner/Third"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{278067CD-EBE4-410A-B1C9-C5B0084A7402}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210823T165613Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "84d065c0-0d30-4bfd-8223-88926e7ef4ae"
+      Hint: PeopleInfo_MaleCount
+      Value: 34
+    - ID: "ce59e663-c78f-462b-920d-4ef6ebecae37"
+      Hint: PeopleInfo_FemaleCount
+      Value: 34
+    - ID: "d2a9fb8c-7265-464b-9210-71e8a55237ff"
+      Hint: PeopleInfo_Title
+      Value: Tester

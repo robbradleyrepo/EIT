@@ -1,0 +1,30 @@
+﻿---
+ID: "ca309bb9-8879-4e53-a67e-c44755a5f548"
+Parent: "6d90c521-08f8-480e-9eff-1718fb085beb"
+Template: "65820284-5849-482c-9894-a9a5091892fe"
+Path: /sitecore/content/LionTrustNew/Home/BTR Page/_Local/Performance Charts/Third Chart
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{F78954C7-18D7-4720-BFDF-428F50E38C2F}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0a7a9253-28d8-4544-b566-43e9909eca08"
+      Hint: PerformanceCharts_MaxRange
+      Value: 90
+    - ID: "18ad469c-30ab-420c-a9aa-1fe500163a10"
+      Hint: PerformanceCharts_Title
+      Value: Third Chart
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210727T164325Z
+    - ID: "91102ff9-f609-4ade-a427-0676fca53279"
+      Hint: PerformanceCharts_Scale
+      Value: $
+    - ID: "eeaa9fa2-acb3-4de1-978b-0fa58d7b0221"
+      Hint: PerformanceCharts_LegendDescription
+      Value: Lorem ipsum
