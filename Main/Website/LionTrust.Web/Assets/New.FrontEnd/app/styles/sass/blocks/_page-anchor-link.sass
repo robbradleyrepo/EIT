@@ -1,4 +1,5 @@
 .page-anchor-link
+    display: none
     background: $secondary-silver
     // height: 62px
     // display: flex
@@ -102,3 +103,94 @@
 .page-anchor__links.m-link
     .page-anchor__link
         margin-right: 3em
+.scroll-nav
+    display: flex
+    justify-content: space-between
+    background: $secondary-silver
+    color: $black
+    padding: 20px 0
+    @include breakpoint(desktop, up)
+        padding: 27px 0
+    &.sticky
+        position: fixed
+        top: 0
+        width: 100%
+        z-index: 3
+    &__list
+        list-style: none
+        display: flex
+        width: 100%
+        margin: 0 0 0 0
+        padding: 0
+        flex-direction: column
+        display: none
+        @include breakpoint(desktop, up)
+            flex-direction: row
+            display: flex !important
+            height: auto !important
+            overflow: unset !important
+    &__item
+       
+    &__item--active
+       .scroll-nav__link
+            color: $primary
+            &:hover
+                color: $primary
+    &__link,
+    span
+        color: $black
+        font-size: 16px
+        letter-spacing: 0
+      
+    span
+        &::after
+            font-family: icomoon!important
+            speak: never
+            font-style: normal
+            font-weight: 400
+            font-variant: normal
+            text-transform: none
+            line-height: 1
+            -webkit-font-smoothing: antialiased
+            -moz-osx-font-smoothing: grayscale
+            content: "\e906"
+            font-size: 6px
+            padding: 0 10px
+            display: inline-flex
+        &.active
+            &::after
+                transform: rotate(180deg)
+        @include breakpoint(desktop, up)
+            &::after
+                content: ':'
+                font-family: $userfont
+                font-size: 18px
+                padding: 0
+    &__link
+        //font-weight: 500
+        line-height: 25px
+        &:hover
+            color: $black
+    &__hidden
+        pointer-events: auto
+        white-space: nowrap
+        margin-right: 3em;
+        @include breakpoint(desktop, up)
+            pointer-events: none
+        @include breakpoint(tablet, up)
+            font-weight: 600
+    & > div
+        flex-direction: column
+        align-items: flex-start
+        @include breakpoint(desktop, up)
+            flex-direction: row
+            align-items: center
+
+
+.section-spy
+    font-size: 0
+    line-height: 0
+    display: flex
+    width: 100%
+    position: absolute
+    top: 60px

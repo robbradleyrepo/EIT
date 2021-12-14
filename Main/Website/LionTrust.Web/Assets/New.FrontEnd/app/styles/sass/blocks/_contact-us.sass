@@ -42,14 +42,11 @@
         margin: 85px auto 90px
     &__title, h2
         margin-bottom: 12px
-    &__margin
-        @include breakpoint(desktop, up)
-            margin-left: -1rem
+    
     .card
-        display: inline-block
+        display: flex
+        width: 100%
         margin-bottom: 1rem
-        @include breakpoint(desktop, up)
-            margin: 1rem
         @include breakpoint(desktop-large, up)
             padding: 30px 40px 40px
     &__half-card
@@ -58,8 +55,11 @@
             @include breakpoint(desktop, up)
                 margin: 0 0 2rem 0
                 width: 100%
+    &__margin
+        margin-bottom: 16px
 .contacts
     display: table
+    width: 100%
     &__title
         font-size: 26px
         line-height: 32px
