@@ -4,7 +4,6 @@ export default () => {
   const sticky = navbar.offset()?.top;
   var sectionToScroll = $(document).find('.section-spy');
   var sectionHash = $(document).find('.page-anchor__right .page-anchor__link');
-  console.log(sectionHash.text());
   sectionHash.each(function (index) {
     var hashText = $(sectionHash[index]).text();
     $(sectionToScroll[index]).text(hashText);
@@ -15,13 +14,14 @@ export default () => {
     $(sectionToScroll[index] ).prependTo(nextOfHash);
     $(sectionToScroll).parent().css('position','relative')
   });
+
   const content = document.querySelector('.main-content');
   scrollnav.init(content, {
     sections: '.section-spy',
   });
   $('.scroll-nav').prepend('<span class="scroll-nav__hidden">On this page</spna>');
   $('.scroll-nav').children().wrapAll('<div class="container d-flex"></div>');
-  const stickyPostion = $('.scroll-nav').offset().top - 90;
+  const stickyPostion = $('.scroll-nav').offset().top;
   function stickyNav() {
     if (window.pageYOffset >= stickyPostion) {
       $(".scroll-nav").addClass("sticky");
