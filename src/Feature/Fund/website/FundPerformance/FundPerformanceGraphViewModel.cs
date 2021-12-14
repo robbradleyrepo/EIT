@@ -18,5 +18,7 @@
         }      
         
         public string StartDate { get; set; }
+
+        public string GraphTitle { get; set; }
     }
 }

@@ -74,5 +74,8 @@
 
         [SitecoreField(Constants.FundClass.GraphStartDate_FieldId)]
         DateTime GraphStartDate { get; set; }
+
+        [SitecoreField(Constants.FundClass.GraphTitle_FieldId)]
+        string GraphTitle { get; set; }
     }
 }

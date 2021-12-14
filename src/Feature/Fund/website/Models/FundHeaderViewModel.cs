@@ -34,5 +34,18 @@
                 return Data.Fund.FundManagers;
             }
         }
+
+        public string FundName
+        {
+            get
+            {
+                if (!string.IsNullOrEmpty(Data.Title))
+                {
+                    return Data.Title;
+                }
+
+                return Data?.Fund?.Name;
+            }
+        }
     }
 }

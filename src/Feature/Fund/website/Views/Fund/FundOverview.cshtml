@@ -21,15 +21,24 @@
                 @Html.Glass().Editable(Model.Fund, m => m.OverviewText)
             </p>
         </div>
-        <div>
-            @using (Html.Glass().BeginRenderLink(Model, m => m.LatestUpdateCTA, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary-forward mr-1 mr-md-4" } }, isEditable: true))
+        <div>           
+            @if (Sitecore.Context.PageMode.IsExperienceEditor)
             {
-                if (Model.LatestUpdateCTA != null)
+                using (Html.Glass().BeginRenderLink(Model, m => m.LatestUpdateCTA, new { @class = "btn btn-primary-forward mr-1 mr-md-4" }, isEditable: true))
                 {
-                    @Model.LatestUpdateCTA.Text
+                    if (Model.LatestUpdateCTA != null)
+                    {
+                        @Model.LatestUpdateCTA.Text
+                    }
+                    <i class="icon-arrow-right animate-arrow"></i>
                 }
-
-                <i class="icon-arrow-right animate-arrow"></i>
+            }
+            else
+            {
+                var fundUpdateUrl = Model.LatestUpdateCTA != null ? Model.LatestUpdateCTA.Url + "?ids=" + Model.Fund.Id.ToString("N") : string.Empty;
+                <a href="@fundUpdateUrl" class="btn btn-primary-forward mr-1 mr-md-4">
+                    @Model.LatestUpdateCTA.Text <i class="icon-arrow-right animate-arrow"></i>
+                </a>
             }
 
             <a href="#" class="link-styles" id="view-documents">
