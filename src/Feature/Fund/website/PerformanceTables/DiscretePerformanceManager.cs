@@ -102,7 +102,7 @@
         public string[] GetColumnHeadings(string citiCode)
         {
             var result = new List<string>();
-            for (int i = -1; i >= -4; i--)
+            for (int i = 0; i >= -3; i--)
             {
                 var qeMonth = GetPerformanceQEMonth(citiCode);
                 result.Add($"{qeMonth} {DateTime.Now.AddYears(i).ToString("yy")}");
