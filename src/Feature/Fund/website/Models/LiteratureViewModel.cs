@@ -29,6 +29,14 @@ namespace LionTrust.Feature.Fund.Models
             {
                 return Literature?.Cta?.Text;
             }
-        }      
+        }
+
+        public string FundId 
+        {
+            get
+            {
+                return Literature?.Fund?.Id.ToString("N");
+            }
+        }
     }
 }
