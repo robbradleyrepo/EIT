@@ -6,45 +6,24 @@ export default () => {
   var sectionHash = $(document).find('.page-anchor__right .page-anchor__link');
   //console.log(sectionToScroll.text());
   console.log(sectionHash.text());
-
-
   sectionHash.each(function (index) {
     var hashText = $(sectionHash[index]).text();
     $(sectionToScroll[index]).text(hashText);
   });
 
- /*  sectionToScroll.each(function (index) {
-    $(sectionToScroll[index] ).next().attr('id',$(sectionToScroll[index]).attr('id')).attr('class','section-spyID');
-    $(sectionToScroll[index]).removeAttr('id');
-  }); */
   sectionToScroll.each(function (index) {
     var nextOfHash = $(sectionToScroll[index] ).next()
     $(sectionToScroll[index] ).prependTo(nextOfHash);
     $(sectionToScroll).parent().css('position','relative')
-    
   });
   const content = document.querySelector('.main-content');
   scrollnav.init(content, {
     sections: '.section-spy',
-
- 
   });
-
-
-
-
-// For some browsers, `attr` is undefined; for others,
-// `attr` is false.  Check for both.
-if (typeof attr !== 'undefined' && attr !== false) {
-}
-
-
-
   $('.scroll-nav').prepend('<span class="scroll-nav__hidden">On this page</spna>');
   $('.scroll-nav').children().wrapAll('<div class="container d-flex"></div>');
   const stickyPostion = $('.scroll-nav').offset().top - 90;
   function stickyNav() {
-
     if (window.pageYOffset >= stickyPostion) {
       $(".scroll-nav").addClass("sticky");
     }
