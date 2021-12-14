@@ -70,7 +70,7 @@
     <div class="row">
         <div class="col-12">
             <h3 class="graph-section__title">
-                @Html.Glass().Editable(Model.Component, m => m.ChartTitle)
+                @Model.GraphTitle
             </h3>
             <iframe class="mt-3 mb-5" id="childFrame"
                     src="@Model.GraphUrl()"

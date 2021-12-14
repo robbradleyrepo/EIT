@@ -100,6 +100,7 @@ namespace LionTrust.Foundation.Legacy
             public const string ManagerInceptionDateFieldId = "{AC4F5B6A-ED1D-43B3-B0DE-A6585F20207F}";
             public const string TargetBenchmarkYieldFieldId = "{2C52314C-F97D-4D99-853E-1497980389C1}";
             public const string GraphStartDate_FieldId = "{F1D242FD-2CE7-4D6F-958B-C1147A73F615}";
+            public const string GraphTitle_FieldId = "{98FF037C-6450-43E9-AE72-B3FDDCC449FB}";
         }
         
         public static class Fund 

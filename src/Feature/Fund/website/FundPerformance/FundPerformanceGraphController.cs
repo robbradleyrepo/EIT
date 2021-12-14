@@ -47,7 +47,9 @@
                     if (currentClass.GraphStartDate != null && currentClass.GraphStartDate != DateTime.MinValue)
                     {
                         model.StartDate = currentClass.GraphStartDate.ToString("dd-MM-yyyy");
-                    }                    
+                    }
+
+                    model.GraphTitle = !string.IsNullOrEmpty(currentClass.GraphTitle) ? currentClass.GraphTitle : datasource.ChartTitle;
                 }
 
                 model.CitiCode = citiCode;
