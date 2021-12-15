@@ -5,7 +5,9 @@
 @model LionTrust.Feature.Fund.Models.IFundScroller
 
 @{ 
-    var compClass = Sitecore.Context.Item.TemplateID.ToString().Equals(FundConstants.FundDashboard.PageTemplateId) ? "fundscroller__dashboard" : string.Empty;
+    var isFundDashboard = Sitecore.Context.Item.TemplateID.ToString().Equals(FundConstants.FundDashboard.PageTemplateId);
+    var compClass = isFundDashboard ? "fundscroller__dashboard" : string.Empty;
+    var colClass = isFundDashboard ? "col-lg-5 col-xl-4" : "col-lg-5";
 }
 
 @if (Model != null)
@@ -15,7 +17,7 @@
             <div class="fundscroller__box">
                 <div class="row">
                     <div class="imagepromo__content">
-                        <div class="col-lg-5">
+                        <div class="@colClass">
                             <div class="fundscroller__left">
                                 <div class="imagepromo__content">
                                     <div class="imagepromo__headbox">
