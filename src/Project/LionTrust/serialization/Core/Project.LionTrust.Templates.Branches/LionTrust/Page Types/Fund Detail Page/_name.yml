@@ -91,8 +91,14 @@ Languages:
               s:id="{DE3BBA47-F726-43E8-A4F3-950B51597BF0}"
               s:ph="/main/fund-graphs" />
             <r
-              uid="{0011854E-FC0B-4EA6-BF0D-E54640F27B47}"
+              uid="{24CDA0F0-E32A-4B69-8C8C-23AF6A264EDB}"
               p:after="r[@uid='{09F227F2-D2C9-43CF-96D9-1212F96F8438}']"
+              s:ds="{EDE34807-C1A0-49FB-9873-F1CD6762D1E5}"
+              s:id="{BA0509C8-337A-45E7-A597-8035DC2F1C21}"
+              s:ph="/main/fund-graphs" />
+            <r
+              uid="{0011854E-FC0B-4EA6-BF0D-E54640F27B47}"
+              p:after="r[@uid='{24CDA0F0-E32A-4B69-8C8C-23AF6A264EDB}']"
               s:ds="{18BE326D-5E9C-4800-A008-9B518C6AAC7D}"
               s:id="{D1F65FAF-D449-484C-AADA-D6733DB1F445}"
               s:ph="/main/fundoverview_rightcolumn" />
