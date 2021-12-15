@@ -22,7 +22,7 @@
     var showTelDivider = (!string.IsNullOrEmpty(Model.TelNumber) && !string.IsNullOrEmpty(Model.OutsideTelNumber)) || Sitecore.Context.PageMode.IsExperienceEditor;
     var showFaxLabel = !string.IsNullOrEmpty(Model.FaxNumber) || !string.IsNullOrEmpty(Model.OutsideFaxNumber) || Sitecore.Context.PageMode.IsExperienceEditor;
     var showFaxDivider = (!string.IsNullOrEmpty(Model.FaxNumber) && !string.IsNullOrEmpty(Model.OutsideFaxNumber)) || Sitecore.Context.PageMode.IsExperienceEditor;
-    var halfCardClass = IsHalfCard() ? "col-lg-6 contact-section__half-card" : string.Empty;
+    var halfCardClass = IsHalfCard() ? "col-lg-6 contact-section__half-card" : "col-md-12 col-lg-10 contact-section__margin";
 
 
 
