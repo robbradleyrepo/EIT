@@ -17,12 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
             imageSrc = imageSrcBg[i].style.backgroundImage.replace(/url\((['"])?(.*?)\1\)/gi, '$2').split(',')[0];
             var bgParents = imageSrcBg[i].closest('.accordion__smartcard');
             console.log(imageSrc);
-            console.log(bgParents); 
+            console.log(bgParents);
             var image = new Image();
             image.src = imageSrc;
             //bgParents.style.width = image.width + 'px';
             bgParents.style.height = image.height + 'px';
-         
+
         }
     };
 });
