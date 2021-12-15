@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
     var anchorLength = anchorLinks.length;
     console.log(anchorLength);
     if (anchorLength > 4) {
-        $(anchorLinks).parent('.scroll-nav__list').addClass('d-flex justify-content-between');
+        $(anchorLinks).parent('.scroll-nav__list').addClass('justify-content-between');
     } else {
-        $(anchorLinks).parent('.scroll-nav__list').addClass('d-flex justify-content-start m-link');
+        $(anchorLinks).parent('.scroll-nav__list').addClass('justify-content-start m-link');
     }
     window.onload = function () {
         var imageSrcBg = document.getElementsByClassName('video-box__link');
