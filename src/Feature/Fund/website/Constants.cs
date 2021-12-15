@@ -315,5 +315,10 @@
             public const string OngoingChargesTooltip_FieldId = "{83E4B514-B489-4AB9-83E4-2C4896975598}";
             public const string AnnualManagementChargeTooltip_FieldId = "{4B5FD293-630A-4CF3-8456-C60BDA4A6F2F}";
         }
+
+        public static class FundDashboard
+        {
+            public const string PageTemplateId = "{7784DCE4-0F3B-4518-81F8-4BCB042373B1}";
+        }
     }
 }
