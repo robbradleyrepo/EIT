@@ -32,26 +32,27 @@
         +breakpoint(mobile-large, down)
             font-weight: normal
     ul
-        @extend .styled-list
-        margin-bottom: 10px
-        @include breakpoint(desktop, up)
-        margin-bottom: 20px
-        li
-            font-weight: normal
-            &_checked
-            li			
-                &:before
-                    content: "\e925"!important
-                    font-family: icomoon!important
-                    width: auto!important
-                    height: auto!important
-                    background: transparent!important
-                    font-size: 10px
-                    top: 5px!important
-                    left: -2px!important
-                    color: $gold
-                    @include breakpoint(desktop, up)
-                        top: 1px!important			
+        &:not(.article-links)
+            @extend .styled-list
+            margin-bottom: 10px
+            @include breakpoint(desktop, up)
+            margin-bottom: 20px
+            li
+                font-weight: normal
+                &_checked
+                li			
+                    &:before
+                        content: "\e925"!important
+                        font-family: icomoon!important
+                        width: auto!important
+                        height: auto!important
+                        background: transparent!important
+                        font-size: 10px
+                        top: 5px!important
+                        left: -2px!important
+                        color: $gold
+                        @include breakpoint(desktop, up)
+                            top: 1px!important		        
 .big-quote
     letter-spacing: 0.26px
     +font-size(22px)
