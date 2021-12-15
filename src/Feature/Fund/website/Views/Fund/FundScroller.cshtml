@@ -1,16 +1,23 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @using LionTrust.Foundation.Analytics.Goals
 @using LionTrust.Foundation.ORM.Extensions;
+@using FundConstants = LionTrust.Feature.Fund.Constants;
 @model LionTrust.Feature.Fund.Models.IFundScroller
+
+@{ 
+    var isFundDashboard = Sitecore.Context.Item.TemplateID.ToString().Equals(FundConstants.FundDashboard.PageTemplateId);
+    var compClass = isFundDashboard ? "fundscroller__dashboard" : string.Empty;
+    var colClass = isFundDashboard ? "col-lg-5 col-xl-4" : "col-lg-5";
+}
 
 @if (Model != null)
 {
-    <div class="fundscroller relative" style="@Model.BackgroundImage.GetSafeBackgroundImageStyle()">
+    <div class="fundscroller relative @compClass" style="@Model.BackgroundImage.GetSafeBackgroundImageStyle()">
         <div class="container">
             <div class="fundscroller__box">
                 <div class="row">
                     <div class="imagepromo__content">
-                        <div class="col-lg-5">
+                        <div class="@colClass">
                             <div class="fundscroller__left">
                                 <div class="imagepromo__content">
                                     <div class="imagepromo__headbox">
