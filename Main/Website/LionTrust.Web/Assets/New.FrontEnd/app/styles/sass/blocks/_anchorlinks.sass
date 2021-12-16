@@ -1,69 +1,81 @@
-.anchorbox
-    padding: 20px 0
-    @include breakpoint(desktop, up)
-        padding-top: 20px
-    &__content
-        display: flex
-        flex-direction: column
-        justify-content: space-around
-        align-items: center
-        padding: 30px 0
+body    
+    .anchorbox
+        padding: 20px 0
         @include breakpoint(desktop, up)
-            flex-direction: row
-
-    &__head
-        white-space: nowrap
-        margin-bottom: 5px
-        @include font-size(18px)
-        line-height: 2.66em
-        font-weight: 500
-        text-align: center
-        @include breakpoint(desktop, up)
-            margin-bottom: 0
-            text-align-last: left
-
-    &__btn
-        display: flex
-        min-width: 43%
-        margin-bottom: 20px
-        align-items: center
-        justify-content: center
-        line-height: inherit
-        height: 42px
-        width: 100%
-        text-transform: none
-        @include breakpoint(desktop, up)
-            height: 48px
-            @include font-size(18px)
-            font-weight: 300
+            padding-top: 20px
+        &__content
+            display: flex
+            flex-direction: column
+            justify-content: space-around
+            align-items: center
+            padding: 30px 0
+            @include breakpoint(desktop, up)
+                flex-direction: row
+        &__head
+            white-space: nowrap
+            margin-bottom: 5px
+            font-size: 16px
+            line-height: 25px
+            font-weight: 500
+            text-align: center
             letter-spacing: 0
+            @include breakpoint(desktop, up)
+                font-size: 18px
+                margin-bottom: 0
+                text-align-last: left
+        &__btn
+            display: flex
+            min-width: auto
+            max-width: uset
+            margin-bottom: 20px
+            align-items: center
+            justify-content: center
+            line-height: inherit
+            height: 42px
+            width: 100%
             text-transform: none
-        @include breakpoint(desktop-large, up)
-    >.container
-        >.row
-            >div
-                min-width: 50%
-                margin: 0
-                padding: 0 15px
-                flex: 0 0 50%              
-                @include breakpoint(desktop, up)
-                    min-width: auto
-                    max-width: 212px
-                    width: 25%
-                    flex: auto
-                    margin-right: 0
-                    padding: 0 15px
-                @include breakpoint(tablet, up) 
-                    max-width: calc(100% / 3)
-                    margin: 0
-                    padding: 0 15px
-                    min-width: unset
-                    width: unset
-                &:last-child
-                    margin: 0
-                &:first-child                    
-                    @include breakpoint(desktop, down)
-                        max-width: 100%
-                        min-width: 100%
-                > .anchorbox__btn
-                    min-width: 100%
+            @include breakpoint(desktop, up)
+                height: 48px
+                @include font-size(18px)
+                font-weight: 300
+                letter-spacing: 0
+                text-transform: none
+            @include breakpoint(desktop-large, up)
+        &__wrapper
+            width: auto
+            max-width: unset
+            min-width: 50%
+
+            @include breakpoint(desktop, up)
+                min-width: 212px
+                //flex: unset
+        &__label
+            max-width: unset
+            width: 100%
+            flex: 0 0 100%
+            @include breakpoint(desktop, up)
+                width: fit-content
+                margin-right: 14px
+                flex: unset
+        // >.container
+        //     >.row
+        //         >div
+        //             min-width: 50%
+        //             margin: 0
+        //             padding: 0 15px
+        //             flex: 0 0 50%              
+        //             @include breakpoint(desktop, up)
+        //                 min-width: auto
+        //                 max-width: 212px
+        //                 width: 25%
+        //                 flex: auto
+        //                 margin-right: 0
+        //                 padding: 0 15px
+        //             &:last-child
+        //                 margin: 0
+        //             &:first-child                    
+        //                 @include breakpoint(desktop, down)
+        //                     max-width: 100%
+        //                     min-width: 100%
+        //             > .anchorbox__btn
+        //                 min-width: 100%
