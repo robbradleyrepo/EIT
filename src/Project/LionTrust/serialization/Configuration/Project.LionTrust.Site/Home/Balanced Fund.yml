@@ -79,8 +79,14 @@ Languages:
               s:id="{E5DD9F72-1F1D-439D-AC28-2B32B06BF019}"
               s:ph="/main/fund-graphs" />
             <r
-              uid="{D2D32B93-2327-40F2-A6F7-EB10133210BC}"
+              uid="{B1979CB6-767C-4F60-B176-304D765D3024}"
               p:after="r[@uid='{5F35249F-9ACC-44F5-85DE-2C47E3B9D0D2}']"
+              s:ds="{D7BA313F-41C2-40E2-B983-405C71F37FFE}"
+              s:id="{DE3BBA47-F726-43E8-A4F3-950B51597BF0}"
+              s:ph="/main/fund-graphs" />
+            <r
+              uid="{D2D32B93-2327-40F2-A6F7-EB10133210BC}"
+              p:after="r[@uid='{B1979CB6-767C-4F60-B176-304D765D3024}']"
               s:ds="{10081E75-8431-47DF-B9C1-9331D06E2CD1}"
               s:id="{BA0509C8-337A-45E7-A597-8035DC2F1C21}"
               s:ph="/main/fund-graphs" />

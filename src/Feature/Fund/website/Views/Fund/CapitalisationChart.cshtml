@@ -13,7 +13,7 @@
         </h3>
         <div class="chart-table chart-table-capitalisation">
             <!-- set values for char in data attribute -->
-            <canvas class="capitalisation-chart" width="400" height="400" data-chart='@Model.JsonDataObject'></canvas>
+            <canvas class="capitalisation-chart" data-chart='@Model.JsonDataObject'></canvas>
             @if (!Sitecore.Context.PageMode.IsExperienceEditor)
             {
                 <div class="capitalisation-legend"></div>

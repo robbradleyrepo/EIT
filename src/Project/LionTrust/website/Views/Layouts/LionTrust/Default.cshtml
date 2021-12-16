@@ -54,10 +54,7 @@
             break;
         case Constants.PageTypes.SearchPageTemplateId:
             mainClass = "result-list-app";
-            break;
-        case Constants.PageTypes.FundDetailPageTemplateId:
-            mainClass = "main-content";
-            break;
+            break;      
     }
 
     var isExperienceEditor = Sitecore.Context.PageMode.IsExperienceEditor ? "experience-editor" : string.Empty;
@@ -66,7 +63,7 @@
 <body class="@bodyClass @isExperienceEditor">
     @Html.Sitecore().Placeholder("onboarding")
     @Html.Sitecore().Placeholder("header")
-    <main id="main" role="main" class="@mainClass">
+    <main id="main" role="main" class="main-content @mainClass">
         @Html.Sitecore().Placeholder("main")
         @if (Sitecore.Context.PageMode.IsExperienceEditor)
         {
