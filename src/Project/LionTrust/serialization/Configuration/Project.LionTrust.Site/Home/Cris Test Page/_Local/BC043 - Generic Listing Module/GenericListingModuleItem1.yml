@@ -1,0 +1,34 @@
+﻿---
+ID: "2131ee48-3081-4d5b-aaa0-c2db106af160"
+Parent: "2f20aad4-f49d-4c76-b7e2-ac4065a0a530"
+Template: "ff052b94-76bd-4482-855f-af3712ee4872"
+Path: "/sitecore/content/LionTrustNew/Home/Cris Test Page/_Local/BC043 - Generic Listing Module/GenericListingModuleItem1"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "146cbbd2-0e88-4fd6-b4b4-49b462266089"
+      Hint: GenericListingModuleItem_Image
+      Value: |
+        <image mediaid="{2F232C81-353E-4815-B983-A45683AD5B3F}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211216T161018Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "62fa783b-735e-4510-91da-900018033ccc"
+      Hint: GenericListingModuleItem_Title
+      Value: Title
+    - ID: "694c3f81-60c0-4719-aa8c-5a4264623feb"
+      Hint: GenericListingModuleItem_Text
+      Value: Test 123
+    - ID: "f0c2dfc2-0f2e-4082-a532-87b9ad9b9b9e"
+      Hint: GenericListingModuleItem_Subtitle
+      Value: Subtitle
+    - ID: "ff934e56-badd-46e1-bfb4-695f32b1d6c5"
+      Hint: GenericListingModuleItem_ListingType
+      Value: "{2845866C-E868-4956-B863-AEB480E9C313}"

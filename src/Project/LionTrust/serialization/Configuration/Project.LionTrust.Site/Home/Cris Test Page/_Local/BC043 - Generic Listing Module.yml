@@ -1,0 +1,63 @@
+﻿---
+ID: "2f20aad4-f49d-4c76-b7e2-ac4065a0a530"
+Parent: "fb635e61-8157-4a7d-977b-cff34c37261f"
+Template: "7474cfba-30cc-4e88-9fc5-0848fce4c77c"
+Path: "/sitecore/content/LionTrustNew/Home/Cris Test Page/_Local/BC043 - Generic Listing Module"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211216T120628Z
+    - ID: "3c5309e0-2068-4614-984e-f1ae3d04c026"
+      Hint: ListingTitle
+      Value: "BC043 - Generic Listing Module"
+    - ID: "40f16d11-306f-4ee5-a862-c4c6fb61b56a"
+      Hint: GenericListingModule_SearchByKeywordLabel
+      Value: Search by keyword
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\cristina
+    - ID: "882bba30-5bfe-41d6-ac98-a85bec219ee0"
+      Hint: ListingTypes
+      Type: Multilist
+      Value: |
+        {2845866C-E868-4956-B863-AEB480E9C313}
+        {847DD6DE-EF25-4CBC-862A-5AF5C40D3BFE}
+        {5095A45E-0EF3-4851-A804-3A350027D53D}
+        {2E9BBE6E-F7C2-435A-85AF-7157AE6ECBE9}
+        {4F0C049D-FE08-4981-8825-8DA0F92ADDC5}
+        {05915A58-9FEF-41FD-8B15-0A23064D17BA}
+        {A428076E-6D0A-4AFE-9B28-25FE76F4178F}
+        {ABAD39E2-BD4C-447F-98EE-793D096DAC8C}
+        {161E99C6-5504-403C-B91D-777B3FC49185}
+        {867A1EC4-D9BC-4209-B191-2664D00E522E}
+        {BC6E0E75-287B-4205-8AE4-0B1D7A413DD7}
+        {A9B85BD5-7C9E-4460-8FA3-CB4E88385DC4}
+        {41FB4326-9B23-48A2-8963-8ACE279B7B76}
+        {A7F68252-DAC3-4119-B9BA-1D37278CAAE3}
+        {15F0C379-33C9-4EFE-805C-62044988F32C}
+    - ID: "b2d0a268-dd2e-4428-b55e-ac7d7299036d"
+      Hint: GenericListingModule_PreviousLabel
+      Value: prev
+    - ID: "ebce5416-ba23-40d1-8fbb-58487f247107"
+      Hint: GenericListingModuleFacets_Year
+      Type: Treelist
+      Value: |
+        {5CFA6543-A35B-4E94-851F-7A9D97A5D3B8}
+        {F8CEE407-719C-4FC7-988D-CF3A9786C54E}
+        {B4BBD660-4A1D-4489-B0A3-60F0378A8244}
+    - ID: "ec94129f-5daf-484d-852f-551008f7b82c"
+      Hint: GenericListingModuleFacets_Month
+      Type: Treelist
+      Value: |
+        {C2BEAAC9-0A6F-439D-94F7-38307444A534}
+        {D1760879-DD39-4EA8-A383-922C526E8AA2}
+        {B8C431D2-D1A1-4FBC-AABB-92C302AC2CE8}
+    - ID: "fa926def-dd37-4e78-969e-bcbcfe14d123"
+      Hint: GenericListingModule_NextLabel
+      Value: next
