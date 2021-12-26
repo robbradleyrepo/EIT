@@ -4,12 +4,11 @@
     padding-bottom: 20px
     // overflow-y: scroll
     flex-wrap: nowrap
+    margin: 0 auto
     @include breakpoint(desktop, up)
         padding-bottom: 30px
         justify-content: center
-        overflow-y: hidden
         @include breakpoint(desktop-large, up)
-            overflow-y: visible
     &__title
         @include p-1-medium-18
     &__btn
@@ -20,8 +19,10 @@
         font-weight: 300
         display: table
         white-space: nowrap
+        margin: 0 0 0 16px
         @include breakpoint(desktop, up)
             display: inline-block
+            margin: 0 0 0 32px
         @include breakpoint(desktop-large, up)
             @include font-size(18px)
             height: 48px
@@ -35,4 +36,7 @@
         align-items: center
         width: auto
     .swiper-slide
-        width: auto    
+        width: auto
+    & > .swiper-wrapper 
+        width: max-content
+        margin: 0 auto
