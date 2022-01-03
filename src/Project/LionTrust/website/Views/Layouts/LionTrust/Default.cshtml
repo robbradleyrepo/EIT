@@ -44,6 +44,9 @@
         case Constants.PageTypes.SearchPageTemplateId:
             bodyClass = "search-page";
             break;
+        case Constants.PageTypes.ContactUsPageTemplateId:
+            bodyClass = "contact-us";
+            break;
     }
 
     var mainClass = string.Empty;
@@ -54,7 +57,7 @@
             break;
         case Constants.PageTypes.SearchPageTemplateId:
             mainClass = "result-list-app";
-            break;      
+            break;
     }
 
     var isExperienceEditor = Sitecore.Context.PageMode.IsExperienceEditor ? "experience-editor" : string.Empty;

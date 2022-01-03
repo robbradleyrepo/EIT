@@ -1,0 +1,25 @@
+﻿---
+ID: "a3ee44b5-2dab-4082-bb17-084c25f1d244"
+Parent: "140d4bf4-d502-488d-8e71-ea9de0992473"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Contact/Grey Panel
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/blackboard.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Type: tree list
+  Value: "{5E0936C3-63AE-421B-B034-78BF1C545BAA}"
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{C62FDD2A-4B86-40A1-A0CA-FC346C1A883A}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210609T102154Z

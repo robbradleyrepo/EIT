@@ -65,5 +65,11 @@
             public const string Heading_FieldId = "{20EEA52D-E2F5-4044-BA05-2E4F9E01F28C}";
             public const string Description_FieldId = "{9C6F549A-4035-4989-BECF-73A7ADE8F016}";
         }
+
+        public static class GreyPanel
+        {
+            public const string Title_FieldId = "{F3276086-FE67-4134-A816-B5DC4748EB6C}";
+            public const string Description_FieldId = "{057159CA-7863-482D-89E6-D8C4D2118D8A}";
+        }
     }
 }
