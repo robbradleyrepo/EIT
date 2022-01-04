@@ -1,5 +1,4 @@
 <div class="article-filter-wrapper">
-    3
     <div class="article-filters" :class="mobileFilter ? 'active' : ''">
         <div class="article-filters__header">
             <div class="container">
@@ -80,7 +79,7 @@
                                     </div>
                                 </div>
                             </select-field>
-                            <select-field inline-template v-if="years.length">
+                            <select-field inline-template  v-if="years.length">
                                 <div class="article-filters__dropdown article-filters__dropdown-small relative" @click.stop style="display: none;" :style="init ? 'display: block' : ''">
                                     <div class="article-filters__select" @click="toggleOption" :class="open ? 'active' : ''">
                                         <span class="article-filters__item-title" :class="active ? 'active' : ''">
@@ -90,26 +89,25 @@
                                     </div>
                                     <div class="article-filters__options article-filters__options_small">
                                         <div class="article-filters__title" @click="hideOption">
-                                            <i class="icon-chevron-left"></i> Fund
+                                            <i class="icon-chevron-left"></i>
+                                            Fund
                                         </div>
                                         <option-field inline-template>
                                             <label class="option-checkbox option-checkbox_small" @click="setChoosen(!checked)">
-                                                <input class="option-checkbox__input" name="year" v-model="year"
-                                                    value="All" type="radio" @click="setYear('All')">
+                                                <input  class="option-checkbox__input" name="year" v-model="year" value="All" type="radio" @click="setYear('All')">
                                                 <span class="option-checkbox__text">All</span>
                                                 <span class="option-checkbox__icon"></span>
                                             </label>
-                                        </option-field>
-                                        <option-field inline-template v-for="(yearItem, i) in years" :key="i">
+                                        </option-field>                        
+                                        <option-field inline-template  v-for="(yearItem, i) in years" :key="i">
                                             <label class="option-checkbox option-checkbox_small" @click="setChoosen(!checked)">
-                                                <input class="option-checkbox__input" name="year" v-model="year"
-                                                    :value="yearItem" type="radio" @click="setYear(yearItem)">
+                                                <input  class="option-checkbox__input" name="year" v-model="year" :value="yearItem" type="radio" @click="setYear(yearItem)">
                                                 <span class="option-checkbox__text">{{yearItem}}</span>
                                                 <span class="option-checkbox__icon"></span>
-                                            </label>
-                                        </option-field>
+                                            </label>                                   
+                                        </option-field>            
                                     </div>
-                                </div>
+                                </div>   
                             </select-field>
                         </div>
                         <div class="article-filters__controls">
