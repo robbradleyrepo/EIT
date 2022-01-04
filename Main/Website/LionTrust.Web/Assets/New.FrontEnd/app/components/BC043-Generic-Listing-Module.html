@@ -1,5 +1,4 @@
-<div class="lister-app legacy-listmode" id="lister-app" data-host="GenericListingApi"
-    data-fundfacetid="7BE813CE-126D-42C8-B4AE-9370E32F9B50" data-parentid="C8DD748E-C4C8-4852-B644-E7F40EC7ABD9">
+<div class="lister-app legacy-listmode" id="lister-app" data-host="GenericListingApi" data-fundfacetid="7BE813CE-126D-42C8-B4AE-9370E32F9B50" data-parentid="C8DD748E-C4C8-4852-B644-E7F40EC7ABD9">
     <div class="article-filter-wrapper">
         <div class="article-filters" :class="mobileFilter ? 'active' : ''">
             <div class="article-filters__header">
@@ -12,8 +11,7 @@
                         </div>
                         <div class="col-lg-3">
                             <form class="search-form" @submit.prevent="submitSearchForm($event)">
-                                <input type="text" v-model="searchText" name="searchText"
-                                    class="search-form__input color-black" placeholder="Search by keyword">
+                                <input type="text" v-model="searchText" name="searchText" class="search-form__input color-black" placeholder="Search by keyword">
                                 <button class="search-form__submit pe-0" type="submit">
                                     <i class="icon-search"></i>
                                 </button>
@@ -99,7 +97,6 @@
             </div>
         </div>
     </div>
-
     <div class="container d-lg-none" v-if="getFacetsLength">
         <div class="d-flex justify-content-between margin-mob-fliter-btn mt-0" :class="!mobileFilter ? 'relative' : ''">
             <btn id="show-article-fliter" class="btn btn-clean" @click="toggleMobileFilter">
@@ -107,7 +104,6 @@
             </btn>
         </div>
     </div>
-
     <section class="container">
         <div class="text-center my-5" v-if="loading">
             <div class="spinner-border text-gold" role="status"></div>
@@ -126,9 +122,7 @@
                                     {{article.title}}
                                 </div>
                                 <div class="podcast-list-item__text" v-html="article.text">
-
                                 </div>
-
                             </div>
                         </div>
                     </div>
