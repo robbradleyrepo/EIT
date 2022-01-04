@@ -30,13 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
     fundsSlider();
     articleSlider();
     awardsSlider();
-    stickyNavbar();
     literatureOverlay();
     locationAndMap();
     shareLink();
     tabNav();
     headerCtaNav();
     preferenceCenter();
+    stickyNavbar();
     if (document.querySelector(".main-page")) parallaxScrolling();
     // init tooltips
     $('[data-toggle="tooltip"]').tooltip({

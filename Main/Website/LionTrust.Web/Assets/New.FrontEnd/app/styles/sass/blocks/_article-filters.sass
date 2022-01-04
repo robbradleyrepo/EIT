@@ -172,6 +172,16 @@ body
         &__btn_primary
             background-color: $primary
             color: $white
+        &__selectControls
+            display: flex
+            width: 100%
+            justify-content: space-between
+            +breakpoint(tablet, down)
+                flex-direction: column
+        &__lists-sort
+            .article-filters__selectControls
+                +breakpoint(desktop, up)
+                    width: auto
     .article-filters, .gallery-filter
         .search-form
             &__input
@@ -303,3 +313,5 @@ body
         align-items: flex-end
         flex-direction: row
         display: flex
+
+    
