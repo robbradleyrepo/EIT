@@ -3,7 +3,7 @@ export default () => {
     $body = $('body'),
     $win = $(window);
 
-    $(document).on("click", "#view-documents", () => {
+    $(document).on("click", ".view-fund-literature", () => {
         $(".lit-overlay__wrapper").addClass("active");
         $(".sidebar-overlay").addClass("sidebar-overlay_active");
         offsetY = window.pageYOffset;
