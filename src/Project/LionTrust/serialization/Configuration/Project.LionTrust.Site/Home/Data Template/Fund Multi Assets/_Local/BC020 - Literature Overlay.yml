@@ -17,6 +17,9 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "1000613e-6f3e-4db4-91ef-c1b5d447dee2"
+      Hint: Literature_Fund
+      Value: "{57693A76-6051-4FE0-AF4C-1CA2C87F2989}"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20211112T115553Z
@@ -24,3 +27,10 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\Admin
+    - ID: "6b74c5e5-7f94-405c-9e38-2b38fcc30079"
+      Hint: Literature_Heading
+      Value: Fund literature
+    - ID: "eeed7c2e-dc3c-4e29-9855-03bd4f9139ad"
+      Hint: Literature_Cta
+      Value: |
+        <link text="View latest fund update" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{7E9E8706-F864-48E5-B4A2-57F2C408EFD7}" />
