@@ -8,36 +8,39 @@ export default () => {
     var hashText = $(sectionHash[index]).text();
     $(sectionToScroll[index]).text(hashText);
   });
-
   sectionToScroll.each(function (index) {
-    var nextOfHash = $(sectionToScroll[index] ).next()
-    $(sectionToScroll[index] ).prependTo(nextOfHash);
-    $(sectionToScroll).parent().css('position','relative')
+    var addID = $(sectionToScroll[index]).attr('id');
+    $(this).removeAttr('id');
+    var nextOfHash = $(sectionToScroll[index]).next()
+    $(nextOfHash).attr('id', addID);
   });
-
-  const content = document.querySelector('.main-content');
-  scrollnav.init(content, {
-    sections: '.section-spy',
-  });
-  $('.scroll-nav').prepend('<span class="scroll-nav__hidden">On this page</spna>');
-  $('.scroll-nav').children().wrapAll('<div class="container d-flex"></div>');
-  const stickyPostion = $('.scroll-nav').offset().top;
+  const stickyPostion = $('.page-anchor-link').offset().top;
   function stickyNav() {
     if (window.pageYOffset >= stickyPostion) {
-      $(".scroll-nav").addClass("sticky");
+      $(".page-anchor-link").addClass("sticky");
     }
     else {
-      $(".scroll-nav").removeClass("sticky");
+      $(".page-anchor-link").removeClass("sticky");
     }
   }
-  const openBtn = $(".scroll-nav__hidden");
+  const openBtn = $("#open-page-anchor");
   openBtn.on("click", (e) => {
     e.stopPropagation();
-    $(".scroll-nav__list").stop().slideToggle();
+    $(".page-anchor__links-mobile").stop().slideToggle();
     openBtn.toggleClass("active");
   });
   document.addEventListener("click", () => {
-    $(".scroll-nav__list").stop().slideUp();
+    $(".page-anchor__links-mobile").stop().slideUp();
     openBtn.removeClass("active");
   });
+  (function ($) {
+    $(window).on("load", function () {
+      $("#sticky-navbar a").mPageScroll2id({
+        highlightSelector: "#sticky-navbar a",
+        liveSelector: "#sticky-navbar a",
+        offset: 80,
+        keepHighlightUntilNext: true
+      });
+    });
+  })(jQuery);
 };

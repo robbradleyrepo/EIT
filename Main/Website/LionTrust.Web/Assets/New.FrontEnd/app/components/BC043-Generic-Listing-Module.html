@@ -23,51 +23,59 @@
             <div class="article-filters__body" v-if="getFacetsLength">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12">
-                            <div class="article-filters__selectControls">
-                                <select-field inline-template v-for="(facet, i) in getFacets" :key="i">
-                                    <div class=" article-filters__dropdown relative" @click.stop>
-                                        <div class="article-filters__select" @click="toggleOption" :class="open ? 'active' : ''">
-                                            <span class="article-filters__item-title" :class="active ? 'active' : ''">
-                                                {{facet.name}}
-                                            </span>
-                                            <i class="article-filters__icon-arrow"></i>
-                                        </div>
-                                        <div class="article-filters__options">
-                                            <div class="article-filters__title" @click="hideOption">
-                                                <i class="icon-chevron-left"></i> {{facet.name}}
-                                            </div>
-                                            <option-field inline-template v-for="(item, i) in facet.items" :for="item.name" :key="i + item.name">
-                                                <label class="option-checkbox">
-                                                    <input :id="item.name" class="option-checkbox__input"
-                                                        type="checkbox" v-model="checked"
-                                                        @change="toggleSelect(item, facet)"
-                                                        @click="setChoosen(!checked)">
-                                                    <span class="option-checkbox__text">{{item.name}} </span>
-                                                    <span class="option-checkbox__icon"></span>
-                                                </label>
-                                            </option-field>
-                                        </div>
+                        <div class="col-12 article-filters__lists">
+                            <select-field inline-template v-for="(facet, i) in getFacets" :key="i">
+                                <div class="article-filters__dropdown relative" @click.stop>
+                                    <div class="article-filters__select" @click="toggleOption"
+                                        :class="open ? 'active' : ''">
+                                        <span class="article-filters__item-title" :class="active ? 'active' : ''">
+                                            {{facet.name}}
+                                        </span>
+                                        <i class="article-filters__icon-arrow"></i>
                                     </div>
-                                </select-field>
-                            </div>
+                                    <div class="article-filters__options">
+                                        <div class="article-filters__title" @click="hideOption">
+                                            <i class="icon-chevron-left"></i>
+                                            {{facet.name}}
+                                        </div>
+                                        <option-field inline-template v-for="(item, i) in facet.items" :for="item.name"
+                                            :key="i + item.name">
+                                            <label class="option-checkbox">
+                                                <input :id="item.name" class="option-checkbox__input" type="checkbox"
+                                                    v-model="checked" @change="toggleSelect(item, facet)"
+                                                    @click="setChoosen(!checked)">
+                                                <span class="option-checkbox__text">{{item.name}} </span>
+                                                <span class="option-checkbox__icon"></span>
+                                            </label>
+                                        </option-field>
+                                    </div>
+                                </div>
+                            </select-field>
                             <div class="article-filters__controls">
                                 <div class="article-filters__btns justify-content-end">
-                                    <button class="btn article-filters__btn article-filters__btn_apply d-none d-xl-block" @click="applyFilters" :class="activeButton ? 'article-filters__btn_primary' : ''">
+                                    <button
+                                        class="btn article-filters__btn article-filters__btn_apply d-none d-xl-block"
+                                        @click="applyFilters"
+                                        :class="activeButton ? 'article-filters__btn_primary' : ''">
                                         Apply filters
                                     </button>
-                                    <button class="clear-filter btn article-filters__btn article-filters__btn_clear d-none d-xl-block" @click="clearFilters">
+                                    <button
+                                        class="clear-filter btn article-filters__btn article-filters__btn_clear d-none d-xl-block"
+                                        @click="clearFilters">
                                         Clear
                                     </button>
-                                    <btn @click="applyFilters" class="btn btn-clean d-none d-md-block d-xl-none" :class="activeButton ? 'text-primary' : ''" @click="toggleMobileFilter">
+                                    <btn @click="applyFilters" class="btn btn-clean d-none d-md-block d-xl-none"
+                                        :class="activeButton ? 'text-primary' : ''" @click="toggleMobileFilter">
                                         <i class="icon-filter"></i> Apply
                                     </btn>
-                                    <btn @click="clearFilters" class="btn btn-clean d-none d-md-block d-xl-none" @click="toggleMobileFilter">
+                                    <btn @click="clearFilters" class="btn btn-clean d-none d-md-block d-xl-none"
+                                        @click="toggleMobileFilter">
                                         <i class="icon-refresh"></i> clear
                                     </btn>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -152,22 +160,27 @@
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
                 <nav v-if="getPageAmount > 1" class="pagination mt-3">
-                    <a href="#" @click.prevent="prevPage" class="pagination__step pagination__step_forward" :class="disablePrevBtn ? 'pagination__step_disabled' : ''"><i class="icon-arrow-left"></i>
+                    <a href="#" @click.prevent="prevPage" class="pagination__step pagination__step_forward"
+                        :class="disablePrevBtn ? 'pagination__step_disabled' : ''"><i class="icon-arrow-left"></i>
                         Previous</a>
                     <ul class="pagination__list">
                         <li class="pagination__item">
-                            <a @click.prevent="jumpPagesForward" v-if="showForwardPageBtn" href="#" class="pagination__link pagination__link_steps">...</a>
+                            <a @click.prevent="jumpPagesForward" v-if="showForwardPageBtn" href="#"
+                                class="pagination__link pagination__link_steps">...</a>
                         </li>
                         <li v-for="(page, i) in getPages" :key="i" class="pagination__item">
-                            <a @click.prevent="changePage(page)" href="#" class="pagination__link" :class="getPage === page ? 'active' : ''">
+                            <a @click.prevent="changePage(page)" href="#" class="pagination__link"
+                                :class="getPage === page ? 'active' : ''">
                                 {{page}}
                             </a>
                         </li>
                         <li class="pagination__item">
-                            <a @click.prevent="jumpPagesNext" v-if="showNextPageBtn" href="#" class="pagination__link pagination__link_steps">...</a>
+                            <a @click.prevent="jumpPagesNext" v-if="showNextPageBtn" href="#"
+                                class="pagination__link pagination__link_steps">...</a>
                         </li>
                     </ul>
-                    <a href="#" @click.prevent="nextPage" :class="disabledNextBtn ? 'pagination__step_disabled' : ''" class="pagination__step pagination__step_next">Next <i class="icon-arrow-right"></i></a>
+                    <a href="#" @click.prevent="nextPage" :class="disabledNextBtn ? 'pagination__step_disabled' : ''"
+                        class="pagination__step pagination__step_next">Next <i class="icon-arrow-right"></i></a>
                 </nav>
             </div>
         </div>
