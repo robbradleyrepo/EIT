@@ -1,0 +1,36 @@
+﻿---
+ID: "20ea0a46-e4bc-4734-880b-5638a31a082d"
+Parent: "c8e97f82-4fb2-46d3-b162-8fa1fb9fe0ff"
+Template: "66e09d5b-4f8e-4313-9df3-fa7e53fbe83a"
+Path: /sitecore/content/LionTrustNew/Global/Funds/Shared documents/Liontrust Sustainable Future Investment Process Fixed Income
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200728T150052Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "8de3f234-7880-4703-8534-02bb8320c09c"
+      Hint: LegacyDocument_RelatedFunds
+      Type: Multilist
+      Value: |
+        {F0851E0C-4F1A-4A72-A58B-867D503CC93B}
+        {DD0F5697-85A7-4DCD-B62C-649585C8423B}
+        {478C9CBC-C736-4A04-B555-E65998A64C16}
+    - ID: "a4a7f9dd-a218-4f33-b72a-7dc2251ccd43"
+      Hint: LegacyDocument_DocumentTypes
+      Type: Multilist
+      Value: "{FE914872-2BEA-4BC4-8094-E7AA7A461694}"
+    - ID: "c794210e-6107-4d69-841f-773cb9943bba"
+      Hint: LegacyDocument_DownloadLink
+      Value: |
+        <link target="" linktype="media" id="{B77B9F99-AC91-480D-8664-B3C93CA5560F}" url="/LionTrust/Files/fund-literature/process-documents/sustainable-future-fixed-income-process" />
+    - ID: "eeb8db99-7da8-4973-adf7-bcf7b29eba79"
+      Hint: LegacyDocument_DocumentName
+      Value: "Liontrust Sustainable Future Investment Process - Fixed Income"

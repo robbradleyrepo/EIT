@@ -18,13 +18,13 @@
                         {
                             using (Html.Glass().BeginRenderLink(document, m => m.DocumentLink, new NameValueCollection { { "class", "key-document__link" } }, isEditable: true))
                             {
-                                <i class="icon-file"></i>@:Download @Html.Glass().Editable(document, m => m.DocumentName)
+                                <i class="icon-file"></i>@Html.Glass().Editable(document, m => m.DocumentName)
                             }
                         }
                     </div>
                 }
                 <div class="text-center key-document__button">
-                    <a href="#" class="btn btn-primary-forward view-documents">
+                    <a href="#" class="btn btn-primary-forward view-fund-literature">
                         @Html.Glass().Editable(Model, m => m.ViewAllDocumentsLabel) <i class="icon-arrow-right animate-arrow"></i>
                     </a>
                 </div>

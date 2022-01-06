@@ -4,7 +4,10 @@
     using LionTrust.Feature.Fund.FundClass;
     using LionTrust.Feature.Fund.Models;
     using Sitecore.Mvc.Controllers;
+    using System;
     using System.Linq;
+    using System.Text;
+    using System.Text.RegularExpressions;
     using System.Web.Mvc;
 
     public class FundStatsController : SitecoreController
@@ -32,24 +35,106 @@
 
             var pageData = _context.GetPageContextItem<IFundSelector>();
             var fund = datasource.Fund != null ? datasource.Fund : pageData?.Fund;
+
+            if (fund == null)
+            {
+                return new EmptyResult();
+            }
+
             var citiCode = FundClassSwitcherHelper.GetCitiCode(HttpContext, fund);
+
+            datasource.Fund.FundSize = GetFundSizeFormatted(fund.FundSize);
+
             var viewModel = new FundStatsViewModel()
             {
-                FundSelector = datasource
+                FundSelector = datasource                
             };
             
-            if (fund != null)
+            var fundClass = fund.Classes.Where(c => c.CitiCode == citiCode).FirstOrDefault();
+            if (fundClass != null)
             {
-                var fundClass = fund.Classes.Where(c => c.CitiCode == citiCode).FirstOrDefault();
-                if (fundClass != null)
+                var fundValues = _fundRepository.GetFundStatsDetails(fundClass);
+                if (fundValues != null)
                 {
-                    var fundValues = _fundRepository.GetFundStatsDetails(fundClass);
-                    if (fundValues != null)
-                        viewModel.FundValues = fundValues;
+                    fundValues.FundSize = GetFundSizeFormatted(fundValues.FundSize);
+                    viewModel.FundValues = fundValues;
                 }
+
+                // compute the Manager Inception Date as the oldest out of all the fund classes
+                var managerInceptionDate = fundClass.ManagerInceptionDateOfFund != DateTime.MinValue ? fundClass.ManagerInceptionDateOfFund : DateTime.MaxValue;
+                foreach (var cls in fund.Classes.Where(c => c.CitiCode != citiCode))
+                {
+                    if (cls.ManagerInceptionDateOfFund != DateTime.MinValue && cls.ManagerInceptionDateOfFund < managerInceptionDate)
+                    {
+                        managerInceptionDate = cls.ManagerInceptionDateOfFund;
+                    }
+                }
+
+                viewModel.ManagedLength = GetManagedLength(managerInceptionDate != DateTime.MaxValue ? managerInceptionDate : datasource.Fund.LaunchDate);
             }
 
             return View("/views/fund/FourFundStats.cshtml", viewModel);
+        }
+
+        private string GetFundSizeFormatted(string fundSize)
+        {
+            if (string.IsNullOrWhiteSpace(fundSize))
+            {
+                return fundSize;
+            }
+
+            decimal fundSizeDecimal;
+
+            //Eg. £12874748.8445 - This regex gets the decimal value from the string.
+            var decimalsFromString = Regex.Match(fundSize, @"(\d+(\.\d+)?)|(\.\d+)")?.Value;
+            if (decimal.TryParse(decimalsFromString, out fundSizeDecimal))
+            {
+                //First char is normally the currency.
+                var currencyChar = fundSize.ToArray().FirstOrDefault(x => char.IsSymbol(x));
+
+                //format with currency, commas and decimal eg. £12,000.56
+                fundSize = string.Format("{0}{1:n}", currencyChar, fundSizeDecimal);
+            }
+
+            return fundSize;
+        }
+
+        private string GetManagedLength(DateTime launchDate)
+        {
+            if(launchDate == null)
+            {
+                return null;
+            }
+
+            var now = DateTime.Today;
+            var lengthCount = now.Year - launchDate.Year;
+            var label = new StringBuilder();
+
+            if(lengthCount > 0)
+            {
+                label.Append(Sitecore.Globalization.Translate.Text("Year"));
+            }
+            else
+            {
+                lengthCount = now.Month - launchDate.Month;
+
+                if(lengthCount > 0)
+                {
+                    label.Append(Sitecore.Globalization.Translate.Text("Month"));
+                }
+                else
+                {
+                    lengthCount = now.Day - launchDate.Day;
+                    label.Append(Sitecore.Globalization.Translate.Text("Day"));
+                }
+            }
+
+            if (lengthCount > 1)
+            {
+                label = label.Append("s");
+            }
+
+            return $"{lengthCount} {label}";
         }
     }
 }

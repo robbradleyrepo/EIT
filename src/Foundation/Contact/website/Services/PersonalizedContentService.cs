@@ -43,7 +43,7 @@
         {
             var context = (Context)WebUtil.GetSessionValue(Constants.SessionKeys.ContextSessionKey, HttpContext.Current);
 
-            if (context == null)
+            if (context == null || context.Preferences == null)
             {
                 var queryStringRef = WebUtil.GetQueryString(Constants.QueryStringNames.EmailPreferencefParams.RefQueryStringKey);
 
@@ -96,7 +96,7 @@
                 SFEntityId = sfEntityId
             };
 
-            context.Preferences = sfEntityUtilityObj.GetSFEmailPreferences(context, true);
+            context.Preferences = sfEntityUtilityObj.GetSFEmailPreferences(context, false);
             UpdateContext(context);
 
             return context;

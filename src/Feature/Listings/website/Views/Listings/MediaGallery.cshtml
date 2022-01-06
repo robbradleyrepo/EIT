@@ -2,182 +2,117 @@
 @model LionTrust.Feature.Listings.Models.MediaGallery.IMediaGallery
 @if (Model != null)
 {
-    <section id="gallery-app" class="gallery-app" data-host="MediaGalleryApi" data-galleryid="@Model.Id">
-        <div class="gallery-filter">
-            <div class="container">
-                <div class="row">
-                    <select-field inline-template>
-                        <div class="col-lg-3 offset-lg-3 relative"
-                             @@click.stop
-                             style="display: none"
-                             :style="init ? 'display: block' : ''">
-                            <div class="article-filters__select"
-                                 @@click="toggleOption"
-                                 :class="open ? 'active' : ''">
-                                <span class="article-filters__item-title"
-                                      :class="active ? 'active' : ''">
-                                    @Html.Glass().Editable(Model, m => m.FilterByCategoryLabel)
-                                </span>
-                                <i class="article-filters__icon-arrow"></i>
-                            </div>
-                            <div class="article-filters__options">
-                                <div class="article-filters__title" @@click="toggleOption">
-                                    <i class="icon-chevron-left"></i>
-                                    @Html.Glass().Editable(Model, m => m.FilterByCategoryLabel)
+    <div class="media-gallery">
+        <div class="container-fluid p-0">
+            <div class="row">
+                <div class="col-12">
+                    <div class="media-gallery__filter">
+                        <div class="filter-gallery media-gallery__dropdown">
+                            <div class="filter-gallery__group">
+                                <div class="filter-gallery__label">
+                                    <p>@Html.Glass().Editable(Model, m => m.FilterByCategoryLabel) </p><i class="article-filters__icon-arrow"></i>
                                 </div>
-                                <option-field inline-template>
-                                    <label class="option-checkbox">
-                                        <input class="option-checkbox__input"
-                                               name="facetname"
-                                               v-model="name"
-                                               value="All"
-                                               type="radio"
-                                               @@click="selectFacet('')" />
-                                        <span class="option-checkbox__text">All</span>
-                                        <span class="option-checkbox__icon"></span>
-                                    </label>
-                                </option-field>
-                                <option-field inline-template
-                                              v-for="facet in facets"
-                                              :key="facet.identifier"
-                                              :facet="facet"
-                                              @@closetab="toggleOption">
-                                    <label class="option-checkbox">
-                                        <input class="option-checkbox__input"
-                                               name="facetname"
-                                               type="radio"
-                                               v-model="name"
-                                               :value="facet.name"
-                                               @@click="selectFacet(facet.identifier)" />
-                                        <span class="option-checkbox__text">{{facet.name}}</span>
-                                        <span class="option-checkbox__icon"></span>
-                                    </label>
-                                </option-field>
+                                @if (Model.FilterCategoryFolder != null && Model.FilterCategoryFolder.FundTeams != null)
+                                {                                    
+                                    <div class="filter-gallery__options">
+                                        <button class="filter-gallery__option" data-group="">All</button>
+                                        @foreach (var fundTeam in Model.FilterCategoryFolder.FundTeams)
+                                        {
+                                            <button class="filter-gallery__option" data-group="@fundTeam.Id.ToString()">@fundTeam.TeamName</button>
+                                        }
+                                    </div>
+                                }
                             </div>
                         </div>
-                    </select-field>
-
-                    <div class="col-lg-3">
-                        <form class="search-form" @@submit.prevent="submitSearchForm($event)">
+                        <div class="filter-gallery media-gallery__search">
                             @if (Sitecore.Context.PageMode.IsExperienceEditor)
                             {
                                 @Html.Glass().Editable(Model, m => m.SearchByKeywordLabel)
                             }
                             else
                             {
-                                <input type="text" v-model="searchText" name="searchText" class="search-form__input color-black"
-                                       placeholder="@Model.SearchByKeywordLabel">
+                                <input class="filter-gallery__search-input" type="search" placeholder="@Model.SearchByKeywordLabel" />
                             }
-                            <button class="search-form__submit pe-0" type="submit">
-                                <i class="icon-search"></i>
-                            </button>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="container">
-            <div class="gallary-download-check">
-                <div class="text-center spineer-loader" :style="!loading ? 'display: none' : ''">
-                    <div class="spinner-border text-gold" role="status"></div>
-                </div>
-                <label class="checkbox">
-                    <input v-model="selectAllDocuments" type="checkbox" class="checkbox__input">
-                    <span class="checkbox__box"></span>
-                    <div class="checkbox__title">@Html.Glass().Editable(Model, m => m.SelectAllLabel)</div>
-                </label>
-                <button @@click="downloadDocumentMultiple" v-if="selectAllDocuments || selectedDocumentIds.length"
-                        class="btn btn-primary">
-                    @Html.Glass().Editable(Model, m => m.DownloadSelectedLabel) <i class="icon-download"></i>
-                </button>
-            </div>
-            <div class="media-listing">
-                <div class="row">
-                    <media-item inline-template
-                                v-for="(item,i) in items"
-                                :key="item.id"
-                                :element="item"
-                                :index="i">
-                        <div class="col-sm-6 col-lg-3 col-xl-2">
-                            <div class="media-item">
-                                <div class="media-item__body">
-                                    <div class="media-item__gallery">
-                                        <a :href="element.headShotImage.url"
-                                           :data-caption="element.description"
-                                           class="media-item-image-gallary"
-                                           :data-fancybox="'images' + index">
-                                            <img class="media-item__image"
-                                                 :src="element.headShotImage.url" />
-                                        </a>
-                                        <div v-if="element.fullBodyImage" style="display: none">
-                                            <a :data-caption="element.description"
-                                               class="media-item-image-gallary"
-                                               :href="element.fullBodyImage.url"
-                                               :data-fancybox="'images' + index">
-                                                <img class="media-item__image"
-                                                     :src="element.fullBodyImage.url" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="media-item__text">
-                                        <span>{{element.description}}</span>
-                                        <div class="media-item__checkboxes"
-                                             v-if="element.fullBodyImage">
-                                            <select-field inline-template
-                                                          @@on -check="selectDocument(element.headShotImage.id)">
-                                                <label class="checkbox checkbox-sm">
-                                                    <input :checked="selected"
-                                                           @@change="onChange"
-                                                           type="checkbox"
-                                                           class="checkbox__input" />
-                                                    <span class="checkbox__box"></span>
-                                                    <div class="checkbox__title">@Html.Glass().Editable(Model, m => m.HeadshotLabel)</div>
-                                                </label>
-                                            </select-field>
-                                            <select-field inline-template @@on -check="selectDocument(element.fullBodyImage.id)">
-                                                <label class="checkbox checkbox-sm">
-                                                    <input :checked="selected" @@change="onChange" type="checkbox"
-                                                           class="checkbox__input">
-                                                    <span class="checkbox__box"></span>
-                                                    <div class="checkbox__title">@Html.Glass().Editable(Model, m => m.FullBodyLabel)</div>
-                                                </label>
-                                            </select-field>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="media-item__footer">
-                                    <select-field inline-template @@on -check="selectDocument(element.headShotImage.id)" v-if="!element.fullBodyImage">
-                                        <label class="checkbox checkbox-sm">
-                                            <input :checked="selected" @@change="onChange" type="checkbox"
-                                                   class="checkbox__input">
-                                            <span class="checkbox__box"></span>
-                                            <div class="checkbox__title">@Html.Glass().Editable(Model, m => m.SelectLabel)</div>
-                                        </label>
-                                    </select-field>
-
-                                    <a href="#" @@click.prevent="download" @@click.prevent="downloadDocument" class="link-styles">
-                                        <i class="icon-download"></i>
-                                        @Html.Glass().Editable(Model, m => m.DownloadLabel)
-                                    </a>
-                                </div>
-                            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="media-gallery__actions">
+                        <div class="media-gallery__select text-black">
+                            <label class="checkbox">
+                                <input type="checkbox" class='checkbox__input' id='select-all'>
+                                <span class="checkbox__box"></span>
+                                @Html.Glass().Editable(Model, m => m.SelectAllLabel)
+                            </label>
                         </div>
-                    </media-item>
+                        <div class="media-gallery__download-all">
+                            <a class="btn btn-primary media-gallery__download-selected" href="#" id="download-selected">
+                                @Html.Glass().Editable(Model, m => m.DownloadSelectedLabel) <i class="icon-download animate-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="gallary-download-check">
-                <label class="checkbox">
-                    <input v-model="selectAllDocuments" type="checkbox" class="checkbox__input">
-                    <span class="checkbox__box"></span>
-                    <div class="checkbox__title">@Html.Glass().Editable(Model, m => m.SelectAllLabel)</div>
-                </label>
-                <button @@click="downloadDocumentMultiple" v-if="selectAllDocuments || selectedDocumentIds.length"
-                        class="btn btn-primary">
-                    @Html.Glass().Editable(Model, m => m.DownloadSelectedLabel) <i class="icon-download"></i>
-                </button>
             </div>
         </div>
-    </section>
+        <div class="media-gallery__media container">
+            <div id="mediaGallery" class="media-gallery__cards row">
+                @if (Model.MediaItems != null)
+                {
+                    foreach (var mediaItem in Model.MediaItems)
+                    {
+                        var fundTeams = mediaItem.Categories != null && mediaItem.Categories.Any()
+                            ? string.Join(",", mediaItem.Categories.Select(c => "\"" + c.Id.ToString() + "\""))
+                            : string.Empty;
+                        <div class="media-gallery__card col-12 col-md-6 col-lg-2" data-groups='[@fundTeams]' data-title="@mediaItem.Name">
+                            @if (Sitecore.Context.PageMode.IsExperienceEditor)
+                            {
+                                @Html.Glass().Editable(mediaItem, m => m.HeadshotImage)
+                                @Html.Glass().Editable(mediaItem, m => m.FullBodyImage)
+                                <p class="media-gallery__description">
+                                    @Html.Glass().Editable(mediaItem, m => m.Description)
+                                </p>
+                            }
+                            else
+                            {
+                                if (mediaItem.HeadshotImage != null && mediaItem.FullBodyImage != null)
+                                {
+                                    <div class="media-gallery__img">
+                                        <a href="@mediaItem.FullBodyImage.Src" data-fancybox="images"
+                                           data-caption="Caption for single image <a class='media-gallery__download' href='@mediaItem.FullBodyImage.Src' download>download</a>">
+                                            <img src="@mediaItem.HeadshotImage.Src" alt="" />
+                                        </a>
+                                    </div>
+                                }
+                                <p class="media-gallery__description">
+                                    @mediaItem.Description
+                                </p>
+                                if (mediaItem.HeadshotImage != null && mediaItem.FullBodyImage != null)
+                                {
+                                    <div class="media-gallery__controls">
+                                        <div class="media-gallery__select text-black">
+                                            <label class="checkbox">
+                                                <input type="checkbox" class="checkbox__input" name="checkMedia" data-id="@mediaItem.HeadshotImage.MediaId">
+                                                <span class="checkbox__box"></span>
+                                                @Html.Glass().Editable(Model, m => m.SelectLabel)
+                                            </label>
+                                        </div>
+                                        <div class="media-gallery__download text-black">
+                                            <a href="@mediaItem.HeadshotImage.Src" download>@Html.Glass().Editable(Model, m => m.DownloadLabel)</a>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    }
+                }                
+                <div class="col-1@sm col-1@xs my-sizer-element"></div>
+            </div>
+        </div>
+    </div>   
 }
 else if (Sitecore.Context.PageMode.IsExperienceEditor)
 {

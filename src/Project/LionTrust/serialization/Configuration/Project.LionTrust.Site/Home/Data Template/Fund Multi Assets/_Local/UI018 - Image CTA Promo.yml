@@ -1,0 +1,39 @@
+﻿---
+ID: "5be97352-3a9d-4a56-b649-d48af775d390"
+Parent: "be90c992-f129-482b-932b-80f3e6223371"
+Template: "d3d9d2ce-b2ce-49ac-b50d-6a5ffd4c4ab8"
+Path: "/sitecore/content/LionTrustNew/Home/Data Template/Fund Multi Assets/_Local/UI018 - Image CTA Promo"
+DB: master
+BranchID: "f99e0a5b-d9b4-45ca-8304-311c93a7737e"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 1700
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{F730C1E8-F093-46C8-8552-A8E140D48B31}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1054e4b6-1cf5-4c08-8a6d-d9b02fb17050"
+      Hint: ImageCTAPromo_Image
+      Value: |
+        <image mediaid="{BFA0670B-C6AC-4868-BEEF-788A63E5DA8B}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211112T115554Z
+    - ID: "48bf236b-0681-4a09-9085-4933fa1c4a7a"
+      Hint: ImageCTAPromo_Body
+      Value: "Before joining Liontrust in early 2018, David and Phil worked together at Kames Capital for 14 years, where David was Head of the Fixed income team and Phil was Head of Investment Strategy. They launched one of the first strategic bond funds in 2003 and have been investing in high yield on a global basis since 2003. Donald was previously an investment manager in the Credit team at Baillie Gifford and worked with David and Phil at Kames Capital for three years from 2005 to 2008. He was co-manager of the Baillie Gifford High Yield Bond Fund from June 2010 to 2017 and the US High yield strategy.Body: [No text in field]"
+    - ID: "4c838697-dbeb-4998-a261-ccc77bc59259"
+      Hint: ImageCTAPromo_Subtitle
+      Value: David Roberts (left), Phil Milburn (right) and Donald Phillips (centre) manage the Liontrust Global Fixed Income Process.
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "7a84ea30-ff24-4c46-ae8f-51fcff940663"
+      Hint: ImageCTAPromo_Title
+      Value: Meet the team

@@ -1,6 +1,7 @@
 ﻿namespace LionTrust.Feature.Fund.CapitalisationChart
 {
     using Glass.Mapper.Sc.Web.Mvc;
+    using LionTrust.Feature.Fund.Repository;
     using Newtonsoft.Json;
     using Sitecore.Mvc.Controllers;
     using System.Linq;
@@ -24,7 +25,7 @@
 
             if (datasource.Children != null)
             {
-                var data = new { labels = datasource.Children.Select(c => c.RowName), data = datasource.Children.Select(c => c.Value), backgroundColor = datasource.Children.Select(c => c?.BackgroundColour?.Value) };
+                var data = new { labels = datasource.Children.Select(c => c.RowName), data = datasource.Children.Select(c => FundRepository.GetTwoDecimalsFormat(c.Value)), backgroundColor = datasource.Children.Select(c => c?.BackgroundColour?.Value) };
                 datasource.JsonDataObject = JsonConvert.SerializeObject(data);
             }
 

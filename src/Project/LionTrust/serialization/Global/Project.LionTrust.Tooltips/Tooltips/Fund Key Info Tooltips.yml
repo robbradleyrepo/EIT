@@ -1,0 +1,27 @@
+﻿---
+ID: "b4df1c29-12ad-4b17-9ed2-7124a1f5e1a2"
+Parent: "8cc89437-a21a-4b3b-a661-d46396cf9802"
+Template: "760ebc2c-3109-4906-939f-9e2fa032be5d"
+Path: /sitecore/content/LionTrustNew/Global/Tooltips/Fund Key Info Tooltips
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211123T131054Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "756526dc-356d-43a0-8028-9d7439391c66"
+      Hint: FundTooltip_TargetBenchmarkYield
+      Value: This field is the Target Benchmark
+    - ID: "a3aad7b8-0f51-4d39-a43f-278f46345b34"
+      Hint: FundTooltip_PriceDate
+      Value: This is the date when the price shown was calculated. Our funds are valued on a forward basis and the price received if you deal today may differ. Please refer to the fund KIID for details of valuation points.
+    - ID: "b1714a77-7578-4004-8399-cc3259022a8c"
+      Hint: FundTooltip_Comparator1
+      Value: This field is the first Comparator.

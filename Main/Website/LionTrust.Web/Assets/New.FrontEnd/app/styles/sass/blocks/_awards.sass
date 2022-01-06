@@ -5,6 +5,7 @@
     padding-top: 23px
     padding-bottom: 16px
     background: #F7F9FC
+    border-bottom: 2px solid $primary
     @include breakpoint(desktop, up)
         padding-top: 88px
     &__heading
@@ -42,6 +43,8 @@
         @include p-1-normal-18
         color: $secondary-gray
         text-align: center
+    .swiper-button-disabled
+        opacity: 0
 
 .swiper-container-awards
     width: 100%

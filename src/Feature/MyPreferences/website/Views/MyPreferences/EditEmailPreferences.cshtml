@@ -1,88 +1,42 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @model LionTrust.Feature.MyPreferences.Models.EditEmailPreferencesViewModel
-<section class="container">
-    @if (string.IsNullOrWhiteSpace(Model.ErrorText))
-    {
-        <div class="row">
-            <div class="col-lg-6">
-                <h2>@Html.Glass().Editable(Model.Content, x => x.Title)</h2>
+<div class="article-with-small my-4 text-black">
 
-                <div class="subtitle-label-light">
-                    @Html.Glass().Editable(Model.Content, x => x.Subtitle)
+    @if (!string.IsNullOrWhiteSpace(Model.Error))
+    {
+        <p class="text-danger">@Html.Raw(Model.Error)</p>
+    }
+<section class="edit-preferences">
+    <h3>@Html.Glass().Editable(Model.Content, x => x.Title)</h3>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.Hidden("DatasourceId", Model.Content.Id)
+        @Html.Sitecore().Placeholder("fund-accordion-list")
+        <div class="row mt-4">
+            <div class="col-lg-12">
+                <div class="edit-preferences__select">
+                    <label class="checkbox">
+                        @Html.ValidationMessageFor(x => x.IsInstitutionalBulletin, string.Empty, new { @class = "text-danger" })
+                        @Html.CheckBoxFor(x => x.IsInstitutionalBulletin, new { @class = "checkbox__input" })
+                        <span class="checkbox__box"></span>
+                        @Html.Glass().Editable(Model.Content, x => x.InstitutionalBulletinTitle)
+                    </label>
+                </div>
+                <div class="edit-preferences__select">
+                    <label class="checkbox">
+                        @Html.ValidationMessageFor(x => x.UnsubscribeAll, string.Empty, new { @class = "text-danger" })
+                        @Html.CheckBoxFor(x => x.UnsubscribeAll, new { @class = "checkbox__input" })
+                        <span class="checkbox__box"></span>
+                        @Html.Glass().Editable(Model.Content, x => x.UnsubscribeAllText)
+                    </label>
+                </div>              
+                <div class="input-btn">
+                    <input type="submit" class="btn-primary" value="@Model.Content.SubmitCTAText" />
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-6">
-                @using (Html.BeginRouteForm(Sitecore.Mvc.Configuration.MvcSettings.SitecoreRouteName, FormMethod.Post))
-                {
-                    @Html.Sitecore().FormHandler("EditEmailPreferences", "Submit")
-                    <h5>@Html.Glass().Editable(Model.Content, x => x.NewsTitle)</h5>
-                    <div class="input-group">
-                        <label>@Html.Glass().Editable(Model.Content, x => x.NewsSubtitle)</label>
-                        <input type="checkbox" runat="server" id="CheckboxIncludeLTNews" class="chk-lt-news"><span></span>
-                    </div>
-                    if (Model.IsInstitutionalBulletin)
-                    {
-                        <h5>@Html.Glass().Editable(Model.Content, x => x.InstitutionalBulletinTitle)</h5>
-                        <div class="input-group">
-                            <label>@Html.Glass().Editable(Model.Content, x => x.InstitutionalBulletinSubtitle)</label>
-                            <input type="checkbox" runat="server" id="CheckboxInstitutionalBulletin" class="chk-lt-InstitutionalBulletin"><span></span>
-                        </div>
-                    }
-                    <h5>@Html.Glass().Editable(Model.Content, x => x.ProcessListTitle)</h5>
-                    <p>@Html.Glass().Editable(Model.Content, x => x.ProcessListSubtitle)</p>
-                    if (Model.SFProcessList.Count > 0)
-                    {
-                        <h5>@Html.Glass().Editable(Model.Content, x => x.CheckboxInstructionText)</h5>
-                        <div class="input-group">
-                            <label>@Html.Glass().Editable(Model.Content, x => x.GlobalSelectAllCheckboxText)</label>
-                            <input type="checkbox" runat="server" id="GlobalSelectAllCheckbox" class="chk-global" /><span></span>
-                        </div>
-                    }
-
-                    for (int i = 0; i < Model.SFProcessList.Count; i++)
-                    {
-                        <div class="input-group">
-                            <label>@Model.SFProcessList[i].SFProcessName</label>
-                            @Html.CheckBoxFor(modelItem => modelItem.SFProcessList[i].IsProcessSelected)
-                        </div>
-                        @Html.HiddenFor(modelItem => modelItem.SFProcessList[i].SFProcessId)
-
-                        for (int f = 0; f < Model.SFProcessList[i].SFFundList.Count; f++)
-                        {
-                            <div class="input-group">
-                                <label>@Model.SFProcessList[i].SFFundList[f].SFFundName</label>
-                                @Html.CheckBoxFor(modelItem => modelItem.SFProcessList[i].SFFundList[f].IsFundSelected)
-                            </div>
-                            @Html.HiddenFor(modelItem => modelItem.SFProcessList[i].SFFundList[f].SFFundId)
-                        }
-                    }
-                   
-                    var customCssClassName = "main-otherlist-div";
-
-                    customCssClassName = (Model.IsInstitutionalBulletin) ? "main-otherlist-alt-bulletin-div" : "main-otherlist-alt-div";
-                    
-                    <div class="@customCssClassName">
-                        <div class="input-group">
-                            <label>@Html.Glass().Editable(Model.Content, x => x.UnsubscribeAllText)</label>
-                            @Html.CheckBoxFor(x => x.UnsubscribeAll)
-                        </div>
-
-                        <div>@Html.Glass().Editable(Model.Content, x => x.PrivacyPolicyText)</div>
-                        <div class="input-btn">
-                            <input type="submit" value="Submit" class="btn-primary" />
-                        </div>
-                        @Html.HiddenFor(x => x.EmailAddress)
-                        @Html.HiddenFor(x => x.IsConsentGivenDateEmpty)
-                    </div>
-                }
-            </div>
-        </div>
     }
-    else
-    {
-        <div>@Model.ErrorText</div>
-    }
-
-</section>
+    </section>
+    @Html.Sitecore().Placeholder("privacy-notice")
+</div>

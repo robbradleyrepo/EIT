@@ -52,7 +52,7 @@
             }
 
             var viewModel = new RegisterInvestorViewModel(data);
-            viewModel.SFProcessList = _emailPreferencesService.GetSFProcessList()?.ToList();
+
             viewModel.CountryName = OnboardingHelper.GetCurrentContactCountry(_context)?.CountryName;
             viewModel.ChangeInvestorUrl = OnboardingHelper.GetChangeUrl();
 
@@ -109,8 +109,8 @@
                             LastName = registerInvestorSubmit.LastName,
                             Email = registerInvestorSubmit.Email,
                             IsUKResident = ukResident,
-                            Company = registerInvestorSubmit.CompanyName
-                        };
+                            Company = !string.IsNullOrEmpty(data.CompanyFieldDefaultValue) ? data.CompanyFieldDefaultValue : "Self"
+                    };
 
                         var savedUser = _emailPreferencesService.SaveNonProfUserAsSFLead(nonProfUserViewModel, emailTemplate, data.EditPreferencesPage.AbsoluteUrl, data.FundDashboardPage.AbsoluteUrl);
 
@@ -173,7 +173,7 @@
             return Redirect($"{Request.RawUrl}?{QueryStringNames.EmailPreferencefParams.ErrorQueryStringKey}={(int)error}");
         }
 
-        public ActionResult ResendEmail(string email, Guid dataSourceId)
+        public ActionResult ResendEmail(string email, Guid dataSourceId, bool isContact)
         {
             var data = _context.SitecoreService.GetItem<IRegisterInvestor>(dataSourceId);
 
@@ -186,7 +186,7 @@
 
             if (!string.IsNullOrEmpty(email))
             {
-                isSuccess = _emailPreferencesService.ResendEditEmailPrefLink(email, false, data.ResendEditPreferencesEmailTemplate, data.EditPreferencesPage.AbsoluteUrl, data.FundDashboardPage.AbsoluteUrl);
+                isSuccess = _emailPreferencesService.ResendEditEmailPrefLink(email, isContact, data.ResendEditPreferencesEmailTemplate, data.EditPreferencesPage.AbsoluteUrl, data.FundDashboardPage.AbsoluteUrl);
             }
 
             if (isSuccess)

@@ -1,0 +1,90 @@
+﻿---
+ID: "1ab165b4-5774-457f-a852-6dc33f7289be"
+Parent: "a34b7c53-d58b-431c-af26-38d5fde6d46d"
+Template: "31f15e11-7a89-46f6-bdde-32ba02250d8d"
+Path: "/sitecore/content/LionTrustNew/Home/BTR Page/_Local/BC044 - Table 1"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0ab50d27-7e96-4187-8ef3-c617f40488f9"
+      Hint: Table_Value
+      Value: |
+        <table class="table table-striped mb-3">
+            <thead>
+                <tr>
+                    <th scope="col">£m</th>
+                    <th scope="col">Actual</th>
+                    <th scope="col">Range</th>
+                    <th scope="col">Consensus</th>
+                    <th scope="col">Consensus</th>
+                    <th scope="col">Lorem&nbsp;</th>
+                    <th scope="col">Consensus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Revenue</th>
+                    <td>99.3</td>
+                    <td>113.4-117.2</td>
+                    <td>115.5</td>
+                    <td>149.1</td>
+                    <td>Ipsum&nbsp;</td>
+                    <td>170.0</td>
+                </tr>
+                <tr>
+                    <th scope="row">Underlying EBITDA</th>
+                    <td>35.4</td>
+                    <td>38.0-41.0</td>
+                    <td>38.9</td>
+                    <td>1342348</td>
+                    <td>asd&nbsp;</td>
+                    <td>56.4</td>
+                </tr>
+                <tr>
+                    <th scope="row">Underlying EBITDA margin (%)</th>
+                    <td>35.6%</td>
+                    <td>113.4-117.2</td>
+                    <td>32.9-34.8%</td>
+                    <td>33.7%</td>
+                    <td>fsde&nbsp;</td>
+                    <td>33.2%</td>
+                </tr>
+                <tr>
+                    <th scope="row">Underlying EPS (pence)</th>
+                    <td>18</td>
+                    <td>22.3</td>
+                    <td>22.3</td>
+                    <td>23.0</td>
+                    <td>wq&nbsp;</td>
+                    <td>27.6</td>
+                </tr>
+                <tr>
+                    <th scope="row">Underlying EPS (pence)</th>
+                    <td>18</td>
+                    <td>22.3</td>
+                    <td>22.3</td>
+                    <td>23.0</td>
+                    <td>234&nbsp;</td>
+                    <td>27.6</td>
+                </tr>
+                <tr>
+                    <th scope="row">Underlying EPS (pence)</th>
+                    <td>18</td>
+                    <td>22.3</td>
+                    <td>22.3</td>
+                    <td>23.0</td>
+                    <td>234&nbsp;</td>
+                    <td>27.6</td>
+                </tr>
+            </tbody>
+        </table>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210726T120304Z

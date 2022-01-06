@@ -15,7 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>@Html.Sitecore().Field("BrowserTitle", new { DisableWebEdit = true })</title>
+    <title>@Html.Sitecore().Field("LegacyPresentationBase_BrowserTitle", new { DisableWebEdit = true })</title>
     @Html.Sitecore().VisitorIdentification()
     <link rel="icon" href="/dist/images/favicon.ico">
     <link rel="stylesheet" href="/dist/css/styles.min.css">
@@ -29,7 +29,7 @@
         case Constants.PageTypes.HomeTemplateId:
             bodyClass = "main-page";
             break;
-        case Constants.PageTypes.FundPageTemplateId:
+        case Constants.PageTypes.FundDetailPageTemplateId:
             bodyClass = "fund-detail-page";
             break;
         case Constants.PageTypes.InsightPageTemplateId:
@@ -43,6 +43,9 @@
             break;
         case Constants.PageTypes.SearchPageTemplateId:
             bodyClass = "search-page";
+            break;
+        case Constants.PageTypes.ContactUsPageTemplateId:
+            bodyClass = "contact-us";
             break;
     }
 
@@ -61,9 +64,14 @@
 }
 
 <body class="@bodyClass @isExperienceEditor">
+    @Html.Sitecore().Placeholder("onboarding")
     @Html.Sitecore().Placeholder("header")
-    <main id="main" role="main" class="@mainClass">
+    <main id="main" role="main" class="main-content @mainClass">
         @Html.Sitecore().Placeholder("main")
+        @if (Sitecore.Context.PageMode.IsExperienceEditor)
+        {
+            @Html.Sitecore().Placeholder("lit-overlay")
+        }
     </main>
     @Html.Sitecore().Placeholder("footer")
 
@@ -79,6 +87,10 @@
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
     <script src="/dist/js/listing-page.min.js"></script>
     <script src="/dist/js/charts-page.min.js"></script>
+    <script src="/dist/js/chartjs-plugin-datalabels@0.7.0.js"></script>
+    <script src="/dist/js/shuffle.js"></script>
+    <script src="/dist/js/componets/galleryApp.js"></script>
+    <script src="/dist/js/scrollnav.min.umd.js"></script>
     @Html.RenderFormStyles()
     @Html.RenderFormScripts()
     @if (Html.Sitecore().CurrentItem.TemplateID.ToString() == Constants.PageTypes.SearchPageTemplateId)
@@ -104,6 +116,8 @@
         </div>
     }
 
-    <div class="lit-overlay__wrapper"></div>
+    <div class="lit-overlay__wrapper">
+        @Html.Sitecore().Placeholder("lit-overlay")
+    </div>
 </body>
 </html>

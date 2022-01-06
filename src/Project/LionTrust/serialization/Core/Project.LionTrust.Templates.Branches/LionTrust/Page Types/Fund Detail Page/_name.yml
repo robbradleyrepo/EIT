@@ -32,8 +32,14 @@ Languages:
           <d
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
             <r
-              uid="{33133DD3-0E19-4033-9C28-7804671069E7}"
+              uid="{CBF27972-F42D-4AD7-B759-6D2B57C84069}"
               p:before="*"
+              s:ds="{973A5E7E-F7B3-4A4D-98DC-7F4CEF8F9E65}"
+              s:id="{56ECB2D2-5D43-4F0F-A5D1-AC267F249E7B}"
+              s:ph="/main/narrow-width" />
+            <r
+              uid="{33133DD3-0E19-4033-9C28-7804671069E7}"
+              p:after="r[@uid='{CBF27972-F42D-4AD7-B759-6D2B57C84069}']"
               s:ds="{7B28BE7E-79BD-4BE8-98C2-92648E0620D1}"
               s:id="{C3B11E64-1214-410E-BA83-3347C5B59A7E}"
               s:ph="main" />
@@ -85,8 +91,14 @@ Languages:
               s:id="{DE3BBA47-F726-43E8-A4F3-950B51597BF0}"
               s:ph="/main/fund-graphs" />
             <r
-              uid="{0011854E-FC0B-4EA6-BF0D-E54640F27B47}"
+              uid="{24CDA0F0-E32A-4B69-8C8C-23AF6A264EDB}"
               p:after="r[@uid='{09F227F2-D2C9-43CF-96D9-1212F96F8438}']"
+              s:ds="{EDE34807-C1A0-49FB-9873-F1CD6762D1E5}"
+              s:id="{BA0509C8-337A-45E7-A597-8035DC2F1C21}"
+              s:ph="/main/fund-graphs" />
+            <r
+              uid="{0011854E-FC0B-4EA6-BF0D-E54640F27B47}"
+              p:after="r[@uid='{24CDA0F0-E32A-4B69-8C8C-23AF6A264EDB}']"
               s:ds="{18BE326D-5E9C-4800-A008-9B518C6AAC7D}"
               s:id="{D1F65FAF-D449-484C-AADA-D6733DB1F445}"
               s:ph="/main/fundoverview_rightcolumn" />
@@ -239,17 +251,22 @@ Languages:
               s:id="{29206264-421A-41D5-8869-A7D1EA60566B}"
               s:ph="main" />
             <r
-              uid="{0A9D9A9E-A231-46A6-BE8A-3F1718BA5756}"
+              uid="{38A81212-9593-431C-BC9E-2DC01E1F5256}"
               p:after="r[@uid='{406EF967-E8F6-4429-90E7-82A525B3FB8D}']"
+              s:id="{06464072-4612-40D5-B861-7BD9DEF6E851}"
+              s:ph="main" />
+            <r
+              uid="{0A9D9A9E-A231-46A6-BE8A-3F1718BA5756}"
+              p:after="r[@uid='{38A81212-9593-431C-BC9E-2DC01E1F5256}']"
               s:ds="{58795D98-728F-44AA-9056-050C3A62947B}"
               s:id="{E975E590-8880-467B-A459-C4B214A66C77}"
-              s:par="AccordionRenderingParameters_TextAlign&amp;AccordionRenderingParameters_AccordionAlign&amp;AccordionRenderingParameters_Theme=%7b56F8F6ED-EFCD-446F-A486-D68F492F57BB%7d&amp;AccordionRenderingParameters_BackgroundColour"
-              s:ph="main" />
+              s:par="AccordionRenderingParameters_BackgroundColour&amp;AccordionRenderingParameters_Theme=%7B56C0E3CA-FA33-42AA-AD90-AC57AD305D0F%7D&amp;AccordionRenderingParameters_TextAlign&amp;AccordionRenderingParameters_AccordionAlign"
+              s:ph="/main/narrow-width" />
             <r
               uid="{99F6B13B-3FE5-4E89-97BE-BA7A7C88B860}"
               p:after="r[@uid='{0A9D9A9E-A231-46A6-BE8A-3F1718BA5756}']"
-              s:ds="{82A7CD38-9187-4A13-AE6D-75611D639876}"
-              s:id="{BA0509C8-337A-45E7-A597-8035DC2F1C21}"
+              s:ds="{9890E69E-8A11-4672-A01F-43D4715F135E}"
+              s:id="{33050F00-5AE0-4130-8B3A-362E4D6EEBCB}"
               s:par=""
               s:ph="main" />
             <r
@@ -266,6 +283,13 @@ Languages:
               s:id="{A811D2B0-D08D-4991-A9DD-6D9FA5799CBD}"
               s:par=""
               s:ph="main" />
+            <r
+              uid="{F9D48010-93AF-430B-A7A2-DE0F8E8394B9}"
+              p:after="*[1=2]"
+              s:ds="{8BC385ED-3E0B-401D-9A6A-22547A0C273C}"
+              s:id="{473A136A-5744-42A9-B430-42CCB92CCC33}"
+              s:par=""
+              s:ph="lit-overlay" />
           </d>
         </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"

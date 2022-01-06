@@ -40,10 +40,10 @@
         DateTime PriceDate { get; set; }
         
         [SitecoreField(Constants.FundClass.DistributionDate_FieldId)]
-        DateTime DistributionDate { get; set; }
+        string DistributionDate { get; set; }
 
         [SitecoreField(Constants.FundClass.ExDividendDate_FieldId)]
-        DateTime ExDividendDate { get; set; }
+        string ExDividendDate { get; set; }
 
         [SitecoreField(Constants.FundClass.InitialCharge_FieldId)]
         string InitialCharge { get; set; }
@@ -60,8 +60,8 @@
         [SitecoreField(Constants.FundClass.FactsheetFieldId)]
         Image Factsheet { get; set; } 
 
-        [SitecoreField(Constants.FundClass.SectorNameFieldId)]
-        string SectorName { get; set; }
+        [SitecoreField(Constants.FundClass.BenchmarkFieldId)]
+        string Benchmark { get; set; }
 
         [SitecoreField(Constants.FundClass.ManagerInceptionDateFieldId)]
         DateTime ManagerInceptionDateOfFund { get; set; }
@@ -71,5 +71,11 @@
 
         [SitecoreField(Constants.FundClass.AnnualManagementChargeFieldId)]
         string AnnualManagemnetCharge { get; set; }
+
+        [SitecoreField(Constants.FundClass.GraphStartDate_FieldId)]
+        DateTime GraphStartDate { get; set; }
+
+        [SitecoreField(Constants.FundClass.GraphTitle_FieldId)]
+        string GraphTitle { get; set; }
     }
 }

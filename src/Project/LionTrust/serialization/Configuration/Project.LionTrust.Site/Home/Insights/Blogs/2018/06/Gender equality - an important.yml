@@ -1,0 +1,106 @@
+﻿---
+ID: "1bd3d355-914f-48cb-8308-50f404e48619"
+Parent: "835bb1dd-a6e0-4fec-b3fd-bda65a73d70a"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2018/06/Gender equality - an important investment issue"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 8200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{A5AC7514-191A-433E-A12F-CBFFADA2A870}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{01155096-347B-4379-BC19-33B1831B3BF8}"
+              p:after="r[@uid='{A5AC7514-191A-433E-A12F-CBFFADA2A870}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{FCCFF55C-C4C6-4BCC-8414-6E5FD693313A}"
+              p:after="r[@uid='{01155096-347B-4379-BC19-33B1831B3BF8}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See also...&amp;RelatedPages={FA0E822B-9229-47E9-9341-79282A4EE71F}|{FC17F0A6-ECAA-4CD7-B80B-6E67FDE3251B}|{A872ED66-C757-4F49-8F30-61F4B764DA0A}|{E3CCBB0D-06F2-4BC8-BA6B-DE48FCD26D3C}&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{E8A37DF3-39A5-4C66-915F-779142411A1A}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "Gender equality - an important investment issue | Insights | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: "Gender equality: an important investment issue"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20160609T230000Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: Harriet Parker, investment manager on the ATI Sustainable Future fund team explains how gender equality can improve company performance and boost investment returns. 
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: "Gender equality: an important investment issue"
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p style="margin-top: 0px;"><span><em>This article was first published by Alliance Trust Investments on 10 June 2016.</em></span></p>
+        <p><span><strong>Harriet Parker, investment manager on the ATI Sustainable Future fund team explains how gender equality can improve company performance and boost investment returns.</strong></span></p>
+        <p><span><em>“Girls and women aren’t on the agenda, they are the agenda”</em>&nbsp;- Melinda Gates</span></p>
+        <p><span>Empowering girls and women is the foundation for an equitable and fully functioning society. It is also central to the delivery of the UN’s Sustainable Development Goals (SDGs): 17 high level global development targets that we at ATI have incorporated into our investment process. Following the publication of the SDG’s last year we took a closer look at gender equality with regards to our investments, engagement and voting activities, in order to ensure that this renewed global focus on gender is reflected in our analysis and understanding of companies.</span></p>
+        <p><span><strong>Gender and corporate performance</strong></span></p>
+        <p><span>The majority of empirical research examining gender diversity and corporate performance highlights a positive link between the two. Studies find that, generally, companies that are more gender diverse outperform those that are less gender diverse. A range of research bodies including McKinsey, Catalyst and Morgan Stanley looked at different measures of performance within a selection of companies including; return on equity, return on sales, return on invested capital, operating results and higher stock market returns. The findings from these and other studies indicate that the best outcomes can often be traced to the presence of a woman within a group, which researchers found enhances the group’s ability to make successful decisions.</span></p>
+        <p><span>The definition of gender diversity companies differs between studies, but typically these firms have a greater proportion of females on boards, in senior positions and in high profile roles such as CEO and CFO, as well as having more balanced gender composition throughout the company. These studies do not prove conclusively that gender diversity causes companies to perform better; it could be that women are attracted to working for more successful companies, or that more successful companies employ more senior women, for example. However there is enough evidence to support our belief that companies which aren’t proactively addressing gender bias in their businesses are potentially missing opportunities.</span></p>
+        <p><span>Potential risks to UK companies with imbalances include incoming legislation that will mean that from 2018 larger British companies will have to publicly state differences in pay between male and female employees. Companies with significant gender imbalances or gaps in pay between men and women may also find it much harder to retain talent and skilled employees, leading to higher costs and turnover. The business decisions made by these firms are also unlikely to fully reflect a diverse range of views and opinions, which could lead to poorer decision making.</span></p>
+        <p><span><strong>Gender imbalance at the portfolio level</strong></span></p>
+        <p><span>Considering the above, we decided to launch a fresh review into gender balance within the companies that we at the ATI Sustainable Future team invest in. We remain focused on selecting high quality companies and believe that incorporating analysis of key environmental, social and governance (ESG) issues is helpful when assessing a company’s long term prospects. We already assess how companies manage employee issues as part of their workplace policies and practices, which includes the extent to which diversity policies and anti-discrimination policies are in place. However, we decided to look at gender diversity metrics at the portfolio level for our holdings in order to see which companies are leading on this issue and which companies could do better. This will inform our analysis and assist in our engagement with firms on this issue.</span></p>
+        <p><span>We will now focus on engaging with those companies that are lagging on gender diversity at the board level, where we have stepped up our voting criteria on female board representation, and on senior women, the level of preparedness for planned public reporting on pay gaps in the UK from 2018 and on internal policies and practices. This will help us understand what best practice looks like and where companies are falling short of this.</span></p>
+        <p><span>As shareholders we are able to vote on resolutions and the company Annual General Meeting. As part of this review, in the future we will vote against the adoption of the annual report and accounts if there are fewer than 15% women on the board, and we will abstain on the adoption of their annual report and accounts if there are fewer than 30% women represented on the board. This enables us to articulate the importance of gender at the board level to company management with a view to promoting positive change and having more diverse boards.</span></p>
+        <p><span><br>
+        </span></p>
+        <p style="color: #222222; margin-right: 0px; margin-bottom: 14px; margin-left: 0px;"><span>For a comprehensive list of common financial words and terms, see our glossary&nbsp;<a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms" style="color: #000000;"><span style="color: #34b233;">here</span></a>.</span></p>
+        <p style="color: #222222; margin: 0px 0px 14px;"><span><strong>Key Risks</strong></span></p>
+        <p style="color: #222222; margin: 0px 0px 14px;"><span><strong>Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital.&nbsp;</strong>The issue of units/shares in Liontrust Funds may be subject to an initial charge, which will have an impact on the realisable value of the investment, particularly in the short term. Investments should always be considered as long term.</span></p>
+        <p style="color: #222222; margin: 0px 0px 14px;"><span>Some of the Funds managed by the Sustainable Future Equities team involve foreign currencies and may be subject to fluctuations in value due to movements in exchange rates.</span></p>
+        <p style="color: #222222; margin: 0px 0px 14px;"><span><strong>Disclaimer</strong></span></p>
+        <div style="color: #222222;"><span>This content should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy.&nbsp; It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, faxed, reproduced, divulged or distributed, in whole or in part, without the express written consent of Liontrust. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.&nbsp;</span></div>

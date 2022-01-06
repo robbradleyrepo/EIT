@@ -9,9 +9,10 @@ SharedFields:
   Hint: Script
   Value: |
         $blogs = Get-ChildItem -Path "master:/sitecore/content/LionTrust/home/what-we-think/blogs" -Recurse | Where-Object { $_.TemplateName -eq 'ArticlePage' }
-        $root = "master:/sitecore/content/LionTrustNew/Home"
+        $root = "master:/sitecore/content/LionTrustNew/Home/Insights"
         $fundManagerView = "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
         $fundUpdate = "{D0700E76-8BC2-427A-9849-FE3B6D28BD22}"
+        $branchId = "{810226BD-15AA-4F26-AB02-7A63B355D4A8}"
     
         foreach ($blog in $blogs) {
             
@@ -22,7 +23,7 @@ SharedFields:
                 $copyToRoot = $root + "/blogs"
             }
             elseif($type -eq $fundUpdate) {
-                $copyToRoot = $root + "/Monthly commentaries"
+                $copyToRoot = $root + "/Monthly Comms"
             }
             else {
                 continue
@@ -31,22 +32,59 @@ SharedFields:
             #folder path with year + month
             $created = [datetime]$blog.Created
             $dateFolderPath = "$($copyToRoot)/$($created.ToString('yyyy'))/$($created.ToString('MM'))"
-            
-            
     
             #test if year folder item exists
             if (!(Test-Path "$($copyToRoot)/$($created.ToString('yyyy'))")) {
                  Write-Host "Creating year folder"
-                 New-Item -Force -Path "$($copyToRoot)/$($created.ToString('yyyy'))" -Name "" -ItemType "/sitecore/templates/Common/Folder"
+                 New-Item -Force -Path "$($copyToRoot)/$($created.ToString('yyyy'))" -Name "" -ItemType "/sitecore/templates/Project/LionTrust/Content Types/Article/Article Folder"
             }
              #test if month folder item exists
             if(!(Test-Path $($dateFolderPath))) {
                 Write-Host "Creating month folder"
-                New-Item -Force -Path $dateFolderPath -Name "" -ItemType "/sitecore/templates/Common/Folder"
+                New-Item -Force -Path $dateFolderPath -Name "" -ItemType "/sitecore/templates/Project/LionTrust/Content Types/Article/Article Folder"
             }
             
-            Write-Host "folders exists, moving blogs to: $($dateFolderPath)";
-            Move-Item -Path $blog.ItemPath -Destination $dateFolderPath;
+            Write-Host "Folders exist, moving blog to: $($dateFolderPath)"
+            $parentItem = Get-Item -Path $dateFolderPath
+            $scBranchID = New-Object -TypeName "Sitecore.Data.ID" -ArgumentList $branchId
+            $newItem = [Sitecore.Data.Managers.ItemManager]::AddFromTemplate($blog.Name, $scBranchID, $parentItem)
+            if ($newItem) {
+                $newItem.Editing.BeginEdit()
+                #_LegacyArticle fields
+                $newItem.Fields["LegacyArticle_Title"].Value = $blog.Fields["LegacyArticle_Title"].Value
+                $newItem.Fields["LegacyArticle_Subtitle"].Value = $blog.Fields["LegacyArticle_Subtitle"].Value
+                $newItem.Fields["LegacyArticle_Content"].Value = $blog.Fields["LegacyArticle_Content"].Value
+                $newItem.Fields["LegacyArticle_Authors"].Value = $blog.Fields["LegacyArticle_Authors"].Value
+                $newItem.Fields["LegacyArticle_BlogType"].Value = $blog.Fields["LegacyArticle_BlogType"].Value
+                $newItem.Fields["LegacyArticle_Fund"].Value = $blog.Fields["LegacyArticle_Fund"].Value
+                #_Article fields
+                $newItem.Fields["Article_ListingImageOpacity"].Value = $blog.Fields["Article_ListingImageOpacity"].Value
+                $newItem.Fields["Article_Topics"].Value = $blog.Fields["Article_Topics"].Value
+                $newItem.Fields["Article_ListingImage"].Value = $blog.Fields["Article_ListingImage"].Value
+                $newItem.Fields["Article_Date"].Value = $blog.Fields["Article_Date"].Value
+                $newItem.Fields["Article_VideoUrl"].Value = $blog.Fields["Article_VideoUrl"].Value
+                $newItem.Fields["Article_PdfDocument"].Value = $blog.Fields["Article_PdfDocument"].Value
+                #_Page fields
+                $newItem.Fields["Breadcrumb_IncludeInBreadcrumb"].Value = $blog.Fields["Breadcrumb_IncludeInBreadcrumb"].Value
+                $newItem.Fields["Breadcrumb_BreadcrumbTitle"].Value = $blog.Fields["Breadcrumb_BreadcrumbTitle"].Value
+                $newItem.Fields["LegacyHeroImagePageData_PageHeaderImage"].Value = $blog.Fields["LegacyHeroImagePageData_PageHeaderImage"].Value
+                $newItem.Fields["LegacyHeroImagePageData_PageHeaderText"].Value = $blog.Fields["LegacyHeroImagePageData_PageHeaderText"].Value
+                $newItem.Fields["LegacyHeroImagePageData_ImagePosition"].Value = $blog.Fields["LegacyHeroImagePageData_ImagePosition"].Value
+                $newItem.Fields["LegacyHeroImagePageData_DarkCaption"].Value = $blog.Fields["LegacyHeroImagePageData_DarkCaption"].Value
+                $newItem.Fields["LegacyPresentationBase_PageTitle"].Value = $blog.Fields["LegacyPresentationBase_PageTitle"].Value
+                $newItem.Fields["LegacyPresentationBase_SubNavigationMenu"].Value = $blog.Fields["LegacyPresentationBase_SubNavigationMenu"].Value
+                $newItem.Fields["LegacyPresentationBase_ShortDescription"].Value = $blog.Fields["LegacyPresentationBase_ShortDescription"].Value
+                $newItem.Fields["IncludeInSearchResults"].Value = $blog.Fields["IncludeInSearchResults"].Value
+                $newItem.Fields["LegacyFundPageData_FundReference"].Value = $blog.Fields["LegacyFundPageData_FundReference"].Value
+                $newItem.Fields["LegacyFundPageData_HidePerformanceChart"].Value = $blog.Fields["LegacyFundPageData_HidePerformanceChart"].Value
+                $newItem.Fields["LegacyFundPageData_HideDiscretePerformanceTable"].Value = $blog.Fields["LegacyFundPageData_HideDiscretePerformanceTable"].Value
+                $newItem.Fields["LegacyFundPageData_HideCumulativePerformanceTable"].Value = $blog.Fields["LegacyFundPageData_HideCumulativePerformanceTable"].Value
+                $newItem.Fields["Sitemap_IncludeInSitemap"].Value = $blog.Fields["Sitemap_IncludeInSitemap"].Value
+                $newItem.Editing.EndEdit()
+            }
+            else {
+                Write-Host "Could not create blog: $($blog.Name)"
+            }
         }
 Languages:
 - Language: en

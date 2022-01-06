@@ -6,7 +6,7 @@
         <div class="container">
             <div class="article__head">
                 <h2>@Html.Glass().Editable(Model.ArticleScroller, m => m.Heading)</h2>
-                @using (Html.Glass().BeginRenderLink(Model.ArticleScroller, m => m.CTA, new NameValueCollection { { "class", "btn btn-black article__btn d-none d-lg-block ml-1" } }, isEditable: true))
+                @using (Html.Glass().BeginRenderLink(Model.ArticleScroller, m => m.CTA, new NameValueCollection { { "class", "btn btn-black article__btn d-none d-lg-flex ml-1" } }, isEditable: true))
                 {
                     if (Model.ArticleScroller.CTA != null && !string.IsNullOrEmpty(Model.ArticleScroller.CTA.Text))
                     {
@@ -40,7 +40,13 @@
                                             if (article.PodcastPromo != null && article.PodcastPromo.Any())
                                             {
                                                 <div class="swiper-slide col-10 col-md-6 col-lg-4">
-                                                    @Html.Partial("~/Views/Article/PromoCards/ArticlePodcastPromo.cshtml", article.PodcastPromo.FirstOrDefault())
+                                                    @Html.Partial("~/Views/Article/PromoCards/ArticlePodcastPromo.cshtml", article.PodcastPromo.FirstOrDefault(), new ViewDataDictionary { { "ArticleUrl", article.Url } })
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <div class="col-10 col-md-6 col-lg-4">
+                                                    @Html.Partial("~/Views/Article/PromoCards/FundManagerViewPromo.cshtml", article)
                                                 </div>
                                             }
                                             break;

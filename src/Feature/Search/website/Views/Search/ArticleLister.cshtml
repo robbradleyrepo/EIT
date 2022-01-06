@@ -2,12 +2,15 @@
 @using LionTrust.Feature.Search.Models
 @using LionTrust.Foundation.ORM.Extensions
 @using Sitecore.Configuration
+@using System.Web
 @model LionTrust.Feature.Search.Models.IArticleLister
 @if (Model != null)
 {
-    <div id="lister-app" 
-         data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.ArticleApiRoute_SettingName))" 
-         data-contenttype="@Model.ContentType">
+    var fundId = HttpContext.Current.Request.QueryString.Get("ids");
+    <div id="lister-app"
+         data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.ArticleApiRoute_SettingName))"
+         data-contenttype="@Model.ContentType"
+         data-funds="@fundId">
         <div class="article-filter-wrapper">
             <div class="article-filters" :class="mobileFilter ? 'active' : ''">
                 <div class="article-filters__header">
@@ -34,108 +37,110 @@
                 <div class="article-filters__body" v-if="getFacetsLength">
                     <div class="container">
                         <div class="row">
-                            <select-field inline-template v-for="(facet, i) in getFacets" :key="i">
-                                <div class="col-lg-2 relative" @@click.stop style="display: none;" :style="init ? 'display: block' : ''">
-                                    <div class="article-filters__select" @@click="toggleOption" :class="open ? 'active' : ''">
-                                        <span class="article-filters__item-title" :class="active ? 'active' : ''">
-                                            {{facet.name}}
-                                        </span>
-                                        <i class="article-filters__icon-arrow"></i>
-                                    </div>
-                                    <div class="article-filters__options">
-                                        <div class="article-filters__title" @@click="hideOption">
-                                            <i class="icon-chevron-left"></i>
-                                            {{facet.name}}
+                            <div class="col-12 article-filters__lists">
+                                <select-field inline-template v-for="(facet, i) in getFacets" :key="i">
+                                    <div class="article-filters__dropdown relative" @@click.stop style="display: none;" :style="init ? 'display: block' : ''">
+                                        <div class="article-filters__select" @@click="toggleOption" :class="open ? 'active' : ''">
+                                            <span class="article-filters__item-title" :class="active ? 'active' : ''">
+                                                {{facet.name}}
+                                            </span>
+                                            <i class="article-filters__icon-arrow"></i>
                                         </div>
-                                        <option-field inline-template v-for="(item, i) in facet.items" :for="item.name" :key="i + item.name">
-                                            <label class="option-checkbox">
-                                                <input :id="item.name" class="option-checkbox__input" type="checkbox" v-model="checked" @@change="toggleSelect(item, facet)" @@click="setChoosen(!checked)">
-                                                <span class="option-checkbox__text">{{item.name}}</span>
-                                                <span class="option-checkbox__icon"></span>
-                                            </label>
-                                        </option-field>
-                                    </div>
-                                </div>
-                            </select-field>
-                            <select-field inline-template v-if="years.length">
-                                <div class="col-lg-1 relative" @@click.stop style="display: none;" :style="init ? 'display: block' : ''">
-                                    <div class="article-filters__select" @@click="toggleOption" :class="open ? 'active' : ''">
-                                        <span class="article-filters__item-title" :class="active ? 'active' : ''">
-                                            @Model.YearLabel
-                                        </span>
-                                        <i class="article-filters__icon-arrow"></i>
-                                    </div>
-                                    <div class="article-filters__options article-filters__options_small">
-                                        <div class="article-filters__title" @@click="hideOption">
-                                            <i class="icon-chevron-left"></i>
-                                            @Model.YearLabel
+                                        <div class="article-filters__options">
+                                            <div class="article-filters__title" @@click="hideOption">
+                                                <i class="icon-chevron-left"></i>
+                                                {{facet.name}}
+                                            </div>
+                                            <option-field inline-template v-for="(item, i) in facet.items" :for="item.name" :key="i + item.name" :selected="item.identifier==='@fundId'">
+                                                <label class="option-checkbox">
+                                                    <input :id="item.name" class="option-checkbox__input" type="checkbox" v-model="checked" @@change="toggleSelect(item, facet)" @@click="setChoosen(!checked)">
+                                                    <span class="option-checkbox__text">{{item.name}}</span>
+                                                    <span class="option-checkbox__icon"></span>
+                                                </label>
+                                            </option-field>
                                         </div>
-                                        <option-field inline-template>
-                                            <label class="option-checkbox option-checkbox_small" @@click="setChoosen(!checked)">
-                                                <input class="option-checkbox__input" name="year" v-model="year" value="All" type="radio" @@click="setYear('All')">
-                                                <span class="option-checkbox__text">All</span>
-                                                <span class="option-checkbox__icon"></span>
-                                            </label>
-                                        </option-field>
-                                        <option-field inline-template v-for="(yearItem, i) in years" :key="i">
-                                            <label class="option-checkbox option-checkbox_small" @@click="setChoosen(!checked)">
-                                                <input class="option-checkbox__input" name="year" v-model="year" :value="yearItem" type="radio" @@click="setYear(yearItem)">
-                                                <span class="option-checkbox__text">{{yearItem}}</span>
-                                                <span class="option-checkbox__icon"></span>
-                                            </label>
-                                        </option-field>
                                     </div>
-                                </div>
-                            </select-field>
-                            <select-field inline-template v-if="months.length">
-                                <div class="col-lg-1 relative" @@click.stop style="display: none;" :style="init ? 'display: block' : ''">
-                                    <div class="article-filters__select" @@click="toggleOption" :class="open ? 'active' : ''">
-                                        <span class="article-filters__item-title" :class="active ? 'active' : ''">
-                                            @Model.MonthLabel
-                                        </span>
-                                        <i class="article-filters__icon-arrow"></i>
-                                    </div>
-                                    <div class="article-filters__options article-filters__options_small">
-                                        <div class="article-filters__title" @@click="hideOption">
-                                            <i class="icon-chevron-left"></i>
-                                            @Model.MonthLabel
+                                </select-field>
+                                <select-field inline-template v-if="months.length">
+                                    <div class="article-filters__dropdown relative article-filters__dropdown-small" @@click.stop style="display: none;" :style="init ? 'display: block' : ''">
+                                        <div class="article-filters__select" @@click="toggleOption" :class="open ? 'active' : ''">
+                                            <span class="article-filters__item-title" :class="active ? 'active' : ''">
+                                                @Model.MonthLabel
+                                            </span>
+                                            <i class="article-filters__icon-arrow"></i>
                                         </div>
-                                        <option-field inline-template>
-                                            <label class="option-checkbox option-checkbox_small" @@click="setChoosen(!checked)">
-                                                <input class="option-checkbox__input" name="month" value="All" type="radio" v-model="month" @@click="setMonth('All')">
-                                                <span class="option-checkbox__text">All</span>
-                                                <span class="option-checkbox__icon"></span>
-                                            </label>
-                                        </option-field>
-                                        <option-field inline-template v-for="(monthItem, i) in months" :key="i">
-                                            <label class="option-checkbox option-checkbox_small" @@click="setChoosen(!checked)">
-                                                <input class="option-checkbox__input" name="month" type="radio" v-model="month" :value="monthItem" @@click="setMonth(monthItem)">
-                                                <span class="option-checkbox__text">{{monthItem}}</span>
-                                                <span class="option-checkbox__icon"></span>
-                                            </label>
-                                        </option-field>
+                                        <div class="article-filters__options article-filters__options_small">
+                                            <div class="article-filters__title" @@click="hideOption">
+                                                <i class="icon-chevron-left"></i>
+                                                @Model.MonthLabel
+                                            </div>
+                                            <option-field inline-template>
+                                                <label class="option-checkbox option-checkbox_small" @@click="setChoosen(!checked)">
+                                                    <input class="option-checkbox__input" name="month" value="All" type="radio" v-model="month" @@click="setMonth('All')">
+                                                    <span class="option-checkbox__text">All</span>
+                                                    <span class="option-checkbox__icon"></span>
+                                                </label>
+                                            </option-field>
+                                            <option-field inline-template v-for="(monthItem, i) in months" :key="i">
+                                                <label class="option-checkbox option-checkbox_small" @@click="setChoosen(!checked)">
+                                                    <input class="option-checkbox__input" name="month" type="radio" v-model="month" :value="monthItem" @@click="setMonth(monthItem)">
+                                                    <span class="option-checkbox__text">{{monthItem}}</span>
+                                                    <span class="option-checkbox__icon"></span>
+                                                </label>
+                                            </option-field>
+                                        </div>
                                     </div>
-                                </div>
-                            </select-field>
-                            <div class="col-lg-2 ml-auto">
-                                <div class="article-filters__btns">
-                                    <button class="btn article-filters__btn article-filters__btn_apply d-none d-xl-block"
-                                            @@click="applyFilters"
-                                            :class="activeButton ? 'article-filters__btn_primary' : ''">
-                                        @Model.FilterLabel
-                                    </button>
-                                    <button class="clear-filter btn article-filters__btn article-filters__btn_clear d-none d-xl-block" @@click="clearFilters">
-                                        @Model.ClearFiltersLabel
-                                    </button>
-                                    <btn @@click="applyFilters"
-                                         class="btn btn-clean d-none d-md-block d-xl-none"
-                                         :class="activeButton ? 'text-primary' : ''"
-                                         @@click="toggleMobileFilter">
-                                        <i class="icon-filter"></i> @Model.FilterLabel
-                                    </btn>
-                                    <btn @@click="clearFilters" class="btn btn-clean d-none d-md-block d-xl-none" @@click="toggleMobileFilter">
-                                        <i class="icon-refresh"></i> @Model.ClearFiltersLabel
-                                    </btn>
+                                </select-field>
+                                <select-field inline-template v-if="years.length">
+                                    <div class="article-filters__dropdown article-filters__dropdown-small relative" @@click.stop style="display: none;" :style="init ? 'display: block' : ''">
+                                        <div class="article-filters__select" @@click="toggleOption" :class="open ? 'active' : ''">
+                                            <span class="article-filters__item-title" :class="active ? 'active' : ''">
+                                                @Model.YearLabel
+                                            </span>
+                                            <i class="article-filters__icon-arrow"></i>
+                                        </div>
+                                        <div class="article-filters__options article-filters__options_small">
+                                            <div class="article-filters__title" @@click="hideOption">
+                                                <i class="icon-chevron-left"></i>
+                                                @Model.YearLabel
+                                            </div>
+                                            <option-field inline-template>
+                                                <label class="option-checkbox option-checkbox_small" @@click="setChoosen(!checked)">
+                                                    <input class="option-checkbox__input" name="year" v-model="year" value="All" type="radio" @@click="setYear('All')">
+                                                    <span class="option-checkbox__text">All</span>
+                                                    <span class="option-checkbox__icon"></span>
+                                                </label>
+                                            </option-field>
+                                            <option-field inline-template v-for="(yearItem, i) in years" :key="i">
+                                                <label class="option-checkbox option-checkbox_small" @@click="setChoosen(!checked)">
+                                                    <input class="option-checkbox__input" name="year" v-model="year" :value="yearItem" type="radio" @@click="setYear(yearItem)">
+                                                    <span class="option-checkbox__text">{{yearItem}}</span>
+                                                    <span class="option-checkbox__icon"></span>
+                                                </label>
+                                            </option-field>
+                                        </div>
+                                    </div>
+                                </select-field>
+                                <div class="article-filters__controls">
+                                    <div class="article-filters__btns">
+                                        <button class="btn article-filters__btn article-filters__btn_apply d-none d-xl-block"
+                                                @@click="applyFilters"
+                                                :class="activeButton ? 'article-filters__btn_primary' : ''">
+                                            @Model.FilterLabel
+                                        </button>
+                                        <button class="clear-filter btn article-filters__btn article-filters__btn_clear d-none d-xl-block" @@click="clearFilters">
+                                            @Model.ClearFiltersLabel
+                                        </button>
+                                        <btn @@click="applyFilters"
+                                             class="btn btn-clean d-none d-md-block d-xl-none"
+                                             :class="activeButton ? 'text-primary' : ''"
+                                             @@click="toggleMobileFilter">
+                                            <i class="icon-filter"></i> @Model.FilterLabel
+                                        </btn>
+                                        <btn @@click="clearFilters" class="btn btn-clean d-none d-md-block d-xl-none" @@click="toggleMobileFilter">
+                                            <i class="icon-refresh"></i> @Model.ClearFiltersLabel
+                                        </btn>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -191,7 +196,7 @@
         <div class="container d-lg-none" v-if="getFacetsLength">
             <div class="d-flex justify-content-between margin-mob-fliter-btn" :class="!mobileFilter ? 'relative' : ''">
                 <btn id="show-article-fliter" class="btn btn-clean" @@click="toggleMobileFilter">
-                    <i class="icon-filter"></i> @Model.FilterLabel
+                    <i class="icon-filter"></i> @Model.FilterMobileLabel
                 </btn>
             </div>
         </div>

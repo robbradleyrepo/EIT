@@ -1,13 +1,12 @@
 <section class="container">
     <div class="text-center my-5" v-if="loading">
         <div class="spinner-border text-gold" role="status"></div>
-      </div>
+    </div>
     <article-item inline-template v-for="(fund, i) in searchData" :key="i + fund.fundName">
         <div class="fund-item-list">
             <div class="row align-items-center">
                 <div class="col-xl-4">
                     <span class="fund-item-list__title mb-lg-3 mb-xl-0">{{fund.fundName}}</span>
-
                 </div>
                 <div class="col-lg-3 col-xl-2">
                     <div class="fund-item-list__badge">
@@ -16,12 +15,12 @@
                         </span>
                     </div>
                 </div>
-                <div class="col-lg-9 col-xl-6">
+                <div class="col-lg-9 col-xl-6 px-0">
                     <div class="fund-item-list__btns">
                         <button href="#" class="btn btn-primary">All factsheets & documents <i
                                 class="icon-folder"></i></button>
                         <a href="#" target="_blank" class="btn btn-primary-forward min-width-auto">Fund update</a>
-                        <a href="#" class="btn btn-link">{{fund.ctaText ? fund.ctaText : 'View this fund'}} 
+                        <a href="#" class="btn btn-link">{{fund.ctaText ? fund.ctaText : 'View this fund'}}
                             <i class="icon-arrow-right animate-arrow"></i>
                         </a>
                     </div>

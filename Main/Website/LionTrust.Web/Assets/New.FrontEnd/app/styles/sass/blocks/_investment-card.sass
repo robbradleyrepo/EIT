@@ -18,8 +18,7 @@
         height: auto
 .investment-card
     color: $black
-    min-height: 274px
-    height: 100%
+    min-height: 274px    
     padding: 20px
     background: #F8FAFA
     border-radius: $border-radius
@@ -49,11 +48,14 @@
     &__content
         z-index: 2
         position: relative
+        @include breakpoint(desktop, up)
+            @include font-size(20px)
+            line-height: 1.5em
     &__title
         font-weight: bold
         text-transform: uppercase
         margin-bottom: 12px
-        font-size: 10px
+        font-size: 12px
         color: $primary
     &__text, p
         @include breakpoint(desktop, up)

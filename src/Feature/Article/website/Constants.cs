@@ -59,12 +59,12 @@
         public static class Article
         {
             public const string TopicsFieldId = "{4F9B280F-A22D-4E70-886A-45327E8AA507}";
-            public const string MultipleAuthorsLabel_FieldId = "{B6833539-8781-4788-92F4-D173F0727FEB}";
-            public const string MultipleAuthorsIcon_FieldId = "{7075D230-7438-4F94-A4CC-1760107174CA}";
+            public const string MultipleAuthorsSetting_FieldId = "{B6833539-8781-4788-92F4-D173F0727FEB}";
             public const string Image_FieldId = "{5BD6E9E9-2240-4473-8094-075E811B8438}";
             public const string ImageOpacity_FieldId = "{FE72ED1F-986F-475E-A40F-B95DA77091B8}";
             public const string Date_FieldId = "{79CC76CC-7503-449B-9809-9808CF6C2D26}";
             public const string PdfDocument_FieldId = "{AE17B17D-0024-4700-9075-E95D8E7B15EE}";
+            public const string ArticleVideoUrl = "{8EB78475-C445-4960-84B0-E946D262F81C}";
         }
 
         public static class ArticleScroller
@@ -83,9 +83,7 @@
 
         public static class ArticleLinks
         {
-            public const string ShareTooltip_FieldId = "{0C44E5E5-AFE2-426E-A113-E6498BC34A65}";
-            public const string ShareLabel_FieldId = "{1D03C959-0BBF-4C3A-A5A5-9050E9F4B38F}";
-            public const string ShareLinkGoal_FieldId = "{A4397CD8-98A8-4164-8263-0B323271B169}";
+            public const string ArticleSharing_FieldId = "{1D03C959-0BBF-4C3A-A5A5-9050E9F4B38F}";
             public const string DownloadLabel_FieldId = "{338376F5-AB65-4249-878A-E891F1FD465A}";
             public const string DownloadGoal_FieldId = "{BB708901-B592-4F8C-9119-7F619B26D5B1}";
         }
@@ -106,6 +104,24 @@
             public const string Article_FieldId = "{AACB640C-6457-4A38-81E2-7AE97DB0DB3A}";
             public const string BackgroundImage_FieldId = "{74A7E935-2A62-4192-B046-958C1ADDB98B}";
             public const string ArticleLinkText_FieldId = "{447AB9EA-F782-41A7-8269-E2AA6EF9862B}";
-        }        
+        }
+
+        public static class ArticleShareLink
+        {
+            public const string Label_FieldId = "{D83E057F-DDBD-4603-9C36-56932E3626D7}";
+            public const string Tooltip_FieldId = "{191B3D6F-C419-407E-8B6D-C69F364FED92}";
+            public const string Goal_FieldId = "{C4EA3176-6C3D-4EE4-8924-034F5664117F}";
+        }
+
+        public static class PromoType
+        {
+            public const string ArticleType_FieldId = "{0B122919-9295-4AF9-A77D-4EFC952ED25B}";
+        }
+
+        public static class MultipleAuthorsSetting
+        {
+            public const string Label_FieldId = "{89BA5B06-2D92-4329-BCBA-9DE16C450CA9}";
+            public const string Icon_FieldId = "{F7431439-3BF3-4D7D-A4FB-B1B6745A233D}";
+        }
     }
 }

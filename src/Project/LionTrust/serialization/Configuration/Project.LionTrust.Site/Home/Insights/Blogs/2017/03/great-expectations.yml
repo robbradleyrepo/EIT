@@ -1,0 +1,141 @@
+﻿---
+ID: "6854fdee-838a-4792-87dc-fcc66401b04b"
+Parent: "1794f9e4-0915-483f-9a66-37e80f9c352e"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2017/03/great-expectations"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 8500
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{1EF51E31-9991-4E56-90FE-74330B305730}"
+          p:after="r[@uid='{30A0A4C8-974F-4822-9DCB-DE14881E0400}']"
+          s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+          s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+          s:par="DatasourceRule"
+          s:ph="/content/side-content" />
+        <r
+          uid="{680D7428-B395-4D41-8EF9-00A083A6FEFE}"
+          p:after="r[@uid='{1EF51E31-9991-4E56-90FE-74330B305730}']"
+          s:ds="{71B20482-B038-49D5-895C-ED6D46D5095F}"
+          s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+          s:par="DatasourceRule"
+          s:ph="/content/side-content" />
+        <r
+          uid="{56453DE4-D58D-4634-9AEE-7A911C8D0FF1}"
+          p:after="*[1=2]"
+          s:ds=""
+          s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+          s:par="Title=See%20also&amp;RelatedPages=%7B9EADCB46-7677-4826-AA77-0AC5F81DFFBC%7D%7C%7B1EC36DCA-A621-4DDD-B8EA-888A3693BF7B%7D%7C%7B01B3EF98-C64F-4F71-BACE-EA0BAFE8A6E0%7D&amp;MaximumNoOfLinks=3"
+          s:ph="/content/side-content" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{666D8658-69FD-4802-B1DF-B4D2FEF1AD18}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "great-expectations | Insights | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: "Great Expectations?"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: "20170307T144849:636244949293014026"
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: |
+        Financial markets are often said to be driven by investor expectations, the so-called fear and greed. This is perhaps best summarised by the frequently quoted father of value investing, Benjamin Graham: "In the short run, the market is a voting machine but, in the long run, it is a weighing machine.” 
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: "Great Expectations?"
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p>Financial markets are often said to be driven by investor expectations, the so-called fear and greed. This is perhaps best summarised by the frequently quoted father of value investing, Benjamin Graham: "In the short run, the market is a voting machine but, in the long run, it is a weighing machine.” </p>
+        <p>The potentially short-term nature of these expectations is illustrated by looking back at 2016. This time last year, investors were concerned about a slowdown in global economic activity and bankruptcy fears in the US energy sector. Subsequently, central banks were forced into further monetary easing to kick-start a stalling global economy. </p>
+        <p>Then along came the Brexit vote and the election of Donald Trump as US President, which proved that populism can rise anywhere and were perceived as protest votes against the secular stagnation of the last decade. The listening politicians certainly interpreted the votes as a signal to abandon fiscal austerity in favour of more populist measures to stimulate the economy whether it through infrastructure spend or tax cuts. </p>
+        <p>This was probably just as well given that central banks had started to declare they had reached the end of the road with extraordinary monetary policy as negative bond yields were seen to be doing more harm than good. Since last summer, government bond yields and equity markets have risen in anticipation of better times ahead. </p>
+        <p>The question now is when will we see hard economic evidence to justify recent animal spirits in financial markets? Judging from a number of annual investment conferences that I have attended over the past couple of months, this is clearly on the minds of my fellow fund buyers as well. These conferences are a good opportunity to gauge the mood of investors, both fund providers and fund buyers. </p>
+        <p>In managing our target risk portfolios, we consider a wide range of forward looking risks that fit into four broad categories: interest rate, inflation, currency and political. I thought it would be interesting and instructive to gather and share with you the most commonly mentioned risks from recent conferences:</p>
+        <p><strong>Interest Rate:</strong><strong></strong></p>
+        <ul>
+            <li>Normalisation and the end of ultra-loose monetary policy</li>
+            <li>Is it time for value to shine; when to buy banks?</li>
+            <li>Where to find yield?</li>
+        </ul>
+        <p><strong>Inflation:</strong><strong></strong></p>
+        <ul>
+            <li>Oil price</li>
+            <li>Populism and anti-globalisation - 'cut &amp; spend' fiscal stimulus</li>
+            <li>End of bond bull market</li>
+            <li>Further sterling devaluation</li>
+        </ul>
+        <p><strong>Currency:</strong><strong></strong></p>
+        <ul>
+            <li>US dollar strength</li>
+            <li>Impact on future returns</li>
+            <li>Capital flows out of China</li>
+            <li>To hedge or not to hedge?</li>
+        </ul>
+        <p><strong>Political:</strong><strong></strong></p>
+        <ul>
+            <li>Brexit, Trump and EU forthcoming elections </li>
+            <li>Trade barriers and protectionism</li>
+            <li>Policy mistakes</li>
+            <li>Is the EU project broken?</li>
+            <li>Geopolitical - North Korea; terrorism; migration</li>
+            <li>Increasing regulation in the fund management industry</li>
+        </ul>
+        <p>Being aware of and understanding these risks is important in managing portfolios. Referring to historical market events helps us to understand how investors have previously responded to similar risks and can act as a guide when making investment decisions although they certainly should not be taken as a script. These risks, therefore, contribute to us making our tactical asset allocations.&nbsp; </p>
+        <p>It is also vital to acknowledge, however, that we do not possess a crystal ball and cannot accurately predict the future. We are long-term investors who believe in diversification, patience and building portfolios to meet the volatility targets that our investors expect us to achieve. The Strategic Asset Allocation of our portfolios is based on the historical behaviour of 20 asset classes. These diversified portfolios are then stress tested with historic events to see how they would have reacted. </p>
+        The art of our approach is how to balance these historic behaviours with being alert to the threats and opportunities created by the elevation of any of these risks.<br><br><p><b>Disclaimer:</b></p>
+        
+        <p>• Past performance is not a guide to future performance. •
+        Do remember that the value of an investment and the income from it can fall as
+        well as rise and you may not get back the amount originally invested. • Any
+        performance shown represents model portfolios which are periodically
+        restructured and/or rebalanced. • Actual returns may vary from the model
+        returns. • There is no certainty the investment objectives of the portfolio
+        will actually be achieved and no warranty or representation is given to this
+        effect. • The portfolio therefore should be considered as a medium to long-term
+        investment.</p>
+        
+        <p>• The information and opinions provided should not be
+        construed as advice for investment in any product or security mentioned.&nbsp;
+        • Always research your own investments and consult with a regulated investment adviser
+        before investing.</p>
+        <p><em>Originally published on 7 March 2017.</em></p>

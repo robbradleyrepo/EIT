@@ -1,0 +1,113 @@
+﻿---
+ID: "5aa79a04-5bcd-4a9e-afaf-a2f21f51fb98"
+Parent: "19c18824-0904-4518-a073-9499f93719b6"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2017/10/sustainable-business"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 86400
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{BF9D58C1-6E21-4591-A838-5D4DD19B7C06}"
+          p:before="*"
+          s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+          s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+          s:par="DatasourceRule"
+          s:ph="/content/side-content" />
+        <r
+          uid="{2B288999-7A3C-46E5-8B8B-61B13C3EE09F}"
+          p:after="r[@uid='{BF9D58C1-6E21-4591-A838-5D4DD19B7C06}']"
+          s:ds=""
+          s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+          s:par="RelatedPages=%7b78CD7F91-7E07-49DE-8344-7619CE0A64C3%7d%7c%7b035EFDA3-BC0A-43D6-9548-FC77F9116B6F%7d%7c%7bFC17F0A6-ECAA-4CD7-B80B-6E67FDE3251B%7d%7c%7b77B5C263-DEEE-4A04-AE96-C01C2138DFCD%7d&amp;Title&amp;MaximumNoOfLinks=4"
+          s:ph="/content/side-content" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{18287D6F-C09C-49D9-889E-474F5D3F143E}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "sustainable-business | Insights | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: Sustainable business
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: "20171025T112848:636445277284340000"
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "438b49ae-2d4c-4a10-ab39-f593889ec214"
+      Hint: LegacyPresentationBase_RestrictedPage
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: Sustainable investment offers business opportunities to advisers because we believe that interest in and demand for this area will only continue to grow.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Sustainable business
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p>Sustainable investment offers business opportunities to advisers because we believe that interest in and demand for this area will only continue to grow.</p>
+        <p>Sustainability is an increasingly important theme for today&rsquo;s consumers, who want what they wear, eat and even drive to both benefit themselves and have a positive impact on the world around them. This is fundamentally changing businesses, from the high street retailer through industrials and even to commodity producers.</p>
+        <p>According to the European SRI Study of 2016, &euro;11 trillion (&pound;9.6 trillion) is currently invested in sustainable and responsible investment across Europe with &euro;1.5 trillion (&pound;1.3 trillion) coming from the UK. Research and studies consistently suggest this demand will continue to grow, especially as millennials inherit and generate increasing levels of wealth.</p>
+        <p>There are three key factors influencing the way business is done and driving more sustainable and responsible corporate behaviour. These are:</p>
+        <p><strong>Consumer pressure</strong></p>
+        <p>With individuals increasingly aware of the impact of their decisions, demand for sustainable products is increasing. Companies capable of providing sustainable goods, produced in an ethical manner, are well placed to profit from this increasing consumer demand.</p>
+        <p><strong>Financial sense</strong></p>
+        <p>Regulations and legislation increase costs for polluting companies, thereby providing significant impetus for efficiency improvements. Companies creating less pollution and those providing pollution reduction and efficiency technologies should continue to prosper.</p>
+        <p><strong>Political climate &amp; regulation </strong></p>
+        <p>The environment and related social impacts are now widely regarded as mainstream political issues with policy decisions increasingly made with sustainability in mind. This political will has a marked effect on regulation, as seen in the banking sector, energy policy and emissions regulation, which in turn affects the competitive landscape for businesses. Regulation influences company behaviour and typically favours more sustainable or resilient companies.</p>
+        <p>Sustainable investment does not only seek to invest in transformative developments that have positive impacts on society, they also have the potential to deliver attractive returns for investors.</p>
+        <p>How does this translate into an investment process which has the potential to outperform mainstream funds over the long term? At the heart of the <a href="http://www.liontrust.co.uk/what-we-offer/investment-processes/sustainable-future-process"><span style="color: #34b233;">Liontrust Sustainable Future investment process</span></a> is the belief the companies that will survive and thrive are those which:</p>
+        <ul>
+            <li>improve people&rsquo;s quality of life through medical, technological or educational advances;</li>
+            <li>drive improvements in the efficiency in which we use increasingly scarce resources;</li>
+            <li>help to build a more stable, resilient and prosperous economy.</li>
+        </ul>
+        <p>The process, which has been developed and honed over more than 15 years, seeks to invest in:</p>
+        <ul>
+            <li>high-quality organisations with robust business fundamentals, strong management and attractive valuations;</li>
+            <li>adaptors and innovators capitalising on change, accessing new markets and opportunities and outperforming their competitors; and</li>
+            <li>companies that are creating real and lasting value for shareholders and society, now and in the future.</li>
+        </ul>
+        <p>High-quality companies must exhibit three characteristics. The first is excellent management and core products or services that are making a positive contribution to society. </p>
+        <p>The other two are strong growth prospects and a business model that enables them to grow profitably from these trends and generate competitive investment returns. </p>
+        <p>Well run companies whose products and operations capitalise on transformative changes will benefit financially. We believe that identifying these powerful trends and investing in exposed companies makes for attractive and sustainable investments.</p>
+        <p><strong>Disclaimer</strong></p>
+        &bull; Past performance is not a guide to future performance. &bull; Do remember that the value of an investment and the income from it can fall as well as rise and you may not get back the amount originally invested. &bull; The majority of the Liontrust Sustainable Future Funds have holdings which are denominated in currencies other than Sterling and may be affected by movements in exchange rates. Some of these funds invest in emerging markets which may involve a higher element of risk due to less well regulated markets and political and economic instability. Consequently the value of an investment may rise or fall in line with the exchange rates. Liontrust UK Ethical Fund, Liontrust SF European Growth Fund and Liontrust SF UK Growth Fund invest geographically in a narrow range and has a concentrated portfolio of securities, there is an increased risk of volatility which may result in frequent rises and falls in the Fund&rsquo;s share price. &bull; Liontrust SF Managed Fund, Liontrust SF Corporate Bond Fund, Liontrust SF Cautious Managed Fund, Liontrust SF Defensive Managed Fund and Liontrust Monthly Income Bond Fund invest in bonds and other fixed-interest securities - fluctuations in interest rates are likely to affect the value of these financial instruments. &bull; If long-term interest rates rise, the value of your shares is likely to fall. If you need to access your money quickly it is possible that, in difficult market conditions, it could be hard to sell holdings in corporate bond funds. This is because there is low trading activity in the markets for many of the bonds held by these funds. Mentioned above five funds can also invest in derivatives. Derivatives are used to protect against currencies, credit and interests rates move or for investment purposes. &bull; There is a risk that losses could be made on derivative positions or that the counterparties could fail to complete on transactions.<br />
+        <br />
+        &bull; The information and opinions provided should not be construed as advice for investment in any product or security mentioned. &nbsp;&bull; Always research your own investments and consult with a regulated investment adviser before investing.

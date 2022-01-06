@@ -1,0 +1,330 @@
+﻿---
+ID: "417711b5-f5b6-4fd2-816b-5426dc3d6aee"
+Parent: "8a907cf1-d331-43b6-aaa1-dbf549b5714a"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2020/04/Examining high yield bond opportunities after sharp rise in spreads
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 102500
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{4628942F-802A-4F09-8DC5-E8AC9C6E16A9}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{6A94D1CB-0766-4090-BEBA-C24BF9112981}"
+              p:after="r[@uid='{4628942F-802A-4F09-8DC5-E8AC9C6E16A9}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{2802BCDA-5932-434A-B90C-F58805A4D0CC}"
+              p:after="r[@uid='{6A94D1CB-0766-4090-BEBA-C24BF9112981}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See%20also...&amp;RelatedPages=%7BDA9CE397-7948-49C2-9704-872C3265F305%7D%7C%7B2301B1D6-2812-4921-AC12-6BCF90F3A836%7D%7C%7B4D7B7C2A-D992-47CA-AE5D-F2DEB5704C2E%7D%7C%7B77B5C263-DEEE-4A04-AE96-C01C2138DFCD%7D&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{4AFC15F0-E001-4591-90B1-DE046B2E2940}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Examining high yield bond opportunities after sharp rise in spreads | Insights | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: Examining high yield bond opportunities after sharp rise in spreads
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200429T094815Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: "Donald Phillips uses top-down market analysis and individual bond selection to examine the opportunities for investors following the sharp rise in high yield bond yields during March’s sell-off."
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Examining high yield bond opportunities after sharp rise in spreads
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p><span>High yield is an excellent long-term, strategic asset class, something we have written about </span><a href="https://www.liontrust.co.uk/what-we-think/blogs/10-things-everyone--should-know-about-high-yield-bonds"><span style="color: #00b050;">before</span></a><span>. </span></p>
+        <p><span>In our experience, however, many investors look to time their allocation to high yield, waiting for an attractive entry point to make a tactical allocation. This begs the question of whether recent volatility has opened up such an opportunity.</span></p>
+        <p><span>High yield bonds consistently display resilience and good risk-adjusted returns versus equities: we like to compare the drawdown experience versus equities, for example, with the chart below showing the experience of the last decade plus.</span></p>
+        <p style="text-align: center;"><span><img src="-/media/729530DAB39E4487888C8C30E2818C02.ashx?h=335&amp;w=599" style="width:599px; height:335px;" alt="Global high yield vs equities over 14 years" class="custom-image-height-auto" /></span><span style="font-size: 1.5rem;"></span></p>
+        <p><span><em>Source: Liontrust, FE Analytics as at 31.12.19. The Liontrust GF High Yield fund’s reference index is the IA Sterling High Yield sector; FTSE 100, Nikkei 225 and S&amp;P 500 are used as reference indices</em></span></p>
+        <p><span>Indeed, while we are not calling the bottom in this current bout of volatility, the peak-to-trough fall in the S&amp;P 500 this year (19 February to 23 March) was around 33%, while the Global High Yield Index fell by about 21%. </span></p>
+        <p><span>The impact of the Covid-19 crisis and oil price plunge on global high yield, when measured by spread (the additional yield earned in top of government bonds), has been a large spike to well over 1000 basis points before rallying to currently sit at around 780bps. </span></p>
+        <p style="text-align: center;"><img src="-/media/49F1B4DF6AE7434A813C59707448D008.ashx?h=338&amp;w=600" style="width:600px; height:338px;" alt="Global high yield spread" class="custom-image-height-auto" /></p>
+        <p>&nbsp;<span style="font-size: 1.5rem;">Previous crises have seen pronounced spikes in spreads and typically these have represented an excellent entry point for medium to long-term investors.</span></p>
+        <p><span>We’ve run the numbers on several past crises to analyse the subsequent returns for investors entering the market at this point. Because there will be sceptics over the role energy sector bonds are playing in current valuations, we’ve chosen to apply this analysis to a sub-index of the market that excludes energy and the lowest-quality bonds in the high yield universe.</span></p>
+        <p style="text-align: center;"><img src="-/media/1BF749AC4C0E438BB6ECDDF9E9786458.ashx?h=131&amp;w=599" style="width:599px; height:131px;" alt="High yield ex energy and CCC through 700bps" class="custom-image-height-auto" /></p>
+        <p><span><em>Source: Bloomberg, Liontrust</em></span></p>
+        <p><span>This illustrates investor returns following a spike in spreads above 700bps. There have been four previous instances in the last two decades: 2002, 2008, 2011 and 2016. We can see that only in the 2008 sell-off, when widening spreads served as a warning of the Global Financial Crisis, did investors experience a negative one-year return when using a 700bps spread as a market entry signal. Even then, over a three year horizon a positive return of 9% per annum was produced (which is better than the 7.5% average annual return of the global high yield market since 2006).</span></p>
+        <p><span>It seems that, for the ex-CCC &amp; Energy sub-index, a 700bps spread (for HY) entry point as a rule-of-thumb is solidly backed up by the data. However, the market has tended to only briefly spike above this level. So unless investors responded very rapidly, they would not necessarily have captured the exact gains illustrated above.</span></p>
+        <p><span>It’s been the same story this year. Spreads on the high yield sub-index did spike above 700bps last month, hitting a high of 875bps, but have now tightened to around 600bps. This may leave investors wondering if they should still invest, given that they may have missed the trough in valuations (or peak in spreads).</span></p>
+        <p><span>In making this decision, it might be helpful to revisit our 2008 example. The market spiked considerably higher than a 700bps spread before rallying from its most distressed point. By mid-October 2009, spreads had fallen to 6% (today’s level). Though it might seem the opportunity had been lost, an investor buying on 15 October 2009 would have received a one year return of 18% (and 12% per annum over three years and 9% per annum over five years).</span></p>
+        <p><span>The speed of market movements during the Covid-19 crisis has put even the Global Financial Crisis in the shade, with spreads coming in from 875bps to 600bps in a matter of weeks. </span><span>Markets are highly likely to remain volatile in the short-term and could conceivably spike above the 700bps level again. However, rather than waiting for another short, sharp spike through the 700bps threshold, we’d suggest that investors instead take confidence from historic returns analysis, which suggests that </span><span>today’s market levels still represent a very good entry point.</span></p>
+        <p><span>When it comes to coronavirus and its economic impact, it’s important to recognise that we – along with other investors – have no expertise. The short-term direction of the market is therefore dangerous to call. But by comparing today’s valuations to past instances of heightened uncertainty, we can see that a longer-term investment opportunity may exist. High yield bond spreads sit well above levels that have previously heralded good investment returns.</span></p>
+        <p><span>When looking to take advantage of such a compelling ‘top-down’ investment opportunity, we need to make sure that we select the correct individual bonds. To do this, we focus our ‘bottom-up’ bond selection on pertinent credit drivers, which we have labelled our credit PRISM. </span></p>
+        <p><span>In judging whether a company’s bond is an attractive long-term investment, we analyse the following factors: </span></p>
+        <p><strong><span>Protections - </span></strong><span>Operational analysis and contractual e.g. structure, covenants</span></p>
+        <p><strong><span>Risks - </span></strong><span>Credit, business and market </span></p>
+        <p><strong><span>Interest cover - </span></strong><span>Leverage and other key ratios</span></p>
+        <p><strong><span>Sustainability - </span></strong><span>Cash flows and ESG factors</span></p>
+        <p><strong><span>Motivations -&nbsp;</span></strong><span style="font-size: 1.5rem;">Management and shareholders</span></p>
+        <p><span>With high yield bond spreads trading at elevated levels, a number of bonds are on distressed prices. It is possible for us to use this market disruption to seek out mispriced bonds.</span></p>
+        <p style="margin-bottom: 0.0001pt;"><span>To illustrate, we have summarised our PRISM findings on four bonds held within the fund and trading on distressed prices but which we think are oversold:</span></p>
+        <p style="margin-bottom: 0.0001pt;">&nbsp;</p>
+        <table border="0" cellspacing="0" cellpadding="0" style="margin-left: -0.25pt; border: none;">
+            <tbody>
+                <tr>
+                    <td valign="top" style="width: 149.1pt; padding: 0cm 5.4pt; text-align: left;"> &nbsp;<img src="-/media/731B110C3729426BBA59664F6BE2690B.ashx?h=146&amp;w=301" style="width:301px; height:146px;" alt="Neptune Energy" class="custom-image-height-auto" /></td>
+                    <td valign="top" style="width: 10cm; padding: 0cm 5.4pt; text-align: left;">
+                    <p style="margin: 0cm -92.8pt 0.0001pt 0cm;">&nbsp;</p>
+                    <p style="margin: 0cm -92.8pt 0.0001pt 0cm;">&nbsp;</p>
+                    <p style="margin: 0cm -92.8pt 0.0001pt 0cm;"><strong><span>Maturity 2025; YTM 17%; GF High Yield exposure 1.5%.</span></strong></p>
+                    <p style="margin-bottom: 0.0001pt;"><em><span>Neptune is a North Sea oil exploration &amp; production company</span></em></p>
+                    <p style="margin-bottom: 0.0001pt;">&nbsp;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="margin-bottom: 0.0001pt;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt;"><strong><span>Protections<br />
+        <br />
+        </span></strong></p>
+        <ul style="list-style-type: disc;">
+            <li><span>Neptune has a large skew to gas (c.70%). Gas prices 84% hedged in 2020, 67% hedged in 2021. Oil prices not materially hedged, and not particularly low cost, i.e. current prices are sustainable for gas assets, but not so for oil.</span></li>
+            <li><span>Cash breakeven for 2020 stated as US$29/barrel of oil equivalent.</span></li>
+        </ul>
+        <p style="margin-bottom: 0.0001pt;"><strong><span>&nbsp;</span></strong></p>
+        <p style="margin-bottom: 0.0001pt;"><strong><span>Risks<br />
+        <br />
+        </span></strong></p>
+        <ul style="list-style-type: disc;">
+            <li><span>A fall in gas prices; oil prices remaining low.</span></li>
+            <li><span>In 2020, it has committed capex and likely M&amp;A (which concludes imminently) which will use up liquidity at a time when a buffer is crucial. </span></li>
+            <li><span>Spending is important for this business. Based on projected 2019 production of 152,000 barrels of oil equivalent per day and pro-forma recent Indonesia and North Sea acquisitions, Neptune’s 2P and 1P reserve lives will have increased to around 12.0 and 7.7 years respectively at 2019 year-end.</span></li>
+        </ul>
+        <p><span>&nbsp;</span></p>
+        <p><strong style="font-size: 1.5rem;">Interest cover (&amp; other financial metrics)</strong></p>
+        <ul>
+            <li><span>Neptune completed 2019 with leverage at 1x – substantial interest cover.</span></li>
+            <li><span>Currently has US$1.9bn of liquidity. Given hedges, capex and likely US$450m on pre-agreed M&amp;A, liquidity probably drops to ~US$1.3bn by year end.</span></li>
+            <li><span>It has a 2024 bank facility and 2025 bond, i.e. debt maturity profile provides cushion</span></li>
+        </ul>
+        <p><span>&nbsp;</span></p>
+        <p><span></span><strong style="font-size: 1.5rem;">Sustainability</strong></p>
+        <ul>
+            <li><span>In the context of a heightened carbon transition risk, a greater focus on natural gas versus oil may prove beneficial in the medium term.</span></li>
+        </ul>
+        <p style="margin: 0cm 0cm 0.0001pt 35.7pt;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt;"><strong><span>Motivations<br />
+        <br />
+        </span></strong></p>
+        <ul style="list-style-type: disc;">
+            <li><span>Neptune was set up by private equity with Sam Laidlaw, former CEO of Centrica, at the helm. Neptune is owned by three main shareholders: China Investment Corporation (49%), Carlyle Group (31%) and CVC Capital Partners (20%). They contributed combined equity of US$2 billion towards the financing of the EPI acquisition in February 2018.</span></li>
+            <li><span>The strategy is to add equity value through accretive M&amp;A. This is tricky in a sector so prone to cyclical pricing – how do you pay a sensible long-term price for assets?</span></li>
+        </ul>
+        <p style="margin: 0cm 0cm 0.0001pt 35.7pt;"><span>&nbsp;</span></p>
+        <p style="margin: 0cm 0cm 0.0001pt 35.7pt;"><span>&nbsp;</span></p>
+        <table border="0" cellspacing="0" cellpadding="0" style="margin-left: -0.25pt; border: none;">
+            <tbody>
+                <tr>
+                    <td valign="top" style="width: 156.3pt; padding: 0cm 5.4pt; text-align: left;">
+                    <p style="margin-bottom: 0.0001pt;"><img src="-/media/D4EDE4B9BA3A4B12B0479BEADB921446.ashx?h=120&amp;w=301" style="width:301px; height:120px;" alt="Adient" class="custom-image-height-auto" /></p>
+                    </td>
+                    <td valign="top" style="width: 290.5pt; padding: 0cm 5.4pt; text-align: left;">
+                    <p style="margin-bottom: 0.0001pt;">&nbsp;</p>
+                    <p style="margin-bottom: 0.0001pt;"><strong><span>Maturity 2024; YTM 9.5%; GF High Yield Bond exposure 0.3%</span></strong></p>
+                    <p style="margin-bottom: 0.0001pt;"><em><span>Adient is a seating supplier in the autos sector which was spun out of Johnsons Controls a few years ago</span></em></p>
+                    <p style="margin-bottom: 0.0001pt;">&nbsp;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="margin: 0cm 0cm 0.0001pt 35.7pt;">&nbsp;</p>
+        <p style="margin-bottom: 0.0001pt;"><strong><span>Protections<br />
+        <br />
+        </span></strong></p>
+        <ul style="list-style-type: disc;">
+            <li><span>Scale and proximity to original equipment manufacturers (OEMs) is crucial in this sector and Adient is strong on this front. It has a global network of approximately 230 manufacturing plants in 33 countries, sitting geographically close to the manufacturing footprint of a diverse book of OEM customers.</span></li>
+            <li><span>Adient’s group of subsidiaries and joint ventures make it a globally diversified business, with Asia Pacific providing 37% revenues, North America 34% and Europe 29%. </span></li>
+            <li><span>Seating relatively free from disruption risk. </span></li>
+            <li><span>No material debt to refinance until 2024.</span></li>
+        </ul>
+        <p><span>&nbsp;</span></p>
+        <p><span></span><strong style="font-size: 1.5rem;">Risks</strong></p>
+        <ul>
+            <li><span>The autos sector is cyclical and extremely vulnerable during this lockdown. Its global footprint should at least be going through the worst parts of lockdown at different times. Looking at the Automotive Experience division of Johnson Controls during the financial crisis indicates the severity of the impact that the cycle can have. Sales fell by one third and EBITDA was wiped out. In 2010, this division returned to an EBITDA margin of 6%.</span></li>
+            <li><span>Adient did not come into this period in the greatest of health as it has been plagued with operational issues for the last 18 months. Progress was being made and Adient had forecast improved margins, positive free cash flow and asset sales (for debt reduction) in 2020. (This improvement was why we purchased the bonds in the low 90s).</span></li>
+        </ul>
+        <p><span>&nbsp;</span></p>
+        <p><span></span><strong style="font-size: 1.5rem;">Interest cover (&amp; other financial metrics)</strong></p>
+        <ul>
+            <li><span>Net debt of US$2.8bn at 31 December 2019.</span></li>
+            <li><span>Cash at calendar year end was US$965m; availability in the asset backed credit facility was US&gt;$1bn.</span></li>
+        </ul>
+        <ul style="list-style-type: disc;">
+            <li><span>The following stresses 2020 sales and EBITDA by 60% and 80%, respectively</span></li>
+        </ul>
+        <p><span>&nbsp;</span></p>
+        <p style="text-align: center;"><img src="-/media/8EDC6C0DE74E43F6A3145E90503E2AD5.ashx?h=196&amp;w=600" style="width:600px; height:196px;" alt="Adient" class="custom-image-height-auto" /></p>
+        <p style="margin-bottom: 0.0001pt;"><strong><span><br />
+        Sustainability<br />
+        <br />
+        </span></strong></p>
+        <ul>
+            <li><span>Adient scores a B rating with MSCI on ESG (which follows a scale similar to credit rating agencies). MSCI highlights difficult labour relations in its European business, opportunities in Clean Tech (I see as irrelevant – we will need seats in solar powered cars!) and some corporate structure issues. All longer-term issues.<br />
+            </span><strong style="font-size: 1.5rem;"></strong></li>
+        </ul>
+        <p><strong style="font-size: 1.5rem;"><br />
+        </strong><strong style="font-size: 1.5rem;">Motivations</strong></p>
+        <ul style="list-style-type: disc;">
+            <li><span>Adient is a listed business with a market cap of around US$1.1bn.</span></li>
+            <li><span>Post spin-off, Adient was on a deleveraging path, with achieving an investment grade rating a stated financial policy. Operational issues derailed this, but recently management has shown commitment to debt reduction within the capital allocation policy.</span></li>
+        </ul>
+        <p style="margin: 0cm 0cm 0.0001pt 35.7pt;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt;"><span>&nbsp;</span></p>
+        <table border="0" cellspacing="0" cellpadding="0" style="margin-left: -0.25pt; border: none;">
+            <tbody>
+                <tr>
+                    <td valign="top" style="width: 156.3pt; padding: 0cm 5.4pt; text-align: left;">
+                    <p style="margin-bottom: 0.0001pt;"><img src="-/media/281565A7CDAF4199ABDF1D9052A5CDDB.ashx?h=205&amp;w=300" style="width:300px; height:205px;" alt="EnQuest" class="custom-image-height-auto" /></p>
+                    </td>
+                    <td valign="top" style="width: 290.5pt; padding: 0cm 5.4pt; text-align: left;">
+                    <p style="margin-bottom: 0.0001pt;"><strong><span>Maturity 2022; YTM 68%; GF High Yield Bond exposure 0.7%.</span></strong></p>
+                    <p style="margin-bottom: 0.0001pt;"><em><span>EnQuest is primarily a North Sea oil exploration &amp; production company. The bond price reflects substantial stress, but also considerable upside if we see oil prices &gt;US$40 on a sustained basis</span></em></p>
+                    <p style="margin-bottom: 0.0001pt;">&nbsp;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <strong style="font-size: 1.5rem;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</strong>
+        <p><span><strong>Protections</strong></span></p>
+        <ul style="list-style-type: disc;">
+            <li><span>In its most recent communication with investors, EnQuest announced efficiency efforts had reduced its cash flow breakeven (cash left over after all cash spending) on Brent crude to c.USS$33/barrel in 2020. With realisations in the first quarter of 2020, the forecast cash flow breakeven falls to c.US$25/barrel for the remainder of the year. 2021 cash flow breakeven is now forecast at c.US$27/barrel.</span></li>
+            <li><span>Having had operational hiccups in recent years bringing large development assets into production, its capacity is operating well, particularly the crucial Kraken field offshore Shetland.</span></li>
+            <li><span>EnQuest has repaid all scheduled bank debt amortisation for 2020. In addition, the bonds allow for interest payments to be paid in kind, arresting cash payments in the short term.</span></li>
+        </ul>
+        <p><span>&nbsp;</span></p>
+        <p><span></span><strong style="font-size: 1.5rem;">Risks</strong></p>
+        <ul>
+            <li><span>Clearly the Brent oil price is the key risk.</span></li>
+            <li><span>Bank and bond debt need to be repaid/refinanced by 2022/23.</span></li>
+            <li><span>Substantial decommissioning liabilities means bond recovery in bankruptcy will likely be negligible.</span></li>
+        </ul>
+        <p><span>&nbsp;</span></p>
+        <p><span></span><strong style="font-size: 1.5rem;">Interest cover (&amp; other financial metrics)</strong></p>
+        <ul>
+            <li><span>Net debt/EBITDA is below 1.5x and there is substantial interest cover. However, the key stat is its cash flow breakeven. For every US$1 that realised prices fall below breakeven, the company burns cash. If we assume 160m barrels of production in 2020, then US$1 below US$25/barrel breakeven is US$160m cash burn. It has US$290m of liquidity. </span>
+            </li>
+            <li><span>Note that EnQuest had 20% of 2020 production hedged at around $65/barrel, which relates to Q1 hedging. It is largely unhedged henceforth.</span></li>
+        </ul>
+        <p><span>&nbsp;</span></p>
+        <p><span></span><strong style="font-size: 1.5rem;">Sustainability</strong></p>
+        <ul>
+            <li><span>EnQuest has a BBB rating from MSCI (which follows a scale similar to credit rating agencies), a high rating in a high yield market context. EnQuest scores well on corporate governance and safety, less so on biodiversity and carbon emissions.</span></li>
+        </ul>
+        <p><span>&nbsp;</span></p>
+        <p><span></span><strong style="font-size: 1.5rem;">Motivations</strong></p>
+        <ul>
+            <li><span>Stockmarket-listed with ~US$280m market cap and high inside ownership: the CEO owns 10%.</span></li>
+            <li><span>EnQuest has been in debt reduction mode since the oil price stress in 2015. Management has been committed to this goal, including large contributions to equity capital raising. However, we suspect fresh equity is not the route out of current stress for this company.</span></li>
+        </ul>
+        <p style="margin: 0cm 0cm 0.0001pt 36pt;"><span>&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt;">&nbsp;</p>
+        <table border="0" cellspacing="0" cellpadding="0" style="margin-left: -0.25pt; border: none;">
+            <tbody>
+                <tr>
+                    <td valign="top" style="width: 156.3pt; padding: 0cm 5.4pt; text-align: left;">
+                    <p style="margin-bottom: 0.0001pt;"><img src="-/media/7D4B034803AC4F4DA1D58ADA9F46789B.ashx?h=62&amp;w=300" style="width:300px; height:62px;" alt="Loxam" class="custom-image-height-auto" /></p>
+                    </td>
+                    <td valign="top" style="width: 290.5pt; padding: 0cm 5.4pt; text-align: left;">
+                    <p style="margin-bottom: 0.0001pt;"><strong><span>Senior bonds: Maturity 2025; YTM 6.5%; GF High Yield Bond exposure 0.7%.</span></strong></p>
+                    <p style="margin-bottom: 0.0001pt;"><strong><span>Junior bonds: Maturity 2027; YTM 13.5%; GF High Yield Bond exposure 0.3%.</span></strong></p>
+                    <p style="margin-bottom: 0.0001pt;"><em><span>Loxam is an equipment rental business based in France, but through M&amp;A has collected a series of rental businesses across EMEA</span></em></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="margin-bottom: 0.0001pt;"><strong style="font-size: 1.5rem;"><br />Protections<br /><br />
+        </strong></p>
+        <ul style="list-style-type: disc;">
+            <li><span>Scale advantages come through network density, which Loxam does well, though not quite so well as we’ve seen from US-based companies like United Rentals and Ashtead.</span></li>
+            <li><span>A well-managed equipment rental business can be expected to cease spending cash in a pinch. Moreover, they can sell equipment to raise cash, which it has managed to do in previous downcycles. It seems unlikely that Loxam is selling much equipment at the moment, but it has certainly slashed capex.</span></li>
+            <li><span>Meanwhile, in France up to 80% of Loxam’s staff have been placed on partial employment.</span></li>
+        </ul>
+        <p><span>&nbsp;</span></p>
+        <p><span></span><strong style="font-size: 1.5rem;">Risks</strong></p>
+        <ul>
+            <li><span>How long does the lockdown last?</span></li>
+            <li><span>Likelihood of selling equipment in this environment? This was a source of funds in previous down-cycles.</span></li>
+        </ul>
+        <p><span>&nbsp;</span></p>
+        <p><span></span><strong style="font-size: 1.5rem;">Interest cover (&amp; other financial metrics)</strong></p>
+        <ul>
+            <li><span>Loxam increased its liquidity by drawing on bank lines of €175m and its revolving credit facility for €75m. Its liquidity at the end of March will be above €400m.</span></li>
+            <li><span>The following stress shows sales (pro-forma for acquisitions) down 75% in 2020, with EBITDA margin halving to 15%.</span></li>
+        </ul>
+        <p style="text-align: center;"><span><img src="-/media/4F2089B9A713452BACA017D7C9FFD3A1.ashx?h=256&amp;w=600" style="width:600px; height:256px;" alt="Loxam" class="custom-image-height-auto" /></span></p>
+        <p><strong style="font-size: 1.5rem;"><br />
+        Sustainability</strong></p>
+        <ul style="list-style-type: disc;">
+            <li><span>Private company – no MSCI rating and no significant governance information provided in financial statements.</span></li>
+            <li><span>Equipment rental is by nature an efficient use of capital equipment, and therefore sustainable. Of course, many customers will be using the equipment in pollutive industries.</span></li>
+        </ul>
+        <p><span>&nbsp;</span></p>
+        <p><span></span><strong style="font-size: 1.5rem;">Motivations</strong></p>
+        <ul>
+            <li><span>Loxam is a private French company formed in the 1960s and was subject to a management buyout in 2004. In 2011 private equity exited, leaving management with 95% of the shares.</span></li>
+            <li><span>Management has shown an aggressive attitude towards debt, with M&amp;A and dividends squeezing the balance sheet. </span></li>
+        </ul>
+        <ul style="list-style-type: disc;">
+            <li><span>The CEO since 1986 is also Chairman and controlling shareholder. The CFO has been in his chair since 2008 and with the company since 2004. Similar true of various other members of senior management.</span></li>
+        </ul>
+        <p style="margin-bottom: 0.0001pt;"><span>&nbsp;</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt;"><span style="color: #222222;">For a comprehensive list of common financial words and terms, see our glossary&nbsp;</span><span style="color: #34b233;"><a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms" style="color: inherit;"><span style="color: inherit;">here</span></a>.</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><span style="color: #222222;">&nbsp;</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><strong><span style="color: #222222;">Key Risks</span></strong></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><span style="color: #222222;">Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. Investment in Funds managed by the Global Fixed Income team involves foreign currencies and may be subject to fluctuations in value due to movements in exchange rates. The value of fixed income securities will fall if the issuer is unable to repay its debt or has its credit rating reduced. Generally, the higher the perceived credit risk of the issuer, the higher the rate of interest. Bond markets may be subject to reduced liquidity. The Funds may invest in emerging markets/soft currencies and in financial derivative instruments, both of which may have the effect of increasing volatility.</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><span style="color: #222222;"><strong><span style="color: #222222;">Disclaimer</span></strong><br />
+        <br />
+        The information and opinions provided should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</span></p>

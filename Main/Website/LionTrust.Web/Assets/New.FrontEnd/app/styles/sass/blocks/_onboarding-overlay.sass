@@ -1,13 +1,14 @@
 .onboarding-overlay
     z-index: 100
-    background-image: url('../images/components/header/bg-desktop.svg')
+    background-image: url("../images/components/header/bg-desktop.svg")
     background-repeat: no-repeat
     background-size: cover
     height: 100vh
     align-items: center
     justify-content: space-between
-    padding: 34px 12px 20px 12px
-    // justify-content: center
+    padding: 0
+    width: 100vw
+    justify-content: center
     flex-direction: column
     display: none
     &::-webkit-scrollbar
@@ -15,30 +16,34 @@
     &::-webkit-scrollbar-thumb
         background-color: trasparent
         border-radius: 5px
-    @include breakpoint(tablet, up)
-        padding-top: 120px
     &.active
         display: flex
         position: fixed
         top: 0
         bottom: 0
-        width: 100vw
         overflow-y: scroll
+        align-items: center
+        justify-content: space-between
+        flex-direction: column
     .btn-primary
-        min-width: 244px
         letter-spacing: 0
-        padding: 0;
-        @include breakpoint(tablet, up)
+        padding: 0
+        +breakpoint(tablet, up)
             letter-spacing: 1.2px
     &__tab
         visibility: hidden
         opacity: 0
         height: 0
         transition: opacity 1s ease-out
+        display: flex
+        flex-direction: column
+        align-items: center
+        overflow: hidden
         &.visible
             visibility: visible
             opacity: 1
             height: auto
+            overflow: unset
     &__logo
         text-align: center
     &__hint
@@ -47,56 +52,92 @@
         font-weight: 300
         text-align: center
         line-height: 28px
-        margin: 0 auto
-        margin-bottom: 55px            
-        @include breakpoint(tablet, up)
-            margin-bottom: 120px
-        @media screen and (max-height: 800px) and (min-width: 992px)
-            margin-bottom: 55px
+        margin: 120px auto 119px auto
+        +breakpoint(mobile-large, down)
+            margin: 34px auto 38px auto
+            padding: 0
     &__img
         width: 197px
         height: auto
-        margin-bottom: 30px
-        @include breakpoint(tablet, up)
     &__title
         @extend .h1
+        font-size: 42px
+        letter-spacing: 0px
         text-align: center
-        margin-bottom: 20px
+        margin: 30px auto 0 auto
+        +breakpoint(tablet, up)
+            letter-spacing: 0
+            margin: 44px auto 0 auto
     &__btns
         text-align: center
-        margin-top: 34px
-        margin-bottom: 48px
-        max-width: 786px
+        max-width: 521px
         width: 100%
-        margin-left: auto
-        margin-right: auto
+        margin: 0 auto
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        align-items: center
+        +breakpoint(mobile-large, down)
+            max-width: 489px
         .onboarding-overlay__set-step
-            margin: 8px
+            position: relative
+            cursor: pointer
+            margin: 48px 0 0 32px
+            min-width: 244px
+            &:nth-child(n+3)
+                margin: 32px 0 0 32px
+                +breakpoint(mobile-large, down)
+                    margin: 13px 0 0 16px
+            +breakpoint(mobile-large, down)
+                margin: 13px 0 0 16px
+                min-width: 158px
+            &::after
+                content: ""
+                width: 100%
+                height: 100%
+                position: absolute
+                left: 0
+                top: 0
+                z-index: 1
+            &:nth-child(odd)
+                margin-left: 0
+            .icon-arrow-right.animate-arrow
+                display: inline-flex
+                margin-left: 10px
+                +breakpoint(mobile-large, down)
+                    display: none
         &.three-buttons
             width: auto
             .onboarding-overlay__set-step
-                display: block
                 margin: 16px auto
-                @include breakpoint(tablet, up)
+                +breakpoint(tablet, up)
                     display: inline-block
                     margin-right: 1rem
                     &:last-child
                         margin-right: 0
     &__text
         @extend .onboarding-overlay__hint
-        margin-bottom: 34px
+        margin: 17px auto 32px auto
         max-width: 456px
+        padding: 0
         @extend .onboarding-overlay__btns
     &__link
         text-decoration: underline
     &__get-hint
         text-align: center
         display: block
+        margin: 48px auto 0 auto
+        +breakpoint(mobile-large, down)
+            margin: 44px auto 0 auto
     &__steps
-        position: absolute
-        bottom: 16px
-        @media screen and (max-height: 800px) and (min-width: 992px)
-            bottom: -110px
+        position: relative
+        display: flex
+        justify-content: center
+        width: 100%
+        margin: 42px 0
+        padding: 0
+        +breakpoint(mobile-large, down)
+            margin: 20px 0
     &__step
         display: inline-block
         margin: 0 5px
@@ -104,8 +145,9 @@
         position: relative
         padding: 5px 0
         cursor: pointer
+        pointer-events: auto
         &::after
-            content: ''
+            content: ""
             position: absolute
             display: block
             width: 20px
@@ -114,12 +156,13 @@
         &.active
             &::after
                 background: $gold
+        &.active ~ .onboarding-overlay__step
+            pointer-events: none
         &:hover
             &::after
                 background: $primary
-    &__row-location
     &__scroller
-        margin: 0 auto
+        margin: 0 auto 26px auto
         max-width: 700px
         padding: 5px 10px
         max-height: 250px
@@ -135,21 +178,37 @@
             font-size: 18px
             font-weight: 300
     &__content
-        position: absolute
-        top: 50%
-        transform: translateY(-50%)
+        width: 100%
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: center        
         @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
             position: static
             transform: none
             top: inherit
 .set-location
-    &__row.row
-        margin-left: 0
-        margin-right: 0
-        max-width: 700px
-        margin: 0 auto
-    &__list
-        margin-bottom: 30px
+    &__row
+        margin: 41px auto
+        display: flex
+        width: 460px        
+        padding: 0
+        justify-content: space-between
+        +breakpoint(tablet, down)
+            padding: 0 30px
+        +breakpoint(mobile-large, down)
+            flex-wrap: wrap
+            padding: 0 2px
+            max-width: 345px
+            width: 100%
+        .set-location
+            width: fit-content
+            padding: 0 !important
+            margin: 0
+            max-width: unset
+            flex: none
+            +breakpoint(mobile-large, down)
+                width: 30%
     &__title
         font-size: 32px
         line-height: 41px
@@ -159,16 +218,28 @@
         font-weight: 300
         cursor: pointer
     &__content
-        width: max-content
         margin: 0 auto
+        display: flex
+        flex-direction: column
+        flex-wrap: nowrap
+        white-space: nowrap
 .onboarding-overlay__set-step
     position: relative
     cursor: pointer
+    margin: 48px 0 0 32px
+    &:nth-child(n+3)
+        margin: 32px 0 0 32px
+        +breakpoint(mobile-large, down)
+            margin: 13px 0 0 16px
+    +breakpoint(mobile-large, down)
+        margin: 13px 0 0 16px
     &::after
-        content: ''
+        content: ""
         width: 100%
         height: 100%
         position: absolute
         left: 0
         top: 0
         z-index: 1
+    &:nth-child(odd)
+        margin-left: 0

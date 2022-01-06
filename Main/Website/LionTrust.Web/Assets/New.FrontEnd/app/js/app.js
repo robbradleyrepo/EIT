@@ -17,7 +17,6 @@ import stickyNavbar from "./componets/stickyNavbar";
 import literatureOverlay from "./componets/literatureOverlay";
 import shareLink from "./componets/shareLink";
 import locationAndMap from "./componets/locationAndMap";
-import galleryApp from "./componets/galleryApp";
 import tabNav from "./componets/tabNav";
 import headerCtaNav from "./componets/headerCtaNav";
 import preferenceCenter from './componets/preferenceCenter';
@@ -31,14 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
     fundsSlider();
     articleSlider();
     awardsSlider();
-    stickyNavbar();
     literatureOverlay();
     locationAndMap();
     shareLink();
-    galleryApp();
     tabNav();
     headerCtaNav();
     preferenceCenter();
+    stickyNavbar();
     if (document.querySelector(".main-page")) parallaxScrolling();
     // init tooltips
     $('[data-toggle="tooltip"]').tooltip({

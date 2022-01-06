@@ -1,18 +1,21 @@
 .insight
     display: flex
     overflow: hidden
+    position: relative
+    @include breakpoint(tablet, down)
+        padding-bottom: 30px
+        margin-bottom: 19px
 
     &__box
         display: flex
         flex-direction: column
-
 
     &__head
         display: flex
         justify-content: space-between
         align-content: center
         padding: 10px 0
-        
+        position: unset
 
     &__tit
         display: flex
@@ -22,20 +25,21 @@
         @include breakpoint(desktop, up)
             font-size: 52px
 
-    
-
-
     &__more
-        display: none
         align-items: center
         color: $primary
         letter-spacing: 2.4px
         font-size: 12px
         text-transform: uppercase
         cursor: pointer
+        position: absolute
+        bottom: 0
         @include breakpoint(desktop, up)
             display: flex
-        > i 
+            position: relative
+            z-index: auto
+            bottom: auto
+        > i
             width: 16px
             height: 13px
             margin-left: 5px
@@ -43,7 +47,27 @@
 
         &:hover
             > i
-                transform: translate(10px, 0)
+                opacity: 0
+        &::after
+            content: "\e901"
+            font-family: icomoon!important
+            speak: never
+            font-style: normal
+            font-weight: 400
+            font-variant: normal
+            text-transform: none
+            line-height: 1
+            -webkit-font-smoothing: antialiased
+            -moz-osx-font-smoothing: grayscale
+            position: absolute
+            font-size: 10px
+            right: 10px
+            opacity: 0
+        &:hover
+            &:after
+                transition: all 0.50s ease-in-out
+                right: 0
+                opacity: 1
 
     &__more-resp
         display: flex
@@ -55,7 +79,7 @@
         cursor: pointer
         @include breakpoint(desktop, up)
             display: none
-        > i 
+        > i
             width: 16px
             height: 13px
             margin-left: 5px
@@ -65,9 +89,8 @@
             > i
                 transform: translate(10px, 0)
 
-
     &__articles-resp
-        visibility: visible      
+        visibility: visible
         padding: 20px 0
         @include breakpoint(desktop, up)
             visibility: hidden
@@ -84,15 +107,6 @@
             display: flex
             flex-direction: row
             flex-wrap: wrap
-
-
-        // .article__slide
-        //     padding: 0
-        //     margin: 20px 20px 0 0
-        //     @include breakpoint(desktop, up)
-        //         width: 289px
-        //         height: 321px
-
-        //     @include breakpoint(desktop-large, up)
-        //         width: 400px
-        //         height: 400px
+    .col-12, .insight__box, .insight__head
+        @include breakpoint(tablet, down)
+            position: unset

@@ -1,0 +1,47 @@
+﻿---
+ID: "cea82665-e5e6-43b1-93e9-f1e251888e9e"
+Parent: "c8e97f82-4fb2-46d3-b162-8fa1fb9fe0ff"
+Template: "66e09d5b-4f8e-4313-9df3-fa7e53fbe83a"
+Path: /sitecore/content/LionTrustNew/Global/Funds/Shared documents/Liontrust Investment Funds I Prospectus
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190927T080655Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "8de3f234-7880-4703-8534-02bb8320c09c"
+      Hint: LegacyDocument_RelatedFunds
+      Type: Multilist
+      Value: |
+        {B1D4F3A2-CD2F-4CEF-A12B-2431A68B569E}
+        {80BFAA5A-CCD9-4D0A-98A9-3F78B62488AA}
+        {14BC0BF0-FCD9-4867-8421-CEE4FF894E79}
+        {FF40A417-F3CF-4FB1-B926-8F53DD39CEE7}
+        {C6C384C4-0CAA-4DEB-B452-F24C8D8B4E61}
+        {1401A2D8-86A4-4932-9D8F-487256DC3B0D}
+        {17361A16-40B0-46FE-9AD6-93345775BA8D}
+        {2F6D6DB8-1DB8-4634-AE7E-85016520CE05}
+        {D335D329-D868-4ED0-94D1-36AA958DFD5D}
+        {BEE76F70-8749-4152-976A-A56C67512CE9}
+        {D576BBA7-B953-4045-9127-904FE9D3B133}
+        {C53D76FD-DC8A-4DF9-A8EB-B413E1917B26}
+        {748F38D7-17DF-4161-99DF-750D2AD48FD8}
+        {69C07E6B-044D-4BBE-8B6E-AAEE9291D9ED}
+    - ID: "a4a7f9dd-a218-4f33-b72a-7dc2251ccd43"
+      Hint: LegacyDocument_DocumentTypes
+      Type: Multilist
+      Value: "{93BD5BD5-AF14-4FD5-96EC-59F7ABB6C172}"
+    - ID: "c794210e-6107-4d69-841f-773cb9943bba"
+      Hint: LegacyDocument_DownloadLink
+      Value: |
+        <link target="" linktype="media" id="{10CD48F4-6E2D-438D-9680-D306C177257C}" url="/LionTrust/Files/fund-literature/prospectus-fund-legal/liontrust-investment-funds-i-prospectus" />
+    - ID: "eeb8db99-7da8-4973-adf7-bcf7b29eba79"
+      Hint: LegacyDocument_DocumentName
+      Value: Liontrust Investment Funds I Prospectus

@@ -143,14 +143,17 @@ Languages:
         </r>
     - ID: "094932b9-ff77-4977-966e-d18f7c7ac091"
       Hint: LegacyArticle_Subtitle
-      Value: Article 5
+      Value: Test
     - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
       Hint: LegacyArticle_Authors
       Type: Treelist
-      Value: "{0F980420-4156-41F4-951F-F156CD3F4359}"
+      Value: "{59739F98-04B1-4BAA-BDC3-C1BD4591A91D}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: New ArticlePage | Insights | Liontrust Asset Management PLC
     - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
       Hint: LegacyArticle_Title
-      Value: Article 5
+      Value: Article
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20210728T094254Z
@@ -159,7 +162,8 @@ Languages:
       Value: "{74A07305-3F24-4766-9595-AD788CAD354A}"
     - ID: "5bd6e9e9-2240-4473-8094-075e811b8438"
       Hint: Article_ListingImage
-      Value: 
+      Value: |
+        <image mediaid="{8C038CB5-FC55-4F88-8934-CC2B85C604C5}" />
     - ID: "79cc76cc-7503-449b-9809-9808cf6c2d26"
       Hint: Article_Date
       Value: 20210512T210000Z
@@ -172,4 +176,8 @@ Languages:
     - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
       Hint: LegacyArticle_Content
       Value: |
-        <span style="background-color: #ffffff; text-align: justify; color: #000000;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies ornare nunc.&nbsp;</span>
+        <ul>
+            <li>test bullet 1</li>
+            <li>test bullet 2</li>
+            <li>test bullet 3</li>
+        </ul>

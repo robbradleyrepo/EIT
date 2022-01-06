@@ -1,0 +1,32 @@
+﻿---
+ID: "4bab3ef6-d412-43dd-9e29-afa29a788350"
+Parent: "be90c992-f129-482b-932b-80f3e6223371"
+Template: "b074a5e0-b766-481c-869c-8c2e3034c4bc"
+Path: /sitecore/content/LionTrustNew/Home/Data Template/Fund Multi Assets/_Local/investmentprocess
+DB: master
+BranchID: "f99e0a5b-d9b4-45ca-8304-311c93a7737e"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 1000
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{7070ADA0-0B82-455C-BAD9-29A8E669077F}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211112T115553Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "98b43e92-3166-4986-a181-e6ef91093454"
+      Hint: Anchor_Id
+      Value: investmentprocess
+    - ID: "aa0a9de9-8d65-4233-a9d5-dfab02bb9b5a"
+      Hint: Anchor_Name
+      Value: investmentprocess

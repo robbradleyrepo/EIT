@@ -111,6 +111,7 @@
     <Content Include="Views\Fund\FundCentre.cshtml" />
     <Content Include="Views\Fund\FundAccessPopUp.cshtml" />
     <Content Include="Views\Fund\CapitalisationChart.cshtml" />
+    <Content Include="Views\Fund\_FundInfoRow.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -173,12 +174,16 @@
     <Compile Include="Indexing\FundManagerFundTeamUrlField.cs" />
     <Compile Include="Indexing\FundTeamUrlField.cs" />
     <Compile Include="Indexing\SalesforceFundIdField.cs" />
+    <Compile Include="Models\FundInfoRowViewModel.cs" />
     <Compile Include="Models\GraphBreakdownViewModel.cs" />
     <Compile Include="CreditRating\ICreditRating.cs" />
     <Compile Include="CreditRating\ICreditRatingRow.cs" />
+    <Compile Include="Models\IAdditionalInfoAndChargesTooltips.cs" />
     <Compile Include="Models\IFourFundStatsManual.cs" />
     <Compile Include="Models\IFundAccessPopUp.cs" />
     <Compile Include="Models\IFundCentre.cs" />
+    <Compile Include="Models\IFundShareLink.cs" />
+    <Compile Include="Models\IKeyInfoPriceTooltips.cs" />
     <Compile Include="Models\IMyFundsScroller.cs" />
     <Compile Include="Models\IGraphWithHeading.cs" />
     <Compile Include="PerformanceTables\CumulativePerformanceController.cs" />
@@ -285,7 +290,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DI\" />
-    <Folder Include="Views\CapitalisationChart\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

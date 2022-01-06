@@ -30,23 +30,17 @@
 
         private static FundClassData ConsolidateData(FundClassData data, FundDataResponseModel apiData)
         {
-            if(string.IsNullOrEmpty(data.SectorName))
+            if(string.IsNullOrEmpty(data.Benchmark))
             {
-                data.SectorName = apiData.SectorName;
+                data.Benchmark = apiData?.Benchmarks?
+                    .FirstOrDefault(x => x.BenchmarkTypeName.ToLower().Contains("benchmark"))?
+                    .BenchmarkName;
             }
-
-            if (data.ClassLaunchDate == null || data.ClassLaunchDate == DateTime.MinValue)
-            {
-                if (DateTime.TryParse(apiData.UnitLaunchDate, out DateTime date))
-                {
-                    data.ClassLaunchDate = date;
-                }
-            }
-
+           
             if (string.IsNullOrEmpty(data.Comparator1))
             {
                 data.Comparator1 = apiData?.Benchmarks?
-                    .FirstOrDefault(x => x.BenchmarkTypeName.ToLower().Contains("benchmark"))?
+                    .FirstOrDefault(x => x.BenchmarkTypeName.ToLower().Contains("benchmark comparator 1"))?
                     .BenchmarkName;
             }
 
@@ -88,9 +82,10 @@
                 OfferPrice = fundClass.OfferPrice,
                 PriceDate = fundClass.PriceDate,
                 SinglePrice = fundClass.SinglePrice,
-                SectorName = fundClass.SectorName,
+                Benchmark = fundClass.Benchmark,
                 ManagerInceptionDateOfFund = fundClass.ManagerInceptionDateOfFund,
-                TargetBenchmarkYield = fundClass.TargetBenchmarkYield
+                TargetBenchmarkYield = fundClass.TargetBenchmarkYield,
+                Id = fundClass.Id
             };
         }
     }

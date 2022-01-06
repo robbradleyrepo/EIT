@@ -18,6 +18,9 @@ Languages:
     - ID: "435d1d54-8a35-4b13-b9cb-c59ca752f272"
       Hint: KeyInfoPriceComponent_PriceLabel
       Value: Price
+    - ID: "5291254f-d8de-4689-811a-c1b862f0b93d"
+      Hint: KeyInfoPriceComponent_BenchmarkLabel
+      Value: Sector
     - ID: "58d81f04-60a8-470a-8880-6d7dc3f4a460"
       Hint: KeyInfoPriceComponent_DurationLabel
       Value: Duration
@@ -38,14 +41,23 @@ Languages:
       Hint: KeyInfoPriceComponent_PriceDateTooltipLabel
       Value: Lorem ipsum
     - ID: "85a7c8e7-fffb-4ee9-9372-17de13a3cefa"
-      Hint: KeyInfoPriceComponent_Benchmark1Label
-      Value: Benchmark 1
+      Hint: KeyInfoPriceComponent_Comparator2Label
+      Value: Comparator Benchmark 2
+    - ID: "94185463-0638-40c0-ac99-233554578886"
+      Hint: KeyInfoPriceComponent_TargetBenchmarkYieldLabel
+      Value: Target Benchmark Yield
     - ID: "9a89e450-3210-4694-8520-345ee6263302"
       Hint: KeyInfoPriceComponent_FundSizeLabel
       Value: Fund Size
+    - ID: "ab8e942c-8129-4a8e-9dd5-2d7f3f9de270"
+      Hint: KeyInfoPriceComponent_ManagerInceptionDateLabel
+      Value: Manager Inception Date of Fund
     - ID: "b27c9cc5-f16c-4a75-852d-3a9b6fdbe497"
-      Hint: KeyInfoPriceComponent_ComparatorLabel
-      Value: Comparator
+      Hint: KeyInfoPriceComponent_Comparator1Label
+      Value: Comparator Benchmark 1
+    - ID: "b58a6442-2039-4a2e-83fd-c6ccd6cca221"
+      Hint: KeyInfoPriceComponent_Tooltips
+      Value: "{B4DF1C29-12AD-4B17-9ED2-7124A1F5E1A2}"
     - ID: "d093b57a-44ca-4867-b0d5-52db25e3cc11"
       Hint: KeyInfoPriceComponent_PriceDateLabel
       Value: Price Date

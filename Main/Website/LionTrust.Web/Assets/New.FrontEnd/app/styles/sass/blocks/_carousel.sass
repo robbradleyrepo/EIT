@@ -45,7 +45,7 @@
             background: $gold
     .swiper-slide:not(.swiper-slide-visible)
         visibility: hidden
-    .swiper-slide-prev, .swiper-slide-next
+    .swiper-slide-prev, .swiper-slide-next,.nextActiveClass,.previousActiveClass
         position: relative
         cursor: pointer
         &:before
@@ -59,7 +59,7 @@
         &:hover
             &:before
                 visibility: visible
-    .swiper-slide-prev
+    .previousActiveClass
         &:before
             top: 50%
             left: 50%
@@ -70,7 +70,7 @@
             display: none
             @include breakpoint(desktop, up)
                 display: block
-    .swiper-slide-next
+    .nextActiveClass
         &::before
             top: 50%
             left: 60%

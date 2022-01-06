@@ -20,10 +20,7 @@
         string OfferPriceLabel { get; set; }
 
         [SitecoreField(Constants.KeyInfoPriceComponent.PriceDateLabel_FieldId)]
-        string PriceDateLabel { get; set; }
-
-        [SitecoreField(Constants.KeyInfoPriceComponent.PriceDateTooltipLabel_FieldId)]
-        string PriceDateTooltipLabel { get; set; }
+        string PriceDateLabel { get; set; }        
 
         [SitecoreField(Constants.KeyInfoPriceComponent.PriceLabel_FieldId)]
         string PriceLabel { get; set; }
@@ -31,13 +28,16 @@
         [SitecoreField(Constants.KeyInfoPriceComponent.SinglePriceLabel_FieldId)]
         string SinglePriceLabel { get; set; }
 
-        [SitecoreField(Constants.KeyInfoPriceComponent.SectorNameLabel_FieldId)]
-        string SectorLabel { get; set; }
+        [SitecoreField(Constants.KeyInfoPriceComponent.BenchmarkLabel_FieldId)]
+        string BenchmarkLabel { get; set; }
 
         [SitecoreField(Constants.KeyInfoPriceComponent.ManagerInceptionDateLabel_FieldId)]
         string ManagerInceptionDateLabel { get; set; }
 
         [SitecoreField(Constants.KeyInfoPriceComponent.TargetBenchmarkYieldLabel_FieldId)]
         string TargetBenchmarkYieldLabel { get; set; }
+
+        [SitecoreField(Constants.KeyInfoPriceComponent.Tooltips_FieldId)]
+        IKeyInfoPriceTooltips Tooltips { get; set; }
     }
 }

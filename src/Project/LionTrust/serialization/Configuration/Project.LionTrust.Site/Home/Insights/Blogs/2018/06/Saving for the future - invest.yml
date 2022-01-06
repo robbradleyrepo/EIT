@@ -1,0 +1,251 @@
+﻿---
+ID: "be68808d-8277-459b-acce-a66c3f0879ba"
+Parent: "835bb1dd-a6e0-4fec-b3fd-bda65a73d70a"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2018/06/Saving for the future - investing in retirement"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 84700
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{6664EE7B-1550-4967-87C7-FFB0342CA6D0}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{3232428D-59FA-484D-95AB-FC14F30151D3}"
+              p:after="r[@uid='{6664EE7B-1550-4967-87C7-FFB0342CA6D0}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{0B62641A-C47E-4B97-B3A2-CC9C92DBF450}"
+              p:after="r[@uid='{3232428D-59FA-484D-95AB-FC14F30151D3}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See also...&amp;RelatedPages={FA0E822B-9229-47E9-9341-79282A4EE71F}|{FC17F0A6-ECAA-4CD7-B80B-6E67FDE3251B}|{A872ED66-C757-4F49-8F30-61F4B764DA0A}|{77B5C263-DEEE-4A04-AE96-C01C2138DFCD}&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{7170277C-D434-4C5D-9945-5D46793D683C}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "Saving for the future - investing in retirement | Insights | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: "Saving for the future: investing in retirement"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20160908T230000Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: Chris Foster, investment analyst at ATI, examines the radically shifting landscape of retirement saving in the UK and the investment opportunities it contains.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: "Saving for the future: investing in retirement"
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p><em>This article was first published by Alliance Trust Investments on 9 September 2016.</em></p>
+        <p><strong>Chris Foster, investment analyst at ATI, examines the radically shifting landscape of retirement saving in the UK and the investment opportunities it contains.</strong></p>
+        <p>In the ATI Sustainable Future team we are looking for companies that are well positioned to help solve problems within our society and our economy. Here we are looking for firms that are addressing the increasing lack of financial security faced by many UK retirement savers. Encouragingly, the current UK pensions and savings landscape suggests a number of different ways savers and investors can tackle this pressing issue. </p>
+        <p>Research conducted by Aviva in 2015 found that Briton&rsquo;s aged over 45 expect their pension funds to generate an average of &pound;12,590 per year of their retirement in addition to the state pension. However, the same report concluded that on average this group&rsquo;s current savings would deliver less than a third of this target income (1). </p>
+        <p>Since then the Bank of England&rsquo;s base interest rate has dropped even further to 0.25% and so Britons are finding it increasingly difficult to grow their retirement savings through conventional vehicles. </p>
+        <p>Traditionally retirement funding has come from three main sources: the government in the form of the state pension, employers and individual savings. The state pension is currently set at &pound;155.63 per week for those who retired after 6 April 2016 (2); however there is every reason to believe that future generations will not receive the same amount in real terms. </p>
+        <p>Despite politicians claiming that Britain&rsquo;s budget deficit is falling, UK national debt to GDP was 84% at the end of 2015 - the highest level since 1967 (3) and the government is increasingly looking to make savings in welfare payments (of which pensions form more than 42% at &pound;108 billion) (4).</p>
+        <p><img height="382" alt="Saving for the future: investing in retirement" width="600" src="-/media/A618BB199F53463FB299E3C0E1DD8E9F.ashx?h=382&amp;w=600" style="height: 382px; width: 600px;"></p>
+        <p>In terms of employee pension schemes, employers are increasingly scrapping defined benefit schemes &ndash; which guarantee a set level of retirement income every year until death at the liability of the employer &ndash; in favour of defined contribution schemes &ndash; payments from which are determined by the performance of underlying investments and for which all risk and liability sits with the employee. In 1997 46% of all UK employees were enrolled into defined benefit pension schemes while in 2012 this had fallen to 28%.</p>
+        <p><img height="367" alt="Saving for the future - investing in retirement " width="600" src="-/media/3F7CB810C2CF4CA88B939B4403D477BC.ashx?h=367&amp;w=600" style="height: 367px; width: 600px;"></p>
+        <p>For those without an employer pension scheme, options include group personal pensions, stakeholder pensions or independent savings and investments. According to the 2012 data from the Office for National Statistics, around 10% of UK employees have opted for personal or stakeholder pensions, however the latter remains difficult to quantify. </p>
+        <p><strong>Shifting demographics</strong></p>
+        <p>The proportion of the European population aged 65 and over is currently around 20%; however this is expected to rise to 30% by 2040, driven by increased life expectancy and falling fertility rates. In the UK specifically the proportion of the population aged 65 and over is expected to grow from 17% in 2014 to 24% in 2040 (5).</p>
+        <p><img height="386" alt="Saving for the future - investing in retirement " width="600" src="-/media/2267FDC1A8DC4C59A966545161D0C28F.ashx?h=386&amp;w=600" style="height: 386px; width: 600px;"></p>
+        <p>Subsequently, old age dependency ratios, which express the number of people in a population aged 65 and over to the number aged between 15 and 65, are expected to rise sharply in Europe over the next few years. The UK&rsquo;s old age dependency ratio is currently around 30% and is expected to rise to over 40% by 2060. In Poland this is expected to rise to over 60%, driven by a huge migration of working age people out of the country since 2010 (6).</p>
+        <p><img height="385" alt="Saving for the future - investing in retirement " width="600" src="-/media/95D12FB2FFDB42DE9288E67D1CC1137E.ashx?h=385&amp;w=600" style="height: 385px; width: 600px;"></p>
+        <p>A rising old age dependency ratio is important because it implies fewer people of working age and, without surges of productivity, slower rates of economic growth. All of this means a greater burden for already heavily indebted governments in terms of state pension provisions and a likely move towards individuals having to save for their own retirements.</p>
+        <p>Figure 5: pension age in 2050 to maintain old-age dependency ratio at 2010 level</p>
+        <table border="1" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td valign="bottom" style="width: 180pt; padding: 0cm; text-align: left;">
+                    <p style="margin: 6.8pt 0cm 0.0001pt;"><strong><span>Country</span></strong></p>
+                    </td>
+                    <td valign="bottom" style="width: 180pt; padding: 0cm; text-align: left;">
+                    <p style="margin: 6.8pt 0cm 0.0001pt;"><strong><span>Required pension age</span></strong></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="bottom" style="width: 180pt; padding: 0cm; text-align: left;">
+                    <p style="margin: 6.8pt 0cm 0.0001pt;"><span>Spain</span></p>
+                    </td>
+                    <td valign="bottom" style="width: 180pt; padding: 0cm; text-align: left;">
+                    <p style="margin: 6.8pt 0cm 0.0001pt;"><span>76.0</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="bottom" style="width: 180pt; padding: 0cm; text-align: left;">
+                    <p style="margin: 6.8pt 0cm 0.0001pt;"><span>Italy</span></p>
+                    </td>
+                    <td valign="bottom" style="width: 180pt; padding: 0cm; text-align: left;">
+                    <p style="margin: 6.8pt 0cm 0.0001pt;"><span>74.7</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="bottom" style="width: 180pt; padding: 0cm; text-align: left;">
+                    <p style="margin: 6.8pt 0cm 0.0001pt;"><span>Germany</span></p>
+                    </td>
+                    <td valign="bottom" style="width: 180pt; padding: 0cm; text-align: left;">
+                    <p style="margin: 6.8pt 0cm 0.0001pt;"><span>73.9</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="bottom" style="width: 180pt; padding: 0cm; text-align: left;">
+                    <p style="margin: 6.8pt 0cm 0.0001pt;"><span>France</span></p>
+                    </td>
+                    <td valign="bottom" style="width: 180pt; padding: 0cm; text-align: left;">
+                    <p style="margin: 6.8pt 0cm 0.0001pt;"><span>72.8</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="bottom" style="width: 180pt; padding: 0cm; text-align: left;">
+                    <p style="margin: 6.8pt 0cm 0.0001pt;"><span>United Kingdom</span></p>
+                    </td>
+                    <td valign="bottom" style="width: 180pt; padding: 0cm; text-align: left;">
+                    <p style="margin: 6.8pt 0cm 0.0001pt;"><span>71.7</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Source: Sustainability of pension systems in Europe &ndash; the demographic challenge</p>
+        <p>Even in the last five years there have been significant changes to public pensions across the UK and Europe. The UK pension age is rising in the UK &ndash; for many years it was 65 for men and 60 for women, but it is increasing to 66 for both genders by 2020, to 67 by 2028 and will rise in line with life expectancy thereafter (7).</p>
+        <p><strong>The new pension landscape </strong></p>
+        <p>New state pension rules that came into force earlier this year mean that to be entitled to the full amount, Britons must have paid national insurance for at least 35 years (8). This could be interpreted as an attempt by the government to reduce its state pension liability. </p>
+        <p>Alongside this, auto-enrolment into workplace pensions means that employers must now enrol eligible employees into their workplace pension - a clear attempt by the government to pass responsibility for pensions on to employers as they recognise that there is a savings issue for the future. </p>
+        <p>Auto-enrolment is being phased in in the UK and it means that by 2019 all eligible employees should be enrolled in a pension scheme. In March 2015, 59% of UK employees were in a workplace pension scheme, 74% of which were employed by large organisations. The minimum total contribution is currently 2%, rising to 5% until April 2019 then rising to 8% thereafter (including tax relief on top of contributions) (9).</p>
+        <table border="1" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td valign="bottom" style="width: 124.5pt; padding: 0cm; text-align: left;">
+                    <p style="margin: 6.8pt 0cm 0.0001pt; text-align: left;"><strong><span>Phase</span></strong></p>
+                    </td>
+                    <td valign="bottom" style="width: 124.5pt; padding: 0cm; text-align: left;">
+                    <p style="margin: 6.8pt 0cm 0.0001pt;"><strong><span>Duration</span></strong></p>
+                    </td>
+                    <td valign="top" style="width: 106.5pt; padding: 0cm; text-align: left;">
+                    <p style="margin: 6.8pt 0cm 0.0001pt;"><strong><span>Employer minimum contribution</span></strong></p>
+                    </td>
+                    <td valign="top" style="width: 106.5pt; padding: 0cm; text-align: left;">
+                    <p style="margin: 6.8pt 0cm 0.0001pt;"><strong><span>Total minimum contribution</span></strong></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="bottom" style="width: 124.5pt; padding: 0cm; text-align: left;">
+                    <p style="margin: 6.8pt 0cm 0.0001pt;"><span>First transitional period</span></p>
+                    </td>
+                    <td valign="bottom" style="width: 124.5pt; padding: 0cm; text-align: left;">
+                    <p style="margin: 6.8pt 0cm 0.0001pt;"><span>To 5 April 2018</span></p>
+                    </td>
+                    <td valign="top" style="width: 106.5pt; padding: 0cm; text-align: left;">
+                    <p style="margin: 6.8pt 0cm 0.0001pt;"><span>1%</span></p>
+                    </td>
+                    <td valign="top" style="width: 106.5pt; padding: 0cm; text-align: left;">
+                    <p style="margin: 6.8pt 0cm 0.0001pt;"><span>2%</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="bottom" style="width: 124.5pt; padding: 0cm; text-align: left;">
+                    <p style="margin: 6.8pt 0cm 0.0001pt;"><span>Second transitional period</span></p>
+                    </td>
+                    <td valign="bottom" style="width: 124.5pt; padding: 0cm; text-align: left;">
+                    <p style="margin: 6.8pt 0cm 0.0001pt;"><span>6 April 2018 to 5 April 2019</span></p>
+                    </td>
+                    <td valign="top" style="width: 106.5pt; padding: 0cm; text-align: left;">
+                    <p style="margin: 6.8pt 0cm 0.0001pt;"><span>2%</span></p>
+                    </td>
+                    <td valign="top" style="width: 106.5pt; padding: 0cm; text-align: left;">
+                    <p style="margin: 6.8pt 0cm 0.0001pt;"><span>5%</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" valign="bottom" style="width: 249pt; padding: 0cm; text-align: left;">
+                    <p style="margin: 6.8pt 0cm 0.0001pt;"><strong><span>From 6 April 2019 onwards</span></strong></p>
+                    </td>
+                    <td valign="top" style="width: 106.5pt; padding: 0cm; text-align: left;">
+                    <p style="margin: 6.8pt 0cm 0.0001pt;"><strong><span>3%</span></strong></p>
+                    </td>
+                    <td valign="top" style="width: 106.5pt; padding: 0cm; text-align: left;">
+                    <p style="margin: 6.8pt 0cm 0.0001pt; text-align: left;"><strong><span>8%</span></strong></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&nbsp;</p>
+        <p>Between the introduction of pension reforms in 2012 and April 2015, the overall proportion of eligible employees saving into a workplace pension increased by 20% from 55% to 75%. Much of this has come from growth in private sector saving, which has increased from 42% to 70% (10). Progress is being made, but from a very low base and there is clearly much more to do.</p>
+        <p><img height="339" alt="Saving for the future - investing in retirement " width="600" src="-/media/2E7E82D77E174FEF877E14C24600C5CB.ashx?h=339&amp;w=600" style="height: 339px; width: 600px;"></p>
+        <p>Source: Annual Survey of Hours and Earnings, Office for National Statistics</p>
+        <p><strong>Investment opportunities</strong></p>
+        <p>One of the most important sectors to play a role in the UK&rsquo;s shifting retirement savings landscape is life insurance. Life insurance demand comes from individuals setting aside a portion of their income to get a degree of compensation for them or their families in the event of death, injury, illness, or loss of employment. </p>
+        <p>However, life insurers are also the largest players in administering defined contribution pension schemes and providing annuities at retirement &ndash; although the latter has become far less attractive due to rock bottom interest rates since 2009. Growth in the sector is correlated with population size and age, affluence, and the role of the state (where the welfare state is in retreat; the need for private life insurance grows). </p>
+        <p>Total UK life insurer reserves (including defined benefit pensions) constitute over one-half of household financial assets and one-third of overall household wealth &mdash; proportions that are high in relative and absolute terms when compared with other developed markets. </p>
+        <p>Asset management is another important sector for retirement savings. According to OECD data, the assets under management of UK asset managers accounted for around 50% of GDP in 1980. In 2010 that figure was 270% - the industry has grown more than fivefold in 30 years. The demand for asset management products, both active and passive, is likely to increase as individuals increase the amount they are saving (11). </p>
+        <p>The financial advice market should also benefit in this new savings environment. There is a clear lack of financial understanding within broader society and it is not just the ultra-high net worth that are in need of financial advice. Personal finance education has been lacking in the UK and has only been part of the academic curriculum for the past few years. As a result, financial literacy in Britain is extremely low (12). </p>
+        <p>Platforms &mdash; online portals that allow consumers (or their advisers) to manage investments &mdash; are becoming an increasingly important part of private investment. Today, 80% of private investor assets are on platform, up from 37% in 2007 (13). The benefits are obvious, reducing costs, making administration of investments easier, and providing opportunities for retail investors to access asset classes they would otherwise not be able to.</p>
+        <p>People throughout the UK and Europe face a huge challenge when it comes to saving adequately for their retirement however there is also an opportunity here for both savers and investors. Greater levels of saving and financial literacy will give people more control over their financial futures while those companies and investors that are helping society to meet these challenges should also benefit.</p>
+        <p><strong>Sources&nbsp;</strong></p>
+        <p>1 http://www.aviva.co.uk/media-centre/story/17506/over-45s-personal-savings-will-leave-them-with-a-r/ </p>
+        <p>2 https://www.gov.uk/new-state-pension </p>
+        <p>3 http://www.economicshelp.org/wp-content/uploads/2016/07/uk-debt-100-years.png </p>
+        <p>4 http://visual.ons.gov.uk/welfare-spending/ </p>
+        <p>5 Source: World Bank Databank: Health Nutrition and Population Statistics: Population estimates and projections </p>
+        <p>6 http://actuary.eu/documents/Sustainability_pension_system_ final_020712 270612_web.pdf </p>
+        <p>7 http://www.telegraph.co.uk/news/politics/georgeosborne/12179375/Work-until-youre-75-or-even-81-under-Government-review-of-state-pension-age.html </p>
+        <p>8 https://www.gov.uk/new-state-pension/your-national-insurance-record-and-your-state-pension</p>
+        <p>9 http://www.thepensionsregulator.gov.uk/docs/automatic-enrolment-commentary-analysis-2016.pdf </p>
+        <p>10 Ibid </p>
+        <p>11 Societal and economic impacts of the European asset management industry, EY, December 2014</p>
+        <p>12 http://www.bbc.co.uk/news/uk-23548745 13 http://www.fca.org.uk/static/documents/market-studies/ms15-02-1.pdf</p>
+        <p>&nbsp;</p>
+        <p style="color: #222222; background-color: #ffffff; margin-right: 0px; margin-bottom: 14px; margin-left: 0px;">For a comprehensive list of common financial words and terms, see our glossary&nbsp;<a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms" style="color: #000000;"><span style="color: #34b233;">here</span></a>.</p>
+        <p style="color: #222222; background-color: #ffffff; margin: 0px 0px 14px;"><span><strong>Key Risks</strong></span></p>
+        <p style="color: #222222; background-color: #ffffff; margin: 0px 0px 14px;"><span><strong>Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital.</strong></span>&nbsp;The issue of units/shares in Liontrust Funds may be subject to an initial charge, which will have an impact on the realisable value of the investment, particularly in the short term. Investments should always be considered as long term.</p>
+        <p style="color: #222222; background-color: #ffffff; margin: 0px 0px 14px;">Some of the Funds managed by the Sustainable Future Equities team involve foreign currencies and may be subject to fluctuations in value due to movements in exchange rates.</p>
+        <p style="color: #222222; background-color: #ffffff; margin: 0px 0px 14px;"><span><strong>Disclaimer</strong></span></p>
+        <div style="color: #222222; background-color: #ffffff;">This content should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy.&nbsp; It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, faxed, reproduced, divulged or distributed, in whole or in part, without the express written consent of Liontrust. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</div>

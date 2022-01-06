@@ -1,0 +1,29 @@
+﻿---
+ID: "a668b57f-ce77-48d2-a765-720879d9b1ae"
+Parent: "6e8072ea-7d57-4df6-a362-3d5208659ed6"
+Template: "a33314f8-d9aa-4710-b47a-9f66ba58ab13"
+Path: "/sitecore/content/LionTrustNew/Home/Balanced Fund/_Local/UI016 - Fund Manager Component"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{93023684-6B07-4CC9-B1FB-8BAB6ED2675A}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211116T131143Z
+    - ID: "4ef859a1-6cd4-4213-8eab-94cc974c6c08"
+      Hint: FundManager_Title
+      Value: FM component
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "742fa605-ec20-4ec8-87fd-9e7daeb8bc84"
+      Hint: FundManagers_Managers
+      Type: Multilist
+      Value: "{8A9DB932-B36C-42AD-BBEB-1A0EF9284BBB}"

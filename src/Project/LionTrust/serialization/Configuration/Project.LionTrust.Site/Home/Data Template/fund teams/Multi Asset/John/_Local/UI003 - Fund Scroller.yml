@@ -1,0 +1,39 @@
+﻿---
+ID: "31d684a4-c388-4e35-99dc-1ee1b554ea65"
+Parent: "ad1081ba-516f-43d8-8f76-cb6e5eb0dadc"
+Template: "f91bff52-8afb-4056-bbf3-84c16924b92d"
+Path: "/sitecore/content/LionTrustNew/Home/Data Template/fund teams/Multi Asset/John/_Local/UI003 - Fund Scroller"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{DE13EB7B-FDC5-481E-A493-D9B0B873A6D2}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210712T135428Z
+    - ID: "451efcd2-40a3-4153-8b02-bec9572a9ec1"
+      Hint: FundScroller_Description
+      Value: Duis volutpat sagittis nulla sit amet lobortis. Etiam auctor felis eget neque tempor elementum. Mauris interdum turpis et elit tincidunt, vel lacinia dolor malesuada. Suspendisse fermentum urna congue tincidunt ornare. Aliquam consectetur posuere ipsum non hendrerit. Vestibulum vitae diam nisl. Nulla eu sem ac enim commodo placerat eu in lorem. Cras in hendrerit lacus, a ullamcorper orci. Vivamus sed dolor in ipsum fringilla egestas.
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "63c464ec-3657-4b91-adf5-28ac9036774f"
+      Hint: FundScroller_PrimaryCta
+      Value: |
+        <link linktype="internal" text="View the funds" querystring="" target="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
+    - ID: "8e11c5f7-1fca-4a99-ad05-b81511f973d9"
+      Hint: FundScroller_Heading
+      Value: John's funds
+    - ID: "e8a3c14f-9976-4734-9fe8-5bb53e1dc9b3"
+      Hint: FundScroller_SecondaryCta
+      Value: |
+        <link linktype="internal" text="See all guidance" querystring="" target="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
+    - ID: "eb9e31a0-ed28-48fc-8cbf-820264b17306"
+      Hint: FundScroller_Subtitle
+      Value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in dapibus purus. Vivamus nec pretium lacus. Ut pharetra rutrum aliquam. Vivamus sed faucibus augue.

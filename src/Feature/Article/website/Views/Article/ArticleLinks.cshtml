@@ -1,19 +1,22 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @model LionTrust.Feature.Article.Models.ArticleLinksViewModel
 @if (Model != null && Model.Article != null && Model.ArticleLinks != null)
-{
-    var shareGoal = Model.ArticleLinks.ShareLinkGoal != null ? Model.ArticleLinks.ShareLinkGoal.ToString() : string.Empty;
+{    
     var downloadGoal = Model.ArticleLinks.DownloadGoal != null ? Model.ArticleLinks.DownloadGoal.ToString() : string.Empty;
     var pdfDocumentAvailable = Model.Article.PdfDocument != null && !string.IsNullOrEmpty(Model.Article.PdfDocument.Src);
     var pdfDocumenSrc = pdfDocumentAvailable ? Model.Article.PdfDocument.Src : "#";
     <div class="article-with-small">
         <ul class="article-links py-3">
-            <li class="article-links__item">
-                <a href="#" class="article-links__link copy-to-clipbord" data-goal-trigger="@shareGoal" data-link="@Model.Article.Url" data-title="@Model.ArticleLinks.ShareTooltip">
-                    <i class="icon-share"></i>
-                    <span>@Html.Glass().Editable(Model.ArticleLinks, m => m.ShareLabel)</span>
-                </a>
-            </li>
+            @if (Model.ArticleLinks.ArticleSharing != null)
+            {
+                var shareGoal = Model.ArticleLinks.ArticleSharing.ShareLinkGoal != null ? Model.ArticleLinks.ArticleSharing.ShareLinkGoal.ToString() : string.Empty;
+                <li class="article-links__item">
+                    <a href="#" class="article-links__link copy-to-clipbord" data-goal-trigger="@shareGoal" data-link="@Model.Article.AbsoluteUrl" data-title="@Model.ArticleLinks.ArticleSharing.ShareTooltip">
+                        <i class="icon-share"></i>
+                        <span>@Html.Glass().Editable(Model.ArticleLinks.ArticleSharing, m => m.ShareLabel)</span>
+                    </a>
+                </li>
+            }
             @if (pdfDocumentAvailable || Sitecore.Context.PageMode.IsExperienceEditor)
             {
                 using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Article/Article Document", Model.Article.Id.ToString(), "Edit Article document"))

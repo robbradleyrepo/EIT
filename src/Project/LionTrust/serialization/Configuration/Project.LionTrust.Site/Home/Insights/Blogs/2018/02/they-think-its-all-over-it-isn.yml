@@ -1,0 +1,101 @@
+﻿---
+ID: "0b553b5b-99e0-4bd5-abe9-1a1cc8cf7f1e"
+Parent: "12031a2c-43bf-455e-a330-c36ffa9edc18"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2018/02/they-think-its-all-over-it-isnt-yet"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 91200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{27F29B63-3E91-4E76-BA78-97D212B2C414}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{702A0E50-64D8-4702-85EA-0365FD0EE509}"
+              p:after="r[@uid='{27F29B63-3E91-4E76-BA78-97D212B2C414}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{749AB917-45A0-457D-BA1C-19F752407C79}"
+              p:after="r[@uid='{702A0E50-64D8-4702-85EA-0365FD0EE509}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See also...&amp;RelatedPages={4D7B7C2A-D992-47CA-AE5D-F2DEB5704C2E}|{8C51575E-E456-4F0D-A8CC-E081D251A901}|{FC17F0A6-ECAA-4CD7-B80B-6E67FDE3251B}|{EB1B6FD8-B497-4758-B015-4344B0948D8A}&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{DBAE5B17-522C-480D-926B-55EA6C1873D3}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "they-think-its-all-over-it-isnt-yet | Insights | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: They think it’s all over, it isn’t yet
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180220T154626Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: "Following the yield curve flattening aggressively in January 2018, we have seen a “bear-steepener”: all bonds falling in price and longer dated ones suffering more. David Roberts explains what this might mean for investors."
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: They think it’s all over, it isn’t yet
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p style="margin-bottom: 12pt;"><span>I wrote <a href="~/link.aspx?_id=38B83E560286457EABFB66D0BD080E99&amp;_z=z"><span style="color: #34b233;">a couple of weeks ago</span></a>&nbsp;about the predictive power of the US interest rate curve. In short, when the yield curve flattens aggressively, this is often a precursor to a wobble in risk assets </span><span>&ndash; </span><span>which is what has happened. The question now is what happens next? </span></p>
+        <p style="margin-bottom: 12pt;"><span>Just to recap, a flatter yield curve means the interest rate charged on bonds of short maturity rises relative to that of long maturity bonds. The curve flattened gently through 2017 and then aggressively in January 2018, signalling economic slowdown ahead.</span></p>
+        <p style="margin-bottom: 12pt;"><span>Since then, what has happened to bond yields? Well, overall prices have fallen and yields have risen, which is not what you would expect given equity weakness. Had bonds risen a little in price, or long-dated bonds continued to do relatively well, we could have been forgiven for thinking the rise in market volatility was transient. </span></p>
+        <p style="margin-bottom: 12pt;"><span>Either of these would have signalled the Federal Reserve was no longer expected to tighten policy &ndash; basically it was running scared of the equity market &ndash; which would have been good in the short term for risk assets.</span></p>
+        <p style="margin-bottom: 12pt;"><strong><em><span>Recent moves: US government bonds. 30-year and five-year bonds, yield differential</span></em></strong></p>
+        <p style="margin-bottom: 12pt;"><strong><em><span><img alt="Recent moves: US government bonds. 30-year and five-year bonds, yield differential" src="-/media/098C8BFE34C14FCFB977646A7B2BC0CB.ashx?h=319&amp;w=600&amp;hash=9B7AAC138DC5027833B6870C5F448F4514ABE3BA" style="height: 319px; width: 600px;"></span></em></strong></p>
+        <p style="margin-bottom: 12pt;"><strong><em><span></span></em></strong><em style="font-size: 1.5rem;">Source: Bloomberg</em></p>
+        <p style="margin-bottom: 12pt;"><span>Instead, we have seen a &ldquo;bear-steepener&rdquo;: all bonds falling in price, but this time longer dated ones have been suffering more. In the chart, you can see investors want 0.6% more to own 30-year bonds, up from 0.4% a week ago. This can be the most dangerous move for risk assets.</span></p>
+        <p><span>Despite my recent comments, I had been quite sanguine about risk up to this point. There are many reasons to remain upbeat but a bear steepener is traditionally horrible for the US and by extension the global economy. Rising long rates have a material impact on the housing market because mortgage rates rise, choking off demand for housing. US mortgage refinance has been a bit like UK PPI &ndash; &ldquo;windfall&rdquo; low rates have supported consumption even as real wage growth has been modest. </span></p>
+        <span>The bond market remains nervous and is signalling that the mild risk correction seen so far is not<strong> </strong>sufficient to stay the Fed&rsquo;s collective hand. All things being equal, if bond yields continue to move higher, the chances are we have further volatility to come.</span>
+        <div><span><br>
+        </span></div>
+        <p><strong>Key Risks &amp; Disclaimer</strong></p>
+        <p>Please remember that past performance is not a guide to future performance and the value of an investment and any income generated from them can fall as well as rise and is not guaranteed, therefore you may not get back the amount originally invested and potentially risk total loss of capital.</p>
+        <div>This blog should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy.&nbsp; It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, faxed, reproduced, divulged or distributed, in whole or in part, without the express written consent of Liontrust.<span></span></div>

@@ -35,7 +35,6 @@
             margin-right: 5px
             @include breakpoint(desktop, up)
                 margin-right: 8px
-
 .contact-section
     margin-top: 30px
     margin-bottom: 30px
@@ -43,14 +42,11 @@
         margin: 85px auto 90px
     &__title, h2
         margin-bottom: 12px
-    &__margin
-        @include breakpoint(desktop, up)
-            margin-left: -1rem
+    
     .card
-        display: inline-block
+        display: flex
+        width: 100%
         margin-bottom: 1rem
-        @include breakpoint(desktop, up)
-            margin: 1rem
         @include breakpoint(desktop-large, up)
             padding: 30px 40px 40px
     &__half-card
@@ -59,10 +55,11 @@
             @include breakpoint(desktop, up)
                 margin: 0 0 2rem 0
                 width: 100%
-                    
-            
+    &__margin
+        margin-bottom: 16px
 .contacts
     display: table
+    width: 100%
     &__title
         font-size: 26px
         line-height: 32px
@@ -139,13 +136,27 @@
         display: none
         @include breakpoint(desktop, up)
             display: table-cell
-
 .contact-form-section
     @extend .contact-section
     margin-bottom: 40px
     @include breakpoint(desktop, up)
         margin-top: 27px
         margin-bottom: 90px
-
+    .input-group
+        label
+            top: -14px
+            left: 0
+            font-size: 12px
+            color: $gray
 .send-message-text
     @extend .follow-us__text
+.contact-us 
+    .light-gray
+        p
+            font: 12px $userfont
+            margin: 0
+            line-height: 22px
+            width: 60%
+            font-weight: 500
+            @include breakpoint(tablet, down)
+                width: 100%

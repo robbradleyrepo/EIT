@@ -8,6 +8,11 @@
         z-index: 2
     .imagepromo__contentbox
         color: #ffffff
+    .accordion-section
+        padding-bottom: 151px
+        background: url('../images/bg/gradient background bottom@2x.png') no-repeat 100% 0
+        background-size: 100%
+
 .shevron-bg
     position: absolute
     top: -50%
@@ -17,18 +22,14 @@
     @include breakpoint(desktop, up)
         left: 40%
         height: auto
-
 body:not(.main-page)
     .shevron-bg
         display: none
-
 .main-bg
-
 .lead-banner
     &__wrapper
         height: 550px
         position: relative
-        top: -60px
         @include breakpoint(desktop, up)
             height: 610px
     &__overlay
@@ -37,7 +38,6 @@ body:not(.main-page)
         left: 0
         right: 0
         bottom: 0
-
     &__bg
         width: 100%
         height: 100%
@@ -54,12 +54,17 @@ body:not(.main-page)
             right: 0
             bottom: 0
             background: linear-gradient(180deg, rgba(0, 0, 0, 0) 69.2%, #000000 100%), linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, .2) 34.28%)
-
+    &__text
+        font-size: 20px
+        letter-spacing: 0.2px
+        line-height: 30px
+        +breakpoint(mobile-large, down)
+            font-size: 18px
+            letter-spacing: 0
+            line-height: 28px
 .main-page-conentent
     position: relative
     z-index: 2
-    overflow-x: hidden
-
 .paralax-circle
     position: absolute
     top: 60vh

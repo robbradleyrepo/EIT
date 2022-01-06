@@ -1,0 +1,23 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Contact.Models.IGreyPanel
+@if (Model != null)
+{
+    <div class="light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h5 class="section__title">
+                        @Html.Glass().Editable(Model, m => m.Title)
+                    </h5>
+                    <p class="section__description">
+                        @Html.Glass().Editable(Model, m => m.Description)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @: Add datasource for Grey Panel component
+}

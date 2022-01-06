@@ -161,6 +161,9 @@ function buildcopy() {
       "app/images/**/*.*",
       "!app/images/src/**/*",
       "app/fonts/**/*",
+	  "app/js/chartjs-plugin-datalabels@0.7.0.js",
+	  "app/js/shuffle.js",
+	  "app/js/componets/galleryApp.js"
     ],
     { base: "app/" }
   ).pipe(dest("dist"));

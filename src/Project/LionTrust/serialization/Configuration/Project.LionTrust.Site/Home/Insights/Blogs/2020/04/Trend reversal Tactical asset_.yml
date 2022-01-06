@@ -1,0 +1,108 @@
+﻿---
+ID: "5527be6f-55d7-4ade-add7-2a228384031a"
+Parent: "8a907cf1-d331-43b6-aaa1-dbf549b5714a"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2020/04/Trend reversal Tactical asset allocation post Coronavirus
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 92300
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{BE5DEC72-99E4-487A-84DC-9953BE5DD8FA}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:ph="/content/side-content" />
+            <r
+              uid="{BB6E1537-D1EB-4B61-9F75-D931D0CF2652}"
+              p:after="r[@uid='{BE5DEC72-99E4-487A-84DC-9953BE5DD8FA}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{AB04828F-9F75-4EEA-88A6-6F51A80BF0E0}"
+              p:after="r[@uid='{BB6E1537-D1EB-4B61-9F75-D931D0CF2652}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See%20also...&amp;RelatedPages=%7B9EADCB46-7677-4826-AA77-0AC5F81DFFBC%7D%7C%7BAFF0AA51-76FC-43AA-AB03-BFFE331D6950%7D%7C%7B01B3EF98-C64F-4F71-BACE-EA0BAFE8A6E0%7D%7C%7B1EC36DCA-A621-4DDD-B8EA-888A3693BF7B%7D&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{666D8658-69FD-4802-B1DF-B4D2FEF1AD18}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Trend reversal Tactical asset allocation post Coronavirus | Insights | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: "Trend reversal? Tactical asset allocation post-Coronavirus"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200406T123358Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: "As asset allocators consider how best to position portfolios over 2020 and beyond, John Husselbee asks whether recent trends of US, growth and large-cap outperformance will continue."
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: "Trend reversal? Tactical asset allocation post-Coronavirus"
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p><strong><span style="color: black;">The outbreak of COVID-19 has led to the focus of everyone’s thoughts being on getting through the next few weeks and then months until any semblance of normality returns. As investors, however, we need to look ahead as far as possible. In managing our Multi-Asset portfolios, we are working to protect clients as much as we can during market volatility but also want to ensure we maximise the potential for future returns, provided we remain within our risk perameters. </span></strong></p>
+        <p><span style="color: black;">We have written in recent weeks that while Coronavirus is exacting a huge toll on people, the world will come through it and current depressed valuations in certain parts of the market are offering potentially attractive entry points for investors prepared to be patient. </span></p>
+        <p><span style="color: black;">With this in mind, we are among many asset allocators reviewing our positioning and working out how we want portfolios to look heading into a new cycle. Our tactical asset allocation can range from one to five, with one the most bearish and five the most positive, and we have been neutral (a 3) since 2018. While the speed of recent events meant we were unable to move down the scale, we now see an opportunity to take advantage of cheap equity valuations as we move up to five, looking to be on the right side of the buy low, sell high maxim.</span></p>
+        <p><span style="color: black;">No one will need reminding that recent events have brought a swift end to an 11-year bull period but, as markets start to recover, what will drive performance – and, importantly, will it be the same as the factors that dominated the recent run?</span></p>
+        <p><span style="color: black;">Looking at what has worked over the last five years, there are some clear trends in evidence and any portfolios getting these right will have comfortably outperformed. In equities, for example, the US has substantially outperformed other markets around the world, including the supposedly higher risk (and potentially higher reward) emerging markets. As the chart shows, the US has outstripped the MSCI World Index by four times over the last five years, even accounting for the huge volatility of recent weeks.</span></p>
+        <p style="text-align: center;"><span style="color: black;"><img src="-/media/F9EF9CD70AED487FB22DEB945CD86810.ashx?h=349&amp;w=599" style="width:599px; height:349px;" alt="US equities vs EM vs Rest of World 5 year trend vs 20 year trend" class="custom-image-height-auto" /></span></p>
+        <p><span style="color: black;">Another pronounced trend has been growth stocks outperforming value. Again, despite intermittent spikes in value and proclamations of an impending turn in fortunes, growth companies have produced more than three times the return over five years. </span></p>
+        <p style="text-align: center;"><span style="color: black;"><img src="-/media/2602A9074D964264A64879516BE6AEF1.ashx?h=343&amp;w=599" style="width:599px; height:343px;" alt="Value vs Growth 5 year trend vs 20 year trend" class="custom-image-height-auto" /></span></p>
+        <p><span style="color: black;">A third factor is large cap companies outperforming small, and a corollary of this has been passive funds broadly beating active, with the latter typically focusing on the mid and small end of the market. The magnitude of this outperformance by large caps is more than double over five years to the end of March.</span></p>
+        <p style="text-align: center;"><span style="color: black;"><img src="-/media/C0164C5CF99E4525A7EBEBFA89FF1D4B.ashx?h=344&amp;w=600" style="width:600px; height:344px;" alt="Large Cap vs Small Cap 5 year trend vs 20 year trend" class="custom-image-height-auto" /></span></p>
+        <p><span style="color: black;">The final trend is in bond markets. For sterling investors, there is a pattern of unhedged exposure to global bonds outperforming hedged, again more than double the returns over five years. Much of the past five years has been under the shadow of Brexit, during which sterling has been consistently weak, particularly against the US dollar. For our portfolios, we want to take bond risk rather than currency risk in our fixed income allocation and therefore hedge back to sterling – and this has clearly gone against us in recent years.</span></p>
+        <p><span style="color: black;">If these are the short to medium-term trends that have driven performance for the last five years, what can we extrapolate from this?</span></p>
+        <p><span style="color: black;">Taking the first three equity factors, US over the rest of the world, growth over value and large caps over small, what is immediately apparent is that all of these run contrary to longer-term trends. If we look at 20-year charts, the US has still outperformed the MSCI World Index – consider that the 11-year bull run took up over half the period – but emerging markets are far ahead, registering a dollar return of more than 380% against 210% by developed markets.</span></p>
+        <p><span style="color: black;">We can also see similar reversals over longer timeframes for value and small caps. Providing some much-needed succour for value advocates, this style has outperformed growth over the last 20 years, although, given the level of underperformance for such an extended period of time, the two are not that far apart in returns. With smaller companies, the traditional outperformance over larger names is much clearer over 20 years: again in US dollars, small caps are up around 320% versus 120% for larger companies.</span></p>
+        <p><span style="color: black;">With the bond versus currency trend, the situation is different: as can be seen from the 20-year chart, the ultimate numbers are fairly similar – 199% for unhedged versus 179% for hedged – but the ride is much smoother for the latter. As stated, we want to take bond rather than currency risk in this part of our portfolios and the less volatile path is a key factor behind that.</span></p>
+        <p><span style="color: black;">As asset allocators, our decision making at this point rests largely on whether we see the last five years as cyclical or secular: have conditions changed to favour these dominant factors in the future or will longer-term trends reassert themselves? We could write a whole series of articles on this, and there are obvious questions to ask, particularly when we all finally emerge from the Coronavirus lockdown. How much will globalisation reverse for example and can technology continue to disrupt industries to the same extent as it has over the last decade or so?</span></p>
+        <p><span style="color: black;">It could be argued that the rise of the FAANGs (Facebook, Amazon, Apple, Netflix and Google) has been behind all three of our equity trends – growth, large cap and US –&nbsp; and whether they can remain so dominant will be a key talking point with our underlying fund managers for the forseeable future.</span></p>
+        <p><span style="color: black;">For our part, we remain in the longer-term trends reasserting camp. Our portfolios have been underweight US and overweight emerging markets and tilted towards value and smaller companies, and we would expect to &nbsp;maintain this profile as we dial up our risk over the weeks and months ahead.</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt;"><span style="color: #222222;">For a comprehensive list of common financial words and terms, see our glossary&nbsp;<a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms" style="color: inherit;">here</a>.</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><span style="color: #222222;">&nbsp;</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><strong><span style="color: #222222;">Key Risks &amp; Disclaimer</span></strong></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><span style="color: #222222;">Please remember that past performance is not a guide to future performance and the value of an investment and any income generated from them can fall as well as rise and is not guaranteed, therefore you may not get back the amount originally invested and potentially risk total loss of capital.</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><span style="color: #222222;">This content should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy.&nbsp; It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, faxed, reproduced, divulged or distributed, in whole or in part, without the express written consent of Liontrust.</span></p>

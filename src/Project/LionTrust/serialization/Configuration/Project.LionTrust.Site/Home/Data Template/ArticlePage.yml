@@ -130,8 +130,14 @@ Languages:
               s:id="{C4570003-4866-4EAA-B069-8FA6611DC0EC}"
               s:ph="main" />
             <r
-              uid="{BBB2192D-FA6A-46AE-AE95-15DD426DC1C0}"
+              uid="{85FC1BDD-E21F-4BE1-88FB-F70869310E16}"
               p:after="r[@uid='{B6168C0D-C843-4588-B49B-2FAB9D488771}']"
+              s:ds="{2DE85F50-17AB-4AC4-9D1C-75DBE2253960}"
+              s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+              s:ph="main" />
+            <r
+              uid="{BBB2192D-FA6A-46AE-AE95-15DD426DC1C0}"
+              p:after="r[@uid='{85FC1BDD-E21F-4BE1-88FB-F70869310E16}']"
               s:ds="{4A06B85D-568A-4BAC-B73A-EAFDD679A733}"
               s:id="{7F3DDF4D-5190-4C04-836D-41325114723D}"
               s:ph="main" />
@@ -141,6 +147,10 @@ Languages:
               s:ds="{11369802-A428-472A-8E0D-F563B230412E}"
               s:id="{29206264-421A-41D5-8869-A7D1EA60566B}"
               s:ph="main" />
+            <r
+              uid="{D93091D4-8A9A-46B9-9313-03DDE504393F}">
+              <p:d />
+            </r>
             <r
               uid="{136B2778-E8D5-477F-A7EA-E29FEBC69BB6}"
               p:after="*[1=2]"
@@ -156,6 +166,9 @@ Languages:
       Hint: LegacyArticle_Authors
       Type: Treelist
       Value: "{0F980420-4156-41F4-951F-F156CD3F4359}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: ArticlePage | Insights | Liontrust Asset Management PLC
     - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
       Hint: LegacyArticle_Title
       Value: Article 5

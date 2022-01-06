@@ -1,383 +1,320 @@
-.article-filters
-    color: $black
-
-    +font-size(18px)
-
-    position: fixed
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    z-index: 4
-    transition: transform 0.35s
-    transform: translate3d(100%, 0, 0)
-
-    +breakpoint(desktop, up)
-        position: static
-        transform: translate3d(0, 0, 0)
-        display: flex
-        flex-direction: column
-        transition: none
-
-
-    &.active
-        transform: translate3d(0, 0, 0)
-        z-index: 12
-    &__header
-        background: $white
-        padding: 15px 0 23px
-
-        +breakpoint(desktop, up)
-            order: 1
-            padding-top: 38px
-
-    &__body
-        background: #F7F9FC
-        height: 100%
-
-        +breakpoint(desktop, up)
-            height: auto
-            padding: 21px 0 22px
-
-
-        &_no-bg
-            +breakpoint(desktop, up)
-                background: transparent
-                padding-bottom: 0
-
-    &__footer
-        position: absolute
-        left: 0
-        right: 0
-        bottom: 24px
-
-        +breakpoint(desktop, up)
-            display: none
-
-    &__main-title
-        @extend h3
-
-        display: flex
-        align-items: center
-        justify-content: space-between
-        margin-bottom: 20px
-
-        i
-            color: $black
-            font-size: 19px
-            cursor: pointer
-
-    &__select
-        border-bottom: 1px solid rgba($secondary-gray, 0.1)
-        padding: 18px 0
-        display: flex
-        justify-content: space-between
-        align-items: center
-        cursor: pointer
-
-        &.active
-            i:before
-                content: ""
-                font-size: 9px
-
-            +breakpoint(desktop, up)
-                border-color: $primary
-
-        +breakpoint(desktop, up)
-            font-size: 16px
-            padding: 8px 0 7px
-
-
-        &.active + .article-filters__options
-            visibility: visible
-            transform: translate3d(0, 0, 0)
-
-    &__select-custom
-        @extend .article-filters__select
-
-        background: transparent
-        border-top: none
-        border-left: none
-        border-right: none
-        appearance: none
-        width: 100%
-
-        &:focus
-            outline: none
-
-    &__item-title
-        &.active
-            color: $primary
-
-            &:after
-                font-family: "icomoon"
-                content: ""
-                position: relative
-                top: 3px
-                left: 5px
-
-                +breakpoint(desktop, up)
-                    font-size: 14px
-                    top: 0
-
-    &__btns
-        display: none
-
-        .btn-clean
-            line-height: 38px
-
-        +breakpoint(desktop, up)
-            display: flex
-            justify-content: space-between
-
-    &__btn
-        color: $secondary
-        min-width: auto
-        height: 38px
-        line-height: 38px
-        white-space: nowrap
-
-        &_apply
-            background: #4148550D
-            padding: 0 0.7rem
-            width: auto
-
-            &:hover
-                background: darken(#4148550D, 50%)
-
-        &_primary
-            background: $primary
-            color: white
-
-            &:hover
-                background: darken($primary, 5%)
-
-        &_clear
-            padding: 0
-            width: auto
-            white-space: nowrap
-            margin-left: 28px
-
-    &__title
-        @extend h4
-
-        display: flex
-        align-items: center
-        margin: 10px 0
-        cursor: pointer
-
-        +breakpoint(desktop, up)
-            display: none
-
-
-        i
-            font-size: 16px
-            margin-right: 10px
-
-    &__icon-arrow
-        @extend [class*=" icon-"]
-
-        &::before
-            content: ""
-
-        +breakpoint(desktop, up)
-            font-size: 5px
-
-            &::before
-                content: ""
-
-
-        &_select
-            position: absolute
-            right: 10px
-            bottom: 20px
-
-    &__options
+body
+    .article-filters
+        color: $black
+        background-color: $white
+        z-index: 3
+        +font-size(18px)
         position: fixed
         top: 0
         left: 0
         right: 0
         bottom: 0
-        background: $white
-        z-index: 5
-        padding: 20px
         transition: transform 0.35s
         transform: translate3d(100%, 0, 0)
-        overflow-y: scroll
-
-        &::-webkit-scrollbar
-            width: 4px
-
-        &::-webkit-scrollbar-thumb
-            background-color: $gray
-
         +breakpoint(desktop, up)
-            position: absolute
-            top: 40px
-            left: 10px
-            right: 10px
-            bottom: inherit
-            box-shadow: 0px 10px 20px #414855
-            border-radius: 0px 0px 6px 6px
-            padding: 10px 11px 0
-            transform: none
-            visibility: hidden
-            max-height: 350px
-
-
-        +breakpoint(desktop-large, up)
-            left: 15px
-            right: 15px
-
-
-        &_small
-            +breakpoint(desktop, up)
-                left: -10px
-                right: -10px
-
-.article-filters, .gallery-filter
-    .search-form
-        &__input
-            +breakpoint(desktop, up)
-                font-size: 16px
-
-        &__submit
-            color: $primary
-
-            +breakpoint(desktop, up)
-                font-size: 16px
-                top: 7px
-                color: initial
-
-.article-filter-wrapper
-    position: relative
-    z-index: 10
-
-.option-checkbox
-    display: block
-    padding-top: 10px
-    cursor: pointer
-    display: flex
-    align-items: center
-    justify-content: space-between
-
-    +breakpoint(desktop, up)
-        font-size: 16px
-        padding-top: 0
-        padding-bottom: 10px
-
-
-    &__input
-        display: none
-
-        &:checked ~ .option-checkbox__text
-            color: $primary
-
-        &:checked ~ .option-checkbox__icon
-            &::before
-                content: ""
-                color: $primary
-
-    &__icon
-        @extend [class*=" icon-"]
-
-        &::before
-            content: ""
-            color: #CFD1D4
-
-#show-article-fliter
-    +breakpoint(desktop, up)
-        display: none
-
-.sort-dropdown
-    @extend .article-filters__options
-
-    box-shadow: 0px 10px 20px #414855
-    position: absolute
-    visibility: hidden
-    opacity: 0
-    border-radius: 6px
-    padding: 10px
-    padding-top: 0
-    top: 0
-    right: -10px
-    transition: opacity 0.3s ease-out, visibility 0.3s ease-out
-    color: $black
-    height: 120px
-    transform: none
-
-    +breakpoint(desktop, up)
-        right: -14px
-        height: auto
-
-
-    &.active
-        visibility: visible
-        opacity: 1
-
-.margin-mob-fliter-btn
-    margin-top: -42px
-    z-index: 10
-    width: 100px
-
-    +breakpoint(desktop, up)
-        margin-top: auto
-
-.margin-sort-btn
-    +breakpoint(desktop, up)
-        margin-top: -50px
-
-.legacy-listmode
-    .article-filters
+            position: relative
+            transform: translate3d(0, 0, 0)
+            display: flex
+            flex-direction: column
+            transition: none
+        &.active
+            transform: translate3d(0, 0, 0)
         &__header
+            background: $white
+            padding: 15px 0 23px
             +breakpoint(desktop, up)
-                order: 0
-                padding: 38px 0
-
-.view-buttons-container
-    background: $secondary-silver
-    height: 62px
-    display: flex
-    align-items: center
-    flex: 1
-
-.view-btn
-    border-radius: 0
-    height: 37px
-    line-height: 37px
-
-    &:hover
-        color: $gold
-        border-bottom: 2px solid $gold
-
-    &.active
-        color: $gold
-        border-bottom: 2px solid $gold
-
-.btn-view-mob
-    &:hover
-        color: $gold
-
-    &.active
-        color: $gold
-
-.view-buttons
-    color: $black
-    text-transform: uppercase
-    font-size: 12px
-    display: flex
-    align-items: center
-
-    i
-        margin-left: 1rem
-
-.view-button-link
-    height: 62px
-    display: flex
-    align-items: center
-    justify-content: center
-
-.article-page
-    .button-sort
+                order: 1
+                padding-top: 38px
+        &__body
+            background: #F7F9FC
+            height: 100%
+            +breakpoint(desktop, up)
+                height: auto
+                padding: 21px 0 22px
+            &_no-bg
+                +breakpoint(desktop, up)
+                    background: transparent
+                    padding-bottom: 0
+        &__footer
+            position: absolute
+            left: 0
+            right: 0
+            bottom: 24px
+            +breakpoint(desktop, up)
+                display: none
+        &__main-title
+            @extend h3
+            display: flex
+            align-items: center
+            justify-content: space-between
+            margin-bottom: 20px
+            i
+                color: $black
+                font-size: 19px
+                cursor: pointer
+        &__select
+            border-bottom: 1px solid rgba($secondary-gray, 0.1)
+            padding: 18px 0
+            display: flex
+            justify-content: space-between
+            align-items: center
+            cursor: pointer
+            &.active
+                i:before
+                    content: ""
+                    font-size: 9px
+                +breakpoint(desktop, up)
+                    border-color: $primary
+            +breakpoint(desktop, up)
+                font-size: 16px
+                padding: 8px 0 7px
+            &.active + .article-filters__options
+                visibility: visible
+                transform: translate3d(0, 0, 0)
+        &__select-custom
+            @extend .article-filters__select
+            background: transparent
+            border-top: none
+            border-left: none
+            border-right: none
+            appearance: none
+            width: 100%
+            &:focus
+                outline: none
+        &__item-title
+            &.active
+                color: $primary
+                &:after
+                    font-family: "icomoon"
+                    content: ""
+                    position: relative
+                    top: 3px
+                    left: 5px
+                    +breakpoint(desktop, up)
+                        font-size: 14px
+                        top: 0
+        &__btns
+            display: none
+            .btn-clean
+                line-height: 38px
+                padding: 0
+            +breakpoint(desktop, up)
+                display: flex
+                margin-left: 32px
+        &__title
+            @extend h4
+            display: flex
+            align-items: center
+            margin: 10px 0
+            cursor: pointer
+            +breakpoint(desktop, up)
+                display: none
+            i
+                font-size: 16px
+                margin-right: 10px
+        &__icon-arrow
+            @extend [class*=" icon-"]
+            &::before
+                content: ""
+            +breakpoint(desktop, up)
+                font-size: 5px
+                &::before
+                    content: ""
+            &_select
+                position: absolute
+                right: 10px
+                bottom: 20px
+        &__options
+            position: fixed
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            background: $white
+            padding: 20px
+            transition: transform 0.35s
+            transform: translate3d(100%, 0, 0)
+            overflow-y: scroll
+            z-index: 3
+            &::-webkit-scrollbar
+                width: 4px
+            &::-webkit-scrollbar-thumb
+                background-color: $gray
+            +breakpoint(desktop, up)
+                position: absolute
+                top: 40px
+                left: 0
+                right: 0
+                bottom: inherit
+                box-shadow: 0px 10px 20px #414855
+                border-radius: 0px 0px 6px 6px
+                padding: 10px 11px 0
+                transform: none
+                visibility: hidden
+                max-height: 350px
+        &__dropdown
+            width: 100%
+            +breakpoint(desktop-large, down)
+                width: 100%
+                margin-right: 15px
+            +breakpoint(desktop-large, up)
+                width: 212px
+                margin: 0 15px
+                
+        &__lists
+            display: flex
+            justify-content: flex-start
+            flex-direction: column
+            align-items: center
+            +breakpoint(desktop, up)
+                flex-direction: row
+                padding: 0 !important
+        &__dropdown-small
+            +breakpoint(desktop-large, up)
+                width: 120px
+        &__btn_primary
+            background-color: $primary
+            color: $white
+        &__selectControls
+            display: flex
+            width: 100%
+            justify-content: space-between
+            +breakpoint(tablet, down)
+                flex-direction: column
+        &__lists-sort
+            .article-filters__selectControls
+                +breakpoint(desktop, up)
+                    width: auto
+    .article-filters, .gallery-filter
+        .search-form
+            &__input
+                +breakpoint(desktop, up)
+                    font-size: 16px
+            &__submit
+                color: $primary
+                +breakpoint(desktop, up)
+                    font-size: 16px
+                    top: 7px
+                    color: initial
+    .article-filter-wrapper
+        position: relative
+    .option-checkbox
+        display: block
+        padding-top: 10px
+        cursor: pointer
+        display: flex
+        align-items: center
+        justify-content: space-between
         +breakpoint(desktop, up)
-            margin-top: -4px
+            font-size: 16px
+            padding-top: 0
+            padding-bottom: 10px
+        &__input
+            display: none
+            &:checked ~ .option-checkbox__text
+                color: $primary
+            &:checked ~ .option-checkbox__icon
+                &::before
+                    content: ""
+                    color: $primary
+        &__icon
+            @extend [class*=" icon-"]
+            &::before
+                content: ""
+                color: #CFD1D4
+    #show-article-fliter
+        +breakpoint(desktop, up)
+            display: none
+    .mobile-sorting
+        +breakpoint(desktop, down)
+            width: 100%
+    .sort-dropdown
+        @extend .article-filters__options
+        box-shadow: 0px 10px 20px #414855
+        position: absolute
+        visibility: hidden
+        opacity: 0
+        border-radius: 6px
+        padding: 10px
+        padding-top: 0
+        top: 0
+        right: 0
+        left: unset
+        transition: opacity 0.3s ease-out, visibility 0.3s ease-out
+        color: $black
+        height: 120px
+        transform: none
+        width: 300px
+        max-width: 100%
+        +breakpoint(desktop, up)
+            right: 0
+            height: auto
+            left: unset
+        &.active
+            visibility: visible
+            opacity: 1
+    .margin-mob-fliter-btn
+        margin-top: -42px
+        width: 100px
+        +breakpoint(desktop, up)
+            margin-top: auto
+    .margin-sort-btn
+        +breakpoint(desktop, up)
+            margin-top: -50px
+    .legacy-listmode
+        .article-filters
+            &__header
+                +breakpoint(desktop, up)
+                    order: 0
+                    padding: 38px 0
+    .view-buttons-container
+        background: $secondary-silver
+        height: 62px
+        display: flex
+        align-items: center
+        flex: 1
+    .view-btn
+        &.mr-3
+            border-radius: 0
+            height: 37px
+            line-height: 37px
+            padding: 0
+            &:hover
+                color: $gold
+                border-bottom: 2px solid $gold
+            &.active
+                color: $gold
+                border-bottom: 2px solid $gold
+            i
+                &.icon-list-view, &.icon-grid-view
+                    margin-left: 7px
+    .btn-view-mob
+        &:hover
+            color: $gold
+        &.active
+            color: $gold
+    .view-buttons
+        color: $black
+        text-transform: uppercase
+        font-size: 12px
+        display: flex
+        align-items: center
+        i
+            margin-left: 1rem
+    .view-button-link
+        height: 62px
+        display: flex
+        align-items: center
+        justify-content: center
+    .article-page
+        .button-sort
+            +breakpoint(desktop, up)
+                margin-top: -4px
+.mobile-filteration
+    &__columns
+        justify-content: space-between
+        align-items: flex-end
+        flex-direction: row
+        display: flex
+
+    

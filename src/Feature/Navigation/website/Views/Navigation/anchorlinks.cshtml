@@ -26,7 +26,7 @@
                 <button class="page-anchor__title">
                     <span>@Html.Glass().Editable(m => m.Heading)</span>
                 </button>
-                <div class="page-anchor__links navbar justify-content-lg-start">
+                <div class="page-anchor__links navbar">
                     @foreach (var item in Model.Children)
                     {
                         using (Html.Glass().BeginEditFrame<LionTrust.Foundation.Navigation.Models.IAnchor>(item, null, i => i.AnchorId))

@@ -17,12 +17,12 @@
             this._genericListingDataManager = genericListingDataManager;
         }
 
-        public ActionResult GetFacets(string articleListingFacetConfig)
+        public ActionResult GetFacets(string facetConfig)
         {
             Guid config;
-            if (!string.IsNullOrEmpty(articleListingFacetConfig))
+            if (!string.IsNullOrEmpty(facetConfig))
             {
-                var success = Guid.TryParse(articleListingFacetConfig, out config);
+                var success = Guid.TryParse(facetConfig, out config);
                 if (!success)
                 {
                     return Content("Configuration ID could not be parsed as a Guid");

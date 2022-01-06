@@ -1,0 +1,143 @@
+﻿---
+ID: "1ac8b54b-b40f-4975-945a-d49b6a479d8e"
+Parent: "e277bbfe-8d66-45a6-8a8a-43d97eeb0790"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2019/08/Liontrusts Phil Milburn reviews Q2 in bonds
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 68300
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{CAF013FB-C296-4F5B-B41F-8220E123DCC3}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{995CEB2D-098C-4CA1-8CBA-CEF41DEAB7EB}"
+              p:after="r[@uid='{CAF013FB-C296-4F5B-B41F-8220E123DCC3}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{1906E2AD-8667-431F-BCAB-9FC0A10A77FF}"
+              p:after="r[@uid='{995CEB2D-098C-4CA1-8CBA-CEF41DEAB7EB}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See also...&amp;RelatedPages={2301B1D6-2812-4921-AC12-6BCF90F3A836}|{4D7B7C2A-D992-47CA-AE5D-F2DEB5704C2E}|{7AAA89F2-3BCF-4DFC-B2F6-C05A7A8E2DDE}|{F8415A35-9C34-47F7-BACE-42EAABBFA145}&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "094932b9-ff77-4977-966e-d18f7c7ac091"
+      Hint: LegacyArticle_Subtitle
+      Value: 
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{5ADAC049-CD3A-4638-B7D9-12A2DB704394}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Liontrusts Phil Milburn reviews Q2 in bonds | Insights | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: Quarterly review – stimulus wave continues in ‘bad news is good’  period
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190815T140539Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: "Long read: Waves of monetary stimulus continues over a quarter in which we returned to the days of ‘bad news is good’."
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Quarterly review – stimulus wave continues in ‘bad news is good’  period
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p style="text-align: left;"><strong><span>Executive summary</span></strong></p>
+        <p style="text-align: left;"><strong><span>Central banks are over-reacting to the manufacturing slowdown and we are being greeted by a wave of monetary stimulus. We believe contagion from manufacturing to the all-important services sector will occur but only enough to trim exuberance as opposed to creating a recession. Consumption is strong and employment is still growing. Our central thesis would be challenged if unemployment rises or wage inflation rapidly falls. On the fiscal side, the removal of the threat of sequestration takes out a potential 0.7% GDP hit tail event from the US economy this year. The consensus forecast for the US is for it to grow by 2.4% in 2019 and 1.7% in 2020; the respective numbers for real global growth are both 2.7%. </span></strong></p>
+        <p style="text-align: left;"><strong><span>Inflation is a little lower than the modal 2% target, running at 1.9%. Insurance cuts are happening but they are not needed: a caveat here is that President Trump could always make things worse, this applies to pretty much any scenario.</span></strong></p>
+        <p style="text-align: left;"><strong><span>Presently, there is little to upset markets as bad economic news increases the Pavlovian response of forecasting more monetary stimulus. Later this year, we anticipate that good economic news will start to become negative for markets as the monetary drug is no longer warranted. </span></strong></p>
+        <p style="text-align: left;"><strong><span>Fundamentals, or at least their impact on central bank technicals, are supportive for risk. However, a large proportion of this has already been captured in credit valuations. Buying defensive carry is sensible but adding to credit beta is not. In the strategic bond funds, adding to US floating rate notes appeals given the short end yield curve inversions and the low volatility nature of the instruments. For our GF High Yield Fund, we also do not want to chase risk but will seek to invest a little cash in shorter dated quality high yield with a good breakeven. The funds maintain their defensive credit stance overall and are waiting for a better opportunity to increase risk.</span></strong></p>
+        <p style="text-align: left;"><strong style="font-size: 1.5rem;">Macroeconomics and rates</strong></p>
+        <p style="text-align: left;"><span>There has been a slowdown in the rate of growth caused by the fall in business confidence emanating from the trade/tariff wars. It is abundantly clear that weaker growth is presently being driven by a fall in industrial production from real growth of 4% 18 months ago to nearer 1% now. This has reduced global real GDP growth from 3.5% to 2.7% over the corresponding period. </span></p>
+        <p style="text-align: left;"><span>Core inflation at the global level is 1.9%; headline inflation is more erratic and is currently 2.2%. This means that headline nominal growth globally is still 4.9%; not a disaster level compared to what commentators, especially those from central banks, would have you believe.</span></p>
+        <p style="text-align: left;"><span>As we stated last quarter, the macroeconomic environment is bifurcated, with manufacturing activity exhibiting weakness but services, employment and the consumer remaining strong. Services’ Purchasing Managers’ Index (PMI) surveys have come off their top but are still indicative of decent growth (the global reading is 52). Manufacturing PMIs are oscillating around the magic 50 level. The biggest gap is between the hard data and soft data in manufacturing, with current output stagnant and with dire expectations. Consumer confidence has barely moved from its high levels. Global retail sales are running at a 4% expansionary rate: if this continues, then it will naturally eventually lead to a destocking and rebound in production activity.</span></p>
+        <p style="text-align: left;"><span>One cannot completely segregate manufacturing and services, but it is certainly easier to apply tariffs to the former. Contagion from manufacturing has been limited so far. Our central case is that the service sectors remain robust and we challenged this by examining the 2015/16 mini cycle: growth in services did slow but rebounded rapidly and always stayed above zero. We see the contagion impact as being more of a drag off the top for services and the consumer rather than a convergence to recessionary levels.</span></p>
+        <p style="text-align: left;"><span>Employment growth is still decent and, although the moving average of non-farm payrolls has reduced, it is greater than the demographic expansion in the US working population. </span></p>
+        <p style="text-align: left;"><span style="font-size: 1.5rem;"><img height="272" alt="US Unemployent vs US Wage Inflation" width="599" src="-/media/97826041843543D495FA6C6C4F06C5C9.ashx?h=272&amp;w=599" class="custom-image-height-auto" style="height: 272px; width: 599px;"></span></p>
+        <p style="text-align: left;"><span>Source: Liontrust, Bloomberg, 31.08.08 to 31.08.19</span></p>
+        <p style="text-align: left;"><span>In terms of how much bad news is already factored into forecasts, eurozone economic surprise indices have rebounded from a dire level at the start of 2019 and are now close to zero. The US has seen a false dawn or two this year and is currently on an upwards trend, but still -40. The UK continues to press ahead with its act of national self-harm.</span></p>
+        <p style="text-align: left;"><span>Inflation has been below central banks’ targets, but is still prevalent around the world. We reiterate that wage inflation is the biggest variable to focus on as it acts as a transmission mechanism for more generalised price increases. </span></p>
+        <p style="text-align: left;"><span>As can be seen on the right hand chart above, US wage inflation is still comfortably above 3% and remember the consumer is 70% of the US economy. The Phillips Curve might be non-linear in nature but it certainly is alive and starting to wake from its slumber. This is particularly the case in services sectors, which have generically been less technologically disrupted than manufacturing. Excluding volatile items, eurozone services inflation is only just below 2% and wage inflation is 2.5%; yet, apparently, more easing is required by the European Central Bank (ECB).</span></p>
+        <p style="text-align: left;"><span>With the Federal Reserve framing monetary easing as “insurance cuts”, it is useful to reflect on the two periods in the 1990s when 75 basis points of insurance cuts occurred. In the charts below, the dark blue lines show the evolution of the respective data during the 1990s, the light blue line is today’s level for the same indicators.</span></p>
+        <p style="text-align: left;"><span><img height="323" alt="Insurance cuts" width="601" src="-/media/8F70AD8FCCAB41009E674DDD6083D855.ashx?h=323&amp;w=601" class="custom-image-height-auto"></span></p>
+        <p style="text-align: left;"><span>Source: Barclays Research, Haver Analytics, FRB, ISM</span></p>
+        <p style="text-align: left;"><span>The left hand chart shows that the US curve shape (three-month versus 10-year) was similar in the 1990s and is actually a little flatter now. More pertinently, on the right hand chart, Institute for Supply Management (ISM) figures were much worse in the 1990s before the Fed cut rates. Their actions can therefore be seen as front running a problem rather than waiting for an actual downturn to happen or that insurance is being purchased sooner. We find it concerning that monetary policy is being used to deal with the political issues caused by Trump and his tariffs.</span></p>
+        <p style="text-align: left;"><span>When the Federal Reserve cuts, most other central banks feel empowered, or indeed obliged, to follow. This is not just about the co-ordinated global slowdown in trade, there is also a decent amount of currency manipulation at stake. Even with this monetary largesse, the rates markets are set up for disappointment if policymakers don’t deliver, or economic Armageddon doesn’t appear. Having $15 trillion of negatively yielding bonds cannot be a rational long-term state for markets to be in.</span></p>
+        <p style="text-align: left;"><span>The Federal Reserve has now stopped shrinking its balance sheet: there will be a continued substitution effect with Mortgage Backed Securities remaining in runoff and US Treasuries growing as a percentage of the asset mix. ECB Target 2 balances have been reasonably static over the last six months, meaning there is no capital flight from the eurozone periphery.</span></p>
+        <p style="text-align: left;"><span>The fiscal side of the equation cannot be ignored. German debt to GDP rose during the financial crisis but has steadily decreased since, from a peak of 75% to today’s 55%, and is forecast to decline further. In the last few months, there has been increasing political discussion in Germany about loosening the fiscal purse strings. This would help to offset manufacturing weakness, which is now being exacerbated by low Rhine water levels again. </span></p>
+        <p style="text-align: left;"><span>Furthermore, it is exactly what the eurozone needs, creating more balance and taking the pressure off monetary policy. Germany is running with an almost 2% fiscal surplus so there is room for $80 billion of spending without breaking the balanced budget rules and assuming no multiplier impact creating higher tax revenues.</span></p>
+        <p style="text-align: left;"><span>Turning from a country with twin surpluses to one with twin deficits, the US continues to be profligate on the spending front. The fiscal deficit is almost $900 billion or 4% of GDP. One significant recent development that seems to have passed many by is the suspension of the US debt ceiling until July 2021. This was achieved through a bipartisan approach to spending and removes the issue until after the 2020 US election. Effectively, the Budget Control Act of 2011 is being consigned to history in this brave new economic paradigm in the US. </span></p>
+        <p style="text-align: left;"><span>The chances of a large scale Federal shutdown over the next few months are close to zero; there will still be budgetary squabbles but we will not witness large scale sequestration. This removes a significant tail risk that could have knocked about 0.7% off growth later in 2019.</span></p>
+        <p style="text-align: left;"><span>We are running our funds with a low duration but not at zero as the madness could last for a lot longer and bond funds should have a correlation, albeit low, to the bond market. We continue to think TIPS (Treasury Inflation Protected Securities) offer better value than conventional debt and see room for inflation break-evens to go materially wider. Building in some inflation protection into any portfolio is presently paramount. With the 2s through to 5s part of the curve being below the Fed Funds Rate, we believe that floating rate notes offer better value than short dated USD credit.</span></p>
+        <p style="text-align: left;"><span>Regarding other relative value within the rates markets, Norway is now oversold against Germany and we have bought back in having taken profits in early June. A Canadian short against the US has been re-established. We have started to book some profits on a German 5s10s flattener. Finally, we have put on a French/German 10s30s box trade: either French 30-year debt is too wide to Germany or 10-year debt is too tight, mathematically this is equivalent to a French 10s30s flattener and German 10s30s steepener.</span></p>
+        <p style="text-align: left;"><strong><span>Spread product</span></strong></p>
+        <p style="text-align: left;"><span>US investment grade leverage has been around 2.6x gross (1.8x net) for the last four years. Various Cassandras are worried about the amount of BBB rated debt outstanding but we really don’t see this as an issue. Margins are coming under pressure from wage inflation and the latest quarterly earnings season is seeing multiple profits warnings in the manufacturing sectors. We like it when the micro data confirm the macro data. </span></p>
+        <p style="text-align: left;"><span>We are not seeing balance sheet destruction and the lack of jumbo leveraged buyout (LBO) deals in this cycle creates less of a pipeline of default candidates. The leverage and coverage figures for high yield have actually been improving since the energy crisis, both at the headline and ex-energy levels. We suggest this is due to the universe doing some cleansing and the lower-quality supply heading to the leveraged loan market. </span></p>
+        <p style="text-align: left;"><span>The area where we see the most froth is leveraged loans, the return of the Collateralised Loan Obligation (CLO) bid has shifted the balance of power firmly in the favour of the seller with the accompanying decline in market discipline that this inevitably entails. A certain Japanese bank (Norinchukin) is now referred to as the CLO whale, these things never end well.</span></p>
+        <p style="text-align: left;"><span>Ratings drifts are fairly sanguine but there has been a marked decrease in the number of US rising stars over the last 12 months. Aggregate US capacity utilisation seems to be stuck in a 78-79 range, a rise to the low to mid 80s tends to coincide with the late end of the corporate cycle. </span><span>There is no productivity mystery in our opinion. Loose money has prevented creative destruction with corporations bending not breaking, the cycle has been sat on by fat central bankers and is thus longer and flatter. The US tax cuts last year seem to have been mainly spent on, you’ll never guess, share buybacks: the fact S&amp;P 500 buybacks are running above capital expenditure should be an issue of shame for the whole capitalist system.</span></p>
+        <p style="text-align: left;"><span>There will be a better time to buy spread product for capital upside, as we did in late December 2018/early January 2019. For now, it is all about the carry and de-risking without giving up too much yield to do so. European BBs have been outperforming their US cousins and weightings have been adjusted accordingly. The main causality of the recent relative strong performance of eurozone credit spreads is the ECB. The market consensus is that the ECB will restart its Corporate Sector Purchase Programme (CSPP) in September, and some of this is definitely already in the price. </span></p>
+        <p style="text-align: left;"><span>In the world of CDS indices, Senior Fins look overbought and might represent a good hedge against tail events. At risk of being a broken record, there is no need to chase risk in CCC rated credit nor emerging markets at this stage of the cycle and with prevailing valuation levels.</span></p>
+        <p style="text-align: left;"><span>The technical picture is very supportive for credit with competitors hopefully over-extending in the reach for yield setting us up for a mini-correction. The new issue market continues the frustratingly annoying “tease and squeeze” primary pricing, with deals printing on top of secondary levels having started 25-30 basis points wider. </span></p>
+        <p style="text-align: left;"><span>Net investment grade corporate issuance is close to zero in the US year to date, and gross issuance has slipped below 2018 levels on a run rate basis. US financial gross issuance is also slightly below last year’s run rate, as is net issuance, but it is still a small positive. In Europe, there has been a significant pickup in both gross and net corporate issuance: within financials the run rate is above 2018 but net supply is only a small positive. High yield supply stateside is at a similar rate to 2016-18 due to continued crowding out by the leveraged loan market. Having said that, due to the questionable quality of many of the loan deals, with over 90% being covenant-lite, we say they are welcome to the supply.</span></p>
+        <p style="text-align: left;"><span>It has been a much better year for fund flows into credit markets. Both the US and Europe are running with decent positive investment grade cumulative totals after large outflows in 2018. US high yield is also attracting cash, while European high yield is about flat; both of these also compare to large 2018 outflows.</span></p>
+        <p style="text-align: left;"><span>Turning to sentiment and market signals, the warning sign that is still flashing amber is the US 2s10s curve (right hand chart below). It is a very powerful predictor but has not inverted yet and always operates with a significant lag. </span></p>
+        <p style="text-align: left;"><img height="295" alt="Fed SLO survey" width="600" src="-/media/D4A04E9F40384EF18F1FDA6C87076001.ashx?h=295&amp;w=600" class="custom-image-height-auto"></p>
+        <p style="text-align: left;"><span style="font-size: 1.5rem;">Source: Liontrust, Bloomberg (LHS: 30.06.99 to 08.08.19; RHS: 02.10.89 to 08.08.19)</span><br></p>
+        <p style="text-align: left;"><span style="font-size: 1.5rem;">Examining the Fed Senior Loan Officers (SLO) surveys, the corporate sector still has pretty loose conditions (as measured by the C&amp;I surveys). Turning to consumer credit conditions, there has been a tightening in credit card lending standards; this is shown on the left hand chart above where a higher line means tighter conditions.</span><br></p>
+        <p style="text-align: left;"><span>LIBOR/OIS spreads have recently oscillated between 20 and 30 basis points. The suspension of the debt ceiling will lead to a huge increase in T-bill issuance over the next few months; this may well create some LIBOR spread distortions but these should not be interpreted as any sign of systemic financial stress.</span></p>
+        <p style="text-align: left;"><span>The CDS versus bond basis is negative across all four major CDS credit indices. There has been a squeeze in CDS indices as investors have reacted to the central banking put by rushing to buy risk. Cash bonds are to be preferred to CDS, and risk hedges are relatively cheap but do detract from carry.&nbsp;</span></p>
+        <p style="text-align: left;"><span style="color: #222222;">For a comprehensive list of common financial words and terms, see our glossary&nbsp;</span><span style="color: #34b233;"><a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms">here</a>.<br>
+        <br>
+        </span></p>
+        <p style="text-align: left;"><strong><span><br>
+        <strong>Key Risks&nbsp;</strong></span></strong></p>
+        <p style="text-align: left;"><span>Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. Investment in Funds managed by the Global Fixed Income team involves foreign currencies and may be subject to fluctuations in value due to movements in exchange rates. The value of fixed income securities will fall if the issuer is unable to repay its debt or has its credit rating reduced. Generally, the higher the perceived credit risk of the issuer, the higher the rate of interest. Bond markets may be subject to reduced liquidity. The Funds may invest in emerging markets/soft currencies and in financial derivative instruments, both of which may have the effect of increasing volatility.<br>
+        <br>
+        <strong>Disclaimer</strong><strong><br>
+        </strong><br>
+        The information and opinions provided should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</span></p>

@@ -1,6 +1,5 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @using System.Collections.Specialized;
-@using LionTrust.Foundation.ORM.Extensions
 @model LionTrust.Feature.Article.Models.IArticlePromo
 @if (Model != null)
 {
@@ -13,20 +12,7 @@
             @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Article/Article Scroller", Model.Id.ToString(), "Edit Article"))
             {
                 <div class="article-promo__head">
-                    @if (Model.Authors != null && Model.Authors.Any())
-                    {
-                        if (Model.Authors.Count() > 1)
-                        {
-                            @Html.Glass().RenderImage(Model, m => m.MultipleAuthorsIcon, new NameValueCollection { { "class", "article-promo__head-img" } }, isEditable: true)
-                            <span class="article-promo__head-title text-gold">@Html.Glass().Editable(Model, m => m.MultipleAuthorsLabel)</span>
-                        }
-                        else
-                        {
-                            var author = Model.Authors.FirstOrDefault();
-                            @Html.Glass().RenderImage(author, m => m.Image, new NameValueCollection { { "class", "article-promo__head-img" } }, isEditable: true)
-                            <span class="article-promo__head-title text-gold">@Html.Glass().Editable(author, m => m.FullName)</span>
-                        }
-                    }
+                    @Html.Partial("~/Views/Article/PromoCards/_ArticleAuthor.cshtml", Model)
                 </div>
                 <span class="article-promo__title">
                     @Html.Glass().Editable(Model, m => m.Title)

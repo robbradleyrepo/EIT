@@ -1,0 +1,20 @@
+﻿@model LionTrust.Feature.Fund.Models.FundInfoRowViewModel
+
+@if (Model != null)
+{
+    <div class="card__row">
+        <div class="card__item-left">
+            @Model.LabelValue
+            @if (!string.IsNullOrEmpty(Model.FieldValue) && !string.IsNullOrEmpty(Model.TooltipValue))
+            {
+                <span class="d-inline-flex" data-toggle="tooltip" data-placement="right"
+                      title="@Model.TooltipValue">
+                    <i class="icon-follow text-gold"></i>
+                </span>
+            }
+        </div>
+        <div class="card__item-right">
+            @Model.FieldValue
+        </div>
+    </div>
+}

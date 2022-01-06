@@ -1,0 +1,98 @@
+﻿---
+ID: "8e7227de-cb89-4988-992e-c6efe7094161"
+Parent: "185e2b85-57f7-4f19-93ff-2e40f8e999d7"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2018/04/brexit-caution-should-not-delay-rate-hikes"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 3400
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{81027925-C969-4E57-B1F4-B4CAF9BDF066}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par=""
+              s:ph="/content/side-content" />
+            <r
+              uid="{503A4B3A-8D51-4381-A868-D71ADC9253BE}"
+              p:after="r[@uid='{81027925-C969-4E57-B1F4-B4CAF9BDF066}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par=""
+              s:ph="/content/side-content" />
+            <r
+              uid="{5EC5A450-8843-4D17-A4C2-CE272B9B9A71}"
+              p:after="r[@uid='{503A4B3A-8D51-4381-A868-D71ADC9253BE}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="RelatedPages=%7b4D7B7C2A-D992-47CA-AE5D-F2DEB5704C2E%7d%7c%7b423225AC-3A28-40F9-AADE-35C234FAFE15%7d%7c%7b78CD7F91-7E07-49DE-8344-7619CE0A64C3%7d%7c%7bFC17F0A6-ECAA-4CD7-B80B-6E67FDE3251B%7d&amp;Title=See+also...&amp;Placeholder=%2fcontent%2fside-content&amp;Caching=0%7c0%7c0%7c0%7c0%7c0%7c0%7c0"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{DBAE5B17-522C-480D-926B-55EA6C1873D3}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "brexit-caution-should-not-delay-rate-hikes | Insights | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: Brexit caution should not delay rate hikes
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180420T140501Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: Yesterday’s comments from Mark Carney suggest an interest rate hike in May is not a done deal. David Roberts argues that with ‘good’ and ‘bad’ Brexit scenarios both ultimately resulting in inflation, rates need to rise.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Brexit caution should not delay rate hikes
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p>Mark Carney surprised markets yesterday with comments suggesting a widely expected interest rate hike in May is not a done deal.</p>
+        <p>Having voted against hiking rates in March and warning of ‘faster and sooner’ rises back in February, many assumed a 0.25% increase was all but nailed on for the <span>Monetary Policy Committee’s May meeting.</span></p>
+        <p>But the Bank of England Governor highlighted “mixed data” in the UK and said he is focusing on the general path of rate rises rather than precise timing, allowing policymakers to keep the economy on a stable path in the face of upcoming Brexit decisions.</p>
+        <p>Sterling has weakened after these comments while Gilts recouped some of their recent losses and the bond marketing is now pricing in less than a 50% chance of a hike in May.</p>
+        <p>Our view on this is a simple one: rates need to rise.</p>
+        <p><span style="font-size: 1.5rem;">Carney says he wants to wait and see what Brexit means for the UK but I have news for him: it means less economically than most of us think.</span></p>
+        <p><span style="font-size: 1.5rem;"></span><span style="font-size: 1.5rem;">A ‘poor’ Brexit scenario would see a sterling collapse leading to </span><span style="font-size: 1.5rem;">imported inflation and a rise in manufacturing output; a ‘good’ result would see the service economy (at full employment already) expanding and domestic inflation edging up. Either way, interest rates need to rise.</span></p>
+        <p><span style="font-size: 1.5rem;"></span><span style="font-size: 1.5rem;">Bond market reaction to Carney’s caution has not been universally positive, with long-dated paper underperforming. The market is worried no rate rises means a greater chance of inflation and investors therefore want a bigger premium to lend money to the government over long terms.</span></p>
+        <p><span style="font-size: 1.5rem;"></span><span style="font-size: 1.5rem;">In this environment, we remain strategically short interest rate risk and would to look to add to that position tactically if Carney fails to pull the rate trigger.</span></p>
+        <p><strong><span><br>Key Risks &amp; Disclaimer</span></strong></p>
+        <p><span>Please remember that past performance is not a guide to future performance and the value of an investment and any income generated from them can fall as well as rise and is not guaranteed, therefore you may not get back the amount originally invested and potentially risk total loss of capital.</span></p>
+        <p><span>This blog should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy.&nbsp; It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, faxed, reproduced, divulged or distributed, in whole or in part, without the express written consent of Liontrust.</span></p>

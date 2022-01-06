@@ -36,12 +36,7 @@
             var listingGenericListingResponse = new GenericListerFacetResponse();
             listingGenericListingResponse.Facets = new List<GenericListingFacet>();
             if (filterFacetConfigItem != null)
-            {
-                if (filterFacetConfigItem.ListingTypeList != null && filterFacetConfigItem.ListingTypeList.Any())
-                {
-                    listingGenericListingResponse.Facets.Add(new GenericListingFacet { Name = "ListingType", Items = filterFacetConfigItem.ListingTypeList.Select(x => new ListingFilterFacetsModel { Name = x.ListingItemTypeName, Identifier = x.Id.ToString() }) });
-                }
-
+            {                
                 if (filterFacetConfigItem.Months != null && filterFacetConfigItem.Months.Any())
                 {
                     listingGenericListingResponse.Facets.Add(new GenericListingFacet { Name = "Month", Items = filterFacetConfigItem.Months.Select(x => new ListingFilterFacetsModel { Name = x.Title, Identifier = x.Value }) });
@@ -51,6 +46,11 @@
                 {
                     listingGenericListingResponse.Facets.Add(new GenericListingFacet { Name = "Year", Items = filterFacetConfigItem.Years.Select(x => new ListingFilterFacetsModel { Name = x.Title, Identifier = !string.IsNullOrEmpty(x.Value) ? x.Value : x.Name }) });
                 }
+
+                if (filterFacetConfigItem.ListingTypeList != null && filterFacetConfigItem.ListingTypeList.Any())
+                {
+                    listingGenericListingResponse.Facets.Add(new GenericListingFacet { Name = "ListingType", Items = filterFacetConfigItem.ListingTypeList.Select(x => new ListingFilterFacetsModel { Name = x.ListingItemTypeName, Identifier = x.Id.ToString() }) });
+                }
             }
 
             return listingGenericListingResponse;
@@ -59,6 +59,7 @@
         public IGenericSearchResponse GetGenericListingResponse(string parent, string listingType = "", List<int> months = null, List<int> years = null, string searchTerm = "", int page = 1, string database = "web")
         {
             page = page - 1;
+            var pageSize = Constants.Pagination.PageSize;
 
             var genericSearchRequest = new GenericSearchRequest
             {
@@ -67,8 +68,8 @@
                 Months = months,
                 Years = years,
                 SearchTerm = searchTerm,
-                Skip = page * 21,
-                Take = 21
+                Skip = page * pageSize,
+                Take = pageSize
             };
 
             if (!string.IsNullOrEmpty(listingType))

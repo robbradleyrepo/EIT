@@ -19,6 +19,7 @@
                 {
                     @Html.AntiForgeryToken()
                     @Html.Hidden("DatasourceId", Model.Content.Id)
+                    @Html.Hidden("IsContact", Model.ProfessionalInvestor)
                     <div class="input-group">
                         @Html.ValidationMessageFor(x => x.Email, string.Empty, new { @class = "text-danger" })
                         @Html.TextBoxFor(x => x.Email)
@@ -58,94 +59,61 @@
             <section class="content-preferences">
                 <h3>@Html.Glass().Editable(Model.Content, x => x.ContentPreferencesTitle)</h3>
                 <span class="content-preferences__subDescription">@Html.Glass().Editable(Model.Content, x => x.ContentPreferencesSubtitle)</span>
-                <div class="accordion-section accordion-section_full content-preferences__accordion">
-                    <div class="container">
-                        <div id="accordionFlushExample" class="accordion accordion_white">
-                            @for (int i = 0; i < Model.SFProcessList.Count; i++)
-                            {
-                                <div class="accordion__card">
-                                    <div class="accordion__header">
-                                        <div class="accordion__link" data-toggle="collapse" data-target="#flush-collapse@(i)" aria-expanded="false" aria-controls="flush-collapse@(i)">
-                                            @Model.SFProcessList[i].SFProcessName
-                                            <div class="content-preferences__accordion-controls">
-                                                <div class="options_count"><span class="content-preferences__category">fund</span><span class="slected_count"></span>of<span class="total_count"></span></div>
-                                                <i class="icon-plus accordion__plus"></i>
-                                                <i class="icon-minus accordion__minus"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="flush-collapse@(i)" class="collapse @(i == 0 ? "show" : string.Empty)" aria-labelledby="flush-heading@(i)" data-parent="#accordionFlushExample">
-                                        <div class="accordion__body">
-                                            <div class="multi-select-card">
-                                                <label class="multi-select-card__row multi-select-card__allSelected">
-                                                    @Html.Glass().Editable(Model.Content, x => x.FollowTeamTitle)
-                                                    @Html.CheckBoxFor(modelItem => modelItem.SFProcessList[i].IsProcessSelected)
-                                                    <span class="checkmark"></span>
-                                                </label>
-                                                @Html.HiddenFor(modelItem => modelItem.SFProcessList[i].SFProcessId)
-                                                <h4 class="content-preferences__subtitle">@Html.Glass().Editable(Model.Content, x => x.TeamFundsTitle)</h4>
-                                                <div class="multi-select-card__group">
-                                                    @for (int f = 0; f < Model.SFProcessList[i].SFFundList.Count; f++)
-                                                    {
-                                                        <label class="multi-select-card__row">
-                                                            @Model.SFProcessList[i].SFFundList[f].SFFundName
-                                                            @Html.CheckBoxFor(modelItem => modelItem.SFProcessList[i].SFFundList[f].IsFundSelected)
-                                                            <span class="checkmark"></span>
-                                                        </label>
-                                                        @Html.HiddenFor(modelItem => modelItem.SFProcessList[i].SFFundList[f].SFFundId)
-                                                    }
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            }
-                        </div>
-                    </div>
-                </div>
+                @Html.Sitecore().Placeholder("fund-accordion-list")
             </section>
         </div>
         <section>
             <h3>@Html.Glass().Editable(Model.Content, x => x.EmailPreferencesTitle)</h3>
             <p class="content-preferences__subDescription">@Html.Glass().Editable(Model.Content, x => x.EmailPreferencesSubtitle)</p>
             <div class="can-toggle demo-rebrand-2">
-                <input id="SubscribeToEmail" type="checkbox" checked>
+                @Html.CheckBoxFor(x => x.SubscribeToEmail)
                 <label for="SubscribeToEmail">
                     <div class="can-toggle__switch" data-checked="Yes" data-unchecked="No"></div>
                 </label>
             </div>
-            <small class="d-block">@Html.Glass().Editable(Model.Content, x => x.SubscribeText)</small>
-            <div class="no-is-checked">
-                @Html.Glass().Editable(Model.Content, x => x.OptOutText)
-            </div>
+            <small class="d-block">@Html.Glass().Editable(Model.Content, x => x.SubscribeText)</small>            
             <div class="row mt-4">
                 <div class="col-lg-12">
-                    <div class="input-group">
-                        @Html.ValidationMessageFor(x => x.FirstName, string.Empty, new { @class = "text-danger" })
-                        @Html.TextBoxFor(x => x.FirstName)
-                        <label>@Html.Glass().Editable(Model.Content, x => x.FirstNameLabel)</label>
-                    </div>
-                    <div class="input-group">
-                        @Html.ValidationMessageFor(x => x.LastName, string.Empty, new { @class = "text-danger" })
-                        @Html.TextBoxFor(x => x.LastName)
-                        <label>@Html.Glass().Editable(Model.Content, x => x.LastNameLabel)</label>
-                    </div>
-                    <div class="input-group">
-                        @Html.ValidationMessageFor(x => x.Email, string.Empty, new { @class = "text-danger" })
-                        @Html.TextBoxFor(x => x.Email)
-                        <label>@Html.Glass().Editable(Model.Content, x => x.EmailAddressLabel)</label>
-                    </div>
-
-                    <div class="@(!Model.ProfessionalInvestor ? "d-none" : string.Empty)">
+                    <div class="yes-is-checked">
                         <div class="input-group">
-                            @Html.ValidationMessageFor(x => x.CompanyId, string.Empty, new { @class = "text-danger" })
-                            @Html.TextBoxFor(x => x.CompanyId)
-                            <label>@Html.Glass().Editable(Model.Content, x => x.FCALabel)</label>
+                            @Html.ValidationMessageFor(x => x.FirstName, string.Empty, new { @class = "text-danger" })
+                            @Html.TextBoxFor(x => x.FirstName)
+                            <label>@Html.Glass().Editable(Model.Content, x => x.FirstNameLabel)</label>
                         </div>
                         <div class="input-group">
-                            @Html.ValidationMessageFor(x => x.CompanyName, string.Empty, new { @class = "text-danger" })
-                            @Html.TextBoxFor(x => x.CompanyName)
-                            <label>@Html.Glass().Editable(Model.Content, x => x.CompanyNameLabel)</label>
+                            @Html.ValidationMessageFor(x => x.LastName, string.Empty, new { @class = "text-danger" })
+                            @Html.TextBoxFor(x => x.LastName)
+                            <label>@Html.Glass().Editable(Model.Content, x => x.LastNameLabel)</label>
+                        </div>
+                        <div class="input-group">
+                            @Html.ValidationMessageFor(x => x.Email, string.Empty, new { @class = "text-danger" })
+                            @Html.TextBoxFor(x => x.Email)
+                            <label>@Html.Glass().Editable(Model.Content, x => x.EmailAddressLabel)</label>
+                        </div>
+                        @if (Model.ProfessionalInvestor || Sitecore.Context.PageMode.IsExperienceEditor)
+                        {
+                            <div class="input-group">
+                                @Html.ValidationMessageFor(x => x.CompanyId, string.Empty, new { @class = "text-danger" })
+                                @Html.TextBoxFor(x => x.CompanyId)
+                                <label>@Html.Glass().Editable(Model.Content, x => x.FCALabel)</label>
+                            </div>
+                            <div class="input-group">
+                                @Html.ValidationMessageFor(x => x.CompanyName, string.Empty, new { @class = "text-danger" })
+                                @Html.TextBoxFor(x => x.CompanyName)
+                                <label>@Html.Glass().Editable(Model.Content, x => x.CompanyNameLabel)</label>
+                            </div>
+                        }                        
+                    </div>
+                    <div class="no-is-checked">
+                        @Html.Glass().Editable(Model.Content, x => x.OptOutText)
+                        <div class="row mt-4">
+                            <div class="col-lg-12">
+                                <div class="input-group">
+                                    @Html.ValidationMessageFor(x => x.Email, string.Empty, new { @class = "text-danger" })
+                                    @Html.TextBoxFor(x => x.Email)
+                                    <label>@Html.Glass().Editable(Model.Content, x => x.EmailAddressLabel)</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="input-btn">
@@ -155,8 +123,5 @@
             </div>
         </section>
     }
-    <section class="privacy-note mt-4 section-card">
-        <p class="section-card__title">@Html.Glass().Editable(Model.Content, x => x.PrivacyNoticeTitle)</p>
-        <p class="section-card__description">@Html.Glass().Editable(Model.Content, x => x.PrivacyNoticeText)</p>
-    </section>
+    @Html.Sitecore().Placeholder("privacy-notice")
 </div>

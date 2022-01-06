@@ -13,32 +13,37 @@
                     <div class="article-hero">
                         <div class="article-hero__content text-center">
                             <h1 class="article-hero__title mb-4">
-                                @Html.Glass().Editable(m => m.Data.Title)
+                                @Model.FundName
                             </h1>
                         </div>
                     </div>
                 </div>
             </div>
-            <ul class="article-links">
-                <li class="article-links__item">
-                    <a href="#" class="article-links__link copy-to-clipbord"
-                       data-link="@Request.Url.ToString()"
-                       data-title="@Model.Data.ShareCopiedText">
-                        <i class="icon-share"></i>
-                        <span>@Html.Glass().Editable(Model, m => m.Data.ShareText)</span>
-                    </a>
-                </li>
-            </ul>
+            @if (Model.Data.FundSharing != null)
+            {
+                <ul class="article-links">
+                    <li class="article-links__item">
+                        <a href="#" class="article-links__link copy-to-clipbord"
+                           data-link="@Request.Url.ToString()"
+                           data-title="@Model.Data.FundSharing.ShareTooltip">
+                            <i class="icon-share"></i>
+                            <span>@Html.Glass().Editable(Model, m => m.Data.FundSharing.ShareLabel)</span>
+                        </a>
+                    </li>
+                </ul>
+            }
         </div>
     </section>
     <div class="container text-center">
         <div class="hero-manager-link">
             @foreach (var manager in Model.Managers)
             {
-                <a href="@manager.Url" class="hero-manager-link__link">
+                var managerUrl = manager.Page != null ? manager.Page.Url : "#";
+                var target = manager.Page != null ? manager.Page.Target : "";
+                <a href="@managerUrl" class="hero-manager-link__link" target="@target">
                     @Html.Glass().RenderImage(manager, m => m.Image, new { @class = "hero-manager-link__img", alt = manager.FullName }, isEditable: true)
                     <span class="hero-manager-link__name"><span>@Html.Glass().Editable(manager, m => m.FullName)</span></span>
-                </a>
+                </a>               
             }
         </div>
     </div>

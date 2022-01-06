@@ -8,11 +8,21 @@
         <div class="lit-overlay__title">@Html.Glass().Editable(m => m.Literature.Heading)</div>
         <div class="lit-overlay__subtitle">
             @Model.FundName
-        </div>
-        @using (Html.Glass().BeginRenderLink(m => m.Literature.Cta, new { @class = "lit-overlay__link" }))
+        </div>       
+        @if (Sitecore.Context.PageMode.IsExperienceEditor)
         {
-            @Model.CtaText
-            <i class="icon-arrow-right animate-arrow"></i>
+            using (Html.Glass().BeginRenderLink(m => m.Literature.Cta, new { @class = "lit-overlay__link" }, isEditable: true))
+            {
+                @Model.CtaText
+                <i class="icon-arrow-right animate-arrow"></i>
+            }
+        }
+        else
+        {
+            var fundUpdateUrl = Model.Literature.Cta != null ? Model.Literature.Cta.Url + "?ids=" + Model.FundId : string.Empty;
+            <a href="@fundUpdateUrl" class="lit-overlay__link">
+                @Model.CtaText <i class="icon-arrow-right animate-arrow"></i>
+            </a>
         }
     </div>
     @foreach (var documentList in Model.Documents)

@@ -1,0 +1,159 @@
+﻿---
+ID: "1e135b87-6ffa-49fb-9ee6-afdc6d1b4328"
+Parent: "19c18824-0904-4518-a073-9499f93719b6"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2017/10/liontrusts-ghoulish-gallery"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 71000
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{B28EB8DA-2A89-41CE-ABBF-E8E67E26B5AF}"
+          p:before="*"
+          s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+          s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+          s:par="DatasourceRule"
+          s:ph="/content/side-content" />
+        <r
+          uid="{081A996C-3859-4CF2-9E97-1BF5CED764FA}"
+          p:after="r[@uid='{B28EB8DA-2A89-41CE-ABBF-E8E67E26B5AF}']"
+          s:ds=""
+          s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+          s:par="Title=See%20also...&amp;RelatedPages=%7BA872ED66-C757-4F49-8F30-61F4B764DA0A%7D%7C%7BFC17F0A6-ECAA-4CD7-B80B-6E67FDE3251B%7D%7C%7B9EADCB46-7677-4826-AA77-0AC5F81DFFBC%7D%7C%7BEB1B6FD8-B497-4758-B015-4344B0948D8A%7D&amp;MaximumNoOfLinks=4"
+          s:ph="/content/side-content" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "094932b9-ff77-4977-966e-d18f7c7ac091"
+      Hint: LegacyArticle_Subtitle
+      Value: "Matt Tonge, Mike Appleby, Stephen Bailey, Olly Russ, John Husselbee, Mark Williams & James Inglis-Jones"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "liontrusts-ghoulish-gallery | Insights | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: Liontrust’s Ghoulish Gallery
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: "20171027T074644:636446872049040000"
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: Our fund managers highlight the charts, stats and facts with the potential to spook investors this Halloween and explain how their portfolios are positioned to withstand them.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Liontrust’s Ghoulish Gallery
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p><strong>With Halloween coming up on Tuesday, our fund managers highlight charts, stats and facts with the potential to spook investors and explain how their portfolios are positioned to withstand them</strong></p>
+        <p><strong><br />
+        </strong></p>
+        <p><strong><span style="font-size: 18px; color: #34b233;">"Be afraid. Be very afrAId"</span></strong></p>
+        <p><img alt="Matt Tonge" src="~/media/E3D0D331D6C1436FA9F0659FDDB23166.ashx?h=102&amp;w=102" style="height: 102px; width: 102px;" /></p>
+        <p><strong>Matt Tonge, fund manager, Economic Advantage team: </strong>The fear that technology will displace jobs is nothing new. The threat to low-wage, low-skilled jobs seems a real one, with the era of self-service kiosks appearing to have dawned for the fast food industry judging by recent announcements from the likes of McDonald&rsquo;s &ndash; which is this year introducing &lsquo;Experience of the Future&rsquo; digital kiosks in 2,500 restaurants. </p>
+        <p>The scope for Artificial Intelligence to spread into other traditionally higher-skilled areas of the economy should not be underestimated if a recent report from MMC Ventures (&ldquo;The State of AI 2017: Inflection Point&rdquo;) is anything to go by. It is predicated on the belief that AI will have the greatest impact in sectors with a large requirement for data collation and processing. Finance &amp; insurance tops its list of exposed sectors, as shown in the chart below. </p>
+        <p>Technology continues to change the world we live in and the growth of the digital economy will be a key influence on investment returns. Given the emphasis of our Economic Advantage investment process on intangible assets, the digital economy is already heavily represented in our Funds, particularly at the micro and small-cap end of the market where access to growth capital can provide a fertile home for the disruptors of tomorrow.</p>
+        <p><br />
+        </p>
+        <p><img alt="Liontrust&rsquo;s Ghoulish Gallery - Percentage of time collating data" src="~/media/FD1DDDF3020D40B4B820172C195959B2.ashx?h=353&amp;w=600" style="height: 353px; width: 600px;" /></p>
+        <p><strong><span style="font-size: 18px; color: #34b233;"><br />
+        </span></strong></p>
+        <p><strong><span style="font-size: 18px; color: #34b233;">Spectre of pollution looms large&nbsp;</span><br />
+        <br />
+        <img height="102" alt="Mike Appleby" width="102" src="~/media/235C9C97DE1D47D68FCC422CEBA60A3E.ashx?h=102&amp;w=102" style="height: 102px; width: 102px;" /><br />
+        </strong></p>
+        <p><strong>Mike Appleby, investment manager, Sustainable Investment team:</strong> The spectre of pollution hangs heavy over central London, leading Mayor Sadiq Khan to introduce a T-Charge for &lsquo;toxic&rsquo; vehicles in the Congestion Charge zone. Poor air quality is, of course, a global problem and is the largest contributor to premature deaths around the world, according to The Lancet medical journal, which published its Lancet Commission on Pollution and Health in October.</p>
+        <p>Our team identifies transformative developments that not only have positive impacts on society, they have the potential to deliver attractive returns for investors as well. Three such long-term trends are improving the efficiency of energy use, accelerating the transition to lower carbon fuels and increasing electricity generation from renewable sources, which will all help to reduce pollution.</p>
+        <p>Burning fossil fuels currently provides the majority of energy used for generating electricity, transport and industrial processes. It is also the largest source of greenhouse gas emissions. While no investor can avoid exposure to fossil fuels completely as all companies use electricity, we invest in businesses that profit from changes under way in our energy system. We look for companies reducing costs through energy efficiencies, selling products that derive efficiencies for others and generating and transmitting renewable energy. Naturally, we avoid companies that stand to lose from these positive trends &ndash; the fossil fuel sectors. We also avoid tobacco and defence companies, which both feature on the list below of major risk factors.</p>
+        <p><br />
+        </p>
+        <p><img height="411" alt="Liontrust&rsquo;s Ghoulish Gallery - Global estimated deaths" width="600" src="~/media/0E5289E5B1CA4C10A80AD0C9FE5C3BFF.ashx?h=411&amp;w=600" style="height: 411px; width: 600px;" /></p>
+        <p><strong><span style="font-size: 18px; color: #34b233;"><br />
+        </span></strong></p>
+        <p><strong><span style="font-size: 18px; color: #34b233;">Should we be frightened by rise in mortality assumptions?</span></strong></p>
+        <p><strong><img height="102" alt="Stephen Bailey" width="102" src="~/media/718E2765B7934B74A19B339AF19904DE.ashx?h=102&amp;w=102" style="height: 102px; width: 102px;" /><br />
+        </strong></p>
+        <p><strong>Stephen Bailey, fund manager, Macro-Thematic team:&nbsp;</strong></p>
+        <p>&ldquo;&hellip;the rate at which life expectancy is improving in the United Kingdom has slowed significantly in recent years&rdquo;. Longevity Bulletin, Institute and Faculty of Actuaries, July 2017.</p>
+        <p>Hardly a bloodcurdling prediction given that today&rsquo;s UK cohort is expected to live longer than any prior generations. But not quite as long as was expected back in 2015. Longevity forecasts have fallen recently as we have seen diminishing marginal benefits of better healthcare and standards of living.</p>
+        <p>For UK investors, the implication is this: a number of UK life insurers will benefit from a reduction in longevity risk. We expect the Institute and Faculty of Actuaries&rsquo; 2017 study to show a further downward revision in longevity forecasts (a rise in mortality rates) extending the fall shown in the infographic. Life insurers&rsquo; annuity product liabilities rise and fall with longevity. Those insurers that built large longevity reserves based on old forecasts (and retained the balance sheet risk rather than reinsuring it out) should now be able to release large chunks of capital. For example, we estimate Legal &amp; General to be capable of releasing as much as &pound;1.3bn. This trend should provide a boost to the sector&rsquo;s earnings and dividend growth for years to come.</p>
+        <p><br />
+        </p>
+        <p><img height="413" alt="Liontrust&rsquo;s Ghoulish Gallery - Change in life expectancy" width="600" src="~/media/E59224261026405D868B48B041F240F4.ashx?h=413&amp;w=600" style="height: 413px; width: 600px;" /></p>
+        <p><strong><span style="font-size: 18px; color: #34b233;"><br />
+        </span></strong></p>
+        <p><strong><span style="font-size: 18px; color: #34b233;">&ldquo;It&rsquo;s quiet&hellip;too quiet&rdquo; &ndash; the spooky absence of equity market volatility</span></strong></p>
+        <p><strong><img height="102" alt="Olly Russ" width="102" src="~/media/053B1A8CCABA4FCBA33F3DB1B5D95DAF.ashx" /><br />
+        </strong></p>
+        <p><strong>Olly Russ, fund manager, European Income team: </strong>The European Central Bank (ECB) has chosen a date five days before Halloween to outline its skeleton plans for the tapering of its quantitative easing (QE) programme. Its QE should effectively be over inside a year, presumably leaving room for ECB President Mario Draghi to raise rates as the grand finale to his term of office shortly thereafter. On a net basis &ndash; taking account of the US unwinding of its QE balance sheet while the Bank of Japan keeps adding to its own &ndash; global QE flows then fall to almost zero.</p>
+        <p>At that stage, investors will find out how much of a support QE has really been to global markets. At the very least, it seems likely that the very low levels of market volatility experienced over recent years seems set to rise. If rate rises mark a return to economic normality in the eurozone, then <a href="https://www.ft.com/content/6ce6b2c2-d713-11e1-8e7d-00144feabdc0" target="_blank"><span style="color: #34b233;">as Draghi promised</span></a>, whatever it was, it was enough.</p>
+        <p><br />
+        </p>
+        <p><img height="389" alt="Liontrust&rsquo;s Ghoulish Gallery - Monthly asset purchases" width="600" src="~/media/37DBEF4BD01445ED99D44E2A72FB9C18.ashx" /></p>
+        <p><strong><span style="font-size: 18px; color: #34b233;"><br />
+        </span></strong></p>
+        <p><strong><span style="font-size: 18px; color: #34b233;">RIP bond market liquidity?</span></strong></p>
+        <p><strong><img height="102" alt="John Husselbee" width="102" src="~/media/C98C7331B5FE4554A29B9E8081E0EB87.ashx" /><br />
+        </strong></p>
+        <p><strong>John Husselbee, Head of Multi-Asset:</strong> A recent Bank of England review drew some ghastly conclusions on corporate bond market liquidity. This is a result of a mismatch between corporate bonds, which can suffer from illiquidity, and the funds that invest in them, which often offer instant redemptions for investors.</p>
+        <p>The chart below plots simulations of bond fund redemptions against their impact on bond prices in terms of basis points of liquidity premium; as bond funds are redeemed and the underlying bonds sold, their price falls and yield rises. In a crisis, the Bank estimate that anything more than 1.3% in weekly redemptions from corporate bond funds could result in "highly dislocated" prices, with yields rising by more than 70bps due to illiquidity alone. This looks a worse-case scenario but with policy beginning to shift toward higher interest rates, an exodus from bonds &ndash; while not our expectation &ndash; &nbsp;should not be discounted entirely.</p>
+        <p><br />
+        </p>
+        <p><img height="429" alt="Liontrust&rsquo;s Ghoulish Gallery - Predicted increase in liquidity" width="600" src="~/media/B00A3398EFEF43ABAB1775BCB515B519.ashx?h=429&amp;w=600" style="height: 429px; width: 600px;" /></p>
+        <p><strong><span style="font-size: 18px; color: #34b233;"><br />
+        </span></strong></p>
+        <p><strong><span style="font-size: 18px; color: #34b233;">An escalation of North Korea&rsquo;s conflict with the West remains as scary a prospect as ever</span><br />
+        <br />
+        <img height="102" alt="Mark Williams" width="102" src="~/media/6A142F4027CD4723897E7F9E3F2A9D07.ashx" /><br />
+        </strong></p>
+        <p><strong>Mark Williams, fund manager, Asia team: </strong>North Korea&rsquo;s risk to global stability is nothing new, but the stakes have certainly risen. A policy misstep cannot be ruled out given the volatility and inexperience of the two protagonists &ndash; Trump and Kim Jong-Un. The likely outcome, however, has to be that Kim Jong-Un will not embark on a war as it would effectively equate to suicide. Furthermore, the unpredictability of the situation makes it very difficult to adjust one&rsquo;s portfolio &ndash; whether Asian or global &ndash; to pre-empt it.<br />
+        <br />
+        While we will monitor the situation, we have to take a pragmatic approach and invest using our base case scenario that a macabre resolution to the conflict is unlikely. We still have a significant exposure to South Korea in the Fund and see no reason to change this.&nbsp;</p>
+        <p >
+        <br />
+        <img height="411" alt="Liontrust&rsquo;s Ghoulish Gallery - Jong-Un v Trump as scary as ever" width="600" src="~/media/C3F1808B68434C1F841D798071980B81.ashx?h=411&amp;w=600" style="height: 411px; width: 600px;" /></p>
+        <p><strong><span style="font-size: 18px; color: #34b233;"><br />
+        </span></strong></p>
+        <p><strong><span style="font-size: 18px; color: #34b233;">Beware phantom forecasts</span></strong></p>
+        <p><strong><img height="102" alt="James Inglis-Jones" width="102" src="~/media/097AB2E032234239A3CD31193FE4F08A.ashx" /><br />
+        </strong></p>
+        <p><strong>James Inglis-Jones, fund manager, Cashflow Solution team:</strong> Companies with high forecast growth look expensive. The chart below shows that valuations for this group are currently in the most expensive quintile (above the orange line) of observations going right back to 1989. They have only been more expensive on two previous occasions: during the TMT (telecoms, media and tech) bubble and prior to the Global Financial Crisis. This is particularly pertinent to us as our Cashflow Solution investment process typically steers well clear of companies which have very high forecast earnings growth. In our view, mispricing of stocks often stems from overconfidence in forecasts of future profitability made by company managers and sell-side brokers, which often turn out to be unreliable. Companies with very high growth forecasts are more vulnerable than most to disappointment.</p>
+        <p>Whilst companies with very high growth forecasts have enjoyed a steady re-rating since the 2009 market trough, this has propelled them to heady valuation levels today and the chart shows that when they get this expensive they have in the past subsequently proved corrosive to an investor's wealth. Rather than rely on analysts&rsquo; forecasts we prefer to examine actual cash flow as shown in companies&rsquo; reports and accounts. Some critics will say we are driving using the rear-view mirror, but our analysis shows that this is by far the superior approach precisely because of the difficulty in forecasting the road ahead.</p>
+        <p><br />
+        </p>
+        <p><img height="411" alt="Liontrust&rsquo;s Ghoulish Gallery - Historic valuations" width="600" src="~/media/CAE3D9D826464BE2BF36F1FA7AB4E887.ashx" /></p>
+        <p><strong><br />
+        </strong></p>
+        <p><strong>Disclaimer:</strong></p>
+        <p> &bull; This content contains information and analysis that is believed to be accurate at the date of publication but is subject to change without notice. Whilst care has been taken in compiling this content, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness. Some parts/sections of this content may been compiled from external sources. Whilst these sources are believed to be reliable, the information has not been independently verified and therefore no representation is made as to its accuracy or completeness. &bull; It should not be copied, faxed, reproduced, divulged or distributed, in whole or in part, without the express written consent of Liontrust. &bull; Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. The issue of units/shares in Liontrust Funds may be subject to an initial charge, which will have an impact on the realisable value of the investment, particularly in the short term. Investments should always be considered as long term. &bull; Any decision to invest should be always based on the final Prospectus and Key Investor Information Documents (KIIDs) and you should take independent legal advice if necessary. These documents contain important information which should be read before investing in any fund and they can be obtained, free of charge, <a href="http://www.liontrust.co.uk/what-we-offer/fund-literature">here</a>.</p>

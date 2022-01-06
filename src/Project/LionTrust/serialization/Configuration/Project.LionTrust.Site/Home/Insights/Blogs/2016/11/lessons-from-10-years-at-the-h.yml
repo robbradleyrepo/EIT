@@ -1,0 +1,148 @@
+﻿---
+ID: "35a81abf-e84d-433b-9990-fb14287142f5"
+Parent: "55f4fff9-d497-4e3f-834f-77e361337a76"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2016/11/lessons-from-10-years-at-the-helm-of-liontrust-european-growth"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 12700
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{7A1512FD-36AC-47B9-8C3D-726FB0AD8B5A}"
+          p:after="r[@uid='{30A0A4C8-974F-4822-9DCB-DE14881E0400}']"
+          s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+          s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+          s:par="DatasourceRule"
+          s:ph="/content/side-content" />
+        <r
+          uid="{6D55E2C7-ED55-4AF1-83EE-6E472A6CC713}"
+          p:after="r[@uid='{7A1512FD-36AC-47B9-8C3D-726FB0AD8B5A}']"
+          s:ds="{71B20482-B038-49D5-895C-ED6D46D5095F}"
+          s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+          s:par="DatasourceRule"
+          s:ph="/content/side-content" />
+        <r
+          uid="{D175FD3D-BDC2-4D82-92F4-AF29CD19FE99}"
+          p:after="*[1=2]"
+          s:ds=""
+          s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+          s:par="Title=See%20also&amp;RelatedPages=%7B6BA81BCB-69B9-4712-AF2F-37889DD5C47C%7D%7C%7B8AC2C886-33C4-45BC-B0B9-A9A1A08032D7%7D%7C%7BF6FEBDDC-30B3-4375-B9DD-26B665170635%7D%7C%7B44FBC176-6761-4C7D-8EF7-175AB98F8DC6%7D&amp;MaximumNoOfLinks=4"
+          s:ph="/content/side-content" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{3668EA85-45A7-4CF0-9131-85BA30A3F1E4}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "lessons-from-10-years-at-the-helm-of-liontrust-european-growth | Insights | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: Lessons from 10 years at the helm of Liontrust European Growth
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: "20161125T111450:636156692903736765"
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: |
+        1. Define and thoroughly research an investment process before you start implementing it
+        
+        An investment process can’t simply be theoretical, it also needs to be backed up by historical analysis to demonstrate that it works.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Lessons from 10 years at the helm of Liontrust European Growth
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <strong>1. Define and thoroughly research an investment process before you start implementing it<br>
+        </strong><br>
+        An investment process can’t simply be theoretical, it also needs to be backed up by historical analysis to demonstrate that it works.&nbsp;<br>
+        <br>
+        When I joined Liontrust in 2006 and began developing the process that would be applied to the European Growth Fund, it was my belief that cash flow was the single most important determinant of shareholder returns. The basic idea was that companies run by conservative managers focused on and delivering cash flow would perform significantly better than companies run by aggressive company managers making large cash investments today to secure forecast growth in the future. We spent time thinking about how best to capture these qualities and ended up with two simple ratios – one focused on how the market valued a company’s cash flow, the other focused on how cash generative a company was.<br>
+        <br>
+        An important first step was to test the ratios we had developed in order to determine whether or not they worked as an investment strategy. We did this by accessing a data set of past returns and fundamental data - simulating how an investment strategy based on our cash flow ratios would have performed in the past.&nbsp;<br>
+        <br>
+        When we carried out these tests I was aware of the dangers of repeatedly mining the data to produce a model that would accurately explain the past but not help much in the future. Fortunately the testing machinery I had access to at the time was sufficiently cumbersome to make repeated testing impractical! Back in 2006 the original approach we developed tested very well and it’s gratifying that 10 years on we’ve delivered returns that in some respects are even better than the original testing work suggested was possible.*<br>
+        <br>
+        <strong>2. Understand how your investment style will perform in different market environments</strong><br>
+        <br>
+        It may be surprising, but an important feature of an investment process is that it does not work all the time. If a process works all the time everyone would soon adopt it and it would lose its potency. A good investment process is sustained by the fact that from time to time it does not perform that well - this causes some people to abandon the approach which serves to sustain the anomaly. We can see these cycles of performance in the historic data and this gives us the resilience and fortitude to continue to apply the process through difficult times. But investors need to know it’s also a commonplace feature of successful funds – a fact highlighted recently by a US study (source: Joel Grenblatt) that showed that for top quartile funds over 10 years, 80% of them had spent at least three of that 10 year period in the bottom quartile.<br>
+        <br>
+        Living with the process over time has deepened our understanding of when it works and when it does not. We now know there are certain market conditions in which the process tends to take a back seat. We ensure that we communicate this to our clients, some of whom have been prepared to add more money to the strategy during difficult periods over the past 10 years. This has proved extremely rewarding for them as the strategy has tended to recover sharply following a period of more difficult performance and the last 10 years has not been an exception to this general rule. &nbsp;<br>
+        <br>
+        <strong>3. Stick to the process and avoid style drift</strong><br>
+        <br>
+        There’s no point in carefully thinking through how you are going to run money, testing the approach on over 50 years’ data only to abandon it when short-term results are not good. This lack of resilience only leads in the longer term to poor investment returns and loss of investors. Although we’ve been fortunate that the Fund has delivered a strong outperformance of the European market over its first 10 years with 70-80% of rolling three year periods better than the market, this period also encompassed short-term bouts of underperformance.&nbsp;<br>
+        <br>
+        On a personal level I underestimated the emotional pressure that can be brought to bear during these difficult periods as some more nervous clients will abandon you at these points and some people will question whether or not the process is still valid. It can be tempting in these circumstances to question your approach. But I found it was invaluable at these times to be able to go back to the long term evidence and realise that these periods were just part and parcel of applying the process. My experience has also been that it is critical at these times to have a supportive organisation. Thankfully, investment processes are in Liontrust’s DNA and I never had any pressure from senior management when the process went through some inevitable short term bouts of difficult performance. The group fundamentally believe in and support what we are doing – we have been left simply to get on with the job of applying the process to the funds we run and it’s pleasing that our clients can look back today on 10 years of excellent returns.*<br>
+        <br>
+        <strong>4. Take a dispassionate approach when faced with swings in sentiment</strong><br>
+        <br>
+        The global financial crisis effectively ushered in an era of investor dependency on central banks to drive risk appetite. Markets became accustomed to easy money and hugely accommodative policymakers, who were happy to provide fresh stimulus at the first sign of a weakening of investors ‘animal spirits’. This created a perverse investment environment.&nbsp;<br>
+        <br>
+        Near-zero interest rates and massive money printing programmes effectively bailed out the most troubled companies in the wake of the global financial crisis. Investors have responded at times by seeking risk, bidding up the prices of cheap assets with ‘contrarian value’ appeal. Some labelled this process as a ‘dash for trash’.<br>
+        <br>
+        This environment represented a huge challenge for fund managers who have built their investment processes around analysis of company fundamentals rather than the prediction of aggregate investor sentiment levels. The most rewarding investment strategy during the many bouts of risk appetite was to focus on low-quality stocks on depressed valuation metrics as they performed well in an environment of rising optimism and enthusiasm for risky assets. However, despite these macro driven bouts of sometimes perverse market behaviour, we never wavered in applying the Cashflow Solution Process – a strategy that has paid off through the strong performance of the European Growth Fund.&nbsp;<br>
+        <br>
+        <strong>5. Enhance rather than change your investment process<br>
+        </strong>
+        <br>
+        We have high conviction in the way we go about managing money, so our emphasis has always been on evolution rather than revolution.&nbsp;<br>
+        <br>
+        As the body of data and back-tested evidence available to us has grown over the years, we have evolved our investment process to reflect it. We have improved our ability to select stocks from the top quintile in our screens as our understanding has deepened regarding the type of stocks that tend to do well in the quintile and the type that tend to do badly. Samantha Gleave’s arrival four years ago with her background in detailed company analysis has been very helpful in this regard.&nbsp;<br>
+        <br>
+        The core Cashflow Solution investment philosophy remains unaltered. Prior to conducting qualitative analysis, we still screen the European universe to identify the upper quintile – the top 20% - as measured by cash flow relative to capital and market cap. But today we apply a further step. We like to categorize stocks into four different buckets within the quintile depending on the ‘type’ of company we think we are looking at. This classification of stocks in the top quintile has helped us to be more efficient in our research and ensure that in portfolios we are taking advantage of all the opportunities the top quintile has to offer.&nbsp;<br>
+        <br>
+        <strong>6. Finally - don’t base investment decisions on forecasts!</strong><br>
+        <br>
+        We base our annual restructuring of the Fund holdings on our findings from an annual review of European companies’ reports and accounts. Some critics will say we are driving using the rear-view mirror, but our analysis shows that this is by far the superior approach precisely because of the difficulty in forecasting the road ahead. In fact, we believe that investors often place too much emphasis on their ability to make forecasts despite a wide body of academic literature that affirms none of us very good at it. We believe our opportunities arise as a result of investors not paying enough attention to the cash flow they can see in a company’s report and accounts today and too much attention on what they think is going to happen tomorrow. Our experience of the last 10 years tells us that eschewing the temptation to second guess the market and make forecasts and sticking to a successful well-defined investment process pays off in the long run.<br>
+        <br>
+        <strong>
+        * Past performance is not a guide to future performance<br>
+        </strong><br>
+        <p><span style="font-weight: 700;">Disclaimer:<br>
+        </span></p>
+        <p>• Past performance is not a guide to future performance. • Do remember that the value of an investment and the income from it can fall as well as rise and you may not get back the amount originally invested. Investment in Funds managed by the Cashflow Solution Team involves foreign currencies and may be subject to fluctuations in value due to movements in exchange rates.&nbsp; • The European Growth Fund holds a concentrated portfolio which could mean that it will be volatile when compared to its benchmark. • The Global Income Fund's expenses are charged to capital. This has the effect of increasing dividends while constraining capital appreciation.<br></p>
+        <p> </p>
+        <p> </p>
+        <p><br>• The information and opinions provided should not be construed as advice for investment in any product or security mentioned.&nbsp; • Always research your own investments and consult with a regulated investment adviser or licensed stock broker before investing.</p>
+        <p><br>
+        </p>
+        <br>
+        <br>
+        <p><em>Originally published on 6 October 2016.<br>
+        </em></p>
+        <br>

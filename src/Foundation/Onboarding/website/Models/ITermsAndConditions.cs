@@ -3,6 +3,7 @@
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
     using LionTrust.Foundation.ORM.Models;
+    using System;
 
     [SitecoreType(TemplateId = Constants.TermsAndConditions.TemplateId)]
     public interface ITermsAndConditions
@@ -24,5 +25,8 @@
 
         [SitecoreField(Constants.TermsAndConditions.Goal_FieldId)]
         IGlassBase Goal { get; set; }
+
+        [SitecoreId]
+        Guid Id { get; set; }
     }
 }

@@ -3,20 +3,18 @@
 @if (Model != null)
 {
     var container = Model.MarginsContainer != null ? Model.MarginsContainer.Value : string.Empty;
-
-    <div class="light-gray">
-        <div class="@container">
-            <div class="row">
-                <div class="col-12 section light-gray-section @(Model.TextColor != null ? Model.TextColor.Value : "text-black")">
-                    @if (Sitecore.Context.PageMode.IsExperienceEditor)
-                    {
-                        @Html.Glass().Editable(Model, m => m.Text)
-                    }
-                    else
-                    {
-                        @Html.Raw(Model.Text)
-                    }
-                </div>
+   
+    <div class="@container">
+        <div class="row">
+            <div class="col-12 section @(Model.TextColor != null ? Model.TextColor.Value : "text-black")">
+                @if (Sitecore.Context.PageMode.IsExperienceEditor)
+                {
+                    @Html.Glass().Editable(Model, m => m.Text)
+                }
+                else
+                {
+                    @Html.Raw(Model.Text)
+                }
             </div>
         </div>
     </div>

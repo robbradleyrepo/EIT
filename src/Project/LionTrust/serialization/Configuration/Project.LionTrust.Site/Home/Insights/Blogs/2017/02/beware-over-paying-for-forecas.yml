@@ -1,0 +1,93 @@
+﻿---
+ID: "ffbd7d4a-0a3b-459d-a4f1-41c11637b5db"
+Parent: "ddc5afd8-6a81-4b56-b35d-611af9fb74c0"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2017/02/beware-over-paying-for-forecast-growth"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 3300
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{98F66281-F723-4481-BA9D-7C52184CB6B3}"
+          p:after="r[@uid='{30A0A4C8-974F-4822-9DCB-DE14881E0400}']"
+          s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+          s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+          s:par="DatasourceRule"
+          s:ph="/content/side-content" />
+        <r
+          uid="{673A8BFF-4798-48F7-B12B-2C871215945D}"
+          p:after="*[1=2]"
+          s:ds="{71B20482-B038-49D5-895C-ED6D46D5095F}"
+          s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+          s:par="DatasourceRule"
+          s:ph="/content/side-content" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{3668EA85-45A7-4CF0-9131-85BA30A3F1E4}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "beware-over-paying-for-forecast-growth | Insights | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: "Beware over-paying for forecast growth"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: "20170228T140133:636238872931718857"
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: We hold an upbeat assessment of the outlook for European equities this year but we are very cognisant of the need to limit exposure to some extreme valuations being afforded to stocks meeting certain investment characteristics. 
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: "Beware over-paying for forecast growth"
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p><strong>We hold an upbeat assessment of the outlook for European equities this year but we are very cognisant of the need to limit exposure to some extreme valuations being afforded to stocks meeting certain investment characteristics. </strong></p>
+        <p>One particularly widely-held group of stocks are those which could be described as ‘quality growth’ plays – stocks with high forecast earnings growth and good ratings on traditional quality metrics such as RoE (Return on Equity), ROIC (return on invested capital) and net income/total assets.</p>
+        <p>While the Cashflow Solution process often identifies high-quality stocks, it typically steers well clear of companies which have very high forecast earnings growth. Investors in our funds will know that our investment philosophy is based on the mistakes people make when forecasting. In our view, mispricing of stocks often stems from overconfidence in forecasts of future profitability made by company managers and sell-side brokers, which often turn out to be unreliable.</p>
+        <p>The exceptional returns to this type of ‘quality growth’ stock in recent years are therefore something of a concern, as we believe they could now be heralding a period of poor subsequent returns.</p>
+        <p>The chart below plots the valuation of the top quintile of stocks in Europe when scored on ‘quality growth’ characteristics, going all the way back to 1989. We have presented valuations relative to their average over the period, with deviation from the mean expressed in terms of standard deviation.</p>
+        <p><img height="393" alt="James Inglis-Jones: Beware over-paying for forecast growth" width="734" src="~/media/12D66565E8D54FE8834FD05617B29CCF.ashx?h=393&amp;w=734" style="height: auto; width: 600px;"></p>
+        <p><em style="font-size: 1.5rem;">Source: Liontrust, proprietary analysis of ‘quality growth’ based upon composite of valuation metrics including price/book, price/sales, earnings/price. As at 30 September 2016.</em><br></p><p><br>
+        The best-scoring quality growth stocks have risen to more than one standard deviation above their average – a statistical occurrence that only happens around 1/6th of the time (assuming a ‘normal’ data distribution). Having experienced a strong rating expansion since 2009, these type of stocks are now approaching levels last seen during the TMT bubble. </p>
+        <p style="text-align: justify;">We recently conveyed to investors our belief that European markets are in a technical uptrend, a signal which is typically followed by further positive returns and low levels of volatility. So while we believe market returns will continue to be good, we think that leadership of these gains is likely to evolve further and will no longer be dominated by companies with very lofty earnings growth forecasts.&nbsp; </p>
+        <p style="text-align: justify;">In 2016 we saw very good returns to some deep pockets of contrarian value which were available in the market; these tended to be centred on the materials, energy and financials sectors. As these areas have rallied, they have gained momentum – losing some of their contrarian credentials as they became more consensus trades. This is particularly true of the materials sector, which on a pan-European basis is dominated by stocks listed in the UK rather than the Continent; the FTSE mining sector generated an investment return of over 100% in 2016. The challenge for these stocks now is to justify this re-rating by delivering against raised investor expectations. </p>
+        <p>While avoiding stocks with high forecast growth, our bottom-up investment process has identified a balance of broad high-quality investments across the majority of the market where valuation dispersion is still fairly compressed (i.e. share price valuation differences do not truly reflect companies’ differing prospects), together with some very selective value opportunities (in targeted areas of the energy and financials sectors). Some of the latter type of value stocks are displaying evidence of high investor anxiety, which we believe is a strong contrarian indicator of good returns ahead. This year we have increased exposure to these areas via stocks such as Italian bank Mediobanca and Swedish oil and gas exploration and production specialist Tethys Oil.&nbsp;</p>
+        <p><strong>Disclaimer:</strong></p>
+        <p> </p>
+        <p>• Past performance is not a guide to future performance. • Do remember that the value of an investment and the income from it can fall as well as rise and you may not get back the amount originally invested. Investment in Funds managed by the Cashflow Solution Team involves foreign currencies and may be subject to fluctuations in value due to movements in exchange rates.&nbsp; • The European Growth Fund holds a concentrated portfolio which could mean that it will be volatile when compared to its benchmark. • The Global Income Fund's expenses are charged to capital. This has the effect of increasing dividends while constraining capital appreciation.</p>
+        <p> </p>
+        <p> </p>
+        <p>• The information and opinions provided should not be construed as advice for investment in any product or security mentioned.&nbsp; • Always research your own investments and consult with a regulated investment adviser before investing.</p>
+        <p><em>Originally published on 28 February 2017.</em></p>

@@ -1,0 +1,31 @@
+﻿---
+ID: "34410524-3137-4f3c-843d-dfafdcd2d9cc"
+Parent: "8b8eabcf-40c5-4d18-9cf2-9cc649fb44a9"
+Template: "fff5f245-ffc0-4022-a998-9b07aa5e761f"
+Path: /sitecore/content/LionTrustNew/Home/Media Gallery/_Local
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: |
+    {F6B5C22C-0B85-45BB-BB44-D743FF235639}
+    {5B3428A4-A17B-4B9C-8B63-5ABF0711237B}
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: "-1000"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{A9374FDF-902A-43A9-9F70-4EBB944BD993}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210823T173622Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin

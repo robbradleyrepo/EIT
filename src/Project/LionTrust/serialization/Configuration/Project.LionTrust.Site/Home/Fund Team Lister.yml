@@ -1,5 +1,5 @@
 ﻿---
-ID: "b0183a42-a5f7-49f8-bd6f-2e1a97ddd0ac"
+ID: "d9a07b76-d4c1-40ad-9c3a-8833b9ac4988"
 Parent: "7502b69e-d154-4861-a033-bc0cb30a91b5"
 Template: "3ef8af1c-0ff1-4afc-8002-606b85fa4ad6"
 Path: /sitecore/content/LionTrustNew/Home/Fund Team Lister
@@ -16,43 +16,43 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
+          uid="{7D8BB5E0-6857-45EB-893C-0943B52933A0}"
+          p:before="*"
+          s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+          s:ph="/header/navigation" />
+        <r
           uid="{EE24C32D-EF97-4CD1-81C1-C37C0961B093}"
-          p:after="r[@uid='{BE8C5C97-D801-42C5-9368-ED6A2E029685}']"
-          s:ds="{9E85B0CE-C95B-4930-B8FD-5D6A4955A7C4}"
+          p:after="r[@uid='{B6CB773C-E731-4F36-B72A-AF5BFE57CA6F}']"
+          s:ds="{99FC526A-A674-4EED-BE57-D5E1C1DD9528}"
           s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
           s:par=""
-          s:ph="main" />
+          s:ph="header" />
         <r
           uid="{68A71C7B-0DA3-4EB6-A798-C5E403059F00}"
-          p:after="r[@uid='{EE24C32D-EF97-4CD1-81C1-C37C0961B093}']"
-          s:ds="{FDD2D5B4-B6C7-4862-BDEE-3227B7C4556A}"
+          p:after="r[@uid='{9057DD73-496E-495D-9460-75D38BBB5B7E}']"
+          s:ds="{8F6F09BB-1B49-4D01-868A-5E0C19625749}"
           s:id="{C3B11E64-1214-410E-BA83-3347C5B59A7E}"
           s:par=""
-          s:ph="main" />
+          s:ph="header" />
         <r
           uid="{748DD613-3E6E-4E79-AE83-98BAB39E2C19}"
           p:after="r[@uid='{68A71C7B-0DA3-4EB6-A798-C5E403059F00}']"
-          s:ds="{7DFD087E-08E3-40E8-93DB-7CEA3AB12315}"
+          s:ds="{3F80BD5B-69A2-4726-9CCD-84949117DB61}"
           s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
           s:par=""
           s:ph="main" />
         <r
           uid="{1BAD071D-5089-49AA-93CF-CB4954BA50E7}"
           p:after="r[@uid='{748DD613-3E6E-4E79-AE83-98BAB39E2C19}']"
-          s:ds="{759AE572-8AC8-4B2A-AF78-430B1641D446}"
+          s:ds="{41B17A19-501A-4AFF-8AE8-9281D0121C73}"
           s:id="{A811D2B0-D08D-4991-A9DD-6D9FA5799CBD}"
           s:par=""
           s:ph="main" />
         <r
           uid="{18B06B94-C99A-494B-9A46-AE485780F958}"
-          p:after="r[@uid='{1BAD071D-5089-49AA-93CF-CB4954BA50E7}']"
+          p:after="*[1=2]"
           s:id="{29A12478-EBE8-4B5C-BF2E-871026066814}"
           s:ph="main" />
-        <r
-          uid="{4FB00752-0C2B-4E6F-A91A-EDDA689D318B}"
-          p:after="*[1=2]"
-          s:ds=""
-          s:par="" />
       </d>
     </r>
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
@@ -63,13 +63,12 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Fund Team Lister | Liontrust Asset Management PLC
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210528T202125Z
-    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
-      Hint: __Created by
-      Value: |
-        sitecore\admin
+      Value: 20211022T141045Z
     - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
       Hint: Breadcrumb_BreadcrumbTitle
       Value: Fund Team Lister

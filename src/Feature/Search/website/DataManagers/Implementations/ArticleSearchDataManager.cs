@@ -152,7 +152,7 @@
             return listingArticleFacetsResponse;
         }
 
-        public ISearchResponse<ITaxonomyContentResult> GetArticleListingResponse(string database, string contentTypes, string funds, string categories, string fundManagers, string fundTeams, int? month, int? year, string searchTerm, string sortOrder, int page, int take = 21)
+        public ISearchResponse<ITaxonomyContentResult> GetArticleListingResponse(string database, string contentTypes, string funds, string categories, string fundManagers, string fundTeams, int? month, int? year, string searchTerm, string sortOrder, int page, int take = 12)
         {
             var fromYear = year ?? 2000;
             var fromMonth = month ?? 1;

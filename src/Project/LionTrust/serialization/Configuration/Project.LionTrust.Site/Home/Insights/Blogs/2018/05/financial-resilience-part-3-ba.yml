@@ -1,0 +1,124 @@
+﻿---
+ID: "c1c7e05f-2e01-45c0-b79b-55dcb2e1e951"
+Parent: "f4b9ddb2-64f1-4c86-b09e-12d4a3729a5d"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2018/05/financial-resilience-part-3-banks-what-we-look-for-and-the-part-they-play"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 7100
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{A23CADB6-34BE-47D6-9B96-2EF194607ADB}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{57A49867-7E71-4841-BC8A-1A6C67A58E94}"
+              p:after="r[@uid='{A23CADB6-34BE-47D6-9B96-2EF194607ADB}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{D7A519BA-8F85-4269-A069-F5D55039038F}"
+              p:after="r[@uid='{57A49867-7E71-4841-BC8A-1A6C67A58E94}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See also...&amp;RelatedPages={47BD668E-4C0F-4D8A-9E71-B6C8C156B32F}|{FA0E822B-9229-47E9-9341-79282A4EE71F}|{F8415A35-9C34-47F7-BACE-42EAABBFA145}|{04578C19-7BC2-4512-A225-02BD2F1DE334}&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{7170277C-D434-4C5D-9945-5D46793D683C}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "financial-resilience-part-3-banks-what-we-look-for-and-the-part-they-play | Insights | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: "Financial resilience part 3: Banks - what we look for and the part they play"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20160225T000000Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: If you type in Google “why are bankers not” then the suggested completed sentence is “in jail”. Banks, and their employees, generally have a bad reputation.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: "Financial resilience part 3: Banks - what we look for and the part they play"
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p><em>This article was first published by Alliance Trust Investments on 25 February 2016.</em></p>
+        <p><strong>If you type in Google &ldquo;why are bankers not&rdquo; then the suggested completed sentence is &ldquo;in jail&rdquo;. Banks, and their employees, generally have a bad reputation as is highlighted in the chart below. Since 2008, there have been a plethora of situations where the profession has hardly covered itself in glory.<br>
+        <br>
+        </strong>
+        </p>
+        <p>
+        We take a pragmatic view to the industry. How much more difficult would life be without somewhere to safely deposit funds, to have an account to make and receive payments, and an institution to provide loans and mortgages?</p>
+        <p><img alt="Veracity Index 2015" src="-/media/F3D6BD60553141A8AB59E3D7CD0EDD73.ashx?h=670&amp;w=454&amp;hash=FFB767F31F91027354AE7FCA36EE6C12BBEF748F&amp;hash=FFB767F31F91027354AE7FCA36EE6C12BBEF748F" style="height: 670px; width: 454px;"></p>
+        <p><strong>
+        How do banks work?</strong></p>
+        <p>
+        The banking sector covers a wide range of intermediary financial services: loan-making and deposit-taking; corporate finance; market making in equities, fixed income and other markets; account administration; payment services and not forgetting the creation of money.</p>
+        <p>
+        </p>
+        <p>
+        Banks operate with a fractional reserve model whereby they hold liquid assets equal to only a small portion of their liabilities (deposits). So there is a disconnect between the promise of instant access for depositors and the reality that only a fraction of depositors could withdraw their money at any one time. This only works if there is trust in the banking institution and depositors are comfortable that the bank is a secure place for their cash.</p>
+        <p><strong>
+        We divide the sector into two types:</strong></p>
+        <p>
+        &bull; Investment banks raise financial capital for corporations, assist in mergers and acquisitions, and make markets in equities, fixed income and derivatives thereof. As part of this they may provide &lsquo;sell-side&rsquo; research services. They generally do not take deposits.&nbsp;<br>
+        &bull; Corporate and retail banks take deposits and make loans &ndash; &lsquo;lending long and borrowing short&rsquo; to individuals and companies.<br>
+        Our view is that there is a clear need and opportunity for banks to play a pivotal role in society. As such, we see them as providing net benefits to society, provided they are well-managed.</p>
+        <p><span style="font-size: 1.5rem;"><strong>Tying it all together</strong></span></p>
+        <p>
+        We identify the main ESG factors that can have tangible impacts on both their contribution to financial resilience in the broader economy &ndash; we believe this is intrinsically linked to the long-term sustainability of the bank &ndash; and also to individual stock performance. There are too many to list them here but I have included an example below for illustrative purposes.</p>
+        <p><img height="287" alt="ESG Factors/Financial Impact" width="454" src="-/media/BFBFF9F5081A4958BAB52E38443A3DCC.ashx?h=287&amp;w=454&amp;hash=98095AE4F4671EBA3A8DB07ED44CFFBEEFAB1B87&amp;hash=98095AE4F4671EBA3A8DB07ED44CFFBEEFAB1B87" style="height: 287px; width: 454px;"></p>
+        <p>On top of this, we recognise the role banks can play in achieving the Sustainable Development goals and in the diagram below we have attempted to identify the key goals and themes that could drive value up to 2020.</p>
+        <p><img alt="Sustainable Development Goals" src="-/media/BB1E4E3C01D04B458D1F071070143032.ashx?h=439&amp;w=462&amp;hash=7E05CD7A5010CC698685DDA4762E1043CFD2B4F6&amp;hash=7E05CD7A5010CC698685DDA4762E1043CFD2B4F6" style="height: 439px; width: 462px;"><br>
+        <br>
+        <strong>Potential Winners</strong></p>
+        <p>We prefer traditional retail banks over investment banking as we see much clearer benefits to society and, as investors, we perceive the volatility inherent in investment banking earnings as undesirable. It is of paramount importance to us that the banks we invest in are well-managed and have policies in place to ensure the products they offer are appropriate to the client. Based on our analysis, KBC Groep and Intesa Sanpaolo are both examples of excellently managed banks that are adequately capitalised and well-positioned to withstand any potential shocks to the broader economy. We also like Shawbrook Group, an SME-focused UK bank, which in our view, because of its positioning in niche and often underserved markets, is both well-capitalised and highly profitable.</p>
+        <p>&nbsp;</p>
+        <p style="color: #222222; background-color: #ffffff; margin-right: 0px; margin-bottom: 14px; margin-left: 0px;">For a comprehensive list of common financial words and terms, see our glossary&nbsp;<a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms" style="color: #000000;"><span style="color: #34b233;">here</span></a>.</p>
+        <p style="color: #222222; background-color: #ffffff; margin: 0px 0px 14px;"><span><strong>Key Risks</strong></span></p>
+        <p style="color: #222222; background-color: #ffffff; margin: 0px 0px 14px;"><span><strong>Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital.</strong></span><span><strong></strong></span>The issue of units/shares in Liontrust Funds may be subject to an initial charge, which will have an impact on the realisable value of the investment, particularly in the short term. Investments should always be considered as long term.</p>
+        <p style="color: #222222; background-color: #ffffff; margin: 0px 0px 14px;">Some of the Funds managed by the Sustainable Future Equities team involve foreign currencies and may be subject to fluctuations in value due to movements in exchange rates.</p>
+        <p style="color: #222222; background-color: #ffffff; margin: 0px 0px 14px;"><span><strong>Disclaimer</strong></span></p>
+        <p style="color: #222222; background-color: #ffffff; margin: 0px 0px 14px;">This content should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy.&nbsp; It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, faxed, reproduced, divulged or distributed, in whole or in part, without the express written consent of Liontrust. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.<span style="font-size: 1.5rem;"></span></p>

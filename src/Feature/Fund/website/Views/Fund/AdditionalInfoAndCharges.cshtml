@@ -1,59 +1,82 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Feature.Fund.Models
+
 @model LionTrust.Feature.Fund.Models.AdditionalInfoAndChargesViewModel
-@if (Model != null && Model.Component != null && Model.Data != null)
+@if (Model != null && Model.Component != null && Model.Data != null && Model.FundClass != null)
 {
     <section class="container additional-info container-p-0">
         <div class="card">
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="card__content">
+            <div class="card__content">
+                <div class="row">
+                    <div class="col-lg-5">
                         <div class="card__title">@Html.Glass().Editable(Model.Component, m => m.AdditionalInfoLabel)</div>
-                        <div class="card__row">
-                            <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.MinInitialLabel)</div>
-                            <div class="card__item-right">@Html.Glass().Editable(Model.FundClass, m => m.MinimalInitialInvestment)</div>
-                        </div>
-                        <div class="card__row">
-                            <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.MinAdditionalLabel)</div>
-                            <div class="card__item-right">@Html.Glass().Editable(Model.FundClass, m => m.MinimumAdditionalInvestment)</div>
-                        </div>
-                        @if ((Model.FundClass != null && Model.FundClass.ExDividendDate.Ticks > 0) || Sitecore.Context.PageMode.IsExperienceEditor)
-                        {
-                            <div class="card__row">
-                                <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.ExDividendDateLabel)</div>
-                                <div class="card__item-right">@Html.Glass().Editable(Model.FundClass, m => m.ExDividendDate, m => m.ExDividendDate.ToString("dd MMM")) </div>
-                            </div>
-                        }
-                        @if ((Model.FundClass != null && Model.FundClass.DistributionDate.Ticks > 0) || Sitecore.Context.PageMode.IsExperienceEditor)
-                        {
-                            <div class="card__row">
-                                <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.DistributionDateLabel)</div>
-                                <div class="card__item-right">@Html.Glass().Editable(Model.FundClass, m => m.DistributionDate, m => m.DistributionDate.ToString("dd MMM"))</div>
-                            </div>
-                        }
-                        <div class="card__row">
-                            <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.SedolCodeLabel)</div>
-                            <div class="card__item-right">@Model.Data.SedolCode</div>
-                        </div>
-                        <div class="card__row">
-                            <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.ISINCodeLabel)</div>
-                            <div class="card__item-right">@Model.Data.ISINCode</div>
-                        </div>
+                        @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", 
+                            new FundInfoRowViewModel() 
+                            {
+                                LabelValue = Html.Glass().Editable(Model.Component, m => m.MinInitialLabel),
+                                FieldValue = Model.FundClass.MinimalInitialInvestment,
+                                TooltipValue = Model.Component.Tooltips != null ? Model.Component.Tooltips.MinInitialTooltip : string.Empty
+                            })
+                        @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", 
+                            new FundInfoRowViewModel() 
+                            {
+                                LabelValue = Html.Glass().Editable(Model.Component, m => m.MinAdditionalLabel),
+                                FieldValue = Model.FundClass.MinimumAdditionalInvestment,
+                                TooltipValue = Model.Component.Tooltips != null ? Model.Component.Tooltips.MinAdditionalTooltip : string.Empty
+                            })
+                        @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", 
+                            new FundInfoRowViewModel() 
+                            {
+                                LabelValue = Html.Glass().Editable(Model.Component, m => m.ExDividendDateLabel),
+                                FieldValue = Model.FundClass.ExDividendDate,
+                                TooltipValue = Model.Component.Tooltips != null ? Model.Component.Tooltips.ExDividendDateTooltip : string.Empty
+                            })
+                        @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", 
+                            new FundInfoRowViewModel() 
+                            {
+                                LabelValue = Html.Glass().Editable(Model.Component, m => m.DistributionDateLabel),
+                                FieldValue = Model.FundClass.DistributionDate,
+                                TooltipValue = Model.Component.Tooltips != null ? Model.Component.Tooltips.DistributionDateTooltip : string.Empty
+                            })
+                        @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", 
+                            new FundInfoRowViewModel() 
+                            {
+                                LabelValue = Html.Glass().Editable(Model.Component, m => m.SedolCodeLabel),
+                                FieldValue = Model.Data.SedolCode,
+                                TooltipValue = Model.Component.Tooltips != null ? Model.Component.Tooltips.SedolCodeTooltip : string.Empty
+                            })
+                        @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml",
+                            new FundInfoRowViewModel() 
+                            {
+                                LabelValue = Html.Glass().Editable(Model.Component, m => m.ISINCodeLabel),
+                                FieldValue = Model.Data.ISINCode,
+                                TooltipValue = Model.Component.Tooltips != null ? Model.Component.Tooltips.ISINCodeTooltip : string.Empty
+                            })
                     </div>
-                </div>
-                <div class="col-lg-6 offset-lg-1">
-                    <div class="card__content">
-                        <div class="card__title">@Html.Glass().Editable(Model.Component, m => m.ChargesLabel)</div>
-                        <div class="card__row">
-                            <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.InitialChargeLabel)</div>
-                            <div class="card__item-right">@Model.Data.InitialCharge</div>
-                        </div>
-                        <div class="card__row">
-                            <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.OngoingChargesLabel)</div>
-                            <div class="card__item-right">@Model.Data.OngoingCharges</div>
-                        </div>
-                        <div class="card__row">
-                            <div class="card__item-left">@Html.Glass().Editable(Model.Component, m => m.AnnualManagementChargeLabel)</div>
-                            <div class="card__item-right">@Model.Data.AnnualManagementCharge</div>
+                    <div class="col-lg-6 offset-lg-1">
+                        <div class="card__content">
+                            <div class="card__title">@Html.Glass().Editable(Model.Component, m => m.ChargesLabel)</div>
+                            @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", 
+                                new FundInfoRowViewModel() 
+                                {
+                                    LabelValue = Html.Glass().Editable(Model.Component, m => m.InitialChargeLabel),
+                                    FieldValue = Model.Data.FormattedInitialCharge,
+                                    TooltipValue = Model.Component.Tooltips != null ? Model.Component.Tooltips.InitialChargeTooltip : string.Empty
+                                })
+                            @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", 
+                                new FundInfoRowViewModel() 
+                                {
+                                    LabelValue = Html.Glass().Editable(Model.Component, m => m.OngoingChargesLabel),
+                                    FieldValue = Model.Data.FormattedOngoingCharges,
+                                    TooltipValue = Model.Component.Tooltips != null ? Model.Component.Tooltips.OngoingChargesTooltip : string.Empty
+                                })
+                            @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml", 
+                                new FundInfoRowViewModel() 
+                                {
+                                    LabelValue = Html.Glass().Editable(Model.Component, m => m.AnnualManagementChargeLabel),
+                                    FieldValue = Model.Data.FormattedAnnualManagementCharge,
+                                    TooltipValue = Model.Component.Tooltips != null ? Model.Component.Tooltips.AnnualManagementChargeTooltip : string.Empty
+                                })
                         </div>
                     </div>
                 </div>

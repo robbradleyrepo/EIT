@@ -1,0 +1,229 @@
+﻿---
+ID: "07006041-9167-40eb-ba78-c22cf004d0d9"
+Parent: "a34b7c53-d58b-431c-af26-38d5fde6d46d"
+Template: "91340f20-178f-48aa-b51a-e202f231504b"
+Path: "/sitecore/content/LionTrustNew/Home/BTR Page/_Local/BC041 - Dividend Chart"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0955f2d3-783e-4ff5-bf3f-9b7623fb00ac"
+      Hint: DividendChart_Title
+      Value: Dividend history
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210802T204314Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "8f6db058-9e75-4a0b-8f19-cd79d3f28fb0"
+      Hint: DividendChart_TableContent
+      Value: |
+        <table class="table table-striped divident-table mb-5">
+              <thead>
+                <tr class="table-head-green">
+                  <th></th>
+                  <th><span class="text-primary">Ex-date</span></th>
+                  <th><span class="text-primary">Record date</span></th>
+                  <th><span class="text-primary">Payment date</span></th>
+                  <th><span class="text-primary">Net dividend price</span></th>
+                  <th><span class="text-primary">Year end total</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <p>
+                      <span class="text-primary"><strong class="fz-20">2021</strong></span><br />
+                      <strong>Lorem ipsum</strong>
+                    </p>
+                  </td>
+                  <td>
+                    <p>
+                      <br />
+                      <strong>Lorem ipsum</strong>
+                    </p>
+                  </td>
+                  <td>
+                    <p>
+                      <br />
+                      <strong>Lorem ipsum</strong>
+                    </p>
+                  </td>
+                  <td>
+                    <p>
+                      <br />
+                      <strong>Lorem ipsum</strong>
+                    </p>
+                  </td>
+                  <td>
+                    <p>
+                      <br />
+                      <strong>Lorem ipsum</strong>
+                    </p>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="text-primary"><strong class="fz-20">2021</strong></span>
+                    <br />
+                    <strong>Lorem ipsum</strong><br />
+                    dolor sit amet
+                  </td>
+                  <td>
+                    <br />
+                    <strong>Lorem ipsum</strong><br />
+                    dolor sit amet
+                  </td>
+                  <td>
+                    <br />
+                    <strong>Lorem ipsum</strong><br />
+                    dolor sit amet
+                  </td>
+                  <td>
+                    <br />
+                    <strong>Lorem ipsum</strong><br />
+                    dolor sit amet
+                  </td>
+                  <td>
+                    <br />
+                    <strong>Lorem ipsum</strong><br />
+                    dolor sit amet
+                  </td>
+                  <td>
+                    <br />
+                    50.8
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="text-primary"><strong class="fz-20">2021</strong></span>
+                    <br />
+                    <strong>Lorem ipsum</strong><br />
+                    dolor sit amet
+                  </td>
+                  <td>
+                    <br />
+                    <strong>Lorem ipsum</strong><br />
+                    dolor sit amet
+                  </td>
+                  <td>
+                    <br />
+                    <strong>Lorem ipsum</strong><br />
+                    dolor sit amet
+                  </td>
+                  <td>
+                    <br />
+                    <strong>Lorem ipsum</strong><br />
+                    dolor sit amet
+                  </td>
+                  <td>
+                    <br />
+                    <strong>Lorem ipsum</strong><br />
+                    dolor sit amet
+                  </td>
+                  <td>
+                    <br />
+                    <p>50.8</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>
+                      <span class="text-primary"><strong class="fz-20">2021</strong></span>
+                    </p>
+                    <p>
+                      <span class="text-primary"><strong>&nbsp;</strong></span><strong>Lorem ipsum</strong>
+                    </p>
+                    <p><strong>&nbsp;</strong>dolor sit amet</p>
+                  </td>
+                  <td>
+                    <p>&nbsp;</p>
+                    <p>
+                      <span class="text-primary"><strong>&nbsp;</strong></span><strong>Lorem ipsum</strong>
+                    </p>
+                    <p><strong>&nbsp;</strong>dolor sit amet</p>
+                  </td>
+                  <td>
+                    <p>&nbsp;</p>
+                    <p>
+                      <span class="text-primary"><strong>&nbsp;</strong></span><strong>Lorem ipsum</strong>
+                    </p>
+                    <p><strong>&nbsp;</strong>dolor sit amet</p>
+                  </td>
+                  <td>
+                    <p>&nbsp;</p>
+                    <p>
+                      <span class="text-primary"><strong>&nbsp;</strong></span><strong>Lorem ipsum</strong>
+                    </p>
+                    <p><strong>&nbsp;</strong>dolor sit amet</p>
+                  </td>
+                  <td>
+                    <p>&nbsp;</p>
+                    <p>
+                      <span class="text-primary"><strong>&nbsp;</strong></span><strong>Lorem ipsum</strong>
+                    </p>
+                    <p><strong>&nbsp;</strong>dolor sit amet</p>
+                  </td>
+                  <td>
+                    <p>&nbsp;</p>
+                    <p>50.8</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>
+                      &nbsp;<span class="text-primary"><strong>2021 </strong></span>
+                    </p>
+                    <p>
+                      <span class="text-primary"><strong>&nbsp;</strong></span><strong>Lorem ipsum</strong>
+                    </p>
+                    <p><strong>&nbsp;</strong>dolor sit amet</p>
+                  </td>
+                  <td>
+                    <p>&nbsp;</p>
+                    <p>
+                      <span class="text-primary"><strong>&nbsp;</strong></span><strong>Lorem ipsum</strong>
+                    </p>
+                    <p><strong>&nbsp;</strong>dolor sit amet</p>
+                  </td>
+                  <td>
+                    <p>&nbsp;</p>
+                    <p>
+                      <span class="text-primary"><strong>&nbsp;</strong></span><strong>Lorem ipsum</strong>
+                    </p>
+                    <p><strong>&nbsp;</strong>dolor sit amet</p>
+                  </td>
+                  <td>
+                    <p>
+                      &nbsp;
+                    </p>
+                    <p>
+                      <span class="text-primary"><strong>&nbsp;</strong></span><strong>Lorem ipsum</strong>
+                    </p>
+                    <p><strong>&nbsp;</strong>dolor sit amet</p>
+                  </td>
+                  <td>
+                    <p>
+                      &nbsp;
+                    </p>
+                    <p>
+                      <span class="text-primary"><strong>&nbsp;</strong></span><strong>Lorem ipsum</strong>
+                    </p>
+                    <p><strong>&nbsp;</strong>dolor sit amet</p>
+                  </td>
+                  <td>
+                    <p>&nbsp;</p>
+                    <p>50.8</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>

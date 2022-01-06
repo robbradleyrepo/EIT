@@ -3,9 +3,8 @@
     width: 100%
     margin: 0 auto
     padding: 0 20px
-    @include breakpoint(desktop-large, up)
+    +breakpoint(desktop-large, up)
         padding: 0
-
 .article-with-big-quote
     @extend .article-with-big
     max-width: 944px
@@ -14,32 +13,57 @@
     width: 100%
     margin: 0 auto
     padding: 0 20px
-    @include breakpoint(desktop-large, up)
+    +breakpoint(desktop-large, up)
         padding: 0
 .article-with-small
     max-width: 700px
     width: 100%
     margin: 0 auto
     padding: 0 20px
-    @include breakpoint(desktop-large, up)
+    +breakpoint(desktop-large, up)
         padding: 0
-    p   
-        @include p-1-normal-20
+    p
+        +p-1-normal-20
         margin-bottom: 1.5em
-        @include breakpoint(desktop, up)
+        +breakpoint(desktop, up)
             margin-bottom: 2em
+    b,strong,
+        font-weight: 500
+        +breakpoint(mobile-large, down)
+            font-weight: normal
+    ul
+        &:not(.article-links)
+            @extend .styled-list
+            margin-bottom: 10px
+            @include breakpoint(desktop, up)
+            margin-bottom: 20px
+            li
+                font-weight: normal
+                &_checked
+                li			
+                    &:before
+                        content: "\e925"!important
+                        font-family: icomoon!important
+                        width: auto!important
+                        height: auto!important
+                        background: transparent!important
+                        font-size: 10px
+                        top: 5px!important
+                        left: -2px!important
+                        color: $gold
+                        @include breakpoint(desktop, up)
+                            top: 1px!important		        
 .big-quote
     letter-spacing: 0.26px
-    @include font-size(22px)
+    +font-size(22px)
     line-height: 1.272em
     margin: 32px 0
     font-weight: 500
     font-style: italic
-    @include breakpoint(desktop, up)
-        @include font-size(26px)
+    +breakpoint(desktop, up)
+        +font-size(26px)
         line-height: 1.384em
         margin: 40px 0 47px
-
 .article-quote
     border-top: 1px solid $gold
     border-bottom: 1px solid $gold
@@ -49,15 +73,15 @@
     width: 100%
     max-width: 764px
     color: $black
-    @include p-1-normal-20
-    @include breakpoint(desktop, up)
+    +p-1-normal-20
+    +breakpoint(desktop, up)
         padding: 15px 32px
         margin-bottom: 45px
     &_with-margins
-        @include breakpoint(mobile-large, down)
+        +breakpoint(mobile-large, down)
             margin: 0 16px 41px
             width: auto
-        @include breakpoint(desktop, down)
+        +breakpoint(desktop, down)
             padding: 14px 13px
 .gold-qoute
     font-size: 26px
@@ -65,21 +89,20 @@
     letter-spacing: 0.26px
     color: $gold
     font-style: italic
-    @include breakpoint(desktop, up)
+    +breakpoint(desktop, up)
         font-size: 42px
         line-height: 52px
-
+        letter-spacing: 0.1px
 .full-with-img
     width: 100%
     height: auto
     margin-bottom: 30px
     height: 211px
     object-fit: cover
-    @include breakpoint(mobile-large, up)
+    +breakpoint(mobile-large, up)
         height: auto
-    @include breakpoint(desktop, up)
+    +breakpoint(desktop, up)
         margin-bottom: 40px
-
 .article-small-title
     color: $black
     font-size: 8px
@@ -87,19 +110,17 @@
     line-height: 10px
     letter-spacing: 0.64px
     text-transform: uppercase
-    @include breakpoint(desktop, up)
+    +breakpoint(desktop, up)
         font-size: 12px
         line-height: 14px
         letter-spacing: 2.4px
-        
 .article-with-small
     h4, h5
         @extend .article-small-title
 .disclaimer-text
     h4, h5
         @extend .article-small-title
-
 .glossary-cta
     margin: 40px 0
-    @include breakpoint(desktop, up)
+    +breakpoint(desktop, up)
         font-size: 20px

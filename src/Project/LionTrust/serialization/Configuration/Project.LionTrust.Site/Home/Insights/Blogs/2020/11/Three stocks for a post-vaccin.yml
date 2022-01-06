@@ -1,0 +1,107 @@
+﻿---
+ID: "67da0e3a-9b79-470c-8c28-f5651f71a394"
+Parent: "b8e00980-eaaf-47d0-b614-9a2f9d99cf00"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2020/11/Three stocks for a post-vaccine world"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 123400
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{304FFFAD-8C44-4EB1-83EE-14C3158C38FD}"
+              p:before="*"
+              s:ds="{AD7430E3-57B7-4D9B-B4D4-E52D614FAF1A}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{218E976D-DDFE-406E-B14D-D318EC057B47}"
+              p:after="r[@uid='{304FFFAD-8C44-4EB1-83EE-14C3158C38FD}']"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{C113A0BE-FF56-4AB9-8B3D-1394A8329514}"
+              p:after="r[@uid='{218E976D-DDFE-406E-B14D-D318EC057B47}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{0529615D-903D-416E-A3EE-72A206B2FC00}"
+              p:after="r[@uid='{C113A0BE-FF56-4AB9-8B3D-1394A8329514}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See%20also...&amp;RelatedPages=%7BEFE10EC4-409C-4FE8-9BF2-1986386A2A24%7D%7C%7B84ABF1FA-B13D-464D-BB28-4FD289C8946E%7D%7C%7B86C2E4E3-25AE-461E-B16C-D2BD0AE2E2F0%7D%7C%7B77B5C263-DEEE-4A04-AE96-C01C2138DFCD%7D&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{FEA79F0A-09CC-49DA-9A72-204F3E489870}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "Three stocks for a post-vaccine world | Insights | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: "Three stocks for a post-vaccine world"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20201112T105351Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: "With light at the end of the pandemic tunnel, Storm Uru highlights three companies that are in sectors challenged by Covid-19 and which he believes offer value opportunities."
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: "Three stocks for a post-vaccine world"
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p style="background: white;"><span style="color: #222222;"><strong>Stockmarkets around the world rocketed on Monday after the announcement that Pfizer and BioNtech may have found an effective and safe vaccine. This rise was to be expected on the news that has given the world light at the end of the pandemic tunnel.</strong></span></p>
+        <p style="background: white;"><span style="color: #222222;">The initial focus of attention has been on pharma stocks and sectors that have been amongst the hardest hit by the lockdowns. We are focused, however, on a few global leaders at the epicentre of this crisis that we believe are offering compelling value opportunities. These are quality companies in sectors that have suffered from a fall in demand but which crucially are not structurally challenged unlike some recent highfliers and others that have been thrown out with both the airlines and cruise lines. &nbsp;</span></p>
+        <p style="background: white;"><span style="color: #222222;">An example is Amadeus, which takes a small slice of revenue from airline tickets booked on its network and which took quick action to rationalise its cost base and free up liquidity. This means that as it emerges from this crisis, it is well-positioned to not only take share but also benefit from higher operating leverage.</span></p>
+        <p style="background: white;"><span style="color: #222222;">Unlike its competitors, this airline booking system leader was able to continue to invest in R&amp;D over the last nine months to develop new services that make its customers, the airlines and airports more productive and shift critical operations to the cloud. So as the airline industry emerges from its hibernation, Amadeus is well-positioned to benefit from the return in demand.</span></p>
+        <p style="background: white;"><span style="color: #222222;">Compass Group is another example of a company which has felt the full impact of a collapse in demand, but management worked quickly to slow cash burn so that the company could be idle until a vaccine was developed. Whilst management did renegotiate some contracts to cost-plus, replacing the more profitable fixed price contracts, the company is well positioned to execute on new contract wins as the workforce returns to the office. Longer term, the way we work has changed but the company will significantly benefit from a return to normality as areas of the economy like sports events return over time. &nbsp;</span></p>
+        <p style="background: white;"><span style="color: #222222;">Lastly, not all big tech is going to find the next six months difficult. Visa, which benefited from a structural shift to cashless payments, has underperformed its peers this year as its very profitable cross-border revenue collapsed as travel disappeared. Now we have a vaccine with high efficacy, Visa will experience an increase in demand for its core services as people return to the sky. We also expect the shift to cashless transactions to not only stick but accelerate over the next five years unlike some other demand, such as online shopping that may take a pause as consumers enjoy a more balanced approach to shopping over the next 12 months.</span></p>
+        <p style="background: white;"><span style="color: #222222;">We still need the bridge over troubled waters until health authorities can efficiently distribute the vaccine to the global population, and we need more than one vaccine. But the market is a forward-looking mechanism so even if it takes 12 months before we get herd immunity, we believe there are opportunities to invest in great companies at attractive valuations.</span></p>
+        <p style="background: white; text-align: center;"><span style="color: #222222;"><a href="~/link.aspx?_id=8288379E20704941B2DADAE442B66077&amp;_z=z"><img src="-/media/97F38249726D43C4B8F8A1B082A96C0C.ashx" style="height:150px; width:600px;" alt="Liontrust Insights" class="custom-image-height-auto" /></a></span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt;"><span style="color: #222222;">For a comprehensive list of common financial words and terms, see our glossary&nbsp;</span><span style="color: #34b233;"><a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms" style="color: inherit;"><span style="color: inherit;">here</span></a>.</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><span style="color: #222222;">&nbsp;&nbsp;</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><strong><span style="color: #222222;">Key Risks</span></strong></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><span style="color: #222222;">Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. Investment in funds managed by the Global Equity (GE) team may involve investment in smaller companies - these stocks may be less liquid and the price swings greater than those in, for example, larger companies. Investment in funds managed by the GE team may involve foreign currencies and may be subject to fluctuations in value due to movements in exchange rates. The team may invest in emerging markets/soft currencies or in financial derivative instruments, both of which may have the effect of increasing volatility. Some of the funds managed by the GE team hold a concentrated portfolio of stocks, meaning that if the price of one of these stocks should move significantly, this may have a notable effect on the value of that portfolio.</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><strong><span style="color: #222222;">Disclaimer</span></strong></p>
+        <p style="background: white; margin: 0cm 0cm 0.0001pt; text-align: start;"><span style="background: white; color: #222222;">The information and opinions provided should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</span></p>

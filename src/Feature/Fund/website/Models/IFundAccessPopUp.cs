@@ -19,5 +19,7 @@ namespace LionTrust.Feature.Fund.Models
 
         [SitecoreField(Constants.FundAccessPopUp.SecondaryCTA_FieldId)]
         Link SecondaryCTA { get; set; }
+
+        string BackUrl { get; set; }
     }
 }

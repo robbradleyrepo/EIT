@@ -5,49 +5,28 @@ namespace LionTrust.Feature.MyPreferences.Models
 {
     public interface IEditEmailPreferences : IGlassBase
     {
-        [SitecoreField(Constants.EditEmailPreferences.Title_FieldId)]
+        [SitecoreField(Constants.EditPreferences.Title_FieldId)]
         string Title { get; set; }
 
-        [SitecoreField(Constants.EditEmailPreferences.Subtitle_FieldId)]
-        string Subtitle { get; set; }
-
-        [SitecoreField(Constants.EditEmailPreferences.NewsTitle_FieldId)]
-        string NewsTitle { get; set; }
-
-        [SitecoreField(Constants.EditEmailPreferences.NewsSubtitle_FieldId)]
-        string NewsSubtitle { get; set; }
-
-        [SitecoreField(Constants.EditEmailPreferences.InstitutionalBulletinTitle_FieldId)]
+        [SitecoreField(Constants.EditPreferences.InstitutionalBulletinLabel_FieldId)]
         string InstitutionalBulletinTitle { get; set; }
 
-        [SitecoreField(Constants.EditEmailPreferences.InstitutionalBulletinSubtitle_FieldId)]
+        [SitecoreField(Constants.EditPreferences.InstitutionalBulletinText_FieldId)]
         string InstitutionalBulletinSubtitle { get; set; }
 
-        [SitecoreField(Constants.EditEmailPreferences.ProcessListTitle_FieldId)]
-        string ProcessListTitle { get; set; }
-
-        [SitecoreField(Constants.EditEmailPreferences.ProcessListSubtitle_FieldId)]
-        string ProcessListSubtitle { get; set; }
-
-        [SitecoreField(Constants.EditEmailPreferences.CheckboxInstructionText_FieldId)]
-        string CheckboxInstructionText { get; set; }
-
-        [SitecoreField(Constants.EditEmailPreferences.SuccessPage_FieldId)]
+        [SitecoreField(Constants.EditPreferences.SuccessPage_FieldId)]
         IGlassBase SuccessPage { get; set; }
 
-        [SitecoreField(Constants.EditEmailPreferences.FailedPage_FieldId)]
-        IGlassBase FailedPage { get; set; }
+        [SitecoreField(Constants.EditPreferences.UnsubscribeAllLabel_FieldId)]
+        string UnsubscribeAllLabel { get; set; }
 
-        [SitecoreField(Constants.EditEmailPreferences.PrivacyPolicyText_FieldId)]
-        string PrivacyPolicyText { get; set; }
-
-        [SitecoreField(Constants.EditEmailPreferences.UnsubscribeAllText_FieldId)]
+        [SitecoreField(Constants.EditPreferences.UnsubscribeAllText_FieldId)]
         string UnsubscribeAllText { get; set; }
 
-        [SitecoreField(Constants.EditEmailPreferences.GlobalSelectAllCheckboxText_FieldId)]
-        string GlobalSelectAllCheckboxText { get; set; }
-
-        [SitecoreField(Constants.EditEmailPreferences.GenericError_FieldId)]
+        [SitecoreField(Constants.EditPreferences.GenericError_FieldId)]
         string GenericError { get; set; }
+
+        [SitecoreField(Constants.EditPreferences.SubmitCTAText_FieldId)]
+        string SubmitCTAText { get; set; }
     }
 }

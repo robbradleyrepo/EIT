@@ -16,6 +16,9 @@
 
             public const string SearchPageTemplateId = "{86212646-0646-4F63-B4DB-6C3F247989B1}";
 
+            public const string FundDetailPageTemplateId = "{AF865864-56FB-4A24-BACC-278C33C44041}";
+
+            public const string ContactUsPageTemplateId = "{152E985E-1632-4C9B-AB1B-38FD0DB4DCAA}";
         }
     }
 }

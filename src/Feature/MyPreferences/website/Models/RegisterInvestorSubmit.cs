@@ -21,10 +21,8 @@
         [EmailAddress]
         public string Email { get; set; }
 
-        [Required]
         public string CompanyName { get; set; }
 
-        [Required]
         [StringLength(6, MinimumLength = 6)]
         public string CompanyId { get; set; }
 

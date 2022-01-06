@@ -27,7 +27,7 @@
         [SitecoreField(Constants.FundLister.SearchPlaceholder_FieldId)]
         string SearchPlaceholder { get; set; }
 
-        [SitecoreField(Constants.FundLister.SearchPlaceholder_FieldId)]
+        [SitecoreField(Constants.FundLister.MobileViewLabel_FieldId)]
         string MobileViewLabel { get; set; }
 
         [SitecoreField(Constants.FundLister.FundLiterature_FieldId)]

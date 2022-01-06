@@ -16,8 +16,8 @@
         [SitecoreField(Constants.FundOverview.LatestUpdateCTA_FieldId, SitecoreFieldType.GeneralLink, "Fund Overview")]
         Link LatestUpdateCTA { get; set; }
 
-        [SitecoreField(Constants.FundOverview.DownloadCTA_FieldId, SitecoreFieldType.GeneralLink, "Fund Overview")]
-        Link DownloadCTA { get; set; }
+        [SitecoreField(Constants.FundOverview.DownloadCTALabel_FieldId, SitecoreFieldType.SingleLineText, "Fund Overview")]
+        string DownloadCTALabel { get; set; }
 
         [SitecoreField(Constants.FundOverview.Alignment_FieldId)]
         ILookupValue Alignment { get; set; }

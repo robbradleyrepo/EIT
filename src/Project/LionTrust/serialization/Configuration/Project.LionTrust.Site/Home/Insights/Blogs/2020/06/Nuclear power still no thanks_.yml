@@ -1,0 +1,213 @@
+﻿---
+ID: "cbc46caf-1239-48ba-a548-1e44b7232acb"
+Parent: "0cf729d8-3938-4516-a08f-84e59495194e"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2020/06/Nuclear power still no thanks in 2020
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 106500
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{B1ED1256-E46B-4CC5-8368-724494FAF5A9}"
+              p:before="*"
+              s:ds="{AD7430E3-57B7-4D9B-B4D4-E52D614FAF1A}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{DB002D57-555B-423B-9F70-AFBB91B0051E}"
+              p:after="r[@uid='{B1ED1256-E46B-4CC5-8368-724494FAF5A9}']"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{A0B0F2BC-08C3-41B0-B0D0-62FD277CAA25}"
+              p:after="r[@uid='{DB002D57-555B-423B-9F70-AFBB91B0051E}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See%20also...&amp;RelatedPages=%7BFA0E822B-9229-47E9-9341-79282A4EE71F%7D%7C%7B035EFDA3-BC0A-43D6-9548-FC77F9116B6F%7D%7C%7BCDE2DD29-4FE7-49A3-841E-366AD0DF018F%7D%7C%7B1EC36DCA-A621-4DDD-B8EA-888A3693BF7B%7D&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{F1DC2199-DDFF-4CF6-8E71-036735EEFF94}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Nuclear power still no thanks in 2020 | Insights | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: "Nuclear power – still no thanks in 2020?"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200616T155035Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: "Liontrust’s Sustainable team has largely avoided nuclear power since a review a decade ago but given this energy’s low carbon emissions – and the increasing urgency of decarbonisation – does this position need to change?"
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: "Nuclear power – still no thanks in 2020?"
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span style="color: black;">Nearly 10 years ago, we looked at nuclear power to assess whether we should expect a surge in new plants to satisfy demand for clean, CO2-free </span></strong><strong><span>electricity – and <span style="color: black;">concluded it was very unlikely.</span></span></strong></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><em><span style="color: black;"><br />
+        </span></em><span style="color: black;">To quote from our 2010 paper: <em>Overall, our analysis concludes that within Europe, there will be very limited construction of nuclear power stations over the next 10 years. We will see coalitions of utilities building the odd one, to keep alive the technology and keep some diversity in their generation mix, and we will also see life extensions on existing power stations. But as things stand, there is little incentive for utilities to do more. The fastest growth will remain in gas-fired power stations and renewable energy generation, where we focus our energy investments.</em></span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">This was based on the fact that while nuclear fission power has very low CO2 emissions during operation, there are other issues that severely counteract this singular benefit, and the past decade has shown our prediction to be correct. </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">In the intervening years, however, there have been three major developments. First, the need to decarbonise has become more urgent; second, the cost of solar and wind has substantially decreased; and, third, new nuclear technologies have been developed. In light of these, we have re-examined the case to question whether the 2020s will be a decade of nuclear renaissance and whether it can be part of the overall solution to decarbonise electricity.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: #2e74b6;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span style="color: black;">Nuclear’s place in the energy supply<br /><br /></span></strong></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">The Intergovernmental Panel on Climate Change (IPCC) report into energy systems states that this is where the most rapid decarbonisation can happen and, at 35%, it is also the sector with the largest quantity of emissions. In short, if we cannot decarbonise here, we have no hope of staying within the 1.5C target for global warming. Since 1971, the size of the energy supply sector, as measured by millions of tonnes of oil equivalent (MTOE), has increased 2.5 times in absolute terms: coal’s share has remained stable, while oil’s has reduced in favour of natural gas, nuclear and non-hydro renewables. Fossil fuels still made up 81% of our energy supply in 2017.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="text-align: center;"><img src="-/media/80ADD9F2B0534713B9800CFE5B3B3FED.ashx?h=334&amp;w=600" style="width:600px; height:334px;" alt="world total primary energy supply by fuel" class="custom-image-height-auto" /></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">As the chart below shows, growth in demand has largely been driven by the economic development of Asia, particularly after 2000.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="text-align: center;"><img src="-/media/0520714F3EC14B99890A329878D06DCB.ashx?h=334&amp;w=600" style="width:600px; height:334px;" alt="world total final consumption by region" class="custom-image-height-auto" /></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">From the 1970s, nuclear’s place in global electricity generation rose to 18% in the late 1990s before falling to 10% today. Renewables (including hydro) have risen to 25%, while oil-based electricity production has been the big loser in favour of gas. Coal remains consistent at above 35%.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: center;"><span style="color: black;"><img src="-/media/64F3ECBC50AA4EDC9CD80A3D21F97ADD.ashx?h=334&amp;w=600" style="width:600px; height:334px;" alt="world electricity generation mix 1971 - 2017" class="custom-image-height-auto" /></span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">In the OECD, nuclear is at 18% with coal and renewables at 26% each and gas at 29%, and gas and renewables are both on growth trajectories.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: center;"><span style="color: black;"><img src="-/media/577074222A5D42E5B48E489645F14846.ashx?h=334&amp;w=600" style="width:600px; height:334px;" alt="Electricity generation by source, OECD" class="custom-image-height-auto" /></span></p>
+        <p style="text-align: left;">&nbsp;</p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">Nuclear generation, in absolute terms, has never been higher, with close to 450 reactors around the world (according to the IAEA, with the US, France and China the leaders). The World Nuclear Organisation projects strong growth, although very few reactors have been built since a surge in the 1980s and many of the earlier ones are coming to final retirement. Since 2012, 49 new reactors have been built and 42 permanently shut down. The vast majority of new reactors have been in China and Russia, although Bangladesh, Belarus, Turkey and the UAE are building their first plants and the IAEA expects wider adoption around the world in the coming decades.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="text-align: center;"><img src="-/media/0FF51E635F314D659E0E3781D4A91924.ashx?h=334&amp;w=600" style="width:600px; height:334px;" alt="Electricity consumption growth in a low-carbon scenario" class="custom-image-height-auto" /></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span style="color: black;">Nuclear’s place in low carbon electricity generation<br /><br /></span></strong></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">Nuclear fission generates heat from the splitting of Uranium 235 nuclei in a moderated chain reaction. In physical terms, it is the conversion of mass to energy (an everyday example of E=mc<sup>2</sup>) and there is no direct emission of carbon dioxide from this process.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">Naturally occurring uranium can be considered a non-renewable resource since suitable ore bodies are scarce but there is little risk of running out given the small amount that is ‘used up’ and the potential for reprocessing of fuel for use in fast-breeder reactors should it come to that. Further energy-intensive enrichment through centrifuges and laser isotope separation are</span><span style="color: blue;"> </span><span style="color: black;">needed to lift the concentration to 3-5% for use in reactors.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">Nuclear power stations are capital-intensive construction projects with high upfront material and embodied energy requirements, and after their 50 years or more of operation, there are also the requirements to decommission and make safe. If the plant operates at high capacity over several decades, however, the CO2 emissions associated with these parts of the lifecycle fall to levels similar to solar photovoltaic (PV) and wind on a per </span><span style="background: white; color: #444444;">Kilowatt hour (KWH)</span><span style="background: white; color: #444444;"> </span><span style="color: black;">basis. Studies across the lifecycle show that nuclear is a factor of 10 less CO2-intensive than gas and coal. </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">The IPCC has a similar view and groups renewables, nuclear and carbon capture and storage (CCS) into one. These form 30% of current (2012) energy supply and need to grow to 80% in the Panel’s scenario. All fossil fuel without CCS is phased out by 2100.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="text-align: center;"><img src="-/media/1AB82308F2044BF3810BEE36C85CCE94.ashx?h=334&amp;w=600" style="width:600px; height:334px;" alt="Carbon emissions from Nuclear Power" class="custom-image-height-auto" /></p>
+        <p style="text-align: left;"><span style="color: black; font-size: 1.5rem;">Nuclear is described in the IPCC report as ‘a mature low-GHG emission source of base-load power’, which ‘could make an increasing contribution to low-carbon energy supply’.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black; font-size: 1.5rem;">Nuclear’s advantage with respect to solar and wind is that it can provide large amounts of predictable power as part of a centralised grid. The Hinkley C station in Somerset, the first new nuclear power station built in the UK for over 20 years, will provide 3,300MW, for instance, equivalent to several thousand wind turbines or 4000 hectares of solar, approximately 26 times Hinkley’s land area. Once built, the marginal cost of generation is almost zero, so it sits at the beginning of the ‘dispatch curve’.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">Given this profile, it is hard to argue against nuclear power as a proven low carbon source of electricity and that it should be considered for a low carbon future energy system. But there are important issues with nuclear highlighted in the same IPCC report: safety risks, uranium mining risk, unresolved waste management and nuclear weapons proliferation as challenges, in addition to adverse public opinion.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span style="color: black;">What about safety?</span></strong></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;"><br />Chernobyl, Three Mile Island, Windscale and Fukushima cast a long shadow over the sector and yet the statistics tell a very different story. Fukushima saw one death from radiation and 2,000 during the evacuation, while TMI and Windscale both caused no direct deaths. Then, of course, we have Chernobyl, where the death toll varies from 50 direct to hundreds of thousands.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">There is a huge amount of scepticism about official reports on these accidents, partly due to governments knowingly hiding the truth but also that we do not know enough about the long-term effects of radiation exposure. The long-lived nature of radiation (Caesium 137 has a 30-year half life) is an amplifying factor in assessing nuclear risk: a nuclear accident could lead to large areas of land becoming uninhabitable for generations, for example.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">These factors combine to create the perception of the industry being unsafe but we can compare nuclear power- related accidents to other industrial accidents for some context: Bohpal (4,000-19,000), Rana Plaza (1,100), China coal mines (6,000) and so on. This is not to pretend nuclear power is perfectly safe, but the death toll in the last 50 years seems low in comparison to the chemical industry, coal mining and even garment manufacturing. It is also clear we accept a degree of risk in these areas and have not given up on the chemical industry or the making of clothes because of accidents. Instead, we work to ensure they do not happen again: the same </span><a href="https://clb.org.hk/content/deaths-coal-mine-accidents-china-fall-new-low-333-2018"><span>report</span></a><span style="color: black;"> on China’s coal mines, for example, celebrates the fall to only 333 deaths in 2018.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">The nuclear industry produces its own comparison of fatalities to make the same point.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: center;"><span style="color: black;"><img src="-/media/736DBB991C3E42BFB1A060B70261032D.ashx?h=334&amp;w=600" style="width:600px; height:334px;" alt="Death rates from energy production" class="custom-image-height-auto" /></span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">We can say that although the nuclear industry has an unusual profile of safety risks, history shows these are lower than in other industries that we accept as part of modern economies. One of the experts we consulted said it is pointless trying to improve the safety of nuclear power as it is already so low risk. The problem for the industry is public perception, which seems to regard the risks in a very different category to other industries. </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black; font-size: 1.5rem;">Even 34 years after Chernobyl, support is waning, as shown in the approval for nuclear in the US.</span><br /></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="text-align: center;"><img src="-/media/59137F9BB7CA40399ABC4BC417E19B05.ashx?h=334&amp;w=600" style="width:600px; height:334px;" alt="Americans evenly split on use of nuclear power" class="custom-image-height-auto" /></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong style="font-size: 1.5rem;"><span style="color: black;">Link to weapons proliferation</span></strong><br /></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;"><br />A further perception issue lies in the links to weapons. Nine countries have nuclear weapons and 31 have a nuclear power programme; while having this power does not inevitably lead to possession of weapons, it is a vital enabler. A pressurised water reactor produces 200kg of plutonium per 1000MW per year; a bomb requires 5kg of plutonium for 50 kilotons of yield (converting 0.05g of mass to energy in the process). The maths is not encouraging for non-proliferation.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">A couple of quotes on nuclear weapons are instructive: </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span style="color: black;">‘A national government that sponsors acquisition of nuclear power plants may have no intention to acquire nuclear weapons; but that government may be replaced by one that does, or may change its collective mind. A country that is actively pursuing nuclear power for peaceful purposes may also secretly develop nuclear explosives to the point where the last stages of assembly and military deployment could be carried out very quickly. The time and resources needed to make the transition from latent to active proliferation can range from very large to very small.’ (</span></strong><a href="https://www.wagingpeace.org/nuclear-power-and-nuclear-weapons/"><strong><span>https://www.wagingpeace.org/nuclear-power-and-nuclear-weapons/</span></strong></a><strong><span style="color: black;">)</span></strong></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span style="color: black;">&nbsp;</span></strong></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span style="color: black;">‘</span></strong><strong><span style="color: black;">Nuclear power does not give you weapons but you get the competence.’ (Hans Blix, </span></strong><strong><span style="color: black;">former head <span style="background: white;">of the International Atomic Energy Agency)</span></span></strong></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">As we see with Iran and North Korea, if countries choose to pursue nuclear weapons, it is hard to prevent if they have their own nuclear power programmes. The risks of a nuclear conflagration are enough to persuade many people this power is a technology we can do without; others believe international cooperation and strong controls can be sufficient to decouple nuclear power from weapons proliferation.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: #2e74b6;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong style="font-size: 1.5rem;"><span style="color: black;">Economics</span></strong><br /></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;"><br />To get right to the point, nuclear power is expensive: the fuel costs may be minimal per kwh but capital costs are enormous. Lazard gives a levelised cost of energy for nuclear, with no subsidies, as three to four times that of gas and wind, and twice as expensive as solar. In practice, the Hinkley Point C station was only commissioned once the UK government guaranteed a take of price of £92/MWh (back in 2012 but inflation linked) versus a current wholesale price of circa £40/MWh, which itself is set by the highest marginal cost of energy.</span></p>
+        <p style="text-align: left;">&nbsp;</p>
+        <p style="text-align: center;"><img src="-/media/6AB787D8C96E455F8B51A02B72DF6435.ashx?h=331&amp;w=601" style="width:601px; height:331px;" alt="Levelised cost of energy comparison" class="custom-image-height-auto" /></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">Nuclear power is not cost competitive as things stand, but can it follow a renewable-like cost deflation curve? Given we were happy to invest in renewables when they were expensive, the current cost of nuclear should not be an automatic barrier to investment.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: #2e74b6;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span style="color: black;">Next-generation nuclear</span></strong></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;"><br />We spoke with two experts on the industry (</span><span>Jan Blomgren, CEO of the Institute for Nuclear Business Excellence, and Paul Dorfman, Senior Fellow at the UCL Energy Institute and Chair of the Nuclear Consulting Group</span><span>)</span><span style="color: black;"> to determine whether next-generation nuclear will markedly change the picture on cost, safety and weapons proliferation. The succinct answer is no.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">Small-scale nuclear power, for example (as touted by Rolls Royce), envisages 200MW units to be distributed across cities. These will be mass produced in factories using modular construction so safety can be designed to tight tolerances. According to our experts: ‘<em>The trouble is you get economies of scale with nuclear power that this ignores’; ‘It will only work with a scaled up supply chain, which needs hundreds of committed orders. So it is chicken and egg, without having either the chicken or the egg.’</em></span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">As for fast breeder, travelling wave or high temperature, all of these have technical benefits but share the same challenges around capital cost and safety perception. Fusion, meanwhile, is a very different process that has been proved from a scientific perspective but is a difficult engineering challenge. For the foreseeable future, the best fusion solution is to use the sun via photovoltaics to generate electricity.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">Meanwhile, the fission reactors built now tend to be in countries with repressive regimes, including China,&nbsp;</span><span style="color: black; font-size: 1.5rem;">UAE and Russia, and these are Generation 3 reactors that would not pass safety requirements in the US or Europe. None of the new ‘Generation 4’ reactors fix any of the inherent problems of the older technologies, and in fact have all ended up costing more.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">In many ways, the best nuclear investment is keeping existing stations running safely for longer; this pushes out decommissioning costs and spreads that initial capital cost further.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: #2e74b6;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">Hinkley Point C is estimated to cost £22 billion. If we assume five to 10 new reactors a year, this gives a 1-2% growth rate in new nuclear and a global market size of £100 billion a year. Of course, there will also be good business in decommissioning, circa £3billion per plant over two decades (according to the Nuclear Regulatory Commission).</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: #2e74b6;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong style="font-size: 1.5rem;"><span style="color: black;">Conclusion<br /></span></strong><br /></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">In a world where the amount of capital available for the energy transition is limited, our view remains that nuclear power cannot be part of the solution.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">There are advantages to nuclear power: it is safer than many believe and the links to weapons proliferation are not inherent and can conceivably be controlled. It can also provide a perpetual source of low carbon electricity.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">However, the costs are excessively high and, unlike renewables, show no signs of falling in practice. In addition, there does not appear to be any emerging technological improvement that can change this picture in the next decade. Capital that is directed to nuclear could be several times more effectively deployed into energy efficiency and renewables.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">Nuclear will remain a low-growth part of the energy system. We should therefore maintain our position of not investing in any new nuclear power developments and only allowing exposure to companies that are providing equipment that improves the safety of existing reactors.</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">&nbsp;</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">Our current screening statement on nuclear reads as follows:</span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span style="color: black;">&nbsp;</span></strong></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><em><span style="color: black;">The team takes the view that despite the benefits of nuclear power as a low carbon source of energy, it is not a viable alternative to other forms of energy generation because of the significant environmental risks and&nbsp;</span></em><em style="font-size: 1.5rem;"><span style="color: black;">liabilities related to waste and decommissioning. Accidents or terrorist attacks on nuclear power stations also&nbsp;</span></em><em style="font-size: 1.5rem;"><span style="color: black;">pose a serious risk.</span></em></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><em><span style="color: black;">&nbsp;</span></em></p>
+        <ul style="list-style-type: disc;">
+            <li style="text-align: left;"><em><span style="color: black;">Excludes companies that derive &gt;5% of turnover from owning or operating nuclear power stations, unless the company has made significant investment (&gt;5% generation capacity) in renewable energy and does not have the option to divest its nuclear capacity </span></em></li>
+            <li style="text-align: left;"><em><span style="color: black;">Excludes companies that derive &gt;5% of turnover from uranium mining or reprocessing of nuclear fuel</span></em></li>
+            <li style="text-align: left;"><em><span style="color: black;">Excludes companies that derive &gt;5% turnover from the development or manufacture of non-safety related products for nuclear power plants</span></em></li>
+        </ul>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span style="color: black;">&nbsp;</span></strong></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><span style="color: black;">We propose to amend this as follows: </span></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><strong><span style="color: black;">&nbsp;</span></strong></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><em><span style="color: black;">The team takes the view that despite the benefits of nuclear power as a low carbon source of energy, the risks&nbsp;</span></em><em style="font-size: 1.5rem;"><span style="color: black;">around safety; the environmental risks and liabilities related to waste and decommissioning; the links to nuclear weapons proliferation; and the very high capital costs mean that it is not a viable solution to decarbonising global energy systems. Capital which is directed to nuclear is capital that could be several times more effectively deployed into energy efficiency, wind and solar.</span></em></p>
+        <p style="margin-bottom: 0.0001pt; text-align: left;"><em><span style="color: black;">&nbsp;</span></em></p>
+        <ul style="list-style-type: disc;">
+            <li style="text-align: left;"><em><span style="color: black;">Excludes companies that derive &gt;5% of turnover from owning, operating or constructing nuclear power stations, unless the company has made significant investment (&gt;5% generation capacity) in renewable energy and does not have the option to divest its nuclear capacity </span></em></li>
+            <li style="text-align: left;"><em><span style="color: black;">Excludes companies that derive &gt;5% of turnover from uranium mining or reprocessing of nuclear fuel</span></em></li>
+            <li style="text-align: left;"><em><span style="color: black;">Excludes companies that derive &gt;5% turnover from the development or manufacture of non-safety related products for nuclear power plants</span></em></li>
+        </ul>
+        <p style="margin: 0cm 0cm 0.0001pt; text-align: left;"><span style="font-size: 1.5rem;">&nbsp;</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: left;"><span style="color: #222222;">For a comprehensive list of common financial words and terms, see our glossary&nbsp;</span><a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms"><span style="color: inherit;">here</span></a><span style="color: #34b233;">.</span></p>
+        <p class="basicparagraph" style="background: white; margin: 0cm 0cm 10.5pt; text-align: left;"><span><span style="color: #222222;"><br />
+        <strong><span>Key Risks</span></strong></span><strong><br />
+        </strong><br />
+        Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. The majority of the Liontrust Sustainable Future Funds have holdings which are denominated in currencies other than Sterling and may be affected by movements in exchange rates. Some of these funds invest in emerging markets which may involve a higher element of risk due to less well-regulated markets and political and economic instability. Consequently the value of an investment may rise or fall in line with the exchange rates. Liontrust UK Ethical Fund, Liontrust SF European Growth Fund and Liontrust SF UK Growth Fund invest geographically in a narrow range and has a concentrated portfolio of securities, there is an increased risk of volatility which may result in frequent rises and falls in the Fund’s share price. Liontrust SF Managed Fund, Liontrust SF Corporate Bond Fund, Liontrust SF Cautious Managed Fund, Liontrust SF Defensive Managed Fund and Liontrust Monthly Income Bond Fund invest in bonds and other fixed-interest securities - fluctuations in interest rates are likely to affect the value of these financial instruments. If long-term interest rates rise, the value of your shares is likely to fall. If you need to access your money quickly it is possible that, in difficult market conditions, it could be hard to sell holdings in corporate bond funds. This is because there is low trading activity in the markets for many of the bonds held by these funds. Mentioned above five funds can also invest in derivatives. Derivatives are used to protect against currencies, credit and interests rates move or for investment purposes. There is a risk that losses could be made on derivative positions or that the counterparties could fail to complete on transactions.<br />
+        <br />
+        <strong><span>Disclaimer</span></strong><br />
+        <br />
+        The information and opinions provided should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</span></p>

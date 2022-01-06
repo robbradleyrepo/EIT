@@ -3,12 +3,11 @@
 @if (Model != null)
 {
     <div class="swiper-slide col-10 col-md-6 col-lg-4">
-        <a href="#" class="investment-card">
+        <div class="investment-card">
             @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/ScrollerCard", Model.Id.ToString(), "Edit Scroller Card"))
             {
                 <div class="investment-card__content">
                     <div class="investment-card__title">@Html.Glass().Editable(Model, m => m.Title)</div>
-                    <p>
                         @if (Sitecore.Context.PageMode.IsExperienceEditor)
                         {
                             @Html.Glass().Editable(Model, m => m.Description)
@@ -17,10 +16,9 @@
                         {
                             @Html.Raw(Model.Description)
                         }
-                    </p>
                 </div>
             }
-        </a>
+        </div>
     </div>
 }
 else if (Sitecore.Context.PageMode.IsExperienceEditor)

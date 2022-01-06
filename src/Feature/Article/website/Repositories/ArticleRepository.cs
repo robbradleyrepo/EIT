@@ -72,7 +72,7 @@
 
         public IEnumerable<IArticlePromo> Map(IArticleFilter filter, string databaseName)
         {
-            return Map(filter.Funds?.Select(f => f.Id), filter.ContentTypes?.Select(fc => fc.Id), filter.FundTeams?.Select(ft => ft.Id), filter.FundManagers?.Select(fm => fm.Id), filter.Topics?.Select(t => t.Id), databaseName);
+            return Map(filter.Funds?.Select(f => f.Id), filter.ContentTypes?.Select(fc => fc.ArticleType), filter.FundTeams?.Select(ft => ft.Id), filter.FundManagers?.Select(fm => fm.Id), filter.Topics?.Select(t => t.Id), databaseName);
         }
 
         private IArticlePromo BuildArticle(ArticleSearchResultItem hit)

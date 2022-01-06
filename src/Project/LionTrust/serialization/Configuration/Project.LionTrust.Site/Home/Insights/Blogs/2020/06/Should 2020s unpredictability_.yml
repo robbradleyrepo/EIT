@@ -1,0 +1,115 @@
+﻿---
+ID: "8096e55c-4750-4e60-9cf8-5b0e849fbf82"
+Parent: "0cf729d8-3938-4516-a08f-84e59495194e"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2020/06/Should 2020s unpredictability force a sustainable rethink
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 106300
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{363E0444-8D90-4BB1-A510-C583076BE6AB}"
+              p:before="*"
+              s:ds="{AD7430E3-57B7-4D9B-B4D4-E52D614FAF1A}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{1CA9F67F-04BE-4CBD-92E4-028846D832BD}"
+              p:after="r[@uid='{363E0444-8D90-4BB1-A510-C583076BE6AB}']"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{4B2C8EAD-07FB-4D0A-863A-9CC224EFE01B}"
+              p:after="r[@uid='{1CA9F67F-04BE-4CBD-92E4-028846D832BD}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{4C28DDFF-DF28-405F-AC51-BE2F85765DA6}"
+              p:after="r[@uid='{4B2C8EAD-07FB-4D0A-863A-9CC224EFE01B}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See%20also...&amp;RelatedPages=%7BFA0E822B-9229-47E9-9341-79282A4EE71F%7D%7C%7B035EFDA3-BC0A-43D6-9548-FC77F9116B6F%7D%7C%7BF8415A35-9C34-47F7-BACE-42EAABBFA145%7D%7C%7B77B5C263-DEEE-4A04-AE96-C01C2138DFCD%7D&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{F1DC2199-DDFF-4CF6-8E71-036735EEFF94}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Should 2020s unpredictability force a sustainable rethink | Insights | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: "Should 2020’s unpredictability force a sustainable rethink? "
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200615T102742Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: The terrible events of the first half of the year have further highlighted the issues of social inequality and the parlous state of our natural world. Liontrust’s Peter Michaelis explains why capital markets and competition between companies can serve society to help produce a more sustainable world.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: "Should 2020’s unpredictability force a sustainable rethink? "
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p><strong><span>2020 is certainly not turning out as we expected: we did not predict Covid-19 nor the death of George Floyd that has set off global protests against persistent racial discrimination. In fact, we started the year optimistic for further progress towards a cleaner, healthier and safer world. Does this mean that we, as investors, had naively underestimated the risks from a global pandemic and social inequality? The answer is partly yes, but mostly no.</span></strong></p>
+        <p><span>Partly yes, because we did not precisely see the impact and rapid spread of either event, but mostly no, because we have long recognised our current system is unsustainable and needs dramatic reform if it is to <em>&lsquo;</em></span><em><span style="background: white; color: #222222;">meet the needs of the present without compromising the ability of future generations to meet their own needs&rsquo;</span></em><span style="background: white; color: #222222;"> (a quote from </span><span style="background: white; color: black;">Gro Harlem&nbsp;Brundtland, who chaired a pioneering commission on sustainable development<strong>,</strong> from 1987</span><span style="background: white; color: #4d5156;">)</span><em><span style="background: white; color: #222222;">. </span></em></p>
+        <p><span>On a social level, we can see the amazing success of our market-based economy at generating wealth has not fed through to all. I witnessed this every day when I walked to our offices on the Strand in London: on the one hand, there is the opulent Savoy Hotel catering to the world&rsquo;s wealthy, on the other, the soup kitchen for the homeless by St Martin-in-the-Fields. </span></p>
+        <p><span>Nowhere on earth has generated as much wealth as San Francisco over the past two decades and yet the streets there are also home to thousands who have experienced no trickle-down effect. We know the system is definitely not working when in a country as wealthy as ours, those essential nurses, carers and teachers cannot afford housing in the areas they work and particular ethnic groups are persistently disadvantaged.</span></p>
+        <p><span>Then we come to our environment. The parlous state of our natural world was summed up in a recent podcast by Inger Anderson, head of the United Nations Environment Programme (UNEP), in which she gave a dismal report card on the effect of human impacts on land, sea and air. In each area, we have drastically decreased the resilience and abundance of the natural ecosystems upon which we ultimately rely. We are altering the chemistry of our atmosphere and oceans in ways that will negatively impact future generations, and on land, we deplete our soil more rapidly than it can possibly replenish. </span></p>
+        <p><span>We do not ascribe a financial value to our forests, oceans and atmosphere, in spite of understanding how essential they are to our livelihoods as well as those of future generations; the system is definitely not working for our environment either.</span></p>
+        <p><span>And yet despite all this, I believe our system of capital markets and competition between companies has to be a major part of the solution to these twin (and inextricably linked) failures. People working together with companies, putting capital to work towards a common purpose, has delivered immense good in many areas. Much of the progress towards the higher quality of life and reduction in poverty has been at least partially driven by this, leading to the vaccines and cancer treatments, the solar and wind generators, the electric vehicles, the LED lighting, the internet and modern communications, and countless other products and services that make our lives better and more sustainable. </span></p>
+        <p><span>The best outcomes have occurred in situations where societies, via their governments, set the correct framework, and then profit-driven, competing companies deliver the solution. Over nearly twenty years on the Sustainable Future Funds, our investments in businesses focused on innovative healthcare, energy efficiency, waste recycling, renewables, and mobile networks have all been successful precisely because these companies have provided something positive that society needs. The best investments have been in companies doing this better than their competitors and then reinvesting excess returns to deliver future growth. </span></p>
+        <p><span>However, what the events of the first half of 2020 show us all too clearly is that the economy and capital markets have to be the servants of society and not the other way around. Capital markets have to deliver widespread prosperity without destroying our society or environment. The events have also laid bare areas where resilience should be prioritised over efficiency, such as when it comes to protective equipment and spare capacity in our health service. </span></p>
+        <p><span>A sustainable society needs to provide opportunities for everyone to live purposeful, fulfilled lives; it also needs to operate within our planetary boundaries in a way that preserves and even enhances nature. One cannot happen without the other and as investors, we support initiatives such as the Just Transition, which examines how we can manage the move to a low carbon economy while preserving jobs and livelihoods. </span></p>
+        <p><span>In addition, we have long engaged with companies to improve diversity. While we have seen some success in terms of more female directors on Boards, we hope this sets a precedent for greater ethnic diversity too, which lags even further behind gender diversity in senior management of our investee companies. </span></p>
+        <p><span>We have a long way to go before we arrive at an entirely sustainable and inclusive model of capitalism. As sustainable investing grows, it is helping to accelerate this transition, but only as part of a broader movement that will need governments, businesses, academics, NGOs, supra-national organisations and each and every one of us working together towards a more sustainable future.</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt;"><span style="color: #222222;">For a comprehensive list of common financial words and terms, see our glossary&nbsp;</span><a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms"><span style="color: inherit;">here</span></a><span style="color: #34b233;">.</span></p>
+        <p class="basicparagraph" style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><span style="color: #222222;">&nbsp;</span></p>
+        <p class="basicparagraph" style="background: white; margin: 0cm 0cm 10.5pt;"><span style="color: #222222;"><br />
+        <strong><span>Key Risks</span></strong></span><strong><br />
+        </strong><br />
+        Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. The majority of the Liontrust Sustainable Future Funds have holdings which are denominated in currencies other than Sterling and may be affected by movements in exchange rates. Some of these funds invest in emerging markets which may involve a higher element of risk due to less well-regulated markets and political and economic instability. Consequently the value of an investment may rise or fall in line with the exchange rates. Liontrust UK Ethical Fund, Liontrust SF European Growth Fund and Liontrust SF UK Growth Fund invest geographically in a narrow range and has a concentrated portfolio of securities, there is an increased risk of volatility which may result in frequent rises and falls in the Fund&rsquo;s share price. Liontrust SF Managed Fund, Liontrust SF Corporate Bond Fund, Liontrust SF Cautious Managed Fund, Liontrust SF Defensive Managed Fund and Liontrust Monthly Income Bond Fund invest in bonds and other fixed-interest securities - fluctuations in interest rates are likely to affect the value of these financial instruments. If long-term interest rates rise, the value of your shares is likely to fall. If you need to access your money quickly it is possible that, in difficult market conditions, it could be hard to sell holdings in corporate bond funds. This is because there is low trading activity in the markets for many of the bonds held by these funds. Mentioned above five funds can also invest in derivatives. Derivatives are used to protect against currencies, credit and interests rates move or for investment purposes. There is a risk that losses could be made on derivative positions or that the counterparties could fail to complete on transactions.<br />
+        <br />
+        <strong><span>Disclaimer</span></strong><br />
+        <br />
+        The information and opinions provided should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</p>

@@ -1,0 +1,52 @@
+﻿---
+ID: "a4c97e54-fe66-4d58-8b55-6d1052589178"
+Parent: "a34b7c53-d58b-431c-af26-38d5fde6d46d"
+Template: "83f3353f-ae46-4cf6-8888-90122899a0a2"
+Path: /sitecore/content/LionTrustNew/Home/BTR Page/_Local/Latest Results and Presentations
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210905T162148Z
+    - ID: "327d008f-c0d4-46c5-99d5-38d2c10f5ba4"
+      Hint: LatestResultsAndPresentations_ReportLabel
+      Value: Report
+    - ID: "359e3ded-a233-442a-a495-d1bdc07ec018"
+      Hint: LatestResultsAndPresentations_ThirdImage
+      Value: |
+        <image mediaid="{E074D0A6-AECD-465A-B600-B32D81B16C0A}" />
+    - ID: "3a9d2acd-60ac-494f-9c21-fdc2a0aa6e72"
+      Hint: LatestResultsAndPresentations_FirstImage
+      Value: |
+        <image mediaid="{E074D0A6-AECD-465A-B600-B32D81B16C0A}" />
+    - ID: "4b14f272-608f-44dc-aa3b-f76d29fee7b8"
+      Hint: LatestResultsAndPresentations_SecondImage
+      Value: |
+        <image mediaid="{E074D0A6-AECD-465A-B600-B32D81B16C0A}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "63b4954a-ad0e-46bf-b2d2-08291ef43784"
+      Hint: LatestResultsAndPresentations_SecondImageOpacity
+      Value: 1
+    - ID: "7142fde5-caf5-4bff-b653-b61a7048903b"
+      Hint: LatestResultsAndPresentations_Title
+      Value: Latest Results and Presentations
+    - ID: "8974c202-3496-474c-b145-05081bbcd994"
+      Hint: LatestResultsAndPresentations_FirstImageOpacity
+      Value: 1
+    - ID: "f7b4af4c-ddff-416e-981c-4f7cd9eba101"
+      Hint: LatestResultsAndPresentations_ThirdImageOpacity
+      Value: 1
+    - ID: "f7cc5a31-e016-4799-a108-a8420e333434"
+      Hint: LatestResultsAndPresentations_AllResultsPage
+      Type: Treelist
+      Value: "{D09061EB-8DB9-4EDF-84D1-88B65140E697}"
+    - ID: "f83e8d46-f1c3-41e2-a7af-4ce0ae9a6306"
+      Hint: LatestResultsAndPresentations_PressReleaseLabel
+      Value: Press

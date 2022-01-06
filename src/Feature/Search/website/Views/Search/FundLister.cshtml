@@ -30,10 +30,10 @@
                             <div class="col-lg-9 d-none d-lg-block">
                                 <div class="text-right">
                                     <button @@click="grid = false" :class="!grid ? 'active' : ''" class="btn btn-clean view-btn mr-3">
-                                        @Html.Glass().Editable(Model, m => m.ViewAsListLabel) <i class="icon-grid-view"></i>
+                                        @Html.Glass().Editable(Model, m => m.ViewAsListLabel) <i class="icon-list-view"></i>
                                     </button>
                                     <button @@click="grid = true" :class="grid ? 'active' : ''" class="btn btn-clean view-btn mr-3">
-                                        @Html.Glass().Editable(Model, m => m.ViewAsGridLabel) <i class="icon-list-view"></i>
+                                        @Html.Glass().Editable(Model, m => m.ViewAsGridLabel) <i class="icon-grid-view"></i>
                                     </button>
                                     @using (Html.Glass().BeginRenderLink(Model, m => m.FundCentreLink, new { @class = "link-styles" }, isEditable: true))
                                     {
@@ -50,48 +50,50 @@
                 <div class="article-filters__body" v-if="getFacetsLength">
                     <div class="container">
                         <div class="row">
-                            <select-field inline-template v-for="(facet, i) in getFacets" :key="i">
-                                <div class="col-lg-2 relative" @@click.stop>
-                                    <div class="article-filters__select" @@click="toggleOption" :class="open ? 'active' : ''">
-                                        <span class="article-filters__item-title" :class="active ? 'active' : ''">
-                                            {{facet.name}}
-                                        </span>
-                                        <i class="article-filters__icon-arrow"></i>
-                                    </div>
-                                    <div class="article-filters__options">
-                                        <div class="article-filters__title" @@click="hideOption">
-                                            <i class="icon-chevron-left"></i>
-                                            {{facet.name}}
+                            <div class="col-12 article-filters__lists">
+                                <select-field inline-template v-for="(facet, i) in getFacets" :key="i">
+                                    <div class="article-filters__dropdown relative" @@click.stop>
+                                        <div class="article-filters__select" @@click="toggleOption" :class="open ? 'active' : ''">
+                                            <span class="article-filters__item-title" :class="active ? 'active' : ''">
+                                                {{facet.name}}
+                                            </span>
+                                            <i class="article-filters__icon-arrow"></i>
                                         </div>
-                                        <option-field inline-template v-for="(item, i) in facet.items" :for="item.name" :key="i + item.name">
-                                            <label class="option-checkbox">
-                                                <input :id="item.name" class="option-checkbox__input" type="checkbox" v-model="checked" @@change="toggleSelect(item, facet)" @@click="setChoosen(!checked)">
-                                                <span class="option-checkbox__text">{{item.name}} </span>
-                                                <span class="option-checkbox__icon"></span>
-                                            </label>
-                                        </option-field>
+                                        <div class="article-filters__options">
+                                            <div class="article-filters__title" @@click="hideOption">
+                                                <i class="icon-chevron-left"></i>
+                                                {{facet.name}}
+                                            </div>
+                                            <option-field inline-template v-for="(item, i) in facet.items" :for="item.name" :key="i + item.name">
+                                                <label class="option-checkbox">
+                                                    <input :id="item.name" class="option-checkbox__input" type="checkbox" v-model="checked" @@change="toggleSelect(item, facet)" @@click="setChoosen(!checked)">
+                                                    <span class="option-checkbox__text">{{item.name}} </span>
+                                                    <span class="option-checkbox__icon"></span>
+                                                </label>
+                                            </option-field>
+                                        </div>
                                     </div>
-                                </div>
-                            </select-field>
-                            <div class="col-lg-2 ml-lg-auto">
-                                <div class="article-filters__btns">
-                                    <button class="btn article-filters__btn article-filters__btn_apply d-none d-xl-block"
-                                            @@click="applyFilters"
-                                            :class="activeButton ? 'article-filters__btn_primary' : ''">
-                                        @Html.Glass().Editable(Model, m => m.ApplyFiltersLabel)
-                                    </button>
-                                    <button class="clear-filter btn article-filters__btn article-filters__btn_clear d-none d-xl-block" @@click="clearFilters">
-                                        @Html.Glass().Editable(Model, m => m.ClearFiltersLabel)
-                                    </button>
-                                    <btn @@click="applyFilters"
-                                         class="btn btn-clean d-none d-md-block d-xl-none"
-                                         :class="activeButton ? 'text-primary' : ''"
-                                         @@click="toggleMobileFilter">
-                                        <i class="icon-filter"></i> @Html.Glass().Editable(Model, m => m.ApplyFiltersLabel)
-                                    </btn>
-                                    <btn @@click="clearFilters" class="btn btn-clean d-none d-md-block d-xl-none" @@click="toggleMobileFilter">
-                                        <i class="icon-refresh"></i> @Html.Glass().Editable(Model, m => m.ClearFiltersLabel)
-                                    </btn>
+                                </select-field>
+                                <div class="article-filters__controls">
+                                    <div class="article-filters__btns">
+                                        <button class="btn article-filters__btn article-filters__btn_apply d-none d-xl-block"
+                                                @@click="applyFilters"
+                                                :class="activeButton ? 'article-filters__btn_primary' : ''">
+                                            @Html.Glass().Editable(Model, m => m.ApplyFiltersLabel)
+                                        </button>
+                                        <button class="clear-filter btn article-filters__btn article-filters__btn_clear d-none d-xl-block" @@click="clearFilters">
+                                            @Html.Glass().Editable(Model, m => m.ClearFiltersLabel)
+                                        </button>
+                                        <btn @@click="applyFilters"
+                                             class="btn btn-clean d-none d-md-block d-xl-none"
+                                             :class="activeButton ? 'text-primary' : ''"
+                                             @@click="toggleMobileFilter">
+                                            <i class="icon-filter"></i> @Html.Glass().Editable(Model, m => m.ApplyFiltersLabel)
+                                        </btn>
+                                        <btn @@click="clearFilters" class="btn btn-clean d-none d-md-block d-xl-none" @@click="toggleMobileFilter">
+                                            <i class="icon-refresh"></i> @Html.Glass().Editable(Model, m => m.ClearFiltersLabel)
+                                        </btn>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -114,23 +116,22 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="hr mb-4"></div>
-        </div>
+        </div>       
+
         <div class="view-buttons-container d-lg-none" v-if="getFacetsLength">
             <div class="container">
-                <div class="d-flex justify-content-between w-100" :class="!mobileFilter ? 'relative' : ''">
+                <div class="d-flex justify-content-between w-100"
+                        :class="!mobileFilter ? 'relative' : ''">
                     <btn id="show-article-fliter" class="btn btn-clean" @@click="toggleMobileFilter">
-                        <i class="icon-filter"></i> @Html.Glass().Editable(Model, m => m.MobileViewLabel)
-                    </btn>
+                        <i class="icon-filter"></i> @Html.Glass().Editable(Model, m => m.FiltersLabel)
+                    </btn>                    
                     <div class="view-buttons">
-                        View
+                        @Html.Glass().Editable(Model, m => m.MobileViewLabel)
                         <button @@click="grid = false" :class="!grid ? 'active' : ''" class="btn btn-clean btn-view-mob ml-auto button-sort">
-                            <i class="icon-grid-view"></i>
+                            <i class="icon-list-view"></i>
                         </button>
                         <button @@click="grid = true" :class="grid ? 'active' : ''" class="btn btn-clean btn-view-mob ml-auto button-sort">
-                            <i class="icon-list-view"></i>
+                            <i class="icon-grid-view"></i>
                         </button>
                     </div>
                 </div>
@@ -183,7 +184,7 @@
                 </article-item>
             </div>
             <article-item v-else inline-template v-for="(fund, i) in searchData" :key="i + fund.fundName">
-                <div class="fund-item-list">
+                <div class="fund-item-list fund-lister">
                     <div class="row align-items-center">
                         <div class="col-xl-4">
                             <span class="fund-item-list__title">{{fund.fundName}}</span>

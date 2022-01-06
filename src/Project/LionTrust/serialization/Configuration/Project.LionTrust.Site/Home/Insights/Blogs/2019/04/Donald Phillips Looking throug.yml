@@ -1,0 +1,111 @@
+﻿---
+ID: "23bff2f9-ebfa-4ac0-9cb1-b18fd05e8ba7"
+Parent: "007f602f-561b-425e-9d9f-65befb319f98"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2019/04/Donald Phillips Looking through a zombie apocalypse
+DB: master
+SharedFields:
+- ID: "39c4902e-9960-4469-aeef-e878e9c8218f"
+  Hint: __Hidden
+  Type: Checkbox
+  Value: 0
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 5800
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{BAE03FC8-FA53-472A-86F1-8FED1FA10FE5}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{F6CE6B0F-64B6-4D28-A2E8-F4425765C493}"
+              p:after="r[@uid='{BAE03FC8-FA53-472A-86F1-8FED1FA10FE5}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{87A75892-529E-4215-8DDB-2122728C0553}"
+              p:after="r[@uid='{F6CE6B0F-64B6-4D28-A2E8-F4425765C493}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See also...&amp;RelatedPages={2301B1D6-2812-4921-AC12-6BCF90F3A836}|{4D7B7C2A-D992-47CA-AE5D-F2DEB5704C2E}|{7AAA89F2-3BCF-4DFC-B2F6-C05A7A8E2DDE}|{F8415A35-9C34-47F7-BACE-42EAABBFA145}&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{4AFC15F0-E001-4591-90B1-DE046B2E2940}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Donald Phillips Looking through a zombie apocalypse | Insights | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: Looking through a zombie apocalypse
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190408T103820Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: "With growing focus on the so-called ‘zombie’ end of the high yield market, kept alive by years of loose monetary policy, Donald Phillips considers the impact on the sector – and the opportunity – if these walking dead were wiped out."
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Looking through a zombie apocalypse
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p style="text-align: center;"><strong><span><img height="349" alt="Donald Phillips: Looking through a zombie apocalypse" width="600" src="-/media/C653B7DDE35F44B2801027A3D2E827CC.ashx" class="custom-image-height-auto"></span></strong></p>
+        <p><strong><span>We are often asked about lending standards in today&rsquo;s bond markets and the prevalence of so-called &lsquo;zombie&rsquo; companies that would perhaps not be &lsquo;alive&rsquo; without such a long period of easy money from central banks. </span></strong></p>
+        <p><span>One initial observation we would make is that the proportion of BBs bonds has grown over the long term, while CCCs have shrunk: in the last 15 years, BBs have grown from 36% to 54% of the global market.</span></p>
+        <p><span>As a team, we tend not to look at the whole market in great detail. By running a concentrated portfolio, focusing on idiosyncratic risk and caring primarily about what we hold rather than the market overall, we have a high yield fund made up of companies that we believe can prosper over the next five years. </span></p>
+        <p><span>That said, as a quick experiment, using US high yield as a proxy for the global market, we thought it might be useful to consider the implications for value in the asset class if concerns about zombie companies prove correct. If we consider that any bonds trading with a yield higher than 10% (8.7% of the market as I write) are zombie companies, what does this tell us about the risks under the high yield bonnet? </span></p>
+        <p><span>First, more than 30% of these bonds are in the energy sector, and we think a fair assumption around this cohort is that high-cost producers unable to adapt to a lower oil price environment will be prevalent. </span></p>
+        <p><span>A high default rate here should not only be expected; it is creative destruction from an economic perspective and non-systemic for the rest of the market. It is also a reminder why active high yield management with a keen focus on thematic risk is the central pillar of our approach to the asset class.</span></p>
+        <p><span>Let&rsquo;s assume we have a zombie apocalypse over the next five years where every one of this 8.7% of higher-yielding companies fail and there are zero recoveries in value. We can now look at the remaining 91.3% of the high yield market as a proxy for a &ldquo;normal&rdquo; cycle without so many undead. </span></p>
+        <p><span>What default rate among this cohort would leave us indifferent between Treasuries and high yield? For the purpose of this exercise, we have assumed investors are indifferent towards volatility. This would be around a 5.5% default rate with 50% recovery (which is the long-term average for senior unsecured bonds). The mean 12-month default rate since 1983 is 4% and this has been skewed by major events, so the actual median is 3%. </span></p>
+        <p><span>To summarise, assuming &ldquo;zombies&rdquo; are obliterated and the remainder of the market has an experience that is close to double the historic median for defaults, today&rsquo;s starting point in yield, other things being equal, leaves a five-year investor indifferent between high yield and US government debt. </span></p>
+        <p><span>High yield may not be cheap versus history but we do not believe it is mis-pricing risk in the way market commentators obsessed with zombies seem to think. </span></p>
+        <p style="margin-bottom: 0.0001pt;"><span style="color: #222222;">For a comprehensive list of common financial words and terms, see our glossary&nbsp;</span><span style="color: #34b233;"><a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms"><span style="color: #34b233;">here</span></a></span><span>.<br>
+        <br>
+        <br>
+        <strong><span>Key Risks</span></strong><strong><br>
+        <br>
+        </strong>Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. Investment in Funds managed by the Global Fixed Income team involves foreign currencies and may be subject to fluctuations in value due to movements in exchange rates. The value of fixed income securities will fall if the issuer is unable to repay its debt or has its credit rating reduced. Generally, the higher the perceived credit risk of the issuer, the higher the rate of interest. Bond markets may be subject to reduced liquidity. The Funds may invest in emerging markets/soft currencies and in financial derivative instruments, both of which may have the effect of increasing volatility.<br>
+        <br>
+        <strong><span>Disclaimer</span></strong><strong><br>
+        <br>
+        </strong>The information and opinions provided should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</span></p>

@@ -1,0 +1,33 @@
+﻿---
+ID: "597cbf1d-911d-47e5-adf4-0632f72de6a8"
+Parent: "b34fb638-7f84-4812-9f79-45b99ad8722d"
+Template: "66e09d5b-4f8e-4313-9df3-fa7e53fbe83a"
+Path: /sitecore/content/LionTrustNew/Global/Funds/Global Equity Fund/Documents/Global Equity Fund Factsheet Inc C
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190927T101613Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "8de3f234-7880-4703-8534-02bb8320c09c"
+      Hint: LegacyDocument_RelatedFunds
+      Type: Multilist
+      Value: "{C6C384C4-0CAA-4DEB-B452-F24C8D8B4E61}"
+    - ID: "a4a7f9dd-a218-4f33-b72a-7dc2251ccd43"
+      Hint: LegacyDocument_DocumentTypes
+      Type: Multilist
+      Value: "{D4DC9F77-EC92-429D-A975-839A13F17C2A}"
+    - ID: "c794210e-6107-4d69-841f-773cb9943bba"
+      Hint: LegacyDocument_DownloadLink
+      Value: |
+        <link target="" linktype="media" id="{D43085BA-AFC5-40BD-8B45-A82810EAB2D3}" url="/LionTrust/Files/fund-literature/factsheets/global-equity/Liontrust_Global_Equity_Fund_Factsheet_C_Inc_GBP" />
+    - ID: "eeb8db99-7da8-4973-adf7-bcf7b29eba79"
+      Hint: LegacyDocument_DocumentName
+      Value: Factsheet Inc C

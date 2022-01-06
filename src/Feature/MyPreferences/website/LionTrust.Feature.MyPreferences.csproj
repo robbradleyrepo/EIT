@@ -99,12 +99,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
-    <Compile Include="Controllers\EditEmailPreferencesController.cs" />
+    <Compile Include="Controllers\EditPreferencesController.cs" />
+    <Compile Include="Controllers\FundAccordionListController.cs" />
     <Compile Include="Controllers\RegisterInvestorController.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
+    <Compile Include="Models\IFundAccordionList.cs" />
     <Compile Include="Models\IEditEmailPreferences.cs" />
     <Compile Include="Models\EditEmailPreferencesViewModel.cs" />
     <Compile Include="Models\IEditEmailPrefTemplate.cs" />
+    <Compile Include="Models\IPrivacyNotice.cs" />
     <Compile Include="Models\IRegisterInvestor.cs" />
     <Compile Include="Models\RegisterInvestorSubmit.cs" />
     <Compile Include="Models\RegisterInvestorViewModel.cs" />
@@ -163,6 +166,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Feature\Feature.MyPreferencest.RegisterContainer.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\MyPreferences\FundAccordionList.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\MyPreferences\PrivacyNotice.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

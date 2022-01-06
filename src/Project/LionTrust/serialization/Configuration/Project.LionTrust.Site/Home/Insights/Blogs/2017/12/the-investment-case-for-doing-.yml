@@ -1,0 +1,94 @@
+﻿---
+ID: "00244743-81e0-46a3-96b7-a333d1fb3e6a"
+Parent: "29060657-01c2-438a-b9d7-980078705ce3"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2017/12/the-investment-case-for-doing-good"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 90100
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{099A481B-43A5-48A7-9B2D-17D284E6133E}"
+          p:before="*"
+          s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+          s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+          s:par="DatasourceRule"
+          s:ph="/content/side-content" />
+        <r
+          uid="{340ECB80-6D37-4697-9AAB-A9AF7978B8AF}"
+          p:after="r[@uid='{099A481B-43A5-48A7-9B2D-17D284E6133E}']"
+          s:ds=""
+          s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+          s:par="Title=See%20also...&amp;RelatedPages=%7B035EFDA3-BC0A-43D6-9548-FC77F9116B6F%7D%7C%7BFC17F0A6-ECAA-4CD7-B80B-6E67FDE3251B%7D%7C%7BFA0E822B-9229-47E9-9341-79282A4EE71F%7D%7C%7B1EC36DCA-A621-4DDD-B8EA-888A3693BF7B%7D&amp;MaximumNoOfLinks=4"
+          s:ph="/content/side-content" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{F1DC2199-DDFF-4CF6-8E71-036735EEFF94}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "the-investment-case-for-doing-good | Insights | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: The investment case for “doing good”
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: "20171106T074207:636455509274440000"
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: "Sustainable investment is not only for investors who want their investments to “do good” and benefit society. We believe there is also a compelling investment case for all investors taking this approach. This is because long-term transformative developments, such as technological and medical advancements, not only have positive impacts on society, they have the potential to deliver attractive returns for investors as well."
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: The investment case for “doing good”
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p>Sustainable investment is not only for investors who want their investments to &ldquo;do good&rdquo; and benefit society. We believe there is also a compelling investment case for all investors taking this approach.</p>
+        <p>This is because long-term transformative developments, such as technological and medical advancements, not only have positive impacts on society, they have the potential to deliver attractive returns for investors as well.</p>
+        <p>The <a href="http://www.liontrust.co.uk/fund-teams/sustainable-investment-team"><span style="color: #34b233;">Liontrust Sustainable Investment team</span></a>, who have worked together for more than 10 years, use a thematic approach to identify the key structural growth trends that will shape the global economy of the future and invest in well-run companies whose products and operations capitalise on these transformative changes and, therefore, are likely to benefit financially.</p>
+        <p>Let&rsquo;s highlight a couple of companies that we hold in the Liontrust Sustainable Future Funds we manage to bring these themes and our investment process to life. One of our key long-term holdings is Kerry Group, which is an Irish-based food technology company. Consumers are demanding more and more from their food, wanting healthier and more natural ingredients while still retaining an appealing taste and texture. It can be difficult to achieve these competing characteristics and so food manufacturers and hospitality companies come to Kerry for its expertise and technology in ingredients and flavourings.</p>
+        <p>Another key trend set to change our lives in the future and the business environment today is our rapidly changing cars. The trends we focus on are electrification and improving safety. These two complementary trends come together in Active Safety, including automatic electronic braking, forward collision warning and even the prospect of fully autonomous driving.</p>
+        <p>These two trends both require a significant increase in semi-conductor content in a car. For example, on average, there is $300 of semi-conductor content in an internal combustion engine car but this rises to $900 for a full electric vehicle.</p>
+        <p>A Tesla can have more than $1,000 of semi-conductor content in it. The leading provider of semi-conductor content is Infineon. Growing demand for reducing emissions and increasing safety has helped the sales growth of the company over the past five years. Infineon also scores well on ESG (Environmental, Social and Governance) by setting challenging targets every year for energy use and employee training.</p>
+        <p>High-quality companies whose products and operations capitalise on the types of transformative changes outlined in this article are able to benefit financially. We believe that identifying these powerful trends and investing in exposed companies can make for attractive and sustainable investments.</p>
+        <p><br />
+        </p>
+        <p><strong>Disclaimer:</strong></p>
+        <p>Issued by Liontrust Fund Partners LLP (2 Savoy Court, London WC2R 0EZ), authorised and regulated in the UK by the Financial Conduct Authority (FRN 518165) to undertake regulated investment business.</p>
+        &bull; Past performance is not a guide to future performance. &bull; Do remember that the value of an investment and the income from it can fall as well as rise and you may not get back the amount originally invested. &bull; The majority of the Liontrust Sustainable Future Funds have holdings which are denominated in currencies other than Sterling and may be affected by movements in exchange rates. Some of these funds invest in emerging markets which may involve a higher element of risk due to less well regulated markets and political and economic instability. Consequently the value of an investment may rise or fall in line with the exchange rates. Liontrust UK Ethical Fund, Liontrust SF European Growth Fund and Liontrust SF UK Growth Fund invest geographically in a narrow range and has a concentrated portfolio of securities, there is an increased risk of volatility which may result in frequent rises and falls in the Fund&rsquo;s share price. &bull; Liontrust SF Managed Fund, Liontrust SF Corporate Bond Fund, Liontrust SF Cautious Managed Fund, Liontrust SF Defensive Managed Fund and Liontrust Monthly Income Bond Fund invest in bonds and other fixed-interest securities - fluctuations in interest rates are likely to affect the value of these financial instruments. &bull; If long-term interest rates rise, the value of your shares is likely to fall. If you need to access your money quickly it is possible that, in difficult market conditions, it could be hard to sell holdings in corporate bond funds. This is because there is low trading activity in the markets for many of the bonds held by these funds. Mentioned above five funds can also invest in derivatives. Derivatives are used to protect against currencies, credit and interests rates move or for investment purposes. &bull; There is a risk that losses could be made on derivative positions or that the counterparties could fail to complete on transactions.<br />
+        <br />
+        &bull; The information and opinions provided should not be construed as advice for investment in any product or security mentioned. &nbsp;&bull; Always research your own investments and consult with a regulated investment adviser before investing.

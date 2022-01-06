@@ -1,0 +1,25 @@
+﻿---
+ID: "115300ec-edd0-4e07-ac2c-f96735d94429"
+Parent: "624530c0-8a0b-4836-a7ea-cac46fe66143"
+Template: "fbfecf7a-bb63-415c-98a5-cf095ff07c99"
+Path: "/sitecore/content/LionTrustNew/Home/Data Template/articles/Liontrust Podcast/_Local/UI026 - Text"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210805T113048Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "7a6eea35-2025-43cf-a371-43d99a82e804"
+      Hint: RichText_Text
+      Value: |
+        <p>Testing rich text:</p>
+        <p>&nbsp;</p>
+        <br />
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/IRjqq2OWC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>

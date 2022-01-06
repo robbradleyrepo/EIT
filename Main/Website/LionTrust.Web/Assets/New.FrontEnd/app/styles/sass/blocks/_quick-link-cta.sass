@@ -6,9 +6,7 @@
     flex-direction: column
     justify-content: flex-end
     padding: 5px 20px
-    background-size: cover
-    @include breakpoint(desktop, up)
-        height: 257px
+    background-size: cover    
     &__title
         @extend .h5
         @include breakpoint(desktop, up)
@@ -23,7 +21,7 @@
         @include breakpoint(desktop, up)
             margin-bottom: 30px
 
-.quick-link-chart-wrapper
+.scrollable-cards
     margin: 40px 0
     @include breakpoint(desktop, up)
         margin: 100px 0
@@ -33,7 +31,11 @@
             overflow-x: visible
     .row
         flex-wrap: nowrap
-    .quick-link-chart
+    &.desktop-wrap
+        .row
+            @include breakpoint(desktop, up)
+                flex-wrap: wrap
+    &__card
         height: 187px
         transition: box-shadow .3s ease
         &:hover

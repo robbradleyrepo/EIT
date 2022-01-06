@@ -15,7 +15,7 @@ export default () => {
         centeredSlides: true,
         spaceBetween: 32,
         speed: 800,
-        loop: true,
+        loop: false,
         simulateTouch : true,
         loopFillGroupWithBlank: false,
         breakpointsInverse: true,
@@ -34,7 +34,7 @@ export default () => {
             },
             992: {
                 slidesPerView: 3,
-                centeredSlides: true
+                centeredSlides: false
             },            
         },
 

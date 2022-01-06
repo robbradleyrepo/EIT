@@ -1,0 +1,112 @@
+﻿---
+ID: "a7361d30-ffee-4880-aa6e-31ff3eeb5039"
+Parent: "12dc7623-ff5d-466e-a998-3de16725c2fe"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2017/09/three-success-stories-and-three-ones-to-watch"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 91700
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{2A911516-BA71-4CCE-814F-1691BFE6FE42}"
+          p:after="r[@uid='{30A0A4C8-974F-4822-9DCB-DE14881E0400}']"
+          s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+          s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+          s:par="DatasourceRule"
+          s:ph="/content/side-content" />
+        <r
+          uid="{67221D6E-EB58-4B58-BA7C-08E26FDBEB0A}"
+          p:after="r[@uid='{2A911516-BA71-4CCE-814F-1691BFE6FE42}']"
+          s:ds="{71B20482-B038-49D5-895C-ED6D46D5095F}"
+          s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+          s:ph="/content/side-content" />
+        <r
+          uid="{664A4CCB-D540-4AA0-98CC-8C2B0D562BC6}"
+          p:after="*[1=2]"
+          s:ds=""
+          s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+          s:par="Title=See%20also...&amp;RelatedPages=%7B8B329F2F-531E-4370-AE7E-29AB76354C39%7D%7C%7B395557CD-AC45-4F30-8DFA-4689C4868FD4%7D%7C%7B7B169127-E025-4744-9F25-B4D2C7A49337%7D%7C%7BFC17F0A6-ECAA-4CD7-B80B-6E67FDE3251B%7D&amp;MaximumNoOfLinks=4"
+          s:ph="/content/side-content" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{42430A5F-F395-4518-98D9-C21C1011175D}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "three-success-stories-and-three-ones-to-watch | Insights | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: 3 success stories and 3 to watch
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: "20170907T135619:636403893790962000"
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: "18 months on from the Fund’s launch, co-manager Matt Tonge takes a look at three ‘success stories’ which have already graduated from the micro cap space and highlights three ‘ones to watch’ from the companies the team has bought so far this year. "
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Three success stories and  three ‘ones to watch’
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p><strong>Part-and-parcel of running a dedicated micro cap investment vehicle is the knowledge that some of the most successful stock picks will naturally outgrow this market cap space.</strong></p>
+        <p>We apply a consistent set of company size parameters to the Liontrust UK Micro Cap Fund, only considering companies with market capitalisations of under £150m for inclusion and looking gradually to exit holdings when they exceed £250m. Avoiding ‘mission creep’ and keeping the Fund aimed at the very smallest part of the market enables investors to know they’re getting ‘exactly what it says on the tin’.</p>
+        <p>Share price growth in micro caps can come both as companies successfully deliver on their growth plans and, in many cases, as increased market capitalisation opens up the shares to a bigger pool of investors. More investors waking up to the merits of a company can often drive a re-rating of the shares, without any huge underlying improvement in the prospects for the business. Finding these undiscovered gems is one of the joys of this part of the market and the best successes are normally driven by both factors.</p>
+        <p>We therefore view this process of stocks outgrowing the fund as both confirmation of a successful instance of stock-selection and an opportunity to add another exciting company from our pipeline of prospective micro cap investments, rather than causing any hindrance or frustration.&nbsp;</p>
+        <p>So far in 2017 we have seen three companies exit the UK Micro Cap Fund driven by the factors described above:</p>
+        <p style="text-align: center;"><img alt="Three success stories and  three ‘ones to watch’" src="~/media/659EA9F6157A45C4B0093999A0016A53.ashx?h=auto&amp;w=400" style="height: auto; width: 400px;"></p>
+        <p><strong>Keywords Studios</strong>, a provider of outsourced art, localisation and testing services to the video games industry, marked the Fund’s first sale of a position since its launch in March 2016. The stock delivered an impressive return of over 150% from initial purchase, reflecting buoyant trading in 2016, as organic growth was complemented by bolt-on acquisitions. After its market cap topped £250m, we completed its sale from the Fund in January 2017.</p>
+        <p style="text-align: center;"><span style="font-size: 1.5rem;"><img alt="Three success stories and  three ‘ones to watch’" src="~/media/181B343F9B724D1DB9EF14C1BBBB28C0.ashx?h=89&amp;w=175" style="height: 89px; width: 175px;"><br>
+        </span></p>
+        <p>Digital PR and marketing specialist <strong>Next Fifteen Communications</strong> exited the portfolio in May 2017, having also exceeded the Fund’s market cap ceiling. Its share price appreciation, over 90% since initial purchase, mirrored its impressive growth in revenue and earnings; in the 12 months to 31 January 2017, the company achieved over 50% annual growth in profit before tax.&nbsp;</p>
+        <p style="text-align: center;"><span style="font-size: 1.5rem;"><img height="215" alt="Three success stories and  three ‘ones to watch’" width="400" src="~/media/959DD9187D304BBDBD8DA5CE5DC920A5.ashx?h=215&amp;w=400" style="height: 215px; width: 400px;"><br>
+        </span></p>
+        <p>Market research and data analytics group <strong>YouGov</strong> followed in the footsteps of Keywords Studios and Next Fifteen in June 2017. Its share price rose over 100% following a string of upbeat statements during 2016, as robust underlying trends were boosted by a positive currency translation effect following the fall in the pound in the wake of the Brexit vote. Interim results in March 2017 beat market expectations with revenue up 24% and adjusted pre-tax profit rising 33%.</p>
+        <p>These sales – together with inflows to the Fund – have given us the firepower to initiate positions in a range of new companies: seven so far this year. All stocks bought into the Fund are subject to a requirement that management of the company owns at least 3% of the shares. This helps foster alignment of incentives between management and shareholders by ensuring management has ‘skin in the game’.</p>
+        <p>Here we highlight three ‘<i>ones to watch</i>’ from the 2017 cohort of additions:</p>
+        <p style="text-align: center;"><span style="font-size: 1.5rem;"><img height="267" alt="Three success stories and  three ‘ones to watch’ " width="400" src="~/media/B828BB8ED771451FB0E9470CD1C190F2.ashx?h=267&amp;w=400" style="height: 267px; width: 400px;"><br>
+        </span></p>
+        <p><span style="font-size: 1.5rem;">Software company </span><strong style="font-size: 1.5rem;">Attraqt</strong><span style="font-size: 1.5rem;"> </span><strong style="font-size: 1.5rem;">Group</strong><span style="font-size: 1.5rem;"> possess all three of the key intangible assets we look for as part of the Economic Advantage investment process: intellectual property, strong distribution networks and recurring revenues. Attraqt provides site search, visual merchandising and personalised product recommendation software to online retailers such as Boohoo, Superdry and TK Maxx. It has intellectual property in the software code and sells its products on a monthly recurring SaaS subscription basis, meaning around 90% of revenues are recurring. Additionally, it enjoys an embedded distribution network strength as customers come to rely increasingly on the product to drive improved conversion of ‘clicks’ to sales.</span></p>
+        <p style="text-align: center;"><img alt="Three success stories and  three ‘ones to watch’" src="~/media/DBFE402C6C2D499BBFBD1DDAFDABA903.ashx?h=267&amp;w=400" style="height: 267px; width: 400px;"></p>
+        <p><strong>Surgical Innovations </strong>specialises in designing, developing and manufacturing devices for use in minimally invasive abdominal surgery. It possesses strong intellectual property as several of its products are patent protected and furthermore have regulatory approval to be used in surgery. In addition, most of its revenue currently comes from sales of consumables, meaning it has high repeat (if not contracted recurring) income. Finally, the company recently acquired its sole UK distributor, so now has full control of its route to market.</p>
+        <p style="text-align: center;"><img height="329" alt="Three success stories and  three ‘ones to watch’" width="400" src="~/media/99BD47E72CCC4DA6B299FF8A2B7BDB94.ashx?h=329&amp;w=400" style="height: 329px; width: 400px;"></p>
+        <p><strong>Inspired Energy </strong>is a consultancy firm which specialises in energy procurement and management for industrial and commercial clients. The company is successfully pursuing an acquisitive growth strategy which the Fund was able to help finance through its participation in a June 2017 placing. This raised £9m for the purchase of Horizon Energy Group, further extending Inspired Energy’s footprint in Ireland. In order to provide its energy procurement services, the company has developed an excellent distribution network with its customers, while it also has a level of recurring income due to long contract cycles; both attributes are core Economic Advantage strengths.</p>
+        <p><strong>Disclaimer:</strong></p>
+        <p> </p>
+        <p>• This content contains information and analysis that is believed to be accurate at the date of publication but is subject to change without notice. Whilst care has been taken in compiling this content, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness. Some parts/sections of this content may been compiled from external sources. Whilst these sources are believed to be reliable, the information has not been independently verified and therefore no representation is made as to its accuracy or completeness. • It should not be copied, faxed, reproduced, divulged or distributed, in whole or in part, without the express written consent of Liontrust. • Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. The issue of units/shares in Liontrust Funds may be subject to an initial charge, which will have an impact on the realisable value of the investment, particularly in the short term. Investments should always be considered as long term. • Any decision to invest should be always based on the final Prospectus and Key Investor Information Documents (KIIDs) and you should take independent legal advice if necessary. These documents contain important information which should be read before investing in any fund and they can be obtained, free of charge, <a href="http://www.liontrust.co.uk/what-we-offer/fund-literature">here</a>.</p>
+        <p> </p>
+        <p>• Some of the Funds managed by the Economic Advantage team invest in smaller companies and companies traded on the Alternative Investment Market.&nbsp; These stocks may be less liquid and the price swings greater than those in, for example, larger companies. The performance of the Liontrust GF UK Growth Fund may differ from the performance of the Liontrust UK Growth Fund and is likely to be lower than its corresponding Master Fund due to additional fees and expenses.</p>

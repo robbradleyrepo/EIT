@@ -6,6 +6,6 @@
         public string SFRandomGUID { get; set; }
         public string SFEntityId { get; set; }
 
-        public EmailPreferences Preferences { get; set; }
+        public EmailPreferences Preferences { get; set; } = new EmailPreferences();
     }
 }

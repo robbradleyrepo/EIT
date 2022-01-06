@@ -1,0 +1,29 @@
+@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Article.Models.IArticle
+@if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    return;
+}
+<div class="article-with-small">
+    @if (Sitecore.Context.PageMode.IsExperienceEditor || Model.ArticleVideoUrl == null)
+    {
+        using (Html.Glass().BeginRenderLink(Model, m => m.ArticleVideoUrl, new { @class = "link-styles" }, isEditable: true))
+        {
+            if (Model.ArticleVideoUrl != null)
+            {
+                @Model.ArticleVideoUrl.Text
+            }
+            else
+            {
+                @:Article Video Url:[No value in field]
+            }
+        }
+    }
+    else
+    {
+        <iframe class="mt-3 mb-5" id="childFrame"
+                src="@Model.ArticleVideoUrl.Url"
+                height="400" width="100%" frameborder="0" scrolling="no" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+        </iframe>
+    }
+</div>

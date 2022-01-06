@@ -1,0 +1,24 @@
+﻿---
+ID: "8cc89437-a21a-4b3b-a661-d46396cf9802"
+Parent: "de347e52-3823-4c3d-96a5-6dda2dcf0d85"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/LionTrustNew/Global/Tooltips
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Applications/32x32/folder_information.png
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: |
+    {760EBC2C-3109-4906-939F-9E2FA032BE5D}
+    {81D6471C-540D-4EAD-AFE4-CDA3DC805F5B}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211123T124311Z

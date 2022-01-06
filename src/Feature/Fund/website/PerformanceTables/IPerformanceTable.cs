@@ -10,10 +10,7 @@
 
         [SitecoreField(Constants.PerformanceTable.QuartileRowLabelFieldId)]
         string QuartileRowLabel { get; set; }
-
-        [SitecoreField(Constants.PerformanceTable.ColumnMonthPrefixFieldId)]
-        string ColumnMonth { get; set; }
-
+       
         [SitecoreField(Constants.PerformanceTable.HeadingFieldId)]
         string Heading { get; set; }
     }

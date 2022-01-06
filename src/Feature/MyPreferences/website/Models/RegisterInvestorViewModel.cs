@@ -9,6 +9,7 @@ namespace LionTrust.Feature.MyPreferences.Models
         public RegisterInvestorViewModel(IRegisterInvestor content)
         {
             Content = content;
+            SubscribeToEmail = true;
         }
 
         public IRegisterInvestor Content { get; set; }
@@ -27,7 +28,6 @@ namespace LionTrust.Feature.MyPreferences.Models
 
         public string CompanyName { get; set; }
 
-        [Required]
         [StringLength(6, MinimumLength = 6)]
         public string CompanyId { get; set; }
 
@@ -42,6 +42,6 @@ namespace LionTrust.Feature.MyPreferences.Models
 
         public string ChangeInvestorUrl { get; set; }
 
-        public IList<SFProcess> SFProcessList { get; set; }
+        public bool SubscribeToEmail { get; set; }
     }
 }

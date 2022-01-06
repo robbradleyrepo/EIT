@@ -1,0 +1,35 @@
+﻿---
+ID: "dfbc68b6-c87c-4bc1-8a73-b97a8e6f0760"
+Parent: "542c6507-46a2-41d7-8a81-0579de553787"
+Template: "042e8c61-e2b5-4f50-9ba4-9f8a36cdfff4"
+Path: "/sitecore/content/LionTrustNew/Home/Media Gallery/_Local/BC046 - Media Gallery/Media Item 2"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "156df9f6-b34d-4f08-8a46-ce1f2a8ec6c2"
+      Hint: MediaItem_Description
+      Value: Lorem ipsum
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210823T175951Z
+    - ID: "26b1d6ba-647a-4951-9ad7-cd169c1d8685"
+      Hint: MediaItem_Categories
+      Type: Treelist
+      Value: |
+        {F1BF43B0-3202-4614-A5DD-D26D01AD8C10}
+        {FF63C615-A3F4-496F-A0F2-6D72F92E9BA9}
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "a3cc90af-cf8b-4be1-bdc9-0c6cc77c1bd1"
+      Hint: MediaItem_FullBodyImage
+      Value: |
+        <image mediaid="{5F19BAA0-3044-4E11-BC86-D59D3890E604}" />
+    - ID: "c9550910-8553-4b8e-b381-3fadf7b58d37"
+      Hint: MediaItem_HeadshotImage
+      Value: |
+        <image mediaid="{F635CA48-769C-4034-BADE-6F1DF273EBE2}" />

@@ -43,18 +43,23 @@ export default () => {
 
   const optionField = Vue.component("option-field", {
     name: "option-field",
-    data: function () {
+    props: ["selected"],   
+	data: function () {
       return {
         checked: false,
       };
-    },
+    },	
     methods: {
       clearChecked() {
         this.checked = false;
       },
     },
     created: function () {
-      this.$parent.$on("clearOptionField", this.clearChecked);
+	  this.$parent.$on("clearOptionField", this.clearChecked);
+	  if(this.selected) {
+		this.checked = true;
+		this.$parent.setChoosen(true);
+	  }      
     },
   });
 
@@ -91,9 +96,9 @@ export default () => {
         this.open = false;
       });
     },
-    created() {
+	created() {
       this.$parent.$on("clearOption", this.clearOption);
-    },
+    },    
   });
 
   const articleItem = Vue.component("article-item", {
@@ -160,7 +165,7 @@ export default () => {
       sortModal: false,
       sortOrder: "ASC",
       amountResults: 0,
-      showPerPage: 21,
+      showPerPage: 12,
       showPageInPagination: 7,
       mobileFilter: false,
       months: [],

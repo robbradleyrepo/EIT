@@ -1,0 +1,161 @@
+﻿---
+ID: "dae1203e-c0f8-4157-9e01-621243490ced"
+Parent: "d8708fe1-535e-4a62-a164-83d823bdf98c"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2020/05/The power of blending fund managers
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 104200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{B5DF14D1-1C54-4A40-B49B-4AAAE37173E3}"
+              p:before="*"
+              s:ds="{AD7430E3-57B7-4D9B-B4D4-E52D614FAF1A}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{69066CA8-A53E-45E1-841B-F11B6C50EE00}"
+              p:after="r[@uid='{B5DF14D1-1C54-4A40-B49B-4AAAE37173E3}']"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{99A26914-8FCB-4040-A263-4F0D0B7F1B15}"
+              p:after="r[@uid='{69066CA8-A53E-45E1-841B-F11B6C50EE00}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:ph="/content/side-content" />
+            <r
+              uid="{7C9F009C-D9AE-40FE-82B3-02708DA87C39}"
+              p:after="r[@uid='{99A26914-8FCB-4040-A263-4F0D0B7F1B15}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See%20also...&amp;RelatedPages=%7BAFF0AA51-76FC-43AA-AB03-BFFE331D6950%7D%7C%7B9EADCB46-7677-4826-AA77-0AC5F81DFFBC%7D%7C%7B01B3EF98-C64F-4F71-BACE-EA0BAFE8A6E0%7D%7C%7BF8415A35-9C34-47F7-BACE-42EAABBFA145%7D%7C%7B77B5C263-DEEE-4A04-AE96-C01C2138DFCD%7D&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{666D8658-69FD-4802-B1DF-B4D2FEF1AD18}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: The power of blending fund managers | Insights | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: The power of blending fund managers
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200527T114331Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: Blending funds and managers is the key extra ingredient in portfolio construction. In this article, John Husselbee interviews two of his UK equity managers to illustrate the benefits of blending.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: The power of blending fund managers
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p><strong><span style="color: black;">Portfolio construction is the fourth and final stage of our Liontrust Multi-Asset investment process. The first three stages – strategic asset allocation, tactical asset allocation and fund selection, along with risk management – all feed into building our portfolios but to be successful, this requires an extra ingredient: blending funds and managers. </span></strong></p>
+        <p><span style="color: black;">Through blending, we consider how each fund and its manager interacts with our other portfolio holdings in terms of correlation, risk and return. Successfully done, blending can deliver diversification across investment styles and risk/return profiles while ensuring we do not lose the benefits of fund selection and asset allocation. </span></p>
+        <p><span style="color: black;">We are aided in this exercise through the transparency of our underlying managers. If we are not given transparency, we do not invest and there are certain key things we want in this regard:</span></p>
+        <ul style="list-style-type: disc;">
+            <li><span style="color: black;">Understanding the managers’ investment processes: we invest with those who have a consistency of process and style. Blending cannot be achieved without this consistency across all our funds.</span></li>
+            <li><span style="color: black;">Regular updates on underlying funds to ensure they are being managed according to their stated objectives and investment processes.</span></li>
+            <li><span style="color: #222222;">The insights of managers into markets, economics, politics, themes, sectors and stocks to help us analyse our underling funds, portfolio construction and tactical asset allocation.</span></li>
+        </ul>
+        <p><span style="color: black;">This article provides an illustration of blending <strong>– </strong>in this case between two UK equity funds within our portfolios <strong>– </strong>via interviews I conducted with Kevin Murphy, who co-manages the Schroder Income Fund, and Axa IM’s Chris St John, who runs Axa Framlington UK Select Opportunities. These interviews took place before Covid-19 reached Europe but this is a perfect example of blending in action and the comments are still pertinent. </span></p>
+        <p><span style="color: black;">While these managers are fundamentally different in some ways – Murphy is a value manager who sees little point in visiting companies and St John is a growth devotee who spends much of his time interrogating chief executives – they also display certain similarities, particularly around the strength and consistency of their investment processes and their focus on the importance of investor behaviour. </span></p>
+        <p><span style="color: black;">We highlight three areas where the managers explain and analyse these differences and similarities, which in turn demonstrate how they successfully complement each other in our portfolios.&nbsp; </span></p>
+        <p><strong><span style="color: black;">Style: growth versus value</span></strong></p>
+        <p><span>On the question of value, Murphy says it is important to differentiate the style beyond simply buying cheap stocks. The key is to split it into two camps, subjective and objective, and his process is rooted in the latter. </span></p>
+        <p><span>“Subjective value is about what a company might look like in the future and at what point it might become cheap based on predictions. </span><span>These are predictions about the future and you cannot back test an opinion,</span><span>” he says. “With objective value, we look at what companies have today, profits, dividend yields and so on, as these are facts and have been stress tested.”</span></p>
+        <p><span>Looking forward, Murphy cautions against putting too much faith in any ‘catalysts’ for value to start outperforming growth, warning that the </span><span>market often just does what it does and managers and commentators like to come up with simple stories about why these things happen.</span></p>
+        <p><span>“People will claim the catalyst [for value to outperform] is interest rates or GDP going up but I fundamentally don't believe this to be the case,” he adds. </span></p>
+        <p><span>If a stock does get through the Schroders value screen, Murphy says the team’s further analysis looks to draw on best practice wherever it might come from. He cites the kinds of checklists used on a flight or going into hospital for an operation, with people’s safety protected by the fact those doing these jobs have ticked off all the key considerations.</span></p>
+        <p><span>“As the safety of client money is paramount to us, we have our own checklist and every stock we look at goes through that process. If, and only if, a company passes this process do we think it potentially warrants a place in the portfolio,” he adds.</span></p>
+        <p><span>St John summarises his growth focus as </span><span>the opportunity to buy an asset that compounds and grows its profits and cashflows over time. </span></p>
+        <p><span>“If I can find businesses increasing their economic output, we will invest as long as we can pay an attractive valuation and are prepared to hold them for a prolonged period of time to allow compounding to work and so we can make some good returns,” he adds.</span></p>
+        <p><span>Despite their different styles, St John concurs on the basic futility of trying to identify broad market catalysts.</span></p>
+        <p><span>“I cannot add value in terms of what is going to happen to the 10-year Treasury yield for example or to capital flows on the back of macroeconomic events,” he adds.</span></p>
+        <p><span>“Where I </span><span>think I can add some value is taking a view on the UK high street and which retail models are challenged. The key is then to find businesses that can sustainably grow and hold them for as long as you can. There is an interesting piece of research by Boston Consulting Group, which calculated that if you hold an equity for one year, 40% of your return comes from the movement in the multiple.</span></p>
+        <p><span>“To my mind, that is very much the capital flow event and very little comes from the underlying growth of the company. Now if you can hold an equity for 10 years, 72% of your return comes from turnover growth and increasing economic output. Equities are long duration assets and you need to hold them for a long time to allow the compounding growth or the undervaluation of the business to show itself and reward equity holders.”<br /></span></p><p><br /></p>
+        <hr />
+        <p style="text-align: justify;"><strong><span>The view from Husselbee: </span></strong><span>We are in an environment where active fund management is under pressure, partly because of underperformance of high-profile managers and the relentless rise of passives allowing a negative narrative to gather momentum. We dispute the notion that all active managers are little more than ‘coin tossers’ and continue to analyse how best to differentiate luck from genuine skill. A key part of the genuine skill of active managers comes from following and implementing a consistent investment process and style. </span></p>
+        <p style="text-align: justify;"><span style="color: black;">We seek to add value for investors by identifying managers with the skill to generate long-term outperformance and to combine funds from across asset classes, geographical regions and investment styles. If you take the most obvious style split of growth and value, we have successfully blended managers in the UK, such as Schroder Income and Axa Framlington UK Select Opportunities in this example. Successfully blending managers can enhance risk-adjusted returns and help us to limit losses in falling markets so we can boost long-term performance.</span></p>
+        <hr />
+        <p><span>&nbsp;</span></p>
+        <p><strong><span>Process: to visit or not to visit?</span></strong></p>
+        <p><span>As stated, St John’s investment process is based largely on meeting companies, believing that talking to senior management can provide essential insights.</span><span> </span><span>“When you have the privilege of meeting a lot of chief executives, it is also important to spend time talking about the wider industry,” he adds. “You can start to build a picture of that individual business but also the industry in which they operate.”</span></p>
+        <p><span>Murphy has a different approach however and his team has gradually moved away from meeting companies towards analysing reports and accounts. </span></p>
+        <p><span>“When we sit in front of companies, they tend to be like politicians, telling us about the great things the business is doing but at no point have I ever had a management team say their stock is expensive or their profits are about to fall,” he adds.</span></p>
+        <p><span>“Rather than spending an hour with a company plus an hour of prep and an hour of subsequent review, we find it more useful, given our skill set, to spend time looking at report and accounts, which is audited data.” </span></p>
+        <p><span>The two managers do have a few holdings in common but, as would be expected, the reasons why they have invested in them are different.</span></p>
+        <p><span>With GlaxoSmithKline, for example, St John says the stock is not necessarily a pure growth name but it does tick the </span><span>box of providing a good absolute return on the basis of risk taken. “We saw Emma Walmsley take over as CEO in 2017 and something she has been very good at during her career is putting teams together, and we have seen that start to emerge with the appointment of Hal Barron to head up R&amp;D.”&nbsp; </span></p>
+        <p><span>“When you have the right culture and the right attitude towards capital within a business, this starts getting used more efficiently and equity holders have the chance of making good returns.”</span></p>
+        <p><span>Murphy says it can be misleading to look at a portfolio snapshot at a certain point in time as it gives no indication of a holding’s lifecycle within the fund. The team bought GSK for Schroder Income in 2011 when the market was concerned about patent cliffs and many </span><span>pharmaceutical companies were shunned because they had failed to get new drugs through the approval process.</span></p>
+        <p><span>“At that point, the market was effectively saying GSK’s pipelines were worthless and that meant when we were buying the shares, we didn't have to believe in the future. We could get the entire value of Glaxo on its current drugs just rolling off and if they ever found a new drug at any point in the future, we got that for free,” he adds.</span></p>
+        <p><span>“That is the situation we like as investors: heads you win, tails you don't lose. Over the course of the next couple of years, of course, the pipelines have started to come through and more drugs have reached the market, and the share price has started to move. </span></p>
+        <p><span>“This means Glaxo is towards the end of its life in our portfolio. Emma </span><span>Walmsley </span><span>is doing a good job as CEO but we are now in a situation where there is no real re-rating opportunity and it is about earnings growth and that pipeline delivering, in which case the risk is now on those drugs not coming to market rather than the other way around.”</span></p>
+        <p><span>&nbsp;</span></p>
+        <hr />
+        <p><strong><span>The view from Husselbee: </span></strong><span>This shows the importance of detailed analysis of fund managers held within portfolios. The top holdings are likely to show some commonality of positions between two UK equity funds, for example. But without understanding their investment styles, there is not the context around why the companies are held by each fund and the role they are fulfilling for their respective portfolios. </span></p>
+        <p><span>Justifying holdings in a fund goes a long way towards emphasising the consistency of process we demand from all our underlying managers.</span></p>
+        <hr />
+        <p><strong><span>&nbsp;</span></strong></p>
+        <p><strong><span>Avoiding behavioural traps</span></strong></p>
+        <p><span>In another similarity, both managers are focused on avoiding the typical behavioural traits that can damage investment. Murphy says: “</span><span>People are very risk-averse, jump to conclusions quickly, and then tell each other stories to try to help articulate what's going on. But in a world where there is lots of data coming in, people come to these stories far too quickly.</span></p>
+        <p><span>“They also like to stay together in packs and hunt together. All of this is within us and there is not much we can do about it, so it is incumbent upon us as investors to build a process to mitigate some of those biases.</span></p>
+        <p><span>“The first way we go about doing this is to start the idea generation process with a quantitative screen, because we want to avoid the herd instinct people have by looking at the same companies at the same time, typically when they report results. Our quant screen </span><span>cuts all of that out and makes sure we are focusing purely on the cheapest stocks in the market at any one time.</span><span>” </span></p>
+        <p><span>St John agrees with this idea of seeing companies outside of the reporting cycle to avoid getting swept along with the herd, also suggesting arriving early to meetings before the company expects him. “</span><span>I always turn up at least half an hour early to any company site visit because I know they won't be ready, or rather some are and some aren't,” he adds.</span></p>
+        <p><span>“Some take it in their stride and show you around whereas others are absolutely charging around, sweeping away all the rubbish and trying to hide things.”</span></p>
+        <p><span>Looking at other behavioural biases, St John said it is<strong> </strong></span><span>very tempting to run your losers in fund management and this goes back to how people are keen not to appear stupid. “We try to keep the barriers to accepting you've got something wrong as low as possible around the desk and, as a consequence of that, I am perfectly prepared to do a 180-degree turn on an investment if I think it is the right thing to do,” he adds.</span></p>
+        <p><span>&nbsp;</span></p>
+        <hr />
+        <p style="text-align: justify;"><strong><span>The view from Husselbee: </span></strong><span>Behavioural science is an increasingly important part of investing and there are reams of books on the subject for those keen to explore. Most behavioural decisions, however, focus on either buying assets or selling them and this is where it becomes a key area of analysis for us when looking at the managers within our portfolios.</span></p>
+        <p style="text-align: justify;"><span>We believe our managers buck the </span><span style="color: black;">‘poor sellers’ characteristic that is apparent in many fund managers.</span><span> </span><span style="color: black;">As our managers have strict buying criteria, selling is a natural counterpoint: as soon as a company no longer has the attributes that made it attractive, it will typically be sold.</span></p>
+        <hr />
+        <p><span>&nbsp;</span></p>
+        <p><strong><span style="color: black;">CVs<br />
+        <br />
+        Kevin Murphy: </span></strong><strong><span style="color: #2b2b2a;">Co-head of the Global Value Team at Schroders, and a founding member in 2013 of this team of value investors who manage UK, European and global portfolios. He joined Schroders in 2000 and became co-manager of the Recovery Fund in 2006 and the Income Fund in 2010.</span></strong></p>
+        <p style="text-align: justify;"><strong><span style="color: black;">Chris St John: Lead manager of AXA Framlington UK Opportunities, taking full responsibility at the beginning of this year after the retirement of Nigel Thomas. He joined AXA in 2005 and has focused on UK multi-cap and mid/small cap strategies. Prior to AXA IM, he was lead portfolio manager on institutional and retail FTSE Small Cap portfolios at ISIS (now F&amp;C Asset Management).</span></strong></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt;"><span style="color: #222222;">For a comprehensive list of common financial words and terms, see our glossary&nbsp;<a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms" style="color: inherit;">here</a>.</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><span style="color: #222222;">&nbsp;</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><strong><span style="color: #222222;">Key Risks &amp; Disclaimer</span></strong></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><span style="color: #222222;">Please remember that past performance is not a guide to future performance and the value of an investment and any income generated from them can fall as well as rise and is not guaranteed, therefore you may not get back the amount originally invested and potentially risk total loss of capital.</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: start;"><span style="color: #222222;">This content should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy.&nbsp; It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, faxed, reproduced, divulged or distributed, in whole or in part, without the express written consent of Liontrust.</span></p>

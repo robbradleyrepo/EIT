@@ -1,0 +1,264 @@
+﻿---
+ID: "aad03e4b-cd82-4df0-bb19-ad4f43706fa3"
+Parent: "92aba568-f063-4316-a3b3-27aa0b4f154a"
+Template: "dadec9bf-b6e8-4e04-a082-f4eb20b76ff9"
+Path: /sitecore/content/LionTrustNew/Global/Funds/GF European Strategic Equity Fund
+DB: master
+BranchID: "562a4f6c-ee2c-40f7-8701-db0a0d8b7e3d"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Business/32x32/currency_pound.png
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: 
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "034cd348-2adc-47e9-b263-2c839808dae1"
+      Hint: FundCard_Fund
+      Value: "{8AC2C886-33C4-45BC-B0B9-A9A1A08032D7}"
+    - ID: "036aeb89-b0bd-42c2-b763-a56cdbe32cdc"
+      Hint: Fund_Classes
+      Type: Multilist
+      Value: |
+        {D928D2B3-C2AD-4D73-B2E5-D9A5DA665A0E}
+        {4B7B6C7A-8979-4F5A-ABBE-76A1571DC256}
+        {F1E67AB7-9A4D-4EEF-9D75-4F752E1AAAC2}
+        {2637D152-24E1-4E02-A226-AF16789E5936}
+        {F28595FB-2528-4E1D-A32A-4E006D49CD0F}
+        {4BCC9BF5-CB44-4FA6-BF54-037240D57ABD}
+        {A239A5F4-A628-439A-831A-DEBE6C1FB32B}
+        {A40D115E-4CAB-42ED-B0E4-EBF63545BCB0}
+        {A229AC95-436A-43A6-AE14-2AFAA57D3C1D}
+        {78CE7013-21F7-4D07-A757-44116255420F}
+        {AD0929D0-42A3-4646-8972-9D3FA3C43629}
+        {EA676D57-7EE6-4AEE-9C3E-FA72FB028D18}
+        {E5A19A9F-A592-4ADD-B5B7-9C596ED786A6}
+        {42284ADA-7139-4AA9-9612-8B9E3BEE6D8E}
+        {DD8BF381-59A2-424A-94C8-A15DCA5742A0}
+        {EB1C4111-C7BF-4161-BFC3-0E310C7EA06A}
+        {4505FDA8-D34F-475F-A00D-BD1E45169273}
+        {2D8F0877-FB30-42E8-B9E2-A907BE4CCF87}
+        {684453E7-EF69-469F-BAB4-96DD04FEEE52}
+        {D7CC8DEC-7927-4020-AF17-66DEB63C1960}
+        {E4352707-99EA-4722-81C6-C099574409BA}
+        {688F270C-357E-4F7B-A018-B0F68932FE30}
+        {E4BB8D41-2F38-4801-A112-BDE1A7DC5E9B}
+        {C5678024-594A-421E-8DCE-2AFA0D33DAA9}
+        {98787CA9-5EBA-4ED5-A6EE-7E046208E703}
+        {29D0D092-902D-4843-B93D-CF24AC8A94E4}
+    - ID: "0905f092-b5b5-4971-b87e-57f4810bd729"
+      Hint: FundCard_Description
+      Value: Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.&nbsp;
+    - ID: "13671185-84c9-49e4-8799-6135f386f3e5"
+      Hint: LegacyFund_FiveYears
+      Value: 8.759%
+    - ID: "1844ecc6-c68f-4989-96d5-296c34ede6e9"
+      Hint: LegacyFundOverviewData_OverviewText
+      Value: "<p>The Fund has been managed since launch in April 2014 by James Inglis-Jones and Samantha Gleave. The fund managers seek to deliver a positive absolute return over the long term by taking long and short positions, primarily in European companies. The Fund buys companies that can generate strong cash returns from their capital and appear cheap on these cash flows and shorts companies that are both expensive and struggling to generate cash.</p>"
+    - ID: "1d2ca9ff-d734-4e78-8459-3b94da9723bf"
+      Hint: LegacyBenchmarkFundData_BenchmarkYear4
+      Value: 18.390%
+    - ID: "200ea310-b6b4-4066-97f8-1f8b7c3e5a6d"
+      Hint: LegacyFund_FundTeamManager
+      Value: "James Inglis-Jones & Samantha Gleave"
+    - ID: "205ed0c5-d7b3-413a-8937-4b728937efef"
+      Hint: LegacyFund_FundTeam
+      Value: "{7B370435-9AB2-4E6F-9B1C-16209BA9C8BD}"
+    - ID: "221e703d-5ba7-4141-a98c-b76d2e5a663a"
+      Hint: LegacyFund_RiskWarning
+      Value: |
+        <h4>Key Risks</h4>
+        <p><span style="font-size: 15px;"><strong>Past performance is not a guide to future performance.</strong> Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. Investment in Funds managed by the Cashflow Solution team involves foreign currencies and may be subject to fluctuations in value due to movements in exchange rates. The Liontrust European Growth Fund holds a concentrated portfolio of stocks, if the price of one of these stocks should move significantly, this may have a notable effect on the value of the respective portfolio. The Liontrust Global Income Fund's expenses are charged to capital. This has the effect of increasing dividends while constraining capital appreciation.</span></p>
+        <br>
+        <h4>Disclaimer</h4>
+        <p><span style="font-size: 15px;">The information and opinions provided should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</span></p>
+        <br>
+        <p><span style="font-size: 15px;"><strong><span>This share class is hedged so investors do not benefit from or are disadvantaged from any movement in the value of the base currency of the fund against investible currencies. In contrast, if applicable, the index returns are in local currency and the average returns of the sector are in sterling.</span></strong></span></p>
+        <br>
+        <p><span style="font-size: 15px;">Source: Financial Express. Total return. Discrete performance data is not available for five full 12 month periods due to the launch date of the portfolio.&nbsp;Citywire information is proprietary and confidential to Citywire Financial Publishers Ltd ('Citywire'), may not be copied and Citywire excludes any liability arising out of its use.</span></p>
+        <br>
+        <p><span style="font-size: 15px;">&copy; $currentYear$ Morningstar. All Rights Reserved. The information contained herein: (1) is proprietary to Morningstar and/or its content providers; (2) may not be copied or distributed; and (3) is not warranted to be accurate, complete or timely. Neither Morningstar nor its content providers are responsible for any damages or losses arising from any use of this information. &nbsp;Past performance is no guarantee of future results.</span></p>
+    - ID: "224b2abd-69c2-4b50-91f5-e628f2ef9055"
+      Hint: LegacyFund_CalendarPerformanceDateText
+      Value: 
+    - ID: "225f8602-2cd0-4926-9e39-d4f5cb37ce5e"
+      Hint: LegacyFund_Type
+      Value: "{8924A32A-1723-4771-A448-74E97686F498}"
+    - ID: "239febfa-4def-40c5-8e2a-6186984962c9"
+      Hint: LegacyFund_CalendarPerformanceTableIntroText
+      Value: 
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20160504T093658Z
+    - ID: "2f3d22c2-88a4-4414-a6f4-d2a1fece4fbe"
+      Hint: LegacyFund_Year5
+      Value: 0.686%
+    - ID: "30054d3b-d471-469d-a82a-c575dc220cf2"
+      Hint: LegacyFund_BenchmarkName
+      Value: MSCI Europe
+    - ID: "31d5f858-8358-49c2-986e-3e2e69013d00"
+      Hint: LegacySectorFundData_SectorYear4
+      Value: 2.456%
+    - ID: "3e03b753-49e9-451f-9530-7a0a393ff881"
+      Hint: LegacyFund_ActiveShare
+      Value: 
+    - ID: "41480335-d753-48ae-bdd4-d85bb711334b"
+      Hint: LegacyBenchmarkFundData_BenchmarkSixMonths
+      Value: 12.918%
+    - ID: "44c4349f-8ad1-4259-a14c-9be2ea3e0fd5"
+      Hint: LegacyFund_Name
+      Value: Liontrust GF European Strategic Equity
+    - ID: "5419905c-ef5b-4577-95b8-c331fccfc261"
+      Hint: LegacySectorFundData_SectorFiveYears
+      Value: 5.289%
+    - ID: "57f1c36c-0d4c-4817-9bb1-250ae40ec7a8"
+      Hint: LegacyBenchmarkFundData_BenchmarkYear1
+      Value: "-6.846%"
+    - ID: "5c1402ef-7663-49d6-9c3c-a777a2238768"
+      Hint: LegacySectorFundData_SectorYear1
+      Value: 1.662%
+    - ID: "5cad1fc2-f50d-45a6-9a05-6dec3f005bb0"
+      Hint: LegacyFund_Awards
+      Type: Treelist
+      Value: 
+    - ID: "5cad2e1d-1e43-4b02-a684-fcab2cf85003"
+      Hint: LegacySectorFundData_SectorThreeYears
+      Value: 2.425%
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "6387ca9a-7a5a-4d33-b706-201681c0b74c"
+      Hint: FundCard_Heading
+      Value: Sustainable Investment
+    - ID: "6afb4eb4-25c4-472b-aa65-8ad9ddb3be2c"
+      Hint: LegacyFund_FundName
+      Value: GF European Strategic Equity Fund
+    - ID: "6cbf0ed2-94b3-4f2a-a84d-a36501e38105"
+      Hint: LegacyFund_LaunchDate
+      Value: 20140424T230000Z
+    - ID: "6d258747-e783-4579-9c3c-f8f23d03ccf6"
+      Hint: LegacySectorFundData_SectorOneYear
+      Value: 3.412%
+    - ID: "737790ec-a3de-49a7-aa58-7c0f574c0e4a"
+      Hint: LegacyBenchmarkFundData_BenchmarkOneYear
+      Value: "-1.886%"
+    - ID: "745247e0-72cf-441e-905d-4d35608d5724"
+      Hint: LegacySectorFundData_SectorSixMonths
+      Value: 5.043%
+    - ID: "76af5024-2b12-421a-96cd-46e756f1db9a"
+      Hint: FundCard_CTA
+      Value: |
+        <link id="{C8165F81-7FA9-4E88-BA21-9BC72C9629E1}" querystring="" target="" text="fund cta" url="/LionTrustNew/Home/Data Template/Fund Detail Page" linktype="internal" />
+    - ID: "776341a4-f1e7-4a9e-9b44-7da25ed3505e"
+      Hint: LegacyFund_Process
+      Type: Treelist
+      Value: "{3C72A90A-F550-432B-83FF-45F2DF7A4BE1}"
+    - ID: "78b7b037-16f3-4d3f-bd57-f7ecd52abc46"
+      Hint: LegacyFund_Year4
+      Value: 5.235%
+    - ID: "7994e108-44fb-4349-bb80-736e783fbbb3"
+      Hint: LegacyFundOverviewData_OverviewTitle
+      Value: The Fund
+    - ID: "7b91fb4b-1ec0-4d49-9aba-d31f17c3d0f5"
+      Hint: LegacyFund_Year2
+      Value: 3.033%
+    - ID: "855d1e7b-3d08-4526-ad2d-fa2e86e9be9b"
+      Hint: LegacyFund_FundManagers
+      Type: Treelist
+      Value: |
+        {3668EA85-45A7-4CF0-9131-85BA30A3F1E4}
+        {6E586116-1EA0-4F93-B711-357D06487909}
+    - ID: "885f3d37-44b1-4a78-8d48-4873a39c638e"
+      Hint: LegacyFund_Year3
+      Value: 2.600%
+    - ID: "899548af-6e4d-4b51-af9f-24bb58ac9b53"
+      Hint: LegacyFund_LaunchDateByAuthor
+      Value: 20120215T000000Z
+    - ID: "8d126770-f164-4e20-94a0-0666798f3201"
+      Hint: LegacyFund_Quote
+      Value: <em>By using the Cashflow Solution investment process, a concentrated long book and a diversified short book, our approach offers the potential for better returns than the market in the long term while taking much less risk.</em><br />
+    - ID: "8f1d085a-547e-4c60-b936-081b456d4659"
+      Hint: LegacyFund_Year1
+      Value: "-14.856%"
+    - ID: "90a7b1e0-c14e-4a3d-a717-72bec978a99a"
+      Hint: LegacyFund_CitiCode
+      Value: GQKV
+    - ID: "9238823c-d3a1-4b63-940c-867e606716aa"
+      Hint: LegacyFund_HistoricYieldText
+      Value: Fund size and number of holdings data is as at previous month end. Performance data is as at previous working day.<br />
+    - ID: "925a2a5a-c73b-46bc-9eb9-726361aa881d"
+      Hint: LegacyFund_ThreeYears
+      Value: 2.311%
+    - ID: "93ffb351-abd8-42a3-a672-15d82fa2783f"
+      Hint: LegacyBenchmarkFundData_BenchmarkFiveYears
+      Value: 28.714%
+    - ID: "9bb40c8a-ca0f-4dfe-a6e7-e779591b2b03"
+      Hint: LegacySectorFundData_SectorYear2
+      Value: 0.089%
+    - ID: "a3f8d30b-b1a3-4135-8cb0-1921cbac3e5c"
+      Hint: LegacyBenchmarkFundData_BenchmarkYear5
+      Value: 7.621%
+    - ID: "a8840688-dce2-49f2-85fa-a2f1bce02746"
+      Hint: LegacyBenchmarkFundData_BenchmarkSinceLaunch
+      Value: 44.648%
+    - ID: "a9e47f4b-123f-4121-ac01-7d0b07820939"
+      Hint: LegacyBenchmarkFundData_BenchmarkYear3
+      Value: 2.666%
+    - ID: "aa7b22ee-71c9-4781-826f-0ccfd357a03f"
+      Hint: LegacySectorFundData_SectorYear3
+      Value: "-1.228%"
+    - ID: "acd80b46-146c-415a-9e5a-bf0f35b0392e"
+      Hint: LegacyFund_OneYear
+      Value: "-8.989%"
+    - ID: "ad147349-080a-4902-8ae0-5cf5ef9cca43"
+      Hint: LegacyBenchmarkFundData_BenchmarkThreeYears
+      Value: 10.003%
+    - ID: "b3e71185-b6c6-44f9-8b44-902957935bba"
+      Hint: LegacyFund_ActiveShareText
+      Value: 
+    - ID: "bf364003-b633-48a4-877f-3e553d116ceb"
+      Hint: LegacyFund_Sector
+      Value: Absolute Return
+    - ID: "c0960c1b-84de-4c1c-bbb9-8c7d86db3c76"
+      Hint: LegacySectorFundData_SectorSinceLaunch
+      Value: 7.404%
+    - ID: "c1a9bff3-bcc0-40c8-a849-32b923e6e323"
+      Hint: LegacyFund_SinceLaunch
+      Value: 22.520%
+    - ID: "c50511fa-ae6d-446b-ab43-aa1bcbbaa079"
+      Hint: LegacyFund_SixMonths
+      Value: 13.209%
+    - ID: "d3a5bbc1-32dc-492d-9c70-645a8e47fb34"
+      Hint: LegacyFund_FundSize
+      Value: €50630500.000
+    - ID: "d8e953d2-a550-47f4-80d4-a28c6e117b2c"
+      Hint: LegacyBenchmarkFundData_BenchmarkYear2
+      Value: 5.816%
+    - ID: "da4173d0-1f60-4edc-84a0-04c140de97d0"
+      Hint: LegacyFund_FundDescription
+      Value: 
+    - ID: "db79496e-bcc5-443f-bba6-e8d5bf0a31a3"
+      Hint: LegacyFund_NumberOfHoldings
+      Value: 131
+    - ID: "e43f6e86-0318-4766-b880-0c4f6512ca4e"
+      Hint: FundPage_Page
+      Value: |
+        <link text="View Fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{313A747A-34BC-46FA-A8AE-5BA31A5797F9}" />
+    - ID: "e456c092-dda4-4179-aa02-1505821fd2a1"
+      Hint: LegacySectorFundData_SectorYear5
+      Value: 0.822%
+    - ID: "e5d3dec0-9cbb-435e-a231-391006503c1c"
+      Hint: LegacyFund_SalesforceFunds
+      Value: "{29871BFF-2F0E-4DB0-B71A-892812FD62DF}"
+    - ID: "eb75dfef-c624-4571-b92b-8f37c36fcee6"
+      Hint: FundCard_Image
+      Value: |
+        <image mediaid="{438CEA59-E77D-4FB0-A495-653BA891E7EC}" />
+    - ID: "ec65712d-5b34-40aa-ae21-fb887d85d44f"
+      Hint: LegacyFund_PerformanceTableIntroText
+      Value: 

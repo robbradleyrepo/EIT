@@ -1,0 +1,204 @@
+﻿---
+ID: "0d0a4661-9fa1-4263-a2e8-f77f5d1aaed0"
+Parent: "0cf729d8-3938-4516-a08f-84e59495194e"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2020/06/10 macro and micro fixed income trades for summer
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 107000
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{8FA3F8C3-426B-4EF9-866F-737C75E70BD2}"
+              p:before="*"
+              s:ds="{AD7430E3-57B7-4D9B-B4D4-E52D614FAF1A}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{37D264A8-AF81-470C-9DF5-C49BC60A22DF}"
+              p:after="r[@uid='{8FA3F8C3-426B-4EF9-866F-737C75E70BD2}']"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{307B25A0-00B4-4E53-8971-3BCAEDBD41F8}"
+              p:after="r[@uid='{37D264A8-AF81-470C-9DF5-C49BC60A22DF}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{5D7D5E12-DA48-463B-9B0C-DF6F23F44986}"
+              p:after="r[@uid='{307B25A0-00B4-4E53-8971-3BCAEDBD41F8}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See%20also...&amp;RelatedPages=%7B5CD4AC75-A565-45D0-AF4C-D6C06FA42B31%7D%7C%7B423225AC-3A28-40F9-AADE-35C234FAFE15%7D%7C%7BDA9CE397-7948-49C2-9704-872C3265F305%7D%7C%7BB837FA56-A22F-41BA-B338-3C6FAB7DCA49%7D&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "094932b9-ff77-4977-966e-d18f7c7ac091"
+      Hint: LegacyArticle_Subtitle
+      Value: David Roberts, Phil Milburn & Donald Phillips
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: 
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: 10 macro and micro fixed income trades for summer | Insights | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: 10 macro and micro fixed income trades for summer
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200623T102908Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: Active management is largely about taking opportunities and the Global Fixed Income team highlight ten potential alpha sources in their funds for the summer months, across macro trades, investment grade and high yield.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: 10 macro and micro fixed income trades for summer
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p style="text-align: left;"><strong><span>Active management is all about taking advantage of opportunities – and this means being prepared to sell, buy or change your mind as circumstances develop. During a crisis, even otherwise successful active market participants can become fixated on their own asset class or geography and not see the bigger picture. Processes that have worked for years are often disregarded, as fear and greed trump rational, long-term investment objectivity. </span></strong></p>
+        <p style="text-align: left;"><span>The following presents 10 trades we currently have in place across our portfolios as we look to take advantage of opportunities, with five macro and five more stock-specific micro plays<strong>.<br /><br /></strong></span></p>
+        <p style="text-align: left;"><strong><span>1. Normal high correlation can (temporarily) break down: opportunity in region-specific investment grade indices</span></strong></p>
+        <p style="text-align: left;"><span>Investment grade companies on both sides of the Atlantic are facing similar headwinds. There are nuances, however, with the US market having higher exposure to the energy sector and Europe suffering from potential contagion for national champion companies from peripheral countries’ sovereign risk.&nbsp; </span></p>
+        <p style="text-align: left;"><span>Overall though, these are large companies in both markets with very low default risk, so the two series naturally mean revert, and the absolute and, importantly, relative volatility is therefore low. We can capture this via a correspondingly low-risk relative value trade, using credit default swap indices.&nbsp; </span></p>
+        <p style="text-align: left;"><strong><span>Fund position</span></strong><span>: We are ‘long’ risk in CDX IG, the US investment grade CDS index, and ‘short’ risk in iTraxx Europe, the European investment grade comparator (this index is often referred to as Main). The entry point for our funds in May 2020 was a +10 basis points spread differential, with a 0.75 years position size on each leg.</span></p>
+        <p style="margin-bottom: 18pt; text-align: left;"><strong><span>Target</span></strong><span>: We would look to take profits if this differential gets close to zero, thereby generating a high single-digit basis point profit per fund. </span></p>
+        <p style="text-align: center;"><img src="-/media/647B3A4BF2A945A791C2A4C3307216ED.ashx?h=334&amp;w=600" style="width:600px; height:334px;" alt="Spread between US and European investment grade bonds" class="custom-image-height-auto" /></p>
+        <p style="text-align: left;"><strong><span><br />2. Investment starting point matters and even more so in times of stress: the folly of quantitative easing (QE) laid bare</span></strong></p>
+        <p style="text-align: left;">We have long been advocates of the US Treasury market over European alternatives. Those who have followed our Strategic Bond funds will know that, for many quarters, we have owned US duration and been close to zero or even negative in European duration, largely on valuation grounds under ‘normal’ market conditions. One unexpected bonus of our position is that it has worked well during the recent crisis.</p>
+        <p><span>The European Central Bank (ECB) took interest rates into negative territory several years ago and we questioned on both the wisdom and benefits of such a move. Without any fiscal stimuli, we could understand the theory although maintaining the practice after a decade of economic expansion seemed doubly dubious. </span></p>
+        <p><span>It is always nice to have a bit of room for manoeuvre – the opportunity to do something more should circumstances dictate. Not so for the ECB however: since former chair Mario Draghi’s farewell speech in September, it has asserted rates would not be lowered. </span></p>
+        <p><span>Anyone buying German (or French, Spanish or Italian) bonds in March may therefore have expected to benefit from the pandemic-inspired flight to quality; after all, the ECB increased QE and launched various market support programmes. This turned out not to be the case, however, and while US bonds rose with Federal interest rate cuts, core EU debt actually fell between April and June as the chart highlights with Treasuries versus bunds.</span></p>
+        <p style="text-align: center;"><span><img src="-/media/AF7F147AE79E48479F0CC0E99D381469.ashx?h=334&amp;w=600" style="width:600px; height:334px;" alt="Not all quality performs the same" class="custom-image-height-auto" /></span></p>
+        <p><strong><span>Fund position</span></strong><span>: At end of May, US bonds still offered 1.2% ‘extra’ versus German equivalents. We believe this spread may drop below 1%, which would mean these bonds rallying another 2-3% relative to German ones, and so we have a ‘long US, short German’ position across roughly 15% of the Strategic Bond funds.</span></p>
+        <p><strong><span>Target</span></strong><span>: A move from a 1.2% to 1% spread would add around 0.35% to overall fund performance.</span></p>
+        <p style="text-align: left;"><strong><span><br />3. We have this great idea to avoid market direction</span></strong></p>
+        <p><span>Interest rate curve management has been a source of alpha for many bond managers over the past decade. Indeed, everyone from the Federal Reserve to equity managers seemed to believe that studying ‘the curve’ was key to the future.</span></p>
+        <p><span>Not so much now, however: with cash yields everywhere at or close to all-time lows, the predictive power of the curve has gone, as has the ability to play it and make money without betting on market direction.</span></p>
+        <p><span>Bonds with a maturity up to about seven years for most G20 countries are now ‘anchored’ by central bank policy – the ECB said in September it was done with rate cuts and the US, UK and even New Zealand’s central banks have gone as low as they are likely to and will now stay there for a long time. Shorter-dated bonds have therefore lost most of their volatility and this is clear from the chart.</span></p>
+        <p style="text-align: center;"><span><img src="-/media/1CDB7EEAF88C4D1EA449D42607BDF9BC.ashx?h=334&amp;w=600" style="width:600px; height:334px;" alt="Five year US Treasury yield" class="custom-image-height-auto" /></span><span style="font-size: 1.5rem;"></span></p>
+        <p><span>Five-year US bond yields have hardly moved since March; 10 and 30-year bonds, meanwhile, have gone up and down as risk sentiment varied. With this mind, next time a geeky bond manager tells you they have a great low-risk, non-directional curve trade, ask them exactly how this works: if you have a position in something which doesn’t move as a hedge against something that does, this is no hedge.</span></p>
+        <p><strong style="font-size: 1.5rem;">Fund position</strong><span style="font-size: 1.5rem;">: We have no five-year bonds and a decent amount of 30-year and did this when US yields rose to nearly 1% in late May.</span></p>
+        <p><strong style="font-size: 1.5rem;">Target</strong><span style="font-size: 1.5rem;">: This has nothing to do with curves. If risk sells off and bonds rally, our 30-year bonds go up in value while five-year debt does next to nothing. This is directional and a partial hedge against all those investment grade and high yield assets we own.</span></p>
+        <p><strong style="font-size: 1.5rem;"><br />4. Just when we thought it was safe to go back into the water . . . Brexit, the sequel</strong></p>
+        <p><span style="font-size: 1.5rem;">It is still possible to find opportunities to make money in cross-market trades: as an example, somehow, Brexit is staging a return to the headlines. Market makers are once again convinced there will be a ‘hard’ option and sterling has slipped against the euro as a result, while gilts have rallied as markets believe the MPC will surely take rates into negative territory.</span></p>
+        <p><span style="font-size: 1.5rem;">Meanwhile, on the other side of the Channel, all is not well in the kingdom of Macron, with the French president facing less than 40% approval ratings and burgeoning Italian-style debt. This combination pushed gilt yields lower and OATs to higher levels and the spread between the two recently narrowed to 20 basis points: apart from that Brexit vote moment back in 2016, this is the lowest in over a decade.</span></p>
+        <p><span style="font-size: 1.5rem;">We cannot help but worry about the fact the UK has a large (something like £140 billion) pile of gilts to issue. Short term, the Bank of England will play with QE and pretend it is all going away, but as the UK moves from the shelter of the EU, the Bank has to pray international investors do not target sterling and create inflation, and decide to continue turning up to gilt auctions. This is a real balancing act and given the backdrop, I don’t need to own gilts and, right now, the long-term relative value in France looks more appealing.</span></p>
+        <p style="text-align: center;"><span style="font-size: 1.5rem;"><img src="-/media/1A85BB42FF9840049A43641B6848CAED.ashx?h=334&amp;w=600" style="width:600px; height:334px;" alt="Spread between 10 year gilts and 10 year Oats" class="custom-image-height-auto" /></span></p>
+        <p><strong><span>Fund position</span></strong><span>: We added French debt and sold UK debt at -0.2%. We did that for around 10% of the fund.</span></p>
+        <p><strong><span>Target</span></strong><span>: With a 2% relative move to -0.4%, you ‘make’ 20 basis points at the fund level but I’ll settle for 10 easy bps if it moves to -0.3%.<br /></span></p><p><br /></p>
+        <p style="text-align: left;"><strong><span>5. If you really are a long-term investor, how much sub-investment grade debt do you own?</span></strong></p>
+        <p><span>Risk assets are on the cheap side at present, while risk-free have never been more expensive. Most of us own a pile of risk-free, often hidden away in our pension funds while high yield bonds are incredibly under owned and most people seem terrified of what is a multi-trillion dollar asset class, dwarfing the FTSE 100 or Dax.</span></p>
+        <p><span>
+        High yield is ‘volatile and illiquid’ apparently but we dispute that description and, overall, the data support us. But let’s say it is true: if you bought high yield today and ignored it for five years how would you do?</span></p>
+        <ul style="list-style-type: disc;">
+            <li style="text-align: left;"><span>At the end of May, five-year UK government bonds paid a zero yield: hold these for five years and you are guaranteed to make nothing.</span></li>
+            <li style="text-align: left;"><span>Meanwhile, the global high yield market paid around 7%.</span></li>
+            <li style="text-align: left;"><span>We would expect a couple of companies in that market to fail but, as the table shows, you have around a 35% return differential to play with and those are good odds.</span></li>
+        </ul>
+        <p style="text-align: center;"><span><img src="-/media/63E09D56676F475D85B01C1183FF4C6D.ashx?h=102&amp;w=602" style="width:602px; height:102px;" alt="Five year gilts vs Global high yield" class="custom-image-height-auto" /></span></p>
+        <p><span style="font-size: 1.5rem;">In truth, parts of the global high yield market, like highly leveraged emerging market companies, are too risky for our process and we don’t like some of the thematic, cyclical risks. But if you sacrifice a little of that 7% yield, you can have a high-quality portfolio including names such as Netflix, Goodyear or Bausch &amp; Lomb. Even if you expect zero capital gain, the income alone questions the sense in owning government bonds or equity versus high yield.</span></p>
+        <p><strong><span>Fund position</span></strong><span>: Our Strategic funds are ‘overweight’ high yield and apart from our core bond holdings, we also have a position in the iTraxx XO series. We own about 10% of that index and are paid around 5% when hedged into the UK.</span></p>
+        <p><strong><span>Target</span></strong><span>: If we own that for five years, at the fund level that small weight gives us a 2.5% gain relative to a whole portfolio invested in five-year gilts.<br /></span></p><p><br /></p>
+        <table>
+            <tbody>
+                <tr>
+                    <td><strong><img src="-/media/D46010D5184B4F9992CA3F59258ADE0E.ashx?h=26&amp;w=151" alt="IQVIA" class="custom-image-height-auto" style="height: 26px; width: 151px;" /></strong>&nbsp;</td>
+                    <td>&nbsp;<strong>6.</strong>&nbsp;<strong>High yield idea one: IQVIA, 2.875%/15.06.28, 3.5% yield (GBP) – highest-quality bond from the highest-quality end of high yield market<br /><br /></strong></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&nbsp;<span style="font-size: 1.5rem;">IQVIA is a large, global healthcare services company, primarily involved in data, technology and analytics. It is a growing business, enjoying 6-7% growth rates over the last few years, and the company is neither particularly cyclical nor directly exposed to government budgets and politics, unlike many healthcare borrowers in the high yield market.</span></p>
+        <p><span>It generates good free cash flow and is also appreciated by the equity market, with a market cap close to $30 billion. S&amp;P judges the company to have a BB+ rating, at the highest end of the sub-investment grade scale. </span></p>
+        <p><span>Having held IQVIA in our GF High Yield Bond fund since launch, and the Strategic Bond fund having owned it previously, we recently purchased a new issue from the company with a spread of 3.3%. This was when other BB bonds had a spread of 3.7% and for that small yield give-up relative to the average of its cohort, we have picked up one of the highest-quality companies from the higher-quality end of the market.<br /></span></p><p><br /></p>
+        <table>
+            <tbody>
+                <tr>
+                    <td><strong><img src="-/media/8DCFA80C8B9C493A86E6C9954810B9D9.ashx?h=105&amp;w=150" alt="Virgin Media" class="custom-image-height-auto" style="height: 105px; width: 150px;" /></strong>&nbsp;</td>
+                    <td>&nbsp;
+                    <p><strong>&nbsp;7. High yield idea two: Virgin Media, 4.875%/15.07.28, 4.5% yield (GBP) – quirky structure offers yield pick-up versus unsecured sector</strong></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><span style="font-size: 1.5rem;">Virgin Media is a leading provider of broadband/fixed line communications in the UK, owned by long-term telecom asset player Liberty Global. The trend towards packaging up broadband and mobile into one customer bundle has seen Virgin and O2 recently announce a tie-up in the UK, which should strengthen its position, or at least bolster it in what remains a competitive marketplace.</span></p>
+        <p><span>Virgin Media is a regular borrower in the high yield market, meeting the needs of its investment in infrastructure and its owners’ appetite for debt, both of which it can afford. Its desire to find different sources of funding has led to the company switching part of its financing for customer installation costs from banks to the bond market. </span></p>
+        <p><span>These come in the form of vendor finance notes, which are secured on receivables and guaranteed by Virgin Media on an unsecured basis. Because they are a little ‘quirky’, however, they offer a higher yield than unsecured bonds of around 0.4%, with both rated mid B by the agencies. This is a discount we see as attractive for our Strategic Bond fund clients in a credit we fundamentally like.</span></p>
+        <table>
+            <tbody>
+                <tr>
+                    <td>&nbsp;<strong><img src="-/media/52539D77C75D42329EC58E9CC2137D40.ashx?h=165&amp;w=150" alt="Origin" class="custom-image-height-auto" style="height: 165px; width: 150px;" /></strong></td>
+                    <td><strong><br /><br /><br />&nbsp;8. Investment grade idea one: Origin Energy, 1%/17.09.29 (EUR) – energy by name, utility by nature</strong>&nbsp;<br /><br /><br /><br /></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&nbsp;<span style="font-size: 1.5rem;">Origin Energy is an integrated Australian utility with a market capitalisation of A$10 billion. The corporate bond market had focused too much on Origin’s upstream energy business, including a share in the Australia Pacific LNG (APLNG) venture. This fundamentally missed Origin’s integrated nature and the cashflows generated by its utility businesses, even though the company deployed this cash previously as a partner in the development of APLNG.</span></p>
+        <p><span>Origin is not a frequent issuer of corporate bonds but has had debt outstanding in the European market since 2011. We were pleasantly surprised its bonds sold off so much as it gave us the chance to buy a bargain for the funds. We purchased during May 2020 at a spread of approximately 310 basis points, equating to a cash price of 87c in the euro. The bonds have started to rally but have much further to go.</span></p>
+        <table>
+            <tbody>
+                <tr>
+                    <td>&nbsp;<strong><img src="-/media/826F9BA2DDB0480AAD04028DB94BED74.ashx?h=75&amp;w=150" alt="AT&amp;T" class="custom-image-height-auto" style="height: 75px; width: 150px;" /></strong></td>
+                    <td><br /><br /><strong>9. Investment grade idea two: AT&amp;T, 4.375%/14.09.29 (GBP) – particularly cheap bond from prolific issuer<br /><br /></strong></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&nbsp;<span style="font-size: 1.5rem;">AT&amp;T is a communications and media behemoth with a market capitalisation of over $200 billion. Its diversity is a key strength for creditors, with temporary hits from Covid-19 exposed divisions such as the Warner Bros movies business offset by the wireless and wireline franchises. The last few years have seen AT&amp;T undertake an acquisition spree, including DirecTV followed by Time Warner, which completed in 2018 almost two years after the original takeover announcement. The company has now committed to deleveraging its balance sheet, having raised huge swathes of debt to pay for these acquisitions; as bondholders, we were delighted to see the announcement in March 2020 that a $4 billion share buyback was suspended for prudence reasons during the crisis.</span></p>
+        <p><span>AT&amp;T has a lot of bonds outstanding for us to choose from. In fact, it is the largest corporate and the third-largest investment grade issuer overall, the only one of the top five issuing companies that is not a bank. Due to being such a prolific issuer of debt, AT&amp;T’s bonds tend to have wider spreads than other companies with a similar business profile. The £4.375 14/09/2029 are particularly cheap with a credit spread of just over 200 basis points, which compares very favourably to euro and US dollar-denominated debt of the same tenor.</span></p>
+        <table>
+            <tbody>
+                <tr>
+                    <td>&nbsp;<strong><img src="-/media/8EBD060AF8A4454ABFCE0F8829443A3D.ashx?h=121&amp;w=151" alt="State Street" class="custom-image-height-auto" style="height: 121px; width: 151px;" /></strong></td>
+                    <td><strong><br /><br />10. Investment grade idea three: State Street, 5.625%/15.12.23 perpetual (USD) – while we hate tier 1 debt generically, State Street’s bonds are the exception</strong>&nbsp;<br /><br /></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&nbsp;<span style="font-size: 1.5rem;">As anyone who has spoken to us about markets in the last few months will know, we are not currently keen on tier 1 banking securities. Tier 1 debt is the lowest tranche of the bond part of the capital structure of banks and has its name because regulators view it as a good type of capital for banks to have. Tier 1 bond securities are perpetual with a call date at some point in the future; the optionality over the call resides with the issuer and requires regulatory approval.&nbsp;</span></p>
+        <p style="text-align: left;"><span>Post the financial crisis of 2008/9, traditional tier 1 structures have been deemed not fit for purpose by European regulators and replaced with additional tier 1 (AT1) instruments. These have a mandatory bail-in if the bank falls below certain capital levels, largely via a conversion into equity but it can also be through a haircut on the bonds’ principal. Furthermore, at times of capital strain, the coupons could be suspended. Most AT1 debt has a high yield rating due to the deep levels of subordination compared to the issuing bank’s senior debt.</span></p>
+        <p style="text-align: left;"><span>For most banks, the increased lending activity during the Covid-19 crisis is leading to a little capital strain; presently, the majority of this is due to an expansion of the denominators of the ratios, the assets and risk weighted assets of the bank. Any large increase in non-performing loans due to the crisis would make it much harder to generate profits (which when retained become capital) or, in extremis, lead to some writedowns. US banks were much faster to book large general provisions in the last quarter, whereas provisioning by European banks has been lower, identifying specific bad loans but not adding a large conservative generic buffer.</span></p>
+        <p style="text-align: left;"><span>With the equity of some banks, such as Lloyds, down 50% during the Covid-19 crisis, we would posit that you are far off allocating capital to one rung lower on the capital structure, its shares, than you are chasing extra yield in AT1 risk.&nbsp; </span></p>
+        <p style="text-align: left;"><span>As much as we are avoiding AT1 assets, there is a tier 1 bond we like, namely State Street $5.625% 15/12/2023 perpetual. The bond currently yields a very attractive 6.5% if one assumes it is called in December 2023, whereas if the bonds are left outstanding, the yield falls to a tolerable 4%. State Street is a custody bank rather than a traditional lender and its activities include investment servicing of over $30 trillion of assets and asset management of $3 trillion. The more defensive nature of these activities is attractive to us as we seek out long-term sustainable business models and those companies with less vulnerability during the crisis. Additionally, they lead to a higher credit rating: even the company’s tier 1 bonds are comfortably investment grade, rated at a mix of mid and high BBB from agencies.</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: left;"><span style="color: #222222;">For a comprehensive list of common financial words and terms, see our glossary&nbsp;</span><span style="color: #34b233;"><a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms" style="color: inherit;"><span style="color: inherit;">here</span></a>.</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: left;"><span style="color: #222222;">&nbsp;</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: left;"><strong><span style="color: #222222;">Key Risks</span></strong></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: left;"><span style="color: #222222;">Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. Investment in Funds managed by the Global Fixed Income team involves foreign currencies and may be subject to fluctuations in value due to movements in exchange rates. The value of fixed income securities will fall if the issuer is unable to repay its debt or has its credit rating reduced. Generally, the higher the perceived credit risk of the issuer, the higher the rate of interest. Bond markets may be subject to reduced liquidity. The Funds may invest in emerging markets/soft currencies and in financial derivative instruments, both of which may have the effect of increasing volatility.</span></p>
+        <p style="background: white; margin: 0cm 0cm 10.5pt; text-align: left;"><span style="color: #222222;"><strong><span style="color: #222222;">Disclaimer</span></strong><br />
+        <br />
+        The information and opinions provided should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</span></p>

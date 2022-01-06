@@ -87,6 +87,7 @@
             public const string SearchPlaceholder_FieldId = "{0EBA5571-B102-467C-993A-3025A1176831}";
             public const string SortLabel_FieldId = "{745B2803-4617-45DB-9C43-E6D910E50EC3}";
             public const string FilterLabel_FieldId = "{6AF33400-0709-4517-B1F7-8D01C5D66C06}";
+            public const string FilterMobileLabel_FieldId = "{115428E3-8A89-48C1-90EC-2E7AE6A6EB70}";
             public const string VideoIcon_FieldId = "{68CADA79-69A0-454A-A9EB-1E5C3E6A6CE2}";
             public const string WhatcNowLabel_FieldId = "{566136F8-0D80-4B50-8ECC-9DB53FC96161}";
         }
@@ -95,6 +96,7 @@
         {
             public const string PreviousLabel_FieldId = "{EE10A0F8-834B-4C8B-9EC5-9B643FCD112C}";
             public const string NextLabel_FieldId = "{87E96566-897A-4D4C-8DA5-8727BD4E436E}";
+            public const int PageSize = 12;
         }
 
         public static class FundLister

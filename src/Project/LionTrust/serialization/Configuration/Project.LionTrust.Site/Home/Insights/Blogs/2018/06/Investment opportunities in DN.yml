@@ -1,0 +1,119 @@
+﻿---
+ID: "99d65497-969e-444f-9b36-e490e1c55ed7"
+Parent: "835bb1dd-a6e0-4fec-b3fd-bda65a73d70a"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2018/06/Investment opportunities in DNA sequencing
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 11100
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{7FF07CBA-EDB2-4B6C-B998-3B5E57659949}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{318846AA-4A93-4D15-8AFA-C6FF471B4E22}"
+              p:after="r[@uid='{7FF07CBA-EDB2-4B6C-B998-3B5E57659949}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{3F6D54B6-6279-4FD5-87A9-FF6E2905E1F9}"
+              p:after="r[@uid='{318846AA-4A93-4D15-8AFA-C6FF471B4E22}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See also...&amp;RelatedPages={FA0E822B-9229-47E9-9341-79282A4EE71F}|{FC17F0A6-ECAA-4CD7-B80B-6E67FDE3251B}|{77B5C263-DEEE-4A04-AE96-C01C2138DFCD}|{F8415A35-9C34-47F7-BACE-42EAABBFA145}&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{3D5873D2-8F3E-4B53-A8EC-5DEF94420AD5}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Investment opportunities in DNA sequencing | Insights | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: Investment opportunities in DNA sequencing
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20160620T230000Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: Simon Clements, investment manager on the ATI Sustainable Future fund team explains how he is capitalising on exciting developments within the DNA sequencing space.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Investment opportunities in DNA sequencing
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p><em>This article was issued by ATI and published on 21 June 2016.</em></p>
+        <p><strong>Simon Clements, investment manager on the ATI Sustainable Future fund team explains how he is capitalising on exciting developments within the DNA sequencing space.</strong></p>
+        <p>An interesting prospect for long-term, forward thinking investors like ATI is companies in the medical science and technology sectors that are developing groundbreaking technologies and treatments. A particularly exciting area is DNA sequencing, which is advancing rapidly and suggesting greater and greater possibilities for patients and investors. </p>
+        <p>The cost of DNA sequencing has reduced dramatically over the past 15 years. The first human genome was sequenced in 2000 at a cost of US $2.7 billion (&pound;1.9 billion)(1), however today it is possible to do it for just a few thousand dollars. This increased accessibility is paving the way for a myriad of new applications that could help to prevent disease and improve the quality of life for millions of people across the globe. </p>
+        <p>It is possible that over the next decade the cost of DNA sequencing could decline to a point at which it becomes ubiquitous. With less than 0.01% of the global population sequenced to date (just 228,000 of a potential 7.4 billion)(2), we think that there remains considerable future growth potential for manufacturers of DNA sequencers and related products. Industry leader Illumina and its main rival Thermo Fisher &ndash; which we hold within our Sustainable Future fund range &ndash; are both well positioned to take advantage of this.</p>
+        <p><strong>Immediate applications</strong></p>
+        <p>Only about 0.1% of our genomes are different to each other. Understanding these variations and how they relate to potential diseases is an area of significant interest and may be the key to identifying treatments for complicated diseases including asthma, diabetes and Alzheimer&rsquo;s. </p>
+        <p>One of the first and most rapid adoption settings for DNA sequencing is in pre-natal testing relating to down&rsquo;s-syndrome. Existing tests involve extracting foetal cells from the placenta or amniotic fluid via a large needle; a highly&nbsp;invasive procedure that carries a risk of miscarriage. The non invasive screen involves taking a blood sample from the mother, as the foetus sheds DNA into the mother&rsquo;s bloodstream. This procedure is currently chosen by around 50% of mothers in the US that are categorised as high risk and its adoption is expected to follow throughout Europe and the rest of the world. </p>
+        <p>Within oncology, the genetic mutation responsible for the growth of cancerous tumours is now frequently being identified, as is how a tumour evades the immune system. This is a significant development from simply being able to locate the cancer in the body. Importantly, this is leading to a more personalized approach to treatment through which drugs are being designed to target the specific mutations that have caused the cancer in an individual. </p>
+        <p>Leaders in oncology with broad portfolios that could potentially combine therapies include Roche, Novartis, Bristol Myers Squibb, Astra Zeneca and Merck. These should all do well, however there are also some interesting smaller companies developing innovative new therapies such as Incyte and Celldex Therapeutics. </p>
+        <p>DNA sequencing is also driving innovation in cardiovascular medicine. A study published in the New England Journal of Medicine showed that over a 15 year period individuals with loss of function mutations in the gene that codes for a particular protein known as PCSK-9 had 29% lower levels of LDL cholesterol and an 88% reduction in the risk of coronary heart disease (3). Several companies are developing drugs that target PCSK-9 that could potentially be approved by regulators this year. </p>
+        <p>Companies at the vanguard of population genetics such as Amgen and Regeneron should have a first mover advantage. We hold American multinational biopharmaceutical company Amgen within the Sustainable Future funds. A leader in the development of a number of cutting edge treatments, Amgen&rsquo;s shares have risen 163% over the five years to 16 June (4). While this lags the Nasdaq Biotechnology index over the same period, it is well ahead of the 63% returned by the MSCI World index (5).</p>
+        <p><strong>Future potential</strong></p>
+        <p>There is significant future opportunity for companies developing drugs targeting rare diseases including Alexion, Shire Pharmaceuticals and Vertex. Alexion, which we hold in the Sustainable Future funds, is a leader in the area of ultra rare diseases. These diseases are so rare that the biggest challenge for doctors is identifying them. DNA sequencing has the potential to help us identify patients at risk of ultra rare diseases through their DNA print, rather than through symptoms. This expands the market for companies like Alexion, whose share price has grown by 180% over the five years to 16 June (6) and in which analysts still see more than 70% potential upside (7).</p>
+        <p>The use of DNA sequencing is not limited to human medicine. DNA sequencing is also used in areas such as enzyme DNA. Enzymes are biological catalysts that are used in applications ranging from laundry detergents to the manufacture of biofuels and food production. Enzyme producers such as Novozymes, which we hold, are leveraging this technology to accelerate the development of enzymes unique to their customer&rsquo;s specific requirements. </p>
+        <p>Reading and understanding DNA is also only the first step in this fascinating journey. The next step is writing DNA. Gene editing technologies may enable us to replace faulty DNA, enabling cures for genetic diseases such as sickle cell anaemia. This could also potentially lead to creating synthetic organisms that produce bio fuels. Indeed, American biotechnologist and geneticist Craig Venter has already created the first living organism with a synthetic genome (8).</p>
+        <p>When the human genome project began there were only a few diseases for which we understood the genetic cause. Today we know the genetic basis for thousands of genetic diseases. Sequencing has driven rapid progress in our understanding and we believe this will lead to the development of more effective treatments for serious diseases and increased opportunities for application in other areas, which will drive returns for early investors.</p>
+        <p><strong>Sources</strong></p>
+        <p>1 https://www.genome.gov/27565109/the-cost-of-sequencing-a-human-genome/ </p>
+        <p>2 https://www.technologyreview.com/s/531091/emtech-illumina-says-228000-human-genomes-will-be-sequenced-this-year/ </p>
+        <p>3 http://www.nejm.org/doi/full/10.1056/NEJMoa054013#t=article </p>
+        <p>4 https://www.google.co.uk/finance?q=NASDAQ:AMGN&amp;ei=a-djV6m_LJrKsQHm5YaYAQ</p>
+        <p>5 FE Analytics </p>
+        <p>6 https://www.google.co.uk/finance?q=alexion&amp;ei=tetjV_HCI4yZsgHUpp2gBQ </p>
+        <p>7 http://www.newsoracle.com/2016/06/16/analyst-recommended-stock-alexion-pharmaceuticals-inc-nasdaqalxn/ </p>
+        <p>8 http://jcvi.org/cms/research/projects/synthetic-bacterial-genome/press-release/</p>
+        <p>&nbsp;</p>
+        <p style="color: #222222; background-color: #ffffff; margin-right: 0px; margin-bottom: 14px; margin-left: 0px;">For a comprehensive list of common financial words and terms, see our glossary&nbsp;<a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms" style="color: #000000;"><span style="color: #34b233;">here</span></a>.</p>
+        <p style="color: #222222; background-color: #ffffff; margin: 0px 0px 14px;"><span><strong>Key Risks</strong></span></p>
+        <p style="color: #222222; background-color: #ffffff; margin: 0px 0px 14px;"><span><strong>Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital.</strong>&nbsp;</span>The issue of units/shares in Liontrust Funds may be subject to an initial charge, which will have an impact on the realisable value of the investment, particularly in the short term. Investments should always be considered as long term.</p>
+        <p style="color: #222222; background-color: #ffffff; margin: 0px 0px 14px;">Some of the Funds managed by the Sustainable Future Equities team involve foreign currencies and may be subject to fluctuations in value due to movements in exchange rates.</p>
+        <p style="color: #222222; background-color: #ffffff; margin: 0px 0px 14px;"><span><strong>Disclaimer</strong></span></p>
+        <div style="color: #222222; background-color: #ffffff;"><span>This content should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy.&nbsp; It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, faxed, reproduced, divulged or distributed, in whole or in part, without the express written consent of Liontrust. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</span>&nbsp;</div>

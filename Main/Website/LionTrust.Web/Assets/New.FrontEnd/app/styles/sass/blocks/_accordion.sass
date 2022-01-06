@@ -1,13 +1,9 @@
 .accordion-section
-    margin: (-110px) 0 50px
     // background: linear-gradient(82.6deg, #000000 3.35%, rgba(0, 0, 0, 0) 50.61%), linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 34.86%), radial-gradient(43.27% 43.9% at 70.37% 85.26%, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(82.62deg, #0D1927 4.49%, #253931 96.65%)
     &_full
-        margin-top: 20px
         .accordion__card
             +breakpoint(desktop, up)
                 width: 100%
-    +breakpoint(desktop, up)
-        margin: 50px 0 180px
     .container
         position: relative
         .order-1
@@ -17,6 +13,8 @@
                         right: 103%
                     +breakpoint(desktop-large, up)
                         right: 102%
+    h2
+        margin-bottom: 5px
 .accordion
     &__card
         background: none
@@ -29,6 +27,9 @@
         +p-1-normal-20
         +breakpoint(desktop-large, up)
             padding: 25px 0
+        p:last-of-type
+            margin: 0
+            padding: 0
     &__link
         font-weight: 300
         font-size: 26px
@@ -71,10 +72,11 @@
             position: absolute
             top: 0
             width: 100%
-            right: -99%
-            padding-left: 32px
+            right: -100%
+            padding: 0 16px
+            height: 100% !important // to overirride js style
         +breakpoint(desktop-large, up)
-            right: -98%
+            right: -100%
     &__smartimg
         width: 100%
         height: 100%

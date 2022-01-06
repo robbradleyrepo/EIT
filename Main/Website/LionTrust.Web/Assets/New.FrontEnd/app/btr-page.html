@@ -1,0 +1,738 @@
+<!--#set var="title" value="LionTrust" -->
+<!--#include virtual="/components/head.html" -->
+
+<body class="fund-detail-page">
+  <header class="header header-bg-gradient header-hero d-flex flex-column justify-content-between">
+    <section class="container">
+      <!--#include virtual="/components/GC001-Header.html" -->
+    </section>
+    <!--#include virtual="/components/BC021-Fund-Header.html" -->
+  </header>
+  <main id="main" role="main" class="">
+    <section class="container">
+      <h2 class="h2 mb-4 pt-3 text-black text-center">Financial Highlights</h2>
+      <div class="fund-stats">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="fund-stats__item">
+              <span class="fund-stats__title">Assets under management</span>
+              <span class="fund-stats__value">£16.1bn</span>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="fund-stats__item">
+              <span class="fund-stats__title">Fund Size</span>
+              <span class="fund-stats__value">£20M</span>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="fund-stats__item">
+              <span class="fund-stats__title">Number of Holdings</span>
+              <span class="fund-stats__value">22</span>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="fund-stats__item">
+              <span class="fund-stats__title">Managed by current team for</span>
+              <span class="fund-stats__value">5 Years</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--#include virtual="/components/BC030-Fund-Performance-Graph.html" -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="text-left">
+            <h2 class="text-black">Document Lister Variant</h2>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <section class="container mb-5" id="tab-content">
+      <div class="lister-select d-lg-none">
+        <select name="document-filter" id="document-select-filter" data-select-for="tab-content"
+          class="class-dropdown__select document-select-filter">
+          <option value="2021" selected="">2021</option>
+          <option value="2020">2020</option>
+          <option value="2019">2019</option>
+        </select>
+        <i class="article-filters__icon-arrow  article-filters__icon-arrow_select"></i>
+      </div>
+      <div class="tab-nav d-none d-lg-flex row" data-select-for="tab-content">
+        <div class=" col-md-2">
+          <div class="tab-nav__item-text">
+            Select a year to view:
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="tab-nav__item active" data-tab-target="2021">
+            2021
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="tab-nav__item" data-tab-target="2020">
+            2020
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="tab-nav__item" data-tab-target="2019">
+            2019
+          </div>
+        </div>
+      </div>
+      <div class="tab-nav-content">
+        <div class="doc-list active" role="tabelement" id="2021">
+          <div class="doc-list__item">
+            <div class="row align-items-center">
+              <div class="col-lg-2 col-md-1">
+                <span class="doc-list__title">
+                  29/07/21 </span>
+              </div>
+              <div class="col-lg-12 col-xl-5">
+                <span class="doc-list__title">
+                  Document Variant 3
+                </span>
+              </div>
+              <div class="col-lg-12 col-xl-5">
+                <div class="doc-list__links">
+                  <a href="" class="link-styles link-styles_black-mobile" rel="noopener noreferrer" target="_blank">Read
+                    Press Release <i class="icon-file"></i>
+                  </a>
+                  <a href="" class="link-styles link-styles_black-mobile" rel="noopener noreferrer" target="_blank">Read
+                    Report <i class="icon-list-view"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="doc-list__item">
+            <div class="row align-items-center">
+              <div class="col-lg-2 col-md-1">
+                <span class="doc-list__title">
+                  29/07/21 </span>
+              </div>
+              <div class="col-lg-12 col-xl-5">
+                <span class="doc-list__title">
+                  Document Variant 4
+                </span>
+              </div>
+              <div class="col-lg-12 col-xl-5">
+                <div class="doc-list__links">
+                  <a href="" class="link-styles link-styles_black-mobile" rel="noopener noreferrer" target="_blank">Read
+                    Press Release <i class="icon-file"></i>
+                  </a>
+                  <a href="" class="link-styles link-styles_black-mobile" rel="noopener noreferrer" target="_blank">Read
+                    Report <i class="icon-list-view"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="doc-list " role="tabelement" id="2020">
+          <div class="doc-list__item">
+            <div class="row align-items-center">
+              <div class="col-lg-2 col-md-1">
+                <span class="doc-list__title">
+                  29/07/20 </span>
+              </div>
+              <div class="col-lg-12 col-xl-5">
+                <span class="doc-list__title">
+                  Document Variant 1
+                </span>
+              </div>
+              <div class="col-lg-12 col-xl-5">
+                <div class="doc-list__links">
+                  <a href="/sitecore/media-library/liontrust/files/around-the-world-with-dividends-april-2020"
+                    class="link-styles link-styles_black-mobile" rel="noopener noreferrer" target="_blank">Read Press
+                    Release <i class="icon-file"></i>
+                  </a>
+                  <a href="" class="link-styles link-styles_black-mobile" rel="noopener noreferrer" target="_blank">Read
+                    Report <i class="icon-list-view"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="doc-list__item">
+            <div class="row align-items-center">
+              <div class="col-lg-2 col-md-1">
+                <span class="doc-list__title">
+                  29/07/20 </span>
+              </div>
+              <div class="col-lg-12 col-xl-5">
+                <span class="doc-list__title">
+                  Document Variant 2
+                </span>
+              </div>
+              <div class="col-lg-12 col-xl-5">
+                <div class="doc-list__links">
+                  <a href="" class="link-styles link-styles_black-mobile" rel="noopener noreferrer" target="_blank">Read
+                    Press Release <i class="icon-file"></i>
+                  </a>
+                  <a href="" class="link-styles link-styles_black-mobile" rel="noopener noreferrer" target="_blank">Read
+                    Report <i class="icon-list-view"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="doc-list " role="tabelement" id="2019">
+          <div class="doc-list__item">
+            <div class="row align-items-center">
+              <div class="col-lg-2 col-md-1">
+                <span class="doc-list__title">
+                  29/07/19 </span>
+              </div>
+              <div class="col-lg-12 col-xl-5">
+                <span class="doc-list__title">
+                  Document Variant 5
+                </span>
+              </div>
+              <div class="col-lg-12 col-xl-5">
+                <div class="doc-list__links">
+                  <a href="" class="link-styles link-styles_black-mobile" rel="noopener noreferrer" target="_blank">Read
+                    Press Release <i class="icon-file"></i>
+                  </a>
+                  <a href="" class="link-styles link-styles_black-mobile" rel="noopener noreferrer" target="_blank">Read
+                    Report <i class="icon-list-view"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="doc-list__item">
+            <div class="row align-items-center">
+              <div class="col-lg-2 col-md-1">
+                <span class="doc-list__title">
+                  29/07/19 </span>
+              </div>
+              <div class="col-lg-12 col-xl-5">
+                <span class="doc-list__title">
+                  Document Variant 6
+                </span>
+              </div>
+              <div class="col-lg-12 col-xl-5">
+                <div class="doc-list__links">
+                  <a href="" class="link-styles link-styles_black-mobile" rel="noopener noreferrer" target="_blank">Read
+                    Press Release <i class="icon-file"></i>
+                  </a>
+                  <a href="" class="link-styles link-styles_black-mobile" rel="noopener noreferrer" target="_blank">Read
+                    Report <i class="icon-list-view"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <h2 class="text-black mb-3">Document</h2>
+      <table class="table table-document">
+        <tbody>
+          <tr>
+            <th scope="row">
+              30/10/19 </th>
+            <td>Liontrust GF Absolute Return Bond Fund Sales Aid</td>
+            <td class="table-document__link">
+              <a href="" class="link-gray" rel="noopener noreferrer" target="_blank">Download File <i
+                  class="icon-file"></i>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              30/10/19 </th>
+            <td>Liontrust GF Absolute Return Bond Fund Sales Aid (International)</td>
+            <td class="table-document__link">
+              <a href="/-/media/liontrust/files/fund-literature/sales-aids/offshore/liontrust-gf-absolute-return-bond-fund-sales-aid-2020-q2-international.ashx"
+                class="link-gray" rel="noopener noreferrer" target="_blank">Download File <i class="icon-file"></i>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              30/10/19 </th>
+            <td>Liontrust GF High Yield Bond Fund Sales Aid</td>
+            <td class="table-document__link">
+              <a href="/-/media/liontrust/files/fund-literature/sales-aids/offshore/liontrust-gf-high-yield-fund-sales-aid-2020-q2.ashx"
+                class="link-gray" rel="noopener noreferrer" target="_blank">Download File <i class="icon-file"></i>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              30/10/19 </th>
+            <td>Liontrust GF High Yield Bond Fund Sales Aid (International)</td>
+            <td class="table-document__link">
+              <a href="/sitecore/media-library/liontrust/files/fund-literature/sales-aids/offshore/liontrust-gf-high-yield-fund-sales-aid-2020-q2-international"
+                class="link-gray" rel="noopener noreferrer" target="_blank">Download File <i class="icon-file"></i>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              30/10/19 </th>
+            <td>Liontrust GF Strategic Bond Fund Sales Aid</td>
+            <td class="table-document__link">
+              <a href="/-/media/liontrust/files/fund-literature/sales-aids/offshore/liontrust-gf-strategic-bond-fund-sales-aid-2020-q2.ashx"
+                class="link-gray" rel="noopener noreferrer" target="_blank">Download File <i class="icon-file"></i>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              27/07/20 </th>
+            <td>Liontrust GF Sustainable Future Global Growth Fund Sales Aid</td>
+            <td class="table-document__link">
+              <a href="/-/media/liontrust/files/fund-literature/sales-aids/offshore/liontrust-gf-sf-global-growth-fund-sales-aid.ashx"
+                class="link-gray" rel="noopener noreferrer" target="_blank">Download File <i class="icon-file"></i>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              30/10/19 </th>
+            <td>Liontrust Strategic Bond Fund Sales Aid</td>
+            <td class="table-document__link">
+              <a href="/-/media/liontrust/files/adviser-support/lt-strategic-bond-fund-sales-aid-build24-online-single-pages.ashx"
+                class="link-gray" rel="noopener noreferrer" target="_blank">Download File <i class="icon-file"></i>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="container">
+      <h2 class="text-black">Dividend history</h2>
+      <div class="table-responsive-lg">
+        <table class="table table-striped divident-table mb-5">
+          <thead>
+            <tr class="table-head-green">
+              <th></th>
+              <th><span class="text-primary">Ex-date</span></th>
+              <th><span class="text-primary">Record date</span></th>
+              <th><span class="text-primary">Payment date</span></th>
+              <th><span class="text-primary">Net dividend price</span></th>
+              <th><span class="text-primary">Year end total</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <p>
+                  <span class="text-primary"><strong class="fz-20">2021</strong></span><br>
+                  <strong>Lorem ipsum</strong>
+                </p>
+              </td>
+              <td>
+                <p>
+                  <br>
+                  <strong>Lorem ipsum</strong>
+                </p>
+              </td>
+              <td>
+                <p>
+                  <br>
+                  <strong>Lorem ipsum</strong>
+                </p>
+              </td>
+              <td>
+                <p>
+                  <br>
+                  <strong>Lorem ipsum</strong>
+                </p>
+              </td>
+              <td>
+                <p>
+                  <br>
+                  <strong>Lorem ipsum</strong>
+                </p>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="text-primary"><strong class="fz-20">2021</strong></span>
+                <br>
+                <strong>Lorem ipsum</strong><br>
+                dolor sit amet
+              </td>
+              <td>
+                <br>
+                <strong>Lorem ipsum</strong><br>
+                dolor sit amet
+              </td>
+              <td>
+                <br>
+                <strong>Lorem ipsum</strong><br>
+                dolor sit amet
+              </td>
+              <td>
+                <br>
+                <strong>Lorem ipsum</strong><br>
+                dolor sit amet
+              </td>
+              <td>
+                <br>
+                <strong>Lorem ipsum</strong><br>
+                dolor sit amet
+              </td>
+              <td>
+                <br>
+                50.8
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="text-primary"><strong class="fz-20">2021</strong></span>
+                <br>
+                <strong>Lorem ipsum</strong><br>
+                dolor sit amet
+              </td>
+              <td>
+                <br>
+                <strong>Lorem ipsum</strong><br>
+                dolor sit amet
+              </td>
+              <td>
+                <br>
+                <strong>Lorem ipsum</strong><br>
+                dolor sit amet
+              </td>
+              <td>
+                <br>
+                <strong>Lorem ipsum</strong><br>
+                dolor sit amet
+              </td>
+              <td>
+                <br>
+                <strong>Lorem ipsum</strong><br>
+                dolor sit amet
+              </td>
+              <td>
+                <br>
+                <p>50.8</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>
+                  <span class="text-primary"><strong class="fz-20">2021</strong></span>
+                </p>
+                <p>
+                  <span class="text-primary"><strong>&nbsp;</strong></span><strong>Lorem ipsum</strong>
+                </p>
+                <p><strong>&nbsp;</strong>dolor sit amet</p>
+              </td>
+              <td>
+                <p>&nbsp;</p>
+                <p>
+                  <span class="text-primary"><strong>&nbsp;</strong></span><strong>Lorem ipsum</strong>
+                </p>
+                <p><strong>&nbsp;</strong>dolor sit amet</p>
+              </td>
+              <td>
+                <p>&nbsp;</p>
+                <p>
+                  <span class="text-primary"><strong>&nbsp;</strong></span><strong>Lorem ipsum</strong>
+                </p>
+                <p><strong>&nbsp;</strong>dolor sit amet</p>
+              </td>
+              <td>
+                <p>&nbsp;</p>
+                <p>
+                  <span class="text-primary"><strong>&nbsp;</strong></span><strong>Lorem ipsum</strong>
+                </p>
+                <p><strong>&nbsp;</strong>dolor sit amet</p>
+              </td>
+              <td>
+                <p>&nbsp;</p>
+                <p>
+                  <span class="text-primary"><strong>&nbsp;</strong></span><strong>Lorem ipsum</strong>
+                </p>
+                <p><strong>&nbsp;</strong>dolor sit amet</p>
+              </td>
+              <td>
+                <p>&nbsp;</p>
+                <p>50.8</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>
+                  &nbsp;<span class="text-primary"><strong>2021 </strong></span>
+                </p>
+                <p>
+                  <span class="text-primary"><strong>&nbsp;</strong></span><strong>Lorem ipsum</strong>
+                </p>
+                <p><strong>&nbsp;</strong>dolor sit amet</p>
+              </td>
+              <td>
+                <p>&nbsp;</p>
+                <p>
+                  <span class="text-primary"><strong>&nbsp;</strong></span><strong>Lorem ipsum</strong>
+                </p>
+                <p><strong>&nbsp;</strong>dolor sit amet</p>
+              </td>
+              <td>
+                <p>&nbsp;</p>
+                <p>
+                  <span class="text-primary"><strong>&nbsp;</strong></span><strong>Lorem ipsum</strong>
+                </p>
+                <p><strong>&nbsp;</strong>dolor sit amet</p>
+              </td>
+              <td>
+                <p>
+                  &nbsp;
+                </p>
+                <p>
+                  <span class="text-primary"><strong>&nbsp;</strong></span><strong>Lorem ipsum</strong>
+                </p>
+                <p><strong>&nbsp;</strong>dolor sit amet</p>
+              </td>
+              <td>
+                <p>
+                  &nbsp;
+                </p>
+                <p>
+                  <span class="text-primary"><strong>&nbsp;</strong></span><strong>Lorem ipsum</strong>
+                </p>
+                <p><strong>&nbsp;</strong>dolor sit amet</p>
+              </td>
+              <td>
+                <p>&nbsp;</p>
+                <p>50.8</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <div class="container">
+      <div class="text-left">
+        <h2 class="text-black">Table</h2>
+      </div>
+    </div>
+    <section class="container mb-30">
+      <div class="table-responsive-lg">
+        <table class="table table-striped mb-3">
+          <thead>
+            <tr>
+              <th scope="col">£m</th>
+              <th scope="col">Actual</th>
+              <th scope="col">Range</th>
+              <th scope="col">Consensus</th>
+              <th scope="col">Consensus</th>
+              <th scope="col">Lorem&nbsp;</th>
+              <th scope="col">Consensus</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Revenue</th>
+              <td>99.3</td>
+              <td>113.4-117.2</td>
+              <td>115.5</td>
+              <td>149.1</td>
+              <td>Ipsum&nbsp;</td>
+              <td>170.0</td>
+            </tr>
+            <tr>
+              <th scope="row">Underlying EBITDA</th>
+              <td>35.4</td>
+              <td>38.0-41.0</td>
+              <td>38.9</td>
+              <td>1342348</td>
+              <td>asd&nbsp;</td>
+              <td>56.4</td>
+            </tr>
+            <tr>
+              <th scope="row">Underlying EBITDA margin (%)</th>
+              <td>35.6%</td>
+              <td>113.4-117.2</td>
+              <td>32.9-34.8%</td>
+              <td>33.7%</td>
+              <td>fsde&nbsp;</td>
+              <td>33.2%</td>
+            </tr>
+            <tr>
+              <th scope="row">Underlying EPS (pence)</th>
+              <td>18</td>
+              <td>22.3</td>
+              <td>22.3</td>
+              <td>23.0</td>
+              <td>wq&nbsp;</td>
+              <td>27.6</td>
+            </tr>
+            <tr>
+              <th scope="row">Underlying EPS (pence)</th>
+              <td>18</td>
+              <td>22.3</td>
+              <td>22.3</td>
+              <td>23.0</td>
+              <td>234&nbsp;</td>
+              <td>27.6</td>
+            </tr>
+            <tr>
+              <th scope="row">Underlying EPS (pence)</th>
+              <td>18</td>
+              <td>22.3</td>
+              <td>22.3</td>
+              <td>23.0</td>
+              <td>234&nbsp;</td>
+              <td>27.6</td>
+            </tr>
+          </tbody>
+        </table>
+        <small class="small-text">
+        </small>
+      </div>
+    </section>
+    <div class="article-with-big">
+      <div class="row">
+        <div class="col-12 section text-black">
+        </div>
+      </div>
+    </div>
+    <!--#include virtual="/components/BC043-People-Info-Banner.html" -->
+    <div class="container mb-5">
+      <h2 class="text-center text-black mb-3">Our Values</h2>
+      <div class="row">
+        <div class="col-lg-4">
+          <h4 class="text-center text-primary">Lorem ipsum</h4>
+          <div class="text-center text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra
+            sem vel lacus rutrum, a imperdiet arcu faucibus. Cras hendrerit mattis erat, et accumsan risus facilisis eu.
+            Proin ultrices risus dui. Nullam convallis arcu aliquam sapien condimentum tincidunt. Praesent sed cursus
+            libero. Donec ultrices magna et libero pharetra, varius malesuada arcu fermentum.</div>
+        </div>
+        <div class="col-lg-4">
+          <h4 class="text-center text-primary">Lorem ipsum</h4>
+          <div class="text-center text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra
+            sem vel lacus rutrum, a imperdiet arcu faucibus. Cras hendrerit mattis erat, et accumsan risus facilisis eu.
+            Proin ultrices risus dui. Nullam convallis arcu aliquam sapien condimentum tincidunt. Praesent sed cursus
+            libero. Donec ultrices magna et libero pharetra, varius malesuada arcu fermentum.&nbsp;</div>
+        </div>
+        <div class="col-lg-4">
+          <h4 class="text-center text-primary">Lorem ipsum</h4>
+          <div class="text-center text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra
+            sem vel lacus rutrum, a imperdiet arcu faucibus. Cras hendrerit mattis erat, et accumsan risus facilisis eu.
+            Proin ultrices risus dui. Nullam convallis arcu aliquam sapien condimentum tincidunt. Praesent sed cursus
+            libero. Donec ultrices magna et libero pharetra, varius malesuada arcu fermentum.&nbsp;</div>
+        </div>
+      </div>
+    </div>
+    <!--#include virtual="/components/BC047-Directors-List.html" -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 contact-section__half-card">
+          <div class="card">
+            <div class="contacts">
+              <div class="contacts__row">
+                <div class="contacts__cell">
+                  <h3 class="contacts__title">UK domiciled funds administration, dealing & valuations</h3>
+                  <div class="contacts__text">
+                    <div class="contacts__text-top">
+                      <span class="font-500">Liontrust Customer Services Team</span>
+                      <span>PO Box 373</span>
+                      <span>Darlington</span>
+                      <span> DL1 9RQ</span>
+                    </div>
+                    <div class="contacts__text-bottom">
+                      <div class="d-xl-flex">
+                        <span class="lit-column">Tel.</span>
+                        <div class="contacts__phones">
+                          <span class="contacts__phone">0344 892 0349</span>
+                          <span class="contacts__divider">/</span>
+                          <span class="contacts__phone">+44 (0) 203 528 4110 </span>
+                          <span class="gray-text">if outside the UK</span>
+                        </div>
+                      </div>
+                      <div class="d-xl-flex">
+                        <span class="lit-column">Fax.</span>
+                        <div class="contacts__phones">
+                          <span class="contacts__phone">0207 964 2562</span>
+                          <span class="contacts__divider">/</span>
+                          <span class="contacts__phone"> +44 (0) 207 964 2562</span>
+                          <span class="gray-text">if outside the UK</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contacts__btns">
+                    <a href="#" class="btn btn-primary contacts__btn">
+                      Enquire about fund
+                      <i class="icon-arrow-right animate-arrow"></i>
+                    </a>
+                    <a href="#" class="link-styles contacts__btn-link">Administration enquiries
+                      <i class="icon-arrow-right animate-arrow"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 contact-section__half-card">
+          <div class="card">
+            <div class="contacts">
+              <div class="contacts__row">
+                <div class="contacts__cell">
+                  <h3 class="contacts__title">UK domiciled funds administration, dealing & valuations</h3>
+                  <div class="contacts__text">
+                    <div class="contacts__text-top">
+                      <span class="font-500">Liontrust Customer Services Team</span>
+                      <span>PO Box 373</span>
+                      <span>Darlington</span>
+                      <span> DL1 9RQ</span>
+                    </div>
+                    <div class="contacts__text-bottom">
+                      <div class="d-xl-flex">
+                        <span class="lit-column">Tel.</span>
+                        <div class="contacts__phones">
+                          <span class="contacts__phone">0344 892 0349</span>
+                          <span class="contacts__divider">/</span>
+                          <span class="contacts__phone">+44 (0) 203 528 4110 </span>
+                          <span class="gray-text">if outside the UK</span>
+                        </div>
+                      </div>
+                      <div class="d-xl-flex">
+                        <span class="lit-column">Fax.</span>
+                        <div class="contacts__phones">
+                          <span class="contacts__phone">0207 964 2562</span>
+                          <span class="contacts__divider">/</span>
+                          <span class="contacts__phone"> +44 (0) 207 964 2562</span>
+                          <span class="gray-text">if outside the UK</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contacts__btns">
+                    <a href="#" class="btn btn-primary contacts__btn">
+                      Enquire about fund
+                      <i class="icon-arrow-right animate-arrow"></i>
+                    </a>
+                    <a href="#" class="link-styles contacts__btn-link">Administration enquiries
+                      <i class="icon-arrow-right animate-arrow"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--#include virtual="/components/LB-400-Latest-Results-Presentations-Component.html" -->
+  </main>
+  <!--#include virtual="/components/LDC-1523-graySectionFundDetailsPaget.html" -->
+  <!--#include virtual="/components/LDC-190-Footer.html" -->
+  <!--#include virtual="/components/GC008-Onboarding-Overlay.html" -->
+  <!--#include virtual="/components/GC006-Search-Overlay.html" -->
+  <!--#include virtual="/components/BC020-Literature-Overlay.html" -->
+  <!--#include virtual="/components/footer.html" -->

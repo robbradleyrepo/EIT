@@ -10,34 +10,40 @@
     return;
 }
 
-<div class="fund-overview @(Model.Alignment != null ? Model.Alignment.Value : string.Empty)">
-    <h2 class="h2">
-        @Html.Glass().Editable(Model.Fund, m => m.OverviewTitle)
-    </h2>
-    <div class="fund-overview__text">
-        <p class="font-500 text-margin">
-            @Html.Glass().Editable(Model.Fund, m => m.OverviewText)
-        </p>
-    </div>
-    <div>
-        @using (Html.Glass().BeginRenderLink(Model, m => m.LatestUpdateCTA, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary-forward mr-1 mr-md-4" } }, isEditable: true))
-        {
-            if (Model.LatestUpdateCTA != null)
+@if (Model.Fund != null)
+{
+    <div class="fund-overview @(Model.Alignment != null ? Model.Alignment.Value : string.Empty)">
+        <h2 class="h2">
+            @Html.Glass().Editable(Model.Fund, m => m.OverviewTitle)
+        </h2>
+        <div class="fund-overview__text">
+            <p class="font-500 text-margin">
+                @Html.Glass().Editable(Model.Fund, m => m.OverviewText)
+            </p>
+        </div>
+        <div>           
+            @if (Sitecore.Context.PageMode.IsExperienceEditor)
             {
-                @Model.LatestUpdateCTA.Text
+                using (Html.Glass().BeginRenderLink(Model, m => m.LatestUpdateCTA, new { @class = "btn btn-primary-forward mr-1 mr-md-4" }, isEditable: true))
+                {
+                    if (Model.LatestUpdateCTA != null)
+                    {
+                        @Model.LatestUpdateCTA.Text
+                    }
+                    <i class="icon-arrow-right animate-arrow"></i>
+                }
+            }
+            else
+            {
+                var fundUpdateUrl = Model.LatestUpdateCTA != null ? Model.LatestUpdateCTA.Url + "?ids=" + Model.Fund.Id.ToString("N") : string.Empty;
+                <a href="@fundUpdateUrl" class="btn btn-primary-forward mr-1 mr-md-4">
+                    @Model.LatestUpdateCTA.Text <i class="icon-arrow-right animate-arrow"></i>
+                </a>
             }
 
-            <i class="icon-arrow-right animate-arrow"></i>
-        }
-
-        @using (Html.Glass().BeginRenderLink(Model, m => m.DownloadCTA, new System.Collections.Specialized.NameValueCollection { { "class", "link-styles" } }, isEditable: true))
-        {
-            if (Model.DownloadCTA != null)
-            {
-                @Model.DownloadCTA.Text
-            }
-
-            <i class="icon-file d-none d-lg-inline-block"></i>
-        }
+            <a href="#" class="link-styles view-fund-literature">
+                @Html.Glass().Editable(Model, m => m.DownloadCTALabel) <i class="icon-file d-none d-lg-inline-block"></i>
+            </a>
+        </div>
     </div>
-</div>
+}

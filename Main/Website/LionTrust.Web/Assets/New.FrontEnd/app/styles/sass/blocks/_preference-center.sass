@@ -222,8 +222,28 @@ body
 .no-is-checked__show
   transition: all 0.75s ease-in-out
 .yes-is-checked__show
-  height: 430px
+  height: auto
   overflow: unset
 .no-is-checked__show
   height: auto
   overflow: unset
+.edit-preferences
+  &__select 
+    .checkbox
+      top: -14px
+      left: 0
+      position: relative
+      letter-spacing: 0
+      line-height: 40px           
+      &__box 
+        width: 20px
+        height: 20px
+        margin-right: 8px
+      &__input
+        &:checked  ~ .checkbox__box
+          background: $gold
+          background-image: url("data:image/svg+xml,%3Csvg width='14' height='11' viewBox='0 0 14 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6 0L14 1.4L5 10.4L0 5.4L1.4 4L5 7.6L12.6 0Z' fill='white'/%3E%3C/svg%3E%0A")
+          background-repeat: no-repeat
+          background-position: center
+        &:focus ~ .checkbox__box
+          border: 2px solid lighten($gold, 10%)

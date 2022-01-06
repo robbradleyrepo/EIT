@@ -11,7 +11,7 @@ Languages:
     Fields:
     - ID: "028d35ef-f418-4f05-a578-3f994b8cc68b"
       Hint: AdditionalInfoComponent_ExDividendDateLabel
-      Value: Ex dividend date
+      Value: "Ex-dividend date"
     - ID: "1417c905-79bb-487b-af65-2209b53803f6"
       Hint: AdditionalInfoComponent_IncludedOFCLabel
       Value: Included within the OCF is the Annual Management Charge
@@ -40,9 +40,12 @@ Languages:
     - ID: "88273fd0-cedc-4ae2-94a5-e4711fe083f6"
       Hint: AdditionalInfoComponent_SedolCodeLabel
       Value: Sedol code
+    - ID: "9582504e-8c9e-4c02-a4ee-7a77d8c085eb"
+      Hint: AdditionalInfoComponent_Tooltips
+      Value: "{0BD36A3C-9E6D-469A-AAE1-B5D320C95E4B}"
     - ID: "b790f7bc-1fa0-4b65-b59f-535dc77d9a86"
       Hint: AdditionalInfoComponent_MinInitialLabel
-      Value: Minimum initial
+      Value: Minimum initial investment
     - ID: "cc91aaa4-ed02-49f4-9027-551abffdf4d4"
       Hint: AdditionalInfoComponent_InitialChargeLabel
       Value: Initial charge

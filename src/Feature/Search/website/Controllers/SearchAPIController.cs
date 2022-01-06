@@ -61,6 +61,9 @@
         /// <returns>A list of articles.</returns>
         public ActionResult GetFilteredArticles(string contentType, string funds, string categories, string fundManagers, string fundTeams, int? month, int? year, string searchTerm, string sortOrder, string database = "web", int page = 1)
         {
+            var selectedFund = HttpContext.Request.QueryString.Get("ids");
+            funds = string.IsNullOrEmpty(funds) ? selectedFund : funds + "|" + selectedFund;
+            
             var response = this._articleListingDataManager.GetArticleListingResponse(database, contentType, funds, categories, fundManagers, fundTeams, month, year, searchTerm, sortOrder, page);
             if (response.StatusCode != 200)
             {
@@ -213,7 +216,7 @@
         /// Gets pages based on site search in the request.
         /// </summary>
         /// <returns>A list of site search results.</returns>
-        public ActionResult GetFilteredSearch(string query, string filters, string database = "web", int page = 1, int take = 21)
+        public ActionResult GetFilteredSearch(string query, string filters, string database = "web", int page = 1, int take = 12)
         {
             var response = _siteSearchDataManager.Search(query, database, filters, Sitecore.Context.Language.Name, take, page);
             if (response.StatusCode != 200)

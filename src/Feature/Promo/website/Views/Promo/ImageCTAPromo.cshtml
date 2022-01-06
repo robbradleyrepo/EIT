@@ -4,9 +4,9 @@
 @model LionTrust.Feature.Promo.Models.IImageCTAPromo
 @{
     var righTextAlignment = Model.TextAlignment != null && !string.IsNullOrEmpty(Model.TextAlignment.Value) && Model.TextAlignment.Value.Equals("right");
-    var titleColor = Model.TitleColor != null && !string.IsNullOrEmpty(Model.TitleColor.Value) ? Model.TitleColor.Value : "text-black";
+    var titleColor = Model.TitleColor != null && !string.IsNullOrEmpty(Model.TitleColor.Value) ? Model.TitleColor.Value : "";
 }
-<div class="container">
+<section class="container">
     <div class="team-card">
         @if (!Model.TitleInSide)
         {
@@ -42,7 +42,7 @@
                 </div>
                 @if (Model.CTALink != null || Sitecore.Context.PageMode.IsExperienceEditor)
                 {
-                    using (Html.Glass().BeginRenderLinkWithGoal(Model, m => m.CTALink, Model.CTAGoal, new NameValueCollection { { "class", "btn d-inline-block btn-primary team-card__btn" } }, isEditable: true))
+                    using (Html.Glass().BeginRenderLinkWithGoal(Model, m => m.CTALink, Model.CTAGoal, new NameValueCollection { { "class", "btn btn-primary team-card__btn" } }, isEditable: true))
                     {
                         if (Model.CTALink != null && !string.IsNullOrEmpty(Model.CTALink.Text))
                         {
@@ -53,7 +53,7 @@
                 }
                 @if (Model.CTALink2 != null || Sitecore.Context.PageMode.IsExperienceEditor)
                 {
-                    using (Html.Glass().BeginRenderLinkWithGoal(Model, m => m.CTALink2, Model.CTAGoal2, new NameValueCollection { { "class", "btn d-inline-block btn-primary-forward team-card__btn" } }, isEditable: true))
+                    using (Html.Glass().BeginRenderLinkWithGoal(Model, m => m.CTALink2, Model.CTAGoal2, new NameValueCollection { { "class", "btn btn-primary-forward team-card__btn" } }, isEditable: true))
                     {
                         if (Model.CTALink2 != null && !string.IsNullOrEmpty(Model.CTALink2.Text))
                         {
@@ -82,4 +82,4 @@
             }
         </div>
     </div>
-</div>
+</section>

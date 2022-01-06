@@ -29,29 +29,67 @@
                 result.Add(new PerformanceTableRow(fundClass.FundName, 
                     new string[] 
                     { 
-                        fundClass.Cumulative1m, 
-                        fundClass.CumulativeYearToDate, 
+                        fundClass.Cumulative1m,                         
                         fundClass.Cumulative3m,
                         fundClass.Cumulative6m,
+                        fundClass.CumulativeYearToDate,
                         fundClass.Cumulative1y,
                         fundClass.Cumulative3y,
                         fundClass.Cumulative5y,
                         fundClass.CumulativeSinceInception,
                     }));
             }
-            
-            if (!string.IsNullOrEmpty(fundClass.SectorName))
+
+            if (fundClass.Benchmarks == null)
             {
-                result.Add(new PerformanceTableRow(fundClass.SectorName, new string[]
+                return new PerformanceTableRow[0];
+            }
+
+            var benchmark0 = fundClass.Benchmarks.FirstOrDefault(b => b.BenchmarkTypeName == "Benchmark");
+            if (benchmark0 != null)
+            {
+                result.Add(new PerformanceTableRow(benchmark0.BenchmarkName, new string[]
                 {
-                    fundClass.SectorCumulative1m,
-                    fundClass.SectorCumulativeYearToDate,
-                    fundClass.SectorCumulative3m,
-                    fundClass.SectorCumulative6m,
-                    fundClass.SectorCumulative1y,
-                    fundClass.SectorCumulative3y,
-                    fundClass.SectorCumulative5y,
-                    fundClass.SectorCumulativeSinceUnitLaunch,
+                    fundClass.Benchmark0Cumulative1m,
+                    fundClass.Benchmark0Cumulative3m,
+                    fundClass.Benchmark0Cumulative6m,
+                    fundClass.Benchmark0CumulativeYearToDate,
+                    fundClass.Benchmark0Cumulative1y,
+                    fundClass.Benchmark0Cumulative3y,
+                    fundClass.Benchmark0Cumulative5y,
+                    fundClass.Benchmark0CumulativeSinceInception
+                }));
+            }
+
+            var benchmark1 = fundClass.Benchmarks.FirstOrDefault(b => b.BenchmarkTypeName == "Benchmark Comparator 1");
+            if (benchmark1 != null)
+            {
+                result.Add(new PerformanceTableRow(benchmark1.BenchmarkName, new string[]
+                {
+                    fundClass.Benchmark1Cumulative1m,
+                    fundClass.Benchmark1Cumulative3m,
+                    fundClass.Benchmark1Cumulative6m,
+                    fundClass.Benchmark1CumulativeYearToDate,
+                    fundClass.Benchmark1Cumulative1y,
+                    fundClass.Benchmark1Cumulative3y,
+                    fundClass.Benchmark1Cumulative5y,
+                    fundClass.Benchmark1CumulativeSinceInception
+                }));
+            }
+
+            var benchmark2 = fundClass.Benchmarks.FirstOrDefault(b => b.BenchmarkTypeName == "Benchmark Comparator 2");
+            if (benchmark2 != null)
+            {
+                result.Add(new PerformanceTableRow(benchmark2.BenchmarkName, new string[]
+                {
+                    fundClass.Benchmark2Cumulative1m,
+                    fundClass.Benchmark2Cumulative3m,
+                    fundClass.Benchmark2Cumulative6m,
+                    fundClass.Benchmark2CumulativeYearToDate,
+                    fundClass.Benchmark2Cumulative1y,
+                    fundClass.Benchmark2Cumulative3y,
+                    fundClass.Benchmark2Cumulative5y,
+                    fundClass.Benchmark2CumulativeSinceInception
                 }));
             }
 
@@ -68,10 +106,10 @@
 
             return new PerformanceTableRow(string.Empty, new string[] 
             { 
-                fundClass.Cumulative1mQuart, 
-                fundClass.CumulativeYearToDateQuart, 
+                fundClass.Cumulative1mQuart,                 
                 fundClass.Cumulative3mQuart, 
                 fundClass.Cumulative6mQuart,
+                fundClass.CumulativeYearToDateQuart,
                 fundClass.Cumulative1yQuart,
                 fundClass.Cumulative3yQuart,
                 fundClass.Cumulative5yQuart

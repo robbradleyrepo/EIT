@@ -1,0 +1,33 @@
+﻿---
+ID: "f161183e-e069-4066-894b-74dfc580596a"
+Parent: "c86e1699-29b6-4fd5-9f19-9d7fde4b3082"
+Template: "66e09d5b-4f8e-4313-9df3-fa7e53fbe83a"
+Path: /sitecore/content/LionTrustNew/Global/Funds/UK Micro Cap Fund/Documents/Long Interim Report
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170113T161247
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "a4a7f9dd-a218-4f33-b72a-7dc2251ccd43"
+      Hint: LegacyDocument_DocumentTypes
+      Type: Multilist
+      Value: "{07F40446-C241-46ED-B767-23567AE864FE}"
+    - ID: "c794210e-6107-4d69-841f-773cb9943bba"
+      Hint: LegacyDocument_DownloadLink
+      Value: |
+        <link target="" linktype="media" id="{C7EBC589-7FDA-44EB-A456-BD934C0D2E1F}" url="/LionTrust/Files/fund-literature/report-accounts/long-interim/uk-micro-cap-fund-long-interim-report" />
+    - ID: "eeb8db99-7da8-4973-adf7-bcf7b29eba79"
+      Hint: LegacyDocument_DocumentName
+      Value: Long Interim Report

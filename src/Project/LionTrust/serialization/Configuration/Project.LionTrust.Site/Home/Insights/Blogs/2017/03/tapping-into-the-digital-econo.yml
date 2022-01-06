@@ -1,0 +1,131 @@
+﻿---
+ID: "dfe10c2e-9da6-4499-a19d-eaa53463a71b"
+Parent: "1794f9e4-0915-483f-9a66-37e80f9c352e"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2017/03/tapping-into-the-digital-economy"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 86500
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{EDD0B9D1-3871-4DE9-B2CC-4A474A7C77CD}"
+          p:after="r[@uid='{30A0A4C8-974F-4822-9DCB-DE14881E0400}']"
+          s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+          s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+          s:par="DatasourceRule"
+          s:ph="/content/side-content" />
+        <r
+          uid="{71CFF4E4-F42B-4F1B-AD01-968C495FD2AC}"
+          p:after="r[@uid='{EDD0B9D1-3871-4DE9-B2CC-4A474A7C77CD}']"
+          s:ds="{71B20482-B038-49D5-895C-ED6D46D5095F}"
+          s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+          s:par="DatasourceRule"
+          s:ph="/content/side-content" />
+        <r
+          uid="{EFDB82F2-2943-45C2-920E-92AD18B1F189}"
+          p:after="*[1=2]"
+          s:ds=""
+          s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+          s:par="Title=See%20also&amp;RelatedPages=%7B8B329F2F-531E-4370-AE7E-29AB76354C39%7D%7C%7BAD48CBEC-F778-431E-A11F-7510A39E665D%7D%7C%7B2016BE5A-D436-4FA0-BF34-3DC3B9A19639%7D%7C%7B395557CD-AC45-4F30-8DFA-4689C4868FD4%7D&amp;MaximumNoOfLinks=4"
+          s:ph="/content/side-content" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{0F980420-4156-41F4-951F-F156CD3F4359}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "tapping-into-the-digital-economy | Insights | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: Tapping into the Digital Economy
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: "20170320T123244:636256099647635421"
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: "It’s hard to attach a value to ‘digital economy’ benefits for any given company, but earlier this year the US mega-deal between Verizon and Yahoo gave us an example of how much it can cost to get your digital strategy wrong: $350m."
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Tapping into the Digital Economy
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p><em>A version of this blog was first published in The Herald on 18 March 2017.</em></p>
+        <p><img alt="Digital economy" src="~/media/BAC878DEB57E43F6BA14AC244A86CF8A.ashx?h=415&amp;w=600" style="height: 415px; width: 600px;"></p>
+        <p><strong>It’s hard to attach a value to ‘digital economy’ benefits for any given company, but earlier this year the US mega-deal between Verizon and Yahoo gave us an example of how much it can cost to get your digital strategy wrong: $350m. This is the amount by which Verizon dropped its original $4.8bn bid due to the cyber data breaches in 2016 which hit over 1bn Yahoo users.</strong></p>
+        <p> </p>
+        <p> </p>
+        <p>There have been many well-publicised cyber attacks in recent years – including TalkTalk and Tesco Bank – and the technological threat from an increasingly digital world is all too clear. While it may seem somewhat of a tired cliché to refer to technological change as both a threat and opportunity, in our investment experience this still rings true. Some traditional industries such as travel, music and retailing have been severely disrupted by digital upstarts such as Airbnb, Spotify and Amazon, whereas other industries including computing infrastructure, data analytics and cyber security have emerged only because of digital technology. But the dichotomy between new and old industries is increasingly less stark as the digital economy becomes inextricably intertwined with the traditional economy. </p>
+        <p> </p>
+        <p> </p>
+        <p>As managers of a micro cap fund, we believe a large number of the potential ‘winners’ from the growing digital economy sit within our investment universe. Small companies can often be the biggest beneficiaries of new technology as they can use it to ‘level the playing field’ and disrupt established industries. Online clothing retailer ASOS is a good example. It was able to grow so successfully from its micro cap roots precisely because its model has enabled it to be far nimbler and more responsive to changing consumer shopping habits than its large high street peers.</p>
+        <p> </p>
+        <p> </p>
+        <p>In our experience, a distinguishing factor between those companies capable of exploiting the opportunity and those that are instead weakened by new market entrants, is a pre-existing barrier to competition. As a team, we prioritise intangible barriers above all others, believing them to be more difficult than tangible assets for competitors to replicate. These barriers to competition afford companies the time to respond to technological advances and seize the digital opportunity for themselves, while also frequently providing them with captive customer bases into which they can market their new digital offerings. </p>
+        <p> </p>
+        <p> </p>
+        <p>At the risk of oversimplification, the broad benefits of the Digital Economy are threefold: <em>higher revenues, increased efficiency and stronger customer relationships.</em></p>
+        <p> </p>
+        <p> </p>
+        <p>As is so often the case, some specific examples of companies reaping these benefits can be far more informative than a theoretical overview.</p>
+        <p> </p>
+        <p> </p>
+        <p>Starting with <em>higher revenues</em>, some companies simply would not exist were it not for the digital economy. Software companies are an obvious example. These feature heavily in the Liontrust UK Micro Cap Fund, making up almost a third of the portfolio. One such software provider is <strong>DotDigital</strong>, whose core product enables email marketing automation. It allows marketing teams to build, launch and manage customer engagement campaigns quickly and efficiently, and to monitor vast amounts of useful data in terms of how people are engaging with the campaign. </p>
+        <p> </p>
+        <p> </p>
+        <p>Outside of pure software companies, other businesses can use digital technology to enhance their existing, more traditional offerings and generate <em>higher revenues</em>. Sprue Aegis is a manufacturer of smoke and carbon monoxide alarms which has recently done this by adding network connectivity to its products, a development that will in future allow remote monitoring of alarms by customers such as the fire service.</p>
+        <p> </p>
+        <p>Another example is <strong>Vianet</strong>, a producer of telemetry monitoring systems for the leisure and vending markets. By using its installed base of internet-connected telemetry hardware to suck data into a software management platform, the company is helping its pub and hot drink vending customers to better manage their estates. Such data can enable customers to monitor over-pouring and waste, optimise product temperatures, manage stock and conduct sales analysis.</p>
+        <p> </p>
+        <p> </p>
+        <p>Turning to <em>increased efficiency</em>, companies’ decision-making processes and compliance procedures can be refined and streamlined if they are able to harness the power of the data they generate and draw actionable insights from that information. The market research and data analytics group <strong>YouGov </strong>is a great example of this, harnessing technology to tap the opinions of five million ‘panel members’ on a regular basis to gain insight for its clients. </p>
+        <p> </p>
+        <p> </p>
+        <p>Lastly, digital solutions can help foster <em>stronger customer relationships</em>, often elevating suppliers to the coveted status of “trusted partner”. The digital economy is not only enabling quicker communication and helping to facilitate transactions; it is also being used to gather ever more information about customer needs, helping companies to embed their products within their customers’ businesses, strengthen on-going relationships and upsell additional solutions. <strong>AB Dynamics </strong>is a designer and manufacturer of advanced testing products for vehicle suspension, brakes and steering. The data derived from the company’s solutions becomes critical to the integrity of the end products, driving increased sales from different departments within their customers globally.</p>
+        <p> </p>
+        <p> </p>
+        <p>The digital economy looks set to provide a strong tailwind for many businesses for years to come. As observed last year by the House of Commons Business, Innovations and Skills Committee “every day, people, businesses, organisations, communities and Government use digital technology to make decisions, to make goods, and to deliver services more efficiently and more quickly.” </p>
+        <p> </p>
+        <p> Those that have strong barriers to competition and can harness the power of technology will surely thrive, with some of the greatest growth opportunities to be found among the smallest businesses on the UK market.<br>
+        <br>
+        </p>
+        <p><strong>Disclaimer:</strong></p>
+        <p> </p>
+        <p>• Past performance is not a guide to future performance. • Do remember that the value of an investment and the income from it can fall as well as rise and you may not get back the amount originally invested.&nbsp; • Some of the Funds managed by the Economic Advantage Team invest in smaller companies and companies traded on the Alternative Investment Market.&nbsp; These stocks may be less liquid and the price swings greater than those in, for example, larger companies. • The performance of the Liontrust GF UK Growth Fund may differ from the performance of the Liontrust UK Growth Fund and will be lower than its corresponding Master Fund due to additional fees and expenses. </p>
+        <p> </p>
+        <p> </p>
+        <p>• The information and opinions provided should not be construed as advice for investment in any product or security mentioned.&nbsp; • Always research your own investments and consult with a regulated investment adviser before investing.</p>

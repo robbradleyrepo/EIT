@@ -1,0 +1,216 @@
+﻿---
+ID: "fd376a1c-e405-4d7c-a4b8-2b1b5b8455ef"
+Parent: "007f602f-561b-425e-9d9f-65befb319f98"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2019/04/Ten trades to put a spring in your step
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 86600
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{13512735-88E3-4A96-B37B-39CC8994A858}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{5391CF1B-B281-4B5F-B972-57D743F5C940}"
+              p:after="r[@uid='{13512735-88E3-4A96-B37B-39CC8994A858}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{956CC4F5-D0AE-453E-A1AB-914E2E13A94B}"
+              p:after="r[@uid='{5391CF1B-B281-4B5F-B972-57D743F5C940}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See also...&amp;RelatedPages={2301B1D6-2812-4921-AC12-6BCF90F3A836}|{4D7B7C2A-D992-47CA-AE5D-F2DEB5704C2E}|{7AAA89F2-3BCF-4DFC-B2F6-C05A7A8E2DDE}|{F8415A35-9C34-47F7-BACE-42EAABBFA145}&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{DBAE5B17-522C-480D-926B-55EA6C1873D3}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Ten trades to put a spring in your step | Insights | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: Ten trades to put a spring in your step
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190403T094926Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: Ahead of the first anniversary of the Liontrust Strategic Bond and GF Strategic Bond Funds, David Roberts outlines 10 trades where he sees opportunities for investors over the coming months.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Ten trades to put a spring in your step
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p style="margin-bottom: 0.0001pt;"><strong style="font-size: 1.5rem;">As we approach the first anniversary of the Liontrust Strategic Bond and GF Strategic Bond Funds &ndash; David Roberts outlines 10 trades the Global Fixed Income team believes offer opportunities to investors.</strong></p>
+        <p><strong><span><br>
+        1. US and Canadian bond markets: as close to a &lsquo;no-brainer&rsquo; as it gets</span></strong></p>
+        <p><span>Who would have thought it? Despite the rebound in oil prices and rocketing Canadian employment, the country&rsquo;s bonds have never been more expensive compared with US debt (as of mid-March).</span></p>
+        <p style="text-align: center;"><span style="font-size: 1.5rem;"><img alt="US vs. Canada: Yield spread on 10-year bonds" src="-/media/A8652D9FC6A94D00B0A0CCF94F9093A6.ashx?h=387&amp;w=600&amp;hash=4343F4A0A0B7559E3D9299A93AC29A4A7F0C9B5D" class="custom-image-height-auto" style="height: 387px; width: 600px;"></span></p>
+        <p><span>Source: Bloomberg, at 21.03.19</span></p>
+        <p><span>Of course, records are there to be broken and trends can remain in force for a protracted period; not to be short Canada against the US at present, however, is outrageous in our view. </span></p>
+        <p><span>Despite a growth horror story in the fourth quarter of 2018 (even though I expect the figures to be revised up), Canada&rsquo;s macro picture otherwise remains fine. Comparing data, we see little difference: on inflation, for example, Canada registered 1.4% in March versus 1.5% for the US. </span></p>
+        <p><span>The only defence for those not short Canada is that the government is running a tighter ship than Uncle Sam (or Uncle Donald) and the debt to GDP ratio is less out of control &ndash; the US in effect is not a risk-free asset. Of course, thinking in such a way brings into question the US dollar as a global reserve currency and mitigates any notion of the Greenback as a safe haven. Are we ready to do that? If so, the end of the capitalist system is upon us. Remember though, markets can stay irrational for long periods of time and, as Keynes once said, &ldquo;in the long run we are all dead&rdquo;. </span></p>
+        <p><strong><span>2. High yield (HY) versus emerging markets (EM) &ndash; one of the (many) gifts that keeps giving&nbsp;</span></strong></p>
+        <p style="text-align: center;"><span style="font-size: 1.5rem;"><img alt="High yield (HY) versus emerging markets (EM) – one of the (many) gifts that keeps giving (A)" src="-/media/463E188A8CDB412FA3152F60A085DF76.ashx?h=425&amp;w=599&amp;hash=A070E2ADF246036D8AB54C116EFF5F227CD61C3E&amp;hash=A070E2ADF246036D8AB54C116EFF5F227CD61C3E" class="custom-image-height-auto" style="height: 425px; width: 599px;"></span></p>
+        <p><span>Source: Bloomberg, at 21.03.19. Chart shows spreads on emerging market debt versus spreads on high yield (on the left-hand axis) and the spread between the two (on the right-hand axis)</span></p>
+        <p><span>So, who would like a market directional, carry-positive position investing in diversification and avoiding a highly correlated basket of assets?&nbsp; </span></p>
+        <p><span>The relationship between EM and HY debt has historically been highly correlated. You do need to &ldquo;beta adjust&rdquo; it, however; HY assets appear to be roughly twice as volatile as their EM cousins. In other words, you should expect to be compensated a bit more for holding HY assets than EM. </span></p>
+        <p><span>There is more to it than that of course. The chart above compares a broad basket of US HY issuers against a liquid index of 15 EM sovereign bonds. As you can see, they are broadly correlated &ndash; spreads over the risk-free asset moving up or down, directionally, at the same time. </span></p>
+        <p><span>Of course, the magnitude of the moves differs depending on why the market is in risk-on or risk-off mode. Ultimately, though, the relationship has a stubborn habit of reasserting itself and it is this pattern &ndash; a move wider or a move tighter &ndash; that we aim to capture. </span></p>
+        <p><span>Last year, we had a very negative view of EM bonds. We felt they were too expensive and too exposed to political risk. We were right but to reduce outright market direction when we sold EM, we added HY against it. This did reduce our return a little when EM sold off but it nicely controlled fund volatility and gave investors a smoother ride. </span></p>
+        <p><span>This year, we did the same &ndash; shorting EM and buying HY &ndash; but for a different reason. Charts showed EM sovereign debt did reasonably well in the December debacle for risk assets while HY struggled, so value was out of line again. This time, we were not betting on an EM sell but rather on a HY buy and this worked as well. We expect more volatility in these series over the next few months, and capturing this would prove it really is a gift that keeps on giving.</span></p>
+        <p><span><strong>3.&nbsp;</strong></span><strong style="font-size: 1.5rem;">Is US inflation dead?</strong></p>
+        <p><span style="font-size: 1.5rem;">The chart below looks at the relationship between &ldquo;normal&rdquo; US government bonds and those where the income an investor receives is pegged to inflation, known as TIPS (Treasury Inflation Protected Securities). Broadly, this shows inflation needs to be 1.93% or higher for people to be better off owning the inflation-linked bonds.</span></p>
+        <p><span>Now, there are a few things going on here:</span></p>
+        <p style="margin-left: 40px;"><span>a. We owned these bonds from the start of the year. As you can see, the market had become hugely pessimistic about inflation and said we only needed 1.68% or so to justify owning index linked. Since then, this has changed &ndash; believe it or not, inflation expectations have risen and so the value of our bonds has gone up.</span></p>
+        <p style="margin-left: 40px;"><span>b. This &ldquo;hidden&rdquo; change in expectation is a sign that many feel things are not as bad as central banks suggest when it comes to guessing where inflation is heading. It helps us maintain our lightweight position to overall government bonds &ndash; in market parlance, TIPS have a lower beta than conventional bonds.</span></p>
+        <p style="text-align: center;"><img height="213" alt="US 10 year inflation breakeven" width="600" src="-/media/9E0329E8AC6B4D2DAF955A307BF4BB1E.ashx?h=213&amp;w=600&amp;hash=B457B8FF4AF0BBDDF7AE35F36E25C75E10A7D5D7&amp;hash=B457B8FF4AF0BBDDF7AE35F36E25C75E10A7D5D7" class="custom-image-height-auto"></p>
+        <p><span></span>Source: Bloomberg, at 21.03.19<span style="font-size: 1.5rem;"></span></p>
+        <p style="margin-left: 40px;"><span>c. Remember the Federal Reserve is now talking about letting the economy &ldquo;run hot&rdquo;, almost hoping for a period of inflation above its 2% target. This would make a lot more money for holders of this type of bonds compared with conventional US Treasuries.</span></p>
+        <p style="margin-left: 40px;"><span>d. Again, this is a volatile series &ndash; it almost never actually sits at the Fed&rsquo;s 2% target. We are almost back there, which for us is probably a sign to take profit and move on. Of course, a further reduction in inflation expectations (perhaps through a cooling labour market) and we would subsequently add to the position.</span></p>
+        <p><span>Of course, the rise in inflation expectation means we also need to worry that risk assets are wrong to think the Federal Reserve is on hold for ever.</span></p>
+        <p><strong><span>4. Drax &ndash; a defensive high-yield bond with a yield over 6%</span></strong></p>
+        <p>&nbsp;<img height="320" alt="Drax – a defensive high-yield bond with a yield over 6%" width="600" src="-/media/51B3E29C050C40F281DEA7B746F3A970.ashx?h=320&amp;w=600&amp;hash=429B91171C04A35E0BA3C37D6B5D5698919459AB&amp;hash=429B91171C04A35E0BA3C37D6B5D5698919459AB" class="custom-image-height-auto" style="text-align: center; font-size: 1.5rem;"><span style="text-align: center; font-size: 1.5rem;"></span></p>
+        <p><span style="font-size: 1.5rem;">Not all our credit investments have to generate capital upside and we are quite happy if a bond meanders along with low volatility throwing off a good yield. In the case of Drax, the 2025 maturity US dollar-denominated bonds offer a yield of above 6% for a BB+ rated investment. They say a picture is worth a thousand words; in this case, the image above is a great way to summarise the transition Drax is going through.</span></p>
+        <p><span>Historically, this was a single-site energy producer in the UK with an enormous coal-fired power plant in Yorkshire. Drax has been evolving from its coal background into using biomass (wooden pellets), which are far less environmentally damaging.&nbsp; </span></p>
+        <p><span>Furthermore, through a combination of acquisitions and organic capital expenditures, the company is growing its exposure to other areas within the renewable energy industry and diversifying its sites across the UK.</span></p>
+        <p><span>Drax is therefore an improving credit story through the quality and sustainability of its earnings.&nbsp; </span></p>
+        <p><span>This is not a deleveraging story as the business is happy to remain rated in the highest band within the high-yield spectrum and has openly stated it will spend any excess cash on growth or returns to shareholders. Balance sheet metrics though remain far superior to US comparators, and it is probably the taint of being a UK name in the US that has led to the generous valuation opportunity.&nbsp; </span></p>
+        <p><span>With over a 6% yield for a solid company with an improving story, this makes Drax an easy one to tuck away in funds for the long term.</span></p>
+        <p><strong><span>5. AbbVie &ndash; a top ten pharma name offering over 5% capital upside</span></strong></p>
+        <p style="text-align: center;"><span><img alt="AbbVie – a top ten pharma name offering over 5% capital upside" src="-/media/727C0E3C5C7A4B33BC7E6ACF0F195BDF.ashx?h=301&amp;w=599&amp;hash=F03E863FDEAE9FAD291727BFCB8C733CBBA21AE8&amp;hash=F03E863FDEAE9FAD291727BFCB8C733CBBA21AE8" class="custom-image-height-auto" style="height: 301px; width: 599px;"></span><span style="font-size: 1.5rem;"></span></p>
+        <p><span style="font-size: 1.5rem;">Source: Barclays, at 21.03.19</span></p>
+        <p><span>AbbVie is a great example of a bond we have bought this year in the secondary market, which is mispriced and offering capital upside. This is one of the top 10 pharmaceutical companies by sales and has a market capitalisation of approximately $120bn. AbbVie is not as strong as many of the other top 10 shown on the chart above but this is more than reflected in the generous credit spreads on the bonds and the equity trading on a single digit price/earnings ratio.&nbsp;&nbsp; </span></p>
+        <p><span>The company&rsquo;s first relative weakness is that it has less diversity; it has one enormous blockbuster drug, Humira, which is the biggest-selling prescription drug in the world. Humira is prescribed for various autoimmune conditions as well as rheumatoid arthritis.&nbsp; </span></p>
+        <p><span>The US patent technically expired in 2016 but biosimilar products are not anticipated to be approved and launched until January 2023 due to other patents surrounding the intellectual property around Humira.&nbsp; Importantly, AbbVie has a strong pipeline of replacement blockbuster drugs, which it is investing in heavily with its prodigious cash flow.&nbsp; </span></p>
+        <p><span>The second relative weakness is that AbbVie has more debt on its balance sheet, proportionately, than the likes of Johnson &amp; Johnson, but with net leverage of around 2.1 times (net debt to EBITDA) this is still very comfortably an investment grade company.&nbsp; </span></p>
+        <p><span>As the sales of AbbVie&rsquo;s other drugs accelerate and more of its pipeline gets approved, I expect a re-rating of the company&rsquo;s bonds. If the valuation differential between AbbVie and the company (Merck &amp; Co) with the second-widest credit spreads only halves, this would provide over 5% capital upside. Not bad for a robust investment grade company, and in the meantime a spread of 200 basis points more than the underlying government debt is attractive carry. The eagle-eyed reader might have noticed there is one of AbbVie&rsquo;s bonds (represented by blue triangles) that has spreads above the interpolated credit curve &ndash; no prizes for guessing which bond we bought.</span></p>
+        <p><strong><span>6. The German curve</span></strong></p>
+        <p><span>Here&rsquo;s one you probably won&rsquo;t be telling your grandchildren about: &ldquo;Let me tell you about the time I made money being long 10-year bunds and short five-year ones&rdquo; isn&rsquo;t up there with the great Norse sagas is it? However, in terms of keeping the performance wolf from the door, it has worked very nicely. </span></p>
+        <p style="text-align: center;"><span style="font-size: 1.5rem;"><img height="387" alt="German bonds 10 and 5 year yield spread" width="600" src="-/media/03A9A71E89BF40FB9E250C77353FD081.ashx?h=387&amp;w=600&amp;hash=541538315E92E01CA5D26599C2D237E3823D1E24&amp;hash=541538315E92E01CA5D26599C2D237E3823D1E24"></span></p>
+        <p><span>Source: Bloomberg, at 21.03.19</span></p>
+        <p><span>It&rsquo;s quite straightforward. Who really wants to own five-year German bonds on a big negative yield? Answer: other than the European Central Bank (ECB), no one. But at the same time, when things were looking difficult for Europe at the beginning of 2019, people did want some exposure to German debt &ldquo;just in case&rdquo;. So they decided to buy some positive yielding 10-year bonds. Not a surprise to us. </span></p>
+        <p><span>What was a bit of a surprise was the extent to which five-year bonds were relatively unloved. Furthermore, despite a bit of market volatility &ndash; bund prices rose and fell in the past 12 months &ndash; five-year bonds were never really in favour. And what did that mean for us? </span></p>
+        <p><span>The largest position we have had in our strategic funds was a &ldquo;short&rdquo; of 20% of fund value in the five year and a &ldquo;long&rdquo; of 10% in 10 year (to remove all the duration risk). The price change meant we made a little over 1% capital gain, but also we received nice income from our long and from our short. </span></p>
+        <p><strong><span>7. Japan versus South Korea (SK)</span></strong></p>
+        <p><span>Most of the trades we feature tend to be &ldquo;western&rdquo;. Why? Well, US and European bond markets remain very open and liquid. They create so many opportunities that we seldom see better risk-adjusted opportunities elsewhere. However, we are always on the lookout and one relationship we are watching closely is that between Japanese and South Korean sovereign bonds. </span></p>
+        <p style="text-align: center;"><span><img height="365" alt="Yield spread between 10 year South korean and Japanese bonds" width="599" src="-/media/AF2A7C171351446EBBF66C88E5C9EFC2.ashx?h=365&amp;w=599&amp;hash=A3FCD8BD73211E0B924B174E2F1599A3E162B635&amp;hash=A3FCD8BD73211E0B924B174E2F1599A3E162B635" class="custom-image-height-auto" style="height: 365px; width: 599px;"></span><span style="font-size: 1.5rem;"></span></p>
+        <p><span>Source: Bloomberg, at 21.03.19</span></p>
+        <p><span style="font-size: 1.5rem;">Everyone knows my views on Japanese Government Bonds (JGBs) &ndash; the only bond market explicitly manipulated to a greater extent than European sovereigns. However, that still creates opportunities. The Bank of Japan has set a &ldquo;corridor&rdquo; along which it wants to see market rates trade. This greatly reduces volatility, albeit leaving a little directionality. So, we can say with a reasonable degree of certainty how JGBs will perform.</span></p>
+        <p><span>Now, in the market rally year-to-date, one would have expected South Korean bonds to continue to outperform Japan &ndash; Japan is range bound, so most other high-quality bonds should outperform as prices rise. South Korean bonds have lagged a little, however.</span></p>
+        <p><span>Unemployment has fallen to just over 4% and GDP growth is around 3%, although core inflation is running around 1.3%, higher than the market expected. This, plus the strong performance of SK bonds last year, may well account for the pull back. Of course, the other big driver is China &ndash; Chinese growth has a direct impact on South Korea, so a significant part of the relative weakness year to date is due to improving trade talks. </span></p>
+        <p><span>Where is the opportunity for us? Being &ldquo;long&rdquo; South Korea and &ldquo;short&rdquo; Japan can give a bit of protection against a trade sentiment reversal. We would expect the spread to narrow again and may even make some gains in Japan. However, if it goes against us and trade talks fare well, the Japan leg should act to modestly dampen any underperformance of SK debt. </span></p>
+        <p><span>Is this one to enter now? Probably not. But as the spread widens, especially if it is driven by positive global macro sentiment, then this looks a good way to add rate risk rather than chase vulnerable Western sovereign debt. </span></p>
+        <p><strong><span>8. Italian government bonds, everyone needs a view. Why? </span></strong></p>
+        <p><span>The two topics I am asked about most as I travel around Europe are Brexit and Italian debt. I think there are strong parallels between them, and normally my answer is &ldquo;if you don&rsquo;t understand something, don&rsquo;t invest in it&rdquo;. </span></p>
+        <p><span>Italian bond yields have fallen dramatically in recent months. There are various reasons for this, of course, but perhaps the main one is an understanding from investors that the Italian economy needs Europe a lot more than Europe needs the Italian economy &ndash; need and want being two very different things. It&rsquo;s amazing how a recession (even a minor one) can focus the mind. So, why have I been happy to avoid?</span></p>
+        <p style="text-align: center;"><span><img height="352" alt="Yield on 10 year italian bonds" width="600" src="-/media/ECC823A75CA44441A3A4C6B5B224E60D.ashx?h=352&amp;w=600&amp;hash=23DA1C769470B2CDAC44C1D459555D9D57379547&amp;hash=23DA1C769470B2CDAC44C1D459555D9D57379547" class="custom-image-height-auto"></span></p>
+        <p><span>Source: Bloomberg, at 21.03.19 </span></p>
+        <p><span style="font-size: 1.5rem;">First, none of our funds need to own Italian debt. This is an important point. Second, there are plenty of opportunities to add value in other markets, so we can afford to sit on the sidelines every once in a while. Third, and most importantly, volatility and directional unpredictability in the market day-to-day is much more common to equity than bond investment.</span></p>
+        <p><span>To make this point, it is worth reproducing a chart showing the performance of Italian bond yields in the past year. A year ago, Italian bonds looked reasonable value on a long-term basis: yields were just above 2% and seemed nice compared with core Europe. </span></p>
+        <p><span>A few statistics:</span></p>
+        <ol style="margin-left: 40px;">
+            <li><span>If you had bought bonds in March 2018 and held to September, you would have seen a capital loss of nearly 12%. On core debt?<br>
+            <br>
+            </span></li>
+            <li><span>If you had bought bonds in March 2018 and still owned them today, despite the recent rally you would still have made a capital loss of 3%.<br>
+            <br>
+            </span></li>
+            <li><span>If you had bought in September 2018, of course, you would be up around 8%.</span></li>
+        </ol>
+        <p style="margin-bottom: 0.0001pt;"><span style="font-size: 1.5rem;">Now, I&rsquo;ll admit &ldquo;value&rdquo; in September at a 3.5% yield seemed good. But had I bought BTPs (Buono del Tesoro Poliennale, Italian government bonds</span><span style="font-size: 1.5rem; background: #f3f4f4; color: #0c0c0c;">)</span><span style="font-size: 1.5rem;"> and they had subsequently traded above 4%, we could no longer have run the risk for our clients and would have been &ldquo;stopped out&rdquo;. There are always plenty of high-risk opportunities in markets, even in bond markets. Getting them right can make you look like a hero in the short term. However, a lesson I&rsquo;ve learned over the past 30 years is that if you minimise negative surprises, control the downside and manage volatility, clients will generally thank you over the long term.</span></p>
+        <p style="margin-bottom: 8pt;"><strong style="font-size: 1.5rem;"><br>
+        9. Brexit &ndash; Long term: loss maker for gilts; short term: play the range but don&rsquo;t bet the farm</strong></p>
+        <p><span>The UK &ldquo;facts&rdquo; at the end of the first quarter of 2019:</span></p>
+        <ul style="list-style-type: disc;">
+            <li><span>Inflation at 1.8% (headline, because we need food and energy)</span></li>
+            <li><span>Growth of 3.1% (nominal, of course, 1.3% real)</span></li>
+            <li><span>Unemployment at 3.9% (lowest in several generations)</span></li>
+            <li><span>And did I mention earnings growth? 3.4%</span></li>
+        </ul>
+        <p><span>Lend to the UK government today for 10 years and you are paid 1.0% a year. You really need to hope for one almighty crisis to make a real return on that loan. Could Brexit be just such a crisis?</span></p>
+        <p><span>We have a central bank already talking about rate hikes after a no-deal Brexit to offset the inflationary impact of a weaker currency and try to fund the rather large UK deficit &ndash; remember 2016 anyone? Of course, given the strength of the economy, even after three years of uncertainty and zero corporate investment, the chances are that following a soft Brexit, the Bank has to raise rates anyway. </span></p>
+        <p><span>So, it looks like rates are going up either way (outside of a global recession and there is precious little evidence for this in the short term). Longer term then, there is little point to buying gilts; short term though, the market has been interesting &ndash; well actually, the market has been downright dull and this, perversely, is what makes it interesting. Compare the following chart with the previous one for Italian bonds &ndash; in a period when equities fell around 10% and subsequently rose about 15%, the price of 10-year UK bonds has moved in little more than a 1% range. </span></p>
+        <p style="text-align: center;"><img height="348" alt="Price of a 10 year gilt" width="599" src="-/media/9CB786C6EF7F43C5B688EF96B4F5C3BC.ashx?h=348&amp;w=599&amp;hash=06D3E8E114F44A9F9282BB984A0BC2212BC87966&amp;hash=06D3E8E114F44A9F9282BB984A0BC2212BC87966" class="custom-image-height-auto"></p>
+        <p><span>Source: Bloomberg, at 21.03.19</span></p>
+        <p><span>Over the past four months, however, there has been a high degree of daily volatility &ndash; the price of bonds has moved materially up or down, albeit within a tight range. Why? Well, it&rsquo;s all about the headlines. Any time we have a &ldquo;good Brexit&rdquo; story, gilts sell off and sterling rises. Likewise, a &ldquo;bad Brexit&rdquo; story and gilts rally, sterling slips. But we stay in the range, with prices subsequently falling back or spiking up. </span></p>
+        <p><span>How to benefit? Well, at some time, the range breaks and my view is it takes bond prices a lot lower. For now, though, we can &ldquo;nickel and dime&rdquo; by buying towards the bottom of the range, selling towards the top &ndash; always in small sizes so that if the range does break, we are not caught out. </span></p>
+        <p><span>Why this and not Italy? Risk and reward for one thing. We can play the gilt market, secure in the knowledge that we will not (for now) be stopped out by excessive price moves. Not so in Italy. And, of course, gilts are one dimensional &ndash; you don&rsquo;t need a Brexit view, just oppose the latest headline and wait for the next, contradictory, one to come along. </span></p>
+        <p><strong><span>10. The trade everyone has been talking about: how to earn over 3% to own German Bunds. For us, this is one to avoid.</span></strong></p>
+        <p style="text-align: center;"><span style="font-size: 1.5rem;"><img height="382" alt="The trade everyone has been talking about: how to earn over 3% to own German Bunds. For us, this is one to avoid." width="600" src="-/media/89AA6D321C164245B34BB4EE3684264D.ashx?h=382&amp;w=600&amp;hash=A8F812B18B085D58CFC15A1756313DAF1B55F2FB&amp;hash=A8F812B18B085D58CFC15A1756313DAF1B55F2FB" class="custom-image-height-auto"></span></p>
+        <p><span>Here is a jolly wheeze: </span></p>
+        <ul>
+            <li><span>You are a US investor.</span></li>
+            <li><span>You want to buy high-quality government debt. </span></li>
+            <li><span>You can buy US 10-year bonds and be paid 2.6% (as at mid-March).</span></li>
+            <li><span>But hang on a minute, you&rsquo;d really like 3%, is that possible?</span></li>
+            <li><span>Nice Mr Banker comes along and says &ldquo;Yes, 3% is indeed possible &ndash; buy German debt.&rdquo;</span></li>
+            <li><span>But you point out 10-year Bunds only pay 0.1%.</span></li>
+            <li><span>Ah, Mr Banker explains, if you do an FX swap for a year, you get &ldquo;paid&rdquo; a total of 3.1%.</span></li>
+            <li><span>How does this work? &ldquo;Trust me,&rdquo; Mr Banker replies&hellip; And, in fact, it does work. To an extent. How?</span></li>
+        </ul>
+        <p><span>You have some US dollars. You sell them into euros so you can buy Bunds and, to remove your FX risk, you buy the US dollar back &ldquo;one year forward&rdquo;. To do this, you receive compensation from the FX market &ndash; because if you invested the USD at LIBOR for a year, you would receive 2.85%, whereas you are swapping into euros and the rate there is -0.15%. </span></p>
+        <p><span>Basically, you get a 3% gain on the FX trade and a 0.1% income from Bunds. This gives you 3.1%, instead of the 2.6% &ldquo;income&rdquo; by owning US Treasuries for a year. No brainer isn&rsquo;t it?</span></p>
+        <p><span>This is in part what has kept euro bond yields so low. It is an unintended (okay, probably intended) consequence of European Central Bank (ECB) rate policy. It distorts capital flows and basically damages the monetary policy of other central banks. But all ECB president Mario Draghi cares about is the Bund/BTP spread. All that is for another day; for now, though, is this really risk-free arbitrage? Of course not.</span></p>
+        <ol style="margin-left: 40px;">
+            <li><span>You need to pay the bid/offer on all these transactions. I&rsquo;m sure Mr Banker is lovely but doing all these transactions eats into your &ldquo;free&rdquo; 0.5%.<br>
+            <br>
+            </span></li>
+            <li>You have only &ldquo;hedged&rdquo; for one year and your bonds are for 10 years. So let&rsquo;s close the transaction out. And this is where the problem can occur. Why?</li>
+        </ol>
+        <p><span style="font-size: 1.5rem;">Let&rsquo;s be honest here. German Bunds have almost never been as expensive as they are today either in absolute terms or relative to US bonds. This weird FX arbitrage in part suggests they will stay so, that the ECB is on hold for ever. But what, just what, if it isn&rsquo;t?</span></p>
+        <p><span>Remember we said Bunds today pay a yield of 0.1% and US bonds 2.6%, a difference of 2.5%. Let&rsquo;s assume in one year that difference has narrowed to 2%, the &ldquo;why&rdquo; is not important. What does this mean? It means a capital loss for Bunds relative to US bonds of up to 5%.</span></p>
+        <p><span>So, all of a sudden, in exchange for your 0.5% &ldquo;extra&rdquo; to own Bunds, you realise you have to pay all those banking transaction costs and are exposed to any relative movement between German and US Bonds &ndash; and, of course, you are buying the one that is really expensive. But not to worry, nice Mr Banker has just bought a new car. </span></p>
+        <span style="color: #222222;">For a comprehensive list of common financial words and terms, see our glossary&nbsp;</span><span style="color: #34b233;"><a href="https://www.liontrust.co.uk/benefits-of-investing/guide-financial-words-terms"><span style="color: #34b233;">here</span></a></span><span>.<br>
+        <br>
+        <br>
+        <strong>Key Risks</strong><strong><br>
+        <br>
+        </strong>Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. Investment in Funds managed by the Global Fixed Income team involves foreign currencies and may be subject to fluctuations in value due to movements in exchange rates. The value of fixed income securities will fall if the issuer is unable to repay its debt or has its credit rating reduced. Generally, the higher the perceived credit risk of the issuer, the higher the rate of interest. Bond markets may be subject to reduced liquidity. The Funds may invest in emerging markets/soft currencies and in financial derivative instruments, both of which may have the effect of increasing volatility.<br>
+        <br>
+        <strong>Disclaimer</strong><strong><br>
+        <br>
+        </strong>The information and opinions provided should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</span>

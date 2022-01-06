@@ -21,9 +21,13 @@
             var apiData = _repository.GetData().FirstOrDefault(f => f.CitiCode == fundClass.CitiCode);
             if (apiData != null)
             {
+                if (int.TryParse(apiData.NumberOfHoldings, out int nrOfHoldings))
+                {
+                    nrOfHoldings -= 1;
+                }
                 return new FundStatsData
                 {
-                    Holdings = apiData.NumberOfHoldings,
+                    Holdings = Convert.ToString(nrOfHoldings),
                     FundSize = apiData.FundSize
                 };
             }

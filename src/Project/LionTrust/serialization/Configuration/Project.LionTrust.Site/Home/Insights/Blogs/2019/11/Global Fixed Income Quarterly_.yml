@@ -1,0 +1,127 @@
+﻿---
+ID: "570d172c-c012-47db-b7ae-63afc25abe2c"
+Parent: "cf43ab73-c00b-4995-b033-6edd60bc85a7"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Blogs/2019/11/Global Fixed Income Quarterly review rates valuations remain hard to fathom
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 8400
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{3A4CB871-C5FF-499D-9D33-F727684EFBB5}"
+              p:before="*"
+              s:ds="{ADEF647F-6595-40F9-A7E8-1DA2E8AAE367}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{7A57327A-FAE7-4168-B2EA-9F664B7E547C}"
+              p:after="r[@uid='{3A4CB871-C5FF-499D-9D33-F727684EFBB5}']"
+              s:ds="{3354D188-4714-4B6B-9584-B8A89BA288AF}"
+              s:id="{67084541-3A58-4648-A597-DA8AA7C4F155}"
+              s:par="DatasourceRule"
+              s:ph="/content/side-content" />
+            <r
+              uid="{9AACDDCD-4B51-4064-BF8C-6506827024DD}"
+              p:after="r[@uid='{7A57327A-FAE7-4168-B2EA-9F664B7E547C}']"
+              s:ds=""
+              s:id="{F329FEA4-20BC-4DEC-AEAD-C68B05C72A32}"
+              s:par="Title=See also...&amp;RelatedPages={2301B1D6-2812-4921-AC12-6BCF90F3A836}|{4D7B7C2A-D992-47CA-AE5D-F2DEB5704C2E}|{F8415A35-9C34-47F7-BACE-42EAABBFA145}|{77B5C263-DEEE-4A04-AE96-C01C2138DFCD}&amp;MaximumNoOfLinks=4"
+              s:ph="/content/side-content" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{5ADAC049-CD3A-4638-B7D9-12A2DB704394}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Global Fixed Income Quarterly review rates valuations remain hard to fathom | Insights | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: Global Fixed Income Quarterly review – rates valuations remain hard to fathom 
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20191108T104732Z
+    - ID: "34690273-d6b5-4cd5-8dfd-cc4f8aaefc81"
+      Hint: LegacyHeroImagePageData_DarkCaption
+      Type: Checkbox
+      Value: 1
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{4D8848D7-ABC1-4206-A6A9-21B174B7E945}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: The Liontrust Global Fixed Income team are more sanguine about the economic outlook than the consensus view and do not agree with current central bank policy. Phil Milburn explains the reasons for the team’s contrarian views and what this means for their portfolios.
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Global Fixed Income Quarterly review – rates valuations remain hard to fathom 
+    - ID: "b3a97116-0825-4197-a212-31849bdc54a2"
+      Hint: LegacyHeroImagePageData_PageHeaderImage
+      Value: |
+        <image mediaid="{954451BD-9670-46F1-8035-1AF35EB613BD}" />
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <p><strong><span>Executive summary</span></strong></p>
+        <p><span>Economic data has been weaker than the expectations that were formed at the start of the year. This has been driven by a collapse in industrial production growth due to direct impacts and uncertainty created by the trade war. The uncertainty has hit business confidence and there is a large gap between the actual data measuring physical activity and the forward-looking surveys, although the latter do have a habit of overshooting. </span></p>
+        <p><span>Global real GDP growth of 2.5% should not be viewed as disastrous; developed market sovereign bonds are pricing in a far more draconian scenario. We find the implications of current rates valuations incredibly hard to fathom and certainly not consistent with the signals that other markets in financial instruments, such as credit and equities, are indicating. </span></p>
+        <p><span>The services sector has seen growth slow and consumption remains robust; our thesis is that this is a soft patch in growth but if consumption rolled over we would be wrong. Employment growth has also slowed but is still consistent with natural population growth and supportive for consumption. There are significant economic risks to the upside too; these emanate from any resolution of the trade wars ahead of the US 2020 presidential elections and the huge capacity for many developed economies to increase their fiscal spending. </span></p>
+        <p><span>On the domestic front, Brexit remains the key driver and the next roll of the political dice entails a general election.</span></p>
+        <p><span>We view the recent dislocations in the US repo markets as a temporary factor that can be remedied by the Federal Reserve conducting open market operations. However, the money markets did act as a proverbial canary in the last cycle and we are watching indicators such as LIBOR/OIS spreads carefully to make sure that the lone canary doesn’t turn into an opera (the collective noun for canaries).</span></p>
+        <p><span>The positioning conclusion from our more sanguine than consensus economic outlook is to continue to run with low duration risk in funds. On the rates management front, we have preferred short-dated and mids (5 to 15-year maturities) to longs in the US and are getting closer to locking this in; money has also been made on German shorts to mids flattening positions. </span></p>
+        <p><span>Inflation protection is very cheap and therefore we prefer treasury inflation protected securities (TIPS) over conventional bonds. With short-dated US Treasuries yielding less than base rates, we also like floating rate notes. Regarding credit, we continue with the strategy of being contrarian and buying exposure to quality names during any market dips; at this stage of the cycle there is no need to chase after the rubbish in the market. Within high yield, European BB rated bonds had come under some pressure as stretched investor positioning unwound; this was due to excessive risk chasing by investors ahead of the restart of the European Central Bank corporate bond purchase programme (CSPP) on 1 November. </span></p>
+        <p><strong><span>Macroeconomics and rates</span></strong></p>
+        <p><span>Presently, there is a huge gap between the soft and hard data; surveys have been weaker than hard data, especially the realised numbers. However, if hard data deteriorates proportionately in line with survey data then we are skirting with a global recession. For example, global manufacturing PMIs have deteriorated from a 2018 peak of 56 to the 50 (flat growth) ballpark, but still have not tracked as low as the future output expectations. Composite PMIs have weakened, the UK being the standout laggard and the eurozone feeling a chill wind across the Atlantic. US, emerging market and global PMIs are suggestive of sub-trend growth but an expansion nonetheless. </span></p>
+        <p><span>The primary cause of the slowdown is US trade policy, with the Trump Administration taking regressive steps. The one successful export this trade war has created is economic weakness, with growth downside materialising in Europe and Asia. The breakdown of eurozone growth illustrates this very clearly: it is the tradeable sector that is causing the malaise, the core of the economies are doing reasonably well. </span></p>
+        <p><span>We discussed in our strategy output last quarter that this weakness is driven by industrial production. Despite this, global real GDP is still expanding at about 2.5%. The consumer is not as confident as a year ago, which is logical, although this needs viewing in the context of global consumer confidence still almost one standard deviation above the long-term average (using JP Morgan’s figures, see the chart on the right below). One has to assume a degree of manufacturing contraction but the key question remains whether it will drag the service sector and consumer with it.</span></p>
+        <p style="text-align: center;"><span><img alt="Phil Milburn: Quarterly review – rates valuations remain hard to fathom " src="-/media/6E020108EBAB464A9818B034856B603A.ashx?h=338&amp;w=591.778" style="width: 591.778px; height: 338px;" class="custom-image-height-auto"></span></p>
+        <p><span>Source: JP Morgan</span></p>
+        <p><span style="font-size: 1.5rem;">One cannot deny the slight deterioration of services activity, but this is commensurate with previous episodes of manufacturing weakness and has historically rebounded once industrial production has reached its nadir. Consumer balance sheets are strong and global retail sales are growing at 5% 3m/3m (JP Morgan figures). Obviously there is a natural correlation between consumption and labour income, as per the chart below.</span><br></p>
+        <p style="text-align: center;"><span></span><span style="font-size: 1.5rem;"><img alt="Phil Milburn: Quarterly review – rates valuations remain hard to fathom " src="-/media/33715B09DAC0455BBD9F69F922C77F73.ashx?h=401&amp;w=600" class="custom-image-height-auto" style="height: 401px; width: 600px;"></span></p>
+        <p><span>Source: BEA, BLS, DB Global Research</span></p>
+        <p><span style="font-size: 1.5rem;">Employment is still growing but off its top significantly: examining the US specifically, the JOLTS data is slowing and non-farm payrolls (NFPs) have adjusted to a lower moving average of about 150K, from the prior 250K level. This should be seen in the context of an economy where unemployment is about 3.5% and expected real growth in 2020 is 1.7%. Contrary to the rumours about the gig economy, US job creation has been in the full-time arena; the US has created/filled about 20m job positions since 2010. Technology undoubtedly substitutes labour but overall the net use of labour grows. The nature of jobs change, there are now more delivery drivers fulfilling online orders for example.</span></p>
+        <p><span>US wage inflation has dropped to “only” 2.9%, this is suggestive of the employment market being a little tougher but certainly not economic Armageddon. To reiterate a point we have been making for the last year, the services sector Phillips Curve is alive and well; this fits the thesis in the paragraph above of where labour substitution by technology can efficiently occur. </span></p>
+        <p><span>Overall, we continue to believe the services sector, employment and the consumer can act in conjunction to help economies through the current manufacturing downturn. It is also important to recognise there are upside risks to growth as well, namely from any trade resolution and loosening fiscal policy. On the former, President Trump clearly desires a second term in office so might be less erratic as he tries to engineer a stronger economy ahead of the 2020 polls. We mentioned last quarter the suspension of the US debt ceiling until July 2021. This allows the US to run a fiscal deficit of almost $900bn, or 4% of GDP; obviously there will still be political squabbles over where to spend this.</span></p>
+        <p><span>For most of the rest of the developed economies in the world, the last 10 years has been more about fixing government deficits. The best example is Germany running with an almost 2% fiscal surplus, meaning there is room for $80bn of spending without breaking the balanced budget rules and assuming no multiplier impact creating higher tax revenues. Central bankers have been keen to stress the marginal impact of looser policy has been reduced and that fiscal expansion is a far more effective tool. We believe monetary policy is long past the reversal rate, but that’s a subject for another time.</span></p>
+        <p><span>Our positioning reflects our comparatively sanguine view on the global economy and the reduction in additional central banking market interference. We continue to believe rates markets are mispriced and guaranteed to generate a negative real return over the next decade. Thus it is appropriate to run with low duration risk but above our zero floor as we are running bond funds.</span></p>
+        <p><span>Inflation protection is cheap so we have exposure to TIPS representing one third of our strategic funds’ overall duration contribution. We have been positioned in the correct parts of the sovereign yield curves, having been in short and mid (5-15 years) dated bonds in the US. Should 5s30s in the US reach 80bps, we would reduce our relative 30-year underweight by levelling out across the maturity buckets. </span></p>
+        <p><span>Cross market we have exposure to New Zealand and Japan. As an aside, the last time Japan raised its consumption tax, as it just has, it created a recession. The Bank of Japan is likely to be more proactive this time around. A couple of high-quality AAA sovereigns look cheap relative to Germany, Norway at the five-year tenor and Swiss 10-year debt.</span></p>
+        <p><strong><span>Spread product</span></strong></p>
+        <p><span>US investment grade leverage has ticked up over the last couple of quarters to three times gross and 2.5x net. Unsurprisingly, interest coverage figures look robust; high leverage is sustainable given the low nominal interest rates. The investment grade ratings drift is actually still mildly positive, high yield is negative but nothing major. The fallen angel rate over the last 12 months (Deutsche Bank figures) is approximately 1% in the US and roughly half of this in Europe. Put simply, the macroeconomic environment is currently a far bigger driver for aggregate credit metrics than any bottom up balance sheet destruction.</span></p>
+        <p><span>Outside of the potential re-merger of Altria and Philip Morris, M&amp;A activity is akin to that in 2017 and 2018. Capital expenditure plans have come off the top, consistent with the uncertainty prevalent in the corporate world. Utilisation in the US is range-bound between 77 and 79%, a figure in the low to mid 80s tends to occur as the economic cycle draws to a close. We maintain this is partly held back by the lack of creative destruction in this cycle caused by monetary largesse; once again there is no productivity mystery.</span></p>
+        <p><span>Compared to the last quarter of 2018, any blip in 2019 could be easily missed if you blinked at the wrong time. The funds have a large capacity to buy investment grade risk should valuation levels improve, in the meantime there are still alpha opportunities at the stock level. Within high yield, we think that a spread of 400bps on an index (ICE BAML H4XE) that excludes CCCs and energy represents good value. The market is not there yet but, on any weakness, we will seek to add to the funds’ physical holdings to take core high yield back up to a 20% weighting and then manage the beta using CDS index overlays.</span></p>
+        <p><span>A pocket of value briefly opened up in European BB rated bonds over Q3. We posit this was due to the retrenchment of some over exuberant buying ahead of the restarting of the ECB’s corporate bond purchasing programme (CSPP) on 1 November.</span></p>
+        <p><span>The supply of investment grade credit has been decent but not spectacular, positive on a net basis but below 2017 and 2018’s run rates. European net corporate supply has picked up and financials are witnessing a small positive in line with 2018 after the prior seven years of shrinkage. Fund flows into the credit markets are still positive and there is no obvious forced selling going on. Credit investors are clearly now trying to protect total returns for the year, the most glaring example is in European high yield where any poor company results quickly gain a bond pariah status in what is an increasingly bifurcated market.</span></p>
+        <p><span>Market-based indicators of sentiment are giving mixed signals. The US 2s10s curve (first chart below) has started to steepen again after a brief foray into negative territory over the summer. SLO (Senior Loan Officers) C&amp;I and consumer surveys are surprisingly benign, but there is some contradicting evidence in banking markets. </span></p>
+        <p style="text-align: center;"><img alt="Phil Milburn: Quarterly review – rates valuations remain hard to fathom " src="-/media/FB183E3EF1EB4150965EBE2B346893F0.ashx?h=340&amp;w=599" class="custom-image-height-auto" style="height: 340px; width: 599px;"></p>
+        <p style="text-align: center;"><img alt="Phil Milburn: Quarterly review – rates valuations remain hard to fathom " src="-/media/2C9345853A2E4F8BAEB9ECDDFE6C934A.ashx?h=338&amp;w=599" class="custom-image-height-auto" style="height: 338px; width: 599px;"></p>
+        <p><span>Source: Liontrust, Bloomberg</span></p>
+        <p><span>Over the last month and a half, there has been a liquidity shortage in the US repo market. Part of this was related to the payment of corporate tax, while some causality can be assigned to the seasonal funding of year end liquidity (three-month funding occurs in late September and early October according to our calendars) and there has been an absorption of liquidity from US T Bill issuance post the debt ceiling suspension. </span></p>
+        <p style="margin-bottom: 0.0001pt;"><span>However, this problem has not entirely vanished and we expect the current Federal Reserve actions to turn into something more akin to permanent open market operations (POMO). Note that the Fed is at pains to stress this fresh expansion of its balance sheet is not further QE. The rumblings are nothing compared to the shock that the BNP money market funds created in 2007 but the plumbing of the system definitely needs watching. LIBOR/OIS has seen some orderly widening, again some of this is seasonal and related to the T Bill issuance. Presently, fear in the money markets is greater than actual problems, but we are watching closely to ensure this remains a lone canary and not a whole opera.</span></p>
+        <p><span style="color: #222222;"><br>For a comprehensive list of common financial words and terms, see our glossary&nbsp;</span><span style="color: #34b233;"><a href="/benefits-of-investing/guide-financial-words-terms">here</a>.<br></span></p><p><br></p><p><strong style="font-size: 1.5rem;">Key Risks&nbsp;</strong><br></p><p><span style="font-size: 1.5rem;">Past performance is not a guide to future performance. Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. Investment in Funds managed by the Global Fixed Income team involves foreign currencies and may be subject to fluctuations in value due to movements in exchange rates. The value of fixed income securities will fall if the issuer is unable to repay its debt or has its credit rating reduced. Generally, the higher the perceived credit risk of the issuer, the higher the rate of interest. Bond markets may be subject to reduced liquidity. The Funds may invest in emerging markets/soft currencies and in financial derivative instruments, both of which may have the effect of increasing volatility.</span><br></p><p><span style="color: #222222;">
+        <br>
+        <strong>Disclaimer<br>
+        </strong><br>
+        The information and opinions provided should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</span></p>

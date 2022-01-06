@@ -27,10 +27,10 @@
 
             var taxonomyFilter = PredicateBuilder.True<ArticleSearchResultItem>();
 
-            if (articleSearchRequest.ContentTypes != null && articleSearchRequest.ContentTypes.Any())
+            if (articleSearchRequest.Categories != null && articleSearchRequest.Categories.Any())
             {
                 var contentTypePredicate = PredicateBuilder.False<ArticleSearchResultItem>();
-                contentTypePredicate = articleSearchRequest.ContentTypes.Aggregate(contentTypePredicate,
+                contentTypePredicate = articleSearchRequest.Categories.Aggregate(contentTypePredicate,
                                                                                             (current, contentType) => current                                                                                                                    
                                                                                             .Or(item => item.ArticleContentType == IdHelper.NormalizeGuid(contentType, true)));
 
@@ -60,17 +60,30 @@
                 taxonomyFilter = taxonomyFilter.And(managerPredicate);
             }
 
-            if (articleSearchRequest.Categories != null && articleSearchRequest.Categories.Any())
+            if (articleSearchRequest.Topics != null && articleSearchRequest.Topics.Any())
             {
-                var managerPredicate = PredicateBuilder.False<ArticleSearchResultItem>();
-                managerPredicate = articleSearchRequest
-                                            .Categories
-                                                    .Aggregate(managerPredicate,
+                var topicPredicate = PredicateBuilder.False<ArticleSearchResultItem>();
+                topicPredicate = articleSearchRequest
+                                            .Topics
+                                                    .Aggregate(topicPredicate,
                                                                     (current, category)
                                                                                 => current
                                                                                      .Or(item => item.Topics.Contains(IdHelper.NormalizeGuid(category, true))));
 
-                taxonomyFilter = taxonomyFilter.And(managerPredicate);
+                taxonomyFilter = taxonomyFilter.And(topicPredicate);
+            }
+
+            if (articleSearchRequest.FundTeams != null && articleSearchRequest.FundTeams.Any())
+            {
+                var teamPredicate = PredicateBuilder.False<ArticleSearchResultItem>();
+                teamPredicate = articleSearchRequest
+                                            .FundTeams
+                                                    .Aggregate(teamPredicate,
+                                                                    (current, team)
+                                                                                => current
+                                                                                     .Or(item => item.ArticleAuthorTeams.Contains(team)));
+
+                taxonomyFilter = taxonomyFilter.And(teamPredicate);
             }
 
             predicate = predicate.And(taxonomyFilter);

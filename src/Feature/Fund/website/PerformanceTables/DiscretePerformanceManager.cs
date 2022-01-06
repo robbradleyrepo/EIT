@@ -4,6 +4,8 @@
     using LionTrust.Foundation.DI;
     using System.Linq;
     using System.Collections.Generic;
+    using System;
+    using System.Globalization;
 
     [Service(ServiceType = typeof(IDiscretePerformanceManager), Lifetime = Lifetime.Singleton)]
     public class DiscretePerformanceManager : IDiscretePerformanceManager
@@ -35,7 +37,7 @@
                         fundClass.DiscretePerformance36To48
                     }));
             }
-
+            
             if (fundClass.Benchmarks == null)
             {
                 return new PerformanceTableRow[0];
@@ -75,18 +77,7 @@
                     fundClass.Benchmark2DiscretePerformance24To36,
                     fundClass.Benchmark2DiscretePerformance36To48
                 }));
-            }
-
-            if (!string.IsNullOrEmpty(fundClass.SectorName))
-            {
-                result.Add(new PerformanceTableRow(fundClass.SectorName, new string[]
-                {
-                    fundClass.SectorDiscretePerformance0To12,
-                    fundClass.SectorDiscretePerformance12To24,
-                    fundClass.SectorDiscretePerformance24To36,
-                    fundClass.SectorDiscretePerformance36To48
-                }));
-            }
+            }            
 
             return result.Where(x => x.Columns.Any(v => v.HasValue));
         }
@@ -106,6 +97,52 @@
                 fundClass.DiscreteQuartile24mTo36m,
                 fundClass.DiscreteQuartile36mTo48m
             });
+        }
+
+        public string[] GetColumnHeadings(string citiCode)
+        {
+            var result = new List<string>();
+            var qeDate = GetPerformanceQEDate(citiCode);
+            var qeMonth = GetPerformanceQEMonth(qeDate);
+            var startIndex = qeDate.Year < DateTime.Now.Year ? -1 : 0;
+            var endIndex = startIndex - 3;
+            for (int i = startIndex; i >= endIndex; i--)
+            {                
+                result.Add($"{qeMonth} {DateTime.Now.AddYears(i).ToString("yy")}");
+            }
+
+            return result.ToArray();
+        }
+
+        private string GetPerformanceQEMonth(DateTime qeDate)
+        {
+            var qeMonth = string.Empty;
+            if (qeDate != null && qeDate != DateTime.MinValue)
+            {
+                qeMonth = qeDate.ToString("MMM");
+            }
+                
+            return qeMonth;
+        }
+
+        private DateTime GetPerformanceQEDate(string citiCode)
+        {
+            var fundClass = _repository.GetData().FirstOrDefault(d => d.CitiCode == citiCode);
+            if (fundClass == null)
+            {
+                return DateTime.MinValue;
+            }
+
+            if (!string.IsNullOrEmpty(fundClass.DiscretePerformanceQE))
+            {
+                DateTime.TryParseExact(fundClass.DiscretePerformanceQE, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.AllowWhiteSpaces, out DateTime qeDate);
+                if (qeDate != null)
+                {
+                    return qeDate;
+                }
+            }
+
+            return DateTime.MinValue;
         }
     }
 }

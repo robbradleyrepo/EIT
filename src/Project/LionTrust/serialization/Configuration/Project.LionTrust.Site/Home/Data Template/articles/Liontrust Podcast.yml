@@ -1,0 +1,164 @@
+﻿---
+ID: "d22816be-abc8-40f3-a7e4-248c9101f20b"
+Parent: "ff86583b-eb8d-4648-a2bc-a59da32cf25e"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Data Template/articles/Liontrust Podcast
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{BA2439A2-5D38-4691-8F50-1B8A94ACD903}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{C8B3B2D1-D42B-4F7F-A536-F647A1CF9C18}"
+              p:before="*"
+              s:ds="{5BA0327B-A12E-4BEC-B72A-9FB2DDBEB523}"
+              s:id="{00E6D57B-DFBB-4C64-8D9F-B9F59A979D23}"
+              s:ph="/header/article-header" />
+            <r
+              uid="{34A6F516-20A4-4E10-8D36-5120670F54DF}"
+              p:after="r[@uid='{C8B3B2D1-D42B-4F7F-A536-F647A1CF9C18}']"
+              s:ds="{F9FFEDAC-974C-4DA6-B033-FEF7D7664D4D}"
+              s:id="{010E3C29-6258-4251-9CEB-FEB1FAC64F98}"
+              s:ph="/main/article" />
+            <r
+              uid="{44D9CD64-8820-4293-928E-E33DAA95A12C}"
+              p:after="r[@uid='{34A6F516-20A4-4E10-8D36-5120670F54DF}']"
+              s:ds="{23E6011C-9F1C-41C1-99B1-B17BE37B808B}"
+              s:id="{DF18E4D6-F59A-4CDD-B26B-91D902F3A2DB}"
+              s:ph="/main/article" />
+            <r
+              uid="{14987E99-5543-44CB-AACC-450C42697891}"
+              p:after="r[@uid='{44D9CD64-8820-4293-928E-E33DAA95A12C}']"
+              s:ds="{4D1F952A-E59F-4F90-9613-44FAB112431C}"
+              s:id="{7626FD78-BC75-4F9C-80E7-DC947364A29B}"
+              s:ph="/main/article" />
+            <r
+              uid="{EEE1E712-F28F-41A1-A9ED-880DD5CB38FD}"
+              p:after="r[@uid='{14987E99-5543-44CB-AACC-450C42697891}']"
+              s:ds="{68D23815-AD71-4334-A12B-C3D27A20C1C1}"
+              s:id="{E9EA1844-F7AA-45D6-A10F-800A467D6E3D}"
+              s:ph="/main/article" />
+            <r
+              uid="{055D3003-595D-4BE2-91E8-375FDE37C61E}"
+              p:after="r[@uid='{EEE1E712-F28F-41A1-A9ED-880DD5CB38FD}']"
+              s:ds="{13BAD453-116B-4FC2-B4BF-9B3B9462FF05}"
+              s:id="{C578F8BA-7001-4285-8D55-B913F21E60E0}"
+              s:ph="/main/article" />
+            <r
+              uid="{9EC6B67F-F89B-4B77-872C-0DB79F2D9718}"
+              p:after="r[@uid='{055D3003-595D-4BE2-91E8-375FDE37C61E}']"
+              s:ds="{26FDBB7F-2485-4B74-8A5D-57AF8824C9B4}"
+              s:id="{7626FD78-BC75-4F9C-80E7-DC947364A29B}"
+              s:ph="/main/article" />
+            <r
+              uid="{0BDBF2FD-B974-4321-8660-8C93C6E90A43}"
+              p:after="r[@uid='{9EC6B67F-F89B-4B77-872C-0DB79F2D9718}']"
+              s:ds="{315EB552-289E-43E4-80D1-BF893F9C88C2}"
+              s:id="{00E6D57B-DFBB-4C64-8D9F-B9F59A979D23}"
+              s:ph="/main/article" />
+            <r
+              uid="{8D7AC930-4240-457A-A7FD-8397628BF5FA}"
+              p:after="r[@uid='{0BDBF2FD-B974-4321-8660-8C93C6E90A43}']"
+              s:ds="{AFC5792E-F7BF-4474-BC2F-8EC0177F2FE0}"
+              s:id="{B87F0E98-81D6-4B7F-A351-549255F96DB7}"
+              s:ph="/main/article" />
+            <r
+              uid="{B9044F0F-A88F-489E-8FD1-6C492AEE5921}"
+              p:after="r[@uid='{8D7AC930-4240-457A-A7FD-8397628BF5FA}']"
+              s:ds="{115300EC-EDD0-4E07-AC2C-F96735D94429}"
+              s:id="{BA0509C8-337A-45E7-A597-8035DC2F1C21}"
+              s:ph="/main/article" />
+            <r
+              uid="{C7EE86D7-3A10-4411-9C69-71EF27E583E4}"
+              p:after="r[@uid='{30A0A4C8-974F-4822-9DCB-DE14881E0400}']"
+              s:ds="{8F7AA55E-2569-4646-A28E-7FA325F64C31}"
+              s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+              s:ph="main" />
+            <r
+              uid="{B6168C0D-C843-4588-B49B-2FAB9D488771}"
+              p:after="r[@uid='{C7EE86D7-3A10-4411-9C69-71EF27E583E4}']"
+              s:ds="{DC3B58C4-457D-4EDE-8A21-90F738F60724}"
+              s:id="{C4570003-4866-4EAA-B069-8FA6611DC0EC}"
+              s:ph="main" />
+            <r
+              uid="{BBB2192D-FA6A-46AE-AE95-15DD426DC1C0}"
+              p:after="r[@uid='{B6168C0D-C843-4588-B49B-2FAB9D488771}']"
+              s:ds="{6A3554C0-A898-4054-9FDF-389DB14617D5}"
+              s:id="{7F3DDF4D-5190-4C04-836D-41325114723D}"
+              s:ph="main" />
+            <r
+              uid="{79DF7224-7866-417D-91E6-6C95F795301F}"
+              p:after="r[@uid='{BBB2192D-FA6A-46AE-AE95-15DD426DC1C0}']"
+              s:ds="{FD8515D1-EA32-49E0-B673-140222F9F87D}"
+              s:id="{29206264-421A-41D5-8869-A7D1EA60566B}"
+              s:ph="main" />
+            <r
+              uid="{136B2778-E8D5-477F-A7EA-E29FEBC69BB6}"
+              p:after="*[1=2]"
+              s:ds="{5B42C29F-C29A-4394-93BA-69355B3DFC53}"
+              s:id="{A811D2B0-D08D-4991-A9DD-6D9FA5799CBD}"
+              s:ph="main" />
+          </d>
+        </r>
+    - ID: "094932b9-ff77-4977-966e-d18f7c7ac091"
+      Hint: LegacyArticle_Subtitle
+      Value: Liontrust Podcast Review
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{666D8658-69FD-4802-B1DF-B4D2FEF1AD18}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Liontrust Podcast | Insights | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: Liontrust Podcast
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210525T152058Z
+    - ID: "4f9b280f-a22d-4e70-886a-45327e8aa507"
+      Hint: Article_Topics
+      Type: Multilist
+      Value: |
+        {B4A230A9-D251-4E23-9289-53031FA8BA0A}
+        {B8BD3FF8-3E07-416A-8F8B-20B63645F0E3}
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{74A07305-3F24-4766-9595-AD788CAD354A}"
+    - ID: "5bd6e9e9-2240-4473-8094-075e811b8438"
+      Hint: Article_ListingImage
+      Value: |
+        <image mediaid="{AA2CE8DF-B8FA-4625-BD11-28C6FB63CAA2}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "79cc76cc-7503-449b-9809-9808cf6c2d26"
+      Hint: Article_Date
+      Value: 20210512T210000Z
+    - ID: "8eb78475-c445-4960-84b0-e946d262f81c"
+      Hint: Article_VideoUrl
+      Value: |
+        <link text="video" linktype="external" url="https://video.liontrust.co.uk/v.ihtml/player.html?token=70c960aa58e512e65ed6ba97094a8d8a&amp;source=embed&amp;photo%5fid=68193386" anchor="" target="" />
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: liontrust podcast
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Article 5
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: Liontrust podcast lorem ipsum dolor sit amet

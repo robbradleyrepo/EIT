@@ -1,0 +1,28 @@
+﻿---
+ID: "eee73333-0b11-4eb8-bde0-4112e89a920a"
+Parent: "5fdfd862-bc6d-4030-a693-693e14dc3704"
+Template: "6ed40c8d-804a-4d93-b81e-0ed14d4fd138"
+Path: /sitecore/content/LionTrustNew/Global/Onboarding Configuration/Choose Country/Section 3/Rest of World
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1e75b4db-fbbf-4410-b2f0-99ccfb86a559"
+      Hint: Country_CountryName
+      Value: Rest of World
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210823T100220Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "a46a84e5-e402-4784-95d3-e316a9761efb"
+      Hint: Country_Iso
+      Value: 01
