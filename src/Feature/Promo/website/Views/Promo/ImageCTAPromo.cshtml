@@ -6,7 +6,7 @@
     var righTextAlignment = Model.TextAlignment != null && !string.IsNullOrEmpty(Model.TextAlignment.Value) && Model.TextAlignment.Value.Equals("right");
     var titleColor = Model.TitleColor != null && !string.IsNullOrEmpty(Model.TitleColor.Value) ? Model.TitleColor.Value : "";
 }
-<div class="container">
+<section class="container">
     <div class="team-card">
         @if (!Model.TitleInSide)
         {
@@ -82,4 +82,4 @@
             }
         </div>
     </div>
-</div>
+</section>
