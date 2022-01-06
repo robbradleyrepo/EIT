@@ -10,6 +10,7 @@ export default () => {
   });
   sectionToScroll.each(function (index) {
     var addID = $(sectionToScroll[index]).attr('id');
+    $(sectionToScroll[index]).nextUntil('.section-spy').wrapAll('<div class="hash-section"/>')
     $(this).removeAttr('id');
     var nextOfHash = $(sectionToScroll[index]).next()
     $(nextOfHash).attr('id', addID);
