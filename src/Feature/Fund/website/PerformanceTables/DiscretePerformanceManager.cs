@@ -102,35 +102,47 @@
         public string[] GetColumnHeadings(string citiCode)
         {
             var result = new List<string>();
-            for (int i = 0; i >= -3; i--)
-            {
-                var qeMonth = GetPerformanceQEMonth(citiCode);
+            var qeDate = GetPerformanceQEDate(citiCode);
+            var qeMonth = GetPerformanceQEMonth(qeDate);
+            var startIndex = qeDate.Year < DateTime.Now.Year ? -1 : 0;
+            var endIndex = startIndex - 3;
+            for (int i = startIndex; i >= endIndex; i--)
+            {                
                 result.Add($"{qeMonth} {DateTime.Now.AddYears(i).ToString("yy")}");
             }
 
             return result.ToArray();
         }
 
-        private string GetPerformanceQEMonth(string citiCode)
+        private string GetPerformanceQEMonth(DateTime qeDate)
+        {
+            var qeMonth = string.Empty;
+            if (qeDate != null && qeDate != DateTime.MinValue)
+            {
+                qeMonth = qeDate.ToString("MMM");
+            }
+                
+            return qeMonth;
+        }
+
+        private DateTime GetPerformanceQEDate(string citiCode)
         {
             var fundClass = _repository.GetData().FirstOrDefault(d => d.CitiCode == citiCode);
             if (fundClass == null)
             {
-                return null;
+                return DateTime.MinValue;
             }
-
-            var qeMonth = string.Empty;
 
             if (!string.IsNullOrEmpty(fundClass.DiscretePerformanceQE))
             {
                 DateTime.TryParseExact(fundClass.DiscretePerformanceQE, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.AllowWhiteSpaces, out DateTime qeDate);
                 if (qeDate != null)
                 {
-                    qeMonth = qeDate.ToString("MMM");
+                    return qeDate;
                 }
             }
-                
-            return qeMonth;
+
+            return DateTime.MinValue;
         }
     }
 }
