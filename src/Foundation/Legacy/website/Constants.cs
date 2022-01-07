@@ -110,8 +110,6 @@ namespace LionTrust.Foundation.Legacy
             public const string ClassesFieldId = "{036AEB89-B0BD-42C2-B763-A56CDBE32CDC}";
             public const string FundManagersFieldId = "{855D1E7B-3D08-4526-AD2D-FA2E86E9BE9B}";
             public const string LaunchDate_FieldId = "{6CBF0ED2-94B3-4F2A-A84D-A36501E38105}";
-            public const string FundSize_FieldId = "{D3A5BBC1-32DC-492D-9C70-645A8E47FB34}";
-            public const string NumberOfHoldings_FieldId = "{DB79496E-BCC5-443F-BBA6-E8D5BF0A31A3}";
             public const string LaunchDateByAuthor_FieldId = "{899548AF-6E4D-4B51-AF9F-24BB58AC9B53}";
             
             public const string BenchmarkName_FieldId = "{30054D3B-D471-469D-A82A-C575DC220CF2}";
