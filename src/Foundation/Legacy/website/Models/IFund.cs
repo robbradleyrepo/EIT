@@ -23,13 +23,7 @@
 
         [SitecoreField(Constants.Fund.LaunchDateByAuthor_FieldId, SitecoreFieldType.Date, "Fund Info")]
         DateTime LaunchDateByAuthor { get; set; }
-
-        [SitecoreField(Constants.Fund.FundSize_FieldId)]
-        string FundSize { get; set; }
-
-        [SitecoreField(Constants.Fund.NumberOfHoldings_FieldId)]
-        string NumberOfHoldings { get; set; }
-
+      
         [SitecoreField(Constants.Fund.BenchmarkName_FieldId)]
         string BenchmarkName { get; set; }
 

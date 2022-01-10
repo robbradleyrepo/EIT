@@ -1,0 +1,29 @@
+﻿---
+ID: "d283111a-9c8a-46f5-ae1c-ad944dc91d85"
+Parent: "cbdc65cb-828a-447d-95df-a708c8f43f1e"
+Template: "e14137dc-817e-40c3-b833-80c4824d2ff6"
+Path: "/sitecore/content/LionTrustNew/Home/funds/MA Active Reserve Fund/_Local/BC017 - Fund Manager Insights"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{C8811EB0-A738-4D1A-BF79-E860A2CBE0BE}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1492465c-0e3c-4fdb-97b8-0fc76924e400"
+      Hint: FundManagerInsightsBase_Heading
+      Value: Fund insights
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211222T144130Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "71469dcb-2347-4fa2-883b-50f4df0e5244"
+      Hint: ArticleSearchParameters_FundManagers
+      Type: Multilist
+      Value: "{666D8658-69FD-4802-B1DF-B4D2FEF1AD18}"

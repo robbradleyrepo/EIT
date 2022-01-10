@@ -43,8 +43,6 @@
 
             var citiCode = FundClassSwitcherHelper.GetCitiCode(HttpContext, fund);
 
-            datasource.Fund.FundSize = GetFundSizeFormatted(fund.FundSize);
-
             var viewModel = new FundStatsViewModel()
             {
                 FundSelector = datasource                
