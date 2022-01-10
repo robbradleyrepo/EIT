@@ -3,12 +3,13 @@
     using System;
     using System.Linq;
     using LionTrust.Foundation.ORM.Extensions;
+    using LionTrust.Foundation.Legacy;
 
     public class ArticleViewModel
     {
         public IArticleHeader ComponentData { get; set; }
 
-        public IArticle ArticleData { get; set; }
+        public IArticle ArticleData { get; set; }        
 
         public string AuthorName
         {
@@ -40,6 +41,19 @@
                 {
                     return ArticleData?.HeaderImage?.GetSafeBackgroundImageStyle();
                 }
+            }
+        }
+
+        public bool IsFundUpdate
+        {
+            get
+            {
+                if (ArticleData != null && ArticleData.PromoType != null && ArticleData.PromoType.Id.ToString("D").ToUpper().Equals(Constants.Article.FundUpdateContentTypeId))
+                {
+                    return true;
+                }
+
+                return false;
             }
         }
 

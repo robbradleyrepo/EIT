@@ -1,7 +1,7 @@
 @using Glass.Mapper.Sc.Web.Mvc
 @using Sitecore.Mvc
-@using LionTrust.Foundation.ORM.Extensions;
 @model LionTrust.Feature.Article.Models.ArticleViewModel
+
 <header class="header header-hero d-flex flex-column justify-content-between" style="@Model.BackgroundImageStyle">
     <section class="container">
         @Html.Sitecore().Placeholder("navigation")
@@ -12,36 +12,48 @@
                         <div class="hero-author hero-author_big">
                             @using (Html.Glass().BeginEditFrame(Model.ArticleData, "Edit author", m => m.Author))
                             {
-                                <img src="@Model.AuthorImageUrl"
-                                     alt="@Model.AuthorName" class="hero-author__img">
+                                if (!string.IsNullOrEmpty(Model.AuthorImageUrl) && !Model.IsFundUpdate)
+                                {
+                                    <img src="@Model.AuthorImageUrl"
+                                         alt="@Model.AuthorName" class="hero-author__img">
+                                }
                             }
-                            <div class="hero-author__content">
+                        <div class="hero-author__content">
+                            @if (!Model.IsFundUpdate)
+                            {
                                 <span class="hero-author__name">
                                     @Model.AuthorName <i class="icon-follow"></i>
                                 </span>
-                                <span class="hero-author__date">
-                                    @if (!Sitecore.Context.PageMode.IsExperienceEditor)
+                            }
+                            <span class="hero-author__date">
+                                @if (!Sitecore.Context.PageMode.IsExperienceEditor)
+                                {
+                                    if (Model.ArticleData.Date.Equals(DateTime.MinValue))
                                     {
-                                        if (Model.ArticleData.Date.Equals(DateTime.MinValue))
-                                        {
-                                            @Model.ArticleData.CreatedDate.ToString("dd-MM-yy")
-                                        }
-                                        else
-                                        {
-                                            @Model.ArticleDate.Date.ToString("dd-MM-yy")
-                                        }
+                                        @Model.ArticleData.CreatedDate.ToString("dd-MM-yy")
                                     }
                                     else
                                     {
-                                        @Html.Glass().Editable(m => m.ArticleData.Date, d => d.ArticleData.Date.ToString("dd-MM-yy"))
+                                        @Model.ArticleDate.Date.ToString("dd-MM-yy")
                                     }
-                                </span>
-                            </div>
+                                }
+                                else
+                                {
+                                    @Html.Glass().Editable(m => m.ArticleData.Date, d => d.ArticleData.Date.ToString("dd-MM-yy"))
+                                }
+                            </span>
+                        </div>
                         </div>
                         <div class="article-hero__content text-center">
                             <h1 class="article-hero__title">
                                 @Html.Glass().Editable(m => m.ArticleData.Title)
                             </h1>
+                            @if (Model.IsFundUpdate)
+                            {
+                                <h4 class="article-hero__subtitle">
+                                    @Html.Glass().Editable(m => m.ArticleData.Subtitle)
+                                </h4>
+                            }
                             @using (Html.Glass().BeginEditFrame(Model.ArticleData, "Edit topics", m => m.Topics))
                             {
                                 <div class="topic-follow d-none d-lg-flex">
