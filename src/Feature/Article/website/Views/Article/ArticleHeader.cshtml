@@ -1,11 +1,7 @@
 @using Glass.Mapper.Sc.Web.Mvc
 @using Sitecore.Mvc
-@using ArticleConstants = LionTrust.Foundation.Legacy.Constants
 @model LionTrust.Feature.Article.Models.ArticleViewModel
 
-@{ 
-    var isFundUpdate = Model.ArticleData.PromoType != null && Model.ArticleData.PromoType.Id.ToString("D").ToUpper().Equals(ArticleConstants.Article.FundUpdateContentTypeId);
-}
 
 <header class="header header-hero d-flex flex-column justify-content-between" style="@Model.BackgroundImageStyle">
     <section class="container">
@@ -17,14 +13,14 @@
                         <div class="hero-author hero-author_big">
                             @using (Html.Glass().BeginEditFrame(Model.ArticleData, "Edit author", m => m.Author))
                             {
-                                if (!string.IsNullOrEmpty(Model.AuthorImageUrl) && !isFundUpdate)
+                                if (!string.IsNullOrEmpty(Model.AuthorImageUrl) && !Model.IsFundUpdate)
                                 {
                                     <img src="@Model.AuthorImageUrl"
                                          alt="@Model.AuthorName" class="hero-author__img">
                                 }
                             }
                         <div class="hero-author__content">
-                            @if (!isFundUpdate)
+                            @if (!Model.IsFundUpdate)
                             {
                                 <span class="hero-author__name">
                                     @Model.AuthorName <i class="icon-follow"></i>
@@ -53,7 +49,7 @@
                             <h1 class="article-hero__title">
                                 @Html.Glass().Editable(m => m.ArticleData.Title)
                             </h1>
-                            @if (isFundUpdate)
+                            @if (Model.IsFundUpdate)
                             {
                                 <h4 class="article-hero__subtitle">
                                     @Html.Glass().Editable(m => m.ArticleData.Subtitle)
