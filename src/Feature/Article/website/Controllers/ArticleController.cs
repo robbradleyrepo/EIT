@@ -84,6 +84,17 @@
                 return null;
             }
 
+            if (Sitecore.Context.Item.TemplateID.ToString().Equals(Constants.PageTypes.HomeTemplateId))
+            {
+                articleScrollerViewModel.DesktopButtonClass = "btn btn-black article__btn d-none d-lg-flex ml-1";
+                articleScrollerViewModel.MobileButtonClass = "btn btn-black d-lg-none";
+            }
+            else
+            {
+                articleScrollerViewModel.DesktopButtonClass = "insight__more link-styles";
+                articleScrollerViewModel.MobileButtonClass = "link-styles d-lg-none";
+            }
+
             return View("~/Views/Article/ArticleScroller.cshtml", articleScrollerViewModel);
         }
 

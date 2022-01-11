@@ -1,29 +1,13 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @using System.Collections.Specialized
-@using ArticleConstants = LionTrust.Feature.Article.Constants
 @model LionTrust.Feature.Article.Models.ArticleScrollerViewModel
-
-@{
-    var desktopButtonClass = string.Empty;
-    var mobileButtonClass = string.Empty;
-    if (Sitecore.Context.Item.TemplateID.ToString().Equals(ArticleConstants.PageTypes.HomeTemplateId))
-    {
-        desktopButtonClass = "btn btn-black article__btn d-none d-lg-flex ml-1";
-        mobileButtonClass = "btn btn-black d-lg-none";
-    }
-    else
-    {
-        desktopButtonClass = "insight__more link-styles";
-        mobileButtonClass = "link-styles d-lg-none";
-    }
-}
 
 <section class="article">
     <div class="article__box">
         <div class="container">
             <div class="article__head">
                 <h2>@Html.Glass().Editable(Model.ArticleScroller, m => m.Heading)</h2>
-                @using (Html.Glass().BeginRenderLink(Model.ArticleScroller, m => m.CTA, new NameValueCollection { { "class", desktopButtonClass } }, isEditable: true))
+                @using (Html.Glass().BeginRenderLink(Model.ArticleScroller, m => m.CTA, new NameValueCollection { { "class", Model.DesktopButtonClass } }, isEditable: true))
                 {
                     if (Model.ArticleScroller.CTA != null && !string.IsNullOrEmpty(Model.ArticleScroller.CTA.Text))
                     {
@@ -108,7 +92,7 @@
                     }
                 </div>
             </div>
-            @using (Html.Glass().BeginRenderLink(Model.ArticleScroller, m => m.CTA, new NameValueCollection { { "class", mobileButtonClass } }))
+            @using (Html.Glass().BeginRenderLink(Model.ArticleScroller, m => m.CTA, new NameValueCollection { { "class", Model.MobileButtonClass } }))
             {
                 if (Model.ArticleScroller.CTA != null && !string.IsNullOrEmpty(Model.ArticleScroller.CTA.Text))
                 {
