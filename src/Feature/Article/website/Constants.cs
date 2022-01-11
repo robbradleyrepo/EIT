@@ -72,7 +72,7 @@
             public const string Heading_FieldId = "{93854C18-0919-445E-BC88-2D353C8491E8}";
             public const string CTA_FieldId = "{BAD318C3-B9B5-457F-A42D-F51516FC3EC2}";
             public const string SelectedArticles_FieldId = "{725DC6C8-8878-4947-86B3-163E51C5911D}";
-            public const string SelectedTags_FieldId = "{23CB5FCD-BCFA-4A06-AE30-8991CC839A4C}";
+            public const string SelectedTags_FieldId = "{23CB5FCD-BCFA-4A06-AE30-8991CC839A4C}";            
         }        
 
         public static class RelatedArticles
@@ -123,5 +123,10 @@
             public const string Label_FieldId = "{89BA5B06-2D92-4329-BCBA-9DE16C450CA9}";
             public const string Icon_FieldId = "{F7431439-3BF3-4D7D-A4FB-B1B6745A233D}";
         }
+
+        public static class PageTypes
+        {
+            public const string HomeTemplateId = "{51D3A578-6E10-4EC6-BB5B-5C1307A6D661}";
+        }        
     }
 }
