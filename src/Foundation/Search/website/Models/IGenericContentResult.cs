@@ -14,7 +14,7 @@
 
         string ImageUrl { get; set; }
 
-        string ListingType { get; set; }
+        string Type { get; set; }
 
         string Date { get; set; }
     }

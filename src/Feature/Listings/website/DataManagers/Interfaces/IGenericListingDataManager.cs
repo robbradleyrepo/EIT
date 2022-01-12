@@ -8,6 +8,6 @@
     public interface IGenericListingDataManager
     {
         GenericListerFacetResponse GetGenericListingFilterFacets(Guid articleFilterFacetConfigId);
-        IGenericSearchResponse GetGenericListingResponse(string parent, string listingType = "", List<int> months = null, List<int> years = null, string searchTerm = "", int page = 1, string database = "web");
+        IGenericSearchResponse GetGenericListingResponse(string parent, string type = "", List<int> months = null, List<int> years = null, string searchTerm = "", int page = 1, string database = "web");
     }
 }
