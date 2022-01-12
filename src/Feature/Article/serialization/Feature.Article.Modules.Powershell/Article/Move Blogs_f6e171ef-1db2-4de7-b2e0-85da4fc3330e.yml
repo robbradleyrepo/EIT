@@ -81,6 +81,14 @@ SharedFields:
                 $newItem.Fields["LegacyFundPageData_HideCumulativePerformanceTable"].Value = $blog.Fields["LegacyFundPageData_HideCumulativePerformanceTable"].Value
                 $newItem.Fields["Sitemap_IncludeInSitemap"].Value = $blog.Fields["Sitemap_IncludeInSitemap"].Value
                 $newItem.Editing.EndEdit()
+                
+                $richtextCompPath = $dateFolderPath + "/" + $newItem.Name + "/_Local/Article Rich Text 1"
+                $richtextItem = Get-Item -Path $richtextCompPath
+                if ($richtextItem) {
+                    $richtextItem.Editing.BeginEdit()
+                    $richtextItem.Fields["ArticleRichText_Copy"].Value = $blog.Fields["LegacyArticle_Content"].Value
+                    $richtextItem.Editing.EndEdit()
+                }
             }
             else {
                 Write-Host "Could not create blog: $($blog.Name)"
