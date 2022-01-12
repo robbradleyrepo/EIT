@@ -25,7 +25,9 @@ Languages:
       Value: Title
     - ID: "694c3f81-60c0-4719-aa8c-5a4264623feb"
       Hint: GenericListingModuleItem_Text
-      Value: Test 123
+      Value: |
+        <p>Test 123</p>
+        <p><a href="~/link.aspx?_id=8B8EABCF40C54D189CF29CC649FB44A9&amp;_z=z">Read more</a></p>
     - ID: "f0c2dfc2-0f2e-4082-a532-87b9ad9b9b9e"
       Hint: GenericListingModuleItem_Subtitle
       Value: Subtitle

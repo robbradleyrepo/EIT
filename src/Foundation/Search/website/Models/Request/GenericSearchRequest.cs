@@ -11,7 +11,7 @@ namespace LionTrust.Foundation.Search.Models.Request
 
         public string Parent { get; set; }
 
-        public IEnumerable<string> ListingType { get; set; }
+        public IEnumerable<string> Type { get; set; }
 
         public IEnumerable<int> Years { get; set; }
 

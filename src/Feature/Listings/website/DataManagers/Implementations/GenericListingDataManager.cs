@@ -49,14 +49,14 @@
 
                 if (filterFacetConfigItem.ListingTypeList != null && filterFacetConfigItem.ListingTypeList.Any())
                 {
-                    listingGenericListingResponse.Facets.Add(new GenericListingFacet { Name = "ListingType", Items = filterFacetConfigItem.ListingTypeList.Select(x => new ListingFilterFacetsModel { Name = x.ListingItemTypeName, Identifier = x.Id.ToString() }) });
+                    listingGenericListingResponse.Facets.Add(new GenericListingFacet { Name = "Type", Items = filterFacetConfigItem.ListingTypeList.Select(x => new ListingFilterFacetsModel { Name = x.ListingItemTypeName, Identifier = x.Id.ToString() }) });
                 }
             }
 
             return listingGenericListingResponse;
         }
 
-        public IGenericSearchResponse GetGenericListingResponse(string parent, string listingType = "", List<int> months = null, List<int> years = null, string searchTerm = "", int page = 1, string database = "web")
+        public IGenericSearchResponse GetGenericListingResponse(string parent, string type = "", List<int> months = null, List<int> years = null, string searchTerm = "", int page = 1, string database = "web")
         {
             page = page - 1;
             var pageSize = Constants.Pagination.PageSize;
@@ -72,9 +72,9 @@
                 Take = pageSize
             };
 
-            if (!string.IsNullOrEmpty(listingType))
+            if (!string.IsNullOrEmpty(type))
             {
-                genericSearchRequest.ListingType = listingType.Split('|');
+                genericSearchRequest.Type = type.Split('|');
             }
 
             ContentSearchResults<GenericSearchResultItem> contentSearchResults;
@@ -107,7 +107,7 @@
                 Title = x.Document.GenericListingTitle,
                 Date = x.Document.Created.ToString("dd.MM.yyyy"),
                 Text = x.Document.GenericListingText,
-                ListingType = x.Document.GenericListingType
+                Type = x.Document.GenericListingType
             });
         }
     }

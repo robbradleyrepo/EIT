@@ -36,9 +36,9 @@
             }           
         }
 
-        public ActionResult GetFilteredResults(string parentId, string listingType = "", List<int> months = null, List<int> years = null, string searchTerm = "", string database = "web", int page = 1)
+        public ActionResult GetFilteredResults(string parentId, string type = "", List<int> months = null, List<int> years = null, string searchTerm = "", string database = "web", int page = 1)
         {
-            var response = this._genericListingDataManager.GetGenericListingResponse(parentId, listingType, months?.ToList(), years?.ToList(), searchTerm, page, database);
+            var response = this._genericListingDataManager.GetGenericListingResponse(parentId, type, months?.ToList(), years?.ToList(), searchTerm, page, database);
             if (response.StatusCode != 200)
             {
                 return new HttpStatusCodeResult(response.StatusCode, response.StatusMessage);

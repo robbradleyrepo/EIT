@@ -18,7 +18,7 @@
                         <div class="col-lg-3">
                             <form class="search-form" @@submit.prevent="submitSearchForm($event)">
                                 <input type="text" v-model="searchText" name="searchText"
-                                       class="search-form__input color-black" placeholder="@Html.Glass().Editable(Model, x => x.SearchByKeywordLabel)">
+                                       class="search-form__input color-black" placeholder="@Model.SearchByKeywordLabel">
                                 <button class="search-form__submit pe-0" type="submit">
                                     <i class="icon-search"></i>
                                 </button>
@@ -115,7 +115,7 @@
             <div class="spinner-border text-gold" role="status"></div>
         </div>
         <!-- <div class="col-lg-6"> -->
-        <article-item inline-template v-for="(article, i) in searchData" :key="i">
+        <article-item inline-template v-for="(article, i) in searchData" :key="i + article.identifier">
             <div class="row">
                 <div class="col-lg-9" v-if="article.imageWidth > 200 && article.imageUrl">
                     <div class="podcast-list-item">
@@ -151,7 +151,7 @@
                         <h2 class="list-mod-item__title">
                             {{article.title}}
                         </h2>
-                        <span class="list-mod-item__date mb-0">{{article.date}}</span>
+                        <span class="list-mod-item__date">{{article.date}}</span>
                         <div class="list-mod-item__content" v-html="article.text"></div>
                     </div>
                 </div>
