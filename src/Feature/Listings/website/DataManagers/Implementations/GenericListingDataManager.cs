@@ -56,7 +56,7 @@
             return listingGenericListingResponse;
         }
 
-        public IGenericSearchResponse GetGenericListingResponse(string parent, string type = "", List<int> months = null, List<int> years = null, string searchTerm = "", int page = 1, string database = "web")
+        public IGenericSearchResponse GetGenericListingResponse(string parent, string type = "", string month = "", string year = "", string searchTerm = "", int page = 1, string database = "web")
         {
             page = page - 1;
             var pageSize = Constants.Pagination.PageSize;
@@ -65,12 +65,20 @@
             {
                 DatabaseName = database,
                 Parent = parent,                
-                Months = months,
-                Years = years,
                 SearchTerm = searchTerm,
                 Skip = page * pageSize,
                 Take = pageSize
             };
+
+            if (!string.IsNullOrEmpty(month))
+            {
+                genericSearchRequest.Months = month.Split('|').Select(i => int.TryParse(i, out var m) ? m : 0);
+            }
+
+            if (!string.IsNullOrEmpty(year))
+            {
+                genericSearchRequest.Years = year.Split('|').Select(i => int.TryParse(i, out var y) ? y : 0);
+            }
 
             if (!string.IsNullOrEmpty(type))
             {
