@@ -6,9 +6,10 @@
         <div id="accordionFlushExample" class="accordion accordion_white">
             @for (int i = 0; i < Model.SFProcessList.Count; i++)
             {
+                var collapsedClass = i != 0 ? "collapsed" : string.Empty;
                 <div class="accordion__card">
                     <div class="accordion__header">
-                        <div class="accordion__link" data-toggle="collapse" data-target="#flush-collapse@(i)" aria-expanded="false" aria-controls="flush-collapse@(i)">
+                        <div class="accordion__link @collapsedClass" data-toggle="collapse" data-target="#flush-collapse@(i)" aria-expanded="false" aria-controls="flush-collapse@(i)">
                             @Model.SFProcessList[i].SFProcessName
                             <div class="content-preferences__accordion-controls">
                                 <div class="options_count"><span class="content-preferences__category">fund</span><span class="slected_count"></span>of<span class="total_count"></span></div>
