@@ -45,6 +45,9 @@
         text-align: center
     .swiper-button-disabled
         opacity: 0
+    .swiper-button-prev,
+    .swiper-button-next
+        z-index: 1
 
 .swiper-container-awards
     width: 100%
@@ -79,12 +82,14 @@
     @include breakpoint(desktop, up)
         visibility: visible
 
-// .swiper-container-awards .swiper-button-next
-//     right: 20px
-
-// .swiper-container-awards .swiper-button-prev
-//     left: 20px
-
-// .swiper-container-awards .swiper-button-next:after, .swiper-container-awards .swiper-button-prev:after
-//     font-size: 50px
-//     color: #C0A961
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+    .swiper-container-awards
+        .swiper-button-prev,.swiper-button-next
+            background-repeat: no-repeat
+            width: 24px
+            height: 48px
+            background-size: 100%
+        .swiper-button-next
+            background-image: url('../../../images/components/common/chevron right.svg')
+        .swiper-button-prev
+            background-image: url('../../../images/components/common/chevron left.svg')
