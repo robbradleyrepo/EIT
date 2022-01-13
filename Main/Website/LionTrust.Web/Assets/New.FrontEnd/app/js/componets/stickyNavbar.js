@@ -4,10 +4,7 @@ export default () => {
   const sticky = navbar.offset()?.top;
   var sectionToScroll = $(document).find('.section-spy');
   var sectionHash = $(document).find('.page-anchor__right .page-anchor__link');
-  sectionHash.each(function (index) {
-    var hashText = $(sectionHash[index]).text();
-    $(sectionToScroll[index]).text(hashText);
-  });
+
   sectionToScroll.each(function (index) {
     var addID = $(sectionToScroll[index]).attr('id');
     $(sectionToScroll[index]).nextUntil('.section-spy').wrapAll('<div class="hash-section"/>')
