@@ -1,19 +1,26 @@
 .swiper-container-awards
     overflow: hidden
+
 .awards
     margin: 100px 0
     padding-top: 23px
     padding-bottom: 16px
     background: #F7F9FC
     border-bottom: 2px solid $primary
-    @include breakpoint(desktop, up)
+
+    +breakpoint(desktop, up)
         padding-top: 88px
+
+
     &__heading
         margin-bottom: 30px
-        @include breakpoint(desktop, up)
+
+        +breakpoint(desktop, up)
             margin-bottom: 44px
+
     &__slide
         display: flex
+
         // width: 270px
         flex-direction: column
         padding: 10px
@@ -25,9 +32,11 @@
         width: 71px
         height: 71px
         margin-bottom: 30px
-        @include breakpoint(desktop, up)
+
+        +breakpoint(desktop, up)
             width: 100px
             height: 100px
+
     &__title
         font-size: 10px
         font-weight: bold
@@ -36,15 +45,20 @@
         text-transform: uppercase
         text-align: center
         line-height: 14px
-        @include breakpoint(desktop, up)
+
+        +breakpoint(desktop, up)
             font-size: 12px
             letter-spacing: 2.4px
+
     &__desc
-        @include p-1-normal-18
+        +p-1-normal-18
+
         color: $secondary-gray
         text-align: center
+
     .swiper-button-disabled
         opacity: 0
+
     .swiper-button-prev,
     .swiper-button-next
         z-index: 1
@@ -54,13 +68,15 @@
     height: 100%
     position: relative
     padding-bottom: 45px
-    @include breakpoint(desktop, up)
+
+    +breakpoint(desktop, up)
         padding-bottom: 88px
 
 .swiper-container-awards
     .swiper-button-next, .swiper-button-prev
         top: 30%
         color: $gold
+
 .swiper-container-awards .swiper-pagination
     visibility: visible
     bottom: 10px
@@ -79,17 +95,20 @@
 
 .swiper-container-awards .swiper-button-next, .swiper-container-awards .swiper-button-prev
     visibility: hidden
-    @include breakpoint(desktop, up)
+
+    +breakpoint(desktop, up)
         visibility: visible
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
     .swiper-container-awards
-        .swiper-button-prev,.swiper-button-next
+        .swiper-button-prev, .swiper-button-next
             background-repeat: no-repeat
             width: 24px
             height: 48px
             background-size: 100%
+
         .swiper-button-next
-            background-image: url('../../../images/components/common/chevron right.svg')
+            background-image: url("../../../images/components/common/chevron right.svg")
+
         .swiper-button-prev
-            background-image: url('../../../images/components/common/chevron left.svg')
+            background-image: url("../../../images/components/common/chevron left.svg")
