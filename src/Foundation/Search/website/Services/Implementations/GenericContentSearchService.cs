@@ -42,12 +42,12 @@
                 taxonomyFilter = taxonomyFilter.And(yearPredicate);
             }
                         
-            if (genericSearchRequest.ListingType != null && genericSearchRequest.ListingType.Any())
+            if (genericSearchRequest.Type != null && genericSearchRequest.Type.Any())
             {
                 var listingTypePredicate = PredicateBuilder.False<GenericSearchResultItem>();
-                listingTypePredicate = genericSearchRequest.ListingType.Aggregate(listingTypePredicate,
-                                                                          (current, listingType) => current
-                                                                                                  .Or(item => item.GenericListingType == IdHelper.NormalizeGuid(listingType, true)));
+                listingTypePredicate = genericSearchRequest.Type.Aggregate(listingTypePredicate,
+                                                                          (current, type) => current
+                                                                                                  .Or(item => item.GenericListingType == IdHelper.NormalizeGuid(type, true)));
 
                 taxonomyFilter = taxonomyFilter.And(listingTypePredicate);                
             }

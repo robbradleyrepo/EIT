@@ -1,20 +1,23 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @model LionTrust.Feature.Text.Models.IFreeTextModule
 @if (Model != null)
-{
-    <h2 class="text-gold">@Html.Glass().Editable(Model, m => m.Title)</h2>
-    if (Sitecore.Context.PageMode.IsExperienceEditor)
-    {
-        <div class="article-with-small">
-            <span>
-                @Html.Glass().Editable(Model, m => m.Body)
-            </span>
+{    
+    <div class="container">
+        <div class="row">
+            <div class="col-12 section text-black">
+                <h2 class="text-gold">@Html.Glass().Editable(Model, m => m.Title)</h2>
+                @if (Sitecore.Context.PageMode.IsExperienceEditor)
+                {
+
+                    @Html.Glass().Editable(Model, m => m.Body)
+                }
+                else
+                {
+                    @Html.Raw(Model.Body)
+                }
+            </div>
         </div>
-    }
-    else
-    {
-        @Html.Raw(Model.Body)
-    }
+    </div>
 }
 else if (Sitecore.Context.PageMode.IsExperienceEditor)
 {

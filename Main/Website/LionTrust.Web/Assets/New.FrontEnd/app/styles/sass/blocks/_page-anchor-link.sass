@@ -72,6 +72,11 @@
             .page-anchor__link.__mPS2id._mPS2id-h.mPS2id-highlight.mPS2id-highlight-last
                 color: $primary
                 text-decoration: underline
+        @include breakpoint(desktop, down) 
+            .page-anchor__link.mPS2id-clicked
+                color: $primary
+                text-decoration: underline
+
     &__link
         color: $black
         margin-right: 3em

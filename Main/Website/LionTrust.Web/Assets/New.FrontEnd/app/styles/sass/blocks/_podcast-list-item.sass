@@ -10,6 +10,17 @@
         @include p-1-normal-20
         @include breakpoint(desktop, up)
             margin-bottom: 32px
+        a
+            @extend .link-styles
+            margin-bottom: 1rem
+            display: inline-block
+            position: relative
+            &::after
+                font-family: icomoon!important
+                content: "\e901"
+                position: absolute
+                top: 0px
+                right: -22px
     &__img
         width: 100%
         height: auto
