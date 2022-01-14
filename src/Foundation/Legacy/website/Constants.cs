@@ -18,6 +18,7 @@ namespace LionTrust.Foundation.Legacy
         {
             public const string Title_FieldId = "{1C19356A-6E47-4D77-BA56-ADE349F17B9D}";
             public const string Subtitle_FieldId = "{094932B9-FF77-4977-966E-D18F7C7AC091}";
+            public const string ShortDescription_FieldId = "{BED4FF5C-E523-4286-9519-C4AD6DC9A46A}";
             public const string Body_FieldId = "{D8CF5DA5-F35F-46D8-B15E-8B388DC01000}";
             public const string PromoType_FieldId = "{58B0791B-504E-423C-8D9E-E16C419353FA}";
             public const string Authors_FieldId = "{15F3AFE1-AB21-4B6B-A434-4C0F7B927921}";

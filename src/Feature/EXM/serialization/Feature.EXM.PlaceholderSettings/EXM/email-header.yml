@@ -1,0 +1,29 @@
+﻿---
+ID: "c7e6e315-7c62-43ea-af54-daaf70807ee9"
+Parent: "7340ec66-256c-4216-911a-8211119ab67d"
+Template: "5c547d4e-7111-4995-95b0-6b561751bf2e"
+Path: "/sitecore/layout/Placeholder Settings/Feature/EXM/email-header"
+DB: master
+SharedFields:
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: "email-header"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+- ID: "e391b526-d0c5-439d-803e-17512eae6222"
+  Hint: Allowed Controls
+  Type: TreelistEx
+  Value: |
+    {77BE2A3E-5B7D-4265-8A54-CAED2B4DB068}
+    {232A687E-8F6E-406A-9226-13F258491D32}
+    {5EDCB93A-E53F-40E2-9B0D-730D22E372DF}
+    {581333B0-AB83-4EA2-B02D-FFACEC35DB4C}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210723T095116Z

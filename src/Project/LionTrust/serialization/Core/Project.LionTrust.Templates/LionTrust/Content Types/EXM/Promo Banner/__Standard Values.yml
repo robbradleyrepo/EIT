@@ -1,0 +1,22 @@
+﻿---
+ID: "59c5d41b-7944-4ab5-a896-038641c416f9"
+Parent: "fb48828a-5744-4e15-b540-4f030855a386"
+Template: "fb48828a-5744-4e15-b540-4f030855a386"
+Path: /sitecore/templates/Project/LionTrust/Content Types/EXM/Promo Banner/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220113T155216Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "f9d663ee-26a4-4c95-b092-d50f4fa8523d"
+      Hint: PromoBanner_CtaImage
+      Value: |
+        <image mediaid="{6ECCCE9E-D91E-42C2-BB3C-63EDE235627E}" />

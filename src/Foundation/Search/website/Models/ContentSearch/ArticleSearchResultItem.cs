@@ -39,6 +39,9 @@
         [IndexField("LegacyArticle_Subtitle")]
         public string ArticleSubtitle { get; set; }
 
+        [IndexField("LegacyArticle_ShortDescription")]
+        public string ArticleShortDescription { get; set; }
+
         //Fund Category
         [IndexField("LegacyArticle_BlogType")]
         public string ArticleContentType { get; set; }

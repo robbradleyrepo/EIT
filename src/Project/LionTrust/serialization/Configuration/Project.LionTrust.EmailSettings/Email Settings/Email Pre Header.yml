@@ -1,0 +1,26 @@
+﻿---
+ID: "69539bfc-c492-4a18-8aa7-458642ec9e5a"
+Parent: "67fcf636-17a5-4c36-8de5-b6ea75a8273d"
+Template: "6ad92f93-3389-4f15-a816-4eecffbbf8b8"
+Path: /sitecore/content/LionTrustNew/Email Settings/Email Pre Header
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220110T113356Z
+    - ID: "5da90013-95a7-4295-a5d4-d7ac3094e30e"
+      Hint: PreHeader_Text
+      Value: |
+        <strong>For professional investors and advisers only.</strong> Can&rsquo;t read this email? Click <a rel="noopener noreferrer" rel="noopener noreferrer" target="_blank" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:underline;color:#2CB543;font-size:11px;line-height:17px;" href="$MessageBrowserUrl$">here </a>to view in a browser
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

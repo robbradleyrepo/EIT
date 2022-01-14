@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
+    using LionTrust.Foundation.Navigation.Models;
 
     public interface IFooterConfiguration : INavigationGlassBase
     {

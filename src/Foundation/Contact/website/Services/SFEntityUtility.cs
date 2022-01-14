@@ -744,6 +744,41 @@
         }
 
         /// <summary>
+        /// Get email preferences id by email
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        public string GetEmailPreferencesIdByEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                Log.Info("Email address is null or empty. No email preferences id returned from the email address.", this);
+                return null;
+            }
+
+            try
+            {
+                var contactService = new ContactService(this.SalesforceSession);
+                var sfContact = contactService.GetByEmail(email);
+                if (sfContact == null)
+                {
+                    Log.Info(string.Format("Salesforce Contact does not exist with the email - {0}", email), this);
+                    return null;
+                }
+
+                var sfEntityId = sfContact.Id.ToString();
+                var randomGuid = sfContact.InternalFields[Constants.SF_GUIDForEmailPref];
+
+                var emailPreferencesId = $"{randomGuid}_{sfEntityId}";
+                return emailPreferencesId;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
         /// Retrieve record types from the SF entity
         /// </summary>
         /// <param name="entityType"></param>

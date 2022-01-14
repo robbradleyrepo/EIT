@@ -107,12 +107,9 @@
     <Compile Include="Models\IHome.cs" />
     <Compile Include="Models\ILinkWithGoal.cs" />
     <Compile Include="Models\INavigationGlassBase.cs" />
-    <Compile Include="Models\IPageLink.cs" />
     <Compile Include="Models\IQuickLinks.cs" />
     <Compile Include="Models\ISecondaryNav.cs" />
     <Compile Include="Models\ISiteRoot.cs" />
-    <Compile Include="Models\ISocialIcon.cs" />
-    <Compile Include="Models\ITwitterAccount.cs" />
     <Compile Include="Models\NavigationViewModel.cs" />
     <Compile Include="Models\OnboardingRole.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

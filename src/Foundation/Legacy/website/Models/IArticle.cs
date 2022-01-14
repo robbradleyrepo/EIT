@@ -17,6 +17,9 @@
         [SitecoreField(Constants.Article.Subtitle_FieldId, SitecoreFieldType.SingleLineText, "Article page data")]
         string Subitle { get; set; }
 
+        [SitecoreField(Constants.Article.ShortDescription_FieldId, SitecoreFieldType.SingleLineText, "Article page data")]
+        string ShortDescription { get; set; }
+
         [SitecoreField(Constants.Article.Body_FieldId, SitecoreFieldType.RichText, "Article page data")]
         string Body { get; set; }
 

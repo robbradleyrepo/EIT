@@ -66,7 +66,10 @@
     <Compile Include="Models\IHeaderDropdown.cs" />
     <Compile Include="Models\IHeaderNavigationColumn.cs" />
     <Compile Include="Models\INavigablePage.cs" />
+    <Compile Include="Models\IPageLink.cs" />
     <Compile Include="Models\IQuickLinkCTA.cs" />
+    <Compile Include="Models\ISocialIcon.cs" />
+    <Compile Include="Models\ITwitterAccount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -81,6 +84,10 @@
     <ProjectReference Include="..\..\Legacy\website\LionTrust.Foundation.Legacy.csproj">
       <Project>{43ee972b-2002-4719-a878-a66a99c42c40}</Project>
       <Name>LionTrust.Foundation.Legacy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Models\website\LionTrust.Foundation.Models.csproj">
+      <Project>{366D70BB-816F-46DC-8C37-5C0C0D40DDFB}</Project>
+      <Name>LionTrust.Foundation.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Onboarding\website\LionTrust.Foundation.Onboarding.csproj">
       <Project>{78b2a114-3eda-4cc7-81eb-d096d9bfc0cc}</Project>

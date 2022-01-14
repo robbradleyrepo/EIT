@@ -1,0 +1,28 @@
+﻿---
+ID: "1c201f39-069d-4936-820a-01a596ccdf0b"
+Parent: "7340ec66-256c-4216-911a-8211119ab67d"
+Template: "5c547d4e-7111-4995-95b0-6b561751bf2e"
+Path: "/sitecore/layout/Placeholder Settings/Feature/EXM/email-footer"
+DB: master
+SharedFields:
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: "email-footer"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+- ID: "e391b526-d0c5-439d-803e-17512eae6222"
+  Hint: Allowed Controls
+  Type: TreelistEx
+  Value: |
+    {A359845C-2343-4E23-BA75-A76FE5CC243E}
+    {03B59743-05AC-46E9-B568-BEF5B6E7DF31}
+    {1E182C5C-1429-4055-BD6A-6E36A5AC2700}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210723T095116Z
