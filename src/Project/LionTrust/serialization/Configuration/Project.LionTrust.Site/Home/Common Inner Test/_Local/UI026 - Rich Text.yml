@@ -1,9 +1,14 @@
 ﻿---
-ID: "090b0a20-adb9-4390-be16-7066a56f4e16"
-Parent: "50cfd1cc-00ee-4a06-9b49-4a864f1bbfcc"
-Template: "07429bcd-04ec-46ea-b3ed-4cb9ca96912b"
-Path: /sitecore/templates/Branches/Project/LionTrust/Page Types/Common Inner/$name/_Local/Article Rich Text
+ID: "c3dd094f-d199-4aa6-b5ca-dfa96380f198"
+Parent: "63a179b0-7819-4407-a0e8-22c4016e04a5"
+Template: "fbfecf7a-bb63-415c-98a5-cf095ff07c99"
+Path: "/sitecore/content/LionTrustNew/Home/Common Inner Test/_Local/UI026 - Rich Text"
 DB: master
+BranchID: "65b014f2-d643-41a1-8e5f-7204ce5831f7"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{090B0A20-ADB9-4390-BE16-7066A56F4E16}"
 Languages:
 - Language: en
   Versions:
@@ -11,13 +16,13 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210604T151647Z
+      Value: 20220114T092851Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\admin
-    - ID: "6876726d-d5d2-40df-94a7-a9a6fae2f683"
-      Hint: ArticleRichText_Copy
+        sitecore\Admin
+    - ID: "7a6eea35-2025-43cf-a371-43d99a82e804"
+      Hint: RichText_Text
       Value: |
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in dapibus purus. Vivamus nec pretium lacus. Ut pharetra rutrum aliquam. Vivamus sed faucibus augue. Duis volutpat sagittis nulla sit amet lobortis. Etiam auctor felis eget neque tempor elementum. Mauris interdum turpis et elit tincidunt, vel lacinia dolor malesuada. Suspendisse fermentum urna congue tincidunt ornare. Aliquam consectetur posuere ipsum non hendrerit. Vestibulum vitae diam nisl. Nulla eu sem ac enim commodo placerat eu in lorem. Cras in hendrerit lacus, a ullamcorper orci. Vivamus sed dolor in ipsum fringilla egestas.<br />
         <br />
@@ -27,5 +32,7 @@ Languages:
         <br />
         Nam ac malesuada arcu. Integer at lorem volutpat, viverra sapien ut, volutpat lectus. Vivamus nec nunc non nibh aliquet pharetra vitae non nisi. Duis vestibulum vel orci a elementum. Proin congue erat sit amet libero elementum, non vulputate nibh facilisis. Ut tincidunt mi nec aliquet lobortis. Phasellus turpis neque, lobortis eget accumsan quis, pulvinar sed dui. Quisque posuere consectetur sapien, quis ullamcorper libero sollicitudin vulputate. Proin quis quam mi. Maecenas sed neque congue, sollicitudin lorem euismod, varius nulla. Donec vitae erat ut lectus ornare tristique eu et enim. Sed eu fermentum felis. Morbi volutpat quam quis nisl vestibulum, a porttitor lorem hendrerit.</p>
         <h5>Key risks</h5>
-        <p>
-        Nam ac malesuada arcu. Integer at lorem volutpat, viverra sapien ut, volutpat lectus. Vivamus nec nunc non nibh aliquet pharetra vitae non nisi. Duis vestibulum vel orci a elementum. Proin congue erat sit amet libero elementum, non vulputate nibh facilisis. Ut tincidunt mi nec aliquet lobortis. Phasellus turpis neque, lobortis eget accumsan quis, pulvinar sed dui. Quisque posuere consectetur sapien, quis ullamcorper libero sollicitudin vulputate. Proin quis quam mi. Maecenas sed neque congue, sollicitudin lorem euismod, varius nulla. Donec vitae erat ut lectus ornare tristique eu et enim. Sed eu fermentum felis. Morbi volutpat quam quis nisl vestibulum, a porttitor lorem hendrerit.&nbsp;</p>
+        <p>Nam ac malesuada arcu. Integer at lorem volutpat, viverra sapien ut, volutpat lectus. Vivamus nec nunc non nibh aliquet pharetra vitae non nisi. Duis vestibulum vel orci a elementum. Proin congue erat sit amet libero elementum, non vulputate nibh facilisis. Ut tincidunt mi nec aliquet lobortis. Phasellus turpis neque, lobortis eget accumsan quis, pulvinar sed dui. Quisque posuere consectetur sapien, quis ullamcorper libero sollicitudin vulputate. Proin quis quam mi. Maecenas sed neque congue, sollicitudin lorem euismod, varius nulla. Donec vitae erat ut lectus ornare tristique eu et enim. Sed eu fermentum felis. Morbi volutpat quam quis nisl vestibulum, a porttitor lorem hendrerit.&nbsp;</p>
+    - ID: "b4d032f0-3342-49a1-ad8a-d0f640c59b4c"
+      Hint: RichText_MarginsContainer
+      Value: "{F067DEBE-FD6A-40DD-8E44-FD19A3B9F91D}"
