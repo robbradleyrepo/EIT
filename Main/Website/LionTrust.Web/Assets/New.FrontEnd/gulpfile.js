@@ -119,6 +119,19 @@ function scriptsCharts() {
     .pipe(browserSync.stream());
 }
 
+function scriptsPostMessage() {
+  return src(["app/js/postmessage.js"], {
+    sourcemaps: true,
+  })
+    .pipe(webpack(webPackConfig))
+    .on("error", function handleError() {
+      this.emit("end");
+    })
+    .pipe(rename("postmessage.min.js"))
+    .pipe(dest("app/js", { sourcemaps: true }))
+    .pipe(browserSync.stream());
+}
+
 
 function styles() {
   return src(
@@ -184,7 +197,7 @@ function startwatch() {
   watch(
     ["app/js/**/*.js", "!app/js/**/*.min.js"],
     { usePolling: true },
-    parallel(scriptsMain, scriptsSearch, scriptsListing, scriptsCharts)
+    parallel(scriptsMain, scriptsSearch, scriptsListing, scriptsCharts, scriptsPostMessage)
   );
   watch(
     "app/images/src/**/*.{jpg,jpeg,png,webp,svg,gif}",
@@ -197,16 +210,17 @@ function startwatch() {
   );
 }
 
-exports.scripts = series(scriptsMain, scriptsSearch, scriptsListing, scriptsCharts);
+exports.scripts = series(scriptsMain, scriptsSearch, scriptsListing, scriptsCharts, scriptsPostMessage);
 exports.styles = styles;
 exports.images = images;
-exports.assets = series(scriptsMain, scriptsSearch, scriptsListing, scriptsCharts, styles, images);
+exports.assets = series(scriptsMain, scriptsSearch, scriptsListing, scriptsCharts, scriptsPostMessage, styles, images);
 exports.build = series(
   cleandist,
   scriptsMain,
   scriptsSearch,
   scriptsListing,
   scriptsCharts,
+  scriptsPostMessage,
   minifyJs,
   styles,
   images,
@@ -218,6 +232,7 @@ exports.default = series(
   scriptsSearch,
   scriptsListing,
   scriptsCharts,
+  scriptsPostMessage,
   styles,
   images,
   parallel(browsersync, startwatch)
