@@ -58,8 +58,10 @@
             background: $primary
             color: $white
         &:hover
-            background: $primary
-            color: $white
+            color: $black
+            @include breakpoint(desktop-large, up)
+                background: $primary
+                color: $white
         &_steps
             color: $primary
             &:hover
