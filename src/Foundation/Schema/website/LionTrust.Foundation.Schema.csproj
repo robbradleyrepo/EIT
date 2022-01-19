@@ -57,6 +57,7 @@
     <Compile Include="Controllers\SchemaController.cs" />
     <Compile Include="Extensions\HtmlExtensions.cs" />
     <Compile Include="Helpers\SchemaHelper.cs" />
+    <Compile Include="Models\BreadcrumbListSchema.cs" />
     <Compile Include="Models\OrganizationSchema.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -13,9 +13,9 @@ namespace LionTrust.Foundation.SchemaOrg.Controllers
             return PartialView("~/Views/Schema/_OrganizationSchema.cshtml", schema);
         }
 
-        public ActionResult BreadcrumbListSchema()
+        public ActionResult BreadcrumbListSchema(BreadcrumbListSchema breadcrumbListSchema)
         {
-            var schema = SchemaHelper.GetBreadcrumbListSchema();
+            var schema = SchemaHelper.GetBreadcrumbListSchema(breadcrumbListSchema);
             return PartialView("~/Views/Schema/_BreadcrumbListSchema.cshtml", schema);
         }
 

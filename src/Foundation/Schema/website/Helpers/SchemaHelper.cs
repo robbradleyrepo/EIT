@@ -63,11 +63,31 @@ namespace LionTrust.Foundation.Schema.Helpers
             };
         }
 
-        public static BreadcrumbList GetBreadcrumbListSchema()
+        public static BreadcrumbList GetBreadcrumbListSchema(BreadcrumbListSchema breadcrumbListSchema)
         {
+            if (breadcrumbListSchema == null || breadcrumbListSchema.BreadcrumbItems == null)
+            {
+                return null;
+            }
+
+            var itemList = new List<ListItem>();
+            foreach (var breadcrumbItem in breadcrumbListSchema.BreadcrumbItems)
+            {
+                var item = new WebPage()
+                {
+                    Id = new Uri(breadcrumbItem.Url ?? "about:blank"),
+                    Name = breadcrumbItem.Name
+                };
+                itemList.Add(new ListItem()
+                {
+                    Position = breadcrumbItem.Position,
+                    Item = item
+                });
+            }
+
             return new BreadcrumbList
             {
-
+                ItemListElement = itemList
             };
         }
     }

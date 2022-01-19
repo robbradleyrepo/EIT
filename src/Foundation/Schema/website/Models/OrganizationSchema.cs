@@ -1,5 +1,4 @@
-﻿using Schema.NET;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace LionTrust.Foundation.Schema.Models
