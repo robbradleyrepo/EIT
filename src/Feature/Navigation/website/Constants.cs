@@ -28,6 +28,9 @@
         {
             public const string Logo_FieldName = "Identity_Logo";
             public const string Logo_FieldID = "{F113BF3D-FE80-4A15-9CDA-679B3C3CB3BE}";
+            public const string CompanyName_FieldID = "{AB125A99-A1A6-413C-A65A-AA55EDA8F0DA}";
+            public const string ContactType_FieldID = "{6E788013-3179-4986-893B-079222C74556}";
+            public const string AreaServed_FieldID = "{417057AA-FBA9-488F-86B2-D7E313D0A7A5}";
         }
 
         public static class FooterConfiguration
@@ -50,6 +53,9 @@
             public const string Copyright_FieldID = "{E168F770-7271-4DC4-9242-72805145ACDC}";
             public const string PageLinks_FieldId = "{E28B0C65-2DC9-42CB-B852-282C57BFEE3A}";
             public const string SocialLinks_FieldId = "{F0D67B9B-4D7D-40AC-B854-AC936934071D}";
+            public const string SameAs_FieldId = "{9423B444-1B41-4BC0-A25E-F5A9A7E35A2F}";
+            public const string Longitude_FieldId = "{CB136376-5BC7-43C4-9D56-76F9C6923EB2}";
+            public const string Latitude_FieldId = "{CBF5D6B1-341D-4832-9D68-AA5A20CEDBCC}";
         }
 
         public static class SocialIcon

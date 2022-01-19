@@ -4,7 +4,7 @@
 @using LionTrust.Foundation.Navigation;
 
 @model LionTrust.Feature.Navigation.Models.NavigationViewModel
-@if (Model != null && Model.RootItem != null && Model.HomeItem != null)
+@if (Model != null && Model.HomeItem != null)
 {
     <div class="sidebar sidebar_border">
         <div class="sidebar__top">
@@ -12,9 +12,9 @@
                 <button class="sidebar__close-btn"></button>
                 <div class="sidebar__logo">
                     <a href="@Model.HomeItem.Url" class="sidebar__logo-link">
-                        @if (Model.RootItem.Logo != null)
+                        @if (Model.HomeItem.Logo != null)
                         {
-                            @Html.Glass().RenderImage(Model.RootItem, x => x.Logo, new { alt = Model.RootItem.Logo != null ? Model.RootItem.Logo.Alt : string.Empty, @class = "sidebar__logo-img" }, isEditable: true)
+                            @Html.Glass().RenderImage(Model.HomeItem, x => x.Logo, new { alt = Model.HomeItem.Logo != null ? Model.HomeItem.Logo.Alt : string.Empty, @class = "sidebar__logo-img" }, isEditable: true)
                         }
                     </a>
                 </div>
