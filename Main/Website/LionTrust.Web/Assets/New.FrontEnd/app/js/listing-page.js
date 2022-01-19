@@ -23,5 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
             //bgParents.style.width = image.width + 'px';
             bgParents.style.height = image.height + 'px';
         }
+        if ($('.onboarding-overlay').hasClass('active') === true) {
+            $('html').addClass('overflow-hidden');
+        }
+        else
+        {
+            $('html').removeClass('overflow-hidden');
+        }
     };
 });
