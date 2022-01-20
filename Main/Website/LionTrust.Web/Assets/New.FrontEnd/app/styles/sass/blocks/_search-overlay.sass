@@ -1,8 +1,12 @@
 .search-overlay
     @extend .onboarding-overlay
+
     padding: 20px
-    @include breakpoint(tablet, up)
+
+    +breakpoint(tablet, up)
         padding-top: 56px
+
+
     &.active
         display: block
         position: fixed
@@ -10,78 +14,111 @@
         left: 0
         right: 0
         bottom: 0
+
     .container
         padding-left: 0
         padding-right: 0
-        @include breakpoint(tablet, up)
+
+        +breakpoint(tablet, up)
             padding-left: inherit
             padding-right: inherit
+
     &__close
         text-align: right
         color: $white
         margin-right: 6px
         margin-top: -6px
+
     &__icon-close
         cursor: pointer
         color: $white
+
         @extend .btn-unset
+
     &__serch-content
         margin-top: 64px
-        @include breakpoint(desktop, up)
+
+        +breakpoint(desktop, up)
             padding: 0 100px
+
+    .search-form
+        &__input
+            color: $white
+
+        &__submit
+            .icon-search
+                color: $white
 
 .search-form
     position: relative
+
     &__input
         width: 100%
         border: none
         background: transparent
         padding: 0 32px 11px 0
-        color: $black
+        color: $white
         font-size: 22px
         line-height: 25px
         font-weight: 400
         border-bottom: 1px solid $gray
         position: relative
         transition: border-color 0.3s ease-in-out
+
         &:focus
             border-color: $gold
+
         &:focus ~ .search-form__submit
             color: $primary
+
         &::placeholder
             color: $gold
-        @include breakpoint(desktop, up)
+
+        +breakpoint(desktop, up)
             font-size: 52px
             padding-right: 40px
+
+
         &.color-black
             &::placeholder
-                font-family: $userfont 
+                font-family: $userfont
                 color: $black
                 font-weight: 400
                 font-size: 16px
+
     &__submit
         position: absolute
         top: 0
         right: 0
         border: none
         background: transparent
-        @include font-size(20px)
+
+        +font-size(20px)
+
         color: $white
         transition: color 0.3s ease-in-out
-        @include breakpoint(desktop, up)
+
+        +breakpoint(desktop, up)
             font-size: 27px
             top: 23px
+
+
         .icon-search
-            color: $black 
+            color: $white
 
 .recent
-    @include p-1-normal-20
+    +p-1-normal-20
+
     margin-top: 24px
-    @include breakpoint(desktop, up)
+
+    +breakpoint(desktop, up)
         margin-top: 33px
+
+
     &__title
         font-weight: 800
         color: #9A9A9A
+
     &__list
         margin-top: 20px
 
