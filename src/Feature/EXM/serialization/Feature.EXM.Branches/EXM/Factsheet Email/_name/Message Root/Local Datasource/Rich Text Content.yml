@@ -1,0 +1,27 @@
+﻿---
+ID: "ac45fb22-7169-4643-a4f1-53b84a79f8b9"
+Parent: "7a1cd871-49a1-4fb4-8450-3835d1dc8fe5"
+Template: "00a71933-7517-4b87-9ae4-cb0b59731038"
+Path: /sitecore/templates/Branches/Feature/EXM/Factsheet Email/$name/Message Root/Local Datasource/Rich Text Content
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 500
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220110T152117Z
+    - ID: "35e76c21-7732-46a5-82bd-399cf7925903"
+      Hint: Text
+      Value: |
+        <p>Please remember that you can edit your preferences</p>
+        <p>(including opting out of communications) at any time.</p>
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

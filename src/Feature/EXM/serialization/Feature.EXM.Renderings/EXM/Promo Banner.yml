@@ -22,7 +22,11 @@ SharedFields:
   Value: "{76F821AA-913A-44E3-AE4A-05E5DA5B1BE6}"
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
-  Value: "query:.//*"
+  Value: "query:.//*[@@templatename='Local Datasource Folder']"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{EDD6613D-5869-45D0-B43F-C604AB51CB20}" />
 - ID: "ded9e431-3604-4921-a4b3-a6ec7636a5b6"
   Hint: Controller Action
   Value: PromoBanner

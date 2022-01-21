@@ -1,0 +1,67 @@
+﻿---
+ID: "5d91d958-39f2-4185-ba6d-f9f7cd16a0f9"
+Parent: "cd846ffc-c75c-4fb6-a413-bd6e597a2df5"
+Template: "3f12d78c-b7b7-4157-98fc-da3322ee1a5b"
+Path: /sitecore/templates/Branches/Feature/EXM/Webinars Email/$name/Message Root
+DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{F7B16AF0-09C8-48F5-95EC-36B76C1CBE2B}">
+        <r
+          ds="{69539BFC-C492-4A18-8AA7-458642EC9E5A}"
+          id="{77BE2A3E-5B7D-4265-8A54-CAED2B4DB068}"
+          par=""
+          ph="email-header"
+          uid="{0E6526F9-6A76-4B96-B374-A71983519753}" />
+        <r
+          ds="{BC7B0B4B-FBD0-49CC-BA71-6CF924A51FA2}"
+          id="{56B8A6ED-E39F-4E4D-8434-E8E64112BD06}"
+          par=""
+          ph="email-header"
+          uid="{B054F12A-8D51-4F84-85CA-54286C140164}" />
+        <r
+          ds="{AD59E930-AE8B-4C55-B539-3053A758C058}"
+          id="{F3F8CA55-7FF5-4E95-A072-B24E5E17F2E6}"
+          par=""
+          ph="email-body"
+          uid="{EBABF084-1C54-4431-9E60-7B9874E2CEF2}" />
+        <r
+          ds="{2D778558-B653-41F8-8BFE-2E91EF798364}"
+          id="{D6AB496B-D7EA-4678-B98A-23D5A9196392}"
+          par=""
+          ph="email-body"
+          uid="{12F027A6-76C5-499A-8CAD-FDA985846302}" />
+        <r
+          ds="{1EEB1E92-F305-4E3E-9C0E-78BB46B27CDA}"
+          id="{B8C4E635-5A0C-4195-9B9C-43D795967248}"
+          par=""
+          ph="email-body"
+          uid="{3D37E61B-8C94-4000-9128-82FF637AC221}" />
+        <r
+          ds="{83C4B9CE-25A6-4A8E-8F01-37901C57B46F}"
+          id="{03B59743-05AC-46E9-B568-BEF5B6E7DF31}"
+          par=""
+          ph="email-footer"
+          uid="{315B5240-4AA4-4725-9847-ED9DFF2C531B}" />
+        <r
+          ds="{501C9D26-E918-44A1-9554-7C52D85D4AC7}"
+          id="{1E182C5C-1429-4055-BD6A-6E36A5AC2700}"
+          par=""
+          ph="email-footer"
+          uid="{308744D2-B17C-4E91-A788-390C499C9882}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220107T092440Z

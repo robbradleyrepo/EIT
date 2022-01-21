@@ -20,10 +20,10 @@ namespace LionTrust.Feature.EXM.Controllers
             return View("~/Views/EXM/Footer.cshtml", model);
         }
 
-        public ActionResult SmallPrint()
+        public ActionResult Disclaimer()
         {
-            var model = _mvcContext.GetDataSourceItem<ISmallPrint>();
-            return View("~/Views/EXM/SmallPrint.cshtml", model);
+            var model = _mvcContext.GetDataSourceItem<IDisclaimer>();
+            return View("~/Views/EXM/Disclaimer.cshtml", model);
         }
     }
 }

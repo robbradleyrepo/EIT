@@ -20,5 +20,10 @@
             public const string Icon_FieldId = "{BB868FC2-144B-4532-818C-BC3FD9338198}";
             public const string LinkGoal_FieldId = "{A4DF08CC-C027-4155-B6B0-0491D5F0F809}";
         }
+
+        public static class Article
+        {
+            public const string Image_FieldId = "{5BD6E9E9-2240-4473-8094-075E811B8438}";
+        }
     }
 }

@@ -20,6 +20,12 @@ namespace LionTrust.Feature.EXM.Controllers
             return View("~/Views/EXM/Hero.cshtml", model);
         }
 
+        public ActionResult HeroLogo()
+        {
+            var model = _mvcContext.GetDataSourceItem<IHeroLogo>();
+            return View("~/Views/EXM/HeroLogo.cshtml", model);
+        }
+
         public ActionResult HeroWithCta()
         {
             var model = _mvcContext.GetDataSourceItem<IHeroWithCta>();

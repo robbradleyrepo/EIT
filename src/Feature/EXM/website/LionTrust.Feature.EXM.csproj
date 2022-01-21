@@ -83,6 +83,10 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\41521605538834349.png" />
+    <Content Include="Content\Images\bottomshadow.png" />
+    <Content Include="Content\Images\card50shadow.png" />
+    <Content Include="Content\Images\card50shadow_a8g.png" />
     <Content Include="Content\sitecore-fixes.css" />
     <Content Include="Views\web.config" />
     <Content Include="App_Config\Include\Feature\Feature.EXM.config" />
@@ -91,35 +95,59 @@
     <Content Include="Views\EXM\Layouts\GeneralEmailLayout.cshtml" />
     <Content Include="Views\EXM\Header.cshtml" />
     <Content Include="Views\EXM\HeroWithDescriptionAndCta.cshtml" />
-    <Content Include="Views\EXM\ArticleCards.cshtml" />
+    <Content Include="Views\EXM\ArticleCardsBlock.cshtml" />
     <Content Include="Views\EXM\RichTextContent.cshtml" />
     <Content Include="Views\EXM\Signature.cshtml" />
     <Content Include="Views\EXM\CTA.cshtml" />
     <Content Include="Views\EXM\PromoBanner.cshtml" />
-    <Content Include="Views\EXM\SmallPrint.cshtml" />
+    <Content Include="Views\EXM\Disclaimer.cshtml" />
     <Content Include="App_Config\Include\Feature\Feature.EXM.Serialization.config" />
+    <Content Include="Views\EXM\ArticleCardsInline.cshtml" />
+    <Content Include="Views\EXM\ArticleCardsList.cshtml" />
+    <Content Include="Views\EXM\HeroWithCta.cshtml" />
+    <Content Include="Views\EXM\Hero.cshtml" />
+    <Content Include="Views\EXM\HeroLogo.cshtml" />
+    <Content Include="Views\EXM\FeaturedArticle.cshtml" />
+    <Content Include="Views\EXM\InsightsCard.cshtml" />
+    <Content Include="Views\EXM\RegisterWebinar.cshtml" />
+    <Content Include="Views\EXM\WebinarCards.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="Controllers\EmailFeaturedArticleController.cs" />
+    <Compile Include="Controllers\EmailSignatureController.cs" />
+    <Compile Include="Controllers\EmailInsightsCardController.cs" />
+    <Compile Include="Controllers\EmailWebinarController.cs" />
     <Compile Include="Controllers\EmailCTAController.cs" />
-    <Compile Include="Controllers\EmailArticleCardsController.cs" />
+    <Compile Include="Controllers\EmailArticleController.cs" />
     <Compile Include="Controllers\EmailPromoBannerController.cs" />
     <Compile Include="Controllers\EmailRichTextContentController.cs" />
     <Compile Include="Controllers\EmailHeaderController.cs" />
     <Compile Include="Controllers\EmailFooterController.cs" />
     <Compile Include="Controllers\EmailHeroController.cs" />
-    <Compile Include="Controllers\EmailSignatureController.cs" />
     <Compile Include="Dispatch\CustomDispatchTask.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
+    <Compile Include="Helpers\Implementations\FillMailHelper.cs" />
+    <Compile Include="Helpers\Interfaces\IFillEmailHelper.cs" />
     <Compile Include="Models\IArticleCards.cs" />
-    <Compile Include="Models\ISmallPrint.cs" />
+    <Compile Include="Models\IExmSettings.cs" />
+    <Compile Include="Models\ISignature.cs" />
+    <Compile Include="Models\IHeroLogo.cs" />
+    <Compile Include="Models\IDisclaimer.cs" />
+    <Compile Include="Models\IHeroWithImage.cs" />
+    <Compile Include="Models\IHeroWithImageBase.cs" />
     <Compile Include="Models\IHeroWithDescriptionAndCta.cs" />
     <Compile Include="Models\IHeroWithCta.cs" />
     <Compile Include="Models\IHero.cs" />
-    <Compile Include="Models\IBaseHero.cs" />
+    <Compile Include="Models\IHeroBase.cs" />
+    <Compile Include="Models\ICard.cs" />
+    <Compile Include="Models\IInsightsCard.cs" />
+    <Compile Include="Models\IWebinar.cs" />
+    <Compile Include="Models\IWebinarCards.cs" />
+    <Compile Include="Models\IRegisterWebinar.cs" />
     <Compile Include="Models\IPromoBanner.cs" />
-    <Compile Include="Models\ISignature.cs" />
+    <Compile Include="Models\IFeaturedArticle.cs" />
     <Compile Include="Models\IRichTextContent.cs" />
     <Compile Include="Models\ICta.cs" />
     <Compile Include="Models\IHeader.cs" />
@@ -134,7 +162,6 @@
     <Compile Include="Repositories\Implementations\ArticleRepository.cs" />
     <Compile Include="Repositories\Interfaces\IArticleRepository.cs" />
     <Compile Include="ViewModels\HeaderViewModel.cs" />
-    <Compile Include="ViewModels\ArticleCardsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Foundation\Analytics\website\LionTrust.Foundation.Analytics.csproj">

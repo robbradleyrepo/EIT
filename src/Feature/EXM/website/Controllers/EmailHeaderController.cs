@@ -24,12 +24,7 @@ namespace LionTrust.Feature.EXM.Controllers
             var currentItem = _mvcContext.ContextItem;
             var preHeader = _mvcContext.GetDataSourceItem<IHeader>();
 
-            QueryStringEncryption.GetDefaultInstance().TryDecrypt(HttpContext.Request.QueryString, out NameValueCollection result);
-
-            var source = ExmContext.ContactIdentifier?.Source;
-            var identifier = ExmContext.ContactIdentifier?.Identifier;
-            //var contactId = ExmContext.Contact != null && ExmContext.Contact.Id.HasValue ? ExmContext.Contact.Id.Value.ToString() : null;
-            var messageUrl = $"/?sc_itemid={currentItem.ID}&sc_lang={currentItem.Language.Name}&ex_id_s={source}&ex_id_i={identifier}&{GlobalSettings.OnlineVersionQueryStringKey}=1";
+            var messageUrl = $"/?sc_itemid={currentItem.ID}&sc_lang={currentItem.Language.Name}&{GlobalSettings.OnlineVersionQueryStringKey}=1";
             var model = new HeaderViewModel
             {
                 PreHeader = preHeader,

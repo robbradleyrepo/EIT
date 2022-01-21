@@ -14,6 +14,11 @@
         public string SalesforceEntityId { get; set; }
         public string SalesforceOrgId { get; set; }
         public string RandomGuidFromSalesforceEntity { get; set; }
+        public string OwnerName { get; set; }
+        public string OwnerTitle { get; set; }
+        public string OwnerPhone { get; set; }
+        public string OwnerEmail { get; set; }
+        public string OwnerRegion { get; set; }
         public List<string> SalesforceFundIds { get; set; }
     }
 }

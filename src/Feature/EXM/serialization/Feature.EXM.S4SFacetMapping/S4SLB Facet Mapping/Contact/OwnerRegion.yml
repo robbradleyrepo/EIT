@@ -1,0 +1,21 @@
+﻿---
+ID: "bdc8eac2-30bb-4e50-afdb-115e74db5578"
+Parent: "ff5a05cb-1eaa-4c59-9520-39d652064c2d"
+Template: "bc672974-8945-4c03-ae84-19ec48b517bd"
+Path: /sitecore/system/Modules/S4S/S4SLB Facet Mapping/Contact/OwnerRegion
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220120T122542Z
+    - ID: "27c0c4f4-3c74-4338-9525-a5c14d96ac85"
+      Hint: Salesforce Field
+      Value: /sitecore/system/Modules/S4S/Facets/FacetFieldKeys/Owner Region
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

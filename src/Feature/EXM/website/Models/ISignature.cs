@@ -7,8 +7,8 @@
         [SitecoreField(Constants.Signature.Name_FieldID)]
         string FullName { get; set; }
 
-        [SitecoreField(Constants.Signature.JobPosition_FieldID)]
-        string JobPosition { get; set; }
+        [SitecoreField(Constants.Signature.Title_FieldID)]
+        string Title { get; set; }
 
         [SitecoreField(Constants.Signature.Email_FieldID)]
         string Email { get; set; }

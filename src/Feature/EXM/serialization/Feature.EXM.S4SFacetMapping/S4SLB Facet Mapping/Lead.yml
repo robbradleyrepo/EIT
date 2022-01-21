@@ -1,0 +1,23 @@
+﻿---
+ID: "1c3ff20a-9a4a-4a73-96ea-41ce6b38150d"
+Parent: "3eb23e17-b1e3-41d3-af84-069f03449555"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/system/Modules/S4S/S4SLB Facet Mapping/Lead
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{BC672974-8945-4C03-AE84-19EC48B517BD}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180226T215714Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

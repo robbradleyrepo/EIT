@@ -2,7 +2,7 @@
 {
     using Glass.Mapper.Sc.Configuration.Attributes;
 
-    public interface IHero : IBaseHero
+    public interface IHero : IHeroBase
     {
         [SitecoreField(Constants.Hero.Description_FieldID)]
         string Description { get; set; }

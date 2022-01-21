@@ -3,12 +3,9 @@
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
 
-    public interface IHeroWithCta : IBaseHero
+    public interface IHeroWithCta : IHeroWitImageBase
     {
-        [SitecoreField(Constants.HeroWithCTA.Image_FieldID)]
-        Image Image { get; set; }
-
-        [SitecoreField(Constants.HeroWithCTA.Cta_FieldID)]
+        [SitecoreField(Constants.Hero.Cta_FieldID)]
         Link CTA { get; set; }
     }
 }

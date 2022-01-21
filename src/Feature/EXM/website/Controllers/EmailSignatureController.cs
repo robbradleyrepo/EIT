@@ -17,6 +17,7 @@ namespace LionTrust.Feature.EXM.Controllers
         public ActionResult Signature()
         {
             var model = _mvcContext.GetDataSourceItem<ISignature>();
+
             return View("~/Views/EXM/Signature.cshtml", model);
         }
     }

@@ -18,7 +18,11 @@ SharedFields:
   Value: 0
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
-  Value: "query:.//*"
+  Value: "query:.//*[@@templatename='Local Datasource Folder']"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{509486B5-D875-462B-8A24-7F62E1F1AADF}" />
 - ID: "ded9e431-3604-4921-a4b3-a6ec7636a5b6"
   Hint: Controller Action
   Value: HeroWithDescriptionAndCta
