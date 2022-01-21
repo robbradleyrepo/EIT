@@ -110,7 +110,6 @@
     <Compile Include="Models\IPageLink.cs" />
     <Compile Include="Models\IQuickLinks.cs" />
     <Compile Include="Models\ISecondaryNav.cs" />
-    <Compile Include="Models\ISiteRoot.cs" />
     <Compile Include="Models\ISocialIcon.cs" />
     <Compile Include="Models\ITwitterAccount.cs" />
     <Compile Include="Models\NavigationViewModel.cs" />
@@ -149,6 +148,10 @@
     <ProjectReference Include="..\..\..\Foundation\ORM\website\LionTrust.Foundation.ORM.csproj">
       <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>
       <Name>LionTrust.Foundation.ORM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Schema\website\LionTrust.Foundation.Schema.csproj">
+      <Project>{8fd09e80-4d68-4825-891e-5ee6fed3015b}</Project>
+      <Name>LionTrust.Foundation.Schema</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\SitecoreExtensions\website\LionTrust.Foundation.SitecoreExtensions.csproj">
       <Project>{a57b01c5-75ad-47c0-beda-93079fd37317}</Project>

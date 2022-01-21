@@ -4,6 +4,7 @@
     using LionTrust.Feature.Navigation.Models;
     using LionTrust.Feature.Navigation.Services;
     using Sitecore.Mvc.Controllers;
+    using System.Collections.Generic;
     using System.Web.Mvc;
 
     public class BreadcrumbController : SitecoreController
@@ -27,7 +28,16 @@
 
             var ancestors = breadcrumbService.GetAncestors(currentPage);
 
-            return View("~/views/navigation/breadcrumb.cshtml", new BreadcrumbViewModel { CurrentPage = currentPage, Ancestors = ancestors });
-        }
+            var breadcrumbItems = new List<IBreadcrumbDetailsModel>();
+            if (ancestors != null)
+            {
+                breadcrumbItems.AddRange(ancestors);
+            }
+            breadcrumbItems.Add(currentPage);
+            
+            var breadcrumbListSchema = breadcrumbService.GetBreadcrumbListData(breadcrumbItems);
+
+            return View("~/views/navigation/breadcrumb.cshtml", new BreadcrumbViewModel { CurrentPage = currentPage, Ancestors = ancestors, BreadcrumbList = breadcrumbListSchema });
+        }        
     }
 }

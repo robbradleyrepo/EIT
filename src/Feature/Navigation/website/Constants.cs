@@ -23,13 +23,7 @@
             public const string IncludeInBreadcrumb = "{E409CE1D-3E4E-4C73-A01D-BA8E98BDF25F}";
             public const string BreadcrumbTitle = "{951B9A2D-0238-49ED-A8B9-C2A9255BA2DF}";
         }
-
-        public static class Identity
-        {
-            public const string Logo_FieldName = "Identity_Logo";
-            public const string Logo_FieldID = "{F113BF3D-FE80-4A15-9CDA-679B3C3CB3BE}";
-        }
-
+        
         public static class FooterConfiguration
         {
             public const string FindUsLabel_FieldID = "{05ABA786-3D35-479B-ADA4-ECEE716AD9F5}";
@@ -50,6 +44,9 @@
             public const string Copyright_FieldID = "{E168F770-7271-4DC4-9242-72805145ACDC}";
             public const string PageLinks_FieldId = "{E28B0C65-2DC9-42CB-B852-282C57BFEE3A}";
             public const string SocialLinks_FieldId = "{F0D67B9B-4D7D-40AC-B854-AC936934071D}";
+            public const string SameAs_FieldId = "{9423B444-1B41-4BC0-A25E-F5A9A7E35A2F}";
+            public const string Longitude_FieldId = "{CB136376-5BC7-43C4-9D56-76F9C6923EB2}";
+            public const string Latitude_FieldId = "{CBF5D6B1-341D-4832-9D68-AA5A20CEDBCC}";
         }
 
         public static class SocialIcon

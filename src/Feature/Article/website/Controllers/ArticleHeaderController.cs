@@ -5,15 +5,19 @@
 
     using Glass.Mapper.Sc.Web.Mvc;
     using LionTrust.Feature.Article.Models;
+    using LionTrust.Feature.Article.Repositories;
+    using LionTrust.Foundation.Search.Services.Interfaces;
     using Sitecore.Mvc.Controllers;
 
     public class ArticleHeaderController: SitecoreController
     {
         private readonly IMvcContext context;
+        private readonly IArticleContentSearchService _contentSearchService;
 
-        public ArticleHeaderController(IMvcContext context)
+        public ArticleHeaderController(IMvcContext context, IArticleContentSearchService contentSearchService)
         {
             this.context = context;
+            _contentSearchService = contentSearchService;
         }
 
         public ActionResult Render()
@@ -31,7 +35,9 @@
 
             var componentData = context.GetDataSourceItem<IArticleHeader>();
 
-            return View("/views/article/articleheader.cshtml", new ArticleViewModel { ComponentData = componentData, ArticleData = article });
-        }
+            var articleSchema = new ArticleRepository(_contentSearchService, context).GetArticleSchemaData(article);
+
+            return View("/views/article/articleheader.cshtml", new ArticleViewModel { ComponentData = componentData, ArticleData = article, ArticleSchema = articleSchema });
+        }        
     }
 }

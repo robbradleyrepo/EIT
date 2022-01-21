@@ -16,7 +16,7 @@
         private readonly INavigationRepository _navigationRepository;
         private readonly IMvcContext _mvcContext;
         private readonly BaseLog _log;
-
+       
         public NavigationController(INavigationRepository navigationRepository, IMvcContext mvcContext, BaseLog log)
         {
             this._navigationRepository = navigationRepository;
@@ -64,20 +64,20 @@
         private NavigationViewModel GetNavigationViewModel()
         {
             var navigationViewModel = new NavigationViewModel();
-            var item = RenderingContext.Current.Rendering.Item;
-            var rootItem = _navigationRepository.GetNavigationSiteRoot(item);
-            if (rootItem != null)
-            {
-                navigationViewModel.RootItem = _mvcContext.SitecoreService.GetItem<ISiteRoot>(rootItem.ID.Guid);
-            }
-
+            var item = RenderingContext.Current.Rendering.Item;            
+           
             var homeItem = _navigationRepository.GetNavigationRoot(item);
             if (homeItem != null)
             {
-                navigationViewModel.HomeItem = _mvcContext.SitecoreService.GetItem<IHome>(homeItem.ID.Guid);
+                navigationViewModel.HomeItem = _mvcContext.SitecoreService.GetItem<IHome>(homeItem.ID.Guid);                
                 if (navigationViewModel.HomeItem.OnboardingConfiguration != null) 
                 {
                     navigationViewModel.HomeItem.HeaderConfiguration = NavigationHelper.GetCurrentHeaderConfiguration(_mvcContext, navigationViewModel.HomeItem.OnboardingConfiguration, _log);
+                }
+
+                if (Sitecore.Context.Item.ID.Equals(homeItem.ID))
+                {
+                    navigationViewModel.Organization = _navigationRepository.GetOrganizationData(navigationViewModel.HomeItem, _mvcContext);
                 }
             }
 
@@ -86,6 +86,6 @@
             navigationViewModel.HomeItem.ChangeInvestorUrl = OnboardingHelper.GetChangeUrl();
 
             return navigationViewModel;
-        }
+        }        
     }
 }

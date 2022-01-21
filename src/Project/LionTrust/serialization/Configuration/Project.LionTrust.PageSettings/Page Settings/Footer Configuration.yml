@@ -29,6 +29,13 @@ Languages:
     - ID: "5d9590c5-5dbe-47a1-b617-634debc799c5"
       Hint: FooterConfiguration_PhoneNumber
       Value: +44 (0)20 7412 1700
+    - ID: "9423b444-1b41-4bc0-a25e-f5a9a7e35a2f"
+      Hint: FooterConfiguration_SameAs
+      Type: Treelist
+      Value: |
+        {5976C22F-9F0A-4330-9C4B-5B8030C0EDB7}
+        {9684486B-7593-40C7-82B7-4B4F990F8FD5}
+        {395CC840-969F-453B-8FC1-A3D4C03AA994}
     - ID: "a4f06287-e1be-4c76-96d8-e0e8b609aac1"
       Hint: FooterConfiguration_GoogleMapsLink
       Value: |
@@ -36,6 +43,12 @@ Languages:
     - ID: "c77b9712-2755-4657-bdf2-c43aed9bee02"
       Hint: FooterConfiguration_Location
       Value: London
+    - ID: "cb136376-5bc7-43c4-9d56-76f9c6923eb2"
+      Hint: FooterConfiguration_Longitude
+      Value: 52.2903622
+    - ID: "cbf5d6b1-341d-4832-9d68-aa5a20cedbcc"
+      Hint: FooterConfiguration_Latitude
+      Value: "-1.5870624"
     - ID: "d77b2873-db24-4887-9db1-af3bcd76f3d6"
       Hint: FooterConfiguration_Email
       Value: test@test.com

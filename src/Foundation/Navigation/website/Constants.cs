@@ -62,5 +62,16 @@
             public const string SmallSize_FieldID = "{AEF64917-7C2C-4435-B7BF-0FDD2AA40974}";
             public const string SmallSize_FieldName = "QuickLinkCTA_SmallSize";
         }
+
+        public static class Identity
+        {
+            public const string Logo_FieldName = "Identity_Logo";
+            public const string Logo_FieldID = "{F113BF3D-FE80-4A15-9CDA-679B3C3CB3BE}";
+            public const string CompanyName_FieldID = "{AB125A99-A1A6-413C-A65A-AA55EDA8F0DA}";
+            public const string ContactType_FieldID = "{6E788013-3179-4986-893B-079222C74556}";
+            public const string AreaServed_FieldID = "{417057AA-FBA9-488F-86B2-D7E313D0A7A5}";
+            public const string TemplateID = "{0DC049B8-406C-4151-912F-C50F1223EA06}";
+        }
+
     }
 }

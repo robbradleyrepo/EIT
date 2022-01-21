@@ -1,0 +1,18 @@
+﻿---
+ID: "395cc840-969f-453b-8fc1-a3d4c03aa994"
+Parent: "bd6e3dcb-654c-4062-9058-7cd79ecd4ac7"
+Template: "7682e3eb-272c-4aad-82c3-a10e68dfcba0"
+Path: /sitecore/content/LionTrustNew/Page Settings/Footer Configuration/Social Links/Wikipedia
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220119T081432Z
+    - ID: "e990e03d-0332-45cc-a5e7-613996deda74"
+      Hint: SocialIcon_Link
+      Value: |
+        <link linktype="external" url="https://en.wikipedia.org/wiki/Liontrust_Asset_Management" />

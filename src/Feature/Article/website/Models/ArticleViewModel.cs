@@ -4,6 +4,7 @@
     using System.Linq;
     using LionTrust.Foundation.ORM.Extensions;
     using LionTrust.Foundation.Legacy;
+    using LionTrust.Foundation.Schema.Models;
 
     public class ArticleViewModel
     {
@@ -83,5 +84,7 @@
                 return this.ArticleData?.Authors?.FirstOrDefault()?.Image?.Src;
             }
         }
+
+        public ArticleSchema ArticleSchema { get; set; }
     }
 }

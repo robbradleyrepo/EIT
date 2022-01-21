@@ -9,5 +9,9 @@
     public interface IArticleContentSearchService
     {
         ContentSearchResults<ArticleSearchResultItem> GetDatedTaxonomyRelatedArticles(ITaxonomySearchRequest articleSearchRequest, Func<IQueryable<ArticleSearchResultItem>, IQueryable<ArticleSearchResultItem>> sort = null);
+
+        string GetArticleContent(Guid articleId);
+
+
     }
 }

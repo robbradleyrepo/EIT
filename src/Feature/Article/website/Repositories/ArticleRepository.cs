@@ -5,9 +5,13 @@
     using System.Linq;
     using Glass.Mapper.Sc.Web.Mvc;
     using LionTrust.Feature.Article.Models;
+    using LionTrust.Foundation.Navigation.Helpers;
+    using LionTrust.Foundation.Schema.Models;
     using LionTrust.Foundation.Search.Models.ContentSearch;
     using LionTrust.Foundation.Search.Models.Request;
     using LionTrust.Foundation.Search.Services.Interfaces;
+    using Sitecore.Data.Items;
+    using Sitecore.Resources.Media;
 
     public class ArticleRepository
     {
@@ -73,6 +77,67 @@
         public IEnumerable<IArticlePromo> Map(IArticleFilter filter, string databaseName)
         {
             return Map(filter.Funds?.Select(f => f.Id), filter.ContentTypes?.Select(fc => fc.ArticleType), filter.FundTeams?.Select(ft => ft.Id), filter.FundManagers?.Select(fm => fm.Id), filter.Topics?.Select(t => t.Id), databaseName);
+        }
+
+        public ArticleSchema GetArticleSchemaData(IArticle article)
+        {
+            var articleSchema = new ArticleSchema
+            {
+                Headline = article.Title,
+                Url = article.AbsoluteUrl,
+                Description = article.PageShortDescription,
+                DatePublished = article.Date.Equals(DateTime.MinValue) ? article.CreatedDate : article.Date,
+                DateModified = article.ModifiedDate
+            };
+
+            var mediaOption = new MediaUrlOptions()
+            {
+                AlwaysIncludeServerUrl = true,
+                AbsolutePath = true,
+                LowercaseUrls = true,
+                RequestExtension = ""
+            };
+
+            if (article.Image != null)
+            {
+                var imageItem = _mvcContext.SitecoreService.GetItem<Item>(article.Image.MediaId);
+                if (imageItem != null)
+                {
+                    articleSchema.ImageUrl = MediaManager.GetMediaUrl(imageItem, mediaOption);
+                }
+            }
+
+            var authorList = new List<string>();
+            if (article.Authors != null)
+            {
+                foreach (var author in article.Authors)
+                {
+                    authorList.Add(author.FullName);
+                }
+            }
+            articleSchema.Authors = authorList;
+
+            articleSchema.ArticleBody = _searchService.GetArticleContent(article.Id);
+
+            var identityModel = NavigationHelper.GetWebsiteIdentity(_mvcContext, Sitecore.Context.Item);
+            if (identityModel == null)
+            {
+                return articleSchema;
+            }
+
+            articleSchema.PublisherName = identityModel.CompanyName;
+            if (identityModel.Logo == null)
+            {
+                return articleSchema;
+            }
+
+            var logoItem = _mvcContext.SitecoreService.GetItem<Item>(identityModel.Logo.MediaId);
+            if (logoItem != null)
+            {
+                articleSchema.LogoUrl = MediaManager.GetMediaUrl(logoItem, mediaOption);
+            }
+
+            return articleSchema;
         }
 
         private IArticlePromo BuildArticle(ArticleSearchResultItem hit)
