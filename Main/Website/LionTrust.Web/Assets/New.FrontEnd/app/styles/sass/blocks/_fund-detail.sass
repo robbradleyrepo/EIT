@@ -35,6 +35,7 @@
         font-size: 6px
         right: 0
         color: $black
+        z-index: -1
         &::before
             content: "\e906"
 
@@ -44,6 +45,20 @@
     @include breakpoint(desktop, up)
         margin-top: 100px
         margin-bottom: 80px
+    .card
+        .row
+            > div
+                .card__content
+                    @include breakpoint(desktop, down)
+                        border-top: 1px solid $secondary-silver
+                        margin-top: 52px
+                        padding-top: 29px
+                &:first-child
+                    .card__content
+                        margin-top: 0
+                        padding-top: 0
+                        border: 0
+                    
 
 .graph-section
     margin: 30px auto
