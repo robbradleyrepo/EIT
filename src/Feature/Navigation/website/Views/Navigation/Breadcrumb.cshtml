@@ -1,5 +1,11 @@
 @using Glass.Mapper.Sc.Web.Mvc
 @model LionTrust.Feature.Navigation.Models.BreadcrumbViewModel
+
+@if (!Sitecore.Context.PageMode.IsExperienceEditor && Model != null && Model.BreadcrumbList != null)
+{
+    Html.RenderAction("BreadcrumbListSchema", "Schema", new { BreadcrumbListSchema = Model.BreadcrumbList });
+}
+
 <div class="breadcrumb">
     <div class="container">
         <div class="row">

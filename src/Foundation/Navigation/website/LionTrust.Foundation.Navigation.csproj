@@ -65,6 +65,7 @@
     <Compile Include="Models\IHeaderConfiguration.cs" />
     <Compile Include="Models\IHeaderDropdown.cs" />
     <Compile Include="Models\IHeaderNavigationColumn.cs" />
+    <Compile Include="Models\IIdentity.cs" />
     <Compile Include="Models\INavigablePage.cs" />
     <Compile Include="Models\IPageLink.cs" />
     <Compile Include="Models\IQuickLinkCTA.cs" />
@@ -96,6 +97,10 @@
     <ProjectReference Include="..\..\ORM\website\LionTrust.Foundation.ORM.csproj">
       <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>
       <Name>LionTrust.Foundation.ORM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SitecoreExtensions\website\LionTrust.Foundation.SitecoreExtensions.csproj">
+      <Project>{a57b01c5-75ad-47c0-beda-93079fd37317}</Project>
+      <Name>LionTrust.Foundation.SitecoreExtensions</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

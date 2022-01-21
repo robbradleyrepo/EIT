@@ -18,31 +18,31 @@
                                          alt="@Model.AuthorName" class="hero-author__img">
                                 }
                             }
-                        <div class="hero-author__content">
-                            @if (!Model.IsFundUpdate)
-                            {
-                                <span class="hero-author__name">
-                                    @Model.AuthorName <i class="icon-follow"></i>
-                                </span>
-                            }
-                            <span class="hero-author__date">
-                                @if (!Sitecore.Context.PageMode.IsExperienceEditor)
+                            <div class="hero-author__content">
+                                @if (!Model.IsFundUpdate)
                                 {
-                                    if (Model.ArticleData.Date.Equals(DateTime.MinValue))
+                                    <span class="hero-author__name">
+                                        @Model.AuthorName <i class="icon-follow"></i>
+                                    </span>
+                                }
+                                <span class="hero-author__date">
+                                    @if (!Sitecore.Context.PageMode.IsExperienceEditor)
                                     {
-                                        @Model.ArticleData.CreatedDate.ToString("dd-MM-yy")
+                                        if (Model.ArticleData.Date.Equals(DateTime.MinValue))
+                                        {
+                                            @Model.ArticleData.CreatedDate.ToString("dd-MM-yy")
+                                        }
+                                        else
+                                        {
+                                            @Model.ArticleDate.Date.ToString("dd-MM-yy")
+                                        }
                                     }
                                     else
                                     {
-                                        @Model.ArticleDate.Date.ToString("dd-MM-yy")
+                                        @Html.Glass().Editable(m => m.ArticleData.Date, d => d.ArticleData.Date.ToString("dd-MM-yy"))
                                     }
-                                }
-                                else
-                                {
-                                    @Html.Glass().Editable(m => m.ArticleData.Date, d => d.ArticleData.Date.ToString("dd-MM-yy"))
-                                }
-                            </span>
-                        </div>
+                                </span>
+                            </div>
                         </div>
                         <div class="article-hero__content text-center">
                             <h1 class="article-hero__title">
@@ -72,4 +72,9 @@
     <div class="section">
         @Html.Sitecore().Placeholder("article-header")
     </div>
+
+    @if (!Sitecore.Context.PageMode.IsExperienceEditor && Model.ArticleSchema != null)
+    {
+        Html.RenderAction("ArticleSchema", "Schema", new { ArticleSchema = Model.ArticleSchema });
+    }
 </header>

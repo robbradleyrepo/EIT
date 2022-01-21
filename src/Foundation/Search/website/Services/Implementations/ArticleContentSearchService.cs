@@ -120,5 +120,28 @@
 
             return _articleContentSearchRepository.GetArticleSearchResultItems(predicate, articleSearchRequest.Skip, articleSearchRequest.Take, articleSearchRequest.DatabaseName, sort);
         }
+
+        public string GetArticleContent(Guid articleId)
+        {
+            var content = string.Empty;
+            var articleItemId = new Sitecore.Data.ID(articleId);
+            var predicate = PredicateBuilder.True<ArticleSearchResultItem>();
+            var language = Sitecore.Context.Language?.Name ?? "en";
+            predicate = predicate.And(x => x.Language == language);
+            predicate = predicate.And(x => x.IsLatestVersion);
+            predicate = predicate.And(x => x.ItemId == articleItemId);
+
+            var results = _articleContentSearchRepository.GetArticleSearchResultItems(predicate, 0, 1);
+            if (results != null && results.SearchResults != null)
+            {
+                var resultItem = results.SearchResults.First();
+                if (resultItem != null)
+                {
+                    content = resultItem.Document.ArticleContent;
+                }
+            }
+
+            return content;
+        }
     }
 }

@@ -25,11 +25,11 @@
 
         [SitecoreField(Constants.Article.PromoType_FieldId, SitecoreFieldType.Droplink, "Article page data")]
         IContentType PromoType { get; set; }
-
-        [SitecoreField(Constants.Article.PublishDate_FieldId, SitecoreFieldType.DateTime, "Article page data")]
-        DateTime PublishedDate { get; set; }
-
-        [SitecoreField(Constants.Article.CreatedDate_FieldId)]
+        
+        [SitecoreField("__Created")]
         DateTime CreatedDate { get; set; }
+
+        [SitecoreField("__Updated")]
+        DateTime ModifiedDate { get; set; }
     }
 }

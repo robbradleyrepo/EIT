@@ -8,6 +8,6 @@
 
     public interface IArticleContentSearchRepository
     {
-        ContentSearchResults<ArticleSearchResultItem> GetArticleSearchResultItems(Expression<Func<ArticleSearchResultItem, bool>> predicate, int skip, int take, string database, Func<IQueryable<ArticleSearchResultItem>, IQueryable<ArticleSearchResultItem>> sort);
+        ContentSearchResults<ArticleSearchResultItem> GetArticleSearchResultItems(Expression<Func<ArticleSearchResultItem, bool>> predicate, int skip, int take, string database = "web", Func<IQueryable<ArticleSearchResultItem>, IQueryable<ArticleSearchResultItem>> sort = null);
     }
 }

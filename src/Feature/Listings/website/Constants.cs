@@ -116,7 +116,7 @@
             public const string SelectYearLabel_FieldId = "{B64882EB-08C1-4DF0-85DB-00712CE4A076}";
             public const string PressReleaseLabel_FieldId = "{D0F4D54F-25A6-4432-8872-488A881D30B4}";
             public const string ReportLabel_FieldId = "{D440A386-E392-4561-926F-BF6B80B7BEB1}";
-            public const string PresentationLabel_FieldId = "{898294D2-A8E4-4570-88CA-C415AD0F5D05}";
+            public const string PresentationLabel_FieldId = "{DF17B95B-5AA8-47E3-BC76-8BF6ED5A8CE9}";
         }
 
         public static class DocumentVariant

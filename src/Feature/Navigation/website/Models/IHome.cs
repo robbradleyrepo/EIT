@@ -4,10 +4,11 @@
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
+    using LionTrust.Foundation.Legacy.Models;
     using LionTrust.Foundation.Navigation.Models;
     using LionTrust.Foundation.Onboarding.Models;
 
-    public interface IHome : INavigationGlassBase
+    public interface IHome : IIdentity, INavigationGlassBase, IPresentationBase
     {
         [SitecoreField(Constants.NavigationRoot.ContactUsPage_FieldID, SitecoreFieldType.DropTree, "Header")]
         INavigablePage ContactUsPage { get; set; }

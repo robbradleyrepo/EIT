@@ -3,8 +3,13 @@
 @using LionTrust.Foundation.Navigation;
 @using LionTrust.Foundation.Navigation.Models;
 @model LionTrust.Feature.Navigation.Models.NavigationViewModel
-@if (Model != null && Model.HomeItem != null && Model.RootItem != null)
+@if (Model != null && Model.HomeItem != null)
 {
+    if (!Sitecore.Context.PageMode.IsExperienceEditor && Sitecore.Context.Item.ID.Guid.Equals(Model.HomeItem.Id))
+    {
+        Html.RenderAction("OrganizationSchema", "Schema", new { OrganizationSchema = Model.Organization });
+    }
+
     <div class="header-navbar">
         @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Navigation/Menu", Model.HomeItem.Id.ToString(), "Edit menu items"))
         {
@@ -12,7 +17,7 @@
         }
 
         <a href="@Model.HomeItem.Url" class="header-navbar__logo">
-            @Html.Glass().RenderImage(Model.RootItem, x => x.Logo, new { alt = Model.RootItem.Logo != null ? Model.RootItem.Logo.Alt : string.Empty, @class = "header-navbar__logo-img" }, isEditable: true)
+            @Html.Glass().RenderImage(Model.HomeItem, x => x.Logo, new { alt = Model.HomeItem.Logo != null ? Model.HomeItem.Logo.Alt : string.Empty, @class = "header-navbar__logo-img" }, isEditable: true)
         </a>
 
         @if (Model.HomeItem.HeaderConfiguration != null && Model.HomeItem.HeaderConfiguration.HeaderDropDowns != null && Model.HomeItem.HeaderConfiguration.HeaderDropDowns.Any())
@@ -291,7 +296,7 @@
         @using (Html.Glass().BeginRenderLink(Model.HomeItem, p => p.MyLionTrust, new { @class = "header-navbar__user-link" }, isEditable: true))
         {
             <img src="/dist/images/components/header/user.svg" alt="user profile">
-        }       
+        }
         <div class="header-navbar__btn-search">
             <img src="/dist/images/components/header/search.svg" alt="search">
         </div>

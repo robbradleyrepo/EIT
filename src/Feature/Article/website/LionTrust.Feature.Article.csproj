@@ -183,6 +183,10 @@
       <Project>{43EE972B-2002-4719-A878-A66A99C42C40}</Project>
       <Name>LionTrust.Foundation.Legacy</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Navigation\website\LionTrust.Foundation.Navigation.csproj">
+      <Project>{0e1e5f5c-f4fe-4afc-bc53-b67a885bbb8c}</Project>
+      <Name>LionTrust.Foundation.Navigation</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Onboarding\website\LionTrust.Foundation.Onboarding.csproj">
       <Project>{78b2a114-3eda-4cc7-81eb-d096d9bfc0cc}</Project>
       <Name>LionTrust.Foundation.Onboarding</Name>
@@ -190,6 +194,10 @@
     <ProjectReference Include="..\..\..\Foundation\ORM\website\LionTrust.Foundation.ORM.csproj">
       <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>
       <Name>LionTrust.Foundation.ORM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Schema\website\LionTrust.Foundation.Schema.csproj">
+      <Project>{8fd09e80-4d68-4825-891e-5ee6fed3015b}</Project>
+      <Name>LionTrust.Foundation.Schema</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Search\website\LionTrust.Foundation.Search.csproj">
       <Project>{22686DC6-4E6C-4D98-84B7-C48042F5B8FC}</Project>

@@ -33,7 +33,7 @@
         [IndexField("LegacyArticle_Title")]
         public string ArticleTitle { get; set; }
 
-        [IndexField("LegacyArticle_Content")]
+        [IndexField("article_content")]
         public string ArticleContent { get; set; }
 
         [IndexField("LegacyArticle_Subtitle")]

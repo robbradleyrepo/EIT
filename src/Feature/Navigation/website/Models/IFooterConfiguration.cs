@@ -61,5 +61,14 @@
 
         [SitecoreField(Constants.FooterConfiguration.SocialLinks_FieldId)]
         IEnumerable<ISocialIcon> SocialIcons { get; set; }
+
+        [SitecoreField(Constants.FooterConfiguration.SameAs_FieldId)]
+        IEnumerable<ISocialIcon> SameAs { get; set; }
+
+        [SitecoreField(Constants.FooterConfiguration.Longitude_FieldId)]
+        string Longitude { get; set; }
+
+        [SitecoreField(Constants.FooterConfiguration.Latitude_FieldId)]
+        string Latitude { get; set; }
     }
 }
