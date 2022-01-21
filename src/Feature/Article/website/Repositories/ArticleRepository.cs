@@ -120,17 +120,21 @@
             articleSchema.ArticleBody = _searchService.GetArticleContent(article.Id);
 
             var identityModel = NavigationHelper.GetWebsiteIdentity(_mvcContext, Sitecore.Context.Item);
-            if (identityModel != null)
+            if (identityModel == null)
             {
-                articleSchema.PublisherName = identityModel.CompanyName;
-                if (identityModel.Logo != null)
-                {
-                    var logoItem = _mvcContext.SitecoreService.GetItem<Item>(identityModel.Logo.MediaId);
-                    if (logoItem != null)
-                    {
-                        articleSchema.LogoUrl = MediaManager.GetMediaUrl(logoItem, mediaOption);
-                    }
-                }
+                return articleSchema;
+            }
+
+            articleSchema.PublisherName = identityModel.CompanyName;
+            if (identityModel.Logo == null)
+            {
+                return articleSchema;
+            }
+
+            var logoItem = _mvcContext.SitecoreService.GetItem<Item>(identityModel.Logo.MediaId);
+            if (logoItem != null)
+            {
+                articleSchema.LogoUrl = MediaManager.GetMediaUrl(logoItem, mediaOption);
             }
 
             return articleSchema;
