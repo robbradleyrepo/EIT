@@ -34,7 +34,8 @@ namespace LionTrust.Feature.EXM
 
         public static class Cta
         {
-            public const string Cta_FieldID = "{A425E517-88F6-40BE-A470-CDF6630B994D}";
+            public const string CtaLink_FieldID = "{A425E517-88F6-40BE-A470-CDF6630B994D}";
+            public const string CtaText_FieldID = "{2DBD0E32-0874-4D15-AEF9-758D779EDE58}";
         }
 
         public static class Hero
@@ -53,7 +54,9 @@ namespace LionTrust.Feature.EXM
 
             public const string RibbonImage_FieldID = "{9B48D793-66CC-400E-9760-0F207DF71100}";
 
-            public const string Cta_FieldID = "{B2BA61A6-A0F8-4B6C-A0E6-530283DD60A6}";
+            public const string CtaLink_FieldID = "{B2BA61A6-A0F8-4B6C-A0E6-530283DD60A6}";
+
+            public const string CtaText_FieldID = "{7AC5C681-0FBB-4674-B640-58E1DF9A01BE}";
         }
 
         public static class HeroWithDescriptionAndCTA

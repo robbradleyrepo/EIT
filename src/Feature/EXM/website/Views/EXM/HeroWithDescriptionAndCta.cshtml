@@ -114,14 +114,14 @@
                                                                         <tr>
                                                                             <td align="left" style="padding: 0; margin: 0; padding-bottom: 30px; padding-left: 30px;">
                                                                                 <!--[if mso]>
-                                                                                    @if (Model.CTA != null) 
+                                                                                    @if (Model.CtaLink != null) 
                                                                                     {
-                                                                                    <a href="@Model.CTA.Url" target="_blank" hidden>
+                                                                                    <a href="@Model.CtaLink.Url" target="_blank" hidden>
                                                                                         <v:roundrect
                                                                                             xmlns:v="urn:schemas-microsoft-com:vml"
                                                                                             xmlns:w="urn:schemas-microsoft-com:office:word"
                                                                                             esdevVmlButton
-                                                                                            href="@Model.CTA.Url"
+                                                                                            href="@Model.CtaLink.Url"
                                                                                             style="height: 33px; v-text-anchor: middle; width: 152px;"
                                                                                             arcsize="15%"
                                                                                             stroke="f"
@@ -138,7 +138,7 @@
                                                                                                     mso-text-raise: 1px;
                                                                                                 "
                                                                                             >
-                                                                                                @Model.CTA.Text
+                                                                                                @Model.CtaText
                                                                                             </center>
                                                                                         </v:roundrect>
                                                                                     </a>
@@ -156,7 +156,10 @@
                                                                                         width: auto;
                                                                                         mso-hide: all;
                                                                                     ">
-                                                                                    @Html.Glass().RenderLink(Model, s => s.CTA, new NameValueCollection { { "target", "_blank" }, { "class", "es-button es-button-1" }, { "style", "mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#FFFFFF;font-size:11px;border-style:solid;border-color:#10a047;border-width:10px 20px;display:inline-block;background:#10a047;border-radius:5px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:bold;font-style:normal;line-height:13px;width:auto;text-align:center" } }, isEditable: true)
+                                                                                    @using (Html.Glass().BeginRenderLink(Model, s => s.CtaLink, new NameValueCollection { { "target", "_blank" }, { "class", "es-button es-button-1" }, { "style", "mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#FFFFFF;font-size:11px;border-style:solid;border-color:#10a047;border-width:10px 20px;display:inline-block;background:#10a047;border-radius:5px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:bold;font-style:normal;line-height:13px;width:auto;text-align:center" } }, isEditable: true, alwaysRender: true))
+                                                                                    {
+                                                                                        @Html.Glass().Editable(Model, s => s.CtaText)
+                                                                                    }
                                                                                 </span>
                                                                                 <!--<![endif]-->
                                                                             </td>

@@ -20,14 +20,17 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\Admin
+    - ID: "7ac5c681-0fbb-4674-b640-58e1df9a01be"
+      Hint: Hero_CtaText
+      Value: UPDATE PREFERENCES
     - ID: "93022681-c2be-4d05-ad7e-d98ac14e59cd"
       Hint: Hero_Logo
       Value: |
         <image mediaid="{03DCCFD1-5A91-485F-8ADB-E7EDC9551DC2}" />
     - ID: "b2ba61a6-a0f8-4b6c-a0e6-530283dd60a6"
-      Hint: Hero_CTA
+      Hint: Hero_CtaLink
       Value: |
-        <link text="UPDATE PREFERENCES" anchor="" linktype="internal" class="" title=""  querystring="ref=$emailpreferencesid$" id="{50C3858D-8102-46FE-8C3B-E479142BC87E}" />
+        <link text="" anchor="" linktype="internal" class="" title=""  querystring="ref=$emailpreferencesid$" id="{50C3858D-8102-46FE-8C3B-E479142BC87E}" />
     - ID: "c19de6ee-2c6b-4676-8964-b1a19f6ba1c3"
       Hint: Hero_LogoLink
       Value: |

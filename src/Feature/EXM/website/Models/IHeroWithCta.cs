@@ -5,7 +5,10 @@
 
     public interface IHeroWithCta : IHeroWitImageBase
     {
-        [SitecoreField(Constants.Hero.Cta_FieldID)]
-        Link CTA { get; set; }
+        [SitecoreField(Constants.Hero.CtaLink_FieldID)]
+        Link CtaLink { get; set; }
+
+        [SitecoreField(Constants.Hero.CtaText_FieldID)]
+        string CtaText { get; set; }
     }
 }
