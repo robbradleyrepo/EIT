@@ -23,16 +23,7 @@
             public const string IncludeInBreadcrumb = "{E409CE1D-3E4E-4C73-A01D-BA8E98BDF25F}";
             public const string BreadcrumbTitle = "{951B9A2D-0238-49ED-A8B9-C2A9255BA2DF}";
         }
-
-        public static class Identity
-        {
-            public const string Logo_FieldName = "Identity_Logo";
-            public const string Logo_FieldID = "{F113BF3D-FE80-4A15-9CDA-679B3C3CB3BE}";
-            public const string CompanyName_FieldID = "{AB125A99-A1A6-413C-A65A-AA55EDA8F0DA}";
-            public const string ContactType_FieldID = "{6E788013-3179-4986-893B-079222C74556}";
-            public const string AreaServed_FieldID = "{417057AA-FBA9-488F-86B2-D7E313D0A7A5}";
-        }
-
+        
         public static class FooterConfiguration
         {
             public const string FindUsLabel_FieldID = "{05ABA786-3D35-479B-ADA4-ECEE716AD9F5}";

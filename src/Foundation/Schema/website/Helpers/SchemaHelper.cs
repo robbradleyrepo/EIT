@@ -17,8 +17,6 @@ namespace LionTrust.Foundation.Schema.Helpers
             var logoObj = new ImageObject() 
             {
                 Url = new Uri(organizationSchema.LogoUrl),
-                Height = organizationSchema.LogoHeight,
-                Width = organizationSchema.LogoWidth
             };
 
             var geoCoordinates = new GeoCoordinates()
@@ -54,15 +52,7 @@ namespace LionTrust.Foundation.Schema.Helpers
                 Address = address
             };
         }
-
-        public static Article GetArticleSchema()
-        {
-            return new Article
-            {
-                
-            };
-        }
-
+        
         public static BreadcrumbList GetBreadcrumbListSchema(BreadcrumbListSchema breadcrumbListSchema)
         {
             if (breadcrumbListSchema == null || breadcrumbListSchema.BreadcrumbItems == null)
@@ -90,5 +80,50 @@ namespace LionTrust.Foundation.Schema.Helpers
                 ItemListElement = itemList
             };
         }
+
+        public static Article GetArticleSchema(ArticleSchema articleSchema)
+        {
+            if (articleSchema == null)
+            {
+                return null;
+            }
+
+            var authorList = new List<Person>();
+            if (articleSchema.Authors != null)
+            {
+                articleSchema.Authors.ForEach(a => authorList.Add(new Person() { Name = a })); 
+            }
+
+            var imageObj = new ImageObject()
+            {
+                Url = new Uri(articleSchema.ImageUrl ?? "about:blank"),
+            };
+
+            var logoObj = new ImageObject()
+            {
+                Url = new Uri(articleSchema.LogoUrl),
+            };
+
+            return new Article
+            {
+                Headline = articleSchema.Headline,
+                MainEntityOfPage = new WebPage()
+                {
+                    Id = new Uri(articleSchema.Url)
+                },
+                Description = articleSchema.Description,
+                DatePublished = new DateTimeOffset(articleSchema.DatePublished),
+                DateModified = new DateTimeOffset(articleSchema.DateModified),
+                Image = imageObj,
+                Author = authorList,
+                Publisher = new Organization()
+                {
+                    Name = articleSchema.PublisherName,
+                    Logo = logoObj
+                },
+                ArticleBody = articleSchema.ArticleBody
+            };
+        }
+
     }
 }

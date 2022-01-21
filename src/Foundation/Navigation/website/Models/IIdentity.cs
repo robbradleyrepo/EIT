@@ -1,4 +1,4 @@
-﻿namespace LionTrust.Feature.Navigation.Models
+﻿namespace LionTrust.Foundation.Navigation.Models
 {
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;

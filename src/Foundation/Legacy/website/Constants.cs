@@ -25,12 +25,10 @@ namespace LionTrust.Foundation.Legacy
             public const string MultipleAuthorsSettingLabel_FieldId = "{89BA5B06-2D92-4329-BCBA-9DE16C450CA9}";
             public const string MultipleAuthorsSettingIcon_FieldId = "{F7431439-3BF3-4D7D-A4FB-B1B6745A233D}";
 
-            public const string PublishDate_FieldId = "{86FE4F77-4D9A-4EC3-9ED9-263D03BD1965}";
             public const string Fund_FieldId = "{52161005-9691-46CD-AF73-E2B5455474C0}";
             public const string Topics_FieldId = "{4F9B280F-A22D-4E70-886A-45327E8AA507}";
             public const string BlogType_FieldId = "{58B0791B-504E-423C-8D9E-E16C419353FA}";
             public const string Article_ListingImage = "{5BD6E9E9-2240-4473-8094-075E811B8438}";
-            public const string CreatedDate_FieldId = "{25BED78C-4957-4165-998A-CA1B52F67497}";
 
             public const string FundUpdateContentTypeId = "D0700E76-8BC2-427A-9849-FE3B6D28BD22";
         }

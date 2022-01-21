@@ -6,9 +6,7 @@ namespace LionTrust.Foundation.Schema.Models
     public class OrganizationSchema
     {
         public string Url { get; set; }
-        public string LogoUrl { get; set; }
-        public int LogoHeight { get; set; }
-        public int LogoWidth { get; set; }
+        public string LogoUrl { get; set; }       
         public string Name { get; set; }
         public string ContactType { get; set; }
         public string AreaServed { get; set; }

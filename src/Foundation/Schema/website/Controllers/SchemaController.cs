@@ -19,9 +19,9 @@ namespace LionTrust.Foundation.SchemaOrg.Controllers
             return PartialView("~/Views/Schema/_BreadcrumbListSchema.cshtml", schema);
         }
 
-        public ActionResult ArticleSchema()
+        public ActionResult ArticleSchema(ArticleSchema articleSchema)
         {
-            var schema = SchemaHelper.GetArticleSchema();
+            var schema = SchemaHelper.GetArticleSchema(articleSchema);
             return PartialView("~/Views/Schema/_ArticleSchema.cshtml", schema);
         }
     }

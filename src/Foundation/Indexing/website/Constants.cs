@@ -9,5 +9,7 @@
         public const string FundClassesItemId = "{70C3BBED-F640-4E33-BDC3-43AD8C49D4FD}";
         public const string ArticleVideoUrl = "{8EB78475-C445-4960-84B0-E946D262F81C}";
         public const string PodcastTemplateId = "{5FA772FC-EA92-47C5-B62C-378240F761F7}";
+        public const string ArticleRichTextTemplateId = "{07429BCD-04EC-46EA-B3ED-4CB9CA96912B}";
+        public const string ArticleRichTextCopy_FieldId = "{6876726D-D5D2-40DF-94A7-A9A6FAE2F683}";
     }
 }

@@ -4,7 +4,10 @@
     using LionTrust.Foundation.Navigation.Models;
     using LionTrust.Foundation.Onboarding.Helpers;
     using LionTrust.Foundation.Onboarding.Models;
+    using LionTrust.Foundation.SitecoreExtensions.Extensions;
     using Sitecore.Abstractions;
+    using Sitecore.Data;
+    using Sitecore.Data.Items;
 
     public class NavigationHelper
     {
@@ -18,6 +21,12 @@
             }
 
             return mvcContext.SitecoreService.GetItem<IHeaderConfiguration>(investor.Header.Id);
+        }
+
+        public static IIdentity GetWebsiteIdentity(IMvcContext mvcContext, Item contextItem)
+        {
+            var identityItem = contextItem.GetAncestorOrSelfOfTemplate(new ID(Constants.Identity.TemplateID));
+            return (identityItem != null ? mvcContext.SitecoreService.GetItem<IIdentity>(identityItem.ID.Guid) : null);
         }
     }
 }
