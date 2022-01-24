@@ -1,0 +1,28 @@
+﻿---
+ID: "117297ba-83b6-424a-a090-d11b67ce8f38"
+Parent: "b20fde90-49de-419a-abc8-b2d0a9e0d2f6"
+Template: "50e3e080-2a7a-4479-8635-99fc7f8a9804"
+Path: /sitecore/system/Settings/Feature/EXM/Exm Settings
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Network/32x32/mail_earth.png
+- ID: "2a7e1691-203f-4449-8952-b523010d23c2"
+  Hint: ExmSettings_WhitelistDomains
+  Value: "sagittarius.agency,sagittarius-marketing.com"
+- ID: "386ada51-995b-4725-a6af-a7082102ba2f"
+  Hint: ExmSettings_TestingRecipientList
+  Value: andre.nascimento@sagittarius.agency
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220120T180216Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

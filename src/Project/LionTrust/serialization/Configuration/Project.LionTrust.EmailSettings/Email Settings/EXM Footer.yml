@@ -1,0 +1,60 @@
+﻿---
+ID: "83c4b9ce-25a6-4a8e-8f01-37901c57b46f"
+Parent: "67fcf636-17a5-4c36-8de5-b6ea75a8273d"
+Template: "835521a2-ac28-42dc-93ef-736f9dd515b3"
+Path: /sitecore/content/LionTrustNew/Email Settings/EXM Footer
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0c1e83ae-b91a-4e9f-adec-30df98ddc668"
+      Hint: ExmFooterConfiguration_LogoLink
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
+    - ID: "228ed50e-d90a-43a3-9fa9-0bd7eb8d7588"
+      Hint: ExmFooterConfiguration_Page Links2
+      Type: Treelist
+      Value: |
+        {2A292B52-8718-401A-889F-96B564776B30}
+        {7BD79660-F041-4947-8546-6BFCC144878F}
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220107T181551Z
+    - ID: "25c0f309-2401-43f7-a017-0a495a763b79"
+      Hint: ExmFooterConfiguration_Location
+      Value: London
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "70161ff9-bcd8-4967-a12d-2d287c1102e6"
+      Hint: ExmFooterConfiguration_PostalCode
+      Value: 2 Savoy Court
+    - ID: "7fdfed87-6fdc-4b55-a085-26dc2a0d8772"
+      Hint: ExmFooterConfiguration_Page Links1
+      Type: Treelist
+      Value: |
+        {269ADCA3-8F69-47AF-9CAF-2AB10045D235}
+        {4C118A39-F6EF-48A1-81C0-19C3E0813ED6}
+    - ID: "8fa7f021-b45e-49c3-b4bb-767208c406dd"
+      Hint: ExmFooterConfiguration_Address
+      Value: 2 Savoy Court
+    - ID: "de4379c9-0ea1-4daf-a9db-4c13ef8f385f"
+      Hint: ExmFooterConfiguration_Social Links
+      Type: Treelist
+      Value: |
+        {0E9A1208-CEB4-4E2E-A2F6-C479880F8B73}
+        {284A5A73-B531-4D07-8E3D-9B2E2E83D996}
+        {BEC825BB-A8DA-4966-BFA3-4D2B60866343}
+        {095BCE10-8AE9-4082-8BB3-C58A2A254E67}
+        {C71AEE62-F70E-4060-A094-6B5961CA74B0}
+    - ID: "f01f80e6-4791-4ee8-9ad2-be0f7f5a546a"
+      Hint: ExmFooterConfiguration_Logo
+      Value: |
+        <image mediaid="{F2B7C6E3-BD39-4FF2-89B2-BDB043D1E889}" />

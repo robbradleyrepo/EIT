@@ -177,6 +177,11 @@
                                 var sfContactId = string.Empty;
                                 var sfLeadId = string.Empty;
                                 var sfOrgId = string.Empty;
+                                var ownerName = string.Empty;
+                                var ownerTitle = string.Empty;
+                                var ownerEmail = string.Empty;
+                                var ownerPhone = string.Empty;
+                                var ownerRegion = string.Empty;
                                 var sfFundIds = new List<string>();
 
                                 if (s4sInfoFacet.Fields.ContainsKey(Foundation.Contact.Constants.SFFirstNameFacetKey))
@@ -209,6 +214,31 @@
                                     sfOrgId = s4sInfoFacet.Fields[Foundation.Contact.Constants.SFOrgIdFacetKey];
                                 }
 
+                                if (s4sInfoFacet.Fields.ContainsKey(Foundation.Contact.Constants.SF_Owner_NameField))
+                                {
+                                    ownerName = s4sInfoFacet.Fields[Foundation.Contact.Constants.SF_Owner_NameField];
+                                }
+
+                                if (s4sInfoFacet.Fields.ContainsKey(Foundation.Contact.Constants.SF_Owner_TitleField))
+                                {
+                                    ownerTitle = s4sInfoFacet.Fields[Foundation.Contact.Constants.SF_Owner_TitleField];
+                                }
+
+                                if (s4sInfoFacet.Fields.ContainsKey(Foundation.Contact.Constants.SF_Owner_PhoneField))
+                                {
+                                    ownerPhone = s4sInfoFacet.Fields[Foundation.Contact.Constants.SF_Owner_PhoneField];
+                                }
+
+                                if (s4sInfoFacet.Fields.ContainsKey(Foundation.Contact.Constants.SF_Owner_EmailField))
+                                {
+                                    ownerEmail = s4sInfoFacet.Fields[Foundation.Contact.Constants.SF_Owner_EmailField];
+                                }
+
+                                if (s4sInfoFacet.Fields.ContainsKey(Foundation.Contact.Constants.SF_Owner_RegionField))
+                                {
+                                    ownerRegion = s4sInfoFacet.Fields[Foundation.Contact.Constants.SF_Owner_RegionField];
+                                }
+
                                 if (s4sInfoFacet.Fields.ContainsKey(Foundation.Contact.Constants.SFFundIdFacetKey))
                                 {
                                     var savedSfFundIdString = s4sInfoFacet.Fields[Foundation.Contact.Constants.SFFundIdFacetKey];
@@ -234,6 +264,11 @@
                                 returnObj.SalesforceEntityId = (!string.IsNullOrEmpty(sfContactId)) ? sfContactId : sfLeadId;
                                 returnObj.SalesforceOrgId = sfOrgId;
                                 returnObj.SalesforceFundIds = sfFundIds;
+                                returnObj.OwnerName = ownerName;
+                                returnObj.OwnerTitle = ownerTitle;
+                                returnObj.OwnerPhone = ownerPhone;
+                                returnObj.OwnerEmail = ownerEmail;
+                                returnObj.OwnerRegion = ownerRegion;
                                 return returnObj;
                             }
                             else

@@ -1,0 +1,22 @@
+﻿---
+ID: "4c118a39-f6ef-48a1-81c0-19c3e0813ed6"
+Parent: "0027e6a9-8964-48d3-8931-9866f7cb3555"
+Template: "ea33832b-34aa-4344-a770-332d71e7f6b1"
+Path: /sitecore/content/LionTrustNew/Email Settings/EXM Footer/Page Links/Cookie Policy
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210614T111953Z
+    - ID: "3f39e86e-0426-46f0-8f64-c5636372e13a"
+      Hint: PageLink_Link
+      Value: |
+        <link text="Cookie Policy" linktype="external" url="http://www.google.com" anchor="" target="" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin

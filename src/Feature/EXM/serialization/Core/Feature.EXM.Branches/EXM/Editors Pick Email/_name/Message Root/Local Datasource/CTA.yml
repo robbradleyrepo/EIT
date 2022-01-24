@@ -1,0 +1,29 @@
+﻿---
+ID: "b17b1a50-519c-4a8e-af45-f978cbbdd64f"
+Parent: "81841af5-5b33-4313-9b98-b44dc144b537"
+Template: "2b6f44a3-6c98-494b-a591-e6cfef5691c0"
+Path: /sitecore/templates/Branches/Feature/EXM/Editors Pick Email/$name/Message Root/Local Datasource/CTA
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 600
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220110T152133Z
+    - ID: "2dbd0e32-0874-4d15-aef9-758d779ede58"
+      Hint: CTA_Text
+      Value: UPDATE PREFERENCES
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "a425e517-88f6-40be-a470-cdf6630b994d"
+      Hint: CTA_Link
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title=""  querystring="ref=$emailpreferencesid$" id="{50C3858D-8102-46FE-8C3B-E479142BC87E}" />

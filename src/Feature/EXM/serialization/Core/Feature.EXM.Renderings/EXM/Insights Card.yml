@@ -1,0 +1,47 @@
+﻿---
+ID: "2987c75c-bf56-4852-aa9f-f8a8a0b8be3a"
+Parent: "61fef82c-11bc-4e8c-b9d0-8a624e5a5754"
+Template: "2a3e91a0-7987-44b5-ab34-35c2d9de83b9"
+Path: /sitecore/layout/renderings/Feature/EXM/Insights Card
+DB: master
+SharedFields:
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: /sitecore/templates/Project/LionTrust/Content Types/EXM/Insights Card
+- ID: "3d08db46-2267-41b0-bc52-be69fd618633"
+  Hint: Cacheable
+  Type: Checkbox
+  Value: 0
+- ID: "8b6d532b-6128-4486-a044-ca06d90948ba"
+  Hint: VaryByData
+  Type: Checkbox
+  Value: 0
+- ID: "a2f5d9df-8cba-4a1d-99eb-51acb94cb057"
+  Hint: Page Editor Buttons
+  Type: Treelist
+  Value: 
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "query:.//*[@@templatename='Local Datasource Folder']"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{D09230D5-7AB6-485F-BE93-FA1DBC69B510}" />
+- ID: "ded9e431-3604-4921-a4b3-a6ec7636a5b6"
+  Hint: Controller Action
+  Value: InsightsCard
+- ID: "e64ad073-dfcc-4d20-8c0b-fe5aa6226cd7"
+  Hint: Controller
+  Value: EmailInsightsCard
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220107T180256Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

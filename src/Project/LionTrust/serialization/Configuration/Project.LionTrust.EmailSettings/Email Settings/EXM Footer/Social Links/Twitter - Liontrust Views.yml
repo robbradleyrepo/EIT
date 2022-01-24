@@ -1,0 +1,30 @@
+﻿---
+ID: "095bce10-8ae9-4082-8bb3-c58a2a254e67"
+Parent: "92d8e3eb-e228-41cf-af9e-ee640baa85ce"
+Template: "7682e3eb-272c-4aad-82c3-a10e68dfcba0"
+Path: "/sitecore/content/LionTrustNew/Email Settings/EXM Footer/Social Links/Twitter - Liontrust Views"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 500
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210406T121437Z
+    - ID: "321db99f-5d14-4703-ac2f-6feea5e48000"
+      Hint: SocialIcon_Icon
+      Value: |
+        <image mediaid="{512703E3-2EDE-4593-B795-3510A95125B8}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "e990e03d-0332-45cc-a5e7-613996deda74"
+      Hint: SocialIcon_Link
+      Value: |
+        <link linktype="external" url="https://twitter.com/LiontrustViews" anchor="" target="_blank" />

@@ -1,0 +1,203 @@
+@using Glass.Mapper.Sc.Web.Mvc
+@using System.Collections.Specialized
+@model LionTrust.Feature.EXM.Models.IHeroWithDescriptionAndCta
+
+@if (Model == null)
+{
+    if (Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        <div class="es-error">Hero Promo - Datasource item not set</div>
+    }
+
+    return;
+}
+
+
+<table class="es-header"
+       cellspacing="0"
+       cellpadding="0"
+       align="center"
+       style="
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+        border-collapse: collapse;
+        border-spacing: 0px;
+        table-layout: fixed !important;
+        width: 100%;
+        background-color: transparent;
+        background-repeat: repeat;
+        background-position: center top;
+    ">
+    <tbody>
+        <tr>
+            <td align="center" style="padding: 0; margin: 0;">
+                <table class="es-header-body"
+                       cellspacing="0"
+                       cellpadding="0"
+                       bgcolor="#e1e1e1"
+                       align="center"
+                       style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0px; background-color: #e1e1e1; width: 620px;">
+                    <tbody>
+                        <tr>
+                            <td class="esdev-adapt-off" align="left" bgcolor="#000" style="padding: 0; margin: 0; background-color: #000000;">
+                                <table cellpadding="0" cellspacing="0" class="esdev-mso-table" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0px; width: 620px; border-bottom: 3px solid #10a047;">
+                                    <tbody>
+                                        <tr>
+                                            <td class="esdev-mso-td" valign="top" style="padding: 0; margin: 0;">
+                                                <table class="es-left" cellspacing="0" cellpadding="0" align="left" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0px; float: left;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align="left" style="padding: 0; margin: 0; width: 320px;">
+                                                                <table width="100%"
+                                                                       cellspacing="0"
+                                                                       cellpadding="0"
+                                                                       bgcolor="#000"
+                                                                       style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0px; background-color: #000000;"
+                                                                       role="presentation">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td align="left" style="padding: 0; margin: 0; padding-bottom: 5px; padding-top: 20px; padding-left: 30px; font-size: 0px;">
+                                                                                @using (Html.Glass().BeginRenderLink(Model, s => s.LogoLink, new NameValueCollection { { "target", "_blank" }, { "style", "-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:underline;color:#2CB543;font-size:14px" } }, isEditable: true, alwaysRender: true))
+                                                                                {
+                                                                                    @Html.Glass().RenderImage(Model, s => s.Logo, new NameValueCollection { { "class", "adapt-img" }, { "style", "display: block; border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic;" }, { "Width", "147" } }, isEditable: true)
+                                                                                }
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" bgcolor="#000" style="margin: 0; padding-bottom: 10px; padding-right: 20px; padding-top: 30px; padding-left: 30px;">
+                                                                                <p style="
+                                                                                        margin: 0;
+                                                                                        -webkit-text-size-adjust: none;
+                                                                                        -ms-text-size-adjust: none;
+                                                                                        mso-line-height-rule: exactly;
+                                                                                        font-family: arial, 'helvetica neue', helvetica, sans-serif;
+                                                                                        line-height: 27px;
+                                                                                        color: #ffffff;
+                                                                                        font-size: 18px;
+                                                                                    ">
+                                                                                    <strong>@Html.Glass().Editable(Model, p => p.Title)</strong>
+                                                                                </p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" style="padding: 0; margin: 0; padding-bottom: 10px; padding-right: 20px; padding-left: 30px;">
+                                                                                <p style="
+                                                                                        margin: 0;
+                                                                                        -webkit-text-size-adjust: none;
+                                                                                        -ms-text-size-adjust: none;
+                                                                                        mso-line-height-rule: exactly;
+                                                                                        font-family: arial, 'helvetica neue', helvetica, sans-serif;
+                                                                                        line-height: 24px;
+                                                                                        color: #c0a961;
+                                                                                        font-size: 20px;
+                                                                                    ">
+                                                                                    @Html.Glass().Editable(Model, p => p.SubTitle)
+                                                                                </p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" style="padding: 0; margin: 0; padding-bottom: 20px; padding-right: 20px; padding-left: 30px;">
+                                                                                <p style="
+                                                                                        margin: 0;
+                                                                                        -webkit-text-size-adjust: none;
+                                                                                        -ms-text-size-adjust: none;
+                                                                                        mso-line-height-rule: exactly;
+                                                                                        font-family: arial, 'helvetica neue', helvetica, sans-serif;
+                                                                                        line-height: 21px;
+                                                                                        color: #ffffff;
+                                                                                        font-size: 14px;
+                                                                                    ">
+                                                                                    @Html.Glass().Editable(Model, p => p.Description)
+                                                                                </p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" style="padding: 0; margin: 0; padding-bottom: 30px; padding-left: 30px;">
+                                                                                <!--[if mso]>
+                                                                                    @if (Model.CtaLink != null) 
+                                                                                    {
+                                                                                    <a href="@Model.CtaLink.Url" target="_blank" hidden>
+                                                                                        <v:roundrect
+                                                                                            xmlns:v="urn:schemas-microsoft-com:vml"
+                                                                                            xmlns:w="urn:schemas-microsoft-com:office:word"
+                                                                                            esdevVmlButton
+                                                                                            href="@Model.CtaLink.Url"
+                                                                                            style="height: 33px; v-text-anchor: middle; width: 152px;"
+                                                                                            arcsize="15%"
+                                                                                            stroke="f"
+                                                                                            fillcolor="#10a047"
+                                                                                        >
+                                                                                            <w:anchorlock></w:anchorlock>
+                                                                                            <center
+                                                                                                style="
+                                                                                                    color: #ffffff;
+                                                                                                    font-family: arial, 'helvetica neue', helvetica, sans-serif;
+                                                                                                    font-size: 10px;
+                                                                                                    font-weight: 700;
+                                                                                                    line-height: 10px;
+                                                                                                    mso-text-raise: 1px;
+                                                                                                "
+                                                                                            >
+                                                                                                @Model.CtaText
+                                                                                            </center>
+                                                                                        </v:roundrect>
+                                                                                    </a>
+                                                                                    }
+                                                                                <![endif]-->
+                                                                                <!--[if !mso]><!-- -->
+                                                                                <span class="msohide es-button-border"
+                                                                                      style="
+                                                                                        border-style: solid;
+                                                                                        border-color: transparent;
+                                                                                        background: #10a047;
+                                                                                        border-width: 0px;
+                                                                                        display: inline-block;
+                                                                                        border-radius: 5px;
+                                                                                        width: auto;
+                                                                                        mso-hide: all;
+                                                                                    ">
+                                                                                    @using (Html.Glass().BeginRenderLink(Model, s => s.CtaLink, new NameValueCollection { { "target", "_blank" }, { "class", "es-button es-button-1" }, { "style", "mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#FFFFFF;font-size:11px;border-style:solid;border-color:#10a047;border-width:10px 20px;display:inline-block;background:#10a047;border-radius:5px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:bold;font-style:normal;line-height:13px;width:auto;text-align:center" } }, isEditable: true, alwaysRender: true))
+                                                                                    {
+                                                                                        @Html.Glass().Editable(Model, s => s.CtaText)
+                                                                                    }
+                                                                                </span>
+                                                                                <!--<![endif]-->
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            <td class="esdev-mso-td" valign="top" style="padding: 0; margin: 0;">
+                                                <table class="es-right" cellspacing="0" cellpadding="0" align="right" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0px; float: right;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align="left" style="padding: 0; margin: 0; width: 300px;">
+                                                                <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0px;">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td align="center" style="padding: 0; margin: 0; font-size: 0px;">
+                                                                                @Html.Glass().RenderImage(Model, s => s.Image, new NameValueCollection { { "class", "adapt-img" }, { "style", "display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" }, { "Width", "300" } }, isEditable: true)
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>

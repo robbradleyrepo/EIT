@@ -60,7 +60,6 @@
         {
             public const string TopicsFieldId = "{4F9B280F-A22D-4E70-886A-45327E8AA507}";
             public const string MultipleAuthorsSetting_FieldId = "{B6833539-8781-4788-92F4-D173F0727FEB}";
-            public const string Image_FieldId = "{5BD6E9E9-2240-4473-8094-075E811B8438}";
             public const string ImageOpacity_FieldId = "{FE72ED1F-986F-475E-A40F-B95DA77091B8}";
             public const string Date_FieldId = "{79CC76CC-7503-449B-9809-9808CF6C2D26}";
             public const string PdfDocument_FieldId = "{AE17B17D-0024-4700-9075-E95D8E7B15EE}";

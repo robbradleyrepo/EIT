@@ -1,0 +1,79 @@
+﻿---
+ID: "c3d04966-c8c8-485f-872c-170061f108e7"
+Parent: "fef9f925-8e49-44e0-9a24-df1fcbf56d01"
+Template: "3f12d78c-b7b7-4157-98fc-da3322ee1a5b"
+Path: /sitecore/templates/Branches/Feature/EXM/Editors Pick Email/$name/Message Root
+DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{F7B16AF0-09C8-48F5-95EC-36B76C1CBE2B}">
+        <r
+          ds="{69539BFC-C492-4A18-8AA7-458642EC9E5A}"
+          id="{77BE2A3E-5B7D-4265-8A54-CAED2B4DB068}"
+          par=""
+          ph="email-header"
+          uid="{0E6526F9-6A76-4B96-B374-A71983519753}" />
+        <r
+          ds="{32E0345F-E10F-496F-ABD4-BA9332CD053E}"
+          id="{581333B0-AB83-4EA2-B02D-FFACEC35DB4C}"
+          par=""
+          ph="email-header"
+          uid="{762E2941-DC6B-4000-ACF1-2E5B756FD191}" />
+        <r
+          ds="{DB88A5D0-0FF6-433E-B46F-9210824CE64D}"
+          id="{75DC3AAC-C17C-4F2E-AAD4-DC0DA9141F3C}"
+          par=""
+          ph="email-body"
+          uid="{455B01F3-BADB-49FD-9495-75270C15E655}" />
+        <r
+          ds="{023A7C70-998A-4BDB-8EDD-80C183ED0BDB}"
+          id="{D6AB496B-D7EA-4678-B98A-23D5A9196392}"
+          par=""
+          ph="email-body"
+          uid="{7689DA38-83A2-46D5-B5A1-A49C1CF504CA}" />
+        <r
+          ds="{B17B1A50-519C-4A8E-AF45-F978CBBDD64F}"
+          id="{8102FDEA-EF85-4B6A-A670-DE8169B671DD}"
+          par=""
+          ph="email-body"
+          uid="{D1926891-1182-4743-BE97-D770C0F0A847}" />
+        <r
+          ds="{553980E5-12CF-47F5-9939-14D6DF3DCDD4}"
+          id="{9174D6F3-2D7E-4E21-9331-8462583FB121}"
+          par=""
+          ph="email-body"
+          uid="{09A3BFBB-0714-4D9A-AE86-5911BBA85704}" />
+        <r
+          ds="{AACF5B27-3453-445B-861A-CAA5166BE8FE}"
+          id="{A359845C-2343-4E23-BA75-A76FE5CC243E}"
+          par=""
+          ph="email-footer"
+          uid="{E11F05EA-75AE-48E7-9868-D0368DD00CCA}" />
+        <r
+          ds="{83C4B9CE-25A6-4A8E-8F01-37901C57B46F}"
+          id="{03B59743-05AC-46E9-B568-BEF5B6E7DF31}"
+          par=""
+          ph="email-footer"
+          uid="{315B5240-4AA4-4725-9847-ED9DFF2C531B}" />
+        <r
+          ds="{501C9D26-E918-44A1-9554-7C52D85D4AC7}"
+          id="{1E182C5C-1429-4055-BD6A-6E36A5AC2700}"
+          par=""
+          ph="email-footer"
+          uid="{308744D2-B17C-4E91-A788-390C499C9882}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220107T092440Z

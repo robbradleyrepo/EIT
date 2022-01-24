@@ -1,0 +1,30 @@
+﻿---
+ID: "0c9a1799-2eb1-494e-be42-418216564f6c"
+Parent: "3b67a6e5-87c0-434c-9c3c-e0de0872b958"
+Template: "3b67a6e5-87c0-434c-9c3c-e0de0872b958"
+Path: /sitecore/templates/Project/LionTrust/Content Types/EXM/Email Signature/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0431b455-144d-4a72-a027-6202c77a137b"
+      Hint: Signature_Phone
+      Value: $ownerphone$
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220120T110502Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "7b4c8092-0a6a-4a8b-a149-c51c423c57a4"
+      Hint: Signature_Name
+      Value: $ownername$
+    - ID: "88a53542-9ac4-4011-b7ab-6606bdc89d8e"
+      Hint: Signature_Email
+      Value: $owneremail$
+    - ID: "ceecd260-3288-42fe-9faf-80d64948f0e4"
+      Hint: Signature_JobPosition
+      Value: $ownertitle$

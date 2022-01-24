@@ -1,0 +1,119 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Extensions
+@using Sitecore.Modules.EmailCampaign.Core
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" style="font-family:arial, 'helvetica neue', helvetica, sans-serif">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>Liontrust</title>
+    <!--[if (mso 16)]>
+      <style type="text/css">
+      a {text-decoration: none;}
+      </style>
+      <![endif]-->
+    <!--[if gte mso 9]><style>sup { font-size: 100% !important; }</style><![endif]-->
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+        <o:AllowPNG></o:AllowPNG>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+    <style type="text/css">
+        #outlook a {
+            padding: 0;
+        }
+
+        .es-button {
+            mso-style-priority: 100 !important;
+            text-decoration: none !important;
+        }
+
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        .es-desk-hidden {
+            display: none;
+            float: left;
+            overflow: hidden;
+            width: 0;
+            max-height: 0;
+            line-height: 0;
+            mso-hide: all;
+        }
+
+        [data-ogsb] .es-button {
+            border-width: 0 !important;
+            padding: 10px 20px 10px 20px !important;
+        }
+
+        [data-ogsb] .es-button.es-button-1 {
+            padding: 10px 20px !important;
+        }
+
+        .es-text-content p {
+            Margin: 0;
+            -webkit-text-size-adjust: none;
+            -ms-text-size-adjust: none;
+            mso-line-height-rule: exactly;
+            font-family: arial, 'helvetica neue', helvetica, sans-serif;
+            line-height: 21px;
+            color: #414855;
+            font-size: 14px;
+        }
+
+        .es-tb-cta + .es-tb-content {
+            margin-top: -15px;
+        }
+
+        .es-article-cards + .es-promo-banner {
+            margin-top: -20px;
+        }
+    </style>
+    @if (Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/sitecore-fixes.css")" />
+    }
+</head>
+<body style="width:100%;font-family:arial, 'helvetica neue', helvetica, sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0">
+    <div class="es-wrapper-color" style="background-color:#F7F9FC">
+        <!--[if gte mso 9]>
+                 <v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
+                     <v:fill type="tile" color="#f7f9fc"></v:fill>
+                 </v:background>
+             <![endif]-->
+        <table class="es-wrapper" width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;padding:0;Margin:0;width:100%;height:100%;background-repeat:repeat;background-position:center top;background-color:#F7F9FC">
+            <tbody>
+                <tr class="gmail-fix" height="0">
+                    <td style="padding:0;Margin:0">
+                        <table cellpadding="0" cellspacing="0" border="0" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:620px">
+                            <tbody>
+                                <tr>
+                                    <td cellpadding="0" cellspacing="0" border="0" height="0" style="padding:0;Margin:0;line-height:1px;min-width:620px"><img src="~/Content/Images/41521605538834349.png" width="620" height="1" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;max-height:0px;min-height:0px;min-width:620px;width:620px" alt="" /></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" style="padding:0;Margin:0">
+                        @Html.Sitecore().Placeholder("email-header")
+                        @Html.Sitecore().Placeholder("email-body")
+                        @Html.Sitecore().Placeholder("email-footer")
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>

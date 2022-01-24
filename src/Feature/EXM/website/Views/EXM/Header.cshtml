@@ -1,0 +1,58 @@
+@using Glass.Mapper.Sc.Web.Mvc
+@using Sitecore.EmailCampaign.Model.Web.Settings
+@using Sitecore.Modules.EmailCampaign.Core
+@model LionTrust.Feature.EXM.ViewModels.HeaderViewModel
+
+@if (Model == null)
+{
+    if (Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        <div class="es-error">Pre Header - Datasource item not set</div>
+    }
+
+    return;
+}
+
+@if (Request.QueryString[GlobalSettings.OnlineVersionQueryStringKey] != "1")
+{
+    <table class="es-header" cellspacing="0" cellpadding="0" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;background-color:transparent;background-repeat:repeat;background-position:center top">
+        <tbody>
+            <tr>
+                <td align="center" style="padding:0;Margin:0">
+                    <table class="es-header-body" cellspacing="0" cellpadding="0" bgcolor="#ffffff" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;border-top:1px solid #e1e1e1;border-right:1px solid #e1e1e1;border-left:1px solid #e1e1e1;width:620px">
+                        <tbody>
+                            <tr>
+                                <td align="left" bgcolor="#e9edf0" style="padding:0;Margin:0;padding-left:20px;padding-right:20px;background-color:#e9edf0">
+                                    <table cellspacing="0" cellpadding="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                        <tbody>
+                                            <tr>
+                                                <td class="es-m-p0r es-m-p20b" valign="top" align="center" style="padding:0;Margin:0;width:578px">
+                                                    <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td align="center" style="padding:0;Margin:0;padding-top:5px;padding-bottom:5px">
+                                                                    @if (Sitecore.Context.PageMode.IsExperienceEditor)
+                                                                    {
+                                                                        <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:13px;color:#333333;font-size:11px">@Html.Glass().Editable(Model.PreHeader, s => s.Text)</p>
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:13px;color:#333333;font-size:11px">@Html.Raw(Model.PreHeaderText)</p>
+                                                                    }
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+}

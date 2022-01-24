@@ -744,6 +744,206 @@
         }
 
         /// <summary>
+        /// Get email preferences id by email
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        public string GetEmailPreferencesIdByEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                Log.Info("Email address is null or empty. No email preferences id returned from the email address.", this);
+                return null;
+            }
+
+            try
+            {
+                var contactService = new ContactService(this.SalesforceSession);
+                var sfContact = contactService.GetByEmail(email);
+                if (sfContact == null)
+                {
+                    Log.Info(string.Format("Salesforce Contact does not exist with the email - {0}", email), this);
+                    return null;
+                }
+
+                var sfEntityId = sfContact.Id.ToString();
+                var randomGuid = sfContact.InternalFields[Constants.SF_GUIDForEmailPref];
+
+                var emailPreferencesId = $"{randomGuid}_{sfEntityId}";
+                return emailPreferencesId;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Get owner title by email
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        public string GetOwnerTitleByEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                Log.Info("Email address is null or empty. No owner title returned from the email address.", this);
+                return null;
+            }
+
+            try
+            {
+                var contactService = new ContactService(this.SalesforceSession);
+                var sfContact = contactService.GetByEmail(email);
+                if (sfContact == null)
+                {
+                    Log.Info(string.Format("Salesforce Contact does not exist with the email - {0}", email), this);
+                    return null;
+                }
+
+                var ownerTitle = sfContact.InternalFields[Constants.SF_Owner_TitleField];
+
+                return ownerTitle;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Get owner name by email
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        public string GetOwnerNameByEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                Log.Info("Email address is null or empty. No owner name returned from the email address.", this);
+                return null;
+            }
+
+            try
+            {
+                var contactService = new ContactService(this.SalesforceSession);
+                var sfContact = contactService.GetByEmail(email);
+                if (sfContact == null)
+                {
+                    Log.Info(string.Format("Salesforce Contact does not exist with the email - {0}", email), this);
+                    return null;
+                }
+
+                var ownerName = sfContact.InternalFields[Constants.SF_Owner_NameField];
+
+                return ownerName;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Get owner email by email
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        public string GetOwnerEmailByEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                Log.Info("Email address is null or empty. No owner title returned from the email address.", this);
+                return null;
+            }
+
+            try
+            {
+                var contactService = new ContactService(this.SalesforceSession);
+                var sfContact = contactService.GetByEmail(email);
+                if (sfContact == null)
+                {
+                    Log.Info(string.Format("Salesforce Contact does not exist with the email - {0}", email), this);
+                    return null;
+                }
+
+                var ownerEmail = sfContact.InternalFields[Constants.SF_Owner_EmailField];
+
+                return ownerEmail;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Get owner title by email
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        public string GetOwnerPhoneByEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                Log.Info("Email address is null or empty. No owner title returned from the email address.", this);
+                return null;
+            }
+
+            try
+            {
+                var contactService = new ContactService(this.SalesforceSession);
+                var sfContact = contactService.GetByEmail(email);
+                if (sfContact == null)
+                {
+                    Log.Info(string.Format("Salesforce Contact does not exist with the email - {0}", email), this);
+                    return null;
+                }
+
+                var ownerPhone = sfContact.InternalFields[Constants.SF_Owner_PhoneField];
+
+                return ownerPhone;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Get owner region by email
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        public string GetOwnerRegionByEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                Log.Info("Email address is null or empty. No owner region returned from the email address.", this);
+                return null;
+            }
+
+            try
+            {
+                var contactService = new ContactService(this.SalesforceSession);
+                var sfContact = contactService.GetByEmail(email);
+                if (sfContact == null)
+                {
+                    Log.Info(string.Format("Salesforce Contact does not exist with the email - {0}", email), this);
+                    return null;
+                }
+
+                var ownerRegion = sfContact.InternalFields[Constants.SF_Owner_RegionField];
+
+                return ownerRegion;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
         /// Retrieve record types from the SF entity
         /// </summary>
         /// <param name="entityType"></param>

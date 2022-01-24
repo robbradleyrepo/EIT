@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="Models\IArticle.cs" />
     <Compile Include="Models\IArticleGlassBase.cs" />
     <Compile Include="Models\IArticlePodcastLink.cs" />
     <Compile Include="Models\IArticlePodcastPromo.cs" />
@@ -58,6 +59,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Legacy\website\LionTrust.Foundation.Legacy.csproj">
+      <Project>{43ee972b-2002-4719-a878-a66a99c42c40}</Project>
+      <Name>LionTrust.Foundation.Legacy</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\ORM\website\LionTrust.Foundation.ORM.csproj">
       <Project>{5e91a7d9-8e93-44fd-857f-f9ce145b6022}</Project>
       <Name>LionTrust.Foundation.ORM</Name>

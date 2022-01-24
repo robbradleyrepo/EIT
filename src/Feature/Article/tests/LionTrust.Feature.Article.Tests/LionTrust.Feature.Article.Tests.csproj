@@ -48,6 +48,10 @@
     <Compile Include="FeaturedArticlesMappers\UrlLinkShould.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Foundation\Article\website\LionTrust.Foundation.Article.csproj">
+      <Project>{7eae8866-cb76-4275-8d05-577c712cfce3}</Project>
+      <Name>LionTrust.Foundation.Article</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\..\Foundation\Content\website\LionTrust.Foundation.Content.csproj">
       <Project>{F8F55034-FA55-4D27-B115-0AB4EEB9A0A8}</Project>
       <Name>LionTrust.Foundation.Content</Name>
@@ -69,7 +73,7 @@
       <Name>LionTrust.Feature.Carousel</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\website\LionTrust.Feature.Article.csproj">
-      <Project>{C3CEB6CA-3590-43F6-8DC2-50A1176180A5}</Project>
+      <Project>{c3ceb6ca-3590-43f6-8dc2-50a1176180a5}</Project>
       <Name>LionTrust.Feature.Article</Name>
     </ProjectReference>
   </ItemGroup>

@@ -6,7 +6,7 @@
     using Glass.Mapper.Sc.Fields;
     using LionTrust.Foundation.Legacy.Models;
 
-    public interface IArticle : Foundation.Legacy.Models.IArticle
+    public interface IArticle : Foundation.Article.Models.IArticle
     {
         IAuthor Author { get; set; }
 
@@ -18,9 +18,6 @@
 
         [SitecoreField(Constants.Article.Date_FieldId)]
         DateTime Date { get; set; }
-
-        [SitecoreField(Constants.Article.Image_FieldId)]
-        Image Image { get; set; }
 
         [SitecoreField(Constants.Article.ImageOpacity_FieldId)]
         string ImageOpacity { get; set; }

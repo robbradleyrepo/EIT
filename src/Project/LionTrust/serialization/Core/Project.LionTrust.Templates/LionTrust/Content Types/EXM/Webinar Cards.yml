@@ -1,0 +1,27 @@
+﻿---
+ID: "6b04bdb0-dfc7-4d1e-8c0e-a3caadf3d085"
+Parent: "c72fcb7b-1e35-4632-aba4-f939ace75249"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/LionTrust/Content Types/EXM/Webinar Cards
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/user_message.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Type: tree list
+  Value: |
+    {1930BBEB-7805-471A-A3BE-4858AC7CF696}
+    {D2B4AE32-B7EB-40A3-97D7-1B84A72566EF}
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{A00C0DE4-FA18-4CC9-B2CE-B48F4C40D34B}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220117T183702Z

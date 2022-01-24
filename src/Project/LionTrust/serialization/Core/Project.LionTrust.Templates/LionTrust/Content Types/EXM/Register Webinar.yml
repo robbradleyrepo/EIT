@@ -1,0 +1,24 @@
+﻿---
+ID: "41d4618c-a364-4384-95bf-9d4c8e64183b"
+Parent: "c72fcb7b-1e35-4632-aba4-f939ace75249"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/LionTrust/Content Types/EXM/Register Webinar
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/hand_touch.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Type: tree list
+  Value: |
+    {1930BBEB-7805-471A-A3BE-4858AC7CF696}
+    {3A913E2F-DFBC-4B89-9656-B1ED0DC6B3E3}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220117T183647Z

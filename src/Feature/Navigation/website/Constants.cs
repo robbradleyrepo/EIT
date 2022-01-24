@@ -49,13 +49,6 @@
             public const string Latitude_FieldId = "{CBF5D6B1-341D-4832-9D68-AA5A20CEDBCC}";
         }
 
-        public static class SocialIcon
-        {
-            public const string SocialLink_FieldID = "{E990E03D-0332-45CC-A5E7-613996DEDA74}";
-            public const string SocialIcon_FieldID = "{321DB99F-5D14-4703-AC2F-6FEEA5E48000}";
-            public const string SocialLinkGoal_FieldID = "{283A74F1-EBFB-4EB8-ACD7-6D4E4AB5E58C}";
-        }
-
         public static class SecondaryNavigation
         {
             public const string HeadingFieldId = "{60E11875-0FD3-4029-8E88-D217A2735B47}";
@@ -71,12 +64,6 @@
         public static class LinkWithGoal
         {
             public const string GoalFieldId = "{FEE8CC02-9E0E-4510-9343-F642A9ABAFEC}";
-        }
-
-        public static class PageLink
-        {
-            public const string Link_FieldID = "{3F39E86E-0426-46F0-8F64-C5636372E13A}";
-            public const string LinkGoal_FieldId = "{8A4C049E-DAD3-4280-B66A-86ECB20987BF}";
         }
 
         public static class NavigationSiteRoot
@@ -109,13 +96,6 @@
         public static class PageTypes
         {
             public const string LearningResourcesTemplateId = "{7B3DCDF5-5735-4FC8-89EB-DCB0F2F72972}";
-        }
-
-        public static class TwitterAccount
-        {
-            public const string TemplateId = "{23084602-8AE7-4B97-96C0-E89784C376D7}";
-            public const string TwitterAccountName_FieldId = "{12150827-6E1A-4A38-91A1-70EB00F3E7B0}";
-            public const string TwitterLinkGoal_FieldId = "{01E1D852-248A-450D-9A14-AB7EF92DBFE0}";
         }
     }
 }

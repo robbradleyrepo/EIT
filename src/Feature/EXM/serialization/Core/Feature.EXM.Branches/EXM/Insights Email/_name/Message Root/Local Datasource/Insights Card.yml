@@ -1,0 +1,25 @@
+﻿---
+ID: "0c92e5c3-4734-4ccd-8362-0748bb4cad63"
+Parent: "5822f794-4cda-4c86-8d3b-001416bd3ca4"
+Template: "7517e7f7-5ecc-4fa6-8b38-b5804fe8d7b2"
+Path: /sitecore/templates/Branches/Feature/EXM/Insights Email/$name/Message Root/Local Datasource/Insights Card
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220119T154515Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "a49d07ee-4090-489b-88db-8799d9a75117"
+      Hint: Card_CtaText
+      Value: VIEW THE ARTICLE ➝
