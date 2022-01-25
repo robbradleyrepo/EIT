@@ -170,7 +170,7 @@
             }
             else
             {
-                contentSearchResults = _fundContentSearchService.GetFunds(fundSearchRequest);
+                contentSearchResults = _fundContentSearchService.GetFunds(fundSearchRequest, result => result.OrderBy(x => x.FundName));
             }
 
             var fundSearchResponse = new SearchResponse<IFundContentResult>();
