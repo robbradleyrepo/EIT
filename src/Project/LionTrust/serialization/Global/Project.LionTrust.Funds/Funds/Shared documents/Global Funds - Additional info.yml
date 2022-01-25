@@ -21,7 +21,6 @@ Languages:
       Type: Multilist
       Value: |
         {068227AB-8DEF-4A60-9C7B-D34739B4FB39}
-        {BB527779-B84C-4E8C-9AAD-A555CCA8D8D4}
         {DD1FB6FB-0E70-4487-8E77-C985DAE34407}
         {AAD03E4B-CD82-4DF0-BB19-AD4F43706FA3}
         {A222ECBF-7442-4884-B13B-3FBFEA108A77}
@@ -31,6 +30,7 @@ Languages:
         {CAB2FB23-6928-475A-B0CF-EA5BA70EE2CA}
         {2335DB68-AD95-4E4E-B11B-007605557258}
         {83BDAC7D-3E51-42B2-8F2B-71E0258485C6}
+        {57693A76-6051-4FE0-AF4C-1CA2C87F2989}
     - ID: "a4a7f9dd-a218-4f33-b72a-7dc2251ccd43"
       Hint: LegacyDocument_DocumentTypes
       Type: Multilist
@@ -38,7 +38,7 @@ Languages:
     - ID: "c794210e-6107-4d69-841f-773cb9943bba"
       Hint: LegacyDocument_DownloadLink
       Value: |
-        <link id="{8F3D0245-DA53-4560-9D3A-D81EB7FF8DAE}" querystring="" text="" title="" class="" linktype="internal" url="/sitecore/media library/LionTrust/Files/fund-literature/prospectus-fund-legal/Liontrust - Belgian Country Supplement July 2018" target="" />
+        <link linktype="media" target="" id="{8F3D0245-DA53-4560-9D3A-D81EB7FF8DAE}" />
     - ID: "eeb8db99-7da8-4973-adf7-bcf7b29eba79"
       Hint: LegacyDocument_DocumentName
       Value: "Liontrust Global Funds - Additional information for investors in Belgium"
