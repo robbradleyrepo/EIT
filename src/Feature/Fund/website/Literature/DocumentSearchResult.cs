@@ -8,7 +8,7 @@
         [IndexField("alltemplates_sm")]
         public string[] AllTemplates { get; set; }
 
-        [IndexField("relatedfunds_sm")]
+        [IndexField("legacydocument_relatedfunds_sm")]
         public string[] RelatedFunds { get; set; }
     }
 }
