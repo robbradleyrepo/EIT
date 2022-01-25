@@ -87,30 +87,6 @@
 
             var facets = new List<Facet>();
 
-            if (filterFacetConfigItem.FundRegionsFolder != null && filterFacetConfigItem.FundRegionsFolder.Children != null && filterFacetConfigItem.FundRegionsFolder.Children.Any())
-            {
-                facets.Add
-                    (
-                        new Facet
-                        {
-                            Name = filterFacetConfigItem.FundRegionsLabel,
-                            Items = filterFacetConfigItem.FundRegionsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name })
-                        }
-                    );
-            }
-
-            if (filterFacetConfigItem.FundManagersFolder != null && filterFacetConfigItem.FundManagersFolder.Children != null && filterFacetConfigItem.FundManagersFolder.Children.Any())
-            {
-                facets.Add
-                    (
-                        new Facet
-                        {
-                            Name = filterFacetConfigItem.FundManagersLabel,
-                            Items = filterFacetConfigItem.FundManagersFolder?.Children?.Where(x => x.IsFundManager)?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name })
-                        }
-                    );
-            }
-
             if (filterFacetConfigItem.FundTeamsFolder != null && filterFacetConfigItem.FundTeamsFolder.Children != null && filterFacetConfigItem.FundTeamsFolder.Children.Any())
             {
                 facets.Add
@@ -131,6 +107,30 @@
                         {
                             Name = filterFacetConfigItem.FundRangesLabel,
                             Items = filterFacetConfigItem.FundRangesFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name })
+                        }
+                    );
+            }
+
+            if (filterFacetConfigItem.FundManagersFolder != null && filterFacetConfigItem.FundManagersFolder.Children != null && filterFacetConfigItem.FundManagersFolder.Children.Any())
+            {
+                facets.Add
+                    (
+                        new Facet
+                        {
+                            Name = filterFacetConfigItem.FundManagersLabel,
+                            Items = filterFacetConfigItem.FundManagersFolder?.Children?.Where(x => x.IsFundManager)?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name })
+                        }
+                    );
+            }
+
+            if (filterFacetConfigItem.FundRegionsFolder != null && filterFacetConfigItem.FundRegionsFolder.Children != null && filterFacetConfigItem.FundRegionsFolder.Children.Any())
+            {
+                facets.Add
+                    (
+                        new Facet
+                        {
+                            Name = filterFacetConfigItem.FundRegionsLabel,
+                            Items = filterFacetConfigItem.FundRegionsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name })
                         }
                     );
             }
