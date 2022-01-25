@@ -12,7 +12,25 @@
                     <h2 class="howtoinvest__head">
                         @Html.Glass().Editable(Model, m => m.Heading)
                     </h2>
-
+                    <div class="howtoinvest__body">
+                        @if (Model.Icons != null && Model.Icons.Any())
+                        {
+                            foreach (var iconWithText in Model.Icons)
+                            {
+                                using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Banner/BannerWithIcons/IconWithText", iconWithText.Id.ToString(), "Edit icon with text"))
+                                {
+                                    if (Sitecore.Context.PageMode.IsExperienceEditor)
+                                    {
+                                        @: Edit Icon with Text
+                                    }
+                                    <div class="howtoinvest__slide">
+                                        @Html.Glass().RenderImage(iconWithText, m => m.Icon, new NameValueCollection { { "class", "howtoinvest__img" } }, isEditable: true)
+                                        <div class="howtoinvest__desc">@Html.Glass().Editable(iconWithText, m => m.Text)</div>
+                                    </div>
+                                }
+                            }
+                        }
+                    </div>
                     <div class="howtoinvest__footer">
                         @using (Html.Glass().BeginRenderLinkWithGoal(Model, m => m.PrimaryCTALink, Model.PrimaryCTALinkGoal, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
                         {
@@ -32,26 +50,6 @@
                             <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
                         }
 
-                    </div>
-
-                    <div class="howtoinvest__body">
-                        @if (Model.Icons != null && Model.Icons.Any())
-                        {
-                            foreach (var iconWithText in Model.Icons)
-                            {
-                                using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Banner/BannerWithIcons/IconWithText", iconWithText.Id.ToString(), "Edit icon with text"))
-                                {
-                                    if (Sitecore.Context.PageMode.IsExperienceEditor)
-                                    {
-                                        @: Edit Icon with Text
-                                    }
-                                    <div class="howtoinvest__slide">
-                                        @Html.Glass().RenderImage(iconWithText, m => m.Icon, new NameValueCollection { { "class", "howtoinvest__img" } }, isEditable: true)
-                                        <div class="howtoinvest__desc">@Html.Glass().Editable(iconWithText, m => m.Text)</div>
-                                    </div>
-                                }
-                            }
-                        }
                     </div>
                 </div>                  
             </div>
