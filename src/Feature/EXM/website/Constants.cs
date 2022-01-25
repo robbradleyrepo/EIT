@@ -20,6 +20,7 @@ namespace LionTrust.Feature.EXM
         {
             public const string SmallBodyText_FieldID = "{497DA0F5-E840-4907-BCAC-74B95CAB5CCC}";
             public const string EmailPreferencesText_FieldID = "{F43CEBED-6CF7-489F-B9F5-20F2562C2706}";
+            public const string EmailPreferencesTextBrowser_FieldID = "{118221E5-FC3B-4543-B102-A3D0CC96A157}";
         }
 
         public static class Header
@@ -35,6 +36,7 @@ namespace LionTrust.Feature.EXM
         public static class Cta
         {
             public const string CtaLink_FieldID = "{A425E517-88F6-40BE-A470-CDF6630B994D}";
+            public const string CtaLinkBrowser_FieldID = "{DEAAD13A-7908-455D-8DFC-12B4395B02EB}";
             public const string CtaText_FieldID = "{2DBD0E32-0874-4D15-AEF9-758D779EDE58}";
         }
 

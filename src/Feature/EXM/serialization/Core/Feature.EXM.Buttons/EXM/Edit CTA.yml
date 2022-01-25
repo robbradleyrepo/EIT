@@ -1,8 +1,8 @@
 ﻿---
-ID: "dee20041-46c4-4d37-835d-bc07bb4547a2"
+ID: "854abf44-e47d-4e1f-8760-5827a0078e99"
 Parent: "b74b8497-37e9-4a5e-baae-f9875bc191d7"
 Template: "1ab4f9ad-b004-413c-8924-3e07143a614b"
-Path: /sitecore/content/Applications/WebEdit/Custom Experience Buttons/Feature/EXM/Edit Article Cards
+Path: /sitecore/content/Applications/WebEdit/Custom Experience Buttons/Feature/EXM/Edit CTA
 DB: core
 SharedFields:
 - ID: "4431914a-c40b-437c-8add-d2ed12cc8cc3"
@@ -10,16 +10,16 @@ SharedFields:
   Value: People/32x32/cube_blue_edit.png
 - ID: "cf738220-908d-4c3f-9482-32e625daf13c"
   Hint: Fields
-  Value: ArticleCards_Title|ArticleCards_Cards|ArticleCards_CtaText
+  Value: CTA_Link|CTA_LinkBrowser|CTA_Text
 Languages:
 - Language: en
   Fields:
   - ID: "108d3a63-baaa-4560-86d8-3a112ed84717"
     Hint: Header
-    Value: Edit Article Cards
+    Value: Edit CTA
   - ID: "5f0812af-d370-4292-afee-f26a39b7406d"
     Hint: Tooltip
-    Value: Edit Article Cards
+    Value: Edit CTA
   Versions:
   - Version: 1
     Fields:

@@ -12,5 +12,8 @@
 
         [SitecoreField(Constants.Disclaimer.EmailPreferencesText_FieldID)]
         string EmailPreferencesText { get; set; }
+
+        [SitecoreField(Constants.Disclaimer.EmailPreferencesTextBrowser_FieldID)]
+        string EmailPreferencesTextBrowser { get; set; }
     }
 }
