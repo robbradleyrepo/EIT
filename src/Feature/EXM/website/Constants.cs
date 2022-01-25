@@ -80,7 +80,8 @@ namespace LionTrust.Feature.EXM
             public const string Title_FieldID = "{6CFC7DE1-DE60-4A80-A1D6-E88519294EFF}";
             public const string Description_FieldID = "{CF7FF455-07B4-4C3E-869E-8ADB7D811361}";
             public const string Image_FieldID = "{03437051-7376-4909-A5A4-C1C44867E7C7}";
-            public const string Cta_FieldID = "{547B728F-FA0E-4131-9DEC-B1CB15714D3B}";
+            public const string CtaLink_FieldID = "{547B728F-FA0E-4131-9DEC-B1CB15714D3B}";
+            public const string CtaText_FieldID = "{03CD3E6A-9D6B-4C84-83CC-6C9852D706A2}";
         }
 
         public static class Card
