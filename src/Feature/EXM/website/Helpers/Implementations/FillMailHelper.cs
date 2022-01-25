@@ -18,7 +18,8 @@ namespace LionTrust.Feature.EXM.Helpers.Implementations
         private readonly SitecoreContactUtility _scContactUtility;
         private readonly BaseSettings _settings;
 
-        private char[] separators = new char[]{ ',', ';' };
+        private readonly char[] separators = new char[]{ ',', ';' };
+        private const string SENDER = "Sender";
 
         public FillMailHelper(BaseSettings settings)
         {
@@ -28,34 +29,6 @@ namespace LionTrust.Feature.EXM.Helpers.Implementations
 
         public void FillEmail(MailMessageItem mailMessageItem, SendMessageArgs sendMessageArgs, EmailMessage emailMessage)
         {
-            var testingEnv = _settings.GetBoolSetting(Constants.Settings.MailTestingEnvironment, true);
-            if (testingEnv)
-            {
-                var publishedDatabase = Sitecore.Data.Database.GetDatabase("web");
-                var sitecoreService = new SitecoreService(publishedDatabase);
-
-                var exmSettings = sitecoreService.GetItem<IExmSettings>(Constants.ExmSettings.ExmSettings_ItemID);
-                var whitelistDomains = exmSettings.WhitelistDomains.Split(separators)?.Select(x => x.Trim());
-                var testingRecipients = exmSettings.TestingRecipientList.Split(separators)?.Select(x => x.Trim());
-
-                var recipients = new List<string>();
-                foreach(var r in emailMessage.Recipients)
-                {
-                    var domain = r.Split('@')[1];
-                    if (whitelistDomains.Any(x => x == domain))
-                    {
-                        recipients.Add(r);
-                    }
-                }
-
-                if (!recipients.Any())
-                {
-                    recipients.AddRange(testingRecipients);
-                }
-
-                emailMessage.Recipients = recipients;
-            }
-
             //send quick test
             if (mailMessageItem.ContactIdentifier == null)
             {
@@ -90,6 +63,37 @@ namespace LionTrust.Feature.EXM.Helpers.Implementations
 
                 SetFrom(emailMessage, scContactFacetData);
             }
+
+            //is testing environment
+            var testingEnv = _settings.GetBoolSetting(Constants.Settings.MailTestingEnvironment, true);
+            if (testingEnv)
+            {
+                emailMessage.FromAddress += ".test";
+
+                var publishedDatabase = Sitecore.Data.Database.GetDatabase("web");
+                var sitecoreService = new SitecoreService(publishedDatabase);
+
+                var exmSettings = sitecoreService.GetItem<IExmSettings>(Constants.ExmSettings.ExmSettings_ItemID);
+                var whitelistDomains = exmSettings.WhitelistDomains.Split(separators)?.Select(x => x.Trim());
+                var testingRecipients = exmSettings.TestingRecipientList.Split(separators)?.Select(x => x.Trim());
+
+                var recipients = new List<string>();
+                foreach (var r in emailMessage.Recipients)
+                {
+                    var domain = r.Split('@')[1];
+                    if (whitelistDomains.Any(x => x == domain))
+                    {
+                        recipients.Add(r);
+                    }
+                }
+
+                if (!recipients.Any())
+                {
+                    recipients.AddRange(testingRecipients);
+                }
+
+                emailMessage.Recipients = recipients;
+            }
         }
 
         private void SetFrom(EmailMessage emailMessage, ScContactFacetData scContactFacetData)
@@ -102,13 +106,13 @@ namespace LionTrust.Feature.EXM.Helpers.Implementations
             {
                 emailMessage.FromName = scContactFacetData.OwnerName;
 
-                if (emailMessage.Headers["Sender"] != null)
+                if (emailMessage.Headers[SENDER] != null)
                 {
-                    emailMessage.Headers["Sender"] = scContactFacetData.OwnerName;
+                    emailMessage.Headers[SENDER] = scContactFacetData.OwnerName;
                 }
                 else
                 {
-                    emailMessage.Headers.Add("Sender", scContactFacetData.OwnerName);
+                    emailMessage.Headers.Add(SENDER, scContactFacetData.OwnerName);
                 }
             }
         }
