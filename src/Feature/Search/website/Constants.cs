@@ -20,7 +20,7 @@
             public const string HeadingFieldId = "{A7C70493-A174-455B-BF2D-67A38143A1E7}";
             public const string SearchLabelFieldId = "{7E350BBA-B71B-49AA-910F-5316636CAC17}";
             public const string ResultsPerPageFieldId = "{2056E3A0-3765-4DF0-8836-349180E8D7F5}";
-            public const string SearchResultsFoundLabelFieldId = "{83D03CE9-1F83-4F04-8D65-474AB9BFBFC0}";
+            public const string NoSearchResultsFoundLabelFieldId = "{83D03CE9-1F83-4F04-8D65-474AB9BFBFC0}";
             public const string FactsheetLinkTextFieldId = "{94CAE85F-6AED-4D42-BA9B-C487AF809CC7}";
         }
 
@@ -113,6 +113,7 @@
             public const string AllDocumentsLabel_FieldId = "{061CF8AB-5D59-47E6-88AA-BDF808FC3BE3}";
             public const string FollowLabel_FieldId = "{373D3F32-A145-4B77-830C-96083118CACA}";
             public const string FactsheetLabel_FieldId = "{AD4992D4-588A-4AB0-B4EC-793A08E648D2}";
+            public const string NoResultsFoundLabel_FieldId = "{5AF3629A-526B-4F49-B631-9B8F0A8AC229}";
         }
 
         public static class Settings

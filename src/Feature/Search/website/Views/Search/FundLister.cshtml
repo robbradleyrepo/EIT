@@ -145,6 +145,9 @@
             <div class="text-center my-5" v-if="loading">
                 <div class="spinner-border text-gold" role="status"></div>
             </div>
+            <p v-if="!searchData.length && !loading" class="h2 text-center mb-5">
+                @Model.NoResultsFoundLabel
+            </p>
             <div class="row" v-if="grid">
                 <article-item inline-template v-for="(fund, i) in searchData" :key="i + fund.fundName">
                     <div class="col-md-6 col-lg-4 col-xl-3 d-flex">

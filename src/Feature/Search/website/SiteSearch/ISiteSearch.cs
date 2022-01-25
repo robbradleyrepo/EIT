@@ -7,8 +7,8 @@
 
     public interface ISiteSearch: IPagination
     {
-        [SitecoreField(Constants.SiteSearch.SearchResultsFoundLabelFieldId)]
-        string SearchResultsFoundCopy { get; set; }
+        [SitecoreField(Constants.SiteSearch.NoSearchResultsFoundLabelFieldId)]
+        string NoSearchResultsFound { get; set; }
 
         [SitecoreField(Constants.SiteSearch.ResultsPerPageFieldId)]
         string ResultsPerPage { get; set; }
