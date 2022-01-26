@@ -11,12 +11,12 @@
     {
         public static Expression<Func<T, bool>> GetFreeTextPredicate(string[] fieldNames, IQuery query)
         {
-            var predicate = PredicateBuilder.False<T>();
             if (string.IsNullOrWhiteSpace(query.QueryText))
             {
-                return predicate;
+                return PredicateBuilder.True<T>();
             }
 
+            var predicate = PredicateBuilder.False<T>();
             foreach (var name in fieldNames)
             {
                 predicate = predicate.Or(i => i[name].Contains(query.QueryText));
