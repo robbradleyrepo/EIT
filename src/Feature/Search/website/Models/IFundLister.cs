@@ -41,5 +41,8 @@
 
         [SitecoreField(Constants.FundLister.FactsheetLabel_FieldId)]
         string FactsheetLabel { get; set; }
+
+        [SitecoreField(Constants.FundLister.NoResultsFoundLabel_FieldId)]
+        string NoResultsFoundLabel { get; set; }
     }
 }
