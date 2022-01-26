@@ -8,9 +8,6 @@
         [SitecoreField(Constants.Cta.CtaLink_FieldID)]
         Link CtaLink { get; set; }
 
-        [SitecoreField(Constants.Cta.CtaLinkBrowser_FieldID)]
-        Link CtaLinkBrowser { get; set; }
-
         [SitecoreField(Constants.Cta.CtaText_FieldID)]
         string CtaText { get; set; }
     }

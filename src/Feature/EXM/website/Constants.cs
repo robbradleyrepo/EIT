@@ -36,7 +36,6 @@ namespace LionTrust.Feature.EXM
         public static class Cta
         {
             public const string CtaLink_FieldID = "{A425E517-88F6-40BE-A470-CDF6630B994D}";
-            public const string CtaLinkBrowser_FieldID = "{DEAAD13A-7908-455D-8DFC-12B4395B02EB}";
             public const string CtaText_FieldID = "{2DBD0E32-0874-4D15-AEF9-758D779EDE58}";
         }
 
