@@ -1,4 +1,5 @@
 @using Glass.Mapper.Sc.Web.Mvc
+@using Sitecore.EmailCampaign.Model.Web.Settings
 @using System.Collections.Specialized
 @model LionTrust.Feature.EXM.Models.ICta
 
@@ -30,19 +31,29 @@
                                                             <td align="left" bgcolor="#ffffff" style="padding:0;Margin:0;padding-bottom:30px">
                                                                 @if (Model.CtaLink != null)
                                                                 {
-                                                                <!--[if mso]><a href="@Model.CtaLink.Url" target="_blank" hidden>
-                                                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" esdevVmlButton href="@Model.CtaLink.Url"
-                                                                                style="height:33px; v-text-anchor:middle; width:177px" arcsize="15%" strokecolor="#10a047" strokeweight="1px" fillcolor="#ffffff">
-                                                                        <w:anchorlock></w:anchorlock>
-                                                                        <center style='color:#10a047; font-family:arial, "helvetica neue", helvetica, sans-serif; font-size:10px; font-weight:400; line-height:10px;  mso-text-raise:1px'>@Model.CtaText</center>
-                                                                    </v:roundrect></a>
-                                                                <![endif]-->
-                                                                <!--[if !mso]><!-- -->
+                                                                    <!--[if mso]><a href="@Model.CtaLink.Url" target="_blank" hidden>
+                                                                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" esdevVmlButton href="@Model.CtaLink.Url"
+                                                                                    style="height:33px; v-text-anchor:middle; width:177px" arcsize="15%" strokecolor="#10a047" strokeweight="1px" fillcolor="#ffffff">
+                                                                            <w:anchorlock></w:anchorlock>
+                                                                            <center style='color:#10a047; font-family:arial, "helvetica neue", helvetica, sans-serif; font-size:10px; font-weight:400; line-height:10px;  mso-text-raise:1px'>@Model.CtaText</center>
+                                                                        </v:roundrect></a>
+                                                                    <![endif]-->
+                                                                    <!--[if !mso]><!-- -->
                                                                 }
                                                                 <span class="msohide es-button-border" style="border-style:solid;border-color:#10a047;background:#ffffff;border-width:1px;display:inline-block;border-radius:5px;width:auto;mso-hide:all">
-                                                                    @using (Html.Glass().BeginRenderLink(Model, s => s.CtaLink, new NameValueCollection { { "target", "_blank" }, { "class", "es-button" }, { "style", "mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#10a047;font-size:11px;border-style:solid;border-color:#ffffff;border-width:10px 20px 10px 20px;display:inline-block;background:#ffffff;border-radius:5px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:normal;font-style:normal;line-height:13px;width:auto;text-align:center" } }, isEditable: true, alwaysRender: true))
+                                                                    @if (Request.QueryString[GlobalSettings.OnlineVersionQueryStringKey] != "1")
                                                                     {
-                                                                        @Html.Glass().Editable(Model, s => s.CtaText)
+                                                                        using (Html.Glass().BeginRenderLink(Model, s => s.CtaLink, new NameValueCollection { { "target", "_blank" }, { "class", "es-button" }, { "style", "mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#10a047;font-size:11px;border-style:solid;border-color:#ffffff;border-width:10px 20px 10px 20px;display:inline-block;background:#ffffff;border-radius:5px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:normal;font-style:normal;line-height:13px;width:auto;text-align:center" } }, isEditable: true, alwaysRender: true))
+                                                                        {
+                                                                            @Html.Glass().Editable(Model, s => s.CtaText)
+                                                                        }
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        using (Html.Glass().BeginRenderLink(Model, s => s.CtaLinkBrowser, new NameValueCollection { { "target", "_blank" }, { "class", "es-button" }, { "style", "mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#10a047;font-size:11px;border-style:solid;border-color:#ffffff;border-width:10px 20px 10px 20px;display:inline-block;background:#ffffff;border-radius:5px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:normal;font-style:normal;line-height:13px;width:auto;text-align:center" } }, isEditable: true, alwaysRender: true))
+                                                                        {
+                                                                            @Html.Glass().Editable(Model, s => s.CtaText)
+                                                                        }
                                                                     }
                                                                 </span>
                                                                 <!--<![endif]-->

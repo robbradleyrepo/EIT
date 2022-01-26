@@ -1,13 +1,10 @@
 ﻿---
-ID: "497da0f5-e840-4907-bcac-74b95cab5ccc"
-Parent: "991ce6c8-f30d-44a5-9f42-d5b5a2bd5334"
+ID: "547b728f-fa0e-4131-9dec-b1cb15714d3b"
+Parent: "e3b93675-25d3-4895-b3f1-94322147605e"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/EXM/_Disclaimer/Disclaimer/SmallPrint_SmallBodyText
+Path: /sitecore/templates/Feature/EXM/_FeaturedArticle/Featured Article/FeaturedArticle_CtaLink
 DB: master
 SharedFields:
-- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
-  Hint: Source
-  Value: 
 - ID: "21828437-ea4b-40a1-8c61-4ce60ea41db6"
   Hint: Validate Button
   Type: tree list
@@ -26,22 +23,22 @@ SharedFields:
   Value: "{59D4EE10-627C-4FD3-A964-61A88B092CBC}"
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: "Multi-Line Text"
+  Value: General Link
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 500
+  Value: 400
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Small body text
+    Value: CTA Link
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20220110T172422Z
+      Value: 20220117T155752Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |

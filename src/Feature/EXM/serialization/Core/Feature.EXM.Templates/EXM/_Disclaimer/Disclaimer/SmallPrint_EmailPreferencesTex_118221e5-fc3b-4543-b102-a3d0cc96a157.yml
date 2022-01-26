@@ -1,8 +1,8 @@
 ﻿---
-ID: "547b728f-fa0e-4131-9dec-b1cb15714d3b"
-Parent: "e3b93675-25d3-4895-b3f1-94322147605e"
+ID: "118221e5-fc3b-4543-b102-a3d0cc96a157"
+Parent: "991ce6c8-f30d-44a5-9f42-d5b5a2bd5334"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/EXM/_FeaturedArticle/Featured Article/FeaturedArticle_Cta
+Path: /sitecore/templates/Feature/EXM/_Disclaimer/Disclaimer/SmallPrint_EmailPreferencesTextBrowser
 DB: master
 SharedFields:
 - ID: "21828437-ea4b-40a1-8c61-4ce60ea41db6"
@@ -23,7 +23,7 @@ SharedFields:
   Value: "{59D4EE10-627C-4FD3-A964-61A88B092CBC}"
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: General Link
+  Value: Rich Text
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 400
@@ -32,13 +32,13 @@ Languages:
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: CTA
+    Value: Email preferences text in browser
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20220117T155752Z
+      Value: 20220125T110457Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |

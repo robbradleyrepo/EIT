@@ -14,7 +14,10 @@
         [SitecoreField(Constants.FeaturedArticle.Image_FieldID)]
         Image Image { get; set; }
 
-        [SitecoreField(Constants.FeaturedArticle.Cta_FieldID)]
-        Link Cta { get; set; }
+        [SitecoreField(Constants.FeaturedArticle.CtaLink_FieldID)]
+        Link CtaLink { get; set; }
+
+        [SitecoreField(Constants.FeaturedArticle.CtaText_FieldID)]
+        string CtaText { get; set; }
     }
 }

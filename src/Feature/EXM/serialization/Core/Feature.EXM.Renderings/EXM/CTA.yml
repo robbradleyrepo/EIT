@@ -16,6 +16,10 @@ SharedFields:
   Hint: VaryByData
   Type: Checkbox
   Value: 0
+- ID: "a2f5d9df-8cba-4a1d-99eb-51acb94cb057"
+  Hint: Page Editor Buttons
+  Type: Treelist
+  Value: "{854ABF44-E47D-4E1F-8760-5827A0078E99}"
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
   Value: "query:.//*[@@templatename='Local Datasource Folder']"
