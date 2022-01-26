@@ -1,55 +1,64 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @model LionTrust.Feature.Fund.PerformanceTables.PerformanceTableViewModel
-@if (Model != null && Model.Hide)
+@if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
 {
     return;
 }
 <section class="container table-section">
     <h3 class="table-section__title">@Html.Glass().Editable(Model.Component, c => c.Heading)</h3>
-    <div class="table-responsive-md">
-        <table class="table table-responcive-md">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">@Html.Glass().Editable(Model.Component, m => m.HeadingLabel)</th>
-                    @foreach (var item in Model.ColumnHeadings)
-                    {
-                        <th scope="col">@item</th>
-                    }
-                </tr>
-            </thead>
-            <tbody>
-                @for (int i = 0; i < Model.Rows.Length; i++)
-                {
-                    var className = i == 0 ? "primary-row" : string.Empty;
-                <tr class="@className">
-                    <th scope="row">@Model.Rows[i].Name</th>
-                    @foreach (var item in Model.Rows[i].Columns)
-                    {
-                        if (item != null)
-                        {
-                            <td>@item.Value.ToString("#0.0")</td>
-                        }
-                        else
-                        {
-                            <td></td>
-                        }
-                    }
-                </tr>
-                }
-            </tbody>
-            @if (Model.QuartileRow != null && Model.QuartileRow.Columns.Any())
-            {
-                <tfoot>
+    @if (!Model.Hide)
+    {
+        <div class="table-responsive-md">
+            <table class="table table-responcive-md">
+                <thead class="thead-dark">
                     <tr>
-                        <td scope="row">@Html.Glass().Editable(Model.Component, m => m.QuartileRowLabel)</td>
-                        @foreach (var item in Model.QuartileRow.Columns.Where(c => c != null))
+                        <th scope="col">@Html.Glass().Editable(Model.Component, m => m.HeadingLabel)</th>
+                        @foreach (var item in Model.ColumnHeadings)
                         {
-                            <td>@item</td>
+                            <th scope="col">@item</th>
                         }
                     </tr>
-                </tfoot>
-            }
-        </table>
-    </div>
+                </thead>
+                <tbody>
+                    @for (int i = 0; i < Model.Rows.Length; i++)
+                    {
+                        var className = i == 0 ? "primary-row" : string.Empty;
+                        <tr class="@className">
+                            <th scope="row">@Model.Rows[i].Name</th>
+                            @foreach (var item in Model.Rows[i].Columns)
+                            {
+                                if (item != null)
+                                {
+                                    <td>@item.Value.ToString("#0.0")</td>
+                                }
+                                else
+                                {
+                                    <td></td>
+                                }
+                            }
+                        </tr>
+                    }
+                </tbody>
+                @if (Model.QuartileRow != null && Model.QuartileRow.Columns.Any())
+                {
+                    <tfoot>
+                        <tr>
+                            <td scope="row">@Html.Glass().Editable(Model.Component, m => m.QuartileRowLabel)</td>
+                            @foreach (var item in Model.QuartileRow.Columns.Where(c => c != null))
+                            {
+                                <td>@item</td>
+                            }
+                        </tr>
+                    </tfoot>
+                }
+            </table>
+        </div>
+    }
+    else
+    {
+        <p class="text-gold">
+            @Model.HidePerformanceMessage
+        </p>
+    }
 </section>
 

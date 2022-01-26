@@ -19,15 +19,6 @@
         bool ExcludeInSearchResults { get; set; }
 
         [SitecoreField(Constants.PresentationBase.FundReference_FieldId)]
-        IFund Fund { get; set; }
-
-        [SitecoreField(Constants.PresentationBase.HidePerformanceChart_FieldId, SitecoreFieldType.Checkbox)]
-        bool HidePerformanceChart { get; set; }
-
-        [SitecoreField(Constants.PresentationBase.HideDiscretePerformanceTable_FieldId, SitecoreFieldType.Checkbox)]
-        bool HideDiscretePerformanceTable { get; set; }
-
-        [SitecoreField(Constants.PresentationBase.HideCumulativePerformanceTable_FieldId, SitecoreFieldType.Checkbox)]
-        bool HideCumulativePerformanceTable { get; set; }
+        IFund Fund { get; set; }        
     }
 }

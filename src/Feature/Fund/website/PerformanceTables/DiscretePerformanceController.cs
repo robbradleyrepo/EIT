@@ -26,14 +26,7 @@
                 return null;
             }
 
-            bool hideDiscreteTable = false;
-            var fundDetailPage = _context.GetContextItem<IPresentationBase>();
-            if (fundDetailPage != null)
-            {
-                hideDiscreteTable = fundDetailPage.HideDiscretePerformanceTable;
-            }
-
-            var result = new PerformanceTableViewModel { Component = datasource, Hide = hideDiscreteTable };
+            var result = new PerformanceTableViewModel { Component = datasource };
             
             if (datasource.Fund != null)
             {
@@ -43,7 +36,13 @@
                     result.ColumnHeadings = _performanceManager.GetColumnHeadings(citiCode);
                     result.Rows = _performanceManager.GetPerformanceTableRows(citiCode).GroupBy(r => r.Name).Select(g => g.First()).ToArray();
                     result.QuartileRow = _performanceManager.GetQuartile(citiCode);
-                }
+
+                    var currentClass = datasource.Fund.Classes.FirstOrDefault(c => c.CitiCode == citiCode);
+                    if (currentClass != null)
+                    {
+                        result.Hide = currentClass.HideDiscretePerformanceTable;
+                    }
+                }                
             }
 
             return View("/views/fund/performancetable.cshtml", result);

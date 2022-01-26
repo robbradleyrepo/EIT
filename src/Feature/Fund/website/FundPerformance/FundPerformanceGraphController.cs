@@ -25,14 +25,7 @@
                 return null;
             }
 
-            bool hidePerformanceChart = false;
-            var fundDetailPage = _context.GetContextItem<IPresentationBase>();
-            if (fundDetailPage != null)
-            {
-                hidePerformanceChart = fundDetailPage.HidePerformanceChart;
-            }
-
-            var model = new FundPerformanceGraphViewModel { Component = datasource, Hide = hidePerformanceChart };
+            var model = new FundPerformanceGraphViewModel { Component = datasource };
             if (datasource.Fund != null)
             {
                 var citiCode = FundClassSwitcherHelper.GetCitiCode(HttpContext, datasource.Fund);
@@ -50,6 +43,7 @@
                     }
 
                     model.GraphTitle = !string.IsNullOrEmpty(currentClass.GraphTitle) ? currentClass.GraphTitle : datasource.ChartTitle;
+                    model.Hide = currentClass.HidePerformanceChart;
                 }
 
                 model.CitiCode = citiCode;
