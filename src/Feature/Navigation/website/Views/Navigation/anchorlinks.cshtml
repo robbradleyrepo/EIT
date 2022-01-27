@@ -15,9 +15,9 @@
                 <div class="page-anchor__links page-anchor__links-mobile">
                     @foreach (var item in Model.Children)
                     {
-                        using (Html.Glass().BeginEditFrame<LionTrust.Foundation.Navigation.Models.IAnchor>(item, null, i => i.AnchorId))
+                        using (Html.Glass().BeginEditFrame<LionTrust.Foundation.Navigation.Models.IAnchor>(item, null, i => i.AnchorId, i => i.AnchorName))
                         {
-                            <a href="#@item.AnchorId" class="page-anchor__link">@Html.Glass().Editable(item, i => i.AnchorName)</a>
+                            <a href="#@item.AnchorId" class="page-anchor__link">@item.AnchorName</a>
                         }
                     }
                 </div>
@@ -29,9 +29,9 @@
                 <div class="page-anchor__links navbar">
                     @foreach (var item in Model.Children)
                     {
-                        using (Html.Glass().BeginEditFrame<LionTrust.Foundation.Navigation.Models.IAnchor>(item, null, i => i.AnchorId))
+                        using (Html.Glass().BeginEditFrame<LionTrust.Foundation.Navigation.Models.IAnchor>(item, null, i => i.AnchorId, i => i.AnchorName))
                         {
-                            <a href="#@item.AnchorId" class="page-anchor__link">@Html.Glass().Editable(item, i => i.AnchorName)</a>
+                            <a href="#@item.AnchorId" class="page-anchor__link">@item.AnchorName</a>
                         }
                     }
                 </div>
