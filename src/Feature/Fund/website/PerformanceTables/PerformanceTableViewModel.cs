@@ -15,11 +15,11 @@
 
         public bool Hide { get; set; }
 
+        public string HidePerformanceMessage => Sitecore.Globalization.Translate.Text("HidePerformanceMessage");
+
         public PerformanceTableViewModel()
         {
             Rows = new PerformanceTableRow[0];
         }
-
-
     }
 }

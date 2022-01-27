@@ -4,10 +4,6 @@
 {
     return;
 }
-@if (Model != null && Model.Hide)
-{
-    return;
-}
 <section id="performance-graph" class="container graph-section">
     <div class="row">
         <div class="col-12">
@@ -69,12 +65,21 @@
 <div class="container">    
     <div class="row">
         <div class="col-12">
-            <h3 class="graph-section__title">
-                @Model.GraphTitle
-            </h3>
-            <iframe class="mt-3 mb-5" id="childFrame"
-                    src="@Model.GraphUrl()"
-                    height="700" width="100%" frameborder="0" scrolling="no"></iframe>
+            @if (!Model.Hide)
+            {
+                <h3 class="graph-section__title">
+                    @Model.GraphTitle
+                </h3>
+                <iframe class="mt-3 mb-5" id="childFrame"
+                        src="@Model.GraphUrl()"
+                        height="700" width="100%" frameborder="0" scrolling="no"></iframe>
+            }
+            else
+            {
+                <p class="text-black">
+                    @Model.HidePerformanceMessage
+                </p>
+            }            
         </div>
     </div>
 </div>

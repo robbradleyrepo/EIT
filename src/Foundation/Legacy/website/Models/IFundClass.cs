@@ -1,5 +1,6 @@
 ﻿namespace LionTrust.Foundation.Legacy.Models
 {
+    using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
     using System;
@@ -77,5 +78,15 @@
 
         [SitecoreField(Constants.FundClass.GraphTitle_FieldId)]
         string GraphTitle { get; set; }
+
+        [SitecoreField(Constants.FundClass.HidePerformanceChart_FieldId, SitecoreFieldType.Checkbox)]
+        bool HidePerformanceChart { get; set; }
+
+        [SitecoreField(Constants.FundClass.HideDiscretePerformanceTable_FieldId, SitecoreFieldType.Checkbox)]
+        bool HideDiscretePerformanceTable { get; set; }
+
+        [SitecoreField(Constants.FundClass.HideCumulativePerformanceTable_FieldId, SitecoreFieldType.Checkbox)]
+        bool HideCumulativePerformanceTable { get; set; }
+
     }
 }
