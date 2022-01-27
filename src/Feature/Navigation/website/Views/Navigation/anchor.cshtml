@@ -4,10 +4,13 @@
 {
     return;
 }
-<span id="@Model.AnchorId" class="section-spy"></span>
 @if (Sitecore.Context.PageMode.IsExperienceEditor)
 {
-    <span class="text-black">
+    <div class="text-black">
         @Html.Glass().Editable(m => m.AnchorId)
-    </span>
+    </div>
+}
+else
+{
+    <span id="@Model.AnchorId" class="section-spy"></span>
 }
