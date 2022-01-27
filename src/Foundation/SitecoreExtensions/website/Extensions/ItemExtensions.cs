@@ -7,6 +7,7 @@
     using Sitecore.Data;
     using Sitecore.Data.Fields;
     using Sitecore.Data.Items;
+    using Sitecore.Layouts;
     using Sitecore.Links;
     using Sitecore.Resources.Media;
 
@@ -75,6 +76,24 @@
             {
                 return null;
             }
+        }
+
+        public static bool HasComponent(this Item item, string renderingId)
+        {
+            if (item == null)
+            {
+                return false;
+            }
+
+            DeviceItem device = Sitecore.Context.Device;
+            var renderings = item.Visualization?.GetRenderings(device, true);
+
+            if (renderings == null)
+            {
+                return false;
+            }
+
+            return renderings.Any(r => r.RenderingID == new ID(renderingId));
         }
     }
 }
