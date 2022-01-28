@@ -1,0 +1,32 @@
+﻿---
+ID: "63a8d296-7c30-40a7-b299-7b322951a33b"
+Parent: "be5cc479-b7e8-4c68-90b0-a4ca8d21e78f"
+Template: "cf87f1eb-f59d-4e08-bcd6-23e0cdd7362f"
+Path: "/sitecore/content/LionTrustNew/Home/Data Template/fund teams/Cris Fund Team/_Local/BC016 - Article Scroller"
+DB: master
+BranchID: "cbbf480e-6a45-44df-a485-a7bee8e19a8a"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{043670F9-6ADD-46AF-A0E1-A78328FF09E8}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220128T112445Z
+    - ID: "550b2192-38e6-4cee-85f2-0bfca295bcf8"
+      Hint: ArticleSearchParameters_Topics
+      Type: Multilist
+      Value: |
+        {B4A230A9-D251-4E23-9289-53031FA8BA0A}
+        {B8BD3FF8-3E07-416A-8F8B-20B63645F0E3}
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "93854c18-0919-445e-bc88-2d353c8491e8"
+      Hint: ArticleScroller_Heading
+      Value: Latest insight
