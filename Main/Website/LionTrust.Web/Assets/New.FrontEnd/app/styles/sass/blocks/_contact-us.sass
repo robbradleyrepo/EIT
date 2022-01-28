@@ -74,6 +74,12 @@
                 margin-bottom: 29px
             span
                 display: block
+        &-bottom
+            > div
+                display: flex
+                .contacts__phone
+                    margin-left: 0
+                    display: inline-flex
         .lit-column
             width: 27px
             display: inline-block
@@ -111,7 +117,7 @@
             align-items: center
         .contacts__btn
             @include breakpoint(tablet, down)
-            width: 100%
+                width: 100%
     &__btn
         display: block
         @include breakpoint(desktop-large, up)
