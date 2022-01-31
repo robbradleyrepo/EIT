@@ -12,301 +12,269 @@ Languages:
     - ID: "0a8bdbc5-3a31-4b6d-b951-757771fd99a0"
       Hint: Message
       Value: |
-        <meta /> <!-- utf-8 works for most cases -->
-        <meta name="viewport" content="width=device-width" /> <!-- Forcing initial-scale shouldn't be necessary -->
-        <meta content="IE=edge" /> <!-- Use the latest (edge) version of IE rendering engine -->
-        <meta name="x-apple-disable-message-reformatting" />  <!-- Disable auto-scale in iOS 10 Mail entirely -->
-        <title>Liontrust - Edit Email Preferences</title>
-        <!-- The title tag shows in email notifications, like Android 4.4. -->
-        <!-- Web Font / @font-face : BEGIN -->
-        <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
-        <!--[if mso]>
-                <style>
-                    * {
-                        font-family: sans-serif !important;
-                    }
-                </style>
+        <meta charset="UTF-8" />
+        <meta name="x-apple-disable-message-reformatting" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="telephone=no" name="format-detection" />
+        <title>Liontrust Welcome</title>
+        <!--[if (mso 16)]>
+            <style type="text/css">
+            a {text-decoration: none;}
+            </style>
             <![endif]-->
-        <!--[if !mso]><!-->
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet" />
-        <!--<![endif]-->
-        <!-- Web Font / @font-face : END -->
-        <style type="text/css">
-            p{
-            margin:0;
-            padding:0;
-            }
-            table{
-            border-collapse:collapse;
-            }
-            h1,h2,h3,h4,h5,h6{
-            display:block;
-            margin:0;
-            padding:0;
-            }
-            img,a img{
-            border:0;
-            height:auto;
-            outline:none;
-            text-decoration:none;
-            }
-            body{
-            height:100%;
-            margin:0;
-            padding:0;
-            width:100%;
-            }
-            #outlook a{
-            padding:0;
-            }
-            img{
-            -ms-interpolation-mode:bicubic;
-            }
-            table{
-            mso-table-lspace:0pt;
-            mso-table-rspace:0pt;
-            }
-            p,a,li,td,blockquote{
-            mso-line-height-rule:exactly;
-            }
-            a[href^=tel],a[href^=sms]{
-            color:inherit;
-            cursor:default;
-            text-decoration:none;
-            }
-            p,a,li,td,body,table,blockquote{
-            -ms-text-size-adjust:100%;
-            -webkit-text-size-adjust:100%;
-            }
-            a[x-apple-data-detectors]{
-            color:inherit !important;
-            text-decoration:none !important;
-            font-size:inherit !important;
-            font-family:inherit !important;
-            font-weight:inherit !important;
-            line-height:inherit !important;
-            }
-            a.btn{
-            display:block;
-            }
-            .hidden {
-            display:none !important;
-            visibility:hidden !important;
-            width: 0px !important;
-            }
-            blockquote .original-only, .wordsection1 .original-only {
-            display: none !important;
-            }
-            .responsiveimg,.fluidimage{
-            vertical-align:bottom;
-            }
-            .textcontent{
-            word-break:break-word;
-            }
-            #templatepreheader{display:none !important;}
-            @media only screen and (max-width: 480px){
-            body,table,td,p,a,li,blockquote{
-            -webkit-text-size-adjust:none !important;
-            }
-            }
-            @media only screen and (max-width: 480px){
-            body{
-            width:100% !important;
-            min-width:100% !important;
-            }
-            }
-            @media only screen and (max-width: 480px){
-            .innercolumn{
-            padding-left: 10px !important;
-            padding-right: 10px !important;
-            }
-            }
-            @media only screen and (max-width: 480px){
-            .templatecolumns{
-            max-width:564px !important;
-            width:100% !important;
-            }
-            }
-            @media only screen and (max-width: 480px){
-            .columnscontainer{
-            display:block!important;
-            max-width:564px !important;
-            padding-bottom:18px !important;
-            padding-left:0 !important;
-            width:100%!important;
-            }
-            }
-            @media only screen and (max-width: 480px){
-            .fluidimage{
-            max-width:100% !important;
-            }
-            }
-            @media only screen and (max-width: 480px){
-            .responsiveimg{
-            height:auto !important;
-            width:100% !important;
-            }
-            }
-            @media only screen and (max-width: 480px){
-            .heading{
-            font-size: 34px !important;
-            line-height: 38px !important;
-            padding-right: 10px;
-            }
-            }
-            @media only screen and (max-width: 480px){
-            .hidden {
-            display:none !important;
-            visibility:hidden !important;
-            width: 0px !important;
-            }
-            }
-            @media only screen and (max-width: 480px){
-            .smaller-text{
-            font-size: 9px !important;
-            }
-            }
-        </style>
+        <!--[if gte mso 9]><style>sup { font-size: 100% !important; }</style><![endif]-->
         <!--[if gte mso 9]>
-            <xml>
-              <o:OfficeDocumentSettings>
-                <o:AllowPNG></o:AllowPNG>
-                <o:PixelsPerInch>96</o:PixelsPerInch>
-             </o:OfficeDocumentSettings>
-            </xml>
-            <![endif]-->
-        <!--[if mso]>
-        <style type="text/css">
-        body, table, td, tr, p, a {font-family: Arial, sans-serif !important;}
-        </style>
+        <xml>
+            <o:OfficeDocumentSettings>
+            <o:AllowPNG></o:AllowPNG>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
         <![endif]-->
-        <!-- Email Body : BEGIN -->
-        <table align="center" border="0" cellpadding="0" cellspacing="0" class="email-container" style="max-width: 600px;" width="100%">
-            <!-- HEADER : BEGIN -->
+        <style type="text/css">
+            #outlook a {
+            padding:0;
+            }
+            .es-button {
+            mso-style-priority:100!important;
+            text-decoration:none!important;
+            }
+            a[x-apple-data-detectors] {
+            color:inherit!important;
+            text-decoration:none!important;
+            font-size:inherit!important;
+            font-family:inherit!important;
+            font-weight:inherit!important;
+            line-height:inherit!important;
+            }
+            .es-desk-hidden {
+            display:none;
+            float:left;
+            overflow:hidden;
+            width:0;
+            max-height:0;
+            line-height:0;
+            mso-hide:all;
+            }
+            [data-ogsb] .es-button {
+            border-width:0!important;
+            padding:10px 20px 10px 20px!important;
+            }
+        </style>
+        <div class="es-wrapper-color" style="background-color:#F7F9FC;">
+        <!--[if gte mso 9]>
+        			<v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
+        				<v:fill type="tile" color="#f7f9fc"></v:fill>
+        			</v:background>
+        		<![endif]-->
+        <table class="es-wrapper" width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;padding:0;margin:0;width:100%;height:100%;background-repeat:repeat;background-position:center top;background-color:#F7F9FC;">
             <tbody>
                 <tr>
-                    <td class="innerColumn" style="padding: 0px 25px; background-color: #ffffff;">
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <td valign="top" style="padding:0;margin:0;">
+                    <table cellpadding="0" cellspacing="0" class="es-content" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;">
                         <tbody>
                             <tr>
-                                <td align="left" style="padding: 15px 0 15px 0; text-align: left;"><img alt="Liontrust" src="http://www2.liontrust.co.uk/l/63682/2018-04-30/chjyvw/63682/139608/logo.png" style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 20px; color: #000000; border-width: 0px; border-style: solid;" /></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    </td>
-                </tr>
-                <!-- HEADER : END --><!-- BODY : START -->
-                <tr>
-                    <!-- CONTENT AREA : START -->
-                    <td class="innerColumn" style="padding: 0px 25px; font-family: 'Source Sans Pro', sans-serif; font-size: 12px; color: #474747; background-color: #ffffff;">
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                        <tbody>
-                            <tr>
-                                <td style="font-family: 'Source Sans Pro', sans-serif; font-size: 12px; line-height: 18px; color: #000000; text-align: left; font-weight: normal;">
-                                <p style="margin: 0;">&nbsp;</p>
-                                <p style="margin: 0;">Dear {FullName},</p>
-                                &nbsp;
-                                <p><span>Thank you for registering with the Liontrust email preference centre. We send out regular views, insights, commentaries, factsheets and updates from our fund management teams. Here is a link for you to access the preference centre and tailor the emails you receive from us. You can amend your preferences whenever you want and unsubscribe from some of or all Liontrust emails.</span></p> 
-        <br />                    
-                                <p><span>Please note that you have been added to our database. Our <a style="color:#11b24d; font-weight: normal; text-decoration: none;" href="{SiteURL}/privacy-notice">Privacy Notice</a> explains the information we may hold about you, how we obtained it, why we have it and how we may use it. </span></p>
-                                <p><span>&nbsp;</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    </td>
-                </tr>
-                <!-- EMAIL SUBS : START -->
-                <tr>
-                    <td style="background-color: #ffffff;">
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                        <tbody>
-                            <tr>
-                                <td class="innerColumn" style="padding:0px  25px 0px; text-align: center;">
-                                <table align="left" border="0" cellpadding="0" cellspacing="0" style="text-align: left;">
+                                <td align="center" style="padding:0;margin:0;">
+                                <table class="es-content-body" align="center" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#000000;width:620px;">
                                     <tbody>
                                         <tr>
-                                            <!--[if mso]>
-                                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" style="height:30px;v-text-anchor:middle;width:200px;" arcsize="10%" stroke="f" fillcolor="#404040">
-                                                <w:anchorlock></w:anchorlock>
-                                                <center style="text-decoration: none; font-family: 'Source Sans Pro', sans-serif; font-size: 14px; line-height: 16px; display: block; white-space: nowrap; border:0; color:#ffffff">
-                                                 <a href="{EditPrefLink}" style="text-decoration: none; font-family: 'Source Sans Pro', sans-serif; font-size: 12px; line-height: 16px; display: block; white-space: nowrap; border:0; color:#ffffff">Edit Email Preferences</a>
-                                                </center>
-                                              </v:roundrect>
-                                              <![endif]--><!--[if !mso]-->
-                                            <td>
-                                            <table border="0" cellpadding="0" cellspacing="0" style="background: #404040; border-radius: 5px;">
+                                            <td align="left" style="padding:0;margin:0;padding-top:25px;padding-left:30px;">
+                                            <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
                                                 <tbody>
                                                     <tr>
-                                                        <td style="padding: 8px 14px;">
-                                                        <a href="{EditPrefLink}" style="text-decoration: none; font-family: 'Source Sans Pro', sans-serif; font-size: 12px; line-height: 16px; display: block; white-space: nowrap; border:0; color:#ffffff;">Edit Email Preferences</a>
+                                                        <td align="center" valign="top" style="padding:0;margin:0;width:590px;">
+                                                        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="left" style="padding:0;margin:0;padding-bottom:30px;font-size:0px;"><img alt="" src="-/media/03dccfd15a91485f8adbe7edc9551dc2.ashx?h=46&amp;w=142" class="adapt-img" style="width: 142px; height: 46px;" /></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="left" style="padding:0;margin:0;padding-bottom:10px;">
+                                                                    <p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:39px;color:#c0a961;font-size:26px;">Welcome to Liontrust</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="left" style="padding:0;margin:0;padding-bottom:40px;">
+                                                                    <p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#ffffff;font-size:14px;">Thank you for registering with our preferences centre.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
                                                         </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                             </td>
-        <td style="width:10px"></td>
-        <td>
-          <table border="0" cellpadding="0" cellspacing="0" style="background: #404040; border-radius: 5px;">
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table cellpadding="0" cellspacing="0" class="es-content" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;">
+                        <tbody>
+                            <tr>
+                                <td align="center" style="padding:0;margin:0;">
+                                <table class="es-content-body" align="center" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;width:620px;">
+                                    <tbody>
+                                        <tr>
+                                            <td align="left" style="margin:0;padding-bottom:10px;padding-top:20px;padding-left:30px;padding-right:30px;">
+                                            <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
                                                 <tbody>
                                                     <tr>
-          <td style="padding: 8px 14px">
-                                                        <a href="{FundDashboardLink}" style="text-decoration: none; font-family: 'Source Sans Pro', sans-serif; font-size: 12px; line-height: 16px; display: block; white-space: nowrap; border:0; color:#ffffff;">Fund Dashboard</a>
+                                                        <td align="center" valign="top" style="padding:0;margin:0;width:560px;">
+                                                        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="left" style="padding:0;margin:0;">
+                                                                    <p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#414855;font-size:14px;"><span style="font-size: 16px;">Dear {FullName},</span><br />
+                                                                    <br />
+                                                                    Thank you for registering with the Liontrust email preference centre. We send out regular views, insights, commentaries, factsheets and updates from our fund management teams. Here is a link for you to access the preference centre and tailor the emails you receive from us. You can amend your preferences whenever you want and unsubscribe from some of or all Liontrust emails.<br />
+                                                                    <br />
+                                                                    Please note that you have been added to our database. Our <a style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:underline;color:#10a047;font-size:14px;text-decoration: none;" href="{SiteURL}/privacy-notice">Privacy Notice</a> explains the information we may hold about you, how we obtained it, why we have it and how we may use it.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
                                                         </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
-        </td>
-                                            <!--[endif]-->
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" style="padding:0;margin:0;padding-top:10px;padding-left:30px;padding-right:30px;">
+                                            <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="es-m-p20b" align="left" style="padding:0;margin:0;width:560px;">
+                                                        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="left" style="padding: 0px 0px 10px; margin: 0px; background-color: #ffffff;">
+                                                                    <!--[if mso]><a href="https://liontrust" target="_blank" hidden>
+        	<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" esdevVmlButton href="https://liontrust" 
+                        style="height:33px; v-text-anchor:middle; width:177px" arcsize="15%" strokecolor="#10a047" strokeweight="1px" fillcolor="#ffffff">
+        		<w:anchorlock></w:anchorlock>
+        		<center style='color:#10a047; font-family:arial, "helvetica neue", helvetica, sans-serif; font-size:10px; font-weight:400; line-height:10px;  mso-text-raise:1px'>UPDATE PREFERENCES</center>
+        	</v:roundrect></a>
+        <![endif]-->
+                                                                    <!--[if !mso]><!-- --><span class="msohide es-button-border" style="border: 1px solid #10a047; background: #ffffff; display: inline-block; border-radius: 5px; width: auto;"><a rel="noopener noreferrer" rel="noopener noreferrer" href="{EditPrefLink}" class="es-button" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#10a047;font-size:11px;border-style:solid;border-color:#ffffff;border-width:10px 20px 10px 20px;display:inline-block;background:#ffffff;border-radius:5px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:normal;font-style:normal;line-height:13px;width:auto;text-align:center;">UPDATE PREFERENCES</a></span>
+                                                                    <!--<![endif]--></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" style="padding:0;margin:0;padding-top:10px;padding-left:30px;padding-right:30px;">
+                                            <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td align="center" valign="top" style="padding:0;margin:0;width:560px;">
+                                                        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="left" style="padding:0;margin:0;">
+                                                                    <p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#414855;font-size:14px;">You may wish to bookmark you preferences link as you will need to use this each time you wish to access your preference centre.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
                                 </td>
-                                <!--[endif]-->
                             </tr>
                         </tbody>
                     </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="innerColumn" style="padding: 0px 25px; background-color: #ffffff;">
-                    <table border="0" cellpadding="0" cellspacing="0" style="border-bottom:1px solid #bfbfbf;" width="100%">
+                    <table cellpadding="0" cellspacing="0" class="es-content" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;">
                         <tbody>
                             <tr>
-                                <td>&nbsp;</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    </td>
-                </tr>
-                <!-- CONTENT AREA : END --><!-- SOCIAL : START -->
-                <tr>
-                    <td style="background-color: #ffffff;">
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                        <tbody>
-                            <tr>
-                                <td class="innerColumn" style="padding:5px  25px 20px; text-align: center;">
-                                <table align="left" style="text-align: left;" width="100%">
+                                <td align="center" style="padding:0;margin:0;">
+                                <table class="es-content-body" align="center" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;width:620px;">
                                     <tbody>
                                         <tr>
-                                            <td style="padding:0 0 15px 0;font-family: 'Source Sans Pro', sans-serif; font-size: 14px; line-height: 18px; color: #000000; text-align: left; font-weight:bold;"><br />
-                                            Follow us and stay up to date</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <table align="center" style="text-align: center;" width="100%">
-                                    <tbody>
-                                        <tr>
-                                            <td style="text-align: center; width: 20%;" valign="top"><a href="https://www.facebook.com/liontrustheroes/" style="font-family: 'Source Sans Pro', sans-serif; font-size: 12px; line-height: 13px; color: #11b24d; text-align: center; font-weight:normal; text-decoration: none; display: block;"><img alt="" height="26" src="http://www2.liontrust.co.uk/l/63682/2018-04-30/chjyvc/63682/139592/fb.png" style="width: 26px; height: 26px; border-width: 0px; border-style: solid;" width="26" /><br />
-                                            /LiontrustHeroes</a></td>
-                                            <td style="text-align: center; width: 20%;" valign="top"><a href="https://www.linkedin.com/company/93186/" style="font-family: 'Source Sans Pro', sans-serif; font-size: 12px; line-height: 13px; color: #11b24d; text-align: center; font-weight:normal; text-decoration: none; display: block;"><img alt="" height="26" src="http://www2.liontrust.co.uk/l/63682/2018-04-30/chjyvk/63682/139596/in.png" style="width: 26px; height: 26px; border-width: 0px; border-style: solid;" width="26" /><br />
-                                            Liontrust</a></td>
-                                            <td style="text-align: center; width: 20%;" valign="top"><a href="https://twitter.com/liontrustheroes" style="font-family: 'Source Sans Pro', sans-serif; font-size: 12px; line-height: 13px; color: #11b24d; text-align: center; font-weight:normal; text-decoration: none; display: block;"><img alt="" height="26" src="http://www2.liontrust.co.uk/l/63682/2018-04-30/chjyw5/63682/139616/tw.png" style="width: 26px; height: 26px; border-width: 0px; border-style: solid;" width="26" /><br />
-                                            @LiontrustHeroes</a></td>
-                                            <td style="text-align: center; width: 20%;" valign="top"><a href="https://twitter.com/LiontrustViews" style="font-family: 'Source Sans Pro', sans-serif; font-size: 12px; line-height: 13px; color: #11b24d; text-align: center; font-weight:normal; text-decoration: none; display: block;"><img alt="" height="26" src="http://www2.liontrust.co.uk/l/63682/2018-04-30/chjyw5/63682/139616/tw.png" style="width: 26px; height: 26px; border-width: 0px; border-style: solid;" width="26" /><br />
-                                            @LiontrustViews</a></td>
-                                            <td style="text-align: center; width: 20%;" valign="top"><a href="https://twitter.com/LiontrustFuture" style="font-family: 'Source Sans Pro', sans-serif; font-size: 12px; line-height: 13px; color: #11b24d; text-align: center; font-weight:normal; text-decoration: none; display: block;"><img alt="" height="26" src="http://www2.liontrust.co.uk/l/63682/2018-04-30/chjyw5/63682/139616/tw.png" style="width: 26px; height: 26px; border-width: 0px; border-style: solid;" width="26" /><br />
-                                            @LiontrustFuture</a></td>
+                                            <td align="left" style="padding:0;margin:0;padding-top:20px;padding-left:30px;padding-right:30px;">
+                                            <!--[if mso]><table style="width:560px" cellpadding="0" cellspacing="0"><tr><td style="width:272px" valign="top"><![endif]-->
+                                            <table cellpadding="0" cellspacing="0" class="es-left" align="left" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="es-m-p20b" align="left" style="padding:0;margin:0;width:272px;">
+                                                        <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#f7f9fc;" role="presentation">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="center" style="padding:0;margin:0;font-size:0px;"><img alt="" src="-/media/89a8ad5b79614b0e81454c9263397fbc.ashx?h=153&amp;w=272" class="adapt-img" style="width: 272px; height: 153px;" /></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="left" style="margin:0;padding-bottom:5px;padding-top:10px;padding-left:10px;padding-right:10px;">
+                                                                    <p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:30px;color:#c0a961;font-size:20px;">Your Fund Dashboard</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="left" style="padding:0;margin:0;padding-left:10px;padding-right:10px;padding-bottom:30px;">
+                                                                    <p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#414855;font-size:14px;">User your personal fund dashboard to access the latest performance data for funds you have preferences for, along with gaining the latest insights from the management teams.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="left" style="padding:0;margin:0;padding-left:10px;padding-right:10px;padding-bottom:15px;">
+                                                                    <p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:17px;color:#2cb543;font-size:11px;"><strong><a rel="noopener noreferrer" rel="noopener noreferrer" target="_blank" href="{SiteURL}/contact-us" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:none;color:#2CB543;font-size:11px;">VIEW YOUR DASHBOARD&nbsp;➝</a></strong></p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" style="padding:0;margin:0;font-size:0px;"><img alt="" src="-/media/c49ff820c52043b4a935cd79e7d6b8bd.ashx?h=25&amp;w=272" class="adapt-img" style="width: 272px; height: 25px;" /></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--[if mso]></td><td style="width:16px"></td><td style="width:272px" valign="top"><![endif]-->
+                                            <table cellpadding="0" cellspacing="0" class="es-right" align="right" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:right;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td align="left" style="padding:0;margin:0;width:272px;">
+                                                        <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#f7f9fc;" role="presentation">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="center" style="padding:0;margin:0;font-size:0px;"><img alt="" src="-/media/f5065bff29834130ba330f137701e9f5.ashx?h=153&amp;w=272" class="adapt-img" style="width: 272px; height: 153px;" /></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="left" style="margin:0;padding-bottom:5px;padding-top:10px;padding-left:10px;padding-right:10px;">
+                                                                    <p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:30px;color:#c0a961;font-size:20px;">Latest Webinars</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="left" style="padding:0;margin:0;padding-left:10px;padding-right:10px;padding-bottom:30px;">
+                                                                    <p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#414855;font-size:14px;">User your personal fund dashboard to access the latest performance data for funds you have preferences for, along with gaining the latest insights from the management teams.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="left" style="padding:0;margin:0;padding-left:10px;padding-right:10px;padding-bottom:15px;">
+                                                                    <p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:17px;color:#2cb543;font-size:11px;"><strong><a rel="noopener noreferrer" rel="noopener noreferrer" target="_blank" href="{SiteURL}/contact-us" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:none;color:#2CB543;font-size:11px;">VIEW YOUR DASHBOARD&nbsp;➝</a></strong></p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" style="padding:0;margin:0;font-size:0px;"><img alt="" src="-/media/cae62f15035147ce923f00bea37966e4.ashx?h=25&amp;w=272" class="adapt-img" style="width: 272px; height: 25px;" /></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--[if mso]></td></tr></table><![endif]--></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -314,41 +282,313 @@ Languages:
                             </tr>
                         </tbody>
                     </table>
-                    </td>
-                </tr>
-                <!-- SOCIAL : END -->
-                <tr>
-                    <td class="innerColumn" style="padding: 0px 25px; background-color: #ffffff;">
-                    <table border="0" cellpadding="0" cellspacing="0" style="border-bottom:1px solid #bfbfbf;" width="100%">
+                    <table cellpadding="0" cellspacing="0" class="es-content" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;border:0;">
                         <tbody>
                             <tr>
-                                <td>&nbsp;</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    </td>
-                </tr>
-                <!-- EMAIL SUBS : END -->
-                <tr>
-                    <td class="innerColumn" style="padding: 0px 25px; background-color: #ffffff;">
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                        <tbody>
-                            <tr>
-                                <td style="padding: 17px 0 17px 0;" valign="middle">
-                                <table align="left" border="0" cellpadding="0" cellspacing="0" style="text-align: left;">
+                                <td align="center" style="padding:0;margin:0;border:0;">
+                                <table class="es-content-body" align="center" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;width:620px;border: 0;">
                                     <tbody>
                                         <tr>
-                                            <td style="font-family: 'Source Sans Pro', sans-serif; font-size: 12px; line-height: 22px; color: #000000; text-align: left; padding:15px 0;">2 Savoy Court, London, WC2R 0EZ, United Kingdom</td>
+                                            <td align="left" style="padding:0;margin:0;padding-bottom:30px;padding-left:30px;padding-right:30px;border: 0;">
+                                            <!--[if mso]><table style="width:560px" cellpadding="0" cellspacing="0"><tr><td style="width:276px" valign="top"><![endif]-->
+                                            <table cellpadding="0" cellspacing="0" class="es-left" align="left" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left;border:0;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td align="left" style="padding:0;margin:0;width:276px;border:0;">
+                                                        <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;border:0;border-bottom:1px solid #000000;background-color:#000000;" role="presentation">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="left" style="margin:0;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:15px;border:0;">
+                                                                    <p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:30px;color:#c0a961;font-size:20px;">Video Gateways</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="left" style="padding:0;margin:0;padding-bottom:10px;padding-right:10px;padding-left:15px;border:0;">
+                                                                    <p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#ffffff;font-size:14px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="left" style="padding:0;margin:0;padding-right:10px;padding-bottom:15px;padding-left:15px;border:0;">
+                                                                    <p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:17px;color:#10a047;font-size:11px;"><a rel="noopener noreferrer" rel="noopener noreferrer" target="_blank" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:none;color:#2CB543;font-size:11px;" href="{SiteURL}/contact-us">VIEW THE VIDEOS&nbsp;➝</a></p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--[if mso]></td><td style="width:0px"></td><td style="width:284px" valign="top"><![endif]-->
+                                            <table cellpadding="0" cellspacing="0" class="es-right" align="right" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:right;border:0;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td align="left" style="padding:0;margin:0;width:284px;border:0;">
+                                                        <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#000000;border:0;" role="presentation">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="center" style="padding:0;margin:0;font-size:0px;border:0;"><a rel="noopener noreferrer" rel="noopener noreferrer" target="_blank" href="{SiteURL}/contact-us" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:underline;color:#2CB543;font-size:14px;"><img alt="" class="adapt-img" src="-/media/e8e04a6d979344039d7731d9c2d03cff.ashx?w=284" style="display: block; border: 0px; outline: none; text-decoration: none; width: 284px;" /></a></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--[if mso]></td></tr></table><![endif]--></td>
                                         </tr>
                                     </tbody>
                                 </table>
-                                <table align="right" border="0" cellpadding="0" cellspacing="0" style="text-align: right;">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table cellpadding="0" cellspacing="0" class="es-footer" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;background-color:transparent;background-repeat:repeat;background-position:center top;">
+                        <tbody>
+                            <tr>
+                                <td align="center" style="padding:0;margin:0;">
+                                <table class="es-footer-body" align="center" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#20242b;width:620px;border-bottom:3px solid #10a047;">
                                     <tbody>
                                         <tr>
-                                            <td>
-                                            <a href="{SiteURL}" style="border: 0;">
-                                            <img alt="Liontrust" src="http://www2.liontrust.co.uk/l/63682/2018-04-30/chjyvw/63682/139608/logo.png" style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 20px; color: #000000; display: inline; border-width: 0px; border-style: solid;" />
-                                            </a>
+                                            <td align="left" style="padding:0;margin:0;padding-top:20px;padding-left:25px;padding-right:25px;background-color:#20242b;">
+                                            <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td align="center" valign="top" style="padding:0;margin:0;width:570px;">
+                                                        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="left" style="padding:0;margin:0;font-size:0px;"><a rel="noopener noreferrer" rel="noopener noreferrer" target="_blank" href="https://www.liontrust.co.uk/" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:underline;color:#FFFFFF;font-size:14px;"><img alt="" src="-/media/f2b7c6e3bd394ff289b2bdb043d1e889.ashx?h=46&amp;w=146" class="adapt-img" style="width: 146px; height: 46px;" /></a></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" style="padding:0;margin:0;padding-top:20px;padding-left:25px;padding-right:25px;background-color:#20242b;">
+                                            <!--[if mso]><table style="width:570px" cellpadding="0" cellspacing="0"><tr><td style="width:196px" valign="top"><![endif]-->
+                                            <table cellpadding="0" cellspacing="0" class="es-left" align="left" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="es-m-p0r es-m-p20b" align="center" style="padding:0;margin:0;width:176px;">
+                                                        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="left" style="padding:0;margin:0;">
+                                                                    <p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;color:#ffffff;font-size:16px;">2 Savoy Court</p>
+                                                                    <p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;color:#ffffff;font-size:16px;"> London</p>
+                                                                    <p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;color:#ffffff;font-size:16px;"> WC2R 0EZ</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        </td>
+                                                        <td class="es-hidden" style="padding:0;margin:0;width:20px;"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--[if mso]></td><td style="width:176px" valign="top"><![endif]-->
+                                            <table cellpadding="0" cellspacing="0" class="es-left" align="left" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="es-m-p20b" align="center" style="padding:0;margin:0;width:176px;">
+                                                        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="left" style="padding:0;margin:0;padding-bottom:5px;">
+                                                                    <p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#ffffff;font-size:14px;"><strong><a rel="noopener noreferrer" rel="noopener noreferrer" target="_blank" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:none;color:#ffffff;font-size:14px;" href="{SiteURL}/contact-us">Who we are&nbsp;<span style="color: #10a047;">➝</span></a></strong></p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="left" style="padding:0;margin:0;padding-bottom:5px;">
+                                                                    <p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#ffffff;font-size:14px;"><strong><a rel="noopener noreferrer" rel="noopener noreferrer" target="_blank" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:none;color:#ffffff;font-size:14px;" href="{SiteURL}/contact-us">What we offer&nbsp;<span style="color: #10a047;">➝</span></a></strong></p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--[if mso]></td><td style="width:20px"></td><td style="width:178px" valign="top"><![endif]-->
+                                            <table cellpadding="0" cellspacing="0" class="es-right" align="right" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:right;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td align="center" style="padding:0;margin:0;width:178px;">
+                                                        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="left" style="padding:0;margin:0;padding-bottom:5px;">
+                                                                    <p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#ffffff;font-size:14px;"><strong><a rel="noopener noreferrer" rel="noopener noreferrer" target="_blank" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:none;color:#ffffff;font-size:14px;" href="{SiteURL}/contact-us">What we think&nbsp;<span style="color: #10a047;">➝</span></a></strong></p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="left" style="padding:0;margin:0;padding-bottom:5px;">
+                                                                    <p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#ffffff;font-size:14px;"><strong><a rel="noopener noreferrer" rel="noopener noreferrer" target="_blank" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:none;color:#ffffff;font-size:14px;" href="{SiteURL}/contact-us">Benefits of investing&nbsp;<span style="color: #10a047;">➝</span></a></strong></p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--[if mso]></td></tr></table><![endif]--></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" style="margin:0;padding-top:20px;padding-bottom:20px;padding-left:25px;padding-right:25px;background-color:#20242b;">
+                                            <!--[if mso]><table style="width:570px" cellpadding="0" cellspacing="0"><tr><td style="width:55px" valign="top"><![endif]-->
+                                            <table cellpadding="0" cellspacing="0" class="es-left" align="left" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="es-m-p0r es-m-p20b" align="center" style="padding:0;margin:0;width:30px;">
+                                                        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="left" style="padding:0;margin:0;font-size:0px;"><a rel="noopener noreferrer" rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/company/liontrust-asset-management" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:underline;color:#FFFFFF;font-size:14px;"><img alt="" src="-/media/109a420488f948adb280af3844c1804c.ashx?h=16&amp;w=15" class="adapt-img" style="width: 15px; height: 16px;" /></a></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        </td>
+                                                        <td class="es-hidden" style="padding:0;margin:0;width:25px;"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--[if mso]></td><td style="width:55px" valign="top"><![endif]-->
+                                            <table cellpadding="0" cellspacing="0" class="es-left" align="left" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="es-m-p20b" align="center" style="padding:0;margin:0;width:30px;">
+                                                        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="left" style="padding:0;margin:0;font-size:0px;"><a rel="noopener noreferrer" rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/liontrustheroes" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:underline;color:#FFFFFF;font-size:14px;"><img alt="" src="-/media/e165c79e899d44e98380decde01b674c.ashx?h=15&amp;w=15" class="adapt-img" style="width: 15px; height: 15px;" /></a></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        </td>
+                                                        <td class="es-hidden" style="padding:0;margin:0;width:25px;"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--[if mso]></td><td style="width:145px" valign="top"><![endif]-->
+                                            <table cellpadding="0" cellspacing="0" class="es-left" align="left" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="es-m-p20b" align="center" style="padding:0;margin:0;width:120px;">
+                                                        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="center" style="padding:0;margin:0;font-size:0px;"><a href="https://twitter.com/Liontrustviews"><img alt="" src="-/media/512703e32ede4593b7953510a95125b8.ashx?h=15&amp;w=118" class="adapt-img" style="width: 118px; height: 15px;" /></a></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        </td>
+                                                        <td class="es-hidden" style="padding:0;margin:0;width:25px;"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--[if mso]></td><td style="width:120px" valign="top"><![endif]-->
+                                            <table cellpadding="0" cellspacing="0" class="es-left" align="left" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td align="center" class="es-m-p20b" style="padding:0;margin:0;width:120px;">
+                                                        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="left" style="padding:0;margin:0;font-size:0px;"><a href="https://twitter.com/Liontrustviews"><img alt="" src="-/media/8908bfc68448459d80694af9419c99c6.ashx?h=15&amp;w=119" class="adapt-img" style="width: 119px; height: 15px;" /></a></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--[if mso]></td><td style="width:25px"></td><td style="width:170px" valign="top"><![endif]-->
+                                            <table cellpadding="0" cellspacing="0" class="es-right" align="right" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:right;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td align="left" style="padding:0;margin:0;width:170px;">
+                                                        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="left" style="padding:0;margin:0;font-size:0px;"><a href="https://twitter.com/LiontrustHeroes"><img alt="" src="-/media/fe9d64f33c2249a6b10e9c96651c7fd7.ashx?h=15&amp;w=123" class="adapt-img" style="width: 123px; height: 15px;" /></a></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--[if mso]></td></tr></table><![endif]--></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table cellpadding="0" cellspacing="0" class="es-footer" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;background-color:transparent;background-repeat:repeat;background-position:center top;">
+                        <tbody>
+                            <tr>
+                                <td align="center" style="padding:0;margin:0;">
+                                <table class="es-footer-body" align="center" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;width:620px;">
+                                    <tbody>
+                                        <tr>
+                                            <td align="left" style="margin:0;padding-top:5px;padding-bottom:5px;padding-left:20px;padding-right:20px;background-color:#e9edf0;">
+                                            <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td align="center" valign="top" style="padding:0;margin:0;width:580px;">
+                                                        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="left" style="padding:0;margin:0;">
+                                                                    <p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;font-size:14px;">Add to your email preferences or unsubscribe from this mailing list <a rel="noopener noreferrer" rel="noopener noreferrer" target="_blank" href="{EditPrefLink}" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:underline;color:#10a047;font-size:14px;">here</a></p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table cellpadding="0" cellspacing="0" class="es-footer" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;background-color:transparent;background-repeat:repeat;background-position:center top;">
+                        <tbody>
+                            <tr>
+                                <td align="center" style="padding:0;margin:0;">
+                                <table class="es-footer-body" align="center" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;width:620px;">
+                                    <tbody>
+                                        <tr>
+                                            <td align="left" style="padding:20px;margin:0;">
+                                            <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td align="center" valign="top" style="padding:0;margin:0;width:580px;">
+                                                        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="left" style="padding:0;margin:0;">
+                                                                    <p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;color:#414855;font-size:12px;"><span style="color: #202124;">Issued by Liontrust Fund Partners LLP (2 Savoy Court, London WC2R 0EZ), authorised and regulated in the UK by the Financial Conduct Authority (FRN 518165) to undertake regulated investment business. Past performance is not a guide to future performance. This email contains information intended only for the person to whom it is addressed or presented (Investment Professionals only), and is intended for evaluation purposes, with no licence to use the content or materials within. It must not be distributed to, or relied upon by, Retail Investors. It should not be copied, forwarded, reproduced, divulged or distributed, in whole or in part, without the express written consent of Liontrust. Any decision to invest should be always based on the final Prospectus and Key Investor Information Documents (KIIDs) and you should take independent legal advice if necessary. These documents contain important information which should be read before investing in any fund. The information provided is generic in nature and is available to any investment firm wishing to receive it. Copyright &copy; 2018. All rights reserved.</span></p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -359,50 +599,9 @@ Languages:
                     </table>
                     </td>
                 </tr>
-                <tr>
-                    <td style="background-color: #262626;">
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                        <tbody>
-                            <tr>
-                                <td style="padding: 17px 25px; text-align: left;">
-                                <table align="left" style="text-align: left;">
-                                    <tbody>
-                                        <tr>
-                                            <td style="font-family: 'Source Sans Pro', sans-serif; font-size: 13px; line-height: 16px; color: #ffffff; text-align: left; font-weight: normal;"><a href="{SiteURL}/who-we-are" style="font-family: 'Source Sans Pro', sans-serif; font-size: 13px; line-height: 16px; color: #ffffff; text-align: left; font-weight:bold; text-decoration: none;">Who we are </a><span style="line-height: 16px; margin-left: 8px; margin-right: 8px; font-family: 'Source Sans Pro', sans-serif; font-size: 13px; color: #ffffff;">&gt;</span> <a href="{SiteURL}/what-we-offer" style="font-family: 'Source Sans Pro', sans-serif; font-size: 13px; line-height: 16px; color: #ffffff; text-align: left; font-weight:bold; text-decoration: none; white-space: nowrap;">What we offer </a> <span style="line-height: 16px; margin-left: 8px; margin-right: 8px; font-family: 'Source Sans Pro', sans-serif; font-size: 13px; color: #ffffff;">&gt;</span> <a href="{SiteURL}/what-we-think" style="font-family: 'Source Sans Pro', sans-serif; font-size: 13px; line-height: 16px; color: #ffffff; text-align: left; font-weight:bold; text-decoration: none; white-space: nowrap;">What we think </a> <span style="line-height: 16px; margin-left: 8px; margin-right: 8px; font-family: 'Source Sans Pro', sans-serif; font-size: 13px; color: #ffffff;">&gt;</span> <a href="{SiteURL}/benefits-of-investing" style="font-family: 'Source Sans Pro', sans-serif; font-size: 13px; line-height: 16px; color: #ffffff; text-align: left; font-weight:bold; text-decoration: none; white-space: nowrap;">Benefits of investing </a> <span style="line-height: 16px; margin-left: 8px; margin-right: 8px; font-family: 'Source Sans Pro', sans-serif; font-size: 13px; color: #ffffff;">&gt;</span> <a href="{SiteURL}/how-to-invest" style="font-family: 'Source Sans Pro', sans-serif; font-size: 13px; line-height: 16px; color: #ffffff; text-align: left; font-weight:bold; text-decoration: none; white-space: nowrap;">How to invest </a></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    </td>
-                </tr>
-                <!-- BREADCRUMBS : END --><!-- FOOTER : BEGIN -->
-                <tr>
-                    <td style="background-color: #e5e5e5;">
-                    <div class="hidden">
-                    <p><span style="overflow: hidden; float: left; display: none; line-height: 0px;">%%unsubscribe%%</span></p>
-                    </div>
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                        <tbody>
-                            <tr>
-                                <td style="padding: 0px 25px 25px 25px; font-family: 'Source Sans Pro', sans-serif; font-size: 12px; line-height: 16px; color: #000000; text-align: left; font-weight:normal;">
-                                <p style="margin: 0;">&nbsp;</p>
-                                <p style="margin: 0;">Issued by Liontrust Fund Partners LLP (2 Savoy Court, London WC2R 0EZ), authorised and regulated in the UK by the Financial Conduct Authority (FRN 518165) to undertake regulated investment business. Past performance is not a guide to future performance. This email contains information intended only for the person to whom it is addressed or presented (Investment Professionals only), and is intended for evaluation purposes, with no licence to use the content or materials within. It must not be distributed to, or relied upon by, Retail Investors. It should not be copied, forwarded, reproduced, divulged or distributed, in whole or in part, without the express written consent of Liontrust. Any decision to invest should be always based on the final Prospectus and Key Investor Information Documents (KIIDs) and you should take independent legal advice if necessary. These documents contain important information which should be read before investing in any fund. The information provided is generic in nature and is available to any investment firm wishing to receive it. Copyright &copy; 2018. All rights reserved.</p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    </td>
-                </tr>
-                <!-- FOOTER : END --><!--[if mso]>
-                    </td>
-                    </tr>
-                    </table>
-                    <![endif]--><!-- // END BODY -->
             </tbody>
         </table>
+        </div>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20181018T194939Z

@@ -12,6 +12,8 @@
         private readonly IApplicationCacheRepository _applicationCacheRepository;
         private const string SFContactCountryListCacheKey = "salesforce-contact-country-list";
         private const string SFLeadCountryListCacheKey = "salesforce-lead-country-list";
+        private const string RelativeImagePath = " src=\"/-/media/";
+        private const string ImageSrc = " src=\"http://{0}/-/media/";
 
         public EmailPreferencesRepository(IApplicationCacheRepository applicationCacheRepository)
         {
@@ -46,6 +48,7 @@
                 emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.EditPrefLinkToken, savedUserEmailDetails.EditEmailPrefLink);
                 emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.FundDashboardLinkToken, savedUserEmailDetails.FundDashboardLink);
                 emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.SiteURLToken, string.Format("https://{0}", HttpContext.Current.Request.Url.Host));
+                emailMessageBody = emailMessageBody.Replace(RelativeImagePath, string.Format(ImageSrc, HttpContext.Current.Request.Url.Host));
 
                 var returnObj = new RegisterdUserWithEmailDetails
                 {
@@ -80,6 +83,7 @@
                 emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.EditPrefLinkToken, savedUserEmailDetails.EditEmailPrefLink);
                 emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.FundDashboardLinkToken, savedUserEmailDetails.FundDashboardLink);
                 emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.SiteURLToken, string.Format("https://{0}", HttpContext.Current.Request.Url.Host));
+                emailMessageBody = emailMessageBody.Replace(RelativeImagePath, string.Format(ImageSrc, HttpContext.Current.Request.Url.Host));
 
                 var returnObj = new RegisterdUserWithEmailDetails
                 {

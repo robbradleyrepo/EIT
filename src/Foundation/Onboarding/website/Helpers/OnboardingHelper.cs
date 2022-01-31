@@ -288,7 +288,23 @@
             return true;
         }
 
-        public static void AddPointsFromProfileCard(IOnboardingConfiguration configuration, IProfileCard profileCard)
+        public static bool HasIdentifier(string source, string identifier)
+        {
+            if (Tracker.Current == null)
+            {
+                return false;
+            }
+
+            // Contact already has the identifier
+            if (Tracker.Current.Session.Contact.Identifiers.Any(x => x.Source == source && x.Identifier == identifier))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+            public static void AddPointsFromProfileCard(IOnboardingConfiguration configuration, IProfileCard profileCard)
         {
             var scores = new Dictionary<string, double>();
 
