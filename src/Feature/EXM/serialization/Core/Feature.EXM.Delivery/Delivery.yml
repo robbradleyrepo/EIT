@@ -1,0 +1,32 @@
+﻿---
+ID: "78a651f9-ee98-4dc2-8335-42c2dd95bdcd"
+Parent: "81089ef5-e6cb-4b88-85a8-421d9c4e4836"
+Template: "f62b4cd7-754c-4461-810f-2b6bd2c92a0d"
+Path: /sitecore/client/Applications/ECM/Pages/Messages/Regular/PageSettings/LoadOnDemandTabs/Delivery
+DB: core
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 500
+- ID: "c8503ef2-0fd2-43c2-be3e-c08cba915cc9"
+  Hint: IsHidden
+  Type: Checkbox
+  Value: 0
+- ID: "deab3795-056f-4421-adf0-758844461b72"
+  Hint: Placeholder Name
+  Value: Delivery
+- ID: "dec8d2d5-e3cf-48b6-a653-8e69e2716641"
+  Hint: __Security
+  Value: |
+    ar|LionTrust\Project LionTrust EXM Limited Users|pe|-item:read|
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20141002T130532Z
+    - ID: "aea872fb-aa91-4d1a-b877-3ca6fbbb4fd4"
+      Hint: Header
+      Value: Delivery
