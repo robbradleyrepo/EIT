@@ -15,20 +15,27 @@
     &__head
         display: flex
         @extend .h2
-        margin-bottom: 20px
+        margin-bottom: 36px
         text-align: center
         justify-content: center
         font-size: 42px
         letter-spacing: 0
         line-height: 48px
+        order: 1
         @include breakpoint(tablet, down)
             font-size: 32px
             letter-spacing: 0.32px
             line-height: 42px
+            margin-bottom: 0
     &__body
         display: flex
-        margin-bottom: 20px
-        justify-content: center
+        margin-bottom: 0
+        justify-content: space-between
+        order: 3
+        margin-top: 53px 
+        @include breakpoint(tablet, down)
+            order: 2
+            margin: 20px 0 6px 0
 
     &__slide
         display: flex
@@ -39,7 +46,7 @@
         padding: 0
         justify-content: flex-start
         @include breakpoint(desktop, up)
-            padding: 20px
+            padding: 0
 
     &__img
         width: 50px
@@ -65,12 +72,18 @@
         display: flex
         flex-direction: column
         justify-content: center
+        order: 3
+        margin-top: 0px
 
         @include breakpoint(tablet, up)
             flex-direction: row
+            order: 2
+            margin-top: 0px
 
         > a
-            margin-bottom: 10px
+            margin-bottom: 0
+            @include breakpoint(tablet, down)
+                margin: 20px 0 0 0
     .btn
         @include breakpoint(desktop, up)
             padding: 0 1rem
