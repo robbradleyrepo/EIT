@@ -102,6 +102,9 @@ namespace LionTrust.Foundation.Legacy
             public const string TargetBenchmarkYieldFieldId = "{2C52314C-F97D-4D99-853E-1497980389C1}";
             public const string GraphStartDate_FieldId = "{F1D242FD-2CE7-4D6F-958B-C1147A73F615}";
             public const string GraphTitle_FieldId = "{98FF037C-6450-43E9-AE72-B3FDDCC449FB}";
+            public const string HidePerformanceChart_FieldId = "{B39AF1CD-8C71-4989-BEF8-7C0441DD570A}";
+            public const string HideDiscretePerformanceTable_FieldId = "{BA664318-D29C-4166-A901-FAA04F7D3AA6}";
+            public const string HideCumulativePerformanceTable_FieldId = "{382CDDED-7732-4690-AC7A-8DBA5C503403}";
         }
         
         public static class Fund 
@@ -150,11 +153,7 @@ namespace LionTrust.Foundation.Legacy
             public const string ExcludeInSearchResults_FieldName = "LegacyPresentationBase_ExcludeInSearchResults";
             public const string ExcludeInSearchResults_FieldId = "{C7D0C7F7-B27C-4F96-B813-32BB19174B6A}";
 
-            public const string FundReference_FieldId = "{CCE4E679-7E94-450D-8CC1-691BDF17CA78}";
-
-            public const string HidePerformanceChart_FieldId = "{B39AF1CD-8C71-4989-BEF8-7C0441DD570A}";
-            public const string HideDiscretePerformanceTable_FieldId = "{BA664318-D29C-4166-A901-FAA04F7D3AA6}";
-            public const string HideCumulativePerformanceTable_FieldId = "{382CDDED-7732-4690-AC7A-8DBA5C503403}";
+            public const string FundReference_FieldId = "{CCE4E679-7E94-450D-8CC1-691BDF17CA78}";            
         }
 
         public static class FundOverviewData

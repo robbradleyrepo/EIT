@@ -20,5 +20,10 @@
 
             public const string ContactUsPageTemplateId = "{152E985E-1632-4C9B-AB1B-38FD0DB4DCAA}";
         }
+
+        public static class Renderings
+        {
+            public const string FundCentreRenderingId = "{FCEF6713-BC3D-47F1-9178-7526D6453DBC}";
+        }
     }
 }

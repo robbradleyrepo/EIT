@@ -205,3 +205,48 @@ body
 
         +breakpoint(tablet, down)
             justify-content: space-between
+    .btn-link
+        align-items: center
+        color: $primary
+        letter-spacing: 2.4px
+        font-size: 12px
+        text-transform: uppercase
+        cursor: pointer
+        overflow: unset
+        @include breakpoint(desktop, up)
+            display: inline-flex
+            align-items: center
+            position: relative
+            z-index: auto
+            bottom: auto
+        > i
+            width: 16px
+            height: 13px
+            margin-left: 5px
+            transition: transform .5s ease-out
+
+        &:hover
+            > i
+                opacity: 0
+        &::after
+            content: "\e901"
+            font-family: icomoon!important
+            speak: never
+            font-style: normal
+            font-weight: 400
+            font-variant: normal
+            text-transform: none
+            line-height: 1
+            -webkit-font-smoothing: antialiased
+            -moz-osx-font-smoothing: grayscale
+            position: absolute
+            font-size: 12px
+            right: 10px
+            opacity: 0
+        &:hover
+            &:after
+                transition: all 0.50s ease-in-out
+                right: 0
+                opacity: 1
+    .link-styles 
+        @extend .btn-link

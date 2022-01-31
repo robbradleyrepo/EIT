@@ -24,24 +24,24 @@
                                     <span class="hero-author__name">
                                         @Model.AuthorName <i class="icon-follow"></i>
                                     </span>
-                                }
-                                <span class="hero-author__date">
-                                    @if (!Sitecore.Context.PageMode.IsExperienceEditor)
-                                    {
-                                        if (Model.ArticleData.Date.Equals(DateTime.MinValue))
+                                    <span class="hero-author__date">
+                                        @if (!Sitecore.Context.PageMode.IsExperienceEditor)
                                         {
-                                            @Model.ArticleData.CreatedDate.ToString("dd-MM-yy")
+                                            if (Model.ArticleData.Date.Equals(DateTime.MinValue))
+                                            {
+                                                @Model.ArticleData.CreatedDate.ToString("dd-MM-yy")
+                                            }
+                                            else
+                                            {
+                                                @Model.ArticleDate.Date.ToString("dd-MM-yy")
+                                            }
                                         }
                                         else
                                         {
-                                            @Model.ArticleDate.Date.ToString("dd-MM-yy")
+                                            @Html.Glass().Editable(m => m.ArticleData.Date, d => d.ArticleData.Date.ToString("dd-MM-yy"))
                                         }
-                                    }
-                                    else
-                                    {
-                                        @Html.Glass().Editable(m => m.ArticleData.Date, d => d.ArticleData.Date.ToString("dd-MM-yy"))
-                                    }
-                                </span>
+                                    </span>
+                                }
                             </div>
                         </div>
                         <div class="article-hero__content text-center">

@@ -3,7 +3,7 @@ import Chart from 'chart.js/dist/Chart.js'
 export default () => {
   const charts = document.getElementsByClassName("stucked-chart__item");
   if (charts) {
-    charts.forEach((chart) => {
+    Array.from(charts).forEach((chart) => {
       const ctx = chart.getContext("2d");
       const data = $(chart).data("chart");
       const { labels, datasets, yAxeConfig } = data;

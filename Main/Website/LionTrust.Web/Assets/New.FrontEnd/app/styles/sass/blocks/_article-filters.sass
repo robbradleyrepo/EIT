@@ -31,7 +31,13 @@ body
 
             +breakpoint(desktop, up)
                 order: 1
-                padding-top: 38px
+                padding: 0
+            > .container
+                > .row
+                    > div
+                        +breakpoint(desktop, up)
+                            padding-top: 21px
+                            padding-bottom: 9px
 
         &__body
             background: #F7F9FC
@@ -46,6 +52,10 @@ body
                 +breakpoint(desktop, up)
                     background: transparent
                     padding-bottom: 0
+            .button-sort
+                +breakpoint(desktop, up)
+                    padding: 0
+                    border: 0
 
         &__footer
             position: absolute
@@ -413,3 +423,5 @@ body
         align-items: flex-end
         flex-direction: row
         display: flex
+        .btn
+            height: auto

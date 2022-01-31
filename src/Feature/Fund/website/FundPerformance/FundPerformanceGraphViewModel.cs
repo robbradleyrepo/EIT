@@ -20,5 +20,7 @@
         public string StartDate { get; set; }
 
         public string GraphTitle { get; set; }
+
+        public string HidePerformanceMessage => Sitecore.Globalization.Translate.Text("HidePerformanceMessage");
     }
 }
