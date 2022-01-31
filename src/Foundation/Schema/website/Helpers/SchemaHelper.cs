@@ -16,7 +16,7 @@ namespace LionTrust.Foundation.Schema.Helpers
 
             var logoObj = new ImageObject() 
             {
-                Url = new Uri(organizationSchema.LogoUrl),
+                Url = new Uri(organizationSchema.LogoUrl ?? "about:blank"),
             };
 
             var geoCoordinates = new GeoCoordinates()
@@ -42,7 +42,7 @@ namespace LionTrust.Foundation.Schema.Helpers
             return new Organization
             {
                 Name = organizationSchema.Name,
-                Url = new Uri(organizationSchema.Url),
+                Url = new Uri(organizationSchema.Url ?? "about:blank"),
                 Logo = logoObj,
                 Description = organizationSchema.Description,
                 SameAs = organizationSchema.SameAs, 
@@ -101,7 +101,7 @@ namespace LionTrust.Foundation.Schema.Helpers
 
             var logoObj = new ImageObject()
             {
-                Url = new Uri(articleSchema.LogoUrl),
+                Url = new Uri(articleSchema.LogoUrl ?? "about:blank"),
             };
 
             return new Article
@@ -109,7 +109,7 @@ namespace LionTrust.Foundation.Schema.Helpers
                 Headline = articleSchema.Headline,
                 MainEntityOfPage = new WebPage()
                 {
-                    Id = new Uri(articleSchema.Url)
+                    Id = new Uri(articleSchema.Url ?? "about:blank")
                 },
                 Description = articleSchema.Description,
                 DatePublished = new DateTimeOffset(articleSchema.DatePublished),

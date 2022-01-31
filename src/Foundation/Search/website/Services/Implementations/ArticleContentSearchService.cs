@@ -134,7 +134,7 @@
             var results = _articleContentSearchRepository.GetArticleSearchResultItems(predicate, 0, 1);
             if (results != null && results.SearchResults != null)
             {
-                var resultItem = results.SearchResults.First();
+                var resultItem = results.SearchResults.FirstOrDefault();
                 if (resultItem != null)
                 {
                     content = resultItem.Document.ArticleContent;
