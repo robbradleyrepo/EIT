@@ -1,0 +1,28 @@
+﻿---
+ID: "b7dacf86-c65e-4433-9377-4620c720e09f"
+Parent: "625d3ecd-73b4-43c6-89ed-3c4cf618636a"
+Template: "84283122-5a14-45a1-b7bf-7f2799e08ead"
+Path: "/sitecore/content/LionTrustNew/Home/funds/MA Passive Dynamic Fund/_Local/BC028 - Class selector"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{7BE48538-C2C8-4572-9C7F-56C80DCCE587}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220111T120058Z
+    - ID: "306eaf63-2d34-4733-872c-2e086009e717"
+      Hint: FundClassSelector_Label
+      Value: "Currently viewing:"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "d765263b-ce31-4e99-8ab3-e1d4594a9d01"
+      Hint: FundClassSelector_Fund
+      Value: "{4E984EF9-A036-4FE0-AE2A-2B0E3BB6ACCA}"

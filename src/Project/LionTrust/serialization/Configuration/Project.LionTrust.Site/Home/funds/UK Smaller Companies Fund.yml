@@ -1,0 +1,319 @@
+﻿---
+ID: "ccc6a19c-4302-4c88-aec0-8d7ba411ac15"
+Parent: "6116e2c5-0d1d-452e-898f-3739042e2046"
+Template: "af865864-56fb-4a24-bacc-278c33c44041"
+Path: /sitecore/content/LionTrustNew/Home/funds/UK Smaller Companies Fund
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 5500
+- ID: "cce4e679-7e94-450d-8cc1-691bdf17ca78"
+  Hint: LegacyFundPageData_FundReference
+  Value: "{C553BBA1-C26E-43FB-98AA-E0163F8C54DE}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{F100020C-98C6-4D33-BCCE-6C46079A6D08}"
+          s:ds="{BDC1F34D-BBD9-4887-81DF-2EB5DB933504}" />
+      </d>
+    </r>
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{96CA7C73-77F7-4E72-899D-82CAC99F1FB6}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{CBF27972-F42D-4AD7-B759-6D2B57C84069}"
+              p:before="*"
+              s:ds="{38B523AD-1EAF-4F06-9675-A88D2B73E6C3}"
+              s:id="{56ECB2D2-5D43-4F0F-A5D1-AC267F249E7B}"
+              s:ph="/main/narrow-width" />
+            <r
+              uid="{33133DD3-0E19-4033-9C28-7804671069E7}"
+              p:after="r[@uid='{CBF27972-F42D-4AD7-B759-6D2B57C84069}']"
+              s:ds="{8D98B42D-6BF0-42B1-9B1B-5C2F437D8B3E}"
+              s:id="{C3B11E64-1214-410E-BA83-3347C5B59A7E}"
+              s:ph="main" />
+            <r
+              uid="{7FDD67D6-1130-4F53-885F-7F9172A239B4}"
+              p:after="r[@uid='{33133DD3-0E19-4033-9C28-7804671069E7}']"
+              s:ds="{E92D5930-3E5E-4D3D-9F02-297A3C9A60C2}"
+              s:id="{AB4777AC-F1FB-44C6-8283-C50F528F4DE2}"
+              s:ph="main" />
+            <r
+              uid="{7DECFCF4-902B-4971-89BE-BD6D488A2CE6}"
+              p:after="r[@uid='{7FDD67D6-1130-4F53-885F-7F9172A239B4}']"
+              s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+              s:ph="/header/navigation" />
+            <r
+              uid="{F97098D8-3254-4752-BFCF-ABFC7D64A578}"
+              p:after="r[@uid='{7DECFCF4-902B-4971-89BE-BD6D488A2CE6}']"
+              s:ds="{6CFC64A4-692A-4CEE-B5B9-9AF30112B9B6}"
+              s:id="{E8615AE3-E7F7-4FA4-9782-C22612560E79}"
+              s:ph="header" />
+            <r
+              uid="{739162E2-69FE-4C57-A83F-C352AFA0A39B}"
+              p:after="r[@uid='{F97098D8-3254-4752-BFCF-ABFC7D64A578}']"
+              s:ds="{3C7D2C24-F745-4713-B3ED-4583BDD8A39A}"
+              s:id="{65A60416-FD52-4573-8DBE-83AAF4CA3978}"
+              s:ph="/main/fund-graphs" />
+            <r
+              uid="{E359AC01-5FA3-42AE-B954-EFB91C0CD1AE}"
+              p:after="r[@uid='{739162E2-69FE-4C57-A83F-C352AFA0A39B}']"
+              s:ds="{54A5BF7F-4A04-4947-A25A-34BE18E0342A}"
+              s:id="{034EB997-49B9-4395-949F-BA16995C123D}"
+              s:ph="/main/fund-graphs" />
+            <r
+              uid="{5F35249F-9ACC-44F5-85DE-2C47E3B9D0D2}"
+              p:after="r[@uid='{E359AC01-5FA3-42AE-B954-EFB91C0CD1AE}']"
+              s:ds="{DEAE22E4-1FA3-4FB9-938A-0B2A73149BC5}"
+              s:id="{E5DD9F72-1F1D-439D-AC28-2B32B06BF019}"
+              s:ph="/main/fund-graphs" />
+            <r
+              uid="{A93708F0-60A5-4B5A-A71F-EBAD7534E9F2}"
+              p:after="r[@uid='{5F35249F-9ACC-44F5-85DE-2C47E3B9D0D2}']"
+              s:ds="{F2F9412B-000A-42C2-827A-378F7A6676DB}"
+              s:id="{05FCF7EF-B8E7-44C9-8950-74A08EA81DF2}"
+              s:ph="/main/fund-graphs" />
+            <r
+              uid="{09F227F2-D2C9-43CF-96D9-1212F96F8438}"
+              p:after="r[@uid='{A93708F0-60A5-4B5A-A71F-EBAD7534E9F2}']"
+              s:ds="{607C5027-C225-47CD-84DE-5C2535F6983A}"
+              s:id="{DE3BBA47-F726-43E8-A4F3-950B51597BF0}"
+              s:ph="/main/fund-graphs" />
+            <r
+              uid="{24CDA0F0-E32A-4B69-8C8C-23AF6A264EDB}"
+              p:after="r[@uid='{09F227F2-D2C9-43CF-96D9-1212F96F8438}']"
+              s:ds="{C9B4F125-B11F-4EB4-94C4-2D248A06BEB2}"
+              s:id="{BA0509C8-337A-45E7-A597-8035DC2F1C21}"
+              s:ph="/main/fund-graphs" />
+            <r
+              uid="{0011854E-FC0B-4EA6-BF0D-E54640F27B47}"
+              p:after="r[@uid='{24CDA0F0-E32A-4B69-8C8C-23AF6A264EDB}']"
+              s:ds="{40EBC852-CB89-4713-A6C1-DBEE08680EA9}"
+              s:id="{D1F65FAF-D449-484C-AADA-D6733DB1F445}"
+              s:ph="/main/fundoverview_rightcolumn" />
+            <r
+              uid="{5AA25FD9-0C14-4CD4-9155-73C7AA55F09B}"
+              p:after="r[@uid='{0011854E-FC0B-4EA6-BF0D-E54640F27B47}']"
+              s:ds="{F4AF534A-998A-491D-85A5-2BEE0A370B28}"
+              s:id="{2A426004-8707-4E51-9772-D999D41FB113}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{9432CECE-C092-46A0-875B-A448D0987AB0}"
+              p:after="r[@uid='{5AA25FD9-0C14-4CD4-9155-73C7AA55F09B}']"
+              s:ds="{9F3CA704-FDAD-4D73-8F92-9DD1563F4A2D}"
+              s:id="{1922AE89-FB11-4FF8-8A56-6AAB8D05F3C2}"
+              s:ph="/main/fundoverview_leftcolumn" />
+            <r
+              uid="{D312293B-788F-40AB-A29E-9EB232B0619E}"
+              p:after="r[@uid='{9432CECE-C092-46A0-875B-A448D0987AB0}']"
+              s:ds="{6992BF96-5316-4A40-A72E-30C037A83EB1}"
+              s:id="{F7E7EFF1-2B5F-4554-9B19-1483BDCD6025}"
+              s:ph="/main/fundoverview_leftcolumn" />
+            <r
+              uid="{7589D47E-751F-4B3D-97DD-57320BD3CC76}"
+              p:after="r[@uid='{D312293B-788F-40AB-A29E-9EB232B0619E}']"
+              s:ds="{36CECFBE-456F-4E87-8099-F5489A290FDF}"
+              s:id="{C34DF103-1F7A-46AA-9A62-9F221947CB35}"
+              s:ph="main" />
+            <r
+              uid="{945FFAFC-E579-491E-9E24-2DD6283DBAF7}"
+              p:after="r[@uid='{7589D47E-751F-4B3D-97DD-57320BD3CC76}']"
+              s:id="{5977731A-5D0C-4CDE-A065-8BA45CF4FE5C}"
+              s:ph="main" />
+            <r
+              uid="{FE145405-DE8D-49C2-ACD5-144562FA729E}"
+              p:after="r[@uid='{945FFAFC-E579-491E-9E24-2DD6283DBAF7}']"
+              s:ds="{18C4E27C-ECAB-4F99-8B60-5B9AABD7E55D}"
+              s:id="{D7EA03CD-11A9-4A09-9CC6-EE9E8566A692}"
+              s:ph="main" />
+            <r
+              uid="{A8956A85-6DC8-48D8-8515-7C7248E11877}"
+              p:after="r[@uid='{FE145405-DE8D-49C2-ACD5-144562FA729E}']"
+              s:ds="{2A6C26E9-AEA5-4026-893E-58614BB03131}"
+              s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+              s:ph="main" />
+            <r
+              uid="{39345DA5-FA18-456E-823A-D38934F9D2E0}"
+              p:after="r[@uid='{A8956A85-6DC8-48D8-8515-7C7248E11877}']"
+              s:ds="{A59A5BFB-2696-4668-8674-10B1C9528F81}"
+              s:id="{6B2E2A4D-C3CB-4676-B804-B3459E4C9BD6}"
+              s:ph="main" />
+            <r
+              uid="{3B94A5E7-F137-40EA-8A86-0E0E355F9FD7}"
+              p:after="r[@uid='{39345DA5-FA18-456E-823A-D38934F9D2E0}']"
+              s:ds="{FEC6E631-5D63-4B5E-86F7-E16BBE2BEFB1}"
+              s:id="{2A426004-8707-4E51-9772-D999D41FB113}"
+              s:ph="main" />
+            <r
+              uid="{B04DE10D-5DB8-4763-92A7-8045F36D4A70}"
+              p:after="r[@uid='{3B94A5E7-F137-40EA-8A86-0E0E355F9FD7}']"
+              s:ds="{53BEC984-0670-4749-8005-18005DE150AD}"
+              s:id="{8D47F982-4A0A-4CEB-BA66-DEABA6B71AD1}"
+              s:ph="main" />
+            <r
+              uid="{6B54758F-A94E-47E0-A137-DB47A023C285}"
+              p:after="r[@uid='{B04DE10D-5DB8-4763-92A7-8045F36D4A70}']"
+              s:ds="{79E51DAD-9CC5-462A-B4C7-C1D8511A9267}"
+              s:id="{2A426004-8707-4E51-9772-D999D41FB113}"
+              s:ph="main" />
+            <r
+              uid="{09310317-A4C8-4A5C-8085-56BE3ADB212B}"
+              p:after="r[@uid='{6B54758F-A94E-47E0-A137-DB47A023C285}']"
+              s:ds="{199386FA-80B8-449F-81F7-81096C5CCAB0}"
+              s:id="{9608FB83-8C06-4A26-BE98-BC32ED778671}"
+              s:ph="main" />
+            <r
+              uid="{47D4C62D-5FF7-4E91-86F6-D618B818B957}"
+              p:after="r[@uid='{09310317-A4C8-4A5C-8085-56BE3ADB212B}']"
+              s:ds="{5BE93986-1326-4ED3-85C3-106BF7AB40F3}"
+              s:id="{5298932D-2EF9-47A0-9934-46AA3010BA2A}"
+              s:ph="main" />
+            <r
+              uid="{E5BA8546-25DA-4236-88AE-E6A97312675A}"
+              p:after="r[@uid='{47D4C62D-5FF7-4E91-86F6-D618B818B957}']"
+              s:ds="{9CFC6310-12B8-47CC-BC86-8118106CAEF4}"
+              s:id="{4004B5C4-2C03-4362-AE8D-2E46B7EFA29C}"
+              s:ph="main" />
+            <r
+              uid="{F847F6F1-832B-4C70-8E19-1CB62F1A030C}"
+              p:after="r[@uid='{E5BA8546-25DA-4236-88AE-E6A97312675A}']"
+              s:ds="{9C75D5E3-8FB4-4322-AC87-92898697C6D1}"
+              s:id="{2A426004-8707-4E51-9772-D999D41FB113}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{245AA087-BAEA-428F-84A3-4C2AEE757523}"
+              p:after="r[@uid='{F847F6F1-832B-4C70-8E19-1CB62F1A030C}']"
+              s:ds="{13C8FBD6-0F6E-4A5B-88D0-10845585C136}"
+              s:id="{AAF449D8-F87E-4D1E-8034-7AACC3D6DA21}"
+              s:ph="main" />
+            <r
+              uid="{7A90018B-652B-4DBC-B352-2AC086423086}"
+              p:after="r[@uid='{245AA087-BAEA-428F-84A3-4C2AEE757523}']"
+              s:ds="{36C4493F-6278-4F90-9889-7AB5380C33A0}"
+              s:id="{98BE3869-3EA0-4D11-9D64-8F7A33C051B1}"
+              s:ph="main" />
+            <r
+              uid="{DE698B12-AE17-4452-9EAA-5DFC43A069CD}"
+              p:after="r[@uid='{7A90018B-652B-4DBC-B352-2AC086423086}']"
+              s:ds="{A1E3C06D-37E7-4908-BDAC-9EAAB632AC74}"
+              s:id="{2A426004-8707-4E51-9772-D999D41FB113}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{FA911D16-5949-44C0-9D56-C1BE2136BAED}"
+              p:after="r[@uid='{DE698B12-AE17-4452-9EAA-5DFC43A069CD}']"
+              s:ds="{319728D0-FA39-4793-8F87-01BEC7A6CEBB}"
+              s:id="{3349B84E-C4C1-42B8-8291-BCDB541DC1B6}"
+              s:ph="main" />
+            <r
+              uid="{9AA059D0-8A7D-44AE-AF03-BC1679AEBFE2}"
+              p:after="r[@uid='{FA911D16-5949-44C0-9D56-C1BE2136BAED}']"
+              s:ds="{8F7AA55E-2569-4646-A28E-7FA325F64C31}"
+              s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+              s:ph="main" />
+            <r
+              uid="{E5667DA7-30AA-4610-A15B-855B1171D9AC}"
+              p:after="r[@uid='{9AA059D0-8A7D-44AE-AF03-BC1679AEBFE2}']"
+              s:ds="{5E1E7F5B-FB3D-4664-AD2B-ED7FFDD23D3C}"
+              s:id="{2A426004-8707-4E51-9772-D999D41FB113}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{13AE5467-C5C0-496F-8748-EBA8F2C1573B}"
+              p:after="r[@uid='{E5667DA7-30AA-4610-A15B-855B1171D9AC}']"
+              s:ds="{2CE6B5F8-2408-488C-850A-7306C21E2B10}"
+              s:id="{049F3D5C-E59A-4505-9BDC-B94C11832A93}"
+              s:ph="main" />
+            <r
+              uid="{63A07CF1-109A-41BA-91B6-3B4EDF460650}"
+              p:after="r[@uid='{13AE5467-C5C0-496F-8748-EBA8F2C1573B}']"
+              s:ds="{AF2E6EB3-89CE-4F92-A8F1-60F32534EF5B}"
+              s:id="{2A426004-8707-4E51-9772-D999D41FB113}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{406EF967-E8F6-4429-90E7-82A525B3FB8D}"
+              p:after="r[@uid='{63A07CF1-109A-41BA-91B6-3B4EDF460650}']"
+              s:ds="{F3ACA700-A838-4F80-BE35-1A49BC749FCA}"
+              s:id="{29206264-421A-41D5-8869-A7D1EA60566B}"
+              s:ph="main" />
+            <r
+              uid="{38A81212-9593-431C-BC9E-2DC01E1F5256}"
+              p:after="r[@uid='{406EF967-E8F6-4429-90E7-82A525B3FB8D}']"
+              s:id="{06464072-4612-40D5-B861-7BD9DEF6E851}"
+              s:ph="main" />
+            <r
+              uid="{0A9D9A9E-A231-46A6-BE8A-3F1718BA5756}"
+              p:after="r[@uid='{38A81212-9593-431C-BC9E-2DC01E1F5256}']"
+              s:ds="{F3BFA483-80BA-4279-ACC9-701F14EC1D9E}"
+              s:id="{E975E590-8880-467B-A459-C4B214A66C77}"
+              s:par="AccordionRenderingParameters_BackgroundColour&amp;AccordionRenderingParameters_Theme=%7B56C0E3CA-FA33-42AA-AD90-AC57AD305D0F%7D&amp;AccordionRenderingParameters_TextAlign&amp;AccordionRenderingParameters_AccordionAlign"
+              s:ph="/main/narrow-width" />
+            <r
+              uid="{99F6B13B-3FE5-4E89-97BE-BA7A7C88B860}"
+              p:after="r[@uid='{0A9D9A9E-A231-46A6-BE8A-3F1718BA5756}']"
+              s:ds="{A894262A-9A1B-40F3-9478-6AD1D4D7F91E}"
+              s:id="{33050F00-5AE0-4130-8B3A-362E4D6EEBCB}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{26789752-D95F-4A5E-8321-BD42D5FDBB3C}"
+              p:after="r[@uid='{99F6B13B-3FE5-4E89-97BE-BA7A7C88B860}']"
+              s:ds="{8F7AA55E-2569-4646-A28E-7FA325F64C31}"
+              s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{01DB04A4-994F-44A5-957B-2DEAA82712E7}"
+              p:after="r[@uid='{26789752-D95F-4A5E-8321-BD42D5FDBB3C}']"
+              s:ds="{A600C8AF-9F72-4262-8507-68532C013E3E}"
+              s:id="{A811D2B0-D08D-4991-A9DD-6D9FA5799CBD}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{F9D48010-93AF-430B-A7A2-DE0F8E8394B9}"
+              p:after="*[1=2]"
+              s:ds="{257766DB-E0C7-4651-897A-F57097F9CFBE}"
+              s:id="{473A136A-5744-42A9-B430-42CCB92CCC33}"
+              s:par=""
+              s:ph="lit-overlay" />
+          </d>
+        </r>
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: UK Smaller Companies Fund | Liontrust Asset Management PLC
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220105T181500Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: UK Smaller Companies Fund
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: UK Smaller Companies Fund

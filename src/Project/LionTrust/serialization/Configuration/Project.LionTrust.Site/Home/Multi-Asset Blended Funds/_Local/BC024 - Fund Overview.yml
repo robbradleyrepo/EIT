@@ -1,0 +1,38 @@
+﻿---
+ID: "2521c103-aa32-4f36-b756-6023e4da73bc"
+Parent: "42196790-49c7-40a3-88b7-eebb6cfd1a01"
+Template: "a480f54b-9112-4249-8f45-b98cba01228c"
+Path: "/sitecore/content/LionTrustNew/Home/Multi-Asset Blended Funds/_Local/BC024 - Fund Overview"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 600
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{4B7819E8-FA4B-4FCA-A149-64E00AF85A8F}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220125T142732Z
+    - ID: "282195f0-0e21-4e60-885b-53c477323c56"
+      Hint: FundOverview_Alignment
+      Value: "{EDCF83C8-44D6-4420-B59B-3E99353325B6}"
+    - ID: "361f876b-0d9b-4827-a7ad-f9245a3a79a2"
+      Hint: FundOverview_DownloadCTALabel
+      Value: Download Fund Literature
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "624e51ce-f2ee-48a1-b49f-eb4a852b713f"
+      Hint: FundOverview_LatestUpdateCTA
+      Value: |
+        <link text="Latest Update CTA 1" anchor="" linktype="internal" class="" title=""  querystring="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
+    - ID: "8730606f-4236-4c61-8859-16cb35541365"
+      Hint: FundOverview_Fund
+      Value: "{B0C7AC70-3895-49C4-8F3C-4DF11EFEDC46}"

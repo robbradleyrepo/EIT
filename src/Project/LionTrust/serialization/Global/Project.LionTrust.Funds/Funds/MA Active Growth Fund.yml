@@ -9,6 +9,9 @@ SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
   Value: Business/32x32/currency_pound.png
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: "{9F34A121-9D36-4EB8-9670-FEAA6EAA981C}"
@@ -17,6 +20,12 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "036aeb89-b0bd-42c2-b763-a56cdbe32cdc"
+      Hint: Fund_Classes
+      Type: Multilist
+      Value: |
+        {FB400077-EF2D-40D2-9DCB-6B8B12D70210}
+        {22680A74-71F3-4418-9057-22C044F35B00}
     - ID: "13671185-84c9-49e4-8799-6135f386f3e5"
       Hint: LegacyFund_FiveYears
       Value: 53.591%
@@ -33,23 +42,14 @@ Languages:
     - ID: "221e703d-5ba7-4141-a98c-b76d2e5a663a"
       Hint: LegacyFund_RiskWarning
       Value: |
-        <h4 style="background: white; margin-bottom: 6.75pt;"><span style="color: #222222;">Key Risks&nbsp;</span></h4>
-        <h4 style="background: white; margin: 0cm 0cm 10.5pt;"><span style="color: #222222;"></span></h4>
-        <p>
-        <strong><span>Past performance is not a guide to future performance.</span></strong>&nbsp;Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital.</p>
+        <div><strong>Key Risks</strong></div>
+        <div>&nbsp;</div>
+        <div><strong>Past performance is not a guide to future performance. The value of an investment and the income generated from it can fall as well as rise and is not guaranteed. You may get back less than you originally invested.</strong></div>
+        <p>The issue of units/shares in Liontrust Funds may be subject to an initial charge, which will have an impact on the realisable value of the investment, particularly in the short term. Investments should always be considered as long term.</p>
+        <p>Some of the Funds and Model Portfolios managed by the Multi-Asset Team have exposure to foreign currencies and may be subject to fluctuations in value due to movements in exchange rates. The majority of the Funds and Model Portfolios invest in Fixed Income securities indirectly through collective investment schemes. The value of fixed income securities will fall if the issuer is unable to repay its debt or has its credit rating reduced. Generally, the higher the perceived credit risk of the issuer, the higher the rate of interest. Bond markets may be subject to reduced liquidity. Some Funds may have exposure to property via collective investment schemes. Property funds may be more difficult to value objectively so may be incorrectly priced, and may at times be harder to sell. This could lead to reduced liquidity in the Fund. Some Funds and Model Portfolios also invest in non-mainstream (alternative) assets indirectly through collective investment schemes. During periods of stressed market conditions non-mainstream (alternative) assets may be difficult to sell at a fair price, which may cause prices to fluctuate more sharply.</p>
         <p>&nbsp;</p>
-        <p><span style="background-color: white; font-size: 1.5rem; color: #222222;">Investment in the Fund involves foreign currencies and may be subject to fluctuations in value due to movements in exchange rates.</span></p>
-        <p><span style="background-color: white; font-size: 1.5rem; color: #222222;">&nbsp;</span></p>
-        <p><span style="font-size: 1.5rem; background-color: #ffffff; color: #222222;">The ACD does not use a benchmark to measure the Fund&rsquo;s performance. However, the performance of the Fund can be assessed against other funds in the Investment Association&rsquo;s Flexible Investment sector. Although this 'sector' contains funds that are flexible, they will not have exactly the same characteristics (objectives, investment policies and levels of risk, for example) and therefore do not provide an exact like-for-like basis for comparison.</span></p>
-        <p>&nbsp;</p>
-        <p><span style="background-color: white; font-size: 1.5rem; color: #222222;"></span></p>
-        <h4><span style="background-color: white; font-size: 1.5rem; color: #222222;"></span><span style="color: #222222;">Disclaimer</span></h4>
-        <p style="background: white;"><span style="color: #222222;">The information and opinions provided should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.&nbsp;</span></p>
-        <p style="background: white;"><span style="color: #222222;">&nbsp;</span></p>
-        <p style="background: white;"><span style="color: #222222;">Source: Financial Express. Total return, bid-to-bid. This page is showing performance data and information for an income producing share class.</span></p>
-        <p style="background: white;"><span style="color: #222222;">&nbsp;</span></p>
-        <p>
-        Please go to our&nbsp;<span style="color: black;"><a href="https://www.liontrust.co.uk/en/what-we-offer/interactive-fund-centre"><span style="color: #34b233;">Interactive Fund Centre</span></a></span><span style="color: #222222;">&nbsp;for performance data and information on the Fund&rsquo;s other share classes.</span></p>
+        <p><strong>Disclaimer</strong></p>
+        <p>This information should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy.&nbsp; It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, forwarded, reproduced, divulged or otherwise distributed in any form whether by way of fax, email, oral or otherwise, in whole or in part without the express and prior written consent of Liontrust. Always research your own investments and if you are not a professional investor please consult a regulated financial adviser regarding the suitability of such an investment for you and your personal circumstances.&nbsp;</p>
     - ID: "225f8602-2cd0-4926-9e39-d4f5cb37ce5e"
       Hint: LegacyFund_Type
       Value: "{BD3AE17A-EF7A-458F-9899-1BE939DD6CF3}"
@@ -95,10 +95,14 @@ Languages:
       Value: MA Active Growth Fund
     - ID: "6cbf0ed2-94b3-4f2a-a84d-a36501e38105"
       Hint: LegacyFund_LaunchDate
-      Value: 20131203T000000
+      Value: 20131203T000000Z
     - ID: "6d258747-e783-4579-9c3c-f8f23d03ccf6"
       Hint: LegacySectorFundData_SectorOneYear
       Value: 6.016%
+    - ID: "6d62860c-e839-4065-a2c2-b2d69e60b939"
+      Hint: LegacyFund_HideFromFundList
+      Type: Checkbox
+      Value: 1
     - ID: "737790ec-a3de-49a7-aa58-7c0f574c0e4a"
       Hint: LegacyBenchmarkFundData_BenchmarkOneYear
       Value: 6.016%
@@ -126,9 +130,8 @@ Languages:
         {061107E6-1485-475E-A2D8-D5A3D34F48FF}
         {A873BDFF-23DF-4C98-9A23-EF3BD83EB871}
         {CAAB183E-773A-445D-BEE1-C59099B1786E}
-        {060F6319-1694-43F1-80CB-49323E4BC10C}
         {E894F67D-3766-4DE6-B23A-E0B8C9B67129}
-        {86757B32-DFA6-4A96-A559-ABE0FB470CFB}
+        {CE428AB4-D799-4083-8BEF-D4C25E125512}
     - ID: "86f07fa6-a576-4462-b343-c4af970a2576"
       Hint: LegacyFund_HistoricYield
       Value: 1.037%

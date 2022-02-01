@@ -1,0 +1,26 @@
+﻿---
+ID: "b339b5a4-f40f-4756-9c07-23c88a77ad6d"
+Parent: "92aba568-f063-4316-a3b3-27aa0b4f154a"
+Template: "dadec9bf-b6e8-4e04-a082-f4eb20b76ff9"
+Path: /sitecore/content/LionTrustNew/Global/Funds/MA Active Funds
+DB: master
+BranchID: "562a4f6c-ee2c-40f7-8701-db0a0d8b7e3d"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Business/32x32/currency_pound.png
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{9F34A121-9D36-4EB8-9670-FEAA6EAA981C}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220201T084421Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

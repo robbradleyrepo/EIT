@@ -1,0 +1,28 @@
+﻿---
+ID: "3265d127-fca0-4c7b-965b-e7f82489aec0"
+Parent: "5d5a9c13-8212-4ee3-8ca4-14ef8f76b3e0"
+Template: "938850b8-54bc-46f7-b76e-9c83a331f8dc"
+Path: /sitecore/content/LionTrustNew/Home/funds/MA Passive Progressive Fund/_Local/Title
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{973A5E7E-F7B3-4A4D-98DC-7F4CEF8F9E65}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220111T113718Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "6102b67d-17d2-4071-af02-7d44677a17d3"
+      Hint: TitleComponent_MarginsContainer
+      Value: "{F067DEBE-FD6A-40DD-8E44-FD19A3B9F91D}"
+    - ID: "88c061a0-4e29-4b8d-a560-a62be5b7d6ef"
+      Hint: TitleComponent_Title
+      Value: Title

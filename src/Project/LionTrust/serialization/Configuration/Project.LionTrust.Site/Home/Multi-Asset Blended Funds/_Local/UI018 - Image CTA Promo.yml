@@ -1,0 +1,38 @@
+﻿---
+ID: "87c6e184-34ab-4812-a200-c6261806e89b"
+Parent: "42196790-49c7-40a3-88b7-eebb6cfd1a01"
+Template: "d3d9d2ce-b2ce-49ac-b50d-6a5ffd4c4ab8"
+Path: "/sitecore/content/LionTrustNew/Home/Multi-Asset Blended Funds/_Local/UI018 - Image CTA Promo"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 1700
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{F730C1E8-F093-46C8-8552-A8E140D48B31}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1054e4b6-1cf5-4c08-8a6d-d9b02fb17050"
+      Hint: ImageCTAPromo_Image
+      Value: |
+        <image mediaid="{D62F8CD6-BF13-4C85-9B38-5A9A8982A687}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220125T142738Z
+    - ID: "48bf236b-0681-4a09-9085-4933fa1c4a7a"
+      Hint: ImageCTAPromo_Body
+      Value: "The Liontrust Multi-Asset investment team is one of the most experienced and highly regarded in the UK market. The whole investment team are responsible for managing both the core Multi-Asset target risk funds and portfolios, and each manager contributes to every stage of the investment process."
+    - ID: "4c838697-dbeb-4998-a261-ccc77bc59259"
+      Hint: ImageCTAPromo_Subtitle
+      Value: 
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "7a84ea30-ff24-4c46-ae8f-51fcff940663"
+      Hint: ImageCTAPromo_Title
+      Value: Meet the team

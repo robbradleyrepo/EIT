@@ -1,0 +1,29 @@
+﻿---
+ID: "6c7f2da8-fbfd-4ee2-ae53-abe8f6b7f655"
+Parent: "6e8072ea-7d57-4df6-a362-3d5208659ed6"
+Template: "dee59db0-b8de-45d6-b615-5ef873f84bca"
+Path: "/sitecore/content/LionTrustNew/Home/funds/Balanced Fund/_Local/BC036 - Discrete Performance Table"
+DB: master
+BranchID: "32b340aa-40ba-4124-a18b-5e04e48c38e3"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{20F40CCF-4AAC-404A-8FD2-EFB8E72929DC}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211116T131134Z
+    - ID: "3f407d7e-838c-4d99-a6ad-890b6a463037"
+      Hint: FundSelector_Fund
+      Value: "{57693A76-6051-4FE0-AF4C-1CA2C87F2989}"
+    - ID: "450fec5e-b30e-48af-adc4-051fd7b27289"
+      Hint: PerformanceTable_Heading
+      Value: Discrete performance (%)
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya

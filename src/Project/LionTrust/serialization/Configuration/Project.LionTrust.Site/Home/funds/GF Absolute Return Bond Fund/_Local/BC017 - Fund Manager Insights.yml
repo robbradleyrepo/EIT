@@ -1,0 +1,32 @@
+﻿---
+ID: "0d20c08d-28de-4856-b18b-f205aa7fa6db"
+Parent: "8ad18d2c-9771-42c2-869b-d600f9888558"
+Template: "e14137dc-817e-40c3-b833-80c4824d2ff6"
+Path: "/sitecore/content/LionTrustNew/Home/funds/GF Absolute Return Bond Fund/_Local/BC017 - Fund Manager Insights"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{C8811EB0-A738-4D1A-BF79-E860A2CBE0BE}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1492465c-0e3c-4fdb-97b8-0fc76924e400"
+      Hint: FundManagerInsightsBase_Heading
+      Value: Fund insights
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220131T174702Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "71469dcb-2347-4fa2-883b-50f4df0e5244"
+      Hint: ArticleSearchParameters_FundManagers
+      Type: Multilist
+      Value: |
+        {4AFC15F0-E001-4591-90B1-DE046B2E2940}
+        {DBAE5B17-522C-480D-926B-55EA6C1873D3}
+        {5ADAC049-CD3A-4638-B7D9-12A2DB704394}

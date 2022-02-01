@@ -1,0 +1,28 @@
+﻿---
+ID: "6a5a9434-1424-4cf7-b91c-c67ca13e22c3"
+Parent: "04bdc592-2e9e-4907-a3be-d5b12d81a513"
+Template: "12c66dc9-f31e-42a5-af22-11a1c2c7e92c"
+Path: "/sitecore/content/LionTrustNew/Home/funds/GF Strategic Bond Fund/_Local/BC037 - Fund Holdings Table"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{7000264B-643F-4EF6-AECA-B04FED1154B1}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220131T174705Z
+    - ID: "3f407d7e-838c-4d99-a6ad-890b6a463037"
+      Hint: FundSelector_Fund
+      Value: "{DB186D8E-97D4-4BF7-B87C-EAB6C44C21BC}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "74b0c999-733f-4edb-b896-d160ea93b6c8"
+      Hint: FundHoldingsTable_Heading
+      Value: Top 10 Holdings (%)

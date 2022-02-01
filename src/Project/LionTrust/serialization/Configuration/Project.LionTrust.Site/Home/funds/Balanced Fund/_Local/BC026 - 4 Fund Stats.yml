@@ -1,0 +1,41 @@
+﻿---
+ID: "509b6932-cb6c-4e0e-85ea-835ed6039759"
+Parent: "6e8072ea-7d57-4df6-a362-3d5208659ed6"
+Template: "fef40064-216d-4888-93ef-a5e4a3d1e203"
+Path: "/sitecore/content/LionTrustNew/Home/funds/Balanced Fund/_Local/BC026 - 4 Fund Stats"
+DB: master
+BranchID: "32b340aa-40ba-4124-a18b-5e04e48c38e3"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{7C24791B-C30B-4F53-A6CE-B6A0DCE35BB0}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1ae48213-0a33-405e-8575-ef6369491fa8"
+      Hint: FourFundStats_Fund
+      Value: "{57693A76-6051-4FE0-AF4C-1CA2C87F2989}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211116T131132Z
+    - ID: "3dc4db39-af37-4bdc-b8a8-7c06458bb9b5"
+      Hint: FourFundStats_FundSizeLabel
+      Value: Fund size
+    - ID: "41a6502d-ce3f-4938-9746-1b6d0eb9a057"
+      Hint: FourFundStats_FundLaunchDateLabel
+      Value: Fund launch date
+    - ID: "4d0f2400-c512-4457-bbe4-afe776d25fea"
+      Hint: FourFundStats_NumberOfHoldingsLabel
+      Value: Number of holdings
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "8e7a0a72-4f42-4fc3-8c5f-bb44152fd189"
+      Hint: FourFundStats_ManagedByCurrentTeamForLabel
+      Value: Managed by current team for
+    - ID: "b141a98c-b927-4c25-aa97-6314c24a974f"
+      Hint: FourFundStats_ManagedByCurrentTeamForValue
+      Value: 

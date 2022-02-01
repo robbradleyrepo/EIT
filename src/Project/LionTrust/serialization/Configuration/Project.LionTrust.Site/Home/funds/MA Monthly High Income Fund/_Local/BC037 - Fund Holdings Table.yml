@@ -1,0 +1,28 @@
+﻿---
+ID: "51c13798-861b-43d7-9b6b-999f059f03bb"
+Parent: "684bc4c2-e0a1-415d-b540-a47f44ed80f3"
+Template: "12c66dc9-f31e-42a5-af22-11a1c2c7e92c"
+Path: "/sitecore/content/LionTrustNew/Home/funds/MA Monthly High Income Fund/_Local/BC037 - Fund Holdings Table"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{7000264B-643F-4EF6-AECA-B04FED1154B1}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220111T142733Z
+    - ID: "3f407d7e-838c-4d99-a6ad-890b6a463037"
+      Hint: FundSelector_Fund
+      Value: "{FE6AA79B-1D11-4B78-ACFA-6EA1464E318E}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "74b0c999-733f-4edb-b896-d160ea93b6c8"
+      Hint: FundHoldingsTable_Heading
+      Value: Top 10 Holdings (%)

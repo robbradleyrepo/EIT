@@ -1,0 +1,28 @@
+﻿---
+ID: "7706a1d4-56e3-4285-8793-2cdc32f6c8db"
+Parent: "8a551b84-4ea5-49d1-abb7-6dca0ef56726"
+Template: "14d42d38-bf48-406b-a8ab-3274126eecb8"
+Path: "/sitecore/content/LionTrustNew/Home/funds/MA Blended Progressive Fund/_Local/BC039 - Geographical Breakdown Chart"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{44602FB7-56E3-4DF2-A17C-8F54544222D0}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220110T162628Z
+    - ID: "3f407d7e-838c-4d99-a6ad-890b6a463037"
+      Hint: FundSelector_Fund
+      Value: "{81B1B8F3-02FA-46B1-BE9C-4A7F015567ED}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "aa344985-91c2-4371-aee9-85a678700bc1"
+      Hint: GraphWthHeading_Heading
+      Value: Geographic Breakdown (%)

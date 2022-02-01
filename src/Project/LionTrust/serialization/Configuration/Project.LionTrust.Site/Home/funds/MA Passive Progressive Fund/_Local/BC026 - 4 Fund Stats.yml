@@ -1,0 +1,37 @@
+﻿---
+ID: "fc1fdc16-dfe8-440d-ab31-582daa919930"
+Parent: "5d5a9c13-8212-4ee3-8ca4-14ef8f76b3e0"
+Template: "fef40064-216d-4888-93ef-a5e4a3d1e203"
+Path: "/sitecore/content/LionTrustNew/Home/funds/MA Passive Progressive Fund/_Local/BC026 - 4 Fund Stats"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{7C24791B-C30B-4F53-A6CE-B6A0DCE35BB0}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1ae48213-0a33-405e-8575-ef6369491fa8"
+      Hint: FourFundStats_Fund
+      Value: "{542882EB-1CB2-4762-A55F-5B5DBA2023E1}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220111T113712Z
+    - ID: "3dc4db39-af37-4bdc-b8a8-7c06458bb9b5"
+      Hint: FourFundStats_FundSizeLabel
+      Value: Fund size
+    - ID: "41a6502d-ce3f-4938-9746-1b6d0eb9a057"
+      Hint: FourFundStats_FundLaunchDateLabel
+      Value: Fund launch date
+    - ID: "4d0f2400-c512-4457-bbe4-afe776d25fea"
+      Hint: FourFundStats_NumberOfHoldingsLabel
+      Value: Number of holdings
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "8e7a0a72-4f42-4fc3-8c5f-bb44152fd189"
+      Hint: FourFundStats_ManagedByCurrentTeamForLabel
+      Value: Managed by current team for

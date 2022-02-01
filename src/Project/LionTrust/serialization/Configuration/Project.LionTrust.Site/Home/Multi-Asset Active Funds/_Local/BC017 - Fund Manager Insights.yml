@@ -1,0 +1,49 @@
+﻿---
+ID: "6ee3b65b-5988-482c-9f94-daa5bbbb3686"
+Parent: "748202a6-3484-49a8-b765-7be31d088aa4"
+Template: "e14137dc-817e-40c3-b833-80c4824d2ff6"
+Path: "/sitecore/content/LionTrustNew/Home/Multi-Asset Active Funds/_Local/BC017 - Fund Manager Insights"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{6A4CE66C-7DBF-4499-8EB5-F9CA65B2D406}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0e5031b3-9232-42be-82d4-05579d7827d9"
+      Hint: ArticleSearchParameters_FundTeams
+      Type: Multilist
+      Value: "{070E5C0B-03B2-4438-9DE1-555EE1B65DD6}"
+    - ID: "1492465c-0e3c-4fdb-97b8-0fc76924e400"
+      Hint: FundManagerInsightsBase_Heading
+      Value: Fund insights
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220125T124642Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "71469dcb-2347-4fa2-883b-50f4df0e5244"
+      Hint: ArticleSearchParameters_FundManagers
+      Type: Multilist
+      Value: |
+        {666D8658-69FD-4802-B1DF-B4D2FEF1AD18}
+        {CE428AB4-D799-4083-8BEF-D4C25E125512}
+        {061107E6-1485-475E-A2D8-D5A3D34F48FF}
+        {A873BDFF-23DF-4C98-9A23-EF3BD83EB871}
+        {CAAB183E-773A-445D-BEE1-C59099B1786E}
+        {E894F67D-3766-4DE6-B23A-E0B8C9B67129}
+    - ID: "c83820f8-fe31-440b-bdb9-61698d79c066"
+      Hint: FundManagerInsights_SelectedArticles
+      Type: Multilist with Search
+      Value: |
+        {6ADA650B-F9CD-4483-BB91-3E0C18227587}
+        {0C878DC6-237C-4A06-AE59-7ADAFEA16236}
+        {AFA6D9BC-42E6-481A-852E-60156CBB5BE8}

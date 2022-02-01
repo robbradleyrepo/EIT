@@ -1,0 +1,28 @@
+﻿---
+ID: "f1cc21e7-4ec2-40b6-bc74-a253cba6b800"
+Parent: "7809433e-7fd6-4d4b-b600-5e84c4f1b5f6"
+Template: "14d42d38-bf48-406b-a8ab-3274126eecb8"
+Path: "/sitecore/content/LionTrustNew/Home/funds/MA Passive Prudent Fund/_Local/BC039 - Geographical Breakdown Chart"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{44602FB7-56E3-4DF2-A17C-8F54544222D0}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220112T123011Z
+    - ID: "3f407d7e-838c-4d99-a6ad-890b6a463037"
+      Hint: FundSelector_Fund
+      Value: "{149B7866-4ABE-447B-A840-732549E781BB}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "aa344985-91c2-4371-aee9-85a678700bc1"
+      Hint: GraphWthHeading_Heading
+      Value: Geographic Breakdown (%)

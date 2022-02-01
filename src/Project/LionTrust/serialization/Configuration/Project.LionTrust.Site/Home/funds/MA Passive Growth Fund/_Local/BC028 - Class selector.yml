@@ -1,0 +1,28 @@
+﻿---
+ID: "d2d10f4e-47cd-4f99-af89-f189282ac1b5"
+Parent: "ec786eb7-2866-4f4b-953d-7bbe8531b2a1"
+Template: "84283122-5a14-45a1-b7bf-7f2799e08ead"
+Path: "/sitecore/content/LionTrustNew/Home/funds/MA Passive Growth Fund/_Local/BC028 - Class selector"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{7BE48538-C2C8-4572-9C7F-56C80DCCE587}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220111T114931Z
+    - ID: "306eaf63-2d34-4733-872c-2e086009e717"
+      Hint: FundClassSelector_Label
+      Value: "Currently viewing:"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "d765263b-ce31-4e99-8ab3-e1d4594a9d01"
+      Hint: FundClassSelector_Fund
+      Value: "{F3A1C7A7-1D1F-4A0E-88A3-5655E1105211}"
