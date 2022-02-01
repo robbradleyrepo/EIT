@@ -20,10 +20,10 @@ namespace LionTrust.Feature.EXM.Controllers
             return View("~/Views/EXM/RegisterWebinar.cshtml", model);
         }
 
-        public ActionResult Webinars()
+        public ActionResult WebinarCards()
         {
             var model = _mvcContext.GetDataSourceItem<IWebinarCards>();
-            return View("~/Views/EXM/Webinars.cshtml", model);
+            return View("~/Views/EXM/WebinarCards.cshtml", model);
         }
     }
 }
