@@ -1,0 +1,31 @@
+﻿---
+ID: "1eadfea5-d550-42d8-baf8-113285f9694b"
+Parent: "684bc4c2-e0a1-415d-b540-a47f44ed80f3"
+Template: "dee59db0-b8de-45d6-b615-5ef873f84bca"
+Path: "/sitecore/content/LionTrustNew/Home/funds/MA Monthly High Income Fund/_Local/BC036 - Cumulative Performance Table"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{B9D96CDB-FA72-4A8A-9832-705A3D1CD63A}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "24b821f2-896b-4bbe-ab3a-6c943a3d8b8f"
+      Hint: PerformanceTable_TableHeadingLabel
+      Value: 
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220111T142732Z
+    - ID: "3f407d7e-838c-4d99-a6ad-890b6a463037"
+      Hint: FundSelector_Fund
+      Value: "{FE6AA79B-1D11-4B78-ACFA-6EA1464E318E}"
+    - ID: "450fec5e-b30e-48af-adc4-051fd7b27289"
+      Hint: PerformanceTable_Heading
+      Value: Cumulative performance (%)
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ

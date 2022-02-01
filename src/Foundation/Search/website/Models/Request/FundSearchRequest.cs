@@ -26,5 +26,7 @@
         public int Take { get; set; }
 
         public IEnumerable<string> Ids { get; set; }
+
+        public bool HideFunds { get; set; }
     }
 }

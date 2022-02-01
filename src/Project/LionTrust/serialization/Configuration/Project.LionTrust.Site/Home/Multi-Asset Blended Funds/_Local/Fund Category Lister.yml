@@ -1,0 +1,37 @@
+﻿---
+ID: "510e2518-bc50-4b5a-94fc-e95b938eb2f7"
+Parent: "42196790-49c7-40a3-88b7-eebb6cfd1a01"
+Template: "f01915af-1185-4618-bed1-e59f75b098c6"
+Path: "/sitecore/content/LionTrustNew/Home/Multi-Asset Blended Funds/_Local/Fund Category Lister"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 900
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{280AFC8F-40FA-4AD0-9B11-CA3A5CC38985}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220125T142733Z
+    - ID: "5a4eab30-2bf3-4114-859a-ea1ca9bb7038"
+      Hint: FundCategoryLister_Title
+      Value: Our Blended Funds
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "e4c0659d-9d40-4a6f-a117-0d9045d62fe6"
+      Hint: FundCategoryLister_Funds
+      Type: Multilist
+      Value: |
+        {357BB108-DD2E-4E5D-ABE2-F62F377B337A}
+        {6D0A84A1-0871-41AF-BB84-5F8E1840A271}
+        {DAD47E77-0C73-41B0-8A0E-53814473F044}
+        {81B1B8F3-02FA-46B1-BE9C-4A7F015567ED}
+        {5B826CCF-D435-4C86-96E9-04DAA99E890F}

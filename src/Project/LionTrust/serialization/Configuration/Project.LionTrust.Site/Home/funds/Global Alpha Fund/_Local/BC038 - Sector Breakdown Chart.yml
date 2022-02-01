@@ -1,0 +1,28 @@
+﻿---
+ID: "2306b359-6d75-4de0-81b6-9bc5bee61736"
+Parent: "a51f2373-f80f-49dd-be07-3bf8b7c3c97f"
+Template: "951bed22-8340-42a7-85dd-f8079ac76986"
+Path: "/sitecore/content/LionTrustNew/Home/funds/Global Alpha Fund/_Local/BC038 - Sector Breakdown Chart"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{AE3EF135-744E-4DFF-B484-6927B13A73E8}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211221T132947Z
+    - ID: "3f407d7e-838c-4d99-a6ad-890b6a463037"
+      Hint: FundSelector_Fund
+      Value: "{B1D4F3A2-CD2F-4CEF-A12B-2431A68B569E}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "fe72e4f7-8806-4907-b17f-aa124431957f"
+      Hint: SectorBreakdown_Heading
+      Value: Sector Breakdown (%)

@@ -1,0 +1,31 @@
+﻿---
+ID: "f3be0553-26c8-4fa3-96b7-9023542b5d77"
+Parent: "f5e450bc-bd21-4509-8911-e3d1437e6094"
+Template: "daff5c4e-a4cf-48b5-bd94-e1a71556ff9a"
+Path: "/sitecore/content/LionTrustNew/Home/funds/Special Situations Fund/_Local/BC041 - Credit Rating Chart/BB"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 275
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{DC7DD190-F2A4-46D2-AB63-935CD7F9B0A0}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "17793ba8-e9b1-406b-b73d-e10c37d4d2c2"
+      Hint: CreditRatingRow_Value
+      Value: 4.8
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220104T162459Z
+    - ID: "5d4c8234-c349-44b9-aa47-652484734a53"
+      Hint: CreditRatingRow_Name
+      Value: BB
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh

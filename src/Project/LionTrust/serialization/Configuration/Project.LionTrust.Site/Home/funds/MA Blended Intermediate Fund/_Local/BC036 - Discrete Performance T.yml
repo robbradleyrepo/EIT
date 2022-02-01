@@ -1,0 +1,28 @@
+﻿---
+ID: "cab6f5ff-0fa9-4537-80f4-7fd421c45a5d"
+Parent: "3cab3d23-869c-4a08-b5e3-7df5a5d4c919"
+Template: "dee59db0-b8de-45d6-b615-5ef873f84bca"
+Path: "/sitecore/content/LionTrustNew/Home/funds/MA Blended Intermediate Fund/_Local/BC036 - Discrete Performance Table"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{20F40CCF-4AAC-404A-8FD2-EFB8E72929DC}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220110T154828Z
+    - ID: "3f407d7e-838c-4d99-a6ad-890b6a463037"
+      Hint: FundSelector_Fund
+      Value: "{DAD47E77-0C73-41B0-8A0E-53814473F044}"
+    - ID: "450fec5e-b30e-48af-adc4-051fd7b27289"
+      Hint: PerformanceTable_Heading
+      Value: Discrete performance (%)
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ

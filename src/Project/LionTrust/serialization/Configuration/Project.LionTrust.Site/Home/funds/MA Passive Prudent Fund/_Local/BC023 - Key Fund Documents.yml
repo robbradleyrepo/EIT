@@ -1,0 +1,35 @@
+﻿---
+ID: "43b4b9f5-5348-4b9f-bf13-cd2cd443359a"
+Parent: "7809433e-7fd6-4d4b-b600-5e84c4f1b5f6"
+Template: "bbfe6c9b-afba-423c-9dd4-eff01eb556f5"
+Path: "/sitecore/content/LionTrustNew/Home/funds/MA Passive Prudent Fund/_Local/BC023 - Key Fund Documents"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{295D047C-FAB8-4CE8-B452-8C56A53AFF38}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "10b9fa41-4f22-4fd2-81be-ee105dfb4329"
+      Hint: KeyFundDocuments_Title
+      Value: Key fund literature
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220112T123009Z
+    - ID: "4189960d-9aae-42e3-8008-3ef3309002d6"
+      Hint: KeyFundDocuments_KeyDocuments
+      Type: Treelist
+      Value: |
+        {B23707F3-C246-4671-913B-03FBC6BCE110}
+        {0DFE160B-2D21-480E-941D-0C9EE45400EA}
+        {79250D56-CC3B-4907-924B-79488F61BA34}
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "760716cf-64d5-4c0d-9dff-2dbb9f0d476a"
+      Hint: KeyFundDocuments_Description
+      Value: 

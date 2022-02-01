@@ -1,0 +1,32 @@
+﻿---
+ID: "3e304e4d-a9da-4fb9-8de8-9751bb2e6693"
+Parent: "f25cae42-79b1-4b98-a1d5-03379f8690f8"
+Template: "a480f54b-9112-4249-8f45-b98cba01228c"
+Path: "/sitecore/content/LionTrustNew/Home/funds/MA Passive Reserve Fund/_Local/BC024 - Fund Overview"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{88482AAE-2539-4016-842D-9DD5D5F1C10C}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220111T093939Z
+    - ID: "361f876b-0d9b-4827-a7ad-f9245a3a79a2"
+      Hint: FundOverview_DownloadCTALabel
+      Value: Download Fund Literature
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "624e51ce-f2ee-48a1-b49f-eb4a852b713f"
+      Hint: FundOverview_LatestUpdateCTA
+      Value: |
+        <link text="Read latest fund update" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{7E9E8706-F864-48E5-B4A2-57F2C408EFD7}" />
+    - ID: "8730606f-4236-4c61-8859-16cb35541365"
+      Hint: FundOverview_Fund
+      Value: "{1DA7ADFE-69DD-4AD3-A3D7-82623FD9466D}"

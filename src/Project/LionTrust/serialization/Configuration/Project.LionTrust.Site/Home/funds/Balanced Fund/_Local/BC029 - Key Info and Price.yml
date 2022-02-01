@@ -1,0 +1,35 @@
+﻿---
+ID: "b5db4394-b5e0-4580-b940-0215b82baa01"
+Parent: "6e8072ea-7d57-4df6-a362-3d5208659ed6"
+Template: "8de51e60-deed-4fef-8b54-d31e6d80de2f"
+Path: "/sitecore/content/LionTrustNew/Home/funds/Balanced Fund/_Local/BC029 - Key Info and Price"
+DB: master
+BranchID: "32b340aa-40ba-4124-a18b-5e04e48c38e3"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{18BE326D-5E9C-4800-A008-9B518C6AAC7D}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211116T131133Z
+    - ID: "3f407d7e-838c-4d99-a6ad-890b6a463037"
+      Hint: FundSelector_Fund
+      Value: "{57693A76-6051-4FE0-AF4C-1CA2C87F2989}"
+    - ID: "5291254f-d8de-4689-811a-c1b862f0b93d"
+      Hint: KeyInfoPriceComponent_BenchmarkLabel
+      Value: Sector
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "94185463-0638-40c0-ac99-233554578886"
+      Hint: KeyInfoPriceComponent_TargetBenchmarkYieldLabel
+      Value: Target Benchmark Yield
+    - ID: "ab8e942c-8129-4a8e-9dd5-2d7f3f9de270"
+      Hint: KeyInfoPriceComponent_ManagerInceptionDateLabel
+      Value: Manager Inception Date of Fund

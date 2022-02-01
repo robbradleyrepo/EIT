@@ -1,0 +1,32 @@
+﻿---
+ID: "5fc27641-2d26-4dc3-a041-3c5f75c20788"
+Parent: "c8aa89d8-3d8d-46fc-b86c-2a06d93b5911"
+Template: "cd8e821e-800e-43dd-bf12-4a00f2bbbcbd"
+Path: "/sitecore/content/LionTrustNew/Home/funds/MA Blended Moderate Fund/_Local/BC020 - Literature Overlay"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{8BC385ED-3E0B-401D-9A6A-22547A0C273C}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1000613e-6f3e-4db4-91ef-c1b5d447dee2"
+      Hint: Literature_Fund
+      Value: "{6D0A84A1-0871-41AF-BB84-5F8E1840A271}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220110T145952Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "6b74c5e5-7f94-405c-9e38-2b38fcc30079"
+      Hint: Literature_Heading
+      Value: Fund literature
+    - ID: "eeed7c2e-dc3c-4e29-9855-03bd4f9139ad"
+      Hint: Literature_Cta
+      Value: |
+        <link text="View latest fund update" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{7E9E8706-F864-48E5-B4A2-57F2C408EFD7}" />

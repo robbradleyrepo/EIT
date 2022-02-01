@@ -1,0 +1,26 @@
+﻿---
+ID: "32c63d39-f000-4685-97f7-9409f5950ff1"
+Parent: "025fc7d5-94a4-4c2b-a6b3-f3058f597e61"
+Template: "cb15bccd-f423-4cb0-b3dc-d4db939599f4"
+Path: "/sitecore/content/LionTrustNew/Home/funds/Edinburgh Investment Trust plc/_Local/BC021 - Fund Header"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{6D288202-A988-4381-A5C6-3487D15AD3CF}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220120T152210Z
+    - ID: "5d55ee9c-7778-47e7-833d-9d692e0e8aab"
+      Hint: FundHeader_BackgroundImage
+      Value: |
+        <image mediaid="{0DC367C9-3DE6-4F12-A4EB-B30CB055B993}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya

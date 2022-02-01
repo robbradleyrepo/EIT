@@ -1,0 +1,51 @@
+﻿---
+ID: "8524cff9-1afe-4e66-82c9-efdea54f804a"
+Parent: "6e8072ea-7d57-4df6-a362-3d5208659ed6"
+Template: "d3d9d2ce-b2ce-49ac-b50d-6a5ffd4c4ab8"
+Path: "/sitecore/content/LionTrustNew/Home/funds/Balanced Fund/_Local/UI018 - Image CTA Promo"
+DB: master
+BranchID: "32b340aa-40ba-4124-a18b-5e04e48c38e3"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{8BE2FDFE-F59F-4CDE-B133-6BAA9F2F5AD8}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1054e4b6-1cf5-4c08-8a6d-d9b02fb17050"
+      Hint: ImageCTAPromo_Image
+      Value: |
+        <image mediaid="{4EC0C6F4-D79B-4A4C-898B-C899592058E9}" />
+    - ID: "143867db-9bba-4097-9eb4-0099c175ad91"
+      Hint: ImageCTAPromo_CTALink
+      Value: |
+        <link text="The Global Equity team" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211116T131143Z
+    - ID: "48bf236b-0681-4a09-9085-4933fa1c4a7a"
+      Hint: ImageCTAPromo_Body
+      Value: Robin Geffen is Head of the Global Equity investment team, having joined Liontrust as part of the acquisition of Neptune Investment Management in October 2019, and manager of the Liontrust Balanced, Global Alpha, Global Smaller Companies, Income and Global Technology funds. Previously, Robin was a fund manager and the CEO of Neptune Investment Management, which he founded in 2002. Previously, Robin was at Charterhouse J Rothschild, Eagle Star, York Trust plc, Scottish Equitable and Orbitex Investments. Robin graduated from Oxford University in 1979 and has more than 40 years&rsquo; investment experience.
+    - ID: "4c838697-dbeb-4998-a261-ccc77bc59259"
+      Hint: ImageCTAPromo_Subtitle
+      Value: 
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "5f6cda9b-99ec-4bfc-8ddb-258d248bc1ae"
+      Hint: ImageCTAPromo_TitleInSide
+      Type: Checkbox
+      Value: 1
+    - ID: "7a84ea30-ff24-4c46-ae8f-51fcff940663"
+      Hint: ImageCTAPromo_Title
+      Value: Meet the team
+    - ID: "94eb1b3f-6b14-4a34-9b12-62dbed7a269e"
+      Hint: ImageCTAPromo_TitleColor
+      Value: "{ABC9B1B3-78C4-4493-A681-576EA253919E}"
+    - ID: "9a62f3e5-e428-4df1-ab96-ed4b651e352b"
+      Hint: ImageCTAPromo_CTALink2
+      Value: |
+        <link text="We can have an optional secondary link here" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />

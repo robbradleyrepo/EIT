@@ -1,0 +1,35 @@
+﻿---
+ID: "a03ce41b-6e0c-4511-a7c1-29cdd988de91"
+Parent: "8b59fe85-decc-4b3d-8f08-da7a75eed1eb"
+Template: "bbfe6c9b-afba-423c-9dd4-eff01eb556f5"
+Path: "/sitecore/content/LionTrustNew/Home/funds/UK Ethical Fund/_Local/BC023 - Key Fund Documents"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{295D047C-FAB8-4CE8-B452-8C56A53AFF38}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "10b9fa41-4f22-4fd2-81be-ee105dfb4329"
+      Hint: KeyFundDocuments_Title
+      Value: Key fund literature
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220117T195624Z
+    - ID: "4189960d-9aae-42e3-8008-3ef3309002d6"
+      Hint: KeyFundDocuments_KeyDocuments
+      Type: Treelist
+      Value: |
+        {AD2FC451-8743-4D76-9B18-45D57591C307}
+        {7C76AF6B-DAC8-489B-A754-350D3A6DEA75}
+        {641D5BD3-1319-4FBB-8289-6A23776E5F9C}
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "760716cf-64d5-4c0d-9dff-2dbb9f0d476a"
+      Hint: KeyFundDocuments_Description
+      Value: 

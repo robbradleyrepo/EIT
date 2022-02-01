@@ -1,0 +1,28 @@
+﻿---
+ID: "0e0824f6-8a8d-4fdc-84c0-50bdbdeb635b"
+Parent: "f25cae42-79b1-4b98-a1d5-03379f8690f8"
+Template: "951bed22-8340-42a7-85dd-f8079ac76986"
+Path: "/sitecore/content/LionTrustNew/Home/funds/MA Passive Reserve Fund/_Local/BC038 - Sector Breakdown Chart"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{AE3EF135-744E-4DFF-B484-6927B13A73E8}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220111T093943Z
+    - ID: "3f407d7e-838c-4d99-a6ad-890b6a463037"
+      Hint: FundSelector_Fund
+      Value: "{1DA7ADFE-69DD-4AD3-A3D7-82623FD9466D}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "fe72e4f7-8806-4907-b17f-aa124431957f"
+      Hint: SectorBreakdown_Heading
+      Value: Sector Breakdown (%)

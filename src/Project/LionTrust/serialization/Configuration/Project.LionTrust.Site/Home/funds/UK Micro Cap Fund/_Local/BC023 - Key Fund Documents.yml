@@ -1,0 +1,35 @@
+﻿---
+ID: "4d6486d1-e37f-4728-965e-0a8c6b7193ac"
+Parent: "0a427180-b316-4b54-a3df-6313776d3532"
+Template: "bbfe6c9b-afba-423c-9dd4-eff01eb556f5"
+Path: "/sitecore/content/LionTrustNew/Home/funds/UK Micro Cap Fund/_Local/BC023 - Key Fund Documents"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{295D047C-FAB8-4CE8-B452-8C56A53AFF38}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "10b9fa41-4f22-4fd2-81be-ee105dfb4329"
+      Hint: KeyFundDocuments_Title
+      Value: Key fund literature
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220105T172916Z
+    - ID: "4189960d-9aae-42e3-8008-3ef3309002d6"
+      Hint: KeyFundDocuments_KeyDocuments
+      Type: Treelist
+      Value: |
+        {D2C36294-86FF-4BB9-BD35-E320BBF02644}
+        {3C648CB1-609D-437E-80D5-85B5DFD138DB}
+        {E1D1A88E-79B6-4C4C-83B5-26272EEE2993}
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "760716cf-64d5-4c0d-9dff-2dbb9f0d476a"
+      Hint: KeyFundDocuments_Description
+      Value: 

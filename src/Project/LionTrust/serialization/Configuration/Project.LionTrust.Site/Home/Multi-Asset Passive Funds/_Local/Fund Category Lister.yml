@@ -1,0 +1,38 @@
+﻿---
+ID: "42eba874-5d82-43f1-9590-043ef424b7b4"
+Parent: "8565476a-932a-44b4-9f47-7b1707e1a0e5"
+Template: "f01915af-1185-4618-bed1-e59f75b098c6"
+Path: "/sitecore/content/LionTrustNew/Home/Multi-Asset Passive Funds/_Local/Fund Category Lister"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 900
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{280AFC8F-40FA-4AD0-9B11-CA3A5CC38985}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220125T150722Z
+    - ID: "5a4eab30-2bf3-4114-859a-ea1ca9bb7038"
+      Hint: FundCategoryLister_Title
+      Value: Our MA Passive Funds
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "e4c0659d-9d40-4a6f-a117-0d9045d62fe6"
+      Hint: FundCategoryLister_Funds
+      Type: Multilist
+      Value: |
+        {1DA7ADFE-69DD-4AD3-A3D7-82623FD9466D}
+        {2919C4E9-1C24-43B1-84A5-52D5DC7AB144}
+        {D8C813EA-12C6-4701-9B15-B0E49B259CE7}
+        {542882EB-1CB2-4762-A55F-5B5DBA2023E1}
+        {F3A1C7A7-1D1F-4A0E-88A3-5655E1105211}
+        {4E984EF9-A036-4FE0-AE2A-2B0E3BB6ACCA}

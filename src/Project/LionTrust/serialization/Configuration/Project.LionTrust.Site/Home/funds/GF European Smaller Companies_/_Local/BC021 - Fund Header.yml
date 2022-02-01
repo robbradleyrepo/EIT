@@ -1,0 +1,32 @@
+﻿---
+ID: "b844aa8e-a9a5-4d19-aba4-868f7ca64eb1"
+Parent: "a2cd2b99-6c78-4f8d-acf5-f49d457ec0f5"
+Template: "cb15bccd-f423-4cb0-b3dc-d4db939599f4"
+Path: "/sitecore/content/LionTrustNew/Home/funds/GF European Smaller Companies Fund/_Local/BC021 - Fund Header"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{6D288202-A988-4381-A5C6-3487D15AD3CF}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1adf8b0c-a198-4cc7-81cc-cfaac0fe3483"
+      Hint: FundHeader_Title
+      Value: GF European Smaller Companies Fund
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220110T173603Z
+    - ID: "5d55ee9c-7778-47e7-833d-9d692e0e8aab"
+      Hint: FundHeader_BackgroundImage
+      Value: |
+        <image mediaid="{0DC367C9-3DE6-4F12-A4EB-B30CB055B993}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "90bcab34-b9e0-466e-97a4-73cec67335f7"
+      Hint: FundHeader_Fund
+      Value: "{DD1FB6FB-0E70-4487-8E77-C985DAE34407}"
