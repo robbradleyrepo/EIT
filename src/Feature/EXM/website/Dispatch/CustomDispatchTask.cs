@@ -21,6 +21,7 @@
     public class CustomDispatchTask : DispatchTask
     {
         private IContactService _contactService;
+
         public CustomDispatchTask([NotNull] ShortRunningTaskPool taskPool, [NotNull] IRecipientValidator recipientValidator, [NotNull] IContactService contactService, [NotNull] EcmDataProvider dataProvider, [NotNull] ItemUtilExt itemUtil, [NotNull] IEventDataService eventDataService, [NotNull] IDispatchManager dispatchManager, [NotNull] EmailAddressHistoryManager emailAddressHistoryManager, [NotNull] IRecipientManagerFactory recipientManagerFactory, [NotNull] SentMessageManager sentMessageManager)
         : base(taskPool, recipientValidator, contactService, dataProvider, itemUtil, eventDataService, dispatchManager, emailAddressHistoryManager, recipientManagerFactory, sentMessageManager)
         {
