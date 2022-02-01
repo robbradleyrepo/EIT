@@ -4,6 +4,10 @@ Parent: "df57ff13-831d-4c47-9ea2-a49fc618d62e"
 Template: "41d4618c-a364-4384-95bf-9d4c8e64183b"
 Path: /sitecore/templates/Branches/Feature/EXM/Webinars Email/$name/Message Root/Local Datasource/Register Webinar
 DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
 Languages:
 - Language: en
   Versions:

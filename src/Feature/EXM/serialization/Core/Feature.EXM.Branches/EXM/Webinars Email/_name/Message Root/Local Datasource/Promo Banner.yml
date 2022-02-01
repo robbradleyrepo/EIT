@@ -1,13 +1,13 @@
 ﻿---
-ID: "2d778558-b653-41f8-8bfe-2e91ef798364"
+ID: "58a71147-fce6-4aff-b60a-694fa751a71e"
 Parent: "df57ff13-831d-4c47-9ea2-a49fc618d62e"
-Template: "00a71933-7517-4b87-9ae4-cb0b59731038"
-Path: /sitecore/templates/Branches/Feature/EXM/Webinars Email/$name/Message Root/Local Datasource/Rich Text Content
+Template: "fb48828a-5744-4e15-b540-4f030855a386"
+Path: /sitecore/templates/Branches/Feature/EXM/Webinars Email/$name/Message Root/Local Datasource/Promo Banner
 DB: master
 SharedFields:
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 150
+  Value: 525
 Languages:
 - Language: en
   Versions:
@@ -15,11 +15,11 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20220110T152117Z
-    - ID: "35e76c21-7732-46a5-82bd-399cf7925903"
-      Hint: Text
-      Value: 
+      Value: 20220201T000535Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
         sitecore\Admin
+    - ID: "a49d07ee-4090-489b-88db-8799d9a75117"
+      Hint: Card_CtaText
+      Value: VIEW NOW ➝

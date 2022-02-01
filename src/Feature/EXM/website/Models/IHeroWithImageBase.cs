@@ -3,7 +3,7 @@
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
 
-    public interface IHeroWitImageBase : IHeroBase
+    public interface IHeroWithImageBase : IHeroBase
     {
         [SitecoreField(Constants.Hero.Image_FieldID)]
         Image Image { get; set; }

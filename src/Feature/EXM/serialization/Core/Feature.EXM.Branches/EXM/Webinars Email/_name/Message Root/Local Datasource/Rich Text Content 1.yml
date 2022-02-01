@@ -1,0 +1,30 @@
+﻿---
+ID: "2d778558-b653-41f8-8bfe-2e91ef798364"
+Parent: "df57ff13-831d-4c47-9ea2-a49fc618d62e"
+Template: "00a71933-7517-4b87-9ae4-cb0b59731038"
+Path: /sitecore/templates/Branches/Feature/EXM/Webinars Email/$name/Message Root/Local Datasource/Rich Text Content 1
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220110T152117Z
+    - ID: "35e76c21-7732-46a5-82bd-399cf7925903"
+      Hint: Text
+      Value: |
+        <p>Dear $firstName$</p>
+        <p>&nbsp;</p>
+        <p>In this webinar, the Liontrust Multi-Asset team will discuss the attractions of combining investment styles and approaches, including active and passive, the role MA Blended Funds can play in client portfolios, and the current positioning of the Funds.</p>
+        <p>&nbsp;</p>
+        <p>Please let us know you will be attending by <a rel="noopener noreferrer" target="_blank" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:underline;color:#2CB543;font-size:14px;">registering now</a>.</p>
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
