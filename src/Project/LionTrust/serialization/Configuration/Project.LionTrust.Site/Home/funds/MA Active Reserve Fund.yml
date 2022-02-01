@@ -1,10 +1,13 @@
 ﻿---
 ID: "30159676-1161-4e4f-8fcc-ded1550575fe"
-Parent: "47bd668e-4c0f-4d8a-9e71-b6c8c156b32f"
+Parent: "6116e2c5-0d1d-452e-898f-3739042e2046"
 Template: "af865864-56fb-4a24-bacc-278c33c44041"
 Path: /sitecore/content/LionTrustNew/Home/funds/MA Active Reserve Fund
 DB: master
 SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 2300
 - ID: "cce4e679-7e94-450d-8cc1-691bdf17ca78"
   Hint: LegacyFundPageData_FundReference
   Value: "{EC799242-4448-42AC-8542-DEF9942DED49}"
@@ -73,14 +76,8 @@ Languages:
               s:id="{65A60416-FD52-4573-8DBE-83AAF4CA3978}"
               s:ph="/main/fund-graphs" />
             <r
-              uid="{E359AC01-5FA3-42AE-B954-EFB91C0CD1AE}"
-              p:after="r[@uid='{739162E2-69FE-4C57-A83F-C352AFA0A39B}']"
-              s:ds="{80FF51DE-6D60-4735-9DB3-792940225557}"
-              s:id="{034EB997-49B9-4395-949F-BA16995C123D}"
-              s:ph="/main/fund-graphs" />
-            <r
               uid="{5F35249F-9ACC-44F5-85DE-2C47E3B9D0D2}"
-              p:after="r[@uid='{E359AC01-5FA3-42AE-B954-EFB91C0CD1AE}']"
+              p:after="r[@uid='{739162E2-69FE-4C57-A83F-C352AFA0A39B}']"
               s:ds="{82644763-4F2A-48CF-BADE-7A8BE2A0EBA2}"
               s:id="{E5DD9F72-1F1D-439D-AC28-2B32B06BF019}"
               s:ph="/main/fund-graphs" />

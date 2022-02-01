@@ -1,10 +1,13 @@
 ﻿---
 ID: "dfe8ff35-f9e0-4563-b705-c3f4917d1c28"
-Parent: "47bd668e-4c0f-4d8a-9e71-b6c8c156b32f"
+Parent: "6116e2c5-0d1d-452e-898f-3739042e2046"
 Template: "af865864-56fb-4a24-bacc-278c33c44041"
 Path: /sitecore/content/LionTrustNew/Home/funds/MA Active Moderate Income Fund
 DB: master
 SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 2100
 - ID: "cce4e679-7e94-450d-8cc1-691bdf17ca78"
   Hint: LegacyFundPageData_FundReference
   Value: "{FEA12E78-7CF8-43CE-A34D-D34A09E0C6A3}"
@@ -73,32 +76,14 @@ Languages:
               s:id="{65A60416-FD52-4573-8DBE-83AAF4CA3978}"
               s:ph="/main/fund-graphs" />
             <r
-              uid="{E359AC01-5FA3-42AE-B954-EFB91C0CD1AE}"
-              p:after="r[@uid='{739162E2-69FE-4C57-A83F-C352AFA0A39B}']"
-              s:ds="{3B3AE26A-C317-4930-89AF-2B4BAD094BC9}"
-              s:id="{034EB997-49B9-4395-949F-BA16995C123D}"
-              s:ph="/main/fund-graphs" />
-            <r
               uid="{5F35249F-9ACC-44F5-85DE-2C47E3B9D0D2}"
-              p:after="r[@uid='{E359AC01-5FA3-42AE-B954-EFB91C0CD1AE}']"
+              p:after="r[@uid='{739162E2-69FE-4C57-A83F-C352AFA0A39B}']"
               s:ds="{6EF98BC6-313A-4A43-A778-5EE9E3B2B3CD}"
               s:id="{E5DD9F72-1F1D-439D-AC28-2B32B06BF019}"
               s:ph="/main/fund-graphs" />
             <r
-              uid="{A93708F0-60A5-4B5A-A71F-EBAD7534E9F2}"
-              p:after="r[@uid='{5F35249F-9ACC-44F5-85DE-2C47E3B9D0D2}']"
-              s:ds="{7BCC75DA-277E-4D1F-9759-53B94B3891BF}"
-              s:id="{05FCF7EF-B8E7-44C9-8950-74A08EA81DF2}"
-              s:ph="/main/fund-graphs" />
-            <r
-              uid="{09F227F2-D2C9-43CF-96D9-1212F96F8438}"
-              p:after="r[@uid='{A93708F0-60A5-4B5A-A71F-EBAD7534E9F2}']"
-              s:ds="{F1B445F3-3C4C-4DDC-8FFB-413F5C18BE42}"
-              s:id="{DE3BBA47-F726-43E8-A4F3-950B51597BF0}"
-              s:ph="/main/fund-graphs" />
-            <r
               uid="{24CDA0F0-E32A-4B69-8C8C-23AF6A264EDB}"
-              p:after="r[@uid='{09F227F2-D2C9-43CF-96D9-1212F96F8438}']"
+              p:after="r[@uid='{5F35249F-9ACC-44F5-85DE-2C47E3B9D0D2}']"
               s:ds="{D7AC1F97-0FC5-4270-B241-562D3865580D}"
               s:id="{BA0509C8-337A-45E7-A597-8035DC2F1C21}"
               s:ph="/main/fund-graphs" />

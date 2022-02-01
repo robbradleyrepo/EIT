@@ -1,0 +1,36 @@
+﻿---
+ID: "4dbf6171-c201-4373-8b3f-92c00922f0fa"
+Parent: "c90cac9a-7ea8-447f-88f4-39f59e6f3749"
+Template: "e14137dc-817e-40c3-b833-80c4824d2ff6"
+Path: "/sitecore/content/LionTrustNew/Home/funds/Sustainable Future UK Growth Fund/_Local/BC017 - Fund Manager Insights"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{C8811EB0-A738-4D1A-BF79-E860A2CBE0BE}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1492465c-0e3c-4fdb-97b8-0fc76924e400"
+      Hint: FundManagerInsightsBase_Heading
+      Value: Fund insights
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220117T195016Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "71469dcb-2347-4fa2-883b-50f4df0e5244"
+      Hint: ArticleSearchParameters_FundManagers
+      Type: Multilist
+      Value: |
+        {7170277C-D434-4C5D-9945-5D46793D683C}
+        {E8A37DF3-39A5-4C66-915F-779142411A1A}
+        {6BB03725-B0C3-4DF1-A72E-DC8F4822D997}
+        {99AC7D08-D85E-4BA1-9EBB-56C258E0A135}
+        {18287D6F-C09C-49D9-889E-474F5D3F143E}
+        {F1DC2199-DDFF-4CF6-8E71-036735EEFF94}
+        {3D5873D2-8F3E-4B53-A8EC-5DEF94420AD5}

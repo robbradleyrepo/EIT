@@ -1,0 +1,35 @@
+﻿---
+ID: "2460a56e-9536-4d9b-8662-6fdee25219d2"
+Parent: "5e39f6dd-4d79-444e-a997-8201ba598917"
+Template: "bbfe6c9b-afba-423c-9dd4-eff01eb556f5"
+Path: "/sitecore/content/LionTrustNew/Home/funds/UK Growth Fund/_Local/BC023 - Key Fund Documents"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{295D047C-FAB8-4CE8-B452-8C56A53AFF38}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "10b9fa41-4f22-4fd2-81be-ee105dfb4329"
+      Hint: KeyFundDocuments_Title
+      Value: Key fund literature
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220107T101855Z
+    - ID: "4189960d-9aae-42e3-8008-3ef3309002d6"
+      Hint: KeyFundDocuments_KeyDocuments
+      Type: Treelist
+      Value: |
+        {AF3A1818-8FF4-47B2-9F7A-77B70973286A}
+        {0F93DB43-5DD1-4D5E-B9C2-49D4B7A27AC9}
+        {E1D1A88E-79B6-4C4C-83B5-26272EEE2993}
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "760716cf-64d5-4c0d-9dff-2dbb9f0d476a"
+      Hint: KeyFundDocuments_Description
+      Value: 

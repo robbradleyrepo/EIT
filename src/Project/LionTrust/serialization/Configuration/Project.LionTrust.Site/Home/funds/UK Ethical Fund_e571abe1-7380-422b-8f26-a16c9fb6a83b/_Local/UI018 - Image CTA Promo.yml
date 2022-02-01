@@ -1,0 +1,47 @@
+﻿---
+ID: "605f09f5-7f8a-46d0-8a07-9ba14c893d67"
+Parent: "f2088b12-8fe7-4f69-8462-f083fef7b13a"
+Template: "d3d9d2ce-b2ce-49ac-b50d-6a5ffd4c4ab8"
+Path: "/sitecore/content/LionTrustNew/Home/funds/UK Ethical Fund/_Local/UI018 - Image CTA Promo"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{8BE2FDFE-F59F-4CDE-B133-6BAA9F2F5AD8}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1054e4b6-1cf5-4c08-8a6d-d9b02fb17050"
+      Hint: ImageCTAPromo_Image
+      Value: |
+        <image mediaid="{6C6FC11D-4926-4939-8AE1-FAE0E28D46A2}" />
+    - ID: "143867db-9bba-4097-9eb4-0099c175ad91"
+      Hint: ImageCTAPromo_CTALink
+      Value: |
+        <link text="Click here" anchor="" linktype="internal" class="" title=""  querystring="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211230T105130Z
+    - ID: "48bf236b-0681-4a09-9085-4933fa1c4a7a"
+      Hint: ImageCTAPromo_Body
+      Value: Test test
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "5f6cda9b-99ec-4bfc-8ddb-258d248bc1ae"
+      Hint: ImageCTAPromo_TitleInSide
+      Type: Checkbox
+      Value: 1
+    - ID: "7a84ea30-ff24-4c46-ae8f-51fcff940663"
+      Hint: ImageCTAPromo_Title
+      Value: Meet the team
+    - ID: "94eb1b3f-6b14-4a34-9b12-62dbed7a269e"
+      Hint: ImageCTAPromo_TitleColor
+      Value: "{ABC9B1B3-78C4-4493-A681-576EA253919E}"
+    - ID: "9a62f3e5-e428-4df1-ab96-ed4b651e352b"
+      Hint: ImageCTAPromo_CTALink2
+      Value: |
+        <link text="Click here 2" anchor="" linktype="internal" class="" title=""  querystring="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />

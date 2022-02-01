@@ -1,0 +1,28 @@
+﻿---
+ID: "831f399c-def6-4206-97e3-a9f58d2676ea"
+Parent: "8eb07474-3b7e-49e9-a740-271b000d8466"
+Template: "dee59db0-b8de-45d6-b615-5ef873f84bca"
+Path: "/sitecore/content/LionTrustNew/Home/funds/MA Active Growth Fund/_Local/BC036 - Discrete Performance Table"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{20F40CCF-4AAC-404A-8FD2-EFB8E72929DC}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220107T162054Z
+    - ID: "3f407d7e-838c-4d99-a6ad-890b6a463037"
+      Hint: FundSelector_Fund
+      Value: "{E538C5B9-2B09-432A-90C1-BC434072D86D}"
+    - ID: "450fec5e-b30e-48af-adc4-051fd7b27289"
+      Hint: PerformanceTable_Heading
+      Value: Discrete performance (%)
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ

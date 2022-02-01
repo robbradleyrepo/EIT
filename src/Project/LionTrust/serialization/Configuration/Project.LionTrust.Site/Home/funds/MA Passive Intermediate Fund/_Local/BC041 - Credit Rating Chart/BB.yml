@@ -1,0 +1,31 @@
+﻿---
+ID: "c97e52c4-98c3-443c-a3c7-f022a726d95c"
+Parent: "aa3a92d1-d07f-4a86-bbf5-cc767e84027e"
+Template: "daff5c4e-a4cf-48b5-bd94-e1a71556ff9a"
+Path: "/sitecore/content/LionTrustNew/Home/funds/MA Passive Intermediate Fund/_Local/BC041 - Credit Rating Chart/BB"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 275
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{DC7DD190-F2A4-46D2-AB63-935CD7F9B0A0}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "17793ba8-e9b1-406b-b73d-e10c37d4d2c2"
+      Hint: CreditRatingRow_Value
+      Value: 4.8
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220111T111701Z
+    - ID: "5d4c8234-c349-44b9-aa47-652484734a53"
+      Hint: CreditRatingRow_Name
+      Value: BB
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ

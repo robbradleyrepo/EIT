@@ -1,0 +1,39 @@
+﻿---
+ID: "23e38975-d4ad-4778-bfc5-bc90b7f341a5"
+Parent: "6e8072ea-7d57-4df6-a362-3d5208659ed6"
+Template: "bbfe6c9b-afba-423c-9dd4-eff01eb556f5"
+Path: "/sitecore/content/LionTrustNew/Home/funds/Balanced Fund/_Local/BC023 - Key Fund Documents"
+DB: master
+BranchID: "32b340aa-40ba-4124-a18b-5e04e48c38e3"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{295D047C-FAB8-4CE8-B452-8C56A53AFF38}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "10b9fa41-4f22-4fd2-81be-ee105dfb4329"
+      Hint: KeyFundDocuments_Title
+      Value: Key fund literature
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211116T131131Z
+    - ID: "4189960d-9aae-42e3-8008-3ef3309002d6"
+      Hint: KeyFundDocuments_KeyDocuments
+      Type: Treelist
+      Value: |
+        {25363A3E-304A-4CC8-9341-CBEDDA564332}
+        {78A4C2CA-4D4A-4DE3-B588-99FFF6167398}
+        {846B2DFE-DB11-4EB5-8699-2A23D3452BAF}
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "760716cf-64d5-4c0d-9dff-2dbb9f0d476a"
+      Hint: KeyFundDocuments_Description
+      Value: 
+    - ID: "99b18b81-5c97-47e1-9edc-9f83c5f49947"
+      Hint: KeyFundDocuments_ViewAllDocumentsLabel
+      Value: View all fund literature

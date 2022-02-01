@@ -1,0 +1,29 @@
+﻿---
+ID: "fe158c65-db57-461b-bd60-127e51d3ea3c"
+Parent: "0c26b7f8-9974-4393-b61c-35c3f67515f1"
+Template: "84cff857-8e94-4207-aa38-c58ba8f5041a"
+Path: "/sitecore/content/LionTrustNew/Home/funds/MA Passive Moderate Fund/_Local/UI024 - Disclaimer"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{9890E69E-8A11-4672-A01F-43D4715F135E}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "06013d0b-db4e-474e-86e7-bb771d5e7577"
+      Hint: FundDisclaimer_SmallWidthText
+      Type: Checkbox
+      Value: 1
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220111T110651Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "98d89d89-ca0f-41ff-a3bf-e0f22f240335"
+      Hint: FundDisclaimer_TextColor
+      Value: "{CAB398B8-B1BE-4F5E-99EA-387D1B46F231}"

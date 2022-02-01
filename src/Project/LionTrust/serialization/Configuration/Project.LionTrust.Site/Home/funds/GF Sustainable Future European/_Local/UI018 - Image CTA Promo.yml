@@ -1,0 +1,40 @@
+﻿---
+ID: "0ba71a42-105f-4bdb-84dc-f8b320a90046"
+Parent: "1ddcd954-2945-4585-abee-e41aaafc5227"
+Template: "d3d9d2ce-b2ce-49ac-b50d-6a5ffd4c4ab8"
+Path: "/sitecore/content/LionTrustNew/Home/funds/GF Sustainable Future European Corporate Bond Fund/_Local/UI018 - Image CTA Promo"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{8BE2FDFE-F59F-4CDE-B133-6BAA9F2F5AD8}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1054e4b6-1cf5-4c08-8a6d-d9b02fb17050"
+      Hint: ImageCTAPromo_Image
+      Value: |
+        <image mediaid="{90CA564A-E1D0-457E-A1A3-B0081AAC44C3}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220112T095237Z
+    - ID: "48bf236b-0681-4a09-9085-4933fa1c4a7a"
+      Hint: ImageCTAPromo_Body
+      Value: |
+        <p><span>The Sustainable Future (SF) Fixed Income team is&nbsp;headed by Stuart Steven, who was formerly <span style="background: white; color: #222222;">Investment Director at Scottish Widows Investment Partnership. Stuart&rsquo;s co-managers are Kenny Watson (formerly at Ignis Asset Management), along with Aitken Ross and Jack Willis who also started their careers in the graduate scheme at ATI.</span> </span></p>
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "5f6cda9b-99ec-4bfc-8ddb-258d248bc1ae"
+      Hint: ImageCTAPromo_TitleInSide
+      Type: Checkbox
+      Value: 1
+    - ID: "7a84ea30-ff24-4c46-ae8f-51fcff940663"
+      Hint: ImageCTAPromo_Title
+      Value: Meet the team
+    - ID: "94eb1b3f-6b14-4a34-9b12-62dbed7a269e"
+      Hint: ImageCTAPromo_TitleColor
+      Value: "{ABC9B1B3-78C4-4493-A681-576EA253919E}"

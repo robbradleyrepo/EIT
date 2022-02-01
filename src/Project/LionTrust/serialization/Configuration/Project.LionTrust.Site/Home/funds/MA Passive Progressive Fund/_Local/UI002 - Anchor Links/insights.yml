@@ -1,0 +1,31 @@
+﻿---
+ID: "19592f01-9b9f-4b77-bcec-ba229e442688"
+Parent: "b24485b8-cbb5-4475-bf3f-b2b604fadb6b"
+Template: "b074a5e0-b766-481c-869c-8c2e3034c4bc"
+Path: "/sitecore/content/LionTrustNew/Home/funds/MA Passive Progressive Fund/_Local/UI002 - Anchor Links/insights"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{B93654D4-E0CD-42C9-AD37-AC4825D0F0F1}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220111T113719Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "98b43e92-3166-4986-a181-e6ef91093454"
+      Hint: Anchor_Id
+      Value: insights
+    - ID: "aa0a9de9-8d65-4233-a9d5-dfab02bb9b5a"
+      Hint: Anchor_Name
+      Value: Insights

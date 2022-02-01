@@ -1,0 +1,32 @@
+﻿---
+ID: "29dfe417-4dac-451b-bce2-f70a0992d82b"
+Parent: "313db31b-0cf4-4d09-822f-e28c4b3e10f6"
+Template: "cd8e821e-800e-43dd-bf12-4a00f2bbbcbd"
+Path: "/sitecore/content/LionTrustNew/Home/Multi-Asset Portfolios/_Local/BC020 - Literature Overlay"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{E4908450-97F5-48A5-B396-19341E374146}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220127T153316Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "6b74c5e5-7f94-405c-9e38-2b38fcc30079"
+      Hint: Literature_Heading
+      Value: Fund literature
+    - ID: "eeed7c2e-dc3c-4e29-9855-03bd4f9139ad"
+      Hint: Literature_Cta
+      Value: |
+        <link text="View latest fund update" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{7E9E8706-F864-48E5-B4A2-57F2C408EFD7}" />

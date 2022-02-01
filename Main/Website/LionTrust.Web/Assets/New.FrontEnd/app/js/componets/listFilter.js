@@ -14,6 +14,7 @@ export default () => {
   const parentId = rootDom.dataset?.parentid;
   const contentType = rootDom.dataset?.contenttype;
   const funds = rootDom.dataset?.funds;
+  const hideFunds = rootDom.dataset?.hidefunds;
   const location = "https://cm-liontrust-it.sagittarius.agency/";
   let root = "";
   if (
@@ -220,6 +221,7 @@ export default () => {
         str = str + "page=" + this.page;
         if (this.searchText) str = str + "&searchTerm=" + this.searchText;
 		if(funds) str = str + "&ids=" + funds;
+		if(hideFunds) str = str + "&hideFunds=" + hideFunds;
         for (let prop in this.params) {
           const mutatedProp = prop.replace(/ /g, "");
           const lowerCaseProp =

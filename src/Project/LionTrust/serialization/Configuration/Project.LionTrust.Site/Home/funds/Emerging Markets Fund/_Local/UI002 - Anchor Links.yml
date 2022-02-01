@@ -1,0 +1,29 @@
+﻿---
+ID: "60ff94bb-59d7-4e75-add7-6328e3cdf562"
+Parent: "aeaa97b4-7720-44b1-acd0-8715f3bcf16a"
+Template: "10bf3f6c-ae91-42d5-adfd-a2ae935ce1c5"
+Path: "/sitecore/content/LionTrustNew/Home/funds/Emerging Markets Fund/_Local/UI002 - Anchor Links"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{7B28BE7E-79BD-4BE8-98C2-92648E0620D1}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211216T132305Z
+    - ID: "2dfcb4d4-7986-47a1-a0f3-79e139f3f976"
+      Hint: AnchorLinks_Heading
+      Value: "On this page: "
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "8d463fe0-e08e-4be8-88f5-727acef0e1c8"
+      Hint: AnchorLinks_Cta
+      Value: |
+        <link linktype="external" text="View literature" class="view-fund-literature" url="http://#" anchor="" target="" />

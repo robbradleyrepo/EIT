@@ -45,9 +45,10 @@
 
             var viewModel = new FundStatsViewModel()
             {
-                FundSelector = datasource                
+                FundSelector = datasource,
+                ManagedLength = datasource.ManagedByCurrentTeamForValue
             };
-            
+
             var fundClass = fund.Classes.Where(c => c.CitiCode == citiCode).FirstOrDefault();
             if (fundClass != null)
             {
@@ -58,17 +59,20 @@
                     viewModel.FundValues = fundValues;
                 }
 
-                // compute the Manager Inception Date as the oldest out of all the fund classes
-                var managerInceptionDate = fundClass.ManagerInceptionDateOfFund != DateTime.MinValue ? fundClass.ManagerInceptionDateOfFund : DateTime.MaxValue;
-                foreach (var cls in fund.Classes.Where(c => c.CitiCode != citiCode))
+                if (string.IsNullOrEmpty(datasource.ManagedByCurrentTeamForValue))
                 {
-                    if (cls.ManagerInceptionDateOfFund != DateTime.MinValue && cls.ManagerInceptionDateOfFund < managerInceptionDate)
+                    // compute the Manager Inception Date as the oldest out of all the fund classes
+                    var managerInceptionDate = fundClass.ManagerInceptionDateOfFund != DateTime.MinValue ? fundClass.ManagerInceptionDateOfFund : DateTime.MaxValue;
+                    foreach (var cls in fund.Classes.Where(c => c.CitiCode != citiCode))
                     {
-                        managerInceptionDate = cls.ManagerInceptionDateOfFund;
+                        if (cls.ManagerInceptionDateOfFund != DateTime.MinValue && cls.ManagerInceptionDateOfFund < managerInceptionDate)
+                        {
+                            managerInceptionDate = cls.ManagerInceptionDateOfFund;
+                        }
                     }
-                }
 
-                viewModel.ManagedLength = GetManagedLength(managerInceptionDate != DateTime.MaxValue ? managerInceptionDate : datasource.Fund.LaunchDate);
+                    viewModel.ManagedLength = GetManagedLength(managerInceptionDate != DateTime.MaxValue ? managerInceptionDate : datasource.Fund.LaunchDate);
+                }
             }
 
             return View("/views/fund/FourFundStats.cshtml", viewModel);

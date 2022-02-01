@@ -140,7 +140,7 @@
             return listingFundFacetsResponse;
         }
 
-        public ISearchResponse<IFundContentResult> GetFundListingResponse(string database, string fundTeams,string fundManagers, string fundRegions, string fundRanges, string searchTerm, string sortOrder, int page, string ids)
+        public ISearchResponse<IFundContentResult> GetFundListingResponse(string database, string fundTeams,string fundManagers, string fundRegions, string fundRanges, string searchTerm, string sortOrder, int page, string ids, bool hideFunds)
         {
             page = page - 1;
             var pageSize = Constants.Pagination.PageSize;
@@ -156,6 +156,7 @@
                 Skip = page * pageSize,
                 Take = pageSize,
                 Ids = ids?.Split('|'),
+                HideFunds = hideFunds
             };
 
             ContentSearchResults<FundSearchResultItem> contentSearchResults;

@@ -1,0 +1,31 @@
+﻿---
+ID: "15a824d4-b492-4003-94c2-4163da511f93"
+Parent: "e76edcd8-af7c-48a6-9da0-c1c55be38859"
+Template: "dee59db0-b8de-45d6-b615-5ef873f84bca"
+Path: "/sitecore/content/LionTrustNew/Home/funds/MA Blended Reserve Fund/_Local/BC036 - Cumulative Performance Table"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{B9D96CDB-FA72-4A8A-9832-705A3D1CD63A}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "24b821f2-896b-4bbe-ab3a-6c943a3d8b8f"
+      Hint: PerformanceTable_TableHeadingLabel
+      Value: 
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220110T140858Z
+    - ID: "3f407d7e-838c-4d99-a6ad-890b6a463037"
+      Hint: FundSelector_Fund
+      Value: "{357BB108-DD2E-4E5D-ABE2-F62F377B337A}"
+    - ID: "450fec5e-b30e-48af-adc4-051fd7b27289"
+      Hint: PerformanceTable_Heading
+      Value: Cumulative performance (%)
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ

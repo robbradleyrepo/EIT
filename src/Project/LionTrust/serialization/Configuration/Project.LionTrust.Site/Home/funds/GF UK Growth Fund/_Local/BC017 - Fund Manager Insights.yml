@@ -1,0 +1,34 @@
+﻿---
+ID: "48c2f0de-3a41-413e-83dd-584c3899dcef"
+Parent: "3dff6376-724b-4fe4-b70a-7a79246d8f2a"
+Template: "e14137dc-817e-40c3-b833-80c4824d2ff6"
+Path: "/sitecore/content/LionTrustNew/Home/funds/GF UK Growth Fund/_Local/BC017 - Fund Manager Insights"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{C8811EB0-A738-4D1A-BF79-E860A2CBE0BE}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1492465c-0e3c-4fdb-97b8-0fc76924e400"
+      Hint: FundManagerInsightsBase_Heading
+      Value: Fund insights
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220107T103558Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "71469dcb-2347-4fa2-883b-50f4df0e5244"
+      Hint: ArticleSearchParameters_FundManagers
+      Type: Multilist
+      Value: |
+        {039DD4F1-8CEE-408B-A206-93ACB8B512D6}
+        {3AF0F46B-301E-45E8-B5F9-6E4BF1FE6D40}
+        {593A3471-F89A-4F84-9A0B-802BE61972AE}
+        {42430A5F-F395-4518-98D9-C21C1011175D}
+        {0F980420-4156-41F4-951F-F156CD3F4359}

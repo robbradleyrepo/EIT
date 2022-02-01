@@ -6,7 +6,8 @@
 {
     <div class="lister-app" id="lister-app" 
          data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.FundApiRoute_SettingName))" 
-         data-literatureid="@(Model.FundLiterature != null ? Model.FundLiterature.Id.ToString() : string.Empty)">
+         data-literatureid="@(Model.FundLiterature != null ? Model.FundLiterature.Id.ToString() : string.Empty)"
+         data-hidefunds="1">
         <div class="article-filter-wrapper">
             <div class="article-filters" :class="mobileFilter ? 'active' : ''">
                 <div class="article-filters__header">
