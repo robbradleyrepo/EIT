@@ -1,5 +1,5 @@
 import listFilter from "./componets/listFilter";
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("load", () => {
     if ($('#lister-app').length > 0)
         listFilter();
     var anchorLinks = $('.page-anchor-link .page-anchor .page-anchor__right:not(.page-anchor__right-mobile) .page-anchor__links .page-anchor__link');
