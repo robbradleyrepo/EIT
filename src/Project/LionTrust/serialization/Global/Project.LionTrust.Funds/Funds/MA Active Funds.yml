@@ -17,6 +17,12 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "0905f092-b5b5-4971-b87e-57f4810bd729"
+      Hint: FundCard_Description
+      Value: MA Active Funds
+    - ID: "205ed0c5-d7b3-413a-8937-4b728937efef"
+      Hint: LegacyFund_FundTeam
+      Value: "{070E5C0B-03B2-4438-9DE1-555EE1B65DD6}"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20220201T084421Z
@@ -24,3 +30,27 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\Admin
+    - ID: "6387ca9a-7a5a-4d33-b706-201681c0b74c"
+      Hint: FundCard_Heading
+      Value: MA Active Funds
+    - ID: "6afb4eb4-25c4-472b-aa65-8ad9ddb3be2c"
+      Hint: LegacyFund_FundName
+      Value: MA Active Funds
+    - ID: "76af5024-2b12-421a-96cd-46e756f1db9a"
+      Hint: FundCard_CTA
+      Value: |
+        <link text="View Multi-Asset Active Funds" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{C56D2292-24AD-4559-822D-A2E91E62C6DD}" />
+    - ID: "90a7b1e0-c14e-4a3d-a717-72bec978a99a"
+      Hint: LegacyFund_CitiCode
+      Value: JMMK
+    - ID: "da4173d0-1f60-4edc-84a0-04c140de97d0"
+      Hint: LegacyFund_FundDescription
+      Value: MA Active Funds
+    - ID: "e43f6e86-0318-4766-b880-0c4f6512ca4e"
+      Hint: FundPage_Page
+      Value: |
+        <link text="View Multi-Asset Active Funds" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{C56D2292-24AD-4559-822D-A2E91E62C6DD}" />
+    - ID: "eb75dfef-c624-4571-b92b-8f37c36fcee6"
+      Hint: FundCard_Image
+      Value: |
+        <image mediaid="{07DFB6DE-1ACA-494E-89FB-157DB737837E}" />

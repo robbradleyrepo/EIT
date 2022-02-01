@@ -130,6 +130,11 @@
                 predicate = predicate.And(searchTermPredicate);
             }
 
+            if (fundSearchRequest.HideFunds)
+            {               
+                predicate = predicate.And(item => !item.HideFromFundList);
+            }
+
             var validationPredicate = PredicateBuilder.True<FundSearchResultItem>();
             validationPredicate = validationPredicate.And(item => item.FundPageUrl != null && item.FundPageUrl != string.Empty);
             validationPredicate = validationPredicate.And(item => item.FundCardImage != null && item.FundCardImage != string.Empty);

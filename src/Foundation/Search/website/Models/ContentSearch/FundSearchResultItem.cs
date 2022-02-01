@@ -48,5 +48,8 @@
 
         [IndexField("salesforce_fundid")]
         public string SalesforceFundId { get; set; }
+
+        [IndexField("LegacyFund_HideFromFundList")]
+        public bool HideFromFundList { get; set; }
     }
 }
