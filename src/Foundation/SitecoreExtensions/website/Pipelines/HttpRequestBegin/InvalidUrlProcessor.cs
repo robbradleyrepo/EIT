@@ -1,6 +1,7 @@
 ﻿namespace LionTrust.Foundation.SitecoreExtensions.Pipelines.HttpRequestBegin
 {
     using Sitecore;
+    using Sitecore.Configuration;
     using Sitecore.Diagnostics;
     using Sitecore.Links;
     using Sitecore.Pipelines.HttpRequest;
@@ -46,6 +47,16 @@
                 return;
             }
 
+            // do not redirect for the 404 page
+            if (Context.Site != null && Context.Database != null)
+            {
+                var pageNotFoundItem = Context.Database.GetItem(string.Concat(Context.Site.StartPath, Settings.ItemNotFoundUrl));
+                if (pageNotFoundItem != null && Context.Item.ID == pageNotFoundItem.ID)
+                {
+                    return;
+                }
+            }
+            
             // Remove the query string off the end if it has one.
             var query = request.Url.Query;
             var decodedQueryString = String.Empty;
