@@ -15,14 +15,14 @@
             {
                 <div class="col-lg-6 col-xl-4">
 
-                    <div class="fund-manager">
+                    <div class="fund-manager fund-manager-px fund-manager-card">
                         @using (Html.Glass().BeginRenderLinkWithGoal(manager, m => m.Page, manager.PageGoal, new NameValueCollection { { "class", "fund-manager__item" } }, isEditable: true))
                         {
                             <div class="row">
-                                <div class="col-4 col-md-2 col-lg-6">
+                                <div class="col-4 col-md-2 col-lg-6 fund-manager__img-col">
                                     @Html.Glass().RenderImage(manager, m => m.Image, new { Alt = manager.FullName, @class = "fund-manager__img" }, isEditable: true)
                                 </div>
-                                <div class="col-8 col-md-10 col-lg-6">
+                                <div class="col-8 col-md-10 col-lg-6 fund-manager__details-col">
                                     <div class="fund-manager__content">
                                         <div class="fund-manager__title">@Html.Glass().Editable(manager, m => m.FullName)</div>
                                         <span class="fund-manager__text">
