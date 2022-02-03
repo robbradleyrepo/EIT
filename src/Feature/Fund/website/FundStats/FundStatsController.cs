@@ -110,6 +110,12 @@
 
             var now = DateTime.Today;
             var lengthCount = now.Year - launchDate.Year;
+            var lengthCountMonths = now.Month - launchDate.Month;
+            if (lengthCountMonths < 0)
+            {
+                lengthCount--;
+            }
+
             var label = new StringBuilder();
 
             if(lengthCount > 0)
@@ -118,10 +124,9 @@
             }
             else
             {
-                lengthCount = now.Month - launchDate.Month;
-
-                if(lengthCount > 0)
+                if(lengthCountMonths > 0)
                 {
+                    lengthCount = lengthCountMonths;
                     label.Append(Sitecore.Globalization.Translate.Text("Month"));
                 }
                 else
