@@ -66,7 +66,6 @@ SharedFields:
                 $newItem.Fields["Article_PdfDocument"].Value = $blog.Fields["Article_PdfDocument"].Value
                 #_Page fields
                 $newItem.Fields["Breadcrumb_IncludeInBreadcrumb"].Value = $blog.Fields["Breadcrumb_IncludeInBreadcrumb"].Value
-                $newItem.Fields["Breadcrumb_BreadcrumbTitle"].Value = $blog.Fields["Breadcrumb_BreadcrumbTitle"].Value
                 $newItem.Fields["LegacyHeroImagePageData_PageHeaderImage"].Value = $blog.Fields["LegacyHeroImagePageData_PageHeaderImage"].Value
                 $newItem.Fields["LegacyHeroImagePageData_PageHeaderText"].Value = $blog.Fields["LegacyHeroImagePageData_PageHeaderText"].Value
                 $newItem.Fields["LegacyHeroImagePageData_ImagePosition"].Value = $blog.Fields["LegacyHeroImagePageData_ImagePosition"].Value
@@ -76,9 +75,6 @@ SharedFields:
                 $newItem.Fields["LegacyPresentationBase_ShortDescription"].Value = $blog.Fields["LegacyPresentationBase_ShortDescription"].Value
                 $newItem.Fields["IncludeInSearchResults"].Value = $blog.Fields["IncludeInSearchResults"].Value
                 $newItem.Fields["LegacyFundPageData_FundReference"].Value = $blog.Fields["LegacyFundPageData_FundReference"].Value
-                $newItem.Fields["LegacyFundPageData_HidePerformanceChart"].Value = $blog.Fields["LegacyFundPageData_HidePerformanceChart"].Value
-                $newItem.Fields["LegacyFundPageData_HideDiscretePerformanceTable"].Value = $blog.Fields["LegacyFundPageData_HideDiscretePerformanceTable"].Value
-                $newItem.Fields["LegacyFundPageData_HideCumulativePerformanceTable"].Value = $blog.Fields["LegacyFundPageData_HideCumulativePerformanceTable"].Value
                 $newItem.Fields["Sitemap_IncludeInSitemap"].Value = $blog.Fields["Sitemap_IncludeInSitemap"].Value
                 $newItem.Editing.EndEdit()
                 
