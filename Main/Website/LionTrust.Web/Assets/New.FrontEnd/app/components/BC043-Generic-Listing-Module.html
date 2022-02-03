@@ -1,4 +1,4 @@
-<div class="lister-app legacy-listmode" id="lister-app" data-host="GenericListingApi" data-fundfacetid="7BE813CE-126D-42C8-B4AE-9370E32F9B50" data-parentid="C8DD748E-C4C8-4852-B644-E7F40EC7ABD9">
+<div class="lister-app legacy-listmode" id="lister-app" v-cloak data-host="GenericListingApi" data-fundfacetid="7BE813CE-126D-42C8-B4AE-9370E32F9B50" data-parentid="C8DD748E-C4C8-4852-B644-E7F40EC7ABD9">
     <div class="article-filter-wrapper">
         <div class="article-filters" :class="mobileFilter ? 'active' : ''">
             <div class="article-filters__header">
@@ -20,7 +20,7 @@
                     </div>
                 </div>
             </div>
-            <div class="article-filters__body" v-if="getFacetsLength">
+            <div class="article-filters__body" v-if="getFacetsLength" v-cloak>
                 <div class="container">
                     <div class="row">
                         <div class="col-12 article-filters__lists">
@@ -28,7 +28,7 @@
                                 <div class="article-filters__dropdown relative" @click.stop>
                                     <div class="article-filters__select" @click="toggleOption"
                                         :class="open ? 'active' : ''">
-                                        <span class="article-filters__item-title" :class="active ? 'active' : ''">
+                                        <span class="article-filters__item-title" :class="active ? 'active' : ''" >
                                             {{facet.name}}
                                         </span>
                                         <i class="article-filters__icon-arrow"></i>
