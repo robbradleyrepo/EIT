@@ -24,7 +24,7 @@ namespace LionTrust.Foundation.SitecoreExtensions.Pipelines.HttpRequestBegin
             }
 
             // avoid api calls to return 404
-            if (args.Url.FilePath.Contains("/sitecore"))
+            if (args.Url.FilePath.ToLowerInvariant().ToLower().Contains("/sitecore"))
             {
                 return;
             }
