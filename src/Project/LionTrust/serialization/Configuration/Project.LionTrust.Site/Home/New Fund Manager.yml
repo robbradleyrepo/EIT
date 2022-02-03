@@ -4,6 +4,10 @@ Parent: "7502b69e-d154-4861-a033-bc0cb30a91b5"
 Template: "a742a8b9-b315-4895-8d46-8754962176ff"
 Path: /sitecore/content/LionTrustNew/Home/New Fund Manager
 DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 3600
 Languages:
 - Language: en
   Versions:

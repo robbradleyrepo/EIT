@@ -1,0 +1,111 @@
+﻿---
+ID: "0fc62b48-fa17-4728-a923-dc6049b44e93"
+Parent: "7502b69e-d154-4861-a033-bc0cb30a91b5"
+Template: "26e1649f-d891-47c8-91d9-be41231f6fd6"
+Path: "/sitecore/content/LionTrustNew/Home/404-page"
+DB: master
+BranchID: "3643bd93-3949-4b21-bba3-89cb15934f8c"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Applications/32x32/stop.png
+- ID: "8d5c486e-a0e3-4dbe-9a4a-cdff93594bda"
+  Hint: IncludeInSearchResults
+  Type: Checkbox
+  Value: 0
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 700
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{6FF528FF-B3F7-4976-8478-AA18791AAFA2}"
+          p:after="r[@uid='{9057DD73-496E-495D-9460-75D38BBB5B7E}']"
+          s:ds="{E99F3B07-421D-43E4-A0C5-F3ED483B5435}"
+          s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
+          s:par=""
+          s:ph="header" />
+        <r
+          uid="{80B5F5E0-79D0-4D46-8ACA-C1641F5BDFC1}"
+          p:after="r[@uid='{6FF528FF-B3F7-4976-8478-AA18791AAFA2}']"
+          s:ds=""
+          s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{A99840D1-7422-4CFC-B584-F65EC2F3E7CA}"
+          p:after="*[1=2]"
+          s:ds="{A55A8889-469F-44A2-8FA7-376CA1509311}"
+          s:id="{A811D2B0-D08D-4991-A9DD-6D9FA5799CBD}"
+          s:par=""
+          s:ph="main" />
+      </d>
+    </r>
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{40D3D732-2692-43A8-90D4-180808C91E06}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{6C2E728F-5BBA-4CE8-9717-763DA2F2FB4F}"
+              p:before="*"
+              s:ds="{60869F32-3D95-4A51-8538-C2AFB39610BF}"
+              s:id="{BA0509C8-337A-45E7-A597-8035DC2F1C21}"
+              s:ph="main" />
+            <r
+              uid="{0BD01103-1700-458C-B9EC-5CB46F0D4BD6}"
+              p:after="r[@uid='{6C2E728F-5BBA-4CE8-9717-763DA2F2FB4F}']"
+              s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+              s:ph="/header/navigation" />
+            <r
+              uid="{80B5F5E0-79D0-4D46-8ACA-C1641F5BDFC1}"
+              s:ds="{8F7AA55E-2569-4646-A28E-7FA325F64C31}" />
+          </d>
+        </r>
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Page not found | Liontrust Asset Management PLC
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220202T082211Z
+    - ID: "679b8b40-1876-4eb5-9280-487bcd8b4a5e"
+      Hint: Sitemap_IncludeInSitemap
+      Type: Checkbox
+      Value: 0
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: Sorry, page not found
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: "404-page"
+    - ID: "9dc8ae8c-c3e1-4536-aa2a-d0bff7398795"
+      Hint: LegacyPresentationBase_MetaDescription
+      Value: Sorry, page not found
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: "Sorry - the page you were looking for cannot be found"
+    - ID: "c7d0c7f7-b27c-4f96-b813-32bb19174b6a"
+      Hint: LegacyPresentationBase_ExcludeInSearchResults
+      Type: Checkbox
+      Value: 1
+    - ID: "e409ce1d-3e4e-4c73-a01d-ba8e98bdf25f"
+      Hint: Breadcrumb_IncludeInBreadcrumb
+      Type: Checkbox
+      Value: 0

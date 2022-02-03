@@ -4,6 +4,10 @@ Parent: "7502b69e-d154-4861-a033-bc0cb30a91b5"
 Template: "ec2bbbdd-7d39-4598-a98c-4ba5e4163a07"
 Path: /sitecore/content/LionTrustNew/Home/Sign Up for Newsletter
 DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 4200
 Languages:
 - Language: en
   Versions:
