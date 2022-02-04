@@ -24,7 +24,7 @@
     </section>
   </header>
 
-  <main id="result-list-app" class="result-list-app" data-pagesize="10" data-host="SiteSearchApi">
+  <main id="result-list-app" class="result-list-app" data-pagesize="10" data-host="SiteSearchApi" v-cloak>
     <div class="container search-page">
       <div class="row">
         <div class="col-lg-7">
@@ -67,7 +67,7 @@
           <div v-if="loading" class="text-center mb-5">
             <div class="spinner-border text-gold" role="status"></div>
           </div>
-          <p v-if="!results.length && !loading" class="h2 text-center mb-5">
+          <p v-if="!results.length && !loading" class="search-no-result mb-5">
             On your request nothing has been found. Please try again
           </p>
           <div v-if="init">     
