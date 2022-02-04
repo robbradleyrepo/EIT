@@ -12,7 +12,7 @@
             </div>
             <div class="row set-location__row">
                 <div class="col-4 col-lg-4 set-location">
-                    <div class="set-location__content">                        
+                    <div class="set-location__content">
                         <ul class="set-location__list">
                             <li class="set-location__item" data-iso-country="GB">United Kingdom</li>
                             <li class="set-location__item" data-iso-country="FR">France</li>
@@ -22,7 +22,7 @@
                     </div>
                 </div>
                 <div class="col-4 col-lg-4 order-lg-1 set-location">
-                    <div class="set-location__content">                        
+                    <div class="set-location__content">
                         <ul class="set-location__list">
                             <li class="set-location__item" data-iso-country="CN">China</li>
                             <li class="set-location__item" data-iso-country="JP">Japan</li>
@@ -32,7 +32,7 @@
 
                 </div>
                 <div class="col-4 col-lg-4 set-location">
-                    <div class="set-location__content">                        
+                    <div class="set-location__content">
                         <ul class="set-location__list">
                             <li class="set-location__item" data-iso-country="US">United States</li>
                         </ul>
@@ -58,98 +58,135 @@
             <div class="onboarding-overlay__title">
                 Which of these best describes you
             </div>
-            <div class="onboarding-overlay__btns">
-                <button data-set-step="3" data-investor-type="0"
-                    class="btn btn-primary onboarding-overlay__set-step private-investor"
-                    id="correct-location">
-                    Private investor
-                    <i class="icon-arrow-right animate-arrow"></i>
-                </button>
-                <button data-set-step="3" data-investor-type="1" class="btn btn-primary onboarding-overlay__set-step">
-                    Professional investor
-                    <i class="icon-arrow-right animate-arrow"></i>
-                </button>
-                <!-- just add two buttons bellow -->
-                <button data-set-step="3" data-investor-type="2" class="btn btn-primary onboarding-overlay__set-step">
-                    Shareholder / Analyst
-                    <i class="icon-arrow-right animate-arrow"></i>
-                </button>
-                <button data-set-step="3" data-investor-type="3" class="btn btn-primary onboarding-overlay__set-step">
-                    Journalist
-                    <i class="icon-arrow-right animate-arrow"></i>
-                </button>
+            <div class="container onboarding-overlay__container">
+                <div class="onboarding-overlay__btns row">
+                    <div class="col-6 col-md-4 onboarding-overlay__btn-col">
+                        <button data-set-step="3" data-investor-type="0"
+                            class="btn btn-primary onboarding-overlay__set-step private-investor" id="correct-location">
+                            <span class="onboarding-overlay__btn-title"><img src="../images/svg-icons/Private investor.svg" alt=""/> Private investor</span>
+                            <span class="onboarding-overlay__btn-description">Individuals investing on their own behalf</span>
+                        </button>
+                    </div>
+                    <div class="col-6 col-md-4 onboarding-overlay__btn-col">
+                        <button data-set-step="3" data-investor-type="1" class="btn btn-primary onboarding-overlay__set-step">
+                            <span class="onboarding-overlay__btn-title"><img src="../images/svg-icons/Professional investor.svg" alt=""/>Professional investor</span>
+                            <span class="onboarding-overlay__btn-description">Current and potential shareholders in Liontrust Asset Management PLC</span>
+                        </button>
+                    </div>
+                    <!-- just add two buttons bellow -->
+                    <div class="col-6 col-md-4 onboarding-overlay__btn-col">
+                        <button data-set-step="3" data-investor-type="2"
+                            class="btn btn-primary onboarding-overlay__set-step">
+                            <span class="onboarding-overlay__btn-title"><img src="../images/svg-icons/Institutional investor.svg" alt=""/> Institutional investor</span>
+                            <span class="onboarding-overlay__btn-description">ICurrent and potential shareholders</span>
+                        </button>
+                    </div>
+                    <div class="col-6 col-md-4 onboarding-overlay__btn-col">
+                        <button data-set-step="3" data-investor-type="3"
+                            class="btn btn-primary onboarding-overlay__set-step">
+                            <span class="onboarding-overlay__btn-title"><img src="../images/svg-icons/Journalist.svg" alt=""/>Journalist</span>
+                            <span class="onboarding-overlay__btn-description">Current and potential shareholders in Liontrust Asset Management PLC</span>
+                        </button>
+                    </div>
+                    <div class="col-6 col-md-4 onboarding-overlay__btn-col">
+                        <button data-set-step="3" data-investor-type="3"
+                            class="btn btn-primary onboarding-overlay__set-step">
+                            <span class="onboarding-overlay__btn-title"><img src="../images/svg-icons/Shareholders.svg" alt=""/>Shareholders</span>
+                            <span class="onboarding-overlay__btn-description">Current and potential shareholders in Liontrust Asset Management PLC</span>
+                        </button>
+                    </div>
+                    <div class="col-6 col-md-4 onboarding-overlay__btn-col">
+                        <button data-set-step="3" data-investor-type="3"
+                            class="btn btn-primary onboarding-overlay__set-step">
+                            <span class="onboarding-overlay__btn-title"><img src="../images/svg-icons/Charity.svg" alt=""/>Charity</span>
+                            <span class="onboarding-overlay__btn-description">Current and potential shareholders in Liontrust Asset Management PLC</span>
+                        </button>
+                    </div>
+                    <div class="col-12">
+                    <a href="#" data-toggle="modal" data-target="#exampleModal" class="onboarding-overlay__get-hint">
+                        Why are you asking this?
+                    </a>
+                </div>
+                </div>
             </div>
-            <a href="#" data-toggle="modal" data-target="#exampleModal" class="onboarding-overlay__get-hint">
-                Why are you asking this?
-            </a>
-        </div>
-        <div class="onboarding-overlay__tab" data-tab-number="3">
-            <div class="onboarding-overlay__title">
-                And finally, please confirm the following
-            </div>
-            <div class="onboarding-overlay__text">
-                I’m a Private Investor in the United Kingdom and I agree to comply with the terms and conditions of the website.
-            </div>
-            <div class="onboarding-overlay__scroller">
-                <p>
-                    <strong>
-                        Before we show you our UK Investors website we need to show you this important information.
-                    </strong>
-                    <br>
-                    By clicking on UK, you have confirmed that you are based in the United Kingdom and that you meet the
-                    following requirements.The information in this area of the website is intended for institutional
-                    investors and consultants in the United Kingdom only. It is not intended for use by any other
-                    persons including members of the general public or investors from other jurisdictions. Please
-                    remember that all investment strategies have the potential for profit and loss and your or your
-                    clients’ capital may be at risk. Baillie Gifford & Co and Baillie Gifford & Co Limited are
-                    authorised and regulated by the Financial Conduct Authority. Baillie Gifford & Co Limited is an
-                    Authorised Corporate Director of OEICs. The information contained in this website has been compiled
-                    with considerable care to ensure its accuracy at the date of publication. However, no representation
-                    or warranty, express or implied, is made to its accuracy or completeness. Nothing in this
-                    information or elsewhere in this website shall exclude, limit or restrict our duties and liabilities
-                    to you under the United Kingdom’s Financial Services and Markets Act 2000 or any conduct of business
-                    rules which we are bound to comply with. This website is informative only and the information
-                    provided should not be considered as investment or other advice or a recommendation to buy, sell or
-                    hold a particular investment. You can read details of our Legal and Important Information here.
-                </p>
-            </div>
-            <div class="onboarding-overlay__btns">
-                <button class="btn btn-primary" id="submit-board">
-                    Yes, I agree
-                    <i class="icon-arrow-right animate-arrow"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="onboarding-overlay__steps">
-        <span data-change-step="1" class="onboarding-overlay__step active"></span>
-        <span data-change-step="2" class="onboarding-overlay__step"></span>
-        <span data-change-step="3" class="onboarding-overlay__step"></span>
-    </div>
-</div>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Why are you asking this?</h5>
+            <div class="onboarding-overlay__tab" data-tab-number="3">
+                <div class="onboarding-overlay__title">
+                    And finally, please confirm the following
+                </div>
+                <div class="onboarding-overlay__text">
+                    I’m a Private Investor in the United Kingdom and I agree to comply with the terms and conditions of
+                    the
+                    website.
+                </div>
+                <div class="onboarding-overlay__scroller">
+                    <p>
+                        <strong>
+                            Before we show you our UK Investors website we need to show you this important information.
+                        </strong>
+                        <br>
+                        By clicking on UK, you have confirmed that you are based in the United Kingdom and that you meet
+                        the
+                        following requirements.The information in this area of the website is intended for institutional
+                        investors and consultants in the United Kingdom only. It is not intended for use by any other
+                        persons including members of the general public or investors from other jurisdictions. Please
+                        remember that all investment strategies have the potential for profit and loss and your or your
+                        clients’ capital may be at risk. Baillie Gifford & Co and Baillie Gifford & Co Limited are
+                        authorised and regulated by the Financial Conduct Authority. Baillie Gifford & Co Limited is an
+                        Authorised Corporate Director of OEICs. The information contained in this website has been
+                        compiled
+                        with considerable care to ensure its accuracy at the date of publication. However, no
+                        representation
+                        or warranty, express or implied, is made to its accuracy or completeness. Nothing in this
+                        information or elsewhere in this website shall exclude, limit or restrict our duties and
+                        liabilities
+                        to you under the United Kingdom’s Financial Services and Markets Act 2000 or any conduct of
+                        business
+                        rules which we are bound to comply with. This website is informative only and the information
+                        provided should not be considered as investment or other advice or a recommendation to buy, sell
+                        or
+                        hold a particular investment. You can read details of our Legal and Important Information here.
+                    </p>
+                </div>
+                <div class="onboarding-overlay__btns">
+                    <button class="btn btn-primary" id="submit-board">
+                        Yes, I agree
+                        <i class="icon-arrow-right animate-arrow"></i>
+                    </button>
+                </div>
             </div>
-            <div class="modal-body">
-                <p class="font-500">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.
-                </p>
-                <p class="mb-0">
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                    dicta sunt.
-                </p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" data-dismiss="modal" aria-label="Close" class="modal-btn">ok <i
-                        class="icon-arrow-right"></i></button>
+        </div>
+        <div class="onboarding-overlay__steps">
+            <span data-change-step="1" class="onboarding-overlay__step active"></span>
+            <span data-change-step="2" class="onboarding-overlay__step"></span>
+            <span data-change-step="3" class="onboarding-overlay__step"></span>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Why are you asking this?</h5>
+                </div>
+                <div class="modal-body">
+                    <p class="font-500">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua.
+                    </p>
+                    <p class="mb-0">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                        laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                        dicta sunt.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="modal-btn">ok <i
+                            class="icon-arrow-right"></i></button>
+                </div>
             </div>
         </div>
     </div>
-</div>
