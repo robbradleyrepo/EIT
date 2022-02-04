@@ -22,6 +22,7 @@
             public const string ResultsPerPageFieldId = "{2056E3A0-3765-4DF0-8836-349180E8D7F5}";
             public const string NoSearchResultsFoundLabelFieldId = "{83D03CE9-1F83-4F04-8D65-474AB9BFBFC0}";
             public const string FactsheetLinkTextFieldId = "{94CAE85F-6AED-4D42-BA9B-C487AF809CC7}";
+            public const string ArticlePageTemplateId = "{AB8309B9-E012-4C89-88BB-6D364FB5E0DB}";
         }
 
         public static class SiteSearchFilter

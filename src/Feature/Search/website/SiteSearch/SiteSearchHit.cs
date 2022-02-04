@@ -9,7 +9,7 @@
 
         public string PageTitle { get; set; }
 
-        public string PageDate { get; set; }
+        public string PageDate { get; set; }        
 
         public string Author { get; set; }
 
@@ -26,5 +26,9 @@
         public string FundTeamUrl { get; set; }
 
         public Guid TemplateId { get; set; }
+
+        public string ArticleDate { get; set; }
+
+        public bool IsArticle { get; set; }
     }
 }

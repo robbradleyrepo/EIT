@@ -4,7 +4,7 @@
 
 @if (Model != null)
 {
-    <div class="lister-app" id="lister-app" 
+    <div class="lister-app" id="lister-app" v-cloak 
          data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.FundApiRoute_SettingName))" 
          data-literatureid="@(Model.FundLiterature != null ? Model.FundLiterature.Id.ToString() : string.Empty)"
          data-hidefunds="1">
@@ -48,7 +48,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="article-filters__body" v-if="getFacetsLength">
+                <div class="article-filters__body" v-if="getFacetsLength" v-cloak>
                     <div class="container">
                         <div class="row">
                             <div class="col-12 article-filters__lists">
@@ -146,7 +146,7 @@
             <div class="text-center my-5" v-if="loading">
                 <div class="spinner-border text-gold" role="status"></div>
             </div>
-            <p v-if="!searchData.length && !loading" class="h2 text-center mb-5">
+            <p v-if="!searchData.length && !loading" class="search-no-result mb-5">
                 @Model.NoResultsFoundLabel
             </p>
             <div class="row" v-if="grid">

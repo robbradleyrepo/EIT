@@ -4,7 +4,7 @@
 @model LionTrust.Feature.Listings.Models.IDocumentLister
 @if (Model != null)
 {
-    <section class="container" id="lister-app" data-host="DocumentsApi" data-folderid="@Model.Id">
+    <section class="container" id="lister-app" v-cloak data-host="DocumentsApi" data-folderid="@Model.Id">
         <div class="doc-list">
             <div class="doc-list__item">
                 <div class="row align-items-center">
