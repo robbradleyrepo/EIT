@@ -2,7 +2,7 @@
 @using Glass.Mapper.Sc
 @using Glass.Mapper.Sc.Web.Mvc
 @model LionTrust.Feature.Listings.Models.IGenericListingFacets
-<div class="lister-app legacy-listmode" id="lister-app" data-host="GenericListingApi"
+<div class="lister-app legacy-listmode" id="lister-app" v-cloak data-host="GenericListingApi"
      data-fundfacetid="@Model.Id.ToString()" data-parentid="@Model.Id.ToString()">
     <div class="article-filter-wrapper">
         <div class="article-filters" :class="mobileFilter ? 'active' : ''">
@@ -27,7 +27,7 @@
                     </div>
                 </div>
             </div>
-            <div class="article-filters__body" v-if="getFacetsLength">
+            <div class="article-filters__body" v-if="getFacetsLength" v-cloak>
                 <div class="container">
                     <div class="row">
                         <div class="col-12 article-filters__lists">

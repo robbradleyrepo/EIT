@@ -2,6 +2,7 @@
 {
     using LionTrust.Foundation.Search.Models.ContentSearch;
     using Sitecore.ContentSearch;
+    using System;
 
     public class SiteSearchResultItem : BaseSearchResultItem
     {
@@ -37,5 +38,8 @@
 
         [IndexField("LegacyDocument_DocumentDescription")]
         public string DocumentDescription { get; set; }
+
+        [IndexField("Article_Date")]
+        public DateTime ArticleDate { get; set; }
     }
 }

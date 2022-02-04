@@ -1,7 +1,9 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @using Sitecore.Configuration
 @model LionTrust.Feature.Search.SiteSearch.ISiteSearch
-<div class="container" id="result-list-app" data-pagesize="@(!string.IsNullOrWhiteSpace(@Model.ResultsPerPage) ? "10" : @Model.ResultsPerPage)" data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.SiteSearchApiRoute_SettingName))">
+<div class="container" id="result-list-app" v-cloak 
+     data-pagesize="@(!string.IsNullOrWhiteSpace(@Model.ResultsPerPage) ? "10" : @Model.ResultsPerPage)" 
+     data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.SiteSearchApiRoute_SettingName))">
     <div class="row">
         <div class="col-lg-7">
             <div class="search-header__desktop">
@@ -22,7 +24,7 @@
             <div v-if="loading" class="text-center mb-5">
                 <div class="spinner-border text-gold" role="status"></div>
             </div>
-            <p v-if="!results.length && !loading" class="h2 text-center mb-5">
+            <p v-if="!results.length && !loading" class="search-no-result mb-5">
                 @Model.NoSearchResultsFound
             </p>
             <div v-if="init">
@@ -38,7 +40,7 @@
                         <a :href="item.url">
                             <p class="search-item__text">{{item.copy}}</p>
                         </a>
-                        <div class="search-item__date">
+                        <div v-if="item.resultType === 'Article'" class="search-item__date">
                             <i class="icon-clock"></i>
                             {{item.pageDate}}
                         </div>

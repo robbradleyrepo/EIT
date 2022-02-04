@@ -3,7 +3,7 @@
 @model LionTrust.Feature.Search.Models.IFundCategoryLister
 @if (Model != null)
 {
-    <div class="lister-app" id="lister-app" data-funds="@string.Join("|", Model.Funds)" data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.FundApiRoute_SettingName))" data-literatureid="@(Model.FundLiterature != null ? Model.FundLiterature.Id.ToString() : string.Empty)">
+    <div class="lister-app" id="lister-app" v-cloak data-funds="@string.Join("|", Model.Funds)" data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.FundApiRoute_SettingName))" data-literatureid="@(Model.FundLiterature != null ? Model.FundLiterature.Id.ToString() : string.Empty)">
     <h2 class="h3 text-center mt-3 mt-lg-4">
         @Html.Glass().Editable(Model, m => m.Title)</h2>
     <section class="container">

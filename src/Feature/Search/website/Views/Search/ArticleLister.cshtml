@@ -7,7 +7,7 @@
 @if (Model != null)
 {
     var fundId = HttpContext.Current.Request.QueryString.Get("ids");
-    <div id="lister-app"
+    <div v-cloak id="lister-app"
          data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.ArticleApiRoute_SettingName))"
          data-contenttype="@Model.ContentType"
          data-funds="@fundId">
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="article-filters__body" v-if="getFacetsLength">
+                <div class="article-filters__body" v-if="getFacetsLength" v-cloak>
                     <div class="container">
                         <div class="row">
                             <div class="col-12 article-filters__lists">

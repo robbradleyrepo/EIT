@@ -14,17 +14,25 @@ namespace LionTrust.Foundation.SitecoreExtensions.Pipelines.HttpRequestBegin
         public override void Process(HttpRequestArgs args)
         {
             if (
-                Context.Item != null
-                || Context.Site == null
-                || Context.Database == null
-                || File.Exists(HttpContext.Current.Server.MapPath(args.Url.FilePath))
+                Context.Item != null ||
+                Context.Site == null ||
+                Context.Database == null ||
+                File.Exists(HttpContext.Current.Server.MapPath(args.Url.FilePath))
                )
             {
                 return;
             }
 
             // avoid api calls to return 404
-            if (args.Url.FilePath.ToLowerInvariant().ToLower().Contains("/sitecore"))
+            var fundSearchApi = Settings.GetSetting("Feature.Search.FundApiRoute", string.Empty).ToLowerInvariant().ToLower();
+            var articleSearchApi = Settings.GetSetting("Feature.Search.ArticleApiRoute", string.Empty).ToLowerInvariant().ToLower();
+            var myFundSearchApi = Settings.GetSetting("Feature.Search.MyFundsApiRoute", string.Empty).ToLowerInvariant().ToLower();
+            var aiteSearchApi = Settings.GetSetting("Feature.Search.SiteSearchApiRoute", string.Empty).ToLowerInvariant().ToLower();
+            if (args.Url.FilePath.ToLowerInvariant().ToLower().Contains("/sitecore") ||
+                args.Url.FilePath.ToLowerInvariant().ToLower().Contains(fundSearchApi) ||
+                args.Url.FilePath.ToLowerInvariant().ToLower().Contains(articleSearchApi) ||
+                args.Url.FilePath.ToLowerInvariant().ToLower().Contains(myFundSearchApi) ||
+                args.Url.FilePath.ToLowerInvariant().ToLower().Contains(aiteSearchApi))
             {
                 return;
             }

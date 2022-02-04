@@ -19,6 +19,11 @@
     @Html.Sitecore().VisitorIdentification()
     <link rel="icon" href="/dist/images/favicon.ico">
     <link rel="stylesheet" href="/dist/css/styles.min.css">
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
     <link rel="canonical" href="@Html.Sitecore().CurrentItem.GetCanonicalUrl()">
     @if (!Sitecore.Context.PageMode.IsExperienceEditor)
     {

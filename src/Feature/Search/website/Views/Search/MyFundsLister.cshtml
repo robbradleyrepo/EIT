@@ -4,7 +4,7 @@
 @model LionTrust.Feature.Search.Models.IMyFundsLister
 @if (Model != null)
 {
-<div class="lister-app" id="lister-app"
+<div class="lister-app" id="lister-app" v-cloak 
      data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.MyFundsApiRoute_SettingName))"
      data-literatureid="@(Model.FundLiterature != null ? Model.FundLiterature.Id.ToString() : string.Empty)"
      data-fundfacetid="@(Model.FacetsConfiguration != null ? Model.FacetsConfiguration.Id.ToString() : string.Empty)">
@@ -25,7 +25,7 @@
                     </div>
                 </div>
             </div>
-            <div class="article-filters__body article-filters__body_no-bg" v-if="getFacetsLength">
+            <div class="article-filters__body article-filters__body_no-bg" v-if="getFacetsLength" v-cloak>
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-lg-6 article-filters__lists justify-content-start">

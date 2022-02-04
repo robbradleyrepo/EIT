@@ -125,6 +125,9 @@
             {
                 if (hit.Document != null)
                 {
+                    var articleDate = hit.Document.ArticleDate != DateTime.MinValue
+                        ? hit.Document.ArticleDate.ToString("dd MMMM yyyy")
+                        : hit.Document.Updated.ToString("dd MMMM yyyy");
                     var siteSearchHit = new SiteSearchHit
                     {
                         Url = hit.Document.PageUrl,
@@ -135,9 +138,9 @@
                         FundTeam = hit.Document.FundTeamName,
                         FundTeamUrl = hit.Document.FundTeamPage,
                         ResultType = hit.Document.ResultType,
-                        PageDate = hit.Document.Updated.ToString("dd MMMM yyyy"),
+                        PageDate = articleDate,
                         TemplateId = hit.Document.TemplateId.Guid,
-                        FactsheetUrl = hit.Document.FactSheetUrl
+                        FactsheetUrl = hit.Document.FactSheetUrl                       
                     };
 
                     results.Add(siteSearchHit);
