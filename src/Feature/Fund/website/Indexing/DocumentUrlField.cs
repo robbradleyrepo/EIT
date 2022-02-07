@@ -34,13 +34,25 @@
                 return null;
             }
 
-            var hashedUrl = string.Empty;
-
             var document = (LinkField)item.Fields[Foundation.Legacy.Constants.Document.DownloadLink_FieldId];
 
-            if (!string.IsNullOrWhiteSpace(document.Value))
+            if (document == null || string.IsNullOrWhiteSpace(document.Value))
             {
-                return HashingUtils.ProtectAssetUrl(document.GetFriendlyUrl());
+                return string.Empty;
+            }
+
+            var mediaItem = document.TargetItem;            
+            if (mediaItem == null)
+            {
+                return string.Empty;
+            }
+
+            var hashedUrl = string.Empty;
+            var mediaOption = new MediaUrlOptions() { AlwaysIncludeServerUrl = false, AbsolutePath = true, LowercaseUrls = true };
+            using (new SiteContextSwitcher(_factory.GetSite(Foundation.Indexing.Constants.SiteName)))
+            {
+                var fileUrl = MediaManager.GetMediaUrl(mediaItem, mediaOption);
+                hashedUrl = fileUrl != null ? HashingUtils.ProtectAssetUrl(fileUrl) : string.Empty;
             }
 
             return hashedUrl;
