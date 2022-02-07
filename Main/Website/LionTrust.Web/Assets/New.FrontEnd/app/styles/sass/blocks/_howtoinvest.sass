@@ -31,10 +31,10 @@
         display: flex
         margin-bottom: 0
         justify-content: space-between
-        order: 3
-        margin-top: 53px 
+        order: 2
+        margin-top: 0px 
         @include breakpoint(tablet, down)
-            order: 2
+            order: 1
             margin: 20px 0 6px 0
 
     &__slide
@@ -70,20 +70,22 @@
 
     &__footer
         display: flex
-        flex-direction: column
+        flex-direction: row
         justify-content: center
         order: 3
-        margin-top: 0px
-
-        @include breakpoint(tablet, up)
-            flex-direction: row
+        margin-top: 53px
+                             
+        @include breakpoint(tablet, down)                 	
             order: 2
-            margin-top: 0px
+            margin-top: 20px
+        
+        @include breakpoint(mobile, down)
+            flex-direction: column		
 
         > a
             margin-bottom: 0
-            @include breakpoint(tablet, down)
+            @include breakpoint(mobile, down)
                 margin: 20px 0 0 0
     .btn
-        @include breakpoint(desktop, up)
+        @include breakpoint(tablet, up)
             padding: 0 1rem
