@@ -22,9 +22,9 @@
             if (item == null)
             {
                 return null;
-            }         
+            }
 
-            var author = (MultilistField) item.Fields[new ID(Foundation.Legacy.Constants.Article.Authors_FieldId)];
+            MultilistField author = item.Fields[new ID(Foundation.Legacy.Constants.Article.Authors_FieldId)];
             if (author == null || author.Count == 0)
             {
                 return null;
@@ -32,7 +32,7 @@
 
             if (author.Count > 1)
             {
-                var multipleAuthorsSetting = (LookupField)item?.Fields[Foundation.Legacy.Constants.Article.MultipleAuthorsSetting_FieldId];
+                LookupField multipleAuthorsSetting = item.Fields[Foundation.Legacy.Constants.Article.MultipleAuthorsSetting_FieldId];
                 var multipleAuthorsSettingItem = multipleAuthorsSetting?.TargetItem;
                 if (multipleAuthorsSettingItem == null)
                 {
