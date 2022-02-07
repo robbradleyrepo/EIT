@@ -45,11 +45,11 @@
                             {{item.pageDate}}
                         </div>
                         <div v-if="item.resultType === 'Article'" class="search-item__footer">
-                            <div class="search-item__author search-item__footer-item">
+                            <div v-if="item.author" class="search-item__author search-item__footer-item">
                                 <img v-if="item.authorImage" :src="item.authorImage" :alt="item.author" class="search-item__author-img" />
                                 {{item.author}}
                             </div>
-                            <div class="search-item__tag search-item__footer-item">
+                            <div v-if="item.fundTeam" class="search-item__tag search-item__footer-item">
                                 <a :href="item.fundTeamUrl">
                                     <i class="icon-team"></i> {{item.fundTeam}}
                                 </a>
@@ -61,7 +61,7 @@
                                     <a :href="item.factsheetUrl"><i class="icon-file"></i> @Model.FactsheetLinkText</a>
                                 </div>
                             </div>
-                            <div class="search-item__tag search-item__footer-item">
+                            <div v-if="item.fundTeam" class="search-item__tag search-item__footer-item">
                                 <a :href="item.fundTeamUrl">
                                     <i class="icon-team"></i> {{item.fundTeam}}
                                 </a>

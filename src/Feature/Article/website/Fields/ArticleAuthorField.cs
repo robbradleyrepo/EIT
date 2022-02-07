@@ -22,26 +22,24 @@
             if (item == null)
             {
                 return null;
-            }
-
-            var multipleAuthorsSetting = (LookupField)item?.Fields[Foundation.Legacy.Constants.Article.MultipleAuthorsSetting_FieldId];
-            var multipleAuthorsSettingItem = multipleAuthorsSetting?.TargetItem;
-            var overrideValue = string.Empty;
-            
-            if (multipleAuthorsSettingItem != null)
-            {
-                overrideValue = multipleAuthorsSettingItem[Foundation.Legacy.Constants.Article.MultipleAuthorsSettingLabel_FieldId];
-            }
-             
-            if (!string.IsNullOrEmpty(overrideValue))
-            {
-                return overrideValue;
-            }
+            }         
 
             var author = (MultilistField) item.Fields[new ID(Foundation.Legacy.Constants.Article.Authors_FieldId)];
             if (author == null || author.Count == 0)
             {
                 return null;
+            }
+
+            if (author.Count > 1)
+            {
+                var multipleAuthorsSetting = (LookupField)item?.Fields[Foundation.Legacy.Constants.Article.MultipleAuthorsSetting_FieldId];
+                var multipleAuthorsSettingItem = multipleAuthorsSetting?.TargetItem;
+                if (multipleAuthorsSettingItem == null)
+                {
+                    return null;
+                }
+
+                return multipleAuthorsSettingItem[Foundation.Legacy.Constants.Article.MultipleAuthorsSettingLabel_FieldId];                
             }
 
             var authorItem = item.Database.GetItem(author[0]); 
