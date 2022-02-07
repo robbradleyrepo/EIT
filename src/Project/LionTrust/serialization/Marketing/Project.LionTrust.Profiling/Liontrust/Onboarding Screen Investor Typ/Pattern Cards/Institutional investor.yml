@@ -1,0 +1,33 @@
+﻿---
+ID: "6c222766-2c29-419f-9e36-83ad1a6f16fc"
+Parent: "a161876a-80c0-482e-b940-fd8910b0d2d4"
+Template: "4a6a7e36-2481-438f-a9ba-0453ecc638fa"
+Path: /sitecore/system/Marketing Control Panel/Profiles/LionTrust/Onboarding Screen Investor Type/Pattern Cards/Institutional Investor
+DB: master
+SharedFields:
+- ID: "6da71ad3-5849-4482-9317-d21390e5a348"
+  Hint: Pattern
+  Value: |
+    <tracking>
+      <profile id="2f782a8a-eb68-4cec-8776-af97fea461cd" name="Onboarding Screen Investor Type">
+        <key name="Charity" value="0" />
+        <key name="Institutional Investor" value="10" />
+        <key name="International Professional Investor" value="0" />
+        <key name="Journalist" value="0" />
+        <key name="Private Investor" value="0" />
+        <key name="Professional Investor" value="0" />
+        <key name="Shareholder" value="0" />
+      </profile>
+    </tracking>
+Languages:
+- Language: en
+  Fields:
+  - ID: "fe732790-2ddb-4657-a882-c2fce1fbf0c9"
+    Hint: Name
+    Value: Institutional Investor
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220207T144817Z

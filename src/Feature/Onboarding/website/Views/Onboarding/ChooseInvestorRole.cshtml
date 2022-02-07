@@ -8,16 +8,22 @@
     <div class="onboarding-overlay__title non-uk-title">
         @Html.Glass().Editable(Model, m => m.NonUKTitle)
     </div>
-    <div class="onboarding-overlay__btns">
-        @foreach (var investor in Model.Investors)
-        {
-            <button data-set-step="3" data-investor-type="@investor.Id" data-excluded-countires="@string.Join("|", investor.ExcludedCountires)" data-investor-name="@investor.InvestorName" class="btn btn-primary onboarding-overlay__set-step">
-                @investor.InvestorName
-                <i class="icon-arrow-right animate-arrow"></i>
-            </button>
-        }
+    <div class="container onboarding-overlay__container">
+        <div class="onboarding-overlay__btns row">
+            @foreach (var investor in Model.Investors)
+            {
+                <div class="col-6 col-md-4 onboarding-overlay__btn-col">
+                    <button data-set-step="3" data-investor-type="@investor.Id"
+                            data-excluded-countires="@string.Join("|", investor.ExcludedCountires)" data-investor-name="@investor.InvestorName"
+                            class="btn btn-primary onboarding-overlay__set-step">
+                        <span class="onboarding-overlay__btn-title">@Html.Glass().RenderImage(investor, i => i.InvestorIcon, isEditable: false) @investor.InvestorName</span>
+                        <span class="onboarding-overlay__btn-description">@investor.InvestorDescription</span>
+                    </button>
+                </div>               
+            }
+        </div>
+        <a href="#" data-toggle="modal" data-target="#exampleModal" class="onboarding-overlay__get-hint">
+            @Html.Glass().Editable(Model, m => m.ModalCTAText)
+        </a>
     </div>
-    <a href="#" data-toggle="modal" data-target="#exampleModal" class="onboarding-overlay__get-hint">
-        @Html.Glass().Editable(Model, m => m.ModalCTAText)
-    </a>
 }

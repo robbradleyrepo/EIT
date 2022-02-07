@@ -1,13 +1,9 @@
 ﻿---
-ID: "db7298ce-c106-40a7-9081-7e1ba151af90"
+ID: "a2d350db-51b2-4d94-8e69-78090f9a3c5c"
 Parent: "6dd21a68-fba0-46a5-819e-c01ac95ea6f7"
 Template: "b0e7c6c9-c2f3-45a8-89fc-a14817d9286c"
-Path: /sitecore/content/LionTrustNew/Global/Onboarding Configuration/Choose Investor Role/Journalist
+Path: /sitecore/content/LionTrustNew/Global/Onboarding Configuration/Choose Investor Role/Charity
 DB: master
-SharedFields:
-- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
-  Hint: __Sortorder
-  Value: 79
 Languages:
 - Language: en
   Versions:
@@ -15,17 +11,17 @@ Languages:
     Fields:
     - ID: "1b479915-f4df-4559-aadb-f74a744c85b1"
       Hint: Investor_Header
-      Value: "{4577FB3D-1D03-438F-8249-E358EF0A1E74}"
+      Value: "{8AF83FDB-F9D8-4B35-8C8E-C0F9465ED7B2}"
     - ID: "24886373-d6e1-411c-87a6-de0062562012"
       Hint: Investor_Icon
       Value: |
-        <image mediaid="{2295EABF-7117-4892-BEAB-D66395E8D70C}" />
+        <image mediaid="{31F83FEC-374D-4754-A0CC-1F42D0A7F702}" />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210819T084354Z
+      Value: 20220207T141828Z
     - ID: "34e7cbb9-226b-41f2-b03f-736bceeb7b06"
       Hint: Investor_PatternCard
-      Value: "{159FA472-CF0C-479B-A4AC-5826A5C7BA0B}"
+      Value: "{92FD4FE6-A3EC-4094-8293-C5AD7FC1A685}"
     - ID: "37cdaebe-7cd2-4d45-bd7b-cb58c9585328"
       Hint: Investor_ExcludedCountries
       Type: Multilist
@@ -49,10 +45,14 @@ Languages:
         {C1276E0B-FA1A-4D8B-AD38-3E9707231224}
     - ID: "4cad945a-dfc5-4001-86ec-e24f204caafb"
       Hint: Investor_ProfileCard
-      Value: "{6707C1D6-F44D-4255-A600-F9D222B3116A}"
+      Value: "{60D9A466-76EA-44D9-92CD-144F5B8E2980}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
     - ID: "b1cc8a2b-0544-4db1-83f0-a7186d820a5c"
       Hint: Investor_Description
-      Value: Members of the media
+      Value: Trustees and those who consult or invest on behalf of charities
     - ID: "c038b21d-c75c-47ce-97b2-04e665dd486c"
       Hint: Investor_Name
-      Value: Journalist
+      Value: Charity

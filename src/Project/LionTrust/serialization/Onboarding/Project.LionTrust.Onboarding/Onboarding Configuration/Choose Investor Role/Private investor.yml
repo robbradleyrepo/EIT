@@ -1,13 +1,13 @@
 ﻿---
-ID: "db7298ce-c106-40a7-9081-7e1ba151af90"
+ID: "e86157ca-78b9-4db6-9a06-e40bef9c55ac"
 Parent: "6dd21a68-fba0-46a5-819e-c01ac95ea6f7"
 Template: "b0e7c6c9-c2f3-45a8-89fc-a14817d9286c"
-Path: /sitecore/content/LionTrustNew/Global/Onboarding Configuration/Choose Investor Role/Journalist
+Path: /sitecore/content/LionTrustNew/Global/Onboarding Configuration/Choose Investor Role/Private investor
 DB: master
 SharedFields:
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 79
+  Value: "-50"
 Languages:
 - Language: en
   Versions:
@@ -15,17 +15,17 @@ Languages:
     Fields:
     - ID: "1b479915-f4df-4559-aadb-f74a744c85b1"
       Hint: Investor_Header
-      Value: "{4577FB3D-1D03-438F-8249-E358EF0A1E74}"
+      Value: "{8AF83FDB-F9D8-4B35-8C8E-C0F9465ED7B2}"
     - ID: "24886373-d6e1-411c-87a6-de0062562012"
       Hint: Investor_Icon
       Value: |
-        <image mediaid="{2295EABF-7117-4892-BEAB-D66395E8D70C}" />
+        <image mediaid="{2BEC2247-AAEE-4C94-B395-36B4ED71C393}" />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210819T084354Z
+      Value: 20210819T084239Z
     - ID: "34e7cbb9-226b-41f2-b03f-736bceeb7b06"
       Hint: Investor_PatternCard
-      Value: "{159FA472-CF0C-479B-A4AC-5826A5C7BA0B}"
+      Value: "{78A022B0-40B4-4FA0-9657-7DD3E7499DE1}"
     - ID: "37cdaebe-7cd2-4d45-bd7b-cb58c9585328"
       Hint: Investor_ExcludedCountries
       Type: Multilist
@@ -49,10 +49,10 @@ Languages:
         {C1276E0B-FA1A-4D8B-AD38-3E9707231224}
     - ID: "4cad945a-dfc5-4001-86ec-e24f204caafb"
       Hint: Investor_ProfileCard
-      Value: "{6707C1D6-F44D-4255-A600-F9D222B3116A}"
+      Value: "{0EAF6E2A-5B8D-418C-8FB4-5029FD141FC8}"
     - ID: "b1cc8a2b-0544-4db1-83f0-a7186d820a5c"
       Hint: Investor_Description
-      Value: Members of the media
+      Value: Individuals investing on their own behalf
     - ID: "c038b21d-c75c-47ce-97b2-04e665dd486c"
       Hint: Investor_Name
-      Value: Journalist
+      Value: Private investor

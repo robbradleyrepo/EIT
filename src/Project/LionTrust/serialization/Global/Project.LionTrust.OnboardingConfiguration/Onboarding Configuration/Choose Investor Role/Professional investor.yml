@@ -2,7 +2,7 @@
 ID: "41b064a1-4e7c-45a4-aa02-92e3bf941d3d"
 Parent: "6dd21a68-fba0-46a5-819e-c01ac95ea6f7"
 Template: "b0e7c6c9-c2f3-45a8-89fc-a14817d9286c"
-Path: /sitecore/content/LionTrustNew/Global/Onboarding Configuration/Choose Investor Role/Professional
+Path: /sitecore/content/LionTrustNew/Global/Onboarding Configuration/Choose Investor Role/Professional investor
 DB: master
 SharedFields:
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
@@ -16,6 +16,10 @@ Languages:
     - ID: "1b479915-f4df-4559-aadb-f74a744c85b1"
       Hint: Investor_Header
       Value: "{E804F92B-5F6F-45D0-ABF2-A61532DE50C4}"
+    - ID: "24886373-d6e1-411c-87a6-de0062562012"
+      Hint: Investor_Icon
+      Value: |
+        <image mediaid="{8D8DFDAC-3792-4973-A445-16279A469708}" />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20210819T084229Z
@@ -25,6 +29,9 @@ Languages:
     - ID: "4cad945a-dfc5-4001-86ec-e24f204caafb"
       Hint: Investor_ProfileCard
       Value: "{4D639D25-4151-4B11-ACA9-F5FC7D1A0105}"
+    - ID: "b1cc8a2b-0544-4db1-83f0-a7186d820a5c"
+      Hint: Investor_Description
+      Value: Those who invest on behalf of or advise private investors
     - ID: "c038b21d-c75c-47ce-97b2-04e665dd486c"
       Hint: Investor_Name
-      Value: Professional
+      Value: Professional investor
