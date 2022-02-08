@@ -114,38 +114,7 @@
             {
                 return new HttpStatusCodeResult(response.StatusCode, response.StatusMessage);
             }
-            else if(response.TotalResults > 0 && response.SearchResults != null)
-            {
-                var fundUpdateArticles = _articleListingDataManager.GetArticleListingResponse(
-                                            database, 
-                                            Search.Constants.APIFacets.Defaults.FundUpdateContentTypeId, 
-                                            string.Join("|", response.SearchResults.Select(f => f.FundId.ToString("N"))),
-                                            null,
-                                            fundManagers,
-                                            fundTeams, 
-                                            null, 
-                                            null,
-                                            searchTerm,
-                                            sortOrder,
-                                            page,
-                                            int.MaxValue);
-                var funds = response.SearchResults.ToList();
-
-                if (fundUpdateArticles != null && fundUpdateArticles.TotalResults > 0)
-                {
-                    foreach (var fund in funds)
-                    {
-                        var latestFundUpdateArticle = fundUpdateArticles.SearchResults.FirstOrDefault(a => a.FundId == fund.FundId.ToString("N"));
-                        if (latestFundUpdateArticle != null && !string.IsNullOrWhiteSpace(latestFundUpdateArticle.Url))
-                        {
-                            fund.FundUpdateUrl = latestFundUpdateArticle.Url;
-                        }
-                    }
-
-                    response.SearchResults = funds;
-                }
-            }
-
+            
             return new JsonCamelCaseResult(response, JsonRequestBehavior.AllowGet);
         }
 
