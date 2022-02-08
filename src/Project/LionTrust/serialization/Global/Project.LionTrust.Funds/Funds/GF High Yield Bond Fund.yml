@@ -85,6 +85,10 @@ Languages:
     - ID: "745247e0-72cf-441e-905d-4d35608d5724"
       Hint: LegacySectorFundData_SectorSixMonths
       Value: 9.054%
+    - ID: "76af5024-2b12-421a-96cd-46e756f1db9a"
+      Hint: FundCard_CTA
+      Value: |
+        <link text="view fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{E402C99A-B93A-4C05-B8C3-6AD2EAE44E08}" />
     - ID: "776341a4-f1e7-4a9e-9b44-7da25ed3505e"
       Hint: LegacyFund_Process
       Type: Treelist
@@ -149,14 +153,14 @@ Languages:
       Value: 7.563%
     - ID: "da4173d0-1f60-4edc-84a0-04c140de97d0"
       Hint: LegacyFund_FundDescription
-      Value: 
+      Value: GF High Yield Bond Fund
     - ID: "db79496e-bcc5-443f-bba6-e8d5bf0a31a3"
       Hint: LegacyFund_NumberOfHoldings
       Value: 108
     - ID: "e43f6e86-0318-4766-b880-0c4f6512ca4e"
       Hint: FundPage_Page
       Value: |
-        <link text="View fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{DA9CE397-7948-49C2-9704-872C3265F305}" />
+        <link text="View fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{E402C99A-B93A-4C05-B8C3-6AD2EAE44E08}" />
     - ID: "eb75dfef-c624-4571-b92b-8f37c36fcee6"
       Hint: FundCard_Image
       Value: |

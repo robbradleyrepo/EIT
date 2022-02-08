@@ -92,6 +92,10 @@ Languages:
     - ID: "745247e0-72cf-441e-905d-4d35608d5724"
       Hint: LegacySectorFundData_SectorSixMonths
       Value: 5.812%
+    - ID: "76af5024-2b12-421a-96cd-46e756f1db9a"
+      Hint: FundCard_CTA
+      Value: |
+        <link text="view fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{9B05D077-72C0-4732-98D1-31F50A20C9C3}" />
     - ID: "776341a4-f1e7-4a9e-9b44-7da25ed3505e"
       Hint: LegacyFund_Process
       Type: Treelist
@@ -159,14 +163,14 @@ Languages:
       Value: 6.147%
     - ID: "da4173d0-1f60-4edc-84a0-04c140de97d0"
       Hint: LegacyFund_FundDescription
-      Value: 
+      Value: GF Sustainable Future European Corporate Bond Fund
     - ID: "db79496e-bcc5-443f-bba6-e8d5bf0a31a3"
       Hint: LegacyFund_NumberOfHoldings
       Value: 60
     - ID: "e43f6e86-0318-4766-b880-0c4f6512ca4e"
       Hint: FundPage_Page
       Value: |
-        <link text="View fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{325075F8-C6F9-4EB9-8432-542F525713C3}" />
+        <link text="View fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{9B05D077-72C0-4732-98D1-31F50A20C9C3}" />
     - ID: "eb75dfef-c624-4571-b92b-8f37c36fcee6"
       Hint: FundCard_Image
       Value: |
