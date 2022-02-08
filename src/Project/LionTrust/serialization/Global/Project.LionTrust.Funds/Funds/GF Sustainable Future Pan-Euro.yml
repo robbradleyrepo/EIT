@@ -113,6 +113,10 @@ Languages:
     - ID: "745247e0-72cf-441e-905d-4d35608d5724"
       Hint: LegacySectorFundData_SectorSixMonths
       Value: 13.952%
+    - ID: "76af5024-2b12-421a-96cd-46e756f1db9a"
+      Hint: FundCard_CTA
+      Value: |
+        <link text="view fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{C6CA102B-F01B-4BE4-A510-788C35DFB641}" />
     - ID: "776341a4-f1e7-4a9e-9b44-7da25ed3505e"
       Hint: LegacyFund_Process
       Type: Treelist
@@ -203,14 +207,14 @@ Languages:
       Value: 5.816%
     - ID: "da4173d0-1f60-4edc-84a0-04c140de97d0"
       Hint: LegacyFund_FundDescription
-      Value: 
+      Value: "GF Sustainable Future Pan-European Growth Fund"
     - ID: "db79496e-bcc5-443f-bba6-e8d5bf0a31a3"
       Hint: LegacyFund_NumberOfHoldings
       Value: 51
     - ID: "e43f6e86-0318-4766-b880-0c4f6512ca4e"
       Hint: FundPage_Page
       Value: |
-        <link text="View fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{C556B42F-45E9-4983-99DC-69766C994A3C}" />
+        <link text="View fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{C6CA102B-F01B-4BE4-A510-788C35DFB641}" />
     - ID: "e456c092-dda4-4179-aa02-1505821fd2a1"
       Hint: LegacySectorFundData_SectorYear5
       Value: 1.205%

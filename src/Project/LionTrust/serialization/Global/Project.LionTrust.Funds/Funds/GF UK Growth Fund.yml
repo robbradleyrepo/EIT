@@ -17,6 +17,9 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "0905f092-b5b5-4971-b87e-57f4810bd729"
+      Hint: FundCard_Description
+      Value: GF UK Growth
     - ID: "13671185-84c9-49e4-8799-6135f386f3e5"
       Hint: LegacyFund_FiveYears
       Value: 33.933%
@@ -97,12 +100,15 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\hayleya
+    - ID: "6387ca9a-7a5a-4d33-b706-201681c0b74c"
+      Hint: FundCard_Heading
+      Value: GF UK Growth
     - ID: "6afb4eb4-25c4-472b-aa65-8ad9ddb3be2c"
       Hint: LegacyFund_FundName
       Value: GF UK Growth Fund
     - ID: "6cbf0ed2-94b3-4f2a-a84d-a36501e38105"
       Hint: LegacyFund_LaunchDate
-      Value: 20140903T000000
+      Value: 20140902T210000Z
     - ID: "6d258747-e783-4579-9c3c-f8f23d03ccf6"
       Hint: LegacySectorFundData_SectorOneYear
       Value: "-9.227%"
@@ -112,6 +118,10 @@ Languages:
     - ID: "745247e0-72cf-441e-905d-4d35608d5724"
       Hint: LegacySectorFundData_SectorSixMonths
       Value: 8.019%
+    - ID: "76af5024-2b12-421a-96cd-46e756f1db9a"
+      Hint: FundCard_CTA
+      Value: |
+        <link text="view fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{0C432C60-284C-43B6-983A-4BF55B79CC2A}" />
     - ID: "776341a4-f1e7-4a9e-9b44-7da25ed3505e"
       Hint: LegacyFund_Process
       Type: Treelist
@@ -148,7 +158,7 @@ Languages:
       Value: "-10.245%"
     - ID: "90a7b1e0-c14e-4a3d-a717-72bec978a99a"
       Hint: LegacyFund_CitiCode
-      Value: KQ1J
+      Value: GQKV
     - ID: "9238823c-d3a1-4b63-940c-867e606716aa"
       Hint: LegacyFund_HistoricYieldText
       Value: Fund size, number of holdings and active share data is as at previous month end. Performance data is as at previous working day.<br />
@@ -202,13 +212,21 @@ Languages:
       Value: 2.684%
     - ID: "da4173d0-1f60-4edc-84a0-04c140de97d0"
       Hint: LegacyFund_FundDescription
-      Value: 
+      Value: GF UK Growth Fund
     - ID: "db79496e-bcc5-443f-bba6-e8d5bf0a31a3"
       Hint: LegacyFund_NumberOfHoldings
       Value: 46
+    - ID: "e43f6e86-0318-4766-b880-0c4f6512ca4e"
+      Hint: FundPage_Page
+      Value: |
+        <link text="view fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{0C432C60-284C-43B6-983A-4BF55B79CC2A}" />
     - ID: "e456c092-dda4-4179-aa02-1505821fd2a1"
       Hint: LegacySectorFundData_SectorYear5
       Value: 10.617%
+    - ID: "eb75dfef-c624-4571-b92b-8f37c36fcee6"
+      Hint: FundCard_Image
+      Value: |
+        <image mediaid="{5F19BAA0-3044-4E11-BC86-D59D3890E604}" />
     - ID: "ec65712d-5b34-40aa-ae21-fb887d85d44f"
       Hint: LegacyFund_PerformanceTableIntroText
       Value: 

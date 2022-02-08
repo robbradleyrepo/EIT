@@ -17,6 +17,9 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "0905f092-b5b5-4971-b87e-57f4810bd729"
+      Hint: FundCard_Description
+      Value: Global Technology Fund
     - ID: "1844ecc6-c68f-4989-96d5-296c34ede6e9"
       Hint: LegacyFundOverviewData_OverviewText
       Value: <p>The Fund is managed by Robin Geffen and aims to generate capital growth over the long term (5 years or more). The Fund invests at least 80% of the portfolio in shares of technology and telecommunications companies across the world. These are companies which, at the time of purchase, are within the GICS (Global Industry Classification Standard) Information Technology and Communication Services sectors.</p>
@@ -73,12 +76,15 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\jackh
+    - ID: "6387ca9a-7a5a-4d33-b706-201681c0b74c"
+      Hint: FundCard_Heading
+      Value: Global Technology Fund
     - ID: "6afb4eb4-25c4-472b-aa65-8ad9ddb3be2c"
       Hint: LegacyFund_FundName
       Value: Global Technology Fund
     - ID: "6cbf0ed2-94b3-4f2a-a84d-a36501e38105"
       Hint: LegacyFund_LaunchDate
-      Value: 20151215T000000
+      Value: 20151214T220000Z
     - ID: "6d258747-e783-4579-9c3c-f8f23d03ccf6"
       Hint: LegacySectorFundData_SectorOneYear
       Value: 38.504%
@@ -88,6 +94,10 @@ Languages:
     - ID: "745247e0-72cf-441e-905d-4d35608d5724"
       Hint: LegacySectorFundData_SectorSixMonths
       Value: 21.825%
+    - ID: "76af5024-2b12-421a-96cd-46e756f1db9a"
+      Hint: FundCard_CTA
+      Value: |
+        <link text="view fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{B1AB6330-5BE6-44C5-B5DA-04248944FEBF}" />
     - ID: "776341a4-f1e7-4a9e-9b44-7da25ed3505e"
       Hint: LegacyFund_Process
       Type: Treelist
@@ -119,7 +129,7 @@ Languages:
       Value: 38.645%
     - ID: "90a7b1e0-c14e-4a3d-a717-72bec978a99a"
       Hint: LegacyFund_CitiCode
-      Value: E2EQ
+      Value: GQKV
     - ID: "9238823c-d3a1-4b63-940c-867e606716aa"
       Hint: LegacyFund_HistoricYieldText
       Value: <p>Fund size and number of holdings data is as at previous month end. Performance data is as at previous working day.</p>
@@ -164,7 +174,15 @@ Languages:
       Value: 6.717%
     - ID: "da4173d0-1f60-4edc-84a0-04c140de97d0"
       Hint: LegacyFund_FundDescription
-      Value: 
+      Value: Global Technology Fund
     - ID: "db79496e-bcc5-443f-bba6-e8d5bf0a31a3"
       Hint: LegacyFund_NumberOfHoldings
       Value: 43
+    - ID: "e43f6e86-0318-4766-b880-0c4f6512ca4e"
+      Hint: FundPage_Page
+      Value: |
+        <link text="view fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{B1AB6330-5BE6-44C5-B5DA-04248944FEBF}" />
+    - ID: "eb75dfef-c624-4571-b92b-8f37c36fcee6"
+      Hint: FundCard_Image
+      Value: |
+        <image mediaid="{8C038CB5-FC55-4F88-8934-CC2B85C604C5}" />

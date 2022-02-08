@@ -71,6 +71,10 @@ Languages:
     - ID: "745247e0-72cf-441e-905d-4d35608d5724"
       Hint: LegacySectorFundData_SectorSixMonths
       Value: 6.170%
+    - ID: "76af5024-2b12-421a-96cd-46e756f1db9a"
+      Hint: FundCard_CTA
+      Value: |
+        <link text="view fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{1FAE4C86-E766-45C3-AC11-5555DC5FF921}" />
     - ID: "776341a4-f1e7-4a9e-9b44-7da25ed3505e"
       Hint: LegacyFund_Process
       Type: Treelist
@@ -132,14 +136,14 @@ Languages:
       Value: $399379300.000
     - ID: "da4173d0-1f60-4edc-84a0-04c140de97d0"
       Hint: LegacyFund_FundDescription
-      Value: 
+      Value: GF Strategic Bond Fund
     - ID: "db79496e-bcc5-443f-bba6-e8d5bf0a31a3"
       Hint: LegacyFund_NumberOfHoldings
       Value: 86
     - ID: "e43f6e86-0318-4766-b880-0c4f6512ca4e"
       Hint: FundPage_Page
       Value: |
-        <link text="View fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{423225AC-3A28-40F9-AADE-35C234FAFE15}" />
+        <link text="View fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{1FAE4C86-E766-45C3-AC11-5555DC5FF921}" />
     - ID: "eb75dfef-c624-4571-b92b-8f37c36fcee6"
       Hint: FundCard_Image
       Value: |

@@ -26,6 +26,9 @@ Languages:
       Value: |
         {66FEC3E7-7E28-428B-8EC9-44DE1ABA83E6}
         {D2116B5D-D7AD-4C74-B9E8-93309FE5545B}
+    - ID: "0905f092-b5b5-4971-b87e-57f4810bd729"
+      Hint: FundCard_Description
+      Value: MA Active Intermediate Income Fund
     - ID: "13671185-84c9-49e4-8799-6135f386f3e5"
       Hint: LegacyFund_FiveYears
       Value: 35.958%
@@ -86,6 +89,9 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\jackh
+    - ID: "6387ca9a-7a5a-4d33-b706-201681c0b74c"
+      Hint: FundCard_Heading
+      Value: MA Active Intermediate Income Fund
     - ID: "69a48b1d-00fe-4fb6-9e2e-44c630e60bea"
       Hint: LegacyFund_TenYears
       Value: 85.090%
@@ -101,13 +107,17 @@ Languages:
     - ID: "6d62860c-e839-4065-a2c2-b2d69e60b939"
       Hint: LegacyFund_HideFromFundList
       Type: Checkbox
-      Value: 1
+      Value: 0
     - ID: "737790ec-a3de-49a7-aa58-7c0f574c0e4a"
       Hint: LegacyBenchmarkFundData_BenchmarkOneYear
       Value: 2.788%
     - ID: "745247e0-72cf-441e-905d-4d35608d5724"
       Hint: LegacySectorFundData_SectorSixMonths
       Value: 8.036%
+    - ID: "76af5024-2b12-421a-96cd-46e756f1db9a"
+      Hint: FundCard_CTA
+      Value: |
+        <link text="view fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{53ACA757-DA94-41E2-B609-E4FB382B7FC6}" />
     - ID: "776341a4-f1e7-4a9e-9b44-7da25ed3505e"
       Hint: LegacyFund_Process
       Type: Treelist
@@ -212,9 +222,17 @@ Languages:
     - ID: "db79496e-bcc5-443f-bba6-e8d5bf0a31a3"
       Hint: LegacyFund_NumberOfHoldings
       Value: 36
+    - ID: "e43f6e86-0318-4766-b880-0c4f6512ca4e"
+      Hint: FundPage_Page
+      Value: |
+        <link text="view fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{53ACA757-DA94-41E2-B609-E4FB382B7FC6}" />
     - ID: "e456c092-dda4-4179-aa02-1505821fd2a1"
       Hint: LegacySectorFundData_SectorYear5
       Value: 12.113%
+    - ID: "eb75dfef-c624-4571-b92b-8f37c36fcee6"
+      Hint: FundCard_Image
+      Value: |
+        <image mediaid="{8C038CB5-FC55-4F88-8934-CC2B85C604C5}" />
     - ID: "f1426edd-1a46-4af0-9967-0743eab156d7"
       Hint: LegacySectorFundData_SectorTenYears
       Value: 60.534%
