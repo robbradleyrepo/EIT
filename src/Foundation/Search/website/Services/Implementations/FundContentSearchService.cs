@@ -122,10 +122,7 @@
             {
                 var searchTermPredicate = PredicateBuilder.False<FundSearchResultItem>();
                 searchTermPredicate = searchTermPredicate.Or(item => item.FundName.Contains(fundSearchRequest.SearchTerm));
-                searchTermPredicate = searchTermPredicate.Or(item => item.FundDescription.Contains(fundSearchRequest.SearchTerm));
-                searchTermPredicate = searchTermPredicate.Or(item => item.Content.Contains(fundSearchRequest.SearchTerm));
-                searchTermPredicate = searchTermPredicate.Or(item => item.FundCardHeading.Contains(fundSearchRequest.SearchTerm));
-                searchTermPredicate = searchTermPredicate.Or(item => item.FundCardDescription.Contains(fundSearchRequest.SearchTerm));
+                searchTermPredicate = searchTermPredicate.Or(item => item.FundManagerNames.Contains(fundSearchRequest.SearchTerm));
 
                 predicate = predicate.And(searchTermPredicate);
             }
