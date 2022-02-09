@@ -3,27 +3,55 @@
     @include breakpoint(desktop, up)
         padding: 16px 0 18px
     &__box
-        position: relative
         display: flex
-        width: 100%
-        min-height: 400px
-        margin: 32px 0
-        flex-direction: column
-        @include breakpoint(desktop, up)
-            > .row
-                width: 100%
-        @include breakpoint(desktop, up)
-            flex-direction: row
-            min-height: 673px
-    // &__left
-    //     @include breakpoint(desktop, up)
-    //         width: 45%
-    //     @media (min-width: 1600px)
-    //         width: 40%
-    //     @media (min-width: 1800px)
-    //         width: 36%
-    //     @media (min-width: 2560px)
-    //         width: 26%
+        @include breakpoint(tablet, down)
+            flex-direction: column
+    &__dashboard-inner
+        padding: 0
+        margin-bottom: 73px
+        .fundscroller__box-col
+            margin-right: 16px
+            max-width: 436px
+            background: #fff
+            position: relative
+            z-index: 1
+            padding: 0 16px 0 43px
+            @include breakpoint(tablet, down)
+                max-width: 100%
+                margin: 0
+                padding: 0 16px
+
+            .imagepromo__headbox
+                margin-top: 30px
+        .fundscroller__carousel-col
+            position: relative
+            z-index: 0
+            max-width: calc( 100% - 455px )
+            @include breakpoint(tablet, down)
+                max-width: 100%
+                margin-top: 43px
+                padding: 0 16px
+            .swiper-slide
+                max-width: 456px
+                margin: 0 16px
+                @include breakpoint(tablet, down)
+                    max-width: 274px
+                    margin: 0 8px
+            .swiper-slide-prev
+                .fund-card
+                    box-shadow: none
+    &__dashboard-home
+        .fundscroller__box-col
+            min-width: 762px;
+            max-width: 762px;
+            background: transparent
+            @include breakpoint(tablet, down)
+                max-width: 100%
+        .fundscroller__carousel-col
+            max-width: 100%
+            overflow: hidden
+            @include breakpoint(tablet, down)
+                max-width: 100%    
     &__right
         display: flex
         position: relative
@@ -36,61 +64,12 @@
             overflow: hidden
             margin-top: 0
             position: absolute
-        //     width: 50%
-        //     padding: 16px 0 30px 20px
-        // @media (min-width: 1600px)
-        //     width: 55%
-        // @media (min-width: 1800px)
-        //     width: 62%
-        // @media (min-width: 2560px)
-        //     width: 72%
     &__slider
         display: flex
     .imagepromo__content
         width: 100%
-    &_bg
-    &__dashboard
-        .fundscroller-container
-            @include breakpoint(mobile, up)
-                left: 50%
-            @include breakpoint(tablet, up)
-                left: 50%
-            @include breakpoint(desktop-large, up)
-                left: 34%
-            .swiper-slide
-                @include breakpoint(mobile, up)
-                    max-width: 274px
-                    margin: 0 8px
-                    padding: 0
-                @include breakpoint(tablet, up)
-                    max-width: 430px
-                    margin: 0 16px
-                    padding: 0
 .fundscroller-bg
     background: radial-gradient(70.56% 228.27% at -4.25% 47.85%, rgba(16, 160, 71, 0.37) 0%, rgba(16, 160, 71, 0) 100%), #000000
-.fundscroller-container
-    padding-bottom: 2rem
-    @include breakpoint(desktop, up)
-        padding: 2rem 0
-    @include breakpoint(desktop, up)
-        overflow: hidden
-        position: absolute
-        top: 0
-        left: 50%
-        padding: 4rem 0
 .main-page
     .fundscroller-bg
         background: none
-    @include breakpoint(desktop, up)
-        .fundscroller-container
-            padding: 2rem 0
-.swiper-container-funds
-    width: 100%
-    height: 100%
-    @include breakpoint(desktop, up)
-        padding-left: 1rem
-    .swiper-slide
-        height: auto
-        width: auto
-    .row
-        flex-wrap: nowrap
