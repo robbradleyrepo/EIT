@@ -98,11 +98,14 @@
     <script src="/dist/js/charts-page.min.js"></script>
     <script src="/dist/js/chartjs-plugin-datalabels@0.7.0.js"></script>
     <script src="/dist/js/shuffle.js"></script>
-    <script src="/dist/js/componets/galleryApp.js"></script>
     <script src="/dist/js/scrollnav.min.umd.js"></script>
     @if (!Sitecore.Context.PageMode.IsExperienceEditorEditing && Html.Sitecore().CurrentItem.HasComponent(Constants.Renderings.FundCentreRenderingId))
     {
         <script src="/dist/js/postmessage.min.js"></script>
+    }
+    @if (Html.Sitecore().CurrentItem.HasComponent(Constants.Renderings.MediaGalleryRenderingId))
+    {
+        <script src="/dist/js/componets/galleryApp.js"></script>
     }
     @Html.RenderFormStyles()
     @Html.RenderFormScripts()

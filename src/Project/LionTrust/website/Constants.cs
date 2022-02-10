@@ -24,6 +24,8 @@
         public static class Renderings
         {
             public const string FundCentreRenderingId = "{FCEF6713-BC3D-47F1-9178-7526D6453DBC}";
+
+            public const string MediaGalleryRenderingId = "{BC23D3DF-6124-4437-80F5-D53E3F24113C}";
         }
     }
 }
