@@ -71,6 +71,7 @@
         {
             public const string FundFieldId = "{90BCAB34-B9E0-466E-97A4-73CEC67335F7}";
             public const string TitleFieldId = "{1ADF8B0C-A198-4CC7-81CC-CFAAC0FE3483}";
+            public const string SubtitleFieldId = "{0A9FCE4C-363C-4A3E-801E-BABE85A54AC8}";
             public const string FundManagerFieldId = "{7A30D0A3-23FD-4863-99FD-A17525112A0E}";            
             public const string BackgroundImageFieldId = "{5D55EE9C-7778-47E7-833D-9D692E0E8AAB}";
             public const string FundSharingFieldId = "{D4BEBE60-2A4F-4965-AA39-EE3ECD18DF5D}";

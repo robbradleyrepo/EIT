@@ -12,6 +12,9 @@
         [SitecoreField(Constants.FundHeader.TitleFieldId)]
         string Title { get; set; }
 
+        [SitecoreField(Constants.FundHeader.SubtitleFieldId)]
+        string Subtitle { get; set; }
+
         [SitecoreField(Constants.FundHeader.FundManagerFieldId)]
         IAuthor FundManager { get; set; }
 
