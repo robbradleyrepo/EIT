@@ -4,7 +4,6 @@ export default () => {
   const sticky = navbar.offset()?.top;
   var sectionToScroll = $(document).find('.section-spy');
   var sectionHash = $(document).find('.page-anchor__right .page-anchor__link');
-
   sectionToScroll.each(function (index) {
     var addID = $(sectionToScroll[index]).attr('id');
     $(sectionToScroll[index]).nextUntil('.section-spy').wrapAll('<div class="hash-section"/>')
@@ -12,7 +11,9 @@ export default () => {
     var nextOfHash = $(sectionToScroll[index]).next()
     $(nextOfHash).attr('id', addID);
   });
-  const stickyPostion = $('.page-anchor-link').offset().top;
+  if ($('.page-anchor-link').length) {
+    var stickyPostion = $('.page-anchor-link').offset().top;
+  }
   function stickyNav() {
     if (window.pageYOffset >= stickyPostion) {
       $(".page-anchor-link").addClass("sticky");
@@ -32,11 +33,17 @@ export default () => {
     openBtn.removeClass("active");
   });
   (function ($) {
+    var hashTagOffest, hashTag;
+    $('.page-anchor__links a').on('click', function () {
+      hashTag = $(this).attr('href');
+      hashTagOffest = $(hashTag).offset().top;
+      console.log(hashTagOffest);
+    })
     $(window).on("load", function () {
       $("#sticky-navbar a").mPageScroll2id({
         highlightSelector: "#sticky-navbar a",
         liveSelector: "#sticky-navbar a",
-        offset: 80,
+        offset: hashTagOffest,
         keepHighlightUntilNext: true
       });
     });
