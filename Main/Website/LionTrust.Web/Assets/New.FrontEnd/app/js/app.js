@@ -20,6 +20,7 @@ import locationAndMap from "./componets/locationAndMap";
 import tabNav from "./componets/tabNav";
 import headerCtaNav from "./componets/headerCtaNav";
 import preferenceCenter from './componets/preferenceCenter';
+import common from "./componets/common";
 
 document.addEventListener("DOMContentLoaded", () => {
     onboardingOverlay();
