@@ -1,9 +1,10 @@
 ﻿---
-ID: "f7419870-8f05-46fb-8f6e-0533d85320bc"
-Parent: "199250c8-c3da-4689-b81e-fba3b660d644"
+ID: "9ccf41b9-6481-4172-b644-fd0757574e66"
+Parent: "68823c4a-a39c-4299-9527-f3a67f2f80db"
 Template: "1d2058b8-c7a2-4d41-8fdf-61ac3b786798"
 Path: /sitecore/content/LionTrustNew/Home/Sustainability/_Local/Lead Banner
 DB: master
+BranchID: "ee74385f-5e37-4283-b0af-ddbfa7a3186a"
 SharedFields:
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
@@ -18,14 +19,8 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210825T104051Z
+      Value: 20220210T104928Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\liontrust_admin
-    - ID: "a9684a39-4c0e-42df-8066-59be90678b54"
-      Hint: LeadBanner_Title
-      Value: Sustainability
-    - ID: "f5081545-46e8-4dc6-a479-ce094ade09de"
-      Hint: LeadBanner_Body
-      Value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin fringilla bibendum dapibus. Cras iaculis, enim ut dictum accumsan, velit urna sagittis nunc, mattis mollis quam orci eget sapien.
+        sitecore\Admin
