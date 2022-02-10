@@ -320,5 +320,10 @@
         {
             public const string PageTemplateId = "{7784DCE4-0F3B-4518-81F8-4BCB042373B1}";
         }
+
+        public static class HomePage
+        {
+            public const string PageTemplateId = "{51D3A578-6E10-4EC6-BB5B-5C1307A6D661}";
+        }
     }
 }
