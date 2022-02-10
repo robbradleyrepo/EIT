@@ -1,13 +1,11 @@
 ﻿---
-ID: "df63a604-ec37-4d8c-8713-7dacaf9625c8"
+ID: "d8ecfd44-50fa-4c96-83f1-afafd6833ba1"
 Parent: "7502b69e-d154-4861-a033-bc0cb30a91b5"
 Template: "aef83073-cabc-4c94-8e30-7d76c7abe05d"
 Path: /sitecore/content/LionTrustNew/Home/Sustainability
 DB: master
+BranchID: "ee74385f-5e37-4283-b0af-ddbfa7a3186a"
 SharedFields:
-- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
-  Hint: __Sortorder
-  Value: 500
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Type: layout
@@ -25,77 +23,77 @@ SharedFields:
         <r
           uid="{A092C9FF-FB8D-42E2-9C58-6365C61DF696}"
           p:after="r[@uid='{31CB9F7C-04BF-4C70-9224-BF76498D95AC}']"
-          s:ds="{80A8D7D8-690D-437B-9A87-B463230B1C71}"
+          s:ds="{9CCF41B9-6481-4172-B644-FD0757574E66}"
           s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
           s:par=""
           s:ph="header" />
         <r
           uid="{CE0C5C3E-D9E5-4DC3-8ECB-0915B95C6A01}"
           p:after="r[@uid='{A092C9FF-FB8D-42E2-9C58-6365C61DF696}']"
-          s:ds="{A85CA4CD-EEF8-44CD-9421-9D9EF6277E14}"
+          s:ds="{2C2D2BA4-D023-4C29-B552-54998E16B3CD}"
           s:id="{7166AE9D-EFBD-48B3-B38F-AFD4CAAB5278}"
           s:par=""
           s:ph="/header/secondary-navigation" />
         <r
           uid="{4D1A1D5F-0420-4BAB-84D2-C17DF0472E26}"
           p:after="r[@uid='{CE0C5C3E-D9E5-4DC3-8ECB-0915B95C6A01}']"
-          s:ds="{3DC53FB7-C4A0-457D-949C-9C0FF8AC482D}"
+          s:ds="{59ED4990-1E28-4D86-82F9-DAD95B4026D4}"
           s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
           s:par=""
           s:ph="main" />
         <r
           uid="{235D069D-D6CC-43B1-9C27-ED0116A0F5EB}"
           p:after="r[@uid='{4D1A1D5F-0420-4BAB-84D2-C17DF0472E26}']"
-          s:ds="{33D08C77-06FC-4DA5-B550-12B42A74FDBD}"
+          s:ds="{69813C97-F3D9-4E4F-96AE-F766ADB873D4}"
           s:id="{6B2E2A4D-C3CB-4676-B804-B3459E4C9BD6}"
           s:par=""
           s:ph="main" />
         <r
           uid="{B9BDE4C3-A7E2-44B7-8CBA-C88484066C9F}"
           p:after="r[@uid='{235D069D-D6CC-43B1-9C27-ED0116A0F5EB}']"
-          s:ds="{5D76BAA7-9587-4806-9FA1-3B4807111355}"
+          s:ds="{CD382639-135A-4192-8985-62AC9B0CFE89}"
           s:id="{56ECB2D2-5D43-4F0F-A5D1-AC267F249E7B}"
           s:par=""
           s:ph="main" />
         <r
           uid="{F368AD5F-0958-4181-A17C-D37D0BDA5653}"
           p:after="r[@uid='{B9BDE4C3-A7E2-44B7-8CBA-C88484066C9F}']"
-          s:ds="{DC978055-503C-466D-88FB-AE676042DD09}"
+          s:ds="{15A9829F-D845-48F9-B1D9-009A8E8B2659}"
           s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
           s:par=""
           s:ph="main" />
         <r
           uid="{FAA3D7A3-1683-4A1C-883B-71722E25BAE6}"
           p:after="r[@uid='{F368AD5F-0958-4181-A17C-D37D0BDA5653}']"
-          s:ds="{C111A194-EC4B-4D1D-8A4E-3D2CF48DECD6}"
+          s:ds="{4101F3F8-E8BF-4D94-BA3C-4FB8E2A6F39A}"
           s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
           s:par=""
           s:ph="main" />
         <r
           uid="{2E48F8B5-A083-4475-A842-D7C90CBDC74F}"
           p:after="r[@uid='{FAA3D7A3-1683-4A1C-883B-71722E25BAE6}']"
-          s:ds="{052617B5-1CEE-4A2F-B292-BE6035F43CE1}"
+          s:ds="{697AC1A2-CA03-4B8D-9F4E-430F2DFE2DCB}"
           s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
           s:par=""
           s:ph="main" />
         <r
           uid="{8538E71F-04E5-4FD5-9721-6BEC2D28201B}"
           p:after="r[@uid='{2E48F8B5-A083-4475-A842-D7C90CBDC74F}']"
-          s:ds="{FB857E9E-35ED-4953-8C07-71BFFF63C7F0}"
+          s:ds="{0F30DEC9-50AA-4E82-B3A6-C4A309552B6B}"
           s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
           s:par=""
           s:ph="main" />
         <r
           uid="{1C275B4A-2BB1-443E-9F6B-E62DC4EF6F3E}"
           p:after="r[@uid='{8538E71F-04E5-4FD5-9721-6BEC2D28201B}']"
-          s:ds="{664C72DB-EB8A-4960-BD35-F9E8C0AD2BA5}"
+          s:ds="{122091BA-20C3-4796-96A4-8CF8C2644D65}"
           s:id="{6B2E2A4D-C3CB-4676-B804-B3459E4C9BD6}"
           s:par=""
           s:ph="main" />
         <r
           uid="{9A85E096-C394-40BA-AB44-2688D32DF393}"
           p:after="r[@uid='{1C275B4A-2BB1-443E-9F6B-E62DC4EF6F3E}']"
-          s:ds="{5CD18826-3449-419D-84A0-1856893D31FE}"
+          s:ds="{8C74C455-CE94-43AC-894A-FD656399C2A8}"
           s:id="{0D2BC18F-5CEA-432E-A94D-16007F1FDE49}"
           s:par=""
           s:ph="main" />
@@ -109,10 +107,15 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Sustainability | Liontrust Asset Management PLC
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210825T104049Z
-    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
-      Hint: __Created by
-      Value: |
-        sitecore\liontrust_admin
+      Value: 20220210T104928Z
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: Sustainability
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Sustainability
