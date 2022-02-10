@@ -146,13 +146,19 @@ document.querySelector('.filter-gallery__group').addEventListener("click", filte
 document.addEventListener('DOMContentLoaded', () => {
   window.demo = new Demo(document.getElementById('mediaGallery'));
 });
-document.getElementById('select-all').onclick = function() {
+document.querySelectorAll('.select-all').forEach((el) => el.addEventListener("click", function() {
   var checkboxes = document.querySelectorAll('.media-gallery__controls .checkbox__input');
   for (var checkbox of checkboxes) {
     checkbox.checked = this.checked;
   }
-}
-document.getElementById('download-selected').onclick = function() {
+  if (this.id === 'select-all-1') {
+	document.getElementById('select-all-2').checked = this.checked;  
+  }
+  if (this.id === 'select-all-2') {
+	document.getElementById('select-all-1').checked = this.checked;  
+  }
+}));
+document.querySelectorAll('.media-gallery__download-selected').forEach((el) => el.addEventListener("click", function() {
   var checkboxes = document.querySelectorAll('.media-gallery__controls .checkbox__input');
   var chkArray = [];
   for (var checkbox of checkboxes) {
@@ -194,4 +200,4 @@ document.getElementById('download-selected').onclick = function() {
   xhr.send(JSON.stringify({
 	downloadMediaIds: chkArray
   }));
-}
+}));
