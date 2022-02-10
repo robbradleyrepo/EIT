@@ -161,6 +161,11 @@ document.getElementById('download-selected').onclick = function() {
 	  }
   }
   
+  if (!chkArray.length)
+  {
+	  return;
+  }
+  
   var xhr = new XMLHttpRequest();
   xhr.open("POST", "MediaGalleryApi/DownloadMediaImages", true);
   xhr.setRequestHeader('Content-Type', 'application/json');
