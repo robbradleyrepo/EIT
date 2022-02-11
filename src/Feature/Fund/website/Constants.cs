@@ -326,5 +326,10 @@
         {
             public const string PageTemplateId = "{51D3A578-6E10-4EC6-BB5B-5C1307A6D661}";
         }
+
+        public static class EmailTemplates
+        {
+            public static Guid FundImportErrorEmail = new Guid("{A0D06E95-9BB2-4377-8DFC-FB6A5B8CACED}");
+        }
     }
 }

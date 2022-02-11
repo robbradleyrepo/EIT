@@ -244,5 +244,13 @@ namespace LionTrust.Foundation.Legacy
             public const string Date_FieldID = "{25BED78C-4957-4165-998A-CA1B52F67497}";
             public const string ListingType_FieldID = "{FF934E56-BADD-46E1-BFB4-695F32B1D6C5}";
         }
+
+        public static class EmailTemplate
+        {
+            public const string FromAddress_FieldId = "{EE11B3CB-B454-4D08-B32E-082D0173006D}";
+            public const string FromDisplayName_FieldId = "{0EB6AA93-9568-495D-B538-73C313511D11}";
+            public const string ToAddresses_FieldId = "{10B60E42-7623-4916-970E-F8F590E2CC82}";
+            public const string Subject_FieldId = "{548F8D1D-EE61-4F5A-BC44-A2AAD347F59A}";
+        }
     }
 }

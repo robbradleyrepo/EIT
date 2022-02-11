@@ -22,6 +22,7 @@
             var result = Map(fundClass);
             if (apiData == null)
             {
+                _repository.SendEmailOnErrorForCiticode(fundClass.CitiCode);
                 return result;
             }
 

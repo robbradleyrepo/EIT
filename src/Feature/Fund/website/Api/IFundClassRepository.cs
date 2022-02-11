@@ -4,5 +4,7 @@
     {
         FundDataResponseModel[] GetData();
         void UpdateData();
+        void SendEmailOnError(string errorMessage);
+        void SendEmailOnErrorForCiticode(string citicode);
     }
 }
