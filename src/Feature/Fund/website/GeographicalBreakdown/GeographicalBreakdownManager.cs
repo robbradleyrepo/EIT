@@ -19,7 +19,13 @@
         public IEnumerable<FundBreakdownModel> GetBreakdowns(string citiCode)
         {
             var apiData = _repository.GetData().FirstOrDefault(f => f.CitiCode == citiCode);
-            if (apiData == null || apiData.SectorBreakdown == null)
+            if (apiData == null)
+            {
+                _repository.SendEmailOnErrorForCiticode(citiCode);
+                return new FundBreakdownModel[0];
+            }
+
+            if (apiData.SectorBreakdown == null)
             {
                 return new FundBreakdownModel[0];
             }

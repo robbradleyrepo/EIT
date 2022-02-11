@@ -20,6 +20,7 @@
             var fundClass = _repository.GetData().FirstOrDefault(d => d.CitiCode == citiCode);
             if (fundClass == null)
             {
+                _repository.SendEmailOnErrorForCiticode(citiCode);
                 return new PerformanceTableRow[0];
             }
 
@@ -101,6 +102,7 @@
             var fundClass = _repository.GetData().FirstOrDefault(d => d.CitiCode == citiCode);
             if (fundClass == null)
             {
+                _repository.SendEmailOnErrorForCiticode(citiCode);
                 return null;
             }
 

@@ -25,6 +25,7 @@
             var apiDetails = _repository.GetData().FirstOrDefault(f => f.CitiCode == citiCode);
             if (apiDetails == null)
             {
+                _repository.SendEmailOnErrorForCiticode(citiCode);
                 return result;
             }
 
