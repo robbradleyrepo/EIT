@@ -27,10 +27,10 @@
 
             var taxonomyFilter = PredicateBuilder.True<ArticleSearchResultItem>();
 
-            if (articleSearchRequest.Categories != null && articleSearchRequest.Categories.Any())
+            if (articleSearchRequest.ContentTypes != null && articleSearchRequest.ContentTypes.Any())
             {
                 var contentTypePredicate = PredicateBuilder.False<ArticleSearchResultItem>();
-                contentTypePredicate = articleSearchRequest.Categories.Aggregate(contentTypePredicate,
+                contentTypePredicate = articleSearchRequest.ContentTypes.Aggregate(contentTypePredicate,
                                                                                             (current, contentType) => current                                                                                                                    
                                                                                             .Or(item => item.ArticleContentType == IdHelper.NormalizeGuid(contentType, true)));
 
@@ -60,11 +60,11 @@
                 taxonomyFilter = taxonomyFilter.And(managerPredicate);
             }
 
-            if (articleSearchRequest.Topics != null && articleSearchRequest.Topics.Any())
+            if (articleSearchRequest.Categories != null && articleSearchRequest.Categories.Any())
             {
                 var topicPredicate = PredicateBuilder.False<ArticleSearchResultItem>();
                 topicPredicate = articleSearchRequest
-                                            .Topics
+                                            .Categories
                                                     .Aggregate(topicPredicate,
                                                                     (current, category)
                                                                                 => current

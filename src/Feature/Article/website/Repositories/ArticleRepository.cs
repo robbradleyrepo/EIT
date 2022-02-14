@@ -24,11 +24,11 @@
             this._mvcContext = mvcContext;
         }
 
-        public IEnumerable<IArticlePromo> GetArticlePromosByTopics(IEnumerable<Guid> topics, IEnumerable<string> fundManagers = null)
+        public IEnumerable<IArticlePromo> GetArticlePromosByTopics(IEnumerable<string> topics, IEnumerable<string> fundManagers = null)
         {
             var request = new ArticleSearchRequest
             {
-                Topics = topics,
+                Categories = topics,
                 FromDate = DateTime.MinValue,
                 ToDate = DateTime.MaxValue,
                 Take = int.MaxValue,
@@ -51,9 +51,9 @@
         {
             var request = new ArticleSearchRequest
             {
-                Topics = topics,
+                Categories = topics?.Select(t => t.ToString().Replace("-", string.Empty)),
                 Funds = funds?.Select(f => f.ToString().Replace("-", string.Empty)),
-                Categories = categories?.Select(fc => fc.ToString().Replace("-", string.Empty)),
+                ContentTypes = categories?.Select(fc => fc.ToString().Replace("-", string.Empty)),
                 FundTeams = fundTeams?.Select(ft => ft.ToString().Replace("-", string.Empty)),
                 FundManagers = fundManagers?.Select(fm => fm.ToString().Replace("-", string.Empty)),
                 Take = 6,

@@ -10,6 +10,7 @@
     using LionTrust.Feature.Article.Repositories;
     using LionTrust.Foundation.Onboarding.Helpers;
     using LionTrust.Foundation.Search.Services.Interfaces;
+    using ContentSearchUtilities = Sitecore.ContentSearch.Utilities;
     using Sitecore.Mvc.Controllers;
     
     public class ArticleController : SitecoreController
@@ -76,7 +77,7 @@
 
 
                 new ArticleRepository(_contentSearchService, _mvcContext)
-                        .GetArticlePromosByTopics(currentPage.Topics.Select(x => x.Id));
+                        .GetArticlePromosByTopics(currentPage.Topics.Select(x => ContentSearchUtilities.IdHelper.NormalizeGuid(x.Id, true)));                
             }
 
             if (!Sitecore.Context.PageMode.IsExperienceEditor && (articleScrollerViewModel.ArticleList == null || !articleScrollerViewModel.ArticleList.Any()))
