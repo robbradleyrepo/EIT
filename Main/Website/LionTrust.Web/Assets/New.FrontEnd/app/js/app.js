@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     shareLink();
     tabNav();
     headerCtaNav();
+    common();
     preferenceCenter();
     if (document.querySelector(".page-anchor-link")) stickyNavbar();
     if (document.querySelector(".main-page")) parallaxScrolling();
