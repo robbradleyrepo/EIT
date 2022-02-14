@@ -14,6 +14,9 @@ export default () => {
   const parentId = rootDom.dataset?.parentid;
   const contentType = rootDom.dataset?.contenttype;
   const funds = rootDom.dataset?.funds;
+  const fundTeams = rootDom.dataset?.fundteams;
+  const fundManagers = rootDom.dataset?.fundmanagers;  
+  const categories = rootDom.dataset?.categories;  
   const hideFunds = rootDom.dataset?.hidefunds;
   const location = "https://cm-liontrust-it.sagittarius.agency/";
   let root = "";
@@ -221,6 +224,9 @@ export default () => {
         str = str + "page=" + this.page;
         if (this.searchText) str = str + "&searchTerm=" + this.searchText;
 		if(funds) str = str + "&ids=" + funds;
+		if(fundTeams) str = str + "&fundTeamIds=" + fundTeams;
+		if(fundManagers) str = str + "&fundManagerIds=" + fundManagers;		
+		if(categories) str = str + "&categoryIds=" + categories;
 		if(hideFunds) str = str + "&hideFunds=" + hideFunds;
         for (let prop in this.params) {
           const mutatedProp = prop.replace(/ /g, "");
@@ -247,6 +253,7 @@ export default () => {
         this.mobileFilter = false;
         this.getSearchRequest();
         this.activeButton = false;
+		this.page = 1;
       },
 
       clearFilters() {

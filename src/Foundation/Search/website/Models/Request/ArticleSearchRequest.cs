@@ -27,8 +27,5 @@
         public int Take { get; set; }
 
         public DateTime ToDate { get; set; }
-
-        public IEnumerable<Guid> Topics { get; set; }
-
     }
 }
