@@ -19,7 +19,7 @@
                                 }
                             }
                             <div class="hero-author__content">
-                                @if (!Model.IsFundUpdate)
+                                @if (!Model.IsFundUpdate && !Model.IsLearning)
                                 {
                                     <span class="hero-author__name">
                                         @Model.AuthorName <i class="icon-follow"></i>

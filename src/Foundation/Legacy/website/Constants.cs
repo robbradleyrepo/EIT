@@ -32,6 +32,7 @@ namespace LionTrust.Foundation.Legacy
             public const string Article_ListingImage = "{5BD6E9E9-2240-4473-8094-075E811B8438}";
 
             public const string FundUpdateContentTypeId = "D0700E76-8BC2-427A-9849-FE3B6D28BD22";
+            public const string LearningContentTypeId = "F84FBEB0-EF4A-4A62-A320-D3413F8B73CA";
         }
 
         public static class ArticleType
