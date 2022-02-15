@@ -1,0 +1,25 @@
+﻿---
+ID: "264a2b9c-f264-43b5-bc66-0a67d8d5754f"
+Parent: "66c24c2c-9cba-4ed4-9cc9-74f65f6d1f1d"
+Template: "fbfecf7a-bb63-415c-98a5-cf095ff07c99"
+Path: /sitecore/content/LionTrustNew/Home/Data Template/Common Inner/_Local/Link to Graph Page
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220215T143119Z
+    - ID: "7a6eea35-2025-43cf-a371-43d99a82e804"
+      Hint: RichText_Text
+      Value: |
+        <div>&nbsp; <b>For a more detailed:</b><br />
+        <a class="btn link-styles text-primary">View of our share chart&nbsp;<svg style="margin-top: -3px;" width="17" height="12" viewbox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10.2 0L9.24146 0.845766L14.3964 5.4H0V6.6H14.3953L9.24038 11.1542L10.1989 12L17 6L10.2 0Z" fill="#0e8039"></path>
+        </svg></a>
+        </div>
+    - ID: "b4d032f0-3342-49a1-ad8a-d0f640c59b4c"
+      Hint: RichText_MarginsContainer
+      Value: "{C433C09B-1CC2-4B78-A43E-F6A5AB4937D2}"
