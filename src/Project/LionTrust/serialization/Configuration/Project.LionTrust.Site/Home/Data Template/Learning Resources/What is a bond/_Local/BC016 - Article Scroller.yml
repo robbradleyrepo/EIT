@@ -1,0 +1,30 @@
+﻿---
+ID: "1f3df9ef-bf99-4e06-9f7d-9c084f8df42d"
+Parent: "7a9399f7-34d0-4e17-9d43-6d6093b53582"
+Template: "cf87f1eb-f59d-4e08-bcd6-23e0cdd7362f"
+Path: "/sitecore/content/LionTrustNew/Home/Data Template/Learning Resources/What is a bond/_Local/BC016 - Article Scroller"
+DB: master
+BranchID: "952009a4-96ce-4b5f-8f41-ff202c570f9f"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{16A8B3D6-313A-48C5-9DF1-2FD59FDCC602}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220215T084037Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "93854c18-0919-445e-bc88-2d353c8491e8"
+      Hint: ArticleScroller_Heading
+      Value: "BC016 - Article Scroller"
+    - ID: "bad318c3-b9b5-457f-a42d-f51516fc3ec2"
+      Hint: ArticleScroller_CTA
+      Value: |
+        <link text="Home" anchor="" linktype="internal" class="" title=""  querystring="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
