@@ -73,6 +73,9 @@ SharedFields:
           s:par=""
           s:ph="main" />
         <r
+          uid="{9057DD73-496E-495D-9460-75D38BBB5B7E}"
+          p:after="r[@uid='{53D290C5-D5FB-494C-9C6E-E237CE399330}']" />
+        <r
           uid="{8221C698-4996-413B-8DBF-1788FB96047F}"
           p:after="*[1=2]"
           s:ds="{1AB165B4-5774-457F-A852-6DC33F7289BE}"
