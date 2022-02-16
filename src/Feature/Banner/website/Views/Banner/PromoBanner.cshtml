@@ -20,45 +20,31 @@
         }
     }
 }
-<section class="lead-banner__wrapper">
-    <div class="absolute-center z-index-10">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="lead-banner @textAlignmentCss">
-                        <div class="lead-banner__content">
-                            <h2 class="lead-banner__title mb-3">@Html.Glass().Editable(Model, x => x.Heading)</h2>
-                            <span class="lead-banner__text pb-lg-3">
-                                @Html.Glass().Editable(Model, x => x.Body)
-                            </span>
-
-                            <div class="lead-banner__btnbox mt-4">
-                                @using (Html.Glass().BeginRenderLinkWithGoal(Model, m => m.PrimaryCTALink, Model.PrimaryCtaGoal, new NameValueCollection { { "class", "btn btn-primary" } }, isEditable: true))
-                                {
-                                    if (Model.PrimaryCTALink != null)
-                                    {
-                                        @Model.PrimaryCTALink.Text;
-                                        <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
-                                    }
-                                }
-
-                                @using (Html.Glass().BeginRenderLinkWithGoal(Model, m => m.SecondaryCTALink, Model.SecondaryCtaGoal, new NameValueCollection { { "class", "btn btn-primary-forward" } }, isEditable: true))
-                                {
-                                    if (Model.SecondaryCTALink != null)
-                                    {
-                                        @Model.SecondaryCTALink.Text;
-                                        <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
-                                    }
-                                }
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="banner-card">
+    <div class="banner-card__img"
+         style="@(Model.Image != null ? Model.Image.GetSafeBackgroundImageStyle() : string.Empty)">
     </div>
-    <div class="lead-banner__overlay">
-        <div class="lead-banner__bg"
-             style="@(Model.Image != null ? Model.Image.GetSafeBackgroundImageStyle() : string.Empty)"></div>
+    <div class="banner-card__text @textAlignmentCss">
+        <h4 class="banner-card__title">@Html.Glass().Editable(Model, x => x.Heading)</h4>
+        <span class="banner-card__description">
+            @Html.Glass().Editable(Model, x => x.Body)
+        </span>
+        @using (Html.Glass().BeginRenderLinkWithGoal(Model, m => m.PrimaryCTALink, Model.PrimaryCtaGoal, new NameValueCollection { { "class", "btn btn-primary" } }, isEditable: true))
+        {
+            if (Model.PrimaryCTALink != null)
+            {
+                @Model.PrimaryCTALink.Text;
+                <i class="icon-arrow-right animate-arrow"></i>
+            }
+        }
+
+        @using (Html.Glass().BeginRenderLinkWithGoal(Model, m => m.SecondaryCTALink, Model.SecondaryCtaGoal, new NameValueCollection { { "class", "btn btn-primary-forward" } }, isEditable: true))
+        {
+            if (Model.SecondaryCTALink != null)
+            {
+                @Model.SecondaryCTALink.Text;
+                <i class="icon-arrow-right animate-arrow"></i>
+            }
+        }        
     </div>
-</section>
+</div>
