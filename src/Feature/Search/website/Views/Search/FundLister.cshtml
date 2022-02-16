@@ -169,7 +169,7 @@
                                     </div>
                                 </div>
                                 <div class="fund-card__text-bottom">
-                                    <div class="fund-card__btns-block">
+                                    <div class="fund-card__btns-block" v-if="fund.fundFactSheet">
                                         <a :href="fund.fundFactSheet" class="fund-card__btn">
                                             @Html.Glass().Editable(Model, m => m.FactsheetLabel) <i class="icon-file"></i>
                                         </a>
@@ -201,7 +201,7 @@
                             </div>
                         </div>
                         <div class="col-lg-6 col-xl-4">
-                            <div class="fund-item-list__links">
+                            <div class="fund-item-list__links" v-if="fund.fundFactSheet">
                                 @*<button href="#" class="link-gray">@Html.Glass().Editable(Model, m => m.FollowLabel) <i class="icon-follow"></i></button>*@
                                 <a :href="fund.fundFactSheet" target="_blank" class="link-gray">@Html.Glass().Editable(Model, m => m.FactsheetLabel) <i class="icon-file"></i></a>
                                 <button class="link-gray view-documents" @@click="showLiteratureOverlay(fund.fundId)">@Html.Glass().Editable(Model, m => m.AllDocumentsLabel) <i class="icon-folder"></i></button>

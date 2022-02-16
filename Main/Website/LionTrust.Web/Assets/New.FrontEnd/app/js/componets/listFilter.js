@@ -250,10 +250,12 @@ export default () => {
 
       applyFilters() {
         // this.pushStateLink();
+		if (this.activeButton) {
+			this.page = 1;
+		}			
         this.mobileFilter = false;
         this.getSearchRequest();
-        this.activeButton = false;
-		this.page = 1;
+        this.activeButton = false;		
       },
 
       clearFilters() {
@@ -283,8 +285,8 @@ export default () => {
 
       changePage(num) {
         if (this.getPage !== num) {
-          this.scrollToTop();
-          this.page = num;
+          this.scrollToTop(); 
+		  this.page = num;		  
           this.applyFilters();
         }
       },
@@ -294,7 +296,10 @@ export default () => {
       },
 
       submitSearchForm(e) {
-        if (e.target.searchText.value) this.applyFilters();
+        if (e.target.searchText.value) {
+			this.page = 1;
+			this.applyFilters();			
+		}
       },
 
       clearDocumentIds() {
