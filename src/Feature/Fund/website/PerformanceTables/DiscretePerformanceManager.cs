@@ -41,7 +41,7 @@
             
             if (fundClass.Benchmarks == null)
             {
-                return new PerformanceTableRow[0];
+                return result;
             }
 
             var benchmark0 = fundClass.Benchmarks.FirstOrDefault(b => b.BenchmarkTypeName == "Benchmark");
