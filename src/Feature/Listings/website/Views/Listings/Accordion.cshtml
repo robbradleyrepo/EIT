@@ -5,7 +5,7 @@
 @model LionTrust.Feature.Listings.Models.AccordionViewModel
 @{
 
-    var fullWidth = !Model.Data.Children.Any(x => x.Image.HasValue() && x.VideoId.HasValue());
+    var fullWidth = !Model.Data.Children.Any(x => x.Thumbnail.HasValue() && x.VideoId.HasValue());
     var wrapperClass = fullWidth ? "accordion-section accordion-section_full" : "accordion-section";
     var textColour = Model.RenderingData.Theme != null && !string.IsNullOrWhiteSpace(Model.RenderingData.Theme.Value) ? Model.RenderingData.Theme.Value : "accordion-light-black-theme";
     var containerId = LionTrust.Feature.Listings.Utils.RandomString(10, true);
@@ -22,7 +22,7 @@
                     }
                     @foreach (var item in Model.Data.Children)
                     {
-                        var imageSrc = item.Image != null ? item.Image.GetSafeBackgroundImageStyle() : string.Empty;
+                        var imageSrc = item.Thumbnail != null ? item.Thumbnail.GetSafeBackgroundImageStyle() : string.Empty;
                         var isCollapsed = item != Model.Data.Children.First();
                         var collapsedClass = isCollapsed ? "collapsed" : string.Empty;
                         var showClass = isCollapsed ? string.Empty : "show";
@@ -48,7 +48,7 @@
                                     <div class="accordion__body" style="text-align:@textAlign">
                                         @Html.Glass().Editable(item, i => i.Copy)
                                     </div>
-                                    @if (item.Image.HasValue() && item.VideoId.HasValue())
+                                    @if (item.Thumbnail.HasValue() && item.VideoId.HasValue())
                                     {
                                         <div class="accordion__smartcard">
                                             <a class="video-box__link" data-fancybox="" data-type="iframe" data-src="@item.VideoId" style="@imageSrc">
