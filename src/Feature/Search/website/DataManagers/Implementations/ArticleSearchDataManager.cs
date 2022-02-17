@@ -44,7 +44,7 @@
 
             if (string.IsNullOrEmpty(label))
             {
-                label = indexedDate.ToString("D", Sitecore.Context.Culture);
+                label = indexedDate.ToString("D", Sitecore.Context.Culture).Replace(",", "");
             }
 
             return label;
