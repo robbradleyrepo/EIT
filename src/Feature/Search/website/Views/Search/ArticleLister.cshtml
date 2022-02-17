@@ -123,7 +123,7 @@
                                                     <span class="option-checkbox__icon"></span>
                                                 </label>
                                             </option-field>
-                                            <option-field inline-template v-for="(yearItem, i) in years" :key="i">
+                                            <option-field inline-template v-for="(yearItem, i) in years.slice().reverse()" :key="i">
                                                 <label class="option-checkbox option-checkbox_small" @@click="setChoosen(!checked)">
                                                     <input class="option-checkbox__input" name="year" v-model="year" :value="yearItem" type="radio" @@click="setYear(yearItem)">
                                                     <span class="option-checkbox__text">{{yearItem}}</span>
@@ -217,7 +217,9 @@
             <div class="text-center my-5" :style="!loading ? 'display: none' : ''">
                 <div class="spinner-border text-gold" role="status"></div>
             </div>
-
+            <p v-if="!searchData.length && !loading" class="search-no-result mb-5">
+                @Model.NoResultsFoundLabel
+            </p>
             <div class="row">
                 <article-item inline-template v-for="(article, i) in searchData" :key="i + article.title">
                     <div class="col-md-6 col-lg-4">

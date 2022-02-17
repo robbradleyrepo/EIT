@@ -44,7 +44,7 @@
 
             if (string.IsNullOrEmpty(label))
             {
-                label = indexedDate.ToString("D", Sitecore.Context.Culture);
+                label = indexedDate.ToString("D", Sitecore.Context.Culture).Replace(",", "");
             }
 
             return label;
@@ -60,7 +60,7 @@
                     Url = hit.Document.ArticleUrl,
                     Authors = hit.Document.ArticleAuthorNames?.Split('|'),
                     Category = hit.Document.ArticleContentTypeName,
-                    Date = this.GetArticleDate(!hit.Document.ArticleDate.Equals(DateTime.MinValue) ? hit.Document.ArticleDate : hit.Document.Created),
+                    Date = this.GetArticleDate(hit.Document.ArticleCreatedDate),
                     Fund = hit.Document.ArticleFundName,
                     ImageUrl = hit.Document.ArticleListingImage,
                     ImageOpacity = string.IsNullOrWhiteSpace(hit.Document.ArticleListingImageOpacity) || hit.Document.ArticleListingImageOpacity == "" ? "1" : hit.Document.ArticleListingImageOpacity,
@@ -116,38 +116,50 @@
             var filterFacetConfigItem = _contentRepository.GetItem<IArticleListingFacetsConfig>(new GetItemByIdOptions(articleFilterFacetConfigId));
 
             var listingArticleFacetsResponse = new ArticleFacetsResponse();
-            if (filterFacetConfigItem == null
-                    || filterFacetConfigItem.FundsFolder == null
-                    || filterFacetConfigItem.CategoriesFolder == null
-                    || filterFacetConfigItem.FundManagersFolder == null
-                    || filterFacetConfigItem.FundTeamsFolder == null)
+            if (filterFacetConfigItem == null)
             {
                 return null;
             }
 
-            listingArticleFacetsResponse.Facets = new List<Facet>
+            var facetList = new List<Facet>();
+
+            if (filterFacetConfigItem.FundsFolder != null)
             {
-                new Facet
+                facetList.Add(new Facet
                 {
                     Name = filterFacetConfigItem.FundsLabel,
                     Items = filterFacetConfigItem.FundsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
-                },
-                new Facet
-                {
-                    Name = filterFacetConfigItem.FundTeamsLabel,
-                    Items = filterFacetConfigItem.FundTeamsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name })
-                },
-                new Facet
+                });
+            }            
+
+            if (filterFacetConfigItem.FundManagersFolder != null)
+            {
+                facetList.Add(new Facet
                 {
                     Name = filterFacetConfigItem.FundManagersLabel,
                     Items = filterFacetConfigItem.FundManagersFolder?.Children?.Where(x => x.IsFundManager)?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
-                },                
-                new Facet
+                });
+            }
+
+            if (filterFacetConfigItem.FundTeamsFolder != null)
+            {
+                facetList.Add(new Facet
+                {
+                    Name = filterFacetConfigItem.FundTeamsLabel,
+                    Items = filterFacetConfigItem.FundTeamsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name })
+                });
+            }
+
+            if (filterFacetConfigItem.CategoriesFolder != null)
+            {
+                facetList.Add(new Facet
                 {
                     Name = filterFacetConfigItem.CategoriesLabel,
                     Items = filterFacetConfigItem.CategoriesFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
-                },
-            };
+                });
+            }
+
+            listingArticleFacetsResponse.Facets = facetList;
 
             return listingArticleFacetsResponse;
         }
@@ -178,11 +190,11 @@
             ContentSearchResults<ArticleSearchResultItem> contentSearchResults;
             if (sortOrder == "ASC")
             {
-                contentSearchResults = this._articleContentSearchService.GetDatedTaxonomyRelatedArticles(articleSearchRequest, result => result.OrderBy(x => x.ArticleDate));
+                contentSearchResults = this._articleContentSearchService.GetDatedTaxonomyRelatedArticles(articleSearchRequest, result => result.OrderBy(x => x.ArticleCreatedDate));
             }
             else if (sortOrder == "DESC")
             {
-                contentSearchResults = this._articleContentSearchService.GetDatedTaxonomyRelatedArticles(articleSearchRequest, result => result.OrderByDescending(x => x.ArticleDate));
+                contentSearchResults = this._articleContentSearchService.GetDatedTaxonomyRelatedArticles(articleSearchRequest, result => result.OrderByDescending(x => x.ArticleCreatedDate));
             }
             else
             {

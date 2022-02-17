@@ -70,6 +70,11 @@
             fundTeams = string.IsNullOrEmpty(fundTeams) ? selectedTeams : fundTeams + "|" + selectedTeams;
             fundCategories = string.IsNullOrEmpty(fundCategories) ? selectedCategories : fundCategories + "|" + selectedCategories;
 
+            if (string.IsNullOrEmpty(sortOrder))
+            {
+                sortOrder = "DESC";
+            }
+
             var response = this._articleListingDataManager.GetArticleListingResponse(database, contentType, funds, fundCategories, fundManagers, fundTeams, month, year, searchTerm, sortOrder, page);
             if (response.StatusCode != 200)
             {

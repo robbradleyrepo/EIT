@@ -76,6 +76,7 @@ SharedFields:
                 $newItem.Fields["IncludeInSearchResults"].Value = $blog.Fields["IncludeInSearchResults"].Value
                 $newItem.Fields["LegacyFundPageData_FundReference"].Value = $blog.Fields["LegacyFundPageData_FundReference"].Value
                 $newItem.Fields["Sitemap_IncludeInSitemap"].Value = $blog.Fields["Sitemap_IncludeInSitemap"].Value
+                $newItem.Fields["__Created"].Value = $blog.Fields["__Created"].Value
                 $newItem.Editing.EndEdit()
                 
                 $richtextCompPath = $dateFolderPath + "/" + $newItem.Name + "/_Local/Article Rich Text 1"

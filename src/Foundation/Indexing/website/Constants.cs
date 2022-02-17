@@ -11,5 +11,6 @@
         public const string PodcastTemplateId = "{5FA772FC-EA92-47C5-B62C-378240F761F7}";
         public const string ArticleRichTextTemplateId = "{07429BCD-04EC-46EA-B3ED-4CB9CA96912B}";
         public const string ArticleRichTextCopy_FieldId = "{6876726D-D5D2-40DF-94A7-A9A6FAE2F683}";
+        public const string ArticleDate_FieldId = "{79CC76CC-7503-449B-9809-9808CF6C2D26}";
     }
 }
