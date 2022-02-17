@@ -121,7 +121,7 @@
             if (!string.IsNullOrEmpty(fundSearchRequest.SearchTerm))
             {
                 var searchTermPredicate = PredicateBuilder.False<FundSearchResultItem>();
-                searchTermPredicate = searchTermPredicate.Or(item => item.FundName.Contains(fundSearchRequest.SearchTerm));
+                searchTermPredicate = searchTermPredicate.Or(item => item.FundSearchName.Contains(fundSearchRequest.SearchTerm));
                 searchTermPredicate = searchTermPredicate.Or(item => item.FundManagerNames.Contains(fundSearchRequest.SearchTerm));
 
                 predicate = predicate.And(searchTermPredicate);
@@ -140,7 +140,6 @@
             validationPredicate = validationPredicate.And(item => item.FundCardDescription != null && item.FundCardDescription != string.Empty);
             validationPredicate = validationPredicate.And(item => item.FundPageLinkText != null && item.FundPageLinkText != string.Empty);
             validationPredicate = validationPredicate.And(item => item.FundTeamName != null && item.FundTeamName != string.Empty);
-            validationPredicate = validationPredicate.And(item => item.FundFactSheet != null && item.FundFactSheet != string.Empty);
 
             predicate = predicate.And(validationPredicate);
 
