@@ -60,7 +60,7 @@
                     Url = hit.Document.ArticleUrl,
                     Authors = hit.Document.ArticleAuthorNames?.Split('|'),
                     Category = hit.Document.ArticleContentTypeName,
-                    Date = this.GetArticleDate(!hit.Document.ArticleDate.Equals(DateTime.MinValue) ? hit.Document.ArticleDate : hit.Document.Created),
+                    Date = this.GetArticleDate(hit.Document.ArticleCreatedDate),
                     Fund = hit.Document.ArticleFundName,
                     ImageUrl = hit.Document.ArticleListingImage,
                     ImageOpacity = string.IsNullOrWhiteSpace(hit.Document.ArticleListingImageOpacity) || hit.Document.ArticleListingImageOpacity == "" ? "1" : hit.Document.ArticleListingImageOpacity,
@@ -178,11 +178,11 @@
             ContentSearchResults<ArticleSearchResultItem> contentSearchResults;
             if (sortOrder == "ASC")
             {
-                contentSearchResults = this._articleContentSearchService.GetDatedTaxonomyRelatedArticles(articleSearchRequest, result => result.OrderBy(x => x.ArticleDate));
+                contentSearchResults = this._articleContentSearchService.GetDatedTaxonomyRelatedArticles(articleSearchRequest, result => result.OrderBy(x => x.ArticleCreatedDate));
             }
             else if (sortOrder == "DESC")
             {
-                contentSearchResults = this._articleContentSearchService.GetDatedTaxonomyRelatedArticles(articleSearchRequest, result => result.OrderByDescending(x => x.ArticleDate));
+                contentSearchResults = this._articleContentSearchService.GetDatedTaxonomyRelatedArticles(articleSearchRequest, result => result.OrderByDescending(x => x.ArticleCreatedDate));
             }
             else
             {

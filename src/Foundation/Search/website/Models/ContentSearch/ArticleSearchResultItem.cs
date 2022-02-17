@@ -78,5 +78,8 @@
 
         [IndexField("article_author_teams")]
         public IEnumerable<string> ArticleAuthorTeams { get; set; }
+
+        [IndexField("article_created_date")]
+        public DateTime ArticleCreatedDate { get; set; }
     }
 }

@@ -1,0 +1,145 @@
+﻿---
+ID: "584ff63e-5b68-4113-8777-5d2db9c2142f"
+Parent: "bdb58bfd-c754-4b57-8d27-f2f4a14ee4dc"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Blogs/2019/07/Liontrust GF SF Pan-European Growth Fund Q2 2019 review"
+DB: master
+BranchID: "810226bd-15aa-4f26-ab02-7a63b355d4a8"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{BA2439A2-5D38-4691-8F50-1B8A94ACD903}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{C8B3B2D1-D42B-4F7F-A536-F647A1CF9C18}"
+              p:before="*"
+              s:ds="{5B4110A3-084D-492A-947D-A1FAF66F0562}"
+              s:id="{00E6D57B-DFBB-4C64-8D9F-B9F59A979D23}"
+              s:ph="/header/article-header" />
+            <r
+              uid="{34A6F516-20A4-4E10-8D36-5120670F54DF}"
+              p:after="r[@uid='{C8B3B2D1-D42B-4F7F-A536-F647A1CF9C18}']"
+              s:ds="{154895F9-935C-46EF-9E44-DE1FA0A550E5}"
+              s:id="{010E3C29-6258-4251-9CEB-FEB1FAC64F98}"
+              s:ph="/main/article" />
+            <r
+              uid="{44D9CD64-8820-4293-928E-E33DAA95A12C}"
+              p:after="r[@uid='{34A6F516-20A4-4E10-8D36-5120670F54DF}']"
+              s:ds="{2D410436-7228-4AF0-BB36-93B493994C1F}"
+              s:id="{DF18E4D6-F59A-4CDD-B26B-91D902F3A2DB}"
+              s:ph="/main/article" />
+            <r
+              uid="{1F957C53-EC39-450C-BD85-F18C9D6D0C39}"
+              p:after="r[@uid='{44D9CD64-8820-4293-928E-E33DAA95A12C}']"
+              s:ds="{ED394385-642A-4C92-8A7C-207F3EC74DD5}"
+              s:id="{7626FD78-BC75-4F9C-80E7-DC947364A29B}"
+              s:ph="/main/article" />
+            <r
+              uid="{055D3003-595D-4BE2-91E8-375FDE37C61E}"
+              p:after="r[@uid='{1F957C53-EC39-450C-BD85-F18C9D6D0C39}']"
+              s:ds="{608DF198-EB45-4405-A6B0-0B2CFFAFF357}"
+              s:id="{C578F8BA-7001-4285-8D55-B913F21E60E0}"
+              s:ph="/main/article" />
+            <r
+              uid="{9EC6B67F-F89B-4B77-872C-0DB79F2D9718}"
+              p:after="r[@uid='{055D3003-595D-4BE2-91E8-375FDE37C61E}']"
+              s:ds="{3FAA043A-9796-455C-A2DA-1068EAC8DB30}"
+              s:id="{7626FD78-BC75-4F9C-80E7-DC947364A29B}"
+              s:ph="/main/article" />
+            <r
+              uid="{0BDBF2FD-B974-4321-8660-8C93C6E90A43}"
+              p:after="r[@uid='{9EC6B67F-F89B-4B77-872C-0DB79F2D9718}']"
+              s:ds="{5B4110A3-084D-492A-947D-A1FAF66F0562}"
+              s:id="{00E6D57B-DFBB-4C64-8D9F-B9F59A979D23}"
+              s:par=""
+              s:ph="/main/article" />
+            <r
+              uid="{18A6223B-77E7-4D4F-B82B-4C383BA8A7EF}"
+              s:ds="{9C51E940-A5B7-43CF-94A2-C2CA33B8F927}" />
+            <r
+              uid="{8FCDAE13-103E-410F-A79E-9E1C59DDACEC}"
+              p:after="r[@uid='{BE0557ED-7DE5-4630-92F6-C480810204DD}']"
+              s:ds="{DABF31D8-49D2-44F4-BFF6-9AF7B8F0926B}"
+              s:id="{B87F0E98-81D6-4B7F-A351-549255F96DB7}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{C7EE86D7-3A10-4411-9C69-71EF27E583E4}"
+              p:after="r[@uid='{8FCDAE13-103E-410F-A79E-9E1C59DDACEC}']"
+              s:ds="{8F7AA55E-2569-4646-A28E-7FA325F64C31}"
+              s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+              s:ph="main" />
+            <r
+              uid="{05CB20B1-127B-4E38-BAC1-5A826D85A9D1}"
+              p:after="r[@uid='{C7EE86D7-3A10-4411-9C69-71EF27E583E4}']"
+              s:ds="{28CDD637-5F51-49E4-8697-FD3AA8C14536}"
+              s:id="{DC0AC587-3DF0-468C-9F4F-6E8C137ECD47}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{B6168C0D-C843-4588-B49B-2FAB9D488771}"
+              p:after="r[@uid='{05CB20B1-127B-4E38-BAC1-5A826D85A9D1}']"
+              s:ds="{418A88A6-55E1-415A-AED8-0A2F10231890}"
+              s:id="{C4570003-4866-4EAA-B069-8FA6611DC0EC}"
+              s:ph="main" />
+            <r
+              uid="{BBB2192D-FA6A-46AE-AE95-15DD426DC1C0}"
+              p:after="r[@uid='{B6168C0D-C843-4588-B49B-2FAB9D488771}']"
+              s:ds="{25C50601-E3F4-4E58-8F62-89BCEF8A882A}"
+              s:id="{7F3DDF4D-5190-4C04-836D-41325114723D}"
+              s:ph="main" />
+            <r
+              uid="{79DF7224-7866-417D-91E6-6C95F795301F}"
+              p:after="r[@uid='{BBB2192D-FA6A-46AE-AE95-15DD426DC1C0}']"
+              s:ds="{E4FDD419-3693-4B31-99D8-EA7A88771FBC}"
+              s:id="{29206264-421A-41D5-8869-A7D1EA60566B}"
+              s:ph="main" />
+            <r
+              uid="{136B2778-E8D5-477F-A7EA-E29FEBC69BB6}"
+              p:after="*[1=2]"
+              s:ds="{98715884-918F-4CB2-8F45-76E38814F897}"
+              s:id="{A811D2B0-D08D-4991-A9DD-6D9FA5799CBD}"
+              s:ph="main" />
+          </d>
+        </r>
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: "{5A4AD063-A365-4A9E-A33C-F53D23FFDD7F}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "Liontrust GF SF Pan-European Growth Fund Q2 2019 review | Insights | Liontrust Asset Management PLC"
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: $name
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190729T123640Z
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5bd6e9e9-2240-4473-8094-075e811b8438"
+      Hint: Article_ListingImage
+      Value: |
+        <image mediaid="{4B453796-9468-4F46-846F-AD773E555CC6}" />
+    - ID: "79cc76cc-7503-449b-9809-9808cf6c2d26"
+      Hint: Article_Date
+      Value: 
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: "Liontrust GF SF Pan-European Growth Fund Q2 2019 review"
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: "Liontrust GF SF Pan-European Growth Fund Q2 2019 review"

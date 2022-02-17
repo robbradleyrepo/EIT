@@ -41,5 +41,8 @@
 
         [IndexField("Article_Date")]
         public DateTime ArticleDate { get; set; }
+
+        [IndexField("article_created_date")]
+        public DateTime ArticleCreatedDate { get; set; }
     }
 }
