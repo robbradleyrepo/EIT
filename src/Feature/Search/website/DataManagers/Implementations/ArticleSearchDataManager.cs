@@ -116,38 +116,50 @@
             var filterFacetConfigItem = _contentRepository.GetItem<IArticleListingFacetsConfig>(new GetItemByIdOptions(articleFilterFacetConfigId));
 
             var listingArticleFacetsResponse = new ArticleFacetsResponse();
-            if (filterFacetConfigItem == null
-                    || filterFacetConfigItem.FundsFolder == null
-                    || filterFacetConfigItem.CategoriesFolder == null
-                    || filterFacetConfigItem.FundManagersFolder == null
-                    || filterFacetConfigItem.FundTeamsFolder == null)
+            if (filterFacetConfigItem == null)
             {
                 return null;
             }
 
-            listingArticleFacetsResponse.Facets = new List<Facet>
+            var facetList = new List<Facet>();
+
+            if (filterFacetConfigItem.FundsFolder != null)
             {
-                new Facet
+                facetList.Add(new Facet
                 {
                     Name = filterFacetConfigItem.FundsLabel,
                     Items = filterFacetConfigItem.FundsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
-                },
-                new Facet
-                {
-                    Name = filterFacetConfigItem.FundTeamsLabel,
-                    Items = filterFacetConfigItem.FundTeamsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name })
-                },
-                new Facet
+                });
+            }            
+
+            if (filterFacetConfigItem.FundManagersFolder != null)
+            {
+                facetList.Add(new Facet
                 {
                     Name = filterFacetConfigItem.FundManagersLabel,
                     Items = filterFacetConfigItem.FundManagersFolder?.Children?.Where(x => x.IsFundManager)?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
-                },                
-                new Facet
+                });
+            }
+
+            if (filterFacetConfigItem.FundTeamsFolder != null)
+            {
+                facetList.Add(new Facet
+                {
+                    Name = filterFacetConfigItem.FundTeamsLabel,
+                    Items = filterFacetConfigItem.FundTeamsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name })
+                });
+            }
+
+            if (filterFacetConfigItem.CategoriesFolder != null)
+            {
+                facetList.Add(new Facet
                 {
                     Name = filterFacetConfigItem.CategoriesLabel,
                     Items = filterFacetConfigItem.CategoriesFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
-                },
-            };
+                });
+            }
+
+            listingArticleFacetsResponse.Facets = facetList;
 
             return listingArticleFacetsResponse;
         }

@@ -52,5 +52,8 @@
 
         [SitecoreField(Constants.ArticleLister.YearLabel_FieldId)]
         string YearLabel { get; set; }
+
+        [SitecoreField(Constants.ArticleLister.NoResultsFoundLabel_FieldId)]
+        string NoResultsFoundLabel { get; set; }
     }
 }
