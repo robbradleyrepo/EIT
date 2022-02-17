@@ -9,6 +9,9 @@
         [SitecoreField(Constants.Country.CountryName_FieldId)]
         string CountryName { get; set; }
 
+        [SitecoreField(Constants.Country.UseDefiniteArticle_FieldId)]
+        bool UseDefiniteArticle { get; set; }
+
         [SitecoreField(Constants.Country.ISO_FieldId)]
         string ISO { get; set; }
 

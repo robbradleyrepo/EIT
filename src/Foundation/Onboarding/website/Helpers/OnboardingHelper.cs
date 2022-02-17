@@ -404,5 +404,21 @@
         {
             return GetCurrentContactCountryCode()?.Equals(CountryCodes.UK, StringComparison.InvariantCultureIgnoreCase) ?? false;
         }
+
+        public static string GetCountryNameDefiniteArticle(ICountry country)
+        {
+            if (country == null)
+            {
+                return string.Empty;
+            }
+
+            var definiteArticle = string.Empty;
+            if (country.UseDefiniteArticle)
+            {
+                definiteArticle = "the ";
+            }
+
+            return $"{definiteArticle}{country.CountryName}";
+        }
     }
 }
