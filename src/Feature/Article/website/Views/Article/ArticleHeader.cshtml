@@ -73,7 +73,7 @@
         @Html.Sitecore().Placeholder("article-header")
     </div>
 
-    @if (!Sitecore.Context.PageMode.IsExperienceEditor && Model.ArticleSchema != null)
+    @if (!Sitecore.Context.PageMode.IsExperienceEditor && !Sitecore.Context.PageMode.IsPreview && Model.ArticleSchema != null)
     {
         Html.RenderAction("ArticleSchema", "Schema", new { ArticleSchema = Model.ArticleSchema });
     }
