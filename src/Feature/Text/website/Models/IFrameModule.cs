@@ -10,10 +10,7 @@
         [SitecoreField(Constants.IFrameModule.IFrameUrl_FieldId)]
         string IFrameUrl { get; set; }
 
-        [SitecoreField(Constants.IFrameModule.Height_FieldId)]
-        string Height { get; set; }
-
-        [SitecoreField(Constants.IFrameModule.Width_FieldId)]
-        string Width { get; set; }
+        [SitecoreField(Constants.IFrameModule.UniqueId_FieldId)]
+        string UniqueId { get; set; }       
     }
 }
