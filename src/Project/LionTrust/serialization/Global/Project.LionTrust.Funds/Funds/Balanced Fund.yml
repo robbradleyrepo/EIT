@@ -103,6 +103,10 @@ Languages:
     - ID: "6afb4eb4-25c4-472b-aa65-8ad9ddb3be2c"
       Hint: LegacyFund_FundName
       Value: Balanced Fund
+    - ID: "6cac6ca9-127d-4cd0-b22e-e12d73d2372a"
+      Hint: FundFacets_FundRanges
+      Type: Multilist
+      Value: "{610F413C-48E4-48A1-94E6-BCFE0E9BC14C}"
     - ID: "6cbf0ed2-94b3-4f2a-a84d-a36501e38105"
       Hint: LegacyFund_LaunchDate
       Value: 20121002T230000Z
@@ -186,6 +190,9 @@ Languages:
     - ID: "b5af47a5-20d0-4b27-8ad2-34ce9a1ffc89"
       Hint: LegacyBenchmarkFundData_BenchmarkTenYears
       Value: 85.726%
+    - ID: "bebce40d-9578-44df-b126-ee555ace9407"
+      Hint: FundFacets_FundRegion
+      Value: "{7F5FC301-FA69-4AFA-96D0-28967E2B7149}"
     - ID: "bf364003-b633-48a4-877f-3e553d116ceb"
       Hint: LegacyFund_Sector
       Value: "IA Mixed Investment 40-85% Shares"

@@ -118,9 +118,9 @@
         /// Gets funds based on filters in the request.
         /// </summary>
         /// <returns>A list of funds.</returns>
-        public ActionResult GetFilteredFunds(string ids, string fundTeams, string fundManagers, string fundRegions, string fundRanges, string searchTerm, string sortOrder, string database = "web", int page = 1, string hideFunds = "")
+        public ActionResult GetFilteredFunds(string ids, string fundTeams, string fundManagers, string regions, string fundRanges, string searchTerm, string sortOrder, string database = "web", int page = 1, string hideFunds = "")
         {
-            var response = _fundListingDataManager.GetFundListingResponse(database, fundTeams, fundManagers, fundRegions, fundRanges, searchTerm, sortOrder, page, ids, hideFunds == "1");
+            var response = _fundListingDataManager.GetFundListingResponse(database, fundTeams, fundManagers, regions, fundRanges, searchTerm, sortOrder, page, ids, hideFunds == "1");
             if (response.StatusCode != 200)
             {
                 return new HttpStatusCodeResult(response.StatusCode, response.StatusMessage);

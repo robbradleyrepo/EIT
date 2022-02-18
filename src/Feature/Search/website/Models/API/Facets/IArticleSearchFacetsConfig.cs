@@ -5,7 +5,7 @@
     public interface IArticleListingFacetsConfig : ISearchGlassBase
     {
         [SitecoreField(FieldId = Constants.APIFacets.ArticleSearchFacetsConfig.FundsFieldId)]
-        IFacetFolder FundsFolder { get; set; }
+        IFundFacetFolder FundsFolder { get; set; }
 
         [SitecoreField(FieldId = Constants.APIFacets.ArticleSearchFacetsConfig.FundsLabelFieldId)]
         string FundsLabel { get; set; }
