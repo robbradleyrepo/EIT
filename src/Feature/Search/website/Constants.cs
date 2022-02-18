@@ -60,6 +60,13 @@
                 public const string IsFundManagerFieldId = "{AD3AF339-1FD6-47EA-B506-7ED32F5D6246}";
             }
 
+            public static class FundFacetOption
+            {
+                public const string TemplateId = "{DD91CC88-A0D2-43D9-B419-458ECFFE9F00}";
+
+                public const string HideFromFiltersFieldId = "{91F79612-5C57-43A3-A182-1CEFDADCAA88}";
+            }
+
             public static class FundSearchFacetsConfig
             {
                 public const string FundRangesFieldId = "{FBE9329C-271B-4573-B4FD-6DC4B7C692C9}";

@@ -128,7 +128,7 @@
                 facetList.Add(new Facet
                 {
                     Name = filterFacetConfigItem.FundsLabel,
-                    Items = filterFacetConfigItem.FundsFolder?.Children?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
+                    Items = filterFacetConfigItem.FundsFolder?.Children?.Where(x => !x.HideFromFilters)?.Select(x => new FacetItem { Identifier = x.Id.ToString("N"), Name = x.Name }),
                 });
             }            
 
