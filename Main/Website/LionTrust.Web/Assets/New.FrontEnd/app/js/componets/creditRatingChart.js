@@ -29,23 +29,10 @@ export default () => {
         },
         plugins: {
           datalabels: {
-            formatter: (value, ctx) => {
-              let sum = 0;
+            formatter: (value, ctx) => {              
               let dataArr = ctx.chart.data.datasets[0].data;
-              let percentage;
-              dataArr.map(data => {
-                sum += data;
-              });
-              if(sum === 0)
-              {
-                 percentage = 0 + "%";
-              }
-              else
-              {
-                percentage = (value * 100 / sum).toFixed(2) + "%";
-              }
-              
-
+              let percentage = value.toFixed(2) + "%";
+             
               return percentage;
             },
             color: '#414855',
