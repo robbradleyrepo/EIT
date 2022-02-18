@@ -62,8 +62,7 @@
         {
             public const string Title_FieldId = "{613F3556-678A-4C6C-9210-9FA32F9C82C2}";
             public const string IFrameUrl_FieldId = "{99577A3D-CF58-4C34-BE70-7459ABCE4DC8}";
-            public const string Height_FieldId = "{F31F2FC8-8CB8-48B5-A856-2A9D07045F25}";
-            public const string Width_FieldId = "{1FE00FBC-83EC-401A-994E-CE8764A9DA49}";
+            public const string UniqueId_FieldId = "{F31F2FC8-8CB8-48B5-A856-2A9D07045F25}";
         }
     }
 }
