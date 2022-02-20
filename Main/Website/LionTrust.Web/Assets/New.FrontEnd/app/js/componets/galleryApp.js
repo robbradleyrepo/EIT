@@ -4,7 +4,7 @@ class Demo {
     this.element = element;
     this.shuffle = new Shuffle(element, {
       itemSelector: '.media-gallery__card',
-      sizer: element.querySelector('.my-sizer-element')
+      sizer: element.querySelector('.sizer-element'),
     });
     // Log events.
     this.addShuffleEventListeners();
