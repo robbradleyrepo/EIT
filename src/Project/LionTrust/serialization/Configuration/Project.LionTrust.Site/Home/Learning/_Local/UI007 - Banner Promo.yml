@@ -1,0 +1,42 @@
+﻿---
+ID: "a03f6e65-4531-4a19-bf25-cf30818f63b1"
+Parent: "dfa0a8eb-1149-4a92-bcbc-334ce0573b87"
+Template: "c83df526-c557-4146-bef9-f4e891ac7721"
+Path: "/sitecore/content/LionTrustNew/Home/Learning/_Local/UI007 - Banner Promo"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{ECEFA1CC-3437-4336-B908-D346DE01EFCD}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211102T115740Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "8bb7fcd3-f2a0-416d-8be8-7bf2e3027597"
+      Hint: PromoBanner_Body
+      Value: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco.
+    - ID: "9b69e8cf-c2bc-4d89-89f0-7ba153cf8d59"
+      Hint: PromoBanner_Heading
+      Value: About Liontrust
+    - ID: "aece4f5d-41f0-4888-916b-ab0f0f0af345"
+      Hint: PromoBanner_TextAlign
+      Value: 
+    - ID: "d9e5b74a-e0de-4ce9-b90c-cb226207d225"
+      Hint: PromoBanner_PrimaryCTALink
+      Value: |
+        <link linktype="internal" text="Find out more" querystring="" target="" id="{D82BA38B-5FD6-4932-84D8-53606239F77B}" />
+    - ID: "dc4d7aea-7e87-4ab5-9fbb-2a96ecafe1d8"
+      Hint: PromoBanner_BackgroundImage
+      Value: |
+        <image mediaid="{8C038CB5-FC55-4F88-8934-CC2B85C604C5}" />
