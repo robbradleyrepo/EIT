@@ -78,6 +78,11 @@
             {
                 viewModel.Error = data.GenericErrorLabel;
             }
+            else if (error == Errors.EmailNotRecognized)
+            {
+                viewModel.Error = data.RetrievePreferencesEmailNotRecognized;
+                viewModel.EmailNotRecognized = true;
+            }
 
             return View("~/Views/MyPreferences/RegisterInvestor.cshtml", viewModel);
         }
@@ -175,6 +180,7 @@
 
         public ActionResult ResendEmail(string email, Guid dataSourceId, bool isContact)
         {
+            var error = Errors.None;
             var data = _context.SitecoreService.GetItem<IRegisterInvestor>(dataSourceId);
 
             if (data == null)
@@ -195,7 +201,8 @@
             }
             else
             {
-                return Redirect(data.ResendEmailFailedPage.Url);
+                error = Errors.EmailNotRecognized;                
+                return Redirect($"{data.ResendEmailFailedPage.Url}?{QueryStringNames.EmailPreferencefParams.ErrorQueryStringKey}={(int)error}&{QueryStringNames.EmailPreferencefParams.EmailQueryStringKey}={email}#retrieve-preferences");
             }
         }
 

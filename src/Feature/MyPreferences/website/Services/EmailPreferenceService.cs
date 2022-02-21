@@ -101,6 +101,11 @@
                     Log.Info(string.Format("Resent edit email preference link email to - {0}", email), this);
                     return true;
                 }
+                else
+                {
+                    Log.Info(string.Format("Email is not recognized - {0}", email), this);
+                    return false;
+                }
             }
             catch (Exception ex)
             {

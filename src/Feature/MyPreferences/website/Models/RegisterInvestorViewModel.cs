@@ -43,5 +43,7 @@ namespace LionTrust.Feature.MyPreferences.Models
         public string ChangeInvestorUrl { get; set; }
 
         public bool SubscribeToEmail { get; set; }
+
+        public bool EmailNotRecognized { get; set; }
     }
 }
