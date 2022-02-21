@@ -67,49 +67,51 @@
                     var fundTeams = mediaItem.Categories != null && mediaItem.Categories.Any()
                         ? string.Join(",", mediaItem.Categories.Select(c => "\"" + c.Id.ToString() + "\""))
                         : string.Empty;
-                    <div class="media-gallery__card col-12 col-md-6 col-lg-2" data-groups='[@fundTeams]' data-title="@mediaItem.Name">
-                        @if (Sitecore.Context.PageMode.IsExperienceEditor)
-                        {
-                            @Html.Glass().Editable(mediaItem, m => m.HeadshotImage)
-                            @Html.Glass().Editable(mediaItem, m => m.FullBodyImage)
-                            <p class="media-gallery__description">
-                                @Html.Glass().Editable(mediaItem, m => m.Description)
-                            </p>
-                        }
-                        else
-                        {
-                            if (mediaItem.HeadshotImage != null && mediaItem.FullBodyImage != null)
+                    <div class="media-gallery__card col-12 col-md-4 col-lg-3 col-xl-2" data-groups='[@fundTeams]' data-title="@mediaItem.Name">
+                        <div class="media-gallery__item">
+                            @if (Sitecore.Context.PageMode.IsExperienceEditor)
                             {
-                                <div class="media-gallery__img">
-                                    <a href="@mediaItem.FullBodyImage.Src" data-fancybox="images"
-                                       data-caption="Caption for single image <a class='media-gallery__download' href='@mediaItem.FullBodyImage.Src' download>download</a>">
-                                        <img src="@mediaItem.HeadshotImage.Src" alt="" />
-                                    </a>
-                                </div>
+                                @Html.Glass().Editable(mediaItem, m => m.HeadshotImage)
+                                @Html.Glass().Editable(mediaItem, m => m.FullBodyImage)
+                                <p class="media-gallery__description">
+                                    @Html.Glass().Editable(mediaItem, m => m.Description)
+                                </p>
                             }
-                            <p class="media-gallery__description">
-                                @mediaItem.Description
-                            </p>
-                            if (mediaItem.HeadshotImage != null && mediaItem.FullBodyImage != null)
+                            else
                             {
-                                <div class="media-gallery__controls">
-                                    <div class="media-gallery__select text-black">
-                                        <label class="checkbox">
-                                            <input type="checkbox" class="checkbox__input" name="checkMedia" data-id="@mediaItem.HeadshotImage.MediaId">
-                                            <span class="checkbox__box"></span>
-                                            @Html.Glass().Editable(Model, m => m.SelectLabel)
-                                        </label>
+                                if (mediaItem.HeadshotImage != null && mediaItem.FullBodyImage != null)
+                                {
+                                    <div class="media-gallery__img">
+                                        <a href="@mediaItem.FullBodyImage.Src" data-fancybox="images"
+                                           data-caption="Caption for single image <a class='media-gallery__download' href='@mediaItem.FullBodyImage.Src' download>download</a>">
+                                            <img src="@mediaItem.HeadshotImage.Src" alt="" />
+                                        </a>
                                     </div>
-                                    <div class="media-gallery__download text-black">
-                                        <a href="@mediaItem.HeadshotImage.Src" download>@Html.Glass().Editable(Model, m => m.DownloadLabel)</a>
+                                }
+                                <p class="media-gallery__description">
+                                    @mediaItem.Description
+                                </p>
+                                if (mediaItem.HeadshotImage != null && mediaItem.FullBodyImage != null)
+                                {
+                                    <div class="media-gallery__controls">
+                                        <div class="media-gallery__select text-black">
+                                            <label class="checkbox">
+                                                <input type="checkbox" class="checkbox__input" name="checkMedia" data-id="@mediaItem.HeadshotImage.MediaId">
+                                                <span class="checkbox__box"></span>
+                                                @Html.Glass().Editable(Model, m => m.SelectLabel)
+                                            </label>
+                                        </div>
+                                        <div class="media-gallery__download text-black">
+                                            <a href="@mediaItem.HeadshotImage.Src" download>@Html.Glass().Editable(Model, m => m.DownloadLabel)</a>
+                                        </div>
                                     </div>
-                                </div>
+                                }
                             }
-                        }
+                        </div>
                     </div>
                 }
             }
-            <div class="col-1@sm col-1@xs my-sizer-element"></div>
+            <div class="sizer-element col-12 col-md-4 col-lg-3 col-xl-2"></div>
         </div>
     </div>
     <div class="container">
