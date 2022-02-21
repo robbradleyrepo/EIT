@@ -65,6 +65,7 @@
                 public const string IntroductionText = "{66D371DB-D7AC-42A0-8A6C-A932C85DB406}";
                 public const string EmailLabel = "{A192BC7F-6B60-4555-853F-FFAD8677F29B}";
                 public const string CTAText = "{79ED1E30-6DF9-4B71-8DBA-7E98851C8040}";
+                public const string EmailNotRecognized = "{A86DB8CA-97F4-4D46-9357-255F92D04CA3}";
             }
         }
 
@@ -125,7 +126,8 @@
         {
             UserExists,
             General,
-            None
+            None,
+            EmailNotRecognized
         }
     }
 }
