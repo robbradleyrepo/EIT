@@ -1,24 +1,177 @@
 ﻿---
-ID: "31fd00cc-76bf-4564-86be-8021d0e10bf9"
-Parent: "49766078-4397-4668-b13e-4efbe7cadf55"
-Template: "c1d35f9a-a7d0-47f9-903d-5ed33a15a795"
+ID: "cc547fc1-9e86-40d5-9361-35c8a2aad347"
+Parent: "2cff5f23-0184-48e8-aca3-e9e3f97c8df2"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
 Path: /sitecore/content/LionTrustNew/Home/Learning/Understanding your risk profile
 DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 1000
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{BA2439A2-5D38-4691-8F50-1B8A94ACD903}"
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{C8B3B2D1-D42B-4F7F-A536-F647A1CF9C18}"
+              p:before="*"
+              s:ds="{625C8600-A5F4-4906-A627-F20F358D186A}"
+              s:id="{00E6D57B-DFBB-4C64-8D9F-B9F59A979D23}"
+              s:ph="/header/article-header" />
+            <r
+              uid="{34A6F516-20A4-4E10-8D36-5120670F54DF}"
+              p:after="r[@uid='{C8B3B2D1-D42B-4F7F-A536-F647A1CF9C18}']"
+              s:ds="{5DFE671B-28E8-44AD-96D8-F998CB08C10D}"
+              s:id="{010E3C29-6258-4251-9CEB-FEB1FAC64F98}"
+              s:ph="/main/article" />
+            <r
+              uid="{44D9CD64-8820-4293-928E-E33DAA95A12C}"
+              p:after="r[@uid='{34A6F516-20A4-4E10-8D36-5120670F54DF}']"
+              s:ds="{931232D0-3A4A-48D3-A53C-CB7E99A57442}"
+              s:id="{DF18E4D6-F59A-4CDD-B26B-91D902F3A2DB}"
+              s:ph="/main/article" />
+            <r
+              uid="{14987E99-5543-44CB-AACC-450C42697891}"
+              p:after="r[@uid='{44D9CD64-8820-4293-928E-E33DAA95A12C}']"
+              s:ds=""
+              s:id="{7626FD78-BC75-4F9C-80E7-DC947364A29B}"
+              s:par=""
+              s:ph="/main/article" />
+            <r
+              uid="{A87AD433-E2E3-4FF0-BE23-59766F74E3BC}"
+              p:after="r[@uid='{14987E99-5543-44CB-AACC-450C42697891}']"
+              s:ds="{9982AED7-C311-401C-A355-3DB229F53A4B}"
+              s:id="{E9EA1844-F7AA-45D6-A10F-800A467D6E3D}"
+              s:ph="/main/article" />
+            <r
+              uid="{1F957C53-EC39-450C-BD85-F18C9D6D0C39}"
+              p:after="r[@uid='{A87AD433-E2E3-4FF0-BE23-59766F74E3BC}']"
+              s:ds="{00B38BEA-D0FC-43C5-9E60-DBE8D51F4373}"
+              s:id="{7626FD78-BC75-4F9C-80E7-DC947364A29B}"
+              s:ph="/main/article" />
+            <r
+              uid="{9EC6B67F-F89B-4B77-872C-0DB79F2D9718}"
+              p:after="r[@uid='{1F957C53-EC39-450C-BD85-F18C9D6D0C39}']"
+              s:ds="{6D389056-42B6-4973-BD36-36B926DF878E}"
+              s:id="{7626FD78-BC75-4F9C-80E7-DC947364A29B}"
+              s:ph="/main/article" />
+            <r
+              uid="{04F7A238-0DF7-4ECB-85F1-46A48F0D8C1C}"
+              p:after="r[@uid='{9EC6B67F-F89B-4B77-872C-0DB79F2D9718}']"
+              s:ds="{D9F4E7C3-FC57-4295-9EA5-42924432D54A}"
+              s:id="{E9EA1844-F7AA-45D6-A10F-800A467D6E3D}"
+              s:ph="/main/article" />
+            <r
+              uid="{41CB1F22-FE7B-4C7B-ABD4-BF7F5DB12699}"
+              p:after="r[@uid='{04F7A238-0DF7-4ECB-85F1-46A48F0D8C1C}']"
+              s:ds="{B4F49D0D-C9D9-4F0E-850D-8E8135F9DDCD}"
+              s:id="{7626FD78-BC75-4F9C-80E7-DC947364A29B}"
+              s:ph="/main/article" />
+            <r
+              uid="{0BDBF2FD-B974-4321-8660-8C93C6E90A43}"
+              p:after="r[@uid='{41CB1F22-FE7B-4C7B-ABD4-BF7F5DB12699}']"
+              s:ds="{625C8600-A5F4-4906-A627-F20F358D186A}"
+              s:id="{00E6D57B-DFBB-4C64-8D9F-B9F59A979D23}"
+              s:par=""
+              s:ph="/main/article" />
+            <r
+              uid="{055D3003-595D-4BE2-91E8-375FDE37C61E}"
+              p:after="r[@uid='{0BDBF2FD-B974-4321-8660-8C93C6E90A43}']"
+              s:ds="{C66E0980-BF51-4BA7-8AB6-19429A222C39}"
+              s:id="{C578F8BA-7001-4285-8D55-B913F21E60E0}"
+              s:ph="/main/article" />
+            <r
+              uid="{8D7AC930-4240-457A-A7FD-8397628BF5FA}"
+              p:after="r[@uid='{055D3003-595D-4BE2-91E8-375FDE37C61E}']"
+              s:ds="{AFC5792E-F7BF-4474-BC2F-8EC0177F2FE0}"
+              s:id="{B87F0E98-81D6-4B7F-A351-549255F96DB7}"
+              s:ph="/main/article" />
+            <r
+              uid="{18A6223B-77E7-4D4F-B82B-4C383BA8A7EF}"
+              s:ds="{001C1938-FDBB-4B7F-9D25-D572B2E2E5F4}" />
+            <r
+              uid="{8FCDAE13-103E-410F-A79E-9E1C59DDACEC}"
+              p:after="r[@uid='{BE0557ED-7DE5-4630-92F6-C480810204DD}']"
+              s:ds="{DD4B5124-B3C9-46BE-ADAC-FEEDC25CC748}"
+              s:id="{B87F0E98-81D6-4B7F-A351-549255F96DB7}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{C7EE86D7-3A10-4411-9C69-71EF27E583E4}"
+              p:after="r[@uid='{8FCDAE13-103E-410F-A79E-9E1C59DDACEC}']"
+              s:ds="{8F7AA55E-2569-4646-A28E-7FA325F64C31}"
+              s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+              s:ph="main" />
+            <r
+              uid="{05CB20B1-127B-4E38-BAC1-5A826D85A9D1}"
+              p:after="r[@uid='{C7EE86D7-3A10-4411-9C69-71EF27E583E4}']"
+              s:ds="{1DAA74BF-A264-4D22-8DCD-2599729FF4B0}"
+              s:id="{DC0AC587-3DF0-468C-9F4F-6E8C137ECD47}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{B6168C0D-C843-4588-B49B-2FAB9D488771}"
+              p:after="r[@uid='{05CB20B1-127B-4E38-BAC1-5A826D85A9D1}']"
+              s:ds="{EA1938E1-08E8-4B35-BEFF-468E6BC4E1E8}"
+              s:id="{C4570003-4866-4EAA-B069-8FA6611DC0EC}"
+              s:ph="main" />
+            <r
+              uid="{BBB2192D-FA6A-46AE-AE95-15DD426DC1C0}"
+              p:after="r[@uid='{B6168C0D-C843-4588-B49B-2FAB9D488771}']"
+              s:ds="{AE0BD7E5-409C-4B4A-BEA3-E0D435E6EA56}"
+              s:id="{7F3DDF4D-5190-4C04-836D-41325114723D}"
+              s:ph="main" />
+            <r
+              uid="{79DF7224-7866-417D-91E6-6C95F795301F}"
+              p:after="r[@uid='{BBB2192D-FA6A-46AE-AE95-15DD426DC1C0}']"
+              s:ds="{C2A605C7-7C4E-4BFE-B887-47D14E7D5AE8}"
+              s:id="{29206264-421A-41D5-8869-A7D1EA60566B}"
+              s:ph="main" />
+            <r
+              uid="{136B2778-E8D5-477F-A7EA-E29FEBC69BB6}"
+              p:after="*[1=2]"
+              s:ds="{5DE6336F-8136-492D-9F8A-D6FBB14A5070}"
+              s:id="{A811D2B0-D08D-4991-A9DD-6D9FA5799CBD}"
+              s:ph="main" />
+          </d>
+        </r>
     - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
       Hint: LegacyPresentationBase_BrowserTitle
-      Value: Understanding your risk profile | Liontrust Asset Management PLC
+      Value: Understanding your risk profile | Insights | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: Understanding your risk profile
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210505T112531Z
+      Value: 20220126T161314Z
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5bd6e9e9-2240-4473-8094-075e811b8438"
+      Hint: Article_ListingImage
+      Value: 
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\Admin
+        sitecore\ChristineB
+    - ID: "79cc76cc-7503-449b-9809-9808cf6c2d26"
+      Hint: Article_Date
+      Value: 20220126T161314Z
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: Understanding your risk profile
     - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
       Hint: LegacyPresentationBase_PageTitle
       Value: Understanding your risk profile

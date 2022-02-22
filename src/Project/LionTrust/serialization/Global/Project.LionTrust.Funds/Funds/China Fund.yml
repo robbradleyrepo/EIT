@@ -9,6 +9,9 @@ SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
   Value: Business/32x32/currency_pound.png
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: "{9F34A121-9D36-4EB8-9670-FEAA6EAA981C}"
@@ -17,9 +20,19 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "034cd348-2adc-47e9-b263-2c839808dae1"
+      Hint: FundCard_Fund
+      Value: "{D90B98EA-7D08-4AA3-8A7C-69EE5817AF40}"
+    - ID: "036aeb89-b0bd-42c2-b763-a56cdbe32cdc"
+      Hint: Fund_Classes
+      Type: Multilist
+      Value: |
+        {2A1B9C36-8FCD-406D-8FE2-5C3E75A73022}
+        {15B1F1B3-C93C-4352-BB08-2ABF605D3AEF}
+        {E1724196-C59D-40DB-BBE9-3E8DD66B131E}
     - ID: "0905f092-b5b5-4971-b87e-57f4810bd729"
       Hint: FundCard_Description
-      Value: China
+      Value: The Fund seeks to invest in Emerging Leaders equities, which are companies with the resources and capabilities to survive and prosper given the huge levels of disruption across the economy in China. 
     - ID: "13671185-84c9-49e4-8799-6135f386f3e5"
       Hint: LegacyFund_FiveYears
       Value: 99.018%
@@ -35,16 +48,18 @@ Languages:
     - ID: "221e703d-5ba7-4141-a98c-b76d2e5a663a"
       Hint: LegacyFund_RiskWarning
       Value: |
-        <h4>Key Risks&nbsp;</h4>
-        <br>
-        <strong>Past performance is not a guide to future performance.&nbsp;</strong>Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital.&nbsp;Investment in funds managed by the Global Equity (GE) team may involve investment in smaller companies - these stocks may be less liquid and the price swings greater than those in, for example, larger companies. Investment in funds managed by the GE team may involve foreign currencies and may be subject to fluctuations in value due to movements in exchange rates. The team may invest in emerging markets/soft currencies or in financial derivative instruments, both of which may have the effect of increasing volatility. Some of the funds managed by the GE team hold a concentrated portfolio of stocks, meaning that if the price of one of these stocks should move significantly, this may have a notable effect on the value of that portfolio.<br>
-        <br>
-        <h4>Disclaimer</h4>
-        <p>
-        <br>
-        The information and opinions provided should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.&nbsp;</p>
-        <p>Source: Financial Express. Total return, bid-to-bid. This page is showing performance data and information for an income producing share class. Please go to our&nbsp;<a href="~/link.aspx?_id=9E780821321E4C3496DFD663882802BB&amp;_z=z">Interactive Fund Centre</a>&nbsp;for performance data and information on the Fund&rsquo;s other share classes.<span style="font-size: 1.5rem;"></span></p>
-        <p>&copy; $currentYear$ Morningstar. All Rights Reserved. The information contained herein: (1) is proprietary to Morningstar and/or its content providers; (2) may not be copied or distributed; and (3) is not warranted to be accurate, complete or timely. Neither Morningstar nor its content providers are responsible for any damages or losses arising from any use of this information. &nbsp;Past performance is no guarantee of future results.</p>
+        <p style="margin-bottom: 0cm;"><strong><span style="color: #131313;">Key Risks&nbsp;</span></strong></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">&nbsp;</span></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">Past performance is not a guide to future performance. The value of an investment and the income generated from it can fall as well as rise and is not guaranteed. You may get back less than you originally invested. The issue of units/shares in Liontrust Funds may be subject to an initial charge, which will have an impact on the realisable value of the investment, particularly in the short term. Investments should always be considered as long term.</span></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;"><br />
+        Investment in the Fund involves foreign currencies and may be subject to fluctuations in value due to movements in exchange rates. The Fund may invest in emerging markets/soft currencies or in financial derivative instruments, both of which may have the effect of increasing volatility.&nbsp;<br />
+        </span></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">&nbsp;</span></p>
+        <p style="margin-bottom: 0cm;"><strong><span style="color: #131313;">Disclaimer</span></strong></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">&nbsp;</span></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">This is a marketing communication. Before making an investment, you should read the relevant Prospectus and the Key Investor Information Document (KIID), which provide full product details including investment charges and risks. These documents can be obtained, free of charge, from www.liontrust.co.uk or direct from Liontrust. Always research your own investments. If you are not a professional investor please consult a regulated financial adviser regarding the suitability of such an investment for you and your personal circumstances.&nbsp;</span></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">&nbsp;</span></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">This should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy. The investment being promoted is for units in a fund, not directly in the underlying assets. It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, forwarded, reproduced, divulged or otherwise distributed in any form whether by way of fax, email, oral or otherwise, in whole or in part without the express and prior written consent of Liontrust. Always research your own investments and if you are not a professional investor please consult a regulated financial adviser regarding the suitability of such an investment for you and your personal circumstances.&nbsp;</span></p>
     - ID: "225f8602-2cd0-4926-9e39-d4f5cb37ce5e"
       Hint: LegacyFund_Type
       Value: "{7FBAE005-95AA-4ABE-A600-9BE8716AA7ED}"
@@ -87,13 +102,17 @@ Languages:
         sitecore\jackh
     - ID: "6387ca9a-7a5a-4d33-b706-201681c0b74c"
       Hint: FundCard_Heading
-      Value: China
+      Value: Global Equity
     - ID: "69a48b1d-00fe-4fb6-9e2e-44c630e60bea"
       Hint: LegacyFund_TenYears
       Value: 89.880%
     - ID: "6afb4eb4-25c4-472b-aa65-8ad9ddb3be2c"
       Hint: LegacyFund_FundName
       Value: China Fund
+    - ID: "6cac6ca9-127d-4cd0-b22e-e12d73d2372a"
+      Hint: FundFacets_FundRanges
+      Type: Multilist
+      Value: "{72560CC1-0DA6-4AEE-AEFD-2BD5C9AFAE6D}"
     - ID: "6cbf0ed2-94b3-4f2a-a84d-a36501e38105"
       Hint: LegacyFund_LaunchDate
       Value: 20121002T230000Z
@@ -108,8 +127,7 @@ Languages:
       Value: 26.536%
     - ID: "76af5024-2b12-421a-96cd-46e756f1db9a"
       Hint: FundCard_CTA
-      Value: |
-        <link text="view fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{28344D76-454C-4837-80FA-4871CE0070F3}" />
+      Value: 
     - ID: "776341a4-f1e7-4a9e-9b44-7da25ed3505e"
       Hint: LegacyFund_Process
       Type: Treelist
@@ -141,7 +159,7 @@ Languages:
       Value: 22.621%
     - ID: "90a7b1e0-c14e-4a3d-a717-72bec978a99a"
       Hint: LegacyFund_CitiCode
-      Value: GQKV
+      Value: GQLG
     - ID: "9238823c-d3a1-4b63-940c-867e606716aa"
       Hint: LegacyFund_HistoricYieldText
       Value: <p>Fund size and number of holdings data is as at previous month end. Performance data is as at previous working day.</p>
@@ -175,6 +193,9 @@ Languages:
     - ID: "b5af47a5-20d0-4b27-8ad2-34ce9a1ffc89"
       Hint: LegacyBenchmarkFundData_BenchmarkTenYears
       Value: 105.953%
+    - ID: "bebce40d-9578-44df-b126-ee555ace9407"
+      Hint: FundFacets_FundRegion
+      Value: "{3C37D1C6-B5A8-40A5-A69B-CEBE9FFBEEA2}"
     - ID: "bf364003-b633-48a4-877f-3e553d116ceb"
       Hint: LegacyFund_Sector
       Value: IA China/Greater China
@@ -195,7 +216,7 @@ Languages:
       Value: "-3.606%"
     - ID: "da4173d0-1f60-4edc-84a0-04c140de97d0"
       Hint: LegacyFund_FundDescription
-      Value: China fund
+      Value: 
     - ID: "db79496e-bcc5-443f-bba6-e8d5bf0a31a3"
       Hint: LegacyFund_NumberOfHoldings
       Value: 48
@@ -209,7 +230,7 @@ Languages:
     - ID: "eb75dfef-c624-4571-b92b-8f37c36fcee6"
       Hint: FundCard_Image
       Value: |
-        <image mediaid="{8C038CB5-FC55-4F88-8934-CC2B85C604C5}" />
+        <image mediaid="{48130744-EA82-4488-A64F-11900CF1D9B4}" />
     - ID: "f1426edd-1a46-4af0-9967-0743eab156d7"
       Hint: LegacySectorFundData_SectorTenYears
       Value: 137.588%

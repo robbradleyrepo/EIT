@@ -9,6 +9,9 @@ SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
   Value: Business/32x32/currency_pound.png
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: "{9F34A121-9D36-4EB8-9670-FEAA6EAA981C}"
@@ -17,13 +20,31 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "034cd348-2adc-47e9-b263-2c839808dae1"
+      Hint: FundCard_Fund
+      Value: "{DA9CE397-7948-49C2-9704-872C3265F305}"
+    - ID: "036aeb89-b0bd-42c2-b763-a56cdbe32cdc"
+      Hint: Fund_Classes
+      Type: Multilist
+      Value: |
+        {B2308D97-5A7D-4422-A84A-82B26C02F136}
+        {CBE2641E-1F36-4817-B88F-93D0218F3603}
+        {493C8D72-25B1-41CD-83FF-06B5F59BCE8D}
+        {A7D9DF1F-5906-488C-8314-E2C47A59A325}
+        {1BC50580-B6DC-4E12-970D-13E971ED2659}
+        {1D583467-D10D-4D53-9A3A-E9B971CF7342}
+        {A11B6FF9-97EE-4792-BF5E-01C415242374}
+        {9F934AF2-ACC0-4EFA-97DE-64D4F86548B0}
+        {698BCDE8-27D3-4B62-AEF9-BD5431175DB2}
+        {34682B40-E895-4075-9D28-970B5051BFA0}
+        {32E5E9EF-A05D-40FB-B8F4-CA4A055922EF}
+        {E8B179D9-6E0B-46B4-A370-A81B4FBA0F53}
     - ID: "0905f092-b5b5-4971-b87e-57f4810bd729"
       Hint: FundCard_Description
-      Value: High Yield
+      Value: The Fund invests in high yield and selected investment grade bond and credit markets, seeking to take advantage of market inefficiencies through understanding the economic environment and detailed bottom up stock analysis.
     - ID: "1844ecc6-c68f-4989-96d5-296c34ede6e9"
       Hint: LegacyFundOverviewData_OverviewText
-      Value: |
-        <p style="margin-top: 1pt;"><span>The GF High Yield Bond Fund has been managed since launch in June 2018 by Phil Milburn and Donald Phillips, who are assisted by David Roberts. The aim of the Fund is to maximise the total return over a long-term horizon (at least 5 years) through a combination of income and capital. The Fund invests predominantly in high yield and selected investment grade bond and credit markets worldwide (including developed and emerging markets). </span></p>
+      Value: The Fund invests in high yield and selected investment grade bond and credit markets, seeking to take advantage of market inefficiencies through understanding the economic environment and detailed bottom up stock analysis.
     - ID: "200ea310-b6b4-4066-97f8-1f8b7c3e5a6d"
       Hint: LegacyFund_FundTeamManager
       Value: 
@@ -33,12 +54,18 @@ Languages:
     - ID: "221e703d-5ba7-4141-a98c-b76d2e5a663a"
       Hint: LegacyFund_RiskWarning
       Value: |
-        <h5></h5>
-        <h4 style="color: #222222; background-color: #ffffff;">Key Risks</h4>
-        <p style="color: #222222; background-color: #ffffff; margin: 0px 0px 0.5rem;"><span>Past performance is not a guide to future performance.&nbsp;Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. Investment in Funds managed by the Global Fixed Income team involves foreign currencies and may be subject to fluctuations in value due to movements in exchange rates. The value of fixed income securities will fall if the issuer is unable to repay its debt or has its credit rating reduced. Generally, the higher the perceived credit risk of the issuer, the higher the rate of interest. Bond markets may be subject to reduced liquidity. The Funds may invest in emerging markets/soft currencies and in financial derivative instruments, both of which may have the effect of increasing volatility.</span></p>
-        <p>&nbsp;</p>
-        <h4 style="color: #222222; background-color: #ffffff;">Disclaimer</h4>
-        <p style="color: #222222; background-color: #ffffff; margin: 0px 0px 0.5rem;"><span>The information and opinions provided should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</span></p>
+        <p style="margin-bottom: 0cm;"><strong><span style="color: #131313;">Key Risks&nbsp;</span></strong></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">&nbsp;</span></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">Past performance is not a guide to future performance. The value of an investment and the income generated from it can fall as well as rise and is not guaranteed. You may get back less than you originally invested. The issue of units/shares in Liontrust Funds may be subject to an initial charge, which will have an impact on the realisable value of the investment, particularly in the short term. Investments should always be considered as long term.</span></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;"><br />
+        Investment in the GF High Yield Bond Fund involves foreign currencies and may be subject to fluctuations in value due to movements in exchange rates. The value of fixed income securities will fall if the issuer is unable to repay its debt or has its credit rating reduced. Generally, the higher the perceived credit risk of the issuer, the higher the rate of interest. Bond markets may be subject to reduced liquidity. The Fund may invest in emerging markets/soft currencies and in financial derivative instruments, both of which may have the effect of increasing volatility. The Fund may invest in derivatives. The use of derivatives may create leverage or gearing. A relatively small movement in the value of a derivative's underlying investment may have a larger impact, positive or negative, on the value of a fund than if the underlying investment was held instead.<br />
+        </span></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">&nbsp;</span></p>
+        <p style="margin-bottom: 0cm;"><strong><span style="color: #131313;">Disclaimer</span></strong></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">&nbsp;</span></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">This is a marketing communication. Before making an investment, you should read the relevant Prospectus and the Key Investor Information Document (KIID), which provide full product details including investment charges and risks. These documents can be obtained, free of charge, from www.liontrust.co.uk or direct from Liontrust. Always research your own investments. If you are not a professional investor please consult a regulated financial adviser regarding the suitability of such an investment for you and your personal circumstances.&nbsp;</span></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">&nbsp;</span></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">This should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy. The investment being promoted is for units in a fund, not directly in the underlying assets. It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, forwarded, reproduced, divulged or otherwise distributed in any form whether by way of fax, email, oral or otherwise, in whole or in part without the express and prior written consent of Liontrust. Always research your own investments and if you are not a professional investor please consult a regulated financial adviser regarding the suitability of such an investment for you and your personal circumstances.&nbsp;</span></p>
     - ID: "225f8602-2cd0-4926-9e39-d4f5cb37ce5e"
       Hint: LegacyFund_Type
       Value: "{8924A32A-1723-4771-A448-74E97686F498}"
@@ -69,13 +96,17 @@ Languages:
         sitecore\jackh
     - ID: "6387ca9a-7a5a-4d33-b706-201681c0b74c"
       Hint: FundCard_Heading
-      Value: High Yield
+      Value: Global Fixed Income
     - ID: "6afb4eb4-25c4-472b-aa65-8ad9ddb3be2c"
       Hint: LegacyFund_FundName
       Value: GF High Yield Bond Fund
+    - ID: "6cac6ca9-127d-4cd0-b22e-e12d73d2372a"
+      Hint: FundFacets_FundRanges
+      Type: Multilist
+      Value: "{023860A7-C8E1-4192-AEA4-78F4F64991A9}"
     - ID: "6cbf0ed2-94b3-4f2a-a84d-a36501e38105"
       Hint: LegacyFund_LaunchDate
-      Value: 20180607T210000Z
+      Value: 20180608T000000Z
     - ID: "6d258747-e783-4579-9c3c-f8f23d03ccf6"
       Hint: LegacySectorFundData_SectorOneYear
       Value: 4.215%
@@ -88,7 +119,7 @@ Languages:
     - ID: "76af5024-2b12-421a-96cd-46e756f1db9a"
       Hint: FundCard_CTA
       Value: |
-        <link text="view fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{E402C99A-B93A-4C05-B8C3-6AD2EAE44E08}" />
+        <link text="View fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{E402C99A-B93A-4C05-B8C3-6AD2EAE44E08}" />
     - ID: "776341a4-f1e7-4a9e-9b44-7da25ed3505e"
       Hint: LegacyFund_Process
       Type: Treelist
@@ -120,7 +151,7 @@ Languages:
       Value: 1.904%
     - ID: "90a7b1e0-c14e-4a3d-a717-72bec978a99a"
       Hint: LegacyFund_CitiCode
-      Value: GQKV
+      Value: OZC7
     - ID: "9238823c-d3a1-4b63-940c-867e606716aa"
       Hint: LegacyFund_HistoricYieldText
       Value: <p>Fund size and number of holdings data is as at previous month end. Performance data is as at previous working day.</p>
@@ -133,6 +164,9 @@ Languages:
     - ID: "acd80b46-146c-415a-9e5a-bf0f35b0392e"
       Hint: LegacyFund_OneYear
       Value: 5.353%
+    - ID: "bebce40d-9578-44df-b126-ee555ace9407"
+      Hint: FundFacets_FundRegion
+      Value: "{73B29C7D-1676-4BDB-A415-E69E1B5ECD4D}"
     - ID: "bf364003-b633-48a4-877f-3e553d116ceb"
       Hint: LegacyFund_Sector
       Value: "Fixed Int - USD High Yield"
@@ -153,7 +187,7 @@ Languages:
       Value: 7.563%
     - ID: "da4173d0-1f60-4edc-84a0-04c140de97d0"
       Hint: LegacyFund_FundDescription
-      Value: GF High Yield Bond Fund
+      Value: The Fund invests in high yield and selected investment grade bond and credit markets, seeking to take advantage of market inefficiencies through understanding the economic environment and detailed bottom up stock analysis.
     - ID: "db79496e-bcc5-443f-bba6-e8d5bf0a31a3"
       Hint: LegacyFund_NumberOfHoldings
       Value: 108
@@ -164,4 +198,4 @@ Languages:
     - ID: "eb75dfef-c624-4571-b92b-8f37c36fcee6"
       Hint: FundCard_Image
       Value: |
-        <image mediaid="{8C038CB5-FC55-4F88-8934-CC2B85C604C5}" />
+        <image mediaid="{4A256B37-B68F-4FD8-A495-A2CD840DF511}" />

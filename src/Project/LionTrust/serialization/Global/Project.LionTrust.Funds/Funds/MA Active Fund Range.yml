@@ -1,0 +1,86 @@
+﻿---
+ID: "fb169222-0214-4396-bceb-cf931586ce22"
+Parent: "92aba568-f063-4316-a3b3-27aa0b4f154a"
+Template: "dadec9bf-b6e8-4e04-a082-f4eb20b76ff9"
+Path: /sitecore/content/LionTrustNew/Global/Funds/MA Active Fund Range
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Business/32x32/currency_pound.png
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{9F34A121-9D36-4EB8-9670-FEAA6EAA981C}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0905f092-b5b5-4971-b87e-57f4810bd729"
+      Hint: FundCard_Description
+      Value: The Liontrust MA Active Funds are a range of six risk profiled funds of funds targeted at investors looking for an actively managed product that uses the skills and judgment of the underlying managers.
+    - ID: "1844ecc6-c68f-4989-96d5-296c34ede6e9"
+      Hint: LegacyFundOverviewData_OverviewText
+      Value: The Liontrust MA Active Funds are a range of six risk profiled funds of funds targeted at investors looking for an actively managed product that uses the skills and judgment of the underlying managers.
+    - ID: "205ed0c5-d7b3-413a-8937-4b728937efef"
+      Hint: LegacyFund_FundTeam
+      Value: "{070E5C0B-03B2-4438-9DE1-555EE1B65DD6}"
+    - ID: "221e703d-5ba7-4141-a98c-b76d2e5a663a"
+      Hint: LegacyFund_RiskWarning
+      Value: |
+        <p><strong>Key Risks</strong></p>
+        <p><strong>Past performance is not a guide to future performance. The value of an investment and the income generated from it can fall as well as rise and is not guaranteed. You may get back less than you originally invested.</strong></p>
+        <p>The issue of units/shares in Liontrust Funds may be subject to an initial charge, which will have an impact on the realisable value of the investment, particularly in the short term. Investments should always be considered as long term.</p>
+        <p>Some of the Funds and Model Portfolios managed by the Multi-Asset Team have exposure to foreign currencies and may be subject to fluctuations in value due to movements in exchange rates. The majority of the Funds and Model Portfolios invest in Fixed Income securities indirectly through collective investment schemes. The value of fixed income securities will fall if the issuer is unable to repay its debt or has its credit rating reduced. Generally, the higher the perceived credit risk of the issuer, the higher the rate of interest. Bond markets may be subject to reduced liquidity. Some Funds may have exposure to property via collective investment schemes. Property funds may be more difficult to value objectively so may be incorrectly priced, and may at times be harder to sell. This could lead to reduced liquidity in the Fund. Some Funds and Model Portfolios also invest in non-mainstream (alternative) assets indirectly through collective investment schemes. During periods of stressed market conditions non-mainstream (alternative) assets may be difficult to sell at a fair price, which may cause prices to fluctuate more sharply.</p>
+        <p><strong>Disclaimer</strong></p>
+        <p>This is a marketing communication. It should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy. The investment being promoted is for units in a fund, not directly in the underlying assets. It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, forwarded, reproduced, divulged or otherwise distributed in any form whether by way of fax, email, oral or otherwise, in whole or in part without the express and prior written consent of Liontrust. Always research your own investments and if you are not a professional investor please consult a regulated financial adviser regarding the suitability of such an investment for you and your personal circumstances.&nbsp;</p>
+    - ID: "225f8602-2cd0-4926-9e39-d4f5cb37ce5e"
+      Hint: LegacyFund_Type
+      Value: "{BD3AE17A-EF7A-458F-9899-1BE939DD6CF3}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220215T100732Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\cristina
+    - ID: "6387ca9a-7a5a-4d33-b706-201681c0b74c"
+      Hint: FundCard_Heading
+      Value: "Multi-Asset"
+    - ID: "6afb4eb4-25c4-472b-aa65-8ad9ddb3be2c"
+      Hint: LegacyFund_FundName
+      Value: MA Active Fund Range
+    - ID: "6cac6ca9-127d-4cd0-b22e-e12d73d2372a"
+      Hint: FundFacets_FundRanges
+      Type: Multilist
+      Value: "{DD1AB37C-511A-4861-AFB1-675BD318E8F5}"
+    - ID: "76af5024-2b12-421a-96cd-46e756f1db9a"
+      Hint: FundCard_CTA
+      Value: |
+        <link text="View fund range" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{C56D2292-24AD-4559-822D-A2E91E62C6DD}" />
+    - ID: "7994e108-44fb-4349-bb80-736e783fbbb3"
+      Hint: LegacyFundOverviewData_OverviewTitle
+      Value: MA Active Funds
+    - ID: "855d1e7b-3d08-4526-ad2d-fa2e86e9be9b"
+      Hint: LegacyFund_FundManagers
+      Type: Treelist
+      Value: |
+        {666D8658-69FD-4802-B1DF-B4D2FEF1AD18}
+        {CE428AB4-D799-4083-8BEF-D4C25E125512}
+        {061107E6-1485-475E-A2D8-D5A3D34F48FF}
+        {A873BDFF-23DF-4C98-9A23-EF3BD83EB871}
+        {CAAB183E-773A-445D-BEE1-C59099B1786E}
+    - ID: "90a7b1e0-c14e-4a3d-a717-72bec978a99a"
+      Hint: LegacyFund_CitiCode
+      Value: JMMK
+    - ID: "da4173d0-1f60-4edc-84a0-04c140de97d0"
+      Hint: LegacyFund_FundDescription
+      Value: The Liontrust MA Active Funds are a range of six risk profiled funds of funds targeted at investors looking for an actively managed product that uses the skills and judgment of the underlying managers.
+    - ID: "e43f6e86-0318-4766-b880-0c4f6512ca4e"
+      Hint: FundPage_Page
+      Value: |
+        <link text="View fund range" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{C56D2292-24AD-4559-822D-A2E91E62C6DD}" />
+    - ID: "eb75dfef-c624-4571-b92b-8f37c36fcee6"
+      Hint: FundCard_Image
+      Value: |
+        <image mediaid="{2CB3F978-2808-47D2-8208-AE557E654285}" />

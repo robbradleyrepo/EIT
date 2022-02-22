@@ -1,0 +1,180 @@
+﻿---
+ID: "07667e66-e6f5-4448-b997-839c0fe6e64f"
+Parent: "2cff5f23-0184-48e8-aca3-e9e3f97c8df2"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
+Path: /sitecore/content/LionTrustNew/Home/Learning/What is style investing
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 1700
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{BA2439A2-5D38-4691-8F50-1B8A94ACD903}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{C8B3B2D1-D42B-4F7F-A536-F647A1CF9C18}"
+              p:before="*"
+              s:ds="{804A13E7-B696-47F6-8A32-6348FD10DAEE}"
+              s:id="{00E6D57B-DFBB-4C64-8D9F-B9F59A979D23}"
+              s:ph="/header/article-header" />
+            <r
+              uid="{34A6F516-20A4-4E10-8D36-5120670F54DF}"
+              p:after="r[@uid='{C8B3B2D1-D42B-4F7F-A536-F647A1CF9C18}']"
+              s:ds="{96A6C246-F05A-44E8-8138-6EB2C7B4528E}"
+              s:id="{010E3C29-6258-4251-9CEB-FEB1FAC64F98}"
+              s:ph="/main/article" />
+            <r
+              uid="{44D9CD64-8820-4293-928E-E33DAA95A12C}"
+              p:after="r[@uid='{34A6F516-20A4-4E10-8D36-5120670F54DF}']"
+              s:ds="{7B1E9ECE-2334-4162-A497-868C5C2D7E88}"
+              s:id="{DF18E4D6-F59A-4CDD-B26B-91D902F3A2DB}"
+              s:ph="/main/article" />
+            <r
+              uid="{14987E99-5543-44CB-AACC-450C42697891}"
+              p:after="r[@uid='{44D9CD64-8820-4293-928E-E33DAA95A12C}']"
+              s:ds=""
+              s:id="{7626FD78-BC75-4F9C-80E7-DC947364A29B}"
+              s:par=""
+              s:ph="/main/article" />
+            <r
+              uid="{1F957C53-EC39-450C-BD85-F18C9D6D0C39}"
+              p:after="r[@uid='{14987E99-5543-44CB-AACC-450C42697891}']"
+              s:ds="{1DC4935C-E2D0-4E8E-A96B-6D5738F006CA}"
+              s:id="{7626FD78-BC75-4F9C-80E7-DC947364A29B}"
+              s:ph="/main/article" />
+            <r
+              uid="{055D3003-595D-4BE2-91E8-375FDE37C61E}"
+              p:after="r[@uid='{1F957C53-EC39-450C-BD85-F18C9D6D0C39}']"
+              s:ds="{30944B46-AFE8-4941-BEE5-199147B82896}"
+              s:id="{C578F8BA-7001-4285-8D55-B913F21E60E0}"
+              s:ph="/main/article" />
+            <r
+              uid="{9EC6B67F-F89B-4B77-872C-0DB79F2D9718}"
+              p:after="r[@uid='{055D3003-595D-4BE2-91E8-375FDE37C61E}']"
+              s:ds="{E2F2E87F-F497-4336-932A-B9C34DFE824C}"
+              s:id="{7626FD78-BC75-4F9C-80E7-DC947364A29B}"
+              s:ph="/main/article" />
+            <r
+              uid="{0BDBF2FD-B974-4321-8660-8C93C6E90A43}"
+              p:after="r[@uid='{9EC6B67F-F89B-4B77-872C-0DB79F2D9718}']"
+              s:ds="{804A13E7-B696-47F6-8A32-6348FD10DAEE}"
+              s:id="{00E6D57B-DFBB-4C64-8D9F-B9F59A979D23}"
+              s:par=""
+              s:ph="/main/article" />
+            <r
+              uid="{8D7AC930-4240-457A-A7FD-8397628BF5FA}"
+              p:after="r[@uid='{0BDBF2FD-B974-4321-8660-8C93C6E90A43}']"
+              s:ds="{AFC5792E-F7BF-4474-BC2F-8EC0177F2FE0}"
+              s:id="{B87F0E98-81D6-4B7F-A351-549255F96DB7}"
+              s:ph="/main/article" />
+            <r
+              uid="{18A6223B-77E7-4D4F-B82B-4C383BA8A7EF}"
+              s:ds="{4F2ACB86-C29E-427E-A862-88B14F8AA3D0}" />
+            <r
+              uid="{8FCDAE13-103E-410F-A79E-9E1C59DDACEC}"
+              p:after="r[@uid='{BE0557ED-7DE5-4630-92F6-C480810204DD}']"
+              s:ds="{7714BAFC-4DB4-4E86-B816-70A0080C42EF}"
+              s:id="{B87F0E98-81D6-4B7F-A351-549255F96DB7}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{C7EE86D7-3A10-4411-9C69-71EF27E583E4}"
+              p:after="r[@uid='{8FCDAE13-103E-410F-A79E-9E1C59DDACEC}']"
+              s:ds="{8F7AA55E-2569-4646-A28E-7FA325F64C31}"
+              s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+              s:ph="main" />
+            <r
+              uid="{05CB20B1-127B-4E38-BAC1-5A826D85A9D1}"
+              p:after="r[@uid='{C7EE86D7-3A10-4411-9C69-71EF27E583E4}']"
+              s:ds="{8A557AF0-7054-46E3-A7A2-3226BC89E9DA}"
+              s:id="{DC0AC587-3DF0-468C-9F4F-6E8C137ECD47}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{B6168C0D-C843-4588-B49B-2FAB9D488771}"
+              p:after="r[@uid='{05CB20B1-127B-4E38-BAC1-5A826D85A9D1}']"
+              s:ds="{E431D441-74EC-4E11-975C-CBC5BCE0F956}"
+              s:id="{C4570003-4866-4EAA-B069-8FA6611DC0EC}"
+              s:ph="main" />
+            <r
+              uid="{BBB2192D-FA6A-46AE-AE95-15DD426DC1C0}"
+              p:after="r[@uid='{B6168C0D-C843-4588-B49B-2FAB9D488771}']"
+              s:ds="{6ABD3A73-AA49-4051-9959-76F12D6FE596}"
+              s:id="{7F3DDF4D-5190-4C04-836D-41325114723D}"
+              s:ph="main" />
+            <r
+              uid="{79DF7224-7866-417D-91E6-6C95F795301F}"
+              p:after="r[@uid='{BBB2192D-FA6A-46AE-AE95-15DD426DC1C0}']"
+              s:ds="{2B2AC0BA-BC21-41C9-AC3C-E6B9A83BD042}"
+              s:id="{29206264-421A-41D5-8869-A7D1EA60566B}"
+              s:ph="main" />
+            <r
+              uid="{136B2778-E8D5-477F-A7EA-E29FEBC69BB6}"
+              p:after="*[1=2]"
+              s:ds="{FA3AC95B-9F52-4225-8208-05190B0F2803}"
+              s:id="{A811D2B0-D08D-4991-A9DD-6D9FA5799CBD}"
+              s:ph="main" />
+          </d>
+        </r>
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: What is style investing | Insights | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: "What is style investing?"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220127T125022Z
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5bd6e9e9-2240-4473-8094-075e811b8438"
+      Hint: Article_ListingImage
+      Value: 
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\TomG
+    - ID: "79cc76cc-7503-449b-9809-9808cf6c2d26"
+      Hint: Article_Date
+      Value: 20220127T125022Z
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: What is style investing
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: What is style investing
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <span id="docs-internal-guid-61d5869b-7fff-78fe-af4c-26fcbe5d4d40"></span>
+        <p dir="ltr" style="margin-top: 0pt; margin-bottom: 8pt;"><span style="color: #000000;"><strong>The link to company life cycles</strong></span></p>
+        <p dir="ltr" style="margin-top: 0pt; margin-bottom: 8pt;"><span style="color: #000000;">To some extent, this is linked to the life cycle of companies. When early-stage companies are small and expanding, they are in their &lsquo;growth&rsquo; stage. They will generally reinvest their profits to finance expansion rather than pay dividends to shareholders. However, it is also true that many of the fastest-growing businesses in the world, such as the technology firms in the US, are among the largest.</span></p>
+        <p dir="ltr" style="margin-top: 0pt; margin-bottom: 8pt;"><span style="color: #000000;">Value stocks tend to be larger, more well-established companies that, for a variety of reasons, are trading below their true worth. This value is measured in terms of their share prices versus their earnings, or &lsquo;PE Ratio&rsquo;. A low PE Ratio can mean that a stock looks like good value.&nbsp;</span></p>
+        <p dir="ltr" style="margin-top: 0pt; margin-bottom: 8pt;"><span style="color: #000000;">However, investors do need to beware of &lsquo;value traps&rsquo; &ndash; there could be good reasons for a company to look cheap; it might just be a badly-run company in low growing market with no chance of its fortunes reversing.&nbsp;</span></p>
+        <p dir="ltr" style="margin-top: 0pt; margin-bottom: 8pt;"><span style="color: #000000;">Provided any such traps are avoided, value companies are generally seen as lower risk though because even if the price fails to get back to full &lsquo;value&rsquo;, the shares should offer some growth and will also typically pay out dividends. The largest value industrial sector is Financials.&nbsp;</span></p>
+        <p dir="ltr" style="margin-top: 0pt; margin-bottom: 8pt;"><span style="color: #000000;">Growth stocks are typically higher risk but offer greater potential rewards, depending on whether a company can keep up with expectations, perhaps through the success of a new product.</span></p>
+        <p dir="ltr" style="margin-top: 0pt; margin-bottom: 8pt;"><span style="color: #000000;"><strong>Both styles dominate different periods</strong></span></p>
+        <p dir="ltr" style="margin-top: 0pt; margin-bottom: 8pt;"><span style="color: #000000;">It is accepted wisdom that value outperforms growth over the long term: over the near 100 years from 1926 to the end of 2020, the respective figures are 1,344,600% for value versus 626,600% for growth, according to Bank of America data.&nbsp;</span></p>
+        <p dir="ltr" style="margin-top: 0pt; margin-bottom: 8pt;"><span style="color: #000000;">However, both styles have dominated during different periods. Over the decade to 2020, growth was the dominant style, for example, thanks to the emergence of the FAANG (Facebook, Amazon, Apple, Netflix and Google) stocks. But then there was a rotation in markets, with vaccine breakthroughs in late 2020 sparking a performance resurgence in traditional value sectors, many of which had been beaten down during COVID-19 lockdowns.&nbsp;</span></p>
+        <p dir="ltr" style="margin-top: 0pt; margin-bottom: 8pt;"><span style="color: #000000;">Inflation is also more of a problem for growth stocks. They are priced according to their expected cashflows in the distant future; an increasing rate of inflation, plus the prospect of interest rates being raised to counter the threat, causes uncertainties around what the real value of these cashflows will be. In contrast, value businesses are priced more according to shorter-term factors with greater certainty.</span></p>
+        <p dir="ltr" style="margin-top: 0pt; margin-bottom: 8pt;"><span style="color: #000000;"><strong>Other approaches</strong></span></p>
+        <p dir="ltr" style="margin-top: 0pt; margin-bottom: 8pt;"><span style="color: #000000;">While growth and value are seen as the two main styles, there are other types of investment approaches that are based on identifying quantifiable characteristics of companies, or &lsquo;factors&rsquo;, to explain differences in performances. Such factors include, for example, momentum, which identifies positive trends in share prices, and low volatility, a defensive approach that selects stocks with the steadiest potential performance.</span></p>
+        <p dir="ltr" style="margin-top: 0pt; margin-bottom: 8pt;"><span style="color: #000000;"><strong>Markets involve more than style</strong></span></p>
+        <p dir="ltr" style="margin-top: 0pt; margin-bottom: 8pt;"><span style="color: #000000;">Ultimately, the decision on growth versus value will be determined by an investor&rsquo;s key criteria dictating any investment, including risk tolerance, investment goals, and time horizon.</span></p>
+        <p dir="ltr" style="margin-top: 0pt; margin-bottom: 8pt;"><span style="color: #000000;">Style definitions are broad labels and there is far more to markets than a simple growth/ value divide. Other factors, such as regional and sector influences, are also relevant and focusing too much on style can be a mistake when investing for the long term.</span></p>
+        <div><span style="color: #000000;"><br />
+        </span></div>

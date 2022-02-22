@@ -1,0 +1,33 @@
+﻿---
+ID: "85f24b3e-9f14-4d8c-8b8f-e1bef756901e"
+Parent: "e4a06325-c35f-45ca-894d-3c3f2aa7d9e2"
+Template: "ed529b1c-9937-4186-afde-69543f5b3618"
+Path: "/sitecore/content/LionTrustNew/Home/Learning/What is an equity fund/_Local/BC002 - Banner with Icons"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{87201971-FC21-4B15-9950-B8E9EF28CAF8}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220211T144532Z
+    - ID: "443586e2-109c-49a6-95ad-01f6c1fbffb2"
+      Hint: BannerWithIcons_Heading
+      Value: How to invest in Liontrust funds
+    - ID: "505e3930-1d34-4dc7-8ca1-926b18ff1195"
+      Hint: BannerWithIcons_PrimaryCTALink
+      Value: |
+        <link linktype="internal" text="Read more" querystring="" target="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\ChristineB
+    - ID: "673a4649-cffb-4cb4-a056-e0cf96a40e33"
+      Hint: BannerWithIcons_SecondaryCTALink
+      Value: |
+        <link linktype="internal" text="See all guidance" querystring="" target="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />

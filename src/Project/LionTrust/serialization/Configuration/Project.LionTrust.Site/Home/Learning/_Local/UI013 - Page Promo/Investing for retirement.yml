@@ -1,0 +1,36 @@
+﻿---
+ID: "c29444e4-6d1a-4572-b8b3-3d96eb71d0ab"
+Parent: "a2a2f5a4-0382-49db-b71d-ec58d5a34821"
+Template: "bc775c7d-48c1-4f1b-865a-fecab210dbe3"
+Path: "/sitecore/content/LionTrustNew/Home/Learning/_Local/UI013 - Page Promo/Investing for retirement"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: "-200"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1058a56c-86ff-4783-a8d2-00c2217cc7ff"
+      Hint: PagePromoItem_Heading
+      Value: Investing for retirement
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220216T092317Z
+    - ID: "5db6612c-40ef-44f7-996b-da07fced5370"
+      Hint: PagePromoItem_CTA
+      Value: |
+        <link text="Read the article" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{1918772A-F497-4991-BFBC-B0E1D7A786B8}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\ChristineB
+    - ID: "f8de397f-fe55-4664-894d-8144b77b455a"
+      Hint: PagePromoItem_Text
+      Value: The state pension is unlikely to provide the standard of living in retirement that most of us would like or expect. Today, enjoying a decent retirement generally means providing a savings pot for ourselves.
+    - ID: "fdcbfc89-a522-4029-a2ce-648e272372d1"
+      Hint: PagePromoItem_Image
+      Value: |
+        <image mediaid="{46DE343C-A3EC-45FA-B8DD-BF7AAD621FB7}" />

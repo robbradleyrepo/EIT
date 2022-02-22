@@ -1,0 +1,26 @@
+﻿---
+ID: "6bce3e02-3018-491e-83cf-4cd068d3d311"
+Parent: "9c01f634-8cbc-43af-95b1-cfa36e5d2c5f"
+Template: "0b8174f1-7295-45d8-9a50-ce3df53507af"
+Path: "/sitecore/content/LionTrustNew/Home/Learning/_Local/UI028 - Secondary Nav/Invest for retirement"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220216T123448Z
+    - ID: "3f39e86e-0426-46f0-8f64-c5636372e13a"
+      Hint: PageLink_Link
+      Value: |
+        <link text="Invest for retirement" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{1918772A-F497-4991-BFBC-B0E1D7A786B8}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\ChristineB
