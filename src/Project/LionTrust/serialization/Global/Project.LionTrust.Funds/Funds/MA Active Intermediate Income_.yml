@@ -20,15 +20,22 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "034cd348-2adc-47e9-b263-2c839808dae1"
+      Hint: FundCard_Fund
+      Value: "{62B480B2-B778-4A72-AC61-129CF7954BE1}"
     - ID: "036aeb89-b0bd-42c2-b763-a56cdbe32cdc"
       Hint: Fund_Classes
       Type: Multilist
       Value: |
         {66FEC3E7-7E28-428B-8EC9-44DE1ABA83E6}
         {D2116B5D-D7AD-4C74-B9E8-93309FE5545B}
+        {3EACB6FF-C967-42FE-8C65-4C13243DB451}
+        {B2C61301-287D-4BA7-9565-BE642AF50750}
+        {BEBB5E50-B479-4CBE-A7F5-9BE1F26CA814}
+        {7A919784-4149-49F0-B27A-35AC5BD70F55}
     - ID: "0905f092-b5b5-4971-b87e-57f4810bd729"
       Hint: FundCard_Description
-      Value: MA Active Intermediate Income Fund
+      Value: The Fund seeks income with a median level of volatility (risk), having a risk profile of 4 in a range from 1 to 7. The underlying funds will be active where possible.
     - ID: "13671185-84c9-49e4-8799-6135f386f3e5"
       Hint: LegacyFund_FiveYears
       Value: 35.958%
@@ -44,14 +51,12 @@ Languages:
     - ID: "221e703d-5ba7-4141-a98c-b76d2e5a663a"
       Hint: LegacyFund_RiskWarning
       Value: |
-        <div><strong>Key Risks</strong></div>
-        <div>&nbsp;</div>
-        <div><strong>Past performance is not a guide to future performance. The value of an investment and the income generated from it can fall as well as rise and is not guaranteed. You may get back less than you originally invested.</strong></div>
+        <p><strong>Key Risks</strong></p>
+        <p><strong>Past performance is not a guide to future performance. The value of an investment and the income generated from it can fall as well as rise and is not guaranteed. You may get back less than you originally invested.</strong></p>
         <p>The issue of units/shares in Liontrust Funds may be subject to an initial charge, which will have an impact on the realisable value of the investment, particularly in the short term. Investments should always be considered as long term.</p>
         <p>Some of the Funds and Model Portfolios managed by the Multi-Asset Team have exposure to foreign currencies and may be subject to fluctuations in value due to movements in exchange rates. The majority of the Funds and Model Portfolios invest in Fixed Income securities indirectly through collective investment schemes. The value of fixed income securities will fall if the issuer is unable to repay its debt or has its credit rating reduced. Generally, the higher the perceived credit risk of the issuer, the higher the rate of interest. Bond markets may be subject to reduced liquidity. Some Funds may have exposure to property via collective investment schemes. Property funds may be more difficult to value objectively so may be incorrectly priced, and may at times be harder to sell. This could lead to reduced liquidity in the Fund. Some Funds and Model Portfolios also invest in non-mainstream (alternative) assets indirectly through collective investment schemes. During periods of stressed market conditions non-mainstream (alternative) assets may be difficult to sell at a fair price, which may cause prices to fluctuate more sharply.</p>
-        <p>&nbsp;</p>
         <p><strong>Disclaimer</strong></p>
-        <p>This information should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy.&nbsp; It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, forwarded, reproduced, divulged or otherwise distributed in any form whether by way of fax, email, oral or otherwise, in whole or in part without the express and prior written consent of Liontrust. Always research your own investments and if you are not a professional investor please consult a regulated financial adviser regarding the suitability of such an investment for you and your personal circumstances.&nbsp;</p>
+        <p>This is a marketing communication. It should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy. The investment being promoted is for units in a fund, not directly in the underlying assets. It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, forwarded, reproduced, divulged or otherwise distributed in any form whether by way of fax, email, oral or otherwise, in whole or in part without the express and prior written consent of Liontrust. Always research your own investments and if you are not a professional investor please consult a regulated financial adviser regarding the suitability of such an investment for you and your personal circumstances.&nbsp;</p>
     - ID: "225f8602-2cd0-4926-9e39-d4f5cb37ce5e"
       Hint: LegacyFund_Type
       Value: "{BD3AE17A-EF7A-458F-9899-1BE939DD6CF3}"
@@ -91,13 +96,17 @@ Languages:
         sitecore\jackh
     - ID: "6387ca9a-7a5a-4d33-b706-201681c0b74c"
       Hint: FundCard_Heading
-      Value: MA Active Intermediate Income Fund
+      Value: "Multi-Asset"
     - ID: "69a48b1d-00fe-4fb6-9e2e-44c630e60bea"
       Hint: LegacyFund_TenYears
       Value: 85.090%
     - ID: "6afb4eb4-25c4-472b-aa65-8ad9ddb3be2c"
       Hint: LegacyFund_FundName
       Value: MA Active Intermediate Income Fund
+    - ID: "6cac6ca9-127d-4cd0-b22e-e12d73d2372a"
+      Hint: FundFacets_FundRanges
+      Type: Multilist
+      Value: "{DD1AB37C-511A-4861-AFB1-675BD318E8F5}"
     - ID: "6cbf0ed2-94b3-4f2a-a84d-a36501e38105"
       Hint: LegacyFund_LaunchDate
       Value: 20131203T000000Z
@@ -107,7 +116,7 @@ Languages:
     - ID: "6d62860c-e839-4065-a2c2-b2d69e60b939"
       Hint: LegacyFund_HideFromFundList
       Type: Checkbox
-      Value: 0
+      Value: 1
     - ID: "737790ec-a3de-49a7-aa58-7c0f574c0e4a"
       Hint: LegacyBenchmarkFundData_BenchmarkOneYear
       Value: 2.788%
@@ -117,7 +126,7 @@ Languages:
     - ID: "76af5024-2b12-421a-96cd-46e756f1db9a"
       Hint: FundCard_CTA
       Value: |
-        <link text="view fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{53ACA757-DA94-41E2-B609-E4FB382B7FC6}" />
+        <link text="View fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{53ACA757-DA94-41E2-B609-E4FB382B7FC6}" />
     - ID: "776341a4-f1e7-4a9e-9b44-7da25ed3505e"
       Hint: LegacyFund_Process
       Type: Treelist
@@ -139,7 +148,6 @@ Languages:
         {061107E6-1485-475E-A2D8-D5A3D34F48FF}
         {A873BDFF-23DF-4C98-9A23-EF3BD83EB871}
         {CAAB183E-773A-445D-BEE1-C59099B1786E}
-        {E894F67D-3766-4DE6-B23A-E0B8C9B67129}
         {CE428AB4-D799-4083-8BEF-D4C25E125512}
     - ID: "86f07fa6-a576-4462-b343-c4af970a2576"
       Hint: LegacyFund_HistoricYield
@@ -225,14 +233,14 @@ Languages:
     - ID: "e43f6e86-0318-4766-b880-0c4f6512ca4e"
       Hint: FundPage_Page
       Value: |
-        <link text="view fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{53ACA757-DA94-41E2-B609-E4FB382B7FC6}" />
+        <link text="View fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{53ACA757-DA94-41E2-B609-E4FB382B7FC6}" />
     - ID: "e456c092-dda4-4179-aa02-1505821fd2a1"
       Hint: LegacySectorFundData_SectorYear5
       Value: 12.113%
     - ID: "eb75dfef-c624-4571-b92b-8f37c36fcee6"
       Hint: FundCard_Image
       Value: |
-        <image mediaid="{8C038CB5-FC55-4F88-8934-CC2B85C604C5}" />
+        <image mediaid="{2CB3F978-2808-47D2-8208-AE557E654285}" />
     - ID: "f1426edd-1a46-4af0-9967-0743eab156d7"
       Hint: LegacySectorFundData_SectorTenYears
       Value: 60.534%
