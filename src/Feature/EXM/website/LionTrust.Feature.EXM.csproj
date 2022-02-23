@@ -112,11 +112,13 @@
     <Content Include="Views\EXM\RegisterWebinar.cshtml" />
     <Content Include="Views\EXM\WebinarCards.cshtml" />
     <Content Include="Views\EXM\HeroWithImage.cshtml" />
+    <Content Include="Views\EXM\UserNameIntro.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\EmailFeaturedArticleController.cs" />
+    <Compile Include="Controllers\EmailUserNameIntroController.cs" />
     <Compile Include="Controllers\EmailSignatureController.cs" />
     <Compile Include="Controllers\EmailInsightsCardController.cs" />
     <Compile Include="Controllers\EmailWebinarController.cs" />
@@ -133,6 +135,7 @@
     <Compile Include="Helpers\Interfaces\IFillEmailHelper.cs" />
     <Compile Include="Models\IArticleCards.cs" />
     <Compile Include="Models\IExmSettings.cs" />
+    <Compile Include="Models\IUserNameIntro.cs" />
     <Compile Include="Models\ISignature.cs" />
     <Compile Include="Models\IHeroLogo.cs" />
     <Compile Include="Models\IDisclaimer.cs" />

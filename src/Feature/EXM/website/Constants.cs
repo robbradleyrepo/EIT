@@ -132,6 +132,11 @@ namespace LionTrust.Feature.EXM
             public const string Phone_FieldID = "{0431B455-144D-4A72-A027-6202C77A137B}";
         }
 
+        public static class UserNameIntro
+        {
+            public const string Text_FieldID = "{B0784484-0EDB-4556-8EAE-4284FB857A90}";
+        }
+
         public static class ExmSettings
         {
             public static Guid ExmSettings_ItemID = new Guid("{117297BA-83B6-424A-A090-D11B67CE8F38}");
