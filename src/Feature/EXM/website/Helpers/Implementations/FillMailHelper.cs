@@ -68,8 +68,6 @@ namespace LionTrust.Feature.EXM.Helpers.Implementations
             var testingEnv = _settings.GetBoolSetting(Constants.Settings.MailTestingEnvironment, true);
             if (testingEnv)
             {
-                emailMessage.FromAddress += ".test";
-
                 var publishedDatabase = Sitecore.Data.Database.GetDatabase("web");
                 var sitecoreService = new SitecoreService(publishedDatabase);
 
