@@ -59,12 +59,23 @@
         /// Gets articles based on filters in the request.
         /// </summary>
         /// <returns>A list of articles.</returns>
-        public ActionResult GetFilteredArticles(string contentType, string funds, string categories, string fundManagers, string fundTeams, int? month, int? year, string searchTerm, string sortOrder, string database = "web", int page = 1)
+        public ActionResult GetFilteredArticles(string contentType, string funds, string fundCategories, string fundManagers, string fundTeams, int? month, int? year, string searchTerm, string sortOrder, string database = "web", int page = 1)
         {
             var selectedFund = HttpContext.Request.QueryString.Get("ids");
+            var selectedManagers = HttpContext.Request.QueryString.Get("fundManagerIds");
+            var selectedTeams = HttpContext.Request.QueryString.Get("fundTeamIds");
+            var selectedCategories = HttpContext.Request.QueryString.Get("categoryIds");
             funds = string.IsNullOrEmpty(funds) ? selectedFund : funds + "|" + selectedFund;
-            
-            var response = this._articleListingDataManager.GetArticleListingResponse(database, contentType, funds, categories, fundManagers, fundTeams, month, year, searchTerm, sortOrder, page);
+            fundManagers = string.IsNullOrEmpty(fundManagers) ? selectedManagers : fundManagers + "|" + selectedManagers;
+            fundTeams = string.IsNullOrEmpty(fundTeams) ? selectedTeams : fundTeams + "|" + selectedTeams;
+            fundCategories = string.IsNullOrEmpty(fundCategories) ? selectedCategories : fundCategories + "|" + selectedCategories;
+
+            if (string.IsNullOrEmpty(sortOrder))
+            {
+                sortOrder = "DESC";
+            }
+
+            var response = this._articleListingDataManager.GetArticleListingResponse(database, contentType, funds, fundCategories, fundManagers, fundTeams, month, year, searchTerm, sortOrder, page);
             if (response.StatusCode != 200)
             {
                 return new HttpStatusCodeResult(response.StatusCode, response.StatusMessage);
@@ -107,9 +118,9 @@
         /// Gets funds based on filters in the request.
         /// </summary>
         /// <returns>A list of funds.</returns>
-        public ActionResult GetFilteredFunds(string ids, string fundTeams, string fundManagers, string fundRegions, string fundRanges, string searchTerm, string sortOrder, string database = "web", int page = 1, string hideFunds = "")
+        public ActionResult GetFilteredFunds(string ids, string fundTeams, string fundManagers, string regions, string fundRanges, string searchTerm, string sortOrder, string database = "web", int page = 1, string hideFunds = "")
         {
-            var response = _fundListingDataManager.GetFundListingResponse(database, fundTeams, fundManagers, fundRegions, fundRanges, searchTerm, sortOrder, page, ids, hideFunds == "1");
+            var response = _fundListingDataManager.GetFundListingResponse(database, fundTeams, fundManagers, regions, fundRanges, searchTerm, sortOrder, page, ids, hideFunds == "1");
             if (response.StatusCode != 200)
             {
                 return new HttpStatusCodeResult(response.StatusCode, response.StatusMessage);

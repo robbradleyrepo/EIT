@@ -5,7 +5,7 @@
 @model LionTrust.Feature.Navigation.Models.NavigationViewModel
 @if (Model != null && Model.HomeItem != null)
 {
-    if (!Sitecore.Context.PageMode.IsExperienceEditor && Sitecore.Context.Item.ID.Guid.Equals(Model.HomeItem.Id))
+    if (!Sitecore.Context.PageMode.IsExperienceEditor && !Sitecore.Context.PageMode.IsPreview && Sitecore.Context.Item.ID.Guid.Equals(Model.HomeItem.Id))
     {
         Html.RenderAction("OrganizationSchema", "Schema", new { OrganizationSchema = Model.Organization });
     }

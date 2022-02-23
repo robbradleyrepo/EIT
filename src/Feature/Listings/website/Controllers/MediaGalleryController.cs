@@ -3,14 +3,10 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Net;
     using System.Web.Mvc;
     using Glass.Mapper.Sc.Web.Mvc;
     using ICSharpCode.SharpZipLib.Zip;
     using LionTrust.Feature.Listings.Helpers;
-    using LionTrust.Feature.Listings.Models.MediaGallery;
-    using LionTrust.Foundation.Core.ActionResults;
-    using LionTrust.Foundation.Legacy.Models;
     using Sitecore.Mvc.Controllers;
 
     public class MediaGalleryController : SitecoreController

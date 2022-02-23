@@ -7,10 +7,18 @@
 @if (Model != null)
 {
     var fundId = HttpContext.Current.Request.QueryString.Get("ids");
+    var fundTeams = HttpContext.Current.Request.QueryString.Get("fundTeamIds");
+    var fundManagers = HttpContext.Current.Request.QueryString.Get("fundManagerIds");
+    var articleContentTypes = HttpContext.Current.Request.QueryString.Get("contentType");
+    var categories = HttpContext.Current.Request.QueryString.Get("categoryIds");
+    var contentTypes = !string.IsNullOrEmpty(articleContentTypes) ? articleContentTypes : Model.ContentType;
     <div v-cloak id="lister-app"
          data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.ArticleApiRoute_SettingName))"
-         data-contenttype="@Model.ContentType"
-         data-funds="@fundId">
+         data-contenttype="@contentTypes"
+         data-funds="@fundId"
+         data-fundTeams="@fundTeams"
+         data-fundManagers="@fundManagers"         
+         data-categories="@categories">
         <div class="article-filter-wrapper">
             <div class="article-filters" :class="mobileFilter ? 'active' : ''">
                 <div class="article-filters__header">
@@ -51,7 +59,11 @@
                                                 <i class="icon-chevron-left"></i>
                                                 {{facet.name}}
                                             </div>
-                                            <option-field inline-template v-for="(item, i) in facet.items" :for="item.name" :key="i + item.name" :selected="item.identifier==='@fundId'">
+                                            <option-field inline-template v-for="(item, i) in facet.items" :for="item.name" :key="i + item.name" 
+                                                          :selected="'@fundId'.includes(item.identifier) || 
+                                                                     '@fundManagers'.includes(item.identifier) ||
+                                                                     '@fundTeams'.includes(item.identifier) ||
+                                                                     '@categories'.includes(item.identifier)">
                                                 <label class="option-checkbox">
                                                     <input :id="item.name" class="option-checkbox__input" type="checkbox" v-model="checked" @@change="toggleSelect(item, facet)" @@click="setChoosen(!checked)">
                                                     <span class="option-checkbox__text">{{item.name}}</span>
@@ -111,7 +123,7 @@
                                                     <span class="option-checkbox__icon"></span>
                                                 </label>
                                             </option-field>
-                                            <option-field inline-template v-for="(yearItem, i) in years" :key="i">
+                                            <option-field inline-template v-for="(yearItem, i) in years.slice().reverse()" :key="i">
                                                 <label class="option-checkbox option-checkbox_small" @@click="setChoosen(!checked)">
                                                     <input class="option-checkbox__input" name="year" v-model="year" :value="yearItem" type="radio" @@click="setYear(yearItem)">
                                                     <span class="option-checkbox__text">{{yearItem}}</span>
@@ -205,7 +217,9 @@
             <div class="text-center my-5" :style="!loading ? 'display: none' : ''">
                 <div class="spinner-border text-gold" role="status"></div>
             </div>
-
+            <p v-if="!searchData.length && !loading" class="search-no-result mb-5">
+                @Model.NoResultsFoundLabel
+            </p>
             <div class="row">
                 <article-item inline-template v-for="(article, i) in searchData" :key="i + article.title">
                     <div class="col-md-6 col-lg-4">

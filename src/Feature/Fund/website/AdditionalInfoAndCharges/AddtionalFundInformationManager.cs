@@ -23,6 +23,11 @@
             }
 
             var data = _repository.GetData().FirstOrDefault(c => c.CitiCode == citiCode);
+            if (data == null)
+            {
+                _repository.SendEmailOnErrorForCiticode(citiCode);
+            }
+
             return Map(fundClass, data);
         }
 

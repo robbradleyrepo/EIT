@@ -16,7 +16,6 @@
     using LionTrust.Foundation.Search.Models.Response;
     using LionTrust.Foundation.Search.Services.Interfaces;
     using Sitecore.ContentSearch.Linq;
-    using Sitecore.Data;
     using Sitecore.Globalization;
 
     public class FundSearchDataManager : IFundSearchDataManager

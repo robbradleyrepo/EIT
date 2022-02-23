@@ -2,72 +2,73 @@
 @model LionTrust.Feature.Listings.Models.MediaGallery.IMediaGallery
 @if (Model != null)
 {
-    <div class="media-gallery">
-        <div class="container-fluid p-0">
-            <div class="row">
-                <div class="col-12">
-                    <div class="media-gallery__filter">
-                        <div class="filter-gallery media-gallery__dropdown">
-                            <div class="filter-gallery__group">
-                                <div class="filter-gallery__label">
-                                    <p>@Html.Glass().Editable(Model, m => m.FilterByCategoryLabel) </p><i class="article-filters__icon-arrow"></i>
-                                </div>
-                                @if (Model.FilterCategoryFolder != null && Model.FilterCategoryFolder.FundTeams != null)
-                                {                                    
-                                    <div class="filter-gallery__options">
-                                        <button class="filter-gallery__option" data-group="">All</button>
-                                        @foreach (var fundTeam in Model.FilterCategoryFolder.FundTeams)
-                                        {
-                                            <button class="filter-gallery__option" data-group="@fundTeam.Id.ToString()">@fundTeam.TeamName</button>
-                                        }
-                                    </div>
-                                }
+<div class="media-gallery">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-12">
+                <div class="media-gallery__filter">
+                    <div class="filter-gallery media-gallery__dropdown">
+                        <div class="filter-gallery__group">
+                            <div class="filter-gallery__label">
+                                <p>@Html.Glass().Editable(Model, m => m.FilterByCategoryLabel) </p><i class="article-filters__icon-arrow"></i>
                             </div>
-                        </div>
-                        <div class="filter-gallery media-gallery__search">
-                            @if (Sitecore.Context.PageMode.IsExperienceEditor)
+                            @if (Model.FilterCategoryFolder != null && Model.FilterCategoryFolder.FundTeams != null)
                             {
-                                @Html.Glass().Editable(Model, m => m.SearchByKeywordLabel)
-                            }
-                            else
-                            {
-                                <input class="filter-gallery__search-input" type="search" placeholder="@Model.SearchByKeywordLabel" />
+                                <div class="filter-gallery__options">
+                                    <button class="filter-gallery__option" data-group="">All</button>
+                                    @foreach (var fundTeam in Model.FilterCategoryFolder.FundTeams)
+                                    {
+                                        <button class="filter-gallery__option" data-group="@fundTeam.Id.ToString()">@fundTeam.TeamName</button>
+                                    }
+                                </div>
                             }
                         </div>
+                    </div>
+                    <div class="filter-gallery media-gallery__search">
+                        @if (Sitecore.Context.PageMode.IsExperienceEditor)
+                        {
+                            @Html.Glass().Editable(Model, m => m.SearchByKeywordLabel)
+                        }
+                        else
+                        {
+                            <input class="filter-gallery__search-input" type="search" placeholder="@Model.SearchByKeywordLabel" />
+                        }
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="media-gallery__actions">
-                        <div class="media-gallery__select text-black">
-                            <label class="checkbox">
-                                <input type="checkbox" class='checkbox__input' id='select-all'>
-                                <span class="checkbox__box"></span>
-                                @Html.Glass().Editable(Model, m => m.SelectAllLabel)
-                            </label>
-                        </div>
-                        <div class="media-gallery__download-all">
-                            <a class="btn btn-primary media-gallery__download-selected" href="#" id="download-selected">
-                                @Html.Glass().Editable(Model, m => m.DownloadSelectedLabel) <i class="icon-download animate-arrow"></i>
-                            </a>
-                        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="media-gallery__actions media-gallery__actions-top">
+                    <div class="media-gallery__select text-black">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input select-all" id="select-all-1">
+                            <span class="checkbox__box"></span>
+                            @Html.Glass().Editable(Model, m => m.SelectAllLabel)
+                        </label>
+                    </div>
+                    <div class="media-gallery__download-all">
+                        <a class="btn btn-primary media-gallery__download-selected" href="#">
+                            @Html.Glass().Editable(Model, m => m.DownloadSelectedLabel) <i class="icon-download animate-arrow"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="media-gallery__media container">
-            <div id="mediaGallery" class="media-gallery__cards row">
-                @if (Model.MediaItems != null)
+    </div>
+    <div class="media-gallery__media container">
+        <div id="mediaGallery" class="media-gallery__cards row">
+            @if (Model.MediaItems != null)
+            {
+                foreach (var mediaItem in Model.MediaItems)
                 {
-                    foreach (var mediaItem in Model.MediaItems)
-                    {
-                        var fundTeams = mediaItem.Categories != null && mediaItem.Categories.Any()
-                            ? string.Join(",", mediaItem.Categories.Select(c => "\"" + c.Id.ToString() + "\""))
-                            : string.Empty;
-                        <div class="media-gallery__card col-12 col-md-6 col-lg-2" data-groups='[@fundTeams]' data-title="@mediaItem.Name">
+                    var fundTeams = mediaItem.Categories != null && mediaItem.Categories.Any()
+                        ? string.Join(",", mediaItem.Categories.Select(c => "\"" + c.Id.ToString() + "\""))
+                        : string.Empty;
+                    <div class="media-gallery__card col-12 col-md-4 col-lg-3 col-xl-2" data-groups='[@fundTeams]' data-title="@mediaItem.Name">
+                        <div class="media-gallery__item">
                             @if (Sitecore.Context.PageMode.IsExperienceEditor)
                             {
                                 @Html.Glass().Editable(mediaItem, m => m.HeadshotImage)
@@ -107,12 +108,33 @@
                                 }
                             }
                         </div>
-                    }
-                }                
-                <div class="col-1@sm col-1@xs my-sizer-element"></div>
+                    </div>
+                }
+            }
+            <div class="sizer-element col-12 col-md-4 col-lg-3 col-xl-2"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="media-gallery__actions media-gallery__actions-bottom">
+                    <div class="media-gallery__select text-black">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input select-all" id="select-all-2">
+                            <span class="checkbox__box"></span>
+                            @Html.Glass().Editable(Model, m => m.SelectAllLabel)
+                        </label>
+                    </div>
+                    <div class="media-gallery__download-all">
+                        <a class="btn btn-primary media-gallery__download-selected" href="#">
+                            @Html.Glass().Editable(Model, m => m.DownloadSelectedLabel) <i class="icon-download animate-arrow"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>   
+    </div>
+</div>   
 }
 else if (Sitecore.Context.PageMode.IsExperienceEditor)
 {

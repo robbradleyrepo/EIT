@@ -1,0 +1,30 @@
+﻿---
+ID: "598aecb4-6693-46f0-a83b-1b2910440c97"
+Parent: "956a6fe2-9fda-4d11-86cc-bd8c846cad7e"
+Template: "4c75fd4b-18bc-48b9-80ce-b9725c5e0aa7"
+Path: "/sitecore/content/LionTrustNew/Home/Data Template/Learning Resources/What is a bond/_Local/BC002 - Banner with Icons/IconWithText 1"
+DB: master
+BranchID: "952009a4-96ce-4b5f-8f41-ff202c570f9f"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{75D9A16B-3F9D-4957-8266-5AC2CBC60147}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0f0b582f-4dbc-4eaa-a233-2bf2bb9a95ba"
+      Hint: IconWithText_Text
+      Value: Sample copy in here
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220215T084036Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "be707199-2471-444b-8794-55174cc40a9b"
+      Hint: IconWithText_Icon
+      Value: |
+        <image mediaid="{EA1B626C-98C7-4084-8EC3-8857FB5A6E35}" />

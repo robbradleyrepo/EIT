@@ -22,6 +22,7 @@
             var fundClass = _repository.GetData().FirstOrDefault(d => d.CitiCode == citiCode);
             if (fundClass == null)
             {
+                _repository.SendEmailOnErrorForCiticode(citiCode);
                 return new PerformanceTableRow[0];
             }
 
@@ -40,7 +41,7 @@
             
             if (fundClass.Benchmarks == null)
             {
-                return new PerformanceTableRow[0];
+                return result;
             }
 
             var benchmark0 = fundClass.Benchmarks.FirstOrDefault(b => b.BenchmarkTypeName == "Benchmark");
@@ -87,6 +88,7 @@
             var fundClass = _repository.GetData().FirstOrDefault(d => d.CitiCode == citiCode);
             if (fundClass == null)
             {
+                _repository.SendEmailOnErrorForCiticode(citiCode);
                 return null;
             }
 
@@ -130,6 +132,7 @@
             var fundClass = _repository.GetData().FirstOrDefault(d => d.CitiCode == citiCode);
             if (fundClass == null)
             {
+                _repository.SendEmailOnErrorForCiticode(citiCode);
                 return DateTime.MinValue;
             }
 

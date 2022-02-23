@@ -8,7 +8,7 @@
     return;
 }
  @{ 
-     var titleColor = Model.TitleColor != null && !string.IsNullOrEmpty(Model.TitleColor.Value) ? Model.TitleColor.Value : "text-black";
+     var titleColor = Model.TitleColor != null && !string.IsNullOrEmpty(Model.TitleColor.Value) ? Model.TitleColor.Value : "text-gold";
  }
 <div class="imagepromo whow-to">
     <div class="container">
@@ -31,8 +31,8 @@
                     </div>
                 </div>
                 <div class="imagepromo__content">
-                    <div class="imagepromo__headbox text @titleColor">
-                        <h2>@Html.Glass().Editable(Model, x => x.Heading)</h2>
+                    <div class="imagepromo__headbox text">
+                        <h2 class="@titleColor">@Html.Glass().Editable(Model, x => x.Heading)</h2>
                     </div>
                     <p class="imagepromo__contentbox @(Model.TextColour != null ? Model.TextColour.Value : "text-white")">
                         @Html.Glass().Editable(Model, x => x.Body)

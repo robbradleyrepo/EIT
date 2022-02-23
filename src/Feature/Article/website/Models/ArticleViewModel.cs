@@ -58,6 +58,19 @@
             }
         }
 
+        public bool IsLearning
+        {
+            get
+            {
+                if (ArticleData != null && ArticleData.PromoType != null && ArticleData.PromoType.Id.ToString("D").ToUpper().Equals(Constants.Article.LearningContentTypeId))
+                {
+                    return true;
+                }
+
+                return false;
+            }
+        }
+
         public DateTime ArticleDate
         { 
             get

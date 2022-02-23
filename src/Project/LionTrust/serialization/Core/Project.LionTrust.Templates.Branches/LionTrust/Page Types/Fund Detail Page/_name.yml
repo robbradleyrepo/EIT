@@ -4,20 +4,6 @@ Parent: "32b340aa-40ba-4124-a18b-5e04e48c38e3"
 Template: "af865864-56fb-4a24-bacc-278c33c44041"
 Path: /sitecore/templates/Branches/Project/LionTrust/Page Types/Fund Detail Page/$name
 DB: master
-SharedFields:
-- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
-  Hint: __Renderings
-  Type: layout
-  Value: |
-    <r xmlns:p="p" xmlns:s="s"
-      p:p="1">
-      <d
-        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
-        <r
-          uid="{F100020C-98C6-4D33-BCCE-6C46079A6D08}"
-          s:ds="{BDC1F34D-BBD9-4887-81DF-2EB5DB933504}" />
-      </d>
-    </r>
 Languages:
 - Language: en
   Versions:

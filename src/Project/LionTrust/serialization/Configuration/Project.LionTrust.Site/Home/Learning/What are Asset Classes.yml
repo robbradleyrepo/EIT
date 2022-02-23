@@ -1,24 +1,179 @@
 ﻿---
-ID: "2f413324-2200-461c-bb0b-5a7ae79b9ee3"
-Parent: "49766078-4397-4668-b13e-4efbe7cadf55"
-Template: "c1d35f9a-a7d0-47f9-903d-5ed33a15a795"
+ID: "07bf7f0a-1b5e-4fd0-ae20-244f73d85a85"
+Parent: "2cff5f23-0184-48e8-aca3-e9e3f97c8df2"
+Template: "ab8309b9-e012-4c89-88bb-6d364fb5e0db"
 Path: /sitecore/content/LionTrustNew/Home/Learning/What are Asset Classes
 DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 1100
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{BA2439A2-5D38-4691-8F50-1B8A94ACD903}"
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{C8B3B2D1-D42B-4F7F-A536-F647A1CF9C18}"
+              p:before="*"
+              s:ds="{69114161-9F2D-40A7-AFE6-AD39EF1A0397}"
+              s:id="{00E6D57B-DFBB-4C64-8D9F-B9F59A979D23}"
+              s:ph="/header/article-header" />
+            <r
+              uid="{34A6F516-20A4-4E10-8D36-5120670F54DF}"
+              p:after="r[@uid='{C8B3B2D1-D42B-4F7F-A536-F647A1CF9C18}']"
+              s:ds="{539B1127-A441-4A31-96E0-F722C43A0441}"
+              s:id="{010E3C29-6258-4251-9CEB-FEB1FAC64F98}"
+              s:ph="/main/article" />
+            <r
+              uid="{44D9CD64-8820-4293-928E-E33DAA95A12C}"
+              p:after="r[@uid='{34A6F516-20A4-4E10-8D36-5120670F54DF}']"
+              s:ds="{B292B3D6-068A-4E73-BDA5-193055F5F586}"
+              s:id="{DF18E4D6-F59A-4CDD-B26B-91D902F3A2DB}"
+              s:ph="/main/article" />
+            <r
+              uid="{14987E99-5543-44CB-AACC-450C42697891}"
+              p:after="r[@uid='{44D9CD64-8820-4293-928E-E33DAA95A12C}']"
+              s:ds=""
+              s:id="{7626FD78-BC75-4F9C-80E7-DC947364A29B}"
+              s:par=""
+              s:ph="/main/article" />
+            <r
+              uid="{1F957C53-EC39-450C-BD85-F18C9D6D0C39}"
+              p:after="r[@uid='{14987E99-5543-44CB-AACC-450C42697891}']"
+              s:ds="{3F140BF1-CE65-416A-AD68-F9E1464CC902}"
+              s:id="{7626FD78-BC75-4F9C-80E7-DC947364A29B}"
+              s:ph="/main/article" />
+            <r
+              uid="{055D3003-595D-4BE2-91E8-375FDE37C61E}"
+              p:after="r[@uid='{1F957C53-EC39-450C-BD85-F18C9D6D0C39}']"
+              s:ds="{44AE391B-6DEA-4E75-9F1B-1F6850F87517}"
+              s:id="{C578F8BA-7001-4285-8D55-B913F21E60E0}"
+              s:ph="/main/article" />
+            <r
+              uid="{9EC6B67F-F89B-4B77-872C-0DB79F2D9718}"
+              p:after="r[@uid='{055D3003-595D-4BE2-91E8-375FDE37C61E}']"
+              s:ds="{B56C4295-8657-4744-ABB6-46ACD5AC7CA2}"
+              s:id="{7626FD78-BC75-4F9C-80E7-DC947364A29B}"
+              s:ph="/main/article" />
+            <r
+              uid="{0BDBF2FD-B974-4321-8660-8C93C6E90A43}"
+              p:after="r[@uid='{9EC6B67F-F89B-4B77-872C-0DB79F2D9718}']"
+              s:ds="{69114161-9F2D-40A7-AFE6-AD39EF1A0397}"
+              s:id="{00E6D57B-DFBB-4C64-8D9F-B9F59A979D23}"
+              s:par=""
+              s:ph="/main/article" />
+            <r
+              uid="{8D7AC930-4240-457A-A7FD-8397628BF5FA}"
+              p:after="r[@uid='{0BDBF2FD-B974-4321-8660-8C93C6E90A43}']"
+              s:ds="{AFC5792E-F7BF-4474-BC2F-8EC0177F2FE0}"
+              s:id="{B87F0E98-81D6-4B7F-A351-549255F96DB7}"
+              s:ph="/main/article" />
+            <r
+              uid="{18A6223B-77E7-4D4F-B82B-4C383BA8A7EF}"
+              s:ds="{D3611F6C-660A-42B3-A2C5-1247A805A887}" />
+            <r
+              uid="{8FCDAE13-103E-410F-A79E-9E1C59DDACEC}"
+              p:after="r[@uid='{BE0557ED-7DE5-4630-92F6-C480810204DD}']"
+              s:ds="{BB137BD8-6F4F-42DF-B159-DD74E2B3CB4E}"
+              s:id="{B87F0E98-81D6-4B7F-A351-549255F96DB7}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{C7EE86D7-3A10-4411-9C69-71EF27E583E4}"
+              p:after="r[@uid='{8FCDAE13-103E-410F-A79E-9E1C59DDACEC}']"
+              s:ds="{8F7AA55E-2569-4646-A28E-7FA325F64C31}"
+              s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+              s:ph="main" />
+            <r
+              uid="{05CB20B1-127B-4E38-BAC1-5A826D85A9D1}"
+              p:after="r[@uid='{C7EE86D7-3A10-4411-9C69-71EF27E583E4}']"
+              s:ds="{F99AB952-71A4-4887-82C4-3AC7CEA4D9C2}"
+              s:id="{DC0AC587-3DF0-468C-9F4F-6E8C137ECD47}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{B6168C0D-C843-4588-B49B-2FAB9D488771}"
+              p:after="r[@uid='{05CB20B1-127B-4E38-BAC1-5A826D85A9D1}']"
+              s:ds="{C7FFC401-D3C9-486C-85E4-179C32E13976}"
+              s:id="{C4570003-4866-4EAA-B069-8FA6611DC0EC}"
+              s:ph="main" />
+            <r
+              uid="{BBB2192D-FA6A-46AE-AE95-15DD426DC1C0}"
+              p:after="r[@uid='{B6168C0D-C843-4588-B49B-2FAB9D488771}']"
+              s:ds="{5EA50CEF-6E18-40C3-B33C-A54C18C94B76}"
+              s:id="{7F3DDF4D-5190-4C04-836D-41325114723D}"
+              s:ph="main" />
+            <r
+              uid="{79DF7224-7866-417D-91E6-6C95F795301F}"
+              p:after="r[@uid='{BBB2192D-FA6A-46AE-AE95-15DD426DC1C0}']"
+              s:ds="{E0EABD29-F533-461E-AB73-D44A60F078EF}"
+              s:id="{29206264-421A-41D5-8869-A7D1EA60566B}"
+              s:ph="main" />
+            <r
+              uid="{136B2778-E8D5-477F-A7EA-E29FEBC69BB6}"
+              p:after="*[1=2]"
+              s:ds="{C308E488-3164-4B32-BBB1-ECBE9D23D3A2}"
+              s:id="{A811D2B0-D08D-4991-A9DD-6D9FA5799CBD}"
+              s:ph="main" />
+          </d>
+        </r>
     - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
       Hint: LegacyPresentationBase_BrowserTitle
-      Value: What are Asset Classes | Liontrust Asset Management PLC
+      Value: What is an Asset Class and What are The Different Types | Insights | Liontrust Asset Management PLC
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: "What is an Asset Class and What are The Different Types?"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210505T112546Z
+      Value: 20220127T131712Z
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
+    - ID: "5bd6e9e9-2240-4473-8094-075e811b8438"
+      Hint: Article_ListingImage
+      Value: 
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\Admin
+        sitecore\TomG
+    - ID: "79cc76cc-7503-449b-9809-9808cf6c2d26"
+      Hint: Article_Date
+      Value: 20220127T131712Z
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: What is an Asset Class and What are The Different Types
     - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
       Hint: LegacyPresentationBase_PageTitle
-      Value: What are Asset Classes
+      Value: What is an Asset Class and What are The Different Types
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: |
+        <span id="docs-internal-guid-25ecc216-7fff-6758-3251-961d215ad2e8"></span>
+        <p dir="ltr" style="margin-top: 0pt; margin-bottom: 8pt;"><span style="color: #222222;">There are three main asset classes, known as equities, bonds and cash. Categories outside of these are known as alternative asset classes and include, for example, real estate, commodities and private equity.</span></p>
+        <p dir="ltr" style="margin-top: 0pt; margin-bottom: 8pt;"><span style="color: #222222;">When you invest, you will put your money into one or more of these asset classes. The choice of asset categories is a key decision for investors because they carry very different levels of potential risk and return.&nbsp;</span></p>
+        <p dir="ltr" style="margin-top: 0pt; margin-bottom: 8pt;"><span style="color: #222222;">Stipulating a fund&rsquo;s asset investment is a key part of explaining to investors where it will be invested and how it will generate returns. Equities and bonds are higher risk assets than cash but they also offer the potential for much higher returns.</span></p>
+        <p dir="ltr" style="margin-top: 0pt; margin-bottom: 8pt;"><span style="color: #222222;">&nbsp;</span></p>
+        <p dir="ltr" style="margin-top: 0pt; margin-bottom: 8pt;"><span style="color: #222222;">What are the different asset classes?</span></p>
+        <p dir="ltr" style="background-color: #ffffff; margin-top: 0pt; margin-bottom: 0pt; padding: 0pt 0pt 10.5pt;"><span style="background-color: transparent; color: #222222;"><strong>Asset class definitions</strong></span></p>
+        <p dir="ltr" style="background-color: #ffffff; margin-top: 0pt; margin-bottom: 0pt; padding: 0pt 0pt 10.5pt;"><span style="background-color: transparent; color: #222222;"><strong>Equities</strong>:</span><span style="background-color: transparent; color: #222222;">&nbsp;an equity is a share in a company and it gives the holder the right to a portion of its profits. Equities can be the most volatile of the asset classes but they can also deliver some of the strongest returns if they are held for a sufficient length of time.</span></p>
+        <p dir="ltr" style="background-color: #ffffff; margin-top: 0pt; margin-bottom: 0pt; padding: 0pt 0pt 10.5pt;"><span style="background-color: transparent; color: #222222;"><strong>Bonds</strong>:</span><span style="background-color: transparent; color: #222222;">&nbsp;These are IOUs issued by governments and companies, with the promise to pay interest (the coupon) and return the loan value at the end of a set term, or maturity. The amount of interest payable will depend on how creditworthy the borrower is.</span></p>
+        <p dir="ltr" style="background-color: #ffffff; margin-top: 0pt; margin-bottom: 0pt; padding: 0pt 0pt 10.5pt;"><span style="background-color: transparent; color: #222222;"><strong>Cash</strong>:</span><span style="background-color: transparent; color: #222222;"> This normally refers to bank and building society accounts although there are also &lsquo;cash&rsquo; funds that loan investors&rsquo; money on the open market.</span></p>
+        <p dir="ltr" style="background-color: #ffffff; margin-top: 0pt; margin-bottom: 0pt; padding: 0pt 0pt 10.5pt;"><span style="background-color: transparent; color: #222222;"><strong>Real estate</strong>:</span><span style="background-color: transparent; color: #222222;">&nbsp;Owning your home is an investment in real estate but commercial properties also offer investment opportunities. Because of the large sums involved, these are usually accessed via a fund that pools investors&rsquo; resources and which have a professional manager who constructs a portfolio of assets.</span></p>
+        <p dir="ltr" style="background-color: #ffffff; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #222222;"><strong>Commodities</strong>:</span><span style="background-color: transparent; color: #222222;">&nbsp;Physical commodities include oil, precious and base metals and soft agricultural products such as coffee, cocoa and wheat. There are specialist funds that invest in this asset class by using derivatives that track their prices.</span></p>
+        <span id="docs-internal-guid-25ecc216-7fff-6758-3251-961d215ad2e8"><br />
+        </span>
+        <p dir="ltr" style="margin-top: 0pt; margin-bottom: 8pt;"><span style="color: #222222;"><strong>Private equity</strong>: </span><span style="color: #222222;">This is investment in private companies, i.e. those that are not listed on public stock markets. Such companies are often smaller and have yet to be floated on the stock exchange, although large public companies are sometimes de-listed and taken private. Some investors will own private companies but they can also invest in this asset class via specialist funds.</span></p>
+        <div><span style="color: #222222;"><br />
+        </span></div>

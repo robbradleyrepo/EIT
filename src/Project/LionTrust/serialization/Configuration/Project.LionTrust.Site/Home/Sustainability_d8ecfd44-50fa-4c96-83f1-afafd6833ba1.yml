@@ -1,0 +1,121 @@
+﻿---
+ID: "d8ecfd44-50fa-4c96-83f1-afafd6833ba1"
+Parent: "7502b69e-d154-4861-a033-bc0cb30a91b5"
+Template: "aef83073-cabc-4c94-8e30-7d76c7abe05d"
+Path: /sitecore/content/LionTrustNew/Home/Sustainability
+DB: master
+BranchID: "ee74385f-5e37-4283-b0af-ddbfa7a3186a"
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1"
+      s:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{31CB9F7C-04BF-4C70-9224-BF76498D95AC}"
+          p:before="*"
+          s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+          s:ph="/header/navigation" />
+        <r
+          uid="{A092C9FF-FB8D-42E2-9C58-6365C61DF696}"
+          p:after="r[@uid='{31CB9F7C-04BF-4C70-9224-BF76498D95AC}']"
+          s:ds="{9CCF41B9-6481-4172-B644-FD0757574E66}"
+          s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
+          s:par=""
+          s:ph="header" />
+        <r
+          uid="{CE0C5C3E-D9E5-4DC3-8ECB-0915B95C6A01}"
+          p:after="r[@uid='{A092C9FF-FB8D-42E2-9C58-6365C61DF696}']"
+          s:ds="{2C2D2BA4-D023-4C29-B552-54998E16B3CD}"
+          s:id="{7166AE9D-EFBD-48B3-B38F-AFD4CAAB5278}"
+          s:par=""
+          s:ph="/header/secondary-navigation" />
+        <r
+          uid="{4D1A1D5F-0420-4BAB-84D2-C17DF0472E26}"
+          p:after="r[@uid='{CE0C5C3E-D9E5-4DC3-8ECB-0915B95C6A01}']"
+          s:ds="{59ED4990-1E28-4D86-82F9-DAD95B4026D4}"
+          s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{235D069D-D6CC-43B1-9C27-ED0116A0F5EB}"
+          p:after="r[@uid='{4D1A1D5F-0420-4BAB-84D2-C17DF0472E26}']"
+          s:ds="{69813C97-F3D9-4E4F-96AE-F766ADB873D4}"
+          s:id="{6B2E2A4D-C3CB-4676-B804-B3459E4C9BD6}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{B9BDE4C3-A7E2-44B7-8CBA-C88484066C9F}"
+          p:after="r[@uid='{235D069D-D6CC-43B1-9C27-ED0116A0F5EB}']"
+          s:ds="{CD382639-135A-4192-8985-62AC9B0CFE89}"
+          s:id="{56ECB2D2-5D43-4F0F-A5D1-AC267F249E7B}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{F368AD5F-0958-4181-A17C-D37D0BDA5653}"
+          p:after="r[@uid='{B9BDE4C3-A7E2-44B7-8CBA-C88484066C9F}']"
+          s:ds="{15A9829F-D845-48F9-B1D9-009A8E8B2659}"
+          s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{FAA3D7A3-1683-4A1C-883B-71722E25BAE6}"
+          p:after="r[@uid='{F368AD5F-0958-4181-A17C-D37D0BDA5653}']"
+          s:ds="{4101F3F8-E8BF-4D94-BA3C-4FB8E2A6F39A}"
+          s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{2E48F8B5-A083-4475-A842-D7C90CBDC74F}"
+          p:after="r[@uid='{FAA3D7A3-1683-4A1C-883B-71722E25BAE6}']"
+          s:ds="{697AC1A2-CA03-4B8D-9F4E-430F2DFE2DCB}"
+          s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{8538E71F-04E5-4FD5-9721-6BEC2D28201B}"
+          p:after="r[@uid='{2E48F8B5-A083-4475-A842-D7C90CBDC74F}']"
+          s:ds="{0F30DEC9-50AA-4E82-B3A6-C4A309552B6B}"
+          s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{1C275B4A-2BB1-443E-9F6B-E62DC4EF6F3E}"
+          p:after="r[@uid='{8538E71F-04E5-4FD5-9721-6BEC2D28201B}']"
+          s:ds="{122091BA-20C3-4796-96A4-8CF8C2644D65}"
+          s:id="{6B2E2A4D-C3CB-4676-B804-B3459E4C9BD6}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{9A85E096-C394-40BA-AB44-2688D32DF393}"
+          p:after="r[@uid='{1C275B4A-2BB1-443E-9F6B-E62DC4EF6F3E}']"
+          s:ds="{8C74C455-CE94-43AC-894A-FD656399C2A8}"
+          s:id="{0D2BC18F-5CEA-432E-A94D-16007F1FDE49}"
+          s:par=""
+          s:ph="main" />
+      </d>
+    </r>
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{6294F940-5845-4367-A670-D14D08D2FCFF}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Sustainability | Liontrust Asset Management PLC
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220210T104928Z
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: Sustainability
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Sustainability

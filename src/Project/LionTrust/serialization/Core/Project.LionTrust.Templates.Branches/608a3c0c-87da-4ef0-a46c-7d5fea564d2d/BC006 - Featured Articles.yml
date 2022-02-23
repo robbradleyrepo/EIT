@@ -9,9 +9,17 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "0e5031b3-9232-42be-82d4-05579d7827d9"
+      Hint: ArticleSearchParameters_FundTeams
+      Type: Multilist
+      Value: "{7B370435-9AB2-4E6F-9B1C-16209BA9C8BD}"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20210519T095739Z
+    - ID: "a03d4f9e-4bda-401d-9639-dd0247f50fab"
+      Hint: ArticleSearchParameters_ContentTypes
+      Type: Multilist
+      Value: "{FE091F88-00F3-4D48-9E29-83949090DEBC}"
     - ID: "b2950181-27e6-4eef-a1fa-329aa73fce55"
       Hint: FeaturedArticles_Heading
       Value: Featured articles

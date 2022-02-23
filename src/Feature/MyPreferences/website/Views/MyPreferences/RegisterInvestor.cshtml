@@ -11,7 +11,7 @@
     </div>
 </div>
 <div class="article-with-small my-4 text-black">
-    <section class="retrive-preferences-form @(Model.UserExists ? "retrive-preferences-form__show" : string.Empty)">
+    <section class="retrive-preferences-form @((Model.UserExists || Model.EmailNotRecognized) ? "retrive-preferences-form__show" : string.Empty)">
         <section class="light-gray">
             <span>@Html.Glass().Editable(Model.Content, x => x.RetrievePreferencesIntroductionText)</span>
             <div class="input-group-row">

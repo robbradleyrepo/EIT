@@ -9,6 +9,9 @@ SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
   Value: Business/32x32/currency_pound.png
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: "{9F34A121-9D36-4EB8-9670-FEAA6EAA981C}"
@@ -17,16 +20,25 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "034cd348-2adc-47e9-b263-2c839808dae1"
+      Hint: FundCard_Fund
+      Value: "{C556B42F-45E9-4983-99DC-69766C994A3C}"
+    - ID: "036aeb89-b0bd-42c2-b763-a56cdbe32cdc"
+      Hint: Fund_Classes
+      Type: Multilist
+      Value: |
+        {AA9C84BD-643D-4A20-B17E-D8BED1F5221E}
+        {B5D8CBF0-A6D9-4267-BC74-9A626EEDA4D2}
+        {989F73A8-8A66-47FC-A3CF-2D6DD0BA3D77}
     - ID: "0905f092-b5b5-4971-b87e-57f4810bd729"
       Hint: FundCard_Description
-      Value: Sustainable Future
+      Value: The Fund identifies the key structural growth trends that will shape the global economy of the future and then seeks to invest in well run companies whose products and operations capitalise on these transformative changes. 
     - ID: "13671185-84c9-49e4-8799-6135f386f3e5"
       Hint: LegacyFund_FiveYears
       Value: 23.827%
     - ID: "1844ecc6-c68f-4989-96d5-296c34ede6e9"
       Hint: LegacyFundOverviewData_OverviewText
-      Value: |
-        <p><span>The Irish-domiciled Liontrust GF Sustainable Future Pan-European Growth Fund, which launched on 19 October 2018, is managed by Peter Michaelis &amp; Martyn Jones. The Luxcellence - Liontrust SF Pan-European Equity Fund, which had launched on 14 March 2001, merged into the Liontrust GF Sustainable Future Pan-European Growth Fund on 19 October 2018.&nbsp;</span><span style="font-size: 1.5rem;">The GF Sustainable Future Pan-European Growth Fund aims to generate capital growth by mainly investing in a broad range of European companies. The Fund seeks to achieve this while benefiting society by identifying the key structural growth trends that will shape the global economy of the future and investing in well-run companies whose products and operations capitalise on these powerful trends and, therefore, may benefit financially.</span></p>
+      Value: "<p><span>The Irish-domiciled Liontrust GF Sustainable Future Pan-European Growth Fund, which launched on 19 October 2018, is managed by Peter Michaelis &amp; Martyn Jones. The Luxcellence - Liontrust SF Pan-European Equity Fund, which had launched on 14 March 2001, merged into the Liontrust GF Sustainable Future Pan-European Growth Fund on 19 October 2018. The GF Sustainable Future Pan-European Growth Fund aims to generate capital growth by mainly investing in a broad range of European companies. The Fund seeks to achieve this while benefiting society by identifying the key structural growth trends that will shape the global economy of the future and investing in well-run companies whose products and operations capitalise on these powerful trends and, therefore, may benefit financially.</span></p>"
     - ID: "1d2ca9ff-d734-4e78-8459-3b94da9723bf"
       Hint: LegacyBenchmarkFundData_BenchmarkYear4
       Value: 18.390%
@@ -39,16 +51,18 @@ Languages:
     - ID: "221e703d-5ba7-4141-a98c-b76d2e5a663a"
       Hint: LegacyFund_RiskWarning
       Value: |
-        <h4>Key Risks</h4>
-        <p><span style="font-size: 15px;"><strong>Past performance is not a guide to future performance. </strong>Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. The majority of the Liontrust Sustainable Future Funds have holdings which are denominated in currencies other than Sterling and may be affected by movements in exchange rates. Some of these funds invest in emerging markets which may involve a higher element of risk due to less well regulated markets and political and economic instability. Consequently the value of an investment may rise or fall in line with the exchange rates. Liontrust UK Ethical Fund, Liontrust SF European Growth Fund and Liontrust SF UK Growth Fund invest geographically in a narrow range and has a concentrated portfolio of securities, there is an increased risk of volatility which may result in frequent rises and falls in the Fund&rsquo;s share price. Liontrust SF Managed Fund, Liontrust SF Corporate Bond Fund, Liontrust SF Cautious Managed Fund, Liontrust SF Defensive Managed Fund and Liontrust Monthly Income Bond Fund invest in bonds and other fixed-interest securities - fluctuations in interest rates are likely to affect the value of these financial instruments. If long-term interest rates rise, the value of your shares is likely to fall. If you need to access your money quickly it is possible that, in difficult market conditions, it could be hard to sell holdings in corporate bond funds. This is because there is low trading activity in the markets for many of the bonds held by these funds. Mentioned above five funds can also invest in derivatives. Derivatives are used to protect against currencies, credit and interests rates move or for investment purposes. There is a risk that losses could be made on derivative positions or that the counterparties could fail to complete on transactions.</span></p>
-        <br>
-        <h4>Disclaimer</h4>
-        <p><span style="font-size: 15px;">The information and opinions provided should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</span></p>
-        <br>
-        <p><span style="font-size: 15px;">Source: Financial Express. Total return.&nbsp;Discrete performance data is not available for five full 12 month periods due to the launch date of the portfolio. Citywire information is proprietary and confidential to Citywire Financial Publishers Ltd ('Citywire'), may not be copied and Citywire excludes any liability arising out of its use.</span></p>
-        <p><span style="font-size: 15px;"><br>
+        <p style="margin-bottom: 0cm;"><strong><span style="color: #131313;">Key Risks&nbsp;</span></strong></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">&nbsp;</span></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">Past performance is not a guide to future performance. The value of an investment and the income generated from it can fall as well as rise and is not guaranteed. You may get back less than you originally invested. The issue of units/shares in Liontrust Funds may be subject to an initial charge, which will have an impact on the realisable value of the investment, particularly in the short term. Investments should always be considered as long term.</span></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;"><br />
+        Investment in the Fund involves foreign currencies and may be subject to fluctuations in value due to movements in exchange rates.<br />
         </span></p>
-        <p><span style="font-size: 15px;">&copy; $currentYear$ Morningstar. All Rights Reserved. The information contained herein: (1) is proprietary to Morningstar and/or its content providers; (2) may not be copied or distributed; and (3) is not warranted to be accurate, complete or timely. Neither Morningstar nor its content providers are responsible for any damages or losses arising from any use of this information. &nbsp;Past performance is no guarantee of future results.</span></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">&nbsp;</span></p>
+        <p style="margin-bottom: 0cm;"><strong><span style="color: #131313;">Disclaimer</span></strong></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">&nbsp;</span></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">This is a marketing communication. Before making an investment, you should read the relevant Prospectus and the Key Investor Information Document (KIID), which provide full product details including investment charges and risks. These documents can be obtained, free of charge, from www.liontrust.co.uk or direct from Liontrust. Always research your own investments. If you are not a professional investor please consult a regulated financial adviser regarding the suitability of such an investment for you and your personal circumstances.&nbsp;</span></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">&nbsp;</span></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">This should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy. The investment being promoted is for units in a fund, not directly in the underlying assets. It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, forwarded, reproduced, divulged or otherwise distributed in any form whether by way of fax, email, oral or otherwise, in whole or in part without the express and prior written consent of Liontrust. Always research your own investments and if you are not a professional investor please consult a regulated financial adviser regarding the suitability of such an investment for you and your personal circumstances.&nbsp;</span></p>
     - ID: "225f8602-2cd0-4926-9e39-d4f5cb37ce5e"
       Hint: LegacyFund_Type
       Value: "{8924A32A-1723-4771-A448-74E97686F498}"
@@ -101,9 +115,13 @@ Languages:
     - ID: "6afb4eb4-25c4-472b-aa65-8ad9ddb3be2c"
       Hint: LegacyFund_FundName
       Value: "GF Sustainable Future Pan-European Growth Fund"
+    - ID: "6cac6ca9-127d-4cd0-b22e-e12d73d2372a"
+      Hint: FundFacets_FundRanges
+      Type: Multilist
+      Value: "{72560CC1-0DA6-4AEE-AEFD-2BD5C9AFAE6D}"
     - ID: "6cbf0ed2-94b3-4f2a-a84d-a36501e38105"
       Hint: LegacyFund_LaunchDate
-      Value: 20010313T220000Z
+      Value: 20010314T000000Z
     - ID: "6d258747-e783-4579-9c3c-f8f23d03ccf6"
       Hint: LegacySectorFundData_SectorOneYear
       Value: 0.497%
@@ -153,7 +171,7 @@ Languages:
       Value: 10.073%
     - ID: "90a7b1e0-c14e-4a3d-a717-72bec978a99a"
       Hint: LegacyFund_CitiCode
-      Value: GQKV
+      Value: N995
     - ID: "9238823c-d3a1-4b63-940c-867e606716aa"
       Hint: LegacyFund_HistoricYieldText
       Value: <p>Fund size and number of holdings data is as at previous month end. Performance data is as at previous working day.</p>
@@ -187,6 +205,9 @@ Languages:
     - ID: "b5af47a5-20d0-4b27-8ad2-34ce9a1ffc89"
       Hint: LegacyBenchmarkFundData_BenchmarkTenYears
       Value: 97.620%
+    - ID: "bebce40d-9578-44df-b126-ee555ace9407"
+      Hint: FundFacets_FundRegion
+      Value: "{DD05D586-C474-4F2D-874A-11D01542E92C}"
     - ID: "bf364003-b633-48a4-877f-3e553d116ceb"
       Hint: LegacyFund_Sector
       Value: "Equity - Europe inc UK"
@@ -207,7 +228,7 @@ Languages:
       Value: 5.816%
     - ID: "da4173d0-1f60-4edc-84a0-04c140de97d0"
       Hint: LegacyFund_FundDescription
-      Value: "GF Sustainable Future Pan-European Growth Fund"
+      Value: 
     - ID: "db79496e-bcc5-443f-bba6-e8d5bf0a31a3"
       Hint: LegacyFund_NumberOfHoldings
       Value: 51
@@ -221,7 +242,7 @@ Languages:
     - ID: "eb75dfef-c624-4571-b92b-8f37c36fcee6"
       Hint: FundCard_Image
       Value: |
-        <image mediaid="{8C038CB5-FC55-4F88-8934-CC2B85C604C5}" />
+        <image mediaid="{F95D14B8-FA3D-4DC8-9855-F9743C62893E}" />
     - ID: "f1426edd-1a46-4af0-9967-0743eab156d7"
       Hint: LegacySectorFundData_SectorTenYears
       Value: 82.472%

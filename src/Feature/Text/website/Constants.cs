@@ -57,5 +57,12 @@
             public const string Title_FieldId = "{0955F2D3-783E-4FF5-BF3F-9B7623FB00AC}";
             public const string TableContent_FieldId = "{8F6DB058-9E75-4A0B-8F19-CD79D3F28FB0}";
         }
+
+        public static class IFrameModule
+        {
+            public const string Title_FieldId = "{613F3556-678A-4C6C-9210-9FA32F9C82C2}";
+            public const string IFrameUrl_FieldId = "{99577A3D-CF58-4C34-BE70-7459ABCE4DC8}";
+            public const string UniqueId_FieldId = "{F31F2FC8-8CB8-48B5-A856-2A9D07045F25}";
+        }
     }
 }

@@ -19,7 +19,5 @@
         IEnumerable<string> FundTeams { get; set; }
         
         DateTime ToDate { get; set; }
-
-        IEnumerable<Guid> Topics { get; set; }
     }
 }

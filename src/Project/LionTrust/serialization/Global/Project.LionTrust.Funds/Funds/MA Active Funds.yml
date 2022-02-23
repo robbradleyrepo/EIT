@@ -42,7 +42,11 @@ Languages:
         <link text="View Multi-Asset Active Funds" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{C56D2292-24AD-4559-822D-A2E91E62C6DD}" />
     - ID: "90a7b1e0-c14e-4a3d-a717-72bec978a99a"
       Hint: LegacyFund_CitiCode
-      Value: JMMK
+      Value: 
+    - ID: "91f79612-5c57-43a3-a182-1cefdadcaa88"
+      Hint: FundFacetOption_HideFromFilters
+      Type: Checkbox
+      Value: 1
     - ID: "da4173d0-1f60-4edc-84a0-04c140de97d0"
       Hint: LegacyFund_FundDescription
       Value: MA Active Funds

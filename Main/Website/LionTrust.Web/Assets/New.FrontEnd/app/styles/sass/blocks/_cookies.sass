@@ -3,11 +3,13 @@ body
         position: fixed
         top: 50%
         left: 50%
-        transform: translate(-50%, -50%)
+        transform: translate(-50%, -50%) !important
         margin: 0 !important
         border: none
         border-radius: 10px
         padding: 25px
+        +breakpoint(tablet, down)
+            max-width: 80% !important //override script style 
 
         a, p, div
             font-family: $userfont
@@ -114,7 +116,6 @@ body
         #CybotCookiebotDialogDetailBody
             padding: 0
             margin-top: 15px
-
             #CybotCookiebotDialogDetailBodyContentTabs
                 display: inline-flex
 

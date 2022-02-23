@@ -105,6 +105,8 @@
     <Compile Include="DataManagers\Interfaces\IArticleSearchDataManager.cs" />
     <Compile Include="DataManagers\Interfaces\IFundSearchDataManager.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
+    <Compile Include="Models\API\Facets\IFundFacetOption.cs" />
+    <Compile Include="Models\API\Facets\IFundFacetFolder.cs" />
     <Compile Include="Models\API\FundResult.cs" />
     <Compile Include="Models\API\Facets\IFundSearchFacetsConfig.cs" />
     <Compile Include="Models\API\Facet.cs" />

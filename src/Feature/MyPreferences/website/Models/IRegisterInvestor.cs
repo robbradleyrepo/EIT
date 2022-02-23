@@ -111,5 +111,7 @@
         [SitecoreField(Constants.RegisterInvestor.RetrievePreferences.CTAText)]
         string RetrievePreferencesCTAText { get; set; }
 
+        [SitecoreField(Constants.RegisterInvestor.RetrievePreferences.EmailNotRecognized)]
+        string RetrievePreferencesEmailNotRecognized { get; set; }
     }
 }

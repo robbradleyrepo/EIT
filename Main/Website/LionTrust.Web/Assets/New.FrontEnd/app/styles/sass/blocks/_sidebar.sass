@@ -71,16 +71,17 @@
                 transition: none
     &__submenu
         position: fixed
-        top: 70px
+        top: 65px
         padding: 13px 20px 43px 21px
         left: 0
         z-index: 1100
         background: $secondary
         width: 100%
         max-width: 450px
-        min-height: 150%
+        height: calc( 100vh - 65px )
         transform: translate3d(-450px, 0, 0)
         transition: transform 0.35s
+        overflow-y: auto
         @include breakpoint(desktop, up)
             transition: transform 0.7s
             z-index: 999

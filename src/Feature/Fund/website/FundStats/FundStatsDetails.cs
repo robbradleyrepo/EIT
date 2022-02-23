@@ -19,19 +19,23 @@
         public FundStatsData GetFundStatsDetails(IFundClass fundClass)
         {
             var apiData = _repository.GetData().FirstOrDefault(f => f.CitiCode == fundClass.CitiCode);
-            if (apiData != null)
+
+            if (apiData == null)
             {
-                if (int.TryParse(apiData.NumberOfHoldings, out int nrOfHoldings))
-                {
-                    nrOfHoldings -= 1;
-                }
-                return new FundStatsData
-                {
-                    Holdings = Convert.ToString(nrOfHoldings),
-                    FundSize = apiData.FundSize
-                };
+                _repository.SendEmailOnErrorForCiticode(fundClass.CitiCode);
+                return null;
             }
-            return null;
+
+            if (int.TryParse(apiData.NumberOfHoldings, out int nrOfHoldings))
+            {
+                nrOfHoldings -= 1;
+            }
+
+            return new FundStatsData
+            {
+                Holdings = Convert.ToString(nrOfHoldings),
+                FundSize = apiData.FundSize
+            };
         }
     }
 }

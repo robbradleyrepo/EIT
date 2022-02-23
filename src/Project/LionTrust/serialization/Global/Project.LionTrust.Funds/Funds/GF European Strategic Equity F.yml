@@ -9,6 +9,9 @@ SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
   Value: Business/32x32/currency_pound.png
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: 
@@ -24,35 +27,14 @@ Languages:
       Hint: Fund_Classes
       Type: Multilist
       Value: |
-        {D928D2B3-C2AD-4D73-B2E5-D9A5DA665A0E}
-        {4B7B6C7A-8979-4F5A-ABBE-76A1571DC256}
-        {F1E67AB7-9A4D-4EEF-9D75-4F752E1AAAC2}
-        {2637D152-24E1-4E02-A226-AF16789E5936}
-        {F28595FB-2528-4E1D-A32A-4E006D49CD0F}
-        {4BCC9BF5-CB44-4FA6-BF54-037240D57ABD}
-        {A239A5F4-A628-439A-831A-DEBE6C1FB32B}
-        {A40D115E-4CAB-42ED-B0E4-EBF63545BCB0}
-        {A229AC95-436A-43A6-AE14-2AFAA57D3C1D}
-        {78CE7013-21F7-4D07-A757-44116255420F}
-        {AD0929D0-42A3-4646-8972-9D3FA3C43629}
-        {EA676D57-7EE6-4AEE-9C3E-FA72FB028D18}
-        {E5A19A9F-A592-4ADD-B5B7-9C596ED786A6}
-        {42284ADA-7139-4AA9-9612-8B9E3BEE6D8E}
-        {DD8BF381-59A2-424A-94C8-A15DCA5742A0}
-        {EB1C4111-C7BF-4161-BFC3-0E310C7EA06A}
-        {4505FDA8-D34F-475F-A00D-BD1E45169273}
-        {2D8F0877-FB30-42E8-B9E2-A907BE4CCF87}
-        {684453E7-EF69-469F-BAB4-96DD04FEEE52}
-        {D7CC8DEC-7927-4020-AF17-66DEB63C1960}
-        {E4352707-99EA-4722-81C6-C099574409BA}
-        {688F270C-357E-4F7B-A018-B0F68932FE30}
-        {E4BB8D41-2F38-4801-A112-BDE1A7DC5E9B}
-        {C5678024-594A-421E-8DCE-2AFA0D33DAA9}
-        {98787CA9-5EBA-4ED5-A6EE-7E046208E703}
-        {29D0D092-902D-4843-B93D-CF24AC8A94E4}
+        {E3D442FA-7511-4CF7-B395-6E85F795CD70}
+        {8926BEF3-9DD9-4F66-BD70-61D154008C36}
+        {95E41F92-BE3D-4270-B871-8B267CCD4052}
+        {067C4BEE-0AF0-4EE7-AE72-239B4B36AA9F}
+        {33D80797-421C-4A04-B585-C1C872BC918D}
     - ID: "0905f092-b5b5-4971-b87e-57f4810bd729"
       Hint: FundCard_Description
-      Value: Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.&nbsp;
+      Value: The Fund takes long positions in companies that can generate strong cash returns from their capital and appear cheap on these cash flows and shorts companies that are expensive and struggling to generate cash. 
     - ID: "13671185-84c9-49e4-8799-6135f386f3e5"
       Hint: LegacyFund_FiveYears
       Value: 8.759%
@@ -71,17 +53,24 @@ Languages:
     - ID: "221e703d-5ba7-4141-a98c-b76d2e5a663a"
       Hint: LegacyFund_RiskWarning
       Value: |
-        <h4>Key Risks</h4>
-        <p><span style="font-size: 15px;"><strong>Past performance is not a guide to future performance.</strong> Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. Investment in Funds managed by the Cashflow Solution team involves foreign currencies and may be subject to fluctuations in value due to movements in exchange rates. The Liontrust European Growth Fund holds a concentrated portfolio of stocks, if the price of one of these stocks should move significantly, this may have a notable effect on the value of the respective portfolio. The Liontrust Global Income Fund's expenses are charged to capital. This has the effect of increasing dividends while constraining capital appreciation.</span></p>
-        <br>
-        <h4>Disclaimer</h4>
-        <p><span style="font-size: 15px;">The information and opinions provided should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</span></p>
-        <br>
-        <p><span style="font-size: 15px;"><strong><span>This share class is hedged so investors do not benefit from or are disadvantaged from any movement in the value of the base currency of the fund against investible currencies. In contrast, if applicable, the index returns are in local currency and the average returns of the sector are in sterling.</span></strong></span></p>
-        <br>
-        <p><span style="font-size: 15px;">Source: Financial Express. Total return. Discrete performance data is not available for five full 12 month periods due to the launch date of the portfolio.&nbsp;Citywire information is proprietary and confidential to Citywire Financial Publishers Ltd ('Citywire'), may not be copied and Citywire excludes any liability arising out of its use.</span></p>
-        <br>
-        <p><span style="font-size: 15px;">&copy; $currentYear$ Morningstar. All Rights Reserved. The information contained herein: (1) is proprietary to Morningstar and/or its content providers; (2) may not be copied or distributed; and (3) is not warranted to be accurate, complete or timely. Neither Morningstar nor its content providers are responsible for any damages or losses arising from any use of this information. &nbsp;Past performance is no guarantee of future results.</span></p>
+        <p style="margin-bottom: 0cm;"><strong><span style="color: #131313;">Key Risks&nbsp;</span></strong></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">&nbsp;</span></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">Past performance is not a guide to future performance. The value of an investment and the income generated from it can fall as well as rise and is not guaranteed. You may get back less than you originally invested. The issue of units/shares in Liontrust Funds may be subject to an initial charge, which will have an impact on the realisable value of the investment, particularly in the short term. Investments should always be considered as long term.<br />
+        <br />
+        </span></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">Investment in the Fund involves foreign currencies and may be subject to fluctuations in value due to movements in exchange rates. The Fund may invest in emerging markets/soft currencies which may have the effect of increasing volatility.<br />
+        <br />
+        The Fund may invest in derivatives. The use of derivatives may create leverage or gearing. A relatively small movement in the value of a derivative's underlying investment may have a larger impact, positive or negative, on the value of a fund than if the underlying investment was held instead.<br />
+        <br />
+        A performance fee of 20% is calculated and accrued at each valuation point. Payment is subject to the Fund's net asset&nbsp; value exceeding an Adjusted Prior Net Asset Value which is a High Water Mark adjusted by any new subscriptions or redemptions and a 4% hurdle per calendar year. No Performance Fee will be payable with respect to a Fund class in any Performance Period unless such class has recovered any accumulated underperformance for previous Performance Periods. Any performance fees are only payable on the positive difference between the NAV and the Adjusted Prior Net&nbsp; Asset Value. Details of the Fund's performance fee in the last financial year can be found in the Key Investor Information Document (KIID) which can be obtained free of charge from the Liontrust website.<br />
+        <br />
+        </span></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">&nbsp;</span></p>
+        <p style="margin-bottom: 0cm;"><strong><span style="color: #131313;">Disclaimer</span></strong></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">&nbsp;</span></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">This is a marketing communication. Before making an investment, you should read the relevant Prospectus and the Key Investor Information Document (KIID), which provide full product details including investment charges and risks. These documents can be obtained, free of charge, from www.liontrust.co.uk or direct from Liontrust. Always research your own investments. If you are not a professional investor please consult a regulated financial adviser regarding the suitability of such an investment for you and your personal circumstances.&nbsp;</span></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">&nbsp;</span></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">This should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy. The investment being promoted is for units in a fund, not directly in the underlying assets. It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, forwarded, reproduced, divulged or otherwise distributed in any form whether by way of fax, email, oral or otherwise, in whole or in part without the express and prior written consent of Liontrust. Always research your own investments and if you are not a professional investor please consult a regulated financial adviser regarding the suitability of such an investment for you and your personal circumstances.&nbsp;</span></p>
     - ID: "224b2abd-69c2-4b50-91f5-e628f2ef9055"
       Hint: LegacyFund_CalendarPerformanceDateText
       Value: 
@@ -134,10 +123,14 @@ Languages:
         sitecore\hayleya
     - ID: "6387ca9a-7a5a-4d33-b706-201681c0b74c"
       Hint: FundCard_Heading
-      Value: Sustainable Investment
+      Value: Cashflow Solution
     - ID: "6afb4eb4-25c4-472b-aa65-8ad9ddb3be2c"
       Hint: LegacyFund_FundName
       Value: GF European Strategic Equity Fund
+    - ID: "6cac6ca9-127d-4cd0-b22e-e12d73d2372a"
+      Hint: FundFacets_FundRanges
+      Type: Multilist
+      Value: "{72560CC1-0DA6-4AEE-AEFD-2BD5C9AFAE6D}"
     - ID: "6cbf0ed2-94b3-4f2a-a84d-a36501e38105"
       Hint: LegacyFund_LaunchDate
       Value: 20140424T230000Z
@@ -153,7 +146,7 @@ Languages:
     - ID: "76af5024-2b12-421a-96cd-46e756f1db9a"
       Hint: FundCard_CTA
       Value: |
-        <link id="{C8165F81-7FA9-4E88-BA21-9BC72C9629E1}" querystring="" target="" text="fund cta" url="/LionTrustNew/Home/Data Template/Fund Detail Page" linktype="internal" />
+        <link text="View" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{7717C4FA-EB34-415F-8AE5-FC7CAF76F713}" />
     - ID: "776341a4-f1e7-4a9e-9b44-7da25ed3505e"
       Hint: LegacyFund_Process
       Type: Treelist
@@ -181,13 +174,13 @@ Languages:
       Value: 20120215T000000Z
     - ID: "8d126770-f164-4e20-94a0-0666798f3201"
       Hint: LegacyFund_Quote
-      Value: <em>By using the Cashflow Solution investment process, a concentrated long book and a diversified short book, our approach offers the potential for better returns than the market in the long term while taking much less risk.</em><br />
+      Value: 
     - ID: "8f1d085a-547e-4c60-b936-081b456d4659"
       Hint: LegacyFund_Year1
       Value: "-14.856%"
     - ID: "90a7b1e0-c14e-4a3d-a717-72bec978a99a"
       Hint: LegacyFund_CitiCode
-      Value: GQKV
+      Value: KL1G
     - ID: "9238823c-d3a1-4b63-940c-867e606716aa"
       Hint: LegacyFund_HistoricYieldText
       Value: Fund size and number of holdings data is as at previous month end. Performance data is as at previous working day.<br />
@@ -221,6 +214,9 @@ Languages:
     - ID: "b3e71185-b6c6-44f9-8b44-902957935bba"
       Hint: LegacyFund_ActiveShareText
       Value: 
+    - ID: "bebce40d-9578-44df-b126-ee555ace9407"
+      Hint: FundFacets_FundRegion
+      Value: "{DD05D586-C474-4F2D-874A-11D01542E92C}"
     - ID: "bf364003-b633-48a4-877f-3e553d116ceb"
       Hint: LegacyFund_Sector
       Value: Absolute Return
@@ -248,7 +244,7 @@ Languages:
     - ID: "e43f6e86-0318-4766-b880-0c4f6512ca4e"
       Hint: FundPage_Page
       Value: |
-        <link text="View Fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{313A747A-34BC-46FA-A8AE-5BA31A5797F9}" />
+        <link text="View fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{7717C4FA-EB34-415F-8AE5-FC7CAF76F713}" />
     - ID: "e456c092-dda4-4179-aa02-1505821fd2a1"
       Hint: LegacySectorFundData_SectorYear5
       Value: 0.822%
@@ -258,7 +254,7 @@ Languages:
     - ID: "eb75dfef-c624-4571-b92b-8f37c36fcee6"
       Hint: FundCard_Image
       Value: |
-        <image mediaid="{438CEA59-E77D-4FB0-A495-653BA891E7EC}" />
+        <image mediaid="{B5770EAC-5DAC-4E63-A603-53E9BA4CF004}" />
     - ID: "ec65712d-5b34-40aa-ae21-fb887d85d44f"
       Hint: LegacyFund_PerformanceTableIntroText
       Value: 

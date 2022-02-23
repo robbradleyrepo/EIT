@@ -51,5 +51,11 @@
 
         [IndexField("LegacyFund_HideFromFundList")]
         public bool HideFromFundList { get; set; }
+
+        [IndexField("Fund_FundManagerNames")]
+        public string FundManagerNames { get; set; }
+
+        [IndexField("Fund_FundName")]
+        public string FundSearchName { get; set; }
     }
 }

@@ -13,34 +13,26 @@ SharedFields:
   Hint: __Renderings
   Type: layout
   Value: |
-    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
       <d
-        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
-        l="{CD1590E1-6573-4CC7-B0A9-E3BB6A9DADE4}">
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          id="{29A12478-EBE8-4B5C-BF2E-871026066814}"
-          ph="footer"
-          uid="{CCBBB036-5788-4F78-AC6A-DF34C178F76C}" />
+          uid="{B6CB773C-E731-4F36-B72A-AF5BFE57CA6F}">
+          <p:d />
+        </r>
         <r
-          id="{DD1D438A-3971-438B-B1C9-461415F43488}"
-          ph="footer"
-          uid="{A9D97645-8E0D-4192-A314-3437510B5AF8}" />
+          uid="{30A0A4C8-974F-4822-9DCB-DE14881E0400}"
+          s:ph="main" />
         <r
-          ds="{374E565F-AB05-4B26-99EA-F394BB9C9D6F}"
-          id="{3322E03C-F4D5-4BF9-88AF-70C9AB775188}"
-          par=""
-          ph="footer"
-          uid="{F100020C-98C6-4D33-BCCE-6C46079A6D08}" />
+          uid="{9057DD73-496E-495D-9460-75D38BBB5B7E}">
+          <p:d />
+        </r>
         <r
-          ds="{CA74E9F1-9B48-44B9-95AA-235DF422EAC1}"
-          id="{2BE3EC53-02FF-4EED-B3FC-5E4535185D73}"
-          par=""
-          ph="main"
-          uid="{30A0A4C8-974F-4822-9DCB-DE14881E0400}" />
-        <r
-          id="{C728A955-DA1D-4700-B924-E0D35901DE4B}"
-          ph="footer"
-          uid="{50FACAA0-F93E-4652-99EA-33AFC98FF0FE}" />
+          uid="{50FACAA0-F93E-4652-99EA-33AFC98FF0FE}"
+          p:after="*[1=2]"
+          s:id="{C728A955-DA1D-4700-B924-E0D35901DE4B}"
+          s:ph="footer" />
       </d>
     </r>
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
@@ -82,8 +74,15 @@ Languages:
               s:id="{06464072-4612-40D5-B861-7BD9DEF6E851}"
               s:ph="main" />
             <r
-              uid="{01EABB43-86E0-4282-A941-C1B22FC9BCBD}"
+              uid="{9D3EE935-4A60-4815-B5F5-FBEC2FB57C5C}"
               p:after="r[@uid='{C64833FA-A8C2-466D-94E1-F7CAFD4D38B6}']"
+              s:ds="{0AD6385A-D810-4584-A336-8F70E5A2D27D}"
+              s:id="{C8A0835C-41F7-4918-B665-F5476CFB3ADE}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{01EABB43-86E0-4282-A941-C1B22FC9BCBD}"
+              p:after="r[@uid='{9D3EE935-4A60-4815-B5F5-FBEC2FB57C5C}']"
               s:ds="{A8DBA7DE-5434-453A-9F6C-CA483003D997}"
               s:id="{7626FD78-BC75-4F9C-80E7-DC947364A29B}"
               s:ph="/main/article" />
@@ -99,8 +98,14 @@ Languages:
               s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
               s:ph="main" />
             <r
-              uid="{48AD1398-C35B-4BD2-A8E8-2DFA0912E0ED}"
+              uid="{45BA6321-E727-438A-AA1A-BFFB7FF5774C}"
               p:after="r[@uid='{E5418B37-8258-4C2D-B3ED-8DD6049E7A18}']"
+              s:ds="{21C7B0B3-FD1C-4698-A357-BBD2D8F6EE00}"
+              s:id="{6B2E2A4D-C3CB-4676-B804-B3459E4C9BD6}"
+              s:ph="main" />
+            <r
+              uid="{48AD1398-C35B-4BD2-A8E8-2DFA0912E0ED}"
+              p:after="r[@uid='{45BA6321-E727-438A-AA1A-BFFB7FF5774C}']"
               s:ds="{8B5690BE-ECE6-4DF4-9335-FFFBABCD40D9}"
               s:id="{A811D2B0-D08D-4991-A9DD-6D9FA5799CBD}"
               s:ph="main" />

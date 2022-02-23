@@ -20,6 +20,7 @@ import locationAndMap from "./componets/locationAndMap";
 import tabNav from "./componets/tabNav";
 import headerCtaNav from "./componets/headerCtaNav";
 import preferenceCenter from './componets/preferenceCenter';
+import common from "./componets/common";
 
 document.addEventListener("DOMContentLoaded", () => {
     onboardingOverlay();
@@ -35,8 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
     shareLink();
     tabNav();
     headerCtaNav();
+    common();
     preferenceCenter();
-    stickyNavbar();
+    if (document.querySelector(".page-anchor-link")) stickyNavbar();
     if (document.querySelector(".main-page")) parallaxScrolling();
     // init tooltips
     $('[data-toggle="tooltip"]').tooltip({

@@ -15,6 +15,11 @@
                             <h1 class="article-hero__title mb-4">
                                 @Model.FundName
                             </h1>
+                            <div class="col-12">
+                                <p class="article-hero__subtitle">
+                                    @Html.Glass().Editable(Model, m => m.Data.Subtitle)
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

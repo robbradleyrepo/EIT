@@ -2,6 +2,7 @@
     display: flex
     margin: 0 auto
     margin-bottom: 20px
+    justify-content: center
     @include breakpoint(desktop, up)
         margin-bottom: 56px
         justify-content: center
@@ -36,3 +37,21 @@
             @include breakpoint(desktop, up)
                 display: inline
                 font-size: 12px
+    .avatar-row
+        display: flex
+        justify-content: center
+        .hero-manager-link__link
+            width: auto
+            margin: 10px 30px
+            @include breakpoint(tablet , down)
+                margin: 0 30px 10px 30px
+        .hero-manager-link__name
+            white-space: nowrap
+.avatarLinks-row
+    flex-wrap: nowrap
+    overflow-x: auto
+
+    @include breakpoint(tablet , up)
+        flex-wrap: wrap
+    @include breakpoint(tablet , down)
+        justify-content: flex-start

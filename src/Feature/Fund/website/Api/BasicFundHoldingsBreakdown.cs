@@ -25,6 +25,7 @@
             var dataForClass = fundDetails.FirstOrDefault(c => c.CitiCode == citiCode);
             if (dataForClass == null)
             {
+                _repository.SendEmailOnErrorForCiticode(citiCode);
                 return new FundBreakdownModel[0];
             }
 

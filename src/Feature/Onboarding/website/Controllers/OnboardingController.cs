@@ -74,8 +74,10 @@
 
                 if (!string.IsNullOrWhiteSpace(countryName))
                 {
-                    viewModel.ChooseCountry.CurrentCountryName = countryName;
+                    var country = OnboardingHelper.GetCountryFromIso(_context, isoCode);                       
+                    viewModel.ChooseCountry.CurrentCountryName = OnboardingHelper.GetCountryNameDefiniteArticle(country);
                     viewModel.ChooseCountry.CurrentCountryIso = isoCode;
+
                     SetTab(Tabs.CountryGeoIp);
                 }
                 else
@@ -181,7 +183,7 @@
             uriBuilder.Query = query.ToString();
 
             return Redirect(uriBuilder.Uri.PathAndQuery);
-        }
+        }        
 
         private bool IsOnboardingConfigured(IHome data)
         {

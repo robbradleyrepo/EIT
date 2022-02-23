@@ -77,6 +77,7 @@
     <Compile Include="ComputedFields\Article\ArticleAuthorImageProtected.cs" />
     <Compile Include="ComputedFields\Article\ArticleAuthorTeams.cs" />
     <Compile Include="ComputedFields\Article\ArticleContent.cs" />
+    <Compile Include="ComputedFields\Article\ArticleCreatedDate.cs" />
     <Compile Include="ComputedFields\Article\ArticleListingImageProtected.cs" />
     <Compile Include="ComputedFields\Article\ArticleAuthorNames.cs" />
     <Compile Include="ComputedFields\Article\ArticleFundName.cs" />
@@ -87,8 +88,10 @@
     <Compile Include="ComputedFields\Article\ArticleUrl.cs" />
     <Compile Include="ComputedFields\Fund\FundCardImageProtected.cs" />
     <Compile Include="ComputedFields\Fund\FundFactSheetProtected.cs" />
+    <Compile Include="ComputedFields\Fund\FundName.cs" />
     <Compile Include="ComputedFields\Fund\FundPageLinkText.cs" />
     <Compile Include="ComputedFields\Fund\FundPageUrl.cs" />
+    <Compile Include="ComputedFields\Fund\FundManagerNames.cs" />
     <Compile Include="ComputedFields\Fund\FundTeamName.cs" />
     <Compile Include="ComputedFields\GenericListingModuleItem\ImageWidth.cs" />
     <Compile Include="ComputedFields\GenericListingModuleItem\ImageProtected.cs" />

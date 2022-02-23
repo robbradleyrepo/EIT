@@ -9,6 +9,9 @@ SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
   Value: Business/32x32/currency_pound.png
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: 
@@ -20,6 +23,19 @@ Languages:
     - ID: "00cb1306-1dfb-42e4-9405-fac6a8d6a87b"
       Hint: LegacyFund_Isin
       Value: GB00B57TMD12
+    - ID: "034cd348-2adc-47e9-b263-2c839808dae1"
+      Hint: FundCard_Fund
+      Value: "{AD48CBEC-F778-431E-A11F-7510A39E665D}"
+    - ID: "036aeb89-b0bd-42c2-b763-a56cdbe32cdc"
+      Hint: Fund_Classes
+      Type: Multilist
+      Value: |
+        {72AB7B41-4A09-474E-94DC-56280D8A7AF9}
+        {BB95D9E9-1A7C-4040-A77F-721CBE3725CA}
+        {A744322C-F76E-4A93-8894-4822A995A25E}
+    - ID: "0905f092-b5b5-4971-b87e-57f4810bd729"
+      Hint: FundCard_Description
+      Value: The Fund, which has been managed by the Economic Advantage team since 1998, seeks companies with a durable competitive advantage. All smaller companies must have a minimum 3% equity ownership by senior management.
     - ID: "13671185-84c9-49e4-8799-6135f386f3e5"
       Hint: LegacyFund_FiveYears
       Value: 92.981%
@@ -31,22 +47,24 @@ Languages:
       Value: 17.774%
     - ID: "200ea310-b6b4-4066-97f8-1f8b7c3e5a6d"
       Hint: LegacyFund_FundTeamManager
-      Value: David Prosser, The Times, July 2016
+      Value: 
     - ID: "205ed0c5-d7b3-413a-8937-4b728937efef"
       Hint: LegacyFund_FundTeam
       Value: "{FF63C615-A3F4-496F-A0F2-6D72F92E9BA9}"
     - ID: "221e703d-5ba7-4141-a98c-b76d2e5a663a"
       Hint: LegacyFund_RiskWarning
       Value: |
-        <h4>Key Risks</h4>
-        <p><span style="font-size: 15px;"><strong>Past performance is not a guide to future performance. </strong>Do remember that the value of an investment and the income generated from them can fall as well as rise and is not guaranteed, therefore, you may not get back the amount originally invested and potentially risk total loss of capital. Some of the Funds managed by the Economic Advantage team invest primarily in smaller companies and companies traded on the Alternative Investment Market. &nbsp;These stocks may be less liquid and the price swings greater than those in, for example, larger companies. The performance of the &nbsp;GF UK Growth Fund may differ from the performance of the &nbsp;UK Growth Fund and will be lower than its corresponding Master Fund due to additional fees and expenses.</span></p>
-        <br />
-        <h4>Disclaimer</h4>
-        <p><span style="font-size: 15px;">The information and opinions provided should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. &nbsp;Always research your own investments and (if you are not a professional or a financial adviser) consult suitability with a regulated financial adviser before investing.</span></p>
-        <br />
-        <p><span style="font-size: 15px;">Source: Financial Express. Total return, bid-to-bid. The performance of Liontrust UK Smaller Companies I Inc&nbsp;does not go back to the Fund's launch date because not all the historic data is available from FE. Performance data starts from 07.08.95.&nbsp;Citywire information is proprietary and confidential to Citywire Financial Publishers Ltd ('Citywire'), may not be copied and Citywire excludes any liability arising out of its use.</span></p>
-        <br />
-        <p>© $currentYear$ Morningstar. All Rights Reserved. The information contained herein: (1) is proprietary to Morningstar and/or its content providers; (2) may not be copied or distributed; and (3) is not warranted to be accurate, complete or timely. Neither Morningstar nor its content providers are responsible for any damages or losses arising from any use of this information. &nbsp;Past performance is no guarantee of future results.</p>
+        <p style="margin-bottom: 0cm;"><strong><span style="color: #131313;">Key Risks&nbsp;</span></strong></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">&nbsp;</span></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">Past performance is not a guide to future performance. The value of an investment and the income generated from it can fall as well as rise and is not guaranteed. You may get back less than you originally invested. The issue of units/shares in Liontrust Funds may be subject to an initial charge, which will have an impact on the realisable value of the investment, particularly in the short term. Investments should always be considered as long term.</span></p>
+        <p style="margin-bottom: 0cm;"><span></span><br />
+        <span>The portfolio is primarily invested in smaller companies and companies traded on the Alternative Investment Market. These stocks may be less liquid and the price swings greater than those in, for example, larger companies.</span> </p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">&nbsp;</span></p>
+        <p style="margin-bottom: 0cm;"><strong><span style="color: #131313;">Disclaimer</span></strong></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">&nbsp;</span></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">This is a marketing communication. Before making an investment, you should read the relevant Prospectus and the Key Investor Information Document (KIID), which provide full product details including investment charges and risks. These documents can be obtained, free of charge, from www.liontrust.co.uk or direct from Liontrust. Always research your own investments. If you are not a professional investor please consult a regulated financial adviser regarding the suitability of such an investment for you and your personal circumstances.&nbsp;</span></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">&nbsp;</span></p>
+        <p style="margin-bottom: 0cm;"><span style="color: #131313;">This should not be construed as advice for investment in any product or security mentioned, an offer to buy or sell units/shares of Funds mentioned, or a solicitation to purchase securities in any company or investment product. Examples of stocks are provided for general information only to demonstrate our investment philosophy. The investment being promoted is for units in a fund, not directly in the underlying assets. It contains information and analysis that is believed to be accurate at the time of publication, but is subject to change without notice. Whilst care has been taken in compiling the content of this document, no representation or warranty, express or implied, is made by Liontrust as to its accuracy or completeness, including for external sources (which may have been used) which have not been verified. It should not be copied, forwarded, reproduced, divulged or otherwise distributed in any form whether by way of fax, email, oral or otherwise, in whole or in part without the express and prior written consent of Liontrust. Always research your own investments and if you are not a professional investor please consult a regulated financial adviser regarding the suitability of such an investment for you and your personal circumstances.&nbsp;</span></p>
     - ID: "224b2abd-69c2-4b50-91f5-e628f2ef9055"
       Hint: LegacyFund_CalendarPerformanceDateText
       Value: 
@@ -112,6 +130,9 @@ Languages:
     - ID: "63315fbe-9290-4e70-b785-0bddfc0a48b4"
       Hint: LegacyFund_SectorClassCode
       Value: "O:UKSMALL"
+    - ID: "6387ca9a-7a5a-4d33-b706-201681c0b74c"
+      Hint: FundCard_Heading
+      Value: Economic Advantage
     - ID: "63e27ea6-1a92-417d-8152-a57e3348f1e9"
       Hint: LegacyFund_TypeCode
       Value: R139
@@ -121,9 +142,13 @@ Languages:
     - ID: "6afb4eb4-25c4-472b-aa65-8ad9ddb3be2c"
       Hint: LegacyFund_FundName
       Value: UK Smaller Companies Fund
+    - ID: "6cac6ca9-127d-4cd0-b22e-e12d73d2372a"
+      Hint: FundFacets_FundRanges
+      Type: Multilist
+      Value: "{72560CC1-0DA6-4AEE-AEFD-2BD5C9AFAE6D}"
     - ID: "6cbf0ed2-94b3-4f2a-a84d-a36501e38105"
       Hint: LegacyFund_LaunchDate
-      Value: 20130128T000000
+      Value: 20130128T000000Z
     - ID: "6d258747-e783-4579-9c3c-f8f23d03ccf6"
       Hint: LegacySectorFundData_SectorOneYear
       Value: 5.560%
@@ -154,6 +179,7 @@ Languages:
         {593A3471-F89A-4F84-9A0B-802BE61972AE}
         {0F980420-4156-41F4-951F-F156CD3F4359}
         {42430A5F-F395-4518-98D9-C21C1011175D}
+        {039DD4F1-8CEE-408B-A206-93ACB8B512D6}
     - ID: "86f07fa6-a576-4462-b343-c4af970a2576"
       Hint: LegacyFund_HistoricYield
       Value: 0.316%
@@ -165,7 +191,7 @@ Languages:
       Value: 19980108T000000Z
     - ID: "8d126770-f164-4e20-94a0-0666798f3201"
       Hint: LegacyFund_Quote
-      Value: <p><em>Almost every adviser we asked to pick a manager with a proven track record in up and down periods named Anthony Cross &amp; Julian Fosh, who run Liontrust UK Smaller Companies. &ldquo;The duo have stayed ahead of the market 83 per cent of the time in months when the markets have declined, an incredibly high rate of success,&rdquo; says Jason Hollands, managing director of Tilney Bestinvest.</em></p>
+      Value: 
     - ID: "8f1d085a-547e-4c60-b936-081b456d4659"
       Hint: LegacyFund_Year1
       Value: 12.814%
@@ -214,6 +240,9 @@ Languages:
     - ID: "b5af47a5-20d0-4b27-8ad2-34ce9a1ffc89"
       Hint: LegacyBenchmarkFundData_BenchmarkTenYears
       Value: 151.367%
+    - ID: "bebce40d-9578-44df-b126-ee555ace9407"
+      Hint: FundFacets_FundRegion
+      Value: "{C1842C39-40E7-476D-9736-AE30CD0A25FE}"
     - ID: "bf364003-b633-48a4-877f-3e553d116ceb"
       Hint: LegacyFund_Sector
       Value: IA UK Smaller Companies
@@ -244,12 +273,23 @@ Languages:
     - ID: "db79496e-bcc5-443f-bba6-e8d5bf0a31a3"
       Hint: LegacyFund_NumberOfHoldings
       Value: 69
+    - ID: "e43f6e86-0318-4766-b880-0c4f6512ca4e"
+      Hint: FundPage_Page
+      Value: |
+        <link text="View fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{CCC6A19C-4302-4C88-AEC0-8D7BA411AC15}" />
     - ID: "e456c092-dda4-4179-aa02-1505821fd2a1"
       Hint: LegacySectorFundData_SectorYear5
       Value: 7.785%
     - ID: "e46ad885-3540-4b5b-8886-8e888f3a16c3"
       Hint: LegacyFund_AssetClass
       Value: Equity
+    - ID: "e5d3dec0-9cbb-435e-a231-391006503c1c"
+      Hint: LegacyFund_SalesforceFunds
+      Value: "{285E56AC-A185-4DA8-BD77-3018EABFF7EA}"
+    - ID: "eb75dfef-c624-4571-b92b-8f37c36fcee6"
+      Hint: FundCard_Image
+      Value: |
+        <image mediaid="{1E23E7A5-0A14-4CCD-AF7D-5C5B23F42A25}"></image>
     - ID: "ec65712d-5b34-40aa-ae21-fb887d85d44f"
       Hint: LegacyFund_PerformanceTableIntroText
       Value: 

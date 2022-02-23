@@ -60,6 +60,13 @@
                 public const string IsFundManagerFieldId = "{AD3AF339-1FD6-47EA-B506-7ED32F5D6246}";
             }
 
+            public static class FundFacetOption
+            {
+                public const string TemplateId = "{DD91CC88-A0D2-43D9-B419-458ECFFE9F00}";
+
+                public const string HideFromFiltersFieldId = "{91F79612-5C57-43A3-A182-1CEFDADCAA88}";
+            }
+
             public static class FundSearchFacetsConfig
             {
                 public const string FundRangesFieldId = "{FBE9329C-271B-4573-B4FD-6DC4B7C692C9}";
@@ -91,6 +98,7 @@
             public const string FilterMobileLabel_FieldId = "{115428E3-8A89-48C1-90EC-2E7AE6A6EB70}";
             public const string VideoIcon_FieldId = "{68CADA79-69A0-454A-A9EB-1E5C3E6A6CE2}";
             public const string WhatcNowLabel_FieldId = "{566136F8-0D80-4B50-8ECC-9DB53FC96161}";
+            public const string NoResultsFoundLabel_FieldId = "{10B2DF8D-71F5-493E-BBEE-D13EA700F618}";
         }
 
         public static class Pagination
