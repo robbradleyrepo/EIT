@@ -542,7 +542,7 @@
                 newSFContact.InternalFields[Constants.SFContact_CompanyNameField] = profUser.Company;
                 newSFContact.InternalFields.SetField<bool>(Constants.SF_UKResident, profUser.IsUKResident);
                 newSFContact.InternalFields[Constants.SFContact_OrgNameField] = profUser.Organisation;
-                newSFContact.InternalFields.SetField<bool>(Constants.SF_EmailOptOutField, profUser.);
+                newSFContact.InternalFields.SetField<bool>(Constants.SF_EmailOptOutField, profUser.Unsubscribed);
 
                 var contactRecordtypes = GetSFEntityRecordTypes(Constants.SFContactEntityName);
                 if (contactRecordtypes != null)
@@ -939,6 +939,56 @@
                 var ownerRegion = sfContact.InternalFields[Constants.SF_Owner_RegionField];
 
                 return ownerRegion;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Get unsubscribed by email
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        public bool GetUnsubscribedByEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                Log.Info("Email address is null or empty. No email preferences id returned from the email address.", this);
+                return true;
+            }
+
+            try
+            {
+                var unsubscribed = true;
+
+                var contactService = new ContactService(this.SalesforceSession);
+                var sfContact = contactService.GetByEmail(email);                
+                if (sfContact != null)
+                {
+                    var sfEntityId = sfContact.Id.ToString();
+                    unsubscribed = sfContact.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
+
+                    return unsubscribed;
+                }
+
+                var leadService = new LeadService(this.SalesforceSession);
+                var sfLead = leadService.GetByEmail(email);
+                if (sfLead != null)
+                {
+                    var sfEntityId = sfLead.Id.ToString();
+                    unsubscribed = sfLead.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
+
+                    return unsubscribed;
+                }
+
+                if (sfContact == null && sfLead == null)
+                {
+                    Log.Info(string.Format("Salesforce Contact or Lead does not exist with the email - {0}", email), this);
+                }                
+              
+                return true;
             }
             catch (Exception ex)
             {
