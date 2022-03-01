@@ -4,13 +4,13 @@
 {
     <div class="container page-promo">
         <div class="row">
-            @foreach (var promoItem in Model.PromoItems)
-            {
-                using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Promo/PagePromo/PagePromoItem", promoItem.Id.ToString(), "Edit Page Promo Item"))
-                {
-                    <div class="col-lg-6">
-                        <div class="page-promo__item">
-                            @using (Html.Glass().BeginRenderLink(promoItem, p => p.CTA, new { @class = "page-promo__image" }, isEditable: true))
+           @foreach (var promoItem in Model.PromoItems)
+           {
+                <div class="col-lg-6">
+                    <div class="page-promo__item">
+                        @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Promo/PagePromo/PagePromoItem", promoItem.Id.ToString(), "Edit Page Promo Item"))
+                        {
+                            using (Html.Glass().BeginRenderLink(promoItem, p => p.CTA, new { @class = "page-promo__image" }, isEditable: true))
                             {
                                 @Html.Glass().RenderImage(promoItem, p => p.Image, new { @class = "page-promo__img" }, isEditable: true)
                             }
@@ -31,9 +31,10 @@
                                     <i class="icon-arrow-right"></i>
                                 }
                             </div>
-                        </div>
+                        }
                     </div>
-                }
+                </div>
+
             }
         </div>
     </div>
