@@ -30,8 +30,7 @@ export default () => {
         plugins: {
           datalabels: {
             formatter: (value, ctx) => {              
-              let dataArr = ctx.chart.data.datasets[0].data;
-              let percentage = value.toFixed(2) + "%";
+              let percentage = value + "%";
              
               return percentage;
             },
