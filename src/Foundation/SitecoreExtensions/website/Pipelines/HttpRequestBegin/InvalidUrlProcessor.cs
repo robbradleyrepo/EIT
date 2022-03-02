@@ -47,6 +47,12 @@
                 return;
             }
 
+            if (currentUrl.ToLower().StartsWith("/?sc_itemid="))
+            {
+                Log.Debug("InvalidUrlProcessor: Skipping due to url containing /?sc_itemid=.");
+                return;
+            }
+
             // do not redirect for the 404 page
             if (Context.Site != null && Context.Database != null)
             {
