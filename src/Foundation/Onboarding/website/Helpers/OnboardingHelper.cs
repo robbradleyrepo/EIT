@@ -54,7 +54,7 @@
         public static IInvestor GetCurrentContactInvestor(IMvcContext context, BaseLog log)
         {
             var home = context.GetHomeItem<IHome>();
-            IInvestor inverstor = null;
+            IInvestor investor = null;
             var tracker = Tracker.Current;
             if (home == null || home.OnboardingConfiguration == null || !IsValidConfiguration(home.OnboardingConfiguration, log))
             {
@@ -71,16 +71,26 @@
                     {
                         if (profile.PatternId.HasValue)
                         {
-                            inverstor = home.OnboardingConfiguration.ChooseInvestorRole?
-                                .FirstOrDefault()?
-                                .Investors?
-                                .FirstOrDefault(i => i?.PatternCard.Id == profile.PatternId);
+                            if (IsUkResident())
+                            {
+                                investor = home.OnboardingConfiguration.ChooseInvestorRole?
+                                    .FirstOrDefault()?
+                                    .Investors?
+                                    .FirstOrDefault(i => i?.PatternCard.Id == profile.PatternId);
+                            }
+                            else
+                            {
+                                investor = home.OnboardingConfiguration.ChooseInvestorRole?
+                                    .FirstOrDefault()?
+                                    .Investors?
+                                    .FirstOrDefault(i => i?.InternationalPatternCard.Id == profile.PatternId);
+                            }
                         }
                     }
                 }
             }
 
-            return inverstor;
+            return investor;
         }
 
         public static bool HasAccess(IEnumerable<ICountry> excludedCountries)
@@ -304,7 +314,7 @@
             return false;
         }
 
-            public static void AddPointsFromProfileCard(IOnboardingConfiguration configuration, IProfileCard profileCard)
+        public static void AddPointsFromProfileCard(IOnboardingConfiguration configuration, IProfileCard profileCard)
         {
             var scores = new Dictionary<string, double>();
 

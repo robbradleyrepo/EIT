@@ -68,6 +68,8 @@
             public const string ProfileCardValueKey_XmlElementName = "key";
             public const string ProfileCardValueName_XmlAttribute = "name";
             public const string ProfileCardValueValue_XmlAttribute = "value";
+            public const string ProfessionalInvestor_ProfileCardName = "Professional Investor";
+            public const string InternationalProfessionalInvestor_ProfileCardName = "International Professional Investor";
         }
 
         public static class Home
@@ -82,7 +84,9 @@
             public const string Description_FieldId = "{B1CC8A2B-0544-4DB1-83F0-A7186D820A5C}";
             public const string Icon_FieldId = "{24886373-D6E1-411C-87A6-DE0062562012}";
             public const string ProfileCard_FieldId = "{4CAD945A-DFC5-4001-86EC-E24F204CAAFB}";
+            public const string InternationalProfileCard_FieldId = "{508340BD-DC1A-4BBB-8085-B4E63811CA7E}";
             public const string PatternCard_FieldId = "{34E7CBB9-226B-41F2-B03F-736BCEEB7B06}";
+            public const string InternationalPatternCard_FieldId = "{5280D30C-66BB-468A-A54A-CDBF0229D7E1}";
             public const string ExcludedCountires_FieldId = "{37CDAEBE-7CD2-4D45-BD7B-CB58C9585328}";
             public const string Header_FieldId = "{1B479915-F4DF-4559-AADB-F74A744C85B1}";
         }

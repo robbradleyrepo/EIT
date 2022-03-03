@@ -20,8 +20,14 @@
         [SitecoreField(Constants.Investor.ProfileCard_FieldId)]
         IProfileCard ProfileCard { get; set; }
 
+        [SitecoreField(Constants.Investor.InternationalProfileCard_FieldId)]
+        IProfileCard InternationalProfileCard { get; set; }
+
         [SitecoreField(Constants.Investor.PatternCard_FieldId)]
         IGlassBase PatternCard { get; set; }
+
+        [SitecoreField(Constants.Investor.InternationalPatternCard_FieldId)]
+        IGlassBase InternationalPatternCard { get; set; }
 
         [SitecoreField(Constants.Investor.ExcludedCountires_FieldId)]
         IEnumerable<ICountry> ExcludedCountires { get; set; }
