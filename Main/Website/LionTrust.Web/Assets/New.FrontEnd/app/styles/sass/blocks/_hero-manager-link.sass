@@ -3,8 +3,9 @@
     margin: 0 auto
     margin-bottom: 20px
     justify-content: center
-    @include breakpoint(desktop, up)
-        margin-bottom: 56px
+    margin-top: 20px
+    @include breakpoint(mobile, up)
+        margin-bottom: 110px
         justify-content: center
         display: inline-block
     &__link
@@ -23,8 +24,8 @@
         margin-bottom: 10px
         background: $herobg-gradient
         @include breakpoint(desktop, up)
-            width: 50px
-            height: 50px
+            width: 70px
+            height: 70px
             margin-bottom: 15px
     &__name
         font-size: 10px
