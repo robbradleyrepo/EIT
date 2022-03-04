@@ -21,12 +21,7 @@
             }
 
             DateField dateTimeField = item.Fields[Constants.GenericListingItemDate_FieldId];
-            if (dateTimeField != null && dateTimeField.DateTime != null && dateTimeField.DateTime != DateTime.MinValue)
-            {
-                return dateTimeField.DateTime.Month;
-            }
-
-            return item.Created.Month;           
+            return ComputedValueHelper.GetDateTimeFieldValue(dateTimeField, item.Created).Month;                      
         }
     }
 }

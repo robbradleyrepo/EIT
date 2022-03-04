@@ -21,12 +21,7 @@
             }
 
             DateField dateTimeField = item.Fields[Constants.GenericListingItemDate_FieldId];
-            if (dateTimeField != null && dateTimeField.DateTime != null && dateTimeField.DateTime != DateTime.MinValue)
-            {
-                return dateTimeField.DateTime.Year;
-            }
-
-            return item.Created.Year;
+            return ComputedValueHelper.GetDateTimeFieldValue(dateTimeField, item.Created).Year;
         }
     }
 }

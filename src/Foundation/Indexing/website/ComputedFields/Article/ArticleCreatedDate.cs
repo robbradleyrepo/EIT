@@ -22,12 +22,8 @@
             }
 
             DateField dateTimeField = item.Fields[Constants.ArticleDate_FieldId];
-            if (dateTimeField != null && dateTimeField.DateTime != null && dateTimeField.DateTime != DateTime.MinValue)
-            {
-                return dateTimeField.DateTime;
-            }
-
-            return item.Created;
+            
+            return ComputedValueHelper.GetDateTimeFieldValue(dateTimeField, item.Created);
         }
     }
 }
