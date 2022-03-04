@@ -1,9 +1,10 @@
 .banner-card
   width: 100%
-  height: 394px
+  height: 762px
   position: relative
   border-radius: 10px
   overflow: hidden
+  box-shadow: 0 0 185px 85px black inset, inset 0px 0px 85px -10px black
   @include breakpoint(tablet, down)
     margin-top: 33px
 
@@ -13,6 +14,10 @@
     line-height: 28px
     color: $white
     margin-bottom: 29px
+    overflow: hidden
+    display: -webkit-box
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
   &__img
     width: 100%
     height: 100%
