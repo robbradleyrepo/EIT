@@ -19,6 +19,7 @@
     using System.Web;
     using System.Web.Mvc;
     using static LionTrust.Feature.Onboarding.Constants;
+    using static LionTrust.Foundation.Onboarding.Constants;
 
     public class OnboardingController : SitecoreController
     {
@@ -172,7 +173,17 @@
                     .Investors?
                     .FirstOrDefault(x => x.Id == OnboardingSubmit.InvestorId);
 
-                OnboardingHelper.AddPointsFromProfileCard(data.OnboardingConfiguration, investor.ProfileCard);
+                IProfileCard profileCard;                
+                if (OnboardingSubmit.Country.Equals(CountryCodes.UK))
+                {
+                    profileCard = investor.ProfileCard;
+                }
+                else
+                {
+                    profileCard = investor.InternationalProfileCard;
+                }
+
+                OnboardingHelper.AddPointsFromProfileCard(data.OnboardingConfiguration, profileCard);
 
                 TrackAnonymousUser(OnboardingSubmit.Country);
             }
@@ -260,12 +271,16 @@
 
             using (XConnectClient client = Sitecore.XConnect.Client.Configuration.SitecoreXConnectClientConfiguration.GetClient())
             {
+
                 var contact = OnboardingHelper.GetContact(client);
                 var profile = OnboardingHelper.GetProfile(config.Profile.Name);
 
+                var isUkResident = OnboardingHelper.IsUkResident();
+
                 if (!string.IsNullOrWhiteSpace(contact?.Addresses()?.PreferredAddress?.CountryCode)
                     && profile != null && profile.PatternId.HasValue
-                    && config.ChooseInvestorRole.FirstOrDefault().Investors.Any(p => p.PatternCard.Id == profile.PatternId.Value))
+                    && (isUkResident && config.ChooseInvestorRole.FirstOrDefault().Investors.Any(p => p.PatternCard.Id == profile.PatternId.Value)
+                    || !isUkResident && config.ChooseInvestorRole.FirstOrDefault().Investors.Any(p => p.InternationalPatternCard.Id == profile.PatternId.Value)))
                 {
                     result = true;
                 }
