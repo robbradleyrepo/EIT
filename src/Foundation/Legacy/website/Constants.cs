@@ -242,7 +242,8 @@ namespace LionTrust.Foundation.Legacy
             public const string Image_FieldID = "{146CBBD2-0E88-4FD6-B4B4-49B462266089}";
             public const string Text_FieldID = "{694C3F81-60C0-4719-AA8C-5A4264623FEB}";
             public const string Text_FieldName = "GenericListingModuleItem_Text";
-            public const string Date_FieldID = "{25BED78C-4957-4165-998A-CA1B52F67497}";
+            public const string CreatedDate_FieldID = "{25BED78C-4957-4165-998A-CA1B52F67497}";
+            public const string Date_FieldID = "{FB91E653-BC6B-426C-995C-7D406DD6A40D}";
             public const string ListingType_FieldID = "{FF934E56-BADD-46E1-BFB4-695F32B1D6C5}";
         }
 

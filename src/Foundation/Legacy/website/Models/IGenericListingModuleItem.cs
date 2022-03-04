@@ -21,5 +21,8 @@
 
         [SitecoreField(Constants.GenericListingModuleItem.Date_FieldID)]
         DateTime Date { get; set; }
+
+        [SitecoreField(Constants.GenericListingModuleItem.CreatedDate_FieldID)]
+        DateTime CreatedDate { get; set; }
     }
 }
