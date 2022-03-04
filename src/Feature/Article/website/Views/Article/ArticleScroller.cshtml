@@ -2,12 +2,99 @@
 @using System.Collections.Specialized
 @model LionTrust.Feature.Article.Models.ArticleScrollerViewModel
 
-<section class="article">
-    <div class="article__box">
-        <div class="container">
-            <div class="article__head">
-                <h2>@Html.Glass().Editable(Model.ArticleScroller, m => m.Heading)</h2>
-                @using (Html.Glass().BeginRenderLink(Model.ArticleScroller, m => m.CTA, new NameValueCollection { { "class", Model.DesktopButtonClass } }, isEditable: true))
+@if (Model != null && Model.ArticleScroller != null)
+{
+    <section class="article">
+        <div class="article__box">
+            <div class="container">
+                <div class="article__head">
+                    <h2>@Html.Glass().Editable(Model.ArticleScroller, m => m.Heading)</h2>
+                    @using (Html.Glass().BeginRenderLink(Model.ArticleScroller, m => m.CTA, new NameValueCollection { { "class", Model.DesktopButtonClass } }, isEditable: true))
+                    {
+                        if (Model.ArticleScroller.CTA != null && !string.IsNullOrEmpty(Model.ArticleScroller.CTA.Text))
+                        {
+                            @Model.ArticleScroller.CTA.Text
+                        }
+                        <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
+                    }
+                </div>
+            </div>
+            <!-- Swiper -->
+            <div class="container">
+                <div class="swiper-container-article">
+                    <div class="swiper-wrapper row">
+                        @if (Model.ArticleList != null && Model.ArticleList.Any())
+                        {
+                            foreach (var article in Model.ArticleList)
+                            {
+                                if (article.PromoType != null && !string.IsNullOrEmpty(article.PromoType.Name))
+                                {
+                                    switch (article.PromoType.Name)
+                                    {
+                                        case "Fund manager views":
+                                            {
+                                                <div class="swiper-slide col-10 col-md-6 col-lg-4">
+                                                    @Html.Partial("~/Views/Article/PromoCards/FundManagerViewPromo.cshtml", article)
+                                                </div>
+                                                break;
+                                            }
+                                        case "Podcast":
+                                            {
+                                                if (article.PodcastPromo != null && article.PodcastPromo.Any())
+                                                {
+                                                    <div class="swiper-slide col-10 col-md-6 col-lg-4">
+                                                        @Html.Partial("~/Views/Article/PromoCards/ArticlePodcastPromo.cshtml", article.PodcastPromo.FirstOrDefault(), new ViewDataDictionary { { "ArticleUrl", article.Url } })
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="col-10 col-md-6 col-lg-4">
+                                                        @Html.Partial("~/Views/Article/PromoCards/FundManagerViewPromo.cshtml", article)
+                                                    </div>
+                                                }
+                                                break;
+                                            }
+                                        case "Fund updates":
+                                            {
+                                                <div class="swiper-slide col-10 col-md-6 col-lg-4">
+                                                    @Html.Partial("~/Views/Article/PromoCards/FundUpdatePromo.cshtml", article)
+                                                </div>
+                                                break;
+                                            }
+                                        case "Video":
+                                            {
+                                                <div class="swiper-slide col-10 col-md-6 col-lg-4">
+                                                    @Html.Partial("~/Views/Article/PromoCards/VideoPromo.cshtml", article)
+                                                </div>
+                                                break;
+                                            }
+                                        case "Magazine and Reports":
+                                            {
+                                                <div class="swiper-slide col-10 col-md-6 col-lg-4">
+                                                    @Html.Partial("~/Views/Article/PromoCards/MagazineReportsPromo.cshtml", article)
+                                                </div>
+                                                break;
+                                            }
+                                        default:
+                                            {
+                                                <div class="swiper-slide col-10 col-md-6 col-lg-4">
+                                                    @Html.Partial("~/Views/Article/PromoCards/FundManagerViewPromo.cshtml", article)
+                                                </div>
+                                            }
+                                            break;
+                                    }
+                                }
+                                else
+                                {
+                                    <div class="swiper-slide col-10 col-md-6 col-lg-4">
+                                        @Html.Partial("~/Views/Article/PromoCards/FundManagerViewPromo.cshtml", article)
+                                    </div>
+                                }
+                            }
+                        }
+                    </div>
+                </div>
+                @using (Html.Glass().BeginRenderLink(Model.ArticleScroller, m => m.CTA, new NameValueCollection { { "class", Model.MobileButtonClass } }))
                 {
                     if (Model.ArticleScroller.CTA != null && !string.IsNullOrEmpty(Model.ArticleScroller.CTA.Text))
                     {
@@ -17,89 +104,5 @@
                 }
             </div>
         </div>
-        <!-- Swiper -->
-        <div class="container">
-            <div class="swiper-container-article">
-                <div class="swiper-wrapper row">
-                    @if (Model.ArticleList != null && Model.ArticleList.Any())
-                    {
-                        foreach (var article in Model.ArticleList)
-                        {
-                            if (article.PromoType != null && !string.IsNullOrEmpty(article.PromoType.Name))
-                            {
-                                switch (article.PromoType.Name)
-                                {
-                                    case "Fund manager views":
-                                        {
-                                            <div class="swiper-slide col-10 col-md-6 col-lg-4">
-                                                @Html.Partial("~/Views/Article/PromoCards/FundManagerViewPromo.cshtml", article)
-                                            </div>
-                                            break;
-                                        }
-                                    case "Podcast":
-                                        {
-                                            if (article.PodcastPromo != null && article.PodcastPromo.Any())
-                                            {
-                                                <div class="swiper-slide col-10 col-md-6 col-lg-4">
-                                                    @Html.Partial("~/Views/Article/PromoCards/ArticlePodcastPromo.cshtml", article.PodcastPromo.FirstOrDefault(), new ViewDataDictionary { { "ArticleUrl", article.Url } })
-                                                </div>
-                                            }
-                                            else
-                                            {
-                                                <div class="col-10 col-md-6 col-lg-4">
-                                                    @Html.Partial("~/Views/Article/PromoCards/FundManagerViewPromo.cshtml", article)
-                                                </div>
-                                            }
-                                            break;
-                                        }
-                                    case "Fund updates":
-                                        {
-                                            <div class="swiper-slide col-10 col-md-6 col-lg-4">
-                                                @Html.Partial("~/Views/Article/PromoCards/FundUpdatePromo.cshtml", article)
-                                            </div>
-                                            break;
-                                        }
-                                    case "Video":
-                                        {
-                                            <div class="swiper-slide col-10 col-md-6 col-lg-4">
-                                                @Html.Partial("~/Views/Article/PromoCards/VideoPromo.cshtml", article)
-                                            </div>
-                                            break;
-                                        }
-                                    case "Magazine and Reports":
-                                        {
-                                            <div class="swiper-slide col-10 col-md-6 col-lg-4">
-                                                @Html.Partial("~/Views/Article/PromoCards/MagazineReportsPromo.cshtml", article)
-                                            </div>
-                                            break;
-                                        }
-                                    default:
-                                        {
-                                            <div class="swiper-slide col-10 col-md-6 col-lg-4">
-                                                @Html.Partial("~/Views/Article/PromoCards/FundManagerViewPromo.cshtml", article)
-                                            </div>
-                                        }
-                                        break;
-                                }
-                            }
-                            else
-                            {
-                                <div class="swiper-slide col-10 col-md-6 col-lg-4">
-                                    @Html.Partial("~/Views/Article/PromoCards/FundManagerViewPromo.cshtml", article)
-                                </div>
-                            }
-                        }
-                    }
-                </div>
-            </div>
-            @using (Html.Glass().BeginRenderLink(Model.ArticleScroller, m => m.CTA, new NameValueCollection { { "class", Model.MobileButtonClass } }))
-            {
-                if (Model.ArticleScroller.CTA != null && !string.IsNullOrEmpty(Model.ArticleScroller.CTA.Text))
-                {
-                    @Model.ArticleScroller.CTA.Text
-                }
-                <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
-            }
-        </div>
-    </div>
-</section>
+    </section>
+}
