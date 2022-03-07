@@ -44,6 +44,8 @@
             public const string PrimaryCtaGoalFieldId = "{8C3AA537-AD28-4338-936C-D0E0F0FB83D7}";
 
             public const string SecondaryCtaGoalFieldId = "{F3FF2CD3-4DE7-4EBE-B740-9540D23F67E2}";
+
+            public const string MarginsContainer_FieldId = "{85B43A42-E9AC-4634-B11D-A69A2A3E3D6C}";
         }
 
         public static class BannerWithIcons

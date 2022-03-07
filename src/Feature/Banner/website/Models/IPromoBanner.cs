@@ -31,5 +31,8 @@
 
         [SitecoreField(Banner.Constants.PromoBanner.SecondaryCtaGoalFieldId)]
         Guid SecondaryCtaGoal { get; set; }
+
+        [SitecoreField(Banner.Constants.PromoBanner.MarginsContainer_FieldId)]
+        ILookupValue MarginsContainer { get; set; }
     }
 }
