@@ -64,5 +64,12 @@
             public const string IFrameUrl_FieldId = "{99577A3D-CF58-4C34-BE70-7459ABCE4DC8}";
             public const string UniqueId_FieldId = "{F31F2FC8-8CB8-48B5-A856-2A9D07045F25}";
         }
+
+        public static class ScriptModule
+        {
+            public const string Title_FieldId = "{219365C1-D9DE-4CBB-9A23-3FDA1D312E35}";
+            public const string Src_FieldId = "{2C1D15DA-95B5-4CCE-9D6E-F4E987706B64}";
+            public const string Id_FieldId = "{13F76C68-C41E-4CC1-B864-154B63332661}";
+        }
     }
 }
