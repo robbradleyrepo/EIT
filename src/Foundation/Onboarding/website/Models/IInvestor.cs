@@ -34,5 +34,8 @@
 
         [SitecoreField(Constants.Investor.Header_FieldId)]
         IGlassBase Header { get; set; }
+
+        [SitecoreField(Constants.Investor.LandingPage_FieldId)]
+        Link LandingPage { get; set; }
     }
 }

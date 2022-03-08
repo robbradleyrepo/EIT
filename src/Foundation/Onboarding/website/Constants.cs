@@ -89,6 +89,7 @@
             public const string InternationalPatternCard_FieldId = "{5280D30C-66BB-468A-A54A-CDBF0229D7E1}";
             public const string ExcludedCountires_FieldId = "{37CDAEBE-7CD2-4D45-BD7B-CB58C9585328}";
             public const string Header_FieldId = "{1B479915-F4DF-4559-AADB-F74A744C85B1}";
+            public const string LandingPage_FieldId = "{FDF548D4-2D00-4A27-A4EC-F49ED693F83B}";
         }
 
         public static class QueryStringNames
