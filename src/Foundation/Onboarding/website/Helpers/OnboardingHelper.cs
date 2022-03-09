@@ -404,7 +404,11 @@
 
             var uriBuilder = new UriBuilder(HttpContext.Current.Request.Url.ToString());
             var query = HttpUtility.ParseQueryString(uriBuilder.Query);
-            query.Add(QueryStringNames.Change, bool.TrueString.ToLower());
+            if (!(query.HasKeys() && query.AllKeys.Contains(QueryStringNames.Change)))
+            {
+                query.Add(QueryStringNames.Change, bool.TrueString.ToLower());
+            }
+            
             uriBuilder.Query = query.ToString();
 
             return uriBuilder.Uri.PathAndQuery;
