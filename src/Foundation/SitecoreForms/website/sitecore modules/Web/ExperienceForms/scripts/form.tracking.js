@@ -45,15 +45,16 @@
             }
         } else {
             value = $jq(element).val();
-        }
-
-        //alert(element.type);
-		if (element.type === "select-one") {
-			alert($jq(element).val());
-		}
+        }        
 
         if (value && Object.prototype.toString.call(value) === "[object Array]") {
-            value = value.join(",");
+			if (element.type === "select-one") {
+				if (element.options && element.options.length > 0) {
+					value = element.options[element.selectedIndex].innerText;
+				}
+			} else {
+				value = value.join(",");
+			}
         }
 
         return value;
