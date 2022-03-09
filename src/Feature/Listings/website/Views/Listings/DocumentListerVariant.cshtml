@@ -5,6 +5,9 @@
 {
     <section class="container mb-5" id="tab-content">
         <div class="lister-select d-lg-none">
+            <div class="">
+                @Html.Glass().Editable(Model.Data, m => m.SelectYearLabel)
+            </div>
             <select name="document-filter" id="document-select-filter" data-select-for="tab-content"
                     class="class-dropdown__select document-select-filter">
                 <option value="@Model.FirstYear" selected>@Model.FirstYear</option>
