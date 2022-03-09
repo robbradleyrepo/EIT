@@ -114,7 +114,8 @@
                 fundClass.CumulativeYearToDateQuart,
                 fundClass.Cumulative1yQuart,
                 fundClass.Cumulative3yQuart,
-                fundClass.Cumulative5yQuart
+                fundClass.Cumulative5yQuart,
+                string.Empty
             });
         }        
     }
