@@ -51,14 +51,13 @@
                 </div>
             </div>
             <document-item inline-template v-for="(document, i) in searchData" :key="i + document.title" :id="document.documentId" :title="document.title">
-                <div class="doc-list__item">
+                <div class="doc-list__item" v-if="document.documentPageLink">
                     <div class="row align-items-center">
                         <div class="col-xl-1 col-md-1 d-none d-md-block">
                             <label class="checkbox doc-list__checkbox">
                                 <input type="checkbox" class="checkbox__input" v-model="selected" @@change="selectDocument(document.documentId)">
                                 <span class="checkbox__box mx-auto"></span>
                             </label>
-
                         </div>
                         <div class="col-xl-6 col-md-11">
                             <span class="doc-list__title">
@@ -82,6 +81,30 @@
                                 </a>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="doc-list__item" v-else>
+                    <div class="row align-items-center">
+                        <div class="col-xl-1 col-md-1 d-none d-md-block">
+                            <label class="checkbox doc-list__checkbox">
+                                <input type="checkbox" class="checkbox__input" v-model="selected" @@change="selectDocument(document.documentId)">
+                                <span class="checkbox__box mx-auto"></span>
+                            </label>
+                        </div>
+                        <div class="col-xl-9 col-md-11">
+                            <span class="doc-list__title">
+                                {{document.title}}
+                            </span>
+                        </div>
+                        <div class="col-lg-6 col-xl-2">
+                            <div class="doc-list__links">
+                                <button @@click="downloadDocument" class="link-gray ml-lg-auto">@Html.Glass().Editable(Model, m => m.DownloadFileLabel) <i class="icon-download"></i></button>                                
+                                <button v-if="document.documentVideoLink" data-type="iframe" data-fancybox
+                                        :data-src="document.documentVideoLink" class="link-gray ml-lg-auto">
+                                    @Html.Glass().Editable(Model, m => m.WatchVideoText) <i class="icon-play"></i>
+                                </button>
+                            </div>
+                        </div>                        
                     </div>
                 </div>
             </document-item>

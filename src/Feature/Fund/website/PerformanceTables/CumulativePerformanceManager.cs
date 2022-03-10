@@ -119,7 +119,8 @@
                 fundClass.Cumulative1yQuart,
                 fundClass.Cumulative3yQuart,
                 fundClass.Cumulative5yQuart,
-                fundClass.Cumulative10yQuart
+                fundClass.Cumulative10yQuart,
+                string.Empty
             });
         }        
     }
