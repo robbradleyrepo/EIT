@@ -35,7 +35,7 @@
                             }
                             else
                             {
-                                <td></td>
+                                <td>-</td>
                             }
                         }
                     </tr>
@@ -46,9 +46,16 @@
                 <tfoot>
                     <tr>
                         <td scope="row">@Html.Glass().Editable(Model.Component, m => m.QuartileRowLabel)</td>
-                        @foreach (var item in Model.QuartileRow.Columns.Where(c => c != null))
+                        @foreach (var item in Model.QuartileRow.Columns)
                         {
-                            <td>@item</td>
+                            if (item != null)
+                            {
+                                <td>@item</td>
+                            }
+                            else
+                            {
+                                <td>-</td>
+                            }
                         }
                     </tr>
                 </tfoot>
