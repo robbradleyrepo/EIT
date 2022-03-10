@@ -35,7 +35,8 @@
                         fundClass.DiscretePerformance0To12,
                         fundClass.DiscretePerformance12To24,
                         fundClass.DiscretePerformance24To36,
-                        fundClass.DiscretePerformance36To48
+                        fundClass.DiscretePerformance36To48,
+                        fundClass.DiscretePerformance48To60
                     }));
             }
             
@@ -52,7 +53,8 @@
                     fundClass.Benchmark0DiscretePerformance0To12,
                     fundClass.Benchmark0DiscretePerformance12To24,
                     fundClass.Benchmark0DiscretePerformance24To36,
-                    fundClass.Benchmark0DiscretePerformance36To48
+                    fundClass.Benchmark0DiscretePerformance36To48,
+                    fundClass.Benchmark0DiscretePerformance48To60
                 }));
             }
 
@@ -64,7 +66,8 @@
                     fundClass.Benchmark1DiscretePerformance0To12,
                     fundClass.Benchmark1DiscretePerformance12To24,
                     fundClass.Benchmark1DiscretePerformance24To36,
-                    fundClass.Benchmark1DiscretePerformance36To48
+                    fundClass.Benchmark1DiscretePerformance36To48,
+                    fundClass.Benchmark1DiscretePerformance48To60
                 }));
             }
 
@@ -76,7 +79,8 @@
                     fundClass.Benchmark2DiscretePerformance0To12,
                     fundClass.Benchmark2DiscretePerformance12To24,
                     fundClass.Benchmark2DiscretePerformance24To36,
-                    fundClass.Benchmark2DiscretePerformance36To48
+                    fundClass.Benchmark2DiscretePerformance36To48,
+                    fundClass.Benchmark2DiscretePerformance48To60
                 }));
             }            
 
@@ -97,7 +101,8 @@
                 fundClass.DiscreteQuartile0To12m,
                 fundClass.DiscreteQuartile12mTo24m,
                 fundClass.DiscreteQuartile24mTo36m,
-                fundClass.DiscreteQuartile36mTo48m
+                fundClass.DiscreteQuartile36mTo48m,
+                fundClass.DiscreteQuartile48mTo60m
             });
         }
 
@@ -107,7 +112,7 @@
             var qeDate = GetPerformanceQEDate(citiCode);
             var qeMonth = GetPerformanceQEMonth(qeDate);
             var startIndex = qeDate.Year < DateTime.Now.Year ? -1 : 0;
-            var endIndex = startIndex - 3;
+            var endIndex = startIndex - 4;
             for (int i = startIndex; i >= endIndex; i--)
             {                
                 result.Add($"{qeMonth} {DateTime.Now.AddYears(i).ToString("yy")}");
