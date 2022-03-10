@@ -37,7 +37,8 @@
                         fundClass.Cumulative1y,
                         fundClass.Cumulative3y,
                         fundClass.Cumulative5y,
-                        fundClass.CumulativeSinceInception,
+                        fundClass.Cumulative10y,
+                        fundClass.CumulativeSinceInception
                     }));
             }
 
@@ -58,6 +59,7 @@
                     fundClass.Benchmark0Cumulative1y,
                     fundClass.Benchmark0Cumulative3y,
                     fundClass.Benchmark0Cumulative5y,
+                    fundClass.Benchmark0Cumulative10y,
                     fundClass.Benchmark0CumulativeSinceInception
                 }));
             }
@@ -74,6 +76,7 @@
                     fundClass.Benchmark1Cumulative1y,
                     fundClass.Benchmark1Cumulative3y,
                     fundClass.Benchmark1Cumulative5y,
+                    fundClass.Benchmark1Cumulative10y,
                     fundClass.Benchmark1CumulativeSinceInception
                 }));
             }
@@ -90,6 +93,7 @@
                     fundClass.Benchmark2Cumulative1y,
                     fundClass.Benchmark2Cumulative3y,
                     fundClass.Benchmark2Cumulative5y,
+                    fundClass.Benchmark2Cumulative10y,
                     fundClass.Benchmark2CumulativeSinceInception
                 }));
             }
@@ -115,6 +119,7 @@
                 fundClass.Cumulative1yQuart,
                 fundClass.Cumulative3yQuart,
                 fundClass.Cumulative5yQuart,
+                fundClass.Cumulative10yQuart,
                 string.Empty
             });
         }        

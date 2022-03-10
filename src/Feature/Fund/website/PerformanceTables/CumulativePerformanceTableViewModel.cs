@@ -8,7 +8,7 @@
             {
                 return new string[]
                 {
-                   "1 month", "3 months", "6 months", "YTD", "1 year", "3 years", "5 years", "Since Inception"
+                   "1 month", "3 months", "6 months", "YTD", "1 year", "3 years", "5 years", "10 years", "Since Inception"
                 };
             }
         }

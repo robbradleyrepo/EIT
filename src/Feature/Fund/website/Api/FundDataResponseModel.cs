@@ -74,6 +74,9 @@
         [JsonProperty("Discrete36mTo48m_QE")]
         public string DiscretePerformance36To48 { get; set; }
 
+        [JsonProperty("Discrete48mTo60m_QE")]
+        public string DiscretePerformance48To60 { get; set; }
+
         [JsonProperty("BenchmarkBMDiscrete0To12m_QE")]
         public string Benchmark0DiscretePerformance0To12 { get; set; }
 
@@ -85,6 +88,9 @@
 
         [JsonProperty("BenchmarkBMDiscrete36mTo48m_QE")]
         public string Benchmark0DiscretePerformance36To48 { get; set; }
+
+        [JsonProperty("BenchmarkBMDiscrete48mTo60m_QE")]
+        public string Benchmark0DiscretePerformance48To60 { get; set; }
 
         [JsonProperty("BenchmarkP1Discrete0To12m_QE")]
         public string Benchmark1DiscretePerformance0To12 { get; set; }
@@ -98,6 +104,9 @@
         [JsonProperty("BenchmarkP1Discrete36mTo48m_QE")]
         public string Benchmark1DiscretePerformance36To48 { get; set; }
 
+        [JsonProperty("BenchmarkP1Discrete48mTo60m_QE")]
+        public string Benchmark1DiscretePerformance48To60 { get; set; }
+
         [JsonProperty("BenchmarkP2Discrete0To12m_QE")]
         public string Benchmark2DiscretePerformance0To12 { get; set; }
 
@@ -108,7 +117,10 @@
         public string Benchmark2DiscretePerformance24To36 { get; set; }
 
         [JsonProperty("BenchmarkP2Discrete36mTo48m_QE")]
-        public string Benchmark2DiscretePerformance36To48 { get; set; }            
+        public string Benchmark2DiscretePerformance36To48 { get; set; }
+
+        [JsonProperty("BenchmarkP2Discrete48mTo60m_QE")]
+        public string Benchmark2DiscretePerformance48To60 { get; set; }
 
         [JsonProperty("Benchmarks")]
         public IEnumerable<Benchmark> Benchmarks { get; set; }
@@ -134,6 +146,9 @@
         [JsonProperty("Cumulative5y_DE")]
         public string Cumulative5y { get; set; }
 
+        [JsonProperty("Cumulative10y_DE")]
+        public string Cumulative10y { get; set; }
+
         [JsonProperty("CumulativeSinceLaunch_DE")]
         public string CumulativeSinceInception { get; set; }
 
@@ -157,6 +172,9 @@
 
         [JsonProperty("BenchmarkBMCumulative5y_DE")]
         public string Benchmark0Cumulative5y { get; set; }
+
+        [JsonProperty("BenchmarkBMCumulative10y_DE")]
+        public string Benchmark0Cumulative10y { get; set; }
 
         [JsonProperty("BenchmarkBMCumulativeSinceUnitLaunch_DE")]
         public string Benchmark0CumulativeSinceInception { get; set; }
@@ -182,6 +200,9 @@
         [JsonProperty("BenchmarkP1Cumulative5y_DE")]
         public string Benchmark1Cumulative5y { get; set; }
 
+        [JsonProperty("BenchmarkP1Cumulative10y_DE")]
+        public string Benchmark1Cumulative10y { get; set; }
+
         [JsonProperty("BenchmarkP1CumulativeSinceUnitLaunch_DE")]
         public string Benchmark1CumulativeSinceInception { get; set; }
 
@@ -206,6 +227,9 @@
         [JsonProperty("BenchmarkP2Cumulative5y_DE")]
         public string Benchmark2Cumulative5y { get; set; }
 
+        [JsonProperty("BenchmarkP2Cumulative10y_DE")]
+        public string Benchmark2Cumulative10y { get; set; }
+
         [JsonProperty("BenchmarkP2CumulativeSinceUnitLaunch_DE")]
         public string Benchmark2CumulativeSinceInception { get; set; }
 
@@ -229,6 +253,9 @@
 
         [JsonProperty("Cumulative5yQuart_DE")]
         public string Cumulative5yQuart { get; set; }
+
+        [JsonProperty("Cumulative10yQuart_DE")]
+        public string Cumulative10yQuart { get; set; }
 
         [JsonProperty("AMC")]
         public string AnnualManagementCharge { get; set; }
