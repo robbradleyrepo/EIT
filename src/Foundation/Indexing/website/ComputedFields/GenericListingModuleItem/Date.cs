@@ -6,7 +6,7 @@
     using Sitecore.ContentSearch.ComputedFields;
     using Sitecore.Data.Fields;
 
-    public class Year : IComputedIndexField
+    public class Date : IComputedIndexField
     {
         public string FieldName { get; set; }
 
@@ -21,7 +21,7 @@
             }
 
             DateField dateTimeField = item.Fields[Constants.GenericListingItemDate_FieldId];
-            return ComputedValueHelper.GetDateTimeFieldValue(dateTimeField, item.Created).Year;
+            return ComputedValueHelper.GetDateTimeFieldValue(dateTimeField, item.Created);
         }
     }
 }
