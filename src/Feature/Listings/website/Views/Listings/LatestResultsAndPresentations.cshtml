@@ -153,13 +153,20 @@
                             {
                                 document = Model.LatestDocuments.Skip(2).Take(1).FirstOrDefault();
                                 imageSrc = Model.Data.SecondImage.GetSafeBackgroundImageStyle();
-                                documentDownloadUrl = !string.IsNullOrEmpty(document.ZipDocumentUrl)
+                                if (document != null)
+                                {
+                                    documentDownloadUrl = !string.IsNullOrEmpty(document.ZipDocumentUrl)
                                             ? document.ZipDocumentUrl
                                             : document.PressReleaseDocument != null
                                             ? document.PressReleaseDocument.Url
                                             : document.ReportDocument != null
                                             ? document.ReportDocument.Url
                                             : string.Empty;
+                                }
+                                else
+                                {
+                                    documentDownloadUrl = string.Empty;
+                                }
                                 <div class="col-lg-4">
                                     <div class="article-promo_short">
                                         <a href="@documentDownloadUrl" class="article-promo__front" download></a>
