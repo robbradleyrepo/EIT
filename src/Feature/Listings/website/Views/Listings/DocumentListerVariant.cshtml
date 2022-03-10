@@ -71,22 +71,34 @@
                                 </div>
                                 <div class="col-lg-12 col-xl-5">
                                     <div class="doc-list__links">
-                                        @using (Html.Glass().BeginRenderLink(document, d => d.PressReleaseDocument, new NameValueCollection { { "class", "link-styles link-styles_black-mobile" }, { "target", "_blank" } }))
+                                        @if (Sitecore.Context.PageMode.IsExperienceEditor || 
+                                            document.PressReleaseDocument != null && !string.IsNullOrEmpty(document.PressReleaseDocument.Url))
                                         {
-                                            @Html.Glass().Editable(Model.Data, d => d.PressReleaseLabel)
-                                            <i class="icon-file"></i>
+                                            using (Html.Glass().BeginRenderLink(document, d => d.PressReleaseDocument, new NameValueCollection { { "class", "link-styles link-styles_black-mobile ml-lg-auto" }, { "target", "_blank" } }))
+                                            {
+                                                @Html.Glass().Editable(Model.Data, d => d.PressReleaseLabel)
+                                                <i class="icon-file"></i>
+                                            }
                                         }
 
-                                        @using (Html.Glass().BeginRenderLink(document, d => d.ReportDocument, new NameValueCollection { { "class", "link-styles link-styles_black-mobile" }, { "target", "_blank" } }))
+                                        @if (Sitecore.Context.PageMode.IsExperienceEditor || 
+                                            document.ReportDocument != null && !string.IsNullOrEmpty(document.ReportDocument.Url))
                                         {
-                                            @Html.Glass().Editable(Model.Data, d => d.ReportLabel)
-                                            <i class="icon-list-view"></i>
+                                            using (Html.Glass().BeginRenderLink(document, d => d.ReportDocument, new NameValueCollection { { "class", "link-styles link-styles_black-mobile ml-lg-auto" }, { "target", "_blank" } }))
+                                            {
+                                                @Html.Glass().Editable(Model.Data, d => d.ReportLabel)
+                                                <i class="icon-list-view"></i>
+                                            }
                                         }
 
-                                        @using (Html.Glass().BeginRenderLink(document, d => d.PresentationLink, new NameValueCollection { { "class", "link-styles link-styles_black-mobile" }, { "target", "_blank" } }))
+                                        @if (Sitecore.Context.PageMode.IsExperienceEditor ||
+                                            document.PresentationLink != null && !string.IsNullOrEmpty(document.PresentationLink.Url))
                                         {
-                                            @Html.Glass().Editable(Model.Data, d => d.PresentationLabel)
-                                            <i class="icon-arrow-right"></i>
+                                            using (Html.Glass().BeginRenderLink(document, d => d.PresentationLink, new NameValueCollection { { "class", "link-styles link-styles_black-mobile ml-lg-auto" }, { "target", "_blank" } }))
+                                            {
+                                                @Html.Glass().Editable(Model.Data, d => d.PresentationLabel)
+                                                <i class="icon-arrow-right"></i>
+                                            }
                                         }
                                     </div>
                                 </div>
