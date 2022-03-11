@@ -132,5 +132,21 @@
                 }
             }
         }       
+
+        public static string GetDocumentUrl(IDocumentVariant document)
+        {
+            if (document == null)
+            {
+                return string.Empty;
+            }
+
+            return !string.IsNullOrEmpty(document.ZipDocumentUrl)
+                    ? document.ZipDocumentUrl
+                    : document.PressReleaseDocument != null && !string.IsNullOrEmpty(document.PressReleaseDocument.Url)
+                    ? document.PressReleaseDocument.Url
+                    : document.ReportDocument != null && !string.IsNullOrEmpty(document.ReportDocument.Url)
+                    ? document.ReportDocument.Url
+                    : string.Empty;
+        }
     }
 }

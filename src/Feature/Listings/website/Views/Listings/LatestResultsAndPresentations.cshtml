@@ -1,6 +1,7 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @using LionTrust.Foundation.ORM.Extensions
 @using System.Collections.Specialized
+@using LionTrust.Feature.Listings.Helpers;
 @model LionTrust.Feature.Listings.Models.LatestResultsAndPresentationsViewModel
 
 @if (Model != null && Model.Data != null)
@@ -14,11 +15,7 @@
                     var document = Model.LatestDocuments.FirstOrDefault();
                     var imageSrc = Model.Data.FirstImage.GetSafeBackgroundImageStyle();
                     var documentsCount = Model.LatestDocuments.Count();
-                    var documentDownloadUrl = !string.IsNullOrEmpty(document.ZipDocumentUrl)
-                                                ? document.ZipDocumentUrl
-                                                : document.PressReleaseDocument != null
-                                                ? document.PressReleaseDocument.Url
-                                                : document.ReportDocument.Url;
+                    var documentDownloadUrl = DocumentHelper.GetDocumentUrl(document);                             
                     <div class="article__head">
                         <h2 class="@titleColor mb-3">@Html.Glass().Editable(Model.Data, m => m.Title)</h2>
 
@@ -80,11 +77,7 @@
                         {
                             document = Model.LatestDocuments.Skip(1).Take(1).FirstOrDefault();
                             imageSrc = Model.Data.SecondImage.GetSafeBackgroundImageStyle();
-                            documentDownloadUrl = !string.IsNullOrEmpty(document.ZipDocumentUrl)
-                                            ? document.ZipDocumentUrl
-                                            : document.PressReleaseDocument != null
-                                            ? document.PressReleaseDocument.Url
-                                            : document.ReportDocument.Url;
+                            documentDownloadUrl = DocumentHelper.GetDocumentUrl(document);
                             <div class="col-lg-4">
                                 <div class="article-promo_short">
                                     <a href="@documentDownloadUrl" class="article-promo__front" download></a>
@@ -138,11 +131,7 @@
                             {
                                 document = Model.LatestDocuments.Skip(2).Take(1).FirstOrDefault();
                                 imageSrc = Model.Data.SecondImage.GetSafeBackgroundImageStyle();
-                                documentDownloadUrl = !string.IsNullOrEmpty(document.ZipDocumentUrl)
-                                            ? document.ZipDocumentUrl
-                                            : document.PressReleaseDocument != null
-                                            ? document.PressReleaseDocument.Url
-                                            : document.ReportDocument.Url;
+                                documentDownloadUrl = DocumentHelper.GetDocumentUrl(document);
                                 <div class="col-lg-4">
                                     <div class="article-promo_short">
                                         <a href="@documentDownloadUrl" class="article-promo__front" download></a>
