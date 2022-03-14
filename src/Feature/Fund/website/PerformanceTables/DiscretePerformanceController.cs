@@ -35,7 +35,11 @@
                 {
                     result.ColumnHeadings = _performanceManager.GetColumnHeadings(citiCode);
                     result.Rows = _performanceManager.GetPerformanceTableRows(citiCode).GroupBy(r => r.Name).Select(g => g.First()).ToArray();
-                    result.QuartileRow = _performanceManager.GetQuartile(citiCode);
+
+                    if (result.Rows != null && result.Rows.Count() > 0)
+                    {
+                        result.QuartileRow = _performanceManager.GetQuartile(citiCode);
+                    }                    
 
                     var currentClass = datasource.Fund.Classes.FirstOrDefault(c => c.CitiCode == citiCode);
                     if (currentClass != null)
