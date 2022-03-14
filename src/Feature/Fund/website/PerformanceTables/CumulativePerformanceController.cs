@@ -39,7 +39,7 @@
                     var currentClass = datasource.Fund.Classes.FirstOrDefault(c => c.CitiCode == citiCode);
                     if (currentClass != null)
                     {
-                        result.Hide = currentClass.HideDiscretePerformanceTable;
+                        result.Hide = currentClass.HideCumulativePerformanceTable;
                     }
                 }
             }
