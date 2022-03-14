@@ -114,7 +114,8 @@
                             LastName = registerInvestorSubmit.LastName,
                             Email = registerInvestorSubmit.Email,
                             IsUKResident = ukResident,
-                            Company = !string.IsNullOrEmpty(data.CompanyFieldDefaultValue) ? data.CompanyFieldDefaultValue : "Self"
+                            Company = !string.IsNullOrEmpty(data.CompanyFieldDefaultValue) ? data.CompanyFieldDefaultValue : "Self",
+                            Unsubscribed = !registerInvestorSubmit.SubscribeToEmail
                     };
 
                         var savedUser = _emailPreferencesService.SaveNonProfUserAsSFLead(nonProfUserViewModel, emailTemplate, data.EditPreferencesPage.AbsoluteUrl, data.FundDashboardPage.AbsoluteUrl);
@@ -135,7 +136,8 @@
                             IsUKResident = ukResident,
                             CompanyId = registerInvestorSubmit.CompanyId,
                             Company = registerInvestorSubmit.CompanyName,
-                            Organisation = sfOrganisationId
+                            Organisation = sfOrganisationId,
+                            Unsubscribed = !registerInvestorSubmit.SubscribeToEmail
                         };
 
                         var savedUser = _emailPreferencesService.SaveProfUserAsSFContact(professionalUser, emailTemplate, data.EditPreferencesPage.AbsoluteUrl, data.FundDashboardPage.AbsoluteUrl);
