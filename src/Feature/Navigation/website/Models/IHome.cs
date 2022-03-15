@@ -39,6 +39,8 @@
          
         string OnboardingRoleName { get; set; }
 
+        string YouAreViewingLabelWithArticle { get; set; }
+
         IHeaderConfiguration HeaderConfiguration { get; set; }
 
         string ChangeInvestorUrl { get; set; }
