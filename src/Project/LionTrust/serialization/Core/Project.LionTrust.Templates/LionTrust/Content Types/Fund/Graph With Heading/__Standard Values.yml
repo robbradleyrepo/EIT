@@ -1,0 +1,21 @@
+﻿---
+ID: "5aa3f803-b17e-4311-8f90-d239fe0cb95e"
+Parent: "14d42d38-bf48-406b-a8ab-3274126eecb8"
+Template: "14d42d38-bf48-406b-a8ab-3274126eecb8"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Fund/Graph With Heading/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220315T215136Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "b52466f4-87ec-44c1-bad5-34de932f931e"
+      Hint: GraphWithHeading_Information
+      Value: "Source: Liontrust as at {date}."
