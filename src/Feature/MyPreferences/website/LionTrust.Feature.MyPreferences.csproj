@@ -157,6 +157,10 @@
       <Project>{5e91a7d9-8e93-44fd-857f-f9ce145b6022}</Project>
       <Name>LionTrust.Foundation.ORM</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Search\website\LionTrust.Foundation.Search.csproj">
+      <Project>{22686dc6-4e6c-4d98-84b7-c48042f5b8fc}</Project>
+      <Name>LionTrust.Foundation.Search</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\MyPreferences\RegisterInvestor.cshtml" />
