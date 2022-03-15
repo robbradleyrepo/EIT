@@ -7,5 +7,7 @@
         IEnumerable<PerformanceTableRow> GetPerformanceTableRows(string citiCode);
 
         PerformanceTableRow GetQuartile(string citiCode);
+
+        string GetDisclaimer(string citiCode);
     }
 }

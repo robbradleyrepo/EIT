@@ -122,6 +122,27 @@
                 fundClass.Cumulative10yQuart,
                 string.Empty
             });
-        }        
+        }
+
+        public string GetDisclaimer(string citiCode)
+        {
+            var fundClass = _repository.GetData().FirstOrDefault(d => d.CitiCode == citiCode);
+            if (fundClass == null)
+            {
+                _repository.SendEmailOnErrorForCiticode(citiCode);
+                return null;
+            }
+
+            var disclaimer = Sitecore.Globalization.Translate.Text("CumulativeTableDisclaimer");
+            if (string.IsNullOrEmpty(disclaimer))
+            {
+                return string.Empty;
+            }
+
+            var cumulativeDate = fundClass.CumulativePerformanceDate;
+            var currency = fundClass.UnitCurrency;
+
+            return disclaimer.Replace("{date}", cumulativeDate).Replace("{currency}", currency);
+        }
     }
 }

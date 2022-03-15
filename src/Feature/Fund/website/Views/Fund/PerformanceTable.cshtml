@@ -48,9 +48,9 @@
                 var referenceRowCounter = referenceRow != null ? referenceRow.Length : 0;
                 <tfoot>
                     <tr>
-                        <td scope="row">@Html.Glass().Editable(Model.Component, m => m.QuartileRowLabel)</td>                        
+                        <td scope="row">@Html.Glass().Editable(Model.Component, m => m.QuartileRowLabel)</td>
                         @foreach (var item in Model.QuartileRow.Columns)
-                        {                            
+                        {
                             if (item != null && counter < referenceRowCounter && referenceRow[counter] != null)
                             {
                                 <td>@item</td>
@@ -63,6 +63,12 @@
                         }
                     </tr>
                 </tfoot>
+            }
+            @if (!string.IsNullOrEmpty(Model.Disclaimer))
+            {
+                <caption>
+                    <p class="graph-section__sub"><span>*</span>@Html.Glass().Editable(Model, t => t.Disclaimer)</p>
+                </caption>
             }
         </table>
     </div>

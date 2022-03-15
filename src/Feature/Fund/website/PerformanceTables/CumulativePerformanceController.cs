@@ -45,6 +45,8 @@
                     {
                         result.Hide = currentClass.HideCumulativePerformanceTable;
                     }
+
+                    result.Disclaimer = _performanceManager.GetDisclaimer(citiCode);
                 }
             }
 
