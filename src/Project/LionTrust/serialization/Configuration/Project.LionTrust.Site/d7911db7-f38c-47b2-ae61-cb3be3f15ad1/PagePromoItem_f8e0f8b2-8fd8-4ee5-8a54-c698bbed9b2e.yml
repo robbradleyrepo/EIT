@@ -1,0 +1,36 @@
+﻿---
+ID: "f8e0f8b2-8fd8-4ee5-8a54-c698bbed9b2e"
+Parent: "d7911db7-f38c-47b2-ae61-cb3be3f15ad1"
+Template: "bc775c7d-48c1-4f1b-865a-fecab210dbe3"
+Path: "/sitecore/content/LionTrustNew/Home/About us/Corporate sustainability/People diversity and inclusion/_Local/UI013 - Page Promo Lister/PagePromoItem"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1058a56c-86ff-4783-a8d2-00c2217cc7ff"
+      Hint: PagePromoItem_Heading
+      Value: Climate Change and the Environment
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220228T212744Z
+    - ID: "5db6612c-40ef-44f7-996b-da07fced5370"
+      Hint: PagePromoItem_CTA
+      Value: |
+        <link text="Find out more" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{97979536-A780-4855-BF1C-53E25FCCEC6A}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "f8de397f-fe55-4664-894d-8144b77b455a"
+      Hint: PagePromoItem_Text
+      Value: We believe climate change will be a defining driver of the global economy, society and financial markets in the future, and that investors will be unable to avoid the impacts of this. 
+    - ID: "fdcbfc89-a522-4029-a2ce-648e272372d1"
+      Hint: PagePromoItem_Image
+      Value: |
+        <image mediaid="{D8A9337A-8A13-405E-9B98-CCC8CD50256E}" />

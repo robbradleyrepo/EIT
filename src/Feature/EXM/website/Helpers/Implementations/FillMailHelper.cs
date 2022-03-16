@@ -92,6 +92,20 @@ namespace LionTrust.Feature.EXM.Helpers.Implementations
 
                 emailMessage.Recipients = recipients;
             }
+
+            // exclude unsubscribed contacts
+            var sfEntityUtility = new SFEntityUtility();
+            var subscribedRecipients = new List<string>();
+            foreach (var recipient in emailMessage.Recipients)
+            {
+                var unsubscribed = sfEntityUtility.GetUnsubscribedByEmail(recipient);
+                if (!unsubscribed)
+                {
+                    subscribedRecipients.Add(recipient);
+                }
+            }
+
+            emailMessage.Recipients = subscribedRecipients;
         }
 
         private void SetFrom(EmailMessage emailMessage, ScContactFacetData scContactFacetData)

@@ -1,27 +1,153 @@
 ﻿---
-ID: "477c9f45-9bbe-42d1-9fae-13e65503206f"
+ID: "d82ba38b-5fd6-4932-84d8-53606239f77b"
 Parent: "7502b69e-d154-4861-a033-bc0cb30a91b5"
-Template: "ec2bbbdd-7d39-4598-a98c-4ba5e4163a07"
-Path: /sitecore/content/LionTrustNew/Home/About Us
+Template: "ae7e1757-b052-4751-b940-a9712e5247fd"
+Path: /sitecore/content/LionTrustNew/Home/About us
 DB: master
 SharedFields:
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 800
+  Value: 900
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{B6CB773C-E731-4F36-B72A-AF5BFE57CA6F}">
+          <p:d />
+        </r>
+        <r
+          uid="{30A0A4C8-974F-4822-9DCB-DE14881E0400}"
+          s:ph="main" />
+        <r
+          uid="{9057DD73-496E-495D-9460-75D38BBB5B7E}">
+          <p:d />
+        </r>
+        <r
+          uid="{50FACAA0-F93E-4652-99EA-33AFC98FF0FE}"
+          p:after="*[1=2]"
+          s:id="{C728A955-DA1D-4700-B924-E0D35901DE4B}"
+          s:ph="footer" />
+      </d>
+    </r>
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{BC67911D-0B34-4CD6-A4C0-714394BD4DE9}"
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{E37921E9-7809-494C-912E-FA23FDEA7BD1}"
+              p:before="*"
+              s:ds="{827CEBAE-1E49-48E7-A791-EB4E29D3FECA}"
+              s:id="{56ECB2D2-5D43-4F0F-A5D1-AC267F249E7B}"
+              s:ph="main" />
+            <r
+              uid="{65259E41-A048-4C84-B166-FC55477D2C5A}"
+              p:after="r[@uid='{E37921E9-7809-494C-912E-FA23FDEA7BD1}']"
+              s:ds="{22475074-C672-4675-BB33-1B96B4559F96}"
+              s:id="{BA0509C8-337A-45E7-A597-8035DC2F1C21}"
+              s:ph="main" />
+            <r
+              uid="{8B248B45-D09C-4E44-85D1-C488D9298DFF}"
+              p:after="r[@uid='{65259E41-A048-4C84-B166-FC55477D2C5A}']"
+              s:ds="{0C7D0562-036C-452D-9765-37FE8BB52C81}"
+              s:id="{E9EA1844-F7AA-45D6-A10F-800A467D6E3D}"
+              s:ph="main" />
+            <r
+              uid="{AEFA6F33-E7BC-4E92-8A89-13BBBA03AF7F}"
+              p:after="r[@uid='{8B248B45-D09C-4E44-85D1-C488D9298DFF}']"
+              s:ds="{B842B18A-E7D5-4F98-A723-B8876DE74454}"
+              s:id="{4D2941CF-65FA-4AC4-96BC-11C83CD7EAEB}"
+              s:ph="main" />
+            <r
+              uid="{F19C436E-C5B5-4276-AD77-260D5664FAAC}"
+              p:after="r[@uid='{AEFA6F33-E7BC-4E92-8A89-13BBBA03AF7F}']"
+              s:ds="{9CB542E9-E2B8-4979-A8EC-557D956B206F}"
+              s:id="{7166AE9D-EFBD-48B3-B38F-AFD4CAAB5278}"
+              s:ph="/header/secondary-navigation" />
+            <r
+              uid="{94C4AA69-0130-48D3-AC4A-73475113F552}"
+              p:after="r[@uid='{F19C436E-C5B5-4276-AD77-260D5664FAAC}']"
+              s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+              s:ph="/header/navigation" />
+            <r
+              uid="{FF08D882-D7EF-45E1-AC02-B8C466D2E660}"
+              p:after="r[@uid='{94C4AA69-0130-48D3-AC4A-73475113F552}']"
+              s:ds="{A3F8B633-BFB8-40CC-9A91-601BDE8E81EE}"
+              s:id="{E9EA1844-F7AA-45D6-A10F-800A467D6E3D}"
+              s:ph="main" />
+            <r
+              uid="{9FC13225-B886-48D1-B830-4D57896F18A8}"
+              p:after="r[@uid='{FF08D882-D7EF-45E1-AC02-B8C466D2E660}']"
+              s:ds="{DDC3AC29-4D03-4362-8595-959CB44C1DA2}"
+              s:id="{56ECB2D2-5D43-4F0F-A5D1-AC267F249E7B}"
+              s:ph="main" />
+            <r
+              uid="{FC3BB927-A62B-4172-8C98-3F3C4B187274}"
+              p:after="r[@uid='{9FC13225-B886-48D1-B830-4D57896F18A8}']"
+              s:ds="{7050EA98-C603-4152-B511-A7BE472BF06F}"
+              s:id="{BA0509C8-337A-45E7-A597-8035DC2F1C21}"
+              s:ph="main" />
+            <r
+              uid="{6C4399D7-54F3-473A-B6A9-4B2BF4074BD9}"
+              p:after="r[@uid='{FC3BB927-A62B-4172-8C98-3F3C4B187274}']"
+              s:ds="{D36C7B13-BF16-470A-9496-CA55D9399562}"
+              s:id="{278645FD-B7C1-4B02-A4FF-DD47E01AED93}"
+              s:ph="main" />
+            <r
+              uid="{A6DEA03E-1DDA-4BED-95B1-71613DA9AFA5}"
+              p:after="r[@uid='{6C4399D7-54F3-473A-B6A9-4B2BF4074BD9}']"
+              s:ds="{69C53613-66D5-40EC-A2AA-C1161A4A760C}"
+              s:id="{D7EA03CD-11A9-4A09-9CC6-EE9E8566A692}"
+              s:ph="main" />
+            <r
+              uid="{E5418B37-8258-4C2D-B3ED-8DD6049E7A18}"
+              p:after="r[@uid='{A6DEA03E-1DDA-4BED-95B1-71613DA9AFA5}']"
+              s:ds="{8F7AA55E-2569-4646-A28E-7FA325F64C31}"
+              s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+              s:ph="main" />
+            <r
+              uid="{48AD1398-C35B-4BD2-A8E8-2DFA0912E0ED}"
+              p:after="r[@uid='{E5418B37-8258-4C2D-B3ED-8DD6049E7A18}']"
+              s:ds="{1614CDC7-80E2-4105-964F-E4A04E4E80E3}"
+              s:id="{A811D2B0-D08D-4991-A9DD-6D9FA5799CBD}"
+              s:ph="main" />
+            <r
+              uid="{21C3C8C1-837E-4D86-AB29-97C4A9E98178}"
+              p:after="r[@uid='{48AD1398-C35B-4BD2-A8E8-2DFA0912E0ED}']"
+              s:ds="{E7CB7783-E6CC-452C-B452-A602630EE9F6}"
+              s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
+              s:ph="header" />
+          </d>
+        </r>
     - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
       Hint: LegacyPresentationBase_BrowserTitle
-      Value: About Us | Liontrust Asset Management PLC
+      Value: About us | Liontrust Asset Management PLC
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210329T175224Z
+      Value: 20220201T094621Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
     - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
       Hint: Breadcrumb_BreadcrumbTitle
-      Value: About Us
+      Value: About us
     - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
       Hint: LegacyPresentationBase_PageTitle
-      Value: About Us
+      Value: About us

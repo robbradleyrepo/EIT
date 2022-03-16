@@ -1,0 +1,51 @@
+﻿---
+ID: "30f3da77-bb1a-4918-8de7-026ce4ba5a36"
+Parent: "6fed4428-43cc-4f89-9195-f4e7db8a448b"
+Template: "d3d9d2ce-b2ce-49ac-b50d-6a5ffd4c4ab8"
+Path: "/sitecore/content/LionTrustNew/Home/About us/Community engagement and sponsorships/_Local/UI018 - Image CTA Promo"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 600
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1054e4b6-1cf5-4c08-8a6d-d9b02fb17050"
+      Hint: ImageCTAPromo_Image
+      Value: |
+        <image mediaid="{F16AB9F2-8C49-49E6-BB72-2A200135F3F9}" ></image>
+    - ID: "143867db-9bba-4097-9eb4-0099c175ad91"
+      Hint: ImageCTAPromo_CTALink
+      Value: |
+        <link text="Find out more" linktype="external" url="https://www.zsl.org/zsl-london-zoo/exhibits/land-of-the-lions" anchor="" target="" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220224T135556Z
+    - ID: "48bf236b-0681-4a09-9085-4933fa1c4a7a"
+      Hint: ImageCTAPromo_Body
+      Value: |
+        <p style="background: white; margin-bottom: 10.5pt;"><span style="color: #222222;">We are proud to have supported ZSL&rsquo;s Asiatic lion campaign for over eight years, which is dedicated to a breeding programme at ZSL London Zoo and protecting the last remaining lions that reside as a single population in Western India&rsquo;s Gir National Forest. With Liontrust&rsquo;s support, ZSL is actively working with local partners in a variety of ways to ensure the survival of this population of just over 600 Asiatic lions:</span></p>
+        <ul class="services-item-list">
+            <li><span style="color: #222222;">Train zoo keepers and veterinarians at Sakkarbaug Zoo in lion care and welfare</span></li>
+            <li><span style="color: #222222;">Improve training of local staff so they can safely transport lions and other dangerous animals away from populated areas</span></li>
+            <li><span style="color: #222222;">Upgrade infrastructure to help care for the lions&rsquo; health and wellbeing</span></li>
+            <li><span style="color: #222222;">Establish exhibits and education programmes for local communities and visitors to learn about lion conservation</span></li>
+            <li><span style="color: #222222;">Train and equipping rapid response teams to rescue and rehabilitate injured lions</span></li>
+        </ul>
+        <p style="background: white; margin-bottom: 0cm;"><span style="color: #222222;">In addition to their work in the field, ZSL opened a brand new conservation breeding centre, Land of the Lions, on 17 March 2016 at ZSL London Zoo. The exhibit was opened by HM The Queen, and its purpose is to ensure a &lsquo;safety net&rsquo; against extinction as well as protecting the genetic viability of species.</span></p>
+    - ID: "4f8e0e85-38f1-4ab6-9ad6-dce0008c8304"
+      Hint: ImageCTAPromo_TextAlignment
+      Value: "{00047897-96EC-4197-BDFA-CC1ADB772B86}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "7a84ea30-ff24-4c46-ae8f-51fcff940663"
+      Hint: ImageCTAPromo_Title
+      Value: ZSL London Zoo
+    - ID: "94eb1b3f-6b14-4a34-9b12-62dbed7a269e"
+      Hint: ImageCTAPromo_TitleColor
+      Value: "{CAB398B8-B1BE-4F5E-99EA-387D1B46F231}"

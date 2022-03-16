@@ -10,5 +10,6 @@ namespace LionTrust.Foundation.Contact.Models
         public bool IsUKResident { get; set; }
         public string Company { get; set; }
         public IEnumerable<string> SalesforceFundIds { get; set; }
+        public bool Unsubscribed { get; set; }
     }
 }
