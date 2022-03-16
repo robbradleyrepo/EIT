@@ -125,6 +125,9 @@
         [JsonProperty("Benchmarks")]
         public IEnumerable<Benchmark> Benchmarks { get; set; }
 
+        [JsonProperty("CumulativePerfAsAt_DE")]
+        public string CumulativePerformanceDate { get; set; }
+
         [JsonProperty("Cumulative1m_DE")]
         public string Cumulative1m { get; set; }
 

@@ -8,5 +8,7 @@
         IEnumerable<PerformanceTableRow> GetPerformanceTableRows(string citiCode, IFundClass fundClassItem);
 
         PerformanceTableRow GetQuartile(string citiCode, IFundClass fundClassItem);
+
+        string GetDisclaimer(string citiCode);
     }
 }

@@ -44,7 +44,9 @@
                     if (result.Rows != null && result.Rows.Count() > 0)
                     {
                         result.QuartileRow = _performanceManager.GetQuartile(citiCode, currentClass);
-                    }                    
+                    }
+
+                    result.Disclaimer = _performanceManager.GetDisclaimer(citiCode);
                 }
             }
 
