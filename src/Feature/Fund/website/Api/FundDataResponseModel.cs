@@ -269,8 +269,58 @@
         [JsonProperty("NumberOfHoldings")]
         public string NumberOfHoldings { get; set; }
 
-        [JsonProperty("UnitCurrency")]
+        [JsonProperty("SectorNameLong")]
+        public string SectorNameLong { get; set; }
 
+        [JsonProperty("SectorDiscretePerfAsAt_QE")]
+        public string SectorDiscretePerformanceQE { get; set; }
+
+        [JsonProperty("SectorDiscrete0To12m_QE")]
+        public string SectorDiscretePerformance0To12 { get; set; }
+
+        [JsonProperty("SectorDiscrete12mTo24m_QE")]
+        public string SectorDiscretePerformance12To24 { get; set; }
+
+        [JsonProperty("SectorDiscrete24mTo36m_QE")]
+        public string SectorDiscretePerformance24To36 { get; set; }
+
+        [JsonProperty("SectorDiscrete36mTo48m_QE")]
+        public string SectorDiscretePerformance36To48 { get; set; }
+
+        [JsonProperty("SectorDiscrete48mTo60m_QE")]
+        public string SectorDiscretePerformance48To60 { get; set; }
+
+        [JsonProperty("SectorCumulativePerfAsAt_DE")]
+        public string SectorCumulativePerformanceDE { get; set; }
+
+        [JsonProperty("SectorCumulative1m_DE")]
+        public string SectorCumulative1m { get; set; }
+
+        [JsonProperty("SectorCumulativeYTD_DE")]
+        public string SectorCumulativeYearToDate { get; set; }
+
+        [JsonProperty("SectorCumulative3m_DE")]
+        public string SectorCumulative3m { get; set; }
+
+        [JsonProperty("SectorCumulative6m_DE")]
+        public string SectorCumulative6m { get; set; }
+
+        [JsonProperty("SectorCumulative1y_DE")]
+        public string SectorCumulative1y { get; set; }
+
+        [JsonProperty("SectorCumulative3y_DE")]
+        public string SectorCumulative3y { get; set; }
+
+        [JsonProperty("SectorCumulative5y_DE")]
+        public string SectorCumulative5y { get; set; }
+
+        [JsonProperty("SectorCumulative10y_DE")]
+        public string SectorCumulative10y { get; set; }
+
+        [JsonProperty("SectorCumulativeSinceUnitLaunch_DE")]
+        public string SectorCumulativeSinceInception { get; set; }
+
+        [JsonProperty("UnitCurrency")]
         public string UnitCurrency { get; set; }
     }
 
