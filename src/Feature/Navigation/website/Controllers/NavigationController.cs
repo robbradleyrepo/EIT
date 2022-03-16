@@ -75,15 +75,17 @@
                 if (navigationViewModel.HomeItem.OnboardingConfiguration != null) 
                 {
                     navigationViewModel.HomeItem.HeaderConfiguration = NavigationHelper.GetCurrentHeaderConfiguration(_mvcContext, navigationViewModel.HomeItem.OnboardingConfiguration, _log);
+                    if (navigationViewModel.HomeItem.HeaderConfiguration != null && navigationViewModel.HomeItem.HeaderConfiguration.MenuItems != null)
+                    {
+                        navigationViewModel.MenuItems = navigationViewModel.HomeItem.HeaderConfiguration.MenuItems.Where(x => OnboardingHelper.HasAccess(x.Fund?.ExcludedCountries));
+                    }                    
                 }
 
                 if (Sitecore.Context.Item.ID.Equals(homeItem.ID))
                 {
                     navigationViewModel.Organization = _navigationRepository.GetOrganizationData(navigationViewModel.HomeItem, _mvcContext);
                 }
-            }
-
-            navigationViewModel.HomeItem.MenuItems = navigationViewModel.HomeItem.MenuItems.Where(x => OnboardingHelper.HasAccess(x.Fund?.ExcludedCountries));
+            }            
 
             navigationViewModel.HomeItem.ChangeInvestorUrl = OnboardingHelper.GetChangeUrl();
 
