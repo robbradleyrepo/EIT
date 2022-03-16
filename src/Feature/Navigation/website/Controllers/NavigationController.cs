@@ -42,6 +42,7 @@
                 if (homeModel.OnboardingConfiguration != null)
                 {
                     homeModel.OnboardingRoleName = OnboardingHelper.ProfileRoleName(homeModel.OnboardingConfiguration, _log);
+                    homeModel.YouAreViewingLabelWithArticle = OnboardingHelper.ViewingLabelWithArticle(homeModel.YouAreViewingLabel, homeModel.OnboardingRoleName);
                 }
 
                 homeModel.ChangeInvestorUrl = OnboardingHelper.GetChangeUrl();
@@ -56,6 +57,7 @@
             if (navigationViewModel.HomeItem != null && navigationViewModel.HomeItem.OnboardingConfiguration != null)
             {
                 navigationViewModel.HomeItem.OnboardingRoleName = OnboardingHelper.ProfileRoleName(navigationViewModel.HomeItem.OnboardingConfiguration, _log);
+                navigationViewModel.HomeItem.YouAreViewingLabelWithArticle = OnboardingHelper.ViewingLabelWithArticle(navigationViewModel.HomeItem.YouAreViewingLabel, navigationViewModel.HomeItem.OnboardingRoleName);
             }
 
             return View("~/Views/Navigation/Menu.cshtml", navigationViewModel);
