@@ -83,7 +83,6 @@
             public const string SignUpNewsletter_FieldID = "{6EB0248B-457F-491C-8F9E-13AEFE2CDEC8}";
             public const string YouAreViewingLabel_FieldID = "{15999105-600F-43FB-B206-ED93304A98E6}";
             public const string ChangeLabel_FieldID = "{E4A364E6-2E1A-4854-ABD8-6A02ACF832CD}";
-            public const string MenuItems_FieldID = "{5D68CC82-EA43-4789-B892-0E49244F68D5}";
             public const string OnboardingConfiguation_FieldId = "{16512055-116D-48B5-936C-ECA678249335}";
         }
 
@@ -96,6 +95,6 @@
         public static class PageTypes
         {
             public const string LearningResourcesTemplateId = "{7B3DCDF5-5735-4FC8-89EB-DCB0F2F72972}";
-        }
+        }       
     }
 }

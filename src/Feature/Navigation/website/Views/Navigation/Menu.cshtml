@@ -20,10 +20,10 @@
                 </div>
             </div>
             <nav class="navigation">
-                @if (Model.HomeItem.MenuItems != null && Model.HomeItem.MenuItems.Any())
+                @if (Model.MenuItems != null && Model.MenuItems.Any())
                 {
                     <ul class="navigation__list">
-                        @foreach (var menuItem in Model.HomeItem.MenuItems.WithAccessTo())
+                        @foreach (var menuItem in Model.MenuItems.WithAccessTo())
                         {
                             var filteredChildrens = menuItem.Children.Where(m => !m.ExcludeInSearchResults);
 
@@ -102,11 +102,11 @@
             </div>
         </div>
         <div class="sidebar__bottom">
-            @if (Model.HomeItem.MenuItems != null && Model.HomeItem.MenuItems.Any())
+            @if (Model.MenuItems != null && Model.MenuItems.Any())
             {
                 <nav class="navigation navigation_desktop">
                     <ul class="navigation__list">
-                        @foreach (var menuItem in Model.HomeItem.MenuItems.WithAccessTo())
+                        @foreach (var menuItem in Model.MenuItems.WithAccessTo())
                         {
                             var filteredChildrens = menuItem.Children.Where(m => !m.ExcludeInSearchResults);
                             if (filteredChildrens != null && filteredChildrens.Any())
@@ -480,10 +480,10 @@
         }
     </div>
     <!-- For desktop sidebar links items -->
-    if (Model.HomeItem.MenuItems != null && Model.HomeItem.MenuItems.Any())
+    if (Model.MenuItems != null && Model.MenuItems.Any())
     {
         <div class="navigation__sublinks-items">
-            @foreach (var menuItem in Model.HomeItem.MenuItems.WithAccessTo())
+            @foreach (var menuItem in Model.MenuItems.WithAccessTo())
             {
                 var filteredChildrens = menuItem.Children.Where(m => !m.ExcludeInSearchResults);
                 <div class="navigation__item">
