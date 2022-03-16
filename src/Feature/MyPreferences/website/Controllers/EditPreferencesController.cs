@@ -75,7 +75,11 @@
                     if(registerInvestorViewModel.UnsubscribeAll)
                     {
                         context.Preferences.UnsubscribeAll();
-                    }                                     
+                    }   
+                    else
+                    {
+                        context.Preferences.SubscribeAll();
+                    }
 
                     context.Preferences.SFProcessList = registerInvestorViewModel.SFProcessList;
                     submitSuccess = _emailPreferencesService.SaveEmailPreferences(context);
