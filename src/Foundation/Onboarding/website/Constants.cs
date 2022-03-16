@@ -59,6 +59,7 @@
             public const string ISO_FieldId = "{A46A84E5-E402-4784-95D3-E316A9761EFB}";
             public const string TermsAndConditions_FieldId = "{BFD9B660-B602-4BEF-82FC-BECC3C9417A6}";
             public const string FundCentreCountryCode_FieldId = "{87460E4B-38FA-4B00-898A-3071546DE530}";
+            public const string Goal_FieldId = "{8CBEEF11-3BFB-4595-97E2-95389824CC2B}";
             public const string RestOfWorldIso = "01";
         }
 
