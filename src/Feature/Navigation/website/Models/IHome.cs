@@ -28,6 +28,9 @@
         [SitecoreField(Constants.NavigationRoot.YouAreViewingLabel_FieldID, SitecoreFieldType.SingleLineText, "Menu")]
         string YouAreViewingLabel { get; set; }
 
+        [SitecoreField(Constants.NavigationRoot.FromLabel_FieldID, SitecoreFieldType.SingleLineText, "Menu")]
+        string FromLabel { get; set; }
+
         [SitecoreField(Constants.NavigationRoot.ChangeLabel_FieldID, SitecoreFieldType.SingleLineText, "Menu")]
         string ChangeLabel { get; set; }              
 
@@ -41,5 +44,7 @@
         IHeaderConfiguration HeaderConfiguration { get; set; }
 
         string ChangeInvestorUrl { get; set; }
+
+        string CurrentCountry { get; set; }
     }
 }
