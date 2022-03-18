@@ -1,0 +1,54 @@
+﻿---
+ID: "fcd94fc6-35ca-46a1-9989-a7fc72f5dfa9"
+Parent: "6fed4428-43cc-4f89-9195-f4e7db8a448b"
+Template: "d3d9d2ce-b2ce-49ac-b50d-6a5ffd4c4ab8"
+Path: "/sitecore/content/LionTrustNew/Home/About us/Community engagement and sponsorships/_Local/UI018 - Image CTA Promo"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1054e4b6-1cf5-4c08-8a6d-d9b02fb17050"
+      Hint: ImageCTAPromo_Image
+      Value: |
+        <image mediaid="{D4B601C9-CAC3-4662-9A70-03CD4ACDCFB8}" ></image>
+    - ID: "143867db-9bba-4097-9eb4-0099c175ad91"
+      Hint: ImageCTAPromo_CTALink
+      Value: |
+        <link text="Find out more" linktype="external" url="https://www.nufoundation.org.uk/" anchor="" target="" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220224T135556Z
+    - ID: "48bf236b-0681-4a09-9085-4933fa1c4a7a"
+      Hint: ImageCTAPromo_Body
+      Value: |
+        <p style="background: white; margin-bottom: 10.5pt;"><span style="color: #222222;">Liontrust partners with Newcastle United Foundation (NUF) to provide a numeracy programme, Financial Football. This is designed to give primary school children a head start in financial education.</span></p>
+        <p style="background: white; margin-bottom: 10.5pt;"><span style="color: #222222;">The six-week programme has helped to break down any barriers that children face in understanding and learning about numeracy and finance, with the aim of improving children&rsquo;s understanding of money, as well as giving them the confidence to thrive in school maths lessons.</span></p>
+        <p style="background: white; margin-bottom: 10.5pt;"><span style="color: #222222;">Financial Football uses the popularity and profile of Newcastle United football club to encourage primary school pupils to engage with maths problems, using real life scenarios such as buying and selling football players and paying fines for red cards to teach concepts such as budgeting.</span></p>
+        <p style="background: white; margin-bottom: 10.5pt;"><span style="color: #222222;">By February 2020, the project, which involves interactive games around football, had worked with 14 schools and 700 pupils. From September 2020, we expanded Financial Football to include Year 4 pupils as well as Year 5 and 6 and more schools so we could reach more primary school children &ndash; 500 a year &ndash; and introduced a new maths education programme to increase primary school children&rsquo;s confidence and understanding of this subject. Newcastle United Foundation enabled Financial Football to go online in case tighter lockdown restrictions limited external visitors to schools.&nbsp;</span></p>
+        <p style="background: white; margin-bottom: 10.5pt;"><span style="color: #222222;">These are the improvements in solving money focused questions as a result of the project:</span></p>
+        <ul class="services-item-list">
+            <li><span style="color: #222222;">67% in numeracy&nbsp;</span></li>
+            <li><span style="color: #222222;">64% in addition, subtraction, multiplication&nbsp;</span></li>
+            <li><span style="color: #222222;">75% in statistics</span></li>
+            <li><span style="color: #222222;">84% in ratios&nbsp;</span></li>
+        </ul>
+        <p style="background: white; margin-bottom: 10.5pt;"><span style="color: #222222;">Phillip Cowler, Literacy and Numeracy Coordinator at Newcastle United Foundation, says: &ldquo;By using football as the basis for the maths challenges, we&rsquo;ve seen pupils who generally struggle to engage with numeracy feel more comfortable about getting involved due to their familiarity with Newcastle United.&rdquo;</span></p>
+    - ID: "4f8e0e85-38f1-4ab6-9ad6-dce0008c8304"
+      Hint: ImageCTAPromo_TextAlignment
+      Value: "{00047897-96EC-4197-BDFA-CC1ADB772B86}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "7a84ea30-ff24-4c46-ae8f-51fcff940663"
+      Hint: ImageCTAPromo_Title
+      Value: Newcastle United Foundation
+    - ID: "94eb1b3f-6b14-4a34-9b12-62dbed7a269e"
+      Hint: ImageCTAPromo_TitleColor
+      Value: "{CAB398B8-B1BE-4F5E-99EA-387D1B46F231}"

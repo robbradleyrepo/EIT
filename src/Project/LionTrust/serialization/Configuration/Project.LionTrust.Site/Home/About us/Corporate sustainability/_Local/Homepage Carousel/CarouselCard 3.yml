@@ -1,0 +1,42 @@
+﻿---
+ID: "6da66b0a-2d01-444d-a808-cc965cd1a369"
+Parent: "839c1d42-a821-4cfe-ab07-90e4a58a29ce"
+Template: "4e106225-a950-4b0c-8dc0-2092d4897b63"
+Path: /sitecore/content/LionTrustNew/Home/About us/Corporate sustainability/_Local/Homepage Carousel/CarouselCard 3
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 75
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{3FF9A107-6609-4788-8BD4-E9C204700208}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211102T115739Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "69be8278-228e-48f0-9e22-72351237e500"
+      Hint: CarouselCard_CTALink
+      Value: |
+        <link text="Find out more" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{DBD81B93-4987-4084-A9B9-A3E9012AD915}" />
+    - ID: "8a233aaa-9955-4e29-a15f-9d8366047617"
+      Hint: CarouselCard_Heading
+      Value: Assessment of Value
+    - ID: "9bf9ebaa-ad4e-4853-a848-85df925d9beb"
+      Hint: CarouselCard_Image
+      Value: |
+        <image mediaid="{297F15DE-E2F0-419C-9A24-302ACC28FEDB}" />
+    - ID: "e57baffa-a701-4053-b5d2-617f132e1d32"
+      Hint: CarouselCard_AuthorName
+      Value: 
+    - ID: "fca56162-7081-4c2b-8726-2c5cc1b24635"
+      Hint: CarouselCard_AuthorImage
+      Value: 

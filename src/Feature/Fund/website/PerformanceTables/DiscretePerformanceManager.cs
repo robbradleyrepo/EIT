@@ -6,6 +6,7 @@
     using System.Collections.Generic;
     using System;
     using System.Globalization;
+    using LionTrust.Foundation.Legacy.Models;
 
     [Service(ServiceType = typeof(IDiscretePerformanceManager), Lifetime = Lifetime.Singleton)]
     public class DiscretePerformanceManager : IDiscretePerformanceManager
@@ -17,10 +18,10 @@
             this._repository = repository;
         }
 
-        public IEnumerable<PerformanceTableRow> GetPerformanceTableRows(string citiCode)
+        public IEnumerable<PerformanceTableRow> GetPerformanceTableRows(string citiCode, IFundClass fundClassItem)
         {
             var fundClass = _repository.GetData().FirstOrDefault(d => d.CitiCode == citiCode);
-            if (fundClass == null)
+            if (fundClass == null || fundClassItem == null)
             {
                 _repository.SendEmailOnErrorForCiticode(citiCode);
                 return new PerformanceTableRow[0];
@@ -39,14 +40,27 @@
                         fundClass.DiscretePerformance48To60
                     }));
             }
-            
+
+            if (!string.IsNullOrEmpty(fundClass.SectorNameLong) && !fundClassItem.HideSectorRows)
+            {
+                result.Add(new PerformanceTableRow(fundClass.SectorNameLong,
+                    new string[]
+                    {
+                        fundClass.SectorDiscretePerformance0To12,
+                        fundClass.SectorDiscretePerformance12To24,
+                        fundClass.SectorDiscretePerformance24To36,
+                        fundClass.SectorDiscretePerformance36To48,
+                        fundClass.SectorDiscretePerformance48To60
+                    }));
+            }
+
             if (fundClass.Benchmarks == null)
             {
                 return result;
             }
 
             var benchmark0 = fundClass.Benchmarks.FirstOrDefault(b => b.BenchmarkTypeName == "Benchmark");
-            if (benchmark0 != null)
+            if (benchmark0 != null && !fundClassItem.HideBenchmarkRows)
             {
                 result.Add(new PerformanceTableRow(benchmark0.BenchmarkName, new string[]
                 {
@@ -59,7 +73,7 @@
             }
 
             var benchmark1 = fundClass.Benchmarks.FirstOrDefault(b => b.BenchmarkTypeName == "Benchmark Comparator 1");
-            if (benchmark1 != null)
+            if (benchmark1 != null && !fundClassItem.HideBenchmarkComparator1Rows)
             {
                 result.Add(new PerformanceTableRow(benchmark1.BenchmarkName, new string[]
                 {
@@ -72,7 +86,7 @@
             }
 
             var benchmark2 = fundClass.Benchmarks.FirstOrDefault(b => b.BenchmarkTypeName == "Benchmark Comparator 2");
-            if (benchmark2 != null)
+            if (benchmark2 != null && !fundClassItem.HideBenchmarkComparator2Rows)
             {
                 result.Add(new PerformanceTableRow(benchmark2.BenchmarkName, new string[]
                 {
@@ -87,12 +101,17 @@
             return result.Where(x => x.Columns.Any(v => v.HasValue));
         }
 
-        public PerformanceTableRow GetQuartile(string citiCode)
+        public PerformanceTableRow GetQuartile(string citiCode, IFundClass fundClassItem)
         {
             var fundClass = _repository.GetData().FirstOrDefault(d => d.CitiCode == citiCode);
-            if (fundClass == null)
+            if (fundClass == null || fundClassItem == null)
             {
                 _repository.SendEmailOnErrorForCiticode(citiCode);
+                return null;
+            }
+
+            if (fundClassItem.HideQuartileRows)
+            {
                 return null;
             }
 

@@ -51,6 +51,26 @@
             return string.Empty;
         }
 
+        public static string ViewingLabelWithArticle(string viewingLabel, string profileName)
+        {
+            char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
+
+            if (!string.IsNullOrEmpty(profileName) && !string.IsNullOrEmpty(viewingLabel))
+            {
+                char firstCharacter = profileName.ToLower().ToCharArray().ElementAt(0);
+                if (vowels.Contains(firstCharacter))
+                {
+                    return $"{viewingLabel} an";
+                }
+                else
+                {
+                    return $"{viewingLabel} a";
+                }
+            }
+
+            return viewingLabel;
+        }
+
         public static IInvestor GetCurrentContactInvestor(IMvcContext context, BaseLog log)
         {
             var home = context.GetHomeItem<IHome>();

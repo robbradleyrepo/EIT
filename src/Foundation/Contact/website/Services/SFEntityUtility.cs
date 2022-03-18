@@ -198,12 +198,6 @@
                 sfEntity.InternalFields.SetField<bool>(Constants.SF_EmailOptOutField, context.Preferences.Unsubscribe);
                 sfEntity.InternalFields.SetField<DateTime>(Constants.SF_DateOfConcentField, DateTime.Now);
 
-                //Institutional Bulletin checkbox available only for SF Contacts
-                if (context.IsContact)
-                {
-                    sfEntity.InternalFields.SetField<bool>(Constants.SFContact_InstitutionalBulletin, context.Preferences.IsInstitutionalBulletinChecked);
-                }
-
                 var isAnyProcessOrFundSelected = false;
                 if (!context.Preferences.Unsubscribe)
                 {
@@ -1043,7 +1037,6 @@
                 returnObj.IncludeInLTNews = sfContact.InternalFields.GetField<bool>(Constants.SF_LTNewsField);
                 returnObj.Unsubscribe = sfContact.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
                 returnObj.IsUkResident = sfContact.InternalFields.GetField<bool>(Constants.SF_UKResident);
-                returnObj.IsInstitutionalBulletinChecked = sfContact.InternalFields.GetField<bool>(Constants.SFContact_InstitutionalBulletin);
                 returnObj.IsConsentGivenDateEmpty = (sfContact.InternalFields[Constants.SF_DateOfConcentField] == null) ? true : false;
                 return returnObj;
             }
@@ -1071,7 +1064,6 @@
                 returnObj.IncludeInLTNews = sfLead.InternalFields.GetField<bool>(Constants.SF_LTNewsField);
                 returnObj.Unsubscribe = sfLead.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
                 returnObj.IsUkResident = sfLead.InternalFields.GetField<bool>(Constants.SF_UKResident);
-                returnObj.IsInstitutionalBulletinChecked = false;
                 returnObj.IsConsentGivenDateEmpty = (sfLead.InternalFields[Constants.SF_DateOfConcentField] == null) ? true : false;
                 return returnObj;
             }

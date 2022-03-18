@@ -29,15 +29,14 @@
         string YouAreViewingLabel { get; set; }
 
         [SitecoreField(Constants.NavigationRoot.ChangeLabel_FieldID, SitecoreFieldType.SingleLineText, "Menu")]
-        string ChangeLabel { get; set; }
-        
-        [SitecoreField(Constants.NavigationRoot.MenuItems_FieldID, SitecoreFieldType.Treelist, "Menu")]
-        IEnumerable<INavigablePage> MenuItems { get; set; }
+        string ChangeLabel { get; set; }              
 
         [SitecoreField(Constants.NavigationRoot.OnboardingConfiguation_FieldId)]
         IOnboardingConfiguration OnboardingConfiguration { get; set; }
          
         string OnboardingRoleName { get; set; }
+
+        string YouAreViewingLabelWithArticle { get; set; }
 
         IHeaderConfiguration HeaderConfiguration { get; set; }
 

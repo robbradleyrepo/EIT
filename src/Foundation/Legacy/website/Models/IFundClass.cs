@@ -88,5 +88,19 @@
         [SitecoreField(Constants.FundClass.HideCumulativePerformanceTable_FieldId, SitecoreFieldType.Checkbox)]
         bool HideCumulativePerformanceTable { get; set; }
 
+        [SitecoreField(Constants.FundClass.HideSectorRows_FieldId, SitecoreFieldType.Checkbox)]
+        bool HideSectorRows { get; set; }
+
+        [SitecoreField(Constants.FundClass.HideBenchmarkRows_FieldId, SitecoreFieldType.Checkbox)]
+        bool HideBenchmarkRows { get; set; }
+
+        [SitecoreField(Constants.FundClass.HideBenchmarkComparator1Rows_FieldId, SitecoreFieldType.Checkbox)]
+        bool HideBenchmarkComparator1Rows { get; set; }
+
+        [SitecoreField(Constants.FundClass.HideBenchmarkComparator2Rows_FieldId, SitecoreFieldType.Checkbox)]
+        bool HideBenchmarkComparator2Rows { get; set; }
+
+        [SitecoreField(Constants.FundClass.HideQuartileRows_FieldId, SitecoreFieldType.Checkbox)]
+        bool HideQuartileRows { get; set; }
     }
 }

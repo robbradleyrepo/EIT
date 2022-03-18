@@ -20,10 +20,10 @@
                 </div>
             </div>
             <nav class="navigation">
-                @if (Model.HomeItem.MenuItems != null && Model.HomeItem.MenuItems.Any())
+                @if (Model.MenuItems != null && Model.MenuItems.Any())
                 {
                     <ul class="navigation__list">
-                        @foreach (var menuItem in Model.HomeItem.MenuItems.WithAccessTo())
+                        @foreach (var menuItem in Model.MenuItems.WithAccessTo())
                         {
                             var filteredChildrens = menuItem.Children.Where(m => !m.ExcludeInSearchResults);
 
@@ -96,17 +96,17 @@
             <div class="user-status">
                 <div class="user-status_hr"></div>
                 <span class="user-status__text">
-                    @Html.Glass().Editable(Model.HomeItem, z => z.YouAreViewingLabel) <span class="user-status__name">@Model.HomeItem.OnboardingRoleName</span>
+                    @Html.Glass().Editable(Model.HomeItem, z => z.YouAreViewingLabelWithArticle) <span class="user-status__name">@Model.HomeItem.OnboardingRoleName</span>
                     | <a href="@Model.HomeItem.ChangeInvestorUrl" class="user-status__change-type">@Html.Glass().Editable(Model.HomeItem, m => m.ChangeLabel)</a>
                 </span>
             </div>
         </div>
         <div class="sidebar__bottom">
-            @if (Model.HomeItem.MenuItems != null && Model.HomeItem.MenuItems.Any())
+            @if (Model.MenuItems != null && Model.MenuItems.Any())
             {
                 <nav class="navigation navigation_desktop">
                     <ul class="navigation__list">
-                        @foreach (var menuItem in Model.HomeItem.MenuItems.WithAccessTo())
+                        @foreach (var menuItem in Model.MenuItems.WithAccessTo())
                         {
                             var filteredChildrens = menuItem.Children.Where(m => !m.ExcludeInSearchResults);
                             if (filteredChildrens != null && filteredChildrens.Any())
@@ -480,10 +480,10 @@
         }
     </div>
     <!-- For desktop sidebar links items -->
-    if (Model.HomeItem.MenuItems != null && Model.HomeItem.MenuItems.Any())
+    if (Model.MenuItems != null && Model.MenuItems.Any())
     {
         <div class="navigation__sublinks-items">
-            @foreach (var menuItem in Model.HomeItem.MenuItems.WithAccessTo())
+            @foreach (var menuItem in Model.MenuItems.WithAccessTo())
             {
                 var filteredChildrens = menuItem.Children.Where(m => !m.ExcludeInSearchResults);
                 <div class="navigation__item">
