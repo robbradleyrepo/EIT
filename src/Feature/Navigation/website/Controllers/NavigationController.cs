@@ -43,6 +43,8 @@
                 {
                     homeModel.OnboardingRoleName = OnboardingHelper.ProfileRoleName(homeModel.OnboardingConfiguration, _log);
                     homeModel.YouAreViewingLabelWithArticle = OnboardingHelper.ViewingLabelWithArticle(homeModel.YouAreViewingLabel, homeModel.OnboardingRoleName);
+                    var country = OnboardingHelper.GetCurrentContactCountry(_mvcContext);
+                    homeModel.CurrentCountry = OnboardingHelper.GetCountryNameDefiniteArticle(country);
                 }
 
                 homeModel.ChangeInvestorUrl = OnboardingHelper.GetChangeUrl();
@@ -58,7 +60,7 @@
             {
                 navigationViewModel.HomeItem.OnboardingRoleName = OnboardingHelper.ProfileRoleName(navigationViewModel.HomeItem.OnboardingConfiguration, _log);
                 navigationViewModel.HomeItem.YouAreViewingLabelWithArticle = OnboardingHelper.ViewingLabelWithArticle(navigationViewModel.HomeItem.YouAreViewingLabel, navigationViewModel.HomeItem.OnboardingRoleName);
-            }
+            }            
 
             return View("~/Views/Navigation/Menu.cshtml", navigationViewModel);
         }
@@ -71,14 +73,22 @@
             var homeItem = _navigationRepository.GetNavigationRoot(item);
             if (homeItem != null)
             {
-                navigationViewModel.HomeItem = _mvcContext.SitecoreService.GetItem<IHome>(homeItem.ID.Guid);                
-                if (navigationViewModel.HomeItem.OnboardingConfiguration != null) 
+                navigationViewModel.HomeItem = _mvcContext.SitecoreService.GetItem<IHome>(homeItem.ID.Guid);
+
+                if (navigationViewModel.HomeItem != null)
                 {
-                    navigationViewModel.HomeItem.HeaderConfiguration = NavigationHelper.GetCurrentHeaderConfiguration(_mvcContext, navigationViewModel.HomeItem.OnboardingConfiguration, _log);
-                    if (navigationViewModel.HomeItem.HeaderConfiguration != null && navigationViewModel.HomeItem.HeaderConfiguration.MenuItems != null)
+                    var country = OnboardingHelper.GetCurrentContactCountry(_mvcContext);
+                    navigationViewModel.HomeItem.CurrentCountry = OnboardingHelper.GetCountryNameDefiniteArticle(country);
+                    if (navigationViewModel.HomeItem.OnboardingConfiguration != null) 
                     {
-                        navigationViewModel.MenuItems = navigationViewModel.HomeItem.HeaderConfiguration.MenuItems.Where(x => OnboardingHelper.HasAccess(x.Fund?.ExcludedCountries));
-                    }                    
+                        navigationViewModel.HomeItem.HeaderConfiguration = NavigationHelper.GetCurrentHeaderConfiguration(_mvcContext, navigationViewModel.HomeItem.OnboardingConfiguration, _log);
+                        if (navigationViewModel.HomeItem.HeaderConfiguration != null && navigationViewModel.HomeItem.HeaderConfiguration.MenuItems != null)
+                        {
+                            navigationViewModel.MenuItems = navigationViewModel.HomeItem.HeaderConfiguration.MenuItems.Where(x => OnboardingHelper.HasAccess(x.Fund?.ExcludedCountries));
+                        }                    
+                    }
+
+                    navigationViewModel.HomeItem.ChangeInvestorUrl = OnboardingHelper.GetChangeUrl();
                 }
 
                 if (Sitecore.Context.Item.ID.Equals(homeItem.ID))
@@ -86,8 +96,6 @@
                     navigationViewModel.Organization = _navigationRepository.GetOrganizationData(navigationViewModel.HomeItem, _mvcContext);
                 }
             }            
-
-            navigationViewModel.HomeItem.ChangeInvestorUrl = OnboardingHelper.GetChangeUrl();
 
             return navigationViewModel;
         }        

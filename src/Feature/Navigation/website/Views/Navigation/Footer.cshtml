@@ -191,6 +191,10 @@
                             <span class="footer__investor" id="InvestorType">
                                 @Model.OnboardingRoleName
                             </span>
+                            @Model.FromLabel
+                            <span class="footer__investor">
+                                @Model.CurrentCountry
+                            </span>
                             | <a href="@Model.ChangeInvestorUrl" class="footer__change-type">@Html.Glass().Editable(Model, m => m.ChangeLabel)</a>
                         </span>
                     }

@@ -82,6 +82,7 @@
             public const string MyPreferences_FieldID = "{6F6A49B5-C780-4EDE-9EB4-9EA509204434}";
             public const string SignUpNewsletter_FieldID = "{6EB0248B-457F-491C-8F9E-13AEFE2CDEC8}";
             public const string YouAreViewingLabel_FieldID = "{15999105-600F-43FB-B206-ED93304A98E6}";
+            public const string FromLabel_FieldID = "{14734052-FFFD-4681-9ABB-311B62D63DA6}";
             public const string ChangeLabel_FieldID = "{E4A364E6-2E1A-4854-ABD8-6A02ACF832CD}";
             public const string OnboardingConfiguation_FieldId = "{16512055-116D-48B5-936C-ECA678249335}";
         }
