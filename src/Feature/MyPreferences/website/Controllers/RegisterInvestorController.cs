@@ -4,6 +4,7 @@
     using LionTrust.Feature.MyPreferences.Models;
     using LionTrust.Feature.MyPreferences.Repositories;
     using LionTrust.Feature.MyPreferences.Services;
+    using LionTrust.Foundation.Analytics.Goals;
     using LionTrust.Foundation.Contact.Managers;
     using LionTrust.Foundation.Contact.Models;
     using LionTrust.Foundation.Contact.Services;
@@ -12,7 +13,6 @@
     using Sitecore.Abstractions;
     using Sitecore.Mvc.Controllers;
     using System;
-    using System.Linq;
     using System.Collections.Generic;
     using System.Web.Mvc;
     using static LionTrust.Feature.MyPreferences.Constants;
@@ -199,6 +199,13 @@
 
             if (isSuccess)
             {
+                // trigger goal
+                var goal = data.RetrievePreferencesGoal;
+                if (goal != Guid.Empty)
+                {
+                    Helper.TriggerGoal(new Sitecore.Data.ID(goal));
+                }
+
                 return Redirect(data.ResendEmailSuccessPage.Url);
             }
             else
