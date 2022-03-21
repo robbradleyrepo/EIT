@@ -14,7 +14,7 @@
             {
                 <div class="col-6 col-md-4 onboarding-overlay__btn-col">
                     <button data-set-step="3" data-investor-type="@investor.Id"
-                            data-excluded-countires="@string.Join("|", investor.ExcludedCountires)" data-investor-name="@investor.InvestorName"
+                            data-excluded-countires="@string.Join("|", investor.ExcludedCountires)" data-investor-name="@investor.InvestorNameWithArticle"
                             class="btn btn-primary onboarding-overlay__set-step">
                         <span class="onboarding-overlay__btn-title">@Html.Glass().RenderImage(investor, i => i.InvestorIcon, isEditable: false) @investor.InvestorName</span>
                         <span class="onboarding-overlay__btn-description">@investor.InvestorDescription</span>

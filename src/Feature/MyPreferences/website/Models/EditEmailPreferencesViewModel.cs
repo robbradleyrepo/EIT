@@ -11,7 +11,6 @@
             {
                 UnsubscribeAll = context.Preferences.Unsubscribe;
                 IsConsentGivenDateEmpty = context.Preferences.IsConsentGivenDateEmpty;
-                IsInstitutionalBulletin = context.Preferences.IsInstitutionalBulletinChecked;
             }
 
             Content = editEmailPreferences;
@@ -27,8 +26,6 @@
         public bool UnsubscribeAll { get; set; }
 
         public bool IsConsentGivenDateEmpty { get; set; }
-
-        public bool IsInstitutionalBulletin { get; set; }
 
         public string Error { get; set; }
 

@@ -14,9 +14,10 @@
                     <div class="set-location__content">
                         <ul class="set-location__list">
                             @foreach (var country in region.Countries)
-                            {                               
+                            {
                                 var countryName = OnboardingHelper.GetCountryNameDefiniteArticle(country);
-                                <li class="set-location__item" data-iso-country="@country.ISO" data-name-country="@countryName">@Html.Glass().Editable(country, c => c.CountryName)</li>
+                                var countryGoal = country.GoalId != null ? country.GoalId.ToString() : string.Empty;
+                                <li class="set-location__item" data-iso-country="@country.ISO" data-name-country="@countryName" data-goal-trigger="@countryGoal">@Html.Glass().Editable(country, c => c.CountryName)</li>
                             }
                         </ul>
                     </div>

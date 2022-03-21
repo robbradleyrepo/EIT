@@ -196,14 +196,7 @@
                 //Update fields
                 sfEntity.InternalFields.SetField<bool>(Constants.SF_LTNewsField, context.Preferences.IncludeInLTNews);
                 sfEntity.InternalFields.SetField<bool>(Constants.SF_EmailOptOutField, context.Preferences.Unsubscribe);
-                sfEntity.InternalFields.SetField<bool>(Constants.SF_Article41NoticeSentField, !context.Preferences.Unsubscribe);
                 sfEntity.InternalFields.SetField<DateTime>(Constants.SF_DateOfConcentField, DateTime.Now);
-
-                //Institutional Bulletin checkbox available only for SF Contacts
-                if (context.IsContact)
-                {
-                    sfEntity.InternalFields.SetField<bool>(Constants.SFContact_InstitutionalBulletin, context.Preferences.IsInstitutionalBulletinChecked);
-                }
 
                 var isAnyProcessOrFundSelected = false;
                 if (!context.Preferences.Unsubscribe)
@@ -395,6 +388,7 @@
                     sfDataObj.SalesforceOrgId = this.SalesforceSession.SalesforceOrganizationId;
                     sfDataObj.RandomGuidFromSalesforceEntity = sfEntity.InternalFields[Constants.SF_GUIDForEmailPref];
                     sfDataObj.SalesforceFundIds = selectedSFFundIdList;
+                    sfDataObj.Unsubscribed = sfEntity.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
 
                     //Save relavant Salesforce data in Sitecore contact facet
                     //selectedSFFundIdList contains the 15 character ids of the Salesforce funds. Explicitly save the 15 character fund ids in the contact facet.
@@ -469,6 +463,7 @@
                         var sfOrgId = this.SalesforceSession.SalesforceOrganizationId;
                         var randomGuid = newlyCreatedLead.InternalFields[Constants.SF_GUIDForEmailPref];
                         var emailAddress = newlyCreatedLead.InternalFields[Constants.SF_EmailField];
+                        var unsubscribed = newlyCreatedLead.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
 
                         if (!string.IsNullOrEmpty(visitorId))
                         {
@@ -482,6 +477,7 @@
                             sfDataObj.SalesforceOrgId = sfOrgId;
                             sfDataObj.RandomGuidFromSalesforceEntity = randomGuid;
                             sfDataObj.SalesforceFundIds = new List<string>();
+                            sfDataObj.Unsubscribed = unsubscribed;
 
                             //Save relavant Salesforce data in Sitecore contact facet
                             var scContactUtilityObj = new SitecoreContactUtility();
@@ -540,6 +536,7 @@
                 newSFContact.InternalFields[Constants.SFContact_CompanyNameField] = profUser.Company;
                 newSFContact.InternalFields.SetField<bool>(Constants.SF_UKResident, profUser.IsUKResident);
                 newSFContact.InternalFields[Constants.SFContact_OrgNameField] = profUser.Organisation;
+                newSFContact.InternalFields.SetField<bool>(Constants.SF_EmailOptOutField, profUser.Unsubscribed);
 
                 var contactRecordtypes = GetSFEntityRecordTypes(Constants.SFContactEntityName);
                 if (contactRecordtypes != null)
@@ -944,6 +941,56 @@
         }
 
         /// <summary>
+        /// Get unsubscribed by email
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        public bool GetUnsubscribedByEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                Log.Info("Email address is null or empty. No email preferences id returned from the email address.", this);
+                return true;
+            }
+
+            try
+            {
+                var unsubscribed = true;
+
+                var contactService = new ContactService(this.SalesforceSession);
+                var sfContact = contactService.GetByEmail(email);                
+                if (sfContact != null)
+                {
+                    var sfEntityId = sfContact.Id.ToString();
+                    unsubscribed = sfContact.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
+
+                    return unsubscribed;
+                }
+
+                var leadService = new LeadService(this.SalesforceSession);
+                var sfLead = leadService.GetByEmail(email);
+                if (sfLead != null)
+                {
+                    var sfEntityId = sfLead.Id.ToString();
+                    unsubscribed = sfLead.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
+
+                    return unsubscribed;
+                }
+
+                if (sfContact == null && sfLead == null)
+                {
+                    Log.Info(string.Format("Salesforce Contact or Lead does not exist with the email - {0}", email), this);
+                }                
+              
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
         /// Retrieve record types from the SF entity
         /// </summary>
         /// <param name="entityType"></param>
@@ -990,7 +1037,6 @@
                 returnObj.IncludeInLTNews = sfContact.InternalFields.GetField<bool>(Constants.SF_LTNewsField);
                 returnObj.Unsubscribe = sfContact.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
                 returnObj.IsUkResident = sfContact.InternalFields.GetField<bool>(Constants.SF_UKResident);
-                returnObj.IsInstitutionalBulletinChecked = sfContact.InternalFields.GetField<bool>(Constants.SFContact_InstitutionalBulletin);
                 returnObj.IsConsentGivenDateEmpty = (sfContact.InternalFields[Constants.SF_DateOfConcentField] == null) ? true : false;
                 return returnObj;
             }
@@ -1018,7 +1064,6 @@
                 returnObj.IncludeInLTNews = sfLead.InternalFields.GetField<bool>(Constants.SF_LTNewsField);
                 returnObj.Unsubscribe = sfLead.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
                 returnObj.IsUkResident = sfLead.InternalFields.GetField<bool>(Constants.SF_UKResident);
-                returnObj.IsInstitutionalBulletinChecked = false;
                 returnObj.IsConsentGivenDateEmpty = (sfLead.InternalFields[Constants.SF_DateOfConcentField] == null) ? true : false;
                 return returnObj;
             }

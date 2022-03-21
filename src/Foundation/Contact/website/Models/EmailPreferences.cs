@@ -12,7 +12,6 @@
         public bool Unsubscribe { get; set; }
         public bool IsConsentGivenDateEmpty { get; set; }
         public bool IsUkResident { get; set; }
-        public bool IsInstitutionalBulletinChecked { get; set; }
         public List<SFProcess> SFProcessList { get; set; }
 
         public EmailPreferences()
@@ -22,21 +21,18 @@
 
         public void UnsubscribeAll()
         {
-            IsInstitutionalBulletinChecked = false;
             IncludeInLTNews = false;
             Unsubscribe = true;
         }
 
         public void SubscribeToInsights()
         {
-            IsInstitutionalBulletinChecked = false;
             IncludeInLTNews = false;
             Unsubscribe = false;
         }
 
         public void SubscribeAll()
         {
-            IsInstitutionalBulletinChecked = true;
             IncludeInLTNews = true;
             Unsubscribe = false;
         }

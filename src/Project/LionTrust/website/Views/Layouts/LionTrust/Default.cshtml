@@ -39,7 +39,7 @@
     @if (!Sitecore.Context.PageMode.IsExperienceEditor)
     {
         <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="a34c7166-af76-479c-a49b-796bd92dc3a0" data-blockingmode="auto" type="text/javascript"></script>
-    }
+    }    
 </head>
 
 @{
@@ -123,6 +123,11 @@
     @if (!Sitecore.Context.PageMode.IsExperienceEditor && Html.Sitecore().CurrentItem.HasComponent(Constants.Renderings.IFrameModuleRenderingId))
     {
         <script src="/dist/js/frame-manager.js"></script>
+    }
+    @if (!Sitecore.Context.PageMode.IsExperienceEditor && Html.Sitecore().CurrentItem.HasComponent(Constants.Renderings.IFrameCASModuleRenderingId))
+    {
+        <script src="/dist/js/frame-manager.js"></script>
+        <script type="text/javascript" src="https://otp.tools.investis.com/assets/cas_refresh/scripts/cas-tool-helper.min.js"></script>
     }
     @if (Html.Sitecore().CurrentItem.HasComponent(Constants.Renderings.MediaGalleryRenderingId))
     {

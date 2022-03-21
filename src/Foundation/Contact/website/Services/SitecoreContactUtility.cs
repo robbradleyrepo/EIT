@@ -68,6 +68,7 @@
                             s4sInfoFacet.Fields[sfEntityIdfacetFieldKey] = sfDataForSaving.SalesforceEntityId;
                             s4sInfoFacet.Fields[Foundation.Contact.Constants.SFOrgIdFacetKey] = sfDataForSaving.SalesforceOrgId;
                             s4sInfoFacet.Fields[Foundation.Contact.Constants.SFRandomGuidFacetKey] = sfDataForSaving.RandomGuidFromSalesforceEntity;
+                            s4sInfoFacet.Fields[Foundation.Contact.Constants.SF_EmailOptOutFacetKey] = Convert.ToString(sfDataForSaving.Unsubscribed);
 
                             var sfFundIdString = (sfDataForSaving.SalesforceFundIds != null) ? string.Join(",", sfDataForSaving.SalesforceFundIds) : string.Empty;
                             s4sInfoFacet.Fields[Foundation.Contact.Constants.SFFundIdFacetKey] = sfFundIdString;
@@ -183,6 +184,7 @@
                                 var ownerPhone = string.Empty;
                                 var ownerRegion = string.Empty;
                                 var sfFundIds = new List<string>();
+                                var unsubscribed = false;
 
                                 if (s4sInfoFacet.Fields.ContainsKey(Foundation.Contact.Constants.SFFirstNameFacetKey))
                                 {
@@ -239,6 +241,11 @@
                                     ownerRegion = s4sInfoFacet.Fields[Foundation.Contact.Constants.SF_Owner_RegionField];
                                 }
 
+                                if (s4sInfoFacet.Fields.ContainsKey(Foundation.Contact.Constants.SF_EmailOptOutFacetKey))
+                                {
+                                    unsubscribed = Convert.ToBoolean(s4sInfoFacet.Fields[Foundation.Contact.Constants.SF_EmailOptOutFacetKey]);
+                                }
+
                                 if (s4sInfoFacet.Fields.ContainsKey(Foundation.Contact.Constants.SFFundIdFacetKey))
                                 {
                                     var savedSfFundIdString = s4sInfoFacet.Fields[Foundation.Contact.Constants.SFFundIdFacetKey];
@@ -269,6 +276,7 @@
                                 returnObj.OwnerPhone = ownerPhone;
                                 returnObj.OwnerEmail = ownerEmail;
                                 returnObj.OwnerRegion = ownerRegion;
+                                returnObj.Unsubscribed = unsubscribed;
                                 return returnObj;
                             }
                             else

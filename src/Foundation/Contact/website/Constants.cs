@@ -20,6 +20,8 @@ namespace LionTrust.Foundation.Contact
         public const string SFContactEntityName = "Contact";
         public const string SfLeadEntityName = "Lead";
 
+        public const string SF_EmailOptOutFacetKey = "HasOptedOutOfEmail";
+
         //Salesforce record types for Product
         public const string SFProcessRecordTypeName = "Process";
         public const string SFFundRecordTypeName = "Fund";
@@ -58,7 +60,6 @@ namespace LionTrust.Foundation.Contact
         public const string SF_LastNameField = "LastName";
         public const string SF_EmailField = "Email";
         public const string SF_UKResident = "UK_Resident__c";
-        public const string SF_Article41NoticeSentField = "Article_14_Notice_Sent__c";
         public const string SF_RecordTypeField = "RecordTypeId";
         public const string SFContact_CountryField = "ContactCountry__c";
         public const string SFContact_CompanyFCAIdField = "Company_FCA_Number__c";

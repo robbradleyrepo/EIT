@@ -59,6 +59,7 @@
             public const string ISO_FieldId = "{A46A84E5-E402-4784-95D3-E316A9761EFB}";
             public const string TermsAndConditions_FieldId = "{BFD9B660-B602-4BEF-82FC-BECC3C9417A6}";
             public const string FundCentreCountryCode_FieldId = "{87460E4B-38FA-4B00-898A-3071546DE530}";
+            public const string Goal_FieldId = "{8CBEEF11-3BFB-4595-97E2-95389824CC2B}";
             public const string RestOfWorldIso = "01";
         }
 
@@ -81,6 +82,7 @@
         {
             public const string TemplateId = "{515B02C8-0C38-46BD-8060-72BE80EC99F0}";
             public const string Name_FieldId = "{C038B21D-C75C-47CE-97B2-04E665DD486C}";
+            public const string NameWithArticle_FieldId = "{093534AA-5F96-4031-94E8-F60F2DD9D373}";
             public const string Description_FieldId = "{B1CC8A2B-0544-4DB1-83F0-A7186D820A5C}";
             public const string Icon_FieldId = "{24886373-D6E1-411C-87A6-DE0062562012}";
             public const string ProfileCard_FieldId = "{4CAD945A-DFC5-4001-86EC-E24F204CAAFB}";
