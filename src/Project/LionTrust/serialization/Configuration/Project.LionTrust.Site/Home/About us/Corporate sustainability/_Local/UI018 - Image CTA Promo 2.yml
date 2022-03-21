@@ -1,0 +1,39 @@
+﻿---
+ID: "9d4fe08d-9831-4248-8056-9a3410973b2a"
+Parent: "81071e90-a7b7-418a-85f1-5293e4331359"
+Template: "d3d9d2ce-b2ce-49ac-b50d-6a5ffd4c4ab8"
+Path: "/sitecore/content/LionTrustNew/Home/About us/Corporate sustainability/_Local/UI018 - Image CTA Promo 2"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1054e4b6-1cf5-4c08-8a6d-d9b02fb17050"
+      Hint: ImageCTAPromo_Image
+      Value: |
+        <image mediaid="{D8A9337A-8A13-405E-9B98-CCC8CD50256E}" />
+    - ID: "143867db-9bba-4097-9eb4-0099c175ad91"
+      Hint: ImageCTAPromo_CTALink
+      Value: |
+        <link linktype="internal" text="Find out more" querystring="" target="" id="{97979536-A780-4855-BF1C-53E25FCCEC6A}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220311T174807Z
+    - ID: "48bf236b-0681-4a09-9085-4933fa1c4a7a"
+      Hint: ImageCTAPromo_Body
+      Value: We believe climate change will be a defining driver of the global economy, society and financial markets in the future, and that investors will be unable to avoid the impacts of this.
+    - ID: "4f8e0e85-38f1-4ab6-9ad6-dce0008c8304"
+      Hint: ImageCTAPromo_TextAlignment
+      Value: "{79DA2651-4E23-42A5-B5B0-94E416E1A3E7}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\TomG
+    - ID: "5f6cda9b-99ec-4bfc-8ddb-258d248bc1ae"
+      Hint: ImageCTAPromo_TitleInSide
+      Type: Checkbox
+      Value: 1
+    - ID: "7a84ea30-ff24-4c46-ae8f-51fcff940663"
+      Hint: ImageCTAPromo_Title
+      Value: Climate Change and the Environment

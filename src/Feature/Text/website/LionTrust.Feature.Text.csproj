@@ -80,12 +80,15 @@
     <Content Include="Views\Text\Table.cshtml" />
     <Content Include="Views\Text\DividendChart.cshtml" />
     <Content Include="Views\Text\IFrameModule.cshtml" />
+    <Content Include="Views\Text\ScriptModule.cshtml" />
+    <Content Include="Views\Text\IFrameCASModule.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Models\IDividendChart.cs" />
-    <Compile Include="Models\IFrameModule.cs" />
+    <Compile Include="Models\IScriptModule.cs" />
+    <Compile Include="Models\IIFrameModule.cs" />
     <Compile Include="Models\IGenericTextModule.cs" />
     <Compile Include="Models\IFreeTextModule.cs" />
     <Compile Include="Models\IRichText.cs" />

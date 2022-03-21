@@ -2,6 +2,7 @@
 {
     using Glass.Mapper.Sc.Configuration.Attributes;
     using LionTrust.Foundation.ORM.Models;
+    using System;
 
     [SitecoreType(TemplateId = Constants.Country.TemplateId)]
     public interface ICountry : IGlassBase
@@ -20,5 +21,8 @@
 
         [SitecoreField(Constants.Country.FundCentreCountryCode_FieldId)]
         string FundCentreCountryCode { get; set; }
+
+        [SitecoreField(Constants.Country.Goal_FieldId)]
+        Guid GoalId { get; set; }
     }
 }

@@ -106,6 +106,11 @@ namespace LionTrust.Foundation.Legacy
             public const string HidePerformanceChart_FieldId = "{B39AF1CD-8C71-4989-BEF8-7C0441DD570A}";
             public const string HideDiscretePerformanceTable_FieldId = "{BA664318-D29C-4166-A901-FAA04F7D3AA6}";
             public const string HideCumulativePerformanceTable_FieldId = "{382CDDED-7732-4690-AC7A-8DBA5C503403}";
+            public const string HideSectorRows_FieldId = "{184F0F35-CE5F-4A85-9593-D82C6C24F419}";
+            public const string HideBenchmarkRows_FieldId = "{975D653B-1A72-4E4E-8B1D-5FF9C05A09A6}";
+            public const string HideBenchmarkComparator1Rows_FieldId = "{0D4E953F-8AA2-4976-B3D7-1A498BE6A53B}";
+            public const string HideBenchmarkComparator2Rows_FieldId = "{7DCAD117-6E0F-4619-BA3C-F62D1970B0D4}";
+            public const string HideQuartileRows_FieldId = "{22906BBB-0880-4130-9149-21185003E807}";
         }
         
         public static class Fund 
@@ -242,7 +247,8 @@ namespace LionTrust.Foundation.Legacy
             public const string Image_FieldID = "{146CBBD2-0E88-4FD6-B4B4-49B462266089}";
             public const string Text_FieldID = "{694C3F81-60C0-4719-AA8C-5A4264623FEB}";
             public const string Text_FieldName = "GenericListingModuleItem_Text";
-            public const string Date_FieldID = "{25BED78C-4957-4165-998A-CA1B52F67497}";
+            public const string CreatedDate_FieldID = "{25BED78C-4957-4165-998A-CA1B52F67497}";
+            public const string Date_FieldID = "{FB91E653-BC6B-426C-995C-7D406DD6A40D}";
             public const string ListingType_FieldID = "{FF934E56-BADD-46E1-BFB4-695F32B1D6C5}";
         }
 

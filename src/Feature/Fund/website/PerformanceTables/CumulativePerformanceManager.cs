@@ -4,6 +4,7 @@
     using LionTrust.Foundation.DI;
     using System.Linq;
     using System.Collections.Generic;
+    using LionTrust.Foundation.Legacy.Models;
 
     [Service(ServiceType = typeof(ICumulativePerformanceManager), Lifetime = Lifetime.Singleton)]
     public class CumulativePerformanceManager : ICumulativePerformanceManager
@@ -15,10 +16,10 @@
             this._repository = repository;
         }
 
-        public IEnumerable<PerformanceTableRow> GetPerformanceTableRows(string citiCode)
+        public IEnumerable<PerformanceTableRow> GetPerformanceTableRows(string citiCode, IFundClass fundClassItem)
         {
             var fundClass = _repository.GetData().FirstOrDefault(d => d.CitiCode == citiCode);
-            if (fundClass == null)
+            if (fundClass == null || fundClassItem == null)
             {
                 _repository.SendEmailOnErrorForCiticode(citiCode);
                 return new PerformanceTableRow[0];
@@ -37,7 +38,25 @@
                         fundClass.Cumulative1y,
                         fundClass.Cumulative3y,
                         fundClass.Cumulative5y,
-                        fundClass.CumulativeSinceInception,
+                        fundClass.Cumulative10y,
+                        fundClass.CumulativeSinceInception
+                    }));
+            }
+
+            if (!string.IsNullOrEmpty(fundClass.SectorNameLong) && !fundClassItem.HideSectorRows)
+            {
+                result.Add(new PerformanceTableRow(fundClass.SectorNameLong, 
+                    new string[]
+                    {
+                        fundClass.SectorCumulative1m,
+                        fundClass.SectorCumulative3m,
+                        fundClass.SectorCumulative6m,
+                        fundClass.SectorCumulativeYearToDate,
+                        fundClass.SectorCumulative1y,
+                        fundClass.SectorCumulative3y,
+                        fundClass.SectorCumulative5y,
+                        fundClass.SectorCumulative10y,
+                        fundClass.SectorCumulativeSinceInception
                     }));
             }
 
@@ -47,7 +66,7 @@
             }
 
             var benchmark0 = fundClass.Benchmarks.FirstOrDefault(b => b.BenchmarkTypeName == "Benchmark");
-            if (benchmark0 != null)
+            if (benchmark0 != null && !fundClassItem.HideBenchmarkRows)
             {
                 result.Add(new PerformanceTableRow(benchmark0.BenchmarkName, new string[]
                 {
@@ -58,12 +77,13 @@
                     fundClass.Benchmark0Cumulative1y,
                     fundClass.Benchmark0Cumulative3y,
                     fundClass.Benchmark0Cumulative5y,
+                    fundClass.Benchmark0Cumulative10y,
                     fundClass.Benchmark0CumulativeSinceInception
                 }));
             }
 
             var benchmark1 = fundClass.Benchmarks.FirstOrDefault(b => b.BenchmarkTypeName == "Benchmark Comparator 1");
-            if (benchmark1 != null)
+            if (benchmark1 != null && !fundClassItem.HideBenchmarkComparator1Rows)
             {
                 result.Add(new PerformanceTableRow(benchmark1.BenchmarkName, new string[]
                 {
@@ -74,12 +94,13 @@
                     fundClass.Benchmark1Cumulative1y,
                     fundClass.Benchmark1Cumulative3y,
                     fundClass.Benchmark1Cumulative5y,
+                    fundClass.Benchmark1Cumulative10y,
                     fundClass.Benchmark1CumulativeSinceInception
                 }));
             }
 
             var benchmark2 = fundClass.Benchmarks.FirstOrDefault(b => b.BenchmarkTypeName == "Benchmark Comparator 2");
-            if (benchmark2 != null)
+            if (benchmark2 != null && !fundClassItem.HideBenchmarkComparator2Rows)
             {
                 result.Add(new PerformanceTableRow(benchmark2.BenchmarkName, new string[]
                 {
@@ -90,19 +111,25 @@
                     fundClass.Benchmark2Cumulative1y,
                     fundClass.Benchmark2Cumulative3y,
                     fundClass.Benchmark2Cumulative5y,
+                    fundClass.Benchmark2Cumulative10y,
                     fundClass.Benchmark2CumulativeSinceInception
                 }));
-            }
+            }            
 
             return result;
         }               
 
-        public PerformanceTableRow GetQuartile(string citiCode)
+        public PerformanceTableRow GetQuartile(string citiCode, IFundClass fundClassItem)
         {
             var fundClass = _repository.GetData().FirstOrDefault(d => d.CitiCode == citiCode);
-            if (fundClass == null)
+            if (fundClass == null || fundClassItem == null)
             {
                 _repository.SendEmailOnErrorForCiticode(citiCode);
+                return null;
+            }
+
+            if (fundClassItem.HideQuartileRows)
+            {
                 return null;
             }
 
@@ -114,8 +141,31 @@
                 fundClass.CumulativeYearToDateQuart,
                 fundClass.Cumulative1yQuart,
                 fundClass.Cumulative3yQuart,
-                fundClass.Cumulative5yQuart
+                fundClass.Cumulative5yQuart,
+                fundClass.Cumulative10yQuart,
+                string.Empty
             });
-        }        
+        }
+
+        public string GetDisclaimer(string citiCode)
+        {
+            var fundClass = _repository.GetData().FirstOrDefault(d => d.CitiCode == citiCode);
+            if (fundClass == null)
+            {
+                _repository.SendEmailOnErrorForCiticode(citiCode);
+                return null;
+            }
+
+            var disclaimer = Sitecore.Globalization.Translate.Text("CumulativeTableDisclaimer");
+            if (string.IsNullOrEmpty(disclaimer))
+            {
+                return string.Empty;
+            }
+
+            var cumulativeDate = fundClass.CumulativePerformanceDate;
+            var currency = fundClass.UnitCurrency;
+
+            return disclaimer.Replace("{date}", cumulativeDate).Replace("{currency}", currency);
+        }
     }
 }

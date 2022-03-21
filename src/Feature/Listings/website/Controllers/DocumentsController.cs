@@ -22,7 +22,7 @@
             _mvcContext = mvcContext;
         }
 
-        public ActionResult GetDocuments(string documentFolderId, string sortOrder = "ASC", int page = 1, int resultsPerPage = 10)
+        public ActionResult GetDocuments(string documentFolderId, string sortOrder = "ASC", int page = 1, int resultsPerPage = 12)
         {
             if (string.IsNullOrEmpty(documentFolderId))
             {
@@ -64,6 +64,7 @@
                     documentsResponse.SearchResults = documentsResponse.SearchResults.OrderByDescending(x => x.Title);
                 }
 
+                documentsResponse.TotalResults = documentsResponse.SearchResults.Count();
                 documentsResponse.SearchResults = documentsResponse.SearchResults.Skip((page - 1) * resultsPerPage).Take(resultsPerPage);
             }
 
@@ -71,8 +72,7 @@
             {
                 return new HttpNotFoundResult();
             }
-
-            documentsResponse.TotalResults = documentsResponse.SearchResults.Count();
+            
             documentsResponse.StatusCode = 200;
 
             return new JsonCamelCaseResult(documentsResponse, JsonRequestBehavior.AllowGet);

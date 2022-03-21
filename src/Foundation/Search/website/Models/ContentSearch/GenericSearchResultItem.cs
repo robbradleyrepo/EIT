@@ -34,7 +34,7 @@
         [IndexField("_parent")]
         public Guid GenericListingParent { get; set; }
 
-        [IndexField("__Created")]
-        public DateTime Created { get; set; }
+        [IndexField("genericlistingmoduleitem_date")]
+        public DateTime Date { get; set; }
     }
 }

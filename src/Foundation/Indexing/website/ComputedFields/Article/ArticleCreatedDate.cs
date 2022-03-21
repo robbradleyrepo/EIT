@@ -5,6 +5,7 @@
     using LionTrust.Foundation.Indexing.ComputedFields.SharedLogic;
     using Sitecore.ContentSearch;
     using Sitecore.ContentSearch.ComputedFields;
+    using Sitecore.Data.Fields;
 
     public class ArticleCreatedDate : IComputedIndexField
     {
@@ -20,13 +21,9 @@
                 return null;
             }
 
-            var dateValue = item.Fields[Constants.ArticleDate_FieldId]?.Value;
-            if (!string.IsNullOrEmpty(dateValue) && DateTime.TryParse(dateValue, out DateTime date))
-            {
-                return date;
-            }
-
-            return item.Created;
+            DateField dateTimeField = item.Fields[Constants.ArticleDate_FieldId];
+            
+            return ComputedValueHelper.GetDateTimeFieldValue(dateTimeField, item.Created);
         }
     }
 }

@@ -19,6 +19,7 @@
     using System.Web;
     using System.Web.Mvc;
     using static LionTrust.Feature.Onboarding.Constants;
+    using static LionTrust.Foundation.Onboarding.Constants;
 
     public class OnboardingController : SitecoreController
     {
@@ -156,6 +157,7 @@
             }
 
             var data = _context.GetHomeItem<IHome>();
+            var landingPageUrl = string.Empty;
 
             if (data?.OnboardingConfiguration == null)
             {
@@ -172,9 +174,26 @@
                     .Investors?
                     .FirstOrDefault(x => x.Id == OnboardingSubmit.InvestorId);
 
-                OnboardingHelper.AddPointsFromProfileCard(data.OnboardingConfiguration, investor.ProfileCard);
+                IProfileCard profileCard;                
+                if (OnboardingSubmit.Country.Equals(CountryCodes.UK))
+                {
+                    profileCard = investor.ProfileCard;
+                }
+                else
+                {
+                    profileCard = investor.InternationalProfileCard;
+                }
+
+                OnboardingHelper.AddPointsFromProfileCard(data.OnboardingConfiguration, profileCard);
 
                 TrackAnonymousUser(OnboardingSubmit.Country);
+
+                landingPageUrl = investor.LandingPage?.Url;
+            }
+
+            if (!string.IsNullOrEmpty(landingPageUrl))
+            {
+                return Redirect(landingPageUrl);
             }
 
             var uriBuilder = new UriBuilder(Request.Url.ToString());
@@ -260,18 +279,37 @@
 
             using (XConnectClient client = Sitecore.XConnect.Client.Configuration.SitecoreXConnectClientConfiguration.GetClient())
             {
+
                 var contact = OnboardingHelper.GetContact(client);
                 var profile = OnboardingHelper.GetProfile(config.Profile.Name);
+                var investors = config.ChooseInvestorRole?.FirstOrDefault()?.Investors;
+                if (investors == null)
+                {
+                    return false;
+                }
 
                 if (!string.IsNullOrWhiteSpace(contact?.Addresses()?.PreferredAddress?.CountryCode)
                     && profile != null && profile.PatternId.HasValue
-                    && config.ChooseInvestorRole.FirstOrDefault().Investors.Any(p => p.PatternCard.Id == profile.PatternId.Value))
+                    && IsInvestorSelected(investors, profile.PatternId.Value))
                 {
                     result = true;
                 }
             }
 
             return result;
+        }
+
+        private bool IsInvestorSelected(IEnumerable<IInvestor> investors, Guid patternId)
+        {
+            var isUkResident = OnboardingHelper.IsUkResident();            
+
+            if (isUkResident && investors.Any(p => p.PatternCard.Id == patternId) ||
+               !isUkResident && investors.Any(p => p.InternationalPatternCard.Id == patternId))
+            {
+                return true;
+            }
+
+            return false;
         }
 
         private void SetTab(Tabs tab)

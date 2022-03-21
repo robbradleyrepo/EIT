@@ -108,6 +108,7 @@
             public const string GenericListingApiRoute_SettingName = "Feature.Listings.GenericListingApiRoute";
             public const string MediGalleryApiRoute_SettingName = "Feature.Listings.MediaGalleryApiRoute";
             public const string LatestResultApiRoute_SettingName = "Feature.Listings.LatestResultsApiRoute";
+            public const string DateFormat = "dd.MM.yyyy";
         }
 
         public static class DocumentListerVariant

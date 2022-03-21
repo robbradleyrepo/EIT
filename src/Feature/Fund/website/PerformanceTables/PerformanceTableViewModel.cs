@@ -17,6 +17,8 @@
 
         public string HidePerformanceMessage => Sitecore.Globalization.Translate.Text("HidePerformanceMessage");
 
+        public string Disclaimer { get; set; } 
+
         public PerformanceTableViewModel()
         {
             Rows = new PerformanceTableRow[0];

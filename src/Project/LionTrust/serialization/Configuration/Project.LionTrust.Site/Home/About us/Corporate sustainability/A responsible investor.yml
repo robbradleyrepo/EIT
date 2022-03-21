@@ -1,0 +1,114 @@
+﻿---
+ID: "994f3841-bfe7-4fef-8d08-0023bd0a85bc"
+Parent: "bd5f427b-8a99-4fcb-b8e3-cc448d3c816d"
+Template: "ae7e1757-b052-4751-b940-a9712e5247fd"
+Path: /sitecore/content/LionTrustNew/Home/About us/Corporate sustainability/A responsible investor
+DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{B6CB773C-E731-4F36-B72A-AF5BFE57CA6F}">
+          <p:d />
+        </r>
+        <r
+          uid="{30A0A4C8-974F-4822-9DCB-DE14881E0400}"
+          s:ph="main" />
+        <r
+          uid="{9057DD73-496E-495D-9460-75D38BBB5B7E}">
+          <p:d />
+        </r>
+        <r
+          uid="{50FACAA0-F93E-4652-99EA-33AFC98FF0FE}"
+          p:after="*[1=2]"
+          s:id="{C728A955-DA1D-4700-B924-E0D35901DE4B}"
+          s:ph="footer" />
+      </d>
+    </r>
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{BC67911D-0B34-4CD6-A4C0-714394BD4DE9}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{73F72C24-2EEA-4325-AEC1-3A5AF56EA595}"
+              p:before="*"
+              s:ds="{8BFEF092-24A5-4D32-9923-DC411F80202C}"
+              s:id="{7166AE9D-EFBD-48B3-B38F-AFD4CAAB5278}"
+              s:ph="/header/secondary-navigation" />
+            <r
+              uid="{DC2C754B-5759-4BFA-9584-5AB0E36DBE19}"
+              p:after="r[@uid='{73F72C24-2EEA-4325-AEC1-3A5AF56EA595}']"
+              s:ds="{39826CEB-3641-42B7-A4F6-FF210FD980C3}"
+              s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+              s:ph="main" />
+            <r
+              uid="{A5A007E4-DCF2-4C6D-AAF9-A557B47F8E85}"
+              p:after="r[@uid='{DC2C754B-5759-4BFA-9584-5AB0E36DBE19}']"
+              s:ds="{ED81F952-38AB-4528-8115-FCB6224EBDB4}"
+              s:id="{56ECB2D2-5D43-4F0F-A5D1-AC267F249E7B}"
+              s:ph="main" />
+            <r
+              uid="{53FFC186-75DF-411D-9A70-51B45A21B740}"
+              p:after="r[@uid='{A5A007E4-DCF2-4C6D-AAF9-A557B47F8E85}']"
+              s:ds="{8585B5F3-7F05-494E-8F80-C15909F03067}"
+              s:id="{E06589BD-EA4D-48EA-8913-4CB37A690E72}"
+              s:ph="main" />
+            <r
+              uid="{94C4AA69-0130-48D3-AC4A-73475113F552}"
+              p:after="r[@uid='{53FFC186-75DF-411D-9A70-51B45A21B740}']"
+              s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+              s:ph="/header/navigation" />
+            <r
+              uid="{E5418B37-8258-4C2D-B3ED-8DD6049E7A18}"
+              p:after="r[@uid='{94C4AA69-0130-48D3-AC4A-73475113F552}']"
+              s:ds="{8F7AA55E-2569-4646-A28E-7FA325F64C31}"
+              s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+              s:ph="main" />
+            <r
+              uid="{48AD1398-C35B-4BD2-A8E8-2DFA0912E0ED}"
+              p:after="r[@uid='{E5418B37-8258-4C2D-B3ED-8DD6049E7A18}']"
+              s:ds="{9E0E025E-FCA8-4A3B-8AA8-48CB0A21F558}"
+              s:id="{A811D2B0-D08D-4991-A9DD-6D9FA5799CBD}"
+              s:ph="main" />
+            <r
+              uid="{21C3C8C1-837E-4D86-AB29-97C4A9E98178}"
+              p:after="r[@uid='{48AD1398-C35B-4BD2-A8E8-2DFA0912E0ED}']"
+              s:ds="{D2808D97-A6A3-445F-9F1D-4676401522D4}"
+              s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
+              s:ph="header" />
+          </d>
+        </r>
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: A responsible investor | Liontrust Asset Management PLC
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220301T111416Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: A responsible investor
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: A responsible investor

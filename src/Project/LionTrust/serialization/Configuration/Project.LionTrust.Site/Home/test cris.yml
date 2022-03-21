@@ -52,8 +52,14 @@ Languages:
           <d
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
             <r
-              uid="{94C4AA69-0130-48D3-AC4A-73475113F552}"
+              uid="{9EE1B16D-9035-450F-87A3-E6820CCF4119}"
               p:before="*"
+              s:ds="{391F5FB9-37E8-49F6-8125-DA78FBB0B63F}"
+              s:id="{D4B39B2E-0388-46EC-A0E0-72828DBE7406}"
+              s:ph="main" />
+            <r
+              uid="{94C4AA69-0130-48D3-AC4A-73475113F552}"
+              p:after="r[@uid='{9EE1B16D-9035-450F-87A3-E6820CCF4119}']"
               s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
               s:ph="/header/navigation" />
             <r

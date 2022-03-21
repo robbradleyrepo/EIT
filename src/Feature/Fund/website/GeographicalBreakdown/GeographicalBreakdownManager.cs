@@ -25,12 +25,34 @@
                 return new FundBreakdownModel[0];
             }
 
-            if (apiData.SectorBreakdown == null)
+            if (apiData.RegionBreakdown == null)
             {
                 return new FundBreakdownModel[0];
             }
 
             return apiData.RegionBreakdown.Breakdowns.Data.Select(bd => new FundBreakdownModel { Name = bd.Name, Weight = bd.Weight });
+        }
+
+        public string GetDisclaimer(string citiCode, string information)
+        {
+            if (string.IsNullOrEmpty(information))
+            { 
+                return string.Empty;
+            }
+
+            var apiData = _repository.GetData().FirstOrDefault(f => f.CitiCode == citiCode);
+            if (apiData == null)
+            {
+                _repository.SendEmailOnErrorForCiticode(citiCode);
+                return information;
+            }
+
+            if (apiData.RegionBreakdown == null)
+            {
+                return information;
+            }
+
+            return information.Replace("{date}", apiData.RegionBreakdown.Date);
         }
     }
 }

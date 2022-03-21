@@ -21,8 +21,8 @@
             {
                 var query = context.GetQueryable<GenericSearchResultItem>()
                                  .Where(predicate);
-                
-                var results = query.Skip(skip).Take(take).GetResults();
+
+                var results = query.OrderByDescending(x => x.Date).Skip(skip).Take(take).GetResults();
                 
                 if (results == null)
                 {

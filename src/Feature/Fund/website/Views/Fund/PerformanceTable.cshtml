@@ -35,23 +35,40 @@
                             }
                             else
                             {
-                                <td></td>
+                                <td>-</td>
                             }
                         }
                     </tr>
                 }
             </tbody>
-            @if (Model.QuartileRow != null && Model.QuartileRow.Columns.Any())
+            @if (Model.QuartileRow != null && Model.QuartileRow.Columns.Any() && Model.Rows.Count() > 0)
             {
+                var counter = 0;
+                var referenceRow = Model.Rows[0].Columns;
+                var referenceRowCounter = referenceRow != null ? referenceRow.Length : 0;
                 <tfoot>
                     <tr>
                         <td scope="row">@Html.Glass().Editable(Model.Component, m => m.QuartileRowLabel)</td>
-                        @foreach (var item in Model.QuartileRow.Columns.Where(c => c != null))
+                        @foreach (var item in Model.QuartileRow.Columns)
                         {
-                            <td>@item</td>
+                            if (item != null && counter < referenceRowCounter && referenceRow[counter] != null)
+                            {
+                                <td>@item</td>
+                            }
+                            else
+                            {
+                                <td>-</td>
+                            }
+                            counter++;
                         }
                     </tr>
                 </tfoot>
+            }
+            @if (!string.IsNullOrEmpty(Model.Disclaimer))
+            {
+                <caption>
+                    <p class="graph-section__sub">@Html.Glass().Editable(Model, t => t.Disclaimer)</p>
+                </caption>
             }
         </table>
     </div>

@@ -8,5 +8,7 @@
         public IGraphWithHeading Component { get; set; }
 
         public IEnumerable<FundBreakdownModel> Breakdown { get; set; }
+
+        public string Disclaimer { get; set; }
     }
 }
