@@ -61,7 +61,7 @@
                 {
                     if (sfProcess.SFFundList != null && sfProcess.SFFundList.Any())
                     {
-                        var allowedFundList = sfProcess.SFFundList.Where(s => allowedFunds.Contains(s.SFFundId));
+                        var allowedFundList = sfProcess.SFFundList.Where(s => allowedFunds.Contains(s.SFFundId.Substring(0, 15)));
                         sfProcess.SFFundList = allowedFundList?.ToList();
                     }
                 }
