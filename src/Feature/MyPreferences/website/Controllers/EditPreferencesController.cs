@@ -4,6 +4,7 @@
     using LionTrust.Feature.MyPreferences.Models;
     using LionTrust.Feature.MyPreferences.Repositories;
     using LionTrust.Feature.MyPreferences.Services;
+    using LionTrust.Foundation.Analytics.Goals;
     using LionTrust.Foundation.Contact.Managers;
     using LionTrust.Foundation.Contact.Services;
     using Sitecore.Abstractions;
@@ -53,6 +54,7 @@
         public ActionResult Render(EditEmailPreferencesViewModel registerInvestorViewModel)
         {
             var submitSuccess = true;
+            Guid subscriptionGoal = Guid.Empty;
 
             if(registerInvestorViewModel == null || registerInvestorViewModel.DatasourceId == null)
             {
@@ -75,10 +77,12 @@
                     if(registerInvestorViewModel.UnsubscribeAll)
                     {
                         context.Preferences.UnsubscribeAll();
+                        subscriptionGoal = data.UnsubscribeGoal;
                     }   
                     else
                     {
                         context.Preferences.SubscribeAll();
+                        subscriptionGoal = data.SubscribeGoal;
                     }
 
                     context.Preferences.SFProcessList = registerInvestorViewModel.SFProcessList;
@@ -108,6 +112,12 @@
                 redirectUrl = uriBuilder.Uri.PathAndQuery;
             }
 
+            // trigger subscription goal
+            if (subscriptionGoal != Guid.Empty)
+            {
+                Helper.TriggerGoal(new Sitecore.Data.ID(subscriptionGoal));
+            }
+            
             return Redirect(redirectUrl);
         }
     }

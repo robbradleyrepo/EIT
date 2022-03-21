@@ -60,6 +60,7 @@
 
             public static class RetrievePreferences
             {
+                public const string RetrievePreferencesGoal_FieldId = "{4C1DF9CD-198D-45E5-9092-A5E21BDF5A25}";
                 public const string BannerTitle_FieldId = "{EB8323F3-80D2-40F8-915A-EC5771D8A940}";
                 public const string BannerCTAText = "{25568FA2-E0DC-40BC-B0C7-63FBAFC8E30B}";
                 public const string IntroductionText = "{66D371DB-D7AC-42A0-8A6C-A932C85DB406}";
@@ -98,6 +99,8 @@
             public const string SubmitCTAText_FieldId = "{6AFBB9DE-8C3E-49E1-A38E-78124BC073C1}";
             public const string GenericError_FieldId = "{B00A7599-FD4A-493A-899C-16095ECDE601}";
             public const string SuccessPage_FieldId = "{71F7C4F1-2285-48C3-A4EC-98E732B394E2}";
+            public const string SubscribeGoal_FieldId = "{A8C59081-6C37-45DD-9BCF-AB882E8B90C1}";
+            public const string UnsubscribeGoal_FieldId = "{47EAB133-5A65-4454-98A3-43911EF21464}";
         }
 
         public static class SitecoreTokens
