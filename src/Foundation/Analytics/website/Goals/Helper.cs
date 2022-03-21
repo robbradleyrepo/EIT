@@ -13,23 +13,29 @@ namespace LionTrust.Foundation.Analytics.Goals
                 Tracker.StartTracking();
             }
 
-            if (Tracker.IsActive && Tracker.Current.CurrentPage != null)
+            if (!Tracker.IsActive || Tracker.Current.CurrentPage == null)
             {
-                var goalItem = Sitecore.Context.Database.GetItem(goalId);
-                if (goalItem != null)
-                {
-                    var goalTrigger = Tracker.MarketingDefinitions.Goals[goalItem.ID.ToGuid()];
-                    if (goalTrigger != null)
-                    {
-                        var goalEventData = Tracker.Current.CurrentPage.RegisterGoal(goalTrigger);
-                        goalEventData.Data = goalItem["Name"];
-                        goalEventData.ItemId = goalItem.ID.ToGuid();
-                        goalEventData.DataKey = goalItem.Paths.Path;
-                        goalEventData.Text = goalItem["Description"];
-                        Tracker.Current.Interaction.AcceptModifications();
-                    }
-                }
+                return;
             }
+
+            var goalItem = Sitecore.Context.Database.GetItem(goalId);
+            if (goalItem == null)
+            {
+                return;
+            }
+
+            var goalTrigger = Tracker.MarketingDefinitions.Goals[goalItem.ID.ToGuid()];
+            if (goalTrigger == null)
+            {
+                return;
+            }
+
+            var goalEventData = Tracker.Current.CurrentPage.RegisterGoal(goalTrigger);
+            goalEventData.Data = goalItem["Name"];
+            goalEventData.ItemId = goalItem.ID.ToGuid();
+            goalEventData.DataKey = goalItem.Paths.Path;
+            goalEventData.Text = goalItem["Description"];
+            Tracker.Current.Interaction.AcceptModifications();
         }
     }
 }
