@@ -1,0 +1,36 @@
+﻿---
+ID: "bcbde7ab-0122-4197-9d3c-5f89303866eb"
+Parent: "6232eaed-c653-4e81-b52b-9d269a3267fd"
+Template: "73ba8165-b3ff-429e-9268-b91fafced6b9"
+Path: "/sitecore/content/LionTrustNew/Home/Investor Relations/Results/_Local/UI010 - Quick Links/QuickLinkCTA 3"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{FCEB5A0B-10A9-488F-82D0-9ED5E9978BB0}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220202T160116Z
+    - ID: "2daf00e2-b3e8-4bb2-836a-c47f505ee481"
+      Hint: QuickLinkCTA_Link
+      Value: |
+        <link text="See more" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{21987809-B3E3-40D3-99DA-C2C675D339AD}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "7ff41320-58c1-4a05-b2c5-dd1e4f9c2191"
+      Hint: QuickLinkCTA_Description
+      Value: Find out about our next AGM.
+    - ID: "c0a0281f-cfe6-45e1-a095-b02d109a8952"
+      Hint: QuickLinkCTA_Image
+      Value: |
+        <image mediaid="{151CB697-B7F9-4F42-BB8A-98B7B00BE053}" />
+    - ID: "d6596c9a-e05a-49dd-98e6-7ba505d79842"
+      Hint: QuickLinkCTA_Title
+      Value: Annual General Meeting
