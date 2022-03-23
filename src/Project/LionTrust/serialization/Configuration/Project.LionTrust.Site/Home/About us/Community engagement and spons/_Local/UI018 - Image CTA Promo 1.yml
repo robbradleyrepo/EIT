@@ -1,0 +1,45 @@
+﻿---
+ID: "47841def-4814-4916-8c16-56ed1eceac1d"
+Parent: "6fed4428-43cc-4f89-9195-f4e7db8a448b"
+Template: "d3d9d2ce-b2ce-49ac-b50d-6a5ffd4c4ab8"
+Path: "/sitecore/content/LionTrustNew/Home/About us/Community engagement and sponsorships/_Local/UI018 - Image CTA Promo 1"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 700
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1054e4b6-1cf5-4c08-8a6d-d9b02fb17050"
+      Hint: ImageCTAPromo_Image
+      Value: |
+        <image mediaid="{E743F194-939D-4EDF-B4EC-C54B318930BF}" ></image>
+    - ID: "143867db-9bba-4097-9eb4-0099c175ad91"
+      Hint: ImageCTAPromo_CTALink
+      Value: |
+        <link text="Find out more" linktype="external" url="https://www.tuskliontrail.com/london-pride/" anchor="" target="" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220224T135556Z
+    - ID: "48bf236b-0681-4a09-9085-4933fa1c4a7a"
+      Hint: ImageCTAPromo_Body
+      Value: |
+        <p style="background: white; margin-bottom: 10.5pt;"><span style="color: #222222;">Liontrust is proud to have supported the Tusk Lion Trail 2021 by sponsoring the lion statue that lived outside the National Gallery in Trafalgar Square. The event was part of a global celebration of lions, the people who live alongside them and the conservation work in Africa. Forty seven life-sized lion sculptures, designed and made by artists, musicians and sportspeople, were placed around the world, including in London, as part of the Trail.</span></p>
+        <p style="background: white; margin-bottom: 10.5pt;"><span style="color: #222222;">We are honoured that the Liontrust lion that lived in Trafalgar Square was been painted by the legendary comedian John Cleese and his wife Jen Wade. The rainbow colours signify hope, dreams and magic. The fish is the symbol of John Cleese&rsquo;s wife.</span></p>
+        <p style="background: white; margin-bottom: 10.5pt;"><span style="color: #222222;"></span><span style="color: #222222;">Watch legendary John Cleese and Jen Wade chat about the inspiration behind their painting of the Liontrust lion in Trafalgar Square for Tusk. Lion conservation is vital and a long-term cause for Liontrust, and we're proud to support Tusk's Lion Trail in 2021</span></p>
+    - ID: "4f8e0e85-38f1-4ab6-9ad6-dce0008c8304"
+      Hint: ImageCTAPromo_TextAlignment
+      Value: "{79DA2651-4E23-42A5-B5B0-94E416E1A3E7}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "7a84ea30-ff24-4c46-ae8f-51fcff940663"
+      Hint: ImageCTAPromo_Title
+      Value: Tusk Lion Trail
+    - ID: "94eb1b3f-6b14-4a34-9b12-62dbed7a269e"
+      Hint: ImageCTAPromo_TitleColor
+      Value: "{CAB398B8-B1BE-4F5E-99EA-387D1B46F231}"

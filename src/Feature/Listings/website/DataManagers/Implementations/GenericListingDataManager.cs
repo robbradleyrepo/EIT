@@ -113,9 +113,7 @@
                 ImageUrl = x.Document.GenericListingImage,
                 Subtitle = x.Document.GenericListingSubtitle,
                 Title = x.Document.GenericListingTitle,
-                Date = (x.Document.Date != null && x.Document.Date != DateTime.MinValue)
-                      ? x.Document.Date.ToString(Constants.Settings.DateFormat)
-                      : x.Document.Created.ToString(Constants.Settings.DateFormat),
+                Date = x.Document.Date.ToString(Constants.Settings.DateFormat),
                 Text = x.Document.GenericListingText,
                 Type = x.Document.GenericListingType
             });

@@ -91,9 +91,15 @@ Languages:
     - ID: "0d831d08-90c7-4e31-b880-5a93146b3029"
       Hint: NavigationRoot_ContactUsPage
       Value: "{CF40B93D-4888-46CC-A347-CA2308385946}"
+    - ID: "15999105-600f-43fb-b206-ed93304a98e6"
+      Hint: NavigationRoot_YouAreViewingLabel
+      Value: You are viewing as
     - ID: "16512055-116d-48b5-936c-eca678249335"
       Hint: OnboardingConfigurationRoot_OnboardingConfiguration
       Value: "{BDC1F34D-BBD9-4887-81DF-2EB5DB933504}"
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Home | Liontrust Asset Management PLC
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20210517T163406Z
@@ -114,6 +120,12 @@ Languages:
     - ID: "6f6a49b5-c780-4ede-9eb4-9ea509204434"
       Hint: NavigationRoot_MyPreferences
       Value: "{D2857E0A-9589-4025-AEC5-6005FDD6BF4A}"
+    - ID: "7f2de5b0-73f0-47aa-bbd4-5f3fe1b654ed"
+      Hint: NavigationRoot_LionHubAllowedInvestors
+      Type: Multilist
+      Value: |
+        {D0F5427B-B0C1-4831-90A1-03F75D8BB406}
+        {41B064A1-4E7C-45A4-AA02-92E3BF941D3D}
     - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
       Hint: LegacyPresentationBase_ShortDescription
       Value: Liontrust is an Asset Management company
@@ -125,11 +137,22 @@ Languages:
       Value: "{8AF83FDB-F9D8-4B35-8C8E-C0F9465ED7B2}"
     - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
       Hint: LegacyPresentationBase_PageTitle
-      Value: LionTrust
+      Value: Home
+    - ID: "b2bae7e0-2869-41b5-9466-961c0e7068eb"
+      Hint: NavigationRoot_MyLiontrustAllowedInvestors
+      Type: Multilist
+      Value: "{E86157CA-78B9-4DB6-9A06-E40BEF9C55AC}"
     - ID: "b810a405-73f4-48cc-af61-778c82531262"
       Hint: NavigationRoot_MyLionTrust
       Value: |
-        <link linktype="external" text="My Liontrust" url="https://www.liontrust.co.uk/how-to-invest/my-liontrust" anchor="" target="" />
+        <link text="My Liontrust" linktype="external" url="https://portal.myliontrust.co.uk/logon" anchor="" target="" />
+    - ID: "c97f99b9-6ab9-4191-9ef9-f3036f098180"
+      Hint: NavigationRoot_LionHubAllowedPages
+      Type: Treelist
+      Value: |
+        {7E9E8706-F864-48E5-B4A2-57F2C408EFD7}
+        {D82BA38B-5FD6-4932-84D8-53606239F77B}
+        {433D1654-8640-4171-96F1-275B519BD8D7}
     - ID: "e27b5db1-ce93-4cb1-ba69-f78556aacaf0"
       Hint: NavigationRoot_FooterConfiguration
       Value: "{8362F08B-C427-4B66-B703-EB98AC1D9183}"
@@ -141,3 +164,7 @@ Languages:
       Hint: Identity_Logo
       Value: |
         <image mediaid="{98A09831-DF76-4BFA-A05E-2EE4C55405D4}" ></image>
+    - ID: "fccf538e-8305-4c6a-9fd8-12998b4fa850"
+      Hint: NavigationRoot_LionHub
+      Value: |
+        <link text="LionHub" linktype="external" url="https://lionhub.liontrust.co.uk/" anchor="" target="" />

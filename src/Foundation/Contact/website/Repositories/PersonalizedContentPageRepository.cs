@@ -56,6 +56,7 @@
                         sfDataObj.LastName = sfEmailPref.LastName;
                         sfDataObj.SalesforceOrgId = sfEmailPref.SFOrgId;
                         sfDataObj.SalesforceFundIds = sfFundIdList;
+                        sfDataObj.Unsubscribed = sfEmailPref.Unsubscribe;
 
                         //Save relavant Salesforce data in Sitecore contact facet                        
                         _sitecoreContactUtility.SaveCustomSFDataIntoS4SInfoFacet(scVisitorId, sfDataObj);

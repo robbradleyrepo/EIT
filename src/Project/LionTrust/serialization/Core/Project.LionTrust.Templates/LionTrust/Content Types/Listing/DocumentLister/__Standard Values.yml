@@ -4,6 +4,11 @@ Parent: "ffece620-590d-4652-bd9d-a3436971690e"
 Template: "ffece620-590d-4652-bd9d-a3436971690e"
 Path: /sitecore/templates/Project/LionTrust/Content Types/Listing/DocumentLister/__Standard Values
 DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{66E09D5B-4F8E-4313-9DF3-FA7E53FBE83A}"
 Languages:
 - Language: en
   Versions:

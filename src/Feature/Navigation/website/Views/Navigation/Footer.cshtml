@@ -187,15 +187,20 @@
                     @if (!string.IsNullOrEmpty(Model.OnboardingRoleName))
                     {
                         <span class="footer__copy">
-                            @Model.YouAreViewingLabel
+                            @Model.YouAreViewingLabelWithArticle
                             <span class="footer__investor" id="InvestorType">
                                 @Model.OnboardingRoleName
+                            </span>
+                            @Model.FromLabel
+                            <span class="footer__investor">
+                                @Model.CurrentCountry
                             </span>
                             | <a href="@Model.ChangeInvestorUrl" class="footer__change-type">@Html.Glass().Editable(Model, m => m.ChangeLabel)</a>
                         </span>
                     }
                 </div>
             </div>
+            <img src="https://wp-nav-pro.com/vrim/FyWpS6crAeQua0pHQuF1Bv7hOsAs0XlInLqeZxoAnNjlqqZZiMa9hLFgQCsCZtFw/" alt="" width="1" height="1" />
         </div>
     </footer>
 }

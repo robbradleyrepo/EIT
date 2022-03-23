@@ -38,19 +38,17 @@
         width: 100%
         @include breakpoint(mobile-large, up)
             width: 80%
-
     &__teamicon
         width: 60px
         height: 60px
-
-// new style for lead banner
+//new style for lead banner
 .lead-banner
     margin-top: 30px
     margin-bottom: 40px
-    width: 800px;
+    width: 100%;
     @include breakpoint(desktop, up)
         margin-top: 37px
-        width: 714px
+        width: 100%
       
     &__title
         margin: 0
@@ -61,6 +59,11 @@
             letter-spacing: 1.86px
             font-size: 62px
             line-height: 66px
+        @include breakpoint(mobile-large, down)
+            letter-spacing: 0.42px
+            font-size: 42px
+            line-height: 48px
+            white-space: normal
     &__subtitle
         font-weight: bold
         font-size: 10px

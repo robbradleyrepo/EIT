@@ -41,14 +41,14 @@
             else
             {
                 viewModel.Years = new List<string>();
-                var years = viewModel.Data.DocumentVariants.GroupBy(x => x.Date).OrderByDescending(x => x.Key);
-                viewModel.FirstYear = years.FirstOrDefault().Key.ToString("yyyy");
+                var years = viewModel.Data.DocumentVariants.Where(x => x.Date != DateTime.MinValue).GroupBy(x => x.Date.Year).OrderByDescending(x => x.Key);
+                viewModel.FirstYear = Convert.ToString(years.FirstOrDefault().Key);
                 viewModel.DocumentsByYears = new List<DocumentVariantYears>();
                 DocumentVariantYears tmpDocumentVariantYear;
                 foreach (var year in years)
                 {
                     tmpDocumentVariantYear = new DocumentVariantYears();
-                    tmpDocumentVariantYear.Year = year.Key.ToString("yyyy");
+                    tmpDocumentVariantYear.Year = Convert.ToString(year.Key);
                     viewModel.Years.Add(tmpDocumentVariantYear.Year);
                     tmpDocumentVariantYear.Documents = new List<IDocumentVariant>();
 
@@ -57,6 +57,7 @@
                         tmpDocumentVariantYear.Documents.Add(document);
                     }
 
+                    tmpDocumentVariantYear.Documents = tmpDocumentVariantYear.Documents.OrderByDescending(x => x.Date).ToList();
                     viewModel.DocumentsByYears.Add(tmpDocumentVariantYear);
                 }
 

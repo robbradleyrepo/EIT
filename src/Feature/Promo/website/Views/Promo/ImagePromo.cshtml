@@ -34,9 +34,9 @@
                     <div class="imagepromo__headbox text">
                         <h2 class="@titleColor">@Html.Glass().Editable(Model, x => x.Heading)</h2>
                     </div>
-                    <p class="imagepromo__contentbox @(Model.TextColour != null ? Model.TextColour.Value : "text-white")">
+                    <div class="imagepromo__contentbox @(Model.TextColour != null ? Model.TextColour.Value : "text-white")">
                         @Html.Glass().Editable(Model, x => x.Body)
-                    </p>
+                    </div>
 
                     <div class="imagepromo__btnbox">
                         @using (Html.Glass().BeginRenderLinkWithGoal(Model, m => m.PrimaryCTALink, Model.PrimaryCTAGoal, new NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))

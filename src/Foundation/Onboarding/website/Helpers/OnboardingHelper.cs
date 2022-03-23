@@ -1,5 +1,5 @@
 ﻿namespace LionTrust.Foundation.Onboarding.Helpers
-{
+{    
     using LionTrust.Foundation.Onboarding.Models;
     using Sitecore.Abstractions;
     using Sitecore.Analytics;
@@ -21,6 +21,7 @@
     using Sitecore.Web;
     using Sitecore.Analytics.Pipelines.InitializeInteractionProfile;
     using ContactIdentifier = Sitecore.Analytics.Model.Entities.ContactIdentifier;
+    using LionTrust.Foundation.ORM.Models;
 
     public static class OnboardingHelper
     {
@@ -49,6 +50,26 @@
             }
 
             return string.Empty;
+        }
+
+        public static string ViewingLabelWithArticle(string viewingLabel, string profileName)
+        {
+            char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
+
+            if (!string.IsNullOrEmpty(profileName) && !string.IsNullOrEmpty(viewingLabel))
+            {
+                char firstCharacter = profileName.ToLower().ToCharArray().ElementAt(0);
+                if (vowels.Contains(firstCharacter))
+                {
+                    return $"{viewingLabel} an";
+                }
+                else
+                {
+                    return $"{viewingLabel} a";
+                }
+            }
+
+            return viewingLabel;
         }
 
         public static IInvestor GetCurrentContactInvestor(IMvcContext context, BaseLog log)
@@ -404,7 +425,11 @@
 
             var uriBuilder = new UriBuilder(HttpContext.Current.Request.Url.ToString());
             var query = HttpUtility.ParseQueryString(uriBuilder.Query);
-            query.Add(QueryStringNames.Change, bool.TrueString.ToLower());
+            if (!(query.HasKeys() && query.AllKeys.Contains(QueryStringNames.Change)))
+            {
+                query.Add(QueryStringNames.Change, bool.TrueString.ToLower());
+            }
+            
             uriBuilder.Query = query.ToString();
 
             return uriBuilder.Uri.PathAndQuery;
@@ -429,6 +454,34 @@
             }
 
             return $"{definiteArticle}{country.CountryName}";
+        }
+
+        public static bool ShowMyLiontrust(IMvcContext context, BaseLog log, IEnumerable<IInvestor> allowedInvestors)
+        {
+            var currentInvestor = GetCurrentContactInvestor(context, log);
+            if (currentInvestor == null || !allowedInvestors.Any(i => i.Id.Equals(currentInvestor.Id)))
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public static bool ShowLionHub(IMvcContext context, BaseLog log, IEnumerable<IInvestor> allowedInvestors, IEnumerable<IGlassBase> allowedPages)
+        {
+            var currentInvestor = GetCurrentContactInvestor(context, log);
+            if (currentInvestor == null || !allowedInvestors.Any(i => i.Id.Equals(currentInvestor.Id)))
+            {
+                return false;
+            }
+
+            var currentPage = context.GetContextItem<IGlassBase>();
+            if (currentPage == null || !allowedPages.Any(p => p.Id.Equals(currentPage.Id)))
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }

@@ -1,0 +1,36 @@
+﻿---
+ID: "17d82551-28ce-4135-a5f0-33b580a77405"
+Parent: "c614ba55-3330-4f94-bafc-060ed4350dc7"
+Template: "bc775c7d-48c1-4f1b-865a-fecab210dbe3"
+Path: "/sitecore/content/LionTrustNew/Home/About us/Corporate sustainability/Climate change and the environment/_Local/UI013 - Page Promo Lister/PagePromoItem"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1058a56c-86ff-4783-a8d2-00c2217cc7ff"
+      Hint: PagePromoItem_Heading
+      Value: Human Rights
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220228T212809Z
+    - ID: "5db6612c-40ef-44f7-996b-da07fced5370"
+      Hint: PagePromoItem_CTA
+      Value: |
+        <link text="Find out more" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{DBD81B93-4987-4084-A9B9-A3E9012AD915}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "f8de397f-fe55-4664-894d-8144b77b455a"
+      Hint: PagePromoItem_Text
+      Value: Liontrust’s policies are consistent with internationally recognised human rights principles such as the UN Global Compact. We comply with applicable human rights legislation in the countries where we operate.
+    - ID: "fdcbfc89-a522-4029-a2ce-648e272372d1"
+      Hint: PagePromoItem_Image
+      Value: |
+        <image mediaid="{1F1B6AAA-A157-4CC0-A4DA-767EDC7DAEEF}" />

@@ -1,0 +1,36 @@
+﻿---
+ID: "4681ef31-f78a-43e0-9c53-7a89b9d3a050"
+Parent: "a08172a5-b2b3-445c-97f7-a51010e77d9c"
+Template: "bc775c7d-48c1-4f1b-865a-fecab210dbe3"
+Path: "/sitecore/content/LionTrustNew/Home/About us/Corporate sustainability/Good corporate citizen/_Local/UI013 - Page Promo Lister/PagePromoItem"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 600
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1058a56c-86ff-4783-a8d2-00c2217cc7ff"
+      Hint: PagePromoItem_Heading
+      Value: People, Diversity and Inclusion
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220228T212753Z
+    - ID: "5db6612c-40ef-44f7-996b-da07fced5370"
+      Hint: PagePromoItem_CTA
+      Value: |
+        <link text="Find out more" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{FA159FF9-EB0D-48EE-AD84-FE47A2370B46}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jackh
+    - ID: "f8de397f-fe55-4664-894d-8144b77b455a"
+      Hint: PagePromoItem_Text
+      Value: We are proud of the people who work at Liontrust and we invest in their training, qualifications and development as part of our strategy to retain talented fund managers and employees.
+    - ID: "fdcbfc89-a522-4029-a2ce-648e272372d1"
+      Hint: PagePromoItem_Image
+      Value: |
+        <image mediaid="{21D9D743-1461-4BB3-A264-65DF83C0DEE6}" />

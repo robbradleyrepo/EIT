@@ -38,6 +38,11 @@ export default () => {
     // set country
     $(".set-location__item").on("click", (e) => {
         SetCountry(e);
+		var $goalId = e.target.dataset.goalTrigger;
+		if ($goalId != undefined && $goalId !== "00000000-0000-0000-0000-000000000000") {
+			var $goalURL = "https://" + document.domain + "/-/media/foundation/analytics/pixel?sc_trk=" + $goalId;
+			$.get($goalURL);
+		}
         showTab(2);
     });
     $('.onboarding-overlay__link').on('click', function() {
