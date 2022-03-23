@@ -29,8 +29,6 @@
             var request = new ArticleSearchRequest
             {
                 Categories = topics,
-                FromDate = DateTime.MinValue,
-                ToDate = DateTime.MaxValue,
                 Take = int.MaxValue,
                 DatabaseName = _mvcContext.SitecoreService.Database.Name,
                 FundManagers = fundManagers
@@ -57,9 +55,7 @@
                 FundTeams = fundTeams?.Select(ft => ft.ToString().Replace("-", string.Empty)),
                 FundManagers = fundManagers?.Select(fm => fm.ToString().Replace("-", string.Empty)),
                 Take = 6,
-                DatabaseName = databaseName,
-                FromDate = DateTime.MinValue,
-                ToDate = DateTime.MaxValue
+                DatabaseName = databaseName
             };
 
             var results = _searchService.GetDatedTaxonomyRelatedArticles(request, result => result.OrderByDescending(hit => hit.Created));

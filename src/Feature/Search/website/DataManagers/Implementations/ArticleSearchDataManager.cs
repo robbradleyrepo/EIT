@@ -166,16 +166,11 @@
 
         public ISearchResponse<ITaxonomyContentResult> GetArticleListingResponse(string database, string contentTypes, string funds, string categories, string fundManagers, string fundTeams, int? month, int? year, string searchTerm, string sortOrder, int page, int take = 12)
         {
-            var fromYear = year ?? 2000;
-            var fromMonth = month ?? 1;
-            var toYear = year ?? DateTime.Now.Year + 1;
-            var toMonth = month ?? 12;
             page = page - 1;
 
             var articleSearchRequest = new ArticleSearchRequest
             {
                 DatabaseName = database,
-                FromDate = new DateTime(fromYear, fromMonth, 1),
                 ContentTypes = contentTypes?.Split('|'),
                 Funds = funds?.Split('|'),
                 Categories = categories?.Split('|'),
@@ -184,7 +179,8 @@
                 SearchTerm = searchTerm,
                 Skip = page * take,
                 Take = take,
-                ToDate = new DateTime(toYear, toMonth, DateTime.DaysInMonth(toYear, toMonth))
+                Month = month,
+                Year = year
             };
 
             ContentSearchResults<ArticleSearchResultItem> contentSearchResults;

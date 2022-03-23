@@ -272,11 +272,13 @@ export default () => {
       setMonth(month) {
         if (month === "All") this.params.month = [];
         else this.params.month = [month];
+		this.activeButton = true;
       },
 
       setYear(year) {
         if (year === "All") this.params.year = [];
         else this.params.year = [year];
+		this.activeButton = true;
       },
 
       showSort() {
