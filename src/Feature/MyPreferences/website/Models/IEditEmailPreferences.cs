@@ -1,5 +1,6 @@
 ﻿using Glass.Mapper.Sc.Configuration.Attributes;
 using LionTrust.Foundation.ORM.Models;
+using System;
 
 namespace LionTrust.Feature.MyPreferences.Models
 {
@@ -28,5 +29,11 @@ namespace LionTrust.Feature.MyPreferences.Models
 
         [SitecoreField(Constants.EditPreferences.SubmitCTAText_FieldId)]
         string SubmitCTAText { get; set; }
+
+        [SitecoreField(Constants.EditPreferences.SubscribeGoal_FieldId)]
+        Guid SubscribeGoal { get; set; }
+
+        [SitecoreField(Constants.EditPreferences.UnsubscribeGoal_FieldId)]
+        Guid UnsubscribeGoal { get; set; }
     }
 }

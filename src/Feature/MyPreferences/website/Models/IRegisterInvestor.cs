@@ -2,6 +2,7 @@
 {
     using Glass.Mapper.Sc.Configuration.Attributes;
     using LionTrust.Foundation.ORM.Models;
+    using System;
 
     public interface IRegisterInvestor : IGlassBase
     {
@@ -113,5 +114,8 @@
 
         [SitecoreField(Constants.RegisterInvestor.RetrievePreferences.EmailNotRecognized)]
         string RetrievePreferencesEmailNotRecognized { get; set; }
+
+        [SitecoreField(Constants.RegisterInvestor.RetrievePreferences.RetrievePreferencesGoal_FieldId)]
+        Guid RetrievePreferencesGoal { get; set; }
     }
 }
