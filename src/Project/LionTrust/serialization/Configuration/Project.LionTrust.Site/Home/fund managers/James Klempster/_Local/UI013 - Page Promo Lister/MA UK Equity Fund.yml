@@ -1,0 +1,36 @@
+﻿---
+ID: "c77f79aa-107e-44c3-bc8c-1259e5c6000e"
+Parent: "42d9963a-05ab-4528-8711-194deebc225e"
+Template: "bc775c7d-48c1-4f1b-865a-fecab210dbe3"
+Path: "/sitecore/content/LionTrustNew/Home/fund managers/James Klempster/_Local/UI013 - Page Promo Lister/MA UK Equity Fund"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 600
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1058a56c-86ff-4783-a8d2-00c2217cc7ff"
+      Hint: PagePromoItem_Heading
+      Value: MA UK Equity Fund
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220215T124848Z
+    - ID: "5db6612c-40ef-44f7-996b-da07fced5370"
+      Hint: PagePromoItem_CTA
+      Value: |
+        <link text="View fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{651FCFCC-0E28-40B2-9E94-4A75012C036B}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "f8de397f-fe55-4664-894d-8144b77b455a"
+      Hint: PagePromoItem_Text
+      Value: The Fund is an actively managed fund of funds that seeks to achieve capital growth. The underlying funds will primarily invest in shares listed on the UK stock market.
+    - ID: "fdcbfc89-a522-4029-a2ce-648e272372d1"
+      Hint: PagePromoItem_Image
+      Value: |
+        <image mediaid="{2CB3F978-2808-47D2-8208-AE557E654285}" />

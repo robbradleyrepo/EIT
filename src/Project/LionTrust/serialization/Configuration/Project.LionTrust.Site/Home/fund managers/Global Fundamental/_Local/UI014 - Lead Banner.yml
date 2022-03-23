@@ -1,0 +1,32 @@
+﻿---
+ID: "d42e1105-2871-4da4-a58d-e36a12b1d027"
+Parent: "3f87cf70-e5b5-42dc-aebb-ddb408b3537d"
+Template: "1d2058b8-c7a2-4d41-8fdf-61ac3b786798"
+Path: "/sitecore/content/LionTrustNew/Home/fund managers/Global Fundamental/_Local/UI014 - Lead Banner"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{073F3B35-9AAF-430C-92C1-B9FA029104B4}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210601T085622Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "94768d3e-7666-4642-8de4-82784372ec45"
+      Hint: LeadBanner_BackgroundImage
+      Value: |
+        <image mediaid="{0B4E63DA-7835-4266-B5BC-B60983BCBA1E}" />
+    - ID: "a9684a39-4c0e-42df-8066-59be90678b54"
+      Hint: LeadBanner_Title
+      Value: Global Fundamental team
+    - ID: "f5081545-46e8-4dc6-a479-ce094ade09de"
+      Hint: LeadBanner_Body
+      Value: 

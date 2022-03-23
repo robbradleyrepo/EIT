@@ -1,0 +1,36 @@
+﻿---
+ID: "899e57ec-5f77-4859-8942-780707558e50"
+Parent: "b4ef44d8-360c-4f39-827d-6e6ffec0c7da"
+Template: "bc775c7d-48c1-4f1b-865a-fecab210dbe3"
+Path: "/sitecore/content/LionTrustNew/Home/fund managers/John Husselbee/_Local/UI013 - Page Promo Lister/MA Blended Funds"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1058a56c-86ff-4783-a8d2-00c2217cc7ff"
+      Hint: PagePromoItem_Heading
+      Value: MA Blended Funds
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220214T172726Z
+    - ID: "5db6612c-40ef-44f7-996b-da07fced5370"
+      Hint: PagePromoItem_CTA
+      Value: |
+        <link text="View MA Blended fund range" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{611C1EE8-1332-41D8-B459-D05CAE7497F7}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "f8de397f-fe55-4664-894d-8144b77b455a"
+      Hint: PagePromoItem_Text
+      Value: "A range of target risk funds offering a cost-effective investment solution with the potential to outperform."
+    - ID: "fdcbfc89-a522-4029-a2ce-648e272372d1"
+      Hint: PagePromoItem_Image
+      Value: |
+        <image mediaid="{2CB3F978-2808-47D2-8208-AE557E654285}" />

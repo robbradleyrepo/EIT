@@ -1,0 +1,35 @@
+﻿---
+ID: "c00e11a8-dad9-49b0-8732-602353468f74"
+Parent: "1ca9b55a-a347-4618-bbd5-353912f396cc"
+Template: "c83df526-c557-4146-bef9-f4e891ac7721"
+Path: "/sitecore/content/LionTrustNew/Home/fund managers/Paul Kim/_Local/UI007 - MA tools"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220322T184418Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "85b43a42-e9ac-4634-b11d-a69a2a3e3d6c"
+      Hint: PromoBanner_MarginsContainer
+      Value: "{C433C09B-1CC2-4B78-A43E-F6A5AB4937D2}"
+    - ID: "8bb7fcd3-f2a0-416d-8be8-7bf2e3027597"
+      Hint: PromoBanner_Body
+      Value: Discover our risk profiling and fund tools.
+    - ID: "9b69e8cf-c2bc-4d89-89f0-7ba153cf8d59"
+      Hint: PromoBanner_Heading
+      Value: "Multi-Asset tools"
+    - ID: "d9e5b74a-e0de-4ce9-b90c-cb226207d225"
+      Hint: PromoBanner_PrimaryCTALink
+      Value: |
+        <link linktype="external" text="Find out more" url="https://tools.liontrust.co.uk/en/global/advisers/risk-profiler/landing/" anchor="" target="_blank" />
+    - ID: "dc4d7aea-7e87-4ab5-9fbb-2a96ecafe1d8"
+      Hint: PromoBanner_BackgroundImage
+      Value: |
+        <image mediaid="{B605A54D-7DBD-4DEF-B161-E3208453A748}" />

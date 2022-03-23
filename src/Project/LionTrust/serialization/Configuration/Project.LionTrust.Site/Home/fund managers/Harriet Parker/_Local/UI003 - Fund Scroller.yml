@@ -1,0 +1,36 @@
+﻿---
+ID: "3b8c1d3b-e879-4ee7-aff5-7e21e6a6fb52"
+Parent: "c30d2e38-e94a-4bd8-b769-c629cf690c6d"
+Template: "f91bff52-8afb-4056-bbf3-84c16924b92d"
+Path: "/sitecore/content/LionTrustNew/Home/fund managers/Harriet Parker/_Local/UI003 - Fund Scroller"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220302T113245Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "8e11c5f7-1fca-4a99-ad05-b81511f973d9"
+      Hint: FundScroller_Heading
+      Value: Sustainable Investment funds
+    - ID: "dd98d557-6e80-4ffb-9e13-498e29de5566"
+      Hint: FundScroller_Funds
+      Type: Multilist
+      Value: |
+        {AD3BB77C-D594-422F-81BB-9B6856D8953F}
+        {EEF5C9FD-444C-4C68-9544-6DB766182F61}
+        {CDF0E61F-2535-4486-9183-6A093254A7E9}
+        {C2095FE1-D6B7-4592-AAE7-C46994E21D3B}
+        {01013679-A90F-4C97-B734-0B4CB72BEF56}
+        {FC89CAC1-0261-4E99-9C79-956E34A50251}
+        {6CB4E6E0-8764-4A8A-9155-153E5DB4738A}
+        {8FE8F95A-8609-4C3E-BA69-BCF56A8017F4}
+        {83BDAC7D-3E51-42B2-8F2B-71E0258485C6}
+        {5CAD19A4-02B6-4E8B-954D-EA6DBABF3258}
+        {CAB2FB23-6928-475A-B0CF-EA5BA70EE2CA}

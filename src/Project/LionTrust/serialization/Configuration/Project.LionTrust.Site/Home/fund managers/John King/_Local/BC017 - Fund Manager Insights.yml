@@ -1,0 +1,46 @@
+﻿---
+ID: "a9c7d22e-13b8-48e6-91ca-50cd7c4d92e6"
+Parent: "286730a7-1d81-448d-9509-2e9d01b49fc5"
+Template: "e14137dc-817e-40c3-b833-80c4824d2ff6"
+Path: "/sitecore/content/LionTrustNew/Home/fund managers/John King/_Local/BC017 - Fund Manager Insights"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0e5031b3-9232-42be-82d4-05579d7827d9"
+      Hint: ArticleSearchParameters_FundTeams
+      Type: Multilist
+      Value: "{1815CF59-949C-4DF9-98EF-66DBFEEE5832}"
+    - ID: "1492465c-0e3c-4fdb-97b8-0fc76924e400"
+      Hint: FundManagerInsightsBase_Heading
+      Value: Latest insights
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220222T155257Z
+    - ID: "550b2192-38e6-4cee-85f2-0bfca295bcf8"
+      Hint: ArticleSearchParameters_Topics
+      Type: Multilist
+      Value: 
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "6e1628b0-ebd1-45c5-ad2f-3e0aa6fc19a4"
+      Hint: FundManagerInsightsBase_CTA
+      Value: |
+        <link text="See all related" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{7E9E8706-F864-48E5-B4A2-57F2C408EFD7}" />
+    - ID: "71469dcb-2347-4fa2-883b-50f4df0e5244"
+      Hint: ArticleSearchParameters_FundManagers
+      Type: Multilist
+      Value: "{8D6552D6-2E05-4A54-866B-948FC9E66B5C}"
+    - ID: "a03d4f9e-4bda-401d-9639-dd0247f50fab"
+      Hint: ArticleSearchParameters_ContentTypes
+      Type: Multilist
+      Value: |
+        {1E9B3548-D1FE-4C91-BB3C-5B9CD7599803}
+        {FE091F88-00F3-4D48-9E29-83949090DEBC}
+        {264310A1-EAC8-4FF3-9A8C-FA05EA49AE34}
+        {BC971C84-D2FD-4CF5-8010-B5162CB17836}
+        {8F7AE3EF-160E-4183-9613-06124444248D}

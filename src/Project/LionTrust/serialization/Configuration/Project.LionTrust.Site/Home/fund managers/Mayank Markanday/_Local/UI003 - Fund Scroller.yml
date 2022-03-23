@@ -1,0 +1,31 @@
+﻿---
+ID: "23869b89-7376-49f6-93f1-68548353bfc0"
+Parent: "752ba86a-d033-43a7-bcda-0995d3957c74"
+Template: "f91bff52-8afb-4056-bbf3-84c16924b92d"
+Path: "/sitecore/content/LionTrustNew/Home/fund managers/Mayank Markanday/_Local/UI003 - Fund Scroller"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220222T131049Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "8e11c5f7-1fca-4a99-ad05-b81511f973d9"
+      Hint: FundScroller_Heading
+      Value: Mayank's funds
+    - ID: "dd98d557-6e80-4ffb-9e13-498e29de5566"
+      Hint: FundScroller_Funds
+      Type: Multilist
+      Value: |
+        {FB169222-0214-4396-BCEB-CF931586CE22}
+        {363C2B75-11D0-4B0A-843A-3DF36B650902}
+        {E9933EB7-983A-4948-A8F9-FD810F2C915C}
+        {A91EBFA9-0D3A-4200-8860-C0F4926AF8F4}
+        {FE6AA79B-1D11-4B78-ACFA-6EA1464E318E}
+        {9AE4E660-5C14-44CF-949B-13C4700132AE}

@@ -1,0 +1,122 @@
+﻿---
+ID: "edd4863d-3ca1-471f-9a1d-fd0c88d67fd7"
+Parent: "a4cff500-4247-4a27-91d1-f4da4c89cc1b"
+Template: "11bdd781-82d0-417f-bfbf-e955f7402ceb"
+Path: /sitecore/content/LionTrustNew/Home/fund managers/Multi Asset
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{FFF11D5F-859B-4B01-8DC7-333F8F4E5E3B}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{5484E5DE-C74A-49D5-BF50-F99473C3A8D9}"
+              p:before="*"
+              s:ds="{FD0B7619-D8A6-4291-BEEB-7CF801AC9DBB}"
+              s:id="{56ECB2D2-5D43-4F0F-A5D1-AC267F249E7B}"
+              s:ph="main" />
+            <r
+              uid="{2A917B51-D17F-4AAB-855C-56565E40C23B}"
+              p:after="r[@uid='{5484E5DE-C74A-49D5-BF50-F99473C3A8D9}']"
+              s:ds="{5AC25F3B-65A7-4BCE-AF9F-C335CD6AF653}"
+              s:id="{BA0509C8-337A-45E7-A597-8035DC2F1C21}"
+              s:ph="main" />
+            <r
+              uid="{564E54F3-AD2C-4EA6-8D4E-30C6EC555175}"
+              p:after="r[@uid='{2A917B51-D17F-4AAB-855C-56565E40C23B}']"
+              s:ds="{EA40CCE7-A529-4CF1-8026-94433A57C2FB}"
+              s:id="{F4301786-A113-4511-BA28-46655D111F73}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{A3780ED1-C6E9-4848-AAC2-924C326789A6}"
+              p:after="r[@uid='{564E54F3-AD2C-4EA6-8D4E-30C6EC555175}']"
+              s:ds="{FF21ACE2-E27A-47EB-8156-646BB16F6E67}"
+              s:id="{8D47F982-4A0A-4CEB-BA66-DEABA6B71AD1}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{BBD75FCF-C4BF-4628-8E9B-F89D1FE4F04E}"
+              p:after="r[@uid='{A3780ED1-C6E9-4848-AAC2-924C326789A6}']"
+              s:ds="{563149B1-0AB6-4839-947C-5C4A8151A503}"
+              s:id="{C4570003-4866-4EAA-B069-8FA6611DC0EC}"
+              s:ph="main" />
+            <r
+              uid="{C68BDFA4-8D38-4DF4-B85B-D1E26839B8E2}"
+              p:after="r[@uid='{BBD75FCF-C4BF-4628-8E9B-F89D1FE4F04E}']"
+              s:ds="{886D83F8-7E0B-4F8A-9BAE-3C5F135185EE}"
+              s:id="{DC0AC587-3DF0-468C-9F4F-6E8C137ECD47}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{6E104641-8300-4E17-9ECC-AC93A98235FB}"
+              p:after="r[@uid='{C68BDFA4-8D38-4DF4-B85B-D1E26839B8E2}']"
+              s:ds="{7FBB22CA-5D38-43F2-B645-9796A7B2C33C}"
+              s:id="{6B2E2A4D-C3CB-4676-B804-B3459E4C9BD6}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{8628349D-448F-4429-A688-C325E41D0C16}"
+              p:after="r[@uid='{6E104641-8300-4E17-9ECC-AC93A98235FB}']"
+              s:ds="{27A83C49-D43A-4F11-95CD-2B010C23B5AA}"
+              s:id="{D7EA03CD-11A9-4A09-9CC6-EE9E8566A692}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{365E5C02-E8F7-46F7-A5FE-B0B845959A93}"
+              p:after="r[@uid='{8628349D-448F-4429-A688-C325E41D0C16}']"
+              s:ds="{7BAFB74D-DCCA-4203-BF2B-865B9895A927}"
+              s:id="{727114BC-F412-4035-9035-172DA5297320}"
+              s:ph="main" />
+            <r
+              uid="{5694D6D0-92F6-4F0E-98BF-8068888B0921}"
+              p:after="r[@uid='{365E5C02-E8F7-46F7-A5FE-B0B845959A93}']"
+              s:ds="{8F7AA55E-2569-4646-A28E-7FA325F64C31}"
+              s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{1134A5AD-5F84-4C13-8365-167AF77AEEE3}"
+              p:after="r[@uid='{5694D6D0-92F6-4F0E-98BF-8068888B0921}']"
+              s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+              s:ph="/header/navigation" />
+            <r
+              uid="{8E8AD69D-DBB5-4174-81EC-352CF07845BC}"
+              p:after="r[@uid='{1134A5AD-5F84-4C13-8365-167AF77AEEE3}']"
+              s:ds="{E17CE869-9662-4831-AF67-22ACD48042BE}"
+              s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
+              s:par=""
+              s:ph="header" />
+          </d>
+        </r>
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: "Multi-Asset team | Liontrust Asset Management PLC"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210601T085613Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: Headed by John Husselbee since joining Liontrust in 2013, the team comprises six investment managers and has combined experience of more than 100 years. Deputy Head James Klempster joined from Momentum Global Investment Management while Mayank Markanday and Jen Causton were previously at Architas. Paul Kim was at Investment Manager Selection (IMS Ltd) before joining Liontrust in 2013. 
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: "Multi-Asset team"
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: "Multi-Asset team"

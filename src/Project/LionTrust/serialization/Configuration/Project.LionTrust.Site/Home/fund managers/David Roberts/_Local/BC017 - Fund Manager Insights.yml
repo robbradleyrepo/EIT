@@ -1,0 +1,25 @@
+﻿---
+ID: "b01e273c-8fc6-4a66-a75f-00f14202f839"
+Parent: "6eb64f5b-4c82-40ee-a465-cdc5cabfa316"
+Template: "e14137dc-817e-40c3-b833-80c4824d2ff6"
+Path: "/sitecore/content/LionTrustNew/Home/fund managers/David Roberts/_Local/BC017 - Fund Manager Insights"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1492465c-0e3c-4fdb-97b8-0fc76924e400"
+      Hint: FundManagerInsightsBase_Heading
+      Value: Latest insights
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220215T162030Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "71469dcb-2347-4fa2-883b-50f4df0e5244"
+      Hint: ArticleSearchParameters_FundManagers
+      Type: Multilist
+      Value: "{DBAE5B17-522C-480D-926B-55EA6C1873D3}"

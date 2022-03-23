@@ -1,0 +1,108 @@
+﻿---
+ID: "e72af19e-ba72-4fe9-97c3-d4d5bfe28a33"
+Parent: "a4cff500-4247-4a27-91d1-f4da4c89cc1b"
+Template: "ae7e1757-b052-4751-b940-a9712e5247fd"
+Path: /sitecore/content/LionTrustNew/Home/fund managers/John Husselbee
+DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{B6CB773C-E731-4F36-B72A-AF5BFE57CA6F}">
+          <p:d />
+        </r>
+        <r
+          uid="{30A0A4C8-974F-4822-9DCB-DE14881E0400}"
+          s:ph="main" />
+        <r
+          uid="{9057DD73-496E-495D-9460-75D38BBB5B7E}">
+          <p:d />
+        </r>
+        <r
+          uid="{50FACAA0-F93E-4652-99EA-33AFC98FF0FE}"
+          p:after="*[1=2]"
+          s:id="{C728A955-DA1D-4700-B924-E0D35901DE4B}"
+          s:ph="footer" />
+      </d>
+    </r>
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{BC67911D-0B34-4CD6-A4C0-714394BD4DE9}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{8AB72399-75C5-4688-A7BA-2F0B023339BF}"
+              p:before="*"
+              s:ds="{828941B8-8A99-431F-B3C5-BF528B7DA9DD}"
+              s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+              s:ph="main" />
+            <r
+              uid="{94C4AA69-0130-48D3-AC4A-73475113F552}"
+              p:after="r[@uid='{8AB72399-75C5-4688-A7BA-2F0B023339BF}']"
+              s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+              s:ph="/header/navigation" />
+            <r
+              uid="{7CF58615-C55C-49DD-9CE1-0979EE4BA6DC}"
+              p:after="r[@uid='{94C4AA69-0130-48D3-AC4A-73475113F552}']"
+              s:ds="{BA6FBA98-7E0E-4C91-8D90-B635C99923E5}"
+              s:id="{3349B84E-C4C1-42B8-8291-BCDB541DC1B6}"
+              s:ph="main" />
+            <r
+              uid="{A564AF3D-CB36-4BF9-A496-9157235DD73B}"
+              p:after="r[@uid='{7CF58615-C55C-49DD-9CE1-0979EE4BA6DC}']"
+              s:ds="{4D667D06-58FA-4561-95FD-E85E2AE7B10E}"
+              s:id="{C4570003-4866-4EAA-B069-8FA6611DC0EC}"
+              s:ph="main" />
+            <r
+              uid="{7201B795-9799-466B-B698-BB5F8B01DF9B}"
+              p:after="r[@uid='{A564AF3D-CB36-4BF9-A496-9157235DD73B}']"
+              s:ds="{B5B7317E-AA4E-43DA-A54D-F303895ABD79}"
+              s:id="{727114BC-F412-4035-9035-172DA5297320}"
+              s:ph="main" />
+            <r
+              uid="{E5418B37-8258-4C2D-B3ED-8DD6049E7A18}"
+              p:after="r[@uid='{7201B795-9799-466B-B698-BB5F8B01DF9B}']"
+              s:ds="{8F7AA55E-2569-4646-A28E-7FA325F64C31}"
+              s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+              s:ph="main" />
+            <r
+              uid="{21C3C8C1-837E-4D86-AB29-97C4A9E98178}"
+              p:after="r[@uid='{E5418B37-8258-4C2D-B3ED-8DD6049E7A18}']"
+              s:ds="{82459D70-11D5-40AE-8293-3E2AF2F44BD5}"
+              s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
+              s:ph="header" />
+          </d>
+        </r>
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: John Husselbee | Liontrust Asset Management PLC
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220209T151427Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: John Husselbee
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: John Husselbee

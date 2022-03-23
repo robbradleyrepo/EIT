@@ -1,0 +1,42 @@
+﻿---
+ID: "042bc612-522f-4ede-ab15-0770355977bd"
+Parent: "3d3eaee9-dc73-4643-b624-9a99f919edff"
+Template: "d3d9d2ce-b2ce-49ac-b50d-6a5ffd4c4ab8"
+Path: /sitecore/content/LionTrustNew/Home/fund managers/_Local/sustainable investment
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{746E8088-3D3A-4295-B6CD-95B9FAD61437}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1054e4b6-1cf5-4c08-8a6d-d9b02fb17050"
+      Hint: ImageCTAPromo_Image
+      Value: |
+        <image mediaid="{FF8BBF1A-2CB3-45EB-86C5-61FEE2B01FB5}" />
+    - ID: "143867db-9bba-4097-9eb4-0099c175ad91"
+      Hint: ImageCTAPromo_CTALink
+      Value: |
+        <link id="{FC508692-1118-4F83-A77B-BE54EA1A769A}" querystring="" text="See more" anchor="" url="/LionTrustNew/Home/fund managers/Sustainable Investment" title="" class="" linktype="internal" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210601T113504Z
+    - ID: "48bf236b-0681-4a09-9085-4933fa1c4a7a"
+      Hint: ImageCTAPromo_Body
+      Value: "The 17-strong team has been managing the Sustainable Future funds for more than 21 years. The team is headed by Peter Michaelis who has been managing the funds since launch. The fund managers all joined from Alliance Trust Investments (ATI) as part of its acquisition and were previously running the Sustainable Future fund range at Aviva Investors.&nbsp;"
+    - ID: "4c838697-dbeb-4998-a261-ccc77bc59259"
+      Hint: ImageCTAPromo_Subtitle
+      Value: 
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "7a84ea30-ff24-4c46-ae8f-51fcff940663"
+      Hint: ImageCTAPromo_Title
+      Value: Sustainable Investment team
+    - ID: "94eb1b3f-6b14-4a34-9b12-62dbed7a269e"
+      Hint: ImageCTAPromo_TitleColor
+      Value: "{ABC9B1B3-78C4-4493-A681-576EA253919E}"
