@@ -52,4 +52,12 @@ export default () => {
       navLinks.removeClass("active");
       sidebar.addClass("sidebar_border");
     });
+	
+	$(".navigation__sub-link").on("click", () => {
+      $(".navigation__sub-link").removeClass(
+        "navigation__submenu_stop-animation"
+      );
+      navLinks.removeClass("active");
+      sidebar.addClass("sidebar_border");
+    });
 };
