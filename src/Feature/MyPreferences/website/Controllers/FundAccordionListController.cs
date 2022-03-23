@@ -65,6 +65,8 @@
                         sfProcess.SFFundList = allowedFundList?.ToList();
                     }
                 }
+
+                SPProcessList = SPProcessList.Where(l => l.SFFundList != null && l.SFFundList.Any())?.ToList();
             }
 
             if (context == null || context.Preferences == null || context.Preferences.SFProcessList == null)
