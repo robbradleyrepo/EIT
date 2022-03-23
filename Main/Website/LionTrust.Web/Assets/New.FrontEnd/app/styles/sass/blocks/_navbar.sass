@@ -27,25 +27,25 @@
             height: auto
     &__btn-search
         margin-top: 16px
+        margin-left: 36px
         cursor: pointer
-    &__user-link
+    &__user-link, &__user-lionhub-link
         display: none
         position: relative
         @include breakpoint(desktop, up)
             margin: 1rem 1rem 0 1rem
         @include breakpoint(desktop-large, up)
-            margin: 16px 36px 0 44px
+            margin: 16px 0px 0 44px
         &:after
             visibility: hidden
-            opacity: 0
-            content: 'my liontrust'
+            opacity: 0            
             position: absolute
             font-size: 10px
             font-weight: 500
             white-space: nowrap
             letter-spacing: 2px
             bottom: -25px
-            left: -35px
+            
             text-transform: uppercase
             display: inline-block
             color: $primary
@@ -57,7 +57,14 @@
             &:after
                 visibility: visible
                 opacity: 1
-
+    &__user-link
+        &:after
+            content: 'my liontrust'
+            left: -35px			
+    &__user-lionhub-link
+        &:after
+            content: 'lionhub'
+            left: -18px
 .nav-desktop
     display: none
     width: 100%

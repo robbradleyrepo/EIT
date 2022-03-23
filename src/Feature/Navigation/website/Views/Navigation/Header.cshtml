@@ -10,115 +10,147 @@
         Html.RenderAction("OrganizationSchema", "Schema", new { OrganizationSchema = Model.Organization });
     }
 
-    <div class="header-navbar">
-        @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Navigation/Menu", Model.HomeItem.Id.ToString(), "Edit menu items"))
-        {
-            <button class="header-navbar__btn-open"></button>
-        }
+<div class="header-navbar">
+    @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Navigation/Menu", Model.HomeItem.Id.ToString(), "Edit menu items"))
+    {
+        <button class="header-navbar__btn-open"></button>
+    }
 
-        <a href="@Model.HomeItem.Url" class="header-navbar__logo">
-            @Html.Glass().RenderImage(Model.HomeItem, x => x.Logo, new { alt = Model.HomeItem.Logo != null ? Model.HomeItem.Logo.Alt : string.Empty, @class = "header-navbar__logo-img" }, isEditable: true)
-        </a>
+    <a href="@Model.HomeItem.Url" class="header-navbar__logo">
+        @Html.Glass().RenderImage(Model.HomeItem, x => x.Logo, new { alt = Model.HomeItem.Logo != null ? Model.HomeItem.Logo.Alt : string.Empty, @class = "header-navbar__logo-img" }, isEditable: true)
+    </a>
 
-        @if (Model.HomeItem.HeaderConfiguration != null && Model.HomeItem.HeaderConfiguration.HeaderDropDowns != null && Model.HomeItem.HeaderConfiguration.HeaderDropDowns.Any())
-        {
-            <nav class="nav-desktop">
-                <ul class="nav-desktop__list">
-                    @foreach (var dropDown in Model.HomeItem.HeaderConfiguration.HeaderDropDowns)
+    @if (Model.HomeItem.HeaderConfiguration != null && Model.HomeItem.HeaderConfiguration.HeaderDropDowns != null && Model.HomeItem.HeaderConfiguration.HeaderDropDowns.Any())
+    {
+        <nav class="nav-desktop">
+            <ul class="nav-desktop__list">
+                @foreach (var dropDown in Model.HomeItem.HeaderConfiguration.HeaderDropDowns)
+                {
+                    if (dropDown != null)
                     {
-                        if (dropDown != null)
+                        var navigationColumnsCount = 0;
+                        IHeaderNavigationColumn firstNavigationColumn = null;
+                        IEnumerable<IHeaderNavigationColumn> otherNavigationColumns = null;
+                        if (dropDown.NavigationColumns != null && dropDown.NavigationColumns.Any())
                         {
-                            var navigationColumnsCount = 0;
-                            IHeaderNavigationColumn firstNavigationColumn = null;
-                            IEnumerable<IHeaderNavigationColumn> otherNavigationColumns = null;
-                            if (dropDown.NavigationColumns != null && dropDown.NavigationColumns.Any())
+                            navigationColumnsCount = dropDown.NavigationColumns.Count();
+                            firstNavigationColumn = dropDown.NavigationColumns.FirstOrDefault();
+                            otherNavigationColumns = dropDown.NavigationColumns.Skip(1);
+                        }
+                        <li class="nav-desktop__item">
+                            @if (dropDown.PageItem != null)
                             {
-                                navigationColumnsCount = dropDown.NavigationColumns.Count();
-                                firstNavigationColumn = dropDown.NavigationColumns.FirstOrDefault();
-                                otherNavigationColumns = dropDown.NavigationColumns.Skip(1);
+                                <a href="@dropDown.PageItem.Url" class="nav-desktop__link">
+                                    @Html.Glass().Editable(dropDown.PageItem, z => z.PageTitle)
+                                </a>
                             }
-                            <li class="nav-desktop__item">
-                                @if (dropDown.PageItem != null)
-                                {
-                                    <a href="@dropDown.PageItem.Url" class="nav-desktop__link">
-                                        @Html.Glass().Editable(dropDown.PageItem, z => z.PageTitle)
-                                    </a>
-                                }
-                                else
-                                {
-                                    <a href="#" class="nav-desktop__link">
-                                        @dropDown.Name
-                                    </a>
-                                }
-                                <div class="dropdown">
-                                    <div class="dropdown__inner">
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col-md-3">
-                                                    <nav class="dropdown-nav">
-                                                        @if (dropDown.ShowCTA)
+                            else
+                            {
+                                <a href="#" class="nav-desktop__link">
+                                    @dropDown.Name
+                                </a>
+                            }
+                            <div class="dropdown">
+                                <div class="dropdown__inner">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <nav class="dropdown-nav">
+                                                    @if (dropDown.ShowCTA)
+                                                    {
+                                                        using (Html.Glass().BeginRenderLink(dropDown, z => z.CTALink, new NameValueCollection { { "class", "btn btn-primary btn-block mb-5" } }, isEditable: true))
                                                         {
-                                                            using (Html.Glass().BeginRenderLink(dropDown, z => z.CTALink, new NameValueCollection { { "class", "btn btn-primary btn-block mb-5" } }, isEditable: true))
+                                                            if (dropDown.CTALink != null && !string.IsNullOrEmpty(dropDown.CTALink.Text))
                                                             {
-                                                                if (dropDown.CTALink != null && !string.IsNullOrEmpty(dropDown.CTALink.Text))
-                                                                {
-                                                                    @dropDown.CTALink.Text
-                                                                    <i class="icon-arrow-right animate-arrow"></i>
-                                                                }
+                                                                @dropDown.CTALink.Text
+                                                                <i class="icon-arrow-right animate-arrow"></i>
                                                             }
                                                         }
+                                                    }
 
-                                                        @if (firstNavigationColumn != null)
+                                                    @if (firstNavigationColumn != null)
+                                                    {
+                                                        <h4 class="dropdown-nav__title">@Html.Glass().Editable(firstNavigationColumn, z => z.ColumnTitle)</h4>
+                                                        if (firstNavigationColumn.ShowColumnLink)
                                                         {
-                                                            <h4 class="dropdown-nav__title">@Html.Glass().Editable(firstNavigationColumn, z => z.ColumnTitle)</h4>
-                                                            if (firstNavigationColumn.ShowColumnLink)
+                                                            using (Html.Glass().BeginRenderLink(firstNavigationColumn, z => z.ColumnLink, new NameValueCollection { { "class", "link-styles d-block mb-4" } }, isEditable: true))
                                                             {
-                                                                using (Html.Glass().BeginRenderLink(firstNavigationColumn, z => z.ColumnLink, new NameValueCollection { { "class", "link-styles d-block mb-4" } }, isEditable: true))
+                                                                if (firstNavigationColumn.ColumnLink != null
+                                                                    && !string.IsNullOrEmpty(firstNavigationColumn.ColumnLink.Text))
                                                                 {
-                                                                    if (firstNavigationColumn.ColumnLink != null
-                                                                        && !string.IsNullOrEmpty(firstNavigationColumn.ColumnLink.Text))
-                                                                    {
-                                                                        @firstNavigationColumn.ColumnLink.Text
-                                                                    }
-                                                                    <i class="icon-arrow-right"></i>
+                                                                    @firstNavigationColumn.ColumnLink.Text
                                                                 }
+                                                                <i class="icon-arrow-right"></i>
                                                             }
-                                                            if (firstNavigationColumn.PageLinks != null && firstNavigationColumn.PageLinks.Any())
+                                                        }
+                                                        if (firstNavigationColumn.PageLinks != null && firstNavigationColumn.PageLinks.Any())
+                                                        {
+                                                            <ul class="dropdown-nav__list">
+                                                                @foreach (var pageLink in firstNavigationColumn.PageLinks.WithAccessTo())
+                                                                {
+                                                                    <li class="dropdown-nav__item">
+                                                                        <a href="@pageLink.Url" class="dropdown-nav__link">@Html.Glass().Editable(pageLink, z => z.PageTitle)</a>
+                                                                    </li>
+                                                                }
+                                                            </ul>
+                                                        }
+                                                    }
+                                                </nav>
+                                            </div>
+                                            @if (otherNavigationColumns != null && otherNavigationColumns.Any())
+                                            {
+                                                var secondNavigationColumn = otherNavigationColumns.FirstOrDefault();
+                                                <div class="col-md-3 offset-1">
+                                                    <nav>
+                                                        <h4 class="dropdown-nav__title">@Html.Glass().Editable(secondNavigationColumn, z => z.ColumnTitle)</h4>
+                                                        @if (secondNavigationColumn.ShowColumnLink)
+                                                        {
+                                                            using (Html.Glass().BeginRenderLink(secondNavigationColumn, z => z.ColumnLink, new NameValueCollection { { "class", "link-styles d-block mb-4" } }, isEditable: true))
                                                             {
-                                                                <ul class="dropdown-nav__list">
-                                                                    @foreach (var pageLink in firstNavigationColumn.PageLinks.WithAccessTo())
-                                                                    {
-                                                                        <li class="dropdown-nav__item">
-                                                                            <a href="@pageLink.Url" class="dropdown-nav__link">@Html.Glass().Editable(pageLink, z => z.PageTitle)</a>
-                                                                        </li>
-                                                                    }
-                                                                </ul>
+                                                                if (secondNavigationColumn.ColumnLink != null
+                                                                    && !string.IsNullOrEmpty(secondNavigationColumn.ColumnLink.Text))
+                                                                {
+                                                                    @secondNavigationColumn.ColumnLink.Text
+                                                                }
+                                                                <i class="icon-arrow-right"></i>
                                                             }
+                                                        }
+                                                        @if (secondNavigationColumn.PageLinks != null && secondNavigationColumn.PageLinks.Any())
+                                                        {
+                                                            <ul class="dropdown-nav__list">
+                                                                @foreach (var pageLink in secondNavigationColumn.PageLinks.WithAccessTo())
+                                                                {
+                                                                    <li class="dropdown-nav__item">
+                                                                        <a href="@pageLink.Url" class="dropdown-nav__link">@Html.Glass().Editable(pageLink, z => z.PageTitle)</a>
+                                                                    </li>
+                                                                }
+                                                            </ul>
                                                         }
                                                     </nav>
                                                 </div>
-                                                @if (otherNavigationColumns != null && otherNavigationColumns.Any())
+                                                var lastNavigationColumn = otherNavigationColumns.Skip(1);
+                                                if (lastNavigationColumn != null && lastNavigationColumn.Any())
                                                 {
-                                                    var secondNavigationColumn = otherNavigationColumns.FirstOrDefault();
-                                                    <div class="col-md-3 offset-1">
+                                                    var thirdNavigationColumn = lastNavigationColumn.FirstOrDefault();
+                                                    <div class="col-xl-4 col-lg-5 offset-xl-1">
                                                         <nav>
-                                                            <h4 class="dropdown-nav__title">@Html.Glass().Editable(secondNavigationColumn, z => z.ColumnTitle)</h4>
-                                                            @if (secondNavigationColumn.ShowColumnLink)
+                                                            <h4 class="dropdown-nav__title">@Html.Glass().Editable(thirdNavigationColumn, z => z.ColumnTitle)</h4>
+                                                            @if (thirdNavigationColumn.ShowColumnLink)
                                                             {
-                                                                using (Html.Glass().BeginRenderLink(secondNavigationColumn, z => z.ColumnLink, new NameValueCollection { { "class", "link-styles d-block mb-4" } }, isEditable: true))
+                                                                using (Html.Glass().BeginRenderLink(thirdNavigationColumn, z => z.ColumnLink, new NameValueCollection { { "class", "link-styles d-block mb-4" } }, isEditable: true))
                                                                 {
-                                                                    if (secondNavigationColumn.ColumnLink != null
-                                                                        && !string.IsNullOrEmpty(secondNavigationColumn.ColumnLink.Text))
+                                                                    if (thirdNavigationColumn.ColumnLink != null
+                                                                    && !string.IsNullOrEmpty(thirdNavigationColumn.ColumnLink.Text))
                                                                     {
-                                                                        @secondNavigationColumn.ColumnLink.Text
+                                                                        @thirdNavigationColumn.ColumnLink.Text
                                                                     }
                                                                     <i class="icon-arrow-right"></i>
                                                                 }
                                                             }
-                                                            @if (secondNavigationColumn.PageLinks != null && secondNavigationColumn.PageLinks.Any())
+                                                            @if (thirdNavigationColumn.PageLinks != null && thirdNavigationColumn.PageLinks.Any())
                                                             {
                                                                 <ul class="dropdown-nav__list">
-                                                                    @foreach (var pageLink in secondNavigationColumn.PageLinks.WithAccessTo())
+                                                                    @foreach (var pageLink in thirdNavigationColumn.PageLinks.WithAccessTo())
                                                                     {
                                                                         <li class="dropdown-nav__item">
                                                                             <a href="@pageLink.Url" class="dropdown-nav__link">@Html.Glass().Editable(pageLink, z => z.PageTitle)</a>
@@ -128,179 +160,157 @@
                                                             }
                                                         </nav>
                                                     </div>
-                                                    var lastNavigationColumn = otherNavigationColumns.Skip(1);
-                                                    if (lastNavigationColumn != null && lastNavigationColumn.Any())
-                                                    {
-                                                        var thirdNavigationColumn = lastNavigationColumn.FirstOrDefault();
-                                                        <div class="col-xl-4 col-lg-5 offset-xl-1">
-                                                            <nav>
-                                                                <h4 class="dropdown-nav__title">@Html.Glass().Editable(thirdNavigationColumn, z => z.ColumnTitle)</h4>
-                                                                @if (thirdNavigationColumn.ShowColumnLink)
-                                                                {
-                                                                    using (Html.Glass().BeginRenderLink(thirdNavigationColumn, z => z.ColumnLink, new NameValueCollection { { "class", "link-styles d-block mb-4" } }, isEditable: true))
-                                                                    {
-                                                                        if (thirdNavigationColumn.ColumnLink != null
-                                                                        && !string.IsNullOrEmpty(thirdNavigationColumn.ColumnLink.Text))
-                                                                        {
-                                                                            @thirdNavigationColumn.ColumnLink.Text
-                                                                        }
-                                                                        <i class="icon-arrow-right"></i>
-                                                                    }
-                                                                }
-                                                                @if (thirdNavigationColumn.PageLinks != null && thirdNavigationColumn.PageLinks.Any())
-                                                                {
-                                                                    <ul class="dropdown-nav__list">
-                                                                        @foreach (var pageLink in thirdNavigationColumn.PageLinks.WithAccessTo())
-                                                                        {
-                                                                            <li class="dropdown-nav__item">
-                                                                                <a href="@pageLink.Url" class="dropdown-nav__link">@Html.Glass().Editable(pageLink, z => z.PageTitle)</a>
-                                                                            </li>
-                                                                        }
-                                                                    </ul>
-                                                                }
-                                                            </nav>
-                                                        </div>
-                                                    }
-                                                    else
-                                                    {
-                                                        if (dropDown.Images != null && dropDown.Images.Any())
-                                                        {
-                                                            <div class="col-xl-4 col-lg-5 offset-xl-1">
-                                                                @if (dropDown.Images.Count() == 1)
-                                                                {
-                                                                    var image = dropDown.Images.FirstOrDefault();
-                                                                    image.SmallSize = false;
-                                                                    @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", image)
-                                                                }
-                                                                else
-                                                                {
-                                                                    var firstImage = dropDown.Images.FirstOrDefault();
-                                                                    if (firstImage != null)
-                                                                    {
-                                                                        firstImage.SmallSize = true;
-                                                                        @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", firstImage)
-                                                                    }
-
-                                                                    var secondImage = dropDown.Images.Skip(1).FirstOrDefault();
-
-                                                                    if (secondImage != null)
-                                                                    {
-                                                                        secondImage.SmallSize = true;
-                                                                        @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", secondImage)
-                                                                    }
-                                                                }
-                                                            </div>
-                                                        }
-
-                                                    }
                                                 }
                                                 else
                                                 {
                                                     if (dropDown.Images != null && dropDown.Images.Any())
                                                     {
-                                                        var imagesCount = dropDown.Images.Count();
-                                                        if (imagesCount == 1)
-                                                        {
-                                                            var image = dropDown.Images.FirstOrDefault();
-                                                            if (image != null)
+                                                        <div class="col-xl-4 col-lg-5 offset-xl-1">
+                                                            @if (dropDown.Images.Count() == 1)
                                                             {
+                                                                var image = dropDown.Images.FirstOrDefault();
                                                                 image.SmallSize = false;
-                                                                <div class="col-xl-4 col-lg-5 offset-lg-4 offset-xl-5">
-                                                                    @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", image)
-                                                                </div>
+                                                                @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", image)
                                                             }
-                                                        }
-                                                        else
+                                                            else
+                                                            {
+                                                                var firstImage = dropDown.Images.FirstOrDefault();
+                                                                if (firstImage != null)
+                                                                {
+                                                                    firstImage.SmallSize = true;
+                                                                    @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", firstImage)
+                                                                }
+
+                                                                var secondImage = dropDown.Images.Skip(1).FirstOrDefault();
+
+                                                                if (secondImage != null)
+                                                                {
+                                                                    secondImage.SmallSize = true;
+                                                                    @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", secondImage)
+                                                                }
+                                                            }
+                                                        </div>
+                                                    }
+
+                                                }
+                                            }
+                                            else
+                                            {
+                                                if (dropDown.Images != null && dropDown.Images.Any())
+                                                {
+                                                    var imagesCount = dropDown.Images.Count();
+                                                    if (imagesCount == 1)
+                                                    {
+                                                        var image = dropDown.Images.FirstOrDefault();
+                                                        if (image != null)
                                                         {
-                                                            var imageCollecion = dropDown.Images;
-                                                            <div class="col-xl-7 col-lg-9 offset-xl-2">
-                                                                <div class="row">
-                                                                    <div class="col-md-6">
-                                                                        @if (imagesCount == 2)
-                                                                        {
-                                                                            var firstImage = dropDown.Images.FirstOrDefault();
-                                                                            if (firstImage != null)
-                                                                            {
-                                                                                firstImage.SmallSize = false;
-                                                                                @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", firstImage)
-                                                                            }
-                                                                            imageCollecion = imageCollecion.Skip(1);
-                                                                        }
-                                                                        else
-                                                                        {
-                                                                            var firstImage = dropDown.Images.FirstOrDefault();
-                                                                            if (firstImage != null)
-                                                                            {
-                                                                                firstImage.SmallSize = true;
-                                                                                @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", firstImage)
-                                                                            }
-                                                                            var secondImage = dropDown.Images.Skip(1).FirstOrDefault();
-                                                                            if (secondImage != null)
-                                                                            {
-                                                                                secondImage.SmallSize = true;
-                                                                                @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", secondImage)
-                                                                            }
-                                                                            imageCollecion = imageCollecion.Skip(2);
-                                                                        }
-                                                                    </div>
-                                                                    <div class="col-md-6">
-                                                                        @if (imagesCount < 4)
-                                                                        {
-                                                                            var secondColumnImage = dropDown.Images.FirstOrDefault();
-                                                                            if (secondColumnImage != null)
-                                                                            {
-                                                                                secondColumnImage.SmallSize = false;
-                                                                                @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", secondColumnImage)
-                                                                            }
-                                                                        }
-                                                                        else
-                                                                        {
-                                                                            var secondColumnFirstImage = dropDown.Images.FirstOrDefault();
-                                                                            if (secondColumnFirstImage != null)
-                                                                            {
-                                                                                secondColumnFirstImage.SmallSize = true;
-                                                                                @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", secondColumnFirstImage)
-                                                                            }
-                                                                            var secondColumnSecondImage = dropDown.Images.Skip(1).FirstOrDefault();
-                                                                            if (secondColumnSecondImage != null)
-                                                                            {
-                                                                                secondColumnSecondImage.SmallSize = true;
-                                                                                @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", secondColumnSecondImage)
-                                                                            }
-                                                                        }
-                                                                    </div>
-                                                                </div>
+                                                            image.SmallSize = false;
+                                                            <div class="col-xl-4 col-lg-5 offset-lg-4 offset-xl-5">
+                                                                @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", image)
                                                             </div>
                                                         }
                                                     }
+                                                    else
+                                                    {
+                                                        var imageCollecion = dropDown.Images;
+                                                        <div class="col-xl-7 col-lg-9 offset-xl-2">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    @if (imagesCount == 2)
+                                                                    {
+                                                                        var firstImage = dropDown.Images.FirstOrDefault();
+                                                                        if (firstImage != null)
+                                                                        {
+                                                                            firstImage.SmallSize = false;
+                                                                            @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", firstImage)
+                                                                        }
+                                                                        imageCollecion = imageCollecion.Skip(1);
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        var firstImage = dropDown.Images.FirstOrDefault();
+                                                                        if (firstImage != null)
+                                                                        {
+                                                                            firstImage.SmallSize = true;
+                                                                            @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", firstImage)
+                                                                        }
+                                                                        var secondImage = dropDown.Images.Skip(1).FirstOrDefault();
+                                                                        if (secondImage != null)
+                                                                        {
+                                                                            secondImage.SmallSize = true;
+                                                                            @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", secondImage)
+                                                                        }
+                                                                        imageCollecion = imageCollecion.Skip(2);
+                                                                    }
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    @if (imagesCount < 4)
+                                                                    {
+                                                                        var secondColumnImage = dropDown.Images.FirstOrDefault();
+                                                                        if (secondColumnImage != null)
+                                                                        {
+                                                                            secondColumnImage.SmallSize = false;
+                                                                            @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", secondColumnImage)
+                                                                        }
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        var secondColumnFirstImage = dropDown.Images.FirstOrDefault();
+                                                                        if (secondColumnFirstImage != null)
+                                                                        {
+                                                                            secondColumnFirstImage.SmallSize = true;
+                                                                            @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", secondColumnFirstImage)
+                                                                        }
+                                                                        var secondColumnSecondImage = dropDown.Images.Skip(1).FirstOrDefault();
+                                                                        if (secondColumnSecondImage != null)
+                                                                        {
+                                                                            secondColumnSecondImage.SmallSize = true;
+                                                                            @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", secondColumnSecondImage)
+                                                                        }
+                                                                    }
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    }
                                                 }
-                                            </div>
+                                            }
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                        }
-                    }
-                    @if (Model.HomeItem.ContactUsPage != null)
-                    {
-                        <li class="nav-desktop__item">
-                            <a href="@Model.HomeItem.ContactUsPage.Url" class="nav-desktop__link nav-desktop__link_contact">
-                                @Html.Glass().Editable(Model.HomeItem.ContactUsPage, z => z.PageTitle)
-                            </a>
+                            </div>
                         </li>
                     }
-                </ul>
-            </nav>
-        }
+                }
+                @if (Model.HomeItem.ContactUsPage != null)
+                {
+                    <li class="nav-desktop__item">
+                        <a href="@Model.HomeItem.ContactUsPage.Url" class="nav-desktop__link nav-desktop__link_contact">
+                            @Html.Glass().Editable(Model.HomeItem.ContactUsPage, z => z.PageTitle)
+                        </a>
+                    </li>
+                }
+            </ul>
+        </nav>
+    }
 
-        @using (Html.Glass().BeginRenderLink(Model.HomeItem, p => p.MyLionTrust, new { @class = "header-navbar__user-link" }, isEditable: true))
+    @if (Model.ShowMyLiontrust)
+    {
+        using (Html.Glass().BeginRenderLink(Model.HomeItem, p => p.MyLionTrust, new { @class = "header-navbar__user-link" }, isEditable: true))
         {
             <img src="/dist/images/components/header/user.svg" alt="user profile">
         }
-        <div class="header-navbar__btn-search">
-            <img src="/dist/images/components/header/search.svg" alt="search">
-        </div>
+    }
+    @if (Model.ShowLionHub)
+    {
+        using (Html.Glass().BeginRenderLink(Model.HomeItem, p => p.LionHub, new { @class = "header-navbar__user-lionhub-link" }, isEditable: true))
+        {
+            <img src="/dist/images/components/header/user.svg" alt="user profile">
+        }
+    }
+    <div class="header-navbar__btn-search">
+        <img src="/dist/images/components/header/search.svg" alt="search">
     </div>
+</div>
 }
 else if (Sitecore.Context.PageMode.IsExperienceEditor)
 {

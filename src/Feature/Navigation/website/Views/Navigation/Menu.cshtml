@@ -48,7 +48,7 @@
                 }
             </nav>
 
-            @if (Model.HomeItem.MyLionTrust != null)
+            @if (Model.ShowMyLiontrust && Model.HomeItem.MyLionTrust != null)
             {
                 <div class="sidebar__profile-btn">
                     @using (Html.Glass().BeginRenderLink(Model.HomeItem, p => p.MyLionTrust, new { @class = "btn btn-primary btn-block" }, isEditable: true))
@@ -57,6 +57,20 @@
                         if (!string.IsNullOrWhiteSpace(Model.HomeItem.MyLionTrust.Text))
                         {
                             @Model.HomeItem.MyLionTrust.Text
+                        }
+                    }
+                </div>
+            }
+
+            @if (Model.ShowLionHub && Model.HomeItem.LionHub != null)
+            {
+                <div class="sidebar__profile-btn">
+                    @using (Html.Glass().BeginRenderLink(Model.HomeItem, p => p.LionHub, new { @class = "btn btn-primary btn-block" }, isEditable: true))
+                    {
+                        <i class="icon-user"></i>
+                        if (!string.IsNullOrWhiteSpace(Model.HomeItem.LionHub.Text))
+                        {
+                            @Model.HomeItem.LionHub.Text
                         }
                     }
                 </div>
