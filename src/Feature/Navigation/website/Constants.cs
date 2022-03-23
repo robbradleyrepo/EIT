@@ -79,12 +79,16 @@
             public const string HeaderConfiguration_FieldID = "{95F0787B-70E6-4164-98C0-F9502163D720}";
             public const string ContactUsPage_FieldID = "{0D831D08-90C7-4E31-B880-5A93146B3029}";
             public const string MyLionTrust_FieldID = "{B810A405-73F4-48CC-AF61-778C82531262}";
+            public const string MyLiontrustAllowedInvestors_FieldID = "{B2BAE7E0-2869-41B5-9466-961C0E7068EB}";
             public const string MyPreferences_FieldID = "{6F6A49B5-C780-4EDE-9EB4-9EA509204434}";
             public const string SignUpNewsletter_FieldID = "{6EB0248B-457F-491C-8F9E-13AEFE2CDEC8}";
             public const string YouAreViewingLabel_FieldID = "{15999105-600F-43FB-B206-ED93304A98E6}";
             public const string FromLabel_FieldID = "{14734052-FFFD-4681-9ABB-311B62D63DA6}";
             public const string ChangeLabel_FieldID = "{E4A364E6-2E1A-4854-ABD8-6A02ACF832CD}";
             public const string OnboardingConfiguation_FieldId = "{16512055-116D-48B5-936C-ECA678249335}";
+            public const string LionHub_FieldID = "{FCCF538E-8305-4C6A-9FD8-12998B4FA850}";
+            public const string LionHubAllowedInvestors_FieldID = "{7F2DE5B0-73F0-47AA-BBD4-5F3FE1B654ED}";
+            public const string LionHubAllowedPages_FieldID = "{C97F99B9-6AB9-4191-9EF9-F3036F098180}";
         }
 
         public static class QuickLinks

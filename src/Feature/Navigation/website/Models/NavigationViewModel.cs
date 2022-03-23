@@ -8,6 +8,8 @@ namespace LionTrust.Feature.Navigation.Models
     {
         public IHome HomeItem { get; set; }
         public OrganizationSchema Organization { get; set; }
-        public IEnumerable<INavigablePage> MenuItems { get; set; }       
+        public IEnumerable<INavigablePage> MenuItems { get; set; }
+        public bool ShowMyLiontrust { get; set; }
+        public bool ShowLionHub { get; set; }
     }
 }

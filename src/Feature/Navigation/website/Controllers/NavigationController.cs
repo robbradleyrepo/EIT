@@ -89,6 +89,17 @@
                     }
 
                     navigationViewModel.HomeItem.ChangeInvestorUrl = OnboardingHelper.GetChangeUrl();
+
+                    if (navigationViewModel.HomeItem.MyLiontrusAllowedInvestors != null && navigationViewModel.HomeItem.MyLiontrusAllowedInvestors.Any())
+                    {
+                        navigationViewModel.ShowMyLiontrust = OnboardingHelper.ShowMyLiontrust(_mvcContext, _log, navigationViewModel.HomeItem.MyLiontrusAllowedInvestors);
+                    }
+
+                    if (navigationViewModel.HomeItem.LionHubAllowedInvestors != null && navigationViewModel.HomeItem.LionHubAllowedInvestors.Any() &&
+                        navigationViewModel.HomeItem.LionHubAllowedPages != null && navigationViewModel.HomeItem.LionHubAllowedPages.Any())
+                    {
+                        navigationViewModel.ShowLionHub = OnboardingHelper.ShowLionHub(_mvcContext, _log, navigationViewModel.HomeItem.LionHubAllowedInvestors, navigationViewModel.HomeItem.LionHubAllowedPages);
+                    }
                 }
 
                 if (Sitecore.Context.Item.ID.Equals(homeItem.ID))
