@@ -41,7 +41,8 @@
                 }
                 else
                 {
-                    return View("/views/fund/geographicalbreakdown.cshtml", new GraphBreakdownViewModel { Breakdown = result, Component = datasource });
+                    var disclaimer = _manager.GetDisclaimer(citiCode, datasource.Information);
+                    return View("/views/fund/geographicalbreakdown.cshtml", new GraphBreakdownViewModel { Breakdown = result, Component = datasource, Disclaimer = disclaimer });
                 }                
             }
 

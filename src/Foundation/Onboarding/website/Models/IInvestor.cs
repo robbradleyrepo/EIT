@@ -11,6 +11,9 @@
         [SitecoreField(Constants.Investor.Name_FieldId)]
         string InvestorName { get; set; }
 
+        [SitecoreField(Constants.Investor.NameWithArticle_FieldId)]
+        string InvestorNameWithArticle { get; set; }
+
         [SitecoreField(Constants.Investor.Description_FieldId)]
         string InvestorDescription { get; set; }
 
@@ -20,13 +23,22 @@
         [SitecoreField(Constants.Investor.ProfileCard_FieldId)]
         IProfileCard ProfileCard { get; set; }
 
+        [SitecoreField(Constants.Investor.InternationalProfileCard_FieldId)]
+        IProfileCard InternationalProfileCard { get; set; }
+
         [SitecoreField(Constants.Investor.PatternCard_FieldId)]
         IGlassBase PatternCard { get; set; }
+
+        [SitecoreField(Constants.Investor.InternationalPatternCard_FieldId)]
+        IGlassBase InternationalPatternCard { get; set; }
 
         [SitecoreField(Constants.Investor.ExcludedCountires_FieldId)]
         IEnumerable<ICountry> ExcludedCountires { get; set; }
 
         [SitecoreField(Constants.Investor.Header_FieldId)]
         IGlassBase Header { get; set; }
+
+        [SitecoreField(Constants.Investor.LandingPage_FieldId)]
+        Link LandingPage { get; set; }
     }
 }

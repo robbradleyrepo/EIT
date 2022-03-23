@@ -32,6 +32,7 @@ namespace LionTrust.Foundation.SitecoreExtensions.Pipelines.HttpRequestBegin
             var genericListingApi = Settings.GetSetting("Feature.Listings.GenericListingApiRoute", string.Empty).ToLowerInvariant().ToLower();
             var mediaGalleryApi = Settings.GetSetting("Feature.Listings.MediaGalleryApiRoute", string.Empty).ToLowerInvariant().ToLower();
             var latestResultsApi = Settings.GetSetting("Feature.Listings.LatestResultsApiRoute", string.Empty).ToLowerInvariant().ToLower();
+            var fieldTrackingRegister = "/fieldtracking/register";
             if (args.Url.FilePath.ToLowerInvariant().ToLower().Contains("/sitecore") ||
                 args.Url.FilePath.ToLowerInvariant().ToLower().Contains(fundSearchApi) ||
                 args.Url.FilePath.ToLowerInvariant().ToLower().Contains(articleSearchApi) ||
@@ -40,7 +41,8 @@ namespace LionTrust.Foundation.SitecoreExtensions.Pipelines.HttpRequestBegin
                 args.Url.FilePath.ToLowerInvariant().ToLower().Contains(documentsApi) ||
                 args.Url.FilePath.ToLowerInvariant().ToLower().Contains(genericListingApi) ||
                 args.Url.FilePath.ToLowerInvariant().ToLower().Contains(mediaGalleryApi) ||
-                args.Url.FilePath.ToLowerInvariant().ToLower().Contains(latestResultsApi))
+                args.Url.FilePath.ToLowerInvariant().ToLower().Contains(latestResultsApi) ||
+                args.Url.FilePath.ToLowerInvariant().ToLower().Contains(fieldTrackingRegister))
             {
                 return;
             }

@@ -120,6 +120,22 @@
             }
 
             return fields;
-        } 
+        }
+
+        public static DateTime GetDateTimeFieldValue(DateField dateField, DateTime defaultDate)
+        {
+            if (dateField == null)
+            {
+                return defaultDate;
+            }
+
+            var dateTimeValue = dateField.DateTime;
+            if (dateTimeValue != null && dateTimeValue != DateTime.MinValue)
+            {
+                return dateTimeValue;
+            }
+
+            return defaultDate;
+        }
     }
 }

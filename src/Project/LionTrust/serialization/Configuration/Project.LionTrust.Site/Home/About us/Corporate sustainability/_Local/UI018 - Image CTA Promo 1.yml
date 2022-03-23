@@ -1,0 +1,36 @@
+﻿---
+ID: "eab10e60-7785-4d32-8c5c-4a4a5f484e71"
+Parent: "81071e90-a7b7-418a-85f1-5293e4331359"
+Template: "d3d9d2ce-b2ce-49ac-b50d-6a5ffd4c4ab8"
+Path: "/sitecore/content/LionTrustNew/Home/About us/Corporate sustainability/_Local/UI018 - Image CTA Promo 1"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1054e4b6-1cf5-4c08-8a6d-d9b02fb17050"
+      Hint: ImageCTAPromo_Image
+      Value: |
+        <image mediaid="{A7DDF85A-951F-4140-A25A-DB508B7C33DA}" />
+    - ID: "143867db-9bba-4097-9eb4-0099c175ad91"
+      Hint: ImageCTAPromo_CTALink
+      Value: |
+        <link linktype="internal" text="Find out more" querystring="" target="" id="{994F3841-BFE7-4FEF-8D08-0023BD0A85BC}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220311T174526Z
+    - ID: "48bf236b-0681-4a09-9085-4933fa1c4a7a"
+      Hint: ImageCTAPromo_Body
+      Value: "Liontrust recognises that good governance and stewardship, sustainability and social impact are important considerations in choosing and monitoring investments and longer-term performance."
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\TomG
+    - ID: "5f6cda9b-99ec-4bfc-8ddb-258d248bc1ae"
+      Hint: ImageCTAPromo_TitleInSide
+      Type: Checkbox
+      Value: 1
+    - ID: "7a84ea30-ff24-4c46-ae8f-51fcff940663"
+      Hint: ImageCTAPromo_Title
+      Value: A Responsible Investor

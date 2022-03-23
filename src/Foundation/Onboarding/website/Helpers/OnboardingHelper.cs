@@ -51,10 +51,30 @@
             return string.Empty;
         }
 
+        public static string ViewingLabelWithArticle(string viewingLabel, string profileName)
+        {
+            char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
+
+            if (!string.IsNullOrEmpty(profileName) && !string.IsNullOrEmpty(viewingLabel))
+            {
+                char firstCharacter = profileName.ToLower().ToCharArray().ElementAt(0);
+                if (vowels.Contains(firstCharacter))
+                {
+                    return $"{viewingLabel} an";
+                }
+                else
+                {
+                    return $"{viewingLabel} a";
+                }
+            }
+
+            return viewingLabel;
+        }
+
         public static IInvestor GetCurrentContactInvestor(IMvcContext context, BaseLog log)
         {
             var home = context.GetHomeItem<IHome>();
-            IInvestor inverstor = null;
+            IInvestor investor = null;
             var tracker = Tracker.Current;
             if (home == null || home.OnboardingConfiguration == null || !IsValidConfiguration(home.OnboardingConfiguration, log))
             {
@@ -71,16 +91,26 @@
                     {
                         if (profile.PatternId.HasValue)
                         {
-                            inverstor = home.OnboardingConfiguration.ChooseInvestorRole?
-                                .FirstOrDefault()?
-                                .Investors?
-                                .FirstOrDefault(i => i?.PatternCard.Id == profile.PatternId);
+                            if (IsUkResident())
+                            {
+                                investor = home.OnboardingConfiguration.ChooseInvestorRole?
+                                    .FirstOrDefault()?
+                                    .Investors?
+                                    .FirstOrDefault(i => i?.PatternCard.Id == profile.PatternId);
+                            }
+                            else
+                            {
+                                investor = home.OnboardingConfiguration.ChooseInvestorRole?
+                                    .FirstOrDefault()?
+                                    .Investors?
+                                    .FirstOrDefault(i => i?.InternationalPatternCard.Id == profile.PatternId);
+                            }
                         }
                     }
                 }
             }
 
-            return inverstor;
+            return investor;
         }
 
         public static bool HasAccess(IEnumerable<ICountry> excludedCountries)
@@ -304,7 +334,7 @@
             return false;
         }
 
-            public static void AddPointsFromProfileCard(IOnboardingConfiguration configuration, IProfileCard profileCard)
+        public static void AddPointsFromProfileCard(IOnboardingConfiguration configuration, IProfileCard profileCard)
         {
             var scores = new Dictionary<string, double>();
 
@@ -394,7 +424,11 @@
 
             var uriBuilder = new UriBuilder(HttpContext.Current.Request.Url.ToString());
             var query = HttpUtility.ParseQueryString(uriBuilder.Query);
-            query.Add(QueryStringNames.Change, bool.TrueString.ToLower());
+            if (!(query.HasKeys() && query.AllKeys.Contains(QueryStringNames.Change)))
+            {
+                query.Add(QueryStringNames.Change, bool.TrueString.ToLower());
+            }
+            
             uriBuilder.Query = query.ToString();
 
             return uriBuilder.Uri.PathAndQuery;

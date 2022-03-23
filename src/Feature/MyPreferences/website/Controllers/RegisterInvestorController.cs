@@ -4,6 +4,7 @@
     using LionTrust.Feature.MyPreferences.Models;
     using LionTrust.Feature.MyPreferences.Repositories;
     using LionTrust.Feature.MyPreferences.Services;
+    using LionTrust.Foundation.Analytics.Goals;
     using LionTrust.Foundation.Contact.Managers;
     using LionTrust.Foundation.Contact.Models;
     using LionTrust.Foundation.Contact.Services;
@@ -12,7 +13,6 @@
     using Sitecore.Abstractions;
     using Sitecore.Mvc.Controllers;
     using System;
-    using System.Linq;
     using System.Collections.Generic;
     using System.Web.Mvc;
     using static LionTrust.Feature.MyPreferences.Constants;
@@ -58,7 +58,7 @@
 
             if (!Sitecore.Context.PageMode.IsExperienceEditor)
             {
-                viewModel.ProfessionalInvestor = investor.Id == home.OnboardingConfiguration.ProfressionalInvestor?.Id;
+                viewModel.ProfessionalInvestor = investor.Id == home.OnboardingConfiguration.ProfessionalInvestor?.Id;
                 viewModel.InvestorType = investor.InvestorName;
             }
 
@@ -114,7 +114,8 @@
                             LastName = registerInvestorSubmit.LastName,
                             Email = registerInvestorSubmit.Email,
                             IsUKResident = ukResident,
-                            Company = !string.IsNullOrEmpty(data.CompanyFieldDefaultValue) ? data.CompanyFieldDefaultValue : "Self"
+                            Company = !string.IsNullOrEmpty(data.CompanyFieldDefaultValue) ? data.CompanyFieldDefaultValue : "Self",
+                            Unsubscribed = !registerInvestorSubmit.SubscribeToEmail
                     };
 
                         var savedUser = _emailPreferencesService.SaveNonProfUserAsSFLead(nonProfUserViewModel, emailTemplate, data.EditPreferencesPage.AbsoluteUrl, data.FundDashboardPage.AbsoluteUrl);
@@ -135,7 +136,8 @@
                             IsUKResident = ukResident,
                             CompanyId = registerInvestorSubmit.CompanyId,
                             Company = registerInvestorSubmit.CompanyName,
-                            Organisation = sfOrganisationId
+                            Organisation = sfOrganisationId,
+                            Unsubscribed = !registerInvestorSubmit.SubscribeToEmail
                         };
 
                         var savedUser = _emailPreferencesService.SaveProfUserAsSFContact(professionalUser, emailTemplate, data.EditPreferencesPage.AbsoluteUrl, data.FundDashboardPage.AbsoluteUrl);
@@ -197,6 +199,13 @@
 
             if (isSuccess)
             {
+                // trigger goal
+                var goal = data.RetrievePreferencesGoal;
+                if (goal != Guid.Empty)
+                {
+                    Helper.TriggerGoal(new Sitecore.Data.ID(goal));
+                }
+
                 return Redirect(data.ResendEmailSuccessPage.Url);
             }
             else

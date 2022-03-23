@@ -19,32 +19,36 @@
                 break;
         }
     }
-}
-<div class="banner-card">
-    <div class="banner-card__img"
-         style="@(Model.Image != null ? Model.Image.GetSafeBackgroundImageStyle() : string.Empty)">
-    </div>
-    <div class="banner-card__text @textAlignmentCss">
-        <h4 class="banner-card__title">@Html.Glass().Editable(Model, x => x.Heading)</h4>
-        <span class="banner-card__description">
-            @Html.Glass().Editable(Model, x => x.Body)
-        </span>
-        @using (Html.Glass().BeginRenderLinkWithGoal(Model, m => m.PrimaryCTALink, Model.PrimaryCtaGoal, new NameValueCollection { { "class", "btn btn-primary" } }, isEditable: true))
-        {
-            if (Model.PrimaryCTALink != null)
-            {
-                @Model.PrimaryCTALink.Text;
-                <i class="icon-arrow-right animate-arrow"></i>
-            }
-        }
 
-        @using (Html.Glass().BeginRenderLinkWithGoal(Model, m => m.SecondaryCTALink, Model.SecondaryCtaGoal, new NameValueCollection { { "class", "btn btn-primary-forward" } }, isEditable: true))
-        {
-            if (Model.SecondaryCTALink != null)
+    var container = Model.MarginsContainer != null ? Model.MarginsContainer.Value : string.Empty;
+}
+<div class="@container">
+    <div class="banner-card">
+        <div class="banner-card__img"
+             style="@(Model.Image != null ? Model.Image.GetSafeBackgroundImageStyle() : string.Empty)">
+        </div>
+        <div class="banner-card__text @textAlignmentCss">
+            <h4 class="banner-card__title">@Html.Glass().Editable(Model, x => x.Heading)</h4>
+            <span class="banner-card__description">
+                @Html.Glass().Editable(Model, x => x.Body)
+            </span>
+            @using (Html.Glass().BeginRenderLinkWithGoal(Model, m => m.PrimaryCTALink, Model.PrimaryCtaGoal, new NameValueCollection { { "class", "btn btn-primary" } }, isEditable: true))
             {
-                @Model.SecondaryCTALink.Text;
-                <i class="icon-arrow-right animate-arrow"></i>
+                if (Model.PrimaryCTALink != null)
+                {
+                    @Model.PrimaryCTALink.Text;
+                    <i class="icon-arrow-right animate-arrow"></i>
+                }
             }
-        }        
+
+            @using (Html.Glass().BeginRenderLinkWithGoal(Model, m => m.SecondaryCTALink, Model.SecondaryCtaGoal, new NameValueCollection { { "class", "btn btn-primary-forward" } }, isEditable: true))
+            {
+                if (Model.SecondaryCTALink != null)
+                {
+                    @Model.SecondaryCTALink.Text;
+                    <i class="icon-arrow-right animate-arrow"></i>
+                }
+            }
+        </div>
     </div>
 </div>

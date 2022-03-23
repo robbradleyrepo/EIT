@@ -4,7 +4,8 @@
     using LionTrust.Foundation.Indexing.ComputedFields.SharedLogic;
     using Sitecore.ContentSearch;
     using Sitecore.ContentSearch.ComputedFields;
-    
+    using Sitecore.Data.Fields;
+
     public class Month : IComputedIndexField
     {
         public string FieldName { get; set; }
@@ -14,13 +15,13 @@
         public object ComputeFieldValue(IIndexable indexable)
         {
             var item = ComputedValueHelper.CheckCastComputedFieldItem(indexable);
-
-            if (item.Created != null)
+            if (item == null)
             {
-                return item.Created.Month;
+                return null;
             }
 
-            return DateTime.MinValue.Month;
+            DateField dateTimeField = item.Fields[Constants.GenericListingItemDate_FieldId];
+            return ComputedValueHelper.GetDateTimeFieldValue(dateTimeField, item.Created).Month;                      
         }
     }
 }

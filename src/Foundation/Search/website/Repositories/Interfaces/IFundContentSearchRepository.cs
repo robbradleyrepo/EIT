@@ -9,5 +9,7 @@
     public interface IFundContentSearchRepository
     {
         ContentSearchResults<FundSearchResultItem> GetFundSearchResultItems(Expression<Func<FundSearchResultItem, bool>> predicate, int skip, int take, string database, Func<IQueryable<FundSearchResultItem>, IQueryable<FundSearchResultItem>> sort);
+
+        ContentSearchResults<FundSearchResultItem> GetAllFundSearchResultItems(Expression<Func<FundSearchResultItem, bool>> predicate, string database = "web");
     }
 }

@@ -20,6 +20,7 @@
         public string OwnerEmail { get; set; }
         public string OwnerRegion { get; set; }
         public List<string> SalesforceFundIds { get; set; }
+        public bool Unsubscribed { get; set; }
     }
 }
 

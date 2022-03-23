@@ -28,6 +28,12 @@
                                         <span class="fund-manager__text">
                                             @Html.Glass().Editable(manager, m => m.ShortBio)
                                         </span>
+                                        @if (manager.Page != null && !string.IsNullOrEmpty(manager.Page.Url) && !string.IsNullOrEmpty(manager.Page.Text))
+                                        {
+                                            <a href="@manager.Page.Url" class="link-styles">
+                                                @manager.Page.Text<i class="icon-arrow-right animate-arrow"></i>
+                                            </a>
+                                        }
                                     </div>
                                 </div>
                             </div>

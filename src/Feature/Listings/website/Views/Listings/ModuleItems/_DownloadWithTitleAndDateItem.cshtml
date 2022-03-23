@@ -1,4 +1,5 @@
-﻿@model LionTrust.Feature.Listings.Models.IGenericListingModuleItem
+﻿@using ListingConstants = LionTrust.Feature.Listings.Constants
+@model LionTrust.Feature.Listings.Models.IGenericListingModuleItem
 <div class="col-lg-6">
     <div class="list-mod-item">
         <h2 class="list-mod-item__title">
@@ -7,11 +8,11 @@
         <span class="list-mod-item__date mb-0">
             @if (!Sitecore.Context.PageMode.IsExperienceEditor)
             {
-                @Model.Date.ToString("dd.MM.yyyy")
+                @Model.Date.ToString(ListingConstants.Settings.DateFormat)
             }
             else
             {
-                @Html.Glass().Editable(m => m.Date.Date, d => d.Date.Date.ToString("dd.MM.yyyy"))
+                @Html.Glass().Editable(m => m.Date.Date, d => d.Date.Date.ToString(ListingConstants.Settings.DateFormat))
             }
             </span>
         <div class="list-mod-item__content">

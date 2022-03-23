@@ -106,14 +106,14 @@
         }
 
         private IEnumerable<IGenericContentResult> MapGenericResultHits(IEnumerable<SearchHit<GenericSearchResultItem>> hits)
-        {
+        {            
             return hits.Select(x => new GenericListingResult
             {
                 ImageWidth = x.Document.GenericListingImageWidth,
                 ImageUrl = x.Document.GenericListingImage,
                 Subtitle = x.Document.GenericListingSubtitle,
                 Title = x.Document.GenericListingTitle,
-                Date = x.Document.Created.ToString("dd.MM.yyyy"),
+                Date = x.Document.Date.ToString(Constants.Settings.DateFormat),
                 Text = x.Document.GenericListingText,
                 Type = x.Document.GenericListingType
             });

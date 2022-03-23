@@ -48,36 +48,30 @@
             else
             {
                 var currentPage = _mvcContext.GetPageContextItem<IArticle>();
-
-                if (currentPage == null || currentPage.Topics == null || !currentPage.Topics.Any())
+                if (currentPage != null)
                 {
-                    return new EmptyResult();
+                    var fundList = new List<Guid>();
+                    if (currentPage.Fund != null)
+                    {
+                        fundList.Add(currentPage.Fund.Id);
+                    }
+
+                    var fundCategories = new List<Guid>();
+                    if (currentPage.PromoType != null)
+                    {
+                        fundCategories.Add(currentPage.PromoType.Id);
+                    }
+
+                    articleScrollerViewModel.ArticleList =
+                        new ArticleRepository(_contentSearchService, _mvcContext).Map(
+                            fundList,
+                            fundCategories,
+                            null,
+                            currentPage.Authors?.Select(a => a.Id),
+                            currentPage.Topics?.Select(t => t.Id),
+                            _databaseName);
+
                 }
-
-                var fundList = new List<Guid>();
-                if (currentPage.Fund != null)
-                {
-                    fundList.Add(currentPage.Fund.Id);
-                }
-
-                var fundCategories = new List<Guid>();
-                if (currentPage.PromoType != null)
-                {
-                    fundCategories.Add(currentPage.PromoType.Id);
-                }
-
-                articleScrollerViewModel.ArticleList =
-                    new ArticleRepository(_contentSearchService, _mvcContext).Map(
-                        fundList,
-                        fundCategories,
-                        null,
-                        currentPage.Authors?.Select(a => a.Id),
-                        currentPage.Topics?.Select(t => t.Id),
-                        _databaseName);
-
-
-                new ArticleRepository(_contentSearchService, _mvcContext)
-                        .GetArticlePromosByTopics(currentPage.Topics.Select(x => ContentSearchUtilities.IdHelper.NormalizeGuid(x.Id, true)));                
             }
 
             if (!Sitecore.Context.PageMode.IsExperienceEditor && (articleScrollerViewModel.ArticleList == null || !articleScrollerViewModel.ArticleList.Any()))
