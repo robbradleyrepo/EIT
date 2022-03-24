@@ -39,6 +39,7 @@
             public const string TemplateId = "{5BB1E536-F64D-462B-8666-0EB6A811EE8F}";
             public const string Title_FieldId = "{04EBF102-7785-40A0-BF5F-040EBCD004A5}";
             public const string ButtonText_FieldId = "{A2BCC4F0-B7F1-4AC8-BDAE-DF69211E86C2}";
+            public const string AcceptanceCheckboxText_FieldId = "{17BF2D26-E72F-4A42-A7F6-9547EF7094C2}";
             public const string AcceptanceFirstText_FieldId = "{30E38AAE-22D7-46C3-B51B-D1F54BAE5C14}";
             public const string AcceptanceLink_FieldId = "{A19DE9DA-FD4F-4A5B-B17B-9FB9373F0BAC}";
             public const string AcceptanceSecondText_FieldId = "{16109397-8678-4A4E-8E14-7E438F035121}";

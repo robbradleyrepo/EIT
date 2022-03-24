@@ -87,4 +87,13 @@ export default () => {
             $('.onboarding-overlay__scroller').show();
         });
     }
+	
+	$('.onboarding-overlay__select .checkbox__input').on('click', function() {
+        if (this.checked) {			
+			$('#submit-board').prop('disabled', false);
+		}
+		else {
+			$('#submit-board').prop('disabled', true);
+		}
+    })
 };
