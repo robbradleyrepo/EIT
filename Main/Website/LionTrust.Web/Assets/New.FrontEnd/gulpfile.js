@@ -176,7 +176,7 @@ function buildcopy() {
       "app/fonts/**/*",
 	  "app/js/chartjs-plugin-datalabels@0.7.0.js",
 	  "app/js/shuffle.js",
-	  "app/js/componets/galleryApp.js",
+	  "app/js/components/galleryApp.js",
 	  "app/js/frame-manager.js"
     ],
     { base: "app/" }
