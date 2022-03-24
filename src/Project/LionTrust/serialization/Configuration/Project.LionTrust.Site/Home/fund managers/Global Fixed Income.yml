@@ -1,0 +1,117 @@
+﻿---
+ID: "6c7f1de8-6395-4e91-b838-aaa0fd1931cc"
+Parent: "a4cff500-4247-4a27-91d1-f4da4c89cc1b"
+Template: "11bdd781-82d0-417f-bfbf-e955f7402ceb"
+Path: /sitecore/content/LionTrustNew/Home/fund managers/Global Fixed Income
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{FFF11D5F-859B-4B01-8DC7-333F8F4E5E3B}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{52B952C6-4ECC-445E-8DB3-B8690A9FDDD9}"
+              p:before="*"
+              s:ds="{CB3821DE-B5E7-4CBF-8E65-366746366FCD}"
+              s:id="{56ECB2D2-5D43-4F0F-A5D1-AC267F249E7B}"
+              s:ph="main" />
+            <r
+              uid="{D36D8FBC-06EF-4EE5-910A-3F68DBD6E0FA}"
+              p:after="r[@uid='{52B952C6-4ECC-445E-8DB3-B8690A9FDDD9}']"
+              s:ds="{012FF554-C56D-477B-9608-C793A52B38D5}"
+              s:id="{BA0509C8-337A-45E7-A597-8035DC2F1C21}"
+              s:ph="main" />
+            <r
+              uid="{564E54F3-AD2C-4EA6-8D4E-30C6EC555175}"
+              p:after="r[@uid='{D36D8FBC-06EF-4EE5-910A-3F68DBD6E0FA}']"
+              s:ds="{CC9B793F-9FF1-45ED-A1B9-97EE5AC433A8}"
+              s:id="{F4301786-A113-4511-BA28-46655D111F73}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{A3780ED1-C6E9-4848-AAC2-924C326789A6}"
+              p:after="r[@uid='{564E54F3-AD2C-4EA6-8D4E-30C6EC555175}']"
+              s:ds="{CAA11F34-35C6-4C01-B3F0-EA9CF2E2B078}"
+              s:id="{8D47F982-4A0A-4CEB-BA66-DEABA6B71AD1}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{6D4834BF-A2EF-4A81-988A-513BB5279181}"
+              p:after="r[@uid='{A3780ED1-C6E9-4848-AAC2-924C326789A6}']"
+              s:ds="{CFBE14C3-1AFC-439F-B62C-2921643F9BD7}"
+              s:id="{C4570003-4866-4EAA-B069-8FA6611DC0EC}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{C68BDFA4-8D38-4DF4-B85B-D1E26839B8E2}"
+              p:after="r[@uid='{6D4834BF-A2EF-4A81-988A-513BB5279181}']"
+              s:ds="{2E176369-0D72-4CC1-BAFE-817AD54B4F99}"
+              s:id="{DC0AC587-3DF0-468C-9F4F-6E8C137ECD47}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{6E104641-8300-4E17-9ECC-AC93A98235FB}"
+              p:after="r[@uid='{C68BDFA4-8D38-4DF4-B85B-D1E26839B8E2}']"
+              s:ds="{1A2683AE-7E37-4B31-8F92-AF4923E9D618}"
+              s:id="{6B2E2A4D-C3CB-4676-B804-B3459E4C9BD6}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{8628349D-448F-4429-A688-C325E41D0C16}"
+              p:after="r[@uid='{6E104641-8300-4E17-9ECC-AC93A98235FB}']"
+              s:ds="{C0C6F09D-0E0B-4F21-923F-53FEC92A6077}"
+              s:id="{D7EA03CD-11A9-4A09-9CC6-EE9E8566A692}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{5694D6D0-92F6-4F0E-98BF-8068888B0921}"
+              p:after="r[@uid='{8628349D-448F-4429-A688-C325E41D0C16}']"
+              s:ds="{8F7AA55E-2569-4646-A28E-7FA325F64C31}"
+              s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{1134A5AD-5F84-4C13-8365-167AF77AEEE3}"
+              p:after="r[@uid='{5694D6D0-92F6-4F0E-98BF-8068888B0921}']"
+              s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+              s:ph="/header/navigation" />
+            <r
+              uid="{8E8AD69D-DBB5-4174-81EC-352CF07845BC}"
+              p:after="r[@uid='{1134A5AD-5F84-4C13-8365-167AF77AEEE3}']"
+              s:ds="{C9D032ED-0AF5-44AA-9292-5368ADBAB879}"
+              s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
+              s:par=""
+              s:ph="header" />
+          </d>
+        </r>
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Global Fixed Income team | Liontrust Asset Management PLC
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210601T085613Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: Before joining Liontrust in early 2018, David Roberts and Phil Milburn worked together at Kames Capital for 14 years, where David was Head of the Fixed Income team and Phil was Head of Investment Strategy. Donald Phillips also joined Liontrust in 2018 and was previously an investment manager in the Credit team at Baillie Gifford and worked with David and Phil at Kames Capital for three years.
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: Global Fixed Income team
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Global Fixed Income team

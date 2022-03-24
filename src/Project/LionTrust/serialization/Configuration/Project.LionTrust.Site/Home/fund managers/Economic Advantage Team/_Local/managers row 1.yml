@@ -1,0 +1,34 @@
+﻿---
+ID: "ba048b9a-f262-4b0f-8bcb-fae6bc34f159"
+Parent: "f44710a0-4504-4e6a-9632-03e9e13acd9e"
+Template: "a33314f8-d9aa-4710-b47a-9f66ba58ab13"
+Path: /sitecore/content/LionTrustNew/Home/fund managers/Economic Advantage Team/_Local/managers row 1
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{A725C17C-25E3-42CC-96B2-4F3EA7545D7C}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210601T085619Z
+    - ID: "4ef859a1-6cd4-4213-8eab-94cc974c6c08"
+      Hint: FundManager_Title
+      Value:  
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "742fa605-ec20-4ec8-87fd-9e7daeb8bc84"
+      Hint: FundManagers_Managers
+      Type: Multilist
+      Value: |
+        {3AF0F46B-301E-45E8-B5F9-6E4BF1FE6D40}
+        {039DD4F1-8CEE-408B-A206-93ACB8B512D6}
+        {593A3471-F89A-4F84-9A0B-802BE61972AE}
+        {42430A5F-F395-4518-98D9-C21C1011175D}
+        {0F980420-4156-41F4-951F-F156CD3F4359}

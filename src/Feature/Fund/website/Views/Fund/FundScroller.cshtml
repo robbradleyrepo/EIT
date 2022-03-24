@@ -4,7 +4,12 @@
 @using FundConstants = LionTrust.Feature.Fund.Constants;
 @model LionTrust.Feature.Fund.Models.IFundScroller
 
-@{ 
+@if ((Model == null || Model.Funds == null || !Model.Funds.Any()) && !Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    return;
+}
+
+@{
     var isHomePage = Sitecore.Context.Item.TemplateID.ToString().Equals(FundConstants.HomePage.PageTemplateId);
     var compClass = isHomePage ? "fundscroller__dashboard-home" : string.Empty;
 }

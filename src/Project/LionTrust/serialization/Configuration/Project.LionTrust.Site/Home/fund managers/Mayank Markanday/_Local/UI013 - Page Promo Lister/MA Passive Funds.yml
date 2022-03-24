@@ -1,0 +1,36 @@
+﻿---
+ID: "556d7d2f-054c-4acf-a6f4-412909ed0e51"
+Parent: "2b3c4040-00bb-42a6-8e4e-b98b3b5bb5c1"
+Template: "bc775c7d-48c1-4f1b-865a-fecab210dbe3"
+Path: "/sitecore/content/LionTrustNew/Home/fund managers/Mayank Markanday/_Local/UI013 - Page Promo Lister/MA Passive Funds"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 150
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1058a56c-86ff-4783-a8d2-00c2217cc7ff"
+      Hint: PagePromoItem_Heading
+      Value: MA Passive Funds
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220215T143747Z
+    - ID: "5db6612c-40ef-44f7-996b-da07fced5370"
+      Hint: PagePromoItem_CTA
+      Value: |
+        <link text="View MA Passive fund range" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{C43165C2-F9FD-4473-A2C9-0C3BC54BE33E}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "f8de397f-fe55-4664-894d-8144b77b455a"
+      Hint: PagePromoItem_Text
+      Value: "A range of target risk funds aiming to harness the advantages of investing in low-cost tracker funds."
+    - ID: "fdcbfc89-a522-4029-a2ce-648e272372d1"
+      Hint: PagePromoItem_Image
+      Value: |
+        <image mediaid="{2CB3F978-2808-47D2-8208-AE557E654285}" />

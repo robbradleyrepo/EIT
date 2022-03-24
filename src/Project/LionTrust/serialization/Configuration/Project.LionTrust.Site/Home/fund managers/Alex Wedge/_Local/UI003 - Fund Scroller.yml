@@ -1,0 +1,31 @@
+﻿---
+ID: "6d34e815-a8d2-4fa2-a284-c88fe8a7b9ca"
+Parent: "7f767033-9dd8-4493-a4fe-a4c49cda8b39"
+Template: "f91bff52-8afb-4056-bbf3-84c16924b92d"
+Path: "/sitecore/content/LionTrustNew/Home/fund managers/Alex Wedge/_Local/UI003 - Fund Scroller"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220222T120045Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "8e11c5f7-1fca-4a99-ad05-b81511f973d9"
+      Hint: FundScroller_Heading
+      Value: Economic Advantage funds
+    - ID: "dd98d557-6e80-4ffb-9e13-498e29de5566"
+      Hint: FundScroller_Funds
+      Type: Multilist
+      Value: |
+        {F2F17A8F-DEC8-458D-965A-1F53AAE9AF6D}
+        {D8F81E1B-EE41-4385-B5F4-C30A63B6B6CA}
+        {2F0AD879-83D7-44CA-A9E4-BD72C73F4D72}
+        {C553BBA1-C26E-43FB-98AA-E0163F8C54DE}
+        {6EC98D5F-B68E-4E89-96BA-E3DC283F1B56}
+        {2335DB68-AD95-4E4E-B11B-007605557258}

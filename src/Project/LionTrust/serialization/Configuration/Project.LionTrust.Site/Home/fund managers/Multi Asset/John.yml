@@ -1,0 +1,85 @@
+﻿---
+ID: "4d7fdc2f-b299-4428-9686-9443edb032b8"
+Parent: "edd4863d-3ca1-471f-9a1d-fd0c88d67fd7"
+Template: "a742a8b9-b315-4895-8d46-8754962176ff"
+Path: /sitecore/content/LionTrustNew/Home/fund managers/Multi Asset/John
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{3F3228F9-2A64-4E90-9DFA-69C6884A8739}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{C884837C-4380-41CB-A9BF-861CA159EE70}"
+              p:before="*"
+              s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+              s:ph="/header/navigation" />
+            <r
+              uid="{F2563908-A8EA-4F99-B1EF-47EFB9CA9BDA}"
+              p:after="r[@uid='{C884837C-4380-41CB-A9BF-861CA159EE70}']"
+              s:ds="{1124FCE5-CF21-4111-9710-1F8B09B0CA26}"
+              s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
+              s:ph="header" />
+            <r
+              uid="{AC255EB9-4ED1-4509-82FC-7C4417835C64}"
+              p:after="r[@uid='{F2563908-A8EA-4F99-B1EF-47EFB9CA9BDA}']"
+              s:ds="{FB52B238-08BE-415B-A34F-2B81209D8F2C}"
+              s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+              s:ph="main" />
+            <r
+              uid="{CA48961A-DDD1-4235-A5F6-EB699CF21B57}"
+              p:after="r[@uid='{AC255EB9-4ED1-4509-82FC-7C4417835C64}']"
+              s:ds="{7676A231-7121-4342-8F21-A5E1A55B8256}"
+              s:id="{3349B84E-C4C1-42B8-8291-BCDB541DC1B6}"
+              s:ph="main" />
+            <r
+              uid="{9D5950EF-A06F-442F-A95B-BBE686DAD392}"
+              p:after="r[@uid='{CA48961A-DDD1-4235-A5F6-EB699CF21B57}']"
+              s:ds="{31D684A4-C388-4E35-99DC-1EE1B554EA65}"
+              s:id="{C4570003-4866-4EAA-B069-8FA6611DC0EC}"
+              s:ph="main" />
+            <r
+              uid="{95084472-99EF-4497-8416-93B3FD8B0423}"
+              p:after="r[@uid='{9D5950EF-A06F-442F-A95B-BBE686DAD392}']"
+              s:ds="{8F7AA55E-2569-4646-A28E-7FA325F64C31}"
+              s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+              s:ph="main" />
+            <r
+              uid="{88AA8D17-F1C2-4CFC-8C50-774453A25EB1}"
+              p:after="r[@uid='{95084472-99EF-4497-8416-93B3FD8B0423}']"
+              s:ds="{7E450107-63F3-49F6-A4EE-ADC144077606}"
+              s:id="{A811D2B0-D08D-4991-A9DD-6D9FA5799CBD}"
+              s:ph="main" />
+          </d>
+        </r>
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: John | Liontrust Asset Management PLC
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210712T135428Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "6b4afd6f-a05f-4141-8e9d-ec71e79a3936"
+      Hint: FundManager_Manager
+      Value: "{666D8658-69FD-4802-B1DF-B4D2FEF1AD18}"
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: John Husselbee
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: John Husselbee
