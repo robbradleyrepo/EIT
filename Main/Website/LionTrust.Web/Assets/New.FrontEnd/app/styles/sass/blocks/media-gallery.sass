@@ -206,7 +206,7 @@
 .fancybox-toolbar
     opacity: 1
     visibility: visible
-.fancybox-inner .fancybox-infobar
+.fancybox-infobar
     color: #eee
     font-size: 13px
     -webkit-font-smoothing: subpixel-antialiased
@@ -219,10 +219,18 @@
     pointer-events: none
     -webkit-touch-callout: none
     user-select: none
-    bottom: 78px
     position: absolute
     z-index: 100000
     visibility: visible
+    top: 82%
+    @include breakpoint(desktop, down)
+        top: 83%
+    @include breakpoint(tablet, down)
+        top: 87%
+        left: 47%
+    @include breakpoint(mobile-large, down)
+        top: 84%
+        left: 45%
 
 
 
