@@ -42,6 +42,7 @@
             var client = new RestClient(url);
             var request = new RestRequest("/api/funddata/liontrust/C9E1ACC5-B0E7-400A-A5BF-83C68654EA0B");
             request.AddQueryParameter("rangename", "LiontrustFunds");
+            request.AddQueryParameter("pricetype", "1");
             var result = client.Execute(request);
             if (!result.IsSuccessful)
             {                
