@@ -10,5 +10,8 @@
 
         [Required(AllowEmptyStrings = false)]
         public Guid InvestorId { get; set; }
+
+        [Range(typeof(bool), "true", "true")]
+        public bool AcceptanceCheckbox { get; set; }
     }
 }

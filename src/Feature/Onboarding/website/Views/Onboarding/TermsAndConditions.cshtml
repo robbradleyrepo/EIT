@@ -27,10 +27,19 @@
                 @Html.AntiForgeryToken()
                 <input type="hidden" id="Country" name="Country" />
                 <input type="hidden" id="InvestorId" name="InvestorId" />
-                <button class="btn btn-primary" id="submit-board" data-goal-trigger="@(Model.Goal != null ? Model.Goal.Id.ToString() : string.Empty)">
-                    @Html.Glass().Editable(Model, m => m.ButtonText)
-                    <i class="icon-arrow-right animate-arrow"></i>
-                </button>
+                <div class="onboarding-overlay__select">
+                    <label class="checkbox">
+                        @Html.CheckBoxFor(x => x.AcceptanceCheckbox, new { @class = "checkbox__input" })
+                        <span class="checkbox__box"></span>
+                        @Html.Glass().Editable(Model, x => x.AcceptanceCheckboxText)
+                    </label>
+                </div>
+                <div>
+                    <button class="btn btn-primary" id="submit-board" disabled data-goal-trigger="@(Model.Goal != null ? Model.Goal.Id.ToString() : string.Empty)">
+                        @Html.Glass().Editable(Model, m => m.ButtonText)
+                        <i class="icon-arrow-right animate-arrow"></i>
+                    </button>
+                </div>
             }
         </div>
     </div>
