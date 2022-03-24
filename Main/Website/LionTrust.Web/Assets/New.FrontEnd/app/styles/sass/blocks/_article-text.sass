@@ -53,7 +53,13 @@
                         left: -2px!important
                         color: $gold
                         @include breakpoint(desktop, up)
-                            top: 1px!important		        
+                            top: 1px!important	
+    .text-danger
+        a	
+            color: $primary
+            &:hover
+                color: $primary
+                text-decoration: underline            
 .big-quote
     letter-spacing: 0.26px
     +font-size(22px)
