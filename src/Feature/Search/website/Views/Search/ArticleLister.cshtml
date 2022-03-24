@@ -95,7 +95,7 @@
                                             </option-field>
                                             <option-field inline-template v-for="(monthItem, i) in months" :key="i">
                                                 <label class="option-checkbox option-checkbox_small" @@click="setChoosen(!checked)">
-                                                    <input class="option-checkbox__input" name="month" type="radio" v-model="month" :value="monthItem" @@click="setMonth(monthItem)">
+                                                    <input class="option-checkbox__input" name="month" type="radio" v-model="month" :value="i + 1" @@click="setMonth(i + 1)">
                                                     <span class="option-checkbox__text">{{monthItem}}</span>
                                                     <span class="option-checkbox__icon"></span>
                                                 </label>
