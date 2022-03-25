@@ -1,6 +1,8 @@
 .breadcrumb
     background-color: $just-black 
     margin-top: 80px
+    @include breakpoint(tablet, down)
+        margin-top: 0px
     
     &__nav
         display: flex
