@@ -1,4 +1,4 @@
-import listFilter from "./componets/listFilter";
+import listFilter from "./components/listFilter";
 document.addEventListener("DOMContentLoaded", () => {
     if ($('#lister-app').length > 0)
         listFilter();

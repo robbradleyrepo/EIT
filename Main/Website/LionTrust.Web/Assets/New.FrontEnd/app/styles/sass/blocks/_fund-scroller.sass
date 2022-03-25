@@ -4,8 +4,31 @@
         padding: 16px 0 18px
     &__box
         display: flex
+        justify-content: space-between
+        flex-wrap: wrap
         @include breakpoint(tablet, down)
             flex-direction: column
+        &.has-content
+            .imagepromo__content
+                width: 100%
+            .fundscroller__box-col
+                max-height: 1000px
+                flex: 1
+                padding: 0 16px 0 43px
+                @include breakpoint(tablet, down)
+                    padding-left: 16px
+            .fundscroller__carousel-col
+                transform: translateY(-55px)
+    &__headbox
+        margin-bottom: 7px
+        padding-left: 43px
+        width: 100%
+        @include breakpoint(desktop, up)
+            margin-top: 30px
+            margin-bottom: 7px
+        @include breakpoint(tablet, down)
+            padding-left: 16px
+
     &__dashboard-inner
         padding: 0
         margin-bottom: 73px
@@ -15,7 +38,10 @@
             background: #fff
             position: relative
             z-index: 1
-            padding: 0 16px 0 43px
+            padding: 0 16px 0 8px
+            flex: 0
+            max-height: 0
+            overflow: hidden
             @include breakpoint(tablet, down)
                 max-width: 100%
                 margin: 0
@@ -24,14 +50,15 @@
             .imagepromo__headbox
                 margin-top: 30px
         .fundscroller__carousel-col
+            flex: 1
             z-index: 0
             position: relative
-            margin-top: 100px
             max-width: calc( 100% - 455px )
             @include breakpoint(tablet, down)
                 max-width: 100%
-                margin-top: 43px
+                margin-top: 0px
                 padding: 0 16px
+                transform: translateY(0px)
             .swiper-slide
                 max-width: 456px
                 margin: 0 16px
@@ -41,10 +68,14 @@
             .swiper-slide-prev
                 .fund-card
                     box-shadow: 0px 10px 30px #41485572
+        .has-content
+            .fundscroller__carousel-col
+                @include breakpoint(tablet, down)
+                    margin-top: 43px
+                    transform: translateY(0px)
     &__dashboard-home
         .fundscroller__box-col
-            min-width: 762px;
-            max-width: 762px;
+            max-width: 762px
             background: transparent
             @include breakpoint(tablet, down)
                 max-width: 100%
@@ -53,6 +84,11 @@
             overflow: hidden
             @include breakpoint(tablet, down)
                 max-width: 100%    
+                transform: translateY(0px)
+        .has-content
+            .fundscroller__carousel-col
+                @include breakpoint(tablet, down)
+                    transform: translateY(0px)
     &__right
         display: flex
         position: relative
@@ -67,8 +103,6 @@
             position: absolute
     &__slider
         display: flex
-    .imagepromo__content
-        width: 100%
 .fundscroller-bg
     background: radial-gradient(70.56% 228.27% at -4.25% 47.85%, rgba(16, 160, 71, 0.37) 0%, rgba(16, 160, 71, 0) 100%), #000000
 .main-page
