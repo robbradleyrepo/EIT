@@ -8,14 +8,6 @@
         margin-bottom: 76px
         justify-content: center
         display: inline-block
-    @include breakpoint(mobile-large, down)
-        -webkit-box-pack: center
-        -ms-flex-pack: center
-        display: grid
-        grid-template-columns: 20% 20%
-        grid-template-rows: auto
-        align-items: stretch
-        justify-content: center
     @include breakpoint(tablet, down)
         -webkit-box-pack: center
         -ms-flex-pack: center
@@ -23,7 +15,6 @@
         grid-template-columns: 20% 20%
         grid-template-rows: auto
         align-items: stretch;
-        justify-content: center;
     &__link
         display: inline-block
         padding: 0 10px
@@ -32,8 +23,6 @@
             margin-right: 0
         @include breakpoint(desktop, up)
             margin-right: 130px
-            width: auto
-        @include breakpoint(mobile-large, down)
             width: auto
         @include breakpoint(tablet, down)
             width: auto
@@ -47,8 +36,6 @@
             width: 100px
             height: 100px
             margin-bottom: 15px
-        @include breakpoint(mobile-large, down)
-            margin-top: 20px
         @include breakpoint(tablet, down)
             margin-top: 20px
     &__name
