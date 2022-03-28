@@ -18,7 +18,7 @@
                 @include breakpoint(tablet, down)
                     padding-left: 16px
             .fundscroller__carousel-col
-                transform: translateY(-55px)
+                transform: translateY(-7px)
     &__headbox
         margin-bottom: 7px
         padding-left: 43px
@@ -35,7 +35,6 @@
         .fundscroller__box-col
             margin-right: 16px
             max-width: 436px
-            background: #fff
             position: relative
             z-index: 1
             padding: 0 16px 0 8px
@@ -54,10 +53,13 @@
             z-index: 0
             position: relative
             max-width: calc( 100% - 455px )
+            overflow: hidden
+            padding-bottom: 25px
+            margin-bottom: -25px
             @include breakpoint(tablet, down)
                 max-width: 100%
                 margin-top: 0px
-                padding: 0 16px
+                padding: 0 16px 25px
                 transform: translateY(0px)
             .swiper-slide
                 max-width: 456px
@@ -71,7 +73,7 @@
         .has-content
             .fundscroller__carousel-col
                 @include breakpoint(tablet, down)
-                    margin-top: 43px
+                    margin-top: 0px
                     transform: translateY(0px)
     &__dashboard-home
         .fundscroller__box-col
@@ -81,7 +83,6 @@
                 max-width: 100%
         .fundscroller__carousel-col
             max-width: 100%
-            overflow: hidden
             @include breakpoint(tablet, down)
                 max-width: 100%    
                 transform: translateY(0px)

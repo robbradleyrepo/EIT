@@ -59,7 +59,11 @@
             height: 100%
             background: $gold
     .quote__head-xl
-        font-size: 62px
+        font-size: 42px
         position: relative
         font-style: oblique
         margin-left: 10%
+        line-height: 150%
+        @include breakpoint(tablet, down)
+            font-size: 40px
+            margin-left: 5%
