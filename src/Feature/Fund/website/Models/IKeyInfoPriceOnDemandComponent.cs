@@ -2,7 +2,7 @@
 {
     using Glass.Mapper.Sc.Configuration.Attributes;
 
-    public interface IKeyInfoPriceOnDemandComponent : IFundSelector
+    public interface IKeyInfoPriceOnDemandComponent : IFundGlassBase
     {
         [SitecoreField(Constants.KeyInfoPriceOnDemandComponent.KeyInformationLabel_FieldId)]
         string KeyInformationLabel { get; set; }

@@ -2,7 +2,6 @@
 {
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
-    using LionTrust.Foundation.Legacy.Models;
 
     public interface IFourFundStatsOnDemand : IFundGlassBase
     {       

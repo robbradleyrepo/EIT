@@ -355,5 +355,24 @@
             public const string HoldingsLabel_FieldId = "{6782838F-9ED1-4D38-8710-B4E85EAA2675}";
             public const string HoldingsValue_FieldId = "{CD76945B-BD6B-45D1-B471-629F9E899A3E}";
         }
+
+        public static class AdditionalInfoOnDemandComponent
+        {
+            public const string AdditionalInfoLabel_FieldId = "{08C1265A-C9BE-4312-A31F-B41DA3E8A3C7}";            
+            public const string DividendDistributionsLabel_FieldId = "{C2BC2615-348A-461D-AEA0-C55D2696FEAD}";
+            public const string DividendDistributionsValue_FieldId = "{68481B33-D4E2-4124-B0FD-2AF8A75FAAED}";
+            public const string NovemberInterimsLabel_FieldId = "{17527C30-1093-4AFB-92C5-52117533E148}";
+            public const string NovemberInterimsValue_FieldId = "{ED30DA7C-0F37-403B-BABE-2648C69BBDA5}";
+            public const string FebruaryInterimsLabel_FieldId = "{7FCEFEA6-4182-4DDC-AAAC-8913FCBF2647}";
+            public const string FebruaryInterimsValue_FieldId = "{13DF9FDA-41E6-44A6-8B35-287BFAA2FA09}";
+            public const string MayInterimsLabel_FieldId = "{5D8F31CD-A9F7-4BA6-9390-D7C583B6D398}";
+            public const string MayInterimsValue_FieldId = "{73272A12-D2CF-4FCB-AAE8-CC71DCCA883D}";
+            public const string JulyInterimsLabel_FieldId = "{2B309DE8-C412-48DE-A4DF-09B1C45FEA70}";
+            public const string JulyInterimsValue_FieldId = "{09BE1671-01D0-444A-B2A4-57DBDC847CE7}";
+            public const string YearEndLabel_FieldId = "{5BDCA1BA-E142-4D66-89FC-E00E2F8303F3}";
+            public const string YearEndValue_FieldId = "{8BCDCA9B-22E2-4B8F-B6DA-2D5732B72FCD}";
+            public const string ISINCodeLabel_FieldId = "{EEB11AD7-C3AA-4A6B-A873-D6F2094803D2}";
+            public const string SedolCodeLabel_FieldId = "{C5329A37-336F-439C-AF1E-68B8176AF79C}";
+        }
     }
 }

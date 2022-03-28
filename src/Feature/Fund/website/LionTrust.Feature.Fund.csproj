@@ -114,6 +114,7 @@
     <Content Include="Views\Fund\_FundInfoRow.cshtml" />
     <Content Include="Views\Fund\FourFundStatsOnDemand.cshtml" />
     <Content Include="Views\Fund\KeyInfoPriceOnDemand.cshtml" />
+    <Content Include="Views\Fund\AdditionalInfoOnDemand.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -179,10 +180,12 @@
     <Compile Include="Indexing\FundManagerFundTeamUrlField.cs" />
     <Compile Include="Indexing\FundTeamUrlField.cs" />
     <Compile Include="Indexing\SalesforceFundIdField.cs" />
+    <Compile Include="Models\AdditionalInfoOnDemandViewModel.cs" />
     <Compile Include="Models\FundInfoRowViewModel.cs" />
     <Compile Include="Models\GraphBreakdownViewModel.cs" />
     <Compile Include="CreditRating\ICreditRating.cs" />
     <Compile Include="CreditRating\ICreditRatingRow.cs" />
+    <Compile Include="Models\IAdditionalInfoOnDemandComponent.cs" />
     <Compile Include="Models\IAdditionalInfoAndChargesTooltips.cs" />
     <Compile Include="Models\IFourFundStatsOnDemand.cs" />
     <Compile Include="Models\IFourFundStatsManual.cs" />
