@@ -51,5 +51,26 @@
 
             return View("~/Views/Fund/Disclaimer.cshtml", viewModel);
         }
+
+        public ActionResult KeyInfoPriceOnDemand()
+        {
+            var viewModel = new KeyInfoPriceOnDemandViewModel();
+            var data = _context.GetDataSourceItem<IKeyInfoPriceOnDemandComponent>();
+            var pageData = _context.GetPageContextItem<IPresentationBase>();
+            var fund = pageData?.Fund;
+            if (fund != null)
+            {
+                var citiCode = FundClassSwitcherHelper.GetCitiCode(HttpContext, fund);
+                var fundClass = fund.Classes.Where(c => c.CitiCode == citiCode).FirstOrDefault();
+                if (fundClass != null)
+                {
+                    viewModel.FundValues = _fundRepository.GetKeyInfoDataOnDemand(fundClass, "0");
+                }
+            }
+
+            viewModel.Component = data;
+
+            return View("~/Views/Fund/KeyInfoPriceOnDemand.cshtml", viewModel);
+        }
     }
 }

@@ -3,6 +3,8 @@
     using Glass.Mapper.Sc.Web.Mvc;
     using LionTrust.Feature.Fund.FundClass;
     using LionTrust.Feature.Fund.Models;
+    using LionTrust.Feature.Fund.Repository;
+    using LionTrust.Foundation.Legacy.Models;
     using Sitecore.Mvc.Controllers;
     using System;
     using System.Linq;
@@ -78,6 +80,43 @@
             return View("/views/fund/FourFundStats.cshtml", viewModel);
         }
 
+        public ActionResult RenderOnDemand()
+        {
+            var datasource = _context.GetDataSourceItem<IFourFundStatsOnDemand>();
+            if (datasource == null)
+            {
+                return null;
+            }
+          
+            var pageData = _context.GetPageContextItem<IPresentationBase>();
+            var fund = pageData?.Fund;
+
+            if (fund == null)
+            {
+                return new EmptyResult();
+            }
+
+            var citiCode = FundClassSwitcherHelper.GetCitiCode(HttpContext, fund);
+
+            var viewModel = new FundStatsOnDemandViewModel()
+            {
+                FundSelector = datasource
+            };
+
+            var fundClass = fund.Classes.Where(c => c.CitiCode == citiCode).FirstOrDefault();
+            if (fundClass != null)
+            {
+                var fundValues = _fundRepository.GetFundStatsDetailsOnDemand(fundClass, "0");
+                if (fundValues != null)
+                {
+                    fundValues.SharePrice = GetSharePriceFormatted(fundValues.SharePrice);
+                    viewModel.FundValues = fundValues;
+                }                
+            }
+
+            return View("/views/fund/FourFundStatsOnDemand.cshtml", viewModel);
+        }
+
         private string GetFundSizeFormatted(string fundSize)
         {
             if (string.IsNullOrWhiteSpace(fundSize))
@@ -100,6 +139,21 @@
 
             return fundSize;
         }
+
+        private string GetSharePriceFormatted(string sharePrice)
+        {
+            if (string.IsNullOrWhiteSpace(sharePrice))
+            {
+                return sharePrice;
+            }
+
+            //Eg. 748.844p - This regex gets the decimal value from the string.
+            var decimalsFromString = Regex.Match(sharePrice, @"(\d+(\.\d+)?)|(\.\d+)")?.Value;
+            var twoDecimalsString = FundRepository.GetTwoDecimalsFormat(decimalsFromString);
+            sharePrice = $"{twoDecimalsString} GBX";
+           
+            return sharePrice;
+        }        
 
         private string GetManagedLength(DateTime launchDate)
         {

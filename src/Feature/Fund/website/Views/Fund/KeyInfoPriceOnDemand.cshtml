@@ -1,0 +1,95 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Feature.Fund.Models
+@model LionTrust.Feature.Fund.Models.KeyInfoPriceOnDemandViewModel
+
+@if (Model != null && Model.Component != null && Model.FundValues != null)
+{
+    <div class="card">
+        <div class="card__content">
+            <span class="card__title">
+                @Html.Glass().Editable(Model.Component, m => m.KeyInformationLabel)
+            </span>
+            @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml",
+                new FundInfoRowViewModel()
+                {
+                    LabelValue = Html.Glass().Editable(Model.Component, m => m.BenchmarkIndexLabel),
+                    FieldValue = Model.FundValues.BenchmarkIndex,
+                    TooltipValue = string.Empty
+                })
+            @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml",
+                new FundInfoRowViewModel()
+                {
+                    LabelValue = Html.Glass().Editable(Model.Component, m => m.AICSectorLabel),
+                    FieldValue = Model.FundValues.AICSector,
+                    TooltipValue = string.Empty
+                })
+            @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml",
+                new FundInfoRowViewModel()
+                {
+                    LabelValue = Html.Glass().Editable(Model.Component, m => m.NetAssetValuePerShareLabel),
+                    FieldValue = Model.FundValues.NetAssetValuePerShare,
+                    TooltipValue = string.Empty
+                })
+            @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml",
+                new FundInfoRowViewModel()
+                {
+                    LabelValue = Html.Glass().Editable(Model.Component, m => m.PremiumDiscountLabel),
+                    FieldValue = Model.FundValues.PremiumDiscount,
+                    TooltipValue = string.Empty
+                })
+            @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml",
+                new FundInfoRowViewModel()
+                {
+                    LabelValue = Html.Glass().Editable(Model.Component, m => m.HistoricDividendPerShareLabel),
+                    FieldValue = Model.Component.HistoricDividendPerShareValue,
+                    TooltipValue = string.Empty
+                })
+            @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml",
+                new FundInfoRowViewModel()
+                {
+                    LabelValue = Html.Glass().Editable(Model.Component, m => m.HistoricSharePriceYieldLabel),
+                    FieldValue = Model.Component.HistoricSharePriceYieldValue,
+                    TooltipValue = string.Empty
+                })
+            @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml",
+                new FundInfoRowViewModel()
+                {
+                    LabelValue = Html.Glass().Editable(Model.Component, m => m.OngoingChargesLabel),
+                    FieldValue = Model.Component.OngoingChargesValue,
+                    TooltipValue = string.Empty
+                })
+            @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml",
+                new FundInfoRowViewModel()
+                {
+                    LabelValue = Html.Glass().Editable(Model.Component, m => m.ActiveSharesLabel),
+                    FieldValue = Model.Component.ActiveSharesValue,
+                    TooltipValue = string.Empty
+                })
+            @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml",
+                new FundInfoRowViewModel()
+                {
+                    LabelValue = Html.Glass().Editable(Model.Component, m => m.GearingGrossLabel),
+                    FieldValue = Model.Component.GearingGrossValue,
+                    TooltipValue = string.Empty
+                })
+            @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml",
+                new FundInfoRowViewModel()
+                {
+                    LabelValue = Html.Glass().Editable(Model.Component, m => m.GearingNetLabel),
+                    FieldValue = Model.Component.GearingNetValue,
+                    TooltipValue = string.Empty
+                })
+            @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml",
+                new FundInfoRowViewModel()
+                {
+                    LabelValue = Html.Glass().Editable(Model.Component, m => m.HoldingsLabel),
+                    FieldValue = Model.Component.HoldingsValue,
+                    TooltipValue = string.Empty
+                })
+        </div>        
+    </div>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <div style="background-color:white"><span style="color:black">Please add datasource to Key Info and Price On Demand component</span></div>
+}

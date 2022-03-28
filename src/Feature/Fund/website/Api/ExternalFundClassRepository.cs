@@ -113,5 +113,35 @@
         {
             SendEmailOnError("New data retrieval for citicode: " + citicode + " failed");
         }
+
+        public FundDataResponseModel GetDataOnDemand(string citicode, string priceType)
+        {
+            var url = _settings.GetSetting("LionTrust.Feature.Fund.FeApiEndPoint");
+            if (string.IsNullOrEmpty(url))
+            {
+                return null;
+            }
+
+            var client = new RestClient(url);
+            var request = new RestRequest("/api/funddata/liontrust/C9E1ACC5-B0E7-400A-A5BF-83C68654EA0B");
+            request.AddQueryParameter("rangename", "LiontrustFunds");
+            request.AddQueryParameter("citicodes", citicode);
+            request.AddQueryParameter("pricetype", priceType);
+            var result = client.Execute(request);
+            if (!result.IsSuccessful)
+            {
+                SendEmailOnError("There was an error during the retrieval of External Fund Data: " + result.ErrorMessage);
+                return null;
+            }
+
+            var fundDetails = JsonConvert.DeserializeObject<FundDataResponseModel[]>(result.Content);
+            if (fundDetails == null || !fundDetails.Any())
+            {
+                SendEmailOnError("There was no External Fund Data retrieved.");
+                return null;
+            }
+
+            return fundDetails[0];
+        }
     }
 }

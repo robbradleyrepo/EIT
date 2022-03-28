@@ -1,0 +1,41 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Fund.FundStats.FundStatsOnDemandViewModel
+@if (Model != null && Model.FundSelector != null)
+{
+    <section class="container">
+        <div class="fund-stats">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="fund-stats__item">
+                        <span class="fund-stats__title">@Html.Glass().Editable(Model.FundSelector, m => m.SharePriceLabel)</span>
+                        <span class="fund-stats__value">@(Model.FundValues != null ? Model.FundValues.SharePrice : "")</span>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="fund-stats__item">
+                        <span class="fund-stats__title">@Html.Glass().Editable(Model.FundSelector, m => m.CompanyLaunchDateLabel)</span>
+                        <span class="fund-stats__value">@Html.Glass().Editable(Model.FundSelector, m => m.CompanyLaunchDateValue)</span>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="fund-stats__item">
+                        <span class="fund-stats__title">@Html.Glass().Editable(Model.FundSelector, m => m.ManagerInceptionDateLabel)</span>
+                        <span class="fund-stats__value">@Html.Glass().Editable(Model.FundSelector, m => m.ManagerInceptionDateValue)</span>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="fund-stats__item">
+                        <span class="fund-stats__title">@Html.Glass().Editable(Model.FundSelector, m => m.TotalAssetsLabel)</span>
+                        <span class="fund-stats__value">@Html.Glass().Editable(Model.FundSelector, m => m.TotalAssetsValue)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <div style="background-color:black">
+        <span style="color:white">Add datasource for Four Fund Stats On Demand Component</span>
+    </div>
+}

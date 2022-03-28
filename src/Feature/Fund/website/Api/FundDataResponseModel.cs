@@ -322,6 +322,12 @@
 
         [JsonProperty("UnitCurrency")]
         public string UnitCurrency { get; set; }
+
+        [JsonProperty("NAV")]
+        public string Nav { get; set; }
+
+        [JsonProperty("PremiumDiscount")]
+        public string PremiumDiscount { get; set; }
     }
 
     public class RegionBreakdown
