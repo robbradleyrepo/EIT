@@ -29,6 +29,26 @@
             return ConsolidateData(result, apiData);
         }
 
+        public KeyInfoDataOnDemand GetKeyInfoDataOnDemand(IFundClass fundClass, string priceType)
+        {
+            var apiData = _repository.GetDataOnDemand(fundClass.CitiCode, priceType);
+            if (apiData == null)
+            {
+                _repository.SendEmailOnErrorForCiticode(fundClass.CitiCode);
+                return null;
+            }
+
+            return new KeyInfoDataOnDemand
+            {               
+                BenchmarkIndex = apiData.Benchmarks?
+                    .FirstOrDefault(x => x.BenchmarkTypeName.ToLower().Contains("benchmark"))?
+                    .BenchmarkName,
+                AICSector = apiData.SectorNameLong,
+                NetAssetValuePerShare = apiData.Nav,
+                PremiumDiscount = apiData.PremiumDiscount
+            };
+        }
+
         private static FundClassData ConsolidateData(FundClassData data, FundDataResponseModel apiData)
         {
             if(string.IsNullOrEmpty(data.Benchmark))

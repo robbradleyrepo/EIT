@@ -5,7 +5,6 @@
     using Sitecore.Mvc.Controllers;
     using System.Web.Mvc;
     using System.Linq;
-    using LionTrust.Foundation.Legacy.Models;
 
     public class CumulativePerformanceController : SitecoreController
     {
@@ -46,7 +45,7 @@
                         result.QuartileRow = _performanceManager.GetQuartile(citiCode, currentClass);
                     }
 
-                    result.Disclaimer = _performanceManager.GetDisclaimer(citiCode);
+                    result.Disclaimer = _performanceManager.GetDisclaimer(citiCode, currentClass.Currency, datasource.Disclaimer);
                 }
             }
 

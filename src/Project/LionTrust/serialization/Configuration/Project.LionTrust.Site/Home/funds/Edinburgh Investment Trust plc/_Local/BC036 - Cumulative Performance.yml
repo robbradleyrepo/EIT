@@ -19,6 +19,9 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20220120T152212Z
+    - ID: "3f407d7e-838c-4d99-a6ad-890b6a463037"
+      Hint: FundSelector_Fund
+      Value: "{8D894F1B-F8F8-4452-B927-96F663373B03}"
     - ID: "450fec5e-b30e-48af-adc4-051fd7b27289"
       Hint: PerformanceTable_Heading
       Value: Cumulative performance (%)
@@ -26,3 +29,6 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\hayleya
+    - ID: "cad3b2b9-d3a9-4bc1-9920-07ac2a7a44af"
+      Hint: PerformanceTable_Disclaimer
+      Value: "EIT: FE fundinfo as at {date}. Performance figures are shown in {currency}. Total return performance figures are calculated net of costs and charges, on a bid price to bid price basis (mid to mid for OEICs) with net income (dividends) reinvested. Where applicable the quartile rank is for the primary share class within the sector. If your investment is made in a currency other than that used in the past performance calculation the return may increase or decrease as a result of currency fluctuations."
