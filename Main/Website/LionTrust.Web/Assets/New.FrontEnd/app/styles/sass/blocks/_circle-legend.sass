@@ -6,6 +6,9 @@
     max-height: 470px
     @include breakpoint(desktop, up)
         padding: 20px 50px
+        overflow-x: auto
+    @include breakpoint(tablet, down)
+        overflow-x: auto
 
 .circle-legend, .capitalisation-legend
     color: $black
