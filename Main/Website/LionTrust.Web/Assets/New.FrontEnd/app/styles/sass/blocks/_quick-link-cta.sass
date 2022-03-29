@@ -6,7 +6,8 @@
     flex-direction: column
     justify-content: flex-end
     padding: 5px 20px
-    background-size: cover    
+    background-size: cover 
+    margin-top: -20px   
     &__title
         @extend .h5
         @include breakpoint(desktop, up)
@@ -24,7 +25,7 @@
 .scrollable-cards
     margin: 40px 0
     @include breakpoint(desktop, up)
-        margin-top: -100px
+        margin: 100px 0
     .container-lg
         overflow-x: scroll
         @include breakpoint(desktop, up)
@@ -35,6 +36,7 @@
         .row
             @include breakpoint(desktop, up)
                 flex-wrap: wrap
+            
     &__card
         height: 187px
         transition: box-shadow .3s ease
