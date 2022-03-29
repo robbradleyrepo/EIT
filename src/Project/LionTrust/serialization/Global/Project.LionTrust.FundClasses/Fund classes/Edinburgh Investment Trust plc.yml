@@ -18,7 +18,7 @@ Languages:
     - ID: "382cdded-7732-4690-ac7a-8dba5c503403"
       Hint: LegacyFundPageData_HideCumulativePerformanceTable
       Type: Checkbox
-      Value: 1
+      Value: 0
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
@@ -32,10 +32,16 @@ Languages:
     - ID: "ba664318-d29c-4166-a901-faa04f7d3aa6"
       Hint: LegacyFundPageData_HideDiscretePerformanceTable
       Type: Checkbox
-      Value: 1
+      Value: 0
+    - ID: "d2f09153-c85f-48ec-9c15-52c9ecbdeefb"
+      Hint: FundClass_Value
+      Value: 
     - ID: "d45fd542-d058-4753-a7fd-ead65fd132d6"
       Hint: KeyInfoAndPrice_ClassLaunchDate
       Value: 19520208T000000Z
+    - ID: "db68ca6d-2ef3-4a15-ac59-475724f4461e"
+      Hint: FundClass_Currency
+      Value: GBP
     - ID: "e22a6228-b13f-4ea0-b795-6429e50588f9"
       Hint: FundClass_Facstsheet
       Value: |

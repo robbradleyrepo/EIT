@@ -13,5 +13,8 @@
        
         [SitecoreField(Constants.PerformanceTable.HeadingFieldId)]
         string Heading { get; set; }
+
+        [SitecoreField(Constants.PerformanceTable.DisclaimerFieldId)]
+        string Disclaimer { get; set; }
     }
 }

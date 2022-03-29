@@ -9,6 +9,6 @@
 
         PerformanceTableRow GetQuartile(string citiCode, IFundClass fundClassItem);
 
-        string GetDisclaimer(string citiCode);
+        string GetDisclaimer(string citiCode, string currency = "", string disclaimerText = "");
     }
 }

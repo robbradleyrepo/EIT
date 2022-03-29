@@ -114,7 +114,7 @@
             SendEmailOnError("New data retrieval for citicode: " + citicode + " failed");
         }
 
-        public FundDataResponseModel GetDataOnDemand(string citicode, string priceType)
+        public FundDataResponseModel GetDataOnDemand(string citicode, string priceType = "1", string currency = "")
         {
             var url = _settings.GetSetting("LionTrust.Feature.Fund.FeApiEndPoint");
             if (string.IsNullOrEmpty(url))
@@ -127,6 +127,11 @@
             request.AddQueryParameter("rangename", "LiontrustFunds");
             request.AddQueryParameter("citicodes", citicode);
             request.AddQueryParameter("pricetype", priceType);
+            if (!string.IsNullOrEmpty(currency))
+            {
+                request.AddQueryParameter("currency", currency);
+            }
+
             var result = client.Execute(request);
             if (!result.IsSuccessful)
             {
