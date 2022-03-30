@@ -1,0 +1,58 @@
+﻿---
+ID: "ff33dfcf-937b-4202-bbcb-e746c028bf26"
+Parent: "082482d5-c272-455d-8386-f1f8ce067699"
+Template: "e14137dc-817e-40c3-b833-80c4824d2ff6"
+Path: "/sitecore/content/LionTrustNew/Home/Our Funds/Multi-Asset Dynamic Beta Portfolios/_Local/BC017 - Fund Manager Insights"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{6A4CE66C-7DBF-4499-8EB5-F9CA65B2D406}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0e5031b3-9232-42be-82d4-05579d7827d9"
+      Hint: ArticleSearchParameters_FundTeams
+      Type: Multilist
+      Value: "{070E5C0B-03B2-4438-9DE1-555EE1B65DD6}"
+    - ID: "1492465c-0e3c-4fdb-97b8-0fc76924e400"
+      Hint: FundManagerInsightsBase_Heading
+      Value: Fund insights
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220201T142244Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "6e1628b0-ebd1-45c5-ad2f-3e0aa6fc19a4"
+      Hint: FundManagerInsightsBase_CTA
+      Value: |
+        <link text="See all related" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{7E9E8706-F864-48E5-B4A2-57F2C408EFD7}" />
+    - ID: "71469dcb-2347-4fa2-883b-50f4df0e5244"
+      Hint: ArticleSearchParameters_FundManagers
+      Type: Multilist
+      Value: |
+        {666D8658-69FD-4802-B1DF-B4D2FEF1AD18}
+        {CE428AB4-D799-4083-8BEF-D4C25E125512}
+        {061107E6-1485-475E-A2D8-D5A3D34F48FF}
+        {A873BDFF-23DF-4C98-9A23-EF3BD83EB871}
+        {CAAB183E-773A-445D-BEE1-C59099B1786E}
+    - ID: "a03d4f9e-4bda-401d-9639-dd0247f50fab"
+      Hint: ArticleSearchParameters_ContentTypes
+      Type: Multilist
+      Value: |
+        {1E9B3548-D1FE-4C91-BB3C-5B9CD7599803}
+        {FE091F88-00F3-4D48-9E29-83949090DEBC}
+        {264310A1-EAC8-4FF3-9A8C-FA05EA49AE34}
+        {BC971C84-D2FD-4CF5-8010-B5162CB17836}
+        {8F7AE3EF-160E-4183-9613-06124444248D}
+    - ID: "c83820f8-fe31-440b-bdb9-61698d79c066"
+      Hint: FundManagerInsights_SelectedArticles
+      Type: Multilist with Search
+      Value: 

@@ -1,0 +1,192 @@
+﻿---
+ID: "985ff287-b97a-4177-b2a2-43cab74269d6"
+Parent: "712f3d02-aac9-4f76-a34c-a04dd9a6208d"
+Template: "793b1a20-f153-4cfb-93bd-8b62896f0d16"
+Path: "/sitecore/content/LionTrustNew/Home/Our Funds/Multi-Asset Income Portfolios"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{6B28AFCF-FA3D-4505-A8D4-C56F384207E3}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{33133DD3-0E19-4033-9C28-7804671069E7}"
+              p:before="*"
+              s:ds="{1B8707EC-E616-4498-A75A-B4252A4C042F}"
+              s:id="{C3B11E64-1214-410E-BA83-3347C5B59A7E}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{7DECFCF4-902B-4971-89BE-BD6D488A2CE6}"
+              p:after="r[@uid='{33133DD3-0E19-4033-9C28-7804671069E7}']"
+              s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+              s:ph="/header/navigation" />
+            <r
+              uid="{F97098D8-3254-4752-BFCF-ABFC7D64A578}"
+              p:after="r[@uid='{7DECFCF4-902B-4971-89BE-BD6D488A2CE6}']"
+              s:ds="{619ABE88-B9CC-47F8-9B53-86258F4E7DEF}"
+              s:id="{E8615AE3-E7F7-4FA4-9782-C22612560E79}"
+              s:par=""
+              s:ph="header" />
+            <r
+              uid="{5AA25FD9-0C14-4CD4-9155-73C7AA55F09B}"
+              p:after="r[@uid='{F97098D8-3254-4752-BFCF-ABFC7D64A578}']"
+              s:ds="{D6BB0575-6047-4978-B811-35012F6C4247}"
+              s:id="{2A426004-8707-4E51-9772-D999D41FB113}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{8F09B293-17AA-4224-B011-9F42C962DBA2}"
+              p:after="r[@uid='{5AA25FD9-0C14-4CD4-9155-73C7AA55F09B}']"
+              s:ds="{EC10465B-2C47-4FF5-8CB4-3B24ACF1F668}"
+              s:id="{56ECB2D2-5D43-4F0F-A5D1-AC267F249E7B}"
+              s:ph="main" />
+            <r
+              uid="{BC53C65D-F364-4983-AF40-2D987B3ED6ED}"
+              p:after="r[@uid='{8F09B293-17AA-4224-B011-9F42C962DBA2}']"
+              s:ds="{49AEF8C0-0352-4854-BF3C-55B49D02B303}"
+              s:id="{BA0509C8-337A-45E7-A597-8035DC2F1C21}"
+              s:ph="main" />
+            <r
+              uid="{D312293B-788F-40AB-A29E-9EB232B0619E}"
+              p:after="r[@uid='{BC53C65D-F364-4983-AF40-2D987B3ED6ED}']"
+              s:ds="{97465D44-32D6-4D92-8529-E3C8F79C8A1B}"
+              s:id="{F7E7EFF1-2B5F-4554-9B19-1483BDCD6025}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{2B4C61A7-CC61-44AC-AF80-3819EB78E837}"
+              p:after="r[@uid='{D312293B-788F-40AB-A29E-9EB232B0619E}']"
+              s:ds="{8D448546-DF44-4017-B148-27BD3D2ED04B}"
+              s:id="{56ECB2D2-5D43-4F0F-A5D1-AC267F249E7B}"
+              s:ph="main" />
+            <r
+              uid="{9A3E9937-AD30-4DEE-9870-AE1D9F1562DE}"
+              p:after="r[@uid='{2B4C61A7-CC61-44AC-AF80-3819EB78E837}']"
+              s:ds="{78E69BBD-051D-4AA3-9C3C-2C11AC41A7D9}"
+              s:id="{BA0509C8-337A-45E7-A597-8035DC2F1C21}"
+              s:ph="main" />
+            <r
+              uid="{3B94A5E7-F137-40EA-8A86-0E0E355F9FD7}"
+              p:after="r[@uid='{9A3E9937-AD30-4DEE-9870-AE1D9F1562DE}']"
+              s:ds="{6725F54B-3FC2-4451-A6FC-4DB5F3CDEEC5}"
+              s:id="{2A426004-8707-4E51-9772-D999D41FB113}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{B04DE10D-5DB8-4763-92A7-8045F36D4A70}"
+              p:after="r[@uid='{3B94A5E7-F137-40EA-8A86-0E0E355F9FD7}']"
+              s:ds="{DE39AC4B-AA5B-4E6B-957E-BD6F042982F7}"
+              s:id="{8D47F982-4A0A-4CEB-BA66-DEABA6B71AD1}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{502E2501-2446-44D9-838C-88F115F2C9A4}"
+              p:after="r[@uid='{B04DE10D-5DB8-4763-92A7-8045F36D4A70}']"
+              s:ds="{0365EE0E-E711-470F-8105-A0DFFA6B4C7B}"
+              s:id="{56ECB2D2-5D43-4F0F-A5D1-AC267F249E7B}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{9CF64375-FEE1-447D-BD81-AA2B9CDE8A35}"
+              p:after="r[@uid='{502E2501-2446-44D9-838C-88F115F2C9A4}']"
+              s:ds="{DD43A0B5-F6E7-4814-8CFF-6B097CD3333E}"
+              s:id="{E9EA1844-F7AA-45D6-A10F-800A467D6E3D}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{DE698B12-AE17-4452-9EAA-5DFC43A069CD}"
+              p:after="r[@uid='{9CF64375-FEE1-447D-BD81-AA2B9CDE8A35}']"
+              s:ds="{8404FCA4-BD90-48A0-BE96-ECC824E84487}"
+              s:id="{2A426004-8707-4E51-9772-D999D41FB113}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{FA911D16-5949-44C0-9D56-C1BE2136BAED}"
+              p:after="r[@uid='{DE698B12-AE17-4452-9EAA-5DFC43A069CD}']"
+              s:ds="{2E5BDBB1-DD59-4FEC-9B57-06547A94BD8D}"
+              s:id="{3349B84E-C4C1-42B8-8291-BCDB541DC1B6}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{E5667DA7-30AA-4610-A15B-855B1171D9AC}"
+              p:after="r[@uid='{FA911D16-5949-44C0-9D56-C1BE2136BAED}']"
+              s:ds="{C1E5215B-2CED-4921-B396-5A4482E39005}"
+              s:id="{2A426004-8707-4E51-9772-D999D41FB113}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{13AE5467-C5C0-496F-8748-EBA8F2C1573B}"
+              p:after="r[@uid='{E5667DA7-30AA-4610-A15B-855B1171D9AC}']"
+              s:ds="{27BB41DD-6DE2-4E44-A4FB-48DB6B60C82C}"
+              s:id="{049F3D5C-E59A-4505-9BDC-B94C11832A93}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{A8956A85-6DC8-48D8-8515-7C7248E11877}"
+              p:after="r[@uid='{13AE5467-C5C0-496F-8748-EBA8F2C1573B}']"
+              s:ds="{09D51230-11BB-4864-BA07-03FDAD20E67A}"
+              s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{39345DA5-FA18-456E-823A-D38934F9D2E0}"
+              p:after="r[@uid='{A8956A85-6DC8-48D8-8515-7C7248E11877}']"
+              s:ds="{15B27E85-CDA2-4B84-B87B-26587824B166}"
+              s:id="{6B2E2A4D-C3CB-4676-B804-B3459E4C9BD6}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{99F6B13B-3FE5-4E89-97BE-BA7A7C88B860}"
+              p:after="r[@uid='{39345DA5-FA18-456E-823A-D38934F9D2E0}']"
+              s:ds="{E6A9FB63-258B-4283-AF3E-F9C21FEB4693}"
+              s:id="{33050F00-5AE0-4130-8B3A-362E4D6EEBCB}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{26789752-D95F-4A5E-8321-BD42D5FDBB3C}"
+              p:after="r[@uid='{99F6B13B-3FE5-4E89-97BE-BA7A7C88B860}']"
+              s:ds="{8F7AA55E-2569-4646-A28E-7FA325F64C31}"
+              s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{CCBBB036-5788-4F78-AC6A-DF34C178F76C}"
+              s:ds=""
+              s:par="" />
+          </d>
+        </r>
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: MPS Income Portfolios | Liontrust Asset Management PLC
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220201T125507Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{AEA66CB3-FAA5-4F80-A3CE-A418B1EC5468}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: "The Liontrust MPS Income Portfolios are designed to deliver an attractive and rising level of income in addition to some long-term capital growth."
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: MPS Income Portfolios
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: MPS Income Portfolios

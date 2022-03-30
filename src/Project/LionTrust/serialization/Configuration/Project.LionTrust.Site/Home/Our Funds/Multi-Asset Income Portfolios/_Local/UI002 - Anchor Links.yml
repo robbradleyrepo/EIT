@@ -1,0 +1,32 @@
+﻿---
+ID: "1b8707ec-e616-4498-a75a-b4252a4c042f"
+Parent: "e21ee671-5ee0-40d0-aa06-65cc22296526"
+Template: "10bf3f6c-ae91-42d5-adfd-a2ae935ce1c5"
+Path: "/sitecore/content/LionTrustNew/Home/Our Funds/Multi-Asset Income Portfolios/_Local/UI002 - Anchor Links"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 1400
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{F1C2CB81-2F86-4F12-ABF1-F8C49D94BB7E}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220201T125513Z
+    - ID: "2dfcb4d4-7986-47a1-a0f3-79e139f3f976"
+      Hint: AnchorLinks_Heading
+      Value: "On this page: "
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "8d463fe0-e08e-4be8-88f5-727acef0e1c8"
+      Hint: AnchorLinks_Cta
+      Value: |
+        <link linktype="external" text="View documents" class="view-documents" url="http://#" anchor="" target="" />
