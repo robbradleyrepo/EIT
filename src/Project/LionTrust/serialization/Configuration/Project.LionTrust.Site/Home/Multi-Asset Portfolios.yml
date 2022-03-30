@@ -5,6 +5,93 @@ Template: "793b1a20-f153-4cfb-93bd-8b62896f0d16"
 Path: "/sitecore/content/LionTrustNew/Home/Multi-Asset Portfolios"
 DB: master
 SharedFields:
+- ID: "b0a67b2a-8b07-4e0b-8809-69f751709806"
+  Hint: __Tracking
+  Type: Tracking
+  Value: |
+    <tracking>
+      <profile
+        id="78031204-e817-478e-bb63-02e3adfe9055"
+        name="Investor type">
+        <key
+          name="Charity"
+          value="0" />
+        <key
+          name="Institutional"
+          value="0" />
+        <key
+          name="International Professional"
+          value="0" />
+        <key
+          name="Journalist"
+          value="0" />
+        <key
+          name="Private"
+          value="10" />
+        <key
+          name="Professional"
+          value="0" />
+        <key
+          name="Shareholder"
+          value="0" />
+      </profile>
+      <profile
+        id="867e79bf-c319-4cab-b6c6-527f0392682c"
+        name="Type of Professional Investor">
+        <key
+          name="Institutional"
+          value="0" />
+        <key
+          name="Outsource Advisor"
+          value="0" />
+        <key
+          name="Paraplanner"
+          value="0" />
+        <key
+          name="Single Strategy Advisor"
+          value="0" />
+        <key
+          name="Wealth Manager"
+          value="0" />
+      </profile>
+      <profile
+        id="5811133e-4cb5-4e97-9ede-d3882905ca19"
+        name="Fund Team"
+        presets="multi-asset|100||">
+        <key
+          name="Cash Flow"
+          value="0" />
+        <key
+          name="Economic"
+          value="0" />
+        <key
+          name="GFI"
+          value="0" />
+        <key
+          name="Global Equity"
+          value="0" />
+        <key
+          name="Multi-Asset"
+          value="10" />
+        <key
+          name="Sustainable"
+          value="0" />
+      </profile>
+      <profile
+        id="e31e33cf-6cc0-4103-8cd9-4a89673601ca"
+        name="Purchase"
+        presets="research|100||">
+        <key
+          name="Buy"
+          value="0" />
+        <key
+          name="Hold"
+          value="0" />
+        <key
+          name="Research"
+          value="10" />
+      </profile>
+    </tracking>
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 3100
@@ -51,36 +138,39 @@ Languages:
               s:par=""
               s:ph="main" />
             <r
-              uid="{9432CECE-C092-46A0-875B-A448D0987AB0}"
+              uid="{D2D727D1-5F14-4A94-8B03-E5AB08A5B4D4}"
               p:after="r[@uid='{5AA25FD9-0C14-4CD4-9155-73C7AA55F09B}']"
-              s:ds="{40AD162F-CAB6-42D8-AEDD-A595B189D5F9}"
-              s:id="{1922AE89-FB11-4FF8-8A56-6AAB8D05F3C2}"
-              s:par=""
+              s:ds="{5FC6F263-012F-403F-8A49-D50442E6CBB9}"
+              s:id="{56ECB2D2-5D43-4F0F-A5D1-AC267F249E7B}"
+              s:ph="main" />
+            <r
+              uid="{0B0C0A62-EDB8-4B34-8CC4-159DE161924F}"
+              p:after="r[@uid='{D2D727D1-5F14-4A94-8B03-E5AB08A5B4D4}']"
+              s:ds="{B590FAED-97CE-4EA6-9C59-C25AACBB3E66}"
+              s:id="{BA0509C8-337A-45E7-A597-8035DC2F1C21}"
               s:ph="main" />
             <r
               uid="{D312293B-788F-40AB-A29E-9EB232B0619E}"
-              p:after="r[@uid='{9432CECE-C092-46A0-875B-A448D0987AB0}']"
+              p:after="r[@uid='{0B0C0A62-EDB8-4B34-8CC4-159DE161924F}']"
               s:ds="{EE1D74AB-DA6F-49CB-AED0-285530191B2B}"
               s:id="{F7E7EFF1-2B5F-4554-9B19-1483BDCD6025}"
               s:par=""
               s:ph="main" />
             <r
-              uid="{A8956A85-6DC8-48D8-8515-7C7248E11877}"
+              uid="{071A69D5-9693-4D0B-A8DE-772C15CBE8BC}"
               p:after="r[@uid='{D312293B-788F-40AB-A29E-9EB232B0619E}']"
-              s:ds="{F5642A04-9BF5-4AE8-AF99-79969397ED00}"
-              s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
-              s:par=""
+              s:ds="{01817B0A-CA40-431F-9327-A0DC6583211B}"
+              s:id="{56ECB2D2-5D43-4F0F-A5D1-AC267F249E7B}"
               s:ph="main" />
             <r
-              uid="{39345DA5-FA18-456E-823A-D38934F9D2E0}"
-              p:after="r[@uid='{A8956A85-6DC8-48D8-8515-7C7248E11877}']"
-              s:ds="{A02CE510-ED16-41E9-96F5-D07FB9248C35}"
-              s:id="{6B2E2A4D-C3CB-4676-B804-B3459E4C9BD6}"
-              s:par=""
+              uid="{A430A8E2-D2FC-4A51-AEE0-3EBF51EE0576}"
+              p:after="r[@uid='{071A69D5-9693-4D0B-A8DE-772C15CBE8BC}']"
+              s:ds="{07E77BFF-0442-4782-92D8-80E41C0F4C06}"
+              s:id="{BA0509C8-337A-45E7-A597-8035DC2F1C21}"
               s:ph="main" />
             <r
               uid="{3B94A5E7-F137-40EA-8A86-0E0E355F9FD7}"
-              p:after="r[@uid='{39345DA5-FA18-456E-823A-D38934F9D2E0}']"
+              p:after="r[@uid='{A430A8E2-D2FC-4A51-AEE0-3EBF51EE0576}']"
               s:ds="{A0F0E40D-FF9C-491F-B912-2F8238A44AE2}"
               s:id="{2A426004-8707-4E51-9772-D999D41FB113}"
               s:par=""
@@ -93,15 +183,8 @@ Languages:
               s:par=""
               s:ph="main" />
             <r
-              uid="{6B54758F-A94E-47E0-A137-DB47A023C285}"
-              p:after="r[@uid='{B04DE10D-5DB8-4763-92A7-8045F36D4A70}']"
-              s:ds="{8CA832FD-5B56-4952-B9C1-9A57A950A77F}"
-              s:id="{2A426004-8707-4E51-9772-D999D41FB113}"
-              s:par=""
-              s:ph="main" />
-            <r
               uid="{502E2501-2446-44D9-838C-88F115F2C9A4}"
-              p:after="r[@uid='{6B54758F-A94E-47E0-A137-DB47A023C285}']"
+              p:after="r[@uid='{B04DE10D-5DB8-4763-92A7-8045F36D4A70}']"
               s:ds="{C027BCBD-A992-4C75-812D-0DC3579094CD}"
               s:id="{56ECB2D2-5D43-4F0F-A5D1-AC267F249E7B}"
               s:par=""
@@ -142,28 +225,22 @@ Languages:
               s:par=""
               s:ph="main" />
             <r
-              uid="{01CBB169-B354-4DAE-9740-03E1951D17FD}"
+              uid="{A8956A85-6DC8-48D8-8515-7C7248E11877}"
               p:after="r[@uid='{13AE5467-C5C0-496F-8748-EBA8F2C1573B}']"
-              s:ds="{12853687-17CA-4D86-A4ED-C67A03F15594}"
-              s:id="{8896A105-689C-44BC-9B14-2FA505363E2E}"
-              s:ph="main" />
-            <r
-              uid="{63A07CF1-109A-41BA-91B6-3B4EDF460650}"
-              p:after="r[@uid='{01CBB169-B354-4DAE-9740-03E1951D17FD}']"
-              s:ds="{ED6CF91C-46EA-4C01-A08F-F0FE1F53B7DE}"
-              s:id="{2A426004-8707-4E51-9772-D999D41FB113}"
+              s:ds="{F5642A04-9BF5-4AE8-AF99-79969397ED00}"
+              s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
               s:par=""
               s:ph="main" />
             <r
-              uid="{406EF967-E8F6-4429-90E7-82A525B3FB8D}"
-              p:after="r[@uid='{63A07CF1-109A-41BA-91B6-3B4EDF460650}']"
-              s:ds="{BF1D31B4-704C-45D0-9563-936E30F34C54}"
-              s:id="{29206264-421A-41D5-8869-A7D1EA60566B}"
+              uid="{39345DA5-FA18-456E-823A-D38934F9D2E0}"
+              p:after="r[@uid='{A8956A85-6DC8-48D8-8515-7C7248E11877}']"
+              s:ds="{A02CE510-ED16-41E9-96F5-D07FB9248C35}"
+              s:id="{6B2E2A4D-C3CB-4676-B804-B3459E4C9BD6}"
               s:par=""
               s:ph="main" />
             <r
               uid="{99F6B13B-3FE5-4E89-97BE-BA7A7C88B860}"
-              p:after="r[@uid='{406EF967-E8F6-4429-90E7-82A525B3FB8D}']"
+              p:after="r[@uid='{39345DA5-FA18-456E-823A-D38934F9D2E0}']"
               s:ds="{442C78C7-D547-4593-823A-75AF0390467B}"
               s:id="{33050F00-5AE0-4130-8B3A-362E4D6EEBCB}"
               s:par=""
@@ -176,28 +253,14 @@ Languages:
               s:par=""
               s:ph="main" />
             <r
-              uid="{01DB04A4-994F-44A5-957B-2DEAA82712E7}"
-              p:after="r[@uid='{26789752-D95F-4A5E-8321-BD42D5FDBB3C}']"
-              s:ds="{D33A61C5-2C89-42C8-8835-7E688224B982}"
-              s:id="{A811D2B0-D08D-4991-A9DD-6D9FA5799CBD}"
-              s:par=""
-              s:ph="main" />
-            <r
               uid="{CCBBB036-5788-4F78-AC6A-DF34C178F76C}"
               s:ds=""
               s:par="" />
-            <r
-              uid="{EFE098A2-6806-4CF6-AA58-7033B8E169D4}"
-              p:after="*[1=2]"
-              s:ds="{29DFE417-4DAC-451B-BCE2-F70A0992D82B}"
-              s:id="{473A136A-5744-42A9-B430-42CCB92CCC33}"
-              s:par=""
-              s:ph="lit-overlay" />
           </d>
         </r>
     - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
       Hint: LegacyPresentationBase_BrowserTitle
-      Value: "Multi-Asset Portfolios | Liontrust Asset Management PLC"
+      Value: MPS Growth Portfolios | Liontrust Asset Management PLC
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20220127T153312Z
@@ -210,10 +273,10 @@ Languages:
       Value: "{AEA66CB3-FAA5-4F80-A3CE-A418B1EC5468}"
     - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
       Hint: LegacyPresentationBase_ShortDescription
-      Value: "The Liontrust Multi-Asset Portfolios are a broad range of 22 target risk, actively managed model portfolios designed to meet most clients' risk and return objectives."
+      Value: "The Liontrust MPS Growth Portfolios are designed to deliver long-term capital growth."
     - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
       Hint: Breadcrumb_BreadcrumbTitle
-      Value: "Multi-Asset Portfolios"
+      Value: MPS Growth Portfolios
     - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
       Hint: LegacyPresentationBase_PageTitle
-      Value: "Multi-Asset Portfolios"
+      Value: MPS Growth Portfolios

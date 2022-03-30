@@ -20,7 +20,7 @@
 
         public IEnumerable<PerformanceTableRow> GetPerformanceTableRows(string citiCode, IFundClass fundClassItem)
         {
-            var fundClass = _repository.GetData().FirstOrDefault(d => d.CitiCode == citiCode);
+            var fundClass = _repository.GetDataOnDemand(citiCode, "1", fundClassItem.Currency);
             if (fundClass == null || fundClassItem == null)
             {
                 _repository.SendEmailOnErrorForCiticode(citiCode);

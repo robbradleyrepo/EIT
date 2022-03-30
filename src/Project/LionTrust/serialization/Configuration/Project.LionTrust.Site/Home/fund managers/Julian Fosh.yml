@@ -1,0 +1,108 @@
+﻿---
+ID: "6226f040-82fc-477d-9f03-85ae586af1ba"
+Parent: "a4cff500-4247-4a27-91d1-f4da4c89cc1b"
+Template: "ae7e1757-b052-4751-b940-a9712e5247fd"
+Path: /sitecore/content/LionTrustNew/Home/fund managers/Julian Fosh
+DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{B6CB773C-E731-4F36-B72A-AF5BFE57CA6F}">
+          <p:d />
+        </r>
+        <r
+          uid="{30A0A4C8-974F-4822-9DCB-DE14881E0400}"
+          s:ph="main" />
+        <r
+          uid="{9057DD73-496E-495D-9460-75D38BBB5B7E}">
+          <p:d />
+        </r>
+        <r
+          uid="{50FACAA0-F93E-4652-99EA-33AFC98FF0FE}"
+          p:after="*[1=2]"
+          s:id="{C728A955-DA1D-4700-B924-E0D35901DE4B}"
+          s:ph="footer" />
+      </d>
+    </r>
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{BC67911D-0B34-4CD6-A4C0-714394BD4DE9}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{94C4AA69-0130-48D3-AC4A-73475113F552}"
+              p:before="*"
+              s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+              s:ph="/header/navigation" />
+            <r
+              uid="{73D274AF-351D-4E6E-87C7-3DC7C86A57D4}"
+              p:after="r[@uid='{94C4AA69-0130-48D3-AC4A-73475113F552}']"
+              s:ds="{5298819A-84B8-4C4F-ADE8-277DB10AF250}"
+              s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+              s:ph="main" />
+            <r
+              uid="{40F54888-7461-4844-89AD-378737DE16A8}"
+              p:after="r[@uid='{73D274AF-351D-4E6E-87C7-3DC7C86A57D4}']"
+              s:ds="{0E57AE63-566B-4511-A445-850576EC8A05}"
+              s:id="{3349B84E-C4C1-42B8-8291-BCDB541DC1B6}"
+              s:ph="main" />
+            <r
+              uid="{FBAF1B71-1DC3-410F-BF3E-CCFE4C4565C1}"
+              p:after="r[@uid='{40F54888-7461-4844-89AD-378737DE16A8}']"
+              s:ds="{7AB0A2B9-9E47-47F8-B0C4-C7961326AC45}"
+              s:id="{C4570003-4866-4EAA-B069-8FA6611DC0EC}"
+              s:ph="main" />
+            <r
+              uid="{E5418B37-8258-4C2D-B3ED-8DD6049E7A18}"
+              p:after="r[@uid='{FBAF1B71-1DC3-410F-BF3E-CCFE4C4565C1}']"
+              s:ds="{8F7AA55E-2569-4646-A28E-7FA325F64C31}"
+              s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+              s:ph="main" />
+            <r
+              uid="{48AD1398-C35B-4BD2-A8E8-2DFA0912E0ED}"
+              p:after="r[@uid='{E5418B37-8258-4C2D-B3ED-8DD6049E7A18}']"
+              s:ds="{4312FB5D-49B5-4D15-825B-6239B39AC580}"
+              s:id="{A811D2B0-D08D-4991-A9DD-6D9FA5799CBD}"
+              s:ph="main" />
+            <r
+              uid="{21C3C8C1-837E-4D86-AB29-97C4A9E98178}"
+              p:after="r[@uid='{48AD1398-C35B-4BD2-A8E8-2DFA0912E0ED}']"
+              s:ds="{9CD87B82-5A53-4238-95EC-4B72A72400A9}"
+              s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
+              s:ph="header" />
+          </d>
+        </r>
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Julian Fosh | Liontrust Asset Management PLC
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220209T150151Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: Julian Fosh
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: Julian Fosh

@@ -81,5 +81,11 @@
 
         [IndexField("article_created_date")]
         public DateTime ArticleCreatedDate { get; set; }
+
+        [IndexField("article_created_date_month")]
+        public int ArticleCreatedDateMonth { get; set; }
+
+        [IndexField("article_created_date_year")]
+        public int ArticleCreatedDateYear { get; set; }
     }
 }

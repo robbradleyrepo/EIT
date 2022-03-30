@@ -7,8 +7,6 @@
     {
         public string DatabaseName { get; set; }
 
-        public DateTime FromDate { get; set; }
-
         public IEnumerable<string> ContentTypes { get; set; }
 
         public IEnumerable<string> Funds { get; set; }
@@ -26,6 +24,8 @@
 
         public int Take { get; set; }
 
-        public DateTime ToDate { get; set; }
+        public int? Month { get; set; }
+
+        public int? Year { get; set; }
     }
 }

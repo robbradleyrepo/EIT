@@ -1,0 +1,41 @@
+﻿---
+ID: "4a5623cb-a8a0-42b1-be4d-6f0a3f1a6ec9"
+Parent: "630bfbad-00ad-4c75-9734-3060468afe1e"
+Template: "e14137dc-817e-40c3-b833-80c4824d2ff6"
+Path: "/sitecore/content/LionTrustNew/Home/fund managers/Martyn Jones/_Local/BC017 - Fund Manager Insights"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0e5031b3-9232-42be-82d4-05579d7827d9"
+      Hint: ArticleSearchParameters_FundTeams
+      Type: Multilist
+      Value: "{64900D7A-93A6-4B31-A639-E1BA6E52D5B4}"
+    - ID: "1492465c-0e3c-4fdb-97b8-0fc76924e400"
+      Hint: FundManagerInsightsBase_Heading
+      Value: Latest insights
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220222T144746Z
+    - ID: "550b2192-38e6-4cee-85f2-0bfca295bcf8"
+      Hint: ArticleSearchParameters_Topics
+      Type: Multilist
+      Value: 
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "6e1628b0-ebd1-45c5-ad2f-3e0aa6fc19a4"
+      Hint: FundManagerInsightsBase_CTA
+      Value: |
+        <link text="See all related" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{7E9E8706-F864-48E5-B4A2-57F2C408EFD7}" />
+    - ID: "71469dcb-2347-4fa2-883b-50f4df0e5244"
+      Hint: ArticleSearchParameters_FundManagers
+      Type: Multilist
+      Value: 
+    - ID: "a03d4f9e-4bda-401d-9639-dd0247f50fab"
+      Hint: ArticleSearchParameters_ContentTypes
+      Type: Multilist
+      Value: 

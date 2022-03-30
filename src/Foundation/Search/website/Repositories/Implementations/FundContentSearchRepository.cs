@@ -37,5 +37,25 @@
                 return new ContentSearchResults<FundSearchResultItem> { SearchResults = results, TotalResults = results.TotalSearchResults };
             }
         }
+
+        public ContentSearchResults<FundSearchResultItem> GetAllFundSearchResultItems(Expression<Func<FundSearchResultItem, bool>> predicate, string database = "web")
+        {
+            using (IProviderSearchContext context = ContentSearchManager
+                                                            .GetIndex($"liontrust_fund_{database}_index")
+                                                            .CreateSearchContext(SearchSecurityOptions.DisableSecurityCheck))
+            {
+                var query = context.GetQueryable<FundSearchResultItem>()
+                                 .Where(predicate);
+
+                var results = query.GetResults();
+
+                if (results == null)
+                {
+                    return null;
+                }
+
+                return new ContentSearchResults<FundSearchResultItem> { SearchResults = results, TotalResults = results.TotalSearchResults };
+            }
+        }
     }
 }

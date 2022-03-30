@@ -1,0 +1,28 @@
+﻿---
+ID: "ebb99a8a-b2d3-4227-979d-90b047a7f48a"
+Parent: "12c4cd3e-9aa5-42bc-add7-aea4b3e8be58"
+Template: "f91bff52-8afb-4056-bbf3-84c16924b92d"
+Path: "/sitecore/content/LionTrustNew/Home/fund managers/Chris Foster/_Local/UI003 - Fund Scroller"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220222T145803Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "8e11c5f7-1fca-4a99-ad05-b81511f973d9"
+      Hint: FundScroller_Heading
+      Value: Chris's funds
+    - ID: "dd98d557-6e80-4ffb-9e13-498e29de5566"
+      Hint: FundScroller_Funds
+      Type: Multilist
+      Value: |
+        {C2095FE1-D6B7-4592-AAE7-C46994E21D3B}
+        {FC89CAC1-0261-4E99-9C79-956E34A50251}
+        {83BDAC7D-3E51-42B2-8F2B-71E0258485C6}

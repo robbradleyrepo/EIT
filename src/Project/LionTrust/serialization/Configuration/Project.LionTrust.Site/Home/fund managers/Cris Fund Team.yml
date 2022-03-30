@@ -1,0 +1,111 @@
+﻿---
+ID: "fc396652-378d-4fc5-89af-7588329ea100"
+Parent: "a4cff500-4247-4a27-91d1-f4da4c89cc1b"
+Template: "11bdd781-82d0-417f-bfbf-e955f7402ceb"
+Path: /sitecore/content/LionTrustNew/Home/fund managers/Cris Fund Team
+DB: master
+BranchID: "cbbf480e-6a45-44df-a485-a7bee8e19a8a"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{FFF11D5F-859B-4B01-8DC7-333F8F4E5E3B}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{58F6B16A-83B9-4536-98CF-416E6CCF060A}"
+              p:before="*"
+              s:ds="{4EDE9E71-3762-4D42-8E7F-241163D45068}"
+              s:id="{56ECB2D2-5D43-4F0F-A5D1-AC267F249E7B}"
+              s:ph="main" />
+            <r
+              uid="{564E54F3-AD2C-4EA6-8D4E-30C6EC555175}"
+              p:after="r[@uid='{58F6B16A-83B9-4536-98CF-416E6CCF060A}']"
+              s:ds="{52D43B4A-7234-4B20-8065-3E11BD017585}"
+              s:id="{F4301786-A113-4511-BA28-46655D111F73}"
+              s:ph="main" />
+            <r
+              uid="{6E104641-8300-4E17-9ECC-AC93A98235FB}"
+              p:after="r[@uid='{564E54F3-AD2C-4EA6-8D4E-30C6EC555175}']"
+              s:ds="{333B759B-EDC2-44DE-BD62-85DB917109CB}"
+              s:id="{6B2E2A4D-C3CB-4676-B804-B3459E4C9BD6}"
+              s:ph="main" />
+            <r
+              uid="{43B5BE7D-F841-40E1-93DF-99728A9575D7}"
+              p:after="r[@uid='{6E104641-8300-4E17-9ECC-AC93A98235FB}']"
+              s:ds="{9EB8E9AA-1C47-407E-8C97-289F7C3B02DC}"
+              s:id="{C5084910-C569-47A3-940B-26D52C89F4B6}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{A3780ED1-C6E9-4848-AAC2-924C326789A6}"
+              p:after="r[@uid='{43B5BE7D-F841-40E1-93DF-99728A9575D7}']"
+              s:ds="{60FB9D37-8123-4D98-B21A-2C2D05905DED}"
+              s:id="{8D47F982-4A0A-4CEB-BA66-DEABA6B71AD1}"
+              s:ph="main" />
+            <r
+              uid="{5694D6D0-92F6-4F0E-98BF-8068888B0921}"
+              p:after="r[@uid='{A3780ED1-C6E9-4848-AAC2-924C326789A6}']"
+              s:ds="{8F7AA55E-2569-4646-A28E-7FA325F64C31}"
+              s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+              s:ph="main" />
+            <r
+              uid="{8628349D-448F-4429-A688-C325E41D0C16}"
+              p:after="r[@uid='{5694D6D0-92F6-4F0E-98BF-8068888B0921}']"
+              s:ds="{1128B416-407F-4C04-BC29-647C9DF9104D}"
+              s:id="{D7EA03CD-11A9-4A09-9CC6-EE9E8566A692}"
+              s:ph="main" />
+            <r
+              uid="{6D4834BF-A2EF-4A81-988A-513BB5279181}"
+              p:after="r[@uid='{8628349D-448F-4429-A688-C325E41D0C16}']"
+              s:ds="{BBC7A2BF-78BD-43F9-998C-A01E17221D57}"
+              s:id="{C4570003-4866-4EAA-B069-8FA6611DC0EC}"
+              s:ph="main" />
+            <r
+              uid="{C68BDFA4-8D38-4DF4-B85B-D1E26839B8E2}"
+              p:after="r[@uid='{6D4834BF-A2EF-4A81-988A-513BB5279181}']"
+              s:ds="{63A8D296-7C30-40A7-B299-7B322951A33B}"
+              s:id="{DC0AC587-3DF0-468C-9F4F-6E8C137ECD47}"
+              s:ph="main" />
+            <r
+              uid="{101FA966-4BBC-48CC-BBAD-A3EBD9A4D424}"
+              p:after="r[@uid='{C68BDFA4-8D38-4DF4-B85B-D1E26839B8E2}']"
+              s:ds="{4FF45A2B-3C27-4668-ADE9-2F00198BE67A}"
+              s:id="{A811D2B0-D08D-4991-A9DD-6D9FA5799CBD}"
+              s:ph="main" />
+            <r
+              uid="{1134A5AD-5F84-4C13-8365-167AF77AEEE3}"
+              p:after="r[@uid='{101FA966-4BBC-48CC-BBAD-A3EBD9A4D424}']"
+              s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+              s:ph="/header/navigation" />
+            <r
+              uid="{8E8AD69D-DBB5-4174-81EC-352CF07845BC}"
+              p:after="r[@uid='{1134A5AD-5F84-4C13-8365-167AF77AEEE3}']"
+              s:ds="{5D9D4675-6C02-4524-ACC8-57F75B9B530A}"
+              s:id="{1C60CE53-EE27-4652-A76F-199EA4B84BD2}"
+              s:ph="header" />
+          </d>
+        </r>
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Cris Fund Team | Liontrust Asset Management PLC
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220128T112444Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: Fund Team

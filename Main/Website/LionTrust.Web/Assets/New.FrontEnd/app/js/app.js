@@ -4,23 +4,23 @@ import $ from "jquery";
 window.jQuery = $;
 window.$ = $;
 
-import onboardingOverlay from "./componets/onboarding";
-import searchOvarlay from "./componets/searchOvarlay";
-import sidebarNav from "./componets/sidebarNav";
-import carouselSlider from "./componets/carouselSlider";
-import fundsSlider from "./componets/fundsSlider";
-import articleSlider from "./componets/articleSlider";
-import awardsSlider from "./componets/awardsSlider";
-import investmentCard from "./componets/investmentCard";
-import parallaxScrolling from "./componets/parallaxScrolling";
-import stickyNavbar from "./componets/stickyNavbar";
-import literatureOverlay from "./componets/literatureOverlay";
-import shareLink from "./componets/shareLink";
-import locationAndMap from "./componets/locationAndMap";
-import tabNav from "./componets/tabNav";
-import headerCtaNav from "./componets/headerCtaNav";
-import preferenceCenter from './componets/preferenceCenter';
-import common from "./componets/common";
+import onboardingOverlay from "./components/onboarding";
+import searchOvarlay from "./components/searchOvarlay";
+import sidebarNav from "./components/sidebarNav";
+import carouselSlider from "./components/carouselSlider";
+import fundsSlider from "./components/fundsSlider";
+import articleSlider from "./components/articleSlider";
+import awardsSlider from "./components/awardsSlider";
+import investmentCard from "./components/investmentCard";
+import parallaxScrolling from "./components/parallaxScrolling";
+import stickyNavbar from "./components/stickyNavbar";
+import literatureOverlay from "./components/literatureOverlay";
+import shareLink from "./components/shareLink";
+import locationAndMap from "./components/locationAndMap";
+import tabNav from "./components/tabNav";
+import headerCtaNav from "./components/headerCtaNav";
+import preferenceCenter from './components/preferenceCenter';
+import common from "./components/common";
 
 document.addEventListener("DOMContentLoaded", () => {
     onboardingOverlay();
@@ -52,5 +52,10 @@ document.addEventListener("DOMContentLoaded", () => {
     $('.nav-desktop__item').on('mouseleave', () => {
         $('.header').css('z-index', '2')
     })
+    $(".imagepromo__contentbox p").each(function(){
+        if ($(this).text().trim().length) {
+            $(this).closest('.fundscroller__box').addClass("has-content");
+        }
+    }); 
 
 });

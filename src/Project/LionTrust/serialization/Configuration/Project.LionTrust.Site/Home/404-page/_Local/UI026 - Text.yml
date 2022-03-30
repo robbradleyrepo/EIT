@@ -14,7 +14,8 @@ Languages:
       Value: 20220202T090238Z
     - ID: "7a6eea35-2025-43cf-a371-43d99a82e804"
       Hint: RichText_Text
-      Value: Why not try searching for something else, otherwise you can return to the homepage.
+      Value: |
+        Why not try <a href="~/link.aspx?_id=A8E3DB36A68147C98E4E50D38B229423&amp;_z=z"><span class="text-primary-forward">searching</span></a>&nbsp;for something else, otherwise you can return to the <a href="~/link.aspx?_id=7502B69ED1544861A033BC0CB30A91B5&amp;_z=z"><span class="text-primary-forward">homepage</span></a>.
     - ID: "b4d032f0-3342-49a1-ad8a-d0f640c59b4c"
       Hint: RichText_MarginsContainer
       Value: "{34FC685B-A73E-45C5-863D-1A828A66C4F1}"

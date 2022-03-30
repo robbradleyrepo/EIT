@@ -111,6 +111,7 @@ namespace LionTrust.Foundation.Legacy
             public const string HideBenchmarkComparator1Rows_FieldId = "{0D4E953F-8AA2-4976-B3D7-1A498BE6A53B}";
             public const string HideBenchmarkComparator2Rows_FieldId = "{7DCAD117-6E0F-4619-BA3C-F62D1970B0D4}";
             public const string HideQuartileRows_FieldId = "{22906BBB-0880-4130-9149-21185003E807}";
+            public const string Currency_FieldId = "{DB68CA6D-2EF3-4A15-AC59-475724F4461E}";
         }
         
         public static class Fund 

@@ -8,5 +8,7 @@
     public interface IFundContentSearchService
     {
         ContentSearchResults<FundSearchResultItem> GetFunds(FundSearchRequest fundSearchRequest, Func<IQueryable<FundSearchResultItem>, IQueryable<FundSearchResultItem>> sort = null);
+
+        ContentSearchResults<FundSearchResultItem> GetAllAllowedFunds();
     }
 }

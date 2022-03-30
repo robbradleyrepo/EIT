@@ -23,26 +23,23 @@
                     @foreach (var item in Model.Data.Children)
                     {
                         var imageSrc = item.Thumbnail != null ? item.Thumbnail.GetSafeBackgroundImageStyle() : string.Empty;
-                        var isCollapsed = item != Model.Data.Children.First();
-                        var collapsedClass = isCollapsed ? "collapsed" : string.Empty;
-                        var showClass = isCollapsed ? string.Empty : "show";
                         var rowName = LionTrust.Feature.Listings.Utils.RandomString(10, true);
 
                         using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/Accordion Row", item.Id.ToString()))
                         {
                             <div class="accordion__card">
                                 <div class="accordion__header">
-                                    <div class="accordion__link @collapsedClass"
+                                    <div class="accordion__link collapsed"
                                          data-toggle="collapse"
                                          data-target="#@rowName"
-                                         aria-expanded="@isCollapsed"
+                                         aria-expanded="true"
                                          aria-controls="@rowName">
                                         @Html.Glass().Editable(item, i => i.Header)
                                         <i class="icon-plus accordion__plus"></i>
                                         <i class="icon-minus accordion__minus"></i>
                                     </div>
                                 </div>
-                                <div id="@rowName" class="collapse @showClass"
+                                <div id="@rowName" class="collapse"
                                      aria-labelledby="flush-heading-@rowName"
                                      data-parent="#@containerId">
                                     <div class="accordion__body" style="text-align:@textAlign">

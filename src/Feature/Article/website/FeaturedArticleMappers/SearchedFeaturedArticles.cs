@@ -29,9 +29,7 @@
                 FundTeams = filter.FundTeams?.Select(ft => ft.Id.ToString().Replace("-", string.Empty)),
                 FundManagers = filter.FundManagers?.Select(fm => fm.Id.ToString().Replace("-", string.Empty)),
                 Take = 6,
-                DatabaseName = databaseName,
-                FromDate = DateTime.MinValue,
-                ToDate = DateTime.MaxValue
+                DatabaseName = databaseName
             };
 
             var results = searchService.GetDatedTaxonomyRelatedArticles(request, result => result.OrderByDescending(hit => hit.Created));

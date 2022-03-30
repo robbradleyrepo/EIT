@@ -133,6 +133,27 @@ Languages:
       Hint: LegacyFund_Process
       Type: Treelist
       Value: "{41762DA9-50DE-4630-917B-34790190F874}"
+    - ID: "77c63a9a-2144-4021-91fd-388d6e5dad52"
+      Hint: FundAccess_ExludeCountries
+      Type: Multilist
+      Value: |
+        {7675C760-28D7-4BFE-B771-D1E61A41C8D0}
+        {88E5D2C5-4758-4764-853F-22A6A5F14F86}
+        {E870220F-9DA2-4240-8714-4EA9BDDCFC6B}
+        {D9D5611F-F556-49D0-A2A9-87FDFC4DAEF6}
+        {75C051D6-661F-4122-9733-2002D5A87DEE}
+        {D54322CB-B3B4-4BCD-9407-AD70EA6A9E95}
+        {E8926419-7532-407B-8CC1-57FADDE37572}
+        {12B75129-A849-456A-AFC4-D842811F3FCF}
+        {856FEA94-1BC7-4F5D-BAE0-55458C8413D3}
+        {FA9EE48D-B545-4A31-A415-B14C98B2933B}
+        {2AB9185A-C52A-40BD-9514-97B850B53FB9}
+        {8FE1C8CB-469F-4C05-AFAF-4BBE98C27987}
+        {0D128353-1862-4F1A-8E69-10D1CB1AEC42}
+        {EEE73333-0B11-4EB8-BDE0-4112E89A920A}
+        {6B3AE8FC-E3FE-4971-98AB-9EF5C7E69450}
+        {7974F912-BDCE-4A86-8984-C6819DD283DC}
+        {C1276E0B-FA1A-4D8B-AD38-3E9707231224}
     - ID: "78b7b037-16f3-4d3f-bd57-f7ecd52abc46"
       Hint: LegacyFund_Year4
       Value: 12.368%
@@ -228,6 +249,9 @@ Languages:
     - ID: "e456c092-dda4-4179-aa02-1505821fd2a1"
       Hint: LegacySectorFundData_SectorYear5
       Value: 15.397%
+    - ID: "e5d3dec0-9cbb-435e-a231-391006503c1c"
+      Hint: LegacyFund_SalesforceFunds
+      Value: "{BBF6C011-6E7C-4609-AF78-DC63247C40BB}"
     - ID: "eb75dfef-c624-4571-b92b-8f37c36fcee6"
       Hint: FundCard_Image
       Value: |

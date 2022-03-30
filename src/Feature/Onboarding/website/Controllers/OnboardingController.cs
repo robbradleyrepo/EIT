@@ -7,7 +7,6 @@
     using Sitecore.Abstractions;
     using Sitecore.Analytics;
     using Sitecore.Analytics.Model;
-    using Sitecore.Analytics.Tracking;
     using Sitecore.Annotations;
     using Sitecore.Mvc.Controllers;
     using Sitecore.XConnect.Client;

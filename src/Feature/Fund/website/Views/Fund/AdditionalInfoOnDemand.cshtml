@@ -1,0 +1,88 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Feature.Fund.Models
+
+@model LionTrust.Feature.Fund.Models.AdditionalInfoOnDemandViewModel
+@if (Model != null && Model.Component != null && Model.Data != null)
+{
+    <section class="container additional-info container-p-0">
+        <div class="card">
+            <div class="card__content">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card__title">@Html.Glass().Editable(Model.Component, m => m.AdditionalInfoLabel)</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5">
+                        @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml",
+                            new FundInfoRowViewModel()
+                            {
+                                LabelValue = Html.Glass().Editable(Model.Component, m => m.DividendDistributionsLabel),
+                                FieldValue = Model.Component.DividendDistributionsValue,
+                                TooltipValue = string.Empty
+                            })
+                        @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml",
+                            new FundInfoRowViewModel()
+                            {
+                                LabelValue = Html.Glass().Editable(Model.Component, m => m.NovemberInterimsLabel),
+                                FieldValue = Model.Component.NovemberInterimsValue,
+                                TooltipValue = string.Empty
+                            })
+                        @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml",
+                            new FundInfoRowViewModel()
+                            {
+                                LabelValue = Html.Glass().Editable(Model.Component, m => m.FebruaryInterimsLabel),
+                                FieldValue = Model.Component.FebruaryInterimsValue,
+                                TooltipValue = string.Empty
+                            })
+                        @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml",
+                            new FundInfoRowViewModel()
+                            {
+                                LabelValue = Html.Glass().Editable(Model.Component, m => m.MayInterimsLabel),
+                                FieldValue = Model.Component.MayInterimsValue,
+                                TooltipValue = string.Empty
+                            })
+                    </div>
+                    <div class="col-lg-6 offset-lg-1">
+                        @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml",
+                            new FundInfoRowViewModel()
+                            {
+                                LabelValue = Html.Glass().Editable(Model.Component, m => m.JulyInterimsLabel),
+                                FieldValue = Model.Component.JulyInterimsValue,
+                                TooltipValue = string.Empty
+                            })
+                        @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml",
+                            new FundInfoRowViewModel()
+                            {
+                                LabelValue = Html.Glass().Editable(Model.Component, m => m.YearEndLabel),
+                                FieldValue = Model.Component.YearEndValue,
+                                TooltipValue = string.Empty
+                            })
+                        @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml",
+                            new FundInfoRowViewModel()
+                            {
+                                LabelValue = Html.Glass().Editable(Model.Component, m => m.ISINCodeLabel),
+                                FieldValue = Model.Data.ISINCode,
+                                TooltipValue = string.Empty
+                            })
+                        @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml",
+                            new FundInfoRowViewModel()
+                            {
+                                LabelValue = Html.Glass().Editable(Model.Component, m => m.SedolCodeLabel),
+                                FieldValue = Model.Data.SedolCode,
+                                TooltipValue = string.Empty
+                            })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <div style="background-color:white">
+        <span style="color:black">
+            Add datasource for Additional Information On Demand component
+        </span>
+    </div>
+}

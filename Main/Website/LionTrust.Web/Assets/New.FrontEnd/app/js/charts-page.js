@@ -1,7 +1,7 @@
-import creditRatingChart from "./componets/creditRatingChart";
-import capitalisationChart from "./componets/capitalisationChart";
-import fundChartDropdown from "./componets/fundChartDropdown";
-import barStuckedChart from "./componets/barStuckedChart";
+import creditRatingChart from "./components/creditRatingChart";
+import capitalisationChart from "./components/capitalisationChart";
+import fundChartDropdown from "./components/fundChartDropdown";
+import barStuckedChart from "./components/barStuckedChart";
 
 document.addEventListener("DOMContentLoaded", () => {
   creditRatingChart();

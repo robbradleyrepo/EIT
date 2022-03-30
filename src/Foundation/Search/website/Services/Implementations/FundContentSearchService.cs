@@ -163,5 +163,20 @@
 
             return _fundContentSearchRepository.GetFundSearchResultItems(predicate, fundSearchRequest.Skip, fundSearchRequest.Take, fundSearchRequest.DatabaseName, sort);
         }
+
+        public ContentSearchResults<FundSearchResultItem> GetAllAllowedFunds()
+        {
+            var predicate = PredicateBuilder.True<FundSearchResultItem>();
+            var language = Sitecore.Context.Language?.Name ?? "en";
+            predicate = predicate.And(x => x.Language == language);
+
+            if (!Sitecore.Context.PageMode.IsExperienceEditorEditing)
+            {
+                var country = OnboardingHelper.GetCurrentContactCountryCode();
+                predicate = predicate.And(x => !x.ExcludedCountries.Contains(country));
+            }
+
+            return _fundContentSearchRepository.GetAllFundSearchResultItems(predicate);
+        }
     }
 }

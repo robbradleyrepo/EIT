@@ -1,0 +1,29 @@
+﻿---
+ID: "4c1a0a2e-dc39-41a1-a8f8-9656a3bb671f"
+Parent: "4339c4a4-fd9f-4638-b6c3-eda945e8daed"
+Template: "e14137dc-817e-40c3-b833-80c4824d2ff6"
+Path: "/sitecore/content/LionTrustNew/Home/fund managers/Matt Tonge/_Local/BC017 - Fund Manager Insights"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0e5031b3-9232-42be-82d4-05579d7827d9"
+      Hint: ArticleSearchParameters_FundTeams
+      Type: Multilist
+      Value: "{FF63C615-A3F4-496F-A0F2-6D72F92E9BA9}"
+    - ID: "1492465c-0e3c-4fdb-97b8-0fc76924e400"
+      Hint: FundManagerInsightsBase_Heading
+      Value: Latest insights
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220218T124726Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "71469dcb-2347-4fa2-883b-50f4df0e5244"
+      Hint: ArticleSearchParameters_FundManagers
+      Type: Multilist
+      Value: 

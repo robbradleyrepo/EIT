@@ -3,6 +3,7 @@
     using Glass.Mapper.Sc.Web.Mvc;
     using LionTrust.Feature.Fund.FundClass;
     using LionTrust.Feature.Fund.Models;
+    using LionTrust.Foundation.Legacy.Models;
     using Sitecore.Mvc.Controllers;
     using System.Linq;
     using System.Web.Mvc;
@@ -53,6 +54,37 @@
             }
 
             return View("~/Views/Fund/AdditionalInfoAndCharges.cshtml", viewModel);
+        }
+
+        public ActionResult RenderOnDemand()
+        {
+            var viewModel = new AdditionalInfoOnDemandViewModel();
+            var datasource = _context.GetDataSourceItem<IAdditionalInfoOnDemandComponent>();
+            if (datasource == null)
+            {
+                return null;
+            }
+
+            var pageData = _context.GetContextItem<IPresentationBase>();
+            var fund = pageData?.Fund;
+            if (fund == null)
+            {
+                return null;
+            }
+
+            viewModel.Component = datasource;
+
+            var citiCode = FundClassSwitcherHelper.GetCitiCode(HttpContext, fund);
+            if (!string.IsNullOrEmpty(citiCode))
+            {
+                var fundClass = fund.Classes.FirstOrDefault(c => c.CitiCode == citiCode);
+                if (fundClass != null)
+                {
+                    viewModel.Data = _manager.GetAdditionalInformation(fundClass, citiCode);
+                }
+            }
+
+            return View("~/Views/Fund/AdditionalInfoOnDemand.cshtml", viewModel);
         }
     }
 }

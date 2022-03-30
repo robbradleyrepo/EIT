@@ -48,6 +48,8 @@
     width: 100%;
     @include breakpoint(desktop, up)
         margin-top: 37px
+        width: 100%
+      
     &__title
         margin: 0
         letter-spacing: 0.42px
@@ -57,6 +59,11 @@
             letter-spacing: 1.86px
             font-size: 62px
             line-height: 66px
+        @include breakpoint(mobile-large, down)
+            letter-spacing: 0.42px
+            font-size: 42px
+            line-height: 48px
+            white-space: normal
     &__subtitle
         font-weight: bold
         font-size: 10px

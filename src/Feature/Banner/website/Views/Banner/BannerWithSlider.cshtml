@@ -1,6 +1,11 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @using System.Collections.Specialized
 @model LionTrust.Feature.Banner.Models.IBannerWithSlider
+@if ((Model == null || Model.Images == null || !Model.Images.Any()) && !Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    return;
+}
+
 @if (Model != null)
 {
     <div class="awards">

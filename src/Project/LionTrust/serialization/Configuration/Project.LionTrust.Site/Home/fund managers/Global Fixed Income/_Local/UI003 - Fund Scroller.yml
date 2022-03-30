@@ -1,0 +1,42 @@
+﻿---
+ID: "cfbe14c3-1afc-439f-b62c-2921643f9bd7"
+Parent: "2f1cb15e-3276-4082-a51f-5a96d678496a"
+Template: "f91bff52-8afb-4056-bbf3-84c16924b92d"
+Path: "/sitecore/content/LionTrustNew/Home/fund managers/Global Fixed Income/_Local/UI003 - Fund Scroller"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{5186C9A7-7949-4FF7-9958-802F6F23AAD1}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210601T085619Z
+    - ID: "451efcd2-40a3-4153-8b02-bec9572a9ec1"
+      Hint: FundScroller_Description
+      Value: The fund managers believe fixed income markets are inefficient and there are myriad ways of adding value to investors’ portfolios. The inefficiencies are caused by many market protagonists who are not price sensitive, ranging from the macroeconomic distortions caused by central banks to the idiosyncratic scenarios when companies need to raise debt finance and price accordingly. 
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "63c464ec-3657-4b91-adf5-28ac9036774f"
+      Hint: FundScroller_PrimaryCta
+      Value: 
+    - ID: "8e11c5f7-1fca-4a99-ad05-b81511f973d9"
+      Hint: FundScroller_Heading
+      Value: Funds managed by the team
+    - ID: "dd98d557-6e80-4ffb-9e13-498e29de5566"
+      Hint: FundScroller_Funds
+      Type: Multilist
+      Value: |
+        {FBB00F95-750B-4D7A-8FB5-C032F454B376}
+        {068227AB-8DEF-4A60-9C7B-D34739B4FB39}
+        {A222ECBF-7442-4884-B13B-3FBFEA108A77}
+        {DB186D8E-97D4-4BF7-B87C-EAB6C44C21BC}
+    - ID: "eb9e31a0-ed28-48fc-8cbf-820264b17306"
+      Hint: FundScroller_Subtitle
+      Value: 

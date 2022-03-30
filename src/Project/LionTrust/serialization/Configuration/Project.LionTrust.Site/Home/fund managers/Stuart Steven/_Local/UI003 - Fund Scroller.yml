@@ -1,0 +1,28 @@
+﻿---
+ID: "bd90cac5-236f-4668-8fc9-d3cc0aff197a"
+Parent: "a847faa2-ba7b-4eb4-bd06-49f7ca9b07af"
+Template: "f91bff52-8afb-4056-bbf3-84c16924b92d"
+Path: "/sitecore/content/LionTrustNew/Home/fund managers/Stuart Steven/_Local/UI003 - Fund Scroller"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220222T153900Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "8e11c5f7-1fca-4a99-ad05-b81511f973d9"
+      Hint: FundScroller_Heading
+      Value: Stuart's funds
+    - ID: "dd98d557-6e80-4ffb-9e13-498e29de5566"
+      Hint: FundScroller_Funds
+      Type: Multilist
+      Value: |
+        {DD0F5697-85A7-4DCD-B62C-649585C8423B}
+        {478C9CBC-C736-4A04-B555-E65998A64C16}
+        {F0851E0C-4F1A-4A72-A58B-867D503CC93B}

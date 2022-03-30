@@ -1,0 +1,36 @@
+﻿---
+ID: "3d3eaee9-dc73-4643-b624-9a99f919edff"
+Parent: "a4cff500-4247-4a27-91d1-f4da4c89cc1b"
+Template: "fff5f245-ffc0-4022-a998-9b07aa5e761f"
+Path: /sitecore/content/LionTrustNew/Home/fund managers/_Local
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: |
+    {F6B5C22C-0B85-45BB-BB44-D743FF235639}
+    {D3D9D2CE-B2CE-49AC-B50D-6A5FFD4C4AB8}
+    {B074A5E0-B766-481C-869C-8C2E3034C4BC}
+    {10BF3F6C-AE91-42D5-ADFD-A2AE935CE1C5}
+    {1D2058B8-C7A2-4D41-8FDF-61AC3B786798}
+    {F91BFF52-8AFB-4056-BBF3-84C16924B92D}
+    {E8041E72-CCBC-41CE-9D69-94A63F153595}
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: "-1000"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{67F7D596-B07F-4BA3-9B01-E25A84E106DB}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210601T113503Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin

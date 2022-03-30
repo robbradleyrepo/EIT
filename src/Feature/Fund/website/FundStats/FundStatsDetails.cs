@@ -37,5 +37,21 @@
                 FundSize = apiData.FundSize
             };
         }
+
+        public FundStatsDataOnDemand GetFundStatsDetailsOnDemand(IFundClass fundClass, string priceType)
+        {
+            var apiData = _repository.GetDataOnDemand(fundClass.CitiCode, priceType);
+
+            if (apiData == null)
+            {
+                _repository.SendEmailOnErrorForCiticode(fundClass.CitiCode);
+                return null;
+            }
+
+            return new FundStatsDataOnDemand
+            {
+                SharePrice = apiData.SinglePrice
+            };
+        }
     }
 }

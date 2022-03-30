@@ -102,5 +102,8 @@
 
         [SitecoreField(Constants.FundClass.HideQuartileRows_FieldId, SitecoreFieldType.Checkbox)]
         bool HideQuartileRows { get; set; }
+
+        [SitecoreField(Constants.FundClass.Currency_FieldId)]
+        string Currency { get; set; }
     }
 }
