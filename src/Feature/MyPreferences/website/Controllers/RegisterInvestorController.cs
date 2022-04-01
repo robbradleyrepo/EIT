@@ -58,7 +58,7 @@
 
             if (!Sitecore.Context.PageMode.IsExperienceEditor)
             {
-                viewModel.ProfessionalInvestor = investor.Id == home.OnboardingConfiguration.ProfessionalInvestor?.Id;
+                viewModel.ProfessionalInvestor = investor.Id != home.OnboardingConfiguration.PrivateInvestor?.Id;
                 viewModel.InvestorType = investor.InvestorName;
             }
 

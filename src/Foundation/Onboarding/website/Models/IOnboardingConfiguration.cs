@@ -20,8 +20,8 @@
         [SitecoreField(Constants.OnboardingConfiguration.Profile_FieldId)]
         IGlassBase Profile { get; set; }
 
-        [SitecoreField(Constants.OnboardingConfiguration.ProfessionalInvestor_FieldId)]
-        IInvestor ProfessionalInvestor { get; set; }
+        [SitecoreField(Constants.OnboardingConfiguration.PrivateInvestor_FieldId)]
+        IInvestor PrivateInvestor { get; set; }
 
         [SitecoreChildren(TemplateId = Constants.ChooseCountry.TemplateId, EnforceTemplate = SitecoreEnforceTemplate.TemplateAndBase)]
         IEnumerable<IChooseCountry> ChooseCountry { get; set; }
