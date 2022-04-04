@@ -30,6 +30,10 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\JamesJ
+    - ID: "6e1628b0-ebd1-45c5-ad2f-3e0aa6fc19a4"
+      Hint: FundManagerInsightsBase_CTA
+      Value: |
+        <link text="See all related" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{7E9E8706-F864-48E5-B4A2-57F2C408EFD7}" />
     - ID: "71469dcb-2347-4fa2-883b-50f4df0e5244"
       Hint: ArticleSearchParameters_FundManagers
       Type: Multilist
@@ -39,11 +43,16 @@ Languages:
         {061107E6-1485-475E-A2D8-D5A3D34F48FF}
         {A873BDFF-23DF-4C98-9A23-EF3BD83EB871}
         {CAAB183E-773A-445D-BEE1-C59099B1786E}
-        {E894F67D-3766-4DE6-B23A-E0B8C9B67129}
+    - ID: "a03d4f9e-4bda-401d-9639-dd0247f50fab"
+      Hint: ArticleSearchParameters_ContentTypes
+      Type: Multilist
+      Value: |
+        {1E9B3548-D1FE-4C91-BB3C-5B9CD7599803}
+        {FE091F88-00F3-4D48-9E29-83949090DEBC}
+        {264310A1-EAC8-4FF3-9A8C-FA05EA49AE34}
+        {BC971C84-D2FD-4CF5-8010-B5162CB17836}
+        {8F7AE3EF-160E-4183-9613-06124444248D}
     - ID: "c83820f8-fe31-440b-bdb9-61698d79c066"
       Hint: FundManagerInsights_SelectedArticles
       Type: Multilist with Search
-      Value: |
-        {6ADA650B-F9CD-4483-BB91-3E0C18227587}
-        {0C878DC6-237C-4A06-AE59-7ADAFEA16236}
-        {AFA6D9BC-42E6-481A-852E-60156CBB5BE8}
+      Value: 

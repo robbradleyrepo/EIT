@@ -112,6 +112,9 @@
     <Content Include="Views\Fund\FundAccessPopUp.cshtml" />
     <Content Include="Views\Fund\CapitalisationChart.cshtml" />
     <Content Include="Views\Fund\_FundInfoRow.cshtml" />
+    <Content Include="Views\Fund\FourFundStatsOnDemand.cshtml" />
+    <Content Include="Views\Fund\KeyInfoPriceOnDemand.cshtml" />
+    <Content Include="Views\Fund\AdditionalInfoOnDemand.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -137,6 +140,7 @@
     <Compile Include="Controllers\FundCentreController.cs" />
     <Compile Include="Controllers\MyFundsScrollerController.cs" />
     <Compile Include="CreditRating\CreditRatingController.cs" />
+    <Compile Include="FundClass\KeyInfoDataOnDemand.cs" />
     <Compile Include="FundClass\FundClassDetails.cs" />
     <Compile Include="FundClass\FundClassController.cs" />
     <Compile Include="Controllers\FundHoldingsController.cs" />
@@ -155,8 +159,10 @@
     <Compile Include="FundPerformance\FundPerformanceGraphViewModel.cs" />
     <Compile Include="FundPerformance\IFundPerformanceGraph.cs" />
     <Compile Include="FundStats\FundStatsController.cs" />
+    <Compile Include="FundStats\FundStatsDataOnDemand.cs" />
     <Compile Include="FundStats\FundStatsData.cs" />
     <Compile Include="FundStats\FundStatsDetails.cs" />
+    <Compile Include="FundStats\FundStatsOnDemandViewModel.cs" />
     <Compile Include="FundStats\FundStatsViewModel.cs" />
     <Compile Include="FundStats\IFundStatsDetails.cs" />
     <Compile Include="GeographicalBreakdown\GeographicalBreakdownController.cs" />
@@ -174,18 +180,23 @@
     <Compile Include="Indexing\FundManagerFundTeamUrlField.cs" />
     <Compile Include="Indexing\FundTeamUrlField.cs" />
     <Compile Include="Indexing\SalesforceFundIdField.cs" />
+    <Compile Include="Models\AdditionalInfoOnDemandViewModel.cs" />
     <Compile Include="Models\FundInfoRowViewModel.cs" />
     <Compile Include="Models\GraphBreakdownViewModel.cs" />
     <Compile Include="CreditRating\ICreditRating.cs" />
     <Compile Include="CreditRating\ICreditRatingRow.cs" />
+    <Compile Include="Models\IAdditionalInfoOnDemandComponent.cs" />
     <Compile Include="Models\IAdditionalInfoAndChargesTooltips.cs" />
+    <Compile Include="Models\IFourFundStatsOnDemand.cs" />
     <Compile Include="Models\IFourFundStatsManual.cs" />
     <Compile Include="Models\IFundAccessPopUp.cs" />
     <Compile Include="Models\IFundCentre.cs" />
     <Compile Include="Models\IFundShareLink.cs" />
+    <Compile Include="Models\IKeyInfoPriceOnDemandComponent.cs" />
     <Compile Include="Models\IKeyInfoPriceTooltips.cs" />
     <Compile Include="Models\IMyFundsScroller.cs" />
     <Compile Include="Models\IGraphWithHeading.cs" />
+    <Compile Include="Models\KeyInfoPriceOnDemandViewModel.cs" />
     <Compile Include="PerformanceTables\CumulativePerformanceController.cs" />
     <Compile Include="PerformanceTables\DiscretePerformanceController.cs" />
     <Compile Include="PerformanceTables\CumulativePerformanceManager.cs" />
@@ -214,7 +225,6 @@
     <Compile Include="Models\IFundSelector.cs" />
     <Compile Include="Models\IFundDetailNavigation.cs" />
     <Compile Include="Models\IFundDisclaimer.cs" />
-    <Compile Include="Models\IFundExtended.cs" />
     <Compile Include="Models\IFundCard.cs" />
     <Compile Include="Models\IFundGlassBase.cs" />
     <Compile Include="Models\IFundHeader.cs" />

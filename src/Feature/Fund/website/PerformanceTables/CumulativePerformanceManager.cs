@@ -18,7 +18,7 @@
 
         public IEnumerable<PerformanceTableRow> GetPerformanceTableRows(string citiCode, IFundClass fundClassItem)
         {
-            var fundClass = _repository.GetData().FirstOrDefault(d => d.CitiCode == citiCode);
+            var fundClass = _repository.GetDataOnDemand(citiCode, "1", fundClassItem.Currency);
             if (fundClass == null || fundClassItem == null)
             {
                 _repository.SendEmailOnErrorForCiticode(citiCode);
@@ -147,25 +147,25 @@
             });
         }
 
-        public string GetDisclaimer(string citiCode)
+        public string GetDisclaimer(string citiCode, string currency, string disclaimerText)
         {
-            var fundClass = _repository.GetData().FirstOrDefault(d => d.CitiCode == citiCode);
+            var fundClass = _repository.GetDataOnDemand(citiCode, "1", currency);
             if (fundClass == null)
             {
                 _repository.SendEmailOnErrorForCiticode(citiCode);
                 return null;
             }
 
-            var disclaimer = Sitecore.Globalization.Translate.Text("CumulativeTableDisclaimer");
+            var disclaimer = !string.IsNullOrEmpty(disclaimerText) ? disclaimerText : Sitecore.Globalization.Translate.Text("CumulativeTableDisclaimer");
             if (string.IsNullOrEmpty(disclaimer))
             {
                 return string.Empty;
             }
 
             var cumulativeDate = fundClass.CumulativePerformanceDate;
-            var currency = fundClass.UnitCurrency;
+            var unitCurrency = fundClass.UnitCurrency;
 
-            return disclaimer.Replace("{date}", cumulativeDate).Replace("{currency}", currency);
+            return disclaimer.Replace("{date}", cumulativeDate).Replace("{currency}", unitCurrency);
         }
     }
 }

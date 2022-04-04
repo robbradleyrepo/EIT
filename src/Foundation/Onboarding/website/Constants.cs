@@ -6,7 +6,7 @@
         {
             public const string Logo_FieldId = "{B2EFA293-4240-4439-997F-DDAC10179067}";
             public const string Text_FieldId = "{44AFFB73-0BB2-4312-8968-39D3737453E4}";
-            public const string ProfessionalInvestor_FieldId = "{A2546C2D-E821-46F7-8042-D78F3F1CA8F1}";  
+            public const string PrivateInvestor_FieldId = "{A2546C2D-E821-46F7-8042-D78F3F1CA8F1}";  
             public const string Profile_FieldId = "{0E092A53-4282-4D27-BB59-8FEFD1E28196}";
         }
 
@@ -32,6 +32,8 @@
             public const string ModalIntroText_FieldId = "{6AC57F67-1641-4BFE-8039-0C567B1E994D}";
             public const string ModalBodyText_FieldId = "{ACD1C722-0258-4BD4-9368-9E37D3FE5273}";
             public const string ModalButtonText_FieldId = "{B7EDC3EF-95E7-44D4-AE3C-4889D55CBBA7}";
+            public const string PrivateInvestor_ItemId = "{E86157CA-78B9-4DB6-9A06-E40BEF9C55AC}";
+            
         }
 
         public static class TermsAndConditions
