@@ -18,7 +18,7 @@ namespace LionTrust.Feature.EXM.Helpers.Implementations
         private readonly SitecoreContactUtility _scContactUtility;
         private readonly BaseSettings _settings;
 
-        private readonly char[] separators = new char[]{ ',', ';' };
+        private readonly char[] separators = new char[] { ',', ';' };
         private const string SENDER = "Sender";
 
         public FillMailHelper(BaseSettings settings)
@@ -30,7 +30,7 @@ namespace LionTrust.Feature.EXM.Helpers.Implementations
         public void FillEmail(MailMessageItem mailMessageItem, SendMessageArgs sendMessageArgs, EmailMessage emailMessage)
         {
             //send quick test
-            if (mailMessageItem.ContactIdentifier == null)
+            if (sendMessageArgs.IsTestSend)
             {
                 IReadOnlyCollection<ContactIdentifier> identifiers = null;
                 switch (sendMessageArgs.EcmMessage)
@@ -41,9 +41,8 @@ namespace LionTrust.Feature.EXM.Helpers.Implementations
                     case TextMail textMail:
                         identifiers = textMail.PersonalizationRecipient?.Identifiers;
                         break;
-
                 }
-                    
+
                 if (identifiers != null)
                 {
                     foreach (var id in identifiers)
@@ -96,16 +95,20 @@ namespace LionTrust.Feature.EXM.Helpers.Implementations
             // exclude unsubscribed contacts
             var sfEntityUtility = new SFEntityUtility();
             var subscribedRecipients = new List<string>();
-            foreach (var recipient in emailMessage.Recipients)
-            {
-                var unsubscribed = sfEntityUtility.GetUnsubscribedByEmail(recipient);
-                if (!unsubscribed)
-                {
-                    subscribedRecipients.Add(recipient);
-                }
-            }
 
-            emailMessage.Recipients = subscribedRecipients;
+            if (sendMessageArgs.IsTestSend == false)
+            {
+                foreach (var recipient in emailMessage.Recipients)
+                {
+                    var isUnsubscribedOrHardBounced = sfEntityUtility.IsUnsubscribedOrHardBounced(recipient);
+                    if (!isUnsubscribedOrHardBounced)
+                    {
+                        subscribedRecipients.Add(recipient);
+                    }
+                }
+
+                emailMessage.Recipients = subscribedRecipients;
+            }
         }
 
         private void SetFrom(EmailMessage emailMessage, ScContactFacetData scContactFacetData)

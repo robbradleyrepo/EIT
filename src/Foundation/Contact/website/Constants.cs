@@ -73,6 +73,7 @@ namespace LionTrust.Foundation.Contact
         public const string SF_Owner_EmailField = "Pardot_Contact_Owner_Pardot_Email__c";
         public const string SF_Owner_PhoneField = "Pardot_Contact_Owner_Pardot_Phone__c";
         public const string SF_Owner_RegionField = "Pardot_Contact_Owner_Pardot_Region__c";
+        public const string SF_Hard_Bounced = "pi__pardot_hard_bounced__c";
 
         //S4S SitecoreXDBContact Salesforce object fields
         public const string SFSitecoreXDBContactObjectName = "FuseITAnalytics__SitecoreXDBContact__c";

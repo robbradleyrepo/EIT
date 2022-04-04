@@ -153,6 +153,13 @@ namespace LionTrust.Feature.EXM
         public static class Settings
         {
             public const string MailTestingEnvironment = "MailTestingEnvironment";
+            public const string MailServerPassword = "MailServerPassword";
+            public const string MailServer = "MailServer";
+        }
+
+        public static class Identifier
+        {
+            public const string S4S = "s4slb";
         }
     }
 }
