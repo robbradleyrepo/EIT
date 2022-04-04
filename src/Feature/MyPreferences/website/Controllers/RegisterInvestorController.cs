@@ -163,7 +163,7 @@
                     else
                     {
                         error = Errors.UserExists;
-                        return Redirect($"{Request.RawUrl}?{QueryStringNames.EmailPreferencefParams.ErrorQueryStringKey}={(int)error}&{QueryStringNames.EmailPreferencefParams.EmailQueryStringKey}={registerInvestorSubmit.Email}#retrieve-preferences");
+                        return Redirect($"{Request.Url.GetLeftPart(UriPartial.Path)}?{QueryStringNames.EmailPreferencefParams.ErrorQueryStringKey}={(int)error}&{QueryStringNames.EmailPreferencefParams.EmailQueryStringKey}={registerInvestorSubmit.Email}#retrieve-preferences");
                     }
                 }
                 else
@@ -177,7 +177,7 @@
                 error = Errors.General;
             }
 
-            return Redirect($"{Request.RawUrl}?{QueryStringNames.EmailPreferencefParams.ErrorQueryStringKey}={(int)error}");
+            return Redirect($"{Request.Url.GetLeftPart(UriPartial.Path)}?{QueryStringNames.EmailPreferencefParams.ErrorQueryStringKey}={(int)error}");
         }
 
         public ActionResult ResendEmail(string email, Guid dataSourceId, bool isContact)
