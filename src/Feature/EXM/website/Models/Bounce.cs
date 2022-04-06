@@ -16,5 +16,7 @@ namespace LionTrust.Feature.EXM.Models
 
         [JsonProperty("status")]
         public string Status { get; set; }
+
+        public bool HardBounce => !string.IsNullOrWhiteSpace(Status) && Status.StartsWith("5");
     }
 }

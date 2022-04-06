@@ -102,8 +102,11 @@ namespace LionTrust.Feature.EXM.Pipelines
                 //sendGrid
                 if (_mailServer.Contains("sendgrid"))
                 {
-                    await ProcessSoftBounces();
-                    await ProcessHardBounces();
+                    var bounces = await _emailService.GetBounces();
+                    var softBounces = bounces.Where(x => !x.HardBounce).ToList();
+                    var hardBounces = bounces.Where(x => x.HardBounce).ToList();
+                    await ProcessSoftBounces(softBounces);
+                    await ProcessHardBounces(hardBounces);
                 }
                 //stmp server
                 else
@@ -185,21 +188,28 @@ namespace LionTrust.Feature.EXM.Pipelines
             return bounceStatus;
         }
 
-        private async System.Threading.Tasks.Task ProcessSoftBounces()
+        private async System.Threading.Tasks.Task ProcessSoftBounces(List<Models.Bounce> bounces)
+        {
+            ExecuteSoftBounces(bounces);
+
+            var blocks = await _emailService.GetBlocks();
+            ExecuteSoftBounces(blocks, true);
+        }
+
+        private async System.Threading.Tasks.Task ExecuteSoftBounces(List<Models.Bounce> list, bool isBlockEmail = false)
         {
             var sfEntityUtility = new SFEntityUtility();
-            var bounces = await _emailService.GetSoftBounces();
             var excludeContacts = new List<KeyValuePair<Contact, FuseIT.Sitecore.SalesforceConnector.Entities.EntityBase>>();
 
             var managerRoot = _managerRootService.GetManagerRoots()?.FirstOrDefault();
 
-            if (bounces.Any())
+            if (list.Any())
             {
                 using (XConnectClient client = Sitecore.XConnect.Client.Configuration.SitecoreXConnectClientConfiguration.GetClient())
                 {
                     try
                     {
-                        foreach (var bouncedEmail in bounces)
+                        foreach (var bouncedEmail in list)
                         {
                             var email = bouncedEmail.Email;
                             var sfEntity = sfEntityUtility.GetEntityByEmail(email);
@@ -240,7 +250,9 @@ namespace LionTrust.Feature.EXM.Pipelines
                             //update salesforce contact
                             sfEntityUtility.SaveHardBounced(exclude.Value);
 
-                            var result = await _emailService.DeleteSoftBounce(emails.PreferredEmail.SmtpAddress);
+                            var result = isBlockEmail 
+                                ? await _emailService.DeleteBlock(emails.PreferredEmail.SmtpAddress)
+                                : await _emailService.DeleteBounce(emails.PreferredEmail.SmtpAddress);
                         }
                     }
                     catch (Exception ex)
@@ -251,10 +263,9 @@ namespace LionTrust.Feature.EXM.Pipelines
             }
         }
 
-        private async System.Threading.Tasks.Task ProcessHardBounces()
+        private async System.Threading.Tasks.Task ProcessHardBounces(List<Models.Bounce> bounces)
         {
             var sfEntityUtility = new SFEntityUtility();
-            var bounces = await _emailService.GetHardBounces();
             var excludeContacts = new List<KeyValuePair<Contact, FuseIT.Sitecore.SalesforceConnector.Entities.EntityBase>>();
 
             var managerRoot = _managerRootService.GetManagerRoots()?.FirstOrDefault();
@@ -292,7 +303,7 @@ namespace LionTrust.Feature.EXM.Pipelines
                             //update salesforce contact
                             sfEntityUtility.SaveHardBounced(exclude.Value);
 
-                            var result = await _emailService.DeleteHardBounce(emails.PreferredEmail.SmtpAddress);
+                            var result = await _emailService.DeleteBounce(emails.PreferredEmail.SmtpAddress);
                         }
                     }
                     catch (Exception ex)

@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using SendGrid;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -16,7 +17,7 @@ namespace LionTrust.Feature.EXM.Services.Implementations
             _apiKey = Sitecore.Configuration.Settings.GetSetting(Constants.Settings.MailServerPassword);
         }
 
-        public async Task<List<Models.Bounce>> GetSoftBounces()
+        public async Task<List<Models.Bounce>> GetBlocks()
         {
             List<Models.Bounce> softBounces = new List<Models.Bounce>();
 
@@ -40,7 +41,7 @@ namespace LionTrust.Feature.EXM.Services.Implementations
             return softBounces;
         }
 
-        public async Task<bool> DeleteSoftBounce(string email)
+        public async Task<bool> DeleteBlock(string email)
         {
             var client = new SendGridClient(_apiKey);
             var response = await client.RequestAsync(
@@ -51,7 +52,7 @@ namespace LionTrust.Feature.EXM.Services.Implementations
             return response.StatusCode == HttpStatusCode.NoContent;
         }
 
-        public async Task<List<Models.Bounce>> GetHardBounces()
+        public async Task<List<Models.Bounce>> GetBounces()
         {
             List<Models.Bounce> bounces = new List<Models.Bounce>();
 
@@ -75,7 +76,7 @@ namespace LionTrust.Feature.EXM.Services.Implementations
             return bounces;
         }
 
-        public async Task<bool> DeleteHardBounce(string email)
+        public async Task<bool> DeleteBounce(string email)
         {
             var queryParams = $"{{'email_address': '{email}'}}";
 
