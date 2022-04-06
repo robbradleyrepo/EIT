@@ -1,10 +1,6 @@
 ﻿using FuseIT.Sitecore.Personalization.Facets;
-using LionTrust.Feature.EXM.Services.Interfaces;
 using LionTrust.Foundation.Contact.Services;
-using Microsoft.Extensions.DependencyInjection;
-using Sitecore.DependencyInjection;
 using Sitecore.Diagnostics;
-using Sitecore.EmailCampaign.Cm;
 using Sitecore.EmailCampaign.Cm.Pipelines.HandleBounce;
 using Sitecore.EmailCampaign.Cm.Pipelines.HandleDispatchFailed;
 using Sitecore.EmailCampaign.XConnect.Web;
@@ -28,8 +24,6 @@ namespace LionTrust.Feature.EXM.Pipelines
     {
         private readonly XConnectRetry _xConnectRetry;
         private readonly IContactService _contactService;
-        private readonly ISubscriptionManager _subscriptionManager;
-        private readonly IEmailService _emailService;
         private readonly ILogger _logger;
 
         public double Delay { get; set; }
@@ -40,30 +34,13 @@ namespace LionTrust.Feature.EXM.Pipelines
           ILogger logger,
           XConnectRetry xConnectRetry,
           IContactService contactService)
-            : this(logger, xConnectRetry, contactService, ServiceProviderServiceExtensions.GetService<ISubscriptionManager>(ServiceLocator.ServiceProvider), ServiceProviderServiceExtensions.GetService<IEmailService>(ServiceLocator.ServiceProvider))
         {
             Assert.ArgumentNotNull((object)logger, nameof(logger));
             Assert.ArgumentNotNull((object)xConnectRetry, nameof(xConnectRetry));
             Assert.ArgumentNotNull((object)contactService, nameof(contactService));
-        }
-
-        public UpdateUndeliveredCount(
-          ILogger logger,
-          XConnectRetry xConnectRetry,
-          IContactService contactService,
-          ISubscriptionManager subscriptionManager,
-          IEmailService emailService)
-        {
-            Assert.ArgumentNotNull((object)logger, nameof(logger));
-            Assert.ArgumentNotNull((object)xConnectRetry, nameof(xConnectRetry));
-            Assert.ArgumentNotNull((object)contactService, nameof(contactService));
-            Assert.ArgumentNotNull((object)subscriptionManager, nameof(subscriptionManager));
-            Assert.ArgumentNotNull((object)contactService, nameof(emailService));
             _logger = logger;
             _xConnectRetry = xConnectRetry;
             _contactService = contactService;
-            _subscriptionManager = subscriptionManager;
-            _emailService = emailService;
         }
 
         public string FacetName { get; set; }
@@ -125,8 +102,6 @@ namespace LionTrust.Feature.EXM.Pipelines
                                 IdentifiedContactReference reference = new IdentifiedContactReference(Constants.Identifier.S4S, identifier);
                                 var expandOptions = new ContactExpandOptions(EmailAddressList.DefaultFacetKey, S4SInfo.DefaultFacetKey);
                                 var xdbContact = client.Get<Contact>(reference, expandOptions);
-
-                                var isExcluded = _subscriptionManager.AddToGlobalOptOutList(xdbContact.Identifiers.First(), managerRoot);
 
                                 //update salesforce contact
                                 sfEntityUtility.SaveHardBounced(sfEntity);

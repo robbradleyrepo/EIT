@@ -9,7 +9,6 @@ using Sitecore.EDS.Core.Diagnostics;
 using Sitecore.EDS.Core.Net.Pop3;
 using Sitecore.EDS.Core.Reporting;
 using Sitecore.EDS.Providers.CustomSmtp.Reporting;
-using Sitecore.EmailCampaign.Cm;
 using Sitecore.ExM.Framework.Diagnostics;
 using Sitecore.Modules.EmailCampaign.Services;
 using Sitecore.XConnect;
@@ -26,7 +25,6 @@ namespace LionTrust.Feature.EXM.Pipelines
         private readonly string _mailServer;
         private readonly IManagerRootService _managerRootService;
         private readonly IEmailService _emailService;
-        private readonly ISubscriptionManager _subscriptionManager;
         private readonly Pop3Settings _pop3Settings;
         private readonly IBounceInspector _inspector;
         private readonly IEnvironmentId _environmentId;
@@ -61,7 +59,7 @@ namespace LionTrust.Feature.EXM.Pipelines
           IBounceInspector inspector,
           IEnvironmentId environmentId,
           ILogger logger)
-            : this(ServiceProviderServiceExtensions.GetService<IEmailService>(ServiceLocator.ServiceProvider), ServiceProviderServiceExtensions.GetService<IManagerRootService>(ServiceLocator.ServiceProvider), ServiceProviderServiceExtensions.GetService<ISubscriptionManager>(ServiceLocator.ServiceProvider), settings, inspector, environmentId, logger)
+            : this(ServiceProviderServiceExtensions.GetService<IEmailService>(ServiceLocator.ServiceProvider), ServiceProviderServiceExtensions.GetService<IManagerRootService>(ServiceLocator.ServiceProvider), settings, inspector, environmentId, logger)
         {
             Assert.ArgumentNotNull((object)settings, nameof(settings));
             Assert.ArgumentNotNull((object)inspector, nameof(inspector));
@@ -72,7 +70,6 @@ namespace LionTrust.Feature.EXM.Pipelines
         public CustomChilkatPop3BounceReceiver(
           IEmailService emailService,
           IManagerRootService managerRootService,
-          ISubscriptionManager subscriptionManager,
           Pop3Settings settings,
           IBounceInspector inspector,
           IEnvironmentId environmentId,
@@ -80,7 +77,6 @@ namespace LionTrust.Feature.EXM.Pipelines
         {
             Assert.ArgumentNotNull((object)emailService, nameof(emailService));
             Assert.ArgumentNotNull((object)managerRootService, nameof(managerRootService));
-            Assert.ArgumentNotNull((object)subscriptionManager, nameof(subscriptionManager));
             Assert.ArgumentNotNull((object)settings, nameof(settings));
             Assert.ArgumentNotNull((object)inspector, nameof(inspector));
             Assert.ArgumentNotNull((object)environmentId, nameof(environmentId));
@@ -88,7 +84,6 @@ namespace LionTrust.Feature.EXM.Pipelines
             _mailServer = Sitecore.Configuration.Settings.GetSetting(Constants.Settings.MailServer);
             _emailService = emailService;
             _managerRootService = managerRootService;
-            _subscriptionManager = subscriptionManager;
             _pop3Settings = settings;
             _inspector = inspector;
             _environmentId = environmentId;
@@ -243,9 +238,7 @@ namespace LionTrust.Feature.EXM.Pipelines
 
                         foreach (var exclude in excludeContacts)
                         {
-                            var isExcluded = managerRoot.GlobalSubscription.AddToDefaultExcludeCollection(exclude.Key);
                             var emails = exclude.Key.Emails();
-                            _subscriptionManager.AddToGlobalOptOutList(exclude.Key.Identifiers.First(), managerRoot);
 
                             //update salesforce contact
                             sfEntityUtility.SaveHardBounced(exclude.Value);
@@ -298,7 +291,6 @@ namespace LionTrust.Feature.EXM.Pipelines
                         foreach (var exclude in excludeContacts)
                         {
                             var emails = exclude.Key.Emails();
-                            var isExcluded = _subscriptionManager.AddToGlobalOptOutList(exclude.Key.Identifiers.First(), managerRoot);
 
                             //update salesforce contact
                             sfEntityUtility.SaveHardBounced(exclude.Value);
