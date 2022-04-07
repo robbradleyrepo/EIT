@@ -14,8 +14,15 @@
     using Sitecore.Mvc.Controllers;
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     using System.Web.Mvc;
+    using FuseIT.Sitecore.SalesforceConnector.SalesforcePartner;
+    using Sitecore.Analytics;
+    using Sitecore.XConnect.Client;
+    using Sitecore.XConnect.Collection.Model;
+    using Sitecore.Xdb.Configuration;
     using static LionTrust.Feature.MyPreferences.Constants;
+    using Constants = Foundation.Contact.Constants;
     using QueryStringNames = Foundation.Contact.Constants.QueryStringNames;
 
     public class RegisterInvestorController : SitecoreController
@@ -44,7 +51,6 @@
             }
 
             var investor = OnboardingHelper.GetCurrentContactInvestor(_context, _log);
-
 
             if (!Sitecore.Context.PageMode.IsExperienceEditor && investor == null)
             {
@@ -92,12 +98,21 @@
         {
             var error = Errors.None;
             var data = _context.SitecoreService.GetItem<IRegisterInvestor>(registerInvestorSubmit.DatasourceId);
+            var home = _context.GetHomeItem<IHome>();
 
             if (data == null)
             {
                 return null;
             }
 
+            // var investor = OnboardingHelper.GetCurrentContactInvestor(_context, _log);
+            //
+            // var countryCode = OnboardingHelper.GetCurrentContactCountryCode();
+
+            // Session.Abandon();
+            // Tracker.Current.EndVisit(true);
+            // Tracker.Current.EndTracking();
+            
             try
             {
                 if (ModelState.IsValid)
@@ -150,7 +165,14 @@
 
                     if (!userExists)
                     {
+                        // OnboardingHelper.AddPointsFromProfileCard(home.OnboardingConfiguration, investor.ProfileCard);
+                        //
+                        // OnboardingHelper.TrackAnonymousUser(countryCode);
+
+                        _personalizedContentService.CreateContextFromContact();
+
                         var context = _personalizedContentService.GetContext();
+                        
                         if (UpdateEmailPreferences(registerInvestorSubmit, context))
                         {
                             return Redirect(data.ConfirmationPage.Url);
