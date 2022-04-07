@@ -483,5 +483,48 @@
 
             return true;
         }
+        
+        public static void TrackAnonymousUser(string country)
+        {
+            var manager = Sitecore.Configuration.Factory.CreateObject("tracking/contactManager", true) as Sitecore.Analytics.Tracking.ContactManager;
+
+            if (manager != null)
+            {
+                Tracker.Current.Contact.ContactSaveMode = ContactSaveMode.AlwaysSave;
+                manager.SaveContactToCollectionDb(Tracker.Current.Contact);
+
+                using (XConnectClient client = Sitecore.XConnect.Client.Configuration.SitecoreXConnectClientConfiguration.GetClient())
+                {
+                    try
+                    {
+                        var contact = OnboardingHelper.GetContact(client);
+
+                        if (contact != null)
+                        {
+                            var address = new Address
+                            {
+                                CountryCode = country
+                            };
+
+                            if (contact.Addresses() != null)
+                            {
+                                contact.Addresses().PreferredAddress = address;
+                            }
+                            else
+                            {
+                                client.SetAddresses(contact, new AddressList(address, AddressList.DefaultFacetKey));
+                            }
+
+                            client.Submit();
+                            OnboardingHelper.UpdateContactSession(contact);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Log.Error("Error saving data to profile", ex, typeof(OnboardingHelper));
+                    }
+                }
+            }
+        }
     }
 }
