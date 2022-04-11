@@ -8,8 +8,6 @@
 
         Context GetContext();
 
-        void CreateContextFromContact();
-
         void UpdateContext(Context context);
     }
 }

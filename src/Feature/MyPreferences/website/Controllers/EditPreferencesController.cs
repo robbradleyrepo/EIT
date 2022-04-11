@@ -12,9 +12,6 @@
     using System;
     using System.Web;
     using System.Web.Mvc;
-    using Foundation.Contact;
-    using Foundation.Contact.Models;
-    using Sitecore.Web;
     using static LionTrust.Feature.MyPreferences.Constants;
     using static LionTrust.Foundation.Contact.Constants;
 
@@ -36,7 +33,9 @@
         public ActionResult Render(Errors error = Errors.None)
         {
             var data = _context.GetDataSourceItem<IEditEmailPreferences>();
-            WebUtil.SetSessionValue(Constants.SessionKeys.ContextSessionKey, null);
+            
+            //remove context if user opens email link an existing session
+            _personalizedContentService.UpdateContext(null);
             var context = _personalizedContentService.GetContext();
 
             if (data == null || context == null)
