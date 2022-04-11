@@ -119,7 +119,9 @@ namespace LionTrust.Feature.EXM.Pipelines
                                 {
                                     IPop3Мail mail = pop3Client.GetMail(pop3Мail.Uidl);
                                     if (mail != null && _environmentId.IsMatching(mail.GetHeader("X-Sitecore-EnvironmentId")))
+                                    {
                                         bouncedMessages.Add(MapToBounce(mail, bounceType));
+                                    }
                                 }
                             }
                             if (bouncedMessages.Count > 0)
@@ -159,10 +161,16 @@ namespace LionTrust.Feature.EXM.Pipelines
         {
             BounceStatus bounceStatus = _inspector.InspectMime(pop3Мail.GetMime);
             if (bounceStatus != BounceStatus.NotBounce || !(pop3Client is MailMan mailMan))
+            {
                 return bounceStatus;
+            }
+
             Email email = mailMan.FetchEmail(pop3Мail.Uidl);
             if (email == null)
+            {
                 return bounceStatus;
+            }
+
             ChilkatBounceInspector inspector = (ChilkatBounceInspector)_inspector;
             if (inspector.ExamineEmail(email))
             {
@@ -172,13 +180,22 @@ namespace LionTrust.Feature.EXM.Pipelines
             {
                 int result;
                 if (!email.IsMultipartReport() || !int.TryParse(email.GetDeliveryStatusInfo("Status").Replace(".", string.Empty), out result))
+                {
                     return bounceStatus;
+                }
+
                 if (result >= 200 && result < 300)
+                {
                     bounceStatus = BounceStatus.NotBounce;
+                }
                 else if (result >= 400 && result < 500)
+                {
                     bounceStatus = BounceStatus.SoftBounce;
+                }
                 else if (result >= 500 && result < 600)
+                {
                     bounceStatus = BounceStatus.HardBounce;
+                }
             }
             return bounceStatus;
         }
