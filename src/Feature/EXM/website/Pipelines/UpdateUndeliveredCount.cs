@@ -49,7 +49,10 @@ namespace LionTrust.Feature.EXM.Pipelines
         {
             Assert.ArgumentNotNull((object)args, nameof(args));
             if (args is HandleDispatchFailedPipelineArgs failedPipelineArgs && !failedPipelineArgs.UpdateUndeliveredCount)
+            {
                 return;
+            }
+
             Contact contactWithRetry = _contactService.GetContactWithRetry(args.EventData.ContactIdentifier, Delay, RetryCount, "Emails");
             if (contactWithRetry == null)
             {
@@ -130,12 +133,14 @@ namespace LionTrust.Feature.EXM.Pipelines
                 ReadOnlyCollection<IXdbOperation> lastBatch = client.LastBatch;
                 ixdbOperations = lastBatch != null ? ((IEnumerable<IXdbOperation>)lastBatch).Where<IXdbOperation>((Func<IXdbOperation, bool>)(x => x.Status == XdbOperationStatus.Failed)) : (IEnumerable<IXdbOperation>)null;
             }
+
             IEnumerable<IXdbOperation> source = ixdbOperations;
             if (ex is XdbUnavailableException || source != null && source.Any<IXdbOperation>())
             {
                 _logger.LogWarn(FormattableString.Invariant(FormattableStringFactory.Create("[{0}] Transient error. Retrying. (Message: {1})", (object)"SaveInteraction", (object)ex.Message)), ex);
                 return true;
             }
+
             _logger.LogError(FormattableString.Invariant(FormattableStringFactory.Create("[{0}] Not a transient error. Throwing: (Message: {1})", (object)"SaveInteraction", (object)ex.Message)), ex);
             return false;
         }

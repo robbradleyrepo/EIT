@@ -9,7 +9,6 @@ using Sitecore.Modules.EmailCampaign;
 using Sitecore.Modules.EmailCampaign.Services;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace LionTrust.Feature.EXM.Pipelines
 {
@@ -76,30 +75,6 @@ namespace LionTrust.Feature.EXM.Pipelines
             }
             return (IEnumerable<IPop3BounceReceiver>)pop3BounceReceiverList;
         }
-
-        //public new IEnumerable<IPop3BounceReceiver> Receivers2()
-        //{
-        //    List<IPop3BounceReceiver> pop3BounceReceiverList = new List<IPop3BounceReceiver>();
-        //    if (Constants.Settings.MailServer.Contains("sendgrid"))
-        //    {
-        //        try
-        //        {
-        //            var apiKey = Sitecore.Configuration.Settings.GetSetting(Constants.Settings.MailServerPassword);
-        //            CustomChilkatPop3BounceReceiver receiver = CreateSendGridReceiver(apiKey);
-        //            pop3BounceReceiverList.Add(receiver);
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            _logger.LogError(ex);
-        //        }
-        //    }
-        //    else
-        //    {
-        //        pop3BounceReceiverList = base.Receivers()?.ToList();
-        //    }
-
-        //    return (IEnumerable<IPop3BounceReceiver>)pop3BounceReceiverList;
-        //}
 
         private CustomChilkatPop3BounceReceiver CreateReceiver(Pop3Settings settings)
         {
