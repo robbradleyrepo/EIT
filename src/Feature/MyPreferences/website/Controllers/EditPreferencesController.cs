@@ -33,6 +33,9 @@
         public ActionResult Render(Errors error = Errors.None)
         {
             var data = _context.GetDataSourceItem<IEditEmailPreferences>();
+            
+            //remove context if user opens email link an existing session
+            _personalizedContentService.UpdateContext(null);
             var context = _personalizedContentService.GetContext();
 
             if (data == null || context == null)
