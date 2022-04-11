@@ -49,7 +49,7 @@
 
                 //Query string "ref" should have the format as follows: {GUID}_{entityId}
                 if (!string.IsNullOrEmpty(queryStringRef))
-                 {
+                {
                     var queryStringParts = queryStringRef.Split('_');
                     if (queryStringParts.Length >= 2)
                     {
@@ -71,16 +71,6 @@
             }
 
             return context;
-        }
-
-        public void CreateContextFromContact()
-        {
-            var xconnectData = _xconnectUtilityRepository.GetCurrentSitecoreContactFacetData();
-
-            if (xconnectData != null)
-            {
-                var context = CreateContext(xconnectData.SalesforceEntityId, xconnectData.RandomGuidFromSalesforceEntity);
-            }
         }
 
         public void UpdateContext(Context context)
