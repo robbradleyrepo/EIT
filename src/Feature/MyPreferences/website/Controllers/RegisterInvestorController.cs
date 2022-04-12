@@ -157,35 +157,6 @@
                         var context = _personalizedContentService.GetContext();
                         if (UpdateEmailPreferences(registerInvestorSubmit, context))
                         {
-                            var country = OnboardingHelper.GetCurrentContactCountry(_context);
-                            
-                            using (XConnectClient client = Sitecore.XConnect.Client.Configuration.SitecoreXConnectClientConfiguration.GetClient())
-                            {
-                                OnboardingHelper.UpdateContactSession(null);
-                                var contact = OnboardingHelper.GetContact(client);
-                                
-                                if (contact != null)
-                                {
-                                    var address = new Address
-                                    {
-                                        CountryCode = country.ISO
-                                    };
-
-                                    if (contact.Addresses() != null)
-                                    {
-                                        contact.Addresses().PreferredAddress = address;
-                                    }
-                                    else
-                                    {
-                                        client.SetAddresses(contact, new AddressList(address, AddressList.DefaultFacetKey));
-                                    }
-
-                                    client.Submit();
-                                    OnboardingHelper.UpdateContactSession(contact);
-                                }
-                                
-                            }
-                            
                             return Redirect(data.ConfirmationPage.Url);
                         }
                         else
