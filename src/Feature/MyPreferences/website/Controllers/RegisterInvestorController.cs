@@ -151,41 +151,31 @@
                             userExists = savedUser.IsUserExists;
                         }
                     }
-
+                    
                     if (!userExists)
                     {
+                        //get original context
                         var context = _personalizedContentService.GetContext();
+                        var oldEmail = context.Preferences.EmailAddress;
+                        
+                        //reset context as we identified a new user
+                        _personalizedContentService.UpdateContext(null);
+                        context = _personalizedContentService.GetContext();
+                        
                         if (UpdateEmailPreferences(registerInvestorSubmit, context))
                         {
-                            var country = OnboardingHelper.GetCurrentContactCountry(_context);
-                            
-                            using (XConnectClient client = Sitecore.XConnect.Client.Configuration.SitecoreXConnectClientConfiguration.GetClient())
+                            //switch back to original visitor if needed
+                            if (registerInvestorSubmit.Email != oldEmail)
                             {
-                                OnboardingHelper.UpdateContactSession(null);
-                                var contact = OnboardingHelper.GetContact(client);
+                                var sfEntityUtilityObj = new SFEntityUtility();
+                                var scVisitorId =
+                                    sfEntityUtilityObj.IdentifyVisitorAndGetVisitorId(oldEmail);
                                 
-                                if (contact != null)
-                                {
-                                    var address = new Address
-                                    {
-                                        CountryCode = country.ISO
-                                    };
-
-                                    if (contact.Addresses() != null)
-                                    {
-                                        contact.Addresses().PreferredAddress = address;
-                                    }
-                                    else
-                                    {
-                                        client.SetAddresses(contact, new AddressList(address, AddressList.DefaultFacetKey));
-                                    }
-
-                                    client.Submit();
-                                    OnboardingHelper.UpdateContactSession(contact);
-                                }
-                                
+                                //reset context as we identified a new user
+                                _personalizedContentService.UpdateContext(null);
+                                context = _personalizedContentService.GetContext();
                             }
-                            
+
                             return Redirect(data.ConfirmationPage.Url);
                         }
                         else

@@ -190,7 +190,7 @@
                 landingPageUrl = investor.LandingPage?.Url;
             }
 
-            if (!string.IsNullOrEmpty(landingPageUrl))
+            if (!string.IsNullOrEmpty(landingPageUrl) && (Sitecore.Context.Item.Template.ID.ToString() != EditPreferencesPage.TemplateId))
             {
                 return Redirect(landingPageUrl);
             }

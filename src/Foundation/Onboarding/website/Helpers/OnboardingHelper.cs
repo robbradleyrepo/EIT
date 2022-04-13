@@ -277,11 +277,12 @@
             if (existingContact == null)
             {
                 Tracker.Current.Session.IdentifyAs(source, identifier);
-
                 var contactId = Tracker.Current.Contact.ContactId;
+
+                Log.Info($"Add identifier for contact '{contactId}'. {source} > {identifier}", typeof(OnboardingHelper));
+
                 manager.RemoveFromSession(contactId);
                 Tracker.Current.Session.Contact = manager.LoadContact(contactId);
-
                 return true;
             }
 
