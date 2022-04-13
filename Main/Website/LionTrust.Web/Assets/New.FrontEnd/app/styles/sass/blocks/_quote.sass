@@ -2,8 +2,8 @@
     display: flex
     flex-direction: column
     justify-content: center
-    text-align: center
-    padding: 40px 0
+    text-align: left
+    padding: 0 203px
     background-image: url(../images/bg/newsletter-bg.svg)
     background-size: cover
     position: relative
@@ -13,7 +13,7 @@
     @include breakpoint(tablet, up)
         padding: 80px 0
     @include breakpoint(desktop, up)
-        padding: 100px 0
+        padding: 100px 203px
         min-height: 340px
     &.quote-people
         justify-content: space-around
@@ -24,12 +24,13 @@
             padding: 20px
     &__headbox        
          @include breakpoint(desktop-large, up)
-            padding: 0 120px
+            padding: 0 203px
     &__head
         display: flex
         color: $white
         letter-spacing: 0.42px
         text-align: left
+        
         width: 100%
         font-size: 26px
         line-height: 36px
@@ -49,7 +50,6 @@
         text-transform: uppercase
         padding-left: 10px
         position: relative
-        margin: auto
         &:before
             content: ''
             position: absolute
@@ -62,4 +62,4 @@
         font-size: 62px
         position: relative
         font-style: oblique
-        margin-left: 10%
+        
