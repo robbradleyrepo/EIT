@@ -151,12 +151,31 @@
                             userExists = savedUser.IsUserExists;
                         }
                     }
-
+                    
                     if (!userExists)
                     {
+                        //get original context
                         var context = _personalizedContentService.GetContext();
+                        var oldEmail = context.Preferences.EmailAddress;
+                        
+                        //reset context as we identified a new user
+                        _personalizedContentService.UpdateContext(null);
+                        context = _personalizedContentService.GetContext();
+                        
                         if (UpdateEmailPreferences(registerInvestorSubmit, context))
                         {
+                            //switch back to original visitor if needed
+                            if (registerInvestorSubmit.Email != oldEmail)
+                            {
+                                var sfEntityUtilityObj = new SFEntityUtility();
+                                var scVisitorId =
+                                    sfEntityUtilityObj.IdentifyVisitorAndGetVisitorId(oldEmail);
+                                
+                                //reset context as we identified a new user
+                                _personalizedContentService.UpdateContext(null);
+                                context = _personalizedContentService.GetContext();
+                            }
+
                             return Redirect(data.ConfirmationPage.Url);
                         }
                         else

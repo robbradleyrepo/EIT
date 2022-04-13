@@ -16,6 +16,11 @@
             public const string ProfileCardValueName_XmlAttribute = "name";
             public const string ProfileCardValueValue_XmlAttribute = "value";
         }
+        
+        public static class EditPreferencesPage
+        {
+            public const string TemplateId = "{68ED9154-702A-4D18-A718-4BCC5AC1D5E6}";
+        }
 
         public enum Tabs
         {

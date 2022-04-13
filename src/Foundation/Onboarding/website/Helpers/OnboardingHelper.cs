@@ -271,30 +271,18 @@
                 return false;
             }
 
-            // Use default identifyAs for unknown contacts
-            if (Tracker.Current.Contact.IdentificationLevel != ContactIdentificationLevel.Known)
-            {
-                Tracker.Current.Session.IdentifyAs(source, identifier);
-
-                var contactId = Tracker.Current.Contact.ContactId;
-                manager.RemoveFromSession(contactId);
-                Tracker.Current.Session.Contact = manager.LoadContact(contactId);
-                return true;
-            }
-
             var existingContact = manager.LoadContact(source, identifier);
 
             // No other contact has this identifier yet: just set it
             if (existingContact == null)
             {
-                var contactId = Tracker.Current.Session.Contact.ContactId;
+                Tracker.Current.Session.IdentifyAs(source, identifier);
+                var contactId = Tracker.Current.Contact.ContactId;
 
                 Log.Info($"Add identifier for contact '{contactId}'. {source} > {identifier}", typeof(OnboardingHelper));
 
-                manager.AddIdentifier(contactId, new ContactIdentifier(source, identifier, ContactIdentificationLevel.Known));
                 manager.RemoveFromSession(contactId);
                 Tracker.Current.Session.Contact = manager.LoadContact(contactId);
-
                 return true;
             }
 
