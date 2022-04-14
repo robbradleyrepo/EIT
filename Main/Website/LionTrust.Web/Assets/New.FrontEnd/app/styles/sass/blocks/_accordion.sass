@@ -6,6 +6,7 @@
                 width: 100%
     .container
         position: relative
+        margin-bottom: 50px
         .order-1
             .accordion
                 &__smartcard
@@ -98,6 +99,10 @@
         background-size: contain
     .collapsing
         position: static !important
+    a
+        color: $primary
+        &:hover
+            text-decoration: underline
 .accordion__link.collapsed
     border-bottom: 1px solid #E9EDF0
     .accordion__link.collapsed

@@ -4,6 +4,7 @@
     using LionTrust.Feature.MyPreferences.Models;
     using LionTrust.Feature.MyPreferences.Repositories;
     using LionTrust.Feature.MyPreferences.Services;
+    using LionTrust.Foundation.Analytics.Goals;
     using LionTrust.Foundation.Contact.Managers;
     using LionTrust.Foundation.Contact.Services;
     using Sitecore.Abstractions;
@@ -32,6 +33,9 @@
         public ActionResult Render(Errors error = Errors.None)
         {
             var data = _context.GetDataSourceItem<IEditEmailPreferences>();
+            
+            //remove context if user opens email link an existing session
+            _personalizedContentService.UpdateContext(null);
             var context = _personalizedContentService.GetContext();
 
             if (data == null || context == null)
@@ -53,6 +57,7 @@
         public ActionResult Render(EditEmailPreferencesViewModel registerInvestorViewModel)
         {
             var submitSuccess = true;
+            Guid subscriptionGoal = Guid.Empty;
 
             if(registerInvestorViewModel == null || registerInvestorViewModel.DatasourceId == null)
             {
@@ -75,12 +80,13 @@
                     if(registerInvestorViewModel.UnsubscribeAll)
                     {
                         context.Preferences.UnsubscribeAll();
-                    }
+                        subscriptionGoal = data.UnsubscribeGoal;
+                    }   
                     else
                     {
-                        context.Preferences.IsInstitutionalBulletinChecked = registerInvestorViewModel.IsInstitutionalBulletin;
+                        context.Preferences.SubscribeAll();
+                        subscriptionGoal = data.SubscribeGoal;
                     }
-                   
 
                     context.Preferences.SFProcessList = registerInvestorViewModel.SFProcessList;
                     submitSuccess = _emailPreferencesService.SaveEmailPreferences(context);
@@ -109,6 +115,12 @@
                 redirectUrl = uriBuilder.Uri.PathAndQuery;
             }
 
+            // trigger subscription goal
+            if (subscriptionGoal != Guid.Empty)
+            {
+                Helper.TriggerGoal(new Sitecore.Data.ID(subscriptionGoal));
+            }
+            
             return Redirect(redirectUrl);
         }
     }

@@ -1,0 +1,26 @@
+﻿---
+ID: "47c71c2b-3ff7-41c3-af5e-161ecaf85299"
+Parent: "858e7ca3-7a4d-4a9b-baab-f0e8c6f7d849"
+Template: "0b8174f1-7295-45d8-9a50-ce3df53507af"
+Path: "/sitecore/content/LionTrustNew/Home/Investor Relations/Results/_Local/UI028 - Secondary Nav/Regulatory news"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220227T141659Z
+    - ID: "3f39e86e-0426-46f0-8f64-c5636372e13a"
+      Hint: PageLink_Link
+      Value: |
+        <link text="Regulatory news" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{C93540D3-A8D0-4C42-9CED-B075CFF44F17}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya

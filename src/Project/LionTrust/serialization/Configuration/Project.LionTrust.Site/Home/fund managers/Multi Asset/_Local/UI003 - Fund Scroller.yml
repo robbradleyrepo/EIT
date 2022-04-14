@@ -1,0 +1,52 @@
+﻿---
+ID: "563149b1-0ab6-4839-947c-5c4a8151a503"
+Parent: "4b293c68-bc55-43f8-a716-8319b5e688b6"
+Template: "f91bff52-8afb-4056-bbf3-84c16924b92d"
+Path: "/sitecore/content/LionTrustNew/Home/fund managers/Multi Asset/_Local/UI003 - Fund Scroller"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{5186C9A7-7949-4FF7-9958-802F6F23AAD1}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210601T085619Z
+    - ID: "451efcd2-40a3-4153-8b02-bec9572a9ec1"
+      Hint: FundScroller_Description
+      Value: 
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "63c464ec-3657-4b91-adf5-28ac9036774f"
+      Hint: FundScroller_PrimaryCta
+      Value: 
+    - ID: "8e11c5f7-1fca-4a99-ad05-b81511f973d9"
+      Hint: FundScroller_Heading
+      Value: Funds and portfolios managed by the team
+    - ID: "dd98d557-6e80-4ffb-9e13-498e29de5566"
+      Hint: FundScroller_Funds
+      Type: Multilist
+      Value: |
+        {FB169222-0214-4396-BCEB-CF931586CE22}
+        {363C2B75-11D0-4B0A-843A-3DF36B650902}
+        {E9933EB7-983A-4948-A8F9-FD810F2C915C}
+        {A91EBFA9-0D3A-4200-8860-C0F4926AF8F4}
+        {FE6AA79B-1D11-4B78-ACFA-6EA1464E318E}
+        {149B7866-4ABE-447B-A840-732549E781BB}
+        {9AE4E660-5C14-44CF-949B-13C4700132AE}
+        {29ADABD7-04AE-4A1B-B2CF-6AEA256E119B}
+        {E8E0E737-4F05-4C67-AB46-BBB98F37B0E7}
+        {239D9D4D-4722-4DCA-9A17-4FDB08654EC9}
+        {A5D000CD-3AE9-456C-9B29-852285CBF272}
+    - ID: "e8a3c14f-9976-4734-9fe8-5bb53e1dc9b3"
+      Hint: FundScroller_SecondaryCta
+      Value: 
+    - ID: "eb9e31a0-ed28-48fc-8cbf-820264b17306"
+      Hint: FundScroller_Subtitle
+      Value: 

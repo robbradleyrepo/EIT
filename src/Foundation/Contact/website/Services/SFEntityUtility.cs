@@ -196,14 +196,7 @@
                 //Update fields
                 sfEntity.InternalFields.SetField<bool>(Constants.SF_LTNewsField, context.Preferences.IncludeInLTNews);
                 sfEntity.InternalFields.SetField<bool>(Constants.SF_EmailOptOutField, context.Preferences.Unsubscribe);
-                sfEntity.InternalFields.SetField<bool>(Constants.SF_Article41NoticeSentField, !context.Preferences.Unsubscribe);
                 sfEntity.InternalFields.SetField<DateTime>(Constants.SF_DateOfConcentField, DateTime.Now);
-
-                //Institutional Bulletin checkbox available only for SF Contacts
-                if (context.IsContact)
-                {
-                    sfEntity.InternalFields.SetField<bool>(Constants.SFContact_InstitutionalBulletin, context.Preferences.IsInstitutionalBulletinChecked);
-                }
 
                 var isAnyProcessOrFundSelected = false;
                 if (!context.Preferences.Unsubscribe)
@@ -266,121 +259,118 @@
                 var selectedSFFundIdList = new List<string>();
 
                 //Update FundPreferences SF entities for UK residents only
-                if (context.Preferences.IsUkResident)
+                var processIdList = context.Preferences.SFProcessList.Select(x => x.SFProcessId).ToList();
+                List<GenericSalesforceEntity> fundPreferneceList = GetFundPreferenceEntities(context, processIdList, false);
+
+                //Generate 'IN' clause for SOQL query
+                var processIdString = string.Empty;
+                foreach (var processId in processIdList)
                 {
-                    var processIdList = context.Preferences.SFProcessList.Select(x => x.SFProcessId).ToList();
-                    List<GenericSalesforceEntity> fundPreferneceList = GetFundPreferenceEntities(context, processIdList, false);
-
-                    //Generate 'IN' clause for SOQL query
-                    var processIdString = string.Empty;
-                    foreach (var processId in processIdList)
+                    if (!string.IsNullOrEmpty(processIdString))
                     {
-                        if (!string.IsNullOrEmpty(processIdString))
-                        {
-                            processIdString = string.Format("{0},'{1}'", processIdString, processId);
-                        }
-                        else
-                        {
-                            processIdString = string.Format("'{0}'", processId);
-                        }
-                    }
-
-                    //Retrieve Salesforce Process objects
-                    GenericSalesforceService genericSFService = new GenericSalesforceService(this.SalesforceSession, Constants.SFProductEntityName);
-
-                    var soqlQuery = string.Format("SELECT {0}, {1}, {2}, (SELECT {3}, {4}, {5} FROM {6} where RecordType.Name = '{7}' AND {8}='{9}') FROM {10} WHERE RecordType.Name='{11}' AND {12}='{13}' AND {14} IN ({15})",
-                                                      Product2.Fields.Id.Name, Product2.Fields.Name.Name, Constants.SFProduct_IsMutiAssetScenarioField, Product2.Fields.Id.Name, Product2.Fields.Name.Name, Constants.SFProduct_IsMutiAssetScenarioField, Constants.SFProcess_RefFieldForFunds,
-                                                      Constants.SFFundRecordTypeName, Constants.SFProduct_StatusField, Constants.SFProductStatusOpenName, Constants.SFProductEntityName,
-                                                      Constants.SFProcessRecordTypeName, Constants.SFProduct_StatusField, Constants.SFProductStatusOpenName, Product2.Fields.Id.Name, processIdString);
-
-                    List<GenericSalesforceEntity> sfProcessListFromAPI = genericSFService.GetBySoql(soqlQuery);
-
-                    foreach (var sfProcessItemFromClient in context.Preferences.SFProcessList)
-                    {
-                        var sfProcessItemFromAPI = sfProcessListFromAPI.Where(x => x.Id == sfProcessItemFromClient.SFProcessId).FirstOrDefault();
-                        if (sfProcessItemFromAPI != null)
-                        {
-                            var fundPreferenceItemListForProcess = fundPreferneceList.Where(x => x.InternalFields[Constants.SFFundPref_RefFieldForProcessId] == sfProcessItemFromAPI.Id);
-                            //Get related SF Funds for each SF Process
-                            var subQueryFundItemList = sfProcessItemFromAPI.InternalFields.GetSubQuery<GenericSalesforceEntity>(Constants.SFProcess_RefFieldForFunds);
-
-                            //This IF block handles the special scenario for "Multi Asset Process".
-                            //If the current Process in the loop is a "Multi Asset Process", Generate a custom fund item and add it to the FundList.
-                            //This step is required becasue for "Multi Asset Process" we do not give the option for user to select any fund.  
-                            if (sfProcessItemFromAPI.InternalFields.GetField<bool>(Constants.SFProduct_IsMutiAssetScenarioField))
-                            {
-                                var specialMultiAssetFund = subQueryFundItemList.Where(x => x.InternalFields.GetField<bool>(Constants.SFProduct_IsMutiAssetScenarioField)).FirstOrDefault();
-                                if (specialMultiAssetFund != null)
-                                {
-                                    var tempFundObj = new SFFund();
-                                    tempFundObj.SFFundId = specialMultiAssetFund.Id;
-                                    tempFundObj.IsFundSelected = (context.Preferences.Unsubscribe) ? false : sfProcessItemFromClient.IsProcessSelected;
-
-                                    sfProcessItemFromClient.SFFundList.Add(tempFundObj);
-                                }
-                            }
-
-                            foreach (var sfFundItemFromClient in sfProcessItemFromClient.SFFundList)
-                            {
-                                var sfFundItemFromAPI = subQueryFundItemList.Where(x => x.Id == sfFundItemFromClient.SFFundId).FirstOrDefault();
-                                if (sfFundItemFromAPI != null)
-                                {
-                                    //Get FundPreference items for each Fund
-                                    var fundPreferenceItemListForFund = fundPreferenceItemListForProcess.Where(x => x.InternalFields[Constants.SFFundPref_FundField] == sfFundItemFromAPI.Id);
-
-                                    if (fundPreferenceItemListForFund != null && fundPreferenceItemListForFund.Count() > 0)
-                                    {
-                                        //Update existing FundPreference items
-                                        foreach (var funPreferenceItemForFund in fundPreferenceItemListForFund)
-                                        {
-                                            funPreferenceItemForFund.InternalFields.SetField<bool>(Constants.SFFundPref_InterestedField, sfFundItemFromClient.IsFundSelected);
-                                            sfFundPreferenceItemsForUpsert.Add(funPreferenceItemForFund);
-                                        }
-                                    }
-                                    else
-                                    {
-                                        //Create new FundPreference items
-                                        if (sfFundItemFromClient.IsFundSelected)
-                                        {
-                                            var newFundPreferenceItem = new GenericSalesforceEntity(Constants.SFFundPreferenceEntityName);
-                                            if (context.IsContact)
-                                            {
-                                                newFundPreferenceItem.InternalFields.SetField(Constants.SFFundPref_ContactField, sfEntityId);
-                                            }
-                                            else
-                                            {
-                                                newFundPreferenceItem.InternalFields.SetField(Constants.SFFundPref_LeadField, sfEntityId);
-                                            }
-
-                                            newFundPreferenceItem.InternalFields.SetField(Constants.SFFundPref_FundField, sfFundItemFromAPI.Id);
-                                            newFundPreferenceItem.InternalFields.SetField(Constants.SFFundPref_InterestedField, true);
-                                            sfFundPreferenceItemsForUpsert.Add(newFundPreferenceItem);
-                                        }
-                                    }
-                                }
-
-                                //Add selected Salesforce fund ids into a seperate list. So this list can use later to update Sitecore contact's facet as the selected Salesfore fund ids
-                                if (sfFundItemFromClient.IsFundSelected)
-                                {
-                                    //Save 15 character salesforce id in the list.  
-                                    selectedSFFundIdList.Add(sfFundItemFromClient.SFFundId.Substring(0, 15));
-                                }
-                            }
-                        }
-                    }
-
-                    if (sfFundPreferenceItemsForUpsert.Count > 0)
-                    {
-                        List<List<GenericSalesforceEntity>> bulkifiedFundPrefEntities = SplitSalesforceGenericEntityList(sfFundPreferenceItemsForUpsert, 200);
-                        foreach (List<GenericSalesforceEntity> fundPreferenceEntities in bulkifiedFundPrefEntities)
-                        {
-                            genericSFService.UpsertEntities(fundPreferenceEntities, Constants.SFFundPref_IdField);
-                        }
+                        processIdString = string.Format("{0},'{1}'", processIdString, processId);
                     }
                     else
                     {
-                        Log.Debug(string.Format("No FundPreference entities found to be insert/update for Entity Id: {0}.", sfEntityId), this);
+                        processIdString = string.Format("'{0}'", processId);
                     }
+                }
+
+                //Retrieve Salesforce Process objects
+                GenericSalesforceService genericSFService = new GenericSalesforceService(this.SalesforceSession, Constants.SFProductEntityName);
+
+                var soqlQuery = string.Format("SELECT {0}, {1}, {2}, (SELECT {3}, {4}, {5} FROM {6} where RecordType.Name = '{7}' AND {8}='{9}') FROM {10} WHERE RecordType.Name='{11}' AND {12}='{13}' AND {14} IN ({15})",
+                                                  Product2.Fields.Id.Name, Product2.Fields.Name.Name, Constants.SFProduct_IsMutiAssetScenarioField, Product2.Fields.Id.Name, Product2.Fields.Name.Name, Constants.SFProduct_IsMutiAssetScenarioField, Constants.SFProcess_RefFieldForFunds,
+                                                  Constants.SFFundRecordTypeName, Constants.SFProduct_StatusField, Constants.SFProductStatusOpenName, Constants.SFProductEntityName,
+                                                  Constants.SFProcessRecordTypeName, Constants.SFProduct_StatusField, Constants.SFProductStatusOpenName, Product2.Fields.Id.Name, processIdString);
+
+                List<GenericSalesforceEntity> sfProcessListFromAPI = genericSFService.GetBySoql(soqlQuery);
+
+                foreach (var sfProcessItemFromClient in context.Preferences.SFProcessList)
+                {
+                    var sfProcessItemFromAPI = sfProcessListFromAPI.Where(x => x.Id == sfProcessItemFromClient.SFProcessId).FirstOrDefault();
+                    if (sfProcessItemFromAPI != null)
+                    {
+                        var fundPreferenceItemListForProcess = fundPreferneceList.Where(x => x.InternalFields[Constants.SFFundPref_RefFieldForProcessId] == sfProcessItemFromAPI.Id);
+                        //Get related SF Funds for each SF Process
+                        var subQueryFundItemList = sfProcessItemFromAPI.InternalFields.GetSubQuery<GenericSalesforceEntity>(Constants.SFProcess_RefFieldForFunds);
+
+                        //This IF block handles the special scenario for "Multi Asset Process".
+                        //If the current Process in the loop is a "Multi Asset Process", Generate a custom fund item and add it to the FundList.
+                        //This step is required becasue for "Multi Asset Process" we do not give the option for user to select any fund.  
+                        if (sfProcessItemFromAPI.InternalFields.GetField<bool>(Constants.SFProduct_IsMutiAssetScenarioField))
+                        {
+                            var specialMultiAssetFund = subQueryFundItemList.Where(x => x.InternalFields.GetField<bool>(Constants.SFProduct_IsMutiAssetScenarioField)).FirstOrDefault();
+                            if (specialMultiAssetFund != null)
+                            {
+                                var tempFundObj = new SFFund();
+                                tempFundObj.SFFundId = specialMultiAssetFund.Id;
+                                tempFundObj.IsFundSelected = (context.Preferences.Unsubscribe) ? false : sfProcessItemFromClient.IsProcessSelected;
+
+                                sfProcessItemFromClient.SFFundList.Add(tempFundObj);
+                            }
+                        }
+
+                        foreach (var sfFundItemFromClient in sfProcessItemFromClient.SFFundList)
+                        {
+                            var sfFundItemFromAPI = subQueryFundItemList.Where(x => x.Id == sfFundItemFromClient.SFFundId).FirstOrDefault();
+                            if (sfFundItemFromAPI != null)
+                            {
+                                //Get FundPreference items for each Fund
+                                var fundPreferenceItemListForFund = fundPreferenceItemListForProcess.Where(x => x.InternalFields[Constants.SFFundPref_FundField] == sfFundItemFromAPI.Id);
+
+                                if (fundPreferenceItemListForFund != null && fundPreferenceItemListForFund.Count() > 0)
+                                {
+                                    //Update existing FundPreference items
+                                    foreach (var funPreferenceItemForFund in fundPreferenceItemListForFund)
+                                    {
+                                        funPreferenceItemForFund.InternalFields.SetField<bool>(Constants.SFFundPref_InterestedField, sfFundItemFromClient.IsFundSelected);
+                                        sfFundPreferenceItemsForUpsert.Add(funPreferenceItemForFund);
+                                    }
+                                }
+                                else
+                                {
+                                    //Create new FundPreference items
+                                    if (sfFundItemFromClient.IsFundSelected)
+                                    {
+                                        var newFundPreferenceItem = new GenericSalesforceEntity(Constants.SFFundPreferenceEntityName);
+                                        if (context.IsContact)
+                                        {
+                                            newFundPreferenceItem.InternalFields.SetField(Constants.SFFundPref_ContactField, sfEntityId);
+                                        }
+                                        else
+                                        {
+                                            newFundPreferenceItem.InternalFields.SetField(Constants.SFFundPref_LeadField, sfEntityId);
+                                        }
+
+                                        newFundPreferenceItem.InternalFields.SetField(Constants.SFFundPref_FundField, sfFundItemFromAPI.Id);
+                                        newFundPreferenceItem.InternalFields.SetField(Constants.SFFundPref_InterestedField, true);
+                                        sfFundPreferenceItemsForUpsert.Add(newFundPreferenceItem);
+                                    }
+                                }
+                            }
+
+                            //Add selected Salesforce fund ids into a seperate list. So this list can use later to update Sitecore contact's facet as the selected Salesfore fund ids
+                            if (sfFundItemFromClient.IsFundSelected)
+                            {
+                                //Save 15 character salesforce id in the list.  
+                                selectedSFFundIdList.Add(sfFundItemFromClient.SFFundId.Substring(0, 15));
+                            }
+                        }
+                    }
+                }
+
+                if (sfFundPreferenceItemsForUpsert.Count > 0)
+                {
+                    List<List<GenericSalesforceEntity>> bulkifiedFundPrefEntities = SplitSalesforceGenericEntityList(sfFundPreferenceItemsForUpsert, 200);
+                    foreach (List<GenericSalesforceEntity> fundPreferenceEntities in bulkifiedFundPrefEntities)
+                    {
+                        genericSFService.UpsertEntities(fundPreferenceEntities, Constants.SFFundPref_IdField);
+                    }
+                }
+                else
+                {
+                    Log.Debug(string.Format("No FundPreference entities found to be insert/update for Entity Id: {0}.", sfEntityId), this);
                 }
 
                 if (!string.IsNullOrEmpty(visitorId))
@@ -395,6 +385,7 @@
                     sfDataObj.SalesforceOrgId = this.SalesforceSession.SalesforceOrganizationId;
                     sfDataObj.RandomGuidFromSalesforceEntity = sfEntity.InternalFields[Constants.SF_GUIDForEmailPref];
                     sfDataObj.SalesforceFundIds = selectedSFFundIdList;
+                    sfDataObj.Unsubscribed = sfEntity.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
 
                     //Save relavant Salesforce data in Sitecore contact facet
                     //selectedSFFundIdList contains the 15 character ids of the Salesforce funds. Explicitly save the 15 character fund ids in the contact facet.
@@ -469,6 +460,7 @@
                         var sfOrgId = this.SalesforceSession.SalesforceOrganizationId;
                         var randomGuid = newlyCreatedLead.InternalFields[Constants.SF_GUIDForEmailPref];
                         var emailAddress = newlyCreatedLead.InternalFields[Constants.SF_EmailField];
+                        var unsubscribed = newlyCreatedLead.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
 
                         if (!string.IsNullOrEmpty(visitorId))
                         {
@@ -482,6 +474,7 @@
                             sfDataObj.SalesforceOrgId = sfOrgId;
                             sfDataObj.RandomGuidFromSalesforceEntity = randomGuid;
                             sfDataObj.SalesforceFundIds = new List<string>();
+                            sfDataObj.Unsubscribed = unsubscribed;
 
                             //Save relavant Salesforce data in Sitecore contact facet
                             var scContactUtilityObj = new SitecoreContactUtility();
@@ -540,6 +533,7 @@
                 newSFContact.InternalFields[Constants.SFContact_CompanyNameField] = profUser.Company;
                 newSFContact.InternalFields.SetField<bool>(Constants.SF_UKResident, profUser.IsUKResident);
                 newSFContact.InternalFields[Constants.SFContact_OrgNameField] = profUser.Organisation;
+                newSFContact.InternalFields.SetField<bool>(Constants.SF_EmailOptOutField, profUser.Unsubscribed);
 
                 var contactRecordtypes = GetSFEntityRecordTypes(Constants.SFContactEntityName);
                 if (contactRecordtypes != null)
@@ -944,6 +938,56 @@
         }
 
         /// <summary>
+        /// Get unsubscribed by email
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        public bool GetUnsubscribedByEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                Log.Info("Email address is null or empty. No email preferences id returned from the email address.", this);
+                return true;
+            }
+
+            try
+            {
+                var unsubscribed = true;
+
+                var contactService = new ContactService(this.SalesforceSession);
+                var sfContact = contactService.GetByEmail(email);                
+                if (sfContact != null)
+                {
+                    var sfEntityId = sfContact.Id.ToString();
+                    unsubscribed = sfContact.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
+
+                    return unsubscribed;
+                }
+
+                var leadService = new LeadService(this.SalesforceSession);
+                var sfLead = leadService.GetByEmail(email);
+                if (sfLead != null)
+                {
+                    var sfEntityId = sfLead.Id.ToString();
+                    unsubscribed = sfLead.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
+
+                    return unsubscribed;
+                }
+
+                if (sfContact == null && sfLead == null)
+                {
+                    Log.Info(string.Format("Salesforce Contact or Lead does not exist with the email - {0}", email), this);
+                }                
+              
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
         /// Retrieve record types from the SF entity
         /// </summary>
         /// <param name="entityType"></param>
@@ -990,7 +1034,6 @@
                 returnObj.IncludeInLTNews = sfContact.InternalFields.GetField<bool>(Constants.SF_LTNewsField);
                 returnObj.Unsubscribe = sfContact.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
                 returnObj.IsUkResident = sfContact.InternalFields.GetField<bool>(Constants.SF_UKResident);
-                returnObj.IsInstitutionalBulletinChecked = sfContact.InternalFields.GetField<bool>(Constants.SFContact_InstitutionalBulletin);
                 returnObj.IsConsentGivenDateEmpty = (sfContact.InternalFields[Constants.SF_DateOfConcentField] == null) ? true : false;
                 return returnObj;
             }
@@ -1018,7 +1061,6 @@
                 returnObj.IncludeInLTNews = sfLead.InternalFields.GetField<bool>(Constants.SF_LTNewsField);
                 returnObj.Unsubscribe = sfLead.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
                 returnObj.IsUkResident = sfLead.InternalFields.GetField<bool>(Constants.SF_UKResident);
-                returnObj.IsInstitutionalBulletinChecked = false;
                 returnObj.IsConsentGivenDateEmpty = (sfLead.InternalFields[Constants.SF_DateOfConcentField] == null) ? true : false;
                 return returnObj;
             }

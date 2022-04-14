@@ -30,9 +30,10 @@ body
             display: none
 
         +breakpoint(desktop, up)
-            min-width: 212px
+            max-width: 212px
             height: 51px
             letter-spacing: 2.4px
+            line-height: 17px
 
             i.animate-arrow
                 display: inline-flex
@@ -118,8 +119,8 @@ body
 
         input[type="submit"]
             @extend .btn
-
             @extend .btn-primary
+            white-space: normal
 
     .link
         font-size: 12px

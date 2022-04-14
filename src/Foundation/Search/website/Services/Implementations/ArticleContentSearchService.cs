@@ -22,8 +22,15 @@
 
         private Expression<Func<ArticleSearchResultItem, bool>> PopoulateDatedTaxonomyPredicate(Expression<Func<ArticleSearchResultItem, bool>> predicate, ITaxonomySearchRequest articleSearchRequest)
         {
-            predicate = predicate.And(x => x.Created > articleSearchRequest.FromDate);
-            predicate = predicate.And(x => x.Created < articleSearchRequest.ToDate);
+            if (articleSearchRequest.Month != null)
+            {                
+                predicate = predicate.And(x => x.ArticleCreatedDateMonth == articleSearchRequest.Month);
+            }
+            
+            if (articleSearchRequest.Year != null)
+            {
+                predicate = predicate.And(x => x.ArticleCreatedDateYear == articleSearchRequest.Year);
+            }
 
             var taxonomyFilter = PredicateBuilder.True<ArticleSearchResultItem>();
 

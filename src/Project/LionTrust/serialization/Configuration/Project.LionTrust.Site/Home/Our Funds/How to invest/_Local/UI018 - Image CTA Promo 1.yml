@@ -1,0 +1,36 @@
+﻿---
+ID: "681d2fde-3964-4c6c-a7e5-ede28b6c86b2"
+Parent: "60cc087d-57fa-47cc-a6e8-5dc1dc4035c1"
+Template: "d3d9d2ce-b2ce-49ac-b50d-6a5ffd4c4ab8"
+Path: "/sitecore/content/LionTrustNew/Home/Our Funds/How to invest/_Local/UI018 - Image CTA Promo 1"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1054e4b6-1cf5-4c08-8a6d-d9b02fb17050"
+      Hint: ImageCTAPromo_Image
+      Value: |
+        <image mediaid="{A5AB4C00-7593-4040-A3A5-FA2CACCD51D2}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220315T114231Z
+    - ID: "48bf236b-0681-4a09-9085-4933fa1c4a7a"
+      Hint: ImageCTAPromo_Body
+      Value: |
+        <span style="background-color: #ffffff; color: #414855;">Fund platforms enable you to invest in Liontrust funds alongside those of other investment managers.</span><br style="color: #414855; background-color: #ffffff;" />
+        <br style="color: #414855; background-color: #ffffff;" />
+        <span style="background-color: #ffffff; color: #414855;">Platforms are able to aggregate large numbers of clients, sometimes offering lower minimum investment amounts and lower fund charges as a result.</span><br style="color: #414855; background-color: #ffffff;" />
+        <br style="color: #414855; background-color: #ffffff;" />
+        <span style="background-color: #ffffff; color: #414855;">The&nbsp;</span><a rel="noopener noreferrer" rel="noopener noreferrer" href="https://www.theia.org/new-investing" class="text-primary" target="_blank" style="color: #10a047; background-color: #ffffff;">Investment Association&rsquo;s website</a><span style="background-color: #ffffff; color: #414855;">&nbsp;contains more information about investing via fund platforms and can also help you find one.</span>
+    - ID: "4f8e0e85-38f1-4ab6-9ad6-dce0008c8304"
+      Hint: ImageCTAPromo_TextAlignment
+      Value: "{79DA2651-4E23-42A5-B5B0-94E416E1A3E7}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "7a84ea30-ff24-4c46-ae8f-51fcff940663"
+      Hint: ImageCTAPromo_Title
+      Value: Invest via a fund platform

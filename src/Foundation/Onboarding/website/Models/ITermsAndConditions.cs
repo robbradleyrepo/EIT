@@ -14,6 +14,9 @@
         [SitecoreField(Constants.TermsAndConditions.ButtonText_FieldId)]
         string ButtonText { get; set; }
 
+        [SitecoreField(Constants.TermsAndConditions.AcceptanceCheckboxText_FieldId)]
+        string AcceptanceCheckboxText { get; set; }
+
         [SitecoreField(Constants.TermsAndConditions.AcceptanceFirstText_FieldId)]
         string AcceptanceFirstText { get; set; }
 
@@ -28,5 +31,7 @@
 
         [SitecoreId]
         Guid Id { get; set; }
+
+        bool AcceptanceCheckbox { get; set; }
     }
 }

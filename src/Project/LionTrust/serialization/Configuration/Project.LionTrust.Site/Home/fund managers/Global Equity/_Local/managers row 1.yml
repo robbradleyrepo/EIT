@@ -1,0 +1,40 @@
+﻿---
+ID: "d005bd72-dc48-453b-ab50-f6f9dd04327c"
+Parent: "808a55cc-d1c5-4488-a28d-0eb3efe8b7ac"
+Template: "a33314f8-d9aa-4710-b47a-9f66ba58ab13"
+Path: /sitecore/content/LionTrustNew/Home/fund managers/Global Equity/_Local/managers row 1
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{A725C17C-25E3-42CC-96B2-4F3EA7545D7C}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210601T085619Z
+    - ID: "4ef859a1-6cd4-4213-8eab-94cc974c6c08"
+      Hint: FundManager_Title
+      Value:  
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "742fa605-ec20-4ec8-87fd-9e7daeb8bc84"
+      Hint: FundManagers_Managers
+      Type: Multilist
+      Value: |
+        {8A9DB932-B36C-42AD-BBEB-1A0EF9284BBB}
+        {3C86E4EC-77B1-4CBC-BEE2-C0F7269F8666}
+        {0E5E4A0C-C069-4515-9891-5F8916D1BA0B}
+        {29CDE738-BB80-4647-B7F3-CF854D8C49F3}
+        {980C538D-B156-4ACB-A4C1-41B6392829DD}
+        {452A22FC-C9C5-4310-A19C-DF119C8B4DFA}
+        {FEA79F0A-09CC-49DA-9A72-204F3E489870}
+        {1CC52EDA-BD90-48F1-957C-07FC72C82B07}
+        {F647BC4C-3E13-4A0F-A65B-F64D360E2EC9}
+        {E5742220-82F3-43CF-9F1B-E97B2A33915A}
+        {67CE7C5C-A7A8-48F2-B43A-B5F79C18A0E6}

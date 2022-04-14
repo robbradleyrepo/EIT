@@ -9,6 +9,7 @@
             public const string TableHeadingFieldId = "{24B821F2-896B-4BBE-AB3A-6C943A3D8B8F}";
             public const string QuartileRowLabelFieldId = "{21554471-1768-4C04-9A5D-A5FAB1B4D8F4}";
             public const string HeadingFieldId = "{450FEC5E-B30E-48AF-ADC4-051FD7B27289}";
+            public const string DisclaimerFieldId = "{CAD3B2B9-D3A9-4BC1-9920-07AC2A7A44AF}";
         }
 
         public static class Literature
@@ -238,17 +239,7 @@
             public const string ManagerInceptionDateLabel_FieldId = "{AB8E942C-8129-4A8E-9DD5-2D7F3F9DE270}";
             public const string TargetBenchmarkYieldLabel_FieldId = "{94185463-0638-40C0-AC99-233554578886}";
             public const string Tooltips_FieldId = "{B58A6442-2039-4A2E-83FD-C6CCD6CCA221}";
-        }
-
-        public static class KeyInfoPrice
-        {
-            public const string ClassLaunchDate_FieldId = "{009E0E82-76BC-4B6A-A326-6FB97237BA50}";
-            public const string Comparator_FieldId = "{37BB71CA-84B0-4D80-9E3D-320A32C9D6C1}";
-            public const string Duration_FieldId = "{7E88256A-2E5D-42EB-B340-7983804209B8}";
-            public const string SinglePrice_FieldId = "{ACF74586-B31A-4812-A440-C4C50A6E4F70}";
-            public const string OfferPrice_FieldId = "{B834FC27-880B-4ACD-BC10-D6158773B285}";
-            public const string PriceDate_FieldId = "{366E54EF-CC6F-4F52-8953-6DDDEA6ED408}";
-        }
+        }        
 
         public static class TwoColumnComponent
         {
@@ -330,6 +321,59 @@
         public static class EmailTemplates
         {
             public static Guid FundImportErrorEmail = new Guid("{A0D06E95-9BB2-4377-8DFC-FB6A5B8CACED}");
+        }
+     
+        public static class FourFundStatsOnDemand
+        {            
+            public const string SharePriceLabel_FieldId = "{7E360DA7-F911-4857-9DEF-14C26FFB4A3A}";
+            public const string CompanyLaunchDateLabel_FieldId = "{44E39FC0-204B-46B4-97E2-F4DAE6E5B520}";
+            public const string CompanyLaunchDateValue_FieldId = "{F1514E6E-0C92-412B-893D-23E7049EAAD7}";
+            public const string ManagerInceptionDateLabel_FieldId = "{6A9DACA0-08CA-4A75-8F13-EE33A197CAFF}";
+            public const string ManagerInceptionDateValue_FieldId = "{F48F9AE1-7760-459B-9320-67CFC46D3D73}";
+            public const string TotalAssetsLabel_FieldId = "{E3BAE9F1-C6F7-4749-A940-5ACBA0156109}";
+            public const string TotalAssetsValue_FieldId = "{CF960DCF-26AD-4FAD-AFF6-1AD39EAE5DCF}";
+        }
+
+        public static class KeyInfoPriceOnDemandComponent
+        {
+            public const string KeyInformationLabel_FieldId = "{22423235-261E-4052-82F4-25B4601D57DE}";
+            public const string BenchmarkIndexLabel_FieldId = "{F019B0D9-147B-4E48-90BF-70B8083B47E2}";
+            public const string AICSectorLabel_FieldId = "{06145D7E-1B20-42A2-9790-DD6AF70C7410}";
+            public const string NetAssetValuePerShareLabel_FieldId = "{6FEB32A0-786E-46DD-98BB-E1FB1E4FD01E}";
+            public const string PremiumDiscountLabel_FieldId = "{16E16A7C-ED86-4A71-8CB7-E09B1DD8ADEC}";
+            public const string HistoricDividendPerShareLabel_FieldId = "{EBC3F489-465F-4DFB-98E9-D1EF742FC4AB}";
+            public const string HistoricDividendPerShareValue_FieldId = "{851EEF90-C009-4E43-A2E4-FCF98CFC5981}";
+            public const string HistoricSharePriceYieldLabel_FieldId = "{62BF8C00-1C74-41DB-BBA6-A85190C1B20C}";
+            public const string HistoricSharePriceYieldValue_FieldId = "{CCC10950-EEA7-4B01-94FC-9441BD66606A}";
+            public const string OngoingChargesLabel_FieldId = "{C30B2D3F-B1C6-4753-8D24-37594B3C5DFA}";
+            public const string OngoingChargesValue_FieldId = "{FF61BD83-1CF2-4866-895A-4041CE72496B}";
+            public const string ActiveSharesLabel_FieldId = "{DDB66D95-C1C6-4AB1-9A59-023F56E6025F}";
+            public const string ActiveSharesValue_FieldId = "{0522258C-F19F-4038-BEAF-AEDFD3487498}";
+            public const string GearingGrossLabel_FieldId = "{AAC49B55-2B21-40CC-9E42-A8B05ECA0E3A}";
+            public const string GearingGrossValue_FieldId = "{9AC54C18-837E-445B-9C24-5CCA841E8F2F}";
+            public const string GearingNetLabel_FieldId = "{A6B5D55F-A7F6-4DCA-BA74-72756AB22CE8}";
+            public const string GearingNetValue_FieldId = "{D6F451B2-D4F3-41DC-900C-E3034005DE75}";
+            public const string HoldingsLabel_FieldId = "{6782838F-9ED1-4D38-8710-B4E85EAA2675}";
+            public const string HoldingsValue_FieldId = "{CD76945B-BD6B-45D1-B471-629F9E899A3E}";
+        }
+
+        public static class AdditionalInfoOnDemandComponent
+        {
+            public const string AdditionalInfoLabel_FieldId = "{08C1265A-C9BE-4312-A31F-B41DA3E8A3C7}";            
+            public const string DividendDistributionsLabel_FieldId = "{C2BC2615-348A-461D-AEA0-C55D2696FEAD}";
+            public const string DividendDistributionsValue_FieldId = "{68481B33-D4E2-4124-B0FD-2AF8A75FAAED}";
+            public const string NovemberInterimsLabel_FieldId = "{17527C30-1093-4AFB-92C5-52117533E148}";
+            public const string NovemberInterimsValue_FieldId = "{ED30DA7C-0F37-403B-BABE-2648C69BBDA5}";
+            public const string FebruaryInterimsLabel_FieldId = "{7FCEFEA6-4182-4DDC-AAAC-8913FCBF2647}";
+            public const string FebruaryInterimsValue_FieldId = "{13DF9FDA-41E6-44A6-8B35-287BFAA2FA09}";
+            public const string MayInterimsLabel_FieldId = "{5D8F31CD-A9F7-4BA6-9390-D7C583B6D398}";
+            public const string MayInterimsValue_FieldId = "{73272A12-D2CF-4FCB-AAE8-CC71DCCA883D}";
+            public const string JulyInterimsLabel_FieldId = "{2B309DE8-C412-48DE-A4DF-09B1C45FEA70}";
+            public const string JulyInterimsValue_FieldId = "{09BE1671-01D0-444A-B2A4-57DBDC847CE7}";
+            public const string YearEndLabel_FieldId = "{5BDCA1BA-E142-4D66-89FC-E00E2F8303F3}";
+            public const string YearEndValue_FieldId = "{8BCDCA9B-22E2-4B8F-B6DA-2D5732B72FCD}";
+            public const string ISINCodeLabel_FieldId = "{EEB11AD7-C3AA-4A6B-A873-D6F2094803D2}";
+            public const string SedolCodeLabel_FieldId = "{C5329A37-336F-439C-AF1E-68B8176AF79C}";
         }
     }
 }

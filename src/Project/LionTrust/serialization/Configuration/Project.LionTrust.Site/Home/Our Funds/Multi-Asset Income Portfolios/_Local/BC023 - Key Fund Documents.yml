@@ -1,0 +1,39 @@
+﻿---
+ID: "27bb41dd-6de2-4e44-a4fb-48db6b60c82c"
+Parent: "e21ee671-5ee0-40d0-aa06-65cc22296526"
+Template: "bbfe6c9b-afba-423c-9dd4-eff01eb556f5"
+Path: "/sitecore/content/LionTrustNew/Home/Our Funds/Multi-Asset Income Portfolios/_Local/BC023 - Key Fund Documents"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 500
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{89B2540A-1F1E-4E8C-91BD-B8B833BC1B2F}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "10b9fa41-4f22-4fd2-81be-ee105dfb4329"
+      Hint: KeyFundDocuments_Title
+      Value: Key literature
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220201T125511Z
+    - ID: "4189960d-9aae-42e3-8008-3ef3309002d6"
+      Hint: KeyFundDocuments_KeyDocuments
+      Type: Treelist
+      Value: |
+        {F24D2C1D-6A89-47DF-8C47-1883CF7D55C7}
+        {C69CD98A-8F2E-46B6-BEC0-7A04D8193A4D}
+        {993A0DEA-51FC-49C8-9A45-DF969B6FB9DA}
+        {9C9ADE78-6FA6-4743-A150-D4A40ADC2650}
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "760716cf-64d5-4c0d-9dff-2dbb9f0d476a"
+      Hint: KeyFundDocuments_Description
+      Value: 

@@ -1,0 +1,28 @@
+﻿---
+ID: "77d3efe1-bae9-43f2-bfcd-3bce60aaced0"
+Parent: "c6020818-d8df-4abc-9951-86a46d106529"
+Template: "a33314f8-d9aa-4710-b47a-9f66ba58ab13"
+Path: /sitecore/content/LionTrustNew/Home/fund managers/Global Fundamental/_Local/managers row 1/managers row 2
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210816T104101Z
+    - ID: "4ef859a1-6cd4-4213-8eab-94cc974c6c08"
+      Hint: FundManager_Title
+      Value: Fixed income
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "742fa605-ec20-4ec8-87fd-9e7daeb8bc84"
+      Hint: FundManagers_Managers
+      Type: Multilist
+      Value: |
+        {0F980420-4156-41F4-951F-F156CD3F4359}
+        {CA7A5B3C-A223-4D09-9442-3FF1945D1F73}
+        {19D9DD92-BB2E-444F-8903-F7D20AFDB962}

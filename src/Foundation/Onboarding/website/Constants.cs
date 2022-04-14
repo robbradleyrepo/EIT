@@ -6,7 +6,7 @@
         {
             public const string Logo_FieldId = "{B2EFA293-4240-4439-997F-DDAC10179067}";
             public const string Text_FieldId = "{44AFFB73-0BB2-4312-8968-39D3737453E4}";
-            public const string ProfessionalInvestor_FieldId = "{A2546C2D-E821-46F7-8042-D78F3F1CA8F1}";  
+            public const string PrivateInvestor_FieldId = "{A2546C2D-E821-46F7-8042-D78F3F1CA8F1}";  
             public const string Profile_FieldId = "{0E092A53-4282-4D27-BB59-8FEFD1E28196}";
         }
 
@@ -32,6 +32,8 @@
             public const string ModalIntroText_FieldId = "{6AC57F67-1641-4BFE-8039-0C567B1E994D}";
             public const string ModalBodyText_FieldId = "{ACD1C722-0258-4BD4-9368-9E37D3FE5273}";
             public const string ModalButtonText_FieldId = "{B7EDC3EF-95E7-44D4-AE3C-4889D55CBBA7}";
+            public const string PrivateInvestor_ItemId = "{E86157CA-78B9-4DB6-9A06-E40BEF9C55AC}";
+            
         }
 
         public static class TermsAndConditions
@@ -39,6 +41,7 @@
             public const string TemplateId = "{5BB1E536-F64D-462B-8666-0EB6A811EE8F}";
             public const string Title_FieldId = "{04EBF102-7785-40A0-BF5F-040EBCD004A5}";
             public const string ButtonText_FieldId = "{A2BCC4F0-B7F1-4AC8-BDAE-DF69211E86C2}";
+            public const string AcceptanceCheckboxText_FieldId = "{17BF2D26-E72F-4A42-A7F6-9547EF7094C2}";
             public const string AcceptanceFirstText_FieldId = "{30E38AAE-22D7-46C3-B51B-D1F54BAE5C14}";
             public const string AcceptanceLink_FieldId = "{A19DE9DA-FD4F-4A5B-B17B-9FB9373F0BAC}";
             public const string AcceptanceSecondText_FieldId = "{16109397-8678-4A4E-8E14-7E438F035121}";
@@ -59,6 +62,7 @@
             public const string ISO_FieldId = "{A46A84E5-E402-4784-95D3-E316A9761EFB}";
             public const string TermsAndConditions_FieldId = "{BFD9B660-B602-4BEF-82FC-BECC3C9417A6}";
             public const string FundCentreCountryCode_FieldId = "{87460E4B-38FA-4B00-898A-3071546DE530}";
+            public const string Goal_FieldId = "{8CBEEF11-3BFB-4595-97E2-95389824CC2B}";
             public const string RestOfWorldIso = "01";
         }
 
@@ -81,6 +85,7 @@
         {
             public const string TemplateId = "{515B02C8-0C38-46BD-8060-72BE80EC99F0}";
             public const string Name_FieldId = "{C038B21D-C75C-47CE-97B2-04E665DD486C}";
+            public const string NameWithArticle_FieldId = "{093534AA-5F96-4031-94E8-F60F2DD9D373}";
             public const string Description_FieldId = "{B1CC8A2B-0544-4DB1-83F0-A7186D820A5C}";
             public const string Icon_FieldId = "{24886373-D6E1-411C-87A6-DE0062562012}";
             public const string ProfileCard_FieldId = "{4CAD945A-DFC5-4001-86EC-E24F204CAAFB}";
@@ -89,6 +94,7 @@
             public const string InternationalPatternCard_FieldId = "{5280D30C-66BB-468A-A54A-CDBF0229D7E1}";
             public const string ExcludedCountires_FieldId = "{37CDAEBE-7CD2-4D45-BD7B-CB58C9585328}";
             public const string Header_FieldId = "{1B479915-F4DF-4559-AADB-F74A744C85B1}";
+            public const string LandingPage_FieldId = "{FDF548D4-2D00-4A27-A4EC-F49ED693F83B}";
         }
 
         public static class QueryStringNames

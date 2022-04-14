@@ -27,6 +27,7 @@
         margin-bottom: 1.5em
         +breakpoint(desktop, up)
             margin-bottom: 2em
+
     b,strong,
         font-weight: 500
         +breakpoint(mobile-large, down)
@@ -52,7 +53,13 @@
                         left: -2px!important
                         color: $gold
                         @include breakpoint(desktop, up)
-                            top: 1px!important		        
+                            top: 1px!important	
+    .text-danger
+        a	
+            color: $primary
+            &:hover
+                color: $primary
+                text-decoration: underline            
 .big-quote
     letter-spacing: 0.26px
     +font-size(22px)
@@ -73,6 +80,8 @@
     width: 100%
     max-width: 764px
     color: $black
+    +breakpoint(mobile-large, down)
+        padding: 20px
     +p-1-normal-20
     +breakpoint(desktop, up)
         padding: 15px 32px

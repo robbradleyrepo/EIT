@@ -61,7 +61,7 @@
                 searchTermPredicate = searchTermPredicate.Or(item => item.GenericListingSubtitle.Contains(genericSearchRequest.SearchTerm));
                 searchTermPredicate = searchTermPredicate.Or(item => item.GenericListingText.Contains(genericSearchRequest.SearchTerm));
 
-                predicate = predicate.Or(searchTermPredicate);
+                predicate = predicate.And(searchTermPredicate);
             }
 
             return predicate;

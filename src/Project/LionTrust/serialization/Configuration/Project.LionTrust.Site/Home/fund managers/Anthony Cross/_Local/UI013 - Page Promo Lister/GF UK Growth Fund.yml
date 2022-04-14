@@ -1,0 +1,36 @@
+﻿---
+ID: "0fd08806-c0d4-4e2b-9398-80ea87e1703c"
+Parent: "1bb83eca-50cc-4fd3-a530-baa47f28184c"
+Template: "bc775c7d-48c1-4f1b-865a-fecab210dbe3"
+Path: "/sitecore/content/LionTrustNew/Home/fund managers/Anthony Cross/_Local/UI013 - Page Promo Lister/GF UK Growth Fund"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1058a56c-86ff-4783-a8d2-00c2217cc7ff"
+      Hint: PagePromoItem_Heading
+      Value: GF UK Growth Fund
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220218T102940Z
+    - ID: "5db6612c-40ef-44f7-996b-da07fced5370"
+      Hint: PagePromoItem_CTA
+      Value: |
+        <link text="View fund" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{0C432C60-284C-43B6-983A-4BF55B79CC2A}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "f8de397f-fe55-4664-894d-8144b77b455a"
+      Hint: PagePromoItem_Text
+      Value: "The Fund seeks UK-listed companies with a durable competitive advantage that allows them to defy industry competition and sustain a higher than average level of profitability for longer than expected."
+    - ID: "fdcbfc89-a522-4029-a2ce-648e272372d1"
+      Hint: PagePromoItem_Image
+      Value: |
+        <image mediaid="{1E23E7A5-0A14-4CCD-AF7D-5C5B23F42A25}" />

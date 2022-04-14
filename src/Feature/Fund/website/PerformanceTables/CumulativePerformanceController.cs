@@ -5,7 +5,6 @@
     using Sitecore.Mvc.Controllers;
     using System.Web.Mvc;
     using System.Linq;
-    using LionTrust.Foundation.Legacy.Models;
 
     public class CumulativePerformanceController : SitecoreController
     {
@@ -33,14 +32,20 @@
                 var citiCode = FundClassSwitcherHelper.GetCitiCode(HttpContext, datasource.Fund);
                 if (!string.IsNullOrEmpty(citiCode))
                 {
-                    result.Rows = _performanceManager.GetPerformanceTableRows(citiCode).GroupBy(r => r.Name).Select(g => g.First()).ToArray();
-                    result.QuartileRow = _performanceManager.GetQuartile(citiCode);
-
                     var currentClass = datasource.Fund.Classes.FirstOrDefault(c => c.CitiCode == citiCode);
                     if (currentClass != null)
                     {
-                        result.Hide = currentClass.HideDiscretePerformanceTable;
+                        result.Hide = currentClass.HideCumulativePerformanceTable;
                     }
+
+                    result.Rows = _performanceManager.GetPerformanceTableRows(citiCode, currentClass).GroupBy(r => r.Name).Select(g => g.First()).ToArray();
+                    
+                    if (result.Rows != null && result.Rows.Count() > 0)
+                    {
+                        result.QuartileRow = _performanceManager.GetQuartile(citiCode, currentClass);
+                    }
+
+                    result.Disclaimer = _performanceManager.GetDisclaimer(citiCode, currentClass.Currency, datasource.Disclaimer);
                 }
             }
 

@@ -24,6 +24,7 @@
     </NuGetPackageImportStamp>
     <TargetFrameworkProfile />
     <Use64BitIISExpress />
+    <LangVersion>default</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -77,6 +78,8 @@
     <Compile Include="ComputedFields\Article\ArticleAuthorImageProtected.cs" />
     <Compile Include="ComputedFields\Article\ArticleAuthorTeams.cs" />
     <Compile Include="ComputedFields\Article\ArticleContent.cs" />
+    <Compile Include="ComputedFields\Article\ArticleCreatedDateYear.cs" />
+    <Compile Include="ComputedFields\Article\ArticleCreatedDateMonth.cs" />
     <Compile Include="ComputedFields\Article\ArticleCreatedDate.cs" />
     <Compile Include="ComputedFields\Article\ArticleListingImageProtected.cs" />
     <Compile Include="ComputedFields\Article\ArticleAuthorNames.cs" />
@@ -97,6 +100,7 @@
     <Compile Include="ComputedFields\GenericListingModuleItem\ImageProtected.cs" />
     <Compile Include="ComputedFields\GenericListingModuleItem\Month.cs" />
     <Compile Include="ComputedFields\GenericListingModuleItem\Text.cs" />
+    <Compile Include="ComputedFields\GenericListingModuleItem\Date.cs" />
     <Compile Include="ComputedFields\GenericListingModuleItem\Year.cs" />
     <Compile Include="ComputedFields\SharedLogic\ComputedValueHelper.cs" />
     <Compile Include="ComputedFields\SharedLogic\ExcludedCountiresField.cs" />

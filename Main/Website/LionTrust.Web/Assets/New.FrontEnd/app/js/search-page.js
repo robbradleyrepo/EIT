@@ -1,4 +1,4 @@
-import searchPage from "./componets/searchPage";
+import searchPage from "./components/searchPage";
 
 document.addEventListener("DOMContentLoaded", () => {  
   if($('body').hasClass('search-page'))

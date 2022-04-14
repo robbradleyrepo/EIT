@@ -1,0 +1,192 @@
+﻿---
+ID: "2a5885a9-dac6-45e6-9ec8-ed4287b3df63"
+Parent: "712f3d02-aac9-4f76-a34c-a04dd9a6208d"
+Template: "793b1a20-f153-4cfb-93bd-8b62896f0d16"
+Path: "/sitecore/content/LionTrustNew/Home/Our Funds/Multi-Asset Dynamic Beta Portfolios"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{6B28AFCF-FA3D-4505-A8D4-C56F384207E3}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{33133DD3-0E19-4033-9C28-7804671069E7}"
+              p:before="*"
+              s:ds="{613D832E-2A1E-446A-AB5F-648C182B68EF}"
+              s:id="{C3B11E64-1214-410E-BA83-3347C5B59A7E}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{7DECFCF4-902B-4971-89BE-BD6D488A2CE6}"
+              p:after="r[@uid='{33133DD3-0E19-4033-9C28-7804671069E7}']"
+              s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+              s:ph="/header/navigation" />
+            <r
+              uid="{F97098D8-3254-4752-BFCF-ABFC7D64A578}"
+              p:after="r[@uid='{7DECFCF4-902B-4971-89BE-BD6D488A2CE6}']"
+              s:ds="{7BC99BFE-1547-4449-AE95-9702796680FD}"
+              s:id="{E8615AE3-E7F7-4FA4-9782-C22612560E79}"
+              s:par=""
+              s:ph="header" />
+            <r
+              uid="{5AA25FD9-0C14-4CD4-9155-73C7AA55F09B}"
+              p:after="r[@uid='{F97098D8-3254-4752-BFCF-ABFC7D64A578}']"
+              s:ds="{FDC72621-CCB9-4680-B7B1-5F2219939879}"
+              s:id="{2A426004-8707-4E51-9772-D999D41FB113}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{690C7A0E-6855-41FE-818A-B955101DC5C4}"
+              p:after="r[@uid='{5AA25FD9-0C14-4CD4-9155-73C7AA55F09B}']"
+              s:ds="{73A23650-0D5F-427F-ADE6-E359FED95C96}"
+              s:id="{56ECB2D2-5D43-4F0F-A5D1-AC267F249E7B}"
+              s:ph="main" />
+            <r
+              uid="{A5FC3774-7697-43E6-932A-63DD5A800264}"
+              p:after="r[@uid='{690C7A0E-6855-41FE-818A-B955101DC5C4}']"
+              s:ds="{DF137677-B8EB-4940-A078-432E41EC6BE0}"
+              s:id="{BA0509C8-337A-45E7-A597-8035DC2F1C21}"
+              s:ph="main" />
+            <r
+              uid="{D312293B-788F-40AB-A29E-9EB232B0619E}"
+              p:after="r[@uid='{A5FC3774-7697-43E6-932A-63DD5A800264}']"
+              s:ds="{2E260131-D09C-44C1-A484-523A05D9D421}"
+              s:id="{F7E7EFF1-2B5F-4554-9B19-1483BDCD6025}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{36FC5185-4DC9-41EA-99D6-EF35F2F7DD6D}"
+              p:after="r[@uid='{D312293B-788F-40AB-A29E-9EB232B0619E}']"
+              s:ds="{105FBCA8-091D-4887-96C1-4A77AD8CFA81}"
+              s:id="{56ECB2D2-5D43-4F0F-A5D1-AC267F249E7B}"
+              s:ph="main" />
+            <r
+              uid="{80F25CFF-0B79-48CE-9154-F742AB798CBD}"
+              p:after="r[@uid='{36FC5185-4DC9-41EA-99D6-EF35F2F7DD6D}']"
+              s:ds="{E9E3E0A5-98AF-4398-A446-DD34865C6269}"
+              s:id="{BA0509C8-337A-45E7-A597-8035DC2F1C21}"
+              s:ph="main" />
+            <r
+              uid="{3B94A5E7-F137-40EA-8A86-0E0E355F9FD7}"
+              p:after="r[@uid='{80F25CFF-0B79-48CE-9154-F742AB798CBD}']"
+              s:ds="{A2DC27AE-FFFC-40EF-A8C1-5E4A5839B292}"
+              s:id="{2A426004-8707-4E51-9772-D999D41FB113}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{B04DE10D-5DB8-4763-92A7-8045F36D4A70}"
+              p:after="r[@uid='{3B94A5E7-F137-40EA-8A86-0E0E355F9FD7}']"
+              s:ds="{742F6BDB-7C7B-470E-A279-C088D1675C8F}"
+              s:id="{8D47F982-4A0A-4CEB-BA66-DEABA6B71AD1}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{502E2501-2446-44D9-838C-88F115F2C9A4}"
+              p:after="r[@uid='{B04DE10D-5DB8-4763-92A7-8045F36D4A70}']"
+              s:ds="{251983EB-656C-4315-BA32-2D9E24026A33}"
+              s:id="{56ECB2D2-5D43-4F0F-A5D1-AC267F249E7B}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{9CF64375-FEE1-447D-BD81-AA2B9CDE8A35}"
+              p:after="r[@uid='{502E2501-2446-44D9-838C-88F115F2C9A4}']"
+              s:ds="{0ED593A7-F122-429A-B5D8-5D064E39AC98}"
+              s:id="{E9EA1844-F7AA-45D6-A10F-800A467D6E3D}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{DE698B12-AE17-4452-9EAA-5DFC43A069CD}"
+              p:after="r[@uid='{9CF64375-FEE1-447D-BD81-AA2B9CDE8A35}']"
+              s:ds="{7BA97C04-50E0-42DA-A8D5-2CA44ADC477B}"
+              s:id="{2A426004-8707-4E51-9772-D999D41FB113}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{FA911D16-5949-44C0-9D56-C1BE2136BAED}"
+              p:after="r[@uid='{DE698B12-AE17-4452-9EAA-5DFC43A069CD}']"
+              s:ds="{FF33DFCF-937B-4202-BBCB-E746C028BF26}"
+              s:id="{3349B84E-C4C1-42B8-8291-BCDB541DC1B6}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{E5667DA7-30AA-4610-A15B-855B1171D9AC}"
+              p:after="r[@uid='{FA911D16-5949-44C0-9D56-C1BE2136BAED}']"
+              s:ds="{0063C3EE-AE79-4F23-8DB4-1ED89160EDAE}"
+              s:id="{2A426004-8707-4E51-9772-D999D41FB113}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{13AE5467-C5C0-496F-8748-EBA8F2C1573B}"
+              p:after="r[@uid='{E5667DA7-30AA-4610-A15B-855B1171D9AC}']"
+              s:ds="{3389F9F4-B4C2-485F-9702-80E0802D377C}"
+              s:id="{049F3D5C-E59A-4505-9BDC-B94C11832A93}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{A8956A85-6DC8-48D8-8515-7C7248E11877}"
+              p:after="r[@uid='{13AE5467-C5C0-496F-8748-EBA8F2C1573B}']"
+              s:ds="{8BC5FAC5-F2CE-4962-8C2C-1A3DE3942404}"
+              s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{39345DA5-FA18-456E-823A-D38934F9D2E0}"
+              p:after="r[@uid='{A8956A85-6DC8-48D8-8515-7C7248E11877}']"
+              s:ds="{0244D43B-567D-4950-850A-DA42CB0ACAD3}"
+              s:id="{6B2E2A4D-C3CB-4676-B804-B3459E4C9BD6}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{99F6B13B-3FE5-4E89-97BE-BA7A7C88B860}"
+              p:after="r[@uid='{39345DA5-FA18-456E-823A-D38934F9D2E0}']"
+              s:ds="{883246DB-1DA4-4BA1-BB23-E5758F16641A}"
+              s:id="{33050F00-5AE0-4130-8B3A-362E4D6EEBCB}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{26789752-D95F-4A5E-8321-BD42D5FDBB3C}"
+              p:after="r[@uid='{99F6B13B-3FE5-4E89-97BE-BA7A7C88B860}']"
+              s:ds="{8F7AA55E-2569-4646-A28E-7FA325F64C31}"
+              s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{CCBBB036-5788-4F78-AC6A-DF34C178F76C}"
+              s:ds=""
+              s:par="" />
+          </d>
+        </r>
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: MPS Dynamic Beta Portfolios | Liontrust Asset Management PLC
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220201T142240Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JamesJ
+    - ID: "6febf0b3-6bdb-43ea-9041-ca30ca342bb3"
+      Hint: LegacyPresentationBase_SubNavigationMenu
+      Value: "{AEA66CB3-FAA5-4F80-A3CE-A418B1EC5468}"
+    - ID: "8a3692c4-8014-4bdd-9f9f-74acfcc1c501"
+      Hint: LegacyPresentationBase_ShortDescription
+      Value: "Dynamic Beta Portfolios are designed to deliver long-term capital growth at a competitive price, predominantly through the use of passive strategies. "
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: MPS Dynamic Beta Portfolios
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: MPS Dynamic Beta Portfolios

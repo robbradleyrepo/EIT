@@ -4,6 +4,7 @@
     using LionTrust.Feature.MyPreferences.Models;
     using LionTrust.Feature.MyPreferences.Repositories;
     using LionTrust.Feature.MyPreferences.Services;
+    using LionTrust.Foundation.Analytics.Goals;
     using LionTrust.Foundation.Contact.Managers;
     using LionTrust.Foundation.Contact.Models;
     using LionTrust.Foundation.Contact.Services;
@@ -12,9 +13,12 @@
     using Sitecore.Abstractions;
     using Sitecore.Mvc.Controllers;
     using System;
-    using System.Linq;
     using System.Collections.Generic;
+    using System.Linq;
     using System.Web.Mvc;
+    using Foundation.Contact;
+    using Sitecore.XConnect.Client;
+    using Sitecore.XConnect.Collection.Model;
     using static LionTrust.Feature.MyPreferences.Constants;
     using QueryStringNames = Foundation.Contact.Constants.QueryStringNames;
 
@@ -58,7 +62,7 @@
 
             if (!Sitecore.Context.PageMode.IsExperienceEditor)
             {
-                viewModel.ProfessionalInvestor = investor.Id == home.OnboardingConfiguration.ProfessionalInvestor?.Id;
+                viewModel.ProfessionalInvestor = investor.Id != home.OnboardingConfiguration.PrivateInvestor?.Id;
                 viewModel.InvestorType = investor.InvestorName;
             }
 
@@ -114,7 +118,8 @@
                             LastName = registerInvestorSubmit.LastName,
                             Email = registerInvestorSubmit.Email,
                             IsUKResident = ukResident,
-                            Company = !string.IsNullOrEmpty(data.CompanyFieldDefaultValue) ? data.CompanyFieldDefaultValue : "Self"
+                            Company = !string.IsNullOrEmpty(data.CompanyFieldDefaultValue) ? data.CompanyFieldDefaultValue : "Self",
+                            Unsubscribed = !registerInvestorSubmit.SubscribeToEmail
                     };
 
                         var savedUser = _emailPreferencesService.SaveNonProfUserAsSFLead(nonProfUserViewModel, emailTemplate, data.EditPreferencesPage.AbsoluteUrl, data.FundDashboardPage.AbsoluteUrl);
@@ -135,7 +140,8 @@
                             IsUKResident = ukResident,
                             CompanyId = registerInvestorSubmit.CompanyId,
                             Company = registerInvestorSubmit.CompanyName,
-                            Organisation = sfOrganisationId
+                            Organisation = sfOrganisationId,
+                            Unsubscribed = !registerInvestorSubmit.SubscribeToEmail
                         };
 
                         var savedUser = _emailPreferencesService.SaveProfUserAsSFContact(professionalUser, emailTemplate, data.EditPreferencesPage.AbsoluteUrl, data.FundDashboardPage.AbsoluteUrl);
@@ -145,12 +151,31 @@
                             userExists = savedUser.IsUserExists;
                         }
                     }
-
+                    
                     if (!userExists)
                     {
+                        //get original context
                         var context = _personalizedContentService.GetContext();
+                        var oldEmail = context.Preferences.EmailAddress;
+                        
+                        //reset context as we identified a new user
+                        _personalizedContentService.UpdateContext(null);
+                        context = _personalizedContentService.GetContext();
+                        
                         if (UpdateEmailPreferences(registerInvestorSubmit, context))
                         {
+                            //switch back to original visitor if needed
+                            if (registerInvestorSubmit.Email != oldEmail)
+                            {
+                                var sfEntityUtilityObj = new SFEntityUtility();
+                                var scVisitorId =
+                                    sfEntityUtilityObj.IdentifyVisitorAndGetVisitorId(oldEmail);
+                                
+                                //reset context as we identified a new user
+                                _personalizedContentService.UpdateContext(null);
+                                context = _personalizedContentService.GetContext();
+                            }
+
                             return Redirect(data.ConfirmationPage.Url);
                         }
                         else
@@ -161,7 +186,7 @@
                     else
                     {
                         error = Errors.UserExists;
-                        return Redirect($"{Request.RawUrl}?{QueryStringNames.EmailPreferencefParams.ErrorQueryStringKey}={(int)error}&{QueryStringNames.EmailPreferencefParams.EmailQueryStringKey}={registerInvestorSubmit.Email}#retrieve-preferences");
+                        return Redirect($"{Request.Url.GetLeftPart(UriPartial.Path)}?{QueryStringNames.EmailPreferencefParams.ErrorQueryStringKey}={(int)error}&{QueryStringNames.EmailPreferencefParams.EmailQueryStringKey}={registerInvestorSubmit.Email}#retrieve-preferences");
                     }
                 }
                 else
@@ -175,7 +200,7 @@
                 error = Errors.General;
             }
 
-            return Redirect($"{Request.RawUrl}?{QueryStringNames.EmailPreferencefParams.ErrorQueryStringKey}={(int)error}");
+            return Redirect($"{Request.Url.GetLeftPart(UriPartial.Path)}?{QueryStringNames.EmailPreferencefParams.ErrorQueryStringKey}={(int)error}");
         }
 
         public ActionResult ResendEmail(string email, Guid dataSourceId, bool isContact)
@@ -197,6 +222,13 @@
 
             if (isSuccess)
             {
+                // trigger goal
+                var goal = data.RetrievePreferencesGoal;
+                if (goal != Guid.Empty)
+                {
+                    Helper.TriggerGoal(new Sitecore.Data.ID(goal));
+                }
+
                 return Redirect(data.ResendEmailSuccessPage.Url);
             }
             else

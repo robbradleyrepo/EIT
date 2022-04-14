@@ -7,7 +7,6 @@
     using Sitecore.Abstractions;
     using Sitecore.Analytics;
     using Sitecore.Analytics.Model;
-    using Sitecore.Analytics.Tracking;
     using Sitecore.Annotations;
     using Sitecore.Mvc.Controllers;
     using Sitecore.XConnect.Client;
@@ -157,6 +156,7 @@
             }
 
             var data = _context.GetHomeItem<IHome>();
+            var landingPageUrl = string.Empty;
 
             if (data?.OnboardingConfiguration == null)
             {
@@ -186,6 +186,13 @@
                 OnboardingHelper.AddPointsFromProfileCard(data.OnboardingConfiguration, profileCard);
 
                 TrackAnonymousUser(OnboardingSubmit.Country);
+
+                landingPageUrl = investor.LandingPage?.Url;
+            }
+
+            if (!string.IsNullOrEmpty(landingPageUrl) && (Sitecore.Context.Item.Template.ID.ToString() != EditPreferencesPage.TemplateId))
+            {
+                return Redirect(landingPageUrl);
             }
 
             var uriBuilder = new UriBuilder(Request.Url.ToString());
@@ -274,19 +281,34 @@
 
                 var contact = OnboardingHelper.GetContact(client);
                 var profile = OnboardingHelper.GetProfile(config.Profile.Name);
-
-                var isUkResident = OnboardingHelper.IsUkResident();
+                var investors = config.ChooseInvestorRole?.FirstOrDefault()?.Investors;
+                if (investors == null)
+                {
+                    return false;
+                }
 
                 if (!string.IsNullOrWhiteSpace(contact?.Addresses()?.PreferredAddress?.CountryCode)
                     && profile != null && profile.PatternId.HasValue
-                    && (isUkResident && config.ChooseInvestorRole.FirstOrDefault().Investors.Any(p => p.PatternCard.Id == profile.PatternId.Value)
-                    || !isUkResident && config.ChooseInvestorRole.FirstOrDefault().Investors.Any(p => p.InternationalPatternCard.Id == profile.PatternId.Value)))
+                    && IsInvestorSelected(investors, profile.PatternId.Value))
                 {
                     result = true;
                 }
             }
 
             return result;
+        }
+
+        private bool IsInvestorSelected(IEnumerable<IInvestor> investors, Guid patternId)
+        {
+            var isUkResident = OnboardingHelper.IsUkResident();            
+
+            if (isUkResident && investors.Any(p => p.PatternCard.Id == patternId) ||
+               !isUkResident && investors.Any(p => p.InternationalPatternCard.Id == patternId))
+            {
+                return true;
+            }
+
+            return false;
         }
 
         private void SetTab(Tabs tab)

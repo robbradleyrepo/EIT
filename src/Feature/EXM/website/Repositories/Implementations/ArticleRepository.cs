@@ -24,8 +24,6 @@
         {
             var request = new ArticleSearchRequest
             {
-                FromDate = DateTime.MinValue,
-                ToDate = DateTime.MaxValue,
                 Take = limit,
                 DatabaseName = _mvcContext.SitecoreService.Database.Name,
             };

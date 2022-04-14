@@ -5,8 +5,6 @@
 
     public interface ITaxonomySearchRequest : ISearchRequest
     {
-        DateTime FromDate { get; set; }
-
         IEnumerable<string> ContentTypes { get; set; }
 
         IEnumerable<string> Funds { get; set; }
@@ -18,6 +16,8 @@
         
         IEnumerable<string> FundTeams { get; set; }
         
-        DateTime ToDate { get; set; }
+        int? Month { get; set; }
+
+        int? Year { get; set; }
     }
 }

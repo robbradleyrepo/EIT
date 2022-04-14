@@ -1,0 +1,45 @@
+﻿---
+ID: "886d83f8-7e0b-4f8a-9bae-3c5f135185ee"
+Parent: "4b293c68-bc55-43f8-a716-8319b5e688b6"
+Template: "cf87f1eb-f59d-4e08-bcd6-23e0cdd7362f"
+Path: "/sitecore/content/LionTrustNew/Home/fund managers/Multi Asset/_Local/BC016 - Article Scroller"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{043670F9-6ADD-46AF-A0E1-A78328FF09E8}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0e5031b3-9232-42be-82d4-05579d7827d9"
+      Hint: ArticleSearchParameters_FundTeams
+      Type: Multilist
+      Value: "{070E5C0B-03B2-4438-9DE1-555EE1B65DD6}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210601T085618Z
+    - ID: "550b2192-38e6-4cee-85f2-0bfca295bcf8"
+      Hint: ArticleSearchParameters_Topics
+      Type: Multilist
+      Value: 
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "71469dcb-2347-4fa2-883b-50f4df0e5244"
+      Hint: ArticleSearchParameters_FundManagers
+      Type: Multilist
+      Value: 
+    - ID: "93854c18-0919-445e-bc88-2d353c8491e8"
+      Hint: ArticleScroller_Heading
+      Value: Latest insights
+    - ID: "a03d4f9e-4bda-401d-9639-dd0247f50fab"
+      Hint: ArticleSearchParameters_ContentTypes
+      Type: Multilist
+      Value: 
+    - ID: "bad318c3-b9b5-457f-a42d-f51516fc3ec2"
+      Hint: ArticleScroller_CTA
+      Value: |
+        <link text="View all insights" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{7E9E8706-F864-48E5-B4A2-57F2C408EFD7}" />

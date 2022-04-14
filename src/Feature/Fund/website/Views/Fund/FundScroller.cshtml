@@ -4,7 +4,12 @@
 @using FundConstants = LionTrust.Feature.Fund.Constants;
 @model LionTrust.Feature.Fund.Models.IFundScroller
 
-@{ 
+@if ((Model == null || Model.Funds == null || !Model.Funds.Any()) && !Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    return;
+}
+
+@{
     var isHomePage = Sitecore.Context.Item.TemplateID.ToString().Equals(FundConstants.HomePage.PageTemplateId);
     var compClass = isHomePage ? "fundscroller__dashboard-home" : string.Empty;
 }
@@ -13,12 +18,12 @@
 {
     <div class="fundscroller relative fundscroller__dashboard fundscroller__dashboard-inner @compClass" style="@Model.BackgroundImage.GetSafeBackgroundImageStyle()">
         <div class="fundscroller__box">
+            <div class="fundscroller__headbox">
+                <h2>@Html.Glass().Editable(m => m.Heading)</h2>
+            </div>
             <div class="fundscroller__box-col">
                 <div class="fundscroller__left">
-                    <div class="imagepromo__content">
-                        <div class="imagepromo__headbox">
-                            <h2>@Html.Glass().Editable(m => m.Heading)</h2>
-                        </div>
+                    <div class="imagepromo__content">                        
                         <div class="imagepromo__contentbox txtlimit tenline @(Model.TextColour != null ? Model.TextColour.Value : string.Empty)">
                             <p>
                                 <b>
