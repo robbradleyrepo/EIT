@@ -25,6 +25,7 @@
     &__headbox        
          @include breakpoint(desktop-large, up)
             padding: 0 120px
+            
     &__head
         display: flex
         color: $white
@@ -41,6 +42,7 @@
         display: flex
         align-items: center
         margin-top: 16px
+        padding-left: 203px
     &__writer
         font-size: 12px
         font-weight: bold
@@ -49,7 +51,6 @@
         text-transform: uppercase
         padding-left: 10px
         position: relative
-        margin: auto
         &:before
             content: ''
             position: absolute
@@ -59,7 +60,8 @@
             height: 100%
             background: $gold
     .quote__head-xl
-        font-size: 62px
+        font-size: 42px
         position: relative
         font-style: oblique
-        margin-left: 10%
+        padding: 0 203px
+       
