@@ -22,5 +22,8 @@
 
         [JsonProperty("documentId")]
         public Guid DocumentId { get; set; }
+        
+        [JsonProperty("customSortOrder")]
+        public int CustomSortOrder { get; set; }
     }
 }
