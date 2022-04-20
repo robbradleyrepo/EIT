@@ -4,9 +4,9 @@ export default () => {
   const swiper = new Swiper(".swiper-container-funds", {
     grabCursor: true,
     slidesPerView: "auto",
-    slidesOffsetAfter: 600,
+    slidesOffsetAfter: 60,
     breakpointsInverse: true,
-    loop: true,
+    loop: false,
 
   });
 };
