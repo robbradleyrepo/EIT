@@ -1,0 +1,30 @@
+﻿---
+ID: "ff46dac9-c316-4805-bf39-257a99710abc"
+Parent: "3687abcf-417e-42be-825b-f398a98f6fde"
+Template: "f6b5c22c-0b85-45bb-bb44-d743ff235639"
+Path: "/sitecore/content/LionTrustNew/Global/UI010-QuickLinks/UI010 - Quick Links - Private"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{9463D840-77DC-4347-AA8D-A9F01455D383}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0d827b79-fd2f-46c0-8c0b-6ec87d4bc086"
+      Hint: QuickLinks_QuickLinksList
+      Type: Multilist
+      Value: |
+        {89127722-AECF-4D1C-8133-80312DF75C2F}
+        {7FD27BA7-74E2-46E4-8F47-BF76CEEBB002}
+        {53B1EB59-1D2F-46F2-B034-A2D54BD779A4}
+        {E700B4E3-42F4-452F-B920-017D7F865375}
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220201T094623Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
