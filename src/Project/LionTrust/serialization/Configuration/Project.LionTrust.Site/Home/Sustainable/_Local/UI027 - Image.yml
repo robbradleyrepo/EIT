@@ -1,0 +1,29 @@
+﻿---
+ID: "11c660d0-613f-4743-9ede-d1735133cd2b"
+Parent: "672288ee-915e-4178-9201-f7691bdee855"
+Template: "e5c6c4e7-6864-4b28-a961-f0f9539f71a2"
+Path: "/sitecore/content/LionTrustNew/Home/Sustainable/_Local/UI027 - Image"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 1700
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220405T123426Z
+    - ID: "48ce5243-5dc9-4b3c-b27f-ea89478f21a5"
+      Hint: Image_Image
+      Value: |
+        <image mediaid="{E7ADE3A7-6309-4B23-93FC-1BB1358BA599}" ></image>
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\TomG
+    - ID: "ed739c9b-001a-4e72-bc67-4141bdef057e"
+      Hint: Image_MarginsContainer
+      Value: "{34FC685B-A73E-45C5-863D-1A828A66C4F1}"

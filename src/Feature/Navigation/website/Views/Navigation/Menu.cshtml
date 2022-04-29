@@ -123,8 +123,37 @@
             {
                 <nav class="navigation navigation_desktop">
                     <ul class="navigation__list">
+                        @{
+                            bool hasDropDowns = false;
+                            hasDropDowns =
+                                Model.HomeItem.HeaderConfiguration != null
+                                 && Model.HomeItem.HeaderConfiguration.HeaderDropDowns != null
+                                 && Model.HomeItem.HeaderConfiguration.HeaderDropDowns.Any();
+                        }
                         @foreach (var menuItem in Model.MenuItems.WithAccessTo())
                         {
+                            bool hideInDesktop = false;
+                            
+                            if (hasDropDowns)
+                            {
+                                foreach (var dropDown in Model.HomeItem.HeaderConfiguration.HeaderDropDowns)
+                                {
+                                    if (dropDown.PageItem != null)
+                                    {
+                                        if (dropDown.Name.ToLowerInvariant() == menuItem.Name.ToLowerInvariant())
+                                        {
+                                            hideInDesktop = true;
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+
+                            if (hideInDesktop)
+                            {
+                                continue;
+                            }
+                            
                             var filteredChildrens = menuItem.Children.Where(m => !m.ExcludeInSearchResults);
                             if (filteredChildrens != null && filteredChildrens.Any())
                             {
