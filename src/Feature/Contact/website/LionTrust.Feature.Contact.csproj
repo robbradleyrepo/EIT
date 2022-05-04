@@ -58,6 +58,11 @@
     </PackageReference>
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="1.0.5" />
     <PackageReference Include="Microsoft.Net.Compilers" Version="2.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.SlowCheetah">
+      <Version>4.0.8</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.Web.Infrastructure">
       <Version>1.0.0</Version>
     </PackageReference>
@@ -79,6 +84,10 @@
     <Content Include="Views\Contact\ContactUsForm.cshtml" />
     <Content Include="Views\Contact\_ContactCard.cshtml" />
     <Content Include="Views\Contact\GreyPanel.cshtml" />
+    <Content Include="App_Config\Include\Feature\FormsExtensions\Feature.FormsExtensions.Settings.config">
+      <TransformOnBuild>true</TransformOnBuild>
+    </Content>
+    <None Include="App_Config\Include\Feature\FormsExtensions\Feature.FormsExtensions.Settings.Production.transform" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

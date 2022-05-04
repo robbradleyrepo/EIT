@@ -52,16 +52,17 @@
                         DocumentLinkText = x.DocumentLink?.Text,
                         DocumentPageLink = x.PageLink?.Url,
                         DocumentId = x.Id,
-                        DocumentVideoLink = x.VideoLink?.Url
+                        DocumentVideoLink = x.VideoLink?.Url,
+                        CustomSortOrder = x.CustomSortOrder == 0 ? 1000 : x.CustomSortOrder
                     });
 
                 if (sortOrder == "ASC")
                 {
-                    documentsResponse.SearchResults = documentsResponse.SearchResults.OrderBy(x => x.Title);
+                    documentsResponse.SearchResults = documentsResponse.SearchResults.OrderBy(x => x.CustomSortOrder).ThenBy(x => x.Title);
                 }
                 else
                 {
-                    documentsResponse.SearchResults = documentsResponse.SearchResults.OrderByDescending(x => x.Title);
+                    documentsResponse.SearchResults = documentsResponse.SearchResults.OrderByDescending(x => x.CustomSortOrder).ThenByDescending(x => x.Title);
                 }
 
                 documentsResponse.TotalResults = documentsResponse.SearchResults.Count();

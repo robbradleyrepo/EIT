@@ -1,0 +1,36 @@
+﻿---
+ID: "1f68587a-d244-4f47-ad1a-6d798b3c76cd"
+Parent: "14e11563-1854-48a7-a6f0-dd5513f77252"
+Template: "73ba8165-b3ff-429e-9268-b91fafced6b9"
+Path: "/sitecore/content/LionTrustNew/Global/UI010-QuickLinks/Quick Links - International/QuickLinkCTA 3"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{FCEB5A0B-10A9-488F-82D0-9ED5E9978BB0}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220201T094623Z
+    - ID: "2daf00e2-b3e8-4bb2-836a-c47f505ee481"
+      Hint: QuickLinkCTA_Link
+      Value: |
+        <link text="Resources" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{3EA11862-FF1B-4C96-9D8E-D78813FE9276}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "7ff41320-58c1-4a05-b2c5-dd1e4f9c2191"
+      Hint: QuickLinkCTA_Description
+      Value: Explore our consumer guides, sales aids and other literature
+    - ID: "c0a0281f-cfe6-45e1-a095-b02d109a8952"
+      Hint: QuickLinkCTA_Image
+      Value: |
+        <image mediaid="{852E69B0-CED1-4880-A985-9DAB1EE9160B}" />
+    - ID: "d6596c9a-e05a-49dd-98e6-7ba505d79842"
+      Hint: QuickLinkCTA_Title
+      Value: Resources

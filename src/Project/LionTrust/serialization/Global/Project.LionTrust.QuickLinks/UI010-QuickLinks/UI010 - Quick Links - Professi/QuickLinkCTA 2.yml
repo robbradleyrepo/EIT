@@ -1,0 +1,36 @@
+﻿---
+ID: "329aec11-b6cc-4923-ae50-635430304273"
+Parent: "abd09829-50d4-4e25-9b55-3d13725585a9"
+Template: "73ba8165-b3ff-429e-9268-b91fafced6b9"
+Path: "/sitecore/content/LionTrustNew/Global/UI010-QuickLinks/UI010 - Quick Links - Professionals/QuickLinkCTA 2"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{8C1AB973-3E7E-4061-8A57-BCA11E35E3C1}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220201T094623Z
+    - ID: "2daf00e2-b3e8-4bb2-836a-c47f505ee481"
+      Hint: QuickLinkCTA_Link
+      Value: |
+        <link text="Insights" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{7E9E8706-F864-48E5-B4A2-57F2C408EFD7}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "7ff41320-58c1-4a05-b2c5-dd1e4f9c2191"
+      Hint: QuickLinkCTA_Description
+      Value: Our latest fund manager views, fund updates, podcasts and videos
+    - ID: "c0a0281f-cfe6-45e1-a095-b02d109a8952"
+      Hint: QuickLinkCTA_Image
+      Value: |
+        <image mediaid="{6A493B02-B661-41E2-A1B9-8E2076CFF577}" />
+    - ID: "d6596c9a-e05a-49dd-98e6-7ba505d79842"
+      Hint: QuickLinkCTA_Title
+      Value: Insights
