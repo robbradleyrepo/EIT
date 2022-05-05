@@ -20,8 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log(bgParents);
             var image = new Image();
             image.src = imageSrc;
-            //bgParents.style.width = image.width + 'px';
-            bgParents.style.height = image.height + 'px';
         }
         if ($('.onboarding-overlay').hasClass('active') === true) {
             $('html').addClass('overflow-hidden');
