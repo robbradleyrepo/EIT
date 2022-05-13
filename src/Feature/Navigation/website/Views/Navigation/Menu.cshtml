@@ -140,7 +140,7 @@
                                 {
                                     if (dropDown.PageItem != null)
                                     {
-                                        if (dropDown.PageItem.Id.ToString().ToLowerInvariant() == menuItem.Id.ToString().ToLowerInvariant())
+                                        if (String.Equals(dropDown.PageItem.Id.ToString(), menuItem.Id.ToString(), StringComparison.InvariantCultureIgnoreCase))
                                         {
                                             hideInDesktop = true;
                                             break;
