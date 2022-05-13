@@ -13,6 +13,9 @@
 
         [SitecoreField(Constants.KeyInfoPriceTooltips.Comparator2Tooltip_FieldId)]
         string Comparator2Tooltip { get; set; }
+        
+        [SitecoreField(Constants.KeyInfoPriceTooltips.Comparator3Tooltip_FieldId)]
+        string Comparator3Tooltip { get; set; }
        
         [SitecoreField(Constants.KeyInfoPriceTooltips.BenchmarkTooltip_FieldId)]
         string BenchmarkTooltip { get; set; }

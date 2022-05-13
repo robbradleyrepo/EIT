@@ -44,6 +44,16 @@
                         TooltipValue = Model.Component.Tooltips != null ? Model.Component.Tooltips.Comparator2Tooltip : string.Empty
                     })
             }
+            @if ((!string.IsNullOrWhiteSpace(Model.ClassData.Comparator3) && !string.IsNullOrWhiteSpace(Model.Component.Comparator3Label)) || Sitecore.Context.PageMode.IsExperienceEditor)
+                        {
+                            @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml",
+                                new FundInfoRowViewModel()
+                                {
+                                    LabelValue = Html.Glass().Editable(Model.Component, m => m.Comparator3Label),
+                                    FieldValue = Model.ClassData.Comparator3,
+                                    TooltipValue = Model.Component.Tooltips != null ? Model.Component.Tooltips.Comparator3Tooltip : string.Empty
+                                })
+                        }
             @if (!string.IsNullOrWhiteSpace(Model.ClassData.TargetBenchmarkYield) || Sitecore.Context.PageMode.IsExperienceEditor)
             {
                 @Html.Partial("~/Views/Fund/_FundInfoRow.cshtml",
