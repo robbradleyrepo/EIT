@@ -8,6 +8,8 @@
         public string Comparator1 { get; set; }
 
         public string Comparator2 { get; set; }
+        
+        public string Comparator3 { get; set; }
 
         public string SinglePrice { get; set; }
 

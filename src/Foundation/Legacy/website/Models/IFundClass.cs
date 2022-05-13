@@ -30,6 +30,9 @@
 
         [SitecoreField(Constants.FundClass.Comparator2_FieldId)]
         string Comparator2 { get; set; }
+        
+        [SitecoreField(Constants.FundClass.Comparator3_FieldId)]
+        string Comparator3 { get; set; }
 
         [SitecoreField(Constants.FundClass.OfferPrice_FieldId)]
         string OfferPrice { get; set; }

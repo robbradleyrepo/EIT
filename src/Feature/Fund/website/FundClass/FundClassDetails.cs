@@ -71,6 +71,13 @@
                     .FirstOrDefault(x => x.BenchmarkTypeName.ToLower().Contains("benchmark comparator 2"))?
                     .BenchmarkName;
             }
+            
+            if (string.IsNullOrEmpty(data.Comparator3))
+            {
+                data.Comparator3 = apiData?.Benchmarks?
+                    .FirstOrDefault(x => x.BenchmarkTypeName.ToLower().Contains("benchmark comparator 3"))?
+                    .BenchmarkName;
+            }
 
             if (string.IsNullOrEmpty(data.OfferPrice))
             {
@@ -100,6 +107,7 @@
                 ClassLaunchDate = fundClass.ClassLaunchDate,
                 Comparator1 = fundClass.Comparator1,
                 Comparator2 = fundClass.Comparator2,
+                Comparator3 = fundClass.Comparator3,
                 OfferPrice = fundClass.OfferPrice,
                 PriceDate = fundClass.PriceDate,
                 SinglePrice = fundClass.SinglePrice,

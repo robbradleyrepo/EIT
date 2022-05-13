@@ -230,6 +230,7 @@
             public const string ClassLaunchDateLabel_FieldId = "{FF6466A5-B6D9-499C-A338-42DB7AA720CF}";
             public const string Comparator1Label_FieldId = "{B27C9CC5-F16C-4A75-852D-3A9B6FDBE497}";
             public const string Comparator2Label_FieldId = "{85A7C8E7-FFFB-4EE9-9372-17DE13A3CEFA}";
+            public const string Comparator3Label_FieldId = "{D28ADAAE-90CD-45FA-B106-CAF4B65F78E7}";
             public const string PriceLabel_FieldId = "{435D1D54-8A35-4B13-B9CB-C59CA752F272}";
             public const string SinglePriceLabel_FieldId = "{6F5E00C3-5757-4E8C-A479-A753137A1BA1}";
             public const string OfferPriceLabel_FieldId = "{678F3E21-91D6-4021-BD2A-26C33B839CE1}";
@@ -287,6 +288,7 @@
             public const string ClassLaunchDateTooltip_FieldId = "{685656EE-0CA1-4C38-A7A4-2AB09F008821}";
             public const string Comparator1Tooltip_FieldId = "{B1714A77-7578-4004-8399-CC3259022A8C}";
             public const string Comparator2Tooltip_FieldId = "{41EDA1DE-FAD7-4144-BD0D-027DCFDEDD3D}";
+            public const string Comparator3Tooltip_FieldId = "{686ED1FE-B131-4769-AA67-7CF3F29215BA}";
             public const string BenchmarkTooltip_FieldId = "{6DA207E5-3696-4921-A6B3-AD0922AD99F4}";
             public const string ManagerInceptionDateTooltip_FieldId = "{EE9594DB-6F49-441E-A55C-FF4FECFAE368}";
             public const string TargetBenchmarkYieldTooltip_FieldId = "{756526DC-356D-43A0-8028-9D7439391C66}";
