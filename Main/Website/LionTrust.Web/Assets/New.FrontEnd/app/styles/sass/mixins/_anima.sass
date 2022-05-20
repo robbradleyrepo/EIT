@@ -1,0 +1,19 @@
+@mixin logo-animation($frames, $static, $animation-name: 'carousel') {
+
+
+    @keyframes #{logo-animation} {
+        0%{
+            filter: hue-rotate(1deg);
+        }
+        50%{
+            filter: hue-rotate(50deg);
+        }
+        100%{
+            filter: hue-rotate(100deg);
+        }
+    
+      }
+    
+  }
+}
+//@include logo-animation(5, 17.5%);
