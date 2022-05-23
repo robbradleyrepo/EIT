@@ -1,18 +1,13 @@
-@mixin keyframes($animation-name) {
-  @-webkit-keyframes #{$animation-name} {
+@mixin keyframes(animation-name) {
+  @-webkit-keyframes #{animation-name} {
     @content;
   }
-  @keyframes #{$animation-name} {
+  @keyframes #{animation-name} {
     @content;
   }
 }
 
-@mixin animation($str) {
-  -webkit-animation: #{$str};
-  animation: #{$str};
-}
-
-@include keyframes(fade) {
+@include keyframes() {
   from {background-position:  0 0;}
   to {background-position:  100% 0;}
 }
