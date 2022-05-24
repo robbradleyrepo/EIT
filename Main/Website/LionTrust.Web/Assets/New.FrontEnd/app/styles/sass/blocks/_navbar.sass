@@ -33,10 +33,11 @@ $logo: url('https://upload.wikimedia.org/wikipedia/commons/9/95/Transparent_goog
         animation-name: logo-bg-slide
         animation-duration: 3s
         animation-iteration-count: infinite
-        animation-fill-mode: forwards
         animation-direction: reverse
-        -webkit-mask: $logo 50%/cover
-        mask: $logo 50%/cover
+        animation-timing-function: ease-out
+        animation-fill-mode: forwards
+        -webkit-mask: $logo 100%/cover
+        mask: $logo 100%/cover
         @include breakpoint(desktop-large, up)
             width: 166px
             height: auto
