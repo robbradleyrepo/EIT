@@ -17,7 +17,7 @@
     }
 
     <a href="@Model.HomeItem.Url" class="header-navbar__logo">
-        @Html.Glass().RenderImage(Model.HomeItem, x => x.Logo, new { alt = Model.HomeItem.Logo != null ? Model.HomeItem.Logo.Alt : string.Empty, @class = "header-navbar__logo-img" }, isEditable: true)
+        <div class="header-navbar__logo-img"></div >
     </a>
 
     @if (Model.HomeItem.HeaderConfiguration != null && Model.HomeItem.HeaderConfiguration.HeaderDropDowns != null && Model.HomeItem.HeaderConfiguration.HeaderDropDowns.Any())

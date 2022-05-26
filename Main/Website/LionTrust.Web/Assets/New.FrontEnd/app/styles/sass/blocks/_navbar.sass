@@ -1,3 +1,6 @@
+@use "variables"
+@use "keyframes"
+$logo: url('/dist/images/components/header/liontrust-logo-pride-color.svg')
 .header-navbar
     padding-top: 10px
     display: flex
@@ -20,11 +23,25 @@
         margin: 0 16px
         @include breakpoint(desktop-large, up)
             margin-left: 60px
-            margin-right: 172px
-    &__logo-img
+            margin-right: 172px        
+    &__logo-img 
+        width: 166px
+        aspect-ratio: 3.2
+        background: linear-gradient(to right, #E50000 4%, #FF8D00 14%, #FFEE00 25%, #008121 32%, #004CFF 38%, #760188  42%, #E50000 52%,#FF8D00 65%, #FFEE00 72%, #008121 80%, #004CFF 88%, #760188  100%)
+        background-size: 220% 
+        background-position: 0 0 
+        animation-name: logo-bg-slide
+        animation-duration: 3s
+        animation-iteration-count: 2
+        animation-direction: reverse
+        animation-timing-function: ease-out
+        animation-fill-mode: forwards
+        -webkit-mask: $logo 100%/cover
+        mask: $logo 100%/cover
         @include breakpoint(desktop-large, up)
             width: 166px
             height: auto
+
     &__btn-search
         margin-top: 16px
         margin-left: 36px
@@ -44,8 +61,7 @@
             font-weight: 500
             white-space: nowrap
             letter-spacing: 2px
-            bottom: -25px
-            
+            bottom: -25px            
             text-transform: uppercase
             display: inline-block
             color: $primary
@@ -117,7 +133,10 @@
                 &:before
                     display: none
                 &:hover
-                    background: $white
-                    color: $primary
+                    background: $prideTwo
+                    color: $white
+                    border: 2px solid $white
+                    text-shadow: 2px 2px #E50000
+
     .nav-desktop__link:hover + .dropdown
         z-index: 9
