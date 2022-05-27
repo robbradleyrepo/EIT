@@ -12,10 +12,7 @@
                 <button class="sidebar__close-btn"></button>
                 <div class="sidebar__logo">
                     <a href="@Model.HomeItem.Url" class="sidebar__logo-link">
-                        @if (Model.HomeItem.Logo != null)
-                        {
-                            @Html.Glass().RenderImage(Model.HomeItem, x => x.Logo, new { alt = Model.HomeItem.Logo != null ? Model.HomeItem.Logo.Alt : string.Empty, @class = "sidebar__logo-img" }, isEditable: true)
-                        }
+                        <img src="/dist/images/components/header/liontrust-logo-pride-color.svg" alt="LionTrust" class="sidebar__logo-img">
                     </a>
                 </div>
             </div>
