@@ -1,3 +1,6 @@
+@use "variables"
+@use "keyframes"
+$logo: url('/images/components/header/liontrust-logo-pride-color.svg')
 .sidebar
     background: $secondary
     display: flex
@@ -42,7 +45,22 @@
         margin-left: 16px
     &__logo-img
         width: 9rem
-        margin-left: -37px
+        margin-left: 53PX
+        aspect-ratio: 3.2
+        background: linear-gradient(to right, #E50000 4%, #FF8D00 14%, #FFEE00 25%, #008121 32%, #004CFF 38%, #760188  42%, #E50000 52%,#FF8D00 65%, #FFEE00 72%, #008121 80%, #004CFF 88%, #760188  100%)
+        background-size: 220% 
+        background-position: 0 0 
+        animation-name: logo-bg-slide
+        animation-duration: 3s
+        animation-iteration-count: 2
+        animation-direction: reverse
+        animation-timing-function: ease-out
+        animation-fill-mode: forwards
+        -webkit-mask: $logo 100%/cover
+        mask: $logo 100%/cover
+        @include breakpoint(desktop-large, up)
+            width: 166px
+            height: auto
     &__profile-btn
         margin-bottom: 0px
         i
