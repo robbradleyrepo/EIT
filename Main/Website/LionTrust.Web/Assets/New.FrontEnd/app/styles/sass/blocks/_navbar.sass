@@ -1,6 +1,12 @@
 @use "variables"
 @use "keyframes"
 $logo: url('/dist/images/components/header/liontrust-logo-pride-color.svg')
+.topper
+    position: fixed
+    width: 100vw
+    top: 0
+    height: 10px
+    background: linear-gradient(to right, #E50000 8%, #FF8D00 28%, #FFEE00 49%, #008121 65%, #004CFF 81%, #760188  100%)
 .header-navbar
     padding-top: 10px
     display: flex
@@ -130,6 +136,7 @@ $logo: url('/dist/images/components/header/liontrust-logo-pride-color.svg')
                 border-radius: 6px
                 background: rgba(255, 255, 255, .1)
                 transition: all .3s ease-out
+                border: 2px solid transparent
                 &:before
                     display: none
                 &:hover
