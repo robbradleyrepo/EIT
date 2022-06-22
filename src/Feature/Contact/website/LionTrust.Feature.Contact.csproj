@@ -87,7 +87,9 @@
     <Content Include="App_Config\Include\Feature\FormsExtensions\Feature.FormsExtensions.Settings.config">
       <TransformOnBuild>true</TransformOnBuild>
     </Content>
-    <None Include="App_Config\Include\Feature\FormsExtensions\Feature.FormsExtensions.Settings.Production.transform" />
+    <Content Include="App_Config\Include\Feature\FormsExtensions\Feature.FormsExtensions.Settings.Production.config.transform">
+      <DependentUpon>Feature.FormsExtensions.Settings.config</DependentUpon>
+    </Content>
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
