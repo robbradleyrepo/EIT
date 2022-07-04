@@ -1,5 +1,6 @@
 ﻿namespace LionTrust.Feature.Fund.PerformanceTables
 {
+    using System;
     using Glass.Mapper.Sc.Web.Mvc;
     using LionTrust.Feature.Fund.FundClass;
     using Sitecore.Mvc.Controllers;
@@ -38,15 +39,26 @@
                     {
                         result.Hide = currentClass.HideCumulativePerformanceTable;
                     }
-
-                    if (currentClass.HideSinceInceptionColumn)
-                        result.ColumnHeadings = result.ColumnHeadings.RemoveWhere(x => x.Equals("Since Inception")).ToArray();
-                    
+               
                     result.Rows = _performanceManager.GetPerformanceTableRows(citiCode, currentClass).GroupBy(r => r.Name).Select(g => g.First()).ToArray();
-                    
+
                     if (result.Rows != null && result.Rows.Count() > 0)
                     {
                         result.QuartileRow = _performanceManager.GetQuartile(citiCode, currentClass);
+                    }
+                    
+                    if (currentClass.HideSinceInceptionColumn)
+                    {
+                        var inceptionIndex = Array.IndexOf(result.ColumnHeadings, "Since Inception");
+                        foreach (var resultRow in result.Rows)
+                        {
+                            resultRow.Columns = resultRow.Columns.Where((source,index) => index != inceptionIndex).ToArray();
+                        }
+
+                        result.QuartileRow.Columns  = result.QuartileRow.Columns.Where((source,index) => index != inceptionIndex).ToArray();
+                        
+                        result.ColumnHeadings = result.ColumnHeadings.RemoveWhere(x => x.Equals("Since Inception"))
+                            .ToArray();
                     }
 
                     result.Disclaimer = _performanceManager.GetDisclaimer(citiCode, currentClass.Currency, datasource.Disclaimer);
