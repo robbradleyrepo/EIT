@@ -5,6 +5,7 @@
     using Sitecore.Mvc.Controllers;
     using System.Web.Mvc;
     using System.Linq;
+    using Sitecore.ContentSearch.Utilities;
 
     public class CumulativePerformanceController : SitecoreController
     {
@@ -38,6 +39,9 @@
                         result.Hide = currentClass.HideCumulativePerformanceTable;
                     }
 
+                    if (currentClass.HideSinceInceptionColumn)
+                        result.ColumnHeadings = result.ColumnHeadings.RemoveWhere(x => x.Equals("Since Inception")).ToArray();
+                    
                     result.Rows = _performanceManager.GetPerformanceTableRows(citiCode, currentClass).GroupBy(r => r.Name).Select(g => g.First()).ToArray();
                     
                     if (result.Rows != null && result.Rows.Count() > 0)
