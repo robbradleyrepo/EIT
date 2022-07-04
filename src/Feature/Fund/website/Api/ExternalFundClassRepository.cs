@@ -135,13 +135,20 @@
                 request.AddQueryParameter("currency", currency);
             }
             
-            //prepare caching of the individual results per 1 hour
             var dictionaryKey = citicode + priceType + currency;
-            
-            if (_dataOnDemand == null)
-                _dataOnDemand = new Dictionary<string, (FundDataResponseModel fundData, DateTime updatedDate)>();
 
-            if (_dataOnDemand.ContainsKey(dictionaryKey) && _dataOnDemand[dictionaryKey].fundData != null && _dataOnDemand[dictionaryKey].updatedDate.AddHours(1) > DateTime.UtcNow) 
+            if (_dataOnDemand == null)
+            {
+                _dataOnDemand = new Dictionary<string, (FundDataResponseModel fundData, DateTime updatedDate)>();
+            }
+
+            double.TryParse(_settings.GetSetting("IndividualFundCachingDuration"), out var individualFundCachingDuration);
+
+            var shouldLoadFundFromCache = _dataOnDemand.ContainsKey(dictionaryKey) &&
+                                          _dataOnDemand[dictionaryKey].fundData != null &&
+                                          _dataOnDemand[dictionaryKey].updatedDate.AddHours(individualFundCachingDuration) > DateTime.UtcNow; 
+
+            if (shouldLoadFundFromCache) 
             {
                 return _dataOnDemand[dictionaryKey].fundData;
             }
