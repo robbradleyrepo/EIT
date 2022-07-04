@@ -8,6 +8,7 @@
     using RestSharp;
     using Sitecore.Abstractions;
     using System;
+    using System.Collections.Generic;
     using System.Linq;
 
     [Service(ServiceType = typeof(IFundClassRepository), Lifetime = Lifetime.Singleton)]
@@ -16,6 +17,8 @@
         private readonly BaseSettings _settings;
 
         private FundDataResponseModel[] _data;
+
+        private Dictionary<string, (FundDataResponseModel fundData, DateTime updatedDate)> _dataOnDemand;
 
         static bool isInitialized;
 
@@ -131,6 +134,24 @@
             {
                 request.AddQueryParameter("currency", currency);
             }
+            
+            var dictionaryKey = citicode + priceType + currency;
+
+            if (_dataOnDemand == null)
+            {
+                _dataOnDemand = new Dictionary<string, (FundDataResponseModel fundData, DateTime updatedDate)>();
+            }
+
+            double.TryParse(_settings.GetSetting("IndividualFundCachingDuration"), out var individualFundCachingDuration);
+
+            var shouldLoadFundFromCache = _dataOnDemand.ContainsKey(dictionaryKey) &&
+                                          _dataOnDemand[dictionaryKey].fundData != null &&
+                                          _dataOnDemand[dictionaryKey].updatedDate.AddHours(individualFundCachingDuration) > DateTime.UtcNow; 
+
+            if (shouldLoadFundFromCache) 
+            {
+                return _dataOnDemand[dictionaryKey].fundData;
+            }
 
             var result = client.Execute(request);
             if (!result.IsSuccessful)
@@ -145,6 +166,8 @@
                 SendEmailOnError("There was no External Fund Data retrieved.");
                 return null;
             }
+           
+            _dataOnDemand[dictionaryKey] = (fundDetails[0], DateTime.UtcNow) ;
 
             return fundDetails[0];
         }
