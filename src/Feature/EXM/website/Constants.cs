@@ -145,6 +145,36 @@ namespace LionTrust.Feature.EXM
             public const string WhitelistDomains_FieldID = "{2A7E1691-203F-4449-8952-B523010D23C2}";
         }
 
+        public static class TeamScore
+        {
+            public static Guid Id = new Guid("{E7F2D7A3-F29C-4844-8478-E2642AA24A0F}");
+            public static Guid TeamScoreFolderId = new Guid("{9059D6F0-7B2A-43E0-A624-15C2CCEA8D02}");
+
+            public const string TeamOrganizationId_FieldID = "{1700A7AE-7D7B-4C10-8D46-83143AE707C1}";
+            public const string EmailOpenedPoints_FieldID = "{C9026BE1-B064-49B2-89D2-7BE773AB08B1}";
+            public const string ClickedThroughPoints_FieldID = "{B85C5351-2057-4000-AE1D-400BFEC7BC04}";
+        }
+
+        public static class SalesforceSyncSettings
+        {
+            public const string LastSyncDate_FieldID = "{3C1206F7-8BFD-4A84-A1AB-B16C4FDE7F88}";
+        }
+
+        public static class SalesforceCampaign
+        {
+            public const string SalesforceCampaignId_FieldID = "{E2F34215-AF0E-4EEB-A310-D2EA4B5BEF14}";
+        }
+
+        public static class MailMessage
+        {
+            public const string IncludedRecipientLists_FieldID = "{F8D592CC-F3E5-4A8E-A600-8AEBE8CC36E4}";
+        }
+
+        public static class MessageRoot
+        {
+            public static Guid TemplateID = new Guid("{3F12D78C-B7B7-4157-98FC-DA3322EE1A5B}");
+        }
+
         public static class Tokens
         {
             public const string MessageInBrowserUrlToken = "$MessageBrowserUrl$";
@@ -161,5 +191,7 @@ namespace LionTrust.Feature.EXM
         {
             public const string S4S = "s4slb";
         }
+
+        public const string SiteName = "LionTrust";
     }
 }

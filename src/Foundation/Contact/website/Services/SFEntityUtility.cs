@@ -1,7 +1,6 @@
 ﻿namespace LionTrust.Foundation.Contact.Services
 {
     using FuseIT.S4S.WebToSalesforce;
-    using FuseIT.Sitecore.Personalization.Extensions;
     using FuseIT.Sitecore.SalesforceConnector;
     using FuseIT.Sitecore.SalesforceConnector.DataSource;
     using FuseIT.Sitecore.SalesforceConnector.Entities;
@@ -16,7 +15,7 @@
     using System.Collections.Generic;
     using System.Linq;
 
-    public class SFEntityUtility
+    public class SFEntityUtility : ISFEntityUtility
     {
         private SalesforceSession _salesforceSession = null;
         private SalesforceSession SalesforceSession
@@ -38,7 +37,7 @@
         /// <summary>
         /// Get email preferences SF Contacts
         /// </summary>
-        /// <param name="sfEntityId"></param>
+        /// <param name="sfEntityId"></param>F
         /// <param name="sfRandomGUID"></param>
         /// <param name="isContact"></param>
         /// <param name="loadFundsForMultiAssetProcesse">By default this parameter is set to false. Becasue in the UI no multi asset funds will be displayed.</param>
@@ -968,6 +967,56 @@
         }
 
         /// <summary>
+        /// Is unsubscribed
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        public bool IsUnsubscribed(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                Log.Info("Email address is null or empty. No email preferences id returned from the email address.", this);
+                return true;
+            }
+
+            try
+            {
+                var unsubscribed = true;
+
+                var contactService = new ContactService(this.SalesforceSession);
+                var sfContact = contactService.GetByEmail(email);
+                if (sfContact != null)
+                {
+                    var sfEntityId = sfContact.Id.ToString();
+                    unsubscribed = sfContact.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
+
+                    return unsubscribed;
+                }
+
+                var leadService = new LeadService(this.SalesforceSession);
+                var sfLead = leadService.GetByEmail(email);
+                if (sfLead != null)
+                {
+                    var sfEntityId = sfLead.Id.ToString();
+                    unsubscribed = sfLead.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
+
+                    return unsubscribed;
+                }
+
+                if (sfContact == null && sfLead == null)
+                {
+                    Log.Info(string.Format("Salesforce Contact or Lead does not exist with the email - {0}", email), this);
+                }
+
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
         /// Is unsubscribed or hard bounced
         /// </summary>
         /// <param name="email"></param>
@@ -1080,6 +1129,25 @@
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        public void UpdateOrInsertEntities(List<GenericSalesforceEntity> entities, string externalFieldId)
+        {
+            //Retrieve Salesforce Process objects
+            GenericSalesforceService genericSFService = new GenericSalesforceService(this.SalesforceSession, Constants.SFProductEntityName);
+
+            if (entities.Count > 0)
+            {
+                List<List<GenericSalesforceEntity>> bulkEntities = SplitSalesforceGenericEntityList(entities, 200);
+                foreach (List<GenericSalesforceEntity> list in bulkEntities)
+                {
+                    genericSFService.UpsertEntities(list, externalFieldId);
+                }
+            }
+            else
+            {
+                Log.Debug("No entities found to be insert/update.", this);
             }
         }
 

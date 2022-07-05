@@ -15,16 +15,24 @@ namespace LionTrust.Feature.EXM.Helpers.Implementations
 {
     public class FillMailHelper : IFillEmailHelper
     {
+        private readonly ISitecoreService _sitecoreService;
         private readonly SitecoreContactUtility _scContactUtility;
         private readonly BaseSettings _settings;
 
         private readonly char[] separators = new char[] { ',', ';' };
         private const string SENDER = "Sender";
+        private const string SALESFORCECAMPAIGN = "SalesforceCampaignId";
 
-        public FillMailHelper(BaseSettings settings)
+        public FillMailHelper(BaseSettings settings) 
+            : this(settings, new SitecoreService("web"))
+        {
+        }
+
+        private FillMailHelper(BaseSettings settings, ISitecoreService sitecoreService)
         {
             _scContactUtility = new SitecoreContactUtility();
             _settings = settings;
+            _sitecoreService = sitecoreService;
         }
 
         public void FillEmail(MailMessageItem mailMessageItem, SendMessageArgs sendMessageArgs, EmailMessage emailMessage)
@@ -36,7 +44,7 @@ namespace LionTrust.Feature.EXM.Helpers.Implementations
                 switch (sendMessageArgs.EcmMessage)
                 {
                     case ABTestMessage testMessage:
-                        identifiers = testMessage.PersonalizationRecipient?.Identifiers;
+                        identifiers = testMessage .PersonalizationRecipient?.Identifiers;
                         break;
                     case TextMail textMail:
                         identifiers = textMail.PersonalizationRecipient?.Identifiers;
@@ -52,6 +60,7 @@ namespace LionTrust.Feature.EXM.Helpers.Implementations
                         var scContactFacetData = _scContactUtility.GetCurrentSitecoreContactFacetData(id.Identifier);
 
                         SetFrom(emailMessage, scContactFacetData);
+                        SetSalesforceCampaignId(emailMessage, mailMessageItem.ID);
                     }
                 }
             }
@@ -61,16 +70,14 @@ namespace LionTrust.Feature.EXM.Helpers.Implementations
                 var scContactFacetData = _scContactUtility.GetCurrentSitecoreContactFacetData(contactId);
 
                 SetFrom(emailMessage, scContactFacetData);
+                SetSalesforceCampaignId(emailMessage, mailMessageItem.ID);
             }
 
             //is testing environment
             var testingEnv = _settings.GetBoolSetting(Constants.Settings.MailTestingEnvironment, true);
             if (testingEnv)
             {
-                var publishedDatabase = Sitecore.Data.Database.GetDatabase("web");
-                var sitecoreService = new SitecoreService(publishedDatabase);
-
-                var exmSettings = sitecoreService.GetItem<IExmSettings>(Constants.ExmSettings.ExmSettings_ItemID);
+                var exmSettings = _sitecoreService.GetItem<IExmSettings>(Constants.ExmSettings.ExmSettings_ItemID);
                 var whitelistDomains = exmSettings.WhitelistDomains.Split(separators)?.Select(x => x.Trim());
                 var testingRecipients = exmSettings.TestingRecipientList.Split(separators)?.Select(x => x.Trim());
 
@@ -129,6 +136,23 @@ namespace LionTrust.Feature.EXM.Helpers.Implementations
                 {
                     emailMessage.Headers.Add(SENDER, scContactFacetData.OwnerName);
                 }
+            }
+        }
+
+        private void SetSalesforceCampaignId(EmailMessage emailMessage, string messageId)
+        {
+            if (string.IsNullOrWhiteSpace(messageId))
+            {
+                return;
+            }
+
+            var mailMessage = _sitecoreService.GetItem<Models.IMailMessage>(new System.Guid(messageId));
+            var contactList = mailMessage?.IncludedRecipientLists?.FirstOrDefault();
+            var salesforceCampaignId = contactList?.SalesforceCampaignId;
+
+            if (!string.IsNullOrWhiteSpace(salesforceCampaignId))
+            {
+                emailMessage.Headers.Add(SALESFORCECAMPAIGN, salesforceCampaignId);
             }
         }
     }

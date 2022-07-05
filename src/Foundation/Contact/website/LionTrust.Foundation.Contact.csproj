@@ -80,6 +80,7 @@
     <Compile Include="Services\IPersonalizedContentService.cs" />
     <Compile Include="Services\PersonalizedContentService.cs" />
     <Compile Include="Services\S4SSessionSingleton.cs" />
+    <Compile Include="Services\ISFEntityUtility.cs" />
     <Compile Include="Services\SFEntityUtility.cs" />
     <Compile Include="Services\SitecoreContactUtility.cs" />
     <Compile Include="Services\ISitecoreContactUtility.cs" />

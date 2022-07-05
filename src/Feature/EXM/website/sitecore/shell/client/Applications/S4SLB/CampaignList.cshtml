@@ -1,0 +1,102 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@using Sitecore.Web.UI.Controls.Common.UserControls
+@using FuseIT.Sitecore.SalesforceConnector
+@using FuseIT.S4S.SitecoreSalesforceListBuilder.SalesforceReports
+@using FuseIT.S4S.SitecoreSalesforceListBuilder.SalesforceCampaigns
+@model RenderingModel
+@{
+    var rendering = Html.Sitecore().Controls().GetUserControl(Model.Rendering);
+    rendering.Class = "sc-CampaignList";
+    rendering.Requires.Script("client", "CampaignList.js");
+
+    var htmlAttributes = rendering.HtmlAttributes;
+}
+<link rel="stylesheet" type="text/css" href="/sitecore/shell/client/Applications/S4SLB/s4slb-custom-styles.css">
+<div class="s4slb-loader-gif"></div>
+<div @htmlAttributes>
+    <div class="s4slb-connstring-div">        
+        <div class="s4slb-connstring-input-div custom-div-seperator">
+            <div class="custom-s4slb-text-right"><a class="btn sc-button btn-primary" href="~/sitecore/client/Applications/S4SLB/CampaignList">Refresh Page</a></div>
+            <div class="s4slb-subtitle">Salesforce Connection Strings</div>
+            <select class="SelectSalesforceConnString s4slb-dropdown-style"></select>
+        </div>
+        <div class="s4slb-connstring-error-div">
+            <div class="custom-s4slb-text-center s4slb-campaign-and-report-load-error">Error occured when loading the page.</div>
+        </div>
+    </div>
+    <div class="s4slb-campaign-and-report-div">
+        <div class="custom-div-seperator">            
+            <div class="s4slb-subtitle">Salesforce Campaigns</div>
+            <div class="s4slb-subtitle-small campaign-list-instructions"><span class="s4slb-warining">*</span>Select one or more</div>
+            <div class="s4slb-campaign-serach-div"><input type="text" placeholder="Campaign name" class="s4slb-campaign-search-textbox" /><button class="btn sc-button btn-primary campaign-search-btn">Search</button></div>
+            <div class="s4slb-campaign-clear-search-div"><a class="s4slb-campaign-clear-search" href="">Clear search</a></div>
+            <div class="campiagnListDiv">
+                <table class="fixed_headers fixed_headers_customCampaignTable sc-table sc-table-header table">
+                    <thead>
+                        <tr>
+                            <th><a class="campaign-list-col-header" data-sortvalue="campaign-name" data-sortorder="asc" href="">Campaign Name <img class="sort-img-style" /></a></th>
+                            <th><a class="campaign-list-col-header" data-sortvalue="lead-count" data-sortorder="asc" href="">Leads <img class="sort-img-style" /></a></th>                            
+                            <th><a class="campaign-list-col-header" data-sortvalue="contact-count" data-sortorder="asc" href="">Contacts <img class="sort-img-style" /></a></th>
+                            <th><a class="campaign-list-col-header" data-sortvalue="created-date" data-sortorder="desc" href="">Created Date <img class="sort-img-style" /></a></th>
+                            <th>Active</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                </table>
+                <div class="campaign-paging-div">
+                    <a class="campaign-previous-icon s4slb-page-font-color" data-campaignList-previous-pagenumber="" href="">
+                        <
+                    </a>
+                    <ul class="campaign-paging-div-ul"></ul>
+                    <a class="campaign-next-icon s4slb-page-font-color" data-campaignList-next-pagenumber="" href="">
+                        >
+                    </a>
+                </div>
+                <div class="custom-s4slb-text-right"><button class="btn sc-button btn-primary campaign-list-next">Next</button></div>
+            </div>
+            <div class="campaignListErrorDiv">
+                <div class="custom-s4slb-text-center">No Salesforce Campaigns found</div>
+            </div>
+            <input type="hidden" class="hidden-selected-campaignids" />
+            <input type="hidden" class="hidden-campaignlist-total-participants" />            
+            <input type="hidden" class="hidden-campaignlist-selected-sortvalue" />
+            <input type="hidden" class="hidden-campaignlist-selected-sortorder" />
+            <input type="hidden" class="hidden-campaignlist-searchterm" />
+        </div>
+		<!--
+        <div class="custom-div-seperator">
+            <div class="s4slb-subtitle">Salesforce Reports</div>
+            <div class="s4slb-subtitle-small report-list-instructions"><span class="s4slb-warining">*</span>Select only one</div>
+            <div class="s4slb-report-serach-div"><input type="text" placeholder="Report name" class="s4slb-report-search-textbox" /><button class="btn sc-button btn-primary report-search-btn">Search</button></div>
+            <div class="s4slb-report-clear-search-div"><a class="s4slb-report-clear-search" href="">Clear search</a></div>
+            <div class="reportListDiv">
+                <table class="fixed_headers fixed_headers_customReportTable sc-table sc-table-header table">
+                    <thead>
+                        <tr>
+                            <th><a class="report-list-col-header" data-sortorder="asc" href="">Report Name <img class="sort-img-style" /></a></th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                </table>
+                <div class="report-paging-div">
+                    <a class="report-previous-icon s4slb-page-font-color" data-reportList-previous-pagenumber="" href="">
+                        <
+                    </a>
+                    <ul class="report-paging-div-ul"></ul>
+                    <a class="report-next-icon s4slb-page-font-color" data-reportList-next-pagenumber="" href="">
+                        >
+                    </a>
+                </div>
+                <div class="custom-s4slb-text-right"><button class="btn sc-button btn-primary report-list-next">Next</button></div>
+            </div>
+            <div class="reportListErrorDiv">
+                <div class="custom-s4slb-text-center">No Salesforce Reports found</div>
+            </div>
+            <input type="hidden" class="hidden-reportlist-selected-reportid" />            
+            <input type="hidden" class="hidden-reportlist-selected-sortorder" />
+            <input type="hidden" class="hidden-reportlist-searchterm" />
+        </div>
+		-->
+    </div>
+</div>

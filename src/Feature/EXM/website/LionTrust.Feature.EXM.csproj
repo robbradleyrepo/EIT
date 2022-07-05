@@ -76,9 +76,17 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="FuseIT.S4S.SitecoreSalesforceListBuilder, Version=1.1.19072.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\dependencies\FuseIT.S4S\FuseIT.S4S.SitecoreSalesforceListBuilder.dll</HintPath>
+    </Reference>
     <Reference Include="FuseIT.Sitecore.Personalization, Version=2.914.21070.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\dependencies\FuseIT.S4S\FuseIT.Sitecore.Personalization.dll</HintPath>
+    </Reference>
+    <Reference Include="FuseIT.Sitecore.Salesforce, Version=2.914.21070.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\dependencies\FuseIT.S4S\FuseIT.Sitecore.Salesforce.dll</HintPath>
     </Reference>
     <Reference Include="FuseIT.Sitecore.SalesforceConnector, Version=2.914.21070.1, Culture=neutral, PublicKeyToken=null" />
     <Reference Include="Microsoft.CSharp" />
@@ -92,8 +100,10 @@
     <Content Include="Content\Images\card50shadow.png" />
     <Content Include="Content\Images\card50shadow_a8g.png" />
     <Content Include="Content\sitecore-fixes.css" />
+    <Content Include="sitecore\shell\client\Applications\S4SLB\CampaignProcessing.js" />
     <Content Include="Views\web.config" />
     <Content Include="App_Config\Include\Feature\Feature.EXM.config" />
+    <Content Include="App_Config\Include\Feature\Feature.EXM.EmailExperience.config" />
     <Content Include="App_Config\Include\Feature\Feature.EXM.RegisterContainer.config" />
     <Content Include="Views\EXM\Footer.cshtml" />
     <Content Include="Views\EXM\Layouts\GeneralEmailLayout.cshtml" />
@@ -117,6 +127,7 @@
     <Content Include="Views\EXM\WebinarCards.cshtml" />
     <Content Include="Views\EXM\HeroWithImage.cshtml" />
     <Content Include="Views\EXM\UserNameIntro.cshtml" />
+    <Content Include="sitecore\shell\client\Applications\S4SLB\CampaignList.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -133,12 +144,20 @@
     <Compile Include="Controllers\EmailHeaderController.cs" />
     <Compile Include="Controllers\EmailFooterController.cs" />
     <Compile Include="Controllers\EmailHeroController.cs" />
+    <Compile Include="Controllers\S4SEXMDashboardController.cs" />
+    <Compile Include="Controllers\SalesforceCampaignsController.cs" />
     <Compile Include="Dispatch\CustomDispatchTask.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
+    <Compile Include="Enums\InteractionType.cs" />
+    <Compile Include="Extensions\MessageExtensions.cs" />
     <Compile Include="Helpers\Implementations\FillMailHelper.cs" />
     <Compile Include="Helpers\Interfaces\IFillEmailHelper.cs" />
     <Compile Include="Models\Bounce.cs" />
+    <Compile Include="Models\ISalesforceSyncSettings.cs" />
+    <Compile Include="Models\IMailMessage.cs" />
+    <Compile Include="Models\ISalesforceCampaign.cs" />
     <Compile Include="Models\IArticleCards.cs" />
+    <Compile Include="Models\ITeamScore.cs" />
     <Compile Include="Models\IExmSettings.cs" />
     <Compile Include="Models\IUserNameIntro.cs" />
     <Compile Include="Models\ISignature.cs" />
@@ -168,14 +187,20 @@
     <Compile Include="Pipelines\CustomChilkatPop3BounceReceiver.cs" />
     <Compile Include="Pipelines\GetContact.cs" />
     <Compile Include="Pipelines\CustomManagerRootsPop3ReceiversCollection.cs" />
+    <Compile Include="Pipelines\RemoveSalesforceCampaignFromContactList.cs" />
     <Compile Include="Pipelines\UpdateUndeliveredCount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pipelines\SendEmailFromSalesManagerFiller.cs" />
     <Compile Include="Repositories\Implementations\ArticleRepository.cs" />
     <Compile Include="Repositories\Interfaces\IArticleRepository.cs" />
+    <Compile Include="ScheduledJobs\SalesforceContactsDataScheduledJobs.cs" />
+    <Compile Include="Services\Implementations\SalesforceAnalyticsService.cs" />
     <Compile Include="Services\Implementations\SendGridEmailService.cs" />
     <Compile Include="Services\Interfaces\IEmailService.cs" />
+    <Compile Include="Services\Interfaces\ISalesforceAnalyticsService.cs" />
+    <Compile Include="ViewModels\ContactViewModel.cs" />
     <Compile Include="ViewModels\HeaderViewModel.cs" />
+    <Compile Include="ViewModels\InteractionViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Foundation\Analytics\website\LionTrust.Foundation.Analytics.csproj">
@@ -217,6 +242,10 @@
     <ProjectReference Include="..\..\..\Foundation\Search\website\LionTrust.Foundation.Search.csproj">
       <Project>{22686DC6-4E6C-4D98-84B7-C48042F5B8FC}</Project>
       <Name>LionTrust.Foundation.Search</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\SitecoreExtensions\website\LionTrust.Foundation.SitecoreExtensions.csproj">
+      <Project>{a57b01c5-75ad-47c0-beda-93079fd37317}</Project>
+      <Name>LionTrust.Foundation.SitecoreExtensions</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
