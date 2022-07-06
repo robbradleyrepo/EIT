@@ -11,17 +11,20 @@
       observeParents: true,
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
-
+      //pag
+      pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      renderBullet: function(index, className) {
+        return `<span class="dot swiper-pagination-bullet"></span>`;
+      },
+      },  
       // Navigation arrows
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
 
-      // And if we need scrollbar
-      scrollbar: {
-        el: '.swiper-scrollbar',
-      },
       lazyLoading: true,
       slideToClickedSlide: true,
       initialSlide: 1,

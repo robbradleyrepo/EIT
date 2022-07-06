@@ -6,6 +6,8 @@
     // max-width: 300px
     overflow: hidden
     box-shadow: 0px 10px 15px rgba(65, 72, 85, 0.45)
+    @include breakpoint(tablet, down)
+        margin-top: 20px
     @include breakpoint(tablet, up)
         // max-width: 334px
     @include breakpoint(desktop, up)
@@ -124,11 +126,26 @@
     height: 60px
     background-color: #000000B3
     opacity: 1
+    top: 39.3%
+    right: 0
 .swiper-scrollbar
     width: 100%
-    margin-top: 15px
-    height: 5px;
-    /* UI Properties */
-    background: #9D9D9D 0% 0% no-repeat padding-box
+    margin-top: 10px
+    height: 15px;
+    /* UI Properties  #9D9D9D */
+    background: transparent
     border-radius: 100px
     opacity: 1
+.swiper-pagination
+    border-radius: 20px
+    color: white
+    background-color: white
+    height: 17px
+    display: flex   
+    justify-content: center
+    align-items: center
+.swiper-pagination-bullet
+    background-color: rgb(192, 169, 97)
+    color: rgb(192, 169, 97)
+
+    
