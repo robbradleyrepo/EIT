@@ -11,7 +11,7 @@
       observeParents: true,
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
-      //Pagination
+
       pagination: {
       el: '.swiper-pagination',
       clickable: true,
@@ -19,7 +19,7 @@
         return `<span class="dot swiper-pagination-bullet"></span>`;
       },
       },  
-      // Navigation arrows
+
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
