@@ -11,7 +11,7 @@
       observeParents: true,
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
-      //pag
+      //Pagination
       pagination: {
       el: '.swiper-pagination',
       clickable: true,
