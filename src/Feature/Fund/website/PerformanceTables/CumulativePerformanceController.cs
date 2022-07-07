@@ -13,6 +13,8 @@
         private readonly ICumulativePerformanceManager _performanceManager;
         private readonly IMvcContext _context;
 
+        private const string SinceInceptionColumnName = "Since Inception";
+
         public CumulativePerformanceController(ICumulativePerformanceManager performanceManager, IMvcContext context)
         {
             this._performanceManager = performanceManager;
@@ -49,7 +51,7 @@
                     
                     if (currentClass.HideSinceInceptionColumn)
                     {
-                        var inceptionIndex = Array.IndexOf(result.ColumnHeadings, "Since Inception");
+                        var inceptionIndex = Array.IndexOf(result.ColumnHeadings, SinceInceptionColumnName);
                         foreach (var resultRow in result.Rows)
                         {
                             resultRow.Columns = resultRow.Columns.Where((source,index) => index != inceptionIndex).ToArray();
@@ -57,7 +59,7 @@
 
                         result.QuartileRow.Columns  = result.QuartileRow.Columns.Where((source,index) => index != inceptionIndex).ToArray();
                         
-                        result.ColumnHeadings = result.ColumnHeadings.RemoveWhere(x => x.Equals("Since Inception"))
+                        result.ColumnHeadings = result.ColumnHeadings.RemoveWhere(x => x.Equals(SinceInceptionColumnName))
                             .ToArray();
                     }
 
