@@ -1,11 +1,13 @@
 .article
     margin-bottom: 40px
+    position: relative
     @include breakpoint(desktop, up)
         margin: 16px 0 70px
     &__box
         display: flex
         flex-direction: column
         overflow: hidden
+        
 
     &__head
         display: flex
@@ -43,9 +45,42 @@
     .swiper-wrapper.row
         flex-wrap: nowrap
         box-sizing: border-box
-        width: auto
+        width: auto  
     .swiper-slide
         display: flex
 #investment-slider
     .swiper-slide
         height: auto
+.swiper-button-prev-article
+    color: black
+    background-color: white
+.swiper-button-next-article
+    color: #FFFFFF
+    font-size: 2px
+    width: 60px
+    height: 60px
+    background-color: #000000B3
+    opacity: 1
+    bottom: 248px
+    right: 0
+    position: relative
+    z-index: 10
+.swiper-button-next-article::after
+    z-index: 12
+    color: #FFFFFF
+.swiper-pagination-article
+    border-radius: 20px
+    color: white
+    background-color: white
+    height: 17px
+    display: flex   
+    justify-content: center
+    align-items: center
+    box-shadow: 0px 8px 15px $gray
+.swiper-pagination-bullet
+    background-color: rgb(192, 169, 97)
+    color: rgb(192, 169, 97)
+    margin-left: 5px
+
+
+
