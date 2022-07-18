@@ -112,6 +112,7 @@ namespace LionTrust.Foundation.Legacy
             public const string HideBenchmarkComparator1Rows_FieldId = "{0D4E953F-8AA2-4976-B3D7-1A498BE6A53B}";
             public const string HideBenchmarkComparator2Rows_FieldId = "{7DCAD117-6E0F-4619-BA3C-F62D1970B0D4}";
             public const string HideQuartileRows_FieldId = "{22906BBB-0880-4130-9149-21185003E807}";
+            public const string HideSinceInceptionColumn_FieldId = "{79F557E6-EB68-4D0E-9F79-197F488B8A45}";
             public const string Currency_FieldId = "{DB68CA6D-2EF3-4A15-AC59-475724F4461E}";
         }
         
@@ -120,6 +121,9 @@ namespace LionTrust.Foundation.Legacy
             public const string FundTeamFieldId = "{205ED0C5-D7B3-413A-8937-4B728937EFEF}";
             public const string CitiCodeFieldId = "{90A7B1E0-C14E-4A3D-A717-72BEC978A99A}";
             public const string ClassesFieldId = "{036AEB89-B0BD-42C2-B763-A56CDBE32CDC}";
+            public const string HideBenchmarkComparator1 = "{21AFB717-846B-48B0-888F-1F2679906AA1}";
+            public const string HideBenchmarkComparator2 = "{917C4AF6-4462-484D-AFAC-8805AD142317}";
+            public const string HideBenchmarkComparator3 = "{CDDF9160-8EF5-4158-BF08-ACF2B508B1BA}";
             public const string FundManagersFieldId = "{855D1E7B-3D08-4526-AD2D-FA2E86E9BE9B}";
             public const string LaunchDate_FieldId = "{6CBF0ED2-94B3-4F2A-A84D-A36501E38105}";
             public const string LaunchDateByAuthor_FieldId = "{899548AF-6E4D-4B51-AF9F-24BB58AC9B53}";

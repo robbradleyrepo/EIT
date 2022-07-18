@@ -15,6 +15,15 @@
         [SitecoreField(Constants.Fund.ClassesFieldId)]
         IEnumerable<IFundClass> Classes { get; set; }
 
+        [SitecoreField(Constants.Fund.HideBenchmarkComparator1)]
+        bool HideBenchmarkComparator1 { get; set; }
+
+        [SitecoreField(Constants.Fund.HideBenchmarkComparator2)]
+        bool HideBenchmarkComparator2 { get; set; }
+
+        [SitecoreField(Constants.Fund.HideBenchmarkComparator3)]
+        bool HideBenchmarkComparator3 { get; set; }
+
         [SitecoreField(Constants.Fund.FundManagersFieldId, SectionName ="Fund Info")]
         IEnumerable<IAuthor> FundManagers { get; set; }
 

@@ -1,15 +1,19 @@
 ﻿namespace LionTrust.Feature.Fund.PerformanceTables
 {
+    using System;
     using Glass.Mapper.Sc.Web.Mvc;
     using LionTrust.Feature.Fund.FundClass;
     using Sitecore.Mvc.Controllers;
     using System.Web.Mvc;
     using System.Linq;
+    using Sitecore.ContentSearch.Utilities;
 
     public class CumulativePerformanceController : SitecoreController
     {
         private readonly ICumulativePerformanceManager _performanceManager;
         private readonly IMvcContext _context;
+
+        private const string SinceInceptionColumnName = "Since Inception";
 
         public CumulativePerformanceController(ICumulativePerformanceManager performanceManager, IMvcContext context)
         {
@@ -37,12 +41,26 @@
                     {
                         result.Hide = currentClass.HideCumulativePerformanceTable;
                     }
-
+               
                     result.Rows = _performanceManager.GetPerformanceTableRows(citiCode, currentClass).GroupBy(r => r.Name).Select(g => g.First()).ToArray();
-                    
+
                     if (result.Rows != null && result.Rows.Count() > 0)
                     {
                         result.QuartileRow = _performanceManager.GetQuartile(citiCode, currentClass);
+                    }
+                    
+                    if (currentClass.HideSinceInceptionColumn)
+                    {
+                        var inceptionIndex = Array.IndexOf(result.ColumnHeadings, SinceInceptionColumnName);
+                        foreach (var resultRow in result.Rows)
+                        {
+                            resultRow.Columns = resultRow.Columns.Where((source,index) => index != inceptionIndex).ToArray();
+                        }
+
+                        result.QuartileRow.Columns  = result.QuartileRow.Columns.Where((source,index) => index != inceptionIndex).ToArray();
+                        
+                        result.ColumnHeadings = result.ColumnHeadings.RemoveWhere(x => x.Equals(SinceInceptionColumnName))
+                            .ToArray();
                     }
 
                     result.Disclaimer = _performanceManager.GetDisclaimer(citiCode, currentClass.Currency, datasource.Disclaimer);

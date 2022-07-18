@@ -6,6 +6,8 @@
     // max-width: 300px
     overflow: hidden
     box-shadow: 0px 10px 15px rgba(65, 72, 85, 0.45)
+    @include breakpoint(tablet, down)
+        margin-top: 20px
     @include breakpoint(tablet, up)
         // max-width: 334px
     @include breakpoint(desktop, up)
@@ -114,3 +116,45 @@
     flex-wrap: nowrap
     box-sizing: border-box
     width: auto
+.swiper-button-prev
+    color: transparent
+    background-color: transparent
+.swiper-button-next
+    color: #FFFFFF
+    font-size: 2px
+    width: 60px
+    height: 60px
+    background-color: #000000B3
+    opacity: 1
+    top: 39.3%
+    right: 0
+.swiper-scrollbar
+    width: 100%
+    margin-top: 10px
+    height: 15px
+    background: transparent
+    border-radius: 100px
+    opacity: 1
+.swiper-pagination
+    border-radius: 20px
+    color: white
+    background-color: white
+    height: 17px
+    display: flex   
+    justify-content: center
+    align-items: center
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+.swiper-pagination.pagarticle
+    display: flex   
+    justify-content: center
+    align-items: center
+    box-shadow: 0px 8px 15px $gray
+    border: 1px solid transparent
+    position: relative
+    width: 90vw
+.swiper-pagination-bullet
+    background-color: rgb(192, 169, 97)
+    color: rgb(192, 169, 97)
+
+
+    
