@@ -8,15 +8,6 @@ define(["sitecore", "loadingImage", "/-/speak/v1/ExperienceEditor/ExperienceEdit
   Sitecore.Commands.SuggestedTests =
     {
       canExecute: function (context) {
-         // disable the suggested test count call while loading the Experience Editor to improve performance
-         // known issue: https://support.sitecore.com/kb?id=kb_article_view&sysparm_article=KB0463044
-        //var self = this;
-        //self.setLoadingAnimation(true);
-        //context.app.canExecute("Optimization.SuggestedTests.Count", context.currentContext, function (testCount) {
-        //  self.setLoadingAnimation(false);
-        //  self.fillupSuggestedTestsCount(testCount);
-        //});
-
         return true;
       },
 
