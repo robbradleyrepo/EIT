@@ -2,10 +2,22 @@ import Swiper from "swiper/bundle";
 
 export default () => {
   const swiper = new Swiper(".swiper-container-article", {
-    slidesPerView: 'auto',
     // spaceBetween: 32,
     grabCursor: true,
+    slidesPerView: 'auto',
     breakpointsInverse: true,
+    pagination: {
+      el: '.swiper-pagination-article',
+      clickable: true,
+      renderBullet: function(index, className) {
+        return `<span class="dot swiper-pagination-bullet"></span>`;
+      },
+      },  
+
+      navigation: {
+        nextEl: '.swiper-button-next-article',
+        prevEl: '.swiper-button-prev-article',
+      }
     // breakpoints: {
     //   576: {
     //     slidesPerView: 1.5,
