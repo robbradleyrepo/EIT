@@ -4,8 +4,8 @@
     const swiper = new Swiper(".swiper-container-funds", {
       grabCursor: true,
       slidesPerView: "auto",
-      slidesOffsetAfter: 600,
       breakpointsInverse: true,
+      slidesOffsetAfter: 600,
       loop: true,
       observer: true,
       observeParents: true,
