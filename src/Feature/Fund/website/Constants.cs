@@ -377,5 +377,14 @@
             public const string ISINCodeLabel_FieldId = "{EEB11AD7-C3AA-4A6B-A873-D6F2094803D2}";
             public const string SedolCodeLabel_FieldId = "{C5329A37-336F-439C-AF1E-68B8176AF79C}";
         }
+
+        public static class Settings
+        {
+            public const string FeApiEndPoint = "LionTrust.Feature.Fund.FeApiEndPoint";
+
+            public const string IndividualFundCachingDuration = "IndividualFundCachingDuration";
+
+            public const string InvalidCurrencies = "InvalidCurrencies";
+        }
     }
 }

@@ -170,7 +170,7 @@
                                             null,
                                             null,
                                             sortOrder,
-                                            page,
+                                            1,
                                             int.MaxValue);
                 var funds = response.SearchResults.ToList();
 
