@@ -11,6 +11,11 @@ namespace LionTrust.Foundation.SitecoreExtensions.Pipelines.RenderRendering
             if (rendering != null && !string.IsNullOrWhiteSpace(rendering.DataSource) && Sitecore.Context.Database.Items.GetItem(rendering.DataSource) == null)
             {
                 rendering.DataSource = string.Empty;
+
+                if (!Sitecore.Context.PageMode.IsExperienceEditor)
+                {
+                    args.Rendered = true;
+                }
             }
         }
     }
