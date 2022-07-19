@@ -6,9 +6,9 @@ namespace LionTrust.Foundation.SitecoreExtensions.Pipelines.RenderRendering
     {
         public override void Process(RenderRenderingArgs args)
         {
-            var rendering = args.Rendering;
+            var rendering = args?.Rendering;
 
-            if (!string.IsNullOrWhiteSpace(rendering.DataSource) && Sitecore.Context.Database.Items.GetItem(rendering.DataSource) == null)
+            if (rendering != null && !string.IsNullOrWhiteSpace(rendering.DataSource) && Sitecore.Context.Database.Items.GetItem(rendering.DataSource) == null)
             {
                 rendering.DataSource = string.Empty;
             }
