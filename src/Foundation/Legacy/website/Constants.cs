@@ -105,6 +105,7 @@ namespace LionTrust.Foundation.Legacy
             public const string GraphStartDate_FieldId = "{F1D242FD-2CE7-4D6F-958B-C1147A73F615}";
             public const string GraphTitle_FieldId = "{98FF037C-6450-43E9-AE72-B3FDDCC449FB}";
             public const string HidePerformanceChart_FieldId = "{B39AF1CD-8C71-4989-BEF8-7C0441DD570A}";
+            public const string HidePerformanceChartDisclaimer_FieldId = "{5F4BF610-7B88-4324-B45F-E8EFC9F2F89A}";
             public const string HideDiscretePerformanceTable_FieldId = "{BA664318-D29C-4166-A901-FAA04F7D3AA6}";
             public const string HideCumulativePerformanceTable_FieldId = "{382CDDED-7732-4690-AC7A-8DBA5C503403}";
             public const string HideSectorRows_FieldId = "{184F0F35-CE5F-4A85-9593-D82C6C24F419}";
