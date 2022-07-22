@@ -12,5 +12,8 @@ namespace LionTrust.Foundation.Search.Models.ContentSearch
 
         [IndexField("excluded_countries")]
         public IList<string> ExcludedCountries { get; set; }
+
+        [IndexField("includeinsearchresults")]
+        public bool IncludeInSearchResults { get; set; }
     }
 }
