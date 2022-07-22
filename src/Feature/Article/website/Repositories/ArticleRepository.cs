@@ -58,7 +58,7 @@
                 DatabaseName = databaseName
             };
 
-            var results = _searchService.GetDatedTaxonomyRelatedArticles(request, result => result.OrderByDescending(hit => hit.Created));
+            var results = _searchService.GetDatedTaxonomyRelatedArticles(request, result => result.OrderByDescending(hit => hit.ArticleCreatedDate));
 
             if (results == null || results.SearchResults == null)
             {
