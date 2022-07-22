@@ -32,7 +32,7 @@
                 DatabaseName = databaseName
             };
 
-            var results = searchService.GetDatedTaxonomyRelatedArticles(request, result => result.OrderByDescending(hit => hit.Created));
+            var results = searchService.GetDatedTaxonomyRelatedArticles(request, result => result.OrderByDescending(hit => hit.ArticleCreatedDate));
             if (results == null || results.SearchResults == null)
             {
                 return new FeaturedArticle[0];
