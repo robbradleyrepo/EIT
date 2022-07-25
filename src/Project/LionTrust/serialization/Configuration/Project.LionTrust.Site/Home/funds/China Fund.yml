@@ -5,6 +5,10 @@ Template: "af865864-56fb-4a24-bacc-278c33c44041"
 Path: /sitecore/content/LionTrustNew/Home/funds/China Fund
 DB: master
 SharedFields:
+- ID: "8d5c486e-a0e3-4dbe-9a4a-cdff93594bda"
+  Hint: IncludeInSearchResults
+  Type: Checkbox
+  Value: 1
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 200

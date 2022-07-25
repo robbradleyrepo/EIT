@@ -85,6 +85,9 @@
         [SitecoreField(Constants.FundClass.HidePerformanceChart_FieldId, SitecoreFieldType.Checkbox)]
         bool HidePerformanceChart { get; set; }
 
+        [SitecoreField(Constants.FundClass.HidePerformanceChartDisclaimer_FieldId, SitecoreFieldType.Checkbox)]
+        bool HidePerformanceChartDisclaimer { get; set; }
+
         [SitecoreField(Constants.FundClass.HideDiscretePerformanceTable_FieldId, SitecoreFieldType.Checkbox)]
         bool HideDiscretePerformanceTable { get; set; }
 
@@ -105,6 +108,10 @@
 
         [SitecoreField(Constants.FundClass.HideQuartileRows_FieldId, SitecoreFieldType.Checkbox)]
         bool HideQuartileRows { get; set; }
+        
+        [SitecoreField(Constants.FundClass.HideSinceInceptionColumn_FieldId, SitecoreFieldType.Checkbox)]
+        bool HideSinceInceptionColumn { get; set; }
+
 
         [SitecoreField(Constants.FundClass.Currency_FieldId)]
         string Currency { get; set; }

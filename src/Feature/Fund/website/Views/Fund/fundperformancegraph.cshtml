@@ -74,7 +74,7 @@
                         src="@Model.GraphUrl()"
                         height="700" width="100%" frameborder="0" scrolling="no"></iframe>
             }
-            else
+            @if (!Model.HideDisclaimer)
             {
                 <p class="text-black">
                     @Model.HidePerformanceMessage

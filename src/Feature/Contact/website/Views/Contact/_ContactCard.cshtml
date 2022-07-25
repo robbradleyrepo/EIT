@@ -84,25 +84,34 @@
                             {
                                 if (Model.CTA1Link != null)
                                 {
-                                    @Model.CTA1Link.Text
+                                    if (!string.IsNullOrEmpty(@Model.CTA1Link.Text))
+                                    {
+                                        @Model.CTA1Link.Text
+                                        <i class="icon-arrow-right animate-arrow"></i>
+                                    }
+                                    
                                 }
                                 else if (Sitecore.Context.PageMode.IsExperienceEditor)
                                 {
                                     @:Edit First CTA
+                                    <i class="icon-arrow-right animate-arrow"></i>
                                 }
-                                <i class="icon-arrow-right animate-arrow"></i>
                             }
                             @using (Html.Glass().BeginRenderLink(Model, m => m.CTA2Link, new NameValueCollection { { "class", "link-styles contacts__btn-link" } }, isEditable: true))
                             {
                                 if (Model.CTA2Link != null)
                                 {
-                                    @Model.CTA2Link.Text
+                                    if (!string.IsNullOrEmpty(@Model.CTA2Link.Text))
+                                    {
+                                        @Model.CTA2Link.Text
+                                        <i class="icon-arrow-right animate-arrow"></i>
+                                    }
                                 }
                                 else if (Sitecore.Context.PageMode.IsExperienceEditor)
                                 {
                                     @:Edit Second CTA
+                                    <i class="icon-arrow-right animate-arrow"></i>
                                 }
-                                <i class="icon-arrow-right animate-arrow"></i>
                             }
                         </div>
                     </div>
