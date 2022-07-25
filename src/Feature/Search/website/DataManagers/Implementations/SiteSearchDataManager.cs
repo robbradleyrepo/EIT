@@ -77,6 +77,8 @@
                     var country = OnboardingHelper.GetCurrentContactCountryCode();
                     predicate = predicate.And(x => !x.ExcludedCountries.Contains(country));
 
+                    predicate = predicate.And(x => x.IncludeInSearchResults);
+
                     var searchQuery = context.GetQueryable<SiteSearchResultItem>()
                         .Where(predicate)
                         .Where(r => r.Language == language)

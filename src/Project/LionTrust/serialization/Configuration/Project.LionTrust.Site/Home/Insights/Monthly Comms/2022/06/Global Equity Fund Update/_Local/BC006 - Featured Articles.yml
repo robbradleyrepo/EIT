@@ -1,0 +1,34 @@
+﻿---
+ID: "4fbd16e3-15e6-4dab-a607-216d6ab07224"
+Parent: "fdb8e34c-303e-436f-88c4-595ab538d60d"
+Template: "1e3cbfca-a817-4638-8966-5a5acd945fb7"
+Path: "/sitecore/content/LionTrustNew/Home/Insights/Monthly Comms/2022/06/Global Equity Fund Update/_Local/BC006 - Featured Articles"
+DB: master
+BranchID: "94022471-b135-4ce1-8900-246fd11d2a91"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{C9460AF1-7870-4C25-AC9F-C42631E2E358}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0e5031b3-9232-42be-82d4-05579d7827d9"
+      Hint: ArticleSearchParameters_FundTeams
+      Type: Multilist
+      Value: "{7DD7CE76-EF32-471F-B075-79EFFF994691}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220722T130858Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "a03d4f9e-4bda-401d-9639-dd0247f50fab"
+      Hint: ArticleSearchParameters_ContentTypes
+      Type: Multilist
+      Value: "{FE091F88-00F3-4D48-9E29-83949090DEBC}"
+    - ID: "b2950181-27e6-4eef-a1fa-329aa73fce55"
+      Hint: FeaturedArticles_Heading
+      Value: Featured articles

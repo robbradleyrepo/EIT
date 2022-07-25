@@ -27,6 +27,14 @@ Languages:
     - ID: "2c52314c-f97d-4d99-853e-1497980389c1"
       Hint: KeyInfoAndPrice_TargetBenchmarkYield
       Value: 
+    - ID: "382cdded-7732-4690-ac7a-8dba5c503403"
+      Hint: LegacyFundPageData_HideCumulativePerformanceTable
+      Type: Checkbox
+      Value: 1
+    - ID: "5f4bf610-7b88-4324-b45f-e8efc9f2f89a"
+      Hint: LegacyFundPageData_HidePerformanceChartDisclaimer
+      Type: Checkbox
+      Value: 0
     - ID: "9711831e-ca02-40da-99c4-960df5305611"
       Hint: FundClass_Citicode
       Value: GQKV
@@ -39,9 +47,17 @@ Languages:
     - ID: "ac4f5b6a-ed1d-43b3-b0de-a6585f20207f"
       Hint: KeyInfoAndPrice_ManagerInceptionDate
       Value: 19981231T000000Z
+    - ID: "b39af1cd-8c71-4989-bef8-7c0441dd570a"
+      Hint: LegacyFundPageData_HidePerformanceChart
+      Type: Checkbox
+      Value: 1
     - ID: "b3eb8f9d-7cd1-47f8-8cfb-442b41ff7aaf"
       Hint: KeyInfoAndPrice_PriceDate
       Value: 20211031T220000Z
+    - ID: "ba664318-d29c-4166-a901-faa04f7d3aa6"
+      Hint: LegacyFundPageData_HideDiscretePerformanceTable
+      Type: Checkbox
+      Value: 1
     - ID: "d45fd542-d058-4753-a7fd-ead65fd132d6"
       Hint: KeyInfoAndPrice_ClassLaunchDate
       Value: 20121003T000000Z

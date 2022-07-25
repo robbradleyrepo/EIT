@@ -44,6 +44,7 @@
 
                     model.GraphTitle = !string.IsNullOrEmpty(currentClass.GraphTitle) ? currentClass.GraphTitle : datasource.ChartTitle;
                     model.Hide = currentClass.HidePerformanceChart;
+                    model.HideDisclaimer = currentClass.HidePerformanceChartDisclaimer;
                 }
 
                 model.CitiCode = citiCode;
