@@ -24,7 +24,7 @@
                         </div>
                     }
                     <div class="swiper-container-awards">
-                        <div class="swiper-wrapper awardscentered">
+                        <div class="swiper-wrapper">
                             @foreach (var imageWithTitleAndText in Model.Images)
                             {
                                 using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Banner/BannerWithSlider/ImageWithTitleAndText", imageWithTitleAndText.Id.ToString(), "Edit image with title and text"))
