@@ -66,6 +66,11 @@
         display: block
         color: $gold
         margin-bottom: 6px
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+
         @include breakpoint(desktop, up)
             margin-bottom: 14px
     &__subtitle
