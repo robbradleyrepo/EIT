@@ -59,11 +59,16 @@
             public const string TemplateId = "{8D10EADA-2239-45F5-B93A-33D733FA20D6}";
             public const string CountryName_FieldId = "{1E75B4DB-FBBF-4410-B2F0-99CCFB86A559}";
             public const string UseDefiniteArticle_FieldId = "{6611B4C5-1D3C-4CA1-8BD8-9017064189C9}";
-            public const string ISO_FieldId = "{A46A84E5-E402-4784-95D3-E316A9761EFB}";
-            public const string TermsAndConditions_FieldId = "{BFD9B660-B602-4BEF-82FC-BECC3C9417A6}";
+            public const string ISO_FieldId = "{A46A84E5-E402-4784-95D3-E316A9761EFB}";            
             public const string FundCentreCountryCode_FieldId = "{87460E4B-38FA-4B00-898A-3071546DE530}";
             public const string Goal_FieldId = "{8CBEEF11-3BFB-4595-97E2-95389824CC2B}";
             public const string RestOfWorldIso = "01";
+            public const string TermsAndConditionsProfessional_FieldId = "{BFD9B660-B602-4BEF-82FC-BECC3C9417A6}";
+            public const string TermsAndConditionsPrivate_FieldId = "{85CD55BF-E0B0-456D-9C88-B0FBECE62EA5}";
+            public const string TermsAndConditionsInstitutional_FieldId = "{B428AC03-A9BF-49C4-8276-7BC3984C728D}";
+            public const string TermsAndConditionsJournalist_FieldId = "{CB56B023-87AE-4BEA-A909-419877F5312E}";
+            public const string TermsAndConditionsShareholder_FieldId = "{34587828-B802-4220-9AA7-BA394DB86AAB}";
+            public const string TermsAndConditionsCharity_FieldId = "{22F74DA6-5D1E-4439-B584-22AE82F9EEDA}";
         }
 
         public static class Analytics
@@ -110,6 +115,16 @@
         public static class SessionKeys
         {
             public const string Contact = "contact";
+        }
+
+        public static class InvestorTypes
+        {
+            public const string ProfessionalInvestor = "Professional investor";
+            public const string PrivateInvestor = "Private investor";
+            public const string InstitutionalInvestor = "Institutional investor";
+            public const string Journalist = "Journalist";
+            public const string Shareholder = "Shareholder";
+            public const string Charity = "Charity";
         }
     }
 }
