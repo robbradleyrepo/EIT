@@ -11,6 +11,8 @@
             public const string TitleFieldId = "{D31755E7-EA3E-459A-B67E-440BC7836FA8}";
 
             public const string VideoIdFieldId = "{F61FAB66-40B9-4395-BF61-5BEBFEAC1596}";
+
+            public const string MarginsContainerFieldId = "{7313941A-568B-4D66-9CA8-AF6B8358BBF6}";
         }
     }
 }

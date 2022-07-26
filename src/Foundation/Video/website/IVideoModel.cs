@@ -1,5 +1,6 @@
 ﻿namespace LionTrust.Foundation.Video
 {
+    using Foundation.Design;
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
     using LionTrust.Foundation.ORM.Models;
@@ -17,5 +18,8 @@
 
         [SitecoreField(Constants.Video.VideoIdFieldId)]
         string VideoId { get; set; }
+
+        [SitecoreField(Constants.Video.MarginsContainerFieldId)]
+        ILookupValue MarginsContainer { get; set; }
     }
 }
