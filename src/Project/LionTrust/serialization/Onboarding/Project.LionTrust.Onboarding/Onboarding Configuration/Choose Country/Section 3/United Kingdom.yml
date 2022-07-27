@@ -16,13 +16,22 @@ Languages:
     - ID: "1e75b4db-fbbf-4410-b2f0-99ccfb86a559"
       Hint: Country_CountryName
       Value: United Kingdom
+    - ID: "22f74da6-5d1e-4439-b584-22ae82f9eeda"
+      Hint: Country_TermsAndConditionsCharity
+      Value: "T & C - Charity"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20210610T095000Z
+    - ID: "34587828-b802-4220-9aa7-ba394db86aab"
+      Hint: Country_TermsAndConditionsShareholder
+      Value: "T & C - Shareholder"
     - ID: "6611b4c5-1d3c-4ca1-8bd8-9017064189c9"
       Hint: Country_UseDefiniteArticle
       Type: Checkbox
       Value: 1
+    - ID: "85cd55bf-e0b0-456d-9c88-b0fbece62ea5"
+      Hint: Country_TermsAndConditionsPrivate
+      Value: "T & C - Private"
     - ID: "87460e4b-38fa-4b00-898a-3071546de530"
       Hint: Country_FundCentreCountryCode
       Value: GBR
@@ -32,6 +41,9 @@ Languages:
     - ID: "a46a84e5-e402-4784-95d3-e316a9761efb"
       Hint: Country_Iso
       Value: GB
+    - ID: "b428ac03-a9bf-49c4-8276-7bc3984c728d"
+      Hint: Country_TermsAndConditionsInstitutional
+      Value: "T & C - Institutional"
     - ID: "bfd9b660-b602-4bef-82fc-becc3c9417a6"
       Hint: Country_TermsAndConditions
       Value: |
@@ -56,3 +68,6 @@ Languages:
                         provided should not be considered as investment or other advice or a recommendation to buy, sell or
                         hold a particular investment. You can read details of our Legal and Important Information here.
                     </p>
+    - ID: "cb56b023-87ae-4bea-a909-419877f5312e"
+      Hint: Country_TermsAndConditionsJournalist
+      Value: "T & C - Journalist"

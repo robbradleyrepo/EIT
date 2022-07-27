@@ -14,15 +14,30 @@
         bool UseDefiniteArticle { get; set; }
 
         [SitecoreField(Constants.Country.ISO_FieldId)]
-        string ISO { get; set; }
-
-        [SitecoreField(Constants.Country.TermsAndConditions_FieldId)]
-        string TermsAndConditions { get; set; }
+        string ISO { get; set; }        
 
         [SitecoreField(Constants.Country.FundCentreCountryCode_FieldId)]
         string FundCentreCountryCode { get; set; }
 
         [SitecoreField(Constants.Country.Goal_FieldId)]
         Guid GoalId { get; set; }
+
+        [SitecoreField(Constants.Country.TermsAndConditionsProfessional_FieldId)]
+        string TermsAndConditionsProfessional { get; set; }
+
+        [SitecoreField(Constants.Country.TermsAndConditionsPrivate_FieldId)]
+        string TermsAndConditionsPrivate { get; set; }
+
+        [SitecoreField(Constants.Country.TermsAndConditionsInstitutional_FieldId)]
+        string TermsAndConditionsInstitutional { get; set; }
+
+        [SitecoreField(Constants.Country.TermsAndConditionsJournalist_FieldId)]
+        string TermsAndConditionsJournalist { get; set; }
+
+        [SitecoreField(Constants.Country.TermsAndConditionsShareholder_FieldId)]
+        string TermsAndConditionsShareholder { get; set; }
+
+        [SitecoreField(Constants.Country.TermsAndConditionsCharity_FieldId)]
+        string TermsAndConditionsCharity { get; set; }
     }
 }
