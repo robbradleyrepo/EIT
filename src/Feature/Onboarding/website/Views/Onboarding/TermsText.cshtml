@@ -1,6 +1,5 @@
-﻿@using Glass.Mapper.Sc.Web.Mvc
-@model LionTrust.Foundation.Onboarding.Models.ICountry
+﻿@model LionTrust.Feature.Onboarding.Models.TermsAndConditionsViewModel
 @if (Model != null)
 {
-    @Html.Glass().Editable(Model, m => m.TermsAndConditions)
+    @Model.Text
 }
