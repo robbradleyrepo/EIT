@@ -88,7 +88,8 @@
                                                     .Aggregate(teamPredicate,
                                                                     (current, team)
                                                                                 => current
-                                                                                     .Or(item => item.ArticleAuthorTeams.Contains(team)));
+                                                                                     .Or(item => item.ArticleAuthorTeams.Contains(team)
+                                                                                              || item.RelatedFundTeam == team));
 
                 taxonomyFilter = taxonomyFilter.And(teamPredicate);
             }
