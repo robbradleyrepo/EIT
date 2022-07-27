@@ -76,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ComputedFields\Article\ArticleAuthorImageProtected.cs" />
+    <Compile Include="ComputedFields\Article\RelatedFundTeam.cs" />
     <Compile Include="ComputedFields\Article\ArticleAuthorTeams.cs" />
     <Compile Include="ComputedFields\Article\ArticleContent.cs" />
     <Compile Include="ComputedFields\Article\ArticleCreatedDateYear.cs" />
