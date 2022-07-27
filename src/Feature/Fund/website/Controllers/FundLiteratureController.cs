@@ -4,6 +4,7 @@
     using LionTrust.Feature.Fund.Literature;
     using LionTrust.Feature.Fund.Models;
     using LionTrust.Foundation.Legacy.Models;
+    using LionTrust.Foundation.SitecoreExtensions.Comparers;
     using Sitecore.Mvc.Controllers;
     using System;
     using System.Collections.Generic;
@@ -72,7 +73,7 @@
                 .Where(d => d.DocumentTypes.Any())
                 .SelectMany(d => d.DocumentTypes, (d, docType) => new { Name = docType.ItemName, Document = d })
                 .GroupBy(d => d.Name)
-                .ToDictionary(g => g.Key, g => g.Select(d => d.Document).ToList());            
+                .ToDictionary(g => g.Key, g => g.Select(d => d.Document).OrderBy(d => d.CustomSortOrder, new EmptyOrDefaultIntAreLast()).ToList());            
         }
     }
 }

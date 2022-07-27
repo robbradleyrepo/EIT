@@ -5,6 +5,7 @@ export default () => {
     const btnStep = $("[data-set-step]");
     const rawAcceptText = $('.onboarding-overlay__text').text();
     var countryName = '';
+	var countryIso = '';
     // default values
     const currentTab = Cookies.get("currentTab") || 0;
     const showTab = (currentTab) => {
@@ -60,6 +61,7 @@ export default () => {
     const SetCountry = (e) => {
         $('#Country').val(e.target.dataset.isoCountry);
         countryName = e.target.dataset.nameCountry;
+		countryIso = e.target.dataset.isoCountry;
         $.ajax({
             url: "/api/sitecore/Onboarding/GetInvestorRoles?countryIso=" + e.target.dataset.isoCountry
         }).done(function(data) {
@@ -71,21 +73,20 @@ export default () => {
                 $('.onboarding-overlay__title.uk-title').show();
                 $('.onboarding-overlay__title.non-uk-title').hide();
             }
-            $("[data-investor-type]").on("click", (e) => {
-                e.preventDefault();
+            $("[data-investor-type]").on("click", (e) => {                
                 $('#InvestorId').val(e.target.dataset.investorType);
+				$.ajax({
+					url: "/api/sitecore/Onboarding/GetTermsAndConditions?countryIso=" + countryIso + "&investorType=" + e.target.dataset.investorType
+				}).done(function(data) {
+					$(".onboarding-overlay__scroller.terms-text").html(data);
+					$('.onboarding-overlay__scroller').show();
+				});
                 var acceptText = $('.onboarding-overlay__text');
-                $(acceptText).text(rawAcceptText.replace("{role}", e.target.dataset.investorName).replace("{country}", countryName));
+                $(acceptText).text(rawAcceptText.replace("{role}", e.target.dataset.investorName).replace("{country}", countryName));				
                 const tab = e.target.dataset.setStep;
                 showTab(tab);
             });
-        });
-        $.ajax({
-            url: "/api/sitecore/Onboarding/GetTermsAndConditions?countryIso=" + e.target.dataset.isoCountry
-        }).done(function(data) {
-            $(".onboarding-overlay__scroller.terms-text").html(data);
-            $('.onboarding-overlay__scroller').show();
-        });
+        });        
     }
 	
 	$('.onboarding-overlay__select .checkbox__input').on('click', function() {
