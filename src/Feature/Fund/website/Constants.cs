@@ -1,5 +1,6 @@
 ﻿namespace LionTrust.Feature.Fund
 {
+    using Sitecore.Data;
     using System;
 
     public static class Constants
@@ -376,6 +377,13 @@
             public const string YearEndValue_FieldId = "{8BCDCA9B-22E2-4B8F-B6DA-2D5732B72FCD}";
             public const string ISINCodeLabel_FieldId = "{EEB11AD7-C3AA-4A6B-A873-D6F2094803D2}";
             public const string SedolCodeLabel_FieldId = "{C5329A37-336F-439C-AF1E-68B8176AF79C}";
+        }
+
+        public static class SharedDocuments
+        {
+            public const string TemplateId = "{95780F8D-3EFB-46A7-9872-06C6119F7A3C}";
+
+            public static readonly ID FolderId = new ID("{C8E97F82-4FB2-46D3-B162-8FA1FB9FE0FF}");
         }
 
         public static class Settings
