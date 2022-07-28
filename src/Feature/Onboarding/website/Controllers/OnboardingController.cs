@@ -14,6 +14,7 @@
     using System;
     using System.Collections.Generic;
     using System.Globalization;
+    using System.IO;
     using System.Linq;
     using System.Web;
     using System.Web.Mvc;
@@ -194,6 +195,11 @@
             if (!ModelState.IsValid)
             {
                 return new EmptyResult();
+            }
+
+            if (_context?.ContextItem?.ID == NotFoundPage.ItemId)
+            {
+                return null;
             }
 
             var data = _context.GetHomeItem<IHome>();
