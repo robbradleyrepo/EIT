@@ -246,7 +246,7 @@
                                                                 <div class="col-md-6">
                                                                     @if (imagesCount < 4)
                                                                     {
-                                                                        var secondColumnImage = dropDown.Images.FirstOrDefault();
+                                                                        var secondColumnImage = imageCollecion.FirstOrDefault();
                                                                         if (secondColumnImage != null)
                                                                         {
                                                                             secondColumnImage.SmallSize = false;
@@ -255,13 +255,13 @@
                                                                     }
                                                                     else
                                                                     {
-                                                                        var secondColumnFirstImage = dropDown.Images.FirstOrDefault();
+                                                                        var secondColumnFirstImage = imageCollecion.FirstOrDefault();
                                                                         if (secondColumnFirstImage != null)
                                                                         {
                                                                             secondColumnFirstImage.SmallSize = true;
                                                                             @Html.Partial("~/Views/Navigation/QuickLinkCTA.cshtml", secondColumnFirstImage)
                                                                         }
-                                                                        var secondColumnSecondImage = dropDown.Images.Skip(1).FirstOrDefault();
+                                                                        var secondColumnSecondImage = imageCollecion.Skip(1).FirstOrDefault();
                                                                         if (secondColumnSecondImage != null)
                                                                         {
                                                                             secondColumnSecondImage.SmallSize = true;
