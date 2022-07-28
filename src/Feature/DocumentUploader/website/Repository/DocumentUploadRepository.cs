@@ -1,104 +1,224 @@
 ﻿namespace LionTrust.Feature.DocumentUploader.Repository
 {
-    using LionTrust.Feature.DocumentUploader.Models;
+    using LionTrust.Foundation.SitecoreExtensions.Extensions;
     using Sitecore.Configuration;
+    using Sitecore.Data;
     using Sitecore.Data.Items;
-    using Sitecore.Diagnostics;
-    using Sitecore.Globalization;
     using Sitecore.Resources.Media;
     using Sitecore.SecurityModel;
+    using Sitecore.StringExtensions;
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Text.RegularExpressions;
+    using System.Linq;
 
     public class DocumentUploadRepository : IDocumentUploadRepository
     {
         /// <summary>
-        /// Constructor init
+        /// Get master DB
         /// </summary>
-        public DocumentUploadRepository()
+        public Database MasterDatabase
         {
+            get
+            {
+                return Factory.GetDatabase("master");
+            }
         }
 
         /// <summary>
-        /// Method to upload files into sitecore media library
+        /// Get document type id for factsheet
         /// </summary>
-        /// <param name="documentUpload"></param>
         /// <returns></returns>
-        public UploadedDocumentsResult UploadDocuments(DocumentUploaderViewModel documentUpload)
+        public Guid GetDocuTypeIdForFactsheet()
         {
-            var itemsCreated = new UploadedDocumentsResult
-            {
-                DocumentsUploaded = new List<UploadedFileViewModel>()
-            };
-            try
-            {
-                foreach (var file in documentUpload.UploadedFiles)
-                {
-                    file.FileAsBinary = file.FileAsBinary.Replace("data:text/xml;base64,", "").Replace("data:application/pdf;base64,", "");
-                    var uploadedFileAsBytes = Convert.FromBase64String(file.FileAsBinary);
-                    using (var memoryStream = new MemoryStream(uploadedFileAsBytes))
-                    {
-                        var fileExtension = GetFileExtension(file.FileName);
-                        var mediaName = GenerateMediaName(file.FileName);
-                        var destination = string.Format("/sitecore/media library/project/liontrust/documents/{0}", mediaName);
-                        var mediaCreator = new MediaCreator();
-                        var options = new MediaCreatorOptions
-                        {
-                            IncludeExtensionInItemName = false,
-                            Database = Factory.GetDatabase("master"),
-                            Destination = destination,
-                            Versioned = false,
-                            Language = Language.Parse(Settings.DefaultLanguage),
-                            FileBased = false
-                        };
+            return Guid.Parse(Constants.DocumentTypes.Factsheet);
+        }
 
+        /// <summary>
+        /// Get document type id for KIID
+        /// </summary>
+        /// <returns></returns>
+        public Guid GetDocTypeIdForKiid()
+        {
+            return Guid.Parse(Constants.DocumentTypes.Kiids);
+        }
+
+        /// <summary>
+        /// Save file as a sitecore media library item and create/update fund document item
+        /// </summary>
+        /// <param name="selectedFund"></param>
+        /// <param name="selectedDocType"></param>
+        /// <param name="fundDocumentName"></param>
+        /// <param name="documentNameFieldValue"></param>
+        /// <param name="fileName"></param>
+        /// <param name="fileAsBinary"></param>
+        /// <param name="mediaLibraryPath"></param>
+        /// <param name="overwriteMediaItem"></param>
+        public void UploadDocuments(string selectedFund, string selectedDocType, string fundDocumentName, string documentNameFieldValue, string fileName, string fileAsBinary, string mediaLibraryPath, bool overwriteMediaItem)
+        {
+            fileAsBinary = fileAsBinary.Replace("data:application/pdf;base64,", "");
+            var uploadedFileAsBytes = Convert.FromBase64String(fileAsBinary);
+
+            fileName = ItemUtil.ProposeValidItemName(Path.GetFileNameWithoutExtension(fileName));
+
+            Item mediaLibraryItem = null;
+            using (new SecurityDisabler())
+            {
+                using (var stream = new MemoryStream(uploadedFileAsBytes))
+                {
+                    var options = new MediaCreatorOptions
+                    {
+                        FileBased = false,
+                        IncludeExtensionInItemName = false,
+                        OverwriteExisting = overwriteMediaItem,
+                        Versioned = false,
+                        Destination = string.Format("{0}/{1}", mediaLibraryPath, fileName),
+                        Database = MasterDatabase
+                    };
+
+                    var mc = new MediaCreator();
+                    mediaLibraryItem = mc.CreateFromStream(stream, string.Format("{0}.pdf", fileName), options);
+                    mediaLibraryItem.PublishItemAsync(false);
+                }
+            }
+
+            if (mediaLibraryItem != null)
+            {
+                var fundItem = MasterDatabase.GetItem(new ID(selectedFund));
+                if (fundItem != null)
+                {
+                    fundDocumentName = fundDocumentName.Trim();
+                    documentNameFieldValue = documentNameFieldValue.Trim();
+
+                    var existingFundDocItem = GetFundDocumentByDocumentName(fundItem, fundDocumentName);
+
+                    if (existingFundDocItem == null || !overwriteMediaItem)
+                    {
+                        var parentItem = fundItem.Children[Constants.Folders.Documents];
+                        if (parentItem != null)
+                        {
+                            var documentTemplateItem = MasterDatabase.Templates[Constants.Templates.Document];
+                            using (new SecurityDisabler())
+                            {
+                                Item newfundDocItem = parentItem.Add(fundDocumentName, documentTemplateItem);
+                                newfundDocItem.Editing.BeginEdit();
+
+                                //Set document name
+                                newfundDocItem[ID.Parse(Constants.FieldIDs.DocumentName)] = documentNameFieldValue;
+
+                                //Set download link
+                                Sitecore.Data.Fields.LinkField downloadlnkField = newfundDocItem.Fields[ID.Parse(Constants.FieldIDs.DownloadLink)];
+                                downloadlnkField.LinkType = "media";
+                                downloadlnkField.Url = mediaLibraryItem.Paths.MediaPath;
+                                downloadlnkField.TargetID = mediaLibraryItem.ID;
+
+                                ////Set document type
+                                newfundDocItem[ID.Parse(Constants.FieldIDs.DocumentTypes)] = (new ID(selectedDocType)).ToString();
+
+                                ////Set related fund
+                                newfundDocItem[ID.Parse(Constants.FieldIDs.RelatedFunds)] = fundItem.ID.ToString();
+
+                                newfundDocItem.Editing.EndEdit();
+                                newfundDocItem.PublishItemAsync(true);
+                            }
+                        }
+                    }
+                    else
+                    {
                         using (new SecurityDisabler())
                         {
-                            var createdItem = mediaCreator.CreateFromStream(memoryStream, string.Format("{0}{1}", mediaName, fileExtension), options);
-                            if (createdItem != null)
-                            {
-                                itemsCreated.DocumentsUploaded.Add(file);
-                            }  
+                            existingFundDocItem.Editing.BeginEdit();
+
+                            //Set download link
+                            Sitecore.Data.Fields.LinkField downloadlnkField = existingFundDocItem.Fields[ID.Parse(Constants.FieldIDs.DownloadLink)];
+                            downloadlnkField.Clear();
+                            downloadlnkField.LinkType = "media";
+                            downloadlnkField.Url = mediaLibraryItem.Paths.MediaPath;
+                            downloadlnkField.TargetID = mediaLibraryItem.ID;
+
+                            //Set document name
+                            existingFundDocItem[ID.Parse(Constants.FieldIDs.DocumentName)] = documentNameFieldValue;
+
+                            //Set document type
+                            existingFundDocItem[ID.Parse(Constants.FieldIDs.DocumentTypes)] = (new ID(selectedDocType)).ToString();
+
+                            //Set related fund
+                            existingFundDocItem[ID.Parse(Constants.FieldIDs.RelatedFunds)] = fundItem.ID.ToString();
+
+                            existingFundDocItem.Editing.EndEdit();
+                            existingFundDocItem.PublishItemAsync(true);
                         }
                     }
                 }
-                if(itemsCreated.DocumentsUploaded.Count > 0)
-                {
-                    itemsCreated.Result = true;
-                }
-                else
-                {
-                    itemsCreated.Result = false;
-                }
-                return itemsCreated;
             }
-            catch (Exception ex)
+        }
+
+        public Item GetFundDocumentByDocumentName(Item fundItem, string documentName)
+        {
+            if (fundItem == null || fundItem.Children[Constants.Folders.Documents] == null)
             {
-                Log.Error("Upload documents failed", ex);
-                itemsCreated.Result = false;
-                return itemsCreated;
+                return null;
             }
 
+            var documentFolderItem = fundItem.Children[Constants.Folders.Documents];
+            var query = "{0}//*[@@templateid='{1}' and @@name = '{2}']".FormatWith(documentFolderItem.Paths.LongID, Constants.Templates.Document, documentName);
+            var documentItems = MasterDatabase.SelectItems(query);
+
+            return documentItems.FirstOrDefault();
         }
 
-        private string GenerateMediaName(string fileName)
+        public IDictionary<Guid, string> GetDoctTypesForLTAdminDocUploadModule()
         {
-            var nameWithoutExtension = Path.GetFileNameWithoutExtension(fileName);
-            var regexPattern = @"\([^)]*\)";
-            var filteredName = Regex.Replace(nameWithoutExtension, regexPattern, "");
-
-            return string.Format(
-                "{0}-{1}", ItemUtil.ProposeValidItemName(
-                filteredName),
-                Guid.NewGuid().ToString().Substring(0, 4)
-                );
+            var docTypes = GetFiltersWithIds(Guid.Parse(Constants.Folders.DocumentTypes), Guid.Parse(Constants.Templates.LegacyLookupItem), Guid.Parse(Constants.FieldIDs.LegacyLookupItemNameField));
+            return docTypes.Where(x => x.Key.Equals(Guid.Parse(Constants.DocumentTypes.Factsheet)) || x.Key.Equals(Guid.Parse(Constants.DocumentTypes.Kiids))).ToDictionary(x => x.Key, x => x.Value);
         }
 
-        private string GetFileExtension(string fileName)
+
+        /// <summary>
+        /// Returns the Guid of the Fund Item, example: Asia Income Fund|{B0C7AC70-3895-49C4-8F3C-4DF11EFEDC46}
+        /// </summary>
+        /// <param name="fundName"></param>
+        /// <returns></returns>
+        public Guid GetFundIdByName(string fundName)
         {
-            return Path.GetExtension(fileName);
+            if (fundName.IsNullOrEmpty() || fundName.Trim().IsNullOrEmpty())
+            {
+                return Guid.Empty;
+            }
+
+            var fundFolder = MasterDatabase.GetItem(Constants.Folders.Funds);
+            if (fundFolder == null)
+            {
+                return Guid.Empty;
+            }
+
+            fundName = fundName.Trim();
+            var fundItem = fundFolder.Children.FirstOrDefault(r => r[ID.Parse(Constants.FieldIDs.FundNameField)] == fundName);
+
+            return fundItem != null
+                ? fundItem.ID.Guid
+                : Guid.Empty;
+
+        }
+
+        private IDictionary<Guid, string> GetFiltersWithIds(Guid folder, Guid template, Guid valueField)
+        {
+            var result = new Dictionary<Guid, string>();
+
+            var lookupItems = MasterDatabase.GetItem(ID.Parse(folder));
+
+            if (lookupItems != null)
+            {
+                foreach (Item child in lookupItems.Children)
+                {
+                    if (child.TemplateID.ToGuid() == template)
+                    {
+                        result.Add(child.ID.ToGuid(), child[ID.Parse(valueField)]);
+                    }
+                }
+            }
+
+            return result;
         }
     }
 }

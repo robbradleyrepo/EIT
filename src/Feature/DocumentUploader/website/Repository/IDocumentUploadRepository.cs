@@ -1,9 +1,21 @@
 ﻿namespace LionTrust.Feature.DocumentUploader.Repository
 {
-    using LionTrust.Feature.DocumentUploader.Models;
+    using System;
+    using System.Collections.Generic;
+    using Sitecore.Data.Items;
 
     public interface IDocumentUploadRepository
     {
-        UploadedDocumentsResult UploadDocuments(DocumentUploaderViewModel documentUploadEntity);
+        Guid GetDocuTypeIdForFactsheet();
+
+        Guid GetDocTypeIdForKiid();
+
+        void UploadDocuments(string selectedFund, string selectedDocType, string fundDocumenttName, string documentNameFieldValue, string fileName, string fileAsBinary, string mediaLibraryPath, bool overwriteMediaItem);
+
+        Item GetFundDocumentByDocumentName(Item fundItem, string documentName);
+
+        IDictionary<Guid, string> GetDoctTypesForLTAdminDocUploadModule();
+
+        Guid GetFundIdByName(string fundName);
     }
 }

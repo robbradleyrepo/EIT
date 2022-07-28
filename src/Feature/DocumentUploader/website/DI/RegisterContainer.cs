@@ -1,5 +1,6 @@
 ﻿namespace LionTrust.Feature.DocumentUploader.DI
 {
+    using LionTrust.Feature.DocumentUploader.Models;
     using LionTrust.Feature.DocumentUploader.Repository;
     using Microsoft.Extensions.DependencyInjection;
     using Sitecore.DependencyInjection;
@@ -9,6 +10,7 @@
         public void Configure(IServiceCollection serviceCollection)
         {
             serviceCollection.AddTransient<IDocumentUploadRepository, DocumentUploadRepository>();
+            serviceCollection.AddTransient<ILTAdminDocumentUploadRepository<LTAdminDocumentUploadViewModel>, LTAdminDocumentUploadRepository >();
         }
     }
 }
