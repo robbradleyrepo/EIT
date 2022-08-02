@@ -10,7 +10,7 @@ export default () => {
     
     new Swiper('.swiper-container-awards', {
 
-        grabCursor: true,
+        // grabCursor: true,
         slidesPerView: 3,
         centeredSlides: true,
         spaceBetween: 32,
