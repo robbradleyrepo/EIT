@@ -157,7 +157,7 @@
 
         private string GetManagedLength(DateTime launchDate)
         {
-            if(launchDate == null)
+            if (launchDate == null)
             {
                 return null;
             }
@@ -168,6 +168,7 @@
             if (lengthCountMonths < 0)
             {
                 lengthCount--;
+                lengthCountMonths += 12;
             }
 
             var label = new StringBuilder();
