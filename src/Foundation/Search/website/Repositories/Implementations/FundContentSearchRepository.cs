@@ -34,8 +34,6 @@
                     return null;
                 }
 
-                var fundTeamsFacetCategory = results.Facets?.Categories?.FirstOrDefault(f => f.Name == "legacyfund_fundteam");                
-
                 return new ContentSearchResults<FundSearchResultItem> 
                 { 
                     SearchResults = results, 
