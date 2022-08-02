@@ -236,7 +236,7 @@
                 fundSearchResponse.StatusMessage = "Success";
                 fundSearchResponse.StatusCode = 200;
                 fundSearchResponse.TotalResults = contentSearchResults.TotalResults;
-                fundSearchResponse.FacetValues = fundTeamFacets.FacetValues.Select(f => f.Name);
+                fundSearchResponse.FacetValues = fundTeamFacets?.FacetValues?.Select(f => f.Name);
             }
             else
             {
