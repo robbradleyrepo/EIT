@@ -164,6 +164,7 @@ export default () => {
       page: 1,
       searchText: "",
       searchData: [],
+	  facetValues: [],
       loading: true,
       init: true,
       sortModal: false,
@@ -348,9 +349,10 @@ export default () => {
 
         $.get(hostUrl + this.getQueryString())
           .done((response) => {
-            const { searchResults, totalResults } = response;
+            const { searchResults, totalResults, facetValues } = response;
             this.searchData = searchResults;
             this.amountResults = totalResults;
+			this.facetValues = facetValues;
             this.loading = false;
             this.activeButton = false;
           })
@@ -359,6 +361,7 @@ export default () => {
             this.loading = false;
             this.searchData = [];
             this.amountResults = 0;
+			this.facetValues = [];
             this.activeButton = false;
           });
       },
