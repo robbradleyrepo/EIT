@@ -203,7 +203,7 @@
                 Take = pageSize,
                 SalesforceFundIds = salesforceFundIds,
                 ExcludeSalesforceFundIds = excludeSalesforceFundIds
-            };
+            };            
 
             ContentSearchResults<FundSearchResultItem> contentSearchResults;
 
@@ -220,6 +220,15 @@
                 contentSearchResults = _fundContentSearchService.GetFunds(fundSearchRequest);
             }
 
+            // Get the Fund Team facets based on the initial list of funds
+            var fundTeamsSearchRequest = new FundSearchRequest
+            {
+                DatabaseName = database,
+                SalesforceFundIds = salesforceFundIds,
+                ExcludeSalesforceFundIds = excludeSalesforceFundIds
+            };
+            var fundTeamFacets = _fundContentSearchService.GetFundTeamFacets(fundTeamsSearchRequest);
+
             var fundSearchResponse = new SearchResponse<IFundContentResult>();
             if (contentSearchResults.TotalResults > 0)
             {
@@ -227,6 +236,7 @@
                 fundSearchResponse.StatusMessage = "Success";
                 fundSearchResponse.StatusCode = 200;
                 fundSearchResponse.TotalResults = contentSearchResults.TotalResults;
+                fundSearchResponse.FacetValues = fundTeamFacets.FacetValues.Select(f => f.Name);
             }
             else
             {

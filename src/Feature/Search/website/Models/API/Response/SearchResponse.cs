@@ -16,5 +16,7 @@
         public string StatusMessage { get; set; }
         
         public int TotalResults { get; set; }
+
+        public IEnumerable<string> FacetValues { get; set; }
     }
 }
