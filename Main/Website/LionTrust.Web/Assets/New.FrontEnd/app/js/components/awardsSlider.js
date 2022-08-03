@@ -13,6 +13,10 @@ export default () => {
         let swrapper = document.getElementById('awardsWrapper');
         swrapper.classList.add("awardscentered");
     }
+    if(countAllSlides <= 3) {
+        let hidepagination = document.getElementById('awardspag');
+        hidepagination.classList.add("hidePagLessThenThree");
+    }
     
     new Swiper('.swiper-container-awards', {
 

@@ -3,6 +3,8 @@
 .awardscentered 
     display: flex
     justify-content: space-around
+.hidePagLessThenThree
+    display: none !important
 .awards
     margin: 100px 0
     padding-top: 23px
@@ -50,6 +52,7 @@
     .swiper-button-prev,
     .swiper-button-next
         z-index: 1
+        background-color: transparent
 .swiper-container-awards
     width: 100%
     height: 100%
@@ -61,6 +64,7 @@
     .swiper-button-next, .swiper-button-prev
         top: 30%
         color: $gold
+        background-color: transparent
 .swiper-container-awards .swiper-pagination
     visibility: visible
     bottom: 10px
