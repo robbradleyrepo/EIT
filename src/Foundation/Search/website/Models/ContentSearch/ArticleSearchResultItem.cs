@@ -25,7 +25,7 @@
         public string ArticleAuthorNames { get; set; }
 
         [IndexField("LegacyArticle_Fund")]
-        public string ArticleFund { get; set; }
+        public IEnumerable<string> ArticleFunds { get; set; }
 
         [IndexField("article_fund_name")]
         public string ArticleFundName { get; set; }

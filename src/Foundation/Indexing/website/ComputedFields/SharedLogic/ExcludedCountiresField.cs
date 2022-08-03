@@ -3,6 +3,7 @@
     using Microsoft.Extensions.DependencyInjection;
     using Sitecore.ContentSearch;
     using Sitecore.ContentSearch.ComputedFields;
+    using Sitecore.Data;
     using System.Collections.Generic;
     using System.Linq;
 
@@ -48,7 +49,12 @@
 
             foreach (var id in excludedCountries)
             {
-                var country = item.Database.GetItem(id);
+                if (string.IsNullOrEmpty(id))
+                {
+                    continue;
+                }
+
+                var country = item.Database.GetItem(ID.Parse(id));
 
                 if (country != null)
                 {
