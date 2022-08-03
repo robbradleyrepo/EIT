@@ -21,7 +21,7 @@
                 @Html.Glass().Editable(Model.Fund, m => m.OverviewText)
             </p>
         </div>
-        <div>           
+        <div>
             @if (Sitecore.Context.PageMode.IsExperienceEditor)
             {
                 using (Html.Glass().BeginRenderLink(Model, m => m.LatestUpdateCTA, new { @class = "btn btn-primary-forward mr-1 mr-md-4" }, isEditable: true))
@@ -35,10 +35,13 @@
             }
             else
             {
-                var fundUpdateUrl = Model.LatestUpdateCTA != null ? Model.LatestUpdateCTA.Url + "?ids=" + Model.Fund.Id.ToString("N") : string.Empty;
-                <a href="@fundUpdateUrl" class="btn btn-primary-forward mr-1 mr-md-4">
-                    @Model.LatestUpdateCTA.Text <i class="icon-arrow-right animate-arrow"></i>
-                </a>
+                if (Model.LatestUpdateCTA != null)
+                {
+                    var fundUpdateUrl = !string.IsNullOrEmpty(Model.LatestUpdateCTA.Url) ? Model.LatestUpdateCTA.Url + "?ids=" + Model.Fund.Id.ToString("N") : string.Empty;
+                    <a href="@fundUpdateUrl" class="btn btn-primary-forward mr-1 mr-md-4">
+                        @Model.LatestUpdateCTA.Text <i class="icon-arrow-right animate-arrow"></i>
+                    </a>
+                }
             }
 
             <a href="#" class="link-styles view-fund-literature">
