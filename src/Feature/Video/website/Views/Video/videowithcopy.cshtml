@@ -5,11 +5,11 @@
     return;
 }
 @{ 
-    var righTextAlignment = Model.TextAlignment == null || string.IsNullOrEmpty(Model.TextAlignment.Value) || Model.TextAlignment.Value.Equals("right");
+    var useRighTextAlignment = Model.TextAlignment == null || string.IsNullOrEmpty(Model.TextAlignment.Value) || Model.TextAlignment.Value.Equals("right");
 }
 <section class="container video-with-text">
     <div class="row">
-        <div class="col-xl-6 @(righTextAlignment ? "order-xl-1" : "order-xl-0")">
+        <div class="col-xl-6 @(useRighTextAlignment ? "order-xl-1" : "order-xl-0")">
             <h2 class="h2">
                 @Html.Glass().Editable(m => m.Heading)
             </h2>
