@@ -9,6 +9,6 @@
     {
         bool CanHandle(IEnumerable<Guid> templateIds);
 
-        IList<ID> GetExcludedCountries(Item item);
+        IList<string> GetExcludedCountries(Item item);
     }
 }
