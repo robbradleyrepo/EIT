@@ -43,7 +43,34 @@
                 color: $gold
                 @include breakpoint(desktop, up)
                     top: 1px!important
-
+    &_circle
+        li
+            &:before
+                content: "\e91c"!important
+                font-family: icomoon!important
+                width: auto!important
+                height: auto!important
+                background: transparent!important
+                font-size: 6px
+                top: 5px!important
+                left: -2px!important
+                color: $gold
+                @include breakpoint(desktop, up)
+                    top: 1px!important
+    &_chevron
+        li
+            &:before
+                content: "\e913"!important
+                font-family: icomoon!important
+                width: auto!important
+                height: auto!important
+                background: transparent!important
+                font-size: 10px
+                top: 5px!important
+                left: -2px!important
+                color: $gold
+                @include breakpoint(desktop, up)
+                    top: 1px!important
 .generic-text
     ul
         @extend .services-item-list

@@ -39,21 +39,7 @@
             @include breakpoint(desktop, up)
             margin-bottom: 20px
             li
-                font-weight: normal
-                &_checked
-                li			
-                    &:before
-                        content: "\e925"!important
-                        font-family: icomoon!important
-                        width: auto!important
-                        height: auto!important
-                        background: transparent!important
-                        font-size: 10px
-                        top: 5px!important
-                        left: -2px!important
-                        color: $gold
-                        @include breakpoint(desktop, up)
-                            top: 1px!important	
+                font-weight: normal                
     .text-danger
         a	
             color: $primary
@@ -139,3 +125,14 @@ article
         width: auto
         margin: 0 auto
         display: flex
+li
+	& > .bullet-disc-style
+        &:before
+            content: ''
+li
+	&:has(.bullet-circle-style)
+        &:before
+            content: '\e925'
+li:has(.bullet-square-style)
+    &:before
+        content: ''			
