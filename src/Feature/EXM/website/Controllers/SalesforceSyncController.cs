@@ -11,18 +11,18 @@ namespace LionTrust.Feature.EXM.Controllers
 {
     [ServicesController]
     [Authorize]
-    public class S4SEXMDashboardController : EntityService<EntityIdentity>
+    public class SalesforceSyncController : EntityService<EntityIdentity>
     {
         private ISalesforceAnalyticsService _salesforceAnalyticsService;
 
-        public S4SEXMDashboardController(
+        public SalesforceSyncController(
           ISalesforceAnalyticsService salesforceAnalyticsService)
           : base(null)
         {
             _salesforceAnalyticsService = salesforceAnalyticsService;
         }
 
-        public S4SEXMDashboardController()
+        public SalesforceSyncController()
           : this(ServiceLocator.ServiceProvider.GetService<ISalesforceAnalyticsService>())
         {
         }
