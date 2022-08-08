@@ -7,13 +7,12 @@ import SwiperCore, { Navigation, Pagination } from 'swiper/core';
 SwiperCore.use([Navigation, Pagination]);
 
 export default () => {
-    let countAllSlides = document.querySelectorAll('.mainSlideDiv').length;
+    const countAllSlides = document.querySelectorAll('.mainSlideDiv').length;
+    const threeSliders = 3;
 
-    if(countAllSlides < 3) {
+    if(countAllSlides <= threeSliders) {
         let swrapper = document.getElementById('awardsWrapper');
         swrapper.classList.add("awardscentered");
-    }
-    if(countAllSlides <= 3) {
         let hidepagination = document.getElementById('awardspag');
         hidepagination.classList.add("hidePagLessThenThree");
     }
