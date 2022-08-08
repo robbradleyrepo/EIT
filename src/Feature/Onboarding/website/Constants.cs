@@ -1,4 +1,6 @@
-﻿namespace LionTrust.Feature.Onboarding
+﻿using Sitecore.Data;
+
+namespace LionTrust.Feature.Onboarding
 {
     public static class Constants
     {
@@ -16,10 +18,15 @@
             public const string ProfileCardValueName_XmlAttribute = "name";
             public const string ProfileCardValueValue_XmlAttribute = "value";
         }
-        
+
         public static class EditPreferencesPage
         {
             public const string TemplateId = "{68ED9154-702A-4D18-A718-4BCC5AC1D5E6}";
+        }
+
+        public static class NotFoundPage
+        {
+            public static ID ItemId = new ID("{0FC62B48-FA17-4728-A923-DC6049B44E93}");
         }
 
         public enum Tabs

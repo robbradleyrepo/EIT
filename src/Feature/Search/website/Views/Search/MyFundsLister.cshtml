@@ -42,7 +42,14 @@
                                             <i class="icon-chevron-left"></i>
                                             {{facet.name}}
                                         </div>
-                                        <option-field inline-template v-for="(item, i) in facet.items" :for="item.name" :key="i + item.name">
+                                        <option-field v-if="facet.name === 'Fund Teams'" inline-template v-for="(item, i) in facet.items" :for="item.name" :key="i + item.name">
+                                            <label class="option-checkbox" v-if="facetValues.includes(item.identifier)">
+                                                <input :id="item.name" class="option-checkbox__input" type="checkbox" v-model="checked" @@change="toggleSelect(item, facet)">
+                                                <span class="option-checkbox__text">{{item.name}} </span>
+                                                <span class="option-checkbox__icon"></span>
+                                            </label>
+                                        </option-field>
+                                        <option-field v-else inline-template v-for="(item, i) in facet.items" :for="item.name" :key="i + item.name">
                                             <label class="option-checkbox">
                                                 <input :id="item.name" class="option-checkbox__input" type="checkbox" v-model="checked" @@change="toggleSelect(item, facet)">
                                                 <span class="option-checkbox__text">{{item.name}} </span>

@@ -37,6 +37,6 @@
 
         public PodcastModel Podcast { get; set; }
 
-        public string FundId { get; set; }
+        public IEnumerable<string> FundIds { get; set; }
     }
 }

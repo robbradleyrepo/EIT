@@ -51,5 +51,16 @@
         display: inline-flex
         padding-right: 17px
         margin-top: 7px
-
+    &__link
+        color: $black
+        margin-right: 3em
+        display: block        
+        border-bottom: 2px solid transparent
+        transition: border-color .3s ease, color .3s ease
+        @include breakpoint(desktop-large, up)            
+            margin: 0
+        &:hover
+            color: $primary
+        @include breakpoint(desktop-large, up)
+            display: inline-block
 

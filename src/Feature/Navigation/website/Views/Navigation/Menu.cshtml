@@ -25,7 +25,11 @@
                     <ul class="navigation__list">
                         @foreach (var menuItem in Model.MenuItems.WithAccessTo())
                         {
-                            var filteredChildrens = menuItem.Children.Where(m => !m.ExcludeInSearchResults);
+                            var menuItemsSecondLevel = menuItem.MenuItems.Where(m => !m.ExcludeInSearchResults);
+
+                            var filteredChildrens = (menuItemsSecondLevel != null && menuItemsSecondLevel.Any())
+                                    ? menuItemsSecondLevel
+                                    : menuItem.Children.Where(m => !m.ExcludeInSearchResults);
 
                             if (filteredChildrens != null && filteredChildrens.Any())
                             {
@@ -133,7 +137,7 @@
                         @foreach (var menuItem in Model.MenuItems.WithAccessTo())
                         {
                             bool hideInDesktop = false;
-                            
+
                             if (hasDropDowns)
                             {
                                 foreach (var dropDown in Model.HomeItem.HeaderConfiguration.HeaderDropDowns)
@@ -153,8 +157,13 @@
                             {
                                 continue;
                             }
-                            
-                            var filteredChildrens = menuItem.Children.Where(m => !m.ExcludeInSearchResults);
+
+                            var menuItemsSecondLevel = menuItem.MenuItems.Where(m => !m.ExcludeInSearchResults);
+
+                            var filteredChildrens = (menuItemsSecondLevel != null && menuItemsSecondLevel.Any())
+                                    ? menuItemsSecondLevel
+                                    : menuItem.Children.Where(m => !m.ExcludeInSearchResults);
+
                             if (filteredChildrens != null && filteredChildrens.Any())
                             {
                                 <li class="navigation__item">
@@ -531,7 +540,12 @@
         <div class="navigation__sublinks-items">
             @foreach (var menuItem in Model.MenuItems.WithAccessTo())
             {
-                var filteredChildrens = menuItem.Children.Where(m => !m.ExcludeInSearchResults);
+                var menuItemsSecondLevel = menuItem.MenuItems.Where(m => !m.ExcludeInSearchResults);
+
+                var filteredChildrens = (menuItemsSecondLevel != null && menuItemsSecondLevel.Any())
+                        ? menuItemsSecondLevel
+                        : menuItem.Children.Where(m => !m.ExcludeInSearchResults);
+
                 <div class="navigation__item">
                     <input type="checkbox" id="@menuItem.Name" class="navigation__checkbox">
                     <div class="navigation__submenu">

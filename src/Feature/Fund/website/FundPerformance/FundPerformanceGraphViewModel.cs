@@ -10,6 +10,8 @@
 
         public bool Hide { get; set; }
 
+        public bool HideDisclaimer { get; set; }
+
         public string FundId { get; set; }
 
         public string GraphUrl()

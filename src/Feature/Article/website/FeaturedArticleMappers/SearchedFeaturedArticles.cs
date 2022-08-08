@@ -25,14 +25,14 @@
             var request = new ArticleSearchRequest
             {
                 Funds = filter.Funds?.Select(f => f.Id.ToString().Replace("-", string.Empty)),
-                Categories = filter.ContentTypes?.Select(fc => fc.Id.ToString().Replace("-", string.Empty)),
+                ContentTypes = filter.ContentTypes?.Select(fc => fc.ArticleType)?.Select(fc => fc.ToString().Replace("-", string.Empty)),
                 FundTeams = filter.FundTeams?.Select(ft => ft.Id.ToString().Replace("-", string.Empty)),
                 FundManagers = filter.FundManagers?.Select(fm => fm.Id.ToString().Replace("-", string.Empty)),
                 Take = 6,
                 DatabaseName = databaseName
             };
 
-            var results = searchService.GetDatedTaxonomyRelatedArticles(request, result => result.OrderByDescending(hit => hit.Created));
+            var results = searchService.GetDatedTaxonomyRelatedArticles(request, result => result.OrderByDescending(hit => hit.ArticleCreatedDate));
             if (results == null || results.SearchResults == null)
             {
                 return new FeaturedArticle[0];

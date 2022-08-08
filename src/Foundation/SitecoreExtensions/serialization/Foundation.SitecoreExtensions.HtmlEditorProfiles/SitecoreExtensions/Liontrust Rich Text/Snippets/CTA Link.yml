@@ -1,0 +1,35 @@
+﻿---
+ID: "afeb892b-b2fe-47e4-b5ad-ddd3b374bb31"
+Parent: "cb3e898d-3103-4b16-bf2d-dc2da5d4b0f3"
+Template: "3825fe6a-6ca1-489b-a7c9-c3b4b3b38272"
+Path: /sitecore/system/Settings/Html Editor Profiles/Foundation/SitecoreExtensions/Liontrust Rich Text/Snippets/CTA Link
+DB: core
+SharedFields:
+- ID: "7dff83d2-e609-4c5f-99a9-13ec8536d65b"
+  Hint: Value
+  Value: |
+    <a class="btn btn-primary" href="">READ MORE</a>
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: 
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 500
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20060424T083025Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: 
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8e5179b0-2a09-4624-885d-619c0e3d0390"
+      Hint: Header
+      Value: CTA Link
