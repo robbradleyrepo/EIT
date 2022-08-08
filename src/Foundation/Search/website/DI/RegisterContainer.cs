@@ -17,6 +17,7 @@ namespace LionTrust.Foundation.Search.DI
             serviceCollection.AddTransient<IFundContentSearchRepository, FundContentSearchRepository>();
             serviceCollection.AddTransient<IGenericContentSearchService, GenericContentSearchService>();
             serviceCollection.AddTransient<IGenericContentSearchRepository, GenericContentSearchRepository>();
+            serviceCollection.AddTransient<IContactListSearchRepository, ContactListSearchRepository>();
         }
     }
 }

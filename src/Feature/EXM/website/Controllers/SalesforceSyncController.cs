@@ -27,7 +27,7 @@ namespace LionTrust.Feature.EXM.Controllers
         {
         }
 
-        [HttpPost]
+        [HttpGet]
         [ActionName("ExplicitlyRunSyncProcess")]
         public void ExplicitlyRunSyncProcess(string id)
         {

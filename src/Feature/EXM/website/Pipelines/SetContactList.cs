@@ -7,16 +7,19 @@
     using System;
     using System.Linq;
 
-    public class RemoveSalesforceCampaignFromContactList
+    using Microsoft.Extensions.DependencyInjection;
+    using Sitecore.DependencyInjection;
+
+    public class SetContactList
     {
         private readonly ISitecoreService _sitecoreService;
 
-        public RemoveSalesforceCampaignFromContactList()
-            : this(new SitecoreService("web"))
+        public SetContactList()
+            : this(new SitecoreService("master"))
         {
         }
 
-        private RemoveSalesforceCampaignFromContactList(ISitecoreService sitecoreService)
+        private SetContactList(ISitecoreService sitecoreService)
         {
             _sitecoreService = sitecoreService;
         }
@@ -36,10 +39,7 @@
                 {
                     using (new SecurityDisabler())
                     {
-                        mailMessage.SalesforceCampaignId = contactList.SalesforceCampaignId;
-                        _sitecoreService.SaveItem(new SaveOptions(mailMessage));
-
-                        contactList.SalesforceCampaignId = string.Empty;
+                        contactList.Active = false;
                         _sitecoreService.SaveItem(new SaveOptions(contactList));
                     }
                 }

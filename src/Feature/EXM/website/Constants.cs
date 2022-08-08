@@ -160,9 +160,19 @@ namespace LionTrust.Feature.EXM
             public const string LastSyncDate_FieldID = "{3C1206F7-8BFD-4A84-A1AB-B16C4FDE7F88}";
         }
 
+        public static class ContactList
+        {
+            public const string ActiveId_FieldID = "{D7604CEA-BDF2-4A96-A2B9-5F66DD78283C}";
+        }
+
         public static class SalesforceCampaign
         {
             public const string SalesforceCampaignId_FieldID = "{E2F34215-AF0E-4EEB-A310-D2EA4B5BEF14}";
+        }
+
+        public static class TeamCampaign
+        {
+            public const string TeamId_FieldID = "{E3A3C038-E84A-4639-90CE-35D4D2525A3C}";
         }
 
         public static class MailMessage

@@ -90,7 +90,7 @@ namespace LionTrust.Feature.EXM.Services.Implementations
                             }
 
                             var messageItem = _sitecoreService.GetItem<IMailMessage>(emailEvent.MessageId);
-                            if (string.IsNullOrWhiteSpace(messageItem.SalesforceCampaignId))
+                            if (string.IsNullOrWhiteSpace(messageItem?.SalesforceCampaignId))
                             {
                                 continue;
                             }
@@ -105,12 +105,11 @@ namespace LionTrust.Feature.EXM.Services.Implementations
                                 var interaction = new InteractionViewModel
                                 {
                                     ContactId = xConnectContact.Id.Value,
-                                    //SitecoreCampaignId = current.CampaignId.Value,
+                                    SitecoreCampaignId = messageItem.Id,
                                     Email = email,
                                     SalesforceContactId = sfContactId,
                                     SalesforceCampaignId = messageItem.SalesforceCampaignId,
                                     ContactList = contactList,
-                                    MessageId = messageItem.Id,
                                     MessageName = messageItem.Name,
                                     MessageLink = messageUrl,
                                     Date = current.LastModified.Value,
@@ -123,12 +122,11 @@ namespace LionTrust.Feature.EXM.Services.Implementations
                                 var interaction = new InteractionViewModel
                                 {
                                     ContactId = xConnectContact.Id.Value,
-                                    //SitecoreCampaignId = current.CampaignId.Value,
+                                    SitecoreCampaignId = messageItem.Id,
                                     Email = email,
                                     SalesforceContactId = sfContactId,
                                     SalesforceCampaignId = messageItem.SalesforceCampaignId,
                                     ContactList = contactList,
-                                    MessageId = messageItem.Id,
                                     MessageName = messageItem.Name,
                                     MessageLink = messageUrl,
                                     Date = current.LastModified.Value,
@@ -141,12 +139,11 @@ namespace LionTrust.Feature.EXM.Services.Implementations
                                 var interaction = new InteractionViewModel
                                 {
                                     ContactId = xConnectContact.Id.Value,
-                                    //SitecoreCampaignId = current.CampaignId.Value,
+                                    SitecoreCampaignId = messageItem.Id,
                                     Email = email,
                                     SalesforceContactId = sfContactId,
                                     SalesforceCampaignId = messageItem.SalesforceCampaignId,
                                     ContactList = contactList,
-                                    MessageId = messageItem.Id,
                                     MessageName = messageItem.Name,
                                     MessageLink = messageUrl,
                                     Date = current.LastModified.Value,
@@ -159,12 +156,11 @@ namespace LionTrust.Feature.EXM.Services.Implementations
                                 var interaction = new InteractionViewModel
                                 {
                                     ContactId = xConnectContact.Id.Value,
-                                    //SitecoreCampaignId = current.CampaignId.Value,
+                                    SitecoreCampaignId = messageItem.Id,
                                     Email = email,
                                     SalesforceContactId = sfContactId,
                                     SalesforceCampaignId = messageItem.SalesforceCampaignId,
                                     ContactList = contactList,
-                                    MessageId = messageItem.Id,
                                     MessageName = messageItem.Name,
                                     MessageLink = messageUrl,
                                     Link = clickedEvent.Url,
@@ -182,18 +178,7 @@ namespace LionTrust.Feature.EXM.Services.Implementations
                 }
             }
 
-            contacts = contacts.Where(x => x.Interactions.Any()).ToList();
-
-            foreach(var contact in contacts)
-            {
-                contact.IsUnsubscribed = _sfEntityUtility.IsUnsubscribed(contact.Email);
-
-                if (!contact.IsUnsubscribed)
-                {
-                    //TODO: calculate score
-                    var teamScores = _sitecoreService.GetChildren(Constants.TeamScore.TeamScoreFolderId, Constants.TeamScore.Id);
-                }
-            }
+            contacts = SetInteractionPoints(contacts);
 
             //var entity = _sfEntityUtility.GetEntityByEmail("harry.scargill@fairstone.co.uk");
             //var fields = entity.InternalFields.AvailableFields().OrderBy(x => x).ToList();
@@ -214,7 +199,7 @@ namespace LionTrust.Feature.EXM.Services.Implementations
             foreach(var interaction in interactions)
             {
                 var entity = new GenericSalesforceEntity("interactions");
-                entity.InternalFields["messageId"] = interaction.MessageId.ToString("D");
+                entity.InternalFields["sitecoreCampaignId"] = interaction.SitecoreCampaignId.ToString("D");
 
                 result.Add(entity);
             }
@@ -252,6 +237,45 @@ namespace LionTrust.Feature.EXM.Services.Implementations
             }
 
             return contactId;
+        }
+
+        private List<ContactViewModel> SetInteractionPoints(List<ContactViewModel> contacts)
+        {
+            var teams = _sitecoreService.GetChildren<ITeamScore>(Constants.TeamScore.TeamScoreFolderId, Constants.TeamScore.Id);
+            contacts = contacts.Where(x => x.Interactions.Any()).ToList();
+
+            foreach (var contact in contacts)
+            {
+                var unsubscribed = false;
+                contact.IsUnsubscribed = _sfEntityUtility.IsUnsubscribed(contact.Email);
+
+                if (!contact.IsUnsubscribed || !unsubscribed)
+                {
+                    foreach (var interaction in contact.Interactions)
+                    {
+                        var campaign = _sitecoreService.GetItem<ICampaign>(interaction.SitecoreCampaignId);
+                        if (campaign?.Team != null)
+                        {
+                            var team = teams.FirstOrDefault(x => x.Id == campaign.Team.Value);
+
+                            switch (interaction.Type)
+                            {
+                                case Enums.InteractionType.EmailOpen:
+                                    interaction.Score = team.EmailOpenedPoints;
+                                    break;
+                                case Enums.InteractionType.LinkClicked:
+                                    interaction.Score = team.ClickedThroughPoints;
+                                    break;
+                                case Enums.InteractionType.Unsubscribed:
+                                    unsubscribed = true;
+                                    break;
+                            }
+                        }
+                    }
+                }
+            }
+
+            return contacts;
         }
     }
 }

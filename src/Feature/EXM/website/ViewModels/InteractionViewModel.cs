@@ -9,13 +9,11 @@ namespace LionTrust.Feature.EXM.ViewModels
 
         public string SalesforceContactId { get; set; }
 
-        //public Guid SitecoreCampaignId { get; set; }
+        public Guid SitecoreCampaignId { get; set; }
 
         public string SalesforceCampaignId { get; set; }
 
         public string Email { get; set; }
-
-        public Guid MessageId { get; set; }
 
         public string MessageName { get; set; }
 

@@ -70,7 +70,13 @@
     <PackageReference Include="Sitecore.EmailCampaign.Cm">
       <Version>9.2.0</Version>
     </PackageReference>
+    <PackageReference Include="Sitecore.EmailCampaign.Server">
+      <Version>9.2.0</Version>
+    </PackageReference>
     <PackageReference Include="Sitecore.Kernel" Version="9.2.0" />
+    <PackageReference Include="Sitecore.ListManagement.Services">
+      <Version>9.2.0</Version>
+    </PackageReference>
     <PackageReference Include="Sitecore.Mvc">
       <Version>9.2.0</Version>
     </PackageReference>
@@ -100,6 +106,10 @@
     <Content Include="Content\Images\card50shadow.png" />
     <Content Include="Content\Images\card50shadow_a8g.png" />
     <Content Include="Content\sitecore-fixes.css" />
+    <Content Include="sitecore\shell\client\Applications\ECM\EmailCampaign.Client\constants.js" />
+    <Content Include="sitecore\shell\client\Applications\ECM\EmailCampaign.Client\Pages\Tabs\10-General.js" />
+    <Content Include="sitecore\shell\client\Applications\ECM\EmailCampaign.Client\Pipelines\SaveMessage\SaveMessage.Execute.js" />
+    <Content Include="sitecore\shell\client\Applications\ECM\EmailCampaign.Controls\MessageContext\MessageContext.js" />
     <Content Include="sitecore\shell\client\Applications\S4SLB\CampaignProcessing.js" />
     <Content Include="Views\web.config" />
     <Content Include="App_Config\Include\Feature\Feature.EXM.config" />
@@ -144,7 +154,10 @@
     <Compile Include="Controllers\EmailHeaderController.cs" />
     <Compile Include="Controllers\EmailFooterController.cs" />
     <Compile Include="Controllers\EmailHeroController.cs" />
+    <Compile Include="Controllers\LTListController.cs" />
+    <Compile Include="Controllers\LTSaveMessageController.cs" />
     <Compile Include="Controllers\S4SEXMDashboardController.cs" />
+    <Compile Include="Controllers\LTMessageController.cs" />
     <Compile Include="Controllers\SalesforceCampaignsController.cs" />
     <Compile Include="Dispatch\CustomDispatchTask.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
@@ -153,9 +166,11 @@
     <Compile Include="Helpers\Implementations\FillMailHelper.cs" />
     <Compile Include="Helpers\Interfaces\IFillEmailHelper.cs" />
     <Compile Include="Models\Bounce.cs" />
+    <Compile Include="Models\ISalesforceCampaign.cs" />
+    <Compile Include="Models\IContactList.cs" />
     <Compile Include="Models\ISalesforceSyncSettings.cs" />
     <Compile Include="Models\IMailMessage.cs" />
-    <Compile Include="Models\ISalesforceCampaign.cs" />
+    <Compile Include="Models\ICampaign.cs" />
     <Compile Include="Models\IArticleCards.cs" />
     <Compile Include="Models\ITeamScore.cs" />
     <Compile Include="Models\IExmSettings.cs" />
@@ -179,6 +194,9 @@
     <Compile Include="Models\IRichTextContent.cs" />
     <Compile Include="Models\ICta.cs" />
     <Compile Include="Models\IHeader.cs" />
+    <Compile Include="Models\LTMessage.cs" />
+    <Compile Include="Models\LTMessageResponse.cs" />
+    <Compile Include="Models\LTUpdateMessageContext.cs" />
     <Compile Include="Personalization\FacetExtensions.cs" />
     <Compile Include="Personalization\CustomRecipientPropertyTokenMap.cs" />
     <Compile Include="FacetKeys.cs" />
@@ -187,7 +205,7 @@
     <Compile Include="Pipelines\CustomChilkatPop3BounceReceiver.cs" />
     <Compile Include="Pipelines\GetContact.cs" />
     <Compile Include="Pipelines\CustomManagerRootsPop3ReceiversCollection.cs" />
-    <Compile Include="Pipelines\RemoveSalesforceCampaignFromContactList.cs" />
+    <Compile Include="Pipelines\SetContactList.cs" />
     <Compile Include="Pipelines\UpdateUndeliveredCount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pipelines\SendEmailFromSalesManagerFiller.cs" />

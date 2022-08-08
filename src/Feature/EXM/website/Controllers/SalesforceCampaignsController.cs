@@ -19,27 +19,23 @@ namespace LionTrust.Feature.EXM.Controllers
     public class SalesforceCampaignsController : EntityService<SalesforceCampaignEntity>
     {
         private ISalesforceCampaignRepositoryActions<SalesforceCampaignEntity> _repository;
-        private readonly ISitecoreService _masterSitecoreService;
-        private readonly ISitecoreService _webSitecoreService;
+        private readonly ISitecoreService _sitecoreService;
         private readonly IFetchRepository<ContactListModel> _contactListRepository;
 
         public SalesforceCampaignsController(
           ISalesforceCampaignRepositoryActions<SalesforceCampaignEntity> repository,
-          ISitecoreService masterSitecoreService,
-          ISitecoreService webSitecoreService,
+          ISitecoreService sitecoreService,
           IFetchRepository<ContactListModel> contactListRepository)
           : base(repository)
         {
             _repository = repository;
-            _masterSitecoreService = masterSitecoreService;
-            _webSitecoreService = webSitecoreService;
+            _sitecoreService = sitecoreService;
             _contactListRepository = contactListRepository;
         }
 
         public SalesforceCampaignsController()
           : this(new SalesforceCampaignRepository(),
-                new SitecoreService("master"),
-                new SitecoreService("web"),
+                ServiceLocator.ServiceProvider.GetService<ISitecoreService>(),
                 ServiceLocator.ServiceProvider.GetService<IFetchRepository<ContactListModel>>())
         {
         }
@@ -58,18 +54,17 @@ namespace LionTrust.Feature.EXM.Controllers
             {
                 if (info.SelectedListMergeOption == "createnewlist")
                 {
-                    var contactList = _masterSitecoreService.GetItem<ISalesforceCampaign>(new Guid(contactListModel.Id));
+                    var contactList = _sitecoreService.GetItem<ICampaign>(new Guid(contactListModel.Id));
                     contactList.SalesforceCampaignId = info.CampaignIdString;
 
-                    _masterSitecoreService.SaveItem(new SaveOptions(contactList));
+                    _sitecoreService.SaveItem(new SaveOptions(contactList));
                 }
                 else if (info.SelectedListMergeOption == "updatelist")
                 {
-                    var contactList = _webSitecoreService.GetItem<ISalesforceCampaign>(new Guid(contactListModel.Id));
+                    var contactList = _sitecoreService.GetItem<ICampaign>(new Guid(contactListModel.Id));
                     contactList.SalesforceCampaignId = info.CampaignIdString;
 
-                    _masterSitecoreService.SaveItem(new SaveOptions(contactList));
-                    _webSitecoreService.SaveItem(new SaveOptions(contactList));
+                    _sitecoreService.SaveItem(new SaveOptions(contactList));
                 }
             }
 
