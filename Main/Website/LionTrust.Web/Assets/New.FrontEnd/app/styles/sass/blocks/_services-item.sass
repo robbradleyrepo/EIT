@@ -52,7 +52,7 @@
                 height: auto!important
                 background: transparent!important
                 font-size: 6px
-                top: 5px!important
+                top: 8px!important
                 left: -2px!important
                 color: $gold
                 @include breakpoint(desktop, up)
@@ -60,17 +60,14 @@
     &_chevron
         li
             &:before
-                content: "\e913"!important
-                font-family: icomoon!important
-                width: auto!important
-                height: auto!important
-                background: transparent!important
-                font-size: 10px
+                content: ''
+                background:url('../images/favicon.ico')!important             
+                width: 16px!important
+                height: 16px!important                             
                 top: 5px!important
-                left: -2px!important
-                color: $gold
+                left: -5px!important                
                 @include breakpoint(desktop, up)
-                    top: 1px!important
+                    top: 7px!important
 .generic-text
     ul
         @extend .services-item-list
