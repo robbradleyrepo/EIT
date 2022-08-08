@@ -2,6 +2,7 @@
 @using System.Collections.Specialized;
 @using LionTrust.Foundation.ORM.Extensions;
 @using LionTrust.Foundation.Navigation;
+@using LionTrust.Foundation.Analytics.Goals;
 
 @model LionTrust.Feature.Navigation.Models.NavigationViewModel
 @if (Model != null && Model.HomeItem != null)
@@ -55,7 +56,8 @@
             @if (Model.ShowMyLiontrust && Model.HomeItem.MyLionTrust != null)
             {
                 <div class="sidebar__profile-btn">
-                    @using (Html.Glass().BeginRenderLink(Model.HomeItem, p => p.MyLionTrust, new { @class = "btn btn-primary btn-block" }, isEditable: true))
+                    @using (Html.Glass().BeginRenderLinkWithGoal(Model.HomeItem, p => p.MyLionTrust, Model.HomeItem.MyLiontrustGoal,
+                        new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary btn-block" } }, isEditable: true))
                     {
                         <i class="icon-user"></i>
                         if (!string.IsNullOrWhiteSpace(Model.HomeItem.MyLionTrust.Text))
