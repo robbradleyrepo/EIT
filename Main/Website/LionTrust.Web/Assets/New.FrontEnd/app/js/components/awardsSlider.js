@@ -14,7 +14,7 @@ export default () => {
         let swrapper = document.getElementById('awardsWrapper');
         swrapper.classList.add("awardscentered");
         let hidepagination = document.getElementById('awardspag');
-        hidepagination.classList.add("hidePagLessThenThree");
+        hidepagination.classList.add("hidePagination");
     }
     
     new Swiper('.swiper-container-awards', {
