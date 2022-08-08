@@ -12,10 +12,8 @@
         const threeSliders = 3;
 
         if(countAllSlides <= threeSliders) {
-            let swrapper = document.getElementById('awardsWrapper');
-            swrapper.classList.add("awardscentered");
-            let hidepagination = document.getElementById('awardspag');
-            hidepagination.classList.add("hidePagination");
+            document.getElementsByClassName('swiper-wrapper awardsWrapper')[0].classList.add('awardscentered');
+            document.getElementsByClassName('swiper-pagination awardspag')[0].classList.add('hidePagination');
         }
         
         new Swiper('.swiper-container-awards', {

@@ -9,6 +9,7 @@ export default () => {
       const { labels, datasets, yAxeConfig } = data;
       // add colors array to dataset
       const genericDataset = datasets.map((set, i) => {
+        console.log('g', genericDataset);
         const backgroundColor = [];
         for (let item in set.data) {
           backgroundColor.push(set.color);
