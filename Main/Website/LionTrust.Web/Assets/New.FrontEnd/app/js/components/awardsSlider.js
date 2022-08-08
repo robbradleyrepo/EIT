@@ -34,6 +34,10 @@
                     slidesPerView: 1.8,
                     centeredSlides: false
                 },
+                576: {
+                    slidesPerView: 2,
+                    centeredSlides: true
+                }, 
                 768: {
                     slidesPerView: 2.2,
                     centeredSlides: false
