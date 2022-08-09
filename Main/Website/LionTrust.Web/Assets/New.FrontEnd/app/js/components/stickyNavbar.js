@@ -33,17 +33,18 @@ export default () => {
     openBtn.removeClass("active");
   });
   (function ($) {
-    var hashTagOffest, hashTag;
-    $('.page-anchor__links a').on('click', function () {
-      hashTag = $(this).attr('href');
-      hashTagOffest = $(hashTag).offset().top;
-      console.log(hashTagOffest);
-    })
     $(window).on("load", function () {
+      let offsetVal;
+      if (window.innerWidth < 991) {
+        offsetVal = 70
+      } else {
+        offsetVal = 84
+      }
+      console.log(offsetVal);
       $("#sticky-navbar a").mPageScroll2id({
         highlightSelector: "#sticky-navbar a",
         liveSelector: "#sticky-navbar a",
-        offset: hashTagOffest,
+        offset: offsetVal,
         keepHighlightUntilNext: true
       });
     });
