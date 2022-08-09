@@ -46,6 +46,15 @@
         margin-bottom: 0
         align-items: center
         justify-content: flex-start
+        > span:not(:first-of-type):before
+            content: ""
+            width: 4px
+            height: 4px
+            border-radius: 50%
+            position: relative
+            display: inline-block
+            background: $primary
+            margin: 2px 5px 2px 7px
         i
             margin-right: 10px
             font-size: 12px
@@ -72,6 +81,15 @@
         line-height: 25px
         @include breakpoint(desktop, up)
             line-height: 50px
+        > span:not(:first-of-type):not(.article-promo__head-title):before
+            content: ""
+            width: 4px 
+            height: 4px
+            border-radius: 50%
+            position: relative
+            display: inline-block
+            background: $primary
+            margin: 2px 5px 2px 7px
     &__title
         font-size: 26px
         font-weight: 300
@@ -179,9 +197,4 @@
                 font-size: 2.5rem
                 
 .dot-divider
-    width: 4px
-    height: 4px
-    border-radius: 50%
-    display: inline-block
-    background: $primary
-    margin: 2px 7px 2px 5px
+    display: none
