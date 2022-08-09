@@ -13,6 +13,8 @@
             public const string VideoIdFieldId = "{F61FAB66-40B9-4395-BF61-5BEBFEAC1596}";
 
             public const string MarginsContainerFieldId = "{7313941A-568B-4D66-9CA8-AF6B8358BBF6}";
+
+            public const string PlayGoalFieldId = "{3A5991F9-49B5-4B3A-B037-FB13FFF4F3E1}";
         }
     }
 }
