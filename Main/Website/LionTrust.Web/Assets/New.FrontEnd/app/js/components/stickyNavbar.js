@@ -37,14 +37,14 @@ export default () => {
       let offsetVal;
       const windowWidthCheck = 991,
             mobStickyNavSize = 70,
-            desktopStickyNavSize = 70
+            desktopStickyNavSize = 84;
 
       if (window.innerWidth < windowWidthCheck) {
         offsetVal = mobStickyNavSize
       } else {
         offsetVal = desktopStickyNavSize
       }
-      
+
       $("#sticky-navbar a").mPageScroll2id({
         highlightSelector: "#sticky-navbar a",
         liveSelector: "#sticky-navbar a",
