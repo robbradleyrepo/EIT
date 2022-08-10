@@ -1,0 +1,55 @@
+.header-top
+    display: none
+    background: transparent
+    position: relative
+    &::before
+        content: ""
+        background: $blue-dark
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 12px
+    &__content
+        position: relative
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+
+    .header-navbar__user-link
+        margin: 0
+        background: $primary
+        color: $blue-dark
+        padding: 10px 15px 10px 16px
+        font-size: 14px
+        letter-spacing: 1.3px
+        font-weight: 500
+        transition: all .3s ease-in
+        &:hover
+            background: #fff
+        img
+            margin-right: 5px
+        &::after
+            display: none
+    .user-status__text
+        font-size: 14px
+        position: relative
+        &::after, &::before
+            content: ""
+            background: #1f242c
+            position: absolute
+            right: 318px
+            bottom: -11px
+            width: 100vw
+            height: 12px
+            transform: skew(-35deg)
+        &::before
+            transform: skew(35deg)
+            right: auto
+            left: 13px
+            width: 100vw
+    .user-status__change-type
+        margin-left: 5px
+    @include breakpoint(desktop, up)
+        display: block
