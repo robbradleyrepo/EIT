@@ -25,5 +25,11 @@
 
         [SitecoreField(Constants.Video.PlayGoalFieldId)]
         Guid PlayGoal { get; set; }
+
+        [SitecoreField(Constants.Video.PercentagePlayFieldId)]
+        int PercentagePlay { get; set; }
+
+        [SitecoreField(Constants.Video.PercentageGoalFieldId)]
+        Guid PercentageGoal { get; set; }
     }
 }
