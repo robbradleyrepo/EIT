@@ -33,17 +33,22 @@ export default () => {
     openBtn.removeClass("active");
   });
   (function ($) {
-    var hashTagOffest, hashTag;
-    $('.page-anchor__links a').on('click', function () {
-      hashTag = $(this).attr('href');
-      hashTagOffest = $(hashTag).offset().top;
-      console.log(hashTagOffest);
-    })
     $(window).on("load", function () {
+      let offsetVal;
+      const windowWidthCheck = 991,
+            mobStickyNavSize = 70,
+            desktopStickyNavSize = 84;
+
+      if (window.innerWidth < windowWidthCheck) {
+        offsetVal = mobStickyNavSize
+      } else {
+        offsetVal = desktopStickyNavSize
+      }
+
       $("#sticky-navbar a").mPageScroll2id({
         highlightSelector: "#sticky-navbar a",
         liveSelector: "#sticky-navbar a",
-        offset: hashTagOffest,
+        offset: offsetVal,
         keepHighlightUntilNext: true
       });
     });
