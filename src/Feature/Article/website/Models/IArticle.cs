@@ -27,5 +27,11 @@
 
         [SitecoreField(Constants.Article.ArticleVideoUrl)]
         Link ArticleVideoUrl { get; set; }
+
+        [SitecoreField(Constants.Article.PercentageScrollFieldId)]
+        int PercentageScroll { get; set; }
+
+        [SitecoreField(Constants.Article.PercentageGoalFieldId)]
+        Guid PercentageGoal { get; set; }
     }
 }

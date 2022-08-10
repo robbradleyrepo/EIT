@@ -78,8 +78,9 @@
             public const string FooterConfiguration_FieldId = "{E27B5DB1-CE93-4CB1-BA69-F78556AACAF0}";
             public const string HeaderConfiguration_FieldID = "{95F0787B-70E6-4164-98C0-F9502163D720}";
             public const string ContactUsPage_FieldID = "{0D831D08-90C7-4E31-B880-5A93146B3029}";
-            public const string MyLionTrust_FieldID = "{B810A405-73F4-48CC-AF61-778C82531262}";
+            public const string MyLionTrust_FieldID = "{B810A405-73F4-48CC-AF61-778C82531262}";            
             public const string MyLiontrustAllowedInvestors_FieldID = "{B2BAE7E0-2869-41B5-9466-961C0E7068EB}";
+            public const string MyLionTrustGoal_FieldID = "{021F52C9-17ED-438F-B584-E39451B5BAA3}";
             public const string MyPreferences_FieldID = "{6F6A49B5-C780-4EDE-9EB4-9EA509204434}";
             public const string SignUpNewsletter_FieldID = "{6EB0248B-457F-491C-8F9E-13AEFE2CDEC8}";
             public const string YouAreViewingLabel_FieldID = "{15999105-600F-43FB-B206-ED93304A98E6}";
