@@ -47,10 +47,6 @@ SharedFields:
           ph="header"
           uid="{34ED60C4-B3DB-41DD-92D9-5B982EA28A31}" />
         <r
-          id="{33ACA670-6568-4FB6-9384-D3C218232F2F}"
-          ph="/header/header-login"
-          uid="{5EB653BB-D0D9-4767-A1BC-EC32824E4132}" />
-        <r
           id="{DD1D438A-3971-438B-B1C9-461415F43488}"
           ph="footer"
           uid="{4FB00752-0C2B-4E6F-A91A-EDDA689D318B}" />
@@ -70,6 +66,10 @@ SharedFields:
           par=""
           ph="footer"
           uid="{DA7B7898-18C7-48E6-BE9C-997359554866}" />
+        <r
+          id="{33ACA670-6568-4FB6-9384-D3C218232F2F}"
+          ph="/header/header-login"
+          uid="{B8202DDD-AA8B-45E7-A9B4-49B5011B295A}" />
       </d>
     </r>
 Languages:
@@ -86,9 +86,6 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20210323T095312Z
-    - ID: "37fd434f-fd78-4401-ac44-e61709e93d12"
-      Hint: NavigationRoot_LionHubName
-      Value: LIONHUB
     - ID: "417057aa-fba9-488f-86b2-d7e313d0a7a5"
       Hint: Identity_AreaServed
       Value: United Kingdom
@@ -115,6 +112,3 @@ Languages:
     - ID: "e4a364e6-2e1a-4854-abd8-6a02acf832cd"
       Hint: NavigationRoot_ChangeLabel
       Value: Change
-    - ID: "e66a62b8-af31-4b18-bf49-562e24a49ba6"
-      Hint: NavigationRoot_MyLiontrustName
-      Value: MY LIONTRUST
