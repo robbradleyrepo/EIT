@@ -1,0 +1,33 @@
+﻿---
+ID: "02096d94-cc46-4f7e-a7c3-ed9dc2c41c09"
+Parent: "28e51f54-cad0-4748-a17b-8380393929d3"
+Template: "dd22f1b3-bd87-4db2-9e7d-f7a496888d43"
+Path: /sitecore/system/Modules/PowerShell/Script Library/Feature/General Scripts/Fix Fund Managers Template
+DB: master
+SharedFields:
+- ID: "b1a94ff0-6897-47c0-9c51-aa6acb80b1f0"
+  Hint: Script
+  Value: |
+    $fundManagerListId = "{A4CFF500-4247-4A27-91D1-F4DA4C89CC1B}"
+    $fundManagerPages = Get-ChildItem -Path "master:" -ID $fundManagerListId | Where-Object { $_.TemplateName -eq 'Common Inner' }
+    
+    foreach($fundManager in $fundManagerPages)
+    {
+        Write-Host $fundManager.ID $fundManager.Name
+        
+        $fundManager.Editing.BeginEdit();
+        $fundManager.TemplateId = "{A742A8B9-B315-4895-8D46-8754962176FF}"
+        $fundManager.Editing.EndEdit();
+    }
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220811T084716Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
