@@ -1,30 +1,38 @@
 ﻿@using LionTrust.Foundation.ORM.Extensions
-@model LionTrust.Feature.Contact.Models.FollowUsSocialIcon
+@using LionTrust.Foundation.Analytics.Goals
+@model LionTrust.Foundation.Navigation.Models.ISocialIcon
 @if (Model != null)
 {
     var link = Model.SocialLink.LinkUrl("#");
     var imageSrc = Model.SocialIcon.GetSafeSitecoreImageUrl();
     var imageAlt = Model.SocialIcon.GetSafeSitecoreImageAltText();
 
-    if (!string.IsNullOrEmpty(Model.TwitterTags))
+    if (Model.TwitterAccounts != null && Model.TwitterAccounts.Any())
     {
-        var tags = Model.TwitterTags.Split(',');
-
         <div class="follow-us__link">
-            <a href="https://twitter.com/@tags.FirstOrDefault()" class="mr-0" target="_blank">
+            @{ 
+                var firstTag = Model.TwitterAccounts.FirstOrDefault();
+            }
+            <a href="https://twitter.com/@firstTag.TwitterAccountName" class="mr-0" target="_blank" data-goal-trigger="@firstTag.CTAGoal">
                 <img src="@imageSrc" alt="@imageAlt" />
             </a>
-            @foreach (var tag in tags)
+
+            @foreach (var tag in Model.TwitterAccounts)
             {
-                <a href="https://twitter.com/@tag" class="follow-us__link" target="_blank">@@@tag</a>
+                if (tag == null)
+                {
+                    continue;
+                }
+
+                <a href="https://twitter.com/@tag.TwitterAccountName" class="follow-us__link" target="_blank" data-goal-trigger="@tag.CTAGoal">@@@tag.TwitterAccountName</a>
             }
         </div>
     }
     else
     {
         <div class="follow-us__link">
-            <a href="@link" class="mr-0" target="_blank"><img src="@imageSrc" alt="@imageAlt" /></a>
-            <a href="@link" target="_blank">
+            <a href="@link" class="mr-0" target="_blank"><img src="@imageSrc" alt="@imageAlt" data-goal-trigger="@Model.SocialLinkGoal" /></a>
+            <a href="@link" target="_blank" data-goal-trigger="@Model.SocialLinkGoal">
                 @if (Model.SocialLink != null)
                 {
                     @Model.SocialLink.Text

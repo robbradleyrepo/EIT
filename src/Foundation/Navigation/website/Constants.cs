@@ -84,6 +84,7 @@
             public const string ContactType_FieldID = "{6E788013-3179-4986-893B-079222C74556}";
             public const string AreaServed_FieldID = "{417057AA-FBA9-488F-86B2-D7E313D0A7A5}";
             public const string TemplateID = "{0DC049B8-406C-4151-912F-C50F1223EA06}";
+            public const string SchemaLogo_FieldID = "{9B43072B-4FBF-4E84-9E12-A3B5F6620DE8}";
         }
 
 
