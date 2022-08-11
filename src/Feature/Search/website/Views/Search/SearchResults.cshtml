@@ -75,7 +75,7 @@
                             </div>
                         </div>
                         <div v-if="item.resultType === 'Document'" class="search-item__footer">
-                            <div class="search-item__tag search-item__footer-item">
+                            <div v-if="item.relatedFundName" class="search-item__tag search-item__footer-item">
                                 <a :href="item.relatedFundUrl">
                                     <i class="icon-team"></i> {{item.relatedFundName}}
                                 </a>
