@@ -21,3 +21,54 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\Admin
+    - ID: "6876726d-d5d2-40df-94a7-a9a6fae2f683"
+      Hint: ArticleRichText_Copy
+      Value: |
+        <p>Test bullet points</p>
+        <ul class="services-item-list">
+            <li>Lorem ipsum dolor sit amet
+            <ul>
+                <li>test 1</li>
+                <li>test 2</li>
+            </ul>
+            </li>
+            <li>Duis aute irure dolor
+            <ul class="services-item-list_circle">
+                <li>test 3</li>
+                <li>test 4</li>
+            </ul>
+            </li>
+            <li>Sed ut perspiciatis unde omnis iste natus<br />
+            <ul class="services-item-list_checked">
+                <li>test 5</li>
+                <li>test 6</li>
+            </ul>
+            </li>
+            <li>Quis autem vel eum iure</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul class="services-item-list_checked">
+            <li>Lorem ipsum dolor sit amet
+            <ul>
+                <li>test 1</li>
+                <li>test 2</li>
+            </ul>
+            </li>
+            <li>Duis aute irure dolor</li>
+            <li>Sed ut perspiciatis unde omnis iste natus</li>
+            <li>Quis autem vel eum iure</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul class="services-item-list_circle">
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Duis aute irure dolor</li>
+            <li>Sed ut perspiciatis unde omnis iste natus</li>
+            <li>Quis autem vel eum iure</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul class="services-item-list_chevron">
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Duis aute irure dolor</li>
+            <li>Sed ut perspiciatis unde omnis iste natus</li>
+            <li>Quis autem vel eum iure</li>
+        </ul>
