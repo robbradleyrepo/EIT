@@ -31,6 +31,19 @@
             return View("~/Views/Navigation/Header.cshtml", navigationViewModel);
         }
 
+        public ActionResult LoginHeader()
+        {
+            NavigationViewModel navigationViewModel = GetNavigationViewModel();
+
+            if (navigationViewModel.HomeItem != null && navigationViewModel.HomeItem.OnboardingConfiguration != null)
+            {
+                navigationViewModel.HomeItem.OnboardingRoleName = OnboardingHelper.ProfileRoleName(navigationViewModel.HomeItem.OnboardingConfiguration, _log);
+                navigationViewModel.HomeItem.YouAreViewingLabelWithArticle = OnboardingHelper.ViewingLabelWithArticle(navigationViewModel.HomeItem.YouAreViewingLabel, navigationViewModel.HomeItem.OnboardingRoleName);
+            }
+
+            return View("~/Views/Navigation/LoginHeader.cshtml", navigationViewModel);
+        }
+
         public ActionResult Footer()
         {
             var item = RenderingContext.Current.Rendering.Item;
