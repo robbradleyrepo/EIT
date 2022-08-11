@@ -42,9 +42,9 @@
                 AreaServed = home.AreaServed
             };
 
-            if (home.Logo != null)
+            if (home.SchemaLogo != null)
             {
-                var imageItem = mvcContext.SitecoreService.GetItem<Item>(home.Logo.MediaId);
+                var imageItem = mvcContext.SitecoreService.GetItem<Item>(home.SchemaLogo.MediaId);
                 if (imageItem != null)
                 {
                     var mediaOption = new MediaUrlOptions()
@@ -55,6 +55,24 @@
                         RequestExtension = ""
                     };
                     organizationSchema.LogoUrl = MediaManager.GetMediaUrl(imageItem, mediaOption);
+                }
+            }
+            else
+            {
+                if (home.Logo != null)
+                {
+                    var imageItem = mvcContext.SitecoreService.GetItem<Item>(home.Logo.MediaId);
+                    if (imageItem != null)
+                    {
+                        var mediaOption = new MediaUrlOptions()
+                        {
+                            AlwaysIncludeServerUrl = true,
+                            AbsolutePath = true,
+                            LowercaseUrls = true,
+                            RequestExtension = ""
+                        };
+                        organizationSchema.LogoUrl = MediaManager.GetMediaUrl(imageItem, mediaOption);
+                    }
                 }
             }
 

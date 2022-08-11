@@ -8,6 +8,7 @@
     using LionTrust.Foundation.Navigation.Models;
     using LionTrust.Foundation.Onboarding.Models;
     using LionTrust.Foundation.ORM.Models;
+    using System;
 
     public interface IHome : IIdentity, INavigationGlassBase, IPresentationBase
     {
@@ -22,6 +23,12 @@
 
         [SitecoreField(Constants.NavigationRoot.MyLiontrustAllowedInvestors_FieldID, SitecoreFieldType.Multilist, "My Liontrust")]
         IEnumerable<IInvestor> MyLiontrusAllowedInvestors { get; set; }
+
+        [SitecoreField(Constants.NavigationRoot.MyLionTrustGoal_FieldID)]
+        Guid MyLiontrustGoal { get; set; }
+
+        [SitecoreField(Constants.NavigationRoot.MyLiontrustName_FieldID)]
+        string MyLiontrustName { get; set; }
 
         [SitecoreField(Constants.NavigationRoot.MyPreferences_FieldID, SitecoreFieldType.DropTree, "Menu")]
         INavigablePage MyPreferences { get; set; }
@@ -49,6 +56,9 @@
 
         [SitecoreField(Constants.NavigationRoot.LionHubAllowedPages_FieldID, SitecoreFieldType.Treelist, "LionHub")]
         IEnumerable<INavigablePage> LionHubAllowedPages { get; set; }
+
+        [SitecoreField(Constants.NavigationRoot.LionHubName_FieldID, SitecoreFieldType.Treelist, "LionHub")]
+        string LionHubName { get; set; }
 
         string OnboardingRoleName { get; set; }
 

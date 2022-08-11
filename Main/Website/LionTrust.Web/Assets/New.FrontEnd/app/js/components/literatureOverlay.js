@@ -34,9 +34,7 @@ export default () => {
         $win.scrollTop(offsetY);
     });
 
-};
-
-$(document).on("click", function () {
+    $(document).on("click", () => {
     $(".lit-overlay__wrapper").removeClass("active");
     $(".sidebar-overlay").removeClass("sidebar-overlay_active");
     $body.css({
@@ -45,3 +43,7 @@ $(document).on("click", function () {
     });
     $win.scrollTop(offsetY);
   });
+
+
+};
+

@@ -10,6 +10,9 @@
         [SitecoreField(Constants.Identity.Logo_FieldID, SitecoreFieldType.Image, "Identity")]
         Image Logo { get; set; }
 
+        [SitecoreField(Constants.Identity.SchemaLogo_FieldID, SitecoreFieldType.Image, "Identity")]
+        Image SchemaLogo { get; set; }
+
         [SitecoreField(Constants.Identity.CompanyName_FieldID, SitecoreFieldType.SingleLineText, "Identity")]
         string CompanyName { get; set; }
 
