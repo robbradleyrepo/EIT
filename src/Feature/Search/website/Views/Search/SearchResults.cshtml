@@ -74,6 +74,13 @@
                                 </a>
                             </div>
                         </div>
+                        <div v-if="item.resultType === 'Document'" class="search-item__footer">
+                            <div v-if="item.relatedFundName" class="search-item__tag search-item__footer-item">
+                                <a :href="item.relatedFundUrl">
+                                    <i class="icon-team"></i> {{item.relatedFundName}}
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <nav v-if="getPageAmount > 1" class="pagination justify-content-start mt-3 mb-5">

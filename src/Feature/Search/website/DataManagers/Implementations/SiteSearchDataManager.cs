@@ -139,7 +139,9 @@
                         ResultType = hit.Document.ResultType,
                         PageDate = hit.Document.ArticleCreatedDate.ToString("dd MMMM yyyy"),
                         TemplateId = hit.Document.TemplateId.Guid,
-                        FactsheetUrl = hit.Document.FactSheetUrl                       
+                        FactsheetUrl = hit.Document.FactSheetUrl,
+                        RelatedFundName = hit.Document.RelatedFundName,
+                        RelatedFundUrl = hit.Document.RelatedFundUrl
                     };
 
                     results.Add(siteSearchHit);
