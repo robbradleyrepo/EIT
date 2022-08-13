@@ -44,5 +44,11 @@
 
         [IndexField("article_created_date")]
         public DateTime ArticleCreatedDate { get; set; }
+
+        [IndexField("related_fund_name")]
+        public string RelatedFundName { get; set; }
+
+        [IndexField("related_fund_url")]
+        public string RelatedFundUrl { get; set; }
     }
 }
