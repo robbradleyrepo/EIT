@@ -1,0 +1,28 @@
+﻿---
+ID: "ac04b1fd-da13-4ca0-b196-4cb6017270bd"
+Parent: "a8676b5c-70dc-4e0a-9127-1e3cc689f625"
+Template: "a8676b5c-70dc-4e0a-9127-1e3cc689f625"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Fund/My Funds Lead Banner/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220815T124907Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "952490fd-3a52-435b-a5ef-d443f60423e5"
+      Hint: MyFundsLeadBannerNoContact_Title
+      Value: My Funds Dashboard
+    - ID: "aa3883fb-0237-4dda-9253-05dd98ce8bc2"
+      Hint: MyFundsLeadBannerNoContact_Cta
+      Value: |
+        <link text="Retrieve preferences" anchor="" linktype="internal" class="" title=""  querystring="" id="{E8BA215C-2593-4E6D-BC72-97F807C2FE1B}" />
+    - ID: "c560089b-d007-4fa5-8626-6e7714205be7"
+      Hint: MyFundsLeadBannerNoContact_Body
+      Value: Unfortunately, we couldn't find your profile, please click below to retrieve your preferences. We will send you an email which will contain a link to your personalised fund dashboard
