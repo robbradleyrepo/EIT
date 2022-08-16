@@ -3,6 +3,7 @@ namespace LionTrust.Feature.Navigation.DI
     using Glass.Mapper.Sc.Web.Mvc;
     using LionTrust.Feature.Navigation.Controllers;
     using LionTrust.Feature.Navigation.Repositories;
+    using LionTrust.Feature.Navigation.Services;
     using Microsoft.Extensions.DependencyInjection;
     using Sitecore.Abstractions;
     using Sitecore.DependencyInjection;
@@ -12,7 +13,8 @@ namespace LionTrust.Feature.Navigation.DI
     {
         public void Configure(IServiceCollection serviceCollection)
         {
-            serviceCollection.AddTransient(provider => new NavigationController(new NavigationRepository(RenderingContext.Current.ContextItem), provider.GetService<IMvcContext>(), provider.GetService<BaseLog>()));
+            serviceCollection.AddTransient<INavigationRepository>(provider => new NavigationRepository(RenderingContext.Current.ContextItem));
+            serviceCollection.AddTransient<INavigationService, NavigationService>();
         }
     }
 }

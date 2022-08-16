@@ -12,31 +12,20 @@
             {
             <div class="article-promo__head">
                 @Html.Partial("~/Views/Article/PromoCards/_ArticleAuthor.cshtml", Model)
-                <span class="article-promo__head-title">
-                    @if (Model.Topics != null && Model.Topics.Any())
+                @if (Model.Topics != null && Model.Topics.Any())
+                {
+                    foreach (var topic in Model.Topics)
                     {
-                        var first = true;
-                        foreach (var topic in Model.Topics)
-                        {
-                            if (!first)
-                            {
-                                <span class="dot-divider"></span>
-                            }
-                            else
-                            {
-                                first = false;
-                            }
-                            @topic.Name
-                        }
+                    <span class="article-promo__head-title">&nbsp;@topic.Name</span>
                     }
-                </span>
+                }
             </div>
-                <span class="article-promo__title">
-                    @Html.Glass().Editable(Model, m => m.Title)
-                </span>
-                <span class="article-promo__desc">
-                    @Html.Glass().Editable(Model, m => m.Subtitle)
-                </span>
+            <span class="article-promo__title">
+                @Html.Glass().Editable(Model, m => m.Title)
+            </span>
+            <span class="article-promo__desc">
+                @Html.Glass().Editable(Model, m => m.Subtitle)
+            </span>
             }
         </a>
         <div class="article-promo__footer">

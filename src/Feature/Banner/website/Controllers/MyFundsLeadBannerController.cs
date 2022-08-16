@@ -5,6 +5,7 @@
     using LionTrust.Foundation.Contact.Services;
     using Sitecore.Analytics;
     using Sitecore.Mvc.Controllers;
+    using Sitecore.Web;
     using System.Web.Mvc;
 
     public class MyFundsLeadBannerController : SitecoreController
@@ -33,6 +34,12 @@
             if (contactData != null)
             {
                 viewModel.ContactName = $"{contactData.FirstName} {contactData.LastName}";
+            }
+
+            var queryString = WebUtil.GetQueryString(Foundation.Contact.Constants.QueryStringNames.EmailPreferencefParams.RefQueryStringKey);
+            if (!string.IsNullOrEmpty(queryString))
+            {
+                viewModel.Content.Cta.Query = string.Format("{0}={1}", Foundation.Contact.Constants.QueryStringNames.EmailPreferencefParams.RefQueryStringKey, queryString);
             }
 
             return View("~/Views/Banner/MyFundsLeadBanner.cshtml", viewModel);
