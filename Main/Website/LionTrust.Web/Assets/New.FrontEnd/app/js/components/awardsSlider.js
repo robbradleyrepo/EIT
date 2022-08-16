@@ -20,7 +20,7 @@ export default () => {
         if (countAllSlides <= threeSliders) {
             console.log("hi")
             nodeList[i].getElementsByClassName('swiper-wrapper slidesWrapper')[0].classList.add('centerawards');
-            nodeList[i].getElementsByClassName('swiper-pagination awardspagination')[0].classList.add('hideawardsPagination');
+            nodeList[i].getElementsByClassName('swiper-pagination awardpagination')[0].classList.add('hideawardsPagination');
         }
 
     }
