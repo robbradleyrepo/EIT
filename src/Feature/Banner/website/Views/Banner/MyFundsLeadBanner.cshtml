@@ -10,29 +10,58 @@
     <section class="container">
         @Html.Sitecore().Placeholder("navigation")
         <div class="row">
-            <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-                <div class="lead-banner text-center">
-                    <h1 class="lead-banner__title">
-                        @Html.Glass().Editable(Model, m => m.Content.Title)
-                    </h1>
-                    <div class="lead-banner__subtitle">
-                        @Model.ContactName
-                    </div>
-                    <span class="lead-banner__text">
-                        @Html.Glass().Editable(Model, m => m.Content.Body)
-                    </span>
-                    <div class="lead-banner__btns">
-                        @using (Html.Glass().BeginRenderLinkWithGoal(Model, m => m.Content.Cta, Model.Content.CtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary" } }, isEditable: true))
-                        {
-                            if (Model.Content.Cta != null)
+            @if (Model.HasQueryString || Sitecore.Context.PageMode.IsExperienceEditor)
+            {
+                <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                    <div class="lead-banner text-center">
+                        <h1 class="lead-banner__title">
+                            @Html.Glass().Editable(Model, m => m.Content.Title)
+                        </h1>
+                        <div class="lead-banner__subtitle">
+                            @Model.ContactName
+                        </div>
+                        <span class="lead-banner__text">
+                            @Html.Glass().Editable(Model, m => m.Content.Body)
+                        </span>
+                        <div class="lead-banner__btns">
+                            @using (Html.Glass().BeginRenderLinkWithGoal(Model, m => m.Content.Cta, Model.Content.CtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary" } }, isEditable: true))
                             {
-                                @Model.Content.Cta.Text
-                                <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
+                                if (Model.Content.Cta != null)
+                                {
+                                    @Model.Content.Cta.Text
+                                    <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
+                                }
                             }
-                        }
+                        </div>
                     </div>
                 </div>
-            </div>
+            }
+            else
+            {
+                <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                    <div class="lead-banner text-center">
+                        <h1 class="lead-banner__title">
+                            @Html.Glass().Editable(Model, m => m.Content.NoContactTitle)
+                        </h1>
+                        <div class="lead-banner__subtitle">
+                            @Model.ContactName
+                        </div>
+                        <span class="lead-banner__text">
+                            @Html.Glass().Editable(Model, m => m.Content.NoContactBody)
+                        </span>
+                        <div class="lead-banner__btns">
+                            @using (Html.Glass().BeginRenderLink(Model, m => m.Content.NoContactCta, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary" } }, isEditable: true))
+                            {
+                                if (Model.Content.NoContactCta != null)
+                                {
+                                    @Model.Content.NoContactCta.Text
+                                    <i class="icon-arrow-right imagepromo__arrow animate-arrow"></i>
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
         </div>
     </section>
     @Html.Sitecore().Placeholder("secondary-navigation")
