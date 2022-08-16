@@ -27,29 +27,26 @@
     {
         public static string ProfileRoleName(IOnboardingConfiguration onboardingConfiguration, BaseLog log)
         {
-            var tracker = Tracker.Current;
-            if (!IsValidConfiguration(onboardingConfiguration, log))
+            var profile = ProfileCard(onboardingConfiguration, log);
+
+            if(profile == null)
             {
                 return string.Empty;
             }
 
-            if (tracker != null && tracker.Interaction != null 
-                && tracker.Interaction.Profiles != null)
+            return profile.PatternLabel;
+        }
+
+        public static Guid? PatternCardId(IOnboardingConfiguration onboardingConfiguration, BaseLog log)
+        {
+            var profile = ProfileCard(onboardingConfiguration, log);
+
+            if (profile == null)
             {
-                if (tracker.Interaction.Profiles.ContainsProfile(onboardingConfiguration.Profile.Name))
-                {
-                    var profile = tracker.Interaction.Profiles[onboardingConfiguration.Profile.Name];                    
-                    if (profile.PatternId != null && profile.PatternId.Value != null)
-                    {
-                        if (profile.PatternId.HasValue)
-                        {
-                            return profile.PatternLabel;
-                        }
-                    }                    
-                }
+                return null;
             }
 
-            return string.Empty;
+            return profile.PatternId;
         }
 
         public static string ViewingLabelWithArticle(string viewingLabel, string profileName)
@@ -248,6 +245,16 @@
         public static void UpdateContactSession(Contact contact)
         {
             WebUtil.SetSessionValue(SessionKeys.Contact, contact);
+        }
+
+        public static Guid? GetInvestorTypeId()
+        {
+            return (Guid?)WebUtil.GetSessionValue(SessionKeys.InvestorType);
+        }
+
+        public static void UpdateInvestorTypeSession(Guid investorType)
+        {
+            WebUtil.SetSessionValue(SessionKeys.InvestorType, investorType);
         }
 
         public static bool IdentifyAs(string source, string identifier)
@@ -470,6 +477,33 @@
             }
 
             return true;
+        }
+
+        public static Profile ProfileCard(IOnboardingConfiguration onboardingConfiguration, BaseLog log)
+        {
+            var tracker = Tracker.Current;
+            if (!IsValidConfiguration(onboardingConfiguration, log))
+            {
+                return null;
+            }
+
+            if (tracker != null && tracker.Interaction != null
+                && tracker.Interaction.Profiles != null)
+            {
+                if (tracker.Interaction.Profiles.ContainsProfile(onboardingConfiguration.Profile.Name))
+                {
+                    var profile = tracker.Interaction.Profiles[onboardingConfiguration.Profile.Name];
+                    if (profile.PatternId != null && profile.PatternId.Value != null)
+                    {
+                        if (profile.PatternId.HasValue)
+                        {
+                            return profile;
+                        }
+                    }
+                }
+            }
+
+            return null;
         }
     }
 }
