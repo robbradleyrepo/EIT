@@ -17,7 +17,7 @@
 
         public Expression<Func<T, bool>> GetQueryPredicate(IQuery query)
         {
-            var fieldNames = new[] { "legacy_content", "LegacyDocument_DocumentName" };
+            var fieldNames = new[] { "legacy_content", "LegacyDocument_DocumentName", "related_fund_name" };
 
             return GetFreeTextPredicateService<T>.GetFreeTextPredicate(fieldNames, query);
         }

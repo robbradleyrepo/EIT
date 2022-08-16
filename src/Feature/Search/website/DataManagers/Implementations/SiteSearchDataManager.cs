@@ -126,7 +126,10 @@
             foreach (var hit in hits)
             {
                 if (hit.Document != null)
-                {                   
+                {
+                    var relatedFundName = !string.IsNullOrEmpty(hit.Document.RelatedFundName)
+                                          ? hit.Document.RelatedFundName.Split('|')[0]
+                                          : string.Empty;
                     var siteSearchHit = new SiteSearchHit
                     {
                         Url = hit.Document.PageUrl,
@@ -140,7 +143,7 @@
                         PageDate = hit.Document.ArticleCreatedDate.ToString("dd MMMM yyyy"),
                         TemplateId = hit.Document.TemplateId.Guid,
                         FactsheetUrl = hit.Document.FactSheetUrl,
-                        RelatedFundName = hit.Document.RelatedFundName,
+                        RelatedFundName = relatedFundName,
                         RelatedFundUrl = hit.Document.RelatedFundUrl
                     };
 
