@@ -16,7 +16,6 @@
     using LionTrust.Foundation.Search.Models.ContentSearch;
     using SiteSearchResultItem = SiteSearch.SiteSearchResultItem;
     using System;
-    using Sitecore.Diagnostics;
     using LionTrust.Foundation.Content.Repositories;
     using Glass.Mapper.Sc;
     using LionTrust.Feature.Search.Models.API;
@@ -82,6 +81,9 @@
                     var searchQuery = context.GetQueryable<SiteSearchResultItem>()
                         .Where(predicate)
                         .Where(r => r.Language == language)
+                        .OrderBy(r => r.Priority)
+                        .ThenByDescending(r => r["score"])
+                        .ThenByDescending(r => r.ArticleCreatedDate)
                         .Skip(startPage)
                         .Take(resultsPerPage);
 

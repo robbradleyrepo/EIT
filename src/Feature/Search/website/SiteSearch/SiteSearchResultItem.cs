@@ -50,5 +50,8 @@
 
         [IndexField("related_fund_url")]
         public string RelatedFundUrl { get; set; }
+
+        [IndexField("priority")]
+        public int Priority { get; set; }
     }
 }
