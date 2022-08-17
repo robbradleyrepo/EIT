@@ -59,4 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }); 
 
+    // Check top header exists
+    if ($(".header-top").length) {
+        $("body").addClass("has-header-top");
+    }
+
 }); 
