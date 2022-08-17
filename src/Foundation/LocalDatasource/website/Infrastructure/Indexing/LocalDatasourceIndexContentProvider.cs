@@ -18,8 +18,9 @@
         public Expression<Func<T, bool>> GetQueryPredicate(IQuery query)
         {
             var fieldNames = new[] { Templates.Index.Fields.LocalDatasourceContent_IndexFieldName };
+            var boosting = new[] { 9f };
 
-            return GetFreeTextPredicateService<T>.GetFreeTextPredicate(fieldNames, query);
+            return GetFreeTextPredicateService<T>.GetFreeTextPredicate(fieldNames, boosting, query);
         }
     }
 }

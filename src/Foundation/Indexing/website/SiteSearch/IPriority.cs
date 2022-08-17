@@ -3,10 +3,10 @@
     using System;
     using System.Collections.Generic;
 
-    public interface IPriority
+    public interface ISearchResultType
     {
         bool CanHandle(IEnumerable<Guid> templateIds);
 
-        int GetPriority();
+        string GetSearchResultType();
     }
 }
