@@ -22,6 +22,7 @@ export default () => {
       results: [],
       init: false,
       amountResults: 0,
+      hasSimilarResults: false,
       showPerPage: pageSize,
       showPageInPagination: 7,
       loading: true,
@@ -83,16 +84,27 @@ export default () => {
         this.loading = true;
         $.ajax(url)
           .done((request) => {
-            const { searchResults, totalResults } = request;
+            const { searchResults, totalResults, similarSearchResults, totalSimilarResults } = request;
             console.log('searchResults', searchResults);
             this.results = searchResults;
             this.amountResults = totalResults;
+
+            if (totalResults <= 0 && totalSimilarResults > 0){
+              this.hasSimilarResults = true;
+              this.results = similarSearchResults;
+              this.amountResults = totalSimilarResults;
+            }
+            else{
+              this.hasSimilarResults = false;
+            }
+
             this.loading = false;
           })
           .fail((e) => {
             this.loading = false;
             this.results = [];
             this.amountResults = 0;
+            this.hasSimilarResults = false;
             console.error("Data is not being retrieved", e)
           });
       },

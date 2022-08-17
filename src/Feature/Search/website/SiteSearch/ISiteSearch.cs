@@ -11,6 +11,9 @@
         [SitecoreField(Constants.SiteSearch.NoSearchResultsFoundLabelFieldId)]
         string NoSearchResultsFound { get; set; }
 
+        [SitecoreField(Constants.SiteSearch.SimilarResultsLabelField)]
+        string SimilarResultsLabel { get; set; }
+
         [SitecoreField(Constants.SiteSearch.ResultsPerPageFieldId)]
         string ResultsPerPage { get; set; }
         

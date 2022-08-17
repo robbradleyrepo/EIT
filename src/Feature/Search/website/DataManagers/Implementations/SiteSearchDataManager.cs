@@ -39,70 +39,35 @@
             public Dictionary<string, string[]> Facets { get; set; }
 
             public int Page { get; set; }
+
+            public bool SimilarResults { get; set; }
         }
 
         public ISearchResponse<SiteSearchHit> Search(string query, string database, string templatesIds, string language, int resultsPerPage, int page)
         {
             var SearchResponse = new SearchResponse<SiteSearchHit>();
+
             try
             {
-                var startPage = resultsPerPage * (page - 1);
-                using (IProviderSearchContext context = ContentSearchManager
-                                                                .GetIndex($"liontrust_search_{database}_index")
-                                                                .CreateSearchContext(SearchSecurityOptions.DisableSecurityCheck))
+                var searchResults = SearchResults(query, database, templatesIds, language, resultsPerPage, page);
+
+                if (searchResults.TotalResults > 0)
                 {
+                    SearchResponse.SearchResults = MapFundResultHits(searchResults.SearchResults);
+                    SearchResponse.StatusMessage = "Success";
+                    SearchResponse.StatusCode = (int)System.Net.HttpStatusCode.OK;
+                    SearchResponse.TotalResults = searchResults.TotalResults;
+                }
+                else
+                {
+                    var similarSearchResults = SearchResults(query, database, templatesIds, language, resultsPerPage, page, true);
 
-                    var predicate = new LocalDatasourceQueryPredicateProvider<SiteSearchResultItem>().GetQueryPredicate(new BasicQuery { QueryText = query });
-                    var legacyPredicate = new LegacyQueryPredicateProvider<SiteSearchResultItem>().GetQueryPredicate(new BasicQuery { QueryText = query });
-
-                    predicate = predicate.Or(legacyPredicate);
-                    if (!string.IsNullOrWhiteSpace(templatesIds))
+                    if (similarSearchResults.TotalResults > 0)
                     {
-                        var templateQuery = PredicateBuilder.True<SiteSearchResultItem>();
-                        foreach (var id in templatesIds.Split('|'))
-                        {
-                            var templateId = new ID(id);
-
-                            if (!ID.IsNullOrEmpty(templateId))
-                            {
-                                templateQuery = templateQuery.Or(s => s.TemplateId == templateId);
-                            }
-                        }
-
-                        predicate = predicate.And(templateQuery);
-                        
-                    }
-
-                    var country = OnboardingHelper.GetCurrentContactCountryCode();
-                    predicate = predicate.And(x => !x.ExcludedCountries.Contains(country));
-
-                    predicate = predicate.And(x => x.IncludeInSearchResults);
-
-                    var searchQuery = context.GetQueryable<SiteSearchResultItem>()
-                        .Where(predicate)
-                        .Where(r => r.Language == language)
-                        .OrderBy(r => r.Priority)
-                        .ThenByDescending(r => r["score"])
-                        .ThenByDescending(r => r.ArticleCreatedDate)
-                        .Skip(startPage)
-                        .Take(resultsPerPage);
-
-                    var results = searchQuery.GetResults();
-
-                    if (results == null)
-                    {
-                        return null;
-                    }
-
-                    var contentSearchResults = new ContentSearchResults<SiteSearchResultItem> { SearchResults = results, TotalResults = results.TotalSearchResults };
-
-
-                    if (contentSearchResults.TotalResults > 0)
-                    {
-                        SearchResponse.SearchResults = MapFundResultHits(contentSearchResults.SearchResults);
+                        SearchResponse.SimilarSearchResults = MapFundResultHits(similarSearchResults.SearchResults);
                         SearchResponse.StatusMessage = "Success";
                         SearchResponse.StatusCode = (int)System.Net.HttpStatusCode.OK;
-                        SearchResponse.TotalResults = contentSearchResults.TotalResults;
+                        SearchResponse.TotalSimilarResults = similarSearchResults.TotalResults;
                     }
                     else
                     {
@@ -120,6 +85,62 @@
 
             return SearchResponse;
 
+        }
+
+        private ContentSearchResults<SiteSearchResultItem> SearchResults(string query, string database, string templatesIds, string language, int resultsPerPage, int page, bool similarResults = false)
+        {
+            var SearchResponse = new SearchResponse<SiteSearchHit>();
+
+            var startPage = resultsPerPage * (page - 1);
+            using (IProviderSearchContext context = ContentSearchManager
+                                                            .GetIndex($"liontrust_search_{database}_index")
+                                                            .CreateSearchContext(SearchSecurityOptions.DisableSecurityCheck))
+            {
+                var predicate = new LocalDatasourceQueryPredicateProvider<SiteSearchResultItem>().GetQueryPredicate(new BasicQuery { QueryText = query, SimilarResults = similarResults });
+                var legacyPredicate = new LegacyQueryPredicateProvider<SiteSearchResultItem>().GetQueryPredicate(new BasicQuery { QueryText = query, SimilarResults = similarResults });
+
+                predicate = predicate.Or(legacyPredicate);
+                if (!string.IsNullOrWhiteSpace(templatesIds))
+                {
+                    var templateQuery = PredicateBuilder.True<SiteSearchResultItem>();
+                    foreach (var id in templatesIds.Split('|'))
+                    {
+                        var templateId = new ID(id);
+
+                        if (!ID.IsNullOrEmpty(templateId))
+                        {
+                            templateQuery = templateQuery.Or(s => s.TemplateId == templateId);
+                        }
+                    }
+
+                    predicate = predicate.And(templateQuery);
+
+                }
+
+                var country = OnboardingHelper.GetCurrentContactCountryCode();
+                predicate = predicate.And(x => !x.ExcludedCountries.Contains(country));
+
+                predicate = predicate.And(x => x.IncludeInSearchResults);
+
+                var searchQuery = context.GetQueryable<SiteSearchResultItem>()
+                    .Where(predicate)
+                    .Where(r => r.Language == language)
+                    .OrderBy(r => r.Priority)
+                    .ThenByDescending(r => r["score"])
+                    .ThenByDescending(r => r.ArticleCreatedDate)
+                    .Skip(startPage)
+                    .Take(resultsPerPage);
+
+                var results = searchQuery.GetResults();
+
+                if (results == null)
+                {
+                    return null;
+                }
+
+                var contentSearchResults = new ContentSearchResults<SiteSearchResultItem> { SearchResults = results, TotalResults = results.TotalSearchResults };
+                return contentSearchResults;
+            }
         }
 
         private IEnumerable<SiteSearchHit> MapFundResultHits(IEnumerable<SearchHit<SiteSearchResultItem>> hits)

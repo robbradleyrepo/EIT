@@ -10,6 +10,7 @@
     using Sitecore;
     using Sitecore.ContentSearch.SearchTypes;
     using Sitecore.Data;
+    using Sitecore.ContentSearch.Linq.Utilities;
 
     public class LocalDatasourceQueryPredicateProvider<T>: ProviderBase, IQueryPredicateProvider<T> where T : SearchResultItem
     {
@@ -17,10 +18,17 @@
 
         public Expression<Func<T, bool>> GetQueryPredicate(IQuery query)
         {
-            var fieldNames = new[] { Templates.Index.Fields.LocalDatasourceContent_IndexFieldName };
-            var boosting = new[] { 9f };
+            var fields = new[] { new Field { FieldName = Templates.Index.Fields.LocalDatasourceContent_IndexFieldName, Boost = 9f }};
 
-            return GetFreeTextPredicateService<T>.GetFreeTextPredicate(fieldNames, boosting, query);
+            var predicate = GetTextPredicateService<T>.GetFreeTextPredicate(fields, query);
+
+            if (query.SimilarResults)
+            {
+                var expression = GetTextPredicateService<T>.GetFuzzyTextPredicate(fields, query);
+                predicate = predicate.Or(expression);
+            }
+
+            return predicate;
         }
     }
 }
