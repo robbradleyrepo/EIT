@@ -6,7 +6,7 @@
      data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.SiteSearchApiRoute_SettingName))">
     <div class="row">
         <div class="col-lg-7">
-            <div class="search-header__desktop">
+            <div class="search-header__desktop" data-recent-searches-label="@Model.RecentSearchesLabel">
                 <div class="search-header__title">
                     {{amountResults}} search results for:
                 </div>
