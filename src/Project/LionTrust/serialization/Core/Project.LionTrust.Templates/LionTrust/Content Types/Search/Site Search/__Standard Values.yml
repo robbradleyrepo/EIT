@@ -19,7 +19,7 @@ Languages:
       Value: 10
     - ID: "233579af-fd62-46a8-9571-be7637bc2a52"
       Hint: SiteSearch_SimilarResultsLabel
-      Value: "No results found - showing similar results"
+      Value: "No results found - showing {TotalResults} similar results"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20210625T101443Z
@@ -30,6 +30,9 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
+    - ID: "75085258-8904-4830-8bc6-98021d1ee711"
+      Hint: SiteSearch_SearchResultsLabel
+      Value: "{TotalResults} search results for:"
     - ID: "7e350bba-b71b-49aa-910f-5316636cac17"
       Hint: SiteSearch_SearchLabel
       Value: Search again

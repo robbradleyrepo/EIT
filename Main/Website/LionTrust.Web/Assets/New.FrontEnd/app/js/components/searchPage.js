@@ -5,6 +5,9 @@ const rootDom = document.getElementById("result-list-app");
 let root = "";
 let host = rootDom.dataset.host;
 const pageSize = rootDom.dataset.pagesize;
+const searchResultsLabel = rootDom.dataset.searchresultslabel;
+const similarResultsLabel = rootDom.dataset.similarresultslabel;
+const totalResultsToken = "{TotalResults}";
 if (
   window.location.hostname === "localhost" ||
   window.location.hostname === "127.0.0.1"
@@ -22,10 +25,10 @@ export default () => {
       results: [],
       init: false,
       amountResults: 0,
-      hasSimilarResults: false,
       showPerPage: pageSize,
       showPageInPagination: 7,
       loading: true,
+      searchLabel: '',
       searchParams: {
         query: "",
         filters: "",
@@ -90,12 +93,12 @@ export default () => {
             this.amountResults = totalResults;
 
             if (totalResults <= 0 && totalSimilarResults > 0){
-              this.hasSimilarResults = true;
               this.results = similarSearchResults;
               this.amountResults = totalSimilarResults;
+              this.searchLabel = similarResultsLabel.replace(totalResultsToken, this.amountResults);
             }
             else{
-              this.hasSimilarResults = false;
+              this.searchLabel = searchResultsLabel.replace(totalResultsToken, this.amountResults);
             }
 
             this.loading = false;
@@ -104,7 +107,7 @@ export default () => {
             this.loading = false;
             this.results = [];
             this.amountResults = 0;
-            this.hasSimilarResults = false;
+            this.searchLabel = searchResultsLabel.replace(totalResultsToken, this.amountResults);
             console.error("Data is not being retrieved", e)
           });
       },

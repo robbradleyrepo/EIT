@@ -3,15 +3,14 @@
 @model LionTrust.Feature.Search.SiteSearch.ISiteSearch
 <div class="container" id="result-list-app" v-cloak 
      data-pagesize="@(!string.IsNullOrWhiteSpace(@Model.ResultsPerPage) ? "10" : @Model.ResultsPerPage)" 
-     data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.SiteSearchApiRoute_SettingName))">
+     data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.SiteSearchApiRoute_SettingName))"
+     data-similarresultslabel="@(Model.SimilarResultsLabel)"
+     data-searchresultslabel="@(Model.SearchResultsLabel)">
     <div class="row">
         <div class="col-lg-7">
             <div class="search-header__desktop" data-recent-searches-label="@Model.RecentSearchesLabel">
-                <div v-if="!hasSimilarResults && !loading" class="search-header__title">
-                    {{amountResults}} search results for:
-                </div>
-                <div v-if="hasSimilarResults && !loading" class="search-header__title">
-                    @Model.SimilarResultsLabel
+                <div class="search-header__title">
+                    {{searchLabel}}
                 </div>
                 <form class="search-form" @@submit.prevent="submit">
                     <input v-model="searchParams.query"
