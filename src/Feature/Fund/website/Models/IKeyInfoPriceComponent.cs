@@ -15,6 +15,9 @@
 
         [SitecoreField(Constants.KeyInfoPriceComponent.Comparator2Label_FieldId)]
         string Comparator2Label { get; set; }
+        
+        [SitecoreField(Constants.KeyInfoPriceComponent.Comparator3Label_FieldId)]
+        string Comparator3Label { get; set; }
 
         [SitecoreField(Constants.KeyInfoPriceComponent.OfferPriceLabel_FieldId)]
         string OfferPriceLabel { get; set; }

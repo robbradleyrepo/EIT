@@ -61,6 +61,7 @@
     <Compile Include="Constants.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="JsonExtension\JsonDateConverter.cs" />
+    <Compile Include="Models\ContentSearch\FundTeamFacetsSearchResults.cs" />
     <Compile Include="Models\ContentSearch\ContactListSearchResultItem.cs" />
     <Compile Include="Models\ContentSearch\ContentSearchResults.cs" />
     <Compile Include="Models\API\Dates.cs" />

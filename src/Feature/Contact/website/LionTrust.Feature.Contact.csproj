@@ -58,6 +58,11 @@
     </PackageReference>
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="1.0.5" />
     <PackageReference Include="Microsoft.Net.Compilers" Version="2.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.SlowCheetah">
+      <Version>4.0.8</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.Web.Infrastructure">
       <Version>1.0.0</Version>
     </PackageReference>
@@ -79,11 +84,13 @@
     <Content Include="Views\Contact\ContactUsForm.cshtml" />
     <Content Include="Views\Contact\_ContactCard.cshtml" />
     <Content Include="Views\Contact\GreyPanel.cshtml" />
+    <Content Include="App_Config\Include\Feature\FormsExtensions\Feature.FormsExtensions.Settings.config">
+      <TransformOnBuild>true</TransformOnBuild>
+    </Content>
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
-    <Compile Include="Models\FollowUsSocialIcon.cs" />
     <Compile Include="Models\IContactCard.cs" />
     <Compile Include="Models\IContactGlassBase.cs" />
     <Compile Include="Models\IContactUsCard.cs" />
@@ -96,9 +103,17 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Foundation\Analytics\website\LionTrust.Foundation.Analytics.csproj">
+      <Project>{71010683-02eb-4e0d-b0e1-6643922799ee}</Project>
+      <Name>LionTrust.Foundation.Analytics</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Design\website\LionTrust.Foundation.Design.csproj">
       <Project>{7f86dd63-be79-4107-804a-514dca76e01e}</Project>
       <Name>LionTrust.Foundation.Design</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Navigation\website\LionTrust.Foundation.Navigation.csproj">
+      <Project>{0E1E5F5C-F4FE-4AFC-BC53-B67A885BBB8C}</Project>
+      <Name>LionTrust.Foundation.Navigation</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\ORM\website\LionTrust.Foundation.ORM.csproj">
       <Project>{5e91a7d9-8e93-44fd-857f-f9ce145b6022}</Project>

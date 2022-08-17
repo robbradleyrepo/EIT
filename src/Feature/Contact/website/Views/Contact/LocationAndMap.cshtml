@@ -16,7 +16,7 @@
                     {
                         foreach (var mapLink in Model.MapLinks)
                         {                            
-                            <button class="select-office__tab @activeCssClass" data-tab="@mapLink.Name">@mapLink.MapLinkName</button>
+                            <button class="select-office__tab @activeCssClass" data-tab="@mapLink.Id">@mapLink.MapLinkName</button>
                             if (first)
                             {
                                 first = false;
@@ -42,7 +42,7 @@
                     {
                         @:Edit Map Link
                     }
-                    <div class="location-item @activeCssClass" id="@mapLink.Name">
+                    <div class="location-item @activeCssClass" id="@mapLink.Id">
                         <div class="d-lg-none">
                             <div class="container">
                                 <div class="our-location">

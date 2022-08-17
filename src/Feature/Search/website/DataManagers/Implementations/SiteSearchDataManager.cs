@@ -16,7 +16,6 @@
     using LionTrust.Foundation.Search.Models.ContentSearch;
     using SiteSearchResultItem = SiteSearch.SiteSearchResultItem;
     using System;
-    using Sitecore.Diagnostics;
     using LionTrust.Foundation.Content.Repositories;
     using Glass.Mapper.Sc;
     using LionTrust.Feature.Search.Models.API;
@@ -77,9 +76,14 @@
                     var country = OnboardingHelper.GetCurrentContactCountryCode();
                     predicate = predicate.And(x => !x.ExcludedCountries.Contains(country));
 
+                    predicate = predicate.And(x => x.IncludeInSearchResults);
+
                     var searchQuery = context.GetQueryable<SiteSearchResultItem>()
                         .Where(predicate)
                         .Where(r => r.Language == language)
+                        .OrderBy(r => r.Priority)
+                        .ThenByDescending(r => r["score"])
+                        .ThenByDescending(r => r.ArticleCreatedDate)
                         .Skip(startPage)
                         .Take(resultsPerPage);
 
@@ -124,7 +128,10 @@
             foreach (var hit in hits)
             {
                 if (hit.Document != null)
-                {                   
+                {
+                    var relatedFundName = !string.IsNullOrEmpty(hit.Document.RelatedFundName)
+                                          ? hit.Document.RelatedFundName.Split('|')[0]
+                                          : string.Empty;
                     var siteSearchHit = new SiteSearchHit
                     {
                         Url = hit.Document.PageUrl,
@@ -137,7 +144,9 @@
                         ResultType = hit.Document.ResultType,
                         PageDate = hit.Document.ArticleCreatedDate.ToString("dd MMMM yyyy"),
                         TemplateId = hit.Document.TemplateId.Guid,
-                        FactsheetUrl = hit.Document.FactSheetUrl                       
+                        FactsheetUrl = hit.Document.FactSheetUrl,
+                        RelatedFundName = relatedFundName,
+                        RelatedFundUrl = hit.Document.RelatedFundUrl
                     };
 
                     results.Add(siteSearchHit);

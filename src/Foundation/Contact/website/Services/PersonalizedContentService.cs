@@ -59,6 +59,10 @@
                         context = CreateContext(sfEntityId, sfRandomGUID);
                     }
                 }
+                else if (!string.IsNullOrEmpty(context?.SFEntityId) && !string.IsNullOrEmpty(context?.SFRandomGUID))
+                {
+                    context = CreateContext(context.SFEntityId, context.SFRandomGUID);
+                }
                 else
                 {
                     var xconnectData = _xconnectUtilityRepository.GetCurrentSitecoreContactFacetData();

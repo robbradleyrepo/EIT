@@ -5,7 +5,7 @@ export default () => {
     watchSlidesVisibility: true,
     centeredSlides: true,
     breakpointsInverse: true,
-    longSwipes: false,
+    longSwipes: true,
     slideToClickedSlide: true,
     setWrapperSize: false,
     spaceBetween: 5,

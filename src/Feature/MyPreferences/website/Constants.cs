@@ -88,6 +88,11 @@
             public const string Subject_FieldId = "{E20E06C6-6506-4B38-8012-53983E7A3D48}";
             public const string Message_FieldId = "{0A8BDBC5-3A31-4B6D-B951-757771FD99A0}";
         }
+        
+        public static class EditPreferencesPage
+        {
+            public const string TemplateId = "{68ED9154-702A-4D18-A718-4BCC5AC1D5E6}";
+        }
 
         public static class EditPreferences
         {

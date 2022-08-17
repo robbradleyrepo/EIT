@@ -49,7 +49,7 @@
                 var fundPredicate = PredicateBuilder.False<ArticleSearchResultItem>();
                 fundPredicate = articleSearchRequest.Funds.Aggregate(fundPredicate,
                                                                           (current, fund) => current
-                                                                                                  .Or(item => item.ArticleFund == IdHelper.NormalizeGuid(fund, true)));
+                                                                                                  .Or(item => item.ArticleFunds.Contains(IdHelper.NormalizeGuid(fund, true))));
 
                 taxonomyFilter = taxonomyFilter.And(fundPredicate);
             }
@@ -88,7 +88,8 @@
                                                     .Aggregate(teamPredicate,
                                                                     (current, team)
                                                                                 => current
-                                                                                     .Or(item => item.ArticleAuthorTeams.Contains(team)));
+                                                                                     .Or(item => item.ArticleAuthorTeams.Contains(team)
+                                                                                              || item.RelatedFundTeam.Contains(IdHelper.NormalizeGuid(team, true))));
 
                 taxonomyFilter = taxonomyFilter.And(teamPredicate);
             }

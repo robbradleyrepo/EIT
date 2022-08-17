@@ -1,11 +1,8 @@
 ﻿namespace LionTrust.Foundation.Indexing.ComputedFields.Article
 {
-    using System;
-
     using LionTrust.Foundation.Indexing.ComputedFields.SharedLogic;
     using Sitecore.ContentSearch;
     using Sitecore.ContentSearch.ComputedFields;
-    using Sitecore.Data.Items;
 
     public class ArticleFundName : IComputedIndexField
     {

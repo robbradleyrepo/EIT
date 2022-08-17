@@ -69,7 +69,7 @@
                 SPProcessList = SPProcessList.Where(l => l.SFFundList != null && l.SFFundList.Any())?.ToList();
             }
 
-            if (context == null || context.Preferences == null || context.Preferences.SFProcessList == null)
+            if (context == null || context.Preferences == null || context.Preferences.SFProcessList == null || (Sitecore.Context.Item.Template.ID.ToString() != Constants.EditPreferencesPage.TemplateId))
             {
                 return SPProcessList;
             }

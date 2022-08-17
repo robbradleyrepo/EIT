@@ -34,4 +34,16 @@ export default () => {
         $win.scrollTop(offsetY);
     });
 
+    $(document).on("click", () => {
+    $(".lit-overlay__wrapper").removeClass("active");
+    $(".sidebar-overlay").removeClass("sidebar-overlay_active");
+    $body.css({
+      'position': 'static',
+      'transition': 'all 0.75s ease-in-out'
+    });
+    $win.scrollTop(offsetY);
+  });
+
+
 };
+

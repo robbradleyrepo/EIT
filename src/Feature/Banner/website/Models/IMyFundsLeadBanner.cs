@@ -18,5 +18,13 @@
         [SitecoreField(Banner.Constants.MyFundsLeadBanner.BodyFieldId)]
         string Body { get; set; }
 
+        [SitecoreField(Banner.Constants.MyFundsLeadBanner.NoContactTitleFieldId)]
+        string NoContactTitle { get; set; }
+
+        [SitecoreField(Banner.Constants.MyFundsLeadBanner.NoContactCtaFieldId)]
+        Link NoContactCta { get; set; }
+
+        [SitecoreField(Banner.Constants.MyFundsLeadBanner.NoContactBodyFieldId)]
+        string NoContactBody { get; set; }
     }
 }

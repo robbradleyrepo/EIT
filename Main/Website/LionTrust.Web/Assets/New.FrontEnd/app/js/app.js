@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     preferenceCenter();
     if (document.querySelector(".page-anchor-link")) stickyNavbar();
     if (document.querySelector(".main-page")) parallaxScrolling();
+    $(".navigation__checkbox").prop("checked", false); //Uncheck mobile menu navigation on load
     // init tooltips
     $('[data-toggle="tooltip"]').tooltip({
         offset: 5,
@@ -58,4 +59,4 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }); 
 
-});
+}); 

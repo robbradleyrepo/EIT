@@ -58,7 +58,7 @@
                 DatabaseName = databaseName
             };
 
-            var results = _searchService.GetDatedTaxonomyRelatedArticles(request, result => result.OrderByDescending(hit => hit.Created));
+            var results = _searchService.GetDatedTaxonomyRelatedArticles(request, result => result.OrderByDescending(hit => hit.ArticleCreatedDate));
 
             if (results == null || results.SearchResults == null)
             {
@@ -127,10 +127,18 @@
                 return articleSchema;
             }
 
-            var logoItem = _mvcContext.SitecoreService.GetItem<Item>(identityModel.Logo.MediaId);
-            if (logoItem != null)
+            var schemaLogoItem = _mvcContext.SitecoreService.GetItem<Item>(identityModel.SchemaLogo.MediaId);
+            if (schemaLogoItem != null)
             {
-                articleSchema.LogoUrl = MediaManager.GetMediaUrl(logoItem, mediaOption);
+                articleSchema.LogoUrl = MediaManager.GetMediaUrl(schemaLogoItem, mediaOption);
+            }
+            else
+            {
+                var logoItem = _mvcContext.SitecoreService.GetItem<Item>(identityModel.Logo.MediaId);
+                if (logoItem != null)
+                {
+                    articleSchema.LogoUrl = MediaManager.GetMediaUrl(logoItem, mediaOption);
+                }
             }
 
             return articleSchema;

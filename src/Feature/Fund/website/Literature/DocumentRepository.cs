@@ -51,14 +51,13 @@
         private List<DocumentSearchResult> GetRelatedDouments(IFund fund, string databaseName)
         {
             var indexedFundId = fund.Id.ToString("N");
-            var fundId = new ID(fund.Id);
             using (var context = ContentSearchManager
                                                             .GetIndex($"sitecore_{databaseName}_index")
                                                             .CreateSearchContext(SearchSecurityOptions.DisableSecurityCheck))
             {
                 return context.GetQueryable<DocumentSearchResult>()
                     .Where(r => r.AllTemplates.Contains(templateId))
-                    .Where(r => !r.Paths.Contains(fundId))
+                    .Where(r => r.Paths.Contains(Constants.SharedDocuments.FolderId))
                     .Where(r => r.RelatedFunds != null && r.RelatedFunds.Contains(indexedFundId)).ToList();                
             }
         }

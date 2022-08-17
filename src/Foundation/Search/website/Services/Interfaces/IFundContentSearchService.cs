@@ -10,5 +10,7 @@
         ContentSearchResults<FundSearchResultItem> GetFunds(FundSearchRequest fundSearchRequest, Func<IQueryable<FundSearchResultItem>, IQueryable<FundSearchResultItem>> sort = null);
 
         ContentSearchResults<FundSearchResultItem> GetAllAllowedFunds();
+
+        FundTeamFacetsSearchResults GetFundTeamFacets(FundSearchRequest fundSearchRequest);
     }
 }

@@ -1,6 +1,138 @@
 <!--#set var="title" value="LionTrust" -->
 <!--#include virtual="/components/head.html" -->
 <body>
+<!--#set var="title" value="LionTrust" -->
+<!--#include virtual="/components/head.html" -->
+
+<body class="find-lister-page">
+    <header class="header header-bg-gradient">
+        <section class="container">
+            <!--#include virtual="/components/GC001-Header.html" -->
+            <!--#include virtual="/components/UI014-Lead-Banner-new.html" -->
+            <div class="header-btn-nav">
+                <span class="header-btn-nav__title">Explore</span>
+                <a href="#" class="header-btn-nav__btn">Fund Updates</a>
+                <a href="#" class="header-btn-nav__btn">Fund Manager Views</a>
+                <a href="#" class="header-btn-nav__btn">Podcasts & Webinars</a>
+                <a href="#" class="header-btn-nav__btn">Videos</a>
+                <a href="#" class="header-btn-nav__btn">Magazines & Reports</a>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <div class="lister-app" id="lister-app" data-host="FundSearchApi" v-cloak data-literatureId="2A60AA49-72DB-4D51-A5FB-E4F25B1B9E19">
+            <!--#include virtual="/components/BC005-Fund-Filters.html" -->
+            <section class="container">
+                <div class="text-center my-5" v-if="loading">
+                    <div class="spinner-border text-gold" role="status"></div>
+                  </div>
+                <div class="row" v-if="grid">
+                    <article-item inline-template v-for="(fund, i) in searchData" :key="i + fund.fundName">
+                        <div class="col-md-6 col-lg-4 col-xl-3 d-flex">
+                            <div class="fund-card fund-card_grid">
+                                <div class="fund-card__head">
+                                    <img :src="fund.fundCardImageUrl" :alt="fund.fundCardHeading" />
+                                </div>
+                                <div class="fund-card__content">
+                                    <div class="fund-card__content-top">
+                                        <span class="fund-card__subtitle">{{fund.fundCardHeading}}</span>
+                                        <span class="fund-card__title"> {{fund.fundName}}</span>
+                                        <div class="fund-card__text">
+                                            <div class="fund-card__text-top">
+                                                <p>
+                                                    {{fund.fundCardDescription}}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="fund-card__text-bottom">
+                                        <div class="fund-card__btns-block">
+                                            <a :href="fund.fundFactSheet" class="fund-card__btn">Factsheet <i class="icon-file"></i></a>
+                                            <button class="fund-card__btn" @click="showLiteratureOverlay(fund.fundId)">All documents <i
+                                                    class="icon-folder"></i></button>
+                                        </div>
+                                        <a :href="fund.url" class="link-styles">
+                                            {{fund.ctaText ? fund.ctaText : 'View this fund'}}
+                                            <i class="icon-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article-item>
+                </div>
+                <article-item v-else inline-template v-for="(fund, i) in searchData" :key="i + fund.fundName">
+                    <div class="fund-item-list">
+                        <div class="row align-items-center">
+                            <div class="col-xl-4">
+                                <span class="fund-item-list__title">{{fund.fundName}}</span>
+
+                            </div>
+                            <div class="col-xl-2">
+                                <div class="fund-item-list__badge">
+                                    <span class="badge-secondary">
+                                        {{fund.fundCardHeading}}
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-xl-4">
+                                <div class="fund-item-list__links">
+                                    <button href="#" class="link-gray">Follow <i class="icon-follow"></i></button>
+                                    <a :href="fund.fundFactSheet" target="_blank" class="link-gray">Factsheet <i class="icon-file"></i></a>
+                                    <button class="link-gray" @click="showLiteratureOverlay(fund.fundId)">All documents <i class="icon-folder"></i></button>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-xl-2">
+                                <div class="fund-item-list__right-btn">
+                                    <a :href="fund.url" class="btn btn-primary-forward">
+                                        {{fund.ctaText ? fund.ctaText : 'View this fund'}} <i class="icon-arrow-right animate-arrow"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article-item>
+            <div>
+                <div class="d-flex justify-content-center">
+                    <nav v-if="getPageAmount > 1" class="pagination mt-3">
+                        <a href="#" @click.prevent="prevPage" class="pagination__step pagination__step_forward"
+                            :class="disablePrevBtn ? 'pagination__step_disabled' : ''"><i
+                                class="icon-arrow-left"></i> Previous</a>
+                        <ul class="pagination__list">
+                            <li class="pagination__item">
+                                <a @click.prevent="jumpPagesForward" v-if="showForwardPageBtn" href="#"
+                                    class="pagination__link pagination__link_steps">...</a>
+                            </li>
+                            <li v-for="(page, i) in getPages" :key="i" class="pagination__item">
+                                <a @click.prevent="changePage(page)" href="#" class="pagination__link"
+                                    :class="getPage === page ? 'active' : ''">
+                                    {{page}}
+                                </a>
+                            </li>
+                            <li class="pagination__item">
+                                <a @click.prevent="jumpPagesNext" v-if="showNextPageBtn" href="#"
+                                    class="pagination__link pagination__link_steps">...</a>
+                            </li>
+                        </ul>
+                        <a href="#" @click.prevent="nextPage"
+                            :class="disabledNextBtn ? 'pagination__step_disabled' : ''"
+                            class="pagination__step pagination__step_next">Next <i class="icon-arrow-right"></i></a>
+                    </nav>
+                </div>
+            </div>
+            </section>
+
+        </div>
+        <!--#include virtual="/components/UI023-Newsletter-Promo.html" -->
+    </main>
+
+    <!--#include virtual="/components/GC009-Breadcrumb-Nav.html" -->
+    <!--#include virtual="/components/BC020-Literature-Overlay.html" -->
+    <!--#include virtual="/components/LDC-190-Footer.html" -->
+    <!--#include virtual="/components/GC008-Onboarding-Overlay.html" -->
+    <!--#include virtual="/components/GC006-Search-Overlay.html" -->
+    <!--#include virtual="/components/footer.html" -->
 <header class="header header_fund-manager">
 	<section class="container">
         <!--#include virtual="/components/GC001-Header.html" -->        

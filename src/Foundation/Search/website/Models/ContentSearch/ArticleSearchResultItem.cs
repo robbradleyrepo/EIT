@@ -25,7 +25,7 @@
         public string ArticleAuthorNames { get; set; }
 
         [IndexField("LegacyArticle_Fund")]
-        public string ArticleFund { get; set; }
+        public IEnumerable<string> ArticleFunds { get; set; }
 
         [IndexField("article_fund_name")]
         public string ArticleFundName { get; set; }
@@ -77,7 +77,7 @@
         public DateTime Created { get; set; }
 
         [IndexField("article_author_teams")]
-        public IEnumerable<string> ArticleAuthorTeams { get; set; }
+        public IEnumerable<string> ArticleAuthorTeams { get; set; }        
 
         [IndexField("article_created_date")]
         public DateTime ArticleCreatedDate { get; set; }
@@ -87,5 +87,8 @@
 
         [IndexField("article_created_date_year")]
         public int ArticleCreatedDateYear { get; set; }
+
+        [IndexField("related_fund_team")]
+        public string RelatedFundTeam { get; set; }
     }
 }

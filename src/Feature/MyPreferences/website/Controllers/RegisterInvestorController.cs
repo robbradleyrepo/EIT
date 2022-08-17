@@ -14,7 +14,11 @@
     using Sitecore.Mvc.Controllers;
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     using System.Web.Mvc;
+    using Foundation.Contact;
+    using Sitecore.XConnect.Client;
+    using Sitecore.XConnect.Collection.Model;
     using static LionTrust.Feature.MyPreferences.Constants;
     using QueryStringNames = Foundation.Contact.Constants.QueryStringNames;
 
@@ -147,12 +151,31 @@
                             userExists = savedUser.IsUserExists;
                         }
                     }
-
+                    
                     if (!userExists)
                     {
+                        //get original context
                         var context = _personalizedContentService.GetContext();
+                        var oldEmail = context.Preferences.EmailAddress;
+                        
+                        //reset context as we identified a new user
+                        _personalizedContentService.UpdateContext(null);
+                        context = _personalizedContentService.GetContext();
+                        
                         if (UpdateEmailPreferences(registerInvestorSubmit, context))
                         {
+                            //switch back to original visitor if needed
+                            if (registerInvestorSubmit.Email != oldEmail)
+                            {
+                                var sfEntityUtilityObj = new SFEntityUtility();
+                                var scVisitorId =
+                                    sfEntityUtilityObj.IdentifyVisitorAndGetVisitorId(oldEmail);
+                                
+                                //reset context as we identified a new user
+                                _personalizedContentService.UpdateContext(null);
+                                context = _personalizedContentService.GetContext();
+                            }
+
                             return Redirect(data.ConfirmationPage.Url);
                         }
                         else
@@ -163,7 +186,7 @@
                     else
                     {
                         error = Errors.UserExists;
-                        return Redirect($"{Request.RawUrl}?{QueryStringNames.EmailPreferencefParams.ErrorQueryStringKey}={(int)error}&{QueryStringNames.EmailPreferencefParams.EmailQueryStringKey}={registerInvestorSubmit.Email}#retrieve-preferences");
+                        return Redirect($"{Request.Url.GetLeftPart(UriPartial.Path)}?{QueryStringNames.EmailPreferencefParams.ErrorQueryStringKey}={(int)error}&{QueryStringNames.EmailPreferencefParams.EmailQueryStringKey}={registerInvestorSubmit.Email}#retrieve-preferences");
                     }
                 }
                 else
@@ -177,7 +200,7 @@
                 error = Errors.General;
             }
 
-            return Redirect($"{Request.RawUrl}?{QueryStringNames.EmailPreferencefParams.ErrorQueryStringKey}={(int)error}");
+            return Redirect($"{Request.Url.GetLeftPart(UriPartial.Path)}?{QueryStringNames.EmailPreferencefParams.ErrorQueryStringKey}={(int)error}");
         }
 
         public ActionResult ResendEmail(string email, Guid dataSourceId, bool isContact)

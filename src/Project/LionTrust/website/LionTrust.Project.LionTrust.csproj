@@ -43,6 +43,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Dianoga">
+      <Version>6.0.1</Version>
+    </PackageReference>
     <PackageReference Include="Sitecore.Kernel" Version="9.2.0" />
     <PackageReference Include="Sitecore.Mvc">
       <Version>9.2.0</Version>
@@ -59,7 +62,30 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Dianoga Tools\avif\avifenc.exe" />
+    <Content Include="App_Data\Dianoga Tools\avif\LICENSE.txt" />
+    <Content Include="App_Data\Dianoga Tools\jpegoptim-windows\COPYING.txt" />
+    <Content Include="App_Data\Dianoga Tools\jpegoptim-windows\COPYRIGHT.txt" />
+    <Content Include="App_Data\Dianoga Tools\jpegoptim-windows\jpegoptim.exe" />
+    <Content Include="App_Data\Dianoga Tools\jxl\cjxl.exe" />
+    <Content Include="App_Data\Dianoga Tools\libwebp\COPYING.txt" />
+    <Content Include="App_Data\Dianoga Tools\libwebp\cwebp.exe" />
+    <Content Include="App_Data\Dianoga Tools\libwebp\gif2webp.exe" />
+    <Content Include="App_Data\Dianoga Tools\mozjpeg\cjpeg.exe" />
+    <Content Include="App_Data\Dianoga Tools\mozjpeg\jpegtran.exe" />
+    <Content Include="App_Data\Dianoga Tools\mozjpeg\LICENSE.txt" />
+    <Content Include="App_Data\Dianoga Tools\PNGOptimizer\Changelog.txt" />
+    <Content Include="App_Data\Dianoga Tools\PNGOptimizer\License.txt" />
+    <Content Include="App_Data\Dianoga Tools\PNGOptimizer\PngOptimizerCL.exe" />
+    <Content Include="App_Data\Dianoga Tools\PNGOptimizer\Readme.txt" />
+    <Content Include="App_Data\Dianoga Tools\pngquant\pngquant.exe" />
+    <Content Include="App_Data\Dianoga Tools\pngquant\README.txt" />
+    <Content Include="App_Data\Dianoga Tools\SVGO\LICENSE.txt" />
+    <Content Include="App_Data\Dianoga Tools\SVGO\svgo-win.exe" />
+    <Content Include="App_Data\Dianoga Tools\SVGO\svgo.sample.config.js" />
     <Content Include="sitecore\login\LionTrust_Wallpaper.jpg" />
+    <Content Include="sitecore\shell\client\Sitecore\ContentTesting\ShowSuggestedTestsCommand.js" />
+    <Content Include="sitecore\shell\Controls\Rich Text Editor\RichText Commands.js" />
     <Content Include="Views\Layouts\LionTrust\Default.cshtml" />
     <Content Include="App_Config\Include\Project\z.LionTrust.DevSettings.config" />
     <Content Include="App_Config\Include\Project\LionTrust.Serialization.DevSettings.config" />
@@ -81,6 +107,32 @@
     <Content Include="Views\FormBuilder\FieldTemplates\SingleLineText.cshtml" />
     <Content Include="Views\FormBuilder\FieldTemplates\Telephone.cshtml" />
     <Content Include="Views\FormBuilder\Form.cshtml" />
+    <Content Include="App_Data\Dianoga Tools\jxl\LICENSE.brotli" />
+    <Content Include="App_Data\Dianoga Tools\jxl\LICENSE.giflib" />
+    <Content Include="App_Data\Dianoga Tools\jxl\LICENSE.highway" />
+    <Content Include="App_Data\Dianoga Tools\jxl\LICENSE.libjpeg-turbo" />
+    <Content Include="App_Data\Dianoga Tools\jxl\LICENSE.libjxl" />
+    <Content Include="App_Data\Dianoga Tools\jxl\LICENSE.libpng" />
+    <Content Include="App_Data\Dianoga Tools\jxl\LICENSE.libwebp" />
+    <Content Include="App_Data\Dianoga Tools\jxl\LICENSE.sjpeg" />
+    <Content Include="App_Data\Dianoga Tools\jxl\LICENSE.skcms" />
+    <Content Include="App_Data\Dianoga Tools\jxl\LICENSE.zlib" />
+    <Content Include="App_Data\Dianoga Tools\pngquant\COPYRIGHT" />
+    <Content Include="App_Config\Include\Dianoga\Dianoga.DisableForSites.config" />
+    <Content Include="App_Config\Include\Dianoga\Dianoga.ExcludePaths.config.example" />
+    <Content Include="App_Config\Include\Dianoga\Dianoga.Jpeg.config" />
+    <Content Include="App_Config\Include\Dianoga\Dianoga.Jpeg.JpegOptim.config.disabled" />
+    <Content Include="App_Config\Include\Dianoga\Dianoga.Log.config" />
+    <Content Include="App_Config\Include\Dianoga\Dianoga.NextGenFormats.CDN.config.disabled" />
+    <Content Include="App_Config\Include\Dianoga\Dianoga.NextGenFormats.config" />
+    <Content Include="App_Config\Include\Dianoga\Dianoga.Png.config" />
+    <Content Include="App_Config\Include\Dianoga\Dianoga.Strategy.GetMediaStreamSync.config.disabled" />
+    <Content Include="App_Config\Include\Dianoga\Dianoga.Strategy.MediaCacheAsync.config" />
+    <Content Include="App_Config\Include\Dianoga\Dianoga.Svg.config" />
+    <Content Include="App_Config\Include\Dianoga\Dianoga.TempFilePath.config.example" />
+    <Content Include="App_Config\Include\Dianoga\z.01.Dianoga.NextGenFormats.WebP.config.disabled" />
+    <Content Include="App_Config\Include\Dianoga\z.02.Dianoga.NextGenFormats.Avif.config.disabled" />
+    <Content Include="App_Config\Include\Dianoga\z.03.Dianoga.NextGenFormats.JpegXL.config.disabled" />
     <None Include="Web.config">
       <SubType>Designer</SubType>
     </None>

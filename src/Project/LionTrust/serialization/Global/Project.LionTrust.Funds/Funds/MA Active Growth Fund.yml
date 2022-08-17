@@ -132,6 +132,12 @@ Languages:
       Hint: LegacyFund_Process
       Type: Treelist
       Value: "{F784C953-CE9E-418A-855E-3C5CC839F540}"
+    - ID: "77c63a9a-2144-4021-91fd-388d6e5dad52"
+      Hint: FundAccess_ExludeCountries
+      Type: Multilist
+      Value: |
+        {E870220F-9DA2-4240-8714-4EA9BDDCFC6B}
+        {D9D5611F-F556-49D0-A2A9-87FDFC4DAEF6}
     - ID: "78b7b037-16f3-4d3f-bd57-f7ecd52abc46"
       Hint: LegacyFund_Year4
       Value: 11.705%

@@ -27,29 +27,26 @@
     {
         public static string ProfileRoleName(IOnboardingConfiguration onboardingConfiguration, BaseLog log)
         {
-            var tracker = Tracker.Current;
-            if (!IsValidConfiguration(onboardingConfiguration, log))
+            var profile = ProfileCard(onboardingConfiguration, log);
+
+            if(profile == null)
             {
                 return string.Empty;
             }
 
-            if (tracker != null && tracker.Interaction != null 
-                && tracker.Interaction.Profiles != null)
+            return profile.PatternLabel;
+        }
+
+        public static Guid? PatternCardId(IOnboardingConfiguration onboardingConfiguration, BaseLog log)
+        {
+            var profile = ProfileCard(onboardingConfiguration, log);
+
+            if (profile == null)
             {
-                if (tracker.Interaction.Profiles.ContainsProfile(onboardingConfiguration.Profile.Name))
-                {
-                    var profile = tracker.Interaction.Profiles[onboardingConfiguration.Profile.Name];                    
-                    if (profile.PatternId != null && profile.PatternId.Value != null)
-                    {
-                        if (profile.PatternId.HasValue)
-                        {
-                            return profile.PatternLabel;
-                        }
-                    }                    
-                }
+                return null;
             }
 
-            return string.Empty;
+            return profile.PatternId;
         }
 
         public static string ViewingLabelWithArticle(string viewingLabel, string profileName)
@@ -250,6 +247,16 @@
             WebUtil.SetSessionValue(SessionKeys.Contact, contact);
         }
 
+        public static Guid? GetInvestorTypeId()
+        {
+            return (Guid?)WebUtil.GetSessionValue(SessionKeys.InvestorType);
+        }
+
+        public static void UpdateInvestorTypeSession(Guid investorType)
+        {
+            WebUtil.SetSessionValue(SessionKeys.InvestorType, investorType);
+        }
+
         public static bool IdentifyAs(string source, string identifier)
         {
             if (Tracker.Current == null)
@@ -271,30 +278,18 @@
                 return false;
             }
 
-            // Use default identifyAs for unknown contacts
-            if (Tracker.Current.Contact.IdentificationLevel != ContactIdentificationLevel.Known)
-            {
-                Tracker.Current.Session.IdentifyAs(source, identifier);
-
-                var contactId = Tracker.Current.Contact.ContactId;
-                manager.RemoveFromSession(contactId);
-                Tracker.Current.Session.Contact = manager.LoadContact(contactId);
-                return true;
-            }
-
             var existingContact = manager.LoadContact(source, identifier);
 
             // No other contact has this identifier yet: just set it
             if (existingContact == null)
             {
-                var contactId = Tracker.Current.Session.Contact.ContactId;
+                Tracker.Current.Session.IdentifyAs(source, identifier);
+                var contactId = Tracker.Current.Contact.ContactId;
 
                 Log.Info($"Add identifier for contact '{contactId}'. {source} > {identifier}", typeof(OnboardingHelper));
 
-                manager.AddIdentifier(contactId, new ContactIdentifier(source, identifier, ContactIdentificationLevel.Known));
                 manager.RemoveFromSession(contactId);
                 Tracker.Current.Session.Contact = manager.LoadContact(contactId);
-
                 return true;
             }
 
@@ -482,6 +477,33 @@
             }
 
             return true;
+        }
+
+        public static Profile ProfileCard(IOnboardingConfiguration onboardingConfiguration, BaseLog log)
+        {
+            var tracker = Tracker.Current;
+            if (!IsValidConfiguration(onboardingConfiguration, log))
+            {
+                return null;
+            }
+
+            if (tracker != null && tracker.Interaction != null
+                && tracker.Interaction.Profiles != null)
+            {
+                if (tracker.Interaction.Profiles.ContainsProfile(onboardingConfiguration.Profile.Name))
+                {
+                    var profile = tracker.Interaction.Profiles[onboardingConfiguration.Profile.Name];
+                    if (profile.PatternId != null && profile.PatternId.Value != null)
+                    {
+                        if (profile.PatternId.HasValue)
+                        {
+                            return profile;
+                        }
+                    }
+                }
+            }
+
+            return null;
         }
     }
 }

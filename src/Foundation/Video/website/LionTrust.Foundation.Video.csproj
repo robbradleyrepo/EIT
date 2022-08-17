@@ -80,6 +80,10 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Design\website\LionTrust.Foundation.Design.csproj">
+      <Project>{7f86dd63-be79-4107-804a-514dca76e01e}</Project>
+      <Name>LionTrust.Foundation.Design</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Indexing\website\LionTrust.Foundation.Indexing.csproj">
       <Project>{acd53016-c45a-4a10-8b46-9a4a82a69d7b}</Project>
       <Name>LionTrust.Foundation.Indexing</Name>

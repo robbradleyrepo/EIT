@@ -5,6 +5,15 @@ Template: "11bdd781-82d0-417f-bfbf-e955f7402ceb"
 Path: /sitecore/content/LionTrustNew/Home/fund managers/Cashflow Solution team
 DB: master
 SharedFields:
+- ID: "b0a67b2a-8b07-4e0b-8809-69f751709806"
+  Hint: __Tracking
+  Type: Tracking
+  Value: |
+    <tracking>
+      <event
+        id="{CEE68AD7-F0B0-44C8-B910-75CBDE7D42F1}"
+        name="Page View_Team Pages_Cashflow Solutions" />
+    </tracking>
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: "{FFF11D5F-859B-4B01-8DC7-333F8F4E5E3B}"
@@ -40,14 +49,20 @@ Languages:
               s:id="{F4301786-A113-4511-BA28-46655D111F73}"
               s:ph="main" />
             <r
-              uid="{A3780ED1-C6E9-4848-AAC2-924C326789A6}"
+              uid="{5E063326-0E2A-4664-A548-B5207B040FB5}"
               p:after="r[@uid='{564E54F3-AD2C-4EA6-8D4E-30C6EC555175}']"
-              s:ds="{C14AE3D4-A0E1-403A-8000-16506DAF710E}"
-              s:id="{8D47F982-4A0A-4CEB-BA66-DEABA6B71AD1}"
+              s:ds="{8CC53106-1653-4A1B-A755-62B7C0C282B2}"
+              s:id="{391E991D-E490-46AC-A04B-6B7E8A19402B}"
+              s:ph="main" />
+            <r
+              uid="{D8ECF5B5-1AB3-45CF-82CA-523833C80F5E}"
+              p:after="r[@uid='{5E063326-0E2A-4664-A548-B5207B040FB5}']"
+              s:ds="{E9C6CC21-04A4-47B6-B38E-D37E90439838}"
+              s:id="{C5084910-C569-47A3-940B-26D52C89F4B6}"
               s:ph="main" />
             <r
               uid="{6D4834BF-A2EF-4A81-988A-513BB5279181}"
-              p:after="r[@uid='{A3780ED1-C6E9-4848-AAC2-924C326789A6}']"
+              p:after="r[@uid='{D8ECF5B5-1AB3-45CF-82CA-523833C80F5E}']"
               s:ds="{E37E481A-44E9-41BF-80D9-7C158E18B2C8}"
               s:id="{C4570003-4866-4EAA-B069-8FA6611DC0EC}"
               s:ph="main" />
@@ -76,8 +91,14 @@ Languages:
               s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
               s:ph="main" />
             <r
-              uid="{1134A5AD-5F84-4C13-8365-167AF77AEEE3}"
+              uid="{FFDB2B16-CBF0-474A-9370-4298187D9130}"
               p:after="r[@uid='{5694D6D0-92F6-4F0E-98BF-8068888B0921}']"
+              s:ds="{E0EA7231-17D8-4BF4-BE93-27E54AE53D2A}"
+              s:id="{64B901EA-34EB-48D1-94B9-BD58E494CC07}"
+              s:ph="main" />
+            <r
+              uid="{1134A5AD-5F84-4C13-8365-167AF77AEEE3}"
+              p:after="r[@uid='{FFDB2B16-CBF0-474A-9370-4298187D9130}']"
               s:id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
               s:ph="/header/navigation" />
             <r
@@ -90,7 +111,7 @@ Languages:
         </r>
     - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
       Hint: LegacyPresentationBase_BrowserTitle
-      Value: Cashflow Solution team | Liontrust Asset Management PLC
+      Value: Cashflow Solution Team | Liontrust Asset Management PLC
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20210601T085613Z
@@ -104,6 +125,9 @@ Languages:
     - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
       Hint: Breadcrumb_BreadcrumbTitle
       Value: Cashflow Solution team
+    - ID: "9dc8ae8c-c3e1-4536-aa2a-d0bff7398795"
+      Hint: LegacyPresentationBase_MetaDescription
+      Value: "Meet the Cashflow Solution team, including James Inglis-Jones and Samantha Gleave, and learn more about their trusted and rigorous cashflow investments process"
     - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
       Hint: LegacyPresentationBase_PageTitle
       Value: Cashflow Solution team

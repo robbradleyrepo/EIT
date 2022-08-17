@@ -2,6 +2,7 @@
 @using System.Collections.Specialized;
 @using LionTrust.Foundation.ORM.Extensions;
 @using LionTrust.Foundation.Navigation;
+@using LionTrust.Foundation.Analytics.Goals;
 
 @model LionTrust.Feature.Navigation.Models.NavigationViewModel
 @if (Model != null && Model.HomeItem != null)
@@ -25,7 +26,11 @@
                     <ul class="navigation__list">
                         @foreach (var menuItem in Model.MenuItems.WithAccessTo())
                         {
-                            var filteredChildrens = menuItem.Children.Where(m => !m.ExcludeInSearchResults);
+                            var menuItemsSecondLevel = menuItem.MenuItems.Where(m => !m.ExcludeInSearchResults);
+
+                            var filteredChildrens = (menuItemsSecondLevel != null && menuItemsSecondLevel.Any())
+                                    ? menuItemsSecondLevel
+                                    : menuItem.Children.Where(m => !m.ExcludeInSearchResults);
 
                             if (filteredChildrens != null && filteredChildrens.Any())
                             {
@@ -51,7 +56,8 @@
             @if (Model.ShowMyLiontrust && Model.HomeItem.MyLionTrust != null)
             {
                 <div class="sidebar__profile-btn">
-                    @using (Html.Glass().BeginRenderLink(Model.HomeItem, p => p.MyLionTrust, new { @class = "btn btn-primary btn-block" }, isEditable: true))
+                    @using (Html.Glass().BeginRenderLinkWithGoal(Model.HomeItem, p => p.MyLionTrust, Model.HomeItem.MyLiontrustGoal,
+                        new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary btn-block" } }, isEditable: true))
                     {
                         <i class="icon-user"></i>
                         if (!string.IsNullOrWhiteSpace(Model.HomeItem.MyLionTrust.Text))
@@ -123,9 +129,43 @@
             {
                 <nav class="navigation navigation_desktop">
                     <ul class="navigation__list">
+                        @{
+                            bool hasDropDowns = false;
+                            hasDropDowns =
+                                Model.HomeItem.HeaderConfiguration != null
+                                 && Model.HomeItem.HeaderConfiguration.HeaderDropDowns != null
+                                 && Model.HomeItem.HeaderConfiguration.HeaderDropDowns.Any();
+                        }
                         @foreach (var menuItem in Model.MenuItems.WithAccessTo())
                         {
-                            var filteredChildrens = menuItem.Children.Where(m => !m.ExcludeInSearchResults);
+                            bool hideInDesktop = false;
+
+                            if (hasDropDowns)
+                            {
+                                foreach (var dropDown in Model.HomeItem.HeaderConfiguration.HeaderDropDowns)
+                                {
+                                    if (dropDown.PageItem != null)
+                                    {
+                                        if (String.Equals(dropDown.PageItem.Id.ToString(), menuItem.Id.ToString(), StringComparison.InvariantCultureIgnoreCase))
+                                        {
+                                            hideInDesktop = true;
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+
+                            if (hideInDesktop)
+                            {
+                                continue;
+                            }
+
+                            var menuItemsSecondLevel = menuItem.MenuItems.Where(m => !m.ExcludeInSearchResults);
+
+                            var filteredChildrens = (menuItemsSecondLevel != null && menuItemsSecondLevel.Any())
+                                    ? menuItemsSecondLevel
+                                    : menuItem.Children.Where(m => !m.ExcludeInSearchResults);
+
                             if (filteredChildrens != null && filteredChildrens.Any())
                             {
                                 <li class="navigation__item">
@@ -502,7 +542,12 @@
         <div class="navigation__sublinks-items">
             @foreach (var menuItem in Model.MenuItems.WithAccessTo())
             {
-                var filteredChildrens = menuItem.Children.Where(m => !m.ExcludeInSearchResults);
+                var menuItemsSecondLevel = menuItem.MenuItems.Where(m => !m.ExcludeInSearchResults);
+
+                var filteredChildrens = (menuItemsSecondLevel != null && menuItemsSecondLevel.Any())
+                        ? menuItemsSecondLevel
+                        : menuItem.Children.Where(m => !m.ExcludeInSearchResults);
+
                 <div class="navigation__item">
                     <input type="checkbox" id="@menuItem.Name" class="navigation__checkbox">
                     <div class="navigation__submenu">

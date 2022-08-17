@@ -30,5 +30,9 @@
         public string ArticleDate { get; set; }
 
         public bool IsArticle { get; set; }
+
+        public string RelatedFundName { get; set; }
+
+        public string RelatedFundUrl { get; set; }
     }
 }

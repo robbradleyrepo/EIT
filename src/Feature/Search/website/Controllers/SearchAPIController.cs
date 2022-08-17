@@ -9,6 +9,7 @@
     using Sitecore.Mvc.Controllers;
     using System.Linq;
     using Sitecore.Data;
+    using LionTrust.Foundation.Search.Models;
 
     public class SearchAPIController : SitecoreController
     {
@@ -165,20 +166,35 @@
                                             string.Join("|", response.SearchResults.Select(f => f.FundId.ToString(thirtyTwodigits))),
                                             null,
                                             null,
-                                            fundTeams,
+                                            null,
                                             null,
                                             null,
                                             null,
                                             sortOrder,
-                                            page,
+                                            1,
                                             int.MaxValue);
                 var funds = response.SearchResults.ToList();
 
                 if (fundUpdateArticles != null && fundUpdateArticles.TotalResults > 0)
                 {
+                    var fundTeamsList = fundTeams?.Split('|');
+                    var fundUpdateArticlesWithTeam = fundTeamsList != null && fundTeamsList.Any()
+                        ? fundUpdateArticles.SearchResults.Where(a => a.Team != null && a.Team.Any(x => fundTeamsList.Contains(x)))
+                        : null;
+
                     foreach (var fund in funds)
                     {
-                        var latestFundUpdateArticle = fundUpdateArticles.SearchResults.FirstOrDefault(a => a.FundId == fund.FundId.ToString(thirtyTwodigits));
+                        ITaxonomyContentResult latestFundUpdateArticle = null;
+
+                        if(fundUpdateArticlesWithTeam != null && fundUpdateArticlesWithTeam.Any(a => a.FundIds.Contains(fund.FundId.ToString(thirtyTwodigits))))
+                        {
+                            latestFundUpdateArticle = fundUpdateArticlesWithTeam.FirstOrDefault(a => a.FundIds.Contains(fund.FundId.ToString(thirtyTwodigits)));
+                        }
+                        else
+                        {
+                            latestFundUpdateArticle = fundUpdateArticles.SearchResults.FirstOrDefault(a => a.FundIds.Contains(fund.FundId.ToString(thirtyTwodigits)));
+                        }
+
                         if (latestFundUpdateArticle != null && !string.IsNullOrWhiteSpace(latestFundUpdateArticle.Url))
                         {
                             fund.FundUpdateUrl = latestFundUpdateArticle.Url;

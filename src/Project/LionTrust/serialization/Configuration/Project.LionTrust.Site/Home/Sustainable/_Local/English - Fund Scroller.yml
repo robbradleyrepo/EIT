@@ -1,0 +1,55 @@
+﻿---
+ID: "89613fd1-6079-468a-847d-9e8cd5106916"
+Parent: "672288ee-915e-4178-9201-f7691bdee855"
+Template: "f91bff52-8afb-4056-bbf3-84c16924b92d"
+Path: "/sitecore/content/LionTrustNew/Home/Sustainable/_Local/English - Fund Scroller"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 1100
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{5186C9A7-7949-4FF7-9958-802F6F23AAD1}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210601T085619Z
+    - ID: "451efcd2-40a3-4153-8b02-bec9572a9ec1"
+      Hint: FundScroller_Description
+      Value: The Liontrust Sustainable Investment team manages a broad range of funds across equities, bonds, and managed funds.
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\liontrust_admin
+    - ID: "63c464ec-3657-4b91-adf5-28ac9036774f"
+      Hint: FundScroller_PrimaryCta
+      Value: 
+    - ID: "8e11c5f7-1fca-4a99-ad05-b81511f973d9"
+      Hint: FundScroller_Heading
+      Value: Funds managed by the team
+    - ID: "dd98d557-6e80-4ffb-9e13-498e29de5566"
+      Hint: FundScroller_Funds
+      Type: Multilist
+      Value: |
+        {DD0F5697-85A7-4DCD-B62C-649585C8423B}
+        {AD3BB77C-D594-422F-81BB-9B6856D8953F}
+        {478C9CBC-C736-4A04-B555-E65998A64C16}
+        {EEF5C9FD-444C-4C68-9544-6DB766182F61}
+        {CDF0E61F-2535-4486-9183-6A093254A7E9}
+        {C2095FE1-D6B7-4592-AAE7-C46994E21D3B}
+        {01013679-A90F-4C97-B734-0B4CB72BEF56}
+        {FC89CAC1-0261-4E99-9C79-956E34A50251}
+        {6CB4E6E0-8764-4A8A-9155-153E5DB4738A}
+        {8FE8F95A-8609-4C3E-BA69-BCF56A8017F4}
+        {F0851E0C-4F1A-4A72-A58B-867D503CC93B}
+        {83BDAC7D-3E51-42B2-8F2B-71E0258485C6}
+        {5CAD19A4-02B6-4E8B-954D-EA6DBABF3258}
+        {CAB2FB23-6928-475A-B0CF-EA5BA70EE2CA}
+    - ID: "eb9e31a0-ed28-48fc-8cbf-820264b17306"
+      Hint: FundScroller_Subtitle
+      Value: 

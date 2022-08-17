@@ -4,10 +4,7 @@
     padding-top: 100%
     border-radius: 10px
     overflow: hidden
-    margin-bottom: 20px
     display: block
-    @include breakpoint(desktop, up)
-        margin-bottom: 20px
     @include breakpoint(desktop-large, up)
         margin-bottom: 32px
     &:hover > &__back
@@ -36,6 +33,7 @@
     &__body
         top: 0
         left: 0
+        color: $white
         z-index: 2
         position: absolute
         padding: 20px 10px 10px
@@ -45,9 +43,19 @@
             padding-right: 20px
     &__head
         display: flex
+        flex-wrap: wrap
         margin-bottom: 0
         align-items: center
         justify-content: flex-start
+        > span:not(:first-of-type):before
+            content: ""
+            width: 4px
+            height: 4px
+            border-radius: 50%
+            position: relative
+            display: inline-block
+            background: $primary
+            margin: 2px 5px 2px 7px
         i
             margin-right: 10px
             font-size: 12px
@@ -69,10 +77,20 @@
         letter-spacing: 2.4px
         text-transform: uppercase
         display: flex
+        flex-wrap: wrap
         align-items: center
         line-height: 25px
         @include breakpoint(desktop, up)
             line-height: 50px
+        > span:not(:first-of-type):not(.article-promo__head-title):before
+            content: ""
+            width: 4px 
+            height: 4px
+            border-radius: 50%
+            position: relative
+            display: inline-block
+            background: $primary
+            margin: 2px 5px 2px 7px
     &__title
         font-size: 26px
         font-weight: 300
@@ -179,10 +197,3 @@
             @include breakpoint(desktop-large, up)
                 font-size: 2.5rem
                 
-.dot-divider
-    width: 4px
-    height: 4px
-    border-radius: 50%
-    display: inline-block
-    background: $primary
-    margin: 2px 7px 2px 5px

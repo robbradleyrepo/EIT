@@ -1,8 +1,10 @@
+@use "variables"
+@use "keyframes"
+$logo: url('/dist/images/components/header/liontrust-logo-pride-color.svg')
 .sidebar
     background: $secondary
     display: flex
     flex-direction: column
-    justify-content: space-between
     padding: 17px 20px 43px 21px
     position: fixed
     top: 0
@@ -41,7 +43,12 @@
         margin-top: -7px
         margin-left: 16px
     &__logo-img
-        margin-left: -37px
+        width: 9rem
+        margin-left: 53PX
+
+        @include breakpoint(desktop-large, up)
+            width: 166px
+            height: auto
     &__profile-btn
         margin-bottom: 0px
         i

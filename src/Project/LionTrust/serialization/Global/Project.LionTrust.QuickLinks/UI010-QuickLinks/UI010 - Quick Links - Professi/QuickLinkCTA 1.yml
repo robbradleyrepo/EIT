@@ -1,0 +1,36 @@
+﻿---
+ID: "624b8468-c35d-49a3-ba35-f0dabbfe4e54"
+Parent: "abd09829-50d4-4e25-9b55-3d13725585a9"
+Template: "73ba8165-b3ff-429e-9268-b91fafced6b9"
+Path: "/sitecore/content/LionTrustNew/Global/UI010-QuickLinks/UI010 - Quick Links - Professionals/QuickLinkCTA 1"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{48E88223-AAD2-4703-97DF-DED9B638C0FF}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220201T094623Z
+    - ID: "2daf00e2-b3e8-4bb2-836a-c47f505ee481"
+      Hint: QuickLinkCTA_Link
+      Value: |
+        <link text="Our funds" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{C445F6B7-3797-400A-87E9-E3FD4F9FEFAD}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\hayleya
+    - ID: "7ff41320-58c1-4a05-b2c5-dd1e4f9c2191"
+      Hint: QuickLinkCTA_Description
+      Value: Find out more about our range of funds and portfolios
+    - ID: "c0a0281f-cfe6-45e1-a095-b02d109a8952"
+      Hint: QuickLinkCTA_Image
+      Value: |
+        <image mediaid="{F4BFEED4-FFA3-4AEC-8929-0513CABFC212}" />
+    - ID: "d6596c9a-e05a-49dd-98e6-7ba505d79842"
+      Hint: QuickLinkCTA_Title
+      Value: Our funds

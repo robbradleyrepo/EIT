@@ -17,9 +17,10 @@
 
         public Expression<Func<T, bool>> GetQueryPredicate(IQuery query)
         {
-            var fieldNames = new[] { "legacy_content", "LegacyDocument_DocumentName" };
+            var fieldNames = new[] { "legacypresentationbase_pagetitle", "legacy_content", "LegacyDocument_DocumentName", "related_fund_name" };
+            var boosting = new[] { 10f, 9f, 10f, 2f };
 
-            return GetFreeTextPredicateService<T>.GetFreeTextPredicate(fieldNames, query);
+            return GetFreeTextPredicateService<T>.GetFreeTextPredicate(fieldNames, boosting, query);
         }
     }
 }

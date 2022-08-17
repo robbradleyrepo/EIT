@@ -259,121 +259,118 @@
                 var selectedSFFundIdList = new List<string>();
 
                 //Update FundPreferences SF entities for UK residents only
-                if (context.Preferences.IsUkResident)
+                var processIdList = context.Preferences.SFProcessList.Select(x => x.SFProcessId).ToList();
+                List<GenericSalesforceEntity> fundPreferneceList = GetFundPreferenceEntities(context, processIdList, false);
+
+                //Generate 'IN' clause for SOQL query
+                var processIdString = string.Empty;
+                foreach (var processId in processIdList)
                 {
-                    var processIdList = context.Preferences.SFProcessList.Select(x => x.SFProcessId).ToList();
-                    List<GenericSalesforceEntity> fundPreferneceList = GetFundPreferenceEntities(context, processIdList, false);
-
-                    //Generate 'IN' clause for SOQL query
-                    var processIdString = string.Empty;
-                    foreach (var processId in processIdList)
+                    if (!string.IsNullOrEmpty(processIdString))
                     {
-                        if (!string.IsNullOrEmpty(processIdString))
-                        {
-                            processIdString = string.Format("{0},'{1}'", processIdString, processId);
-                        }
-                        else
-                        {
-                            processIdString = string.Format("'{0}'", processId);
-                        }
-                    }
-
-                    //Retrieve Salesforce Process objects
-                    GenericSalesforceService genericSFService = new GenericSalesforceService(this.SalesforceSession, Constants.SFProductEntityName);
-
-                    var soqlQuery = string.Format("SELECT {0}, {1}, {2}, (SELECT {3}, {4}, {5} FROM {6} where RecordType.Name = '{7}' AND {8}='{9}') FROM {10} WHERE RecordType.Name='{11}' AND {12}='{13}' AND {14} IN ({15})",
-                                                      Product2.Fields.Id.Name, Product2.Fields.Name.Name, Constants.SFProduct_IsMutiAssetScenarioField, Product2.Fields.Id.Name, Product2.Fields.Name.Name, Constants.SFProduct_IsMutiAssetScenarioField, Constants.SFProcess_RefFieldForFunds,
-                                                      Constants.SFFundRecordTypeName, Constants.SFProduct_StatusField, Constants.SFProductStatusOpenName, Constants.SFProductEntityName,
-                                                      Constants.SFProcessRecordTypeName, Constants.SFProduct_StatusField, Constants.SFProductStatusOpenName, Product2.Fields.Id.Name, processIdString);
-
-                    List<GenericSalesforceEntity> sfProcessListFromAPI = genericSFService.GetBySoql(soqlQuery);
-
-                    foreach (var sfProcessItemFromClient in context.Preferences.SFProcessList)
-                    {
-                        var sfProcessItemFromAPI = sfProcessListFromAPI.Where(x => x.Id == sfProcessItemFromClient.SFProcessId).FirstOrDefault();
-                        if (sfProcessItemFromAPI != null)
-                        {
-                            var fundPreferenceItemListForProcess = fundPreferneceList.Where(x => x.InternalFields[Constants.SFFundPref_RefFieldForProcessId] == sfProcessItemFromAPI.Id);
-                            //Get related SF Funds for each SF Process
-                            var subQueryFundItemList = sfProcessItemFromAPI.InternalFields.GetSubQuery<GenericSalesforceEntity>(Constants.SFProcess_RefFieldForFunds);
-
-                            //This IF block handles the special scenario for "Multi Asset Process".
-                            //If the current Process in the loop is a "Multi Asset Process", Generate a custom fund item and add it to the FundList.
-                            //This step is required becasue for "Multi Asset Process" we do not give the option for user to select any fund.  
-                            if (sfProcessItemFromAPI.InternalFields.GetField<bool>(Constants.SFProduct_IsMutiAssetScenarioField))
-                            {
-                                var specialMultiAssetFund = subQueryFundItemList.Where(x => x.InternalFields.GetField<bool>(Constants.SFProduct_IsMutiAssetScenarioField)).FirstOrDefault();
-                                if (specialMultiAssetFund != null)
-                                {
-                                    var tempFundObj = new SFFund();
-                                    tempFundObj.SFFundId = specialMultiAssetFund.Id;
-                                    tempFundObj.IsFundSelected = (context.Preferences.Unsubscribe) ? false : sfProcessItemFromClient.IsProcessSelected;
-
-                                    sfProcessItemFromClient.SFFundList.Add(tempFundObj);
-                                }
-                            }
-
-                            foreach (var sfFundItemFromClient in sfProcessItemFromClient.SFFundList)
-                            {
-                                var sfFundItemFromAPI = subQueryFundItemList.Where(x => x.Id == sfFundItemFromClient.SFFundId).FirstOrDefault();
-                                if (sfFundItemFromAPI != null)
-                                {
-                                    //Get FundPreference items for each Fund
-                                    var fundPreferenceItemListForFund = fundPreferenceItemListForProcess.Where(x => x.InternalFields[Constants.SFFundPref_FundField] == sfFundItemFromAPI.Id);
-
-                                    if (fundPreferenceItemListForFund != null && fundPreferenceItemListForFund.Count() > 0)
-                                    {
-                                        //Update existing FundPreference items
-                                        foreach (var funPreferenceItemForFund in fundPreferenceItemListForFund)
-                                        {
-                                            funPreferenceItemForFund.InternalFields.SetField<bool>(Constants.SFFundPref_InterestedField, sfFundItemFromClient.IsFundSelected);
-                                            sfFundPreferenceItemsForUpsert.Add(funPreferenceItemForFund);
-                                        }
-                                    }
-                                    else
-                                    {
-                                        //Create new FundPreference items
-                                        if (sfFundItemFromClient.IsFundSelected)
-                                        {
-                                            var newFundPreferenceItem = new GenericSalesforceEntity(Constants.SFFundPreferenceEntityName);
-                                            if (context.IsContact)
-                                            {
-                                                newFundPreferenceItem.InternalFields.SetField(Constants.SFFundPref_ContactField, sfEntityId);
-                                            }
-                                            else
-                                            {
-                                                newFundPreferenceItem.InternalFields.SetField(Constants.SFFundPref_LeadField, sfEntityId);
-                                            }
-
-                                            newFundPreferenceItem.InternalFields.SetField(Constants.SFFundPref_FundField, sfFundItemFromAPI.Id);
-                                            newFundPreferenceItem.InternalFields.SetField(Constants.SFFundPref_InterestedField, true);
-                                            sfFundPreferenceItemsForUpsert.Add(newFundPreferenceItem);
-                                        }
-                                    }
-                                }
-
-                                //Add selected Salesforce fund ids into a seperate list. So this list can use later to update Sitecore contact's facet as the selected Salesfore fund ids
-                                if (sfFundItemFromClient.IsFundSelected)
-                                {
-                                    //Save 15 character salesforce id in the list.  
-                                    selectedSFFundIdList.Add(sfFundItemFromClient.SFFundId.Substring(0, 15));
-                                }
-                            }
-                        }
-                    }
-
-                    if (sfFundPreferenceItemsForUpsert.Count > 0)
-                    {
-                        List<List<GenericSalesforceEntity>> bulkifiedFundPrefEntities = SplitSalesforceGenericEntityList(sfFundPreferenceItemsForUpsert, 200);
-                        foreach (List<GenericSalesforceEntity> fundPreferenceEntities in bulkifiedFundPrefEntities)
-                        {
-                            genericSFService.UpsertEntities(fundPreferenceEntities, Constants.SFFundPref_IdField);
-                        }
+                        processIdString = string.Format("{0},'{1}'", processIdString, processId);
                     }
                     else
                     {
-                        Log.Debug(string.Format("No FundPreference entities found to be insert/update for Entity Id: {0}.", sfEntityId), this);
+                        processIdString = string.Format("'{0}'", processId);
                     }
+                }
+
+                //Retrieve Salesforce Process objects
+                GenericSalesforceService genericSFService = new GenericSalesforceService(this.SalesforceSession, Constants.SFProductEntityName);
+
+                var soqlQuery = string.Format("SELECT {0}, {1}, {2}, (SELECT {3}, {4}, {5} FROM {6} where RecordType.Name = '{7}' AND {8}='{9}') FROM {10} WHERE RecordType.Name='{11}' AND {12}='{13}' AND {14} IN ({15})",
+                                                  Product2.Fields.Id.Name, Product2.Fields.Name.Name, Constants.SFProduct_IsMutiAssetScenarioField, Product2.Fields.Id.Name, Product2.Fields.Name.Name, Constants.SFProduct_IsMutiAssetScenarioField, Constants.SFProcess_RefFieldForFunds,
+                                                  Constants.SFFundRecordTypeName, Constants.SFProduct_StatusField, Constants.SFProductStatusOpenName, Constants.SFProductEntityName,
+                                                  Constants.SFProcessRecordTypeName, Constants.SFProduct_StatusField, Constants.SFProductStatusOpenName, Product2.Fields.Id.Name, processIdString);
+
+                List<GenericSalesforceEntity> sfProcessListFromAPI = genericSFService.GetBySoql(soqlQuery);
+
+                foreach (var sfProcessItemFromClient in context.Preferences.SFProcessList)
+                {
+                    var sfProcessItemFromAPI = sfProcessListFromAPI.Where(x => x.Id == sfProcessItemFromClient.SFProcessId).FirstOrDefault();
+                    if (sfProcessItemFromAPI != null)
+                    {
+                        var fundPreferenceItemListForProcess = fundPreferneceList.Where(x => x.InternalFields[Constants.SFFundPref_RefFieldForProcessId] == sfProcessItemFromAPI.Id);
+                        //Get related SF Funds for each SF Process
+                        var subQueryFundItemList = sfProcessItemFromAPI.InternalFields.GetSubQuery<GenericSalesforceEntity>(Constants.SFProcess_RefFieldForFunds);
+
+                        //This IF block handles the special scenario for "Multi Asset Process".
+                        //If the current Process in the loop is a "Multi Asset Process", Generate a custom fund item and add it to the FundList.
+                        //This step is required becasue for "Multi Asset Process" we do not give the option for user to select any fund.  
+                        if (sfProcessItemFromAPI.InternalFields.GetField<bool>(Constants.SFProduct_IsMutiAssetScenarioField))
+                        {
+                            var specialMultiAssetFund = subQueryFundItemList.Where(x => x.InternalFields.GetField<bool>(Constants.SFProduct_IsMutiAssetScenarioField)).FirstOrDefault();
+                            if (specialMultiAssetFund != null)
+                            {
+                                var tempFundObj = new SFFund();
+                                tempFundObj.SFFundId = specialMultiAssetFund.Id;
+                                tempFundObj.IsFundSelected = (context.Preferences.Unsubscribe) ? false : sfProcessItemFromClient.IsProcessSelected;
+
+                                sfProcessItemFromClient.SFFundList.Add(tempFundObj);
+                            }
+                        }
+
+                        foreach (var sfFundItemFromClient in sfProcessItemFromClient.SFFundList)
+                        {
+                            var sfFundItemFromAPI = subQueryFundItemList.Where(x => x.Id == sfFundItemFromClient.SFFundId).FirstOrDefault();
+                            if (sfFundItemFromAPI != null)
+                            {
+                                //Get FundPreference items for each Fund
+                                var fundPreferenceItemListForFund = fundPreferenceItemListForProcess.Where(x => x.InternalFields[Constants.SFFundPref_FundField] == sfFundItemFromAPI.Id);
+
+                                if (fundPreferenceItemListForFund != null && fundPreferenceItemListForFund.Count() > 0)
+                                {
+                                    //Update existing FundPreference items
+                                    foreach (var funPreferenceItemForFund in fundPreferenceItemListForFund)
+                                    {
+                                        funPreferenceItemForFund.InternalFields.SetField<bool>(Constants.SFFundPref_InterestedField, sfFundItemFromClient.IsFundSelected);
+                                        sfFundPreferenceItemsForUpsert.Add(funPreferenceItemForFund);
+                                    }
+                                }
+                                else
+                                {
+                                    //Create new FundPreference items
+                                    if (sfFundItemFromClient.IsFundSelected)
+                                    {
+                                        var newFundPreferenceItem = new GenericSalesforceEntity(Constants.SFFundPreferenceEntityName);
+                                        if (context.IsContact)
+                                        {
+                                            newFundPreferenceItem.InternalFields.SetField(Constants.SFFundPref_ContactField, sfEntityId);
+                                        }
+                                        else
+                                        {
+                                            newFundPreferenceItem.InternalFields.SetField(Constants.SFFundPref_LeadField, sfEntityId);
+                                        }
+
+                                        newFundPreferenceItem.InternalFields.SetField(Constants.SFFundPref_FundField, sfFundItemFromAPI.Id);
+                                        newFundPreferenceItem.InternalFields.SetField(Constants.SFFundPref_InterestedField, true);
+                                        sfFundPreferenceItemsForUpsert.Add(newFundPreferenceItem);
+                                    }
+                                }
+                            }
+
+                            //Add selected Salesforce fund ids into a seperate list. So this list can use later to update Sitecore contact's facet as the selected Salesfore fund ids
+                            if (sfFundItemFromClient.IsFundSelected)
+                            {
+                                //Save 15 character salesforce id in the list.  
+                                selectedSFFundIdList.Add(sfFundItemFromClient.SFFundId.Substring(0, 15));
+                            }
+                        }
+                    }
+                }
+
+                if (sfFundPreferenceItemsForUpsert.Count > 0)
+                {
+                    List<List<GenericSalesforceEntity>> bulkifiedFundPrefEntities = SplitSalesforceGenericEntityList(sfFundPreferenceItemsForUpsert, 200);
+                    foreach (List<GenericSalesforceEntity> fundPreferenceEntities in bulkifiedFundPrefEntities)
+                    {
+                        genericSFService.UpsertEntities(fundPreferenceEntities, Constants.SFFundPref_IdField);
+                    }
+                }
+                else
+                {
+                    Log.Debug(string.Format("No FundPreference entities found to be insert/update for Entity Id: {0}.", sfEntityId), this);
                 }
 
                 if (!string.IsNullOrEmpty(visitorId))
