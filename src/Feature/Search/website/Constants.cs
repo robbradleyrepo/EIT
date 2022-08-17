@@ -165,10 +165,5 @@
             public const string FactsheetCtaText_FieldId = "{C3A8028A-BE37-4140-9D2E-63A547702AC0}";
             public const string Funds_FieldId = "{E4C0659D-9D40-4A6F-A117-0D9045D62FE6}";
         }
-
-        public static class Tokens
-        {
-            public const string TotalResults = "{TotalResults}";
-        }
     }
 }
