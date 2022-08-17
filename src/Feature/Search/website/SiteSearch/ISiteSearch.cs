@@ -34,5 +34,8 @@
 
         [SitecoreChildren(TemplateId = Constants.SiteSearchFilter.TemplateId, EnforceTemplate = SitecoreEnforceTemplate.TemplateAndBase)]
         IEnumerable<ISiteSearchFilter> Filters { get; set; }
+
+        [SitecoreField(Constants.SiteSearch.RecentSearchesLabelFieldId)]
+        string RecentSearchesLabel { get; set; }
     }
 }

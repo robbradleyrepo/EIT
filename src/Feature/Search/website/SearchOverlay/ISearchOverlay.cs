@@ -15,5 +15,8 @@
 
         [SitecoreField(Constants.SearchOverlay.SearchGoalFieldId)]
         Guid SearchGoal { get; set; }
+
+        [SitecoreField(Constants.SearchOverlay.RecentSearchesLabelFieldId)]
+        string RecentSearchesLabel { get; set; }
     }
 }
