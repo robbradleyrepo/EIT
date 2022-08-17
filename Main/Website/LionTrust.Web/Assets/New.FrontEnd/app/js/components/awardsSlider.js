@@ -15,10 +15,10 @@ export default () => {
 
         let countAllSlides = nodeList[i].querySelectorAll('.slideDiv').length;
         console.log(countAllSlides)
-        let threeSliders = 3;
+        let maxSlidersWhithNoPagination = 3;
 
-        if (countAllSlides <= threeSliders) {
-            console.log("hi")
+        // remove pagination 
+        if (countAllSlides <= maxSlidersWhithNoPagination) {
             nodeList[i].getElementsByClassName('swiper-wrapper slidesWrapper')[0].classList.add('centerawards');
             nodeList[i].getElementsByClassName('swiper-pagination awardpagination')[0].classList.add('hideawardsPagination');
         }
