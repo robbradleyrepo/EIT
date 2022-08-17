@@ -110,6 +110,7 @@
     <Compile Include="Controllers\RelatedArticlesController.cs" />
     <Compile Include="Controllers\FeaturedArticlesController.cs" />
     <Compile Include="Fields\ArticleExcludedCountiesField.cs" />
+    <Compile Include="Fields\ArticlePriorityField.cs" />
     <Compile Include="Fields\ArticleSearchResultTypeField.cs" />
     <Compile Include="Fields\ArticleBaseField.cs" />
     <Compile Include="Fields\ArticleAuthorField.cs" />

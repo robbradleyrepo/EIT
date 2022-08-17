@@ -4,7 +4,7 @@
 <div class="search-overlay">
     <div class="container">
         <div class="search-overlay__close"><button class="icon-close search-overlay__icon-close"></button></div>
-        <div class="search-overlay__serch-content">
+        <div class="search-overlay__serch-content" data-recent-searches-label="@Model.RecentSearchesLabel">
             <form class="search-form" action="@Model.SearchResultsPage.Url" autocomplete="off">
                 <input type="text" name="query" class="search-form__input" placeholder="@Model.Placeholdertext" onfocus="this.placeholder = ''" onblur="this.placeholder = '@Model.Placeholdertext'">
                 <button class="search-form__submit" type="submit" data-goal-trigger="@Model.SearchGoal">
