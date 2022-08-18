@@ -108,12 +108,13 @@
     <Compile Include="ComputedFields\SharedLogic\SalesforceFundIdField.cs" />
     <Compile Include="ComputedFields\SharedLogic\ISalesforceFundIdField.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="Models\Field.cs" />
     <Compile Include="Models\IQuery.cs" />
     <Compile Include="Models\IQueryPredicateProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ISearchRepository.cs" />
     <Compile Include="Repositories\SearchRepository.cs" />
-    <Compile Include="Services\GetFreeTextPredicateService.cs" />
+    <Compile Include="Services\GetTextPredicateService.cs" />
     <Compile Include="Services\IndexableLinkGenerator.cs" />
     <Compile Include="SiteSearch\FundFactsheetUrlField.cs" />
     <Compile Include="SiteSearch\IPriority.cs" />
