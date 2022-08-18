@@ -5,6 +5,9 @@ const rootDom = document.getElementById("result-list-app");
 let root = "";
 let host = rootDom.dataset.host;
 const pageSize = rootDom.dataset.pagesize;
+const searchResultsLabel = rootDom.dataset.searchresultslabel;
+const similarResultsLabel = rootDom.dataset.similarresultslabel;
+const totalResultsToken = "{TotalResults}";
 if (
   window.location.hostname === "localhost" ||
   window.location.hostname === "127.0.0.1"
@@ -25,6 +28,7 @@ export default () => {
       showPerPage: pageSize,
       showPageInPagination: 7,
       loading: true,
+      searchLabel: '',
       searchParams: {
         query: "",
         filters: "",
@@ -83,16 +87,27 @@ export default () => {
         this.loading = true;
         $.ajax(url)
           .done((request) => {
-            const { searchResults, totalResults } = request;
+            const { searchResults, totalResults, similarSearchResults, totalSimilarResults } = request;
             console.log('searchResults', searchResults);
             this.results = searchResults;
             this.amountResults = totalResults;
+
+            if (totalResults <= 0 && totalSimilarResults > 0){
+              this.results = similarSearchResults;
+              this.amountResults = totalSimilarResults;
+              this.searchLabel = similarResultsLabel.replace(totalResultsToken, this.amountResults);
+            }
+            else{
+              this.searchLabel = searchResultsLabel.replace(totalResultsToken, this.amountResults);
+            }
+
             this.loading = false;
           })
           .fail((e) => {
             this.loading = false;
             this.results = [];
             this.amountResults = 0;
+            this.searchLabel = searchResultsLabel.replace(totalResultsToken, this.amountResults);
             console.error("Data is not being retrieved", e)
           });
       },
