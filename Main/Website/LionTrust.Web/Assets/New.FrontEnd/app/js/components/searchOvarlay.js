@@ -5,7 +5,6 @@ export default () => {
   });
 
   $(".header-navbar__btn-search, .search-header__search-header-mobile, .sidebar-actions__link--open-search").on("click", () => {
-    console.log("open-search")
     overlay.addClass("active");
   });
 };
