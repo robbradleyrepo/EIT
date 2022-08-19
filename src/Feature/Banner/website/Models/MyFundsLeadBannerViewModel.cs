@@ -10,5 +10,7 @@
         public IMyFundsLeadBanner Content { get; private set; }
 
         public string ContactName { get; set; }
+
+        public bool HasQueryString => !string.IsNullOrEmpty(Content?.Cta?.Query);
     }
 }

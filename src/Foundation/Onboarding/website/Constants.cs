@@ -115,6 +115,7 @@
         public static class SessionKeys
         {
             public const string Contact = "contact";
+            public const string InvestorType = "investorType";
         }
 
         public static class InvestorTypes

@@ -1,0 +1,33 @@
+﻿---
+ID: "2221ab19-0e49-4f48-9dcf-aab25473a887"
+Parent: "a7fae3b8-01e2-4a64-ae86-bc312564b068"
+Template: "7682e3eb-272c-4aad-82c3-a10e68dfcba0"
+Path: /sitecore/content/LionTrustNew/Home/Insights/Podcasts/Global Infusions/Cybercrime/_Local/Follow Us Social/Linkedin
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210406T121432Z
+    - ID: "283a74f1-ebfb-4eb8-acd7-6d4e4ab5e58c"
+      Hint: SocialIcon_LinkGoal
+      Value: 
+    - ID: "321db99f-5d14-4703-ac2f-6feea5e48000"
+      Hint: SocialIcon_Icon
+      Value: |
+        <image mediaid="{F9EFB8C0-E9DC-42D9-9D1F-AEE0E5A0FF14}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "e990e03d-0332-45cc-a5e7-613996deda74"
+      Hint: SocialIcon_Link
+      Value: |
+        <link text="Liontrust" linktype="external" url="https://www.linkedin.com/company/liontrust-asset-management/" anchor="" target="" />

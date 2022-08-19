@@ -8,5 +8,6 @@
         int NoOfResults { get; set; }
         Dictionary<string, string[]> Facets { get; set; }
         int Page { get; set; }
+        bool SimilarResults { get; set; }
     }
 }

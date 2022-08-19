@@ -91,6 +91,7 @@
     <Content Include="Views\Navigation\anchor.cshtml" />
     <Content Include="Views\Navigation\HomepageHeader.cshtml" />
     <Content Include="Views\Navigation\HomePageSecondaryNavigation.cshtml" />
+    <Content Include="Views\Navigation\LoginHeader.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -115,7 +116,9 @@
     <Compile Include="Repositories\INavigationRepository.cs" />
     <Compile Include="Repositories\NavigationRepository.cs" />
     <Compile Include="Services\BreadcrumbService.cs" />
+    <Compile Include="Services\INavigationService.cs" />
     <Compile Include="Services\IBreadcrumbService.cs" />
+    <Compile Include="Services\NavigationService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Foundation\Analytics\website\LionTrust.Foundation.Analytics.csproj">

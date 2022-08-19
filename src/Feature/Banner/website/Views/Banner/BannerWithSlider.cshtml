@@ -24,12 +24,14 @@
                         </div>
                     }
                     <div class="swiper-container-awards">
-                        <div class="swiper-wrapper">
+                        <!-- wrapper -->
+                        <div class="swiper-wrapper slidesWrapper">
                             @foreach (var imageWithTitleAndText in Model.Images)
                             {
                                 using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Banner/BannerWithSlider/ImageWithTitleAndText", imageWithTitleAndText.Id.ToString(), "Edit image with title and text"))
                                 {
-                                    <div class="swiper-slide">
+                                    <!-- slide -->
+                                    <div class="swiper-slide slideDiv">
                                         <div class="awards__slide">
                                             @Html.Glass().RenderImage(imageWithTitleAndText, m => m.Image, new NameValueCollection { { "class", "awards__img" } }, isEditable: true)
                                             <span class="awards__title txtlimit twoline">
@@ -43,9 +45,11 @@
                                 }
                             }
                         </div>
-                        <div class="swiper-pagination"></div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
+                        <!-- these 3 divs are the pagination and arrows -->
+                        <div class="swiper-pagination awardpagination"></div>
+
+                        <div class="swiper-button-next awardpagination"></div>
+                        <div class="swiper-button-prev awardpagination"></div>
                     </div>
                 }
             }
