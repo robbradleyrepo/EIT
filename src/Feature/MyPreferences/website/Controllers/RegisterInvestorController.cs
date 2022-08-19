@@ -47,7 +47,7 @@
                 return null;
             }
 
-            var investor = OnboardingHelper.GetCurrentContactInvestor(_context, _log);
+            var investor = OnboardingHelper.GetOnboardingInvestor(_context, _log);
 
 
             if (!Sitecore.Context.PageMode.IsExperienceEditor && investor == null)
