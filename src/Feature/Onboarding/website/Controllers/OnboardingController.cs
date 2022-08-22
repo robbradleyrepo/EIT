@@ -231,7 +231,7 @@
                 }
 
                 OnboardingHelper.AddPointsFromProfileCard(data.OnboardingConfiguration, profileCard);
-                OnboardingHelper.UpdateInvestorTypeSession(investor.PatternCard.Id);
+                OnboardingHelper.UpdateInvestorTypeSession(investor.Id);
 
                 TrackAnonymousUser(OnboardingSubmit.Country);
 

@@ -37,18 +37,6 @@
             return profile.PatternLabel;
         }
 
-        public static Guid? PatternCardId(IOnboardingConfiguration onboardingConfiguration, BaseLog log)
-        {
-            var profile = ProfileCard(onboardingConfiguration, log);
-
-            if (profile == null)
-            {
-                return null;
-            }
-
-            return profile.PatternId;
-        }
-
         public static string ViewingLabelWithArticle(string viewingLabel, string profileName)
         {
             char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
@@ -106,6 +94,25 @@
                         }
                     }
                 }
+            }
+
+            return investor;
+        }
+
+        public static IInvestor GetOnboardingInvestor(IMvcContext context, BaseLog log)
+        {
+            IInvestor investor = null;
+            var investorTypeId = OnboardingHelper.GetInvestorTypeId();
+
+            if (investorTypeId.HasValue)
+            {
+                investor = context.SitecoreService.GetItem<IInvestor>(investorTypeId.Value);
+            }
+
+            if (investor == null)
+            {
+                investor = GetCurrentContactInvestor(context, log);
+                UpdateInvestorTypeSession(investor.Id);
             }
 
             return investor;
@@ -453,7 +460,7 @@
 
         public static bool ShowMyLiontrust(IMvcContext context, BaseLog log, IEnumerable<IInvestor> allowedInvestors)
         {
-            var currentInvestor = GetCurrentContactInvestor(context, log);
+            var currentInvestor = GetOnboardingInvestor(context, log);
             if (currentInvestor == null || !allowedInvestors.Any(i => i.Id.Equals(currentInvestor.Id)))
             {
                 return false;
@@ -464,7 +471,7 @@
 
         public static bool ShowLionHub(IMvcContext context, BaseLog log, IEnumerable<IInvestor> allowedInvestors, IEnumerable<IGlassBase> allowedPages)
         {
-            var currentInvestor = GetCurrentContactInvestor(context, log);
+            var currentInvestor = GetOnboardingInvestor(context, log);
             if (currentInvestor == null || !allowedInvestors.Any(i => i.Id.Equals(currentInvestor.Id)))
             {
                 return false;
