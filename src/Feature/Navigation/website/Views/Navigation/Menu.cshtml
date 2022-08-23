@@ -35,7 +35,7 @@
                             if (filteredChildrens != null && filteredChildrens.Any())
                             {
                                 <li class="navigation__item">
-                                    <label class="navigation__link" for="@menuItem.Name">
+                                    <label class="navigation__link" for="@menuItem.Id">
                                         @Html.Glass().Editable(menuItem, z => z.PageTitle)
                                     </label>
                                 </li>
@@ -169,7 +169,7 @@
                             if (filteredChildrens != null && filteredChildrens.Any())
                             {
                                 <li class="navigation__item">
-                                    <label class="navigation__link" for="@menuItem.Name">
+                                    <label class="navigation__link" for="@menuItem.Id">
                                         @Html.Glass().Editable(menuItem, z => z.PageTitle)
                                     </label>
                                 </li>
@@ -198,11 +198,12 @@
                 {
                     if (dropDown.PageItem != null)
                     {
+                        var id = dropDown.PageItem.MenuItems.Any() ? dropDown.Id : dropDown.PageItem.Id;
                         var navigationColumnCount = 0;
                         <div class="navigation__item">
-                            <input type="checkbox" id="@dropDown.Name" class="navigation__checkbox">
+                            <input type="checkbox" id="@id" class="navigation__checkbox">
                             <div class="navigation__submenu">
-                                <label class="navigation__close-submenu" for="@dropDown.Name">
+                                <label class="navigation__close-submenu" for="@id">
                                     <i class="icon-chevron-left"></i>
                                     back
                                 </label>
@@ -542,6 +543,11 @@
         <div class="navigation__sublinks-items">
             @foreach (var menuItem in Model.MenuItems.WithAccessTo())
             {
+                if (!menuItem.MenuItems.Any())
+                {
+                    continue;
+                }
+
                 var menuItemsSecondLevel = menuItem.MenuItems.Where(m => !m.ExcludeInSearchResults);
 
                 var filteredChildrens = (menuItemsSecondLevel != null && menuItemsSecondLevel.Any())
@@ -549,9 +555,9 @@
                         : menuItem.Children.Where(m => !m.ExcludeInSearchResults);
 
                 <div class="navigation__item">
-                    <input type="checkbox" id="@menuItem.Name" class="navigation__checkbox">
+                    <input type="checkbox" id="@menuItem.Id" class="navigation__checkbox">
                     <div class="navigation__submenu">
-                        <label class="navigation__close-submenu" for="@menuItem.Name">
+                        <label class="navigation__close-submenu" for="@menuItem.Id">
                             <i class="icon-chevron-left"></i>
                             back
                         </label>
