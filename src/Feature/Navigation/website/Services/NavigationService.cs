@@ -82,12 +82,6 @@ namespace LionTrust.Feature.Navigation.Services
 
             if (string.IsNullOrEmpty(investorType))
             {
-                var patternCardId = OnboardingHelper.PatternCardId(onboardingConfiguration, _log);
-                if (patternCardId.HasValue)
-                {
-                    OnboardingHelper.UpdateInvestorTypeSession(patternCardId.Value);
-                }
-
                 investorType = OnboardingHelper.ProfileRoleName(onboardingConfiguration, _log);
             }
 
