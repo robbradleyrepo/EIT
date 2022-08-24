@@ -59,6 +59,8 @@
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
+    <Compile Include="Enums\EntityType.cs" />
+    <Compile Include="Enums\InteractionType.cs" />
     <Compile Include="Managers\IMailManager.cs" />
     <Compile Include="Managers\MailManager.cs" />
     <Compile Include="Models\Context.cs" />

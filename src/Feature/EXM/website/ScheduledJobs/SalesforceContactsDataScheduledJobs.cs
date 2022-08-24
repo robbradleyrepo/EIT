@@ -30,13 +30,13 @@
 
                 var service = ServiceLocator.ServiceProvider.GetService<ISalesforceAnalyticsService>();
 
-                var contacts = service.GetContactWithInteractions(lastSyncDate);
-                var sfEntities = service.GetSalesforceEntities(contacts);
-                //service.SyncData(sfEntities);
+                var entities = service.GetEntityWithInteractions(lastSyncDate);
+                //service.SyncEngagementHistory(entities);
+                //service.SyncScore(entities);
 
-                if (contacts.SelectMany(x => x.Interactions).Any())
+                if (entities.SelectMany(x => x.Interactions).Any())
                 {
-                    var lastRun = contacts.SelectMany(x => x.Interactions).Max(x => x.Date);
+                    var lastRun = entities.SelectMany(x => x.Interactions).Max(x => x.Date);
 
                     using (new SecurityDisabler())
                     {

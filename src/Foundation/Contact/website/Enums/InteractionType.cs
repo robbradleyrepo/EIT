@@ -1,4 +1,4 @@
-﻿namespace LionTrust.Feature.EXM.Enums
+﻿namespace LionTrust.Foundation.Contact.Enums
 {
     public enum InteractionType
     {

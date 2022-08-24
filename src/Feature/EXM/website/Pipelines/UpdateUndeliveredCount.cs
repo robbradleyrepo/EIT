@@ -17,6 +17,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using ContactConstants = LionTrust.Foundation.Contact.Constants;
 
 namespace LionTrust.Feature.EXM.Pipelines
 {
@@ -102,7 +103,7 @@ namespace LionTrust.Feature.EXM.Pipelines
                                 var sfEntity = sfEntityUtility.GetEntityByEmail(preferredEmail.SmtpAddress);
                                 var identifier = sfEntityUtility.GetIdentifier(sfEntity);
 
-                                IdentifiedContactReference reference = new IdentifiedContactReference(Constants.Identifier.S4S, identifier);
+                                IdentifiedContactReference reference = new IdentifiedContactReference(ContactConstants.Identifier.S4S, identifier);
                                 var expandOptions = new ContactExpandOptions(EmailAddressList.DefaultFacetKey, S4SInfo.DefaultFacetKey);
                                 var xdbContact = client.Get<Contact>(reference, expandOptions);
 

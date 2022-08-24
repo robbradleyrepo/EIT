@@ -1,7 +1,9 @@
 ﻿namespace LionTrust.Foundation.Contact.Services
 {
     using FuseIT.Sitecore.SalesforceConnector.Entities;
+    using LionTrust.Foundation.Contact.Enums;
     using LionTrust.Foundation.Contact.Models;
+    using System;
     using System.Collections.Generic;
 
     public interface ISFEntityUtility
@@ -130,6 +132,31 @@
         /// <returns></returns>
         string GetIdentifier(EntityBase sfEntity);
 
-        void UpdateOrInsertEntities(List<GenericSalesforceEntity> entities, string externalFieldId);
+        void UpdateOrInsertEntities(List<GenericSalesforceEntity> entities, string entityType, string externalFieldId);
+
+        /// <summary>
+        /// Get entity with updated score
+        /// </summary>
+        /// <param name="entityId"></param>
+        /// <param name="entityType"></param>
+        /// <param name="scorePoints"></param>
+        /// <returns></returns>
+        GenericSalesforceEntity GetEntityWithUpdatedScore(string entityId, string entityType, int scorePoints);
+
+        /// <summary>
+        /// Generates engagement history object
+        /// </summary>
+        /// <param name="campaignId"></param>
+        /// <param name="sfEntityId"></param>
+        /// <param name="sfCampaignId"></param>
+        /// <param name="entityType"></param>
+        /// <param name="interactionType"></param>
+        /// <param name="contactList"></param>
+        /// <param name="email"></param>
+        /// <param name="messageLink"></param>
+        /// <param name="link"></param>
+        /// <param name="date"></param>
+        /// <returns></returns>
+        GenericSalesforceEntity GenerateEngagementHistory(Guid campaignId, string sfEntityId, string sfCampaignId, EntityType entityType, InteractionType interactionType, string contactList, string email, string messageLink, string link, DateTime date);
     }
 }

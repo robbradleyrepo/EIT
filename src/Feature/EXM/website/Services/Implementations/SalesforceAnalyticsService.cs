@@ -5,6 +5,7 @@ using LionTrust.Feature.EXM.Extensions;
 using LionTrust.Feature.EXM.Models;
 using LionTrust.Feature.EXM.Services.Interfaces;
 using LionTrust.Feature.EXM.ViewModels;
+using LionTrust.Foundation.Contact.Enums;
 using LionTrust.Foundation.Contact.Services;
 using LionTrust.Foundation.SitecoreExtensions.Extensions;
 using Sitecore.EmailCampaign.Model.XConnect.Events;
@@ -15,6 +16,7 @@ using Sitecore.XConnect.Collection.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using ContactConstants = LionTrust.Foundation.Contact.Constants;
 
 namespace LionTrust.Feature.EXM.Services.Implementations
 {
@@ -22,23 +24,23 @@ namespace LionTrust.Feature.EXM.Services.Implementations
     {
         private readonly ISitecoreService _sitecoreService;
         private readonly ISFEntityUtility _sfEntityUtility;
+        private readonly ISitecoreContactUtility _sitecoreContactUtility;
 
-        private const char IdentifierSeparator = '_';
-
-        public SalesforceAnalyticsService(ISitecoreService sitecoreService, ISFEntityUtility sfEntityUtility)
+        public SalesforceAnalyticsService(ISitecoreService sitecoreService, ISFEntityUtility sfEntityUtility, ISitecoreContactUtility sitecoreContactUtility)
         {
             _sitecoreService = sitecoreService;
             _sfEntityUtility = sfEntityUtility;
+            _sitecoreContactUtility = sitecoreContactUtility;
         }
 
-        public List<ContactViewModel> GetContactWithInteractions(DateTime fromDate)
+        public List<EntityViewModel> GetEntityWithInteractions(DateTime fromDate)
         {
-            var contacts = new List<ContactViewModel>();
+            var entities = new List<EntityViewModel>();
 
             using (XConnectClient client = Sitecore.XConnect.Client.Configuration.SitecoreXConnectClientConfiguration.GetClient())
             {
                 IAsyncQueryable<Interaction> asyncQueryable = client.Interactions
-                        .Where(interaction => interaction.LastModified >= fromDate)
+                        .Where(interaction => interaction.StartDateTime > fromDate)
                         .WithExpandOptions(new InteractionExpandOptions
                         {
                             Contact = new RelatedContactExpandOptions(new string[2]
@@ -68,18 +70,22 @@ namespace LionTrust.Feature.EXM.Services.Implementations
                             continue;
                         }
 
-                        var sfContactId = GetSalesforceContactId(xConnectContact);
+                        var sfEntityId = _sitecoreContactUtility.GetSalesforceEntityId(xConnectContact);
+                        var entityType = _sitecoreContactUtility.GetEntityType(sfEntityId);
 
-                        var contact = contacts.FirstOrDefault(x => x.ContactId == current.Contact.Id.Value);
-                        if(contact == null)
+                        var entity = entities.FirstOrDefault(x => x.EntityId == current.Contact.Id.Value);
+                        if(entity == null && entityType != Foundation.Contact.Enums.EntityType.None)
                         {
-                            contact = new ContactViewModel()
+                            entity = new EntityViewModel()
                             {
-                                ContactId = xConnectContact.Id.Value,
-                                SalesforceContactId = sfContactId,
+                                EntityId = xConnectContact.Id.Value,
+                                SalesforceEntityId = sfEntityId,
+                                SalesforceEntityType = entityType == Foundation.Contact.Enums.EntityType.Contact
+                                                        ? ContactConstants.SFContactEntityName
+                                                        : ContactConstants.SfLeadEntityName,
                                 Email = email
                             };
-                            contacts.Add(contact);
+                            entities.Add(entity);
                         }
 
                         foreach (var ev in current.Events)
@@ -102,72 +108,23 @@ namespace LionTrust.Feature.EXM.Services.Implementations
 
                             if (ev is EmailSentEvent)
                             {
-                                var interaction = new InteractionViewModel
-                                {
-                                    ContactId = xConnectContact.Id.Value,
-                                    SitecoreCampaignId = messageItem.Id,
-                                    Email = email,
-                                    SalesforceContactId = sfContactId,
-                                    SalesforceCampaignId = messageItem.SalesforceCampaignId,
-                                    ContactList = contactList,
-                                    MessageName = messageItem.Name,
-                                    MessageLink = messageUrl,
-                                    Date = current.LastModified.Value,
-                                    Type = Enums.InteractionType.EmailSent
-                                };
-                                contact.Interactions.Add(interaction);
+                                var interaction = GetInteractionViewModel(xConnectContact.Id.Value, sfEntityId, entityType, messageItem, messageUrl, email, current.StartDateTime, InteractionType.EmailSent);
+                                entity.Interactions.Add(interaction);
                             }
                             else if (ev is EmailOpenedEvent)
                             {
-                                var interaction = new InteractionViewModel
-                                {
-                                    ContactId = xConnectContact.Id.Value,
-                                    SitecoreCampaignId = messageItem.Id,
-                                    Email = email,
-                                    SalesforceContactId = sfContactId,
-                                    SalesforceCampaignId = messageItem.SalesforceCampaignId,
-                                    ContactList = contactList,
-                                    MessageName = messageItem.Name,
-                                    MessageLink = messageUrl,
-                                    Date = current.LastModified.Value,
-                                    Type = Enums.InteractionType.EmailOpen
-                                };
-                                contact.Interactions.Add(interaction);
+                                var interaction = GetInteractionViewModel(xConnectContact.Id.Value, sfEntityId, entityType, messageItem, messageUrl, email, current.StartDateTime, InteractionType.EmailOpen);
+                                entity.Interactions.Add(interaction);
                             }
                             else if (ev is UnsubscribedFromEmailEvent unsubscribedEvent)
                             {
-                                var interaction = new InteractionViewModel
-                                {
-                                    ContactId = xConnectContact.Id.Value,
-                                    SitecoreCampaignId = messageItem.Id,
-                                    Email = email,
-                                    SalesforceContactId = sfContactId,
-                                    SalesforceCampaignId = messageItem.SalesforceCampaignId,
-                                    ContactList = contactList,
-                                    MessageName = messageItem.Name,
-                                    MessageLink = messageUrl,
-                                    Date = current.LastModified.Value,
-                                    Type = Enums.InteractionType.Unsubscribed
-                                };
-                                contact.Interactions.Add(interaction);
+                                var interaction = GetInteractionViewModel(xConnectContact.Id.Value, sfEntityId, entityType, messageItem, messageUrl, email, current.StartDateTime, InteractionType.Unsubscribed);
+                                entity.Interactions.Add(interaction);
                             }
                             else if (ev is EmailClickedEvent clickedEvent)
                             {
-                                var interaction = new InteractionViewModel
-                                {
-                                    ContactId = xConnectContact.Id.Value,
-                                    SitecoreCampaignId = messageItem.Id,
-                                    Email = email,
-                                    SalesforceContactId = sfContactId,
-                                    SalesforceCampaignId = messageItem.SalesforceCampaignId,
-                                    ContactList = contactList,
-                                    MessageName = messageItem.Name,
-                                    MessageLink = messageUrl,
-                                    Link = clickedEvent.Url,
-                                    Date = current.LastModified.Value,
-                                    Type = Enums.InteractionType.LinkClicked
-                                };
-                                contact.Interactions.Add(interaction);
+                                var interaction = GetInteractionViewModel(xConnectContact.Id.Value, sfEntityId, entityType, messageItem, messageUrl, email, current.StartDateTime, InteractionType.LinkClicked, clickedEvent.Url);
+                                entity.Interactions.Add(interaction);
                             }
                             else
                             {
@@ -178,78 +135,95 @@ namespace LionTrust.Feature.EXM.Services.Implementations
                 }
             }
 
-            contacts = SetInteractionPoints(contacts);
-
-            //var entity = _sfEntityUtility.GetEntityByEmail("harry.scargill@fairstone.co.uk");
-            //var fields = entity.InternalFields.AvailableFields().OrderBy(x => x).ToList();
-            //foreach(var e in entity.InternalFields.AvailableFields())
-            //{
-            //    var test = entity.InternalFields[e];
-            //    System.Diagnostics.Debug.Print($"{e}: {entity.InternalFields[e]}");
-            //}
-
-            return contacts;
+            entities = SetInteractionPoints(entities);
+            return entities;
         }        
 
-        public List<GenericSalesforceEntity> GetSalesforceEntities(List<ContactViewModel> contacts)
+        public bool SyncEngagementHistory(List<EntityViewModel> entities)
         {
-            var result = new List<GenericSalesforceEntity>();
-
-            var interactions = contacts.SelectMany(x => x.Interactions);
-            foreach(var interaction in interactions)
+            try
             {
-                var entity = new GenericSalesforceEntity("interactions");
-                entity.InternalFields["sitecoreCampaignId"] = interaction.SitecoreCampaignId.ToString("D");
+                var entitiesToSync = new List<GenericSalesforceEntity>();
 
-                result.Add(entity);
+                var interactions = entities.SelectMany(x => x.Interactions).Where(x => x.Type != InteractionType.Unsubscribed);
+                foreach (var interaction in interactions)
+                {
+                    var entity = _sfEntityUtility.GenerateEngagementHistory(
+                        interaction.SitecoreCampaignId,
+                        interaction.SalesforceEntityId,
+                        interaction.SalesforceCampaignId,
+                        interaction.EntityType,
+                        interaction.Type,
+                        interaction.ContactList,
+                        interaction.Email,
+                        interaction.MessageLink,
+                        interaction.Link,
+                        interaction.Date);
+
+                    entitiesToSync.Add(entity);
+                }
+
+                _sfEntityUtility.UpdateOrInsertEntities(entitiesToSync, ContactConstants.SfEngagementHistory, ContactConstants.EngagementHistory.SF_IdField);
+
+                return true;
             }
-
-            return result;
-        }
-
-        public void SyncData(List<GenericSalesforceEntity> entities)
-        {
-            var sfEntityUtility = new SFEntityUtility();
-            sfEntityUtility.UpdateOrInsertEntities(entities, "history engagement");
-        }
-
-        private List<List<GenericSalesforceEntity>> GetEntitiesList<GenericSalesforceEntity>(List<GenericSalesforceEntity> entities, int maxItems)
-        {
-            List<List<GenericSalesforceEntity>> result = new List<List<GenericSalesforceEntity>>();
-
-            for (int index = 0; index < entities.Count; index += maxItems)
+            catch(Exception ex)
             {
-                result.Add(entities.GetRange(index, Math.Min(maxItems, entities.Count - index)));
+                Sitecore.Diagnostics.Log.Error("Exception occured when syncing engagement history objects to Salesforce.", ex, this);
+                return false;
             }
-
-            return result;
         }
 
-        private string GetSalesforceContactId(Sitecore.XConnect.Contact contact)
+        public bool SyncScore(List<EntityViewModel> entities)
         {
-            string contactId = null;
-
-            var identifier = contact.Identifiers.FirstOrDefault(x => x.Source == Constants.Identifier.S4S)?.Identifier;
-            
-            if (identifier != null && identifier.Split(IdentifierSeparator).Length > 1)
+            try
             {
-                contactId = identifier.Split(IdentifierSeparator)[1];
-            }
+                var contactsToSync = new List<GenericSalesforceEntity>();
+                var leadsToSync = new List<GenericSalesforceEntity>();
 
-            return contactId;
+                foreach (var entity in entities)
+                {
+                    var scorePoints = entity.Interactions.Sum(x => x.Score);
+
+                    if (scorePoints <= 0)
+                    {
+                        continue;
+                    }
+
+                    var entityObj = _sfEntityUtility.GetEntityWithUpdatedScore(entity.SalesforceEntityId, entity.SalesforceEntityType, scorePoints);
+                    if (entity.SalesforceEntityType == ContactConstants.SFContactEntityName)
+                    {
+                        contactsToSync.Add(entityObj);
+                    }
+                    else
+                    {
+                        leadsToSync.Add(entityObj);
+                    }
+                }
+
+                _sfEntityUtility.UpdateOrInsertEntities(contactsToSync, ContactConstants.SFContactEntityName, ContactConstants.SF_IdField);
+                _sfEntityUtility.UpdateOrInsertEntities(leadsToSync, ContactConstants.SfLeadEntityName, ContactConstants.SF_IdField);
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Sitecore.Diagnostics.Log.Error("Exception occured when syncing contact/lead score to Salesforce.", ex, this);
+                return false;
+            }
         }
 
-        private List<ContactViewModel> SetInteractionPoints(List<ContactViewModel> contacts)
+        private List<EntityViewModel> SetInteractionPoints(List<EntityViewModel> entities)
         {
             var teams = _sitecoreService.GetChildren<ITeamScore>(Constants.TeamScore.TeamScoreFolderId, Constants.TeamScore.Id);
-            contacts = contacts.Where(x => x.Interactions.Any()).ToList();
+            entities = entities.Where(x => x.Interactions.Any()).ToList();
 
-            foreach (var contact in contacts)
+            foreach (var contact in entities)
             {
                 var unsubscribed = false;
                 contact.IsUnsubscribed = _sfEntityUtility.IsUnsubscribed(contact.Email);
 
-                if (!contact.IsUnsubscribed || !unsubscribed)
+                if (!contact.IsUnsubscribed && !unsubscribed)
                 {
                     foreach (var interaction in contact.Interactions)
                     {
@@ -260,22 +234,59 @@ namespace LionTrust.Feature.EXM.Services.Implementations
 
                             switch (interaction.Type)
                             {
-                                case Enums.InteractionType.EmailOpen:
+                                case InteractionType.EmailOpen:
                                     interaction.Score = team.EmailOpenedPoints;
                                     break;
-                                case Enums.InteractionType.LinkClicked:
+                                case InteractionType.LinkClicked:
                                     interaction.Score = team.ClickedThroughPoints;
                                     break;
-                                case Enums.InteractionType.Unsubscribed:
+                                case InteractionType.Unsubscribed:
                                     unsubscribed = true;
                                     break;
+                            }
+
+                            if (unsubscribed)
+                            {
+                                break;
                             }
                         }
                     }
                 }
             }
 
-            return contacts;
+            return entities;
+        }
+
+        private InteractionViewModel GetInteractionViewModel(
+            Guid entityId, 
+            string sfEntityId, 
+            Foundation.Contact.Enums.EntityType entityType, 
+            IMailMessage messageItem, 
+            string messageUrl, 
+            string email,
+            DateTime date,
+            InteractionType interactionType,
+            string link = null)
+        {
+            var contactList = messageItem.IncludedRecipientLists.FirstOrDefault()?.Name;
+
+            var interaction = new InteractionViewModel
+            {
+                EntityId = entityId,
+                EntityType = entityType,
+                SitecoreCampaignId = messageItem.Id,
+                Email = email,
+                SalesforceEntityId = sfEntityId,
+                SalesforceCampaignId = messageItem.SalesforceCampaignId,
+                ContactList = contactList,
+                MessageName = messageItem.Name,
+                MessageLink = messageUrl,
+                Link = link,
+                Date = date,
+                Type = interactionType
+            };
+
+            return interaction;
         }
     }
 }

@@ -1,13 +1,15 @@
-﻿using LionTrust.Feature.EXM.Enums;
+﻿using LionTrust.Foundation.Contact.Enums;
 using System;
 
 namespace LionTrust.Feature.EXM.ViewModels
 {
     public class InteractionViewModel
     {
-        public Guid ContactId { get; set; }
+        public Guid EntityId { get; set; }
 
-        public string SalesforceContactId { get; set; }
+        public EntityType EntityType { get; set; }
+
+        public string SalesforceEntityId { get; set; }
 
         public Guid SitecoreCampaignId { get; set; }
 

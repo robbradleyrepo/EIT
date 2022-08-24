@@ -157,6 +157,8 @@ namespace LionTrust.Feature.EXM
 
         public static class SalesforceSyncSettings
         {
+            public static Guid Id = new Guid("{72B10F4B-8534-4EF5-9F8C-015EABFD4DDF}");
+
             public const string LastSyncDate_FieldID = "{3C1206F7-8BFD-4A84-A1AB-B16C4FDE7F88}";
         }
 
@@ -195,11 +197,6 @@ namespace LionTrust.Feature.EXM
             public const string MailTestingEnvironment = "MailTestingEnvironment";
             public const string MailServerPassword = "MailServerPassword";
             public const string MailServer = "MailServer";
-        }
-
-        public static class Identifier
-        {
-            public const string S4S = "s4slb";
         }
 
         public const string SiteName = "LionTrust";

@@ -8,6 +8,7 @@
     using FuseIT.Sitecore.SalesforceConnector.SalesforceServiceWrappers;
     using FuseIT.Sitecore.SalesforceConnector.Services;
     using FuseIT.Sitecore.SalesforceConnector.Soql;
+    using LionTrust.Foundation.Contact.Enums;
     using LionTrust.Foundation.Contact.Models;
     using LionTrust.Foundation.Onboarding.Helpers;
     using Sitecore.Diagnostics;
@@ -617,7 +618,7 @@
                 GenericSalesforceService genericService = new GenericSalesforceService(this.SalesforceSession, entityType);
                 var sfEntity = genericService.GetByEntityId(entity.Id);
 
-                sfEntity.InternalFields.SetField<bool>(Constants.SF_Hard_Bounced, true);
+                sfEntity.InternalFields.SetField<bool>(Constants.SF_Hard_BouncedField, true);
 
                 //Update SF Contact/Lead               
                 var result = genericService.UpdateEntity(sfEntity);
@@ -1036,7 +1037,7 @@
                 {
                     var sfEntityId = sfContact.Id.ToString();
                     unsubscribed = sfContact.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
-                    var hardBounced = sfContact.InternalFields.GetField<bool>(Constants.SF_Hard_Bounced);
+                    var hardBounced = sfContact.InternalFields.GetField<bool>(Constants.SF_Hard_BouncedField);
 
                     return unsubscribed || hardBounced;
                 }
@@ -1047,7 +1048,7 @@
                 {
                     var sfEntityId = sfLead.Id.ToString();
                     unsubscribed = sfLead.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
-                    var hardBounced = sfLead.InternalFields.GetField<bool>(Constants.SF_Hard_Bounced);
+                    var hardBounced = sfLead.InternalFields.GetField<bool>(Constants.SF_Hard_BouncedField);
 
                     return unsubscribed || hardBounced;
                 }
@@ -1106,6 +1107,104 @@
         }
 
         /// <summary>
+        /// Get entity with updated score
+        /// </summary>
+        /// <param name="entityId"></param>
+        /// <param name="entityType"></param>
+        /// <param name="scorePoints"></param>
+        /// <returns></returns>
+        public GenericSalesforceEntity GetEntityWithUpdatedScore(string entityId, string entityType, int scorePoints)
+        {
+            try
+            {
+                GenericSalesforceService genericService = new GenericSalesforceService(this.SalesforceSession, entityType);
+                var sfEntity = genericService.GetByEntityId(entityId);
+
+                if (sfEntity == null)
+                {
+                    Log.Info(string.Format("No Salesforce entity found for Id: {0}.", entityId), this);
+                    return null;
+                }
+
+                if (double.TryParse(sfEntity.InternalFields[Constants.SF_ScoreField], out var score))
+                {
+                    sfEntity.InternalFields[Constants.SF_ScoreField] = (score + scorePoints).ToString();
+                }
+                else
+                {
+                    sfEntity.InternalFields[Constants.SF_ScoreField] = scorePoints.ToString();
+                }
+
+                return sfEntity;
+            }
+            catch (Exception ex)
+            {
+                Log.Error("Exception occured when retrieving entity object from Salesforce Contact/Lead.", ex, this);
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Generates engagement history object
+        /// </summary>
+        /// <param name="campaignId"></param>
+        /// <param name="sfEntityId"></param>
+        /// <param name="sfCampaignId"></param>
+        /// <param name="entityType"></param>
+        /// <param name="interactionType"></param>
+        /// <param name="contactList"></param>
+        /// <param name="email"></param>
+        /// <param name="messageLink"></param>
+        /// <param name="link"></param>
+        /// <param name="date"></param>
+        /// <returns></returns>
+        public GenericSalesforceEntity GenerateEngagementHistory(
+            Guid campaignId, 
+            string sfEntityId, 
+            string sfCampaignId, 
+            EntityType entityType, 
+            InteractionType interactionType, 
+            string contactList, 
+            string email, 
+            string messageLink, 
+            string link, 
+            DateTime date)
+        {
+            var entity = new GenericSalesforceEntity(Constants.SfEngagementHistory);
+            entity.InternalFields[Constants.EngagementHistory.SF_CampaignField] = sfCampaignId;
+            entity.InternalFields[Constants.EngagementHistory.SF_ContactListField] = contactList;
+            entity.InternalFields[Constants.EngagementHistory.SF_EmailField] = email;
+            entity.InternalFields[Constants.EngagementHistory.SF_MessageLinkField] = messageLink;
+            entity.InternalFields[Constants.EngagementHistory.SF_LinkField] = link;
+            entity.InternalFields[Constants.EngagementHistory.SF_SitecoreCampaignIdField] = campaignId.ToString("D");
+            entity.InternalFields[Constants.EngagementHistory.SF_DateTimeField] = date.ToString("yyyy-MM-ddThh:mm:ss.000Z");
+
+            if (entityType == EntityType.Contact)
+            {
+                entity.InternalFields[Constants.EngagementHistory.SF_ContactField] = sfEntityId;
+            }
+            else if (entityType == EntityType.Lead)
+            {
+                entity.InternalFields[Constants.EngagementHistory.SF_LeadField] = sfEntityId;
+            }
+
+            switch (interactionType)
+            {
+                case InteractionType.LinkClicked:
+                    entity.InternalFields[Constants.EngagementHistory.SF_TypeField] = Constants.EngagementHistory.EventTypes.TrackedLinkClicked;
+                    break;
+                case InteractionType.EmailOpen:
+                    entity.InternalFields[Constants.EngagementHistory.SF_TypeField] = Constants.EngagementHistory.EventTypes.EmailOpen;
+                    break;
+                case InteractionType.EmailSent:
+                    entity.InternalFields[Constants.EngagementHistory.SF_TypeField] = Constants.EngagementHistory.EventTypes.EmailSent;
+                    break;
+            }
+
+            return entity;
+        }
+
+        /// <summary>
         /// Get identifier by entity
         /// </summary>
         /// <param name="sfEntity"></param>
@@ -1129,17 +1228,26 @@
             }
         }
 
-        public void UpdateOrInsertEntities(List<GenericSalesforceEntity> entities, string externalFieldId)
+        public void UpdateOrInsertEntities(List<GenericSalesforceEntity> entities, string entityType, string externalFieldId)
         {
             //Retrieve Salesforce Process objects
-            GenericSalesforceService genericSFService = new GenericSalesforceService(this.SalesforceSession, Constants.SFProductEntityName);
+            GenericSalesforceService genericSFService = new GenericSalesforceService(this.SalesforceSession, entityType);
 
             if (entities.Count > 0)
             {
                 List<List<GenericSalesforceEntity>> bulkEntities = SplitSalesforceGenericEntityList(entities, 200);
                 foreach (List<GenericSalesforceEntity> list in bulkEntities)
                 {
-                    genericSFService.UpsertEntities(list, externalFieldId);
+                    var result = genericSFService.UpsertEntities(list, externalFieldId);
+
+                    if (result.Any(x => !x.success))
+                    {
+                        var errors = result.Where(x => !x.success).SelectMany(x => x.errors).Select(x => x.message).Distinct();
+                        foreach(var error in errors)
+                        {
+                            Log.Debug(string.Format("Error when trying to insert/update object in Salesforce: {0}.", error), this);
+                        }
+                    }
                 }
             }
             else

@@ -7,12 +7,10 @@ namespace LionTrust.Feature.EXM.Services.Interfaces
 {
     public interface ISalesforceAnalyticsService
     {
-        List<ContactViewModel> GetContactWithInteractions(DateTime fromDate);
+        List<EntityViewModel> GetEntityWithInteractions(DateTime fromDate);
 
-        List<GenericSalesforceEntity> GetSalesforceEntities(List<ContactViewModel> contacts);
+        bool SyncEngagementHistory(List<EntityViewModel> entities);
 
-        void SyncData(List<GenericSalesforceEntity> entities);
-
-        //InteractionsViewModel GetInteractionsViewModel();
+        bool SyncScore(List<EntityViewModel> entities);
     }
 }

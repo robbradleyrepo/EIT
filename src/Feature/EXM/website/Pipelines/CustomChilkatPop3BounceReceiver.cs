@@ -17,6 +17,7 @@ using Sitecore.XConnect.Collection.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using ContactConstants = LionTrust.Foundation.Contact.Constants;
 
 namespace LionTrust.Feature.EXM.Pipelines
 {
@@ -227,7 +228,7 @@ namespace LionTrust.Feature.EXM.Pipelines
                             var sfEntity = sfEntityUtility.GetEntityByEmail(email);
                             var identifier = sfEntityUtility.GetIdentifier(sfEntity);
 
-                            IdentifiedContactReference reference = new IdentifiedContactReference(Constants.Identifier.S4S, identifier);
+                            IdentifiedContactReference reference = new IdentifiedContactReference(ContactConstants.Identifier.S4S, identifier);
                             var expandOptions = new ContactExpandOptions(EmailAddressList.DefaultFacetKey, S4SInfo.DefaultFacetKey);
                             var xdbContact = client.Get<Contact>(reference, expandOptions);
 
@@ -292,7 +293,7 @@ namespace LionTrust.Feature.EXM.Pipelines
                             var sfEntity = sfEntityUtility.GetEntityByEmail(email);
                             var identifier = sfEntityUtility.GetIdentifier(sfEntity);
 
-                            IdentifiedContactReference reference = new IdentifiedContactReference(Constants.Identifier.S4S, identifier);
+                            IdentifiedContactReference reference = new IdentifiedContactReference(ContactConstants.Identifier.S4S, identifier);
                             var expandOptions = new ContactExpandOptions(EmailAddressList.DefaultFacetKey, S4SInfo.DefaultFacetKey);
                             var xdbContact = client.Get<Contact>(reference, expandOptions);
 

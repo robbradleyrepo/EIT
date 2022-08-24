@@ -7,19 +7,16 @@
     using System;
     using System.Linq;
 
-    using Microsoft.Extensions.DependencyInjection;
-    using Sitecore.DependencyInjection;
-
-    public class SetContactList
+    public class UpdateSalesforceCampaign
     {
         private readonly ISitecoreService _sitecoreService;
 
-        public SetContactList()
+        public UpdateSalesforceCampaign()
             : this(new SitecoreService("master"))
         {
         }
 
-        private SetContactList(ISitecoreService sitecoreService)
+        private UpdateSalesforceCampaign(ISitecoreService sitecoreService)
         {
             _sitecoreService = sitecoreService;
         }
@@ -41,6 +38,9 @@
                     {
                         contactList.Active = false;
                         _sitecoreService.SaveItem(new SaveOptions(contactList));
+
+                        mailMessage.SalesforceCampaignId = contactList.SalesforceCampaignId;
+                        _sitecoreService.SaveItem(new SaveOptions(mailMessage));
                     }
                 }
             }
