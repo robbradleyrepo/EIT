@@ -112,7 +112,11 @@
             if (investor == null)
             {
                 investor = GetCurrentContactInvestor(context, log);
-                UpdateInvestorTypeSession(investor.Id);
+
+                if (investor != null)
+                {
+                    UpdateInvestorTypeSession(investor.Id);
+                }
             }
 
             return investor;
