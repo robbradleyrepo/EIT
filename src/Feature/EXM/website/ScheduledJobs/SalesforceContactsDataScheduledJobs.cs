@@ -14,7 +14,7 @@
 
     public class SalesforceContactsDataScheduledJobs
     {
-        public void UpdateData(Item[] itemArray, CommandItem commandItem, ScheduleItem scheduleItem)
+        public async System.Threading.Tasks.Task UpdateData(Item[] itemArray, CommandItem commandItem, ScheduleItem scheduleItem)
         {
             if (itemArray.Length == 0)
             {
@@ -30,7 +30,7 @@
 
                 var service = ServiceLocator.ServiceProvider.GetService<ISalesforceAnalyticsService>();
 
-                var entities = service.GetEntityWithInteractions(lastSyncDate);
+                var entities = await service.GetEntityWithInteractions(lastSyncDate);
                 //service.SyncEngagementHistory(entities);
                 //service.SyncScore(entities);
 

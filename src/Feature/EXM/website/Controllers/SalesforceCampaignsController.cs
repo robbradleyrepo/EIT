@@ -54,14 +54,14 @@ namespace LionTrust.Feature.EXM.Controllers
             {
                 if (info.SelectedListMergeOption == "createnewlist")
                 {
-                    var contactList = _sitecoreService.GetItem<ICampaign>(new Guid(contactListModel.Id));
+                    var contactList = _sitecoreService.GetItem<IMessageCampaign>(new Guid(contactListModel.Id));
                     contactList.SalesforceCampaignId = info.CampaignIdString;
 
                     _sitecoreService.SaveItem(new SaveOptions(contactList));
                 }
                 else if (info.SelectedListMergeOption == "updatelist")
                 {
-                    var contactList = _sitecoreService.GetItem<ICampaign>(new Guid(contactListModel.Id));
+                    var contactList = _sitecoreService.GetItem<IMessageCampaign>(new Guid(contactListModel.Id));
                     contactList.SalesforceCampaignId = info.CampaignIdString;
 
                     _sitecoreService.SaveItem(new SaveOptions(contactList));

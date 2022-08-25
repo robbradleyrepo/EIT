@@ -146,17 +146,17 @@
         /// <summary>
         /// Generates engagement history object
         /// </summary>
-        /// <param name="campaignId"></param>
         /// <param name="sfEntityId"></param>
         /// <param name="sfCampaignId"></param>
         /// <param name="entityType"></param>
         /// <param name="interactionType"></param>
         /// <param name="contactList"></param>
         /// <param name="email"></param>
+        /// <param name="messageId"></param>
         /// <param name="messageLink"></param>
         /// <param name="link"></param>
         /// <param name="date"></param>
         /// <returns></returns>
-        GenericSalesforceEntity GenerateEngagementHistory(Guid campaignId, string sfEntityId, string sfCampaignId, EntityType entityType, InteractionType interactionType, string contactList, string email, string messageLink, string link, DateTime date);
+        GenericSalesforceEntity GenerateEngagementHistory(string sfEntityId, string sfCampaignId, EntityType entityType, InteractionType interactionType, string contactList, string email, Guid messageId, string messageLink, string link, DateTime date);
     }
 }

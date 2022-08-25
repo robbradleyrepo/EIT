@@ -52,7 +52,7 @@ namespace LionTrust.Feature.EXM.Controllers
             var baseResponse = (MessageResponse)base.Message(data);
             var response = new LTMessageResponse(baseResponse);
 
-            var message = _sitecoreService.GetItem<ICampaign>(new Guid(data.MessageId));
+            var message = _sitecoreService.GetItem<IMessageCampaign>(new Guid(data.MessageId));
 
             if (message.Team != null)
             {

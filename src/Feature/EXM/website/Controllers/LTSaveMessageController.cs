@@ -51,7 +51,7 @@ namespace LionTrust.Feature.EXM.Controllers
 
             if (!save.Error)
             {
-                var message = _sitecoreService.GetItem<ICampaign>(new Guid(data.Message.Id));
+                var message = _sitecoreService.GetItem<IMessageCampaign>(new Guid(data.Message.Id));
 
                 if (!string.IsNullOrEmpty(data.Team))
                 {

@@ -1147,25 +1147,25 @@
         /// <summary>
         /// Generates engagement history object
         /// </summary>
-        /// <param name="campaignId"></param>
         /// <param name="sfEntityId"></param>
         /// <param name="sfCampaignId"></param>
         /// <param name="entityType"></param>
         /// <param name="interactionType"></param>
         /// <param name="contactList"></param>
         /// <param name="email"></param>
+        /// <param name="messageId"></param>
         /// <param name="messageLink"></param>
         /// <param name="link"></param>
         /// <param name="date"></param>
         /// <returns></returns>
         public GenericSalesforceEntity GenerateEngagementHistory(
-            Guid campaignId, 
             string sfEntityId, 
             string sfCampaignId, 
             EntityType entityType, 
             InteractionType interactionType, 
             string contactList, 
-            string email, 
+            string email,
+            Guid messageId,
             string messageLink, 
             string link, 
             DateTime date)
@@ -1176,7 +1176,7 @@
             entity.InternalFields[Constants.EngagementHistory.SF_EmailField] = email;
             entity.InternalFields[Constants.EngagementHistory.SF_MessageLinkField] = messageLink;
             entity.InternalFields[Constants.EngagementHistory.SF_LinkField] = link;
-            entity.InternalFields[Constants.EngagementHistory.SF_SitecoreCampaignIdField] = campaignId.ToString("D");
+            entity.InternalFields[Constants.EngagementHistory.SF_SitecoreCampaignIdField] = messageId.ToString("D");
             entity.InternalFields[Constants.EngagementHistory.SF_DateTimeField] = date.ToString("yyyy-MM-ddThh:mm:ss.000Z");
 
             if (entityType == EntityType.Contact)

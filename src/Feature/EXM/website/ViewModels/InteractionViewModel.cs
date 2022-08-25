@@ -9,13 +9,15 @@ namespace LionTrust.Feature.EXM.ViewModels
 
         public EntityType EntityType { get; set; }
 
-        public string SalesforceEntityId { get; set; }
+        public Guid CampaignId { get; set; }
 
-        public Guid SitecoreCampaignId { get; set; }
+        public string SalesforceEntityId { get; set; }
 
         public string SalesforceCampaignId { get; set; }
 
         public string Email { get; set; }
+
+        public Guid MessageId { get; set; }
 
         public string MessageName { get; set; }
 
@@ -30,5 +32,7 @@ namespace LionTrust.Feature.EXM.ViewModels
         public string Link { get; set; }
 
         public int Score { get; set; }
+
+        public bool FirstTime { get; set; }
     }
 }
