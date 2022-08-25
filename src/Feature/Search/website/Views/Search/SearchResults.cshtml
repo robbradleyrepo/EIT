@@ -3,12 +3,14 @@
 @model LionTrust.Feature.Search.SiteSearch.ISiteSearch
 <div class="container" id="result-list-app" v-cloak 
      data-pagesize="@(!string.IsNullOrWhiteSpace(@Model.ResultsPerPage) ? "10" : @Model.ResultsPerPage)" 
-     data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.SiteSearchApiRoute_SettingName))">
+     data-host="@(Settings.GetSetting(LionTrust.Feature.Search.Constants.Settings.SiteSearchApiRoute_SettingName))"
+     data-similarresultslabel="@(Model.SimilarResultsLabel)"
+     data-searchresultslabel="@(Model.SearchResultsLabel)">
     <div class="row">
         <div class="col-lg-7">
-            <div class="search-header__desktop">
+            <div class="search-header__desktop" data-recent-searches-label="@Model.RecentSearchesLabel">
                 <div class="search-header__title">
-                    {{amountResults}} search results for:
+                    {{searchLabel}}
                 </div>
                 <form class="search-form" @@submit.prevent="submit">
                     <input v-model="searchParams.query"
@@ -71,6 +73,13 @@
                             <div class="search-item__tag search-item__footer-item">
                                 <a :href="item.fundTeamUrl">
                                     <i class="icon-team"></i> {{item.fundTeam}}
+                                </a>
+                            </div>
+                        </div>
+                        <div v-if="item.resultType === 'Document'" class="search-item__footer">
+                            <div v-if="item.relatedFundName" class="search-item__tag search-item__footer-item">
+                                <a :href="item.relatedFundUrl">
+                                    <i class="icon-team"></i> {{item.relatedFundName}}
                                 </a>
                             </div>
                         </div>

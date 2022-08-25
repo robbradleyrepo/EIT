@@ -11,6 +11,12 @@
         [SitecoreField(Constants.SiteSearch.NoSearchResultsFoundLabelFieldId)]
         string NoSearchResultsFound { get; set; }
 
+        [SitecoreField(Constants.SiteSearch.SearchResultsLabelField)]
+        string SearchResultsLabel { get; set; }
+
+        [SitecoreField(Constants.SiteSearch.SimilarResultsLabelField)]
+        string SimilarResultsLabel { get; set; }
+
         [SitecoreField(Constants.SiteSearch.ResultsPerPageFieldId)]
         string ResultsPerPage { get; set; }
         
@@ -31,5 +37,8 @@
 
         [SitecoreChildren(TemplateId = Constants.SiteSearchFilter.TemplateId, EnforceTemplate = SitecoreEnforceTemplate.TemplateAndBase)]
         IEnumerable<ISiteSearchFilter> Filters { get; set; }
+
+        [SitecoreField(Constants.SiteSearch.RecentSearchesLabelFieldId)]
+        string RecentSearchesLabel { get; set; }
     }
 }

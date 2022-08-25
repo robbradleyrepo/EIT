@@ -9,6 +9,8 @@
     {
         public IEnumerable<T> SearchResults { get; set; }
 
+        public IEnumerable<T> SimilarSearchResults { get; set; }
+
         [JsonIgnore]
         public int StatusCode { get; set; }
 
@@ -16,6 +18,8 @@
         public string StatusMessage { get; set; }
         
         public int TotalResults { get; set; }
+
+        public int TotalSimilarResults { get; set; }
 
         public IEnumerable<string> FacetValues { get; set; }
     }

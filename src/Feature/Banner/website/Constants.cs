@@ -106,6 +106,9 @@
             public const string CtaFieldId = "{07F07757-D439-4B90-9430-0C3F3D9BF9BF}";
             public const string CtaGoalFieldId = "{7EEBE834-1B0C-433D-A5B5-BDFB93BE49DE}";
             public const string BodyFieldId = "{838AB617-CCE0-4319-964E-4FA17315D6BD}";
+            public const string NoContactTitleFieldId = "{952490FD-3A52-435B-A5EF-D443F60423E5}";
+            public const string NoContactCtaFieldId = "{AA3883FB-0237-4DDA-9253-05DD98CE8BC2}";
+            public const string NoContactBodyFieldId = "{C560089B-D007-4FA5-8626-6E7714205BE7}";
         }
 
         public static class PeopleInfoBanner

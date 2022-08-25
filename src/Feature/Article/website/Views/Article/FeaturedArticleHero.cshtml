@@ -4,6 +4,7 @@
 @if (Model != null)
 {
     <header class="header header-hero header-overlay d-flex flex-column justify-content-between" style="@Model.BackgroundImage.GetSafeBackgroundImageStyle()">
+        @Html.Sitecore().Placeholder("header-login")
         <section class="container">
             @Html.Sitecore().Placeholder("navigation")
             <div class="row">
