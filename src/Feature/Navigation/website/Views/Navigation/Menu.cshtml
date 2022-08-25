@@ -198,6 +198,11 @@
                 {
                     if (dropDown.PageItem != null)
                     {
+                        if (dropDown.PageItem.MenuItems.Any())
+                        {
+                            continue;
+                        }
+
                         var id = dropDown.PageItem.MenuItems.Any() ? dropDown.Id : dropDown.PageItem.Id;
                         var navigationColumnCount = 0;
                         <div class="navigation__item">
@@ -543,10 +548,6 @@
         <div class="navigation__sublinks-items">
             @foreach (var menuItem in Model.MenuItems.WithAccessTo())
             {
-                if (!menuItem.MenuItems.Any())
-                {
-                    continue;
-                }
 
                 var menuItemsSecondLevel = menuItem.MenuItems.Where(m => !m.ExcludeInSearchResults);
 
