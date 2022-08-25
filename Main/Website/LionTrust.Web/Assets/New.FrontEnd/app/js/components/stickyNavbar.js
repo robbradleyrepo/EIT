@@ -4,6 +4,11 @@ export default () => {
   const sticky = navbar.offset()?.top;
   var sectionToScroll = $(document).find('.section-spy');
   var sectionHash = $(document).find('.page-anchor__right .page-anchor__link');
+  let paddingsize;
+  const StickyNavSize = $("#sticky-navbar").outerHeight();
+
+  paddingsize = StickyNavSize;
+
   sectionToScroll.each(function (index) {
     var addID = $(sectionToScroll[index]).attr('id');
     $(sectionToScroll[index]).nextUntil('.section-spy').wrapAll('<div class="hash-section"/>')
@@ -17,10 +22,15 @@ export default () => {
   function stickyNav() {
     if (window.pageYOffset >= stickyPostion) {
       $(".page-anchor-link").addClass("sticky");
+      $(".sticky-navbar-wrapper").css("padding-top", paddingsize);
     }
     else {
       $(".page-anchor-link").removeClass("sticky");
+      $(".sticky-navbar-wrapper").removeClass("add-paddings");
+      $(".sticky-navbar-wrapper").css("padding-top", "0");
     }
+    $(".page-anchor__links-mobile").stop().slideUp();
+    $("#open-page-anchor").removeClass("active");
   }
   const openBtn = $("#open-page-anchor");
   openBtn.on("click", (e) => {
@@ -50,7 +60,7 @@ export default () => {
         liveSelector: "#sticky-navbar a",
         offset: offsetVal,
         keepHighlightUntilNext: true
-      });
+      });  
     });
   })(jQuery);
 };
