@@ -23,10 +23,7 @@
 
         public void Process(SendMessageArgs args)
         {
-            if (args.EcmMessage == null)
-                return;
-
-            if (!args.IsTestSend)
+            if (args.EcmMessage != null && !args.IsTestSend)
             {
                 var messageId = ((MailMessageItem)args.EcmMessage).ID;
                 var mailMessage = _sitecoreService.GetItem<Models.IMailMessage>(new Guid(messageId));

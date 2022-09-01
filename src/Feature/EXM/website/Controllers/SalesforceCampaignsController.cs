@@ -47,25 +47,14 @@ namespace LionTrust.Feature.EXM.Controllers
           SalesforceCampaignEntity info)
         {
             var campaignEntity = _repository.ImportCampaignsToSitecore(id, info);
-
-            ContactListModel contactListModel = _contactListRepository.GetAll().FirstOrDefault(x => x.Name == info.CustomListName);
+            var contactListModel = _contactListRepository.GetAll().FirstOrDefault(x => x.Name == info.CustomListName);
 
             if (campaignEntity.IsSuccess && contactListModel?.Id != null && !string.IsNullOrWhiteSpace(contactListModel.Id))
             {
-                if (info.SelectedListMergeOption == "createnewlist")
-                {
-                    var contactList = _sitecoreService.GetItem<IMessageCampaign>(new Guid(contactListModel.Id));
-                    contactList.SalesforceCampaignId = info.CampaignIdString;
+                var contactList = _sitecoreService.GetItem<IMessageCampaign>(new Guid(contactListModel.Id));
+                contactList.SalesforceCampaignId = info.CampaignIdString;
 
-                    _sitecoreService.SaveItem(new SaveOptions(contactList));
-                }
-                else if (info.SelectedListMergeOption == "updatelist")
-                {
-                    var contactList = _sitecoreService.GetItem<IMessageCampaign>(new Guid(contactListModel.Id));
-                    contactList.SalesforceCampaignId = info.CampaignIdString;
-
-                    _sitecoreService.SaveItem(new SaveOptions(contactList));
-                }
+                _sitecoreService.SaveItem(new SaveOptions(contactList));
             }
 
             return campaignEntity;

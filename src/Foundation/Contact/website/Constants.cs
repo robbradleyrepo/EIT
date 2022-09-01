@@ -109,6 +109,7 @@ namespace LionTrust.Foundation.Contact
             public const string SF_SitecoreCampaignIdField = "SitecoreCampaignId__c";
             public const string SF_TypeField = "Type__c";
             public const string SF_MessageLinkField = "Message_Link__c";
+            public const string SF_FirstOpenField = "First_Open__c";
 
             //Engagement History event types
             public static class EventTypes

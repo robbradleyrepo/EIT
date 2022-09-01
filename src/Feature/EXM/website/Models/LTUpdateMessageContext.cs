@@ -5,7 +5,7 @@ namespace LionTrust.Feature.EXM.Models
 {
     public class LTUpdateMessageContext : UpdateMessageContext
     {
-        [JsonProperty("team")]
+        [JsonProperty(Constants.ExmMessage.Team)]
         public string Team { get; set; }
     }
 }

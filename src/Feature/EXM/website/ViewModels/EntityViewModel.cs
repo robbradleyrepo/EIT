@@ -17,12 +17,9 @@ namespace LionTrust.Feature.EXM.ViewModels
 
         public bool IsUnsubscribed { get; set; }
 
-        public int Score { get; set; }
-
         public EntityViewModel()
         {
             Interactions = new List<InteractionViewModel>();
-            Score = 0;
         }
     }
 }

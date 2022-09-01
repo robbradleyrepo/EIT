@@ -5,10 +5,10 @@ namespace LionTrust.Feature.EXM.Models
 {
     public class LTMessage : Message
     {
-        [JsonProperty("team")]
+        [JsonProperty(Constants.ExmMessage.Team)]
         public string Team { get; set; }
 
-        [JsonProperty("teamPath")]
+        [JsonProperty(Constants.ExmMessage.TeamPath)]
         public string TeamPath { get; set; }
 
         public LTMessage(Message message)

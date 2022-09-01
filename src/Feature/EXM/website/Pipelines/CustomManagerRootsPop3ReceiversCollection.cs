@@ -23,11 +23,8 @@ namespace LionTrust.Feature.EXM.Pipelines
           IBounceInspector inspector,
           IEnvironmentId environmentId,
           ILogger logger)
-          : this((IManagerRootService)ServiceProviderServiceExtensions.GetService<IManagerRootService>(ServiceLocator.ServiceProvider), inspector, environmentId, logger)
+          : this(ServiceLocator.ServiceProvider.GetService<IManagerRootService>(), inspector, environmentId, logger)
         {
-            Assert.ArgumentNotNull((object)inspector, nameof(inspector));
-            Assert.ArgumentNotNull((object)environmentId, nameof(environmentId));
-            Assert.ArgumentNotNull((object)logger, nameof(logger));
         }
 
         public CustomManagerRootsPop3ReceiversCollection(
@@ -36,10 +33,10 @@ namespace LionTrust.Feature.EXM.Pipelines
           IEnvironmentId environmentId,
           ILogger logger)
         {
-            Assert.ArgumentNotNull((object)managerRootService, nameof(managerRootService));
-            Assert.ArgumentNotNull((object)inspector, nameof(inspector));
-            Assert.ArgumentNotNull((object)environmentId, nameof(environmentId));
-            Assert.ArgumentNotNull((object)logger, nameof(logger));
+            Assert.ArgumentNotNull(managerRootService, nameof(managerRootService));
+            Assert.ArgumentNotNull(inspector, nameof(inspector));
+            Assert.ArgumentNotNull(environmentId, nameof(environmentId));
+            Assert.ArgumentNotNull(logger, nameof(logger));
             _managerRootService = managerRootService;
             _inspector = inspector;
             _environmentId = environmentId;
@@ -48,12 +45,12 @@ namespace LionTrust.Feature.EXM.Pipelines
 
         public IEnumerable<IPop3BounceReceiver> Receivers()
         {
-            List<IPop3BounceReceiver> pop3BounceReceiverList = new List<IPop3BounceReceiver>();
-            foreach (ManagerRoot managerRoot in this._managerRootService.GetManagerRoots())
+            var pop3BounceReceiverList = new List<IPop3BounceReceiver>();
+            foreach (ManagerRoot managerRoot in _managerRootService.GetManagerRoots())
             {
                 if (managerRoot.Settings.GatherNotifications)
                 {
-                    Pop3Settings settings = new Pop3Settings()
+                    var settings = new Pop3Settings()
                     {
                         Password = managerRoot.Settings.POP3Password,
                         Port = managerRoot.Settings.POP3Port,
@@ -62,6 +59,7 @@ namespace LionTrust.Feature.EXM.Pipelines
                         UserName = managerRoot.Settings.POP3UserName,
                         StartTls = !managerRoot.Settings.POP3SSL
                     };
+
                     try
                     {
                         var receiver = CreateReceiver(settings);
@@ -73,7 +71,7 @@ namespace LionTrust.Feature.EXM.Pipelines
                     }
                 }
             }
-            return (IEnumerable<IPop3BounceReceiver>)pop3BounceReceiverList;
+            return pop3BounceReceiverList;
         }
 
         private CustomChilkatPop3BounceReceiver CreateReceiver(Pop3Settings settings)

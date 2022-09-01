@@ -136,14 +136,12 @@
     <Content Include="Views\EXM\RegisterWebinar.cshtml" />
     <Content Include="Views\EXM\WebinarCards.cshtml" />
     <Content Include="Views\EXM\HeroWithImage.cshtml" />
-    <Content Include="Views\EXM\UserNameIntro.cshtml" />
     <Content Include="sitecore\shell\client\Applications\S4SLB\CampaignList.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\EmailFeaturedArticleController.cs" />
-    <Compile Include="Controllers\EmailUserNameIntroController.cs" />
     <Compile Include="Controllers\EmailSignatureController.cs" />
     <Compile Include="Controllers\EmailInsightsCardController.cs" />
     <Compile Include="Controllers\EmailWebinarController.cs" />
@@ -198,21 +196,23 @@
     <Compile Include="Models\LTUpdateMessageContext.cs" />
     <Compile Include="Personalization\FacetExtensions.cs" />
     <Compile Include="Personalization\CustomRecipientPropertyTokenMap.cs" />
-    <Compile Include="FacetKeys.cs" />
     <Compile Include="Models\IFooter.cs" />
     <Compile Include="Models\IExmGlassBase.cs" />
     <Compile Include="Pipelines\CustomChilkatPop3BounceReceiver.cs" />
+    <Compile Include="Pipelines\CustomSendTestMessage.cs" />
     <Compile Include="Pipelines\GetContact.cs" />
     <Compile Include="Pipelines\CustomManagerRootsPop3ReceiversCollection.cs" />
     <Compile Include="Pipelines\UpdateSalesforceCampaign.cs" />
     <Compile Include="Pipelines\UpdateUndeliveredCount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Pipelines\SendEmailFromSalesManagerFiller.cs" />
+    <Compile Include="Pipelines\CustomFillEmail.cs" />
     <Compile Include="Repositories\Implementations\ArticleRepository.cs" />
     <Compile Include="Repositories\Interfaces\IArticleRepository.cs" />
     <Compile Include="ScheduledJobs\SalesforceContactsDataScheduledJobs.cs" />
+    <Compile Include="Services\Implementations\CustomContactService.cs" />
     <Compile Include="Services\Implementations\SalesforceAnalyticsService.cs" />
     <Compile Include="Services\Implementations\SendGridEmailService.cs" />
+    <Compile Include="Services\Interfaces\ICustomContactService.cs" />
     <Compile Include="Services\Interfaces\IEmailService.cs" />
     <Compile Include="Services\Interfaces\ISalesforceAnalyticsService.cs" />
     <Compile Include="ViewModels\EntityViewModel.cs" />

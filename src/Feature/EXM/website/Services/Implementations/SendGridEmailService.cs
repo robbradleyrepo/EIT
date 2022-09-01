@@ -2,7 +2,6 @@
 using Newtonsoft.Json;
 using SendGrid;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -19,20 +18,9 @@ namespace LionTrust.Feature.EXM.Services.Implementations
 
         public async Task<List<Models.Bounce>> GetBlocks()
         {
-            List<Models.Bounce> softBounces = new List<Models.Bounce>();
+            var softBounces = new List<Models.Bounce>();
 
-            var headers = new Dictionary<string, string>
-            {
-                { "Accept", "application/json" }
-            };
-
-            var client = new SendGridClient(apiKey: _apiKey, requestHeaders: headers);
-
-            var response = await client.RequestAsync(
-                method: SendGridClient.Method.GET,
-                urlPath: "suppression/blocks"
-            );
-
+            var response = await GetResponse(BaseClient.Method.GET, Constants.SendGridApi.Blocks);
             if (response.StatusCode == HttpStatusCode.OK)
             {
                 softBounces = JsonConvert.DeserializeObject<List<Models.Bounce>>(response.Body.ReadAsStringAsync().Result);
@@ -43,31 +31,16 @@ namespace LionTrust.Feature.EXM.Services.Implementations
 
         public async Task<bool> DeleteBlock(string email)
         {
-            var client = new SendGridClient(_apiKey);
-            var response = await client.RequestAsync(
-                method: SendGridClient.Method.DELETE,
-                urlPath: $"suppression/blocks/{email}"
-            );
+            var response = await GetResponse(BaseClient.Method.DELETE, $"{Constants.SendGridApi.Blocks}/{email}");
 
             return response.StatusCode == HttpStatusCode.NoContent;
         }
 
         public async Task<List<Models.Bounce>> GetBounces()
         {
-            List<Models.Bounce> bounces = new List<Models.Bounce>();
+            var bounces = new List<Models.Bounce>();
 
-            var headers = new Dictionary<string, string>
-            {
-                { "Accept", "application/json" }
-            };
-
-            var client = new SendGridClient(apiKey: _apiKey, requestHeaders: headers);
-
-            var response = await client.RequestAsync(
-                method: SendGridClient.Method.GET,
-                urlPath: "suppression/bounces"
-            );
-
+            var response = await GetResponse(BaseClient.Method.GET, Constants.SendGridApi.Bounces);
             if (response.StatusCode == HttpStatusCode.OK)
             {
                 bounces = JsonConvert.DeserializeObject<List<Models.Bounce>>(response.Body.ReadAsStringAsync().Result);
@@ -79,15 +52,27 @@ namespace LionTrust.Feature.EXM.Services.Implementations
         public async Task<bool> DeleteBounce(string email)
         {
             var queryParams = $"{{'email_address': '{email}'}}";
+            var response = await GetResponse(BaseClient.Method.DELETE, $"{Constants.SendGridApi.Bounces}/{email}", queryParams);
 
-            var client = new SendGridClient(_apiKey);
+            return response.StatusCode == HttpStatusCode.NoContent;
+        }
+
+        private async Task<Response> GetResponse(BaseClient.Method method, string urlPath, string queryParams = null)
+        {
+            var headers = new Dictionary<string, string>
+            {
+                { "Accept", "application/json" }
+            };
+
+            var client = new SendGridClient(apiKey: _apiKey, requestHeaders: headers);
+
             var response = await client.RequestAsync(
-                method: SendGridClient.Method.DELETE,
-                urlPath: $"suppression/bounces/{email}",
+                method: method,
+                urlPath: urlPath,
                 queryParams: queryParams
             );
 
-            return response.StatusCode == HttpStatusCode.NoContent;
+            return response;
         }
     }
 }

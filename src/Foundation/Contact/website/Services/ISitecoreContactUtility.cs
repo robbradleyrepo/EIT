@@ -12,8 +12,6 @@
 
         ScContactFacetData GetCurrentSitecoreContactFacetData(string scVisitorId);
 
-        string GetSalesforceEntityId(Contact contact);
-
         Enums.EntityType GetEntityType(string entityId);
     }
 }

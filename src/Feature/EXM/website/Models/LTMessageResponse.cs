@@ -5,7 +5,7 @@ namespace LionTrust.Feature.EXM.Models
 {
     public class LTMessageResponse : MessageResponse
     {
-        [JsonProperty("message")]
+        [JsonProperty(Constants.ExmMessage.Message)]
         public new LTMessage Message { get; set; }
 
         public LTMessageResponse(MessageResponse message)

@@ -140,7 +140,6 @@
 
                     $('.s4slb-loader-gif').show();
                     $.ajax({
-                        //url: "/sitecore/api/ssc/FuseIT-S4S-SitecoreSalesforceListBuilder-Controllers/SalesforceCampaigns/1/ImportSaleforceCampaignsToSitecore",
                         url: "/sitecore/api/ssc/LionTrust-Feature-EXM-Controllers/SalesforceCampaigns/1/ImportSaleforceCampaignsToSitecore",
                         type: "POST",
                         data: JSON.stringify(info),

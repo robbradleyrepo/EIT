@@ -8,10 +8,11 @@ using LionTrust.Feature.EXM.ViewModels;
 using LionTrust.Foundation.Contact.Enums;
 using LionTrust.Foundation.Contact.Services;
 using LionTrust.Foundation.SitecoreExtensions.Extensions;
+using Microsoft.Extensions.DependencyInjection;
+using Sitecore.DependencyInjection;
 using Sitecore.EmailCampaign.Model.XConnect.Events;
 using Sitecore.XConnect;
 using Sitecore.XConnect.Client;
-using Sitecore.XConnect.Client.Synchronous;
 using Sitecore.XConnect.Collection.Model;
 using System;
 using System.Collections.Generic;
@@ -27,6 +28,11 @@ namespace LionTrust.Feature.EXM.Services.Implementations
         private readonly ISFEntityUtility _sfEntityUtility;
         private readonly ISitecoreContactUtility _sitecoreContactUtility;
 
+        public SalesforceAnalyticsService(ISitecoreService sitecoreService)
+            : this(sitecoreService, ServiceLocator.ServiceProvider.GetService<ISFEntityUtility>(), ServiceLocator.ServiceProvider.GetService<ISitecoreContactUtility>())
+        {
+        }
+
         public SalesforceAnalyticsService(ISitecoreService sitecoreService, ISFEntityUtility sfEntityUtility, ISitecoreContactUtility sitecoreContactUtility)
         {
             _sitecoreService = sitecoreService;
@@ -40,7 +46,7 @@ namespace LionTrust.Feature.EXM.Services.Implementations
 
             using (XConnectClient client = Sitecore.XConnect.Client.Configuration.SitecoreXConnectClientConfiguration.GetClient())
             {
-                IAsyncQueryable<Interaction> asyncQueryable = client.Interactions
+                var asyncQueryable = client.Interactions
                         .Where(interaction => interaction.StartDateTime > fromDate)
                         .WithExpandOptions(new InteractionExpandOptions
                         {
@@ -51,12 +57,12 @@ namespace LionTrust.Feature.EXM.Services.Implementations
                             }),
                         });
 
-                List<Interaction> interactionList = new List<Interaction>();
-                IEntityBatchEnumerator<Interaction> batchEnumeratorSync = asyncQueryable.GetBatchEnumeratorSync<Interaction>(1000);
+                var interactionList = new List<Interaction>();
+                var batchEnumeratorSync = asyncQueryable.GetBatchEnumeratorSync(1000);
 
                 while (batchEnumeratorSync.MoveNext())
                 {
-                    IEnumerator<Interaction> enumerator = batchEnumeratorSync.Current.GetEnumerator();
+                    var enumerator = batchEnumeratorSync.Current.GetEnumerator();
                     
                     while (enumerator.MoveNext())
                     {
@@ -76,7 +82,7 @@ namespace LionTrust.Feature.EXM.Services.Implementations
                             continue;
                         }
 
-                        var sfEntityId = _sitecoreContactUtility.GetSalesforceEntityId(xConnectContact);
+                        s4sInfoFacet.Fields.TryGetValue(ContactConstants.SF_IdField, out var sfEntityId);
                         var entityType = _sitecoreContactUtility.GetEntityType(sfEntityId);
 
                         var entity = entities.FirstOrDefault(x => x.EntityId == current.Contact.Id.Value);
@@ -164,7 +170,8 @@ namespace LionTrust.Feature.EXM.Services.Implementations
                         interaction.MessageId,
                         interaction.MessageLink,
                         interaction.Link,
-                        interaction.Date);
+                        interaction.Date,
+                        interaction.FirstTime);
 
                     entitiesToSync.Add(entity);
                 }

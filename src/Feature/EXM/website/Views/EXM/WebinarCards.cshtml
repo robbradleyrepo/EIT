@@ -127,7 +127,7 @@ else if (Model.Webinars == null || !Model.Webinars.Any())
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <td align="left" style="padding-bottom: 30px; margin: 0; padding-right: 10px; padding-top: 5px; padding-left: 10px;">
+                                                                <td align="left" style="padding: 0; margin: 0; padding-top: 5px; padding-left: 10px;">
                                                                     <p style="
                                                                         margin: 0;
                                                                         -webkit-text-size-adjust: none;
@@ -154,12 +154,16 @@ else if (Model.Webinars == null || !Model.Webinars.Any())
                                                                         color: #c0a961;
                                                                         font-size: 20px;
                                                                     ">
-                                                                        @Model.Webinars[i].Title
+                                                                        <a target="_blank"
+                                                                           style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: none; color: #c0a961; font-size: 20px;"
+                                                                           href="@Model.Webinars[i].Link.Url">
+                                                                            @Model.Webinars[i].Title
+                                                                        </a>
                                                                     </p>
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <td align="left" style="padding: 0; margin: 0; padding-left: 10px; padding-right: 10px; padding-bottom: 30px;">
+                                                                <td align="left" style="padding: 0; margin: 0; padding-left: 10px; padding-right: 10px; padding-bottom: 20px;">
                                                                     <p style="
                                                                         margin: 0;
                                                                         -webkit-text-size-adjust: none;

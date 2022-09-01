@@ -4,6 +4,7 @@
     using Sitecore.Diagnostics;
     using LionTrust.Foundation.Contact.Services;
     using LionTrust.Foundation.Contact.Models;
+    using FuseIT.Sitecore.Personalization.Facets;
 
     /// <summary>
     /// Repository to contain functionalities related to read/write data using xconnect

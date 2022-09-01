@@ -5,18 +5,19 @@ namespace LionTrust.Feature.EXM.Models
     [JsonObject]
     public class Bounce
     {
-        [JsonProperty("created")]
+        [JsonProperty(Constants.Bounce.Created)]
         public int Created { get; set; }
 
-        [JsonProperty("email")]
+        [JsonProperty(Constants.Bounce.Email)]
         public string Email { get; set; }
 
-        [JsonProperty("reason")]
+        [JsonProperty(Constants.Bounce.Reason)]
         public string Reason { get; set; }
 
-        [JsonProperty("status")]
+        [JsonProperty(Constants.Bounce.Status)]
         public string Status { get; set; }
 
+        //5XX errors are hard bounces 
         public bool HardBounce => !string.IsNullOrWhiteSpace(Status) && Status.StartsWith("5");
     }
 }

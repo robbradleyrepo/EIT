@@ -20,7 +20,6 @@ namespace LionTrust.Feature.EXM
         {
             public const string SmallBodyText_FieldID = "{497DA0F5-E840-4907-BCAC-74B95CAB5CCC}";
             public const string EmailPreferencesText_FieldID = "{F43CEBED-6CF7-489F-B9F5-20F2562C2706}";
-            public const string EmailPreferencesTextBrowser_FieldID = "{118221E5-FC3B-4543-B102-A3D0CC96A157}";
         }
 
         public static class Header
@@ -187,16 +186,49 @@ namespace LionTrust.Feature.EXM
             public static Guid TemplateID = new Guid("{3F12D78C-B7B7-4157-98FC-DA3322EE1A5B}");
         }
 
-        public static class Tokens
-        {
-            public const string MessageInBrowserUrlToken = "$MessageBrowserUrl$";
-        }
-
         public static class Settings
         {
             public const string MailTestingEnvironment = "MailTestingEnvironment";
             public const string MailServerPassword = "MailServerPassword";
             public const string MailServer = "MailServer";
+        }
+
+        public static class Bounce
+        {
+            public const string Created = "created";
+            public const string Email = "email";
+            public const string Reason = "reason";
+            public const string Status = "status";
+        }
+
+        public static class SendGridApi
+        {
+            public const string Bounces = "suppression/bounces";
+            public const string Blocks = "suppression/blocks";
+        }
+
+        public static class ExmMessage
+        {
+            public const string Team = "team";
+            public const string TeamPath = "teamPath";
+            public const string Message = "message";
+        }
+
+        public static class Tokens
+        {
+            public const string EmailPreferencesId = "emailpreferencesid";
+
+            public const string OwnerTitle = "ownertitle";
+
+            public const string OwnerName = "ownername";
+
+            public const string OwnerEmail = "owneremail";
+
+            public const string OwnerPhone = "ownerphone";
+
+            public const string OwnerRegion = "ownerregion";
+
+            public const string MessageInBrowserUrl = "$MessageBrowserUrl$";
         }
 
         public const string SiteName = "LionTrust";

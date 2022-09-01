@@ -25,7 +25,7 @@ namespace LionTrust.Feature.EXM.Controllers
             var model = new HeaderViewModel
             {
                 PreHeader = preHeader,
-                PreHeaderText = preHeader?.Text?.Replace(Constants.Tokens.MessageInBrowserUrlToken, messageUrl),
+                PreHeaderText = preHeader?.Text?.Replace(Constants.Tokens.MessageInBrowserUrl, messageUrl),
             };
 
             return View("~/Views/EXM/Header.cshtml", model);

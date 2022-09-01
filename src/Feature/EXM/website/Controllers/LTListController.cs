@@ -5,6 +5,7 @@ using Sitecore.ListManagement.Services;
 using Sitecore.ListManagement.Services.Model;
 using Sitecore.Services.Infrastructure.Web.Http;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace LionTrust.Feature.EXM.Controllers
@@ -16,7 +17,7 @@ namespace LionTrust.Feature.EXM.Controllers
     public class LTListController : ServicesApiController
     {
         private readonly IContactListSearchRepository _contactListSearchRepository;
-
+        
         public LTListController()
             : this(ServiceLocator.ServiceProvider.GetService<IContactListSearchRepository>())
         { }
@@ -28,24 +29,14 @@ namespace LionTrust.Feature.EXM.Controllers
 
         [Route("sitecore/api/ssc/ListManagement/LTList")]
         [HttpGet]
-        public FetchResult<ListModel> GetAllActiveLists()
+        public async Task<FetchResult<ListModel>> GetAllActiveLists()
         {
             var results = _contactListSearchRepository.GetAllActiveContactListSearchResultItems();
 
             var list = new List<ListModel>();
             foreach(var item in results.SearchResults)
             {
-                var model = new ListModel
-                {
-                    Created = item.Document.CreatedDate.ToLocalTime().ToString("yyyyMMddTHHmmss"),
-                    CreatedBy = item.Document.CreatedBy,
-                    Id = item.Document.ItemId.Guid.ToString("D"),
-                    Name = item.Document.Name,
-                    Type = item.Document.Type,
-                    TypeName = item.Document.TypeName,
-                    Updated = item.Document.Updated.ToLocalTime().ToString("yyyyMMddTHHmmss")
-                };
-
+                var model = _contactListSearchRepository.GetListModel(item.Document);
                 list.Add(model);
             }
 

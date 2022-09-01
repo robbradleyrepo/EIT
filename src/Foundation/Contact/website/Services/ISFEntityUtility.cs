@@ -63,48 +63,6 @@
         string IdentifyVisitorAndGetVisitorId(string emailAddress);
 
         /// <summary>
-        /// Get email preferences id by email
-        /// </summary>
-        /// <param name="email"></param>
-        /// <returns></returns>
-        string GetEmailPreferencesIdByEmail(string email);
-
-        /// <summary>
-        /// Get owner title by email
-        /// </summary>
-        /// <param name="email"></param>
-        /// <returns></returns>
-        string GetOwnerTitleByEmail(string email);
-
-        /// <summary>
-        /// Get owner name by email
-        /// </summary>
-        /// <param name="email"></param>
-        /// <returns></returns>
-        string GetOwnerNameByEmail(string email);
-
-        /// <summary>
-        /// Get owner email by email
-        /// </summary>
-        /// <param name="email"></param>
-        /// <returns></returns>
-        string GetOwnerEmailByEmail(string email);
-
-        /// <summary>
-        /// Get owner title by email
-        /// </summary>
-        /// <param name="email"></param>
-        /// <returns></returns>
-        string GetOwnerPhoneByEmail(string email);
-
-        /// <summary>
-        /// Get owner region by email
-        /// </summary>
-        /// <param name="email"></param>
-        /// <returns></returns>
-        string GetOwnerRegionByEmail(string email);
-
-        /// <summary>
         /// Is unsubscribed
         /// </summary>
         /// <param name="email"></param>
@@ -156,7 +114,8 @@
         /// <param name="messageLink"></param>
         /// <param name="link"></param>
         /// <param name="date"></param>
+        /// <param name="firstTime"></param>
         /// <returns></returns>
-        GenericSalesforceEntity GenerateEngagementHistory(string sfEntityId, string sfCampaignId, EntityType entityType, InteractionType interactionType, string contactList, string email, Guid messageId, string messageLink, string link, DateTime date);
+        GenericSalesforceEntity GenerateEngagementHistory(string sfEntityId, string sfCampaignId, EntityType entityType, InteractionType interactionType, string contactList, string email, Guid messageId, string messageLink, string link, DateTime date, bool firstTime = false);
     }
 }

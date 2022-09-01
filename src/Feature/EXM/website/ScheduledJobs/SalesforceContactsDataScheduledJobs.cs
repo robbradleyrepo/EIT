@@ -26,7 +26,7 @@
 
             try
             {
-                var lastSyncDate = (settings.LastSyncDate.HasValue ? settings.LastSyncDate.Value : DateTime.MinValue).ToUniversalTime();
+                var lastSyncDate = (settings.LastSyncDate ?? DateTime.MinValue).ToUniversalTime();
 
                 var service = ServiceLocator.ServiceProvider.GetService<ISalesforceAnalyticsService>();
 
