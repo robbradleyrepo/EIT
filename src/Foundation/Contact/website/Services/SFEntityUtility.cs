@@ -1,6 +1,7 @@
 ﻿namespace LionTrust.Foundation.Contact.Services
 {
     using FuseIT.S4S.WebToSalesforce;
+    using FuseIT.Sitecore.Personalization.Facets;
     using FuseIT.Sitecore.SalesforceConnector;
     using FuseIT.Sitecore.SalesforceConnector.DataSource;
     using FuseIT.Sitecore.SalesforceConnector.Entities;
@@ -817,47 +818,51 @@
         /// <summary>
         /// Is unsubscribed or hard bounced
         /// </summary>
+        /// <param name="s4sInfo"></param>
         /// <param name="email"></param>
         /// <returns></returns>
-        public bool IsUnsubscribedOrHardBounced(string email)
+        public bool IsUnsubscribedOrHardBounced(S4SInfo s4sInfo, string email)
         {
-            if (string.IsNullOrWhiteSpace(email))
+            if (s4sInfo == null)
             {
-                Log.Info("Email address is null or empty. No email preferences id returned from the email address.", this);
-                return true;
+                Log.Info(string.Format("S4SInfo facet is null for the email address - {0}", email), this);
+                return false;
             }
 
             try
             {
-                var unsubscribed = true;
+                var unsubscribed = false;
 
-                var contactService = new ContactService(this.SalesforceSession);
-                var sfContact = contactService.GetByEmail(email);                
-                if (sfContact != null)
+                s4sInfo.Fields.TryGetValue(Constants.SF_IdField, out var sfEntityId);
+                if (sfEntityId.StartsWith(Constants.PrefixSalesforceContact, StringComparison.InvariantCultureIgnoreCase))
                 {
-                    var sfEntityId = sfContact.Id.ToString();
-                    unsubscribed = sfContact.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
-                    var hardBounced = sfContact.InternalFields.GetField<bool>(Constants.SF_Hard_BouncedField);
+                    var contactService = new ContactService(this.SalesforceSession);
 
-                    return unsubscribed || hardBounced;
+                    var sfContact = contactService.GetByEntityId(sfEntityId);
+                    if (sfContact != null)
+                    {
+                        unsubscribed = sfContact.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
+                        var hardBounced = sfContact.InternalFields.GetField<bool>(Constants.SF_Hard_BouncedField);
+
+                        return unsubscribed || hardBounced;
+                    }
+                }
+                else if (sfEntityId.StartsWith(Constants.PrefixSalesforceLead, StringComparison.InvariantCultureIgnoreCase))
+                {
+                    var leadService = new LeadService(this.SalesforceSession);
+                    var sfLead = leadService.GetByEntityId(sfEntityId);
+                    if (sfLead != null)
+                    {
+                        unsubscribed = sfLead.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
+                        var hardBounced = sfLead.InternalFields.GetField<bool>(Constants.SF_Hard_BouncedField);
+
+                        return unsubscribed || hardBounced;
+                    }
                 }
 
-                var leadService = new LeadService(this.SalesforceSession);
-                var sfLead = leadService.GetByEmail(email);
-                if (sfLead != null)
-                {
-                    var sfEntityId = sfLead.Id.ToString();
-                    unsubscribed = sfLead.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
-                    var hardBounced = sfLead.InternalFields.GetField<bool>(Constants.SF_Hard_BouncedField);
 
-                    return unsubscribed || hardBounced;
-                }
+                Log.Info(string.Format("Salesforce Contact or Lead does not exist with the contact email - {0}", email), this);
 
-                if (sfContact == null && sfLead == null)
-                {
-                    Log.Info(string.Format("Salesforce Contact or Lead does not exist with the email - {0}", email), this);
-                }                
-              
                 return false;
             }
             catch (Exception ex)

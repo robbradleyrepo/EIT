@@ -9,6 +9,10 @@
             var sfEntityId = GetFieldValue(info, Foundation.Contact.Constants.SF_IdField);
             var randomGuid = GetFieldValue(info, Foundation.Contact.Constants.SF_GUIDForEmailPref);
 
+            if (string.IsNullOrEmpty(sfEntityId) || string.IsNullOrEmpty(randomGuid)) {
+                return null;
+            }
+
             var emailPreferencesId = $"{randomGuid}_{sfEntityId}";
             return emailPreferencesId;
         }

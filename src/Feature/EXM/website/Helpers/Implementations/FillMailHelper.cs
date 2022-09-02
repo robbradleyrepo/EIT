@@ -2,10 +2,7 @@
 using Glass.Mapper.Sc;
 using LionTrust.Feature.EXM.Helpers.Interfaces;
 using LionTrust.Feature.EXM.Models;
-using LionTrust.Foundation.Contact.Services;
-using Microsoft.Extensions.DependencyInjection;
 using Sitecore.Abstractions;
-using Sitecore.DependencyInjection;
 using Sitecore.EDS.Core.Dispatch;
 using Sitecore.EmailCampaign.Cm.Pipelines.SendEmail;
 using Sitecore.Modules.EmailCampaign.Messages;
@@ -18,7 +15,6 @@ namespace LionTrust.Feature.EXM.Helpers.Implementations
     public class FillMailHelper : IFillEmailHelper
     {
         private readonly ISitecoreService _sitecoreService;
-        private readonly ISFEntityUtility _sfEntityUtility;
         private readonly BaseSettings _settings;
 
         private readonly char[] separators = new char[] { ',', ';' };
@@ -26,13 +22,12 @@ namespace LionTrust.Feature.EXM.Helpers.Implementations
         private const string SALESFORCECAMPAIGN = "SalesforceCampaignId";
 
         public FillMailHelper(BaseSettings settings)
-            : this(settings, new SitecoreService("web"), ServiceLocator.ServiceProvider.GetService<ISFEntityUtility>())
+            : this(settings, new SitecoreService("web"))
         {
         }
 
-        private FillMailHelper(BaseSettings settings, ISitecoreService sitecoreService, ISFEntityUtility sfEntityUtility)
+        private FillMailHelper(BaseSettings settings, ISitecoreService sitecoreService)
         {
-            _sfEntityUtility = sfEntityUtility;
             _settings = settings;
             _sitecoreService = sitecoreService;
         }
@@ -40,37 +35,41 @@ namespace LionTrust.Feature.EXM.Helpers.Implementations
         public void FillEmail(MailMessageItem mailMessageItem, SendMessageArgs sendMessageArgs, EmailMessage emailMessage)
         {
             var s4sInfo = mailMessageItem?.PersonalizationRecipient?.GetFacet<S4SInfo>(S4SInfo.DefaultFacetKey);
-            SetFrom(emailMessage, s4sInfo);
+            var exmSettings = _sitecoreService.GetItem<IExmSettings>(Constants.ExmSettings.ExmSettings_ItemID);
+
+            SetFrom(emailMessage, s4sInfo, exmSettings);
             SetSalesforceCampaignId(emailMessage, mailMessageItem.ID);
 
-            emailMessage.Recipients = SetRecipients(emailMessage);
-            emailMessage.Recipients = ExcludeUnsubscribedContacts(emailMessage, sendMessageArgs.IsTestSend);
+            emailMessage.Recipients = SetRecipients(emailMessage, exmSettings);
         }
 
-        private void SetFrom(EmailMessage emailMessage, S4SInfo info)
+        private void SetFrom(EmailMessage emailMessage, S4SInfo info, IExmSettings exmSettings)
         {
-            if (info == null)
+            if (info == null || !info.Fields.TryGetValue(Foundation.Contact.Constants.SF_Owner_EmailField, out var ownerEmail) ||
+                !info.Fields.TryGetValue(Foundation.Contact.Constants.SF_Owner_NameField, out var ownerName))
             {
                 return;
             }
 
-            if (info.Fields.ContainsKey(Foundation.Contact.Constants.SF_Owner_EmailField))
-            {
-                emailMessage.FromAddress = info.Fields[Foundation.Contact.Constants.SF_Owner_EmailField];
-            }
-            if (info.Fields.ContainsKey(Foundation.Contact.Constants.SF_Owner_NameField))
-            {
-                var ownerName = info.Fields[Foundation.Contact.Constants.SF_Owner_NameField];
-                emailMessage.FromName = ownerName;
+            var validDomains = exmSettings.ValidDomains.Split(separators)?.Select(x => x.Trim());
 
-                if (emailMessage.Headers[SENDER] != null)
-                {
-                    emailMessage.Headers[SENDER] = ownerName;
-                }
-                else
-                {
-                    emailMessage.Headers.Add(SENDER, ownerName);
-                }
+            //check if domain is valid
+            var domain = ownerEmail.Split('@')[1];
+            if (!validDomains.Any(x => x == domain))
+            {
+                return;
+            }
+
+            emailMessage.FromAddress = ownerEmail;
+            emailMessage.FromName = ownerName;
+
+            if (emailMessage.Headers[SENDER] != null)
+            {
+                emailMessage.Headers[SENDER] = ownerName;
+            }
+            else
+            {
+                emailMessage.Headers.Add(SENDER, ownerName);
             }
         }
 
@@ -91,13 +90,12 @@ namespace LionTrust.Feature.EXM.Helpers.Implementations
             }
         }
 
-        private List<string> SetRecipients(EmailMessage emailMessage)
+        private List<string> SetRecipients(EmailMessage emailMessage, IExmSettings exmSettings)
         {
             //is testing environment
             var testingEnv = _settings.GetBoolSetting(Constants.Settings.MailTestingEnvironment, true);
             if (testingEnv)
             {
-                var exmSettings = _sitecoreService.GetItem<IExmSettings>(Constants.ExmSettings.ExmSettings_ItemID);
                 var whitelistDomains = exmSettings.WhitelistDomains.Split(separators)?.Select(x => x.Trim());
                 var testingRecipients = exmSettings.TestingRecipientList.Split(separators)?.Select(x => x.Trim());
 
@@ -117,30 +115,6 @@ namespace LionTrust.Feature.EXM.Helpers.Implementations
                 }
 
                 return recipients;
-            }
-            else
-            {
-                return emailMessage.Recipients;
-            }
-        }
-
-        private List<string> ExcludeUnsubscribedContacts(EmailMessage emailMessage, bool isTestSend)
-        {
-            // exclude unsubscribed contacts
-            var subscribedRecipients = new List<string>();
-
-            if (isTestSend == false)
-            {
-                foreach (var recipient in emailMessage.Recipients)
-                {
-                    var isUnsubscribedOrHardBounced = _sfEntityUtility.IsUnsubscribedOrHardBounced(recipient);
-                    if (!isUnsubscribedOrHardBounced)
-                    {
-                        subscribedRecipients.Add(recipient);
-                    }
-                }
-
-                return subscribedRecipients;
             }
             else
             {

@@ -1,5 +1,6 @@
 ﻿namespace LionTrust.Foundation.Contact.Services
 {
+    using FuseIT.Sitecore.Personalization.Facets;
     using FuseIT.Sitecore.SalesforceConnector.Entities;
     using LionTrust.Foundation.Contact.Enums;
     using LionTrust.Foundation.Contact.Models;
@@ -72,9 +73,10 @@
         /// <summary>
         /// Is unsubscribed or hard bounced
         /// </summary>
+        /// <param name="s4sInfo">
         /// <param name="email"></param>
         /// <returns></returns>
-        bool IsUnsubscribedOrHardBounced(string email);
+        bool IsUnsubscribedOrHardBounced(S4SInfo s4sInfo, string email);
 
         /// <summary>
         /// Get salesforce entity by email

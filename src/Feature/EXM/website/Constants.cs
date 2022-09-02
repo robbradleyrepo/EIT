@@ -140,6 +140,7 @@ namespace LionTrust.Feature.EXM
         {
             public static Guid ExmSettings_ItemID = new Guid("{117297BA-83B6-424A-A090-D11B67CE8F38}");
 
+            public const string ValidDomains_FieldID = "{B05252F6-C4E0-4D11-ABDD-D3363FE1FC9E}";
             public const string TestingRecipientList_FieldID = "{386ADA51-995B-4725-A6AF-A7082102BA2F}";
             public const string WhitelistDomains_FieldID = "{2A7E1691-203F-4449-8952-B523010D23C2}";
         }
