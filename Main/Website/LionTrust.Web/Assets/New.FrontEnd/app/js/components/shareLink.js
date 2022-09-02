@@ -2,9 +2,11 @@ import copy from 'copy-to-clipboard';
 
 export default () => {
 
-  $(".copy-to-clipbord").tooltip({
-    trigger: "click",
-  });
+  if($(".copy-to-clipbord").length){
+    $(".copy-to-clipbord").tooltip({
+      trigger: "click",
+    });
+  }
 
   const setTooltip = (message) => {
     $(".copy-to-clipbord")
@@ -19,13 +21,15 @@ export default () => {
     }, 3000);
   };
 
-  $(".copy-to-clipbord").on("click", function (e) {
-    e.preventDefault();
-    const self = $(this);
-    const message = self.data("title");
-    const copyLink = self.data("link");
-    copy(copyLink);
-    setTooltip(message);
-    hideTooltip();  
-  });
+  if($(".copy-to-clipbord").length){
+    $(".copy-to-clipbord").on("click", function (e) {
+      e.preventDefault();
+      const self = $(this);
+      const message = self.data("title");
+      const copyLink = self.data("link");
+      copy(copyLink);
+      setTooltip(message);
+      hideTooltip();  
+    });
+  }
 };
