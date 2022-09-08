@@ -126,7 +126,7 @@ namespace LionTrust.Feature.EXM
         public static class Signature
         {
             public const string Name_FieldID = "{7B4C8092-0A6A-4A8B-A149-C51C423C57A4}";
-            public const string Title_FieldID = "{CEECD260-3288-42FE-9FAF-80D64948F0E4}";
+            public const string Job_FieldID = "{CEECD260-3288-42FE-9FAF-80D64948F0E4}";
             public const string Email_FieldID = "{88A53542-9AC4-4011-B7AB-6606BDC89D8E}";
             public const string Phone_FieldID = "{0431B455-144D-4A72-A027-6202C77A137B}";
         }
@@ -160,6 +160,8 @@ namespace LionTrust.Feature.EXM
             public static Guid Id = new Guid("{72B10F4B-8534-4EF5-9F8C-015EABFD4DDF}");
 
             public const string LastSyncDate_FieldID = "{3C1206F7-8BFD-4A84-A1AB-B16C4FDE7F88}";
+            public const string Enabled_FieldID = "{8453ECF3-635E-4DF9-A722-2F4095946B98}";
+            public const string Running_FieldID = "{D3EDC1AB-7F5A-4638-800B-2E90C4F06B4A}";
         }
 
         public static class ContactList
@@ -219,7 +221,7 @@ namespace LionTrust.Feature.EXM
         {
             public const string EmailPreferencesId = "emailpreferencesid";
 
-            public const string OwnerTitle = "ownertitle";
+            public const string OwnerJob = "ownerjob";
 
             public const string OwnerName = "ownername";
 

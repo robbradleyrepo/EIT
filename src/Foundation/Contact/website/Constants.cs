@@ -14,12 +14,14 @@ namespace LionTrust.Foundation.Contact
         public const string SFLastNameFacetKey = "LastName";
         public const string PrefixSalesforceContact = "003";
         public const string PrefixSalesforceLead = "00Q";
+        public const string PrefixSalesforceUser = "005";
         public const string PrefixSalesforceEngagementHistory = "a1U";
 
         public const string SFProductEntityName = "Product__c";
         public const string SFFundPreferenceEntityName = "Fund_Preference__c";
         public const string SFContactEntityName = "Contact";
         public const string SfLeadEntityName = "Lead";
+        public const string SfUserEntityName = "User";
         public const string SfEngagementHistory = "Engagement_History__c";
 
         public const string SF_EmailOptOutFacetKey = "HasOptedOutOfEmail";
@@ -76,6 +78,12 @@ namespace LionTrust.Foundation.Contact
         public const string SF_Owner_EmailField = "Pardot_Contact_Owner_Pardot_Email__c";
         public const string SF_Owner_PhoneField = "Pardot_Contact_Owner_Pardot_Phone__c";
         public const string SF_Owner_RegionField = "Pardot_Contact_Owner_Pardot_Region__c";
+        public const string SF_Owner_IdField = "OwnerId";
+        public const string SF_User_NameField = "Pardot_Name__c";
+        public const string SF_User_TitleField = "Pardot_Title__c";
+        public const string SF_User_EmailField = "Pardot_Email__c";
+        public const string SF_User_PhoneField = "Pardot_Phone__c";
+        public const string SF_User_RegionField = "Pardot_Region__c";
         public const string SF_Hard_BouncedField = "pi__pardot_hard_bounced__c";
         public const string SF_ScoreField = "Score__c";
 

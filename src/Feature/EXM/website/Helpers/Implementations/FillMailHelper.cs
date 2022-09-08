@@ -45,8 +45,14 @@ namespace LionTrust.Feature.EXM.Helpers.Implementations
 
         private void SetFrom(EmailMessage emailMessage, S4SInfo info, IExmSettings exmSettings)
         {
-            if (info == null || !info.Fields.TryGetValue(Foundation.Contact.Constants.SF_Owner_EmailField, out var ownerEmail) ||
-                !info.Fields.TryGetValue(Foundation.Contact.Constants.SF_Owner_NameField, out var ownerName))
+            if (info == null)
+            {
+                return;
+            }
+
+            var owner = SFEntityHelper.GetOwner(info);
+            
+            if (owner == null)
             {
                 return;
             }
@@ -54,22 +60,22 @@ namespace LionTrust.Feature.EXM.Helpers.Implementations
             var validDomains = exmSettings.ValidDomains.Split(separators)?.Select(x => x.Trim());
 
             //check if domain is valid
-            var domain = ownerEmail.Split('@')[1];
+            var domain = owner.Email.Split('@')[1];
             if (!validDomains.Any(x => x == domain))
             {
                 return;
             }
 
-            emailMessage.FromAddress = ownerEmail;
-            emailMessage.FromName = ownerName;
+            emailMessage.FromAddress = owner.Email;
+            emailMessage.FromName = owner.Name;
 
             if (emailMessage.Headers[SENDER] != null)
             {
-                emailMessage.Headers[SENDER] = ownerName;
+                emailMessage.Headers[SENDER] = owner.Name;
             }
             else
             {
-                emailMessage.Headers.Add(SENDER, ownerName);
+                emailMessage.Headers.Add(SENDER, owner.Name);
             }
         }
 

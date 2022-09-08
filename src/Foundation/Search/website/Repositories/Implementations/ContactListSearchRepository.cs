@@ -63,13 +63,13 @@ namespace LionTrust.Foundation.Search.Repositories.Implementations
         {
             var model = new ListModel
             {
-                Created = item.CreatedDate.ToLocalTime().ToString("yyyyMMddTHHmmss"),
+                Created = Sitecore.DateUtil.ToIsoDate(item.CreatedDate.ToLocalTime()),
                 CreatedBy = item.CreatedBy,
                 Id = item.ItemId.Guid.ToString("D"),
                 Name = item.Name,
                 Type = item.Type,
                 TypeName = item.TypeName,
-                Updated = item.Updated.ToLocalTime().ToString("yyyyMMddTHHmmss")
+                Updated = Sitecore.DateUtil.ToIsoDate(item.Updated.ToLocalTime()),
             };
 
             var contactList = new ContactList(new ContactListDefinition(item.ItemId.Guid, alias, Sitecore.Context.Language.CultureInfo, item.Name, item.CreatedDate, item.CreatedBy));

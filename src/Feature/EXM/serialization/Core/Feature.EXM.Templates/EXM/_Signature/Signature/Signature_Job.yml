@@ -1,8 +1,8 @@
 ﻿---
-ID: "b0784484-0edb-4556-8eae-4284fb857a90"
-Parent: "52030f60-d6b9-4a35-9e2a-bfc3180cf7a6"
+ID: "ceecd260-3288-42fe-9faf-80d64948f0e4"
+Parent: "7060982a-d111-49ed-8e3e-8ff4cf76623f"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/EXM/_UserNameIntro/User Name Intro/UserNameIntro_Text
+Path: /sitecore/templates/Feature/EXM/_Signature/Signature/Signature_Job
 DB: master
 SharedFields:
 - ID: "21828437-ea4b-40a1-8c61-4ce60ea41db6"
@@ -23,16 +23,16 @@ SharedFields:
   Value: "{59D4EE10-627C-4FD3-A964-61A88B092CBC}"
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: Rich Text
+  Value: "Single-Line Text"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 100
+  Value: 200
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: User Name Intro
+    Value: Job
   Versions:
   - Version: 1
     Fields:

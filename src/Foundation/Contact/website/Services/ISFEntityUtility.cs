@@ -66,9 +66,9 @@
         /// <summary>
         /// Is unsubscribed
         /// </summary>
-        /// <param name="email"></param>
+        /// <param name="entityId"></param>
         /// <returns></returns>
-        bool IsUnsubscribed(string email);
+        bool IsUnsubscribed(string entityId);
 
         /// <summary>
         /// Is unsubscribed or hard bounced
@@ -77,6 +77,13 @@
         /// <param name="email"></param>
         /// <returns></returns>
         bool IsUnsubscribedOrHardBounced(S4SInfo s4sInfo, string email);
+
+        /// <summary>
+        /// Get salesforce entity by entity id
+        /// </summary>
+        /// <param name="entityId"></param>
+        /// <returns></returns>
+        EntityBase GetEntityByEntityId(string entityId);
 
         /// <summary>
         /// Get salesforce entity by email
@@ -119,5 +126,19 @@
         /// <param name="firstTime"></param>
         /// <returns></returns>
         GenericSalesforceEntity GenerateEngagementHistory(string sfEntityId, string sfCampaignId, EntityType entityType, InteractionType interactionType, string contactList, string email, Guid messageId, string messageLink, string link, DateTime date, bool firstTime = false);
+
+        /// <summary>
+        /// Checks if a salesforce entity is a contact 
+        /// </summary>
+        /// <param name="entityId"></param>
+        /// <returns></returns>
+        bool IsContact(string entityId);
+
+        /// <summary>
+        /// Checks if a salesforce entity is a lead 
+        /// </summary>
+        /// <param name="entityId"></param>
+        /// <returns></returns>
+        bool IsLead(string entityId);
     }
 }

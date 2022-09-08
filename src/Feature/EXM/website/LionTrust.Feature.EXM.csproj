@@ -161,6 +161,7 @@
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Extensions\MessageExtensions.cs" />
     <Compile Include="Helpers\Implementations\FillMailHelper.cs" />
+    <Compile Include="Helpers\Implementations\SFEntityHelper.cs" />
     <Compile Include="Helpers\Interfaces\IFillEmailHelper.cs" />
     <Compile Include="Models\Bounce.cs" />
     <Compile Include="Models\ISalesforceCampaign.cs" />
@@ -194,6 +195,7 @@
     <Compile Include="Models\LTMessage.cs" />
     <Compile Include="Models\LTMessageResponse.cs" />
     <Compile Include="Models\LTUpdateMessageContext.cs" />
+    <Compile Include="Models\Owner.cs" />
     <Compile Include="Personalization\FacetExtensions.cs" />
     <Compile Include="Personalization\CustomRecipientPropertyTokenMap.cs" />
     <Compile Include="Models\IFooter.cs" />
@@ -243,6 +245,10 @@
     <ProjectReference Include="..\..\..\Foundation\Legacy\website\LionTrust.Foundation.Legacy.csproj">
       <Project>{43EE972B-2002-4719-A878-A66A99C42C40}</Project>
       <Name>LionTrust.Foundation.Legacy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Logging\website\LionTrust.Foundation.Logging.csproj">
+      <Project>{9B72C426-123C-4782-BEF8-0D52E5F2A396}</Project>
+      <Name>LionTrust.Foundation.Logging</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Navigation\website\LionTrust.Foundation.Navigation.csproj">
       <Project>{0E1E5F5C-F4FE-4AFC-BC53-B67A885BBB8C}</Project>

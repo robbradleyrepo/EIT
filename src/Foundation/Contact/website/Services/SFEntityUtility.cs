@@ -768,13 +768,13 @@
         /// <summary>
         /// Is unsubscribed
         /// </summary>
-        /// <param name="email"></param>
+        /// <param name="entityId"></param>
         /// <returns></returns>
-        public bool IsUnsubscribed(string email)
+        public bool IsUnsubscribed(string entityId)
         {
-            if (string.IsNullOrWhiteSpace(email))
+            if (string.IsNullOrWhiteSpace(entityId))
             {
-                Log.Info("Email address is null or empty. No email preferences id returned from the email address.", this);
+                Log.Info("Entity Id is null or empty. No email preferences id returned from the entity id.", this);
                 return true;
             }
 
@@ -782,30 +782,17 @@
             {
                 var unsubscribed = true;
 
-                var contactService = new ContactService(this.SalesforceSession);
-                var sfContact = contactService.GetByEmail(email);
-                if (sfContact != null)
-                {
-                    var sfEntityId = sfContact.Id.ToString();
-                    unsubscribed = sfContact.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
+                var sfEntityType = IsContact(entityId) ? Constants.SFContactEntityName : Constants.SfLeadEntityName;
+                GenericSalesforceService genericService = new GenericSalesforceService(this.SalesforceSession, sfEntityType);
+                var sfEntity = genericService.GetByEntityId(entityId);
 
+                if (sfEntity != null)
+                {
+                    unsubscribed = sfEntity.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
                     return unsubscribed;
                 }
-
-                var leadService = new LeadService(this.SalesforceSession);
-                var sfLead = leadService.GetByEmail(email);
-                if (sfLead != null)
-                {
-                    var sfEntityId = sfLead.Id.ToString();
-                    unsubscribed = sfLead.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
-
-                    return unsubscribed;
-                }
-
-                if (sfContact == null && sfLead == null)
-                {
-                    Log.Info(string.Format("Salesforce Contact or Lead does not exist with the email - {0}", email), this);
-                }
+                
+                Log.Info(string.Format("Salesforce Contact or Lead does not exist with the entity id - {0}", entityId), this);
 
                 return false;
             }
@@ -834,7 +821,7 @@
                 var unsubscribed = false;
 
                 s4sInfo.Fields.TryGetValue(Constants.SF_IdField, out var sfEntityId);
-                if (sfEntityId.StartsWith(Constants.PrefixSalesforceContact, StringComparison.InvariantCultureIgnoreCase))
+                if (IsContact(sfEntityId))
                 {
                     var contactService = new ContactService(this.SalesforceSession);
 
@@ -847,7 +834,7 @@
                         return unsubscribed || hardBounced;
                     }
                 }
-                else if (sfEntityId.StartsWith(Constants.PrefixSalesforceLead, StringComparison.InvariantCultureIgnoreCase))
+                else if (IsLead(sfEntityId))
                 {
                     var leadService = new LeadService(this.SalesforceSession);
                     var sfLead = leadService.GetByEntityId(sfEntityId);
@@ -872,6 +859,45 @@
         }
 
         /// <summary>
+        /// Get salesforce entity by entity id
+        /// </summary>
+        /// <param name="entityId"></param>
+        /// <returns></returns>
+        public EntityBase GetEntityByEntityId(string entityId)
+        {
+            if (string.IsNullOrWhiteSpace(entityId))
+            {
+                Log.Info("Entity Id is null or empty.", this);
+                return null;
+            }
+
+            try
+            {
+                var entityType = IsContact(entityId) ? Constants.SFContactEntityName
+                                : IsLead(entityId) ? Constants.SfLeadEntityName
+                                : IsUser(entityId) ? Constants.SfUserEntityName : null;
+                
+                if (entityId != null)
+                {
+                    var genericService = new GenericSalesforceService(this.SalesforceSession, entityType);
+                    var sfEntity = genericService.GetByEntityId(entityId);
+                    
+                    if (sfEntity != null)
+                    {
+                        return sfEntity;
+                    }
+                }
+
+                Log.Info(string.Format("Salesforce Entity does not exist with the entity id - {0}", entityId), this);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
         /// Get salesforce entity by email
         /// </summary>
         /// <param name="email"></param>
@@ -880,7 +906,7 @@
         {
             if (string.IsNullOrWhiteSpace(email))
             {
-                Log.Info("Email address is null or empty. No entity returned from the email address.", this);
+                Log.Info("Email address is null or empty.", this);
                 return null;
             }
 
@@ -983,7 +1009,7 @@
             entity.InternalFields.SetField(Constants.EngagementHistory.SF_MessageLinkField, messageLink);
             entity.InternalFields.SetField(Constants.EngagementHistory.SF_LinkField, link);
             entity.InternalFields.SetField(Constants.EngagementHistory.SF_SitecoreCampaignIdField, messageId.ToString("D"));
-            entity.InternalFields.SetField(Constants.EngagementHistory.SF_DateTimeField, date.ToString("yyyy-MM-ddThh:mm:ss.000Z"));
+            entity.InternalFields.SetField(Constants.EngagementHistory.SF_DateTimeField, date.ToString("yyyy-MM-ddTHH:mm:ss.000Z"));
 
             if (entityType == EntityType.Contact)
             {
@@ -1332,6 +1358,21 @@
         private bool ValidateEmailPreferenceQueryString(string queryString, Context context)
         {
             return string.IsNullOrEmpty(queryString) || queryString != context.SFRandomGUID;
+        }
+
+        public bool IsContact(string entityId)
+        {
+            return entityId.StartsWith(Constants.PrefixSalesforceContact, StringComparison.InvariantCultureIgnoreCase);
+        }
+
+        public bool IsLead(string entityId)
+        {
+            return entityId.StartsWith(Constants.PrefixSalesforceLead, StringComparison.InvariantCultureIgnoreCase);
+        }
+
+        private bool IsUser(string entityId)
+        {
+            return entityId.StartsWith(Constants.PrefixSalesforceUser, StringComparison.InvariantCultureIgnoreCase);
         }
     }
 }
