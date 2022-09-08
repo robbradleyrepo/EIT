@@ -1,13 +1,12 @@
-﻿using Glass.Mapper.Sc;
+﻿using FuseIT.Sitecore.Personalization.Facets;
+using Glass.Mapper.Sc;
 using LionTrust.Feature.EXM.Helpers.Interfaces;
 using LionTrust.Feature.EXM.Models;
-using LionTrust.Foundation.Contact.Models;
-using LionTrust.Foundation.Contact.Services;
 using Sitecore.Abstractions;
 using Sitecore.EDS.Core.Dispatch;
 using Sitecore.EmailCampaign.Cm.Pipelines.SendEmail;
 using Sitecore.Modules.EmailCampaign.Messages;
-using Sitecore.XConnect;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -15,63 +14,94 @@ namespace LionTrust.Feature.EXM.Helpers.Implementations
 {
     public class FillMailHelper : IFillEmailHelper
     {
-        private readonly SitecoreContactUtility _scContactUtility;
+        private readonly ISitecoreService _sitecoreService;
         private readonly BaseSettings _settings;
 
-        private readonly char[] separators = new char[]{ ',', ';' };
+        private readonly char[] separators = new char[] { ',', ';' };
         private const string SENDER = "Sender";
+        private const string SALESFORCECAMPAIGN = "SalesforceCampaignId";
 
         public FillMailHelper(BaseSettings settings)
+            : this(settings, new SitecoreService("web"))
         {
-            _scContactUtility = new SitecoreContactUtility();
+        }
+
+        private FillMailHelper(BaseSettings settings, ISitecoreService sitecoreService)
+        {
             _settings = settings;
+            _sitecoreService = sitecoreService;
         }
 
         public void FillEmail(MailMessageItem mailMessageItem, SendMessageArgs sendMessageArgs, EmailMessage emailMessage)
         {
-            //send quick test
-            if (mailMessageItem.ContactIdentifier == null)
+            var s4sInfo = mailMessageItem?.PersonalizationRecipient?.GetFacet<S4SInfo>(S4SInfo.DefaultFacetKey);
+            var exmSettings = _sitecoreService.GetItem<IExmSettings>(Constants.ExmSettings.ExmSettings_ItemID);
+
+            SetFrom(emailMessage, s4sInfo, exmSettings);
+            SetSalesforceCampaignId(emailMessage, mailMessageItem.ID);
+
+            emailMessage.Recipients = SetRecipients(emailMessage, exmSettings);
+        }
+
+        private void SetFrom(EmailMessage emailMessage, S4SInfo info, IExmSettings exmSettings)
+        {
+            if (info == null)
             {
-                IReadOnlyCollection<ContactIdentifier> identifiers = null;
-                switch (sendMessageArgs.EcmMessage)
-                {
-                    case ABTestMessage testMessage:
-                        identifiers = testMessage.PersonalizationRecipient?.Identifiers;
-                        break;
-                    case TextMail textMail:
-                        identifiers = textMail.PersonalizationRecipient?.Identifiers;
-                        break;
+                return;
+            }
 
-                }
-                    
-                if (identifiers != null)
-                {
-                    foreach (var id in identifiers)
-                    {
-                        if (id.Source != Sitecore.XConnect.Constants.AliasIdentifierSource) continue;
+            var owner = SFEntityHelper.GetOwner(info);
+            
+            if (owner == null)
+            {
+                return;
+            }
 
-                        var scContactFacetData = _scContactUtility.GetCurrentSitecoreContactFacetData(id.Identifier);
+            var validDomains = exmSettings.ValidDomains.Split(separators)?.Select(x => x.Trim());
 
-                        SetFrom(emailMessage, scContactFacetData);
-                    }
-                }
+            //check if domain is valid
+            var domain = owner.Email.Split('@')[1];
+            if (!validDomains.Any(x => x == domain))
+            {
+                return;
+            }
+
+            emailMessage.FromAddress = owner.Email;
+            emailMessage.FromName = owner.Name;
+
+            if (emailMessage.Headers[SENDER] != null)
+            {
+                emailMessage.Headers[SENDER] = owner.Name;
             }
             else
             {
-                var contactId = mailMessageItem.ContactIdentifier.Identifier;
-                var scContactFacetData = _scContactUtility.GetCurrentSitecoreContactFacetData(contactId);
+                emailMessage.Headers.Add(SENDER, owner.Name);
+            }
+        }
 
-                SetFrom(emailMessage, scContactFacetData);
+        private void SetSalesforceCampaignId(EmailMessage emailMessage, string messageId)
+        {
+            if (string.IsNullOrWhiteSpace(messageId))
+            {
+                return;
             }
 
+            var mailMessage = _sitecoreService.GetItem<Models.IMailMessage>(new Guid(messageId));
+            var contactList = mailMessage?.IncludedRecipientLists?.FirstOrDefault();
+            var salesforceCampaignId = contactList?.SalesforceCampaignId;
+
+            if (!string.IsNullOrWhiteSpace(salesforceCampaignId))
+            {
+                emailMessage.Headers.Add(SALESFORCECAMPAIGN, salesforceCampaignId);
+            }
+        }
+
+        private List<string> SetRecipients(EmailMessage emailMessage, IExmSettings exmSettings)
+        {
             //is testing environment
             var testingEnv = _settings.GetBoolSetting(Constants.Settings.MailTestingEnvironment, true);
             if (testingEnv)
             {
-                var publishedDatabase = Sitecore.Data.Database.GetDatabase("web");
-                var sitecoreService = new SitecoreService(publishedDatabase);
-
-                var exmSettings = sitecoreService.GetItem<IExmSettings>(Constants.ExmSettings.ExmSettings_ItemID);
                 var whitelistDomains = exmSettings.WhitelistDomains.Split(separators)?.Select(x => x.Trim());
                 var testingRecipients = exmSettings.TestingRecipientList.Split(separators)?.Select(x => x.Trim());
 
@@ -90,42 +120,11 @@ namespace LionTrust.Feature.EXM.Helpers.Implementations
                     recipients.AddRange(testingRecipients);
                 }
 
-                emailMessage.Recipients = recipients;
+                return recipients;
             }
-
-            // exclude unsubscribed contacts
-            var sfEntityUtility = new SFEntityUtility();
-            var subscribedRecipients = new List<string>();
-            foreach (var recipient in emailMessage.Recipients)
+            else
             {
-                var unsubscribed = sfEntityUtility.GetUnsubscribedByEmail(recipient);
-                if (!unsubscribed)
-                {
-                    subscribedRecipients.Add(recipient);
-                }
-            }
-
-            emailMessage.Recipients = subscribedRecipients;
-        }
-
-        private void SetFrom(EmailMessage emailMessage, ScContactFacetData scContactFacetData)
-        {
-            if (!string.IsNullOrWhiteSpace(scContactFacetData?.OwnerEmail))
-            {
-                emailMessage.FromAddress = scContactFacetData.OwnerEmail;
-            }
-            if (!string.IsNullOrWhiteSpace(scContactFacetData?.OwnerName))
-            {
-                emailMessage.FromName = scContactFacetData.OwnerName;
-
-                if (emailMessage.Headers[SENDER] != null)
-                {
-                    emailMessage.Headers[SENDER] = scContactFacetData.OwnerName;
-                }
-                else
-                {
-                    emailMessage.Headers.Add(SENDER, scContactFacetData.OwnerName);
-                }
+                return emailMessage.Recipients;
             }
         }
     }

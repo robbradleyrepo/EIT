@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using Sitecore;
     using Sitecore.Abstractions;
     using Sitecore.Configuration;
     using Sitecore.Data;
@@ -97,6 +98,49 @@
             }
 
             return renderings.Any(r => r.RenderingID == new ID(renderingId));
+        }
+
+        public static T GetField<T>(this Item item, string fieldId, T defaultValue)
+        {
+            if (string.IsNullOrEmpty(fieldId))
+            {
+                return defaultValue;
+            }
+
+            return GetField(item, new ID(fieldId), defaultValue);
+        }
+
+        public static T GetField<T>(this Item item, ID fieldId, T defaultValue)
+        {
+
+            if (item.Fields[fieldId] != null && !string.IsNullOrEmpty(item.Fields[fieldId].Value))
+            {
+                var value = item.Fields[fieldId].Value;
+                if (typeof(T) == typeof(bool))
+                {
+                    if (bool.TryParse(value, out var boolParsed))
+                    {
+                        return (T)(object)boolParsed;
+                    }
+                }
+                else if (typeof(T) == typeof(int))
+                {
+                    if (int.TryParse(value, out var intParsed))
+                    {
+                        return (T)(object)intParsed;
+                    }
+                }
+                else if (typeof(T) == typeof(DateTime))
+                {
+                    return (T)(object)DateUtil.IsoDateToDateTime(value);
+                }
+                else if (typeof(T) == typeof(string))
+                {
+                    return (T)(object)value;
+
+                }
+            }
+            return defaultValue;
         }
 
         #region "Publish item"

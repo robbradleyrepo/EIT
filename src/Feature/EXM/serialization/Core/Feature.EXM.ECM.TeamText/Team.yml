@@ -1,0 +1,28 @@
+﻿---
+ID: "82f8af9e-410b-4a32-9b33-44ae372ed456"
+Parent: "c12754ce-5480-4aeb-a5d6-8e4a3386ab92"
+Template: "6437cfd5-76ca-48aa-bfbd-8b8d73eb5581"
+Path: /sitecore/client/Applications/ECM/Component/Text/GeneralTab/Team
+DB: core
+SharedFields:
+- ID: "844fe7aa-2cb9-49a2-ac81-917c04b0713e"
+  Hint: TextType
+  Value: Label
+- ID: "9c6106ea-7a5a-48e2-8cad-f0f693b1e2d4"
+  Hint: __Read Only
+  Type: checkbox
+  Value: 0
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20131015T135413Z
+    - ID: "3564b3d0-3804-4d86-9880-b5e7473ef56c"
+      Hint: Text
+      Value: "Team:"
+    - ID: "e17d3534-a424-47e3-8f2c-3dbba705565f"
+      Hint: Tooltip
+      Value: Enter a team for the message

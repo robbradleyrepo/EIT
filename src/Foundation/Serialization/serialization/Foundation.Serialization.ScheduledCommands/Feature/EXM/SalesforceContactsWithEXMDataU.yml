@@ -1,0 +1,25 @@
+﻿---
+ID: "65eba277-1500-4621-8da7-340be23395a6"
+Parent: "8ab7e4c4-ca09-47c6-94b9-8edbae4f6846"
+Template: "58119a3e-560e-4da6-97c6-1ace8a5b1219"
+Path: /sitecore/system/Tasks/Commands/Feature/EXM/SalesforceContactsWithEXMDataUpdateCommand
+DB: master
+SharedFields:
+- ID: "4bc75539-d5c4-487b-af35-ff13d62bd286"
+  Hint: Method
+  Value: UpdateData
+- ID: "752579a7-ef2f-45b7-b9d1-9b682308b7a5"
+  Hint: Type
+  Value: LionTrust.Feature.EXM.ScheduledJobs.SalesforceContactsDataScheduledJobs, LionTrust.Feature.EXM
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220623T111627Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

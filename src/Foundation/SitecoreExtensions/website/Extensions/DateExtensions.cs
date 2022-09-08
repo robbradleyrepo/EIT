@@ -18,5 +18,10 @@
                 return "Today";
             }
         }
+
+        public static string ToDateTimeWithTicks(this DateTime dateTime)
+        {
+            return $"{dateTime:yyyyMMddTHHmmss}:{dateTime.Ticks}Z";
+        }
     }
 }

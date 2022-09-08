@@ -1,4 +1,5 @@
 using Sitecore.Diagnostics;
+using System;
 
 namespace LionTrust.Foundation.Logging.Repositories
 {
@@ -8,7 +9,9 @@ namespace LionTrust.Foundation.Logging.Repositories
 
         public void Debug(string message, params object[] args) => Log.Debug(string.Format(message, args));
 
-        public void Error(string message) => Log.Error(message, this);
+        public void Error(string message) => Log.Error(message,  this);
+
+        public void Error(string message, Exception ex) => Log.Error(message, ex, this);
 
         public void SingleError(string message) => Log.SingleError(message, this);
 

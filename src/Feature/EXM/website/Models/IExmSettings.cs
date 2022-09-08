@@ -4,6 +4,9 @@
 
     public interface IExmSettings : IExmGlassBase
     {
+        [SitecoreField(Constants.ExmSettings.ValidDomains_FieldID)]
+        string ValidDomains { get; set; }
+
         [SitecoreField(Constants.ExmSettings.TestingRecipientList_FieldID)]
         string TestingRecipientList { get; set; }
 

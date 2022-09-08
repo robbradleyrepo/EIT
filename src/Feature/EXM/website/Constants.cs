@@ -20,7 +20,6 @@ namespace LionTrust.Feature.EXM
         {
             public const string SmallBodyText_FieldID = "{497DA0F5-E840-4907-BCAC-74B95CAB5CCC}";
             public const string EmailPreferencesText_FieldID = "{F43CEBED-6CF7-489F-B9F5-20F2562C2706}";
-            public const string EmailPreferencesTextBrowser_FieldID = "{118221E5-FC3B-4543-B102-A3D0CC96A157}";
         }
 
         public static class Header
@@ -127,7 +126,7 @@ namespace LionTrust.Feature.EXM
         public static class Signature
         {
             public const string Name_FieldID = "{7B4C8092-0A6A-4A8B-A149-C51C423C57A4}";
-            public const string Title_FieldID = "{CEECD260-3288-42FE-9FAF-80D64948F0E4}";
+            public const string Job_FieldID = "{CEECD260-3288-42FE-9FAF-80D64948F0E4}";
             public const string Email_FieldID = "{88A53542-9AC4-4011-B7AB-6606BDC89D8E}";
             public const string Phone_FieldID = "{0431B455-144D-4A72-A027-6202C77A137B}";
         }
@@ -141,18 +140,100 @@ namespace LionTrust.Feature.EXM
         {
             public static Guid ExmSettings_ItemID = new Guid("{117297BA-83B6-424A-A090-D11B67CE8F38}");
 
+            public const string ValidDomains_FieldID = "{B05252F6-C4E0-4D11-ABDD-D3363FE1FC9E}";
             public const string TestingRecipientList_FieldID = "{386ADA51-995B-4725-A6AF-A7082102BA2F}";
             public const string WhitelistDomains_FieldID = "{2A7E1691-203F-4449-8952-B523010D23C2}";
         }
 
-        public static class Tokens
+        public static class TeamScore
         {
-            public const string MessageInBrowserUrlToken = "$MessageBrowserUrl$";
+            public static Guid Id = new Guid("{E7F2D7A3-F29C-4844-8478-E2642AA24A0F}");
+            public static Guid TeamScoreFolderId = new Guid("{9059D6F0-7B2A-43E0-A624-15C2CCEA8D02}");
+
+            public const string TeamOrganizationId_FieldID = "{1700A7AE-7D7B-4C10-8D46-83143AE707C1}";
+            public const string EmailOpenedPoints_FieldID = "{C9026BE1-B064-49B2-89D2-7BE773AB08B1}";
+            public const string ClickedThroughPoints_FieldID = "{B85C5351-2057-4000-AE1D-400BFEC7BC04}";
+        }
+
+        public static class SalesforceSyncSettings
+        {
+            public static Guid Id = new Guid("{72B10F4B-8534-4EF5-9F8C-015EABFD4DDF}");
+
+            public const string LastSyncDate_FieldID = "{3C1206F7-8BFD-4A84-A1AB-B16C4FDE7F88}";
+            public const string Enabled_FieldID = "{8453ECF3-635E-4DF9-A722-2F4095946B98}";
+            public const string Running_FieldID = "{D3EDC1AB-7F5A-4638-800B-2E90C4F06B4A}";
+        }
+
+        public static class ContactList
+        {
+            public const string ActiveId_FieldID = "{D7604CEA-BDF2-4A96-A2B9-5F66DD78283C}";
+        }
+
+        public static class SalesforceCampaign
+        {
+            public const string SalesforceCampaignId_FieldID = "{E2F34215-AF0E-4EEB-A310-D2EA4B5BEF14}";
+        }
+
+        public static class TeamCampaign
+        {
+            public const string TeamId_FieldID = "{E3A3C038-E84A-4639-90CE-35D4D2525A3C}";
+        }
+
+        public static class MailMessage
+        {
+            public const string IncludedRecipientLists_FieldID = "{F8D592CC-F3E5-4A8E-A600-8AEBE8CC36E4}";
+        }
+
+        public static class MessageRoot
+        {
+            public static Guid TemplateID = new Guid("{3F12D78C-B7B7-4157-98FC-DA3322EE1A5B}");
         }
 
         public static class Settings
         {
             public const string MailTestingEnvironment = "MailTestingEnvironment";
+            public const string MailServerPassword = "MailServerPassword";
+            public const string MailServer = "MailServer";
         }
+
+        public static class Bounce
+        {
+            public const string Created = "created";
+            public const string Email = "email";
+            public const string Reason = "reason";
+            public const string Status = "status";
+        }
+
+        public static class SendGridApi
+        {
+            public const string Bounces = "suppression/bounces";
+            public const string Blocks = "suppression/blocks";
+        }
+
+        public static class ExmMessage
+        {
+            public const string Team = "team";
+            public const string TeamPath = "teamPath";
+            public const string Message = "message";
+        }
+
+        public static class Tokens
+        {
+            public const string EmailPreferencesId = "emailpreferencesid";
+
+            public const string OwnerJob = "ownerjob";
+
+            public const string OwnerName = "ownername";
+
+            public const string OwnerEmail = "owneremail";
+
+            public const string OwnerPhone = "ownerphone";
+
+            public const string OwnerRegion = "ownerregion";
+
+            public const string MessageInBrowserUrl = "$MessageBrowserUrl$";
+        }
+
+        public const string SiteName = "LionTrust";
     }
 }

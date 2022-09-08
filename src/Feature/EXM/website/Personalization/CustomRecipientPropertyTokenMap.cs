@@ -1,31 +1,29 @@
 ﻿namespace LionTrust.Feature.EXM.Personalization
 {
+    using FuseIT.Sitecore.Personalization.Facets;
     using Sitecore.Modules.EmailCampaign.Core.Personalization;
-    using Sitecore.XConnect.Collection.Model;
-    using System;
     using System.Collections.Generic;
-    using System.Linq.Expressions;
     using System.Reflection;
 
     public class CustomRecipientPropertyTokenMap : DefaultRecipientPropertyTokenMap
     {
         protected static readonly MethodInfo GetEmailPreferencesId = 
-            typeof(FacetExtensions).GetMethod(nameof(FacetExtensions.GetEmailPreferencesId), new[] { typeof(EmailAddressList) });
+            typeof(FacetExtensions).GetMethod(nameof(FacetExtensions.GetEmailPreferencesId), new[] { typeof(S4SInfo) });
 
-        protected static readonly MethodInfo GetOwnerTitle =
-            typeof(FacetExtensions).GetMethod(nameof(FacetExtensions.GetOwnerTitle), new[] { typeof(EmailAddressList) });
+        protected static readonly MethodInfo GetOwnerJob =
+            typeof(FacetExtensions).GetMethod(nameof(FacetExtensions.GetOwnerJob), new[] { typeof(S4SInfo) });
 
         protected static readonly MethodInfo GetOwnerName =
-            typeof(FacetExtensions).GetMethod(nameof(FacetExtensions.GetOwnerName), new[] { typeof(EmailAddressList) });
+            typeof(FacetExtensions).GetMethod(nameof(FacetExtensions.GetOwnerName), new[] { typeof(S4SInfo) });
 
         protected static readonly MethodInfo GetOwnerPhone =
-            typeof(FacetExtensions).GetMethod(nameof(FacetExtensions.GetOwnerPhone), new[] { typeof(EmailAddressList) });
+            typeof(FacetExtensions).GetMethod(nameof(FacetExtensions.GetOwnerPhone), new[] { typeof(S4SInfo) });
 
         protected static readonly MethodInfo GetOwnerEmail =
-            typeof(FacetExtensions).GetMethod(nameof(FacetExtensions.GetOwnerEmail), new[] { typeof(EmailAddressList) });
+            typeof(FacetExtensions).GetMethod(nameof(FacetExtensions.GetOwnerEmail), new[] { typeof(S4SInfo) });
 
         protected static readonly MethodInfo GetOwnerRegion =
-            typeof(FacetExtensions).GetMethod(nameof(FacetExtensions.GetOwnerRegion), new[] { typeof(EmailAddressList) });
+            typeof(FacetExtensions).GetMethod(nameof(FacetExtensions.GetOwnerRegion), new[] { typeof(S4SInfo) });
 
         static CustomRecipientPropertyTokenMap()
         {
@@ -33,22 +31,22 @@
             {
                 TokenBindings = new Dictionary<Token, RecipientPropertyTokenBinding>();
             }
-            var emailPreferencesIdTokenBinding = RecipientPropertyTokenBinding.Build<EmailAddressList>(new Token(FacetKeys.EmailPreferencesId), (Expression<Func<EmailAddressList, object>>)null, CustomRecipientPropertyTokenMap.GetEmailPreferencesId);
+            var emailPreferencesIdTokenBinding = RecipientPropertyTokenBinding.Build<S4SInfo>(new Token(Constants.Tokens.EmailPreferencesId), null, GetEmailPreferencesId);
             TokenBindings.Add(emailPreferencesIdTokenBinding.Token, emailPreferencesIdTokenBinding);
 
-            var ownerTitleTokenBinding = RecipientPropertyTokenBinding.Build<EmailAddressList>(new Token(FacetKeys.OwnerTitle), (Expression<Func<EmailAddressList, object>>)null, CustomRecipientPropertyTokenMap.GetOwnerTitle);
-            TokenBindings.Add(ownerTitleTokenBinding.Token, ownerTitleTokenBinding);
+            var ownerJobTokenBinding = RecipientPropertyTokenBinding.Build<S4SInfo>(new Token(Constants.Tokens.OwnerJob), null, GetOwnerJob);
+            TokenBindings.Add(ownerJobTokenBinding.Token, ownerJobTokenBinding);
 
-            var ownerNameTokenBinding = RecipientPropertyTokenBinding.Build<EmailAddressList>(new Token(FacetKeys.OwnerName), (Expression<Func<EmailAddressList, object>>)null, CustomRecipientPropertyTokenMap.GetOwnerName);
+            var ownerNameTokenBinding = RecipientPropertyTokenBinding.Build<S4SInfo>(new Token(Constants.Tokens.OwnerName), null, GetOwnerName);
             TokenBindings.Add(ownerNameTokenBinding.Token, ownerNameTokenBinding);
 
-            var ownerEmailTokenBinding = RecipientPropertyTokenBinding.Build<EmailAddressList>(new Token(FacetKeys.OwnerEmail), (Expression<Func<EmailAddressList, object>>)null, CustomRecipientPropertyTokenMap.GetOwnerEmail);
+            var ownerEmailTokenBinding = RecipientPropertyTokenBinding.Build<S4SInfo>(new Token(Constants.Tokens.OwnerEmail), null, GetOwnerEmail);
             TokenBindings.Add(ownerEmailTokenBinding.Token, ownerEmailTokenBinding);
 
-            var ownerPhoneTokenBinding = RecipientPropertyTokenBinding.Build<EmailAddressList>(new Token(FacetKeys.OwnerPhone), (Expression<Func<EmailAddressList, object>>)null, CustomRecipientPropertyTokenMap.GetOwnerPhone);
+            var ownerPhoneTokenBinding = RecipientPropertyTokenBinding.Build<S4SInfo>(new Token(Constants.Tokens.OwnerPhone), null, GetOwnerPhone);
             TokenBindings.Add(ownerPhoneTokenBinding.Token, ownerPhoneTokenBinding);
 
-            var ownerRegionTokenBinding = RecipientPropertyTokenBinding.Build<EmailAddressList>(new Token(FacetKeys.OwnerRegion), (Expression<Func<EmailAddressList, object>>)null, CustomRecipientPropertyTokenMap.GetOwnerRegion);
+            var ownerRegionTokenBinding = RecipientPropertyTokenBinding.Build<S4SInfo>(new Token(Constants.Tokens.OwnerRegion), null, GetOwnerRegion);
             TokenBindings.Add(ownerRegionTokenBinding.Token, ownerRegionTokenBinding);
         }
     }

@@ -29,10 +29,7 @@ namespace LionTrust.Feature.EXM
                 throw new ArgumentException("Either the contact identifier or the contact id must be set");
             }
 
-            string[] facetKeys = args.FacetKeys.Concat(new[]
-            {
-                S4SInfo.DefaultFacetKey
-            }).ToArray();
+            var facetKeys = args.FacetKeys.Concat(new[] { S4SInfo.DefaultFacetKey }).ToArray();
 
             args.Contact =
                 args.ContactIdentifier != null ?

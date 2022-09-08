@@ -66,7 +66,10 @@ else if (Model.Articles == null || !Model.Articles.Any())
                                                                 <tr>
                                                                     <td align="center" style="padding:0;Margin:0;font-size:0px">
                                                                         <a target="_blank" href="@Model.Articles[i].AbsoluteUrl" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:underline;color:#2CB543;font-size:14px">
-                                                                            <img class="adapt-img" src="@Model.Articles[i].Image.Src" alt="@Model.Articles[i].Image.Alt" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="278" height="222">
+                                                                            @if (Model.Articles[i].Image != null)
+                                                                            {
+                                                                                <img class="adapt-img" src="@Model.Articles[i].Image.Src" alt="@Model.Articles[i].Image.Alt" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="278" height="222" />
+                                                                            }
                                                                         </a>
                                                                     </td>
                                                                 </tr>
@@ -175,7 +178,10 @@ else if (Model.Articles == null || !Model.Articles.Any())
                                                                 <tr>
                                                                     <td align="center" style="padding:0;Margin:0;font-size:0px">
                                                                         <a target="_blank" href="@Model.Articles[i].AbsoluteUrl" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:underline;color:#2CB543;font-size:14px">
-                                                                            <img class="adapt-img" src="@Model.Articles[i].Image.Src" alt="@Model.Articles[i].Image.Alt" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="278" height="222">
+                                                                            @if (Model.Articles[i].Image != null)
+                                                                            {
+                                                                                <img class="adapt-img" src="@Model.Articles[i].Image.Src" alt="@Model.Articles[i].Image.Alt" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="278" height="222" />
+                                                                            }
                                                                         </a>
                                                                     </td>
                                                                 </tr>
@@ -209,7 +215,7 @@ else if (Model.Articles == null || !Model.Articles.Any())
                                 </tr>
                             }
                         }
-                            </tbody>
+                    </tbody>
                 </table>
             </td>
         </tr>

@@ -10,10 +10,10 @@ SharedFields:
   Value: Network/32x32/mail_earth.png
 - ID: "2a7e1691-203f-4449-8952-b523010d23c2"
   Hint: ExmSettings_WhitelistDomains
-  Value: "sagittarius.agency,sagittarius-marketing.com,outlook.com"
+  Value: "sagittarius.agency,sagittarius-marketing.com"
 - ID: "386ada51-995b-4725-a6af-a7082102ba2f"
   Hint: ExmSettings_TestingRecipientList
-  Value: cristina.dragos@sagittarius.agency
+  Value: andre.nascimento@sagittarius.agency
 Languages:
 - Language: en
   Versions:
@@ -26,3 +26,6 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\Admin
+    - ID: "b05252f6-c4e0-4d11-abdd-d3363fe1fc9e"
+      Hint: ExmSettings_ValidDomains
+      Value: liontrust.co.uk,liontrustassetmanagement.co.uk

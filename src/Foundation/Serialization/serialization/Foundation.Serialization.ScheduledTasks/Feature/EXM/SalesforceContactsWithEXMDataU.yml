@@ -1,0 +1,28 @@
+﻿---
+ID: "9d1ae7e9-829d-41c4-b826-e61c65cc7b95"
+Parent: "b4313334-9654-4dd7-902a-6964d791e11c"
+Template: "70244923-fa84-477c-8cbd-62f39642c42b"
+Path: /sitecore/system/Tasks/Schedules/Feature/EXM/SalesforceContactsWithEXMDataUpdate
+DB: master
+SharedFields:
+- ID: "50be51f8-746d-4dc2-9c3b-b14abc5ce9b7"
+  Hint: Schedule
+  Value: "19000101|22000101|127|02:00:00"
+- ID: "62e64dbb-0a39-4dd7-ba05-7bd08c5404e0"
+  Hint: Command
+  Value: "{65EBA277-1500-4621-8DA7-340BE23395A6}"
+- ID: "70893ef5-98e6-4721-844a-c364d0d9e48e"
+  Hint: Items
+  Value: /sitecore/system/Settings/Feature/EXM/Salesforce Sync Settings
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220623T120826Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

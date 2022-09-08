@@ -1,0 +1,531 @@
+﻿---
+ID: "233901c0-4adf-4bd7-83bd-ee37c9e8e48c"
+Parent: "cf9c8a2a-2794-4fea-980a-ef8426f3d6c3"
+Template: "cf9c8a2a-2794-4fea-980a-ef8426f3d6c3"
+Path: /sitecore/templates/System/Email/Manager Root/__Standard Values
+DB: master
+SharedFields:
+- ID: "04182fb9-3e6c-400b-8fc5-ba2bf6c9dc45"
+  Hint: Monthly Send Limit
+  Value: 
+- ID: "0c894aab-962b-4a84-b923-cb24b05e60d2"
+  Hint: __Ribbon
+  Value: "{144AD540-32DE-46E4-A9B1-E60E8C3D120B}"
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: 
+- ID: "1b5ecbd6-fbbe-4fc8-9640-0c7597990f18"
+  Hint: Gather Notifications
+  Type: Checkbox
+  Value: 1
+- ID: "1b963507-6176-4336-a14d-d5070c3b0286"
+  Hint: Base URL
+  Value: "http://your.host"
+- ID: "369ee5a2-7a9b-4594-88e9-7c360ec95c2c"
+  Hint: Weekly Send Limit
+  Value: 
+- ID: "3fa74d1e-11b0-478d-bb01-d775e47c6ea6"
+  Hint: Preference Center Marketing Group Html
+  Value: $categories$
+- ID: "470e902a-0a07-45dd-973e-473bc3cc1dd6"
+  Hint: Preference Center Marketing Category Html
+  Value: |
+    <div class="row">
+        <label>
+            <div class="label">
+                <input type="checkbox" data-category-id="$marketingcategoryid$" checked="checked" value="yes" />
+            </div>
+    
+            <div class="description">
+                <div class="title">$title$</div>
+                <p>$description$</p>
+            </div>
+        </label>
+    </div>
+- ID: "54a9031b-154f-4fa6-9350-8979b56f0115"
+  Hint: Undelivered Maximum
+  Value: 3
+- ID: "6ce2099a-ab45-40e9-bb59-7ef2f9ba7bfb"
+  Hint: Brand Logo
+  Value: |
+    <image mediaid="{1AB2CEF2-245E-4FD3-A516-16AD021BEF90}" alt="Logo" height="" width="" hspace="" vspace="" />
+- ID: "826730f6-4aeb-4fa5-a55b-b02fece73c14"
+  Hint: Brand Name
+  Value: Sitecore EXM
+- ID: "9135200a-5626-4dd8-ab9d-d665b8c11748"
+  Hint: __Never publish
+  Type: checkbox
+  Value: 0
+- ID: "97d7cb7a-1efd-43c0-b39e-8fc28a40356f"
+  Hint: Track Message Open
+  Type: Checkbox
+  Value: 1
+- ID: "a0cb3965-8884-4c7a-8815-b6b2e5ced162"
+  Hint: __Editors
+  Type: TreelistEx
+  Value: "{A0C460F4-DBAE-4A5A-8F3A-C4ADFCDACEEA}"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 
+- ID: "bba9823e-7749-4275-92c2-2b70565207ee"
+  Hint: Preference Center Layout Html
+  Value: |
+    <!doctype html>
+    <html>
+        <head>
+            <meta charset="utf-8" />
+            <meta http-equiv="x-ua-compatible" content="ie=edge" />
+            <title>$title$</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <meta name="robots" content="noindex" />
+            <style type="text/css">
+              * {
+                padding: 0;
+                margin: 0;
+              }
+            
+              html,
+              body {
+                font-size: 10px;
+                font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B", Helvetica, Arial, sans-serif;
+                font-weight: 300;
+                line-height: 1.5em;
+                color: #55555a;
+                background: #f2f2f5;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+              }
+            
+              header {
+                height: 90px;
+                background: url('~/media/System/Email/PreferenceCenter/breadcrumb_red_bg.png') no-repeat;
+                padding: 0 15px;
+                color: #fff;
+              }
+            
+              header:before {
+                position: absolute;
+                right: 0;
+                top: 0px;
+                display: block;
+                background: url('~/media/System/Email/PreferenceCenter/logo_spiral.png') center right;
+                background-repeat: no-repeat;
+                width: 113px;
+                height: 90px;
+                content: "";
+              }
+            
+              header h1 {
+                font-size: 2em;
+                line-height: 90px;
+                text-align: center;
+              }
+            
+              .exmPreferenceCenter .inner {
+                max-width: 700px;
+                margin: 0 auto;
+                position: relative;
+              }
+            
+              .logo {
+                padding: 20px 0 40px 0;
+                text-align: center;
+              }
+            
+              .logo img {
+                height: 60px;
+                width: auto;
+              }
+            
+              .sc-applicationHeader-row {
+                height: 40px;
+                background-color: #ffffff;
+                border-bottom: 1px solid #cccccc;
+                padding: 10px 15px;
+                z-index: 9;
+                padding-top: 12px;
+              }
+            
+              .exmPreferenceCenter article .top-bar {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background: #fc6423;
+                height: 8px;
+              }
+            
+              .exmPreferenceCenter .content-wrap {
+                padding: 0px 100px 70px 100px;
+                border: 1px solid #ddd;
+                margin-bottom: 50px;
+                text-align: center;
+                font-size: 1.6rem;
+                background: white;
+                margin-top: 50px;
+              }
+            
+              hr {
+                border: none;
+                border-top: 1px solid #ddd;
+              }
+            
+              .exmPreferenceCenter .content-wrap p {
+                line-height: 1.4em;
+                margin-bottom: 12px;
+              }
+            
+              .exmPreferenceCenter div.intro {
+                margin-bottom: 30px;
+              }
+            
+              .exmPreferenceCenter form div,
+              form span,
+              form label,
+              form p {
+                text-align: left;
+                margin: 0;
+                padding: 0;
+              }
+            
+              .exmPreferenceCenter form div.row {
+                margin-bottom: 30px;
+              }
+            
+              .exmPreferenceCenter label {
+                cursor: pointer;
+                margin-left: 1.5em;
+                margin-top: 0.1em;
+                margin-bottom: 0.3em;
+                line-height: 1.2em;
+                display: block;
+                min-height: 12px;
+              }
+            
+              .exmPreferenceCenter .groups.disabled label {
+                cursor: not-allowed;
+              }
+            
+              .exmPreferenceCenter label input {
+                float: left;
+              }
+            
+              .exmPreferenceCenter label .description {
+                padding-left: 30px;
+              }
+            
+              .exmPreferenceCenter label .description .title {
+                font-weight: 700;
+                margin-bottom: 5px;
+              }
+            
+              .exmPreferenceCenter form hr {
+                margin-bottom: 30px;
+              }
+            
+              .exmPreferenceCenter form button {
+                min-width: 300px;
+                display: inline-block;
+                font-weight: 400;
+                text-align: center;
+                white-space: nowrap;
+                vertical-align: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                border: 1px solid transparent;
+                padding: .75rem 1.25rem;
+                font-size: 1.05em;
+                line-height: 1.4;
+                height: 40px;
+                border-radius: .5rem;
+                transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+                color: #fff;
+                background-color: #e33e35;
+                border-color: #a21d16;
+                box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, .15), 0 1px 1px hsla(0, 0%, 7%, .075);
+                cursor: default;
+                outline: none;
+              }
+            
+              .exmPreferenceCenter form button:hover {
+                background-color: #ea6962;
+                border-color: #ca241c;
+              }
+            
+              .exmPreferenceCenter form button:active {
+                background-color: #ca241c;
+                box-shadow: 0 0 0 0.2rem #f3a9a5, inset 0 0.25rem 0.41666667rem hsla(0, 0%, 7%, .3);
+                outline: none;
+              }
+            
+              .exmPreferenceCenter form button.disabled {
+                cursor: not-allowed;
+                opacity: 0.5;
+              }
+            
+              .exmPreferenceCenter form .error {
+                background-color: #f3a9a5;
+                color: #a21d16;
+                line-height: 120%;
+                padding: 15px;
+                text-align: center;
+                display: none;
+                margin-bottom: 30px;
+              }
+            
+              .exmPreferenceCenter div.success {
+                background-color: #cae1b7;
+                color: #588136;
+                display: none;
+                line-height: 120%;
+                padding: 15px;
+              }
+            
+              @media only screen and (max-width: 500px) {
+                .exmPreferenceCenter .content-wrap {
+                  padding: 20px 10px;
+                }
+            
+                .exmPreferenceCenter label {
+                  margin-left: 0.5em;
+                }
+              }
+            </style>     
+        </head>
+       <body>
+            <header class="exmPreferenceCenter">
+                <h1>$title$</h1>
+            </header>
+            <section class="exmPreferenceCenter">
+                <article class="inner">
+                    <div class="content-wrap">
+    					<div class="logo">
+    						$logo$
+    					</div>
+                        <div class="intro">$intro$</div>
+                        
+                        <div class="success">
+                            $success$
+                        </div>
+                        
+                        <form method="post" action="" data-manager-root-id="$managerRootId$" data-contact-identifier="$contactIdentifier$" data-message-id="$messageId$" data-instance-id="$instanceId$" data-message-language="$messageLanguage$" data-test-value-index="$testValueIndex$" data-email-address-history-entry-id="$emailAddressHistoryEntryId$">
+                            <div class="groups">
+                                $groups$
+                            </div>
+                            <hr />                        
+                            <div class="row">
+                                <label>
+                                    <div class="label">
+                                        <input type="checkbox" id="chkUnsubscribeFromAll" checked="checked" value="yes" />
+                                    </div>
+                                    <div class="description">
+                                        <p>$unsubscribefromall$</p>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="error">
+                                $error$
+                            </div>
+                            
+                            <button type="submit" id="btnSaveExmPreferences" disabled="" class="disabled">$submit$</button>
+                        </form>
+                    </div>
+                </article>
+            </section>
+            $javascript$
+        </body>
+    </html>
+- ID: "d3ae7222-425d-4b77-95d8-ee33ac2b6730"
+  Hint: __Context Menu
+  Value: 
+- ID: "de923cf4-7b97-41e8-bce7-8229c2224fdc"
+  Hint: Daily Send Limit
+  Value: 
+- ID: "dec8d2d5-e3cf-48b6-a653-8e69e2716641"
+  Hint: __Security
+  Value: |
+    ar|sitecore\EXM Advanced users|pe|+item:create|+item:read|+item:rename|+item:delete|+item:write|^*|pd|+item:create|+item:read|+item:rename|+item:delete|+item:write|^*|ar|sitecore\EXM users|pe|+item:read|^*|pd|+item:read|^*|
+- ID: "e0614797-9a63-41c9-aa8a-7a67b490dc5d"
+  Hint: Encoding
+  Value: "utf-8"
+- ID: "faba955d-2f58-43c1-b9b8-6738c2083d67"
+  Hint: Preference Center JavaScript
+  Value: |
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-3.2.1.min.js"><\/script>')</script>
+    <script>
+        (function($){
+            $.fn.disable = function () {
+                this.find("input, select, submit, a").addClass("disabled")
+                    .attr("disabled", true)
+                    .bind("click.disable", function (e) {
+                        e.preventDefault();
+                        return false;
+                    });
+    
+                this.animate({ 'opacity': "0.5" });
+                this.addClass("disabled");
+            };
+    
+            $.fn.enable = function () {
+                this.find("input, select, submit, a").removeClass("disabled")
+                    .removeAttr("disabled")
+                    .unbind("click.disable");
+                this.animate({ 'opacity': "1" });
+                this.removeClass("disabled");
+            };
+            
+            function formSuccess() {
+              $(".exmPreferenceCenter form, .exmPreferenceCenter .intro").hide();
+              $(".exmPreferenceCenter .success").show();
+            }
+          
+            function formFail(data, status) {
+                $(".exmPreferenceCenter form .error").show();
+                $("#btnSaveExmPreferences")
+                    .removeClass("disabled")
+                    .removeAttr("disabled");
+            }
+            
+            function toggleUnsubscribeFromAll() {
+                var checked = $("#chkUnsubscribeFromAll").is(":checked");
+                if (checked) {
+                    $(".exmPreferenceCenter .groups").disable();
+                } else {
+                    $(".exmPreferenceCenter .groups").enable();
+                }
+            }
+    		
+    		function getPreferences(managerRootId) {
+    			var preferences = [];
+    			$(".exmPreferenceCenter form input[data-category-id]").each(function() {
+    				var preference = {
+    					"MarketingCategoryId" : $(this).attr("data-category-id"),
+    					"ManagerRootId" : managerRootId,
+    					"Preference" : $(this).is(":checked")
+    				};
+    				  
+    				preferences.push(preference);
+    			});			
+    			return preferences;
+    		}
+            
+            function submitPreferences(e) {
+                e.preventDefault();
+                $("#btnSaveExmPreferences")
+                    .attr("disabled", "disabled")
+                    .addClass("disabled");
+                $(".exmPreferenceCenter form .error").hide();
+              
+                var $form = $(".exmPreferenceCenter form");
+              
+                var managerRootId = $form.attr("data-manager-root-id");
+                var contactIdentifier = $form.attr("data-contact-identifier");
+    			var messageId = $form.attr("data-message-id");
+    			var instanceId = $form.attr("data-instance-id");
+    			var messageLanguage = $form.attr("data-message-language");
+    			var testValueIndex = $form.attr("data-test-value-index");
+    			var emailAddressHistoryEntryId = $form.attr("data-email-address-history-entry-id");
+    
+    			var preferences = getPreferences(managerRootId);
+    				
+                if ($("#chkUnsubscribeFromAll").is(":checked")) {
+                    $.ajax(
+    					{						
+                            url: '/sitecore/api/exm/unsubscribe/' + managerRootId + '/fromall',
+    						method: 'POST',
+    						contentType: 'application/json',
+    						processData: false,
+    						data: JSON.stringify({
+    							encryptedContactIdentifier: contactIdentifier,
+    							encryptedMessageId: messageId,
+    							encryptedInstanceId: instanceId,
+    							messageLanguage: messageLanguage,
+    							testValueIndex: testValueIndex,
+    							emailAddressHistoryEntryId: emailAddressHistoryEntryId
+    						})
+                        }).then(formSuccess, formFail);
+    					
+    					for (var i = 0; i < preferences.length; i++) {
+    						preferences[i].Preference = false;
+    					}					
+                } else {
+                    $.ajax('/sitecore/api/EXM/Unsubscribe/' + managerRootId + '/removefromglobaloptout', {
+                            method: 'POST',
+    						contentType: 'application/json',
+    						processData: false,
+    						data: JSON.stringify({
+    							encryptedContactIdentifier: contactIdentifier,
+    							encryptedMessageId: messageId,
+    							encryptedInstanceId: instanceId,
+    							messageLanguage: messageLanguage,
+    							testValueIndex: testValueIndex,
+    							emailAddressHistoryEntryId: emailAddressHistoryEntryId
+    						})
+                        });
+                }
+    			
+    			$.ajax('/sitecore/api/exm/marketingpreferences', {
+                        method: 'POST',
+                        contentType: 'application/json',
+                        processData: false,
+                        data: JSON.stringify({
+                            "Preferences" : preferences,
+    						"EncryptedContactIdentifier": contactIdentifier
+                        })
+                    }).then(formSuccess, formFail);			
+            };
+          
+            $().ready(function() {
+                $("#btnSaveExmPreferences")
+                    .click(submitPreferences)
+                    .removeClass("disabled")
+                    .removeAttr("disabled");
+                    
+                toggleUnsubscribeFromAll();
+                $("#chkUnsubscribeFromAll").change(toggleUnsubscribeFromAll);
+            });
+        })(jQuery.noConflict());
+    </script>
+- ID: "ff64b61e-e68d-4be1-bfd1-aae311f4aca1"
+  Hint: Embed Images
+  Type: Checkbox
+  Value: 0
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20081013T085000Z
+    - ID: "3e20d02f-a3bf-4672-b1e5-d922758dc67a"
+      Hint: Preference Center Unsubscribe from all
+      Value: I do not want to receive any emails from $brandname$. Unsubscribe me from all.
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "75ddde7f-ac74-486e-82f8-b849acdc5266"
+      Hint: Preference Center Submit
+      Value: Update Subscriptions
+    - ID: "85fdc8e9-0ac4-4c70-b5a7-5d17451c1e5a"
+      Hint: Preference Center Title
+      Value: Email Preference Center
+    - ID: "94ad306e-97ab-4e94-95d2-c4ec12ef6d14"
+      Hint: Preference Center Error
+      Value: There was an error saving your preferences. Please try again later.
+    - ID: "d13e4a70-3ea1-4c12-9891-748d315e7b68"
+      Hint: Marketing Category Groups
+      Type: Multilist
+      Value: "{8DF1EB92-AB86-436D-8644-36FDEA56EAF6}"
+    - ID: "db528f31-f54f-48d5-a86a-ca31d8074348"
+      Hint: Preference Center Intro
+      Value: <p>To update your email preferences, select the items you wish to subscribe to.</p>
+    - ID: "e34202a5-65e3-4509-9687-ce73e819700a"
+      Hint: Preference Center Success
+      Value: Thank you, your preferences have been saved successfully.
