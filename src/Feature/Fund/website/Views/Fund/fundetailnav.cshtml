@@ -1,39 +1,43 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @model LionTrust.Feature.Fund.Models.IFundDetailNavigation
-<div class="page-anchor-link" id="sticky-navbar">
-    <div class="container">
-        <div class="page-anchor full-wigth">
-            <div class="page-anchor__right page-anchor__right-mobile">
-                <button class="page-anchor__title" id="open-page-anchor">
-                    <span>@Html.Glass().Editable(m => m.Header)</span>
-                </button>
-                <div class="page-anchor__links page-anchor__links-mobile">
-                    @foreach (var item in Model.Children)
-                    {
-                        using (Html.Glass().BeginEditFrame(item, "Edit component", i => i.AnchorId))
-                        {
-                            <a href="#@item.AnchorId" class="page-anchor__link">@Html.Glass().Editable(item, i => i.AnchorName)</a>
-                        }
-                    }
+<div class="sticky-navbar-wrapper">
+    <div class="page-anchor-link" id="sticky-navbar">
+        <div class="container">
+            <div class="page-anchor full-wigth">
+                <div class="page-anchor__right page-anchor__right-mobile">
+                    <button class="page-anchor__title" id="open-page-anchor">
+                        <span>@Html.Glass().Editable(m => m.Header)</span>
+                    </button>
+                    <div class="page-anchor__links page-anchor__links-mobile">
+                        <div class="container">
+                            @foreach (var item in Model.Children)
+                            {
+                                using (Html.Glass().BeginEditFrame(item, "Edit component", i => i.AnchorId))
+                                {
+                                    <a href="#@item.AnchorId" class="page-anchor__link">@Html.Glass().Editable(item, i => i.AnchorName)</a>
+                                }
+                            }
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="page-anchor__right">
-                <button class="page-anchor__title">
-                    <span>@Html.Glass().Editable(m => m.Header)</span>
-                </button>
-                <div class="page-anchor__links">
-                    @foreach (var item in Model.Children)
-                    {
-                        using (Html.Glass().BeginEditFrame(item, "Edit component", i => i.AnchorId))
+                <div class="page-anchor__right">
+                    <button class="page-anchor__title">
+                        <span>@Html.Glass().Editable(m => m.Header)</span>
+                    </button>
+                    <div class="page-anchor__links">
+                        @foreach (var item in Model.Children)
                         {
-                            <a href="#@item.AnchorId" class="page-anchor__link">@Html.Glass().Editable(item, i => i.AnchorName)</a>
+                            using (Html.Glass().BeginEditFrame(item, "Edit component", i => i.AnchorId))
+                            {
+                                <a href="#@item.AnchorId" class="page-anchor__link">@Html.Glass().Editable(item, i => i.AnchorName)</a>
+                            }
                         }
-                    }
+                    </div>
                 </div>
-            </div>
 
-            <div class="page-anchor__left">
+                <div class="page-anchor__left">
 
+                </div>
             </div>
         </div>
     </div>
