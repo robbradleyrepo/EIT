@@ -2,10 +2,8 @@
 {
     using Glass.Mapper.Sc.Web.Mvc;
     using LionTrust.Feature.MyPreferences.Models;
-    using LionTrust.Feature.MyPreferences.Repositories;
     using LionTrust.Feature.MyPreferences.Services;
     using LionTrust.Foundation.Analytics.Goals;
-    using LionTrust.Foundation.Contact.Managers;
     using LionTrust.Foundation.Contact.Services;
     using Sitecore.Abstractions;
     using Sitecore.Mvc.Controllers;
@@ -19,15 +17,15 @@
     {
         private readonly IMvcContext _context;
         private readonly BaseLog _log;
-        private readonly EmailPreferencesService _emailPreferencesService;
+        private readonly IEmailPreferencesService _emailPreferencesService;
         private readonly IPersonalizedContentService _personalizedContentService;
 
-        public EditPreferencesController(IMvcContext context, BaseLog log, IMailManager mailManager, IEmailPreferencesRepository editEmailPreferencesRepository, IPersonalizedContentService personalizedContentService)
+        public EditPreferencesController(IMvcContext context, BaseLog log, IPersonalizedContentService personalizedContentService, IEmailPreferencesService emailPreferencesService)
         {
             _context = context;
             _log = log;
             _personalizedContentService = personalizedContentService;
-            _emailPreferencesService = new EmailPreferencesService(editEmailPreferencesRepository, mailManager, personalizedContentService);
+            _emailPreferencesService = emailPreferencesService;
         }
 
         public ActionResult Render(Errors error = Errors.None)
