@@ -433,6 +433,7 @@
                 newSFLead.InternalFields[Constants.SF_EmailField] = nonProfUser.Email;
                 newSFLead.InternalFields[Constants.SFLead_CompanyField] = nonProfUser.Company;
                 newSFLead.InternalFields.SetField<bool>(Constants.SF_UKResident, nonProfUser.IsUKResident);
+                newSFLead.InternalFields.SetField<bool>(Constants.SF_CreatedViaPreferenceCentreField, true);
 
                 var leadrecordtypes = GetSFEntityRecordTypes(Constants.SfLeadEntityName);
                 if (leadrecordtypes != null)
@@ -535,6 +536,7 @@
                 newSFContact.InternalFields.SetField<bool>(Constants.SF_UKResident, profUser.IsUKResident);
                 newSFContact.InternalFields[Constants.SFContact_OrgNameField] = profUser.Organisation;
                 newSFContact.InternalFields.SetField<bool>(Constants.SF_EmailOptOutField, profUser.Unsubscribed);
+                newSFContact.InternalFields.SetField<bool>(Constants.SF_CreatedViaPreferenceCentreField, true);
 
                 var contactRecordtypes = GetSFEntityRecordTypes(Constants.SFContactEntityName);
                 if (contactRecordtypes != null)
