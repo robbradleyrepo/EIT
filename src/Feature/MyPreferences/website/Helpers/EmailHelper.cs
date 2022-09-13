@@ -6,7 +6,7 @@ namespace LionTrust.Feature.MyPreferences.Helpers
     public class EmailHelper : IEmailHelper
     {
         private const string RelativeImageRegex = " src=\"[/]?-/media/";
-        private const string ImageSrc = " src=\"http://{0}/-/media/";
+        private const string ImageSrc = " src=\"https://{0}/-/media/";
 
         private readonly BaseFactory _factory;
 
