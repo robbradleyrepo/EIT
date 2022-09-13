@@ -2,10 +2,8 @@
 {
     using Glass.Mapper.Sc.Web.Mvc;
     using LionTrust.Feature.MyPreferences.Models;
-    using LionTrust.Feature.MyPreferences.Repositories;
     using LionTrust.Feature.MyPreferences.Services;
     using LionTrust.Foundation.Analytics.Goals;
-    using LionTrust.Foundation.Contact.Managers;
     using LionTrust.Foundation.Contact.Models;
     using LionTrust.Foundation.Contact.Services;
     using LionTrust.Foundation.Onboarding.Helpers;
@@ -14,11 +12,7 @@
     using Sitecore.Mvc.Controllers;
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Web.Mvc;
-    using Foundation.Contact;
-    using Sitecore.XConnect.Client;
-    using Sitecore.XConnect.Collection.Model;
     using static LionTrust.Feature.MyPreferences.Constants;
     using QueryStringNames = Foundation.Contact.Constants.QueryStringNames;
 
@@ -27,14 +21,14 @@
         private readonly IMvcContext _context;
         private readonly BaseLog _log;
         private readonly IPersonalizedContentService _personalizedContentService;
-        private readonly EmailPreferencesService _emailPreferencesService;
+        private readonly IEmailPreferencesService _emailPreferencesService;
 
-        public RegisterInvestorController(IMvcContext context, BaseLog log, IMailManager mailManager, IEmailPreferencesRepository editEmailPreferencesRepository, IPersonalizedContentService personalizedContentService)
+        public RegisterInvestorController(IMvcContext context, BaseLog log, IPersonalizedContentService personalizedContentService, IEmailPreferencesService emailPreferencesService)
         {
             _context = context;
             _log = log;
             _personalizedContentService = personalizedContentService;
-            _emailPreferencesService = new EmailPreferencesService(editEmailPreferencesRepository, mailManager, personalizedContentService);
+            _emailPreferencesService = emailPreferencesService;
         }
 
         public ActionResult RegisterInvestor(Errors error = Errors.None, string email = "")

@@ -9,11 +9,14 @@ SharedFields:
   Hint: __Icon
   Value: Network/32x32/mail_earth.png
 - ID: "2a7e1691-203f-4449-8952-b523010d23c2"
-  Hint: ExmSettings_WhitelistDomains
+  Hint: TestingMode_WhitelistDomains
   Value: "sagittarius.agency,sagittarius-marketing.com"
 - ID: "386ada51-995b-4725-a6af-a7082102ba2f"
-  Hint: ExmSettings_TestingRecipientList
+  Hint: TestingMode_RecipientList
   Value: andre.nascimento@sagittarius.agency
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
 Languages:
 - Language: en
   Versions:

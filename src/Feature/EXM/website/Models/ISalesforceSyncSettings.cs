@@ -13,5 +13,17 @@
 
         [SitecoreField(Constants.SalesforceSyncSettings.Running_FieldID)]
         bool Running { get; set; }
+
+        [SitecoreField(Constants.SalesforceSyncSettings.FromAddress_FieldID)]
+        string FromAddress { get; set; }
+
+        [SitecoreField(Constants.SalesforceSyncSettings.FromDisplayName_FieldID)]
+        string FromDisplayName { get; set; }
+
+        [SitecoreField(Constants.SalesforceSyncSettings.ToAddress_FieldID)]
+        string ToAddresses { get; set; }
+
+        [SitecoreField(Constants.SalesforceSyncSettings.Subject_FieldID)]
+        string Subject { get; set; }
     }
 }

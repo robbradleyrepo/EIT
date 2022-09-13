@@ -409,7 +409,7 @@
         /// </summary>
         /// <param name=""></param>
         /// <returns></returns>
-        public RegisterdUserReturnViewModel SaveNonProfUserAsSFLead(NonProfessionalUser nonProfUser, string PreferencesUrl, string fundDashboardUrl)
+        public RegisterdUserReturnViewModel SaveNonProfUserAsSFLead(NonProfessionalUser nonProfUser, string preferencesUrl, string fundDashboardUrl)
         {
             try
             {
@@ -433,6 +433,7 @@
                 newSFLead.InternalFields[Constants.SF_EmailField] = nonProfUser.Email;
                 newSFLead.InternalFields[Constants.SFLead_CompanyField] = nonProfUser.Company;
                 newSFLead.InternalFields.SetField<bool>(Constants.SF_UKResident, nonProfUser.IsUKResident);
+                newSFLead.InternalFields.SetField<bool>(Constants.SF_CreatedViaPreferenceCentreField, true);
 
                 var leadrecordtypes = GetSFEntityRecordTypes(Constants.SfLeadEntityName);
                 if (leadrecordtypes != null)
@@ -484,11 +485,10 @@
                         }
 
                         //Generate the link to edit email pref page
-                        var queryStringParams = string.Format("{0}={1}_{2}", Constants.QueryStringNames.EmailPreferencefParams.RefQueryStringKey, randomGuid, sfEntityId);
-                        var editEmailPrefPagelink = string.Format("{0}?{1}", PreferencesUrl, queryStringParams);
-                        var fundDashboardlink = string.Format("{0}?{1}", fundDashboardUrl, queryStringParams);
+                        var editEmailPrefPagelink = GetEditEmailPrefPageLink(preferencesUrl, randomGuid, sfEntityId);
+                        var fundDashboardlink = GetFundDashboardLink(fundDashboardUrl, randomGuid, sfEntityId);
 
-                        returnObj.FullName = string.Format("{0} {1}", firstName, lastName);
+                        returnObj.FullName = GetFullName(newlyCreatedLead.InternalFields);
                         returnObj.EmailAddress = emailAddress;
                         returnObj.EditEmailPrefLink = editEmailPrefPagelink;
                         returnObj.FundDashboardLink = fundDashboardlink;
@@ -536,6 +536,7 @@
                 newSFContact.InternalFields.SetField<bool>(Constants.SF_UKResident, profUser.IsUKResident);
                 newSFContact.InternalFields[Constants.SFContact_OrgNameField] = profUser.Organisation;
                 newSFContact.InternalFields.SetField<bool>(Constants.SF_EmailOptOutField, profUser.Unsubscribed);
+                newSFContact.InternalFields.SetField<bool>(Constants.SF_CreatedViaPreferenceCentreField, true);
 
                 var contactRecordtypes = GetSFEntityRecordTypes(Constants.SFContactEntityName);
                 if (contactRecordtypes != null)
@@ -585,12 +586,11 @@
                         }
 
                         //Generate the link to edit email pref page
-                        var queryStringParams = string.Format("{0}={1}_{2}", Constants.QueryStringNames.EmailPreferencefParams.RefQueryStringKey, randomGuid, sfEntityId);
-                        var editEmailPrefPagelink = string.Format("{0}?{1}", preferencesUrl, queryStringParams);
-                        var fundDashboardPagelink = string.Format("{0}?{1}", fundDashboardUrl, queryStringParams);
+                        var editEmailPrefPagelink = GetEditEmailPrefPageLink(preferencesUrl, randomGuid, sfEntityId);
+                        var fundDashboardPagelink = GetFundDashboardLink(fundDashboardUrl, randomGuid, sfEntityId);
 
 
-                        returnObj.FullName = string.Format("{0} {1}", firstName, lastName);
+                        returnObj.FullName = GetFullName(newlyCreatedContact.InternalFields);
                         returnObj.EmailAddress = emailAddress;
                         returnObj.EditEmailPrefLink = editEmailPrefPagelink;
                         returnObj.FundDashboardLink = fundDashboardPagelink;
@@ -652,7 +652,7 @@
                     var sfContact = contactService.GetByEmail(email);
                     if (sfContact != null)
                     {
-                        fullName = string.Format("{0} {1}", sfContact.InternalFields[Constants.SF_FirstNameField], sfContact.InternalFields[Constants.SF_LastNameField]);
+                        fullName = GetFullName(sfContact.InternalFields);
                         entityId = sfContact.Id;
                         randomGuid = sfContact.InternalFields[Constants.SF_GUIDForEmailPref];
                     }
@@ -663,7 +663,7 @@
                     var sfLead = leadService.GetByEmail(email);
                     if (sfLead != null)
                     {
-                        fullName = string.Format("{0} {1}", sfLead.InternalFields[Constants.SF_FirstNameField], sfLead.InternalFields[Constants.SF_LastNameField]);
+                        fullName = GetFullName(sfLead.InternalFields);
                         entityId = sfLead.Id;
                         randomGuid = sfLead.InternalFields[Constants.SF_GUIDForEmailPref];
                     }
@@ -672,9 +672,8 @@
                 if (!string.IsNullOrEmpty(entityId) && !string.IsNullOrEmpty(randomGuid))
                 {
                     //Generate the link to edit email pref page
-                    var queryStringParams = string.Format("{0}={1}_{2}", Constants.QueryStringNames.EmailPreferencefParams.RefQueryStringKey, randomGuid, entityId);
-                    var editEmailPrefPagelink = string.Format("{0}?{1}", preferencesUrl, queryStringParams);
-                    var fundDashboardPagelink = string.Format("{0}?{1}", fundDashboardUrl, queryStringParams);
+                    var editEmailPrefPagelink = GetEditEmailPrefPageLink(preferencesUrl, randomGuid, entityId);
+                    var fundDashboardPagelink = GetFundDashboardLink(fundDashboardUrl, randomGuid, entityId);
 
                     return new ResendEmailPrefUserDetails { FullName = fullName, EditEmailPrefLink = editEmailPrefPagelink, FundDashboardLink = fundDashboardPagelink };
                 }
@@ -1087,6 +1086,58 @@
             {
                 Log.Debug("No entities found to be insert/update.", this);
             }
+        }
+
+        public string GetEditEmailPrefPageLink(string preferencesUrl, string randomGuid, string entityId)
+        {
+            var queryStringParams = string.Format("{0}={1}_{2}", Constants.QueryStringNames.EmailPreferencefParams.RefQueryStringKey, randomGuid, entityId);
+            var editEmailPrefPagelink = string.Format("{0}?{1}", preferencesUrl, queryStringParams);
+
+            return editEmailPrefPagelink;
+        }
+
+        public string GetFundDashboardLink(string fundDashboardUrl, string randomGuid, string entityId)
+        {
+            var queryStringParams = string.Format("{0}={1}_{2}", Constants.QueryStringNames.EmailPreferencefParams.RefQueryStringKey, randomGuid, entityId);
+            var fundDashboardlink = string.Format("{0}?{1}", fundDashboardUrl, queryStringParams);
+
+            return fundDashboardlink;
+        }
+
+        public string GetFullName(InternalFields fields)
+        {
+            return string.Format("{0} {1}", fields[Constants.SF_FirstNameField], fields[Constants.SF_LastNameField]);
+        }
+
+        /// <summary>
+        /// Get contacts and leads that have not received the welcome email
+        /// </summary>
+        /// <returns></returns>
+        public List<GenericSalesforceEntity> GetEntitiesToSendWecomeEmail(DateTime fromDate)
+        {
+            var returnList = new List<GenericSalesforceEntity>();
+
+           var sfContactList = GetEntitiesToSendWecomeEmail(fromDate, Constants.SFContactEntityName);
+            var sfLeadList = GetEntitiesToSendWecomeEmail(fromDate, Constants.SfLeadEntityName);
+
+            returnList.AddRange(sfContactList);
+            returnList.AddRange(sfLeadList);
+
+            return returnList;
+        }
+
+        private List<GenericSalesforceEntity> GetEntitiesToSendWecomeEmail(DateTime fromDate, string entityName)
+        {
+            var genericSFService = new GenericSalesforceService(this.SalesforceSession, entityName);
+            var soqlQuery = string.Format("SELECT {0}, {1}, {2}, {3}, {4}, {5}, {6} FROM {7} WHERE IsDeleted = false AND {8} = {9} AND {10} >= {11}",
+                                          Constants.SF_IdField, Constants.SF_FirstNameField, Constants.SF_LastNameField, Constants.SF_EmailField,
+                                          Constants.SF_UKResident, Constants.SF_GUIDForEmailPref, Constants.SF_CreatedDateField, entityName,
+                                          Constants.SF_CreatedViaPreferenceCentreField, false, Constants.SF_CreatedDateField, fromDate.ToString("yyyy-MM-ddTHH:mm:ssZ"));
+
+            Log.Debug(string.Format("Get{0}sToSendWelcomeEmail() soqlQuery={1}.", entityName, soqlQuery), this);
+
+            var sfEntityList = genericSFService.GetBySoql(soqlQuery);
+            return sfEntityList;
         }
 
         /// <summary>

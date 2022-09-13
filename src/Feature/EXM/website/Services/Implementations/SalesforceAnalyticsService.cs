@@ -6,6 +6,7 @@ using LionTrust.Feature.EXM.Models;
 using LionTrust.Feature.EXM.Services.Interfaces;
 using LionTrust.Feature.EXM.ViewModels;
 using LionTrust.Foundation.Contact.Enums;
+using LionTrust.Foundation.Contact.Managers;
 using LionTrust.Foundation.Contact.Services;
 using LionTrust.Foundation.Logging.Repositories;
 using LionTrust.Foundation.SitecoreExtensions.Extensions;
@@ -29,18 +30,20 @@ namespace LionTrust.Feature.EXM.Services.Implementations
     public class SalesforceAnalyticsService : ISalesforceAnalyticsService
     {
         private readonly ISitecoreService _sitecoreService;
+        private readonly IMailManager _mailManager;
         private readonly ISFEntityUtility _sfEntityUtility;
         private readonly ISitecoreContactUtility _sitecoreContactUtility;
         private readonly ILogRepository _logRepository;
 
         public SalesforceAnalyticsService(ISitecoreService sitecoreService)
-            : this(sitecoreService, ServiceLocator.ServiceProvider.GetService<ISFEntityUtility>(), ServiceLocator.ServiceProvider.GetService<ISitecoreContactUtility>(), ServiceLocator.ServiceProvider.GetService<ILogRepository>())
+            : this(sitecoreService, ServiceLocator.ServiceProvider.GetService<IMailManager>(), ServiceLocator.ServiceProvider.GetService<ISFEntityUtility>(), ServiceLocator.ServiceProvider.GetService<ISitecoreContactUtility>(), ServiceLocator.ServiceProvider.GetService<ILogRepository>())
         {
         }
 
-        public SalesforceAnalyticsService(ISitecoreService sitecoreService, ISFEntityUtility sfEntityUtility, ISitecoreContactUtility sitecoreContactUtility, ILogRepository logRepository)
+        public SalesforceAnalyticsService(ISitecoreService sitecoreService, IMailManager mailManager, ISFEntityUtility sfEntityUtility, ISitecoreContactUtility sitecoreContactUtility, ILogRepository logRepository)
         {
             _sitecoreService = sitecoreService;
+            _mailManager = mailManager;
             _sfEntityUtility = sfEntityUtility;
             _sitecoreContactUtility = sitecoreContactUtility;
             _logRepository = logRepository;
@@ -63,8 +66,8 @@ namespace LionTrust.Feature.EXM.Services.Implementations
 
                 var lastSyncDate = settings.GetField(Constants.SalesforceSyncSettings.LastSyncDate_FieldID, DateTime.MinValue).ToUniversalTime();
                 var entities = await GetEntityWithInteractions(lastSyncDate);
-                SyncEngagementHistory(entities);
-                SyncScore(entities);
+                SyncEngagementHistory(entities, settings);
+                SyncScore(entities, settings);
 
                 if (entities.SelectMany(x => x.Interactions).Any())
                 {
@@ -75,7 +78,9 @@ namespace LionTrust.Feature.EXM.Services.Implementations
             catch (Exception ex)
             {
                 SetRunning(settings, false);
-                _logRepository.Error("[Salesforce Sync] Error updating EXM data to Salesforce", ex);
+
+                var message = string.Format("Error updating EXM data to Salesforce: {0}", ex.Message);
+                SendEmailOnError(message, ex, settings);
 
                 return false;
             }
@@ -201,7 +206,7 @@ namespace LionTrust.Feature.EXM.Services.Implementations
             return entities;
         }        
 
-        private bool SyncEngagementHistory(List<EntityViewModel> entities)
+        private bool SyncEngagementHistory(List<EntityViewModel> entities, Item settings)
         {
             try
             {
@@ -232,12 +237,14 @@ namespace LionTrust.Feature.EXM.Services.Implementations
             }
             catch(Exception ex)
             {
-                Sitecore.Diagnostics.Log.Error("Exception occured when syncing engagement history objects to Salesforce.", ex, this);
+                var message = string.Format("Exception occured when syncing engagement history objects to Salesforce: {0}", ex.Message);
+                SendEmailOnError(message, ex, settings);
+
                 return false;
             }
         }
 
-        private bool SyncScore(List<EntityViewModel> entities)
+        private bool SyncScore(List<EntityViewModel> entities, Item settings)
         {
             try
             {
@@ -271,7 +278,9 @@ namespace LionTrust.Feature.EXM.Services.Implementations
             }
             catch (Exception ex)
             {
-                Sitecore.Diagnostics.Log.Error("Exception occured when syncing contact/lead score to Salesforce.", ex, this);
+                var message = string.Format("Exception occured when syncing contact/lead score to Salesforce: {0}", ex.Message);
+                SendEmailOnError(message, ex, settings);
+
                 return false;
             }
         }
@@ -385,6 +394,29 @@ namespace LionTrust.Feature.EXM.Services.Implementations
                 settings.Editing.BeginEdit();
                 settings.Fields[new ID(Constants.SalesforceSyncSettings.LastSyncDate_FieldID)].Value = dateTime.ToDateTimeWithTicks();
                 settings.Editing.EndEdit();
+            }
+        }
+
+        private void SendEmailOnError(string message, Exception exception, Item settings)
+        {
+            _logRepository.Error(string.Format("[Salesforce Sync] {0}", message), exception);
+
+            try
+            {
+                if (settings == null)
+                {
+                    return;
+                }
+
+                var fromAddress = settings.Fields[new ID(Constants.SalesforceSyncSettings.FromAddress_FieldID)].Value;
+                var fromDisplayName = settings.Fields[new ID(Constants.SalesforceSyncSettings.FromDisplayName_FieldID)].Value;
+                var toAddresses = settings.Fields[new ID(Constants.SalesforceSyncSettings.ToAddress_FieldID)].Value;
+                var subject = settings.Fields[new ID(Constants.SalesforceSyncSettings.Subject_FieldID)].Value;
+                _mailManager.SendEmail(fromAddress, fromDisplayName, toAddresses, subject, message, true);
+            }
+            catch (Exception ex)
+            {
+                _logRepository.Error("[Salesforce Sync]: Error sending email with salesforce sync information", ex);
             }
         }
     }

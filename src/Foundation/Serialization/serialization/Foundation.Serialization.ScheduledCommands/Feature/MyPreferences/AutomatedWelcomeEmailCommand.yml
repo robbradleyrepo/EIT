@@ -1,0 +1,25 @@
+﻿---
+ID: "e1cf6975-f7dc-4866-9d2a-e078bae4430f"
+Parent: "d58def13-6561-488f-a4ae-aaad92b3cf57"
+Template: "58119a3e-560e-4da6-97c6-1ace8a5b1219"
+Path: /sitecore/system/Tasks/Commands/Feature/MyPreferences/AutomatedWelcomeEmailCommand
+DB: master
+SharedFields:
+- ID: "4bc75539-d5c4-487b-af35-ff13d62bd286"
+  Hint: Method
+  Value: Execute
+- ID: "752579a7-ef2f-45b7-b9d1-9b682308b7a5"
+  Hint: Type
+  Value: LionTrust.Feature.MyPreferences.ScheduledJobs.AutomatedWelcomeEmailScheduledJob, LionTrust.Feature.MyPreferences
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220623T111627Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

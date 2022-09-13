@@ -162,6 +162,11 @@ namespace LionTrust.Feature.EXM
             public const string LastSyncDate_FieldID = "{3C1206F7-8BFD-4A84-A1AB-B16C4FDE7F88}";
             public const string Enabled_FieldID = "{8453ECF3-635E-4DF9-A722-2F4095946B98}";
             public const string Running_FieldID = "{D3EDC1AB-7F5A-4638-800B-2E90C4F06B4A}";
+
+            public const string FromAddress_FieldID = "{9344D3F5-D404-4D9A-AAED-1D01538AF948}";
+            public const string FromDisplayName_FieldID = "{E10A3410-AB22-4B09-A195-293D9A2E34BA}";
+            public const string ToAddress_FieldID = "{F547F117-8ECC-44AA-85ED-A68AB4504F9C}";
+            public const string Subject_FieldID = "{D3E491F9-3E79-40E7-9CB5-F86CFA7FEECC}";
         }
 
         public static class ContactList
