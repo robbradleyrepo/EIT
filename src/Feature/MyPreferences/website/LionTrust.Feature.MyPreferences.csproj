@@ -103,10 +103,13 @@
     <Compile Include="Controllers\FundAccordionListController.cs" />
     <Compile Include="Controllers\RegisterInvestorController.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
+    <Compile Include="Helpers\EmailHelper.cs" />
+    <Compile Include="Helpers\IEmailHelper.cs" />
+    <Compile Include="Models\IAutomatedWelcomeSettings.cs" />
+    <Compile Include="Models\IEditEmailPrefTemplate.cs" />
     <Compile Include="Models\IFundAccordionList.cs" />
     <Compile Include="Models\IEditEmailPreferences.cs" />
     <Compile Include="Models\EditEmailPreferencesViewModel.cs" />
-    <Compile Include="Models\IEditEmailPrefTemplate.cs" />
     <Compile Include="Models\IPrivacyNotice.cs" />
     <Compile Include="Models\IRegisterInvestor.cs" />
     <Compile Include="Models\RegisterInvestorSubmit.cs" />
@@ -116,6 +119,8 @@
     <Compile Include="Repositories\EmailPreferencesRepository.cs" />
     <Compile Include="Repositories\IApplicationCacheRepository.cs" />
     <Compile Include="Repositories\IEmailPreferencesRepository.cs" />
+    <Compile Include="ScheduledJobs\AutomatedWelcomeEmailScheduledJob.cs" />
+    <Compile Include="Services\IEmailPreferenceService.cs" />
     <Compile Include="Services\EmailPreferenceService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -144,6 +149,10 @@
     <ProjectReference Include="..\..\..\Foundation\DI\website\LionTrust.Foundation.DI.csproj">
       <Project>{0D3A6F11-B5FF-4D8C-8A74-19501D2E80D4}</Project>
       <Name>LionTrust.Foundation.DI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Indexing\website\LionTrust.Foundation.Indexing.csproj">
+      <Project>{acd53016-c45a-4a10-8b46-9a4a82a69d7b}</Project>
+      <Name>LionTrust.Foundation.Indexing</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Legacy\website\LionTrust.Foundation.Legacy.csproj">
       <Project>{43ee972b-2002-4719-a878-a66a99c42c40}</Project>

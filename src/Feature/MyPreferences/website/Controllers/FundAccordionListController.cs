@@ -12,24 +12,21 @@
     using System.Linq;
     using System.Collections.Generic;
     using LionTrust.Foundation.Contact.Models;
-    using LionTrust.Foundation.Onboarding.Helpers;
-    using LionTrust.Foundation.Onboarding.Models;
-    using LionTrust.Foundation.Search.Models.Request;
     using LionTrust.Foundation.Search.Models.ContentSearch;
     using LionTrust.Foundation.Search.Services.Interfaces;
 
     public class FundAccordionListController : SitecoreController
     {
         private readonly IMvcContext _context;
-        private readonly EmailPreferencesService _emailPreferencesService;
+        private readonly IEmailPreferencesService _emailPreferencesService;
         private readonly IPersonalizedContentService _personalizedContentService;
         private readonly IFundContentSearchService _fundContentSearchService;
 
-        public FundAccordionListController(IMvcContext context, BaseLog log, IMailManager mailManager, IEmailPreferencesRepository editEmailPreferencesRepository, IPersonalizedContentService personalizedContentService, IFundContentSearchService fundContentSearchService)
+        public FundAccordionListController(IMvcContext context, BaseLog log, IMailManager mailManager, IEmailPreferencesRepository editEmailPreferencesRepository, IPersonalizedContentService personalizedContentService, IFundContentSearchService fundContentSearchService, IEmailPreferencesService emailPreferencesService)
         {
             _context = context;
             _personalizedContentService = personalizedContentService;
-            _emailPreferencesService = new EmailPreferencesService(editEmailPreferencesRepository, mailManager, personalizedContentService);
+            _emailPreferencesService = emailPreferencesService;
             _fundContentSearchService = fundContentSearchService;
         }
 
