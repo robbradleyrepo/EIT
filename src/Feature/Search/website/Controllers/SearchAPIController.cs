@@ -160,6 +160,12 @@
             {
                 //https://docs.microsoft.com/en-us/dotnet/api/system.guid.tostring
                 var thirtyTwodigits = "N";
+
+                if (string.IsNullOrEmpty(sortOrder))
+                {
+                    sortOrder = "DESC";
+                }
+
                 var fundUpdateArticles = _articleListingDataManager.GetArticleListingResponse(
                                             database,
                                             Search.Constants.APIFacets.Defaults.FundUpdateContentTypeId,
@@ -172,7 +178,7 @@
                                             null,
                                             sortOrder,
                                             1,
-                                            int.MaxValue);
+                                            short.MaxValue);
                 var funds = response.SearchResults.ToList();
 
                 if (fundUpdateArticles != null && fundUpdateArticles.TotalResults > 0)
