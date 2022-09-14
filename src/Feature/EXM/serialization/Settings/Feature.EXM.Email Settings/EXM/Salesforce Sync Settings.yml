@@ -1,0 +1,28 @@
+﻿---
+ID: "72b10f4b-8534-4ef5-9f8c-015eabfd4ddf"
+Parent: "b20fde90-49de-419a-abc8-b2d0a9e0d2f6"
+Template: "9fdcbfec-9863-4b84-8347-fb1a72a6c573"
+Path: /sitecore/system/Settings/Feature/EXM/Salesforce Sync Settings
+DB: master
+SharedFields:
+- ID: "3c1206f7-8bfd-4a84-a1ab-b16c4fde7f88"
+  Hint: LastSyncDate
+  Value: 20220912T123000Z
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+- ID: "f547f117-8ecc-44aa-85ed-a68ab4504f9c"
+  Hint: ToAddress
+  Value: "jack.hilliam@liontrust.co.uk; marketing@liontrust.co.uk; andre.nascimento@sagittarius.agency; sabina.filip@sagittarius-marketing.com"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220623T185158Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

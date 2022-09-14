@@ -14,6 +14,7 @@
     using System;
     using System.Collections.Generic;
     using System.Globalization;
+    using System.IO;
     using System.Linq;
     using System.Web;
     using System.Web.Mvc;
@@ -93,11 +94,11 @@
             return View("~/Views/OnBoarding/OnboardingOverlay.cshtml", viewModel);
         }
 
-        public ActionResult GetTermsAndConditions(string countryIso)
+        public ActionResult GetTermsAndConditions(string countryIso, string investorType)
         {
             var data = _context.GetHomeItem<IHome>();
 
-            if (data == null || string.IsNullOrWhiteSpace(countryIso))
+            if (data == null || string.IsNullOrWhiteSpace(countryIso) || string.IsNullOrWhiteSpace(investorType))
             {
                 return null;
             }
@@ -117,7 +118,48 @@
                 }
                 else
                 {
-                    return View("~/Views/OnBoarding/TermsText.cshtml", country);
+                    var termsText = string.Empty;
+                    if (Guid.TryParse(investorType, out Guid investorTypeId))
+                    {
+                        var investor = data.OnboardingConfiguration.ChooseInvestorRole?
+                            .FirstOrDefault()?
+                            .Investors?
+                            .FirstOrDefault(x => x.Id == investorTypeId);
+
+                        if (investor == null)
+                        {
+                            return null;
+                        }
+
+                        switch (investor.Name)
+                        {
+                            case InvestorTypes.ProfessionalInvestor:
+                                termsText = country.TermsAndConditionsProfessional;
+                                break;
+                            case InvestorTypes.PrivateInvestor:
+                                termsText = country.TermsAndConditionsPrivate;
+                                break;
+                            case InvestorTypes.InstitutionalInvestor:
+                                termsText = country.TermsAndConditionsInstitutional;
+                                break;
+                            case InvestorTypes.Journalist:
+                                termsText = country.TermsAndConditionsJournalist;
+                                break;
+                            case InvestorTypes.Shareholder:
+                                termsText = country.TermsAndConditionsShareholder;
+                                break;
+                            case InvestorTypes.Charity:
+                                termsText = country.TermsAndConditionsCharity;
+                                break;
+                        }
+                    }
+                    
+                    if (string.IsNullOrEmpty(termsText))
+                    {
+                        termsText = country.TermsAndConditionsProfessional;
+                    }
+
+                    return View("~/Views/OnBoarding/TermsText.cshtml", new TermsAndConditionsViewModel { Text = termsText } );
                 }
             }
         }
@@ -155,6 +197,11 @@
                 return new EmptyResult();
             }
 
+            if (_context?.ContextItem?.ID == NotFoundPage.ItemId)
+            {
+                return null;
+            }
+
             var data = _context.GetHomeItem<IHome>();
             var landingPageUrl = string.Empty;
 
@@ -184,6 +231,7 @@
                 }
 
                 OnboardingHelper.AddPointsFromProfileCard(data.OnboardingConfiguration, profileCard);
+                OnboardingHelper.UpdateInvestorTypeSession(investor.Id);
 
                 TrackAnonymousUser(OnboardingSubmit.Country);
 

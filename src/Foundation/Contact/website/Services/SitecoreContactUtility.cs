@@ -13,7 +13,6 @@
 
     public class SitecoreContactUtility : ISitecoreContactUtility
     {
-
         /// <summary>
         /// Save relavant Salesforce data into S4SInfo facet
         /// </summary>
@@ -297,6 +296,27 @@
             }
 
             return null;
+        }
+
+        public Enums.EntityType GetEntityType(string entityId)
+        {
+            var entityType = Enums.EntityType.None;
+
+            if (string.IsNullOrEmpty(entityId))
+            {
+                return entityType;
+            }
+
+            if (entityId.StartsWith(Foundation.Contact.Constants.PrefixSalesforceContact, StringComparison.InvariantCultureIgnoreCase))
+            {
+                entityType = Enums.EntityType.Contact;
+            }
+            else if (entityId.StartsWith(Foundation.Contact.Constants.PrefixSalesforceLead, StringComparison.InvariantCultureIgnoreCase))
+            {
+                entityType = Enums.EntityType.Lead;
+            }
+
+            return entityType;
         }
     }
 }

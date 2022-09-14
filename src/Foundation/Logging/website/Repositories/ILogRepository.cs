@@ -1,3 +1,5 @@
+using System;
+
 namespace LionTrust.Foundation.Logging.Repositories
 {
     public interface ILogRepository
@@ -7,6 +9,8 @@ namespace LionTrust.Foundation.Logging.Repositories
         void Debug(string message, params object[] args);
 
         void Error(string message);
+
+        void Error(string message, Exception ex);
 
         void SingleError(string message);
 

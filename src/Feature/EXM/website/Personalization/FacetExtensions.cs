@@ -1,110 +1,47 @@
 ﻿namespace LionTrust.Feature.EXM.Personalization
 {
-    using LionTrust.Foundation.Contact.Services;
-    using Sitecore.XConnect.Collection.Model;
+    using FuseIT.Sitecore.Personalization.Facets;
+    using LionTrust.Feature.EXM.Helpers.Implementations;
 
     public static class FacetExtensions
     {
-        public static string GetEmailPreferencesId(EmailAddressList emailAddressList)
+        public static string GetEmailPreferencesId(S4SInfo info)
         {
-            var preferredEmail = emailAddressList?.PreferredEmail;
+            var sfEntityId = SFEntityHelper.GetFieldValue(info, Foundation.Contact.Constants.SF_IdField);
+            var randomGuid = SFEntityHelper.GetFieldValue(info, Foundation.Contact.Constants.SF_GUIDForEmailPref);
 
-            if (!string.IsNullOrWhiteSpace(preferredEmail?.SmtpAddress))
+            if (string.IsNullOrEmpty(sfEntityId) || string.IsNullOrEmpty(randomGuid)) 
             {
-                var email = preferredEmail.SmtpAddress;
-
-                var sfEntityUtility = new SFEntityUtility();
-                var emailPreferencesId = sfEntityUtility.GetEmailPreferencesIdByEmail(email);
-
-                return emailPreferencesId;
+                return null;
             }
 
-            return null;
+            var emailPreferencesId = $"{randomGuid}_{sfEntityId}";
+            return emailPreferencesId;
         }
 
-        public static string GetOwnerTitle(EmailAddressList emailAddressList)
+        public static string GetOwnerJob(S4SInfo info)
         {
-            var preferredEmail = emailAddressList?.PreferredEmail;
-
-            if (!string.IsNullOrWhiteSpace(preferredEmail?.SmtpAddress))
-            {
-                var email = preferredEmail.SmtpAddress;
-
-                var sfEntityUtility = new SFEntityUtility();
-                var ownerTitle = sfEntityUtility.GetOwnerTitleByEmail(email);
-
-                return ownerTitle;
-            }
-
-            return null;
+            return SFEntityHelper.GetFieldValue(info, Foundation.Contact.Constants.SF_Owner_TitleField, Foundation.Contact.Constants.SF_User_TitleField);
         }
 
-        public static string GetOwnerName(EmailAddressList emailAddressList)
+        public static string GetOwnerName(S4SInfo info)
         {
-            var preferredEmail = emailAddressList?.PreferredEmail;
-
-            if (!string.IsNullOrWhiteSpace(preferredEmail?.SmtpAddress))
-            {
-                var email = preferredEmail.SmtpAddress;
-
-                var sfEntityUtility = new SFEntityUtility();
-                var ownerName = sfEntityUtility.GetOwnerNameByEmail(email);
-
-                return ownerName;
-            }
-
-            return null;
+            return SFEntityHelper.GetFieldValue(info, Foundation.Contact.Constants.SF_Owner_NameField, Foundation.Contact.Constants.SF_User_NameField);
         }
 
-        public static string GetOwnerEmail(EmailAddressList emailAddressList)
+        public static string GetOwnerEmail(S4SInfo info)
         {
-            var preferredEmail = emailAddressList?.PreferredEmail;
-
-            if (!string.IsNullOrWhiteSpace(preferredEmail?.SmtpAddress))
-            {
-                var email = preferredEmail.SmtpAddress;
-
-                var sfEntityUtility = new SFEntityUtility();
-                var ownerEmail = sfEntityUtility.GetOwnerEmailByEmail(email);
-
-                return ownerEmail;
-            }
-
-            return null;
+            return SFEntityHelper.GetFieldValue(info, Foundation.Contact.Constants.SF_Owner_EmailField, Foundation.Contact.Constants.SF_User_EmailField);
         }
 
-        public static string GetOwnerPhone(EmailAddressList emailAddressList)
+        public static string GetOwnerPhone(S4SInfo info)
         {
-            var preferredEmail = emailAddressList?.PreferredEmail;
-
-            if (!string.IsNullOrWhiteSpace(preferredEmail?.SmtpAddress))
-            {
-                var email = preferredEmail.SmtpAddress;
-
-                var sfEntityUtility = new SFEntityUtility();
-                var ownerPhone = sfEntityUtility.GetOwnerPhoneByEmail(email);
-
-                return ownerPhone;
-            }
-
-            return null;
+            return SFEntityHelper.GetFieldValue(info, Foundation.Contact.Constants.SF_Owner_PhoneField, Foundation.Contact.Constants.SF_User_PhoneField);
         }
 
-        public static string GetOwnerRegion(EmailAddressList emailAddressList)
+        public static string GetOwnerRegion(S4SInfo info)
         {
-            var preferredEmail = emailAddressList?.PreferredEmail;
-
-            if (!string.IsNullOrWhiteSpace(preferredEmail?.SmtpAddress))
-            {
-                var email = preferredEmail.SmtpAddress;
-
-                var sfEntityUtility = new SFEntityUtility();
-                var ownerRegion = sfEntityUtility.GetOwnerRegionByEmail(email);
-
-                return ownerRegion;
-            }
-
-            return null;
+            return SFEntityHelper.GetFieldValue(info, Foundation.Contact.Constants.SF_Owner_RegionField, Foundation.Contact.Constants.SF_User_RegionField);
         }
     }
 }

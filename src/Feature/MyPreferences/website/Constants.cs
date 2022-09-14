@@ -1,9 +1,13 @@
-﻿namespace LionTrust.Feature.MyPreferences
+﻿using System;
+
+namespace LionTrust.Feature.MyPreferences
 {
     public static class Constants
     {
         public static class RegisterInvestor
         {
+            public static Guid Item_ID = new Guid("{15518891-53BA-4B83-93D5-F3BAC21D3344}");
+
             public static class Content
             {
                 public const string IntroductionText_FieldId = "{ABAC9452-B35B-4FEA-88D5-8B0846826D46}";
@@ -128,6 +132,16 @@
                     public const string SiteURLToken = "{SiteURL}";
                 }
             }
+        }
+
+        public static class AutomatedWelcomeSettings
+        {
+            public const string Enabled_FieldID = "{A1D79CD8-7DC4-4EDD-9C5B-D186A3A26359}";
+
+            public const string FromAddress_FieldID = "{60B81BA0-0A04-4F73-8131-22330EDD9FFF}";
+            public const string FromDisplayName_FieldID = "{545B6376-0BF8-49C0-8B0C-5B6D64A92DFB}";
+            public const string ToAddress_FieldID = "{8B08B1B5-BCBF-4BD8-A1E0-12D6A907C055}";
+            public const string Subject_FieldID = "{D9A994F4-3102-48ED-9C42-E9B2730D5002}";
         }
 
         public enum Errors

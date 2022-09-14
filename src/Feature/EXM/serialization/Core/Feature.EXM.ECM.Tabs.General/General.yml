@@ -1,0 +1,434 @@
+﻿---
+ID: "4d607c27-c8d8-4e8b-9e24-9e1fb9e31d3e"
+Parent: "1c5fed62-c6b7-4416-bcab-980ba8703518"
+Template: "f62b4cd7-754c-4461-810f-2b6bd2c92a0d"
+Path: /sitecore/client/Applications/ECM/Pages/Messages/Regular/PageSettings/Tabs/General
+DB: core
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+- ID: "deab3795-056f-4421-adf0-758844461b72"
+  Hint: Placeholder Name
+  Value: General
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{759BEFD1-3323-404D-A243-E0ED81163C03}">
+        <r
+          id="{CB83D434-31ED-4AC3-A280-CCE2B63F9743}"
+          par="PageCodeScriptFileName=%2fsitecore%2fshell%2fclient%2fApplications%2fECM%2fEmailCampaign.Client%2fPages%2fTabs%2f10-General.js"
+          ph="Page.Body"
+          uid="{8E29865A-AC0A-413F-92C5-EE98841DA293}" />
+        <r
+          id="{F6C9F461-FCAF-47DC-AA01-C8C64C2EFFB8}"
+          par="Id=GeneralTabBorder"
+          ph="Page.Body"
+          uid="{55460785-AC18-44A6-B6B5-8EEF8B8DBCDF}" />
+        <r
+          ds="{51180C64-97F4-4985-9E13-AEE545FA880B}"
+          id="{442BD093-FBAD-4E36-BC08-489E16C82D08}"
+          par="Id=GeneralMessageInfoAccordion&amp;IsVisible=1&amp;EnableAdditional=0"
+          ph="GeneralTabBorder.Content"
+          uid="{D3925ACA-2E4E-4840-9D4F-02C9BA786851}" />
+        <r
+          id="{F6C9F461-FCAF-47DC-AA01-C8C64C2EFFB8}"
+          par="padding=2px&amp;Id=GeneralMessageInfoAccordionBorder&amp;UsePadding=1&amp;ShowBorder=0"
+          ph="GeneralMessageInfoAccordion.Body"
+          uid="{2375D03E-CD09-4659-A98F-88A5259D5A64}" />
+        <r
+          id="{C4393722-39FA-4869-9582-3A8EB8983A0D}"
+          par="UsePadding=1&amp;Id=NameRowPanel"
+          ph="GeneralMessageInfoAccordionBorder.Content"
+          uid="{275E7479-FE6A-4B0D-9CB7-AB015E740685}" />
+        <r
+          id="{5CB208F6-1860-426B-8221-FAA85B329848}"
+          par="Id=NameColumnPanelLeft&amp;GridColumns=3&amp;ContentAlign=Left"
+          ph="NameRowPanel.Content"
+          uid="{47362D31-3D23-49B4-B654-28EBA48919E1}" />
+        <r
+          ds="{BE05241E-5A37-41AF-9D8F-2BC0282FDCC5}"
+          id="{98316BB6-F3F5-4E6F-81F0-79F173D151D8}"
+          par="Id=NameLabel&amp;Target=%7bBinding+NameTextBox.Text%7d"
+          ph="NameColumnPanelLeft.Content"
+          uid="{95127B45-7869-4395-AF9B-027EAB8F8017}" />
+        <r
+          id="{5CB208F6-1860-426B-8221-FAA85B329848}"
+          par="Id=NameColumnPanelRight&amp;GridColumns=9"
+          ph="NameRowPanel.Content"
+          uid="{CC821F66-7987-4FAF-B0AE-A5F35A9E5972}" />
+        <r
+          id="{57F86E9A-1844-45CE-BF8A-62900AE17A92}"
+          par="TriggerTextChangeOnKeyUp=1&amp;IsRequired=1&amp;MaxLength=100&amp;Id=NameTextBox&amp;IsVisible=1"
+          ph="NameColumnPanelRight.Content"
+          uid="{9A2F159D-A5C6-4E3B-A3E6-6148B024D41E}" />
+        <r
+          id="{C4393722-39FA-4869-9582-3A8EB8983A0D}"
+          par="UsePadding=1&amp;Id=DescriptionRowPanel"
+          ph="GeneralMessageInfoAccordionBorder.Content"
+          uid="{FE274897-31FC-4B19-ABE8-473565EE7888}" />
+        <r
+          id="{5CB208F6-1860-426B-8221-FAA85B329848}"
+          par="Id=DesriptionColumnPanelLeft&amp;GridColumns=3&amp;ContentAlign=Left"
+          ph="DescriptionRowPanel.Content"
+          uid="{D808EB09-6118-4701-A5F0-3B1FC0413B8B}" />
+        <r
+          ds="{09793287-81AC-42F8-8E0A-D7D4DB70ED78}"
+          id="{98316BB6-F3F5-4E6F-81F0-79F173D151D8}"
+          par="Id=DescriptionLabel&amp;Target=%7bBinding+DescriptionArea.Text%7d"
+          ph="DesriptionColumnPanelLeft.Content"
+          uid="{C422B06B-324E-4A85-AA06-881EE597CC68}" />
+        <r
+          id="{5CB208F6-1860-426B-8221-FAA85B329848}"
+          par="Id=DescriptionColumnPanelRight&amp;GridColumns=9"
+          ph="DescriptionRowPanel.Content"
+          uid="{005D5A57-C046-41B2-9C53-D9FC903CEBF6}" />
+        <r
+          id="{9918B36C-92ED-4EB8-A95A-009E2523C672}"
+          par="Id=DescriptionArea&amp;IsVisible=1"
+          ph="DescriptionColumnPanelRight.Content"
+          uid="{8CA7156A-AF33-4A12-87C8-4FCAFDFE3F21}" />
+        <r
+          id="{C4393722-39FA-4869-9582-3A8EB8983A0D}"
+          par="UsePadding=1&amp;Id=CampaignCategoryRowPanel"
+          ph="GeneralMessageInfoAccordionBorder.Content"
+          uid="{2E1BCA8C-869A-40A0-B293-4325DEDAE1B3}" />
+        <r
+          id="{5CB208F6-1860-426B-8221-FAA85B329848}"
+          par="Id=CampaignCategoryColumnPanelLeft&amp;GridColumns=3&amp;ContentAlign=Left"
+          ph="CampaignCategoryRowPanel.Content"
+          uid="{C4FFE5BE-35B2-4D2A-A395-4FF52564C1FF}" />
+        <r
+          ds="{61DD1ECD-2F6E-4339-A980-83E8660126AB}"
+          id="{98316BB6-F3F5-4E6F-81F0-79F173D151D8}"
+          par="Id=CampaignCategoryLabel&amp;Target=%7bBinding+CampaignCategoryTextBox%7d"
+          ph="CampaignCategoryColumnPanelLeft.Content"
+          uid="{AAF73483-0E78-4004-B8DF-3603FC4E415B}" />
+        <r
+          id="{5CB208F6-1860-426B-8221-FAA85B329848}"
+          par="Id=CampaignCategoryColumnPanelRight&amp;GridColumns=9"
+          ph="CampaignCategoryRowPanel.Content"
+          uid="{4DA2717F-C67A-4A64-BB01-32EDB2E44B9B}" />
+        <r
+          ds="{2A1C30F0-BBC3-4664-BE96-0345AC644627}"
+          id="{E4C8C7BE-E941-49F2-9724-29237AE7EA37}"
+          par="Click=select%3acampaign%3acategory%3abrowse&amp;Id=CampaignCategoryTextBox"
+          ph="CampaignCategoryColumnPanelRight.Content"
+          uid="{40F1624F-CF78-4CDC-A5F8-ADCDE235656B}" />
+        <r
+          ds="{C186B3F1-D121-4E77-94CA-39C698188425}"
+          id="{B60FB581-44D1-4372-86A2-D6E494F020E1}"
+          par="Id=CampaignCategoryDialogWindow&amp;Size=%7bDFE6D45B-ED26-4D2C-8C5C-5A1EA07B1DEF%7d&amp;EnableKeyboard=1"
+          ph="CampaignCategoryColumnPanelRight.Content"
+          uid="{58DA871D-083C-466D-B978-930E01DC2124}" />
+        <r
+          id="{F6C9F461-FCAF-47DC-AA01-C8C64C2EFFB8}"
+          par="Id=CampaignCategoryDialogBorder"
+          ph="CampaignCategoryDialogWindow.Content"
+          uid="{4314907D-CDF1-49D0-991E-88008C231987}" />
+        <r
+          id="{08B6767B-8E8A-41C8-8880-EFEBB4EAE0E3}"
+          par="Id=CampaignCategoryTreeView&amp;SelectMode=1&amp;RootItem=%7bC1B8669B-C41A-4ED3-BF0D-E859CF880D42%7d&amp;Base Templates=%7bA87A00B1-E6DB-45AB-8B54-636FEC3B5523%7d%7c%7b56682FE6-9679-4B69-9589-60C99AA08BEC%7d&amp;ShowIconImage=1&amp;IsCheckboxEnabled=0&amp;ShowSitecoreIcons=1"
+          ph="CampaignCategoryDialogBorder.Content"
+          uid="{53F14FC9-9BC8-4383-9FC6-E54EB2BA19A7}" />
+        <r
+          ds="{C93C19C0-BE48-450E-820D-DCEE114D5E68}"
+          id="{913AB005-2527-4C2D-9827-FB3A8DFB135C}"
+          par="Click=select%3acampaign%3acategory%3aok&amp;Id=CampaignCategoryPopupOkBtn&amp;ButtonType=Primary"
+          ph="CampaignCategoryDialogWindow.Buttons"
+          uid="{770C1BD5-A0CC-4D37-A5B5-6D09C4E3C78A}" />
+        <r
+          ds="{04066A55-F53D-435E-9902-2BA00CF68B6A}"
+          id="{913AB005-2527-4C2D-9827-FB3A8DFB135C}"
+          par="Click=select%3acampaign%3acategory%3acancel&amp;Id=CampaignCategoryPopupCancelBtn"
+          ph="CampaignCategoryDialogWindow.Buttons"
+          uid="{E42C6F9D-2DC8-4C53-AEB2-7733A7620301}" />
+        <r
+          id="{C4393722-39FA-4869-9582-3A8EB8983A0D}"
+          par="UsePadding=1&amp;Id=CampaignGroupRowPanel"
+          ph="GeneralMessageInfoAccordionBorder.Content"
+          uid="{ECCFA320-3A4D-455A-9CDB-F1133F8EBC4E}" />
+        <r
+          id="{5CB208F6-1860-426B-8221-FAA85B329848}"
+          par="Id=CampaignGroupColumnPanelLeft&amp;GridColumns=3&amp;ContentAlign=Left"
+          ph="CampaignGroupRowPanel.Content"
+          uid="{7BDFC44C-FCE9-4A16-A043-6034F9D25667}" />
+        <r
+          ds="{334D67C9-6520-4658-9078-A11EB012D516}"
+          id="{98316BB6-F3F5-4E6F-81F0-79F173D151D8}"
+          par="Id=CampaignGroupLabel"
+          ph="CampaignGroupColumnPanelLeft.Content"
+          uid="{736EF860-39F0-469D-844E-184761954728}" />
+        <r
+          id="{5CB208F6-1860-426B-8221-FAA85B329848}"
+          par="Id=CampaignGroupColumnPanelRight&amp;GridColumns=9"
+          ph="CampaignGroupRowPanel.Content"
+          uid="{745BBAED-1E4F-4636-90A4-A277FDD9A71F}" />
+        <r
+          ds="{2A1C30F0-BBC3-4664-BE96-0345AC644627}"
+          id="{E4C8C7BE-E941-49F2-9724-29237AE7EA37}"
+          par="Click=select%3acampaign%3agroup%3abrowse&amp;IsEnabled=1&amp;Id=CampaignGroupTextBox&amp;IsVisible=1"
+          ph="CampaignGroupColumnPanelRight.Content"
+          uid="{8E3CB16A-AD47-45B0-92AE-1B1DE19D8E51}" />
+        <r
+          ds="{43A59CC0-0A72-4977-9617-6A7088405F60}"
+          id="{B60FB581-44D1-4372-86A2-D6E494F020E1}"
+          par="Id=CampaignGroupDialogWindow&amp;Size=%7bDFE6D45B-ED26-4D2C-8C5C-5A1EA07B1DEF%7d&amp;EnableKeyboard=1"
+          ph="CampaignGroupColumnPanelRight.Content"
+          uid="{6CB842E4-4996-4CD0-B8BB-416B5EA0AEA3}" />
+        <r
+          id="{08B6767B-8E8A-41C8-8880-EFEBB4EAE0E3}"
+          par="Id=CampaignGroupTreeView&amp;SelectMode=1&amp;RootItem=%7bAB2F413C-4854-48EB-B7EB-6FD2E8142B19%7d&amp;Base Templates=%7b7CC96707-325D-4024-9F58-B10CE1F950D1%7d%7c%7bA87A00B1-E6DB-45AB-8B54-636FEC3B5523%7d&amp;ShowIconImage=1&amp;ClickFolderMode=3&amp;IsCheckboxEnabled=0&amp;ShowSitecoreIcons=1"
+          ph="CampaignGroupDialogWindow.Content"
+          uid="{0F337409-A947-4C84-B2C0-88F06DC3D6AF}" />
+        <r
+          ds="{C93C19C0-BE48-450E-820D-DCEE114D5E68}"
+          id="{913AB005-2527-4C2D-9827-FB3A8DFB135C}"
+          par="Click=select%3acampaign%3agroup%3aok&amp;Id=CampaignGroupPopupOkBtn&amp;ButtonType=Primary"
+          ph="CampaignGroupDialogWindow.Buttons"
+          uid="{E662E9F6-BE15-4AB7-B1DD-142488081E56}" />
+        <r
+          ds="{04066A55-F53D-435E-9902-2BA00CF68B6A}"
+          id="{913AB005-2527-4C2D-9827-FB3A8DFB135C}"
+          par="Click=select%3acampaign%3agroup%3acancel&amp;Id=CampaignGroupPopupCancelBtn"
+          ph="CampaignGroupDialogWindow.Buttons"
+          uid="{5AB5B328-B779-45F6-A0FD-E595DDA4B16C}" />
+        <r
+          ds="{57C487A0-4851-4A24-A747-02F4FE48B5C0}"
+          id="{442BD093-FBAD-4E36-BC08-489E16C82D08}"
+          par="Id=SenderAccordion&amp;EnableAdditional=0"
+          ph="GeneralTabBorder.Content"
+          uid="{DD7A3ED8-9D51-4086-A58D-71402D9B7CE6}" />
+        <r
+          id="{F6C9F461-FCAF-47DC-AA01-C8C64C2EFFB8}"
+          par="padding=2px&amp;Id=SenderAccordionBorder&amp;UsePadding=1"
+          ph="SenderAccordion.Body"
+          uid="{9E07B8A3-85C7-4C92-9AF8-AD4529EA7DAA}" />
+        <r
+          id="{C4393722-39FA-4869-9582-3A8EB8983A0D}"
+          par="UsePadding=1&amp;Id=FromNameRowPanel"
+          ph="SenderAccordionBorder.Content"
+          uid="{7ECF1958-1055-4776-97A7-3EB32A9238DA}" />
+        <r
+          id="{5CB208F6-1860-426B-8221-FAA85B329848}"
+          par="Id=FromNameColumnPanelLeft&amp;GridColumns=3&amp;ContentAlign=Left"
+          ph="FromNameRowPanel.Content"
+          uid="{F8198987-1E8B-4CF4-9EBF-07CC3A7E3479}" />
+        <r
+          ds="{EB148415-D144-4957-B4DA-34E73E413389}"
+          id="{98316BB6-F3F5-4E6F-81F0-79F173D151D8}"
+          par="Id=FromNameLabel&amp;Target=%7bBinding+FromNameTextBox.Text%7d"
+          ph="FromNameColumnPanelLeft.Content"
+          uid="{2D01DCF8-DBC4-48FF-98D6-4C499E0306B3}" />
+        <r
+          id="{5CB208F6-1860-426B-8221-FAA85B329848}"
+          par="Id=FromNameColumnPanelRight&amp;GridColumns=9"
+          ph="FromNameRowPanel.Content"
+          uid="{A1363843-6944-45D7-9081-ED9B8F753D98}" />
+        <r
+          id="{57F86E9A-1844-45CE-BF8A-62900AE17A92}"
+          par="Id=FromNameTextBox&amp;IsVisible=1"
+          ph="FromNameColumnPanelRight.Content"
+          uid="{4CF5CE24-6954-4D73-812E-539DAC6DDF7C}" />
+        <r
+          id="{C4393722-39FA-4869-9582-3A8EB8983A0D}"
+          par="UsePadding=1&amp;Id=FromEmailRowPanel"
+          ph="SenderAccordionBorder.Content"
+          uid="{E19FAA56-2C66-4EBB-AF4C-845D7249B38C}" />
+        <r
+          id="{5CB208F6-1860-426B-8221-FAA85B329848}"
+          par="Id=FromEmailColumnPanelLeft&amp;GridColumns=3&amp;ContentAlign=Left"
+          ph="FromEmailRowPanel.Content"
+          uid="{6757C4D7-D1E0-4853-861F-1CB8AFD6CAED}" />
+        <r
+          ds="{1D327C52-BF3C-42EF-8CEC-348487B90E53}"
+          id="{98316BB6-F3F5-4E6F-81F0-79F173D151D8}"
+          par="Id=FromEmailLabel&amp;Target=%7bBinding+FromEmailTextBox.Text%7d"
+          ph="FromEmailColumnPanelLeft.Content"
+          uid="{CD29934D-2EC2-4588-8EF9-2FC587FC6D94}" />
+        <r
+          id="{5CB208F6-1860-426B-8221-FAA85B329848}"
+          par="Id=FromEmailColumnPanelRight&amp;GridColumns=9"
+          ph="FromEmailRowPanel.Content"
+          uid="{DB790F0F-15C4-4A65-B1BA-5D01E90356D3}" />
+        <r
+          id="{7717EB6C-9F90-4C58-826D-5E87722A0318}"
+          par="Id=SenderValidateIndicator"
+          ph="FromEmailColumnPanelRight.Content"
+          uid="{2AC0655C-4DA2-4E7F-BAF9-AF848EBFC1D9}" />
+        <r
+          id="{57F86E9A-1844-45CE-BF8A-62900AE17A92}"
+          par="IsRequired=1&amp;Id=FromEmailTextBox&amp;IsVisible=1"
+          ph="FromEmailColumnPanelRight.Content"
+          uid="{EFF10CA2-4164-42F9-BBBB-FC5E4DCF549B}" />
+        <r
+          id="{F6C9F461-FCAF-47DC-AA01-C8C64C2EFFB8}"
+          par="Id=ReplyToBorder&amp;IsVisible=1"
+          ph="SenderAccordionBorder.Content"
+          uid="{35F8F153-F26F-4BE2-B443-0AB79483318C}" />
+        <r
+          id="{C4393722-39FA-4869-9582-3A8EB8983A0D}"
+          par="UsePadding=1&amp;Id=ReplyToRowPanel"
+          ph="ReplyToBorder.Content"
+          uid="{D77F40F6-1634-4558-80E1-7731B480A14C}" />
+        <r
+          id="{5CB208F6-1860-426B-8221-FAA85B329848}"
+          par="Id=ReplyToColumnPanelLeft&amp;GridColumns=3&amp;ContentAlign=Left"
+          ph="ReplyToRowPanel.Content"
+          uid="{D4D157B1-BAF2-4DBB-8D5F-9F9627D7914E}" />
+        <r
+          ds="{09CFDF98-AB8F-4634-A026-892261795B24}"
+          id="{98316BB6-F3F5-4E6F-81F0-79F173D151D8}"
+          par="Id=ReplyToLabel&amp;Target=%7bBinding+ReplyToTextBox.Text%7d"
+          ph="ReplyToColumnPanelLeft.Content"
+          uid="{EDB0B7D4-23E4-48AC-A07E-5F9E4BCE2D91}" />
+        <r
+          id="{5CB208F6-1860-426B-8221-FAA85B329848}"
+          par="Id=ReplyToColumnPanelRight&amp;GridColumns=9"
+          ph="ReplyToRowPanel.Content"
+          uid="{3930999C-AD71-4704-94D3-CAF284D1AAA4}" />
+        <r
+          id="{57F86E9A-1844-45CE-BF8A-62900AE17A92}"
+          par="Tooltip=%7bBinding+ToolTip1.Title%7d&amp;Id=ReplyToTextBox&amp;IsVisible=1"
+          ph="ReplyToColumnPanelRight.Content"
+          uid="{4281AE69-C636-4C82-A659-33F055D5795D}" />
+        <r
+          ds="{06B83FDE-003E-4626-B5D5-25348D8E52BE}"
+          id="{442BD093-FBAD-4E36-BC08-489E16C82D08}"
+          par="Id=TemplateAccordion&amp;IsOpen=1"
+          ph="GeneralTabBorder.Content"
+          uid="{8F835F94-FEFE-4E5B-8704-F4D7BF4C3F14}" />
+        <r
+          id="{F517C5E4-9A53-46C3-B922-5B44E6DAAA48}"
+          par="Id=TemplateThumbnailImage"
+          ph="TemplateThumbnailRightColumnPanel.Content"
+          uid="{7D5047A9-7448-4382-854F-72EB9F07E41A}" />
+        <r
+          id="{F6C9F461-FCAF-47DC-AA01-C8C64C2EFFB8}"
+          par="padding=2px&amp;Id=TemplateAccordionBorder&amp;UsePadding=1"
+          ph="TemplateAccordion.Body"
+          uid="{15B2946D-E179-4D65-B54B-5FF58680217D}" />
+        <r
+          id="{C4393722-39FA-4869-9582-3A8EB8983A0D}"
+          par="UsePadding=1&amp;Id=TemplateNameRowPanel"
+          ph="TemplateAccordionBorder.Content"
+          uid="{2392CC9F-AAF9-4A1E-A20F-11DD270A8F29}" />
+        <r
+          id="{5CB208F6-1860-426B-8221-FAA85B329848}"
+          par="Id=TemplateNameLeftColumnPanel&amp;GridColumns=3&amp;ContentAlign=Left"
+          ph="TemplateNameRowPanel.Content"
+          uid="{9BFFD824-4FD3-458D-B977-8557FF489E3C}" />
+        <r
+          ds="{BE05241E-5A37-41AF-9D8F-2BC0282FDCC5}"
+          id="{98316BB6-F3F5-4E6F-81F0-79F173D151D8}"
+          par="Id=TemplateNameLabel&amp;Tooltip=+"
+          ph="TemplateNameLeftColumnPanel.Content"
+          uid="{33952944-5B45-4CB3-8D8A-141924493014}" />
+        <r
+          id="{5CB208F6-1860-426B-8221-FAA85B329848}"
+          par="Id=TemplateNameRightColumnPanel&amp;GridColumns=9"
+          ph="TemplateNameRowPanel.Content"
+          uid="{517AC1D5-1AC0-40AF-9A05-8B9404901AB4}" />
+        <r
+          id="{98316BB6-F3F5-4E6F-81F0-79F173D151D8}"
+          par="Id=TemplateNameValueLabel"
+          ph="TemplateNameRightColumnPanel.Content"
+          uid="{1C1DAE64-42C0-476F-AD78-FDD2AB48A8D4}" />
+        <r
+          id="{C4393722-39FA-4869-9582-3A8EB8983A0D}"
+          par="UsePadding=1&amp;Id=TemplateThumbnailRowPanel"
+          ph="TemplateAccordionBorder.Content"
+          uid="{D4EA76B8-D6C6-4C8F-BDF9-F810B8286455}" />
+        <r
+          id="{5CB208F6-1860-426B-8221-FAA85B329848}"
+          par="Id=TemplateThumbnailLeftColumnPanel&amp;GridColumns=3&amp;ContentAlign=Left"
+          ph="TemplateThumbnailRowPanel.Content"
+          uid="{F2F252F5-FC24-4FC0-B891-401EF9398B61}" />
+        <r
+          ds="{F4A5C1FC-E811-4D26-8CC2-54429EA67FAB}"
+          id="{98316BB6-F3F5-4E6F-81F0-79F173D151D8}"
+          par="Id=TemplateThumbnailLabel&amp;Tooltip=+"
+          ph="TemplateThumbnailLeftColumnPanel.Content"
+          uid="{89F099E7-0280-4BA0-8C28-DE8DDB37584D}" />
+        <r
+          id="{5CB208F6-1860-426B-8221-FAA85B329848}"
+          par="Id=TemplateThumbnailRightColumnPanel&amp;GridColumns=9"
+          ph="TemplateThumbnailRowPanel.Content"
+          uid="{96AE0029-9D57-4D67-AC83-15E988740513}" />
+        <r
+          id="{C4393722-39FA-4869-9582-3A8EB8983A0D}"
+          par="UsePadding=1&amp;Id=TeamRowPanel"
+          ph="GeneralMessageInfoAccordionBorder.Content"
+          uid="{275E7479-FE6A-4B0D-9CB7-AB015E740685}" />
+        <r
+          id="{5CB208F6-1860-426B-8221-FAA85B329848}"
+          par="Id=TeamColumnPanelLeft&amp;GridColumns=3&amp;ContentAlign=Left"
+          ph="TeamRowPanel.Content"
+          uid="{7BDFC44C-FCE9-4A16-A043-6034F9D25667}" />
+        <r
+          ds="{82F8AF9E-410B-4A32-9B33-44AE372ED456}"
+          id="{98316BB6-F3F5-4E6F-81F0-79F173D151D8}"
+          par="Id=TeamLabel"
+          ph="TeamColumnPanelLeft.Content"
+          uid="{736EF860-39F0-469D-844E-184761954728}" />
+        <r
+          id="{5CB208F6-1860-426B-8221-FAA85B329848}"
+          par="Tooltip&amp;IsVisible=1&amp;GridColumns=9&amp;ContentAlign&amp;ApplyGridColumsToAllSizes&amp;AccessKey&amp;ConfigurationItem&amp;Id=TeamColumnPanelRight&amp;Behaviors"
+          ph="TeamRowPanel.Content"
+          uid="{745BBAED-1E4F-4636-90A4-A277FDD9A71F}" />
+        <r
+          ds="{2A1C30F0-BBC3-4664-BE96-0345AC644627}"
+          id="{E4C8C7BE-E941-49F2-9724-29237AE7EA37}"
+          par="IsEnabled=1&amp;ButtonText&amp;Text&amp;Tooltip&amp;ButtonImageUrl&amp;Type&amp;IsVisible=1&amp;Watermark&amp;ButtonType&amp;WidthPolicy&amp;AccessKey&amp;ConfigurationItem&amp;IsReadonly&amp;MaxLength&amp;IsRequired&amp;TriggerTextChangeOnKeyUp&amp;Id=TeamTextBox&amp;Behaviors&amp;Click=select%3Acampaign%3Ateam%3Abrowse"
+          ph="TeamColumnPanelRight.Content"
+          uid="{8E3CB16A-AD47-45B0-92AE-1B1DE19D8E51}" />
+        <r
+          ds="{43A59CC0-0A72-4977-9617-6A7088405F60}"
+          id="{B60FB581-44D1-4372-86A2-D6E494F020E1}"
+          par="EnableKeyboard=1&amp;Size=%7BDFE6D45B-ED26-4D2C-8C5C-5A1EA07B1DEF%7D&amp;Tooltip&amp;IsVisible=1&amp;IsAnimated=1&amp;HeaderText=Select%20Team&amp;HeaderLess&amp;Backdrop&amp;AccessKey&amp;ConfigurationItem&amp;Id=TeamDialogWindow&amp;Behaviors"
+          ph="TeamColumnPanelRight.Content"
+          uid="{6CB842E4-4996-4CD0-B8BB-416B5EA0AEA3}" />
+        <r
+          id="{F6C9F461-FCAF-47DC-AA01-C8C64C2EFFB8}"
+          par="ContentAlignment&amp;ShowBorder&amp;Tooltip&amp;IsVisible=1&amp;UsePadding&amp;PaddingType&amp;Height&amp;Width&amp;AccessKey&amp;ConfigurationItem&amp;Id=TeamDialogBorder&amp;Behaviors"
+          ph="TeamDialogWindow.Content"
+          uid="{4314907D-CDF1-49D0-991E-88008C231987}" />
+        <r
+          id="{08B6767B-8E8A-41C8-8880-EFEBB4EAE0E3}"
+          par="Tooltip&amp;IsVisible=1&amp;AccessKey&amp;ConfigurationItem&amp;Database&amp;RootItem=%7B9059D6F0-7B2A-43E0-A624-15C2CCEA8D02%7D&amp;PreLoadPath&amp;SelectedItemId&amp;CheckedItemIds&amp;Id=TeamTreeView&amp;Behaviors&amp;ClickFolderMode&amp;IsCheckboxEnabled=0&amp;SelectMode=1&amp;ShowSitecoreIcons&amp;ShowIconImage&amp;Template&amp;Base Templates=%7BA87A00B1-E6DB-45AB-8B54-636FEC3B5523%7D%7C%7BE7F2D7A3-F29C-4844-8478-E2642AA24A0F%7D&amp;ShowHiddenItems"
+          ph="TeamDialogWindow.Content"
+          uid="{0F337409-A947-4C84-B2C0-88F06DC3D6AF}" />
+        <r
+          ds="{C93C19C0-BE48-450E-820D-DCEE114D5E68}"
+          id="{913AB005-2527-4C2D-9827-FB3A8DFB135C}"
+          par="ButtonType=Primary&amp;Dimension&amp;Tooltip&amp;IsVisible=1&amp;Text&amp;ImageUrl&amp;BackgroundPosition&amp;AccessKey&amp;ConfigurationItem&amp;IsEnabled=1&amp;Id=TeamPopupOkBtn&amp;Behaviors&amp;Click=select%3Acampaign%3Ateam%3Aok"
+          ph="TeamDialogWindow.Buttons"
+          uid="{E662E9F6-BE15-4AB7-B1DD-142488081E56}" />
+        <r
+          ds="{04066A55-F53D-435E-9902-2BA00CF68B6A}"
+          id="{913AB005-2527-4C2D-9827-FB3A8DFB135C}"
+          par="ButtonType&amp;Dimension&amp;Tooltip&amp;IsVisible=1&amp;Text&amp;ImageUrl&amp;BackgroundPosition&amp;AccessKey&amp;ConfigurationItem&amp;IsEnabled=1&amp;Id=TeamPopupCancelBtn&amp;Behaviors&amp;Click=select%3Acampaign%3Ateam%3Acancel"
+          ph="TeamDialogWindow.Buttons"
+          uid="{5AB5B328-B779-45F6-A0FD-E595DDA4B16C}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20131121T114220
+  - Version: 2
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220728T160559Z
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20220728T160559Z

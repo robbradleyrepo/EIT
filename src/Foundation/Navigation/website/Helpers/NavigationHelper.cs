@@ -13,7 +13,7 @@
     {
         public static IHeaderConfiguration GetCurrentHeaderConfiguration(IMvcContext mvcContext, IOnboardingConfiguration configuration, BaseLog log)
         {
-            var investor = OnboardingHelper.GetCurrentContactInvestor(mvcContext, log);
+            var investor = OnboardingHelper.GetOnboardingInvestor(mvcContext, log);
 
             if (investor == null || investor.Header == null)
             {

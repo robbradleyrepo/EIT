@@ -1,9 +1,13 @@
 ﻿---
-ID: "c7fc7e9f-d9d6-4aa7-abb1-46e671414547"
+ID: "ae762688-a476-4b06-af4e-223b03c513f7"
 Parent: "50e3e080-2a7a-4479-8635-99fc7f8a9804"
 Template: "e269fbb5-3750-427a-9149-7aa950b49301"
 Path: /sitecore/templates/Feature/EXM/ExmSettings/EXM Settings
 DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
 Languages:
 - Language: en
   Versions:
@@ -11,4 +15,8 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20220120T175053Z
+      Value: 20220901T174153Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

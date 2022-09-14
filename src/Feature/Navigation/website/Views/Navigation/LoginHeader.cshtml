@@ -1,0 +1,47 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc;
+@using LionTrust.Foundation.Analytics.Goals;
+@model LionTrust.Feature.Navigation.Models.NavigationViewModel
+
+@if (Model != null && Model.HomeItem != null)
+{
+    if (!Sitecore.Context.PageMode.IsExperienceEditor && !Model.ShowLionHub && !Model.ShowMyLiontrust)
+    {
+        return;
+    }
+
+    <div class="header-top">
+        <div class="container">
+            <div class="header-top__content">
+                <span class="user-status__text">
+                    @Model.HomeItem.YouAreViewingLabelWithArticle
+                    <span class="user-status__name">@Model.HomeItem.OnboardingRoleName</span>
+                    @Model.HomeItem.FromLabel
+                    <span class="user-status__country">@Model.HomeItem.CurrentCountry</span>
+                    <a href="@Model.HomeItem.ChangeInvestorUrl" class="user-status__change-type">@Html.Glass().Editable(Model.HomeItem, m => m.ChangeLabel)</a>
+                </span>
+
+                @if (Model.ShowMyLiontrust)
+                {
+                    using (Html.Glass().BeginRenderLinkWithGoal(Model.HomeItem, p => p.MyLionTrust, Model.HomeItem.MyLiontrustGoal,
+                        new System.Collections.Specialized.NameValueCollection { { "class", "header-navbar__user-link" } }, isEditable: true))
+                    {
+                        <img src="/dist/images/components/header/user-dark.svg" alt="user profile">
+                        @Model.HomeItem.MyLiontrustName
+                    }
+                }
+                @if (Model.ShowLionHub)
+                {
+                    using (Html.Glass().BeginRenderLink(Model.HomeItem, p => p.LionHub, new { @class = "header-navbar__user-lionhub-link" }, isEditable: true))
+                    {
+                        <img src="/dist/images/components/header/user-dark.svg" alt="user profile">
+                        @Model.HomeItem.LionHubName
+                    }
+                }
+            </div>
+        </div>
+    </div>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @:Issue with navigation: wrong Root/Home item
+}

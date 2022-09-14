@@ -1,37 +1,44 @@
 @using LionTrust.Foundation.ORM.Extensions;
-
 @model LionTrust.Foundation.Video.IVideoModel
+
 @if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
 {
     return;
 }
 @{
     var thumbnailUrl = Model.Thumbnail != null ? Model.Thumbnail.GetSafeBackgroundImageStyle() : string.Empty;
+    var container = Model.MarginsContainer != null ? Model.MarginsContainer.Value : string.Empty;
 }
-<a class="video-box__link"
-   data-type="iframe"
-   data-fancybox
-   data-src="@Model.VideoId"
-   style="@thumbnailUrl">
-    <svg class="video-box__play-btn"
-         xmlns="http://www.w3.org/2000/svg"
-         width="188"
-         height="188">
-        <defs>
-            <style>
-                .c {
-                    stroke: none;
-                }
-            </style>
-        </defs>
-        <g fill="transparent">
-            <g stroke="#fff">
-                <circle class="c" cx="94" cy="94" r="94" />
-                <circle cx="94" cy="94" r="93.5" fill="none" />
+
+<div class="@container">
+    <a class="video-box__link"
+       data-type="iframe"
+       data-fancybox
+       data-src="@Model.VideoId"
+       data-goal-trigger="@Model.PlayGoal"
+       data-percentage-play="@Model.PercentagePlay"
+       data-percentage-goal="@Model.PercentageGoal"
+       style="@thumbnailUrl">
+        <svg class="video-box__play-btn"
+             xmlns="http://www.w3.org/2000/svg"
+             width="188"
+             height="188">
+            <defs>
+                <style>
+                    .c {
+                        stroke: none;
+                    }
+                </style>
+            </defs>
+            <g fill="transparent">
+                <g stroke="#fff">
+                    <circle class="c" cx="94" cy="94" r="94" />
+                    <circle cx="94" cy="94" r="93.5" fill="none" />
+                </g>
+                <path class="triangle" d="M79.5 119.63V72.37L120.008 96 79.5 119.63z" />
+                <path d="M119.015 96L80 73.241v45.518L119.015 96M121 96l-42 24.5v-49L121 96z"
+                      fill="#fff" />
             </g>
-            <path class="triangle" d="M79.5 119.63V72.37L120.008 96 79.5 119.63z" />
-            <path d="M119.015 96L80 73.241v45.518L119.015 96M121 96l-42 24.5v-49L121 96z"
-                  fill="#fff" />
-        </g>
-    </svg>
-</a>
+        </svg>
+    </a>
+</div>

@@ -27,29 +27,14 @@
     {
         public static string ProfileRoleName(IOnboardingConfiguration onboardingConfiguration, BaseLog log)
         {
-            var tracker = Tracker.Current;
-            if (!IsValidConfiguration(onboardingConfiguration, log))
+            var profile = ProfileCard(onboardingConfiguration, log);
+
+            if(profile == null)
             {
                 return string.Empty;
             }
 
-            if (tracker != null && tracker.Interaction != null 
-                && tracker.Interaction.Profiles != null)
-            {
-                if (tracker.Interaction.Profiles.ContainsProfile(onboardingConfiguration.Profile.Name))
-                {
-                    var profile = tracker.Interaction.Profiles[onboardingConfiguration.Profile.Name];                    
-                    if (profile.PatternId != null && profile.PatternId.Value != null)
-                    {
-                        if (profile.PatternId.HasValue)
-                        {
-                            return profile.PatternLabel;
-                        }
-                    }                    
-                }
-            }
-
-            return string.Empty;
+            return profile.PatternLabel;
         }
 
         public static string ViewingLabelWithArticle(string viewingLabel, string profileName)
@@ -108,6 +93,29 @@
                             }
                         }
                     }
+                }
+            }
+
+            return investor;
+        }
+
+        public static IInvestor GetOnboardingInvestor(IMvcContext context, BaseLog log)
+        {
+            IInvestor investor = null;
+            var investorTypeId = OnboardingHelper.GetInvestorTypeId();
+
+            if (investorTypeId.HasValue)
+            {
+                investor = context.SitecoreService.GetItem<IInvestor>(investorTypeId.Value);
+            }
+
+            if (investor == null)
+            {
+                investor = GetCurrentContactInvestor(context, log);
+
+                if (investor != null)
+                {
+                    UpdateInvestorTypeSession(investor.Id);
                 }
             }
 
@@ -248,6 +256,16 @@
         public static void UpdateContactSession(Contact contact)
         {
             WebUtil.SetSessionValue(SessionKeys.Contact, contact);
+        }
+
+        public static Guid? GetInvestorTypeId()
+        {
+            return (Guid?)WebUtil.GetSessionValue(SessionKeys.InvestorType);
+        }
+
+        public static void UpdateInvestorTypeSession(Guid investorType)
+        {
+            WebUtil.SetSessionValue(SessionKeys.InvestorType, investorType);
         }
 
         public static bool IdentifyAs(string source, string identifier)
@@ -446,7 +464,7 @@
 
         public static bool ShowMyLiontrust(IMvcContext context, BaseLog log, IEnumerable<IInvestor> allowedInvestors)
         {
-            var currentInvestor = GetCurrentContactInvestor(context, log);
+            var currentInvestor = GetOnboardingInvestor(context, log);
             if (currentInvestor == null || !allowedInvestors.Any(i => i.Id.Equals(currentInvestor.Id)))
             {
                 return false;
@@ -457,7 +475,7 @@
 
         public static bool ShowLionHub(IMvcContext context, BaseLog log, IEnumerable<IInvestor> allowedInvestors, IEnumerable<IGlassBase> allowedPages)
         {
-            var currentInvestor = GetCurrentContactInvestor(context, log);
+            var currentInvestor = GetOnboardingInvestor(context, log);
             if (currentInvestor == null || !allowedInvestors.Any(i => i.Id.Equals(currentInvestor.Id)))
             {
                 return false;
@@ -470,6 +488,33 @@
             }
 
             return true;
+        }
+
+        public static Profile ProfileCard(IOnboardingConfiguration onboardingConfiguration, BaseLog log)
+        {
+            var tracker = Tracker.Current;
+            if (!IsValidConfiguration(onboardingConfiguration, log))
+            {
+                return null;
+            }
+
+            if (tracker != null && tracker.Interaction != null
+                && tracker.Interaction.Profiles != null)
+            {
+                if (tracker.Interaction.Profiles.ContainsProfile(onboardingConfiguration.Profile.Name))
+                {
+                    var profile = tracker.Interaction.Profiles[onboardingConfiguration.Profile.Name];
+                    if (profile.PatternId != null && profile.PatternId.Value != null)
+                    {
+                        if (profile.PatternId.HasValue)
+                        {
+                            return profile;
+                        }
+                    }
+                }
+            }
+
+            return null;
         }
     }
 }

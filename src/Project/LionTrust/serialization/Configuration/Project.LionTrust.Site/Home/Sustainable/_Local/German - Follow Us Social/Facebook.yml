@@ -1,0 +1,26 @@
+﻿---
+ID: "64dbfd91-3190-4265-a3ff-3887095f1f71"
+Parent: "a97d6ce8-be6d-424d-84d4-c368dced8871"
+Template: "7682e3eb-272c-4aad-82c3-a10e68dfcba0"
+Path: "/sitecore/content/LionTrustNew/Home/Sustainable/_Local/German - Follow Us Social/Facebook"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210406T121428Z
+    - ID: "321db99f-5d14-4703-ac2f-6feea5e48000"
+      Hint: SocialIcon_Icon
+      Value: |
+        <image mediaid="{0CB29CBF-C218-4830-905B-F2E1CC078DA0}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "e990e03d-0332-45cc-a5e7-613996deda74"
+      Hint: SocialIcon_Link
+      Value: |
+        <link text="LiontrustHeroes" linktype="external" url="https://www.facebook.com/liontrustheroes/" anchor="" target="" />

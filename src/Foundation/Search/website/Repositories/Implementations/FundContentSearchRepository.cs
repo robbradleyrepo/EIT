@@ -34,7 +34,11 @@
                     return null;
                 }
 
-                return new ContentSearchResults<FundSearchResultItem> { SearchResults = results, TotalResults = results.TotalSearchResults };
+                return new ContentSearchResults<FundSearchResultItem> 
+                { 
+                    SearchResults = results, 
+                    TotalResults = results.TotalSearchResults
+                };
             }
         }
 
@@ -54,7 +58,36 @@
                     return null;
                 }
 
-                return new ContentSearchResults<FundSearchResultItem> { SearchResults = results, TotalResults = results.TotalSearchResults };
+                return new ContentSearchResults<FundSearchResultItem> 
+                { 
+                    SearchResults = results, 
+                    TotalResults = results.TotalSearchResults
+                };
+            }
+        }
+
+        public FundTeamFacetsSearchResults GetFundTeamFacets(Expression<Func<FundSearchResultItem, bool>> predicate, string database = "web")
+        {
+            using (IProviderSearchContext context = ContentSearchManager
+                                                            .GetIndex($"liontrust_fund_{database}_index")
+                                                            .CreateSearchContext(SearchSecurityOptions.DisableSecurityCheck))
+            {
+                var query = context.GetQueryable<FundSearchResultItem>()
+                                 .Where(predicate).FacetOn(x => x.FundTeam, 1);
+              
+                var results = query.GetResults();
+
+                if (results == null)
+                {
+                    return null;
+                }
+
+                var fundTeamsFacetCategory = results.Facets?.Categories?.FirstOrDefault(f => f.Name == "legacyfund_fundteam");
+
+                return new FundTeamFacetsSearchResults
+                {
+                    FacetValues = fundTeamsFacetCategory?.Values
+                };
             }
         }
     }

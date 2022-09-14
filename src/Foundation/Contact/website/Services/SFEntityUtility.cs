@@ -1,6 +1,7 @@
 ﻿namespace LionTrust.Foundation.Contact.Services
 {
     using FuseIT.S4S.WebToSalesforce;
+    using FuseIT.Sitecore.Personalization.Facets;
     using FuseIT.Sitecore.SalesforceConnector;
     using FuseIT.Sitecore.SalesforceConnector.DataSource;
     using FuseIT.Sitecore.SalesforceConnector.Entities;
@@ -8,6 +9,7 @@
     using FuseIT.Sitecore.SalesforceConnector.SalesforceServiceWrappers;
     using FuseIT.Sitecore.SalesforceConnector.Services;
     using FuseIT.Sitecore.SalesforceConnector.Soql;
+    using LionTrust.Foundation.Contact.Enums;
     using LionTrust.Foundation.Contact.Models;
     using LionTrust.Foundation.Onboarding.Helpers;
     using Sitecore.Diagnostics;
@@ -15,7 +17,7 @@
     using System.Collections.Generic;
     using System.Linq;
 
-    public class SFEntityUtility
+    public class SFEntityUtility : ISFEntityUtility
     {
         private SalesforceSession _salesforceSession = null;
         private SalesforceSession SalesforceSession
@@ -407,7 +409,7 @@
         /// </summary>
         /// <param name=""></param>
         /// <returns></returns>
-        public RegisterdUserReturnViewModel SaveNonProfUserAsSFLead(NonProfessionalUser nonProfUser, string PreferencesUrl, string fundDashboardUrl)
+        public RegisterdUserReturnViewModel SaveNonProfUserAsSFLead(NonProfessionalUser nonProfUser, string preferencesUrl, string fundDashboardUrl)
         {
             try
             {
@@ -431,6 +433,7 @@
                 newSFLead.InternalFields[Constants.SF_EmailField] = nonProfUser.Email;
                 newSFLead.InternalFields[Constants.SFLead_CompanyField] = nonProfUser.Company;
                 newSFLead.InternalFields.SetField<bool>(Constants.SF_UKResident, nonProfUser.IsUKResident);
+                newSFLead.InternalFields.SetField<bool>(Constants.SF_CreatedViaPreferenceCentreField, true);
 
                 var leadrecordtypes = GetSFEntityRecordTypes(Constants.SfLeadEntityName);
                 if (leadrecordtypes != null)
@@ -482,11 +485,10 @@
                         }
 
                         //Generate the link to edit email pref page
-                        var queryStringParams = string.Format("{0}={1}_{2}", Constants.QueryStringNames.EmailPreferencefParams.RefQueryStringKey, randomGuid, sfEntityId);
-                        var editEmailPrefPagelink = string.Format("{0}?{1}", PreferencesUrl, queryStringParams);
-                        var fundDashboardlink = string.Format("{0}?{1}", fundDashboardUrl, queryStringParams);
+                        var editEmailPrefPagelink = GetEditEmailPrefPageLink(preferencesUrl, randomGuid, sfEntityId);
+                        var fundDashboardlink = GetFundDashboardLink(fundDashboardUrl, randomGuid, sfEntityId);
 
-                        returnObj.FullName = string.Format("{0} {1}", firstName, lastName);
+                        returnObj.FullName = GetFullName(newlyCreatedLead.InternalFields);
                         returnObj.EmailAddress = emailAddress;
                         returnObj.EditEmailPrefLink = editEmailPrefPagelink;
                         returnObj.FundDashboardLink = fundDashboardlink;
@@ -534,6 +536,7 @@
                 newSFContact.InternalFields.SetField<bool>(Constants.SF_UKResident, profUser.IsUKResident);
                 newSFContact.InternalFields[Constants.SFContact_OrgNameField] = profUser.Organisation;
                 newSFContact.InternalFields.SetField<bool>(Constants.SF_EmailOptOutField, profUser.Unsubscribed);
+                newSFContact.InternalFields.SetField<bool>(Constants.SF_CreatedViaPreferenceCentreField, true);
 
                 var contactRecordtypes = GetSFEntityRecordTypes(Constants.SFContactEntityName);
                 if (contactRecordtypes != null)
@@ -583,12 +586,11 @@
                         }
 
                         //Generate the link to edit email pref page
-                        var queryStringParams = string.Format("{0}={1}_{2}", Constants.QueryStringNames.EmailPreferencefParams.RefQueryStringKey, randomGuid, sfEntityId);
-                        var editEmailPrefPagelink = string.Format("{0}?{1}", preferencesUrl, queryStringParams);
-                        var fundDashboardPagelink = string.Format("{0}?{1}", fundDashboardUrl, queryStringParams);
+                        var editEmailPrefPagelink = GetEditEmailPrefPageLink(preferencesUrl, randomGuid, sfEntityId);
+                        var fundDashboardPagelink = GetFundDashboardLink(fundDashboardUrl, randomGuid, sfEntityId);
 
 
-                        returnObj.FullName = string.Format("{0} {1}", firstName, lastName);
+                        returnObj.FullName = GetFullName(newlyCreatedContact.InternalFields);
                         returnObj.EmailAddress = emailAddress;
                         returnObj.EditEmailPrefLink = editEmailPrefPagelink;
                         returnObj.FundDashboardLink = fundDashboardPagelink;
@@ -601,6 +603,32 @@
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Save hard bounced in Salesforce
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
+        public bool SaveHardBounced(EntityBase entity)
+        {
+            try
+            {
+                var entityType = entity is Contact ? Constants.SFContactEntityName : Constants.SfLeadEntityName;
+                GenericSalesforceService genericService = new GenericSalesforceService(this.SalesforceSession, entityType);
+                var sfEntity = genericService.GetByEntityId(entity.Id);
+
+                sfEntity.InternalFields.SetField<bool>(Constants.SF_Hard_BouncedField, true);
+
+                //Update SF Contact/Lead               
+                var result = genericService.UpdateEntity(sfEntity);
+                return result.success;
+            }
+            catch (Exception ex)
+            {
+                Log.Error("Exception occured when saving hard bounced to Salesforce", ex, this);
+                return false;
             }
         }
 
@@ -624,7 +652,7 @@
                     var sfContact = contactService.GetByEmail(email);
                     if (sfContact != null)
                     {
-                        fullName = string.Format("{0} {1}", sfContact.InternalFields[Constants.SF_FirstNameField], sfContact.InternalFields[Constants.SF_LastNameField]);
+                        fullName = GetFullName(sfContact.InternalFields);
                         entityId = sfContact.Id;
                         randomGuid = sfContact.InternalFields[Constants.SF_GUIDForEmailPref];
                     }
@@ -635,7 +663,7 @@
                     var sfLead = leadService.GetByEmail(email);
                     if (sfLead != null)
                     {
-                        fullName = string.Format("{0} {1}", sfLead.InternalFields[Constants.SF_FirstNameField], sfLead.InternalFields[Constants.SF_LastNameField]);
+                        fullName = GetFullName(sfLead.InternalFields);
                         entityId = sfLead.Id;
                         randomGuid = sfLead.InternalFields[Constants.SF_GUIDForEmailPref];
                     }
@@ -644,9 +672,8 @@
                 if (!string.IsNullOrEmpty(entityId) && !string.IsNullOrEmpty(randomGuid))
                 {
                     //Generate the link to edit email pref page
-                    var queryStringParams = string.Format("{0}={1}_{2}", Constants.QueryStringNames.EmailPreferencefParams.RefQueryStringKey, randomGuid, entityId);
-                    var editEmailPrefPagelink = string.Format("{0}?{1}", preferencesUrl, queryStringParams);
-                    var fundDashboardPagelink = string.Format("{0}?{1}", fundDashboardUrl, queryStringParams);
+                    var editEmailPrefPagelink = GetEditEmailPrefPageLink(preferencesUrl, randomGuid, entityId);
+                    var fundDashboardPagelink = GetFundDashboardLink(fundDashboardUrl, randomGuid, entityId);
 
                     return new ResendEmailPrefUserDetails { FullName = fullName, EditEmailPrefLink = editEmailPrefPagelink, FundDashboardLink = fundDashboardPagelink };
                 }
@@ -738,215 +765,15 @@
         }
 
         /// <summary>
-        /// Get email preferences id by email
+        /// Is unsubscribed
         /// </summary>
-        /// <param name="email"></param>
+        /// <param name="entityId"></param>
         /// <returns></returns>
-        public string GetEmailPreferencesIdByEmail(string email)
+        public bool IsUnsubscribed(string entityId)
         {
-            if (string.IsNullOrWhiteSpace(email))
+            if (string.IsNullOrWhiteSpace(entityId))
             {
-                Log.Info("Email address is null or empty. No email preferences id returned from the email address.", this);
-                return null;
-            }
-
-            try
-            {
-                var contactService = new ContactService(this.SalesforceSession);
-                var sfContact = contactService.GetByEmail(email);
-                if (sfContact == null)
-                {
-                    Log.Info(string.Format("Salesforce Contact does not exist with the email - {0}", email), this);
-                    return null;
-                }
-
-                var sfEntityId = sfContact.Id.ToString();
-                var randomGuid = sfContact.InternalFields[Constants.SF_GUIDForEmailPref];
-
-                var emailPreferencesId = $"{randomGuid}_{sfEntityId}";
-                return emailPreferencesId;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// Get owner title by email
-        /// </summary>
-        /// <param name="email"></param>
-        /// <returns></returns>
-        public string GetOwnerTitleByEmail(string email)
-        {
-            if (string.IsNullOrWhiteSpace(email))
-            {
-                Log.Info("Email address is null or empty. No owner title returned from the email address.", this);
-                return null;
-            }
-
-            try
-            {
-                var contactService = new ContactService(this.SalesforceSession);
-                var sfContact = contactService.GetByEmail(email);
-                if (sfContact == null)
-                {
-                    Log.Info(string.Format("Salesforce Contact does not exist with the email - {0}", email), this);
-                    return null;
-                }
-
-                var ownerTitle = sfContact.InternalFields[Constants.SF_Owner_TitleField];
-
-                return ownerTitle;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// Get owner name by email
-        /// </summary>
-        /// <param name="email"></param>
-        /// <returns></returns>
-        public string GetOwnerNameByEmail(string email)
-        {
-            if (string.IsNullOrWhiteSpace(email))
-            {
-                Log.Info("Email address is null or empty. No owner name returned from the email address.", this);
-                return null;
-            }
-
-            try
-            {
-                var contactService = new ContactService(this.SalesforceSession);
-                var sfContact = contactService.GetByEmail(email);
-                if (sfContact == null)
-                {
-                    Log.Info(string.Format("Salesforce Contact does not exist with the email - {0}", email), this);
-                    return null;
-                }
-
-                var ownerName = sfContact.InternalFields[Constants.SF_Owner_NameField];
-
-                return ownerName;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// Get owner email by email
-        /// </summary>
-        /// <param name="email"></param>
-        /// <returns></returns>
-        public string GetOwnerEmailByEmail(string email)
-        {
-            if (string.IsNullOrWhiteSpace(email))
-            {
-                Log.Info("Email address is null or empty. No owner title returned from the email address.", this);
-                return null;
-            }
-
-            try
-            {
-                var contactService = new ContactService(this.SalesforceSession);
-                var sfContact = contactService.GetByEmail(email);
-                if (sfContact == null)
-                {
-                    Log.Info(string.Format("Salesforce Contact does not exist with the email - {0}", email), this);
-                    return null;
-                }
-
-                var ownerEmail = sfContact.InternalFields[Constants.SF_Owner_EmailField];
-
-                return ownerEmail;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// Get owner title by email
-        /// </summary>
-        /// <param name="email"></param>
-        /// <returns></returns>
-        public string GetOwnerPhoneByEmail(string email)
-        {
-            if (string.IsNullOrWhiteSpace(email))
-            {
-                Log.Info("Email address is null or empty. No owner title returned from the email address.", this);
-                return null;
-            }
-
-            try
-            {
-                var contactService = new ContactService(this.SalesforceSession);
-                var sfContact = contactService.GetByEmail(email);
-                if (sfContact == null)
-                {
-                    Log.Info(string.Format("Salesforce Contact does not exist with the email - {0}", email), this);
-                    return null;
-                }
-
-                var ownerPhone = sfContact.InternalFields[Constants.SF_Owner_PhoneField];
-
-                return ownerPhone;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// Get owner region by email
-        /// </summary>
-        /// <param name="email"></param>
-        /// <returns></returns>
-        public string GetOwnerRegionByEmail(string email)
-        {
-            if (string.IsNullOrWhiteSpace(email))
-            {
-                Log.Info("Email address is null or empty. No owner region returned from the email address.", this);
-                return null;
-            }
-
-            try
-            {
-                var contactService = new ContactService(this.SalesforceSession);
-                var sfContact = contactService.GetByEmail(email);
-                if (sfContact == null)
-                {
-                    Log.Info(string.Format("Salesforce Contact does not exist with the email - {0}", email), this);
-                    return null;
-                }
-
-                var ownerRegion = sfContact.InternalFields[Constants.SF_Owner_RegionField];
-
-                return ownerRegion;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// Get unsubscribed by email
-        /// </summary>
-        /// <param name="email"></param>
-        /// <returns></returns>
-        public bool GetUnsubscribedByEmail(string email)
-        {
-            if (string.IsNullOrWhiteSpace(email))
-            {
-                Log.Info("Email address is null or empty. No email preferences id returned from the email address.", this);
+                Log.Info("Entity Id is null or empty. No email preferences id returned from the entity id.", this);
                 return true;
             }
 
@@ -954,37 +781,363 @@
             {
                 var unsubscribed = true;
 
-                var contactService = new ContactService(this.SalesforceSession);
-                var sfContact = contactService.GetByEmail(email);                
-                if (sfContact != null)
-                {
-                    var sfEntityId = sfContact.Id.ToString();
-                    unsubscribed = sfContact.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
+                var sfEntityType = IsContact(entityId) ? Constants.SFContactEntityName : Constants.SfLeadEntityName;
+                GenericSalesforceService genericService = new GenericSalesforceService(this.SalesforceSession, sfEntityType);
+                var sfEntity = genericService.GetByEntityId(entityId);
 
+                if (sfEntity != null)
+                {
+                    unsubscribed = sfEntity.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
                     return unsubscribed;
                 }
+                
+                Log.Info(string.Format("Salesforce Contact or Lead does not exist with the entity id - {0}", entityId), this);
 
-                var leadService = new LeadService(this.SalesforceSession);
-                var sfLead = leadService.GetByEmail(email);
-                if (sfLead != null)
-                {
-                    var sfEntityId = sfLead.Id.ToString();
-                    unsubscribed = sfLead.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
-
-                    return unsubscribed;
-                }
-
-                if (sfContact == null && sfLead == null)
-                {
-                    Log.Info(string.Format("Salesforce Contact or Lead does not exist with the email - {0}", email), this);
-                }                
-              
-                return true;
+                return false;
             }
             catch (Exception ex)
             {
                 throw ex;
             }
+        }
+
+        /// <summary>
+        /// Is unsubscribed or hard bounced
+        /// </summary>
+        /// <param name="s4sInfo"></param>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        public bool IsUnsubscribedOrHardBounced(S4SInfo s4sInfo, string email)
+        {
+            if (s4sInfo == null)
+            {
+                Log.Info(string.Format("S4SInfo facet is null for the email address - {0}", email), this);
+                return false;
+            }
+
+            try
+            {
+                var unsubscribed = false;
+
+                s4sInfo.Fields.TryGetValue(Constants.SF_IdField, out var sfEntityId);
+                if (IsContact(sfEntityId))
+                {
+                    var contactService = new ContactService(this.SalesforceSession);
+
+                    var sfContact = contactService.GetByEntityId(sfEntityId);
+                    if (sfContact != null)
+                    {
+                        unsubscribed = sfContact.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
+                        var hardBounced = sfContact.InternalFields.GetField<bool>(Constants.SF_Hard_BouncedField);
+
+                        return unsubscribed || hardBounced;
+                    }
+                }
+                else if (IsLead(sfEntityId))
+                {
+                    var leadService = new LeadService(this.SalesforceSession);
+                    var sfLead = leadService.GetByEntityId(sfEntityId);
+                    if (sfLead != null)
+                    {
+                        unsubscribed = sfLead.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
+                        var hardBounced = sfLead.InternalFields.GetField<bool>(Constants.SF_Hard_BouncedField);
+
+                        return unsubscribed || hardBounced;
+                    }
+                }
+
+
+                Log.Info(string.Format("Salesforce Contact or Lead does not exist with the contact email - {0}", email), this);
+
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Get salesforce entity by entity id
+        /// </summary>
+        /// <param name="entityId"></param>
+        /// <returns></returns>
+        public EntityBase GetEntityByEntityId(string entityId)
+        {
+            if (string.IsNullOrWhiteSpace(entityId))
+            {
+                Log.Info("Entity Id is null or empty.", this);
+                return null;
+            }
+
+            try
+            {
+                var entityType = IsContact(entityId) ? Constants.SFContactEntityName
+                                : IsLead(entityId) ? Constants.SfLeadEntityName
+                                : IsUser(entityId) ? Constants.SfUserEntityName : null;
+                
+                if (entityId != null)
+                {
+                    var genericService = new GenericSalesforceService(this.SalesforceSession, entityType);
+                    var sfEntity = genericService.GetByEntityId(entityId);
+                    
+                    if (sfEntity != null)
+                    {
+                        return sfEntity;
+                    }
+                }
+
+                Log.Info(string.Format("Salesforce Entity does not exist with the entity id - {0}", entityId), this);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Get salesforce entity by email
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        public EntityBase GetEntityByEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                Log.Info("Email address is null or empty.", this);
+                return null;
+            }
+
+            try
+            {
+                var contactService = new ContactService(this.SalesforceSession);
+                var sfContact = contactService.GetByEmail(email);
+
+                if (sfContact != null)
+                {
+                    return sfContact;
+                }
+
+                var leadService = new LeadService(this.SalesforceSession);
+                var sfLead = leadService.GetByEmail(email);
+
+                if (sfLead != null)
+                {
+                    return sfLead;
+                }
+
+                Log.Info(string.Format("Salesforce Entity does not exist with the email - {0}", email), this);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Get entity with updated score
+        /// </summary>
+        /// <param name="entityId"></param>
+        /// <param name="entityType"></param>
+        /// <param name="scorePoints"></param>
+        /// <returns></returns>
+        public GenericSalesforceEntity GetEntityWithUpdatedScore(string entityId, string entityType, int scorePoints)
+        {
+            try
+            {
+                GenericSalesforceService genericService = new GenericSalesforceService(this.SalesforceSession, entityType);
+                var sfEntity = genericService.GetByEntityId(entityId);
+
+                if (sfEntity == null)
+                {
+                    Log.Info(string.Format("No Salesforce entity found for Id: {0}.", entityId), this);
+                    return null;
+                }
+
+                if (double.TryParse(sfEntity.InternalFields[Constants.SF_ScoreField], out var score))
+                {
+                    sfEntity.InternalFields[Constants.SF_ScoreField] = (score + scorePoints).ToString();
+                }
+                else
+                {
+                    sfEntity.InternalFields[Constants.SF_ScoreField] = scorePoints.ToString();
+                }
+
+                return sfEntity;
+            }
+            catch (Exception ex)
+            {
+                Log.Error("Exception occured when retrieving entity object from Salesforce Contact/Lead.", ex, this);
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Generates engagement history object
+        /// </summary>
+        /// <param name="sfEntityId"></param>
+        /// <param name="sfCampaignId"></param>
+        /// <param name="entityType"></param>
+        /// <param name="interactionType"></param>
+        /// <param name="contactList"></param>
+        /// <param name="email"></param>
+        /// <param name="messageId"></param>
+        /// <param name="messageLink"></param>
+        /// <param name="link"></param>
+        /// <param name="date"></param>
+        /// <returns></returns>
+        public GenericSalesforceEntity GenerateEngagementHistory(
+            string sfEntityId, 
+            string sfCampaignId, 
+            EntityType entityType, 
+            InteractionType interactionType, 
+            string contactList, 
+            string email,
+            Guid messageId,
+            string messageLink, 
+            string link, 
+            DateTime date,
+            bool firstTime = false)
+        {
+            var entity = new GenericSalesforceEntity(Constants.SfEngagementHistory);
+            entity.InternalFields.SetField(Constants.EngagementHistory.SF_CampaignField, sfCampaignId);
+            entity.InternalFields.SetField(Constants.EngagementHistory.SF_ContactListField, contactList);
+            entity.InternalFields.SetField(Constants.EngagementHistory.SF_EmailField, email);
+            entity.InternalFields.SetField(Constants.EngagementHistory.SF_MessageLinkField, messageLink);
+            entity.InternalFields.SetField(Constants.EngagementHistory.SF_LinkField, link);
+            entity.InternalFields.SetField(Constants.EngagementHistory.SF_SitecoreCampaignIdField, messageId.ToString("D"));
+            entity.InternalFields.SetField(Constants.EngagementHistory.SF_DateTimeField, date.ToString("yyyy-MM-ddTHH:mm:ss.000Z"));
+
+            if (entityType == EntityType.Contact)
+            {
+                entity.InternalFields.SetField(Constants.EngagementHistory.SF_ContactField, sfEntityId);
+            }
+            else if (entityType == EntityType.Lead)
+            {
+                entity.InternalFields.SetField(Constants.EngagementHistory.SF_LeadField, sfEntityId);
+            }
+
+            switch (interactionType)
+            {
+                case InteractionType.LinkClicked:
+                    entity.InternalFields.SetField(Constants.EngagementHistory.SF_TypeField, Constants.EngagementHistory.EventTypes.TrackedLinkClicked);
+                    break;
+                case InteractionType.EmailOpen:
+                    entity.InternalFields.SetField(Constants.EngagementHistory.SF_TypeField, Constants.EngagementHistory.EventTypes.EmailOpen);
+                    entity.InternalFields.SetField(Constants.EngagementHistory.SF_FirstOpenField, firstTime);
+                    break;
+                case InteractionType.EmailSent:
+                    entity.InternalFields.SetField(Constants.EngagementHistory.SF_TypeField, Constants.EngagementHistory.EventTypes.EmailSent);
+                    break;
+            }
+
+            return entity;
+        }
+
+        /// <summary>
+        /// Get identifier by entity
+        /// </summary>
+        /// <param name="sfEntity"></param>
+        /// <returns></returns>
+        public string GetIdentifier(EntityBase sfEntity)
+        {
+            try
+            {
+                if (sfEntity == null)
+                {
+                    Log.Info(string.Format("Salesforce Entity is null"), this);
+                    return null;
+                }
+
+                var identifier = $"{SalesforceSession.SalesforceOrganizationId}_{sfEntity.Id}".ToUpper();
+                return identifier;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void UpdateOrInsertEntities(List<GenericSalesforceEntity> entities, string entityType, string externalFieldId)
+        {
+            //Retrieve Salesforce Process objects
+            GenericSalesforceService genericSFService = new GenericSalesforceService(this.SalesforceSession, entityType);
+
+            if (entities.Count > 0)
+            {
+                List<List<GenericSalesforceEntity>> bulkEntities = SplitSalesforceGenericEntityList(entities, 200);
+                foreach (List<GenericSalesforceEntity> list in bulkEntities)
+                {
+                    var result = genericSFService.UpsertEntities(list, externalFieldId);
+
+                    if (result.Any(x => !x.success))
+                    {
+                        var errors = result.Where(x => !x.success).SelectMany(x => x.errors).Select(x => x.message).Distinct();
+                        foreach(var error in errors)
+                        {
+                            Log.Debug(string.Format("Error when trying to insert/update object in Salesforce: {0}.", error), this);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                Log.Debug("No entities found to be insert/update.", this);
+            }
+        }
+
+        public string GetEditEmailPrefPageLink(string preferencesUrl, string randomGuid, string entityId)
+        {
+            var queryStringParams = string.Format("{0}={1}_{2}", Constants.QueryStringNames.EmailPreferencefParams.RefQueryStringKey, randomGuid, entityId);
+            var editEmailPrefPagelink = string.Format("{0}?{1}", preferencesUrl, queryStringParams);
+
+            return editEmailPrefPagelink;
+        }
+
+        public string GetFundDashboardLink(string fundDashboardUrl, string randomGuid, string entityId)
+        {
+            var queryStringParams = string.Format("{0}={1}_{2}", Constants.QueryStringNames.EmailPreferencefParams.RefQueryStringKey, randomGuid, entityId);
+            var fundDashboardlink = string.Format("{0}?{1}", fundDashboardUrl, queryStringParams);
+
+            return fundDashboardlink;
+        }
+
+        public string GetFullName(InternalFields fields)
+        {
+            return string.Format("{0} {1}", fields[Constants.SF_FirstNameField], fields[Constants.SF_LastNameField]);
+        }
+
+        /// <summary>
+        /// Get contacts and leads that have not received the welcome email
+        /// </summary>
+        /// <returns></returns>
+        public List<GenericSalesforceEntity> GetEntitiesToSendWecomeEmail(DateTime fromDate)
+        {
+            var returnList = new List<GenericSalesforceEntity>();
+
+           var sfContactList = GetEntitiesToSendWecomeEmail(fromDate, Constants.SFContactEntityName);
+            var sfLeadList = GetEntitiesToSendWecomeEmail(fromDate, Constants.SfLeadEntityName);
+
+            returnList.AddRange(sfContactList);
+            returnList.AddRange(sfLeadList);
+
+            return returnList;
+        }
+
+        private List<GenericSalesforceEntity> GetEntitiesToSendWecomeEmail(DateTime fromDate, string entityName)
+        {
+            var genericSFService = new GenericSalesforceService(this.SalesforceSession, entityName);
+            var soqlQuery = string.Format("SELECT {0}, {1}, {2}, {3}, {4}, {5}, {6} FROM {7} WHERE IsDeleted = false AND {8} = {9} AND {10} >= {11}",
+                                          Constants.SF_IdField, Constants.SF_FirstNameField, Constants.SF_LastNameField, Constants.SF_EmailField,
+                                          Constants.SF_UKResident, Constants.SF_GUIDForEmailPref, Constants.SF_CreatedDateField, entityName,
+                                          Constants.SF_CreatedViaPreferenceCentreField, false, Constants.SF_CreatedDateField, fromDate.ToString("yyyy-MM-ddTHH:mm:ssZ"));
+
+            Log.Debug(string.Format("Get{0}sToSendWelcomeEmail() soqlQuery={1}.", entityName, soqlQuery), this);
+
+            var sfEntityList = genericSFService.GetBySoql(soqlQuery);
+            return sfEntityList;
         }
 
         /// <summary>
@@ -1256,6 +1409,21 @@
         private bool ValidateEmailPreferenceQueryString(string queryString, Context context)
         {
             return string.IsNullOrEmpty(queryString) || queryString != context.SFRandomGUID;
+        }
+
+        public bool IsContact(string entityId)
+        {
+            return entityId.StartsWith(Constants.PrefixSalesforceContact, StringComparison.InvariantCultureIgnoreCase);
+        }
+
+        public bool IsLead(string entityId)
+        {
+            return entityId.StartsWith(Constants.PrefixSalesforceLead, StringComparison.InvariantCultureIgnoreCase);
+        }
+
+        private bool IsUser(string entityId)
+        {
+            return entityId.StartsWith(Constants.PrefixSalesforceUser, StringComparison.InvariantCultureIgnoreCase);
         }
     }
 }

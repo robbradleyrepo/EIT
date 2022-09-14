@@ -168,13 +168,16 @@
     <Compile Include="GeographicalBreakdown\GeographicalBreakdownController.cs" />
     <Compile Include="GeographicalBreakdown\GeographicalBreakdownManager.cs" />
     <Compile Include="GeographicalBreakdown\IGeographicalBreakdownManager.cs" />
+    <Compile Include="Indexing\DocumentPriorityField.cs" />
     <Compile Include="Indexing\DocumentSearchResultTypeField.cs" />
+    <Compile Include="Indexing\FundDetailPriorityField.cs" />
     <Compile Include="Indexing\FundDetailSearchResultTypeField.cs" />
     <Compile Include="Indexing\DocumentUrlField.cs" />
     <Compile Include="Indexing\FundDetailPageExcludedCountiresField.cs" />
     <Compile Include="Indexing\FundExcludedCountiresField.cs" />
     <Compile Include="Indexing\FundFactsheetUrlField.cs" />
     <Compile Include="Indexing\FundManagerFundTeamField.cs" />
+    <Compile Include="Indexing\FundManagerPriorityField.cs" />
     <Compile Include="Indexing\FundManagerSearchResultTypeField.cs" />
     <Compile Include="Indexing\FundTeamField.cs" />
     <Compile Include="Indexing\FundManagerFundTeamUrlField.cs" />

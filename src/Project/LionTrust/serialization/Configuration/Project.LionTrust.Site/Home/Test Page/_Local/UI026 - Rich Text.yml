@@ -1,0 +1,55 @@
+﻿---
+ID: "31b040b5-f55e-4eb0-80ee-a1750f827ec5"
+Parent: "70526bb0-aa28-467a-a732-979eb04cbf1d"
+Template: "fbfecf7a-bb63-415c-98a5-cf095ff07c99"
+Path: "/sitecore/content/LionTrustNew/Home/Test Page/_Local/UI026 - Rich Text"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{090B0A20-ADB9-4390-BE16-7066A56F4E16}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220816T144806Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Sarah
+    - ID: "7a6eea35-2025-43cf-a371-43d99a82e804"
+      Hint: RichText_Text
+      Value: |
+        <ul class="services-item-list">
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Duis aute irure dolor</li>
+            <li>Sed ut perspiciatis unde omnis iste natus</li>
+            <li>Quis autem vel eum iure</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul class="services-item-list_checked">
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Duis aute irure dolor</li>
+            <li>Sed ut perspiciatis unde omnis iste natus</li>
+            <li>Quis autem vel eum iure&nbsp; &nbsp; &nbsp;</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul class="services-item-list_circle">
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Duis aute irure dolor</li>
+            <li>Sed ut perspiciatis unde omnis iste natus</li>
+            <li>Quis autem vel eum iure</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul class="services-item-list_chevron">
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Duis aute irure dolor</li>
+            <li>Sed ut perspiciatis unde omnis iste natus</li>
+            <li>Quis autem vel eum iure</li>
+        </ul>
+    - ID: "b4d032f0-3342-49a1-ad8a-d0f640c59b4c"
+      Hint: RichText_MarginsContainer
+      Value: "{F067DEBE-FD6A-40DD-8E44-FD19A3B9F91D}"

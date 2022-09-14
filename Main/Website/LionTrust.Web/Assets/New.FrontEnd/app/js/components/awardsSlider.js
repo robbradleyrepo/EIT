@@ -6,8 +6,26 @@ import SwiperCore, { Navigation, Pagination } from 'swiper/core';
 // configure Swiper to use modules
 SwiperCore.use([Navigation, Pagination]);
 
+
 export default () => {
-    
+
+    let nodeList = document.querySelectorAll(".swiper-container-awards");
+    for (let i = 0; i < nodeList.length; i++) {
+     
+
+        let countAllSlides = nodeList[i].querySelectorAll('.slideDiv').length;
+        console.log(countAllSlides)
+        let maxSlidersWhithNoPagination = 3;
+
+        // remove pagination 
+        if (countAllSlides <= maxSlidersWhithNoPagination) {
+            nodeList[i].getElementsByClassName('swiper-wrapper slidesWrapper')[0].classList.add('centerawards');
+            nodeList[i].getElementsByClassName('swiper-pagination awardpagination')[0].classList.add('hideawardsPagination');
+        }
+
+    }
+
+
     new Swiper('.swiper-container-awards', {
 
         grabCursor: true,
@@ -16,7 +34,7 @@ export default () => {
         spaceBetween: 32,
         speed: 800,
         loop: false,
-        simulateTouch : true,
+        simulateTouch: true,
         loopFillGroupWithBlank: false,
         breakpointsInverse: true,
         breakpoints: {
@@ -26,7 +44,7 @@ export default () => {
             },
             576: {
                 slidesPerView: 2,
-                centeredSlides: false
+                centeredSlides: true
             },
             768: {
                 slidesPerView: 2.2,
@@ -35,7 +53,7 @@ export default () => {
             992: {
                 slidesPerView: 3,
                 centeredSlides: false
-            },            
+            },
         },
 
 
@@ -47,6 +65,7 @@ export default () => {
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
-        },
+        }
     });
+  
 }

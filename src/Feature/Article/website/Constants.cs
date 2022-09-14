@@ -64,6 +64,8 @@
             public const string Date_FieldId = "{79CC76CC-7503-449B-9809-9808CF6C2D26}";
             public const string PdfDocument_FieldId = "{AE17B17D-0024-4700-9075-E95D8E7B15EE}";
             public const string ArticleVideoUrl = "{8EB78475-C445-4960-84B0-E946D262F81C}";
+            public const string PercentageScrollFieldId = "{C522ADF8-B03B-41DF-9D55-7C1DE30E6C3D}";
+            public const string PercentageGoalFieldId = "{729A677E-787C-4B48-966F-D545AFAE6620}";
         }
 
         public static class ArticleScroller

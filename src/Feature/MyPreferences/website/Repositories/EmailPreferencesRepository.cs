@@ -1,23 +1,27 @@
 ﻿namespace LionTrust.Feature.MyPreferences.Repositories
 {
     using LionTrust.Foundation.Contact.Models;
-    using LionTrust.Feature.MyPreferences.Models;
     using System;
-    using System.Web;
     using LionTrust.Foundation.Contact.Services;
     using System.Collections.Generic;
+    using LionTrust.Foundation.Contact.Managers;
+    using LionTrust.Feature.MyPreferences.Models;
+    using LionTrust.Feature.MyPreferences.Helpers;
 
     public class EmailPreferencesRepository : IEmailPreferencesRepository
     {
         private readonly IApplicationCacheRepository _applicationCacheRepository;
+        private readonly IMailManager _mailManager;
+        private readonly IEmailHelper _emailHelper;
+
         private const string SFContactCountryListCacheKey = "salesforce-contact-country-list";
         private const string SFLeadCountryListCacheKey = "salesforce-lead-country-list";
-        private const string RelativeImagePath = " src=\"/-/media/";
-        private const string ImageSrc = " src=\"http://{0}/-/media/";
 
-        public EmailPreferencesRepository(IApplicationCacheRepository applicationCacheRepository)
+        public EmailPreferencesRepository(IApplicationCacheRepository applicationCacheRepository, IMailManager mailManager, IEmailHelper emailHelper)
         {
             _applicationCacheRepository = applicationCacheRepository;
+            _mailManager = mailManager;
+            _emailHelper = emailHelper;
         }
         public EmailPreferences GetEmailPreferences(Context context)
         {
@@ -43,12 +47,7 @@
                 }
 
                 //Generate email body
-                var emailMessageBody = emailTemplate.Message;
-                emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.FullNameToken, savedUserEmailDetails.FullName);
-                emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.EditPrefLinkToken, savedUserEmailDetails.EditEmailPrefLink);
-                emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.FundDashboardLinkToken, savedUserEmailDetails.FundDashboardLink);
-                emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.SiteURLToken, string.Format("https://{0}", HttpContext.Current.Request.Url.Host));
-                emailMessageBody = emailMessageBody.Replace(RelativeImagePath, string.Format(ImageSrc, HttpContext.Current.Request.Url.Host));
+                var emailMessageBody = _emailHelper.GenerateEmailMessageBody(emailTemplate.Message, savedUserEmailDetails.FullName, savedUserEmailDetails.EditEmailPrefLink, savedUserEmailDetails.FundDashboardLink);
 
                 var returnObj = new RegisterdUserWithEmailDetails
                 {
@@ -78,12 +77,7 @@
                 }
 
                 //Generate email body
-                var emailMessageBody = emailTemplate.Message;
-                emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.FullNameToken, savedUserEmailDetails.FullName);
-                emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.EditPrefLinkToken, savedUserEmailDetails.EditEmailPrefLink);
-                emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.FundDashboardLinkToken, savedUserEmailDetails.FundDashboardLink);
-                emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.SiteURLToken, string.Format("https://{0}", HttpContext.Current.Request.Url.Host));
-                emailMessageBody = emailMessageBody.Replace(RelativeImagePath, string.Format(ImageSrc, HttpContext.Current.Request.Url.Host));
+                var emailMessageBody = _emailHelper.GenerateEmailMessageBody(emailTemplate.Message, savedUserEmailDetails.FullName, savedUserEmailDetails.EditEmailPrefLink, savedUserEmailDetails.FundDashboardLink);
 
                 var returnObj = new RegisterdUserWithEmailDetails
                 {
@@ -126,11 +120,7 @@
             {
 
                 //Generate email body
-                var emailMessageBody = emailTemplate.Message;
-                emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.FullNameToken, userDetails.FullName);
-                emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.EditPrefLinkToken, userDetails.EditEmailPrefLink);
-                emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.FundDashboardLinkToken, userDetails.FundDashboardLink);
-                emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.SiteURLToken, string.Format("https://{0}", HttpContext.Current.Request.Url.Host));
+                var emailMessageBody = _emailHelper.GenerateEmailMessageBody(emailTemplate.Message, userDetails.FullName, userDetails.EditEmailPrefLink, userDetails.FundDashboardLink);
 
                 var returnObj = new ResendEmailPrefEmailDetails
                 {

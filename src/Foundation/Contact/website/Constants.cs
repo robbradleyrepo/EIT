@@ -14,11 +14,15 @@ namespace LionTrust.Foundation.Contact
         public const string SFLastNameFacetKey = "LastName";
         public const string PrefixSalesforceContact = "003";
         public const string PrefixSalesforceLead = "00Q";
+        public const string PrefixSalesforceUser = "005";
+        public const string PrefixSalesforceEngagementHistory = "a1U";
 
         public const string SFProductEntityName = "Product__c";
         public const string SFFundPreferenceEntityName = "Fund_Preference__c";
         public const string SFContactEntityName = "Contact";
         public const string SfLeadEntityName = "Lead";
+        public const string SfUserEntityName = "User";
+        public const string SfEngagementHistory = "Engagement_History__c";
 
         public const string SF_EmailOptOutFacetKey = "HasOptedOutOfEmail";
 
@@ -48,6 +52,7 @@ namespace LionTrust.Foundation.Contact
         public const string SFProcess_RefFieldForFunds = "Products__r";
 
         //Salesforce Contact and Lead field names
+        public const string SF_IdField = "Id";
         public const string SF_LTNewsField = "Liontrust_News__c";
         public const string SF_FactSheetField = "Factsheets__c";
         public const string SF_RelBlogField = "Relevant_Blogs__c";
@@ -56,10 +61,12 @@ namespace LionTrust.Foundation.Contact
         public const string SF_DateOfConcentField = "Date_of_Consent_Given__c";
         public const string SF_SitecoreVistorIdField = "FuseITAnalytics__SitecoreVisitorId__c";
         public const string SF_GUIDForEmailPref = "GUID_For_EmailPreferences__c";
+        public const string SF_CreatedViaPreferenceCentreField = "Created_Via_Preference_Centre__c";
         public const string SF_FirstNameField = "FirstName";
         public const string SF_LastNameField = "LastName";
         public const string SF_EmailField = "Email";
         public const string SF_UKResident = "UK_Resident__c";
+        public const string SF_Article14NoticeField = "Article_14_Notice_Sent__c";
         public const string SF_RecordTypeField = "RecordTypeId";
         public const string SFContact_CountryField = "ContactCountry__c";
         public const string SFContact_CompanyFCAIdField = "Company_FCA_Number__c";
@@ -73,6 +80,15 @@ namespace LionTrust.Foundation.Contact
         public const string SF_Owner_EmailField = "Pardot_Contact_Owner_Pardot_Email__c";
         public const string SF_Owner_PhoneField = "Pardot_Contact_Owner_Pardot_Phone__c";
         public const string SF_Owner_RegionField = "Pardot_Contact_Owner_Pardot_Region__c";
+        public const string SF_Owner_IdField = "OwnerId";
+        public const string SF_User_NameField = "Pardot_Name__c";
+        public const string SF_User_TitleField = "Pardot_Title__c";
+        public const string SF_User_EmailField = "Pardot_Email__c";
+        public const string SF_User_PhoneField = "Pardot_Phone__c";
+        public const string SF_User_RegionField = "Pardot_Region__c";
+        public const string SF_Hard_BouncedField = "pi__pardot_hard_bounced__c";
+        public const string SF_ScoreField = "Score__c";
+        public const string SF_CreatedDateField = "CreatedDate";
 
         //S4S SitecoreXDBContact Salesforce object fields
         public const string SFSitecoreXDBContactObjectName = "FuseITAnalytics__SitecoreXDBContact__c";
@@ -90,6 +106,31 @@ namespace LionTrust.Foundation.Contact
 
         public const string IdentifierSourceConfigName = "S4S.Analytics.IdentifierSource";
 
+        //Salesforce Engagement History object fields
+        public static class EngagementHistory
+        {
+            public const string SF_IdField = "Id";
+            public const string SF_CampaignField = "Campaign__c";
+            public const string SF_ContactField = "Contact__c";
+            public const string SF_ContactListField = "Contact_List__c";
+            public const string SF_DateTimeField = "DateTime__c";
+            public const string SF_EmailField = "Email__c";
+            public const string SF_LeadField = "Lead__c";
+            public const string SF_LinkField = "Link__c";
+            public const string SF_SitecoreCampaignIdField = "SitecoreCampaignId__c";
+            public const string SF_TypeField = "Type__c";
+            public const string SF_MessageLinkField = "Message_Link__c";
+            public const string SF_FirstOpenField = "First_Open__c";
+
+            //Engagement History event types
+            public static class EventTypes
+            {
+                public const string TrackedLinkClicked = "Tracked Link Clicked";
+                public const string EmailOpen = "Email Open";
+                public const string EmailSent = "Email Sent";
+            }
+        }
+
         public static class QueryStringNames
         {
             public static class EmailPreferencefParams
@@ -100,6 +141,11 @@ namespace LionTrust.Foundation.Contact
                 public static readonly string ErrorQueryStringKey = "error";
                 public static readonly string DatasourceIdQueryStringKey = "dataSourceId";
             }
+        }
+
+        public static class Identifier
+        {
+            public const string S4S = "s4slb";
         }
 
         public static class SessionKeys

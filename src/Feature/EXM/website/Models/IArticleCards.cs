@@ -1,7 +1,6 @@
 ﻿namespace LionTrust.Feature.EXM.Models
 {
     using Glass.Mapper.Sc.Configuration.Attributes;
-    using Glass.Mapper.Sc.Fields;
     using System.Collections.Generic;
     using LionTrust.Foundation.Article.Models;
 

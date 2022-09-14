@@ -21,7 +21,6 @@ export default () => {
             'position': 'static',
             'transition': 'all 0.75s ease-in-out'
         });
-        $win.scrollTop(offsetY);
     });
 
     $(".sidebar-overlay").on("click", () => {
@@ -31,7 +30,7 @@ export default () => {
             'position': 'static',
             'transition': 'all 0.75s ease-in-out'
         });
-        $win.scrollTop(offsetY);
     });
 
 };
+

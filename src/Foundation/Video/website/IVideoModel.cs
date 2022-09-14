@@ -1,8 +1,10 @@
 ﻿namespace LionTrust.Foundation.Video
 {
+    using Foundation.Design;
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
     using LionTrust.Foundation.ORM.Models;
+    using System;
 
     public interface IVideoModel: IGlassBase
     {
@@ -17,5 +19,17 @@
 
         [SitecoreField(Constants.Video.VideoIdFieldId)]
         string VideoId { get; set; }
+
+        [SitecoreField(Constants.Video.MarginsContainerFieldId)]
+        ILookupValue MarginsContainer { get; set; }
+
+        [SitecoreField(Constants.Video.PlayGoalFieldId)]
+        Guid PlayGoal { get; set; }
+
+        [SitecoreField(Constants.Video.PercentagePlayFieldId)]
+        int PercentagePlay { get; set; }
+
+        [SitecoreField(Constants.Video.PercentageGoalFieldId)]
+        Guid PercentageGoal { get; set; }
     }
 }

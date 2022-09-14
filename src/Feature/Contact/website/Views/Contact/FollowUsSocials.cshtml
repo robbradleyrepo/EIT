@@ -1,30 +1,10 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
-@using LionTrust.Feature.Contact.Models;
-@using System.Collections.Specialized;
+@using LionTrust.Foundation.Navigation.Models
 @model LionTrust.Feature.Contact.Models.IFollowUsSocials
 @if (Model != null)
 {
     var twitterColumn = "col-xl-7";
     var socialColumn = "col-xl-5";
-    var firstSocialIcon = new FollowUsSocialIcon()
-    {
-        SocialIcon = Model.FirstSocialIcon,
-        SocialLink = Model.FirstSocialLink,
-        TwitterTags = Model.FirstTwitterTags
-    };
-
-    var secondSocialIcon = new FollowUsSocialIcon()
-    {
-        SocialIcon = Model.SecondSocialIcon,
-        SocialLink = Model.SecondSocialLink,
-        TwitterTags = Model.SecondTwitterTags
-    };
-    var thirdSocialIcon = new FollowUsSocialIcon()
-    {
-        SocialIcon = Model.ThirdSocialIcon,
-        SocialLink = Model.ThirdSocialLink,
-        TwitterTags = Model.ThirdTwitterTags
-    };
 
     <section class="container follow-us-section">
         <div class="row">
@@ -37,48 +17,41 @@
                         </p>
                     </div>
                     <div class="row">
-                        @if (!string.IsNullOrEmpty(firstSocialIcon.TwitterTags))
-                        {
+                        <div class="@socialColumn">
+                            <div class="follow-us__links">
+                                @foreach (var socialIcon in Model.SocialIcons)
+                                {
+                                    if (socialIcon == null)
+                                    {
+                                        continue;
+                                    }
+                                    if (socialIcon.TwitterAccounts != null && socialIcon.TwitterAccounts.Any())
+                                    {
+                                        continue;
+                                    }
+                                    else
+                                    {
 
-                            <div class="@socialColumn">
-                                <div class="follow-us__links">
-                                    @Html.Partial("~/Views/Contact/_FollowUsSocialIcon.cshtml", secondSocialIcon)
-                                    @Html.Partial("~/Views/Contact/_FollowUsSocialIcon.cshtml", thirdSocialIcon)
-                                </div>
+                                        @Html.Partial("~/Views/Contact/_FollowUsSocialIcon.cshtml", socialIcon)
+
+                                    }
+                                }
                             </div>
-                            <div class="@twitterColumn">
-                                <div class="follow-us__links">
-                                    @Html.Partial("~/Views/Contact/_FollowUsSocialIcon.cshtml", firstSocialIcon)
-                                </div>
-                            </div>
-                        }
-                        else if (!string.IsNullOrEmpty(secondSocialIcon.TwitterTags))
+                        </div>
+                        @foreach (var socialIcon in Model.SocialIcons)
                         {
-                            <div class="@socialColumn">
-                                <div class="follow-us__links">
-                                    @Html.Partial("~/Views/Contact/_FollowUsSocialIcon.cshtml", firstSocialIcon)
-                                    @Html.Partial("~/Views/Contact/_FollowUsSocialIcon.cshtml", thirdSocialIcon)
+                            if (socialIcon == null)
+                            {
+                                continue;
+                            }
+                            if (socialIcon.TwitterAccounts != null && socialIcon.TwitterAccounts.Any())
+                            {
+                                <div class="@twitterColumn">
+                                    <div class="follow-us__links">
+                                        @Html.Partial("~/Views/Contact/_FollowUsSocialIcon.cshtml", socialIcon)
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="@twitterColumn">
-                                <div class="follow-us__links">
-                                    @Html.Partial("~/Views/Contact/_FollowUsSocialIcon.cshtml", secondSocialIcon)
-                                </div>
-                            </div>
-                        }
-                        else
-                        {
-                            <div class="@socialColumn">
-                                <div class="follow-us__links">
-                                    @Html.Partial("~/Views/Contact/_FollowUsSocialIcon.cshtml", firstSocialIcon)
-                                    @Html.Partial("~/Views/Contact/_FollowUsSocialIcon.cshtml", secondSocialIcon)
-                                </div>
-                            </div>
-                            <div class="@twitterColumn">
-                                <div class="follow-us__links">
-                                    @Html.Partial("~/Views/Contact/_FollowUsSocialIcon.cshtml", thirdSocialIcon)
-                                </div>
-                            </div>
+                            }
                         }
                     </div>
                 </div>

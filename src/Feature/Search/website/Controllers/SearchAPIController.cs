@@ -186,13 +186,13 @@
                     {
                         ITaxonomyContentResult latestFundUpdateArticle = null;
 
-                        if(fundUpdateArticlesWithTeam != null && fundUpdateArticlesWithTeam.Any(a => a.FundId == fund.FundId.ToString(thirtyTwodigits)))
+                        if(fundUpdateArticlesWithTeam != null && fundUpdateArticlesWithTeam.Any(a => a.FundIds.Contains(fund.FundId.ToString(thirtyTwodigits))))
                         {
-                            latestFundUpdateArticle = fundUpdateArticlesWithTeam.FirstOrDefault(a => a.FundId == fund.FundId.ToString(thirtyTwodigits));
+                            latestFundUpdateArticle = fundUpdateArticlesWithTeam.FirstOrDefault(a => a.FundIds.Contains(fund.FundId.ToString(thirtyTwodigits)));
                         }
                         else
                         {
-                            latestFundUpdateArticle = fundUpdateArticles.SearchResults.FirstOrDefault(a => a.FundId == fund.FundId.ToString(thirtyTwodigits));
+                            latestFundUpdateArticle = fundUpdateArticles.SearchResults.FirstOrDefault(a => a.FundIds.Contains(fund.FundId.ToString(thirtyTwodigits)));
                         }
 
                         if (latestFundUpdateArticle != null && !string.IsNullOrWhiteSpace(latestFundUpdateArticle.Url))

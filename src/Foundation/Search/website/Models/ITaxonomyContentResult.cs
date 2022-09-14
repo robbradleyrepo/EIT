@@ -27,6 +27,6 @@
 
         string Url { get; set; }
 
-        string FundId { get; set; }
+        IEnumerable<string> FundIds { get; set; }
     }
 }

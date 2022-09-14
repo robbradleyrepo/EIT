@@ -1,0 +1,35 @@
+﻿---
+ID: "8b57b8c0-40cc-452d-a7ff-6002c733d0b7"
+Parent: "9fdcbfec-9863-4b84-8347-fb1a72a6c573"
+Template: "9fdcbfec-9863-4b84-8347-fb1a72a6c573"
+Path: /sitecore/templates/Project/LionTrust/Content Types/EXM/Salesforce Sync Settings/__Standard Values
+DB: master
+SharedFields:
+- ID: "8453ecf3-635e-4df9-a722-2f4095946b98"
+  Hint: Enabled
+  Type: Checkbox
+  Value: 0
+- ID: "9344d3f5-d404-4d9a-aaed-1d01538af948"
+  Hint: FromAddress
+  Value: noreply@liontrustassetmanagement.co.uk
+- ID: "d3e491f9-3e79-40e7-9cb5-f86cfa7feecc"
+  Hint: Subject
+  Value: Liontrust salesforce sync failure
+- ID: "e10a3410-ab22-4b09-a195-293d9a2e34ba"
+  Hint: FromDisplayName
+  Value: Noreply
+- ID: "f547f117-8ecc-44aa-85ed-a68ab4504f9c"
+  Hint: ToAddress
+  Value: "jack.hilliam@liontrust.co.uk; marketing@liontrust.co.uk; andre.nascimento@sagittarius.agency; sabina.filip@sagittarius-marketing.com"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220902T153905Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
