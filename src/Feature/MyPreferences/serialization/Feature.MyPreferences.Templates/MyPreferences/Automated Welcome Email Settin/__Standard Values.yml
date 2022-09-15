@@ -2,7 +2,7 @@
 ID: "114dbb4b-d54c-497d-b2e3-0f1dbfacee15"
 Parent: "d5164962-de96-4a74-ba93-c521cd88328e"
 Template: "d5164962-de96-4a74-ba93-c521cd88328e"
-Path: /sitecore/templates/Project/LionTrust/Content Types/MyPreferences/Automated Welcome Email Settings/__Standard Values
+Path: /sitecore/templates/Feature/MyPreferences/Automated Welcome Email Settings/__Standard Values
 DB: master
 SharedFields:
 - ID: "545b6376-0bf8-49c0-8b0c-5b6d64a92dfb"
@@ -14,6 +14,9 @@ SharedFields:
 - ID: "8b08b1b5-bcbf-4bd8-a1e0-12d6a907c055"
   Hint: ToAddress
   Value: "jack.hilliam@liontrust.co.uk; marketing@liontrust.co.uk; andre.nascimento@sagittarius.agency; sabina.filip@sagittarius-marketing.com"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
 - ID: "d9a994f4-3102-48ed-9c42-e9b2730d5002"
   Hint: Subject
   Value: Liontrust automated welcome email failure

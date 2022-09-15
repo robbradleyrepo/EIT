@@ -1,13 +1,13 @@
 ﻿---
-ID: "a1d79cd8-7dc4-4edd-9c5b-d186a3a26359"
-Parent: "416dec47-b567-430d-a36c-fab6cd2ff231"
+ID: "545b6376-0bf8-49c0-8b0c-5b6d64a92dfb"
+Parent: "7f7387e6-1a9b-476e-8a81-52cb1a77105c"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/MyPreferences/_AutomatedWelcomeEmailSettings/Data/Enabled
+Path: /sitecore/templates/Feature/MyPreferences/Automated Welcome Email Settings/Send email on error/FromDisplayName
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: Checkbox
+  Value: "Single-Line Text"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 200
@@ -17,9 +17,13 @@ SharedFields:
   Value: 1
 Languages:
 - Language: en
+  Fields:
+  - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
+    Hint: Title
+    Value: From display name
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20220902T153655Z
+      Value: 20220912T145928Z

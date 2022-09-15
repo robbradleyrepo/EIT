@@ -1,8 +1,8 @@
 ﻿---
-ID: "e10a3410-ab22-4b09-a195-293d9a2e34ba"
+ID: "9344d3f5-d404-4d9a-aaed-1d01538af948"
 Parent: "ed49e650-eb9b-43e3-a256-af54c0b42ba2"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/EXM/_SalesforceSyncSettings/Send email on error/FromDisplayName
+Path: /sitecore/templates/Feature/EXM/Salesforce Sync Settings/Send email on error/FromAddress
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
@@ -10,7 +10,7 @@ SharedFields:
   Value: "Single-Line Text"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 200
+  Value: 100
 - ID: "be351a73-fcb0-4213-93fa-c302d8ab4f51"
   Hint: Shared
   Type: Checkbox
@@ -20,10 +20,10 @@ Languages:
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: From display name
+    Value: From address
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20220912T145928Z
+      Value: 20220912T145926Z
