@@ -108,8 +108,18 @@
         /// <param name="entityId"></param>
         /// <param name="entityType"></param>
         /// <param name="scorePoints"></param>
+        /// <param name="cashflowSolutionsScore"></param>
+        /// <param name="economicAdvantageScore"></param>
+        /// <param name="globalEquityScore"></param>
+        /// <param name="globalFixedIncomeScore"></param>
+        /// <param name="globalFundamentalScore"></param>
+        /// <param name="globalInnovationScore"></param>
+        /// <param name="multiAssetScore"></param>
+        /// <param name="sustainableInvestmentScore"></param>
         /// <returns></returns>
-        GenericSalesforceEntity GetEntityWithUpdatedScore(string entityId, string entityType, int scorePoints);
+        GenericSalesforceEntity GetEntityWithUpdatedScore(string entityId, string entityType, int scorePoints, int cashflowSolutionsScore,
+                        int economicAdvantageScore, int globalEquityScore, int globalFixedIncomeScore, int globalFundamentalScore, int globalInnovationScore,
+                        int multiAssetScore, int sustainableInvestmentScore);
 
         /// <summary>
         /// Generates engagement history object
