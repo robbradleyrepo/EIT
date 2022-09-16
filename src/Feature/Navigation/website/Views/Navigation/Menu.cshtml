@@ -102,6 +102,15 @@
                             </a>
                         </li>
                     }
+                    @if (!string.IsNullOrEmpty(Model.HomeItem.SearchLabel))
+                    {
+                        <li class="sidebar-actions__item">
+                            <span class="sidebar-actions__link sidebar-actions__link--open-search">
+                                <i class="icon-search"></i>
+                                @Model.HomeItem.SearchLabel
+                            </span>
+                        </li>
+                    }
                     @if (Model.HomeItem.ContactUsPage != null)
                     {
                         <li class="sidebar-actions__item">

@@ -43,7 +43,10 @@
         string FromLabel { get; set; }
 
         [SitecoreField(Constants.NavigationRoot.ChangeLabel_FieldID, SitecoreFieldType.SingleLineText, "Menu")]
-        string ChangeLabel { get; set; }              
+        string ChangeLabel { get; set; }
+
+        [SitecoreField(Constants.NavigationRoot.SearchLabel_FieldID, SitecoreFieldType.SingleLineText, "Menu")]
+        string SearchLabel { get; set; }
 
         [SitecoreField(Constants.NavigationRoot.OnboardingConfiguation_FieldId)]
         IOnboardingConfiguration OnboardingConfiguration { get; set; }
