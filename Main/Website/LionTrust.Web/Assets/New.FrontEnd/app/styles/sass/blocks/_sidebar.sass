@@ -10,7 +10,7 @@ $logo: url('/dist/images/components/header/liontrust-logo-pride-color.svg')
     top: 0
     left: 0
     transform: translate3d(-452px, 0, 0)
-    overflow-y: scroll
+    overflow: auto
     height: 100%
     width: 100%
     max-width: 452px
@@ -18,13 +18,14 @@ $logo: url('/dist/images/components/header/liontrust-logo-pride-color.svg')
     transition: transform .3s ease
     border-right: 2px solid transparent
     @include breakpoint(mobile-large, up)
+        overflow: auto
         &_border
             border-right: 2px solid $gold
     @include breakpoint(desktop, up)
         padding: 27px 32px 64px 84px
-        overflow-y: initial
+        overflow-y: auto
         @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
-            overflow: hidden
+            overflow: auto
     &_active
         transform: translate3d(0, 0, 0)
     &__header
@@ -193,7 +194,7 @@ $logo: url('/dist/images/components/header/liontrust-logo-pride-color.svg')
         font-size: 7px
         margin-left: 3px
     &_hr
-        display: none
+        display: block
         height: 1px
         background: #2d3440
         margin: 10px 0
@@ -208,3 +209,11 @@ $logo: url('/dist/images/components/header/liontrust-logo-pride-color.svg')
     line-height: 3em
     @include breakpoint(desktop, up)
         display: block
+.sidebar::-webkit-scrollbar
+  width: 0.6em
+.sidebar::-webkit-scrollbar-thumb
+  background: hsl(211, 12%, 48%)
+  border-radius: 6px
+.sidebar::-webkit-scrollbar-track
+  background-color: hsl(184, 9%, 83%)
+ 

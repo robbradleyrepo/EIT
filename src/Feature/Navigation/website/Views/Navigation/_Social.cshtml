@@ -1,0 +1,36 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using System.Collections.Specialized
+@model LionTrust.Feature.Navigation.Models.IFooterConfiguration
+@if (Model == null)
+{
+    return;
+}
+
+<div class="social">
+    @if (Model.SocialIcons != null
+        && Model.SocialIcons.Any())
+    {
+        foreach (var socialLink in Model.SocialIcons)
+        {
+            if (socialLink.TwitterAccounts == null || !socialLink.TwitterAccounts.Any())
+            {
+                <a href="@(socialLink.SocialLink != null ? socialLink.SocialLink.Url : "#")"
+                   class="social__link" data-goal-trigger="@socialLink.SocialLinkGoal" target="_blank">
+                    @Html.Glass().RenderImage(socialLink, x => x.SocialIcon, new NameValueCollection { { "class", "social__link-icon" } }, isEditable: true)
+                </a>
+            }
+            else
+            {
+                <span class="social__link">
+                    @Html.Glass().RenderImage(socialLink, x => x.SocialIcon, new NameValueCollection { { "class", "social__link-icon" } }, isEditable: true)
+                    <div class="social__twitter">
+                        @foreach (var account in socialLink.TwitterAccounts)
+                        {
+                            <a href="https://twitter.com/@account.TwitterAccountName" target="_blank" data-goal-trigger="@account.CTAGoal" class="social__twitter-link">@@@account.TwitterAccountName</a>
+                        }
+                    </div>
+                </span>
+            }
+        }
+    }
+</div>
