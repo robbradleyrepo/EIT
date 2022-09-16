@@ -1,8 +1,8 @@
 ﻿---
-ID: "9fdcbfec-9863-4b84-8347-fb1a72a6c573"
-Parent: "c72fcb7b-1e35-4632-aba4-f939ace75249"
+ID: "d5164962-de96-4a74-ba93-c521cd88328e"
+Parent: "c5a42004-e2f3-41ce-a964-91f87dd7dfdb"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Project/LionTrust/Content Types/EXM/Salesforce Sync Settings
+Path: /sitecore/templates/Feature/MyPreferences/Automated Welcome Email Settings
 DB: master
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
@@ -11,12 +11,10 @@ SharedFields:
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
   Type: tree list
-  Value: |
-    {1930BBEB-7805-471A-A3BE-4858AC7CF696}
-    {B2AD2760-7B5A-4407-8EFC-1D454334F764}
+  Value: "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"
 - ID: "f7d48a55-2158-4f02-9356-756654404f73"
   Hint: __Standard values
-  Value: "{8B57B8C0-40CC-452D-A7FF-6002C733D0B7}"
+  Value: "{114DBB4B-D54C-497D-B2E3-0F1DBFACEE15}"
 Languages:
 - Language: en
   Versions:
