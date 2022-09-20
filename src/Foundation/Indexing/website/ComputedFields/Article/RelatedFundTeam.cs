@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     using LionTrust.Foundation.Indexing.ComputedFields.SharedLogic;
     using Sitecore.ContentSearch;
     using Sitecore.ContentSearch.ComputedFields;
@@ -24,9 +25,9 @@
                 return null;
             }
 
-            var fundTeamIds = fundTeamIdsString.Split('|');
+            var fundTeamIds = fundTeamIdsString.Split('|').Distinct().ToList();
             var formattedFundTeamIds = new List<string>();
-            if (fundTeamIds.Length <= 0)
+            if (!fundTeamIds.Any())
             {
                 return formattedFundTeamIds;
             }
