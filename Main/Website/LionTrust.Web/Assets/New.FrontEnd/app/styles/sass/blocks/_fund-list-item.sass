@@ -26,6 +26,11 @@
         margin-bottom: 15px
         @include breakpoint(desktop, up)
             margin: 0
+
+        &.has-no-factsheet
+            justify-content: flex-start
+            @include breakpoint(xl, up)
+                justify-content: flex-end
     .btn
         .animate-arrow
             transform: translate(-2px,0)
