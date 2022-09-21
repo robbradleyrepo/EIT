@@ -169,7 +169,7 @@
                                     </div>
                                 </div>
                                 <div class="fund-card__text-bottom">
-                                    <div class="fund-card__btns-block" v-if="fund.fundFactSheet || !fund.hideLiteratureButton">
+                                    <div class="fund-card__btns-block"  v-bind:class=" fund.fundFactSheet ? 'has-factsheet': 'has-no-factsheet'" v-if="fund.fundFactSheet || !fund.hideLiteratureButton">
                                         <a :href="fund.fundFactSheet" class="fund-card__btn"  v-if="fund.fundFactSheet">
                                             @Html.Glass().Editable(Model, m => m.FactsheetLabel) <i class="icon-file"></i>
                                         </a>
@@ -201,7 +201,7 @@
                             </div>
                         </div>
                         <div class="col-lg-6 col-xl-4">
-                            <div class="fund-item-list__links" v-if="fund.fundFactSheet || !fund.hideLiteratureButton">
+                            <div class="fund-item-list__links" v-bind:class=" fund.fundFactSheet ? 'has-factsheet': 'has-no-factsheet'" v-if="fund.fundFactSheet || !fund.hideLiteratureButton">
                                 <a :href="fund.fundFactSheet" target="_blank" class="link-gray" v-if="fund.fundFactSheet">@Html.Glass().Editable(Model, m => m.FactsheetLabel) <i class="icon-file"></i></a>
                                 <button class="link-gray view-documents" @@click="showLiteratureOverlay(fund.fundId)" v-if="!fund.hideLiteratureButton">@Html.Glass().Editable(Model, m => m.AllDocumentsLabel) <i class="icon-folder"></i></button>
                             </div>
