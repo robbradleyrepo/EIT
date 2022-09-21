@@ -35,5 +35,6 @@
 
         string SalesforceFundId { get; set; }
 
+        bool HideLiteratureButton { get; set; }
     }
 }

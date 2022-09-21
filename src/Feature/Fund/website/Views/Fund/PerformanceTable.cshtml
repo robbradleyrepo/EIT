@@ -15,9 +15,12 @@
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">@Html.Glass().Editable(Model.Component, m => m.HeadingLabel)</th>
-                    @foreach (var item in Model.ColumnHeadings)
+                    @if (Model.ColumnHeadings != null && Model.ColumnHeadings.Length > 0)
                     {
-                        <th scope="col">@item</th>
+                        foreach (var item in Model.ColumnHeadings)
+                        {
+                            <th scope="col">@item</th>
+                        }
                     }
                 </tr>
             </thead>
