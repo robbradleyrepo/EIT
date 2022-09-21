@@ -15,7 +15,7 @@
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">@Html.Glass().Editable(Model.Component, m => m.HeadingLabel)</th>
-                    @if (Model.ColumnHeadings != null && Model.ColumnHeadings.Length > 0)
+                    @if (Model.ColumnHeadings != null && Model.ColumnHeadings.Any())
                     {
                         foreach (var item in Model.ColumnHeadings)
                         {
@@ -44,11 +44,11 @@
                     </tr>
                 }
             </tbody>
-            @if (Model.QuartileRow != null && Model.QuartileRow.Columns.Any() && Model.Rows.Count() > 0)
+            @if (Model.QuartileRow != null && Model.QuartileRow.Columns.Any() && Model.Rows.Any())
             {
                 var counter = 0;
                 var referenceRow = Model.Rows[0].Columns;
-                var referenceRowCounter = referenceRow != null ? referenceRow.Length : 0;
+                var referenceRowCounter = referenceRow?.Length ?? 0;
                 <tfoot>
                     <tr>
                         <td scope="row">@Html.Glass().Editable(Model.Component, m => m.QuartileRowLabel)</td>
