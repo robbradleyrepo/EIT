@@ -66,7 +66,8 @@
                 FundRegion = x.Document.FundRegion,
                 FundTeam = x.Document.FundTeam,
                 FundTeamName = x.Document.FundTeamName,
-                SalesforceFundId = x.Document.SalesforceFundId
+                SalesforceFundId = x.Document.SalesforceFundId,
+                HideLiteratureButton = x.Document.HideLiteratureButtonFromFundList
             }); ;
         }
 

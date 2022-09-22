@@ -35,5 +35,7 @@
         public string FundUpdateUrl { get; set; }
 
         public string SalesforceFundId { get; set; }
+
+        public bool HideLiteratureButton { get; set; }
     }
 }
