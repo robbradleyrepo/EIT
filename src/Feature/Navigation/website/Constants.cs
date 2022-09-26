@@ -87,6 +87,7 @@
             public const string YouAreViewingLabel_FieldID = "{15999105-600F-43FB-B206-ED93304A98E6}";
             public const string FromLabel_FieldID = "{14734052-FFFD-4681-9ABB-311B62D63DA6}";
             public const string ChangeLabel_FieldID = "{E4A364E6-2E1A-4854-ABD8-6A02ACF832CD}";
+            public const string SearchLabel_FieldID = "{ECB92611-4663-4D9B-8BA2-565021F840EC}";
             public const string OnboardingConfiguation_FieldId = "{16512055-116D-48B5-936C-ECA678249335}";
             public const string LionHub_FieldID = "{FCCF538E-8305-4C6A-9FD8-12998B4FA850}";
             public const string LionHubAllowedInvestors_FieldID = "{7F2DE5B0-73F0-47AA-BBD4-5F3FE1B654ED}";

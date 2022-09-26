@@ -10,7 +10,7 @@
     &__title
         @extend .h5
         @include breakpoint(desktop, up)
-            font-size: 32px
+            font-size: 2rem
     &__text
         @include breakpoint(desktop, up)
             @include font-size(20px)
@@ -29,7 +29,6 @@
         overflow-x: scroll
         @include breakpoint(desktop, up)
             overflow-x: visible
-            margin: 100px 0
     .row
         flex-wrap: nowrap
     &.desktop-wrap
@@ -37,7 +36,7 @@
             @include breakpoint(desktop, up)
                 flex-wrap: wrap
     &__card
-        height: 187px
+        height: 100%
         transition: box-shadow .3s ease
         &:hover
             box-shadow: 0px 10px 20px rgba(32, 36, 42, .6)
