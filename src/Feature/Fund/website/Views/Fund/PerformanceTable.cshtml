@@ -48,7 +48,7 @@
             {
                 var counter = 0;
                 var referenceRow = Model.Rows[0].Columns;
-                var referenceRowCounter = referenceRow?.Length ?? 0;
+                var referenceRowCounter = referenceRow != null ? referenceRow.Length : 0;
                 <tfoot>
                     <tr>
                         <td scope="row">@Html.Glass().Editable(Model.Component, m => m.QuartileRowLabel)</td>
