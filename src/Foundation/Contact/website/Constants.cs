@@ -88,14 +88,6 @@ namespace LionTrust.Foundation.Contact
         public const string SF_User_RegionField = "Pardot_Region__c";
         public const string SF_Hard_BouncedField = "pi__pardot_hard_bounced__c";
         public const string SF_ScoreField = "Score__c";
-        public const string SF_CashflowSolutionsScoreField = "sc_Cashflow_Solutions_Score__c";
-        public const string SF_EconomicAdvantageScoreField = "sc_Economic_Advantage_Score__c";
-        public const string SF_GlobalEquityScoreField = "sc_Global_Equity_Score__c";
-        public const string SF_GlobalFixedIncomeScoreField = "sc_Global_Fixed_Income_Score__c";
-        public const string SF_GlobalFundamentalScoreField = "sc_Global_Fundamental_Score__c";
-        public const string SF_GlobalInnovationScoreField = "sc_Global_Innovation_Score__c";
-        public const string SF_MultiAssetScoreField = "sc_Multi_Asset_Score__c";
-        public const string SF_SustainableInvestmentScoreField = "sc_Sustainable_Investment_Score__c";
         public const string SF_CreatedDateField = "CreatedDate";
 
         //S4S SitecoreXDBContact Salesforce object fields
@@ -136,7 +128,7 @@ namespace LionTrust.Foundation.Contact
                 public const string TrackedLinkClicked = "Tracked Link Clicked";
                 public const string EmailOpen = "Email Open";
                 public const string EmailSent = "Email Sent";
-            }            
+            }
         }
 
         public static class QueryStringNames
