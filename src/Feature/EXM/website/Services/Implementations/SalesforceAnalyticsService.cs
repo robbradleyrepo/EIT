@@ -7,6 +7,7 @@ using LionTrust.Feature.EXM.Services.Interfaces;
 using LionTrust.Feature.EXM.ViewModels;
 using LionTrust.Foundation.Contact.Enums;
 using LionTrust.Foundation.Contact.Managers;
+using LionTrust.Foundation.Contact.Models;
 using LionTrust.Foundation.Contact.Services;
 using LionTrust.Foundation.Logging.Repositories;
 using LionTrust.Foundation.SitecoreExtensions.Extensions;
@@ -94,6 +95,7 @@ namespace LionTrust.Feature.EXM.Services.Implementations
         private async Task<List<EntityViewModel>> GetEntityWithInteractions(DateTime fromDate)
         {
             var entities = new List<EntityViewModel>();
+            var teams = _sitecoreService.GetChildren<ITeamScore>(Constants.TeamScore.TeamScoreFolderId, Constants.TeamScore.Id)?.Where(x => !string.IsNullOrEmpty(x.SalesforceFieldId));
 
             using (XConnectClient client = Sitecore.XConnect.Client.Configuration.SitecoreXConnectClientConfiguration.GetClient())
             {
@@ -149,7 +151,10 @@ namespace LionTrust.Feature.EXM.Services.Implementations
                                 SalesforceEntityType = entityType == Foundation.Contact.Enums.EntityType.Contact
                                                         ? ContactConstants.SFContactEntityName
                                                         : ContactConstants.SfLeadEntityName,
-                                Email = email
+                                Email = email,
+                                Scores = teams != null 
+                                            ? teams.ToDictionary(x => x.Id, x => new ScoreViewModel { Id = x.Id, SalesforceFieldId = x.SalesforceFieldId }) 
+                                            : new Dictionary<Guid, ScoreViewModel>()
                             };
                             entities.Add(entity);
                         }
@@ -253,24 +258,14 @@ namespace LionTrust.Feature.EXM.Services.Implementations
 
                 foreach (var entity in entities)
                 {
-                    var scorePoints = entity.Score.Values.Sum();
+                    var scorePoints = entity.Scores.Select(x => x.Value.Score).Sum();
 
                     if (scorePoints <= 0)
                     {
                         continue;
                     }
 
-                    var cashflowSolutionsScore = GetTeamScore(entity, ContactConstants.TeamScore.CashflowSolutionsScore_Id);
-                    var economicAdvantageScore = GetTeamScore(entity, ContactConstants.TeamScore.EconomicAdvantageScore_Id);
-                    var globalEquityScore = GetTeamScore(entity, ContactConstants.TeamScore.GlobalEquityScore_Id);
-                    var globalFixedIncomeScore = GetTeamScore(entity, ContactConstants.TeamScore.GlobalFixedIncomeScore_Id);
-                    var globalFundamentalScore = GetTeamScore(entity, ContactConstants.TeamScore.GlobalFundamentalScore_Id);
-                    var globalInnovationScore = GetTeamScore(entity, ContactConstants.TeamScore.GlobalInnovationScore_Id);
-                    var multiAssetScore = GetTeamScore(entity, ContactConstants.TeamScore.MultiAssetScore_Id);
-                    var sustainableInvestmentScore = GetTeamScore(entity, ContactConstants.TeamScore.SustainableInvestmentScore_Id);
-
-                    var entityObj = _sfEntityUtility.GetEntityWithUpdatedScore(entity.SalesforceEntityId, entity.SalesforceEntityType, scorePoints, cashflowSolutionsScore, 
-                        economicAdvantageScore, globalEquityScore, globalFixedIncomeScore, globalFundamentalScore, globalInnovationScore, multiAssetScore, sustainableInvestmentScore);
+                    var entityObj = _sfEntityUtility.GetEntityWithUpdatedScore(entity.SalesforceEntityId, entity.SalesforceEntityType, scorePoints, entity.Scores.Values);
                     if (entity.SalesforceEntityType == ContactConstants.SFContactEntityName)
                     {
                         contactsToSync.Add(entityObj);
@@ -295,11 +290,6 @@ namespace LionTrust.Feature.EXM.Services.Implementations
             }
         }
 
-        private int GetTeamScore(EntityViewModel entity, Guid teamScoreId)
-        {
-            return entity.Score.TryGetValue(teamScoreId, out var teamScore) ? teamScore : 0;
-        }
-
         private List<EntityViewModel> SetInteractionPoints(List<EntityViewModel> entities)
         {
             var teams = _sitecoreService.GetChildren<ITeamScore>(Constants.TeamScore.TeamScoreFolderId, Constants.TeamScore.Id);
@@ -322,16 +312,16 @@ namespace LionTrust.Feature.EXM.Services.Implementations
                             switch (interaction.Type)
                             {
                                 case InteractionType.EmailOpen:
-                                    if (interaction.FirstTime & contact.Score.ContainsKey(team.Id))
+                                    if (interaction.FirstTime & contact.Scores.ContainsKey(team.Id))
                                     {
-                                        contact.Score[team.Id] = contact.Score[team.Id] + team.EmailOpenedPoints;
+                                        contact.Scores[team.Id].Score += team.EmailOpenedPoints;
                                     }
 
                                     break;
                                 case InteractionType.LinkClicked:
-                                    if (contact.Score.ContainsKey(team.Id))
+                                    if (contact.Scores.ContainsKey(team.Id))
                                     {
-                                        contact.Score[team.Id] = contact.Score[team.Id] + team.ClickedThroughPoints;
+                                        contact.Scores[team.Id].Score += team.ClickedThroughPoints;
                                     }
 
                                     break;

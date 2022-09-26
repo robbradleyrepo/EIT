@@ -942,18 +942,9 @@
         /// <param name="entityId"></param>
         /// <param name="entityType"></param>
         /// <param name="scorePoints"></param>
-        /// <param name="cashflowSolutionsScore"></param>
-        /// <param name="economicAdvantageScore"></param>
-        /// <param name="globalEquityScore"></param>
-        /// <param name="globalFixedIncomeScore"></param>
-        /// <param name="globalFundamentalScore"></param>
-        /// <param name="globalInnovationScore"></param>
-        /// <param name="multiAssetScore"></param>
-        /// <param name="sustainableInvestmentScore"></param>
+        /// <param name="scores"></param>
         /// <returns></returns>
-        public GenericSalesforceEntity GetEntityWithUpdatedScore(string entityId, string entityType, int scorePoints, int cashflowSolutionsScore,
-                        int economicAdvantageScore, int globalEquityScore, int globalFixedIncomeScore, int globalFundamentalScore, int globalInnovationScore, 
-                        int multiAssetScore, int sustainableInvestmentScore)
+        public GenericSalesforceEntity GetEntityWithUpdatedScore(string entityId, string entityType, int scorePoints, IEnumerable<ScoreViewModel> scores)
         {
             try
             {
@@ -967,16 +958,11 @@
                 }
 
                 sfEntity.InternalFields[Constants.SF_ScoreField] = GetScorePoints(sfEntity, Constants.SF_ScoreField, scorePoints);
-                //TODO: populate field names in Constants class once Alpha confirm the fields are created in Salesforce 
-                //sfEntity.InternalFields[Constants.SF_CashflowSolutionsScoreField] = GetScorePoints(sfEntity, Constants.SF_CashflowSolutionsScoreField, cashflowSolutionsScore);
-                //sfEntity.InternalFields[Constants.SF_EconomicAdvantageScoreField] = GetScorePoints(sfEntity, Constants.SF_EconomicAdvantageScoreField, economicAdvantageScore);
-                //sfEntity.InternalFields[Constants.SF_GlobalEquityScoreField] = GetScorePoints(sfEntity, Constants.SF_GlobalEquityScoreField, globalEquityScore);
-                //sfEntity.InternalFields[Constants.SF_GlobalFixedIncomeScoreField] = GetScorePoints(sfEntity, Constants.SF_GlobalFixedIncomeScoreField, globalFixedIncomeScore);
-                //sfEntity.InternalFields[Constants.SF_GlobalFundamentalScoreField] = GetScorePoints(sfEntity, Constants.SF_GlobalFundamentalScoreField, globalFundamentalScore);
-                //sfEntity.InternalFields[Constants.SF_GlobalInnovationScoreField] = GetScorePoints(sfEntity, Constants.SF_GlobalInnovationScoreField, globalInnovationScore);
-                //sfEntity.InternalFields[Constants.SF_MultiAssetScoreField] = GetScorePoints(sfEntity, Constants.SF_MultiAssetScoreField, multiAssetScore);
-                //sfEntity.InternalFields[Constants.SF_SustainableInvestmentScoreField] = GetScorePoints(sfEntity, Constants.SF_SustainableInvestmentScoreField, sustainableInvestmentScore);
 
+                foreach(var score in scores)
+                {
+                    sfEntity.InternalFields[score.SalesforceFieldId] = GetScorePoints(sfEntity, Constants.SF_CashflowSolutionsScoreField, score.Score);
+                }
 
                 return sfEntity;
             }

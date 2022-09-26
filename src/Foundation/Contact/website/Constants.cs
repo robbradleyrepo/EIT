@@ -88,14 +88,14 @@ namespace LionTrust.Foundation.Contact
         public const string SF_User_RegionField = "Pardot_Region__c";
         public const string SF_Hard_BouncedField = "pi__pardot_hard_bounced__c";
         public const string SF_ScoreField = "Score__c";
-        public const string SF_CashflowSolutionsScoreField = "";
-        public const string SF_EconomicAdvantageScoreField = "";
-        public const string SF_GlobalEquityScoreField = "";
-        public const string SF_GlobalFixedIncomeScoreField = "";
-        public const string SF_GlobalFundamentalScoreField = "";
-        public const string SF_GlobalInnovationScoreField = "";
-        public const string SF_MultiAssetScoreField = "";
-        public const string SF_SustainableInvestmentScoreField = "";
+        public const string SF_CashflowSolutionsScoreField = "sc_Cashflow_Solutions_Score__c";
+        public const string SF_EconomicAdvantageScoreField = "sc_Economic_Advantage_Score__c";
+        public const string SF_GlobalEquityScoreField = "sc_Global_Equity_Score__c";
+        public const string SF_GlobalFixedIncomeScoreField = "sc_Global_Fixed_Income_Score__c";
+        public const string SF_GlobalFundamentalScoreField = "sc_Global_Fundamental_Score__c";
+        public const string SF_GlobalInnovationScoreField = "sc_Global_Innovation_Score__c";
+        public const string SF_MultiAssetScoreField = "sc_Multi_Asset_Score__c";
+        public const string SF_SustainableInvestmentScoreField = "sc_Sustainable_Investment_Score__c";
         public const string SF_CreatedDateField = "CreatedDate";
 
         //S4S SitecoreXDBContact Salesforce object fields
@@ -137,25 +137,6 @@ namespace LionTrust.Foundation.Contact
                 public const string EmailOpen = "Email Open";
                 public const string EmailSent = "Email Sent";
             }            
-        }
-
-        public static class TeamScore
-        {
-            public static Guid CashflowSolutionsScore_Id = new Guid("{F10EB9F2-ACF8-4F72-9A67-9A9109AE2281}");
-
-            public static Guid EconomicAdvantageScore_Id = new Guid("{23D0E0D1-2C67-46AE-AE36-686B2D4C7DFA}");
-
-            public static Guid GlobalEquityScore_Id = new Guid("{FAA01154-D9D1-4045-B0F2-9B6F68FF7C63}");
-
-            public static Guid GlobalFixedIncomeScore_Id = new Guid("{A54D92A5-FC09-46FB-8F47-1F5D8DDA6500}");
-
-            public static Guid GlobalFundamentalScore_Id = new Guid("{45702089-9F9B-4B30-8A3C-934CE785FE31}");
-
-            public static Guid GlobalInnovationScore_Id = new Guid("{6366739A-0904-4003-B709-8189FFB8AB6A}");
-
-            public static Guid MultiAssetScore_Id = new Guid("{FA759891-E939-4D3C-A3BB-1032E7BF1D73}");
-
-            public static Guid SustainableInvestmentScore_Id = new Guid("{FAC0FC21-FD4E-4128-AEF6-8BE47356FDFC}");
         }
 
         public static class QueryStringNames

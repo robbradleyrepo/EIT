@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LionTrust.Foundation.Contact.Models;
+using System;
 using System.Collections.Generic;
 
 namespace LionTrust.Feature.EXM.ViewModels
@@ -17,22 +18,12 @@ namespace LionTrust.Feature.EXM.ViewModels
 
         public bool IsUnsubscribed { get; set; }
 
-        public IDictionary<Guid, int> Score { get; set; }
+        public IDictionary<Guid, ScoreViewModel> Scores { get; set; }
 
         public EntityViewModel()
         {
             Interactions = new List<InteractionViewModel>();
-            Score = new Dictionary<Guid, int>()
-            {
-                { Foundation.Contact.Constants.TeamScore.CashflowSolutionsScore_Id, 0 },
-                { Foundation.Contact.Constants.TeamScore.EconomicAdvantageScore_Id, 0 },
-                { Foundation.Contact.Constants.TeamScore.GlobalEquityScore_Id, 0 },
-                { Foundation.Contact.Constants.TeamScore.GlobalFixedIncomeScore_Id, 0 },
-                { Foundation.Contact.Constants.TeamScore.GlobalFundamentalScore_Id, 0 },
-                { Foundation.Contact.Constants.TeamScore.GlobalInnovationScore_Id, 0 },
-                { Foundation.Contact.Constants.TeamScore.MultiAssetScore_Id, 0 },
-                { Foundation.Contact.Constants.TeamScore.SustainableInvestmentScore_Id, 0 },
-            };
+            Scores = new Dictionary<Guid, ScoreViewModel>();
         }
     }
 }
