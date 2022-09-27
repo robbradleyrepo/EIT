@@ -5,6 +5,13 @@ Template: "e7f2d7a3-f29c-4844-8478-e2642aa24a0f"
 Path: /sitecore/content/LionTrustNew/Email Settings/Teams/Global Fundamental Team
 DB: master
 SharedFields:
+- ID: "9c6106ea-7a5a-48e2-8cad-f0f693b1e2d4"
+  Hint: __Read Only
+  Type: Checkbox
+  Value: 1
+- ID: "b50cee3e-4a68-4f12-9cd2-598a3ac51bfc"
+  Hint: SalesforceFieldId
+  Value: sc_Global_Fundamental_Score__c
 - ID: "b85c5351-2057-4000-ae1d-400bfec7bc04"
   Hint: ClickedThroughPoints
   Value: 10

@@ -4,8 +4,8 @@
 
     public interface ITeamScore : IExmGlassBase
     {
-        [SitecoreField(Constants.TeamScore.TeamOrganizationId_FieldID)]
-        string TeamOrganizationId { get; set; }
+        [SitecoreField(Constants.TeamScore.SalesforceFieldId_FieldID)]
+        string SalesforceFieldId { get; set; }
 
         [SitecoreField(Constants.TeamScore.EmailOpenedPoints_FieldID)]
         int EmailOpenedPoints { get; set; }

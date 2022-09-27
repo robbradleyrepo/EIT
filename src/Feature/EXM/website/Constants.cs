@@ -150,7 +150,7 @@ namespace LionTrust.Feature.EXM
             public static Guid Id = new Guid("{E7F2D7A3-F29C-4844-8478-E2642AA24A0F}");
             public static Guid TeamScoreFolderId = new Guid("{9059D6F0-7B2A-43E0-A624-15C2CCEA8D02}");
 
-            public const string TeamOrganizationId_FieldID = "{1700A7AE-7D7B-4C10-8D46-83143AE707C1}";
+            public const string SalesforceFieldId_FieldID = "{B50CEE3E-4A68-4F12-9CD2-598A3AC51BFC}";
             public const string EmailOpenedPoints_FieldID = "{C9026BE1-B064-49B2-89D2-7BE773AB08B1}";
             public const string ClickedThroughPoints_FieldID = "{B85C5351-2057-4000-AE1D-400BFEC7BC04}";
         }

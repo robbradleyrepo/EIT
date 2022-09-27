@@ -1,5 +1,6 @@
 ﻿using LionTrust.Foundation.Contact.Enums;
 using System;
+using System.Collections.Generic;
 
 namespace LionTrust.Feature.EXM.ViewModels
 {
@@ -30,8 +31,6 @@ namespace LionTrust.Feature.EXM.ViewModels
         public InteractionType Type { get; set; }
 
         public string Link { get; set; }
-
-        public int Score { get; set; }
 
         public bool FirstTime { get; set; }
     }
