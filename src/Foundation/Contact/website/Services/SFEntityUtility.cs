@@ -961,7 +961,7 @@
 
                 foreach(var score in scores)
                 {
-                    sfEntity.InternalFields[score.SalesforceFieldId] = GetScorePoints(sfEntity, Constants.SF_CashflowSolutionsScoreField, score.Score);
+                    sfEntity.InternalFields[score.SalesforceFieldId] = GetScorePoints(sfEntity, score.SalesforceFieldId, score.Score);
                 }
 
                 return sfEntity;
