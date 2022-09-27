@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LionTrust.Foundation.Contact.Models;
+using System;
 using System.Collections.Generic;
 
 namespace LionTrust.Feature.EXM.ViewModels
@@ -17,9 +18,12 @@ namespace LionTrust.Feature.EXM.ViewModels
 
         public bool IsUnsubscribed { get; set; }
 
+        public IDictionary<Guid, ScoreViewModel> Scores { get; set; }
+
         public EntityViewModel()
         {
             Interactions = new List<InteractionViewModel>();
+            Scores = new Dictionary<Guid, ScoreViewModel>();
         }
     }
 }

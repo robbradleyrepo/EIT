@@ -942,8 +942,9 @@
         /// <param name="entityId"></param>
         /// <param name="entityType"></param>
         /// <param name="scorePoints"></param>
+        /// <param name="scores"></param>
         /// <returns></returns>
-        public GenericSalesforceEntity GetEntityWithUpdatedScore(string entityId, string entityType, int scorePoints)
+        public GenericSalesforceEntity GetEntityWithUpdatedScore(string entityId, string entityType, int scorePoints, IEnumerable<ScoreViewModel> scores)
         {
             try
             {
@@ -956,13 +957,11 @@
                     return null;
                 }
 
-                if (double.TryParse(sfEntity.InternalFields[Constants.SF_ScoreField], out var score))
+                sfEntity.InternalFields[Constants.SF_ScoreField] = GetScorePoints(sfEntity, Constants.SF_ScoreField, scorePoints);
+
+                foreach(var score in scores)
                 {
-                    sfEntity.InternalFields[Constants.SF_ScoreField] = (score + scorePoints).ToString();
-                }
-                else
-                {
-                    sfEntity.InternalFields[Constants.SF_ScoreField] = scorePoints.ToString();
+                    sfEntity.InternalFields[score.SalesforceFieldId] = GetScorePoints(sfEntity, Constants.SF_CashflowSolutionsScoreField, score.Score);
                 }
 
                 return sfEntity;
@@ -1424,6 +1423,16 @@
         private bool IsUser(string entityId)
         {
             return entityId.StartsWith(Constants.PrefixSalesforceUser, StringComparison.InvariantCultureIgnoreCase);
+        }
+
+        private string GetScorePoints(GenericSalesforceEntity sfEntity, string fieldName, int scorePoints)
+        {
+            if (double.TryParse(sfEntity.InternalFields[fieldName], out var score))
+            {
+                return (score + scorePoints).ToString();
+            }
+
+            return scorePoints.ToString();
         }
     }
 }

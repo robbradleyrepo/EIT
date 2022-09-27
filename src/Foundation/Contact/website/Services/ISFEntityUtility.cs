@@ -108,8 +108,9 @@
         /// <param name="entityId"></param>
         /// <param name="entityType"></param>
         /// <param name="scorePoints"></param>
+        /// <param name="scores"></param>
         /// <returns></returns>
-        GenericSalesforceEntity GetEntityWithUpdatedScore(string entityId, string entityType, int scorePoints);
+        GenericSalesforceEntity GetEntityWithUpdatedScore(string entityId, string entityType, int scorePoints, IEnumerable<ScoreViewModel> scores);
 
         /// <summary>
         /// Generates engagement history object
