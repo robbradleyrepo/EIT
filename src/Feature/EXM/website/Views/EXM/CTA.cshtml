@@ -41,18 +41,9 @@
                                                                     <!--[if !mso]><!-- -->
                                                                 }
                                                                 <span class="msohide es-button-border" style="border-style:solid;border-color:#10a047;background:#ffffff;border-width:1px;display:inline-block;border-radius:5px;width:auto;mso-hide:all">
-                                                                    @if (Request.QueryString[GlobalSettings.OnlineVersionQueryStringKey] != "1")
+                                                                    @using (Html.Glass().BeginRenderLink(Model, s => s.CtaLink, new NameValueCollection { { "target", "_blank" }, { "class", "es-button" }, { "style", "mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#10a047;font-size:11px;border-style:solid;border-color:#ffffff;border-width:10px 20px 10px 20px;display:inline-block;background:#ffffff;border-radius:5px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:normal;font-style:normal;line-height:13px;width:auto;text-align:center" } }, isEditable: true, alwaysRender: true))
                                                                     {
-                                                                        using (Html.Glass().BeginRenderLink(Model, s => s.CtaLink, new NameValueCollection { { "target", "_blank" }, { "class", "es-button" }, { "style", "mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#10a047;font-size:11px;border-style:solid;border-color:#ffffff;border-width:10px 20px 10px 20px;display:inline-block;background:#ffffff;border-radius:5px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:normal;font-style:normal;line-height:13px;width:auto;text-align:center" } }, isEditable: true, alwaysRender: true))
-                                                                        {
-                                                                            @Html.Glass().Editable(Model, s => s.CtaText)
-                                                                        }
-                                                                    }
-                                                                    else if (!Sitecore.Context.PageMode.IsExperienceEditor && Model.CtaLink != null)
-                                                                    {
-                                                                    <a href="@Model.CtaLink.Url" target="_blank" class="es-button" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#10a047;font-size:11px;border-style:solid;border-color:#ffffff;border-width:10px 20px 10px 20px;display:inline-block;background:#ffffff;border-radius:5px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:normal;font-style:normal;line-height:13px;width:auto;text-align:center">
                                                                         @Html.Glass().Editable(Model, s => s.CtaText)
-                                                                    </a>
                                                                     }
                                                                 </span>
                                                                 <!--<![endif]-->
