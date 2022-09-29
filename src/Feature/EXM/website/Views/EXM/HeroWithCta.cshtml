@@ -59,7 +59,7 @@
                                                         <tr>
                                                             <td align="left" style="padding: 0; margin: 0;">
                                                                 <!--[if mso]>
-                                                                    @if (Model.CtaLink != null)
+                                                                    @if (Model.CtaLink != null && !string.IsNullOrEmpty(Model.CtaText))
                                                                     {
                                                                     <a href="@Model.CtaLink.Url" target="_blank" hidden>
                                                                         <v:roundrect

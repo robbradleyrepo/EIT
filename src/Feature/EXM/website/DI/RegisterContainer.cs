@@ -7,7 +7,6 @@ namespace LionTrust.Feature.EXM.DI
     using LionTrust.Feature.EXM.Repositories.Interfaces;
     using LionTrust.Feature.EXM.Services.Implementations;
     using LionTrust.Feature.EXM.Services.Interfaces;
-    using LionTrust.Foundation.Contact.Services;
     using Microsoft.Extensions.DependencyInjection;
     using Sitecore.DependencyInjection;
 
