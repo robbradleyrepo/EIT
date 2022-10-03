@@ -1,6 +1,7 @@
 ﻿using System.Web.Mvc;
 using Glass.Mapper.Sc.Web.Mvc;
 using LionTrust.Feature.EXM.Models;
+using LionTrust.Foundation.SitecoreExtensions.Extensions;
 using Sitecore.Mvc.Controllers;
 
 namespace LionTrust.Feature.EXM.Controllers

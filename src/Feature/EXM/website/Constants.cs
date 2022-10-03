@@ -239,6 +239,18 @@ namespace LionTrust.Feature.EXM
             public const string MessageInBrowserUrl = "$MessageBrowserUrl$";
         }
 
+        public static class CharatersLimit
+        {
+            public const int WebinarTitle = 25;
+            public const int WebinarSpeakers = 70;
+
+            public const int ArticleCardTitle = 47;
+            public const int ArticleCardShortDescription = 250;
+
+            public const int ArticleCardListTitle = 41;
+            public const int ArticleCardListShortDescription = 141;
+        }
+
         public const string SiteName = "LionTrust";
     }
 }
