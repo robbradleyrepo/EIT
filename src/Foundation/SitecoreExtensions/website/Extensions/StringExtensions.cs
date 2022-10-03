@@ -2,14 +2,14 @@
 {
     public static class StringExtensions
     {
-        public static string Ellipsis(this string text, int length)
+        public static string Ellipsis(this string text, int maxLength)
         {
-            if (text.Length <= length)
+            if (text.Length <= maxLength)
             {
                 return text;
             }
 
-            return text.Substring(0, length - 1).Trim() + "...";
+            return text.Substring(0, maxLength - 1).Trim() + "...";
         }
     }
 }
