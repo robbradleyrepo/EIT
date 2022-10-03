@@ -4,7 +4,7 @@
     {
         public static string Ellipsis(this string text, int maxLength)
         {
-            if (text.Length <= maxLength)
+            if (text.Length <= maxLength || maxLength <= 0)
             {
                 return text;
             }
