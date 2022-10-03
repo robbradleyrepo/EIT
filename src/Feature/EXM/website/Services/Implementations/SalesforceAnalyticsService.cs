@@ -72,7 +72,7 @@ namespace LionTrust.Feature.EXM.Services.Implementations
 
                 if (entities.SelectMany(x => x.Interactions).Any())
                 {
-                    var lastRun = entities.SelectMany(x => x.Interactions).Max(x => x.Date);
+                    var lastRun = entities.SelectMany(x => x.Interactions).Max(x => x.EndDate);
                     SetLastSyncDate(settings, lastRun);
                 }
             }
@@ -100,7 +100,7 @@ namespace LionTrust.Feature.EXM.Services.Implementations
             using (XConnectClient client = Sitecore.XConnect.Client.Configuration.SitecoreXConnectClientConfiguration.GetClient())
             {
                 var asyncQueryable = client.Interactions
-                        .Where(interaction => interaction.StartDateTime > fromDate && 
+                        .Where(interaction => interaction.EndDateTime > fromDate && 
                             interaction.Events.Any(x => x.DefinitionId == Sitecore.EmailCampaign.Model.Constants.EmailOpenedPageEventId ||
                                 x.DefinitionId == Sitecore.EmailCampaign.Model.Constants.EmailSentPageEventId ||
                                 x.DefinitionId == Sitecore.EmailCampaign.Model.Constants.ClickPageEventId))
@@ -124,7 +124,13 @@ namespace LionTrust.Feature.EXM.Services.Implementations
                     {
                         Interaction current = enumerator.Current;
 
-                        if (!current.CampaignId.HasValue)
+                        Guid campaignId;
+                        var campaignEvent = current.Events.FirstOrDefault(x => x is CampaignEvent);
+                        if (campaignEvent != null && campaignEvent is CampaignEvent campaign && campaign.CampaignDefinitionId != Guid.Empty)
+                        {
+                            campaignId = campaign.CampaignDefinitionId;
+                        }
+                        else
                         {
                             continue;
                         }
@@ -179,23 +185,23 @@ namespace LionTrust.Feature.EXM.Services.Implementations
 
                             if (ev is EmailSentEvent)
                             {
-                                var interaction = GetInteractionViewModel(xConnectContact.Id.Value, sfEntityId, current.CampaignId.Value, entityType, messageItem, messageUrl, email, current.StartDateTime, InteractionType.EmailSent);
+                                var interaction = GetInteractionViewModel(xConnectContact.Id.Value, sfEntityId, campaignId, entityType, messageItem, messageUrl, email, current.StartDateTime, current.EndDateTime, InteractionType.EmailSent);
                                 entity.Interactions.Add(interaction);
                             }
                             else if (ev is EmailOpenedEvent)
                             {
-                                var firstTime = await IsFirstEmailOpen(current.CampaignId.Value, xConnectContact.Id.Value, current.StartDateTime);
-                                var interaction = GetInteractionViewModel(xConnectContact.Id.Value, sfEntityId, current.CampaignId.Value, entityType, messageItem, messageUrl, email, current.StartDateTime, InteractionType.EmailOpen, firstTime);
+                                var firstTime = await IsFirstEmailOpen(campaignId, xConnectContact.Id.Value, current.StartDateTime);
+                                var interaction = GetInteractionViewModel(xConnectContact.Id.Value, sfEntityId, campaignId, entityType, messageItem, messageUrl, email, current.StartDateTime, current.EndDateTime, InteractionType.EmailOpen, firstTime);
                                 entity.Interactions.Add(interaction);
                             }
                             else if (ev is UnsubscribedFromEmailEvent unsubscribedEvent)
                             {
-                                var interaction = GetInteractionViewModel(xConnectContact.Id.Value, sfEntityId, current.CampaignId.Value, entityType, messageItem, messageUrl, email, current.StartDateTime, InteractionType.Unsubscribed);
+                                var interaction = GetInteractionViewModel(xConnectContact.Id.Value, sfEntityId, campaignId, entityType, messageItem, messageUrl, email, current.StartDateTime, current.EndDateTime, InteractionType.Unsubscribed);
                                 entity.Interactions.Add(interaction);
                             }
                             else if (ev is EmailClickedEvent clickedEvent)
                             {
-                                var interaction = GetInteractionViewModel(xConnectContact.Id.Value, sfEntityId, current.CampaignId.Value, entityType, messageItem, messageUrl, email, current.StartDateTime, InteractionType.LinkClicked, false, clickedEvent.Url);
+                                var interaction = GetInteractionViewModel(xConnectContact.Id.Value, sfEntityId, campaignId, entityType, messageItem, messageUrl, email, current.StartDateTime, current.EndDateTime, InteractionType.LinkClicked, false, clickedEvent.Url);
                                 entity.Interactions.Add(interaction);
                             }
                             else
@@ -217,7 +223,7 @@ namespace LionTrust.Feature.EXM.Services.Implementations
             {
                 var entitiesToSync = new List<GenericSalesforceEntity>();
 
-                var interactions = entities.SelectMany(x => x.Interactions).Where(x => x.Type != InteractionType.Unsubscribed).OrderBy(x => x.Date);
+                var interactions = entities.SelectMany(x => x.Interactions).Where(x => x.Type != InteractionType.Unsubscribed).OrderBy(x => x.StartDate);
                 foreach (var interaction in interactions)
                 {
                     var entity = _sfEntityUtility.GenerateEngagementHistory(
@@ -230,7 +236,7 @@ namespace LionTrust.Feature.EXM.Services.Implementations
                         interaction.MessageId,
                         interaction.MessageLink,
                         interaction.Link,
-                        interaction.Date,
+                        interaction.StartDate,
                         interaction.FirstTime);
 
                     entitiesToSync.Add(entity);
@@ -362,7 +368,8 @@ namespace LionTrust.Feature.EXM.Services.Implementations
             IMailMessage messageItem, 
             string messageUrl, 
             string email,
-            DateTime date,
+            DateTime startDate,
+            DateTime endDate,
             InteractionType interactionType,
             bool firstTime = false,
             string link = null)
@@ -382,7 +389,8 @@ namespace LionTrust.Feature.EXM.Services.Implementations
                 MessageName = messageItem.Name,
                 MessageLink = messageUrl,
                 Link = link,
-                Date = date,
+                StartDate = startDate,
+                EndDate = endDate,
                 FirstTime = firstTime,
                 Type = interactionType
             };
