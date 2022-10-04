@@ -9,6 +9,14 @@ SwiperCore.use([Navigation, Pagination]);
 
 export default () => {
 
+    // align carousel to left in awardsSlider.js
+    let description = document.getElementsByClassName("imagepromo__contentbox");
+    let fundScroller = document.getElementsByClassName("fundscroller-container");
+    if(description.length === 0){
+       fundScroller.classList.add("full-width-carousel"); 
+    }
+    
+
     let nodeList = document.querySelectorAll(".swiper-container-awards");
     for (let i = 0; i < nodeList.length; i++) {
      
@@ -28,38 +36,18 @@ export default () => {
 
     new Swiper('.swiper-container-awards', {
 
-        grabCursor: true,
         slidesPerView: 3,
-        centeredSlides: true,
         spaceBetween: 32,
         speed: 800,
         loop: false,
-        simulateTouch: true,
-        loopFillGroupWithBlank: false,
-        breakpointsInverse: true,
-        breakpoints: {
-            0: {
-                slidesPerView: 1.8,
-                centeredSlides: false
-            },
-            576: {
-                slidesPerView: 2,
-                centeredSlides: true
-            },
-            768: {
-                slidesPerView: 2.2,
-                centeredSlides: false
-            },
-            992: {
-                slidesPerView: 3,
-                centeredSlides: false
-            },
-        },
-
+        
+        
+     
 
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
+            
 
         },
         navigation: {
