@@ -53,6 +53,12 @@
                 return;
             }
 
+            if (currentUrl.ToLower().StartsWith("/?sc_mode=edit"))
+            {
+                Log.Debug("InvalidUrlProcessor: Skipping due to url containing /?sc_mode=edit.");
+                return;
+            }
+
             // do not redirect for the 404 page
             if (Context.Site != null && Context.Database != null)
             {
