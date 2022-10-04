@@ -61,6 +61,11 @@
             public const string CtaGoalFieldId = "{632237D3-8942-415E-AB0D-3F6051E31D63}";
         }
 
+        public static class CtaLinks
+        {
+            public const string HeadingFieldId = "{04A3D0A3-A898-43E4-A6E9-44D016760878}";
+        }
+
         public static class LinkWithGoal
         {
             public const string GoalFieldId = "{FEE8CC02-9E0E-4510-9343-F642A9ABAFEC}";

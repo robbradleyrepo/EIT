@@ -1,0 +1,32 @@
+﻿---
+ID: "124265b4-12b7-4cef-bd6b-03f2a19162d0"
+Parent: "ad887c47-c4ee-48cb-a429-7ff13fd09094"
+Template: "99f8905d-4a87-4eb8-9f8b-a9bebfb3add6"
+Path: "/sitecore/layout/Renderings/Feature/Navigation/UI002 - CTA Links"
+DB: master
+SharedFields:
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: /sitecore/templates/Project/LionTrust/Content Types/Navigation/CTA Links
+- ID: "51b435bc-f7b9-478a-9c51-52916af96ff5"
+  Hint: Path
+  Value: ~/views/navigation/CtaLinks.cshtml
+- ID: "a2f5d9df-8cba-4a1d-99eb-51acb94cb057"
+  Hint: Page Editor Buttons
+  Type: Treelist
+  Value: "{31A3A929-C599-4DD3-91A6-F4A9487CC8B7}"
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "site:ctalinks"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04437558-ac18-42cb-ab21-1243a66abe67"
+      Hint: Supports Local Datasource
+      Type: Checkbox
+      Value: 1
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: "20221004T091926:638004719665577971Z"

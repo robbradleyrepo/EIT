@@ -1,4 +1,6 @@
-﻿namespace LionTrust.Feature.Listings
+﻿using System;
+
+namespace LionTrust.Feature.Listings
 {
     public static class Constants
     {
@@ -158,6 +160,7 @@
         public static class Director
         {
             public const string Image_FieldId = "{1202E300-6635-4D4B-AB9E-21990AC3D601}";
+            public const string FirstName_FieldId = "{61373AD5-3A86-4C55-8792-5DFC66F6C21B}";
             public const string FullName_FieldId = "{40EC24BE-E4C8-4D5A-9226-6AFDBFF86698}";
             public const string Role_FieldId = "{0930A4BB-1CC6-471D-BC6B-FFD4097E2008}";
             public const string ShortBio_FieldId = "{97454B15-76C1-4AE0-AB59-C3F8D2304CCC}";
@@ -167,6 +170,19 @@
             public const string EmailLabel_FieldId = "{09F372E5-FEA3-4223-BD92-D2F20EBCC480}";
             public const string DirectLineLabel_FieldId = "{83BE90B2-30FF-4AB7-863F-AF1ED4B68B82}";
             public const string MobileLabel_FieldId = "{DD918658-BE8B-400F-A2B8-0940951726DB}";
+            public const string LinkedIn_FieldId = "{EF71DCA8-686B-4501-9096-2214CAC2708F}";
+            public const string SubHeader_FieldId = "{323233BE-9A0B-4D72-8948-054EE7B0D88E}";
+        }
+
+        public static class DirectorSettings
+        {
+            public static Guid DirectorSettings_Id = new Guid("{7C2A0318-38C4-43E7-BAAB-60A526275215}");
+
+            public const string Header_FieldId = "{336E4ABB-15EA-472D-826E-8DF5DFF67775}";
+            public const string LinkedInLabel_FieldId = "{B851B789-6BEF-44AC-9773-228F1D967460}";
+            public const string LinkedInImage_FieldId = "{D36DCFBB-97FD-4479-8469-559DC329B84F}";
+
+            public const string FirstNameToken = "{firstName}";
         }
 
         public static class OurValues

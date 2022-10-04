@@ -5,6 +5,9 @@
 
     public interface IDirector : IListingsGlassBase
     {
+        [SitecoreField(Constants.Director.FirstName_FieldId)]
+        string FirstName { get; set; }
+
         [SitecoreField(Constants.Director.FullName_FieldId)]
         string FullName { get; set; }
 
@@ -34,5 +37,11 @@
 
         [SitecoreField(Constants.Director.MobileLabel_FieldId)]
         string MobileLabel { get; set; }
+
+        [SitecoreField(Constants.Director.LinkedIn_FieldId)]
+        string LinkedIn { get; set; }
+
+        [SitecoreField(Constants.Director.SubHeader_FieldId)]
+        string SubHeader { get; set; }
     }
 }

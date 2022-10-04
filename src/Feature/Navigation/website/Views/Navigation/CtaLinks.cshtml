@@ -1,0 +1,50 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using System.Collections.Specialized
+@using LionTrust.Foundation.SitecoreExtensions.Extensions
+@model LionTrust.Feature.Navigation.Models.ICtaLinks
+
+@if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    return;
+}
+
+<div class="page-anchor-link" id="sticky-navbar">
+    <div class="container">
+        <div class="page-anchor full-wigth">
+            <div class="page-anchor__right page-anchor__right-mobile">
+                <button class="page-anchor__title" id="open-page-anchor">
+                    <span>@Html.Glass().Editable(m => m.Heading)</span>
+                </button>
+                <div class="page-anchor__links page-anchor__links-mobile">
+                    @foreach (var item in Model.Children)
+                    {
+                        using (Html.Glass().BeginRenderLink(item, m => m.CtaLink, new NameValueCollection { { "class", (item.CtaLink.IsCurrentPage(Sitecore.Context.Item) ? "page-anchor__link green" : "page-anchor__link") } }))
+                        {
+                            if (item.CtaLink != null && !string.IsNullOrEmpty(item.CtaName))
+                            {
+                                @Html.Glass().Editable(item, m => m.CtaName)
+                            }
+                        }
+                    }
+                </div>
+            </div>
+            <div class="page-anchor__right">
+                <button class="page-anchor__title">
+                    <span>@Html.Glass().Editable(m => m.Heading)</span>
+                </button>
+                <div class="page-anchor__links navbar">
+                    @foreach (var item in Model.Children)
+                    {
+                        using (Html.Glass().BeginRenderLink(item, m => m.CtaLink, new NameValueCollection { { "class", (item.CtaLink.IsCurrentPage(Sitecore.Context.Item) ? "page-anchor__link green" : "page-anchor__link") } }))
+                        {
+                            if (item.CtaLink != null && !string.IsNullOrEmpty(item.CtaName))
+                            {
+                                @Html.Glass().Editable(item, m => m.CtaName)
+                            }
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

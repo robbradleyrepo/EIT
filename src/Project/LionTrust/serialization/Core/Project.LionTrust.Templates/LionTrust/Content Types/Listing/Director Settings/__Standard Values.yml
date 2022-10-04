@@ -1,0 +1,24 @@
+﻿---
+ID: "b2d31f8c-df14-4edf-86f1-6c91b924e3b0"
+Parent: "d9cc432c-749a-44a5-b02f-006e012e15da"
+Template: "d9cc432c-749a-44a5-b02f-006e012e15da"
+Path: /sitecore/templates/Project/LionTrust/Content Types/Listing/Director Settings/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20221004T160212Z
+    - ID: "336e4abb-15ea-472d-826e-8df5dff67775"
+      Hint: Header
+      Value: "About {firstName}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "b851b789-6bef-44ac-9773-228f1d967460"
+      Hint: LinkedInLabel
+      Value: "VIEW {firstName}'S LINKEDIN PROFILE"
