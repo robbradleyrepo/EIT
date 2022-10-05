@@ -17,7 +17,8 @@ export default () => {
     selectBtn.on('click', function(){
         if(window.innerWidth < 992) {
             $(this).toggleClass("active");
-            $(this).next().toggleClass("open");
+            $(this).next().slideToggle().toggleClass("open");
         }
     });
+
 }
