@@ -1,6 +1,7 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @using System.Collections.Specialized
 @using LionTrust.Foundation.SitecoreExtensions.Extensions
+@using LionTrust.Foundation.Analytics.Goals
 @model LionTrust.Feature.Navigation.Models.ICtaLinks
 
 @if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
@@ -18,7 +19,7 @@
                 <div class="page-anchor__links page-anchor__links-mobile">
                     @foreach (var item in Model.Children)
                     {
-                        using (Html.Glass().BeginRenderLink(item, m => m.CtaLink, new NameValueCollection { { "class", (item.CtaLink.IsCurrentPage(Sitecore.Context.Item) ? "page-anchor__link green" : "page-anchor__link") } }))
+                        using (Html.Glass().BeginRenderLinkWithGoal(item, m => m.CtaLink, item.CtaLinkGoal, new NameValueCollection { { "class", (item.CtaLink.IsCurrentPage(Sitecore.Context.Item) ? "page-anchor__link green" : "page-anchor__link") } }))
                         {
                             if (item.CtaLink != null && !string.IsNullOrEmpty(item.CtaName))
                             {
@@ -35,7 +36,7 @@
                 <div class="page-anchor__links navbar">
                     @foreach (var item in Model.Children)
                     {
-                        using (Html.Glass().BeginRenderLink(item, m => m.CtaLink, new NameValueCollection { { "class", (item.CtaLink.IsCurrentPage(Sitecore.Context.Item) ? "page-anchor__link green" : "page-anchor__link") } }))
+                        using (Html.Glass().BeginRenderLinkWithGoal(item, m => m.CtaLink, item.CtaLinkGoal, new NameValueCollection { { "class", (item.CtaLink.IsCurrentPage(Sitecore.Context.Item) ? "page-anchor__link green" : "page-anchor__link") } }))
                         {
                             if (item.CtaLink != null && !string.IsNullOrEmpty(item.CtaName))
                             {
