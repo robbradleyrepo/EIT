@@ -9,6 +9,9 @@ export default () => {
     navLinks.each(function(){
         if($(this).attr("href").indexOf(pathnameTxt) !== -1) {
             $(this).addClass("active")
+            if(window.innerWidth < 992) {
+                $(".page-anchor__title > span").text($(this).text()).addClass("text-primary");
+            }
         }
     })
 
