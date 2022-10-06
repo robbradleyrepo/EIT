@@ -101,6 +101,8 @@
             font-weight: bold
             @include breakpoint(desktop, up)
                 cursor: default
+                flex: 0 0 25%
+                margin-right: 0
                 &::after
                     display: none
         .page-anchor__links
@@ -110,9 +112,13 @@
             @include breakpoint(desktop, up)
                 display: flex!important //override mobile JS on resize
                 flex-direction: row
-                justify-content: space-evenly
+                justify-content: center
                 align-items: center
                 padding: 0
+                li
+                    flex: 1
+                    text-align: center
+
         .page-anchor__link
             font-weight: 500
             margin-right: 0
@@ -127,7 +133,8 @@
             flex-direction: column
             align-items: flex-start
             @include breakpoint(desktop, up)
-                width: 100%
+                width: 80%
+                margin: 0 auto
                 flex-direction: row
                 align-items: center
     .page-anchor__right
