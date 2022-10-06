@@ -1,8 +1,10 @@
 ﻿namespace LionTrust.Feature.Fund.Models
 {
     using Glass.Mapper.Sc.Configuration.Attributes;
+    using Glass.Mapper.Sc.Fields;
     using LionTrust.Foundation.Legacy.Models;
     using LionTrust.Foundation.ORM.Models;
+    using System;
 
     public interface IFundHeader : IGlassBase
     {
@@ -19,9 +21,21 @@
         IAuthor FundManager { get; set; }
 
         [SitecoreField(Constants.FundHeader.BackgroundImageFieldId)]
-        Glass.Mapper.Sc.Fields.Image BackgroundImage { get;set; }
+        Image BackgroundImage { get;set; }
 
         [SitecoreField(Constants.FundHeader.FundSharingFieldId)]
         IFundShareLink FundSharing { get; set; }
+
+        [SitecoreField(Constants.FundHeader.PrimaryCtaLink)]
+        Link PrimaryCta { get; set; }
+
+        [SitecoreField(Constants.FundHeader.PrimaryCtaLinkGoal)]
+        Guid PrimaryCtaGoalId { get; set; }
+
+        [SitecoreField(Constants.FundHeader.SecondaryCtaLink)]
+        Link SecondaryCta { get; set; }
+
+        [SitecoreField(Constants.FundHeader.SecondaryCtaLinkGoal)]
+        Guid SecondaryCtaGoalId { get; set; }
     }
 }
