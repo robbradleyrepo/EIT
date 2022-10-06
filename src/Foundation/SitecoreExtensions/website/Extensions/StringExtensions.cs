@@ -1,4 +1,6 @@
-﻿namespace LionTrust.Foundation.SitecoreExtensions.Extensions
+﻿using System.Text.RegularExpressions;
+
+namespace LionTrust.Foundation.SitecoreExtensions.Extensions
 {
     public static class StringExtensions
     {
@@ -10,6 +12,16 @@
             }
 
             return text.Substring(0, maxLength - 1).Trim() + "...";
+        }
+
+        public static string RemoveWhiteSpace(this string text)
+        {
+            if (text == null)
+            {
+                return text;
+            }
+
+            return Regex.Replace(text, @"\s+", "");
         }
     }
 }

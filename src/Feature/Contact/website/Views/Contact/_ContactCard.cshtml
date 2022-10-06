@@ -1,4 +1,5 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Foundation.SitecoreExtensions.Extensions
 @using System.Collections.Specialized
 @model LionTrust.Feature.Contact.Models.IContactCard
 @if (Model != null)
@@ -46,12 +47,16 @@
                                         <span class="lit-column">@Html.Glass().Editable(Model, m => m.TelLabel)</span>
                                     }
                                     <div class="contacts__phones">
-                                        <span class="contacts__phone">@Html.Glass().Editable(Model, m => m.TelNumber)</span>
+                                        <span class="contacts__phone">
+                                            <a href="tel:@Model.TelNumber.RemoveWhiteSpace()" class="phone__link">@Html.Glass().Editable(Model, d => d.TelNumber)</a>
+                                        </span>
                                         @if (showTelDivider)
                                         {
                                             <span class="contacts__divider">/</span>
                                         }
-                                        <span class="contacts__phone">@Html.Glass().Editable(Model, m => m.OutsideTelNumber)</span>
+                                        <span class="contacts__phone">
+                                            <a href="tel:@Model.OutsideTelNumber.RemoveWhiteSpace()" class="phone__link">@Html.Glass().Editable(Model, d => d.OutsideTelNumber)</a>
+                                        </span>
                                         @if (!string.IsNullOrEmpty(Model.OutsideTelNumber) || Sitecore.Context.PageMode.IsExperienceEditor)
                                         {
                                             <span class="gray-text">@Html.Glass().Editable(Model, m => m.OutsideLabel)</span>
@@ -65,12 +70,16 @@
                                         <span class="lit-column">@Html.Glass().Editable(Model, m => m.FaxLabel)</span>
                                     }
                                     <div class="contacts__phones">
-                                        <span class="contacts__phone">@Html.Glass().Editable(Model, m => m.FaxNumber)</span>
+                                        <span class="contacts__phone">
+                                            <a href="tel:@Model.FaxNumber.RemoveWhiteSpace()" class="phone__link">@Html.Glass().Editable(Model, d => d.FaxNumber)</a>
+                                        </span>
                                         @if (showFaxDivider)
                                         {
                                             <span class="contacts__divider">/</span>
                                         }
-                                        <span class="contacts__phone">@Html.Glass().Editable(Model, m => m.OutsideFaxNumber)</span>
+                                        <span class="contacts__phone">
+                                            <a href="tel:@Model.OutsideFaxNumber.RemoveWhiteSpace()" class="phone__link">@Html.Glass().Editable(Model, d => d.OutsideFaxNumber)</a>
+                                        </span>
                                         @if (!string.IsNullOrEmpty(Model.OutsideFaxNumber) || Sitecore.Context.PageMode.IsExperienceEditor)
                                         {
                                             <span class="gray-text">@Html.Glass().Editable(Model, m => m.OutsideLabel)</span>
@@ -89,7 +98,7 @@
                                         @Model.CTA1Link.Text
                                         <i class="icon-arrow-right animate-arrow"></i>
                                     }
-                                    
+
                                 }
                                 else if (Sitecore.Context.PageMode.IsExperienceEditor)
                                 {
