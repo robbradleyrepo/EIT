@@ -1,12 +1,29 @@
   import Swiper, { Pagination } from "swiper/bundle";
 
   export default () => {
+      //create new var for pagination
+     
+      //create new variable for the amount of carousel cards 
+      // align carousel to left in awardsSlider.js
+       let description = document.getElementsByClassName("imagepromo__contentbox p").length;
+       let fundScroller = document.getElementsByClassName("fundscroller-container");
+       let prevArrow = document.getElementsByClassName("swiper-button-prev");
+       let nextArrow = document.getElementsByClassName("swiper-button-next");
+
+       if(description.length === 0 || fundScroller.length < 3){
+        fundScroller.classList.add("full-width-carousel");
+        nextArrow.classList.add("hide-arrows");
+        prevArrow.classList.add("hide-arrows"); 
+        //if carousel cards less than 3, then pagination = false, loop=false
+     }
+    
+     
+
     const swiper = new Swiper(".swiper-container-funds", {
       grabCursor: true,
       slidesPerView: "auto",
       breakpointsInverse: true,
-      slidesOffsetAfter: 600,
-      loop: true,
+      slidesOffsetAfter: 30,
       observer: true,
       observeParents: true,
       watchSlidesVisibility: true,

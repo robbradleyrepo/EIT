@@ -8,21 +8,16 @@ SwiperCore.use([Navigation, Pagination]);
 
 
 export default () => {
-
-    // align carousel to left in awardsSlider.js
-    let description = document.getElementsByClassName("imagepromo__contentbox");
-    let fundScroller = document.getElementsByClassName("fundscroller-container");
-    if(description.length === 0){
-       fundScroller.classList.add("full-width-carousel"); 
-    }
     
+  
+  
 
     let nodeList = document.querySelectorAll(".swiper-container-awards");
     for (let i = 0; i < nodeList.length; i++) {
      
 
         let countAllSlides = nodeList[i].querySelectorAll('.slideDiv').length;
-        console.log(countAllSlides)
+        console.log("all slides = "+ countAllSlides)
         let maxSlidersWhithNoPagination = 3;
 
         // remove pagination 
