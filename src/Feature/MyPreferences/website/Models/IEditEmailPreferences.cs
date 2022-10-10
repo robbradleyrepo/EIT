@@ -18,6 +18,12 @@ namespace LionTrust.Feature.MyPreferences.Models
         [SitecoreField(Constants.EditPreferences.SuccessPage_FieldId)]
         IGlassBase SuccessPage { get; set; }
 
+        [SitecoreField(Constants.EditPreferences.UnsubscribeTortoiseNewsletterLabel_FieldId)]
+        string UnsubscribeTortoiseNewsletterLabel { get; set; }
+
+        [SitecoreField(Constants.EditPreferences.UnsubscribeTortoiseNewsletterText_FieldId)]
+        string UnsubscribeTortoiseNewsletterText { get; set; }
+
         [SitecoreField(Constants.EditPreferences.UnsubscribeAllLabel_FieldId)]
         string UnsubscribeAllLabel { get; set; }
 

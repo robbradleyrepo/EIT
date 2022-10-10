@@ -200,6 +200,11 @@
                 sfEntity.InternalFields.SetField<bool>(Constants.SF_EmailOptOutField, context.Preferences.Unsubscribe);
                 sfEntity.InternalFields.SetField<DateTime>(Constants.SF_DateOfConcentField, DateTime.Now);
 
+                if (sfEntity.InternalFields.Contains(Constants.SF_TortoiseNewsletter))
+                {
+                    sfEntity.InternalFields.SetField<bool>(Constants.SF_TortoiseNewsletter, context.Preferences.TortoiseNewsletter);
+                }
+
                 var isAnyProcessOrFundSelected = false;
                 if (!context.Preferences.Unsubscribe)
                 {
@@ -1187,6 +1192,8 @@
                 returnObj.Unsubscribe = sfContact.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
                 returnObj.IsUkResident = sfContact.InternalFields.GetField<bool>(Constants.SF_UKResident);
                 returnObj.IsConsentGivenDateEmpty = (sfContact.InternalFields[Constants.SF_DateOfConcentField] == null) ? true : false;
+                returnObj.TortoiseNewsletter = sfContact.InternalFields.Contains(Constants.SF_TortoiseNewsletter) ? sfContact.InternalFields.GetField<bool>(Constants.SF_TortoiseNewsletter) : false;
+
                 return returnObj;
             }
 
@@ -1212,6 +1219,7 @@
                 returnObj.LastName = sfLead.LastName;
                 returnObj.IncludeInLTNews = sfLead.InternalFields.GetField<bool>(Constants.SF_LTNewsField);
                 returnObj.Unsubscribe = sfLead.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
+                returnObj.TortoiseNewsletter = sfLead.InternalFields.Contains(Constants.SF_TortoiseNewsletter) ? sfLead.InternalFields.GetField<bool>(Constants.SF_TortoiseNewsletter) : false;
                 returnObj.IsUkResident = sfLead.InternalFields.GetField<bool>(Constants.SF_UKResident);
                 returnObj.IsConsentGivenDateEmpty = (sfLead.InternalFields[Constants.SF_DateOfConcentField] == null) ? true : false;
                 return returnObj;

@@ -89,6 +89,7 @@ namespace LionTrust.Foundation.Contact
         public const string SF_Hard_BouncedField = "pi__pardot_hard_bounced__c";
         public const string SF_ScoreField = "Score__c";
         public const string SF_CreatedDateField = "CreatedDate";
+        public const string SF_TortoiseNewsletter = "Tortoise_Newsletter__c";
 
         //S4S SitecoreXDBContact Salesforce object fields
         public const string SFSitecoreXDBContactObjectName = "FuseITAnalytics__SitecoreXDBContact__c";

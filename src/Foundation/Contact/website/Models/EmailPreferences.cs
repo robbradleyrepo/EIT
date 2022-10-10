@@ -10,6 +10,7 @@
         public string LastName { get; set; }
         public bool IncludeInLTNews { get; set; }
         public bool Unsubscribe { get; set; }
+        public bool TortoiseNewsletter { get; set; }
         public bool IsConsentGivenDateEmpty { get; set; }
         public bool IsUkResident { get; set; }
         public List<SFProcess> SFProcessList { get; set; }
