@@ -62,6 +62,10 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Sitecore.Analytics.RobotDetection, Version=13.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\dependencies\Sitecore.Analytics\Sitecore.Analytics.RobotDetection.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
@@ -89,6 +93,7 @@
     <Content Include="sitecore\login\LionTrust_Wallpaper.jpg" />
     <Content Include="sitecore\shell\client\Sitecore\ContentTesting\ShowSuggestedTestsCommand.js" />
     <Content Include="sitecore\shell\Controls\Rich Text Editor\RichText Commands.js" />
+    <Content Include="sitecore\shell\hotfixes\SC Hotfix 374154-1.txt" />
     <Content Include="sitecore\shell\hotfixes\SC Hotfix 490409-1.package.ids.txt" />
     <Content Include="Views\Layouts\LionTrust\Default.cshtml" />
     <Content Include="App_Config\Include\Project\z.LionTrust.DevSettings.config" />
