@@ -2,6 +2,7 @@
 {
     using Glass.Mapper.Sc.Web.Mvc;
     using LionTrust.Feature.Search.SearchOverlay;
+    using LionTrust.Foundation.ORM.Models;
     using Moq;
     using NUnit.Framework;
 
@@ -29,6 +30,8 @@
         public void ReturnANonNullWhenDatasourceIsFound()
         {
             var overlay = new Mock<ISearchOverlay>();
+            var searchResultPage = new Mock<IGlassBase>();
+            overlay.SetupProperty(m => m.SearchResultsPage, searchResultPage.Object);
             _context.Setup(c => c.GetDataSourceItem<ISearchOverlay>()).Returns(overlay.Object);
             var target = new SearchOverlayController(_context.Object);
             var result = target.Render();
