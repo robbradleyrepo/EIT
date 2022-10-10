@@ -1,16 +1,34 @@
 .people-card
     padding-bottom: 20px
+    display: flex
+    flex-direction: row
+    @include breakpoint(desktop, up)
+        flex-direction: column
     &__image
-        padding-bottom: 15px
+        @include breakpoint(desktop, up)
+            padding-bottom: 15px
         img
             display: block
+            max-width: 100px
+            border-radius: 10px
+            @include breakpoint(desktop, up)
+                max-width: none
+                border-radius: 0
     &__content
+        padding-left: 20px
+        @include breakpoint(desktop, up)
+            padding-left: 0
         a
             text-transform: uppercase
-            font-size: 10px
+            font-size: 12px
+            line-height: 17px
             display: inline-block
             color: $primary
             letter-spacing: 2.4px
+            padding-top: 20px
+            @include breakpoint(desktop, up)
+                font-size: 10px
+                padding-top: 0
             i
                 padding-left: 5px
 
@@ -18,7 +36,12 @@
             margin: 0
             &:not(.people-card__content-title)
                 font-size: 1rem
-                line-height: 12px
+                line-height: 22px
+                @include breakpoint(desktop, up)
+                    line-height: 12px
         &-title
-            padding-bottom: 10px
             color: $gold
+            line-height: 32px
+            @include breakpoint(desktop, up)
+                font-size: 26px
+                padding-bottom: 10px
