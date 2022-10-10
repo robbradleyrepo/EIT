@@ -29,17 +29,17 @@ export default () => {
       $(".sticky-navbar-wrapper").removeClass("add-paddings");
       $(".sticky-navbar-wrapper").css("padding-top", "0");
     }
-    $(".page-anchor__links-mobile").stop().slideUp();
+    $(".page-anchor__links-mobile").slideUp();
     $("#open-page-anchor").removeClass("active");
   }
   const openBtn = $("#open-page-anchor");
   openBtn.on("click", (e) => {
     e.stopPropagation();
-    $(".page-anchor__links-mobile").stop().slideToggle();
+    $(".page-anchor__links-mobile").slideToggle();
     openBtn.toggleClass("active");
   });
   document.addEventListener("click", () => {
-    $(".page-anchor__links-mobile").stop().slideUp();
+    $(".page-anchor__links-mobile").slideUp();
     openBtn.removeClass("active");
   });
   (function ($) {
