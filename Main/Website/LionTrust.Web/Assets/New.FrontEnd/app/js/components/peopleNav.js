@@ -1,13 +1,10 @@
 export default () => {
     //active class
     var navLinks = $(".page-anchor__links li a");
-    var pathname = location.pathname.split(".");
-    pathname.pop();
-    
-    var pathnameTxt = pathname.join();
-    
+    var pathname = location.pathname;
+   
     navLinks.each(function(){
-        if($(this).attr("href").indexOf(pathnameTxt) !== -1) {
+        if($(this).attr("href") === pathname) {
             $(this).addClass("active")
             if(window.innerWidth < 992) {
                 $(".page-anchor__title > span").text($(this).text()).addClass("text-primary");
