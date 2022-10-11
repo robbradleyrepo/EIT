@@ -1,5 +1,5 @@
 .people-card
-    padding-bottom: 20px
+    padding-bottom: 25px
     display: flex
     flex-direction: row
     @include breakpoint(desktop, up)
@@ -27,21 +27,23 @@
             letter-spacing: 2.4px
             padding-top: 20px
             @include breakpoint(desktop, up)
-                font-size: 10px
-                padding-top: 0
+                padding-top: 15px
             i
                 padding-left: 5px
-
         p
             margin: 0
             &:not(.people-card__content-title)
                 font-size: 1rem
                 line-height: 22px
                 @include breakpoint(desktop, up)
-                    line-height: 12px
+                    font-size: 20px
+                    line-height: 26px
+                    letter-spacing: 0.2px
         &-title
             color: $gold
+            font-size: 20px
             line-height: 32px
+            font-weight: 300
             @include breakpoint(desktop, up)
-                font-size: 26px
-                padding-bottom: 10px
+                font-size: 32px
+                line-height: 38px
