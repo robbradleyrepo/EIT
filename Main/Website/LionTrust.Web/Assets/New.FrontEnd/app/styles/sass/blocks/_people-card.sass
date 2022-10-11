@@ -1,0 +1,49 @@
+.people-card
+    padding-bottom: 25px
+    display: flex
+    flex-direction: row
+    @include breakpoint(desktop, up)
+        flex-direction: column
+    &__image
+        @include breakpoint(desktop, up)
+            padding-bottom: 15px
+        img
+            display: block
+            max-width: 100px
+            border-radius: 10px
+            @include breakpoint(desktop, up)
+                max-width: none
+                border-radius: 0
+    &__content
+        padding-left: 20px
+        @include breakpoint(desktop, up)
+            padding-left: 0
+        a
+            text-transform: uppercase
+            font-size: 12px
+            line-height: 17px
+            display: inline-block
+            color: $primary
+            letter-spacing: 2.4px
+            padding-top: 20px
+            @include breakpoint(desktop, up)
+                padding-top: 15px
+            i
+                padding-left: 5px
+        p
+            margin: 0
+            &:not(.people-card__content-title)
+                font-size: 1rem
+                line-height: 22px
+                @include breakpoint(desktop, up)
+                    font-size: 20px
+                    line-height: 26px
+                    letter-spacing: 0.2px
+        &-title
+            color: $gold
+            font-size: 20px
+            line-height: 32px
+            font-weight: 300
+            @include breakpoint(desktop, up)
+                font-size: 32px
+                line-height: 38px
