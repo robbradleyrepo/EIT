@@ -97,18 +97,25 @@
         color: $primary
 .page-anchor.full-wigth
     &.people-anchors
+        padding: 10px 0
+        @include breakpoint(desktop, up)
+            padding: 13px 0
         .page-anchor__title
             font-weight: bold
+            font-size: 16px
+            line-height: 22px
             @include breakpoint(desktop, up)
                 cursor: default
                 flex: 0 0 25%
                 margin-right: 0
+                font-size: 20px
+                line-height: 25px
                 &::after
                     display: none
         .page-anchor__links
             display: none
             width: 100%
-            padding: 5px 0
+            padding: 10px 0 5px
             @include breakpoint(desktop, up)
                 display: flex!important //override mobile JS on resize
                 flex-direction: row
@@ -120,6 +127,8 @@
                     text-align: center
 
         .page-anchor__link
+            font-size: 16px
+            line-height: 22px
             font-weight: 500
             margin-right: 0
             border: 0
@@ -128,6 +137,8 @@
                 color: $primary
             @include breakpoint(desktop, up)
                 padding: 0
+                font-size: 20px
+                line-height: 25px
         .page-anchor__right
             display: flex
             flex-direction: column
