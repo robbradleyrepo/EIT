@@ -9,10 +9,13 @@
        let fundScroller = document.getElementsByClassName("fundscroller-container");
        let prevArrow = document.getElementsByClassName("swiper-button-prev");
        let nextArrow = document.getElementsByClassName("swiper-button-next");
-       let allCards = document.getElementsByClassName("swiper-slide fund-card");
-       let swiperPagination = document.getElementsByClassName("swiper-pagination");
 
-      
+       if(description.length === 0 || fundScroller.length < 3){
+        fundScroller.classList.add("full-width-carousel");
+        nextArrow.classList.add("hide-arrows");
+        prevArrow.classList.add("hide-arrows"); 
+        //if carousel cards less than 3, then pagination = false, loop=false
+     }
     
      
 
@@ -22,7 +25,6 @@
       breakpointsInverse: true,
       slidesOffsetAfter: 30,
       observer: true,
-      loop: true,
       observeParents: true,
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
@@ -45,17 +47,6 @@
       initialSlide: 1,
 
       });
-      //left align if no description is available
-      if(description.length === 0){
-        fundScroller.classList.add("full-width-carousel");
-      }
-
-       //if carousel cards less than 3, hide pagination and arrows
-       if(allCards.length > 3){
-        swiperPagination.classList.add("hide-pagination");
-        nextArrow.classList.add("hide-arrows");
-        prevArrow.classList.add("hide-arrows");
-       }
   };
 
 
