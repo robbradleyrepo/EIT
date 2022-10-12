@@ -5,7 +5,7 @@
       grabCursor: true,
       slidesPerView: "auto",
       breakpointsInverse: true,
-      slidesOffsetAfter: 30,
+      slidesOffsetAfter: 600,
       loop: true,
       observer: true,
       observeParents: true,
