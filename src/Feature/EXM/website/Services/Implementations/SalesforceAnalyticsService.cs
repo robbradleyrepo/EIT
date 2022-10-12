@@ -304,7 +304,7 @@ namespace LionTrust.Feature.EXM.Services.Implementations
             foreach (var contact in entities)
             {
                 var unsubscribed = false;
-                contact.IsUnsubscribed = _sfEntityUtility.IsUnsubscribed(contact.SalesforceEntityId);
+                contact.IsUnsubscribed = _sfEntityUtility.IsExmUnsubscribed(contact.SalesforceEntityId);
 
                 if (!contact.IsUnsubscribed && !unsubscribed)
                 {

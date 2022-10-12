@@ -54,9 +54,7 @@ namespace LionTrust.Foundation.Contact
         //Salesforce Contact and Lead field names
         public const string SF_IdField = "Id";
         public const string SF_LTNewsField = "Liontrust_News__c";
-        public const string SF_FactSheetField = "Factsheets__c";
-        public const string SF_RelBlogField = "Relevant_Blogs__c";
-        public const string SF_Commentaries = "Monthly_Commentaries__c";
+        public const string SF_InsightsField = "Insights__c";
         public const string SF_EmailOptOutField = "HasOptedOutOfEmail";
         public const string SF_DateOfConcentField = "Date_of_Consent_Given__c";
         public const string SF_SitecoreVistorIdField = "FuseITAnalytics__SitecoreVisitorId__c";
