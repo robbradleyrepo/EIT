@@ -4,11 +4,31 @@
     &-full-height
         .modal-dialog, .modal-content
             height: 100%
+        .modal-dialog
+            overflow: hidden
+        .modal-content
+            overflow: auto
     &-right
+        &.fade
+            &.show
+                .modal-dialog
+                    transform: translate(0, 0) 
+            .modal-dialog
+                transform: translate(100%, 0)
         .modal-dialog
             margin-right: -18px
             margin-top: 0
             margin-bottom: 0
+        .modal-header
+            padding: 0
+            button
+                background: transparent
+                border: none
+                margin: 0 0 0 auto
+                padding-right: 0
+                font-size: 24px
+                i
+                    color: rgba($just-black, 0.5)
     &-content
         border-radius: 10px
 
@@ -45,5 +65,5 @@
     &__close
         margin-top: 21px
     &-open
-        .footer__change-type
-            visibility: hidden
+        header, footer
+            z-index: -1
