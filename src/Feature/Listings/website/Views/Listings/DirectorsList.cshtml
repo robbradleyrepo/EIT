@@ -1,5 +1,6 @@
 ﻿@using System.Collections.Specialized
 @using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Foundation.SitecoreExtensions.Extensions
 @model LionTrust.Feature.Listings.Models.IDirectorsList
 <section class="container">
     <h2 class="h2 mb-4 pt-3">@Html.Glass().Editable(Model, m => m.Title)</h2>
@@ -35,18 +36,18 @@
                                         @if (!string.IsNullOrEmpty(director.DirectLine) || Sitecore.Context.PageMode.IsExperienceEditorEditing)
                                         {
                                             <span class="director-card__info-label">@Html.Glass().Editable(director, d => d.DirectLineLabel)</span>
-                                            <a href="tel:@director.DirectLine" class="director-card__link">@Html.Glass().Editable(director, d => d.DirectLine)</a><br />
+                                            <a href="tel:@director.DirectLine.RemoveWhiteSpace()" class="director-card__link">@Html.Glass().Editable(director, d => d.DirectLine)</a><br />
                                         }
                                         @if (!string.IsNullOrEmpty(director.MobileNumber) || Sitecore.Context.PageMode.IsExperienceEditorEditing)
                                         {
                                             <span class="director-card__info-label">@Html.Glass().Editable(director, d => d.MobileLabel)</span>
-                                            <a href="tel:@director.MobileNumber" class="director-card__link">@Html.Glass().Editable(director, d => d.MobileNumber)</a><br />
+                                            <a href="tel:@director.MobileNumber.RemoveWhiteSpace()" class="director-card__link">@Html.Glass().Editable(director, d => d.MobileNumber)</a><br />
                                         }
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>                    
+                    </div>
                 }
             }
         }

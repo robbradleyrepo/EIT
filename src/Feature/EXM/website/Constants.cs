@@ -150,7 +150,7 @@ namespace LionTrust.Feature.EXM
             public static Guid Id = new Guid("{E7F2D7A3-F29C-4844-8478-E2642AA24A0F}");
             public static Guid TeamScoreFolderId = new Guid("{9059D6F0-7B2A-43E0-A624-15C2CCEA8D02}");
 
-            public const string TeamOrganizationId_FieldID = "{1700A7AE-7D7B-4C10-8D46-83143AE707C1}";
+            public const string SalesforceFieldId_FieldID = "{B50CEE3E-4A68-4F12-9CD2-598A3AC51BFC}";
             public const string EmailOpenedPoints_FieldID = "{C9026BE1-B064-49B2-89D2-7BE773AB08B1}";
             public const string ClickedThroughPoints_FieldID = "{B85C5351-2057-4000-AE1D-400BFEC7BC04}";
         }
@@ -162,6 +162,11 @@ namespace LionTrust.Feature.EXM
             public const string LastSyncDate_FieldID = "{3C1206F7-8BFD-4A84-A1AB-B16C4FDE7F88}";
             public const string Enabled_FieldID = "{8453ECF3-635E-4DF9-A722-2F4095946B98}";
             public const string Running_FieldID = "{D3EDC1AB-7F5A-4638-800B-2E90C4F06B4A}";
+
+            public const string FromAddress_FieldID = "{9344D3F5-D404-4D9A-AAED-1D01538AF948}";
+            public const string FromDisplayName_FieldID = "{E10A3410-AB22-4B09-A195-293D9A2E34BA}";
+            public const string ToAddress_FieldID = "{F547F117-8ECC-44AA-85ED-A68AB4504F9C}";
+            public const string Subject_FieldID = "{D3E491F9-3E79-40E7-9CB5-F86CFA7FEECC}";
         }
 
         public static class ContactList
@@ -232,6 +237,18 @@ namespace LionTrust.Feature.EXM
             public const string OwnerRegion = "ownerregion";
 
             public const string MessageInBrowserUrl = "$MessageBrowserUrl$";
+        }
+
+        public static class CharatersLimit
+        {
+            public const int WebinarTitle = 25;
+            public const int WebinarSpeakers = 70;
+
+            public const int ArticleCardTitle = 47;
+            public const int ArticleCardShortDescription = 250;
+
+            public const int ArticleCardListTitle = 41;
+            public const int ArticleCardListShortDescription = 141;
         }
 
         public const string SiteName = "LionTrust";

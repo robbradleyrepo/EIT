@@ -1,6 +1,7 @@
 ﻿namespace LionTrust.Foundation.Contact.Services
 {
     using FuseIT.Sitecore.Personalization.Facets;
+    using FuseIT.Sitecore.SalesforceConnector;
     using FuseIT.Sitecore.SalesforceConnector.Entities;
     using LionTrust.Foundation.Contact.Enums;
     using LionTrust.Foundation.Contact.Models;
@@ -107,8 +108,9 @@
         /// <param name="entityId"></param>
         /// <param name="entityType"></param>
         /// <param name="scorePoints"></param>
+        /// <param name="scores"></param>
         /// <returns></returns>
-        GenericSalesforceEntity GetEntityWithUpdatedScore(string entityId, string entityType, int scorePoints);
+        GenericSalesforceEntity GetEntityWithUpdatedScore(string entityId, string entityType, int scorePoints, IEnumerable<ScoreViewModel> scores);
 
         /// <summary>
         /// Generates engagement history object
@@ -126,6 +128,19 @@
         /// <param name="firstTime"></param>
         /// <returns></returns>
         GenericSalesforceEntity GenerateEngagementHistory(string sfEntityId, string sfCampaignId, EntityType entityType, InteractionType interactionType, string contactList, string email, Guid messageId, string messageLink, string link, DateTime date, bool firstTime = false);
+
+        /// <summary>
+        /// Get contacts and leads that have not received the welcome email
+        /// </summary>
+        /// <param name="fromDate"></param>
+        /// <returns></returns>
+        List<GenericSalesforceEntity> GetEntitiesToSendWecomeEmail(DateTime fromDate);
+
+        string GetEditEmailPrefPageLink(string preferencesUrl, string randomGuid, string entityId);
+
+        string GetFundDashboardLink(string fundDashboardUrl, string randomGuid, string entityId);
+
+        string GetFullName(InternalFields fields);
 
         /// <summary>
         /// Checks if a salesforce entity is a contact 

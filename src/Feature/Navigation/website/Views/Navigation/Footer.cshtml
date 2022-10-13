@@ -2,6 +2,7 @@
 @using System.Collections.Specialized;
 @using LionTrust.Foundation.Navigation.Models;
 @using LionTrust.Foundation.Analytics.Goals
+@using LionTrust.Foundation.SitecoreExtensions.Extensions
 @model LionTrust.Feature.Navigation.Models.IHome
 @if (Model != null && Model.FooterConfiguration != null)
 {
@@ -40,7 +41,7 @@
                                 <span class="footer__title h5">@Html.Glass().Editable(Model.FooterConfiguration, x => x.GetInTouchLabel)</span>
                                 <ul class="footer__list">
                                     <li class="footer__item">
-                                        <a href="tel:@Model.FooterConfiguration.PhoneNumber" class="footer__link" data-goal-trigger="@Model.FooterConfiguration.PhoneGoal">@Html.Glass().Editable(Model.FooterConfiguration, x => x.PhoneNumber)</a>
+                                        <a href="tel:@Model.FooterConfiguration.PhoneNumber.RemoveWhiteSpace()" class="footer__link" data-goal-trigger="@Model.FooterConfiguration.PhoneGoal">@Html.Glass().Editable(Model.FooterConfiguration, x => x.PhoneNumber)</a>
                                     </li>
                                     <li class="footer__item">
                                         <a href="mailto:@Model.FooterConfiguration.Email" class="footer__link footer__link_arrow" data-goal-trigger="@Model.FooterConfiguration.EmailCTAGoal">
@@ -50,35 +51,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="social">
-                                @if (Model.FooterConfiguration != null
-                                    && Model.FooterConfiguration.SocialIcons != null
-                                    && Model.FooterConfiguration.SocialIcons.Any())
-                                {
-                                    foreach (var socialLink in Model.FooterConfiguration.SocialIcons)
-                                    {
-                                        if (socialLink.TwitterAccounts == null || !socialLink.TwitterAccounts.Any())
-                                        {
-                                            <a href="@(socialLink.SocialLink != null ? socialLink.SocialLink.Url : "#")"
-                                               class="social__link" data-goal-trigger="@socialLink.SocialLinkGoal" target="_blank">
-                                                @Html.Glass().RenderImage(socialLink, x => x.SocialIcon, new NameValueCollection { { "class", "social__link-icon" } }, isEditable: true)
-                                            </a>
-                                        }
-                                        else
-                                        {
-                                            <span class="social__link">
-                                                @Html.Glass().RenderImage(socialLink, x => x.SocialIcon, new NameValueCollection { { "class", "social__link-icon" } }, isEditable: true)
-                                                <div class="social__twitter">
-                                                    @foreach (var account in socialLink.TwitterAccounts)
-                                                    {
-                                                        <a href="https://twitter.com/@account.TwitterAccountName" target="_blank" data-goal-trigger="@account.CTAGoal" class="social__twitter-link">@@@account.TwitterAccountName</a>
-                                                    }
-                                                </div>
-                                            </span>
-                                        }
-                                    }
-                                }
-                            </div>
+                            @Html.Partial("~/Views/Navigation/_Social.cshtml", Model.FooterConfiguration)
                         </div>
                         <div class="col-12 my-4 my-lg-0 col-lg-6 footer__section">
                             <span class="footer__title h5">@Html.Glass().Editable(Model.FooterConfiguration, m => m.SubscribeNewsletterLabel)</span>

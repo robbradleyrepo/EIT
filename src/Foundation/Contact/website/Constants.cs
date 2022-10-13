@@ -61,10 +61,12 @@ namespace LionTrust.Foundation.Contact
         public const string SF_DateOfConcentField = "Date_of_Consent_Given__c";
         public const string SF_SitecoreVistorIdField = "FuseITAnalytics__SitecoreVisitorId__c";
         public const string SF_GUIDForEmailPref = "GUID_For_EmailPreferences__c";
+        public const string SF_CreatedViaPreferenceCentreField = "Created_Via_Preference_Centre__c";
         public const string SF_FirstNameField = "FirstName";
         public const string SF_LastNameField = "LastName";
         public const string SF_EmailField = "Email";
         public const string SF_UKResident = "UK_Resident__c";
+        public const string SF_Article14NoticeField = "Article_14_Notice_Sent__c";
         public const string SF_RecordTypeField = "RecordTypeId";
         public const string SFContact_CountryField = "ContactCountry__c";
         public const string SFContact_CompanyFCAIdField = "Company_FCA_Number__c";
@@ -86,6 +88,7 @@ namespace LionTrust.Foundation.Contact
         public const string SF_User_RegionField = "Pardot_Region__c";
         public const string SF_Hard_BouncedField = "pi__pardot_hard_bounced__c";
         public const string SF_ScoreField = "Score__c";
+        public const string SF_CreatedDateField = "CreatedDate";
 
         //S4S SitecoreXDBContact Salesforce object fields
         public const string SFSitecoreXDBContactObjectName = "FuseITAnalytics__SitecoreXDBContact__c";

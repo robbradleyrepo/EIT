@@ -18,6 +18,7 @@
     using LionTrust.Foundation.Search.Services.Interfaces;
     using Sitecore.ContentSearch.Linq;
     using Sitecore.Globalization;
+    using Sitecore.StringExtensions;
 
     public class ArticleSearchDataManager : IArticleSearchDataManager
     {
@@ -175,7 +176,7 @@
                 Funds = funds?.Split('|'),
                 Categories = categories?.Split('|'),
                 FundManagers = fundManagers?.Split('|'),
-                FundTeams = fundTeams?.Split('|'),
+                FundTeams = fundTeams?.Split('|').Where(x => !x.IsNullOrEmpty()),
                 SearchTerm = searchTerm,
                 Skip = page * take,
                 Take = take,

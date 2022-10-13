@@ -1,5 +1,8 @@
 ﻿namespace LionTrust.Foundation.Indexing.ComputedFields.Article
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
     using LionTrust.Foundation.Indexing.ComputedFields.SharedLogic;
     using Sitecore.ContentSearch;
     using Sitecore.ContentSearch.ComputedFields;
@@ -13,11 +16,33 @@
         public object ComputeFieldValue(IIndexable indexable)
         {
             var item = ComputedValueHelper.CheckCastComputedFieldItem(indexable);
-
             var multiValueField = item?.Fields[Legacy.Constants.Article.Fund_FieldId];
-            return multiValueField != null 
-                ? ComputedValueHelper.GetMultiListValue(multiValueField, Legacy.Constants.Fund.FundTeamFieldId) 
-                : null;                      
-        }     
+            var fundTeamIdsString = multiValueField != null
+                ? ComputedValueHelper.GetMultiListValue(multiValueField, Legacy.Constants.Fund.FundTeamFieldId)
+                : null;
+            if (fundTeamIdsString == null)
+            {
+                return null;
+            }
+
+            var fundTeamIds = fundTeamIdsString.Split('|').Distinct().ToList();
+            var formattedFundTeamIds = new List<string>();
+            if (!fundTeamIds.Any())
+            {
+                return formattedFundTeamIds;
+            }
+
+            foreach (var fundTeamId in fundTeamIds)
+            {
+                Guid fundTeamGuid;
+                if (Guid.TryParse(fundTeamId, out fundTeamGuid))
+                {
+                    formattedFundTeamIds.Add(fundTeamGuid.ToString("N"));
+                }
+            }
+
+
+            return formattedFundTeamIds;
+        }
     }
 }

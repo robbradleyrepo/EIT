@@ -30,42 +30,53 @@
             }
 
             var result = new CumulativePerformanceTableViewModel { Component = datasource };
-            
-            if (datasource.Fund != null)
+
+            if (datasource.Fund == null)
             {
-                var citiCode = FundClassSwitcherHelper.GetCitiCode(HttpContext, datasource.Fund);
-                if (!string.IsNullOrEmpty(citiCode))
-                {
-                    var currentClass = datasource.Fund.Classes.FirstOrDefault(c => c.CitiCode == citiCode);
-                    if (currentClass != null)
-                    {
-                        result.Hide = currentClass.HideCumulativePerformanceTable;
-                    }
+                return View("/views/fund/performancetable.cshtml", result);
+            }
+
+            var citiCode = FundClassSwitcherHelper.GetCitiCode(HttpContext, datasource.Fund);
+            if (string.IsNullOrEmpty(citiCode))
+            {
+                return View("/views/fund/performancetable.cshtml", result);
+            }
+
+            var currentClass = datasource.Fund.Classes.FirstOrDefault(c => c.CitiCode == citiCode);
+            if (currentClass != null)
+            {
+                result.Hide = currentClass.HideCumulativePerformanceTable;
+            }
                
-                    result.Rows = _performanceManager.GetPerformanceTableRows(citiCode, currentClass).GroupBy(r => r.Name).Select(g => g.First()).ToArray();
+            result.Rows = _performanceManager.GetPerformanceTableRows(citiCode, currentClass).GroupBy(r => r.Name).Select(g => g.First()).ToArray();
 
-                    if (result.Rows != null && result.Rows.Count() > 0)
-                    {
-                        result.QuartileRow = _performanceManager.GetQuartile(citiCode, currentClass);
-                    }
+            if (result.Rows != null && result.Rows.Any())
+            {
+                result.QuartileRow = _performanceManager.GetQuartile(citiCode, currentClass);
+            }
                     
-                    if (currentClass.HideSinceInceptionColumn)
+            if (currentClass?.HideSinceInceptionColumn != null && currentClass.HideSinceInceptionColumn)
+            {
+                var inceptionIndex = Array.IndexOf(result.ColumnHeadings, SinceInceptionColumnName);
+                if (result.Rows != null && result.Rows.Any())
+                {
+                    foreach (var resultRow in result.Rows)
                     {
-                        var inceptionIndex = Array.IndexOf(result.ColumnHeadings, SinceInceptionColumnName);
-                        foreach (var resultRow in result.Rows)
-                        {
-                            resultRow.Columns = resultRow.Columns.Where((source,index) => index != inceptionIndex).ToArray();
-                        }
-
-                        result.QuartileRow.Columns  = result.QuartileRow.Columns.Where((source,index) => index != inceptionIndex).ToArray();
-                        
-                        result.ColumnHeadings = result.ColumnHeadings.RemoveWhere(x => x.Equals(SinceInceptionColumnName))
+                        resultRow.Columns = resultRow.Columns.Where((source, index) => index != inceptionIndex)
                             .ToArray();
                     }
-
-                    result.Disclaimer = _performanceManager.GetDisclaimer(citiCode, currentClass.Currency, datasource.Disclaimer);
                 }
+
+                if (result.QuartileRow?.Columns != null)
+                {
+                    result.QuartileRow.Columns = result.QuartileRow.Columns.Where((source, index) => index != inceptionIndex).ToArray();
+                }
+
+                result.ColumnHeadings = result.ColumnHeadings.RemoveWhere(x => x.Equals(SinceInceptionColumnName))
+                    .ToArray();
             }
+
+            result.Disclaimer = _performanceManager.GetDisclaimer(citiCode, currentClass.Currency, datasource.Disclaimer);
 
             return View("/views/fund/performancetable.cshtml", result);
         }

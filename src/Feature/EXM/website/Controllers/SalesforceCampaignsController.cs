@@ -35,7 +35,7 @@ namespace LionTrust.Feature.EXM.Controllers
 
         public SalesforceCampaignsController()
           : this(new SalesforceCampaignRepository(),
-                ServiceLocator.ServiceProvider.GetService<ISitecoreService>(),
+                new SitecoreService("master"),
                 ServiceLocator.ServiceProvider.GetService<IFetchRepository<ContactListModel>>())
         {
         }

@@ -6,6 +6,8 @@ using LionTrust.Feature.EXM.Models;
 using LionTrust.Feature.EXM.Services.Interfaces;
 using LionTrust.Feature.EXM.ViewModels;
 using LionTrust.Foundation.Contact.Enums;
+using LionTrust.Foundation.Contact.Managers;
+using LionTrust.Foundation.Contact.Models;
 using LionTrust.Foundation.Contact.Services;
 using LionTrust.Foundation.Logging.Repositories;
 using LionTrust.Foundation.SitecoreExtensions.Extensions;
@@ -29,18 +31,20 @@ namespace LionTrust.Feature.EXM.Services.Implementations
     public class SalesforceAnalyticsService : ISalesforceAnalyticsService
     {
         private readonly ISitecoreService _sitecoreService;
+        private readonly IMailManager _mailManager;
         private readonly ISFEntityUtility _sfEntityUtility;
         private readonly ISitecoreContactUtility _sitecoreContactUtility;
         private readonly ILogRepository _logRepository;
 
         public SalesforceAnalyticsService(ISitecoreService sitecoreService)
-            : this(sitecoreService, ServiceLocator.ServiceProvider.GetService<ISFEntityUtility>(), ServiceLocator.ServiceProvider.GetService<ISitecoreContactUtility>(), ServiceLocator.ServiceProvider.GetService<ILogRepository>())
+            : this(sitecoreService, ServiceLocator.ServiceProvider.GetService<IMailManager>(), ServiceLocator.ServiceProvider.GetService<ISFEntityUtility>(), ServiceLocator.ServiceProvider.GetService<ISitecoreContactUtility>(), ServiceLocator.ServiceProvider.GetService<ILogRepository>())
         {
         }
 
-        public SalesforceAnalyticsService(ISitecoreService sitecoreService, ISFEntityUtility sfEntityUtility, ISitecoreContactUtility sitecoreContactUtility, ILogRepository logRepository)
+        public SalesforceAnalyticsService(ISitecoreService sitecoreService, IMailManager mailManager, ISFEntityUtility sfEntityUtility, ISitecoreContactUtility sitecoreContactUtility, ILogRepository logRepository)
         {
             _sitecoreService = sitecoreService;
+            _mailManager = mailManager;
             _sfEntityUtility = sfEntityUtility;
             _sitecoreContactUtility = sitecoreContactUtility;
             _logRepository = logRepository;
@@ -63,19 +67,21 @@ namespace LionTrust.Feature.EXM.Services.Implementations
 
                 var lastSyncDate = settings.GetField(Constants.SalesforceSyncSettings.LastSyncDate_FieldID, DateTime.MinValue).ToUniversalTime();
                 var entities = await GetEntityWithInteractions(lastSyncDate);
-                SyncEngagementHistory(entities);
-                SyncScore(entities);
+                SyncEngagementHistory(entities, settings);
+                SyncScore(entities, settings);
 
                 if (entities.SelectMany(x => x.Interactions).Any())
                 {
-                    var lastRun = entities.SelectMany(x => x.Interactions).Max(x => x.Date);
+                    var lastRun = entities.SelectMany(x => x.Interactions).Max(x => x.EndDate);
                     SetLastSyncDate(settings, lastRun);
                 }
             }
             catch (Exception ex)
             {
                 SetRunning(settings, false);
-                _logRepository.Error("[Salesforce Sync] Error updating EXM data to Salesforce", ex);
+
+                var message = string.Format("Error updating EXM data to Salesforce: {0}", ex.Message);
+                SendEmailOnError(message, ex, settings);
 
                 return false;
             }
@@ -89,11 +95,12 @@ namespace LionTrust.Feature.EXM.Services.Implementations
         private async Task<List<EntityViewModel>> GetEntityWithInteractions(DateTime fromDate)
         {
             var entities = new List<EntityViewModel>();
+            var teams = _sitecoreService.GetChildren<ITeamScore>(Constants.TeamScore.TeamScoreFolderId, Constants.TeamScore.Id)?.Where(x => !string.IsNullOrEmpty(x.SalesforceFieldId));
 
             using (XConnectClient client = Sitecore.XConnect.Client.Configuration.SitecoreXConnectClientConfiguration.GetClient())
             {
                 var asyncQueryable = client.Interactions
-                        .Where(interaction => interaction.StartDateTime > fromDate && 
+                        .Where(interaction => interaction.EndDateTime > fromDate && 
                             interaction.Events.Any(x => x.DefinitionId == Sitecore.EmailCampaign.Model.Constants.EmailOpenedPageEventId ||
                                 x.DefinitionId == Sitecore.EmailCampaign.Model.Constants.EmailSentPageEventId ||
                                 x.DefinitionId == Sitecore.EmailCampaign.Model.Constants.ClickPageEventId))
@@ -117,7 +124,13 @@ namespace LionTrust.Feature.EXM.Services.Implementations
                     {
                         Interaction current = enumerator.Current;
 
-                        if (!current.CampaignId.HasValue)
+                        Guid campaignId;
+                        var campaignEvent = current.Events.FirstOrDefault(x => x is CampaignEvent);
+                        if (campaignEvent != null && campaignEvent is CampaignEvent campaign && campaign.CampaignDefinitionId != Guid.Empty)
+                        {
+                            campaignId = campaign.CampaignDefinitionId;
+                        }
+                        else
                         {
                             continue;
                         }
@@ -144,7 +157,10 @@ namespace LionTrust.Feature.EXM.Services.Implementations
                                 SalesforceEntityType = entityType == Foundation.Contact.Enums.EntityType.Contact
                                                         ? ContactConstants.SFContactEntityName
                                                         : ContactConstants.SfLeadEntityName,
-                                Email = email
+                                Email = email,
+                                Scores = teams != null 
+                                            ? teams.ToDictionary(x => x.Id, x => new ScoreViewModel { Id = x.Id, SalesforceFieldId = x.SalesforceFieldId }) 
+                                            : new Dictionary<Guid, ScoreViewModel>()
                             };
                             entities.Add(entity);
                         }
@@ -169,23 +185,23 @@ namespace LionTrust.Feature.EXM.Services.Implementations
 
                             if (ev is EmailSentEvent)
                             {
-                                var interaction = GetInteractionViewModel(xConnectContact.Id.Value, sfEntityId, current.CampaignId.Value, entityType, messageItem, messageUrl, email, current.StartDateTime, InteractionType.EmailSent);
+                                var interaction = GetInteractionViewModel(xConnectContact.Id.Value, sfEntityId, campaignId, entityType, messageItem, messageUrl, email, current.StartDateTime, current.EndDateTime, InteractionType.EmailSent);
                                 entity.Interactions.Add(interaction);
                             }
                             else if (ev is EmailOpenedEvent)
                             {
-                                var firstTime = await IsFirstEmailOpen(current.CampaignId.Value, xConnectContact.Id.Value, current.StartDateTime);
-                                var interaction = GetInteractionViewModel(xConnectContact.Id.Value, sfEntityId, current.CampaignId.Value, entityType, messageItem, messageUrl, email, current.StartDateTime, InteractionType.EmailOpen, firstTime);
+                                var firstTime = await IsFirstEmailOpen(campaignId, xConnectContact.Id.Value, current.StartDateTime);
+                                var interaction = GetInteractionViewModel(xConnectContact.Id.Value, sfEntityId, campaignId, entityType, messageItem, messageUrl, email, current.StartDateTime, current.EndDateTime, InteractionType.EmailOpen, firstTime);
                                 entity.Interactions.Add(interaction);
                             }
                             else if (ev is UnsubscribedFromEmailEvent unsubscribedEvent)
                             {
-                                var interaction = GetInteractionViewModel(xConnectContact.Id.Value, sfEntityId, current.CampaignId.Value, entityType, messageItem, messageUrl, email, current.StartDateTime, InteractionType.Unsubscribed);
+                                var interaction = GetInteractionViewModel(xConnectContact.Id.Value, sfEntityId, campaignId, entityType, messageItem, messageUrl, email, current.StartDateTime, current.EndDateTime, InteractionType.Unsubscribed);
                                 entity.Interactions.Add(interaction);
                             }
                             else if (ev is EmailClickedEvent clickedEvent)
                             {
-                                var interaction = GetInteractionViewModel(xConnectContact.Id.Value, sfEntityId, current.CampaignId.Value, entityType, messageItem, messageUrl, email, current.StartDateTime, InteractionType.LinkClicked, false, clickedEvent.Url);
+                                var interaction = GetInteractionViewModel(xConnectContact.Id.Value, sfEntityId, campaignId, entityType, messageItem, messageUrl, email, current.StartDateTime, current.EndDateTime, InteractionType.LinkClicked, false, clickedEvent.Url);
                                 entity.Interactions.Add(interaction);
                             }
                             else
@@ -201,13 +217,13 @@ namespace LionTrust.Feature.EXM.Services.Implementations
             return entities;
         }        
 
-        private bool SyncEngagementHistory(List<EntityViewModel> entities)
+        private bool SyncEngagementHistory(List<EntityViewModel> entities, Item settings)
         {
             try
             {
                 var entitiesToSync = new List<GenericSalesforceEntity>();
 
-                var interactions = entities.SelectMany(x => x.Interactions).Where(x => x.Type != InteractionType.Unsubscribed).OrderBy(x => x.Date);
+                var interactions = entities.SelectMany(x => x.Interactions).Where(x => x.Type != InteractionType.Unsubscribed).OrderBy(x => x.StartDate);
                 foreach (var interaction in interactions)
                 {
                     var entity = _sfEntityUtility.GenerateEngagementHistory(
@@ -220,7 +236,7 @@ namespace LionTrust.Feature.EXM.Services.Implementations
                         interaction.MessageId,
                         interaction.MessageLink,
                         interaction.Link,
-                        interaction.Date,
+                        interaction.StartDate,
                         interaction.FirstTime);
 
                     entitiesToSync.Add(entity);
@@ -232,12 +248,14 @@ namespace LionTrust.Feature.EXM.Services.Implementations
             }
             catch(Exception ex)
             {
-                Sitecore.Diagnostics.Log.Error("Exception occured when syncing engagement history objects to Salesforce.", ex, this);
+                var message = string.Format("Exception occured when syncing engagement history objects to Salesforce: {0}", ex.Message);
+                SendEmailOnError(message, ex, settings);
+
                 return false;
             }
         }
 
-        private bool SyncScore(List<EntityViewModel> entities)
+        private bool SyncScore(List<EntityViewModel> entities, Item settings)
         {
             try
             {
@@ -246,14 +264,14 @@ namespace LionTrust.Feature.EXM.Services.Implementations
 
                 foreach (var entity in entities)
                 {
-                    var scorePoints = entity.Interactions.Sum(x => x.Score);
+                    var scorePoints = entity.Scores.Select(x => x.Value.Score).Sum();
 
                     if (scorePoints <= 0)
                     {
                         continue;
                     }
 
-                    var entityObj = _sfEntityUtility.GetEntityWithUpdatedScore(entity.SalesforceEntityId, entity.SalesforceEntityType, scorePoints);
+                    var entityObj = _sfEntityUtility.GetEntityWithUpdatedScore(entity.SalesforceEntityId, entity.SalesforceEntityType, scorePoints, entity.Scores.Values);
                     if (entity.SalesforceEntityType == ContactConstants.SFContactEntityName)
                     {
                         contactsToSync.Add(entityObj);
@@ -271,7 +289,9 @@ namespace LionTrust.Feature.EXM.Services.Implementations
             }
             catch (Exception ex)
             {
-                Sitecore.Diagnostics.Log.Error("Exception occured when syncing contact/lead score to Salesforce.", ex, this);
+                var message = string.Format("Exception occured when syncing contact/lead score to Salesforce: {0}", ex.Message);
+                SendEmailOnError(message, ex, settings);
+
                 return false;
             }
         }
@@ -298,10 +318,18 @@ namespace LionTrust.Feature.EXM.Services.Implementations
                             switch (interaction.Type)
                             {
                                 case InteractionType.EmailOpen:
-                                    interaction.Score = interaction.FirstTime ? team.EmailOpenedPoints : 0;
+                                    if (interaction.FirstTime & contact.Scores.ContainsKey(team.Id))
+                                    {
+                                        contact.Scores[team.Id].Score += team.EmailOpenedPoints;
+                                    }
+
                                     break;
                                 case InteractionType.LinkClicked:
-                                    interaction.Score = team.ClickedThroughPoints;
+                                    if (contact.Scores.ContainsKey(team.Id))
+                                    {
+                                        contact.Scores[team.Id].Score += team.ClickedThroughPoints;
+                                    }
+
                                     break;
                                 case InteractionType.Unsubscribed:
                                     unsubscribed = true;
@@ -340,7 +368,8 @@ namespace LionTrust.Feature.EXM.Services.Implementations
             IMailMessage messageItem, 
             string messageUrl, 
             string email,
-            DateTime date,
+            DateTime startDate,
+            DateTime endDate,
             InteractionType interactionType,
             bool firstTime = false,
             string link = null)
@@ -360,7 +389,8 @@ namespace LionTrust.Feature.EXM.Services.Implementations
                 MessageName = messageItem.Name,
                 MessageLink = messageUrl,
                 Link = link,
-                Date = date,
+                StartDate = startDate,
+                EndDate = endDate,
                 FirstTime = firstTime,
                 Type = interactionType
             };
@@ -385,6 +415,29 @@ namespace LionTrust.Feature.EXM.Services.Implementations
                 settings.Editing.BeginEdit();
                 settings.Fields[new ID(Constants.SalesforceSyncSettings.LastSyncDate_FieldID)].Value = dateTime.ToDateTimeWithTicks();
                 settings.Editing.EndEdit();
+            }
+        }
+
+        private void SendEmailOnError(string message, Exception exception, Item settings)
+        {
+            _logRepository.Error(string.Format("[Salesforce Sync] {0}", message), exception);
+
+            try
+            {
+                if (settings == null)
+                {
+                    return;
+                }
+
+                var fromAddress = settings.Fields[new ID(Constants.SalesforceSyncSettings.FromAddress_FieldID)].Value;
+                var fromDisplayName = settings.Fields[new ID(Constants.SalesforceSyncSettings.FromDisplayName_FieldID)].Value;
+                var toAddresses = settings.Fields[new ID(Constants.SalesforceSyncSettings.ToAddress_FieldID)].Value;
+                var subject = settings.Fields[new ID(Constants.SalesforceSyncSettings.Subject_FieldID)].Value;
+                _mailManager.SendEmail(fromAddress, fromDisplayName, toAddresses, subject, message, true);
+            }
+            catch (Exception ex)
+            {
+                _logRepository.Error("[Salesforce Sync]: Error sending email with salesforce sync information", ex);
             }
         }
     }

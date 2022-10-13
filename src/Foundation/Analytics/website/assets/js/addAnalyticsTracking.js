@@ -1,6 +1,6 @@
 ﻿$("a[data-goal-trigger]").click(function (e) {	
 	var $goalId = $(this).data("goal-trigger");
-	if ($goalId != undefined && $goalId !== "00000000-0000-0000-0000-000000000000") {
+	if ($goalId != undefined && $goalId !== "{00000000-0000-0000-0000-000000000000}") {
 		var $goalURL = "https://" + document.domain + "/-/media/foundation/analytics/pixel?sc_trk=" + $goalId;
 		$.get($goalURL);
 	}
@@ -21,7 +21,7 @@
 
 $("button[data-goal-trigger]").click(function (e) {	
 	var $goalId = $(this).data("goal-trigger");
-	if ($goalId != undefined && $goalId !== "00000000-0000-0000-0000-000000000000") {
+	if ($goalId != undefined && $goalId !== "{00000000-0000-0000-0000-000000000000}") {
 		var $goalURL = "https://" + document.domain + "/-/media/foundation/analytics/pixel?sc_trk=" + $goalId;
 		$.get($goalURL);
 	}

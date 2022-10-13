@@ -27,7 +27,7 @@ namespace LionTrust.Feature.EXM.Controllers
                   ServiceLocator.ServiceProvider.GetService<ItemUtilExt>(),
                   ServiceLocator.ServiceProvider.GetService<IMessageVariantsService>(),
                   ServiceLocator.ServiceProvider.GetService<ILogger>(),
-                  ServiceLocator.ServiceProvider.GetService<ISitecoreService>())
+                  new SitecoreService("master"))
         {
         }
 
