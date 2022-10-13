@@ -2,7 +2,40 @@
     backdrop-filter: none
     background: rgba($just-black, 0.5)
     backdrop-filter: blur(8px)
-    .modal-dialog
-        max-width: 40vw
-        .modal-content
-            border-radius: 0
+    &__card
+        &-info
+            display: flex
+            flex-direction: column
+            &-title
+                font-size: 2rem
+                line-height: 38px
+                margin-bottom: 0
+            ul
+                li
+                    font-size: 1rem
+                    letter-spacing: 0.16px
+                    display: flex
+                    span
+                        flex: 0 0 30%
+                    a
+                        color: $black
+            &-social
+                margin-top: auto
+                margin-bottom: 0
+                a
+                    font-size: 12px
+                    line-height: 17px
+                    letter-spacing: 2.4px
+                    text-transform: uppercase
+                    color: $black
+                    img
+                        display: inline-block
+                        padding-right: 10px
+                        margin-top: -10px
+    &__content
+        &-title
+            line-height: 30px
+            letter-spacing: 0.26px
+   
+           
+            

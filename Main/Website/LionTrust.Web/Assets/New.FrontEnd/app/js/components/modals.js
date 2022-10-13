@@ -1,5 +1,5 @@
 export default () => {
-    $("#peopleCard").on('shown.bs-modal', function() {
-        console.log('helooooo');
-    });
+    if ($(".modal-right").data('bs.modal') && $(".modal-right").data('bs.modal').isShown) {
+        console.log('hello')
+    }
 }
