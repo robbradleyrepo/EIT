@@ -58,7 +58,7 @@
     </div>
     @if (Sitecore.Context.PageMode.IsExperienceEditor || ((Model.Data.PrimaryCta != null && !string.IsNullOrEmpty(Model.Data.PrimaryCta.Text)) || (Model.Data.SecondaryCta != null && !string.IsNullOrEmpty(Model.Data.SecondaryCta.Text))))
     {
-        <div class="lead-banner__btnbox mt-4">
+        <div class="lead-banner__btnbox mb-5">
             @using (Html.Glass().BeginRenderLinkWithGoal(Model.Data, m => m.PrimaryCta, Model.Data.PrimaryCtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
             {
                 if (Model.Data.PrimaryCta != null)
