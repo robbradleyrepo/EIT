@@ -55,7 +55,7 @@
                 var s4sInfo = contact.GetFacet<S4SInfo>();
                 var email = contact.Emails()?.PreferredEmail?.SmtpAddress;
 
-                var isUnsubscribedOrHardBounced = _sfEntityUtility.IsUnsubscribedOrHardBounced(s4sInfo, email);
+                var isUnsubscribedOrHardBounced = _sfEntityUtility.IsExmUnsubscribedOrHardBounced(s4sInfo, email);
                 if (!isUnsubscribedOrHardBounced)
                 {
                     result.Add(item);
