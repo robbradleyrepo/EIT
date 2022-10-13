@@ -14,7 +14,18 @@
         @Html.Hidden("DatasourceId", Model.Content.Id)
         @Html.Sitecore().Placeholder("fund-accordion-list")
         <div class="row mt-4">
-            <div class="col-lg-12">               
+            <div class="col-lg-12">
+                @if (Model.ShowUnsubscribeTortoise)
+                {
+                    <div class="edit-preferences__select">
+                        <label class="checkbox">
+                            @Html.ValidationMessageFor(x => x.UnsubscribeTortoise, string.Empty, new { @class = "text-danger" })
+                            @Html.CheckBoxFor(x => x.UnsubscribeTortoise, new { @class = "checkbox__input" })
+                            <span class="checkbox__box"></span>
+                            @Html.Glass().Editable(Model.Content, x => x.UnsubscribeTortoiseNewsletterText)
+                        </label>
+                    </div>
+                }
                 <div class="edit-preferences__select">
                     <label class="checkbox">
                         @Html.ValidationMessageFor(x => x.UnsubscribeAll, string.Empty, new { @class = "text-danger" })
@@ -22,7 +33,7 @@
                         <span class="checkbox__box"></span>
                         @Html.Glass().Editable(Model.Content, x => x.UnsubscribeAllText)
                     </label>
-                </div>              
+                </div>
                 <div class="input-btn">
                     <input type="submit" class="btn-primary" value="@Model.Content.SubmitCTAText" />
                 </div>
