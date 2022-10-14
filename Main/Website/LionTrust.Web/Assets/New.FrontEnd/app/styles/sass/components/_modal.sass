@@ -3,7 +3,7 @@
     backdrop-filter: blur(8px)
     &-full-height
         .modal-dialog, .modal-content
-            height: 100%
+            height: calc(100% + 1px)
         .modal-dialog
             overflow: hidden
         .modal-content
@@ -11,6 +11,9 @@
             &::-webkit-scrollbar
                 width: 30px
                 background: $white
+                display: none
+                @include breakpoint(desktop, up)
+                    display: block
                 &-thumb
                     background: $gray
                     border-radius: 100px
@@ -26,29 +29,32 @@
                 transform: translate(100%, 0)
         .modal-dialog
             margin-right: -18px
-            margin-top: 0
+            margin-top: -1px
             margin-bottom: 0
+            margin-left: -1px
             max-width: none
-            @include breakpoint(desktop, up)
-                max-width: 40vw
+            @include breakpoint(tablet, up)
+                max-width: 700px
+                margin-left: auto
             .modal-content
                 padding: 0
                 border-radius: 0
                 .modal-header
                     padding: 0
-                    position: fixed
-                    width: 100%
                     button
                         background: transparent
                         border: none
                         margin: 0 0 0 auto
-                        padding-top: 6px
-                        font-size: 24px
-                        i
-                            color: rgba($just-black, 0.5)
+                        padding: 16px
+                        font-size: 19px
+                        @include breakpoint(desktop, up)
+                            font-size: 24px
+                            padding-top: 6px
+                            padding-right: 0
                 .modal-body
-                    margin-top: 50px
-                    padding: 1rem calc(1rem + 20px)
+                    padding: 0 21px 1rem
+                    @include breakpoint(desktop, up)
+                        padding: 1rem calc(1rem + 20px)
     &-content
         border-radius: 10px
 

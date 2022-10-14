@@ -3,9 +3,19 @@
     background: rgba($just-black, 0.5)
     backdrop-filter: blur(8px)
     &__card
+        flex-direction: column
+        @include breakpoint(desktop, up)
+            flex-direction: row
+        &-image
+            img 
+                max-width: 100%
+                height: auto
         &-info
             display: flex
             flex-direction: column
+            padding-top: 30px
+            @include breakpoint(desktop, up)
+                padding-top: 0
             &-title
                 font-size: 2rem
                 line-height: 38px
@@ -16,26 +26,43 @@
                     letter-spacing: 0.16px
                     display: flex
                     span
-                        flex: 0 0 30%
+                        flex: 0 0 20%
+                        @include breakpoint(desktop, up)
+                            flex: 0 0 30%
                     a
                         color: $black
             &-social
-                margin-top: auto
+                margin-top: 0
                 margin-bottom: 0
+                padding-top: 30px
+                @include breakpoint(desktop, up)
+                    padding-top: 0
+                    margin-top: auto
                 a
                     font-size: 12px
                     line-height: 17px
                     letter-spacing: 2.4px
                     text-transform: uppercase
                     color: $black
+                    font-weight: 500
                     img
                         display: inline-block
                         padding-right: 10px
                         margin-top: -10px
     &__content
         &-title
+            font-size: 26px 
             line-height: 30px
             letter-spacing: 0.26px
-   
-           
+            display: none
+            @include breakpoint(desktop, up)
+                display: block   
+        p:not(.modal-people__content-title)
+            font-size: 18px
+            line-height: 28px
+            letter-spacing: 0.18px
+            @include breakpoint(desktop, up)
+                font-size: 20px
+                line-height: 30px
+                letter-spacing: 0.2px
             

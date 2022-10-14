@@ -1,5 +1,5 @@
 export default () => {
-    if ($(".modal-right").data('bs.modal') && $(".modal-right").data('bs.modal').isShown) {
-        console.log('hello')
-    }
+    $('#peopleCard').on('shown.bs.modal', function () {
+        $("html").addClass("no-scroll");
+      })
 }
