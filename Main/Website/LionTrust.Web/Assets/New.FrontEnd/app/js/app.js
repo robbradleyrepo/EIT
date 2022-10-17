@@ -22,7 +22,7 @@ import headerCtaNav from "./components/headerCtaNav";
 import preferenceCenter from './components/preferenceCenter';
 import common from "./components/common";
 import peopleNav from "./components/peopleNav";
-import modals from "./components/modals";
+import modals from "./components/bs-modals";
 
 document.addEventListener("DOMContentLoaded", () => {
     onboardingOverlay();

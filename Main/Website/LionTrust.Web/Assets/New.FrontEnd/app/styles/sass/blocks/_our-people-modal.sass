@@ -1,20 +1,20 @@
 .modal-people
-    backdrop-filter: none
-    background: rgba($just-black, 0.5)
-    backdrop-filter: blur(8px)
     &__card
         flex-direction: column
-        @include breakpoint(desktop, up)
+        @include breakpoint(tablet, up)
             flex-direction: row
         &-image
             img 
                 max-width: 100%
                 height: auto
+                border-radius: 10px
+                @include breakpoint(tablet, up)
+                    border-radius: 0
         &-info
             display: flex
             flex-direction: column
             padding-top: 30px
-            @include breakpoint(desktop, up)
+            @include breakpoint(tablet, up)
                 padding-top: 0
             &-title
                 font-size: 2rem
@@ -27,7 +27,7 @@
                     display: flex
                     span
                         flex: 0 0 20%
-                        @include breakpoint(desktop, up)
+                        @include breakpoint(tablet, up)
                             flex: 0 0 30%
                     a
                         color: $black
@@ -35,7 +35,11 @@
                 margin-top: 0
                 margin-bottom: 0
                 padding-top: 30px
-                @include breakpoint(desktop, up)
+                padding-bottom: 20px
+                @include breakpoint(mobile-large, up)
+                    padding-bottom: 0
+
+                @include breakpoint(tablet, up)
                     padding-top: 0
                     margin-top: auto
                 a
@@ -55,13 +59,13 @@
             line-height: 30px
             letter-spacing: 0.26px
             display: none
-            @include breakpoint(desktop, up)
+            @include breakpoint(tablet, up)
                 display: block   
         p:not(.modal-people__content-title)
             font-size: 18px
             line-height: 28px
             letter-spacing: 0.18px
-            @include breakpoint(desktop, up)
+            @include breakpoint(tablet, up)
                 font-size: 20px
                 line-height: 30px
                 letter-spacing: 0.2px

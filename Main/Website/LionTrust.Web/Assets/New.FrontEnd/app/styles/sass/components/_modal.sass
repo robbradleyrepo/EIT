@@ -9,7 +9,7 @@
         .modal-content
             overflow: auto
             &::-webkit-scrollbar
-                width: 30px
+                width: 60px
                 background: $white
                 display: none
                 @include breakpoint(desktop, up)
@@ -17,7 +17,7 @@
                 &-thumb
                     background: $gray
                     border-radius: 100px
-                    border-width: 50px 12.9px 50px 13px
+                    border-width: 50px 27px 50px 28px
                     border-style: solid
                     border-color: $white
     &-right
@@ -45,16 +45,16 @@
                         background: transparent
                         border: none
                         margin: 0 0 0 auto
-                        padding: 16px
+                        padding: 16px 35px 16px 16px
                         font-size: 19px
                         @include breakpoint(desktop, up)
                             font-size: 24px
                             padding-top: 6px
                             padding-right: 0
                 .modal-body
-                    padding: 0 21px 1rem
+                    padding: 0 38px 1rem 21px
                     @include breakpoint(desktop, up)
-                        padding: 1rem calc(1rem + 20px)
+                        padding: 1rem 15px 1rem calc(1rem + 20px)
     &-content
         border-radius: 10px
 
@@ -88,8 +88,15 @@
         opacity: 1
         background: none
         display: none
+        &-custom
+            backdrop-filter: none
+            background: rgba($just-black, 0.5)
+            backdrop-filter: blur(8px)
     &__close
         margin-top: 21px
     &-open
+        padding-right: 0!important
+        .modal, .nav 
+            padding-right: 0!important
         header, footer
             z-index: -1
