@@ -1134,6 +1134,32 @@
             return returnList;
         }
 
+        /// <summary>
+        /// Get Salesforce Contact/Lead id
+        /// </summary>
+        /// <param name="s4sInfo"></param>
+        /// <returns></returns>
+        public string GetSalesforceEntityId(S4SInfo s4sInfo)
+        {
+            if (s4sInfo.Fields.ContainsKey(Constants.SF_IdField)) 
+            {
+                return s4sInfo.Fields[Constants.SF_IdField];
+            }
+            
+            if (s4sInfo.Fields.ContainsKey(Constants.SFContactIdFacetKey))
+            {
+                return s4sInfo.Fields[Constants.SFContactIdFacetKey];
+            }
+
+            if (
+                s4sInfo.Fields.ContainsKey(Constants.SFLeadIdFacetKey))
+            {
+                return s4sInfo.Fields[Constants.SFLeadIdFacetKey];
+            }
+
+            return null;
+        }
+
         private List<GenericSalesforceEntity> GetEntitiesToSendWecomeEmail(DateTime fromDate, string entityName)
         {
             var genericSFService = new GenericSalesforceService(this.SalesforceSession, entityName);

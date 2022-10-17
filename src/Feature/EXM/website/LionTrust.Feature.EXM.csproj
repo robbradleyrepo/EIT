@@ -94,7 +94,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\dependencies\FuseIT.S4S\FuseIT.Sitecore.Salesforce.dll</HintPath>
     </Reference>
-    <Reference Include="FuseIT.Sitecore.SalesforceConnector, Version=2.914.21070.1, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="FuseIT.Sitecore.SalesforceConnector, Version=2.914.21070.1, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\dependencies\FuseIT.S4S\FuseIT.Sitecore.SalesforceConnector.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Web" />

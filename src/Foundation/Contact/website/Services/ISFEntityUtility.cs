@@ -136,6 +136,13 @@
         /// <returns></returns>
         List<GenericSalesforceEntity> GetEntitiesToSendWecomeEmail(DateTime fromDate);
 
+        /// <summary>
+        /// Get Salesforce Contact/Lead id
+        /// </summary>
+        /// <param name="s4sInfo"></param>
+        /// <returns></returns>
+        string GetSalesforceEntityId(S4SInfo s4sInfo);
+
         string GetEditEmailPrefPageLink(string preferencesUrl, string randomGuid, string entityId);
 
         string GetFundDashboardLink(string fundDashboardUrl, string randomGuid, string entityId);
