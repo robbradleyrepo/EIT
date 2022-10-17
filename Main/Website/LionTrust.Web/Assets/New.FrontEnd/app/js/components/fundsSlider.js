@@ -1,13 +1,13 @@
-import Swiper, { Pagination } from "swiper/bundle";
-
+import Swiper, { Nvaigation, Pagination } from "swiper/bundle";
 
 export default () => {
+
   const swiper = new Swiper(".swiper-container-funds", {
     grabCursor: true,
     slidesPerView: "auto",
     breakpointsInverse: true,
-    slidesOffsetAfter: 600,
-    loop: true,
+    slidesOffsetAfter: 0,
+    slidesOffsetBefore: 0,
     observer: true,
     observeParents: true,
     watchSlidesVisibility: true,
@@ -34,14 +34,17 @@ export default () => {
 
     lazyLoading: true,
     slideToClickedSlide: true,
-    initialSlide: 1,
+    initialSlide: 0,
   });
 
   let description = document.getElementsByClassName("imagepromo__contentbox");
   let fundScroller = document.getElementsByClassName("fundscroller-container");
-  let slides = document.getElementsByClassName("swiper-slides");
   let prevArrow = document.getElementsByClassName("swiper-button-prev");
   let nextArrow = document.getElementsByClassName("swiper-button-next");
+ 
+  let allCards = document.getElementsByClassName("forSlides");
+  console.log("number of slides " + allCards.length);
+  
   if (description.length === 0) {
     fundScroller.classList.add("full-width-carousel");
   }
