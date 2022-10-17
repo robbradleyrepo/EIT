@@ -90,12 +90,6 @@ Languages:
               s:id="{7F3DDF4D-5190-4C04-836D-41325114723D}"
               s:ph="main" />
             <r
-              uid="{79DF7224-7866-417D-91E6-6C95F795301F}"
-              p:after="r[@uid='{BBB2192D-FA6A-46AE-AE95-15DD426DC1C0}']"
-              s:ds="{87201971-FC21-4B15-9950-B8E9EF28CAF8}"
-              s:id="{29206264-421A-41D5-8869-A7D1EA60566B}"
-              s:ph="main" />
-            <r
               uid="{D7C4D638-75FD-4FD3-89FD-B5AE5182342A}"
               p:after="*[1=2]" />
           </d>
@@ -118,7 +112,8 @@ Languages:
       Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
     - ID: "5bd6e9e9-2240-4473-8094-075e811b8438"
       Hint: Article_ListingImage
-      Value: 
+      Value: |
+        <image mediaid="{525577A8-998D-4E67-B480-AE73FDF88DEE}" />
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
