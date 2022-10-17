@@ -1151,8 +1151,7 @@
                 return s4sInfo.Fields[Constants.SFContactIdFacetKey];
             }
 
-            if (
-                s4sInfo.Fields.ContainsKey(Constants.SFLeadIdFacetKey))
+            if (s4sInfo.Fields.ContainsKey(Constants.SFLeadIdFacetKey))
             {
                 return s4sInfo.Fields[Constants.SFLeadIdFacetKey];
             }
