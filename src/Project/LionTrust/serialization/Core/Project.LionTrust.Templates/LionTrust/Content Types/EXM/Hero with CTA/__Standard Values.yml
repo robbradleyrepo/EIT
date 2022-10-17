@@ -1,0 +1,37 @@
+﻿---
+ID: "d780a598-f3a3-4330-affa-449bdf6f00c7"
+Parent: "1fa1ccc1-656e-4935-9698-4d1c18ceccae"
+Template: "1fa1ccc1-656e-4935-9698-4d1c18ceccae"
+Path: /sitecore/templates/Project/LionTrust/Content Types/EXM/Hero with CTA/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20221017T133119Z
+    - ID: "2d995220-0210-4f6c-b90d-55f2c03bf15b"
+      Hint: Hero_Image
+      Value: |
+        <image mediaid="{2EBD87A8-44D3-460B-AEF4-B24A8678F04E}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\anascimento
+    - ID: "7ac5c681-0fbb-4674-b640-58e1df9a01be"
+      Hint: Hero_CtaText
+      Value: UPDATE PREFERENCES
+    - ID: "93022681-c2be-4d05-ad7e-d98ac14e59cd"
+      Hint: Hero_Logo
+      Value: |
+        <image mediaid="{03DCCFD1-5A91-485F-8ADB-E7EDC9551DC2}" />
+    - ID: "b2ba61a6-a0f8-4b6c-a0e6-530283dd60a6"
+      Hint: Hero_CtaLink
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title="" target="" querystring="ref=$emailpreferencesid$" id="{9536D22A-A541-4553-8154-507DC8E7698E}" />
+    - ID: "c19de6ee-2c6b-4676-8964-b1a19f6ba1c3"
+      Hint: Hero_LogoLink
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />

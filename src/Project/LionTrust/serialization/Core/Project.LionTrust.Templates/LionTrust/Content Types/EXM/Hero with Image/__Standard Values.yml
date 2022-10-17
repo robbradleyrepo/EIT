@@ -1,0 +1,34 @@
+﻿---
+ID: "e013f04c-af34-4111-abf0-2228aa18bd2d"
+Parent: "7d497419-816d-4600-8fc6-6dc394067a1e"
+Template: "7d497419-816d-4600-8fc6-6dc394067a1e"
+Path: /sitecore/templates/Project/LionTrust/Content Types/EXM/Hero with Image/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20221017T134003Z
+    - ID: "2d995220-0210-4f6c-b90d-55f2c03bf15b"
+      Hint: Hero_Image
+      Value: |
+        <image mediaid="{47B771E2-5D50-473A-BD1C-E85FED587118}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\anascimento
+    - ID: "93022681-c2be-4d05-ad7e-d98ac14e59cd"
+      Hint: Hero_Logo
+      Value: |
+        <image mediaid="{03DCCFD1-5A91-485F-8ADB-E7EDC9551DC2}" />
+    - ID: "9b48d793-66cc-400e-9760-0f207df71100"
+      Hint: Hero_RibbonImage
+      Value: |
+        <image mediaid="{D09A81BC-4F6C-4D33-BB49-E147E8DA61BF}" />
+    - ID: "c19de6ee-2c6b-4676-8964-b1a19f6ba1c3"
+      Hint: Hero_LogoLink
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
