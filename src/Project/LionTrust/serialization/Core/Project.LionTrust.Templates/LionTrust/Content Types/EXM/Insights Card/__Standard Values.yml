@@ -1,0 +1,25 @@
+﻿---
+ID: "03600ea7-0203-4f78-a250-6431f9b1d62b"
+Parent: "7517e7f7-5ecc-4fa6-8b38-b5804fe8d7b2"
+Template: "7517e7f7-5ecc-4fa6-8b38-b5804fe8d7b2"
+Path: /sitecore/templates/Project/LionTrust/Content Types/EXM/Insights Card/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20221017T131930Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\anascimento
+    - ID: "a49d07ee-4090-489b-88db-8799d9a75117"
+      Hint: Card_CtaText
+      Value: VIEW THE ARTICLE ➝
+    - ID: "ac850f50-bd45-4256-941e-58a4d1ef2636"
+      Hint: Card_Image
+      Value: |
+        <image mediaid="{2EBD87A8-44D3-460B-AEF4-B24A8678F04E}" />

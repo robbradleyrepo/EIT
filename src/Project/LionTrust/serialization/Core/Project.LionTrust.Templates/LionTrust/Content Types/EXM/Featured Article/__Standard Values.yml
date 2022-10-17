@@ -1,0 +1,25 @@
+﻿---
+ID: "e3ae32ed-457d-40e1-b9f0-74a4b5aacc3e"
+Parent: "f80a6a7a-1b3e-4a26-9ba4-520fca5918a4"
+Template: "f80a6a7a-1b3e-4a26-9ba4-520fca5918a4"
+Path: /sitecore/templates/Project/LionTrust/Content Types/EXM/Featured Article/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "03437051-7376-4909-a5a4-c1c44867e7c7"
+      Hint: FeaturedArticle_Image
+      Value: |
+        <image mediaid="{7A1E2A12-EDBD-4AB3-9C6B-37758F243940}" />
+    - ID: "03cd3e6a-9d6b-4c84-83cc-6c9852d706a2"
+      Hint: FeaturedArticle_CtaText
+      Value: READ THE ARTICLE
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20221017T132244Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\anascimento

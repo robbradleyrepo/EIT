@@ -1,0 +1,26 @@
+﻿---
+ID: "f32cfc7b-8c4e-4374-8235-5eb794153705"
+Parent: "f9b93f8d-3723-4584-af17-5690efe9f952"
+Template: "f9b93f8d-3723-4584-af17-5690efe9f952"
+Path: "/sitecore/templates/Project/LionTrust/Content Types/EXM/Hero - Logo/__Standard Values"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20221017T133026Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\anascimento
+    - ID: "93022681-c2be-4d05-ad7e-d98ac14e59cd"
+      Hint: Hero_Logo
+      Value: |
+        <image mediaid="{DE04E38D-8792-4B66-9455-32C366F54971}" />
+    - ID: "c19de6ee-2c6b-4676-8964-b1a19f6ba1c3"
+      Hint: Hero_LogoLink
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{7502B69E-D154-4861-A033-BC0CB30A91B5}" />
