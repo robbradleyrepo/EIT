@@ -123,6 +123,12 @@ namespace LionTrust.Feature.EXM.Services.Implementations
                     while (enumerator.MoveNext())
                     {
                         var current = enumerator.Current;
+                        
+                        var campaignId = GetCampaignId(current);
+                        if (campaignId == Guid.Empty)
+                        {
+                            continue;
+                        }
 
                         var xConnectContact = current.Contact as Sitecore.XConnect.Contact;
                         var email = xConnectContact.GetFacet<EmailAddressList>(EmailAddressList.DefaultFacetKey)?.PreferredEmail?.SmtpAddress;
@@ -177,30 +183,30 @@ namespace LionTrust.Feature.EXM.Services.Implementations
                             var messageRoot = _sitecoreService.GetChildren(emailEvent.MessageId, Constants.MessageRoot.TemplateID).FirstOrDefault();
                             var messageUrl = messageRoot.GetAbsoluteMessageUrl();
 
-                            if (ev is EmailSentEvent sentEvent)
+                            if (ev is EmailSentEvent)
                             {
-                                var firstTime = await IsFirstSentEmail(sentEvent.MessageId, xConnectContact.Id.Value, current.StartDateTime);
+                                var firstTime = await IsFirstSentEmail(campaignId, xConnectContact.Id.Value, current.StartDateTime);
 
                                 if (firstTime)
                                 {
-                                    var interaction = GetInteractionViewModel(xConnectContact.Id.Value, sfEntityId, sentEvent.MessageId, entityType, messageItem, messageUrl, email, ev.Timestamp, current.LastModified.Value, InteractionType.EmailSent);
+                                    var interaction = GetInteractionViewModel(xConnectContact.Id.Value, sfEntityId, campaignId, entityType, messageItem, messageUrl, email, ev.Timestamp, current.LastModified.Value, InteractionType.EmailSent);
                                     entity.Interactions.Add(interaction);
                                 }
                             }
-                            else if (ev is EmailOpenedEvent openedEvent)
+                            else if (ev is EmailOpenedEvent)
                             {
-                                var firstTime = await IsFirstEmailOpen(openedEvent.MessageId, xConnectContact.Id.Value, current.StartDateTime);
-                                var interaction = GetInteractionViewModel(xConnectContact.Id.Value, sfEntityId, openedEvent.MessageId, entityType, messageItem, messageUrl, email, ev.Timestamp, current.LastModified.Value, InteractionType.EmailOpen, firstTime);
+                                var firstTime = await IsFirstEmailOpen(campaignId, xConnectContact.Id.Value, current.StartDateTime);
+                                var interaction = GetInteractionViewModel(xConnectContact.Id.Value, sfEntityId, campaignId, entityType, messageItem, messageUrl, email, ev.Timestamp, current.LastModified.Value, InteractionType.EmailOpen, firstTime);
                                 entity.Interactions.Add(interaction);
                             }
-                            else if (ev is UnsubscribedFromEmailEvent unsubscribedEvent)
+                            else if (ev is UnsubscribedFromEmailEvent)
                             {
-                                var interaction = GetInteractionViewModel(xConnectContact.Id.Value, sfEntityId, unsubscribedEvent.MessageId, entityType, messageItem, messageUrl, email, ev.Timestamp, current.LastModified.Value, InteractionType.Unsubscribed);
+                                var interaction = GetInteractionViewModel(xConnectContact.Id.Value, sfEntityId, campaignId, entityType, messageItem, messageUrl, email, ev.Timestamp, current.LastModified.Value, InteractionType.Unsubscribed);
                                 entity.Interactions.Add(interaction);
                             }
                             else if (ev is EmailClickedEvent clickedEvent)
                             {
-                                var interaction = GetInteractionViewModel(xConnectContact.Id.Value, sfEntityId, clickedEvent.MessageId, entityType, messageItem, messageUrl, email, ev.Timestamp, current.LastModified.Value, InteractionType.LinkClicked, false, clickedEvent.Url);
+                                var interaction = GetInteractionViewModel(xConnectContact.Id.Value, sfEntityId, campaignId, entityType, messageItem, messageUrl, email, ev.Timestamp, current.LastModified.Value, InteractionType.LinkClicked, false, clickedEvent.Url);
                                 entity.Interactions.Add(interaction);
                             }
                             else
@@ -214,6 +220,24 @@ namespace LionTrust.Feature.EXM.Services.Implementations
 
             entities = SetInteractionPoints(entities);
             return entities;
+        }
+
+        private Guid GetCampaignId(Interaction interaction)
+        {
+            var campaignId = Guid.Empty;
+
+            if (interaction.CampaignId.HasValue && interaction.CampaignId.Value != Guid.Empty)
+            {
+                return interaction.CampaignId.Value;
+            }
+
+            var campaignEvent = interaction.Events.FirstOrDefault(x => x is CampaignEvent);
+            if (campaignEvent != null && campaignEvent is CampaignEvent campaign && campaign.CampaignDefinitionId != Guid.Empty)
+            {
+                campaignId = campaign.CampaignDefinitionId;
+            }
+
+            return campaignId;
         }
 
         private bool SyncEngagementHistory(List<EntityViewModel> entities, Item settings)
