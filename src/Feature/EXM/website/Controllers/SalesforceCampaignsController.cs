@@ -11,6 +11,7 @@ using System.Web.Http;
 using System;
 using System.Linq;
 using LionTrust.Feature.EXM.Models;
+using LionTrust.Foundation.Logging.Repositories;
 
 namespace LionTrust.Feature.EXM.Controllers
 {
@@ -21,11 +22,13 @@ namespace LionTrust.Feature.EXM.Controllers
         private ISalesforceCampaignRepositoryActions<SalesforceCampaignEntity> _repository;
         private readonly ISitecoreService _sitecoreService;
         private readonly IFetchRepository<ContactListModel> _contactListRepository;
+        private readonly ILogRepository _logRepository;
 
         public SalesforceCampaignsController(
           ISalesforceCampaignRepositoryActions<SalesforceCampaignEntity> repository,
           ISitecoreService sitecoreService,
-          IFetchRepository<ContactListModel> contactListRepository)
+          IFetchRepository<ContactListModel> contactListRepository,
+          ILogRepository logRepository)
           : base(repository)
         {
             _repository = repository;
@@ -36,7 +39,8 @@ namespace LionTrust.Feature.EXM.Controllers
         public SalesforceCampaignsController()
           : this(new SalesforceCampaignRepository(),
                 new SitecoreService("master"),
-                ServiceLocator.ServiceProvider.GetService<IFetchRepository<ContactListModel>>())
+                ServiceLocator.ServiceProvider.GetService<IFetchRepository<ContactListModel>>(),
+                ServiceLocator.ServiceProvider.GetService<ILogRepository>())
         {
         }
 
@@ -54,7 +58,14 @@ namespace LionTrust.Feature.EXM.Controllers
                 var contactList = _sitecoreService.GetItem<IMessageCampaign>(new Guid(contactListModel.Id));
                 contactList.SalesforceCampaignId = info.CampaignIdString;
 
-                _sitecoreService.SaveItem(new SaveOptions(contactList));
+                try
+                {
+                    _sitecoreService.SaveItem(new SaveOptions(contactList));
+                }
+                catch(Exception ex)
+                {
+                    _logRepository.Error(ex.Message, ex);
+                }
             }
 
             return campaignEntity;
