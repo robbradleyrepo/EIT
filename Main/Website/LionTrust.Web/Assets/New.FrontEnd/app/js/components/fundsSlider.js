@@ -8,10 +8,16 @@ export default () => {
     breakpointsInverse: true,
     slidesOffsetAfter: 0,
     slidesOffsetBefore: 0,
+    watchOverflow: true, 
     observer: true,
     observeParents: true,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
+    lazyLoading: true,
+    slideToClickedSlide: true,
+    initialSlide: 0,
+ 
+   
 
     pagination: {
       el: ".swiper-pagination",
@@ -20,9 +26,9 @@ export default () => {
         return `<span class="dot swiper-pagination-bullet"></span>`;
       },
       hidePaginatiom: function () {
-        if (this.slidesPerView.length > 3) {
-          prevArrow.classList.add("hide-arrows");
-          nextArrow.classList.add("hide-arrows");
+        if (this.slidesPerView.length < 8) {
+          prevArrow.classList.add("'swiper-button-disabled'");
+          nextArrow.classList.add("'swiper-button-disabled'");
         }
       },
     },
@@ -32,21 +38,37 @@ export default () => {
       prevEl: ".swiper-button-prev",
     },
 
-    lazyLoading: true,
-    slideToClickedSlide: true,
-    initialSlide: 0,
+    
   });
 
-  let description = document.getElementsByClassName("imagepromo__contentbox");
-  let fundScroller = document.getElementsByClassName("fundscroller-container");
-  let prevArrow = document.getElementsByClassName("swiper-button-prev");
-  let nextArrow = document.getElementsByClassName("swiper-button-next");
+  // let description = document.getElementsByClassName("imagepromo__contentbox");
+  // if(description.length !== 0){
+  //   fundScroller.classList.add("full-width-carousel");
+  // }
+  let fundScroller = $(".fundscroller-container");
  
-  let allCards = document.getElementsByClassName("forSlides");
-  console.log("number of slides " + allCards.length);
+ fundScroller.each(function(){
+
+  let nextButton= $(this).find(".swiper-button-next");
+  let prevButton= $(this).find(".swiper-button-prev");
+  let pagination= $(this).find(".swiper-pagination");
+  let swiperSlides= $(this).find(".swiper-slide");
+ 
+ 
+  nextButton.on("click", function(e){
+    if ($("swiper-button-disabled").length){
+      e.preventDefault();
+    }
+  })
   
-  if (description.length === 0) {
-    fundScroller.classList.add("full-width-carousel");
+  
+  if(swiperSlides.length < 3){
+    pagination.hide();
+    prevButton.hide();
+    nextButton.hide();
   }
-  
+ 
+  })
+
+
 };
