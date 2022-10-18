@@ -62,6 +62,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Foundation\ORM\website\LionTrust.Foundation.ORM.csproj">
+      <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>
+      <Name>LionTrust.Foundation.ORM</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\website\LionTrust.Feature.Search.csproj">
       <Project>{aaffed79-3927-404c-99db-94b8d27d774e}</Project>
       <Name>LionTrust.Feature.Search</Name>

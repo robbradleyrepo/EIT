@@ -60,6 +60,9 @@ input, textarea, select
 		border-color: $primary
 html
 	overflow-x: hidden
+	&.no-scroll
+		overflow-y: hidden
+		padding-right: 17px
 body
 	font-family: $userfont
 	font-size: $fontsize
@@ -229,6 +232,12 @@ strong
 .tenline
 	-webkit-line-clamp: 10 /* number of lines to show */
 
+.phone, .mail
+	&__link
+		color: $black
+		&:hover
+			color: $primary
+
 hr, .hr
 	border-top: 1px solid #4148551A
 	width: 100%
@@ -236,4 +245,4 @@ hr, .hr
 main
 	@include breakpoint(desktop, up)
 		position: relative
-		z-index: 0
+		z-index: 2
