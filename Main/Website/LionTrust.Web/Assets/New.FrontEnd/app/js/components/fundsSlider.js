@@ -41,11 +41,7 @@ export default () => {
     
   });
 
-  // let description = document.getElementsByClassName("imagepromo__contentbox");
-  // if(description.length !== 0){
-  //   fundScroller.classList.add("full-width-carousel");
-  // }
-  let fundScroller = $(".fundscroller-container");
+ let fundScroller = $(".fundscroller-container");
  
  fundScroller.each(function(){
 
@@ -54,13 +50,7 @@ export default () => {
   let pagination= $(this).find(".swiper-pagination");
   let swiperSlides= $(this).find(".swiper-slide");
  
- 
-  nextButton.on("click", function(e){
-    if ($("swiper-button-disabled").length){
-      e.preventDefault();
-    }
-  })
-  
+   
   let numberOfSlides = 3;
   if(swiperSlides.length < numberOfSlides){
     pagination.hide();
