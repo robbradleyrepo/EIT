@@ -1,25 +1,25 @@
 ﻿---
-ID: "09f372e5-fea3-4223-bd92-d2f20ebcc480"
+ID: "97454b15-76c1-4ae0-ab59-c3f8d2304ccc"
 Parent: "e0bbfc78-5097-4c98-a785-84140aa2aaa8"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Listings/_Director/Director/Director_EmailLabel
+Path: /sitecore/templates/Feature/Listings/_Director/Director/Director_ShortBio
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: "Single-Line Text"
+  Value: "Multi-Line Text"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 600
+  Value: 125
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Email Label
+    Value: Short Bio
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20211021T145916Z
+      Value: 20210805T113955Z

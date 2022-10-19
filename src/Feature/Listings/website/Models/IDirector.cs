@@ -29,19 +29,13 @@
         [SitecoreField(Constants.Director.MobileNumber_FieldId)]
         string MobileNumber { get; set; }
 
-        [SitecoreField(Constants.Director.EmailLabel_FieldId)]
-        string EmailLabel { get; set; }
-
-        [SitecoreField(Constants.Director.DirectLineLabel_FieldId)]
-        string DirectLineLabel { get; set; }
-
-        [SitecoreField(Constants.Director.MobileLabel_FieldId)]
-        string MobileLabel { get; set; }
-
         [SitecoreField(Constants.Director.LinkedIn_FieldId)]
         string LinkedIn { get; set; }
 
         [SitecoreField(Constants.Director.SubHeader_FieldId)]
         string SubHeader { get; set; }
+
+        [SitecoreField(Constants.Director.ImageOverlay_FieldId)]
+        Image ImageOverlay { get; set; }
     }
 }

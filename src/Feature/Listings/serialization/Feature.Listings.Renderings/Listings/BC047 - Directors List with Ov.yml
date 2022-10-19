@@ -2,15 +2,12 @@
 ID: "1bba8922-f845-4c6e-ab56-2106c611fd1d"
 Parent: "24f14312-98cd-4560-8e59-ec05fd396495"
 Template: "2a3e91a0-7987-44b5-ab34-35c2d9de83b9"
-Path: "/sitecore/layout/Renderings/Feature/Listings/BC047 - Directors List with Overlay"
+Path: "/sitecore/layout/renderings/Feature/Listings/BC047 - Directors List with Overlay"
 DB: master
 SharedFields:
 - ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
   Hint: Datasource Template
   Value: /sitecore/templates/Project/LionTrust/Content Types/Listing/Directors List
-- ID: "51b435bc-f7b9-478a-9c51-52916af96ff5"
-  Hint: Path
-  Value: ~/Views/Listings/DirectorsListWithOverlay.cshtml
 - ID: "a2f5d9df-8cba-4a1d-99eb-51acb94cb057"
   Hint: Page Editor Buttons
   Type: Treelist
@@ -24,10 +21,10 @@ SharedFields:
     <image mediaid="{D73C56DF-4E74-42E5-990F-87602A4965D2}" />
 - ID: "ded9e431-3604-4921-a4b3-a6ec7636a5b6"
   Hint: Controller Action
-  Value: Render
+  Value: DirectorsListWithOverlayRender
 - ID: "e64ad073-dfcc-4d20-8c0b-fe5aa6226cd7"
   Hint: Controller
-  Value: DirectorsListWithOverlay
+  Value: DirectorsList
 Languages:
 - Language: en
   Versions:

@@ -1,8 +1,8 @@
 ﻿---
-ID: "dd918658-be8b-400f-a2b8-0940951726db"
-Parent: "e0bbfc78-5097-4c98-a785-84140aa2aaa8"
+ID: "e1ca33aa-86b1-4082-8835-414976c01cec"
+Parent: "bd1b6e5b-4aff-49ef-b622-62dbfe1f184a"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Listings/_Director/Director/Director_MobileLabel
+Path: /sitecore/templates/Feature/Listings/_DirectorSettings/Settings/DirectLineLabel
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
@@ -10,16 +10,16 @@ SharedFields:
   Value: "Single-Line Text"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 700
+  Value: 500
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Mobile Label
+    Value: Direct Line Label
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20211021T145916Z
+      Value: 20221019T112350Z

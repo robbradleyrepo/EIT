@@ -167,11 +167,9 @@ namespace LionTrust.Feature.Listings
             public const string Email_FieldId = "{F5F940CB-C703-406F-B58D-C8F0AA689C89}";
             public const string DirectLine_FieldId = "{8E50CB61-DC34-4C4D-8407-FD5575402C4A}";
             public const string MobileNumber_FieldId = "{BFB65241-8F9F-4270-BE5B-194904AEB9E8}";
-            public const string EmailLabel_FieldId = "{09F372E5-FEA3-4223-BD92-D2F20EBCC480}";
-            public const string DirectLineLabel_FieldId = "{83BE90B2-30FF-4AB7-863F-AF1ED4B68B82}";
-            public const string MobileLabel_FieldId = "{DD918658-BE8B-400F-A2B8-0940951726DB}";
             public const string LinkedIn_FieldId = "{EF71DCA8-686B-4501-9096-2214CAC2708F}";
             public const string SubHeader_FieldId = "{323233BE-9A0B-4D72-8948-054EE7B0D88E}";
+            public const string ImageOverlay_FieldId = "{931AB6F3-3D2E-4F3A-955D-DB3EB542FB36}";
         }
 
         public static class DirectorSettings
@@ -181,6 +179,10 @@ namespace LionTrust.Feature.Listings
             public const string Header_FieldId = "{336E4ABB-15EA-472D-826E-8DF5DFF67775}";
             public const string LinkedInLabel_FieldId = "{B851B789-6BEF-44AC-9773-228F1D967460}";
             public const string LinkedInImage_FieldId = "{D36DCFBB-97FD-4479-8469-559DC329B84F}";
+            public const string ViewMoreLabel_FieldId = "{563CFAA8-FF84-4F76-9034-67A812FB002C}";
+            public const string EmailLabel_FieldId = "{FF65025A-5043-4A7C-86C0-70E3BE9CDCA3}";
+            public const string DirectLineLabel_FieldId = "{E1CA33AA-86B1-4082-8835-414976C01CEC}";
+            public const string MobileLabel_FieldId = "{F2A9D287-7DB3-427E-8BAA-4D620F70D479}";
 
             public const string FirstNameToken = "{firstName}";
         }

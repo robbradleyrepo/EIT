@@ -4,68 +4,39 @@
 
 @if (Model != null && Model.Data != null)
 {
-    <section class="container">
-        <h2 class="h2 mb-4 pt-3">@Html.Glass().Editable(Model.Data, m => m.Title)</h2>
-        <div class="row">
-            @if (Model.Children != null && Model.Children.Any())
-            {
-                foreach (var director in Model.Children)
+    <div class="people-card__section">
+        @if (Sitecore.Context.PageMode.IsExperienceEditor || !string.IsNullOrEmpty(Model.Data.Title))
+        {
+            <h2 class="py-3">@Html.Glass().Editable(Model.Data, m => m.Title)</h2>
+        }
+
+        @if (Model.Children != null && Model.Children.Any())
+        {
+            <div class="row">
+                @foreach (var card in Model.Children)
                 {
-                    using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/DirectorsList", director.Data.Id.ToString(), "Edit director"))
+                    using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/DirectorsList", card.Data.Id.ToString(), "Edit director"))
                     {
-                        <div class="col-lg-6">
-                            <div class="fund-manager fund-manager-director director-card">
-                                <div class="fund-manager__item director-card__columns">
-                                    <div class="director-card__img-col">
-                                        @Html.Glass().RenderImage(director.Data, d => d.Image, new NameValueCollection { { "class", "fund-manager__img" } }, isEditable: true)
-                                    </div>
-                                    <div class="director-card__details-col">
-                                        <div class="director-card__details-title">
-                                            @Html.Glass().Editable(director.Data, d => d.FullName)
-                                        </div>
-                                        <p class="director-card__sub-title">
-                                            @Html.Glass().Editable(director.Data, d => d.Role)
-                                        </p>
-                                        <div class="director-card__description">
-                                            @director.Header
-                                        </div>
-                                        <div class="director-card__description">
-                                            @Html.Glass().Editable(director, d => d.Data.SubHeader)
-                                        </div>
-                                        <div class="director-card__description">
-                                            @Html.Glass().Editable(director, d => d.Data.ShortBio)
-                                        </div>
-                                        <div class="director-card__info">
-                                            @if (!string.IsNullOrEmpty(director.Data.Email) || Sitecore.Context.PageMode.IsExperienceEditorEditing)
-                                            {
-                                                <span class="director-card__info-label">@Html.Glass().Editable(director, d => d.Data.EmailLabel)</span>
-                                                <a href="mailto:@director.Data.Email" class="director-card__link">@Html.Glass().Editable(director, d => d.Data.Email)</a><br />
-                                            }
-                                            @if (!string.IsNullOrEmpty(director.Data.DirectLine) || Sitecore.Context.PageMode.IsExperienceEditorEditing)
-                                            {
-                                                <span class="director-card__info-label">@Html.Glass().Editable(director.Data, d => d.DirectLineLabel)</span>
-                                                <a href="tel:@director.Data.DirectLine" class="director-card__link">@Html.Glass().Editable(director.Data, d => d.DirectLine)</a><br />
-                                            }
-                                            @if (!string.IsNullOrEmpty(director.Data.MobileNumber) || Sitecore.Context.PageMode.IsExperienceEditorEditing)
-                                            {
-                                                <span class="director-card__info-label">@Html.Glass().Editable(director.Data, d => d.MobileLabel)</span>
-                                                <a href="tel:@director.Data.MobileNumber" class="director-card__link">@Html.Glass().Editable(director.Data, d => d.MobileNumber)</a><br />
-                                            }
-                                            @if (!string.IsNullOrEmpty(director.Data.LinkedIn) || Sitecore.Context.PageMode.IsExperienceEditorEditing)
-                                            {
-                                                <span class="director-card__info-label">@director.LinkedInLabel</span>
-                                                <a href="@director.Data.LinkedIn" class="director-card__link">@Html.Glass().Editable(director.Data, d => d.LinkedIn)</a><br />
-                                            }
-                                        </div>
-                                    </div>
+                        <div class="col-lg-4">
+                            <div class="people-card">
+                                <div class="people-card__image">
+                                    <a href="#" data-toggle="modal" data-target="#@card.Id">
+                                        @Html.Glass().RenderImage(card.Data, d => d.Image, isEditable: true)
+                                    </a>
+                                </div>
+                                <div class="people-card__content">
+                                    <p class="people-card__content-title">@Html.Glass().Editable(card.Data, d => d.FullName)</p>
+                                    <p>@Html.Glass().Editable(card.Data, d => d.Role)</p>
+                                    <a data-toggle="modal" data-target="#@card.Id" href="#">@card.ViewMoreLabel <i class="icon-arrow-right"></i></a>
                                 </div>
                             </div>
+                            @Html.Partial("~/Views/Listings/DirectorsList/PeopleOverlay.cshtml", card)
                         </div>
                     }
                 }
-            }
-        </div>
-    </section>
+            </div>
+        }
+    </div>
 }
 else if (Sitecore.Context.PageMode.IsExperienceEditor)
 {

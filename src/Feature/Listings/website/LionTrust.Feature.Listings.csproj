@@ -98,11 +98,13 @@
     <Content Include="Views\Listings\OurValues.cshtml" />
     <Content Include="Views\Listings\LatestResultsAndPresentations.cshtml" />
     <Content Include="Views\Listings\DirectorsListWithOverlay.cshtml" />
+    <Content Include="Views\Listings\DirectorsList\PeopleOverlay.cshtml" />
+    <Content Include="Views\Listings\DirectorsListSection.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
-    <Compile Include="Controllers\DirectorsListWithOverlayController.cs" />
+    <Compile Include="Controllers\DirectorsListController.cs" />
     <Compile Include="Controllers\AccordionController.cs" />
     <Compile Include="Controllers\DocumentsController.cs" />
     <Compile Include="Controllers\LatestResultsAndPresentationsController.cs" />

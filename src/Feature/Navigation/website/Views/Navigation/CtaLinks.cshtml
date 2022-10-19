@@ -13,21 +13,19 @@
     <div class="container">
         <div class="page-anchor full-wigth people-anchors">
             <div class="page-anchor__right">
-                <button class="page-anchor__title text-black"><span>>@Html.Glass().Editable(m => m.Heading)</span></button>
+                <button class="page-anchor__title text-black"><span>@Html.Glass().Editable(m => m.Heading)</span></button>
                 <ul class="page-anchor__links">
                     @foreach (var item in Model.Children)
                     {
-                    <li>
-                        <a class="page-anchor__link" href="">Board of Directors</a>
-
-                        @using (Html.Glass().BeginRenderLinkWithGoal(item, m => m.CtaLink, item.CtaLinkGoal, new NameValueCollection { { "class", (item.CtaLink.IsCurrentPage(Sitecore.Context.Item) ? "page-anchor__link active" : "page-anchor__link") } }))
-                        {
-                            if (item.CtaLink != null && !string.IsNullOrEmpty(item.CtaName))
+                        <li>
+                            @using (Html.Glass().BeginRenderLinkWithGoal(item, m => m.CtaLink, item.CtaLinkGoal, new NameValueCollection { { "class", (item.CtaLink.IsCurrentPage(Sitecore.Context.Item) ? "page-anchor__link active" : "page-anchor__link") } }))
                             {
-                                @Html.Glass().Editable(item, m => m.CtaName)
+                                if (item.CtaLink != null && !string.IsNullOrEmpty(item.CtaName))
+                                {
+                                    @Html.Glass().Editable(item, m => m.CtaName)
+                                }
                             }
-                        }
-                    </li>
+                        </li>
                     }
                 </ul>
             </div>

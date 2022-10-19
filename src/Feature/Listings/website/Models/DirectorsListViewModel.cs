@@ -1,5 +1,4 @@
-﻿using Glass.Mapper.Sc.Fields;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace LionTrust.Feature.Listings.Models
 {
@@ -7,8 +6,12 @@ namespace LionTrust.Feature.Listings.Models
     {
         public IDirectorsList Data { get; set; }
 
-        public IEnumerable<DirectorViewModel> Children { get; set; }
+        public string EmailLabel { get; set; }
 
-        public Image LinkedInImage { get; set; }
+        public string DirectLineLabel { get; set; }
+
+        public string MobileLabel { get; set; }
+
+        public IEnumerable<DirectorViewModel> Children { get; set; }
     }
 }
