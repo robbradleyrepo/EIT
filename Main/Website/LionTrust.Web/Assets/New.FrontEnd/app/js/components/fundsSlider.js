@@ -26,7 +26,7 @@ export default () => {
         return `<span class="dot swiper-pagination-bullet"></span>`;
       },
       hidePaginatiom: function () {
-        if (this.slidesPerView.length < 8) {
+        if (this.slidesPerView.length < 3) {
           prevArrow.classList.add("'swiper-button-disabled'");
           nextArrow.classList.add("'swiper-button-disabled'");
         }
@@ -61,8 +61,8 @@ export default () => {
     }
   })
   
-  
-  if(swiperSlides.length < 3){
+  let numberOfSlides = 3;
+  if(swiperSlides.length < numberOfSlides){
     pagination.hide();
     prevButton.hide();
     nextButton.hide();
