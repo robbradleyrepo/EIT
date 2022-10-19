@@ -8,8 +8,6 @@
                 max-width: 100%
                 height: auto
                 border-radius: 10px
-                @include breakpoint(tablet, up)
-                    border-radius: 0
         &-info
             display: flex
             flex-direction: column
@@ -26,9 +24,8 @@
                     letter-spacing: 0.16px
                     display: flex
                     span
-                        flex: 0 0 20%
-                        @include breakpoint(tablet, up)
-                            flex: 0 0 30%
+                       flex: 0 0 auto
+                       min-width: 100px
                     a
                         color: $black
             &-social
