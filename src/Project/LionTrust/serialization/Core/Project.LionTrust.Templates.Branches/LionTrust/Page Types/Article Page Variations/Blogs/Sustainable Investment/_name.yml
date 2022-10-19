@@ -39,15 +39,8 @@ Languages:
               s:par=""
               s:ph="/main/article" />
             <r
-              uid="{A1ACDEAC-3130-496B-9608-43B82F47003C}"
-              p:after="r[@uid='{44D9CD64-8820-4293-928E-E33DAA95A12C}']"
-              s:ds="{F2FA86BE-8BA4-434E-A1BA-A8E373DD2604}"
-              s:id="{E9EA1844-F7AA-45D6-A10F-800A467D6E3D}"
-              s:par=""
-              s:ph="/main/article" />
-            <r
               uid="{1F957C53-EC39-450C-BD85-F18C9D6D0C39}"
-              p:after="r[@uid='{A1ACDEAC-3130-496B-9608-43B82F47003C}']"
+              p:after="r[@uid='{44D9CD64-8820-4293-928E-E33DAA95A12C}']"
               s:ds="{481455D1-CD5B-4448-8CEE-1A2C54E58112}"
               s:id="{7626FD78-BC75-4F9C-80E7-DC947364A29B}"
               s:par=""
@@ -133,7 +126,8 @@ Languages:
       Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
     - ID: "5bd6e9e9-2240-4473-8094-075e811b8438"
       Hint: Article_ListingImage
-      Value: 
+      Value: |
+        <image mediaid="{525577A8-998D-4E67-B480-AE73FDF88DEE}" />
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
