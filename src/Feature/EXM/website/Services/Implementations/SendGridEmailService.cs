@@ -11,9 +11,9 @@ namespace LionTrust.Feature.EXM.Services.Implementations
     {
         private readonly string _apiKey;
 
-        public SendGridEmailService()
+        public SendGridEmailService(string password)
         {
-            _apiKey = Sitecore.Configuration.Settings.GetSetting(Constants.Settings.MailServerPassword);
+            _apiKey = password;
         }
 
         public async Task<List<Models.Bounce>> GetBlocks()

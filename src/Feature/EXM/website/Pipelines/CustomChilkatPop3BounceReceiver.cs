@@ -1,5 +1,6 @@
 ﻿using Chilkat;
 using FuseIT.Sitecore.Personalization.Facets;
+using LionTrust.Feature.EXM.Services.Implementations;
 using LionTrust.Feature.EXM.Services.Interfaces;
 using LionTrust.Foundation.Contact.Services;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,7 +27,6 @@ namespace LionTrust.Feature.EXM.Pipelines
     {
         private const string SendGrid = "sendgrid";
 
-        private readonly string _mailServer;
         private readonly IManagerRootService _managerRootService;
         private readonly ISFEntityUtility _sfEntityUtility;
         private readonly IEmailService _emailService;
@@ -57,7 +57,7 @@ namespace LionTrust.Feature.EXM.Pipelines
           IBounceInspector inspector,
           IEnvironmentId environmentId,
           ILogger logger)
-            : this(ServiceLocator.ServiceProvider.GetService<IEmailService>(),
+            : this(new SendGridEmailService(settings.Password),
                   ServiceLocator.ServiceProvider.GetService<IManagerRootService>(),
                   ServiceLocator.ServiceProvider.GetService<ISFEntityUtility>(),
                   settings, 
@@ -84,7 +84,6 @@ namespace LionTrust.Feature.EXM.Pipelines
             Assert.ArgumentNotNull(environmentId, nameof(environmentId));
             Assert.ArgumentNotNull(logger, nameof(logger));
 
-            _mailServer = Sitecore.Configuration.Settings.GetSetting(Constants.Settings.MailServer);
             _emailService = emailService;
             _managerRootService = managerRootService;
             _sfEntityUtility = sfEntityUtility;
@@ -99,7 +98,7 @@ namespace LionTrust.Feature.EXM.Pipelines
             try
             {
                 //sendGrid
-                if (_mailServer.Contains(SendGrid))
+                if (_pop3Settings.Server.Contains(SendGrid))
                 {
                     var bounces = await _emailService.GetBounces();
                     var softBounces = bounces.Where(x => !x.HardBounce).ToList();
