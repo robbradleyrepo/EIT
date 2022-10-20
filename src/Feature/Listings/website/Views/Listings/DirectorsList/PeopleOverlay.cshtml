@@ -20,7 +20,7 @@
                             @Html.Glass().RenderImage(Model, d => d.ImageOverlay, isEditable: true)
                         </picture>
                     </div>
-                    <div class="col-auto modal-people__card-info">
+                    <div class="col-7 modal-people__card-info">
                         <p class="h4 modal-people__card-info-title">@Html.Glass().Editable(Model.Data, d => d.FullName)</p>
                         <p>@Html.Glass().Editable(Model.Data, d => d.Role)</p>
                         <ul>
