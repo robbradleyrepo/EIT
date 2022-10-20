@@ -79,7 +79,7 @@
                         {
                             <div class="swiper-slide">
 
-                                @using (Html.Glass().BeginRenderLink(item, i => i.CTA, new { @class = "fund-card" }, isEditable: true))
+                                @using (Html.Glass().BeginRenderLink(item, i => i.CTA, new { @class = "fund-card forSlides" }, isEditable: true))
                                 {
                                     <div class="fund-card__head">
                                         @Html.Glass().Editable(item, i => i.Image)
