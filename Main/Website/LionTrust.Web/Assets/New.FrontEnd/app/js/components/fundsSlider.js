@@ -1,17 +1,23 @@
-import Swiper, { Pagination } from "swiper/bundle";
-
+import Swiper, { Nvaigation, Pagination } from "swiper/bundle";
 
 export default () => {
+
   const swiper = new Swiper(".swiper-container-funds", {
     grabCursor: true,
     slidesPerView: "auto",
     breakpointsInverse: true,
-    slidesOffsetAfter: 600,
-    loop: true,
+    slidesOffsetAfter: 0,
+    slidesOffsetBefore: 0,
+    watchOverflow: true, 
     observer: true,
     observeParents: true,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
+    lazyLoading: true,
+    slideToClickedSlide: true,
+    initialSlide: 0,
+ 
+   
 
     pagination: {
       el: ".swiper-pagination",
@@ -20,9 +26,9 @@ export default () => {
         return `<span class="dot swiper-pagination-bullet"></span>`;
       },
       hidePaginatiom: function () {
-        if (this.slidesPerView.length > 3) {
-          prevArrow.classList.add("hide-arrows");
-          nextArrow.classList.add("hide-arrows");
+        if (this.slidesPerView.length < 3) {
+          prevArrow.classList.add("'swiper-button-disabled'");
+          nextArrow.classList.add("'swiper-button-disabled'");
         }
       },
     },
@@ -32,18 +38,27 @@ export default () => {
       prevEl: ".swiper-button-prev",
     },
 
-    lazyLoading: true,
-    slideToClickedSlide: true,
-    initialSlide: 1,
+    
   });
 
-  let description = document.getElementsByClassName("imagepromo__contentbox");
-  let fundScroller = document.getElementsByClassName("fundscroller-container");
-  let slides = document.getElementsByClassName("swiper-slides");
-  let prevArrow = document.getElementsByClassName("swiper-button-prev");
-  let nextArrow = document.getElementsByClassName("swiper-button-next");
-  if (description.length === 0) {
-    fundScroller.classList.add("full-width-carousel");
+ let fundScroller = $(".fundscroller-container");
+ 
+ fundScroller.each(function(){
+
+  let nextButton= $(this).find(".swiper-button-next");
+  let prevButton= $(this).find(".swiper-button-prev");
+  let pagination= $(this).find(".swiper-pagination");
+  let swiperSlides= $(this).find(".swiper-slide");
+ 
+   
+  let numberOfSlides = 3;
+  if(swiperSlides.length < numberOfSlides){
+    pagination.hide();
+    prevButton.hide();
+    nextButton.hide();
   }
-  
+ 
+  })
+
+
 };
