@@ -15,7 +15,7 @@
             <div class="row">
                 @foreach (var card in Model.Children)
                 {
-                    using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/DirectorsList", card.Data.Id.ToString(), "Edit director"))
+                    using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/Directors List with Overlay", card.Data.Id.ToString(), "Edit director with overlay"))
                     {
                         <div class="col-lg-4">
                             <div class="people-card">
