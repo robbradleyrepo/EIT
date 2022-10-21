@@ -752,7 +752,7 @@
             string visitorid = string.Empty;
             try
             {
-                string identifierSource = Sitecore.Configuration.Settings.GetSetting(Constants.IdentifierSourceConfigName, "S4S");
+                string identifierSource = Sitecore.Configuration.Settings.GetSetting(Constants.IdentifierSourceConfigName, Constants.Identifier.S4S);
 
                 if (OnboardingHelper.IdentifyAs(identifierSource, emailAddress))
                 {
