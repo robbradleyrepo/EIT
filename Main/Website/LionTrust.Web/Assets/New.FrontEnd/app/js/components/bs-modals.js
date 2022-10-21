@@ -9,4 +9,10 @@ export default () => {
     $('.modal-people').on('hide.bs.modal', function () {
       $("html").removeClass("no-scroll");
     });
+
+    //Trigger people card modal
+    $(".people-card a").on("click", function(e){
+      e.preventDefault();
+      $(this).parents(".people-card").next(".modal").modal("show");
+    });
 }
