@@ -196,6 +196,7 @@ namespace LionTrust.Feature.EXM
 
         public static class Settings
         {
+            public const string IsBouncesBackEnable = "IsBouncesBackEnable";
             public const string MailTestingEnvironment = "MailTestingEnvironment";
             public const string MailServerPassword = "MailServerPassword";
             public const string MailServer = "MailServer";

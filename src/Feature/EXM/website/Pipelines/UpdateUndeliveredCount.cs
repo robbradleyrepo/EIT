@@ -117,14 +117,11 @@ namespace LionTrust.Feature.EXM.Pipelines
                             using (XConnectClient client = Sitecore.XConnect.Client.Configuration.SitecoreXConnectClientConfiguration.GetClient())
                             {
                                 var sfEntity = _sfEntityUtility.GetEntityByEmail(preferredEmail.SmtpAddress);
-                                var identifier = _sfEntityUtility.GetIdentifier(sfEntity);
-
-                                var reference = new IdentifiedContactReference(ContactConstants.Identifier.S4S, identifier);
-                                var expandOptions = new ContactExpandOptions(EmailAddressList.DefaultFacetKey, S4SInfo.DefaultFacetKey);
-                                var xdbContact = client.Get(reference, expandOptions);
-
-                                //update salesforce contact
-                                _sfEntityUtility.SaveHardBounced(sfEntity);
+                                if (sfEntity != null)
+                                {
+                                    //update salesforce contact
+                                    _sfEntityUtility.SaveHardBounced(sfEntity);
+                                }
                             }
                         }
                     }

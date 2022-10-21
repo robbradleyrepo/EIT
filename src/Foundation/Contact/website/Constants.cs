@@ -144,7 +144,13 @@ namespace LionTrust.Foundation.Contact
 
         public static class Identifier
         {
-            public const string S4S = "s4slb";
+            public const string XdbTracker = "xDB.Tracker";
+            public const string S4S = "S4S";
+        }
+
+        public static class EmailAddressList
+        {
+            public const string PreferredKey = "Preferred";
         }
 
         public static class SessionKeys
