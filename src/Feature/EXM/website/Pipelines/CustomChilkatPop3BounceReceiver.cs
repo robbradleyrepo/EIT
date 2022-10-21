@@ -4,6 +4,7 @@ using LionTrust.Feature.EXM.Services.Implementations;
 using LionTrust.Feature.EXM.Services.Interfaces;
 using LionTrust.Foundation.Contact.Services;
 using Microsoft.Extensions.DependencyInjection;
+using Sitecore.Abstractions;
 using Sitecore.DependencyInjection;
 using Sitecore.Diagnostics;
 using Sitecore.EDS.Core.Diagnostics;
@@ -35,6 +36,8 @@ namespace LionTrust.Feature.EXM.Pipelines
         private readonly IEnvironmentId _environmentId;
         private readonly ILogger _logger;
 
+        private readonly bool _isBouncesBackEnable;
+
         public CustomChilkatPop3BounceReceiver(
           Pop3Settings settings,
           IBounceInspector inspector,
@@ -63,7 +66,8 @@ namespace LionTrust.Feature.EXM.Pipelines
                   settings, 
                   inspector, 
                   environmentId, 
-                  logger)
+                  logger,
+                  ServiceLocator.ServiceProvider.GetService<BaseSettings>())
         {
         }
 
@@ -74,7 +78,8 @@ namespace LionTrust.Feature.EXM.Pipelines
           Pop3Settings settings,
           IBounceInspector inspector,
           IEnvironmentId environmentId,
-          ILogger logger)
+          ILogger logger,
+          BaseSettings baseSettings)
         {
             Assert.ArgumentNotNull(emailService, nameof(emailService));
             Assert.ArgumentNotNull(managerRootService, nameof(managerRootService));
@@ -91,6 +96,8 @@ namespace LionTrust.Feature.EXM.Pipelines
             _inspector = inspector;
             _environmentId = environmentId;
             _logger = logger;
+
+            _isBouncesBackEnable = baseSettings.GetBoolSetting(Constants.Settings.IsBouncesBackEnable, false);
         }
 
         public async System.Threading.Tasks.Task ProcessMessages(Func<ICollection<Sitecore.EDS.Core.Reporting.Bounce>, System.Threading.Tasks.Task> handleBounces)
@@ -265,9 +272,12 @@ namespace LionTrust.Feature.EXM.Pipelines
 
                         foreach (var exclude in excludeContacts)
                         {
-                            var result = isBlockEmail
-                                    ? await _emailService.DeleteBlock(exclude.Key)
-                                    : await _emailService.DeleteBounce(exclude.Key);
+                            if (_isBouncesBackEnable)
+                            {
+                                var result = isBlockEmail
+                                        ? await _emailService.DeleteBlock(exclude.Key)
+                                        : await _emailService.DeleteBounce(exclude.Key);
+                            }
 
                             //update salesforce contact
                             _sfEntityUtility.SaveHardBounced(exclude.Value);
@@ -326,7 +336,10 @@ namespace LionTrust.Feature.EXM.Pipelines
 
                         foreach (var exclude in excludeContacts)
                         {
-                            var result = await _emailService.DeleteBounce(exclude.Key);
+                            if (_isBouncesBackEnable)
+                            {
+                                var result = await _emailService.DeleteBounce(exclude.Key);
+                            }
 
                             //update salesforce contact
                             _sfEntityUtility.SaveHardBounced(exclude.Value);
