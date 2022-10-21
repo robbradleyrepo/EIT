@@ -212,7 +212,7 @@ namespace LionTrust.Feature.EXM.Pipelines
 
         private async System.Threading.Tasks.Task ExecuteSoftBounces(List<Models.Bounce> list, bool isBlockEmail = false)
         {
-            var excludeContacts = new List<KeyValuePair<Contact, FuseIT.Sitecore.SalesforceConnector.Entities.EntityBase>>();
+            var excludeContacts = new List<KeyValuePair<string, FuseIT.Sitecore.SalesforceConnector.Entities.EntityBase>>();
 
             var managerRoot = _managerRootService.GetManagerRoots()?.FirstOrDefault();
 
@@ -226,13 +226,23 @@ namespace LionTrust.Feature.EXM.Pipelines
                         {
                             var email = bouncedEmail.Email;
                             var sfEntity = _sfEntityUtility.GetEntityByEmail(email);
+                            if (sfEntity == null)
+                            {
+                                continue;
+                            }
+
                             var identifier = _sfEntityUtility.GetIdentifier(sfEntity);
 
-                            var reference = new IdentifiedContactReference(ContactConstants.Identifier.S4S, identifier);
+                            var reference = new IdentifiedContactReference(ContactConstants.Identifier.S4S, email);
                             var expandOptions = new ContactExpandOptions(EmailAddressList.DefaultFacetKey, S4SInfo.DefaultFacetKey);
                             var xdbContact = client.Get(reference, expandOptions);
 
-                            var emails = xdbContact.Emails();
+                            var emails = xdbContact?.Emails();
+
+                            if (emails == null)
+                            {
+                                emails = new EmailAddressList(new EmailAddress(email, true), ContactConstants.EmailAddressList.PreferredKey);
+                            }
 
                             if (emails.PreferredEmail.BounceCount < managerRoot.Settings.MaxUndelivered)
                             {
@@ -245,25 +255,22 @@ namespace LionTrust.Feature.EXM.Pipelines
 
                             if (emails.PreferredEmail.BounceCount >= managerRoot.Settings.MaxUndelivered)
                             {
-                                excludeContacts.Add(new KeyValuePair<Contact, FuseIT.Sitecore.SalesforceConnector.Entities.EntityBase>(xdbContact, sfEntity));
+                                excludeContacts.Add(new KeyValuePair<string, FuseIT.Sitecore.SalesforceConnector.Entities.EntityBase>(email, sfEntity));
                             }
 
                             client.SetFacet(xdbContact, EmailAddressList.DefaultFacetKey, emails);
-                            excludeContacts.Add(new KeyValuePair<Contact, FuseIT.Sitecore.SalesforceConnector.Entities.EntityBase>(xdbContact, sfEntity));
                         }
 
                         client.Submit();
 
                         foreach (var exclude in excludeContacts)
                         {
-                            var emails = exclude.Key.Emails();
+                            var result = isBlockEmail
+                                    ? await _emailService.DeleteBlock(exclude.Key)
+                                    : await _emailService.DeleteBounce(exclude.Key);
 
                             //update salesforce contact
                             _sfEntityUtility.SaveHardBounced(exclude.Value);
-
-                            var result = isBlockEmail 
-                                ? await _emailService.DeleteBlock(emails.PreferredEmail.SmtpAddress)
-                                : await _emailService.DeleteBounce(emails.PreferredEmail.SmtpAddress);
                         }
                     }
                     catch (Exception ex)
@@ -276,7 +283,7 @@ namespace LionTrust.Feature.EXM.Pipelines
 
         private async System.Threading.Tasks.Task ProcessHardBounces(List<Models.Bounce> bounces)
         {
-            var excludeContacts = new List<KeyValuePair<Contact, FuseIT.Sitecore.SalesforceConnector.Entities.EntityBase>>();
+            var excludeContacts = new List<KeyValuePair<string, FuseIT.Sitecore.SalesforceConnector.Entities.EntityBase>>();
 
             var managerRoot = _managerRootService.GetManagerRoots()?.FirstOrDefault();
 
@@ -289,30 +296,40 @@ namespace LionTrust.Feature.EXM.Pipelines
                         foreach (var bouncedEmail in bounces)
                         {
                             var email = bouncedEmail.Email;
+
                             var sfEntity = _sfEntityUtility.GetEntityByEmail(email);
+                            if (sfEntity == null)
+                            {
+                                continue;
+                            }
+
                             var identifier = _sfEntityUtility.GetIdentifier(sfEntity);
 
-                            var reference = new IdentifiedContactReference(ContactConstants.Identifier.S4S, identifier);
+                            var reference = new IdentifiedContactReference(ContactConstants.Identifier.S4S, email);
                             var expandOptions = new ContactExpandOptions(EmailAddressList.DefaultFacetKey, S4SInfo.DefaultFacetKey);
                             var xdbContact = client.Get(reference, expandOptions);
 
-                            var emails = xdbContact.Emails();
-                            emails.PreferredEmail.BounceCount = managerRoot.Settings.MaxUndelivered;
+                            var emails = xdbContact?.Emails();
 
+                            if (emails == null)
+                            {
+                                emails = new EmailAddressList(new EmailAddress(email, true), ContactConstants.EmailAddressList.PreferredKey);
+                            }
+
+                            emails.PreferredEmail.BounceCount = managerRoot.Settings.MaxUndelivered;
                             client.SetFacet(xdbContact, EmailAddressList.DefaultFacetKey, emails);
-                            excludeContacts.Add(new KeyValuePair<Contact, FuseIT.Sitecore.SalesforceConnector.Entities.EntityBase>(xdbContact, sfEntity));
+
+                            excludeContacts.Add(new KeyValuePair<string, FuseIT.Sitecore.SalesforceConnector.Entities.EntityBase>(email, sfEntity));
                         }
 
                         client.Submit();
 
                         foreach (var exclude in excludeContacts)
                         {
-                            var emails = exclude.Key.Emails();
+                            var result = await _emailService.DeleteBounce(exclude.Key);
 
                             //update salesforce contact
                             _sfEntityUtility.SaveHardBounced(exclude.Value);
-
-                            var result = await _emailService.DeleteBounce(emails.PreferredEmail.SmtpAddress);
                         }
                     }
                     catch (Exception ex)
