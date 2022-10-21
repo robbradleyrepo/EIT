@@ -42,7 +42,9 @@
                 .modal-header
                     padding: 0
                     position: absolute
-                    width: 635px
+                    width: 100%
+                    @include breakpoint(tablet, up)
+                        width: 635px
                     button
                         background: transparent
                         border: none
