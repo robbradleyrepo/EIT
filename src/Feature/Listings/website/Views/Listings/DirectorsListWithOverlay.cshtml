@@ -20,14 +20,14 @@
                         <div class="col-lg-4">
                             <div class="people-card">
                                 <div class="people-card__image">
-                                    <a href="#" data-toggle="modal" data-target="#@card.Id">
+                                    <a href="#">
                                         @Html.Glass().RenderImage(card.Data, d => d.Image, isEditable: true)
                                     </a>
                                 </div>
                                 <div class="people-card__content">
                                     <p class="people-card__content-title">@Html.Glass().Editable(card.Data, d => d.FullName)</p>
                                     <p>@Html.Glass().Editable(card.Data, d => d.Role)</p>
-                                    <a data-toggle="modal" data-target="#@card.Id" href="#">@card.ViewMoreLabel <i class="icon-arrow-right"></i></a>
+                                    <a href="#">@card.ViewMoreLabel <i class="icon-arrow-right"></i></a>
                                 </div>
                             </div>
                             @Html.Partial("~/Views/Listings/DirectorsList/PeopleOverlay.cshtml", card)

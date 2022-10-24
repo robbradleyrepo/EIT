@@ -5,8 +5,6 @@ namespace LionTrust.Feature.Listings.Models
 {
     public class DirectorViewModel
     {
-        public Guid Id { get; set; }
-
         public IDirector Data { get; set; }
 
         public string Header { get; set; }
@@ -22,10 +20,5 @@ namespace LionTrust.Feature.Listings.Models
         public string LinkedInLabel { get; set; }
 
         public Image LinkedInImage { get; set; }
-
-        public DirectorViewModel()
-        {
-            Id = Guid.NewGuid();
-        }
     }
 }

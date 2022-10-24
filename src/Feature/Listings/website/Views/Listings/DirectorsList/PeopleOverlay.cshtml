@@ -3,7 +3,7 @@
 @using LionTrust.Foundation.SitecoreExtensions.Extensions
 @model LionTrust.Feature.Listings.Models.DirectorViewModel
 
-<div class="modal modal-right modal-full-height modal-backdrop-custom modal-people fade" id="@Model.Id" tabindex="-1" aria-labelledby="peopleCardModalLabel" aria-hidden="true">
+<div class="modal modal-right modal-full-height modal-backdrop-custom modal-people fade" tabindex="-1" aria-labelledby="peopleCardModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -20,7 +20,7 @@
                             @Html.Glass().RenderImage(Model, d => d.ImageOverlay, isEditable: true)
                         </picture>
                     </div>
-                    <div class="col-7 modal-people__card-info">
+                    <div class="col-md-7 modal-people__card-info">
                         <p class="h4 modal-people__card-info-title">@Html.Glass().Editable(Model.Data, d => d.FullName)</p>
                         <p>@Html.Glass().Editable(Model.Data, d => d.Role)</p>
                         <ul>
