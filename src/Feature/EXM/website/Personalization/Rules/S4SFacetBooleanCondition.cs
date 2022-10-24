@@ -49,24 +49,10 @@
                 }
 
                 var s4Sinfo = contact.S4SInfo();
-                if (s4Sinfo != null)
+                if (s4Sinfo?.Fields != null && s4Sinfo.Fields.TryGetValue(key, out string field) && bool.TryParse(field, out var fieldValue))
                 {
-                    if (s4Sinfo.Fields != null)
-                    {
-                        if (s4Sinfo.Fields.TryGetValue(key, out string field) && bool.TryParse(field, out var fieldValue))
-                        {
-                            if (fieldValue)
-                            {
-                                Logging.DebugFormat(this, "FacetDictionaryValueCondition Facet key found a match Rule Key {0}", key);
-                                return true;
-                            }
-                            else
-                            {
-                                Logging.DebugFormat(this, "FacetDictionaryValueCondition Rule condition was not matched key {0}", key);
-                                return false;
-                            }
-                        }
-                    }
+                    Logging.DebugFormat(this, "FacetDictionaryValueCondition Facet key found a match Rule Key {0}", key);
+                    return true;
                 }
             }
 
