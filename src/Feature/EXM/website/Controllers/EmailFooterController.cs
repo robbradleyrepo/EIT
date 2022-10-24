@@ -19,11 +19,5 @@ namespace LionTrust.Feature.EXM.Controllers
             var model = _mvcContext.GetDataSourceItem<IFooter>();
             return View("~/Views/EXM/Footer.cshtml", model);
         }
-
-        public ActionResult Disclaimer()
-        {
-            var model = _mvcContext.GetDataSourceItem<IDisclaimer>();
-            return View("~/Views/EXM/Disclaimer.cshtml", model);
-        }
     }
 }

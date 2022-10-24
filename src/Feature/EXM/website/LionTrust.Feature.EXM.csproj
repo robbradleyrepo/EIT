@@ -198,6 +198,7 @@
     <Compile Include="Models\LTMessageResponse.cs" />
     <Compile Include="Models\LTUpdateMessageContext.cs" />
     <Compile Include="Models\Owner.cs" />
+    <Compile Include="Personalization\Rules\S4SFacetBooleanCondition.cs" />
     <Compile Include="Personalization\FacetExtensions.cs" />
     <Compile Include="Personalization\CustomRecipientPropertyTokenMap.cs" />
     <Compile Include="Models\IFooter.cs" />

@@ -66,7 +66,43 @@ SharedFields:
           id="{1E182C5C-1429-4055-BD6A-6E36A5AC2700}"
           par=""
           ph="email-footer"
-          uid="{308744D2-B17C-4E91-A788-390C499C9882}" />
+          uid="{308744D2-B17C-4E91-A788-390C499C9882}">
+          <rls>
+            <ruleset>
+              <rule
+                name="UK Resident"
+                uid="{3D2102F1-0E01-4E35-966D-F4283424BC78}">
+                <actions>
+                  <action
+                    id="{0F3C6BEC-E56B-4875-93D7-2846A75881D2}"
+                    uid="3DEF06D1C3DB42C9AFA3C7645D3F93C7"
+                    DataSource="{501C9D26-E918-44A1-9554-7C52D85D4AC7}" />
+                </actions>
+                <conditions>
+                  <condition
+                    id="{14771920-DCA6-40B3-8BBC-37C3759BC4E5}"
+                    uid="8B356B10B65A44B591CF7D70CA8A7D7F"
+                    ItemId="{3093B93E-1563-4DAB-8FD5-0649E214ACF5}" />
+                </conditions>
+              </rule>
+              <rule
+                uid="{00000000-0000-0000-0000-000000000000}"
+                name="Default">
+                <conditions>
+                  <condition
+                    id="{4888ABBB-F17D-4485-B14B-842413F88732}"
+                    uid="0ECB249C0669415AB1F34AF2A9D0DAE7" />
+                </conditions>
+                <actions>
+                  <action
+                    id="{0F3C6BEC-E56B-4875-93D7-2846A75881D2}"
+                    uid="E588065797AE48C1864278E255F5B0BA"
+                    DataSource="{06D65B5B-310E-4F13-8235-F5ABBC041BB2}" />
+                </actions>
+              </rule>
+            </ruleset>
+          </rls>
+        </r>
       </d>
     </r>
 Languages:
@@ -79,4 +115,4 @@ Languages:
       Value: 20220107T092440Z
     - ID: "c0bfd467-0b74-4efe-b7c9-1ecf7f0e5370"
       Hint: Subject
-      Value: subject aaa
+      Value: 
