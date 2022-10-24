@@ -244,7 +244,12 @@ namespace LionTrust.Feature.EXM.Pipelines
                             var expandOptions = new ContactExpandOptions(EmailAddressList.DefaultFacetKey, S4SInfo.DefaultFacetKey);
                             var xdbContact = client.Get(reference, expandOptions);
 
-                            var emails = xdbContact?.Emails();
+                            if (xdbContact == null)
+                            {
+                                continue;
+                            }
+
+                            var emails = xdbContact.Emails();
 
                             if (emails == null)
                             {
@@ -318,6 +323,11 @@ namespace LionTrust.Feature.EXM.Pipelines
                             var reference = new IdentifiedContactReference(ContactConstants.Identifier.S4S, email);
                             var expandOptions = new ContactExpandOptions(EmailAddressList.DefaultFacetKey, S4SInfo.DefaultFacetKey);
                             var xdbContact = client.Get(reference, expandOptions);
+
+                            if (xdbContact == null)
+                            {
+                                continue;
+                            }
 
                             var emails = xdbContact?.Emails();
 
