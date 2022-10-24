@@ -238,12 +238,7 @@ namespace LionTrust.Feature.EXM.Pipelines
                                 continue;
                             }
 
-                            var identifier = _sfEntityUtility.GetIdentifier(sfEntity);
-
-                            var reference = new IdentifiedContactReference(ContactConstants.Identifier.S4S, email);
-                            var expandOptions = new ContactExpandOptions(EmailAddressList.DefaultFacetKey, S4SInfo.DefaultFacetKey);
-                            var xdbContact = client.Get(reference, expandOptions);
-
+                            var xdbContact = GetContact(client, email, sfEntity);
                             if (xdbContact == null)
                             {
                                 continue;
@@ -318,18 +313,13 @@ namespace LionTrust.Feature.EXM.Pipelines
                                 continue;
                             }
 
-                            var identifier = _sfEntityUtility.GetIdentifier(sfEntity);
-
-                            var reference = new IdentifiedContactReference(ContactConstants.Identifier.S4S, email);
-                            var expandOptions = new ContactExpandOptions(EmailAddressList.DefaultFacetKey, S4SInfo.DefaultFacetKey);
-                            var xdbContact = client.Get(reference, expandOptions);
-
+                            var xdbContact = GetContact(client, email, sfEntity);
                             if (xdbContact == null)
                             {
                                 continue;
                             }
 
-                            var emails = xdbContact?.Emails();
+                            var emails = xdbContact.Emails();
 
                             if (emails == null)
                             {
@@ -361,6 +351,22 @@ namespace LionTrust.Feature.EXM.Pipelines
                     }
                 }
             }
+        }
+
+        private Contact GetContact(XConnectClient client, string email, FuseIT.Sitecore.SalesforceConnector.Entities.EntityBase sfEntity)
+        {
+            var reference = new IdentifiedContactReference(ContactConstants.Identifier.S4S, email);
+            var expandOptions = new ContactExpandOptions(EmailAddressList.DefaultFacetKey, S4SInfo.DefaultFacetKey);
+            var xdbContact = client.Get(reference, expandOptions);
+
+            if (xdbContact == null)
+            {
+                var identifier = _sfEntityUtility.GetIdentifier(sfEntity);
+                reference = new IdentifiedContactReference(ContactConstants.Identifier.S4SLB, identifier);
+                xdbContact = client.Get(reference, expandOptions);
+            }
+
+            return xdbContact;
         }
     }
 }
