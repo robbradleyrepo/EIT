@@ -146,6 +146,7 @@ namespace LionTrust.Foundation.Contact
         {
             public const string XdbTracker = "xDB.Tracker";
             public const string S4S = "S4S";
+            public const string S4SLB = "s4slb";
         }
 
         public static class EmailAddressList
