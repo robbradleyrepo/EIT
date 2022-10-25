@@ -1,0 +1,22 @@
+﻿---
+ID: "cf0be33f-f3c0-4f4b-a3d7-c4394ff859dc"
+Parent: "66e119ee-8ce0-4de9-8a8f-fe630b745055"
+Template: "0650b85b-227a-4387-8335-91903bcafef4"
+Path: "/sitecore/templates/Branches/Project/LionTrust/Page Types/Article Page Variations/Fund Updates/Global Fundamental/$name/_Local/BC011 - Article Header"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210519T103318Z
+    - ID: "30451f6b-437d-4473-ae3e-79fe7a1af36a"
+      Hint: ArticleHeader_BackgroundImage
+      Value: |
+        <image mediaid="{9CA07B7A-CDBA-4E84-8101-1F01FDF455F5}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

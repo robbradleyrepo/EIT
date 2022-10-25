@@ -1,0 +1,37 @@
+﻿---
+ID: "1081e093-b547-4b95-bd95-e7cdceb03ee8"
+Parent: "1e0187fe-2df2-411e-aab3-872e4c005aa4"
+Template: "cf87f1eb-f59d-4e08-bcd6-23e0cdd7362f"
+Path: "/sitecore/templates/Branches/Project/LionTrust/Page Types/Article Page Variations/Blogs/Global Fundamental/$name/_Local/BC016 - Article Scroller"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0e5031b3-9232-42be-82d4-05579d7827d9"
+      Hint: ArticleSearchParameters_FundTeams
+      Type: Multilist
+      Value: "{7B370435-9AB2-4E6F-9B1C-16209BA9C8BD}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210519T133301Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "93854c18-0919-445e-bc88-2d353c8491e8"
+      Hint: ArticleScroller_Heading
+      Value: More from the team
+    - ID: "a03d4f9e-4bda-401d-9639-dd0247f50fab"
+      Hint: ArticleSearchParameters_ContentTypes
+      Type: Multilist
+      Value: |
+        {1E9B3548-D1FE-4C91-BB3C-5B9CD7599803}
+        {264310A1-EAC8-4FF3-9A8C-FA05EA49AE34}
+        {BC971C84-D2FD-4CF5-8010-B5162CB17836}
+        {8F7AE3EF-160E-4183-9613-06124444248D}
+    - ID: "bad318c3-b9b5-457f-a42d-f51516fc3ec2"
+      Hint: ArticleScroller_CTA
+      Value: |
+        <link text="See all related" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{7E9E8706-F864-48E5-B4A2-57F2C408EFD7}" />
