@@ -356,14 +356,15 @@ namespace LionTrust.Feature.EXM.Pipelines
 
         private Contact GetContact(XConnectClient client, string email, FuseIT.Sitecore.SalesforceConnector.Entities.EntityBase sfEntity)
         {
-            var reference = new IdentifiedContactReference(ContactConstants.Identifier.S4S, email);
+            var identifier = _sfEntityUtility.GetIdentifier(sfEntity);
+            var reference = new IdentifiedContactReference(ContactConstants.Identifier.S4SLB, identifier);
             var expandOptions = new ContactExpandOptions(EmailAddressList.DefaultFacetKey, S4SInfo.DefaultFacetKey);
+
             var xdbContact = client.Get(reference, expandOptions);
 
             if (xdbContact == null)
             {
-                var identifier = _sfEntityUtility.GetIdentifier(sfEntity);
-                reference = new IdentifiedContactReference(ContactConstants.Identifier.S4SLB, identifier);
+                reference = new IdentifiedContactReference(ContactConstants.Identifier.S4S, email);
                 xdbContact = client.Get(reference, expandOptions);
             }
 
