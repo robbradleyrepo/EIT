@@ -21,6 +21,7 @@ import tabNav from "./components/tabNav";
 import headerCtaNav from "./components/headerCtaNav";
 import preferenceCenter from './components/preferenceCenter';
 import common from "./components/common";
+import geographicalChart from "./components/geographicalChart";
 
 document.addEventListener("DOMContentLoaded", () => {
     onboardingOverlay();
@@ -29,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     investmentCard();
     carouselSlider();
     fundsSlider();
+    geographicalChart();
     articleSlider();
     awardsSlider();
     literatureOverlay();
@@ -64,26 +66,5 @@ document.addEventListener("DOMContentLoaded", () => {
         $("body").addClass("has-header-top");
     }
     
-    //Geographical breakdown chart button
-    $(document).ready(function(){
-        $(".geographical-breakdown").addClass("hide-rows");
-        $(".toggle-geographical-button").click(function(){
-          $(".geographical-breakdown").toggleClass("hide-rows");
-          $(this).text(function(i, v){
-            return v === '+' ? '-' : '+'
-         });
-        });
-      });
-
-    //Sector breakdown chart button
-    $(document).ready(function(){
-        $(".sector-breakdown").addClass("hide-rows");
-        $(".toggle-sector-button").click(function(){
-          $(".sector-breakdown").toggleClass("hide-rows");
-          $(this).text(function(i, v){
-            return v === '+' ? '-' : '+'
-         });
-        });
-      });
     
 }); 
