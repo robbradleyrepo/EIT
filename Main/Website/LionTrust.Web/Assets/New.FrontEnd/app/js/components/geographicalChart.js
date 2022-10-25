@@ -5,7 +5,6 @@ export default () => {
  
  let toggleGeographicalButton = $('.toggle-geographical-button');
  let toggleSectorButton = $('.toggle-sector-button');
- console.log("number of sector rows = "+ sectorRowCount, "number of geo rows =" + geographicalRowCount);
  
  if(geographicalRowCount <= 10 ) {
     toggleGeographicalButton.hide();
@@ -14,14 +13,17 @@ export default () => {
  if(sectorRowCount <= 10){
      toggleSectorButton.hide();
  }
-
+ 
+  let chartButton = $(".chartButton");
   $(".sector-breakdown, .geographical-breakdown").addClass("hide-rows");
-  $(".toggle-sector-button, .toggle-geographical-button").click(function(){
-    $(".sector-breakdown, .geographical-breakdown").toggleClass("hide-rows");
-    $(this).text(function(i, v){
+  chartButton.each(function(index){
+    $(this).on("click", function(){
+     $(this).prev().toggleClass("hide-rows");
+     $(this).text(function(i, v){
       return v === '+' ? '-' : '+'
    });
-  });
+    })
+  })
   
 }
 
