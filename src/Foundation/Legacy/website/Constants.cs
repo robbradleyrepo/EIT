@@ -266,5 +266,18 @@ namespace LionTrust.Foundation.Legacy
             public const string ToAddresses_FieldId = "{10B60E42-7623-4916-970E-F8F590E2CC82}";
             public const string Subject_FieldId = "{548F8D1D-EE61-4F5A-BC44-A2AAD347F59A}";
         }
+
+        public static class Seo
+        {
+            public const string LegacyPresentationBase_BrowserTitle_FieldId = "{199AE724-078D-49B4-9E50-03F4C5E9E938}";
+            public const string LegacyPresentationBase_MetaDescription_FieldId = "{9DC8AE8C-C3E1-4536-AA2A-D0BFF7398795}";
+            public const string LegacyPresentationBase_MetaKeywords_FieldId = "{4F86EE15-D758-4F6A-826D-BCD23171073C}";
+            public const string LegacyPresentationBase_MetaRobots_FieldId = "{187226F4-9C3E-4D5C-B21F-2C917136F20C}";
+        }
+
+        public static class Robot
+        {
+            public const string Content_FieldId = "{EA95F729-53AD-43FA-8068-98132056220F}";
+        }
     }
 }
