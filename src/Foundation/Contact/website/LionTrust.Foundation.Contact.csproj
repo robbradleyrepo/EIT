@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FuseIT.S4S.SitecoreSalesforceListBuilder">
+      <HintPath>..\..\..\..\dependencies\FuseIT.S4S\FuseIT.S4S.SitecoreSalesforceListBuilder.dll</HintPath>
+    </Reference>
     <Reference Include="FuseIT.S4S.WebToSalesforce">
       <HintPath>..\..\..\..\dependencies\FuseIT.S4S\FuseIT.S4S.WebToSalesforce.dll</HintPath>
     </Reference>
@@ -84,6 +87,8 @@
     <Compile Include="Services\PersonalizedContentService.cs" />
     <Compile Include="Services\S4SSessionSingleton.cs" />
     <Compile Include="Services\ISFEntityUtility.cs" />
+    <Compile Include="Services\ISalesforceCampaign.cs" />
+    <Compile Include="Services\SalesforceCampaign.cs" />
     <Compile Include="Services\SFEntityUtility.cs" />
     <Compile Include="Services\SitecoreContactUtility.cs" />
     <Compile Include="Services\ISitecoreContactUtility.cs" />

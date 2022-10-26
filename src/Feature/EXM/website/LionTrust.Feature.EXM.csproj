@@ -212,6 +212,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pipelines\CustomFillEmail.cs" />
     <Compile Include="Repositories\Implementations\ArticleRepository.cs" />
+    <Compile Include="Repositories\Implementations\CustomSalesforceCampaignRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ISalesforceCampaignRepository.cs" />
     <Compile Include="Repositories\Interfaces\IArticleRepository.cs" />
     <Compile Include="ScheduledJobs\SalesforceContactsDataScheduledJobs.cs" />
     <Compile Include="Services\Implementations\CustomContactService.cs" />
