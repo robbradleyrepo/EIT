@@ -39,22 +39,22 @@ namespace LionTrust.Foundation.Contact.Services
 
                             if (current.Contact != null)
                             {
-                                if (current.Contact.Id != null && !string.IsNullOrEmpty(current.Contact.Id))
+                                if (!string.IsNullOrEmpty(current.Contact?.Id))
                                 {
                                     recordIdentifier = current.Contact.Id;
                                 }
 
-                                if (current.Contact.Email != null && !string.IsNullOrEmpty(current.Contact.Email))
+                                if (!string.IsNullOrEmpty(current.Contact?.Email))
                                 {
                                     emailAddress = current.Contact.Email;
                                 }
 
-                                if (current.Contact.FirstName != null && !string.IsNullOrEmpty(current.Contact.FirstName))
+                                if (!string.IsNullOrEmpty(current.Contact?.FirstName))
                                 {
                                     firstName = current.Contact.FirstName;
                                 }
 
-                                if (current.Contact.LastName != null && !string.IsNullOrEmpty(current.Contact.LastName))
+                                if (string.IsNullOrEmpty(current.Contact?.LastName))
                                 {
                                     lastName = current.Contact.LastName;
                                 }
@@ -63,22 +63,22 @@ namespace LionTrust.Foundation.Contact.Services
                             }
                             else if (current.Lead != null)
                             {
-                                if (current.Lead.Id != null && !string.IsNullOrEmpty(current.Lead.Id))
+                                if (!string.IsNullOrEmpty(current.Lead.Id))
                                 {
                                     recordIdentifier = current.Lead.Id;
                                 }
 
-                                if (current.Lead.Email != null && !string.IsNullOrEmpty(current.Lead.Email))
+                                if (!string.IsNullOrEmpty(current.Lead.Email))
                                 {
                                     emailAddress = current.Lead.Email;
                                 }
 
-                                if (current.Lead.FirstName != null)
+                                if (!string.IsNullOrEmpty(current.Lead?.FirstName))
                                 {
                                     firstName = current.Lead.FirstName;
                                 }
 
-                                if (current.Lead.LastName != null && !string.IsNullOrEmpty(current.Lead.LastName))
+                                if (!string.IsNullOrEmpty(current.Lead.LastName))
                                 {
                                     lastName = current.Lead.LastName;
                                 }
