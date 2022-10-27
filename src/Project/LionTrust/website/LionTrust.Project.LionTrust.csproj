@@ -165,6 +165,10 @@
     <Folder Include="Content\Project\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Foundation\Legacy\website\LionTrust.Foundation.Legacy.csproj">
+      <Project>{43ee972b-2002-4719-a878-a66a99c42c40}</Project>
+      <Name>LionTrust.Foundation.Legacy</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\SitecoreExtensions\website\LionTrust.Foundation.SitecoreExtensions.csproj">
       <Project>{a57b01c5-75ad-47c0-beda-93079fd37317}</Project>
       <Name>LionTrust.Foundation.SitecoreExtensions</Name>
