@@ -21,6 +21,7 @@ import tabNav from "./components/tabNav";
 import headerCtaNav from "./components/headerCtaNav";
 import preferenceCenter from './components/preferenceCenter';
 import common from "./components/common";
+import geographicalChart from "./components/geographicalChart";
 
 document.addEventListener("DOMContentLoaded", () => {
     onboardingOverlay();
@@ -29,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     investmentCard();
     carouselSlider();
     fundsSlider();
+    geographicalChart();
     articleSlider();
     awardsSlider();
     literatureOverlay();
@@ -63,5 +65,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if ($(".header-top").length) {
         $("body").addClass("has-header-top");
     }
-
+    
+    
 }); 
