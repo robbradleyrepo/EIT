@@ -1,0 +1,62 @@
+﻿---
+ID: "ca46f1c7-14bf-4a0a-8272-6923a480e947"
+Parent: "cf59a6d8-580e-4cc3-b9c3-bdcfc5994345"
+Template: "dd22f1b3-bd87-4db2-9e7d-f7a496888d43"
+Path: /sitecore/system/Modules/PowerShell/Script Library/Feature/Listings/Move Directors List to Global folder
+DB: master
+SharedFields:
+- ID: "b1a94ff0-6897-47c0-9c51-aa6acb80b1f0"
+  Hint: Script
+  Value: |
+    $destinationParentID = "{853CD78F-3935-40AB-B6E4-FE44AF893F44}"
+    $directorsListPath = "/sitecore/content/LionTrustNew/Global/Directors List"
+    
+    Write-Host "Moving directors list from 'Sales team' to 'Global/Directors List'"
+    $salesTeamName = "Sales team"
+    $salesTeamFolder = $directorsListPath + "/" + $salesTeamName
+    if (@(Get-Item -Path "master:" -Query $salesTeamFolder).count -gt 0) 
+    {
+        Continue
+    // Create new item
+    } else 
+    {
+        New-Item -Path $directorsListPath -Name $salesTeamName -ItemType "/sitecore/templates/Common/Folder"
+    }
+    $salesTeamFolderItem = Get-Item -Path "master:" -Query $salesTeamFolder
+    $directorsList = Get-ChildItem -Path "master:/sitecore/content/LionTrustNew/Home/About us/Sales team/_Local" -Recurse | Where-Object { $_.TemplateName -eq 'Directors List' } | Move-Item -Destination $salesTeamFolderItem.Id
+    
+    Write-Host "Moving directors list from 'Board of Directors and Company Secretary' to 'Global/Directors List'"
+    $boardOfDirectorsName = "Board of Directors"
+    $boardOfDirectorsFolder = $directorsListPath + "/" + $boardOfDirectorsName
+    if (@(Get-Item -Path "master:" -Query $boardOfDirectorsFolder).count -gt 0) 
+    {
+        Continue
+    // Create new item
+    } else 
+    {
+        New-Item -Path $directorsListPath -Name $boardOfDirectorsName -ItemType "/sitecore/templates/Common/Folder"
+    }
+    $boardOfDirectorsFolderItem = Get-Item -Path "master:" -Query $boardOfDirectorsFolder
+    $directorsList = Get-ChildItem -Path "master:/sitecore/content/LionTrustNew/Home/About us/Board of Directors and Company Secretary/_Local" -Recurse | Where-Object { $_.TemplateName -eq 'Directors List' } | Move-Item -Destination $boardOfDirectorsFolderItem.Id
+    
+    Write-Host "Moving directors list from 'Heads of department' to 'Global/Directors List'"
+    $headsOfDepartmentName = "Heads of department"
+    $headsOfDepartmentFolder = $directorsListPath + "/" + $headsOfDepartmentName
+    if (@(Get-Item -Path "master:" -Query $headsOfDepartmentFolder).count -gt 0) 
+    {
+        Continue
+    // Create new item
+    } else 
+    {
+        New-Item -Path $directorsListPath -Name $headsOfDepartmentName -ItemType "/sitecore/templates/Common/Folder"
+    }
+    $headsOfDepartmentFolderItem = Get-Item -Path "master:" -Query $headsOfDepartmentFolder
+    $directorsList = Get-ChildItem -Path "master:/sitecore/content/LionTrustNew/Home/About us/Heads of department/_Local" -Recurse | Where-Object { $_.TemplateName -eq 'Directors List' } | Move-Item -Destination $headsOfDepartmentFolderItem.Id
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20221003T164144Z
