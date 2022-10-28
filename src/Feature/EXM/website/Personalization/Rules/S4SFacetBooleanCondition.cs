@@ -52,7 +52,7 @@
                 if (s4Sinfo?.Fields != null && s4Sinfo.Fields.TryGetValue(key, out string field) && bool.TryParse(field, out var fieldValue))
                 {
                     Logging.DebugFormat(this, "FacetDictionaryValueCondition Facet key found a match Rule Key {0}", key);
-                    return true;
+                    return fieldValue;
                 }
             }
 

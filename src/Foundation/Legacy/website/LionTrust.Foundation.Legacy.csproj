@@ -101,6 +101,8 @@
     <Compile Include="Models\IListingItemType.cs" />
     <Compile Include="Models\ILookupItem.cs" />
     <Compile Include="Models\IPresentationBase.cs" />
+    <Compile Include="Models\IRobot.cs" />
+    <Compile Include="Models\ISeo.cs" />
     <Compile Include="Models\ITag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

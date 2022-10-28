@@ -6,6 +6,8 @@
 @using LionTrust.Foundation.SitecoreExtensions.Extensions
 @{
     Layout = null;
+    var sitecoreService = (Glass.Mapper.Sc.ISitecoreService)Sitecore.DependencyInjection.ServiceLocator.ServiceProvider.GetService(typeof(Glass.Mapper.Sc.ISitecoreService));
+    var seoItem = sitecoreService.GetItem<LionTrust.Foundation.Legacy.Models.ISeo>(Html.Sitecore().CurrentItem.ID.Guid);
 }
 @using LionTrust.Project.LionTrust
 <!DOCTYPE html>
@@ -16,7 +18,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="facebook-domain-verification" content="l4k5mtgmseno37nys4690q1h7swfn2" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>@Html.Sitecore().Field("LegacyPresentationBase_BrowserTitle", new { DisableWebEdit = true })</title>
+    <title>@seoItem.BrowserTitle</title>
+    @if (!string.IsNullOrEmpty(seoItem.MetaDescription))
+    {
+        <meta name="description" content="@seoItem.MetaDescription">
+    }
+    @if (!string.IsNullOrEmpty(seoItem.MetaKeywords))
+    {
+        <meta name="keywords" content="@seoItem.MetaKeywords">
+    }
+    @if (seoItem.MetaRobots != null && !string.IsNullOrEmpty(seoItem.MetaRobots.Content))
+    {
+        <meta name="robots" content="@seoItem.MetaRobots.Content">
+    }
     @Html.Sitecore().VisitorIdentification()
     <link rel="icon" href="/dist/images/favicon.ico">
     <link rel="stylesheet" href="/dist/css/styles.min.css">

@@ -18,6 +18,7 @@ namespace LionTrust.Feature.EXM.DI
             serviceCollection.AddTransient<IFillEmailHelper, FillMailHelper>();
             serviceCollection.AddTransient<IEmailService, SendGridEmailService>();
             serviceCollection.AddTransient<ICustomContactService, CustomContactService>();
+            serviceCollection.AddTransient<ISalesforceCampaignRepository, CustomSalesforceCampaignRepository>();
             serviceCollection.AddTransient<ISalesforceAnalyticsService, SalesforceAnalyticsService>(provider => new SalesforceAnalyticsService(new SitecoreService("master")));
         }
     }

@@ -219,7 +219,7 @@ namespace LionTrust.Feature.EXM.Pipelines
 
         private async System.Threading.Tasks.Task ExecuteSoftBounces(List<Models.Bounce> list, bool isBlockEmail = false)
         {
-            var excludeContacts = new List<KeyValuePair<string, FuseIT.Sitecore.SalesforceConnector.Entities.EntityBase>>();
+            var contacts = new List<KeyValuePair<EmailAddressList, FuseIT.Sitecore.SalesforceConnector.Entities.EntityBase>>();
 
             var managerRoot = _managerRootService.GetManagerRoots()?.FirstOrDefault();
 
@@ -229,22 +229,22 @@ namespace LionTrust.Feature.EXM.Pipelines
                 {
                     try
                     {
-                        foreach (var bouncedEmail in list)
+                        foreach (var bouncedEmail in list.GroupBy(x => x.Email))
                         {
-                            var email = bouncedEmail.Email;
+                            var email = bouncedEmail.Key;
                             var sfEntity = _sfEntityUtility.GetEntityByEmail(email);
                             if (sfEntity == null)
                             {
                                 continue;
                             }
 
-                            var identifier = _sfEntityUtility.GetIdentifier(sfEntity);
+                            var xdbContact = GetContact(client, email, sfEntity);
+                            if (xdbContact == null)
+                            {
+                                continue;
+                            }
 
-                            var reference = new IdentifiedContactReference(ContactConstants.Identifier.S4S, email);
-                            var expandOptions = new ContactExpandOptions(EmailAddressList.DefaultFacetKey, S4SInfo.DefaultFacetKey);
-                            var xdbContact = client.Get(reference, expandOptions);
-
-                            var emails = xdbContact?.Emails();
+                            var emails = xdbContact.Emails();
 
                             if (emails == null)
                             {
@@ -253,34 +253,35 @@ namespace LionTrust.Feature.EXM.Pipelines
 
                             if (emails.PreferredEmail.BounceCount < managerRoot.Settings.MaxUndelivered)
                             {
-                                emails.PreferredEmail.BounceCount = emails.PreferredEmail.BounceCount + 1;
+                                emails.PreferredEmail.BounceCount = emails.PreferredEmail.BounceCount + bouncedEmail.Count() > managerRoot.Settings.MaxUndelivered
+                                                                    ? managerRoot.Settings.MaxUndelivered
+                                                                    : emails.PreferredEmail.BounceCount + bouncedEmail.Count();
                             }
                             else
                             {
                                 emails.PreferredEmail.BounceCount = managerRoot.Settings.MaxUndelivered;
                             }
 
-                            if (emails.PreferredEmail.BounceCount >= managerRoot.Settings.MaxUndelivered)
-                            {
-                                excludeContacts.Add(new KeyValuePair<string, FuseIT.Sitecore.SalesforceConnector.Entities.EntityBase>(email, sfEntity));
-                            }
-
+                            contacts.Add(new KeyValuePair<EmailAddressList, FuseIT.Sitecore.SalesforceConnector.Entities.EntityBase>(emails, sfEntity));
                             client.SetFacet(xdbContact, EmailAddressList.DefaultFacetKey, emails);
                         }
 
                         client.Submit();
 
-                        foreach (var exclude in excludeContacts)
+                        foreach (var contact in contacts)
                         {
                             if (_isBouncesBackEnable)
                             {
                                 var result = isBlockEmail
-                                        ? await _emailService.DeleteBlock(exclude.Key)
-                                        : await _emailService.DeleteBounce(exclude.Key);
+                                        ? await _emailService.DeleteBlock(contact.Key.PreferredEmail.SmtpAddress)
+                                        : await _emailService.DeleteBounce(contact.Key.PreferredEmail.SmtpAddress);
                             }
 
-                            //update salesforce contact
-                            _sfEntityUtility.SaveHardBounced(exclude.Value);
+                            if (contact.Key.PreferredEmail.BounceCount >= managerRoot.Settings.MaxUndelivered)
+                            {
+                                //update salesforce contact
+                                _sfEntityUtility.SaveHardBounced(contact.Value);
+                            }
                         }
                     }
                     catch (Exception ex)
@@ -303,9 +304,9 @@ namespace LionTrust.Feature.EXM.Pipelines
                 {
                     try
                     {
-                        foreach (var bouncedEmail in bounces)
+                        foreach (var bouncedEmail in bounces.GroupBy(x => x.Email))
                         {
-                            var email = bouncedEmail.Email;
+                            var email = bouncedEmail.Key;
 
                             var sfEntity = _sfEntityUtility.GetEntityByEmail(email);
                             if (sfEntity == null)
@@ -313,13 +314,13 @@ namespace LionTrust.Feature.EXM.Pipelines
                                 continue;
                             }
 
-                            var identifier = _sfEntityUtility.GetIdentifier(sfEntity);
+                            var xdbContact = GetContact(client, email, sfEntity);
+                            if (xdbContact == null)
+                            {
+                                continue;
+                            }
 
-                            var reference = new IdentifiedContactReference(ContactConstants.Identifier.S4S, email);
-                            var expandOptions = new ContactExpandOptions(EmailAddressList.DefaultFacetKey, S4SInfo.DefaultFacetKey);
-                            var xdbContact = client.Get(reference, expandOptions);
-
-                            var emails = xdbContact?.Emails();
+                            var emails = xdbContact.Emails();
 
                             if (emails == null)
                             {
@@ -351,6 +352,23 @@ namespace LionTrust.Feature.EXM.Pipelines
                     }
                 }
             }
+        }
+
+        private Contact GetContact(XConnectClient client, string email, FuseIT.Sitecore.SalesforceConnector.Entities.EntityBase sfEntity)
+        {
+            var identifier = _sfEntityUtility.GetIdentifier(sfEntity);
+            var reference = new IdentifiedContactReference(ContactConstants.Identifier.S4SLB, identifier);
+            var expandOptions = new ContactExpandOptions(EmailAddressList.DefaultFacetKey, S4SInfo.DefaultFacetKey);
+
+            var xdbContact = client.Get(reference, expandOptions);
+
+            if (xdbContact == null)
+            {
+                reference = new IdentifiedContactReference(ContactConstants.Identifier.S4S, email);
+                xdbContact = client.Get(reference, expandOptions);
+            }
+
+            return xdbContact;
         }
     }
 }
