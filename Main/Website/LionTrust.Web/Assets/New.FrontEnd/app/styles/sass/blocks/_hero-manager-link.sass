@@ -5,13 +5,14 @@
     justify-content: center
     margin-top: 20px
     @include breakpoint(mobile, up)
+        display: flex
         margin-bottom: 76px
         justify-content: center
-        display: inline-block
     @include breakpoint(tablet, down)
         -webkit-box-pack: center
         -ms-flex-pack: center
-        display: grid
+        display: flex
+        justify-content: center
         grid-template-columns: 20% 20%
         grid-template-rows: auto
         align-items: stretch;
