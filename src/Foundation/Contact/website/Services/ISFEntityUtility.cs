@@ -65,19 +65,19 @@
         string IdentifyVisitorAndGetVisitorId(string emailAddress);
 
         /// <summary>
-        /// Is unsubscribed
+        /// Is exm unsubscribed
         /// </summary>
         /// <param name="entityId"></param>
         /// <returns></returns>
-        bool IsUnsubscribed(string entityId);
+        bool IsExmUnsubscribed(string entityId);
 
         /// <summary>
-        /// Is unsubscribed or hard bounced
+        /// Is exm unsubscribed or hard bounced
         /// </summary>
         /// <param name="s4sInfo">
         /// <param name="email"></param>
         /// <returns></returns>
-        bool IsUnsubscribedOrHardBounced(S4SInfo s4sInfo, string email);
+        bool IsExmUnsubscribedOrHardBounced(S4SInfo s4sInfo, string email);
 
         /// <summary>
         /// Get salesforce entity by entity id
@@ -135,6 +135,13 @@
         /// <param name="fromDate"></param>
         /// <returns></returns>
         List<GenericSalesforceEntity> GetEntitiesToSendWecomeEmail(DateTime fromDate);
+
+        /// <summary>
+        /// Get Salesforce Contact/Lead id
+        /// </summary>
+        /// <param name="s4sInfo"></param>
+        /// <returns></returns>
+        string GetSalesforceEntityId(S4SInfo s4sInfo);
 
         string GetEditEmailPrefPageLink(string preferencesUrl, string randomGuid, string entityId);
 

@@ -54,9 +54,7 @@ namespace LionTrust.Foundation.Contact
         //Salesforce Contact and Lead field names
         public const string SF_IdField = "Id";
         public const string SF_LTNewsField = "Liontrust_News__c";
-        public const string SF_FactSheetField = "Factsheets__c";
-        public const string SF_RelBlogField = "Relevant_Blogs__c";
-        public const string SF_Commentaries = "Monthly_Commentaries__c";
+        public const string SF_InsightsField = "Insights__c";
         public const string SF_EmailOptOutField = "HasOptedOutOfEmail";
         public const string SF_DateOfConcentField = "Date_of_Consent_Given__c";
         public const string SF_SitecoreVistorIdField = "FuseITAnalytics__SitecoreVisitorId__c";
@@ -89,6 +87,7 @@ namespace LionTrust.Foundation.Contact
         public const string SF_Hard_BouncedField = "pi__pardot_hard_bounced__c";
         public const string SF_ScoreField = "Score__c";
         public const string SF_CreatedDateField = "CreatedDate";
+        public const string SF_TortoiseNewsletter = "Tortoise_Newsletter__c";
 
         //S4S SitecoreXDBContact Salesforce object fields
         public const string SFSitecoreXDBContactObjectName = "FuseITAnalytics__SitecoreXDBContact__c";
@@ -145,7 +144,14 @@ namespace LionTrust.Foundation.Contact
 
         public static class Identifier
         {
-            public const string S4S = "s4slb";
+            public const string XdbTracker = "xDB.Tracker";
+            public const string S4S = "S4S";
+            public const string S4SLB = "s4slb";
+        }
+
+        public static class EmailAddressList
+        {
+            public const string PreferredKey = "Preferred";
         }
 
         public static class SessionKeys

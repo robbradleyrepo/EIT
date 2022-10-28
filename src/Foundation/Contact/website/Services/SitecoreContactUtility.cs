@@ -69,6 +69,11 @@
                             s4sInfoFacet.Fields[Foundation.Contact.Constants.SFRandomGuidFacetKey] = sfDataForSaving.RandomGuidFromSalesforceEntity;
                             s4sInfoFacet.Fields[Foundation.Contact.Constants.SF_EmailOptOutFacetKey] = Convert.ToString(sfDataForSaving.Unsubscribed);
 
+                            if (s4sInfoFacet.Fields.ContainsKey(Foundation.Contact.Constants.SF_TortoiseNewsletter))
+                            {
+                                s4sInfoFacet.Fields[Foundation.Contact.Constants.SF_TortoiseNewsletter] = Convert.ToString(sfDataForSaving.TortoiseNewsletter);
+                            }
+
                             var sfFundIdString = (sfDataForSaving.SalesforceFundIds != null) ? string.Join(",", sfDataForSaving.SalesforceFundIds) : string.Empty;
                             s4sInfoFacet.Fields[Foundation.Contact.Constants.SFFundIdFacetKey] = sfFundIdString;
 

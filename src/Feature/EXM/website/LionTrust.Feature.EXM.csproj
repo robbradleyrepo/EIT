@@ -94,7 +94,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\dependencies\FuseIT.S4S\FuseIT.Sitecore.Salesforce.dll</HintPath>
     </Reference>
-    <Reference Include="FuseIT.Sitecore.SalesforceConnector, Version=2.914.21070.1, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="FuseIT.Sitecore.SalesforceConnector, Version=2.914.21070.1, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\dependencies\FuseIT.S4S\FuseIT.Sitecore.SalesforceConnector.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Web" />
@@ -196,6 +198,7 @@
     <Compile Include="Models\LTMessageResponse.cs" />
     <Compile Include="Models\LTUpdateMessageContext.cs" />
     <Compile Include="Models\Owner.cs" />
+    <Compile Include="Personalization\Rules\S4SFacetBooleanCondition.cs" />
     <Compile Include="Personalization\FacetExtensions.cs" />
     <Compile Include="Personalization\CustomRecipientPropertyTokenMap.cs" />
     <Compile Include="Models\IFooter.cs" />
@@ -209,6 +212,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pipelines\CustomFillEmail.cs" />
     <Compile Include="Repositories\Implementations\ArticleRepository.cs" />
+    <Compile Include="Repositories\Implementations\CustomSalesforceCampaignRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ISalesforceCampaignRepository.cs" />
     <Compile Include="Repositories\Interfaces\IArticleRepository.cs" />
     <Compile Include="ScheduledJobs\SalesforceContactsDataScheduledJobs.cs" />
     <Compile Include="Services\Implementations\CustomContactService.cs" />

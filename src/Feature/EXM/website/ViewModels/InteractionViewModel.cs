@@ -26,9 +26,9 @@ namespace LionTrust.Feature.EXM.ViewModels
 
         public string ContactList { get; set; }
 
-        public DateTime StartDate { get; set; }
+        public DateTime EventDate { get; set; }
 
-        public DateTime EndDate { get; set; }
+        public DateTime InteractionDate { get; set; }
 
         public InteractionType Type { get; set; }
 

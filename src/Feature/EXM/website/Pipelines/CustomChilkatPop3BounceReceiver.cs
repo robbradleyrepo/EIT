@@ -1,8 +1,10 @@
 ﻿using Chilkat;
 using FuseIT.Sitecore.Personalization.Facets;
+using LionTrust.Feature.EXM.Services.Implementations;
 using LionTrust.Feature.EXM.Services.Interfaces;
 using LionTrust.Foundation.Contact.Services;
 using Microsoft.Extensions.DependencyInjection;
+using Sitecore.Abstractions;
 using Sitecore.DependencyInjection;
 using Sitecore.Diagnostics;
 using Sitecore.EDS.Core.Diagnostics;
@@ -26,7 +28,6 @@ namespace LionTrust.Feature.EXM.Pipelines
     {
         private const string SendGrid = "sendgrid";
 
-        private readonly string _mailServer;
         private readonly IManagerRootService _managerRootService;
         private readonly ISFEntityUtility _sfEntityUtility;
         private readonly IEmailService _emailService;
@@ -34,6 +35,8 @@ namespace LionTrust.Feature.EXM.Pipelines
         private readonly IBounceInspector _inspector;
         private readonly IEnvironmentId _environmentId;
         private readonly ILogger _logger;
+
+        private readonly bool _isBouncesBackEnable;
 
         public CustomChilkatPop3BounceReceiver(
           Pop3Settings settings,
@@ -57,13 +60,14 @@ namespace LionTrust.Feature.EXM.Pipelines
           IBounceInspector inspector,
           IEnvironmentId environmentId,
           ILogger logger)
-            : this(ServiceLocator.ServiceProvider.GetService<IEmailService>(),
+            : this(new SendGridEmailService(settings.Password),
                   ServiceLocator.ServiceProvider.GetService<IManagerRootService>(),
                   ServiceLocator.ServiceProvider.GetService<ISFEntityUtility>(),
                   settings, 
                   inspector, 
                   environmentId, 
-                  logger)
+                  logger,
+                  ServiceLocator.ServiceProvider.GetService<BaseSettings>())
         {
         }
 
@@ -74,7 +78,8 @@ namespace LionTrust.Feature.EXM.Pipelines
           Pop3Settings settings,
           IBounceInspector inspector,
           IEnvironmentId environmentId,
-          ILogger logger)
+          ILogger logger,
+          BaseSettings baseSettings)
         {
             Assert.ArgumentNotNull(emailService, nameof(emailService));
             Assert.ArgumentNotNull(managerRootService, nameof(managerRootService));
@@ -84,7 +89,6 @@ namespace LionTrust.Feature.EXM.Pipelines
             Assert.ArgumentNotNull(environmentId, nameof(environmentId));
             Assert.ArgumentNotNull(logger, nameof(logger));
 
-            _mailServer = Sitecore.Configuration.Settings.GetSetting(Constants.Settings.MailServer);
             _emailService = emailService;
             _managerRootService = managerRootService;
             _sfEntityUtility = sfEntityUtility;
@@ -92,6 +96,8 @@ namespace LionTrust.Feature.EXM.Pipelines
             _inspector = inspector;
             _environmentId = environmentId;
             _logger = logger;
+
+            _isBouncesBackEnable = baseSettings.GetBoolSetting(Constants.Settings.IsBouncesBackEnable, false);
         }
 
         public async System.Threading.Tasks.Task ProcessMessages(Func<ICollection<Sitecore.EDS.Core.Reporting.Bounce>, System.Threading.Tasks.Task> handleBounces)
@@ -99,7 +105,7 @@ namespace LionTrust.Feature.EXM.Pipelines
             try
             {
                 //sendGrid
-                if (_mailServer.Contains(SendGrid))
+                if (_pop3Settings.Server.Contains(SendGrid))
                 {
                     var bounces = await _emailService.GetBounces();
                     var softBounces = bounces.Where(x => !x.HardBounce).ToList();
@@ -213,7 +219,7 @@ namespace LionTrust.Feature.EXM.Pipelines
 
         private async System.Threading.Tasks.Task ExecuteSoftBounces(List<Models.Bounce> list, bool isBlockEmail = false)
         {
-            var excludeContacts = new List<KeyValuePair<Contact, FuseIT.Sitecore.SalesforceConnector.Entities.EntityBase>>();
+            var contacts = new List<KeyValuePair<EmailAddressList, FuseIT.Sitecore.SalesforceConnector.Entities.EntityBase>>();
 
             var managerRoot = _managerRootService.GetManagerRoots()?.FirstOrDefault();
 
@@ -223,48 +229,59 @@ namespace LionTrust.Feature.EXM.Pipelines
                 {
                     try
                     {
-                        foreach (var bouncedEmail in list)
+                        foreach (var bouncedEmail in list.GroupBy(x => x.Email))
                         {
-                            var email = bouncedEmail.Email;
+                            var email = bouncedEmail.Key;
                             var sfEntity = _sfEntityUtility.GetEntityByEmail(email);
-                            var identifier = _sfEntityUtility.GetIdentifier(sfEntity);
+                            if (sfEntity == null)
+                            {
+                                continue;
+                            }
 
-                            var reference = new IdentifiedContactReference(ContactConstants.Identifier.S4S, identifier);
-                            var expandOptions = new ContactExpandOptions(EmailAddressList.DefaultFacetKey, S4SInfo.DefaultFacetKey);
-                            var xdbContact = client.Get(reference, expandOptions);
+                            var xdbContact = GetContact(client, email, sfEntity);
+                            if (xdbContact == null)
+                            {
+                                continue;
+                            }
 
                             var emails = xdbContact.Emails();
 
+                            if (emails == null)
+                            {
+                                emails = new EmailAddressList(new EmailAddress(email, true), ContactConstants.EmailAddressList.PreferredKey);
+                            }
+
                             if (emails.PreferredEmail.BounceCount < managerRoot.Settings.MaxUndelivered)
                             {
-                                emails.PreferredEmail.BounceCount = emails.PreferredEmail.BounceCount + 1;
+                                emails.PreferredEmail.BounceCount = emails.PreferredEmail.BounceCount + bouncedEmail.Count() > managerRoot.Settings.MaxUndelivered
+                                                                    ? managerRoot.Settings.MaxUndelivered
+                                                                    : emails.PreferredEmail.BounceCount + bouncedEmail.Count();
                             }
                             else
                             {
                                 emails.PreferredEmail.BounceCount = managerRoot.Settings.MaxUndelivered;
                             }
 
-                            if (emails.PreferredEmail.BounceCount >= managerRoot.Settings.MaxUndelivered)
-                            {
-                                excludeContacts.Add(new KeyValuePair<Contact, FuseIT.Sitecore.SalesforceConnector.Entities.EntityBase>(xdbContact, sfEntity));
-                            }
-
+                            contacts.Add(new KeyValuePair<EmailAddressList, FuseIT.Sitecore.SalesforceConnector.Entities.EntityBase>(emails, sfEntity));
                             client.SetFacet(xdbContact, EmailAddressList.DefaultFacetKey, emails);
-                            excludeContacts.Add(new KeyValuePair<Contact, FuseIT.Sitecore.SalesforceConnector.Entities.EntityBase>(xdbContact, sfEntity));
                         }
 
                         client.Submit();
 
-                        foreach (var exclude in excludeContacts)
+                        foreach (var contact in contacts)
                         {
-                            var emails = exclude.Key.Emails();
+                            if (_isBouncesBackEnable)
+                            {
+                                var result = isBlockEmail
+                                        ? await _emailService.DeleteBlock(contact.Key.PreferredEmail.SmtpAddress)
+                                        : await _emailService.DeleteBounce(contact.Key.PreferredEmail.SmtpAddress);
+                            }
 
-                            //update salesforce contact
-                            _sfEntityUtility.SaveHardBounced(exclude.Value);
-
-                            var result = isBlockEmail 
-                                ? await _emailService.DeleteBlock(emails.PreferredEmail.SmtpAddress)
-                                : await _emailService.DeleteBounce(emails.PreferredEmail.SmtpAddress);
+                            if (contact.Key.PreferredEmail.BounceCount >= managerRoot.Settings.MaxUndelivered)
+                            {
+                                //update salesforce contact
+                                _sfEntityUtility.SaveHardBounced(contact.Value);
+                            }
                         }
                     }
                     catch (Exception ex)
@@ -277,7 +294,7 @@ namespace LionTrust.Feature.EXM.Pipelines
 
         private async System.Threading.Tasks.Task ProcessHardBounces(List<Models.Bounce> bounces)
         {
-            var excludeContacts = new List<KeyValuePair<Contact, FuseIT.Sitecore.SalesforceConnector.Entities.EntityBase>>();
+            var excludeContacts = new List<KeyValuePair<string, FuseIT.Sitecore.SalesforceConnector.Entities.EntityBase>>();
 
             var managerRoot = _managerRootService.GetManagerRoots()?.FirstOrDefault();
 
@@ -287,33 +304,46 @@ namespace LionTrust.Feature.EXM.Pipelines
                 {
                     try
                     {
-                        foreach (var bouncedEmail in bounces)
+                        foreach (var bouncedEmail in bounces.GroupBy(x => x.Email))
                         {
-                            var email = bouncedEmail.Email;
-                            var sfEntity = _sfEntityUtility.GetEntityByEmail(email);
-                            var identifier = _sfEntityUtility.GetIdentifier(sfEntity);
+                            var email = bouncedEmail.Key;
 
-                            var reference = new IdentifiedContactReference(ContactConstants.Identifier.S4S, identifier);
-                            var expandOptions = new ContactExpandOptions(EmailAddressList.DefaultFacetKey, S4SInfo.DefaultFacetKey);
-                            var xdbContact = client.Get(reference, expandOptions);
+                            var sfEntity = _sfEntityUtility.GetEntityByEmail(email);
+                            if (sfEntity == null)
+                            {
+                                continue;
+                            }
+
+                            var xdbContact = GetContact(client, email, sfEntity);
+                            if (xdbContact == null)
+                            {
+                                continue;
+                            }
 
                             var emails = xdbContact.Emails();
-                            emails.PreferredEmail.BounceCount = managerRoot.Settings.MaxUndelivered;
 
+                            if (emails == null)
+                            {
+                                emails = new EmailAddressList(new EmailAddress(email, true), ContactConstants.EmailAddressList.PreferredKey);
+                            }
+
+                            emails.PreferredEmail.BounceCount = managerRoot.Settings.MaxUndelivered;
                             client.SetFacet(xdbContact, EmailAddressList.DefaultFacetKey, emails);
-                            excludeContacts.Add(new KeyValuePair<Contact, FuseIT.Sitecore.SalesforceConnector.Entities.EntityBase>(xdbContact, sfEntity));
+
+                            excludeContacts.Add(new KeyValuePair<string, FuseIT.Sitecore.SalesforceConnector.Entities.EntityBase>(email, sfEntity));
                         }
 
                         client.Submit();
 
                         foreach (var exclude in excludeContacts)
                         {
-                            var emails = exclude.Key.Emails();
+                            if (_isBouncesBackEnable)
+                            {
+                                var result = await _emailService.DeleteBounce(exclude.Key);
+                            }
 
                             //update salesforce contact
                             _sfEntityUtility.SaveHardBounced(exclude.Value);
-
-                            var result = await _emailService.DeleteBounce(emails.PreferredEmail.SmtpAddress);
                         }
                     }
                     catch (Exception ex)
@@ -322,6 +352,23 @@ namespace LionTrust.Feature.EXM.Pipelines
                     }
                 }
             }
+        }
+
+        private Contact GetContact(XConnectClient client, string email, FuseIT.Sitecore.SalesforceConnector.Entities.EntityBase sfEntity)
+        {
+            var identifier = _sfEntityUtility.GetIdentifier(sfEntity);
+            var reference = new IdentifiedContactReference(ContactConstants.Identifier.S4SLB, identifier);
+            var expandOptions = new ContactExpandOptions(EmailAddressList.DefaultFacetKey, S4SInfo.DefaultFacetKey);
+
+            var xdbContact = client.Get(reference, expandOptions);
+
+            if (xdbContact == null)
+            {
+                reference = new IdentifiedContactReference(ContactConstants.Identifier.S4S, email);
+                xdbContact = client.Get(reference, expandOptions);
+            }
+
+            return xdbContact;
         }
     }
 }

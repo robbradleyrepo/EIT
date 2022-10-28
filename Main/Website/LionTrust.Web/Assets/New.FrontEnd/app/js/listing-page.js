@@ -16,8 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
         for (var i = 0; i < imageSrcBg.length; i++) {
             imageSrc = imageSrcBg[i].style.backgroundImage.replace(/url\((['"])?(.*?)\1\)/gi, '$2').split(',')[0];
             var bgParents = imageSrcBg[i].closest('.accordion__smartcard');
-            console.log(imageSrc);
-            console.log(bgParents);
             var image = new Image();
             image.src = imageSrc;
         }

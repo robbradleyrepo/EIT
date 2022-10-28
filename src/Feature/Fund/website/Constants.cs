@@ -77,6 +77,10 @@
             public const string FundManagerFieldId = "{7A30D0A3-23FD-4863-99FD-A17525112A0E}";            
             public const string BackgroundImageFieldId = "{5D55EE9C-7778-47E7-833D-9D692E0E8AAB}";
             public const string FundSharingFieldId = "{D4BEBE60-2A4F-4965-AA39-EE3ECD18DF5D}";
+            public const string PrimaryCtaLink = "{7EA308B4-EDE5-4F32-A741-F247F8949135}";
+            public const string PrimaryCtaLinkGoal = "{D84BD0A8-B572-4432-8AAA-8A760E668EEF}";
+            public const string SecondaryCtaLink = "{CC92E29D-3899-472A-A7B6-A227A6DFEAAC}";
+            public const string SecondaryCtaLinkGoal = "{7DAFE7F0-7AF0-46A7-A844-9F6D3699A0EA}";
         }
 
         public static class FundDetailNavigation

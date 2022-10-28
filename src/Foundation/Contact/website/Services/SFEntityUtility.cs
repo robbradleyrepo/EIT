@@ -200,6 +200,11 @@
                 sfEntity.InternalFields.SetField<bool>(Constants.SF_EmailOptOutField, context.Preferences.Unsubscribe);
                 sfEntity.InternalFields.SetField<DateTime>(Constants.SF_DateOfConcentField, DateTime.Now);
 
+                if (sfEntity.InternalFields.Contains(Constants.SF_TortoiseNewsletter))
+                {
+                    sfEntity.InternalFields.SetField<bool>(Constants.SF_TortoiseNewsletter, context.Preferences.TortoiseNewsletter);
+                }
+
                 var isAnyProcessOrFundSelected = false;
                 if (!context.Preferences.Unsubscribe)
                 {
@@ -224,9 +229,10 @@
 
                 var isCommonCheckboxesChecked = (!isAnyProcessOrFundSelected || context.Preferences.Unsubscribe) ? false : true;
 
-                sfEntity.InternalFields.SetField<bool>(Constants.SF_FactSheetField, isCommonCheckboxesChecked);
-                sfEntity.InternalFields.SetField<bool>(Constants.SF_RelBlogField, isCommonCheckboxesChecked);
-                sfEntity.InternalFields.SetField<bool>(Constants.SF_Commentaries, isCommonCheckboxesChecked);
+                if (sfEntity.InternalFields.Contains(Constants.SF_InsightsField))
+                {
+                    sfEntity.InternalFields.SetField<bool>(Constants.SF_InsightsField, isCommonCheckboxesChecked);
+                }
 
                 //If user unsubscribed from the preference center, change the record type to unsubscribe
                 if (context.Preferences.Unsubscribe)
@@ -746,7 +752,7 @@
             string visitorid = string.Empty;
             try
             {
-                string identifierSource = Sitecore.Configuration.Settings.GetSetting(Constants.IdentifierSourceConfigName, "S4S");
+                string identifierSource = Sitecore.Configuration.Settings.GetSetting(Constants.IdentifierSourceConfigName, Constants.Identifier.S4S);
 
                 if (OnboardingHelper.IdentifyAs(identifierSource, emailAddress))
                 {
@@ -765,11 +771,11 @@
         }
 
         /// <summary>
-        /// Is unsubscribed
+        /// Is exm unsubscribed
         /// </summary>
         /// <param name="entityId"></param>
         /// <returns></returns>
-        public bool IsUnsubscribed(string entityId)
+        public bool IsExmUnsubscribed(string entityId)
         {
             if (string.IsNullOrWhiteSpace(entityId))
             {
@@ -788,7 +794,8 @@
                 if (sfEntity != null)
                 {
                     unsubscribed = sfEntity.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
-                    return unsubscribed;
+                    var insights = sfEntity.InternalFields.Contains(Constants.SF_InsightsField) ? sfEntity.InternalFields.GetField<bool>(Constants.SF_InsightsField) : true;
+                    return unsubscribed || !insights;
                 }
                 
                 Log.Info(string.Format("Salesforce Contact or Lead does not exist with the entity id - {0}", entityId), this);
@@ -802,12 +809,12 @@
         }
 
         /// <summary>
-        /// Is unsubscribed or hard bounced
+        /// Is exm unsubscribed or hard bounced
         /// </summary>
         /// <param name="s4sInfo"></param>
         /// <param name="email"></param>
         /// <returns></returns>
-        public bool IsUnsubscribedOrHardBounced(S4SInfo s4sInfo, string email)
+        public bool IsExmUnsubscribedOrHardBounced(S4SInfo s4sInfo, string email)
         {
             if (s4sInfo == null)
             {
@@ -829,8 +836,9 @@
                     {
                         unsubscribed = sfContact.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
                         var hardBounced = sfContact.InternalFields.GetField<bool>(Constants.SF_Hard_BouncedField);
+                        var insights = !sfContact.InternalFields.Contains(Constants.SF_InsightsField) || sfContact.InternalFields.GetField<bool>(Constants.SF_InsightsField);
 
-                        return unsubscribed || hardBounced;
+                        return unsubscribed || hardBounced || !insights;
                     }
                 }
                 else if (IsLead(sfEntityId))
@@ -841,8 +849,9 @@
                     {
                         unsubscribed = sfLead.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
                         var hardBounced = sfLead.InternalFields.GetField<bool>(Constants.SF_Hard_BouncedField);
+                        var insights = !sfLead.InternalFields.Contains(Constants.SF_InsightsField) || sfLead.InternalFields.GetField<bool>(Constants.SF_InsightsField);
 
-                        return unsubscribed || hardBounced;
+                        return unsubscribed || hardBounced || !insights;
                     }
                 }
 
@@ -1125,6 +1134,31 @@
             return returnList;
         }
 
+        /// <summary>
+        /// Get Salesforce Contact/Lead id
+        /// </summary>
+        /// <param name="s4sInfo"></param>
+        /// <returns></returns>
+        public string GetSalesforceEntityId(S4SInfo s4sInfo)
+        {
+            if (s4sInfo.Fields.ContainsKey(Constants.SF_IdField)) 
+            {
+                return s4sInfo.Fields[Constants.SF_IdField];
+            }
+            
+            if (s4sInfo.Fields.ContainsKey(Constants.SFContactIdFacetKey))
+            {
+                return s4sInfo.Fields[Constants.SFContactIdFacetKey];
+            }
+
+            if (s4sInfo.Fields.ContainsKey(Constants.SFLeadIdFacetKey))
+            {
+                return s4sInfo.Fields[Constants.SFLeadIdFacetKey];
+            }
+
+            return null;
+        }
+
         private List<GenericSalesforceEntity> GetEntitiesToSendWecomeEmail(DateTime fromDate, string entityName)
         {
             var genericSFService = new GenericSalesforceService(this.SalesforceSession, entityName);
@@ -1187,6 +1221,8 @@
                 returnObj.Unsubscribe = sfContact.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
                 returnObj.IsUkResident = sfContact.InternalFields.GetField<bool>(Constants.SF_UKResident);
                 returnObj.IsConsentGivenDateEmpty = (sfContact.InternalFields[Constants.SF_DateOfConcentField] == null) ? true : false;
+                returnObj.TortoiseNewsletter = sfContact.InternalFields.Contains(Constants.SF_TortoiseNewsletter) ? sfContact.InternalFields.GetField<bool>(Constants.SF_TortoiseNewsletter) : false;
+
                 return returnObj;
             }
 
@@ -1212,6 +1248,7 @@
                 returnObj.LastName = sfLead.LastName;
                 returnObj.IncludeInLTNews = sfLead.InternalFields.GetField<bool>(Constants.SF_LTNewsField);
                 returnObj.Unsubscribe = sfLead.InternalFields.GetField<bool>(Constants.SF_EmailOptOutField);
+                returnObj.TortoiseNewsletter = sfLead.InternalFields.Contains(Constants.SF_TortoiseNewsletter) ? sfLead.InternalFields.GetField<bool>(Constants.SF_TortoiseNewsletter) : false;
                 returnObj.IsUkResident = sfLead.InternalFields.GetField<bool>(Constants.SF_UKResident);
                 returnObj.IsConsentGivenDateEmpty = (sfLead.InternalFields[Constants.SF_DateOfConcentField] == null) ? true : false;
                 return returnObj;

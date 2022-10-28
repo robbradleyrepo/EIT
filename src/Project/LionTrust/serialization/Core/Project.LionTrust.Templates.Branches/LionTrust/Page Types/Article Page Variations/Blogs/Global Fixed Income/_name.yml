@@ -39,15 +39,8 @@ Languages:
               s:par=""
               s:ph="/main/article" />
             <r
-              uid="{3C54DBAC-C97C-4E17-9606-6D4C182673FD}"
-              p:after="r[@uid='{44D9CD64-8820-4293-928E-E33DAA95A12C}']"
-              s:ds="{CF90F4E0-4CBA-4758-8F0B-64217E3B6D91}"
-              s:id="{E9EA1844-F7AA-45D6-A10F-800A467D6E3D}"
-              s:par=""
-              s:ph="/main/article" />
-            <r
               uid="{1F957C53-EC39-450C-BD85-F18C9D6D0C39}"
-              p:after="r[@uid='{3C54DBAC-C97C-4E17-9606-6D4C182673FD}']"
+              p:after="r[@uid='{44D9CD64-8820-4293-928E-E33DAA95A12C}']"
               s:ds="{D00B775F-23C9-44A6-AB4C-03B8C10535F1}"
               s:id="{7626FD78-BC75-4F9C-80E7-DC947364A29B}"
               s:par=""
@@ -104,26 +97,15 @@ Languages:
               s:par=""
               s:ph="main" />
             <r
-              uid="{B6168C0D-C843-4588-B49B-2FAB9D488771}"
-              p:after="r[@uid='{05CB20B1-127B-4E38-BAC1-5A826D85A9D1}']"
-              s:ds="{4BEB5835-0C17-43B6-BECD-22647B366DFD}"
-              s:id="{C4570003-4866-4EAA-B069-8FA6611DC0EC}"
-              s:par=""
-              s:ph="main" />
-            <r
               uid="{BBB2192D-FA6A-46AE-AE95-15DD426DC1C0}"
-              p:after="r[@uid='{B6168C0D-C843-4588-B49B-2FAB9D488771}']"
+              p:after="r[@uid='{05CB20B1-127B-4E38-BAC1-5A826D85A9D1}']"
               s:ds="{0528AB53-AB4F-4E94-9E51-92530B6E0CCA}"
               s:id="{7F3DDF4D-5190-4C04-836D-41325114723D}"
               s:par=""
               s:ph="main" />
             <r
-              uid="{136B2778-E8D5-477F-A7EA-E29FEBC69BB6}"
-              p:after="*[1=2]"
-              s:ds="{86DE9801-1BE6-42ED-8981-7FAD1EC73916}"
-              s:id="{A811D2B0-D08D-4991-A9DD-6D9FA5799CBD}"
-              s:par=""
-              s:ph="main" />
+              uid="{D7C4D638-75FD-4FD3-89FD-B5AE5182342A}"
+              p:after="*[1=2]" />
           </d>
         </r>
     - ID: "094932b9-ff77-4977-966e-d18f7c7ac091"
@@ -144,7 +126,8 @@ Languages:
       Value: "{A0938A5B-ECE4-47D8-8564-421C0D816141}"
     - ID: "5bd6e9e9-2240-4473-8094-075e811b8438"
       Hint: Article_ListingImage
-      Value: 
+      Value: |
+        <image mediaid="{525577A8-998D-4E67-B480-AE73FDF88DEE}" />
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |

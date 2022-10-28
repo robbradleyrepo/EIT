@@ -1,0 +1,25 @@
+﻿---
+ID: "c2ca16d3-68f8-4d64-89c0-1cff739c128e"
+Parent: "666bd880-32a4-482c-a2f3-ba278d8b7656"
+Template: "d5a5ce40-c6d3-4556-967a-0974120ccb45"
+Path: "/sitecore/templates/Branches/Project/LionTrust/Page Types/Article Page Variations/Fund Updates/Global Innovation/$name/_Local/BC001 - Copy with CTA"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210519T110221Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "9ffe2dd1-92ae-4208-98bd-c1d9c73da582"
+      Hint: CopyWithCta_Cta
+      Value: |
+        <link text="See our glossary" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{255E7315-0284-4F04-98B3-F11F51017372}" />
+    - ID: "d7cd16bd-dbb5-44d9-ab26-8bbb1c9b7c2a"
+      Hint: CopyWithCta_Copy
+      Value: Understand common financial words and terms

@@ -10,6 +10,7 @@
             if (context.Preferences != null)
             {
                 UnsubscribeAll = context.Preferences.Unsubscribe;
+                ShowUnsubscribeTortoise = context.Preferences.TortoiseNewsletter;
                 IsConsentGivenDateEmpty = context.Preferences.IsConsentGivenDateEmpty;
             }
 
@@ -24,6 +25,10 @@
         public IEditEmailPreferences Content { get; set; }
 
         public bool UnsubscribeAll { get; set; }
+
+        public bool ShowUnsubscribeTortoise { get; set; }
+
+        public bool UnsubscribeTortoise { get; set; }
 
         public bool IsConsentGivenDateEmpty { get; set; }
 

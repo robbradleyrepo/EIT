@@ -7,6 +7,8 @@ namespace LionTrust.Feature.MyPreferences.Helpers
     {
         private const string RelativeImageRegex = " src=\"[/]?-/media/";
         private const string ImageSrc = " src=\"https://{0}/-/media/";
+        private const string RelativeHrefRegex = " href=\"/";
+        private const string AnchorHref = " href=\"https://{0}/";
 
         private readonly BaseFactory _factory;
 
@@ -34,6 +36,7 @@ namespace LionTrust.Feature.MyPreferences.Helpers
             emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.FundDashboardLinkToken, fundDashboardLink);
             emailMessageBody = emailMessageBody.Replace(Constants.SitecoreTokens.RegisterUserProcess.EmailTokens.SiteURLToken, string.Format("https://{0}", hostName));
             emailMessageBody = Regex.Replace(emailMessageBody, RelativeImageRegex, string.Format(ImageSrc, hostName));
+            emailMessageBody = Regex.Replace(emailMessageBody, RelativeHrefRegex, string.Format(AnchorHref, hostName));
 
             return emailMessageBody;
         }

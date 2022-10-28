@@ -57,6 +57,7 @@
                         sfDataObj.SalesforceOrgId = sfEmailPref.SFOrgId;
                         sfDataObj.SalesforceFundIds = sfFundIdList;
                         sfDataObj.Unsubscribed = sfEmailPref.Unsubscribe;
+                        sfDataObj.TortoiseNewsletter = sfEmailPref.TortoiseNewsletter;
 
                         //Save relavant Salesforce data in Sitecore contact facet                        
                         _sitecoreContactUtility.SaveCustomSFDataIntoS4SInfoFacet(scVisitorId, sfDataObj);

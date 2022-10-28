@@ -103,6 +103,8 @@ namespace LionTrust.Feature.MyPreferences
             public const string Title_FieldId = "{AE3B72BB-EBDE-4F47-B046-ED56E78DC358}";
             public const string InstitutionalBulletinLabel_FieldId = "{6D4C1618-7856-4BF4-B0F4-0433228F1999}";
             public const string InstitutionalBulletinText_FieldId = "{D85E6A06-6437-4BD5-9233-8BBCC464D01F}";
+            public const string UnsubscribeTortoiseNewsletterLabel_FieldId = "{3DB050CC-9B66-44FF-8CB1-D13FE472E077}";
+            public const string UnsubscribeTortoiseNewsletterText_FieldId = "{397FD0A1-A34A-40AC-A3CD-424766ACA233}";
             public const string UnsubscribeAllLabel_FieldId = "{B1204568-EE4B-4DB0-8447-1E18CB3E9291}";
             public const string UnsubscribeAllText_FieldId = "{184A144B-A5E5-4349-A5DC-BB61C5C0FB75}";
             public const string SubmitCTAText_FieldId = "{6AFBB9DE-8C3E-49E1-A38E-78124BC073C1}";

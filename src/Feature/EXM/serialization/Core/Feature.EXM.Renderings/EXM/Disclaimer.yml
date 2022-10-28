@@ -1,8 +1,8 @@
 ﻿---
 ID: "1e182c5c-1429-4055-bd6a-6e36a5ac2700"
 Parent: "61fef82c-11bc-4e8c-b9d0-8a624e5a5754"
-Template: "2a3e91a0-7987-44b5-ab34-35c2d9de83b9"
-Path: /sitecore/layout/renderings/Feature/EXM/Disclaimer
+Template: "99f8905d-4a87-4eb8-9f8b-a9bebfb3add6"
+Path: /sitecore/layout/Renderings/Feature/EXM/Disclaimer
 DB: master
 SharedFields:
 - ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
@@ -12,6 +12,9 @@ SharedFields:
   Hint: Cacheable
   Type: Checkbox
   Value: 0
+- ID: "51b435bc-f7b9-478a-9c51-52916af96ff5"
+  Hint: Path
+  Value: ~/views/EXM/Disclaimer.cshtml
 - ID: "8b6d532b-6128-4486-a044-ca06d90948ba"
   Hint: VaryByData
   Type: Checkbox

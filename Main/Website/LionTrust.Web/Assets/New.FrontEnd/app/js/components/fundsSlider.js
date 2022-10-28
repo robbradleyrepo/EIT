@@ -1,39 +1,64 @@
-  import Swiper, { Pagination } from "swiper/bundle";
+import Swiper, { Nvaigation, Pagination } from "swiper/bundle";
 
-  export default () => {
-    const swiper = new Swiper(".swiper-container-funds", {
-      grabCursor: true,
-      slidesPerView: "auto",
-      breakpointsInverse: true,
-      slidesOffsetAfter: 30,
-      loop: false,
-      observer: true,
-      observeParents: true,
-      watchSlidesVisibility: true,
-      watchSlidesProgress: true,
+export default () => {
 
-      pagination: {
-      el: '.swiper-pagination',
+  const swiper = new Swiper(".swiper-container-funds", {
+    grabCursor: true,
+    slidesPerView: "auto",
+    breakpointsInverse: true,
+    slidesOffsetAfter: 0,
+    slidesOffsetBefore: 0,
+    watchOverflow: true, 
+    observer: true,
+    observeParents: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    lazyLoading: true,
+    slideToClickedSlide: true,
+    initialSlide: 0,
+ 
+   
+
+    pagination: {
+      el: ".swiper-pagination",
       clickable: true,
-      renderBullet: function(index, className) {
+      renderBullet: function (index, className) {
         return `<span class="dot swiper-pagination-bullet"></span>`;
       },
-      },  
-
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+      hidePaginatiom: function () {
+        if (this.slidesPerView.length < 3) {
+          prevArrow.classList.add("'swiper-button-disabled'");
+          nextArrow.classList.add("'swiper-button-disabled'");
+        }
       },
+    },
 
-      lazyLoading: true,
-      slideToClickedSlide: true,
-      initialSlide: 1,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
 
-      });
-  };
+    
+  });
+
+ let fundScroller = $(".fundscroller-container");
+ 
+ fundScroller.each(function(){
+
+  let nextButton= $(this).find(".swiper-button-next");
+  let prevButton= $(this).find(".swiper-button-prev");
+  let pagination= $(this).find(".swiper-pagination");
+  let swiperSlides= $(this).find(".swiper-slide");
+ 
+   
+  let numberOfSlides = 3;
+  if(swiperSlides.length < numberOfSlides){
+    pagination.hide();
+    prevButton.hide();
+    nextButton.hide();
+  }
+ 
+  })
 
 
-
-
-
-  
+};
