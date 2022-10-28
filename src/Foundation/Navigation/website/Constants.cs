@@ -9,6 +9,13 @@
             public const string AnchorNameFieldId = "{AA0A9DE9-8D65-4233-A9D5-DFAB02BB9B5A}";
         }
 
+        public static class CtaLink
+        {
+            public const string CtaNameFieldId = "{CC67CDC4-AC7E-4DFC-BF08-4FF344242D69}";
+            public const string CtaLinkFieldId = "{7B0C81B6-3D33-418F-8AE6-454EC6F8FAB2}";
+            public const string CtaLinkGoalFieldId = "{D7340341-05FA-4DDC-96F9-2FD08C5CB2BD}";
+        }
+
         public static class SocialIcon
         {
             public const string SocialLink_FieldID = "{E990E03D-0332-45CC-A5E7-613996DEDA74}";

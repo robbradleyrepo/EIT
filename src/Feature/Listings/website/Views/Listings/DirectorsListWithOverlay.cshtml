@@ -1,0 +1,44 @@
+﻿@using System.Collections.Specialized
+@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Listings.Models.DirectorsListViewModel
+
+@if (Model != null && Model.Data != null)
+{
+    <div class="people-card__section">
+        @if (Sitecore.Context.PageMode.IsExperienceEditor || !string.IsNullOrEmpty(Model.Data.Title))
+        {
+            <h2 class="py-3">@Html.Glass().Editable(Model.Data, m => m.Title)</h2>
+        }
+
+        @if (Model.Children != null && Model.Children.Any())
+        {
+            <div class="row">
+                @foreach (var card in Model.Children)
+                {
+                    using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/Directors List with Overlay", card.Data.Id.ToString(), "Edit director with overlay"))
+                    {
+                        <div class="col-lg-4">
+                            <div class="people-card">
+                                <div class="people-card__image">
+                                    <a href="#">
+                                        @Html.Glass().RenderImage(card.Data, d => d.Image, isEditable: true)
+                                    </a>
+                                </div>
+                                <div class="people-card__content">
+                                    <p class="people-card__content-title">@Html.Glass().Editable(card.Data, d => d.FullName)</p>
+                                    <p>@Html.Glass().Editable(card.Data, d => d.Role)</p>
+                                    <a href="#">@card.ViewMoreLabel <i class="icon-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            @Html.Partial("~/Views/Listings/DirectorsList/PeopleOverlay.cshtml", card)
+                        </div>
+                    }
+                }
+            </div>
+        }
+    </div>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @: Add datasource for component
+}
