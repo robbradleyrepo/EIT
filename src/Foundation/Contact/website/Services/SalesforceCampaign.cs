@@ -54,7 +54,7 @@ namespace LionTrust.Foundation.Contact.Services
                                     firstName = current.Contact.FirstName;
                                 }
 
-                                if (string.IsNullOrEmpty(current.Contact?.LastName))
+                                if (!string.IsNullOrEmpty(current.Contact?.LastName))
                                 {
                                     lastName = current.Contact.LastName;
                                 }
