@@ -1,0 +1,28 @@
+﻿---
+ID: "73702e13-08e8-48e1-93f6-b5fe50f87627"
+Parent: "f3d568cc-d252-4dba-a7b4-a54b5d08f590"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/EIT/Content Types/Site Root
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: apps/16x16/file (1).png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Type: tree list
+  Value: |
+    {1930BBEB-7805-471A-A3BE-4858AC7CF696}
+    {8375C190-5C85-4616-9E14-E8AE5CBAD135}
+    {BB85C5C2-9F87-48CE-8012-AF67CF4F765D}
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{AED4911B-09C9-4A0C-9FE9-E486B1A255A8}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210323T095014Z

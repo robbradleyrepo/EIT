@@ -1,0 +1,33 @@
+﻿---
+ID: "b7615ee9-d533-4253-a697-94beb0c7ec9d"
+Parent: "34663ce6-e2ef-41d4-8af3-3038d6319335"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/EIT/Page Types/Home
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Apps/32x32/Earth.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Type: tree list
+  Value: |
+    {1930BBEB-7805-471A-A3BE-4858AC7CF696}
+    {8375C190-5C85-4616-9E14-E8AE5CBAD135}
+    {93962463-4F5F-45E8-BE15-79F96D0CBB04}
+    {AA97AB0E-14B2-4BB5-B69F-ECB5E16865DF}
+    {0DC049B8-406C-4151-912F-C50F1223EA06}
+    {82597E91-AB37-4614-A8E7-6CD139FCB7EB}
+    {924C5C0C-2006-47AA-876E-5CB712A4D768}
+    {AC1F2CD5-1DC2-4F6B-85B9-C8E622EB7EDB}
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{32A5B637-52DA-4036-83EE-6FC749537E76}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210323T095223Z

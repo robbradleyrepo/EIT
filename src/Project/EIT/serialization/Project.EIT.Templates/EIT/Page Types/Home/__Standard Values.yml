@@ -1,0 +1,90 @@
+﻿---
+ID: "32a5b637-52da-4036-83ee-6fc749537e76"
+Parent: "b7615ee9-d533-4253-a697-94beb0c7ec9d"
+Template: "b7615ee9-d533-4253-a697-94beb0c7ec9d"
+Path: /sitecore/templates/Project/EIT/Page Types/Home/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: |
+    {F99E0A5B-D9B4-45CA-8304-311C93A7737E}
+    {C1D35F9A-A7D0-47F9-903D-5ED33A15A795}
+    {EC2BBBDD-7D39-4598-A98C-4BA5E4163A07}
+    {5CBA079C-D5AD-4342-B6F5-DA1D08D72F47}
+    {CA116DE7-3554-48D7-81D2-0D02F0D24C28}
+    {A3E61FC4-9DCD-4DE8-80BA-A3EAFA5685EC}
+    {810226BD-15AA-4F26-AB02-7A63B355D4A8}
+    {8CF10444-5920-4FBF-A54A-613B2523041E}
+    {32B340AA-40BA-4124-A18B-5E04E48C38E3}
+    {65B014F2-D643-41A1-8E5F-7204CE5831F7}
+    {CBBF480E-6A45-44DF-A485-A7BEE8E19A8A}
+    {6E14C10E-64D4-4154-BBE4-FBED8C647C13}
+    {3643BD93-3949-4B21-BBA3-89CB15934F8C}
+    {123BC431-2512-47F6-BDEB-93CAE56DB624}
+    {1604DBF2-1DB4-44B7-B02F-CB86A3BF1E97}
+    {2B568216-2952-4A37-9A6F-0C1D2CC00C98}
+    {BE0ADC6B-80FD-49B1-A699-BAEFACEC4B70}
+    {07B7BAA4-4F71-42C4-8927-650585F56CDC}
+    {817D30AF-B9D5-4E8A-882F-BF6C8993CA9A}
+    {C4E2714B-2943-4EC9-A636-59B69891D820}
+    {EE74385F-5E37-4283-B0AF-DDBFA7A3186A}
+    {942BDF33-F9BD-46E4-94CC-78B01568A61B}
+    {55979059-A1A2-454F-8766-F50F3D1DA1EC}
+    {C61E9BE5-0C4E-43F4-9AB0-375E7B8D8F62}
+    {1BA5FE5D-721E-4D9A-BD7F-0A122793EBAF}
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{98FEBDC4-5C7C-46D3-8C5B-0335BAD69A97}">
+        <p
+          uid="{CF3B7BE4-CFA4-499D-B035-045A84AFE2AE}"
+          key="header"
+          md="{FA3F9296-CF56-4B41-B178-A51F13B77D45}" />
+        <p
+          uid="{DF49E698-F4D0-4D94-B8EB-9917C95FDE1B}"
+          key="main"
+          md="{FEF862F9-1111-4D0C-A9FF-596EC051998C}" />
+        <p
+          uid="{7921F7B7-B600-43D3-8A5E-9B89FC2B8D2A}"
+          key="footer"
+          md="{7FAB58B3-4A26-4B06-8F0D-6273BF625CB6}" />
+        <p
+          uid="{B7ADE3E5-2BC1-43F4-8B98-DB286FD05F62}"
+          key="lit-overlay"
+          md="{7A7CCFE0-BFEC-471C-A38C-F8282D65EA46}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210323T095312Z
+    - ID: "417057aa-fba9-488f-86b2-d7e313d0a7a5"
+      Hint: Identity_AreaServed
+      Value: United Kingdom
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "6e788013-3179-4986-893b-079222c74556"
+      Hint: Identity_ContactType
+      Value: Customer Service
+    - ID: "951b9a2d-0238-49ed-a8b9-c2a9255ba2df"
+      Hint: Breadcrumb_BreadcrumbTitle
+      Value: Edinburgh Investment Trust
+    - ID: "ab125a99-a1a6-413c-a65a-aa55eda8f0da"
+      Hint: Identity_CompanyName
+      Value: Liontrust Asset Management
+    - ID: "e409ce1d-3e4e-4c73-a01d-ba8e98bdf25f"
+      Hint: Breadcrumb_IncludeInBreadcrumb
+      Type: Checkbox
+      Value: 1
