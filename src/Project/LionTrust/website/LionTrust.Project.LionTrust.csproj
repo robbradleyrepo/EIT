@@ -66,6 +66,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\dependencies\Hotfix 374154-1\Sitecore.Analytics.RobotDetection.dll</HintPath>
     </Reference>
+    <Reference Include="Sitecore.Marketing.Campaigns.Services">
+      <HintPath>..\..\..\..\dependencies\Hotfix 556679-1\Sitecore.Marketing.Campaigns.Services.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
@@ -95,6 +98,7 @@
     <Content Include="sitecore\shell\Controls\Rich Text Editor\RichText Commands.js" />
     <Content Include="sitecore\shell\hotfixes\SC Hotfix 374154-1.txt" />
     <Content Include="sitecore\shell\hotfixes\SC Hotfix 490409-1.package.ids.txt" />
+    <Content Include="sitecore\shell\hotfixes\SC Hotfix 556679-1.txt" />
     <Content Include="Views\Layouts\LionTrust\Default.cshtml" />
     <Content Include="App_Config\Include\Project\z.LionTrust.DevSettings.config" />
     <Content Include="App_Config\Include\Project\LionTrust.Serialization.DevSettings.config" />
