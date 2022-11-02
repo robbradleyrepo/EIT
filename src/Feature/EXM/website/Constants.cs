@@ -179,9 +179,10 @@ namespace LionTrust.Feature.EXM
             public const string SalesforceCampaignId_FieldID = "{E2F34215-AF0E-4EEB-A310-D2EA4B5BEF14}";
         }
 
-        public static class TeamCampaign
+        public static class EmailCampaign
         {
             public const string TeamId_FieldID = "{E3A3C038-E84A-4639-90CE-35D4D2525A3C}";
+            public const string KeepDefaultSender_FieldID = "{AE1A463B-1B90-47A5-924F-C2C7E26C2773}";
         }
 
         public static class MailMessage
@@ -221,6 +222,7 @@ namespace LionTrust.Feature.EXM
             public const string Team = "team";
             public const string TeamPath = "teamPath";
             public const string Message = "message";
+            public const string KeepDefaultSender = "keepDefaultSender";
         }
 
         public static class Tokens

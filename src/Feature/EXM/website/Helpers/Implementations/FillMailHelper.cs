@@ -37,15 +37,21 @@ namespace LionTrust.Feature.EXM.Helpers.Implementations
             var s4sInfo = mailMessageItem?.PersonalizationRecipient?.GetFacet<S4SInfo>(S4SInfo.DefaultFacetKey);
             var exmSettings = _sitecoreService.GetItem<IExmSettings>(Constants.ExmSettings.ExmSettings_ItemID);
 
-            SetFrom(emailMessage, s4sInfo, exmSettings);
+            SetFrom(emailMessage, s4sInfo, exmSettings, mailMessageItem.ID);
             SetSalesforceCampaignId(emailMessage, mailMessageItem.ID);
 
             emailMessage.Recipients = SetRecipients(emailMessage, exmSettings);
         }
 
-        private void SetFrom(EmailMessage emailMessage, S4SInfo info, IExmSettings exmSettings)
+        private void SetFrom(EmailMessage emailMessage, S4SInfo info, IExmSettings exmSettings, string messageId)
         {
             if (info == null)
+            {
+                return;
+            }
+
+            var message = _sitecoreService.GetItem<IMessageCampaign>(new Guid(messageId));
+            if (message.KeepDefaultSender)
             {
                 return;
             }
