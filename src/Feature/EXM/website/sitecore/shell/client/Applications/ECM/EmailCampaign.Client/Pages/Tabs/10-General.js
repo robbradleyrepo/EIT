@@ -44,6 +44,8 @@
         contextApp.FromEmailTextBox.on("change:text", onChangeMessageInput);
 
         contextApp.ReplyToTextBox.on("change:text", onChangeMessageInput);
+
+        contextApp.KeepDefaultSenderCheckBox.on("isChecked", onChangeMessageInput);
     }
 
     function addModifiedListeners(contextApp, messageContext) {
@@ -57,6 +59,7 @@
         listenToTextbox(contextApp.FromNameTextBox, messageContext, "fromName");
         listenToTextbox(contextApp.FromEmailTextBox, messageContext, "fromEmail");
         listenToTextbox(contextApp.ReplyToTextBox, messageContext, "replyTo");
+        listenToCheckbox(contextApp.KeepDefaultSenderCheckBox, messageContext, "keepDefaultSender");
 
         //Listen to accordion changes
         listenToSenderAccordion(contextApp);
@@ -68,6 +71,15 @@
         }
         textbox.on("change:text", function() {
             messageContext.set(propertyName, textbox.get("text"));
+        });
+    }
+
+    function listenToCheckbox(checkbox, messageContext, propertyName) {
+        if (!checkbox || !messageContext || !propertyName) {
+            return;
+        }
+        checkbox.on("change:isChecked", function () {
+            messageContext.set(propertyName, checkbox.get("isChecked"));
         });
     }
 
@@ -263,6 +275,7 @@
             contextApp.FromEmailTextBox.set("text", contextApp.MessageContext.get("fromEmail"));
             contextApp.ReplyToTextBox.set("isReadOnly", isSenderDetailsReadonly);
             contextApp.ReplyToTextBox.set("text", contextApp.MessageContext.get("replyTo"));
+            contextApp.KeepDefaultSenderCheckBox.set('isChecked', contextApp.MessageContext.get("keepDefaultSender"));
 
             setReadOnlyToTextBox(contextApp.CampaignCategoryTextBox);
             contextApp.CampaignCategoryTextBox.set("text", contextApp.MessageContext.get("campaignCategoryPath"));

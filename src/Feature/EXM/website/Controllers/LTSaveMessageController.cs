@@ -61,6 +61,8 @@ namespace LionTrust.Feature.EXM.Controllers
                 {
                     message.Team = null;
                 }
+
+                message.KeepDefaultSender = data.KeepDefaultSender;
                 
                 _sitecoreService.SaveItem(new SaveOptions(message));
             }

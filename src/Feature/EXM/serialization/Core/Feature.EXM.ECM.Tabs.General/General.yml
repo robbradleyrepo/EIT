@@ -297,6 +297,38 @@ SharedFields:
           ph="ReplyToColumnPanelRight.Content"
           uid="{4281AE69-C636-4C82-A659-33F055D5795D}" />
         <r
+          id="{C4393722-39FA-4869-9582-3A8EB8983A0D}"
+          par="Id=KeepDefaultSenderRowPanel"
+          ph="SenderAccordionBorder.Content"
+          uid="{3A50D2BE-7115-41EE-ABC5-B4553D91EF24}" />
+        <r
+          id="{5CB208F6-1860-426B-8221-FAA85B329848}"
+          par="GridColumns=3&amp;Id=PesonalisationLeftColumnPanel"
+          ph="KeepDefaultSenderRowPanel.Content"
+          uid="{81AEE82B-FB96-4C4B-BB36-716A7F7AB285}" />
+        <r
+          ds="{A9EC05D8-7CE1-4B2F-8F15-45CE7258F55B}"
+          id="{98316BB6-F3F5-4E6F-81F0-79F173D151D8}"
+          par="Id=KeepDefaultSenderLabel&amp;Target=%7bBinding+KeepDefaultSenderCheckBox.Text%7d"
+          ph="KeepDefaultSenderColumnPanelLeft.Content"
+          uid="{EDB0B7D4-23E4-48AC-A07E-5F9E4BCE2D91}" />
+        <r
+          id="{5CB208F6-1860-426B-8221-FAA85B329848}"
+          par="GridColumns=9&amp;Id=KeepDefaultSenderRightColumnPanel"
+          ph="KeepDefaultSenderRowPanel.Content"
+          uid="{9185DDE9-D2C8-4BE9-88F6-E27EA0BDCA57}" />
+        <r
+          ds="{69333E27-128A-4548-AF20-B40F891543CC}"
+          id="{3824DAB6-745A-468A-9D75-044591E72FB5}"
+          par="Id=KeepDefaultSenderCheckBox"
+          ph="KeepDefaultSenderRightColumnPanel.Content"
+          uid="{0947101E-6108-41ED-8373-5B5399700A45}" />
+        <r
+          id="{F6C9F461-FCAF-47DC-AA01-C8C64C2EFFB8}"
+          par="UsePadding=1&amp;Id=KeepDefaultSenderSpacerBorder"
+          ph="SenderAccordionBorder.Content"
+          uid="{0E3A7F77-4192-45BC-A4F9-DD42050798F3}" />
+        <r
           ds="{06B83FDE-003E-4626-B5D5-25348D8E52BE}"
           id="{442BD093-FBAD-4E36-BC08-489E16C82D08}"
           par="Id=TemplateAccordion&amp;IsOpen=1"
