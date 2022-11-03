@@ -86,7 +86,7 @@
                         subscriptionGoal = data.SubscribeGoal;
                     }
 
-                    context.Preferences.TortoiseNewsletter = !registerInvestorViewModel.UnsubscribeTortoise;
+                    context.Preferences.TortoiseNewsletter = registerInvestorViewModel.ShowUnsubscribeTortoise && !registerInvestorViewModel.UnsubscribeTortoise;
                     context.Preferences.SFProcessList = registerInvestorViewModel.SFProcessList;
                     submitSuccess = _emailPreferencesService.SaveEmailPreferences(context);
                 }

@@ -16,7 +16,10 @@
                     <div class="col-auto modal-people__card-image">
                         <picture>
                             <!--Show large image for mobile / small for desktop-->
-                            <source media="(max-width:767px)" srcset="@Model.Data.Image.Src">
+                            @if (Model.Data.Image != null)
+                            {
+                                <source media="(max-width:767px)" srcset="@Model.Data.Image.Src">
+                            }
                             @Html.Glass().RenderImage(Model, d => d.ImageOverlay, isEditable: true)
                         </picture>
                     </div>
