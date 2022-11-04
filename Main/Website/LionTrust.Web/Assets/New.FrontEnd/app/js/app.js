@@ -61,8 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     $(".imagepromo__contentbox p").each(function(){
         if ($(this).text().trim().length) {
-            $(this).closes
-            t('.fundscroller__box').addClass("has-content");
+            $(this).closest('.fundscroller__box').addClass("has-content");
         }
         // if empty
         if ($(this).trim().length > 0 ) {
