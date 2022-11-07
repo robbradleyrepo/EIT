@@ -81,6 +81,7 @@
   <ItemGroup>
     <Compile Include="Comparers\EmptyOrDefaultIntAreLast.cs" />
     <Compile Include="Extensions\LinkExtensions.cs" />
+    <Compile Include="Extensions\RuleListExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Extensions\DateExtensions.cs" />
     <Compile Include="Extensions\FieldExtensions.cs" />
