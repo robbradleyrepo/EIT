@@ -11,6 +11,9 @@ namespace LionTrust.Feature.EXM.Models
         [JsonProperty(Constants.ExmMessage.TeamPath)]
         public string TeamPath { get; set; }
 
+        [JsonProperty(Constants.ExmMessage.KeepDefaultSender)]
+        public bool KeepDefaultSender { get; set; }
+
         public LTMessage(Message message)
         {
             UsesPersonalisation = message.UsesPersonalisation;
