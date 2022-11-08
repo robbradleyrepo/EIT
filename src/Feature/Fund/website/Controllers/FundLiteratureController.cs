@@ -5,6 +5,7 @@
     using LionTrust.Feature.Fund.Models;
     using LionTrust.Foundation.Legacy.Models;
     using LionTrust.Foundation.SitecoreExtensions.Comparers;
+    using MoreLinq.Extensions;
     using Sitecore.Mvc.Controllers;
     using System;
     using System.Collections.Generic;
@@ -67,13 +68,13 @@
 
         private Dictionary<string, List<IDocument>> ArrangeDocuments(IFund fund)
         {
-            var documents = _documentRepository.GetRelatedDocuments(fund).Where(d => d.DocumentLink != null);
+            var documents = _documentRepository.GetRelatedDocuments(fund).Where(d => !string.IsNullOrEmpty(d.DocumentName) && d.DocumentLink != null);
 
             return documents
                 .Where(d => d.DocumentTypes.Any())
                 .SelectMany(d => d.DocumentTypes, (d, docType) => new { Name = docType.ItemName, Document = d })
                 .GroupBy(d => d.Name)
-                .ToDictionary(g => g.Key, g => g.Select(d => d.Document).OrderBy(d => d.CustomSortOrder, new EmptyOrDefaultIntAreLast()).ToList());            
+                .ToDictionary(g => g.Key, g => g.Select(d => d.Document).DistinctBy(d => d.DocumentName).OrderBy(d => d.CustomSortOrder, new EmptyOrDefaultIntAreLast()).ToList());            
         }
     }
 }

@@ -97,10 +97,14 @@
     <Content Include="Views\Listings\DirectorsList.cshtml" />
     <Content Include="Views\Listings\OurValues.cshtml" />
     <Content Include="Views\Listings\LatestResultsAndPresentations.cshtml" />
+    <Content Include="Views\Listings\DirectorsListWithOverlay.cshtml" />
+    <Content Include="Views\Listings\DirectorsList\PeopleOverlay.cshtml" />
+    <Content Include="Views\Listings\DirectorsListSection.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="Controllers\DirectorsListController.cs" />
     <Compile Include="Controllers\AccordionController.cs" />
     <Compile Include="Controllers\DocumentsController.cs" />
     <Compile Include="Controllers\LatestResultsAndPresentationsController.cs" />
@@ -114,7 +118,10 @@
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Helpers\FileHelper.cs" />
     <Compile Include="Helpers\MediaGalleryHelper.cs" />
+    <Compile Include="Models\DirectorViewModel.cs" />
+    <Compile Include="Models\DirectorsListViewModel.cs" />
     <Compile Include="Models\AccordionViewModel.cs" />
+    <Compile Include="Models\IDirectorSettings.cs" />
     <Compile Include="Models\IDirector.cs" />
     <Compile Include="Models\IDirectorsList.cs" />
     <Compile Include="Models\ILatestResultsAndPresentations.cs" />

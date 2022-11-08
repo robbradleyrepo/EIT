@@ -4,11 +4,11 @@
 {
     <div class="container">
         <div class="row">
-            <div class="col-12 section text-black">
+            <div class="col-12 mt-5 section text-black">
                 <h2 class="text-gold">@Html.Glass().Editable(Model, m => m.Title)</h2>
                 @using (Html.Glass().BeginEditFrame(Model, "Edit IFrame Parameters", m => m.IFrameUrl, m => m.UniqueId))
                 {
-                    <iframe class="mt-3 mb-5 responsive" id="@Model.UniqueId"
+                    <iframe class="mt-3 mb-3 responsive" id="@Model.UniqueId"
                             src="@Model.IFrameUrl"
                             height="1000" width="100%" frameborder="0" scrolling="no"
                             webkitallowfullscreen mozallowfullscreen allowfullscreen>

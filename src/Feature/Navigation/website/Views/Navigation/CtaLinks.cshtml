@@ -1,0 +1,34 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using System.Collections.Specialized
+@using LionTrust.Foundation.SitecoreExtensions.Extensions
+@using LionTrust.Foundation.Analytics.Goals
+@model LionTrust.Feature.Navigation.Models.ICtaLinks
+
+@if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    return;
+}
+
+<div class="nav fixed-top page-anchor-link">
+    <div class="container">
+        <div class="page-anchor full-wigth people-anchors">
+            <div class="page-anchor__right">
+                <button class="page-anchor__title text-black"><span>@Html.Glass().Editable(m => m.Heading)</span></button>
+                <ul class="page-anchor__links">
+                    @foreach (var item in Model.Children)
+                    {
+                        <li>
+                            @using (Html.Glass().BeginRenderLinkWithGoal(item, m => m.CtaLink, item.CtaLinkGoal, new NameValueCollection { { "class", (item.CtaLink.IsCurrentPage(Sitecore.Context.Item) ? "page-anchor__link active" : "page-anchor__link") } }))
+                            {
+                                if (item.CtaLink != null && !string.IsNullOrEmpty(item.CtaName))
+                                {
+                                    @Html.Glass().Editable(item, m => m.CtaName)
+                                }
+                            }
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+﻿@using System.Collections.Specialized
+@using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Foundation.SitecoreExtensions.Extensions
+@model LionTrust.Feature.Listings.Models.DirectorViewModel
+
+<div class="modal modal-right modal-full-height modal-backdrop-custom modal-people fade" tabindex="-1" aria-labelledby="peopleCardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="icon-close"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row modal-people__card">
+                    <div class="col-auto modal-people__card-image">
+                        <picture>
+                            <!--Show large image for mobile / small for desktop-->
+                            @if (Model.Data.Image != null)
+                            {
+                                <source media="(max-width:767px)" srcset="@Model.Data.Image.Src">
+                            }
+                            @Html.Glass().RenderImage(Model, d => d.ImageOverlay, isEditable: true)
+                        </picture>
+                    </div>
+                    <div class="col-md-7 modal-people__card-info">
+                        <p class="h4 modal-people__card-info-title">@Html.Glass().Editable(Model.Data, d => d.FullName)</p>
+                        <p>@Html.Glass().Editable(Model.Data, d => d.Role)</p>
+                        <ul>
+                            @if (!string.IsNullOrEmpty(Model.Data.Email) || Sitecore.Context.PageMode.IsExperienceEditorEditing)
+                            {
+                                <li><span><strong>@Model.EmailLabel</strong></span><a class="text-primary" href="mailto:@Model.Data.Email">@Html.Glass().Editable(Model.Data, d => d.Email)</a></li>
+                            }
+                            @if (!string.IsNullOrEmpty(Model.Data.DirectLine) || Sitecore.Context.PageMode.IsExperienceEditorEditing)
+                            {
+                                <li><span><strong>@Model.DirectLineLabel</strong></span><a href="tel:@Model.Data.DirectLine.RemoveWhiteSpace()">@Html.Glass().Editable(Model.Data, d => d.DirectLine)</a></li>
+                            }
+                        </ul>
+                        @if (!string.IsNullOrEmpty(Model.Data.LinkedIn) || Sitecore.Context.PageMode.IsExperienceEditorEditing)
+                        {
+                            <p class="modal-people__card-info-social">
+                                <a href="@Model.Data.LinkedIn">
+                                    @Html.Glass().RenderImage(Model, d => d.LinkedInImage, isEditable: false)
+                                    @Model.LinkedInLabel
+                                </a>
+                            </p>
+                        }
+                    </div>
+                </div>
+
+                @if (!string.IsNullOrEmpty(Model.Data.ShortBio) || Sitecore.Context.PageMode.IsExperienceEditorEditing)
+                {
+                    <div class="row pt-md-5 modal-people__content">
+                        <div class="col-12">
+                            <p class="h5 modal-people__content-title">@Model.Header</p>
+                            <!--Intro text-->
+                            @if (!string.IsNullOrEmpty(Model.Data.SubHeader) || Sitecore.Context.PageMode.IsExperienceEditorEditing)
+                            {
+                                <p class="modal-people__content-intro">
+                                    <strong>
+                                        @Html.Glass().Editable(Model.Data, d => d.SubHeader)
+                                    </strong>
+                                </p>
+                            }
+                            <!--Main content-->
+                            @if (!string.IsNullOrEmpty(Model.Data.ShortBio) || Sitecore.Context.PageMode.IsExperienceEditorEditing)
+                            {
+                                @Html.Glass().Editable(Model.Data, d => d.ShortBio)
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

@@ -34,6 +34,7 @@
                 this.set("fromName", "");
                 this.set("fromEmail", "");
                 this.set("replyTo", "");
+                this.set("keepDefaultSender", false);
                 this.set("isSenderDetailsReadonly", false);
 
                 // template
@@ -94,6 +95,7 @@
                 this.on("change:fromName", this.modified, this);
                 this.on("change:fromEmail", this.modified, this);
                 this.on("change:replyTo", this.modified, this);
+                this.on("change:keepDefaultSender", this.modified, this);
                 this.on("change:usesPersonalisation", this.modified, this);
                 this.on("change:isServiceMessage", this.modified, this);
                 this.on("change:usePreferredLanguage", this.modified, this);
@@ -175,6 +177,7 @@
                 this.set("isServiceMessage", response.message.isServiceMessage);
                 this.set("usesPersonalisation", response.message.usesPersonalisation);
                 this.set("usePreferredLanguage", response.message.usePreferredLanguage);
+                this.set("keepDefaultSender", response.message.keepDefaultSender);
                 if (response.message.startTime) {
                     var startTime = response.message.startTime.split("-");
                     // cross browser: new Date (year, month, day)
@@ -185,6 +188,7 @@
                 this.set("fromName", response.message.sender.name);
                 this.set("fromEmail", response.message.sender.email);
                 this.set("replyTo", response.message.sender.replyTo);
+                this.set("keepDefaultSender", response.message.keepDefaultSender);
                 this.set("isSenderDetailsReadonly", response.message.sender.readonly);
 
                 // template
@@ -257,7 +261,8 @@
                 message.sender = {
                     name: encodeURIComponent(this.get("fromName")),
                     email: this.get("fromEmail"),
-                    replyTo: this.get("replyTo")
+                    replyTo: this.get("replyTo"),
+                    keepDefaultSender: this.get("keepDefaultSender")
                 };
 
                 return message;
@@ -318,6 +323,7 @@
                     language: this.get('language'),
                     message: this.getMessage(),
                     team: this.get("team"),
+                    keepDefaultSender: this.get("keepDefaultSender"),
                     errorCount: 0
                 };
 

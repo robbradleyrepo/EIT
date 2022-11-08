@@ -1,6 +1,65 @@
 // Changed default bootstrap styles
 .modal
     backdrop-filter: blur(8px)
+    &-full-height
+        .modal-dialog, .modal-content
+            height: calc(100% + 1px)
+        .modal-dialog
+            overflow: hidden
+        .modal-content
+            overflow: auto
+            &::-webkit-scrollbar
+                width: 60px
+                background: $white
+                display: none
+                @include breakpoint(desktop, up)
+                    display: block
+                &-thumb
+                    background: $gray
+                    border-radius: 100px
+                    border-width: 50px 27px 50px 28px
+                    border-style: solid
+                    border-color: $white
+    &-right
+        &.fade
+            &.show
+                .modal-dialog
+                    transform: translate(0, 0) 
+            .modal-dialog
+                transform: translate(100%, 0)
+        .modal-dialog
+            margin-right: -18px
+            margin-top: -1px
+            margin-bottom: 0
+            margin-left: -1px
+            max-width: none
+            @include breakpoint(tablet, up)
+                max-width: 700px
+                margin-left: auto
+            .modal-content
+                padding: 0
+                border-radius: 0
+                .modal-header
+                    padding: 0
+                    position: absolute
+                    width: 100%
+                    @include breakpoint(tablet, up)
+                        width: 635px
+                    button
+                        background: transparent
+                        border: none
+                        margin: 0 0 0 auto
+                        padding: 16px 35px 16px 16px
+                        font-size: 19px
+                        @include breakpoint(desktop, up)
+                            font-size: 24px
+                            padding-top: 6px
+                            padding-right: 0
+                .modal-body
+                    padding: 0 38px 1rem 21px
+                    margin-top: 50px
+                    @include breakpoint(desktop, up)
+                        padding: 1rem 15px 1rem calc(1rem + 20px)
     &-content
         border-radius: 10px
 
@@ -33,5 +92,16 @@
         backdrop-filter: blur(8px)
         opacity: 1
         background: none
+        display: none
+        &-custom
+            backdrop-filter: none
+            background: rgba($just-black, 0.5)
+            backdrop-filter: blur(8px)
     &__close
         margin-top: 21px
+    &-open
+        padding-right: 0!important
+        .modal, .nav 
+            padding-right: 0!important
+        header, footer
+            z-index: -1

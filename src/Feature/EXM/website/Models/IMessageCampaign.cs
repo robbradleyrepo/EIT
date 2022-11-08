@@ -5,7 +5,10 @@ namespace LionTrust.Feature.EXM.Models
 {
     public interface IMessageCampaign : ISalesforceCampaign
     {
-        [SitecoreField(Constants.TeamCampaign.TeamId_FieldID)]
+        [SitecoreField(Constants.EmailCampaign.TeamId_FieldID)]
         Guid? Team { get; set; }
+
+        [SitecoreField(Constants.EmailCampaign.KeepDefaultSender_FieldID)]
+        bool KeepDefaultSender { get; set; }
     }
 }

@@ -1,0 +1,23 @@
+﻿---
+ID: "69333e27-128a-4548-af20-b40f891543cc"
+Parent: "c12754ce-5480-4aeb-a5d6-8e4a3386ab92"
+Template: "6437cfd5-76ca-48aa-bfbd-8b8d73eb5581"
+Path: /sitecore/client/Applications/ECM/Component/Text/GeneralTab/KeepDefaultSenderHint
+DB: core
+SharedFields:
+- ID: "844fe7aa-2cb9-49a2-ac81-917c04b0713e"
+  Hint: TextType
+  Value: Text
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Value: "20221101T185000:638029254003949704Z"
+    - ID: "3564b3d0-3804-4d86-9880-b5e7473ef56c"
+      Hint: Text
+      Value: Select this checkbox to keep the default sender details.
+    - ID: "e17d3534-a424-47e3-8f2c-3dbba705565f"
+      Hint: Tooltip
+      Value: Select this checkbox to keep the default sender details.

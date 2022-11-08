@@ -53,13 +53,15 @@ namespace LionTrust.Feature.EXM.Controllers
             var response = new LTMessageResponse(baseResponse);
 
             var message = _sitecoreService.GetItem<IMessageCampaign>(new Guid(data.MessageId));
-
+            
             if (message.Team != null)
             {
                 response.Message.Team = message.Team?.ToString();
                 var team = _sitecoreService.GetItem<Item>(message.Team.Value);
                 response.Message.TeamPath =  team.Paths.FullPath.Replace(team.Parent.Paths.FullPath, string.Empty);
             }
+
+            response.Message.KeepDefaultSender = message.KeepDefaultSender;
 
             return response;
         }

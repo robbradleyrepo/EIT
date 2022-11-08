@@ -25,13 +25,16 @@
 
         public static RenderingResult BeginRenderLinkWithGoal<TK, T>(this GlassHtmlMvc<TK> glass, T model, Expression<Func<T, object>> field, Guid goalId, NameValueCollection attributes = null, bool isEditable = false, bool alwaysRender = false)
         {
-            if (attributes == null)
+            if (goalId != Guid.Empty)
             {
-                attributes = new NameValueCollection { { "data-goal-trigger", goalId.ToString("B").ToUpperInvariant() } };
-            }
-            else
-            {
-                attributes.Add("data-goal-trigger", goalId.ToString("B").ToUpperInvariant());
+                if (attributes == null)
+                {
+                    attributes = new NameValueCollection { { "data-goal-trigger", goalId.ToString("B").ToUpperInvariant() } };
+                }
+                else
+                {
+                    attributes.Add("data-goal-trigger", goalId.ToString("B").ToUpperInvariant());
+                }
             }
 
             return glass.BeginRenderLink<T>(model, field, attributes, isEditable, alwaysRender);
