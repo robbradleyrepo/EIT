@@ -1,6 +1,8 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @model LionTrust.Feature.Listings.Models.IHorizontalScroll
-@{
+
+@if (Model != null)
+{
     var counter = Model.NumberOfItems;
     if (Model.NumberOfItems == 0)
     {
@@ -24,4 +26,8 @@
             </div>
         </section>
     }
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <div style="background-color:white"><span style="color:black">Please add datasource to Horizontal Scroll component</span></div>
 }

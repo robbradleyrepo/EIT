@@ -2,12 +2,16 @@
 ID: "fa3f9296-cf56-4b41-b178-a51f13b77d45"
 Parent: "52e0db23-34df-41f9-bab1-a8a15c0ce90b"
 Template: "5c547d4e-7111-4995-95b0-6b561751bf2e"
-Path: /sitecore/layout/Placeholder Settings/Project/EIT/header
+Path: /sitecore/layout/placeholder settings/Project/EIT/header
 DB: master
 SharedFields:
 - ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
   Hint: Placeholder Key
   Value: header
+- ID: "e391b526-d0c5-439d-803e-17512eae6222"
+  Hint: Allowed Controls
+  Type: TreelistEx
+  Value: "{37E7BD25-2361-4C48-8B98-1A3C92719326}"
 Languages:
 - Language: en
   Versions:

@@ -8,18 +8,18 @@
     }
 
     <div class="light-gray fund-details-gray">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-              <div class="disclaimer-text @(Model.Component.SmallSize ? "article-with-small" : "article-with-big") @(Model.Component.TextColor != null ? Model.Component.TextColor.Value : "text-black")">
-                  @Html.Raw(riskWarning)
-              </div>
-          </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="disclaimer-text @(Model.Component.SmallSize ? "article-with-small" : "article-with-big") @(Model.Component.TextColor != null ? Model.Component.TextColor.Value : "text-black")">
+                        @Html.Raw(riskWarning)
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 }
 else if (Sitecore.Context.PageMode.IsExperienceEditor)
 {
-    @: Add datasource for Text component
+    <div style="background-color:white"><span style="color:black">Please add datasource to Disclaimer component</span></div>
 }

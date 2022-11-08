@@ -2,6 +2,9 @@
 @using LionTrust.Foundation.Analytics.Goals
 @using System.Collections.Specialized
 @model LionTrust.Feature.Newsletter.Promo.NewsletterPromoViewModel
+
+@if (Model != null)
+{
 <section class="newsletter-wrapper">
     <div class="newsletter" style="@Model.BackgroundImageStyle">
         <div class="row z-index-10">
@@ -71,4 +74,8 @@
         </svg>
     </div>
 </section>
-
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <div style="background-color:white"><span style="color:black">Please add datasource to Newsletter Promo component</span></div>
+}

@@ -2,6 +2,7 @@
 @model LionTrust.Feature.Fund.Models.IFundOverview
 @if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
 {
+    <div style="background-color:white"><span style="color:black">Please add datasource to Fund Overview component</span></div>
     return;
 }
 @if (Model.Fund == null && Sitecore.Context.PageMode.IsExperienceEditor)

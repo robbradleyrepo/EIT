@@ -9,31 +9,8 @@ SharedFields:
   Hint: __Masters
   Type: TreelistEx
   Value: |
-    {F99E0A5B-D9B4-45CA-8304-311C93A7737E}
-    {C1D35F9A-A7D0-47F9-903D-5ED33A15A795}
-    {EC2BBBDD-7D39-4598-A98C-4BA5E4163A07}
-    {5CBA079C-D5AD-4342-B6F5-DA1D08D72F47}
-    {CA116DE7-3554-48D7-81D2-0D02F0D24C28}
-    {A3E61FC4-9DCD-4DE8-80BA-A3EAFA5685EC}
-    {810226BD-15AA-4F26-AB02-7A63B355D4A8}
-    {8CF10444-5920-4FBF-A54A-613B2523041E}
-    {32B340AA-40BA-4124-A18B-5E04E48C38E3}
-    {65B014F2-D643-41A1-8E5F-7204CE5831F7}
-    {CBBF480E-6A45-44DF-A485-A7BEE8E19A8A}
-    {6E14C10E-64D4-4154-BBE4-FBED8C647C13}
-    {3643BD93-3949-4B21-BBA3-89CB15934F8C}
-    {123BC431-2512-47F6-BDEB-93CAE56DB624}
-    {1604DBF2-1DB4-44B7-B02F-CB86A3BF1E97}
-    {2B568216-2952-4A37-9A6F-0C1D2CC00C98}
-    {BE0ADC6B-80FD-49B1-A699-BAEFACEC4B70}
-    {07B7BAA4-4F71-42C4-8927-650585F56CDC}
-    {817D30AF-B9D5-4E8A-882F-BF6C8993CA9A}
-    {C4E2714B-2943-4EC9-A636-59B69891D820}
-    {EE74385F-5E37-4283-B0AF-DDBFA7A3186A}
-    {942BDF33-F9BD-46E4-94CC-78B01568A61B}
-    {55979059-A1A2-454F-8766-F50F3D1DA1EC}
-    {C61E9BE5-0C4E-43F4-9AB0-375E7B8D8F62}
-    {1BA5FE5D-721E-4D9A-BD7F-0A122793EBAF}
+    {A020BE84-F96C-43DD-88A0-7FA4026C4F9D}
+    {EC92A8C7-E81F-4970-BD62-FF6513D3A445}
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Type: layout
@@ -58,6 +35,36 @@ SharedFields:
           uid="{B7ADE3E5-2BC1-43F4-8B98-DB286FD05F62}"
           key="lit-overlay"
           md="{7A7CCFE0-BFEC-471C-A38C-F8282D65EA46}" />
+        <p
+          uid="{412FE3D9-9ED9-42C3-94FF-6A6EE4A4E66B}"
+          key="header-content"
+          md="{7C9ACB7B-5C3D-4677-8251-6D7A74AD491C}" />
+        <p
+          uid="{1B657F8C-0DA5-4C24-9F32-62E75002942B}"
+          key="left-column"
+          md="{CA563308-FD23-4C94-B813-DD56A4432A79}" />
+        <p
+          uid="{519246E4-28CB-471A-A850-72BC374486BF}"
+          key="right-column"
+          md="{A0F33E68-4FBD-4202-A3C1-84951774AD8C}" />
+        <p
+          uid="{4192F8E9-3573-47FE-AF1D-5DF73BC79E86}"
+          key="fund-graphs"
+          md="{B1641753-1D8C-4CC7-9642-32D4274BA14C}" />
+        <r
+          id="{37E7BD25-2361-4C48-8B98-1A3C92719326}"
+          ph="header"
+          uid="{59C4FDDB-918D-40BF-9C38-5356397AA3A3}" />
+        <r
+          ds="{A5AF9869-08CA-4D6D-8652-122F15521702}"
+          id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+          par=""
+          ph="/header/header-content"
+          uid="{C3C887A5-A4A5-4F0D-B94B-1011FD76446E}" />
+        <r
+          id="{DD1D438A-3971-438B-B1C9-461415F43488}"
+          ph="footer"
+          uid="{0F0475A7-CA54-47F3-ADC1-7B6B417E2EEB}" />
       </d>
     </r>
 Languages:
@@ -65,6 +72,20 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <p
+              uid="{4192F8E9-3573-47FE-AF1D-5DF73BC79E86}">
+              <p:d />
+            </p>
+          </d>
+        </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20210323T095312Z

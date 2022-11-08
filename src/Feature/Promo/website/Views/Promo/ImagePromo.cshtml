@@ -5,11 +5,12 @@
 @model LionTrust.Feature.Promo.Models.IImagePromo
 @if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
 {
+    <div style="background-color:white"><span style="color:black">Please add datasource to Image Promo component</span></div>
     return;
 }
- @{ 
-     var titleColor = Model.TitleColor != null && !string.IsNullOrEmpty(Model.TitleColor.Value) ? Model.TitleColor.Value : "text-gold";
- }
+@{
+    var titleColor = Model.TitleColor != null && !string.IsNullOrEmpty(Model.TitleColor.Value) ? Model.TitleColor.Value : "text-gold";
+}
 <div class="imagepromo whow-to">
     <div class="container">
         <div class="imagepromo__box">

@@ -86,10 +86,14 @@
                     FieldValue = Model.Component.HoldingsValue,
                     TooltipValue = string.Empty
                 })
-        </div>        
+        </div>
     </div>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor && (Model == null || Model.Component == null))
+{
+    <div style="background-color:white"><span style="color:black">Please add datasource to Key Info and Price On Demand component</span></div>
 }
 else if (Sitecore.Context.PageMode.IsExperienceEditor)
 {
-    <div style="background-color:white"><span style="color:black">Please add datasource to Key Info and Price On Demand component</span></div>
+    <div style="background-color:white"><span style="color:black">Key Info and Price On Demand: Please add a Fund to the page</span></div>
 }

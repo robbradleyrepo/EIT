@@ -5,7 +5,7 @@
     using LionTrust.Foundation.ORM.Models;
     using System;
 
-    [SitecoreType(TemplateId = Constants.TwitterAccount.TemplateId, EnforceTemplate = SitecoreEnforceTemplate.Template)]
+    [SitecoreType(TemplateId = Constants.TwitterAccount.TemplateId, EnforceTemplate = SitecoreEnforceTemplate.TemplateAndBase)]
     public interface ITwitterAccount : IGlassBase
     {
         [SitecoreField(Constants.TwitterAccount.TwitterAccountName_FieldId)]

@@ -2,9 +2,10 @@
 @model LionTrust.Feature.Video.Models.IVideoWithCopy
 @if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
 {
+    <div style="background-color:white"><span style="color:black">Please add datasource to Video with Copy component</span></div>
     return;
 }
-@{ 
+@{
     var useRighTextAlignment = Model.TextAlignment == null || string.IsNullOrEmpty(Model.TextAlignment.Value) || Model.TextAlignment.Value.Equals("right");
 }
 <section class="container video-with-text">

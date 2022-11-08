@@ -97,7 +97,7 @@
 
         public static class TwitterAccount
         {
-            public const string TemplateId = "{23084602-8AE7-4B97-96C0-E89784C376D7}";
+            public const string TemplateId = "{D7DB876A-D6E8-4274-A889-1D9D095AC54A}";
             public const string TwitterAccountName_FieldId = "{12150827-6E1A-4A38-91A1-70EB00F3E7B0}";
             public const string TwitterLinkGoal_FieldId = "{01E1D852-248A-450D-9A14-AB7EF92DBFE0}";
         }
