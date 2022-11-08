@@ -1,0 +1,96 @@
+﻿---
+ID: "9787e3f3-b4fb-4ff1-9beb-432eb7c7b64b"
+Parent: "058d0c7a-2e5e-4e18-88a3-e9e03f43f54d"
+Template: "b7615ee9-d533-4253-a697-94beb0c7ec9d"
+Path: /sitecore/content/EIT/Home
+DB: master
+SharedFields:
+- ID: "cce4e679-7e94-450d-8cc1-691bdf17ca78"
+  Hint: LegacyFundPageData_FundReference
+  Value: "{8D894F1B-F8F8-4452-B927-96F663373B03}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{B1D53370-8F2E-4F10-BCD3-3B01944CBCB3}"
+              p:after="r[@uid='{0F0475A7-CA54-47F3-ADC1-7B6B417E2EEB}']"
+              s:ds="{F08F099C-7308-4D40-84A4-E8AAD34516A4}"
+              s:id="{BA0509C8-337A-45E7-A597-8035DC2F1C21}"
+              s:ph="/main/left-column" />
+            <r
+              uid="{98D20871-26FD-4E8A-8460-D1DAE388F676}"
+              p:after="r[@uid='{B1D53370-8F2E-4F10-BCD3-3B01944CBCB3}']"
+              s:ds="{FE898DB7-2FC5-4296-860D-58C6730F7D9F}"
+              s:id="{A21A8112-FDFD-4974-9F0F-08A634846275}"
+              s:ph="main" />
+            <r
+              uid="{E26F8669-CAC4-4F01-8BE5-4D7E2BF31A7F}"
+              p:after="r[@uid='{98D20871-26FD-4E8A-8460-D1DAE388F676}']"
+              s:ds="{7ABC11C4-C811-4283-B10F-617CFA41F9A2}"
+              s:id="{56ECB2D2-5D43-4F0F-A5D1-AC267F249E7B}"
+              s:ph="main" />
+            <r
+              uid="{A635ED69-8717-4F08-82B7-655AF21EFA1E}"
+              p:after="r[@uid='{E26F8669-CAC4-4F01-8BE5-4D7E2BF31A7F}']"
+              s:ds="{2D863235-9EA0-4D27-8377-01E9AC10E121}"
+              s:id="{ADCC3DF1-6C80-4064-B4DB-0F3008D9CA2B}"
+              s:ph="main" />
+            <r
+              uid="{D54E0184-A6E7-40BC-9CE7-9BBA66C0F4DF}"
+              p:after="r[@uid='{A635ED69-8717-4F08-82B7-655AF21EFA1E}']"
+              s:ds="{4876D201-244A-4ECC-8508-A7F2813C4AD7}"
+              s:id="{3349B84E-C4C1-42B8-8291-BCDB541DC1B6}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{4DC932A3-9146-4E55-A2DD-F2B40D77769F}"
+              p:after="r[@uid='{D54E0184-A6E7-40BC-9CE7-9BBA66C0F4DF}']"
+              s:ds="{0C27B8A2-F38C-4BAA-B949-57F4E77A51C5}"
+              s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+              s:ph="main" />
+            <r
+              uid="{CEF38AE1-7326-4C24-A01E-0CC869CB72C7}"
+              p:after="r[@uid='{4DC932A3-9146-4E55-A2DD-F2B40D77769F}']"
+              s:ds="{A4901DDE-AB34-469A-B061-B5DB91D0191E}"
+              s:id="{278645FD-B7C1-4B02-A4FF-DD47E01AED93}"
+              s:ph="main" />
+            <r
+              uid="{05B25417-2DB0-48AD-A57B-C0579DC7586F}"
+              p:after="r[@uid='{CEF38AE1-7326-4C24-A01E-0CC869CB72C7}']"
+              s:ds="{40FBF0B5-15B4-48FB-B25C-06BF64A125FF}"
+              s:id="{33050F00-5AE0-4130-8B3A-362E4D6EEBCB}"
+              s:ph="main" />
+            <r
+              uid="{503B4BB6-2F62-4180-8942-28070AEF054D}"
+              p:after="*[1=2]"
+              s:ds="{1994D2E1-0211-4593-9A64-B299C78CF647}"
+              s:id="{BA0509C8-337A-45E7-A597-8035DC2F1C21}"
+              s:ph="/main/right-column" />
+          </d>
+        </r>
+    - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
+      Hint: LegacyPresentationBase_BrowserTitle
+      Value: Home | Liontrust Asset Management PLC
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20221101T094919Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "9dc8ae8c-c3e1-4536-aa2a-d0bff7398795"
+      Hint: LegacyPresentationBase_MetaDescription
+      Value: Liontrust is a specialist fund management company that takes pride in having a distinct culture and approach. Find out more and start investing.
+    - ID: "e27b5db1-ce93-4cb1-ba69-f78556aacaf0"
+      Hint: NavigationRoot_FooterConfiguration
+      Value: "{1BBF4F61-836D-43B0-A02B-4DFD75CEFF34}"

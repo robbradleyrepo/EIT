@@ -1,0 +1,33 @@
+﻿---
+ID: "8481adae-2289-497a-a2f0-41995918d99a"
+Parent: "c725cdf1-6ce2-40f2-bb4d-e46e4484fd60"
+Template: "c725cdf1-6ce2-40f2-bb4d-e46e4484fd60"
+Path: /sitecore/templates/Project/EIT/Content Types/Text/Title/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210428T200453Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "6102b67d-17d2-4071-af02-7d44677a17d3"
+      Hint: TitleComponent_MarginsContainer
+      Value: "{34FC685B-A73E-45C5-863D-1A828A66C4F1}"
+    - ID: "88c061a0-4e29-4b8d-a560-a62be5b7d6ef"
+      Hint: TitleComponent_Title
+      Value: $name
+    - ID: "af43676e-2d5e-4c6e-9df1-fd700a2516d1"
+      Hint: TitleComponent_TextAlignment
+      Value: "{0CBA15E9-7556-4865-9155-34CBB3BA59B2}"
+    - ID: "b680a92f-4b97-4700-90c1-6dc60349afeb"
+      Hint: TitleComponent_HeadingType
+      Value: "{981AE33B-F369-41E6-A4D6-1CB90D3E78AE}"
+    - ID: "ed1ec554-3049-42ed-bce7-419d27c1e0f7"
+      Hint: TitleComponent_TextColor
+      Value: "{E1289A04-6CCC-4F72-97CE-5058069BB9E2}"

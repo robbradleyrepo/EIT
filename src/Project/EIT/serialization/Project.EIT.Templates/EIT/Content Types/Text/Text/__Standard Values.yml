@@ -1,0 +1,28 @@
+﻿---
+ID: "fdd1ac09-9652-4aec-addc-0dbf6f9e2b8c"
+Parent: "4339584b-3fc2-4d70-8c65-e32dbb10fe3f"
+Template: "4339584b-3fc2-4d70-8c65-e32dbb10fe3f"
+Path: /sitecore/templates/Project/EIT/Content Types/Text/Text/__Standard Values
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/font.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0422a25c-25c0-4b34-8cd5-8e39b76bbf3f"
+      Hint: RichText_TextColor
+      Value: "{CAB398B8-B1BE-4F5E-99EA-387D1B46F231}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210428T184841Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "b4d032f0-3342-49a1-ad8a-d0f640c59b4c"
+      Hint: RichText_MarginsContainer
+      Value: "{3EF09D24-CDE7-4D01-9F06-DAF3554F411E}"

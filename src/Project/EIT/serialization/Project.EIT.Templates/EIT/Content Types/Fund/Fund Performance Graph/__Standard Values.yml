@@ -1,0 +1,31 @@
+﻿---
+ID: "bb163e17-8df6-4cd8-b213-017e9cb10b9a"
+Parent: "abbe8ad0-3659-476a-910e-6417c4e2a91c"
+Template: "abbe8ad0-3659-476a-910e-6417c4e2a91c"
+Path: /sitecore/templates/Project/EIT/Content Types/Fund/Fund Performance Graph/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "09768300-13a0-46e6-bd44-474db7aaa852"
+      Hint: FundPerformanceGraph_FactsheetText
+      Value: Download factsheet
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210621T155545Z
+    - ID: "46c68bf8-8d80-4959-81d6-0eecae187697"
+      Hint: FundPerformanceGraph_Heading
+      Value: Performance
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "7ba56456-c580-4919-8b04-9156bb341b4c"
+      Hint: FundPerformanceGraph_Detail
+      Value: |
+        <link text="Read latest fund update" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{7E9E8706-F864-48E5-B4A2-57F2C408EFD7}" />
+    - ID: "c1c2ecf9-5ea9-44aa-b2e0-6e4d5e2f4645"
+      Hint: FundPerformanceGraph_ChartTitle
+      Value: Since launch date

@@ -1,0 +1,26 @@
+﻿---
+ID: "b1641753-1d8c-4cc7-9642-32d4274ba14c"
+Parent: "52e0db23-34df-41f9-bab1-a8a15c0ce90b"
+Template: "5c547d4e-7111-4995-95b0-6b561751bf2e"
+Path: "/sitecore/layout/Placeholder Settings/Project/EIT/fund-graphs"
+DB: master
+SharedFields:
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: "fund-graphs"
+- ID: "e391b526-d0c5-439d-803e-17512eae6222"
+  Hint: Allowed Controls
+  Type: TreelistEx
+  Value: |
+    {65A60416-FD52-4573-8DBE-83AAF4CA3978}
+    {034EB997-49B9-4395-949F-BA16995C123D}
+    {E5DD9F72-1F1D-439D-AC28-2B32B06BF019}
+    {BA0509C8-337A-45E7-A597-8035DC2F1C21}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210603T200616Z

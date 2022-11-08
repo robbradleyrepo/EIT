@@ -1,0 +1,56 @@
+﻿---
+ID: "60af5c47-5393-48d3-9d27-d2b2c097f3c3"
+Parent: "434ff00c-b643-49e0-a2f7-a664bebec277"
+Template: "434ff00c-b643-49e0-a2f7-a664bebec277"
+Path: /sitecore/templates/Project/EIT/Content Types/Navigation/Footer Configuration/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "05aba786-3d35-479b-ada4-ecee716ad9f5"
+      Hint: FooterConfiguration_FindUsLabel
+      Value: FIND US
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210406T120041Z
+    - ID: "25fe6d9f-7990-451a-a9cb-94a632389cd3"
+      Hint: FooterConfiguration_SubscribeCTALink
+      Value: |
+        <link id="{E8BA215C-2593-4E6D-BC72-97F807C2FE1B}" querystring="" target="" text="Register now" anchor="" title="" class="" url="/LionTrustNew/Home/My preferences" linktype="internal" />
+    - ID: "580a13a4-8095-4815-be0a-2888c67a8aeb"
+      Hint: FooterConfiguration_PostalCode
+      Value: WC2R 0EZ
+    - ID: "5d9590c5-5dbe-47a1-b617-634debc799c5"
+      Hint: FooterConfiguration_PhoneNumber
+      Value: +44 (0)20 7412 1700
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "6a0f17ab-b448-474a-a275-5ee5f12f8d10"
+      Hint: FooterConfiguration_SubscribeNewsletterLabel
+      Value: SUBSCRIBE TO OUR NEWSLETTER
+    - ID: "a4f06287-e1be-4c76-96d8-e0e8b609aac1"
+      Hint: FooterConfiguration_GoogleMapsLink
+      Value: |
+        <link text="GOOGLE MAPS" linktype="external" url="https://www.google.co.uk/maps/place/Liontrust+Asset+Management+PLC/@51.5104013,-0.1209916,15z/data=!4m5!3m4!1s0x0:0x47a4ba74de28cb84!8m2!3d51.5104013!4d-0.1209916" anchor="" target="" />
+    - ID: "c77b9712-2755-4657-bdf2-c43aed9bee02"
+      Hint: FooterConfiguration_Location
+      Value: London
+    - ID: "d77b2873-db24-4887-9db1-af3bcd76f3d6"
+      Hint: FooterConfiguration_Email
+      Value: info@liontrust.co.uk
+    - ID: "e168f770-7271-4dc4-9242-72805145acdc"
+      Hint: FooterConfiguration_Copyright
+      Value: "Copyright © Liontrust Asset Management PLC 2001-{year}"
+    - ID: "e4ca4419-efee-45a0-bef9-2f611004d7a7"
+      Hint: FooterConfiguration_EmailCTALabel
+      Value: Contact us
+    - ID: "eaf0ce55-4593-4771-924b-e078f3aa3407"
+      Hint: FooterConfiguration_GetInTouchLabel
+      Value: GET IN TOUCH
+    - ID: "f53df5de-4d7d-4278-8dae-59d0c79d0b0c"
+      Hint: FooterConfiguration_Address
+      Value: 2 Savoy Court

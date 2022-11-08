@@ -1,0 +1,24 @@
+﻿---
+ID: "83859d51-f7b7-4e6b-9029-4dc5f7eadb4c"
+Parent: "9e86d5ea-bb72-4a47-b075-384bdcdd15dd"
+Template: "9e86d5ea-bb72-4a47-b075-384bdcdd15dd"
+Path: /sitecore/templates/Project/EIT/Content Types/Fund/Performance Table/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "21554471-1768-4c04-9a5d-a5fab1b4d8f4"
+      Hint: PerformanceTable_QuartileRowName
+      Value: Quartile Ranking
+    - ID: "24b821f2-896b-4bbe-ab3a-6c943a3d8b8f"
+      Hint: PerformanceTable_TableHeadingLabel
+      Value: "To previous quarter 12 months ending:"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210702T132546Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

@@ -1,0 +1,73 @@
+﻿---
+ID: "681ae344-6686-4641-a508-872f016cdea4"
+Parent: "7f73471d-e42b-41ac-9d8d-2869a7182430"
+Template: "7f73471d-e42b-41ac-9d8d-2869a7182430"
+Path: /sitecore/templates/Project/EIT/Page Types/Common Inner/__Standard Values
+DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{98FEBDC4-5C7C-46D3-8C5B-0335BAD69A97}">
+        <p
+          uid="{00BDE44C-84DC-49C3-A54D-485BA9E9FE36}"
+          key="header"
+          md="{FA3F9296-CF56-4B41-B178-A51F13B77D45}" />
+        <p
+          uid="{1827174D-7578-46CA-AD7E-1F8CA0CD0531}"
+          key="header-content"
+          md="{7C9ACB7B-5C3D-4677-8251-6D7A74AD491C}" />
+        <p
+          uid="{D1AD8CE6-8578-4616-897C-7AE8D03A481D}"
+          key="main"
+          md="{FEF862F9-1111-4D0C-A9FF-596EC051998C}" />
+        <p
+          uid="{79E525DC-F4D1-4945-AD3F-9E72FA74446B}"
+          key="footer"
+          md="{7FAB58B3-4A26-4B06-8F0D-6273BF625CB6}" />
+        <p
+          uid="{2E64E60B-1272-484F-89D3-7402BC37CEE2}"
+          key="fund-graphs"
+          md="{B1641753-1D8C-4CC7-9642-32D4274BA14C}" />
+        <p
+          uid="{8C9ECB62-A6EF-476B-8646-B54B9D815999}"
+          key="grey-content"
+          md="{196945AD-C884-4EAB-912E-374DEE487ADF}" />
+        <p
+          uid="{E8BD434A-98B0-41DB-AE5D-580EB46452DA}"
+          key="contact-form"
+          md="{6623752B-BAEB-4591-9E09-BDBDC1CA56D9}" />
+        <r
+          id="{5201B773-B4FF-4E38-A900-3D3D84F4C91A}"
+          ph="header"
+          uid="{F3313268-CF8B-478A-8614-F737F491AC50}" />
+        <r
+          id="{D0DB0627-8629-4EA8-AEBC-4FCD648C588A}"
+          ph="/header/header-content"
+          uid="{E70ECDEA-5D12-49A7-AC79-A08776C38CF6}" />
+        <r
+          id="{C0032272-B674-40E5-B6A2-F81370F3CAC8}"
+          ph="/header/header-content"
+          uid="{2BF44908-A7A5-48D8-94FD-ED2477DF408F}" />
+        <r
+          id="{DD1D438A-3971-438B-B1C9-461415F43488}"
+          ph="footer"
+          uid="{108AC6FF-088A-4E62-A4AF-91CE6180F0BC}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20221103T130956Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

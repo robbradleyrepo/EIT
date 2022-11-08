@@ -1,0 +1,21 @@
+﻿---
+ID: "14be9a4b-c019-4aa1-a012-2e9d0235eb0d"
+Parent: "8871a51e-2e85-4bf4-813e-22dc418118bd"
+Template: "8871a51e-2e85-4bf4-813e-22dc418118bd"
+Path: /sitecore/templates/Project/EIT/Content Types/Navigation/TwitterAccount/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "12150827-6e1a-4a38-91a1-70eb00f3e7b0"
+      Hint: TwitterAccount_TwitterName
+      Value: $name
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210624T083415Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

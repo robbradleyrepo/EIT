@@ -1,0 +1,30 @@
+﻿---
+ID: "151023f2-35ef-4f5c-9e68-c87a9e520d3b"
+Parent: "3c5b19c6-809c-40bc-9ac5-7a016378736a"
+Template: "3c5b19c6-809c-40bc-9ac5-7a016378736a"
+Path: /sitecore/templates/Project/EIT/Content Types/Contact/Contact Card/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "016242c6-2f08-481a-8f81-4eaeee7f134c"
+      Hint: ContactCard_TelephoneLabel
+      Value: Tel.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210824T143538Z
+    - ID: "390479c7-361c-463b-8e25-4acd2eba51a0"
+      Hint: ContactCard_OutsideUkLabel
+      Value: if outside the UK
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "933d66bb-1f8c-4754-b619-79fd55f2a2ec"
+      Hint: ContactCard_Heading
+      Value: Contact Us
+    - ID: "b79d731a-62cd-444e-95b5-3a7a42c1fc6e"
+      Hint: ContactCard_FaxLabel
+      Value: Fax.

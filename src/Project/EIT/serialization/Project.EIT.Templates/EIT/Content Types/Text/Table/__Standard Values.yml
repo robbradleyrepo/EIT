@@ -1,0 +1,59 @@
+﻿---
+ID: "e746c389-adff-4550-8d15-c565d1337a08"
+Parent: "e4f6e14f-2c76-4455-987d-91c0203c32b0"
+Template: "e4f6e14f-2c76-4455-987d-91c0203c32b0"
+Path: /sitecore/templates/Project/EIT/Content Types/Text/Table/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0ab50d27-7e96-4187-8ef3-c617f40488f9"
+      Hint: Table_Value
+      Value: |
+        <table class="table table-striped mb-3">
+            <thead>
+                <tr class="table-head-green">
+                    <th></th>
+                    <th>Title</th>
+                    <th>Title</th>
+                    <th>Title</th>
+                    <th>Title</th>
+                    <th>Title</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>Title</th>
+                    <th>Title</th>
+                    <th>Title</th>
+                    <th>Title</th>
+                    <th>Title</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Title</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Title</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210726T113247Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
