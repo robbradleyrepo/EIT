@@ -1,22 +1,26 @@
 ﻿---
-ID: "7f73471d-e42b-41ac-9d8d-2869a7182430"
+ID: "66fb0aae-1e4d-4d85-9838-d06949b51f42"
 Parent: "34663ce6-e2ef-41d4-8af3-3038d6319335"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Project/EIT/Page Types/Common Inner
+Path: /sitecore/templates/Project/EIT/Page Types/_Page
 DB: master
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
-  Value: Applications/32x32/document_dirty.png
+  Value: Applications/16x16/document_plain.png
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
   Type: tree list
   Value: |
     {1930BBEB-7805-471A-A3BE-4858AC7CF696}
-    {66FB0AAE-1E4D-4D85-9838-D06949B51F42}
+    {82597E91-AB37-4614-A8E7-6CD139FCB7EB}
+    {5DFCFE62-DBDF-42BD-AD8A-198E70D8A327}
+    {8FD6C8B6-A9A4-4322-947E-90CE3D94916D}
+    {D6B5C5F5-5AA9-48F2-A0EC-E2AB1BCE1751}
+    {045742DE-28A0-4C15-9C56-D479197C4CC1}
 - ID: "f7d48a55-2158-4f02-9356-756654404f73"
   Hint: __Standard values
-  Value: "{681AE344-6686-4641-A508-872F016CDEA4}"
+  Value: "{4EBE30A9-3C9E-4E15-8A67-5035F755577E}"
 Languages:
 - Language: en
   Versions:
@@ -24,8 +28,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20221103T130846Z
-    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
-      Hint: __Created by
-      Value: |
-        sitecore\admin
+      Value: 20210514T141752Z

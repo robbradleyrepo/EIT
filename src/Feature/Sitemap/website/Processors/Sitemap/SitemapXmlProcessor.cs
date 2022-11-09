@@ -93,6 +93,12 @@
             LanguageCollection languages = LanguageManager.GetLanguages(Context.Database);
             Item item = Context.Database.GetItem(args.Site.RootPath + args.Site.StartItem);
             SiteDefinition siteDefinition = base.Configuration[args.Site.Name];
+
+            if (siteDefinition.IndexName != _indexName)
+            {
+                return;
+            }
+
             if (siteDefinition.EmbedLanguage)
             {
                 foreach (Language current in languages.Where(f => f.Name != "en"))

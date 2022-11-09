@@ -1,16 +1,14 @@
 ﻿---
-ID: "93962463-4f5f-45e8-be15-79f96d0cbb04"
+ID: "ddbebb44-2327-4d27-a7cc-2f985d485030"
 Parent: "efd01086-a297-4f6c-930d-cf383098b685"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Feature/Navigation/_NavigationRoot
+Path: /sitecore/templates/Feature/Navigation/_Footer
 DB: master
 SharedFields:
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
   Type: tree list
-  Value: |
-    {1930BBEB-7805-471A-A3BE-4858AC7CF696}
-    {DDBEBB44-2327-4D27-A7CC-2F985D485030}
+  Value: "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"
 Languages:
 - Language: en
   Versions:
@@ -18,4 +16,8 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210412T140459Z
+      Value: 20221109T005230Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
