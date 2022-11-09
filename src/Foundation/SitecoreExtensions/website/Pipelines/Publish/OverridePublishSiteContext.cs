@@ -12,7 +12,7 @@ namespace LionTrust.Foundation.SitecoreExtensions.Pipelines.Publish
                 context.PublishOptions.PublishRelatedItems = false;
                 PublishingLog.Info(string.Format("SitePublish detected. PublishContext was overridden with PublishRelatedItems=false."));
             }
-            if (IsHomepage(context.PublishOptions))
+            else if (IsHomepage(context.PublishOptions))
             {
                 context.PublishOptions.PublishRelatedItems = false;
                 PublishingLog.Info(string.Format("HomepagePublish detected. PublishContext was overridden with PublishRelatedItems=false."));
@@ -25,7 +25,7 @@ namespace LionTrust.Foundation.SitecoreExtensions.Pipelines.Publish
         }
         private bool IsHomepage(PublishOptions publishOptions)
         {
-            return publishOptions.RootItem.DescendsFrom(Constants.Site.Template_ID);
+            return publishOptions.RootItem != null && publishOptions.RootItem.DescendsFrom(Constants.Site.Template_ID);
         }
     }
 }
