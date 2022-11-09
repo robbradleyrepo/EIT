@@ -1,0 +1,25 @@
+﻿---
+ID: "20d5f2bc-ecfb-4a38-be62-eb43b1d6d36d"
+Parent: "0db26bb9-f519-4448-9724-af4afc8588e5"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/EIT/Content Types/Navigation/Header Configuration
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: office/32x32/document_header.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Type: tree list
+  Value: "{9F43C73B-4CC3-4D5C-AD5A-8CF8D61CDFA0}"
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{E88ECFE2-6A6E-46EF-B453-402B491EBB11}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210406T115143Z
