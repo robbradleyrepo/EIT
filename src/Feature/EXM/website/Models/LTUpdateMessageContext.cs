@@ -7,5 +7,8 @@ namespace LionTrust.Feature.EXM.Models
     {
         [JsonProperty(Constants.ExmMessage.Team)]
         public string Team { get; set; }
+
+        [JsonProperty(Constants.ExmMessage.KeepDefaultSender)]
+        public bool KeepDefaultSender { get; set; }
     }
 }

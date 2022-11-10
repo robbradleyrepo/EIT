@@ -1,0 +1,22 @@
+﻿---
+ID: "e8ac0e06-5809-4bd7-a35b-fc47419f7265"
+Parent: "24f14312-98cd-4560-8e59-ec05fd396495"
+Template: "99f8905d-4a87-4eb8-9f8b-a9bebfb3add6"
+Path: "/sitecore/layout/Renderings/Feature/Listings/BC047 - Directors List Section"
+DB: master
+SharedFields:
+- ID: "51b435bc-f7b9-478a-9c51-52916af96ff5"
+  Hint: Path
+  Value: ~/Views/Listings/DirectorsListSection.cshtml
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{D73C56DF-4E74-42E5-990F-87602A4965D2}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20221019T101303Z

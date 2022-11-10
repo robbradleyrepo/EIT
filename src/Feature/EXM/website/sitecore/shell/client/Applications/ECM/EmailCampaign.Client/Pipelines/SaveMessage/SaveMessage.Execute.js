@@ -11,7 +11,7 @@
         priority: 1,
         execute: function(context) {
             ServerRequest(Constants.ServerRequests.SAVE_MESSAGE, {
-                data: { message: context.currentContext.message, language: context.currentContext.language, team: context.currentContext.team },
+                data: { message: context.currentContext.message, language: context.currentContext.language, team: context.currentContext.team, keepDefaultSender: context.currentContext.keepDefaultSender },
                 success: function(response) {
                     context.currentContext.refreshMessageContext = response.refreshMessageContext;
                     if (response.error) {

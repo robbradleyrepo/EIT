@@ -93,6 +93,7 @@
     <Content Include="Views\Navigation\HomePageSecondaryNavigation.cshtml" />
     <Content Include="Views\Navigation\LoginHeader.cshtml" />
     <Content Include="Views\Navigation\_Social.cshtml" />
+    <Content Include="Views\Navigation\CtaLinks.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -101,6 +102,7 @@
     <Compile Include="Controllers\NavigationController.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Models\BreadcrumbViewModel.cs" />
+    <Compile Include="Models\ICtaLinks.cs" />
     <Compile Include="Models\IAnchorLinks.cs" />
     <Compile Include="Models\IBreadcrumbDetailsModel.cs" />
     <Compile Include="Models\ICopyWithCta.cs" />

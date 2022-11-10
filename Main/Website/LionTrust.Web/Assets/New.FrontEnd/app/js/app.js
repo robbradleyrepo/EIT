@@ -21,6 +21,9 @@ import tabNav from "./components/tabNav";
 import headerCtaNav from "./components/headerCtaNav";
 import preferenceCenter from './components/preferenceCenter';
 import common from "./components/common";
+import peopleNav from "./components/peopleNav";
+import modals from "./components/bs-modals";
+import geographicalChart from "./components/geographicalChart";
 
 document.addEventListener("DOMContentLoaded", () => {
     onboardingOverlay();
@@ -29,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     investmentCard();
     carouselSlider();
     fundsSlider();
+    geographicalChart();
     articleSlider();
     awardsSlider();
     literatureOverlay();
@@ -38,6 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
     headerCtaNav();
     common();
     preferenceCenter();
+    peopleNav();
+    modals();
     if (document.querySelector(".page-anchor-link")) stickyNavbar();
     if (document.querySelector(".main-page")) parallaxScrolling();
     $(".navigation__checkbox").prop("checked", false); //Uncheck mobile menu navigation on load
@@ -63,5 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if ($(".header-top").length) {
         $("body").addClass("has-header-top");
     }
-
+    
+    
 }); 

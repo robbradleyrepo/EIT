@@ -8,7 +8,7 @@
     <div class="table-section">
         <h3 class="table-section__title">@Html.Glass().Editable(m => m.Component.Heading)</h3>
         <div class="table-responsive">
-            <table class="table table-full-border table-horizontal-chart">
+            <table class="table geographical-breakdown table-full-border table-horizontal-chart">
                 <tbody>
                     @foreach (var item in Model.Breakdown)
                     {
@@ -32,7 +32,8 @@
                         <p class="graph-section__sub">@Model.Disclaimer</p>
                     </caption>
                 }
-            </table>            
+            </table> 
+            <button class="toggle-geographical-button chartButton">+</button>
         </div>
     </div>
 </div>
