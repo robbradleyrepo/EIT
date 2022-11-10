@@ -102,6 +102,10 @@ $logo: url('/dist/images/components/header/liontrust-logo-pride-color.svg')
             border-right: 2px solid $gold
         &_stop-animation
             transition: none
+        &--divider
+            border-top: 2px solid $gold
+            padding-top: 20px
+            margin-top: 10px
     &__checkbox
         display: none
     &__close-submenu
@@ -209,11 +213,11 @@ $logo: url('/dist/images/components/header/liontrust-logo-pride-color.svg')
     line-height: 3em
     @include breakpoint(desktop, up)
         display: block
+
 .sidebar::-webkit-scrollbar
   width: 0.6em
 .sidebar::-webkit-scrollbar-thumb
   background: hsl(211, 12%, 48%)
   border-radius: 6px
 .sidebar::-webkit-scrollbar-track
-  background-color: hsl(184, 9%, 83%)
- 
+  background-color: hsl(184, 9%, 83%) 
