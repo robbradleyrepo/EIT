@@ -1,9 +1,17 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @using LionTrust.Foundation.Analytics.Goals
+@using LionTrust.Foundation.SitecoreExtensions.Extensions
 @model LionTrust.Feature.Navigation.Models.IAnchorLinks
 @if (Model == null && !Sitecore.Context.PageMode.IsExperienceEditor)
 {
     return;
+}
+@{ 
+    var visibleAnchors = Model.Children;
+    if(!Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        visibleAnchors = visibleAnchors.Where(c => c.AnchorVisibilityRules.EvaluateRules()).ToArray();
+    }
 }
 <div class="sticky-navbar-wrapper">
     <div class="page-anchor-link" id="sticky-navbar">
@@ -15,9 +23,9 @@
                     </button>
                     <div class="page-anchor__links page-anchor__links-mobile">
                         <div class="container">
-                            @foreach (var item in Model.Children)
+                            @foreach (var item in visibleAnchors)
                             {
-                                using (Html.Glass().BeginEditFrame<LionTrust.Foundation.Navigation.Models.IAnchor>(item, null, i => i.AnchorId, i => i.AnchorName))
+                                using (Html.Glass().BeginEditFrame<LionTrust.Foundation.Navigation.Models.IAnchor>(item, null, i => i.AnchorId, i => i.AnchorName, i => i.AnchorVisibilityRules))
                                 {
                                     <a href="#@item.AnchorId" class="page-anchor__link">@item.AnchorName</a>
                                 }
@@ -30,9 +38,9 @@
                         <span>@Html.Glass().Editable(m => m.Heading)</span>
                     </button>
                     <div class="page-anchor__links navbar">
-                        @foreach (var item in Model.Children)
+                        @foreach (var item in visibleAnchors)
                         {
-                            using (Html.Glass().BeginEditFrame<LionTrust.Foundation.Navigation.Models.IAnchor>(item, null, i => i.AnchorId, i => i.AnchorName))
+                            using (Html.Glass().BeginEditFrame<LionTrust.Foundation.Navigation.Models.IAnchor>(item, null, i => i.AnchorId, i => i.AnchorName, i => i.AnchorVisibilityRules))
                             {
                                 <a href="#@item.AnchorId" class="page-anchor__link">@item.AnchorName</a>
                             }

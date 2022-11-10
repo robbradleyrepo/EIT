@@ -5,8 +5,8 @@
         public static class Anchor
         {
             public const string AnchorFieldId = "{98B43E92-3166-4986-A181-E6EF91093454}";
-
             public const string AnchorNameFieldId = "{AA0A9DE9-8D65-4233-A9D5-DFAB02BB9B5A}";
+            public const string AnchorVisibilityRulesFieldId = "{2B030FA3-4AFE-4546-AFE9-439B616B7A53}";
         }
 
         public static class CtaLink
