@@ -51,7 +51,7 @@
             {
                 using (new SiteContextSwitcher(Factory.GetSite(Constants.SiteName)))
                 {
-                    fundPageUrl = LinkManager.GetItemUrl(fundPageField.TargetItem, new UrlOptions { AlwaysIncludeServerUrl = true, LowercaseUrls = true });
+                    fundPageUrl = LinkManager.GetItemUrl(fundPageField.TargetItem, new UrlOptions { AlwaysIncludeServerUrl = true, LowercaseUrls = true, LanguageEmbedding = LanguageEmbedding.Never });
                 }
             }
 
