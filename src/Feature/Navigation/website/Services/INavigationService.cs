@@ -7,6 +7,8 @@ namespace LionTrust.Feature.Navigation.Services
     {
         NavigationViewModel GetNavigationViewModel();
 
+        BasicNavigationViewModel GetBasicNavigationViewModel();
+
         string GetOnboardingRoleName(IOnboardingConfiguration onboardingConfiguration);
     }
 }

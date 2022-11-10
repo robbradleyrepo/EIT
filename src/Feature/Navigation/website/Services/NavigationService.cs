@@ -69,6 +69,26 @@ namespace LionTrust.Feature.Navigation.Services
             return navigationViewModel;
         }
 
+        public BasicNavigationViewModel GetBasicNavigationViewModel()
+        {
+            var headerViewModel = new BasicNavigationViewModel();
+            var item = RenderingContext.Current.Rendering.Item;
+
+            var homeItem = _navigationRepository.GetNavigationRoot(item);
+            if (homeItem != null)
+            {
+                headerViewModel.HomeItem = _mvcContext.SitecoreService.GetItem<IHomeBase>(homeItem.ID.Guid);
+                headerViewModel.MenuItems = headerViewModel.HomeItem?.HeaderConfiguration.MenuItems.Where(x => x != null);
+
+                if (_mvcContext.ContextItem.ID.Equals(homeItem.ID))
+                {
+                    headerViewModel.Organization = _navigationRepository.GetOrganizationData(headerViewModel.HomeItem, _mvcContext);
+                }
+            }
+
+            return headerViewModel;
+        }
+
         public string GetOnboardingRoleName(Foundation.Onboarding.Models.IOnboardingConfiguration onboardingConfiguration)
         {
             var investorType = string.Empty;

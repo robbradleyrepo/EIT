@@ -77,11 +77,16 @@
             public const string TemplateID = "{8375C190-5C85-4616-9E14-E8AE5CBAD135}";
         }
 
+        public static class NavigationRootBase
+        {
+            public const string TemplateID = "{DDBEBB44-2327-4D27-A7CC-2F985D485030}";
+            public const string FooterConfiguration_FieldId = "{E27B5DB1-CE93-4CB1-BA69-F78556AACAF0}";
+        }
+
         public static class NavigationRoot
         {
             public const string TemplateID = "{93962463-4F5F-45E8-BE15-79F96D0CBB04}";
-            public const string FooterConfiguration_FieldId = "{E27B5DB1-CE93-4CB1-BA69-F78556AACAF0}";
-            public const string HeaderConfiguration_FieldID = "{95F0787B-70E6-4164-98C0-F9502163D720}";
+            public const string HeaderConfiguration_FieldID = "{2020E3F5-94CD-4F5A-8333-B68EA49C7BC5}";
             public const string ContactUsPage_FieldID = "{0D831D08-90C7-4E31-B880-5A93146B3029}";
             public const string MyLionTrust_FieldID = "{B810A405-73F4-48CC-AF61-778C82531262}";            
             public const string MyLiontrustAllowedInvestors_FieldID = "{B2BAE7E0-2869-41B5-9466-961C0E7068EB}";

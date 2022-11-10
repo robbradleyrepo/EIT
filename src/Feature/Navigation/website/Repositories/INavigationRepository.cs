@@ -9,6 +9,6 @@
     {
         Item GetNavigationRoot(Item contextItem);
 
-        OrganizationSchema GetOrganizationData(IHome home, IMvcContext mvcContext);        
+        OrganizationSchema GetOrganizationData(IHomeBase home, IMvcContext mvcContext);        
     }
 }

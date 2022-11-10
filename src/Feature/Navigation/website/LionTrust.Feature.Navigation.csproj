@@ -89,11 +89,12 @@
     <Content Include="Views\Navigation\QuickLinks.cshtml" />
     <Content Include="Views\Navigation\copywithcta.cshtml" />
     <Content Include="Views\Navigation\anchor.cshtml" />
-    <Content Include="Views\Navigation\HomepageHeader.cshtml" />
+    <Content Include="Views\Navigation\HeaderSection.cshtml" />
     <Content Include="Views\Navigation\HomePageSecondaryNavigation.cshtml" />
     <Content Include="Views\Navigation\LoginHeader.cshtml" />
     <Content Include="Views\Navigation\_Social.cshtml" />
     <Content Include="Views\Navigation\CtaLinks.cshtml" />
+    <Content Include="Views\Navigation\BasicHeader.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -108,11 +109,13 @@
     <Compile Include="Models\ICopyWithCta.cs" />
     <Compile Include="Models\ICta.cs" />
     <Compile Include="Models\IFooterConfiguration.cs" />
+    <Compile Include="Models\IHomeBase.cs" />
     <Compile Include="Models\IHome.cs" />
     <Compile Include="Models\ILinkWithGoal.cs" />
     <Compile Include="Models\INavigationGlassBase.cs" />
     <Compile Include="Models\IQuickLinks.cs" />
     <Compile Include="Models\ISecondaryNav.cs" />
+    <Compile Include="Models\BasicNavigationViewModel.cs" />
     <Compile Include="Models\NavigationViewModel.cs" />
     <Compile Include="Models\OnboardingRole.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

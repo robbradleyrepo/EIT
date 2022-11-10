@@ -7,7 +7,7 @@ DB: master
 SharedFields:
 - ID: "cce4e679-7e94-450d-8cc1-691bdf17ca78"
   Hint: LegacyFundPageData_FundReference
-  Value: "{8D894F1B-F8F8-4452-B927-96F663373B03}"
+  Value: "{F8B39538-2ED7-4403-9F67-917DAAA1D0BC}"
 Languages:
 - Language: en
   Versions:
@@ -81,6 +81,9 @@ Languages:
     - ID: "199ae724-078d-49b4-9e50-03f4c5e9e938"
       Hint: LegacyPresentationBase_BrowserTitle
       Value: Home | Edinburgh Investment Trust
+    - ID: "2020e3f5-94cd-4f5a-8333-b68ea49c7bc5"
+      Hint: NavigationRoot_HeaderConfiguration
+      Value: "{ED9C5684-4C4A-4C77-BDA8-363CF1EB53FC}"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20221101T094919Z
@@ -93,4 +96,8 @@ Languages:
       Value: Liontrust is a specialist fund management company that takes pride in having a distinct culture and approach. Find out more and start investing.
     - ID: "e27b5db1-ce93-4cb1-ba69-f78556aacaf0"
       Hint: NavigationRoot_FooterConfiguration
-      Value: 
+      Value: "{1BBF4F61-836D-43B0-A02B-4DFD75CEFF34}"
+    - ID: "f113bf3d-fe80-4a15-9cda-679b3c3cb3be"
+      Hint: Identity_Logo
+      Value: |
+        <image mediaid="{98A09831-DF76-4BFA-A05E-2EE4C55405D4}" />

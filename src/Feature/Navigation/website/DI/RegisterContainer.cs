@@ -13,7 +13,7 @@ namespace LionTrust.Feature.Navigation.DI
     {
         public void Configure(IServiceCollection serviceCollection)
         {
-            serviceCollection.AddTransient<INavigationRepository>(provider => new NavigationRepository(RenderingContext.Current.ContextItem));
+            serviceCollection.AddTransient<INavigationRepository, NavigationRepository>();
             serviceCollection.AddTransient<INavigationService, NavigationService>();
         }
     }

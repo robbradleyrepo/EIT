@@ -4,19 +4,14 @@
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
-    using LionTrust.Foundation.Legacy.Models;
     using LionTrust.Foundation.Navigation.Models;
     using LionTrust.Foundation.Onboarding.Models;
-    using LionTrust.Foundation.ORM.Models;
     using System;
 
-    public interface IHome : IIdentity, INavigationGlassBase, IPresentationBase
+    public interface IHome : IHomeBase
     {
         [SitecoreField(Constants.NavigationRoot.ContactUsPage_FieldID, SitecoreFieldType.DropTree, "Header")]
         INavigablePage ContactUsPage { get; set; }
-
-        [SitecoreField(Constants.NavigationRoot.FooterConfiguration_FieldId, SitecoreFieldType.DropTree, "Footer")]
-        IFooterConfiguration FooterConfiguration { get; set; }
 
         [SitecoreField(Constants.NavigationRoot.MyLionTrust_FieldID, SitecoreFieldType.GeneralLink, "My Liontrust")]
         Link MyLionTrust { get; set; }
@@ -67,7 +62,7 @@
 
         string YouAreViewingLabelWithArticle { get; set; }
 
-        IHeaderConfiguration HeaderConfiguration { get; set; }
+        new IHeaderConfiguration HeaderConfiguration { get; set; }
 
         string ChangeInvestorUrl { get; set; }
 

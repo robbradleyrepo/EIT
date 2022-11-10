@@ -83,6 +83,7 @@
     <Content Include="Views\Banner\RiskBanner.cshtml" />
     <Content Include="Views\Banner\MyFundsLeadBanner.cshtml" />
     <Content Include="Views\Banner\PeopleInfoBanner.cshtml" />
+    <Content Include="Views\Banner\BannerWithImage.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -90,6 +91,7 @@
     <Compile Include="Controllers\BannerWithSliderController.cs" />
     <Compile Include="Controllers\MyFundsLeadBannerController.cs" />
     <Compile Include="Models\IBannerGlassBase.cs" />
+    <Compile Include="Models\IBannerWithImage.cs" />
     <Compile Include="Models\IBannerWithSlider.cs" />
     <Compile Include="Models\IBannerWithIcons.cs" />
     <Compile Include="Models\IMyFundsLeadBanner.cs" />

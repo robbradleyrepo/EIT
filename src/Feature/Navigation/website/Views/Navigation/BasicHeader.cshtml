@@ -1,0 +1,36 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc;
+@model LionTrust.Feature.Navigation.Models.BasicNavigationViewModel
+
+@if (Model != null && Model.HomeItem != null)
+{
+    if (!Sitecore.Context.PageMode.IsExperienceEditor && !Sitecore.Context.PageMode.IsPreview)
+    {
+        Html.RenderAction("OrganizationSchema", "Schema", new { OrganizationSchema = Model.Organization });
+    }
+
+    <div class="header-navbar header-bg-gradient">
+        <a href="@Model.HomeItem.Url" class="header-navbar__logo">
+            @Html.Glass().RenderImage(Model.HomeItem, x => x.Logo, new { alt = Model.HomeItem.Logo != null ? Model.HomeItem.Logo.Alt : string.Empty, @class = "header-navbar__logo-img" }, isEditable: true)
+        </a>
+
+        @if (Model.MenuItems != null && Model.MenuItems.Any())
+        {
+            <nav class="nav-desktop">
+                <ul class="nav-desktop__list">
+                    @foreach (var pageItem in Model.MenuItems)
+                    {
+                        <li class="nav-desktop__item">
+                            <a href="@pageItem.Url" class="nav-desktop__link">
+                                @Html.Glass().Editable(pageItem, z => z.PageTitle)
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </nav>
+        }
+    </div>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @:Issue with navigation: wrong Root/Home item
+}

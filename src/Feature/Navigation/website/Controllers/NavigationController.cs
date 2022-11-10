@@ -9,6 +9,7 @@
     using Sitecore.Mvc.Controllers;
     using Sitecore.Mvc.Presentation;
     using LionTrust.Feature.Navigation.Services;
+    using LionTrust.Foundation.Navigation.Models;
 
     public class NavigationController : SitecoreController
     {
@@ -28,6 +29,13 @@
             NavigationViewModel navigationViewModel = _navigationService.GetNavigationViewModel();
 
             return View("~/Views/Navigation/Header.cshtml", navigationViewModel);
+        }
+
+        public ActionResult BasicHeader()
+        {
+            var navigationViewModel = _navigationService.GetBasicNavigationViewModel();
+
+            return View("~/Views/Navigation/BasicHeader.cshtml", navigationViewModel);
         }
 
         public ActionResult LoginHeader()

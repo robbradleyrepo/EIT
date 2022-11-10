@@ -66,6 +66,17 @@
             public const string SecondaryCTALinkGoal_FieldId = "{FDEBCA2F-D107-40A8-B1EE-898B91EAF049}";
         }
 
+        public static class BannerWithImage
+        {
+            public const string Heading_FieldId = "{1A02F5A1-8E1B-41EC-B737-B3CAE237D2D1}";
+            public const string Copy_FieldId = "{20C12E33-CF6A-47E3-B95E-DB1056677DB1}";
+            public const string Image_FieldId = "{03795E95-DA53-414D-882E-A7B411D98C89}";
+            public const string PrimaryCTALink_FieldId = "{C0413091-2C31-489F-955A-7403A909FD77}";
+            public const string PrimaryCTALinkGoal_FieldId = "{7AD428C1-A2C2-4C3F-84CA-8AA9B78C14B6}";
+            public const string SecondaryCTALink_FieldId = "{7DA7A929-A3A4-4CC8-98B5-570406C5787A}";
+            public const string SecondaryCTALinkGoal_FieldId = "{98052A5C-5F3B-45D3-B926-C35F9FDC9264}";
+        }
+
         public static class IconWithText
         {
             public const string Text_FieldName = "IconWithText_Text";
