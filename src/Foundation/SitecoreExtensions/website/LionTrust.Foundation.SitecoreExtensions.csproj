@@ -82,6 +82,7 @@
     <Compile Include="Comparers\EmptyOrDefaultIntAreLast.cs" />
     <Compile Include="Extensions\LinkExtensions.cs" />
     <Compile Include="Extensions\RuleListExtensions.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Extensions\DateExtensions.cs" />
     <Compile Include="Extensions\FieldExtensions.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Pipelines\HttpRequestBegin\InvalidUrlProcessor.cs" />
     <Compile Include="Pipelines\HttpRequestEnd\ItemNotFoundRequestHeader.cs" />
     <Compile Include="Pipelines\HttpRequestBegin\ItemNotFoundProcessor.cs" />
+    <Compile Include="Pipelines\Publish\OverridePublishSiteContext.cs" />
     <Compile Include="Pipelines\RenderRendering\ClearInvalidDatasource.cs" />
     <Compile Include="Pipelines\RichTextEditor\RichTextEditorCustomConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

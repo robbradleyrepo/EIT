@@ -63,6 +63,14 @@ document.addEventListener("DOMContentLoaded", () => {
         if ($(this).text().trim().length) {
             $(this).closest('.fundscroller__box').addClass("has-content");
         }
+        // if empty
+        if ($(this).trim().length > 0 ) {
+            (this).addClass('mb-0');
+        }
+        // if any child is empty 
+        if ($(this).children().trim().length > 0 ) {
+            (this).parentElement('p').addClass('mb-0');
+        }
     }); 
 
     // Check top header exists
