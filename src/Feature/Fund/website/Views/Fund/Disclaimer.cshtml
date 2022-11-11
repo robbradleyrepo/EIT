@@ -7,7 +7,13 @@
         riskWarning = riskWarning.Replace(LionTrust.Feature.Fund.Constants.FundDisclaimer.CurrentYearToken, DateTime.Now.Year.ToString());
     }
 
-    <div class="light-gray fund-details-gray">
+    var backgroundImage = "";
+    if (Model.Component.UseBackgroundImage && Model.Component.BackgroundImage != null && !string.IsNullOrEmpty(Model.Component.BackgroundImage.Src))
+    {
+        backgroundImage = string.Format("background-image: url('{0}')", Model.Component.BackgroundImage.Src);
+    }
+
+    <div class="@(string.IsNullOrEmpty(backgroundImage) ? "light-gray" : "") fund-details-gray" style="@backgroundImage">
         <div class="container">
             <div class="row">
                 <div class="col-12">

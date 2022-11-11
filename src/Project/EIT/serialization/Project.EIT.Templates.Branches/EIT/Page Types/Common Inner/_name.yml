@@ -4,6 +4,21 @@ Parent: "a020be84-f96c-43dd-88a0-7fa4026c4f9d"
 Template: "7f73471d-e42b-41ac-9d8d-2869a7182430"
 Path: /sitecore/templates/Branches/Project/EIT/Page Types/Common Inner/$name
 DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{2BF44908-A7A5-48D8-94FD-ED2477DF408F}"
+          s:ds="{2C0B08B5-FF31-4580-A899-A721BEBF4A2A}"
+          s:par="" />
+      </d>
+    </r>
 Languages:
 - Language: en
   Versions:

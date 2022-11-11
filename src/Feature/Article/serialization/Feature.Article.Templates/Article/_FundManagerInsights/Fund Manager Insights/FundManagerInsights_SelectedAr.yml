@@ -7,7 +7,7 @@ DB: master
 SharedFields:
 - ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
   Hint: Source
-  Value: "StartSearchLocation={0DE95AE4-41AB-4D01-9EB0-67441B7C2450}&Filter=+alltemplates_sm:51bda85172564bdeb294ae2a0ce45682"
+  Value: "StartSearchLocation=query:ancestor-or-self::*[@@name->'Home']&Filter=+alltemplates_sm:51bda85172564bdeb294ae2a0ce45682"
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
   Value: Multilist with Search

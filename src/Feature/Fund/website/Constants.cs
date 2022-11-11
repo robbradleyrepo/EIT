@@ -260,6 +260,8 @@
         {
             public const string SmallSize_FieldId = "{06013D0B-DB4E-474E-86E7-BB771D5E7577}";
             public const string TextColor_FieldId = "{98D89D89-CA0F-41FF-A3BF-E0F22F240335}";
+            public const string BackgroundImage_FieldId = "{967ED374-D2A0-4BF8-BF49-56CFF814A1DE}";
+            public const string UseBackgroundImage_FieldId = "{337D81DE-B6CF-4509-A787-B588979C0A63}";
             public const string CurrentYearToken = "$currentYear$";
         }
 

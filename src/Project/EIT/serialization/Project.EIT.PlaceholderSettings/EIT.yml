@@ -4,6 +4,10 @@ Parent: "f5f0fbe3-61ad-4967-a5d8-8d760331d6a1"
 Template: "c3b037a0-46e5-4b67-ac7a-a144b962a56f"
 Path: /sitecore/layout/placeholder settings/Project/EIT
 DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
 Languages:
 - Language: en
   Versions:

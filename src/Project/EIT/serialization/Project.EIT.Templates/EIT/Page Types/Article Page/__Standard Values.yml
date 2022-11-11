@@ -9,10 +9,23 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: $name
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20221103T130952Z
+    - ID: "5bd6e9e9-2240-4473-8094-075e811b8438"
+      Hint: Article_ListingImage
+      Value: |
+        <image mediaid="{4B453796-9468-4F46-846F-AD773E555CC6}" />
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
         sitecore\admin
+    - ID: "b6833539-8781-4788-92f4-d173f0727feb"
+      Hint: Article_MultipleAuthorsSetting
+      Value: 
+    - ID: "fe72ed1f-986f-475e-a40f-b95da77091b8"
+      Hint: Article_ListingImageOpacity
+      Value: 0.75

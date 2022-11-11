@@ -68,6 +68,7 @@
   <ItemGroup>
     <Content Include="App_Config\Include\Foundation\Foundation.SitecoreExtensions.Serialization.config" />
     <Content Include="App_Config\Include\Foundation\Foundation.SitecoreExtensions.Pipelines.config" />
+    <Content Include="App_Config\Include\Foundation\Foundation.SitecoreExtensions.RegisterContainer.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -80,6 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Comparers\EmptyOrDefaultIntAreLast.cs" />
+    <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Extensions\LinkExtensions.cs" />
     <Compile Include="Extensions\RuleListExtensions.cs" />
     <Compile Include="Constants.cs" />
@@ -92,9 +94,14 @@
     <Compile Include="Pipelines\HttpRequestBegin\InvalidUrlProcessor.cs" />
     <Compile Include="Pipelines\HttpRequestEnd\ItemNotFoundRequestHeader.cs" />
     <Compile Include="Pipelines\HttpRequestBegin\ItemNotFoundProcessor.cs" />
+    <Compile Include="Placeholders\CustomPageContext.cs" />
+    <Compile Include="Pipelines\PlaceholderRenderings\GetAllowedSiteRenderings.cs" />
     <Compile Include="Pipelines\Publish\OverridePublishSiteContext.cs" />
     <Compile Include="Pipelines\RenderRendering\ClearInvalidDatasource.cs" />
     <Compile Include="Pipelines\RichTextEditor\RichTextEditorCustomConfiguration.cs" />
+    <Compile Include="Placeholders\CustomBasePlaceholderCacheManager.cs" />
+    <Compile Include="Placeholders\CustomPlaceholderCache.cs" />
+    <Compile Include="Placeholders\CustomPlaceholderCacheManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -106,6 +113,7 @@
       <Name>LionTrust.Foundation.ORM</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

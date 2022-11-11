@@ -19,38 +19,6 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
         l="{98FEBDC4-5C7C-46D3-8C5B-0335BAD69A97}">
-        <p
-          uid="{CF3B7BE4-CFA4-499D-B035-045A84AFE2AE}"
-          key="header"
-          md="{FA3F9296-CF56-4B41-B178-A51F13B77D45}" />
-        <p
-          uid="{DF49E698-F4D0-4D94-B8EB-9917C95FDE1B}"
-          key="main"
-          md="{FEF862F9-1111-4D0C-A9FF-596EC051998C}" />
-        <p
-          uid="{7921F7B7-B600-43D3-8A5E-9B89FC2B8D2A}"
-          key="footer"
-          md="{7FAB58B3-4A26-4B06-8F0D-6273BF625CB6}" />
-        <p
-          uid="{B7ADE3E5-2BC1-43F4-8B98-DB286FD05F62}"
-          key="lit-overlay"
-          md="{7A7CCFE0-BFEC-471C-A38C-F8282D65EA46}" />
-        <p
-          uid="{412FE3D9-9ED9-42C3-94FF-6A6EE4A4E66B}"
-          key="header-content"
-          md="{7C9ACB7B-5C3D-4677-8251-6D7A74AD491C}" />
-        <p
-          uid="{1B657F8C-0DA5-4C24-9F32-62E75002942B}"
-          key="left-column"
-          md="{CA563308-FD23-4C94-B813-DD56A4432A79}" />
-        <p
-          uid="{519246E4-28CB-471A-A850-72BC374486BF}"
-          key="right-column"
-          md="{A0F33E68-4FBD-4202-A3C1-84951774AD8C}" />
-        <p
-          uid="{4192F8E9-3573-47FE-AF1D-5DF73BC79E86}"
-          key="fund-graphs"
-          md="{B1641753-1D8C-4CC7-9642-32D4274BA14C}" />
         <r
           id="{37E7BD25-2361-4C48-8B98-1A3C92719326}"
           ph="header"
@@ -74,20 +42,6 @@ Languages:
   Versions:
   - Version: 1
     Fields:
-    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
-      Hint: __Final Renderings
-      Type: Layout
-      Value: |
-        <r xmlns:p="p" xmlns:s="s"
-          p:p="1">
-          <d
-            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
-            <p
-              uid="{4192F8E9-3573-47FE-AF1D-5DF73BC79E86}">
-              <p:d />
-            </p>
-          </d>
-        </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20210323T095312Z

@@ -4,8 +4,19 @@
 @using LionTrust.Foundation.Analytics.Goals
 @using LionTrust.Foundation.ORM.Extensions
 @model LionTrust.Feature.Carousel.Models.IHomepageCarousel
+
 @if (Model != null)
 {
+    if (Model.CarouselCards == null || !Model.CarouselCards.Any())
+    {
+        if (Sitecore.Context.PageMode.IsExperienceEditor)
+        {
+        <div style="background-color:white"><span style="color:black">Please add Carousel Cards to Homepage Carousel component</span></div>
+        }
+
+        return;
+    }
+
     <div class="carousel-box">
         <div class="swiper-container-carousel carousel">
             @{
@@ -89,5 +100,5 @@
 }
 else if (Sitecore.Context.PageMode.IsExperienceEditor)
 {
-    <div> Please assign datasource for Homepage Carousel component! </div>
+    <div style="background-color:white"><span style="color:black">Please add datasource to Homepage Carousel component</span></div>
 }
