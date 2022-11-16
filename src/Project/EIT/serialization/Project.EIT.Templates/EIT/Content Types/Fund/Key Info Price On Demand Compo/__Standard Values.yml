@@ -1,0 +1,42 @@
+﻿---
+ID: "ce636801-732c-43f4-b38a-623f13e6fc06"
+Parent: "945016ea-9c7d-46a2-aded-4aa31c9e10f2"
+Template: "945016ea-9c7d-46a2-aded-4aa31c9e10f2"
+Path: /sitecore/templates/Project/EIT/Content Types/Fund/Key Info Price On Demand Component/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "06145d7e-1b20-42a2-9790-dd6af70c7410"
+      Hint: KeyInfoPriceOnDemandComponent_AICSectorLabel
+      Value: AIC Sector
+    - ID: "16e16a7c-ed86-4a71-8cb7-e09b1dd8adec"
+      Hint: KeyInfoPriceOnDemandComponent_PremiumDiscountLabel
+      Value: "Premium/Discount +/- (%)"
+    - ID: "22423235-261e-4052-82f4-25b4601d57de"
+      Hint: KeyInfoPriceOnDemandComponent_KeyInformationLabel
+      Value: Key Information
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20221114T105530Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "62bf8c00-1c74-41db-bba6-a85190c1b20c"
+      Hint: KeyInfoPriceOnDemandComponent_HistoricSharePriceYieldLabel
+      Value: Historic share price yield
+    - ID: "6feb32a0-786e-46dd-98bb-e1fb1e4fd01e"
+      Hint: KeyInfoPriceOnDemandComponent_NetAssetValuePerShareLabel
+      Value: Net Asset Value per share
+    - ID: "851eef90-c009-4e43-a2e4-fcf98cfc5981"
+      Hint: KeyInfoPriceOnDemandComponent_HistoricDividendPerShareValue
+      Value: 
+    - ID: "ebc3f489-465f-4dfb-98e9-d1ef742fc4ab"
+      Hint: KeyInfoPriceOnDemandComponent_HistoricDividendPerShareLabel
+      Value: Historic Dividend per share
+    - ID: "f019b0d9-147b-4e48-90bf-70b8083b47e2"
+      Hint: KeyInfoPriceOnDemandComponent_BenchmarkIndexLabel
+      Value: Benchmark Index

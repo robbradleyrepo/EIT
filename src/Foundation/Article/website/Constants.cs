@@ -4,7 +4,7 @@
     {
         public static class ArticlePodcastPromo
         {
-            public const string TemplateId = "{5FA772FC-EA92-47C5-B62C-378240F761F7}";
+            public const string TemplateId = "{AD101A0B-F16C-4B8C-83D6-CCE649EB1929}";
             public const string Heading_FieldId = "{D9709962-08AE-4B8B-8A17-8AF53DA5F9CC}";
             public const string Title_FieldId = "{B43132DB-B2C9-400F-B79C-2DEE790E100B}";
             public const string Body_FieldId = "{831456DF-6D24-4B5F-BE64-A95B27CB3039}";
@@ -24,6 +24,11 @@
         public static class Article
         {
             public const string Image_FieldId = "{5BD6E9E9-2240-4473-8094-075E811B8438}";
+        }
+
+        public static class Topic
+        {
+            public const string TopicTitleFieldId = "{48A28820-BAFD-4DDB-A968-75B57EE0925A}";
         }
     }
 }

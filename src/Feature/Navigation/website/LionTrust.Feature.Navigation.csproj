@@ -95,6 +95,7 @@
     <Content Include="Views\Navigation\_Social.cshtml" />
     <Content Include="Views\Navigation\CtaLinks.cshtml" />
     <Content Include="Views\Navigation\BasicHeader.cshtml" />
+    <Content Include="Views\Navigation\AnalyticsSnippet.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -103,6 +104,7 @@
     <Compile Include="Controllers\NavigationController.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Models\BreadcrumbViewModel.cs" />
+    <Compile Include="Models\IAnalyticsSnippet.cs" />
     <Compile Include="Models\ICtaLinks.cs" />
     <Compile Include="Models\IAnchorLinks.cs" />
     <Compile Include="Models\IBreadcrumbDetailsModel.cs" />

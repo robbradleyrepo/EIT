@@ -16,6 +16,10 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\hayleya
+    - ID: "8de3f234-7880-4703-8534-02bb8320c09c"
+      Hint: LegacyDocument_RelatedFunds
+      Type: Multilist
+      Value: "{FE6AA79B-1D11-4B78-ACFA-6EA1464E318E}"
     - ID: "a4a7f9dd-a218-4f33-b72a-7dc2251ccd43"
       Hint: LegacyDocument_DocumentTypes
       Type: Multilist
@@ -23,7 +27,7 @@ Languages:
     - ID: "c794210e-6107-4d69-841f-773cb9943bba"
       Hint: LegacyDocument_DownloadLink
       Value: |
-        <link linktype="media" target="" id="{891EC10C-8ECA-439D-8F44-1568AE97483F}" />
+        <link id="{891EC10C-8ECA-439D-8F44-1568AE97483F}" url="/LionTrust/files/fund-literature/kiids/english/GB00BCZW5V02_Liontrust_Multi_Asset_Monthly_High_Income_S_Inc_EN_KID" linktype="media" />
     - ID: "eeb8db99-7da8-4973-adf7-bcf7b29eba79"
       Hint: LegacyDocument_DocumentName
       Value: KIID S Inc

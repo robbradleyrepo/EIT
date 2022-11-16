@@ -48,6 +48,7 @@
     <Compile Include="Models\IArticleGlassBase.cs" />
     <Compile Include="Models\IArticlePodcastLink.cs" />
     <Compile Include="Models\IArticlePodcastPromo.cs" />
+    <Compile Include="Models\ITopic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

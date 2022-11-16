@@ -105,6 +105,7 @@
             public const string VideoIcon_FieldId = "{68CADA79-69A0-454A-A9EB-1E5C3E6A6CE2}";
             public const string WhatcNowLabel_FieldId = "{566136F8-0D80-4B50-8ECC-9DB53FC96161}";
             public const string NoResultsFoundLabel_FieldId = "{10B2DF8D-71F5-493E-BBEE-D13EA700F618}";
+            public const string HideFilters_FieldId = "{3152EF17-D2C2-40F6-AFBA-3B0AF45459E8}";
         }
 
         public static class Pagination

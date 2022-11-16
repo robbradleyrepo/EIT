@@ -1,11 +1,8 @@
 ﻿namespace LionTrust.Foundation.Indexing.ComputedFields.Article
 {
-    using System;
-
     using LionTrust.Foundation.Indexing.ComputedFields.SharedLogic;
     using Sitecore.ContentSearch;
     using Sitecore.ContentSearch.ComputedFields;
-    using Sitecore.Data.Items;
 
     public class ArticleTopicNames : IComputedIndexField
     {
@@ -20,7 +17,7 @@
             var multiValueField = item?.Fields[Legacy.Constants.Article.Topics_FieldId];
 
             return multiValueField != null
-                                    ? ComputedValueHelper.GetMultiListValue(multiValueField, "Topic_Value")
+                                    ? ComputedValueHelper.GetMultiListValue(multiValueField, Foundation.Article.Constants.Topic.TopicTitleFieldId)
                                     : null;
         }
     }

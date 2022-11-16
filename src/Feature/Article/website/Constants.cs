@@ -28,6 +28,7 @@
 
         public static class ArticleFilter
         {
+            public const string TemplateId = "{B0C943DC-16B9-44A0-B4ED-92D7492B3813}";
             public const string FundTeamsFieldId = "{0E5031B3-9232-42BE-82D4-05579D7827D9}";
             public const string FundsFieldId = "{D65BC812-CEB9-4C78-A2FB-EBC7788CCDE1}";
             public const string ContentTypesFieldId = "{A03D4F9E-4BDA-401D-9639-DD0247F50FAB}";
@@ -49,11 +50,6 @@
         public static class ArticleHeader
         {            
             public const string BackgroundImageFieldId = "{30451F6B-437D-4473-AE3E-79FE7A1AF36A}";
-        }
-
-        public static class Topic
-        {
-            public const string TopicTitleFieldId = "{48A28820-BAFD-4DDB-A968-75B57EE0925A}";
         }
 
         public static class Article

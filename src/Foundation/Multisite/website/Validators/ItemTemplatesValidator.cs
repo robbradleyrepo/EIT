@@ -38,7 +38,7 @@
             if(Ids.All(x =>
                 {
                     var item = field.Database.GetItem(x);
-                    return templateIds.Any(t => item.DescendsFrom(t));
+                    return item != null && templateIds.Any(t => item.DescendsFrom(t));
                 }))
             {
                 result = ValidatorResult.Valid;

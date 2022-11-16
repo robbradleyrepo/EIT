@@ -188,7 +188,11 @@
             if (!Sitecore.Context.PageMode.IsExperienceEditorEditing)
             {
                 var country = OnboardingHelper.GetCurrentContactCountryCode();
-                predicate = predicate.And(x => !x.ExcludedCountries.Contains(country));
+
+                if (!string.IsNullOrEmpty(country))
+                {
+                    predicate = predicate.And(x => !x.ExcludedCountries.Contains(country));
+                }
             }
 
             predicate = this.PopoulateFundPredicate(predicate, fundSearchRequest);

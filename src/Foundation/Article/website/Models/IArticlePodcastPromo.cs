@@ -5,7 +5,7 @@
     using Glass.Mapper.Sc.Fields;
     using System.Collections.Generic;
 
-    [SitecoreType(TemplateId = Constants.ArticlePodcastPromo.TemplateId, EnforceTemplate = SitecoreEnforceTemplate.Template)]
+    [SitecoreType(TemplateId = Constants.ArticlePodcastPromo.TemplateId, EnforceTemplate = SitecoreEnforceTemplate.TemplateAndBase)]
     public interface IArticlePodcastPromo : IArticleGlassBase
     {
         [SitecoreField(Constants.ArticlePodcastPromo.Heading_FieldId)]

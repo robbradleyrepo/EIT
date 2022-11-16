@@ -1,0 +1,26 @@
+﻿---
+ID: "68332503-d19d-4ea2-a511-504768e4b391"
+Parent: "3df3c6e8-0562-453a-bb43-4f09e93baa5b"
+Template: "3df3c6e8-0562-453a-bb43-4f09e93baa5b"
+Path: /sitecore/templates/Project/EIT/Content Types/Contact/Follow Us Social/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{ACC33898-284A-4C43-B790-E6D8A566EA71}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210517T180904Z
+    - ID: "409f8514-e699-4f19-8f35-425460a598df"
+      Hint: FollowUsSocial_Heading
+      Value: $name
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

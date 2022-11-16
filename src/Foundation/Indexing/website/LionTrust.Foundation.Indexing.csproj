@@ -147,6 +147,10 @@
     <Folder Include="Infrastructure\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Article\website\LionTrust.Foundation.Article.csproj">
+      <Project>{7eae8866-cb76-4275-8d05-577c712cfce3}</Project>
+      <Name>LionTrust.Foundation.Article</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\DI\website\LionTrust.Foundation.DI.csproj">
       <Project>{0D3A6F11-B5FF-4D8C-8A74-19501D2E80D4}</Project>
       <Name>LionTrust.Foundation.DI</Name>

@@ -21,7 +21,7 @@
                 return string.Empty;
             }
 
-            var articlePodcast = itemChildrens.Where(x => x != null && x.TemplateID.Equals(new ID(Constants.PodcastTemplateId)))?.FirstOrDefault();
+            var articlePodcast = itemChildrens.Where(x => x != null && x.DescendsFrom(new ID(Constants.PodcastTemplateId)))?.FirstOrDefault();
             if (articlePodcast == null)
             {
                 return string.Empty;

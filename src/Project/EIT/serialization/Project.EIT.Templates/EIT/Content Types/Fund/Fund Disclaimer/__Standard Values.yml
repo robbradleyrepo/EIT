@@ -1,0 +1,33 @@
+﻿---
+ID: "9e95064b-9e3c-41e0-9549-cc98776ac80a"
+Parent: "1ba4a6be-be4d-4c3a-874f-485446a4a806"
+Template: "1ba4a6be-be4d-4c3a-874f-485446a4a806"
+Path: /sitecore/templates/Project/EIT/Content Types/Fund/Fund Disclaimer/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "06013d0b-db4e-474e-86e7-bb771d5e7577"
+      Hint: FundDisclaimer_SmallWidthText
+      Type: Checkbox
+      Value: 1
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210504T124820Z
+    - ID: "337d81de-b6cf-4509-a787-b588979c0a63"
+      Hint: FundDisclaimer_UseBackgroundImage
+      Type: Checkbox
+      Value: 1
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "967ed374-d2a0-4bf8-bf49-56cff814a1de"
+      Hint: FundDisclaimer_BackgroundImage
+      Value: |
+        <image mediaid="{AFC097BF-C408-490F-B66F-4FE20656A316}" />
+    - ID: "98d89d89-ca0f-41ff-a3bf-e0f22f240335"
+      Hint: FundDisclaimer_TextColor
+      Value: "{48C80FA3-EC7D-4F44-B9D5-4466804FE054}"

@@ -8,7 +8,8 @@
 
 @if (Model != null)
 {
-    <div class="awards">
+    var backgroundImg = Model.BackgroundImage != null && !string.IsNullOrEmpty(Model.BackgroundImage.Src) ? string.Format("background-image: url('{0}')", Model.BackgroundImage.Src) : "";
+    <div class="awards" style="@backgroundImg">
         <div class="container">
             <h3 class="text-center awards__heading">
                 @Html.Glass().Editable(Model, m => m.Heading)

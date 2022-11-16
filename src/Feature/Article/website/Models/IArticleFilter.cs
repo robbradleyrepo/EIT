@@ -1,10 +1,11 @@
 ﻿namespace LionTrust.Feature.Article.Models
 {
     using Glass.Mapper.Sc.Configuration.Attributes;
+    using LionTrust.Foundation.Article.Models;
     using LionTrust.Foundation.Legacy.Models;
     using System.Collections.Generic;
 
-    [SitecoreType(TemplateId = "{B0C943DC-16B9-44A0-B4ED-92D7492B3813}")]
+    [SitecoreType(TemplateId = Constants.ArticleFilter.TemplateId)]
     public interface IArticleFilter
     {
         [SitecoreField(Constants.ArticleFilter.FundsFieldId)]

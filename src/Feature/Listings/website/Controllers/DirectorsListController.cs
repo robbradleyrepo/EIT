@@ -42,6 +42,29 @@
 
         }
 
+        public ActionResult DirectorsListVariantRender()
+        {
+            var datasource = _repository.GetDataSourceItem<IDirectorsList>();
+            var settings = _sitecoreService.GetItem<IDirectorSettings>(Constants.DirectorSettings.DirectorSettings_Id);
+
+            var model = new DirectorsListViewModel
+            {
+                Data = datasource,
+                EmailLabel = settings.EmailLabel,
+                DirectLineLabel = settings.DirectLineLabel,
+                MobileLabel = settings.MobileLabel,
+                Children = datasource.DirectorsList?.Select(x =>
+                            new DirectorViewModel
+                            {
+                                Data = x,
+                                EmailLabel = settings.EmailLabel,
+                                DirectLineLabel = settings.DirectLineLabel
+                            })
+            };
+
+            return View("~/views/listings/directorslistvariant.cshtml", model);
+        }
+
         public ActionResult DirectorsListWithOverlayRender()
         {
             var datasource = _repository.GetDataSourceItem<IDirectorsList>();

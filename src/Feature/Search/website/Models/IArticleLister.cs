@@ -55,5 +55,8 @@
 
         [SitecoreField(Constants.ArticleLister.NoResultsFoundLabel_FieldId)]
         string NoResultsFoundLabel { get; set; }
+
+        [SitecoreField(Constants.ArticleLister.HideFilters_FieldId)]
+        bool HideFilters { get; set; }
     }
 }

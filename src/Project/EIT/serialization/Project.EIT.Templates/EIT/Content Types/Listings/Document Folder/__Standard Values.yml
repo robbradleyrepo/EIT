@@ -1,0 +1,58 @@
+﻿---
+ID: "d978a75c-6e57-4ba4-aefe-c0e13ffa05b1"
+Parent: "f2c308f5-b0f0-435c-8912-a9f02f79d40b"
+Template: "f2c308f5-b0f0-435c-8912-a9f02f79d40b"
+Path: /sitecore/templates/Project/EIT/Content Types/Listings/Document Folder/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: |
+    {71BFD41C-9267-4F84-AFE5-563BF34C6184}
+    {F2C308F5-B0F0-435C-8912-A9F02F79D40B}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "208d44b3-8ffc-49ea-8d03-68fd6289c199"
+      Hint: LegacyDocumentFolder_DownloadText
+      Value: Download
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140919T091321Z
+    - ID: "40fd447e-6459-4ee2-b86d-de9ab7008604"
+      Hint: DocumentLister_WatchVideoText
+      Value: Watch Video
+    - ID: "45fd77a0-8249-4d0b-88d0-947fca97d513"
+      Hint: LegacyDocumentFolder_DownloadLinkText
+      Value: Download Message
+    - ID: "58e70fcf-1799-4a4b-8da7-ef4eedaa07a4"
+      Hint: DocumentLister_DownloadFileLabel
+      Value: Download File
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "707223f8-4670-4008-910f-c572046d0815"
+      Hint: DocumentLister_SortText
+      Value: Sort
+    - ID: "a9e362cc-4ae9-4202-b2a1-edce877102fa"
+      Hint: LegacyDocumentFolder_NameText
+      Value: Name
+    - ID: "aae23341-c861-4fbc-b0ab-16ea97a7ffc7"
+      Hint: DocumentLister_AZText
+      Value: A to Z
+    - ID: "d3733e07-651d-4602-a5e6-9ea7953199bc"
+      Hint: DocumentLister_ZAText
+      Value: Z to A
+    - ID: "ea027445-01e2-488b-a94c-a2fbf460972a"
+      Hint: DocumentLister_PreviousText
+      Value: Previous
+    - ID: "eb373c6d-b8f8-4e56-b711-f574e2fab67f"
+      Hint: DocumentLister_NextText
+      Value: Next
+    - ID: "fea256fa-27b1-46e9-935c-69bf920571a5"
+      Hint: DocumentLister_ViewPageText
+      Value: View This Page

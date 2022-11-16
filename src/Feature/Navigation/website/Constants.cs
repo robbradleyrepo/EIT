@@ -111,6 +111,11 @@
             public const string QuickLinksList_FieldId = "{0D827B79-FD2F-46C0-8C0B-6EC87D4BC086}";
         }
 
+        public static class AnalyticsSnippet
+        {
+            public const string Script_FieldId = "{4652B269-851D-4EF2-A339-44A15F728283}";
+        }
+
         public static class PageTypes
         {
             public const string LearningResourcesTemplateId = "{7B3DCDF5-5735-4FC8-89EB-DCB0F2F72972}";

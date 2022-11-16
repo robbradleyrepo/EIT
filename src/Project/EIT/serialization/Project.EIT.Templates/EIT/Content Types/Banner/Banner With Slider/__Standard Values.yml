@@ -1,0 +1,26 @@
+﻿---
+ID: "c96e0a0c-357e-4d0f-ae08-54e2a024e6b9"
+Parent: "0d8c18c7-42ad-4bd6-a081-e5aca19757b6"
+Template: "0d8c18c7-42ad-4bd6-a081-e5aca19757b6"
+Path: /sitecore/templates/Project/EIT/Content Types/Banner/Banner With Slider/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{A0CCA2EF-BDF4-4F62-AB4B-298FF8670DAC}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210505T125615Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "80c119c8-e2b9-45a8-bfa7-25e65218b121"
+      Hint: BannerWithSlider_Heading
+      Value: $name

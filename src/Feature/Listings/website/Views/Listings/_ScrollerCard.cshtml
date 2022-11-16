@@ -1,4 +1,5 @@
-﻿@using Glass.Mapper.Sc.Web.Mvc
+﻿@using System.Collections.Specialized
+@using Glass.Mapper.Sc.Web.Mvc
 @model LionTrust.Feature.Listings.Models.IScrollerCard
 @if (Model != null)
 {
@@ -7,6 +8,7 @@
             @using (Html.Glass().BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Feature/Listings/ScrollerCard", Model.Id.ToString(), "Edit Scroller Card"))
             {
                 <div class="investment-card__content">
+                    @Html.Glass().RenderImage(Model, m => m.Icon, new NameValueCollection { { "class", "" } }, isEditable: true)
                     <div class="investment-card__title">@Html.Glass().Editable(Model, m => m.Title)</div>
                         @if (Sitecore.Context.PageMode.IsExperienceEditor)
                         {

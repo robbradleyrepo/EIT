@@ -19,5 +19,8 @@
 
         [SitecoreField(Constants.ScrollerCard.LinkGoal_FieldID, SitecoreFieldType.Droplink, "Content")]
         Guid LinkGoal { get; set; }
+
+        [SitecoreField(Constants.ScrollerCard.Icon_FieldID)]
+        Image Icon { get; set; }
     }
 }

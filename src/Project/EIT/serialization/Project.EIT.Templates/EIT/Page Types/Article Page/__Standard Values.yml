@@ -4,6 +4,33 @@ Parent: "084f0f8a-3d3d-469a-b9fc-9ff73bccdd06"
 Template: "084f0f8a-3d3d-469a-b9fc-9ff73bccdd06"
 Path: /sitecore/templates/Project/EIT/Page Types/Article Page/__Standard Values
 DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{100E2E52-D5BB-494F-BF75-78AEC10AC541}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{98FEBDC4-5C7C-46D3-8C5B-0335BAD69A97}">
+        <r
+          ds="{CBC67B74-6111-4E17-9A9A-48D0F8A4A1D1}"
+          id="{C2EFEC6C-431F-4404-A05C-698751430659}"
+          par=""
+          ph="head-script"
+          uid="{A6AA7189-2378-4214-AD63-971D227C90DF}" />
+        <r
+          ds="{3AE2FB93-6994-43C8-8EBE-B82EED4D87E4}"
+          id="{C2EFEC6C-431F-4404-A05C-698751430659}"
+          par=""
+          ph="body-script"
+          uid="{7494A2D0-4847-42BA-AB43-E46D72EB8B6F}" />
+      </d>
+    </r>
 Languages:
 - Language: en
   Versions:

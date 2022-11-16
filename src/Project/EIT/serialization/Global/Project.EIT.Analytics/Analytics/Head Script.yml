@@ -1,0 +1,29 @@
+﻿---
+ID: "cbc67b74-6111-4e17-9a9a-48d0f8a4a1d1"
+Parent: "2d88c932-fa9f-47d8-a1cc-af92b09f04a1"
+Template: "7ffea93c-c78b-467b-bbc0-2f388f115854"
+Path: /sitecore/content/EIT/Global/Analytics/Head Script
+DB: master
+SharedFields:
+- ID: "4652b269-851d-4ef2-a339-44a15f728283"
+  Hint: Script
+  Value: |
+    <!-- Google Tag Manager -->
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-MDN73Z');
+        </script>
+    <!-- End Google Tag Manager -->
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Value: "20221116T103602:638041917621188168Z"

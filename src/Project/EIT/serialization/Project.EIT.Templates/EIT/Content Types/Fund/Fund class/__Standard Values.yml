@@ -1,0 +1,30 @@
+﻿---
+ID: "7ab16fd5-0eb9-44c0-87a8-7785db5415e4"
+Parent: "5a570f49-9923-4e49-afbd-23b40fb11ec9"
+Template: "5a570f49-9923-4e49-afbd-23b40fb11ec9"
+Path: /sitecore/templates/Project/EIT/Content Types/Fund/Fund class/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{5A570F49-9923-4E49-AFBD-23B40FB11EC9}"
+- ID: "c9283d9e-7c29-4419-9c28-5a5c8ff53e84"
+  Hint: __Bucketable
+  Type: Checkbox
+  Value: 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0ce0e3bf-4431-4071-a2ea-a3b79d3f0093"
+      Hint: FundClass_Name
+      Value: $name
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210608T100811Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

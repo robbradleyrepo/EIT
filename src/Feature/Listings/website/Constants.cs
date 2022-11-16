@@ -34,16 +34,10 @@ namespace LionTrust.Feature.Listings
         public static class ScrollerCard
         {
             public const string Title_FieldID = "{5B9F1D26-BDE7-4209-A71C-F0CEAC2600B5}";
-            public const string Title_FieldName = "ScrollCard_Title";
-
             public const string Description_FieldID = "{4826908C-F8C8-43E4-8360-0C09ED0C732A}";
-            public const string Description_FieldName = "ScrollCard_Description";
-
             public const string Link_FieldID = "{CE038003-3CA3-4B12-A32A-BB5E664C0595}";
-            public const string Link_FieldName = "ScrollCard_Link";
-
             public const string LinkGoal_FieldID = "{BB76C1D8-044A-4813-B4DE-E36D21085304}";
-            public const string LinkGoal_FieldName = "ScrollCard_LinkGoal";
+            public const string Icon_FieldID = "{160AD479-A843-48DE-B0A0-40AFE7752F6E}";
         }
 
         public static class Defaults

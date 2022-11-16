@@ -1,0 +1,23 @@
+﻿---
+ID: "3ae2fb93-6994-43c8-8ebe-b82eed4d87e4"
+Parent: "2d88c932-fa9f-47d8-a1cc-af92b09f04a1"
+Template: "7ffea93c-c78b-467b-bbc0-2f388f115854"
+Path: /sitecore/content/EIT/Global/Analytics/Body Script
+DB: master
+SharedFields:
+- ID: "4652b269-851d-4ef2-a339-44a15f728283"
+  Hint: Script
+  Value: |
+    <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDN73Z"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Value: "20221116T103611:638041917712164085Z"
