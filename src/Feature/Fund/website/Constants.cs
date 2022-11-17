@@ -366,6 +366,26 @@
             public const string HoldingsValue_FieldId = "{CD76945B-BD6B-45D1-B471-629F9E899A3E}";
         }
 
+        public static class Snapshot
+        {
+            public const string SnapshotTitle_FieldId = "{DD742413-371B-4853-8186-2680E4CCFE7D}";
+            public const string SnapshotSubtitle_FieldId = "{CD8E2277-E71D-4C18-8D39-C76131B1E878}";
+            public const string SharePriceLabel_FieldId = "{81C37A77-0B88-468B-A21B-E90EB2209AC4}";
+            public const string NetAssetValuePerShareLabel_FieldId = "{1FCAF708-443F-475C-ABDB-C321C8CE7F6D}";
+            public const string PremiumDiscountLabel_FieldId = "{4A5A5FB5-FFCF-4A00-9C0F-F76B0E5A4121}";
+            public const string GrossAssetsLabel_FieldId = "{0CF8BC8A-5E35-421F-9023-B344D6B0F7B7}";
+            public const string GrossAssetsValue_FieldId = "{41F4ADFB-52FC-40BA-B550-F6B284FD975F}";
+            public const string GearingGrossLabel_FieldId = "{32246781-3C23-4BD1-B4F9-56304586856F}";
+            public const string GearingGrossValue_FieldId = "{F00BC8DD-E81D-4E8B-82FA-1B72DDB45F77}";
+            public const string YieldLabel_FieldId = "{2D3450B5-15E5-43EF-929D-2BDB513E095A}";
+            public const string YieldValue_FieldId = "{14DB62FF-7520-42D9-96C0-AEA39286D9D5}";
+            public const string Column1_FieldId = "{DE1AE680-47BA-4F20-83FA-89268CC20D03}";
+            public const string Column2_FieldId = "{EEB7673C-4BE2-4A69-AC0B-C83D9087D393}";
+            public const string Column3_FieldId = "{C8F3446D-E839-41A4-8DA6-ED7300C3A333}";
+            public const string SnapshotIcon_FieldId = "{34C3E74E-A655-4F4B-8B32-4979934D47E2}";
+            public const string BackgroundImage_FieldId = "{DDFCB254-4B97-432A-B440-09795A22EE3F}";
+        }
+
         public static class AdditionalInfoOnDemandComponent
         {
             public const string AdditionalInfoLabel_FieldId = "{08C1265A-C9BE-4312-A31F-B41DA3E8A3C7}";            

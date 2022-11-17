@@ -45,7 +45,8 @@
                     .BenchmarkName,
                 AICSector = apiData.SectorNameLong,
                 NetAssetValuePerShare = apiData.Nav,
-                PremiumDiscount = apiData.PremiumDiscount
+                PremiumDiscount = apiData.PremiumDiscount,
+                SharePrice = apiData.SinglePrice
             };
         }
 

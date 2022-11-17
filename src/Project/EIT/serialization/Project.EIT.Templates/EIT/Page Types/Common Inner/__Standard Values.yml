@@ -5,6 +5,10 @@ Template: "7f73471d-e42b-41ac-9d8d-2869a7182430"
 Path: /sitecore/templates/Project/EIT/Page Types/Common Inner/__Standard Values
 DB: master
 SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{A020BE84-F96C-43DD-88A0-7FA4026C4F9D}"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Type: layout

@@ -1,0 +1,56 @@
+﻿---
+ID: "925c72a2-746b-4885-9888-7e19d38a7abb"
+Parent: "dd062d6f-e498-4613-93d0-3fe2169e6c2c"
+Template: "dd062d6f-e498-4613-93d0-3fe2169e6c2c"
+Path: /sitecore/templates/Project/EIT/Content Types/Fund/Snapshot/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0cf8bc8a-5e35-421f-9023-b344d6b0f7b7"
+      Hint: Snapshot_GrossAssetsLabel
+      Value: Gross assets
+    - ID: "1fcaf708-443f-475c-abdb-c321c8ce7f6d"
+      Hint: Snapshot_NetAssetValuePerShareLabel
+      Value: Nav pre ordinary shares
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20221117T114608Z
+    - ID: "2d3450b5-15e5-43ef-929d-2bdb513e095a"
+      Hint: Snapshot_YieldLabel
+      Value: Yield*
+    - ID: "32246781-3c23-4bd1-b4f9-56304586856f"
+      Hint: Snapshot_GearingGrossLabel
+      Value: Gearing (gross)
+    - ID: "34c3e74e-a655-4f4b-8b32-4979934d47e2"
+      Hint: Snapshot_Logo
+      Value: |
+        <image mediaid="{DDCC85E5-5AC5-4C5A-8E70-78EB558614C3}" />
+    - ID: "4a5a5fb5-ffcf-4a00-9c0f-f76b0e5a4121"
+      Hint: Snapshot_PremiumDiscountLabel
+      Value: Premium (discount)
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "81c37a77-0b88-468b-a21b-e90eb2209ac4"
+      Hint: Snapshot_SharePriceLabel
+      Value: Share price
+    - ID: "c8f3446d-e839-41a4-8da6-ed7300c3a333"
+      Hint: Snapshot_Column3
+      Value: Past performance is not guide to the future. The price of investments and the income from them may fall as well as rise and investors may not
+    - ID: "cd8e2277-e71d-4c18-8d39-c76131b1e878"
+      Hint: Snapshot_SubTitle
+      Value: Performance & statistics
+    - ID: "dd742413-371b-4853-8186-2680e4ccfe7d"
+      Hint: Snapshot_Title
+      Value: Latest Snapshot
+    - ID: "ddfcb254-4b97-432a-b440-09795a22ee3f"
+      Hint: Snapshot_BackgroundImage
+      Value: |
+        <image mediaid="{AFC097BF-C408-490F-B66F-4FE20656A316}" />
+    - ID: "eeb7673c-4be2-4a69-ac0b-c83d9087d393"
+      Hint: Snapshot_Column2
+      Value: *Yield is historic and based on previous years dividend. The amount of income payable may

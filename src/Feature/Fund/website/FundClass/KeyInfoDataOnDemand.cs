@@ -8,6 +8,8 @@
 
         public string NetAssetValuePerShare { get; set; }
 
-        public string PremiumDiscount { get; set; }       
+        public string PremiumDiscount { get; set; } 
+        
+        public string SharePrice { get; set; }
     }
 }

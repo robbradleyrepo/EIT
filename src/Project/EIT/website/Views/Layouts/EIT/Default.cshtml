@@ -44,29 +44,13 @@
 </head>
 
 @{
-    var bodyClass = string.Empty;
-    switch (@Html.Sitecore().CurrentItem.TemplateID.ToString())
-    {
-        case Constants.PageTypes.HomeTemplateId:
-            bodyClass = "main-page";
-            break;
-    }
-
-    var mainClass = string.Empty;
-    switch (@Html.Sitecore().CurrentItem.TemplateID.ToString())
-    {
-        case Constants.PageTypes.HomeTemplateId:
-            mainClass = "main-page-conentent";
-            break;
-    }
-
     var isExperienceEditor = Sitecore.Context.PageMode.IsExperienceEditor ? "experience-editor" : string.Empty;
 }
 
-<body class="@bodyClass @isExperienceEditor">
+<body class="@isExperienceEditor">
     @Html.Sitecore().Placeholder("body-script")
     @Html.Sitecore().Placeholder("header")
-    <main id="main" role="main" class="main-content @mainClass">
+    <main id="main" role="main" class="main-content">
         @Html.Sitecore().Placeholder("main")
         @if (Sitecore.Context.PageMode.IsExperienceEditor)
         {

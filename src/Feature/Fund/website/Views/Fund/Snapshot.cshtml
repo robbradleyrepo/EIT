@@ -1,0 +1,81 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Feature.Fund.Models
+@model SnapshotViewModel
+
+@if (Model != null && Model.Component != null && Model.FundValues != null)
+{
+    var backgroundImg = Model.Component.BackgroundImage != null && !string.IsNullOrEmpty(Model.Component.BackgroundImage.Src) ? string.Format("background-image: url('{0}')", Model.Component.BackgroundImage.Src) : "";
+    
+    <section class="container" style="@backgroundImg">
+        <div>
+            <div class="row">
+                <div>
+                    @Html.Glass().RenderImage(Model.Component, m => m.Icon, new { @class = "" }, isEditable: true)
+                </div>
+            </div>
+            <div class="row">
+                <div><p>Title: @Html.Glass().Editable(Model.Component, m => m.SnapshotTitle)</p></div>
+            </div>
+            <div class="row">
+                <div><p>SubTitle: @Html.Glass().Editable(Model.Component, m => m.SnapshotSubtitle)</p></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="fund-stats__item">
+                        <span class="fund-stats__title">@Html.Glass().Editable(Model.Component, m => m.SharePriceLabel)</span>
+                        <span class="fund-stats__value">@(Model.FundValues != null ? Model.FundValues.SharePrice : "")</span>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="fund-stats__item">
+                        <span class="fund-stats__title">@Html.Glass().Editable(Model.Component, m => m.NetAssetValuePerShareLabel)</span>
+                        <span class="fund-stats__value">@(Model.FundValues != null ? Model.FundValues.NetAssetValuePerShare : "")</span>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="fund-stats__item">
+                        <span class="fund-stats__title">@Html.Glass().Editable(Model.Component, m => m.PremiumDiscountLabel)</span>
+                        <span class="fund-stats__value">@(Model.FundValues != null ? Model.FundValues.PremiumDiscount : "")</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="fund-stats__item">
+                        <span class="fund-stats__title">@Html.Glass().Editable(Model.Component, m => m.GrossAssetsLabel)</span>
+                        <span class="fund-stats__value">@Html.Glass().Editable(Model.Component, m => m.GrossAssetsValue)</span>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="fund-stats__item">
+                        <span class="fund-stats__title">@Html.Glass().Editable(Model.Component, m => m.GearingGrossLabel)</span>
+                        <span class="fund-stats__value">@Html.Glass().Editable(Model.Component, m => m.GearingGrossValue)</span>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="fund-stats__item">
+                        <span class="fund-stats__title">@Html.Glass().Editable(Model.Component, m => m.YieldLabel)</span>
+                        <span class="fund-stats__value">@Html.Glass().Editable(Model.Component, m => m.YieldValue)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div><p>Column 1: @Html.Glass().Editable(Model.Component, m => m.Column1)</p></div>
+            </div>
+            <div class="row">
+                <div><p>Column 2: @Html.Glass().Editable(Model.Component, m => m.Column2)</p></div>
+            </div>
+            <div class="row">
+                <div><p>Column 3: @Html.Glass().Editable(Model.Component, m => m.Column3)</p></div>
+            </div>
+        </div>
+    </section>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor && (Model == null || Model.Component == null))
+{
+<div style="background-color:white"><span style="color:black">Please add datasource to Snapshot component</span></div>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+<div style="background-color:white"><span style="color:black">Snaphot: Please add a Fund to the page</span></div>
+}

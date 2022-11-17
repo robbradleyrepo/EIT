@@ -118,6 +118,7 @@
     <Content Include="Views\Fund\FourFundStatsOnDemand.cshtml" />
     <Content Include="Views\Fund\KeyInfoPriceOnDemand.cshtml" />
     <Content Include="Views\Fund\AdditionalInfoOnDemand.cshtml" />
+    <Content Include="Views\Fund\Snapshot.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -141,6 +142,7 @@
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\FundAccessController.cs" />
     <Compile Include="Controllers\FundCentreController.cs" />
+    <Compile Include="Controllers\SnapshotController.cs" />
     <Compile Include="Controllers\MyFundsScrollerController.cs" />
     <Compile Include="CreditRating\CreditRatingController.cs" />
     <Compile Include="FundClass\KeyInfoDataOnDemand.cs" />
@@ -198,10 +200,12 @@
     <Compile Include="Models\IFundAccessPopUp.cs" />
     <Compile Include="Models\IFundCentre.cs" />
     <Compile Include="Models\IFundShareLink.cs" />
+    <Compile Include="Models\ISnapshot.cs" />
     <Compile Include="Models\IKeyInfoPriceOnDemandComponent.cs" />
     <Compile Include="Models\IKeyInfoPriceTooltips.cs" />
     <Compile Include="Models\IMyFundsScroller.cs" />
     <Compile Include="Models\IGraphWithHeading.cs" />
+    <Compile Include="Models\SnapshotViewModel.cs" />
     <Compile Include="Models\KeyInfoPriceOnDemandViewModel.cs" />
     <Compile Include="PerformanceTables\CumulativePerformanceController.cs" />
     <Compile Include="PerformanceTables\DiscretePerformanceController.cs" />
