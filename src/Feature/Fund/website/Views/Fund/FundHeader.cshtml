@@ -49,9 +49,8 @@
             {
                 var managerUrl = manager.Page != null ? manager.Page.Url : "#";
                 var target = manager.Page != null ? manager.Page.Target : "";
-                <a href="@managerUrl" class="hero-manager-link__link" target="@target">
-                    @Html.Glass().RenderImage(manager, m => m.Image, new { @class = "hero-manager-link__img", alt = manager.FullName }, isEditable: true)
-                    <span class="hero-manager-link__name"><span>@Html.Glass().Editable(manager, m => m.FullName)</span></span>
+                <a href="@managerUrl" title="@(!string.IsNullOrEmpty(manager.FullName) ? manager.FullName : "")" class="hero-manager-link__link" target="@target">
+                    @Html.Glass().RenderImage(manager, m => m.Image, new { alt = manager.FullName }, isEditable: true)
                 </a>
             }
         </div>
