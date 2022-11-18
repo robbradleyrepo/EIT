@@ -18,6 +18,8 @@
         private readonly IMvcContext _mvcContext;
         private readonly IRenderingRepository _repository;
 
+        private const int MaxTabs = 5;
+
         public DocumentListerVariantController(IMvcContext mvcContext, IRenderingRepository repository)
         {
             _mvcContext = mvcContext;
@@ -40,25 +42,34 @@
             }
             else
             {
-                viewModel.Years = new List<string>();
                 var years = viewModel.Data.DocumentVariants.Where(x => x.Date != DateTime.MinValue).GroupBy(x => x.Date.Year).OrderByDescending(x => x.Key);
-                viewModel.FirstYear = Convert.ToString(years.FirstOrDefault().Key);
+                var yearTabs = years.Select(x => x.Key).ToList();
                 viewModel.DocumentsByYears = new List<DocumentVariantYears>();
-                DocumentVariantYears tmpDocumentVariantYear;
+
                 foreach (var year in years)
                 {
-                    tmpDocumentVariantYear = new DocumentVariantYears();
-                    tmpDocumentVariantYear.Year = Convert.ToString(year.Key);
-                    viewModel.Years.Add(tmpDocumentVariantYear.Year);
-                    tmpDocumentVariantYear.Documents = new List<IDocumentVariant>();
+                    var yearLabel = GetYearLabel(year.Key, yearTabs);
 
-                    foreach (var document in year) 
+                    if (yearTabs.Count < MaxTabs || (yearTabs.Count > MaxTabs && yearTabs[MaxTabs - 1] <= year.Key))
                     {
-                        tmpDocumentVariantYear.Documents.Add(document);
+                        var documentVariantYears = new DocumentVariantYears
+                        {
+                            Id = Guid.NewGuid(),
+                            Year = yearLabel,
+                            IsLatestYear = years.FirstOrDefault()?.Key == year.Key,
+                            Documents = new List<IDocumentVariant>()
+                        };
+
+                        viewModel.DocumentsByYears.Add(documentVariantYears);
                     }
 
-                    tmpDocumentVariantYear.Documents = tmpDocumentVariantYear.Documents.OrderByDescending(x => x.Date).ToList();
-                    viewModel.DocumentsByYears.Add(tmpDocumentVariantYear);
+                    var documents = year.OrderByDescending(x => x.Date).ToList();
+
+                    var documentByYear = viewModel.DocumentsByYears.FirstOrDefault(x => x.Year == yearLabel);
+                    if (documentByYear != null)
+                    {
+                        documentByYear.Documents.AddRange(documents);
+                    }
                 }
 
                 return View("~/Views/Listings/DocumentListerVariant.cshtml", viewModel);
@@ -120,6 +131,28 @@
                     HttpContext.Response.End();
                 }
             }
+        }
+
+        private string GetYearLabel(int year, List<int> years)
+        {
+            var yearLabel = Convert.ToString(year);
+            if (years.Count > MaxTabs)
+            {
+                if (years[MaxTabs - 1] == year)
+                {
+                    yearLabel = $"{year}+";
+                }
+                else if (years[MaxTabs - 1] < year)
+                {
+                    yearLabel = Convert.ToString(year);
+                }
+                else if (years[MaxTabs - 1] > year)
+                {
+                    yearLabel = $"{years[MaxTabs - 1]}+";
+                }
+            }
+
+            return yearLabel;
         }
     }
 }

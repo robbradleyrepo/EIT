@@ -10,12 +10,10 @@
             </div>
             <select name="document-filter" id="document-select-filter" data-select-for="tab-content"
                     class="class-dropdown__select document-select-filter">
-                <option value="@Model.FirstYear" selected>@Model.FirstYear</option>
                 @{
-                    var yearsWithoutFirst = Model.Years.Skip(1);
-                    foreach (var year in yearsWithoutFirst)
+                    foreach (var year in Model.DocumentsByYears)
                     {
-                        <option value="@year">@year</option>
+                        <option value="@year.Id" @(year.IsLatestYear ? "selected" : "")>@year.Year</option>
                     }
                 }
             </select>
@@ -27,16 +25,11 @@
                     @Html.Glass().Editable(Model.Data, m => m.SelectYearLabel)
                 </div>
             </div>
-            <div class="col-md-2">
-                <div class="tab-nav__item active" data-tab-target="@Model.FirstYear">
-                    @Model.FirstYear
-                </div>
-            </div>
-            @foreach (var year in yearsWithoutFirst)
+            @foreach (var year in Model.DocumentsByYears)
             {
                 <div class="col-md-2">
-                    <div class="tab-nav__item" data-tab-target="@year">
-                        @year
+                    <div class="tab-nav__item @(year.IsLatestYear ? "active" : "")" data-tab-target="@year.Id">
+                        @year.Year
                     </div>
                 </div>
             }
@@ -44,7 +37,7 @@
         <div class="tab-nav-content">
             @foreach (var yearDocument in Model.DocumentsByYears)
             {
-                <div class="doc-list @(yearDocument.Year.Equals(Model.FirstYear) ? "active" : string.Empty)" role="tabelement" id="@yearDocument.Year">
+                <div class="doc-list @(yearDocument.IsLatestYear ? "active" : string.Empty)" role="tabelement" id="@yearDocument.Id">
                     @foreach (var document in yearDocument.Documents)
                     {
                         <div class="doc-list__item">
