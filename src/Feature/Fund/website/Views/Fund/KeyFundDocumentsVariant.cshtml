@@ -1,0 +1,55 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Foundation.SitecoreExtensions.Extensions;
+@using System.Collections.Specialized;
+@model LionTrust.Feature.Fund.Models.IKeyFundDocumentsVariant
+
+@if (Model != null)
+{
+    <section class="key-document">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <h3 class="h3 text-center">
+                        @Html.Glass().Editable(Model, m => m.Title)
+                    </h3>
+                    <p>
+                        @if (Sitecore.Context.PageMode.IsExperienceEditor || Model.CtaLink != null)
+                        {
+                            using (Html.Glass().BeginRenderLink(Model, m => m.CtaLink, new { @class = "" }, isEditable: true))
+                            {
+                                if (Model.CtaLink != null)
+                                {
+                                    @Model.CtaLink.Text
+                                }
+                                <i class="icon-arrow-right animate-arrow"></i>
+                            }
+                        }
+                    </p>
+                    @if (Model.KeyDocuments != null)
+                    {
+                        <div class="key-document__link-block">
+                            @foreach (var document in Model.KeyDocuments)
+                            {
+                                using (Html.Glass().BeginRenderLink(document, m => m.DocumentLink, new NameValueCollection { { "class", "key-document__link" } }, isEditable: true))
+                                {
+                                    <i class="icon-file"></i>@Html.Glass().Editable(document, m => m.DocumentName)
+                                }
+                                <p>date time: @document.Date.ToDateTimeString()</p>
+                                <p>download label: @Model.DownloadLabel</p>
+                            }
+                        </div>
+                    }
+                    <div class="text-center key-document__button">
+                        <a href="#" class="btn btn-primary-forward view-fund-literature">
+                            @Html.Glass().Editable(Model, m => m.ViewAllDocumentsLabel) <i class="icon-arrow-right animate-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <div style="background-color:white"><span style="color:black">Please add datasource to Key Fund Documents component</span></div>
+}

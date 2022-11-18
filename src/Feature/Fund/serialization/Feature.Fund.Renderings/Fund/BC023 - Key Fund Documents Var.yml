@@ -1,0 +1,36 @@
+﻿---
+ID: "bdd5f808-fa3e-4fef-a67b-16cf0272d103"
+Parent: "a00fc4a2-2931-4607-88bb-c19d1833086a"
+Template: "99f8905d-4a87-4eb8-9f8b-a9bebfb3add6"
+Path: "/sitecore/layout/Renderings/Feature/Fund/BC023 - Key Fund Documents Variant"
+DB: master
+SharedFields:
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: 
+- ID: "51b435bc-f7b9-478a-9c51-52916af96ff5"
+  Hint: Path
+  Value: ~/Views/Fund/KeyFundDocumentsVariant.cshtml
+- ID: "a2f5d9df-8cba-4a1d-99eb-51acb94cb057"
+  Hint: Page Editor Buttons
+  Type: Treelist
+  Value: "{98D797F7-9339-4468-9B15-A83451C0992B}"
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "site:keyfunddocumentsvariant"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{532CE939-6507-4791-B732-E9D78D6C0D38}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04437558-ac18-42cb-ab21-1243a66abe67"
+      Hint: Supports Local Datasource
+      Type: Checkbox
+      Value: 1
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210507T121321Z

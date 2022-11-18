@@ -183,6 +183,15 @@
             public const string ViewAllDocumentsLabel_FieldId = "{99B18B81-5C97-47E1-9EDC-9F83C5F49947}";
         }
 
+        public static class KeyFundDocumentsVariant
+        {
+            public const string Title_FieldId = "{981155EF-250E-43EF-9FCB-10FC7115E3ED}";
+            public const string CtaLink_FieldId = "{A7212A21-9655-40DF-8572-B34176D8764C}";
+            public const string KeyDocuments_FieldId = "{2AFAF628-6441-468D-A7A6-D357BB9BF163}";
+            public const string ViewAllDocumentsLabel_FieldId = "{ACAEEF57-D71D-4225-8CF0-613DE533D057}";
+            public const string DownloadLabel_FieldId = "{A285777F-6639-456A-8DF9-429AC1DF09B4}";
+        }
+
         public static class FundManagers
         {
             public const string TitleFieldId = "{4EF859A1-6CD4-4213-8EAB-94CC974C6C08}";

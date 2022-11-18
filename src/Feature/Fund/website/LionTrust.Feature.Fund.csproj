@@ -119,6 +119,7 @@
     <Content Include="Views\Fund\KeyInfoPriceOnDemand.cshtml" />
     <Content Include="Views\Fund\AdditionalInfoOnDemand.cshtml" />
     <Content Include="Views\Fund\Snapshot.cshtml" />
+    <Content Include="Views\Fund\KeyFundDocumentsVariant.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -200,6 +201,7 @@
     <Compile Include="Models\IFundAccessPopUp.cs" />
     <Compile Include="Models\IFundCentre.cs" />
     <Compile Include="Models\IFundShareLink.cs" />
+    <Compile Include="Models\IKeyFundDocumentsVariant.cs" />
     <Compile Include="Models\ISnapshot.cs" />
     <Compile Include="Models\IKeyInfoPriceOnDemandComponent.cs" />
     <Compile Include="Models\IKeyInfoPriceTooltips.cs" />

@@ -1,25 +1,25 @@
 ﻿---
-ID: "eeb7673c-4be2-4a69-ac0b-c83d9087d393"
-Parent: "3c437988-9c38-4fd3-92a6-4755873e6d91"
+ID: "acaeef57-d71d-4225-8cf0-613de533d057"
+Parent: "4576e34a-3323-41a9-b125-8fd2788a7f86"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Fund/_Snapshot/Footer/Snapshot_Column2
+Path: /sitecore/templates/Feature/Fund/_KeyFundDocumentsVariant/Key Fund Documents/KeyDocuments_AllDocumentsLabel
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: "Multi-Line Text"
+  Value: "Single-Line Text"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 200
+  Value: 400
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Column 2
+    Value: All Documents Label
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20221117T112551Z
+      Value: 20221117T170421Z

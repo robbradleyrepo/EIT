@@ -1,8 +1,8 @@
 ﻿---
-ID: "64a60871-a80f-4528-9825-a8c16e88a1e9"
-Parent: "af86eb05-988f-40bf-84d4-39635d3aeff7"
+ID: "d7504f0d-af01-4e05-882a-c6922f993713"
+Parent: "8cd25614-82ad-4901-a863-8aee12ad5edd"
 Template: "8f8e2549-c77f-4860-b83b-54fa31e2befa"
-Path: /sitecore/system/Settings/Feature/Article/Validation Rules/Field Rules/Fund Items
+Path: /sitecore/system/Settings/Feature/Listings/Validation Rules/Field Rules/Document Items
 DB: master
 SharedFields:
 - ID: "43a829d1-43da-465c-b772-ebaa0d515e3e"
@@ -10,7 +10,7 @@ SharedFields:
   Value: LionTrust.Foundation.Multisite.Validators.ItemTemplatesValidator,LionTrust.Foundation.Multisite
 - ID: "8f9d8603-2e34-4c5f-b0bb-f0d91eb956ca"
   Hint: Parameters
-  Value: "Templates={DADEC9BF-B6E8-4E04-A082-F4EB20B76FF9}|{C836F741-DC3F-4035-A207-3D0A1548CB38}"
+  Value: "Templates={66E09D5B-4F8E-4313-9DF3-FA7E53FBE83A}|{71BFD41C-9267-4F84-AFE5-563BF34C6184}"
 - ID: "b3607d43-e523-494e-9aff-102678d11670"
   Hint: Use Thread
   Type: Checkbox
@@ -23,7 +23,7 @@ Languages:
   Fields:
   - ID: "5dcf6ff3-41c5-466c-ad5e-991cfcd55716"
     Hint: Text
-    Value: Funds should only have 'Fund' items selected.
+    Value: Documents should only have 'Document' items selected.
   Versions:
   - Version: 1
     Fields:
@@ -32,11 +32,11 @@ Languages:
       Value: 20061123T134059Z
     - ID: "58014183-26fe-4568-b19f-c26745824c32"
       Hint: Description
-      Value: Funds should only have 'Fund' items selected.
+      Value: Documents should only have 'Document' items selected.
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
         sitecore\Admin
     - ID: "da43c533-cbae-43d0-9019-65b1e346f984"
       Hint: Title
-      Value: Fund Items validator
+      Value: Document Items validator

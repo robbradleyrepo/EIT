@@ -1,0 +1,28 @@
+﻿---
+ID: "cea9265e-ca5f-4cb8-a169-1dab895787b1"
+Parent: "aaf08a62-c7f8-42ff-8d20-10e4fce07e40"
+Template: "aaf08a62-c7f8-42ff-8d20-10e4fce07e40"
+Path: /sitecore/templates/Project/EIT/Content Types/Fund/Fund Literature/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1000613e-6f3e-4db4-91ef-c1b5d447dee2"
+      Hint: Literature_Fund
+      Value: "{F8B39538-2ED7-4403-9F67-917DAAA1D0BC}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20221117T175039Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "6b74c5e5-7f94-405c-9e38-2b38fcc30079"
+      Hint: Literature_Heading
+      Value: Fund literature
+    - ID: "eeed7c2e-dc3c-4e29-9855-03bd4f9139ad"
+      Hint: Literature_Cta
+      Value: |
+        <link text="View latest fund update" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{48B2C6E1-F906-44DC-907C-D871FD5F52DE}" />

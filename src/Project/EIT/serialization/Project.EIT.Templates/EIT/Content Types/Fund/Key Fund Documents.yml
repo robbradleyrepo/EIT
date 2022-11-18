@@ -1,23 +1,22 @@
 ﻿---
-ID: "aaf08a62-c7f8-42ff-8d20-10e4fce07e40"
+ID: "93cb6886-74e9-43ee-a7b8-5168d85ee1e5"
 Parent: "0a56e01c-a542-4bbe-ab42-1213d097b648"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Project/EIT/Content Types/Fund/Fund Literature
+Path: /sitecore/templates/Project/EIT/Content Types/Fund/Key Fund Documents
 DB: master
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
-  Value: business/32x32/address_book2.png
+  Value: Office/32x32/folder_document.png
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
   Type: tree list
-  Value: "{86ADC270-6EB2-4030-8F4F-3D86248A2BBA}"
-- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
-  Hint: __Sortorder
-  Value: 1600
+  Value: |
+    {1930BBEB-7805-471A-A3BE-4858AC7CF696}
+    {0E58018D-33E2-4AA3-95C2-8A9F0C1826D3}
 - ID: "f7d48a55-2158-4f02-9356-756654404f73"
   Hint: __Standard values
-  Value: "{CEA9265E-CA5F-4CB8-A169-1DAB895787B1}"
+  Value: "{ADC60204-40C2-427E-BA48-CED98BD04C2D}"
 Languages:
 - Language: en
   Versions:
@@ -25,7 +24,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210512T120103Z
+      Value: 20221117T163640Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |

@@ -1,5 +1,6 @@
 ﻿namespace LionTrust.Foundation.SitecoreExtensions.Extensions
 {
+    using Sitecore.Globalization;
     using System;
 
     public static class DateExtensions
@@ -17,6 +18,26 @@
             {
                 return "Today";
             }
+        }
+
+        public static string ToDateTimeString(this DateTime dateTime)
+        {
+            var label = string.Empty;
+            if (dateTime.Date == DateTime.Today)
+            {
+                label = $"{Translate.Text("Today")} {dateTime:hh:mm tt}";
+            }
+            else if (DateTime.Today - dateTime.Date == TimeSpan.FromDays(1))
+            {
+                label = $"{Translate.Text("Yesterday")} {dateTime:hh:mm tt}";
+            }
+
+            if (string.IsNullOrEmpty(label))
+            {
+                label = dateTime.ToString("f", Sitecore.Context.Culture);
+            }
+
+            return label;
         }
 
         public static string ToDateTimeWithTicks(this DateTime dateTime)
