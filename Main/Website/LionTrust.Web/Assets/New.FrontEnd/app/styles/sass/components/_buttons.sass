@@ -203,9 +203,25 @@ body
         &-multiple
             .btn
                 margin-left: 32px
+            .btn-block
+                +breakpoint(tablet, down)
+                    margin-left: 0px       
 
         +breakpoint(tablet, down)
             justify-content: space-between
+    
+    .btn-row
+        margin: auto
+        text-align: center
+        justify-content: center
+        display: flex
+        flex-direction: row
+        row-gap: 32px
+        column-gap: 32px
+        +breakpoint(mobile, down)
+            flex-direction: column
+
+
     .btn-link
         align-items: center
         color: $primary
