@@ -24,12 +24,14 @@ import common from "./components/common";
 import peopleNav from "./components/peopleNav";
 import modals from "./components/bs-modals";
 import geographicalChart from "./components/geographicalChart";
+import insightAuthor from "./components/insightAuthor";
 
 document.addEventListener("DOMContentLoaded", () => {
     onboardingOverlay();
     sidebarNav();
     searchOvarlay();
     investmentCard();
+    insightAuthor();
     carouselSlider();
     fundsSlider();
     geographicalChart();

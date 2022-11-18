@@ -7,7 +7,7 @@
 }
 <div class="article-with-small">
     <div class="glossary-cta">
-        <span class="font-500 color-black">@Html.Glass().Editable(m => m.Copy)</span>
+        <span class="font-500 text-black">@Html.Glass().Editable(m => m.Copy)</span>
         @using (Html.Glass().BeginRenderLink(m => m.Cta, new NameValueCollection { { "class", "link-styles mx-lg-4 d-block d-lg-inline" } }, isEditable: true))
         {
             if (Model.Cta != null)
