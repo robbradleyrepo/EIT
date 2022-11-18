@@ -30,7 +30,7 @@
             {
                 using (new SiteContextSwitcher(Factory.GetSite(Constants.SiteName)))
                 {
-                    return LinkManager.GetItemUrl(item, new UrlOptions { AlwaysIncludeServerUrl = true, LowercaseUrls = true });
+                    return LinkManager.GetItemUrl(item, new UrlOptions { AlwaysIncludeServerUrl = true, LowercaseUrls = true, LanguageEmbedding = LanguageEmbedding.Never });
                 }
             }
 
