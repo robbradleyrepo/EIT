@@ -1,64 +1,25 @@
 .hero-manager-link
-    display: inline-block
-    margin: 0 auto
-    margin-bottom: 20px
-    margin-top: 20px
-    @include breakpoint(mobile, up)
-        display: inline-block
-        margin-bottom: 76px
-    @include breakpoint(tablet, down)
-        -webkit-box-pack: center
-        -ms-flex-pack: center
-        display: inline-block
-    &__link
-        display: inline-block
-        padding: 0 10px
-        width: 33%
-        &:last-child
-            margin-right: 0
-        @include breakpoint(desktop, up)
-            margin-right: 130px
-            width: auto
-        @include breakpoint(tablet, down)
-            width: auto
-    &__img
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-evenly
+    margin: 50px auto
+    column-gap: 10%
+    row-gap: 30px
+    width: 100%
+    @include breakpoint(desktop, up)
+        width: 55%
+    img
         border-radius: 50%
-        width: 25px
-        height: 25px
-        margin-bottom: 10px
+        width: 75px
+        height: 75px
         background: $herobg-gradient
         @include breakpoint(desktop, up)
             width: 100px
             height: 100px
-            margin-bottom: 15px
-        @include breakpoint(tablet, down)
-            margin-top: 20px
-    &__name
+    span
         font-size: 10px
         font-weight: 500
         display: block
         letter-spacing: 2.4px
         text-transform: uppercase
-        span
-            display: block
-            @include breakpoint(desktop, up)
-                display: inline
-                font-size: 12px
-    .avatar-row
-        display: flex
-        justify-content: center
-        .hero-manager-link__link
-            width: auto
-            margin: 10px 30px
-            @include breakpoint(tablet , down)
-                margin: 0 30px 10px 30px
-        .hero-manager-link__name
-            white-space: nowrap
-.avatarLinks-row
-    flex-wrap: nowrap
-    overflow-x: auto
-
-    @include breakpoint(tablet , up)
-        flex-wrap: wrap
-    @include breakpoint(tablet , down)
-        justify-content: flex-start
+        margin: 16px 0
