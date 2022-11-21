@@ -1,0 +1,24 @@
+﻿---
+ID: "918f3065-a261-42d6-acbf-b1642d3ab016"
+Parent: "52e0db23-34df-41f9-bab1-a8a15c0ce90b"
+Template: "5c547d4e-7111-4995-95b0-6b561751bf2e"
+Path: "/sitecore/layout/Placeholder Settings/Project/EIT/sub-banner"
+DB: master
+SharedFields:
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: "sub-banner"
+- ID: "e391b526-d0c5-439d-803e-17512eae6222"
+  Hint: Allowed Controls
+  Type: TreelistEx
+  Value: |
+    {28C9A1DC-3A1D-4E4B-88A6-E5CF82751388}
+    {CDF7F9AF-CB7A-4360-9FDF-BEF90EC070E6}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20221121T121639Z

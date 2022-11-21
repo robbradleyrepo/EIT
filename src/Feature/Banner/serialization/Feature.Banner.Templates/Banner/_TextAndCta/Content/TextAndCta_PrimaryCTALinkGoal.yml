@@ -1,8 +1,8 @@
 ﻿---
-ID: "98052a5c-5f3b-45d3-b926-c35f9fdc9264"
-Parent: "285f67da-b5b0-43af-8853-6f250c3d105f"
+ID: "9d7218fd-472c-46c0-8fba-fb914dec3df0"
+Parent: "18dfd979-dda8-4894-9379-3f4ef2ed783a"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Banner/_BannerWithImage/Content/BannerWithImage_SecondaryCTALinkGoal
+Path: /sitecore/templates/Feature/Banner/_TextAndCta/Content/TextAndCta_PrimaryCTALinkGoal
 DB: master
 SharedFields:
 - ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
@@ -13,16 +13,16 @@ SharedFields:
   Value: Droptree
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 500
+  Value: 300
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Secondary CTA Link Goal
+    Value: CTA Link Goal
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: "20210429T141701:637553026213934345Z"
+      Value: "20210429T141647:637553026071988352Z"

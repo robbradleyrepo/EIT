@@ -1,0 +1,32 @@
+@using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Foundation.Analytics.Goals
+
+@model LionTrust.Feature.Banner.Models.ITwoCtas
+
+@if (Model != null)
+{
+    <div class="lead-banner__btnbox mt-4">
+
+        @using (Html.Glass().BeginRenderLinkWithGoal(Model, m => m.PrimaryCTALink, Model.PrimaryCTALinkGoal, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
+        {
+            if (Model.PrimaryCTALink != null)
+            {
+                @Model.PrimaryCTALink.Text
+                <i class='icon-arrow-right imagepromo__arrow animate-arrow'></i>
+            }
+        }
+
+        @using (Html.Glass().BeginRenderLinkWithGoal(Model, m => m.SecondaryCTALink, Model.SecondaryCTALinkGoal, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-white imagepromo__btn" } }, isEditable: true))
+        {
+            if (Model.SecondaryCTALink != null)
+            {
+                @Model.SecondaryCTALink.Text
+                <i class='icon-arrow-right imagepromo__arrow animate-arrow'></i>
+            }
+        }
+    </div>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <div style="background-color:white"><span style="color:black">Please add datasource to Two CTAs component</span></div>
+}

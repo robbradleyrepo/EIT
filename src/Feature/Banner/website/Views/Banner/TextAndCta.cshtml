@@ -1,0 +1,24 @@
+@using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Foundation.Analytics.Goals
+
+@model LionTrust.Feature.Banner.Models.ITextAndCta
+
+@if (Model != null)
+{
+    <div class="lead-banner__btnbox mt-4">
+        <dev><p>@Html.Glass().Editable(Model, m => m.Text)</p></dev>
+
+        @using (Html.Glass().BeginRenderLinkWithGoal(Model, m => m.CTALink, Model.CTALinkGoal, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
+        {
+            if (Model.CTALink != null)
+            {
+                @Model.CTALink.Text
+                <i class='icon-arrow-right imagepromo__arrow animate-arrow'></i>
+            }
+        }
+    </div>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <div style="background-color:white"><span style="color:black">Please add datasource to Text and CTA component</span></div>
+}

@@ -15,26 +15,7 @@
                 <span class="lead-banner__text">
                     @Html.Glass().Editable(m => m.Copy)
                 </span>
-                <div class="lead-banner__btnbox mt-4">
-
-                    @using (Html.Glass().BeginRenderLinkWithGoal(Model, m => m.PrimaryCTALink, Model.PrimaryCTALinkGoal, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
-                    {
-                        if (Model.PrimaryCTALink != null)
-                        {
-                            @Model.PrimaryCTALink.Text
-                            <i class='icon-arrow-right imagepromo__arrow animate-arrow'></i>
-                        }
-                    }
-
-                    @using (Html.Glass().BeginRenderLinkWithGoal(Model, m => m.SecondaryCTALink, Model.SecondaryCTALinkGoal, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-white imagepromo__btn" } }, isEditable: true))
-                    {
-                        if (Model.SecondaryCTALink != null)
-                        {
-                            @Model.SecondaryCTALink.Text
-                            <i class='icon-arrow-right imagepromo__arrow animate-arrow'></i>
-                        }
-                    }
-                </div>
+                @Html.Sitecore().Placeholder("sub-banner")
             </div>
         </div>
     </div>
