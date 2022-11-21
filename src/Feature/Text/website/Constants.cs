@@ -28,6 +28,14 @@
             public const string MarginsContainer_FieldId = "{6102B67D-17D2-4071-AF02-7D44677A17D3}";
         }
 
+        public static class TextWithBackground
+        {
+            public const string Title_FieldId = "{ADAE8F6F-86E6-4AFF-ACC8-B75995064D90}";
+            public const string Subtitle_FieldId = "{4A95067A-A825-4506-B098-1563F7F373EF}";
+            public const string Body_FieldId = "{CCF29482-1D77-4161-AE4E-9BA498DC78FA}";
+            public const string BackgroundImage_FieldId = "{3D953626-BBF8-4058-AA83-3F3B379C05B9}";
+        }
+
         public static class Testimonial
         {
             public const string Author_FieldName = "Testimonial_Author";

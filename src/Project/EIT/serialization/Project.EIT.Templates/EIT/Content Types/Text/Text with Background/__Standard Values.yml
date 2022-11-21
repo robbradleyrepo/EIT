@@ -1,0 +1,22 @@
+﻿---
+ID: "8756212c-8dfd-4d2c-acfe-44ff281b57bc"
+Parent: "d3269910-f2ca-4ffe-b3ea-5c3930c6ec37"
+Template: "d3269910-f2ca-4ffe-b3ea-5c3930c6ec37"
+Path: /sitecore/templates/Project/EIT/Content Types/Text/Text with Background/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20221121T154325Z
+    - ID: "3d953626-bbf8-4058-aa83-3f3b379c05b9"
+      Hint: TextWithBackground_BackgorundImage
+      Value: |
+        <image mediaid="{AFC097BF-C408-490F-B66F-4FE20656A316}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

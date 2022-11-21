@@ -1,0 +1,24 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model LionTrust.Feature.Text.Models.ITextWithBackground
+
+@if (Model != null)
+{
+    var backgroundImg = Model.BackgroundImage != null && !string.IsNullOrEmpty(Model.BackgroundImage.Src) ? string.Format("background-image: url('{0}')", Model.BackgroundImage.Src) : "";
+    <div class="row" style="@backgroundImg">
+        <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+            <div class="lead-banner text-center">
+                <h1 class="lead-banner__title mb-3">
+                    @Html.Glass().Editable(m => m.Title)
+                </h1>
+                <span class="lead-banner__text">
+                    @Html.Glass().Editable(m => m.Subtitle)
+                </span>
+                @Html.Glass().Editable(Model, m => m.Body)
+            </div>
+        </div>
+    </div>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <div style="background-color:white"><span style="color:black">Please add datasource to Text with Background</span></div>
+}
