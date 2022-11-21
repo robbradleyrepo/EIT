@@ -3,11 +3,11 @@
     flex-wrap: wrap
     justify-content: space-evenly
     margin: auto
-    column-gap: 10%
+    column-gap: 2%
     row-gap: 30px
     width: 100%
-    @include breakpoint(desktop, up)
-        width: 55%
+    & > div 
+        min-width: 150px
     img
         border-radius: 50%
         width: 75px
@@ -27,3 +27,4 @@
         letter-spacing: 2.4px
         text-transform: uppercase
         margin: 16px 0 8px
+        max-width: 150px
