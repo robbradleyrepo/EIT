@@ -12,49 +12,50 @@
 
             @if (Model.ShowAuthors)
             {
-            <div class="row">
-                <div class="hero-manager-link small">
-                    @foreach (var author in Model.ArticleData.Authors)
-                    {
-                        using (Html.Glass().BeginEditFrame(author, "Edit author", m => m))
+                <div class="row">
+                    <div class="hero-manager-link small">
+                        @foreach (var author in Model.ArticleData.Authors)
                         {
-                            if (author.Image != null && !string.IsNullOrEmpty(author.Image.Src) && !Model.IsFundUpdate)
+                            using (Html.Glass().BeginEditFrame(author, "Edit author", m => m))
                             {
-                                <a href="@(author.Page != null ? author.Page.Url : "#")" title="@author.FullName" target="@(author.Page != null ? author.Page.Target : "")">
-                                    <img src="@author.Image.Src" alt="@author.FullName" class="hero-author__img">
-                                    <span>
-                                        @author.FullName
-                                        <i class="icon-follow"></i>
-                                    </span>
-                                    <time itemprop="datePublished">
-                                        @if (!Sitecore.Context.PageMode.IsExperienceEditor)
-                                        {
-                                            if (Model.ArticleData.Date.Equals(DateTime.MinValue))
-                                            {
-                                                @Model.ArticleData.CreatedDate.ToString("dd-MM-yy")
-                                            }
-                                            else
-                                            {
-                                                @Model.ArticleDate.Date.ToString("dd-MM-yy")
-                                            }
-                                        }
-                                        else
-                                        {
-                                            @Html.Glass().Editable(m => m.ArticleData.Date, d => d.ArticleData.Date.ToString("dd-MM-yy"))
-                                        }
-                                    </time>
-                                </a>
+                                if (author.Image != null && !string.IsNullOrEmpty(author.Image.Src) && !Model.IsFundUpdate)
+                                {
+                                    <div>
+                                        <a href="@(author.Page != null ? author.Page.Url : "#")" title="@author.FullName" target="@(author.Page != null ? author.Page.Target : "")">
+                                            <img src="@author.Image.Src" alt="@author.FullName">
+                                            <span>
+                                                @author.FullName
+                                            </span>
+                                        </a>
+                                    </div>
+                                }
                             }
                         }
-                    }
+                    </div>
                 </div>
-            </div>
             }
 
             <div class="row">
                 <div class="col-xl-6 offset-xl-3 mt-3">
                     <div class="article-hero">
                         <div class="article-hero__content text-center">
+                            <time itemprop="datePublished">
+                                @if (!Sitecore.Context.PageMode.IsExperienceEditor)
+                                {
+                                    if (Model.ArticleData.Date.Equals(DateTime.MinValue))
+                                    {
+                                        @Model.ArticleData.CreatedDate.ToString("dd-MM-yyyy")
+                                    }
+                                    else
+                                    {
+                                        @Model.ArticleDate.Date.ToString("dd-MM-yyyy")
+                                    }
+                                }
+                                else
+                                {
+                                    @Html.Glass().Editable(m => m.ArticleData.Date, d => d.ArticleData.Date.ToString("dd-MM-yyyy"))
+                                }
+                            </time>
                             <h1 class="article-hero__title">
                                 @Html.Glass().Editable(m => m.ArticleData.Title)
                             </h1>
@@ -75,7 +76,7 @@
                             }
                         </div>
                     </div>
-                </div>    
+                </div>
             </div>
         </div>
     </section>
