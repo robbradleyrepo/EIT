@@ -14,17 +14,5 @@
 
         [SitecoreField(Constants.BannerWithImage.Image_FieldId)]
         Image Image { get; set; }
-
-        [SitecoreField(Constants.BannerWithImage.PrimaryCTALink_FieldId)]
-        Link PrimaryCTALink { get; set; }
-
-        [SitecoreField(Constants.BannerWithImage.PrimaryCTALinkGoal_FieldId)]
-        Guid PrimaryCTALinkGoal { get; set; }
-
-        [SitecoreField(Constants.BannerWithImage.SecondaryCTALink_FieldId)]
-        Link SecondaryCTALink { get; set; }
-
-        [SitecoreField(Constants.BannerWithImage.SecondaryCTALinkGoal_FieldId)]
-        Guid SecondaryCTALinkGoal { get; set; }
     }
 }

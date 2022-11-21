@@ -22,8 +22,14 @@ Languages:
           <d
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
             <r
-              uid="{E26F8669-CAC4-4F01-8BE5-4D7E2BF31A7F}"
+              uid="{FAA84CBB-87ED-4BF2-9C0E-FD1755CB1C9F}"
               p:before="*"
+              s:ds="{7233CFD9-0DE1-4A20-B11F-F1A0DAFA85B7}"
+              s:id="{28C9A1DC-3A1D-4E4B-88A6-E5CF82751388}"
+              s:ph="/header/header-content/sub-banner" />
+            <r
+              uid="{E26F8669-CAC4-4F01-8BE5-4D7E2BF31A7F}"
+              p:after="r[@uid='{FAA84CBB-87ED-4BF2-9C0E-FD1755CB1C9F}']"
               s:ds="{7ABC11C4-C811-4283-B10F-617CFA41F9A2}"
               s:id="{56ECB2D2-5D43-4F0F-A5D1-AC267F249E7B}"
               s:ph="/main/grey-content" />

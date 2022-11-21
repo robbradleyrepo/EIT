@@ -1,8 +1,8 @@
 ﻿---
-ID: "6d584228-5ea7-4c13-b22e-eafe5268af66"
+ID: "e963338c-6695-4890-887d-3e332472cc97"
 Parent: "c82998f3-f10f-4bc7-a323-81026b466209"
 Template: "1ab4f9ad-b004-413c-8924-3e07143a614b"
-Path: /sitecore/content/Applications/WebEdit/Custom Experience Buttons/Feature/Banner/Edit Banner with Image Component
+Path: /sitecore/content/Applications/WebEdit/Custom Experience Buttons/Feature/Banner/Edit Text and CTA
 DB: core
 SharedFields:
 - ID: "4431914a-c40b-437c-8add-d2ed12cc8cc3"
@@ -10,7 +10,7 @@ SharedFields:
   Value: Applications/32x32/contract.png
 - ID: "cf738220-908d-4c3f-9482-32e625daf13c"
   Hint: Fields
-  Value: BannerWithImage_Heading|BannerWithImage_Copy|BannerWithImage_Image
+  Value: TextAndCta_Text|TextAndCta_CTALink|TextAndCta_CTALinkGoal
 Languages:
 - Language: en
   Fields:
