@@ -10,7 +10,7 @@
     <section class="container">
         @Html.Sitecore().Placeholder("navigation")
     </section>
-    <section class="container mb-lg-5">
+    <section class="container mt-5">
         <div class="d-flex flex-column">
             <div class="row">
                 <div class="col-xl-8 offset-xl-2">
@@ -43,7 +43,7 @@
             }
         </div>
     </section>
-    <div class="container text-center">
+    <div class="container text-center mb-5 mt-5">
         <div class="hero-manager-link">
             @foreach (var manager in Model.Managers)
             {
@@ -51,30 +51,33 @@
                 var target = manager.Page != null ? manager.Page.Target : "";
                 <a href="@managerUrl" title="@(!string.IsNullOrEmpty(manager.FullName) ? manager.FullName : "")" class="hero-manager-link__link" target="@target">
                     @Html.Glass().RenderImage(manager, m => m.Image, new { alt = manager.FullName }, isEditable: true)
+                    <span>@manager.FullName</span>
                 </a>
             }
         </div>
     </div>
     @if (Sitecore.Context.PageMode.IsExperienceEditor || ((Model.Data.PrimaryCta != null && !string.IsNullOrEmpty(Model.Data.PrimaryCta.Text)) || (Model.Data.SecondaryCta != null && !string.IsNullOrEmpty(Model.Data.SecondaryCta.Text))))
     {
-        <div class="lead-banner__btnbox mb-5">
-            @using (Html.Glass().BeginRenderLinkWithGoal(Model.Data, m => m.PrimaryCta, Model.Data.PrimaryCtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
-            {
-                if (Model.Data.PrimaryCta != null)
+        <div class="container">
+            <div class="text-center btn-row mb-5">
+                @using (Html.Glass().BeginRenderLinkWithGoal(Model.Data, m => m.PrimaryCta, Model.Data.PrimaryCtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
                 {
-                    @Model.Data.PrimaryCta.Text
-                    <i class='icon-arrow-right imagepromo__arrow animate-arrow'></i>
+                    if (Model.Data.PrimaryCta != null)
+                    {
+                        @Model.Data.PrimaryCta.Text
+                        <i class='icon-arrow-right imagepromo__arrow animate-arrow'></i>
+                    }
                 }
-            }
 
-            @using (Html.Glass().BeginRenderLinkWithGoal(Model.Data, m => m.SecondaryCta, Model.Data.SecondaryCtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-white imagepromo__btn" } }, isEditable: true))
-            {
-                if (Model.Data.SecondaryCta != null)
+                @using (Html.Glass().BeginRenderLinkWithGoal(Model.Data, m => m.SecondaryCta, Model.Data.SecondaryCtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-white imagepromo__btn" } }, isEditable: true))
                 {
-                    @Model.Data.SecondaryCta.Text
-                    <i class='icon-arrow-right imagepromo__arrow animate-arrow'></i>
+                    if (Model.Data.SecondaryCta != null)
+                    {
+                        @Model.Data.SecondaryCta.Text
+                        <i class='icon-arrow-right imagepromo__arrow animate-arrow'></i>
+                    }
                 }
-            }
+            </div>
         </div>
     }
 </header>

@@ -1,5 +1,6 @@
 @using Glass.Mapper.Sc.Web.Mvc
 @using Sitecore.Mvc
+@using System.Linq
 @model LionTrust.Feature.Article.Models.ArticleViewModel
 
 <header class="header header-hero d-flex flex-column justify-content-between" style="@Model.BackgroundImageStyle"
@@ -7,26 +8,25 @@
     @Html.Sitecore().Placeholder("header-login")
     <section class="container">
         @Html.Sitecore().Placeholder("navigation")
-        <div class="d-flex flex-column">
+        <div class="container text-center mt-5">
+
+            @if (Model.ShowAuthors)
+            {
             <div class="row">
-                <div class="col-xl-6 offset-xl-3">
-                    <div class="article-hero">
-                        <div class="hero-author hero-author_big">
-                            @using (Html.Glass().BeginEditFrame(Model.ArticleData, "Edit author", m => m.Author))
+                <div class="hero-manager-link small">
+                    @foreach (var author in Model.ArticleData.Authors)
+                    {
+                        using (Html.Glass().BeginEditFrame(author, "Edit author", m => m))
+                        {
+                            if (author.Image != null && !string.IsNullOrEmpty(author.Image.Src) && !Model.IsFundUpdate)
                             {
-                                if (!string.IsNullOrEmpty(Model.AuthorImageUrl) && !Model.IsFundUpdate)
-                                {
-                                    <img src="@Model.AuthorImageUrl"
-                                         alt="@Model.AuthorName" class="hero-author__img">
-                                }
-                            }
-                            <div class="hero-author__content">
-                                @if (!Model.IsFundUpdate && !Model.IsLearning)
-                                {
-                                    <span class="hero-author__name">
-                                        @Model.AuthorName <!--i class="icon-follow"></i-->
+                                <a href="@(author.Page != null ? author.Page.Url : "#")" title="@author.FullName" target="@(author.Page != null ? author.Page.Target : "")">
+                                    <img src="@author.Image.Src" alt="@author.FullName" class="hero-author__img">
+                                    <span>
+                                        @author.FullName
+                                        <i class="icon-follow"></i>
                                     </span>
-                                    <span class="hero-author__date">
+                                    <time itemprop="datePublished">
                                         @if (!Sitecore.Context.PageMode.IsExperienceEditor)
                                         {
                                             if (Model.ArticleData.Date.Equals(DateTime.MinValue))
@@ -42,10 +42,18 @@
                                         {
                                             @Html.Glass().Editable(m => m.ArticleData.Date, d => d.ArticleData.Date.ToString("dd-MM-yy"))
                                         }
-                                    </span>
-                                }
-                            </div>
-                        </div>
+                                    </time>
+                                </a>
+                            }
+                        }
+                    }
+                </div>
+            </div>
+            }
+
+            <div class="row">
+                <div class="col-xl-6 offset-xl-3 mt-3">
+                    <div class="article-hero">
                         <div class="article-hero__content text-center">
                             <h1 class="article-hero__title">
                                 @Html.Glass().Editable(m => m.ArticleData.Title)
@@ -67,7 +75,7 @@
                             }
                         </div>
                     </div>
-                </div>
+                </div>    
             </div>
         </div>
     </section>

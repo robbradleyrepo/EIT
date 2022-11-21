@@ -10,25 +10,7 @@
     {
         public IArticleHeader ComponentData { get; set; }
 
-        public IArticle ArticleData { get; set; }        
-
-        public string AuthorName
-        {
-            get
-            {
-                if (ArticleData == null || ArticleData.Authors == null)
-                {
-                    return string.Empty;
-                }
-
-                if (ArticleData.Authors.Any() && ArticleData.Authors.Count() > 1)
-                {
-                    return ArticleData.MultipleAuthorsSetting?.Label;
-                }
-                
-                return ArticleData.Authors?.FirstOrDefault()?.FullName;
-            }
-        }
+        public IArticle ArticleData { get; set; }
 
         public string BackgroundImageStyle
         {
@@ -72,7 +54,7 @@
         }
 
         public DateTime ArticleDate
-        { 
+        {
             get
             {
                 if (ArticleData == null || ArticleData.Date == null || ArticleData.Date == DateTime.MinValue)
@@ -84,20 +66,8 @@
             }
         }
 
-
-        public string AuthorImageUrl
-        {
-            get
-            {
-                if (ArticleData.Authors.Any() && ArticleData.Authors.Count() > 1)
-                {
-                    return ArticleData.MultipleAuthorsSetting?.Icon?.Src;
-                }
-
-                return this.ArticleData?.Authors?.FirstOrDefault()?.Image?.Src;
-            }
-        }
-
         public ArticleSchema ArticleSchema { get; set; }
+
+        public bool ShowAuthors { get; set; }
     }
 }
