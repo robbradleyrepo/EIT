@@ -1,11 +1,8 @@
 .article-hero
     text-align: center
-    margin-top: 30px
 
     +breakpoint(desktop, up)
         text-align: left
-        margin-top: 57px
-
 
     &__title
         +breakpoint(desktop, up)
@@ -26,6 +23,12 @@
         +breakpoint(desktop, up)
             display: block
             margin-right: 15%
+    time 
+        display: block
+        @include font-size(14px)
+        font-weight: 700
+        color: $gray
+        margin: 0 0 16px
 
 header
 
@@ -158,6 +161,7 @@ header
 
 .article-links
     display: flex
+    gap: 3%
     justify-content: space-between
     font-size: 12px
     margin-bottom: 22px

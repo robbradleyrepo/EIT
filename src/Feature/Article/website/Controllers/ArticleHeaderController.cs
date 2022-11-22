@@ -14,6 +14,8 @@
         private readonly IMvcContext context;
         private readonly IArticleContentSearchService _contentSearchService;
 
+        private const int MaxAuthors = 3;
+
         public ArticleHeaderController(IMvcContext context, IArticleContentSearchService contentSearchService)
         {
             this.context = context;
@@ -28,16 +30,18 @@
                 return null;
             }
 
-            if (article.Authors.Any())
-            {
-                article.Author = article.Authors.First();
-            }
-
             var componentData = context.GetDataSourceItem<IArticleHeader>();
-
             var articleSchema = new ArticleRepository(_contentSearchService, context).GetArticleSchemaData(article);
 
-            return View("/views/article/articleheader.cshtml", new ArticleViewModel { ComponentData = componentData, ArticleData = article, ArticleSchema = articleSchema });
+            var viewModel = new ArticleViewModel 
+            { 
+                ComponentData = componentData, 
+                ArticleData = article, 
+                ArticleSchema = articleSchema,
+                ShowAuthors = article.Authors != null && article.Authors.Count() <= MaxAuthors
+            };
+
+            return View("/views/article/articleheader.cshtml", viewModel);
         }        
     }
 }
