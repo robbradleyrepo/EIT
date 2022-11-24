@@ -7,7 +7,9 @@
     row-gap: 30px
     width: 100%
     & > div 
-        min-width: 150px
+        min-width: 120px
+        @include breakpoint(desktop, up)
+            max-width: 150px
     img
         border-radius: 50%
         width: 75px
@@ -16,10 +18,6 @@
         @include breakpoint(desktop, up)
             width: 100px
             height: 100px
-    &.small
-        img 
-            width: 50px
-            height: 50px
     span
         @include font-size(12px)
         font-weight: 500
@@ -27,4 +25,11 @@
         letter-spacing: 2.4px
         text-transform: uppercase
         margin: 16px 0 8px
-        max-width: 150px
+        max-width: 120px        
+        @include breakpoint(desktop, up)
+            max-width: 150px
+    &.small
+        img 
+            width: 50px
+            height: 50px
+        
