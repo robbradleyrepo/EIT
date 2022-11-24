@@ -30,54 +30,58 @@
             </div>
             @if (Model.Data.FundSharing != null)
             {
-                <ul class="article-links">
-                    <li class="article-links__item">
-                        <a href="#" class="article-links__link copy-to-clipbord"
-                           data-link="@Request.Url.ToString()"
-                           data-title="@Model.Data.FundSharing.ShareTooltip">
-                            <i class="icon-share"></i>
-                            <span>@Html.Glass().Editable(Model, m => m.Data.FundSharing.ShareLabel)</span>
-                        </a>
-                    </li>
-                </ul>
+            <ul class="article-links">
+                <li class="article-links__item">
+                    <a href="#" class="article-links__link copy-to-clipbord"
+                       data-link="@Request.Url.ToString()"
+                       data-title="@Model.Data.FundSharing.ShareTooltip">
+                        <i class="icon-share"></i>
+                        <span>@Html.Glass().Editable(Model, m => m.Data.FundSharing.ShareLabel)</span>
+                    </a>
+                </li>
+            </ul>
             }
         </div>
     </section>
     <div class="container text-center mb-5 mt-5">
-        <div class="hero-manager-link">
-            @foreach (var manager in Model.Managers)
-            {
-                var managerUrl = manager.Page != null ? manager.Page.Url : "#";
-                var target = manager.Page != null ? manager.Page.Target : "";
-                <a href="@managerUrl" title="@(!string.IsNullOrEmpty(manager.FullName) ? manager.FullName : "")" class="hero-manager-link__link" target="@target">
-                    @Html.Glass().RenderImage(manager, m => m.Image, new { alt = manager.FullName }, isEditable: true)
-                    <span>@manager.FullName</span>
-                </a>
-            }
-        </div>
-    </div>
-    @if (Sitecore.Context.PageMode.IsExperienceEditor || ((Model.Data.PrimaryCta != null && !string.IsNullOrEmpty(Model.Data.PrimaryCta.Text)) || (Model.Data.SecondaryCta != null && !string.IsNullOrEmpty(Model.Data.SecondaryCta.Text))))
-    {
-        <div class="container">
-            <div class="text-center btn-row mb-5">
-                @using (Html.Glass().BeginRenderLinkWithGoal(Model.Data, m => m.PrimaryCta, Model.Data.PrimaryCtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
+        <div class="row">
+            <div class="hero-manager-link col-xl-6 offset-xl-3 mt-3">
+                @foreach (var manager in Model.Managers)
                 {
-                    if (Model.Data.PrimaryCta != null)
-                    {
-                        @Model.Data.PrimaryCta.Text
-                        <i class='icon-arrow-right imagepromo__arrow animate-arrow'></i>
-                    }
-                }
-
-                @using (Html.Glass().BeginRenderLinkWithGoal(Model.Data, m => m.SecondaryCta, Model.Data.SecondaryCtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-white imagepromo__btn" } }, isEditable: true))
-                {
-                    if (Model.Data.SecondaryCta != null)
-                    {
-                        @Model.Data.SecondaryCta.Text
-                        <i class='icon-arrow-right imagepromo__arrow animate-arrow'></i>
-                    }
+                    var managerUrl = manager.Page != null ? manager.Page.Url : "#";
+                    var target = manager.Page != null ? manager.Page.Target : "";
+                <div>
+                    <a href="@managerUrl" class="hero-manager-link__link" target="@target">
+                        @Html.Glass().RenderImage(manager, m => m.Image, new { alt = manager.FullName }, isEditable: true)
+                        <span>@Html.Glass().Editable(manager, m => m.FullName)</span>
+                    </a>
+                </div>
                 }
             </div>
         </div>
-    }
+    </div>
+    <div class="container">
+        <div class="text-center btn-row mb-5">
+            @if (Sitecore.Context.PageMode.IsExperienceEditor || ((Model.Data.PrimaryCta != null && !string.IsNullOrEmpty(Model.Data.PrimaryCta.Text)) || (Model.Data.SecondaryCta != null && !string.IsNullOrEmpty(Model.Data.SecondaryCta.Text))))
+            {
+				using (Html.Glass().BeginRenderLinkWithGoal(Model.Data, m => m.PrimaryCta, Model.Data.PrimaryCtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
+				{
+					if (Model.Data.PrimaryCta != null)
+					{
+            @Model.Data.PrimaryCta.Text
+            <i class='icon-arrow-right imagepromo__arrow animate-arrow'></i>
+					}
+				}
+
+				using (Html.Glass().BeginRenderLinkWithGoal(Model.Data, m => m.SecondaryCta, Model.Data.SecondaryCtaGoalId, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-white imagepromo__btn" } }, isEditable: true))
+				{
+					if (Model.Data.SecondaryCta != null)
+					{
+            @Model.Data.SecondaryCta.Text
+            <i class='icon-arrow-right imagepromo__arrow animate-arrow'></i>
+					}
+				}
+            }
+        </div>
+    </div>
 </header>
