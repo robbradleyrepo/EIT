@@ -397,9 +397,10 @@
 
                 var menuItemsSecondLevel = menuItem.MenuItems.Where(m => !m.ExcludeInSearchResults);
 
-                var filteredChildrens = (menuItemsSecondLevel != null && menuItemsSecondLevel.Any())
+                var filteredChildren = (menuItemsSecondLevel != null && menuItemsSecondLevel.Any())
                         ? menuItemsSecondLevel
                         : menuItem.Children.Where(m => !m.ExcludeInSearchResults);
+                filteredChildren = filteredChildren.Where(m => m.TemplateId != LionTrust.Feature.Navigation.Constants.LocalDatasource.TemplateID);
 
                 <div class="navigation__item">
                     <input type="checkbox" id="@menuItem.Id" class="navigation__checkbox">
@@ -415,9 +416,9 @@
                                     <i class="icon-chevron-right"></i>
                                 </a>
                             </li>
-                            @if (filteredChildrens != null && filteredChildrens.Any())
+                            @if (filteredChildren != null && filteredChildren.Any())
                             {
-                                foreach (var child in filteredChildrens)
+                                foreach (var child in filteredChildren)
                                 {
                                     <li class="navigation__sub-item">
                                         <a class="navigation__sub-link" href="@child.Url">@Html.Glass().Editable(child, z => z.PageTitle)</a>

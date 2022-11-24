@@ -93,6 +93,7 @@
     <Compile Include="Models\TermsAndConditionsViewModel.cs" />
     <Compile Include="Models\OnboardingViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rules\Conditions\VisitorCountry.cs" />
     <Compile Include="TrackerResolver.cs" />
   </ItemGroup>
   <ItemGroup>
