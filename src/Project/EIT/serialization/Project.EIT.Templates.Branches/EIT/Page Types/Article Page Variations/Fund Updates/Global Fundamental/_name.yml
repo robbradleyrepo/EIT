@@ -1,0 +1,110 @@
+﻿---
+ID: "1dfa9b35-a218-4898-80fe-176e2d3fca17"
+Parent: "18659cf7-4685-469b-8867-af158a3b0b6b"
+Template: "084f0f8a-3d3d-469a-b9fc-9ff73bccdd06"
+Path: /sitecore/templates/Branches/Project/EIT/Page Types/Article Page Variations/Fund Updates/Global Fundamental/$name
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{C8B3B2D1-D42B-4F7F-A536-F647A1CF9C18}"
+              p:before="*"
+              s:ds="{3BE8B79E-B411-470B-BAFB-95ED7B7D48D3}"
+              s:id="{00E6D57B-DFBB-4C64-8D9F-B9F59A979D23}"
+              s:par=""
+              s:ph="/header/article-header" />
+            <r
+              uid="{34A6F516-20A4-4E10-8D36-5120670F54DF}"
+              p:after="r[@uid='{C8B3B2D1-D42B-4F7F-A536-F647A1CF9C18}']"
+              s:ds="{BFAAD109-D6D4-47C5-9F4E-B630239B1CE0}"
+              s:id="{010E3C29-6258-4251-9CEB-FEB1FAC64F98}"
+              s:par=""
+              s:ph="article-main" />
+            <r
+              uid="{44D9CD64-8820-4293-928E-E33DAA95A12C}"
+              p:after="r[@uid='{34A6F516-20A4-4E10-8D36-5120670F54DF}']"
+              s:ds="{0661204D-6ADD-43F3-8D5E-7C5A22918007}"
+              s:id="{DF18E4D6-F59A-4CDD-B26B-91D902F3A2DB}"
+              s:par=""
+              s:ph="article-main" />
+            <r
+              uid="{1F957C53-EC39-450C-BD85-F18C9D6D0C39}"
+              p:after="r[@uid='{44D9CD64-8820-4293-928E-E33DAA95A12C}']"
+              s:ds="{C76F5729-29F4-4288-9BF7-6E3AF5817E3D}"
+              s:id="{7626FD78-BC75-4F9C-80E7-DC947364A29B}"
+              s:par=""
+              s:ph="article-main" />
+            <r
+              uid="{055D3003-595D-4BE2-91E8-375FDE37C61E}"
+              p:after="r[@uid='{1F957C53-EC39-450C-BD85-F18C9D6D0C39}']"
+              s:ds="{A8DD5A33-50C9-4B8C-A7A2-D45CC6DFECBE}"
+              s:id="{C578F8BA-7001-4285-8D55-B913F21E60E0}"
+              s:par=""
+              s:ph="article-main" />
+            <r
+              uid="{9EC6B67F-F89B-4B77-872C-0DB79F2D9718}"
+              p:after="r[@uid='{055D3003-595D-4BE2-91E8-375FDE37C61E}']"
+              s:ds="{8A8F601B-9F62-4B6D-A88E-8CE58B5D3161}"
+              s:id="{7626FD78-BC75-4F9C-80E7-DC947364A29B}"
+              s:par=""
+              s:ph="article-main" />
+            <r
+              uid="{0BDBF2FD-B974-4321-8660-8C93C6E90A43}"
+              p:after="r[@uid='{9EC6B67F-F89B-4B77-872C-0DB79F2D9718}']"
+              s:ds="{3BE8B79E-B411-470B-BAFB-95ED7B7D48D3}"
+              s:id="{00E6D57B-DFBB-4C64-8D9F-B9F59A979D23}"
+              s:par=""
+              s:ph="article-main" />
+            <r
+              uid="{C7EE86D7-3A10-4411-9C69-71EF27E583E4}"
+              p:after="*[1=2]"
+              s:ds="{0C27B8A2-F38C-4BAA-B949-57F4E77A51C5}"
+              s:id="{22FD70F2-7C50-4401-B3A5-1DE2C3D3A924}"
+              s:par=""
+              s:ph="article-main" />
+          </d>
+        </r>
+    - ID: "094932b9-ff77-4977-966e-d18f7c7ac091"
+      Hint: LegacyArticle_Subtitle
+      Value: 
+    - ID: "15f3afe1-ab21-4b6b-a434-4c0f7b927921"
+      Hint: LegacyArticle_Authors
+      Type: Treelist
+      Value: 
+    - ID: "1c19356a-6e47-4d77-ba56-ade349f17b9d"
+      Hint: LegacyArticle_Title
+      Value: $name
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210513T123251Z
+    - ID: "58b0791b-504e-423c-8d9e-e16c419353fa"
+      Hint: LegacyArticle_BlogType
+      Value: "{8CBC3FC5-5EE7-4B65-AC09-E94A9676D45C}"
+    - ID: "5bd6e9e9-2240-4473-8094-075e811b8438"
+      Hint: Article_ListingImage
+      Value: |
+        <image mediaid="{CD32ECB8-4C07-4AC7-AFD0-AB90F51631DE}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "79cc76cc-7503-449b-9809-9808cf6c2d26"
+      Hint: Article_Date
+      Value: $now
+    - ID: "aebdd235-46dd-490a-bae3-c613c670a8bf"
+      Hint: LegacyPresentationBase_PageTitle
+      Value: $name
+    - ID: "d8cf5da5-f35f-46d8-b15e-8b388dc01000"
+      Hint: LegacyArticle_Content
+      Value: 

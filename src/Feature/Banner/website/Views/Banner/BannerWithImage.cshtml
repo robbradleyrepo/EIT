@@ -1,24 +1,33 @@
 @using Glass.Mapper.Sc.Web.Mvc
-@using LionTrust.Foundation.Analytics.Goals
+@using LionTrust.Feature.Banner.ViewModels
+@model BannerWithImageViewModel
 
-@model LionTrust.Feature.Banner.Models.IBannerWithImage
-
-@if (Model != null)
+@if (Model != null && Model.ComponentData != null)
 {
-    var backgroundImg = Model.Image != null && !string.IsNullOrEmpty(Model.Image.Src) ? string.Format("background-image: url('{0}')", Model.Image.Src) : "";
-    <div class="row" style="@backgroundImg">
-        <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-            <div class="lead-banner text-center">
-                <h1 class="lead-banner__title mb-3">
-                    @Html.Glass().Editable(m => m.Heading)
-                </h1>
-                <span class="lead-banner__text">
-                    @Html.Glass().Editable(m => m.Copy)
-                </span>
-                @Html.Sitecore().Placeholder("sub-banner")
+    <header class="header header-hero d-flex flex-column justify-content-between" style="@Model.BackgroundImageStyle">
+        <section class="container">
+            @Html.Sitecore().Placeholder("navigation")
+            <div class="d-flex flex-column">
+                <div class="row">
+                    <div class="col-xl-6 offset-xl-3">
+                        <div class="article-hero">
+                            <div class="article-hero__content text-center">
+                                <h1 class="article-hero__title">
+                                    @Html.Glass().Editable(m => m.ComponentData.Heading)
+                                </h1>
+                                <h4 class="article-hero__subtitle">
+                                    @Html.Glass().Editable(m => m.ComponentData.Copy)
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
+        <div class="section">
+            @Html.Sitecore().Placeholder("sub-banner")
         </div>
-    </div>
+    </header>
 }
 else if (Sitecore.Context.PageMode.IsExperienceEditor)
 {

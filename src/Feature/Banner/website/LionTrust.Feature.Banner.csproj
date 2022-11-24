@@ -90,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="Controllers\BannerWithImageController.cs" />
     <Compile Include="Controllers\BannerWithSliderController.cs" />
     <Compile Include="Controllers\MyFundsLeadBannerController.cs" />
     <Compile Include="Models\IBannerGlassBase.cs" />
@@ -109,6 +110,7 @@
     <Compile Include="Models\LeadBannerModel.cs" />
     <Compile Include="Models\MyFundsLeadBannerViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\BannerWithImageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Foundation\Analytics\website\LionTrust.Foundation.Analytics.csproj">

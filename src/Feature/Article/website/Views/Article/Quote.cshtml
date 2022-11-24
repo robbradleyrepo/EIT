@@ -1,0 +1,16 @@
+@using Glass.Mapper.Sc.Web.Mvc
+@using LionTrust.Feature.Article.Models
+@model IQuote
+
+@if (Model != null)
+{
+    <div class="article-with-big">
+        <span class="gold-qoute font-500 @(Model.TextColor != null ? Model.TextColor.Value : "")">
+            @Html.Glass().Editable(m => m.Copy)
+        </span>
+    </div>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <div style="background-color:white"><span style="color:black">Please add datasource to Quote component</span></div>
+}

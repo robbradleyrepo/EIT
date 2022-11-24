@@ -11,6 +11,7 @@ SharedFields:
   Value: |
     {A020BE84-F96C-43DD-88A0-7FA4026C4F9D}
     {EC92A8C7-E81F-4970-BD62-FF6513D3A445}
+    {F3B7B4ED-6525-4365-A306-B6C9408A1224}
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Type: layout
@@ -32,17 +33,17 @@ SharedFields:
           ph="body-script"
           uid="{3611EF6A-84D6-40FD-A1C8-560EF017AC1D}" />
         <r
-          id="{37E7BD25-2361-4C48-8B98-1A3C92719326}"
-          ph="header"
-          uid="{59C4FDDB-918D-40BF-9C38-5356397AA3A3}" />
-        <r
-          id="{A1486C00-1F6E-4CC8-BABD-50C7FC45CF67}"
-          ph="/header/header-content"
-          uid="{D48AE7FB-4223-4496-8D0A-51F6FC092408}" />
-        <r
+          ds=""
           id="{C0032272-B674-40E5-B6A2-F81370F3CAC8}"
-          ph="/header/header-content"
+          par=""
+          ph="header"
           uid="{6140CC04-A03F-46FA-A889-41AF4647E87F}" />
+        <r
+          ds=""
+          id="{A1486C00-1F6E-4CC8-BABD-50C7FC45CF67}"
+          par=""
+          ph="/header/navigation"
+          uid="{D48AE7FB-4223-4496-8D0A-51F6FC092408}" />
         <r
           id="{DD1D438A-3971-438B-B1C9-461415F43488}"
           ph="footer"

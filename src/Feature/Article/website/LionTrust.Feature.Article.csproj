@@ -98,6 +98,7 @@
     <Content Include="Views\Article\ArticleContent.cshtml" />
     <Content Include="Views\Article\ArticleVideo.cshtml" />
     <Content Include="Views\Article\PromoCards\_ArticleAuthor.cshtml" />
+    <Content Include="Views\Article\Quote.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -121,6 +122,7 @@
     <Compile Include="Models\ArticleScrollerViewModel.cs" />
     <Compile Include="Models\ArticleViewModel.cs" />
     <Compile Include="Models\FundResult.cs" />
+    <Compile Include="Models\IQuote.cs" />
     <Compile Include="Models\IMultipleAuthorsSetting.cs" />
     <Compile Include="Models\IArticleShareLink.cs" />
     <Compile Include="Models\IFeaturedArticleHero.cs" />

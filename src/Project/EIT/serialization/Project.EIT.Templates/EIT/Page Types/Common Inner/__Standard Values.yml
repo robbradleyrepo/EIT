@@ -30,17 +30,17 @@ SharedFields:
           ph="body-script"
           uid="{4A913173-03CD-460B-910E-75612C96F29B}" />
         <r
-          id="{37E7BD25-2361-4C48-8B98-1A3C92719326}"
-          ph="header"
-          uid="{D6142664-3BAC-4610-BECF-06A9788ACCF5}" />
-        <r
-          id="{A1486C00-1F6E-4CC8-BABD-50C7FC45CF67}"
-          ph="/header/header-content"
-          uid="{0BB3C034-4702-4263-AB02-5CBD4FA86F91}" />
-        <r
+          ds=""
           id="{C0032272-B674-40E5-B6A2-F81370F3CAC8}"
-          ph="/header/header-content"
+          par=""
+          ph="header"
           uid="{2BF44908-A7A5-48D8-94FD-ED2477DF408F}" />
+        <r
+          ds=""
+          id="{A1486C00-1F6E-4CC8-BABD-50C7FC45CF67}"
+          par=""
+          ph="/header/navigation"
+          uid="{0BB3C034-4702-4263-AB02-5CBD4FA86F91}" />
         <r
           id="{DD1D438A-3971-438B-B1C9-461415F43488}"
           ph="footer"

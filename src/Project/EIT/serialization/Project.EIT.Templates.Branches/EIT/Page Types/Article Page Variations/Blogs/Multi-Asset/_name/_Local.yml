@@ -1,0 +1,35 @@
+﻿---
+ID: "ccbeff80-0ac2-48b6-917e-dbd880f2dead"
+Parent: "cbe3ba14-a532-4bec-8fbe-e03d9ef39f89"
+Template: "fff5f245-ffc0-4022-a998-9b07aa5e761f"
+Path: "/sitecore/templates/Branches/Project/EIT/Page Types/Article Page Variations/Blogs/Multi-Asset/$name/_Local"
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: |
+    {2C310F46-93CA-4625-B37D-278AB19136B1}
+    {8E92C3FD-ABFC-468B-8848-53B7AEF8FB66}
+    {53A084EE-C831-4E5F-ACB1-4CE7CF596682}
+    {9B7A314B-BB8F-46BF-A1C5-4B4B85E3FA11}
+    {BA71D966-969A-4EEA-B454-E615B19ADC5A}
+    {B6DA82E4-1FF6-4A2D-A46E-50EA25E90D1B}
+    {E4C3048A-DE22-4327-92F8-D98FC7F3C11C}
+    {0BD7DD18-3839-45A6-913A-7CFF529016CC}
+    {3C1BB89D-8A0E-411D-BAB2-6CD250438731}
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: "-1000"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210513T130556Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

@@ -1,0 +1,22 @@
+﻿---
+ID: "aa882e42-b6dc-4096-abed-7fc79d153272"
+Parent: "9b7a314b-bb8f-46bf-a1c5-4b4b85e3fa11"
+Template: "9b7a314b-bb8f-46bf-a1c5-4b4b85e3fa11"
+Path: /sitecore/templates/Project/EIT/Content Types/Article/Article Header/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20221121T164833Z
+    - ID: "30451f6b-437d-4473-ae3e-79fe7a1af36a"
+      Hint: ArticleHeader_BackgroundImage
+      Value: |
+        <image mediaid="{49D3DEF7-49E4-43CB-BC8D-C53D9D4225C0}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

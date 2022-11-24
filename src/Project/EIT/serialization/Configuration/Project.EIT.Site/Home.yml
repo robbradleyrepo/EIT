@@ -22,14 +22,14 @@ Languages:
           <d
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
             <r
-              uid="{FAA84CBB-87ED-4BF2-9C0E-FD1755CB1C9F}"
+              uid="{8EE4A763-C0D1-4416-9D23-2DFDD2FBD50D}"
               p:before="*"
               s:ds="{7233CFD9-0DE1-4A20-B11F-F1A0DAFA85B7}"
               s:id="{28C9A1DC-3A1D-4E4B-88A6-E5CF82751388}"
-              s:ph="/header/header-content/sub-banner" />
+              s:ph="/header/sub-banner" />
             <r
               uid="{E26F8669-CAC4-4F01-8BE5-4D7E2BF31A7F}"
-              p:after="r[@uid='{FAA84CBB-87ED-4BF2-9C0E-FD1755CB1C9F}']"
+              p:after="r[@uid='{8EE4A763-C0D1-4416-9D23-2DFDD2FBD50D}']"
               s:ds="{7ABC11C4-C811-4283-B10F-617CFA41F9A2}"
               s:id="{56ECB2D2-5D43-4F0F-A5D1-AC267F249E7B}"
               s:ph="/main/grey-content" />
@@ -41,8 +41,7 @@ Languages:
               s:ph="/main/grey-content" />
             <r
               uid="{6140CC04-A03F-46FA-A889-41AF4647E87F}"
-              s:ds="{285A5CE0-D79D-47A7-953B-02B9A5C8A696}"
-              s:par="" />
+              s:ds="{285A5CE0-D79D-47A7-953B-02B9A5C8A696}" />
             <r
               uid="{B1D53370-8F2E-4F10-BCD3-3B01944CBCB3}"
               p:after="r[@uid='{0F0475A7-CA54-47F3-ADC1-7B6B417E2EEB}']"
@@ -118,6 +117,10 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
+    - ID: "9b43072b-4fbf-4e84-9e12-a3b5f6620de8"
+      Hint: Identity_SchemaLogo
+      Value: |
+        <image mediaid="{98A09831-DF76-4BFA-A05E-2EE4C55405D4}" />
     - ID: "9dc8ae8c-c3e1-4536-aa2a-d0bff7398795"
       Hint: LegacyPresentationBase_MetaDescription
       Value: Liontrust is a specialist fund management company that takes pride in having a distinct culture and approach. Find out more and start investing.
@@ -130,4 +133,4 @@ Languages:
     - ID: "f113bf3d-fe80-4a15-9cda-679b3c3cb3be"
       Hint: Identity_Logo
       Value: |
-        <image mediaid="{98A09831-DF76-4BFA-A05E-2EE4C55405D4}" />
+        <image mediaid="{98A09831-DF76-4BFA-A05E-2EE4C55405D4}" ></image>

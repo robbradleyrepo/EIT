@@ -26,6 +26,11 @@
             public const string CopyFieldId = "{8D298C2B-5646-4EEB-8F1B-2A81BCE70E01}";
         }
 
+        public static class TextBase
+        {
+            public const string TextColorFieldId = "{D5A1D36A-6823-4646-81CF-958CEB0128B0}";
+        }
+
         public static class ArticleFilter
         {
             public const string TemplateId = "{B0C943DC-16B9-44A0-B4ED-92D7492B3813}";

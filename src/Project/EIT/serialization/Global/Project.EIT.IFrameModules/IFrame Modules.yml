@@ -4,6 +4,11 @@ Parent: "c70250c6-1100-41bb-8714-fa3f9bc048d8"
 Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
 Path: /sitecore/content/EIT/Global/IFrame Modules
 DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{4E3B961E-22C4-4DAC-99FE-E8B3975DACE5}"
 Languages:
 - Language: en
   Versions:

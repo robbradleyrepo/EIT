@@ -1,7 +1,7 @@
 ﻿---
 ID: "c0032272-b674-40e5-b6a2-f81370f3cac8"
 Parent: "0913dc6f-3612-49a9-ba50-c0e4a00d3eae"
-Template: "99f8905d-4a87-4eb8-9f8b-a9bebfb3add6"
+Template: "2a3e91a0-7987-44b5-ab34-35c2d9de83b9"
 Path: "/sitecore/layout/Renderings/Feature/Banner/UI012 - Banner with Image"
 DB: master
 SharedFields:
@@ -22,6 +22,12 @@ SharedFields:
   Hint: __Thumbnail
   Value: |
     <image mediaid="{21F31CB8-A704-4CFE-8D19-C301562B718C}" />
+- ID: "ded9e431-3604-4921-a4b3-a6ec7636a5b6"
+  Hint: Controller Action
+  Value: Render
+- ID: "e64ad073-dfcc-4d20-8c0b-fe5aa6226cd7"
+  Hint: Controller
+  Value: BannerWithImage
 Languages:
 - Language: en
   Versions:

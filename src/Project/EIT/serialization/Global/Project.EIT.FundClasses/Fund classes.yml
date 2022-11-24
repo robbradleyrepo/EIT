@@ -4,6 +4,13 @@ Parent: "c70250c6-1100-41bb-8714-fa3f9bc048d8"
 Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
 Path: /sitecore/content/EIT/Global/Fund classes
 DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: |
+    {5A570F49-9923-4E49-AFBD-23B40FB11EC9}
+    {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
 Languages:
 - Language: en
   Versions:

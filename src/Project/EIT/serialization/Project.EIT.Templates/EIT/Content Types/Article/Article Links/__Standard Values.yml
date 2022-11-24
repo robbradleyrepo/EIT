@@ -1,0 +1,24 @@
+﻿---
+ID: "8a9c9a96-e8fb-4796-b1eb-fdff6b0ee2a8"
+Parent: "b6da82e4-1ff6-4a2d-a46e-50ea25e90d1b"
+Template: "b6da82e4-1ff6-4a2d-a46e-50ea25e90d1b"
+Path: /sitecore/templates/Project/EIT/Content Types/Article/Article Links/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1d03c959-0bbf-4c3a-a5a5-9050e9f4b38f"
+      Hint: ArticleLinks_Sharing
+      Value: "{D4236E0F-B943-4025-AAEA-F913265CEE66}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210519T130043Z
+    - ID: "338376f5-ab65-4249-878a-e891f1fd465a"
+      Hint: ArticleLinks_DownloadLabel
+      Value: Download Article
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

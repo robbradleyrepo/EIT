@@ -5,13 +5,19 @@ Template: "5c547d4e-7111-4995-95b0-6b561751bf2e"
 Path: /sitecore/layout/placeholder settings/Project/EIT/footer
 DB: master
 SharedFields:
+- ID: "14d0728a-82f9-4b01-ab16-1fe1577cede2"
+  Hint: Editable
+  Type: Checkbox
+  Value: 0
 - ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
   Hint: Placeholder Key
   Value: footer
 - ID: "e391b526-d0c5-439d-803e-17512eae6222"
   Hint: Allowed Controls
   Type: TreelistEx
-  Value: "{DD1D438A-3971-438B-B1C9-461415F43488}"
+  Value: |
+    {29A12478-EBE8-4B5C-BF2E-871026066814}
+    {DD1D438A-3971-438B-B1C9-461415F43488}
 Languages:
 - Language: en
   Versions:

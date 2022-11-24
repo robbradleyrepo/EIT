@@ -8,7 +8,7 @@
         Html.RenderAction("OrganizationSchema", "Schema", new { OrganizationSchema = Model.Organization });
     }
 
-    <div class="header-navbar header-bg-gradient">
+    <div class="header-navbar">
         <a href="@Model.HomeItem.Url" class="header-navbar__logo">
             @Html.Glass().RenderImage(Model.HomeItem, x => x.Logo, new { alt = Model.HomeItem.Logo != null ? Model.HomeItem.Logo.Alt : string.Empty, @class = "header-navbar__logo-img" }, isEditable: true)
         </a>
