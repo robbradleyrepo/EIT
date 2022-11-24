@@ -1,6 +1,7 @@
 ﻿namespace LionTrust.Feature.Navigation
 {
     using Sitecore.Data;
+    using System;
 
     public static class Constants
     {
@@ -109,6 +110,11 @@
         public static class PageTypes
         {
             public const string LearningResourcesTemplateId = "{7B3DCDF5-5735-4FC8-89EB-DCB0F2F72972}";
-        }       
+        }      
+        
+        public static class LocalDatasource
+        {
+            public static Guid TemplateID = new Guid(LionTrust.Foundation.LocalDatasource.Settings.LocalDatasourceFolderTemplate);
+        }
     }
 }

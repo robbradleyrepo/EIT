@@ -140,6 +140,10 @@
       <Project>{43ee972b-2002-4719-a878-a66a99c42c40}</Project>
       <Name>LionTrust.Foundation.Legacy</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\LocalDatasource\website\LionTrust.Foundation.LocalDatasource.csproj">
+      <Project>{02acf4f4-f561-4b57-ab00-49d97079ba28}</Project>
+      <Name>LionTrust.Foundation.LocalDatasource</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Navigation\website\LionTrust.Foundation.Navigation.csproj">
       <Project>{0E1E5F5C-F4FE-4AFC-BC53-B67A885BBB8C}</Project>
       <Name>LionTrust.Foundation.Navigation</Name>
