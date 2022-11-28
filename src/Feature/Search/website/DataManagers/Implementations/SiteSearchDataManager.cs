@@ -109,7 +109,7 @@
 
                         if (!ID.IsNullOrEmpty(templateId))
                         {
-                            templateQuery = templateQuery.Or(s => s.TemplateId == templateId);
+                            templateQuery = templateQuery.Or(s => s.Templates.Contains(templateId.Guid));
                         }
                     }
 

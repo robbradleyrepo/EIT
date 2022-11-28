@@ -5,8 +5,12 @@
 
 @if (Model != null)
 {
-    <div class="lead-banner__btnbox mt-4">
+    if (!Sitecore.Context.PageMode.IsExperienceEditor && Model.PrimaryCTALink == null && Model.SecondaryCTALink == null)
+    {
+        return;
+    }
 
+    <div class="lead-banner__btnbox mt-4">
         @using (Html.Glass().BeginRenderLinkWithGoal(Model, m => m.PrimaryCTALink, Model.PrimaryCTALinkGoal, new System.Collections.Specialized.NameValueCollection { { "class", "btn btn-primary imagepromo__btn" } }, isEditable: true))
         {
             if (Model.PrimaryCTALink != null)

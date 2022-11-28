@@ -9,6 +9,10 @@ SharedFields:
   Hint: __Masters
   Type: TreelistEx
   Value: "{A020BE84-F96C-43DD-88A0-7FA4026C4F9D}"
+- ID: "8d5c486e-a0e3-4dbe-9a4a-cdff93594bda"
+  Hint: IncludeInSearchResults
+  Type: Checkbox
+  Value: 0
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Type: layout
@@ -41,6 +45,10 @@ SharedFields:
           par=""
           ph="/header/navigation"
           uid="{0BB3C034-4702-4263-AB02-5CBD4FA86F91}" />
+        <r
+          id="{29A12478-EBE8-4B5C-BF2E-871026066814}"
+          ph="footer"
+          uid="{94A89AA0-82D1-41C2-AF08-9DDABCB8287C}" />
         <r
           id="{DD1D438A-3971-438B-B1C9-461415F43488}"
           ph="footer"

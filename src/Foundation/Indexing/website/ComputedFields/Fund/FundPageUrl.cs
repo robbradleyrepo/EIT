@@ -22,10 +22,7 @@
 
             if (fundPageField != null && fundPageField.TargetItem != null)
             {
-                using (new SiteContextSwitcher(Factory.GetSite(Constants.SiteName)))
-                {
-                    fundPageUrl = LinkManager.GetItemUrl(fundPageField.TargetItem, new UrlOptions { AlwaysIncludeServerUrl = true, LowercaseUrls = true, LanguageEmbedding = LanguageEmbedding.Never });
-                }
+                fundPageUrl = LinkManager.GetItemUrl(fundPageField.TargetItem, new UrlOptions { AlwaysIncludeServerUrl = true, LowercaseUrls = true, LanguageEmbedding = LanguageEmbedding.Never, SiteResolving = true });
             }
 
             return fundPageUrl;

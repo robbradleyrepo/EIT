@@ -5,6 +5,11 @@
 
 @if (Model != null)
 {
+    if (!Sitecore.Context.PageMode.IsExperienceEditor && Model.CTALink == null)
+    {
+        return;
+    }
+
     <div class="lead-banner__btnbox mt-4">
         <dev><p>@Html.Glass().Editable(Model, m => m.Text)</p></dev>
 
