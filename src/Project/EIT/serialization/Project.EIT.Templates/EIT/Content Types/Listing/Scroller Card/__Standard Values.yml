@@ -1,0 +1,21 @@
+﻿---
+ID: "3b11c5cf-0b01-401a-9258-d4ec024c6d60"
+Parent: "8dfca9ba-1024-47ee-8a43-93752e480bcb"
+Template: "8dfca9ba-1024-47ee-8a43-93752e480bcb"
+Path: /sitecore/templates/Project/EIT/Content Types/Listing/Scroller Card/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210429T115827Z
+    - ID: "5b9f1d26-bde7-4209-a71c-f0ceac2600b5"
+      Hint: ScrollCard_Title
+      Value: $name
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

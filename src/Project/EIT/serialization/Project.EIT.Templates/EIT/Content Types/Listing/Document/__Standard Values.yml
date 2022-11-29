@@ -1,0 +1,32 @@
+﻿---
+ID: "80693692-66f9-4814-8d50-76127dd19b97"
+Parent: "71bfd41c-9267-4f84-afe5-563bf34c6184"
+Template: "71bfd41c-9267-4f84-afe5-563bf34c6184"
+Path: /sitecore/templates/Project/EIT/Content Types/Listing/Document/__Standard Values
+DB: master
+SharedFields:
+- ID: "8d5c486e-a0e3-4dbe-9a4a-cdff93594bda"
+  Hint: IncludeInSearchResults
+  Type: Checkbox
+  Value: 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140919T125630
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "c794210e-6107-4d69-841f-773cb9943bba"
+      Hint: LegacyDocument_DownloadLink
+      Value: 
+    - ID: "eeb8db99-7da8-4973-adf7-bcf7b29eba79"
+      Hint: LegacyDocument_DocumentName
+      Value: $name
+    - ID: "f47124a7-6a71-437b-bd00-455b0e9942cf"
+      Hint: LegacyDocument_Date
+      Value: $date

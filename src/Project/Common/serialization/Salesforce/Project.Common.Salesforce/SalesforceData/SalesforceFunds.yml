@@ -1,0 +1,23 @@
+﻿---
+ID: "a3042256-673d-413b-bde2-1afd9db3b20d"
+Parent: "fea64687-d8b4-481e-8cef-919270e9aac2"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/Shared Content/SalesforceData/SalesforceFunds
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{27EF64DF-0988-4791-A40D-ADEF40E913CC}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200701T212853Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\ashan

@@ -1,0 +1,28 @@
+﻿---
+ID: "17202a6f-3290-45ab-b86e-1f1a4a4d4f5f"
+Parent: "b57d5685-5af4-42e7-a99c-1ce6727f77b6"
+Template: "b57d5685-5af4-42e7-a99c-1ce6727f77b6"
+Path: /sitecore/templates/Project/EIT/Content Types/Fund/Fund Overview/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20221125T132243Z
+    - ID: "361f876b-0d9b-4827-a7ad-f9245a3a79a2"
+      Hint: FundOverview_DownloadCTALabel
+      Value: DOWNLOAD TRUST LITERATURE
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "624e51ce-f2ee-48a1-b49f-eb4a852b713f"
+      Hint: FundOverview_LatestUpdateCTA
+      Value: |
+        <link text="TRUST INSIGHTS" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{48B2C6E1-F906-44DC-907C-D871FD5F52DE}" />
+    - ID: "8730606f-4236-4c61-8859-16cb35541365"
+      Hint: FundOverview_Fund
+      Value: "{8D894F1B-F8F8-4452-B927-96F663373B03}"

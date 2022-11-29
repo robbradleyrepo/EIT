@@ -7,7 +7,7 @@ DB: master
 SharedFields:
 - ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
   Hint: Source
-  Value: "query:./ancestor-or-self::*[@@templatename='Site Root']/Global/Funds/*[@@templateid='{DADEC9BF-B6E8-4E04-A082-F4EB20B76FF9}' or @@templateid='{C836F741-DC3F-4035-A207-3D0A1548CB38}']"
+  Value: "query:/sitecore/content/Shared Content/Funds/*[@@templateid='{DADEC9BF-B6E8-4E04-A082-F4EB20B76FF9}']"
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
   Value: Multilist

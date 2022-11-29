@@ -1,0 +1,21 @@
+﻿---
+ID: "17efc67f-bb30-4878-885a-970e10bc87a1"
+Parent: "ea1e849c-472d-4590-b924-34e7e81dd054"
+Template: "ea1e849c-472d-4590-b924-34e7e81dd054"
+Path: /sitecore/templates/Project/EIT/Content Types/Listing/Director/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210805T162813Z
+    - ID: "40ec24be-e4c8-4d5a-9226-6afdbff86698"
+      Hint: Director_FullName
+      Value: $name
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

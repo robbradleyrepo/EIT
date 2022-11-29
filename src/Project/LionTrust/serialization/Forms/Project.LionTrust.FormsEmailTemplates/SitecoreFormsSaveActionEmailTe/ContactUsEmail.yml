@@ -11,7 +11,7 @@ Languages:
     Fields:
     - ID: "06cf7584-f7f7-44c1-a05b-5b3241eee9dd"
       Hint: SendEmailSaveActionEmailTemplate_To
-      Value: gerhart@test.com
+      Value: info@liontrust.co.uk
     - ID: "09f919e5-1203-45fa-8c64-6f25576ac61d"
       Hint: SendEmailSaveActionEmailTemplate_CC
       Value: 
@@ -20,7 +20,7 @@ Languages:
       Value: 20191205T215957Z
     - ID: "2717fca7-8394-427c-8d42-da9f4d0f3593"
       Hint: SendEmailSaveActionEmailTemplate_Subject
-      Value: Liontrust Contact Us
+      Value: Contact Us
     - ID: "44cd553a-743b-4b83-8eae-3238713fe856"
       Hint: SendEmailSaveActionEmailTemplate_FromDisplayName
       Value: 
@@ -33,14 +33,13 @@ Languages:
       Value: 
     - ID: "b1ffe662-f00c-42dc-9f4a-48a7263b5ebe"
       Hint: SendEmailSaveActionEmailTemplate_From
-      Value: test@test.com
+      Value: 
     - ID: "ffb22c77-93ed-41e0-b4d7-c8973bb5fb40"
       Hint: SendEmailSaveActionEmailTemplate_Message
       Value: |
         <p>The following contact us message has been submitted from the Liontrust website.</p>
         <p>&nbsp;</p>
-        <p>Fund Enquiry: {Fund Enquiry}</p>
-        <p>Liontrust GF Sustainable: {Liontrust GF Sustainable}</p>
-        <p>&nbsp;</p>
+        <p>Fund (if applicable): {Fund}</p>
         <p>Email Address: {Email}</p>
-        <p>Telephone Number: {Telephone}</p>
+        <p>Contact Number: {Telephone}</p>
+        <p>Message: {Message}</p>

@@ -15,11 +15,15 @@
                     <p>
                         @if (Sitecore.Context.PageMode.IsExperienceEditor || Model.CtaLink != null)
                         {
-                            using (Html.Glass().BeginRenderLink(Model, m => m.CtaLink, new { @class = "" }, isEditable: true))
+                            using (Html.Glass().BeginRenderLink(Model, m => m.CtaLink, new { @class = "btn btn-primary" }, isEditable: true))
                             {
                                 if (Model.CtaLink != null)
                                 {
                                     @Model.CtaLink.Text
+                                }
+                                else
+                                {
+                                    @:Add CTA
                                 }
                                 <i class="icon-arrow-right animate-arrow"></i>
                             }
