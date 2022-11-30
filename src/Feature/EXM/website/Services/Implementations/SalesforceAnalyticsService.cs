@@ -337,6 +337,10 @@ namespace LionTrust.Feature.EXM.Services.Implementations
                         if (messageCampaign?.Team != null)
                         {
                             var team = teams.FirstOrDefault(x => x.Id == messageCampaign.Team.Value);
+                            if (team == null)
+                            {
+                                continue;
+                            }
 
                             switch (interaction.Type)
                             {
