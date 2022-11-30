@@ -45,7 +45,6 @@
             }
         }
 
-
         public void TrySendEmail(string message, bool isSuccess = false)
         {
             if (ShouldSuspendEmail(isSuccess))
