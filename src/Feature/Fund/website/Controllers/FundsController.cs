@@ -64,7 +64,7 @@
                 var fundClass = fund.Classes.Where(c => c.CitiCode == citiCode).FirstOrDefault();
                 if (fundClass != null)
                 {
-                    viewModel.FundValues = _fundRepository.GetKeyInfoDataOnDemand(fundClass, "0");
+                    viewModel.FundValues = _fundRepository.GetKeyInfoDataOnDemand(fundClass, Constants.PriceTypes.Zero);
                 }
             }
 

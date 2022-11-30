@@ -106,7 +106,7 @@
             var fundClass = fund.Classes.Where(c => c.CitiCode == citiCode).FirstOrDefault();
             if (fundClass != null)
             {
-                var fundValues = _fundRepository.GetFundStatsDetailsOnDemand(fundClass, "0");
+                var fundValues = _fundRepository.GetFundStatsDetailsOnDemand(fundClass, Constants.PriceTypes.Zero);
                 if (fundValues != null)
                 {
                     fundValues.SharePrice = GetSharePriceFormatted(fundValues.SharePrice);

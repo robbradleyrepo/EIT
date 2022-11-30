@@ -127,12 +127,16 @@
     <Compile Include="AdditionalInfoAndCharges\FundAdditionalInfoController.cs" />
     <Compile Include="AdditionalInfoAndCharges\IAdditionalFundInformationManager.cs" />
     <Compile Include="Api\BasicFundHoldingsBreakdown.cs" />
+    <Compile Include="Api\Cache\FundDataResponseModelPersistentCache.cs" />
+    <Compile Include="Api\Error\ConditionalErrorTracker.cs" />
+    <Compile Include="Api\Error\IConditionalErrorTracker.cs" />
     <Compile Include="Api\ExternalFundClassRepository.cs" />
     <Compile Include="Api\ExternalFundDataScheduledJob.cs" />
     <Compile Include="Api\FundBreakdownModel.cs" />
     <Compile Include="Api\FundClassDataModel.cs" />
     <Compile Include="Api\FundDataResponseModel.cs" />
     <Compile Include="Api\IFundClassDataApi.cs" />
+    <Compile Include="Api\Cache\IFundDataResponseModelPersistentCache.cs" />
     <Compile Include="Api\IFundClassRepository.cs" />
     <Compile Include="Api\IFundHoldingsBreakdown.cs" />
     <Compile Include="CapitalisationChart\CapitalisationChartController.cs" />

@@ -13,8 +13,7 @@
             try
             {
                 var fundRepo = ServiceLocator.ServiceProvider.GetService<IFundClassRepository>();
-                fundRepo.UpdateData();
-
+                fundRepo.UpdateData(true);
             }
             catch (Exception ex)
             {

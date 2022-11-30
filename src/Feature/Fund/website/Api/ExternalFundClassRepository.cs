@@ -1,9 +1,8 @@
 ﻿namespace LionTrust.Feature.Fund.Api
 {
-    using Glass.Mapper.Sc.Web.Mvc;
-    using LionTrust.Foundation.Contact.Managers;
+    using LionTrust.Feature.Fund.Api.Cache;
+    using LionTrust.Feature.Fund.Api.Error;
     using LionTrust.Foundation.DI;
-    using LionTrust.Foundation.Legacy.Models;
     using Newtonsoft.Json;
     using RestSharp;
     using Sitecore.Abstractions;
@@ -17,6 +16,8 @@
     {
         private readonly BaseSettings _settings;
 
+        private DateTime? _mainDataLastFailure;
+
         private FundDataResponseModel[] _data;
 
         private Dictionary<string, (FundDataResponseModel fundData, DateTime updatedDate)> _dataOnDemand;
@@ -25,67 +26,86 @@
 
         private object locker = new object();
 
-        private readonly IMailManager _mailManager;
-        private readonly IMvcContext _context;
+        private readonly IFundDataResponseModelPersistentCache _persistentCache;
 
-        public ExternalFundClassRepository(BaseSettings settings, IMailManager mailManager, IMvcContext context)
+        private readonly IConditionalErrorTracker _conditionalErrorTracker;
+
+        private readonly double _individualFundCachingDuration;
+
+        private readonly double _refreshDataAfterErrorIntervalInHours;
+
+
+        public ExternalFundClassRepository(BaseSettings settings, IConditionalErrorTracker conditionalErrorTracker, IFundDataResponseModelPersistentCache persistentCache)
         {
             this._settings = settings;
-            this._mailManager = mailManager;
-            this._context = context;
+            this._persistentCache = persistentCache;
+            this._conditionalErrorTracker = conditionalErrorTracker;
+
+            if (double.TryParse(_settings.GetSetting(Constants.Settings.IndividualFundCachingDuration), out var individualFundCachingDuration))
+            {
+                this._individualFundCachingDuration = individualFundCachingDuration;
+            }
+
+            if (double.TryParse(_settings.GetSetting(Constants.Settings.RefreshDataAfterErrorIntervalInHours), out var refreshDataAfterErrorIntervalInHours))
+            {
+                this._refreshDataAfterErrorIntervalInHours = refreshDataAfterErrorIntervalInHours;
+            }
+
         }
 
         private void LoadData()
         {
-            var url = _settings.GetSetting(Constants.Settings.FeApiEndPoint);
-            if (string.IsNullOrEmpty(url))
+            var fundDataForPriceType1 = GetDataFromAPI(null, Constants.PriceTypes.One, null, 20000);
+
+            if (fundDataForPriceType1 == null)
             {
-                return;
+                fundDataForPriceType1 = _persistentCache.GetData(Constants.PriceTypes.One);
+                _mainDataLastFailure = DateTime.UtcNow;
             }
-
-            var client = new RestClient(url);
-            var request = new RestRequest("/api/funddata/liontrust/C9E1ACC5-B0E7-400A-A5BF-83C68654EA0B");
-            request.AddQueryParameter("rangename", "LiontrustFunds");
-            request.AddQueryParameter("pricetype", "1");
-            var result = client.Execute(request);
-            if (!result.IsSuccessful)
-            {                
-                SendEmailOnError("There was an error during the retrieval of External Fund Data: " + result.ErrorMessage);
-                return;
-            }
-
-            var fundDetails = JsonConvert.DeserializeObject<FundDataResponseModel[]>(result.Content);
-            if (fundDetails == null || !fundDetails.Any())
+            else
             {
-                SendEmailOnError("There was no External Fund Data retrieved.");
-                return;
+                _persistentCache.SetData(fundDataForPriceType1, Constants.PriceTypes.One);
+
+                var fundDataForPriceType0 = GetDataFromAPI(null, Constants.PriceTypes.Zero, null, 20000);
+                if (fundDataForPriceType0 == null)
+                {
+                    _mainDataLastFailure = DateTime.UtcNow;
+                }
+                else
+                {
+                    _persistentCache.SetData(fundDataForPriceType0, Constants.PriceTypes.Zero);
+                    _mainDataLastFailure = null;
+                }
             }
 
-            _data = fundDetails;
+            _data = fundDataForPriceType1;
         }
 
         public FundDataResponseModel[] GetData()
         {
-            lock (locker)
+            bool needRefresh = _mainDataLastFailure.HasValue && _mainDataLastFailure.Value.AddHours(_refreshDataAfterErrorIntervalInHours) < DateTime.UtcNow;
+            if (_data == null || needRefresh)
             {
-                if (_data == null)
+                lock (locker)
                 {
-                    LoadData();
+                    if (_data == null || needRefresh)
+                    {
+                        LoadData();
+                    }
                 }
-
-                return _data;
             }
+            return _data;
         }
 
-        public void UpdateData()
+        public void UpdateData(bool force = false)
         {
-            if (!isInitialized)
+            if (!isInitialized || force)
             {
                 try
                 {
                     lock (locker)
                     {
-                        if (!isInitialized)
+                        if (!isInitialized || force)
                         {
                             LoadData();
 
@@ -95,54 +115,18 @@
                 }
                 catch (Exception ex)
                 {
-                    var message = "Error updating External Fund Data: ";
-                    SendEmailOnError(message + ex.Message);
-                    Log.Error(message, ex, this);
+                    _conditionalErrorTracker.Error($"Error updating External Fund Data: {ex.Message}", this);
                 }
-            }
-        }
-
-        public void SendEmailOnError(string errorMessage)
-        {
-            try
-            {
-                var emailTemplate = _context.SitecoreService.GetItem<IEmail>(Constants.EmailTemplates.FundImportErrorEmail);
-                if (emailTemplate == null)
-                {
-                    return;
-                }
-
-                _mailManager.SendEmail(emailTemplate.FromAddress, emailTemplate.FromDisplayName, emailTemplate.ToAddresses, emailTemplate.Subject, errorMessage, true);
-            }
-            catch(Exception ex)
-            {
-                Log.Error("[ExternalFund]: Error sending email with Fund API information", ex);
             }
         }
 
         public void SendEmailOnErrorForCiticode(string citicode)
         {
-            SendEmailOnError("New data retrieval for citicode: " + citicode + " failed");
+            _conditionalErrorTracker.TrySendEmail($"New data retrieval for citicode: {citicode} failed");
         }
 
-        public FundDataResponseModel GetDataOnDemand(string citicode, string priceType = "1", string currency = "")
+        public FundDataResponseModel GetDataOnDemand(string citicode, string priceType = Constants.PriceTypes.One, string currency = "")
         {
-            var url = _settings.GetSetting(Constants.Settings.FeApiEndPoint);
-            if (string.IsNullOrEmpty(url))
-            {
-                return null;
-            }
-
-            var client = new RestClient(url);
-            var request = new RestRequest("/api/funddata/liontrust/C9E1ACC5-B0E7-400A-A5BF-83C68654EA0B");
-            request.AddQueryParameter("rangename", "LiontrustFunds");
-            request.AddQueryParameter("citicodes", citicode);
-            request.AddQueryParameter("pricetype", priceType);
-            if (IsValidCurrency(currency))
-            {
-                request.AddQueryParameter("currency", currency);
-            }
-            
             var dictionaryKey = citicode + priceType + currency;
 
             if (_dataOnDemand == null)
@@ -150,40 +134,29 @@
                 _dataOnDemand = new Dictionary<string, (FundDataResponseModel fundData, DateTime updatedDate)>();
             }
 
-            double.TryParse(_settings.GetSetting(Constants.Settings.IndividualFundCachingDuration), out var individualFundCachingDuration);
-
             var shouldLoadFundFromCache = _dataOnDemand.ContainsKey(dictionaryKey) &&
                                           _dataOnDemand[dictionaryKey].fundData != null &&
-                                          _dataOnDemand[dictionaryKey].updatedDate.AddHours(individualFundCachingDuration) > DateTime.UtcNow; 
+                                          _dataOnDemand[dictionaryKey].updatedDate.AddHours(_individualFundCachingDuration) > DateTime.UtcNow; 
 
             if (shouldLoadFundFromCache) 
             {
                 return _dataOnDemand[dictionaryKey].fundData;
             }
 
-            var result = client.Execute(request);
-            Log.Info($"[ExternalFund]: The API has been called with these parameters: '{string.Join(", ", request.Parameters.Select(x => $"{x.Name}={x.Value}"))}'", this);
+            var fundData = GetDataFromAPI(citicode, priceType, currency, 10000)?.FirstOrDefault();
 
-            if (!result.IsSuccessful)
+            if (fundData == null)
             {
-                var errorMessage = "There was an error during the retrieval of External Fund Data: " + result.ErrorMessage;
-                Log.Error($"[ExternalFund]: {errorMessage}'", this);
-                SendEmailOnError(errorMessage);
-                return null;
+                fundData = _persistentCache.GetData(citicode, priceType, currency);
             }
-
-            var fundDetails = JsonConvert.DeserializeObject<FundDataResponseModel[]>(result.Content);
-            if (fundDetails == null || !fundDetails.Any())
+            else
             {
-                var errorMessage = "There was no External Fund Data retrieved.";
-                Log.Error($"[ExternalFund]: {errorMessage}'", this);
-                SendEmailOnError(errorMessage);
-                return null;
+                _persistentCache.SetData(fundData, citicode, priceType, currency);
             }
            
-            _dataOnDemand[dictionaryKey] = (fundDetails[0], DateTime.UtcNow) ;
+            _dataOnDemand[dictionaryKey] = (fundData, DateTime.UtcNow) ;
 
-            return fundDetails[0];
+            return fundData;
         }
 
         private bool IsValidCurrency(string currency)
@@ -191,6 +164,52 @@
             var invalidCurrencies = _settings.GetSetting(Constants.Settings.InvalidCurrencies)?.Split(',');
 
             return !string.IsNullOrEmpty(currency) && !invalidCurrencies.Any(x => currency.Equals(x, StringComparison.CurrentCultureIgnoreCase));
+        }
+
+        private FundDataResponseModel[] GetDataFromAPI(string citicode, string priceType, string currency, int timeout)
+        {
+            var url = _settings.GetSetting(Constants.Settings.FeApiEndPoint);
+            if (string.IsNullOrEmpty(url))
+            {
+                _conditionalErrorTracker.Error("No FE API end point", this);
+                return null;
+            }
+
+            var client = new RestClient(url);
+            var request = new RestRequest("/api/funddata/liontrust/C9E1ACC5-B0E7-400A-A5BF-83C68654EA0B");
+            request.AddQueryParameter("rangename", "LiontrustFunds");
+            if (citicode != null) 
+            { 
+                request.AddQueryParameter("citicodes", citicode); 
+            }
+            request.AddQueryParameter("pricetype", priceType);
+            if (currency != null && IsValidCurrency(currency))
+            {
+                request.AddQueryParameter("currency", currency);
+            }
+
+            request.Timeout = timeout;
+            var result = client.Execute(request);
+            string requestUrl = $"{url}{request.Resource}?{string.Join("&", request.Parameters.Select(x => $"{x.Name}={x.Value}"))}";
+            Log.Info($"[ExternalFund]: The API has been called: {requestUrl}", this);
+
+            if (!result.IsSuccessful)
+            {
+                var errorMessage = $"There was an error during the retrieval of External Fund Data for {requestUrl}";
+                _conditionalErrorTracker.Error(errorMessage, this);
+                return null;
+            }
+
+            var fundDetails = JsonConvert.DeserializeObject<FundDataResponseModel[]>(result.Content);
+            if (fundDetails == null || !fundDetails.Any())
+            {
+                var errorMessage = $"There was no External Fund Data retrieved for {requestUrl}.";
+                _conditionalErrorTracker.Error(errorMessage, this);
+                return null;
+            }
+
+            _conditionalErrorTracker.Success();
+            return fundDetails;
         }
     }
 }
