@@ -401,6 +401,10 @@
             public const string RefreshDataAfterErrorIntervalInHours = "LionTrust.Feature.Fund.RefreshDataAfterErrorIntervalInHours";
 
             public const string SuspendErrorEmailsIntervalInHours = "LionTrust.Feature.Fund.SuspendErrorEmailsIntervalInHours";
+
+            public const string FeApiTimeoutForListsInMiliseconds = "LionTrust.Feature.Fund.FeApiTimeoutForListsInMiliseconds";
+
+            public const string FeApiTimeoutForDetailsInMiliseconds = "LionTrust.Feature.Fund.FeApiTimeoutForDetailsInMiliseconds";
         }
 
         // NOTE: we are using two values for pricetype in API, I saw no explanation about the difference therefore just making them consts without meaning 

@@ -18,8 +18,6 @@
     {
         private readonly IMailManager _mailManager;
         private readonly double _suspendErrorEmailsIntervalInHours;
-        private DateTime? _lastError;
-        private DateTime? _lastSuccess;
         private DateTime? _lastEmailFailure;
         private DateTime? _lastEmailSuccess;
         private object _locker = new object();
@@ -36,7 +34,6 @@
 
         public void Error(string message, object owner, bool trySendEmail = true)
         {
-            _lastError = DateTime.UtcNow;
             Log.Error(message, owner);
 
             if (trySendEmail)
@@ -113,8 +110,6 @@
 
         public void Success(string message = "", bool trySendEmail = true)
         {
-            _lastSuccess = DateTime.UtcNow;
-
             if (trySendEmail)
             {
                 TrySendEmail(message, true);

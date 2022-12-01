@@ -34,6 +34,9 @@
 
         private readonly double _refreshDataAfterErrorIntervalInHours;
 
+        private readonly int _timeoutForListsInMiliseconds;
+
+        private readonly int _timeoutForDetailsInMiliseconds;
 
         public ExternalFundClassRepository(BaseSettings settings, IConditionalErrorTracker conditionalErrorTracker, IFundDataResponseModelPersistentCache persistentCache)
         {
@@ -51,11 +54,29 @@
                 this._refreshDataAfterErrorIntervalInHours = refreshDataAfterErrorIntervalInHours;
             }
 
+            if (int.TryParse(_settings.GetSetting(Constants.Settings.FeApiTimeoutForListsInMiliseconds), out var timeoutForListsInMiliseconds))
+            {
+                this._timeoutForListsInMiliseconds = timeoutForListsInMiliseconds;
+            }
+            else
+            {
+                this._timeoutForListsInMiliseconds = 20000;
+            }
+
+            if (int.TryParse(_settings.GetSetting(Constants.Settings.FeApiTimeoutForDetailsInMiliseconds), out var timeoutForDetailsInMiliseconds))
+            {
+                this._timeoutForDetailsInMiliseconds = timeoutForDetailsInMiliseconds;
+            }
+            else
+            {
+                this._timeoutForDetailsInMiliseconds = 10000;
+            }
+
         }
 
         private void LoadData()
         {
-            var fundDataForPriceType1 = GetDataFromAPI(null, Constants.PriceTypes.One, null, 20000);
+            var fundDataForPriceType1 = GetDataFromAPI(null, Constants.PriceTypes.One, null, _timeoutForListsInMiliseconds);
 
             if (fundDataForPriceType1 == null)
             {
@@ -66,7 +87,7 @@
             {
                 _persistentCache.SetData(fundDataForPriceType1, Constants.PriceTypes.One);
 
-                var fundDataForPriceType0 = GetDataFromAPI(null, Constants.PriceTypes.Zero, null, 20000);
+                var fundDataForPriceType0 = GetDataFromAPI(null, Constants.PriceTypes.Zero, null, _timeoutForListsInMiliseconds);
                 if (fundDataForPriceType0 == null)
                 {
                     _mainDataLastFailure = DateTime.UtcNow;
@@ -143,7 +164,7 @@
                 return _dataOnDemand[dictionaryKey].fundData;
             }
 
-            var fundData = GetDataFromAPI(citicode, priceType, currency, 10000)?.FirstOrDefault();
+            var fundData = GetDataFromAPI(citicode, priceType, currency, _timeoutForDetailsInMiliseconds)?.FirstOrDefault();
 
             if (fundData == null)
             {
