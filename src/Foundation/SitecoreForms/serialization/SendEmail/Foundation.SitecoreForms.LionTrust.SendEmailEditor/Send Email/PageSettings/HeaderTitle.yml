@@ -1,8 +1,8 @@
 ﻿---
-ID: "a2900c27-0d5e-4bea-aeb8-dc5a40100440"
-Parent: "fc0608b6-0450-4950-9f30-f47ac49bfffb"
+ID: "f6920b1e-bad3-46d2-915b-9006a7bc5015"
+Parent: "f6116045-bd61-4186-a501-b2259ea81899"
 Template: "46efcf7f-6ebb-4059-b9bf-8ef47c4f5e20"
-Path: "/sitecore/client/Applications/FormsBuilder/Components/Layouts/Actions/Send Email - EIT/PageSettings/HeaderSubtitle"
+Path: /sitecore/client/Applications/FormsBuilder/Components/Layouts/Actions/Send Email/PageSettings/HeaderTitle
 DB: core
 Languages:
 - Language: en
@@ -11,7 +11,7 @@ Languages:
     Fields:
     - ID: "240acdcd-c405-4e49-a96a-b3caab843920"
       Hint: Text
-      Value: Select the email template that you want to use for submission.
+      Value: Select Email Template
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20170403T085023Z

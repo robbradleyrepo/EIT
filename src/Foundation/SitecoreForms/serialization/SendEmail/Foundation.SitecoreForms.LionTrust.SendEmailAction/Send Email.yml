@@ -2,7 +2,7 @@
 ID: "05d226f2-affa-48a5-9e34-3015144bd2ef"
 Parent: "891e7268-fa3e-4e74-b4b1-c16b206f2165"
 Template: "c2d1d114-3cfe-4558-a9e3-d1a1ec0fcab7"
-Path: "/sitecore/system/Settings/Forms/Submit Actions/Send Email - LionTrust"
+Path: /sitecore/system/Settings/Forms/Submit Actions/Send Email
 DB: master
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
@@ -20,7 +20,7 @@ Languages:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Value: "20221116T172541:638042163410112699Z"
+      Value: "20221201T160742:638055076629863214Z"
     - ID: "47837625-b3d9-46f1-a73b-ff13dd1c8b25"
       Hint: Error Message
-      Value: "Failed to send email!"
+      Value: "Send email failed!"
