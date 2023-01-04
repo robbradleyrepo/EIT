@@ -1,0 +1,153 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?lj5ehj');
+  src:  url('fonts/icomoon.eot?lj5ehj#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?lj5ehj') format('truetype'),
+    url('fonts/icomoon.woff?lj5ehj') format('woff'),
+    url('fonts/icomoon.svg?lj5ehj#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-refresh:before {
+  content: "\e929";
+}
+.icon-grid-view:before {
+  content: "\e927";
+}
+.icon-list-view:before {
+  content: "\e928";
+}
+.icon-minus:before {
+  content: "\e926";
+}
+.icon-check:before {
+  content: "\e925";
+}
+.icon-play:before {
+  content: "\e924";
+}
+.icon-info:before {
+  content: "\e923";
+}
+.icon-folder:before {
+  content: "\e922";
+}
+.icon-download:before {
+  content: "\e920";
+}
+.icon-share:before {
+  content: "\e921";
+}
+.icon-sort:before {
+  content: "\e91e";
+}
+.icon-filter:before {
+  content: "\e91f";
+}
+.icon-icon-circle:before {
+  content: "\e91c";
+}
+.icon-icon-check-circle:before {
+  content: "\e91d";
+}
+.icon-follow:before {
+  content: "\e91b";
+}
+.icon-arrow-up:before {
+  content: "\e91a";
+}
+.icon-team:before {
+  content: "\e917";
+}
+.icon-file:before {
+  content: "\e918";
+}
+.icon-twitter:before {
+  content: "\e915";
+}
+.icon-chevron-left:before {
+  content: "\e914";
+}
+.icon-close:before {
+  content: "\e916";
+}
+.icon-chat:before {
+  content: "\e912";
+}
+.icon-arrow-left:before {
+  content: "\e919";
+}
+.icon-chevron-right:before {
+  content: "\e913";
+}
+.icon-tab:before {
+  content: "\e900";
+}
+.icon-arrow-right:before {
+  content: "\e901";
+}
+.icon-apple:before {
+  content: "\e902";
+}
+.icon-arrow-down:before {
+  content: "\e903";
+}
+.icon-bookmark:before {
+  content: "\e904";
+}
+.icon-email:before {
+  content: "\e905";
+}
+.icon-chevron:before {
+  content: "\e906";
+}
+.icon-mic:before {
+  content: "\e907";
+}
+.icon-linked-in:before {
+  content: "\e908";
+}
+.icon-clock:before {
+  content: "\e909";
+}
+.icon-booksmark:before {
+  content: "\e90a";
+}
+.icon-facebook:before {
+  content: "\e90b";
+}
+.icon-plus:before {
+  content: "\e90c";
+}
+.icon-wifi:before {
+  content: "\e90d";
+}
+.icon-search:before {
+  content: "\e90e";
+}
+.icon-settings:before {
+  content: "\e90f";
+}
+.icon-spotify:before {
+  content: "\e910";
+}
+.icon-user:before {
+  content: "\e911";
+}

@@ -1,0 +1,79 @@
+.g-header
+    position: relative
+    width: 100% 
+    display: flex
+    flex-direction: row
+    align-content: space-between
+    justify-content: space-between
+    justify-items: center
+    text-align: center
+    flex-wrap: wrap
+
+    &__brand
+        display: block
+        margin: auto
+        // @include breakpoint(desktop, up)
+        //     margin: 0
+        img
+            max-width: 157px
+    
+    a.mobile-control
+        color: $c-white
+        width: 35px
+        display: inline-block
+        text-decoration: none
+        *
+            transition: all 200ms ease
+        // @include breakpoint(desktop, up)
+        //     display: none   
+        hr
+            margin-bottom: 0
+        span
+            font-family: 'futura'
+            font-weight: 400
+            text-transform: uppercase
+            font-size: 10px
+            letter-spacing: 2px
+            text-decoration: none
+        &:hover
+            hr
+                border-color: $c-orange
+                background: $c-orange
+            span
+                color: $c-orange
+
+    .g-nav-desktop
+        display: none
+        // @include breakpoint(desktop, up)
+        //     display: block
+        ul
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: flex-end
+            height: 88px
+            // @include vertical-align
+            li 
+                position: relative
+                margin: 0 1vw
+                // @include breakpoint(desktop, up)
+                //     margin: 0 1.5vw
+                // @include breakpoint(desktop-grid-break-large, up)
+                //     margin: 0 2vw 
+                &:last-child
+                    margin-right: 0          
+                a
+                    font-family: $f-nav-primary
+                    font-weight: 400
+                    font-size: 14px// breakpoints
+                    display: block
+                    height: 100%
+                    color: $c-white
+                    text-align: center
+                    text-decoration: none
+                    text-transform: uppercase 
+                    @extend %animate-underline
+                    // @include breakpoint(desktop-grid-break-large, up)
+                        // font-size: 16px 
+                    &:hover, &:active, &.active
+                        color: $c-orange 

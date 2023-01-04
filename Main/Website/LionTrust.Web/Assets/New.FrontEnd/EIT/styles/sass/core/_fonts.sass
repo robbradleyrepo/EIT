@@ -1,0 +1,25 @@
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url('#{$furl}.woff2') format('woff2'), url('#{$furl}.woff') format('woff')
+
+@include font('gotham-thin', normal, 300, '../fonts/gotham/Gotham-Thin')
+@include font('gotham-thin', italic, 300, '../fonts/gotham/Gotham-ThinItalic')
+@include font('gotham-ultraitalic', italic, 300, '../fonts/gotham/Gotham-UltraItalic')
+@include font('gotham', normal, 300, '../fonts/gotham/Gotham-XLight')
+@include font('gotham', normal, 400, '../fonts/gotham/GothamLight')
+@include font('gotham', italic, 400, '../fonts/gotham/GothamLightItalic')
+@include font('gotham', normal, 500, '../fonts/gotham/GothamMedium')
+@include font('gotham', italic, 500, '../fonts/gotham/GothamMediumItalic')
+@include font('gotham-', normal, 700, '../fonts/gotham/GothamBold')
+@include font('gotham-', italic, 700, '../fonts/gotham/GothamBoldItalic')
+@include font('gotham-book', normal, 300, '../fonts/gotham/GothamBook')
+@include font('gotham-book', italic, 300, '../fonts/gotham/GothamBookItalic') 
+
+@include font('futura', normal, 300, '../fonts/futura/futuralight') 
+@include font('futura', normal, 400, '../fonts/futura/futuramedium') 
+@include font('futura', normal, 500, '../fonts/futura/futurabold') 
+
+

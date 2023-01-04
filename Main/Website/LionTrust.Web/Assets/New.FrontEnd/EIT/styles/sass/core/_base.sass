@@ -1,0 +1,53 @@
+$fontsize: 16px 
+$textcolor: $c-black 
+$lineheight: 1.4 
+$userfont:  sans-serif 
+$font-family-bold: sans-serif
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif 
+
+$body-bg: $c-white
+$body-text: $c-black
+$body-font: 'gotham'
+$text-size: 16px
+$line-height: 1.4
+
+html 
+	font-size: 16px 
+	scroll-behavior: smooth 
+	@media screen and (prefers-reduced-motion: reduce) 
+        scroll-behavior: auto 
+body 
+	width: 100% 
+	background: $body-bg 
+	color: $body-text 
+	font-family: $body-font
+	font-size: $text-size
+	-webkit-font-smoothing: auto
+	line-height: $line-height
+	min-width: 320px 
+	position: relative 
+	&.overflow-hidden
+		overflow-y: hidden 
+		position: fixed 
+		top: 0 
+		left: 0 
+		right: 0 
+		bottom: 0 
+		height: 100% 
+		width: 100% 
+	.fancybox-content 
+		background: $c-black
+a 
+	text-decoration: none
+	transition: color 150ms ease-in-out
+p
+	// @mixin p-1-book-20 
+ul 
+	list-style-type: none 
+	padding: 0
+	margin: 0
+dl 
+	dt 
+    	font-weight: bold 
+	dd 
+		margin: 0 

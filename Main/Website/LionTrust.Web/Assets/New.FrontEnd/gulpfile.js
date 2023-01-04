@@ -1,3 +1,5 @@
+// all functions with postfix of "2" refer to EIT/
+
 let preprocessor = "sass", // Preprocessor (sass, less, styl); 'sass' also work with the Scss
   fileswatch = "html,htm,txt,json,md,woff2"; // List of files extensions for watching & hard reload
 
@@ -60,6 +62,19 @@ function browsersync() {
   });
 }
 
+function browsersync2() {
+  browserSync.init({
+    server: {
+      baseDir: "EIT/",
+      middleware: bssi({ baseDir: "EIT/", ext: ".html" }),
+    },
+    ghostMode: { clicks: false },
+    notify: false,
+    online: true,
+    // tunnel: 'yousutename'
+  });
+}
+
 function scriptsMain() {
   return src(
     [
@@ -77,6 +92,26 @@ function scriptsMain() {
     })
     .pipe(rename("app.min.js"))
     .pipe(dest("app/js", { sourcemaps: true }))
+    .pipe(browserSync.stream());
+}
+
+function scriptsMain2() {
+  return src(
+    [
+      "EIT/js/app.js",
+      // "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js", // import fancybox
+      // "node_modules/bootstrap/js/dist/modal.js", // import bootstrap modal
+      // "node_modules/bootstrap/js/dist/collapse.js", // import bootstrap collapse
+      // "node_modules/bootstrap/js/dist/tooltip.js", // import tooltip
+    ],
+    { sourcemaps: true }
+  )
+    .pipe(webpack(webPackConfig))
+    .on("error", function handleError() {
+      this.emit("end");
+    })
+    .pipe(rename("EIT__app.min.js"))
+    .pipe(dest("EIT/js", { sourcemaps: true }))
     .pipe(browserSync.stream());
 }
 
@@ -153,6 +188,27 @@ function styles() {
     .pipe(browserSync.stream());
 }
 
+
+function styles2() {
+  return src(
+    [`EIT/styles/${preprocessor}/*.*`, `!app/styles/${preprocessor}/_*.*`],
+    { sourcemaps: true }
+  )
+    .pipe(eval(`${preprocessor}glob`)())
+    .pipe(eval(preprocessor)())
+    .pipe(
+      autoprefixer({ overrideBrowserslist: ["last 10 versions"], grid: true })
+    )
+    .pipe(
+      cleancss({
+        level: { 1: { specialComments: 0 } } /* format: 'beautify' */,
+      })
+    )
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(dest("EIT/css", { sourcemaps: true }))
+    .pipe(browserSync.stream());
+}
+
 function images() {
   return src(["app/images/src/**/*"])
     .pipe(newer("app/images/dist"))
@@ -161,10 +217,25 @@ function images() {
     .pipe(browserSync.stream());
 }
 
+
+function images2() {
+  return src(["EIT/images/src/**/*"])
+    .pipe(newer("EIT/images/dist"))
+    .pipe(imagemin())
+    .pipe(dest("EIT/images/dist"))
+    .pipe(browserSync.stream());
+}
+
 function minifyJs() {
   return src(['app/js/*.min.js'])
   .pipe(uglify())
   .pipe(dest('app/js'))
+}
+
+function minifyJs2() {
+  return src(['EIT/js/*.min.js'])
+  .pipe(uglify())
+  .pipe(dest('EIT/js'))
 }
  
 function buildcopy() {
@@ -183,8 +254,27 @@ function buildcopy() {
   ).pipe(dest("dist"));
 }
 
+function buildcopy2() {
+  return src(
+    [
+      "{EIT/js,app/css}/*.min.*",
+      "EIT/images/**/*.*",
+      "!EIT/images/src/**/*",
+      "EIT/fonts/**/*",
+	  ],
+    { base: "EIT/" }
+  ).pipe(dest("dist/EIT/"));
+}
+
+
 async function buildhtml() {
   let includes = new ssi("app/", "dist/", "/**/*.html");
+  includes.compile();
+  del("dist/components", { force: true });
+}
+
+async function buildhtml2() {
+  let includes = new ssi("EIT/", "dist/EIT/", "/**/*.html");
   includes.compile();
   del("dist/components", { force: true });
 }
@@ -192,6 +282,11 @@ async function buildhtml() {
 function cleandist() {
   return del("dist/**/*", { force: true });
 }
+
+function cleandist2() {
+  return del("dist/EIT/**/*", { force: true });
+}
+
 
 function startwatch() {
   watch(`app/styles/${preprocessor}/**/*`, { usePolling: true }, styles);
@@ -206,6 +301,24 @@ function startwatch() {
     images
   );
   watch(`app/**/*.{${fileswatch}}`, { usePolling: true }).on(
+    "change",
+    browserSync.reload
+  );
+}
+
+function startwatch2() {
+  watch(`EIT/styles/${preprocessor}/**/*`, { usePolling: true }, styles);
+  watch(
+    ["EIT/js/**/*.js", "!EIT/js/**/*.min.js"],
+    { usePolling: true },
+    parallel(scriptsMain, scriptsSearch, scriptsListing, scriptsCharts, scriptsPostMessage)
+  );
+  watch(
+    "EIT/images/src/**/*.{jpg,jpeg,png,webp,svg,gif}",
+    { usePolling: true },
+    images
+  );
+  watch(`EIT/**/*.{${fileswatch}}`, { usePolling: true }).on(
     "change",
     browserSync.reload
   );
@@ -237,4 +350,24 @@ exports.default = series(
   styles,
   images,
   parallel(browsersync, startwatch)
+);
+
+exports.scripts2 = scriptsMain2;
+exports.styles2 = styles2;
+exports.images2 = images2;
+exports.assets2 = series(scriptsMain2, styles2, images2);
+exports.eitbuild = series(
+  cleandist2,
+  scriptsMain2,
+  minifyJs2,
+  styles2,
+  images2,
+  buildcopy2,
+  buildhtml2
+);
+exports.eitdev = series(
+  scriptsMain2,
+  styles2,
+  images2,
+  parallel(browsersync2, startwatch2)
 );

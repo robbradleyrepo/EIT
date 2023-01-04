@@ -1,0 +1,28 @@
+$v-max-width: 1440px
+
+header
+    position: relative
+    width: 100% 
+    min-height: max-content
+    // @include breakpoint(desktop, up)
+    //     min-height: 36vw
+    // @include breakpoint(desktop-large, up)
+    //     min-height: 36vw
+        
+section, article
+    &.u-edge
+        position: relative
+        // @extend .mt-4
+        // @extend .mb-4
+        // @extend .pt-4
+        // @extend .pb-4              
+        // &.zero-margin
+        //     @extend .mt-0
+        //     @extend .mb-0
+
+.u-container
+    max-width: $v-max-width
+    margin: 0 auto
+    padding: 0 20px
+    // @include breakpoint(tablet, up)
+    //     padding: 0 30px 
