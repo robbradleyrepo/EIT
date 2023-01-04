@@ -98,7 +98,7 @@ function scriptsMain() {
 function scriptsMain2() {
   return src(
     [
-      "EIT/js/app.js",
+      "EIT/js/app.js"
       // "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js", // import fancybox
       // "node_modules/bootstrap/js/dist/modal.js", // import bootstrap modal
       // "node_modules/bootstrap/js/dist/collapse.js", // import bootstrap collapse
@@ -110,7 +110,7 @@ function scriptsMain2() {
     .on("error", function handleError() {
       this.emit("end");
     })
-    .pipe(rename("EIT__app.min.js"))
+    .pipe(rename("app.min.js"))
     .pipe(dest("EIT/js", { sourcemaps: true }))
     .pipe(browserSync.stream());
 }
@@ -191,7 +191,7 @@ function styles() {
 
 function styles2() {
   return src(
-    [`EIT/styles/${preprocessor}/*.*`, `!app/styles/${preprocessor}/_*.*`],
+    [`EIT/styles/${preprocessor}/*.*`, `!EIT/styles/${preprocessor}/_*.*`],
     { sourcemaps: true }
   )
     .pipe(eval(`${preprocessor}glob`)())
@@ -257,10 +257,10 @@ function buildcopy() {
 function buildcopy2() {
   return src(
     [
-      "{EIT/js,app/css}/*.min.*",
+      "{EIT/js,EIT/css}/*.min.*",
       "EIT/images/**/*.*",
       "!EIT/images/src/**/*",
-      "EIT/fonts/**/*",
+      "EIT/fonts/**/*"
 	  ],
     { base: "EIT/" }
   ).pipe(dest("dist/EIT/"));
@@ -356,7 +356,7 @@ exports.scripts2 = scriptsMain2;
 exports.styles2 = styles2;
 exports.images2 = images2;
 exports.assets2 = series(scriptsMain2, styles2, images2);
-exports.eitbuild = series(
+exports.build__eit = series(
   cleandist2,
   scriptsMain2,
   minifyJs2,
@@ -365,7 +365,7 @@ exports.eitbuild = series(
   buildcopy2,
   buildhtml2
 );
-exports.eitdev = series(
+exports.eit = series(
   scriptsMain2,
   styles2,
   images2,
