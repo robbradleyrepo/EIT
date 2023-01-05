@@ -11,14 +11,11 @@ header
         
 section, article
     &.u-edge
-        position: relative
-        // @extend .mt-4
-        // @extend .mb-4
-        // @extend .pt-4
-        // @extend .pb-4              
-        // &.zero-margin
-        //     @extend .mt-0
-        //     @extend .mb-0
+        position: relative 
+        @include my(4)
+        @include py(4)            
+        &.zero-margin
+            @include my(0)
 
 .u-container
     max-width: $v-max-width

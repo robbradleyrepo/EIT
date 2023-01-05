@@ -6,12 +6,11 @@
         font-weight: normal
         font-size: 32px
         line-height: 38px
-        color: $c-orange 
-        @include p(6)
+        color: $c-orange
+        @include mb(3)
         @include lg
             font-size: 36px
-            line-height: 42px 
-            @include p(2)
+            line-height: 42px
         &:empty
             display: none
     p 
@@ -36,7 +35,7 @@
             display: block
 
     &__cta
-        // @extend .mt-4
+        @include mt(4)
         &:empty
             display: none
         a:hover 
@@ -68,7 +67,7 @@
                 letter-spacing: 2.4px
                 color: $c-gray-dark
                 text-transform: uppercase
-                // @extend .pl-3
+                @include pl(3)
                 text-decoration: none
             &:hover
                 span 
