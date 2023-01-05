@@ -49,7 +49,7 @@ const webPackConfig = {
   },
 };
 
-function browsersync() {
+function browsersync1() {
   browserSync.init({
     server: {
       baseDir: "app/",
@@ -75,7 +75,7 @@ function browsersync2() {
   });
 }
 
-function scriptsMain() {
+function scriptsMain1() {
   return src(
     [
       "app/js/app.js",
@@ -115,7 +115,7 @@ function scriptsMain2() {
     .pipe(browserSync.stream());
 }
 
-function scriptsSearch() {
+function scriptsSearch1() {
   return src(["app/js/search-page.js"], {
     sourcemaps: true,
   })
@@ -128,7 +128,7 @@ function scriptsSearch() {
     .pipe(browserSync.stream());
 }
 
-function scriptsListing() {
+function scriptsListing1() {
   return src(["app/js/listing-page.js"], {
     sourcemaps: true,
   })
@@ -141,7 +141,7 @@ function scriptsListing() {
     .pipe(browserSync.stream());
 }
 
-function scriptsCharts() {
+function scriptsCharts1() {
   return src(["app/js/charts-page.js"], {
     sourcemaps: true,
   })
@@ -154,7 +154,7 @@ function scriptsCharts() {
     .pipe(browserSync.stream());
 }
 
-function scriptsPostMessage() {
+function scriptsPostMessage1() {
   return src(["app/js/postmessage.js"], {
     sourcemaps: true,
   })
@@ -168,7 +168,7 @@ function scriptsPostMessage() {
 }
 
 
-function styles() {
+function styles1() {
   return src(
     [`app/styles/${preprocessor}/*.*`, `!app/styles/${preprocessor}/_*.*`],
     { sourcemaps: true }
@@ -199,6 +199,7 @@ function styles2() {
     .pipe(
       autoprefixer({ overrideBrowserslist: ["last 10 versions"], grid: true })
     )
+    
     .pipe(
       cleancss({
         level: { 1: { specialComments: 0 } } /* format: 'beautify' */,
@@ -209,7 +210,7 @@ function styles2() {
     .pipe(browserSync.stream());
 }
 
-function images() {
+function images1() {
   return src(["app/images/src/**/*"])
     .pipe(newer("app/images/dist"))
     .pipe(imagemin())
@@ -226,7 +227,7 @@ function images2() {
     .pipe(browserSync.stream());
 }
 
-function minifyJs() {
+function minifyJs1() {
   return src(['app/js/*.min.js'])
   .pipe(uglify())
   .pipe(dest('app/js'))
@@ -238,7 +239,7 @@ function minifyJs2() {
   .pipe(dest('EIT/js'))
 }
  
-function buildcopy() {
+function buildcopy1() {
   return src(
     [
       "{app/js,app/css}/*.min.*",
@@ -267,7 +268,7 @@ function buildcopy2() {
 }
 
 
-async function buildhtml() {
+async function buildhtml1() {
   let includes = new ssi("app/", "dist/", "/**/*.html");
   includes.compile();
   del("dist/components", { force: true });
@@ -279,7 +280,7 @@ async function buildhtml2() {
   del("dist/components", { force: true });
 }
 
-function cleandist() {
+function cleandist1() {
   return del("dist/**/*", { force: true });
 }
 
@@ -288,12 +289,12 @@ function cleandist2() {
 }
 
 
-function startwatch() {
+function startwatch1() {
   watch(`app/styles/${preprocessor}/**/*`, { usePolling: true }, styles);
   watch(
     ["app/js/**/*.js", "!app/js/**/*.min.js"],
     { usePolling: true },
-    parallel(scriptsMain, scriptsSearch, scriptsListing, scriptsCharts, scriptsPostMessage)
+    parallel(scriptsMain2, scriptsSearch, scriptsListing, scriptsCharts, scriptsPostMessage)
   );
   watch(
     "app/images/src/**/*.{jpg,jpeg,png,webp,svg,gif}",
@@ -307,16 +308,16 @@ function startwatch() {
 }
 
 function startwatch2() {
-  watch(`EIT/styles/${preprocessor}/**/*`, { usePolling: true }, styles);
+  watch(`EIT/styles/${preprocessor}/**/*`, { usePolling: true }, styles2);
   watch(
     ["EIT/js/**/*.js", "!EIT/js/**/*.min.js"],
     { usePolling: true },
-    parallel(scriptsMain, scriptsSearch, scriptsListing, scriptsCharts, scriptsPostMessage)
+    parallel(scriptsMain2)
   );
   watch(
     "EIT/images/src/**/*.{jpg,jpeg,png,webp,svg,gif}",
     { usePolling: true },
-    images
+    images2
   );
   watch(`EIT/**/*.{${fileswatch}}`, { usePolling: true }).on(
     "change",
@@ -324,39 +325,39 @@ function startwatch2() {
   );
 }
 
-exports.scripts = series(scriptsMain, scriptsSearch, scriptsListing, scriptsCharts, scriptsPostMessage);
-exports.styles = styles;
-exports.images = images;
-exports.assets = series(scriptsMain, scriptsSearch, scriptsListing, scriptsCharts, scriptsPostMessage, styles, images);
-exports.build = series(
-  cleandist,
-  scriptsMain,
-  scriptsSearch,
-  scriptsListing,
-  scriptsCharts,
-  scriptsPostMessage,
-  minifyJs,
-  styles,
-  images,
-  buildcopy,
-  buildhtml
+exports.scripts1 = series(scriptsMain1, scriptsSearch1, scriptsListing1, scriptsCharts1, scriptsPostMessage1);
+exports.styles1 = styles1;
+exports.images1 = images1;
+exports.assets1 = series(scriptsMain1, scriptsSearch1, scriptsListing1, scriptsCharts1, scriptsPostMessage1, styles1, images1);
+exports.build1 = series(
+  cleandist1,
+  scriptsMain1,
+  scriptsSearch1,
+  scriptsListing1,
+  scriptsCharts1,
+  scriptsPostMessage1,
+  minifyJs1,
+  styles1,
+  images1,
+  buildcopy1,
+  buildhtml1
 );
-exports.default = series(
-  scriptsMain,
-  scriptsSearch,
-  scriptsListing,
-  scriptsCharts,
-  scriptsPostMessage,
-  styles,
-  images,
-  parallel(browsersync, startwatch)
+exports.lt = series(
+  scriptsMain1,
+  scriptsSearch1,
+  scriptsListing1,
+  scriptsCharts1,
+  scriptsPostMessage1,
+  styles1,
+  images1,
+  parallel(browsersync1, startwatch1)
 );
 
 exports.scripts2 = scriptsMain2;
 exports.styles2 = styles2;
 exports.images2 = images2;
 exports.assets2 = series(scriptsMain2, styles2, images2);
-exports.build__eit = series(
+exports.build2 = series(
   cleandist2,
   scriptsMain2,
   minifyJs2,
