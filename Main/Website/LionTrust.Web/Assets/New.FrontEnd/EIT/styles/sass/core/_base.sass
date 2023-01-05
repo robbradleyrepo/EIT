@@ -1,28 +1,25 @@
-$fontsize: 16px 
-$textcolor: $c-black 
-$lineheight: 1.4 
-$userfont:  sans-serif 
-$font-family-bold: sans-serif
-$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif 
+$f-nav-primary: "gotham"
+$f-gotham: "gotham"
+$f-gotham-book: "gotham-book"
+$f-futura: "futura"
+$f-textsize: 16px
+$line-height: 1.4
 
 $body-bg: $c-white
 $body-text: $c-black
-$body-font: 'gotham'
-$text-size: 16px
-$line-height: 1.4
+$body-font: $f-gotham
 
-html 
-	font-size: 16px 
+html  
 	scroll-behavior: smooth 
 	@media screen and (prefers-reduced-motion: reduce) 
         scroll-behavior: auto 
 body 
 	width: 100% 
 	background: $body-bg 
-	color: $body-text 
-	font-family: $body-font
-	font-weight: 300
-	font-size: $text-size
+	color: $c-black 
+	font-family: $f-gotham
+	font-weight: normal
+	font-size: $f-textsize
 	-webkit-font-smoothing: auto
 	line-height: $line-height
 	min-width: 320px 
@@ -38,11 +35,16 @@ body
 		width: 100% 
 	.fancybox-content 
 		background: $c-black
+
+h1 
+	font-family: $f-gotham
+	font-weight: normal    
 a 
 	text-decoration: none
 	transition: color 150ms ease-in-out
 p
-	// @mixin p-1-book-20 
+	font-family: $f-gotham
+	font-weight: normal
 ul 
 	list-style-type: none 
 	padding: 0
