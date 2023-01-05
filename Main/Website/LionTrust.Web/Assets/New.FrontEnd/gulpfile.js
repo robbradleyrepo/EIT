@@ -281,14 +281,9 @@ async function buildhtml2() {
   del("dist/components", { force: true });
 }
 
-function cleandist1() {
+function cleandist() {
   return del("dist/**/*", { force: true });
 }
-
-function cleandist2() {
-  return del("dist/EIT/**/*", { force: true });
-}
-
 
 function startwatch1() {
   watch(`app/styles/${preprocessor}/**/*`, { usePolling: true }, styles1);
@@ -331,7 +326,7 @@ exports.styles1 = styles1;
 exports.images1 = images1;
 exports.assets1 = series(scriptsMain1, scriptsSearch1, scriptsListing1, scriptsCharts1, scriptsPostMessage1, styles1, images1);
 exports.build__LT = series(
-  cleandist1,
+  cleandist,
   scriptsMain1,
   scriptsSearch1,
   scriptsListing1,
@@ -359,7 +354,7 @@ exports.styles2 = styles2;
 exports.images2 = images2;
 exports.assets2 = series(scriptsMain2, styles2, images2);
 exports.build__EIT = series(
-  cleandist2,
+  cleandist,
   scriptsMain2,
   minifyJs2,
   styles2,
