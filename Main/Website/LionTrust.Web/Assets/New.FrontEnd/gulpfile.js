@@ -1,3 +1,4 @@
+// all functions with postfix of "1" refer to app/ (LT)
 // all functions with postfix of "2" refer to EIT/
 
 let preprocessor = "sass", // Preprocessor (sass, less, styl); 'sass' also work with the Scss
@@ -290,16 +291,16 @@ function cleandist2() {
 
 
 function startwatch1() {
-  watch(`app/styles/${preprocessor}/**/*`, { usePolling: true }, styles);
+  watch(`app/styles/${preprocessor}/**/*`, { usePolling: true }, styles1);
   watch(
     ["app/js/**/*.js", "!app/js/**/*.min.js"],
     { usePolling: true },
-    parallel(scriptsMain2, scriptsSearch, scriptsListing, scriptsCharts, scriptsPostMessage)
+    parallel(scriptsMain1, scriptsSearch1, scriptsListing1, scriptsCharts1, scriptsPostMessage1)
   );
   watch(
     "app/images/src/**/*.{jpg,jpeg,png,webp,svg,gif}",
     { usePolling: true },
-    images
+    images1
   );
   watch(`app/**/*.{${fileswatch}}`, { usePolling: true }).on(
     "change",
@@ -329,7 +330,7 @@ exports.scripts1 = series(scriptsMain1, scriptsSearch1, scriptsListing1, scripts
 exports.styles1 = styles1;
 exports.images1 = images1;
 exports.assets1 = series(scriptsMain1, scriptsSearch1, scriptsListing1, scriptsCharts1, scriptsPostMessage1, styles1, images1);
-exports.build1 = series(
+exports.build__LT = series(
   cleandist1,
   scriptsMain1,
   scriptsSearch1,
@@ -342,7 +343,7 @@ exports.build1 = series(
   buildcopy1,
   buildhtml1
 );
-exports.lt = series(
+exports.dev__LT = series(
   scriptsMain1,
   scriptsSearch1,
   scriptsListing1,
@@ -357,7 +358,7 @@ exports.scripts2 = scriptsMain2;
 exports.styles2 = styles2;
 exports.images2 = images2;
 exports.assets2 = series(scriptsMain2, styles2, images2);
-exports.build2 = series(
+exports.build__EIT = series(
   cleandist2,
   scriptsMain2,
   minifyJs2,
@@ -366,7 +367,7 @@ exports.build2 = series(
   buildcopy2,
   buildhtml2
 );
-exports.eit = series(
+exports.dev__EIT = series(
   scriptsMain2,
   styles2,
   images2,
