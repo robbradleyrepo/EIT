@@ -1,8 +1,39 @@
-$breakpoints: (mobile: 0, mobile-large: 480, tablet: 768, desktop: 992, desktop-grid-break-large: 1200, desktop-large: 1440) 
-
-
+// legacy
+// $breakpoints: (mobile: 0, mobile-large: 480, tablet: 768, desktop: 992, desktop-grid-break-large: 1200, desktop-large: 1440) 
 // $grid-gutter-widths: ( xs: 20px, sm: 20px, md: 30px, lg: 30px, xl: 30px )
 // $grid-gutter-width: $grid-gutter-widths
 // $gutter: $grid-gutter-widths
 // $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px )
 // $container-max-widths: ( sm: 540px, md: 720px, lg: 960px, xl: 1140px)
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px
+
+// Small tablets (portrait view)
+$screen-md-min: 768px
+
+// Tablets and small desktops
+$screen-lg-min: 992px
+
+// Large tablets and desktops
+$screen-xl-min: 1200px
+
+@mixin sm
+	@media (min-width: #{$screen-sm-min})
+        @content
+@mixin md
+    @media (min-width: #{$screen-md-min})
+        @content
+@mixin lg
+    @media (min-width: #{$screen-lg-min})
+        @content
+@mixin xl
+    @media (min-width: #{$screen-xl-min})
+        @content
+
+@mixin rwd($screen)
+    @media (min-width: $screen+'px')
+        @content
+
+ 
+
