@@ -3,10 +3,33 @@
 ## Start project
 for start project clone this repository and run ```npm i```
 
+# Update 2023
+
+FE Env has been updated to incorporate EIT/ project which sits parallel to app/ (LT as before)
+
+Both projects work successfully in isolation from one another as reflected by isolated
+gulp tasks, refactored and extended accordingly.
+
 ## Main Gulpfile.js options:
 
-* ```gulp``` : run default gulp task (scripts, images, styles, browsersync, startwatch)
-* ```build```: project build
+## LionTrust Project:
+
+Unaffected by update, except for new gulp commands:
+
+* ```gulp dev__LT``` : run default gulp task (scripts, images, styles, browsersync, startwatch)
+* ```gulp build__LT```: project build
+
+
+## Edinburgh Investment Trust Project:
+
+* ```gulp dev__EIT``` : run default gulp task (scripts, images, styles, browsersync, startwatch)
+* ```gulp build__EIT```: project build
+
+## Destination dirs
+
+* LT: ```dist/``` 
+* EIT: ```dist/EIT/``` 
+
 
 ## Rules
 * All scripts located in ```app/js/app.js | app.min.js```
