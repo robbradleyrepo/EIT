@@ -4,10 +4,10 @@ header
     position: relative
     width: 100% 
     min-height: max-content
-    // @include breakpoint(desktop, up)
-    //     min-height: 36vw
-    // @include breakpoint(desktop-large, up)
-    //     min-height: 36vw
+    @include lg
+        min-height: 36vw
+    @include xl
+        min-height: 36vw
         
 section, article
     &.u-edge
@@ -24,10 +24,8 @@ section, article
     max-width: $v-max-width
     margin: 0 auto
     padding: 0 20px
-    // @include breakpoint(tablet, up)
-    //     padding: 0 30px 
+    @include md
+        padding: 0 30px 
 
-.grid__item 
-    @include xl
-        background: green
+.grid__item  
     

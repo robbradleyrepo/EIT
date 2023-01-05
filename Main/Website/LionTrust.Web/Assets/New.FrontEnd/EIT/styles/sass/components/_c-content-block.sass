@@ -6,11 +6,12 @@
         font-weight: normal
         font-size: 32px
         line-height: 38px
-        color: $c-orange
-        // @extend .mb-3
-        // @include breakpoint(desktop, up)
-        //     font-size: 36px
-        //     line-height: 42px
+        color: $c-orange 
+        @include p(6)
+        @include lg
+            font-size: 36px
+            line-height: 42px 
+            @include p(2)
         &:empty
             display: none
     p 
@@ -19,9 +20,9 @@
         font-size: 14px
         line-height: 20px
         color: $c-black
-        // @include breakpoint(desktop, up)
-        //     font-size: 16px
-        //     line-height: 22px
+        @include lg
+            font-size: 16px
+            line-height: 22px
         &.bold
             font-weight: 500
         &:empty
@@ -31,8 +32,8 @@
 
     &__featured-image
         display: none
-        // @include breakpoint(desktop-large, up)
-        //     display: block
+        @include lg
+            display: block
 
     &__cta
         // @extend .mt-4

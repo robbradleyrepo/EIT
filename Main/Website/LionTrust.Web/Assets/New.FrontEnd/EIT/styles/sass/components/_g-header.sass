@@ -12,8 +12,8 @@
     &__brand
         display: block
         margin: auto
-        // @include breakpoint(desktop, up)
-        //     margin: 0
+        @include lg
+            margin: 0
         img
             max-width: 157px
     
@@ -24,8 +24,8 @@
         text-decoration: none
         *
             transition: all 200ms ease
-        // @include breakpoint(desktop, up)
-        //     display: none   
+        @include lg
+            display: none   
         hr
             margin-bottom: 0
         span
@@ -44,8 +44,8 @@
 
     .g-nav-desktop
         display: none
-        // @include breakpoint(desktop, up)
-        //     display: block
+        @include lg
+            display: block
         ul
             display: flex
             flex-direction: row
@@ -56,10 +56,10 @@
             li 
                 position: relative
                 margin: 0 1vw
-                // @include breakpoint(desktop, up)
-                //     margin: 0 1.5vw
-                // @include breakpoint(desktop-grid-break-large, up)
-                //     margin: 0 2vw 
+                @include lg
+                    margin: 0 1.5vw
+                @include xl
+                    margin: 0 2vw 
                 &:last-child
                     margin-right: 0          
                 a
@@ -73,7 +73,7 @@
                     text-decoration: none
                     text-transform: uppercase 
                     @extend %animate-underline
-                    // @include breakpoint(desktop-grid-break-large, up)
-                        // font-size: 16px 
+                    @include lg
+                        font-size: 16px 
                     &:hover, &:active, &.active
                         color: $c-orange 

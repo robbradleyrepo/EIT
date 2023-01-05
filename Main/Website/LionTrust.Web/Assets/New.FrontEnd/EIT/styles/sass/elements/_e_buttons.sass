@@ -13,8 +13,8 @@
 		letter-spacing: 1.6px
 		text-decoration: none
 		transition: all 150ms ease-out
-		// @include breakpoint(tablet, up)
-		// 	font-size: 16px
+		@include md
+			font-size: 16px
 		&__primary
 			background: $c-orange
 			color: $c-white
@@ -36,9 +36,9 @@
 				
 		&__container
 			display: flex
-			flex-direction: row
+			flex-direction: column
 			row-gap: 30px
 			column-gap: 30px
 			justify-content: left 
-			// +breakpoint(mobile, down)
-			// 	flex-direction: column 
+			@include sm
+				flex-direction: row 
