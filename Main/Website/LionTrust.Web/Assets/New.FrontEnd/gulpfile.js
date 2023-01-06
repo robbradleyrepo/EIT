@@ -253,7 +253,7 @@ function buildcopy1() {
 	  "app/js/frame-manager.js"
     ],
     { base: "app/" }
-  ).pipe(dest("dist"));
+  ).pipe(dest("dist/LT/"));
 }
 
 function buildcopy2() {
@@ -270,15 +270,16 @@ function buildcopy2() {
 
 
 async function buildhtml1() {
-  let includes = new ssi("app/", "dist/", "/**/*.html");
+  let includes = new ssi("app/", "dist/LT/", "/**/*.html");
   includes.compile();
-  del("dist/components", { force: true });
+  del("dist/LT/components", { force: true });
 }
+
 
 async function buildhtml2() {
   let includes = new ssi("EIT/", "dist/EIT/", "/**/*.html");
   includes.compile();
-  del("dist/components", { force: true });
+  del("dist/EIT/components", { force: true });
 }
 
 function cleandist() {
@@ -325,7 +326,13 @@ exports.scripts1 = series(scriptsMain1, scriptsSearch1, scriptsListing1, scripts
 exports.styles1 = styles1;
 exports.images1 = images1;
 exports.assets1 = series(scriptsMain1, scriptsSearch1, scriptsListing1, scriptsCharts1, scriptsPostMessage1, styles1, images1);
-exports.build__LT = series(
+
+exports.scripts2 = scriptsMain2;
+exports.styles2 = styles2;
+exports.images2 = images2;
+exports.assets2 = series(scriptsMain2, styles2, images2);
+
+exports.build = series(
   cleandist,
   scriptsMain1,
   scriptsSearch1,
@@ -336,8 +343,15 @@ exports.build__LT = series(
   styles1,
   images1,
   buildcopy1,
-  buildhtml1
+  buildhtml1,
+  scriptsMain2,
+  minifyJs2,
+  styles2,
+  images2,
+  buildcopy2,
+  buildhtml2
 );
+
 exports.dev__LT = series(
   scriptsMain1,
   scriptsSearch1,
@@ -349,19 +363,6 @@ exports.dev__LT = series(
   parallel(browsersync1, startwatch1)
 );
 
-exports.scripts2 = scriptsMain2;
-exports.styles2 = styles2;
-exports.images2 = images2;
-exports.assets2 = series(scriptsMain2, styles2, images2);
-exports.build__EIT = series(
-  cleandist,
-  scriptsMain2,
-  minifyJs2,
-  styles2,
-  images2,
-  buildcopy2,
-  buildhtml2
-);
 exports.dev__EIT = series(
   scriptsMain2,
   styles2,

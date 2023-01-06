@@ -7,9 +7,6 @@ for start project clone this repository and run ```npm i```
 
 FE Env has been updated to incorporate EIT/ project which sits parallel to app/ (LT as before)
 
-Both projects work successfully in isolation from one another as reflected by isolated
-gulp tasks, refactored and extended accordingly.
-
 ## Main Gulpfile.js options:
 
 ## LionTrust Project:
@@ -17,17 +14,22 @@ gulp tasks, refactored and extended accordingly.
 Unaffected by update, except for new gulp commands:
 
 * ```gulp dev__LT``` : run default gulp task (scripts, images, styles, browsersync, startwatch)
-* ```gulp build__LT```: project build
+* ```gulp build```: project build
 
 
 ## Edinburgh Investment Trust Project:
 
 * ```gulp dev__EIT``` : run default gulp task (scripts, images, styles, browsersync, startwatch)
-* ```gulp build__EIT```: project build
+* ```gulp build```: project build
+
+```gulp build``` command will execute BOTH projects concurrently.
+
+Both projects work successfully in isolation from one another as reflected by isolated
+gulp tasks, refactored and extended accordingly.
 
 ## Destination dirs
 
-* LT: ```dist/``` 
+* LT: ```dist/LT/``` 
 * EIT: ```dist/EIT/``` 
 
 
