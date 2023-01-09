@@ -1,11 +1,12 @@
 $v-max-width: 1440px
+$v-max-width-narrow: 800px
 
 header
     position: relative
     width: 100% 
     min-height: max-content
     @include lg
-        min-height: 36vw
+        min-height: 52vw
     @include xl
         min-height: 36vw
         
@@ -23,6 +24,9 @@ section, article
     padding: 0 20px
     @include md
         padding: 0 30px 
+    &.narrow
+        max-width: $v-max-width-narrow
+        margin: 0 auto
 
 .grid__item  
     

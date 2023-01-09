@@ -13,13 +13,13 @@ FE Env has been updated to incorporate EIT/ project which sits parallel to app/ 
 
 Unaffected by update, except for new gulp commands:
 
-* ```gulp dev__LT``` : run default gulp task (scripts, images, styles, browsersync, startwatch)
+* ```gulp lt``` : run default gulp task (scripts, images, styles, browsersync, startwatch)
 * ```gulp build```: project build
 
 
 ## Edinburgh Investment Trust Project:
 
-* ```gulp dev__EIT``` : run default gulp task (scripts, images, styles, browsersync, startwatch)
+* ```gulp eit``` : run default gulp task (scripts, images, styles, browsersync, startwatch)
 * ```gulp build```: project build
 
 ```gulp build``` command will execute BOTH projects concurrently.

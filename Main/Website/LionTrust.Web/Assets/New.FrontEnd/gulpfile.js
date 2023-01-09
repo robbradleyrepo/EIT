@@ -352,7 +352,7 @@ exports.build = series(
   buildhtml2
 );
 
-exports.dev__LT = series(
+exports.lt = series(
   scriptsMain1,
   scriptsSearch1,
   scriptsListing1,
@@ -363,7 +363,7 @@ exports.dev__LT = series(
   parallel(browsersync1, startwatch1)
 );
 
-exports.dev__EIT = series(
+exports.eit = series(
   scriptsMain2,
   styles2,
   images2,
