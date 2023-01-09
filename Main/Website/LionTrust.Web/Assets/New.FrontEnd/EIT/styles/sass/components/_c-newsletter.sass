@@ -1,0 +1,23 @@
+.c-newsletter
+    background-color: $c-navy
+    background-image: url("../images/bg-signup.png")
+    background-repeat: no-repeat
+    background-position: cover
+    .c-content
+        text-align: center
+        margin: auto
+        @include py(5)
+    p
+        font-weight: 300
+        text-align: center
+        font-size: 26px
+        line-height: 36px
+        color: $c-white
+        @include mt(0)
+        @include mb(4)
+        @include lg
+            font-size: 36px
+            line-height: 48px
+        &:empty
+            display: none
+    

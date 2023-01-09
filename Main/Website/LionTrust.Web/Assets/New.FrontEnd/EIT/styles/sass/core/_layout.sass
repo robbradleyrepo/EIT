@@ -1,5 +1,6 @@
 $v-max-width: 1440px
-$v-max-width-narrow: 800px
+$v-max-width-md: 800px
+$v-max-width-sm: 630px
 
 header
     position: relative
@@ -10,7 +11,7 @@ header
     @include xl
         min-height: 36vw
         
-section, article
+section, article, aside
     &.u-edge
         position: relative 
         @include my(4)
@@ -24,8 +25,11 @@ section, article
     padding: 0 20px
     @include md
         padding: 0 30px 
-    &.narrow
-        max-width: $v-max-width-narrow
+    &.md
+        max-width: $v-max-width-md
+        margin: 0 auto
+    &.sm
+        max-width: $v-max-width-sm
         margin: 0 auto
 
 .grid__item  
