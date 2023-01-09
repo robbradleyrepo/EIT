@@ -1,25 +1,29 @@
-.c-list-block
-    h1
-        text-align:  center
+.c-copy-block
+    font-family: $f-gotham
+    font-weight: normal
+    h2
+        text-align:  left
         font-size: 32px
         line-height: 38px
-        color: $c-orange
-        @include mb(4)
-        @include lg
-            @include mb(5)
+        color: $c-orange 
             font-size: 36px
             line-height: 42px
         &:empty
             display: none
-    ul
-        @include mx(4)
+
+    .e-list-block 
+        max-width: $v-max-width-sm
+        margin: auto
+        padding: inherit
+        h2
+            text-align:  center
         li
             line-height: 160%
-            margin-left: 5px
+            margin-left: 10px
             text-indent: -35px
             margin-bottom: 30px
             font-weight: 400
-           
+            
             &::before
                 border: 2px solid $c-orange
                 border-radius: 50%
@@ -29,4 +33,4 @@
                 height: 10px
                 width: 10px
                 position: relative
-                bottom: -2px
+                bottom: -1px
