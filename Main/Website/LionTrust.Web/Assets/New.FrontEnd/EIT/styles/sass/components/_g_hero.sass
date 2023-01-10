@@ -10,4 +10,19 @@
         
     p
         @include mb(4)
-        color: $c-white       
+        color: $c-white
+    
+    &--article
+        text-align: center
+        
+        .u-container
+            max-width: 780px
+            @include pb(5)
+        h1
+            color: $c-orange
+            font-size: 28px
+            line-height: 30px
+            @include md
+                font-size: 48px
+                line-height: 56px
+            
