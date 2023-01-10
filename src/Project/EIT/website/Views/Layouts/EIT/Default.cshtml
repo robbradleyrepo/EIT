@@ -13,12 +13,16 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <title>@seoItem.BrowserTitle</title>
+
+    <link rel="icon" href="/dist/EIT/favicon.ico">
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="facebook-domain-verification" content="l4k5mtgmseno37nys4690q1h7swfn2" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>@seoItem.BrowserTitle</title>
+
     @if (!string.IsNullOrEmpty(seoItem.MetaDescription))
     {
         <meta name="description" content="@seoItem.MetaDescription">
@@ -32,14 +36,17 @@
         <meta name="robots" content="@seoItem.MetaRobots.Content">
     }
     @Html.Sitecore().VisitorIdentification()
-    <link rel="icon" href="/dist/images/favicon.ico">
-    <link rel="stylesheet" href="/dist/css/styles.min.css">
+    <meta name="msapplication-TileColor" content="#000">
+    <meta name="theme-color" content="#000">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="/dist/EIT/css/styles.min.css">
     <style>
         [v-cloak] {
             display: none;
         }
     </style>
     <link rel="canonical" href="@Html.Sitecore().CurrentItem.GetCanonicalUrl()">
+    <script src="/dist/EIT/js/app.min.js"></script>
     @Html.Sitecore().Placeholder("head-script")
 </head>
 
@@ -50,69 +57,17 @@
 <body class="@isExperienceEditor">
     @Html.Sitecore().Placeholder("body-script")
     @Html.Sitecore().Placeholder("header")
-    <main id="main" role="main" class="main-content">
+    <main itemscope itemprop="mainContentOfPage">
         @Html.Sitecore().Placeholder("main")
-        @if (Sitecore.Context.PageMode.IsExperienceEditor)
-        {
-            @Html.Sitecore().Placeholder("lit-overlay")
-        }
     </main>
     @Html.Sitecore().Placeholder("footer")
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script src="/dist/js/app.min.js"></script>
-    <script src="~/Scripts/jquery.validate.min.js"></script>
-    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
-    <script src="/dist/js/listing-page.min.js"></script>
-    <script src="/dist/js/charts-page.min.js"></script>
-    <script src="/dist/js/shuffle.js"></script>
-    <script src="/dist/js/scrollnav.min.umd.js"></script>
-    @if (!Sitecore.Context.PageMode.IsExperienceEditor && Html.Sitecore().CurrentItem.HasComponent(Constants.Renderings.FundCentreRenderingId))
-    {
-        <script src="/dist/js/postmessage.min.js"></script>
-    }
-    @if (!Sitecore.Context.PageMode.IsExperienceEditor && Html.Sitecore().CurrentItem.HasComponent(Constants.Renderings.IFrameModuleRenderingId))
-    {
-        <script src="/dist/js/frame-manager.js"></script>
-    }
-    @if (!Sitecore.Context.PageMode.IsExperienceEditor && Html.Sitecore().CurrentItem.HasComponent(Constants.Renderings.IFrameCASModuleRenderingId))
-    {
-        <script src="/dist/js/frame-manager.js"></script>
-        <script type="text/javascript" src="https://otp.tools.investis.com/assets/cas_refresh/scripts/cas-tool-helper.min.js"></script>
-    }
-    @if (Html.Sitecore().CurrentItem.HasComponent(Constants.Renderings.MediaGalleryRenderingId))
-    {
-        <script src="/dist/js/components/galleryApp.js"></script>
-    }
     @Html.RenderFormStyles()
     @Html.RenderFormScripts()
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script src="https://pagecdn.io/lib/zepto/1.2.0/zepto.min.js"></script>
+
     @if (!Sitecore.Context.PageMode.IsExperienceEditor)
     {
         <script src="/assets/js/addAnalyticsTracking.js"></script>
     }
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    @if (Html.Sitecore().CurrentItem.TemplateID.ToString() == Constants.PageTypes.HomeTemplateId)
-    {
-        <div class="paralax-circle">
-            <div class="paralax-circle__item" style="transform: translate3d(0px, 92.9684px, 0px);"></div>
-        </div>
-    }
-
-    <div class="lit-overlay__wrapper">
-        @Html.Sitecore().Placeholder("lit-overlay")
-    </div>
 </body>
 </html>

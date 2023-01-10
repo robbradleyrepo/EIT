@@ -25,7 +25,7 @@
                     using (Html.Glass().BeginRenderLinkWithGoal(Model.HomeItem, p => p.MyLionTrust, Model.HomeItem.MyLiontrustGoal,
                         new System.Collections.Specialized.NameValueCollection { { "class", "header-navbar__user-link" } }, isEditable: true))
                     {
-                        <img src="/dist/images/components/header/user-dark.svg" alt="user profile">
+                        <img src="/dist/LT/images/components/header/user-dark.svg" alt="user profile">
                         @Model.HomeItem.MyLiontrustName
                     }
                 }
@@ -33,7 +33,7 @@
                 {
                     using (Html.Glass().BeginRenderLink(Model.HomeItem, p => p.LionHub, new { @class = "header-navbar__user-lionhub-link" }, isEditable: true))
                     {
-                        <img src="/dist/images/components/header/user-dark.svg" alt="user profile">
+                        <img src="/dist/LT/images/components/header/user-dark.svg" alt="user profile">
                         @Model.HomeItem.LionHubName
                     }
                 }

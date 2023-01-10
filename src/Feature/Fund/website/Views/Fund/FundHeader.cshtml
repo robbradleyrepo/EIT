@@ -5,7 +5,7 @@
 @model LionTrust.Feature.Fund.Models.FundHeaderViewModel
 
 <header class="header header-bg-gradient header-hero d-flex flex-column justify-content-between"
-        style="@(Model.Data.BackgroundImage != null ? Model.Data.BackgroundImage.GetSafeBackgroundImageStyle("/dist/images/components/header/fund-detail-bg.png") : string.Empty)">
+        style="@(Model.Data.BackgroundImage != null ? Model.Data.BackgroundImage.GetSafeBackgroundImageStyle("/dist/LT/images/components/header/fund-detail-bg.png") : string.Empty)">
     @Html.Sitecore().Placeholder("header-login")
     <section class="container">
         @Html.Sitecore().Placeholder("navigation")

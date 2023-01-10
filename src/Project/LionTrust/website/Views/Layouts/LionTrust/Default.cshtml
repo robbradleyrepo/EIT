@@ -32,8 +32,8 @@
         <meta name="robots" content="@seoItem.MetaRobots.Content">
     }
     @Html.Sitecore().VisitorIdentification()
-    <link rel="icon" href="/dist/images/favicon.ico">
-    <link rel="stylesheet" href="/dist/css/styles.min.css">
+    <link rel="icon" href="/dist/LT/images/favicon.ico">
+    <link rel="stylesheet" href="/dist/LT/css/styles.min.css">
     <style>
         [v-cloak] {
             display: none;
@@ -119,35 +119,35 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="/dist/js/app.min.js"></script>
+    <script src="/dist/LT/js/app.min.js"></script>
     <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
-    <script src="/dist/js/listing-page.min.js"></script>
-    <script src="/dist/js/charts-page.min.js"></script>
-    <script src="/dist/js/shuffle.js"></script>
-    <script src="/dist/js/scrollnav.min.umd.js"></script>
+    <script src="/dist/LT/js/listing-page.min.js"></script>
+    <script src="/dist/LT/js/charts-page.min.js"></script>
+    <script src="/dist/LT/js/shuffle.js"></script>
+    <script src="/dist/LT/js/scrollnav.min.umd.js"></script>
     @if (!Sitecore.Context.PageMode.IsExperienceEditor && Html.Sitecore().CurrentItem.HasComponent(Constants.Renderings.FundCentreRenderingId))
     {
-        <script src="/dist/js/postmessage.min.js"></script>
+        <script src="/dist/LT/js/postmessage.min.js"></script>
     }
     @if (!Sitecore.Context.PageMode.IsExperienceEditor && Html.Sitecore().CurrentItem.HasComponent(Constants.Renderings.IFrameModuleRenderingId))
     {
-        <script src="/dist/js/frame-manager.js"></script>
+        <script src="/dist/LT/js/frame-manager.js"></script>
     }
     @if (!Sitecore.Context.PageMode.IsExperienceEditor && Html.Sitecore().CurrentItem.HasComponent(Constants.Renderings.IFrameCASModuleRenderingId))
     {
-        <script src="/dist/js/frame-manager.js"></script>
+        <script src="/dist/LT/js/frame-manager.js"></script>
         <script type="text/javascript" src="https://otp.tools.investis.com/assets/cas_refresh/scripts/cas-tool-helper.min.js"></script>
     }
     @if (Html.Sitecore().CurrentItem.HasComponent(Constants.Renderings.MediaGalleryRenderingId))
     {
-        <script src="/dist/js/components/galleryApp.js"></script>
+        <script src="/dist/LT/js/components/galleryApp.js"></script>
     }
     @Html.RenderFormStyles()
     @Html.RenderFormScripts()
     @if (Html.Sitecore().CurrentItem.TemplateID.ToString() == Constants.PageTypes.SearchPageTemplateId)
     {
-        <script src="/dist/js/search-page.min.js"></script>
+        <script src="/dist/LT/js/search-page.min.js"></script>
     }
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
