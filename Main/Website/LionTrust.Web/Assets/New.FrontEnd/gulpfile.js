@@ -72,7 +72,7 @@ function browsersync2() {
     ghostMode: { clicks: false },
     notify: false,
     online: true,
-    // tunnel: 'yousutename'
+    tunnel: true
   });
 }
 

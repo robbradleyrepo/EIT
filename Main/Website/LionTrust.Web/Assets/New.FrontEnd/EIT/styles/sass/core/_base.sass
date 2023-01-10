@@ -2,6 +2,7 @@ $f-nav-primary: "gotham"
 $f-gotham: "gotham"
 $f-gotham-book: "gotham-book"
 $f-futura: "futura"
+$f-calibri: "calibri"
 $f-textsize: 16px
 $line-height: 1.4
 
@@ -63,3 +64,21 @@ dl
     	font-weight: bold 
 	dd 
 		margin: 0 
+
+a
+	&.animate
+		color: $c-orange
+		@extend %animate-underline 
+		display: inline-block
+		i 
+			display: inline-block
+			top: 2px
+			font-size: 12px
+			@include ml(1)
+			transform: translateX(-1px) 
+			transition: all 200ms ease-in
+			filter: brightness(90%)
+		&:hover, &:active
+			i    
+				transform: translateX(2px)
+				filter: brightness(100%)
