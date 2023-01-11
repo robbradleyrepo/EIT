@@ -1,17 +1,27 @@
-#LionTrust Flats Starter
+# LionTrust & Edinburgh Investment Trust FE
 
-## Start project
-for start project clone this repository and run ```npm i```
+Update 2023:
 
-# Update 2023
+FE Env has been updated to incorporate EIT/ project for Edinburgh Investment Trust site
 
-FE Env has been updated to incorporate EIT/ project which sits parallel to app/ (LT as before)
+Both projects work successfully in isolation from one another in DEVELOPMENT mode. 
 
-## Main Gulpfile.js options:
+BUILD task will build BOTH projects into /dist/**/
 
-## LionTrust Project:
+## Installation
 
-Unaffected by update, except for new gulp commands:
+Install node.js
+
+Install nvm - https://github.com/nvm-sh/nvm
+
+Run ```nvm install 12.9.1```
+
+Run ```nvm use 12.9.1```
+
+Run ```npm i```
+ 
+
+## LionTrust Project: 
 
 * ```gulp lt``` : run default gulp task (scripts, images, styles, browsersync, startwatch)
 * ```gulp build```: project build
@@ -24,26 +34,25 @@ Unaffected by update, except for new gulp commands:
 
 ```gulp build``` command will execute BOTH projects concurrently.
 
-Both projects work successfully in isolation from one another as reflected by isolated
-gulp tasks, refactored and extended accordingly.
 
-## Destination dirs
+
+# Destination dirs
 
 * LT: ```dist/LT/``` 
 * EIT: ```dist/EIT/``` 
 
-## Asset Paths (both builds)
+# Asset Paths (both builds)
 
 * HTML: ```<img src="images/***" />```
 * SASS: ```background-image: url("../images/***")```
 
-## EIT Specific
+# EIT Specific
 
 Bootstrap has been stripped out. 
 
 New Breakpoint, Spacing and Grid system now work inconjunction, allowing nested mixins to play nice.
 
-# Grid
+## Grid
 
 GridilyDidily
 
@@ -51,7 +60,7 @@ GridilyDidily
 
 http://philippkuehn.github.io/gridilydidily/
 
-# Spacings
+## Spacings
 
 Sass Spacing
 
@@ -59,11 +68,11 @@ Sass Spacing
 
 https://github.com/digitaledgeit/sass-spacing
 
-# Breakpoints
+## Breakpoints
 
 ```EIT\styles\sass\core\_breakpoints.sass```
 
-# BEMIT 
+## BEMIT 
 
 Class prefixes
 
