@@ -35,16 +35,18 @@ Run ```npm i```
 ```gulp build``` command will execute BOTH projects concurrently.
 
 
-
-# Destination dirs
+## Destination dirs
 
 * LT: ```dist/LT/``` 
 * EIT: ```dist/EIT/``` 
 
-# Asset Paths (both builds)
+
+## Declaring asset paths
 
 * HTML: ```<img src="images/***" />```
 * SASS: ```background-image: url("../images/***")```
+
+
 
 # EIT Specific
 
@@ -74,7 +76,7 @@ https://github.com/digitaledgeit/sass-spacing
 
 ## BEMIT 
 
-Class prefixes
+Class prefixes in play:
 
 ```t-***``` - Template
 ```u-***``` - Utility (Containers, Site Wrappers, Generic)
@@ -82,8 +84,9 @@ Class prefixes
 ```c-***``` - Component (Local)
 ```e-***``` - Element
 
+More info - https://gist.github.com/stephenway/a6145d9b4430e8c55a77
 
-## Rules
+# Rules
 * All scripts located in ```app/js/app.js | app.min.js```
 * Main ```sass``` files located in ```app/styles/sass/styles.*```
 * Each ```html component``` located in ```app/components```
@@ -92,7 +95,7 @@ Class prefixes
 * Main ```sass``` files located in ```EIT/styles/sass/styles.*```
 * Each ```html component``` located in ```EIT/components```
 
-##Include parts of HTML code:
+## Include parts of HTML code:
  You can import any part of the code using construction in any of html files:
 
  `<!--#include virtual="/components/GC001-Header.html" -->`
