@@ -1,0 +1,57 @@
+// wip
+    
+@keyframes fold
+    0% 
+        margin-bottom: -8px
+        visibility: visible
+        line-height: 0 
+        transform: rotate3d(1, 0, 0, -90deg)
+    33.333% 
+        margin-bottom: 4px
+        line-height: 16px
+        transform: rotate3d(1, 0, 0, 0deg)
+    66.667% 
+        margin-bottom: 2px
+        transform: rotate3d(1, 0, 0, 25deg)
+    100% 
+        margin-bottom: 0
+        visibility: visible
+        height: auto 
+        transform: rotate3d(1, 0, 0, 0deg)
+
+
+.e-tooltip
+    
+    &--info
+        display: block 
+        visibility: hidden 
+        overflow: hidden 
+        box-sizing: border-box 
+        height: 0 
+        margin-bottom: -8px 
+        cursor: help 
+        animation-name: fold 
+        animation-duration: 500ms 
+        animation-timing-function: ease-in 
+        animation-direction: reverse 
+        padding: 4px 16px
+        background: #bbb
+        color: #fff
+        font-weight: 600
+        font-size: 12px
+        line-height: 16px
+    
+    ::placeholder 
+        color: $c-white
+    
+    &--control
+        all: unset
+        &:hover
+            cursor: pointer
+        &:focus
+            + .e-tooltip--info
+                margin-bottom: 0 
+                height: auto 
+                visibility: visible 
+                animation: fold ease-in 500ms 
+                animation-direction: normal 

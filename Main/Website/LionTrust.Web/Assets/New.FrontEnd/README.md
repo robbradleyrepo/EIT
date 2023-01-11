@@ -60,7 +60,7 @@ GridilyDidily
 
 ```EIT\styles\sass\vendor\gridilydidily.scss```
 
-http://philippkuehn.github.io/gridilydidily/
+Usage - http://philippkuehn.github.io/gridilydidily/
 
 ## Spacings
 
@@ -68,25 +68,33 @@ Sass Spacing
 
 ```EIT\styles\sass\vendor\sass-spacing.scss```
 
-https://github.com/digitaledgeit/sass-spacing
+Usage (SASS) - https://github.com/digitaledgeit/sass-spacing
 
 ## Breakpoints
 
 ```EIT\styles\sass\core\_breakpoints.sass```
 
+Usage (SASS)
+
+* ``` @include sm ```
+* ``` @include md ```
+* ``` @include lg ```
+* ``` @include xl ```
+
 ## BEMIT 
 
 Class prefixes in play:
 
-```t-***``` - Template
-```u-***``` - Utility (Containers, Site Wrappers, Generic)
-```g-***``` - Component (Global)
-```c-***``` - Component (Local)
-```e-***``` - Element
+* ```t-***``` - Template
+* ```u-***``` - Utility (Containers, Site Wrappers, Generic)
+* ```g-***``` - Component (Global)
+* ```c-***``` - Component (Local)
+* ```e-***``` - Element
 
 More info - https://gist.github.com/stephenway/a6145d9b4430e8c55a77
 
-# Rules
+## Rules
+
 * All scripts located in ```app/js/app.js | app.min.js```
 * Main ```sass``` files located in ```app/styles/sass/styles.*```
 * Each ```html component``` located in ```app/components```
