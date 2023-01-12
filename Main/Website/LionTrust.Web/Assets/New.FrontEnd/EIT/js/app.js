@@ -25,6 +25,7 @@ window.$ = $;
 // import geographicalChart from "./components/geographicalChart";
 // import insightAuthor from "./components/insightAuthor";
 
+import scrollDetect from "./edge/scrolldetect"; 
 import mobileNav from "./edge/mobile-nav";
 import shareLink from "./edge/share-link"; 
 
@@ -48,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // preferenceCenter();
     // peopleNav();
     // modals();
+    scrollDetect();
     mobileNav();
     shareLink(); 
    

@@ -1,16 +1,6 @@
 $v-max-width: 1140px
 $v-max-width-md: 800px
-$v-max-width-sm: 630px
-
-// animate__delay-2s	2s
-// animate__delay-3s	3s
-// animate__delay-4s	4s
-// animate__delay-5s	5s
-
-// animate__slow	2s
-// animate__slower	3s
-// animate__fast	800ms
-// animate__faster	500ms
+$v-max-width-sm: 630px 
 
 body
     &.t-global 
@@ -22,6 +12,13 @@ body
             @include lg
                 min-height: 40vw
                 background-image: url("../images/hero-generic-desktop.png")
+        main
+            section, aside
+                &.u-edge
+                    opacity: 0
+                    transition: opacity .3s
+                    &.active
+                        opacity: 1
     &.t-article 
         header.g-header 
             background-image: url("../images/articlehero-mobile.png")
@@ -48,6 +45,7 @@ section, article, aside, footer
         &.zero-padding
             @include py(0)
 
+
 .u-container
     max-width: $v-max-width
     margin: 0 auto
@@ -71,3 +69,4 @@ section, article, aside, footer
         @extend .zero-margin
     .c-promo-author
         @include pt(0)
+    
