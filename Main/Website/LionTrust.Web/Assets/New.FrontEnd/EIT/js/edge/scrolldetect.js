@@ -1,16 +1,14 @@
-"use strict";
-var $ = require("jquery");
+"use strict"; 
 
 export default () => {
 
 	// Get all of the images that are marked up to fade in
 	const images = document.querySelectorAll('.js-lazyload-image');
-
-	const sections = document.querySelectorAll('.t-global main .u-edge');
+	const sections = document.querySelectorAll('.t-global main .u-edge:not(:first-child)');
 
 	let config = {
 		rootMargin: '0px',
-		threshold: .5
+		threshold: .3
 	};
 
 	let observer = new IntersectionObserver((entries) => {
@@ -28,14 +26,9 @@ export default () => {
 	});
 
 	function intersectionHandler(entry) {
-		const current = document.querySelector('.section.active');
 		const next = entry.target; 
-
-		if (current) {
-		current.classList.remove('active');
-		}
 		if (next) {
-		next.classList.add('active'); 
+			next.classList.add('active'); 
 		}
 	}
 
