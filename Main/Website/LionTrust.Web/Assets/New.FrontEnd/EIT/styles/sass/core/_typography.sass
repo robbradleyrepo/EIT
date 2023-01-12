@@ -1,5 +1,9 @@
 // https://codepen.io/piperhaywood/pen/vYWEgmb?editors=1100
 
+h1, h2, h3, h4, h5, h6
+	font-family: $f-gotham
+	font-weight: normal  
+    
 h1
     font-size: 36px
     line-height: 48px 
@@ -15,3 +19,46 @@ h2
     @include lg
         font-size: 36px
         line-height: 42px
+  
+a 
+	text-decoration: none
+	transition: color 150ms ease-in-out
+p
+	font-family: $f-gotham
+	font-weight: 400
+ul 
+	list-style-type: none 
+	padding: 0
+	margin: 0 
+	&.sg
+		list-style-type: circle
+		list-style-position: inside
+		margin: 40px 
+		margin-left: 0
+		li
+			a
+				font-weight: 500
+				color: $c-black
+dl 
+	dt 
+    	font-weight: bold 
+	dd 
+		margin: 0 
+
+a
+	&.animate
+		color: $c-orange
+		@extend %animate-underline 
+		display: inline-block
+		i 
+			display: inline-block
+			top: 2px
+			font-size: 12px
+			@include ml(1)
+			transform: translateX(-1px) 
+			transition: all 200ms ease-in
+			filter: brightness(90%)
+		&:hover, &:active
+			i    
+				transform: translateX(2px)
+				filter: brightness(100%)

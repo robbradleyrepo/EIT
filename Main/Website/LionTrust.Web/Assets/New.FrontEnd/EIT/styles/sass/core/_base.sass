@@ -24,64 +24,7 @@ body
 	-webkit-font-smoothing: auto
 	line-height: $line-height
 	min-width: 320px 
-	position: relative 
-	&.overflow-hidden
-		overflow-y: hidden 
-		position: fixed 
-		top: 0 
-		left: 0 
-		right: 0 
-		bottom: 0 
-		height: 100% 
-		width: 100% 
-	.fancybox-content 
-		background: $c-black
-
-h1, h2, h3, h4, h5, h6
-	font-family: $f-gotham
-	font-weight: normal    
-a 
-	text-decoration: none
-	transition: color 150ms ease-in-out
-p
-	font-family: $f-gotham
-	font-weight: 400
-ul 
-	list-style-type: none 
-	padding: 0
-	margin: 0 
-	&.sg
-		list-style-type: circle
-		list-style-position: inside
-		margin: 40px 
-		margin-left: 0
-		li
-			a
-				font-weight: 500
-				color: $c-black
-dl 
-	dt 
-    	font-weight: bold 
-	dd 
-		margin: 0 
-
-a
-	&.animate
-		color: $c-orange
-		@extend %animate-underline 
-		display: inline-block
-		i 
-			display: inline-block
-			top: 2px
-			font-size: 12px
-			@include ml(1)
-			transform: translateX(-1px) 
-			transition: all 200ms ease-in
-			filter: brightness(90%)
-		&:hover, &:active
-			i    
-				transform: translateX(2px)
-				filter: brightness(100%)
+	position: relative  
 
 .sr-only
     clip: rect(1px, 1px, 1px, 1px)
