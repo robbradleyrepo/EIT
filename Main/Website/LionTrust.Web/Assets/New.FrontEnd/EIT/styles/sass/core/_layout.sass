@@ -2,6 +2,16 @@ $v-max-width: 1140px
 $v-max-width-md: 800px
 $v-max-width-sm: 630px
 
+// animate__delay-2s	2s
+// animate__delay-3s	3s
+// animate__delay-4s	4s
+// animate__delay-5s	5s
+
+// animate__slow	2s
+// animate__slower	3s
+// animate__fast	800ms
+// animate__faster	500ms
+
 body
     &.t-global 
         header.g-header
@@ -25,6 +35,8 @@ body
             background-repeat: no-repeat
             background-position: bottom
             background-size: cover
+            @extend .animated
+            @extend .fadeIn
         
 section, article, aside, footer
     &.u-edge

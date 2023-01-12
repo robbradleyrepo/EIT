@@ -20,6 +20,10 @@ export default () => {
                 const self = $(this);
                 const copyLink = self.data("link");
                 copy(copyLink);
+                self.addClass("active");
+                setTimeout(function() { 
+                    self.removeClass('active');
+                }, 4000);
             });  
         };
  

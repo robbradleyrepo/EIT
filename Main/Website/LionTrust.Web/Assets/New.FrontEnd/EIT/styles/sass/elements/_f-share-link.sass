@@ -1,0 +1,19 @@
+.f-share-link
+    color: $c-orange
+    &:hover
+        color: $c-orange
+    &.active
+        position: relative
+        &:after 
+            z-index: 1000
+            @include p(2)
+            background: $c-orange
+            top: 30px
+            left: -50%
+            width: 300px
+            border-radius: 5px
+            color: $c-white
+            position: absolute
+            display: block
+            content: attr(data-title)
+            
