@@ -26,7 +26,8 @@ window.$ = $;
 // import insightAuthor from "./components/insightAuthor";
 
 import mobileNav from "./edge/mobile-nav";
-import shareLink from "./edge/share-link";
+import shareLink from "./edge/share-link"; 
+
 
 document.addEventListener("DOMContentLoaded", () => {
     // onboardingOverlay();
@@ -41,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // awardsSlider();
     // literatureOverlay();
     // locationAndMap();
-    shareLink();
     // tabNav();
     // headerCtaNav();
     // common();
@@ -49,5 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // peopleNav();
     // modals();
     mobileNav();
+    shareLink(); 
    
 }); 

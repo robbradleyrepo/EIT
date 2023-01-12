@@ -1,16 +1,18 @@
 .g-hero
     position: relative
     width: 100%
-    h1 
-        color: $c-white 
-        text-transform: uppercase
-        letter-spacing: 1.44px
-        text-shadow: 0px 0px 10px $c-black
-        @include mb(3)
-        
-    p
-        @include mb(4)
-        color: $c-white
+
+    &--global
+        h1 
+            color: $c-white 
+            text-transform: uppercase
+            letter-spacing: 1.44px
+            text-shadow: 0px 0px 10px $c-black
+            @include mb(3)
+            
+        p
+            @include mb(4)
+            color: $c-white
     
     &--article
         text-align: center
@@ -24,14 +26,19 @@
             line-height: 30px
             @include my(4)
             @include md
-                @include mb(5)
                 font-size: 48px
                 line-height: 56px
         time
             color: $c-silver-chalice
             font-weight: 500
             text-transform: uppercase
+    &--subtitle
+        color: $c-orange
+        @extend h2
+        &:empty
+            display: none
     &--share
+        @include mt(5)
         a
             color: $c-white
             @include mx(3)

@@ -19,6 +19,13 @@ h2
     @include lg
         font-size: 36px
         line-height: 42px
+
+h3
+    font-size: 32px
+    line-height: 38px
+    @include lg
+        font-size: 36px
+        line-height: 42px
   
 a 
 	text-decoration: none
@@ -62,3 +69,14 @@ a
 			i    
 				transform: translateX(2px)
 				filter: brightness(100%)
+
+.g-article
+	.c-copy-block
+		h2 
+			@include mt(5)
+			width: 60%
+			font-size: 24px
+			line-height: 28px
+			@include lg
+				font-size: 25px
+				line-height: 28px
