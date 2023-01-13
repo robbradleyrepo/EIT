@@ -1,0 +1,16 @@
+.e-title-link
+    @include mt(5)
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    @include md
+        flex-direction: row
+        align-items: center
+    span
+        @extend h3
+        color: $c-orange 
+        @include md
+            max-width: 70%
+    a
+        @extend .fx
+        
