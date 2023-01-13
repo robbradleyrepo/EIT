@@ -1,15 +1,52 @@
-.c-promo-block--x4
+.c-promo-block-x4
     font-family: $f-gotham
     font-weight: normal
     h2
-        text-align:  left
+        text-align: left
         font-size: 32px
         line-height: 38px
         color: $c-orange 
             font-size: 36px
             line-height: 42px
         &:empty
-            display: none
+            display: 
+    p
+        font-weight: 400
 
     img
         width: 100%
+    
+    .imagepromo 
+        width: 100%
+        @include md
+            margin-right: 16px
+        @include lg
+            width: 50%
+            margin-right: 32px
+        &__imageboxchild
+            display: flex
+            flex-direction: column
+        &__image-bg
+            object-fit: cover
+            width: 100%
+            height: 194px
+            margin-bottom: 16px
+            border-radius: 5px
+            @include md
+                height: 408px
+            @include lg
+                margin-bottom: 20px
+            @include xl
+                margin-bottom: 32px
+        &__image-sm
+            object-fit: cover
+            width: 100%
+            height: 90px
+            margin-bottom: 16px
+            border-radius: 5px
+            @include md
+                height: 188px
+            @include lg
+                margin-bottom: 20px
+            @include xl
+                margin-bottom: 32px
