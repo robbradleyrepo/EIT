@@ -1,8 +1,11 @@
 .g-hero
     position: relative
     width: 100%
-
+    
     &--global
+        .u-container
+            @extend %animated
+            @extend %fadeIn
         h1 
             color: $c-white 
             text-transform: uppercase
