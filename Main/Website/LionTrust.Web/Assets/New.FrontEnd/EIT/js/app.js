@@ -27,8 +27,7 @@ window.$ = $;
 
 import scrollDetect from "./edge/scrolldetect"; 
 import mobileNav from "./edge/mobile-nav";
-import shareLink from "./edge/share-link";  
-import iframeEmbed from "./edge/iframe-embed";
+import shareLink from "./edge/share-link";   
 
 document.addEventListener("DOMContentLoaded", () => {
     // onboardingOverlay();
@@ -49,9 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // preferenceCenter();
     // peopleNav();
     // modals();
-    scrollDetect();
+    scrollDetect(); 
     mobileNav();
-    shareLink(); 
-    iframeEmbed();
+    shareLink();  
    
 }); 
