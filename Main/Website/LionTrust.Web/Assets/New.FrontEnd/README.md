@@ -54,6 +54,12 @@ Bootstrap has been stripped out.
 
 New Breakpoint, Spacing and Grid system now work inconjunction, allowing nested mixins to play nice.
 
+## Style Guide
+
+```index.html``` for WIP primitive SG list of components
+
+To do: https://github.com/mpetrovich/stylemark
+
 ## Grid
 
 GridilyDidily

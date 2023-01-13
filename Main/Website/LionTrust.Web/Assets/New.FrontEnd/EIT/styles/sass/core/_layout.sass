@@ -59,8 +59,14 @@ section, article, aside, footer
         max-width: $v-max-width-sm
         margin: 0 auto
 
-// article template specific
+// TEMPLATE SPECIFIC
 
+.t-global
+    .g-prefooter
+        .u-container
+            @extend .sm
+            @include pb(5)
+ 
 .t-article
     .g-article
         .u-container
@@ -69,4 +75,3 @@ section, article, aside, footer
         @extend .zero-margin
     .c-promo-author
         @include pt(0)
-    
