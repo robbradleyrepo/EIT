@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // common();
     // preferenceCenter();
     // peopleNav();
-    // modals();
+    // modals();git
     scrollDetect(); 
     mobileNav();
     shareLink();  
