@@ -54,16 +54,16 @@
             color: $c-silver-chalice
             font-weight: 500
             text-transform: uppercase
+        .e-share-links
+            @include mt(5)
+            a
+                color: $c-white
+                @include mx(3)
+                &:hover
+                    color: $c-orange
     &--subtitle
         color: $c-orange
         @extend h2
         &:empty
             display: none
-    &--share
-        @include mt(5)
-        a
-            color: $c-white
-            @include mx(3)
-            &:hover
-                color: $c-orange
-            
+                

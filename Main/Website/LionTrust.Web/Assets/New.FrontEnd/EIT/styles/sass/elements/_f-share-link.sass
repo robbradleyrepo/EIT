@@ -1,18 +1,22 @@
-.f-share-link
-    @extend .fx
-    @include mr(3)
-    &.active
-        position: relative
-        &:after 
-            z-index: 1000
-            @include p(2)
-            background: $c-orange
-            top: 30px
-            left: -50%
-            width: 300px
-            border-radius: 5px
-            color: $c-white
-            position: absolute
-            display: block
-            content: attr(data-title)
+.e-share-links
+    a  
+        @extend .fx
+        span
+            @include mx(1)
+    .f-share-link
+        @include mr(3)
+        &.active
+            position: relative
+            &:after 
+                z-index: 1000
+                @include p(2)
+                background: $c-orange
+                top: 30px
+                left: -50%
+                width: 300px
+                border-radius: 5px
+                color: $c-white
+                position: absolute
+                display: block
+                content: attr(data-title)
             
