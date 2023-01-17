@@ -63,9 +63,14 @@
             // @include vertical-align
             li 
                 position: relative
-                margin: 0 1vw
+                margin: 0 2vw 
+                width: 120px
                 @include lg
-                    margin: 0 1.5vw 
+                    margin: 0 0.8vw 
+                    width: 130px
+                @include xl
+                    margin: 0 15px
+                    width: 150px
                 &:last-child
                     margin-right: 0          
                 a
@@ -73,13 +78,12 @@
                     font-weight: 400
                     line-height: 22px
                     font-size: 14px// breakpoints
-                    display: block
+                    display: inline-block
                     height: 100%
                     color: $c-white
                     text-align: center
                     text-decoration: none
                     text-transform: uppercase 
-                    max-width: 140px
                     @extend %animate-underline
                     @include lg
                         font-size: 14px 
