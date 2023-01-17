@@ -1,6 +1,35 @@
 .c-content-block
     font-family: $f-gotham
     font-weight: normal
+    
+    &--split 
+        display: grid
+        grid-template-columns: 1fr 
+        grid-template-rows: 1fr
+        align-content: flex-start
+
+        @include lg
+            grid-template-columns: repeat(2, minmax(0, 1fr))
+            column-gap: 30px
+            
+    &--image
+        @include lg
+            grid-row-start: 2    
+            transform: translateY(-60px)
+    
+    &--copy
+        @include lg
+            grid-row-start: 2    
+        
+    &--title
+        grid-row-start: 1
+        @include lg
+            grid-column-start: 2 
+    
+    .reverse
+        direction: rtl
+        text-align: left
+
     h1, h2
         font-size: 32px
         line-height: 38px
@@ -26,13 +55,13 @@
     img 
         width: 100%
 
-    .hide-lg
+    .hide-mb
         display: none
         @include lg
             display: block
 
     &__cta
-        
+        direction: ltr
         @include mt(4)
         &:empty
             display: none
