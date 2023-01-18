@@ -3,10 +3,12 @@
     display: flex
     flex-direction: column
     align-items: flex-start
+    justify-content: space-between
     @include md
         flex-direction: row
         align-items: center
     span
+        @include mb(2)
         @extend h3
         color: $c-orange 
         @include md
