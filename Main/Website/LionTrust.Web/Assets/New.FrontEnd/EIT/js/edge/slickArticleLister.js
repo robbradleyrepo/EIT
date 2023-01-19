@@ -7,10 +7,12 @@ export default () => {
     function slickOnResizeD(){
         $('.c-article-list .f-slick-lg').not('.slick-initialized').slick({
             dots: true,
+            // prevArrow: $('.c-article-list .f-slick-lg .prev'),
+            // nextArrow: $('.c-article-list .f-slick-lg .next'),
             infinite: false,
             speed: 200, 
             slidesPerRow: 3,
-            rows: 2,
+            rows: 2,  
             responsive: [
                 {
                     breakpoint: 992,
@@ -31,7 +33,8 @@ export default () => {
 
     function slickOnResizeM(){
         $('.c-article-list .f-slick-sm').not('.slick-initialized').slick({
-            dots: true,
+            dots: false,
+            arrows: false,
             infinite: false,
             speed: 200, 
             slidesToShow: 1,

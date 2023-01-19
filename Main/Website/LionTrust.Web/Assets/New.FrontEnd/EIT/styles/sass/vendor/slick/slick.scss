@@ -61,9 +61,13 @@
         visibility: hidden;
     }
 }
+
+ 
+
 .slick-slide {
     float: left;
     height: 100%;
+    margin-bottom: 5px;
     min-height: 1px;
     [dir="rtl"] & {
         float: right;

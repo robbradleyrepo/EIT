@@ -28,7 +28,7 @@ window.$ = $;
 import scrollDetect from "./edge/scrolldetect"; 
 import mobileNav from "./edge/mobile-nav";
 import shareLink from "./edge/share-link";
-import slick from "./edge/slick";   
+import slickArticleLister from "./edge/slickArticleLister";   
 
 document.addEventListener("DOMContentLoaded", () => {
     // onboardingOverlay();
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollDetect(); 
     mobileNav();
     shareLink();   
-    slick();
+    slickArticleLister();
    
 }); 
 

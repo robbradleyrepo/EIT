@@ -1,4 +1,8 @@
 .c-article-list
+    
+    .u-container
+       
+
     &--inner
         display: grid
         grid-template-columns: repeat(1, 1fr)
@@ -7,20 +11,6 @@
             grid-template-columns: repeat(2, 1fr)
         @include lg
             grid-template-columns: repeat(3, 1fr)
-
-    .u-container
-        max-width: 100%
-        @include xl
-            max-width: 1170px
-            width: 100%
-            margin: auto
-        .f-slick
-            & > div
-                width: 100%
-                @include lg
-                    max-width: auto
-                    height: auto
-
 
 // .grid-x5
 //     margin: 0 auto
