@@ -99,11 +99,7 @@ function scriptsMain1() {
 function scriptsMain2() {
   return src(
     [
-      "EIT/js/app.js"
-      // "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js", // import fancybox
-      // "node_modules/bootstrap/js/dist/modal.js", // import bootstrap modal
-      // "node_modules/bootstrap/js/dist/collapse.js", // import bootstrap collapse
-      // "node_modules/bootstrap/js/dist/tooltip.js", // import tooltip
+      "EIT/js/app.js",
     ],
     { sourcemaps: true }
   )

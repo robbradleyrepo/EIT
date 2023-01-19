@@ -27,7 +27,8 @@ window.$ = $;
 
 import scrollDetect from "./edge/scrolldetect"; 
 import mobileNav from "./edge/mobile-nav";
-import shareLink from "./edge/share-link";   
+import shareLink from "./edge/share-link";
+import slick from "./edge/slick";   
 
 document.addEventListener("DOMContentLoaded", () => {
     // onboardingOverlay();
@@ -50,6 +51,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // modals();git
     scrollDetect(); 
     mobileNav();
-    shareLink();  
+    shareLink();   
+    slick();
    
 }); 
+
+ 
