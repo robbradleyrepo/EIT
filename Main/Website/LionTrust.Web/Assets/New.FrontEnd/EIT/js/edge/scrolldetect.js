@@ -2,17 +2,16 @@
 
 export default () => {
 
-	// Get all of the images that are marked up to fade in
 	const images = document.querySelectorAll('.js-lazyload-image');
 	const sections = document.querySelectorAll('.t-global main .u-edge:not(:first-child)');
 
 	let config = {
 		rootMargin: '0px',
-		threshold: .3
+		threshold: 1,
+		triggerOnce: true,
 	};
 
 	let observer = new IntersectionObserver((entries) => {
-		console.log(entries);
 		entries.forEach(entry => {
 		if (entry.isIntersecting) {
 			intersectionHandler(entry);

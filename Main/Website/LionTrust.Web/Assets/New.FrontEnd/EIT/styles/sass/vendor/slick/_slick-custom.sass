@@ -1,0 +1,28 @@
+.f-slick__controls
+    display: none
+    @include lg
+        display: flex
+        flex-direction: row
+        width: 50%
+        margin: 30px auto
+        align-items: center
+        justify-content: space-around
+        justify-items: center
+        & > a
+            color: $c-orange
+            font-size: 14px
+            i
+                font-size: 12px
+                @include px(2)
+        ul
+            li
+                color: $c-black
+                font-size: 12px
+                letter-spacing: 2.4px
+                line-height: 17px
+                @include p(1)
+
+            .slick-active
+                background: $c-orange
+                border-radius: 50%
+                color: $c-white
