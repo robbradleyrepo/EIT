@@ -1,0 +1,61 @@
+.c-snapshot
+    background-color: $c-navy
+    background-image: url("../images/bg_orb.png")
+    background-repeat: no-repeat
+    background-size: cover
+    color: $c-white
+    h2 
+        @include my(0)
+        @include lg
+            font-size: 48px
+            line-height: 54px
+            @include my(3)
+    &__stack
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        @include lg
+            display: block
+    
+        p
+            width: 100%
+            font-weight: 300
+            font-size: 14px
+            @include mt(0)
+            @include lg
+                @include my(3)
+                font-size: 16px
+            .figure
+                display: block
+                font-size: 32px
+                line-height: 48px
+                font-weight: 500
+                @include lg
+                    font-size: 44px
+                    @include pt(1)
+    &__info
+        opacity: 0.8
+        border-top: 1px solid $c-white
+        @include mt(3)
+        @include pt(3)
+        p
+            opacity: 0.8
+            font-size: 10px
+            @include my(1)
+            @include lg
+                font-size: 12px
+    &.active
+        .c-snapshot__data
+            &:nth-child(2)
+                @extend %animated
+                @extend %fadeInUp
+                animation-delay: 0.2s
+            &:nth-child(3)
+                @extend %animated
+                @extend %fadeInUp
+                animation-delay: 0.4s
+            &:nth-child(4)
+                @extend %animated
+                @extend %fadeInUp
+                animation-delay: 0.6s
+            
