@@ -13,3 +13,14 @@
             @include m(0)
             width: 100%
             max-width: none
+    &--header
+        display: flex
+        align-content: center
+        justify-content: center
+        justify-content: space-between
+        align-items: center
+
+        .view-all
+            display: none
+            @include lg
+                display: block

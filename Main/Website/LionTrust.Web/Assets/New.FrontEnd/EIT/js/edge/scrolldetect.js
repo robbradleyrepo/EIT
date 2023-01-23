@@ -1,13 +1,13 @@
 "use strict"; 
-
+var $ = require("jquery");
 export default () => {
 
 	const images = document.querySelectorAll('.js-lazyload-image');
-	const sections = document.querySelectorAll('.t-global main .u-edge:not(:first-child)');
+	const sections = document.querySelectorAll('.t-global main section.u-edge:not(:first-child), .t-global main aside.u-edge:not(:first-child)');
 
 	let config = {
 		rootMargin: '0px',
-		threshold: 1,
+		threshold: 0.6,
 		triggerOnce: true,
 	};
 

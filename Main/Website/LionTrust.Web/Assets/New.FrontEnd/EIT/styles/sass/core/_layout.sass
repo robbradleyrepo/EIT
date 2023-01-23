@@ -14,11 +14,14 @@ body
                 background-image: url("../images/hero-generic-desktop.png")
         main
             section, aside
-                &.u-edge:not(:first-child)
-                    opacity: 0
-                    transition: opacity .3s
-                    &.active
-                        opacity: 1
+                &.u-edge
+                    &:not(:first-child)
+                        opacity: 0
+                        transition: opacity .3s
+                        &.active
+                            opacity: 1 
+                
+                
     &.t-article 
         header.g-header 
             background-image: url("../images/articlehero-mobile.png")

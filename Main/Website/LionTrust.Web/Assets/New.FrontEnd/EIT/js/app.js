@@ -28,7 +28,8 @@ window.$ = $;
 import scrollDetect from "./edge/scrolldetect"; 
 import mobileNav from "./edge/mobile-nav";
 import shareLink from "./edge/share-link"; 
-import slickCarousel from "./edge/slick-carousel";  
+import slickCarousel from "./edge/slick-carousel-double"; 
+import slickCarouselSingle from "./edge/slick-carousel-single";  
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -54,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
     mobileNav();
     shareLink();    
     slickCarousel();
+    slickCarouselSingle();
    
 }); 
 

@@ -72,7 +72,7 @@ function browsersync2() {
     ghostMode: { clicks: false },
     notify: false,
     online: true,
-    tunnel: true
+    // tunnel: true,
   });
 }
 
@@ -99,7 +99,7 @@ function scriptsMain1() {
 function scriptsMain2() {
   return src(
     [
-      "EIT/js/app.js",
+      "EIT/js/app.js"
     ],
     { sourcemaps: true }
   )
