@@ -30,6 +30,7 @@ import mobileNav from "./edge/mobile-nav";
 import shareLink from "./edge/share-link"; 
 import slickCarousel from "./edge/slick-carousel-double"; 
 import slickCarouselSingle from "./edge/slick-carousel-single";  
+import slidePanel from "./edge/slide-panel";  
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -56,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     shareLink();    
     slickCarousel();
     slickCarouselSingle();
+    slidePanel();
    
 }); 
 
