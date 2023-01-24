@@ -1,10 +1,10 @@
 .f-slick__controls
     display: none
-    @include lg
+    @include xl
         display: flex
         flex-direction: row
         width: 50%
-        margin: 30px auto
+        margin: 10px auto
         align-items: center
         justify-content: space-around
         justify-items: center
@@ -26,3 +26,17 @@
                 background: $c-orange
                 border-radius: 50%
                 color: $c-white
+
+.f-slick-single-master
+    article
+        width: 385px
+    .slick-slide
+        margin: 0 8px 
+
+.f-slick-double-master
+    article
+        margin-right: 15px 
+        @include xl
+            margin-bottom: 10px
+            max-width: calc( 100% - 10px )
+        

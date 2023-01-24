@@ -57,7 +57,7 @@ export default () => {
                 },
                 responsive: [
                     {
-                        breakpoint: 992,
+                        breakpoint: 1260,
                         settings: "unslick"  
                     },
                 ]
@@ -76,7 +76,7 @@ export default () => {
                 mobileFirst: true,
                 responsive: [
                     {
-                        breakpoint: 992,
+                        breakpoint: 1260,
                         settings: "unslick" 
                     },
                 ]
