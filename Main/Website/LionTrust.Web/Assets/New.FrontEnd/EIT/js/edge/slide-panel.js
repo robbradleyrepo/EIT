@@ -16,30 +16,29 @@ export default () => {
         SlidePanelComponent.prototype.initSlidePanelComponent = function () {
             this.slidePanelToggle(); 
         }; 
-        SlidePanelComponent.prototype.openSlidePanel = function () {
+        SlidePanelComponent.prototype.openSlidePanel = function () { 
+            var _self = this; 
             this.$componentSelector.addClass('active').attr('aria-hidden', 'false');
             this.$navScreen.addClass('active');
-            this.$body.addClass('overflow-hidden');
-            this.$navClose.addClass('active');
+            _self.$body.addClass('overflow-hidden'); 
         }; 
         SlidePanelComponent.prototype.closeSlidePanel = function () {
             var _self = this; 
             this.$componentSelector.removeClass('active').attr('aria-hidden', 'true');
-            this.$navScreen.removeClass('active');
-            this.$navClose.removeClass('active');
-            setTimeout(function () {
-                _self.$body.removeClass('overflow-hidden');
-            }, 300);
+            this.$navScreen.removeClass('active'); 
+            _self.$body.removeClass('overflow-hidden');
+            
         }; 
         SlidePanelComponent.prototype.slidePanelToggle = function () {
             var _self = this; 
-            _self.$navMasterControl.on('click', function (e) {
+            _self.$navMasterControl.on('click', function (e) { 
                 e.preventDefault(); 
-                _self.openSlidePanel();
+                _self.openSlidePanel(); 
+                
             });
             // close nav
             _self.$navClose.on('click', function (e) {
-                e.preventDefault();
+                e.preventDefault(); 
                 _self.closeSlidePanel();
                 
             });
