@@ -1,0 +1,33 @@
+.table-master
+    table
+        border-collapse: collapse
+        text-align: left
+        width: 100%
+        @include p(3) 
+        th, td
+            @include py(2) 
+            @include px(3) 
+        thead
+            text-transform: uppercase
+            font-size: 12px
+            letter-spacing: 2.4px
+            color: $c-river-bed     
+        tbody
+            border: 1px solid $c-athens-gray
+            th, td 
+                font-weight: 600
+                border-bottom: 1px dashed $c-athens-gray
+        tfoot
+            th
+                @include my(0)
+                font-size: 12px
+                font-weight: 300
+                color: $c-dove-gray
+                
+
+.bar
+    display: inline-block
+    height: 16px
+    background: $primary
+    &__gold
+        background: $c-orange
