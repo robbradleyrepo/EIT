@@ -1,0 +1,33 @@
+.c-process-cards
+    color: $c-white
+    h2
+        @include mt(0)
+    &--grid
+        display: grid
+        grid-template-columns: repeat(1, 1fr)
+        grid-gap: 15px
+        row-gap: 15px
+        @include xl
+            grid-template-columns: repeat(3, 1fr)
+    &--card
+        background-color: $c-navy
+        background-image: url('../images/BG_OrbsTile.png')
+        background-repeat: no-repeat    
+        background-size: cover
+        @include p(4)
+        text-align: center
+        @include xl
+            min-height: 400px
+    &--title
+        @include m(0)
+        @include pb(3)
+        font-size: 36px
+        display: flex
+        justify-content: center
+        align-items: center
+        @include xl
+            @include pb(4)
+        img
+            @include mr(3)
+    p
+        font-weight: 300

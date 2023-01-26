@@ -1,31 +1,30 @@
 .g-slide-panel
-    
+    border-left: 5px solid $c-orange
     position: fixed
     left: 0
     height: 100%
-    width: 85%
+    width: 90%
     background-color: $c-white
     -webkit-overflow-scrolling: touch
     z-index: 10000
     top: 0
-    overflow-y: none
+    overflow-y: auto
     overflow-x: none
     opacity: 1
     transform: translateX(200%)
     // transition: all 200ms ease-in-out
     transition: transform 300ms cubic-bezier(0.77,0.2,0.05,1.0)
     @include md 
-        width: 50%
+        width: 40%
+        transform: translateX(250%)
     &.active 
-        transform: translateX(20%)
+        transform: translateX(10%)
         @include md
-            transform: translateX(100%) 
+            transform: translateX(150%) 
     &__content
         @extend .c-copy-block
-        border-left: 5px solid $c-orange
         @include px(3)
-        @include py(5)
-        height: 100%
+        @include py(5) 
         h2, h3
             @include mb(0)
             color: $c-orange
