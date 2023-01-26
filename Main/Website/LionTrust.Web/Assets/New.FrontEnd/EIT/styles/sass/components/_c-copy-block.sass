@@ -1,12 +1,28 @@
 .c-copy-block
     font-family: $f-gotham
     font-weight: normal
-    h2 
+   
+    &--featured
+        p, li
+            font-size: 18px
+            font-weight: 400
+    &--shade
+        background-color: $c-white-lilac   
+    &--dark 
+        background-color: $c-navy
+        color: $c-white
+        p 
+            font-size: 14px
+            line-height: 20px
+            font-weight: 300    
+    
+    h2, h3 
         @include mt(0)
         text-align:  left
         color: $c-orange 
         &:empty
             display: none
+
     .e-list-block 
         max-width: $v-max-width-sm
         margin: auto
@@ -30,14 +46,33 @@
                 width: 10px
                 position: relative
                 bottom: -1px
-    &--dark 
-        background-color: $c-navy
-        color: $c-white
-        p 
-            font-size: 14px
-            line-height: 20px
-            font-weight: 300    
-
-        
+        &--sm
+            max-width: none
+            @include px(3)
+            @include py(0)
+            li 
+                line-height: 160%
+                margin-left: 5px
+                text-indent: -20px
+                margin-bottom: 10px
+                &::before
+                    border: 2px solid $c-orange
+                    border-radius: 50%
+                    content: ""
+                    display: inline-block
+                    margin-right: 10px
+                    height: 5px
+                    width: 5px
+                    position: relative
+                    bottom: 1px
+    .e-box
+        border-top: 1px solid $c-orange
+        border-bottom: 1px solid $c-orange
+        background-color: $c-whisper
+        @include px(4)
+        @include py(3)
+        @include mt(4)
+        &.zero-margin
+            @include mt(0)
         
 

@@ -37,6 +37,23 @@ main
 	.u-edge
 		h2
 			color: $c-orange
+		p
+			&.narrow
+				@include lg
+					@include mr(5)
+			&.lead
+				@include mt(0)
+		dl  
+			display: grid  
+			grid-template-columns: repeat(2, 1fr)
+			row-gap: 10px
+			grid-auto-flow: dense
+			dt 
+				grid-column: 1
+			dd  
+				grid-column: 2
+				text-align: right
+				@include m(0)
 
 .sr-only
     clip: rect(1px, 1px, 1px, 1px)
