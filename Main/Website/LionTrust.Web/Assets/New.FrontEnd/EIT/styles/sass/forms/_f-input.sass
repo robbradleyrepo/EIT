@@ -7,29 +7,18 @@
     input[type=text],
     input[type=email] 
         display: block
-        background: $c-white
-        padding: 11px 47px 12px 17px
+        background: $c-white 
         width: 100% 
-       
-        &::placeholder
-            color: $c-orange
-            font-size: 12px
+        border: none
+        border-bottom: 1px solid $c-silver-chalice
+        max-width: 500px
+        height: 35px
 
-        &:focus, &:active
-            border: 1px solid $c-orange !important
+        &.focus, &:focus, &:active
+            outline: none
+            cursor: pointer
+            border-bottom: 1px solid $c-orange  
+            transition: all 200ms ease 
 
             & + .f-forms__element--status
                 display: none !important
-
-        & + p 
-            margin-top: 7px
-
-        &.half-width
-            width: 100%
-            
-            @include md
-                width: 50%
-
-            & ~ span 
-                @include md
-                    right: 50%

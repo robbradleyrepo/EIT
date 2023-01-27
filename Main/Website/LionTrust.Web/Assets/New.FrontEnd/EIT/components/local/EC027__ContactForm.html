@@ -7,17 +7,23 @@
                 
                 <h2>Send a Message</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+
+                <script type="text/javascript" src="https://www.google.com/recaptcha/api.js"></script>
                 
-                <form novalidate data-parsley-validate="" aria-label="Enter form details below, ensuring each mandatory step is completed, before continuing.">
+                <form spellcheck="false" novalidate data-parsley-validate="" aria-label="Enter form details below, ensuring each mandatory step is completed, before continuing.">
                 
                     <!--#include virtual="../forms/select.html" --> 
+ 
 
                     <!--#include virtual="../forms/input__email.html" --> 
 
                     <!--#include virtual="../forms/input__phone.html" --> 
 
                     <!--#include virtual="../forms/textarea.html" --> 
-                
+                    
+                    <div class="e-button__container">
+                        <button href="#" class="e-button e-button__primary">SEND</button>
+                    </div>
                 </form> 
             </div>
  

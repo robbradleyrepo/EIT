@@ -4,13 +4,8 @@
         display: block
         width: 100%
         padding: 15px 0
-        position: relative
-
-        &.half-width 
-            width: 100%
-            
-            @include md
-                width: 50%
+        position: relative 
+        transition: all 200ms ease
 
         &.hidden 
             display: none
@@ -19,8 +14,12 @@
         .f-forms__label,
         label  
             display: block
-            margin-bottom: 10px
+            margin-bottom: 0px
             position: relative
-            left: 0S
-            &.focus
-                left: 15px
+            left: 0
+            font-family: $f-calibri
+            font-size: 12px
+            font-weight: 500
+    
+    button
+        cursor: pointer

@@ -8,41 +8,40 @@
         .select-arrow 
             position: absolute
             padding: 11px
-            color: $c-scorpion
-            left: calc(100% - 41px)
-            top: 3px
+            font-size: 8px
+            right: 0px
+            bottom: 5px
             z-index: 1
-            pointer-events: none
-            
+            pointer-events: none 
+            transition: all 200ms ease
+            color: $c-silver-chalice
             &.focus
                color: $c-orange
+               
     
         select 
             display: block
-            width: 100%
-            background-color: $c-white
-            border: 1px solid $c-scorpion
-            padding: 10px 17px
-            -webkit-appearance: none
-            -moz-appearance: none 
-            font-weight: normal
-            height: 45px
-            padding-right: 45px;
+            width: 100% 
+            border: none
+            border-bottom: 1px solid $c-silver-chalice
+            font-size: 14px
+            font-weight: 500
+            appearance: none 
+            height: 35px
+            padding-right: 45px
+            border-radius: 0px
 
-            &::-ms-expand 
-                display: none
-            
-            
             option 
-                padding: 2px
-
+                @include my(2)
+                cursor: pointer
             &:invalid 
-                border: 1px solid $c-orange
+                border-bottom: 1px solid $c-orange
 
             &.focus, &:focus, &:active 
                 outline: none
-                border: 1px solid $c-orange  
-                
+                cursor: pointer
+                border-bottom: 1px solid $c-orange  
+                transition: all 200ms ease
                 & ~ .select-arrow 
                     color: $c-orange  
 

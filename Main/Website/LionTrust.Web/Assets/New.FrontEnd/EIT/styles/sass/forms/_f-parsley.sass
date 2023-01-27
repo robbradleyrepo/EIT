@@ -12,20 +12,23 @@
             
         &--error 
             margin-bottom: 0
-
-
+ 
+            
         &.parsley-success 
 
             & > input[type=tel],
             & > input[type=text],
-            & > input[type=email],
-            & .f-forms__textarea > textarea
-                border: 1px solid $c-orange
+            & > input[type=email] 
+                font-size: 14px
+                font-weight: 500
+               
+            & .f-forms__textarea > textarea 
+                text-decoration: none !important
 
             & > .f-forms__select
 
                 select  
-                    border: 1px solid $c-orange
+                    border-bottom: 1px solid $c-orange
                 .select-arrow
                     color: $c-orange
                 
@@ -44,7 +47,11 @@
             input[type=number],
             input[type=tel],
             input[type=text],
-            input[type=email],
+            input[type=email]
+                font-size: 14px
+                font-weight: 500
+                border-bottom: 1px solid $c-orange
+
             textarea 
                 border: 1px solid $c-orange
             
@@ -53,18 +60,13 @@
             
 
             .f-forms__element--error 
-                max-height: 500px
+                color: $c-orange
+                font-weight: 500
+                font-size: 12px
                 overflow: inherit
                 opacity: 1
                 visibility: visible
-                margin-top: 12px
+                @include mt(2)
                 clear: both
-
-        &--success
-            padding: 10px
-            margin-top: 10px
-            display: flex
-            align-content: center
-            align-items: center
  
     
