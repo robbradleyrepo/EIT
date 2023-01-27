@@ -1,0 +1,22 @@
+.f-forms 
+    &__textarea 
+        
+        position: relative
+
+        textarea 
+            min-height: 90px
+            max-height: 700px
+            resize: none
+
+            &:focus,
+            &:active 
+
+                & + .f-forms__textarea--chars 
+                    opacity: 1
+
+
+        &--chars 
+            opacity: 0
+            float: right
+            font-style: normal
+            color: $c-scorpion

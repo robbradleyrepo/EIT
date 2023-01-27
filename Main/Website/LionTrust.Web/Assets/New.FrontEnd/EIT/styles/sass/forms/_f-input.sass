@@ -1,0 +1,35 @@
+.f-forms 
+    input[type=url],
+    input[type=date],
+    input[type=password],
+    input[type=number],
+    input[type=tel],
+    input[type=text],
+    input[type=email] 
+        display: block
+        background: $c-white
+        padding: 11px 47px 12px 17px
+        width: 100% 
+       
+        &::placeholder
+            color: $c-orange
+            font-size: 12px
+
+        &:focus, &:active
+            border: 1px solid $c-orange !important
+
+            & + .f-forms__element--status
+                display: none !important
+
+        & + p 
+            margin-top: 7px
+
+        &.half-width
+            width: 100%
+            
+            @include md
+                width: 50%
+
+            & ~ span 
+                @include md
+                    right: 50%

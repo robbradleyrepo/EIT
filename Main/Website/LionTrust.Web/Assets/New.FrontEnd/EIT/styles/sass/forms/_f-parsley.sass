@@ -1,0 +1,70 @@
+.f-forms-parsley
+
+    .f-forms__element 
+
+        &--status 
+            display: inline-block
+            position: absolute
+            right: 0
+            margin-right: 15px
+            opacity: 0
+
+            
+        &--error 
+            margin-bottom: 0
+
+
+        &.parsley-success 
+
+            & > input[type=tel],
+            & > input[type=text],
+            & > input[type=email],
+            & .f-forms__textarea > textarea
+                border: 1px solid $c-orange
+
+            & > .f-forms__select
+
+                select  
+                    border: 1px solid $c-orange
+                .select-arrow
+                    color: $c-orange
+                
+
+            & > .f-forms__element--error 
+                max-height: 0
+                overflow: hidden
+                opacity: 0
+                visibility: hidden
+                
+        &.parsley-error 
+
+            input[type=date],
+            input[type=url],
+            input[type=password],
+            input[type=number],
+            input[type=tel],
+            input[type=text],
+            input[type=email],
+            textarea 
+                border: 1px solid $c-orange
+            
+            .f-forms__element--status
+                display: none
+            
+
+            .f-forms__element--error 
+                max-height: 500px
+                overflow: inherit
+                opacity: 1
+                visibility: visible
+                margin-top: 12px
+                clear: both
+
+        &--success
+            padding: 10px
+            margin-top: 10px
+            display: flex
+            align-content: center
+            align-items: center
+ 
+    

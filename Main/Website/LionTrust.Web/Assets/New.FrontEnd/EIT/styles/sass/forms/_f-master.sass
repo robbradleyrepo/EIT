@@ -1,0 +1,26 @@
+.f-forms 
+
+    &__element 
+        display: block
+        width: 100%
+        padding: 15px 0
+        position: relative
+
+        &.half-width 
+            width: 100%
+            
+            @include md
+                width: 50%
+
+        &.hidden 
+            display: none
+
+
+        .f-forms__label,
+        label  
+            display: block
+            margin-bottom: 10px
+            position: relative
+            left: 0S
+            &.focus
+                left: 15px

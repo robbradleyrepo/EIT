@@ -1,0 +1,51 @@
+.f-forms 
+    .f-forms__select 
+
+        display: inline-block
+        position: relative
+        width: 100%
+
+        .select-arrow 
+            position: absolute
+            padding: 11px
+            color: $c-scorpion
+            left: calc(100% - 41px)
+            top: 3px
+            z-index: 1
+            pointer-events: none
+            
+            &.focus
+               color: $c-orange
+    
+        select 
+            display: block
+            width: 100%
+            background-color: $c-white
+            border: 1px solid $c-scorpion
+            padding: 10px 17px
+            -webkit-appearance: none
+            -moz-appearance: none 
+            font-weight: normal
+            height: 45px
+            padding-right: 45px;
+
+            &::-ms-expand 
+                display: none
+            
+            
+            option 
+                padding: 2px
+
+            &:invalid 
+                border: 1px solid $c-orange
+
+            &.focus, &:focus, &:active 
+                outline: none
+                border: 1px solid $c-orange  
+                
+                & ~ .select-arrow 
+                    color: $c-orange  
+
+            &.selected 
+
+            
