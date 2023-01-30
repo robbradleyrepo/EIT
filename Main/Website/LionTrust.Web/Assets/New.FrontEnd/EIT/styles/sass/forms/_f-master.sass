@@ -23,3 +23,23 @@
     
     button
         cursor: pointer
+        &:disabled 
+            opacity: 0.7
+            cursor: not-allowed 
+            background: $c-silver-chalice
+            border: 1px solid $c-silver-chalice
+            box-shadow: none
+            &:hover 
+                background: $c-silver-chalice
+                border: 1px solid $c-silver-chalice
+                box-shadow: none
+                
+
+    &__actual
+        &.hidden
+            display: none
+    
+    &__notice
+        display: none
+        &.success
+            display: block

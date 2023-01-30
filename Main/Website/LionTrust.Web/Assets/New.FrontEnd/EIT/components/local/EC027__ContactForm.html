@@ -5,16 +5,16 @@
             
             <div class="grid__item" data-grid="12/12" data-grid--small="6/12">  
                 
-                <h2>Send a Message</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-
-                <script type="text/javascript" src="https://www.google.com/recaptcha/api.js"></script>
+                <!-- pending integration on FE - to do -->
+                <!-- <script type="text/javascript" src="https://www.google.com/recaptcha/api.js"></script> -->
                 
-                <form spellcheck="false" novalidate data-parsley-validate="" aria-label="Enter form details below, ensuring each mandatory step is completed, before continuing.">
-                
+                <form class="f-forms__actual" onsubmit="return false;" spellcheck="false" novalidate data-parsley-validate="" aria-label="Enter form details below, ensuring each mandatory step is completed, before continuing.">
+                    
+                    <h2>Send a Message</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                    
                     <!--#include virtual="../forms/select.html" --> 
  
-
                     <!--#include virtual="../forms/input__email.html" --> 
 
                     <!--#include virtual="../forms/input__phone.html" --> 
@@ -22,9 +22,18 @@
                     <!--#include virtual="../forms/textarea.html" --> 
                     
                     <div class="e-button__container">
-                        <button href="#" class="e-button e-button__primary">SEND</button>
+                        <button class="e-button e-button__primary f-forms__submit">SEND</button>
                     </div>
+
+                    
                 </form> 
+
+                <div class="f-forms__notice hidden">
+                    <h2>Your message has been sent</h2>
+                    <p>Thank you.</p>
+                    <p>A representative of our team will contact you in due course. </p>
+                </div>
+
             </div>
  
         </div>

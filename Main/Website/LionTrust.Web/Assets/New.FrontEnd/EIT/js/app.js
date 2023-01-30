@@ -11,6 +11,7 @@ import shareLink from "./edge/share-link";
 import slickCarousel from "./edge/slick-carousel-double"; 
 import slickCarouselSingle from "./edge/slick-carousel-single";  
 import slidePanel from "./edge/slide-panel";  
+// import form from "./edge/form";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     slickCarousel();
     slickCarouselSingle();
     slidePanel();
+    // form();
    
 }); 
 
