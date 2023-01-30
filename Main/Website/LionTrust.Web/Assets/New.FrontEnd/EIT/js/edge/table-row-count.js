@@ -4,10 +4,10 @@ export default () => {
       function TableRowCountComponent($theComponentSelector) {
           this.$componentSelector = $theComponentSelector;
           this.$control = this.$componentSelector.find(".f-toggle-row");
-          this.clickChartButton();
+          this.clickToggleButton();
       }
 
-      TableRowCountComponent.prototype.clickChartButton = function () {
+      TableRowCountComponent.prototype.clickToggleButton = function () {
           var _self = this;
           let tableRowCount = $(".g-table-row-count tbody  tr").length;
 
