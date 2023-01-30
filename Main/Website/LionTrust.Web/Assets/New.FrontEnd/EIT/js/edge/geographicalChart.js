@@ -1,30 +1,35 @@
 export default () => {
- 
- let geographicalRowCount = $('.geographical-breakdown tr').length;
- let sectorRowCount = $('.sector-breakdown tbody tr').length;
- 
- let toggleGeographicalButton = $('.toggle-geographical-button');
- let toggleSectorButton = $('.toggle-sector-button');
- 
- if(geographicalRowCount <= 10 ) {
-    toggleGeographicalButton.hide();
-          
- }
- if(sectorRowCount <= 10){
-     toggleSectorButton.hide();
- }
- 
-  let chartButton = $(".chartButton");
-  $(".sector-breakdown, .geographical-breakdown").addClass("hide-rows");
-  chartButton.each(function(index){
-    $(this).on("click", function(){
-     $(this).prev().toggleClass("hide-rows");
-     $(this).text(function(i, v){
-      return v === '+' ? '-' : '+'
-   });
-    })
-  })
-  
-}
+    var TableRowCountComponent = /** @class */ (function () {
+      
+      function TableRowCountComponent($theComponentSelector) {
+          this.$componentSelector = $theComponentSelector;
+          this.$control = this.$componentSelector.find(".f-toggle-row");
+          this.clickChartButton();
+      }
 
+      TableRowCountComponent.prototype.clickChartButton = function () {
+          var _self = this;
+          let tableRowCount = $(".g-table-row-count tbody  tr").length;
 
+          if (tableRowCount <= 10) {
+              _self.$control.hide();
+          }
+
+          _self.$control.on("click", function (e) {
+              e.preventDefault();
+              $(this).prev().toggleClass("hide-rows");
+              $(this).text(function (i, v) {
+                  return v === "+" ? "-" : "+";
+              });
+          });
+      };
+      return TableRowCountComponent;
+    })();
+
+  $(function () {
+      var tableRowCountComponentHolder = ".g-table-row-count";
+      $(tableRowCountComponentHolder).each(function () {
+          var tableRowCountComponent = new TableRowCountComponent($(this));
+      });
+  });
+};
