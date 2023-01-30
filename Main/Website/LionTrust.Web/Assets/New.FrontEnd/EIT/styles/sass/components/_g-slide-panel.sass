@@ -28,6 +28,10 @@
         h2, h3
             @include mb(0)
             color: $c-orange
+        h3 
+            &:not(:first-child)
+                @include mt(3)
+                @include mb(2)
         ul
             display: flex
             flex-direction: column
