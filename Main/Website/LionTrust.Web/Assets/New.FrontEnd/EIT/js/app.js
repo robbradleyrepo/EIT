@@ -11,6 +11,7 @@ import shareLink from "./edge/share-link";
 import slickCarousel from "./edge/slick-carousel-double"; 
 import slickCarouselSingle from "./edge/slick-carousel-single";  
 import slidePanel from "./edge/slide-panel";  
+import geographicalChart from "./edge/geographicalChart";  
 // import form from "./edge/form";
 
 
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     slickCarousel();
     slickCarouselSingle();
     slidePanel();
+    geographicalChart();
     // form();
    
 }); 

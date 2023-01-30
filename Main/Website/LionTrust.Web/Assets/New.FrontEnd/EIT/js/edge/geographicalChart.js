@@ -1,7 +1,7 @@
 export default () => {
  
  let geographicalRowCount = $('.geographical-breakdown tr').length;
- let sectorRowCount = $('.sector-breakdown tr').length;
+ let sectorRowCount = $('.sector-breakdown tbody tr').length;
  
  let toggleGeographicalButton = $('.toggle-geographical-button');
  let toggleSectorButton = $('.toggle-sector-button');
