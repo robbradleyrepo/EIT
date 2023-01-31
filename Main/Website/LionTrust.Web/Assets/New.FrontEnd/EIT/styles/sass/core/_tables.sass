@@ -36,6 +36,20 @@
                             @include pb(4)
                 td:last-child
                     width: 40%
+            .geo-spacing
+                display: flex
+                align-items: center
+                justify-content: space-between
+                th
+                    @include pl(3)
+                td
+                    &.geo-numbers
+                        width: 55%
+                    div
+                        display: flex
+                        align-items: center
+                        span
+                           width: 45px
         tfoot
             th
                 @include my(0)
@@ -50,6 +64,10 @@
                 border: 1px solid $secondary-silver
                 th, td 
                     border-bottom: 1px dashed $secondary-silver
+                .geo-spacing
+                    border-bottom: 1px dashed $secondary-silver
+                    th, td
+                        border: none
                
     &.g-table-spacing
         table
