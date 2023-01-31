@@ -1,33 +1,78 @@
-.table-master
-    table
+.g-table-master
+    @include px(3)
+    table 
         border-collapse: collapse
         text-align: left
         width: 100%
         @include p(3) 
         th, td
             @include py(2) 
-            @include px(3) 
+            @include px(2) 
         thead
             text-transform: uppercase
             font-size: 12px
             letter-spacing: 2.4px
-            color: $c-river-bed     
-        tbody
-            border: 1px solid $c-athens-gray
+            color: $c-river-bed  
+            tr
+                white-space: nowrap 
+                font-weight: 400 
+                th
+                    @include p(0)
+                    @include py(2)
+        tbody     
             th, td 
-                font-weight: 600
-                border-bottom: 1px dashed $c-athens-gray
+                font-weight: 400 
+            tr
+                &:first-child, 
+                    td, th
+                        @include pt(3)
+                        @include sm
+                            @include pt(4)
+
+                &:last-child
+                    td, th
+                        @include pb(3)
+                        @include sm
+                            @include pb(4)
+                td:last-child
+                    width: 40%
         tfoot
             th
                 @include my(0)
                 font-size: 12px
                 font-weight: 300
                 color: $c-dove-gray
-                
-
+                white-space: nowrap 
+    //variations as per below 
+    &.g-table-border
+        table
+            tbody    
+                border: 1px solid $secondary-silver
+                th, td 
+                    border-bottom: 1px dashed $secondary-silver
+               
+    &.g-table-spacing
+        table
+            tbody    
+                th, td  
+                    @include px(4) 
+                   
 .bar
     display: inline-block
     height: 16px
     background: $primary
     &__gold
         background: $c-orange
+.f-toggle-row
+    border-radius: 8px
+    border-color: transparent
+    float: right
+    width: 65px
+    height: 40px
+    text-align: center
+    background-color: $c-orange
+    color: white
+.hide-rows
+    tbody
+         tr:nth-child(n+11)
+            display: none
