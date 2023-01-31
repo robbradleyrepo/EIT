@@ -1,0 +1,63 @@
+.c-liontrust-theme
+    background-color: $c-cod-gray
+    
+    .u-container 
+        @include md
+            background-image: url("../images/lion-isolated-x1.png")
+            background-repeat: no-repeat
+            background-size: 70%
+            background-position-x: 130%
+            background-position-y: -1vw
+        h2
+            @include mt(0) 
+            @include mb(0)
+            color: $c-husk
+            font-family: $f-futura-pt
+            @include md
+               @include mt(0) 
+               @include mb(3) 
+        p
+            font-family: $f-futura-pt
+            color: $c-white
+            font-size: 16px
+            letter-spacing: 0.18px
+            line-height: 24px
+            font-weight: 300
+            @include lg
+                font-size: 18px
+            &.lead
+                @include md
+                    font-family: $f-figtree
+                    font-size: 25px
+                    line-height: 35px
+                    letter-spacing: 0.28px
+            &:nth-of-type(1n+3)
+                display: inherit
+                @include lg
+                    display: block 
+        .e-button__container
+            @include mt(4)
+
+        img 
+            width: 100%
+            &.lion
+                @include md
+                    display: none
+            &.logo
+                max-width: 200px
+                @include mt(4)
+
+    &.active
+        .u-container
+            @extend %animated
+            @extend %fadeInUp
+            h2
+                @extend %animated
+                @extend %fadeInUp
+                animation-delay: 0.4s
+            p
+                @extend %animated
+                @extend %fadeInUp 
+                animation-delay: 0.8s
+                &.lead
+                    animation-delay: 0.6s
