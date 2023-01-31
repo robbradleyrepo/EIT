@@ -2,16 +2,84 @@
 <!--#include virtual="components/template/head.html" -->
 
 <body class="t-global">
-  <header class="g-header"> 
-    <!--#include virtual="components/global/EG001__NavDesktop.html" -->
-    <!--#include virtual="components/global/EG003__HeroGlobal__A.html" -->
-    <!--#include virtual="components/global/EG002__NavMobile.html" -->
-  </header>
+	<header class="g-header"> 
+		<!--#include virtual="components/global/EG001__NavDesktop.html" -->
+		<!--#include virtual="components/global/EG003__HeroGlobal__A.html" -->
+		<!--#include virtual="components/global/EG002__NavMobile.html" -->
+	</header>
 
-  <main itemscope itemprop="mainContentOfPage"> 
-    <!--#include virtual="components/local/EC021__TableData.html" --> 
-  </main>
-  <!--#include virtual="components/global/EG004__Footer.html" -->
-  
+  	<main itemscope itemprop="mainContentOfPage">  
+		<!--#include virtual="components/local/EC016__StatsBanner.html" --> 
+		<!--#include virtual="components/local/EC017__VizGraph.html" --> 
+
+		<!-- EC018-->
+		<section class="u-edge">
+		<div class="u-container">
+			<h2>Discrete Performance (PENDING)</h2>
+
+			<!-- include here > EC018 Discrete -->
+			</div>
+		</section>
+
+
+		<!-- EC019 -->
+		<section class="u-edge">
+		<div class="u-container">
+			<h2>Cumulative Performance (PENDING)</h2>
+
+			<!-- include here > EC019 Cumulative -->
+			</div>
+		</section>
+
+		<!-- EC020 -->
+		<section class="u-edge">
+		<div class="u-container">
+			<h2>Premium/Discount* History (PENDING)</h2>
+
+			<!-- include here > EC020 Cumulative -->
+			</div>
+		</section>
+
+		<!-- Two Cols  -->
+		<section class="u-edge">
+			<div class="u-container">
+				<h2>Current Positioning</h2>
+				
+				<div class="grid" data-grid="narrow v--narrow" data-grid--medium="wide">
+					<div class="grid__item" data-grid="12/12" data-grid--medium="6/12">  
+						<h3>Top 10 Holdings (pending)</h3>
+						<!-- include here  -->
+					</div>
+					<div class="grid__item" data-grid="12/12" data-grid--medium="6/12"> 
+						<!--#include virtual="components/local/EC021__TableData.html" --> 
+					</div>
+				</div> 
+
+				<div class="grid" data-grid="narrow v--narrow" data-grid--medium="wide">
+					<div class="grid__item" data-grid="12/12" data-grid--medium="6/12">  
+						<h3>Geographical Breakdown Table (pending)</h3>
+						<!-- EC022 -->
+					</div>
+				</div> 
+					
+			</div>
+		</section>
+
+		<!-- EC021 -->
+		<section class="u-edge">
+			<div class="u-container">
+				<h2>Dividend timetable (PENDING)</h2>
+				
+			</div>
+		</section>
+
+		<!-- EC013 -->
+		<section class="u-edge">
+			<div class="u-container"> 
+				<!--#include virtual="components/local/EC013__DividendTable.html" -->
+			</div>
+		</section> 
+  	</main>
+  	<!--#include virtual="components/global/EG004__Footer.html" -->
 
 <!--#include virtual="components/template/footer.html" -->

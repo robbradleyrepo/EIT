@@ -56,6 +56,10 @@
             tbody    
                 th, td  
                     @include px(4) 
+    &.g-table-striped
+        tbody 
+            tr:nth-of-type(odd)
+                background: $c-whisper
                    
 .bar
     display: inline-block

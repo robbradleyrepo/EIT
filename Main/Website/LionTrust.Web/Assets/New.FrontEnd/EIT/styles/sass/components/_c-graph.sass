@@ -1,0 +1,19 @@
+.c-graph
+    h2
+        @include mt(0)
+        @include mb(2) 
+    a
+        color: $c-black
+        font-weight: 400
+        font-size: 16px
+        @include mr(3) 
+        @include ml(1) 
+        @extend .animate
+        i 
+            color: $c-orange   
+            @include pl(2) 
+            font-size: 14px
+            bottom: -1px
+        &:hover
+            color: $c-orange
+            
