@@ -1,0 +1,19 @@
+.breadcrumb
+    background: $just-black
+    &__nav
+        display: flex
+        align-items: center
+
+    &__divider
+        display: inline-block
+        line-height: 20px
+
+    &__path
+        color: $c-orange
+        @include px(2)
+        &:hover
+            text-decoration: underline
+
+    &__path.active
+        color: $white
+        font-weight: 600
