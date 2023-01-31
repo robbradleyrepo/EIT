@@ -1,19 +1,15 @@
-.breadcrumb
-    background: $just-black
-    &__nav
-        display: flex
-        align-items: center
-
-    &__divider
+.g-breadcrumbs
+    background: $black
+    @include py(2)
+    span
         display: inline-block
         line-height: 20px
-
-    &__path
+        color: $white
+    a
         color: $c-orange
-        @include px(2)
+        @include px(1)
         &:hover
             text-decoration: underline
-
-    &__path.active
-        color: $white
-        font-weight: 600
+        &.active
+            color: $white
+            font-weight: 600
