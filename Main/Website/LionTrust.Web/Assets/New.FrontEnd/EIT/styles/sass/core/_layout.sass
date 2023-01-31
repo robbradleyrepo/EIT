@@ -6,11 +6,10 @@ body
     &.t-global 
         header.g-header
             background-image: url("../images/hero-generic-mobile.png")
-            @include md
-                min-height: 52vw
+            transition: all 200ms ease
+            @include md 
                 background-image: url("../images/hero-generic-tablet.png")
-            @include lg
-                min-height: 40vw
+            @include lg 
                 background-image: url("../images/hero-generic-desktop.png")
         main
             section, aside
@@ -99,6 +98,8 @@ section, article, aside, footer
             animation-duration: 4s
             animation-duration: 3s
             z-index: -1
+        .g-hero--global
+            @include pb(5)
 
     .g-prefooter
         background-image: url("../images/bg_orb.png")
