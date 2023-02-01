@@ -1,0 +1,15 @@
+.g-breadcrumbs
+    background: $c-black
+    @include py(2)
+    span
+        display: inline-block
+        line-height: 20px
+        color: $c-white
+    a
+        color: $c-orange
+        @include px(1)
+        &:hover
+            text-decoration: underline
+        &.active
+            color: $c-white
+            font-weight: 600
