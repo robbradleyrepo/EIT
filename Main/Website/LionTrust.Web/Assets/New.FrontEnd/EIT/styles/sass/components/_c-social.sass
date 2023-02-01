@@ -1,0 +1,47 @@
+.c-social
+    background-color: $c-navy
+    background-image: url("../images/BG_Orbs@2x.png")
+    background-repeat: no-repeat
+    background-size: 100%
+    color: $c-white
+    .c-content
+        text-align: center
+        margin: auto
+        @include pb(5)
+        position: relative
+        z-index: 200
+    p
+        text-align: center
+        font-size: 16px
+        color: $c-white
+        @include mt(0)
+        @include mb(4)
+        @include lg 
+            margin: auto
+            font-size: 18px
+            line-height: 26px
+        &:empty
+            display: none
+
+    nav
+        z-index: 200
+        display: flex
+        flex-direction: row
+        align-content: center
+        justify-content: space-evenly
+        a
+            font-size: 14px
+            color: $c-white
+            img
+                max-width: 21px
+                position: relative
+                bottom: -2px
+                @include mr(2)
+            &:hover
+                color: $c-orange
+    &.active
+        .c-content
+            @extend %animated
+            @extend %fadeInUp
+            animation-delay: 0.2s 
+        
