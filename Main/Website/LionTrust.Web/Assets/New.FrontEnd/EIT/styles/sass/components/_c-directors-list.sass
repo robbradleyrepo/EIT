@@ -1,0 +1,56 @@
+.c-directors-list
+    h2
+        @include mt(0)
+
+    &__card
+        width: 275px
+        @include mr(3)
+
+        @include lg
+            width: 100%
+            display: flex
+            flex-direction: row
+            align-items: flex-start
+            justify-content: center
+            gap: 20px
+            @include mb(3)
+            @include mr(0)
+
+        &--image
+            @include lg
+                flex: 0 0 200px
+            img 
+                width: 100%
+
+        &--copy
+            p 
+                @include m(3)
+                @include lg
+                    @include mt(0)
+                    @include mb(1)
+                    @include mx(0)
+                &.name
+                    @extend h3
+                    color: $c-orange
+                    height: 50px
+                    @include lg
+                        @include mt(2)
+                        height: auto
+                &.position
+                    font-weight: 500
+                    @include my(0)
+                    @include lg
+                &.bio
+                    font-size: 14px
+                    font-weight: 400
+                    @include mt(2)
+                    display: -webkit-box
+                    -webkit-line-clamp: 7
+                    -webkit-box-orient: vertical
+                    @include lg
+                        font-size: inherit 
+
+                &:empty
+                    display: none
+                    
+

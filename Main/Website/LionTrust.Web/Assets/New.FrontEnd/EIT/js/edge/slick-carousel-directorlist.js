@@ -14,6 +14,9 @@ export default () => {
         DirectorListSlickComponent.prototype.initDirectorListSlickComponent = function () {
                 
                 var _self = this;
+                if (!_self.$itemActual.hasClass('slick-initialized')) {
+                    _self.$item.addClass("active");
+                }
 
                 _self.$itemActual.slick({
                     dots: false,
@@ -24,7 +27,7 @@ export default () => {
                     mobileFirst: true,
                     responsive: [
                         {
-                            breakpoint: 768,
+                            breakpoint: 992,
                             settings: "unslick" 
                         },
                     ]
