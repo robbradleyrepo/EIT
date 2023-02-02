@@ -17,7 +17,7 @@ export default () => {
 	function engageObserver() {
 		let config = {
 			rootMargin: '100px',
-			threshold: 0.6,
+			threshold: 0.4,
 			triggerOnce: true,
 		};
 
