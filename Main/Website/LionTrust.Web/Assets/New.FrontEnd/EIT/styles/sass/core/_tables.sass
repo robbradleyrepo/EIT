@@ -60,6 +60,19 @@
                 font-weight: 300
                 color: $c-dove-gray
                 white-space: nowrap 
+    h2
+        color: $c-orange
+    .dividend
+        tbody
+            tr
+                &:first-child
+                    td, th
+                        @include pt(3)
+                &:nth-child(odd)
+                    background: $c-whisper
+                td,th
+                    @include px(4)
+                    @include py(3)
     //variations as per below 
     &.g-table-border
         table
