@@ -10,7 +10,12 @@ body
             @include md 
                 background-image: url("../images/hero-generic-tablet.png")
             @include lg 
+                min-height: 38vw
                 background-image: url("../images/hero-generic-desktop.png")
+            @include xl
+                min-height: 33vw
+            @include xxl
+                max-height: 38vw
         main
             section, aside
                 &.u-edge
