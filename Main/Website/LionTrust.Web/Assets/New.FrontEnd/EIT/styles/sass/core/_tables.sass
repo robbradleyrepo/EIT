@@ -73,6 +73,31 @@
                 td,th
                     @include px(4)
                     @include py(3)
+    .divident-table
+        thead
+            th
+                text-align: center
+            span
+                @include px(4)
+        tr
+            &:first-child
+                td, th
+                    @include pt(3)
+            &:last-child
+                td,th
+                  @include pb(3)
+            td:last-child
+                width: auto
+            td
+                text-align: center
+                @include px(2)
+                &:first-child
+                    text-align: left
+                    white-space: nowrap
+                p
+                    margin: unset
+                
+                
     //variations as per below 
     &.g-table-border
         table
@@ -114,3 +139,13 @@
     tbody
          tr:nth-child(n+11)
             display: none
+.table-responsive-lg
+    overflow-x: scroll
+    &::-webkit-scrollbar-track
+        background: $c-silver
+        border-radius: 5px
+    &::-webkit-scrollbar-thumb
+        background: $c-orange
+        border-radius: 5px
+    &::-webkit-scrollbar 
+        height: 3px
