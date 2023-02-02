@@ -12,8 +12,6 @@ body
             @include lg 
                 min-height: 38vw
                 background-image: url("../images/hero-generic-desktop.png")
-            @include xl
-                min-height: 33vw
             @include xxl
                 max-height: 38vw
         main
@@ -80,6 +78,8 @@ section, article, aside, footer
     &.sm
         max-width: $v-max-width-sm
         margin: 0 auto
+    .center
+        text-align: center
 
 // TEMPLATE SPECIFIC
 
