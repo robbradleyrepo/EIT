@@ -73,7 +73,7 @@
                 td,th
                     @include px(4)
                     @include py(3)
-    .divident-table
+    .divident-table,.performance-table
         thead
             th
                 text-align: center
@@ -98,7 +98,27 @@
                     @include pl(4)
                 p
                     margin: unset
-                
+    .performance-table
+        thead
+            background:  $c-black
+            color: $c-white
+            
+            th
+                min-width: 80px
+                font-weight: 400
+                &:first-child
+                    text-align: left
+                    @include pl(3)
+            tr
+                border-bottom: none
+        tr
+            border-bottom: 1px dashed $c-silver
+            td
+                &:first-child
+                    @include pl(3)
+        .hightlights
+            color: $c-orange
+           
                 
     //variations as per below 
     &.g-table-border
