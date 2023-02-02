@@ -8,6 +8,8 @@ export default () => {
         function DirectorListSlickComponent($theComponentSelector) {
             this.$item = $theComponentSelector;  
             this.$itemActual = this.$item.find('.f-slick-single');
+            this.$moreControl = this.$item.find('.f-read-more');
+            this.$lessControl = this.$item.find('.f-read-less');
             this.initDirectorListSlickComponent(); 
         }
     
@@ -33,10 +35,22 @@ export default () => {
                     ]
                 }); 
  
+ 
                 $(window).on('resize orientationchange', function () { 
-                    if (_self.$itemActual.hasClass('slick-initialized')) {
-                        _self.$itemActual.slick('resize');
-                    } 
+                    _self.$itemActual.slick('resize');
+                });
+
+                _self.$moreControl.on('click', function (e) {
+                    e.preventDefault(); 
+                    _self.$lessControl.removeClass('hidden');
+                    _self.$moreControl.addClass('hidden');
+                    _self.$itemActual.addClass('expand'); 
+                });
+                _self.$lessControl.on('click', function (e) {
+                    e.preventDefault(); 
+                    _self.$lessControl.addClass('hidden');
+                    _self.$moreControl.removeClass('hidden');
+                    _self.$itemActual.removeClass('expand'); 
                 });
         };
 

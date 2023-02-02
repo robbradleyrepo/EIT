@@ -6,7 +6,7 @@ export default () => {
 	const sections = document.querySelectorAll('.t-global main section.u-edge:not(:first-child), .t-global main aside.u-edge:not(:first-child), .t-global main section.u-edge.c-stats-banner');
 
 	let config = {
-		rootMargin: '0px',
+		rootMargin: '100px',
 		threshold: 0.6,
 		triggerOnce: true,
 	};

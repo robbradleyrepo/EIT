@@ -2,8 +2,11 @@
     background-color: $c-navy
     background-image: url("../images/BG_Orbs@2x.png")
     background-repeat: no-repeat
-    background-size: 100%
-    color: $c-white
+    background-size: cover
+    background-position: center
+    color: $c-white 
+    @include lg 
+        background-position: 0
     .c-content
         text-align: center
         margin: auto
