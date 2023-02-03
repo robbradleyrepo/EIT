@@ -8,20 +8,20 @@ export default () => {
       }
 
       TableRowCountComponent.prototype.clickToggleButton = function () {
-          var _self = this;
-          let tableRowCount = $(".g-table-row-count tbody  tr").length;
+        var _self = this;
+        let tableRowCount = $(this.$componentSelector).find('tbody tr').length;
 
-          if (tableRowCount <= 10) {
-              _self.$control.hide();
-          }
+        if (tableRowCount <= 10) {
+            _self.$control.hide();
+        } 
 
-          _self.$control.on("click", function (e) {
-              e.preventDefault();
-              $(this).prev().toggleClass("hide-rows");
-              $(this).text(function (i, v) {
-                  return v === "+" ? "-" : "+";
-              });
-          });
+        _self.$control.on("click", function (e) {
+            e.preventDefault();
+            $(this).prev().toggleClass("hide-rows");
+            $(this).text(function (i, v) {
+                return v === "+" ? "-" : "+";
+            });
+        });
       };
       return TableRowCountComponent;
     })();
