@@ -12,6 +12,7 @@ body
             @include lg 
                 min-height: 38vw
                 background-image: url("../images/hero-generic-desktop.png")
+                background-color: $c-white
             @include xxl
                 max-height: 38vw
         main
@@ -41,6 +42,8 @@ body
         background-size: cover
         @extend %animated
         @extend %fadeIn
+        @include lg 
+            width: 100.5%
         
 section, article, aside, footer
     &.u-edge

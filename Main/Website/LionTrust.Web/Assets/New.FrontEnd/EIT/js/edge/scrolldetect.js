@@ -4,7 +4,7 @@ export default () => {
 
 
 	const images = document.querySelectorAll('.js-lazyload-image');
-	const sections = document.querySelectorAll('.t-global main section.u-edge:not(:first-child), .t-global main aside.u-edge:not(:first-child), .t-global main section.u-edge.c-stats-banner');
+	const sections = document.querySelectorAll('.t-global main .u-edge');
 
 	function widthResizer(){
 		var width = window.innerWidth

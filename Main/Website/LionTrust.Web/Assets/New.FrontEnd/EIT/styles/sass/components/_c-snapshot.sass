@@ -45,6 +45,9 @@
             @include lg
                 font-size: 12px
     &.active
+        h2
+            @extend %animated
+            @extend %fadeInUp
         .c-snapshot__data
             &:nth-child(2)
                 @extend %animated
@@ -58,4 +61,8 @@
                 @extend %animated
                 @extend %fadeInUp
                 animation-delay: 0.6s
+        .c-snapshot__info
+            @extend %animated
+            @extend %fadeInLeft
+            animation-delay: 1s
             
