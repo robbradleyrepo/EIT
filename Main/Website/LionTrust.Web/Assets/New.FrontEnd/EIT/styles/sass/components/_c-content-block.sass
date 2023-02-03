@@ -1,6 +1,10 @@
 .c-content-block
     font-family: $f-gotham
     font-weight: normal
+
+    .reverse
+        direction: rtl
+        text-align: left
     
     &--split 
         display: grid
@@ -13,6 +17,7 @@
             column-gap: 30px
             
     &--image
+        direction: ltr !important
         @extend %animated
         @extend %fadeIn
         animation-delay: 0.4s
@@ -21,17 +26,17 @@
             transform: translateY(-60px)
     
     &--copy
+        direction: ltr !important
         @include lg
             grid-row-start: 2    
         
     &--title
+        direction: ltr !important
         grid-row-start: 1
         @include lg
             grid-column-start: 2 
     
-    .reverse
-        direction: rtl
-        text-align: left
+    
 
     h1, h2
         font-size: 32px
