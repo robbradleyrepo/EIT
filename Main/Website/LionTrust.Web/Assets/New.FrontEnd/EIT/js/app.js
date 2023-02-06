@@ -2,7 +2,7 @@ import "core-js/es/number";
 import "core-js/features/string/repeat";
 import $ from "jquery";
 window.jQuery = $;
-window.$ = $; 
+window.$ = $;  
  
 
 import scrollDetect from "./edge/scrolldetect"; 
@@ -13,6 +13,7 @@ import slickCarouselSingle from "./edge/slick-carousel-single";
 import DirectorListSlickComponent from "./edge/slick-carousel-directorlist"; 
 import slidePanel from "./edge/slide-panel"; 
 import tableRowCount from "./edge/table-row-count";  
+import ModalVideoComponent from "./edge/modal-video";
 
 // import form from "./edge/form";
 
@@ -27,8 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
     slidePanel();
     tableRowCount();
     DirectorListSlickComponent();  
+    ModalVideoComponent();
     // form();
-   
 }); 
 
  

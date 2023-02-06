@@ -1,0 +1,40 @@
+
+.e-video
+    width: 100%
+    height: 100%
+    display: block
+    position: relative
+    filter: brightness(100%)
+    transition: all 200ms ease
+    img
+        transition: all 200ms ease
+        width: 100%
+    &:hover
+        img
+            filter: brightness(70%)
+        &::after
+            transform: translate(-50%, -50%) scale(1)
+    &::after
+        width: 100%
+        max-width: 130px
+        height: 130px
+        display: block
+        content: " "
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%) scale(0.5)
+        z-index: 2
+        background-image: url("../images/PlayBtn@2x.png")
+        background-repeat: no-repeat
+        background-size: 100%
+        transition: all 200ms ease
+        @include lg
+            transform: translate(-50%, -50%) scale(0.9)
+        &:hover
+            filter: brightness(100%)
+            
+
+    
+        
+ 
