@@ -1,0 +1,48 @@
+.c-awards
+    .u-container
+        position: relative
+    
+    h2
+        @include mb(5)
+
+    figure 
+        @include my(0) 
+        text-align: center
+        margin: auto 
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        gap: 20px  
+        width: 100%
+        max-width: 230px
+        figcaption
+            font-weight: 900
+            font-size: 18px 
+            span
+                display: block
+        img
+            width: 100%
+            max-width: 160px
+            margin: auto
+        a
+            text-align: center
+            margin: auto 
+            display: block
+            color: inherit 
+            transition: all 200ms ease
+            figcaption
+                transition: all 200ms ease
+            img
+                @include mb(3)
+                filter: brightness(100%)
+                transition: all 200ms ease
+            &:hover
+                img
+                    filter: brightness(80%)
+                figcaption
+                    color: $c-orange
+                    
+            
+
+ 

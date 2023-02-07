@@ -39,4 +39,35 @@
         @include xl
             margin-bottom: 10px
             max-width: calc( 100% - 10px )
+.f-slick-awards-master
+    .slick-dots
+        li
+            position: relative 
+            button
+                &::before
+                    color: $c-gray
+                    opacity: 1
+            &.slick-active
+                button
+                    &::before
+                        color: $c-orange !important
+ 
+    .f-slick-awards__controls 
+        @include my(3)
+        &--prev, &--next
+            position: absolute
+            bottom: 52%
+            transform: scale(1)
+            transition: all 200ms ease
+            i 
+                color: $c-silver2
+                font-size: 35px
+            &:hover
+                transform: scale(1.2)
+                i 
+                    color: $c-orange
+        &--prev
+            left: 30px
+        &--next
+            right: 30px
         
