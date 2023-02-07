@@ -39,3 +39,32 @@
                 width: 5px
                 position: relative
                 bottom: 1px
+
+main 
+    .u-edge
+        ul
+            &.e-list-brand
+                @include my(3)
+                list-style-type: disc
+                list-style-position: inside
+                text-align: left 
+                li
+                    line-height: 1.5em
+                    &::marker
+                        color: $c-orange
+                    & > ul  
+                        margin-left: 20px
+                        @include my(1) 
+                        list-style-position: inside
+                        li
+                            @include my(1)
+                            position: relative
+                            &::marker
+                                color: $c-orange
+                                content: "✓"
+                                display: inline-block
+                                margin-right: 20px
+                                left: -20px
+                                position: relative
+
+
