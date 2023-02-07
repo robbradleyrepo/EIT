@@ -6,11 +6,9 @@ export default () => {
     var ModalVideoComponent = /** @class */ (function () {
 
         function ModalVideoComponent($theComponentSelector) {
-           
-               
             $($theComponentSelector).modalVideo({
                 animationSpeed: 200
-            });              
+            });
         }
     
         return ModalVideoComponent;
