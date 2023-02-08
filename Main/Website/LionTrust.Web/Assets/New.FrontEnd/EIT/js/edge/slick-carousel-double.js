@@ -16,8 +16,10 @@ export default () => {
             this.TouchSlickComponent();
         }
     
-        SlickComponent.prototype.initSlickComponent = function () {    
+        SlickComponent.prototype.initSlickComponent = function () {   
             var _self = this;
+            _self.$controls.find('.f-slick-double__controls--prev').addClass('hidden');
+
             _self.$controls.find('.f-slick-double__controls--prev').on('click', function (e) {
                 e.preventDefault(); 
                 _self.$desktopItem.slick('slickPrev');
@@ -35,6 +37,25 @@ export default () => {
                     }, 100);
                 }
             });
+
+            _self.$desktopItem.on('afterChange', function (event, slick, currentSlide) {
+               
+                if (slick.currentSlide >= slick.slideCount - slick.options.slidesToShow) {
+                    _self.$controls.find('.f-slick-double__controls--next').addClass('hidden');
+                }
+                else {
+                    _self.$controls.find('.f-slick-double__controls--next').removeClass('hidden');
+                }
+        
+                if (currentSlide === 0) {
+                    _self.$controls.find('.f-slick-double__controls--prev').addClass('hidden');
+                }
+                else {
+                    _self.$controls.find('.f-slick-double__controls--prev').removeClass('hidden');
+                }  
+
+                
+            })
         };
 
         SlickComponent.prototype.DesktopSlickComponent = function () { 

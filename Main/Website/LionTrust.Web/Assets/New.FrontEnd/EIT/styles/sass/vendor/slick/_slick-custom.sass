@@ -11,9 +11,15 @@
         & > a
             color: $c-orange
             font-size: 14px
+            visibility: visible
+            transition: all 300ms ease
+            opacity: 1
             i
                 font-size: 12px
                 @include px(2)
+            &.hidden
+                visibility: hidden
+                opacity: 0
         ul
             li
                 color: $c-black
@@ -70,4 +76,7 @@
             left: 30px
         &--next
             right: 30px
-        
+
+.slick-disabled
+    display: none 
+    pointer-events: none
