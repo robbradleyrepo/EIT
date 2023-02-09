@@ -1,0 +1,19 @@
+.u-sg ~ main .u-edge
+    ul 
+        &.sg	
+            list-style-type: none 
+            columns: 1
+            list-style-type: circle
+            list-style-position: inside 
+            margin-left: 0
+            font-weight: 500
+            @include mb(5)
+            @include md
+                columns: 2
+            li
+                line-height: 3em
+                &::marker
+                    content: none
+                a
+                    
+                    color: $c-orange

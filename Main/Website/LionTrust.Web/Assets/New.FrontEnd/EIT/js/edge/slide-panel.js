@@ -10,8 +10,7 @@ export default () => {
             this.$body = $('body');
             this.$navScreen = $('.u-screen'); 
             this.$navMasterControl = $('.f-slide-panel'); 
-            this.$navClose = $('.g-slide-panel__close');  
-            this.$panelLinks = this.$componentSelector.find('ul > li > a');
+            this.$navClose = $('.g-slide-panel__close');   
             this.initSlidePanelComponent();
         }
         SlidePanelComponent.prototype.initSlidePanelComponent = function () {
@@ -51,9 +50,7 @@ export default () => {
         };
         SlidePanelComponent.prototype.refsSlidePanel = function () {
             var _self = this; 
-            _self.$panelLinks.on('click', function (e) { 
-                e.preventDefault(); 
-            }); 
+            
             if (window.location.hash.indexOf('activepanel') != -1) {
                 _self.openSlidePanel(); 
             } 
