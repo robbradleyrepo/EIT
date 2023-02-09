@@ -1,4 +1,14 @@
 .c-transcript
-    @include m(5)
+    @include mx(3)
+    @include my(5)
+    @include sm
+        @include m(5)
     p
         margin: revert
+    .beefup__head 
+        button
+            color: $c-husk
+            font-weight: 300
+    .is-open
+        .beefup-close
+            cursor: pointer
