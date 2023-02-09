@@ -1,0 +1,23 @@
+.c-contact-card
+    .card-container
+        display: flex
+        flex-direction: column
+        align-items: center
+        @include lg
+            flex-direction: row
+            justify-content: space-between
+
+    .contact-card
+        width: 500px
+        height: 200px
+        background-color: $c-white
+        @include p(4)
+        margin-bottom: 2rem
+        & > span
+            font-size: 18px
+            color: $c-black
+            font-weight: 600
+            margin: 0
+        .contact-address
+            display: grid
+            @include py(3)
