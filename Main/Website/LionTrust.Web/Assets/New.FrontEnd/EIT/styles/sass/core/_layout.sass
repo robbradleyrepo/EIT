@@ -6,15 +6,27 @@ body
     &.t-global 
         header.g-header
             background-image: url("../images/hero-generic-mobile.png")
-            transition: all 200ms ease
+            background-repeat: no-repeat           
+            background-size: cover
+            transition: all 50ms ease
+            background-position-y: bottom
+            background-position-x: center
             @include md 
+                background-position-x: right
                 background-image: url("../images/hero-generic-tablet.png")
-            @include lg 
-                min-height: 38vw
-                background-image: url("../images/hero-generic-desktop.png")
+            @include lg
+                background-position-x: 75%
+                background-position-y: center
+                min-height: 440px
+            @include xl
+                min-height: 40vw
+                background-image: url("../images/hero-generic-desktop-v2.png")
                 background-color: $c-white
+                background-position-x: 50% 
+                background-position-y: bottom
             @include xxl
-                max-height: 38vw
+                background-position-x: 100% 
+                min-height: 500px
         main
             section, aside
                 &.u-edge
@@ -27,7 +39,11 @@ body
                 
                 
     &.t-article 
-        header.g-header 
+        header.g-header
+            min-height: max-content
+            background-repeat: no-repeat
+            background-position: bottom
+            background-size: cover 
             background-image: url("../images/articlehero-mobile.png")
             @include lg 
                 background-image: url("../images/articlehero-desktop.png")
@@ -35,11 +51,7 @@ body
     header.g-header
         z-index: 2
         position: relative
-        width: 100% 
-        min-height: max-content
-        background-repeat: no-repeat
-        background-position: bottom
-        background-size: cover
+        width: 100%  
         @extend %animated
         @extend %fadeIn
         

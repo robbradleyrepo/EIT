@@ -1,0 +1,11 @@
+<script>
+    if (document.body.classList.contains('t-global')) {
+       
+        const mediaQueryList = window.matchMedia("(min-width: 992px)");
+        const header = document.querySelector("header");
+        if (mediaQueryList.matches) { 
+            header.style.backgroundImage = "url(images/hero-generic-desktop-v2.png)";
+        }
+    } 
+
+</script>
