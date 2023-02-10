@@ -6,30 +6,22 @@ export default () => {
     var AccordionComponent = /** @class */ (function () {
 
         function AccordionComponent($theComponentSelector) {
-            this.$componentSelector = $theComponentSelector;   
-            this.$closeControl = this.$componentSelector.find('.beefup-close');  
             
-            this.$componentSelector.beefup({
-                scrollOffset: -100
+            $('.beefup').beefup({
+                scrollOffset: -100, 
+                openSingle: true,
+                selfClose: true
             }); 
 
-            this.closeAccordionComponent();
-        };
-
-        AccordionComponent.prototype.closeAccordionComponent = function () {
-            var _self = this; 
-            _self.$closeControl.on('click', function (e) {
-                e.preventDefault(); 
-             
-                _self.$componentSelector.close($(_self.$componentSelector));
-                _self.$componentSelector.scroll($(_self.$componentSelector));
-            }); 
+            var $beefup = $('.beefup-close').beefup();
             
+            $('.beefup-close').on('click', function () {
+                $beefup.close($('#beefup'));                
+            });
         };
-      
+ 
         return AccordionComponent;
     }());
-
 
     $(function () {
         var accordionComponentHolder = '.beefup';
@@ -37,7 +29,4 @@ export default () => {
             var accordionComponent = new AccordionComponent($(this));
         });
     });
-
 }
-
-
