@@ -13,7 +13,7 @@ import slickCarouselSingle from "./edge/slick-carousel-single";
 import DirectorListSlickComponent from "./edge/slick-carousel-directorlist"; 
 import slidePanel from "./edge/slide-panel"; 
 import tableRowCount from "./edge/table-row-count";  
-import tabNavigation from "./edge/tab-navigation";  
+import documentTabNavigation from "./edge/document-tab-navigation";  
 
 import ModalVideoComponent from "./edge/modal-video";
 import slickCarouselAwards from "./edge/slick-carousel-awards";
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ModalVideoComponent();
     slickCarouselAwards();
     // form();
-    tabNavigation();
+    documentTabNavigation();
    
 }); 
 
