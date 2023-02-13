@@ -1,0 +1,77 @@
+.c-document-tab-nav
+    .tab-nav
+        color: $black
+        margin-bottom: 2.3rem
+        display: none
+        flex-wrap: wrap
+        align-items: center
+        @include pt(4)
+        @include md
+            display: flex
+
+        .tab-nav-item
+            @include p(2)
+            max-width: 15%
+            flex-basis: 15%
+
+            span
+                @include p(1)
+
+            div
+                @include px(4)
+                cursor: pointer
+                text-align: center
+                color: $c-black
+                border-bottom: 2px solid $c-black
+                padding: 11px
+                transition: color .3s ease-out, border-color .3s ease-out
+                &:hover
+                    color: $c-orange
+                    border-color: $c-orange
+                &.active
+                    color: $c-orange
+                    border-color: $c-orange
+
+    .tab-nav-content
+        .doc-list
+            display: none
+            &.active
+                display: block
+
+    .select-mobile
+        position: relative
+        color: $black
+        display: block
+        @include py(4)
+        @include md
+            display: none
+        select
+            width: 100%
+            @include py(3)
+            border: none
+            border-bottom: 1px solid $c-whisper
+
+    .doc-list
+        @include px(2)
+        span
+            @include lg
+                max-width: 400px
+        .doc-list-item
+            display: grid
+            border-bottom: 1px solid $c-whisper
+            @include py(4)
+            @include lg
+                display: flex
+                justify-content: space-between
+            div
+                display: contents
+                a
+                    color: $c-orange
+                    @include py(1)
+                    @include lg
+                        @include py(0)
+                    &.hide-link
+                        display: none
+                        @include lg
+                            display: block
+                            visibility: hidden
