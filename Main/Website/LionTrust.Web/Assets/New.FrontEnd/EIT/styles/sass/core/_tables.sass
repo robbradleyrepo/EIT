@@ -119,13 +119,18 @@
                 &:first-child
                     text-align: left
                     @include pl(3)
+                &.sticky-heading
+                    background:  $c-black
             tr
                 border-bottom: none
+                
         tr
             border-bottom: 1px dashed $c-silver
             td
                 &:first-child
                     @include pl(3)
+                &.sticky-heading
+                    background:  $c-white
         .hightlights
             color: $c-orange
         tfoot
@@ -172,3 +177,13 @@
         tbody
             tr:nth-child(n+11)
                 display: none
+    .disclaimer
+        @include p(3)
+        font-size: 12px
+        font-weight: 300
+        color: $c-dove-gray
+        max-width: 700px
+    .sticky-heading
+        position: sticky
+        left: 0
+    
