@@ -17,7 +17,7 @@ export default () => {
 
         _self.$control.on("click", function (e) {
             e.preventDefault();
-            $(this).prev().toggleClass("hide-rows");
+            $(this).prevAll('table').toggleClass("hide-rows");
             $(this).text(function (i, v) {
                 return v === "+" ? "-" : "+";
             });
