@@ -14,11 +14,10 @@ import DirectorListSlickComponent from "./edge/slick-carousel-directorlist";
 import slidePanel from "./edge/slide-panel"; 
 import tableRowCount from "./edge/table-row-count";  
 import documentTabNavigation from "./edge/document-tab-navigation";  
-
 import ModalVideoComponent from "./edge/modal-video";
 import slickCarouselAwards from "./edge/slick-carousel-awards";
 import AccordionComponent from "./edge/accordion";
-// import form from "./edge/form";
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -34,7 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
     ModalVideoComponent();
     slickCarouselAwards();
     AccordionComponent();
-    // form();
     documentTabNavigation();
    
 }); 

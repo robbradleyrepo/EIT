@@ -80,12 +80,20 @@ Usage (SASS) - https://github.com/digitaledgeit/sass-spacing
 
 ```EIT\styles\sass\core\_breakpoints.sass```
 
-Usage (SASS)
+Usage (SASS) min width mixins
 
 * ``` @include sm ```
 * ``` @include md ```
 * ``` @include lg ```
 * ``` @include xl ```
+* ``` @include xxl ```
+
+$screen-sm-min: 576px
+$screen-md-min: 768px
+$screen-lg-min: 992px
+$screen-xl-min: 1200px
+$screen-xxl-min: 1440px
+
 
 ## BEMIT 
 
@@ -96,6 +104,7 @@ Class prefixes in play:
 * ```g-***``` - Component (Global)
 * ```c-***``` - Component (Local)
 * ```e-***``` - Element
+* ```f-***``` - Function - purely an additional class if JS required. Components should not be styled using this.   
 
 More info - https://gist.github.com/stephenway/a6145d9b4430e8c55a77
 
@@ -113,3 +122,15 @@ More info - https://gist.github.com/stephenway/a6145d9b4430e8c55a77
  You can import any part of the code using construction in any of html files:
 
  `<!--#include virtual="/components/GC001-Header.html" -->`
+
+## Carousels
+Slick - http://kenwheeler.github.io/slick/ 
+
+## Accordions
+Beefup - https://schascha.github.io/BeefUp/
+
+## Animations
+Animate CSS - https://animate.style/
+
+## Video
+jQuery Modal Video - https://appleple.github.io/modal-video/
