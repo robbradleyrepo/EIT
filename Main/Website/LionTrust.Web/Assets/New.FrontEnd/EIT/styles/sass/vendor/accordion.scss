@@ -11,8 +11,9 @@
   position: relative;
   padding: 0; 
   font-size: 26px;
-  border-bottom: 1px solid $c-silver2;
+  border-bottom: 1px solid $c-silver-chalice;
   padding-bottom: 10px;
+  color: $c-orange;
 }
 button.beefup__head, .beefup__head > button {
   cursor: pointer;
@@ -43,7 +44,7 @@ button.beefup__head[aria-disabled], .beefup__head > button[aria-disabled] {
   content: "\e90c"; 
   font-family: "icomoon";
   position: absolute; 
-  color: $c-husk;
+  color: $c-orange;
   top: 10%;
   right: 0px;
   z-index: 0; 
@@ -67,7 +68,7 @@ button.beefup__head[aria-disabled], .beefup__head > button[aria-disabled] {
   position: absolute;
   display: block;
   content: "";
-  border-bottom: 1px solid $c-husk;
+  border-bottom: 1px solid $c-orange;
   bottom: -1px;
   width: 0%;
   transition: width 100ms cubic-bezier(0.77,0.2,0.05,1.0);

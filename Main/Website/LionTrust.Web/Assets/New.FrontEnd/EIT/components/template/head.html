@@ -2,7 +2,12 @@
 <html lang="en">
 <head>
 	<title><!--#echo var="title" --></title>
+	
+	<!-- Should ONLY be added on GLOBAL template HTML pages-->
 	<link rel="preload" href="images/hero-generic-desktop-v2.png" as="image" media="(min-width: 992px)" />
+
+	<link rel="stylesheet" rel="stylesheet preload" href="css/styles.min.css" as="style" />
+
 	<link rel="icon" type="image/png" sizes="64x64" href="/images/EIT_Favicon_64x64.png" />
 
 	<meta charset="utf-8" />
@@ -23,11 +28,6 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
 	
-	 
-	<link rel="stylesheet" rel="preload" href="css/styles.min.css" />
-
 	<script rel="preload" src="js/app.min.js"></script>
-
-	<!-- only needed for Contact page-->
-	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+ 
 </head>
