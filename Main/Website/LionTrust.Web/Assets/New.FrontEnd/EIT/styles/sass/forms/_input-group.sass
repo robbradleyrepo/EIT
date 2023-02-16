@@ -6,8 +6,10 @@ $width: 100%
 
 .f-forms--sitecore
     .input-btn
+        @include mt(3)
         input
             cursor: pointer
+            
     .input-group
         position: relative
         @include mt(5)
@@ -33,30 +35,39 @@ $width: 100%
 
             &:focus ~ .bar:before
                 width: $width
+        
+        .select-arrow
+            background: transparent
+            right: 1px
+            top: 14px 
+            position: absolute 
+            display: block
+            font-family: $f-icomoon
+            @extend .icon-chevron
+            font-style: normal
+            font-size: 10px
+            color: $c-silver-chalice 
         select
+            appearance: none
             &:focus
                 border-bottom: 1px solid $c-orange
+                & ~ .select-arrow 
+                    color: $c-orange
+
         textarea
             border: 1px solid $c-silver-chalice
             resize: none 
             height: 200px
             font-size: 16px
+            width: calc(100% - 16px)
             @include p(2)
             &::placeholder
                 color: inherit
                 font-size: 12px
             &:focus
                 border: 1px solid $c-orange
-           
-        .select-arrow
-            display: none
-            color: $c-silver-chalice
-            &::before
-                color: $c-silver-chalice
-                content: "\e906"
-                font-size: 10px
-                @include lg
-                    font-size: 6px
+                
+        
         label
             color: $c-scorpion
             font-size: 12px
@@ -83,3 +94,6 @@ $width: 100%
         //     transition: $trans-time ease all
         //     left: 0%
         
+    .fxt-captcha
+        color: $c-orange
+        @include my(2)
