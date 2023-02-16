@@ -3,7 +3,7 @@
     padding: inherit
     h2
         text-align:  center
-    li
+    & > li
         line-height: 160%
         margin-left: 10px
         text-indent: -35px
@@ -29,7 +29,7 @@
         max-width: none
         @include px(3)
         @include py(0)
-        li 
+        & > li 
             line-height: 160%
             margin-left: 5px
             text-indent: -20px
@@ -55,7 +55,7 @@ main
                 list-style-type: disc
                 list-style-position: outside
                 text-align: left 
-                li
+                & > li
                     line-height: 1.5em
                     &::marker
                         color: $c-orange
@@ -63,7 +63,7 @@ main
             &.e-list-tick  
                 @include my(1) 
                 list-style-position: inside
-                li
+                & > li
                     line-height: 1.5em
                     padding-left: 25px
                     position: relative
@@ -86,7 +86,7 @@ main
                 list-style-type: circle
                 list-style-position: outside
                 text-align: left 
-                li
+                & > li
                     line-height: 1.5em
                     &::marker
                         color: $c-orange

@@ -44,7 +44,7 @@ export default () => {
       };
 
       DocumentTabNavigationComponent.prototype.changeTab = function (id) {
-        const tab = this.$tabNavContent.find(`#${id}`);
+        const tab = this.$tabNavContent.find(`[data-tab-source="${id}"]`)
         if (tab.length) {
           this.$tabNavContent.find('.doc-list').removeClass("active");
           tab.addClass("active");

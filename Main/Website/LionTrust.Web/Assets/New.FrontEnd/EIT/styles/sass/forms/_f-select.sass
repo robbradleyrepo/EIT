@@ -1,35 +1,26 @@
 .f-forms 
-    .f-forms__select 
-
-        display: inline-block
-        position: relative
-        width: 100%
-
-        .select-arrow 
-            position: absolute
-            padding: 11px
-            font-size: 8px
-            right: 0px
-            bottom: 5px
-            z-index: 1
-            pointer-events: none 
-            transition: all 200ms ease
-            color: $c-silver-chalice
-            &.focus
-               color: $c-orange
-               
+    &__select 
+        display: block
+        position: relative 
+ 
     
         select 
-            display: block
-            width: 100% 
+            cursor: pointer
+            appearance: none
+            width: 100%
+            background: none 
+            font-size: 16px
+            @include py(2)
+            @include mt(3)
+            display: block 
             border: none
+            border-radius: 0
             border-bottom: 1px solid $c-silver-chalice
-            font-size: 14px
             font-weight: 500
-            appearance: none 
-            height: 35px
-            padding-right: 45px
-            border-radius: 0px
+             
+            &:focus
+                outline: none
+                border-bottom: 1px solid $c-orange
 
             option 
                 @include my(2)
@@ -44,7 +35,23 @@
                 transition: all 200ms ease
                 & ~ .select-arrow 
                     color: $c-orange  
-
-            &.selected 
+        .select-arrow
+            background: transparent
+            right: 5px
+            bottom: 14px 
+            position: absolute 
+            display: block
+            font-family: $f-icomoon
+            @extend .icon-chevron
+            font-style: normal
+            font-size: 10px
+            color: $c-silver-chalice 
+        select
+            appearance: none
+            &:focus
+                border-bottom: 1px solid $c-orange
+                & ~ .select-arrow 
+                    color: $c-orange
+       
 
             
