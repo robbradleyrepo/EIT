@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     slickCarouselAwards();
     AccordionComponent();
     documentTabNavigation();
-   
+    iFrameResize({ log: false, warningTimeout: 100000 }, '.f-iframe-resize');
 }); 
 
  
